@@ -34,7 +34,7 @@ La classe Blob vous permet de créer et de manipuler des [objets blob](../Concep
 
 #### Description
 
-`4D.Blob.new` <!-- REF #4D.Blob.new().Summary -->crée un nouvel objet `4D.Blob` encapsulant, de manière facultative, une copie des données à partir d'un autre blob (blob scalaire ou `4D.Blob`)<!-- END REF -->.
+`4D.Blob.new` <!-- REF #4D.Blob.new().Summary -->crée un nouvel objet `4D.Blob` encapsulant éventuellement une copie des données d'un autre blob (blob scalaire ou `4D.Blob`).<!-- END REF -->
 
 Si le paramètre `blob` est omis, la méthode retourne un 4D.Blob vide.
 
@@ -60,8 +60,8 @@ La propriété `.size` <!-- REF #Blob.size.Summary -->retourne la taille d'un `4
 <!-- REF #Blob.slice().Params -->
 | Paramètres | Type    |    | Description                                                              |
 | ---------- | ------- |:--:| ------------------------------------------------------------------------ |
-| start      | Real    | -> | indice du premier octet à inclure dans le nouveau `4D.Blob`.             |
-| end        | Real    | -> | indice du premier octet qui ne sera pas inclus dans le nouveau `4D.Blob` |
+| start      | Réel    | -> | indice du premier octet à inclure dans le nouveau `4D.Blob`.             |
+| end        | Réel    | -> | indice du premier octet qui ne sera pas inclus dans le nouveau `4D.Blob` |
 | Résultat   | 4D.Blob | <- | Nouveau `4D.Blob`|<!-- END REF -->
 
 |

@@ -8,8 +8,8 @@ title: エンティティ
 
 ### 概要
 
-|                                                                                                                                                                                                                                           |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE EntityClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntityClass.attributeName.Summary -->|
 | [<!-- INCLUDE #EntityClass.clone().Syntax -->](#clone)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.clone().Summary -->|
 | [<!-- INCLUDE #EntityClass.diff().Syntax -->](#diff)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.diff().Summary -->|
@@ -18,7 +18,6 @@ title: エンティティ
 | [<!-- INCLUDE #EntityClass.fromObject().Syntax -->](#fromobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.fromObject().Summary -->|
 | [<!-- INCLUDE #EntityClass.getDataClass().Syntax -->](#getdataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getDataClass().Summary -->|
 | [<!-- INCLUDE #EntityClass.getKey().Syntax -->](#getkey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getKey().Summary -->|
-| [<!-- INCLUDE #EntityClass.getRemoteContextAttributes().Syntax -->](#getremotecontextattributes)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getRemoteContextAttributes().Summary -->|
 | [<!-- INCLUDE #EntityClass.getSelection().Syntax -->](#getselection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getSelection().Summary -->|
 | [<!-- INCLUDE #EntityClass.getStamp().Syntax -->](#getstamp)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getStamp().Summary -->|
 | [<!-- INCLUDE #EntityClass.indexOf().Syntax -->](#indexof)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.indexOf().Summary -->|
@@ -654,61 +653,7 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 <!-- END REF -->
 
 
-<!-- REF EntityClass.getRemoteContextAttributes().Desc -->
-## .getRemoteContextAttributes()
 
-<details><summary>履歴</summary>
-| バージョン | 内容 |
-| ----- | -- |
-| v19R5 | 追加 |
-</details>
-
-<!-- REF #EntityClass.getRemoteContextAttributes().Syntax -->
-**.getRemoteContextAttributes()** : Text<!-- END REF -->
-
-<!-- REF #EntityClass.getRemoteContextAttributes().Params -->
-| 引数     | タイプ  |    | 説明                             |
-| ------ | ---- | -- | ------------------------------ |
-| result | テキスト | <- | エンティティにリンクされたコンテキスト属性 (カンマ区切り) |
-<!-- END REF -->
-
-> **上級者向け:** この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。
-
-
-#### 説明
-
-`.getRemoteContextAttributes()` 関数は、 <!-- REF #EntityClass.getRemoteContextAttributes().Summary -->エンティティによって使われている最適化コンテキストの情報を返します <!-- END REF -->。
-
-エンティティについて [最適化コンテキスト](../ORDA/remoteDatastores.md#クライアントサーバーの最適化) が存在しない場合、関数は空のテキストを返します。
-
-#### 例題
-
-```4d
-var $ds : 4D.DataStoreImplementation
-var $address : cs.AddressEntity
-var $p : cs.PersonsEntity
-var $contextA : Object
-var $info : Text
-var $text : Text
-
-$ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
-
-$contextA:=New object("context"; "contextA")
-
-$address:=$ds.Address.get(1; $contextA)
-$text:="" 
-For each ($p; $address.persons)
-    $text:=$p.firstname+" "+$p.lastname
-End for each 
-
-$info:=$address.getRemoteContextAttributes()
-
-//$info = "persons,persons.lastname,persons.firstname"
-```
-
-#### 参照
-
-[EntitySelection.getRemoteContextAttributes()](./EntitySelectionClass.md#getRemoteContextAttributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
 
 <!-- REF EntityClass.getSelection().Desc -->
 ## .getSelection()
@@ -768,9 +713,9 @@ $info:=$address.getRemoteContextAttributes()
 **.getStamp()** : Integer<!-- END REF -->
 
 <!-- REF #EntityClass.getStamp().Params -->
-| 引数  | タイプ |    | 説明                                   |
-| --- | --- |:--:| ------------------------------------ |
-| 戻り値 | 整数  | <- | エンティティのスタンプ (エンティティが作成されたばかりの場合には 0) |
+| 引数  | タイプ     |    | 説明                                   |
+| --- | ------- |:--:| ------------------------------------ |
+| 戻り値 | Integer | <- | エンティティのスタンプ (エンティティが作成されたばかりの場合には 0) |
 <!-- END REF -->
 
 #### 説明
@@ -820,7 +765,7 @@ $info:=$address.getRemoteContextAttributes()
 | 引数              | タイプ                |    | 説明                            |
 | --------------- | ------------------ |:--:| ----------------------------- |
 | entitySelection | 4D.EntitySelection | -> | エンティティの位置を取得する対象のエンティティセレクション |
-| 戻り値             | 整数                 | <- | エンティティセレクション内でのエンティティの位置      |
+| 戻り値             | Integer            | <- | エンティティセレクション内でのエンティティの位置      |
 <!-- END REF -->
 
 #### 説明
@@ -867,9 +812,9 @@ $info:=$address.getRemoteContextAttributes()
 **.isNew()** : Boolean<!-- END REF -->
 
 <!-- REF #EntityClass.isNew().Params -->
-| 引数  | タイプ |    | 説明                                         |
-| --- | --- |:--:| ------------------------------------------ |
-| 戻り値 | ブール | <- | エンティティが作成されたばかりで未保存の場合は true。 それ以外は false。 |
+| 引数  | タイプ     |    | 説明                                         |
+| --- | ------- |:--:| ------------------------------------------ |
+| 戻り値 | Boolean | <- | エンティティが作成されたばかりで未保存の場合は true。 それ以外は false。 |
 <!-- END REF -->
 
 #### 説明
@@ -949,10 +894,10 @@ $info:=$address.getRemoteContextAttributes()
 **.lock**( { *mode* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.lock().Params -->
-| 引数   | タイプ    |    | 説明                                                       |
-| ---- | ------ |:--:| -------------------------------------------------------- |
-| mode | 整数     | -> | `dk reload if stamp changed`: スタンプが変更されてる場合はロック前にリロードします |
-| 戻り値  | オブジェクト | <- | ロックの結果                                                   |
+| 引数   | タイプ     |    | 説明                                                       |
+| ---- | ------- |:--:| -------------------------------------------------------- |
+| mode | Integer | -> | `dk reload if stamp changed`: スタンプが変更されてる場合はロック前にリロードします |
+| 戻り値  | Object  | <- | ロックの結果                                                   |
 <!-- END REF -->
 
 #### 説明
@@ -996,7 +941,7 @@ $info:=$address.getRemoteContextAttributes()
 |                  | task_name           | テキスト                | プロセス名                                                                                                                                             |
 |                  | client_version      | テキスト                | クライアントのバージョン                                                                                                                                      |
 |                  |                     |                     | ***RESTセッションによるロックの場合:***                                                                                                                         |
-|                  | host                | テキスト                | エンティティをロックした URL (例: "www.myserver.com")                                                                                                          |
+|                  | host                | テキスト                | エンティティをロックした URL (例: "127.0.0.1:8043")                                                                                                            |
 |                  | IPAddr              | テキスト                | ロック元の IPアドレス (例: "127.0.0.1")                                                                                                                     |
 |                  | userAgent           | テキスト                | ロック元の userAgent (例: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 |                  |                     |                     | ***深刻なエラーの場合にのみ利用可能*** (深刻なエラーとは、プライマリーキーを重複させようとした、ディスクがいっぱいであった、などです):                                                                          |
@@ -1155,7 +1100,7 @@ $info:=$address.getRemoteContextAttributes()
 <!-- REF #EntityClass.reload().Params -->
 | 引数  | タイプ    |    | 説明          |
 | --- | ------ |:--:| ----------- |
-| 戻り値 | オブジェクト | <- | ステータスオブジェクト |
+| 戻り値 | Object | <- | ステータスオブジェクト |
 <!-- END REF -->
 
 #### 説明
@@ -1216,10 +1161,10 @@ $info:=$address.getRemoteContextAttributes()
 **.save**( { *mode* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.save().Params -->
-| 引数   | タイプ    |    | 説明                               |
-| ---- | ------ |:--:| -------------------------------- |
-| mode | 整数     | -> | `dk auto merge`: 自動マージモードを有効化します |
-| 戻り値  | オブジェクト | <- | 保存の結果                            |
+| 引数   | タイプ     |    | 説明                               |
+| ---- | ------- |:--:| -------------------------------- |
+| mode | Integer | -> | `dk auto merge`: 自動マージモードを有効化します |
+| 戻り値  | Object  | <- | 保存の結果                            |
 <!-- END REF -->
 
 #### 説明
@@ -1351,12 +1296,12 @@ $info:=$address.getRemoteContextAttributes()
 **.toObject**() : Object<br>**.toObject**( *filterString* : Text { ; *options* : Integer}  ) : Object<br>**.toObject**( *filterCol* : Collection { ; *options* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.toObject().Params -->
-| 引数           | タイプ    |    | 説明                                                                                            |
-| ------------ | ------ |:--:| --------------------------------------------------------------------------------------------- |
-| filterString | テキスト   | -> | 取得する属性 (カンマ区切り)                                                                               |
-| filterCol    | コレクション | -> | 取得する属性のコレクション                                                                                 |
-| options      | 整数     | -> | `dk with primary key`: \_\_KEY プロパティを追加;<br>`dk with stamp`: \_\_STAMP プロパティを追加 |
-| 戻り値          | オブジェクト | <- | エンティティを元にビルドされたオブジェクト                                                                         |
+| 引数           | タイプ        |    | 説明                                                                                            |
+| ------------ | ---------- |:--:| --------------------------------------------------------------------------------------------- |
+| filterString | Text       | -> | 取得する属性 (カンマ区切り)                                                                               |
+| filterCol    | Collection | -> | 取得する属性のコレクション                                                                                 |
+| options      | Integer    | -> | `dk with primary key`: \_\_KEY プロパティを追加;<br>`dk with stamp`: \_\_STAMP プロパティを追加 |
+| 戻り値          | Object     | <- | エンティティを元にビルドされたオブジェクト                                                                         |
 <!-- END REF -->
 
 #### 説明
@@ -1638,9 +1583,9 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 **.touched()** : Boolean<!-- END REF -->
 
 <!-- REF #EntityClass.touched().Params -->
-| 引数  | タイプ |    | 説明                                                   |
-| --- | --- |:--:| ---------------------------------------------------- |
-| 戻り値 | ブール | <- | 少なくとも一つのエンティティ属性が編集されていて未保存の場合に true、それ以外の場合には false |
+| 引数  | タイプ     |    | 説明                                                   |
+| --- | ------- |:--:| ---------------------------------------------------- |
+| 戻り値 | Boolean | <- | 少なくとも一つのエンティティ属性が編集されていて未保存の場合に true、それ以外の場合には false |
 <!-- END REF -->
 
 #### 説明
@@ -1682,9 +1627,9 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 **.touchedAttributes()** : Collection<!-- END REF -->
 
 <!-- REF #EntityClass.touchedAttributes().Params -->
-| 引数  | タイプ    |    | 説明                      |
-| --- | ------ |:--:| ----------------------- |
-| 戻り値 | コレクション | <- | 変更された属性の名前、あるいは空のコレクション |
+| 引数  | タイプ        |    | 説明                      |
+| --- | ---------- |:--:| ----------------------- |
+| 戻り値 | Collection | <- | 変更された属性の名前、あるいは空のコレクション |
 <!-- END REF -->
 
 #### 説明
@@ -1760,7 +1705,7 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 <!-- REF #EntityClass.unlock().Params -->
 | 引数  | タイプ    |    | 説明          |
 | --- | ------ |:--:| ----------- |
-| 戻り値 | オブジェクト | <- | ステータスオブジェクト |
+| 戻り値 | Object | <- | ステータスオブジェクト |
 <!-- END REF -->
 
 #### 説明

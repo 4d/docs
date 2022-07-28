@@ -86,7 +86,7 @@ The following compound assignment operators are supported:
 | División       | Number /= Number   | Número | `$n/=5 //$n:=$n/5`                                                  |
 |                | Time /= Time       | Hora   | `$t1/=$t2 //$t1:=$t1/$t2`                                           |
 |                | Time /= Number     | Número | `$t1/=5 //$t1:=$t1/5`                                               |
-|                | Picture /= Picture | Imagen | `$p1/=$p2 //$p1:=$p1/$p2 (add $p2 to the bottom of $p1)`            |
+|                | Picture /= Picture | Imagen | `$p1/=$p2 //$p1:=$p1/$p2 (añadir $p2 debajo de $p1)`                |
 |                | Picture /= Number  | Imagen | `$p1/=5 //$p1:=$p1/5 (desplazar verticalmente $p1 de 5 píxeles)`    |
 | Multiplicación | Text *= Number     | Texto  | `$t*="abc"  //$t:=$t*"abc"`                                         |
 |                | Number *= Number   | Número | `$n*=5 //$n:=$n*5`                                                  |
@@ -285,7 +285,7 @@ If $myObject is Null, the second argument is not executed, thus no error is thro
 
 ### Short-circuit OR operator (||)
 
-The || operator returns the value of one of the specified operands. The expression is evaluated left to right and tested for possible "short-circuit" evaluation using the following rule:
+El operador || devuelve el valor de uno de los operandos especificados. The expression is evaluated left to right and tested for possible "short-circuit" evaluation using the following rule:
 
 Given `Expr1 || Expr2`:
 

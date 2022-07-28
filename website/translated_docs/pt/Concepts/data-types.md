@@ -22,7 +22,7 @@ Apesar de geralmente serem equivalentes, alguns tipos de dados disponíveis no n
 | [Null](Concepts/dt_null_undefined.md)          | -                        | Sim                     | -                                                       | -                                                                |
 | [Ponteiro](Concepts/dt_pointer.md)             | -                        | Sim                     | `Ponteiro`                                              | `C_POINTER`, `ARRAY POINTER`                                     |
 | [Imagem](Concepts/dt_picture.md)               | Sim                      | Sim                     | `Imagem`                                                | `C_PICTURE`, `ARRAY PICTURE`                                     |
-| [BLOB](Concepts/dt_blob.md)                    | Sim                      | Sim                     | `Blob`, `4D.Blob`                                       | `C_BLOB`, `ARRAY BLOB`                                           |
+| [BLOB](Concepts/dt_blob.md)                    | Sim                      | Sim                     | `Blob`, `4D. Blob`                                      | `C_BLOB`, `ARRAY BLOB`                                           |
 | [Objeto](Concepts/dt_object.md)                | Sim                      | Sim                     | `Objeto`                                                | `C_OBJECT`, `ARRAY OBJECT`                                       |
 | [Coleção](Concepts/dt_collection.md)           | -                        | Sim                     | `Coleção`                                               | `C_COLLECTION`                                                   |
 | [Variant](Concepts/dt_variant.md)(2)           | -                        | Sim                     | `Variant`                                               | `C_VARIANT`                                                      |
@@ -39,7 +39,7 @@ The default value depends on the variable type:
 
 | Type          | Default value  |
 | ------------- | -------------- |
-| Boolean       | False          |
+| Booleano      | False          |
 | Date          | 00-00-00       |
 | Inteiro longo | 0              |
 | Hora          | 00:00:00       |

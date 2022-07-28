@@ -96,11 +96,15 @@ The returned Web server object contains the current values of the Web server pro
 From your component, you want to know if the Web server of the host database is started:
 
 ```4d
-  // Method of a component
- var $hostWS : 4D.WebServer
- $hostWS:=WEB Server(Web server host database)
- If($hostWS.isRunning)
-    ...
+  var $settings;$result : Object
+ var $webServer : 4D.WebServer
+
+ $settings:=New object("HTTPPort";8080;"defaultHomepage";"myAdminHomepage.html")
+
+ $webServer:=WEB Server
+ $result:=$webServer.start($settings)
+ If($result.success)
+  //...
  End if
 ```
 

@@ -184,8 +184,9 @@ Le menu de format du journal propose les options suivantes :
 
 -   **Pas de journal** : Lorsque cette option est sélectionnée, 4D ne génère pas d’historique des requêtes.
 
--   **CLF (Common Log Format)** : Lorsque cette option est sélectionnée, l’historique des requêtes est généré au format CLF. Avec le format CLF, chaque ligne du fichier représente une requête sous la forme :\
-host rfc931 utilisateur [JJ/MMM/AAAA] "requête" statut longueur\ Chaque champ est séparé par un espace, chaque ligne se termine par la séquence CR/LF (caractère 13, caractère 10).
+-   **CLF (Common Log Format)** : Lorsque cette option est sélectionnée, l’historique des requêtes est généré au format CLF. Avec le format CLF, chaque ligne du fichier représente une requête, comme : \
+  host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length\
+  Chaque champ est séparé par un espace et chaque ligne se termine par la séquence CR/LF (caractère 13, caractère 10).
 
     -   hôte : adresse IP du client (ex. 192.100.100.10)
     -   rfc931 : information non gérée par 4D, c’est toujours - (signe moins)

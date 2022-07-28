@@ -10,39 +10,38 @@ title: EntitySelection
 
 ### 概要
 
-|                                                                                                                                                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE EntitySelectionClass.index.Syntax -->](#91index93)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.index.Summary -->                                                         |
-| [<!-- INCLUDE EntitySelectionClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.attributeName.Summary -->                                     |
-| [<!-- INCLUDE #EntitySelectionClass.add().Syntax -->](#add)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.add().Summary -->                                                             |
-| [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.and().Summary -->                                                             |
-| [<!-- INCLUDE #EntitySelectionClass.average().Syntax -->](#average)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.average().Summary -->                                                 |
-| [<!-- INCLUDE #EntitySelectionClass.contains().Syntax -->](#contains)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.contains().Summary -->                                              |
-| [<!-- INCLUDE #EntitySelectionClass.count().Syntax -->](#count)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.count().Summary -->                                                       |
-| [<!-- INCLUDE #EntitySelectionClass.distinct().Syntax -->](#distinct)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.distinct().Summary -->                                              |
-| [<!-- INCLUDE #EntitySelectionClass.drop().Syntax -->](#drop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.drop().Summary -->                                                          |
-| [<!-- INCLUDE #EntitySelectionClass.extract().Syntax -->](#extract)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.extract().Summary -->                                                 |
-| [<!-- INCLUDE #EntitySelectionClass.first().Syntax -->](#first)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.first().Summary -->                                                       |
-| [<!-- INCLUDE #EntitySelectionClass.getDataClass().Syntax -->](#getdataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.getDataClass().Summary -->                                  |
-| [<!-- INCLUDE #EntitySelectionClass.getRemoteContextAttributes().Syntax -->](#getremotecontextattributes)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getRemoteContextAttributes().Summary --> |
-| [<!-- INCLUDE #EntitySelectionClass.isAlterable().Syntax -->](#isalterable)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.isAlterable().Summary -->                                     |
-| [<!-- INCLUDE #EntitySelectionClass.isOrdered().Syntax -->](#isordered)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.isOrdered().Summary -->                                           |
-| [<!-- INCLUDE #EntitySelectionClass.last().Syntax -->](#last)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.last().Summary -->                                                          |
-| [<!-- INCLUDE #EntitySelectionClass.length.Syntax -->](#length)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.length.Summary -->                                                        |
-| [<!-- INCLUDE #EntitySelectionClass.max().Syntax -->](#max)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.max().Summary -->                                                             |
-| [<!-- INCLUDE #EntitySelectionClass.min().Syntax -->](#min)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.min().Summary -->                                                             |
-| [<!-- INCLUDE #EntitySelectionClass.minus().Syntax -->](#minus)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.minus().Summary -->                                                       |
-| [<!-- INCLUDE #EntitySelectionClass.or().Syntax -->](#or)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.or().Summary -->                                                                |
-| [<!-- INCLUDE #EntitySelectionClass.orderBy().Syntax -->](#orderby)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.orderBy().Summary -->                                                 |
-| [<!-- INCLUDE #EntitySelectionClass.orderByFormula().Syntax -->](#orderbyformula)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.orderByFormula().Summary -->                            |
-| [<!-- INCLUDE #EntitySelectionClass.query().Syntax -->](#query)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.query().Summary -->                                                       |
-| [<!-- INCLUDE #EntitySelectionClass.queryPath.Syntax -->](#querypath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.queryPath.Summary -->                                               |
-| [<!-- INCLUDE #EntitySelectionClass.queryPlan.Syntax -->](#queryplan)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.queryPlan.Summary -->                                               |
-| [<!-- INCLUDE #EntitySelectionClass.refresh().Syntax -->](#refresh)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.refresh().Summary -->                                                 |
-| [<!-- INCLUDE #EntitySelectionClass.selected().Syntax -->](#selected)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.selected().Summary -->                                              |
-| [<!-- INCLUDE #EntitySelectionClass.slice().Syntax -->](#slice)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.slice().Summary -->                                                       |
-| [<!-- INCLUDE #EntitySelectionClass.sum().Syntax -->](#sum)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.sum().Summary -->                                                             |
-| [<!-- INCLUDE #EntitySelectionClass.toCollection().Syntax -->](#tocollection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.toCollection().Summary -->                                  |
+|                                                                                                                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [<!-- INCLUDE EntitySelectionClass.index.Syntax -->](#91index93)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.index.Summary -->                              |
+| [<!-- INCLUDE EntitySelectionClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.attributeName.Summary -->          |
+| [<!-- INCLUDE #EntitySelectionClass.add().Syntax -->](#add)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.add().Summary -->                                  |
+| [<!-- INCLUDE #EntitySelectionClass.and().Syntax -->](#and)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.and().Summary -->                                  |
+| [<!-- INCLUDE #EntitySelectionClass.average().Syntax -->](#average)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.average().Summary -->                      |
+| [<!-- INCLUDE #EntitySelectionClass.contains().Syntax -->](#contains)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.contains().Summary -->                   |
+| [<!-- INCLUDE #EntitySelectionClass.count().Syntax -->](#count)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.count().Summary -->                            |
+| [<!-- INCLUDE #EntitySelectionClass.distinct().Syntax -->](#distinct)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.distinct().Summary -->                   |
+| [<!-- INCLUDE #EntitySelectionClass.drop().Syntax -->](#drop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.drop().Summary -->                               |
+| [<!-- INCLUDE #EntitySelectionClass.extract().Syntax -->](#extract)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.extract().Summary -->                      |
+| [<!-- INCLUDE #EntitySelectionClass.first().Syntax -->](#first)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.first().Summary -->                            |
+| [<!-- INCLUDE #EntitySelectionClass.getDataClass().Syntax -->](#getdataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.getDataClass().Summary -->       |
+| [<!-- INCLUDE #EntitySelectionClass.isAlterable().Syntax -->](#isalterable)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.isAlterable().Summary -->          |
+| [<!-- INCLUDE #EntitySelectionClass.isOrdered().Syntax -->](#isordered)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.isOrdered().Summary -->                |
+| [<!-- INCLUDE #EntitySelectionClass.last().Syntax -->](#last)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.last().Summary -->                               |
+| [<!-- INCLUDE #EntitySelectionClass.length.Syntax -->](#length)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.length.Summary -->                             |
+| [<!-- INCLUDE #EntitySelectionClass.max().Syntax -->](#max)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.max().Summary -->                                  |
+| [<!-- INCLUDE #EntitySelectionClass.min().Syntax -->](#min)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.min().Summary -->                                  |
+| [<!-- INCLUDE #EntitySelectionClass.minus().Syntax -->](#minus)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.minus().Summary -->                            |
+| [<!-- INCLUDE #EntitySelectionClass.or().Syntax -->](#or)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.or().Summary -->                                     |
+| [<!-- INCLUDE #EntitySelectionClass.orderBy().Syntax -->](#orderby)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.orderBy().Summary -->                      |
+| [<!-- INCLUDE #EntitySelectionClass.orderByFormula().Syntax -->](#orderbyformula)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.orderByFormula().Summary --> |
+| [<!-- INCLUDE #EntitySelectionClass.query().Syntax -->](#query)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.query().Summary -->                            |
+| [<!-- INCLUDE #EntitySelectionClass.queryPath.Syntax -->](#querypath)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.queryPath.Summary -->                    |
+| [<!-- INCLUDE #EntitySelectionClass.queryPlan.Syntax -->](#queryplan)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.queryPlan.Summary -->                    |
+| [<!-- INCLUDE #EntitySelectionClass.refresh().Syntax -->](#refresh)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.refresh().Summary -->                      |
+| [<!-- INCLUDE #EntitySelectionClass.selected().Syntax -->](#selected)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.selected().Summary -->                   |
+| [<!-- INCLUDE #EntitySelectionClass.slice().Syntax -->](#slice)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.slice().Summary -->                            |
+| [<!-- INCLUDE #EntitySelectionClass.sum().Syntax -->](#sum)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.sum().Summary -->                                  |
+| [<!-- INCLUDE #EntitySelectionClass.toCollection().Syntax -->](#tocollection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.toCollection().Summary -->       |
 
 
 
@@ -82,7 +81,7 @@ title: EntitySelection
 ```4d
 var $employees : cs.EmployeeSelection
 ALL RECORDS([Employee])
-$employees:=Create entity selection([Employee]) 
+$employees:=Create entity selection([Employee])
 // $employees エンティティセレクションには、
 // Employee データクラスの全エンティティへの参照が格納されています
 ```
@@ -410,8 +409,8 @@ $result:=$sel[0].lock() //動作しません
 <!-- REF #EntitySelectionClass.average().Params -->
 | 引数            | タイプ  |    | 説明                                                            |
 | ------------- | ---- |:--:| ------------------------------------------------------------- |
-| attributePath | テキスト | -> | 計算に使用する属性パス                                                   |
-| 戻り値           | 実数   | <- | エンティティの属性値の算術平均 (相加平均) (エンティティセレクションがからの場合には undefined を返します) |
+| attributePath | Text | -> | 計算に使用する属性パス                                                   |
+| 戻り値           | Real | <- | エンティティの属性値の算術平均 (相加平均) (エンティティセレクションがからの場合には undefined を返します) |
 
 <!-- END REF -->
 
@@ -464,7 +463,7 @@ $result:=$sel[0].lock() //動作しません
 | 引数     | タイプ       |    | 説明                                                |
 | ------ | --------- |:--:| ------------------------------------------------- |
 | entity | 4D.Entity | -> | 評価するエンティティ                                        |
-| 戻り値    | ブール       | <- | エンティティがエンティティセレクションに属している場合には true、そうでない場合は false |
+| 戻り値    | Boolean   | <- | エンティティがエンティティセレクションに属している場合には true、そうでない場合は false |
 
 <!-- END REF -->
 
@@ -512,8 +511,8 @@ $result:=$sel[0].lock() //動作しません
 <!-- REF #EntitySelectionClass.count().Params -->
 | 引数            | タイプ  |    | 説明                                            |
 | ------------- | ---- |:--:| --------------------------------------------- |
-| attributePath | テキスト | -> | 計算に使用する属性パス                                   |
-| 戻り値           | 実数   | <- | エンティティセレクション内の *attributePath* が null でない値の個数 |
+| attributePath | Text | -> | 計算に使用する属性パス                                   |
+| 戻り値           | Real | <- | エンティティセレクション内の *attributePath* が null でない値の個数 |
 
 <!-- END REF -->
 
@@ -559,7 +558,7 @@ $result:=$sel[0].lock() //動作しません
 <!-- REF #EntitySelectionClass.copy().Params -->
 | 引数     | タイプ                |    | 説明                                  |
 | ------ | ------------------ |:--:| ----------------------------------- |
-| option | 整数                 | -> | `ck shared`: 共有可能なエンティティセレクションを返します |
+| option | Integer            | -> | `ck shared`: 共有可能なエンティティセレクションを返します |
 | 戻り値    | 4D.EntitySelection | <- | エンティティセレクションのコピー                    |
 
 <!-- END REF -->
@@ -622,11 +621,11 @@ $result:=$sel[0].lock() //動作しません
 
 
 <!-- REF #EntitySelectionClass.distinct().Params -->
-| 引数            | タイプ    |    | 説明                                                       |
-| ------------- | ------ |:--:| -------------------------------------------------------- |
-| attributePath | テキスト   | -> | 重複しない値を取得する属性のパス                                         |
-| option        | 整数     | -> | `dk diacritical`: アクセント等の発音区別符号を無視しない評価 (たとえば "A" # "a") |
-| 戻り値           | コレクション | <- | 重複しない値のみを格納したコレクション                                      |
+| 引数            | タイプ        |    | 説明                                                       |
+| ------------- | ---------- |:--:| -------------------------------------------------------- |
+| attributePath | Text       | -> | 重複しない値を取得する属性のパス                                         |
+| option        | Integer    | -> | `dk diacritical`: アクセント等の発音区別符号を無視しない評価 (たとえば "A" # "a") |
+| 戻り値           | Collection | <- | 重複しない値のみを格納したコレクション                                      |
 
 <!-- END REF -->
 
@@ -687,7 +686,7 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 <!-- REF #EntitySelectionClass.drop().Params -->
 | 引数   | タイプ                |    | 説明                                                            |
 | ---- | ------------------ |:--:| ------------------------------------------------------------- |
-| mode | 整数                 | -> | `dk stop dropping on first error`: 最初のドロップ不可エンティティで実行を止めます    |
+| mode | Integer            | -> | `dk stop dropping on first error`: 最初のドロップ不可エンティティで実行を止めます    |
 | 戻り値  | 4D.EntitySelection | <- | 成功した場合には空のエンティティセレクション、そうでない場合にはドロップ不可エンティティを格納したエンティティセレクション |
 
 <!-- END REF -->
@@ -751,12 +750,12 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 
 
 <!-- REF #EntitySelectionClass.extract().Params -->
-| 引数            | タイプ    |    | 説明                                                        |
-| ------------- | ------ |:--:| --------------------------------------------------------- |
-| attributePath | テキスト   | -> | 新しいコレクションに抽出する値の属性パス                                      |
-| targetPath    | テキスト   | -> | 抽出先の属性パスあるいは属性名                                           |
-| option        | 整数     | -> | `ck keep null`: 返されるコレクションに null 属性を含めます (デフォルトでは無視されます)。 |
-| 戻り値           | コレクション | <- | 抽出した値を格納したコレクション                                          |
+| 引数            | タイプ        |    | 説明                                                        |
+| ------------- | ---------- |:--:| --------------------------------------------------------- |
+| attributePath | Text       | -> | 新しいコレクションに抽出する値の属性パス                                      |
+| targetPath    | Text       | -> | 抽出先の属性パスあるいは属性名                                           |
+| option        | Integer    | -> | `ck keep null`: 返されるコレクションに null 属性を含めます (デフォルトでは無視されます)。 |
+| 戻り値           | Collection | <- | 抽出した値を格納したコレクション                                          |
 
 <!-- END REF -->
 
@@ -949,61 +948,6 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 
 <!-- END REF -->
 
-<!-- REF EntitySelectionClass.getRemoteContextAttributes().Desc -->
-## .getRemoteContextAttributes()
-
-<details><summary>履歴</summary>
-| バージョン | 内容 |
-| ----- | -- |
-| v19R5 | 追加 |
-</details>
-
-
-<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Syntax --> **.getRemoteContextAttributes()** : Text<!-- END REF -->
-
-
-<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Params -->
-| 引数     | タイプ  |    | 説明                                   |
-| ------ | ---- | -- | ------------------------------------ |
-| result | テキスト | <- | エンティティセレクションにリンクされたコンテキスト属性 (カンマ区切り) |
-
-<!-- END REF -->
-
-> **上級者向け:** この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。
-
-
-#### 説明
-
-`.getRemoteContextAttributes()` 関数は、<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Summary -->エンティティセレクションによって使われている最適化コンテキストの情報を返します<!-- END REF -->。
-
-エンティティセレクションについて [最適化コンテキスト](../ORDA/remoteDatastores.md#クライアントサーバーの最適化) が存在しない場合、関数は空のテキストを返します。
-
-#### 例題
-
-```4d
-var $ds : 4D.DataStoreImplementation
-var $persons : cs.PersonsSelection
-var $p : cs.PersonsEntity
-
-var $info : Text
-var $text : Text
-
-$ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
-
-$persons:=$ds.Persons.all()
-$text:="" 
-For each ($p; $persons)
-    $text:=$p.firstname+" lives in "+$p.address.city+" / " 
-End for each 
-
-$info:=$persons.getRemoteContextAttributes()
-//$info = "firstname,address,address.city"
-```
-
-#### 参照
-
-[Entity.getRemoteContextAttributes()](./EntityClass.md#getRemoteContextAttributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
-
 <!-- REF EntitySelectionClass.isAlterable().Desc -->
 ## .isAlterable()
 
@@ -1020,9 +964,9 @@ $info:=$persons.getRemoteContextAttributes()
 
 
 <!-- REF #EntitySelectionClass.isAlterable().Params -->
-| 引数  | タイプ |    | 説明                                         |
-| --- | --- |:--:| ------------------------------------------ |
-| 戻り値 | ブール | <- | エンティティセレクションが追加可能であれば true、それ以外の場合には false |
+| 引数  | タイプ     |    | 説明                                         |
+| --- | ------- |:--:| ------------------------------------------ |
+| 戻り値 | Boolean | <- | エンティティセレクションが追加可能であれば true、それ以外の場合には false |
 
 <!-- END REF -->
 
@@ -1063,9 +1007,9 @@ Form.products.add(Form.product)
 
 
 <!-- REF #EntitySelectionClass.isOrdered().Params -->
-| 引数  | タイプ |    | 説明                                        |
-| --- | --- |:--:| ----------------------------------------- |
-| 戻り値 | ブール | <- | 順列ありエンティティセレクションの場合には true、そうでない場合は false |
+| 引数  | タイプ     |    | 説明                                        |
+| --- | ------- |:--:| ----------------------------------------- |
+| 戻り値 | Boolean | <- | 順列ありエンティティセレクションの場合には true、そうでない場合は false |
 
 <!-- END REF -->
 
@@ -1170,7 +1114,6 @@ Form.products.add(Form.product)
 
 エンティティセレクションは、常に `.length` プロパティを持っています。
 
-> この関数は、元のエンティティセレクションを変更しません。
 
 #### 例題
 
@@ -1333,7 +1276,7 @@ Form.products.add(Form.product)
  var $employees; $result : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
 
- $employees:=ds.Employee.query("lastName = :1";"H@") 
+ $employees:=ds.Employee.query("lastName = :1";"H@")
   // $employees エンティティセレクションは、主キー710 のエンティティと他のエンティティを格納しています
   //  例: "Colin Hetrick", "Grady Harness", "Sherlock Holmes" (主キー710)
 
@@ -1649,7 +1592,6 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 エンティティが見つからない場合、空のエンティティセレクションが返されます。
 
-
 *queryString* および *value* や *querySettings* パラメーターを使ってクエリをビルドする方法の詳細については、DataClass[`.query()`](DataClassClass.md#query) 関数を参照ください。
 > *queryString* 内で **order by** ステートメントを省略した場合のデフォルトでは、返されるエンティティセレクションは、[順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし)のものになります。 しかしながら、クライアント/サーバーモードにおいては、順列ありのエンティティセレクションのように振る舞う (エンティティはセレクションの終わりに追加されていく) 点に注意してください。
 
@@ -1691,7 +1633,7 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 `.queryPath` プロパティは、<!-- REF #EntitySelectionClass.queryPath.Summary -->実際に 4Dで実行されたクエリの詳細な情報<!-- END REF -->を格納します。 このプロパティは、[`.query()`](#query) 関数の *querySettings* 引数に `"queryPath":true` プロパティが渡されていた場合に、クエリを通して生成された `EntitySelection` オブジェクトで利用可能です。
 
-詳細については、DataClass[`.query()`](DataClassClass.html#query) の **querySettings** の説明を参照ください。 
+詳細については、DataClass[`.query()`](DataClassClass.html#query) の **querySettings** の説明を参照ください。
 
 <!-- END REF -->
 
@@ -1709,12 +1651,11 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 <!-- REF #EntitySelectionClass.queryPlan.Syntax --> **.queryPlan** : Text<!-- END REF -->
 
 
-
 #### 説明
 
 `.queryPlan` プロパティは、<!-- REF #EntitySelectionClass.queryPlan.Summary -->実行前のクエリの詳細な情報 (クエリプラン) を格納します<!-- END REF -->。 このプロパティは、[`.query()`](#query) 関数の *querySettings* 引数に `"queryPlan":true` プロパティが渡されていた場合に、クエリを通して生成された `EntitySelection` オブジェクトで利用可能です。
 
-詳細については、DataClass[`.query()`](DataClassClass.html#query) の **querySettings** の説明を参照ください。 
+詳細については、DataClass[`.query()`](DataClassClass.html#query) の **querySettings** の説明を参照ください。
 
 <!-- END REF -->
 
@@ -1938,7 +1879,6 @@ $slice:=ds.Employee.all().slice(-1;-2) // インデックス 9 から 8番まで
 
 
 <!-- REF #EntitySelectionClass.sum().Syntax --> **.sum**( *attributePath* : Text ) : Real<!-- END REF -->
-
 
 
 <!-- REF #EntitySelectionClass.sum().Params -->
@@ -2204,6 +2144,7 @@ $employeesCollection:=$employees.toCollection($filter;0;0;2)
 #### 例題 4
 
 `relatedEntity` (リレートエンティティ) 型の属性を単純な形式で抽出した例:
+
 
 ```4d
 var $employeesCollection : Collection

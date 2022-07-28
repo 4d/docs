@@ -51,15 +51,15 @@ El objeto `Session` actual puede entonces ser accedido a través del comando [`S
 
 ![alt-text](assets/en/WebServer/schemaSession.png)
 
-Los procesos web no suelen terminar, sino que se reciclan en un fondo común para ser más eficientes. Cuando un proceso termina de ejecutar una petición, se devuelve al pool y queda disponible para la siguiente petición. Dado que un proceso web puede ser reutilizado por cualquier sesión, [las variables de proceso](Concepts/variables.md#process-variables) deben ser borradas por su código al final de su ejecución (utilizando [`CLEAR VARIABLE`](https://doc.4d.com/4dv18/help/command/en/page89.html) por ejemplo). Esta limpieza es necesaria para cualquier información relacionada con el proceso, como una referencia a un archivo abierto. Esta es la razón por la que **se recomienda** utilizar el objeto [Sesión](API/SessionClass.md) cuando se quiera guardar información relacionada con la sesión.
+Web processes usually do not end, they are recycled in a pool for efficiency. When a process finishes executing a request, it is put back in the pool and made available for the next request. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv18/help/command/en/page89.html) for example). This cleanup is necessary for any process related information, such as a reference to an opened file. This is the reason why **it is recommended** to use the [Session](API/SessionClass.md) object when you want to keep session related information.
 
 ### Modo apropiativo
 
-En 4D Server, las sesiones del servidor web se manejan automáticamente a través de procesos apropiativos, **incluso en modo interpretado**. Debe asegurarse de que el código de su servidor web es [compatible con una ejecución apropiativa](preemptiveWeb.md#writing-thread-safe-web-server-code).
+En 4D Server, las sesiones del servidor web se manejan automáticamente a través de procesos apropiativos, **incluso en modo interpretado**. You need to make sure that your web server code is [compliant with a preemptive execution](preemptiveWeb.md#writing-thread-safe-web-server-code).
 
-> Para depurar el código web interpretado en la máquina del servidor, asegúrese de que el depurador está [adjuntado al servidor](Debugging/debugging-remote.md) o [a una máquina remota](Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4d-client). Los procesos web pasan entonces al modo cooperativo y se puede depurar el código del servidor web.
+> To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](Debugging/debugging-remote.md) or [to a remote machine](Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4d-client). Web processes then switch to cooperative mode and the web server code can be debugged.
 
-Con 4D monopuesto, el código interpretado siempre se ejecuta en modo cooperativo.
+With 4D single-user, interpreted code always runs in cooperative mode.
 
 
 ## Compartir información

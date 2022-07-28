@@ -7,9 +7,9 @@ title: はじめに
 4D View Pro は、[4D フォームエリア](FormObjects/viewProArea_overview.md) と専用の [メソッド](method-list.md) が含まれる [4Dコンポーネント](Concepts/components.md) です。 これにより、先進的なスプレッドシート機能をプロジェクトに埋め込むことが可能です。
 
 
-![](assets/en/ViewPro/vpSpreadsheet.png)
+![](assets/en/ViewPro/vpSpreadsheet.PNG)
 
-スプレッドシートとは、セルのグリッドを格納したアプリケーションのことで、これらのセルに情報を入力したり、計算を実行させたり、あるいはピクチャーを表示したりすることができます。 4D View Proは、4Dに統合された [SpreadJS スプレッドシートソリューション](https://www.grapecity.com/spreadjs/docs/versions/v14/online/overview.html) に基づいて動作します。
+スプレッドシートとは、セルのグリッドを格納したアプリケーションのことで、これらのセルに情報を入力したり、計算を実行させたり、あるいはピクチャーを表示したりすることができます。 4D View Proは、4Dに統合された [SpreadJS スプレッドシートソリューション](https://www.grapecity.com/spreadjs/docs/v14/online/overview.html) に基づいて動作します。
 
 フォームに 4D View Pro エリアを埋め込むことで、4D View Pro コマンドを使ってスプレッドシートドキュメントを読み込んだり書き出したりすることができます。
 
@@ -83,7 +83,7 @@ title: はじめに
 
 *   列や行のヘッダーをクリックした場合: コンテンツの **挿入**、**削除**、**非表示**、**再表示**
 *   セルあるいはセルレンジのクリック:
-    *   **フィルタリング**: フィルタリングを使用して行を非表示にします (SpreadJS ドキュメントの [Filtering rows](https://www.grapecity.com/spreadjs/docs/versions/v14/online/filter.html) を参照ください)
+    *   **フィルタリング**: フィルタリングを使用して行を非表示にします (SpreadJS ドキュメントの [Filtering rows](http://help.grapecity.com/spread/SpreadSheets11/webframe.html#filter.html) を参照ください)
     *   **ソート**: 列のコンテンツを並べ替えます。
     *   **コメントの挿入**: ユーザーコメントを入力できます。 コメントが入力されているセルには、小さな赤い三角形が表示されます:  
       ![](assets/en/ViewPro/vpContext2.PNG)

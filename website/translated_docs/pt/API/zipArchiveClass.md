@@ -15,17 +15,15 @@ A 4D ZIP archive is a `File` or `Folder` object containing one or more files or 
 To retrieve and view the contents of a ZIP file object:
 
 ```4d
-var $path; $archive : 4D.File
-var $zipFile : 4D.ZipFile
-var $zipFolder : 4D.ZipFolder
+var $path; $archive : 4D. File
+var $zipFile : 4D. ZipFile
+var $zipFolder : 4D. ZipFolder
 var $txt : Text
 
 $path:=Folder(fk desktop folder).file("MyDocs/Archive.zip")
 $archive:=ZIP Read archive($path)
 $zipFolder:=$archive.root // armazenar a pasta principal zip
-$zipFile:=$zipFolder.files()[0] //ler o primeiro arquivo zipado
-
-If($zipFile.extension=".txt")
+$zipFile:=$zipFolder.files()[0] //ler o primeiro arquivo zipado If($zipFile.extension=".txt")
     $txt:=$zipFile.getText()
 End if
 ```
@@ -52,12 +50,12 @@ End if
 <!-- REF #_command_.ZIP Create archive.Params -->
 | Parameter       | Type       |    | Descrição                                            |
 | --------------- | ---------- |:--:| ---------------------------------------------------- |
-| fileToZip       | 4D.File    | -> | Objeto File ou Folder a comprimir                    |
+| fileToZip       | 4D. File   | -> | Objeto File ou Folder a comprimir                    |
 | folderToZip     | 4D. Folder | -> | Objeto File ou Folder a comprimir                    |
 | zipStructure    | Objeto     | -> | Objeto File ou Folder a comprimir                    |
-| destinationFile | 4D.File    | -> | Arquivo destino para o arquivo                       |
+| destinationFile | 4D. File   | -> | Arquivo destino para o arquivo                       |
 | options         | Integer    | -> | *folderToZip* option: `ZIP Without enclosing folder` |
-| Resultado       | Objeto     | <- | Status object                                        |
+| Resultado       | Objeto     | <- | Objeto de estado                                     |
 <!-- END REF -->
 
 
@@ -69,7 +67,7 @@ Pode passar um objeto 4D. File,  4D. Folder, ou um objeto de estrutura zip como 
 
 - *fileToZip*: You simply pass a `4D.File` to compress.
 
-- *folderToZip*: You pass a `4D.Folder` to compress. In this case, the *options* parameter allows you to compress only the contents of the folder (i.e., exclude the enclosing folder). By default, `ZIP Create archive` will compress the folder and its contents, so that the decompressing operation will recreate a folder. If you want the decompressing operation to restore only the contents of the folder, pass the `ZIP Without enclosing folder` constant in the *options* parameter.
+- *folderToZip*: You pass a `4D. Folder` to compress. In this case, the *options* parameter allows you to compress only the contents of the folder (i.e., exclude the enclosing folder). By default, `ZIP Create archive` will compress the folder and its contents, so that the decompressing operation will recreate a folder. If you want the decompressing operation to restore only the contents of the folder, pass the `ZIP Without enclosing folder` constant in the *options* parameter.
 
 - *zipStructure*: You pass an object describing the ZIP archive object. The following properties are available to define the structure:
 
@@ -86,7 +84,7 @@ No parâmetro *destinationFile* passe um `4D. File` objeto descrevendo o arquivo
 
 Quando um arquivo for criado, pode usar o comando [ZIP Read archive](#zip-read-archive) para acessá-lo.
 
-**Status object**
+**Objeto de estado**
 
 O estado do objeto retornado contém as propriedades abaixo:
 
@@ -102,7 +100,7 @@ O estado do objeto retornado contém as propriedades abaixo:
 Para comprimir um `4D. File`:
 
 ```4d
- var $file; $destination : 4D.File
+ var $file; $destination : 4D. File
  var $status : Object
 
  $destination:=Folder(fk desktop folder).file("MyDocs/file.zip")
@@ -117,8 +115,8 @@ Para comprimir um `4D. File`:
 Para comprimir uma `4D. Folder` sem a pasta em si:
 
 ```4D
- var $folder : 4D.Folder
- var $destination : 4D.File
+ var $folder : 4D. Folder
+ var $destination : 4D. File
  var $status : Object
 
  $destination:=Folder(fk desktop folder).file("MyDocs/Images.zip")
@@ -132,7 +130,7 @@ Para comprimir uma `4D. Folder` sem a pasta em si:
 Para compactar uma estrutura de arquivo ZIP sem uma senha e barra de progresso:
 
 ```4d
- var $destination : 4D.File
+ var $destination : 4D. File
  var $zip;$status : Object
  var progID : Integer
 
@@ -163,7 +161,7 @@ Para compactar uma estrutura de arquivo ZIP sem uma senha e barra de progresso:
 Pode passar uma coleção de pastas e arquivos para compactar ao objeto *zipStructure*:
 
 ```4d
- var $destination : 4D.File
+ var $destination : 4D. File
  var $zip;$err : Object
  $zip:=New object
  $zip.files:=New collection
@@ -208,7 +206,7 @@ $err:=ZIP Create archive($zip; $destination)
 <!-- REF #_command_.ZIP Read archive.Params -->
 | Parameter | Type           |    | Descrição                       |
 | --------- | -------------- |:--:| ------------------------------- |
-| zipFile   | 4D.File        | -> | Arquivos Zip                    |
+| zipFile   | 4D. File       | -> | Arquivos Zip                    |
 | senha     | Texto          | -> | Senha do arquivo ZIP, se houver |
 | Resultado | 4D. ZipArchive | <- | Objeto arquivo                  |
 <!-- END REF -->

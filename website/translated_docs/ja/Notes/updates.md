@@ -6,27 +6,9 @@ title: ドキュメンテーション更新情報
 このドキュメントのおもな更新内容のリストです。 4D製品の新機能についての一般的な情報は、[doc.4d.com](https://doc.4d.com) の **リリースノート** を参照ください。
 
 
-## 4D v19 R5
-
-- ビルドされたクライアント/サーバーアプリケーション:
-    - ビルド時に、プロジェクトの [directory.json ファイル](../Users/handling_users_groups.md#directoryjson-file) を [サーバーに埋め込む](../Desktop/building.md#ビルドしたサーバーアプリケーションにプロジェクトのユーザーとグループを埋め込む) ことができるようになりました。これにより、基本的なセキュリティのユーザーとグループ構成でクライアント/サーバーアプリケーションを運用することができます。
-    - ビルドするアプリケーションで、[使用しないモジュールの選択を解除](../Desktop/building.md#モジュールの選択解除) できるようになりました。
-
-- [クライアント/サーバーの最適化](../ORDA/remoteDatastores.md#クライアントサーバーの最適化): 新しいクラス関数により、ORDAキャッシュと最適化コンテキストの内容を操作することができます。 詳細は、[コンテキストの事前設定](../ORDA/remoteDatastores.md#コンテキストの事前設定) および [ORDAキャッシュ](../ORDA/remoteDatastores.md#ordaキャッシュ) を参照ください。
-
-    > これらの関数は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。
-
-- [DataClass クラス](../API/DataClassClass.md): 新しい [.getCount()](../API/DataClassClass.md#getcount) 関数は、データクラスの総エンティティ数を返します。
-
-- 4D View Pro:
-    - 新しい [VP SET DATA CONTEXT](ViewPro/method-list.md#vp-set-data-context)、[VP Get data context](ViewPro/method-list.md#vp-get-data-context)、[VP SET BINDING PATH](ViewPro/method-list.md#vp-set-binding-path)、および [VP Get binding path](ViewPro/method-list.md#vp-get-binding-path) コマンドを使って、データコンテキストを作成し、その内容をシートのセルにバインドすることができます。
-    - [VP EXPORT DOCUMENT](ViewPro/method-list.md#vp-get-binding-path) と [VP Export to object](ViewPro/method-list.md#vp-get-binding-path) は、データコンテキストの内容をセルの値としてエクスポートするための新しい `includeBindingSource` オプションを受け付けます。
-
-
 ## 4D v19 R4
 
 - ORDAクラス: [エイリアス属性](ORDA/ordaClasses.md#エイリアス属性-1) が利用可能に。
-
 - ループにおける [break と continue](Concepts/cf_looping.md#break-と-continue) 文のサポート。
 - [return](Concepts/flow-control.md#return-expression) 文と、値を返すための [return {expression}](Concepts/parameters.md#return-expression) 文のサポート。
 - [複合代入演算子](Concepts/operators.md#複合代入演算子)、[短絡演算子](Concepts/operators.md#短絡演算子)、および [三項演算子](Concepts/operators.md#三項演算子) のサポート。

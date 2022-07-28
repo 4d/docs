@@ -61,18 +61,18 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 </details>
 
 
-<!-- REF #_command_.File.Syntax --> **File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
+<!-- REF #_command_.File.Syntax --> **File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D. File<br>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D. File<!-- END REF -->
 
 
 
 <!-- REF #_command_.File.Params -->
-| Parameter    | Type    |    | Descrição                                       |
-| ------------ | ------- |:--:| ----------------------------------------------- |
-| path         | Texto   | -> | File path                                       |
-| fileConstant | Integer | -> | 4D file constant                                |
-| pathType     | Integer | -> | `fk posix path` (default) or `fk platform path` |
-| *            |         | -> | * to return file of host database               |
-| Resultado    | 4D.File | <- | New file object                                 |
+| Parameter    | Type     |    | Descrição                                       |
+| ------------ | -------- |:--:| ----------------------------------------------- |
+| path         | Texto    | -> | File path                                       |
+| fileConstant | Integer  | -> | 4D file constant                                |
+| pathType     | Integer  | -> | `fk posix path` (default) or `fk platform path` |
+| *            |          | -> | * to return file of host database               |
+| Resultado    | 4D. File | <- | New file object                                 |
 
 <!-- END REF -->
 
@@ -128,7 +128,7 @@ If the target *fileConstant* does not exist, a null object is returned. No error
 If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.
 
 
-## 4D.File.new()
+## 4D. File.new()
 
 <details><summary>Histórico</summary>
 | Versão | Mudanças   |
@@ -144,7 +144,7 @@ If the command is called from a component, pass the optional * parameter to get 
 
 File.new()</code> function <!-- REF #4D. File.new(). Summary -->creates and returns a new object of the `4D. File` type<!-- END REF -->. It is identical to the [`File`](#file) command (shortcut).
 
-> It is recommended to use the [`File`](#file) shortcut command instead of `4D.File.new()`.
+> It is recommended to use the [`File`](#file) shortcut command instead of `4D. File.new()`.
 
 <!-- INCLUDE document.copyTo().Desc -->
 
@@ -215,7 +215,7 @@ Creation of a preferences file in the database folder:
 | destinationFolder | 4D. Folder | -> | Destination folder for the alias or shortcut |
 | aliasName         | Texto      | -> | Name of the alias or shortcut                |
 | aliasType         | Integer    | -> | Type of the alias link                       |
-| Resultado         | 4D.File    | <- | Alias or shortcut file reference             |
+| Resultado         | 4D. File   | <- | Alias or shortcut file reference             |
 
 <!-- END REF -->
 
@@ -423,7 +423,7 @@ ALERT($info.
 | ----------------- | ---------- | -- | ---------------------------- |
 | destinationFolder | 4D. Folder | -> | Pasta de destino             |
 | newName           | Texto      | -> | Full name for the moved file |
-| Resultado         | 4D.File    | <- | Moved file                   |
+| Resultado         | 4D. File   | <- | Moved file                   |
 
 <!-- END REF -->
 
@@ -478,10 +478,10 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 
 <!--REF #FileClass.rename().Params -->
-| Parameter | Type    |    | Descrição                  |
-| --------- | ------- | -- | -------------------------- |
-| newName   | Texto   | -> | New full name for the file |
-| Resultado | 4D.File | <- | Renamed file               |
+| Parameter | Type     |    | Descrição                  |
+| --------- | -------- | -- | -------------------------- |
+| newName   | Texto    | -> | New full name for the file |
+| Resultado | 4D. File | <- | Renamed file               |
 
 <!-- END REF -->
 

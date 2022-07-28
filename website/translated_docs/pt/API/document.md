@@ -332,7 +332,7 @@ Essa propriedade é**apenas leitura**.
 </details>
 
 <!-- REF #document.original.Syntax -->
-**.original** : 4D.File<br>**.original** : 4D.Folder<!-- END REF -->
+**.original** : 4D. File<br>**.original** : 4D. Folder<!-- END REF -->
 
 
 #### Descrição
@@ -361,21 +361,16 @@ Essa propriedade é**apenas leitura**.
 </details>
 
 <!-- REF #document.parent.Syntax -->
-**.parent** : 4D.Folder<!-- END REF -->
+Essa propriedade é**apenas leitura**.<!-- END REF -->
 
 
 #### Descrição
 
-A propriedade `.parent` retorna <!-- REF #document.parent.Summary -->o objeto da pasta pai do arquivo<!-- END REF -->. If the path represents a system path (e.g., "/DATA/"), the system path is returned.
+A propriedade `.parent` retorna <!-- REF #document.parent.Summary -->o objeto da pasta pai do arquivo<!-- END REF -->. A função `.folder()`<!-- REF #directory.folder().</p>
 
 Essa propriedade é**apenas leitura**. 
 
-<!-- END REF -->
-
-
-
-
-<!-- REF document.path.Desc -->
+<!-- END REF --><!-- REF document.path.Desc -->
 ## .path
 
 <details><summary>Histórico</summary>
@@ -470,7 +465,7 @@ Essa propriedade é**apenas leitura**.
 | destinationFolder | 4D. Folder | -> | Pasta de destino                                       |
 | newName           | Texto      | -> | Nome para a copia                                      |
 | overwrite         | Integer    | -> | `fk overwrite` para substituir os elementos existentes |
-| Resultado         | 4D.File    | <- | Arquivo copiado                                        |
+| Resultado         | 4D. File   | <- | Arquivo copiado                                        |
 <!-- END REF -->
 
 
@@ -511,29 +506,29 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 ## .getContent()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças        |
-| ------ | --------------- |
-| v19 R2 | Returns 4D.Blob |
-| v17 R5 | Adicionado      |
+| Versão | Mudanças         |
+| ------ | ---------------- |
+| v19 R2 | Returns 4D. Blob |
+| v17 R5 | Adicionado       |
 </details>
 
 <!-- REF #document.getContent().Syntax -->
-**.getContent( )** : 4D.Blob<!-- END REF -->
+**.getContent( )** : 4D. Blob<!-- END REF -->
 
 <!-- REF #document.getContent().Params -->
-| Parameter | Type    |    | Descrição           |
-| --------- | ------- | -- | ------------------- |
-| Resultado | 4D.Blob | <- | Conteúdo do arquivo |
+| Parameter | Type     |    | Descrição           |
+| --------- | -------- | -- | ------------------- |
+| Resultado | 4D. Blob | <- | Conteúdo do arquivo |
 <!-- END REF -->
 
 
 #### Descrição
 
-The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `4D.Blob` object containing the entire content of a file<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
+The `.getContent()` function<!-- REF #document.getContent(). Summary -->returns a `4D. Blob` object containing the entire content of a file<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
 
 **Returned value**
 
-A `4D.Blob` object.
+A `4D. Blob` object.
 
 #### Exemplo
 

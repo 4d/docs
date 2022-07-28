@@ -19,7 +19,7 @@ Además, los archivos de proyecto 4D facilitan la programación genérica, la cr
 
 Los proyectos 4D se desarrollan con la aplicación **4D**. Ofrece un entorno de desarrollo integrado (IDE) para los proyectos 4D, así como un servidor web, un generador de proyectos para móviles y un tiempo de ejecución de aplicaciones, lo que permite desarrollar, probar y depurar cualquier tipo de proyecto.
 
-El desarrollo multiusuario se gestiona a través de herramientas estándar del repositorio de **control de fuentes** (Perforce, Git, SVN, etc.), que permiten a los desarrolladores trabajar en diferentes ramas y comparar, fusionar o revertir las modificaciones.
+Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications.
 
 
 ## Aplicación final
@@ -27,7 +27,7 @@ El desarrollo multiusuario se gestiona a través de herramientas estándar del r
 Los archivos del proyecto pueden ser [compilados](compiler.md) y fácilmente desplegados. 4D le permite crear tres tipos de aplicaciones a partir de sus proyectos:
 
 - las aplicaciones [web](WebServer/webServer.md),
-- las aplicaciones [móviles](https://developer.4d.com/go-mobile/),
+- [mobile](https://developer.4d.com/go-mobile/) applications,
 - las aplicaciones [de escritorio](Desktop/building.md) (cliente/servidor o monopuesto).
 
-Las aplicaciones de back-end pueden desplegarse utilizando 4D Server, 4D, o [fusionadas con la licencia 4D Volume](Desktop/building.md).
+Back end applications can be deployed using 4D Server, 4D, or [merged with 4D Volume license](Desktop/building.md).

@@ -4,7 +4,7 @@ title: Página Mantenimiento
 ---
 
 
-The **Maintenance** page of the 4D Server Administration window provides information concerning the current operation of the application. It also provides access to basic maintenance functions:
+The **Maintenance** page of the 4D Server Administration window provides information concerning the current operation of the application. También ofrece acceso a las funciones básicas de mantenimiento:
 
 ![](assets/en/Admin/server-maintenance.png)
 
@@ -17,7 +17,7 @@ These areas indicate the date, time and status of the last [data verification](M
 
 This button can be used to launch the verification operation directly, without interrupting the server. Note that the server may be noticeably slowed down during the operation.
 
-All the records and all the indexes of the database are verified. If you want to be able to target the verification or have additional options available, you will need to use the [Maintenance and Security Center](MSC/overview.md) (MSC).
+Se verifican todos los registros y todos los índices de la base de datos. If you want to be able to target the verification or have additional options available, you will need to use the [Maintenance and Security Center](MSC/overview.md) (MSC).
 
 After verification, a report file is generated in XML format on the server in the [maintenance Logs](Project/architecture.md#logs) folder. The **View Report** button (named **Download Report** if the operation was carried out from a remote machine) lets you display the file in your browser.
 
@@ -73,7 +73,7 @@ Refer to the [**Description of log files**](Debugging/debugLogFiles.md) section 
 
 The **Start Request and Debug Logs** button starts log files. Since this may noticeably deteriorate server performance, it is to be reserved for the development phase of the application.
 
-> This button only logs operations that are executed on the server.
+> Este botón sólo registra las operaciones que se ejecutan en el servidor.
 
 When the logs have been activated, the button title changes to **Stop Request and Debug Logs**, so that you can stop recording requests at any time. Pay attention to the fact that restarting the log after stopping it "erases" the previous file.
 
@@ -88,7 +88,7 @@ This button allows you to load a special server [log configuration file](Debuggi
 
 ### Detener el registro
 
-This button suspends all currently logging operations started on the server. This feature can be useful to temporarily lighten the server tasks.
+This button suspends all currently logging operations started on the server. Esta funcionalidad puede ser útil para aligerar temporalmente las tareas del servidor.
 
 When the logs have been paused, the button title changes to **Resume logging**, so that you can resume the logging operations.
 

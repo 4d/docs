@@ -35,6 +35,8 @@ EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)
 //pase la fecha !05/05/20! como parámetro de SetCalendarDate  
 //en el contexto de un subformulario  
 //pase la fecha !05/05/20! como parámetro de SetCalendarDate  
+//en el contexto de un subformulario  
+//pase la fecha !05/05/20! como parámetro de SetCalendarDate  
 //en el contexto de un subformulario
 ```
 
@@ -86,7 +88,7 @@ Function getArea($width : Integer; $height : Integer) -> $area : Integer
 Se aplican las siguientes reglas:
 
 - La línea de declaración debe ser la primera línea del código del método o de la función, de lo contrario se mostrará un error (sólo los comentarios o los saltos de línea pueden preceder la declaración).
-- Los nombres de los parámetros deben comenzar con un carácter `$` y cumplir con [reglas de denominación de las propiedades](identifiers.md#object-properties).
+- Parameter names must start with a `$` character and be compliant with [property naming rules](identifiers.md#object-properties).
 - Múltiples parámetros (y tipos) están separados por punto y coma (;).
 - Las sintaxis multilínea están soportadas (utilizando el carácter "\\").
 
@@ -126,7 +128,7 @@ El parámetro de retorno de una función se declara añadiendo una flecha (->) y
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
 
-También se puede declarar el parámetro de retorno sólo añadiendo `: tipo`, en cuyo caso se puede manejar mediante una [instrucción de retorno](#return-expression) o a través de `$0` en la [sintaxis secuencial](#returned-value-1)). Por ejemplo:
+You can also declare the return parameter only by adding `: type`, in which case it can be handled by a [return statement](#return-expression) or through `$0`in the [sequential syntax](#returned-value-1)). Por ejemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -240,12 +242,12 @@ The `return` statement can be used along with the standard syntax for [returned 
 Function getValue
     $0:=10
     return 20
-    // devuelve 20
+    // returns 20
 
 Function getValue -> $v : Integer
     return 10
-    $v:=20 // nunca se ejecuta
-    // devuelve 10
+    $v:=20 // never executed
+    // returns 10
 ```
 
 
@@ -498,10 +500,10 @@ ALERT("Are you sure?";"Yes I am") //2 parámetros
 ALERT("Time is over") //1 parámetro
 ```
 
-Los métodos y las funciones 4D también aceptan estos parámetros opcionales. Tenga en cuenta que aunque haya declarado 0, 1 o más parámetros en el método, siempre puede pasar el número de parámetros que desee. Si llama a un método o función con menos parámetros que los declarados, los parámetros que faltan se procesan como valores por defecto en el código llamado, [según su tipo](data-types.md#default-values). Por ejemplo:
+4D methods and functions also accept such optional parameters. Tenga en cuenta que aunque haya declarado 0, 1 o más parámetros en el método, siempre puede pasar el número de parámetros que desee. If you call a method or function with less parameters than declared, missing parameters are processed as default values in the called code, [according to their type](data-types.md#default-values). Por ejemplo:
 
 ```4d
-// función "concate" de myClass
+// "concate" function of myClass
 Function concate ($param1 : Text ; $param2 : Text)->$result : Text
 $result:=$param1+" "+$param2
 ```
@@ -512,7 +514,7 @@ $result:=$param1+" "+$param2
  $class.concate() // Displays " "
 ```
 
-> También puede llamar a un método o función con más parámetros de los declarados. Estarán disponibles en el código llamado a través de la sintaxis [${N}](#parameter-indirection-n).
+> You can also call a method or function with more parameters than declared. They will be available within the called code through the [${N} syntax](#parameter-indirection-n).
 
 Utilizando el comando `Count parameters` desde dentro del método llamado, puede detectar el número real de parámetros y realizar diferentes operaciones dependiendo de lo que haya recibido.
 

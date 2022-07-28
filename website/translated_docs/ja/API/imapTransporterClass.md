@@ -739,7 +739,7 @@ End if
 <!-- REF IMAPTransporterClass.expunge().Params -->
 | 引数  | タイプ    |    | 説明              |
 | --- | ------ |:--:| --------------- |
-| 戻り値 | オブジェクト | <- | expunge処理のステータス |
+| 戻り値 | Object | <- | expunge処理のステータス |
 <!-- END REF -->
 
 #### 説明
@@ -805,8 +805,8 @@ $status:=$transporter.expunge()
 <!-- REF #IMAPTransporterClass.getBoxInfo().Params -->
 | 引数   | タイプ    |    | 説明             |
 | ---- | ------ |:--:| -------------- |
-| name | テキスト   | -> | メールボックスの名称     |
-| 戻り値  | オブジェクト | <- | boxInfo オブジェクト |
+| name | Text   | -> | メールボックスの名称     |
+| 戻り値  | Object | <- | boxInfo オブジェクト |
 <!-- END REF -->
 
 
@@ -859,10 +859,10 @@ $status:=$transporter.expunge()
 **.getBoxList**( { *parameters* : Object } ) : Collection<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.getBoxList().Params -->
-| 引数         | タイプ    |    | 説明                    |
-| ---------- | ------ |:--:| --------------------- |
-| parameters | オブジェクト | -> | 引数のオブジェクト             |
-| 戻り値        | コレクション | <- | mailbox オブジェクトのコレクション |
+| 引数         | タイプ        |    | 説明                    |
+| ---------- | ---------- |:--:| --------------------- |
+| parameters | Object     | -> | 引数のオブジェクト             |
+| 戻り値        | Collection | <- | mailbox オブジェクトのコレクション |
 <!-- END REF -->
 
 
@@ -929,7 +929,7 @@ $status:=$transporter.expunge()
 <!-- REF #IMAPTransporterClass.getDelimiter().Params -->
 | 引数  | タイプ  |    | 説明      |
 | --- | ---- |:--:| ------- |
-| 戻り値 | テキスト | <- | 階層区切り文字 |
+| 戻り値 | Text | <- | 階層区切り文字 |
 <!-- END REF -->
 
 
@@ -985,12 +985,12 @@ $status:=$transporter.expunge()
 **.getMail**( *msgNumber*: Integer { ; *options* : Object } ) : Object<br>**.getMail**( *msgID*: Text { ; *options* : Object } ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.getMail().Params -->
-| 引数        | タイプ    |    | 説明                                               |
-| --------- | ------ |:--:| ------------------------------------------------ |
-| msgNumber | 整数     | -> | メッセージのシーケンス番号                                    |
-| msgID     | テキスト   | -> | メッセージの固有ID                                       |
-| options   | オブジェクト | -> | メッセージ管理オプション                                     |
-| 戻り値       | オブジェクト | <- | [Email オブジェクト](EmailObjectClass.md#email-オブジェクト) |
+| 引数        | タイプ     |    | 説明                                               |
+| --------- | ------- |:--:| ------------------------------------------------ |
+| msgNumber | Integer | -> | メッセージのシーケンス番号                                    |
+| msgID     | Text    | -> | メッセージの固有ID                                       |
+| options   | Object  | -> | メッセージ管理オプション                                     |
+| 戻り値       | Object  | <- | [Email オブジェクト](EmailObjectClass.md#email-オブジェクト) |
 <!-- END REF -->
 
 
@@ -1730,11 +1730,11 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 **.selectBox**( *name* : Text { ; *state* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.selectBox().Params -->
-| 引数    | タイプ    |    | 説明             |
-| ----- | ------ |:--:| -------------- |
-| name  | テキスト   | -> | メールボックスの名称     |
-| state | 整数     | -> | メールボックスのアクセス状態 |
-| 戻り値   | オブジェクト | <- | boxInfo オブジェクト |
+| 引数    | タイプ     |    | 説明             |
+| ----- | ------- |:--:| -------------- |
+| name  | Text    | -> | メールボックスの名称     |
+| state | Integer | -> | メールボックスのアクセス状態 |
+| 戻り値   | Object  | <- | boxInfo オブジェクト |
 <!-- END REF -->
 
 
@@ -1761,7 +1761,7 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 | プロパティ      | タイプ    | 説明                      |
 | ---------- | ------ | ----------------------- |
-| name       | テキスト   | メールボックスの名称              |
+| name       | Text   | メールボックスの名称              |
 | mailCount  | number | メールボックス内のメッセージの数        |
 | mailRecent | number | "recent" フラグがついたメッセージの数 |
 
@@ -1800,8 +1800,8 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 <!-- REF #IMAPTransporterClass.subscribe().Params -->
 | 引数   | タイプ    |    | 説明                |
 | ---- | ------ |:--:| ----------------- |
-| name | テキスト   | -> | メールボックスの名称        |
-| 戻り値  | オブジェクト | <- | subscribe処理のステータス |
+| name | Text   | -> | メールボックスの名称        |
+| 戻り値  | Object | <- | subscribe処理のステータス |
 <!-- END REF -->
 
 

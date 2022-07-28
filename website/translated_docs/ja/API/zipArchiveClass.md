@@ -79,7 +79,7 @@ End if
 | level       | Integer     | 圧縮レベル。 とりうる値: 1 - 10。 低い値ではファイルが大きくなり、高い値ではファイルが小さくなります。 ただし、圧縮レベルはパフォーマンスに影響します。 デフォルト値 (省略時): <p><li>`ZIP Compression standard`: 6</li></p><p><li>`ZIP Compression LZMA`: 4</li></p><p><li>`ZIP Compression XZ`: 4</li></p> |
 | encryption  | 整数          | パスワードが設定されていた場合に使用する暗号化方法:<p><li>`ZIP Encryption AES128`: 128-bit キーを使った AES による暗号化</li></p><p><li>`ZIP Encryption AES192`: 192-bit キーを使った AES による暗号化</li></p><p><li>`ZIP Encryption AES256`: 256-bit キーを使った AES による暗号化 (パスワードが設定されている場合のデフォルト)</li></p><p><li>`ZIP Encryption none`: 暗号化なし (パスワードが設定されてない場合のデフォルト)</li></p>                                           |
 | password    | Text        | 暗号化が必要な場合に使用するパスワード                                                                                                                                                        |
-| files       | Collection  | <p><li>`4D.File` または `4D.Folder` オブジェクトのコレクション</li></p><p><li>以下のプロパティを持ったオブジェクトのコレクション:</li></p><table><tr><td>プロパティ</td><td>タイプ</td><td>説明</td></tr><tr><td>source</td><td>4D.File または 4D.Folder<td>File または Folder</td></tr><tr><td>destination</td><td>テキスト</td><td>(任意) - アーカイブのコンテンツ構成を変更するための相対ファイルパス</td></tr><tr><td>option</td><td>number</td><td>(任意) - `ZIP Ignore invisible files` で非表示ファイルを無視、0 を渡すと全ファイルを圧縮</td></tr></table>                                                                                             |
+| files       | Collection  | <p><li>`4D.File` または `4D.Folder` オブジェクトのコレクション</li></p><p><li>以下のプロパティを持ったオブジェクトのコレクション:</li></p><table><tr><td>プロパティ</td><td>タイプ</td><td>説明</td></tr><tr><td>source</td><td>4D.File または 4D.Folder<td>File または Folder</td></tr><tr><td>destination</td><td>Text</td><td>(任意) - アーカイブのコンテンツ構成を変更するための相対ファイルパス</td></tr><tr><td>option</td><td>number</td><td>(任意) - `ZIP Ignore invisible files` で非表示ファイルを無視、0 を渡すと全ファイルを圧縮</td></tr></table>                                                                                             |
 | callback    | 4D.Function | $1 に圧縮の進捗 (0 - 100) を受け取るコールバックフォーミュラ                                                                                                                                      |
 
 *destinationFile* には、作成する ZIPアーカイブ (名前や位置など) を記述する `4D.File` オブジェクトを渡します。 作成した ZIPアーカイブがあらゆるソフトウェアで自動的に処理されるようにするため、".zip" 拡張子の使用が推奨されます。
@@ -218,7 +218,7 @@ $err:=ZIP Create archive($zip; $destination)
 
 `ZIP Read archive` コマンドは、 <!-- REF #_command_.ZIP Read archive.Summary -->*zipFile* のコンテンツを取得し、`4D.ZipArchive` オブジェクト形式で返します<!-- END REF -->。
 
-> このコマンドは ZIPアーカイブを展開することはしません。その中身に関する情報を提供するのみです。 アーカイブのコンテンツを取り出すには、[file.copyTo()](Document.md#copyto) あるいは [folder.copyTo()](Directory.md#copyto) などの関数を使用します。
+> このコマンドは ZIPアーカイブを展開することはしません。 その中身に関する情報を提供するのみです。 アーカイブのコンテンツを取り出すには、[file.copyTo()](Document.md#copyto) あるいは [folder.copyTo()](Directory.md#copyto) などの関数を使用します。
 
 *zipFile* 引数として、圧縮された ZIPアーカイブを参照している `4D.File` オブジェクトを渡します。 ターゲットのアーカイブファイルは `ZIP Read archive` が実行を終えるまで (全コンテンツ/参照が取得/解放されるまで) は開いた状態となり、その後自動的に閉じられます。
 

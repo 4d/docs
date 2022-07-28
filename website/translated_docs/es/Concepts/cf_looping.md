@@ -330,7 +330,7 @@ La colección debe contener sólo elementos del mismo tipo, de lo contrario se d
 En cada iteración del bucle, la variable _Current_Item_ se llena automáticamente con el elemento correspondiente de la colección. Hay que tener en cuenta los siguientes puntos:
 
 - Si la variable _Current_Item_ es de tipo objeto o de tipo colección (es decir, si _Expresión_ es una colección de objetos o de colecciones), al modificar esta variable se modificará automáticamente el elemento coincidente de la colección (porque los objetos y las colecciones comparten las mismas referencias). Si la variable es de tipo escalar, sólo se modificará la variable.
-- La variable _Current_Item_ debe ser del mismo tipo que los elementos de la colección. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
+- End for each</code> se utiliza con una _Expression_ del tipo _Collection_, el parámetro _Current_Item_ es una variable del mismo tipo que los elementos de la colección. Si algún elemento de la colección no es del mismo tipo que la variable, se genera un error y el bucle se detiene.
 - Si la colección contiene elementos con un valor **Null**, se generará un error si el tipo de variable _Current_Item_ no soporta valores **Null** (como las variables de tipo entero largo).
 
 #### Ejemplo

@@ -6,9 +6,10 @@ title: Zone Web
 
 Les zones Web (Web Areas) peuvent afficher tout type de contenu Web à l’intérieur de vos formulaires : pages HTML au contenu statique ou dynamique, fichiers, images, JavaScript, etc. Le moteur de rendu de la zone web dépend de la plate-forme d’exécution de l’application et de [l'option de moteur de rendu](properties_WebArea.md#use-embedded-web-rendering-engine) sélectionnée.
 
-Il est possible de créer plusieurs zones web dans un même formulaire. A noter cependant que l'utilisation de zones web est soumise à [quelques limitations](#web-area-rules).
+Il est possible de créer plusieurs zones web dans un même formulaire. A noter cependant que l'insertion de zones web est soumis à [quelques limitations](#web-areas-rules).
 
 Plusieurs [actions standard](#standard-actions), de nombreuses [commandes de langage](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.en.html) et [événements formulaires](#form-events) génériques et dédiés permettent au développeur de contrôler le fonctionnement des zones web. Des variables spécifiques permettent d’échanger des informations entre la zone et l’environnement 4D.
+> (*) L'usage de plugins web et d'applets Java est toutefois déconseillé dans les zones web car ils peuvent déstabiliser une opération menée par 4D, notamment au niveau de la gestion d'événement.
 
 
 ## Propriétés spécifiques
@@ -19,13 +20,11 @@ Deux variables spécifiques sont automatiquement associées à chaque zone web :
 - [`URL`](properties_WebArea.md#url) -- pour contrôler l’URL affiché par la zone web
 - [`Progression`](properties_WebArea.md#progression) -- pour contrôler le pourcentage de chargement de la page affichée dans la zone web.
 
-> À partir de 4D v19 R5, la variable de Progression n'est plus mise à jour dans les zones Web utilisant le [moteur de rendu du système Windows](./webArea_overview.md#web-rendering-engine).
-
 ### Moteur de rendu Web
 
 Vous pouvez choisir entre [deux moteurs de rendus](properties_WebArea.md#use-embedded-web-rendering-engine) pour la zone web, en fonction des spécificités de votre application.
 
-La sélection du moteur de rendu Web intégré vous permet d'appeler des méthodes 4D à partir de la zone Web et de vous assurer que les fonctionnalités sur macOS et Windows sont similaires. La sélection du moteur de rendu système est recommandée lorsque la zone web est connectée à Internet car elle bénéficie toujours des dernières mises à jour de sécurité.
+Le moteur de rendu Web vous permet d'appeler des méthodes 4D à partir de la zone web.
 
 ### Accéder aux méthodes 4D
 
@@ -155,10 +154,7 @@ Lors de l’exécution du formulaire, l’utilisateur dispose des fonctions d’
 
 - **Commandes Edit menu** : lorsque la zone web a le focus, les commandes du menu **Edit** permettent d’effectuer les actions de copier, coller, tout sélectionner, etc., en fonction de la sélection.
 - **Le menu contextuel** : il est possible d'utiliser le [menu contextuel](properties_Entry.md#context-menu) standard du système avec la zone web. L’affichage de ce menu peut également être contrôlé via la commande `WA SET PREFERENCE`.
-- **Glisser-déposer** : l’utilisateur peut effectuer des glisser-déposer de textes, d’images ou de documents à l’intérieur d’une zone web ou entre une zone web et les objets des formulaires 4D, en fonction des propriétés des objets 4D. Pour des raisons de sécurité, le changement du contenu d'une zone web via le glisser-déposer d'un fichier ou d'un URL n'est pas autorisé par défaut. Dans ce cas, le curseur affiche une icône d'interdiction ![](assets/en/FormObjects/forbidden.png). Vous devez utiliser l'instruction `WA SET PREFERENCE(*;"warea";WA enable URL drop;True)` pour afficher une icône "drop" et générer l'événement [`On Window Opening Denied`](Events/onWindowOpeningDenied.md). Dans cet événement, vous pouvez appeler la commande [`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/en/page1020.html) ou définir la [variable URL](properties_WebArea.md#url) en réponse à un dépôt utilisateur.
-
-> Les fonctions de glisser-déposer décrites ci-dessus ne sont pas prises en charge dans les zones Web utilisant le [moteur de rendu du système macOS](properties_WebArea.md#use-embedded-web-rendering-engine).
-
+- **Glisser-déposer** : l’utilisateur peut effectuer des glisser-déposer de textes, d’images ou de documents à l’intérieur d’une zone web ou entre une zone web et les objets des formulaires 4D, en fonction des propriétés des objets 4D. Pour des raisons de sécurité, le changement du contenu d'une zone web via le glisser-déposer d'un fichier ou d'un URL n'est pas autorisé par défaut. Dans ce cas, le curseur affiche une icône d'interdiction ![](assets/en/FormObjects/forbidden.png). La possibilité de déposer des URL ou des fichiers dans la zone web doit être explicitement autorisée à l'aide de la commande `WA SET PREFERENCE`.
 
 ### Sous-formulaires
 
@@ -175,39 +171,42 @@ Pour des raisons liées aux mécanismes de redessinement des fenêtres, l'insert
 Sous Windows, il est déconseillé d’accéder via une zone web au serveur Web de l’application 4D contenant la zone car cette configuration peut provoquer un conflit paralysant l’application. Bien entendu, un 4D distant peut accéder au serveur Web du 4D Server, mais pas à son propre serveur web.
 
 ### Insertion du protocole (macOS)
-
 Les URLs manipulés par programmation dans les zones web sous macOS doivent débuter par le protocole. Par exemple, vous devez passer la chaîne "http://www.monsite.fr" et non uniquement "www.monsite.fr".
 
 
 ## Accès à l’inspecteur web
 
-Vous pouvez visualiser et utiliser un inspecteur web dans les zones web de vos formulaires ou dans les zones web hors écran. Il permet d’analyser le code et les flux d’information des pages web.
+Vous pouvez visualiser et utiliser un inspecteur web dans les zones web de vos formulaires ou dans les zones web hors écran. L’inspecteur web est un débogueur, proposé par le moteur de rendu Web intégré. Il permet d’analyser le code et les flux d’information des pages web.
+
+### Afficher l’inspecteur web
 
 Pour afficher l'inspecteur web, vous pouvez soit exécuter la commande `WA OPEN WEB INSPECTOR`, soit utiliser le menu contextuel de la zone web.
 
-- **Execute the `WA OPEN WEB INSPECTOR` command**<br> This command can be used directly with onscreen (form object) and offscreen web areas.
+- **Execute the `WA OPEN WEB INSPECTOR` command**<br> This command can be used directly with onscreen (form object) and offscreen web areas. Dans le cas d'une zone web hors écran, [le moteur de rendu web intégré doit être sélectionné](properties_WebArea.md#use-embedded-web-rendering-engine) pour la zone (l’inspecteur web n’est disponible que dans cette configuration).
 
 - **Use the web area context menu**<br> This feature can only be used with onscreen web areas and requires that the following conditions are met:
+    - le moteur de rendu web intégré est sélectionné pour la zone
     - le [menu contextuel](properties_Entry.md#context-menu) de la zone Web est activé
     - l'utilisation de l'inspecteur est expressément autorisée dans la zone via la déclaration suivante :
-    ```4d
-        WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)  
-    ```
 
-> Avec le [moteur de rendu du système Windows](properties_WebArea.md#use-embedded-web-rendering-engine), une modification de cette préférence nécessite une action de navigation dans la zone (par exemple, un rafraîchissement de la page) pour être prise en compte.
+```4d
+    WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)
+```
 
 Pour plus d'informations, reportez-vous à la description de la commande `WA SET PREFERENCE`.
 
+### Utilisation de l’Inspecteur web
+
 Lorsque les paramétrages décrits ci-dessus sont effectués, vous disposez de nouvelles options telles que **Inspect Element** dans le menu contextuel de la zone. Lorsque vous sélectionnez cette option, le débogueur de la zone web est alors affiché.
 
-> Pour une description détaillée des fonctionnalités de ce débogueur, veuillez vous reporter à la documentation du moteur de rendu web utilisé.
+> L’inspecteur web est inclus dans le moteur de rendu web intégré. Pour une description détaillée des fonctionnalités de ce débogueur, veuillez vous reporter à la documentation du moteur de rendu web utilisé.
 
 
 
 
 ## Propriétés prises en charge
 
-[Style de la bordure](properties_BackgroundAndBorder.md#border-line-style) - [Bas](properties_CoordinatesAndSizing.md#bottom) - [CSS Class](properties_Object.md#css-class) - [Menu contextuel](properties_Entry.md#context-menu) - [Hauteur](properties_CoordinatesAndSizing.md#height) - [Dim. horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Gauche](properties_CoordinatesAndSizing.md#left) - [Méthode](properties_Action.md#method) - [Nom](properties_Object.md#object-name) - [Progression](properties_WebArea.md#progression) - [Droite](properties_CoordinatesAndSizing.md#right) - [Haut](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [URL](properties_WebArea.md#url) - [Utiliser le moteur de rendu Web intégré](properties_WebArea.md#use-embedded-web-rendering-engine) - [Variable ou expression](properties_Object.md#variable-or-expression) - [Dim. vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilité](properties_Display.md#visibility) - [Largeur](properties_CoordinatesAndSizing.md#width) 
+[Style de la bordure](properties_BackgroundAndBorder.md#border-line-style) - [Bas](properties_CoordinatesAndSizing.md#bottom) - [CSS Class](properties_Object.md#css-class) - [Menu contextuel](properties_Entry.md#context-menu) - [Hauteur](properties_CoordinatesAndSizing.md#height) - [Dim. horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Gauche](properties_CoordinatesAndSizing.md#left) - [Méthode](properties_Action.md#method) - [Nom](properties_Object.md#object-name) - [Progression](properties_WebArea.md#progression) - [Droite](properties_CoordinatesAndSizing.md#right) - [Haut](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - URL<13> - [Utiliser le moteur de rendu Web intégré](properties_WebArea.md#use-embedded-web-rendering-engine) - [Variable ou expression](properties_Object.md#variable-or-expression) - [Dim. vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilité](properties_Display.md#visibility) - [Largeur](properties_CoordinatesAndSizing.md#width) </p> 
 
 
 

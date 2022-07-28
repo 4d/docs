@@ -6,9 +6,10 @@ title: Área Web
 
 Las áreas web pueden mostrar varios tipos de contenido web dentro de sus formularios: páginas HTML con contenidos estáticos o dinámicos, archivos, imágenes, JavaScript, etc. El motor de renderizado del área web depende de la plataforma de ejecución de la aplicación y de [la opción motor de renderizado](properties_WebArea.md#use-embedded-web-rendering-engine) seleccionada.
 
-Es posible crear varias áreas web en el mismo formulario. Tenga en cuenta, sin embargo, que el uso de las áreas web debe seguir [varias reglas](#web-area-rules).
+Es posible crear varias áreas web en el mismo formulario. Tenga en cuenta, sin embargo, que el uso de las áreas web debe seguir [varias reglas](#web-areas-rules).
 
 Varias [acciones estándar](#standard-actions) dedicadas, numerosos [comandos de lenguaje](https://doc.4d.com/4Dv18/4D/18/Web-Area.201-4504309.en.html) así como también [eventos formulario](#form-events) genéricos y específicos, permiten al desarrollador controlar el funcionamiento de las áreas web. Se pueden utilizar variables específicas para intercambiar información entre el área y el entorno 4D.
+> No se recomienda el uso de plugins web ni de applets de Java en las áreas web porque pueden provocar inestabilidad en el funcionamiento de 4D, especialmente a nivel de gestión de eventos.
 
 
 ## Propiedades específicas
@@ -19,13 +20,11 @@ Se pueden asociar dos variables específicas a cada área web:
 - [`URL`](properties_WebArea.md#url) --para controlar la URL que muestra el área web
 - [`Progresión`](properties_WebArea.md#progression) -- para controlar el porcentaje de carga de la página mostrada en el área web.
 
-> A partir de 4D v19 R5, la variable Progression ya no se actualiza en las Áreas Web que utilizan el [motor de renderizado del sistema Windows](./webArea_overview.md#web-rendering-engine).
-
 ### Motor de renderización web
 
 Puede elegir entre [dos motores de renderizado](properties_WebArea.md#use-embedded-web-rendering-engine) para el área web, dependiendo de las particularidades de su aplicación.
 
-Seleccionar el motor de renderizado web anidado permite llamar a los métodos de 4D desde el área web y asegurarse de que las funcionalidades en macOS y Windows sean similares. Se recomienda seleccionar el motor de renderizado del sistema cuando el área web está conectada a Internet porque siempre se beneficia de las últimas actualizaciones de seguridad.
+La selección del motor de renderizado web anidado le permite llamar a los métodos 4D desde el área web.
 
 ### Acceder a los métodos 4D
 
@@ -124,7 +123,7 @@ $4d.calcSum(33, 45, 75, 102.5, 7, function(dollarZero)
 
 ## Acciones estándar
 
-Hay cuatro acciones estándar específicas para gestionar las áreas web de forma automática: `Open Back URL`, `Open Forward URL`, `Refresh Current URL` y `Stop Loading URL`. Estas acciones pueden asociarse a botones o comandos de menú y permiten una rápida implementación de interfaces web básicas. Estas acciones se describen en [Acciones estándar](https://doc.4d.com/4Dv17R6/4D/17-R6/Standard-actions.300-4354791.en.html).
+Hay cuatro acciones estándar específicas para gestionar las áreas web de forma automática: `Open Back URL`, `Open Forward URL`, `Refresh Current URL` y `Stop Loading URL`. Estas acciones pueden asociarse a botones o comandos de menú y permiten una rápida implementación de interfaces web básicas. These actions are described in [Standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Standard-actions.300-4354791.en.html).
 
 
 ## Eventos formulario
@@ -155,10 +154,7 @@ Cuando se ejecuta el formulario, las funciones estándar de la interfaz del nave
 
 - **Comandos menú Edición**: cuando el área web tiene el foco, los comandos del menú **Edición** pueden utilizarse para realizar acciones como copiar, pegar, seleccionar todo, etc., según la selección.
 - **El menú contextual**: es posible utilizar el [menú contextual](properties_Entry.md#context-menu) estándar del sistema con el área web. La visualización del menú contextual se puede controlar con el comando `WA SET PREFERENCE`.
-- **Arrastrar y soltar**: el usuario puede arrastrar y soltar texto, imágenes y documentos dentro del área web o entre un área web y los objetos de los formularios 4D, según las propiedades de los objetos 4D. Por razones de seguridad, no se permite por defecto cambiar el contenido de un área web mediante la acción de arrastrar y soltar un archivo o una URL. En este caso, el cursor muestra un icono "prohibido" ![ mark=](assets/es/FormObjects/forbidden.png). Tiene que utilizar la instrucción `WA SET PREFERENCE(*; "warea";WA enable URL drop;True)` para mostrar un icono "soltar" y generar el evento [`On Window Opening Denied`](Events/onWindowOpeningDenied.md). En este evento, se puede llamar al comando [`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/en/page1020.html) o establecer la variable [URL](properties_WebArea.md#url) en respuesta a una caída del usuario.
-
-> Las funciones de arrastrar y soltar descritas anteriormente no son compatibles con las áreas web que utilizan el motor de renderización del sistema [de macOS](properties_WebArea.md#use-embedded-web-rendering-engine).
-
+- **Arrastrar y soltar**: el usuario puede arrastrar y soltar texto, imágenes y documentos dentro del área web o entre un área web y los objetos de los formularios 4D, según las propiedades de los objetos 4D. Por razones de seguridad, no se permite por defecto cambiar el contenido de un área web mediante la acción de arrastrar y soltar un archivo o una URL. En este caso, el cursor muestra un icono "prohibido" ![ mark=](assets/es/FormObjects/forbidden.png). Tiene que utilizar el comando `WA SET PREFERENCE` para permitir explícitamente soltar URLs o archivos en el área web.
 
 ### Subformularios
 
@@ -175,32 +171,35 @@ Por razones relacionadas con los mecanismos de redibujado de ventanas, la inserc
 En Windows, no se recomienda acceder, a través de un área web, al servidor web de la aplicación 4D que contiene el área, ya que esta configuración podría provocar un conflicto que paralice la aplicación. Por supuesto, un 4D remoto puede acceder al servidor web de 4D Server, pero no a su propio servidor web.
 
 ### Inserción del protocolo (macOS)
-
 Las URLs manejadas por programación en áreas web bajo macOS deben comenzar con el protocolo. Por ejemplo, debe pasar la cadena "http://www.mysite.com" y no sólo "www.mysite.com".
 
 
 ## Acceso al inspector web
 
-Puede visualizar y utilizar un inspector web dentro de las áreas web de sus formularios o en las áreas web fuera de la pantalla. El inspector web es un depurador que permite analizar el código y el flujo de información de las páginas web.
+Puede visualizar y utilizar un inspector web dentro de las áreas web de sus formularios o en las áreas web fuera de la pantalla. El inspector web es un depurador que ofrece el motor web integrado. Permite analizar el código y el flujo de información de las páginas web.
 
-Para mostrar el inspector Web, puede ejecutar el comando `WA OPEN WEB INSPECTOR` o utilizar el menú contextual del área web.
+### Mostrar el inspector web
 
-- **Ejecute el comando `WA OPEN WEB INSPECTOR` **<br> Este comando se puede utilizar directamente con áreas web en pantalla (objeto formulario) y fuera de ella.
+Para mostrar el inspector web, puede ejecutar el comando `WA OPEN WEB INSPECTOR` o utilizar el menú contextual del área web.
 
-- **Use the web area context menu**<br> This feature can only be used with onscreen web areas and requires that the following conditions are met:
+- **Ejecute el comando `WA OPEN WEB INSPECTOR` **<br> Este comando se puede utilizar directamente con áreas web en pantalla (objeto formulario) y fuera de ella. En el caso de un área web en pantalla, debe haber [seleccionado el motor de renderizado web integrado](properties_WebArea.md#use-embedded-web-rendering-engine) para el área (el inspector web sólo está disponible con esta configuración).
+
+- **Utilice el menú contextual del área web**<br> Esta funcionalidad sólo puede utilizarse con áreas web en pantalla y requiere que se cumplan las siguientes condiciones:
+    - se selecciona el motor de renderizado web integrado para el área
     - el [menú contextual](properties_Entry.md#context-menu) del área web está activado
     - el uso del inspector está expresamente autorizado en el área mediante la siguiente declaración:
-    ```4d
-        WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)  
-    ```
 
-> Con [Motor de renderizado del sistema Windows](properties_WebArea.md#use-embedded-web-rendering-engine), un cambio en esta preferencia requiere que se tenga en cuenta una acción de navegación en el área (por ejemplo, una actualización de la página).
+```4d
+    WA SET PREFERENCE(*;"WA";WA enable Web inspector;True)
+```
 
 Para más información, consulte la descripción del comando `WA SET PREFERENCE`.
 
+### Utilización del inspector web
+
 Cuando haya realizado los ajustes como se ha descrito anteriormente, entonces tendrá nuevas opciones como **Inspeccionar elemento** en el menú contextual del área. Al seleccionar esta opción, se muestra la ventana del inspector web.
 
-> Para una descripción detallada de las funcionalidades de este depurador, consulte la documentación que ofrece el motor de renderizado web.
+> El inspector web está incluido en el motor de renderizado web integrado. Para una descripción detallada de las funcionalidades de este depurador, consulte la documentación que ofrece el motor de renderizado web.
 
 
 

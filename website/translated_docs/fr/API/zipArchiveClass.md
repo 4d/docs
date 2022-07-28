@@ -94,7 +94,7 @@ L'objet statut retourné contient les propriétés suivantes :
 | ---------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | statusText | Text    | Message d'erreur (le cas échéant) :<li>Impossible d'ouvrir l'archive ZIP</li><li>Impossible de créer une archive ZIP</li><li>Le mot de passe est requis pour le chiffrement |
 | status     | Integer | Code d'état                                                                                                                                                     |
-| success    | Boolean | Vrai si l'archive a été créée avec succès, sinon faux                                                                                                           |
+| success    | Booléen | Vrai si l'archive a été créée avec succès, sinon faux                                                                                                           |
 
 
 #### Exemple 1

@@ -25,27 +25,27 @@ Attachment objects provide the following read-only properties and functions:
 ## MAIL New attachment
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças                             |
-| ------ | ------------------------------------ |
-| v19 R2 | Accepts 4D.File, 4D.ZipFile, 4D.Blob |
+| Versão | Mudanças                                |
+| ------ | --------------------------------------- |
+| v19 R2 | Accepts 4D. File, 4D. ZipFile, 4D. Blob |
 </details>
 
 
-<!-- REF #_command_.MAIL_New_attachment.Syntax --> **MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
+<!-- REF #_command_.MAIL_New_attachment.Syntax --> **MAIL New attachment**( *file* : 4D. File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D. MailAttachment<br>**MAIL New attachment**( *zipFile* : 4D. ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D. MailAttachment<br>**MAIL New attachment**( *blob* : 4D. Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D. MailAttachment<br>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.<!-- END REF -->
 
 <!-- REF #_command_.MAIL_New_attachment.Params -->
 
-| Parameter   | Type              |    | Descrição                                                            |
-| ----------- | ----------------- |:--:| -------------------------------------------------------------------- |
-| file        | 4D.File           | -> | Attachment file                                                      |
-| zipFile     | 4D.ZipFile        | -> | Attachment Zipfile                                                   |
-| blob        | 4D.Blob           | -> | BLOB containing the attachment                                       |
-| path        | Texto             | -> | Path of the attachment file                                          |
-| name        | Texto             | -> | Name + extension used by the mail client to designate the attachment |
-| cid         | Texto             | -> | ID of attachment (HTML messages only), or " " if no cid is required  |
-| type        | Texto             | -> | Value of the content-type header                                     |
-| disposition | Texto             | -> | Value of the content-disposition header: "inline" or "attachment".   |
-| Resultado   | 4D.MailAttachment | <- | Attachment object                                                    |
+| Parameter   | Type               |    | Descrição                                                            |
+| ----------- | ------------------ |:--:| -------------------------------------------------------------------- |
+| file        | 4D. File           | -> | Attachment file                                                      |
+| zipFile     | 4D. ZipFile        | -> | Attachment Zipfile                                                   |
+| blob        | 4D. Blob           | -> | BLOB containing the attachment                                       |
+| path        | Texto              | -> | Path of the attachment file                                          |
+| name        | Texto              | -> | Name + extension used by the mail client to designate the attachment |
+| cid         | Texto              | -> | ID of attachment (HTML messages only), or " " if no cid is required  |
+| type        | Texto              | -> | Value of the content-type header                                     |
+| disposition | Texto              | -> | Value of the content-disposition header: "inline" or "attachment".   |
+| Resultado   | 4D. MailAttachment | <- | Attachment object                                                    |
 
 <!-- END REF -->
 
@@ -56,9 +56,9 @@ MailAttachment.new()</code> <!-- REF #4D. MailAttachment.new(). Summary -->cria 
 
 To define the attachment, you can use:
 
-- a *file*, pass a `4D.File` object containing the attachment file.
-- a *zipfile*, pass a `4D.ZipFile` object containing the attachment file.
-- a *blob*, pass a `4D.Blob` object containing the attachment itself.
+- a *file*, pass a `4D. File` object containing the attachment file.
+- a *zipfile*, pass a `4D. ZipFile` object containing the attachment file.
+- a *blob*, pass a `4D. Blob` object containing the attachment itself.
 - a *path*, pass a **text** value containing the path of the attachment file, expressed with the system syntax. You can pass a full path name or a simple file name (in which case 4D will search for the file in the same directory as the project file).
 
 The optional *name* parameter lets you pass the name and extension to be used by the mail client to designate the attachment. If *name* is omitted and:
@@ -109,9 +109,7 @@ You want to send an email with a user-selected file as an attachment and an imag
 
 ```4d
 $doc:=Select document("";"*";"Please select a file to attach";0)
-If (OK=1) //If a document was selected
-
-C_OBJECT($email;$server;$transporter)
+If (OK=1) //If a document was selected C_OBJECT($email;$server;$transporter)
 
 $server:=New object
 $server.host:="smtp.mail.com"
@@ -136,9 +134,7 @@ $email.htmlBody:="<html>"+\
 "</head>"+\
 "</html>"
 
-$transporter.send($email) //send mail
-
-End if
+$transporter.send($email) //send mail End if
 ```
 
 #### Exemplo 2
@@ -147,9 +143,7 @@ You want to send an email with a 4D Write Pro area as an attachment:
 
 ```4d
 C_BLOB($blob)
-WP EXPORT VARIABLE(WPArea;$blob;wk docx)
-
-C_OBJECT($email;$server;$transporter)
+WP EXPORT VARIABLE(WPArea;$blob;wk docx) C_OBJECT($email;$server;$transporter)
 
 $server:=New object
 $server.host:="smtp.mail.com"
@@ -168,37 +162,37 @@ $transporter.send($email)
 ```
 
 
-## 4D.MailAttachment.new()
+## 4D. MailAttachment.new()
 
 <details><summary>Histórico</summary>
-| Versão | Mudanças                             |
-| ------ | ------------------------------------ |
-| v19 R2 | Accepts 4D.File, 4D.ZipFile, 4D.Blob |
+| Versão | Mudanças                                |
+| ------ | --------------------------------------- |
+| v19 R2 | Accepts 4D. File, 4D. ZipFile, 4D. Blob |
 </details>
 
 
-<!-- REF #4D.MailAttachment.new().Syntax --> **4D.MailAttachment.new**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br>**4D.MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
+<!-- REF #4D.MailAttachment.new().Syntax --> **4D. MailAttachment.new**( *file* : 4D. File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D. MailAttachment.new</strong>( *zipFile* : 4D. ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D. MailAttachment.new</strong>( *blob* : 4D. Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D. MailAttachment.new</strong>( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D. MailAttachment<!-- END REF -->
 
 <!-- REF #4D.MailAttachment.new().Params -->
 
-| Parameter   | Type              |    | Descrição                                                            |
-| ----------- | ----------------- |:--:| -------------------------------------------------------------------- |
-| file        | 4D.File           | -> | Attachment file                                                      |
-| zipFile     | 4D.ZipFile        | -> | Attachment Zipfile                                                   |
-| blob        | 4D.Blob           | -> | BLOB containing the attachment                                       |
-| path        | Texto             | -> | Path of the attachment file                                          |
-| name        | Texto             | -> | Name + extension used by the mail client to designate the attachment |
-| cid         | Texto             | -> | ID of attachment (HTML messages only), or " " if no cid is required  |
-| type        | Texto             | -> | Value of the content-type header                                     |
-| disposition | Texto             | -> | Value of the content-disposition header: "inline" or "attachment".   |
-| Resultado   | 4D.MailAttachment | <- | Attachment object                                                    |
+| Parameter   | Type               |    | Descrição                                                            |
+| ----------- | ------------------ |:--:| -------------------------------------------------------------------- |
+| file        | 4D. File           | -> | Attachment file                                                      |
+| zipFile     | 4D. ZipFile        | -> | Attachment Zipfile                                                   |
+| blob        | 4D. Blob           | -> | BLOB containing the attachment                                       |
+| path        | Texto              | -> | Path of the attachment file                                          |
+| name        | Texto              | -> | Name + extension used by the mail client to designate the attachment |
+| cid         | Texto              | -> | ID of attachment (HTML messages only), or " " if no cid is required  |
+| type        | Texto              | -> | Value of the content-type header                                     |
+| disposition | Texto              | -> | Value of the content-disposition header: "inline" or "attachment".   |
+| Resultado   | 4D. MailAttachment | <- | Attachment object                                                    |
 
 <!-- END REF -->
 
 
 #### Descrição
 
-Objetos anexo permite referenciar arquivos dentro de um objeto[`Email`](EmailObjectClass.md). It is identical to the [`MAIL New attachment`](#mail-new-attachment) command (shortcut).
+Objetos anexo permite referenciar arquivos dentro de um objeto[`Email`](EmailObjectClass.md). Isso é idêntico ao comando [`MAIL New attachment`](#mail-new-attachment) (atalho).
 
 
 ## .cid
@@ -229,20 +223,20 @@ A propriedade `.disposition` contém <!-- REF #MailAttachmentClass.disposition. 
 ## .getContent()
 
 
-<!-- REF #MailAttachmentClass.getContent().Syntax --> **.getContent()** : 4D.Blob<!-- END REF -->
+<!-- REF #MailAttachmentClass.getContent().Syntax --> **.getContent()** : 4D. Blob<!-- END REF -->
 
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
-| Parameter | Type    |    | Descrição         |
-| --------- | ------- |:--:| ----------------- |
-| Resultado | 4D.Blob | <- | Conteúdo do anexo |
+| Parameter | Type     |    | Descrição         |
+| --------- | -------- |:--:| ----------------- |
+| Resultado | 4D. Blob | <- | Conteúdo do anexo |
 
 <!-- END REF -->
 
 
 #### Descrição
 
-The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary -->returns the contents of the attachment object in a `4D.Blob` object<!-- END REF -->. Summary -->permite que crie um objeto anexo que pode adicionar a um [objeto Email ](EmailObjectClass.md#email-object)<!-- END REF -->.
+Objetos anexo permite referenciar arquivos dentro de um objeto[`Email`](EmailObjectClass.md). Summary -->permite que crie um objeto anexo que pode adicionar a um [objeto Email ](EmailObjectClass.md#email-object)<!-- END REF -->.
 
 
 

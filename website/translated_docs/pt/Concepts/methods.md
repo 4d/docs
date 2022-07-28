@@ -58,7 +58,7 @@ For example, let’s say you have a project of customers. As you customize the p
  MODIFY RECORD([Customers])
 ```
 
-If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. If there are ten places in your project where you need to do this, you will have to write the code ten times. If you use subroutines, you will only have to write it once. This is the first advantage of subroutines—to reduce the amount of code.
+If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. If you use subroutines, you will only have to write it once. This is the first advantage of subroutines—to reduce the amount of code.
 
 If the previously described code was a method called `MODIFY_CUSTOMER`, you would execute it simply by using the name of the method in another method. For example, to modify a customer’s record and then print the record, you would write this method:
 
@@ -67,7 +67,7 @@ If the previously described code was a method called `MODIFY_CUSTOMER`, you woul
  PRINT SELECTION([Customers])
 ```
 
-This capability simplifies your methods dramatically. In the example, you do not need to know how the `MODIFY_CUSTOMER` method works, just what it does. This is the second reason for using subroutines—to clarify your methods. In this way, your methods become extensions to the 4D language.
+This capability simplifies your methods dramatically. This capability simplifies your methods dramatically. This is the second reason for using subroutines—to clarify your methods. In this way, your methods become extensions to the 4D language.
 
 If you need to change your method of finding customers in this example project, you will need to change only one method, not ten. This is the next reason to use subroutines—to facilitate changes to your methods.
 
@@ -91,8 +91,7 @@ The `Formula` or `Formula from string` commands allow you to create native formu
 To execute a method stored in an object property, use the **( )** operator after the property name. Por exemplo:
 
 ```4d
-//myAlert
-ALERT("Hello world!")
+//myAlert ALERT("Hello world!")
 ```
 
 Then `myAlert` can be encapsulated in any object and called:
@@ -112,8 +111,7 @@ $o["custom_Alert"]() //exibe "Hello world!"
 You can also [pass parameters](Concepts/parameters.md) to your formula when you call it by using $1, $2… just like with 4D project methods:
 
 ```4d
-//fullName method
-C_TEXT($0;$1;$2)
+//fullName method C_TEXT($0;$1;$2)
 $0:=$1+" "+$2
 ```
 
@@ -130,8 +128,7 @@ $result:=$o.full_name("John";"Smith")
 Combined with the `This`function, such object methods allow writing powerful generic code. Por exemplo:
 
 ```4d
-//fullName2 method
-C_TEXT($0)
+//fullName2 method C_TEXT($0)
 $0:=This.firstName+" "+This.lastName
 ```
 
@@ -216,6 +213,8 @@ For this example, we assume the values in the fields are unique (there are no tw
     QUERY([Friends and Relatives];[Friends and Relatives]Name=$vsName)
     If(Records in selection([Friends and Relatives])>0)
        ALERT("A friend of mine, "+Genealogy of($vsName)+", does this for a living!")
+    End if
+ End if
     End if
  End if
 ```

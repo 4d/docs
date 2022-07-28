@@ -1,6 +1,6 @@
 ---
 id: classes
-title: Classes
+title: クラス
 ---
 
 
@@ -55,8 +55,6 @@ $hello:=$person.sayHello() // "Hello John Doe"
 
 - Project フォルダー
     + Project
-
-
 
 
         * Sources
@@ -232,7 +230,7 @@ Function getFullname()->$fullname : Text
 ```
 
 
-クラスメソッドの場合には、`Current method name` コマンドは次を返します: `<ClassName>.<FunctionName>` (例: "MyClass.myFunction")。
+クラスメソッドの場合には、`Current method name` コマンドは次を返します: `<ClassName>.<FunctionName>` (例: "MyClass.myMethod")。
 
 アプリケーションのコード内では、クラス関数はオブジェクトインスタンスのメンバーメソッドとして呼び出され、[引数](#クラス関数の引数 mark=) を受け取ることができます。 以下のシンタックスがサポートされています:
 
@@ -280,7 +278,7 @@ Function add($x : Integer)
 
 #### 戻り値
 
-関数の戻り値を宣言するには (任意)、入力パラメーターリストに矢印 (`->`) と戻り値の定義を追加します。または、コロン (`:`) 記号の後に戻り値のデータ型だけを指定することも可能です。 たとえば:
+コロン (`:`) 記号の後に戻り値のデータ型だけを指定し、そのうえで [`return 文`](parameters.md#return-expression) を使って戻り値を返すこともできます (これは関数の実行を終了します)。 たとえば:
 
 
 
@@ -290,7 +288,7 @@ Function add($x : Variant; $y : Integer)->$result : Integer
 ```
 
 
-コロン (`:`) 記号の後に戻り値のデータ型だけを指定し、そのうえで [`return 文`](parameters.md#return-expression) を使って戻り値を返すこともできます (これは関数の実行を終了します)。 たとえば: 
+オブジェクトのメンバーメソッドとしてフォーミュラが呼び出された場合、`This` はメソッドの呼び出し元であるオブジェクトを指します。 たとえば: 
 
 
 
@@ -420,6 +418,7 @@ Function set fullName( $fullName : Text )
     $p:=Position(" "; $fullName)
     This.firstName:=Substring($fullName; 1; $p-1)
     This.lastName:=Substring($fullName; $p+1)
+
 ```
 
 
@@ -558,8 +557,6 @@ Class constructor ($side : Integer)
     // Super を呼び出しておく必要があります
     This.name:="Square"
 
-
-
     Function getArea()
         C_LONGINT($0)
         $0:=This.height*This.width
@@ -577,7 +574,7 @@ Class constructor ($side : Integer)
 
 
 ```4d
-Super {( param{;...;paramN} )} {-> Object}
+Super {( param{;...;paramN} )} {-> Object} 
 ```
 
 
@@ -792,7 +789,6 @@ $o:=cs.ob.new()
 $o.a:=5
 $o.b:=3
 $val:=$o.f() //8
-
 ```
 
 
@@ -812,7 +808,7 @@ $val:=$o.f() //8
 
 
 
-#### `OB Class ( object ) -> Object | Null`
+#### OB Class ( object ) -> Object | Null
 
 4Dランゲージには、クラス機能を扱う複数のコマンドがあります。 
 
@@ -823,6 +819,6 @@ $val:=$o.f() //8
 
 
 
-#### `OB Instance of ( object ; class ) -> Boolean`
+#### OB Instance of ( object ; class ) -> Boolean
 
 `OB Class` は引数として渡したオブジェクトのクラスを返します。

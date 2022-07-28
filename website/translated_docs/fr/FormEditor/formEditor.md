@@ -21,7 +21,7 @@ You can show or hide several interface elements on the current page of the form:
 - **Markers**: Output control lines and associated markers that show the limits of the form’s different areas. This element can only be displayed by default in [list forms](properties_FormProperties.md#form-type).
 - **Marker Labels**: Marker labels, available only when the output control lines are displayed. This element can only be displayed by default in [list forms](properties_FormProperties.md#form-type).
 - **Limits**: Form’s limits. Lorsque cette option est sélectionnée, le formulaire est affiché dans l’éditeur tel qu’il apparaîtra en mode Application. Cette possibilité est particulièrement intéressante pour ajuster un formulaire sans devoir tester le mode Application pour visualiser le résultat.
-> > The [**Size Based on**](properties_FormSize.md#size-based-on), [**Hor. margin**](properties_FormSize.md#hor-margin) and [**Vert. margin**](properties_FormSize.md#vert-margin) settings of the form properties affect the form’s limits. Les limites du formulaire sont calculées en fonction des objets qui le composent. Lorsque vous déplacez ou agrandissez un objet placé près de la limite d’un formulaire, le rectangle de délimitation est modifié en conséquence.
+> > > The [**Size Based on**](properties_FormSize.md#size-based-on), [**Hor. margin**](properties_FormSize.md#hor-margin) and [**Vert. margin**](properties_FormSize.md#vert-margin) settings of the form properties affect the form’s limits. Les limites du formulaire sont calculées en fonction des objets qui le composent. Lorsque vous déplacez ou agrandissez un objet placé près de la limite d’un formulaire, le rectangle de délimitation est modifié en conséquence.
 
 #### Default display
 
@@ -150,7 +150,7 @@ Pour sélectionner un objet à l’aide de la barre d’outils :
 Pour sélectionner un objet à l’aide de la Liste des propriétés :
 
 1.  Sélectionnez le nom de l’objet dans la liste de sélection située en haut de la palette.<p>De cette manière, vous pouvez sélectionner un objet masqué par d’autres objets ou situé en-dehors des limites de la fenêtre. Pour désélectionner un objet, cliquez hors de ses limites ou cliquez dessus en maintenant la touche **Majuscule** enfoncée.
-> Il est également possible de sélectionner des objets en double-cliquant dans la fenêtre de résultat d’une recherche globale.
+> > Il est également possible de sélectionner des objets en double-cliquant dans la fenêtre de résultat d’une recherche globale.
 
 ### Selecting multiple objects
 
@@ -229,7 +229,7 @@ Vous pouvez dégrouper un groupe d’objets à tout moment et les traiter de nou
 Un objet actif qui a été groupé doit être dégroupé pour que vous puissiez accéder à ses propriétés ou à sa méthode. Il est toutefois possible de sélectionner un objet appartenant à un groupe sans devoir dégrouper l’ensemble : pour cela, effectuez **Ctrl+clic** (Windows) ou **Commande+clic** (Mac Os) sur l’objet (le groupe doit être sélectionné au préalable).
 
 Grouper des objets n’a d’effet que dans l’éditeur de formulaires. Lors de l’exécution du formulaire, tous les objets groupés (hormis les boutons radio dans les bases binaires) se comportent comme s’ils étaient indépendants.
-> Il n’est pas possible de grouper des objets appartenant à des vues différentes et seuls les objets appartenant à la vue courante peuvent être groupés (cf. section [Utiliser les vues d'objet](#views)).
+> Le magnétisme entraîne également l’observation de paliers lors du redimensionnement manuel des objets.
 
 Pour grouper les objets :
 
@@ -255,7 +255,7 @@ Le sous-menu Aligner du menu Objets (ou du menu contextuel de l’éditeur) et l
 
 ![](assets/en/FormEditor/alignmentMenu.png)
 
-Lorsque 4D aligne des objets, il utilise l’objet le plus avancé dans la direction de l’alignement comme “ancre” sur laquelle tous les autres objets vont être alignés. This object is the “anchor.” It uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. Par exemple, si vous alignez un groupe d’objets à droite, les objets seront alignés sur le côté droit de l’objet situé le plus à droite. Voici le résultat des alignements "aucun", "à gauche", "centré horizontalement" et "à droite" :
+Lorsque 4D aligne des objets, il utilise l’objet le plus avancé dans la direction de l’alignement comme “ancre” sur laquelle tous les autres objets vont être alignés. This object is the “anchor.” This object is the “anchor.” It uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. Par exemple, si vous alignez un groupe d’objets à droite, les objets seront alignés sur le côté droit de l’objet situé le plus à droite. Voici le résultat des alignements "aucun", "à gauche", "centré horizontalement" et "à droite" :
 
 ![](assets/en/FormEditor/alignmentTools.png)
 
@@ -293,7 +293,7 @@ En ce qui concerne la répartition des objets, 4D propose une distance basée su
 ![](assets/en/FormEditor/magneticGrid2.png)
 
 Ce fonctionnement s’applique à tous les types d’objets des formulaires. Le magnétisme peut être activé ou désactivé à tout moment à l’aide de la commande **Activer la grille magnétique** du menu **Formulaire** ou du menu contextuel de l’éditeur. Il est également possible de définir l’activation par défaut de cette fonction dans la page **Préférences** >**Formulaires** (option **Activer l'auto-alignement par défaut**). Il est possible d’activer ou de désactiver manuellement la grille magnétique lorsqu’un objet est sélectionné en appuyant sur la touche **Ctrl** (Windows) ou **Control** (Mac Os).
-> Le magnétisme entraîne également l’observation de paliers lors du redimensionnement manuel des objets.
+> Lorsque plusieurs objets sont superposés, le raccourci **Ctrl+clic** / **Commande+clic** permet de sélectionner successivement chaque objet en descendant d’un plan à chaque clic.
 
 ### Distributing objects
 
@@ -304,7 +304,7 @@ Pour répartir directement une sélection d’objets (verticalement ou horizonta
 
 1.  Sélectionnez les objets (au moins trois) que vous souhaitez répartir.
 
-2.  Dans la barre d’outils, cliquez sur l’outil de répartition qui correspond la répartition que vous souhaitez appliquer.<p>![](assets/en/FormEditor/distributionTool.png)<p>OR<p>Choisissez la commande Répartir horizontalement ou Répartir verticalement dans le sous-menu **Aligner** du menu **Objets** ou du menu contextuel de l'éditeur.<p>4D répartit les objets par rapport à leurs centres, la plus grande distance entre deux objets contigus est utilisée comme distance de référence.
+2.  Dans la barre d’outils, cliquez sur l’outil de répartition qui correspond la répartition que vous souhaitez appliquer.<p>![](assets/en/FormEditor/distributionTool.png)<p>OR<p>Choisissez la commande Répartir horizontalement ou Répartir verticalement dans le sous-menu **Aligner** du menu **Objets** ou du menu contextuel de l'éditeur.<p>4D répartit les objets par rapport à leurs centres, 4D répartit les objets par rapport à leurs centres, la plus grande distance entre deux objets contigus est utilisée comme distance de référence.
 
 Pour répartir des objets à l’aide de la boîte de dialogue d'alignement et répartition :
 
@@ -319,7 +319,7 @@ Pour répartir des objets à l’aide de la boîte de dialogue d'alignement et r
     *   Horizontalement, les icônes correspondent aux répartitions suivantes : équidistance des côtés gauches, des centres (hor.) et des côtés droits des objets sélectionnés.
     *   Verticalement, les icônes correspondent aux répartitions suivantes : équidistance des bords supérieurs, des centres (vert.) et des bords inférieurs des objets sélectionnés.
 
-    Vous pouvez prévisualiser le résultat réel de vos paramétrages en cliquant sur le bouton **Prévisualisation** : l’opération s’effectue dans l’éditeur de formulaires, mais la boîte de dialogue reste au premier plan. Vous pouvez alors Appliquer ou Annuler les modifications. Vous pouvez alors **Appliquer** ou **Annuler** les modifications.
+    Vous pouvez prévisualiser le résultat réel de vos paramétrages en cliquant sur le bouton **Prévisualisation** : l’opération s’effectue dans l’éditeur de formulaires, mais la boîte de dialogue reste au premier plan. Vous pouvez alors **Appliquer** ou **Annuler** les modifications.
 > Cette boîte de dialogue vous permet de combiner l’alignement d’objets et leur répartition. Pour plus d’informations sur l’alignement, reportez-vous au paragraphe [Aligner des objets](#aligning-objects).
 
 
@@ -350,7 +350,7 @@ Every object that supports the focusable property is included in the data entry 
 
 Setting the entry order for a JSON form is done with the [`entryOrder`](properties_JSONref.md) property.
 
-Si vous ne spécifiez pas d’ordre de saisie personnalisé, 4D utilise par défaut le plan des objets comme ordre de saisie, dans le sens “arrière-plan vers premier plan.” Par défaut, l’ordre de saisie correspond donc à l’ordre de création des objets dans le formulaire.
+Si vous ne spécifiez pas d’ordre de saisie personnalisé, 4D utilise par défaut le plan des objets comme ordre de saisie, dans le sens “arrière-plan vers premier plan.” Par défaut, l’ordre de saisie correspond donc à l’ordre de création des objets dans le formulaire. Par défaut, l’ordre de saisie correspond donc à l’ordre de création des objets dans le formulaire.
 
 Dans certains formulaires, il est nécessaire de définir un ordre de saisie personnalisé. Ci-dessous par exemple, des champs supplémentaires relatifs à l’adresse ont été ajoutés après la création du formulaire. The resulting standard entry order thus becomes illogical and forces the user to enter the information in an awkward manner:
 

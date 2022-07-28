@@ -198,7 +198,7 @@ Voici la description de chaque ligne de l’exemple :
 - $PointerOne:=->$MyVar --> $PointerOne contient désormais un pointeur vers $MyVar.
 - $PointerTwo:=->$PointerOne --> $PointerTwo (une nouvelle variable) contient un pointeur vers $PointerOne, qui, lui, pointe vers $MyVar.
 - ($PointerTwo->)->:="Goodbye" --> $PointerTwo-> référence le contenu de $PointerOne, qui lui-même référence $MyVar. Par conséquent, ($PointerTwo->)-> référence le contenu de $MyVar. Donc, dans ce cas, la valeur "Goodbye" est assignée à $MyVar.
-- ALERT (($PointerTwo->)->) --> C'est ici la même chose que précédemment : $PointerTwo-> référence le contenu de $PointerOne, qui lui-même référence $MyVar. Par conséquent, ($PointerTwo->)-> référence le contenu de $MyVar. Donc, dans ce cas, la boîte de dialogue d'alerte affiche le contenu de $MyVar.
+- ALERT (($PointerTwo->)->) --> C'est ici la même chose que précédemment : $PointerTwo-> référence le contenu de $PointerOne, qui lui-même référence $MyVar. Par conséquent, ($PointerTwo->)-> référence le contenu de $MyVar. Par conséquent, ($PointerTwo->)-> référence le contenu de $MyVar.
 
 La ligne suivante place la valeur "Hello" dans $MyVar :
 ```4d

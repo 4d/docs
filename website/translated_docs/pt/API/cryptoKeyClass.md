@@ -14,7 +14,7 @@ The following sample code signs and verifies a message using a new ECDSA key pai
 
 ```4d
  // Generate a new ECDSA key pair
-$key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
+$key:=4D. CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
   // Get signature as base64
 $message:="hello world"
@@ -47,7 +47,7 @@ ASSERT($status.success)
 
 
 
-## 4D.CryptoKey.new()
+## 4D. CryptoKey.new()
 
 <details><summary>Histórico</summary>
 | Versão | Mudanças   |
@@ -71,12 +71,12 @@ CryptoKey.new()</code> <!-- REF #4D. CryptoKey.new(). Summary -->cria um novo ob
 
 #### *settings*
 
-| Propriedade     | Type    | Descrição                                      |
-| --------------- | ------- | ---------------------------------------------- |
-| [curve](#curve) | texto   | Name of ECDSA curve                            |
-| [pem](#pem)     | texto   | PEM definition of an encryption key to load    |
-| [size](#size)   | integer | Size of RSA key in bits                        |
-| [type](#type)   | texto   | Type of the key: "RSA", "ECDSA", or "PEM"</li> |
+| Propriedade     | Type    | Descrição                                          |
+| --------------- | ------- | -------------------------------------------------- |
+| [curve](#curve) | texto   | Name of ECDSA curve                                |
+| [pem](#pem)     | texto   | PEM definition of an encryption key to load        |
+| [size](#size)   | integer | Size of RSA key in bits                            |
+| [type](#type)   | texto   | Nome do tipo da chave - "RSA", "ECDSA", "PEM"</li> |
 
 
 #### *CryptoKey*

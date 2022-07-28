@@ -53,11 +53,11 @@ Para suministrar las etiquetas de un control de pestañas, puede utilizar:
 
 You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. El objeto debe contener las siguientes propiedades:
 
-| Propiedad      | Tipo       | Descripción                                                                                                                                      |
-| -------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `values`       | Collection | Obligatorio - Colección de valores escalares. Sólo se admiten valores de tipo cadena. If invalid, empty or not defined, the tab control is empty |
-| `index`        | number     | Index of the currently tab control page (value between 0 and `collection.length-1`)                                                              |
-| `currentValue` | Texto      | Valor actual seleccionado                                                                                                                        |
+| Propiedad      | Tipo       | Descripción                                                                                                                                                  |
+| -------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `values`       | Collection | Obligatorio - Colección de valores escalares. Sólo se admiten valores de tipo cadena. Si es inválido, vacío o no definido, el control de pestañas está vacío |
+| `index`        | number     | Index of the currently tab control page (value between 0 and `collection.length-1`)                                                                          |
+| `currentValue` | Texto      | Valor actual seleccionado                                                                                                                                    |
 
 The initialization code must be executed before the form is presented to the user.
 

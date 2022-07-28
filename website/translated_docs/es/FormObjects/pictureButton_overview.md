@@ -56,7 +56,7 @@ Hay otros modos disponibles:
 - [Desplazamiento continuo en clics](properties_Animation.md#switch-continuously-on-clicks)
 - [Utilizar el Último cuadro como Desactivado](properties_Animation.md#use-last-frame-as-disabled)
 - [Utilizar el Último cuadro como Desactivado](properties_Animation.md#use-last-frame-as-disabled)
-> [Utilizar el último cuadro como desactivado](properties_Animation.md#use-last-frame-as-disabled) > [Utilizar el último cuadro como desactivado](properties_Animation.md#use-last-frame-as-disabled) > [Utilizar el último cuadro como desactivado](properties_Animation.md#use-last-frame-as-disabled) > La [variable asociada](properties_Object.md#variable-or-expression) al botón imagen devuelve el número de índice, en la tabla de miniaturas, de la imagen actual mostrada. La numeración de las imágenes en la tabla empieza por 0.
+> [Utilizar el Último cuadro como Desactivado](properties_Animation.md#use-last-frame-as-disabled) > [Utilizar el último cuadro como desactivado](properties_Animation.md#use-last-frame-as-disabled) > [Utilizar el último cuadro como desactivado](properties_Animation.md#use-last-frame-as-disabled) > [Utilizar el último cuadro como desactivado](properties_Animation.md#use-last-frame-as-disabled) > La [variable asociada](properties_Object.md#variable-or-expression) al botón imagen devuelve el número de índice, en la tabla de miniaturas, de la imagen actual mostrada. La numeración de las imágenes en la tabla empieza por 0.
 
 ## Propiedades soportadas
 

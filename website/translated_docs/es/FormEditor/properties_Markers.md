@@ -6,7 +6,7 @@ title: Marcadores
 
 Estas propiedades permiten especificar la ubicación precisa de los marcadores en la regla vertical de un **formulario tabla**. Los marcadores se utilizan principalmente en los formularios de salida. They control the information that is listed and set header, breaks, detail and footer areas of the form. Any object that placed in these areas is displayed or printed at the appropriate location.
 
-Whenever any form is used for output, either for screen display or printing, the output marker lines take effect and the areas display or print at designated locations. The markers also take effect when a form is used as the List form in a subform area. However, they have no effect when a form is used for input.
+Whenever any form is used for output, either for screen display or printing, the output marker lines take effect and the areas display or print at designated locations. The markers also take effect when a form is used as the List form in a subform area. Sin embargo, no tienen ningún efecto cuando se utiliza un formulario para introducir datos.
 
 Methods that are associated with objects in these areas are executed when the areas are printed or displayed as long as the appropriate events have been activated. For example, a object method placed in the Header area is executed when the `On Header` event takes place.
 
@@ -45,7 +45,7 @@ Puede hacer el área Detalle más pequeña o más grande. Whatever you place in 
 
 ## Pie del formulario
 
-The Form Footer area is displayed on screen under the list of records. It is always printed at the bottom of every page of a report. The Footer area is defined as the area between the Break control line and the Footer control line.
+The Form Footer area is displayed on screen under the list of records. Siempre se imprime al final de cada página de un informe. The Footer area is defined as the area between the Break control line and the Footer control line.
 Puede hacer que el área del pie de página sea más pequeña o más grande.<p>
 
 You can use the Footer area to print graphics, page numbers, the current date, or any text you want at the bottom of each page of a report. For output forms designed for use on screen, the Footer area typically contains buttons that give the user options such as doing a search or sort, printing records, or putting away the current report. Se aceptan los objetos activos.

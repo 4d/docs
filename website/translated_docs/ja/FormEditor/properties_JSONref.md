@@ -20,7 +20,7 @@ title: JSON プロパティリスト
 | [`entryOrder`](formEditor.md#データの入力順)                              | 入力フォームで **Tab**キーや **改行**キーが使用されたときに、アクティブオブジェクトが選択される順番。 | 4Dフォームオブジェクト名のコレクション                                                                  |
 | [`events`](Events/overview.md)                                     | オブジェクトまたはフォームについて選択されているイベントのリスト                          | イベント名のコレクション。例: ["onClick","onDataChange"...].                                        |
 | <a name="f">**f**</a>                                          |                                                           |                                                                                       |
-| [`formSizeAnchor`](properties_FormSize.md#サイズを決めるもの)               | フォームサイズを定義するために使用するオブジェクトの名前 (最小長さ: 1)                    | 4Dオブジェクトの名前                                                                           |
+| [`formSizeAnchor`](properties_FormSize.md#サイズを決めるもの)               | フォームサイズを定義するために使用するオブジェクトの名前 (最小長さ: 1) (最小長さ: 1)          | 4Dオブジェクトの名前                                                                           |
 | <a name="h">**h**</a>                                          |                                                           |                                                                                       |
 | [`height`](properties_FormSize.md#高さ)                              | フォームの高さ                                                   | 最小値: 0                                                                                |
 | <a name="i">**i**</a>                                          |                                                           |                                                                                       |

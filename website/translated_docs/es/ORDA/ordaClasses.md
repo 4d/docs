@@ -170,7 +170,7 @@ Function getCityName()
     End if
 ```
 
-The client application opens a session on the remote datastore:
+La aplicación cliente abre una sesión en el datastore remoto:
 
 ```4d
 $cityManager:=Open datastore(New object("hostname";"127.0.0.1:8111");"CityManager")
@@ -190,7 +190,7 @@ Each table exposed with ORDA offers an EntitySelection class in the `cs` class s
 
 - **Extends**: 4D.EntitySelection
 - **Class name**: *DataClassName*Selection (where *DataClassName* is the table name)
-- **Example name**: cs.EmployeeSelection
+- **Ejemplo**: cs.EmployeeSelection
 
 
 #### Ejemplo
@@ -289,7 +289,7 @@ When creating or editing data model classes, you must pay attention to the follo
 
 ### Ejecución apropiativa
 
-When compiled, data model class functions are executed:
+Cuando se compilan, las funciones de clase del modelo de datos se ejecutan:
 
 - in **preemptive or cooperative processes** (depending on the calling process) in single-user applications,
 - in **preemptive processes** in client/server applications (except if the [`local`](#local-functions) keyword is used, in which case it depends on the calling process like in single-user).
@@ -376,7 +376,7 @@ Function get fullName($event : Object)-> $fullName : Text
     End case 
 ```
 
-- A computed attribute can be based upon an entity related attribute:
+- Un atributo calculado puede basarse en un atributo relativo a una entidad:
 
 ```4d
 Function get bigBoss($event : Object)-> $result: cs.EmployeeEntity
@@ -472,7 +472,7 @@ The *$event* parameter contains the following properties:
 
 #### Ejemplos
 
-- Query on the *fullName* computed attribute.
+- Búsqueda en el atributo calculado *fullName*.
 
 ```4d
 Function query fullName($event : Object)->$result : Object
@@ -575,7 +575,7 @@ The *$event* parameter contains the following properties:
 | descending    | Booleano | `true` for descending order, `false` for ascending order                                              |
 | result        | Variant  | Valor a tratar por el atributo calculado. Pass `Null` if you want to let 4D execute the default sort. |
 
-> You can use either the `operator` or the `descending` property. It is essentially a matter of programming style (see examples).
+> You can use either the `operator` or the `descending` property. Es esencialmente una cuestión de estilo de programación (ver ejemplos).
 
 You can return the `orderBy` string either in the `$event.result` object property or in the *$result* function result. If the function returns a value in *$result* and another value is assigned to the `$event.result` property, the priority is given to `$event.result`.
 
@@ -618,7 +618,7 @@ Function orderBy age($event : Object)-> $result : Text
 
 ### Generalidades
 
-An **alias** attribute is built above another attribute of the data model, named **target** attribute. The target attribute can belong to a related dataclass (available through any number of relation levels) or to the same dataclass. An alias attribute stores no data, but the path to its target attribute. You can define as many alias attributes as you want in a dataclass.
+An **alias** attribute is built above another attribute of the data model, named **target** attribute. The target attribute can belong to a related dataclass (available through any number of relation levels) or to the same dataclass. An alias attribute stores no data, but the path to its target attribute. Puede definir tantos atributos de alias como desee en una clase de datos.
 
 Alias attributes are particularly useful to handle N to N relations. They bring more readability and simplicity in the code and in queries by allowing to rely on business concepts instead of implementation details.
 
@@ -640,7 +640,7 @@ You create an alias attribute in a dataclass by using the `Alias` keyword in the
 
 *targetPath* is an attribute path containing one or more levels, such as "employee.company.name". If the target attribute belongs to the same dataclass, *targetPath* is the attribute name.
 
-An alias can be used as a part of a path of another alias.
+Un alias puede ser utilizado como parte de una ruta de otro alias.
 
 A [computed attribute](#computed-attributes-1) can be used in an alias path, but only as the last level of the path, otherwise, an error is returned. For example, if "fullName" is a computed attribute, an alias with path "employee.fullName" is valid.
 
@@ -668,7 +668,7 @@ Alias attributes are read-only (except when based upon a scalar attribute of the
 | `entity.diff()`                                |
 | `entity.touchedAttributes()`                   |
 
-> Keep in mind that alias attributes are calculated on the server. In remote configurations, updating alias attributes in entities requires that entities are reloaded from the server.
+> Tenga en cuenta que los atributos alias se calculan en el servidor. In remote configurations, updating alias attributes in entities requires that entities are reloaded from the server.
 
 ### Alias properties
 
@@ -710,7 +710,7 @@ Alias teachers courses.teacher //relatedEntities
 
 En la dataclass Course:
 
-- an alias attribute returns another label for the "name" attribute
+- un atributo alias devuelve otra etiqueta para el atributo "name"
 - un atributo alias devuelve el nombre del profesor
 - un atributo alias devuelve el nombre del estudiante
 
@@ -928,7 +928,7 @@ An ORDA data model user class is defined by adding, at the [same location as reg
 ![](assets/en/ORDA/ORDA_Classes-3.png)
 
 
-> By default, empty ORDA classes are not displayed in the Explorer. To show them you need to select **Show all data classes** from the Explorer's options menu: ![](assets/en/ORDA/showClass.png)
+> Por defecto, las clases ORDA vacías no se muestran en el Explorador. To show them you need to select **Show all data classes** from the Explorer's options menu: ![](assets/en/ORDA/showClass.png)
 
 ORDA user classes have a different icon from regular classes. Las clases vacías se atenúan:
 

@@ -16,7 +16,7 @@ Cette option permet de configurer l’affichage proposé par défaut par 4D au d
 *   **Ouvrir le dernier projet utilisé** : 4D ouvre directement le dernier projet utilisé, aucune boîte de dialogue d’ouverture n’apparaît. >Pour forcer l’affichage de la boîte de dialogue d’ouverture lorsque cette option est sélectionnée, maintenez enfoncée la touche **Alt** (Windows) ou **Option** (macOS) pendant le lancement du projet.
 *   **Dialogue d’ouverture du projet distant** : 4D affiche la boîte de dialogue standard de connexion avec 4D Server, permettant de désigner une base de données publiée sur le réseau.
 *   **Dialogue Assistant de bienvenue** (réglage d'usine) : 4D affiche la boîte de dialogue de l'Assistant de bienvenue.
-> **4D Server** : L'application 4D Server ne tient pas compte de cette option. Dans cet environnement, le mode **Ne rien faire** est toujours utilisé.
+> > **4D Server** : L'application 4D Server ne tient pas compte de cette option. Dans cet environnement, le mode **Ne rien faire** est toujours utilisé.
 
 ### Création de formulaire automatique
 
@@ -132,7 +132,7 @@ Ce paramètre permet de définir la langue utilisée par défaut pour le traitem
 Une base 4D peut donc fonctionner dans une langue différente de celle du système. A l’ouverture d’une base, le moteur de 4D détecte la langue utilisée par le fichier de données et la fournit au langage (interpréteur ou mode compilé). Les comparaisons de texte, qu’elles soient effectuées par le moteur de base de données ou par le langage, sont donc toujours effectuées dans la même langue.
 
 Lors de la création d’un nouveau fichier de données, 4D utilise la langue définie dans ce menu. En cas d’ouverture d’un fichier de données qui n’est pas dans la même langue que la structure, la langue du fichier de données est utilisée et le code de langue est recopié dans la structure.
-> Cette option n'est prise en compte que pour l'accès à la documentation des commandes (à l'exclusion des fonctions de classe).
+> Il est possible de modifier ce paramètre pour la base ouverte via les Propriétés de la base (voir [Comparaison de texte](https://doc.4d.com/4Dv18R6/4D/18-R6/DatabaseData-storage-page.300-5217842.en.html#460252)).
 
 ## Emplacement de la documentation
 

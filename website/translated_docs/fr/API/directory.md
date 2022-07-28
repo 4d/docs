@@ -563,6 +563,7 @@ Vous souhaitez savoir s'il y a des fichiers invisibles dans le dossier de la bas
  If($all.length#$noInvisible.length)
     ALERT("Il y a des fichiers invisibles dans le dossier de la base.")
  End if
+ End if
 ```
 
 #### Exemple 2

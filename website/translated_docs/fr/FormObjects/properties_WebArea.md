@@ -30,8 +30,6 @@ Lorsque cette propriété est cochée, un objet JavaScript spécial `$4d` est in
 
 La variable "Progression" est de type Entier long. Elle contient une valeur entre 0 et 100, représentant le pourcentage du chargement complet de la page affichée dans la zone Web. La variable est mise à jour automatiquement par 4D. Il n’est pas possible de la modifier manuellement.
 
-> À partir de 4D v19 R5, cette variable n'est plus mise à jour dans les zones Web utilisant le [moteur de rendu du système Windows](./webArea_overview.md#web-rendering-engine).
-
 #### Grammaire JSON
 
 | Nom            | Type de données | Valeurs possibles              |
@@ -83,16 +81,13 @@ La variable URL produit les mêmes effets que la commande [WA OUVRIR URL](https:
 
 Cette option vous permet de choisir entre deux moteurs de rendus pour la zone Web, en fonction des spécificités de votre application :
 
-*   **non coché** - `valeur JSON : system` (par défaut) : Dans ce cas, 4D utilise le "meilleur" moteur correspondant au système. Ce fonctionnement vous permet de bénéficier automatiquement des dernières avancées en matière de rendu Web, via HTML5 ou JavaScript. However, you may notice some rendering differences between platforms. On Windows, 4D uses Microsoft Edge WebView2. Sur macOS, 4D utilise la version courante du WebKit (Safari).
+*   **non coché** - `valeur JSON : system` (par défaut) : Dans ce cas, 4D utilise le "meilleur" moteur correspondant au système. Sous Windows, 4D utilise automatiquement la plus version la plus récente du navigateur présent sur la machine (IE11, MS Edge, etc.). Sur macOS, 4D utilise la version courante du WebKit (Safari). Ce fonctionnement vous permet de bénéficier automatiquement des dernières avancées en matière de rendu Web, via HTML5 ou JavaScript. En revanche, vous pouvez rencontrer des différences de rendu entre les implémentations d’Internet Explorer/Edge et de WebKit.
+*   **coché** - `valeur JSON : embedded` : Dans ce cas, 4D utilise Blink à partir de Google (CEF). L’utilisation d'un moteur Web intégré vous permet d’avoir l’assurance que le rendu et le fonctionnement des zones Web de votre application seront quasiment identiques, quelle que soit la plate-forme d’exécution de 4D (de légères variations de pixels ou des différences liées à l’implémentation réseau pourront toutefois être constatées). En contrepartie, vous ne bénéficiez plus des mises à jour automatiques du moteur Web effectuées par le système d’exploitation. Des nouvelles versions du moteur seront toutefois proposées via 4D.
 
-> On Windows, if Microsoft Edge WebView2 is not installed, 4D uses the embedded engine as system rendering engine. To know if it is installed in your system, look for "Microsoft Edge WebView2 Runtime" in your applications panel.
+A noter que le moteur Blink est soumis aux restrictions suivantes :
 
-*   **checked** - `JSON value: embedded`: In this case, 4D uses the Chromium Embedded Framework (CEF). L’utilisation d'un moteur Web intégré vous permet d’avoir l’assurance que le rendu et le fonctionnement des zones Web de votre application seront quasiment identiques, quelle que soit la plate-forme d’exécution de 4D (de légères variations de pixels ou des différences liées à l’implémentation réseau pourront toutefois être constatées). L’utilisation d'un moteur Web intégré vous permet d’avoir l’assurance que le rendu et le fonctionnement des zones Web de votre application seront quasiment identiques, quelle que soit la plate-forme d’exécution de 4D (de légères variations de pixels ou des différences liées à l’implémentation réseau pourront toutefois être constatées).
-
-The CEF engine has the following limitations:
-
-- [WA SET PAGE CONTENT](https://doc.4d.com/4dv19/help/command/en/page1037.html): using this command requires that at least one page is already loaded in the area (through a call to [`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/en/page1020.html) or an assignment to the URL variable associated to the area).
-- When URL drops are enabled by the `WA enable URL drop` selector of the [WA SET PREFERENCE](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.en.html) command, the first drop must be preceded by at least one call to [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) or one assignment to the URL variable associated to the area.
+- [WA SET PAGE CONTENT](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PAGE-CONTENT.301-5232965.en.html) : l'utilisation de cette commande nécessite le chargement d'au moins une page dans la zone (via un appel à la commande [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) ou via une affectation à la variable URL associée à la zone).
+- Lorsque les déposer d'URL sont rendus possibles par le sélecteur `WA enable URL drop` de la commande [WA SET PREFERENCE](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.en.html), le premier déposer doit être précédé d'au moins un appel à la commande [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) ou d'une affectation vers la variable d'URL associée à la zone.
 
 #### Grammaire JSON
 

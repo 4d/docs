@@ -74,7 +74,7 @@ Pour garantir l'évaluation correcte des expressions traitées via les balises, 
 
 La balise `<!--#4DBASE -->` désigne le répertoire de travail à utiliser par la balise `<!--#4DINCLUDE-->`.
 
-Lorsqu'elle est appelée dans une page Web, la balise `<!--#4DBASE -->` modifie tous les appels `<!--#4DINCLUDE-->` ultérieurs sur cette page, jusqu'au prochain `<!--#4DBASE -->, le cas échéant. Si le dossier `<!--#4DBASE --> est modifié à partir d'un fichier inclus, il récupère sa valeur originale dans le fichier parent.
+Lorsqu'elle est appelée dans une page Web, la balise `<!--#4DBASE -->` modifie tous les appels `<!--#4DINCLUDE-->` ultérieurs sur cette page, jusqu'au prochain `<!--#4DBASE -->, le cas échéant. Si le dossier`<!--#4DBASE --> est modifié à partir d'un fichier inclus, il récupère sa valeur originale dans le fichier parent.
 
 Le paramètre *folderPath* doit contenir un nom de chemin relatif à la page actuelle et il doit se terminer par une barre oblique (/). Le dossier désigné doit être situé à l'intérieur du dossier Web.
 
@@ -197,7 +197,7 @@ La collection ne doit contenir que des **éléments de même type**, sinon une e
 
 Le nombre de boucles est basé sur le nombre d'éléments de la collection. À chaque itération, la variable de l'élément correspond automatiquement à l'élément correspondant de la collection. Vous devez tenir compte des points suivants :
 
-- The *item* variable gets the same type as the first collection element. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
+- If the *item* variable is of the object type or collection type (i.e. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
 - If the *item* variable is of the object type or collection type (i.e. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
 - Si la collection contient des éléments de valeur Null, une erreur sera générée si le type de la variable ne prend pas en charge la valeur *Null* (comme par exemple les variables entier long).
 
@@ -340,7 +340,7 @@ In case of an error during interpretation, the text inserted will be in the form
 #### Alternative syntax: `$4DHTML(expression)`
 
 
-The value of the 4D variable `vtSiteName` will be inserted in the HTML page when it is sent. This value is inserted as simple text, special HTML characters such as ">" are automatically escaped.
+La valeur de la variable 4D `vtSiteName` sera insérée dans la page HTML lors de son envoi. Cette valeur est insérée comme du texte simple, les caractères HTML spéciaux tels que ">" sont automatiquement échappés.
 
 For example, here are the processing results of the 4D text variable myvar with the available tags:
 

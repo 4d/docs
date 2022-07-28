@@ -58,15 +58,15 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 *server* 引数として、以下のプロパティを持つオブジェクトを渡します:
 
 
-| *server*                                                                                                                                                                                                                                                                                                                                           | デフォルト値 (省略時)                     |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| *server*                                                                                                                                                                                                                                                                                                                   | デフォルト値 (省略時)                     |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                            |
-| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<p>OAuth2 認証の資格情報を表すテキスト文字列またはトークンオブジェクト。 `authenticationMode` が OAUTH2 の場合のみ使用されます。 `accessTokenOAuth2` が使用されているが `authenticationMode` が省略されていた場合、OAuth2 プロトコルが使用されます (サーバーで許可されていれば)。 *[POP3 transporter](#pop3-transporter-オブジェクト)* オブジェクトには返されません。 | なし                               |
+| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<p>OAuth2 認証の資格情報を表すテキスト文字列またはトークンオブジェクト。 `authenticationMode` が OAUTH2 の場合のみ使用されます。 `accessTokenOAuth2` が使用されているが `authenticationMode` が省略されていた場合、OAuth2 プロトコルが使用されます (サーバーで許可されていれば)。 OAuth2 認証の資格情報を表すテキスト文字列またはトークンオブジェクト。 | なし                               |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| サーバーがサポートするもっともセキュアな認証モードが使用されます |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                               |
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *必須*                             |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| なし                               |
-| **.password** : Text<p>サーバーとの認証のためのユーザーパスワード *[POP3 transporter](#pop3-transporter-オブジェクト)* オブジェクトには返されません。                                                                                                                                                                                                                 | なし                               |
+| **.password** : Text<p>サーバーとの認証のためのユーザーパスワード OAuth2 認証の資格情報を表すテキスト文字列またはトークンオブジェクト。                                                                                                                                                                                                                 | なし                               |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 995                              |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| なし                               |
 
@@ -144,7 +144,8 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
     $status:=$transporter.checkConnection()
     If($status.success)
-       ALERT("POP3接続チェックに成功しました。")
+       ALERT("POP3接続チェックに成功しました。
+    ")
     Else
        ALERT("Error: "+$status.statusText)
     End if
@@ -193,7 +194,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
     $POP3_transporter.delete($mailInfo.number)
  End for each
   // セッションを強制的に終了し、削除フラグを立てたメールを削除します
- CONFIRM("選択されているメッセージは削除されます。";"削除する";"元に戻す")
+ CONFIRM("選択されているメッセージは削除されます。 ";"削除する";"元に戻す")
  If(OK=1) // 削除を選んだ場合
     $POP3_transporter:=Null
  Else
@@ -250,7 +251,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
   // メールボックス情報
  $boxInfo:=$transporter.getBoxInfo()
- ALERT("メールボックスには "+String($boxInfo.mailCount)+" 件のメッセージがあります。")
+ ALERT("メールボックスには "+String($boxInfo.mailCount)+" 件のメッセージがあります。
 ```
 
 
@@ -372,7 +373,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
   // メッセージ情報
  $mailInfo:=$transporter.getMailInfo(1) // 先頭メールを取得します
  If($mailInfo #Null)
-    ALERT("最初のメールのサイズは "+String($mailInfo.size)+" バイトです。")
+    ALERT("最初のメールのサイズは "+String($mailInfo.size)+" バイトです。
  End if
 ```
 
@@ -442,7 +443,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
  $vNum:=$mailInfo.length
  $vSize:=$mailInfo.sum("size")
 
- ALERT("メールボックスには "+String($vNum)+" 件のメッセージがあります。合計サイズは "+String($vSize)+" バイトです。")
+ ALERT("メールボックスには "+String($vNum)+" 件のメッセージがあります。 合計サイズは "+String($vSize)+" バイトです。
 ```
 
 

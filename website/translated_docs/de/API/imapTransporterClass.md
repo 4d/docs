@@ -526,6 +526,10 @@ Else
 ALERT("Error: "+$status.statusText)
 End if
 End if
+Else
+ALERT("Error: "+$status.statusText)
+End if
+End if
 ```
 
 <!-- END REF -->
@@ -711,6 +715,10 @@ $status:=$transporter.deleteBox($name)
 
 If ($status.success)
     ALERT("Mailbox deletion successful!")
+    Else
+    ALERT("Error: "+$status.statusText)
+    End if
+End if
     Else
     ALERT("Error: "+$status.statusText)
     End if
@@ -1149,6 +1157,8 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
         // ...
     End for each
  End if
+    End for each
+ End if
 ```
 
 <!-- END REF -->
@@ -1194,7 +1204,7 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 *   **True** - to mark the message as "seen" (indicating the message has been read)
 *   **False** - to leave the message's "seen" status untouched > * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message, > * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated, > * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox()`.
 > * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message,
-> * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated,
+> * > * The function returns an empty BLOB if *msgNumber* or msgID* designates a non-existing message, > * If no mailbox is selected with the [`.selectBox()`](#selectbox) command, an error is generated, > * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox()`.
 > * If there is no open connection, `.getMIMEAsBlob()` will open a connection the last mailbox specified with `.selectBox()`.
 
 
@@ -1573,6 +1583,10 @@ If ($status.success)
    ALERT("Error: "+$status.statusText)
  End if
 End if
+   Else
+   ALERT("Error: "+$status.statusText)
+ End if
+End if
 ```
 
 <!-- END REF -->
@@ -1854,6 +1868,10 @@ If ($status.success)
    ALERT("Error: "+$status.statusText)
    End if
 End if
+   Else
+   ALERT("Error: "+$status.statusText)
+   End if
+End if
 ```
 
 <!-- END REF -->
@@ -1923,6 +1941,10 @@ $status:=$transporter.unsubscribe($name)
 
 If ($status.success)
    ALERT("Mailbox unsubscription successful!")
+   Else
+   ALERT("Error: "+$status.statusText)
+   End if
+End if
    Else
    ALERT("Error: "+$status.statusText)
    End if

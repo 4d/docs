@@ -610,7 +610,7 @@ Valeur de l'attribut `SameSite` du cookie de session. Cet attribut vous permet d
 
 Trois valeurs sont disponibles :
 
-- "Strict" (valeur par défaut de l'attribut` SameSite` pour les cookies de session 4D) : les cookies ne seront envoyés que dans le contexte de première partie, c'est-à-dire le contexte correspondant au domaine du site, et jamais à des sites Web tiers.
+- "Strict" (valeur par défaut de l'attribut`SameSite` pour les cookies de session 4D) : les cookies ne seront envoyés que dans le contexte de première partie, c'est-à-dire le contexte correspondant au domaine du site, et jamais à des sites Web tiers.
 - "Lax": Cookies are not sent on cross-site subrequests (for example to load images or frames into a third-party site), but are sent when a user is navigating to the origin site (i.e. they follow a link).
 - "None": Cookies are sent in all contexts, i.e in responses to both first-party and cross-origin requests. When "None" value is used, the cookie `Secure` attribute must also be set (or the cookie will be blocked).
 

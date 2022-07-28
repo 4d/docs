@@ -13,7 +13,7 @@ This page allows selecting, creating, or configuring Method editor themes. A the
 
 ### Lista de temas
 
-In this list, you select the theme to apply to the code editor. All available themes are displayed, including custom themes (if any). 4D ofrece dos temas por defecto:
+En esta lista, se selecciona el tema que se aplicará al editor de código. All available themes are displayed, including custom themes (if any). 4D ofrece dos temas por defecto:
 
 *   **Tema Light por defecto**
 *   **Tema oscuro por defecto**
@@ -64,14 +64,14 @@ These options configure the various colors used in the Method editor and debugge
 | **Color de fondo**                                     | Color de fondo de la ventana del editor de métodos.                                                                                                                      |
 | **Borde de la línea en ejecución en el depurador**     | Color of the border surrounding the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options) page.          |
 | **Color de fondo de la línea del cursor**              | Color de fondo de la línea que contiene el cursor.                                                                                                                       |
-| **Color de fondo de la línea en ejecución**            | Background color of line being executed in the debugger.                                                                                                                 |
+| **Color de fondo de la línea en ejecución**            | Color de fondo de la línea que se está ejecutando en el depurador.                                                                                                       |
 | **Resaltar las palabras encontradas**                  | Color de resaltado de las palabras encontradas en una búsqueda.                                                                                                          |
 | **Destacar los paréntesis**                            | Highlight color of corresponding parentheses (used when pairs of parentheses are signaled by highlighting, see [Options](#options)).                                     |
 | **Resaltado de los bloques**                           | Highlight color for selected logical blocks when the "Highlight logical blocks" option is enabled in the [Options](#options).                                            |
 | **Resaltar la misma variable o campo**                 | Highlight color for other occurrences of the same variable or field text when one of the "Highlighting variables and text" option is enabled in the [Options](#options). |
 | **Resaltado de la línea en ejecución en el depurador** | Highlight color of the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options).                            |
 | **Color de fondo de la selección**                     | Color de fondo de la selección.                                                                                                                                          |
-| **Texto sugerido**                                     | Color of autocomplete text suggested by the Method editor.                                                                                                               |
+| **Texto sugerido**                                     | Color del texto de autocompletado sugerido por el editor de método.                                                                                                      |
 
 
 
@@ -97,9 +97,9 @@ Allows you to disable/enable the "international" code settings for the local 4D 
 
 #### Indentación
 
-Changes the indentation value for the 4D code in the Method editor. El ancho debe especificarse en puntos (10 por defecto).
+Cambia el valor de indentación del código 4D en el editor de métodos. El ancho debe especificarse en puntos (10 por defecto).
 
-4D code is automatically indented in order to reveal its structure:
+El código 4D es indentado automáticamente para revelar su estructura:
 
 ![](assets/en/Preferences/optionsIndent.png)
 
@@ -131,7 +131,7 @@ The highlight color can be set in the [Theme](#theme-definition) page.
 
 #### Mostrar siempre las líneas de bloques
 
-Permite ocultar permanentemente las líneas verticales de bloques. The block lines are designed to visually connect nodes. By default, they are always displayed (except when collapse/expand icons are hidden, see below).
+Permite ocultar permanentemente las líneas verticales de bloques. Las líneas de bloque están diseñadas para conectar visualmente los nodos. By default, they are always displayed (except when collapse/expand icons are hidden, see below).
 
 ![](assets/en/Preferences/optionsBlockLines.png)
 
@@ -180,15 +180,15 @@ Highlights the line that is currenty running in the debugger in addition to the 
 
 ![](assets/en/Preferences/optionsLine.png)
 
-If you deselect this option, only the yellow arrow is shown.
+Si deselecciona esta opción, sólo se mostrará la flecha amarilla.
 
 ### Sugerencias
 
 This area lets you configure autocomplete mechanisms in the Method editor to adapt it to your own work habits.
 
-|                                   | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Apertura automática de la ventana | Triggers the automatic display of the suggestion window for:<p> <ul><li>Constantes</li><li>Variables (local and interprocess) and object attributes</li><li>Tablas</li><li>Prototipos (es decir las funciones de clase)</li></ul><p><p>For example, when the "Variables (local or interprocess) and object attributes" option is checked, a list of suggestions appears when you type the $ character:<p><p>![](assets/en/Preferences/suggestionsAutoOpen.png)<p><p>    You can disable this functioning for certain elements of the language by deselecting their corresponding option. |
-| Validación de una sugerencia      | Sets the entry context that allows the Method editor to validate automatically the current suggestion displayed in the autocomplete window.<p><p><ul><li>**Tab and delimiters**<br>When this option is selected, you can validate the current selection with the Tab key or any delimiter that is relevant to the context. For example, if you enter "ALE" and then "(", 4D automatically writes "ALERT(" in the editor. Here is the list of delimiters that are taken into account:<br> ( ; : = < [ {</li><li>**Tab only**<br>When this option is selected, you can only use the Tab key to insert the current suggestion. Esto se puede utilizar más concretamente para facilitar la introducción de caracteres delimitadores en los nombres de los elementos, como ${1}.<p><p>**Note**: You can also double-click in the window or press the Carriage return key to validate a suggestion.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                    |
+|                                   | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Apertura automática de la ventana | Activa la visualización automática de la ventana de sugerencias para:<p> <ul><li>Constantes</li><li>Variables (locales e interproceso) y atributos de objetos</li><li>Tablas</li><li>Prototipos (es decir las funciones de clase)</li></ul><p><p>For example, when the "Variables (local or interprocess) and object attributes" option is checked, a list of suggestions appears when you type the $ character:<p><p>![](assets/en/Preferences/suggestionsAutoOpen.png)<p><p>    You can disable this functioning for certain elements of the language by deselecting their corresponding option. |
+| Validación de una sugerencia      | Sets the entry context that allows the Method editor to validate automatically the current suggestion displayed in the autocomplete window.<p><p><ul><li>**Tab and delimiters**<br>When this option is selected, you can validate the current selection with the Tab key or any delimiter that is relevant to the context. For example, if you enter "ALE" and then "(", 4D automatically writes "ALERT(" in the editor. Here is the list of delimiters that are taken into account:<br> ( ; : = < [ {</li><li>**Tab only**<br>When this option is selected, you can only use the Tab key to insert the current suggestion. Esto se puede utilizar más concretamente para facilitar la introducción de caracteres delimitadores en los nombres de los elementos, como ${1}.<p><p>**Note**: You can also double-click in the window or press the Carriage return key to validate a suggestion.</li></ul>                                                                                                                                                                                                                                                                                                                                                                                             |
 	
 

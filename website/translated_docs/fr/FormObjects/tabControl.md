@@ -49,7 +49,7 @@ Pour fournir les étiquettes d'un onglet, vous pouvez utiliser :
 - une liste déroulante
 - un tableau
 
-### Utilisation d'un objet
+### Using an object
 
 Vous pouvez affecter un [objet](Concepts/dt_object.md) encapsulant une [collection](Concepts/dt_collection) comme [source de données](properties_Object.md#variable-or-expression) de l'onglet. The object must contain the following properties:
 
@@ -126,4 +126,4 @@ Par exemple, si l’utilisateur clique sur le 3e onglet, 4D affichera la page 3 
 
 ## Propriétés prises en charge
 
-[Gras](properties_Text.md#bold) - [Bas](properties_CoordinatesAndSizing.md#bottom) - [Énumération](properties_DataSource.md#choice-list-static-list) - [Css Class](properties_Object.md#css-class) - [Type d'expression](properties_Object.md#expression-type) - [Police](properties_Text.md#font) - [Taille](properties_Text.md#font-size) - [Hauteur](properties_CoordinatesAndSizing.md#height) - [Message d'aide](properties_Help.md#help-tip) - [Dim. horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Italique](properties_Text.md#italic) - [Gauche](properties_CoordinatesAndSizing.md#left) - [Nom](properties_Object.md#object-name) - [Droite](properties_CoordinatesAndSizing.md#right) - [Valeur standard](properties_Object.md#save-value) - [Action standard](properties_Action.md#standard-action) - [Orientation onglets](properties_Appearance.md#tab-control-direction) - [Haut](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Souligné](properties_Text.md#underline) - [Dim. vertical](properties_ResizingOptions.md#vertical-sizing) - [Variable ou expression](properties_Object.md#variable-or-expression) - [Visibilité](properties_Display.md#visibility) - [Largeur](properties_CoordinatesAndSizing.md#width) 
+Par exemple, si l’utilisateur clique sur le 3e onglet, 4D affichera la page 3 du formulaire courant (si elle existe). 

@@ -142,12 +142,10 @@ For example, you can write in a template:
 
 ```html
 <!--#4DCODE
-//PARAMETERS initialization
-C_OBJECT:C1216($graphParameters)
+//PARAMETERS initialization C_OBJECT:C1216($graphParameters)
 OB SET:C1220($graphParameters;"graphType";1)
 $graphType:=1
-//...your code here
-If(OB Is defined:C1231($graphParameters;"graphType"))
+//...your code here If(OB Is defined:C1231($graphParameters;"graphType"))
     $graphType:=OB GET:C1224($graphParameters;"graphType")
     If($graphType=7)
         $nbSeries:=1
@@ -155,8 +153,7 @@ If(OB Is defined:C1231($graphParameters;"graphType"))
             DELETE FROM ARRAY:C228 ($yValuesArrPtr{1}->;9;100000)
             $nbValues:=8
         End if
-    End if
-End if
+    End if End if
 -->
 ```
 
@@ -257,7 +254,7 @@ The number of loops is based on the number of entities of the entity selection. 
 
         <tr><th>ID</th><th>Name</th><th>Total purchase</th></tr>
 
-          <!--#4DEACH $customer in ds.Customers.all()-->
+          <!--#4DEACH $customer in ds. Customers.all()-->
         <tr>
             <td><!--#4DTEXT $customer.ID--></td>
             <td><!--#4DTEXT $customer.name--></td>
@@ -270,14 +267,13 @@ The number of loops is based on the number of entities of the entity selection. 
 #### Example with `PROCESS 4D TAGS`
 
 ```4d
-var customers : cs.CustomersSelection
+var customers : cs. CustomersSelection
 var $input; $output : Text
 
-customers:=ds.Customers.all()
+customers:=ds. Customers.all()
 $input:="<!--#4DEACH $cust in customers-->" 
 $input:=$input+"<!--#4DTEXT $cust.name -->"+Char(Carriage return)
-$input:=$input+"<!--#4DENDEACH-->" 
-PROCESS 4D TAGS($input; $output)
+$input:=$input+"<!--#4DENDEACH-->" PROCESS 4D TAGS($input; $output)
 TEXT TO DOCUMENT("customers.txt"; $output)
 ```
 
@@ -340,7 +336,7 @@ In case of an error during interpretation, the text inserted will be in the form
 #### Alternative syntax: `$4DHTML(expression)`
 
 
-Just like the `4DTEXT` tag, this tag lets you assess a 4D variable or expression that returns a value, and insert it as an HTML expression. Unlike the `4DTEXT` tag, this tag does not escape HTML special characters (e.g. ">").
+The value of the 4D variable `vtSiteName` will be inserted in the HTML page when it is sent. This value is inserted as simple text, special HTML characters such as ">" are automatically escaped.
 
 For example, here are the processing results of the 4D text variable myvar with the available tags:
 
@@ -362,9 +358,9 @@ Used with the `<!--#4DELSEIF-->` (optional), `<!--#4DELSE-->` (optional) and `<!
 
 The *expression* parameter can contain any valid 4D expression returning a Boolean value. It must be indicated within parenthesis and comply with the 4D syntax rules.
 
-The `<!--#4DIF expression-->` ... `<!--#4DENDIF-->` blocks can be nested in several levels. Like in 4D, each `<!--#4DIF expression-->` must match a `<!--#4DENDIF-->`.
-
 In case of an interpretation error, the text "`<!--#4DIF expression-->`: A Boolean expression was expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`. Likewise, if there are not as many `<!--#4DENDIF-->` as `<!--#4DIF -->`, the text "`<!--#4DIF expression-->`: 4DENDIF expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`.
+
+In case of an interpretation error, the text "`<!--#4DIF expression-->`: A Boolean expression was expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`. The `<!--#4DIF expression-->` ... `<!--#4DENDIF-->` blocks can be nested in several levels. Like in 4D, each `<!--#4DIF expression-->` must match a `<!--#4DENDIF-->`.
 
 Using the `<!--#4DELSEIF-->` tag, you can test an unlimited number of conditions. Only the code that follows the first condition evaluated as `True` is executed. If no conditions are true, no statement is executed (if there is no final `<!--#4DELSE-->`). You can use a <!--#4DELSE--> tag after the last <!--#4DELSEIF-->. If all the conditions are false, the statements following the <!--#4DELSE--> are executed.
 
@@ -407,10 +403,8 @@ This example of code inserted in a static HTML page displays a different label a
 ```html
 <BODY>
 ...
-<!--#4DIF (vname#"")-->
-Names starting with <!--#4DTEXT vname-->.
-<!--#4DELSE-->
-No name has been found.
+<!--#4DIF (vname#"")--> Names starting with <!--#4DTEXT vname-->.
+<!--#4DELSE--> No name has been found.
 <!--#4DENDIF-->
 ...
 </BODY>
@@ -659,7 +653,7 @@ The tag `<!--#4DTEXT expression-->` allows you to insert a reference to a 4D var
 <P>Welcome to <!--#4DTEXT vtSiteName-->!</P>
 ```
 
-The value of the 4D variable `vtSiteName` will be inserted in the HTML page when it is sent. This value is inserted as simple text, special HTML characters such as ">" are automatically escaped.
+Just like the `4DTEXT` tag, this tag lets you assess a 4D variable or expression that returns a value, and insert it as an HTML expression. This value is inserted as simple text, special HTML characters such as ">" are automatically escaped.
 
 You can also insert 4D expressions. You can for example directly insert the contents of a field (`<!--#4DTEXT [tableName]fieldName-->`), an array element (`<!--#4DTEXT tabarr{1}-->`) or a method returning a value (`<!--#4DTEXT mymethod-->`). The expression conversion follows the same rules as the variable ones. Moreover, the expression must comply with 4D syntax rules.
 

@@ -10,7 +10,7 @@ The 4D web server settings include security parameters, listening ports, default
 
 There are different ways to configure the 4D web server settings, depending on the scope and the server you want to set:
 
-| Localização do parâmetro                                      | Scope                                    | Involved web server                             |
+| Configuração de local                                         | Scope                                    | Involved web server                             |
 | ------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------- |
 | [webServer object](webServerObject.md)                        | Temporary (current session)              | Any web server, including component web servers |
 | `WEB SET OPTION` or a `WEB XXX` command                       | Temporary (current session)              | Main server                                     |
@@ -35,9 +35,9 @@ You can modify the size of the cache in the **Pages Cache Size** area. The value
 
 ## Certificate folder
 
-| Can be set with  | Nome                | Comentários                                                                                                                            |
-| ---------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| webServer object | `certificateFolder` | Text property but can be a [`4D.Folder`](API/FolderClass.md) object when used with the *settings* parameter of the `start()` function. |
+| Can be set with  | Nome                | Comentários                                                                                                                             |
+| ---------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| webServer object | `certificateFolder` | Text property but can be a [`4D. Folder`](API/FolderClass.md) object when used with the *settings* parameter of the `start()` function. |
 
 Folder where the TLS certificate files for the web server are located.
 
@@ -549,7 +549,7 @@ You can designate another default HTML root folder by entering its pathname.
 
 - The path is relative to the [Project folder](Project/architecture.md#project-folder) (4D local and 4D Server) or to the folder containing the 4D application or software package (4D in remote mode).
 - The path is expressed with the POSIX syntax (folders are separated by a slash ("/"))
-- To "go up" one level in the folder hierarchy, enter “..” (two periods) before the folder name
+- To "go up" one level in the folder hierarchy, enter “..” (two periods) before the folder name (two periods) before the folder name
 - The path must not start with a slash (except if you want the HTML root folder to be the Project or 4D remote folder, but for access to the folders above to be forbidden, in which case you can pass "/" as the root folder).
 
 For example, if you want the HTML root folder to be the "Web" subfolder in the "MyWebApp" folder, enter "MyWebApp/Web".

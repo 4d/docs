@@ -14,7 +14,7 @@ For example, if you installed two components in your main application, you can s
 
 Other than memory, there is no limit to the number of components and thus, of web servers, that can be attached to a single 4D application project.
 
-Each 4D web server, including the main application's web server, is exposed as a specific **object** of the `4D.WebServer` class. Once instantiated, a web server object can be handled from the current application or from any component using a [large number of properties and functions](API/WebServerClass.md).
+Each 4D web server, including the main application's web server, is exposed as a specific **object** of the `4D. WebServer` class. Once instantiated, a web server object can be handled from the current application or from any component using a [large number of properties and functions](API/WebServerClass.md).
 
 > The legacy [WEB commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) of the 4D language are supported but cannot select the web server to which they apply (see below).
 
@@ -38,8 +38,8 @@ $nbSrv:=WEB Server list.length
 To instantiate a web server object, call the [`WEB Server`](API/WebServerClass.md#web-server) command:
 
 ```4d
-    //create an object variable of the 4D.WebServer class
-var webServer : 4D.WebServer 
+    //create an object variable of the 4D. WebServer class
+var webServer : 4D. WebServer 
     //call the web server from the current context
 webServer:=WEB Server  
 
@@ -54,7 +54,7 @@ If the application uses components and you want to call:
 you can also use:
 
 ```4d
-var webServer : 4D.WebServer 
+var webServer : 4D. WebServer 
     //call the host web server from a component  
 webServer:=WEB Server(Web server host database)  
     //call the target web server

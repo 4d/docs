@@ -64,4 +64,4 @@ Für das logische ODER gilt:
  (Expr1|Expr2) & Not(Expr1 & Expr2)  
 ```
 
-> In boolean contexts, the 4D language also supports [short-circuit operators](operators.md#short-circuit-operators) (`&&` and `||`) and the [truthy and falsy](operators.md#truthy-and-falsy) concept. 
+> In boolean contexts, the 4D language also supports [short-circuit operators](operators.md#short-circuit-operators) (`&&` and `||`) and the [trushy and falsy](operators.md#truthy-and-falsy) concept. 

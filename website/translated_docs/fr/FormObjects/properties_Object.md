@@ -114,8 +114,8 @@ When a variable is not named, when the form is loaded, 4D creates a new variable
 - You can use a specific initialization code when the form is loaded that uses, for example, the `VARIABLE TO VARIABLE` command:
 
 ```4d
- If(Form event code=On Load)
-    var $init : Text
+ If(Form event=On Load)
+    C_TEXT($init)
     $Ptr_object:=OBJECT Get pointer(Object named;"comments")
     $init:=""
     VARIABLE TO VARIABLE(Current process;$Ptr_object->;$init)
@@ -145,7 +145,7 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 #### Objets pris en charge
 
-[Zone 4D View Pro](viewProArea_overview) - [Zone 4D Write Pro](writeProArea_overview) - [Bouton](button_overview.md) - [Grille de boutons](buttonGrid_overview.md) - [Case à cocher](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Liste déroulante](dropdownList_Overview.md) - [Liste hiérarchique](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Colonne List Box](listbox_overview.md#list-box-columns) - [En-tête list box](listbox_overview.md#list-box-headers) - [Pied List Box](listbox_overview.md#list-box-footers) - [Pop-up Menu Image](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Indicateur de progression](progressIndicator.md) - [Bouton Radio](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Sous-formulaire](subform_overview.md#overview) - [Onglet](tabControl.md) - [Zone Web](webArea_overview.md)
+[4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress indicator](progressIndicator.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Tab control](tabControl.md) - [Subform](subform_overview.md#overview) - [Radio Button](radio_overview.md) - [Web Area](webArea_overview.md)
 
 
 
@@ -213,7 +213,7 @@ The collection or the entity selection must be available to the form when it is 
 
 *   if you used a collection of objects, you can call **This** in the datasource expression to access each property value, for example **This.\<propertyPath>**.
 *   if you used an entity selection, you can call **This** in the datasource expression to access each attribute value, for example  **This.\<attributePath>**.
-> > > > If you used a collection of scalar values (and not objects), 4D allows you to display each value by calling **This.value** in the datasource expression. However in this case you will not be able to modify values or to access the current ite object (see below) Note: For information about entity selections, please refer to the [ORDA](https://doc.4d.com/4Dv17R6/4D/17-R6/ORDA.200-4354624.en.html) chapter.
+> > > > > If you used a collection of scalar values (and not objects), 4D allows you to display each value by calling **This.value** in the datasource expression. However in this case you will not be able to modify values or to access the current ite object (see below) Note: For information about entity selections, please refer to the [ORDA](https://doc.4d.com/4Dv17R6/4D/17-R6/ORDA.200-4354624.en.html) chapter.
 
 #### Grammaire JSON
 

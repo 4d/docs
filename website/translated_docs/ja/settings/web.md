@@ -184,7 +184,9 @@ CORSサービスで許可されたホストとメソッドの一覧。 [CORS設�
 
 -   **ログファイルなし**: このオプションが選択されると、4D はリクエストのログファイルを作成しません。
 
--   **CLF (Common Log Format)**: このオプションが選択されると、リクエストのログが CLFフォーマットで作成されます。 CLFフォーマットでは、それぞれのリクエストが行単位でファイル内に表示されます: <br/> host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length<br/> 各フィールドはスペースによって区切られ、各行は CR/LF シーケンス (character 13、character 10) で終わります。
+-   **CLF (Common Log Format)**: このオプションが選択されると、リクエストのログが CLFフォーマットで作成されます。 CLFフォーマットでは、それぞれのリクエストが行単位でファイル内に表示されます: \
+  host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length\
+  各フィールドはスペースによって区切られ、各行は CR/LF シーケンス (character 13、character 10) で終わります。
 
     -   host: クライアントの IPアドレス (例: 192.100.100.10)
     -   rfc931: 4Dによって作成されない情報。 常に - (マイナス記号) です。

@@ -41,11 +41,11 @@ Un [objeto](Concepts/dt_object.md) encapsulando una [colección](Concepts/dt_col
 
 Si el objeto contiene otras propiedades, se ignoran.
 
-To initialize the object associated to the drop-down list, you can:
+Para inicializar el objeto asociado a la lista desplegable, puede:
 
-* Introduzca una lista de valores por defecto en las propiedades del objeto seleccionando "\<Static List>" en el tema [Fuente de datos](properties_DataSource.md) de la lista de propiedades. The default values are loaded into an object automatically.
+* Introduzca una lista de valores por defecto en las propiedades del objeto seleccionando "\<Static List>" en el tema [Fuente de datos](properties_DataSource.md) de la lista de propiedades. Los valores por defecto se cargan en un objeto automáticamente.
 
-* Execute code that creates the object and its properties. For example, if "myList" is the [variable](properties_Object.md#variable-or-expression) associated to the drop-down list, you can write in the [On Load](Events/onLoad.md) form event:
+* Ejecutar código que crea el objeto y sus propiedades. For example, if "myList" is the [variable](properties_Object.md#variable-or-expression) associated to the drop-down list, you can write in the [On Load](Events/onLoad.md) form event:
 
 ```4d
 // Form.myDrop is the datasource of the form object
@@ -56,7 +56,7 @@ Form.myDrop.index:=-1  //currentValue is a placeholder
 Form.myDrop.currentValue:="Select a fruit" 
 ```
 
-The drop-down list is displayed with the placeholder string:
+La lista desplegable se muestra con la cadena del marcador de posición:
 
 ![](assets/en/FormObjects/fruits2.png)
 
@@ -150,7 +150,7 @@ A hierarchical drop-down list has a sublist associated with each item in the lis
 
 ![](assets/en/FormObjects/popupDropdown_hierar.png)
 
-> In forms, hierarchical drop-down lists are limited to two levels.
+> En los formularios, las listas desplegables jerárquicas están limitadas a dos niveles.
 
 You can assign the hierarchical choice list to the drop-down list object using the [Choice List](properties_DataSource.md#choice-list) field of the Property List.
 

@@ -23,7 +23,8 @@ title: On Close Box
   //...
     :(Form event code=On Close Box)
        If(Modified record($vpFormTable->))
-          CONFIRM("レコードが変更されました。 へんこうを保存しますか？")
+          CONFIRM("レコードが変更されました。 へんこうを保存しますか？
+          ")
           If(OK=1)
              ACCEPT
           Else

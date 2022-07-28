@@ -34,7 +34,7 @@ The Blob class lets you create and manipulate [blob objects](../Concepts/dt_blob
 
 #### Beschreibung
 
-`4D.Blob.new` <!-- REF #4D.Blob.new().Summary -->creates a new `4D.Blob` object optionally encapsulating a copy of the data from another blob (scalar blob or `4D.Blob`)<!-- END REF -->.
+`4D.Blob.new` <!-- REF #4D.Blob.new().Summary -->creates a new `4D.Blob` object optionally encapsulating a copy of the data from another blob (scalar blob or `4D.Blob`).<!-- END REF -->
 
 If the `blob` parameter is omitted, the method returns an empty 4D.Blob.
 

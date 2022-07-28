@@ -21,6 +21,9 @@ All the records and all the indexes of the database are verified. If you want to
 
 After verification, a report file is generated in XML format on the server in the [maintenance Logs](Project/architecture.md#logs) folder. The **View Report** button (named **Download Report** if the operation was carried out from a remote machine) lets you display the file in your browser.
 
+
+This area indicates the date, time and status of the last  carried out on the database data.
+
 ### Compact Data...
 
 Thus button can be used to launch a data compacting operation directly. This operation requires stopping the server: when you click on this button, the 4D Server shutdown dialog box appears so that you can choose how to interrupt the operation:

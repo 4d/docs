@@ -107,8 +107,8 @@ For example, consider the following table in the 4D structure:
 The `Company` table is automatically available as a dataclass in the `ds` datastore. You can write:
 
 ```4d 
-var $compClass : cs.Company //declares a $compClass object variable of the Company class
-$compClass:=ds.Company //assigns the Company dataclass reference to $compClass
+var $compClass : cs. Company //declares a $compClass object variable of the Company class
+$compClass:=ds. Company //assigns the Company dataclass reference to $compClass
 ```
 
 A dataclass object can contain:
@@ -121,7 +121,7 @@ The dataclass offers an abstraction of the physical database and allows handling
 The dataclass object itself cannot be copied as an object:
 
 ```4d 
-$mydataclass:=OB Copy(ds.Employee) //returns null
+$mydataclass:=OB Copy(ds. Employee) //returns null
 ```
 
 The dataclass properties are however enumerable:
@@ -138,8 +138,8 @@ OB GET PROPERTY NAMES(ds. Employee;$prop)
 Dataclass properties are attribute objects describing the underlying fields or relations. Por exemplo:
 
 ```4d 
- $nameAttribute:=ds.Company.name //reference to class attribute
- $revenuesAttribute:=ds.Company["revenues"] //alternate way
+ $nameAttribute:=ds. Company.name //reference to class attribute
+ $revenuesAttribute:=ds. Company["revenues"] //alternate way
 ```
 
 This code assigns to `$nameAttribute` and `$revenuesAttribute` references to the name and revenues attributes of the `Company` class. This syntax does NOT return values held inside of the attribute, but instead returns references to the attributes themselves. To handle values, you need to go through [Entities](#entity).
@@ -167,7 +167,7 @@ In addition, the following relation attributes will also be automatically availa
 
 *   in the Project dataclass: **theClient** attribute, of the "relatedEntity" kind; there is at most one Company for each Project (the client)
 *   in the Company dataclass: **companyProjects** attribute, of the "relatedEntities" kind; for each Company there is any number of related Projects.
-> The Manual or Automatic property of a database relation has no effect in ORDA.
+> > The Manual or Automatic property of a database relation has no effect in ORDA.
 
 All dataclass attributes are exposed as properties of the dataclass:
 
@@ -189,14 +189,14 @@ The purpose of the entity is to manage data (create, update, delete). When an en
 The entity object itself cannot be copied as an object:
 
 ```4d
- $myentity:=OB Copy(ds.Employee.get(1)) //returns null
+ $myentity:=OB Copy(ds. Employee.get(1)) //returns null
 ```
 
 The entity properties are however enumerable:
 
 ```4d
  ARRAY TEXT($prop;0)
- OB GET PROPERTY NAMES(ds.Employee.get(1);$prop)
+ OB GET PROPERTY NAMES(ds. Employee.get(1);$prop)
   //$prop contains the names of all the entity attributes
 ```
 
@@ -208,8 +208,8 @@ An entity selection is an object containing one or more reference(s) to entities
 Exemplo:
 
 ```4d
-var $e : cs.EmployeeSelection //declares a $e object variable of the EmployeeSelection class type
-$e:=ds.Employee.all() //assigns the resulting entity selection reference to the $e variable
+var $e : cs. EmployeeSelection //declares a $e object variable of the EmployeeSelection class type
+$e:=ds. Employee.all() //assigns the resulting entity selection reference to the $e variable
 ```
 
 Entity selections can be "sorted" or "unsorted" ([see below](#ordered-or-unordered-entity-selection)).
@@ -219,14 +219,14 @@ Entity selections can be "sorted" or "unsorted" ([see below](#ordered-or-unorder
 The entity selection object itself cannot be copied as an object:
 
 ```4d
- $myentitysel:=OB Copy(ds.Employee.all()) //returns null
+ $myentitysel:=OB Copy(ds. Employee.all()) //returns null
 ```
 
 The entity selection properties are however enumerable:
 
 ```4d
  ARRAY TEXT($prop;0)
- OB GET PROPERTY NAMES(ds.Employee.all();$prop)
+ OB GET PROPERTY NAMES(ds. Employee.all();$prop)
   //$prop contains the names of the entity selection properties
   //("length", 00", "01"...)
 ```
@@ -246,9 +246,9 @@ Unordered entity selections are created in the following cases:
 *   result of a standard `query()` on a selection (of any type) or a `query()` on a dataclass,
 *   result of the `newSelection()` method without option,
 *   result of any of the comparison methods, whatever the input selection types: `or()`, `and()`, `minus()`.
-> > The following entity selections are always **ordered**: > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
+> > > The following entity selections are always **ordered**: > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
 > 
-> * entity selections returned by 4D Server to a remote client
+> * > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
 > * entity selections built upon remote datastores.
 
 Note that when an ordered entity selection becomes an unordered entity selection, any repeated entity references are removed.

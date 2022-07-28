@@ -32,7 +32,7 @@ For a picture type [input](input_overview.md), in addition to standard editing c
 
 For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md), in addition to standard editing commands, the context menu provides the following commands:
 - **Fonts...**: displays the font system dialog box
-- **Recent fonts**: displays the names of recent fonts selected during the session. The list can store up to 10 fonts (beyond that, the last font used replaces the oldest). By default, this list is empty and the option is not displayed. You can manage this list using the `SET RECENT FONTS` and `FONT LIST` commands.
+- **Recent fonts**: displays the names of recent fonts selected during the session. The list can store up to 10 fonts (beyond that, the last font used replaces the oldest). Por defecto, esta lista está vacía y la opción no se muestra. You can manage this list using the `SET RECENT FONTS` and `FONT LIST` commands.
 - commands for supported style modifications: font, size, style, color and background color. When the user modifies a style attribute via this pop-up menu, 4D generates the `On After Edit` form event.
 
 For a [Web Area](webArea_overview.md), the contents of the menu depend of the rendering engine of the platform. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) command.
@@ -77,7 +77,7 @@ When this property is disabled, any pop-up menus associated with a list box colu
 ---
 ## Filtro de entrada
 
-An entry filter controls exactly what the user can type during data entry. Unlike [required lists](properties_RangeOfValues.md#required-list) for example, entry filters operate on a character-by-character basis. For example, if a part number always consists of two letters followed by three digits, you can use an entry filter to restrict the user to that pattern. You can even control the particular letters and numbers.
+An entry filter controls exactly what the user can type during data entry. Unlike [required lists](properties_RangeOfValues.md#required-list) for example, entry filters operate on a character-by-character basis. For example, if a part number always consists of two letters followed by three digits, you can use an entry filter to restrict the user to that pattern. Incluso puede controlar las letras y números en particular.
 
 Un filtro de entrada sólo funciona durante la entrada de datos. It has no effect on data display after the user deselects the object. In general, you use entry filters and [display formats](properties_Display.md) together. The filter constrains data entry and the format ensures proper display of the value after data entry.
 
@@ -99,26 +99,26 @@ For information about creating entry filters, see [Filter and format codes](http
 
 Here is a table that explains each of the entry filter choices in the Entry Filter drop-down list:
 
-| Filtro de entrada                      | Descripción                                                                                                                                                             |
-| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ~A                                     | Permitir la entrada de toda letra, pero convertir a mayúsculas.                                                                                                         |
-| &9                                     | Permitir sólo números.                                                                                                                                                  |
-| &A                                     | Permitir sólo letras mayúsculas.                                                                                                                                        |
-| &a                                     | Permitir sólo letras (mayúsculas y minúsculas).                                                                                                                         |
-| &@                                     | Permitir sólo caracteres alfanuméricos. No hay caracteres especiales.                                                                                                   |
-| ~a##                                   | Abreviatura del nombre del estado (por ej., CA). Permite la entrada de dos letras, pero las convierte en mayúsculas.                                                    |
-| !0&9##/##/##                           | Formato de entrada de fechas estándar. Mostrar ceros en los espacios de entrada. Permitir cualquier número.                                                             |
-| !0&9 Día: ## Mes: ## Año: ##           | Formato de entrada de hora. Mostrar ceros en los espacios de entrada. Permitir cualquier número. Limitado a horas y minutos.                                            |
-| !0&9##:##                              | Formato de entrada de hora. Limitado a horas y minutos. Mostrar ceros en los espacios de entrada. Permitir cuatro números, separados por dos puntos.                    |
-| !0&9## Horas ## Minutos ## Segundos    | Formato de entrada de hora. Mostrar ceros en los espacios de entrada. Permitir dos números antes de cada palabra.                                                       |
-| !0&9Horas: ## Minutas: ## Segundos: ## | Formato de entrada de hora. Mostrar ceros en los espacios de entrada. Permitir dos números después de cada palabra.                                                     |
-| !0&9##-##-##-##                        | Formato de número de teléfono local. Mostrar ceros en los espacios de entrada. Permitir cualquier número. Tres entradas, guión, cuatro entradas.                        |
-| !_&9(###)!0###-####                    | Número de teléfono de larga distancia. Display underscores in first three entry spaces, zeros in remainder.                                                             |
-| !0&9###-###-###                        | Número de teléfono de larga distancia. Mostrar ceros en los espacios de entrada. Permitir cualquier número. Three entries, hyphen, three entries, hyphen, four entries. |
-| !0&9###-##-###                         | Número de la Seguridad Social. Mostrar ceros en los espacios de entrada. Permitir cualquier número.                                                                     |
-| ~"A-Z;0-9; ;,;.;-"                     | Uppercase letters and punctuation. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                                           |
-| &"a-z;0-9; ;,;.;-"                     | Letras mayúsculas y minúsculas y puntuación. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                                                    |
-| &"0-9;.;-"                             | Números. Allow only numbers, decimal points, and hyphens (minus sign).                                                                                                  |
+| Filtro de entrada                      | Descripción                                                                                                                                                              |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ~A                                     | Permitir la entrada de toda letra, pero convertir a mayúsculas.                                                                                                          |
+| &9                                     | Permitir sólo números.                                                                                                                                                   |
+| &A                                     | Permitir sólo letras mayúsculas.                                                                                                                                         |
+| &a                                     | Permitir sólo letras (mayúsculas y minúsculas).                                                                                                                          |
+| &@                                     | Permitir sólo caracteres alfanuméricos. No hay caracteres especiales.                                                                                                    |
+| ~a##                                   | Abreviatura del nombre del estado (por ej., CA). Permite la entrada de dos letras, pero las convierte en mayúsculas.                                                     |
+| !0&9##/##/##                           | Formato de entrada de fechas estándar. Mostrar ceros en los espacios de entrada. Permitir cualquier número.                                                              |
+| !0&9 Día: ## Mes: ## Año: ##           | Formato de entrada de hora. Mostrar ceros en los espacios de entrada. Permitir cualquier número. Limitado a horas y minutos.                                             |
+| !0&9##:##                              | Formato de entrada de hora. Limitado a horas y minutos. Mostrar ceros en los espacios de entrada. Permitir cuatro números, separados por dos puntos.                     |
+| !0&9## Horas ## Minutos ## Segundos    | Formato de entrada de hora. Mostrar ceros en los espacios de entrada. Permitir dos números antes de cada palabra.                                                        |
+| !0&9Horas: ## Minutas: ## Segundos: ## | Formato de entrada de hora. Mostrar ceros en los espacios de entrada. Permitir dos números después de cada palabra.                                                      |
+| !0&9##-##-##-##                        | Formato de número de teléfono local. Mostrar ceros en los espacios de entrada. Permitir cualquier número. Tres entradas, guión, cuatro entradas.                         |
+| !_&9(###)!0###-####                    | Número de teléfono de larga distancia. Display underscores in first three entry spaces, zeros in remainder.                                                              |
+| !0&9###-###-###                        | Número de teléfono de larga distancia. Mostrar ceros en los espacios de entrada. Permitir cualquier número. Tres entradas, guión, tres entradas, guión, cuatro entradas. |
+| !0&9###-##-###                         | Número de la Seguridad Social. Mostrar ceros en los espacios de entrada. Permitir cualquier número.                                                                      |
+| ~"A-Z;0-9; ;,;.;-"                     | Uppercase letters and punctuation. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                                            |
+| &"a-z;0-9; ;,;.;-"                     | Letras mayúsculas y minúsculas y puntuación. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                                                     |
+| &"0-9;.;-"                             | Números. Sólo se permiten números, puntos decimales y guiones (signo menos).                                                                                             |
 
 
 #### Gramática JSON
@@ -174,7 +174,7 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 This property associates a specific keyboard layout to an [input object](input_overview.md). For example, in an international application, if a form contains a field whose contents must be entered in Greek characters, you can associate the "Greek" keyboard layout with this field. This way, during data entry, the keyboard configuration is automatically changed when this field has the focus.
 
-By default, the object uses the current keyboard layout.
+Por defecto, el objeto utiliza la disposición actual del teclado.
 
 > You can also set and get the keyboard dynamically using the `OBJECT SET KEYBOARD LAYOUT` and `OBJECT Get keyboard layout` commands.
 
@@ -226,7 +226,7 @@ Cuando se selecciona este valor, la propiedad es gestionada por la opción [Reto
 ---
 ## Marcador
 
-4D can display placeholder text in the fields of your forms.
+4D puede mostrar texto con marcador de posición en los campos de sus formularios.
 
 Placeholder text appears as watermark text in a field, supplying a help tip, indication or example for the data to be entered. This text disappears as soon as the user enters a character in the area:
 
@@ -234,7 +234,7 @@ Placeholder text appears as watermark text in a field, supplying a help tip, ind
 
 The placeholder text is displayed again if the contents of the field is erased.
 
-A placeholder can be displayed for the following types of data:
+Se puede mostrar un marcador de posición para los siguientes tipos de datos:
 
 - cadena (text o alpha)
 - date and time when the **Blank if null** property is enabled.
@@ -291,7 +291,7 @@ You can configure this option by clicking the [...] button in the Shortcuts prop
 
 
 ![](assets/en/FormObjects/property_shortcut.png)
-> You can also assign a shortcut to a custom menu command. If there is a conflict between two shortcuts, the active object has priority. For more information about associating shortcuts with menus, refer to [Setting menu properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
+> También puede asignar un acceso directo a un comando de menú personalizado. If there is a conflict between two shortcuts, the active object has priority. For more information about associating shortcuts with menus, refer to [Setting menu properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
 
 To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](https://doc.4d.com/4Dv17R5/4D/17-R5/Shortcuts-Page.300-4163701.en.html) in the Preferences dialog box.
 

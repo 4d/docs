@@ -157,7 +157,7 @@ Hay tres opciones disponibles:
 
 Using the **Selected item reference** option requires compliance with the following principles:
 - To be able to store the reference, the field or variable data source must be of the Number type (regardless of the type of value displayed in the list). The [expression](properties_Object.md#expression-type) property is automatically set.
-- Valid and unique references must be associated with list items.
+- Las referencias válidas y únicas deben estar asociadas a los elementos de la lista.
 - The drop-down list must be associated with a field or a variable.
 
 
@@ -290,7 +290,7 @@ This option lets you optimize memory usage: storing numeric values in fields use
 Using this property requires compliance with the following principles:
 
 - To be able to store the reference, the field or variable data source must be of the Number type (regardless of the type of value displayed in the list). The [expression](properties_Object.md#expression-type) property is automatically set.
-- Valid and unique references must be associated with list items.
+- Las referencias válidas y únicas deben estar asociadas a los elementos de la lista.
 
 
 #### Gramática JSON
@@ -328,7 +328,7 @@ Specifies a variable or expression that will be assigned the elements or entitie
 ## Selección de nombres
 `List boxes de tipo selección nombrada`
 
-Especifica la selección con nombre que se utilizará. Debe introducir el nombre de una selección nombrada válida. Puede ser una selección nombrada proceso o interproceso. The contents of the list box will be based on this selection. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
+Especifica la selección con nombre que se utilizará. Debe introducir el nombre de una selección nombrada válida. Puede ser una selección nombrada proceso o interproceso. El contenido del list box se basará en esta selección. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
 
 > Las selecciones con nombre son listas ordenadas de registros. They are used to keep the order and current record of a selection in memory. For more information, refer to **Named Selections** section in the *4D Language Reference manual*.
 

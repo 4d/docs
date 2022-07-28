@@ -448,7 +448,7 @@
         "title": "ピクチャー"
       },
       "FormEditor/action": {
-        "title": "アクション"
+        "title": "動作"
       },
       "FormEditor/propertiesForm": {
         "title": "フォームプロパティ"
@@ -514,7 +514,7 @@
         "title": "進捗インジケーター"
       },
       "FormObjects/propertiesAction": {
-        "title": "アクション"
+        "title": "動作"
       },
       "FormObjects/propertiesAnimation": {
         "title": "アニメーション"
@@ -919,9 +919,6 @@
       "Users/overview": {
         "title": "アクセスコントロールの概要"
       },
-      "ViewPro/advanced-programming": {
-        "title": "Javascript による高度なプログラミング"
-      },
       "ViewPro/configuring": {
         "title": "4D View Pro エリアの設定"
       },
@@ -985,8 +982,7 @@
       "Class API Reference": "クラス API リファレンス",
       "Code Editor": "コードエディター",
       "Debugging": "デバッガー",
-      "Transformation Tags": "変換タグ",
-      "Settings": "設定",
+      "Settings": "Settings",
       "Preferences": "環境設定",
       "4D Server Administration Window": "4D Server 管理ウィンドウ",
       "Web Administration": "Web 管理",
@@ -1050,10 +1046,9 @@
     "Developing Components|no description given": "コンポーネントの開発",
     "Developing Plugins|no description given": "プラグインの開発",
     "Working with a project|no description given": "プロジェクトを開発する",
-    "Settings|no description given": "設定",
-    "Transformation Tags|no description given": "変換タグ",
+    "Settings|no description given": "Settings",
     "User Settings|no description given": "ユーザー設定",
-    "https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html|no description given": "https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.ja.html",
+    "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.en.html|no description given": "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.ja.html",
     "Getting started|no description given": "はじめに",
     "Core Development|no description given": "コア開発",
     "Administration|no description given": "管理",

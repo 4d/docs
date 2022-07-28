@@ -554,8 +554,7 @@ Neste exemplo, você envia diretamente um documento 4D Write Pro contendo fotos:
 var $mime: Blob
 var $email;$server;$transporter;$status: Object
 
-// Mime export of the 4D Write Pro document
-WP EXPORT VARIABLE(WParea;$mime;wk mime html)
+// Mime export of the 4D Write Pro document WP EXPORT VARIABLE(WParea;$mime;wk mime html)
 
 // convert 4D Write Pro Mime variable in mail object
 $email:=MAIL Convert from MIME($mime)

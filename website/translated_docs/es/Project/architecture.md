@@ -49,7 +49,7 @@ El archivo de desarrollo de proyecto, utilizado para designar y lanzar el proyec
 
 > En los proyectos 4D, el desarrollo se realiza con 4D y el desarrollo multiusuarios se gestiona a través de las herramientas de control de versión. 4D Server puede abrir archivos .4DProject para realizar pruebas.
 
-Este archivo texto también puede contener llaves de configuración, en particular [`"tokenizedText": false`](../Preferences/general.md#excluding-tokens-in-existing-projects).
+This text file can also contain configuration keys, in particular [`"tokenizedText": false`](../Preferences/general.md#excluding-tokens-in-existing-projects).
 
 ### `Sources`
 
@@ -166,7 +166,7 @@ La carpeta Data contiene el archivo de datos y todos los archivos y carpetas rel
 
 Esta carpeta contiene **archivos de configuración de datos** utilizados para la administración de la aplicación.
 
-> Estos parámetros tienen prioridad sobre los **[archivos de propiedades usuario](#settings-1)** y los archivos de **[propiedades estructura](#sources)**.
+> These settings take priority over **[user settings files](#settings-1)** and **[structure settings](#sources)** files.
 
 | Contenido           | Descripción                                                                                                                                                                                                                                                                                                         | Formato |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
@@ -191,7 +191,7 @@ La carpeta Logs contiene todos los archivos de registro utilizados por el proyec
 
 Esta carpeta contiene **archivos de propiedades usuario** utilizados para la administración de la aplicación.
 
-> Estos parámetros tienen prioridad sobre los archivos **[propiedades estructura](#sources)**. Sin embargo, si existe un **[archivo de parámetros usuario](#settings)**, éste tiene prioridad sobre el archivo de las propiedades usuario.
+> These settings take priority over **[structure settings](#sources)** files. However, if a **[user settings file for data](#settings)** exists, it takes priority over user settings file.
 
 | Contenido           | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Formato |
 | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
@@ -241,4 +241,4 @@ Define la carpeta raíz por defecto del servidor web 4D para las páginas, las i
 
 ## Archivo `.gitignore` (opcional)
 
-Archivo que especifica qué archivos serán ignorados por git. Puede incluir un archivo gitignore en sus proyectos utilizando la opción **Crear un archivo .gitignore** en la página **General** de las preferencias. Para configurar el contenido de ese archivo, ver [Crear un archivo `.gitignore`](Preferences/general.md#create-gitignore-file).
+Archivo que especifica los archivos que serán ignorados por git. You can include a gitignore file in your projects using the **Create .gitignore file** option on the **General** page of the preferences. To configure the contents of that file, see [Create `.gitignore` file](Preferences/general.md#create-gitignore-file).

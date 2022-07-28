@@ -184,7 +184,7 @@ Si vous désélectionnez cette option, seule la flèche jaune est affichée.
 
 ### Suggestions
 
-Cette zone vous permet de configurer les mécanismes d'autocomplétion de l'éditeur de méthodes afin de l'adapter à vos propres habitudes de travail.
+Cette zone vous permet de configurer les mécanismes de saisie prédictive dans l’éditeur de méthodes afin de les adapter à vos habitudes de travail.
 
 |                                     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -30,8 +30,6 @@ Cuando esta propiedad está activada, se instancia un objeto JavaScript especial
 
 Nombre de una variable de tipo Longint. Esta variable recibirá un valor entre 0 y 100, que representa el porcentaje de finalización de la carga de la página en el área web. Actualizado automáticamente por 4D, no puede ser modificado manualmente.
 
-> As of 4D v19 R5, this variable is no longer updated in Web Areas using the [Windows system rendering engine](./webArea_overview.md#web-rendering-engine).
-
 #### Gramática JSON
 
 | Nombre         | Tipos de datos | Valores posibles               |
@@ -83,15 +81,12 @@ La variable URL produce los mismos efectos que el comando [WA OPEN URL](https://
 
 Esta opción permite elegir entre dos motores de renderizado para el área web, dependiendo de las particularidades de su aplicación:
 
-*   **no marcado** - `valor JSON: sistema` (por defecto): en este caso, 4D utiliza el "mejor" motor correspondiente al sistema. Esto significa que usted se beneficia automáticamente de los últimos avances en la renderización web, a través de HTML5 o JavaScript. Sin embargo, es posible que note algunas diferencias de renderizado entre plataformas. En Windows, 4D utiliza Microsoft Edge WebView2. En macOS, 4D utiliza la versión actual de WebKit (Safari).
+*   **no marcado** - `valor JSON: sistema` (por defecto): en este caso, 4D utiliza el "mejor" motor correspondiente al sistema. En Windows, 4D utiliza automáticamente la versión más reciente del navegador encontrado en la máquina (IE11, MS Edge, etc.). En macOS, 4D utiliza la versión actual de WebKit (Safari). Esto significa que usted se beneficia automáticamente de los últimos avances en la renderización web, a través de HTML5 o JavaScript. Sin embargo, puede notar algunas diferencias de representación entre las implementaciones de Internet Explorer/Edge y las de WebKit.
+*   **marcado** - `valor JSON: anidado`: en este caso, 4D utiliza el motor Blink de Google (CEF). La utilización del motor web integrado significa que la representación de las áreas web y su funcionamiento en su aplicación son idénticos independientemente de la plataforma utilizada para ejecutar 4D (no obstante, pueden observarse ligeras variaciones de píxeles o diferencias relacionadas con la implementación de la red). Cuando se elige esta opción, ya no se beneficia de las actualizaciones automáticas del motor web realizadas por el sistema operativo; sin embargo, las nuevas versiones de los motores se ofrecen a través de 4D.
 
-> On Windows, if Microsoft Edge WebView2 is not installed, 4D uses the embedded engine as system rendering engine. To know if it is installed in your system, look for "Microsoft Edge WebView2 Runtime" in your applications panel.
+Tenga en cuenta que el motor Blink tiene las siguientes restricciones:
 
-*   **checked** - `JSON value: embedded`: In this case, 4D uses the Chromium Embedded Framework (CEF). La utilización del motor web integrado significa que la representación de las áreas web y su funcionamiento en su aplicación son idénticos independientemente de la plataforma utilizada para ejecutar 4D (no obstante, pueden observarse ligeras variaciones de píxeles o diferencias relacionadas con la implementación de la red). La utilización del motor web integrado significa que la representación de las áreas web y su funcionamiento en su aplicación son idénticos independientemente de la plataforma utilizada para ejecutar 4D (no obstante, pueden observarse ligeras variaciones de píxeles o diferencias relacionadas con la implementación de la red).
-
-El motor CEF tiene las siguientes limitaciones:
-
-- [WA SET PAGE CONTENT](https://doc.4d.com/4dv19/help/command/en/page1037.html): using this command requires that at least one page is already loaded in the area (through a call to [`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/en/page1020.html) or an assignment to the URL variable associated to the area).
+- [WA SET PAGE CONTENT](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PAGE-CONTENT.301-5232965.en.html):utilizar este comando requiere que al menos una página ya esté cargada en el área (a través de una llamada a [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) o una asignación a la variable URL asociada al área).
 - Cuando se activa soltar URLs mediante el selector `WA enable URL drop` del comando [WA SET PREFERENCE](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.en.html), la primera soltada debe ir precedida de al menos una llamada a [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) o una asignación a la variable URL asociada al área.
 
 #### Gramática JSON

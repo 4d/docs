@@ -65,17 +65,20 @@ Three location options are provided:
 
 -   **Sorting order appropriate for searching**: This option is only displayed when the Japanese language is selected. Modifies the interpretation of characters such as the "Katakana-Hiragana Prolonged Sound Mark" or "長音記号" or the "Japanese Iteration Marks" such as "ゝ" or "ゞ". Typical Japanese speaker is likely to prefer the results when the setting is enabled.
 
-#### Support of MeCab (Japanese version)
+#### Support of Mecab (Japanese version)
 
-On Japanese systems, 4D supports the *MeCab* library, with a indexing algorithm for keywords that is particularly suited for the Japanese language.
+On Japanese systems, 4D supports the *Mecab* library, with a indexing algorithm for keywords that is particularly suited for the Japanese language.
 
-This algorithm is used by default in Japanese versions of 4D. If needed, you can disable the use of the *MeCab* algorithm and use the conventional *ICU* library.
+This algorithm is used by default in Japanese versions of 4D. **Consider only non-alphanumeric chars for keywords**: Modifies the algorithm used by 4D to identify keyword separators and hence build their indexes.
 
-To disable *MeCab*, just check the **Consider only non-alphanumeric chars for keywords** option:
+If needed, you can disable the use of the *Mecab* algorithm and use the conventional *ICU* library.
+
+To disable *Mecab*, just check the **Consider only non-alphanumeric chars for keywords** option:
 
 
 ![](assets/en/settings/non-alphanumeric-chars.png)
 
+> **Note:** You can also disable the use of Mecab by deleting or renaming the Resources/mecab folder of your 4D Japanese application.
 
 ## Memory page
 
@@ -86,7 +89,8 @@ You use the settings on this tab to configure the cache memory for the database.
 -   **Calculation of adaptive cache**: When this option is checked, management of the memory cache is done dynamically by the system --- respecting limits that you set. This allows configuration of a high performance memory cache adapted to most configurations. The size of the memory cache is then calculated dynamically depending on set parameters. The values offered by default correspond to standard 4D usage.
 
     -   **Memory to be reserved for other applications and for the system**: Portion of the RAM memory to reserve for the System and other applications. This value is increased for optimization when other applications are running on the same machine as 4D.
-    -   **Percentage of available memory used for cache**: Percentage of the remaining memory allocated to the cache by default.\ To obtain the size allocated by default to the cache, simply perform the following calculation: (Physical memory -- Physical memory to be reserved) X Percentage of the memory used for the cache. In the adaptive mode, the size of the memory cache varies dynamically depending on the needs of the application and the system. You can set limits using the following two options:
+    -   **Percentage of available memory used for cache**: Percentage of the remaining memory allocated to the cache by default.\
+      To obtain the size allocated by default to the cache, simply perform the following calculation: (Physical memory -- Physical memory to be reserved) X Percentage of the memory used for the cache. In the adaptive mode, the size of the memory cache varies dynamically depending on the needs of the application and the system. You can set limits using the following two options:
     -   **Minimum Size**: Minimum amount of memory that must be reserved for the cache. This value cannot be less than 100 MB.
     -   **Maximum Size**: Maximum amount of memory that can be used by the cache. This value is virtually unlimited.\  
       Setting limits is particularly useful for databases that are distributed on machines for which you do not know the memory configuration a priori. In this case, the limits set let you guarantee a minimum performance in all cases. The following diagram illustrates this behavior:
@@ -99,7 +103,7 @@ You use the settings on this tab to configure the cache memory for the database.
 
     The size of the memory cache that you enter will be reserved for the 4D database, regardless of the state of machine resources. This setting can be used in certain specific configurations, or when the database is designed to be used on dissimilar systems in terms of memory. In most cases, the adaptive cache offers better performance.
 
--   **Flush Cache every ... Seconds/Minutes**: Specifies the time period between each automatic saving of the data cache, i.e., its writing to disk. 4D saves the data placed in the cache at regular intervals. You can specify any time interval between 1 second and 500 minutes. By default, 4D saves your data every 20 seconds. The application also saves your data to disk each time you change to another environment or exit the application. You can also call the [FLUSH CACHE](https://doc.4d.com/4dv19R/help/command/en/page297.html) command to trigger the flush at any moment.
+-   **Flush Cache every... Seconds/Minutes**: Specifies the time period between each automatic saving of the data cache, i.e., its writing to disk. 4D saves the data placed in the cache at regular intervals. You can specify any time interval between 1 second and 500 minutes. By default, 4D saves your data every 20 seconds. The application also saves your data to disk each time you change to another environment or exit the application. You can also call the [FLUSH CACHE](https://doc.4d.com/4dv19R/help/command/en/page297.html) command to trigger the flush at any moment.
 
     When you anticipate heavy data entry, consider setting a short time interval between saves. In case of a power failure, you will only lose the data entered since the previous save (if the database is running without a log file).
 

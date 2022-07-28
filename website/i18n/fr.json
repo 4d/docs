@@ -171,7 +171,7 @@
         "title": "Pointeur"
       },
       "Concepts/string": {
-        "title": "Chaîne"
+        "title": "Chaine"
       },
       "Concepts/time": {
         "title": "Heure"
@@ -919,9 +919,6 @@
       "Users/overview": {
         "title": "Présentation du contrôle des accès"
       },
-      "ViewPro/advanced-programming": {
-        "title": "Programmation avancée avec Javascript"
-      },
       "ViewPro/configuring": {
         "title": "Configuration des zones 4D View Pro"
       },
@@ -985,7 +982,6 @@
       "Class API Reference": "Classes API",
       "Code Editor": "Éditeur de code",
       "Debugging": "Débogage",
-      "Transformation Tags": "Transformation Tags",
       "Settings": "Settings",
       "Preferences": "Préférences",
       "4D Server Administration Window": "Fenêtre d'administration de 4D Server",
@@ -999,7 +995,7 @@
       "Web Server": "Serveur Web",
       "Web Development": "Développement Web",
       "REST Server": "Serveur REST",
-      "Client/Server": "Client/Server",
+      "Client/Server": "Client/Serveur",
       "Forms": "Formulaires",
       "Form Properties": "Propriétés des formulaires",
       "Form Objects": "Objets formulaires",
@@ -1035,7 +1031,7 @@
     "Web Administration|no description given": "Administration Web",
     "4D Server Administration Window|no description given": "Fenêtre d'administration de 4D Server",
     "4D Components Library|no description given": "Bibliothèque des composants 4D",
-    "Client/Server|no description given": "Client/Server",
+    "Client/Server|no description given": "Client/Serveur",
     "TLS Protocol|no description given": "Protocole TLS",
     "Debugging|no description given": "Débogage",
     "Code Editor|no description given": "Éditeur de code",
@@ -1051,9 +1047,8 @@
     "Developing Plugins|no description given": "Plugins de développement",
     "Working with a project|no description given": "Travailler avec des projets",
     "Settings|no description given": "Settings",
-    "Transformation Tags|no description given": "Transformation Tags",
     "User Settings|no description given": "Propriétés utilisateur",
-    "https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html|no description given": "https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html",
+    "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.en.html|no description given": "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.en.html",
     "Getting started|no description given": "Prise en main",
     "Core Development|no description given": "Développement",
     "Administration|no description given": "Administration",

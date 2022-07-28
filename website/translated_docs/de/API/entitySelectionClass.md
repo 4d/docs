@@ -10,8 +10,8 @@ Entity selections can be created from existing selections using various function
 
 ### Summary
 
-|                                                                                                                                                                                                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                                         |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE EntitySelectionClass.index.Syntax -->](#91index93)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.index.Summary -->|
 | [<!-- INCLUDE EntitySelectionClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntitySelectionClass.attributeName.Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.add().Syntax -->](#add)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.add().Summary -->|
@@ -24,7 +24,6 @@ Entity selections can be created from existing selections using various function
 | [<!-- INCLUDE #EntitySelectionClass.extract().Syntax -->](#extract)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.extract().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.first().Syntax -->](#first)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.first().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.getDataClass().Syntax -->](#getdataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.getDataClass().Summary -->|
-| [<!-- INCLUDE #EntitySelectionClass.getRemoteContextAttributes().Syntax -->](#getremotecontextattributes)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getRemoteContextAttributes().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.isAlterable().Syntax -->](#isalterable)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.isAlterable().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.isOrdered().Syntax -->](#isordered)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.isOrdered().Summary -->|
 | [<!-- INCLUDE #EntitySelectionClass.last().Syntax -->](#last)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.last().Summary -->|
@@ -80,7 +79,7 @@ In the optional *settings* parameter, you can pass an object containing the foll
 ```4d
 var $employees : cs.EmployeeSelection
 ALL RECORDS([Employee])
-$employees:=Create entity selection([Employee]) 
+$employees:=Create entity selection([Employee])
 // The $employees entity selection now contains a set of reference
 // on all entities related to the Employee dataclass
 ```
@@ -143,7 +142,7 @@ Note that the corresponding entity is reloaded from the datastore.
 *index* can be any number between 0 and `.length`-1.
 
 *   If *index* is out of range, an error is returned.
-*   If *index* corresponds to a dropped entity, a Null value is returned.
+*   If *attributeName* kind is `storage`: `.attributeName` returns a collection of values of the same type as *attributeName*.
 > > **Warning**: `EntitySelection[index]` is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like [`.lock()`](EntityClass.md#lock) or [`.save()`](EntityClass.md#save). To work with the corresponding entity, you need to assign the returned expression to an assignable expression, such as a variable. Beispiele:
 
 ```4d
@@ -348,7 +347,7 @@ Calls to the function can be chained:
 The `.and()` function <!-- REF #EntitySelectionClass.and().Summary -->combines the entity selection with an *entity* or *entitySelection* parameter using the logical AND operator<!-- END REF -->; it returns a new, unordered entity selection that contains only the entities that are referenced in both the entity selection and the parameter.
 
 *   If you pass *entity* as parameter, you combine this entity with the entity selection. If the entity belongs to the entity selection, a new entity selection containing only the entity is returned. Otherwise, an empty entity selection is returned.
-*   If you pass *entitySelection* as parameter, you combine both entity selections. A new entity selection that contains only the entities that are referenced in both selections is returned. If there is no intersecting entity, an empty entity selection is returned.
+*   If you pass *entity* as parameter, you compare this entity with the entity selection. If the entity belongs to the entity selection, a new reference to the entity selection is returned. Otherwise, a new entity selection containing the original entity selection and the entity is returned.
 > > You can compare [ordered and/or unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). The resulting selection is always unordered.
 
 If the original entity selection or the *entitySelection* parameter is empty, or if the *entity* is Null, an empty entity selection is returned.
@@ -802,14 +801,14 @@ Given the following table and relation:
   //
   //
   //$mailing is a collection of objects with properties "who" and "to"
-  //"who" property content is String type 
+  //"who" property content is String type
   //"to" property content is entity type (Address dataclass)
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address";"to")
   //
   //
   //$mailing is a collection of objects with properties "who" and "city"
-  //"who" property content is String type 
-  //"city" property content is String type 
+  //"who" property content is String type
+  //"city" property content is String type
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address.city";"city")
   //
   //$teachers is a collection of objects with properties "where" and "who"
@@ -931,58 +930,6 @@ The following generic code duplicates all entities of the entity selection:
 
 <!-- END REF -->
 
-<!-- REF EntitySelectionClass.getRemoteContextAttributes().Desc -->
-## .getRemoteContextAttributes()
-
-<details><summary>History</summary>
-| Version | Changes |
-| ------- | ------- |
-| v19R5   | Added   |
-</details>
-
-<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Syntax -->
-**.getRemoteContextAttributes()** : Text<!-- END REF -->
-
-<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Params -->
-| Parameter | Typ  |    | Beschreibung                                                            |
-| --------- | ---- | -- | ----------------------------------------------------------------------- |
-| result    | Text | <- | Context attributes linked to the entity selection, separated by a comma |
-<!-- END REF -->
-
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
-
-
-#### Beschreibung
-
-The `.getRemoteContextAttributes()` function <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Summary -->returns information about the optimization context used by the entity selection<!-- END REF -->.
-
-If there is no [optimization context](../ORDA/remoteDatastores.md#clientserver-optimization) for the entity selection, the function returns an empty Text.
-
-#### Beispiel
-
-```4d
-var $ds : 4D.DataStoreImplementation
-var $persons : cs.PersonsSelection
-var $p : cs.PersonsEntity
-
-var $info : Text
-var $text : Text
-
-$ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
-
-$persons:=$ds.Persons.all()
-$text:="" 
-For each ($p; $persons)
-    $text:=$p.firstname+" lives in "+$p.address.city+" / " 
-End for each 
-
-$info:=$persons.getRemoteContextAttributes()
-//$info = "firstname,address,address.city"
-```
-
-#### See also
-
-[Entity.getRemoteContextAttributes()](./EntityClass.md#getRemoteContextAttributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
 
 <!-- REF EntitySelectionClass.isAlterable().Desc -->
 ## .isAlterable()
@@ -1149,7 +1096,6 @@ The `.length` property <!-- REF #EntitySelectionClass.length.Summary -->returns 
 
 Entity selections always have a `.length` property.
 
-> To know the total number of entities in a dataclass, it is recommended to use the [`getCount()`](DataClassClass.md#getcount) function which is more optimized than the `ds.myClass.all().length` expression.
 
 #### Beispiel
 
@@ -1307,7 +1253,7 @@ If the original entity selection and the parameter are not related to the same d
  var $employees; $result : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
 
- $employees:=ds.Employee.query("lastName = :1";"H@") 
+ $employees:=ds.Employee.query("lastName = :1";"H@")
   // The $employees entity selection contains the entity with primary key 710 and other entities
   // for ex. "Colin Hetrick", "Grady Harness", "Sherlock Holmes" (primary key 710)
 
@@ -1356,8 +1302,8 @@ We want to have a selection of female employees named "Jones" who live in New Yo
 
 The `.or()` function <!-- REF #EntitySelectionClass.or().Summary -->combines the entity selection with the *entity* or *entitySelection* parameter using the logical (not exclusive) OR operator<!-- END REF -->; it returns a new, unordered entity selection that contains all the entities from the entity selection and the parameter.
 
-*   If you pass *entity* as parameter, you compare this entity with the entity selection. If the entity belongs to the entity selection, a new reference to the entity selection is returned. Otherwise, a new entity selection containing the original entity selection and the entity is returned.
-*   If you pass *entitySelection* as parameter, you compare entity selections. A new entity selection containing the entities belonging to the original entity selection or *entitySelection* is returned (or is not exclusive, entities referenced in both selections are not duplicated in the resulting selection).
+*   If you pass *entitySelection* as parameter, you compare entity selections. A new entity selection that contains only the entities that are referenced in both selections is returned. Otherwise, a new entity selection containing the original entity selection and the entity is returned.
+*   If the original entity selection and the *entitySelection* parameter are empty, an empty entity selection is returned. If the original entity selection is empty, a reference to *entitySelection* or an entity selection containing only *entity* is returned.
 > > You can compare [ordered and/or unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). The resulting selection is always unordered.
 
 If the original entity selection and the *entitySelection* parameter are empty, an empty entity selection is returned. If the original entity selection is empty, a reference to *entitySelection* or an entity selection containing only *entity* is returned.
@@ -1620,7 +1566,6 @@ The `.query()` function <!-- REF #EntitySelectionClass.query().Summary -->search
 
 If no matching entities are found, an empty `EntitySelection` is returned.
 
-
 For detailed information on how to build a query using *queryString*, *value*, and *querySettings* parameters, please refer to the DataClass [`.query()`](DataClassClass.md#query) function description.
 > By default if you omit the **order by** statement in the *queryString*, the returned entity selection is [not ordered](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). Note however that, in Client/Server mode, it behaves like an ordered entity selection (entities are added at the end of the selection).
 
@@ -1664,7 +1609,7 @@ More examples of queries can be found in the DataClass [`.query()`](DataClassCla
 
 The `.queryPath` property <!-- REF #EntitySelectionClass.queryPath.Summary -->contains a detailed description of the query as it was actually performed by 4D<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPath":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
 
-For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page. 
+For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page.
 
 <!-- END REF -->
 
@@ -1684,12 +1629,11 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 **.queryPlan** : Text<!-- END REF -->
 
 
-
 #### Beschreibung
 
 The `.queryPlan` property <!-- REF #EntitySelectionClass.queryPlan.Summary --> contains a detailed description of the query just before it is executed (i.e., the planned query)<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPlan":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
 
-For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page. 
+For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page.
 
 <!-- END REF -->
 
@@ -1915,7 +1859,6 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 <!-- REF #EntitySelectionClass.sum().Syntax -->
 **.sum**( *attributePath* : Text ) : Real<!-- END REF -->
 
-
 <!-- REF #EntitySelectionClass.sum().Params -->
 | Parameter     | Typ  |    | Beschreibung                                     |
 | ------------- | ---- |:--:| ------------------------------------------------ |
@@ -1993,13 +1936,13 @@ If a filter is specified for an attribute of the `relatedEntity` kind:
 
 *   propertyPath = "relatedEntity" -> it is extracted with simple form
 *   propertyPath = "relatedEntity.*" -> all the properties are extracted
-*   propertyPath = "relatedEntity.propertyName1, relatedEntity.propertyName2, ..." -> only those properties are extracted
+*   propertyPath = "relatedEntity.propertyName1, relatedEntity.propertyName2, ..." -> only those properties are extracted -> only those properties are extracted
 
 
 If a filter is specified for an attribute of the `relatedEntities` kind:
 
 *   propertyPath = "relatedEntities.*" -> all the properties are extracted
-*   propertyPath = "relatedEntities.propertyName1, relatedEntities.propertyName2, ..." -> only those properties are extracted
+*   propertyPath = "relatedEntities.propertyName1, relatedEntities.propertyName2, ..." -> only those properties are extracted -> only those properties are extracted
 
 
 
@@ -2176,6 +2119,7 @@ Returns:
 #### Example 4
 
 Example with `relatedEntity` type with simple form:
+
 
 ```4d
 var $employeesCollection : Collection

@@ -4,12 +4,12 @@ title: Prise en main
 ---
 
 
-4D View Pro is a [4D component](Concepts/components.md) that includes a [4D form area](FormObjects/viewProArea_overview.md) and specific [methods](method-list.md). Il vous permet d'intégrer des fonctionnalités avancées de tableur dans vos projets.
+4D View Pro est un [composant 4D](Concepts/components.md) qui comprend une [zone de formulaire 4D](FormObjects/viewProArea_overview.md) et des [méthodes](method-list.md) spécifiques. Il vous permet d'intégrer des fonctionnalités avancées de tableur dans vos projets.
 
 
-![](assets/en/ViewPro/vpSpreadsheet.png)
+![](assets/en/ViewPro/vpSpreadsheet.PNG)
 
-Une tableur est une application contenant une grille de cellules dans lesquelles vous pouvez saisir des informations, effectuer des calculs ou afficher des images. 4D View Pro is powered by the [SpreadJS spreadsheet solution](https://www.grapecity.com/spreadjs/docs/versions/v14/online/overview.html) integrated in 4D.
+Une tableur est une application contenant une grille de cellules dans lesquelles vous pouvez saisir des informations, effectuer des calculs ou afficher des images. 4D View Pro est alimenté par la [solution de tableur SpreadJS](https://www.grapecity.com/spreadjs/docs/v14/online/overview.html) intégrée à 4D.
 
 L'intégration de zones 4D View Pro dans vos formulaires vous permet d'importer et d'exporter des documents de type tableur à l'aide des commandes 4D View Pro.
 
@@ -83,7 +83,7 @@ Les zones 4D View Pro bénéficient d'un menu contextuel automatique qui offre d
 
 *   cliquez sur un en-tête de colonne ou de ligne : **Insérer**, **Supprimer**, **Masquer** ou **Décompresser** le contenu
 *   cliquez sur une cellule ou une plage de cellules :
-    *   **Filter**: allows hiding row through filters (see [Filtering rows](https://www.grapecity.com/spreadjs/docs/versions/v14/online/filter.html) in the SpreadJS documentation).
+    *   **Filtrer** : permet de masquer la ligne via des filtres (voir [Filtrer les lignes](http://help.grapecity.com/spread/SpreadSheets11/webframe.html#filter.html) dans la documentation SpreadJS).
     *   **Trier** : permet de trier le contenu des colonnes.
     *   **Insérer un commentaire** : permet à l'utilisateur de saisir un commentaire pour une zone. Lorsqu'un commentaire a été saisi pour une zone, la cellule supérieure gauche de la zone affiche un petit triangle rouge :  
       ![](assets/en/ViewPro/vpContext2.PNG)

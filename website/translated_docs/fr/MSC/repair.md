@@ -16,10 +16,10 @@ Cette page permet de réparer le fichier de données ou le fichier de structure 
 Chemin d’accès du fichier de données courant. Le bouton **[...]** permet de désigner un autre fichier de données. Lorsque vous cliquez sur ce bouton, une boîte de dialogue standard d’ouverture de documents s’affiche, vous permettant de désigner le fichier de données à réparer. Une fois cette boîte de dialogue validée, le chemin d’accès du fichier à réparer est indiqué dans la fenêtre. Si vous effectuez une réparation par [réparation par en-têtes d'enregistrements](#réparation-par-en-têtes-denregistrements), vous pouvez sélectionner tout fichier de données. Une fois cette boîte de dialogue validée, le chemin d’accès du fichier à réparer est indiqué dans la fenêtre.
 
 ### Dossier de sauvegarde
-Par défaut, le fichier de données original sera dupliqué avant réparation. Il sera placé dans un sous-dossier libellé “Replaced files (repairing)” dans le dossier de l'application. Le second bouton **[...]** permet de désigner un autre emplacement pour les sauvegardes des fichiers originaux effectuées avant réparation. Cette option permet notamment de réparer des fichiers volumineux en utilisant différents disques.
+Par défaut, le fichier de données original sera dupliqué avant réparation. Par défaut, le fichier de données original sera dupliqué avant réparation. Le second bouton **[...]** permet de désigner un autre emplacement pour les sauvegardes des fichiers originaux effectuées avant réparation. Cette option permet notamment de réparer des fichiers volumineux en utilisant différents disques.
 
 ### Fichiers réparés
-4D crée un nouveau fichier de données vide à l’emplacement du fichier d’origine. Le fichier d’origine est déplacé dans le dossier nommé "\Replaced Files (Repairing) date heure" dont l’emplacement a été défini dans la zone de "Dossier de sauvegarde" (dossier de l'application par défaut). Le fichier vide est rempli avec les données récupérées.
+4D crée un nouveau fichier de données vide à l’emplacement du fichier d’origine. 4D crée un nouveau fichier de données vide à l’emplacement du fichier d’origine. Le fichier vide est rempli avec les données récupérées.
 
 
 ## Réparation standard

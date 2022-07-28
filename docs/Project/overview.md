@@ -3,7 +3,7 @@ id: overview
 title: Overview
 ---
 
-A 4D project contains all of the source code of a 4D application, whatever its deployement type (web, mobile, or desktop), from the database structure to the user interface, including code, forms, menus, user settings, or any required resources. A 4D project is primarily made of text-based files. 
+A 4D project contains all of the source code of a 4D application, whatever its deployment type (web, mobile, or desktop), from the database structure to the user interface, including code, forms, menus, user settings, or any required resources. A 4D project is primarily made of text-based files. 
 
 
 ## Project files
@@ -17,7 +17,7 @@ In addition, 4D project files make it easier to program generically, create appl
 
 ## Development
 
-4D projects are developed using the **4D** application. It provides an Integrated Development Environment (IDE) for 4D projects as well as a web server, a mobile project generator, and an application runtime, allowing to develop, test, and debug any kind of project. 
+4D projects are developed using the **4D** application. It provides an Integrated Development Environment (IDE) for 4D projects as well as a web server, a mobile project generator, and an application runtime, allowing you to develop, test, and debug any kind of project. 
 
 Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications. 
 
@@ -30,4 +30,4 @@ Project files can be [compiled](compiler.md) and easily deployed. 4D allows you 
 - [mobile](https://developer.4d.com/go-mobile/) applications, 
 - [desktop](Desktop/building.md) applications (client/server or single-user). 
 
-Back end applications can be deployed using 4D Server, 4D, or [merged with 4D Volume license](Desktop/building.md).
+Back end applications can be deployed using 4D Server, 4D, or [merged with 4D Volume license](../Desktop/building.md).

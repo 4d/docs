@@ -16,10 +16,10 @@ Esta página se utiliza para reparar el archivo de datos cuando se ha dañado. G
 Nombre de la ruta del archivo de datos actual. El botón **[...]** puede utilizarse para especificar otro archivo de datos. Al hacer clic en este botón, se muestra un diálogo estándar de ápertura de documentos para que pueda designar el archivo de datos a reparar. If you perform a [standard repair](#standard-repair), you must select a data file that is compatible with the open project file. Si realiza una reparación [reparación por encabezados de registros](#recover-by-record-headers), puede seleccionar todo archivo de datos. Una vez validado este diálogo, se indica en la ventana el nombre de la ruta del archivo a reparar.
 
 ### Carpeta de copia de seguridad de los archivos originales
-Por defecto, el archivo de datos original se duplicará antes de la operación de reparación. It will be placed in a subfolder named “Replaced files (repairing)” in the application folder. El segundo botón **[...]** se puede utilizar para especificar otra ubicación para guardar los archivos originales antes de iniciar la reparación. Esta opción se puede utilizar más particularmente cuando se reparan archivos voluminosos mientras se utilizan diferentes discos.
+Por defecto, el archivo de datos original se duplicará antes de la operación de reparación. Por defecto, el archivo de datos original se duplicará antes de la operación de reparación. El segundo botón **[...]** se puede utilizar para especificar otra ubicación para guardar los archivos originales antes de iniciar la reparación. Esta opción se puede utilizar más particularmente cuando se reparan archivos voluminosos mientras se utilizan diferentes discos.
 
 ### Archivos reparados
-4D crea un nuevo archivo de datos vacío en la ubicación del archivo original. The original file is moved into the folder named "\Replaced Files (Repairing) date time" whose location is set in the "Original files backup folder" area (application folder by default). El archivo vacío se llena con los datos recuperados.
+4D crea un nuevo archivo de datos vacío en la ubicación del archivo original. 4D crea un nuevo archivo de datos vacío en la ubicación del archivo original. El archivo vacío se llena con los datos recuperados.
 
 
 ## Reparación estándar

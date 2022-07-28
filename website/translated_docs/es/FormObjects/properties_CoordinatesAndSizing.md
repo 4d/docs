@@ -21,7 +21,7 @@ Cuando esta propiedad está activada, la altura de cada línea se calcula autom�
 
 *   El cálculo de la altura de línea no tiene en cuenta:
     *   contenido de columna oculta
-    *   La propiedad Row Height Array no se tiene en cuenta para los list box jerárquicos.
+    *   Para los list box de tipo array, esta propiedad sólo está disponible si la opción [Altura de línea automática](#automatic-row-height) no está seleccionada.
 > Algunos objetos pueden tener una altura predefinida que no se puede modificar.
 
 

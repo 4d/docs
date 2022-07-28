@@ -180,7 +180,7 @@ L'objet `.bodyValues` contient les propriété suivantes :
 
 | Propriété                  | Type    | Valeur                                                                                                                                                                     |
 | -------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| *partID*.value             | text    | Valeur de la partie body                                                                                                                                                   |
+| *partID*.value             | Texte   | Valeur de la partie body                                                                                                                                                   |
 | *partID*.isEncodingProblem | boolean | Vrai si des sections malformées sont identifiées durant le décodage du charset, si le charset est inconnu, ou si le content transfer-encoding est inconnu. Faux par défaut |
 
 

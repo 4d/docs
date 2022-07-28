@@ -302,7 +302,7 @@ Essa propriedade é**apenas leitura**.
 </details>
 
 
-<!-- REF #directory.original.Syntax --> **.original** : 4D.Folder<!-- END REF -->
+<!-- REF #directory.original.Syntax --> Essa propriedade é**apenas leitura**.<!-- END REF -->
 
 
 #### Descrição
@@ -324,14 +324,16 @@ Essa propriedade é**apenas leitura**.
 </details>
 
 
-<!-- REF #directory.parent.Syntax --> **.parent** : 4D.Folder<!-- END REF -->
+<!-- REF #directory.parent.Syntax --> Essa propriedade é**apenas leitura**.<!-- END REF -->
 
 
 #### Descrição
 
-A propriedade `.hidden` devolve <!-- REF #directory.hidden. If the path represents a system path (e.g., "/DATA/"), the system path is returned.</p>
+A propriedade `.hidden` devolve <!-- REF #directory.hidden. A função <code>.folder()</code> 
 
-If the folder does not have a parent (root), the null value is returned.
+<!-- REF #directory.folder().</p>
+
+Se a pasta não existir no disco, se devolve um icone vazio como padrão.
 
 Essa propriedade é**apenas leitura**. 
 
@@ -429,7 +431,7 @@ O objeto `Folder` copiado.
 Se quiser copiar uma *pasta* Imágens da pasta de documentos do usuário a pasta da Database:
 
 ```4d
-var $userImages; $copiedImages : 4D.Folder
+var $userImages; $copiedImages : 4D. Folder
 $userImages:=Folder(fk documents folder+"/Pictures/")
 $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 ```
@@ -451,10 +453,10 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 
 <!-- REF #directory.file().Params -->
-| Parameter | Type    |    | Descrição                                     |
-| --------- | ------- | -- | --------------------------------------------- |
-| path      | Texto   | -> | Rota POSIX relativa                           |
-| Resultado | 4D.File | <- | Objeto `File` (null se a rota não for válida) |
+| Parameter | Type     |    | Descrição                                     |
+| --------- | -------- | -- | --------------------------------------------- |
+| path      | Texto    | -> | Rota POSIX relativa                           |
+| Resultado | 4D. File | <- | Objeto `File` (null se a rota não for válida) |
 
 <!-- END REF -->
 
@@ -471,7 +473,7 @@ Um objeto `File` ou null se *path* não for válido.
 #### Exemplo
 
 ```4d
-var $myPDF : 4D.File
+var $myPDF : 4D. File
 $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 ```
 
@@ -526,6 +528,7 @@ Se quiser saber se há arquivos invisíveis na pasta Database:
  If($all.length#$noInvisible.length)
     ALERT("Database folder contains hidden files.")
  End if
+ End if
 ```
 
 #### Exemplo 2
@@ -574,7 +577,7 @@ Um objeto `Folder` ou null se *path* não for válido.
 #### Exemplo
 
 ```4d
- var $mypicts : 4D.Folder
+ var $mypicts : 4D. Folder
  $mypicts:=Folder(fk documents folder).folder("Pictures")
 ```
 

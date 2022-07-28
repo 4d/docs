@@ -37,7 +37,7 @@ O administrador pode:
 
 O Administrador não pode:
 - editar o usuário Designer
-- by default, access to protected parts of the application. O Administrador não pode acessar o modo Design se for restringido. The Administrator must be part of one or more groups to have access privileges in the application. O administrador é inscrito em todo novo grupo, mas é possível remover o nome do Administrador de qualquer grupo.
+- by default, access to protected parts of the application. O Administrador não pode acessar o modo Design se for restringido. O Administrador não pode acessar o modo Design se for restringido. O administrador é inscrito em todo novo grupo, mas é possível remover o nome do Administrador de qualquer grupo.
 
 Both the Designer and Administrator are available by default in all applications. No diálogo de [gestão de usuários](#users-and-groups-editor), os ícones de Designer e Administrator são exibidos em verde e vermelho, respectivamentes:
 
@@ -74,7 +74,7 @@ A lista de usuários exibe todos os usuários, incluindo o[Designer and the Admi
 
 4D adiciona um novo usuário para a lista, chamado "Novo usuárioX" como padrão.
 
-3. Digite o nome de usuário. This name will be used by the user to open the application. Pode renomear um usuário a qualquer momento usando o comando **Rename** do menu contextual ou usando os atalhos Alt+clique (Windows) ou Opção+clique (macOS), ou ainda clicando duas vezes no nome que quiser mudar.
+3. Digite o nome de usuário. Digite o nome de usuário. Pode renomear um usuário a qualquer momento usando o comando **Rename** do menu contextual ou usando os atalhos Alt+clique (Windows) ou Opção+clique (macOS), ou ainda clicando duas vezes no nome que quiser mudar.
 
 4. Para digitar uma senha para o usuário, clique o botão **Edit...** na área de propriedades de usuário e digite a senha daus vezes na caixa de diálogo. Pode usar até 15 caracteres alfanuméricos para a senha. O editor de senhas é sensível a maiúsculas ou minúsculas.
 
@@ -196,5 +196,5 @@ This file can be stored at the following locations, depending on your needs:
 - If you want to use the same directory for all data files (or if you use a single data file), store the **directory.json** file in the user settings folder, i.e. in the "Settings" folder at the [same level as the "Project" folder](Project/architecture.md#project-folder) (default location).
 - If you want to use a specific directory file per data file, store the **directory.json** file in the data settings folder, i.e. in the ["Settings" folder of the "Data" folder](Project/architecture.md#settings). If a **directory.json** file is present at this location, it takes priority over the file in the user settings folder. This custom/local Users and Groups configuration will left untouched by an application upgrade.
 
-> To allow for safe changes of passwords and group memberships in a deployed environment, you can include your **directory.json** file in the server application during the build, using the [corresponding build application option](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application).
+> If no password is assigned to the "Designer" user, the **directory.json** is not created.
 

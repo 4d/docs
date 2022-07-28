@@ -25,7 +25,7 @@ Sin embargo, 4D View Pro requiere una licencia. You need to activate this licens
 
 ## Inserción de un área 4D View Pro
 
-4D View Pro documents are displayed and edited manually in a [4D form object](FormObjects/viewProArea_overview.md) named 4D View Pro. To select this object, click on the last tool in the object bar:
+4D View Pro documents are displayed and edited manually in a [4D form object](FormObjects/viewProArea_overview.md) named 4D View Pro. Para seleccionar este objeto, haga clic en la última herramienta de la barra de objetos:
 
 ![](assets/en/ViewPro/vpArea.png)
 
@@ -38,11 +38,11 @@ You can [configure the area](configuring.md) using the Property List and 4D View
 
 ## Fundamentos de la selección, la entrada y de la navegación
 
-Las hojas de cálculo se componen de líneas y columnas. A cada línea se le asocia un número. A letter (or group of letters once the number of columns surpasses the number of letters in the alphabet) is associated with each column. The intersection of a row and a column makes a cell. Las celdas pueden ser seleccionadas y sus contenidos editados.
+Las hojas de cálculo se componen de líneas y columnas. A cada línea se le asocia un número. A letter (or group of letters once the number of columns surpasses the number of letters in the alphabet) is associated with each column. La intersección de una línea y de una columna constituye una celda. Las celdas pueden ser seleccionadas y sus contenidos editados.
 
 ### Selecting cells, columns and rows
 
-*   To select a cell, simply click on it or use the direction arrows on the keyboard. Its content (or formula) is displayed within the cell.
+*   To select a cell, simply click on it or use the direction arrows on the keyboard. Su contenido (o fórmula) se muestra dentro de la celda.
 
 *   To select several continuous cells, drag the mouse from one end of the selection to the other. You can also click on the two ends of the selection while holding down the Shift key.
 
@@ -54,7 +54,7 @@ Las hojas de cálculo se componen de líneas y columnas. A cada línea se le aso
 
 *   To select a group of cells that are not continuous, hold down the **Ctrl** key (Windows) or **Command** key (Mac) and click on each cell to be selected.
 
-*   To deselect cells, simply click anywhere within the spreadsheet.
+*   Para deseleccionar las celdas, basta con hacer clic en cualquier lugar de la hoja de cálculo.
 
 ### Entrada de datos
 
@@ -84,7 +84,7 @@ The direction keys (arrows) allow you to move a cell in the direction indicated 
 *   click on a column or row header: **Insert**, **Delete**, **Hide**, or **Unhide** the contents
 *   haga clic en una celda o en un rango de celdas:
     *   **Filter**: allows hiding row through filters (see [Filtering rows](http://help.grapecity.com/spread/SpreadSheets11/webframe.html#filter.html) in the SpreadJS documentation).
-    *   **Sort**: sorts the column contents.
+    *   **Ordenar**: ordena el contenido de la columna.
     *   **Insert Comment**: allows user to enter a comment for an area. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:  
       ![](assets/en/ViewPro/vpContext2.PNG)
 
@@ -101,7 +101,7 @@ For a detailed list of component methods, see [Method list](method-list.md).
 
 ### Abordando un área 4D View Pro
 
-A 4D View Pro area handles several objects and elements.
+Un área 4D View Pro maneja varios objetos y elementos.
 
 ![](assets/en/ViewPro/vpDocument.PNG)
 
@@ -140,16 +140,16 @@ You can then pass `$myRange` to another 4D View Pro method to modify these cells
 *   area - El nombre del área 4D View Pro
 *   rangos - Una colección de objeto(s) rango. Available properties within each range object depend on the range object type. For example, a column range object will only include the *.column* and *.sheet* properties.
 
-| Propiedad |                   | Tipo      | Descripción                                                         | Disponible para                                                |
-| --------- | ----------------- | --------- | ------------------------------------------------------------------- | -------------------------------------------------------------- |
-| area      |                   | texto     | Nombre de objeto formulario área 4D View Pro                        | always available                                               |
-| ranges    |                   | colección | Colección de rangos                                                 | always available                                               |
-|           | \[ ].name        | texto     | Nombre de rango                                                     | name                                                           |
-|           | \[ ].sheet       | number    | Sheet index (current sheet index by default) (counting begins at 0) | celda, celdas, línea, líneas, columna, columnas, todos, nombre |
-|           | \[ ].row         | number    | Índice de la línea (el conteo comienza en 0)                        | celda, celdas, línea, líneas                                   |
-|           | \[ ].rowCount    | number    | Número de líneas                                                    | celdas, líneas                                                 |
-|           | \[ ].column      | number    | Índice de la columna (el conteo comienza en 0)                      | celda, celdas, columna, columnas                               |
-|           | \[ ].columnCount | number    | Conteo de columnas                                                  | celdas, columnas                                               |
+| Propiedad |                   | Tipo      | Descripción                                                                         | Disponible para                                                |
+| --------- | ----------------- | --------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| area      |                   | texto     | Nombre de objeto formulario área 4D View Pro                                        | always available                                               |
+| ranges    |                   | colección | Colección de rangos                                                                 | always available                                               |
+|           | \[ ].name        | texto     | Nombre de rango                                                                     | name                                                           |
+|           | \[ ].sheet       | number    | Índice de la hoja (por defecto, índice de la hoja actual) (el conteo comienza en 0) | celda, celdas, línea, líneas, columna, columnas, todos, nombre |
+|           | \[ ].row         | number    | Índice de la línea (el conteo comienza en 0)                                        | celda, celdas, línea, líneas                                   |
+|           | \[ ].rowCount    | number    | Número de líneas                                                                    | celdas, líneas                                                 |
+|           | \[ ].column      | number    | Índice de la columna (el conteo comienza en 0)                                      | celda, celdas, columna, columnas                               |
+|           | \[ ].columnCount | number    | Conteo de columnas                                                                  | celdas, columnas                                               |
 
 
 

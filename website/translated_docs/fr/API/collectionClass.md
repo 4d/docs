@@ -80,7 +80,7 @@ Une collection est initialisée avec :
 | Paramètres | Type                                                                    |    | Description             |
 | ---------- | ----------------------------------------------------------------------- |:--:| ----------------------- |
 | value      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Valeur(s) de collection |
-| Résultat   | Collection                                                              | <- | Nouvelle collection     |
+| Résultat   | Collection                                                              | <- | New collection          |
 
 <!-- END REF -->
 
@@ -190,14 +190,14 @@ Si le nouvel indice de l'élément est au-delà du dernier élément existant de
 Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge :
 
 *   nombre (réel, entier...). Les valeurs numériques sont toujours stockées sous forme de réels.
-*   text
+*   Texte
 *   boolean
 *   date
 *   heure (stockée en nombre de milliseconds - réel)
 *   null
 *   shared object(*)
-*   shared collection(*)
-> Contrairement aux collections standard (non partagées), les collections partagées ne prennent pas en charge les images, les pointeurs et les objets ou collections non partagés.
+*   shared collection(*) > Contrairement aux collections standard (non partagées), les collections partagées ne prennent pas en charge les images, les pointeurs et les objets ou collections non partagés.
+> Cette fonction modifie la collection d'origine.
 
 (\*)Lorsqu'un objet partagé ou une collection partagée est ajouté(e) comme élément à une collection partagée, il/elle hérite de son (*)locking identifier*. Pour plus d'informations sur ce point, reportez-vous au manuel **Concepts du langage 4D**.
 
@@ -342,7 +342,7 @@ La fonction `.combine()` <!-- REF #collection.combine().Summary -->insère les �
 > Cette fonction modifie la collection d'origine.
 
 Par défaut, les éléments de *col2* sont ajoutés à la fin de la collection d'origine. Vous pouvez passer dans *index* le numéro de l'élément après lequel vous souhaitez que les éléments de *col2* soient insérés dans la collection.
-> **Attention** : A noter que la numérotation des éléments de collection débute à 0.
+> Cette fonction ne modifie pas la collection d'origine.
 
 *   Si *index* > la longueur de la collection, l'*index* de départ réel sera fixé à la longueur de la collection.
 *   Si *index* < 0, il est recalculé comme *index:=index+lenth* (il est considéré comme le décalage par rapport à la fin de la collection).
@@ -737,7 +737,7 @@ Si la collection contient des objets, vous pouvez passer le paramètre *property
 La fonction `.equal()` <!-- REF #collection.equal().Summary -->compare la collection avec collection2 <!-- END REF -->et retourne **vrai** si elles sont identiques (deep comparison).
 
 Par défaut, une évaluation non diacritique est effectuée. Si vous souhaitez que l'évaluation soit sensible à la casse ou pour différencier des caractères accentués et non-accentués, passez la constante `ck diacritical` dans le paramètre option.
-> Les éléments contenant valeurs **Null** ne sont pas équivalents aux éléments Undefined.
+> Cette fonction ne modifie pas la collection d'origine.
 
 #### Exemple
 
@@ -1408,7 +1408,7 @@ La fonction `.insert()` <!-- REF #collection.insert().Summary --> insère *eleme
 > Cette fonction modifie la collection d'origine.
 
 Dans *index*, passez le numéro de l'élément après lequel vous souhaitez que le paramètre element soit inséré.
-> **Attention** : A noter que la numérotation des éléments de collection débute à 0.
+> Cette fonction ne modifie pas la collection d'origine.
 
 *   Si *index* > la longueur de la collection, l'*index* de départ réel sera fixé à la longueur de la collection.
 *   Si *index* < 0, il est recalculé comme *index:=index+length* (la fin de la collection est considérée comme point de départ du calcul de la position).
@@ -1549,7 +1549,7 @@ Optionnellement, vous pouvez passer le numéro de l'élément auquel démarrer l
 
 #### Description
 
-La propriété `.length` <!-- REF #collection.length.Summary -->retourne le nombre d'éléments contenus dans la collection.<!-- END REF -->
+La propriété `.length` <!-- REF #collection.length.Summary -->retourne le nombre d'éléments contenus dans la collection<!-- END REF -->.
 
 La propriété `.length` est initialisée à la création de la collection. Elle est automatiquement mise à jour en cas d'ajout ou de suppression d'éléments. Cette propriété est en **lecture seulement** (vous ne pouvez pas l'utiliser pour modifier la taille de la collection).
 
@@ -2117,7 +2117,7 @@ propertyPath comparator value {logicalOperator propertyPath comparator value}
 
 Cet exemple retourne les personnes dont le nom contient "in" :
 
-> Les formules ne sont pas prises en charge par la fonction `collection.query()`, ni dans le paramètre *queryString* ni en tant que paramètre objet *formula*.
+> Cette fonction ne modifie pas la collection d'origine.
 
 #### Exemple 1
 
@@ -2142,6 +2142,10 @@ Cet exemple retourne les personnes dont le nom contient "in" :
  $c:=New collection
  $c.push(New object("name";"Smith";"dateHired";!22-05-2002!;"age";45))
  $c.push(New object("name";"Wesson";"dateHired";!30-11-2017!))
+ $c.push(New object("name";"Winch";"dateHired";!16-05-2018!;"age";36))
+
+ $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
+ $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
  $c.push(New object("name";"Winch";"dateHired";!16-05-2018!;"age";36))
 
  $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
@@ -2178,7 +2182,7 @@ Vous trouverez plus d'exemples de requêtes dans la page `dataClass.query()`.
 
 ```4d
  $col:=$c.query("dateHired < :1";(Current date-90))
-  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] si la date du jour est 01/10/2018
+  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] si la date du jour est 01/10/2018 si la date du jour est 01/10/2018
 ```
 
 
@@ -2309,7 +2313,7 @@ Dans *index*, passez la position où vous souhaitez supprimer l'élément de la 
 > Cette fonction modifie la collection d'origine.
 
 La fonction `.remove()` <!-- REF #collection.remove().Summary -->supprime un ou plusieurs élément(s) de la position d'*index* spécifiée dans la collection et retourne la collection modifiée<!-- END REF -->.
-> **Attention** : A noter que la numérotation des éléments de collection débute à 0. Si *index* est supérieur à la longueur de la collection, l'*index* de départ réel sera fixé à la longueur de la collection.
+> Cette fonction ne modifie pas la collection d'origine. Si *startFrom* < 0, la fin de la collection est considérée comme point de départ du calcul de la position (*startFrom:=startFrom+length*).
 
 *   Si *index* < 0, il est recalculé comme *index:=index+lenth* (il est considéré comme le décalage par rapport à la fin de la collection).
 *   Si la valeur recalculée est négative, *index* prend la valeur 0.

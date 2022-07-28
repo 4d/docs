@@ -58,7 +58,6 @@ O resultado é parecido mas o _MethodB_ é avaliado somente se necessário.
     QUERY([People];[People]LastName=$Find)
  Else
     ALERT("Não introduciu um nome.")
- End if
  End if 
 ```
 
@@ -140,6 +139,13 @@ Esse exemplo testa uma variável numérica e exibe uma caixa de alerta com uma a
        ALERT("Three.") //Se for 3, exibe um alerta
     Else //Se não for 1, 2, ou 3, exibe um alerta
        ALERT("It was not one, two, or three.")
+ End case //Se for 1, mostrar um alerta
+    :(vResult=2) //Testar se o número é 2
+       ALERT("Two.") //Se for 2, exibe um alerta
+    :(vResult=3) //Testa se o número é 3
+       ALERT("Three.") //Se for 3, exibe um alerta
+    Else //Se não for 1, 2, ou 3, exibe um alerta
+       ALERT("It was not one, two, or three.")
  End case
 ```
 
@@ -147,10 +153,19 @@ Por comparação, aqui está a versão `If... Else... End if` do mesmo método:
 
 ```4d
  If(vResult=1) //Teste se o número é 1
+    ALERT("One.") If(vResult=1) //Teste se o número é 1
     ALERT("One.") //If it is 1, display an alert
  Else
     If(vResult=2) //Teste se o número é  2
        ALERT("Two.") //Se for 2, exibe um alerta
+    Else
+       If(vResult=3) //Teste se o número é 3
+          ALERT("Three.") //Se for 3, exibe um alerta
+       Else //Se não for 1, 2, ou 3,  exibe um alerta
+          ALERT("It was not one, two, or three.")
+       End if
+    End if
+ End if //Se for 2, exibe um alerta
     Else
        If(vResult=3) //Teste se o número é 3
           ALERT("Three.") //Se for 3, exibe um alerta
@@ -198,7 +213,7 @@ No código anterior, a presença da segunda condição não é detectada, já qu
 
 Além disso, se quiser implementar teste hierárquico, pode considerar usar um código hierárquico.
 
-**Dica:** a ramificação|branching pode ser feita sem que as instruções sejam executados em um caso ou outro Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
+**Dica:** a ramificação|branching pode ser feita sem que as instruções sejam executados em um caso ou outro Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
 ```4d
  Case of
     :(Boolean_Expression)

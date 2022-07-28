@@ -706,11 +706,11 @@ Nom du cookie utilisé pour stocker l'ID de session<!-- END REF -->.
 
 Valeur "SameSite" du cookie de session<!-- END REF -->. Valeurs possibles (avec constantes):
 
-| Constante           | Valeur   | Description                                                                                                                                                    |
-| ------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Web SameSite Strict | "Strict" | *Valeur par défaut* - Les cookies sont envoyés uniquement dans un contexte interne (first-party)                                                               |
-| Web SameSite Lax    | "Lax"    | Les cookies sont également envoyés aux sous-requêtes intersites mais uniquement lorsque l'internaute navigue vers le site d'origine (i.e. en suivant un lien). |
-| Web SameSite None   | "None"   | Les cookies sont envoyés dans tous les contextes, i.e. en réponse aux requêtes internes (first-party) et aux requêtes cross-origin.                            |
+| Constante           | Valeur   | Description                                                                                                                               |
+| ------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Web SameSite Strict | "Strict" | *Valeur par défaut* - Les cookies sont envoyés uniquement dans un contexte interne (first-party)                                          |
+| Web SameSite Lax    | "Lax"    | Les cookies sont également envoyés aux sous-requêtes intersites mais uniquement lorsque l'internaute navigue vers le site d'origine (i.e. |
+| Web SameSite None   | "None"   | Les cookies sont envoyés dans tous les contextes, i.e. en réponse aux requêtes internes (first-party) et aux requêtes cross-origin.       |
 
 Tous les paramètres des [objets Web Server](#web-server-object) peuvent être personnalisés, hormis les propriétés en lecture seule ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), et [.sessionCookieName](#sessioncookiename)).
 
@@ -769,9 +769,9 @@ La fonction retourne un objet décrivant le statut démarré du serveur Web. Cet
 
 | Propriété |                         | Type       | Description                                                               |
 | --------- | ----------------------- | ---------- | ------------------------------------------------------------------------- |
-| success   |                         | Boolean    | Vrai si le serveur web a été correctement démarré, sinon Faux             |
+| success   |                         | Booléen    | Vrai si le serveur web a été correctement démarré, sinon Faux             |
 | errors    |                         | Collection | Pile d'erreurs 4D (non retournée si le serveur web a démarré avec succès) |
-|           | \[].errCode            | Number     | Code d'erreur 4D                                                          |
+|           | \[].errCode            | Nombre     | Code d'erreur 4D                                                          |
 |           | \[].message            | Text       | Description de l'erreur 4D                                                |
 |           | \[].componentSignature | Text       | Signature du composant interne qui a retourné l'erreur                    |
 > Si le serveur Web a déjà été lancé, une erreur est générée.

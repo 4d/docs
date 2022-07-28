@@ -58,15 +58,15 @@ La commande `POP3 New transporter` <!-- REF #_command_.POP3 New transporter.Summ
 Dans le paramètre *server*, passez un objet contenant les propriétés suivantes :
 
 
-| *server*                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Valeur par défaut (si omise)                                                     |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| *server*                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Valeur par défaut (si omise)                                                     |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| Faux                                                                             |
-| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<p>Chaîne de texte ou objet token représentant les informations d'autorisation OAuth2. Il est utilisé uniquement avec OAUTH2 `authenticationMode`. Si `accessTokenOAuth2` est utilisé mais que `authenticationMode` est omis, le protocole OAuth 2 est utilisé (si le serveur l'autorise). Non retourné dans l'objet *[SMTP transporter](#smtptransporterobject)*. | aucune                                                                           |
+| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<p>Chaîne de texte ou objet token représentant les informations d'autorisation OAuth2. Il est utilisé uniquement avec OAUTH2 `authenticationMode`. Si `accessTokenOAuth2` est utilisé mais que `authenticationMode` est omis, le protocole OAuth 2 est utilisé (si le serveur l'autorise). Chaîne de texte ou objet token représentant les informations d'autorisation OAuth2. | aucune                                                                           |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| le mode d'authentification le plus sûr pris en charge par le serveur est utilisé |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                               |
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *obligatoire*                                                                    |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| aucune                                                                           |
-| **.password** : Text<p>Mot de passe de l'utilisateur pour l'authentification sur le serveur. Non retourné dans l'objet *[SMTP transporter](#smtptransporterobject)*.                                                                                                                                                                                                                                                                    | aucune                                                                           |
+| **.password** : Text<p>Mot de passe de l'utilisateur pour l'authentification sur le serveur. Chaîne de texte ou objet token représentant les informations d'autorisation OAuth2.                                                                                                                                                                                                                                                                    | aucune                                                                           |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 995                                                                              |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| aucune                                                                           |
 
@@ -145,6 +145,10 @@ La fonction `4D.POP3Transporter.new()` <!-- REF #4D.POP3Transporter.new().Summar
     $status:=$transporter.checkConnection()
     If($status.success)
        ALERT("POP3 connection check successful!")
+    Else
+       ALERT("Error: "+$status.statusText)
+    End if
+ End if
     Else
        ALERT("Error: "+$status.statusText)
     End if
@@ -373,6 +377,7 @@ La fonction retourne **Null** si :
  $mailInfo:=$transporter.getMailInfo(1) //obtenir le premier e-mail
  If($mailInfo #Null)
     ALERT("First mail size is:"+String($mailInfo.size)+" bytes.")
+ End if
  End if
 ```
 

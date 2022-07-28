@@ -42,7 +42,9 @@ Pour mettre à jour les autres machines clientes qui ne sont pas connectées, il
 
 -   **SQL Server** : 19812 par défaut (peut être modifié via la page "SQL/Configuration" des Préférences).
 -   **Serveur d'application** : 19813 par défaut (peut être modifié via la page "Client-Serveur/Configuration" des Préférences, voir ci-dessus).
--   **Serveur DB4D** (serveur de base de données) : 19814 par défaut. Ce numéro de port ne peut pas être modifié directement mais il est toujours constitué du numéro de port du serveur d'application + 1.\ Lorsqu'un client 4D se connecte à 4D Server, il utilise le port TCP du serveur d'application (19813 ou le port indiqué après les deux points " : " dans l'adresse IP affichée dans la boîte de dialogue de connexion). La connexion aux autres serveurs via leurs ports respectifs est alors automatique ; il n'est plus nécessaire de les spécifier.\ A noter que dans le cas d'un accès via un routeur ou un pare-feu, les trois ports TCP doivent être ouverts explicitement.
+-   **Serveur DB4D** (serveur de base de données) : 19814 par défaut. Ce numéro de port ne peut pas être modifié directement mais il est toujours constitué du numéro de port du serveur d'application + 1.\
+  Lorsqu'un client 4D se connecte à 4D Server, il utilise le port TCP du serveur d'application (19813 ou le port indiqué après les deux points " : " dans l'adresse IP affichée dans la boîte de dialogue de connexion). La connexion aux autres serveurs via leurs ports respectifs est alors automatique ; il n'est plus nécessaire de les spécifier.\
+  A noter que dans le cas d'un accès via un routeur ou un pare-feu, les trois ports TCP doivent être ouverts explicitement.
 
 #### Authentification de l'utilisateur auprès du serveur de domaine
 
@@ -74,7 +76,7 @@ Ce paramètre permet de définir globalement le mode de mise à jour de l'instan
 
 -   **Jamais** : Le dossier **Resources** local n'est pas mis à jour pendant la session. La notification envoyée par le serveur est ignorée. Le dossier **Resources** local peut être mis à jour manuellement à l'aide de la commande **Update Local Resources** du menu d'action (voir [Utilisation de l'explorateur de ressources](https://doc.4d.com/4Dv19/4D/19/Using-the-Resources-explorer.300-5416788.en.html)).
 -   **Toujours** : La synchronisation du dossier local **Resources** est automatiquement effectuée pendant la session chaque fois qu'une notification est envoyée par le serveur.
--   **Demander** : Lorsque la notification est envoyée par le serveur, une boîte de dialogue est affichée sur les postes clients, indiquant la modification. L’utilisateur peut alors accepter ou refuser la synchronisation du dossier **Resources** local.\ Le dossier **Resources** centralise les fichiers personnalisés nécessaires à l'interface de la base (fichiers de traduction, images, etc.). Des mécanismes automatiques ou manuels permettent de notifier chaque client lorsque le contenu de ce dossier a été modifié. Pour plus d'informations, reportez-vous à la section [Gestion du dossier Resources](https://doc.4d.com/4Dv19/4D/19/Gestion-du-dossier-Resources.300-5422466.fe.html).
+-   **Demander** : Lorsque la notification est envoyée par le serveur, une boîte de dialogue est affichée sur les postes clients, indiquant la modification. **Demander** : Lorsque la notification est envoyée par le serveur, une boîte de dialogue est affichée sur les postes clients, indiquant la modification. Des mécanismes automatiques ou manuels permettent de notifier chaque client lorsque le contenu de ce dossier a été modifié. Pour plus d'informations, reportez-vous à la section [Gestion du dossier Resources](https://doc.4d.com/4Dv19/4D/19/Gestion-du-dossier-Resources.300-5422466.fe.html).
 
 
 ## Page Configuration IP

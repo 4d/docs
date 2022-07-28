@@ -8,8 +8,8 @@ Une [entity](ORDA/dsMapping.md#entity) est une instance d'une [Dataclass](ORDA/d
 
 ### Sommaire
 
-|                                                                                                                                                                                                                                           |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE EntityClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntityClass.attributeName.Summary -->|
 | [<!-- INCLUDE #EntityClass.clone().Syntax -->](#clone)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.clone().Summary -->|
 | [<!-- INCLUDE #EntityClass.diff().Syntax -->](#diff)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.diff().Summary -->|
@@ -18,7 +18,6 @@ Une [entity](ORDA/dsMapping.md#entity) est une instance d'une [Dataclass](ORDA/d
 | [<!-- INCLUDE #EntityClass.fromObject().Syntax -->](#fromobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.fromObject().Summary -->|
 | [<!-- INCLUDE #EntityClass.getDataClass().Syntax -->](#getdataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getDataClass().Summary -->|
 | [<!-- INCLUDE #EntityClass.getKey().Syntax -->](#getkey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getKey().Summary -->|
-| [<!-- INCLUDE #EntityClass.getRemoteContextAttributes().Syntax -->](#getremotecontextattributes)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getRemoteContextAttributes().Summary -->|
 | [<!-- INCLUDE #EntityClass.getSelection().Syntax -->](#getselection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getSelection().Summary -->|
 | [<!-- INCLUDE #EntityClass.getStamp().Syntax -->](#getstamp)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getStamp().Summary -->|
 | [<!-- INCLUDE #EntityClass.indexOf().Syntax -->](#indexof)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.indexOf().Summary -->|
@@ -158,7 +157,7 @@ Les différences sont retournées sous forme de collection d'objets dont les pro
 
 | Nom de propriété | Type                      | Description                                  |
 | ---------------- | ------------------------- | -------------------------------------------- |
-| attributeName    | String                    | Nom de l'attribut                            |
+| attributeName    | Chaine                    | Nom de l'attribut                            |
 | value            | Dépend du type d'attribut | Valeur de l'attribut dans l'entité d'origine |
 | otherValue       | Dépend du type d'attribut | Valeur de l'attribut dans *entityToCompare*  |
 
@@ -362,26 +361,26 @@ Sinon, vous pouvez passer l'option `dk force drop if stamp changed` dans le para
 
 L'objet retourné par `.drop( )` contient les propriétés suivantes :
 
-| Propriété     |                     | Type                  | Description                                                                                                    |
-| ------------- | ------------------- | --------------------- | -------------------------------------------------------------------------------------------------------------- |
-| success       |                     | boolean               | vrai si l'action de suppression a été effectuée avec succès, sinon Faux.                                       |
-|               |                     |                       | ***Disponible uniquement en cas d'erreur :***                                                                  |
-| status(*)     |                     | number                | Code d'erreur, voir ci-dessous                                                                                 |
-| statusText(*) |                     | text                  | Description de l'erreur, voir ci-dessous                                                                       |
-|               |                     |                       | ***Disponible uniquement en cas d'erreur de verrouillage pessimiste :***                                       |
-| LockKindText  |                     | text                  | "Locked by record"                                                                                             |
-| lockInfo      |                     | object                | Information sur l'origine du verrouillage                                                                      |
-|               | task_id             | number                | Id du process                                                                                                  |
-|               | user_name           | text                  | Nom d'utilisateur de la session sur la machine                                                                 |
-|               | user4d_alias        | text                  | Alias utilisateur si défini avec `SET USER ALIAS`, sinon le nom d'utilisateur dans le répertoire de la base 4D |
-|               | host_name           | text                  | Nom de la machine                                                                                              |
-|               | task_name           | text                  | Nom du process                                                                                                 |
-|               | client_version      | text                  |                                                                                                                |
-|               |                     |                       | ***Disponible uniquement en cas d'erreur critique (clé primaire dupliquée, disque plein..) :***                |
-| errors        |                     | collection of objects |                                                                                                                |
-|               | message             | text                  | Message d'erreur                                                                                               |
-|               | component signature | text                  | signature du composant interne (e.g. "dmbg" pour le composant de base de données)                              |
-|               | errCode             | number                | Code d'erreur                                                                                                  |
+| Propriété     |                     | Type                | Description                                                                                                    |
+| ------------- | ------------------- | ------------------- | -------------------------------------------------------------------------------------------------------------- |
+| success       |                     | boolean             | vrai si l'action de suppression a été effectuée avec succès, sinon Faux.                                       |
+|               |                     |                     | ***Disponible uniquement en cas d'erreur :***                                                                  |
+| status(*)     |                     | number              | Code d'erreur, voir ci-dessous                                                                                 |
+| statusText(*) |                     | Texte               | Description de l'erreur, voir ci-dessous                                                                       |
+|               |                     |                     | ***Disponible uniquement en cas d'erreur de verrouillage pessimiste :***                                       |
+| LockKindText  |                     | Texte               | "Locked by record"                                                                                             |
+| lockInfo      |                     | object              | Information sur l'origine du verrouillage                                                                      |
+|               | task_id             | number              | Id du process                                                                                                  |
+|               | user_name           | Texte               | Nom d'utilisateur de la session sur la machine                                                                 |
+|               | user4d_alias        | Texte               | Alias utilisateur si défini avec `SET USER ALIAS`, sinon le nom d'utilisateur dans le répertoire de la base 4D |
+|               | host_name           | Texte               | Nom de la machine                                                                                              |
+|               | task_name           | Texte               | Nom du process                                                                                                 |
+|               | client_version      | Texte               |                                                                                                                |
+|               |                     |                     | ***Disponible uniquement en cas d'erreur critique (clé primaire dupliquée, disque plein..) :***                |
+| errors        |                     | collection d'objets |                                                                                                                |
+|               | message             | Texte               | Message d'erreur                                                                                               |
+|               | component signature | Texte               | signature du composant interne (e.g. "dmbg" pour le composant de base de données)                              |
+|               | errCode             | number              | Code d'erreur                                                                                                  |
 
 (\*) Les valeurs suivantes peuvent être retournées dans les propriétés *status* et *statusText* de l'objet *Résultat* en cas d'erreur :
 
@@ -654,61 +653,7 @@ Les clés primaires peuvent être des nombres (integer) ou des textes. Vous pouv
 <!-- END REF -->
 
 
-<!-- REF EntityClass.getRemoteContextAttributes().Desc -->
-## .getRemoteContextAttributes()
 
-<details><summary>Historique</summary>
-| Version | Modifications |
-| ------- | ------------- |
-| v19R5   | Ajout         |
-</details>
-
-<!-- REF #EntityClass.getRemoteContextAttributes().Syntax -->
-**.getRemoteContextAttributes()** : Text<!-- END REF -->
-
-<!-- REF #EntityClass.getRemoteContextAttributes().Params -->
-| Paramètres | Type |    | Description                                                        |
-| ---------- | ---- | -- | ------------------------------------------------------------------ |
-| result     | Text | <- | Attirbuts de contexte associés à l'entity, séparés par une virgule |
-<!-- END REF -->
-
-> **Mode avancé :** Cette fonction est destinée aux développeurs qui souhaitent personnaliser les fonctionnalités par défaut de ORDA dans le cadre de configurations spécifiques. Dans la plupart des cas, vous n'aurez pas besoin de l'utiliser.
-
-
-#### Description
-
-La fonction `.getRemoteContextAttributes()` <!-- REF #EntityClass.getRemoteContextAttributes().Summary -->retourne des informations relatives au contexte d'optimisation utilisé par l'entity <!-- END REF -->.
-
-S'il n'existe pas de [contexte d'optimisation](../ORDA/remoteDatastores.md#clientserver-optimization) pour l'entity, la fonction retourne un texte vide.
-
-#### Exemple
-
-```4d
-var $ds : 4D.DataStoreImplementation
-var $address : cs.AddressEntity
-var $p : cs.PersonsEntity
-var $contextA : Object
-var $info : Text
-var $text : Text
-
-$ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
-
-$contextA:=New object("context"; "contextA")
-
-$address:=$ds.Address.get(1; $contextA)
-$text:="" 
-For each ($p; $address.persons)
-    $text:=$p.firstname+" "+$p.lastname
-End for each 
-
-$info:=$address.getRemoteContextAttributes()
-
-//$info = "persons,persons.lastname,persons.firstname"
-```
-
-#### Voir aussi
-
-[EntitySelection.getRemoteContextAttributes()](./EntitySelectionClass.md#getRemoteContextAttributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
 
 <!-- REF EntityClass.getSelection().Desc -->
 ## .getSelection()
@@ -982,21 +927,21 @@ L'objet retourné par `.lock( )` contient les propriétés suivantes :
 | **wasReloaded**  |                     | boolean             | vrai si l'entité a été correctement rechargée, sinon faux.                                                                                                                 |
 |                  |                     |                     | ***Disponible uniquement en cas d'erreur :***                                                                                                                              |
 | status(\*)     |                     | number              | Code d'erreur, voir ci-dessous                                                                                                                                             |
-| statusText(\*) |                     | text                | Description de l'erreur, voir ci-dessous                                                                                                                                   |
+| statusText(\*) |                     | Texte               | Description de l'erreur, voir ci-dessous                                                                                                                                   |
 |                  |                     |                     | ***Disponible uniquement en cas d'erreur de verrouillage pessimiste :***                                                                                                   |
-| lockKindText     |                     | text                | "Locked by record" si verrouillage par un process 4D, "Locked by session" si verrouillage par une session REST                                                             |
+| lockKindText     |                     | Texte               | "Locked by record" si verrouillage par un process 4D, "Locked by session" si verrouillage par une session REST                                                             |
 | lockInfo         |                     | object              | Information sur l'origine du verrouillage. Les propriétés retournées dépendent de l'origine du verrouillage (process 4D ou session REST).                                  |
 |                  |                     |                     | ***Disponible uniquement pour un verrouillage par process 4D:***                                                                                                           |
 |                  | task_id             | number              | ID du process                                                                                                                                                              |
-|                  | user_name           | text                | Nom d'utilisateur de la session sur la machine                                                                                                                             |
+|                  | user_name           | Texte               | Nom d'utilisateur de la session sur la machine                                                                                                                             |
 |                  | user4d_alias        | Texte               | Nom ou alias de l'utilisateur 4D                                                                                                                                           |
 |                  | user4d_id           | number              | Identifiant utilisateur dans le répertoire de la base 4D                                                                                                                   |
-|                  | host_name           | text                | Nom de la machine                                                                                                                                                          |
-|                  | task_name           | text                | Nom du process                                                                                                                                                             |
+|                  | host_name           | Texte               | Nom de la machine                                                                                                                                                          |
+|                  | task_name           | Texte               | Nom du process                                                                                                                                                             |
 |                  | client_version      | Texte               | Version du client                                                                                                                                                          |
 |                  |                     |                     | ***Disponible uniquement pour un verrouillage par session REST :***                                                                                                        |
-|                  | host                | text                | URL ayant verrouillé l'entité (ex : "www.myserver.com")                                                                                                                    |
-|                  | IPAddr              | text                | Adresse IP d'origine du verrouillage (ex. 127.0.0.1")                                                                                                                      |
+|                  | host                | Texte               | URL d'origine du verrouillage de l'entité (ex : "127.0.0.1:8043")                                                                                                          |
+|                  | IPAddr              | Texte               | Adresse IP d'origine du verrouillage (ex. 127.0.0.1")                                                                                                                      |
 |                  | userAgent           | Texte               | userAgent de l'origine du verouillage (ex : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 |                  |                     |                     | ***Disponible uniquement en cas d'erreur critique*** (clé primaire dupliquée, disque plein...) :                                                                           |
 | errors           |                     | collection d'objets |                                                                                                                                                                            |
@@ -1169,7 +1114,7 @@ L'objet retourné par `.reload( )` contient les propriétés suivantes :
 | ---------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | success          | boolean | Vrai si le rechargement a été effectué avec succès, sinon Faux.<p><p>***Disponible uniquement en cas d'erreur*** : |
 | status(\*)     | number  | Code d'erreur, voir ci-dessous                                                                                                                                     |
-| statusText(\*) | text    | Description de l'erreur, voir ci-dessous                                                                                                                           |
+| statusText(\*) | Texte   | Description de l'erreur, voir ci-dessous                                                                                                                           |
 
 (\*) Les valeurs suivantes peuvent être retournées dans les propriétés *status* et *statusText* de l'objet *Résultat* en cas d'erreur :
 
@@ -1238,28 +1183,28 @@ Sinon, vous pouvez passer l'option `dk auto merge` dans le paramètre *mode* afi
 
 L'objet retourné par `.save()` contient les propriétés suivantes :
 
-| Propriété    |                    | Type                  | Description                                                                                                    |
-| ------------ | ------------------ | --------------------- | -------------------------------------------------------------------------------------------------------------- |
-| success      |                    | boolean               | Vrai si la sauvegarde a été effectuée avec succès, sinon faux.                                                 |
-|              |                    |                       | ***Disponible uniquement si l'option `dk auto merge` a été utilisée*** :                                       |
-| autoMerged   |                    | boolean               | Vrai si un "auto merge" a été effectué, sinon faux.                                                            |
-|              |                    |                       | ***Disponible uniquement en cas d'erreur*** :                                                                  |
-| status       |                    | number                | Code d'erreur, [voir ci-dessous](#status-and-statustext)                                                       |
-| statusText   |                    | text                  | Description de l'erreur, [voir ci-dessous](#status-and-statustext)                                             |
-|              |                    |                       | ***Disponible uniquement en cas d'erreur en verrouillage pessimiste*** :                                       |
-| lockKindText |                    | text                  | "Locked by record"                                                                                             |
-| lockInfo     |                    | object                | Information sur l'origine du verrouillage                                                                      |
-|              | task_id            | number                | Id du process                                                                                                  |
-|              | user_name          | text                  | Nom d'utilisateur de la session sur la machine                                                                 |
-|              | user4d_alias       | text                  | Alias utilisateur si défini avec `SET USER ALIAS`, sinon le nom d'utilisateur dans le répertoire de la base 4D |
-|              | host_name          | text                  | Nom de la machine                                                                                              |
-|              | task_name          | text                  | Nom du process                                                                                                 |
-|              | client_version     | text                  |                                                                                                                |
-|              |                    |                       | ***Disponible uniquement en cas d'erreur critique*** (clé primaire dupliquée, disque plein...) :               |
-| errors       |                    | collection of objects |                                                                                                                |
-|              | message            | text                  | Message d'erreur                                                                                               |
-|              | componentSignature | text                  | Signature du composant interne (e.g. "dmbg" pour le composant de base de données)                              |
-|              | errCode            | number                | Code d'erreur                                                                                                  |
+| Propriété    |                    | Type                | Description                                                                                                    |
+| ------------ | ------------------ | ------------------- | -------------------------------------------------------------------------------------------------------------- |
+| success      |                    | boolean             | Vrai si la sauvegarde a été effectuée avec succès, sinon faux.                                                 |
+|              |                    |                     | ***Disponible uniquement si l'option `dk auto merge` a été utilisée*** :                                       |
+| autoMerged   |                    | boolean             | Vrai si un "auto merge" a été effectué, sinon faux.                                                            |
+|              |                    |                     | ***Disponible uniquement en cas d'erreur*** :                                                                  |
+| status       |                    | number              | Code d'erreur, [voir ci-dessous](#status-and-statustext)                                                       |
+| statusText   |                    | Texte               | Description de l'erreur, [voir ci-dessous](#status-and-statustext)                                             |
+|              |                    |                     | ***Disponible uniquement en cas d'erreur en verrouillage pessimiste*** :                                       |
+| lockKindText |                    | Texte               | "Locked by record"                                                                                             |
+| lockInfo     |                    | object              | Information sur l'origine du verrouillage                                                                      |
+|              | task_id            | number              | Id du process                                                                                                  |
+|              | user_name          | Texte               | Nom d'utilisateur de la session sur la machine                                                                 |
+|              | user4d_alias       | Texte               | Alias utilisateur si défini avec `SET USER ALIAS`, sinon le nom d'utilisateur dans le répertoire de la base 4D |
+|              | host_name          | Texte               | Nom de la machine                                                                                              |
+|              | task_name          | Texte               | Nom du process                                                                                                 |
+|              | client_version     | Texte               |                                                                                                                |
+|              |                    |                     | ***Disponible uniquement en cas d'erreur critique*** (clé primaire dupliquée, disque plein...) :               |
+| errors       |                    | collection d'objets |                                                                                                                |
+|              | message            | Texte               | Message d'erreur                                                                                               |
+|              | componentSignature | Texte               | Signature du composant interne (e.g. "dmbg" pour le composant de base de données)                              |
+|              | errCode            | number              | Code d'erreur                                                                                                  |
 
 ##### status et statusText
 
@@ -1785,7 +1730,7 @@ L'objet retourné par `.unlock()` contient la propriété suivante :
 
 | Propriété | Type    | Description                                                                                                                                                                                                                                                                 |
 | --------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| success   | Boolean | Vrai si l'action unlock a été exécutée avec succès, Faux sinon. Si le déverrouillage est effectué sur une entité qui a été supprimée, sur un enregistrement non verrouillé ou sur un enregistrement verrouillé par un autre process ou une autre entité, success vaut Faux. |
+| success   | Booléen | Vrai si l'action unlock a été exécutée avec succès, Faux sinon. Si le déverrouillage est effectué sur une entité qui a été supprimée, sur un enregistrement non verrouillé ou sur un enregistrement verrouillé par un autre process ou une autre entité, success vaut Faux. |
 
 #### Exemple
 

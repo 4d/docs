@@ -13,7 +13,7 @@ Por último, 4D dispone de funciones que analizan el contenido del archivo de hi
 
 El archivo de historial generado por 4D contiene una descripción de todas las operaciones realizadas en los datos de las tablas registradas en el diario, que se registran de forma secuencial. Por defecto, todas las tablas se registran en el diario, es decir, se incluyen en el archivo de historial, pero puede anular la selección de tablas individuales mediante la propiedad **Incluir en el archivo de historial**.
 
-Así, cada operación realizada por un usuario provoca dos acciones simultáneas: la primera en el archivo de datos (la instrucción se ejecuta normalmente) y la segunda en el archivo de historial (se registra la descripción de la operación). El archivo de historial se crea de forma independiente, sin perturbar ni ralentizar el trabajo del usuario. Una aplicación sólo puede trabajar con un archivo de historial a la vez. El archivo de historial registra los siguientes tipos de acciones:
+Así, cada operación realizada por un usuario provoca dos acciones simultáneas: la primera en el archivo de datos (la instrucción se ejecuta normalmente) y la segunda en el archivo de historial (se registra la descripción de la operación). El archivo de historial se crea de forma independiente, sin perturbar ni ralentizar el trabajo del usuario. El archivo de historial se crea de forma independiente, sin perturbar ni ralentizar el trabajo del usuario. El archivo de historial registra los siguientes tipos de acciones:
 
 - Apertura y cierre del archivo de datos,
 - Apertura y cierre del proceso (contextos),

@@ -7,7 +7,8 @@ Dans 4D, vous pouvez exécuter des scripts PHP en configurant directement la pag
 
 ## Interpréteur
 
--   **Adresse IP** et Numéro de port Par défaut, 4D fournit un interpréteur PHP, compilé en FastCGI. Pour des raisons liées à l'architecture interne, les demandes d'exécution vont vers l'interpréteur PHP à une adresse HTTP spécifique. Par défaut, 4D utilise l'adresse 127.0.0.1 et le port 8002. Vous pouvez modifier cette adresse et/ou ce port s'ils sont déjà utilisés par un autre service ou si vous avez plusieurs interpréteurs sur la même machine. Pour ce faire, modifiez les paramètres **Adresse IP** et **Numéro de port**. \ A noter que l'adresse HTTP doit se trouver sur la même machine que 4D.
+-   **Adresse IP** et Numéro de port Par défaut, 4D fournit un interpréteur PHP, compilé en FastCGI. Pour des raisons liées à l'architecture interne, les demandes d'exécution vont vers l'interpréteur PHP à une adresse HTTP spécifique. Par défaut, 4D utilise l'adresse 127.0.0.1 et le port 8002. Vous pouvez modifier cette adresse et/ou ce port s'ils sont déjà utilisés par un autre service ou si vous avez plusieurs interpréteurs sur la même machine. Pour ce faire, modifiez les paramètres **Adresse IP** et **Numéro de port**.\
+  A noter que l'adresse HTTP doit se trouver sur la même machine que 4D.
 
 -   **Interpréteur externe** Si vous utilisez un interpréteur PHP externe, il doit être compilé en FastCGI et se trouver sur la même machine que 4D (voir "Utiliser un autre interpréteur PHP ou un autre fichier php.ini" dans [Exécution de scripts PHP dans 4D](https://doc.4d.com/4Dv19/4D/19.1/Executing-PHP-scripts-in-4D.300-5654093.en.html)). Sélectionnez cette option pour que 4D ne tente pas de se connecter avec l'interpréteur interne lors de l'exécution d'une requête PHP. A noter que cette configuration nécessite une exécution et un contrôle manuels de l'interpréteur externe.
 

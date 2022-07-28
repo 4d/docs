@@ -57,8 +57,6 @@ Par exemple, si vous souhaitez définir une classe nommée "Polygon", vous devez
     + Project
 
 
-
-
         * Sources
             - Classes
                 + Polygon.4dm
@@ -213,7 +211,7 @@ Function getFullname()->$fullname : Text
     $fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
-Pour une fonction de classe, la commande `Current method name` retourne : `<ClassName>.<FunctionName>`, par exemple "MyClass.myFunction".
+Pour une fonction de classe, la commande `Current method name` retourne : `<ClassName>.<FunctionName>`, par exemple "MyClass.myMethod".
 
 Dans le code de l'application, les fonctions de classes sont appelées comme des méthodes membres des instances d'objets et peuvent recevoir des [paramètres](#class-function-parameters) si besoin. Les syntaxes suivantes sont prises en charge :
 
@@ -358,6 +356,7 @@ Function set fullName( $fullName : Text )
     $p:=Position(" "; $fullName)
     This.firstName:=Substring($fullName; 1; $p-1)
     This.lastName:=Substring($fullName; $p+1)
+
 ```
 
 ```4d
@@ -396,7 +395,7 @@ Une fonction class constructor, qui accepte des [paramètres](#parameters), peut
 
 Dans ce cas, lorsque vous appelez la fonction [`new()`](API/ClassClass.md#new), le class constructor est appelé avec les paramètres optionnellement passés à la fonction `new()`.
 
-Pour une fonction class constructor, la commande `Current method name` retourne : `<ClassName>:constructor`, par exemple "MyClass.constructor".
+Une fonction class constructor, qui accepte des [paramètres](#parameters), peut être utilisée pour définir une classe utilisateur.
 
 
 
@@ -455,14 +454,12 @@ Class extends Polygon
 
 Class constructor ($side : Integer)
 
-    // Il appelle le constructeur de la classe parente avec les longueurs
-    // fournies pour la largeur et la hauteur du polygone.
+    // Elle appelle le class constructor de la classe parente en lui passant 
+    // les longueurs fournies pour la largeur et hauteur du polygone
     Super($side;$side)
-    // Dans les classes dérivées, Super doit être appelé avant que vous puissiez
-    // utiliser 'This'.
+    // Dans les classes dérivées, Super doit être appelé avant
+    // de pouvoir utiliser 'This'
     This.name:="Square"
-
-
 
     Function getArea()
         C_LONGINT($0)
@@ -474,7 +471,7 @@ Class constructor ($side : Integer)
 #### Syntaxe
 
 ```4d
-Super {( param{;...;paramN} )} {-> Object}
+Super {( param{;...;paramN} )} {-> Object} 
 ```
 
 | Paramètres | Type   |    | Description                                                |
@@ -526,10 +523,9 @@ Function getArea()
     var $0 : Integer
     $0:=(This.height)*(This.width)
 
-// Function definition
+// Définition de fonction
 Function getArea()
     var $0 : Integer
-
     $0:=(This.height)*(This.width)
 ```
 
@@ -645,7 +641,6 @@ $o:=cs.ob.new()
 $o.a:=5
 $o.b:=3
 $val:=$o.f() //8
-
 ```
 
 Dans cet exemple, l'objet affecté à la variable $o n'a pas de propriété *f*, il hérite de celle de sa classe. Comme *f* est appelée comme une méthode de $o, son `This` se réfère à $o.
@@ -658,13 +653,13 @@ Plusieurs commandes du langage 4D se rapportent à la manipulation des classes.
 
 ### `OB Class`
 
-#### `OB Class ( object ) -> Object | Null`
+#### OB Class ( object ) -> Object | Null
 
 `OB Class` retourne la classe de l'objet passé en paramètre.
 
 
 ### `OB Instance of`
 
-#### `OB Instance of ( object ; class ) -> Boolean`
+#### OB Instance of ( object ; class ) -> Boolean
 
 `OB Instance of` retourne `true` si `object` appartient à la `class` ou à l'une de ses classes héritées, et `false` sinon.

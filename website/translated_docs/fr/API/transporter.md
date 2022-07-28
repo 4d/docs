@@ -383,11 +383,11 @@ La fonction envoie une requête au serveur de mail et retourne un objet décriva
 | ---------- | ------------------------ | ---------- | --------------------------------------------------------------------------------------------------------------------------- |
 | success    |                          | boolean    | Vrai si la vérification a été effectuée avec succès, sinon Faux                                                             |
 | status     |                          | number     | (SMTP uniquement) Code du statut retourné par le serveur de messagerie (0 en cas de problème non lié au traitement du mail) |
-| statusText |                          | text       | Message du statut retourné par le serveur de messagerie, ou dernière erreur retournée dans la pile d'erreurs 4D             |
+| statusText |                          | Texte      | Message du statut retourné par le serveur de messagerie, ou dernière erreur retournée dans la pile d'erreurs 4D             |
 | errors     |                          | collection | Pile d'erreurs 4D (non retournée si une réponse du serveur de messagerie est reçue)                                         |
 |            | \[ ].errCode            | number     | Code d'erreur 4D                                                                                                            |
-|            | \[ ].message            | text       | Description de l'erreur 4D                                                                                                  |
-|            | \[ ].componentSignature | text       | Signature du composant interne qui a retourné l'erreur                                                                      |
+|            | \[ ].message            | Texte      | Description de l'erreur 4D                                                                                                  |
+|            | \[ ].componentSignature | Texte      | Signature du composant interne qui a retourné l'erreur                                                                      |
 
 
 

@@ -6,27 +6,9 @@ title: Documentation updates
 The list of main updates in this documentation. For general information about new features in the 4D products, see the **release notes** on [doc.4d.com](https://doc.4d.com).
 
 
-## 4D v19 R5
-
-- Built Client/Server applications:
-    - The project [directory.json file](../Users/handling_users_groups.md#directoryjson-file) can now be [embedded in the server](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) at build time, allowing you to deploy a client/server application with a basic security user and group configuration.
-    - You can now [deselect useless modules](../Desktop/building.md#deselecting-modules) in your built applications.
-
-- [Client/Server optimization](../ORDA/remoteDatastores.md#clientserver-optimization): New class functions allow you to handle the ORDA cache and the contents of an optimization context. See [Preconfiguring contexts](../ORDA/remoteDatastores.md#preconfiguring-contexts) and [ORDA Cache](../ORDA/remoteDatastores.md#orda-cache) for more information.
-
-    > These functions are intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use them.
-
-- [DataClass class](../API/DataClassClass.md): The new [.getCount()](../API/DataClassClass.md#getcount) function returns the number of entities in a dataclass.
-
-- 4D View Pro:
-    - The new [VP SET DATA CONTEXT](ViewPro/method-list.md#vp-set-data-context), [VP Get data context](ViewPro/method-list.md#vp-get-data-context), [VP SET BINDING PATH](ViewPro/method-list.md#vp-set-binding-path), [VP Get binding path](ViewPro/method-list.md#vp-get-binding-path) commands allow you to create data contexts and bind their contents to sheet cells.
-    - [VP EXPORT DOCUMENT](ViewPro/method-list.md#vp-get-binding-path) and [VP Export to object](ViewPro/method-list.md#vp-get-binding-path) now accept the new `includeBindingSource` option that exports the contents of a data context as cell values.
-
-
 ## 4D v19 R4
 
 - [Alias attributes](ORDA/ordaClasses.md#alias-attributes-1) are available in ORDA classes.
-
 - Support for [break and continue](Concepts/cf_looping.md#break-and-continue) statements in loops.
 - Support for [return](Concepts/flow-control.md#return-expression) statement and [return expression](Concepts/parameters.md#return-expression) to return values.
 - Support for [compound assignment operators](Concepts/operators.md#compound-assignment-operators), [short-circuit operators](Concepts/operators.md#short-circuit-operators), and [ternary operator](Concepts/operators.md#ternary-operator)
@@ -55,7 +37,7 @@ The list of main updates in this documentation. For general information about ne
 ## 4D v19 R2
 
 - A [default .gitignore file](Preferences/general.md#create-gitignore-file) can be created with new projects
-- New [Blob class API](API/BlobClass.md) to handle new [`4D.Blob` objects](Concepts/dt_blob.md#blob-types)
+- New [Blob class API](API/BlobClass.md) to handle new [`4D. Blob` objects](Concepts/dt_blob.md#blob-types)
 - `no-bom` support and new default end-of-line characters in [`.setText()`](API/FileClass.md#settext)
 
 

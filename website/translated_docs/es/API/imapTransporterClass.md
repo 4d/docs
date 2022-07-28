@@ -505,27 +505,29 @@ Para crear un nuevo buzón "Invoices":
 
 
 ```4d
-var $pw : text
-var $options; $transporter; $status : object
+var $server,$boxInfo,$result : Object
+ var $transporter : 4D.IMAPTransporter
 
-$options:=New object
+ $server:=New object
+ $server.host:="imap.gmail.com" //Obligatorio
+ $server.port:=993
+ $server.user:="4d@gmail.com"
+ $server.password:="XXXXXXXX"
 
-$pw:=Request("Please enter your password:")
-If(OK=1)
-$options.host:="imap.gmail.com"
-$options.user:="test@gmail.com"
-$options.password:=$pw
+  //crear transportador
+ $transporter:=IMAP New transporter($server)
 
-$transporter:=IMAP New transporter($options)
+  //seleccionar buzón
+ $boxInfo:=$transporter.selectBox("INBOX")
 
-$status:=$transporter.createBox("Invoices")
-
-If ($status.success)
-ALERT("Mailbox creation successful!")
-Else
-ALERT("Error: "+$status.statusText)
-End if
-End if
+  If($boxInfo.mailCount>0)
+        // recuperar los encabezados de los últimos 20 mensajes sin marcarlos como leídos
+    $result:=$transporter.getMails($boxInfo.mailCount-20;$boxInfo.mailCount;\
+        New object("withBody";False;"updateSeen";False))
+    For each($mail;$result.list)
+        // ...
+End for each
+ End if
 ```
 
 <!-- END REF -->
@@ -711,6 +713,10 @@ $status:=$transporter.deleteBox($name)
 
 If ($status.success)
     ALERT("Mailbox deletion successful!")
+    Else
+    ALERT("Error: "+$status.statusText)
+    End if
+End if
     Else
     ALERT("Error: "+$status.statusText)
     End if
@@ -1094,9 +1100,9 @@ El parámetro opcional *options* permite definir las partes de los mensajes a de
 
 La segunda sintaxis permite recuperar los mensajes en función de un rango secuencial. Los valores pasados representan la posición de los mensajes en el buzón.
 
-En el parámetro *startMsg*, pase un valor *entero* correspondiente al número del primer mensaje en un rango secuencial. Si se pasa un número negativo (*startMsg* <= 0), se utilizará el primer mensaje del buzón como inicio de la secuencia.
+En el parámetro *startMsg*, pase un valor entero correspondiente al número del primer mensaje en un rango secuencial. Si se pasa un número negativo (*startMsg* <= 0), se utilizará el primer mensaje del buzón como inicio de la secuencia.
 
-En el parámetro *endMsg*, pase un valor *entero* correspondiente al número del último mensaje a incluir en un rango secuencial. Si se pasa un número negativo (*endMsg* <= 0), se utilizará el último mensaje del buzón como fin de secuencia.
+En el parámetro *endMsg*, pase un valor entero correspondiente al número del último mensaje a incluir en un rango secuencial. Si se pasa un número negativo (*endMsg* <= 0), se utilizará el último mensaje del buzón como fin de secuencia.
 
 El parámetro opcional *options* permite definir las partes de los mensajes a devolver.
 
@@ -1193,8 +1199,8 @@ El parámetro opcional *updateSeen* permite indicar si el mensaje está marcado 
 
 *   **True** - para marcar el mensaje como "visto" (indicando que el mensaje ha sido leído)
 *   **False** - para dejar intacto el estado "visto" del mensaje > * La función devuelve un BLOB vacío si *msgNumber* o msgID* designa un mensaje inexistente, > * Si no se selecciona ningún buzón con el comando [`.selectBox()`](#selectbox), se genera un error, > * Si no hay ninguna conexión abierta, `.getMIMEAsBlob()` abrirá una conexión con el último buzón especificado por `.selectBox()`.
-> * La función devuelve un BLOB vacío si *msgNumber* o msgID* designa un mensaje inexistente,
-> * Si no se selecciona ningún buzón con el comando [`.selectBox()`](#selectbox), se genera un error,
+> * La función genera un error y devuelve **Null** si *name* designa un buzón inexistente.
+> * Si no hay ninguna conexión abierta, `.selectBox()` abrirá una conexión.
 > * Si no hay ninguna conexión abierta, `.getMIMEAsBlob()` abrirá una conexión con el último buzón especificado por `.selectBox()`.
 
 
@@ -1274,7 +1280,7 @@ Puede pasar:
 
 El parámetro *destinationBox* permite pasar un valor texto con el nombre del buzón donde los mensajes serán desplazados.
 
-> Esta función sólo la soportan los servidores IMAP que cumplen con el RFC [8474](https://tools.ietf.org/html/rfc8474).
+> Esta función se basa en la especificación del [protocolo IMAP](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol).
 
 
 **Objeto devuelto**
@@ -1373,9 +1379,9 @@ Para mover todos los mensajes del buzón actual:
 
 La función `.numToID()` <!-- REF #IMAPTransporterClass.numToID().Summary -->convierte los números de secuencia en IDs únicos IMAP para los mensajes en el rango secuencial designado por *startMsg* y *endMsg*<!-- END REF --> en el buzón actualmente seleccionado.
 
-En el parámetro *startMsg*, pase un valor entero correspondiente al número del primer mensaje en un rango secuencial. Si se pasa un número negativo (*startMsg* <= 0), se utilizará el primer mensaje del buzón como inicio de la secuencia.
+En el parámetro *startMsg*, pase un valor *entero* correspondiente al número del primer mensaje en un rango secuencial. Si se pasa un número negativo (*startMsg* <= 0), se utilizará el primer mensaje del buzón como inicio de la secuencia.
 
-En el parámetro *endMsg*, pase un valor entero correspondiente al número del último mensaje a incluir en un rango secuencial. Si se pasa un número negativo (*endMsg* <= 0), se utilizará el último mensaje del buzón como fin de secuencia.
+En el parámetro *endMsg*, pase un valor *entero* correspondiente al número del último mensaje a incluir en un rango secuencial. Si se pasa un número negativo (*endMsg* <= 0), se utilizará el último mensaje del buzón como fin de secuencia.
 
 
 #### Resultado
@@ -1608,7 +1614,7 @@ End if
 
 #### Descripción
 
-> Esta función se basa en la especificación del [protocolo IMAP](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol).
+> Las coincidencias no suelen diferenciar entre mayúsculas y minúsculas
 
 La función `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary -->busca los mensajes que coincidan con el *searchCriteria* en el buzón actual<!-- END REF -->. El parámetro *searchCriteria* contiene una o varias palabras clave de búsqueda.
 
@@ -1620,7 +1626,7 @@ SearchKey2 = NOT FLAGGED
 SearchKey3 = FLAGGED DRAFT
 ```
 
-> Las coincidencias no suelen diferenciar entre mayúsculas y minúsculas
+> Para obtener la información de un buzón sin cambiar el buzón actual, utilice [`.getBoxInfo()`](#getboxinfo).
 
 - Si el *searchCriteria* es una cadena null, la búsqueda será equivalente a un "seleccionar todo".
 - Si *searchCriteria* incluye varias llaves de búsqueda, el resultado es la intersección (función AND) de todos los mensajes que coinciden con esas llaves.
@@ -1653,7 +1659,7 @@ searchCriteria = HEADER CONTENT-TYPE "E" NOT SUBJECT "o" NOT HEADER CONTENT-TYPE
 
 En cuanto a los dos últimos ejemplos, observe que el resultado de la búsqueda es diferente cuando se eliminan los paréntesis de la primera lista de llaves de búsqueda.
 
-- El parámetro *searchCriteria* puede incluir opcionalmente la instrucción \[CHARSET]. Esta instrucción consiste en la palabra "CHARSET" seguida de un conjunto de caracteres definido \[CHARSET] (US ASCII, ISO-8859). Indica el conjunto de caracteres de la cadena *searchCriteria*. Por lo tanto, debe convertir la cadena *searchCriteria* en el conjunto de caracteres especificado si utiliza la instrucción \[CHARSET] (ver los comandos `CONVERT FROM TEXT` o `Convert to text`). Por defecto, 4D codifica la cadena de criterios searchCriteria en Quotable Printable si contiene los caracteres extendidos.
+- The *searchCriteria* may include the optional \[CHARSET] specification. This consists of the "CHARSET" word followed by a registered \[CHARSET] (US ASCII, ISO-8859). It indicates the charset of the *searchCriteria* string. Therefore, you must convert the *searchCriteria* string into the specified charset if you use the \[CHARSET] specification (see the `CONVERT FROM TEXT` or `Convert to text` commands). By default, 4D encodes in Quotable Printable the searchCriteria string if it contains extended characters.
 
 ```
 searchCriteria = CHARSET "ISO-8859" BODY "Help"
@@ -1665,15 +1671,15 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 Las claves de búsqueda pueden solicitar el valor a buscar:
 
-- **Valores de tipo fecha**: los valores de tipo fecha se colocan en cadenas con el siguiente formato: *date-day+"-"+date-month+"-"+date-year* donde date-day indica la fecha del día del mes (2 caracteres como máximo), date-month indica el mes (Jan/Feb/Mar/Apr/May/Jun/Jul/Aug/Sep/Oct/Dec) y date-year indica el año (4 dígitos). Ejemplo: `searchCriteria = SENTBEFORE 1-Feb-2020` (una fecha no suele necesitar comillas, ya que no contiene caracteres especiales)
+- **Search-keys with a field-name value**: the field-name is the name of a header field. Ejemplo: `searchCriteria = SENTBEFORE 1-Feb-2020` (una fecha no suele necesitar comillas, ya que no contiene caracteres especiales)
 
-- **Valores de tipo cadena**: la cadena puede contener cualquier caracter y debe ir entre comillas. Si la cadena no contiene ningún caracter especial, como el espacio, por ejemplo, no es necesario colocarla entre comillas. Al colocar entre comillas estas cadenas se garantiza que su valor se interpretará correctamente. Ejemplo: `criterios de búsqueda = FROM "SMITH"` Para todas las llaves de búsqueda que utilizan cadenas, un mensaje coincide con la llave si la cadena es una subcadena del campo. Las coincidencias no diferencian entre mayúsculas y minúsculas.
+- **Search-keys with a string value**: the string may contain any character and must be quoted. If the string does not contain any special characters, like the space character for instance, it does not need to be quoted. Quoting such strings will ensure that your string value will be correctly interpreted. Ejemplo: `criterios de búsqueda = FROM "SMITH"` Para todas las llaves de búsqueda que utilizan cadenas, un mensaje coincide con la llave si la cadena es una subcadena del campo. Las coincidencias no diferencian entre mayúsculas y minúsculas.
 
 - **Search-keys with a flag value**: the flag may accept one or several keywords (including standard flags), separated by spaces. Example: `searchCriteria = HEADER CONTENT-TYPE "MIXED"`
 
-- **Marcadores**: los valores de tipo marcador (flags) aceptan una o varias palabras claves (incluyendo marcadores estándar) separados por espacios. Ejemplo: `searchCriteria = KEYWORD \Flagged \Draft`
+- **Search-keys with a flag value**: the flag may accept one or several keywords (including standard flags), separated by spaces. Example: `searchCriteria = KEYWORD \Flagged \Draft`
 
-- **Conjunto de mensajes**: identifica un conjunto de mensajes. En el caso de los números de secuencia de los mensajes, se trata de números consecutivos desde el 1 hasta el número total de mensajes en el buzón. Los números son separados por coma; un dos puntos (:) delimita entre dos números inclusive. Ejemplos: `2,4:7,9,12:*` es `2,4,5,6,7,9,12,13,14,15` para un buzón con 15 mensajes. `searchCriteria = 1:5 ANSWERED` busca en la selección de mensajes 1 a 5, los mensajes que tienen el marcador \Answered. `searchCriteria= 2,4 ANSWERED` busca en la selección de mensajes (números de mensaje 2 y 4) los mensajes que tienen el marcador \Answered.
+- **Search-keys with a message set value**: Identifies a set of messages. For message sequence numbers, these are consecutive numbers from 1 to the total number of messages in the mailbox. A comma delimits individual numbers; a colon delimits between two numbers inclusive. Ejemplos: `2,4:7,9,12:*` es `2,4,5,6,7,9,12,13,14,15` para un buzón con 15 mensajes. `searchCriteria = 1:5 ANSWERED` search in message selection from message sequence number 1 to 5 for messages which have the \Answered flag set. `searchCriteria= 2,4 ANSWERED` search in the message selection (message numbers 2 and 4) for messages which have the \Answered flag set.
 
 
 #### Teclas de búsqueda disponibles
@@ -1854,6 +1860,10 @@ If ($status.success)
    ALERT("Error: "+$status.statusText)
    End if
 End if
+   Else
+   ALERT("Error: "+$status.statusText)
+   End if
+End if
 ```
 
 <!-- END REF -->
@@ -1923,6 +1933,10 @@ $status:=$transporter.unsubscribe($name)
 
 If ($status.success)
    ALERT("Mailbox unsubscription successful!")
+   Else
+   ALERT("Error: "+$status.statusText)
+   End if
+End if
    Else
    ALERT("Error: "+$status.statusText)
    End if

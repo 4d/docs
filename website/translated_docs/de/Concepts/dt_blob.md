@@ -26,7 +26,7 @@ Each blob type has its advantages. Use the following table to determine which on
 | Performance when accessing bytes     |  +   |    -    |
 | Maximum size                         | 2GB  | Memory  |
 
-\*Unlike the 4D commands designed to take a scalar blob as a parameter, passing a scalar blob to a method duplicates it in memory. When working with methods, using blob objects (`4D.Blob`) is more efficient, as they are passed by reference.
+Keep in mind that unlike blob objects, which are passed by reference, scalar blobs are duplicated in memory when passed to methods. You can pass blobs and blob objects (`4D.Blob`) to methods.
 
 > By default, 4D sets the maximum size of scalar blobs to 2GB, but this size limit may be lower depending on your OS and how much space is available.
 
@@ -75,7 +75,7 @@ Some 4D commands alter the original blob, and thus do not support the `4D.Blob` 
 
 ### Passing blobs and blob objects to methods
 
-You can pass blobs and blob objects (`4D.Blob`) to methods. Keep in mind that unlike blob objects, which are passed by reference, scalar blobs are duplicated in memory when passed to methods.
+When working with methods, using blob objects (`4D.Blob`) is more efficient, as they are passed by reference. Keep in mind that unlike blob objects, which are passed by reference, scalar blobs are duplicated in memory when passed to methods.
 
 ### Passing a scalar blob by reference using a pointer
 
