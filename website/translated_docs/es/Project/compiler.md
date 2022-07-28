@@ -44,7 +44,7 @@ The number of errors found during your first compilations may be daunting, but d
 
 Once a project is compiled, it is possible to switch from [interpreted mode to compiled mode](Concepts/interpreted.md), and vice versa, at any time and without having to quit the 4D application (except when the interpreted code has been removed). To do this, use tge **Restart Interpreted** and **Restart Compiled** commands of the **Run** menu. The [Open project dialog box](creating.md#options) also offers a choice between interpreted or compiled mode for database startup.
 
-When you switch from one mode to the other, 4D closes the current mode and opens the new one. This is equivalent to exiting and reopening the application. Each time you change from one mode to another, 4D executes the two following database methods (if specified) in this order: `On Exit` -> `On Startup`.
+When you switch from one mode to the other, 4D closes the current mode and opens the new one. Esto equivale a salir y volver a abrir la aplicación. Each time you change from one mode to another, 4D executes the two following database methods (if specified) in this order: `On Exit` -> `On Startup`.
 
 If you modify your project in interpreted mode, you must recompile it in order to have your edits taken into account in compiled mode.
 
@@ -62,7 +62,7 @@ Syntax checking can also be launched directly using the **Check Syntax** command
 
 The **Generate Typing** button creates or updates typing compiler methods. Compiler methods are project methods that group together all the variable and array typing declarations (process and interprocess), as well as the method parameters. These methods, when they exist, are used directly by the compiler during code compilation, resulting in faster compilation times.
 
-The name of these methods must begin with `Compiler_`. You can set the default name for each of the 5 compiler methods in the [compiler settings window](#compiler-methods-for). The compiler methods that are generated and maintained by 4D automatically have the `Invisible` attribute:
+El nombre de estos métodos debe comenzar por `Compiler_`. You can set the default name for each of the 5 compiler methods in the [compiler settings window](#compiler-methods-for). The compiler methods that are generated and maintained by 4D automatically have the `Invisible` attribute:
 
 ![](assets/en/Project/compilerWin3.png)
 
@@ -146,7 +146,7 @@ Used to set the number of passes (code parsing) performed by the compiler and th
 | v19     | Añadidos       |
 </details>
 
-This setting allows you to select the processor family for which your 4D project must be natively compiled. The 4D compiler can build native code for two processor families:
+This setting allows you to select the processor family for which your 4D project must be natively compiled. El compilador 4D puede generar código nativo para dos familias de procesadores:
 
 - Los procesadores **Intel/AMD** (todas las máquinas),
 - los procesadores **Apple Silicon**.
@@ -220,7 +220,7 @@ Esta lista está dividida en tres columnas:
 A complete list of your database and project methods is given at the end of the file with:
 
 - su tipo (procedimiento o función que devuelve un valor)
-- the data types of their parameters and the returned result
+- los tipos de datos de sus parámetros y del resultado devuelto
 - el número de llamadas
 - la propiedad Thread Safe o Thread Unsafe.
 
@@ -235,14 +235,14 @@ result data type, number of calls, Thread Safe or Thread Unsafe
 
 You can choose whether or not to generate an error file during compilation using the [**Generate error file**](#generate-error-file) option in the compiler settings. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](Project/architecture.md#logs) of the project.
 
-Although the errors can be accessed directly via the [compiler window](#compile), it can be useful to have an error file that can be transmitted from one machine to another. The error file is generated in XML format in order to facilitate automatic parsing of its contents. It also allows the creation of customized error display interfaces.
+Although the errors can be accessed directly via the [compiler window](#compile), it can be useful to have an error file that can be transmitted from one machine to another. The error file is generated in XML format in order to facilitate automatic parsing of its contents. También permite la creación de interfaces personalizadas de visualización de errores.
 
 The length of the error file depends on the number of errors and warnings issued by the compiler.
 
 La estructura del archivo de errores es la siguiente:
 
 - At the top of the file is the list of errors and warnings, sorted by method and in their order of creation in 4D. In the ***General errors*** section, all the typing impossibilities and identity ambiguities are grouped together. These errors and warnings are listed using the following format:
-    - line number in the method (0 indicates general errors)
+    - el número de línea en el método (0 indica errores generales)
     - warning attribute indicating whether the detected anomaly is a warning (warning="true") or an error (warning="false")
     - diagnóstico que describe el error
 
@@ -253,17 +253,17 @@ Un archivo de error puede contener tres tipos de mensajes:
 - **Errors linked to a specific line**: these errors are displayed in context — the line in which they were found — with an explanation. The compiler reports this type of error when it encounters an expression in which it sees an inconsistency related to data type or syntax. In the compiler window, double–click on each error detected in order to open the method concerned directly in the 4D Method editor, with the line containing the error highlighted.
 
 - **General errors**: These are errors that make it impossible to compile the project. There are two cases in which the compiler reports a general error:
-    - The data type of a process variable could not be determined.
+    - No se ha podido determinar el tipo de datos de una variable proceso.
     - Dos tipos diferentes de objetos tienen el mismo nombre. General errors are so named because they cannot be linked to any specific method. In the first case, the compiler could not perform a specified typing anywhere in the project. In the second, it was unable to decide whether to associate a given name with one object rather than with another.
 
-- **Warnings**: Warnings are not errors. They do not prevent the project from being compiled, but simply point out potential code errors. En la ventana del compilador, las advertencias aparecen en itálica. Double-click on each warning to open the method concerned directly in the 4D Method editor, with the line containing the warning highlighted.
+- **Avisos**: los avisos no son errores. They do not prevent the project from being compiled, but simply point out potential code errors. En la ventana del compilador, las advertencias aparecen en itálica. Double-click on each warning to open the method concerned directly in the 4D Method editor, with the line containing the warning highlighted.
 
 
 
 
 ### Control de ejecución
 
-The code generated by the 4D compiler automatically checks that every access to an array element or a character reference is done within the actual range of array elements or string characters. Out of range accesses will provoke runtime execution errors.
+The code generated by the 4D compiler automatically checks that every access to an array element or a character reference is done within the actual range of array elements or string characters. Los accesos fuera de rango provocarán errores durante la ejecución.
 
 In some cases, you might prefer range checking not to apply to certain parts of the code that are considered to be reliable. More particularly, in the case of loops that are repeated a great number of times, and when running the compiled database on older machines, range checking can significantly slow down processing. If you are absolutely certain that the code concerned is reliable and cannot cause system errors, you can disable range checking locally.
 
@@ -326,7 +326,7 @@ In any cases, the 4D Silicon compiler will warn you if your configuration does n
 
 #### Compilador incremental
 
-The Silicon compiler is incremental, which means that:
+El compilador Silicon es incremental, lo que significa que:
 
 - During the very first compilation, **all 4D methods** are compiled. Este paso podría tomar un cierto tiempo. Sin embargo, sólo ocurre una vez.
 - During all subsequent compilations, only **new or modified methods** are processed, thus reducing drastically the compilation time. 

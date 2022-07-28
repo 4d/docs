@@ -23,7 +23,7 @@ The `localID` is local to the machine that connects to the remote datastore, whi
 *   If another process of the same application opens the same remote datastore but with another `localID`, it will create a new session on the remote datastore.
 *   If another machine connects to the same remote datastore with the same `localID`, it will create another session with another cookie.
 
-These principles are illustrated in the following graphics:
+Estos principios se ilustran en los gráficos siguientes:
 
 ![](assets/en/ORDA/sessions.png)
 
@@ -51,7 +51,7 @@ ORDA features related to entity locking and transaction are managed at process l
 *   Locks on entities are removed and transactions are rollbacked:
     *   when the process is killed.
     *   cuando la sesión se cierra en el servidor
-    *   when the session is killed from the server administration window.
+    *   cuando la sesión es terminada desde la ventana de administración del servidor.
 
 ## Cierre de las sesiones
 

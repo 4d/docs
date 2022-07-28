@@ -85,7 +85,7 @@ Y el método es:
 ```
 
 You can handle entities like any other object in 4D and pass their references directly as [parameters](Concepts/parameters.md).
-> With the entities, there is no concept of "current record" as in the classic 4D language. You can use as many entities as you need, at the same time. There is also no automatic lock on an entity (see [Entity locking](#entity-locking)). When an entity is loaded, it uses the [lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. Nevertheless, in client/server, the entity can be automatically loaded directly if necessary.
+> With the entities, there is no concept of "current record" as in the classic 4D language. Puede utilizar tantas entidades como necesite al mismo tiempo. There is also no automatic lock on an entity (see [Entity locking](#entity-locking)). When an entity is loaded, it uses the [lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. Nevertheless, in client/server, the entity can be automatically loaded directly if necessary.
 
 
 ## Uso de los atributos de entidades
@@ -102,7 +102,7 @@ Por ejemplo, para definir un atributo de almacenamiento:
 ```
 > Pictures attributes cannot be assigned directly with a given path in an entity.
 
-Accessing a related attribute depends on the attribute kind. Por ejemplo, con la siguiente estructura:
+El acceso a un atributo relacionado depende del tipo de atributo. Por ejemplo, con la siguiente estructura:
 
 ![](assets/en/ORDA/entityAttributes.png)
 
@@ -228,7 +228,7 @@ A new entity selection is **alterable** in the following cases:
 
 Ejemplo:
 ```4d
-$toModify:=ds.Company.all().copy() //$toModify is alterable
+$toModify:=ds.Company.all().copy() //$toModify es alterable
 ```
 
 
@@ -334,7 +334,7 @@ You often need to manage possible conflicts that might arise when several users 
 
 ORDA le ofrece dos modos de bloqueo de entidad:
 
-- an automatic "optimistic" mode, suitable for most applications,
+- un modo automático "optimista", adecuado para la mayoría de las aplicaciones,
 - a "pessimistic" mode allowing you to lock entities prior to their access.
 
 ### Bloqueo automático optimista
@@ -351,7 +351,7 @@ El siguiente diagrama ilustra el bloqueo optimista:
 
 1. Dos procesos cargan la misma entidad.<br><br>![](assets/en/ORDA/optimisticLock1.png)
 
-2. The first process modifies the entity and validates the change. Se llama al método `entity.save( )`. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.<br><br>![](assets/en/ORDA/optimisticLock2.png)
+2. El primer proceso modifica la entidad y valida el cambio. Se llama al método `entity.save( )`. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.<br><br>![](assets/en/ORDA/optimisticLock2.png)
 
 3. The second process also modifies the loaded entity and validates its changes. Se llama al método `entity.save( )`. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.<br><br>![](assets/en/ORDA/optimisticLock3.png)
 
@@ -375,7 +375,7 @@ When this situation occurs, you can, for example, reload the entity from the dis
 
 ### Bloqueo pesimista
 
-You can lock and unlock entities on demand when accessing data. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. The entity can only be loaded in read-only mode in these processes; its values cannot be edited or saved.
+Puede bloquear y desbloquear las entidades bajo pedido cuando acceda a los datos. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. The entity can only be loaded in read-only mode in these processes; its values cannot be edited or saved.
 
 This feature is based upon two methods of the `Entity` class:
 
@@ -388,7 +388,7 @@ For more information, please refer to the descriptions for these functions.
 
 
 
-### Concurrent use of 4D classic locks and ORDA pessimistic locks
+### Utilización simultánea de los bloqueos clásicos 4D y de los bloqueos pesimistas ORDA
 
 Using both classic and ORDA commands to lock records is based upon the following principles:
 

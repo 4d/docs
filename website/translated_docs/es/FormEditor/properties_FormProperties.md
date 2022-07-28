@@ -69,7 +69,7 @@ Los tipos soportados dependen de la categoría de formulario:
 | Tipo de formulario              | Gramática JSON   | Descripción                                                      | Soportado con                            |
 | ------------------------------- | ---------------- | ---------------------------------------------------------------- | ---------------------------------------- |
 | Formulario detallado            | detailScreen     | Un formulario de visualización para introducir y modificar datos | Formularios proyecto - Formularios tabla |
-| Formulario detallado imprimible | detailPrinter    | A printed report with one page per record, such as an invoice    | Formularios proyecto - Formularios tabla |
+| Formulario detallado imprimible | detailPrinter    | Un informe impreso con una página por registro, como una factura | Formularios proyecto - Formularios tabla |
 | Formulario listado              | listScreen       | Un formulario para listar los registros en la pantalla           | Formularios tabla                        |
 | Formulario de lista imprimible  | listPrinter      | A printed report that list records                               | Formularios tabla                        |
 | Ninguno                         | *no destination* | A form with no specific feature                                  | Formularios proyecto - Formularios tabla |
@@ -121,7 +121,7 @@ Set to **\<None>** in the Property List (or " " in JSON) to inherited from a pro
 
 Para que un formulario componente sea seleccionado como [subformulario](FormObjects/subform_overview.md) en una aplicación anfitriona, debe haber sido compartido explícitamente. When this property is selected, the form will be published in the host application.
 
-Only project forms can be specified as published subforms.
+Sólo los proyectos formulario se pueden especificar como subformularios publicados.
 
 
 

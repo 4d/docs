@@ -9,7 +9,7 @@ Since ORDA is object-based, using ORDA requires basic knowledge in object progra
 
 The ORDA datastore is automatically based upon a 4D database structure, provided it complies with the [ORDA prerequisites](overview.md#orda-prerequisites).
 
-This example will use the following simple 4D database structure:
+Este ejemplo utilizará la siguiente estructura de base de datos 4D simple:
 
 ![](assets/en/ORDA/struc.png)
 
@@ -19,7 +19,7 @@ To know what is exposed as the datastore, create a new project method, write the
 TRACE
 ```
 
-Execute the method -- it simply calls the debugger window. In the Expression area, double-click to insert an expression and enter `ds`. Devuelve el objeto del datastore. Deploy the object, you can see that tables and fields are automatically exposed by ORDA as properties of the `ds` object:
+Ejecute el método -- simplemente llama la ventana del depurador. In the Expression area, double-click to insert an expression and enter `ds`. Devuelve el objeto del datastore. Deploy the object, you can see that tables and fields are automatically exposed by ORDA as properties of the `ds` object:
 
 ![](assets/en/ORDA/debug1.png)
 
@@ -100,7 +100,7 @@ La lista de usuarios muestra todos los usuarios, incluyendo el [Diseñador y el 
 
 3. Introduzca el nombre de usuario. Este nombre será utilizado por el usuario para abrir la base. Puede renombrar un usuario en cualquier momento utilizando el comando **Renombrar** del menú contextual, o utilizando los atajos Alt+clic (Windows) u Opción+clic (macOS), o haciendo dos veces clic en el nombre que quiera cambiar.
 
-4. To enter a password for the user, click the **Edit...** button in the user properties area and enter the password twice in the dialog box. You can use up to 15 alphanumeric characters for a password. El editor de contraseñas es sensible a las mayúsculas y minúsculas.
+4. To enter a password for the user, click the **Edit...** button in the user properties area and enter the password twice in the dialog box. Puede utilizar hasta 15 caracteres alfanuméricos para una contraseña. El editor de contraseñas es sensible a las mayúsculas y minúsculas.
 
 > Users can change their password at any time according to the options in the "Security" page of the database settings, or using the `CHANGE PASSWORD` command.
 
@@ -112,7 +112,7 @@ The membership of users to different groups can also be set by group on the [Gro
 
 To delete a user, select it then click the deletion button or use the **Delete** command of the context menu. ![](assets/en/Users/MinussNew.png)
 
-Deleted user names no longer appear in the Users editor. Note that the IDs for deleted users are reassigned when new user accounts are created.
+Los nombres de usuario borrados ya no aparecen en el editor de usuarios. Note that the IDs for deleted users are reassigned when new user accounts are created.
 
 ### Propiedades de los usuarios
 
@@ -133,7 +133,7 @@ Keep in mind that once a group has been created, it cannot be deleted. If you wa
 
 Para crear un grupo:
 
-1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button. 4D muestra la ventana del editor de grupos. The list of groups displays all the groups of the database.
+1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button. 4D muestra la ventana del editor de grupos. La lista de grupos muestra todos los grupos de la base.
 
 2. Click on the ![](assets/en/Users/PlussNew.png) button located below the list of groups.  
    OR  
@@ -141,7 +141,7 @@ Para crear un grupo:
 
 > The Duplicate command can be used to create several groups having the same characteristics quickly.
 
-4D adds a new group to the list, named "New groupX" by default.
+4D añade un nuevo grupo a la lista, llamado por defecto "Nuevo grupoX".
 
 3. Introduzca el nombre del nuevo grupo. El nombre del grupo puede tener hasta 15 caracteres. You can rename a group at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
 
@@ -162,7 +162,7 @@ To remove a user or group from another group, you just need to deselect the corr
 
 ### Asignar un grupo a un plug-in o a un servidor
 
-You can assign a group privileges to any plug-ins installed in the database. This includes all the 4D plug-ins and any third-party plug-ins.
+You can assign a group privileges to any plug-ins installed in the database. Esto incluye todos los plug-ins de 4D y los de terceros.
 
 Distributing access to the plug-ins lets you control the use of the licenses you possess for these plug-ins. Any users that do not belong to the access group of a plug-in cannot load this plug-in.
 
@@ -172,12 +172,12 @@ The “Plug-in” area on the Groups page of the tool box lists all the plug-ins
 
 ![](assets/en/Users/plugins.png)
 
-The **4D Client Web Server** and **4D Client SOAP Server** items lets you control the possibility of Web and SOAP (Web Services) publication for each 4D in remote mode. These licenses are considered as plug-in licenses by 4D Server. Therefore, in the same way as for plug-ins, you can restrict the right to use these licenses to a specific group of users.
+The **4D Client Web Server** and **4D Client SOAP Server** items lets you control the possibility of Web and SOAP (Web Services) publication for each 4D in remote mode. Estas licencias son consideradas por 4D Server como licencias de plug-in. Therefore, in the same way as for plug-ins, you can restrict the right to use these licenses to a specific group of users.
 
 
 ### Un esquema de acceso jerárquico
 
-The best way to ensure the security of your database and provide users with different levels of access is to use an access hierarchy scheme. Users can be assigned to appropriate groups and groups can be nested to create a hierarchy of access rights. This section discusses several approaches to such a scheme.
+The best way to ensure the security of your database and provide users with different levels of access is to use an access hierarchy scheme. Users can be assigned to appropriate groups and groups can be nested to create a hierarchy of access rights. Esta sección describe varios enfoques de este esquema.
 
 In this example, a user is assigned to one of three groups depending on their level of responsibility. Users assigned to the Accounting group are responsible for data entry. Users assigned to the Finances group are responsible for maintaining the data, including updating records and deleting outdated records. Users assigned to the General Management group are responsible for analyzing the data, including performing searches and printing analytical reports.
 

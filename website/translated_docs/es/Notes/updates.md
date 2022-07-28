@@ -16,7 +16,7 @@ La lista de las principales actualizaciones de esta documentación. Para obtener
 - New default dark and light themes in [method editor preferences](Preferences/methods.md#theme-list).
 - [Native compilation](Project/compiler.md#compiler-methods-for) for Silicon processors.
 - [Variable calculation](FormObjects/properties_Object.md#variable-calculation) property is now supported by entity selection list box columns.
-- New, comprehensive [CLI](Admin/cli.md) page.
+- Nueva, página [CLI](Admin/cli.md) completa.
 
 
 ## 4D v18 R6
@@ -24,6 +24,6 @@ La lista de las principales actualizaciones de esta documentación. Para obtener
 - [Entity Selection Class](API/EntitySelectionClass.md): `.average()`, `.max()` and `.min()` functions now return *undefined* if the entity selection is empty.
 - [IMAP Mail](API/IMAPTransporterClass.md), [POP3 Mail](API/POP3TransporterClass.md) and [SMTP Mail](API/SMTPTransporterClass.md): `authenticationMode` property enables OAuth 2.0
 - [IMAP Mail](API/IMAPTransporterClass.md): new `.expunge()` and `.append()` functions
-- New [WebAdmin](Admin/webAdmin.md) web server component
-- New [DataExplorer](Admin/dataExplorer) interface
+- Nuevo componente [WebAdmin](Admin/webAdmin.md) del servidor web
+- Nueva interfaz [DataExplorer](Admin/dataExplorer)
 - New web [user sessions](WebServer/sessions.md) and [their API](API/SessionClass.md).

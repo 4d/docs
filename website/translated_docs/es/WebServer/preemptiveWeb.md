@@ -12,12 +12,12 @@ For in-depth information on preemptive process in 4D, please refer to the *Preem
 
 The following table indicates whether the preemptive mode is used or is available, depending on the execution context:
 
-| 4D Server             | Interpreted, project ([client connected locally](../Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine)) | Interpreted, project (no client connected locally) or binary | Compilado       |
-| --------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ | --------------- |
-| Servidor REST         | cooperativo                                                                                                              | apropiativo                                                  | apropiativo     |
-| Servidor Web          | cooperativo                                                                                                              | *parámetro web*                                              | *parámetro web* |
-| Servidor Web Services | cooperativo                                                                                                              | *parámetro web*                                              | *parámetro web* |
-| Legacy REST           | cooperativo                                                                                                              | *parámetro web*                                              | *parámetro web* |
+| 4D Server             | Interpreted, project ([client connected locally](../Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine)) | Interpretado, proyecto (sin cliente conectado localmente) o binario | Compilado       |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------- | --------------- |
+| Servidor REST         | cooperativo                                                                                                              | apropiativo                                                         | apropiativo     |
+| Servidor Web          | cooperativo                                                                                                              | *parámetro web*                                                     | *parámetro web* |
+| Servidor Web Services | cooperativo                                                                                                              | *parámetro web*                                                     | *parámetro web* |
+| Legacy REST           | cooperativo                                                                                                              | *parámetro web*                                                     | *parámetro web* |
 
 | 4D remoto/monopuesto  | Interpretado | Compilado       |
 | --------------------- | ------------ | --------------- |

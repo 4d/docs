@@ -8,11 +8,11 @@ title: Imagen
 
 Ruta de una imagen source estática para un [botón imagen](pictureButton_overview.md), [menú emergente de imagen](picturePopupMenu_overview.md), o [imagen estática](staticPicture.md). Debe utilizar la sintaxis POSIX.
 
-The following locations can be used for static pictures:
+Las siguientes ubicaciones pueden utilizarse para las imágenes estáticas:
 
 - in the **Resources** folder of the project. Appropriate when you want to share static pictures between several forms in the project. En este caso, el nombre de la ruta es "/RESOURCES/\<picture path\>".
 - en una carpeta de imágenes (por ejemplo, llamada **Images**) dentro de la carpeta del formulario. Apropiado cuando las imágenes estáticas se utilizan sólo en el formulario y/o se quiere poder mover o duplicar todo el formulario dentro del proyecto o de diferentes proyectos. En este caso, el nombre de la ruta es ""\<picture path\>" y se resuelve desde la raíz de la carpeta del formulario.
-- en una variable imagen 4D. The picture must be loaded in memory when the form is executed. In this case, the Pathname is "var:\<variableName\>".
+- en una variable imagen 4D. The picture must be loaded in memory when the form is executed. En este caso, el nombre de la ruta es "var:\<variableName\>".
 
 
 #### Gramática JSON
@@ -55,7 +55,7 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 `Gramática JSON: "truncatedCenter" / "truncatedTopLeft"`
 
-El formato **Centro** hace que 4D centre la imagen en el área y recorte cualquier parte que no quepa dentro del área. 4D crops equally from each edge and from the top and bottom.
+El formato **Centro** hace que 4D centre la imagen en el área y recorte cualquier parte que no quepa dentro del área. 4D recorta por igual desde cada borde y desde la parte superior e inferior.
 
 The **Truncated (non-centered)** format causes 4D to place the upper-left corner of the picture in the upper-left corner of the area and crop any portion that does not fit within the area. 4D crops from the right and bottom.
 > When the picture format is **Truncated (non-centered)**, it is possible to add scroll bars to the input area.

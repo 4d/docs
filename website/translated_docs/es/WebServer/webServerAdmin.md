@@ -68,9 +68,9 @@ The **Watch** page (**Web** heading) in the Runtime Explorer displays web server
 
 *   **Web Cache Usage**: indicates the number of pages present in the web cache as well as its use percentage. This information is only available if the web server is active and if the cache size is greater than 0.
 
-*   **Web Server Elapsed Time**: indicates the duration of use (in hours:minutes:seconds format) of the Web server. This information is only available if the web server is active.
+*   **Web Server Elapsed Time**: indicates the duration of use (in hours:minutes:seconds format) of the Web server. Esta información sólo está disponible si el servidor web está activo.
 
-*   **Web Hits Count**: indicates the total number of HTTP requests received since the web server boot, as well as an instantaneous number of requests per second (measure taken between two Runtime Explorer updates). This information is only available if the web server is active.
+*   **Web Hits Count**: indicates the total number of HTTP requests received since the web server boot, as well as an instantaneous number of requests per second (measure taken between two Runtime Explorer updates). Esta información sólo está disponible si el servidor web está activo.
 
 
 
@@ -189,29 +189,29 @@ When you choose the ELF or WLF format, the “Web Log Token Selection” area di
 
 The following table lists the fields available for each format (in alphabetical order) and describes its contents:
 
-| Campo          | ELF | WLF | Valor                                                                                                                       |
-| -------------- | --- | --- | --------------------------------------------------------------------------------------------------------------------------- |
-| BYTES_RECEIVED |     | X   | Número de bytes recibidos por el servidor                                                                                   |
-| BYTES_SENT     | X   | X   | Número de bytes enviados por el servidor al cliente                                                                         |
-| C_DNS          | X   | X   | IP address of the DNS (ELF: field identical to the C_IP field)                                                              |
-| C_IP           | X   | X   | IP address of the client (for example 192.100.100.10)                                                                       |
-| CONNECTION_ID  |     | X   | Número de identificación de la conexión                                                                                     |
-| CS(COOKIE)     | X   | X   | Information about cookies contained in the HTTP request                                                                     |
-| CS(HOST)       | X   | X   | Campo Host de la petición HTTP                                                                                              |
-| CS(REFERER)    | X   | X   | URL de la página que apunta al documento solicitado                                                                         |
-| CS(USER_AGENT) | X   | X   | Information about the software and operating system of the client                                                           |
-| CS_SIP         | X   | X   | Dirección IP del servidor                                                                                                   |
-| CS_URI         | X   | X   | URI sobre el que se realiza la petición                                                                                     |
-| CS_URI_QUERY | X   | X   | Parámetros de consulta de la petición                                                                                       |
-| CS_URI_STEM  | X   | X   | Parte de la petición sin los parámetros de consulta                                                                         |
-| DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year                                                  |
-| METHOD         | X   | X   | HTTP method used for the request sent to the server                                                                         |
-| PATH_ARGS      |     | X   | Parámetros CGI: cadena situada después del caracter "$"                                                                     |
-| STATUS         | X   | X   | Respuesta ofrecida por el servidor                                                                                          |
-| TIME           | X   | X   | HH: hour, MM: minutes, SS: seconds                                                                                          |
-| TRANSFER_TIME  | X   | X   | Tiempo solicitado por el servidor para generar la respuesta                                                                 |
-| USER           | X   | X   | User name if authenticated; otherwise - (minus sign). If the user name contains spaces, they are replaced by _ (underlines) |
-| URL            |     | X   | URL solicitado por el cliente                                                                                               |
+| Campo          | ELF | WLF | Valor                                                                                                                                            |
+| -------------- | --- | --- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| BYTES_RECEIVED |     | X   | Número de bytes recibidos por el servidor                                                                                                        |
+| BYTES_SENT     | X   | X   | Número de bytes enviados por el servidor al cliente                                                                                              |
+| C_DNS          | X   | X   | IP address of the DNS (ELF: field identical to the C_IP field)                                                                                   |
+| C_IP           | X   | X   | Dirección IP del cliente (por ejemplo 192.100.100.10)                                                                                            |
+| CONNECTION_ID  |     | X   | Número de identificación de la conexión                                                                                                          |
+| CS(COOKIE)     | X   | X   | Información sobre las cookies contenidas en la petición HTTP                                                                                     |
+| CS(HOST)       | X   | X   | Campo Host de la petición HTTP                                                                                                                   |
+| CS(REFERER)    | X   | X   | URL de la página que apunta al documento solicitado                                                                                              |
+| CS(USER_AGENT) | X   | X   | Información sobre el software y el sistema operativo del cliente                                                                                 |
+| CS_SIP         | X   | X   | Dirección IP del servidor                                                                                                                        |
+| CS_URI         | X   | X   | URI sobre el que se realiza la petición                                                                                                          |
+| CS_URI_QUERY | X   | X   | Parámetros de consulta de la petición                                                                                                            |
+| CS_URI_STEM  | X   | X   | Parte de la petición sin los parámetros de consulta                                                                                              |
+| DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year                                                                       |
+| METHOD         | X   | X   | Método HTTP utilizado para la petición enviada al servidor                                                                                       |
+| PATH_ARGS      |     | X   | Parámetros CGI: cadena situada después del caracter "$"                                                                                          |
+| STATUS         | X   | X   | Respuesta ofrecida por el servidor                                                                                                               |
+| TIME           | X   | X   | HH: hour, MM: minutes, SS: seconds                                                                                                               |
+| TRANSFER_TIME  | X   | X   | Tiempo solicitado por el servidor para generar la respuesta                                                                                      |
+| USER           | X   | X   | Nombre de usuario si está autenticado; en caso contrario, - (signo menos). If the user name contains spaces, they are replaced by _ (underlines) |
+| URL            |     | X   | URL solicitado por el cliente                                                                                                                    |
 
 > Las fechas y horas se indican en GMT.
 

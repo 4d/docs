@@ -72,11 +72,11 @@ Lista de cifrado utilizada para el protocolo seguro; establece la prioridad de l
 
 ## Parámetros CORS
 
-| Puede ajustarse con           | Nombre                                                  | Comentarios                                                                            |
-| ----------------------------- | ------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| objeto webServer              | [`CORSSettings`](API/WebServerClass.md#corssettings)    | Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)       |
-| `WEB SET OPTION`              | `Web CORS settings`                                     | Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)       |
-| Caja de diálogo de parámetros | Options (II) page/Domain names and HTTP methods allowed | Haga clic en el botón [+] para añadir un nombre de dominio permitido y su(s) método(s) |
+| Puede ajustarse con           | Nombre                                                            | Comentarios                                                                            |
+| ----------------------------- | ----------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| objeto webServer              | [`CORSSettings`](API/WebServerClass.md#corssettings)              | Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)       |
+| `WEB SET OPTION`              | `Web CORS settings`                                               | Colección de objetos (Lista de hosts y métodos permitidos para el servicio CORS)       |
+| Caja de diálogo de parámetros | Página Options (II)/Nombres de dominio y Métodos HTTP autorizados | Haga clic en el botón [+] para añadir un nombre de dominio permitido y su(s) método(s) |
 
 Lista de hosts y métodos permitidos para el servicio CORS.
 
@@ -242,7 +242,7 @@ Specifies the maximum length of time (in seconds) that HSTS is active for each n
 
 Compression level for all compressed HTTP exchanges for the 4D web server (client requests or server replies). This setting lets you optimize exchanges by either privileging speed of execution (less compression) or the amount of compression (less speed). The choice of a value depends on the size and type of data exchanged.
 
-Pass 1 to 9 as value where 1 is the fastest compression and 9 the highest. You can also pass -1 to get a compromise between speed and rate of compression. By default, the compression level is 1 (faster compression).
+Pass 1 to 9 as value where 1 is the fastest compression and 9 the highest. You can also pass -1 to get a compromise between speed and rate of compression. Por defecto, el nivel de compresión es 1 (compresión más rápida).
 
 ## Umbral de compresión HTTP
 
@@ -253,7 +253,7 @@ Pass 1 to 9 as value where 1 is the fastest compression and 9 the highest. You c
 
 In the framework of optimized HTTP exchanges, size threshold for requests below which exchanges should not be compressed. Este parámetro es útil para evitar la pérdida de tiempo de la máquina al comprimir los intercambios pequeños.
 
-Pasa el tamaño expresado en bytes como valor. By default, the compression threshold is set to 1024 bytes.
+Pasa el tamaño expresado en bytes como valor. Por defecto, el límite de compresión está fijado en 1024 bytes.
 
 
 ## Puerto HTTP
@@ -294,7 +294,7 @@ Activación del método HTTP TRACE en el servidor web 4D. For security reasons, 
 | `WEB SET OPTION`              | `Web HTTPS port ID`                            |             |
 | Caja de diálogo de parámetros | Página Configuración/Puerto HTTPS              |             |
 
-Listening IP port number for HTTPS connections via TLS. Por defecto, el valor es 443 (valor estándar). See also [HTTP Port](#http-port) for information on port numbers.
+Número de puerto IP de escucha para las conexiones HTTPS vía TLS. Por defecto, el valor es 443 (valor estándar). See also [HTTP Port](#http-port) for information on port numbers.
 
 
 ## Tiempo de espera del proceso inactivo
@@ -307,7 +307,7 @@ Listening IP port number for HTTPS connections via TLS. Por defecto, el valor es
 
 Life duration (in minutes) of inactive processes associated with sessions. At the end of the timeout, the process is killed on the server, the `On Web Close Process` database method is called, then the session context is destroyed.
 
-Default: 480 minutes (pass 0 to restore the default value)
+Por defecto: 480 minutos (pase 0 para restaurar el valor por defecto)
 
 
 ## Tiempo de espera de las sesiones inactivas
@@ -319,7 +319,7 @@ Default: 480 minutes (pass 0 to restore the default value)
 
 Life duration (in minutes) of inactive sessions (duration set in cookie). Al final de este periodo, la cookie de sesión expira y deja de ser enviada por el cliente HTTP.
 
-Default: 480 minutes (pass 0 to restore the default value)
+Por defecto: 480 minutos (pase 0 para restaurar el valor por defecto)
 
 
 ## Dirección IP de escucha
@@ -332,7 +332,7 @@ Default: 480 minutes (pass 0 to restore the default value)
 
 IP address strings on which the 4D web server will receive HTTP requests (4D local and 4D Server).
 
-By default, no specific address is defined (**Any** value in the Settings dialog box), which means that the server responds to all IP addresses. When you designate a specific address, the server only responds to requests sent to this address. This feature is designed for 4D web servers located on machines with multiple TCP/IP addresses. It is, for example, frequently the case of most host providers.
+By default, no specific address is defined (**Any** value in the Settings dialog box), which means that the server responds to all IP addresses. When you designate a specific address, the server only responds to requests sent to this address. This feature is designed for 4D web servers located on machines with multiple TCP/IP addresses. Por ejemplo, es el caso frecuente de la mayoría de los proveedores de hosting.
 
 Valores posibles: cadena de direcciones IP. Both IPv6 string formats (e.g. "2001:0db8:0000:0000:0000:ff00:0042:8329") and IPv4 string formats (e.g. "123.45.67.89") are supported.
 
@@ -378,9 +378,9 @@ True por defecto (activado).
 | `WEB SET OPTION`              | `Web log recording`                                  |             |
 | Caja de diálogo de parámetros | Historial (tipo)/Formato del historial               | Menú popup  |
 
-Starts or stops the recording of requests received by the 4D web server in the *logweb.txt* file and sets its format. By default, requests are not recorded (0/No Log File). When enabled, the *logweb.txt* file is automatically placed in the Logs folder.
+Starts or stops the recording of requests received by the 4D web server in the *logweb.txt* file and sets its format. Por defecto, las peticiones no se registran (0/Sin archivo de registro). When enabled, the *logweb.txt* file is automatically placed in the Logs folder.
 
-This setting allows you to select the format of this file. Valores disponibles:
+Este parámetro permite seleccionar el formato de este archivo. Valores disponibles:
 
 | Valor | Nombre del formato          | Descripción                                                                                                                                                                                                                               |
 | ----- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -413,7 +413,7 @@ Por defecto, el valor es 100. Puede definir el número entre 10 y 32000.
 | objeto webServer    | [`maxRequestSize`](API/WebServerClass.md#maxrequestsize) |             |
 | `WEB SET OPTION`    | `Web maximum requests size`                              |             |
 
-Maximum size (in bytes) of incoming HTTP requests (POST) that the web server is authorized to process. By default, the value is 2 000 000, i.e. a little less than 2 MB. Passing the maximum value (2 147 483 648) means that, in practice, no limit is set.
+Maximum size (in bytes) of incoming HTTP requests (POST) that the web server is authorized to process. Por defecto, el valor es de 2 000 000, es decir, algo menos de 2 MB. Passing the maximum value (2 147 483 648) means that, in practice, no limit is set.
 
 Este límite se utiliza para evitar la saturación del servidor web debido a peticiones entrantes demasiado grandes. Este límite se utiliza para evitar la saturación del servidor web debido a peticiones entrantes demasiado grandes.
 
@@ -511,7 +511,7 @@ Otro ejemplo:
    Disallow: /
 ```
 
-In this case, robots are not allowed to access the entire site.
+En este caso, los robots no pueden acceder a todo el sitio.
 
 
 ## Root Folder
@@ -550,7 +550,7 @@ For example, if you want the HTML root folder to be the "Web" subfolder in the "
 | objeto webServer    | [`sessionCookieDomain`](API/WebServerClass.md#sessioncookiedomain) |             |
 | `WEB SET OPTION`    | `Web session cookie domain`                                        |             |
 
-Campo "path" de la cookie de sesión. Useful for controlling the scope of the session cookies. Si define, por ejemplo, el valor "/*.4d.fr" para este selector, el cliente sólo enviará una cookie cuando la solicitud se dirija al dominio ".4d.fr", lo que excluye a los servidores que alojan datos estáticos externos.
+Campo "path" de la cookie de sesión. Utilizado para controlar el alcance de las cookies de sesión. Si define, por ejemplo, el valor "/*.4d.fr" para este selector, el cliente sólo enviará una cookie cuando la solicitud se dirija al dominio ".4d.fr", lo que excluye a los servidores que alojan datos estáticos externos.
 
 
 ## Nombre de la cookie de sesión
@@ -628,7 +628,7 @@ When the **Reuse Temporary Contexts** option is checked, in remote mode 4D maint
 In return, you must make sure in this case to systematically initialize the variables used in 4D methods in order to avoid getting incorrect results. Similarly, it is necessary to erase any current selections or records defined during the previous request.
 > * This option is checked (and locked) automatically when the **Automatic Session Management** option is checked. In fact, the session management mechanism is actually based on the principle of recycling web processes: each session uses the same process that is maintained during the lifespan of the session. However, note that session processes cannot be "shared" between different sessions: once the session is over, the process is automatically killed (and not reused). It is therefore unnecessary to reset the selections or variables in this case.
 > 
-> * This option only has an effect with a 4D web server in remote mode. With a 4D in local mode, all web processes (other than session processes) are killed after their use.
+> * Esta opción sólo tiene efecto con un servidor web 4D en modo remoto. With a 4D in local mode, all web processes (other than session processes) are killed after their use.
 
 
 
@@ -645,7 +645,7 @@ The **Use Keep-Alive Connections** option enables or disables keep-alive TCP con
 
 The 4D Web Server keep-alive function concerns all TCP/IP connections (HTTP, HTTPS). Note however that keep-alive connections are not always used for all 4D web processes.
 
-In some cases, other optimized internal functions may be invoked. Keep-alive connections are useful mainly for static pages.
+En algunos casos, se pueden invocar otras funciones internas optimizadas. Keep-alive connections are useful mainly for static pages.
 
 Two options allow you to set how the keep-alive connections work:
 

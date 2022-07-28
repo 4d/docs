@@ -705,6 +705,8 @@ Exemplo com a opção `dk stop dropping on first error`:
 
 
 
+
+
 <!-- REF #EntitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 
@@ -1761,7 +1763,7 @@ $slice:=ds. Employee.all().slice(-1;-2) //tries to return entities from index 9 
 <!-- END REF -->
 
 <!-- REF EntitySelectionClass.sum().Desc -->
-## .sum( )
+## .sum()
 
 <details><summary>Histórico</summary>
 | Versão | Mudanças   |
@@ -1814,7 +1816,7 @@ $sum:=$sel.sum("salary")
 <!-- END REF -->
 
 <!-- REF EntitySelectionClass.toCollection().Desc -->
-## .toCollection( )
+## .toCollection()
 
 <details><summary>Histórico</summary>
 | Versão | Mudanças   |

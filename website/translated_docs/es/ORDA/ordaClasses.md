@@ -161,7 +161,7 @@ Function getCityName()
     End if
 ```
 
-The client application opens a session on the remote datastore:
+La aplicación cliente abre una sesión en el datastore remoto:
 
 ```4d
 $cityManager:=Open datastore(New object("hostname";"127.0.0.1:8111");"CityManager")
@@ -181,7 +181,7 @@ Each table exposed with ORDA offers an EntitySelection class in the `cs` class s
 
 - **Extends**: 4D.EntitySelection
 - **Class name**: *DataClassName*Selection (where *DataClassName* is the table name)
-- **Example name**: cs.EmployeeSelection
+- **Ejemplo**: cs.EmployeeSelection
 
 
 #### Ejemplo
@@ -424,7 +424,7 @@ An ORDA data model user class is defined by adding, at the [same location as reg
 
 ![](assets/en/ORDA/ORDA_Classes-3.png)
 
-> By default, empty ORDA classes are not displayed in the Explorer. To show them you need to select **Show all data classes** from the Explorer's options menu: ![](assets/en/ORDA/showClass.png)
+> Por defecto, las clases ORDA vacías no se muestran en el Explorador. To show them you need to select **Show all data classes** from the Explorer's options menu: ![](assets/en/ORDA/showClass.png)
 
 ORDA user classes have a different icon from regular classes. Las clases vacías se atenúan:
 

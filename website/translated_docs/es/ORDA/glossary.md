@@ -40,7 +40,7 @@ Función de una clase de modelo de datos ORDA.
 
 ## Dataclass
 
-A dataclass is an object model that describes the data. Tables in the database provided by the datastore are handled through dataclasses. Each table in the database provided by the datastore has a corresponding dataclass with the same name. Each field of the table is an attribute of the dataclass.
+Una dataclass es un modelo de objeto que describe los datos. Tables in the database provided by the datastore are handled through dataclasses. Each table in the database provided by the datastore has a corresponding dataclass with the same name. Each field of the table is an attribute of the dataclass.
 
 Un dataclass está relacionado con un único datastore.
 
@@ -64,7 +64,7 @@ Un datastore referencia solo a una base de datos. It is, however, possible to op
 
 ## DataStore class
 
-Class for datastore objects, in which you can add custom functions.
+Clase para los objetos datastore, en la que puede agregar funciones personalizadas.
 
 
 ## DataStoreImplementation
@@ -77,11 +77,11 @@ A deep copy duplicates an object and all the references it contains. After a dee
 
 ## ds
 
-`ds` is the 4D language command that returns a [datastore](dsMapping.md#datastore) object reference. It matches the datastore available upon the 4D main database.
+`ds` is the 4D language command that returns a [datastore](dsMapping.md#datastore) object reference. Coincide con el datastore disponible en la base de datos principal 4D.
 
 ## Entity
 
-An entity is an object that corresponds to a dataclass model. An entity contains the same attributes as the dataclass.
+An entity is an object that corresponds to a dataclass model. Una entidad contiene los mismos atributos que la dataclass.
 
 An entity can be seen as an instance of the dataclass, like a record of the table matching the dataclass in its associated datastore. Sin embargo, una entidad también contiene los datos relacionados. The purpose of the entity is to manage data (create, update, delete).
 
@@ -95,14 +95,14 @@ Una selección de entidades contiene:
 
 *   un conjunto de 0 a X referencias de entidades,
 *   a length property (always),
-*   queryPlan and queryPath properties (if asked while querying).
+*   las propiedades queryPlan y queryPath (si se preguntan durante la consulta).
 
 Una selección de entidades también puede estar vacía.
 
 
 ## Generic class
 
-Built-in class for ORDA objects such as entities, or dataclasses. Functions and properties of generic classes are automatically available in user extended classes, e.g. `EmployeeEntity`.
+Clase integrada para los objetos ORDA tales como las entidades o las dataclasses. Functions and properties of generic classes are automatically available in user extended classes, e.g. `EmployeeEntity`.
 
 
 ## Lazy loading
@@ -115,7 +115,7 @@ The Datastore object matching the opened 4D database (standalone or client/serve
 
 ## Método
 
-ORDA objects such as datastores, dataclasses, entity selections, and entities, define classes of objects. They provide specific methods to directly interact with them. Estos métodos también se llaman funciones miembros (member functions). Such methods are used by calling them on an instance of the object.
+ORDA objects such as datastores, dataclasses, entity selections, and entities, define classes of objects. They provide specific methods to directly interact with them. Estos métodos también se llaman funciones miembros (member functions). Estos métodos se utilizan llamándolos sobre una instancia del objeto.
 
 For example, the `query()` method is a dataclass member function. Si ha almacenado un objeto dataclass en la variable `$myClass`, puede escribir:
 
@@ -140,7 +140,7 @@ In this documentation, "Mixed" data type is used to designate the various type o
 
 ## Bloqueo optimista
 
-In "optimistic lock" mode, entities are not locked explicitly before updating them. Each entity has an internal stamp that is automatically incremented each time the entity is saved on disk. The entity.save( ) or entity.drop( ) methods will return an error if the stamp of the loaded entity (in memory) and the stamp of the entity on disk do not match, or if the entity has been dropped. Optimistic locking is only available in ORDA implementation. Ver también " Bloqueo pesimista ".
+In "optimistic lock" mode, entities are not locked explicitly before updating them. Each entity has an internal stamp that is automatically incremented each time the entity is saved on disk. The entity.save( ) or entity.drop( ) methods will return an error if the stamp of the loaded entity (in memory) and the stamp of the entity on disk do not match, or if the entity has been dropped. El bloqueo optimista sólo está disponible en la implementación ORDA. Ver también " Bloqueo pesimista ".
 
 ## Bloqueo pesimista
 
@@ -153,7 +153,7 @@ Ver [Atributo](#attribute).
 
 ## PropertyPath
 
-A propertyPath is the path to a property in a given object. If the property is nested in several levels, each level separated is by a dot (".").
+Un propertyPath es la ruta de acceso a una propiedad en un objeto dado. If the property is nested in several levels, each level separated is by a dot (".").
 
 ## Regular class
 
@@ -190,7 +190,7 @@ When the 4D application connects to a Remote datastore, a session is created on 
 
 Cada vez que se abre una nueva sesión, se utiliza una licencia. Cada vez que se cierra una sesión, se libera la licencia.
 
-Inactive sessions are automatically closed after a timeout. The default timeout is 48 hours, it can be set by the developer (it must be >= 60 minutes).
+Las sesiones inactivas se cierran automáticamente después de un tiempo de espera. The default timeout is 48 hours, it can be set by the developer (it must be >= 60 minutes).
 
 ## Copia superficial (Shallow copy)
 

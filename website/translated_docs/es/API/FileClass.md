@@ -224,7 +224,7 @@ The `.createAlias()` function <!-- REF #FileClass.createAlias().Summary -->creat
 
 Pass the name of the alias or shortcut to create in the *aliasName* parameter.
 
-By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. Las siguientes constantes están disponibles:
+Por defecto en macOS, la función crea un alias estándar. You can also create a symbolic link by using the *aliasType* parameter. Las siguientes constantes están disponibles:
 
 | Constante          | Valor | Comentario                         |
 | ------------------ | ----- | ---------------------------------- |
@@ -292,7 +292,7 @@ If the file does not exist on disk, the function does nothing (no error is gener
 
 #### Ejemplo
 
-You want to delete a specific file in the database folder:
+Desea eliminar un archivo específico en la carpeta de la base de datos:
 
 ```4d
  $tempo:=File("/PACKAGE/SpecialPrefs/"+Current user+".prefs")
@@ -598,11 +598,11 @@ Each valid property set in the *info* object parameter is written in the version
 If you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.
 
 
-***info* parameter object with a .plist file**
+**Parámetro *info* con un un archivo .plist**
 
 Each valid property set in the *info* object parameter is written in the .plist file as a key. Se acepta todo nombre de llave. Los tipos de valores se conservan cuando es posible.
 
-If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Other existing keys in the .plist file are left untouched.
+If a key set in the *info* parameter is already defined in the .plist file, its value is updated while keeping its original type. Las demás llaves existentes en el archivo .plist no se modifican.
 
 > To define a Date type value, the format to use is a json timestamp string formated in ISO UTC without milliseconds ("2003-02-01T01:02:03Z") like in the Xcode plist editor.
 

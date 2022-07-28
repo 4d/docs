@@ -701,6 +701,8 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 
 
 
+
+
 <!-- REF #EntitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 
@@ -1748,7 +1750,7 @@ $slice:=ds.Employee.all().slice(-1;-2) // インデックス 9 から 8番まで
 
 
 <!-- REF EntitySelectionClass.sum().Desc -->
-## .sum( )
+## .sum()
 
 <details><summary>履歴</summary>
 | バージョン | 内容 |
@@ -1799,7 +1801,7 @@ $sum:=$sel.sum("salary")
 
 
 <!-- REF EntitySelectionClass.toCollection().Desc -->
-## .toCollection( )
+## .toCollection()
 
 <details><summary>履歴</summary>
 | バージョン | 内容 |

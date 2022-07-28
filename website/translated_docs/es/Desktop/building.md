@@ -291,7 +291,7 @@ You can check the **Allow automatic update...** option for client applications r
 - the **Build server application** option is checked,
 - the **Allow automatic update...** option for client applications running on the current platform is checked.
 
-This feature requires that you click on the **[...]** button and designate the location on your disk of the file to use for the update. The file to select depends on the current server platform:
+This feature requires that you click on the **[...]** button and designate the location on your disk of the file to use for the update. El archivo a seleccionar depende de la plataforma actual del servidor:
 
 | Plataforma del servidor actual | Archivo requerido                                           | Detalles                                                                                                                                                                   |
 | ------------------------------ | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -431,7 +431,7 @@ Customizing the server-side cache folder name is useful when you run several ide
 
 On this tab, you set each [plug-in](Concepts/plug-ins.md) and each [component](Concepts/components.md) that you will use in your stand-alone or client/server application.
 
-The page lists the elements loaded by the current 4D application:
+La página lista los elementos cargados por la aplicación 4D actual:
 
 ![](assets/en/Project/buildapppluginsProj.png)
 
@@ -458,7 +458,7 @@ If there is a conflict between two different versions of the same plug-in (one l
 La página de Licencias & Certificados puede utilizarse para:
 
 *   designate the license number(s) that you want to integrate into your single-user stand-alone application
-*   sign the application by means of a certificate in macOS.
+*   firmar la aplicación mediante un certificado en macOS.
 
 ![](assets/en/Admin/buildappCertif.png)
 
@@ -474,8 +474,8 @@ You must designate the files that contain your Developer license as well as thos
 
 Once you have selected a file, the list will indicate the characteristics of the license that it contains.
 
-*   **License #** - Product license number
-*   **License** - Name of the product
+*   **Licencia #** - número de licencia del producto
+*   **Licencia** - Nombre del producto
 *   **Expiration date** - Expiration date of the license (if any)
 *   **Ruta de acceso** - Ubicación en el disco
 
@@ -555,14 +555,14 @@ You can also set specific [XML keys](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-
 
 ### Apertura del archivo de datos
 
-When a user launches a merged application or an update (single-user or client/server applications), 4D tries to select a valid data file. Several locations are examined by the application successively.
+When a user launches a merged application or an update (single-user or client/server applications), 4D tries to select a valid data file. Varias ubicaciones son examinadas sucesivamente por la aplicación.
 
-The opening sequence for launching a merged application is:
+La secuencia de lanzamiento de una aplicación fusionada es:
 
 1. 4D tries to open the last data file opened, [as described below](#last-data-file-opened) (not applicable during initial launch).
 2. If not found, 4D tries to open the data file in a default data folder next to the .4DZ file in read-only mode.
 3. If not found, 4D tries to open the standard default data file (same name and same location as the .4DZ file).
-4. If not found, 4D displays a standard "Open data file" dialog box.
+4. Si no se encuentra, 4D muestra una caja de diálogo estándar "Abrir archivo de datos".
 
 
 ### Último archivo de datos abierto
@@ -580,7 +580,7 @@ The data file path is stored in a dedicated file, named *lastDataPath.xml*.
 
 Thanks to this architecture, when you provide an update of your application, the local user data file (last data file used) is opened automatically at first launch.
 
-This mechanism is usually suitable for standard deployments. However, for specific needs, for example if you duplicate your merged applications, you might want to change the way that the data file is linked to the application (described below).
+Este mecanismo suele ser adecuado para los despliegues estándar. However, for specific needs, for example if you duplicate your merged applications, you might want to change the way that the data file is linked to the application (described below).
 
 #### Configuring the data linking mode
 
@@ -593,9 +593,9 @@ This may be unsuitable if you want to duplicate a merged application intended to
 This mode allows you to duplicate your merged applications without breaking the link to the data file. However, with this option, if the application package is moved on the disk, the user will be prompted for a data file, since the application path will no longer match the "executablePath" attribute (after a user has selected a data file, the *lastDataPath.xml* file is updated accordingly).
 
 
-*Duplication when data linked by application name:* ![](assets/en/Project/datalinking1.png)
+*Duplicación cuando los datos están vinculados por el nombre de la aplicación:* ![](assets/en/Project/datalinking1.png)
 
-*Duplication when data linked by application path:* ![](assets/en/Project/datalinking2.png)
+*Duplicación cuando los datos están vinculados por la ruta de la aplicación:* ![](assets/en/Project/datalinking2.png)
 
 You can select the data linking mode during the build application process. Puede:
 
@@ -616,7 +616,7 @@ Más específicamente, se cubren los siguientes casos:
 Para definir y utilizar un archivo de datos por defecto:
 
 - You provide a default data file (named "Default.4DD") and store it in a default folder (named "Default Data") inside the application project folder. This file must be provided along with all other necessary files, depending on the project configuration: index (.4DIndx), external Blobs, journal, etc. Es su responsabilidad proveer un archivo de datos válido por defecto. Es su responsabilidad proveer un archivo de datos válido por defecto.
-- When the application is built, the default data folder is integrated into the merged application. All files within this default data folder are also embedded.
+- When the application is built, the default data folder is integrated into the merged application. Todos los archivos dentro de esta carpeta por defecto también están anidados.
 
 El siguiente gráfico ilustra esta funcionalidad:
 

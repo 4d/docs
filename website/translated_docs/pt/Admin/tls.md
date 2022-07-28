@@ -15,7 +15,7 @@ O protocolo TLS (sucessor de SSL) foi criado para assegurar trocas de dados entr
 
 No nível de rede, o protocolo de segurança é inserido entre a capa TCP/IP (baixo nível) e o protocolo de alto nível HTTP. Foi criado principalmente para trabalhar com HTTP.
 
-Configuração de rede usando TSL:
+Network configuration using TLS:
 
 ![](assets/en/WebServer/tls1.png)
 
