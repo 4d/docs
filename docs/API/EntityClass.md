@@ -126,7 +126,7 @@ This function can only be used with entities already saved in the database. It c
 <!-- REF #EntityClass.diff().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|entityToCompare|4D.Entity|->|Entity to be compared with the original entity| 
+|entityToCompare|4D.Entity|->|Entity to be compared with the original entity|
 |attributesToCompare|Collection|-> |Name of attributes to be compared |
 |Result|Collection|<-|Differences between the entities|
 <!-- END REF -->
@@ -368,8 +368,8 @@ The object returned by `.drop( )` contains the following properties:
 
 |Constant| Value| Comment|
 |---|---|---|
-|`dk status entity does not exist anymore`|5|The entity no longer exists in the data. This error can occur in the following cases:<br/><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using entity.drop( ), this error can be returned when dk force drop if stamp changed option is used. When using entity.lock( ), this error can be returned when dk reload if stamp changed option is used</li><p>**Associated statusText**: "Entity does not exist anymore"|
-|`dk status locked`|3|The entity is locked by a pessimistic lock.<br/>**Associated statusText**: "Already locked"|
+|`dk status entity does not exist anymore`|5|The entity no longer exists in the data. This error can occur in the following cases:<br/><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using entity.drop( ), this error can be returned when dk force drop if stamp changed option is used. When using entity.lock( ), this error can be returned when dk reload if stamp changed option is used</li> **Associated statusText**: "Entity does not exist anymore"|
+|`dk status locked`|3|The entity is locked by a pessimistic lock.<br/> **Associated statusText**: "Already locked"|
 |`dk status serious error`| 4| A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.<br/>**Associated statusText**: "Other error"
 |`dk status stamp has changed`| 2|The internal stamp value of the entity does not match the one of the entity stored in the data (optimistic lock).<br/><li>with `.save( )`: error only if the `dk auto merge` option is not used</li><li>with `.drop( )`: error only if the `dk force drop if stamp changed` option is not used</li><li>with `.lock( )`: error only if the `dk reload if stamp changed` option is not used</li><li>**Associated statusText**: "Stamp has changed"</li>|
 
@@ -953,8 +953,8 @@ The object returned by `.lock( )` contains the following properties:
 |Constant |Value| Comment|
 |---|---|---|
 |`dk status entity does not exist anymore`| 5 |The entity no longer exists in the data. This error can occur in the following cases:<li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using `.drop( )`, this error can be returned when dk force drop if stamp changed option is used. When using `.lock( )`, this error can be returned when `dk reload if stamp changed` option is used</li><br/>**Associated statusText**: "Entity does not exist anymore"|
-|`dk status locked`| 3 |The entity is locked by a pessimistic lock.<p><p>**Associated statusText**: "Already locked"
-|`dk status serious error`| 4 |A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.<p><p>**Associated statusText**: "Other error"|
+|`dk status locked`| 3 |The entity is locked by a pessimistic lock. **Associated statusText**: "Already locked"
+|`dk status serious error`| 4 |A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc. **Associated statusText**: "Other error"|
 |`dk status stamp has changed`|2|The internal stamp value of the entity does not match the one of the entity stored in the data (optimistic lock).<li>with `.save( )`: error only if the `dk auto merge` option is not used</li><li>with `.drop( )`: error only if the `dk force drop if stamp changed` option is not used</li><li>with `.lock( )`: error only if the `dk reload if stamp changed` option is not used</li><br/>**Associated statusText**: "Stamp has changed"|
 
 #### Example 1
@@ -1101,7 +1101,7 @@ The object returned by `.reload( )` contains the following properties:
 
 |Property |Type| Description|
 |---|---|---|
-|success|boolean| True if the reload action is successful, False otherwise.<p><p>***Available only in case of error***:|
+|success|boolean| True if the reload action is successful, False otherwise. ***Available only in case of error***:|
 |status(\*)|number|Error code, see below|
 |statusText(\*)|text|Description of the error, see below|
 
@@ -1187,9 +1187,9 @@ The object returned by `.save()` contains the following properties:
 ||user4d_alias| text| User alias if defined by `SET USER ALIAS`, otherwise user name in the 4D directory|
 ||host_name |text |Machine name|
 ||task_name| text| Process name|
-||client_version| text|| 
+||client_version| text||
 ||||***Available only in case of serious error*** (serious error - can be trying to duplicate a primary key, disk full...):|
-|errors || collection of objects|| 
+|errors || collection of objects||
 ||message| text |Error message|
 ||componentSignature| text| Internal component signature (e.g. "dmbg" stands for the database component)|
 ||errCode| number| Error code|
@@ -1202,8 +1202,8 @@ The following values can be returned in the `status` and `statusText` properties
 |---|---|---|
 |`dk status automerge failed`| 6| (Only if the `dk auto merge` option is used) The automatic merge option failed when saving the entity. **Associated statusText**: "Auto merge failed"|
 |`dk status entity does not exist anymore`| 5| The entity no longer exists in the data. This error can occur in the following cases:<br/><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using `.drop( )`, this error can be returned when `dk force drop if stamp changed` option is used. When using `.lock( )`, this error can be returned when `dk reload if stamp changed` option is used</li><br/>**Associated statusText**: "Entity doesnot exist anymore"|
-|`dk status locked`| 3| The entity is locked by a pessimistic lock.<p><p>**Associated statusText**: "Already locked"
-|`dk status serious error`|4|A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.<p><p>**Associated statusText**: "Other error"|
+|`dk status locked`| 3| The entity is locked by a pessimistic lock.**Associated statusText**: "Already locked"
+|`dk status serious error`|4|A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.**Associated statusText**: "Other error"|
 |`dk status stamp has changed`|2|The internal stamp value of the entity does not match the one of the entity stored in the data (optimistic lock).<br/><li>with `.save( )`: error only if the `dk auto merge` option is not used</li><li>with `.drop( )`: error only if the `dk force drop if stamp changed` option is not used</li><li>with `.lock( )`: error only if the `dk reload if stamp changed` option is not used</li><br/>**Associated statusText**: "Stamp has changed"
 
 #### Example 1  
@@ -1282,8 +1282,8 @@ Updating an entity with `dk auto merge` option:
 <!-- REF #EntityClass.toObject().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|filterString |Text |->|Attribute(s) to extract (comma-separated string)| 
-|filterCol |Collection |->|Collection of attribute(s) to extract| 
+|filterString |Text |->|Attribute(s) to extract (comma-separated string)|
+|filterCol |Collection |->|Collection of attribute(s) to extract|
 |options|Integer|->|`dk with primary key`: adds the \_KEY property;<br/>`dk with stamp`: adds the \_STAMP property|
 |Result|Object|<-|Object built from the entity|
 <!-- END REF -->
