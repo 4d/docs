@@ -105,7 +105,7 @@
 <blockquote>
 <blockquote>
 <blockquote>
-<p>It is not possible to combine different list box types in the same list box object. La fuente de datos se define cuando se crea el list box. It is then no longer possible to modify it by programming.</p>
+<p>It is not possible to combine different list box types in the same list box object. La fuente de datos se define cuando se crea el list box. Entonces ya no es posible modificarlo por programación.</p>
 </blockquote>
 </blockquote>
 </blockquote>
@@ -116,7 +116,7 @@
 <p>The 4D Language includes a dedicated &quot;List Box&quot; theme for list box commands, but commands from various other themes, such as &quot;Object properties&quot; commands or <code>EDIT ITEM</code>, <code>Displayed line number</code> commands can also be used. Refer to the <a href="https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box-Commands-Summary.300-4311159.en.html">List Box Commands Summary</a> page of the <em>4D Language reference</em> for more information.</p>
 <h2><a class="anchor" aria-hidden="true" id="objetos-tipo-list-box"></a><a href="#objetos-tipo-list-box" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objetos tipo List box</h2>
 <h3><a class="anchor" aria-hidden="true" id="list-box-de-tipo-array"></a><a href="#list-box-de-tipo-array" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>List box de tipo array</h3>
-<p>En un list box de tipo array, cada columna debe estar asociada a un array unidimensional 4D; se pueden utilizar todos los tipos de array, a excepción de los arrays de punteros. The number of rows is based on the number of array elements.</p>
+<p>En un list box de tipo array, cada columna debe estar asociada a un array unidimensional 4D; se pueden utilizar todos los tipos de array, a excepción de los arrays de punteros. El número de líneas se basa en el número de elementos del array.</p>
 <p>By default, 4D assigns the name &quot;ColumnX&quot; to each column. You can change it, as well as other column properties, in the <a href="/docs/18/es/FormObjects/listboxOverview.html#column-specific-properties">column properties</a>. The display format for each column can also be defined using the <code>OBJECT SET FORMAT</code> command.</p>
 <blockquote>
 <p>Array type list boxes can be displayed in <a href="/docs/18/es/FormObjects/listboxOverview.html#hierarchical-list-boxes">hierarchical mode</a>, with specific mechanisms.</p>
@@ -386,7 +386,7 @@
 <pre><code class="hljs">    <span class="hljs-string">"highlightSet"</span>: <span class="hljs-string">"<span class="hljs-variable">$SampleSet</span>"</span>,
     <span class="hljs-string">"rowFillSource"</span>: <span class="hljs-string">"UI_SetColor"</span>,
 </code></pre>
-<p>You can write in the <em>UI_SetColor</em> method:</p>
+<p>Puede escribir en el método <em>UI_SetColor</em>:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> If</span>(<span class="hljs-function">Is in set</span>(<span class="hljs-string">"$SampleSet"</span>))
     <span class="hljs-variable">$color</span>:=<span class="hljs-number">0x0080</span>C<span class="hljs-number">080</span> <span class="hljs-comment">// green background</span><span class="hljs-keyword">
  Else</span>
@@ -457,7 +457,7 @@
 <li>the 2 elements for column 1 and 2 are changed to dark blue using the <a href="/docs/18/es/FormObjects/propertiesBackgroundAndBorder.html#row-background-color-array">Row Background Color Array</a> property for the column 1 and 2 objects:</li>
 </ul>
 <p><img src="/docs/18/assets/en/FormObjects/listbox_styles3.png" alt=""></p>
-<p>To restore the original appearance of the list box, you can:</p>
+<p>Para restaurar la apariencia original de la caja del list box, puede:</p>
 <ul>
 <li>pass the <code>lk inherited</code> constant in element 2 of the background color arrays for columns 1 and 2: then they inherit the red background color of the row.</li>
 <li>pass the <code>lk inherited</code> constant in elements 3 and 4 of the style array for column 5: then they inherit the standard style, except for element 4, which changes to italics as specified in the style array of the list box.</li>
@@ -503,8 +503,8 @@
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="propiedades-del-list-box-jerárquico"></a><a href="#propiedades-del-list-box-jerárquico" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Propiedades del List Box jerárquico</h4>
 <p>This property specifies that the list box must be displayed in hierarchical form. In the JSON form, this feature is triggered <a href="/docs/18/es/FormObjects/propertiesObject.html#hierarchical-list-box">when the <em>dataSource</em> property value is an array</a>, i.e. a collection.</p>
-<p>Additional options (<strong>Variable 1...10</strong>) are available when the <em>Hierarchical List Box</em> option is selected, corresponding to each <em>dataSource</em> array to use as break column. Each time a value is entered in a field, a new row is added. Se pueden especificar hasta 10 variables. These variables set the hierarchical levels to be displayed in the first column.</p>
-<p>The first variable always corresponds to the name of the variable for the first column of the list box (the two values are automatically bound). Esta primera variable está siempre visible y se puede editar. Por ejemplo: country. The second variable is also always visible and enterable; it specifies the second hierarchical level. Por ejemplo: regions. Beginning with the third field, each variable depends on the one preceding it. Por ejemplo: counties, cities, etc. Se puede especificar un máximo de diez niveles jerárquicos. If you remove a value, the whole hierarchy moves up a level.</p>
+<p>Additional options (<strong>Variable 1...10</strong>) are available when the <em>Hierarchical List Box</em> option is selected, corresponding to each <em>dataSource</em> array to use as break column. Cada vez que se introduce un valor en un campo, se añade una nueva línea. Se pueden especificar hasta 10 variables. These variables set the hierarchical levels to be displayed in the first column.</p>
+<p>The first variable always corresponds to the name of the variable for the first column of the list box (the two values are automatically bound). Esta primera variable está siempre visible y se puede editar. Por ejemplo: country. The second variable is also always visible and enterable; it specifies the second hierarchical level. Por ejemplo: regions. Beginning with the third field, each variable depends on the one preceding it. Por ejemplo: counties, cities, etc. Se puede especificar un máximo de diez niveles jerárquicos. Si se elimina un valor, toda la jerarquía sube de nivel.</p>
 <p>The last variable is never hierarchical even if several identical values exists at this level. For example, referring to the configuration illustrated above, imagine that arr1 contains the values A A A B B B, arr2 has the values 1 1 1 2 2 2 and arr3 the values X X Y Y Y Z. In this case, A, B, 1 and 2 could appear in collapsed form, but not X and Y:</p>
 <p><img src="/docs/18/assets/en/FormObjects/property_hierarchicalListBox.png" alt=""></p>
 <p>This principle is not applied when only one variable is specified in the hierarchy: in this case, identical values may be grouped.</p>
@@ -666,7 +666,7 @@
 </thead>
 <tbody>
 <tr><td>texto</td><td>lo mismo que se define en el objeto</td><td>any (no control)</td></tr>
-<tr><td>real</td><td>same as defined in object (using system decimal separator)</td><td>&quot;0-9&quot; y &quot;.&quot; y &quot;-&quot;</td></tr>
+<tr><td>real</td><td>lo mismo que se define en el objeto (utilizando el separador decimal del sistema)</td><td>&quot;0-9&quot; y &quot;.&quot; y &quot;-&quot;</td></tr>
 <tr><td></td><td></td><td>&quot;0-9&quot; y &quot;.&quot; si min&gt;=0</td></tr>
 <tr><td>integer</td><td>lo mismo que se define en el objeto</td><td>&quot;0-9&quot; y &quot;-&quot;</td></tr>
 <tr><td></td><td></td><td>&quot;0-9&quot; if min&gt;=0</td></tr>
@@ -677,7 +677,7 @@
 </table>
 <h3><a class="anchor" aria-hidden="true" id="atributos"></a><a href="#atributos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Atributos</h3>
 <p>Cada elemento del array de objetos es un objeto que puede contener uno o más atributos que definirán el contenido de la celda y la visualización de los datos (ver el ejemplo anterior).</p>
-<p>The only mandatory attribute is &quot;valueType&quot; and its supported values are &quot;text&quot;, &quot;real&quot;, &quot;integer&quot;, &quot;boolean&quot;, &quot;color&quot;, and &quot;event&quot;. The following table lists all the attributes supported in list box object arrays, depending on the &quot;valueType&quot; value (any other attributes are ignored). Display formats are detailed and examples are provided below.</p>
+<p>The only mandatory attribute is &quot;valueType&quot; and its supported values are &quot;text&quot;, &quot;real&quot;, &quot;integer&quot;, &quot;boolean&quot;, &quot;color&quot;, and &quot;event&quot;. The following table lists all the attributes supported in list box object arrays, depending on the &quot;valueType&quot; value (any other attributes are ignored). A continuación se detallan los formatos de visualización y se ofrecen ejemplos.</p>
 <table>
 <thead>
 <tr><th></th><th>valueType</th><th>texto</th><th>real</th><th>integer</th><th>booleano</th><th>color</th><th>evento</th></tr>
@@ -967,7 +967,7 @@
 </code></pre>
 <p><img src="/docs/18/assets/en/FormObjects/listbox_column_objectArray_eventValueType.png" alt=""></p>
 <h3><a class="anchor" aria-hidden="true" id="gestión-de-eventos"></a><a href="#gestión-de-eventos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gestión de eventos</h3>
-<p>Several events can be handled while using an object list box array:</p>
+<p>Se pueden manejar varios eventos mientras se utiliza un array list box de objetos:</p>
 <ul>
 <li><strong>On Data Change</strong>: An <code>On Data Change</code> event is triggered when any value has been modified either:
 <ul>

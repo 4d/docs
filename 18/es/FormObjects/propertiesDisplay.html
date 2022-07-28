@@ -68,7 +68,7 @@
             });
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/18/docs/FormObjects/properties_Display.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Visualización</h1></header><article><div><span><hr>
 <h2><a class="anchor" aria-hidden="true" id="formato-alfa"></a><a href="#formato-alfa" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Formato Alfa</h2>
-<p>Alpha formats control the way the alphanumeric fields and variables appear when displayed or printed. Here is a list of formats provided for alphanumeric fields:</p>
+<p>Alpha formats control the way the alphanumeric fields and variables appear when displayed or printed. Aquí hay una lista de formatos suministrados para los campos alfanuméricos:</p>
 <p><img src="/docs/18/assets/en/FormObjects/property_alphaFormat.png" alt=""></p>
 <p>You can choose a format from this list or use any custom format. The default list contains formats for some of the most common alpha fields that require formats: US telephone numbers (local and long distance), Social Security numbers, and zip codes. You can also enter a custom format name set in the Filters and formats editor of the tool box. In this case, the format cannot be modified in the object properties. Any custom formats or filters that you have created are automatically available, preceded by a vertical bar (|).</p>
 <p>The number sign (#) is the placeholder for an alphanumeric display format. You can include the appropriate dashes, hyphens, spaces, and any other punctuation marks that you want to display. You use the actual punctuation marks you want and the number sign for each character you want to display.</p>
@@ -180,8 +180,8 @@
 <p>If characters are placed between placeholders, they appear only if digits are displayed on both sides. Por ejemplo, si define el formato:</p>
 <pre><code class="hljs">###.##0
 </code></pre>
-<p>the point appears only if the user enters at least four digits.</p>
-<p>Spaces are treated as characters in number display formats.</p>
+<p>el punto aparece sólo si el usuario introduce al menos cuatro dígitos.</p>
+<p>Los espacios se tratan como caracteres en los formatos de visualización de números.</p>
 <h3><a class="anchor" aria-hidden="true" id="formatos-para-positivo-negativo-y-cero"></a><a href="#formatos-para-positivo-negativo-y-cero" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Formatos para positivo, negativo y cero</h3>
 <p>A number display format can have up to three parts allowing you to specify display formats for positive, negative, and zero values. You specify the three parts by separating them with semicolons as shown below:</p>
 <pre><code class="hljs">Positivo;Negativo;Cero
@@ -279,14 +279,14 @@
 <p><img src="/docs/18/assets/en/FormObjects/property_pictureFormat_ScaledToFit.png" alt=""></p>
 <h3><a class="anchor" aria-hidden="true" id="truncado-centrado-y-no-centrado"></a><a href="#truncado-centrado-y-no-centrado" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Truncado (centrado y no centrado)</h3>
 <p><code>Gramática JSON: &quot;truncatedCenter&quot; / &quot;truncatedTopLeft&quot;</code></p>
-<p>The <strong>Truncated (centered)</strong> format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 4D crops equally from each edge and from the top and bottom.</p>
+<p>The <strong>Truncated (centered)</strong> format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 4D recorta por igual desde cada borde y desde la parte superior e inferior.</p>
 <p>The <strong>Truncated (non-centered)</strong> format causes 4D to place the upper-left corner of the picture in the upper-left corner of the area and crop any portion that does not fit within the area. 4D crops from the right and bottom.</p>
 <blockquote>
 <p>When the picture format is <strong>Truncated (non-centered)</strong>, it is possible to add scroll bars to the input area.</p>
 </blockquote>
 <p><img src="/docs/18/assets/en/FormObjects/property_pictureFormat_Truncated.png" alt=""></p>
 <h3><a class="anchor" aria-hidden="true" id="scaled-to-fit-proportional-and-scaled-to-fit-centered-proportional"></a><a href="#scaled-to-fit-proportional-and-scaled-to-fit-centered-proportional" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Scaled to fit (proportional) and Scaled to fit centered (proportional)</h3>
-<p><code>JSON grammar: &quot;proportionalTopLeft&quot; / &quot;proportionalCenter&quot;</code></p>
+<p><code>Gramática JSON: &quot;proportionalTopLeft&quot; / &quot;proportionalCenter&quot;</code></p>
 <p>When you use <strong>Scaled to fit (proportional)</strong>, the picture is reduced proportionally on all sides to fit the area created for the picture. The <strong>Scaled to fit centered (proportional)</strong> option does the same, but centers the picture in the picture area.</p>
 <p>If the picture is smaller than the area set in the form, it will not be modified. If the picture is bigger than the area set in the form, it is proportionally reduced. Since it is proportionally reduced, the picture will not appear distorted.</p>
 <p>If you have applied the <strong>Scaled to fit centered (proportional)</strong> format, the picture is also centered in the area:</p>
@@ -326,9 +326,9 @@
 <tr><td>HH:MM AM/PM</td><td>hh_mm_am</td><td></td><td>4:30 a.m.</td></tr>
 <tr><td>MM SS</td><td>mm_ss</td><td>Hora expresada como duración a partir de las 00:00:00</td><td>270:25</td></tr>
 <tr><td>Min Sec</td><td>MM_SS</td><td>Hora expresada como duración a partir de las 00:00:00</td><td>270 Minutos 25 Segundos</td></tr>
-<tr><td>ISO Date Time</td><td>iso8601</td><td>Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format</td><td>0000-00-00T04:30:25</td></tr>
+<tr><td>ISO Date Time</td><td>iso8601</td><td>Corresponde al estándar XML para representar datos relacionados con la hora. It is mainly intended to be used when importing/exporting data in XML format</td><td>0000-00-00T04:30:25</td></tr>
 <tr><td>System time short</td><td>- (por defecto)</td><td>Formato de hora estándar definido en el sistema</td><td>04:30:25</td></tr>
-<tr><td>System time long abbreviated</td><td>systemMedium</td><td>macOS only: Abbreviated time format defined in the system. <br>Windows: this format is the same as the System time short format</td><td>4•30•25 AM</td></tr>
+<tr><td>System time long abbreviated</td><td>systemMedium</td><td>sólo macOS: formato de tiempo abreviado definido en el sistema. <br>Windows: this format is the same as the System time short format</td><td>4•30•25 AM</td></tr>
 <tr><td>System time long</td><td>systemLong</td><td>macOS únicamente: formato de tiempo largo definido en el sistema. <br>Windows: this format is the same as the System time short format</td><td>4:30:25 AM HNEC</td></tr>
 </tbody>
 </table>
@@ -368,7 +368,7 @@
 <p><a href="/docs/18/es/FormObjects/listboxOverview.html#list-box-columns">List Box Column</a> - <a href="/docs/18/es/FormObjects/inputOverview.html">Input</a></p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="tipo-de-visualización"></a><a href="#tipo-de-visualización" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tipo de visualización</h2>
-<p>Used to associate a display format with the column data. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes).</p>
+<p>Utilizado para asociar un formato de visualización con los datos de la columna. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes).</p>
 <p>Boolean and number (numeric or integer) columns can be displayed as check boxes. In this case, the <a href="#title">Title</a> property can be defined.</p>
 <p>Las columnas booleanas también pueden mostrarse como menús emergentes. In this case, the <a href="#text-when-false-text-when-true">Text when False and Text when True</a> properties must be defined.</p>
 <h4><a class="anchor" aria-hidden="true" id="gramática-json-6"></a><a href="#gramática-json-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gramática JSON</h4>
@@ -385,7 +385,7 @@
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="no-renderizado"></a><a href="#no-renderizado" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>No renderizado</h2>
 <p>When this property is enabled, the object is not drawn on the form, however it can still be activated.</p>
-<p>In particular, this property allows implementing &quot;invisible&quot; buttons.  Non-rendered buttons can be placed on top of graphic objects. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.</p>
+<p>In particular, this property allows implementing &quot;invisible&quot; buttons.  Los botones no renderizados pueden colocarse sobre los objetos gráficos. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.</p>
 <h4><a class="anchor" aria-hidden="true" id="gramática-json-7"></a><a href="#gramática-json-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gramática JSON</h4>
 <table>
 <thead>
@@ -451,7 +451,7 @@
 <p><img src="/docs/18/assets/en/FormObjects/property_truncate1.png" alt=""></p></li>
 </ul>
 <blockquote>
-<p>La posición de la elipsis depende del sistema operativo. In the above example (Windows), it is added on the right side of the text. On macOS, the ellipsis is added in the middle of the text.</p>
+<p>La posición de la elipsis depende del sistema operativo. In the above example (Windows), it is added on the right side of the text. En macOS, la elipsis se añade en medio del texto.</p>
 </blockquote>
 <ul>
 <li><p>When the property is disabled, if the contents of a cell exceed the width of the column, they are simply clipped with no ellipsis added:</p>
@@ -512,7 +512,7 @@
 <p>When this option is selected, text automatically wraps to the next line whenever its width exceeds that of the column/area, if the column/area height permits it.</p>
 <ul>
 <li><p>In single-line columns/areas, only the last word that can be displayed entirely is displayed. 4D inserts line returns; it is possible to scroll the contents of the area by pressing the down arrow key.</p></li>
-<li><p>In multiline columns/areas, 4D carries out automatic line returns.</p></li>
+<li><p>En las columnas/áreas multilínea, 4D realiza retornos de línea automáticos.</p></li>
 </ul>
 <p><img src="/docs/18/assets/en/FormObjects/wordwrap2.png" alt=""></p>
 <h4><a class="anchor" aria-hidden="true" id="unchecked-for-list-boxno-for-input"></a><a href="#unchecked-for-list-boxno-for-input" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Unchecked for list box/No for input</h4>
