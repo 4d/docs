@@ -179,7 +179,7 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 <tr><td>protocol</td><td>Texto</td><td>&quot;auto&quot; o &quot;HTTP1&quot;. &quot;auto&quot; significa HTTP1 en la implementación actual</td><td>&quot;auto&quot;</td></tr>
 <tr><td>proxyAuthentication</td><td><a href="#authentication-object">authentication object</a></td><td>Autenticación del proxy de gestión de objetos</td><td>indefinido</td></tr>
 <tr><td>serverAuthentication</td><td><a href="#authentication-object">authentication object</a></td><td>Autenticación del servidor de gestión de objetos</td><td>indefinido</td></tr>
-<tr><td>returnResponseBody</td><td>Booleano</td><td>If false, the response body is not returned in the <a href="#response"><code>response</code> object</a>. Returns an error if false and <code>onData</code> is undefined</td><td>True</td></tr>
+<tr><td>returnResponseBody</td><td>Booleano</td><td>If false, the response body is not returned in the <a href="#response"><code>response</code> object</a>. Devuelve un error si es false y <code>onData</code> es indefinido</td><td>True</td></tr>
 <tr><td>timeout</td><td>Real</td><td>Tiempo de espera en segundos. Indefinido = sin tiempo de espera</td><td>Indefinido</td></tr>
 </tbody>
 </table>
@@ -198,7 +198,7 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 <ol>
 <li><code>onHeaders</code> se llama siempre una vez</li>
 <li><code>onData</code> is called zero or several times (not called if the request does not have a body)</li>
-<li>If no error occured, <code>onResponse</code> is always called once</li>
+<li>Si no se produce ningún error, <code>onResponse</code> se llama siempre una vez</li>
 <li>If an error occurs, <code>onError</code> is executed once (and terminates the request)</li>
 <li><code>onTerminate</code> se ejecuta siempre una vez</li>
 </ol>
@@ -272,7 +272,7 @@ var</span> <span class="hljs-variable">$request </span>: 4D.HTTPRequest
 </thead>
 <tbody>
 <tr><td>.body</td><td>Variant</td><td>Cuerpo de la respuesta. The type of the message is defined according to the <a href="#datatype"><code>dataType</code></a> property. Indefinido si el cuerpo no se ha recibido todavía</td></tr>
-<tr><td>.headers</td><td>Objeto</td><td>Headers of the response. <code>headers.key</code> = value (value can be a collection if the same key appears multiple times). Undefined if the headers have not been received yet.</td></tr>
+<tr><td>.headers</td><td>Objeto</td><td>Headers of the response. <code>headers.key</code> = value (value can be a collection if the same key appears multiple times). Indefinido si el los encabezados no se ha recibido aún.</td></tr>
 <tr><td>.status</td><td>Número</td><td>Código de estado de la respuesta</td></tr>
 <tr><td>.statusText</td><td>Texto</td><td>Mensaje explicando el código de estado</td></tr>
 </tbody>

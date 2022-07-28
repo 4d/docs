@@ -69,7 +69,7 @@
         </script></nav></div><div class="container mainContainer docsContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/4D/docs/edit/master/docs/Debugging/debugger.md" target="_blank" rel="noreferrer noopener">Edit</a><h1 id="__docusaurus" class="postHeaderTitle">Depurador</h1></header><article><div><span><p>The debugger is useful when you need to spot errors or monitor the execution of methods. It allows you to step through your code slowly and examine the information. This process is called &quot;tracing&quot;.</p>
 <p><img src="/docs/assets/en/Debugging/debugger-window-intro.png" alt="debugger-window-local"></p>
 <h2><a class="anchor" aria-hidden="true" id="llamada-al-depurador"></a><a href="#llamada-al-depurador" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Llamada al depurador</h2>
-<p>There are multiple ways to get the Debugger to display:</p>
+<p>Hay varias formas de conseguir que el depurador se muestre:</p>
 <ul>
 <li>Clicking the <strong>Trace</strong> button in the <a href="/docs/es/Debugging/basics.html#syntax-error-window">Syntax Error window</a></li>
 <li>Using the <a href="https://doc.4d.com/4dv19/help/command/en/page157.html"><code>TRACE</code></a> command</li>
@@ -172,7 +172,7 @@
 </tbody>
 </table>
 <p>La variable <code>$a</code> aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.</p></li>
-<li><p>You click the <strong>Step Over</strong> button. The program counter is now set to the line <code>b:=a+1</code>. En este punto, el tema muestra:</p>
+<li><p>You click the <strong>Step Over</strong> button. El contador del programa se pone ahora en la línea <code>b:=a+1</code>. En este punto, el tema muestra:</p>
 <table>
 <thead>
 <tr><th>$a</th><th>1</th></tr>
@@ -182,7 +182,7 @@
 </tbody>
 </table>
 <p>El valor de la variable <code>$a</code> es ahora 1. La variable <code>$b</code> aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.</p></li>
-<li><p>You click the <strong>Step Over</strong> button again. The program counter is now set on the line with c:=a+b. At this point the Line Objects theme displays:</p>
+<li><p>You click the <strong>Step Over</strong> button again. El contador del programa ahora está en la línea con c:=a+b. At this point the Line Objects theme displays:</p>
 <table>
 <thead>
 <tr><th>$c</th><th>Indefinido</th></tr>
@@ -201,11 +201,11 @@
 <tr><th>Subtema</th><th>Descripción</th><th>¿Se pueden modificar los valores?</th></tr>
 </thead>
 <tbody>
-<tr><td>Interproceso</td><td>List of interprocess variables being used at this point</td><td>Sí</td></tr>
+<tr><td>Interproceso</td><td>Lista de variables de interproceso que se están utilizando en este punto</td><td>Sí</td></tr>
 <tr><td>Proceso</td><td>Lista de variables proceso utilizadas por el proceso actual</td><td>Sí</td></tr>
-<tr><td>Local</td><td>List of local variables used by the method being traced</td><td>Sí</td></tr>
+<tr><td>Local</td><td>Lista de variables locales utilizadas por el método rastreado</td><td>Sí</td></tr>
 <tr><td>Parámetros</td><td>Lista de parámetros recibidos por el método</td><td>Sí</td></tr>
-<tr><td>Self</td><td>Pointer to the current object, when tracing an Object Method</td><td>No</td></tr>
+<tr><td>Self</td><td>Puntero al objeto actual, cuando se rastrea un método Objeto</td><td>No</td></tr>
 </tbody>
 </table>
 <p>Arrays, like other variables, appear in the Interprocess, Process, and Local subthemes, depending on their scope. El depurador muestra los primeros 100 elementos. Inside the <strong>Value</strong> column, you can modify the values of array elements, but not the size of the arrays.</p>
@@ -220,11 +220,11 @@
 <h4><a class="anchor" aria-hidden="true" id="constantes"></a><a href="#constantes" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Constantes</h4>
 <p>Like the Constants page of the Explorer window, this theme displays predefined constants provided by 4D. Las expresiones de este tema no pueden ser modificadas.</p>
 <h4><a class="anchor" aria-hidden="true" id="semáforos"></a><a href="#semáforos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Semáforos</h4>
-<p>This theme lists the local semaphores currently being set. For each semaphore, the Value column provides the name of the process that sets the semaphore. Las expresiones de este tema no pueden ser modificadas. The expressions from this theme cannot be modified.</p>
+<p>Este tema lista los semáforos locales que se están configurando actualmente. For each semaphore, the Value column provides the name of the process that sets the semaphore. Las expresiones de este tema no pueden ser modificadas. The expressions from this theme cannot be modified.</p>
 <h4><a class="anchor" aria-hidden="true" id="procesos"></a><a href="#procesos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Procesos</h4>
 <p>This theme lists the processes started since the beginning of the working session. The value column displays the time used and the current state for each process (i.e., Executing, Paused, and so on). Las expresiones de este tema no pueden ser modificadas.</p>
 <h4><a class="anchor" aria-hidden="true" id="tablas-y-campos"></a><a href="#tablas-y-campos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Tablas y campos</h4>
-<p>This theme lists the tables and fields in the 4D database. For each Table item, the Value column displays the size of the current selection for the current process as well as the number of <strong>locked records</strong>.</p>
+<p>Este tema lista las tablas y los campos en la base 4D. For each Table item, the Value column displays the size of the current selection for the current process as well as the number of <strong>locked records</strong>.</p>
 <p>For each Field item, the Value column displays the value of the field for the current record (except picture and BLOB). You can modify the field values but not the the tables' information.</p>
 <h4><a class="anchor" aria-hidden="true" id="conjuntos"></a><a href="#conjuntos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Conjuntos</h4>
 <p>This theme lists the sets defined in the current process (the one you're currently tracing) and the interprocess sets. For each set, the Value column displays the number of records and the table name. Las expresiones de este tema no pueden ser modificadas.</p>
@@ -235,13 +235,13 @@
 <h4><a class="anchor" aria-hidden="true" id="web"></a><a href="#web" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Web</h4>
 <p>This theme displays information regarding the main Web server of the application (only available if the Web server is active):</p>
 <ul>
-<li>Web File To Send: name of Web file waiting to be sent (if any)</li>
+<li>Archivo web a enviar: nombre del archivo web en espera de ser enviado (si lo hay)</li>
 <li>Web Cache Usage: number of pages present in Web cache as well as its use percentage</li>
 <li>Web Server Elapsed Time: duration of Web server use in hours:minutes:seconds format</li>
 <li>Web Hits Count: total number of HTTP requests received since Web server launch, as well as the instantaneous number of requests per second</li>
 <li>Number of active Web processes: number of active Web processes, all Web processes together</li>
 </ul>
-<p>The expressions contained within this theme cannot be modified.</p>
+<p>Las expresiones contenidas en este tema no pueden ser modificadas.</p>
 <h3><a class="anchor" aria-hidden="true" id="menú-contextual-de-la-ventana-de-expresión"></a><a href="#menú-contextual-de-la-ventana-de-expresión" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Menú contextual de la ventana de expresión</h3>
 <p>Additional options are available from the contextual menu of the Watch pane.</p>
 <p><img src="/docs/assets/en/Debugging/contextual-menu.png" alt="context-menu"></p>
@@ -256,12 +256,12 @@
 <li><strong>Enable activity monitoring</strong>: Activates the monitoring of activity (advanced checking of internal activity of the application) and displays the information retrieved in the additional themes: <strong>Scheduler</strong>, <strong>Web</strong> and <strong>Network</strong>.</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="panel-de-la-cadena-de-llamadas"></a><a href="#panel-de-la-cadena-de-llamadas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Panel de la cadena de llamadas</h2>
-<p>A method may call other methods or class functions, which may call other methods or functions. The Call Chain pane lets you keep track of that hierarchy.</p>
+<p>A method may call other methods or class functions, which may call other methods or functions. El panel de la Cadena de Llamadas le permite hacer un seguimiento de esa jerarquía.</p>
 <p><img src="/docs/assets/en/Debugging/call-chain-example.png" alt="call-chain-pane"></p>
-<p>Each main level item is the name of a method or class function. The top item is the one you are currently tracing, the next main level item is the name of the caller (the method or function that called the one you are currently tracing), the next one is the caller's caller, and so on.</p>
+<p>Cada elemento del nivel principal es el nombre de un método o función clase. The top item is the one you are currently tracing, the next main level item is the name of the caller (the method or function that called the one you are currently tracing), the next one is the caller's caller, and so on.</p>
 <p>En la imagen de arriba:</p>
 <ul>
-<li><code>thirdMethod</code> has not received any parameter</li>
+<li><code>thirdMethod</code> no ha recibido ningún parámetro</li>
 <li><code>$0</code> is currently undefined, as the method did not assign any value to <code>$0</code> (because it has not executed this assignment yet or because the method is a subroutine and not a function)</li>
 <li><code>secondMethod</code> has received three parameters from <code>firstMethod</code>:
 <ul>
@@ -288,9 +288,9 @@
 <li>y cualquier otra cosa que devuelva un valor</li>
 </ul>
 <p><img src="/docs/assets/en/Debugging/custom-watch-pane.png" alt="custom-Watch-pane"></p>
-<p>You can evaluate any expression that can be shown in text form. This does not cover picture and BLOB fields or variables. To display BLOB contents, you can use BLOB commands, such as <a href="https://doc.4d.com/4dv19/help/command/en/page555.html">BLOB to text</a>.</p>
+<p>Puede evaluar toda expresión que pueda mostrarse en forma de texto. This does not cover picture and BLOB fields or variables. To display BLOB contents, you can use BLOB commands, such as <a href="https://doc.4d.com/4dv19/help/command/en/page555.html">BLOB to text</a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="gestión-de-expresiones"></a><a href="#gestión-de-expresiones" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gestión de expresiones</h3>
-<p>There are several ways to add expressions to the list:</p>
+<p>Hay varias formas de añadir expresiones a la lista:</p>
 <ul>
 <li>Drag and drop an object or expression from the Watch Pane or the Call Chain Pane</li>
 <li>Select an expression in the <a href="#source-code-pane">Source Code pane</a> and press <strong>ctrl+D</strong>  (Windows) or <strong>cmd+D</strong> (macOS)</li>
@@ -339,7 +339,7 @@
 <h3><a class="anchor" aria-hidden="true" id="añadir-expresiones-al-panel-de-control-personalizado"></a><a href="#añadir-expresiones-al-panel-de-control-personalizado" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Añadir expresiones al panel de control personalizado</h3>
 <p>You can copy any selected expression from the Source Code Pane to the <a href="#custom-watch-pane">Custom Watch Pane</a>.</p>
 <ol>
-<li>In the Source code pane, select the expression to evaluate</li>
+<li>En el panel de código fuente, seleccione la expresión a evaluar</li>
 <li>Haga una de las siguientes cosas:
 <ul>
 <li>Drag and drop the selected text to the Expression area of the Custom Watch Pane</li>
@@ -351,8 +351,8 @@
 <p>The yellow arrow in the left margin of the Source Code pane is called the program counter. Marca la siguiente línea a ejecutar.</p>
 <p>By default, the program counter line (also called the running line) is highlighted in the debugger. You can customize the highlight color in the <a href="/docs/es/Preferences/methods.html">Methods page of the Preferences</a>.</p>
 <h4><a class="anchor" aria-hidden="true" id="mover-el-contador-del-programa"></a><a href="#mover-el-contador-del-programa" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Mover el contador del programa</h4>
-<p>For debugging purposes, you can move the program counter for the method at the top of the call chain (the method currently executing). To do so, click and drag the yellow arrow to another line.</p>
-<p>This only tells the debugger to pursue tracing or executing from a different point. It does not execute lines or cancel their execution. All current settings, fields, variables, etc. are not impacted.</p>
+<p>For debugging purposes, you can move the program counter for the method at the top of the call chain (the method currently executing). Para ello, haga clic y arrastre la flecha amarilla a otra línea.</p>
+<p>This only tells the debugger to pursue tracing or executing from a different point. It does not execute lines or cancel their execution. Todos los ajustes, campos, variables, etc. actuales no se ven afectados.</p>
 <p>Por ejemplo:</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">// ...</span><span class="hljs-keyword">
  If</span>(<span class="hljs-literal">This</span> condition)
@@ -402,7 +402,7 @@
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="panel-de-código-fuente-1"></a><a href="#panel-de-código-fuente-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Panel de código fuente</h4>
 <ul>
-<li>Click in the left margin to set or remove break points.</li>
+<li>Haga clic en el margen izquierdo para definiir o eliminar puntos de ruptura.</li>
 <li><strong>Alt+Shift+Click</strong> (Windows) or <strong>Option+Shift+Click</strong> (macOS) sets a temporary break point.</li>
 <li><strong>Alt-Click</strong> (Windows) or <strong>Option-Click</strong> displays the Edit Break window for a new or existing break point.</li>
 <li>A selected expression or object can be copied to the Custom Watch Pane by simple drag and drop.</li>
@@ -416,7 +416,7 @@
 <li><strong>Ctrl + *</strong> (Windows) or <strong>Command + *</strong> (macOS) forces the updating of the Watch Pane.</li>
 <li>When no item is selected in any pane, press <strong>Enter</strong> to step over.</li>
 <li>When an item value is selected, use the arrows keys to navigate through the list.</li>
-<li>When editing an item, use the arrow keys to move the cursor. Use Ctrl-A/X/C/V (Windows) or Command-A/X/C/V (macOS) as shortcuts to the Select All/Cut/Copy/Paste menu commands of the Edit menu.</li>
+<li>Al editar un elemento, utilice las teclas de flecha para mover el cursor. Use Ctrl-A/X/C/V (Windows) or Command-A/X/C/V (macOS) as shortcuts to the Select All/Cut/Copy/Paste menu commands of the Edit menu.</li>
 </ul>
 </span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/es/Debugging/basics.html"><span class="arrow-prev">← </span><span>Básicos</span></a><a class="docs-next button" href="/docs/es/Debugging/breakpoints.html"><span>Puntos de ruptura y captura de comandos</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#llamada-al-depurador">Llamada al depurador</a></li><li><a href="#botones-barra-de-herramientas">Botones barra de herramientas</a></li><li><a href="#ventana-de-expresión">Ventana de expresión</a><ul class="toc-headings"><li><a href="#lista-de-expresiones">Lista de expresiones</a></li><li><a href="#menú-contextual-de-la-ventana-de-expresión">Menú contextual de la ventana de expresión</a></li></ul></li><li><a href="#panel-de-la-cadena-de-llamadas">Panel de la cadena de llamadas</a></li><li><a href="#panel-de-vigilancia-personalizado">Panel de vigilancia personalizado</a><ul class="toc-headings"><li><a href="#gestión-de-expresiones">Gestión de expresiones</a></li><li><a href="#menú-contextual-de-la-ventana-de-expresión-1">Menú contextual de la ventana de expresión</a></li></ul></li><li><a href="#panel-de-código-fuente">Panel de código fuente</a><ul class="toc-headings"><li><a href="#tips">Tips</a></li><li><a href="#añadir-expresiones-al-panel-de-control-personalizado">Añadir expresiones al panel de control personalizado</a></li><li><a href="#program-counter">Program Counter</a></li><li><a href="#menú-contextual">Menú contextual</a></li><li><a href="#buscar-siguienteanterior">Buscar siguiente/anterior</a></li></ul></li><li><a href="#atajos">Atajos</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {

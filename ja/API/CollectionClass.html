@@ -73,8 +73,8 @@
 <tr><th></th></tr>
 </thead>
 <tbody>
-<tr><td><a href="#new-collection"><strong>New collection</strong> {( <em>...value</em> : any )} : Collection</a><p>     空の、あるいは値の入った新規コレクションを作成し、その参照を返します</td></tr>
-<tr><td><a href="#new-shared-collection"><strong>New shared collection</strong> {( <em>...value</em> : any )} : Collection</a><p>     空の、あるいは値が入った新規コレクションを作成し、その参照を返します</td></tr>
+<tr><td><a href="#new-collection"> <strong>New collection</strong> {( <em>...value</em> : any )} : Collection</a><p>    空の、あるいは値の入った新規コレクションを作成し、その参照を返します</td></tr>
+<tr><td><a href="#new-shared-collection"> <strong>New shared collection</strong> {( <em>...value</em> : any )} : Collection</a><p>    空の、あるいは値が入った新規コレクションを作成し、その参照を返します</td></tr>
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="例題"></a><a href="#例題" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h3>
@@ -87,46 +87,46 @@
 <tr><th></th></tr>
 </thead>
 <tbody>
-<tr><td><a href="#average"><strong>.average</strong>( {<em>propertyPath</em> : Text } ) : Real</a><p>    コレクションインスタンス内で定義されている値の算術平均を返します</td></tr>
-<tr><td><a href="#clear"><strong>.clear()</strong> : Collection</a><p>    コレクションインスタンス内の全要素を削除し、空のコレクションを返します</td></tr>
-<tr><td><a href="#combine"><strong>.combine</strong>( <em>col2</em> : Collection {; <em>index</em> : Integer } ) : Collection</a><p>    コレクションインスタンスの最後、あるいは <em>index</em> で指定した位置に <em>col2</em> の要素を挿入し、変更された元のコレクションを返します</td></tr>
-<tr><td><a href="#concat"><strong>.concat</strong>( <em>value</em> : any { <em>;...valueN</em> } ) : Collection</a><p>    <em>value</em> に指定した要素を元のコレクションの最後に追加した、新しいコレクションを返します</td></tr>
-<tr><td><a href="#copy"><strong>.copy</strong>() : Collection<br><strong>.copy</strong>( <em>option</em> : Integer ) : Collection<br><strong>.copy</strong>( <em>option</em> : Integer ; <em>groupWithCol</em> : Collection ) : Collection<br><strong>.copy</strong>( <em>option</em> : Integer ; <em>groupWithObj</em> : Object ) : Collection</a><p>     コレクションインスタンスのディープ・コピーを返します</td></tr>
-<tr><td><a href="#count"><strong>.count</strong>( { <em>propertyPath</em> : Text } ) : Real</a><p>    コレクション内の、null ではない要素の個数を返します</td></tr>
-<tr><td><a href="#countvalues"><strong>.countValues</strong>( <em>value</em> : any {; <em>propertyPath</em> : Text } ) : Real</a><p>    <em>value</em> 引数に指定した値がコレクション内において見つかった回数を返します</td></tr>
-<tr><td><a href="#distinct"><strong>.distinct</strong>( {<em>option</em> : Integer} ) : Collection<br><strong>.distinct</strong>( <em>propertyPath</em> : Text {; <em>option</em> : Integer } ) : Collection</a><p>    元のコレクションから重複しない (異なる) 値のみを格納した新しいコレクションを返します</td></tr>
-<tr><td><a href="#equal"><strong>.equal</strong>( <em>collection2</em> : Collection {; <em>option</em> : Integer } ) : Boolean</a><p>    コレクションを <em>collection2</em> とディープ比較し、同一の場合には <strong>true</strong> を返します</td></tr>
-<tr><td><a href="#every"><strong>.every</strong>( { <em>startFrom</em> : Integer ; } <em>formula</em> : 4D.Function { ;<em>...param</em> : any } ) : Boolean<br><strong>.every</strong>( { <em>startFrom</em> : Integer ; } <em>methodName</em> : Text { ;<em>...param</em> : any } ) : Boolean</a><p>    コレクション内の全要素が、<em>formula</em> オブジェクトまたは <em>methodName</em> に指定したメソッドで実装されたテストにパスした場合には <strong>true</strong> を返します</td></tr>
-<tr><td><a href="#extract"><strong>.extract</strong>( <em>propertyPath</em> : Text { ; <em>option</em> : Integer } ) : Collection<br><strong>.extract</strong>( <em>propertyPath</em> : Text ;  <em>targetPath</em> : Text  { ;...<em>propertyPathN</em> : Text ;... <em>targetPathN</em> : Text } ) : Collection</a><p>    元のオブジェクトのコレクションから、<em>propertyPath</em> 引数が指定するプロパティ値を抽出し、新しいコレクションに格納して返します</td></tr>
-<tr><td><a href="#fill"><strong>.fill</strong>( <em>value</em> : any ) : Collection<br><strong>.fill</strong>( <em>value</em> : any ;  <em>startFrom</em>  : Integer { ; <em>end</em> : Integer } ) : Collection</a><p>    コレクションを <em>value</em> 引数の値で満たし、同コレクションを返します。オプションとして、<em>startFrom</em> および <em>end</em> インデックスを渡して代入開始位置および終了位置を指定することもできます</td></tr>
-<tr><td><a href="#filter"><strong>.filter</strong>( <em>formula</em> : 4D.Function { ; <em>...param</em> : any } ) : Collection<br><strong>.filter</strong>( <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Collection</a><p>    </td></tr>
-<tr><td><a href="#find"><strong>.find</strong>( { <em>startFrom</em> : Integer ; }  <em>formula</em> : 4D.Function { ; <em>...param</em> : any } ) : any<br><strong>.find</strong>( { <em>startFrom</em> : Integer ; }  <em>methodName</em> : Text { ; <em>...param</em> : any } ) : any</a><p>    <em>formula</em> 引数のフォーミュラまたは <em>methodName</em> 引数のメソッドを各コレクション要素に適用して、<strong>true</strong> を返す最初の要素を返します</td></tr>
-<tr><td><a href="#find"><strong>.findIndex</strong>( { <em>startFrom</em> : Integer ; }  <em>formula</em> : 4D.Function { ; <em>...param</em> : any } ) : Integer<br><strong>.findIndex</strong>( { <em>startFrom</em> : Integer ; }  <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Integer</a><p>    <em>formula</em> 引数のフォーミュラまたは <em>methodName</em> 引数のメソッドを各コレクション要素に適用して、<strong>true</strong> を返す最初の要素のインデックスを返します</td></tr>
-<tr><td><a href="#indexof"><strong>.indexOf</strong>(  <em>toSearch</em> : expression { ; <em>startFrom</em> : Integer } ) : Integer </a><p>    <em>toSearch</em> 引数の式をコレクション要素の中から検索し、最初に見つかった要素のインデックス (見つからなかった場合には -1) を返します</td></tr>
-<tr><td><a href="#indices"><strong>.indices</strong>(  <em>queryString</em> : Text { ; <em>...value</em> : any } ) : Collection </a><p>    <em>queryString</em> 引数の検索条件に合致する、元のコレクション要素のインデックスを返します</td></tr>
-<tr><td><a href="#insert"><strong>.insert</strong>( <em>index</em> : Integer ; <em>element</em> : any ) : Collection </a><p>     <em>index</em> で指定したコレクションインスタンスの位置に <em>element</em> 要素を挿入し、変更された元のコレクションを返します</td></tr>
-<tr><td><a href="#join"><strong>.join</strong>( <em>delimiter</em> : Text { ; <em>option</em> : Integer } ) : Text </a><p>    <em>delimiter</em> に渡した文字列を区切り文字として、コレクションの全要素を一つの文字列につなげます</td></tr>
-<tr><td><a href="#lastindexof"><strong>.lastIndexOf</strong>( <em>toSearch</em> : expression { ; <em>startFrom</em> : Integer } ) : Integer </a><p>    <em>toSearch</em> 引数の式をコレクション要素の中から検索し、最後に見つかった要素のインデックス (見つからなかった場合には -1) を返します</td></tr>
-<tr><td>[<strong>.length</strong> : Integer</td></tr>
+<tr><td><a href="#average"> <strong>.average</strong>( {<em>propertyPath</em> : Text } ) : Real</a><p>    コレクションインスタンス内で定義されている値の算術平均を返します</td></tr>
+<tr><td><a href="#clear"> <strong>.clear()</strong> : Collection</a><p>    コレクションインスタンス内の全要素を削除し、空のコレクションを返します</td></tr>
+<tr><td><a href="#combine"> <strong>.combine</strong>( <em>col2</em> : Collection {; <em>index</em> : Integer } ) : Collection</a><p>    コレクションインスタンスの最後、あるいは <em>index</em> で指定した位置に <em>col2</em> の要素を挿入し、変更された元のコレクションを返します</td></tr>
+<tr><td><a href="#concat"> <strong>.concat</strong>( <em>value</em> : any { <em>;...valueN</em> } ) : Collection</a><p>    <em>value</em> に指定した要素を元のコレクションの最後に追加した、新しいコレクションを返します</td></tr>
+<tr><td><a href="#copy"> <strong>.copy</strong>() : Collection<br><strong>.copy</strong>( <em>option</em> : Integer ) : Collection<br><strong>.copy</strong>( <em>option</em> : Integer ; <em>groupWithCol</em> : Collection ) : Collection<br><strong>.copy</strong>( <em>option</em> : Integer ; <em>groupWithObj</em> : Object ) : Collection</a><p>     コレクションインスタンスのディープ・コピーを返します</td></tr>
+<tr><td><a href="#count"> <strong>.count</strong>( { <em>propertyPath</em> : Text } ) : Real</a><p>    コレクション内の、null ではない要素の個数を返します</td></tr>
+<tr><td><a href="#countvalues"> <strong>.countValues</strong>( <em>value</em> : any {; <em>propertyPath</em> : Text } ) : Real</a><p>     <em>value</em> 引数に指定した値がコレクション内において見つかった回数を返します</td></tr>
+<tr><td><a href="#distinct"> <strong>.distinct</strong>( {<em>option</em> : Integer} ) : Collection<br><strong>.distinct</strong>( <em>propertyPath</em> : Text {; <em>option</em> : Integer } ) : Collection</a><p>     元のコレクションから重複しない (異なる) 値のみを格納した新しいコレクションを返します</td></tr>
+<tr><td><a href="#equal"> <strong>.equal</strong>( <em>collection2</em> : Collection {; <em>option</em> : Integer } ) : Boolean</a><p>     コレクションを <em>collection2</em> とディープ比較し、同一の場合には <strong>true</strong> を返します</td></tr>
+<tr><td><a href="#every"> <strong>.every</strong>( { <em>startFrom</em> : Integer ; } <em>formula</em> : 4D.Function { ;<em>...param</em> : any } ) : Boolean<br><strong>.every</strong>( { <em>startFrom</em> : Integer ; } <em>methodName</em> : Text { ;<em>...param</em> : any } ) : Boolean</a><p>    コレクション内の全要素が、<em>formula</em> オブジェクトまたは <em>methodName</em> に指定したメソッドで実装されたテストにパスした場合には <strong>true</strong> を返します</td></tr>
+<tr><td><a href="#extract"> <strong>.extract</strong>( <em>propertyPath</em> : Text { ; <em>option</em> : Integer } ) : Collection<br><strong>.extract</strong>( <em>propertyPath</em> : Text ;  <em>targetPath</em> : Text  { ;...<em>propertyPathN</em> : Text ;... <em>targetPathN</em> : Text } ) : Collection</a><p>    元のオブジェクトのコレクションから、<em>propertyPath</em> 引数が指定するプロパティ値を抽出し、新しいコレクションに格納して返します</td></tr>
+<tr><td><a href="#fill"> <strong>.fill</strong>( <em>value</em> : any ) : Collection<br><strong>.fill</strong>( <em>value</em> : any ;  <em>startFrom</em>  : Integer { ; <em>end</em> : Integer } ) : Collection</a><p>    コレクションを <em>value</em> 引数の値で満たし、同コレクションを返します。オプションとして、<em>startFrom</em> および <em>end</em> インデックスを渡して代入開始位置および終了位置を指定することもできます</td></tr>
+<tr><td><a href="#filter"> <strong>.filter</strong>( <em>formula</em> : 4D.Function { ; <em>...param</em> : any } ) : Collection<br><strong>.filter</strong>( <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Collection</a><p>    </td></tr>
+<tr><td><a href="#find"> <strong>.find</strong>( { <em>startFrom</em> : Integer ; }  <em>formula</em> : 4D.Function { ; <em>...param</em> : any } ) : any<br><strong>.find</strong>( { <em>startFrom</em> : Integer ; }  <em>methodName</em> : Text { ; <em>...param</em> : any } ) : any</a><p>    <em>formula</em> 引数のフォーミュラまたは <em>methodName</em> 引数のメソッドを各コレクション要素に適用して、<strong>true</strong> を返す最初の要素を返します</td></tr>
+<tr><td><a href="#find"> <strong>.findIndex</strong>( { <em>startFrom</em> : Integer ; }  <em>formula</em> : 4D.Function { ; <em>...param</em> : any } ) : Integer<br><strong>.findIndex</strong>( { <em>startFrom</em> : Integer ; }  <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Integer</a><p>    <em>formula</em> 引数のフォーミュラまたは <em>methodName</em> 引数のメソッドを各コレクション要素に適用して、<strong>true</strong> を返す最初の要素のインデックスを返します</td></tr>
+<tr><td><a href="#indexof"> <strong>.indexOf</strong>(  <em>toSearch</em> : expression { ; <em>startFrom</em> : Integer } ) : Integer </a><p>     <em>toSearch</em> 引数の式をコレクション要素の中から検索し、最初に見つかった要素のインデックス (見つからなかった場合には -1) を返します</td></tr>
+<tr><td><a href="#indices"> <strong>.indices</strong>(  <em>queryString</em> : Text { ; <em>...value</em> : any } ) : Collection </a><p>    <em>queryString</em> 引数の検索条件に合致する、元のコレクション要素のインデックスを返します</td></tr>
+<tr><td><a href="#insert"> <strong>.insert</strong>( <em>index</em> : Integer ; <em>element</em> : any ) : Collection </a><p>    <em>index</em> で指定したコレクションインスタンスの位置に <em>element</em> 要素を挿入し、変更された元のコレクションを返します</td></tr>
+<tr><td><a href="#join"> <strong>.join</strong>( <em>delimiter</em> : Text { ; <em>option</em> : Integer } ) : Text </a><p>    <em>delimiter</em> に渡した文字列を区切り文字として、コレクションの全要素を一つの文字列につなげます</td></tr>
+<tr><td><a href="#lastindexof"> <strong>.lastIndexOf</strong>( <em>toSearch</em> : expression { ; <em>startFrom</em> : Integer } ) : Integer </a><p>     <em>toSearch</em> 引数の式をコレクション要素の中から検索し、最後に見つかった要素のインデックス (見つからなかった場合には -1) を返します</td></tr>
+<tr><td>[ <strong>.length</strong> : Integer</td></tr>
 <tr><td>](#length)<p>    コレクション内の要素数を返します</td></tr>
-<tr><td><a href="#map"><strong>.map</strong>( <em>formula</em> : 4D.Function { ; <em>...param</em> : any } ) : Collection<br><strong>.map</strong>( <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Collection </a><p>    元のコレクションの各要素に対して <em>formula</em> フォーミュラまたは <em>methodName</em> メソッドを呼び出した結果に基づいた、新しいコレクションを作成します</td></tr>
-<tr><td><a href="#max"><strong>.max</strong>( { <em>propertyPath</em> : Text } ) : any </a><p>    コレクション内の最大値を持つ要素を返します</td></tr>
-<tr><td><a href="#min"><strong>.min</strong>( { <em>propertyPath</em> : Text } ) : any </a><p>    コレクション内の最小値を持つ要素を返します</td></tr>
-<tr><td><a href="#orderby"><strong>.orderBy</strong>( ) : Collection<br><strong>.orderBy</strong>( <em>pathStrings</em> : Text ) : Collection<br><strong>.orderBy</strong>( <em>pathObjects</em> : Collection ) : Collection<br><strong>.orderBy</strong>( <em>ascOrDesc</em> : Integer ) : Collection </a><p>    コレクションの要素を指定順に並べ替えた新しいコレクションを返します</td></tr>
-<tr><td><a href="#orderbymethod"><strong>.orderByMethod</strong>( <em>formula</em> : 4D.Function { ; ...<em>extraParam</em> : expression } ) : Collection<br><strong>.orderByMethod</strong>( <em>methodName</em> : Text { ; ...<em>extraParam</em> : expression } ) : Collection</a><p>    <em>formula</em> フォーミュラまたは <em>methodName</em> メソッドを通して定義された順番でコレクション要素を並べ替えた新しいコレクションを返します</td></tr>
-<tr><td><a href="#pop"><strong>.pop()</strong> : any </a><p>    コレクションから最後の要素を取り除き、それを戻り値として返します</td></tr>
-<tr><td><a href="#push"><strong>.push</strong>( <em>element</em> : any { ;...<em>elementN</em> } ) : Collection </a><p>    一つ以上の <em>element</em> 引数をコレクションインスタンスの最後に追加し、変更された元のコレクションを返します</td></tr>
-<tr><td><a href="#query"><strong>.query</strong>( <em>queryString</em> : Text ; <em>...value</em> : any ) : Collection<br><strong>.query</strong>( <em>queryString</em> : Text ; <em>querySettings</em> : Object ) : Collection </a><p>    検索条件に合致するオブジェクトコレクションの要素をすべて返します</td></tr>
-<tr><td><a href="#reduce"><strong>.reduce</strong>( <em>formula</em> : 4D.Function { ; <em>initValue</em> : any { ; <em>...param</em> : expression }} ) : any<br><strong>.reduce</strong>( <em>methodName</em> : Text { ; <em>initValue</em> : any { ; <em>...param</em> : expression }} ) : any </a><p>    <em>formula</em> または <em>methodName</em> コールバックをアキュムレーターおよびコレクションの各要素に (左から右へ) 適用して、単一の値にまとめます</td></tr>
-<tr><td><a href="#remove"><strong>.remove</strong>( <em>index</em> : Integer { ; <em>howMany</em> : Integer } ) : Collection </a><p>    <em>index</em> で指定した位置から一つまた複数のコレクション要素を削除し、変更されたコレクションを返します</td></tr>
-<tr><td><a href="#resize"><strong>.resize</strong>( <em>size</em> : Integer { ; <em>defaultValue</em> : any } ) : Collection </a><p>    コレクションの length を引数で指定されたサイズに設定し、変更された元のコレクションを返します</td></tr>
-<tr><td><a href="#reverse"><strong>.reverse( )</strong> : Collection </a><p>    全要素が逆順になった、コレクションのディープ・コピーを返します</td></tr>
-<tr><td><a href="#shift"><strong>.shift()</strong> : any</a><p>    コレクションの先頭要素を取り除き、それを戻り値として返します</td></tr>
-<tr><td><a href="#slice"><strong>.slice</strong>( <em>startFrom</em> : Integer { ; <em>end</em> : Integer } ) : Collection</a><p>    コレクションの一部を、新しいコレクションの中に返します</td></tr>
-<tr><td><a href="#some"><strong>.some</strong>( { <em>startFrom</em> : Integer ; } <em>formula</em> : 4D.Function { ; <em>...param</em> : any } ) : Boolean<br><strong>.some</strong>( { <em>startFrom</em> : Integer ; } <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Boolean</a><p>    少なくとも一つのコレクション要素が、<em>formula</em> または <em>methodName</em> に指定したコードで実装されたテストにパスした場合に <strong>true</strong> を返します</td></tr>
-<tr><td><a href="#sort"><strong>.sort</strong>( <em>formula</em> : 4D.Function { ; <em>...extraParam</em> : any } ) : Collection<br><strong>.sort</strong>( <em>methodName</em> : Text { ; <em>...extraParam</em> : any } ) : Collection </a><p>    コレクションの要素を並べ替え、並べ替えられた元のコレクションを返します</td></tr>
-<tr><td><a href="#sum"><strong>.sum</strong>( { <em>propertyPath</em> : Text } ) : Real</a><p>    コレクションインスタンスの全要素の値を合計して返します</td></tr>
-<tr><td><a href="#unshift"><strong>.unshift</strong>( <em>value</em> : any { ;...<em>valueN</em> : any } ) : Collection</a><p>    一つ以上の <em>value</em> 引数をコレクションインスタンスの先頭に挿入し、変更された元のコレクションを返します</td></tr>
+<tr><td><a href="#map"> <strong>.map</strong>( <em>formula</em> : 4D.Function { ; <em>...param</em> : any } ) : Collection<br><strong>.map</strong>( <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Collection </a><p>    元のコレクションの各要素に対して <em>formula</em> フォーミュラまたは <em>methodName</em> メソッドを呼び出した結果に基づいた、新しいコレクションを作成します</td></tr>
+<tr><td><a href="#max"> <strong>.max</strong>( { <em>propertyPath</em> : Text } ) : any </a><p>    コレクション内の最大値を持つ要素を返します</td></tr>
+<tr><td><a href="#min"> <strong>.min</strong>( { <em>propertyPath</em> : Text } ) : any </a><p>    コレクション内の最小値を持つ要素を返します</td></tr>
+<tr><td><a href="#orderby"> <strong>.orderBy</strong>( ) : Collection<br><strong>.orderBy</strong>( <em>pathStrings</em> : Text ) : Collection<br><strong>.orderBy</strong>( <em>pathObjects</em> : Collection ) : Collection<br><strong>.orderBy</strong>( <em>ascOrDesc</em> : Integer ) : Collection </a><p>    コレクションの要素を指定順に並べ替えた新しいコレクションを返します</td></tr>
+<tr><td><a href="#orderbymethod"> <strong>.orderByMethod</strong>( <em>formula</em> : 4D.Function { ; ...<em>extraParam</em> : expression } ) : Collection<br><strong>.orderByMethod</strong>( <em>methodName</em> : Text { ; ...<em>extraParam</em> : expression } ) : Collection</a><p>    <em>formula</em> フォーミュラまたは <em>methodName</em> メソッドを通して定義された順番でコレクション要素を並べ替えた新しいコレクションを返します</td></tr>
+<tr><td><a href="#pop"> <strong>.pop()</strong> : any </a><p>    コレクションから最後の要素を取り除き、それを戻り値として返します</td></tr>
+<tr><td><a href="#push"> <strong>.push</strong>( <em>element</em> : any { ;...<em>elementN</em> } ) : Collection </a><p>    一つ以上の <em>element</em> 引数をコレクションインスタンスの最後に追加し、変更された元のコレクションを返します</td></tr>
+<tr><td><a href="#query"> <strong>.query</strong>( <em>queryString</em> : Text ; <em>...value</em> : any ) : Collection<br><strong>.query</strong>( <em>queryString</em> : Text ; <em>querySettings</em> : Object ) : Collection </a><p>    検索条件に合致するオブジェクトコレクションの要素をすべて返します</td></tr>
+<tr><td><a href="#reduce"> <strong>.reduce</strong>( <em>formula</em> : 4D.Function { ; <em>initValue</em> : any { ; <em>...param</em> : expression }} ) : any<br><strong>.reduce</strong>( <em>methodName</em> : Text { ; <em>initValue</em> : any { ; <em>...param</em> : expression }} ) : any </a><p>    <em>formula</em> または <em>methodName</em> コールバックをアキュムレーターおよびコレクションの各要素に (左から右へ) 適用して、単一の値にまとめます</td></tr>
+<tr><td><a href="#remove"> <strong>.remove</strong>( <em>index</em> : Integer { ; <em>howMany</em> : Integer } ) : Collection </a><p>    <em>index</em> で指定した位置から一つまた複数のコレクション要素を削除し、変更されたコレクションを返します</td></tr>
+<tr><td><a href="#resize"> <strong>.resize</strong>( <em>size</em> : Integer { ; <em>defaultValue</em> : any } ) : Collection </a><p>    コレクションの length を引数で指定されたサイズに設定し、変更された元のコレクションを返します</td></tr>
+<tr><td><a href="#reverse"> <strong>.reverse( )</strong> : Collection </a><p>    全要素が逆順になった、コレクションのディープ・コピーを返します</td></tr>
+<tr><td><a href="#shift"> <strong>.shift()</strong> : any</a><p>    コレクションの先頭要素を取り除き、それを戻り値として返します</td></tr>
+<tr><td><a href="#slice"> <strong>.slice</strong>( <em>startFrom</em> : Integer { ; <em>end</em> : Integer } ) : Collection</a><p>    コレクションの一部を、新しいコレクションの中に返します</td></tr>
+<tr><td><a href="#some"> <strong>.some</strong>( { <em>startFrom</em> : Integer ; } <em>formula</em> : 4D.Function { ; <em>...param</em> : any } ) : Boolean<br><strong>.some</strong>( { <em>startFrom</em> : Integer ; } <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Boolean</a><p>    少なくとも一つのコレクション要素が、<em>formula</em> または <em>methodName</em> に指定したコードで実装されたテストにパスした場合に <strong>true</strong> を返します</td></tr>
+<tr><td><a href="#sort"> <strong>.sort</strong>( <em>formula</em> : 4D.Function { ; <em>...extraParam</em> : any } ) : Collection<br><strong>.sort</strong>( <em>methodName</em> : Text { ; <em>...extraParam</em> : any } ) : Collection </a><p>    コレクションの要素を並べ替え、並べ替えられた元のコレクションを返します</td></tr>
+<tr><td><a href="#sum"> <strong>.sum</strong>( { <em>propertyPath</em> : Text } ) : Real</a><p>    コレクションインスタンスの全要素の値を合計して返します</td></tr>
+<tr><td><a href="#unshift"> <strong>.unshift</strong>( <em>value</em> : any { ;...<em>valueN</em> : any } ) : Collection</a><p>    一つ以上の <em>value</em> 引数をコレクションインスタンスの先頭に挿入し、変更された元のコレクションを返します</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="new-collection"></a><a href="#new-collection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>New collection</code></h2>
@@ -141,7 +141,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明"></a><a href="#説明" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>New collection</code> コマンドは、  空の、あるいは値の入った新規コレクションを作成し、その参照を返します 。</p>
+<p><code>New collection</code> コマンドは、空の、あるいは値の入った新規コレクションを作成し、その参照を返します。</p>
 <p>引数を渡さなかった場合、<code>New collection</code> は空のコレクションを作成し、その参照を返します。</p>
 <p>返された参照は、コレクション型の 4D変数に代入する必要があります。</p>
 <blockquote>
@@ -202,7 +202,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-1"></a><a href="#説明-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>New shared collection</code> コマンドは、  空の、あるいは値が入った新規コレクションを作成し、その参照を返します 。</p>
+<p><code>New shared collection</code> コマンドは、空の、あるいは値が入った新規コレクションを作成し、その参照を返します。</p>
 <p>このコレクションに要素を追加する場合には <a href="/docs/ja/Concepts/shared.html#useend-use"><code>Use...End use</code></a> 構造でくくる必要があり、そうしない場合にはエラーが返されます。 ただし、属性の読み取りは <a href="/docs/ja/Concepts/shared.html#useend-use"><code>Use...End use</code></a> 構造の外側でも可能です。</p>
 <blockquote>
 <p>共有コレクションについての詳細は、<a href="/docs/ja/Concepts/shared.html">共有オブジェクトと共有コレクション</a> のページを参照してください。</p>
@@ -257,7 +257,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-2"></a><a href="#説明-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.average()</code> 関数は、 コレクションインスタンス内で定義されている値の算術平均を返します。</p>
+<p><code>.average()</code> 関数は、コレクションインスタンス内で定義されている値の算術平均を返します。</p>
 <p>計算の対象となるのは数値のみです (他の型の要素は無視されます)。</p>
 <p>コレクションがオブジェクトを格納している場合には、計算するオブジェクトプロパティのパスを <em>propertyPath</em> に渡します。</p>
 <p><code>.average()</code> は以下の場合には <code>undefined</code> を返します:</p>
@@ -300,7 +300,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-3"></a><a href="#説明-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.clear()</code> 関数は、 コレクションインスタンス内の全要素を削除し、空のコレクションを返します。</p>
+<p><code>.clear()</code> 関数は、コレクションインスタンス内の全要素を削除し、空のコレクションを返します。</p>
 <blockquote>
 <p>このコマンドは、元のコレクションを変更します。</p>
 </blockquote>
@@ -333,7 +333,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-4"></a><a href="#説明-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.combine()</code> 関数は、 コレクションインスタンスの最後、あるいは <em>index</em> で指定した位置に <em>col2</em> の要素を挿入し、変更された元のコレクションを返します。 <code>.insert()</code> 関数とは異なり、<code>.combine()</code> は <em>col2</em> の各要素を元のコレクション追加します (<em>col2</em> 自体を単一のコレクション要素としては挿入しません)。</p>
+<p><code>.combine()</code> 関数は、コレクションインスタンスの最後、あるいは <em>index</em> で指定した位置に <em>col2</em> の要素を挿入し、変更された元のコレクションを返します。 <code>.insert()</code> 関数とは異なり、<code>.combine()</code> は <em>col2</em> の各要素を元のコレクション追加します (<em>col2</em> 自体を単一のコレクション要素としては挿入しません)。</p>
 <blockquote>
 <p>このコマンドは、元のコレクションを変更します。</p>
 </blockquote>
@@ -374,7 +374,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-5"></a><a href="#説明-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.concat()</code> 関数は、 <em>value</em> に指定した要素を元のコレクションの最後に追加した、新しいコレクションを返します。</p>
+<p><code>.concat()</code> 関数は、<em>value</em> に指定した要素を元のコレクションの最後に追加した、新しいコレクションを返します。</p>
 <blockquote>
 <p>このコマンドは、元のコレクションを変更しません。</p>
 </blockquote>
@@ -412,7 +412,7 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-6"></a><a href="#説明-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.copy()</code> 関数は、  コレクションインスタンスのディープ・コピーを返します。<strong><em>ディープ・コピー</em></strong> とは、元のコレクション内のオブジェクトやコレクションは複製されることを意味し、返されたコレクションと元のコレクションは参照を共有しないということを意味します。</p>
+<p><code>.copy()</code> 関数は、 コレクションインスタンスのディープ・コピーを返します。<strong><em>ディープ・コピー</em></strong> とは、元のコレクション内のオブジェクトやコレクションは複製されることを意味し、返されたコレクションと元のコレクションは参照を共有しないということを意味します。</p>
 <blockquote>
 <p>このコマンドは、元のコレクションを変更しません。</p>
 </blockquote>
@@ -512,7 +512,7 @@ End use</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-7"></a><a href="#説明-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.count()</code> 関数は、 コレクション内の、null ではない要素の個数を返します。</p>
+<p><code>.count()</code> 関数は、コレクション内の、null ではない要素の個数を返します。</p>
 <p>コレクションがオブジェクトを含んでいる場合、<em>propertyPath</em> 引数を渡すことができます。 この場合、<em>propertyPath</em> で指定したパスを含む要素のみがカウントされます。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-8"></a><a href="#例題-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col </span>: Collection<span class="hljs-keyword">
@@ -650,7 +650,7 @@ End use</span>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-10"></a><a href="#説明-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.equal()</code> 関数は、 コレクションを <em>collection2</em> とディープ比較し、同一の場合には <strong>true</strong> を返します 。</p>
+<p><code>.equal()</code> 関数は、 コレクションを <em>collection2</em> とディープ比較し、同一の場合には <strong>true</strong> を返します。</p>
 <p>デフォルトでは、アクセント等の発音区別符号を無視した評価が実行されます。 評価の際に文字の大小を区別したり、アクセント記号を区別したい場合には、option に <code>ck diacritical</code> 定数を渡します。</p>
 <blockquote>
 <p><strong>Null</strong>値の要素は undefined要素と同じとはみなされません。</p>
@@ -769,7 +769,7 @@ var</span> <span class="hljs-variable">$f </span>: 4D.<span class="hljs-keyword"
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-12"></a><a href="#説明-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.extract()</code> 関数は、 元のオブジェクトのコレクションから、<em>propertyPath</em> 引数が指定するプロパティ値を抽出し、新しいコレクションに格納して返します。</p>
+<p><code>.extract()</code> 関数は、元のオブジェクトのコレクションから、<em>propertyPath</em> 引数が指定するプロパティ値を抽出し、新しいコレクションに格納して返します。</p>
 <blockquote>
 <p>このコマンドは、元のコレクションを変更しません。</p>
 </blockquote>
@@ -828,7 +828,7 @@ var</span> <span class="hljs-variable">$f </span>: 4D.<span class="hljs-keyword"
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-13"></a><a href="#説明-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.fill()</code> 関数は、 コレクションを <em>value</em> 引数の値で満たし、同コレクションを返します。オプションとして、<em>startFrom</em> および <em>end</em> インデックスを渡して代入開始位置および終了位置を指定することもできます。</p>
+<p><code>.fill()</code> 関数は、コレクションを <em>value</em> 引数の値で満たし、同コレクションを返します。オプションとして、<em>startFrom</em> および <em>end</em> インデックスを渡して代入開始位置および終了位置を指定することもできます。</p>
 <blockquote>
 <p>このコマンドは、元のコレクションを変更します。</p>
 </blockquote>
@@ -876,7 +876,7 @@ var</span> <span class="hljs-variable">$f </span>: 4D.<span class="hljs-keyword"
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-14"></a><a href="#説明-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.slice()</code> 関数は、<em>startFrom</em> の位置 (含まれる) から <em>end</em> の位置 (含まれない) までのコレクションの一部を、新しいコレクションの中に返します。 この関数は <strong><em>シャロウ・コピー</em></strong> を返します。つまり、元のコレクションにオブジェクト要素やコレクション要素が含まれていた場合、それらの参照は戻り値のコレクションで共有されます。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。</p>
+<p><code>.slice()</code> 関数は、<em>startFrom</em> の位置 (含まれる) から <em>end</em> の位置 (含まれない) までの コレクションの一部を、新しいコレクションの中に返します。 この関数は <strong><em>シャロウ・コピー</em></strong> を返します。つまり、元のコレクションにオブジェクト要素やコレクション要素が含まれていた場合、それらの参照は戻り値のコレクションで共有されます。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。</p>
 <blockquote>
 <p>このコマンドは、元のコレクションを変更しません。</p>
 </blockquote>
@@ -1128,7 +1128,7 @@ var</span> <span class="hljs-variable">$val2</span>;<span class="hljs-variable">
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-18"></a><a href="#説明-18" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.indices()</code> 関数は <a href="#query"><code>.query()</code></a> 関数と同様に機能しますが、 <em>queryString</em> 引数の検索条件に合致する、元のコレクション要素のインデックスを返します(コレクション要素自体は返しません)。 インデックスは、昇順に返されます。</p>
+<p><code>.indices()</code> 関数は <a href="#query"><code>.query()</code></a> 関数と同様に機能しますが、<em>queryString</em> 引数の検索条件に合致する、元のコレクション要素のインデックスを返します(コレクション要素自体は返しません)。 インデックスは、昇順に返されます。</p>
 <blockquote>
 <p>このコマンドは、元のコレクションを変更しません。</p>
 </blockquote>
@@ -1171,7 +1171,7 @@ var</span> <span class="hljs-variable">$val2</span>;<span class="hljs-variable">
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-19"></a><a href="#説明-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.insert()</code> 関数は、  <em>index</em> で指定したコレクションインスタンスの位置に <em>element</em> 要素を挿入し、変更された元のコレクションを返します。</p>
+<p><code>.insert()</code> 関数は、<em>index</em> で指定したコレクションインスタンスの位置に <em>element</em> 要素を挿入し、変更された元のコレクションを返します。</p>
 <blockquote>
 <p>このコマンドは、元のコレクションを変更します。</p>
 </blockquote>
@@ -1215,7 +1215,7 @@ var</span> <span class="hljs-variable">$val2</span>;<span class="hljs-variable">
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-20"></a><a href="#説明-20" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.join()</code> 関数は、 <em>delimiter</em> に渡した文字列を区切り文字として、コレクションの全要素を一つの文字列につなげます。戻り値はつなげられた文字列です。</p>
+<p><code>.join()</code> 関数は、<em>delimiter</em> に渡した文字列を区切り文字として、コレクションの全要素を一つの文字列につなげます。戻り値はつなげられた文字列です。</p>
 <blockquote>
 <p>このコマンドは、元のコレクションを変更しません。</p>
 </blockquote>
@@ -1290,7 +1290,7 @@ var</span> <span class="hljs-variable">$val2</span>;<span class="hljs-variable">
 <p></details></p>
 <p><strong>.length</strong> : Integer</p>
 <h4><a class="anchor" aria-hidden="true" id="説明-22"></a><a href="#説明-22" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.length</code> プロパティは、 コレクション内の要素数を返します。</p>
+<p><code>.length</code> プロパティは、コレクション内の要素数を返します。</p>
 <p><code>.length</code> プロパティは、コレクション作成時に初期化されます。 要素を追加・削除すると、必要に応じて length は更新されます。 このプロパティは <strong>読み取り専用</strong> です (これを使用してコレクションのサイズを設定することはできません)。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-18"></a><a href="#例題-18" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col </span>: Collection <span class="hljs-comment">// $col.length が 0 に初期化されます</span>
@@ -1372,7 +1372,7 @@ var</span> <span class="hljs-variable">$val2</span>;<span class="hljs-variable">
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-24"></a><a href="#説明-24" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.max()</code> 関数は、 コレクション内の最大値を持つ要素を返します (<a href="#sort"><code>.sort()</code></a> 関数を使用して昇順に並べ替えたときのコレクションの最後の要素が最大値の要素です)。</p>
+<p><code>.max()</code> 関数は、コレクション内の最大値を持つ要素を返します (<a href="#sort"><code>.sort()</code></a> 関数を使用して昇順に並べ替えたときのコレクションの最後の要素が最大値の要素です)。</p>
 <blockquote>
 <p>このコマンドは、元のコレクションを変更しません。</p>
 </blockquote>
@@ -1411,7 +1411,7 @@ var</span> <span class="hljs-variable">$val2</span>;<span class="hljs-variable">
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-25"></a><a href="#説明-25" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.min()</code> 関数は、 コレクション内の最小値を持つ要素を返します (<a href="#sort"><code>.sort()</code></a> 関数を使用して昇順に並べ替えたときのコレクションの先頭の要素が最小値の要素です)。</p>
+<p><code>.min()</code> 関数は、コレクション内の最小値を持つ要素を返します (<a href="#sort"><code>.sort()</code></a> 関数を使用して昇順に並べ替えたときのコレクションの先頭の要素が最小値の要素です)。</p>
 <blockquote>
 <p>このコマンドは、元のコレクションを変更しません。</p>
 </blockquote>
@@ -1452,7 +1452,7 @@ var</span> <span class="hljs-variable">$val2</span>;<span class="hljs-variable">
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-26"></a><a href="#説明-26" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.orderBy()</code> 関数は、 コレクションの要素を指定順に並べ替えた新しいコレクションを返します。</p>
+<p><code>.orderBy()</code> 関数は、コレクションの要素を指定順に並べ替えた新しいコレクションを返します。</p>
 <p>この関数は <em>シャロウ・コピー</em> を返します。つまり、元のコレクションにオブジェクト要素やコレクション要素が含まれていた場合、それらの参照は戻り値のコレクションで共有されます。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。</p>
 <blockquote>
 <p>このコマンドは、元のコレクションを変更しません。</p>
@@ -1643,7 +1643,7 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-28"></a><a href="#説明-28" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.pop()</code> 関数は、 コレクションから最後の要素を取り除き、それを戻り値として返します。</p>
+<p><code>.pop()</code> 関数は、コレクションから最後の要素を取り除き、それを戻り値として返します。</p>
 <blockquote>
 <p>このコマンドは、元のコレクションを変更します。</p>
 </blockquote>
@@ -1680,7 +1680,7 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-29"></a><a href="#説明-29" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.push()</code> 関数は、 一つ以上の <em>element</em> 引数をコレクションインスタンスの最後に追加し、変更された元のコレクションを返します。</p>
+<p><code>.push()</code> 関数は、一つ以上の <em>element</em> 引数をコレクションインスタンスの最後に追加し、変更された元のコレクションを返します。</p>
 <blockquote>
 <p>このコマンドは、元のコレクションを変更します。</p>
 </blockquote>
@@ -1724,7 +1724,7 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-30"></a><a href="#説明-30" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.query()</code> 関数は、<em>queryString</em> および、任意の <em>value</em> や <em>querySettings</em> パラメーターによって定義された 検索条件に合致するオブジェクトコレクションの要素をすべて返します 。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。</p>
+<p><code>.query()</code> 関数は、<em>queryString</em> および、任意の <em>value</em> や <em>querySettings</em> パラメーターによって定義された検索条件に合致するオブジェクトコレクションの要素をすべて返します。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。</p>
 <blockquote>
 <p>このコマンドは、元のコレクションを変更しません。</p>
 </blockquote>
@@ -1801,7 +1801,7 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-31"></a><a href="#説明-31" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p>次のいずれかを使用して、コレクション要素を評価するために実行されるコールバックを指定します:</p>
+<p><code>.reduce()</code> 関数は、<em>formula</em> または <em>methodName</em> コールバックをアキュムレーターおよびコレクションの各要素に (左から右へ) 適用して、単一の値にまとめます。</p>
 <blockquote>
 <p>このコマンドは、元のコレクションを変更しません。</p>
 </blockquote>
@@ -1867,7 +1867,7 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-32"></a><a href="#説明-32" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.remove()</code> 関数は、 <em>index</em> で指定した位置から一つまた複数のコレクション要素を削除し、変更されたコレクションを返します。</p>
+<p><code>.remove()</code> 関数は、<em>index</em> で指定した位置から一つまた複数のコレクション要素を削除し、変更されたコレクションを返します。</p>
 <blockquote>
 <p>このコマンドは、元のコレクションを変更します。</p>
 </blockquote>
@@ -1913,7 +1913,7 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-33"></a><a href="#説明-33" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.resize()</code> 関数は、 コレクションの length を引数で指定されたサイズに設定し、変更された元のコレクションを返します。</p>
+<p><code>.resize()</code> 関数は、コレクションの length を引数で指定されたサイズに設定し、変更された元のコレクションを返します。</p>
 <blockquote>
 <p>このコマンドは、元のコレクションを変更します。</p>
 </blockquote>
@@ -1958,7 +1958,7 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-34"></a><a href="#説明-34" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.reverse()</code> 関数は、 全要素が逆順になった、コレクションのディープ・コピーを返します。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。</p>
+<p><code>.reverse()</code> 関数は、全要素が逆順になった、コレクションのディープ・コピーを返します。 また、元のコレクションが共有コレクションであった場合、返されるコレクションもまた共有コレクションになります。</p>
 <blockquote>
 <p>このコマンドは、元のコレクションを変更しません。</p>
 </blockquote>
@@ -1988,7 +1988,7 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-35"></a><a href="#説明-35" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.shift()</code> 関数は、 コレクションの先頭要素を取り除き、それを戻り値として返します。</p>
+<p><code>.shift()</code> 関数は、コレクションの先頭要素を取り除き、それを戻り値として返します。</p>
 <blockquote>
 <p>このコマンドは、元のコレクションを変更します。</p>
 </blockquote>
@@ -2070,7 +2070,7 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-37"></a><a href="#説明-37" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p>次のいずれかを使用して、コレクション要素を評価するために実行されるコード (コールバック) を指定します:</p>
-<p>次のいずれかを使用して、コレクション要素を評価するために実行されるコールバックを指定します:</p>
+<p>次のいずれかを使用して、コレクション要素を評価するために実行されるコード (コールバック) を指定します:</p>
 <ul>
 <li><em>formula</em> (推奨シンタックス)、関数やプロジェクトメソッドを含むあらゆる実行可能な式を格納できる <a href="/docs/ja/API/FunctionClass.html">Formula オブジェクト</a>。</li>
 <li>または <em>methodName</em>、プロジェクトメソッドの名前 (テキスト)。</li>
@@ -2202,7 +2202,7 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-39"></a><a href="#説明-39" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.sum()</code> 関数は、 コレクションインスタンスの全要素の値を合計して返します。</p>
+<p><code>.sum()</code> 関数は、コレクションインスタンスの全要素の値を合計して返します。</p>
 <p>計算の対象となるのは数値のみです (他の型の要素は無視されます)。</p>
 <p>コレクションがオブジェクトを格納している場合には、計算するオブジェクトプロパティのパスを <em>propertyPath</em> に渡します。</p>
 <p><code>.sum()</code> は以下の場合には 0 を返します:</p>
@@ -2248,7 +2248,7 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-40"></a><a href="#説明-40" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>.unshift()</code> 関数は、 一つ以上の <em>value</em> 引数をコレクションインスタンスの先頭に挿入し、変更された元のコレクションを返します 。</p>
+<p><code>.unshift()</code> 関数は、一つ以上の <em>value</em> 引数をコレクションインスタンスの先頭に挿入し、変更された元のコレクションを返します。</p>
 <blockquote>
 <p>このコマンドは、元のコレクションを変更します。</p>
 </blockquote>

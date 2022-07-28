@@ -83,7 +83,7 @@
 <p><a href="viewProArea_overview">Área 4D View Pro</a> - <a href="writeProArea_overview">Área 4D Write Pro</a> - <a href="/docs/es/FormObjects/buttonOverview.html">Botón</a> - <a href="/docs/es/FormObjects/buttonGridOverview.html">Rejilla de botones</a> - <a href="/docs/es/FormObjects/checkboxOverview.html">Casilla de selección</a> - <a href="/docs/es/FormObjects/comboBoxOverview.html">Combo Box</a> - <a href="/docs/es/FormObjects/dropdownListOverview.html">Lista desplegable</a> - <a href="/docs/es/FormObjects/groupBox.html">Group Box</a> - <a href="/docs/es/FormObjects/listOverview.html">Lista jerárquica</a> - <a href="/docs/es/FormObjects/listboxOverview.html">List Box</a> - <a href="/docs/es/FormObjects/listboxOverview.html#list-box-columns">Columna List Box</a> - <a href="/docs/es/FormObjects/listboxOverview.html#list-box-footers">Pie de List Box</a> - <a href="/docs/es/FormObjects/listboxOverview.html#list-box-headers">Encabezado de List Box</a> - <a href="/docs/es/FormObjects/pictureButtonOverview.html">Botón imagen</a> - <a href="/docs/es/FormObjects/picturePopupMenuOverview.html">Menú emergente imagen</a> - <a href="/docs/es/FormObjects/pluginAreaOverview.html">Área de Plug-in</a> - <a href="/docs/es/FormObjects/progressIndicator.html">Indicador de progreso</a> - <a href="/docs/es/FormObjects/radiobuttonOverview.html">Botón de radio</a> -<a href="/docs/es/FormObjects/spinner.html">Spinner</a> - <a href="/docs/es/FormObjects/splitters.html">Splitter</a> - <a href="/docs/es/FormObjects/staticPicture.html">Imagen estática</a> - <a href="/docs/es/FormObjects/stepper.html">Stepper</a> - <a href="/docs/es/FormObjects/subformOverview.html">Subformulario</a> - <a href="/docs/es/FormObjects/tabControl.html">Control de pestañas</a> - <a href="/docs/es/FormObjects/text.html">Área de texto</a> - <a href="/docs/es/FormObjects/webAreaOverview.html">Área web</a></p>
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="nombre-del-objeto"></a><a href="#nombre-del-objeto" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Nombre del objeto</h2>
-<p>Each active form object is associated with an object name. Cada nombre de objeto debe ser único.</p>
+<p>Cada objeto de formulario activo está asociado a un nombre de objeto. Cada nombre de objeto debe ser único.</p>
 <blockquote>
 <p>Los nombres de objetos están limitados a un tamaño de 255 bytes.</p>
 </blockquote>
@@ -132,7 +132,7 @@
 <blockquote>
 <p>See also <strong><a href="/docs/es/FormObjects/propertiesDataSource.html#expression">Expression</a></strong> for Selection and collection type list box columns.</p>
 </blockquote>
-<p>Esta propiedad especifica la fuente de los datos. Each active form object is associated with an object name and a variable name. The variable name can be different from the object’s name. In the same form, you can use the same variable several times while each <a href="#object-name">object name</a> must be unique.</p>
+<p>Esta propiedad especifica la fuente de los datos. Each active form object is associated with an object name and a variable name. El nombre de la variable puede ser diferente del nombre del objeto. In the same form, you can use the same variable several times while each <a href="#object-name">object name</a> must be unique.</p>
 <blockquote>
 <p>El tamaño del nombre de la variable está limitado a 31 bytes. See <a href="/docs/es/Concepts/identifiers.html">Identifiers</a> section for more information about naming rules.</p>
 </blockquote>
@@ -189,7 +189,7 @@
 <p>However, this property has a typing function in the following specific cases:</p>
 <ul>
 <li><strong><a href="#dynamic-variables">Dynamic variables</a></strong>: you can use this property to declare the type of dynamic variables.</li>
-<li><strong><a href="/docs/es/FormObjects/listboxOverview.html#list-box-columns">List Box Columns</a></strong>: this property is used to associate a display format with the column data. The formats provided will depend on the variable type (array type list box) or the data/field type (selection and collection type list boxes). The standard 4D formats that can be used are: Alpha, Numeric, Date, Time, Picture and Boolean. The Text type does not have specific display formats. Todos los formatos personalizados existentes también están disponibles.</li>
+<li><strong><a href="/docs/es/FormObjects/listboxOverview.html#list-box-columns">List Box Columns</a></strong>: this property is used to associate a display format with the column data. The formats provided will depend on the variable type (array type list box) or the data/field type (selection and collection type list boxes). The standard 4D formats that can be used are: Alpha, Numeric, Date, Time, Picture and Boolean. El tipo Texto no tiene formatos de visualización específicos. Todos los formatos personalizados existentes también están disponibles.</li>
 <li><strong><a href="/docs/es/FormObjects/inputOverview.html">Picture variables</a></strong>: you can use this menu to declare the variables before loading the form in interpreted mode. Specific native mechanisms govern the display of picture variables in forms. These mechanisms require greater precision when configuring variables: from now on, they must have already been declared before loading the form — i.e., even before the <code>On Load</code> form event — unlike other types of variables. To do this, you need either for the statement <code>C_PICTURE(varName)</code> to have been executed before loading the form (typically, in the method calling the <code>DIALOG</code> command), or for the variable to have been typed at the form level using the expression type property. Otherwise, the picture variable will not be displayed correctly (only in interpreted mode).</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="gramática-json-4"></a><a href="#gramática-json-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gramática JSON</h4>
@@ -243,7 +243,7 @@
 <tr><th>Nombre</th><th>Tipos de datos</th><th>Valores posibles</th></tr>
 </thead>
 <tbody>
-<tr><td>dataSource</td><td>cadena</td><td>Expression that returns a collection or an entity selection.</td></tr>
+<tr><td>dataSource</td><td>cadena</td><td>Expresión que devuelve una colección o una selección de entidades.</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="objetos-soportados-6"></a><a href="#objetos-soportados-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objetos soportados</h4>
@@ -278,7 +278,7 @@
 <tr><th>Nombre</th><th>Tipos de datos</th><th>Valores posibles</th></tr>
 </thead>
 <tbody>
-<tr><td>pluginAreaKind</td><td>cadena</td><td>Name of the plug-in external area (starts with a % character)</td></tr>
+<tr><td>pluginAreaKind</td><td>cadena</td><td>Nombre del área externa del plug-in (comienza con un carácter %)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="objetos-soportados-8"></a><a href="#objetos-soportados-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Objetos soportados</h4>
@@ -303,7 +303,7 @@
 <p>You can force a carriage return in the label by using the \ character (backslash).</p>
 <p><img src="/docs/assets/en/FormObjects/property_title.png" alt=""></p>
 <p>Para insertar un \ en la etiqueta, ingrese &quot;\\&quot;.</p>
-<p>By default, the label is placed in the center of the object. When the object also contains an icon, you can modify the relative location of these two elements using the <a href="/docs/es/FormObjects/propertiesTextAndPicture.html#title-picture-position">Title/Picture Position</a> property.</p>
+<p>Por defecto, la etiqueta se coloca en el centro del objeto. When the object also contains an icon, you can modify the relative location of these two elements using the <a href="/docs/es/FormObjects/propertiesTextAndPicture.html#title-picture-position">Title/Picture Position</a> property.</p>
 <p>For application translation purposes, you can enter an XLIFF reference in the title area of a button (see <a href="https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html">Appendix B: XLIFF architecture</a>).</p>
 <h4><a class="anchor" aria-hidden="true" id="gramática-json-10"></a><a href="#gramática-json-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Gramática JSON</h4>
 <table>

@@ -73,11 +73,11 @@
 <ol>
 <li>Select the cell into which you will enter the formula or function.</li>
 <li>Introduzca = (el signo igual).</li>
-<li>Type the formula and hit the <strong>Enter</strong> key.</li>
+<li>Escriba la fórmula y presione la tecla <strong>Intro</strong>.</li>
 </ol>
-<p>When writing a formula, you can use different shortcuts:</p>
+<p>Al escribir una fórmula, puede utilizar diferentes atajos:</p>
 <ul>
-<li>click on a cell to enter its reference in the formula:</li>
+<li>haga clic en una celda para introducir su referencia en la fórmula:</li>
 </ul>
 <p><img src="/docs/assets/en/ViewPro/formulas.PNG" alt=""></p>
 <ul>
@@ -145,7 +145,7 @@
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="referencias-de-celdas"></a><a href="#referencias-de-celdas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Referencias de celdas</h2>
-<p>Formulas often refer to other cells by cell addresses. Puede copiar estas fórmulas a otras celdas. For example, the following formula, entered in cell C8, adds the values in the two cells above it and displays the result.</p>
+<p>Las fórmulas a menudo se refieren a otras celdas por medio de direcciones de celdas. Puede copiar estas fórmulas a otras celdas. For example, the following formula, entered in cell C8, adds the values in the two cells above it and displays the result.</p>
 <pre><code class="hljs"><span class="hljs-section">= C6 + C7</span>
 </code></pre>
 <p>Esta fórmula se refiere a las celdas C6 y C7. That is, 4D View Pro is instructed to refer to these other cells for values to use in the formula.</p>
@@ -166,7 +166,7 @@
 </thead>
 <tbody>
 <tr><td>C5</td><td>Relativo</td><td>Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used</td></tr>
-<tr><td>$C$5</td><td>Absoluto</td><td>La referencia es absoluta. Will always refer to cell C5 no matter where it is used.</td></tr>
+<tr><td>$C$5</td><td>Absoluto</td><td>La referencia es absoluta. Siempre se referirá a la celda C5 sin importar dónde se utilice.</td></tr>
 <tr><td>$C5</td><td>Mixed</td><td>Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.</td></tr>
 <tr><td>C$5</td><td>Mixed</td><td>Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used</td></tr>
 <tr><td>Nombre de la celda</td><td>Absoluto</td><td>La referencia es absoluta. Will always refer to the <a href="/docs/es/ViewPro/method-list.html#vp-add-range-name">named cell or range</a> no matter where the reference is used.</td></tr>
@@ -216,7 +216,7 @@
 <h3><a class="anchor" aria-hidden="true" id="ejemplo-con-hello-world"></a><a href="#ejemplo-con-hello-world" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo con Hello World</h3>
 <p>We want to print &quot;Hello World&quot; in a 4D View Pro area cell using a 4D project method:</p>
 <ol>
-<li>Create a &quot;myMethod&quot; project method with the following code:</li>
+<li>Cree un método proyecto &quot;myMethod&quot; con el siguiente código:</li>
 </ol>
 <pre><code class="hljs css language-4d"> #DECLARE-&gt;<span class="hljs-variable">$hw Text</span>
  <span class="hljs-variable">$hw</span>:=<span class="hljs-string">"Hello World"</span>
@@ -236,9 +236,9 @@
  End case</span>
 </code></pre>
 <ol start="3">
-<li><p>Edit the content of a cell in a 4D View Pro area and type:</p>
+<li><p>Edite el contenido de una celda en un área 4D View Pro y escriba:</p>
 <p><img src="/docs/assets/en/ViewPro/vpProjMeth1.PNG" alt=""></p>
-<p>&quot;myMethod&quot; is then called by 4D and the cell displays:</p>
+<p>&quot;myMethod&quot; es entonces llamado por 4D y la la celda se muestra:</p>
 <p><img src="/docs/assets/en/ViewPro/vpProjMeth2.PNG" alt=""></p></li>
 </ol>
 <h3><a class="anchor" aria-hidden="true" id="parámetros"></a><a href="#parámetros" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parámetros</h3>
@@ -255,7 +255,7 @@
 <p>If you do not declare parameters, values can be sequentially passed to methods (they will be received in $1, $2...) and their type will be automatically converted. Dates in <em>jstype</em> will be passed as <a href="/docs/es/Concepts/object.html">object</a> in 4D code with two properties:<br>
 |Property|    Type|   Description| |---|---|---| |value|   Date|   Date value| |time |Real|  Time in seconds|</p>
 </blockquote>
-<p>4D project methods can also return values in the 4D View Pro cell formula via $0. The following data types are supported for returned parameters:</p>
+<p>4D project methods can also return values in the 4D View Pro cell formula via $0. Los siguientes tipos de datos son soportados para los parámetros devueltos:</p>
 <ul>
 <li><p><a href="/docs/es/Concepts/string.html">text</a> (converted to string in 4D View Pro)</p></li>
 <li><p><a href="/docs/es/Concepts/number.html">real</a>/<a href="/docs/es/Concepts/number.html">longint</a> (converted to number in 4D View Pro)</p></li>
@@ -278,7 +278,7 @@
 <p>If the 4D method returns nothing, an empty string is automatically returned.</p>
 <p>Se devuelve un error en la celda 4D View Pro si:</p>
 <ul>
-<li>the 4D method returns another type other than those listed above,</li>
+<li>el método 4D devuelve otro tipo distinto de los mencionados anteriormente,</li>
 <li>an error occurred during 4D method execution (when user clicks on &quot;abort&quot; button).</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="ejemplo"></a><a href="#ejemplo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ejemplo</h4>
@@ -306,7 +306,7 @@
 <ul>
 <li>The field must belong to the virtual structure of the database, i.e. it must be declared through the <a href="https://doc.4d.com/4dv19/help/command/en/page601.html"><code>SET TABLE TITLES</code></a> and/or <a href="https://doc.4d.com/4dv19/help/command/en/page602.html"><code>SET FIELD TITLES</code></a> commands with the * parameter (see example),</li>
 <li>Table and field names must be ECMA compliant (see <a href="https://www.ecma-international.org/ecma-262/5.1/#sec-7.6">ECMA Script standard</a>),</li>
-<li>The field type must be supported by 4D View Pro (see above).</li>
+<li>El tipo de campo debe ser soportado por 4D View Pro (ver arriba).</li>
 </ul>
 <p>An error is returned in the 4D View Pro cell if the formula calls a field which is not compliant.</p>
 <h4><a class="anchor" aria-hidden="true" id="llamar-a-un-campo-virtual-en-una-fórmula"></a><a href="#llamar-a-un-campo-virtual-en-una-fórmula" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Llamar a un campo virtual en una fórmula</h4>
@@ -344,11 +344,11 @@
 </ol>
 <p><img src="/docs/assets/en/ViewPro/vpFieldMeth2.PNG" alt=""></p>
 <ol start="4">
-<li>Select EMP_NAME (use the Tab key) and enter the closing ).</li>
+<li>Seleccione EMP_NAME (utilice la tecla Tab) e introduzca el cierre).</li>
 </ol>
 <p><img src="/docs/assets/en/ViewPro/vpFieldMeth3.PNG" alt=""></p>
 <ol start="5">
-<li>Validate the field to display the name of the current employee:</li>
+<li>Valide el campo para mostrar el nombre del empleado actual:</li>
 </ol>
 <p><img src="/docs/assets/en/ViewPro/vpFieldMeth4.PNG" alt=""></p>
 <blockquote>

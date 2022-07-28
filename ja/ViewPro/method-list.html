@@ -619,27 +619,27 @@
 </thead>
 <tbody>
 <tr><td>rangeObj</td><td>Object</td><td>-&gt;</td><td>レンジオブジェクト</td></tr>
-<tr><td>tableName</td><td>テキスト</td><td>-&gt;</td><td>テーブルの名称</td></tr>
-<tr><td>source</td><td>テキスト</td><td>-&gt;</td><td>テーブルに表示するデータコンテキストプロパティ名</td></tr>
+<tr><td>tableName</td><td>テキスト</td><td>-&gt;</td><td>表組みの名称</td></tr>
+<tr><td>source</td><td>テキスト</td><td>-&gt;</td><td>表に表示するデータコンテキストプロパティ名</td></tr>
 <tr><td>options</td><td>オブジェクト</td><td>-&gt;</td><td>追加のオプション</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-15"></a><a href="#説明-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>VP CREATE TABLE</code> コマンドは、 指定のレンジ内にテーブルを作成します。 テーブルを作成することで、関連するデータの管理や分析をより簡単におこなえます。 テーブルは通常、関連するデータを行と列に含み、 <a href="#vp-set-data-context">データコンテキスト</a> を利用します。</p>
+<p><code>VP CREATE TABLE</code> コマンドは、 指定のレンジ内に表組みを作成します。 表組みを作成することで、関連するデータの管理や分析をより簡単におこなえます。 表組みは通常、関連するデータを行と列に含み、 <a href="#vp-set-data-context">データコンテキスト</a> を利用します。</p>
 <p><img src="/docs/assets/en/ViewPro/vp-create-table.png" alt=""></p>
-<p><em>rangeObj</em> 引数には、テーブルの作成場所としたいセルのレンジを渡します。</p>
-<p><em>tableName</em> には、テーブルの名称を渡します。 名称は次の条件を満たさなくてはなりません:</p>
+<p><em>rangeObj</em> 引数には、表の作成場所としたいセルのレンジを渡します。</p>
+<p><em>tableName</em> には、表組みの名称を渡します。 名称は次の条件を満たさなくてはなりません:</p>
 <ul>
 <li>シートにおいて固有のものである</li>
 <li>5文字以上である</li>
 <li>先頭が数字でなく、スペースを含まない</li>
 </ul>
-<p><em>source</em> には、テーブルにデータを表示する <a href="#vp-set-data-context">データコンテキスト</a> のプロパティ名を渡します。 これにより、テーブルをデータコンテキストにバインドします。 データコンテキストが更新されると、テーブルに表示されるデータも更新されます。 このデータコンテキストには、各要素が行を表すオブジェクトのコレクションが含まれている必要があります。</p>
+<p><em>source</em> には、表組みにデータを提供する <a href="#vp-set-data-context">データコンテキスト</a> のプロパティ名を渡します。 これにより、表をデータコンテキストにバインドします。 データコンテキストが更新されると、表に表示されるデータも更新されます。 このデータコンテキストには、各要素が行を表すオブジェクトのコレクションが含まれている必要があります。</p>
 <ul>
-<li><em>source</em> を指定しない場合、コマンドは <em>rangeObj</em> が定義するサイズの空のテーブルを作成します。</li>
-<li>指定された <em>source</em> をドキュメント内に完全に表示できない場合、テーブルは作成されません。</li>
+<li><em>source</em> を指定しない場合、コマンドは <em>rangeObj</em> が定義するサイズの空の表を作成します。</li>
+<li>指定された <em>source</em> をドキュメント内に完全に表示できない場合、表は作成されません。</li>
 </ul>
-<p><em>options</em> には、テーブル用の追加オプションを格納したオブジェクトを渡せます。 とりうる値:</p>
+<p><em>options</em> には、表組み用の追加オプションを格納したオブジェクトを渡せます。 とりうる値:</p>
 <table>
 <thead>
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th><th>デフォルト値</th></tr>
@@ -647,26 +647,26 @@
 <tbody>
 <tr><td>showFooter</td><td>ブール</td><td>フッターを表示</td><td>False</td></tr>
 <tr><td>showHeader</td><td>ブール</td><td>ヘッダーを表示</td><td>True</td></tr>
-<tr><td>showResizeHandle</td><td>ブール</td><td><em>source</em> を持たないテーブルの場合。 リサイズハンドルを表示</td><td>False</td></tr>
-<tr><td>tableColumns</td><td>コレクション</td><td>テーブルの列を作成するために使用されるオブジェクトのコレクション (下記参照)</td><td>未定義</td></tr>
+<tr><td>showResizeHandle</td><td>ブール</td><td><em>source</em> を持たない表の場合。 リサイズハンドルを表示</td><td>False</td></tr>
+<tr><td>tableColumns</td><td>コレクション</td><td>表の列を作成するために使用されるオブジェクトのコレクション (下記参照)</td><td>未定義</td></tr>
 <tr><td>useFooterDropDownList</td><td>ブール</td><td>列の合計値を計算するフッターセルでドロップダウンリストを使用</td><td>False</td></tr>
 </tbody>
 </table>
-<p><em>tableColumns</em> コレクションは、テーブルの列の構造を決定します。 コレクション内の各オブジェクトは以下の値を持ちます:</p>
+<p><em>tableColumns</em> コレクションは、表の列の構造を決定します。 コレクション内の各オブジェクトは以下の値を持ちます:</p>
 <table>
 <thead>
 <tr><th>プロパティ</th><th>タイプ</th><th>説明</th><th>必須</th></tr>
 </thead>
 <tbody>
-<tr><td>dataField</td><td>Text</td><td>データコンテキストにおける、テーブル列のプロパティ名</td><td>×</td></tr>
-<tr><td>formatter</td><td>Text</td><td>テーブル列のフォーマッター</td><td>×</td></tr>
-<tr><td>name</td><td>テキスト</td><td>テーブル列の名前</td><td>◯</td></tr>
+<tr><td>dataField</td><td>Text</td><td>データコンテキストにおける、表の列のプロパティ名</td><td>×</td></tr>
+<tr><td>formatter</td><td>Text</td><td>表の列のフォーマッター</td><td>×</td></tr>
+<tr><td>name</td><td>テキスト</td><td>表の列の名前</td><td>◯</td></tr>
 </tbody>
 </table>
 <p><em>tableColumns</em> コレクションの長さは、レンジの列数と等しくなければなりません:</p>
 <ul>
-<li><em>rangeObj</em> の列数が <em>tableColumns</em> の列数より多い場合、テーブルは追加の空列で埋められます。</li>
-<li><em>rangeObj</em> の列数が <em>テーブル列</em> の列数より少ない場合、テーブルはレンジの列数のみを表示します。</li>
+<li><em>rangeObj</em> の列数が <em>tableColumns</em> の列数より多い場合、表は追加の空列で埋められます。</li>
+<li><em>rangeObj</em> の列数が <em>tableColumns</em> の列数より少ない場合、表はレンジの列数のみを表示します。</li>
 </ul>
 <p><em>source</em> を渡しながら、<em>tableColumn</em> オプションは渡さなかった場合、コマンドは自動的に列を生成します。 この場合、<em>rangeObj</em> はセルレンジでなければなりません。 そうでなければ、レンジの先頭セルが使用されます。 列を自動生成する場合、次のルールが適用されます:</p>
 <ul>
@@ -687,7 +687,7 @@
 <p>これは列を自動生成するときにのみ機能します。 <em>tableColumns</em> オプションを使用する場合、スカラーデータのコレクションは使用できません。</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="例題-15"></a><a href="#例題-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
-<p>データコンテキストを使用したテーブルを作成します:</p>
+<p>データコンテキストを使用した表組みを作成します:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-comment">// データコンテキストの設定します</span><span class="hljs-keyword">
 var</span> <span class="hljs-variable">$data </span>: Object
 
@@ -699,7 +699,7 @@ var</span> <span class="hljs-variable">$data </span>: Object
 
 <span class="hljs-function">VP SET DATA CONTEXT</span>(<span class="hljs-string">"ViewProArea"</span>; <span class="hljs-variable">$data</span>)
 
-<span class="hljs-comment">// テーブルの列を定義します</span><span class="hljs-keyword">
+<span class="hljs-comment">// 表の列を定義します</span><span class="hljs-keyword">
 var</span> <span class="hljs-variable">$options </span>: Object
 
 <span class="hljs-variable">$options</span>:=New object
@@ -708,7 +708,7 @@ var</span> <span class="hljs-variable">$options </span>: Object
 <span class="hljs-variable">$options</span>.tableColumns.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>; <span class="hljs-string">"Last name"</span>; <span class="hljs-string">"dataField"</span>; <span class="hljs-string">"lastName"</span>))
 <span class="hljs-variable">$options</span>.tableColumns.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>; <span class="hljs-string">"Email"</span>; <span class="hljs-string">"dataField"</span>; <span class="hljs-string">"email"</span>))
 
-<span class="hljs-comment">// "people" コレクションからテーブルを作成します</span>
+<span class="hljs-comment">// "people" コレクションから表を作成します</span>
 <span class="hljs-function">VP CREATE TABLE</span>(<span class="hljs-function">VP Cells</span>(<span class="hljs-string">"ViewProArea"</span>; <span class="hljs-number">1</span>; <span class="hljs-number">1</span>; <span class="hljs-variable">$options</span>.tableColumns.length; <span class="hljs-number">1</span>); <span class="hljs-string">"ContextTable"</span>; <span class="hljs-string">"people"</span>; <span class="hljs-variable">$options</span>)
 </code></pre>
 <p>このようになります:</p>
@@ -2495,15 +2495,15 @@ End if</span>
 </thead>
 <tbody>
 <tr><td>vpAreaName</td><td>テキスト</td><td>-&gt;</td><td>4D View Pro エリア名</td></tr>
-<tr><td>tableName</td><td>テキスト</td><td>-&gt;</td><td>削除するテーブルの名称</td></tr>
+<tr><td>tableName</td><td>テキスト</td><td>-&gt;</td><td>削除する表組みの名称</td></tr>
 <tr><td>options</td><td>整数</td><td>-&gt;</td><td>追加のオプション</td></tr>
 <tr><td>sheet</td><td>整数</td><td>-&gt;</td><td>シートのインデックス (省略した場合はカレントシート)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="説明-66"></a><a href="#説明-66" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
-<p><code>VP REMOVE TABLE</code> コマンドは、<a href="#vp-create-table">VP CREATE TABLE</a> で作成した テーブルを削除します 。</p>
-<p><em>vpAreaName</em> には、削除したいテーブルが置かれている 4D View Pro エリアの名前を渡します。</p>
-<p><em>tableName</em> には、削除するテーブルの名称を渡します。</p>
+<p><code>VP REMOVE TABLE</code> コマンドは、<a href="#vp-create-table">VP CREATE TABLE</a> で作成した 表組みを削除します 。</p>
+<p><em>vpAreaName</em> には、削除したい表組みが置かれている 4D View Pro エリアの名前を渡します。</p>
+<p><em>tableName</em> には、削除する表組みの名称を渡します。</p>
 <p><em>options</em> には、追加のオプションを指定できます。 とりうる値:</p>
 <table>
 <thead>
@@ -2515,9 +2515,9 @@ End if</span>
 <tr><td>vk table remove data</td><td>2</td><td>データを削除し、スタイルは維持</td></tr>
 </tbody>
 </table>
-<p>テーブル名はシートのレベルで定義されます。 任意の <em>sheet</em> 引数にシートインデックス (0 起点) を指定することで、テーブルが置かれているシートを指定できます。</p>
+<p>表組み名はシートのレベルで定義されます。 任意の <em>sheet</em> 引数にシートインデックス (0 起点) を指定することで、表が置かれているシートを指定できます。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-61"></a><a href="#例題-61" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
-<p>2番目のシートの &quot;people&quot; テーブルを削除し、セルのデータは保持します:</p>
+<p>2番目のシートの &quot;people&quot; の表組みを削除し、セルのデータは保持します:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-function">VP REMOVE TABLE</span>(<span class="hljs-string">"ViewProArea"</span>; <span class="hljs-string">"people"</span>; vk table remove style; <span class="hljs-number">2</span>)
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="参照-63"></a><a href="#参照-63" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参照</h4>
