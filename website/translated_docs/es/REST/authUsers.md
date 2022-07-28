@@ -14,7 +14,7 @@ You log in a user to your application by calling [`$directory/login`]($directory
 
 ## Apertura de sesiones
 
-When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (recommended), if the `On REST Authentication` database method returns `true`, a user session is then automatically opened and you can handle it through the `Session` object and the [Session API](API/SessionClass.md). Subsequent REST requests will reuse the same session cookie.
+When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (recommended), if the `On REST Authentication` database method returns `true`, a user session is then automatically opened and you can handle it through the `Session` object and the [Session API](API/SessionClass.md). Las siguientes peticiones REST reutilizarán la misma cookie de sesión.
 
 If the `On REST Authentication` database method has not been defined, a `guest` session is opened.
 

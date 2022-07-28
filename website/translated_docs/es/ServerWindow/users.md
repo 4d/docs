@@ -9,7 +9,7 @@ The **Users** page lists the 4D users connected to the server.
 
 ![](assets/en/Admin/server-users.png)
 
-The "Users" button indicates, in parentheses, the total number of users connected to the server (this number does not take into account any display filters applied to the window). The page also contains a dynamic search area and control buttons. You can modify the order of the columns by dragging and dropping their header areas.
+The "Users" button indicates, in parentheses, the total number of users connected to the server (this number does not take into account any display filters applied to the window). La página también contiene un área de búsqueda dinámica y botones de control. You can modify the order of the columns by dragging and dropping their header areas.
 
 You can also sort the list of column values by clicking on its header. Click several times to specify in turn an ascending/descending order.
 
@@ -19,9 +19,9 @@ You can also sort the list of column values by clicking on its header. Click sev
 
 For each user connected to the server, the list provides the following information:
 
-- System of the client machine (macOS or Windows) as an icon.
+- Sistema de la máquina cliente (macOS o Windows) como un icono.
 - **4D User**: Name of the 4D user, or alias if set with the [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) command on the user machine. If passwords are not activated and no alias has been set, all users are named "Designer".
-- **Machine name**: Name of the remote machine.
+- **Nombre de máquina**: Nombre de la máquina remota.
 - **Session name**: Name of the session opened on the remote machine.
 - **IP Address**: IP address of the remote machine.
 - **Login date**: Date and time of the remote machine connection.
@@ -45,7 +45,7 @@ The following scenario is supported: a remote user stops working for awhile, for
 
 This feature can be used to reduce the number of rows displayed in the list to those that correspond to the text entered in the search area. The area indicates the columns where the search/filtering will be carried out. On the Users page, it will be the 4D User, Machine name and Session name columns.
 
-The list is updated in real time as you enter text in the area. It is possible to enter more than one value to be searched for: separate the values with a semi-colon. The `OR` type operator is used in this case. For example, if you enter "John;Mary;Peter," only rows with John OR Mary OR Peter in the target columns will be kept.
+La lista se actualiza en tiempo real a medida que se introduce texto en el área. It is possible to enter more than one value to be searched for: separate the values with a semi-colon. En este caso se utiliza el operador de tipo `OR`. For example, if you enter "John;Mary;Peter," only rows with John OR Mary OR Peter in the target columns will be kept.
 
 
 ## Botones de administración
@@ -58,7 +58,7 @@ This button can be used to send a message to the 4D users selected in the window
 
 ![](assets/en/Admin/server-message.png)
 
-The message will be displayed as an alert on the remote machines.
+El mensaje se mostrará como una alerta en las máquinas remotas.
 
 > You can perfom the same action for remote users with the [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1632.html) command.
 

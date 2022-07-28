@@ -1,6 +1,6 @@
 ---
 id: creating-using-macros
-title: Creating and using macros
+title: Créer et utiliser des macros
 ---
 
 Vous pouvez utiliser des macro-commandes dans vos méthodes. Les macro-commandes permettent de gagner beaucoup de temps lors de la saisie de code.

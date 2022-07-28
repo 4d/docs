@@ -6,7 +6,7 @@ title: Visualización
 ---
 ## Formato Alfa
 
-Alpha formats control the way the alphanumeric fields and variables appear when displayed or printed. Here is a list of formats provided for alphanumeric fields:
+Alpha formats control the way the alphanumeric fields and variables appear when displayed or printed. Aquí hay una lista de formatos suministrados para los campos alfanuméricos:
 
 ![](assets/en/FormObjects/property_alphaFormat.png)
 
@@ -150,9 +150,9 @@ If characters are placed between placeholders, they appear only if digits are di
 
     ###.##0
 
-the point appears only if the user enters at least four digits.
+el punto aparece sólo si el usuario introduce al menos cuatro dígitos.
 
-Spaces are treated as characters in number display formats.
+Los espacios se tratan como caracteres en los formatos de visualización de números.
 
 ### Formatos para positivo, negativo y cero
 
@@ -279,7 +279,7 @@ The **Scaled to fit** format causes 4D to resize the picture to fit the dimensio
 
 `Gramática JSON: "truncatedCenter" / "truncatedTopLeft"`
 
-The **Truncated (centered)** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 4D crops equally from each edge and from the top and bottom.
+The **Truncated (centered)** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 4D recorta por igual desde cada borde y desde la parte superior e inferior.
 
 The **Truncated (non-centered)** format causes 4D to place the upper-left corner of the picture in the upper-left corner of the area and crop any portion that does not fit within the area. 4D crops from the right and bottom.
 > When the picture format is **Truncated (non-centered)**, it is possible to add scroll bars to the input area.
@@ -288,7 +288,7 @@ The **Truncated (non-centered)** format causes 4D to place the upper-left corner
 
 ### Scaled to fit (proportional) and Scaled to fit centered (proportional)
 
-`JSON grammar: "proportionalTopLeft" / "proportionalCenter"`
+`Gramática JSON: "proportionalTopLeft" / "proportionalCenter"`
 
 When you use **Scaled to fit (proportional)**, the picture is reduced proportionally on all sides to fit the area created for the picture. The **Scaled to fit centered (proportional)** option does the same, but centers the picture in the picture area.
 
@@ -331,19 +331,19 @@ Time formats control the way times appear when displayed or printed. For data en
 
 The table below shows the Time field display formats and gives examples:
 
-| Nombre del formato           | Cadena JSON     | Comentarios                                                                                                                                      | Ejemplo para 04:30:25          |
-| ---------------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------ |
-| HH:MM:SS                     | hh_mm_ss      |                                                                                                                                                  | 04:30:25                       |
-| HH:MM                        | hh_mm           |                                                                                                                                                  | 04:30                          |
-| Hour Min Sec                 | HH_MM_SS      |                                                                                                                                                  | 4 horas 30 minutos 25 segundos |
-| Hour Min                     | HH_MM           |                                                                                                                                                  | 4 horas 30 minutos             |
-| HH:MM AM/PM                  | hh_mm_am      |                                                                                                                                                  | 4:30 a.m.                      |
-| MM SS                        | mm_ss           | Hora expresada como duración a partir de las 00:00:00                                                                                            | 270:25                         |
-| Min Sec                      | MM_SS           | Hora expresada como duración a partir de las 00:00:00                                                                                            | 270 Minutos 25 Segundos        |
-| ISO Date Time                | iso8601         | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25            |
-| System time short            | - (por defecto) | Formato de hora estándar definido en el sistema                                                                                                  | 04:30:25                       |
-| System time long abbreviated | systemMedium    | macOS only: Abbreviated time format defined in the system. <br>Windows: this format is the same as the System time short format            | 4•30•25 AM                     |
-| System time long             | systemLong      | macOS únicamente: formato de tiempo largo definido en el sistema. <br>Windows: this format is the same as the System time short format     | 4:30:25 AM HNEC                |
+| Nombre del formato           | Cadena JSON     | Comentarios                                                                                                                                               | Ejemplo para 04:30:25          |
+| ---------------------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| HH:MM:SS                     | hh_mm_ss      |                                                                                                                                                           | 04:30:25                       |
+| HH:MM                        | hh_mm           |                                                                                                                                                           | 04:30                          |
+| Hour Min Sec                 | HH_MM_SS      |                                                                                                                                                           | 4 horas 30 minutos 25 segundos |
+| Hour Min                     | HH_MM           |                                                                                                                                                           | 4 horas 30 minutos             |
+| HH:MM AM/PM                  | hh_mm_am      |                                                                                                                                                           | 4:30 a.m.                      |
+| MM SS                        | mm_ss           | Hora expresada como duración a partir de las 00:00:00                                                                                                     | 270:25                         |
+| Min Sec                      | MM_SS           | Hora expresada como duración a partir de las 00:00:00                                                                                                     | 270 Minutos 25 Segundos        |
+| ISO Date Time                | iso8601         | Corresponde al estándar XML para representar datos relacionados con la hora. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25            |
+| System time short            | - (por defecto) | Formato de hora estándar definido en el sistema                                                                                                           | 04:30:25                       |
+| System time long abbreviated | systemMedium    | sólo macOS: formato de tiempo abreviado definido en el sistema. <br>Windows: this format is the same as the System time short format                | 4•30•25 AM                     |
+| System time long             | systemLong      | macOS únicamente: formato de tiempo largo definido en el sistema. <br>Windows: this format is the same as the System time short format              | 4:30:25 AM HNEC                |
 
 #### Gramática JSON
 
@@ -386,7 +386,7 @@ When a [boolean expression](properties_Object.md#expression-type) is displayed a
 ---
 ## Tipo de visualización
 
-Used to associate a display format with the column data. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes).
+Utilizado para asociar un formato de visualización con los datos de la columna. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes).
 
 Boolean and number (numeric or integer) columns can be displayed as check boxes. In this case, the [Title](#title) property can be defined.
 
@@ -411,7 +411,7 @@ Las columnas booleanas también pueden mostrarse como menús emergentes. In this
 
 When this property is enabled, the object is not drawn on the form, however it can still be activated.
 
-In particular, this property allows implementing "invisible" buttons.  Non-rendered buttons can be placed on top of graphic objects. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.
+In particular, this property allows implementing "invisible" buttons.  Los botones no renderizados pueden colocarse sobre los objetos gráficos. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.
 
 
 #### Gramática JSON
@@ -497,7 +497,7 @@ This option is available for columns with any type of contents, except pictures 
 *   When the property is enabled (default), if the contents of a list box cell exceed the width of the column, they are truncated and an ellipsis is displayed:
 
     ![](assets/en/FormObjects/property_truncate1.png)
-> La posición de la elipsis depende del sistema operativo. In the above example (Windows), it is added on the right side of the text. On macOS, the ellipsis is added in the middle of the text.
+> La posición de la elipsis depende del sistema operativo. In the above example (Windows), it is added on the right side of the text. En macOS, la elipsis se añade en medio del texto.
 
 *   When the property is disabled, if the contents of a cell exceed the width of the column, they are simply clipped with no ellipsis added:
 
@@ -578,7 +578,7 @@ When this option is selected, text automatically wraps to the next line whenever
 
 - In single-line columns/areas, only the last word that can be displayed entirely is displayed. 4D inserts line returns; it is possible to scroll the contents of the area by pressing the down arrow key.
 
-- In multiline columns/areas, 4D carries out automatic line returns.
+- En las columnas/áreas multilínea, 4D realiza retornos de línea automáticos.
 
 ![](assets/en/FormObjects/wordwrap2.png)
 

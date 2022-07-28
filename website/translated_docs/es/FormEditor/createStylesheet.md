@@ -222,7 +222,7 @@ Available media features:
 
 Available media feature expressions:
 
-*   **light**<br>For using a light scheme
+*   **light**<br>Para utilizar un esquema de luz
 *   **dark**<br>For using a dark scheme
 
 > Los esquemas de color sólo son soportados en macOS.

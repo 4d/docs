@@ -1079,9 +1079,9 @@ Exemplo com `dk reload se o selo mudou a opção`:
 
 A função `.next()` <!-- REF #EntityClass.next(). Summary --> retorna uma referência à próxima entidade na seleção da entidade à qual a entidade pertence<!-- END REF -->.
 
-If the entity does not belong to any existing entity selection (i.e. [.getSelection()](#getselection) returns Null), the function returns a Null value.
+Se a entidade não pertencer a nenhuma seleção de entidade existente (ex: [.getSelection()](#getselection) retorna Null), a função retorna um valor nulo.
 
-If there is no valid next entity in the entity selection (i.e. you are on the last entity of the selection), the function returns Null. If the next entity has been dropped, the function returns the next valid entity (and eventually Null).
+Se não houver entidade seguinte válida na selecção da entidade (ou seja, se estiver na última entidade da selecção), a função devolve Null. Se a entidade seguinte tiver sido abandonada, a função devolve a entidade válida seguinte (e eventualmente Nula).
 
 
 #### Exemplo
@@ -1089,9 +1089,9 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 ```4d
  var $employees : cs. EmployeeSelection
  var $employee; $nextEmployee : cs. EmployeeEntity
- $employees:=ds. Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
+ $employees:=ds. Employee.query("lastName = :1";"H@") //Esta seleção de entidade contém três entidades
  $employee:=$employees[0]
- $nextEmployee:=$employee.next() //$nextEmployee is the second entity of the $employees entity selection
+ $nextEmployee:=$employee.next() //$nextEmployee é a segunda entidade da seleção de entidades $employees
 
 ```
 
@@ -1113,19 +1113,19 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 
 
 <!-- REF #EntityClass.previous().Params -->
-| Parameter | Type       |    | Descrição                                                                |
-| --------- | ---------- |:--:| ------------------------------------------------------------------------ |
-| Resultado | 4D. Entity | <- | Reference to previous entity in the entity selection (Null if not found) |
+| Parameter | Type       |    | Descrição                                                                          |
+| --------- | ---------- |:--:| ---------------------------------------------------------------------------------- |
+| Resultado | 4D. Entity | <- | Referência a entidade anterior na seleção da entidade (Null se não for encontrado) |
 
 <!-- END REF -->
 
 #### Descrição
 
-The `.previous()` function <!-- REF #EntityClass.previous(). Summary --> returns a reference to the previous entity in the entity selection which the entity belongs to<!-- END REF -->.
+A função `.previous()` <!-- REF #EntityClass.previous(). Summary --> retorna uma referência à entidade anterior na seleção da entidade a que a entidade pertence <!-- END REF -->.
 
-If the entity does not belong to any existing entity selection (i.e. [.getSelection()](#getselection) returns Null), the function returns a Null value.
+Se a entidade não pertencer a nenhuma seleção de entidade existente (ex: [.getSelection()](#getselection) retorna Null), a função retorna um valor nulo.
 
-If there is no valid previous entity in the entity selection (i.e. you are on the first entity of the selection), the function returns Null. If the previous entity has been dropped, the function returns the previous valid entity (and eventually Null).
+Se não houver nenhuma entidade anterior válida na seleção da entidade (ou seja, você está na primeira entidade da seleção), a função retorna Null. Se a entidade anterior foi abandonada, a função retorna a entidade válida anterior (e eventualmente Null).
 
 
 #### Exemplo
@@ -1133,9 +1133,9 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 ```4d
  var $employees : cs. EmployeeSelection
  var $employee; $previousEmployee : cs. EmployeeEntity
- $employees:=ds. Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
+ $employees:=ds. Employee.query("lastName = :1";"H@") //Esta seleção de entidades contém 3 entidades
  $employee:=$employees[1]
- $previousEmployee:=$employee.previous() //$previousEmployee is the first entity of the $employees entity selection
+ $previousEmployee:=$employee.previous() //$previousEmployee é a primeira entidade da seleção de entidades $employees
 ```
 
 
@@ -1156,32 +1156,32 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 
 
 <!-- REF #EntityClass.reload().Params -->
-| Parameter | Type   |    | Descrição     |
-| --------- | ------ |:--:| ------------- |
-| Resultado | Objeto | <- | Status object |
+| Parameter | Type   |    | Descrição        |
+| --------- | ------ |:--:| ---------------- |
+| Resultado | Objeto | <- | Objeto de estado |
 
 <!-- END REF -->
 
 #### Descrição
 
-The `.reload()` function <!-- REF #EntityClass.reload(). Summary -->reloads the content of the entity in memory<!-- END REF -->, according to information stored in the table related to the dataclass in the datastore. The reload is done only if the entity still exists with the same primary key.
+A função `.reload()` <!-- REF #EntityClass.reload(). Summary -->recarrega o conteúdo da entidade na memória<! - END REF -->, de acordo com as informações armazenadas na tabela relacionadas ao dataclass no datastore. A recarga só é feita se a entidade ainda existir com a mesma chave primária.
 
 **Resultado**
 
-The object returned by `.reload( )` contains the following properties:
+O objeto retornado por `.reload( )` contém as seguintes propriedades:
 
-| Propriedade      | Type     | Descrição                                                                                                                                             |
-| ---------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| success          | booleano | True if the reload action is successful, False otherwise.<p><p>***Available only in case of error***: |
-| status(\*)     | number   | Código de erro, ver abaixo                                                                                                                            |
-| statusText(\*) | texto    | Descrição do erro, ver abaixo                                                                                                                         |
+| Propriedade      | Type     | Descrição                                                                                                                                                             |
+| ---------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| success          | booleano | Verdadeiro se a ação de recarga for bem-sucedida, Falso caso contrário.<p><p>***Disponível apenas em caso de erro***: |
+| status(\*)     | number   | Código de erro, ver abaixo                                                                                                                                            |
+| statusText(\*) | texto    | Descrição do erro, ver abaixo                                                                                                                                         |
 
 (\*) Os seguintes valores podem ser devolvidos nas propriedades *status* e *statusText* do objecto *Result* em caso de erro:
 
-| Constante                                 | Value | Comentário                                                                                                                                                                                                            |
-| ----------------------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. Este erro pode ocorrer nos seguintes casos:<br><li>a entidade foi descartada (o selo mudou e o espaço de memória é agora livre)</li><li>a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). Ao usar `.lock( )`, este erro pode ser retornado quando a opção `dk reload if stamp changed" for usado</li><br>***Associated statusText***: "Entity does not exist anymore" |
-| `dk status serious error`                 | 4     | A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.<br>***Associated statusText***: "Other error"                                                                       |
+| Constante                                 | Value | Comentário                                                                                                                                                                                                      |
+| ----------------------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. Este erro pode ocorrer nos seguintes casos:<br><li>a entidade foi descartada (o selo mudou e o espaço de memória é agora livre)</li><li>a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). a entidade foi eliminada e substituída por outra com outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). Ao usar `.lock( )`, este erro pode ser retornado quando a opção `dk reload if stamp changed" for usado</li><br>***statusText associado***: "a entidade já não existe" |
+| `dk status serious error`                 | 4     | Um erro grave é um erro de banco de dados de baixo nível (por exemplo, chave duplicada), um erro de hardware, etc.<br>***Texto status associado***: "Outro erro"                                          |
 
 
 #### Exemplo
@@ -1221,10 +1221,10 @@ The object returned by `.reload( )` contains the following properties:
 
 
 <!-- REF #EntityClass.save().Params -->
-| Parameter | Type    |    | Descrição                                         |
-| --------- | ------- |:--:| ------------------------------------------------- |
-| mode      | Integer | -> | `dk auto merge`: Enables the automatic merge mode |
-| Resultado | Objeto  | <- | Result of save operation                          |
+| Parameter | Type    |    | Descrição                                           |
+| --------- | ------- |:--:| --------------------------------------------------- |
+| mode      | Integer | -> | `dk auto merge`: Permite o modo de fusão automática |
+| Resultado | Objeto  | <- | Resultado da operação de salvamento                 |
 
 <!-- END REF -->
 
@@ -1250,7 +1250,7 @@ The object returned by `.save()` contains the following properties:
 | success      |                    | booleano               | True if the save action is successful, False otherwise.                                                                 |
 |              |                    |                        | ***Available only if `dk auto merge` option is used***:                                                                 |
 | autoMerged   |                    | booleano               | True if an auto merge was done, False otherwise.                                                                        |
-|              |                    |                        | ***Available only in case of error***:                                                                                  |
+|              |                    |                        | ***Disponível apenas em caso de erro***:                                                                                |
 | status       |                    | number                 | Error code, [see below](#status-and-statustext)                                                                         |
 | statusText   |                    | texto                  | Description of the error, [see below](#status-and-statustext)                                                           |
 |              |                    |                        | ***Available only in case of pessimistic lock error***:                                                                 |
@@ -1275,7 +1275,7 @@ The following values can be returned in the `status` and `statusText` properties
 | Constante                                 | Value | Comentário                                                                                                                                                                                                                                                      |
 | ----------------------------------------- | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `dk status automerge failed`              | 6     | (Only if the `dk auto merge` option is used) The automatic merge option failed when saving the entity.<p><p>**Associated statusText**: "Auto merge failed"                                                      |
-| `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. Este erro pode ocorrer nos seguintes casos:<br><li>a entidade foi descartada (o selo mudou e o espaço de memória é agora livre)</li><li>a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). Ao usar `.lock( )`, este erro pode ser retornado quando a opção `dk reload if stamp changed" for usado</li><br>**Associated statusText**: "Entity doesnot exist anymore"                                              |
+| `dk status entity does not exist anymore` | 5     | A entidade não existe mais nos dados. Este erro pode ocorrer nos seguintes casos:<br><li>a entidade foi descartada (o selo mudou e o espaço de memória é agora livre)</li><li>a entidade foi descartada e substituída por outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). a entidade foi eliminada e substituída por outra com outra chave primária (o selo mudou e uma nova entidade agora usa o espaço de memória). Ao usar `.lock( )`, este erro pode ser retornado quando a opção `dk reload if stamp changed" for usado</li><br>**Associated statusText**: "Entity doesnot exist anymore"                                              |
 | `dk status locked`                        | 3     | A entidade está fechada por uma fechadura pessimista.<p><p>**Associado statusText**: "Já bloqueado"                                                                                                             |
 | `dk status serious error`                 | 4     | Um erro grave é um erro de banco de dados de baixo nível (por exemplo, chave duplicada), um erro de hardware, etc.<p><p>**Texto status associado**: "Outro erro"                                                |
 | `dk status stamp has changed`             | 2     | O valor de selo interno da entidade não corresponde a uma da entidade armazenada nos dados (bloqueio otimista).<br><li>com `.save( )`: erro apenas se a opção `dk auto merge' não for utilizada</li><li>com `.drop( )`: erro apenas se a opção `dk force drop if stamp changed' não for utilizada</li><li>com `.lock( )`: erro apenas se a opção `dk reload if stamp changed` não for usada</li><br>**Associated statusText**: "Stamp has changed" |
@@ -1768,9 +1768,9 @@ Nesse modo:
 
 
 <!-- REF #EntityClass.unlock().Params -->
-| Parameter | Type   |    | Descrição     |
-| --------- | ------ |:--:| ------------- |
-| Resultado | Objeto | <- | Status object |
+| Parameter | Type   |    | Descrição        |
+| --------- | ------ |:--:| ---------------- |
+| Resultado | Objeto | <- | Objeto de estado |
 
 <!-- END REF -->
 

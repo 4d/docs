@@ -26,7 +26,7 @@ Esta propiedad designa el tipo del [objeto formulario activo o inactivo](formObj
 ---
 ## Nombre del objeto
 
-Each active form object is associated with an object name. Cada nombre de objeto debe ser único.
+Cada objeto de formulario activo está asociado a un nombre de objeto. Cada nombre de objeto debe ser único.
 > Los nombres de objetos están limitados a un tamaño de 255 bytes.
 
 When using 4D’s language, you can refer to an active form object by its object name (for more information about this, refer to [Object Properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) in the 4D Language Reference manual).
@@ -81,7 +81,7 @@ Esta es la lista de objetos cuyo valor se puede guardar:
 > See also **[Expression](properties_DataSource.md#expression)** for Selection and collection type list box columns.
 
 
-Esta propiedad especifica la fuente de los datos. Each active form object is associated with an object name and a variable name. The variable name can be different from the object’s name. In the same form, you can use the same variable several times while each [object name](#object-name) must be unique.
+Esta propiedad especifica la fuente de los datos. Each active form object is associated with an object name and a variable name. El nombre de la variable puede ser diferente del nombre del objeto. In the same form, you can use the same variable several times while each [object name](#object-name) must be unique.
 > El tamaño del nombre de la variable está limitado a 31 bytes. See [Identifiers](Concepts/identifiers.md) section for more information about naming rules.
 
 The form object variables allow you to control and monitor the objects. For example, when a button is clicked, its variable is set to 1; at all other times, it is 0. The expression associated with a progress indicator lets you read and change the current setting.
@@ -168,7 +168,7 @@ Specify the data type for the expression or variable associated to the object. N
 However, this property has a typing function in the following specific cases:
 
 - **[Dynamic variables](#dynamic-variables)**: you can use this property to declare the type of dynamic variables.
-- **[List Box Columns](listbox_overview.md#list-box-columns)**: this property is used to associate a display format with the column data. The formats provided will depend on the variable type (array type list box) or the data/field type (selection and collection type list boxes). The standard 4D formats that can be used are: Alpha, Numeric, Date, Time, Picture and Boolean. The Text type does not have specific display formats. Todos los formatos personalizados existentes también están disponibles.
+- **[List Box Columns](listbox_overview.md#list-box-columns)**: this property is used to associate a display format with the column data. The formats provided will depend on the variable type (array type list box) or the data/field type (selection and collection type list boxes). The standard 4D formats that can be used are: Alpha, Numeric, Date, Time, Picture and Boolean. El tipo Texto no tiene formatos de visualización específicos. Todos los formatos personalizados existentes también están disponibles.
 - **[Picture variables](input_overview.md)**: you can use this menu to declare the variables before loading the form in interpreted mode. Specific native mechanisms govern the display of picture variables in forms. These mechanisms require greater precision when configuring variables: from now on, they must have already been declared before loading the form — i.e., even before the `On Load` form event — unlike other types of variables. To do this, you need either for the statement `C_PICTURE(varName)` to have been executed before loading the form (typically, in the method calling the `DIALOG` command), or for the variable to have been typed at the form level using the expression type property. Otherwise, the picture variable will not be displayed correctly (only in interpreted mode).
 
 
@@ -217,9 +217,9 @@ The collection or the entity selection must be available to the form when it is 
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles                                             |
-| ---------- | -------------- | ------------------------------------------------------------ |
-| dataSource | cadena         | Expression that returns a collection or an entity selection. |
+| Nombre     | Tipos de datos | Valores posibles                                                   |
+| ---------- | -------------- | ------------------------------------------------------------------ |
+| dataSource | cadena         | Expresión que devuelve una colección o una selección de entidades. |
 
 #### Objetos soportados
 
@@ -265,9 +265,9 @@ Name of the [plug-in external area](pluginArea_overview.md) associated to the ob
 
 #### Gramática JSON
 
-| Nombre         | Tipos de datos | Valores posibles                                              |
-| -------------- | -------------- | ------------------------------------------------------------- |
-| pluginAreaKind | cadena         | Name of the plug-in external area (starts with a % character) |
+| Nombre         | Tipos de datos | Valores posibles                                                 |
+| -------------- | -------------- | ---------------------------------------------------------------- |
+| pluginAreaKind | cadena         | Nombre del área externa del plug-in (comienza con un carácter %) |
 
 
 #### Objetos soportados
@@ -306,7 +306,7 @@ You can force a carriage return in the label by using the \ character (backslash
 
 Para insertar un \ en la etiqueta, ingrese "&#92;&#92;".
 
-By default, the label is placed in the center of the object. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) property.
+Por defecto, la etiqueta se coloca en el centro del objeto. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) property.
 
 For application translation purposes, you can enter an XLIFF reference in the title area of a button (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 

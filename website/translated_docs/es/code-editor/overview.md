@@ -58,7 +58,7 @@ The import/export function is multi-platform: a method exported under Mac OS can
 
 After creating a project method, you can rename it and modify its properties. Project method properties mainly concern their access and security conditions (access by users, integrated servers or services) as well as their execution mode.
 
-The other types of methods do not have specific properties. Their properties are related to those of the objects to which they are attached.
+Los otros tipos de métodos no tienen propiedades específicas. Their properties are related to those of the objects to which they are attached.
 
 To display the **Method Properties** dialog box for a project method, you can either:
 
@@ -180,13 +180,13 @@ Using the "Attributes for methods" dialog box, you can modify an attribute (Invi
 Para la configuración por lotes de los atributos del método:
 
 1.  On the [Methods Page](https://doc.4d.com/4Dv19R5/4D/19-R5/Methods-Page.300-5851337.en.html) of the 4D Explorer, expand the options menu, then choose the **Batch setting of attributes...** command. The **Attributes for methods** dialog appears.
-2.  In the "Matching method name:" area, enter a string that lets you designate the methods you want to modify as a batch. The character string is used as a search criterion for the method names. Use the wildcard character @ to help define groups of methods:
+2.  In the "Matching method name:" area, enter a string that lets you designate the methods you want to modify as a batch. The character string is used as a search criterion for the method names. Utilice el carácter comodín @ para ayudar a definir los grupos de métodos:
    -   To designate methods whose names begin with..., type @ at the end of the string. Por ejemplo: web@
     -   To designate methods whose names contain..., type @ in the middle of the string. Por ejemplo: web@write
     -   To designate methods whose names end with..., type @ at the beginning of the string. For example: @write
     -   To designate all of the methods, just type @ in the area.\
       **Notes:**
-        -   The search does not take upper/lower case into account.
+        -   La búsqueda no tiene en cuenta las mayúsculas/minúsculas.
         -   You can enter several @ characters in the string, for example dtro_@web@pro.@
 3.  In the "Attribute to Modify" area, choose an attribute from the drop-down list, then click on the **True** or **False** radio button corresponding to the value to be applied. **Note:** If the "Published in WSDL" attribute is set to True, it will only be applied to project methods already containing the "Offered as a Web Service" attribute.
 4.  Haga clic en **Aplicar**. The modification is applied instantly to all the project methods designated by the character string entered.

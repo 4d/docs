@@ -126,10 +126,10 @@
         "title": "Paramètres de sauvegarde"
       },
       "code-editor/creating-using-macros": {
-        "title": "Creating and using macros"
+        "title": "Créer et utiliser des macros"
       },
       "code-editor/find-replace": {
-        "title": "Find and replace"
+        "title": "Chercher et remplacer"
       },
       "code-editor/overview": {
         "title": "About 4D Code"
@@ -998,7 +998,7 @@
       "4D Language Concepts": "Concepts du langage 4D",
       "ORDA": "ORDA",
       "Class API Reference": "Classes API",
-      "Handling Code": "Handling Code",
+      "Handling Code": "Gestion du code",
       "Debugging": "Débogage",
       "Settings": "Settings",
       "Preferences": "Préférences",
@@ -1006,14 +1006,14 @@
       "Web Administration": "Administration Web",
       "Command Line Interface": "Interface de ligne de commande",
       "TLS Protocol": "Protocole TLS",
-      "Licenses & Data Collection": "Licenses & Data Collection",
+      "Licenses & Data Collection": "Licences et collecte de données",
       "Access Rights": "Droits d'accès",
       "MSC": "CSM",
       "Backup and Restore": "Sauvegarde et restitution",
       "Web Server": "Serveur Web",
       "Web Development": "Développement Web",
       "REST Server": "Serveur REST",
-      "Client/Server": "Client/Server",
+      "Client/Server": "Client/Serveur",
       "Forms": "Formulaires",
       "Form Properties": "Propriétés des formulaires",
       "Form Objects": "Objets formulaires",
@@ -1044,15 +1044,15 @@
     "REST Server|no description given": "Serveur REST",
     "Maintenance and Security Center|no description given": "Centre de Sécurité et de Maintenance",
     "Backup and Restore|no description given": "Sauvegarde et restitution",
-    "Licenses & Data Collection|no description given": "Licenses & Data Collection",
+    "Licenses & Data Collection|no description given": "Licences et collecte de données",
     "Build Application|no description given": "Générateur d'application",
     "Web Administration|no description given": "Administration Web",
     "4D Server Administration Window|no description given": "Fenêtre d'administration de 4D Server",
     "4D Components Library|no description given": "Bibliothèque des composants 4D",
-    "Client/Server|no description given": "Client/Server",
+    "Client/Server|no description given": "Client/Serveur",
     "TLS Protocol|no description given": "Protocole TLS",
     "Debugging|no description given": "Débogage",
-    "Handling Code|no description given": "Handling Code",
+    "Handling Code|no description given": "Gestion du code",
     "Web Data Explorer|no description given": "Explorateur de données Web",
     "Language Reference (4D Doc Center)|no description given": "Langage (4D Doc Center)",
     "Access Rights|no description given": "Droits d'accès",
@@ -1065,9 +1065,9 @@
     "Developing Plugins|no description given": "Plugins de développement",
     "Working with a project|no description given": "Travailler avec des projets",
     "Settings|no description given": "Settings",
-    "Transformation Tags|no description given": "Transformation Tags",
+    "Transformation Tags|no description given": "Balises de transformation",
     "User Settings|no description given": "Propriétés utilisateur",
-    "https://doc.4d.com/4Dv19R5/4D/19-R5/4D-Language-Reference.100-5829974.en.html|no description given": "https://doc.4d.com/4Dv19R5/4D/19-R5/4D-Language-Reference.100-5829974.en.html",
+    "https://doc.4d.com/4Dv19R5/4D/19-R5/4D-Language-Reference.100-5829974.en.html|no description given": "https://doc.4d.com/4Dv19R5/4D/19-R5/4D-Language-Reference.100-5829974.fe.html",
     "Getting started|no description given": "Prise en main",
     "Core Development|no description given": "Développement",
     "Administration|no description given": "Administration",

@@ -285,7 +285,7 @@ If $myObject is Null, the second argument is not executed, thus no error is thro
 
 ### Short-circuit OR operator (||)
 
-The || operator returns the value of one of the specified operands. The expression is evaluated left to right and tested for possible "short-circuit" evaluation using the following rule:
+El operador || devuelve el valor de uno de los operandos especificados. The expression is evaluated left to right and tested for possible "short-circuit" evaluation using the following rule:
 
 Given `Expr1 || Expr2`:
 

@@ -55,7 +55,7 @@ End if
 | zipStructure    | Objeto     | -> | Objeto File ou Folder a comprimir                    |
 | destinationFile | 4D. File   | -> | Arquivo destino para o arquivo                       |
 | options         | Integer    | -> | *folderToZip* option: `ZIP Without enclosing folder` |
-| Resultado       | Objeto     | <- | Status object                                        |
+| Resultado       | Objeto     | <- | Objeto de estado                                     |
 <!-- END REF -->
 
 
@@ -84,7 +84,7 @@ No parâmetro *destinationFile* passe um `4D. File` objeto descrevendo o arquivo
 
 Quando um arquivo for criado, pode usar o comando [ZIP Read archive](#zip-read-archive) para acessá-lo.
 
-**Status object**
+**Objeto de estado**
 
 O estado do objeto retornado contém as propriedades abaixo:
 

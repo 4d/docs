@@ -134,7 +134,7 @@ En el parámetro *options*, pase un objeto que pueda contener las siguientes pro
 | protocol             | Texto                                           | "auto" o "HTTP1". "auto" significa HTTP1 en la implementación actual                                                                                                                                                                                                      | "auto"       |
 | proxyAuthentication  | [authentication object](#authentication-object) | Autenticación del proxy de gestión de objetos                                                                                                                                                                                                                             | indefinido   |
 | serverAuthentication | [authentication object](#authentication-object) | Autenticación del servidor de gestión de objetos                                                                                                                                                                                                                          | indefinido   |
-| returnResponseBody   | Booleano                                        | If false, the response body is not returned in the [`response` object](#response). Returns an error if false and `onData` is undefined                                                                                                                                    | True         |
+| returnResponseBody   | Booleano                                        | If false, the response body is not returned in the [`response` object](#response). Devuelve un error si es false y `onData` es indefinido                                                                                                                                 | True         |
 | timeout              | Real                                            | Tiempo de espera en segundos. Indefinido = sin tiempo de espera                                                                                                                                                                                                           | Indefinido   |
 
 #### Función callback (retrollamada)
@@ -151,7 +151,7 @@ Esta es la secuencia de llamadas de retorno:
 
 1. `onHeaders` se llama siempre una vez
 2. `onData` is called zero or several times (not called if the request does not have a body)
-3. If no error occured, `onResponse` is always called once
+3. Si no se produce ningún error, `onResponse` se llama siempre una vez
 4. If an error occurs, `onError` is executed once (and terminates the request)
 5. `onTerminate` se ejecuta siempre una vez
 
@@ -283,12 +283,12 @@ La propiedad `.response` contiene <!-- REF #4D.HTTPRequest.response.Summary -->t
 
 A `response` object is a non-sharable object. Ofrece las siguientes propiedades:
 
-| Propiedad   | Tipo    | Descripción                                                                                                                                                             |
-| ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| .body       | Variant | Cuerpo de la respuesta. The type of the message is defined according to the [`dataType`](#datatype) property. Indefinido si el cuerpo no se ha recibido todavía         |
-| .headers    | Objeto  | Headers of the response. `headers.key` = value (value can be a collection if the same key appears multiple times). Undefined if the headers have not been received yet. |
-| .status     | Número  | Código de estado de la respuesta                                                                                                                                        |
-| .statusText | Texto   | Mensaje explicando el código de estado                                                                                                                                  |
+| Propiedad   | Tipo    | Descripción                                                                                                                                                                |
+| ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| .body       | Variant | Cuerpo de la respuesta. The type of the message is defined according to the [`dataType`](#datatype) property. Indefinido si el cuerpo no se ha recibido todavía            |
+| .headers    | Objeto  | Headers of the response. `headers.key` = value (value can be a collection if the same key appears multiple times). Indefinido si el los encabezados no se ha recibido aún. |
+| .status     | Número  | Código de estado de la respuesta                                                                                                                                           |
+| .statusText | Texto   | Mensaje explicando el código de estado                                                                                                                                     |
 
 
 

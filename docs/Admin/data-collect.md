@@ -9,6 +9,7 @@ This page explains:
 
 - what information is collected
 - where information is stored and when it is sent to 4D
+- how to disable automatic data collection in client/server built applications.
 
 
 ## Collected information
@@ -77,3 +78,10 @@ Once a week, the file is automatically sent over the network to 4D. The file is 
 ![](assets/en/Admin/data-collect.png)
 
 > If the file could not be sent for some reason, it is nevertheless deleted and no error message is displayed on the 4D Server side. 
+
+
+## Disabling data collection in client/server built applications
+
+You can disable the automatic data collection in [client/server built applications](../Desktop/building.md#clientserver-page).
+
+To disable the collection, pass the value **False** to the [`ServerDataCollection`](https://doc.4d.com/4Dv19R6/4D/19-R6/ServerDataCollection.300-6011712.en.html) key in the `buildApp.4DSettings` file, used to build the client/server application.

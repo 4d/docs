@@ -30,12 +30,12 @@ This button toggles and can be used to control the activation of the 4D Server S
 
 This area provides information about the SQL server configuration parameters: automatic launching on startup, listening IP address, TCP port (19812 by default) and enabling of SSL for SQL connections (does not concern 4D nor HTTP connections).
 
-These parameters can be modified via the 4D Settings.
+Estos parámetros pueden modificarse a través de las Preferencias de 4D.
 
 ### Conecciones
 
-Number of SQL connections currently open on 4D Server.
+Número de conexiones SQL abiertas actualmente en 4D Server.
 
 ### Conexiones máximas
 
-Maximum number of simultaneous SQL connections allowed. This value depends on the license installed on the server machine.
+Número máximo de conexiones SQL simultáneas autorizadas. This value depends on the license installed on the server machine.

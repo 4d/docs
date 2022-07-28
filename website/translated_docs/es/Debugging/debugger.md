@@ -10,7 +10,7 @@ The debugger is useful when you need to spot errors or monitor the execution of 
 
 ## Llamada al depurador
 
-There are multiple ways to get the Debugger to display:
+Hay varias formas de conseguir que el depurador se muestre:
 
 * Clicking the **Trace** button in the [Syntax Error window](basics.md#syntax-error-window)
 * Using the [`TRACE`](https://doc.4d.com/4dv19/help/command/en/page157.html) command
@@ -137,7 +137,7 @@ $c:=a+b
 
     La variable `$a` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
-2. You click the **Step Over** button. The program counter is now set to the line `b:=a+1`. En este punto, el tema muestra:
+2. You click the **Step Over** button. El contador del programa se pone ahora en la línea `b:=a+1`. En este punto, el tema muestra:
 
     | $a | 1          |
     | -- | ---------- |
@@ -145,7 +145,7 @@ $c:=a+b
 
     El valor de la variable `$a` es ahora 1. La variable `$b` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
-3. You click the **Step Over** button again. The program counter is now set on the line with c:=a+b. At this point the Line Objects theme displays:
+3. You click the **Step Over** button again. El contador del programa ahora está en la línea con c:=a+b. At this point the Line Objects theme displays:
 
     | $c | Indefinido |
     | -- | ---------- |
@@ -158,13 +158,13 @@ $c:=a+b
 
 Este tema se compone de los siguientes subtemas:
 
-| Subtema      | Descripción                                                  | ¿Se pueden modificar los valores? |
-| ------------ | ------------------------------------------------------------ | --------------------------------- |
-| Interproceso | List of interprocess variables being used at this point      | Sí                                |
-| Proceso      | Lista de variables proceso utilizadas por el proceso actual  | Sí                                |
-| Local        | List of local variables used by the method being traced      | Sí                                |
-| Parámetros   | Lista de parámetros recibidos por el método                  | Sí                                |
-| Self         | Pointer to the current object, when tracing an Object Method | No                                |
+| Subtema      | Descripción                                                              | ¿Se pueden modificar los valores? |
+| ------------ | ------------------------------------------------------------------------ | --------------------------------- |
+| Interproceso | Lista de variables de interproceso que se están utilizando en este punto | Sí                                |
+| Proceso      | Lista de variables proceso utilizadas por el proceso actual              | Sí                                |
+| Local        | Lista de variables locales utilizadas por el método rastreado            | Sí                                |
+| Parámetros   | Lista de parámetros recibidos por el método                              | Sí                                |
+| Self         | Puntero al objeto actual, cuando se rastrea un método Objeto             | No                                |
 
 Arrays, like other variables, appear in the Interprocess, Process, and Local subthemes, depending on their scope. El depurador muestra los primeros 100 elementos. Inside the **Value** column, you can modify the values of array elements, but not the size of the arrays.
 
@@ -190,7 +190,7 @@ Like the Constants page of the Explorer window, this theme displays predefined c
 
 #### Semáforos
 
-This theme lists the local semaphores currently being set. For each semaphore, the Value column provides the name of the process that sets the semaphore. Las expresiones de este tema no pueden ser modificadas. The expressions from this theme cannot be modified.
+Este tema lista los semáforos locales que se están configurando actualmente. For each semaphore, the Value column provides the name of the process that sets the semaphore. Las expresiones de este tema no pueden ser modificadas. The expressions from this theme cannot be modified.
 
 #### Procesos
 
@@ -198,7 +198,7 @@ This theme lists the processes started since the beginning of the working sessio
 
 #### Tablas y campos
 
-This theme lists the tables and fields in the 4D database. For each Table item, the Value column displays the size of the current selection for the current process as well as the number of **locked records**.
+Este tema lista las tablas y los campos en la base 4D. For each Table item, the Value column displays the size of the current selection for the current process as well as the number of **locked records**.
 
 For each Field item, the Value column displays the value of the field for the current record (except picture and BLOB). You can modify the field values but not the the tables' information.
 
@@ -218,13 +218,13 @@ This theme contains general information regarding database operation, such as th
 
 This theme displays information regarding the main Web server of the application (only available if the Web server is active):
 
-* Web File To Send: name of Web file waiting to be sent (if any)
+* Archivo web a enviar: nombre del archivo web en espera de ser enviado (si lo hay)
 * Web Cache Usage: number of pages present in Web cache as well as its use percentage
 * Web Server Elapsed Time: duration of Web server use in hours:minutes:seconds format
 * Web Hits Count: total number of HTTP requests received since Web server launch, as well as the instantaneous number of requests per second
 * Number of active Web processes: number of active Web processes, all Web processes together
 
-The expressions contained within this theme cannot be modified.
+Las expresiones contenidas en este tema no pueden ser modificadas.
 
 ### Menú contextual de la ventana de expresión
 
@@ -243,15 +243,15 @@ Additional options are available from the contextual menu of the Watch pane.
 
 ## Panel de la cadena de llamadas
 
-A method may call other methods or class functions, which may call other methods or functions. The Call Chain pane lets you keep track of that hierarchy.
+A method may call other methods or class functions, which may call other methods or functions. El panel de la Cadena de Llamadas le permite hacer un seguimiento de esa jerarquía.
 
 ![call-chain-pane](assets/en/Debugging/call-chain-example.png)
 
-Each main level item is the name of a method or class function. The top item is the one you are currently tracing, the next main level item is the name of the caller (the method or function that called the one you are currently tracing), the next one is the caller's caller, and so on.
+Cada elemento del nivel principal es el nombre de un método o función clase. The top item is the one you are currently tracing, the next main level item is the name of the caller (the method or function that called the one you are currently tracing), the next one is the caller's caller, and so on.
 
 En la imagen de arriba:
 
-* `thirdMethod` has not received any parameter
+* `thirdMethod` no ha recibido ningún parámetro
 * `$0` is currently undefined, as the method did not assign any value to `$0` (because it has not executed this assignment yet or because the method is a subroutine and not a function)
 * `secondMethod` has received three parameters from `firstMethod`:
     * $1 is a pointer to the `[Employee]` table
@@ -284,11 +284,11 @@ The Custom Watch Pane is useful for evaluating expressions. It is similar to the
 
 ![custom-Watch-pane](assets/en/Debugging/custom-watch-pane.png)
 
-You can evaluate any expression that can be shown in text form. This does not cover picture and BLOB fields or variables. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](https://doc.4d.com/4dv19/help/command/en/page555.html).
+Puede evaluar toda expresión que pueda mostrarse en forma de texto. This does not cover picture and BLOB fields or variables. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](https://doc.4d.com/4dv19/help/command/en/page555.html).
 
 ### Gestión de expresiones
 
-There are several ways to add expressions to the list:
+Hay varias formas de añadir expresiones a la lista:
 
 * Drag and drop an object or expression from the Watch Pane or the Call Chain Pane
 * Select an expression in the [Source Code pane](#source-code-pane) and press **ctrl+D**  (Windows) or **cmd+D** (macOS)
@@ -347,7 +347,7 @@ Esto también funciona con las selecciones:
 
 You can copy any selected expression from the Source Code Pane to the [Custom Watch Pane](#custom-watch-pane).
 
-1. In the Source code pane, select the expression to evaluate
+1. En el panel de código fuente, seleccione la expresión a evaluar
 2. Haga una de las siguientes cosas:
     * Drag and drop the selected text to the Expression area of the Custom Watch Pane
     * Press **Ctrl+D** (Windows) or **Cmd+D** (macOS)
@@ -361,9 +361,9 @@ By default, the program counter line (also called the running line) is highlight
 
 #### Mover el contador del programa
 
-For debugging purposes, you can move the program counter for the method at the top of the call chain (the method currently executing). To do so, click and drag the yellow arrow to another line.
+For debugging purposes, you can move the program counter for the method at the top of the call chain (the method currently executing). Para ello, haga clic y arrastre la flecha amarilla a otra línea.
 
-This only tells the debugger to pursue tracing or executing from a different point. It does not execute lines or cancel their execution. All current settings, fields, variables, etc. are not impacted.
+This only tells the debugger to pursue tracing or executing from a different point. It does not execute lines or cancel their execution. Todos los ajustes, campos, variables, etc. actuales no se ven afectados.
 
 Por ejemplo:
 
@@ -421,7 +421,7 @@ This section lists all the shortcuts available in the debugger window.
 
 #### Panel de código fuente
 
-* Click in the left margin to set or remove break points.
+* Haga clic en el margen izquierdo para definiir o eliminar puntos de ruptura.
 * **Alt+Shift+Click** (Windows) or **Option+Shift+Click** (macOS) sets a temporary break point.
 * **Alt-Click** (Windows) or **Option-Click** displays the Edit Break window for a new or existing break point.
 * A selected expression or object can be copied to the Custom Watch Pane by simple drag and drop.
@@ -435,4 +435,4 @@ This section lists all the shortcuts available in the debugger window.
 - **Ctrl + \*** (Windows) or **Command + \*** (macOS) forces the updating of the Watch Pane.
 - When no item is selected in any pane, press **Enter** to step over.
 - When an item value is selected, use the arrows keys to navigate through the list.
-- When editing an item, use the arrow keys to move the cursor. Use Ctrl-A/X/C/V (Windows) or Command-A/X/C/V (macOS) as shortcuts to the Select All/Cut/Copy/Paste menu commands of the Edit menu.
+- Al editar un elemento, utilice las teclas de flecha para mover el cursor. Use Ctrl-A/X/C/V (Windows) or Command-A/X/C/V (macOS) as shortcuts to the Select All/Cut/Copy/Paste menu commands of the Edit menu.

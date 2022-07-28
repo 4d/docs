@@ -707,7 +707,7 @@ In the following example, `$ds.Persons.all()` loads the first entity with all it
 
 Note that `address.city` is loaded in the cache of the `Persons` dataclass.
 
-Only the first entity of the `Address` dataclass is stored in the cache. It is loaded during the first iteration of the loop.
+Only the first entity of the `Address` dataclass is stored in the cache. Se carga durante la primera iteración del bucle.
 
 ```4d
 var $ds : 4D.DataStoreImplementation

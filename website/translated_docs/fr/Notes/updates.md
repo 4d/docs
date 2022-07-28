@@ -8,11 +8,11 @@ La liste des principales mises à jour de cette documentation. Pour des informat
 
 ## 4D v19 R6
 
-- New [HTTPRequest](API/HTTPRequestClass.md) class.
+- Nouvelle classe [HTTPRequest](API/HTTPRequestClass.md).
 - Collection functions that can call code now support function objects as *formula* parameter: [`.every()`](API/CollectionClass.md#every), [`.filter()`](API/CollectionClass.md#filter), [`.find()`](API/CollectionClass.md#find), [`.findIndex()`](API/CollectionClass.md#findindex), [`.map()`](API/CollectionClass.md#map), [`.orderByMethod()`](API/CollectionClass.md#orderbymethod), [`.reduce()`](API/CollectionClass.md#reduce), [`.some()`](API/CollectionClass.md#some), [`.sort()`](API/CollectionClass.md#sort)
 - Listbox cells support [horizontal](FormObjects/properties_CoordinatesAndSizing.md#horizontal-padding) and [vertical](FormObjects/properties_CoordinatesAndSizing.md#vertical-padding) padding.
 - 4D View Pro: new [VP CREATE TABLE](ViewPro/method-list.md#vp-create-table) and [VP REMOVE TABLE](ViewPro/method-list.md#vp-remove-table) commands to handle tables in sheets.
-- New page explaining [why and how 4D collects data](Admin/data-collect.md).
+- Nouvelle page expliquant [pourquoi et comment 4D collecte des données](Admin/data-collect. md).
 
 
 ## 4D v19 R5

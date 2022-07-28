@@ -714,55 +714,55 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 <!-- REF #_method_.VP CREATE TABLE.Params -->
 
-| 引数        | タイプ    |    | 説明                       |
-| --------- | ------ | -- | ------------------------ |
-| rangeObj  | Object | -> | レンジオブジェクト                |
-| tableName | テキスト   | -> | テーブルの名称                  |
-| source    | テキスト   | -> | テーブルに表示するデータコンテキストプロパティ名 |
-| options   | オブジェクト | -> | 追加のオプション                 |
+| 引数        | タイプ    |    | 説明                    |
+| --------- | ------ | -- | --------------------- |
+| rangeObj  | Object | -> | レンジオブジェクト             |
+| tableName | テキスト   | -> | 表組みの名称                |
+| source    | テキスト   | -> | 表に表示するデータコンテキストプロパティ名 |
+| options   | オブジェクト | -> | 追加のオプション              |
 <!-- END REF -->  
 
 #### 説明
 
-`VP CREATE TABLE` コマンドは、 <!-- REF #_method_.VP CREATE TABLE.Summary -->指定のレンジ内にテーブルを作成します<!-- END REF -->。 テーブルを作成することで、関連するデータの管理や分析をより簡単におこなえます。 テーブルは通常、関連するデータを行と列に含み、 [データコンテキスト](#vp-set-data-context) を利用します。
+`VP CREATE TABLE` コマンドは、 <!-- REF #_method_.VP CREATE TABLE.Summary -->指定のレンジ内に表組みを作成します<!-- END REF -->。 表組みを作成することで、関連するデータの管理や分析をより簡単におこなえます。 表組みは通常、関連するデータを行と列に含み、 [データコンテキスト](#vp-set-data-context) を利用します。
 
 ![](assets/en/ViewPro/vp-create-table.png)
 
-*rangeObj* 引数には、テーブルの作成場所としたいセルのレンジを渡します。
+*rangeObj* 引数には、表の作成場所としたいセルのレンジを渡します。
 
-*tableName* には、テーブルの名称を渡します。 名称は次の条件を満たさなくてはなりません:
+*tableName* には、表組みの名称を渡します。 名称は次の条件を満たさなくてはなりません:
 
 * シートにおいて固有のものである
 * 5文字以上である
 * 先頭が数字でなく、スペースを含まない
 
-*source* には、テーブルにデータを表示する [データコンテキスト](#vp-set-data-context) のプロパティ名を渡します。 これにより、テーブルをデータコンテキストにバインドします。 データコンテキストが更新されると、テーブルに表示されるデータも更新されます。 このデータコンテキストには、各要素が行を表すオブジェクトのコレクションが含まれている必要があります。
+*source* には、表組みにデータを提供する [データコンテキスト](#vp-set-data-context) のプロパティ名を渡します。 これにより、表をデータコンテキストにバインドします。 データコンテキストが更新されると、表に表示されるデータも更新されます。 このデータコンテキストには、各要素が行を表すオブジェクトのコレクションが含まれている必要があります。
 
-  * *source* を指定しない場合、コマンドは *rangeObj* が定義するサイズの空のテーブルを作成します。
-  * 指定された *source* をドキュメント内に完全に表示できない場合、テーブルは作成されません。
+  * *source* を指定しない場合、コマンドは *rangeObj* が定義するサイズの空の表を作成します。
+  * 指定された *source* をドキュメント内に完全に表示できない場合、表は作成されません。
 
-*options* には、テーブル用の追加オプションを格納したオブジェクトを渡せます。 とりうる値:
+*options* には、表組み用の追加オプションを格納したオブジェクトを渡せます。 とりうる値:
 
-| プロパティ                 | タイプ    | 説明                                      | デフォルト値 |
-| --------------------- | ------ | --------------------------------------- | ------ |
-| showFooter            | ブール    | フッターを表示                                 | False  |
-| showHeader            | ブール    | ヘッダーを表示                                 | True   |
-| showResizeHandle      | ブール    | *source* を持たないテーブルの場合。 リサイズハンドルを表示      | False  |
-| tableColumns          | コレクション | テーブルの列を作成するために使用されるオブジェクトのコレクション (下記参照) | 未定義    |
-| useFooterDropDownList | ブール    | 列の合計値を計算するフッターセルでドロップダウンリストを使用          | False  |
+| プロパティ                 | タイプ    | 説明                                   | デフォルト値 |
+| --------------------- | ------ | ------------------------------------ | ------ |
+| showFooter            | ブール    | フッターを表示                              | False  |
+| showHeader            | ブール    | ヘッダーを表示                              | True   |
+| showResizeHandle      | ブール    | *source* を持たない表の場合。 リサイズハンドルを表示      | False  |
+| tableColumns          | コレクション | 表の列を作成するために使用されるオブジェクトのコレクション (下記参照) | 未定義    |
+| useFooterDropDownList | ブール    | 列の合計値を計算するフッターセルでドロップダウンリストを使用       | False  |
 
-*tableColumns* コレクションは、テーブルの列の構造を決定します。 コレクション内の各オブジェクトは以下の値を持ちます:
+*tableColumns* コレクションは、表の列の構造を決定します。 コレクション内の各オブジェクトは以下の値を持ちます:
 
-  | プロパティ     | タイプ  | 説明                         | 必須 |
-  | --------- | ---- | -------------------------- | -- |
-  | dataField | Text | データコンテキストにおける、テーブル列のプロパティ名 | ×  |
-  | formatter | Text | テーブル列のフォーマッター              | ×  |
-  | name      | テキスト | テーブル列の名前                   | ◯  |
+  | プロパティ     | タイプ  | 説明                       | 必須 |
+  | --------- | ---- | ------------------------ | -- |
+  | dataField | Text | データコンテキストにおける、表の列のプロパティ名 | ×  |
+  | formatter | Text | 表の列のフォーマッター              | ×  |
+  | name      | テキスト | 表の列の名前                   | ◯  |
 
 *tableColumns* コレクションの長さは、レンジの列数と等しくなければなりません:
 
-  * *rangeObj* の列数が *tableColumns* の列数より多い場合、テーブルは追加の空列で埋められます。
-  * *rangeObj* の列数が *テーブル列* の列数より少ない場合、テーブルはレンジの列数のみを表示します。
+  * *rangeObj* の列数が *tableColumns* の列数より多い場合、表は追加の空列で埋められます。
+  * *rangeObj* の列数が *tableColumns* の列数より少ない場合、表はレンジの列数のみを表示します。
 
 *source* を渡しながら、*tableColumn* オプションは渡さなかった場合、コマンドは自動的に列を生成します。 この場合、*rangeObj* はセルレンジでなければなりません。 そうでなければ、レンジの先頭セルが使用されます。 列を自動生成する場合、次のルールが適用されます:
 
@@ -784,7 +784,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 #### 例題
 
-データコンテキストを使用したテーブルを作成します:
+データコンテキストを使用した表組みを作成します:
 
 ```4d
 // データコンテキストの設定します
@@ -798,7 +798,7 @@ $data.people.push(New object("firstName"; "Mary"; "lastName"; "Poppins"; "email"
 
 VP SET DATA CONTEXT("ViewProArea"; $data)
 
-// テーブルの列を定義します
+// 表の列を定義します
 var $options : Object
 
 $options:=New object
@@ -807,7 +807,7 @@ $options.tableColumns.push(New object("name"; "First name"; "dataField"; "firstN
 $options.tableColumns.push(New object("name"; "Last name"; "dataField"; "lastName"))
 $options.tableColumns.push(New object("name"; "Email"; "dataField"; "email"))
 
-// "people" コレクションからテーブルを作成します
+// "people" コレクションから表を作成します
 VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; $options.tableColumns.length; 1); "ContextTable"; "people"; $options)
 ```
 
@@ -3199,18 +3199,18 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 | 引数         | タイプ  |    | 説明                          |
 | ---------- | ---- | -- | --------------------------- |
 | vpAreaName | テキスト | -> | 4D View Pro エリア名            |
-| tableName  | テキスト | -> | 削除するテーブルの名称                 |
+| tableName  | テキスト | -> | 削除する表組みの名称                  |
 | options    | 整数   | -> | 追加のオプション                    |
 | sheet      | 整数   | -> | シートのインデックス (省略した場合はカレントシート) |
 <!-- END REF -->  
 
 #### 説明
 
-`VP REMOVE TABLE` コマンドは、[VP CREATE TABLE](#vp-create-table) で作成した <!-- REF #_method_.VP REMOVE TABLE.Summary -->テーブルを削除します<!-- END REF --> 。
+`VP REMOVE TABLE` コマンドは、[VP CREATE TABLE](#vp-create-table) で作成した <!-- REF #_method_.VP REMOVE TABLE.Summary -->表組みを削除します<!-- END REF --> 。
 
-*vpAreaName* には、削除したいテーブルが置かれている 4D View Pro エリアの名前を渡します。
+*vpAreaName* には、削除したい表組みが置かれている 4D View Pro エリアの名前を渡します。
 
-*tableName* には、削除するテーブルの名称を渡します。
+*tableName* には、削除する表組みの名称を渡します。
 
 *options* には、追加のオプションを指定できます。 とりうる値:
 
@@ -3220,11 +3220,11 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 | vk table remove style | 1 | スタイルを削除し、データは保持   |
 | vk table remove data  | 2 | データを削除し、スタイルは維持   |
 
-テーブル名はシートのレベルで定義されます。 任意の *sheet* 引数にシートインデックス (0 起点) を指定することで、テーブルが置かれているシートを指定できます。
+表組み名はシートのレベルで定義されます。 任意の *sheet* 引数にシートインデックス (0 起点) を指定することで、表が置かれているシートを指定できます。
 
 #### 例題
 
-2番目のシートの "people" テーブルを削除し、セルのデータは保持します:
+2番目のシートの "people" の表組みを削除し、セルのデータは保持します:
 
 ```4d
 VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)

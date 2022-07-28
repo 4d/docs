@@ -8,7 +8,7 @@ La lista de las principales actualizaciones de esta documentación. For general 
 
 ## 4D v19 R6
 
-- New [HTTPRequest](API/HTTPRequestClass.md) class.
+- Nueva clase [HTTPRequest](API/HTTPRequestClass.md).
 - Collection functions that can call code now support function objects as *formula* parameter: [`.every()`](API/CollectionClass.md#every), [`.filter()`](API/CollectionClass.md#filter), [`.find()`](API/CollectionClass.md#find), [`.findIndex()`](API/CollectionClass.md#findindex), [`.map()`](API/CollectionClass.md#map), [`.orderByMethod()`](API/CollectionClass.md#orderbymethod), [`.reduce()`](API/CollectionClass.md#reduce), [`.some()`](API/CollectionClass.md#some), [`.sort()`](API/CollectionClass.md#sort)
 - Listbox cells support [horizontal](FormObjects/properties_CoordinatesAndSizing.md#horizontal-padding) and [vertical](FormObjects/properties_CoordinatesAndSizing.md#vertical-padding) padding.
 - 4D View Pro: new [VP CREATE TABLE](ViewPro/method-list.md#vp-create-table) and [VP REMOVE TABLE](ViewPro/method-list.md#vp-remove-table) commands to handle tables in sheets.
@@ -43,7 +43,7 @@ La lista de las principales actualizaciones de esta documentación. For general 
 - New Preferences: [**Include tokens in project source files**](Preferences/general.md#include-tokens-in-project-source-files) and [**Show clipboards**](Preferences/methods.md#show-clipboards) option on the Methods page.
 - New REST request to [lock/unlock](REST/$lock.md) entities.
 - [4D View Pro](ViewPro/getting-started.md) chapter added with new commands: [VP Copy to object](ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](ViewPro/method-list.md#vp-paste-from-object).
-- New [SystemWorker class](API/SystemWorkerClass.md).
+- Nuevo [Clase SystemWorker](API/SystemWorkerClass.md).
 
 
 ## 4D v19 R3
@@ -78,7 +78,7 @@ La lista de las principales actualizaciones de esta documentación. For general 
 - New default dark and light themes in [Code Editor preferences](Preferences/methods.md#theme-list).
 - [Native compilation](Project/compiler.md#compiler-methods-for) for Silicon processors.
 - [Variable calculation](FormObjects/properties_Object.md#variable-calculation) property is now supported by entity selection list box columns.
-- New, comprehensive [CLI](Admin/cli.md) page.
+- Nueva, página [CLI](Admin/cli.md) completa.
 
 
 
@@ -87,6 +87,6 @@ La lista de las principales actualizaciones de esta documentación. For general 
 - [Entity Selection Class](API/EntitySelectionClass.md): `.average()`, `.max()` and `.min()` functions now return *undefined* if the entity selection is empty.
 - [IMAP Mail](API/IMAPTransporterClass.md), [POP3 Mail](API/POP3TransporterClass.md) and [SMTP Mail](API/SMTPTransporterClass.md): `authenticationMode` property enables OAuth 2.0
 - [IMAP Mail](API/IMAPTransporterClass.md): new `.expunge()` and `.append()` functions
-- New [WebAdmin](Admin/webAdmin.md) web server component
-- New [DataExplorer](Admin/dataExplorer) interface
+- Nuevo componente [WebAdmin](Admin/webAdmin.md) del servidor web
+- Nueva interfaz [DataExplorer](Admin/dataExplorer)
 - New web [user sessions](WebServer/sessions.md) and [their API](API/SessionClass.md).

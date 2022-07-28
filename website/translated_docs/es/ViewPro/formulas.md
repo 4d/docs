@@ -13,11 +13,11 @@ Para introducir una fórmula en un área 4D View Pro:
 
 1.  Select the cell into which you will enter the formula or function.
 2.  Introduzca = (el signo igual).
-3.  Type the formula and hit the **Enter** key.
+3.  Escriba la fórmula y presione la tecla **Intro**.
 
-When writing a formula, you can use different shortcuts:
+Al escribir una fórmula, puede utilizar diferentes atajos:
 
-- click on a cell to enter its reference in the formula:
+- haga clic en una celda para introducir su referencia en la fórmula:
 
 ![](assets/en/ViewPro/formulas.PNG)
 
@@ -86,7 +86,7 @@ Lista de los operadores de la mas a menos importante:
 
 ## Referencias de celdas
 
-Formulas often refer to other cells by cell addresses. Puede copiar estas fórmulas a otras celdas. For example, the following formula, entered in cell C8, adds the values in the two cells above it and displays the result.
+Las fórmulas a menudo se refieren a otras celdas por medio de direcciones de celdas. Puede copiar estas fórmulas a otras celdas. For example, the following formula, entered in cell C8, adds the values in the two cells above it and displays the result.
 
 ```
 = C6 + C7
@@ -115,7 +115,7 @@ The following table shows the effect of the different notations:
 | Ejemplo            | Tipo de referencia | Descripción                                                                                                                                        |
 | ------------------ | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------- |
 | C5                 | Relativo           | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                       |
-| $C$5               | Absoluto           | La referencia es absoluta. Will always refer to cell C5 no matter where it is used.                                                                |
+| $C$5               | Absoluto           | La referencia es absoluta. Siempre se referirá a la celda C5 sin importar dónde se utilice.                                                        |
 | $C5                | Mixed              | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.               |
 | C$5                | Mixed              | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used                |
 | Nombre de la celda | Absoluto           | La referencia es absoluta. Will always refer to the [named cell or range](method-list.md#vp-add-range-name) no matter where the reference is used. |
@@ -178,7 +178,7 @@ $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 
 We want to print "Hello World" in a 4D View Pro area cell using a 4D project method:
 
-1.  Create a "myMethod" project method with the following code:
+1.  Cree un método proyecto "myMethod" con el siguiente código:
 
 ```4d
  #DECLARE->$hw Text
@@ -200,11 +200,11 @@ We want to print "Hello World" in a 4D View Pro area cell using a 4D project met
  End case
 ```
 
-3.  Edit the content of a cell in a 4D View Pro area and type:
+3.  Edite el contenido de una celda en un área 4D View Pro y escriba:
 
     ![](assets/en/ViewPro/vpProjMeth1.PNG)
 
-    "myMethod" is then called by 4D and the cell displays:
+    "myMethod" es entonces llamado por 4D y la la celda se muestra:
 
     ![](assets/en/ViewPro/vpProjMeth2.PNG)
 
@@ -233,7 +233,7 @@ For more information on supported incoming parameter types, please refer to the 
 > If you do not declare parameters, values can be sequentially passed to methods (they will be received in $1, $2...) and their type will be automatically converted. Dates in *jstype* will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:   
 > |Property|    Type|   Description| |---|---|---| |value|   Date|   Date value| |time |Real|  Time in seconds|
 
-4D project methods can also return values in the 4D View Pro cell formula via $0. The following data types are supported for returned parameters:
+4D project methods can also return values in the 4D View Pro cell formula via $0. Los siguientes tipos de datos son soportados para los parámetros devueltos:
 
 * [text](Concepts/dt_string.md) (converted to string in 4D View Pro)
 * [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (converted to number in 4D View Pro)
@@ -252,7 +252,7 @@ If the 4D method returns nothing, an empty string is automatically returned.
 
 Se devuelve un error en la celda 4D View Pro si:
 
-*   the 4D method returns another type other than those listed above,
+*   el método 4D devuelve otro tipo distinto de los mencionados anteriormente,
 *   an error occurred during 4D method execution (when user clicks on "abort" button).
 
 #### Ejemplo
@@ -289,7 +289,7 @@ Alternate solutions are available to declare fields or methods as functions in y
 
 *   The field must belong to the virtual structure of the database, i.e. it must be declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter (see example),
 *   Table and field names must be ECMA compliant (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
-*   The field type must be supported by 4D View Pro (see above).
+*   El tipo de campo debe ser soportado por 4D View Pro (ver arriba).
 
 An error is returned in the 4D View Pro cell if the formula calls a field which is not compliant.
 
@@ -340,12 +340,12 @@ We want to print the name of a person in a 4D View Pro area cell using a 4D virt
 ![](assets/en/ViewPro/vpFieldMeth2.PNG)
 
 
-4.  Select EMP_NAME (use the Tab key) and enter the closing ).
+4.  Seleccione EMP_NAME (utilice la tecla Tab) e introduzca el cierre).
 
 ![](assets/en/ViewPro/vpFieldMeth3.PNG)
 
 
-5.  Validate the field to display the name of the current employee:
+5.  Valide el campo para mostrar el nombre del empleado actual:
 
 ![](assets/en/ViewPro/vpFieldMeth4.PNG)
 > La tabla \[Employee] debe tener un registro actual.

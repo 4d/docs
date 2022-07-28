@@ -415,13 +415,13 @@ The Form editor toolbar provides a CSS button for viewing styled objects:
 
 ![](assets/en/FormEditor/cssToolbar.png)
 
-Select one of the following preview modes from the menu:
+Seleccione uno de los siguientes modos de vista previa en el menú:
 
-| Icono barra de herramientas          | Modo de vista previa CSS | Descripción                                                                                                                                |
-| ------------------------------------ | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| ![](assets/en/FormEditor/cssNo.png)  | Ninguno                  | No CSS values are applied in the form and no CSS values or icons displayed in the Property List.                                           |
-| ![](assets/en/FormEditor/cssWin.png) | Windows                  | CSS values for Windows platform are applied in the form. Los valores e iconos CSS que se muestran en la lista de propiedades.              |
-| ![](assets/en/FormEditor/cssMac.png) | macOS                    | Los valores CSS para la plataforma macOS se aplican en el formulario. Los valores e iconos CSS que se muestran en la lista de propiedades. |
+| Icono barra de herramientas          | Modo de vista previa CSS | Descripción                                                                                                                                  |
+| ------------------------------------ | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](assets/en/FormEditor/cssNo.png)  | Ninguno                  | No CSS values are applied in the form and no CSS values or icons displayed in the Property List.                                             |
+| ![](assets/en/FormEditor/cssWin.png) | Windows                  | Los valores CSS para la plataforma Windows se aplican en el formulario. Los valores e iconos CSS que se muestran en la lista de propiedades. |
+| ![](assets/en/FormEditor/cssMac.png) | macOS                    | Los valores CSS para la plataforma macOS se aplican en el formulario. Los valores e iconos CSS que se muestran en la lista de propiedades.   |
 > If a font size too large for an object is defined in a style sheet or JSON, the object will automatically be rendered to accommodate the font, however the size of the object will not be changed.
 
 The CSS preview mode reflects the priority order applied to style sheets vs JSON attributes as defined in the [JSON vs Style Sheet](stylesheets.html#json-vs-style-sheet) section.
@@ -453,7 +453,7 @@ An attribute value defined in a style sheet can be overridden in the JSON form d
 
 | Icono                                      | Descripción                                                                                                                                                        |
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ![](assets/en/FormEditor/cssIcon.png)      | Indicates that an attribute value has been defined in a style sheet                                                                                                |
+| ![](assets/en/FormEditor/cssIcon.png)      | Indica que un valor de atributo ha sido definido en una hoja de estilo                                                                                             |
 | ![](assets/en/FormEditor/cssImportant.png) | Indicates that an attribute value has been defined in a style sheet with the `!important` declaration                                                              |
 | ![](assets/en/FormEditor/cssIconMixed.png) | Displayed when an attribute value defined in a style sheet for at least one item in a group or a selection of multiple objects is different from the other objects |
 
