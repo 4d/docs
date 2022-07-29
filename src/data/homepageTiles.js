@@ -106,6 +106,51 @@ const Sections = [
   },
   {
     title: translate({
+      message: 'Extensions',
+      id: 'homepage.sections.textensions.title',
+    }),
+    image: {
+      src: '/img/illu_Extensions.png',
+      width: 1038.23,
+      height: 693.31,
+    },
+    links: (
+      <div className="homepageLinks">
+        <Link to="/docs/Extensions/overview">
+          <Translate>Overview</Translate>
+        </Link>
+        <Link to="/docs/ViewPro/getting-started">
+          <Translate>4D View Pro</Translate>
+        </Link>
+        <Link to="https://github.com/4d/4D-Mobile-App-Server">
+          <Translate>4D Mobile App Server</Translate>
+        </Link>
+        <Link to="https://github.com/4d/4D-NetKit">
+          <Translate>4D NetKit</Translate>
+        </Link>
+        <Link to="https://doc.4d.com/4Dv19/4D/19/4D-Progress.100-5461799.en.html">
+          <Translate>4D Progress</Translate>
+        </Link>
+        <Link to="https://doc.4d.com/4Dv19/4D/19/4D-SVG-Component.300-5462064.en.html">
+          <Translate>4D SVG</Translate>
+        </Link>
+        <Link to="https://doc.4d.com/4Dv19/4D/19/4D-Widgets.100-5462909.en.html">
+          <Translate>4D Widgets</Translate>
+        </Link>
+        <Link to="https://github.com/4d/4D-WritePro-Interface">
+          <Translate>4D Write Pro Interface</Translate>
+        </Link>
+        <Link to="https://developer.4d.com/docs/en/Extensions/develop-components.html">
+          <Translate>Developing Components</Translate>
+        </Link>
+        <Link to="https://developer.4d.com/docs/en/Extensions/develop-plug-ins.html">
+          <Translate>Developing Plugins</Translate>
+        </Link>
+      </div>
+    ),
+  },
+  {
+    title: translate({
       message: 'Web Applications',
       id: 'homepage.sections.web-applications.title',
     }),
@@ -187,51 +232,6 @@ const Sections = [
         </Link>
         <Link to="https://developer.4d.com/4d-for-ios/docs/en/overview.html">
           <Translate>4D for iOS (Archive)</Translate>
-        </Link>
-      </div>
-    ),
-  },
-  {
-    title: translate({
-      message: 'Extensions',
-      id: 'homepage.sections.textensions.title',
-    }),
-    image: {
-      src: '/img/illu_Extensions.png',
-      width: 1038.23,
-      height: 693.31,
-    },
-    links: (
-      <div className="homepageLinks">
-        <Link to="/docs/Extensions/overview">
-          <Translate>Overview</Translate>
-        </Link>
-        <Link to="/docs/ViewPro/getting-started">
-          <Translate>4D View Pro</Translate>
-        </Link>
-        <Link to="https://github.com/4d/4D-Mobile-App-Server">
-          <Translate>4D Mobile App Server</Translate>
-        </Link>
-        <Link to="https://github.com/4d/4D-NetKit">
-          <Translate>4D NetKit</Translate>
-        </Link>
-        <Link to="https://doc.4d.com/4Dv19/4D/19/4D-Progress.100-5461799.en.html">
-          <Translate>4D Progress</Translate>
-        </Link>
-        <Link to="https://doc.4d.com/4Dv19/4D/19/4D-SVG-Component.300-5462064.en.html">
-          <Translate>4D SVG</Translate>
-        </Link>
-        <Link to="https://doc.4d.com/4Dv19/4D/19/4D-Widgets.100-5462909.en.html">
-          <Translate>4D Widgets</Translate>
-        </Link>
-        <Link to="https://github.com/4d/4D-WritePro-Interface">
-          <Translate>4D Write Pro Interface</Translate>
-        </Link>
-        <Link to="https://developer.4d.com/docs/en/Extensions/develop-components.html">
-          <Translate>Developing Components</Translate>
-        </Link>
-        <Link to="https://developer.4d.com/docs/en/Extensions/develop-plug-ins.html">
-          <Translate>Developing Plugins</Translate>
         </Link>
       </div>
     ),
