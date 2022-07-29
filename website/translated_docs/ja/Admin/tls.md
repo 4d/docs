@@ -15,7 +15,7 @@ TLSプロトコル (SSLプロトコルの後継版) は 2つのアプリケー�
 
 ネットワークレベルにおいては、TLSプロトコルは TCP/IPレイヤー (低レベル) とHTTP高レベルプロトコルとの間に挿入されます。 TLS は主に HTTP で動作するように設計されました。
 
-TLS を用いたネットワーク設定:
+Network configuration using TLS:
 
 ![](assets/en/WebServer/tls1.png)
 

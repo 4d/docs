@@ -12,7 +12,7 @@ title: クライアント/サーバー管理
 
 ![](assets/en/getStart/localremote.png)
 
-> ただし、**4D Server と同じマシン** から接続している場合には、プロジェクトファイルの変更が可能です。 この [特殊機能](#4d-と-4d-server-の同じマシン上での使用) により、クライアント/サーバーアプリケーションを運用時と同じコンテキストで開発することができます。
+> Connecting to a remote project from the **same machine as 4D Server** allows modifying the project files. この [特殊機能](#4d-と-4d-server-の同じマシン上での使用) により、クライアント/サーバーアプリケーションを運用時と同じコンテキストで開発することができます。
 
 
 

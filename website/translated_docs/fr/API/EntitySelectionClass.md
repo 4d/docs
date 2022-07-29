@@ -744,6 +744,7 @@ Exemple avec l'option `dk stop dropping on first error` :
 
 
 
+
 <!-- REF #EntitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 
@@ -1819,6 +1820,7 @@ Dans cet exemple, les langages classiques et ORDA modifient simultanément les m
 <!-- END REF -->
 
 
+
 #### Description
 
 La fonction `.selected()` <!-- REF #EntitySelectionClass.selected().Summary -->retourne un objet décrivant la ou les positions de *selectedEntities* dans l'entity selection d'origine<!-- END REF -->.
@@ -1924,7 +1926,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tente de retourner les entités de posi
 <!-- END REF -->
 
 <!-- REF EntitySelectionClass.sum().Desc -->
-## .sum( )
+## .sum()
 
 <details><summary>Historique</summary>
 | Version | Modifications |
@@ -1978,7 +1980,7 @@ $sum:=$sel.sum("salary")
 <!-- END REF -->
 
 <!-- REF EntitySelectionClass.toCollection().Desc -->
-## .toCollection( )
+## .toCollection()
 
 <details><summary>Historique</summary>
 | Version | Modifications |
@@ -2174,6 +2176,7 @@ var $employees : cs.EmployeeSelection
 
 $employeesCollection:=New collection
 $filter:=New collection
+
 
 $filter.push("firstName")
 $filter.push("lastName")

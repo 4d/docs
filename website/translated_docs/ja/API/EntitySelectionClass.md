@@ -746,6 +746,7 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 
 
 
+
 <!-- REF #EntitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 
@@ -1821,6 +1822,7 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 <!-- END REF -->
 
 
+
 #### 説明
 
 呼び出し対象のエンティティセレクション、または *selectedEntities* のエンティティセレクションが空の場合、関数は `ranges` に空のコレクションを返します。
@@ -1926,7 +1928,7 @@ $slice:=ds.Employee.all().slice(-1;-2) // インデックス 9 から 8番まで
 <!-- END REF -->
 
 <!-- REF EntitySelectionClass.sum().Desc -->
-## .sum( )
+## .sum()
 
 <details><summary>履歴</summary>
 | バージョン | 内容 |
@@ -1980,7 +1982,7 @@ $sum:=$sel.sum("salary")
 <!-- END REF -->
 
 <!-- REF EntitySelectionClass.toCollection().Desc -->
-## .toCollection( )
+## .toCollection()
 
 <details><summary>履歴</summary>
 | バージョン | 内容 |
@@ -2176,6 +2178,7 @@ var $employees : cs.EmployeeSelection
 
 $employeesCollection:=New collection
 $filter:=New collection
+
 
 $filter.push("firstName")
 $filter.push("lastName")

@@ -740,6 +740,7 @@ Exemplo com a opção `dk stop dropping on first error`:
 
 
 
+
 <!-- REF #EntitySelectionClass.extract().Syntax -->**.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 
@@ -1809,6 +1810,7 @@ A list box displays the Form.students entity selection and several clients work 
 <!-- END REF -->
 
 
+
 #### Descrição
 
 The `.selected()` function <!-- REF #EntitySelectionClass.selected(). Summary -->returns an object describing the position(s) of *selectedEntities* in the original entity selection<!-- END REF -->.
@@ -1914,7 +1916,7 @@ $slice:=ds. Employee.all().slice(-1;-2) //tries to return entities from index 9 
 <!-- END REF -->
 
 <!-- REF EntitySelectionClass.sum().Desc -->
-## .sum( )
+## .sum()
 
 <details><summary>Histórico</summary>
 | Versão | Mudanças   |
@@ -1968,7 +1970,7 @@ $sum:=$sel.sum("salary")
 <!-- END REF -->
 
 <!-- REF EntitySelectionClass.toCollection().Desc -->
-## .toCollection( )
+## .toCollection()
 
 <details><summary>Histórico</summary>
 | Versão | Mudanças   |
@@ -2159,14 +2161,18 @@ Retorna:
 Example with slicing and filtering on properties:
 
 ```4d
-EmployeeSelection
- $employees:=ds.Employee.query("firstName=:1";"S@")
- $notDropped:=$employees.drop() // $notDropped for uma entity selection que contém todas as entidades não suprimidas
- If($notDropped.length=0) //A ação de eliminação for exitosa, todas as entidades foram eliminadas
-    ALERT("You have dropped "+String($employees.length)+" employees") //A seleção de entidades eliminada permanece na memoria
- Else
-    ALERT("Problem during drop, try later")
- End if var $employees; $notDropped : cs.
+var $employeesCollection; $filter : Collection
+var $employees : cs.EmployeeSelection
+
+$employeesCollection:=New collection
+$filter:=New collection
+
+
+$filter.push("firstName")
+$filter.push("lastName")
+
+$employees:=ds.Employee.all()
+$employeesCollection:=$employees.toCollection($filter;0;0;2)
 ```
 
 Retorna:
