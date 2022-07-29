@@ -18,6 +18,9 @@ const Sections = [
         <Link to="/docs/GettingStarted/installation" >
           <Translate>Installation</Translate>
         </Link>
+        <Link to="/docs/GettingStarted/creating" >
+          <Translate>Working with a project</Translate>
+        </Link>
       </div>
     ),
   }, {
@@ -47,6 +50,15 @@ const Sections = [
         <Link to="/docs/API/overview" >
           <Translate>Class API Reference</Translate>
         </Link>
+        <Link to="/docs/code-editor/overview" >
+          <Translate>Handling code</Translate>
+        </Link>
+        <Link to="/docs/Debugging/basics" >
+          <Translate>Debugging</Translate>
+        </Link>
+        <Link to="/docs/settings/overview" >
+          <Translate>Settings</Translate>
+        </Link>
         <Link to="/docs/Preferences/overview" >
           <Translate>Preferences</Translate>
         </Link>
@@ -65,23 +77,20 @@ const Sections = [
     },
     links: (
       <div className="homepageLinks">
+        <Link to="/docs/ServerWindow/overview" >
+          <Translate>4D Server Administration Window</Translate>
+        </Link>
         <Link to="docs/Admin/webAdmin">
           <Translate>Web Administration</Translate>
-        </Link>
-        <Link to="docs/Admin/dataExplorer">
-          <Translate>Web Data Explorer</Translate>
-        </Link>
-        <Link to="docs/Admin/licenses">
-          <Translate>License Management</Translate>
-        </Link>
-        <Link to="docs/Admin/tls">
-          <Translate>TLS Protocol (HTTPS)</Translate>
         </Link>
         <Link to="docs/Admin/cli">
           <Translate>Command Line Interface</Translate>
         </Link>
-        <Link to="docs/Admin/debugLogFiles">
-          <Translate>Description of log files</Translate>
+        <Link to="docs/Admin/tls">
+          <Translate>TLS Protocol</Translate>
+        </Link>
+        <Link to="docs/Admin/licenses">
+          <Translate>Licenses & Data Collection</Translate>
         </Link>
         <Link to="docs/Users/overview">
           <Translate>Access Rights</Translate>
@@ -152,8 +161,11 @@ const Sections = [
         <Link to="/docs/Menus/overview" >
           <Translate>Menus</Translate>
         </Link>
+        <Link to="/docs/Desktop/user-settings" >
+          <Translate>User Settings</Translate>
+        </Link>
         <Link to="/docs/Desktop/building" >
-          <Translate>Menus</Translate>
+          <Translate>Build Application</Translate>
         </Link>
       </div>
     ),
@@ -170,8 +182,56 @@ const Sections = [
     },
     links: (
       <div className="homepageLinks">
+        <Link to="https://developer.4d.com/go-mobile">
+          <Translate>Go Mobile with 4D</Translate>
+        </Link>
         <Link to="https://developer.4d.com/4d-for-ios/docs/en/overview.html">
-          <Translate>4D for iOS</Translate>
+          <Translate>4D for iOS (Archive)</Translate>
+        </Link>
+      </div>
+    ),
+  },
+  {
+    title: translate({
+      message: 'Extensions',
+      id: 'homepage.sections.textensions.title',
+    }),
+    image: {
+      src: '/img/illu_Extensions.png',
+      width: 1038.23,
+      height: 693.31,
+    },
+    links: (
+      <div className="homepageLinks">
+        <Link to="/docs/Extensions/overview">
+          <Translate>Overview</Translate>
+        </Link>
+        <Link to="/docs/ViewPro/getting-started">
+          <Translate>4D View Pro</Translate>
+        </Link>
+        <Link to="https://github.com/4d/4D-Mobile-App-Server">
+          <Translate>4D Mobile App Server</Translate>
+        </Link>
+        <Link to="https://github.com/4d/4D-NetKit">
+          <Translate>4D NetKit</Translate>
+        </Link>
+        <Link to="https://doc.4d.com/4Dv19/4D/19/4D-Progress.100-5461799.en.html">
+          <Translate>4D Progress</Translate>
+        </Link>
+        <Link to="https://doc.4d.com/4Dv19/4D/19/4D-SVG-Component.300-5462064.en.html">
+          <Translate>4D SVG</Translate>
+        </Link>
+        <Link to="https://doc.4d.com/4Dv19/4D/19/4D-Widgets.100-5462909.en.html">
+          <Translate>4D Widgets</Translate>
+        </Link>
+        <Link to="https://github.com/4d/4D-WritePro-Interface">
+          <Translate>4D Write Pro Interface</Translate>
+        </Link>
+        <Link to="https://developer.4d.com/docs/en/Extensions/develop-components.html">
+          <Translate>Developing Components</Translate>
+        </Link>
+        <Link to="https://developer.4d.com/docs/en/Extensions/develop-plug-ins.html">
+          <Translate>Developing Plugins</Translate>
         </Link>
       </div>
     ),
