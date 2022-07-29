@@ -3,7 +3,7 @@ id: overview
 title: Aperçu
 ---
 
-Un projet 4D contient l'intégralité du code source d'une application 4D, quel que soit son type de déploiement (web, mobile ou desktop), de la structure de la base de données à l'interface utilisateur, en passant par le code, les formulaires, les menus, les paramètres utilisateur ou n'importe quelle ressource requise. Un projet 4D est principalement constitué de fichiers texte.
+A 4D project contains all of the source code of a 4D application, whatever its deployment type (web, mobile, or desktop), from the database structure to the user interface, including code, forms, menus, user settings, or any required resources. Un projet 4D est principalement constitué de fichiers texte.
 
 
 ## Fichiers du projet
@@ -17,7 +17,7 @@ De plus, les fichiers de projet 4D facilitent la programmation générique, la c
 
 ## Développement
 
-Les projets 4D sont développés à l'aide de l'application **4D**. Elle fournit un environnement de développement intégré (IDE) pour les projets 4D ainsi qu'un serveur web, un générateur d'application mobile, une exécution d'application, permettant de développer, tester et déboguer le projet.
+Les projets 4D sont développés à l'aide de l'application **4D**. It provides an Integrated Development Environment (IDE) for 4D projects as well as a web server, a mobile project generator, and an application runtime, allowing you to develop, test, and debug any kind of project.
 
 Le développement multi-utilisateur est géré via des outils de **source control** standard (Perforce, Git, SVN, etc.), permettant aux développeurs de travailler sur différentes branches et de comparer, fusionner ou annuler des modifications.
 
@@ -30,4 +30,4 @@ Les fichiers du projet peuvent être [compilés](compiler.md) et facilement dép
 - des applications [mobile](https://developer.4d.com/go-mobile/),
 - des applications [desktop](Desktop/building.md) (client/serveur ou monoposte).
 
-Les applications back-end peuvent être déployées à l'aide de 4D Server, de 4D, ou bien [fusionnées avec la licence 4D Volume](Desktop/building.md).
+Back end applications can be deployed using 4D Server, 4D, or [merged with 4D Volume license](../Desktop/building.md).
