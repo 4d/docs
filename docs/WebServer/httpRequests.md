@@ -9,7 +9,8 @@ The 4D web server provides several features to handle HTTP requests:
 - the `/4DACTION` URL to call server-side code
 - `WEB GET VARIABLES` to get values from HTML objects sent to the server
 - other commands such as `WEB GET HTTP BODY`, `WEB GET HTTP HEADER`, or `WEB GET BODY PART` allow to customize the request processing, including cookies.
-- the *COMPILER_WEB* project method, to declare your variables.
+- the *COMPILER_WEB* project method, to declare your variables. 
+
 
 ## On Web Connection
 
@@ -19,7 +20,7 @@ The `On Web Connection` database method can be used as the entry point for the 4
 
 The `On Web Connection` database method is automatically called when the server reveives any URL that is not a path to an existing page on the server. The database method is called with the URL.
 
-For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*" will not call the database method if the page "c.html" exists in the "a/b" subfolder of the [WebFolder](webServerConfig.md#root-folder).
+For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*" will not call the database method if the page "c.html" exists in the "a/b" subfolder of the [WebFolder](webServerConfig.md#root-folder). 
 
 > The request should have previously been accepted by the [`On Web Authentication`](authentication.md#on-web-authentication) database method (if it exists) and the web server must be launched.
 
@@ -35,6 +36,7 @@ For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*"
 |$4|Text|<-|IP address of the server |
 |$5|Text|<-|User name |
 |$6|Text|<-|Password |
+
 
 You must declare these parameters as shown below:
 
@@ -56,7 +58,9 @@ Alternatively, you can use the [named parameters](Concepts/parameters.md#named-p
 
 ```
 
+
 > Calling a 4D command that displays an interface element (`DIALOG`, `ALERT`, etc.) is not allowed and ends the method processing.
+
 
 ### $1 - URL extra data
 
@@ -67,12 +71,13 @@ Let’s use an intranet connection as an example. Suppose that the IP address of
 |URL entered in web browser|Value of parameter $1|
 |---|---|
 |123.4.567.89|/ |
-|<http://123.4.567.89>|/ |
+|http://123.4.567.89|/ |
 |123.4.567.89/Customers|/Customers |
-|<http://123.4.567.89/Customers/Add>|/Customers/Add |
+|http://123.4.567.89/Customers/Add|/Customers/Add |
 |123.4.567.89/Do_This/If_OK/Do_That|/Do_This/If_OK/Do_That |
-
+	
 Note that you are free to use this parameter at your convenience. 4D simply ignores the value passed beyond the host part of the URL. For example, you can establish a convention where the value "*/Customers/Add*" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
+
 
 ### $2 - Header and Body of the HTTP request
 
@@ -82,10 +87,11 @@ If your application uses this information, it is up to you to parse the header a
 
 >For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Beyond this size, they are truncated by the 4D HTTP server.
 
+
 ### $3 - Web client IP address
 
 The $3 parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between intranet and internet connections.
-
+ 
 >4D returns IPv4 addresses in a hybrid IPv6/IPv4 format written with a 96-bit prefix, for example ::ffff:192.168.2.34 for the IPv4 address 192.168.2.34. For more information, refer to the [IPv6 Support](webServerConfig.md#about-ipv6-support) section.
 
 ### $4 - Server IP address
@@ -95,8 +101,11 @@ The $4 parameter receives the IP address requested by the 4D Web Server. 4D allo
 ### $5 and $6 - User Name and Password
 
 The $5 and $6 parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser, if applicable (see the [authentication page](authentication.md)).
-
+ 
 >If the user name sent by the browser exists in 4D, the $6 parameter (the user’s password) is not returned for security reasons.
+
+
+
 
 ## /4DACTION
 
@@ -113,7 +122,7 @@ The $5 and $6 parameters receive the user name and password entered by the user 
 This URL allows you to call the *MethodName* 4D project method with an optional *Param* text parameter. The method will receive this parameter in *$1*.
 
 - The 4D project method must have been [allowed for web requests](allowProject.md): the “Available through 4D tags and URLs (4DACTION...)” attribute value must have been checked in the properties of the method. If the attribute is not checked, the web request is rejected.
-- When 4D receives a `/4DACTION/MethodName/Param` request, the `On Web Authentication` database method (if it exists) is called.
+- When 4D receives a `/4DACTION/MethodName/Param` request, the `On Web Authentication` database method (if it exists) is called. 
 
 `4DACTION/` can be associated with a URL in a static Web page:
 
@@ -149,16 +158,15 @@ PICTURE TO BLOB($PictVar;$BLOB;".png") //convert the picture to ".png" format
 WEB SEND BLOB($BLOB;"image/png")
 ```
 
-### 4DACTION to post forms
+### 4DACTION to post forms 
 
 The 4D Web server also allows you to use “posted” forms, which are static HTML pages that send data to the Web server, and to easily retrieve all the values. The POST type must be associated to them and the form’s action must imperatively start with /4DACTION/MethodName.
 
 A form can be submitted through two methods (both can be used with 4D):
-
 - POST, usually used to send data to the Web server,
 - GET, usually used to request data from the Web server.
 
-> When the Web server receives a posted form, it calls the `On Web Authentication` database method (if it exists).
+> When the Web server receives a posted form, it calls the `On Web Authentication` database method (if it exists). 
 
 In the called method, you must call the `WEB GET VARIABLES` command in order to [retrieve the names and values](#getting-values-from-the-requests) of all the fields included in an HTML page submitted to the server.
 
@@ -217,11 +225,14 @@ OK="Search"
 End if
 ```
 
+
+
+
 ## Getting values from HTTP requests
 
 4D's Web server lets you recover data sent through POST or GET requests, using Web forms or URLs.
 
-When the Web server receives a request with data in the header or in the URL, 4D can retrieve the values of any HTML objects it contains. This principle can be implemented in the case of a Web form, sent for example using `WEB SEND FILE` or `WEB SEND BLOB`, where the user enters or modifies values, then clicks on the validation button.
+When the Web server receives a request with data in the header or in the URL, 4D can retrieve the values of any HTML objects it contains. This principle can be implemented in the case of a Web form, sent for example using `WEB SEND FILE` or `WEB SEND BLOB`, where the user enters or modifies values, then clicks on the validation button. 
 
 In this case, 4D can retrieve the values of the HTML objects found in the request using the `WEB GET VARIABLES` command. The `WEB GET VARIABLES` command retrieves the values as text.
 
@@ -254,13 +265,13 @@ return false
  name="frmWelcome"
  onsubmit="return GetBrowserInformation(frmWelcome)">
   <h1>Welcome to Spiders United</h1>
-  <b>Please enter your name:</b>
+  <p><b>Please enter your name:</b>
   <input name="vtUserName" value="" size="30" type="text"></p>
-   
+  <p> 
 <input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit"> 
 <input name="vsbRegister" value="Register" type="submit">
 <input name="vsbInformation" value="Information" type="submit"></p>
- 
+<p> 
 <input name="vtNav_appName" value="" type="hidden"> 
 <input name="vtNav_appVersion" value="" type="hidden"> 
 <input name="vtNav_appCodeName" value="" type="hidden">
@@ -319,9 +330,10 @@ Let’s examine the 4D method `WWW_STD_FORM_POST` that is called when the user c
 The features of this method are:
 
 - The values of the variables *vtNav_appName*, *vtNav_appVersion*, *vtNav_appCodeName*, and *vtNav_userAgent* (bound to the HTML objects having the same names) are retrieved using the `WEB GET VARIABLES` command from HTML objects created by the *GetBrowserInformation* JavaScript script.
-- Out of the *vsbLogOn*, *vsbRegister* and *vsbInformation* variables bound to the three Submit buttons, only the one corresponding to the button that was clicked will be retrieved by the `WEB GET VARIABLES` command. When the submit is performed by one of these buttons, the browser returns the value of the clicked button to 4D. This tells you which button was clicked.
+- Out of the *vsbLogOn*, *vsbRegister* and *vsbInformation* variables bound to the three Submit buttons, only the one corresponding to the button that was clicked will be retrieved by the `WEB GET VARIABLES` command. When the submit is performed by one of these buttons, the browser returns the value of the clicked button to 4D. This tells you which button was clicked. 
 
 Keep in main that with HTML, all objects are text objects. If you use a SELECT object, it is the value of the highlighted element in the object that is returned in the `WEB GET VARIABLES` command, and not the position of the element in the array as in 4D. `WEB GET VARIABLES` always returns values of the Text type.
+
 
 ## Other Web Server Commands
 
@@ -342,3 +354,5 @@ The 4D web server supports files uploaded in chunked transfer encoding from any 
 The COMPILER\_WEB method, if it exists, is systematically called when the HTTP server receives a dynamic request and calls the 4D engine. This is the case, for example, when the 4D Web server receives a posted form or a URL to process in [`On Web Connection`](#on-web-connection). This method is intended to contain typing and/or variable initialization directives used during Web exchanges. It is used by the compiler when the application is compiled. The COMPILER\_WEB method is common to all the Web forms. By default, the COMPILER_WEB method does not exist. You must explicitly create it.
 
 > The COMPILER_WEB project method is also called, if it exists, for each SOAP request accepted.
+
+

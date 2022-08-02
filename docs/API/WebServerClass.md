@@ -59,6 +59,7 @@ They provide the following properties and functions:
 ## WEB Server
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R3|Added|
@@ -106,6 +107,7 @@ From your component, you want to know if the Web server of the host database is 
 ## WEB Server list
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R3|Added
@@ -634,9 +636,11 @@ The <!-- REF #WebServerClass.sessionCookiePath.Summary -->"path" field of the se
 ## .sessionCookieSameSite
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19|Added|
+
 </details>
 
 <!-- REF #WebServerClass.sessionCookieSameSite.Syntax -->
@@ -672,12 +676,14 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 ## .start()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R3|Added
 </details>
 
 <!-- REF #WebServerClass.start().Syntax -->
+
 **.start**() : Object<br/>**.start**( *settings* : Object ) : Object<!-- END REF -->
 
 <!-- REF #WebServerClass.start().Params -->
@@ -693,7 +699,7 @@ The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the w
 
 The web server starts with default settings defined in the settings file of the project or (host database only) using the `WEB SET OPTION` command. However, using the *settings* parameter, you can define customized properties for the web server session.
 
-All settings of [Web Server objects](#web-server-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName](#sessioncookiename)).
+All settings of [Web Server objects](#web-server-object) can be customized, except read-only properties ([.isRunning](#isrunning), [.name](#name), [.openSSLVersion](#opensslversion), [.perfectForwardSecrecy](#perfectforwardsecrecy), and [.sessionCookieName(#sessioncookiename)]).
 
 Customized session settings will be reset when the [`.stop()`](#stop) function is called.
 
@@ -733,6 +739,17 @@ The function returns an object describing the Web server launch status. This obj
 ## .stop()
 
 <details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v18 R3|Added
+</details>
+
+<!-- REF #WebServerClass.stop().Syntax -->
+## .stop()
+
+<details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R3|Added

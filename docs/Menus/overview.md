@@ -3,7 +3,7 @@ id: overview
 title: Overview
 ---
 
-You can create menu bars and menus for your 4D applications. Because pull-down menus are a standard feature of any desktop application, their addition will make your applications easier to use and will make them feel familiar to users.
+You can create menu bars and menus for your 4D applications. Because pull-down menus are a standard feature of any desktop application, their addition will make your applications easier to use and will make them feel familiar to users. 
 
 ![](../assets/en/Menus/menubar.png)
 
@@ -11,10 +11,9 @@ A **menu bar** is a group of menus that can be displayed on a screen together. E
 
 You can have many separate menu bars for each application. For example, you can use one menu bar that contains menus for standard operations on the database and another that becomes active only for reporting. One menu bar may contain a menu with menu commands for entering records. The menu bar appearing with the input form may contain the same menu, but the menu commands are disabled because the user doesn’t need them during data entry.
 
-You can use the same menu in several menu bars or other menus, or you can leave it unattached and manage it only by programming (in this case, it is known as an independent menu).
+You can use the same menu in several menu bars or other menus, or you can leave it unattached and manage it only by programming (in this case, it is known as an independent menu). 
 
 When you design menus, keep the following two rules in mind:
-
 - Use menus for functions that are suited to menus: Menu commands should perform tasks such as adding a record, searching for records, or printing a report.
 - Group menu commands by function: For example, all menu commands that print reports should be in the same menu. For another example, you might have all the operations for a certain table in one menu.
 
@@ -24,9 +23,9 @@ To create menus and menu bars, you can use either:
 - language commands for the "Menus" theme,
 - a combination of both.
 
-## Menu editor
 
-The Menu editor is accessed using the **Menus** button of the Toolbox.
+## Menu editor
+The Menu editor is accessed using the **Menus** button of the Toolbox. 
 
 ![](../assets/en/Menus/editor1.png)
 

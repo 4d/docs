@@ -8,7 +8,7 @@ title: Classes
 
 The 4D language supports the concept of **classes**. In a programming language, using a class allows you to define an object behaviour with associated properties and functions.
 
-Once a user class is defined, you can **instantiate** objects of this class anywhere in your code. Each object is an instance of its class. A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function).
+Once a user class is defined, you can **instantiate** objects of this class anywhere in your code. Each object is an instance of its class. A class can [`extend`](#class-extends-classname) another class, and then inherits from its [functions](#function) and properties ([static](#class-constructor) and [computed](#function-get-and-function-set)).
 
 > The class model in 4D is similar to classes in JavaScript, and based on a chain of prototypes.
 
@@ -19,9 +19,12 @@ For example, you could create a `Person` class with the following definition:
 Class constructor($firstname : Text; $lastname : Text)
  This.firstName:=$firstname
  This.lastName:=$lastname
+
+Function get fullName() -> $fullName : text
+ $fullName:=This.firstName+" "+This.lastName
  
 Function sayHello()->$welcome : Text
- $welcome:="Hello "+This.firstName+" "+This.lastName
+ $welcome:="Hello "+This.fullName
 ```
 
 In a method, creating a "Person":
@@ -30,7 +33,7 @@ In a method, creating a "Person":
 var $person : cs.Person //object of Person class  
 var $hello : Text
 $person:=cs.Person.new("John";"Doe")
-// $person:{firstName: "John"; lastName: "Doe" }
+// $person:{firstName: "John"; lastName: "Doe"; fullName: "John Doe"}
 $hello:=$person.sayHello() //"Hello John Doe"
 ```
 
@@ -48,11 +51,11 @@ When naming classes, you should keep in mind the following rules:
 
 For example, if you want to define a class named "Polygon", you need to create the following file:
 
-- Project folder
-  - Project
-    - Sources
-      - Classes
-        - Polygon.4dm
+Project folder
+ Project
+  Sources
+   Classes
+    Polygon.4dm
 
 ### Deleting a class
 
@@ -61,7 +64,7 @@ To delete an existing class, you can:
 - on your disk, remove the .4dm class file from the "Classes" folder,
 - in the 4D Explorer, select the class and click ![](../assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu.
 
-### Using 4D interface
+### Using the 4D interface
 
 Class files are automatically stored at the appropriate location when created through the 4D interface, either via the **File** menu or the Explorer.
 
@@ -100,7 +103,7 @@ Available classes are accessible from their class stores. Two class stores are a
 - `cs` for user class store
 - `4D` for built-in class store
 
-### cs
+### `cs`
 
 #### cs -> classStore
 
@@ -118,7 +121,7 @@ You want to create a new instance of an object of `myClass`:
 $instance:=cs.myClass.new()
 ```
 
-### 4D
+### `4D`
 
 #### 4D -> classStore
 
@@ -159,10 +162,11 @@ When 4D does not find a function or a property in a class, it searches it in its
 Specific 4D keywords can be used in class definitions:
 
 - `Function <Name>` to define class functions of the objects.
-- `Class constructor` to define the properties of the objects.
+- `Function get <Name>` and `Function set <Name>` to define computed properties of the objects.
+- `Class constructor` to define static properties of the objects.
 - `Class extends <ClassName>` to define inheritance.
 
-### Function
+### `Function`
 
 #### Syntax
 
@@ -194,7 +198,7 @@ Function getFullname()->$fullname : Text
  $fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
   
-For a class function, the `Current method name` command returns: `<ClassName>.<FunctionName>`, for example "MyClass.myMethod".
+For a class function, the `Current method name` command returns: `<ClassName>.<FunctionName>`, for example "MyClass.myFunction".
 
 In the application code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. The following syntaxes are supported:
 
@@ -218,19 +222,6 @@ Function add($x; $y : Variant; $z : Integer; $xy : Object)
 
 >If the type is not stated, the parameter will be defined as `Variant`.
 
-You declare the return parameter (optional) by adding an arrow (`->`) and the return parameter definition after the input parameter(s) list. For example:
-
-```4d
-Function add($x : Variant; $y : Integer)->$result : Integer
-```
-
-You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through $0. For example:
-
-```4d
-Function add($x : Variant; $y : Integer): Integer
- $0:=$x+$y
-```
-
 The [classic 4D syntax](parameters.md#sequential-parameters) for method parameters can be used to declare class function parameters. Both syntaxes can be mixed. For example:
 
 ```4d
@@ -241,7 +232,24 @@ Function add($x : Integer)
  $0:=String($value)
 ```
 
-#### Example
+#### Return value
+
+You declare the return parameter (optional) by adding an arrow (`->`) and the return parameter definition after the input parameter(s) list, or a colon (`:`) and the return parameter type only. For example:
+
+```4d
+Function add($x : Variant; $y : Integer)->$result : Integer
+ $result:=$x+$y
+```
+
+You can also declare the return parameter by adding only `: type` and use the [`return expression`](parameters.md#return-expression) (it will also end the function execution). For example:
+
+```4d
+Function add($x : Variant; $y : Integer): Integer
+ // some code
+ return $x+$y
+```
+
+#### Example 1
 
 ```4d
 // Class: Rectangle
@@ -265,7 +273,92 @@ $rect:=cs.Rectangle.new(50;100)
 $area:=$rect.getArea() //5000
 ```
 
-### Class constructor
+#### Example 2
+
+This example uses the [`return expression`](parameters.md#return-expression):
+
+```4d
+Function getRectArea($width : Integer; $height : Integer) : Integer
+ If ($width > 0 && $height > 0)
+  return $width * $height
+ Else
+  return 0
+ End if
+```
+
+### `Function get` and `Function set`
+
+#### Syntax
+
+```4d
+Function get <name>()->$result : type
+// code
+```
+
+```4d
+Function set <name>($parameterName : type)
+// code
+```
+
+`Function get` and `Function set` are accessors defining **computed properties** in the class. A computed property is a named property with a data type that masks a calculation. When a computed property value is accessed, 4D substitutes the corresponding accessor's code:
+
+- when the property is read, the `Function get` is executed,
+- when the property is written, the `Function set` is executed.
+
+If the property is not accessed, the code never executes.
+
+Computed properties are designed to handle data that do not necessary need to be kept in memory. They are usually based upon persistent properties. For example, if a class object contains as persistent property the *gross price* and the *VAT rate*, the *net price* could be handled by a computed property.
+
+In the class definition file, computed property declarations use the `Function get` (the *getter*) and `Function set` (the *setter*) keywords, followed by the name of the property. The name must be compliant with [property naming rules](Concepts/identifiers.md#object-properties).
+
+`Function get` returns a value of the property type and `Function set` takes a parameter of the property type. Both arguments must comply with standard [function parameters](#parameters).
+
+When both functions are defined, the computed property is **read-write**. If only a `Function get` is defined, the computed property is **read-only**. In this case, an error is returned if the code tries to modify the property. If only a `Function set` is defined, 4D returns *undefined* when the property is read.
+
+The type of the computed property is defined by the `$return` type declaration of the *getter*. It can be of any [valid property type](dt_object.md).
+
+> Assigning *undefined* to an object property clears its value while preserving its type. In order to do that, the `Function get` is first called to retrieve the value type, then the `Function set` is called with an empty value of that type.
+
+#### Example 1
+
+```4d  
+//Class: Person.4dm
+
+Class constructor($firstname : Text; $lastname : Text)
+ This.firstName:=$firstname
+ This.lastName:=$lastname
+
+Function get fullName() -> $fullName : Text
+ $fullName:=This.firstName+" "+This.lastName
+
+Function set fullName( $fullName : Text )
+ $p:=Position(" "; $fullName)
+ This.firstName:=Substring($fullName; 1; $p-1)
+ This.lastName:=Substring($fullName; $p+1)
+```
+
+```4d
+//in a project method
+$fullName:=$person.fullName // Function get fullName() is called
+$person.fullName:="John Smith" // Function set fullName() is called
+```
+
+#### Example 2
+
+```4d
+Function get fullAddress()->$result : Object
+ 
+ $result:=New object
+ 
+ $result.fullName:=This.fullName
+ $result.address:=This.address
+ $result.zipCode:=This.zipCode
+ $result.city:=This.city
+ $result.state:=This.state
+ $result.country:=This.country 
+```
+
+### `Class Constructor`
 
 #### Syntax
 
@@ -279,7 +372,7 @@ A class constructor function, which can accept [parameters](#parameters), can be
 
 In that case, when you call the [`new()`](API/ClassClass.md#new) function, the class constructor is called with the parameters optionally passed to the `new()` function.
 
-For a class constructor function, the `Current method name` command returns:  `<ClassName>:constructor`, for example "MyClass:constructor".
+For a class constructor function, the `Current method name` command returns: `<ClassName>:constructor`, for example "MyClass:constructor".
 
 #### Example
 
@@ -298,7 +391,7 @@ $o:=cs.MyClass.new("HelloWorld")
 // $o = {"name":"HelloWorld"}
 ```
 
-### Class extends `\<ClassName>`
+### `Class extends <ClassName>`
 
 #### Syntax
 
@@ -340,22 +433,24 @@ Class constructor ($side : Integer)
  // can use 'This'
  This.name:="Square"
 
+
+
  Function getArea()
   C_LONGINT($0)
   $0:=This.height*This.width
 ```
 
-### Super
+### `Super`
 
 #### Syntax
 
 ```4d
-Super {( param{;...;paramN} )} {-> Object} 
+Super {( param{;...;paramN} )} {-> Object}
 ```
 
 |Parameter|Type||Description|  
 |---|---|---|---|
-|param|mixed|->|Parameter(s) to pass to the parent constructor
+|param|mixed|->|Parameter(s) to pass to the parent constructor|
 |Result|object|<-|Object's parent|
 
 The `Super` keyword allows calls to the `superclass`, i.e. the parent class.
@@ -400,6 +495,7 @@ Function sayName()
 // Function definition
 Function getArea()
  var $0 : Integer
+
  $0:=(This.height)*(This.width)
 ```
 
@@ -455,7 +551,7 @@ $square:=cs.Square.new()
 $message:=$square.description() //I have 4 sides which are all equal
 ```
 
-### This
+### `This`
 
 #### Syntax
 
@@ -467,7 +563,7 @@ This -> Object
 |---|---|---|---|
 |Result|object|<-|Current object|
 
-The `This` keyword returns a reference to the currently processed object. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
+The `This` keyword returns a reference to the currently processed object. In 4D, it can be used in [different contexts](https://doc.4d.com/4Dv19/help/command/page1470.html).
 
 In most cases, the value of `This` is determined by how a function is called. It can't be set by assignment during execution, and it may be different each time the function is called.
 
@@ -514,6 +610,7 @@ $o:=cs.ob.new()
 $o.a:=5
 $o.b:=3
 $val:=$o.f() //8
+
 ```
 
 In this example, the object assigned to the variable $o doesn't have its own *f* property, it inherits it from its class. Since *f* is called as a method of $o, its `This` refers to $o.
@@ -522,14 +619,14 @@ In this example, the object assigned to the variable $o doesn't have its own *f*
 
 Several commands of the 4D language allows you to handle class features.
 
-### OB Class
+### `OB Class`
 
-#### OB Class ( object ) -> Object | Null
+#### `OB Class ( object ) -> Object | Null`
 
 `OB Class` returns the class of the object passed in parameter.
 
-### OB Instance of
+### `OB Instance of`
 
-#### OB Instance of ( object ; class ) -> Boolean
+#### `OB Instance of ( object ; class ) -> Boolean`
 
 `OB Instance of` returns `true` if `object` belongs to `class` or to one of its inherited classes, and `false` otherwise.

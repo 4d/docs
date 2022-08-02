@@ -66,8 +66,8 @@ function Tile({
 }
 
 function TilesContainer() {
-  const firstRow = Tiles.slice(0, 3);
-  const secondRow = Tiles.slice(3);
+  const firstRow = Tiles.slice(0, 4);
+  const secondRow = Tiles.slice(4);
 
   return (
     <div className="container text--center">

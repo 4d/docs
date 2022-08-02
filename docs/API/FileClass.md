@@ -53,9 +53,11 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ## File
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF #_command_.File.Syntax -->
@@ -124,6 +126,7 @@ If the command is called from a component, pass the optional *parameter to get t
 ## 4D.File.new()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R6|Added
@@ -143,6 +146,7 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 ## .create()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -185,6 +189,7 @@ Creation of a preferences file in the database folder:
 ## .createAlias()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -239,6 +244,7 @@ You want to create an alias to a file in your database folder:
 ## .delete()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -286,6 +292,7 @@ You want to delete a specific file in the database folder:
 ## .getAppInfo()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19|Added
@@ -377,6 +384,7 @@ ALERT($info.Copyright)
 ## .moveTo()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -428,6 +436,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 ## .rename()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -469,6 +478,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 ## .setAppInfo()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19|Added
@@ -551,6 +561,7 @@ $infoPlistFile.setAppInfo($info)
 ## .setContent()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -581,9 +592,12 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 ## .setText()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
-|v17 R5|Added
+|v19 R3|Default for new projects: no BOM and (macOS) LF for EOL|
+|v17 R5|Added|
+
 </details>
 
 <!--REF #FileClass.setText().Syntax -->
@@ -607,14 +621,14 @@ In *text*, pass the text to write to the file. It can be a literal ("my text"), 
 
 Optionally, you can designate the character set to be used for writing the contents. You can pass either:
 
-* in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or ""UTF-8"),
+* in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or "UTF-8"),
 * or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
 
 > For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
 
-If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file. If you do not specify a character set, by default 4D uses the "UTF-8" character set and a BOM.
+If a Byte Order Mark (BOM) exists for the character set, 4D inserts it into the file unless the character set used contains the suffix "-no-bom" (e.g. "UTF-8-no-bom"). If you do not specify a character set, by default 4D uses the "UTF-8" character set without BOM.
 
-In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme are available:
+In *breakMode*, you can pass a number indicating the processing to apply to end-of-line characters before saving them in the file. The following constants, found in the **System Documents** theme, are available:
 
 |Constant|Value|Comment|
 |--------|-----|-------|
@@ -625,6 +639,8 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 |`Document with LF`|4|Line breaks are converted to LF (line feed), the default Unix and macOS format|
 
 By default, when you omit the *breakMode* parameter, line breaks are processed in native mode (1).
+
+> **Compatibility Note**: Compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4dv19R/help/title/en/page3239.html) on doc.4d.com.
 
 #### Example
 

@@ -11,7 +11,7 @@
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 90%;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -63,6 +63,12 @@ footer {
 
 
 @media only screen and (max-width: 768px) {
+  .tile {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
   .tile {
     text-align: center;
   }

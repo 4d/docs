@@ -13,15 +13,14 @@ Once created, you can use a variable wherever you need it in your application. F
  [MyTable]MyField:=MyText
 ```
 
-
 Variables are language objects; you can create and use variables that will never appear on the screen. In your forms, you can display variables (except Pointer and BLOB) on the screen, enter data into them, and print them in reports. In this way, enterable and non-enterable area variables act just like fields, and the same built-in controls are available when you create them. Form variables can also control buttons, list boxes, scrollable areas, picture buttons, and so on, or display results of calculations that do not need to be saved.
 
-## Declaring Variables   
+## Declaring Variables
 
 You create variables by declaring them. The 4D language offers two ways to declare variables:
 
 - using the `var` keyword (recommended, specially if your code uses objects and classes),
-- using one of the "Compiler" or "Arrays" theme 4D language commands (classic language only). 
+- using one of the "Compiler" or "Arrays" theme 4D language commands (classic language only).
 
 **Note:** Although it is usually not recommended, you can create basic variables simply by using them; you do not necessarily need to formally define them. For example, to declare a variable that will hold the current date plus 30 days, you can write:
 
@@ -31,14 +30,13 @@ You create variables by declaring them. The 4D language offers two ways to decla
  // and assigns the current date plus 30 days
 ```
 
-
 ### Using the `var` keyword
 
-Declaring variables using the `var` keyword is recommended since this syntax allows you to bind object variables with classes. Using this syntax enhances code editor suggestions and type-ahead features. 
+Declaring variables using the `var` keyword is recommended since this syntax allows you to bind object variables with classes. Using this syntax enhances code editor suggestions and type-ahead features.
 
 To declare a variable of any type with the `var` keyword, use the following syntax:
 
-`	var <varName>{; <varName2>;...}{ : <varType>}`
+`var <varName>{; <varName2>;...}{ : <varType>}`
 
 For example:
 
@@ -49,15 +47,15 @@ var $myFile : 4D.File  //a file class object variable
 var $myVar //a variant variable
 ```
 
-`varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers.   
-This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md). 
+`varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers.
+This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md).
 
 `varType` can be:
 
-- a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type, 
+- a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type,
 - a [class reference](Concepts/classes.md) (4D class or user class), in which case the variable contains a reference to an object of the defined class.
 
-If `varType` is omitted, a variable of the **variant** type is created. 
+If `varType` is omitted, a variable of the **variant** type is created.
 
 The following table lists all supported `varType` values:
 
@@ -71,10 +69,10 @@ The following table lists all supported `varType` values:
 |`Real`|Real value|
 |`Pointer`|Pointer value|
 |`Picture`|Picture value|
-|`Blob`|BLOB value|
+|`Blob`|Scalar Blob value|
 |`Collection`|Collection value|
 |`Variant`|Variant value|
-|`Object`|Object with default class (`4D.Object`)|
+|`Object`|Object with default class (4D.Object)|
 |`4D.<className>`|Object of the 4D class name|
 |`cs.<className>`|Object of the user class name|
 
@@ -107,12 +105,11 @@ var $dataclass : cs.Employee
 var $entity : cs.EmployeeEntity
 ```
 
-
 ### Using a C_ directive
 
-> **Compatibility Note:** This feature is not recommended to declare variables inside methods. It is recommended to use the [var](#using-the-var-keyword) keyword. 
+> **Compatibility Note:** This feature is not recommended to declare variables inside methods. It is recommended to use the [var](#using-the-var-keyword) keyword.
 
-Directives from the "Compiler" theme commands allow you to declare variables of basic types. 
+Directives from the "Compiler" theme commands allow you to declare variables of basic types.
 
 For example, if you want to define a text variable, you write:
 
@@ -132,7 +129,6 @@ The following are some basic variable declarations:
 
 **Note:** Arrays are a particular type of variables (an array is an ordered series of variables of the same type). Arrays are declared with specific commands, such as `ARRAY LONGINT(alAnArray;10)`. For more information, please refer to [Arrays](Concepts/arrays.md).
 
-
 ## Assigning Data
 
 Data can be put into and copied out of variables and arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields.
@@ -145,7 +141,7 @@ MyNumber:=3
 
 creates the variable _MyNumber_ and puts the number 3 into it. If MyNumber already exists, then the number 3 is just put into it.
 
-> It is usually not recommended to create variables without [declaring their type](#creating-variables). 
+> It is usually not recommended to create variables without [declaring their type](#creating-variables).
 
 Of course, variables would not be very useful if you could not get data out of them. Once again, you use the assignment operator. If you need to put the value of MyNumber in a field called [Products]Size, you would write _MyNumber_ on the right side of the assignment operator:
 
@@ -210,12 +206,10 @@ For more information, see the chapter **Processes** and the description of these
 
 ### Interprocess variables
 
-Interprocess variables are available throughout the project and are shared across all cooperative processes. They are primarily used to share information between processes. 
+Interprocess variables are available throughout the project and are shared across all cooperative processes. They are primarily used to share information between processes.
 
 > Use of interprocess variables is not recommended since they are not available from preemptive processes and tend to make the code less maintainable.  
 
 The name of an interprocess variable always begins with the symbols `<>` — a “less than” sign followed by a “greater than” sign— followed by 31 characters.
 
 In Client/Server, each machine (Client machines and Server machine) share the same definition of interprocess variables, but each machine has a different instance for each variable.
-
-

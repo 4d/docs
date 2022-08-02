@@ -24,6 +24,7 @@ Entity selections can be created from existing selections using various function
 |[<!-- INCLUDE #EntitySelectionClass.extract().Syntax -->](#extract)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.extract().Summary -->|
 |[<!-- INCLUDE #EntitySelectionClass.first().Syntax -->](#first)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.first().Summary -->|
 |[<!-- INCLUDE #EntitySelectionClass.getDataClass().Syntax -->](#getdataclass)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.getDataClass().Summary -->|
+|[<!-- INCLUDE #EntitySelectionClass.getRemoteContextAttributes().Syntax -->](#getremotecontextattributes)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getRemoteContextAttributes().Summary -->|
 |[<!-- INCLUDE #EntitySelectionClass.isAlterable().Syntax -->](#isalterable)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.isAlterable().Summary -->|
 |[<!-- INCLUDE #EntitySelectionClass.isOrdered().Syntax -->](#isordered)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.isOrdered().Summary -->|
 |[<!-- INCLUDE #EntitySelectionClass.last().Syntax -->](#last)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.last().Summary -->|
@@ -38,6 +39,7 @@ Entity selections can be created from existing selections using various function
 |[<!-- INCLUDE #EntitySelectionClass.queryPath.Syntax -->](#querypath)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.queryPath.Summary -->|
 |[<!-- INCLUDE #EntitySelectionClass.queryPlan.Syntax -->](#queryplan)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.queryPlan.Summary -->|
 |[<!-- INCLUDE #EntitySelectionClass.refresh().Syntax -->](#refresh)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.refresh().Summary -->|
+|[<!-- INCLUDE #EntitySelectionClass.selected().Syntax -->](#selected)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.selected().Summary -->|
 |[<!-- INCLUDE #EntitySelectionClass.slice().Syntax -->](#slice)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.slice().Summary -->|
 |[<!-- INCLUDE #EntitySelectionClass.sum().Syntax -->](#sum)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.sum().Summary -->|
 |[<!-- INCLUDE #EntitySelectionClass.toCollection().Syntax -->](#tocollection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntitySelectionClass.toCollection().Summary -->|
@@ -74,7 +76,7 @@ In the optional *settings* parameter, you can pass an object containing the foll
 ```4d
 var $employees : cs.EmployeeSelection
 ALL RECORDS([Employee])
-$employees:=Create entity selection([Employee])
+$employees:=Create entity selection([Employee]) 
 // The $employees entity selection now contains a set of reference
 // on all entities related to the Employee dataclass
 ```
@@ -83,10 +85,40 @@ $employees:=Create entity selection([Employee])
 
 [`dataClass.newSelection()`](DataClassClass.md#newselection)
 
+## USE ENTITY SELECTION
+
+<!-- REF #_command_.USE ENTITY SELECTION.Syntax -->
+**USE ENTITY SELECTION** (*entitySelection*)<!-- END REF -->
+
+<!-- REF #_command_.USE ENTITY SELECTION.Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|entitySelection|EntitySelection|->|An entity selection|
+<!-- END REF -->
+
+#### Description
+
+The `USE ENTITY SELECTION` command updates the current selection of the table matching the dataclass of the *entitySelection* parameter, according to the content of the entity selection.
+
+This command cannot be used with a [Remote datastore](../ORDA/remoteDatastores.md).
+
+> After a call to `USE ENTITY SELECTION`, the first record of the updated current selection (if not empty) becomes the current record, but it is not loaded in memory. If you need to use the values of the fields in the current record, use the `LOAD RECORD` command after the `USE ENTITY SELECTION` command.
+
+#### Example
+
+```4d
+var $entitySel : Object
+
+$entitySel:=ds.Employee.query("lastName = :1";"M@") //$entitySel is related to the Employee dataclass
+REDUCE SELECTION([Employee];0)
+USE ENTITY SELECTION($entitySel) //The current selection of the Employee table is updated
+```
+
 <!-- REF EntitySelectionClass.index.Desc -->
 ## &#91;*index*&#93;
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -136,9 +168,11 @@ Note that the corresponding entity is reloaded from the datastore.
 ## .*attributeName*
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
+
 </details>
 
 <!-- REF EntitySelectionClass.attributeName.Syntax -->
@@ -208,10 +242,12 @@ The resulting object is an entity selection of Employee with duplications remove
 ## .add()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R5|Only supports alterable entity selections|
 |v17|Added|
+
 </details>
 
 <!-- REF #EntitySelectionClass.add().Syntax -->
@@ -274,9 +310,11 @@ Calls to the function can be chained:
 ## .and()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
+
 </details>
 
 <!-- REF #EntitySelectionClass.and().Syntax -->
@@ -313,7 +351,7 @@ If the original entity selection and the parameter are not related to the same d
   //with primary key 710 and other entities
   //for ex. "Colin Hetrick" / "Grady Harness" / "Sherlock Holmes" (primary key 710)
  $employee:=ds.Employee.get(710) // Returns "Sherlock Holmes"
-
+ 
  $result:=$employees.and($employee) //$result is an entity selection containing   
   //only the entity with primary key 710 ("Sherlock Holmes")
 ```
@@ -335,6 +373,7 @@ We want to have a selection of employees named "Jones" who live in New York:
 ## .average()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R6|Returns undefined if empty entity selection|
@@ -386,6 +425,7 @@ We want to obtain a list of employees whose salary is higher than the average sa
 ## .contains()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -415,10 +455,10 @@ If *entity* and the entity selection do not belong to the same dataclass, an err
 ```4d
  var $employees : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
-
+ 
  $employees:=ds.Employee.query("lastName=:1";"H@")
  $employee:=ds.Employee.get(610)
-
+ 
  If($employees.contains($employee))
     ALERT("The entity with primary key 610 has a last name beginning with H")
  Else
@@ -432,6 +472,7 @@ If *entity* and the entity selection do not belong to the same dataclass, an err
 ## .count()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -466,7 +507,7 @@ We want to find out the total number of employees for a company without counting
 ```4d
  var $sel : cs.EmployeeSelection
  var $count : Real
-
+ 
  $sel:=ds.Employee.query("employer = :1";"Acme, Inc")
  $count:=$sel.count("jobtitle")
 ```
@@ -477,6 +518,7 @@ We want to find out the total number of employees for a company without counting
 ## .copy()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R5|Added|
@@ -512,7 +554,7 @@ You create a new, empty entity selection of products when the form is loaded:
     :(Form event code=On Load)
        Form.products:=ds.Products.newSelection()
  End case
-
+ 
 ```
 
 Then this entity selection is updated with products and you want to share the products between several processes. You copy the Form.products entity selection as a shareable one:
@@ -521,12 +563,12 @@ Then this entity selection is updated with products and you want to share the pr
  ...
   // The Form.products entity selection is updated
  Form.products.add(Form.selectedProduct)
-
+ 
  Use(Storage)
     If(Storage.products=Null)
        Storage.products:=New shared object()
     End if
-
+ 
     Use(Storage.products)
        Storage.products:=Form.products.copy(ck shared)
     End use
@@ -539,6 +581,7 @@ Then this entity selection is updated with products and you want to share the pr
 ## .distinct()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -599,6 +642,7 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 ## .drop()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -658,6 +702,7 @@ Example with the `dk stop dropping on first error` option:
 ## .extract()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R3|Added|
@@ -730,14 +775,14 @@ Given the following table and relation:
   //
   //
   //$mailing is a collection of objects with properties "who" and "to"
-  //"who" property content is String type
+  //"who" property content is String type 
   //"to" property content is entity type (Address dataclass)
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address";"to")
   //
   //
   //$mailing is a collection of objects with properties "who" and "city"
-  //"who" property content is String type
-  //"city" property content is String type
+  //"who" property content is String type 
+  //"city" property content is String type 
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address.city";"city")
   //
   //$teachers is a collection of objects with properties "where" and "who"
@@ -755,6 +800,7 @@ Given the following table and relation:
 ## .first()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -808,6 +854,7 @@ There is, however, a difference between both statements when the selection is em
 ## .getDataClass()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
@@ -836,7 +883,7 @@ The following generic code duplicates all entities of the entity selection:
 ```4d
   //duplicate_entities method
   //duplicate_entities($entity_selection)
-
+ 
  #DECLARE ( $entitySelection : 4D.EntitySelection )  
  var $dataClass : 4D.DataClass
  var $entity; $duplicate : 4D.Entity
@@ -851,6 +898,60 @@ The following generic code duplicates all entities of the entity selection:
 ```
 
 <!-- END REF -->
+
+<!-- REF EntitySelectionClass.getRemoteContextAttributes().Desc -->
+## .getRemoteContextAttributes()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19R5|Added|
+
+</details>
+
+<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Syntax -->
+**.getRemoteContextAttributes()** : Text<!-- END REF -->
+
+<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Params -->
+|Parameter|Type||Description|
+|---|---|---|---|
+|result|Text|<-|Context attributes linked to the entity selection, separated by a comma|
+<!-- END REF -->
+
+> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
+
+#### Description
+
+The `.getRemoteContextAttributes()` function <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Summary -->returns information about the optimization context used by the entity selection<!-- END REF -->.
+
+If there is no [optimization context](../ORDA/remoteDatastores.md#clientserver-optimization) for the entity selection, the function returns an empty Text.
+
+#### Example
+
+```4d
+var $ds : 4D.DataStoreImplementation
+var $persons : cs.PersonsSelection
+var $p : cs.PersonsEntity
+
+var $info : Text
+var $text : Text
+
+$ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
+
+$persons:=$ds.Persons.all()
+$text:="" 
+For each ($p; $persons)
+    $text:=$p.firstname+" lives in "+$p.address.city+" / " 
+End for each 
+
+$info:=$persons.getRemoteContextAttributes()
+//$info = "firstname,address,address.city"
+```
+
+#### See also
+
+[Entity.getRemoteContextAttributes()](./EntityClass.md#getRemoteContextAttributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
 
 <!-- REF EntitySelectionClass.isAlterable().Desc -->
 ## .isAlterable()
@@ -928,12 +1029,12 @@ For more information, please refer to [Ordered or unordered entity selection](OR
  var $isOrdered : Boolean
  $employees:=ds.Employee.newSelection(dk keep ordered)
  $employee:=ds.Employee.get(714) // Gets the entity with primary key 714
-
+ 
   //In an ordered entity selection, we can add the same entity several times (duplications are kept)
  $employees.add($employee)
  $employees.add($employee)
  $employees.add($employee)
-
+ 
  $isOrdered:=$employees.isOrdered()
  If($isOrdered)
     ALERT("The entity selection is ordered and contains "+String($employees.length)+" employees")
@@ -946,6 +1047,7 @@ For more information, please refer to [Ordered or unordered entity selection](OR
 ## .last()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -990,6 +1092,7 @@ If the entity selection is empty, the function returns Null.
 ## .length
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1005,6 +1108,8 @@ The `.length` property <!-- REF #EntitySelectionClass.length.Summary -->returns 
 
 Entity selections always have a `.length` property.
 
+> To know the total number of entities in a dataclass, it is recommended to use the [`getCount()`](DataClassClass.md#getcount) function which is more optimized than the `ds.myClass.all().length` expression.
+
 #### Example
 
 ```4d
@@ -1019,6 +1124,7 @@ Entity selections always have a `.length` property.
 ## .max()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1031,7 +1137,7 @@ Entity selections always have a `.length` property.
 
 <!-- REF #EntitySelectionClass.max().Params -->
 |Parameter|Type||Description|
-|---------|--- |:---:|------|
+|---------|--- |---|------|
 |attributePath |Text|->|Path of the attribute to be used for calculation|
 |Result|any|<-|Highest value of attribute|
 <!-- END REF -->
@@ -1066,6 +1172,7 @@ We want to find the highest salary among all the female employees:
 ## .min()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1113,6 +1220,7 @@ In this example, we want to find the lowest salary among all the female employee
 ## .minus()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1150,13 +1258,13 @@ If the original entity selection and the parameter are not related to the same d
 ```4d
  var $employees; $result : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
-
- $employees:=ds.Employee.query("lastName = :1";"H@")
+ 
+ $employees:=ds.Employee.query("lastName = :1";"H@") 
   // The $employees entity selection contains the entity with primary key 710 and other entities
   // for ex. "Colin Hetrick", "Grady Harness", "Sherlock Holmes" (primary key 710)
-
+ 
  $employee:=ds.Employee.get(710) // Returns "Sherlock Holmes"
-
+ 
  $result:=$employees.minus($employee) //$result contains "Colin Hetrick", "Grady Harness"
 ```
 
@@ -1177,6 +1285,7 @@ We want to have a selection of female employees named "Jones" who live in New Yo
 ## .or()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1226,7 +1335,7 @@ If the original entity selection and the parameter are not related to the same d
  $employees:=ds.Employee.query("lastName = :1";"H@") // Returns "Colin Hetrick","Grady Harness", "Sherlock Holmes"
  $employee:=ds.Employee.get(686) //the entity with primary key 686 does not belong to the $employees entity selection
   //It matches the employee "Mary Smith"
-
+ 
  $result:=$employees.or($employee) //$result contains "Colin Hetrick", "Grady Harness", "Sherlock Holmes", "Mary Smith"
 ```
 
@@ -1236,6 +1345,7 @@ If the original entity selection and the parameter are not related to the same d
 ## .orderBy()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1292,13 +1402,13 @@ You can add as many objects in the criteria collection as necessary.
 // order by formula
  $sortedEntitySelection:=$entitySelection.orderBy("firstName asc, salary desc")
  $sortedEntitySelection:=$entitySelection.orderBy("firstName")
-
+ 
   // order by collection with or without sort orders
  $orderColl:=New collection
  $orderColl.push(New object("propertyPath";"firstName";"descending";False))
  $orderColl.push(New object("propertyPath";"salary";"descending";True))
  $sortedEntitySelection:=$entitySelection.orderBy($orderColl)
-
+ 
  $orderColl:=New collection
  $orderColl.push(New object("propertyPath";"manager.lastName"))
  $orderColl.push(New object("propertyPath";"salary"))
@@ -1311,6 +1421,7 @@ You can add as many objects in the criteria collection as necessary.
 ## .orderByFormula()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R6|Added|
@@ -1389,16 +1500,16 @@ In this example, the "marks" object field in the **Students** dataClass contains
  var $formula; $schoolA; $schoolB : Object
  $es1:=ds.Students.query("nationality=:1";"French")
  $formula:=Formula(computeAverage($1))
-
+ 
  $schoolA:=New object() //settings object
  $schoolA.args:=New object("english";1;"math";1;"history";1) // Coefficients to compute an average
-
+ 
   //Order students according to school A criteria
  $es2:=$es1.entitySelection.orderByFormula($formula;$schoolA)
-
+ 
  $schoolB:=New object() //settings object
  $schoolB.args:=New object("english";1;"math";2;"history";3) // Coefficients to compute an average
-
+ 
   //Order students according to school B criteria
  $es2:=$es1.entitySelection.orderByFormula($formula;dk descending;$schoolB)
 ```
@@ -1410,18 +1521,18 @@ In this example, the "marks" object field in the **Students** dataClass contains
  #DECLARE ($coefList : Object) -> $result : Integer
  var $subject : Text
  var $average; $sum : Integer
-
+ 
  $average:=0
  $sum:=0
-
+ 
  For each($subject;$coefList)
     $sum:=$sum+$coefList[$subject]
  End for each
-
+ 
  For each($subject;This.marks)
     $average:=$average+(This.marks[$subject]*$coefList[$subject])
  End for each
-
+ 
  $result:=$average/$sum
 ```
 
@@ -1431,6 +1542,7 @@ In this example, the "marks" object field in the **Students** dataClass contains
 ## .query()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R6|Support of Formula parameters|
@@ -1485,6 +1597,7 @@ More examples of queries can be found in the DataClass [`.query()`](DataClassCla
 ## .queryPath
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1506,6 +1619,7 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 ## .queryPlan
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1527,6 +1641,7 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 ## .refresh()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R3|Added|
@@ -1556,24 +1671,24 @@ In this example, classic and ORDA code modify the same data simultaneously:
 
 ```4d
  //On a 4D remote
-
+ 
  var $selection : cs.StudentsSelection
  var $student : cs.StudentsEntity
-
+ 
  $selection:=ds.Students.query("lastname=:1";"Collins")
   //The first entity is loaded in the ORDA cache
  $student:=$selection.first()
-
+ 
   //Update with classic 4D, ORDA cache is not aware of if
  QUERY([Students];[Students]lastname="Collins")
  [Students]lastname:="Colin"
  SAVE RECORD([Students])
-
+ 
   //to get the latest version, the ORDA cache must be invalidated
  $selection.refresh()
   // Even if cache is not expired, the first entity is reloaded from disk
  $student:=$selection.first()
-
+ 
   //$student.lastname contains "Colin"
 ```
 
@@ -1600,10 +1715,75 @@ A list box displays the Form.students entity selection and several clients work 
 
 <!-- END REF -->
 
+<!-- REF EntitySelectionClass.selected().Desc -->
+## .selected()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R3|Added|
+
+</details>
+
+<!-- REF #EntitySelectionClass.selected().Syntax -->
+**.selected**( *selectedEntities* : 4D.EntitySelection ) : Object<!-- END REF -->
+
+<!-- REF #EntitySelectionClass.selected().Params -->
+|Parameter|Type||Description|
+|---------|--- |:---:|------|
+|selectedEntities |4D.EntitySelection|->|Entity selection with entities for which to know the rank in the entity selection|
+|Result|Object|<-|Range(s) of selected entities in entity selection|
+<!-- END REF -->
+
+#### Description
+
+The `.selected()` function <!-- REF #EntitySelectionClass.selected().Summary -->returns an object describing the position(s) of *selectedEntities* in the original entity selection<!-- END REF -->.
+
+>This function does not modify the original entity selection.
+
+Pass in the *selectedEntities* parameter an entity selection containing entities for which you want to know the position in the original entity selection. *selectedEntities* must be an entity selection belonging to the same dataclass as the original entity selection, otherwise an error 1587 - "The entity selection comes from an incompatible dataclass" is raised.
+
+#### Result
+
+The returned object contains the following properties:
+
+|Property|Type|Description
+|---|---|---|
+|ranges|Collection|Collection of range objects|
+|ranges[].start|Integer|First entity index in the range|
+|ranges[].end|Integer|Last entity index in the range|
+
+If a `ranges` property contains a single entity, `start` = `end`. Index starts at 0.
+
+The function returns an empty collection in the `ranges` property if the original entity selection or the *selectedEntities* entity selection is empty.
+
+#### Example
+
+```4d
+var $invoices; $cashSel; $creditSel : cs.Invoices
+var $result1; $result2 : Object
+
+$invoices:=ds.Invoices.all()
+
+$cashSelection:=ds.Invoices.query("payment = :1"; "Cash")
+$creditSel:=ds.Invoices.query("payment IN :1"; New collection("Cash"; "Credit Card"))
+
+$result1:=$invoices.selected($cashSelection)
+$result2:=$invoices.selected($creditSel)
+
+//$result1 = {ranges:[{start:0;end:0},{start:3;end:3},{start:6;end:6}]}
+//$result2 = {ranges:[{start:0;end:1},{start:3;end:4},{start:6;end:7}]}
+
+```
+
+<!-- END REF -->
+
 <!-- REF EntitySelectionClass.slice().Desc -->
 ## .slice()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1662,6 +1842,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 ## .sum( )
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1697,7 +1878,7 @@ An error is returned if:
 ```4d
 var $sel : cs.EmployeeSelection
 var $sum : Real
-
+ 
 $sel:=ds.Employee.query("salary < :1";20000)
 $sum:=$sel.sum("salary")
 ```
@@ -1708,6 +1889,7 @@ $sum:=$sel.sum("salary")
 ## .toCollection( )
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1774,7 +1956,7 @@ Example without filter or options parameter:
 ```4d
  var $employeesCollection : Collection
  var $employees : cs.EmployeeSelection
-
+ 
  $employeesCollection:=New collection
  $employees:=ds.Employee.all()
  $employeesCollection:=$employees.toCollection()
@@ -1800,6 +1982,7 @@ Returns:
         },
         "manager": {
             "__KEY": 412
+
         }
     },
     {
@@ -1892,9 +2075,10 @@ var $employees : cs.EmployeeSelection
 
 $employeesCollection:=New collection
 $filter:=New collection
+
 $filter.push("firstName")
 $filter.push("lastName")
-
+ 
 $employees:=ds.Employee.all()
 $employeesCollection:=$employees.toCollection($filter;0;0;2)
 ```

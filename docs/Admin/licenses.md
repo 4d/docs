@@ -3,17 +3,18 @@ id: licenses
 title: Managing 4D Licenses
 ---
 
-Once installed on your disk, you must activate your 4D products in order to be able to use them. Usually, the activation is automatic if you [sign in using your 4D account](GettingStarted/Installation.md) in the Welcome Wizard.
+Once installed on your disk, you must activate your 4D products in order to be able to use them. Usually, the activation is automatic if you [sign in using your 4D account](GettingStarted/Installation.md) in the Welcome Wizard. 
 
 However, in specific cases you could need to activate your licenses manually, for example if:
 
 - your configuration does not allow the automatic activation,
-- you have purchased additional licenses.
+- you have purchased additional licenses. 
 
 No activation is required for the following uses:
 
 - 4D used in remote mode (connection to a 4D Server)
 - 4D used in local mode with an interpreted application project with no access to the Design environment.
+
 
 ## First activation
 
@@ -34,6 +35,7 @@ Enter your user ID (email or 4D account) as well as your password. If you do not
 Then enter the license number of the product you want to activate. This number is provided by email or by mail after a product is purchased.
 
 ![](../assets/en/getStart/activ2.png)
+
 
 ### Deferred Activation
 
@@ -68,6 +70,7 @@ Your 4D application is now activated.
 
 This mode can be used for a special temporary activation of 4D (5 days maximum) without connecting to the 4D Web site. This activation can only be used one time.
 
+
 ## Adding licenses  
 
 You can add new licenses, for example to extend the capacities of your application, at any time.
@@ -76,7 +79,7 @@ Choose the **License Manager...** command from the **Help** menu of the 4D or 4D
 
 ![](../assets/en/getStart/licens1.png)
 
-This button connects you to our customer database and automatically activates any new or updated licenses related to the current license (the current license is displayed in **bold** in the "Active Licenses" list). You will just be prompted for your user account and password.
+This button connects you to our customer database and automatically activates any new or updated licenses related to the current license (the current license is displayed in **bold** in the "Active Licenses" list). You will just be prompted for your user account and password. 
 
 - If you purchased additional expansions for a 4D Server, you do not need to enter any license number -- just click **Refresh**.
 - At the first activation of a 4D Server, you just need to enter the server number and all the purchased expansions are automatically assigned.
@@ -86,19 +89,21 @@ You can use the **Refresh** button in the following contexts:
 - When you have purchased an additional expansion and want to activate it,
 - When you need to update an expired temporary number (Partners or evolutions).
 
+
+
 ## 4D Online Store  
 
 In 4D Store, you can order, upgrade, extend, and/or manage 4D products. You can reach the store at the following address: [https://store.4d.com/us/](https://store.4d.com/us/) (you will need to select your country).
 
 Click **Login** to sign in using your existing account or **New Account** to create a new one, then follow the on-screen instructions.
 
-### License Management
+### License Management 
 
 After you log in, you can click on **License list** at the top right of the page:
 
 ![](../assets/en/getStart/licens2.png)
 
-Here you can manage your licenses by assigning them to projects.
+Here you can manage your licenses by assigning them to projects. 
 
 Select the appropriate license from the list then click **Link to a project... >**:
 
@@ -114,6 +119,7 @@ You can use projects to organize your licenses according to your needs:
 
 ![](../assets/en/getStart/licens6.png)
 
+
 ## Troubleshooting  
 
 If the installation or activation process fails, please check the following table, which gives the most common causes of malfunctioning:
@@ -125,6 +131,7 @@ If the installation or activation process fails, please check the following tabl
 |Failure of on-line activation|Antivirus application, firewall, proxy|1- Temporarily disable your antivirus application or your firewall OR 2- Use deferred activation (not available with licenses for "R" versions)|
 
 If this information does not help you resolve your problem, please contact 4D or your local distributor.
+
 
 ## Contacts  
 

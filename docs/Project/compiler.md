@@ -31,7 +31,7 @@ If errors are detected, the process is stopped and the "Compilation failed" mess
 
 ![](../assets/en/Project/compilerWin2.png)
 
-Double-click on each error detected to open the method or class concerned directly in the 4D method editor. The line containing the error is highlighted and the type of error is displayed in the syntax area of the window.
+Double-click on each error detected to open the method or class concerned directly in the 4D Code Editor. The line containing the error is highlighted and the type of error is displayed in the syntax area of the window.
 
 Use the **Previous Error** / **Next Error** commands of the **Method** menu to navigate from one error to the next.
 
@@ -41,7 +41,7 @@ The number of errors found during your first compilations may be daunting, but d
 
 ## Run Compiled
 
-Once a project is compiled, it is possible to switch from [interpreted mode to compiled mode](Concepts/interpreted.md), and vice versa, at any time and without having to quit the 4D application (except when the interpreted code has been removed). To do this, use tge **Restart Interpreted** and **Restart Compiled** commands of the **Run** menu. The [Open project dialog box](creating.md#options) also offers a choice between interpreted or compiled mode for database startup.
+Once a project is compiled, it is possible to switch from [interpreted mode to compiled mode](Concepts/interpreted.md), and vice versa, at any time and without having to quit the 4D application (except when the interpreted code has been removed). To do this, use tge **Restart Interpreted** and **Restart Compiled** commands of the **Run** menu. The [Open project dialog box](GettingStarted/creating.md#options) also offers a choice between interpreted or compiled mode for database startup.
 
 When you switch from one mode to the other, 4D closes the current mode and opens the new one. This is equivalent to exiting and reopening the application. Each time you change from one mode to another, 4D executes the two following database methods (if specified) in this order: `On Exit` -> `On Startup`.
 
@@ -67,7 +67,7 @@ The name of these methods must begin with `Compiler_`. You can set the default n
 
 Only the necessary compiler methods (i.e., those for which items already exist in the project) are generated.
 
-The information area indicates any errors found during method creation or updating. Double-clicking on an error line causes the method and line concerned to be displayed in the Method editor.
+The information area indicates any errors found during method creation or updating. Double-clicking on an error line causes the method and line concerned to be displayed in the Code Editor.
 
 ### Clear compiled code
 
@@ -115,7 +115,7 @@ The "Compiler" page of the Settings dialog box lets you set parameters related t
 
 This area groups the generic options used during the compilation process.
 
-#### Generate symbol file
+#### Generate the symbol file
 
 Used to generate the symbol file (see [symbol file](#symbol-file)). The symbol file is created in the in the [Logs folder](Project/architecture.md#logs) of the project with the name `ProjectName_symbols.txt`.
 
@@ -134,9 +134,11 @@ Used to set the number of passes (code parsing) performed by the compiler and th
 #### Compilation Target
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19|Added|
+
 </details>
 
 This setting allows you to select the processor family for which your 4D project must be natively compiled. The 4D compiler can build native code for two processor families:
@@ -234,7 +236,8 @@ The length of the error file depends on the number of errors and warnings issued
 
 The structure of the error file is as follows:
 
-- At the top of the file is the list of errors and warnings, sorted by method and in their order of creation in 4D. In the ***General errors*** section, all the typing impossibilities and identity ambiguities are grouped together. These errors and warnings are listed using the following format:
+- At the top of the file is the list of errors and warnings, sorted by method and in their order of creation in 4D.
+- In the ***General errors*** section, all the typing impossibilities and identity ambiguities are grouped together. These errors and warnings are listed using the following format:
   - line number in the method (0 indicates general errors)
   - warning attribute indicating whether the detected anomaly is a warning (warning="true") or an error (warning="false")
   - diagnostic describing the error
@@ -243,14 +246,15 @@ If your project does not have any general errors, the file will not have a *Gene
 
 An error file may contain three types of messages:
 
-- **Errors linked to a specific line**: these errors are displayed in context — the line in which they were found — with an explanation. The compiler reports this type of error when it encounters an expression in which it sees an inconsistency related to data type or syntax. In the compiler window, double–click on each error detected in order to open the method concerned directly in the 4D Method editor, with the line containing the error highlighted.
+- **Errors linked to a specific line**: these errors are displayed in context — the line in which they were found — with an explanation. The compiler reports this type of error when it encounters an expression in which it sees an inconsistency related to data type or syntax. In the compiler window, double–click on each error detected in order to open the method concerned directly in the 4D Code Editor, with the line containing the error highlighted.
 
 - **General errors**: These are errors that make it impossible to compile the project. There are two cases in which the compiler reports a general error:
   - The data type of a process variable could not be determined.
   - Two different kinds of objects have the same name.
+
 General errors are so named because they cannot be linked to any specific method. In the first case, the compiler could not perform a specified typing anywhere in the project. In the second, it was unable to decide whether to associate a given name with one object rather than with another.
 
-- **Warnings**: Warnings are not errors. They do not prevent the project from being compiled, but simply point out potential code errors. In the compiler window, warnings appear in italics. Double-click on each warning to open the method concerned directly in the 4D Method editor, with the line containing the warning highlighted.
+- **Warnings**: Warnings are not errors. They do not prevent the project from being compiled, but simply point out potential code errors. In the compiler window, warnings appear in italics. Double-click on each warning to open the method concerned directly in the 4D Code Editor, with the line containing the warning highlighted.
 
 ### Range checking
 

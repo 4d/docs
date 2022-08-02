@@ -21,6 +21,7 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 ||
 |---|
 |[<!-- INCLUDE DataClassAttributeClass.autoFilled.Syntax -->](#autofilled)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.autoFilled.Summary -->|
+|[<!-- INCLUDE DataClassAttributeClass.exposed.Syntax -->](#exposed)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.exposed.Summary --> |
 |[<!-- INCLUDE DataClassAttributeClass.fieldNumber.Syntax -->](#fieldnumber)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.fieldNumber.Summary --> |
 |[<!-- INCLUDE DataClassAttributeClass.fieldType.Syntax -->](#fieldtype)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.fieldType.Summary --> |
 |[<!-- INCLUDE DataClassAttributeClass.indexed.Syntax -->](#indexed)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.indexed.Summary --> |
@@ -29,6 +30,8 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 |[<!-- INCLUDE DataClassAttributeClass.kind.Syntax -->](#kind)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.kind.Summary --> |
 |[<!-- INCLUDE DataClassAttributeClass.mandatory.Syntax -->](#mandatory)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.mandatory.Summary --> |
 |[<!-- INCLUDE DataClassAttributeClass.name.Syntax -->](#name)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.name.Summary --> |
+|[<!-- INCLUDE DataClassAttributeClass.path.Syntax -->](#path)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.path.Summary --> |
+|[<!-- INCLUDE DataClassAttributeClass.readOnly.Syntax -->](#readonly)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.readOnly.Summary --> |
 |[<!-- INCLUDE DataClassAttributeClass.relatedDataClass.Syntax -->](#relateddataclass)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.relatedDataClass.Summary --> |
 |[<!-- INCLUDE DataClassAttributeClass.type.Syntax -->](#type)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.type.Summary --> |
 |[<!-- INCLUDE DataClassAttributeClass.unique.Syntax -->](#unique)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassAttributeClass.unique.Summary --> |
@@ -37,9 +40,11 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 ## .autoFilled
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF DataClassAttributeClass.autoFilled.Syntax -->
@@ -58,13 +63,39 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 
 <!-- END REF -->
 
+<!-- REF DataClassAttributeClass.exposed.Desc -->
+## .exposed
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R3|Added|
+
+</details>
+
+<!-- REF DataClassAttributeClass.exposed.Syntax -->
+**.exposed** : Boolean<!-- END REF -->
+
+#### Description
+
+The `.exposed` property is <!-- REF DataClassAttributeClass.exposed.Summary -->true if the attribute is exposed in REST<!-- END REF -->.
+
+#### See also
+
+[DataClass.getInfo()](DataClassClass.md#getinfo)
+
+<!-- END REF -->
+
 <!-- REF DataClassAttributeClass.fieldNumber.Desc -->
 ## .fieldNumber
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF DataClassAttributeClass.fieldNumber.Syntax -->
@@ -84,9 +115,12 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 ## .fieldType  
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
-|v17 R5|Added|
+|v19 R4|Support of alias attributes|
+|v19 R3|Support of computed attributes|
+
 </details>
 
 <!-- REF DataClassAttributeClass.fieldType.Syntax -->
@@ -98,21 +132,29 @@ The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->
 
 **Possible values:**
 
-|dataClassAttribute.kind| fieldType |Comment|
-|---|---|---|
-|storage| Corresponding 4D field type| See `Type` command|
-|relatedEntity| 38 (Is object) ||
-|relatedEntities| 42 (Is collection) ||
+|dataClassAttribute.kind| fieldType|
+|---|---|
+|storage| Corresponding 4D field type, see [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)|
+|relatedEntity| 38 (`Is object`) |
+|relatedEntities| 42 (`Is collection`) |
+|calculated|<li>scalar: corresponding 4D field type, see [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>entity: 38 (`Is object`)</li><li>entity selection: 42 (`Is collection)`</li>|
+|alias|<li>scalar: corresponding 4D field type, see [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>entity: 38 (`Is object`)</li><li>entity selection: 42 (`Is collection)`</li>|
 
 <!-- END REF -->
+
+#### See also
+
+[.type](#type)
 
 <!-- REF DataClassAttributeClass.indexed.Desc -->
 ## .indexed  
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF DataClassAttributeClass.indexed.Syntax -->
@@ -132,9 +174,11 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 ## .inverseName  
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF DataClassAttributeClass.inverseName.Syntax -->
@@ -154,9 +198,11 @@ This property is not returned if `.kind` = "storage". It must be of the "related
 ## .keywordIndexed  
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF DataClassAttributeClass.keywordIndexed.Syntax -->
@@ -176,9 +222,12 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 ## .kind  
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
-|v17 R5|Added|
+|v19 R4|Added "alias"|
+|v19 R3|Added "calculated"|
+
 </details>
 
 <!-- REF DataClassAttributeClass.kind.Syntax -->
@@ -189,6 +238,8 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 The `.kind` property <!-- REF DataClassAttributeClass.kind.Summary -->returns the category of the attribute<!-- END REF -->. Returned value can be one of the following:
 
 * "storage": storage (or scalar) attribute, i.e. attribute storing a value, not a reference to another attribute
+* "calculated": computed attribute, i.e. defined through a [`get` function](ORDA/ordaClasses.md#function-get-attributename)
+* "alias": attribute built upon [another attribute](ORDA/ordaClasses.md#alias-attributes-1)
 * "relatedEntity": N -> 1 relation attribute (reference to an entity)
 * "relatedEntities": 1 -> N relation attribute (reference to an entity selection)
 
@@ -211,9 +262,11 @@ Given the following table and relation:
 ## .mandatory  
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF DataClassAttributeClass.mandatory.Syntax -->
@@ -235,9 +288,11 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 ## .name  
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF DataClassAttributeClass.name.Syntax -->
@@ -256,10 +311,60 @@ The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->returns th
 
 <!-- END REF -->
 
+<!-- REF DataClassAttributeClass.path.Desc -->
+## .path  
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R4|Added|
+
+</details>
+
+<!-- REF DataClassAttributeClass.path.Syntax -->
+**.path** : Text<!-- END REF -->
+
+#### Description
+
+The `.path` property <!-- REF DataClassAttributeClass.path.Summary -->returns the path of an alias attribute based upon a relation<!-- END REF -->.
+
+#### Example
+
+```4d
+ var $path : Text
+ $path:=ds.Teacher.students.path //$path="courses.student"
+```
+
+<!-- END REF -->
+
+<!-- REF DataClassAttributeClass.readOnly.Desc -->
+## .readOnly  
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R3|Added|
+
+</details>
+
+<!-- REF DataClassAttributeClass.readOnly.Syntax -->
+**.readOnly** : Boolean<!-- END REF -->
+
+#### Description
+
+The `.readOnly` property is <!-- REF DataClassAttributeClass.readOnly.Summary -->true if the attribute is read-only<!-- END REF -->.
+
+For example, computed attributes without [`set` function](ORDA/ordaClasses.md#function-set-attributename) are read-only.
+
+<!-- END REF -->
+
 <!-- REF DataClassAttributeClass.relatedDataClass.Desc -->
 ## .relatedDataClass  
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
@@ -293,9 +398,11 @@ Given the following tables and relations:
 ## .type  
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
-|v17 R5|Added|
+|v19 R3|Support of computed attributes|
+
 </details>
 
 <!-- REF DataClassAttributeClass.type.Syntax -->
@@ -311,19 +418,26 @@ The conceptual value type depends on the attribute [`.kind`](#kind).
 
 |dataClassAttribute.kind| type| Comment|
 |---|---|---|
-|storage| "number", "date", "object", "bool", "image", or "string"|"number" is returned for any numeric types including duration. "string" is returned for uuid, alpha and text field types|
+|storage|"blob", "bool", "date", "image", "number", "object", or "string"| "number" is returned for any numeric types including duration. "string" is returned for uuid, alpha and text field types. "blob" attributes are [blob objects](Concepts/dt_blob.md#blob-type), they are handled using the [Blob class](BlobClass.md).|
 |relatedEntity|related dataClass name|Ex: "Companies"|
 |relatedEntities|related dataClass name + "Selection" suffix| Ex: "EmployeeSelection"|
+|calculated|<li>storage: type ("blob", "number", etc.)</li><li>entity: dataClass name</li><li>entity selection: dataClass name + "Selection"</li>|
 
 <!-- END REF -->
+
+#### See also
+
+[`.fieldType`](#fieldtype)
 
 <!-- REF DataClassAttributeClass.unique.Desc -->
 ## .unique  
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF DataClassAttributeClass.unique.Syntax -->

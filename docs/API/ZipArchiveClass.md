@@ -18,7 +18,7 @@ var $path; $archive : 4D.File
 var $zipFile : 4D.ZipFile
 var $zipFolder : 4D.ZipFolder
 var $txt : Text
-
+ 
 $path:=Folder(fk desktop folder).file("MyDocs/Archive.zip")
 $archive:=ZIP Read archive($path)
 $zipFolder:=$archive.root // store the zip main folder
@@ -38,9 +38,12 @@ End if
 ## ZIP Create archive
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
+|v19 R3|Added `ZIP Compression LZMA`, `ZIP Compression xy`, `.level` property|
 |v18|Added|
+
 </details>
 
 <!-- REF #_command_.ZIP Create archive.Syntax -->
@@ -99,10 +102,10 @@ To compress a `4D.File`:
 ```4d
  var $file; $destination : 4D.File
  var $status : Object
-
+ 
  $destination:=Folder(fk desktop folder).file("MyDocs/file.zip")
  $file:=Folder(fk desktop folder).file("MyDocs/text.txt")
-
+ 
  $status:=ZIP Create archive($file;$destination)
 ```
 
@@ -117,7 +120,7 @@ To compress a `4D.Folder` without the folder itself:
 
  $destination:=Folder(fk desktop folder).file("MyDocs/Images.zip")
  $folder:=Folder(fk desktop folder).folder("MyDocs/Images")
-
+ 
  $status:=ZIP Create archive($folder;$destination;ZIP Without enclosing folder)
 ```
 
@@ -129,18 +132,18 @@ To compress a ZIP archive structure with a password and progress bar:
  var $destination : 4D.File
  var $zip;$status : Object
  var progID : Integer
-
+ 
  $destination:=Folder(fk desktop folder).file("MyDocs/Archive.zip")
-
+ 
  $zip:=New object
  $zip.files:=Folder(fk desktop folder).folder("MyDocs/Resources").folders()
  $zip.password:="password"
  $zip.callback:=Formula(myFormulaCompressingMethod($1))
-
+ 
  progID:=Progress New //we use the 4D Progress component
-
+ 
  $status:=ZIP Create archive($zip;$destination)
-
+ 
  Progress QUIT(progID)
 ```
 
@@ -163,17 +166,37 @@ You want to pass a collection of folders and files to compress to the *zipStruct
  $zip.files.push(New object("source";Folder(fk desktop folder).file("Tests/text.txt")))
  $zip.files.push(New object("source";Folder(fk desktop folder).file("Tests/text2.txt")))
  $zip.files.push(New object("source";Folder(fk desktop folder).file("Images/image.png")))
-
+ 
  $destination:=Folder(fk desktop folder).file("file.zip")
  $err:=ZIP Create archive($zip;$destination)
+```
+
+#### Example 5
+
+You want to use an alternative compression algorithm with a high compression level:
+
+```4d
+var $destination : 4D.File
+var $zip; $err : Object
+
+$zip:=New object
+$zip.files:=New collection
+$zip.files.push(Folder(fk desktop folder).folder("images"))
+$zip.compression:=ZIP Compression LZMA
+$zip.level:=7 //default is 4
+
+$destination:=Folder(fk desktop folder).file("images.zip")
+$err:=ZIP Create archive($zip; $destination)
 ```
 
 ## ZIP Read archive
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18|Added|
+
 </details>
 
 <!-- REF #_command_.ZIP Read archive.Syntax -->
@@ -208,7 +231,7 @@ To retrieve and view the contents of a ZIP file object:
 ```4d
  var $archive : 4D.ZipArchive
  var $path : 4D.File
-
+ 
  $path:=Folder(fk desktop folder).file("MyDocs/Archive.zip")
  $archive:=ZIP Read archive($path)
 ```
@@ -236,7 +259,7 @@ To extract from the root folder:
 ```4d
   //extract a file
  $folderResult:=$files[$i].copyTo(Folder(fk desktop folder).folder("MyDocs"))
-
+ 
   //extract all files
  $folderResult:=$archive.root.copyTo(Folder(fk desktop folder).folder("MyDocs"))
 ```

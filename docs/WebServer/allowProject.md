@@ -4,13 +4,13 @@ title: Allowing project methods
 ---
 
   
-The 4D tags such as `4DEVAL`, `4DTEXT`, `4DHTML`... as well as the [`/4DACTION URL`](httpRequests.md#/4daction) allow you to trigger the execution of any project method of a 4D project published on the Web. For example, the request *<http://www.server.com/4DACTION/login>* causes the execution of the ***login*** project method, if it exists.
+The 4D tags such as `4DEVAL`, `4DTEXT`, `4DHTML`... as well as the [`/4DACTION URL`](httpRequests.md#/4daction) allow you to trigger the execution of any project method of a 4D project published on the Web. For example, the request *http://www.server.com/4DACTION/login* causes the execution of the ***login*** project method, if it exists.
 
 This mechanism therefore presents a security risk for the application, in particular if an Internet user intentionally (or unintentionally) triggers a method not intended for execution via the web. You can avoid this risk in the following ways:
 
-* Filter the methods called via the URLS using the [`On Web Authentication`](authentication.md#on-web-authentication) database method. Drawbacks: If the database includes a great number of methods, this system may be difficult to manage.
+*	Filter the methods called via the URLS using the [`On Web Authentication`](authentication.md#on-web-authentication) database method. Drawbacks: If the database includes a great number of methods, this system may be difficult to manage.
 
-* Use the **Available through 4D tags and URLs (4DACTION...)** option found in the Method properties dialog box:
+*	Use the **Available through 4D tags and URLs (4DACTION...)** option found in the Method properties dialog box:
 
 ![](../assets/en/WebServer/methodProperties.png)
 

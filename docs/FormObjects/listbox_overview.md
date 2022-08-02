@@ -148,6 +148,7 @@ Supported properties depend on the list box type.
 |[Highlight Set](properties_ListBox.md#highlight-set)||X||
 |[Horizontal Alignment](properties_Text.md#horizontal-alignment)|X|X|X|
 |[Horizontal Line Color](properties_Gridlines.md#horizontal-line-color)|X|X|X|
+|[Horizontal Padding](properties_CoordinatesAndSizing.md#horizontal-padding)|X|X|X|
 |[Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar)|X|X|X|
 |[Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing)|X|X|X|
 |[Italic](properties_Text.md#italic)|X|X|X|
@@ -181,6 +182,7 @@ Supported properties depend on the list box type.
 |[Variable or Expression](properties_Object.md#variable-or-expression)|X|X||
 |[Vertical Alignment](properties_Text.md#vertical-alignment)|X|X|X|
 |[Vertical Line Color](properties_Gridlines.md#vertical-line-color)|X|X|X|
+|[Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding)|X|X|X|
 |[Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar)|X|X|X|
 |[Vertical Sizing](properties_ResizingOptions.md#vertical-sizing)|X|X|X|
 |[Visibility](properties_Display.md#visibility)|X|X|X|
@@ -260,7 +262,7 @@ You can set standard properties (text, background color, etc.) for each column o
 
 ### Column Specific Properties
 
-[Alpha Format](properties_Display.md#alpha-format) - [Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color) - [Automatic Row Height](properties_CoordinatesAndSizing.md#automatic-row-height) - [Background Color](properties_Text.md#background-color) - [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) - [Bold](properties_Text.md#bold) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Data Type (selection and collection list box column)](properties_DataSource.md#data-type) - [Date Format](properties_Display.md#date-format) - [Default Values](properties_DataSource.md#default-values) - [Display Type](properties_Display.md#display-type) - [Enterable](properties_Entry.md#enterable) - [Entry Filter](properties_Entry.md#entry-filter) - [Excluded List](properties_RangeOfValues.md#excluded-list) - [Expression](properties_DataSource.md#expression) - [Expression Type (array list box column)](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Italic](properties_Text.md#italic) - [Invisible](properties_Display.md#visibility) - [Maximum Width](properties_CoordinatesAndSizing.md#maximum-width) - [Method](properties_Action.md#method) - [Minimum Width](properties_CoordinatesAndSizing.md#minimum-width) - [Multi-style](properties_Text.md#multi-style) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Resizable](properties_ResizingOptions.md#resizable) - [Required List](properties_RangeOfValues.md#required-list) - [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) - [Row Font Color Array](properties_Text.md#row-font-color-array) - [Row Style Array](properties_Text.md#row-style-array) - [Save as](properties_DataSource.md#save-as) - [Style Expression](properties_Text.md#style-expression) - [Text when False/Text when True](properties_Display.md#text-when-false-text-when-true) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
+[Alpha Format](properties_Display.md#alpha-format) - [Alternate Background Color](properties_BackgroundAndBorder.md#alternate-background-color) - [Automatic Row Height](properties_CoordinatesAndSizing.md#automatic-row-height) - [Background Color](properties_Text.md#background-color) - [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) - [Bold](properties_Text.md#bold) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Data Type (selection and collection list box column)](properties_DataSource.md#data-type) - [Date Format](properties_Display.md#date-format) - [Default Values](properties_DataSource.md#default-values) - [Display Type](properties_Display.md#display-type) - [Enterable](properties_Entry.md#enterable) - [Entry Filter](properties_Entry.md#entry-filter) - [Excluded List](properties_RangeOfValues.md#excluded-list) - [Expression](properties_DataSource.md#expression) - [Expression Type (array list box column)](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Padding](properties_CoordinatesAndSizing.md#horizontal-padding) - [Italic](properties_Text.md#italic) - [Invisible](properties_Display.md#visibility) - [Maximum Width](properties_CoordinatesAndSizing.md#maximum-width) - [Method](properties_Action.md#method) - [Minimum Width](properties_CoordinatesAndSizing.md#minimum-width) - [Multi-style](properties_Text.md#multi-style) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Resizable](properties_ResizingOptions.md#resizable) - [Required List](properties_RangeOfValues.md#required-list) - [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) - [Row Font Color Array](properties_Text.md#row-font-color-array) - [Row Style Array](properties_Text.md#row-style-array) - [Save as](properties_DataSource.md#save-as) - [Style Expression](properties_Text.md#style-expression) - [Text when False/Text when True](properties_Display.md#text-when-false-text-when-true) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
 
 ### Supported Form Events
 
@@ -309,7 +311,7 @@ When the `OBJECT SET VISIBLE` command is used with a header, it is applied to al
 
 ### Header Specific Properties
 
-[Bold](properties_Text.md#bold) - [Class](properties_Object.md#css-class) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Icon Location](properties_TextAndPicture.md#icon-location) - [Italic](properties_Text.md#italic) - [Object Name](properties_Object.md#object-name) - [Pathname](properties_TextAndPicture.md#picture-pathname) - [Title](properties_Object.md#title) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Width](properties_CoordinatesAndSizing.md#width)
+[Bold](properties_Text.md#bold) - [Class](properties_Object.md#css-class) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Padding](properties_CoordinatesAndSizing.md#horizontal-padding) - [Icon Location](properties_TextAndPicture.md#icon-location) - [Italic](properties_Text.md#italic) - [Object Name](properties_Object.md#object-name) - [Pathname](properties_TextAndPicture.md#picture-pathname) - [Title](properties_Object.md#title) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding) - [Width](properties_CoordinatesAndSizing.md#width)
 
 ## List box footers
 
@@ -329,7 +331,7 @@ When the `OBJECT SET VISIBLE` command is used with a footer, it is applied to al
 
 ### Footer Specific Properties
 
-[Alpha Format](properties_Display.md#alpha-format) - [Background Color](properties_BackgroundAndBorder.md#background-color-fill-color) - [Bold](properties_Text.md#bold) - [Class](properties_Object.md#css-class) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Italic](properties_Text.md#italic) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable Calculation](properties_Object.md#variable-calculation) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
+[Alpha Format](properties_Display.md#alpha-format) - [Background Color](properties_BackgroundAndBorder.md#background-color-fill-color) - [Bold](properties_Text.md#bold) - [Class](properties_Object.md#css-class) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Padding](properties_CoordinatesAndSizing.md#horizontal-padding) - [Italic](properties_Text.md#italic) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable Calculation](properties_Object.md#variable-calculation) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Vertical Padding](properties_CoordinatesAndSizing.md#vertical-padding) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
 
 ## Managing entry  
 
@@ -381,7 +383,6 @@ The typical sequence of events generated during data entry or modification is as
 ||All|On Losing Focus
 
 (*) With entity selection list boxes, in the On Data Change event:
-
 * the [Current item](properties_DataSource.md#current-item) object contains the value before modification.
 * the `This` object contains the modified value.
 
@@ -397,7 +398,7 @@ Selections are managed differently depending on whether the list box is based on
   * [Current item](properties_DataSource.md#current-item) is an object that will receive the selected element/entity
   * [Selected Items](properties_DataSource.md#selected-items) is a collection of selected items
   * [Current item position](properties_DataSource.md#current-item-position) returns the position of the selected element or entity.
-
+ 
 * **Array list box**: The `LISTBOX SELECT ROW` command can be used to select one or more rows of the list box by programming.
 The [variable linked to the List box object](properties_Object.md#variable-or-expression) is used to get, set or store selections of object rows. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. The size of this array is determined by the size of the list box: it contains the same number of elements as the smallest array linked to the columns.
 Each element of this array contains `True` if the corresponding line is selected and `False` otherwise. 4D updates the contents of this array depending on user actions. Inversely, you can change the value of array elements to change the selection in the list box.
@@ -432,7 +433,6 @@ You can then define specific background colors, font colors and/or font styles b
 To determine which rows are selected, you have to check whether they are included in the set indicated in the [Highlight Set](properties_ListBox.md#highlight-set) property of the list box. You can then define the appearance of selected rows using one or more of the relevant [color or style expression property](#using-arrays-and-expressions).
 
 Keep in mind that expressions are automatically re-evaluated each time the:
-
 * list box selection changes.
 * list box gets or loses the focus.
 * form window containing the list box becomes, or ceases to be, the frontmost window.
@@ -444,7 +444,6 @@ You have to parse the Boolean array [Variable or Expression](properties_Object.m
 You can then define the appearance of selected rows using one or more of the relevant [color or style array property](#using-arrays-and-expressions).
 
 Note that list box arrays used for defining the appearance of selected rows must be recalculated during the `On Selection Change` form event; however, you can also modify these arrays based on the following additional form events:
-
 * `On Getting Focus` (list box property)
 * `On Losing Focus` (list box property)
 * `On Activate` (form property)
@@ -836,7 +835,6 @@ A hierarchical list box is built from the contents of its arrays so it can only 
 Using the `On Expand` and `On Collapse` form events can overcome these constraints: for example, you can display only part of the hierarchy and load/unload the arrays on the fly, based on user actions. In the context of these events, the `LISTBOX GET CELL POSITION` command returns the cell where the user clicked in order to expand or collapse a row.
 
 In this case, you must fill and empty arrays through the code. The principles to be implemented are:
-
 * When the list box is displayed, only the first array must be filled. However, you must create a second array with empty values so that the list box displays the expand/collapse buttons:
 ![](../assets/en/FormObjects/hierarch15.png)
 
@@ -886,7 +884,7 @@ ARRAY OBJECT(obColumn;0) //column array
 When a list box column is associated with an object array, the way a cell is displayed, entered, or edited, is based on the valueType attribute of the array element. Supported valueType values are:
 
 * "text": for a text value
-* "real": for a numeric value that can include separators like a `\<space>`, <.>, or <,>
+* "real": for a numeric value that can include separators like a `\<space>`, `<.>`, or `<,>`
 * "integer": for an integer value
 * "boolean": for a True/False value
 * "color": to define a background color
@@ -929,7 +927,7 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 
 | |valueType| text| real |integer| boolean| color| event|
 |---|---|---|---|---|---|---|---|
-|*Attributes* |*Description* | | | | | | |
+|*Attributes* |*Description* | | | | | | |    
 |value| cell value (input or output)|x| x| x| | | |
 |min| minimum value| |x| x| | | |
 |max| maximum value| |x| x| | | |
@@ -937,9 +935,9 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 |requiredList| drop-down list defined in object|x| x|x || | |
 |choiceList| combo box defined in object|x|x|x|  | | |
 |requiredListReference| 4D list ref, depends on "saveAs" value|x|x|x|  | | |
-|requiredListName| 4D list name, depends on "saveAs" value|x|x|x|  | | |
+|requiredListName| 4D list name, depends on "saveAs" value|x|x|x|  | | | 
 |saveAs| "reference" or "value"| x|x|x|  | | |
-|choiceListReference| 4D list ref, display combo box| x| x| x|  | | |
+|choiceListReference| 4D list ref, display combo box| x| x| x|  | | | 
 |choiceListName| 4D list name, display combo box|x|x|x|  | | |
 |unitList| array of X elements|x|x|x|  | | |
 |unitReference| index of selected element|x|x| x |  | | |
@@ -1076,12 +1074,12 @@ Examples:
  OB SET($ob;"saveAs";"value")
  OB SET($ob;"value";"blue")
  OB SET($ob;"requiredListName";"colors") 
-```
+``` 
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_colorsResult.png)
-
+ 
 * You want to display a drop-down list based on a list defined by programming and save it as a reference:
-
+ 
 ```4d
  <>List:=New list
  APPEND TO LIST(<>List;"Paris";1)
@@ -1095,7 +1093,7 @@ Examples:
  OB SET($ob;"requiredListReference";<>List)
 ```
 
- ![](../assets/en/FormObjects/listbox_column_objectArray_cities.png)
+	![](../assets/en/FormObjects/listbox_column_objectArray_cities.png)
 
 #### choiceListName and choiceListReference  
 

@@ -28,11 +28,13 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 ## SMTP New transporter
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18|New logFile property|
 |v17 R5|New bodyCharset and headerCharset properties|
 |v17 R4|Added|
+
 </details>
 
 <!-- REF #_command_.SMTP New transporter.Syntax -->
@@ -61,7 +63,7 @@ In the *server* parameter, pass an object containing the following properties:
 |*server*|Default value (if omitted)|
 |---|---|
 |[<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->|False|
-|.**accessTokenOAuth2**: TextText string representing OAuth 2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[SMTP transporter](#smtp-transporter-object)* object.|none|
+|.**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object <br/> Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[SMTP transporter](#smtp-transporter-object)* object.|none|
 |[<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->|the most secure authentication mode supported by the server is used|
 |[<!-- INCLUDE #transporter.bodyCharset.Syntax -->](#bodycharset)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.bodyCharset.Summary -->|`mail mode UTF8` (US-ASCII_UTF8_QP)|
 |[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->|30|
@@ -69,7 +71,7 @@ In the *server* parameter, pass an object containing the following properties:
 |[<!-- INCLUDE #transporter.host.Syntax -->](#host)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->|*mandatory*
 |[<!-- INCLUDE #SMTPTransporterClass.keepAlive.Syntax -->](#keepalive)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SMTPTransporterClass.keepAlive.Summary -->|True|
 |[<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->|none|
-|**password** : TextUser password for authentication on the server. Not returned in *[SMTP transporter](#smtp-transporter-object)* object.|none|
+|**password** : Text<br/>User password for authentication on the server. Not returned in *[SMTP transporter](#smtp-transporter-object)* object.|none|
 |[<!-- INCLUDE #transporter.port.Syntax -->](#port)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->|587|
 |[<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](#sendtimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.sendTimeOut.Summary -->|100|
 |[<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|none|
@@ -97,7 +99,7 @@ The function returns a [**SMTP transporter object**](#smtp-transporter-object). 
  $email.to:="4d@4d.com;test@4d.com"
  $email.textBody:="Hello World"
  $email.htmlBody:="<h1>Hello World</h1><h4>'Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...'</h4>\
- There are many variations of passages of Lorem Ipsum available."\
+ <p>There are many variations of passages of Lorem Ipsum available."\
  +"The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>"
 
  $status:=$transporter.send($email)
@@ -167,6 +169,7 @@ For information about SMTP status codes, please refer to [this page](https://www
 ## .keepAlive
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R4|Added
@@ -191,10 +194,12 @@ The SMTP connection is automatically closed:
 ## .send()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Support of mime contents|
 |v17 R4|Added|
+
 </details>
 
 <!-- REF #SMTPTransporterClass.send().Syntax -->

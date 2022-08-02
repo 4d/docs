@@ -82,8 +82,6 @@ The form can contains [additional header areas](#additional-areas) to be associa
 |---|---|---|
 |markerHeader|integer &#x7c; integer collection|Header marker position or collection of header marker positions in pixels.<br/>Minimum value: 0|
 
----
-
 ## Additional areas
 
 You can create additional Break areas and Header areas for a report. These additional areas allow you to print subtotals and other calculations in a report and to display other information effectively.
@@ -98,7 +96,7 @@ Break at level 0 zero takes in all the records; it occurs after all the records 
 
 A Break level 1 occurs after the records grouped by the first sorted field are printed.
 
-|Label|Description|Prints after groups created by:|
+|Label|Description|Prints after groups created by|
 |---|---|---|
 |Form Break 1|Break at level 1|First sorted field|
 |Form Break 2|Break at level 2|Second sorted field|
@@ -106,7 +104,7 @@ A Break level 1 occurs after the records grouped by the first sorted field are p
 
 Additional Header areas are associated with Breaks. A level 1 Header is printed just before the records grouped by the first sorted field are printed.
 
-|Label|Description|Prints after groups created by:|
+|Label|Description|Prints after groups created by|
 |---|---|---|
 |Form Header 1|Header at level 1|First sorted field|
 |Form Header 2|Header at level 2|Second sorted field|

@@ -21,7 +21,7 @@ A date literal constant is enclosed by exclamation marks (!…!). A date must be
 
 A null date is specified by _!00-00-00!_.
 
-**Tip:** The Method Editor includes a shortcut for entering a null date. To type a null date, enter the exclamation (!) character and press Enter.
+**Tip:** The Code Editor includes a shortcut for entering a null date. To type a null date, enter the exclamation (!) character and press Enter.
 
 **Notes:**
 

@@ -17,6 +17,7 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 |[<!-- INCLUDE #EntityClass.fromObject().Syntax -->](#fromobject)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.fromObject().Summary -->|
 |[<!-- INCLUDE #EntityClass.getDataClass().Syntax -->](#getdataclass)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getDataClass().Summary -->|
 |[<!-- INCLUDE #EntityClass.getKey().Syntax -->](#getkey)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getKey().Summary -->|
+|[<!-- INCLUDE #EntityClass.getRemoteContextAttributes().Syntax -->](#getremotecontextattributes)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getRemoteContextAttributes().Summary -->|
 |[<!-- INCLUDE #EntityClass.getSelection().Syntax -->](#getselection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getSelection().Summary -->|
 |[<!-- INCLUDE #EntityClass.getStamp().Syntax -->](#getstamp)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getStamp().Summary -->|
 |[<!-- INCLUDE #EntityClass.indexOf().Syntax -->](#indexof)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.indexOf().Summary -->|
@@ -36,9 +37,11 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 ## .*attributeName*
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
+
 </details>
 
 <!-- REF EntityClass.attributeName.Syntax -->
@@ -75,9 +78,11 @@ The attribute value type depends on the attribute [kind](DataClassAttributeClass
 ## .clone()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
+
 </details>
 
 <!-- REF #EntityClass.clone().Syntax -->
@@ -86,8 +91,7 @@ The attribute value type depends on the attribute [kind](DataClassAttributeClass
 <!-- REF #EntityClass.clone().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Entity|<-|New entity referencing the record
-|
+|Result|4D.Entity|<-|New entity referencing the record|
 <!-- END REF -->
 
 #### Description
@@ -115,9 +119,11 @@ This function can only be used with entities already saved in the database. It c
 ## .diff()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
+
 </details>
 
 <!-- REF #EntityClass.diff().Syntax -->
@@ -313,6 +319,7 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 ## .drop()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -368,8 +375,8 @@ The object returned by `.drop( )` contains the following properties:
 
 |Constant| Value| Comment|
 |---|---|---|
-|`dk status entity does not exist anymore`|5|The entity no longer exists in the data. This error can occur in the following cases:<br/><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using entity.drop( ), this error can be returned when dk force drop if stamp changed option is used. When using entity.lock( ), this error can be returned when dk reload if stamp changed option is used</li>**Associated statusText**: "Entity does not exist anymore"|
-|`dk status locked`|3|The entity is locked by a pessimistic lock.<br/>**Associated statusText**: "Already locked"|
+|`dk status entity does not exist anymore`|5|The entity no longer exists in the data. This error can occur in the following cases:<br/><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using entity.drop( ), this error can be returned when dk force drop if stamp changed option is used. When using entity.lock( ), this error can be returned when dk reload if stamp changed option is used</li> **Associated statusText**: "Entity does not exist anymore"|
+|`dk status locked`|3|The entity is locked by a pessimistic lock.<br/> **Associated statusText**: "Already locked"|
 |`dk status serious error`| 4| A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.<br/>**Associated statusText**: "Other error"
 |`dk status stamp has changed`| 2|The internal stamp value of the entity does not match the one of the entity stored in the data (optimistic lock).<br/><li>with `.save( )`: error only if the `dk auto merge` option is not used</li><li>with `.drop( )`: error only if the `dk force drop if stamp changed` option is not used</li><li>with `.lock( )`: error only if the `dk reload if stamp changed` option is not used</li><li>**Associated statusText**: "Stamp has changed"</li>|
 
@@ -417,6 +424,7 @@ Example with `dk force drop if stamp changed` option:
 ## .first()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -454,6 +462,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 ## .fromObject()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -538,6 +547,7 @@ You could also use a related entity given as an object:
 ## .getDataClass()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
@@ -581,6 +591,7 @@ The following generic code duplicates any entity:
 ## .getKey()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -617,10 +628,68 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 
 <!-- END REF -->
 
+<!-- REF EntityClass.getRemoteContextAttributes().Desc -->
+## .getRemoteContextAttributes()
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19R5|Added|
+
+</details>
+
+<!-- REF #EntityClass.getRemoteContextAttributes().Syntax -->
+**.getRemoteContextAttributes()** : Text<!-- END REF -->
+
+<!-- REF #EntityClass.getRemoteContextAttributes().Params -->
+|Parameter|Type||Description|
+|---|---|---|---|
+|result|Text|<-|Context attributes linked to the entity, separated by a comma|
+<!-- END REF -->
+
+> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
+
+#### Description
+
+The `.getRemoteContextAttributes()` function <!-- REF #EntityClass.getRemoteContextAttributes().Summary -->returns information about the optimization context used by the entity <!-- END REF -->.
+
+If there is no [optimization context](../ORDA/remoteDatastores.md#clientserver-optimization) for the entity, the function returns an empty Text.
+
+#### Example
+
+```4d
+var $ds : 4D.DataStoreImplementation
+var $address : cs.AddressEntity
+var $p : cs.PersonsEntity
+var $contextA : Object
+var $info : Text
+var $text : Text
+
+$ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
+
+$contextA:=New object("context"; "contextA")
+
+$address:=$ds.Address.get(1; $contextA)
+$text:="" 
+For each ($p; $address.persons)
+    $text:=$p.firstname+" "+$p.lastname
+End for each 
+
+$info:=$address.getRemoteContextAttributes()
+
+//$info = "persons,persons.lastname,persons.firstname"
+```
+
+#### See also
+
+[EntitySelection.getRemoteContextAttributes()](./EntitySelectionClass.md#getRemoteContextAttributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
+
 <!-- REF EntityClass.getSelection().Desc -->
 ## .getSelection()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -662,6 +731,7 @@ If the entity does not belong to an entity selection, the function returns Null.
 ## .getStamp()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -707,6 +777,7 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 ## .indexOf()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -753,6 +824,7 @@ The resulting value is included between 0 and the length of the entity selection
 ## .isNew()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -790,6 +862,7 @@ The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True i
 ## .last()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -827,6 +900,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 ## .lock()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -849,10 +923,12 @@ The `.lock()` function <!-- REF #EntityClass.lock().Summary -->puts a pessimisti
 
 Other processes will see this record as locked (the `result.success` property will contain False if they try to lock the same entity using this function). Only functions executed in the "locking" session are allowed to edit and save the attributes of the entity. The entity can be loaded as read-only by other sessions, but they will not be able to enter and save values.
 
-A locked record is unlocked:
+A record locked by `.lock()` is unlocked:
 
 * when the [`unlock()`](#unlock) function is called on a matching entity in the same process
 * automatically, when it is no longer referenced by any entities in memory. For example, if the lock is put only on one local reference of an entity, the entity is unlocked when the function ends. As long as there are references to the entity in memory, the record remains locked.
+
+> An entity can also be [locked by a REST session](../REST/$lock.md), in which case it can only be unlocked by the session.
 
 By default, if the *mode* parameter is omitted, the function will return an error (see below) if the same entity was modified (i.e. the stamp has changed) by another process or user in the meantime.
 
@@ -871,15 +947,20 @@ The object returned by `.lock( )` contains the following properties:
 |status(\*)|  |number| Error code, see below|
 |statusText(\*)|| text| Description of the error, see below|
 ||||***Available only in case of pessimistic lock error:***|
-|lockKindText| | text| "Locked by record"|
-|lockInfo| | object| Information about the lock origin|
+|lockKindText| | text|"Locked by record" if locked by a 4D process, "Locked by session" if locked by a REST session|
+|lockInfo| | object| Information about the lock origin. Returned properties depend on the lock origin (4D process or REST session).|
+||| |***Available only for a 4D process lock:***|
 ||task_id| number| Process ID|
 ||user_name |text| Session user name on the machine|
 ||user4d_alias| text| Name or alias of the 4D user|
 ||user4d_id |number |User id in the 4D database directory|
 ||host_name| text| Machine name
 ||task_name |text |Process name|
-||client_version| text ||
+||client_version| text |Version of the client|
+||||***Available only for a REST session lock:***|
+||host|text|URL that locked the entity (e.g. "www.myserver.com")|
+||IPAddr |text|IP address of the locker (e.g. "127.0.0.1")|
+||userAgent |text|userAgent of the locker (e.g. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36")|
 ||||***Available only in case of serious error*** (primary key already exists, disk full...):|
 |errors || collection of objects ||
 ||message |text |Error message|
@@ -891,8 +972,8 @@ The object returned by `.lock( )` contains the following properties:
 |Constant |Value| Comment|
 |---|---|---|
 |`dk status entity does not exist anymore`| 5 |The entity no longer exists in the data. This error can occur in the following cases:<li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using `.drop( )`, this error can be returned when dk force drop if stamp changed option is used. When using `.lock( )`, this error can be returned when `dk reload if stamp changed` option is used</li><br/>**Associated statusText**: "Entity does not exist anymore"|
-|`dk status locked`| 3 |The entity is locked by a pessimistic lock.**Associated statusText**: "Already locked"
-|`dk status serious error`| 4 |A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.**Associated statusText**: "Other error"|
+|`dk status locked`| 3 |The entity is locked by a pessimistic lock. **Associated statusText**: "Already locked"
+|`dk status serious error`| 4 |A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc. **Associated statusText**: "Other error"|
 |`dk status stamp has changed`|2|The internal stamp value of the entity does not match the one of the entity stored in the data (optimistic lock).<li>with `.save( )`: error only if the `dk auto merge` option is not used</li><li>with `.drop( )`: error only if the `dk force drop if stamp changed` option is not used</li><li>with `.lock( )`: error only if the `dk reload if stamp changed` option is not used</li><br/>**Associated statusText**: "Stamp has changed"|
 
 #### Example 1
@@ -935,6 +1016,7 @@ Example with `dk reload if stamp changed` option:
 ## .next()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -975,6 +1057,7 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 ## .previous()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1014,6 +1097,7 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 ## .reload( )
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1039,7 +1123,7 @@ The object returned by `.reload( )` contains the following properties:
 
 |Property |Type| Description|
 |---|---|---|
-|success|boolean| True if the reload action is successful, False otherwise.***Available only in case of error***:|
+|success|boolean| True if the reload action is successful, False otherwise. ***Available only in case of error***:|
 |status(\*)|number|Error code, see below|
 |statusText(\*)|text|Description of the error, see below|
 
@@ -1075,6 +1159,7 @@ The object returned by `.reload( )` contains the following properties:
 ## .save()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1138,7 +1223,7 @@ The following values can be returned in the `status` and `statusText` properties
 
 |Constant| Value |Comment|
 |---|---|---|
-|`dk status automerge failed`| 6| (Only if the `dk auto merge` option is used) The automatic merge option failed when saving the entity.**Associated statusText**: "Auto merge failed"|
+|`dk status automerge failed`| 6| (Only if the `dk auto merge` option is used) The automatic merge option failed when saving the entity. **Associated statusText**: "Auto merge failed"|
 |`dk status entity does not exist anymore`| 5| The entity no longer exists in the data. This error can occur in the following cases:<br/><li>the entity has been dropped (the stamp has changed and the memory space is now free)</li><li>the entity has been dropped and replaced by another one with another primary key (the stamp has changed and a new entity now uses the memory space). When using `.drop( )`, this error can be returned when `dk force drop if stamp changed` option is used. When using `.lock( )`, this error can be returned when `dk reload if stamp changed` option is used</li><br/>**Associated statusText**: "Entity doesnot exist anymore"|
 |`dk status locked`| 3| The entity is locked by a pessimistic lock.**Associated statusText**: "Already locked"
 |`dk status serious error`|4|A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.**Associated statusText**: "Other error"|
@@ -1208,6 +1293,7 @@ Updating an entity with `dk auto merge` option:
 ## .toObject()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1488,6 +1574,7 @@ Returns:
 ## .touched( )
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1531,6 +1618,7 @@ In this example, we check to see if it is necessary to save the entity:
 ## .touchedAttributes( )
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1603,6 +1691,7 @@ In this case:
 ## .unlock()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|

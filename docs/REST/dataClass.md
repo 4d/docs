@@ -1,6 +1,6 @@
 ---
 id: dataClass
-title: dataClass 
+title: dataClass
 ---
 
 
@@ -20,27 +20,29 @@ Dataclass names can be used directly in the REST requests to work with entities 
 
 > Function calls are detailed in the [Calling ORDA class functions](ClassFunctions.md) section.
 
+
+
 ## {dataClass}
 
-Returns all the data (by default the first 100 entities) for a specific dataclass (*e.g.*, `Company`)
+Returns all the data (by default the first 100 entities) for a specific dataclass (*e.g.*, `Company`)	
 
-### Description
+### Description   
 
 When you call this parameter in your REST request, the first 100 entities are returned unless you have specified a value using [`$top/$limit`]($top_$limit.md).
 
 Here is a description of the data returned:
 
-|Property| Type| Description|
+|Property|	Type|	Description|
 |---|---|---|
-|__entityModel| String| Name of the dataclass.|
-|__COUNT| Number |Number of entities in the dataclass.|
-|__SENT| Number| Number of entities sent by the REST request. This number can be the total number of entities if it is less than the value defined by `$top/$limit`.|
-|__FIRST| Number| Entity number that the selection starts at. Either 0 by default or the value defined by `$skip`.|
-|__ENTITIES |Collection| This collection of objects contains an object for each entity with all its attributes. All relational attributes are returned as objects with a URI to obtain information regarding the parent.|
+|__entityModel|	String|	Name of the dataclass.|
+|__COUNT|	Number	|Number of entities in the dataclass.|
+|__SENT|	Number|	Number of entities sent by the REST request. This number can be the total number of entities if it is less than the value defined by `$top/$limit`.|
+|__FIRST|	Number|	Entity number that the selection starts at. Either 0 by default or the value defined by `$skip`.|
+|__ENTITIES	|Collection|	This collection of objects contains an object for each entity with all its attributes. All relational attributes are returned as objects with a URI to obtain information regarding the parent.|
 
 Each entity contains the following properties:
 
-|Property| Type| Description|
+|Property|	Type|	Description|
 |---|---|---|
 |__KEY|String|Value of the primary key defined for the dataclass.|
 |__TIMESTAMP|Date|Timestamp of the last modification of the entity|
@@ -49,6 +51,8 @@ Each entity contains the following properties:
 If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
 
  `GET  /rest/Company/name,address`
+
+
 
 ### Example  
 
@@ -135,11 +139,12 @@ Return all the data for a specific dataclass.
 }
 ````
 
+
 ## {dataClass}({key})
 
 Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company(22) or Company("IT0911AB2200")`
 
-### Description
+### Description   
 
 By passing the dataclass and a key, you can retrieve all the public information for that entity. The key is the value in the attribute defined as the Primary Key for your dataclass. For more information about defining a primary key, refer to the **Modifying the Primary Key** section in the **Data Model Editor**.
 
@@ -182,6 +187,8 @@ The following request returns all the public data in the Company dataclass whose
 }
 ````
 
+
+
 ## {dataClass}:{attribute}(value)
 
 Returns the data for one entity in which the attribute's value is defined
@@ -205,3 +212,4 @@ If you want to use a relation attribute using [$attributes]($attributes.md), you
 The following request returns all the public data of the employee named "Jones".
 
  `GET  /rest/Employee:lastname(Jones)`
+

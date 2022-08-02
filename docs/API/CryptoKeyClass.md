@@ -30,22 +30,25 @@ ASSERT($status.success)
 ||
 |---|
 |[<!-- INCLUDE #4D.CryptoKey.new().Syntax -->](#4dcryptokeynew)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.CryptoKey.new().Summary -->|
-|[<!-- INCLUDE #CryptoKey.curve.Syntax -->](#curve)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.curve.Summary --> |
+|[<!-- INCLUDE #CryptoKey.curve.Syntax -->](#curve)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.curve.Summary -->|
 |[<!-- INCLUDE #CryptoKey.decrypt().Syntax -->](#decrypt)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.decrypt().Summary -->|
 |[<!-- INCLUDE #CryptoKey.encrypt().Syntax -->](#encrypt)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.encrypt().Summary -->|
 |[<!-- INCLUDE #CryptoKey.getPrivateKey().Syntax -->](#getprivatekey)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.getPrivateKey().Summary -->|
 |[<!-- INCLUDE #CryptoKey.getPublicKey().Syntax -->](#getpublickey)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.getPublicKey().Summary -->|
-|[<!-- INCLUDE #CryptoKey.sign().Syntax -->](#sign)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.sign().Summary --> |
-|[<!-- INCLUDE #CryptoKey.size.Syntax -->](#size)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.size.Summary --> |
-|[<!-- INCLUDE #CryptoKey.type.Syntax -->](#type)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.type.Summary --> |
+|[<!-- INCLUDE #CryptoKey.sign().Syntax -->](#sign)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.sign().Summary -->|
+|[<!-- INCLUDE #CryptoKey.size.Syntax -->](#size)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.size.Summary -->|
+|[<!-- INCLUDE #CryptoKey.type.Syntax -->](#type)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.type.Summary -->|
 |[<!-- INCLUDE #CryptoKey.verify().Syntax -->](#verify)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.verify().Summary -->|
 
 ## 4D.CryptoKey.new()
 
-<details><summary>History</summary>
+<details>
+<summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added
+
 </details>
 
 <!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
@@ -74,10 +77,13 @@ The returned `CryptoKey` object encapsulates an encryption key pair. It is a sha
 <!-- REF CryptoKey.curve -->
 ## .curve
 
-<details><summary>History</summary>
+<details>
+<summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added
+
 </details>
 
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Text<!-- END REF -->
@@ -85,13 +91,15 @@ The returned `CryptoKey` object encapsulates an encryption key pair. It is a sha
 Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised curve name of the key<!-- END REF -->. Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512.
 <!-- END REF -->
 
-<!-- REF CryptoKey.decrypt().Desc -->
 ## .decrypt()
 
-<details><summary>History</summary>
+<details>
+<summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added
+
 </details>
 
 <!-- REF #CryptoKey.decrypt().Syntax -->**.decrypt**( *message* : Text ; *options* : Object ) : Object<!-- END REF -->
@@ -127,15 +135,17 @@ The function returns a status object with `success` property set to `true` if th
 |errors|collection|If `success` is `false`, may contain a collection of errors|
 
 In case the *message* couldn't be decrypted because it was not encrypted with the same key or algorithm, the `status` object being returned contains an error collection in `status.errors`.
-<!-- END REF -->
 
 <!-- REF CryptoKey.encrypt().Desc -->
 ## .encrypt()
 
-<details><summary>History</summary>
+<details>
+<summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added
+
 </details>
 
 <!-- REF #CryptoKey.encrypt().Syntax -->**.encrypt**( *message* : Text ; *options* : Object ) : Text<!-- END REF -->
@@ -168,10 +178,13 @@ The returned value is an encrypted message.
 <!-- REF CryptoKey.getPrivateKey().Desc -->
 ## .getPrivateKey()
 
-<details><summary>History</summary>
+<details>
+<summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added
+
 </details>
 
 <!-- REF #CryptoKey.getPrivateKey().Syntax -->**.getPrivateKey()** : Text<!-- END REF -->
@@ -192,10 +205,13 @@ The returned value is the private key.
 <!-- REF CryptoKey.getPublicKey().Desc -->
 ## .getPublicKey()
 
-<details><summary>History</summary>
+<details>
+<summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added
+
 </details>
 
 <!-- REF #CryptoKey.getPublicKey().Syntax -->**.getPublicKey( )** : Text<!-- END REF -->
@@ -218,6 +234,7 @@ The returned value is the public key.
 ## .pem
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added
@@ -230,13 +247,16 @@ The returned value is the public key.
 <!-- REF CryptoKey.sign().Desc -->
 ## .sign()
 
-<details><summary>History</summary>
+<details>
+<summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added
+
 </details>
 
-<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
+<!-- REF #CryptoKey.sign().Syntax -->**.sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.sign().Params -->
 |Parameter|Type||Description|
@@ -268,10 +288,13 @@ The utf8 representation of the *message* string.
 ## .size
 <!-- END REF -->
 
-<details><summary>History</summary>
+<details>
+<summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added
+
 </details>
 
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
@@ -283,6 +306,7 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 <!-- END REF -->
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added
@@ -296,9 +320,11 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 ## .verify()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added
+
 </details>
 
 <!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
