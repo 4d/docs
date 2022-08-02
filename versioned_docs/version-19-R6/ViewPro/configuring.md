@@ -296,11 +296,11 @@ The following special characters allow the automatic addition or formatting of i
 |T |Current time| printInfo.headerLeft:="It is &T."| It is 16:30:36.|
 |G |Image| printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" |![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
 |S |Strikethrough| printInfo.headerLeft:="&SThis is text." |~~This is text.~~|
-|U |Underline |printInfo.headerLeft:="&UThis is text."| <ins>This is text.</ins>|
+|U |Underline |printInfo.headerLeft:="&UThis is text."| This is text. (underlined)|
 |B| Bold| printInfo.headerLeft:="&BThis is text." |**This is text.**|
 |I |Italic| printInfo.headerLeft:="&IThis is text." |*This is text.*|
 |" |Font prefix| printInfo.headerLeft:="&\"Lucida Console\"&14This is text." |![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG)|
-|K| Text Color prefix| printInfo.headerLeft:="&KFF0000This is text."| <span style="color:red">This is text</span>.
+|K| Text Color prefix| printInfo.headerLeft:="&KFF0000This is text."| This is text (in red).
 |F| Workbook name| printInfo.headerLeft:="&F"| 2019 Monthly Revenue Forecasts|
 |A| Spreadsheet name| printInfo.headerLeft:="&A"| June 2019 revenue forecast |
 
