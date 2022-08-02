@@ -28,9 +28,11 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 ## .*attributeName*
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
+
 </details>
 
 <!-- REF DataClassClass.attributeName.Syntax -->
@@ -94,10 +96,12 @@ Considering the following table properties:
 ## .all()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Support of the *settings* parameter|
 |v17|Added|
+
 </details>
 
 <!-- REF #DataClassClass.all().Syntax -->
@@ -141,9 +145,11 @@ In the optional *settings* parameter, you can pass an object containing addition
 ## .clearRemoteCache()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R5|Added|
+
 </details>
 
 <!-- REF #DataClassClass.clearRemoteCache().Syntax -->
@@ -191,10 +197,12 @@ $ds.Persons.clearRemoteCache()
 ## .fromCollection()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Support of the *settings* parameter|
 |v17|Added|
+
 </details>
 
 <!-- REF #DataClassClass.fromCollection().Syntax -->
@@ -389,6 +397,7 @@ In this example, the first entity will be created and saved but the second will 
 ## .get()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -463,9 +472,11 @@ This example illustrates the use of the *context* property:
 ## .getCount()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R5|Added|
+
 </details>
 
 <!-- REF #DataClassClass.getCount().Syntax -->
@@ -500,9 +511,11 @@ $number:=$ds.Persons.getCount()
 ## .getDataStore()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF #DataClassClass.getDataStore().Syntax -->
@@ -550,10 +563,12 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 ## .getInfo()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R3|Added exposed property|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF #DataClassClass.getInfo().Syntax -->
@@ -624,9 +639,11 @@ The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns 
 ## .getRemoteCache()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R5|Added|
+
 </details>
 
 <!-- REF #DataClassClass.getRemoteCache().Syntax -->
@@ -709,9 +726,11 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 ## .new()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
+
 </details>
 
 <!-- REF #DataClassClass.new().Syntax -->
@@ -752,9 +771,11 @@ This example creates a new entity in the "Log" Dataclass and records information
 ## .newSelection()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
+
 </details>
 
 <!-- REF #DataClassClass.newSelection().Syntax -->
@@ -791,11 +812,13 @@ When created, the entity selection does not contain any entities (`mySelection.l
 ## .query()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R6|Support of Formula parameters|
 |v17 R5|Support of placeholders for values|
 |v17|Added|
+
 </details>
 
 <!-- REF #DataClassClass.query().Syntax -->
@@ -1396,9 +1419,11 @@ We want to disallow formulas, for example when the user enters their query:
 ## .setRemoteCacheSettings()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R5|Added|
+
 </details>
 
 <!-- REF #DataClassClass.setRemoteCacheSettings().Syntax -->

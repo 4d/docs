@@ -264,6 +264,7 @@ This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/ht
 |.\<keyword\>|boolean|Keyword to set (value must be true)|
 
 Reserved keywords:
+
 - $draft - Indicates a message is a draft
 - $seen - Indicates a message has been read
 - $flagged - Indicates a message needs special attention (e.g., Urgent)
@@ -385,9 +386,11 @@ The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary
 ## MAIL Convert from MIME
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18|Added|
+
 </details>
 
 <!-- REF #_command_.MAIL_Convert_from_MIME.Syntax -->
@@ -468,10 +471,12 @@ $status:=$transporter.send($email)
 ## MAIL Convert to MIME
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R4|Added|
 |v17 R5|Modified|
+
 </details>
 
 <!-- REF #_command_.MAIL_Convert_to_MIME.Syntax -->

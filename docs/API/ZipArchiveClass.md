@@ -38,10 +38,12 @@ End if
 ## ZIP Create archive
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R3|Added `ZIP Compression LZMA`, `ZIP Compression xy`, `.level` property|
 |v18|Added|
+
 </details>
 
 <!-- REF #_command_.ZIP Create archive.Syntax -->
@@ -190,9 +192,11 @@ $err:=ZIP Create archive($zip; $destination)
 ## ZIP Read archive
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18|Added|
+
 </details>
 
 <!-- REF #_command_.ZIP Read archive.Syntax -->

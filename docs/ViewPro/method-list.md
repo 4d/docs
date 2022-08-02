@@ -388,6 +388,7 @@ $cell:=VP Cell("ViewProArea";2;4) // C5
 <!-- REF #_method_.VP Cells.Syntax -->**VP Cells** ( *vpAreaName* : Text ; *column*: Integer ; *row*: Integer ; *columnCount* : Integer ; *rowCount* : Integer { ; *sheet* : Integer } ) : Object<!-- END REF -->
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R4|Added
@@ -646,6 +647,7 @@ $vPict:=VP Convert to picture($vpAreaObj) //export the whole area
 ### VP Copy to object
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R4|Added
@@ -704,6 +706,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 ### VP CREATE TABLE
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R6|Added
@@ -1297,9 +1300,11 @@ $activeCell:=VP Get active cell("myVPArea")
 ### VP Get binding path
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R5|Added|
+
 </details>
 
 <!-- REF #_method_.VP Get binding path.Syntax -->**VP Get binding path** ( *rangeObj* : Object ) : Text<!-- END REF -->
@@ -1508,9 +1513,11 @@ $index:=VP Get current sheet("ViewProArea")
 ### VP Get data context
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R5|Added|
+
 </details>
 
 <!-- REF #_method_.VP Get data context.Syntax -->**VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Object<br/>**VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Collection<!-- END REF -->
@@ -2656,6 +2663,7 @@ The results is:
 ### VP MOVE CELLS
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R4|Added
@@ -2843,6 +2851,7 @@ $cellStyle.font:=VP Object to font($font)
 ### VP PASTE FROM OBJECT
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R4|Added
@@ -3128,6 +3137,7 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 ### VP REMOVE TABLE
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R6|Added
@@ -3551,9 +3561,11 @@ After this code is executed, the defined functions can be used in 4D View Pro fo
 ### VP SET BINDING PATH
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R5|Added|
+
 </details>
 
 <!-- REF #_method_.VP SET BINDING PATH.Syntax -->**VP SET BINDING PATH** ( *rangeObj* : Object  ; *dataContextAttribute*  : Text) <!-- END REF -->
@@ -3968,9 +3980,11 @@ End case
 ### VP SET DATA CONTEXT
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R5|Added|
+
 </details>
 
 <!-- REF #_method_.VP SET DATA CONTEXT.Syntax -->**VP SET DATA CONTEXT** ( *vpAreaName* : Text ; *dataObj* : Object {; *options* : Object } {; *sheet* : Integer} )<br/>**VP SET DATA CONTEXT** ( *vpAreaName* : Text ; *dataColl* : Collection ; {*options* : Object } {; *sheet* : Integer} )<!-- END REF -->

@@ -8,6 +8,7 @@ title: On Window Opening Denied
 |53|[Web Area](FormObjects/webArea_overview.md)|A pop-up window has been blocked|
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R5|Triggered on drop
@@ -24,12 +25,12 @@ This event is also triggered when a drop operation has been done in the Web area
 ```4d
 //web area object method
 If (FORM Event.code=On Window Opening Denied)
-	WA OPEN URL(*; "WebArea"; WA Get last filtered URL(*; "WebArea"))  
-	// or UrlVariable:=WA Get last filtered URL(*; "WebArea")  
-	// where UrlVariable is the URL variable associated to the web area
+ WA OPEN URL(*; "WebArea"; WA Get last filtered URL(*; "WebArea"))  
+ // or UrlVariable:=WA Get last filtered URL(*; "WebArea")  
+ // where UrlVariable is the URL variable associated to the web area
 End if 
 ```
 
-
 ### See also
+
 [`On Open External Link`](onOpenExternalLink.md)

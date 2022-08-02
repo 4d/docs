@@ -9,6 +9,7 @@ title: Directory Class
 ## .creationDate
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -47,6 +48,7 @@ This property is **read-only**.
 ## .exists
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -69,6 +71,7 @@ This property is **read-only**.
 ## .extension
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -91,6 +94,7 @@ This property is **read-only**.
 ## .fullName
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -113,6 +117,7 @@ This property is **read-only**.
 ## .hidden
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -135,6 +140,7 @@ This property is **read-only**.
 ## .isAlias
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -157,6 +163,7 @@ This property is **read-only**.
 ## .isFile
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -179,6 +186,7 @@ This property is **read-only**.
 ## .isFolder
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -201,6 +209,7 @@ This property is **read-only**.
 ## .isPackage
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -225,6 +234,7 @@ This property is **read-only**.
 ## .modificationDate
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -247,6 +257,7 @@ This property is **read-only**.
 ## .modificationTime
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -269,6 +280,7 @@ This property is **read-only**.
 ## .name
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -291,6 +303,7 @@ This property is **read-only**.
 ## .original
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -315,6 +328,7 @@ This property is **read-only**.
 ## .parent
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -339,6 +353,7 @@ This property is **read-only**.
 ## .path
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -361,6 +376,7 @@ This property is **read-only**.
 ## .platformPath
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -383,6 +399,7 @@ This property is **read-only**.
 ## .copyTo()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -436,6 +453,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 ## .file()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -476,6 +494,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 ## .files()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -538,6 +557,7 @@ You want to get all files that are not invisible in the Documents folder:
 ## .folder()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -578,6 +598,7 @@ A `Folder` object or null if *path* is invalid.
 ## .folders()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -625,6 +646,7 @@ You want the collection of all folders and subfolders of the database folder:
 ## .getIcon()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added

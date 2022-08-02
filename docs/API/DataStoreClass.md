@@ -32,10 +32,12 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 ## ds
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18|Support of localID parameter|
 |v17|Added|
+
 </details>
 
 <!-- REF #_command_.ds.Syntax -->
@@ -99,9 +101,11 @@ Using the main datastore on the 4D database:
 ## Open datastore
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18|Added|
+
 </details>
 
 <!-- REF #_command_.Open datastore.Syntax -->
@@ -204,9 +208,11 @@ In case of error, the command returns **Null**. If the remote datastore cannot b
 ## *.dataclassName*
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
+
 </details>
 
 <!-- REF DataStoreClass.dataclassName.Syntax -->
@@ -235,9 +241,11 @@ Each dataclass in a datastore is available as a property of the [DataStore objec
 ## .cancelTransaction()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18|Added|
+
 </details>
 
 <!-- REF #DataStoreClass.cancelTransaction().Syntax -->
@@ -267,9 +275,11 @@ See example for the [`.startTransaction()`](#starttransaction) function.
 ## .clearAllRemoteContexts()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R5|Added|
+
 </details>
 
 <!-- REF #DataStoreClass.clearAllRemoteContexts().Syntax -->
@@ -297,9 +307,11 @@ In such cases, you can use `.clearAllRemoteContexts()` to clear your contexts an
 ## .encryptionStatus()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF #DataStoreClass.encryptionStatus().Syntax -->
@@ -367,9 +379,11 @@ You want to know the number of encrypted tables in the current data file:
 ## .getAllRemoteContexts()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R5|Added|
+
 </details>
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Syntax -->
@@ -440,6 +454,7 @@ $info:=$ds.getAllRemoteContexts()
 ## .getInfo()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -507,9 +522,11 @@ On a remote datastore:
 ## .getRemoteContextInfo()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R5|Added|
+
 </details>
 
 <!-- REF #DataStoreClass.getRemoteContextInfo().Syntax -->
@@ -556,9 +573,11 @@ See the example from the [.setRemoteContextInfo()](#example-1-3) section.
 ## .getRequestLog()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R6|Added|
+
 </details>
 
 <!-- REF #DataStoreClass.getRequestLog().Syntax -->
@@ -592,9 +611,11 @@ See Example 2 of [`.startRequestLog()`](#startrequestlog).
 ## .isAdminProtected()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R6|Added|
+
 </details>
 
 <!-- REF #DataStoreClass.isAdminProtected().Syntax -->
@@ -622,9 +643,11 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 ## .makeSelectionsAlterable()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R5|Added|
+
 </details>
 
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Syntax -->
@@ -653,9 +676,11 @@ On the other hand, using this method in new projects created in 4D v18 R5 and hi
 ## .provideDataKey()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF #DataStoreClass.provideDataKey().Syntax -->
@@ -725,9 +750,11 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 ## .setAdminProtection()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R6|Added|
+
 </details>
 
 <!-- REF #DataStoreClass.setAdminProtection().Syntax -->**.setAdminProtection**( *status* : Boolean )<!-- END REF -->
@@ -764,9 +791,11 @@ You create a *protectDataFile* project method to call before deployments for exa
 ## .setRemoteContextInfo()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R5|Added|
+
 </details>
 
 <!-- REF #DataStoreClass.setRemoteContextInfo().Syntax -->
@@ -891,9 +920,11 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 ## .startRequestLog()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R6|Added|
+
 </details>
 
 <!-- REF #DataStoreClass.startRequestLog().Syntax -->
@@ -916,6 +947,7 @@ The ORDA request log can be sent to a file or to memory, depending on the parame
 
 * If you passed a *file* object created with the `File` command, the log data is written in this file as a collection of objects (JSON format). Each object represents a request.<br/>If the file does not already exist, it is created. Otherwise if the file already exists, the new log data is appended to it.
 If `.startRequestLog( )` is called with a file while a logging was previously started in memory, the memory log is stopped and emptied.
+
  >A \] character must be manually appended at the end of the file to perform a JSON validation
 
 * If you passed a *reqNum* integer, the log in memory is emptied (if any) and a new log is initialized. It will keep *reqNum* requests in memory until the number is reached, in which case the oldest entries are emptied (FIFO stack).<br/>If `.startRequestLog()` is called with a *reqNum* while a logging was previously started in a file, the file logging is stopped.
@@ -965,9 +997,11 @@ You want to log ORDA client requests in memory:
 ## .startTransaction()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18|Added|
+
 </details>
 
 <!-- REF #DataStoreClass.startTransaction().Syntax -->
@@ -1026,9 +1060,11 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 ## .stopRequestLog()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R6|Added|
+
 </details>
 
 <!-- REF #DataStoreClass.stopRequestLog().Syntax -->
@@ -1056,9 +1092,11 @@ See examples for [`.startRequestLog()`](#startrequestlog).
 ## .validateTransaction()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18|Added|
+
 </details>
 
 <!-- REF #DataStoreClass.validateTransaction().Syntax -->

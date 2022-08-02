@@ -9,6 +9,7 @@ title: Document Class
 ## .creationDate
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -49,6 +50,7 @@ This property is **read-only**.
 ## .exists
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -70,6 +72,7 @@ This property is **read-only**.
 ## .extension
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -90,6 +93,7 @@ This property is **read-only**.
 ## .fullName
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -110,6 +114,7 @@ This property is **read-only**.
 ## .hidden
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -130,6 +135,7 @@ This property is **read-only**.
 ## .isAlias
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -150,6 +156,7 @@ This property is **read-only**.
 ## .isFile
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -170,6 +177,7 @@ This property is **read-only**.
 ## .isFolder
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -190,6 +198,7 @@ This property is **read-only**.
 ## .isWritable
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -221,6 +230,7 @@ This property is **read-only**.
 ## .modificationDate
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -241,6 +251,7 @@ This property is **read-only**.
 ## .modificationTime
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -261,6 +272,7 @@ This property is **read-only**.
 ## .name
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -281,6 +293,7 @@ This property is **read-only**.
 ## .original
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -306,6 +319,7 @@ This property is **read-only**.
 ## .parent
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -326,6 +340,7 @@ This property is **read-only**.
 ## .path
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -346,6 +361,7 @@ This property is **read-only**.
 ## .platformPath
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -366,6 +382,7 @@ This property is **read-only**.
 ## .size
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -386,6 +403,7 @@ This property is **read-only**.
 ## .copyTo()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -437,6 +455,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 ## .getContent()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R2|Returns 4D.Blob
@@ -478,6 +497,7 @@ To save a document's contents in a `BLOB` field:
 ## .getIcon()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -511,6 +531,7 @@ File icon [picture](../Concepts/picture.html).
 ## .getText()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
