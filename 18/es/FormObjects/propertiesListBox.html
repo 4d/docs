@@ -169,7 +169,7 @@
 <p>Estas propiedades interactúan de la siguiente manera:</p>
 <ul>
 <li><p>If you set columns that are only static, they cannot be moved.</p></li>
-<li><p>If you set columns that are locked but not static, you can still change their position freely within the locked area. However, a locked column cannot be moved outside of this locked area.</p></li>
+<li><p>If you set columns that are locked but not static, you can still change their position freely within the locked area. Sin embargo, una columna bloqueada no puede moverse fuera de esta área bloqueada.</p></li>
 </ul>
 <p><img src="/docs/18/assets/en/FormObjects/property_lockedStaticColumns1.png" alt=""></p>
 <ul>
@@ -226,7 +226,7 @@
 <h2><a class="anchor" aria-hidden="true" id="array-de-control-de-líneas"></a><a href="#array-de-control-de-líneas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Array de control de líneas</h2>
 <p><code>List box de tipo array</code></p>
 <p>Un array 4D que controla la visualización de las líneas del list box.</p>
-<p>You can set the &quot;hidden&quot;, &quot;disabled&quot; and &quot;selectable&quot; interface properties for each row in an array-based list box using this array. It can also be designated using the <code>LISTBOX SET ARRAY</code> command.</p>
+<p>You can set the &quot;hidden&quot;, &quot;disabled&quot; and &quot;selectable&quot; interface properties for each row in an array-based list box using this array. También puede ser designado utilizando el comando <code>LISTBOX SET ARRAY</code>.</p>
 <p>The row control array must be of the Longint type and include the same number of rows as the list box. Each element of the <em>Row Control Array</em> defines the interface status of its corresponding row in the list box. Three interface properties are available using constants in the &quot;List Box&quot; constant theme:</p>
 <table>
 <thead>
@@ -235,10 +235,10 @@
 <tbody>
 <tr><td>lk row is disabled</td><td>2</td><td>The corresponding row is disabled. El texto y los controles, como las casillas de selección, aparecen atenuados o en gris. Las áreas de entrada de texto introducibles ya no lo son. Valor por defecto: Activado</td></tr>
 <tr><td>lk row is hidden</td><td>1</td><td>La línea correspondiente está oculta. Ocultar las líneas sólo afecta a la visualización del list box. The hidden rows are still present in the arrays and can be managed by programming. The language commands, more particularly <code>LISTBOX Get number of rows</code> or <code>LISTBOX GET CELL POSITION</code>, do not take the displayed/hidden status of rows into account. For example, in a list box with 10 rows where the first 9 rows are hidden, <code>LISTBOX Get number of rows</code> returns 10. From the user’s point of view, the presence of hidden rows in a list box is not visibly discernible. Only visible rows can be selected (for example using the Select All command). Valor por defecto: Visible</td></tr>
-<tr><td>lk row is not selectable</td><td>4</td><td>The corresponding row is not selectable (highlighting is not possible). Enterable text input areas are no longer enterable unless the <a href="/docs/18/es/FormObjects/propertiesEntry.html#single-click-edit">Single-Click Edit</a> option is enabled. Controls such as check boxes and lists are still functional however. This setting is ignored if the list box selection mode is &quot;None&quot;. Valor por defecto: Seleccionable</td></tr>
+<tr><td>lk row is not selectable</td><td>4</td><td>The corresponding row is not selectable (highlighting is not possible). Enterable text input areas are no longer enterable unless the <a href="/docs/18/es/FormObjects/propertiesEntry.html#single-click-edit">Single-Click Edit</a> option is enabled. Controls such as check boxes and lists are still functional however. Esta configuración se ignora si el modo de selección del list box es &quot;Ninguno&quot;. Valor por defecto: Seleccionable</td></tr>
 </tbody>
 </table>
-<p>To change the status for a row, you just need to set the appropriate constant(s) to the corresponding array element. For example, if you do not want row #10 to be selectable, you can write:</p>
+<p>To change the status for a row, you just need to set the appropriate constant(s) to the corresponding array element. Por ejemplo, si no quiere que la línea #10 sea seleccionable, puede escribir:</p>
 <pre><code class="hljs css language-4d"> aLControlArr{<span class="hljs-number">10</span>}:=<span class="hljs-function">lk row is not selectable</span>
 </code></pre>
 <p><img src="/docs/18/assets/en/FormObjects/listbox_styles5.png" alt=""></p>
