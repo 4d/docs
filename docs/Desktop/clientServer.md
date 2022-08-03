@@ -10,7 +10,7 @@ title: Client/Server Management
 
 - **remote projects** are [.4DProject](Project/architecture.md) files opened by 4D Server and accessed with 4D in remote mode. The server sends a .4dz version of the project ([compressed format](building.md#build-compiled-structure)) to the remote 4D, thus structure files are read-only. This configuration is usually used for application testing.
 
-![](assets/en/getStart/localremote.png)   
+![](../assets/en/getStart/localremote.png)   
 
 > Connecting to a remote project from the **same machine as 4D Server** allows modifying the project files. This [specific feature](#using-4d-and-4d-server-on-the-same-machine) allows to develop a client/server application in the same context as the deployment context.
 
@@ -39,7 +39,7 @@ The 4D Server connection dialog appears. This dialog has three tabs: **Recent**,
 
 If 4D Server is connected to the same network as the remote 4D, select **Available**. 4D Server includes a built-in TCP/IP broadcasting system that, by default, publishes the name of the 4D Server projects available over the network. The list is sorted by order of appearance and updated dynamically. 
 
-![](assets/en/getStart/serverConnect.png)
+![](../assets/en/getStart/serverConnect.png)
 
 To connect to a server from the list, double-click on its name or select it and click the **OK** button.
 
@@ -47,7 +47,7 @@ To connect to a server from the list, double-click on its name or select it and 
 
 If the published project is not displayed in the **Available** list, select **Custom**. The Custom page allows you to connect to a published server on the network using its network address and assigning it a customized name. 
 
-![](assets/en/Desktop/serverConnect2.png)
+![](../assets/en/Desktop/serverConnect2.png)
 
 
 - **Project name**: Defines the local name of the 4D Server project. This name will be used in the **Recent** page when referring to the project.

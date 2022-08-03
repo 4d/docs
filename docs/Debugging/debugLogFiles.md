@@ -76,7 +76,7 @@ For each request, the following fields are logged:
 
 Request flow:
 
-![](assets/en/Admin/logRequestFlow.PNG)
+![](../assets/en/Admin/logRequestFlow.PNG)
 
 ## 4DRequestsLog_ProcessInfo.txt  
 

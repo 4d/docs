@@ -5,7 +5,7 @@ title: Debugger
 
 The debugger is useful when you need to spot errors or monitor the execution of methods. It allows you to step through your code slowly and examine the information. This process is called "tracing".
 
-![debugger-window-local](assets/en/Debugging/debugger-window-intro.png)
+![debugger-window-local](../assets/en/Debugging/debugger-window-intro.png)
 
 
 ## Calling the Debugger
@@ -17,7 +17,7 @@ There are multiple ways to get the Debugger to display:
 * Clicking the **Debug** button in the Execute Method window or selecting **Run and debug...** button in the Code Editor 
 * Using **Alt+Shift+Right click** (Windows) or **Ctrl+Option+Cmd+Click** (macOS) while a method is executing, then selecting the process to trace in the pop-up menu:
 
-![open-debugger](assets/en/Debugging/openDebugger.png)
+![open-debugger](../assets/en/Debugging/openDebugger.png)
 
 * Clicking the **Trace** button when a process is selected in the Process page of the Runtime Explorer.
 * Adding a break point in the Code Editor window or in the Break and Catch pages of the Runtime Explorer.
@@ -41,7 +41,7 @@ The Debugger window is usually displayed on the machine where the code is execut
 
 The debugger's tool bar includes several buttons, associated with default shortcuts:
 
-![execution-control-toolbar-buttons](assets/en/Debugging/executionToolbarButtons.png)
+![execution-control-toolbar-buttons](../assets/en/Debugging/executionToolbarButtons.png)
 
 > Default shortcuts can be customized in the Shortcuts Page of the Preferences dialog box. 
 
@@ -102,7 +102,7 @@ This action is not available in remote debugging mode (see [Debugging from Remot
 
 The **Watch pane** is displayed in the top left corner of the Debugger window, below the Execution Control Tool Bar. Here is an example:
 
-![watch-pane](assets/en/Debugging/watchPane.png)
+![watch-pane](../assets/en/Debugging/watchPane.png)
 
 > This pane is not available in remote debugging mode.
 
@@ -170,17 +170,17 @@ Arrays, like other variables, appear in the Interprocess, Process, and Local sub
 
 To display the variable types and their internal names, right click and check the **Show Types** option in the context menu:
 
-![show-types-menu-item](assets/en/Debugging/showTypes.png)
+![show-types-menu-item](../assets/en/Debugging/showTypes.png)
 
 Here's the result: 
 
-![dynamic-variable-names](assets/en/Debugging/dynamicVariableNames.png)
+![dynamic-variable-names](../assets/en/Debugging/dynamicVariableNames.png)
 
 #### Current Form Values
 
 This theme contains the name of each dynamic object included in the current form, as well as the value of its associated variable:
 
-![current-form-value](assets/en/Debugging/current-form-values.png)
+![current-form-value](../assets/en/Debugging/current-form-values.png)
 
 Some objects, such as list box arrays, can be presented as two distinct objects, the variable of the object itself and its data source.
 
@@ -230,7 +230,7 @@ The expressions contained within this theme cannot be modified.
 
 Additional options are available from the contextual menu of the Watch pane.
 
-![context-menu](assets/en/Debugging/contextual-menu.png)
+![context-menu](../assets/en/Debugging/contextual-menu.png)
 
 * **Collapse All**: Collapses all levels of the hierarchical list.
 * **Expand All**: Expand all levels of the hierarchical list.
@@ -245,7 +245,7 @@ Additional options are available from the contextual menu of the Watch pane.
 
 A method may call other methods or class functions, which may call other methods or functions. The Call Chain pane lets you keep track of that hierarchy.
 
-![call-chain-pane](assets/en/Debugging/call-chain-example.png)
+![call-chain-pane](../assets/en/Debugging/call-chain-example.png)
 
 Each main level item is the name of a method or class function. The top item is the one you are currently tracing, the next main level item is the name of the caller (the method or function that called the one you are currently tracing), the next one is the caller's caller, and so on. 
 
@@ -264,7 +264,7 @@ Clicking the icon next to a method or function name expands or collapses the par
 
 To display the parameter type, check the **Show types** option in the contextual menu:
 
-![call-chain-show-types](assets/en/Debugging/callChainShowTypes.png)
+![call-chain-show-types](../assets/en/Debugging/callChainShowTypes.png)
 
 After you deploy the list of parameters, you can drag and drop parameters and function results to the [Custom Watch Pane](#custom-watch-pane).
 
@@ -282,7 +282,7 @@ The Custom Watch Pane is useful for evaluating expressions. It is similar to the
 * method 
 * and anything else that returns a value
 
-![custom-Watch-pane](assets/en/Debugging/custom-watch-pane.png)
+![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
 You can evaluate any expression that can be shown in text form. This does not cover picture and BLOB fields or variables. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](https://doc.4d.com/4dv19/help/command/en/page555.html).
 
@@ -306,11 +306,11 @@ To delete an expression, click on it to select it, then press **Backspace** or *
 
 The Custom Watch Pane’s context menu gives you access the 4D formula editor and other options:
 
-![custom-watch-pane-context-menu](assets/en/Debugging/custom-watch-pane-context-menu.png)
+![custom-watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-context-menu.png)
 
 **New Expression**: This inserts a new expression and displays the 4D Formula Editor.
 
-![custom-Watch-pane-context-menu](assets/en/Debugging/custom-watch-pane-formula-editor.png)
+![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
 
 For more information on the Formula Editor, see the <a href="https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html" target="_blank">4D Design Reference manual.</a>
 
@@ -338,11 +338,11 @@ Hover your pointer over any expression to display a tool tip that indicates:
 * the declared type of the expression
 * the current value of the expression
 
-![source-code-pane](assets/en/Debugging/sourceCodePane.png)
+![source-code-pane](../assets/en/Debugging/sourceCodePane.png)
 
 This also works with selections:
 
-![source-code-pane-tip](assets/en/Debugging/sourcePaneTip.png)
+![source-code-pane-tip](../assets/en/Debugging/sourcePaneTip.png)
 
 ### Adding expressions to the Custom Watch Pane
 
@@ -386,7 +386,7 @@ To examine the results of the `DO_SOMETHING` line, you can move the program coun
 
 The contextual menu of the Source Code Pane provides access to several functions that are useful when executing methods in Trace mode:
 
-![source-code-pane-context-window](assets/en/Debugging/sourceCodePaneContext.png)
+![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
 * **Goto Definition**: Goes to where the selected object is defined. This command is available for:
   * *Project methods:* displays method contents in a new window of the Code Editor

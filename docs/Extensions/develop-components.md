@@ -75,13 +75,13 @@ All the project methods of a matrix project are by definition included in the co
 
 On the other hand, by default these project methods will not be visible, and they can't be called in the host project. In the matrix project, you must explicitly designate the methods that you want to share with the host project by checking the **Shared by components and host project** box in the method properties dialog box:
 
-![](assets/en/Concepts/shared-methods.png)
+![](../assets/en/Concepts/shared-methods.png)
 
 Shared project methods can be called in the code of the host project (but they cannot be modified in the Code Editor of the host project). These methods are **entry points** of the component. 
 
 Conversely, for security reasons, by default a component cannot execute project methods belonging to the host project. In certain cases, you may need to allow a component to access the project methods of your host project. To do this, you must explicitly designate which project methods of the host project you want to make accessible to the components (in the method properties, check the **Shared by components and host project** box).
 
-![](assets/en/Concepts/pict516563.en.png)
+![](../assets/en/Concepts/pict516563.en.png)
 
 Once the project methods of the host projects are available to the components, you can execute a host method from inside a component using the `EXECUTE FORMULA` or `EXECUTE METHOD` commands. For example: 
 
@@ -109,7 +109,7 @@ By default, component classes and functions cannot be called from the 4D Code Ed
 
 To allow classes and functions of your component to be exposed in the host projects, enter a value in the [**Component namespace in the class store** option in the General page](../settings/general.md#component-namespace-in-the-class-store) of the matrix project Settings. By default, the area is empty: component classes are not available outside of the component context.
 
-![](assets/en/settings/namespace.png)
+![](../assets/en/settings/namespace.png)
 
 > A *namespace* ensures that no conflict emerges when a host project uses different components that have classes or functions with identical names. A component namespace must be compliant with [property naming rules](../Concepts/identifiers.md#object-properties).
 
@@ -145,8 +145,8 @@ To make your component easier to use for developers, you can check the [**Genera
 
 A syntax file (JSON format) is then automatically created during the compilation phase, filled with the syntax of your component's classes, functions, and [exposed methods](#sharing-of-project-methods), and placed in the \Resources\en.lproj folder of the component project. 4D uses the contents of that syntax file to generate contextual help in the code editor, such as code completion and function syntax:
 
-![](assets/en/settings/syntax-code-completion-2.png)
-![](assets/en/settings/syntax-code-completion-1.png)
+![](../assets/en/settings/syntax-code-completion-2.png)
+![](../assets/en/settings/syntax-code-completion-1.png)
 
 If you don't enter a [component namespace](#declaring-the-component-namespace), the resources for the classes and exposed methods are not generated even if the syntax file option is checked.
 

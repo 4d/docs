@@ -87,7 +87,7 @@ This Menu editor option allows defining a group to a menu command so that only u
 
 Groups of menu commands in a menu can be divided by a separator line. This convention is useful for grouping associated menu commands by function.
 
-![](assets/en/Menus/separator.png)
+![](../assets/en/Menus/separator.png)
 
 You add a separator line by creating a specific menu command. 
 
@@ -135,7 +135,7 @@ To assign a keyboard shortcut in the Menu editor:
 Select the menu item to which you want to assign a keyboard shortcut.
 Click on the [...] button to the right of the "Shortcut" entry area. The following window appears:
 
-![](assets/en/Menus/Shortcut.png)
+![](../assets/en/Menus/Shortcut.png)
 
 Enter the character to use then (optional) click the **Shift** and/or **Alt** (**Option**) checkboxes according to the combination desired. 
 You can also directly press the keys that make up the desired combination (do not press the **Ctrl/Command** key).
@@ -174,11 +174,11 @@ As a general rule, apply font styles sparingly to your menus — too many styles
 
 You can associate an icon with a menu item. It will displayed directly in the menu, next to the item:
 
-![](assets/en/Menus/iconMenu.png)
+![](../assets/en/Menus/iconMenu.png)
 
 To define the icon in the Menu editor, click on the "Item icon" area and select **Open** to open a picture from the disk. If you select a picture file that is not already stored in the project resources folder, it is automatically copied in that folder. Once set, the item icon appears in the preview area: 
 
-![](assets/en/Menus/iconpreview.png)
+![](../assets/en/Menus/iconpreview.png)
 
 To remove the icon from the item, choose the **No Icon** option from the "Item Icon" area.
 

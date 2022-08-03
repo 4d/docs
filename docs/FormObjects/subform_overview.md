@@ -57,7 +57,7 @@ By default, 4D creates a variable or expression of [object type](properties_Obje
 
 Binding the same variable or expression to your subform container and other objects of the parent form lets you link the parent form and subform contexts to put the finishing touches on sophisticated interfaces. Imagine a subform representing a clock, inserted into a parent form containing an enterable variable of the Time type:
 
-![](assets/en/FormObjects/subforms1.png)
+![](../assets/en/FormObjects/subforms1.png)
 
 In the parent form, both objects (time variable and subform container) **have the same value as *Variable or Expression***. It can be a variable (e.g. `parisTime`), or an expression (e.g. `Form.parisTime`). 
 
@@ -81,7 +81,7 @@ End if
 
 It updates the value of `Form.clockValue` in the subform:
 
-![](assets/en/FormObjects/update-subform.png)
+![](../assets/en/FormObjects/update-subform.png)
 
 The [On Bound Variable Change](../Events/onBoundVariableChange.md) form event is generated:
 
@@ -112,7 +112,7 @@ If (Form event code=On Data Change) //whatever the way the value is changed
 End if
 ```
 
-![](assets/en/FormObjects/update-main-form.png)
+![](../assets/en/FormObjects/update-main-form.png)
 
 Everytime the value of `Form.clockValue` changes in the subform, `Form.parisTime` in the subform container is also updated.
 
@@ -128,11 +128,11 @@ When bound a the subform container, this object is returned by the `Form` comman
 
 For example, in a subform, inputs are bound to the `Form` object properties (of the subform form):
 
-![](assets/en/FormObjects/subnew1.png)
+![](../assets/en/FormObjects/subnew1.png)
 
 In the parent form, you display the subfom twice. Each subform container is bound to an expression which is a property of the `Form` object (of the parent form):
 
-![](assets/en/FormObjects/subnew2.png)
+![](../assets/en/FormObjects/subnew2.png)
 
 The button only creates `mother` and `father` properties in the parent's `Form` object:
 
@@ -144,12 +144,12 @@ Form.father:=New object("lastname"; "Golf"; "firstname"; "Félix")
 
 When you execute the form and click on the button, you see that all values are correctly displayed:
 
-![](assets/en/FormObjects/subnew3.png)
+![](../assets/en/FormObjects/subnew3.png)
 
 If you modify a value either in the parent form or in the subform, it is automatically updated in the other form because the same object is used:
 
-![](assets/en/FormObjects/subnew4.png)
-![](assets/en/FormObjects/subnew5.png)
+![](../assets/en/FormObjects/subnew4.png)
+![](../assets/en/FormObjects/subnew5.png)
 
 ### Using pointers (compatibility)
 
@@ -192,7 +192,7 @@ The `EXECUTE METHOD IN SUBFORM` command lets a form or one of its objects reques
 
 This mechanism is illustrated in the following diagram:
 
-![](assets/en/FormObjects/subforms6.png)
+![](../assets/en/FormObjects/subforms6.png)
 
 For more information, refer to the description of the `EXECUTE METHOD IN SUBFORM` command.
 

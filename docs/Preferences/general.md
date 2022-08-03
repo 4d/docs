@@ -35,15 +35,15 @@ You can benefit from this feature in the following environments (with 4D 64-bit 
 
 All windows from these editors can be put in tab form:
 
-![](assets/en/Preferences/general2.png)
+![](../assets/en/Preferences/general2.png)
 
 A set of commands in the **Window** menu allows managing the tabs:
 
-![](assets/en/Preferences/general3.png)
+![](../assets/en/Preferences/general3.png)
 
 In the 4D's Preferences dialog box, the **Window tabbing** option allows you to control this feature:
 
-![](assets/en/Preferences/general4.png)
+![](../assets/en/Preferences/general4.png)
 
 Three options are available:
 
@@ -78,7 +78,7 @@ If you check this option, two items are added in the **File > New** menu and the
 *	**Database...**
 *	**Database from Structure Definition...**
 
-![](assets/en/Preferences/general5.png)
+![](../assets/en/Preferences/general5.png)
 
 These items allow you to create binary databases (see [Creating a new database](https://doc.4d.com/4Dv18R6/4D/18-R6/Creating-a-new-database.300-5217610.en.html) section). They are no longer proposed by default because 4D recommends using project-based architecture for new developments. 
 

@@ -6,7 +6,7 @@ title: SQL Server Page
 
 The **SQL Server** page groups together information about the integrated SQL server of 4D Server. It also includes a button that can be used to control the activation of the server.
 
-![](assets/en/Admin/server-admin-sql-page.png)
+![](../assets/en/Admin/server-admin-sql-page.png)
 
 
 The upper part of the page provides information about the current status of the SQL server of 4D Server.

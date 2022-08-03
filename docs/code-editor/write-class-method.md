@@ -5,7 +5,7 @@ title: Code Editor
 
 4D has a powerful built-in code editor that offers a wide set of features for highly productive code editing such as intelligent code completion, code navigation, debugging, searching, and more. 
 
-![](assets/en/code-editor/code-editor-overview.png)
+![](../assets/en/code-editor/code-editor-overview.png)
 
 The Code Editor works much like a text editor. Writing a method or a class is usually a combination of typing text, selecting components, and dragging items from the Explorer or other windows. You can also use various type-ahead functions to create methods faster.
 
@@ -20,14 +20,14 @@ Each Code Editor window has a toolbar that provides instant access to basic func
 
 | Element | Icon | Description |
 |--|--|--|
-| **Method execution** | ![execute-method](assets/en/code-editor/execute-method.png) | When working with methods, each Code Editor window has a button that can be used to run the current method. Using the menu associated with this button, you can choose the type of execution:<ul><li> **Run new process**: Creates a process and runs the method in standard mode in this process.<li>**Run and debug new process**: Creates a new process and displays the method in the Debugger window for step by step execution in this process.</li><li>**Run in Application process**: Runs the method in standard mode in the context of the Application process (in other words, the record display window).</li><li>**Run and debug in Application process**: Displays the method in the Debugger window for step by step execution in the context of the Application process (in other words, the record display window).</li></ul>For more information on method execution, see [Calling Project Methods](../Concepts/methods.md#calling-project-methods). |
-| **Search** | ![search-icon](assets/en/code-editor/search.png) | Allows performing a search in the current window. |
-| **Macros** | ![macros-button](assets/en/code-editor/macros.png) | Inserts a macro at the selection. Click the dropdown arrow to display a list of available macros. For more information on how to create and instantiate macros, see [Macros](creating-using-macros.md). |
-| **Expand all / Collapse all** | ![expand-collapse-button](assets/en/code-editor/expand-collapse-all.png) | These buttons allow expanding or collapsing all the control flow structures of the code. |
-| **Method information** | ![method-information-icon](assets/en/code-editor/method-information.png) | Displays the [Method Properties](../Concepts/methods.md#project-method-properties) dialog box (project methods only). |
-| **Last clipboard values** | ![last-clipboard-values-icon](assets/en/code-editor/last-clipboard-values.png) | Displays the last values stored in the clipboard. |
-| **Clipboards** | ![clipboard icons](assets/en/code-editor/clipboards.png) | Nine clipboards available in the code editor. You can [use these clipboards](./write-class-method.md#multiple-copy-paste-and-numbering-of-clipboards) by clicking on them directly or by using keyboard shortcuts. You can use a [Preferences option](Preferences/methods.md#options-1) to hide them. |
-| **Code navigation** | ![code-navigation-icons](assets/en/code-editor/tags.png) | Lets you navigate inside methods and classes with automatically tagged content or manually declared markers. See [Navigation dropdown](./write-class-method.md#navigation-dropdown). |
+| **Method execution** | ![execute-method](../assets/en/code-editor/execute-method.png) | When working with methods, each Code Editor window has a button that can be used to run the current method. Using the menu associated with this button, you can choose the type of execution:<ul><li> **Run new process**: Creates a process and runs the method in standard mode in this process.<li>**Run and debug new process**: Creates a new process and displays the method in the Debugger window for step by step execution in this process.</li><li>**Run in Application process**: Runs the method in standard mode in the context of the Application process (in other words, the record display window).</li><li>**Run and debug in Application process**: Displays the method in the Debugger window for step by step execution in the context of the Application process (in other words, the record display window).</li></ul>For more information on method execution, see [Calling Project Methods](../Concepts/methods.md#calling-project-methods). |
+| **Search** | ![search-icon](../assets/en/code-editor/search.png) | Allows performing a search in the current window. |
+| **Macros** | ![macros-button](../assets/en/code-editor/macros.png) | Inserts a macro at the selection. Click the dropdown arrow to display a list of available macros. For more information on how to create and instantiate macros, see [Macros](creating-using-macros.md). |
+| **Expand all / Collapse all** | ![expand-collapse-button](../assets/en/code-editor/expand-collapse-all.png) | These buttons allow expanding or collapsing all the control flow structures of the code. |
+| **Method information** | ![method-information-icon](../assets/en/code-editor/method-information.png) | Displays the [Method Properties](../Concepts/methods.md#project-method-properties) dialog box (project methods only). |
+| **Last clipboard values** | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Displays the last values stored in the clipboard. |
+| **Clipboards** | ![clipboard icons](../assets/en/code-editor/clipboards.png) | Nine clipboards available in the code editor. You can [use these clipboards](./write-class-method.md#multiple-copy-paste-and-numbering-of-clipboards) by clicking on them directly or by using keyboard shortcuts. You can use a [Preferences option](Preferences/methods.md#options-1) to hide them. |
+| **Code navigation** | ![code-navigation-icons](../assets/en/code-editor/tags.png) | Lets you navigate inside methods and classes with automatically tagged content or manually declared markers. See [Navigation dropdown](./write-class-method.md#navigation-dropdown). |
 
 ## Editing area
 
@@ -47,14 +47,14 @@ You can customize the display of the editing area. Any customization is automati
 
 The lists area lets you display one or more lists of elements necessary for writing methods and classes (commands, constants, forms, etc.). You can choose the number and contents of the lists displayed in the window.
 
-By default, the Code Editor displays four lists. You can hide or show all lists by clicking on the icon at the botton right of the window. ![](assets/en/code-editor/show-hide-list.png)
+By default, the Code Editor displays four lists. You can hide or show all lists by clicking on the icon at the botton right of the window. ![](../assets/en/code-editor/show-hide-list.png)
 
 You can enlarge or reduce the relative width of each list area by dragging one of its partitions. It is also possible to adjust the size of the list area in relation to that of the editing area by dragging the dividing line between them.
 
 - Double-clicking on an item in a list causes it to be inserted into the editing area, at the location of the cursor.
 - To **modify the contents** of a list, click on the title area of the list concerned: a pop-up menu appears, enabling you to choose the type of item to be displayed.
 
-![](assets/en/code-editor/list-area.png)
+![](../assets/en/code-editor/list-area.png)
 
 - To add or remove a list, click in the title area of one of the lists and choose the corresponding command in the pop-up menu.
     The **Remove this list** command is disabled when you click on the last list. If you want to hide all the lists, you must either click on the **show or hide lists**  button at the bottom right of the window or hide them by default in the **Preferences**.
@@ -119,12 +119,12 @@ Displaying the line numbers makes it easier to find your way around in the windo
 
 The status bar located at the bottom right part of the editor window displays the position of the cursor at all times:
 
-![](assets/en/code-editor/status-bar.png)
+![](../assets/en/code-editor/status-bar.png)
 
 - **Ln**: Line number
 - **Col**: Column number, i.e., the level in the hierarchy of programming structures. The first level is 0. The column number is useful for debugging since this information can be provided by the interpreter in the event of an error in the code.
 - **Ch**: Location of character in the line.
-- ![](assets/en/code-editor/show-hide-list.png): Hide/display lists.
+- ![](../assets/en/code-editor/show-hide-list.png): Hide/display lists.
 
 
 
@@ -172,7 +172,7 @@ By default, the drag-and-drop mechanism moves the selected text. In order to cop
 
 You can write a single statement on several lines by terminating each line of the statement with a backslash `\` character. 4D will consider all the lines at once. For example, both the following statements are equivalent:
 
-![](assets/en/code-editor/entry-several-lines.png)
+![](../assets/en/code-editor/entry-several-lines.png)
 
 ### Changing case  
 
@@ -201,13 +201,13 @@ In addition to the standard copy-paste operation, 4D offers two additional funct
 
 * The program stores the last 10 "copy" or "cut" actions that were performed in the Code Editor in memory during the current session. Each of the different contents saved in this way can be reused at any time. To do this, use the **Clipboard History** command of the Code Editor context menu or the "Last Clipboard values" button of the toolbar:
 
-    ![](assets/en/code-editor/last-clipboard-values-2.png)
+    ![](../assets/en/code-editor/last-clipboard-values-2.png)
 
     The first few words of the copied or cut items are displayed. Select an item to insert it at the current location of the cursor.
 
 * Nine additional numbered clipboards are available and can be employed directly using the buttons of the Code Editor toolbar or using keyboard shortcuts:
 
-![](assets/en/code-editor/clipboards-2.png)
+![](../assets/en/code-editor/clipboards-2.png)
 
 |Platform|Copy selected text to a clipboard|Paste contents of a clipboard at cursor location|
     |--|--|--|
@@ -227,7 +227,7 @@ You can move the line where the cursor is directly without selecting it first us
 
 Colored bars instantly show you where lines of code were modified since the method was opened:
 
-![](assets/en/code-editor/change-bars.png)
+![](../assets/en/code-editor/change-bars.png)
 
 The change bars change colors to indicate whether or not the modifications were saved:
 
@@ -240,26 +240,26 @@ The Code Editor provides autocomplete functions. 4D automatically displays sugge
 
 In the example given below, typing the string "cop" causes the display of a blue triangle indicating that several suggestions are available:
 
-![](assets/en/code-editor/autocomplete-1.png)
+![](../assets/en/code-editor/autocomplete-1.png)
 
 When the characters you enter correspond to a single possibility, this suggested value appears greyed out (and is inserted if you hit the **Tab** key):
-![](assets/en/code-editor/autocomplete-2.png) ---> ![](assets/en/code-editor/autocomplete-3.png)
+![](../assets/en/code-editor/autocomplete-2.png) ---> ![](../assets/en/code-editor/autocomplete-3.png)
 
 > If you checked the **Insert () and closing } ) ] "** option in the **Methods** page of the **Preferences**, 4D will also automatically add **()** after a 4D command, keyword or project method that requires one or more mandatory arguments (after accepting a suggestion or completion):
-![](assets/en/code-editor/insert-and-closing-1.png) -> ![](assets/en/code-editor/insert-and-closing-2.png)
+![](../assets/en/code-editor/insert-and-closing-1.png) -> ![](../assets/en/code-editor/insert-and-closing-2.png)
 
 Autocompletion also works with code structures (e.g. If..End if, For each...End for each): when you enter the first part of the structure, the Code Editor will automatically suggest the closing part:
-![](assets/en/code-editor/autocomplete-code-structures.png)
+![](../assets/en/code-editor/autocomplete-code-structures.png)
 
 If there are several suggestions available, 4D displays them in a pop-up list when you hit the **Tab** key:
 
-![](assets/en/code-editor/autocomplete-popup.png)
+![](../assets/en/code-editor/autocomplete-popup.png)
 
 The list is in alphabetical order. Choose the value by double-clicking it or scroll the list using the arrow keys of the keyboard and then hit **Enter**, **Carriage Return** or **Tab** to insert the selected value.
 
 By default, you can also insert a suggested value by hitting one of the following delimiter `( ; : = < [ {` keys after selecting a value: the value inserted is then followed by the delimiter, ready for data entry.
 
-![](assets/en/code-editor/autocomplete-delimiter.png)  +  **(** key --> ![](assets/en/code-editor/autocomplete-delimiter-2.png)
+![](../assets/en/code-editor/autocomplete-delimiter.png)  +  **(** key --> ![](../assets/en/code-editor/autocomplete-delimiter-2.png)
 
 > You can disable the use of delimiters for inserting suggested values in **Preferences** > **Methods** > **Options**.
 
@@ -289,13 +289,13 @@ If the characters typed correspond to different types of objects, the list displ
 * type a dot "." after an object or
 * use the Tab key after a dereferenced object pointer "->".
 
-![](assets/en/code-editor/autocomplete-object-attributes.png)
+![](../assets/en/code-editor/autocomplete-object-attributes.png)
 
 > The `length` property is always included for use with collections.
 
 Once created, property names are stored in an internal global list and are available anytime a method/class/function is opened, closed or changes focus.
 
-![](assets/en/code-editor/autocomplete-object-attributes-2.png)
+![](../assets/en/code-editor/autocomplete-object-attributes-2.png)
 
 The list of suggestions is dynamically updated while you edit code. When switching between windows, new/edited property names are always added to the global list. The list is also updated when you preview a method, class or function in the Explorer.
 
@@ -352,9 +352,9 @@ Standard keyboard shortcuts to navigate the code are available in 4D's Code Edit
 
 ## Checking and correcting syntax errors  
 
-4D automatically checks the method syntax to see if it is correct. If you enter text or select a component that is not syntactically correct, 4D displays a symbol to indicate the incorrect expression ![](assets/en/code-editor/incorrect-expression-icon.png). When you move the mouse over the symbol, a help tip displays the cause of the error:
+4D automatically checks the method syntax to see if it is correct. If you enter text or select a component that is not syntactically correct, 4D displays a symbol to indicate the incorrect expression ![](../assets/en/code-editor/incorrect-expression-icon.png). When you move the mouse over the symbol, a help tip displays the cause of the error:
 
-![](assets/en/code-editor/incorrect-expression-message.png)
+![](../assets/en/code-editor/incorrect-expression-message.png)
 
 When entering code, you can immediately check the syntax of the current line (without advancing to the next line) by pressing the **Enter** key on the numeric keypad. 4D evaluates the line, formats it, marks any errors, and places the insertion point at the end of the line. When a line of a method, class or function is marked as having improper syntax, check and fix the entry. If the line becomes correct, 4D removes the error symbol. When you save or close the window, the entire method is validated. You can also force validation by pressing the **Enter** key.
 
@@ -364,7 +364,7 @@ When the method, class or function is validated, 4D checks for:
 * the structure of statements (`If`, `End if` and so on)
 * matching enclosing characters in the code such as parentheses or quotation marks. When you type an enclosing character, 4D indicates the match by framing the start/end characters with gray rectangles:
 
-![](assets/en/code-editor/matching-enclosing-characters.png)
+![](../assets/en/code-editor/matching-enclosing-characters.png)
 
 > If you click on an enclosing character in the code, 4D indicates its match with gray rectangles by default. You can modify the way 4D indicates matching enclosing characters or disable this feature in **Preferences** > **Methods** > **Options** > **Matching parentheses**.
 
@@ -379,21 +379,21 @@ The Code Editor provides various contextual information using help tips. They ap
 * **Errors**: When you mouse over the symbol indicating an error to the left of the editing area, a help tip displays the cause of the error (see [Checking and correcting syntax errors](#checking-and-correcting-syntax-errors)).
 
 * **4D command documentation**: When you set the cursor in a command name or parameter(s), the status bar displays the syntax of the command. If you write or select a parameter, the area shows the current parameter in **bold**:
-    ![](assets/en/code-editor/status-bar-bold.png)
+    ![](../assets/en/code-editor/status-bar-bold.png)
     When you move the mouse over a 4D command, a help tip provides the command syntax along with a brief description of how it works.
-    ![](assets/en/code-editor/status-bar-description.png)
+    ![](../assets/en/code-editor/status-bar-description.png)
 
 * **Variable type and description**: When you mouse over a variable, a help tip shows its type (if it has been explicitly defined in the method) and associated comment, if any.
-    ![](assets/en/code-editor/variable-type.png)
+    ![](../assets/en/code-editor/variable-type.png)
 
 * **Project methods**: When you mouse over a project method or class function, a help tip displays:
 
   * either the comments specified in the Explorer.
   * or the first few lines of the method or class function if it includes comments (lines beginning with // or /*...*/ comment block). It is common practice to insert documentation for the method as well as its parameters in the form of comments at the beginning of the method. You can get this information directly in the help tip, just make sure to first remove any comments found in the Explorer.
         Comments at the beginning of a method:
-        ![](assets/en/code-editor/comments-method.png)
+        ![](../assets/en/code-editor/comments-method.png)
         Help tip in another method:
-        ![](assets/en/code-editor/help-tip.png)  
+        ![](../assets/en/code-editor/help-tip.png)  
 
 * You can also create a **dedicated documentation file** named `<MethodName>.md` in the `<package>/documentation` folder. See [Viewing documentation in the code editor](../Project/documentation.md#viewing-documentation-in-the-code-editor)
 
@@ -429,16 +429,16 @@ Used to surround the content to create inline comments or multiline comment bloc
 Both inline and multiline comment blocks begin with /*and end with*/.
 
 - *Inline comments* -  can be anywhere in the code.The length of inline comments is limited to the maximum size of a line (32,000 characters).
-![](assets/en/code-editor/inline-comment.png)
+![](../assets/en/code-editor/inline-comment.png)
 
 -   *Multiline comment blocks* - can be collapsed or expanded. Multiline comment blocks can be nested and each block  is expandable/collapsable. The comments on the first line of an expandable/collapsable block will remain visible when the block is collapsed. The length of multiline comments is limited to the maximum size of 32,000 characters per line. There is no limit on the number of lines.
-![](assets/en/code-editor/multiline-comment.png)
+![](../assets/en/code-editor/multiline-comment.png)
 
 > Multiline comments at the end of a line are not supported.-  
 
 The **Comment/Uncomment** command, found in the **Method** menu as well as in the Code Editor context menu is used to mark a group of selected lines of code as single line comments, or, on the contrary, to remove the single line comment characters from a selection. To use this command, select the code to be marked as commented, then select the **Comment/Uncomment** command:
 
-![](assets/en/code-editor/comment-uncomment-1.png) --> ![](assets/en/code-editor/comment-uncomment-2.png)
+![](../assets/en/code-editor/comment-uncomment-1.png) --> ![](../assets/en/code-editor/comment-uncomment-2.png)
 
 When the selection contains only active code, the **Comment** command is applied. When the selection includes both active code and commented lines, an additional pair of comment characters ( // ) is added to the latter; this way, they will retain their initial commented status if the line is subsequently "uncommented." When the selection contains only commented lines, the **Uncomment** command is applied.
 
@@ -467,7 +467,7 @@ In the following example, the **Carriage return** character (escape sequence \r)
 
 `ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
 
-![](assets/en/code-editor/carriage-return.png)
+![](../assets/en/code-editor/carriage-return.png)
 
 **Warning:** The `\` (backslash) character is used as a separator in pathnames under Windows. In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash `\` with a double backslash `\\`. For instance, `C:\Folder` will become `C:\\Folder`. However, if you write `"C:\MyDocuments\New"`, 4D will display `"C:\\MyDocuments\New"`. In this case, the second backslash is interpreted incorrectly as `\N` (an existing escape sequence). You must therefore enter a double backslash `\\` when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
 
@@ -480,10 +480,10 @@ Several functions in the Code Editor make code easier to read and facilitate bro
 4D code located inside loops and conditions can now be collapsed or expanded, in order to facilitate the reading of methods:
 
 * Expanded code:
-    ![](assets/en/code-editor/expanded-code.png)
+    ![](../assets/en/code-editor/expanded-code.png)
 
 * Collapsed code:
-    ![](assets/en/code-editor/collapsed-code.png)
+    ![](../assets/en/code-editor/collapsed-code.png)
 
 If you place the mouse over the expand button [...], a help tip appears, displaying the first lines of the hidden code.
 
@@ -530,7 +530,7 @@ Bookmarks are managed using the **Bookmarks** submenu of the **Method** menu:
 
 The navigation dropdown helps you organize your code and navigate more easily inside your classes and methods:
 
-![dropdown-list](assets/en/code-editor/dropdown-list.png)
+![dropdown-list](../assets/en/code-editor/dropdown-list.png)
 
 Some tags are added automatically, and you can complement the dropdown list using [markers](#manual-tagging). 
 
@@ -548,10 +548,10 @@ The following items are added automatically:
 
 |Icon|Item| 
 |---|---|
-|![no-tag-icon](assets/en/code-editor/no-tag.png)|No tag| 
-|![constructor-icon](assets/en/code-editor/constructor.png)|Class constructor or method declaration| 
-|![computed-attribute-icon](assets/en/code-editor/computed-attribute.png)|Computed attribute (get, set, orderBy and query)| 
-|![function-icon](assets/en/code-editor/function.png)|Class function name| 
+|![no-tag-icon](../assets/en/code-editor/no-tag.png)|No tag| 
+|![constructor-icon](../assets/en/code-editor/constructor.png)|Class constructor or method declaration| 
+|![computed-attribute-icon](../assets/en/code-editor/computed-attribute.png)|Computed attribute (get, set, orderBy and query)| 
+|![function-icon](../assets/en/code-editor/function.png)|Class function name| 
 
 
 ### Manual tagging 
@@ -560,9 +560,9 @@ By adding markers in your code, you can add the following tags to the dropdown:
 
 |Icon|Item| 
 |---|---|
-|![mark-tag-icon](assets/en/code-editor/mark-tag.png)|MARK: tag| 
-|![todo-tag-icon](assets/en/code-editor/todo-tag.png)|TODO: tag| 
-|![fixme-icon](assets/en/code-editor/fixme-tag.png)|FIXME: tag|  
+|![mark-tag-icon](../assets/en/code-editor/mark-tag.png)|MARK: tag| 
+|![todo-tag-icon](../assets/en/code-editor/todo-tag.png)|TODO: tag| 
+|![fixme-icon](../assets/en/code-editor/fixme-tag.png)|FIXME: tag|  
 
 You declare them by adding comments such as:
 
@@ -574,11 +574,11 @@ Declarations are not case-sensitive; writing `fixme:` has the same effect.
 
 Adding a hyphen after the `MARK:` tag draws a separating line in the code editor and the dropdown menu. So writing this:
 
-![mark-hyphen-image](assets/en/code-editor/mark-hyphen-editor.png)
+![mark-hyphen-image](../assets/en/code-editor/mark-hyphen-editor.png)
 
 Results in this:
 
-![mark-hyphen-image](assets/en/code-editor/dropdown-organize.png)
+![mark-hyphen-image](../assets/en/code-editor/dropdown-organize.png)
 
 All markers located inside functions are indented in the dropdown list, except for the `MARK:` tags located at the end of functions and not followed by instructions. Those will appear at the first level. 
 

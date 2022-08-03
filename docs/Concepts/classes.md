@@ -64,7 +64,7 @@ Project folder
 To delete an existing class, you can:
 
 - on your disk, remove the .4dm class file from the "Classes" folder,
-- in the 4D Explorer, select the class and click ![](assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu. 
+- in the 4D Explorer, select the class and click ![](../assets/en/Users/MinussNew.png) or choose **Move to Trash** from the contextual menu. 
 
 
 ### Using the 4D interface
@@ -83,9 +83,9 @@ In the **Methods** page of the Explorer, classes are grouped in the **Classes** 
 
 To create a new class, you can:
 
-- select the **Classes** category and click on the ![](assets/en/Users/PlussNew.png) button.
+- select the **Classes** category and click on the ![](../assets/en/Users/PlussNew.png) button.
 - select **New Class...** from the action menu at the bottom of the Explorer window, or from the contexual menu of the Classes group.
-![](assets/en/Concepts/newClass.png)
+![](../assets/en/Concepts/newClass.png)
 - select **New > Class...** from the contexual menu of the Explorer's Home page. 
 
 #### Class code support

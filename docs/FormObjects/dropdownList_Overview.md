@@ -7,7 +7,7 @@ Drop-down lists are form objects that allow the user to select from a list. You 
 
 On macOS, drop-down lists are also sometimes called "pop-up menu". Both names refer to the same objects. As the following example shows, the appearance of these objects can differ slightly according to the platform: 
 
-![](assets/en/FormObjects/popupDropdown_appearance.png)
+![](../assets/en/FormObjects/popupDropdown_appearance.png)
 
 
 ## Drop-down list types
@@ -58,11 +58,11 @@ Form.myDrop.currentValue:="Select a fruit"
 
 The drop-down list is displayed with the placeholder string:
 
-![](assets/en/FormObjects/fruits2.png)
+![](../assets/en/FormObjects/fruits2.png)
 
 After the user selects a value:
 
-![](assets/en/FormObjects/fruits3.png)
+![](../assets/en/FormObjects/fruits3.png)
 
 ```4d
 Form.myDrop.values // ["apples","nuts","pears","oranges","carrots"]
@@ -139,7 +139,7 @@ To associate a drop-down list with a field or variable, enter the name of the fi
 
 When the form is executed, 4D automatically manages the drop-down list during input or display: when a user chooses a value, it is saved in the field; this field value is shown in the drop-down list when the form is displayed:
 
-![](assets/en/FormObjects/popupDropdown_choiceList.png)
+![](../assets/en/FormObjects/popupDropdown_choiceList.png)
 
 
 #### Selected item value or Selected item reference
@@ -150,7 +150,7 @@ When you have associated a drop-down list with a choice list and with a field or
 
 A hierarchical drop-down list has a sublist associated with each item in the list. Here is an example of a hierarchical drop-down list:
 
-![](assets/en/FormObjects/popupDropdown_hierar.png)
+![](../assets/en/FormObjects/popupDropdown_hierar.png)
 
 > In forms, hierarchical drop-down lists are limited to two levels. 
 

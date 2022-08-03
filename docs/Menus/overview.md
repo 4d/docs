@@ -5,7 +5,7 @@ title: Overview
 
 You can create menu bars and menus for your 4D applications. Because pull-down menus are a standard feature of any desktop application, their addition will make your applications easier to use and will make them feel familiar to users. 
 
-![](assets/en/Menus/menubar.png)
+![](../assets/en/Menus/menubar.png)
 
 A **menu bar** is a group of menus that can be displayed on a screen together. Each **menu** on a menu bar can have numerous menu commands in it, including some that call cascading submenus (or hierarchical submenus). When the user chooses a menu or submenu command, it calls a project method or a standard action that performs an operation.
 
@@ -27,7 +27,7 @@ To create menus and menu bars, you can use either:
 ## Menu editor
 The Menu editor is accessed using the **Menus** button of the Toolbox. 
 
-![](assets/en/Menus/editor1.png)
+![](../assets/en/Menus/editor1.png)
 
 Menus and menu bars are displayed as two items of the same hierarchical list, on the left side of the dialog box. Each menu can be attached to a menu bar or to another menu. In the second case, the menu becomes a sub-menu.
 

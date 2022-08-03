@@ -9,7 +9,7 @@ The 4D View Pro area properties can be configured using the Property list. Sprea
 
 Using the area's property list, you can set [4D View Pro object properties](FormObjects/viewProArea_overview.md#supported-properties) such as **Object Name**, [**Variable or Expression**](#4d-view-pro-form-object-variable), **Appearance**, **Action**, and **Events**.
 
-![](assets/en/ViewPro/vpPropertyList.PNG)
+![](../assets/en/ViewPro/vpPropertyList.PNG)
 
 
 
@@ -17,7 +17,7 @@ Using the area's property list, you can set [4D View Pro object properties](Form
 
 You can select the interface to use with your 4D View Pro form areas in the **Property List**, under **Appearance**:  
 
-![](assets/en/ViewPro/vpUserInterface.png)
+![](../assets/en/ViewPro/vpUserInterface.png)
 
 > You can also use the [`userInterface`](FormObjects/properties_Appearance.md#user-interface) and [`withFormulaBar`](FormObjects/properties_Appearance.md#show-formula-bar)(only with the "toolbar" interface) JSON properties.  
 
@@ -26,7 +26,7 @@ Interfaces allow for basic modifications and data manipulation. User-defined mod
 
 #### Ribbon
 
-![](assets/en/ViewPro/vpRibbon.png)
+![](../assets/en/ViewPro/vpRibbon.png)
 
 #### Toolbar
 
@@ -34,7 +34,7 @@ Enabling the Toolbar interface displays the [**Show Formula Bar**](FormObjects/p
 
 With visible formula bar:
 
-![](assets/en/ViewPro/vpToolbar.png)
+![](../assets/en/ViewPro/vpToolbar.png)
 
 #### Features
 
@@ -137,7 +137,7 @@ Defining a format pattern ensures that the content of your 4D View Pro documents
 
 For example, when using the [VP SET VALUE](method-list.md#vp-set-value) or [VP SET NUM VALUE](method-list.md#vp-set-num-value) methods to enter amounts in an invoice, you may want the currency symbols ($, €, ¥, etc.) to be aligned regardless of the space required by the number (i.e., whether the amount is $5.00 or $5,000.00). You could use formatting characters and spectify the pattern _($* #,##0.00_) which would display amounts as shown:
 
-![](assets/en/ViewPro/apx_vpCellFormat1.PNG)
+![](../assets/en/ViewPro/apx_vpCellFormat1.PNG)
 
 Note that when creating your own format patterns, only the display of the data is modified. The value of the data remains unchanged.
 
@@ -150,7 +150,7 @@ Number formats apply to all number types (e.g., positive, negative, and zeros).
 |---|---|---|
 |0|	Placeholder that displays zeros.|	#.00 will display 1.1 as 1.10  |
 |.|	Displays a decimal point|	0.00 will display 1999 as 1999.00|
-|,	|Displays the thousands separator in a number.<p><p> Thousands are separated by commas if the format contains a comma enclosed by number signs "#" or by zeros. A comma following a digit placeholder scales the number by 1,000.|	#,0 will display 12200000 as 12,200,000|
+|,	|Displays the thousands separator in a number. Thousands are separated by commas if the format contains a comma enclosed by number signs "#" or by zeros. A comma following a digit placeholder scales the number by 1,000.|	#,0 will display 12200000 as 12,200,000|
 |\_	|Skips the width of the next character.	|Usually used in combination with parentheses to add left and right indents, \_( and _) respectively.|
 |@|	Formatter for text. Applies the format to all text in the cell|	"\[Red]@" applies the red font color for text values.|
 |*	|Repeats the next character to fill the column width.|	0*- will include enough dashes after a number to fill the cell, whereas *0 before any format will include leading zeros.|
@@ -179,15 +179,15 @@ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_
 
 |Constant|	Value|	Comment|
 |---|---|---|
-|`vk pattern full date time`|	"_fullDateTimePattern_"	|ISO 8601 format for the full date and time in current localization.<p><p>USA default pattern: "dddd, dd MMMM yyyy HH:mm:ss"|
-|`vk pattern long date`|	"_longDatePattern_"	|ISO 8601 format for the full date in current localization.<p><p>USA default pattern: "dddd, dd MMMM yyyy"|
-|`vk pattern long time`|	"_longTimePattern_"	|ISO 8601 format for the time in current localization.<p><p>USA default pattern: "HH:mm:ss"|
-|`vk pattern month day`|	"_monthDayPattern_"	|ISO 8601 format for the month and day in current localization.<p><p>USA default pattern: "MMMM dd"|
-|`vk pattern short date`|	"_shortDatePattern_"	|Abbreviated ISO 8601 format for the date in current localization.<p><p>USA default pattern: "MM/dd/yyyy"|
-|`vk pattern short time`|	"_shortTimePattern_"|	Abbreviated ISO 8601 format for the time in current localization.<p><p>USA default pattern: "HH:mm"|
-|`vk pattern sortable date time`|	"_sortableDateTimePattern_"	|ISO 8601 format for the date and time in current localization which can be sorted.<p><p>USA default pattern: "yyyy\'-\'MM\'-\'dd\'T\'HH\':\'mm\':\'ss"|
-|`vk pattern universal sortable date time`|	"_universalSortableDateTimePattern_"	|ISO 8601 format for the date and time in current localization using UTC which can be sorted.<p><p>USA default pattern: "yyyy\'-\'MM\'-\'dd HH\':\'mm\':\'ss\'Z\'"|
-|`vk pattern year month`|"_yearMonthPattern_"|	ISO 8601 format for the month and year in current localization.<p><p>USA default pattern: "yyyy MMMM"|
+|`vk pattern full date time`|	"_fullDateTimePattern_"	|ISO 8601 format for the full date and time in current localization.USA default pattern: "dddd, dd MMMM yyyy HH:mm:ss"|
+|`vk pattern long date`|	"_longDatePattern_"	|ISO 8601 format for the full date in current localization.USA default pattern: "dddd, dd MMMM yyyy"|
+|`vk pattern long time`|	"_longTimePattern_"	|ISO 8601 format for the time in current localization.USA default pattern: "HH:mm:ss"|
+|`vk pattern month day`|	"_monthDayPattern_"	|ISO 8601 format for the month and day in current localization.USA default pattern: "MMMM dd"|
+|`vk pattern short date`|	"_shortDatePattern_"	|Abbreviated ISO 8601 format for the date in current localization.USA default pattern: "MM/dd/yyyy"|
+|`vk pattern short time`|	"_shortTimePattern_"|	Abbreviated ISO 8601 format for the time in current localization.USA default pattern: "HH:mm"|
+|`vk pattern sortable date time`|	"_sortableDateTimePattern_"	|ISO 8601 format for the date and time in current localization which can be sorted.USA default pattern: "yyyy\'-\'MM\'-\'dd\'T\'HH\':\'mm\':\'ss"|
+|`vk pattern universal sortable date time`|	"_universalSortableDateTimePattern_"	|ISO 8601 format for the date and time in current localization using UTC which can be sorted.USA default pattern: "yyyy\'-\'MM\'-\'dd HH\':\'mm\':\'ss\'Z\'"|
+|`vk pattern year month`|"_yearMonthPattern_"|	ISO 8601 format for the month and year in current localization.USA default pattern: "yyyy MMMM"|
 
 
 #### Example  
@@ -312,12 +312,12 @@ The following special characters allow the automatic addition or formatting of i
 |N	|Page count|	printInfo.headerLeft:="There are &N pages."|	There are 10 pages. |
 |D	|Current date (yyyy/mm/dd format)|	printInfo.headerLeft:="It is &D."|	It is 2015/6/19. |
 |T	|Current time|	printInfo.headerLeft:="It is &T."|	It is 16:30:36.|
-|G	|Image|	printInfo.headerLeftImage:=smiley<br>printInfo.headerLeft:="&G"	|![](assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
+|G	|Image|	printInfo.headerLeftImage:=smiley<br>printInfo.headerLeft:="&G"	|![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
 |S	|Strikethrough|	printInfo.headerLeft:="&SThis is text."	|~~This is text.~~|
 |U	|Underline	|printInfo.headerLeft:="&UThis is text."|	<ins>This is text.</ins>|
 |B|	Bold|	printInfo.headerLeft:="&BThis is text."	|**This is text.**|
 |I	|Italic|	printInfo.headerLeft:="&IThis is text."	|*This is text.*|
-|"	|Font prefix|	printInfo.headerLeft:="&\"Lucida Console\"&14This is text."	|![](assets/en/ViewPro/apx_vpPrintAttributes2.PNG)|
+|"	|Font prefix|	printInfo.headerLeft:="&\"Lucida Console\"&14This is text."	|![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG)|
 |K|	Text Color prefix|	printInfo.headerLeft:="&KFF0000This is text."|	<span style="color:red">This is text</span>. 
 |F|	Workbook name|	printInfo.headerLeft:="&F"|	2019 Monthly Revenue Forecasts|
 |A|	Spreadsheet name|	printInfo.headerLeft:="&A"|	June 2019 revenue forecast |
@@ -399,7 +399,7 @@ Show / Hide attributes are used to specify the visibility (printing) of 4D View 
 
 |Property|	Type|	Description|
 |---|---|---|
-|showBorder|	boolean	|Prints the outline border.<p><p>Default value = "true"|
+|showBorder|	boolean	|Prints the outline border.Default value = "true"|
 |showColumnHeader	|longint	|Column header print settings. Available values: `vk print visibility hide`, `vk print visibility inherit` (default), `vk print visibility show`, `vk print visibility show once`|
 |showGridLine|	boolean	|Prints the gridlines.<p>Default value = "false"|
 |showRowHeader	|longint	|Row headers print settings. Available values: `vk print visibility hide`, `vk print visibility inherit` (default), `vk print visibility show`, `vk print visibility show once`|

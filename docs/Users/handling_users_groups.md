@@ -44,8 +44,8 @@ The Administrator cannot:
 
 Both the Designer and Administrator are available by default in all applications. In the [user management dialog box](#users-and-groups-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
 
-- Designer icon: ![](assets/en/Users/iconDesigner.png)
-- Administrator icon: ![](assets/en/Users/iconAdmin.png)
+- Designer icon: ![](../assets/en/Users/iconDesigner.png)
+- Administrator icon: ![](../assets/en/Users/iconAdmin.png)
 
 You can rename the Designer and Administrator users. In the language, the Designer ID is always 1 and the Administrator ID is always 2.
 
@@ -57,7 +57,7 @@ The Designer and Administrator can each create up to 16,000 groups and 16,000 us
 
 The editor for users is located in the Toolbox of 4D. 
 
-![](assets/en/Users/editor.png)
+![](../assets/en/Users/editor.png)
 
 > Users and groups editor can be displayed at runtime using the [EDIT ACCESS](https://doc.4d.com/4dv19R/help/command/en/page281.html) command. 
 > The whole users and groups configuration can also be edited during application execution using 4D language commands of the `Users and Groups` theme.  
@@ -73,7 +73,7 @@ To add a user from the Toolbox :
 
 The list of users displays all the users, including the [Designer and the Administrator](#designer-and-administrator).
 
-2. Click on the ![](assets/en/Users/PlussNew.png) button located below the list of users.
+2. Click on the ![](../assets/en/Users/PlussNew.png) button located below the list of users.
 OR
 Right-click in the list of users and choose **Add** or **Duplicate** in the context menu.
 
@@ -98,7 +98,7 @@ The membership of users to different groups can also be set by group on the [Gro
 
 
 To delete a user, select it then click the deletion button or use the **Delete** command of the context menu.
-![](assets/en/Users/MinussNew.png)
+![](../assets/en/Users/MinussNew.png)
 
 Deleted user names no longer appear in the Users editor. Note that the IDs for deleted users are reassigned when new user accounts are created. 
 
@@ -124,7 +124,7 @@ To create a group:
 1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button.
 4D displays the groups editor window. The list of groups displays all the groups of the application project.
 
-2. Click on the ![](assets/en/Users/PlussNew.png) button located below the list of groups.  
+2. Click on the ![](../assets/en/Users/PlussNew.png) button located below the list of groups.  
 OR  
 Right-click in the list of groups and choose the **Add** or **Duplicate** command in the context menu.
 
@@ -144,7 +144,7 @@ You can place any user or group into a group, and you can also place the group i
 
 To place a user or group in a group, you simply need to check the "Member" option for each user or group in the member attribution area:
 
-![](assets/en/Users/groups.png)
+![](../assets/en/Users/groups.png)
 
 If you check the name of a user, this user is added to the group. If you check the name of a group, all the users of the group are added to the new group.
 The affiliated user or group will then have the same access privileges as those assigned to the new group. 
@@ -163,7 +163,7 @@ Distributing access to the plug-ins lets you control the use of the licenses you
 
 The “Plug-in” area on the Groups page of the tool box lists all the plug-ins loaded by the 4D application. To give a group access to a plug-in, you simply need to check the corresponding option. 
 
-![](assets/en/Users/plugins.png)
+![](../assets/en/Users/plugins.png)
 
 The **4D Client Web Server** and **4D Client SOAP Server** items lets you control the possibility of Web and SOAP (Web Services) publication for each 4D in remote mode. These licenses are considered as plug-in licenses by 4D Server. Therefore, in the same way as for plug-ins, you can restrict the right to use these licenses to a specific group of users.
 
@@ -177,13 +177,13 @@ In this example, a user is assigned to one of three groups depending on their le
 The groups are then nested so that privileges are correctly distributed to the users of each group. 
 
 - The General Management group contains only “high-level” users.
-![](assets/en/Users/schema1.png)
+![](../assets/en/Users/schema1.png)
 
 - The Finances group contains data maintenance users as well as General Management users, thus the users in General Management have the privileges of the Finances group as well.
-![](assets/en/Users/schema2.png)
+![](../assets/en/Users/schema2.png)
 
 - The Accounting group contains data entry users as well as Finances group users, so the users who belong to the Finances group and the General Management group enjoy the privileges of the Accounting group as well.
-![](assets/en/Users/schema3.png)
+![](../assets/en/Users/schema3.png)
 
 You can decide which access privileges to assign to each group based on the level of responsibility of the users it includes.
 
@@ -201,7 +201,7 @@ Groups are assigned access privileges to specific parts or features of the appli
 
 These accesses are defined in the Settings dialog. The following example shows Design and Runtime explorer access rights being assigned to the "Devs" group: 
 
-![](assets/en/Users/Access1.png)
+![](../assets/en/Users/Access1.png)
 
 You also use groups to [distribute available licenses](#assigning-a-group-to-a-plug-in-or-to-a-server). This distribution is defined in the Groups editor.
 

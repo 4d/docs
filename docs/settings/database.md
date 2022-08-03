@@ -14,7 +14,7 @@ You use this page to configure data storage on disk for the 4D database.
 
 This option allows configuration of the application operation when opening a locked data file at the operating system level. 4D includes a mechanism that automatically prevents the opening of a database when its data file, or one of its segments, is locked. In this case, when this detection option is activated, 4D displays a warning message and does not open the database:
 
-![](assets/en/settings/data-locked.png)
+![](../assets/en/settings/data-locked.png)
 
 Unless this option is checked, it is not possible to open a database when its data file is locked (default operation for 4D databases).
 
@@ -28,7 +28,7 @@ This area lets you change the location of temporary files created while 4D is ru
 
 The current location of this folder is displayed in the "Current:" area. You can click in this area to show the pathname as a scrolldown list:
 
-![](assets/en/settings/temporary-file-location.png)
+![](../assets/en/settings/temporary-file-location.png)
 
 Three location options are provided:
 
@@ -75,7 +75,7 @@ This algorithm is used by default in Japanese versions of 4D. If needed, you can
 To disable *MeCab*, just check the **Consider only non-alphanumeric chars for keywords** option:
 
 
-![](assets/en/settings/non-alphanumeric-chars.png)
+![](../assets/en/settings/non-alphanumeric-chars.png)
 
 
 ## Memory page
@@ -98,7 +98,7 @@ You use the settings on this tab to configure the cache memory for the database.
     Percentage of the available memory used for the cache = 50%
     Maximum size = 1 GB Minimum size = 128 MB*
 
-    ![](assets/en/settings/memory-maximum-size.png)
+    ![](../assets/en/settings/memory-maximum-size.png)
 
 -   **Calculation of adaptive cache not checked**:  this mode, you set the size of the memory cache for the database yourself. 4D then displays an entry area that allows setting the memory cache to use as well as information related to the physical memory (RAM available on the machine), the current cache and cache after restart (taking your changes into account).
     

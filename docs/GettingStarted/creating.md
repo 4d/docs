@@ -15,7 +15,7 @@ New 4D application projects can be created from **4D** or **4D Server**. In any 
 To create a new project:
 
 1. Launch 4D or 4D Server.
-2. Select **New > Project...** from the **File** menu: <p>![](assets/en/getStart/projectCreate1.png)<p>OR<p>(4D only) Select **Project...** from the **New** toolbar button:<p>![](assets/en/getStart/projectCreate2.png)<p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
+2. Select **New > Project...** from the **File** menu: <p>![](../assets/en/getStart/projectCreate1.png)<p>OR<p>(4D only) Select **Project...** from the **New** toolbar button:<p>![](../assets/en/getStart/projectCreate2.png)<p>A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
 
 3. Enter the name of your project folder and click **Save**.<p>
 This name will be used:
@@ -73,7 +73,7 @@ You can use a [`.4DLink` file](#about-4DLink-files) to launch the 4D application
 - double-click or drag and drop the `.4DLink` file onto the 4D application
 - go to **File** > **Open Recent Projects** and select a project
 
-![open-recent-projects](assets/en/Project/4Dlinkfiles.png)
+![open-recent-projects](../assets/en/Project/4Dlinkfiles.png)
 
 A .4DLink file of "remote project" type can be copied and used on several machines.
 
@@ -110,10 +110,10 @@ Since the editors use files on the disk, potential conflicts could happen if the
 The 4D development framework includes a file access manager to control concurrent access:
 
 - if an open file is read-only at the OS level, a locked icon is displayed in the editor: 
-![](assets/en/Project/lockicon.png)
+![](../assets/en/Project/lockicon.png)
 - if an open file is edited concurrently from different locations, 4D displays an alert dialog when trying to save the changes:
 
-![](assets/en/Project/projectReload.png)  
+![](../assets/en/Project/projectReload.png)  
 	- **Yes**: discard editor changes and reload the modified version
 	- **No**: save changes and overwrite the other version
 	- **Cancel**: do not save

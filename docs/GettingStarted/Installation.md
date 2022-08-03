@@ -26,11 +26,11 @@ Additional technical details are available on the 4D website's [Resources page](
 
 Once you have completed the installation, you can start 4D and sign in. To do so, double-click on the 4D product icon.
 
-![](assets/en/getStart/logo4d.png)
+![](../assets/en/getStart/logo4d.png)
 
 The Welcome Wizard then appears:
 
-![](assets/en/getStart/welcome2.png)
+![](../assets/en/getStart/welcome2.png)
 
 - If you want to discover and explore 4D, click on the **free trial** link. You will only be asked to sign in or to create a 4D account.
 

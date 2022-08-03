@@ -9,7 +9,7 @@ When a 4D database is running on 4D Server in interpreted mode, you can debug th
 
 On a remote machine, the [debugger window](debugger.md) displays a specific server icon and a blue background color to indicate that you are debugging server code: 
 
-![debugger-window-remote](assets/en/Debugging/debuggerWindowRemote.png)
+![debugger-window-remote](../assets/en/Debugging/debuggerWindowRemote.png)
 
 This feature is particularly useful when 4D Server runs in headless mode (see [Command Line Interface](../Admin/cli.md)), or when access to the server machine is not easy.  
 
@@ -83,9 +83,9 @@ While the debugger is already attached to a remote 4D client or to 4D Server, no
 
 If a machine tries to attach the debugger while it is already attached, the attachment is rejected and a dialog box appears:
 
-![attach-debugger-dialog](assets/en/Debugging/attach-debugger-dialog.png)
+![attach-debugger-dialog](../assets/en/Debugging/attach-debugger-dialog.png)
 
-![attach-debugger-dialog-2](assets/en/Debugging/attach-debugger-dialog-2.png)
+![attach-debugger-dialog-2](../assets/en/Debugging/attach-debugger-dialog-2.png)
 
 Attaching the debugger in this case requires that:
 

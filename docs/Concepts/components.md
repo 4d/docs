@@ -24,4 +24,4 @@ When an installed component contains methods, they appear in the **Component Met
 
 You can select a component method and click on the **Documentation** button of the Explorer to get information about it, [if any](Project/documentation.md). 
 
-![alt-text](assets/en/Project/compDoc.png)
+![alt-text](../assets/en/Project/compDoc.png)

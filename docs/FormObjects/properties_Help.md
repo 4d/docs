@@ -7,7 +7,7 @@ title: Help
 
 This property allows associating help messages with active objects in your forms. They can be displayed at runtime:
 
-![](assets/en/FormObjects/property_helpTip.png) 
+![](../assets/en/FormObjects/property_helpTip.png) 
 
 > - The display delay and maximum duration of help tips can be controlled using the ``Tips delay`` and ``Tips duration`` selectors of the **[SET DATABASE PARAMETER](https://doc.4d.com/4Dv17R5/4D/17-R5/SET-DATABASE-PARAMETER.301-4128139.en.html)** command.
 > - Help tips can be globally disabled or enabled for the application using the Tips enabled selector of the [**SET DATABASE PARAMETER**](https://doc.4d.com/4Dv17R5/4D/17-R5/SET-DATABASE-PARAMETER.301-4128139.en.html) command.

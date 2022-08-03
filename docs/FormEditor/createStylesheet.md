@@ -22,9 +22,9 @@ The 4D Tool Box provides a **Style Sheets** page as a shortcut option to create 
 
 1.	Open the **Style Sheets** page by choosing the **Tool Box > Style Sheet** from the Design menu or click on the **Tool Box** icon in the Form Editor toolbar.
 
-	![](assets/en/FormEditor/stylesheets.png)
+	![](../assets/en/FormEditor/stylesheets.png)
 	
-2.	Select the type of style sheet to create and click on the **Create** or **Edit** button: ![](assets/en/FormEditor/createButton.png)
+2.	Select the type of style sheet to create and click on the **Create** or **Edit** button: ![](../assets/en/FormEditor/createButton.png)
 
 3. The style sheet will open in your default text editor.  
 

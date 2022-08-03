@@ -29,11 +29,11 @@ Building a project package can be carried out using:
 
 To display the Build application dialog, select **Design** > **Build Application...** from the menu bar.
 
-![](assets/en/Project/buildappProj.png)
+![](../assets/en/Project/buildappProj.png)
 
 The Build Application dialog includes several pages that can be accessed using tabs: 
 
-![](assets/en/Project/appbuilderProj.png)
+![](../assets/en/Project/appbuilderProj.png)
 
 
 Building can only be carried out once the project is compiled. If you select this command without having previously compiled the project, or if the compiled code does not correspond to the interpreted code, a warning dialog box appears indicating that the project must be (re)compiled.
@@ -65,7 +65,7 @@ Checking this file may help you saving time during the subsequent deployment ste
 
 ## Application name and destination folder
 
-![](assets/en/Project/buidappstructureProj.png)
+![](../assets/en/Project/buidappstructureProj.png)
 
 Enter the name of the application in **Application Name**.
 
@@ -77,7 +77,7 @@ Specify the folder for the built application in **Destination Folder**. If the s
 
 This tab allows you to build a standard compiled structure file and/or a compiled component:
 
-![](assets/en/Project/appbuilderProj.png)
+![](../assets/en/Project/appbuilderProj.png)
 	
 
 ### Build compiled structure
@@ -119,7 +119,7 @@ The *MyComponent.4dbase* folder contains:
 
 This tab allows you can build a stand-alone, single-user version of your application: 
 
-![](assets/en/Project/standaloneProj.png)
+![](../assets/en/Project/standaloneProj.png)
 
 ### Build stand-alone Application
 
@@ -213,7 +213,7 @@ Items must be installed:
 
 On this tab, you can build customized client-server applications that are homogenous, cross-platform and with an automatic update option. 
 
-![](assets/en/Desktop/client-server-buildapp.png)
+![](../assets/en/Desktop/client-server-buildapp.png)
 
 ### What is a Client/Server application?  
 
@@ -277,7 +277,7 @@ To allow Apple Silicon clients to connect to a Server application built on Windo
 
 Then, you can copy that structure to your Windows machine, and use it to build the server application: 
 
-![](assets/en/Desktop/allow-mac-clients.png)
+![](../assets/en/Desktop/allow-mac-clients.png)
 
 #### Compiled structure location
 
@@ -451,11 +451,11 @@ Customizing the client-side cache folder name can be useful when your client app
 
 - Default configuration (*for each connection to a server, a specific cache folder is downloaded/updated*):
 
-![](assets/en/Admin/cachea.png)
+![](../assets/en/Admin/cachea.png)
 
 - Using the `ClientServerSystemFolderName` key (*a single cache folder is used for all servers*):
 
-![](assets/en/Admin/cacheb.png)
+![](../assets/en/Admin/cacheb.png)
 
 
 #### Server cache folder
@@ -464,11 +464,11 @@ Customizing the server-side cache folder name is useful when you run several ide
 
 - Default configuration (*same server applications share the same cache folder*):
 
-![](assets/en/Admin/cacheServera.png)
+![](../assets/en/Admin/cacheServera.png)
 
 - Using the `ServerStructureFolderName` key (*a dedicated cache folder is used for each server application*):
 
-![](assets/en/Admin/cacheServerb.png)
+![](../assets/en/Admin/cacheServerb.png)
 
 
 
@@ -480,7 +480,7 @@ On this tab, you set each [**plug-in**](Concepts/plug-ins.md), [**component**](C
 
 The page lists the elements loaded by the current 4D application:
 
-![](assets/en/Desktop/buildappcomps.png)
+![](../assets/en/Desktop/buildappcomps.png)
 
 *	 **Active** column - Indicates that the items will be integrated into the application package built. All the items are checked by default. To exclude a plug-in, a component, or a module, deselect the check box next to it. 
 
@@ -524,7 +524,7 @@ The Licences & Certificate page can be used to:
 *	designate the license number(s) that you want to integrate into your single-user stand-alone application
 *	sign the application by means of a certificate in macOS.
 
-![](assets/en/Admin/buildappCertif.png)
+![](../assets/en/Admin/buildappCertif.png)
 
 ### Licenses
 
@@ -558,21 +558,21 @@ The application builder can sign merged 4D applications under macOS (single-user
 
 - Check the **Sign application** option to include certification in the application builder procedure for OS X. 4D will check the availability of elements required for certification when the build occurs: 
 
-![](assets/en/Admin/buildapposxcertProj.png)
+![](../assets/en/Admin/buildapposxcertProj.png)
 
 This option is displayed under both Windows and macOS, but it is only taken into account for macOS versions.
 
 *	**Name of certificate** - Enter the name of your developer certificate validated by Apple in this entry area. The certificate name is usually the name of the certificate in the Keychain Access utility (part in red in the following example):
 
-![](assets/en/Project/certificate.png)
+![](../assets/en/Project/certificate.png)
 
 To obtain a developer certificate from Apple, Inc., you can use the commands of the Keychain Access menu or go here: [http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html](http://developer.apple.com/library/mac/#documentation/Security/Conceptual/CodeSigningGuide/Procedures/Procedures.html).
 
 >This certificate requires the presence of the Apple codesign utility, which is provided by default and usually located in the “/usr/bin/” folder. If an error occurs, make sure that this utility is present on your disk.
 
 * **Generate self-signed certificate** - runs the "Certificate Assistant" that allows you to generate a self-signed certificate. If you do not have an Apple developer certificate, you need to provide a self-signed certificate. With this certificate, no alert message is displayed if the application is deployed internally. If the application is deployed externally (i.e. through http or email), at launch macOS displays an alert message that the application's developer is unidentified. The user can "force" the opening of the application. <p>In the "Certificate Assistant", be sure to select the appropriate options:
-![](assets/en/Admin/Cert1.png)
-![](assets/en/Admin/Cert2.png)
+![](../assets/en/Admin/Cert1.png)
+![](../assets/en/Admin/Cert2.png)
 
 > 4D recommends to subscribe to the Apple Developer Program to get access to Developer Certificates that are necessary to notarize applications (see below). 
 
@@ -666,10 +666,10 @@ This mode allows you to duplicate your merged applications without breaking the 
 
 
 *Duplication when data linked by application name:*
-![](assets/en/Project/datalinking1.png)
+![](../assets/en/Project/datalinking1.png)
 
 *Duplication when data linked by application path:*
-![](assets/en/Project/datalinking2.png)
+![](../assets/en/Project/datalinking2.png)
 
 You can select the data linking mode during the build application process. You can either:
 
@@ -694,7 +694,7 @@ To define and use a default data file:
 
 The following graphic illustrates this feature:
 
-![](assets/en/Project/DefaultData.png)
+![](../assets/en/Project/DefaultData.png)
 
 When the default data file is detected at first launch, it is silently opened in read-only mode, thus allowing you to execute any custom operations that do not modify the data file itself.
 
@@ -719,7 +719,7 @@ The connection procedure for merged client applications supports cases where the
 
 The whole procedure is described in the following diagram:
 
-![](assets/en/Desktop/client-connect.png)
+![](../assets/en/Desktop/client-connect.png)
 
 
 
@@ -744,12 +744,12 @@ You can choose whether or not to display the standard server selection dialog bo
 
 - **Display of an error message with no access possible to the server selection dialog box**. Default operation. The application can only quit.  
 `ServerSelectionAllowed`: **False** or key omitted
-![](assets/en/Project/connect1.png)
+![](../assets/en/Project/connect1.png)
 
 - **Display of an error message with access to the server selection dialog box possible**. The user can access the server selection window by clicking on the **Select...** button.   
 `ServerSelectionAllowed`: **True**
-![](assets/en/Project/connect2.png) 
-![](assets/en/Project/connect3.png)
+![](../assets/en/Project/connect2.png) 
+![](../assets/en/Project/connect3.png)
 
 
 ## Automatic updating of server or single-user applications

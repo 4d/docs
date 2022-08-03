@@ -61,7 +61,7 @@ $compCity:=ds.Company["city"] //returns the city attribute in the Company datacl
 
 Considering the following database structure:
 
-![](assets/en/API/dataclassAttribute.png)
+![](../assets/en/API/dataclassAttribute.png)
 
 
 ```4d
@@ -86,7 +86,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 Considering the following table properties:
 
-![](assets/en/API/dataclassAttribute2.png)
+![](../assets/en/API/dataclassAttribute2.png)
 
 
 ```4d
@@ -907,7 +907,7 @@ where:
 	|Not condition applied on a statement|	NOT|	Parenthesis are mandatory when NOT is used before a statement containing several operators|
 	|Contains keyword|	%|	Keywords can be used in attributes of string or picture type|
 
-*	**value**: the value to compare to the current value of the property of each entity in the entity selection or element in the collection. It can be a **placeholder** (see **Using placeholders** below) or any expression matching the data type property.<p><p>
+*	**value**: the value to compare to the current value of the property of each entity in the entity selection or element in the collection. It can be a **placeholder** (see **Using placeholders** below) or any expression matching the data type property.
 When using a constant value, the following rules must be respected:
 	*	**text** type constant can be passed with or without simple quotes (see **Using quotes** below). To query a string within a string (a "contains" query), use the wildcard symbol (@) in value to isolate the string to be searched for as shown in this example: "@Smith@". The following keywords are forbidden for text constants: true, false.
 	*	**boolean** type constants: **true** or **false** (case sensitive).
@@ -1058,7 +1058,7 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 
 ORDA offers a special syntax to facilitate queries in many-to-many relations. In this context, you may need to search for different values with an `AND` operator BUT in the same attribute. For example, take a look at the following structure:
 
-![alt-text](assets/en/API/manytomany.png)
+![alt-text](../assets/en/API/manytomany.png)
 
 Imagine that you want to search all movies in which *both* actor A and actor B have a role. If you write a simple query using an `AND` operator, it will not work:
 

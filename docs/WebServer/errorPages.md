@@ -34,7 +34,7 @@ For example, when an HTTP response returns a status code 404:
 
 If you define the following custom pages in your web folder:
 
-![](assets/en/WebServer/errorPage.png)
+![](../assets/en/WebServer/errorPage.png)
 
 *	the "403.html" or "404.html" pages will be served when 403 or 404 HTTP responses are returned respectively,
 

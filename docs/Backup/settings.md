@@ -19,7 +19,7 @@ If this application was not launched at the theoretical moment of the backup, th
 
 The scheduler backup settings are defined on the **Backup/Scheduler** page of the Structure Settings:
 
-![](assets/en/Backup/backup02.png)
+![](../assets/en/Backup/backup02.png)
 
 The options found on this tab let you set and configure scheduled automatic backups of the application. You can choose a standard quick configuration or you can completely customize it. Various options appear depending on the choice made in the **Automatic Backup** menu:
 
@@ -41,7 +41,7 @@ The options found on this tab let you set and configure scheduled automatic back
 
 The Backup/Configuration page of the Structure Settings lets you set the backup files and their location, as well as that of the log file. These parameters are specific to each application opened by 4D or 4D Server.
 
-![](assets/en/Backup/backup03.png)
+![](../assets/en/Backup/backup03.png)
 
 > **4D Server:** These parameters can only be set from the 4D Server machine.
 
@@ -80,7 +80,7 @@ By default, any project created with 4D uses a log file (option **Use Log File**
 
 Modifying backup and restore options is optional. Their default values correspond to a standard use of the function.
 
-![](assets/en/Backup/backup04.png)
+![](../assets/en/Backup/backup04.png)
 
 ### General settings
 

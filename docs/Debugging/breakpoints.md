@@ -21,7 +21,7 @@ To create a break point, click in the left margin of the Source Code pane in the
 
 In the following example, a break point (the red bullet) has been set, in the debugger, on the line `If ($in.dataClass#Null)`:
 
-![break-point](assets/en/Debugging/break.png)
+![break-point](../assets/en/Debugging/break.png)
 
 In the above example, clicking the [**No Trace**](./debugger.md/#no-trace) button resumes normal execution up to the line marked with the break point. That line is not executed itself — you are taken back to trace mode. Setting a break point beyond the program counter and clicking the **No Trace** button allows you to skip portions of the method being traced.
 
@@ -32,7 +32,7 @@ To remove a break point, click the corresponding bullet.
 
 You can edit the behavior of a breakpoint using the Breakpoint Properties window:
 
-![breakpoint-properties](assets/en/Debugging/breakpoint-properties.png)
+![breakpoint-properties](../assets/en/Debugging/breakpoint-properties.png)
 
 This window is available from the Code Editor or the [Source Code Pane](debugger.md#source-code-pane). You can:
 
@@ -65,7 +65,7 @@ To open the Break list page:
 
 2. Click the **Break** tab to display the Break list:
 
-![break-list-runtime-explorer](assets/en/Debugging/break-list.png)
+![break-list-runtime-explorer](../assets/en/Debugging/break-list.png)
 
 Using this window, you can:
 
@@ -91,7 +91,7 @@ To open the Caught Commands page:
 
 2. Click **Catch** to display the Caught Commands List:
 
-![runtime-explorer-window](assets/en/Debugging/catch-command.png)
+![runtime-explorer-window](../assets/en/Debugging/catch-command.png)
 
 This page lists the commands to be caught during execution. It is composed of two columns:
 

@@ -6,7 +6,7 @@ title: Maintenance Page
 
 The **Maintenance** page of the 4D Server Administration window provides information concerning the current operation of the application. It also provides access to basic maintenance functions:
 
-![](assets/en/Admin/server-maintenance.png)
+![](../assets/en/Admin/server-maintenance.png)
 
 
 ## Last verification/compacting
@@ -25,7 +25,7 @@ After verification, a report file is generated in XML format on the server in th
 
 Thus button can be used to launch a data compacting operation directly. This operation requires stopping the server: when you click on this button, the 4D Server shutdown dialog box appears so that you can choose how to interrupt the operation:
 
-![](assets/en/Admin/server-shut.png)
+![](../assets/en/Admin/server-shut.png)
 
 After the actual interruption of the application service, 4D Server carries out a standard compacting operation on the database data. If you want to have additional options available, you will need to use the [MSC](MSC/overview.md).
 

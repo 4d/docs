@@ -22,11 +22,11 @@ You can configure the `WebAdmin` web server to be launched at 4D or 4D Server ap
 
 - If you use a 4D application with interface, select the **File > Web Administration > Settings...** menu item. 
 
-![alt-text](assets/en/Admin/waMenu1.png)
+![alt-text](../assets/en/Admin/waMenu1.png)
 
 Check the **Web server administration automatic startup** option in the settings dialog box:
 
-![alt-text](assets/en/Admin/waSettings.png)
+![alt-text](../assets/en/Admin/waSettings.png)
 
 - Whether you use 4D application which is headless or not, you can enable the automatic startup mode using the following *Command Line Interface* argument:
 
@@ -44,7 +44,7 @@ If you use a 4D application with interface, you can start or stop the `WebAdmin`
 
 Select the **File > Web Administration > Start Server** menu item.
 
-![alt-text](assets/en/Admin/waMenu2.png)
+![alt-text](../assets/en/Admin/waMenu2.png)
 
 The menu item becomes **Stop Server** when the server is launched; select **Stop Server** to stop the `WebAdmin` web server.
 
@@ -63,11 +63,11 @@ You can configure the `WebAdmin` component using the [Web Administration setting
 
 To open the Web Administration settings dialog box, select the **File > Web Administration > Settings...** menu item.
 
-![alt-text](assets/en/Admin/waMenu1.png)
+![alt-text](../assets/en/Admin/waMenu1.png)
 
 The following dialog box is displayed:
 
-![alt-text](assets/en/Admin/waSettings2.png)
+![alt-text](../assets/en/Admin/waSettings2.png)
 
 #### Web server administration automatic startup
 
@@ -114,7 +114,7 @@ Status or format of the HTTP request log file (HTTPDebugLog_*nn*.txt, stored in 
 
 Defining an access key is mandatory to unlock access to the `WebAdmin` web server through a URL (access via a 4D menu command does not require an access key). When no access key is defined, no web client is allowed to connect through a URL to a web administration interface like the [Data Explorer page](dataExplorer.md). An error page is returned in case of connection request: 
 
-![alt-text](assets/en/Admin/accessKey.png)
+![alt-text](../assets/en/Admin/accessKey.png)
 
 An access key is similar to a password but not associated to a login. 
 
