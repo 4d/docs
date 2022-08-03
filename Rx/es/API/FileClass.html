@@ -165,13 +165,13 @@
 <tr><td>Backup settings file</td><td>1</td><td>Archivo backup.4DSettings por defecto (formato xml), almacenado en la carpeta Settings del proyecto</td></tr>
 <tr><td>Backup settings file for data</td><td>17</td><td>archivo backup.4DSettings del archivo de datos (formato xml), almacenado en la carpeta Settings de la carpeta data</td></tr>
 <tr><td>Build application log file</td><td>14</td><td>Archivo de historial actual en formato xml del generador de aplicaciones. Almacenado en la carpeta Logs.</td></tr>
-<tr><td>Build application settings file</td><td>20</td><td>Default settings file of the application builder (&quot;buildApp.4DSettings&quot;). Almacenado en la carpeta Settings del proyecto.</td></tr>
+<tr><td>Build application settings file</td><td>20</td><td>Archivo de configuración por defecto del generador de aplicaciones (&quot;buildApp.4DSettings&quot;). Almacenado en la carpeta Settings del proyecto.</td></tr>
 <tr><td>Compacting log file</td><td>6</td><td>Log file of the most recent compacting done with the Compact data file command or the Maintenance and security center. Almacenado en la carpeta Logs.</td></tr>
 <tr><td>Current backup settings file</td><td>18</td><td>backup.4DSettings file currently used by the application. It can be the backup settings file (default) or a custom user backup settings file defined for the data file</td></tr>
 <tr><td>Debug log file</td><td>12</td><td>Log file created by the <code>SET DATABASE PARAMETER(Debug log recording)</code> command. Almacenado en la carpeta Logs.</td></tr>
 <tr><td>Diagnostic log file</td><td>11</td><td>Log file created by the <code>SET DATABASE PARAMETER(Diagnostic log recording)</code> command. Almacenado en la carpeta Logs.</td></tr>
 <tr><td>Directory file</td><td>16</td><td>directory.json file, containing the description of users and groups (if any) for the project application. It can be located either in the user settings folder (default, global to the project), or in the data settings folder (specific to a data file).</td></tr>
-<tr><td>HTTP debug log file</td><td>9</td><td>Log file created by the <code>WEB SET OPTION(Web debug log)</code> command. Almacenado en la carpeta Logs.</td></tr>
+<tr><td>HTTP debug log file</td><td>9</td><td>Archivo de registro creado por el comando <code>WEB SET OPTION(Web debug log)</code>. Almacenado en la carpeta Logs.</td></tr>
 <tr><td>HTTP log file</td><td>8</td><td>Log file created by the <code>WEB SET OPTION(Web log recording)</code> command. Almacenado en la carpeta Logs.</td></tr>
 <tr><td>IMAP Log file</td><td>23</td><td>Log file created by the <code>SET DATABASE PARAMETER(IMAP Log)</code> command. Almacenado en la carpeta Logs.</td></tr>
 <tr><td>Last backup file</td><td>2</td><td>Último archivo de copia de seguridad, llamado &lt;applicationName&gt;[bkpNum].4BK, almacenado en una ubicación personalizada.</td></tr>
@@ -185,7 +185,7 @@
 </tbody>
 </table>
 <p>If the target <em>fileConstant</em> does not exist, a null object is returned. No se produce ningún error.</p>
-<p>If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.</p>
+<p>If the command is called from a component, pass the optional * parameter to get the path of the host database. De lo contrario, si omite el parámetro *, siempre se devuelve un objeto null.</p>
 <h2><a class="anchor" aria-hidden="true" id="4dfilenew"></a><a href="#4dfilenew" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>4D.File.new()</h2>
 <p><details><summary>Histórico</summary></p>
 <table>

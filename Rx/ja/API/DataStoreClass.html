@@ -78,13 +78,17 @@
 </thead>
 <tbody>
 <tr><td><a href="#canceltransaction"><strong>.cancelTransaction()</strong></a><p>    トランザクションをキャンセルします</td></tr>
+<tr><td><a href="#clearallremotecontexts"><strong>.clearAllRemoteContexts()</strong></a><p>    データストアのすべてのアクティブコンテキストの全属性をクリアします</td></tr>
 <tr><td><a href="#dataclassname"><strong><em>.dataclassName</em></strong> : 4D.DataClass</a><p>    データクラスの詳細が格納されています</td></tr>
 <tr><td><a href="#encryptionstatus"><strong>.encryptionStatus()</strong>: Object</a><p>    カレントデータファイルの暗号化状態を示すオブジェクトを返します</td></tr>
+<tr><td><a href="#getallremotecontexts"><strong>.getAllRemoteContexts()</strong> : Collection</a><p>    データストア内のすべてのアクティブな最適化コンテキストに関する情報を格納するオブジェクトのコレクションを返します</td></tr>
 <tr><td><a href="#getinfo"><strong>.getInfo()</strong>: Object</a><p>    データストアの情報を提供するオブジェクトを返します</td></tr>
+<tr><td><a href="#getremotecontextinfo"><strong>.getRemoteContextInfo</strong>(<em>contextName</em> : Text) : Object </a><p>     <em>contextName</em> で指定したデータストアの最適化コンテキストに関する情報を格納するオブジェクトを返します</td></tr>
 <tr><td><a href="#getrequestlog"><strong>.getRequestLog()</strong> : Collection</a><p>    クライアント側のメモリに記録されている ORDAリクエストを返します</td></tr>
 <tr><td><a href="#makeselectionsalterable"><strong>.makeSelectionsAlterable()</strong></a><p>    カレントアプリケーションのデータストアにおいて、すべての新規エンティティセレクションをデフォルトで追加可能に設定します</td></tr>
 <tr><td><a href="#providedatakey"><strong>.provideDataKey</strong>( <em>curPassPhrase</em> : Text ) : Object <br><strong>.provideDataKey</strong>( <em>curDataKey</em> : Object ) : Object </a><p>    データストアのカレントデータファイルのデータ暗号化キーを受け取り、暗号化されたデータと合致するかどうかチェックします</td></tr>
 <tr><td><a href="#setadminprotection"><strong>.setAdminProtection</strong>( <em>status</em> : Boolean )</a><p>    <code>WebAdmin</code>セッションにおける <a href="/docs/Rx/ja/Admin/dataExplorer.html">データエクスプローラー</a> 含め、<a href="/docs/Rx/ja/Admin/webAdmin.html#httpポート">Web管理ポート</a>上でのデータアクセスを無効に設定することができます</td></tr>
+<tr><td><a href="#setremotecontextinfo"><strong>.setRemoteContextInfo</strong>( <em>contextName</em> : Text ; <em>dataClassName</em> : Text ; <em>attributes</em> : Text {; <em>contextType</em> : Text { ; <em>pageLength</em> : Integer}})<br/><strong>.setRemoteContextInfo</strong>( <em>contextName</em> : Text ; <em>dataClassName</em> : Text; <em>attributesColl</em> : Collection {; <em>contextType</em> : Text { ; <em>pageLength</em> : Integer }} )<br/><strong>.setRemoteContextInfo</strong>( <em>contextName</em> : Text ; <em>dataClassObject</em> : 4D.DataClass ; <em>attributes</em> : Text {; <em>contextType</em> : Text { ; <em>pageLength</em> : Integer }})<br/><strong>.setRemoteContextInfo</strong>( <em>contextName</em> : Text ; <em>dataClassObject</em> : 4D.DataClass ; <em>attributesColl</em> : Collection {; <em>contextType</em> : Text { ; <em>pageLength</em> : Integer }} )</a><p>    指定したデータクラス属性を <em>contextName</em> の最適化コンテキストにリンクします</td></tr>
 <tr><td><a href="#startrequestlog"><strong>.startRequestLog</strong>()<br><strong>.startRequestLog</strong>( <em>file</em> : 4D.File )<br><strong>.startRequestLog</strong>( <em>reqNum</em> : Integer )</a><p>    クライアント側で ORDAリクエストのログを開始します</td></tr>
 <tr><td><a href="#starttransaction"><strong>.startTransaction()</strong></a><p>    対象データストアに対応するデータベース上で、カレントプロセス内のトランザクションを開始します</td></tr>
 <tr><td><a href="#stoprequestlog"><strong>.stopRequestLog()</strong>  </a><p>    クライアント側の ORDAリクエストのログをすべて停止します</td></tr>
@@ -279,6 +283,27 @@
 <p>複数のトランザクションをネストすること (サブトランザクション) が可能です。 メイントランザクションがキャンセルされると、サブトランザクションも (たとえ個々に<a href="#validatetransactions"><code>.validateTransaction()</code></a> 関数で承認されていても) すべてキャンセルされます。</p>
 <h4><a class="anchor" aria-hidden="true" id="例題-4"></a><a href="#例題-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <p><a href="#starttransaction"><code>.startTransaction()</code></a> 関数の例題を参照ください。</p>
+<h2><a class="anchor" aria-hidden="true" id="clearallremotecontexts"></a><a href="#clearallremotecontexts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.clearAllRemoteContexts()</h2>
+<p><details><summary>履歴</summary></p>
+<table>
+<thead>
+<tr><th>バージョン</th><th>内容</th></tr>
+</thead>
+<tbody>
+<tr><td>v19 R5</td><td>追加</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.clearAllRemoteContexts()</strong>
+| 引数 | タイプ |  | 説明                |
+| -- | --- |::| ----------------- |
+|    |     |  | このコマンドは引数を必要としません |</p>
+<h4><a class="anchor" aria-hidden="true" id="説明-4"></a><a href="#説明-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<p><code>.clearAllRemoteContexts()</code> 関数は、 データストアのすべてのアクティブコンテキストの全属性をクリアします。</p>
+<p>この機能は主にデバッグで使用されます。 注意しなければならないのは、デバッガーを開くと、デバッガーはサーバーにリクエストを送り、データクラス属性をすべてクエリして表示することです。 このため、不要なデータでコンテキストが過負荷になることがあります。</p>
+<p>そのような場合は、<code>.clearAllRemoteContexts()</code> を使用してコンテキストをクリアし、クリーンな状態を保つことができます。</p>
+<h4><a class="anchor" aria-hidden="true" id="参照"></a><a href="#参照" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参照</h4>
+<p><a href="#getremotecontextinfo">.getRemoteContextInfo()</a><br/><a href="#getallremotecontexts">.getAllRemoteContexts()</a><br/><a href="#setremotecontextinfo">.setRemoteContextInfo()</a></p>
 <h2><a class="anchor" aria-hidden="true" id="encryptionstatus"></a><a href="#encryptionstatus" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.encryptionStatus()</h2>
 <p><details><summary>履歴</summary></p>
 <table>
@@ -296,10 +321,10 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>戻り値</td><td>Object</td><td style="text-align:center">&lt;-</td><td>カレントデータストアと、各テーブルの暗号化についての情報</td></tr>
+<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>カレントデータストアと、各テーブルの暗号化についての情報</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="説明-4"></a><a href="#説明-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-5"></a><a href="#説明-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.encryptionStatus()</code> 関数は、 カレントデータファイルの暗号化状態を示すオブジェクトを返します 。カレントデータファイルとはつまり、<code>ds</code> データストアのデータファイルです。 各テーブルの状態も提供されます。</p>
 <blockquote>
 <p>その他のデータファイルの暗号化状態を調べるには、<code>Data file encryption status</code> コマンドを使います。</p>
@@ -331,7 +356,7 @@
 <p>カレントデータファイル内で暗号化されているテーブルの数を知りたい場合:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$status </span>: Object
 
- <span class="hljs-variable">$status</span>:=dataStore.<span class="hljs-function">encryptionStatus</span>()<span class="hljs-keyword">
+ <span class="hljs-variable">$status</span>:=ds.<span class="hljs-function">encryptionStatus</span>()<span class="hljs-keyword">
 
  If</span>(<span class="hljs-variable">$status</span>.isEncrypted) <span class="hljs-comment">// データベースが暗号化されていれば</span>
 <span class="hljs-function">    C_LONGINT</span>(<span class="hljs-variable">$vcount</span>)
@@ -346,6 +371,75 @@
 <span class="hljs-function">    ALERT</span>(<span class="hljs-string">"このデータベースは暗号化されていません。"</span>)<span class="hljs-keyword">
  End if</span>
 </code></pre>
+<h2><a class="anchor" aria-hidden="true" id="getallremotecontexts"></a><a href="#getallremotecontexts" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.getAllRemoteContexts()</h2>
+<p><details><summary>履歴</summary></p>
+<table>
+<thead>
+<tr><th>バージョン</th><th>内容</th></tr>
+</thead>
+<tbody>
+<tr><td>v19 R5</td><td>追加</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.getAllRemoteContexts()</strong> : Collection</p>
+<table>
+<thead>
+<tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
+</thead>
+<tbody>
+<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>最適化コンテキストオブジェクトのコレクション</td></tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>上級者向け:</strong> この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="説明-6"></a><a href="#説明-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<p><code>.getAllRemoteContexts()</code> 関数は、 データストア内のすべてのアクティブな最適化コンテキストに関する情報を格納するオブジェクトのコレクションを返します。</p>
+<blockquote>
+<p>コンテキストの作成に関する詳細については、<a href="/docs/Rx/ja/ORDA/datastores.html#クライアントサーバーの最適化">クライアント/サーバーの最適化</a> を参照ください。</p>
+</blockquote>
+<p>返されたコレクション内の各オブジェクトは、<a href="#返されるオブジェクト"><code>.getRemoteContextInfo()</code></a> セクションに記載されているプロパティを持ちます。</p>
+<h4><a class="anchor" aria-hidden="true" id="例題-6"></a><a href="#例題-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<p>次のコードは 2つのコンテキストを設定し、<code>.getAllRemoteContexts()</code> を使用してそれらを取得します:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$ds </span>: 4D.DataStoreImplementation<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$persons </span>: cs.PersonsSelection<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$addresses </span>: cs.AddressSelection<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$p </span>: cs.PersonsEntity<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$a </span>: cs.AddressEntity<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$contextA</span>; <span class="hljs-variable">$contextB </span>: Object<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$info </span>: Collection<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$text </span>: Text
+
+<span class="hljs-comment">// リモートデータストアを開きます</span>
+<span class="hljs-variable">$ds</span>:=<span class="hljs-function">Open datastore</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"hostname"</span>; <span class="hljs-string">"www.myserver.com"</span>); <span class="hljs-string">"myDS"</span>)
+
+<span class="hljs-comment">// コンテキストA を設定します</span>
+<span class="hljs-variable">$contextA</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"context"</span>; <span class="hljs-string">"contextA"</span>)
+<span class="hljs-variable">$persons</span>:=<span class="hljs-variable">$ds</span>.Persons.<span class="hljs-function">all</span>(<span class="hljs-variable">$contextA</span>)
+<span class="hljs-variable">$text</span>:=<span class="hljs-string">""</span><span class="hljs-keyword"> 
+For each</span> (<span class="hljs-variable">$p</span>; <span class="hljs-variable">$persons</span>)
+    <span class="hljs-variable">$text</span>:=<span class="hljs-variable">$p</span>.firstname+<span class="hljs-string">" lives in "</span>+<span class="hljs-variable">$p</span>.address.city+<span class="hljs-string">" / "</span><span class="hljs-keyword"> 
+End for each</span> 
+
+<span class="hljs-comment">// コンテキストB を設定します</span>
+<span class="hljs-variable">$contextB</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"context"</span>; <span class="hljs-string">"contextB"</span>)
+<span class="hljs-variable">$addresses</span>:=<span class="hljs-variable">$ds</span>.Address.<span class="hljs-function">all</span>(<span class="hljs-variable">$contextB</span>)
+<span class="hljs-variable">$text</span>:=<span class="hljs-string">""</span><span class="hljs-keyword"> 
+For each</span> (<span class="hljs-variable">$a</span>; <span class="hljs-variable">$addresses</span>)
+    <span class="hljs-variable">$text</span>:=<span class="hljs-variable">$a</span>.zipCode<span class="hljs-keyword">
+End for each</span> 
+
+<span class="hljs-comment">// すべてのリモートコンテキストを取得します (contextA と contextB)</span>
+<span class="hljs-variable">$info</span>:=<span class="hljs-variable">$ds</span>.<span class="hljs-function">getAllRemoteContexts</span>()
+<span class="hljs-comment">//$info = [{name:"contextB"; dataclass:"Address"; main:"zipCode"},</span>
+{name:<span class="hljs-string">"contextA"</span>;dataclass:<span class="hljs-string">"Persons"</span>;main:<span class="hljs-string">"firstname,address.city"</span>}]
+</code></pre>
+<blockquote>
+<p>この例はデモンストレーションであり、実際の実装を想定したものではありません。</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="参照-1"></a><a href="#参照-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参照</h4>
+<p><a href="#getremotecontextinfo">.getRemoteContextInfo()</a><br/><a href="#setremotecontextinfo">.setRemoteContextInfo()</a><br/><a href="#clearallremotecontexts">.clearAllRemoteContexts()</a></p>
 <h2><a class="anchor" aria-hidden="true" id="getinfo"></a><a href="#getinfo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.getInfo()</h2>
 <p><details><summary>履歴</summary></p>
 <table>
@@ -363,10 +457,10 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>戻り値</td><td>Object</td><td style="text-align:center">&lt;-</td><td>データストアのプロパティ</td></tr>
+<tr><td>戻り値</td><td>オブジェクト</td><td style="text-align:center">&lt;-</td><td>データストアのプロパティ</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="説明-5"></a><a href="#説明-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-7"></a><a href="#説明-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.getInfo()</code> 関数は、 データストアの情報を提供するオブジェクトを返します。 このメソッドは汎用的なコードを書くのに有用です。</p>
 <p><strong>返されるオブジェクト</strong></p>
 <table>
@@ -407,6 +501,51 @@
   <span class="hljs-comment">//"networked":true,</span>
   <span class="hljs-comment">//"connection":{hostname:"111.222.33.44:8044","tls":false,"idleTimeout":2880,"user":"marie"}}</span>
 </code></pre>
+<h2><a class="anchor" aria-hidden="true" id="getremotecontextinfo"></a><a href="#getremotecontextinfo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.getRemoteContextInfo()</h2>
+<p><details><summary>履歴</summary></p>
+<table>
+<thead>
+<tr><th>バージョン</th><th>内容</th></tr>
+</thead>
+<tbody>
+<tr><td>v19 R5</td><td>追加</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.getRemoteContextInfo</strong>(<em>contextName</em> : Text) : Object</p>
+<table>
+<thead>
+<tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
+</thead>
+<tbody>
+<tr><td>contextName</td><td>テキスト</td><td>-&gt;</td><td>コンテキストの名称</td></tr>
+<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>最適化コンテキストの詳細</td></tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>上級者向け:</strong> この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="説明-8"></a><a href="#説明-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<p><code>.getRemoteContextInfo()</code> 関数は、  <em>contextName</em> で指定したデータストアの最適化コンテキストに関する情報を格納するオブジェクトを返します。</p>
+<p>最適化コンテキストの作成に関する詳細については、<a href="/docs/Rx/ja/ORDA/datastores.html#クライアントサーバーの最適化">クライアント/サーバーの最適化</a> を参照ください。</p>
+<h4><a class="anchor" aria-hidden="true" id="返されるオブジェクト"></a><a href="#返されるオブジェクト" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>返されるオブジェクト</h4>
+<p>戻り値のオブジェクトには、以下のプロパティが格納されています:</p>
+<table>
+<thead>
+<tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr>
+</thead>
+<tbody>
+<tr><td>name</td><td>テキスト</td><td>コンテキストの名称</td></tr>
+<tr><td>main</td><td>テキスト</td><td>コンテキストに関連する属性 (複数の場合はカンマ区切り)</td></tr>
+<tr><td>dataclass</td><td>テキスト</td><td>データクラスの名称</td></tr>
+<tr><td>currentItem (任意)</td><td>テキスト</td><td>コンテキストがリストボックスとリンクしている場合の <a href="/docs/Rx/ja/ORDA/datastores.html#エンティティセレクション型リストボックス">ページモード</a> の属性。 コンテキスト名がリストボックスに使用されていない場合、または currentItem に対応するコンテキストが存在しない場合は、<code>Null</code> または空のテキスト要素として返されます。</td></tr>
+</tbody>
+</table>
+<p>コンテキストは属性に対するフィルターとして動作するため、<em>main</em> が空で返された場合、それはフィルターが適用されておらず、サーバーがすべてのデータクラス属性を返すことを意味します。</p>
+<h4><a class="anchor" aria-hidden="true" id="例題-7"></a><a href="#例題-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<p><a href="#example-1-3">.setRemoteContextInfo()</a> の例題を参照ください。</p>
+<h4><a class="anchor" aria-hidden="true" id="参照-2"></a><a href="#参照-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参照</h4>
+<p><a href="#setremotecontextinfo">.setRemoteContextInfo()</a><br/><a href="#getallremotecontexts">.getAllRemoteContexts()</a> <br/><a href="#clearallremotecontexts">.clearAllRemoteContexts()</a></p>
 <h2><a class="anchor" aria-hidden="true" id="getrequestlog"></a><a href="#getrequestlog" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.getRequestLog()</h2>
 <p><details><summary>履歴</summary></p>
 <table>
@@ -424,16 +563,16 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>戻り値</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>オブジェクトのコレクション (要素毎に一つのリクエストを記述します)</td></tr>
+<tr><td>戻り値</td><td>コレクション</td><td style="text-align:center">&lt;-</td><td>オブジェクトのコレクション (要素毎に一つのリクエストを記述します)</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="説明-6"></a><a href="#説明-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-9"></a><a href="#説明-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.getRequestLog()</code> 関数は、 クライアント側のメモリに記録されている ORDAリクエストを返します。 ORDAリクエストのログが、<a href="#startrequestlog"><code>.startRequestLog()</code></a> 関数によって事前に有効化されている必要があります。</p>
 <p>このメソッドはリモートの 4D で呼び出す必要があり、そうでない場合には空のコレクションを返します。 これはクライアント/サーバー環境でのデバッグを想定して設計されています。</p>
 <p><strong>戻り値</strong></p>
 <p>スタックされたリクエストオブジェクトのコレクションが返されます。 直近のリクエストにはインデックス 0 が振られています。</p>
 <p>ORDAリクエストログのフォーマットの詳細は、<a href="https://doc.4d.com/4Dv18R6/4D/18-R6/Description-of-log-files.300-5217819.ja.html#4385373"><strong>ORDAクライアントリクエスト</strong></a> の章を参照ください。</p>
-<h4><a class="anchor" aria-hidden="true" id="例題-6"></a><a href="#例題-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<h4><a class="anchor" aria-hidden="true" id="例題-8"></a><a href="#例題-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <p><a href="#startrequestlog"><code>.startRequestLog()</code></a> の例題2を参照ください。</p>
 <h2><a class="anchor" aria-hidden="true" id="isadminprotected"></a><a href="#isadminprotected" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.isAdminProtected()</h2>
 <p><details><summary>履歴</summary></p>
@@ -452,13 +591,13 @@
 <tr><th>引数</th><th>タイプ</th><th style="text-align:center"></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>戻り値</td><td>Boolean</td><td style="text-align:center">&lt;-</td><td>データエクスプローラーへのアクセスが無効に設定されているの場合は true、有効の場合は false (デフォルト)</td></tr>
+<tr><td>戻り値</td><td>ブール</td><td style="text-align:center">&lt;-</td><td>データエクスプローラーへのアクセスが無効に設定されているの場合は true、有効の場合は false (デフォルト)</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="説明-7"></a><a href="#説明-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-10"></a><a href="#説明-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.isAdminProtected()</code> 関数は、 現在のセッションにおいて <a href="/docs/Rx/ja/Admin/dataExplorer.html">データエクスプローラー</a> へのアクセスが無効に設定されているの場合は <code>true</code>を返します。</p>
 <p><code>webAdmin</code>セッションにおいて、データエクスプローラーへのアクセスはデフォルトで有効となっていますが、管理者によるデータアクセスを禁止するため無効にすることもできます (<a href="#setadminprotection"><code>.setAdminProtection()</code></a> 関数参照)。</p>
-<h4><a class="anchor" aria-hidden="true" id="参照"></a><a href="#参照" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参照</h4>
+<h4><a class="anchor" aria-hidden="true" id="参照-3"></a><a href="#参照-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参照</h4>
 <p><a href="#setadminprotection"><code>.setAdminProtection()</code></a></p>
 <h2><a class="anchor" aria-hidden="true" id="makeselectionsalterable"></a><a href="#makeselectionsalterable" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.makeSelectionsAlterable()</h2>
 <p><details><summary>履歴</summary></p>
@@ -475,7 +614,7 @@
 | 引数 | タイプ |  | 説明                |
 | -- | --- |::| ----------------- |
 |    |     |  | このコマンドは引数を必要としません |</p>
-<h4><a class="anchor" aria-hidden="true" id="説明-8"></a><a href="#説明-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-11"></a><a href="#説明-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.makeSelectionsAlterable()</code> 関数は、 カレントアプリケーションのデータストアにおいて、すべての新規エンティティセレクションをデフォルトで追加可能に設定します (<a href="/docs/Rx/ja/ORDA/datastores.html">リモートデータストア</a> を含む)。 これはたとえば <code>On Startup</code> データベースメソッドなどで、一度だけ使用することが想定されています。</p>
 <p>このメソッドが呼ばれてない場合、新規エンティティセレクションはそれぞれの &quot;親&quot; の性質や作成方法に応じて、共有可能に設定される場合もあります (<a href="/docs/Rx/ja/ORDA/entities.html#共有可能追加可能なエンティティセレクション">共有可能/追加可能なエンティティセレクション</a> 参照)。</p>
 <blockquote>
@@ -501,12 +640,12 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>curPassPhrase</td><td>Text</td><td>-&gt;</td><td>カレントのパスフレーズ</td></tr>
-<tr><td>curDataKey</td><td>Object</td><td>-&gt;</td><td>カレントのデータ暗号化キー</td></tr>
-<tr><td>戻り値</td><td>Object</td><td>&lt;-</td><td>暗号化キーのチェックの結果</td></tr>
+<tr><td>curPassPhrase</td><td>テキスト</td><td>-&gt;</td><td>カレントのパスフレーズ</td></tr>
+<tr><td>curDataKey</td><td>オブジェクト</td><td>-&gt;</td><td>カレントのデータ暗号化キー</td></tr>
+<tr><td>戻り値</td><td>オブジェクト</td><td>&lt;-</td><td>暗号化キーのチェックの結果</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="説明-9"></a><a href="#説明-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-12"></a><a href="#説明-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.provideDataKey()</code> 関数は、 データストアのカレントデータファイルのデータ暗号化キーを受け取り、暗号化されたデータと合致するかどうかチェックします。 この関数は、暗号化されたデータベースを開くときや、データファイルの再暗号化など暗号化キーが必要となる暗号化オペレーションを実行する際に使用します。</p>
 <blockquote>
 <ul>
@@ -528,18 +667,18 @@
 <tr><th>プロパティ</th><th></th><th>タイプ</th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>success</td><td></td><td>Boolean</td><td>提供された暗号化キーが暗号化データと合致すれば true、それ以外は false</td></tr>
+<tr><td>success</td><td></td><td>ブール</td><td>提供された暗号化キーが暗号化データと合致すれば true、それ以外は false</td></tr>
 <tr><td></td><td></td><td></td><td>以下のプロパティは、success が <em>FALSE</em> であった場合にのみ返されます。</td></tr>
-<tr><td>status</td><td></td><td>Number</td><td>エラーコード (提供された暗号化キーが間違っていた場合には 4)</td></tr>
-<tr><td>statusText</td><td></td><td>Text</td><td>エラーメッセージ</td></tr>
-<tr><td>errors</td><td></td><td>Collection</td><td>エラーのスタック。 最初のエラーに最も高いインデックスが割り当てられます。</td></tr>
-<tr><td></td><td>[ ].componentSignature</td><td>Text</td><td>内部コンポーネント名</td></tr>
-<tr><td></td><td>[ ].errCode</td><td>Number</td><td>エラー番号</td></tr>
-<tr><td></td><td>[ ].message</td><td>Text</td><td>エラーメッセージ</td></tr>
+<tr><td>status</td><td></td><td>数値</td><td>エラーコード (提供された暗号化キーが間違っていた場合には 4)</td></tr>
+<tr><td>statusText</td><td></td><td>テキスト</td><td>エラーメッセージ</td></tr>
+<tr><td>errors</td><td></td><td>コレクション</td><td>エラーのスタック。 最初のエラーに最も高いインデックスが割り当てられます。</td></tr>
+<tr><td></td><td>[ ].componentSignature</td><td>テキスト</td><td>内部コンポーネント名</td></tr>
+<tr><td></td><td>[ ].errCode</td><td>数値</td><td>エラー番号</td></tr>
+<tr><td></td><td>[ ].message</td><td>テキスト</td><td>エラーメッセージ</td></tr>
 </tbody>
 </table>
 <p><em>curPassphrase</em> および <em>curDataKey</em> のどちらの引数も渡されなかった場合、<code>.provideDataKey()</code> は <strong>null</strong> を返します (この場合エラーは生成されません)。</p>
-<h4><a class="anchor" aria-hidden="true" id="例題-7"></a><a href="#例題-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<h4><a class="anchor" aria-hidden="true" id="例題-9"></a><a href="#例題-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$keyStatus </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$passphrase </span>: Text
 
@@ -570,19 +709,130 @@
 <tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
 </thead>
 <tbody>
-<tr><td>status</td><td>Boolean</td><td>-&gt;</td><td><code>webAdmin</code>ポート上で、データエクスプローラーによるデータアクセスを無効にするには true、アクセスを有効にするには false (デフォルト)</td></tr>
+<tr><td>status</td><td>ブール</td><td>-&gt;</td><td><code>webAdmin</code>ポート上で、データエクスプローラーによるデータアクセスを無効にするには true、アクセスを有効にするには false (デフォルト)</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="説明-10"></a><a href="#説明-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-13"></a><a href="#説明-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.setAdminProtection()</code> 関数は、 <code>WebAdmin</code>セッションにおける <a href="/docs/Rx/ja/Admin/dataExplorer.html">データエクスプローラー</a> 含め、<a href="/docs/Rx/ja/Admin/webAdmin.html#httpポート">Web管理ポート</a>上でのデータアクセスを無効に設定することができます。</p>
 <p>この関数が呼び出されなかった場合のデフォルトでは、データエクスプローラーを使用した <code>WebAdmin</code> 権限を持つセッションについて、Web管理ポート上のデータアクセスは常に許可されます。 環境によっては (たとえば、アプリケーションサーバーが第三者のマシン上でホストされている場合)、 管理者に対して <a href="/docs/Rx/ja/Admin/webAdmin.html#access-key">access key</a> 設定を含むサーバー設定の編集は許可しても、データ閲覧はできないようにしたいかもしれません。</p>
 <p>このような場合にこの関数を呼び出すことで、ユーザーセッションが <code>WebAdmin</code> 権限を持っていても、マシンの Web管理ポート上でのデータエクスプローラーによるデータアクセスを無効にすることができます。 この関数を実行するとデータファイルは即座に保護され、そのステータスがディスク上に保存されます: アプリケーションを再起動しても、データファイルは保護されたままです。</p>
-<h4><a class="anchor" aria-hidden="true" id="例題-8"></a><a href="#例題-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<h4><a class="anchor" aria-hidden="true" id="例題-10"></a><a href="#例題-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <p>運用前に呼び出す <em>protectDataFile</em> プロジェクトメソッドを作成します:</p>
 <pre><code class="hljs css language-4d"> ds.<span class="hljs-function">setAdminProtection</span>(<span class="hljs-literal">True</span>) <span class="hljs-comment">// データエクスプローラーによるデータアクセスを無効化します</span>
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="参照-1"></a><a href="#参照-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参照</h4>
+<h4><a class="anchor" aria-hidden="true" id="参照-4"></a><a href="#参照-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参照</h4>
 <p><a href="#isadminprotected"><code>.isAdminProtected()</code></a></p>
+<h2><a class="anchor" aria-hidden="true" id="setremotecontextinfo"></a><a href="#setremotecontextinfo" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.setRemoteContextInfo()</h2>
+<p><details><summary>履歴</summary></p>
+<table>
+<thead>
+<tr><th>バージョン</th><th>内容</th></tr>
+</thead>
+<tbody>
+<tr><td>v19 R5</td><td>追加</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.setRemoteContextInfo</strong>( <em>contextName</em> : Text ; <em>dataClassName</em> : Text ; <em>attributes</em> : Text {; <em>contextType</em> : Text { ; <em>pageLength</em> : Integer}})<br/><strong>.setRemoteContextInfo</strong>( <em>contextName</em> : Text ; <em>dataClassName</em> : Text; <em>attributesColl</em> : Collection {; <em>contextType</em> : Text { ; <em>pageLength</em> : Integer }} )<br/><strong>.setRemoteContextInfo</strong>( <em>contextName</em> : Text ; <em>dataClassObject</em> : 4D.DataClass ; <em>attributes</em> : Text {; <em>contextType</em> : Text { ; <em>pageLength</em> : Integer }})<br/><strong>.setRemoteContextInfo</strong>( <em>contextName</em> : Text ; <em>dataClassObject</em> : 4D.DataClass ; <em>attributesColl</em> : Collection {; <em>contextType</em> : Text { ; <em>pageLength</em> : Integer }} )</p>
+<table>
+<thead>
+<tr><th>引数</th><th>タイプ</th><th></th><th>説明</th></tr>
+</thead>
+<tbody>
+<tr><td>contextName</td><td>テキスト</td><td>-&gt;</td><td>コンテキストの名称</td></tr>
+<tr><td>dataClassName</td><td>テキスト</td><td>-&gt;</td><td>データクラスの名称</td></tr>
+<tr><td>dataClassObject</td><td>4D.DataClass</td><td>-&gt;</td><td>DataClass オブジェクト (例: datastore.Employee)</td></tr>
+<tr><td>attributes</td><td>テキスト</td><td>-&gt;</td><td>カンマ区切りの属性リスト</td></tr>
+<tr><td>attributesColl</td><td>コレクション</td><td>-&gt;</td><td>属性名 (テキスト) のコレクション</td></tr>
+<tr><td>contextType</td><td>テキスト</td><td>-&gt;</td><td>渡す場合、値は &quot;main&quot; または &quot;currentItem&quot; のいずれか</td></tr>
+<tr><td>pageLength</td><td>整数</td><td>-&gt;</td><td>コンテキストにリンクされたエンティティセレクションのページ長 (デフォルトは 80)</td></tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>上級者向け:</strong> この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="説明-14"></a><a href="#説明-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<p><code>.setRemoteContextInfo()</code> 関数は、 指定したデータクラス属性を <em>contextName</em> の最適化コンテキストにリンクします。 指定した属性に対して最適化コンテキストが既に存在する場合、このコマンドはそれを置き換えます。</p>
+<p>ORDAクラスの関数にコンテキストを渡すと、RESTリクエストの最適化が即座に発動します:</p>
+<ul>
+<li>自動モードのときとは異なり、先頭エンティティは完全にロードされません。</li>
+<li>80件のエンティティ (または <code>pageLength</code> に対応するエンティティ数) のページが直ちにサーバーに要求される際、コンテキストの属性のみが要求されます。</li>
+</ul>
+<blockquote>
+<p>最適化コンテキストの作成に関する詳細については、<a href="/docs/Rx/ja/ORDA/datastores.html#クライアントサーバーの最適化">クライアント/サーバーの最適化</a> を参照ください。</p>
+</blockquote>
+<p><em>contextName</em> には、データクラス属性にリンクする最適化コンテキストの名前を渡します。</p>
+<p>コンテキストを受け取るデータクラスを指定するために、<em>dataClassName</em> または <em>dataClassObject</em> を渡すことができます。</p>
+<p>コンテキストにリンクする属性を指定するには、<em>attributes</em> (テキスト) にカンマ区切りの属性リストを渡すか、属性名のコレクションを <em>attributesColl</em> (テキストのコレクション) に渡します。</p>
+<p><em>attributes</em> が空のテキスト、または <em>attributesColl</em> が空のコレクションの場合、データクラスのすべてのスカラー属性が最適化コンテキストに置かれます。 データクラスに存在しない属性を渡した場合、それは無視され、エラーが返されます。</p>
+<p><em>contextType</em> を渡して、コンテキストが標準コンテキストか、リストボックスに表示されているカレントエンティティセレクション項目のコンテキストかを指定することができます。</p>
+<ul>
+<li>&quot;main&quot; (デフォルト) を渡すと、<em>contextName</em> は標準コンテキストを指定します。</li>
+<li>&quot;currentItem&quot; の場合には、渡された属性はカレント項目のコンテキストに置かれます。  <a href="/docs/Rx/ja/ORDA/datastores.html#エンティティセレクション型リストボックス">エンティティセレクション型リストボックス</a> を参照ください。</li>
+</ul>
+<p><em>pageLength</em> には、サーバーに要求するデータクラスエンティティの数を指定します。</p>
+<p>エンティティセレクションであるリレーション属性 (1対N) について、<em>pageLength</em> を渡すことができます。 シンタックスは、<code>relationAttributeName:pageLength</code> です (例: employees:20)。</p>
+<h4><a class="anchor" aria-hidden="true" id="例題-1-3"></a><a href="#例題-1-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 1</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$ds </span>: 4D.DataStoreImplementation<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$persons </span>: cs.PersonsSelection<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$p </span>: cs.PersonsEntity<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$contextA </span>: Object<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$info </span>: Object<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$text </span>: Text
+
+<span class="hljs-comment">// リモートデータストアを開きます</span>
+<span class="hljs-variable">$ds</span>:=<span class="hljs-function">Open datastore</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"hostname"</span>; <span class="hljs-string">"www.myserver.com"</span>); <span class="hljs-string">"myDS"</span>)
+
+<span class="hljs-comment">// コンテキストを設定します</span>
+<span class="hljs-variable">$contextA</span>:=<span class="hljs-function">New object</span>(<span class="hljs-string">"context"</span>; <span class="hljs-string">"contextA"</span>)
+<span class="hljs-variable">$ds</span>.<span class="hljs-function">setRemoteContextInfo</span>(<span class="hljs-string">"contextA"</span>; <span class="hljs-variable">$ds</span>.Persons; <span class="hljs-string">"firstname, lastname"</span>)
+
+<span class="hljs-comment">// ループを使い、サーバーにリクエストを送信します</span>
+<span class="hljs-variable">$persons</span>:=<span class="hljs-variable">$ds</span>.Persons.<span class="hljs-function">all</span>(<span class="hljs-variable">$contextA</span>)
+<span class="hljs-variable">$text</span>:=<span class="hljs-string">""</span><span class="hljs-keyword"> 
+For each</span> (<span class="hljs-variable">$p</span>; <span class="hljs-variable">$persons</span>)
+    <span class="hljs-variable">$text</span>:=<span class="hljs-variable">$p</span>.firstname + <span class="hljs-string">" "</span> + <span class="hljs-variable">$p</span>.lastname<span class="hljs-keyword">
+End for each</span> 
+
+<span class="hljs-comment">// コンテキストの情報を確認します</span>
+<span class="hljs-variable">$info</span>:=<span class="hljs-variable">$ds</span>.<span class="hljs-function">getRemoteContextInfo</span>(<span class="hljs-string">"contextA"</span>)
+<span class="hljs-comment">// $info = {name:"contextA";dataclass:"Persons";main:"firstname, lastname"} </span>
+</code></pre>
+<blockquote>
+<p>この例はデモンストレーションであり、実際の実装を想定したものではありません。</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="例題-2-3"></a><a href="#例題-2-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 2</h4>
+<p>以下のコードでは、<code>Address</code> データクラスのエンティティ 30件のページをサーバーに要求しています。 返されるエンティティは、<code>zipCode</code> 属性のみを含みます。</p>
+<p>各 <code>Address</code> エンティティに対して、20件の Persons エンティティが返され、それらには <code>lastname</code> と <code>firstname</code> 属性のみが含まれます:</p>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$ds </span>: 4D.DataStoreImplementation
+
+<span class="hljs-variable">$ds</span>:=<span class="hljs-function">Open datastore</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"hostname"</span>; <span class="hljs-string">"www.myserver.com"</span>); <span class="hljs-string">"myDS"</span>)
+
+<span class="hljs-variable">$ds</span>.<span class="hljs-function">setRemoteContextInfo</span>(<span class="hljs-string">"contextA"</span>; <span class="hljs-variable">$ds</span>.Address; <span class="hljs-string">"zipCode, persons:20,\
+persons.lastname, persons.firstname"</span>; <span class="hljs-string">"main"</span>; <span class="hljs-number">30</span>)
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="例題-3---リストボックス"></a><a href="#例題-3---リストボックス" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 3 - リストボックス</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// フォームのロード時に</span><span class="hljs-keyword">
+Case of</span> 
+    : (Form event code=On Load)
+
+        Form.ds:=<span class="hljs-function">Open datastore</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"hostname"</span>; <span class="hljs-string">"www.myserver.com"</span>); <span class="hljs-string">"myDS"</span>)
+
+       <span class="hljs-comment">// ページコンテキストの属性を設定します</span>
+        Form.ds.<span class="hljs-function">setRemoteContextInfo</span>(<span class="hljs-string">"LB"</span>; Form.ds.Persons; <span class="hljs-string">"age, gender,\
+        children"</span>; <span class="hljs-string">"currentItem"</span>)
+
+        Form.settings:=<span class="hljs-function">New object</span>(<span class="hljs-string">"context"</span>; <span class="hljs-string">"LB"</span>)
+        Form.persons:=Form.ds.Persons.<span class="hljs-function">all</span>(Form.settings) 
+        <span class="hljs-comment">// Form.persons がリストボックスに表示されます</span><span class="hljs-keyword">
+End case</span> 
+
+<span class="hljs-comment">// カレント項目のコンテキストの属性を取得します</span>
+Form.currentItemLearntAttributes:=Form.selectedPerson.<span class="hljs-function">getRemoteContextAttributes</span>()
+<span class="hljs-comment">// Form.currentItemLearntAttributes = "age, gender, children" </span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="参照-5"></a><a href="#参照-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>参照</h4>
+<p><a href="#getremotecontextinfo">.getRemoteContextInfo()</a><br/><a href="#getallremotecontexts">.getAllRemoteContexts()</a><br/><a href="#clearallremotecontexts">.clearAllRemoteContexts()</a></p>
 <h2><a class="anchor" aria-hidden="true" id="startrequestlog"></a><a href="#startrequestlog" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.startRequestLog()</h2>
 <p><details><summary>履歴</summary></p>
 <table>
@@ -601,10 +851,10 @@
 </thead>
 <tbody>
 <tr><td>file</td><td>4D.File</td><td>-&gt;</td><td>File オブジェクト</td></tr>
-<tr><td>reqNum</td><td>Integer</td><td>-&gt;</td><td>メモリ内に保管するリクエストの数</td></tr>
+<tr><td>reqNum</td><td>整数</td><td>-&gt;</td><td>メモリ内に保管するリクエストの数</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="説明-11"></a><a href="#説明-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-15"></a><a href="#説明-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.startRequestLog()</code> 関数は、 クライアント側で ORDAリクエストのログを開始します。</p>
 <p>このメソッドはリモート側の 4D で呼び出す必要があり、それ以外の場合には何もしません。 これはクライアント/サーバー環境でのデバッグを想定して設計されています。</p>
 <p>ORDA リクエストログは、渡した引数によってファイルまたはメモリに送ることができます:</p>
@@ -619,7 +869,7 @@
 <li><p>引数を何も渡さなかった場合、ログはメモリに記録されていきます。 前もって <code>.startRequestLog()</code> が<em>reqNum</em> 引数付きで 呼び出されていた場合 (ただし <code>.stopRequestLog()</code> の前)、ログが次回消去されるかまたは<code>.stopRequestLog()</code> が呼び出されるまで、ログデータはメモリ内にスタックされます。</p></li>
 </ul>
 <p>ORDAリクエストログのフォーマットの詳細は、<a href="https://doc.4d.com/4Dv18R6/4D/18-R6/Description-of-log-files.300-5217819.ja.html#4385373"><strong>ORDAクライアントリクエスト</strong></a> の章を参照ください。</p>
-<h4><a class="anchor" aria-hidden="true" id="例題-1-3"></a><a href="#例題-1-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="例題-1-4"></a><a href="#例題-1-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 1</h4>
 <p>ORDA クライアントリクエストをファイルに記録し、ログシーケンス番号を使用します:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$file </span>: 4D.File<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$e </span>: cs.PersonsEntity
@@ -632,7 +882,7 @@
  ds.<span class="hljs-function">stopRequestLog</span>()
 <span class="hljs-function"> SET DATABASE PARAMETER</span>(Client Log Recording;<span class="hljs-number">0</span>)
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="例題-2-3"></a><a href="#例題-2-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 2</h4>
+<h4><a class="anchor" aria-hidden="true" id="例題-2-4"></a><a href="#例題-2-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題 2</h4>
 <p>ORDA クライアントリクエストをメモリに記録します:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$es </span>: cs.PersonsSelection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$log </span>: Collection
@@ -660,13 +910,13 @@
 | 引数 | タイプ |  | 説明                |
 | -- | --- |  | ----------------- |
 |    |     |  | このコマンドは引数を必要としません |</p>
-<h4><a class="anchor" aria-hidden="true" id="説明-12"></a><a href="#説明-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-16"></a><a href="#説明-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.startTransaction()</code> 関数は、 対象データストアに対応するデータベース上で、カレントプロセス内のトランザクションを開始します。 トランザクションプロセス中にデータストアのエンティティに加えられた変更は、トランザクションが確定されるかキャンセルされるまで一時的に保管されたままになります。</p>
 <blockquote>
 <p>このメソッドがメインのデータストア (<code>ds</code> コマンドで返されるデータストア) で呼ばれた場合、トランザクションはメインのデータストアとそのデータベースで実行されるすべてのオペレーションに適用されます。これには、そこで実行される ORDA とクラシック言語も含まれます。</p>
 </blockquote>
 <p>複数のトランザクションをネストすること (サブトランザクション) が可能です。 個々のトランザクションまたはサブトランザクションは、それぞれキャンセルするか確定される必要があります。 メイントランザクションがキャンセルされると、サブトランザクションも (たとえ個々に<code>.validateTransaction()</code> 関数で承認されていても) すべてキャンセルされます。</p>
-<h4><a class="anchor" aria-hidden="true" id="例題-9"></a><a href="#例題-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<h4><a class="anchor" aria-hidden="true" id="例題-11"></a><a href="#例題-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$connect</span>; <span class="hljs-variable">$status </span>: Object<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$person </span>: cs.PersonsEntity<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$ds </span>: cs.DataStore<span class="hljs-keyword">
@@ -711,10 +961,10 @@
 | 引数 | タイプ |  | 説明                |
 | -- | --- |  | ----------------- |
 |    |     |  | このコマンドは引数を必要としません |</p>
-<h4><a class="anchor" aria-hidden="true" id="説明-13"></a><a href="#説明-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-17"></a><a href="#説明-17" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.stopRequestLog()</code> 関数は、 クライアント側の ORDAリクエストのログをすべて停止します (ファイル・メモリとも)。 これは、開かれたドキュメントを実際に閉じてディスクに保存するため、ファイルにログを取っている場合にとくに有用です。</p>
 <p>このメソッドはリモート側の 4D で呼び出す必要があり、それ以外の場合には何もしません。 これはクライアント/サーバー環境でのデバッグを想定して設計されています。</p>
-<h4><a class="anchor" aria-hidden="true" id="例題-10"></a><a href="#例題-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<h4><a class="anchor" aria-hidden="true" id="例題-12"></a><a href="#例題-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <p><a href="#startrequestlog"><code>.startRequestLog()</code></a> の例題を参照ください。</p>
 <h2><a class="anchor" aria-hidden="true" id="validatetransaction"></a><a href="#validatetransaction" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.validateTransaction()</h2>
 <p><details><summary>履歴</summary></p>
@@ -731,14 +981,14 @@
 | 引数 | タイプ |  | 説明                |
 | -- | --- |  | ----------------- |
 |    |     |  | このコマンドは引数を必要としません |</p>
-<h4><a class="anchor" aria-hidden="true" id="説明-14"></a><a href="#説明-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
+<h4><a class="anchor" aria-hidden="true" id="説明-18"></a><a href="#説明-18" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>説明</h4>
 <p><code>.validateTransaction()</code> 関数は、対象データストアの対応するレベルで <a href="#starttransaction"><code>.startTransaction()</code></a> で開始された トランザクションを受け入れます 。</p>
 <p>この関数は、トランザクション中におこなわれたデータストア上のデータの変更を保存します。</p>
 <p>複数のトランザクションをネストすること (サブトランザクション) が可能です。 メイントランザクションがキャンセルされると、サブトランザクションも (たとえ個々にこの関数で承認されていても) すべてキャンセルされます。</p>
-<h4><a class="anchor" aria-hidden="true" id="例題-11"></a><a href="#例題-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
+<h4><a class="anchor" aria-hidden="true" id="例題-13"></a><a href="#例題-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>例題</h4>
 <p><a href="#starttransaction"><code>.startTransaction()</code></a> の例題を参照ください。</p>
 <style> h2 { background: #d9ebff;}</style>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/ja/API/DataClassAttributeClass.html"><span class="arrow-prev">← </span><span class="function-name-prevnext">DataClassAttribute</span></a><a class="docs-next button" href="/docs/Rx/ja/API/EmailObjectClass.html"><span>Email</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#ds">ds</a></li><li><a href="#open-datastore">Open datastore</a></li><li><a href="#dataclassname"><em>.dataclassName</em></a></li><li><a href="#canceltransaction">.cancelTransaction()</a></li><li><a href="#encryptionstatus">.encryptionStatus()</a></li><li><a href="#getinfo">.getInfo()</a></li><li><a href="#getrequestlog">.getRequestLog()</a></li><li><a href="#isadminprotected">.isAdminProtected()</a></li><li><a href="#makeselectionsalterable">.makeSelectionsAlterable()</a></li><li><a href="#providedatakey">.provideDataKey()</a></li><li><a href="#setadminprotection">.setAdminProtection()</a></li><li><a href="#startrequestlog">.startRequestLog()</a></li><li><a href="#starttransaction">.startTransaction()</a></li><li><a href="#stoprequestlog">.stopRequestLog()</a></li><li><a href="#validatetransaction">.validateTransaction()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/ja/API/DataClassAttributeClass.html"><span class="arrow-prev">← </span><span class="function-name-prevnext">DataClassAttribute</span></a><a class="docs-next button" href="/docs/Rx/ja/API/EmailObjectClass.html"><span>Email</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#ds">ds</a></li><li><a href="#open-datastore">Open datastore</a></li><li><a href="#dataclassname"><em>.dataclassName</em></a></li><li><a href="#canceltransaction">.cancelTransaction()</a></li><li><a href="#clearallremotecontexts">.clearAllRemoteContexts()</a></li><li><a href="#encryptionstatus">.encryptionStatus()</a></li><li><a href="#getallremotecontexts">.getAllRemoteContexts()</a></li><li><a href="#getinfo">.getInfo()</a></li><li><a href="#getremotecontextinfo">.getRemoteContextInfo()</a></li><li><a href="#getrequestlog">.getRequestLog()</a></li><li><a href="#isadminprotected">.isAdminProtected()</a></li><li><a href="#makeselectionsalterable">.makeSelectionsAlterable()</a></li><li><a href="#providedatakey">.provideDataKey()</a></li><li><a href="#setadminprotection">.setAdminProtection()</a></li><li><a href="#setremotecontextinfo">.setRemoteContextInfo()</a></li><li><a href="#startrequestlog">.startRequestLog()</a></li><li><a href="#starttransaction">.startTransaction()</a></li><li><a href="#stoprequestlog">.stopRequestLog()</a></li><li><a href="#validatetransaction">.validateTransaction()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

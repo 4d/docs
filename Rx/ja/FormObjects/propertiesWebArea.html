@@ -87,6 +87,9 @@
 <hr>
 <h2><a class="anchor" aria-hidden="true" id="進捗状況変数"></a><a href="#進捗状況変数" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>進捗状況変数</h2>
 <p>倍長整数型変数の名前です。 この変数には 0 から 100 までの値が格納され、この数値は Webエリアに表示されるページのロードされたパーセンテージを表します。 この変数は 4D が自動で更新します。手動で変更することはできません。</p>
+<blockquote>
+<p>As of 4D v19 R5, this variable is no longer updated in Web Areas using the <a href="/docs/Rx/ja/FormObjects/webAreaOverview.html#web-rendering-engine">Windows system rendering engine</a>.</p>
+</blockquote>
 <h4><a class="anchor" aria-hidden="true" id="json-文法-1"></a><a href="#json-文法-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON 文法</h4>
 <table>
 <thead>
@@ -110,9 +113,9 @@
 <p>URL変数は <a href="https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html">WA OPEN URL</a> コマンドと同じ効果をもたらします。 しかしながら、以下の違いに注意してください。</p>
 <ul>
 <li>ドキュメントにアクセスする場合、この変数は RFC準拠 (&quot;file://c:/My%20Doc&quot;) な URL のみを受け付け、システムパス名 (&quot;c:\MyDoc&quot;) は受け付けません。 <a href="https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html">WA OPEN URL</a> コマンドは両方の記法を受け付けます。</li>
-<li>URL変数が空の文字列の場合、Webエリアは URL をロードしません。 <a href="https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html">WA OPEN URL</a> コマンドはこの場合にエラーを生成します。</li>
-<li>URL変数がプロトコル (http, mailto, file など) を含まない場合、Webエリアは &quot;http://&quot; を付加します。<a href="https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html">WA OPEN URL</a> コマンドはこれを付加しません。</li>
-<li>Webエリアがフォーム上で表示されていない場合 (フォームの別ページに Webエリアがある場合等)、<a href="https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html">WA OPEN URL</a> コマンドを実行しても効果はありません。一方、URL変数に値を代入すると、カレントURL が更新されます。</li>
+<li>URL変数が空の文字列の場合、Webエリアは URL をロードしません。 <a href="https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html">WA OPEN URL</a> コマンドはこれを付加しません。</li>
+<li><a href="https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PAGE-CONTENT.301-5232965.ja.html">WA SET PAGE CONTENT</a>: このコマンドを使用する場合、(<a href="https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.ja.html">WA OPEN URL</a> コマンドを呼び出すかあるいはエリアに割り当てられた URL変数への代入を通して) 少なくとも既に 1ページがエリア内に読み込まれている必要があります。</li>
+<li>Webエリアがフォーム上で表示されていない場合 (フォームの別ページに Webエリアがある場合等)、<a href="https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html">WA OPEN URL</a> コマンドを実行しても効果はありません。</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="json-文法-2"></a><a href="#json-文法-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON 文法</h4>
 <table>
@@ -129,13 +132,18 @@
 <h2><a class="anchor" aria-hidden="true" id="埋め込みwebレンダリングエンジンを使用"></a><a href="#埋め込みwebレンダリングエンジンを使用" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>埋め込みWebレンダリングエンジンを使用</h2>
 <p>このオプションを使用して、Webエリアで使用する描画エンジンを 2つのうちから選択することができます:</p>
 <ul>
-<li><strong>チェックなし</strong> - <code>JSON値: system</code> (デフォルト): この場合、4Dはシステムの最適なエンジンを使用します。 Windows では、4Dはマシンにインストールされた最新のブラウザー (IE11、MS Edge、等) を自動的に使用します。 macOS では、カレントバージョンの WebKit (Safari) です。 この結果、HTML5 や JavaScript の最新 Web描画エンジンを自動的に利用できることになります。 しかし、Internet Explorer/Edge と WebKit 間で若干描画に違いがでることがあります。</li>
-<li><strong>チェックあり</strong> - <code>JSON値: embedded</code>: この場合、4Dは Google (CEF) の Blink エンジンを使用します。 埋め込みWebレンダリングエンジンを使用すると、Webエリアの描画とその動作が (ピクセル単位での若干の相違やネットワーク実装に関連する違いを除き) プラットフォームに関わらず同じになります。 このオプションが選択されると、OS によりおこなわれる自動更新などの利点を得ることができなくなります。使用エンジンの新バージョンは 4D のリリースを通して提供されます。</li>
+<li><strong>チェックなし</strong> - <code>JSON値: system</code> (デフォルト): この場合、4Dはシステムの最適なエンジンを使用します。 この結果、HTML5 や JavaScript の最新 Web描画エンジンを自動的に利用できることになります。 しかし、プラットフォーム間で若干描画に違いがでることがあります。 Windows では、4Dは Microsoft Edge WebView2 を使用します。 macOS では、カレントバージョンの WebKit (Safari) です。</li>
 </ul>
-<p>Blinkエンジンには以下のような制約があります:</p>
+<blockquote>
+<p>Windows で Microsoft Edge WebView2がインストールされていない場合、4D はシステムのレンダリングエンジンとして埋め込みエンジンを使用します。 システムにインストールされているかどうかを確認するには、アプリケーションパネルで &quot;Microsoft Edge WebView2 Runtime&quot; を検索してください。</p>
+</blockquote>
 <ul>
-<li><a href="https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PAGE-CONTENT.301-5232965.ja.html">WA SET PAGE CONTENT</a>: このコマンドを使用する場合、(<a href="https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.ja.html">WA OPEN URL</a> コマンドを呼び出すかあるいはエリアに割り当てられた URL変数への代入を通して) 少なくとも既に 1ページがエリア内に読み込まれている必要があります。</li>
-<li><a href="https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.ja.html">WA SET PREFERENCE</a> コマンドの <code>WA enable URL drop</code> セレクターによって URLドロップが許可されている場合、最初のドロップをする前に少なくとも 1度は <a href="https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.ja.html">WA OPEN URL</a> コマンドを呼び出すか、またはエリアに割り当てられている URL変数に URL が渡されている必要があります。</li>
+<li><strong>チェックあり</strong> - <code>JSON値: embedded</code>: この場合、4D は Chromium Embedded Framework (CEF) を使用します。 埋め込みWebレンダリングエンジンを使用すると、Webエリアの描画とその動作が (ピクセル単位での若干の相違やネットワーク実装に関連する違いを除き) プラットフォームに関わらず同じになります。 このオプションが選択されると、OS によりおこなわれる自動更新などの利点を得ることができなくなります。 使用エンジンの新バージョンは 4D のリリースを通して定期的に提供されます。</li>
+</ul>
+<p>CEFエンジンには以下のような制約があります:</p>
+<ul>
+<li><a href="https://doc.4d.com/4dv19/help/command/ja/page1037.html">WA SET PAGE CONTENT</a>: このコマンドを使用する場合、(<a href="https://doc.4d.com/4dv19/help/command/ja/page1020.html"><code>WA OPEN URL</code></a> コマンドを呼び出すかあるいはエリアに割り当てられた URL変数への代入を通して) 少なくとも既に 1ページがエリア内に読み込まれている必要があります。</li>
+<li><a href="https://doc.4d.com/4dv19/help/command/ja/page1041.html">WA SET PREFERENCE</a> コマンドの <code>WA enable URL drop</code> セレクターによって URLドロップが許可されている場合、最初のドロップをする前に少なくとも 1度は <a href="https://doc.4d.com/4dv19/help/command/ja/page1020.html">WA OPEN URL</a> コマンドを呼び出すか、またはエリアに割り当てられている URL変数に URL が渡されている必要があります。</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="json-文法-3"></a><a href="#json-文法-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>JSON 文法</h4>
 <table>

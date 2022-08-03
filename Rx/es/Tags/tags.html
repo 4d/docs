@@ -102,7 +102,7 @@
 <pre><code class="hljs css language-html"><span class="hljs-comment">&lt;!--#4DHTML [Mail]Letter_type--&gt;</span>
 </code></pre>
 <p>If the <code>[Mail]Letter_type</code> text field itself contains a tag, for example <code>&lt;!--#4DSCRIPT/m_Gender--&gt;</code>, this tag will be evaluated recursively after the interpretation of the 4DHTML tag.</p>
-<p>This powerful principle meets most needs related to text transformation. Note, however, that in some cases this can also allow malicious code to be inserted in the web context, <a href="/docs/Rx/es/WebServer/templates.html#prevention-of-malicious-code-insertion">which can be avoided</a>.</p>
+<p>Este poderoso principio satisface la mayoría de las necesidades relacionadas con la transformación de textos. Note, however, that in some cases this can also allow malicious code to be inserted in the web context, <a href="/docs/Rx/es/WebServer/templates.html#prevention-of-malicious-code-insertion">which can be avoided</a>.</p>
 <h3><a class="anchor" aria-hidden="true" id="identificadores-con-tokens"></a><a href="#identificadores-con-tokens" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Identificadores con tokens</h3>
 <p>To ensure the correct evaluation of expressions processed via tags, regardless of the language or 4D version, it's recommended to use the tokenized syntax for elements whose name may vary over versions (commands, tables, fields, constants). For example, to insert the <code>Current time</code> command, enter <code>Current time: C178</code>.</p>
 <h3><a class="anchor" aria-hidden="true" id="utilizando-el--como-separador-decimal"></a><a href="#utilizando-el--como-separador-decimal" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utilizando el &quot;.&quot; como separador decimal</h3>
@@ -379,7 +379,7 @@ No name has been found.
 <p>However, if the HTML page specified does not contain <code>&lt;body&gt;``&lt;/body&gt;</code> tags, the entire page is included. Depende de usted verificar la consistencia de las meta-etiquetas.</p>
 <p>The <code>&lt;!--#4DINCLUDE --&gt;</code> comment is very useful for tests (<code>&lt;!--#4DIF--&gt;</code>) or loops (<code>&lt;!--#4DLOOP--&gt;</code>). It is very convenient to include banners according to a criteria or randomly. When including, regardless of the file name extension, 4D analyzes the called page and then inserts the contents (modified or not) in the page originating the <code>4DINCLUDE</code> call.</p>
 <p>An included page with the <code>&lt;!--#4DINCLUDE --&gt;</code> comment is loaded in the Web server cache the same way as pages called via a URL or sent with the <code>WEB SEND FILE</code> command.</p>
-<p>In <em>path</em>, put the path leading to the document to include. Warning: In the case of a <code>4DINCLUDE</code> call, the path is relative to the document being analyzed, that is, the &quot;parent&quot; document. Use the slash character (/) as a folder separator and the two dots (..) to go up one level (HTML syntax). When you use the <code>4DINCLUDE</code> tag with the <code>PROCESS 4D TAGS</code> command, the default folder is the project folder.</p>
+<p>En <em>ruta</em>, coloque la ruta que va al documento a incluir. Warning: In the case of a <code>4DINCLUDE</code> call, the path is relative to the document being analyzed, that is, the &quot;parent&quot; document. Use the slash character (/) as a folder separator and the two dots (..) to go up one level (HTML syntax). When you use the <code>4DINCLUDE</code> tag with the <code>PROCESS 4D TAGS</code> command, the default folder is the project folder.</p>
 <blockquote>
 <p>You can modify the default folder used by the <code>4DINCLUDE</code> tag in the current page, using the <code>&lt;!--#4DBASE --&gt;</code> tag (see below).</p>
 </blockquote>
@@ -417,7 +417,7 @@ No name has been found.
 <blockquote>
 <p>Esta sintaxis no se puede utilizar con arrays de dos dimensiones. En este caso, es mejor combinar un método con bucles anidados.</p>
 </blockquote>
-<p>The following code example:</p>
+<p>El siguiente ejemplo de código:</p>
 <pre><code class="hljs css language-html"><span class="hljs-comment">&lt;!--#4DLOOP arr_names--&gt;</span>
 <span class="hljs-comment">&lt;!--#4DTEXT arr_names{arr_names}--&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">BR</span>&gt;</span>
 <span class="hljs-comment">&lt;!--#4DENDLOOP--&gt;</span>
@@ -432,7 +432,7 @@ No name has been found.
 <p>This syntax makes a loop as long as the method returns <code>True</code>. El método toma un tipo de parámetro Long Integer. First it is called with the value 0 to allow an initialization stage (if necessary); it is then called with the values 1 ,then 2, then 3 and so on, as long as it returns <code>True</code>.</p>
 <p>For security reasons, within a Web process, the <code>On Web Authentication</code> database method can be called once just before the initialization stage (method execution with 0 as parameter). Si la autenticación es correcta, se procederá a la etapa de inicialización.</p>
 <p><code>C_BOOLEAN($0)</code> y <code>C_LONGINT($1)</code> DEBE declararse dentro del método a efectos de compilación.</p>
-<p>The following code example:</p>
+<p>El siguiente ejemplo de código:</p>
 <pre><code class="hljs css language-html"><span class="hljs-comment">&lt;!--#4DLOOP my_method--&gt;</span>
 <span class="hljs-comment">&lt;!--#4DTEXT var--&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">BR</span>&gt;</span> 
 <span class="hljs-comment">&lt;!--#4DENDLOOP--&gt;</span>
@@ -527,16 +527,16 @@ No name has been found.
 <pre><code class="hljs css language-html"><span class="hljs-tag">&lt;<span class="hljs-name">P</span>&gt;</span>Welcome to <span class="hljs-comment">&lt;!--#4DTEXT vtSiteName--&gt;</span>!<span class="hljs-tag">&lt;/<span class="hljs-name">P</span>&gt;</span>
 </code></pre>
 <p>Just like the <code>4DTEXT</code> tag, this tag lets you assess a 4D variable or expression that returns a value, and insert it as an HTML expression. This value is inserted as simple text, special HTML characters such as &quot;&gt;&quot; are automatically escaped.</p>
-<p>También puede insertar expresiones 4D. You can for example directly insert the contents of a field (<code>&lt;!--#4DTEXT [tableName]fieldName--&gt;</code>), an array element (<code>&lt;!--#4DTEXT tabarr{1}--&gt;</code>) or a method returning a value (<code>&lt;!--#4DTEXT mymethod--&gt;</code>). The expression conversion follows the same rules as the variable ones. Además, la expresión debe cumplir con las reglas de sintaxis 4D.</p>
+<p>También puede insertar expresiones 4D. You can for example directly insert the contents of a field (<code>&lt;!--#4DTEXT [tableName]fieldName--&gt;</code>), an array element (<code>&lt;!--#4DTEXT tabarr{1}--&gt;</code>) or a method returning a value (<code>&lt;!--#4DTEXT mymethod--&gt;</code>). La conversión de las expresiones sigue las mismas reglas que las de las variables. Además, la expresión debe cumplir con las reglas de sintaxis 4D.</p>
 <blockquote>
 <p>For security reasons, it is recommended to use this tag when processing data introduced from outside the application, in order to prevent the <a href="#prevention-of-malicious-code-insertion">insertion of malicious code</a>.</p>
 </blockquote>
 <p>In case of an evaluation error, the inserted text will appear as <code>&lt;!--#4DTEXT myvar--&gt; : ## error # error code</code>.</p>
 <ul>
 <li>Debe utilizar las variables proceso.</li>
-<li>Puede mostrar el contenido de un campo imagen. However, it is not possible to display the content of a picture array item.</li>
+<li>Puede mostrar el contenido de un campo imagen. Sin embargo, no es posible mostrar el contenido de un elemento del array de imágenes.</li>
 <li>It is possible to display the contents of an object field by means of a 4D formula. For example, you can write <code>&lt;!--#4DTEXT OB Get: C1224([Rect]Desc;\&quot;color\&quot;)--&gt;</code>.</li>
-<li>Normalmente se trabaja con variables de tipo texto. Sin embargo, también se pueden utilizar las variables BLOB. You just need to generate BLOBs in <code>Text without length</code> mode.</li>
+<li>Normalmente se trabaja con variables de tipo texto. Sin embargo, también se pueden utilizar las variables BLOB. Sólo tiene que generar los BLOBs en modo <code>Texto sin longitud</code>.</li>
 </ul>
 <h2><a class="anchor" aria-hidden="true" id="sintaxis-alternativa-para-4dtext-4dhtml-4deval"></a><a href="#sintaxis-alternativa-para-4dtext-4dhtml-4deval" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sintaxis alternativa para 4DTEXT, 4DHTML, 4DEVAL</h2>
 <p>Several existing 4D transformation tags can be expressed using a $-based syntax:</p>
@@ -564,7 +564,7 @@ No name has been found.
 <pre><code class="hljs css language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">line</span> <span class="hljs-attr">x1</span>=<span class="hljs-string">"$4DEVAL($x)"</span> <span class="hljs-attr">y1</span>=<span class="hljs-string">"$4DEVAL($graphY1)"</span>/&gt;</span>
 </code></pre>
 <p>Note that <code>$4dtag</code> and <code>&lt;--#4dtag --&gt;</code> are not strictly equivalent: unlike <code>&lt;--#4dtag --&gt;</code>, <code>$4dtag</code> processing does not interpret 4D tags <a href="#recursive-processing">recursively</a>. Las etiquetas <code>$</code> siempre se evalúan una vez y el resultado se considera texto plano.</p>
-<p>The reason for this difference is to prevent malicious code injection. As <a href="#prevention-of-malicious-code-insertion">explained below</a>, it is strongly recommended to use <code>4DTEXT</code> tags instead of <code>4DHTML</code> tags when handling user text to protect against unwanted reinterpretation of tags: with <code>4DTEXT</code>, special characters such as &quot;&lt;&quot; are escaped, thus any 4D tags using the <code>&lt;!--#4dtag expression --&gt;</code> syntax will lose their particular meaning. However, since <code>4DTEXT</code> does not escape the <code>$</code> symbol, we decided to break support for recursion in order to prevent malicious injection using the <code>$4dtag (expression)</code> syntax.</p>
+<p>La razón de esta diferencia es evitar la inyección de código malicioso. As <a href="#prevention-of-malicious-code-insertion">explained below</a>, it is strongly recommended to use <code>4DTEXT</code> tags instead of <code>4DHTML</code> tags when handling user text to protect against unwanted reinterpretation of tags: with <code>4DTEXT</code>, special characters such as &quot;&lt;&quot; are escaped, thus any 4D tags using the <code>&lt;!--#4dtag expression --&gt;</code> syntax will lose their particular meaning. However, since <code>4DTEXT</code> does not escape the <code>$</code> symbol, we decided to break support for recursion in order to prevent malicious injection using the <code>$4dtag (expression)</code> syntax.</p>
 <p>The following examples show the result of processing depending on the syntax and tag used:</p>
 <pre><code class="hljs css language-4d">  <span class="hljs-comment">// example 1</span>
  myName:=<span class="hljs-string">"&lt;!--#4DHTML QUIT 4D--&gt;"</span> <span class="hljs-comment">//malicious injection</span>

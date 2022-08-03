@@ -73,7 +73,7 @@
 <tr><th></th></tr>
 </thead>
 <tbody>
-<tr><td><a href="#4dblobnew"><strong>4D.Blob.new()</strong> : 4D.Blob<br/><strong>4D.Blob.new</strong>( <em>blobScal</em> : Blob ) : 4D.Blob<br/><strong>4D.Blob.new</strong>( <em>blobObj</em> : 4D.Blob ) : 4D.Blob</a><p>    crée un nouvel objet <code>4D.Blob</code> encapsulant éventuellement une copie des données d'un autre blob (blob scalaire ou <code>4D.Blob</code>).</td></tr>
+<tr><td><a href="#4dblobnew"><strong>4D.Blob.new()</strong> : 4D.Blob<br/><strong>4D.Blob.new</strong>( <em>blobScal</em> : Blob ) : 4D.Blob<br/><strong>4D.Blob.new</strong>( <em>blobObj</em> : 4D.Blob ) : 4D.Blob</a><p>    crée un nouvel objet <code>4D.Blob</code> encapsulant, de manière facultative, une copie des données à partir d'un autre blob (blob scalaire ou <code>4D.Blob</code>)</td></tr>
 <tr><td><a href="#size"><strong>.size</strong> : Real</a><p>    retourne la taille d'un <code>4D.Blob</code>, exprimée en octets.</td></tr>
 <tr><td><a href="#slice"><strong>.slice()</strong> : 4D.Blob<br/><strong>.slice</strong>( <em>start</em> : Real ) : 4D.Blob<br/><strong>.slice</strong>( <em>start</em> : Real; <em>end</em> : Real ) : 4D.Blob</a><p>     crée et retourne un <code>4D.Blob</code> qui référence les données d'un sous-ensemble du blob sur lequel il est appelé. Le blob d'origine n'est pas modifié.</td></tr>
 </tbody>
@@ -100,8 +100,8 @@
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description"></a><a href="#description" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p><code>4D.Blob.new</code> crée un nouvel objet <code>4D.Blob</code> encapsulant éventuellement une copie des données d'un autre blob (blob scalaire ou <code>4D.Blob</code>).
-Si le paramètre <code>blob</code> est omis, la méthode retourne un 4D.Blob vide.</p>
+<p><code>4D.Blob.new</code> crée un nouvel objet <code>4D.Blob</code> encapsulant, de manière facultative, une copie des données à partir d'un autre blob (blob scalaire ou <code>4D.Blob</code>).</p>
+<p>Si le paramètre <code>blob</code> est omis, la méthode retourne un 4D.Blob vide.</p>
 <h2><a class="anchor" aria-hidden="true" id="size"></a><a href="#size" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.size</h2>
 <p><strong>.size</strong> : Real</p>
 <h4><a class="anchor" aria-hidden="true" id="description-1"></a><a href="#description-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>

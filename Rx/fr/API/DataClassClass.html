@@ -75,13 +75,17 @@
 <tbody>
 <tr><td><a href="#attributename"><strong><em>.attributeName</em></strong> : DataClassAttribute</a><p>    objets disponibles directement en tant que propriétés</td></tr>
 <tr><td><a href="#all"><strong>.all</strong> ( { <em>settings</em> : Object } ) : 4D.EntitySelection</a><p>    interroge le datastore pour trouver toutes les entités de la dataclass et les renvoie en tant qu&quot;entity selection</td></tr>
+<tr><td><a href="#clearremotecache"><strong>.clearRemoteCache()</strong></a><p>    vide le cache ORDA d'une dataclass</td></tr>
 <tr><td><a href="#fromcollection"><strong>.fromCollection</strong>( <em>objectCol</em> : Collection { ; <em>settings</em> : Object } ) : 4D.EntitySelection</a><p>    modifie ou crée des entités dans la dataclass en utilisant la collection d'objets <em>objectCol</em> et retourne l'entity selection correspondante</td></tr>
 <tr><td><a href="#get"><strong>.get</strong>( <em>primaryKey</em> : Integer { ; <em>settings</em> : Object } ) : 4D.Entity<br><strong>.get</strong>( <em>primaryKey</em> : Text { ; <em>settings</em> : Object } ) : 4D.Entity</a><p>    interroge la dataclass pour récupérer l'entité correspondant au paramètre <em>primaryKey</em></td></tr>
+<tr><td><a href="#getcount"><strong>.getCount()</strong> : Integer </a><p>     retourne le nombre d'entités dans une dataclass</td></tr>
 <tr><td><a href="#getdatastore"><strong>.getDataStore()</strong> : cs.DataStore</a><p>    retourne le datastore de la dataclass</td></tr>
 <tr><td><a href="#getinfo"><strong>.getInfo()</strong> : Object </a><p>    retourne un objet qui fournit des informations sur la dataclass</td></tr>
+<tr><td><a href="#getremotecache"><strong>.getRemoteCache</strong>() : Object </a><p>    retourne un objet qui contient le cache ORDA pour la dataclass</td></tr>
 <tr><td><a href="#new"><strong>.new()</strong> : 4D.Entity </a><p>    crée en mémoire et renvoie une nouvelle entité vide pour la dataclass</td></tr>
 <tr><td><a href="#newselection"><strong>.newSelection</strong>( { <em>keepOrder</em> : Integer } ) : 4D.EntitySelection </a><p>    crée en mémoire une entity selection vide, non partageable, liée à la dataclass</td></tr>
 <tr><td><a href="#query"><strong>.query</strong>( <em>queryString</em> : Text { ; <em>...value</em> : any } { ; <em>querySettings</em> : Object } ) : 4D.EntitySelection <br><strong>.query</strong>( <em>formula</em> : Object { ; <em>querySettings</em> : Object } ) : 4D.EntitySelection </a><p>    recherche les entités répondant aux critères de recherche spécifiés dans <em>queryString</em> ou <em>formula</em> et (optionnellement) dans <em>value</em>toutes les entités de la dataclass</td></tr>
+<tr><td><a href="#setremotecachesettings"><strong>.setRemoteCacheSettings</strong>(<em>settings</em> : Object) </a><p>    définit le timeout et la taille maximum du cache ORDA pour la dataclass</td></tr>
 </tbody>
 </table>
 <h2><a class="anchor" aria-hidden="true" id="attributename"></a><a href="#attributename" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.<em>attributeName</em></h2>
@@ -170,9 +174,53 @@
 <tr><td>context</td><td>Text</td><td>Nom du contexte d'optimisation appliqué à l'entity selection. Ce contexte sera utilisé par le code qui manipule l'entity selection afin de bénéficier de l'optimisation. Cette fonctionnalité est <a href="/docs/Rx/fr/ORDA/entities.html#optimisation-client-server">conçue pour le traitement client/serveur ORDA</a>.</td></tr>
 </tbody>
 </table>
+<blockquote>
+<p>Pour obtenir le nombre total d'entités dans une dataclass, il est recommandé d'utiliser la fonction <a href="#getcount"><code>getCount()</code></a> qui est plus optimisée que l'expression <code>ds.myClass.all().length</code>.</p>
+</blockquote>
 <h4><a class="anchor" aria-hidden="true" id="exemple"></a><a href="#exemple" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$allEmp </span>: cs.EmployeeSelection
  <span class="hljs-variable">$allEmp</span>:=ds.Employee.<span class="hljs-function">all</span>()
+</code></pre>
+<h2><a class="anchor" aria-hidden="true" id="clearremotecache"></a><a href="#clearremotecache" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.clearRemoteCache()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v19 R5</td><td>Ajout</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.clearRemoteCache()</strong>
+| Paramètres | Type |  | Description                 |
+| ---------- | ---- |::| --------------------------- |
+|            |      |  | Ne requiert aucun paramètre |</p>
+<h4><a class="anchor" aria-hidden="true" id="description-2"></a><a href="#description-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>La fonction <code>.clearRemoteCache()</code> vide le cache ORDA d'une dataclass.</p>
+<blockquote>
+<p>Cette fonction ne réinitialise pas les valeurs de <code>timeout</code> et <code>maxEntries</code>.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="exemple-4"></a><a href="#exemple-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$ds </span>: 4D.DataStoreImplementation<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$persons </span>: cs.PersonsSelection<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$p </span>: cs.PersonsEntity<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$cache </span>: Object<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$info </span>: Collection<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$text </span>: Text
+
+<span class="hljs-variable">$ds</span>:=<span class="hljs-function">Open datastore</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"hostname"</span>; <span class="hljs-string">"www.myserver.com"</span>); <span class="hljs-string">"myDS"</span>)
+
+<span class="hljs-variable">$persons</span>:=<span class="hljs-variable">$ds</span>.Persons.<span class="hljs-function">all</span>()
+<span class="hljs-variable">$text</span>:=<span class="hljs-string">""</span><span class="hljs-keyword">
+For each</span> (<span class="hljs-variable">$p</span>; <span class="hljs-variable">$persons</span>)
+    <span class="hljs-variable">$text</span>:=<span class="hljs-variable">$p</span>.firstname+<span class="hljs-string">" lives in "</span>+<span class="hljs-variable">$p</span>.address.city+<span class="hljs-string">" / "</span><span class="hljs-keyword">
+End for each</span>
+
+<span class="hljs-variable">$cache</span>:=<span class="hljs-variable">$ds</span>.Persons.<span class="hljs-function">getRemoteCache</span>()
+
+<span class="hljs-variable">$ds</span>.Persons.<span class="hljs-function">clearRemoteCache</span>()
+<span class="hljs-comment">// Cache of the Persons dataclass = {timeout:30;maxEntries:30000;stamp:255;entries:[]}</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="fromcollection"></a><a href="#fromcollection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.fromCollection()</h2>
 <p><details><summary>Historique</summary></p>
@@ -197,7 +245,7 @@
 <tr><td>Résultat</td><td>4D.EntitySelection</td><td style="text-align:center">&lt;-</td><td>Entity selection issue de la collection</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="description-2"></a><a href="#description-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<h4><a class="anchor" aria-hidden="true" id="description-3"></a><a href="#description-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La fonction <code>.fromCollection()</code> modifie ou crée des entités dans la dataclass en utilisant la collection d'objets <em>objectCol</em> et retourne l'entity selection correspondante.</p>
 <p>Dans le paramètre <em>objectCol</em> passez une collection d'objets destinée à créer ou à modifier des entités de la dataclass. Les noms des propriétés doivent correspondre à ceux des attributs de la dataclass. Si un nom de propriété n'existe pas dans la dataclass, il est ignoré. Si une valeur d'attribut n'est pas définie dans la collection pour une entité créée, l'attribut prend la valeur Null.</p>
 <p>La correspondance entre les objets de la collection et les entités est effectuée au niveau des <strong>noms d'attributs</strong> et de leur <strong>type de données</strong>. Si une propriété d'objet a le même nom qu'un attribut d'entité mais que leurs types ne sont pas compatibles, l'attribut de l'entité ne reçoit pas de valeur.</p>
@@ -283,7 +331,7 @@
  <span class="hljs-variable">$empsCollection</span>.<span class="hljs-function">push</span>(<span class="hljs-variable">$emp</span>)
  <span class="hljs-variable">$employees</span>:=ds.Employee.<span class="hljs-function">fromCollection</span>(<span class="hljs-variable">$empsCollection</span>)
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="exemple-4"></a><a href="#exemple-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 4</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-4-1"></a><a href="#exemple-4-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 4</h4>
 <p>Nous souhaitons créer une entité. La propriété __NEW est à Vrai, la clé primaire de l'employé n'est pas fournie :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$empsCollection </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$emp </span>: Object<span class="hljs-keyword">
@@ -366,7 +414,7 @@
 <tr><td>Résultat</td><td>4D.Entity</td><td style="text-align:center">&lt;-</td><td>Entité correspondant à la clé primaire indiquée</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="description-3"></a><a href="#description-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<h4><a class="anchor" aria-hidden="true" id="description-4"></a><a href="#description-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La fonction <code>.get()</code> interroge la dataclass pour récupérer l'entité correspondant au paramètre <em>primaryKey</em>.</p>
 <p>Dans <em>primaryKey</em>, passez la valeur de clé primaire de l'entité à récupérer. Le type de valeur doit correspondre au type de clé primaire définie dans le datastore (entier long ou texte). Vous pouvez également vous assurer que la valeur de la clé primaire est toujours renvoyée en tant que texte en utilisant la fonction <a href="/docs/Rx/fr/API/EntityClass.html#getkey"><code>.getKey()</code></a> avec le paramètre <code>dk key as string</code>.</p>
 <p>Si aucune entité avec <em>primaryKey</em> n'est trouvée, une entité <strong>Null</strong> est retournée.</p>
@@ -407,6 +455,37 @@
  <span class="hljs-variable">$e4</span>:=ds.Employee.<span class="hljs-function">get</span>(<span class="hljs-number">4</span>;<span class="hljs-variable">$settings2</span>)
 <span class="hljs-function"> completeSummary</span>(<span class="hljs-variable">$e4</span>) <span class="hljs-comment">//Dans la méthode completeSummary, l'optimisation associée au contexte "summary" est appliquée</span>
 </code></pre>
+<h2><a class="anchor" aria-hidden="true" id="getcount"></a><a href="#getcount" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.getCount()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v19 R5</td><td>Ajout</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.getCount()</strong> : Integer</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>result</td><td>Integer</td><td>&lt;-</td><td>Nombre d'entités dans la dataclass</td></tr>
+</tbody>
+</table>
+<h4><a class="anchor" aria-hidden="true" id="description-5"></a><a href="#description-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>La fonction <code>.getCount()</code>  retourne le nombre d'entités dans une dataclass.</p>
+<p>Si cette fonction est utilisée dans une transaction, les entités créées durant la transaction sont prises en compte.</p>
+<h4><a class="anchor" aria-hidden="true" id="exemple-7"></a><a href="#exemple-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$ds </span>: 4D.DataStoreImplementation<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$number </span>: Integer
+
+<span class="hljs-variable">$ds</span>:=<span class="hljs-function">Open datastore</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"hostname"</span>; <span class="hljs-string">"www.myserver.com"</span>); <span class="hljs-string">"myDS"</span>)
+
+<span class="hljs-variable">$number</span>:=<span class="hljs-variable">$ds</span>.Persons.<span class="hljs-function">getCount</span>()
+</code></pre>
 <h2><a class="anchor" aria-hidden="true" id="getdatastore"></a><a href="#getdatastore" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.getDataStore()</h2>
 <p><details><summary>Historique</summary></p>
 <table>
@@ -427,14 +506,14 @@
 <tr><td>Résultat</td><td>cs.DataStore</td><td style="text-align:center">&lt;-</td><td>Datastore de la dataclass</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="description-4"></a><a href="#description-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<h4><a class="anchor" aria-hidden="true" id="description-6"></a><a href="#description-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La fonction <code>.getDataStore()</code> retourne le datastore de la dataclass.</p>
 <p>Le datastore peut être :</p>
 <ul>
 <li>le datastore principal, retourné par la commande <code>ds</code>.</li>
 <li>un datastore distant, ouvert à l'aide de la commande <code>Open datastore</code>.</li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="exemple-7"></a><a href="#exemple-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-8"></a><a href="#exemple-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <p>La méthode projet <strong><em>SearchDuplicate</em></strong> recherche des valeurs dupliquées dans une dataclass.</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$pet </span>: cs.CatsEntity
  <span class="hljs-variable">$pet</span>:=ds.Cats.<span class="hljs-function">all</span>().<span class="hljs-function">first</span>() <span class="hljs-comment">//lire une entité</span>
@@ -470,7 +549,7 @@
 <tr><td>Résultat</td><td>Object</td><td>&lt;-</td><td>Informations sur la dataclass</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="description-5"></a><a href="#description-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<h4><a class="anchor" aria-hidden="true" id="description-7"></a><a href="#description-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La fonction <code>.getInfo()</code> retourne un objet qui fournit des informations sur la dataclass. Cette fonction est utile pour l'écriture de code générique.</p>
 <p><strong>Objet retourné</strong></p>
 <table>
@@ -513,6 +592,92 @@
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="voir-aussi-1"></a><a href="#voir-aussi-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Voir aussi</h4>
 <p><a href="/docs/Rx/fr/API/DataClassAttributeClass.html#exposed">DataClassAttribute.exposed</a></p>
+<h2><a class="anchor" aria-hidden="true" id="getremotecache"></a><a href="#getremotecache" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.getRemoteCache()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v19 R5</td><td>Ajout</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.getRemoteCache</strong>() : Object</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>result</td><td>Object</td><td>&lt;-</td><td>Objet décrivant le contenu du cache ORDA pour la dataclass.</td></tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Mode avancé :</strong> Cette fonction est destinée aux développeurs qui souhaitent personnaliser les fonctionnalités par défaut de ORDA dans le cadre de configurations spécifiques. Dans la plupart des cas, vous n'aurez pas besoin de l'utiliser.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="description-8"></a><a href="#description-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>La fonction <code>.getRemoteCache()</code> retourne un objet qui contient le cache ORDA pour la dataclass.</p>
+<p>Si elle est appelée depuis une application 4D monoposte, la fonction retourne <code>Null</code>.</p>
+<p>L'objet retourné contient les propriétés suivantes :</p>
+<table>
+<thead>
+<tr><th>Propriété</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>maxEntries</td><td>Integer</td><td>Nombre maximum de collections &quot;entries&quot;.</td></tr>
+<tr><td>stamp</td><td>Integer</td><td>Marqueur du cache.</td></tr>
+<tr><td>timeout</td><td>Integer</td><td>Durée avant qu'une nouvelle entrée dans le cache soit indiquée comme expirée.</td></tr>
+<tr><td>entries</td><td>Collection</td><td>Contient un objet pour chaque entité dans le cache.</td></tr>
+</tbody>
+</table>
+<p>Chaque objet &quot;entrée&quot; de la collection <code>entries</code> contient les propriétés suivantes :</p>
+<table>
+<thead>
+<tr><th>Propriété</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>data</td><td>Object</td><td>Objet contenant les données de l'entrée.</td></tr>
+<tr><td>expired</td><td>Booléen</td><td>True si l'entrée a expiré.</td></tr>
+<tr><td>key</td><td>Text</td><td>Clé primaire de l'entité.</td></tr>
+</tbody>
+</table>
+<p>L'objet <code>data</code> de chaque entrée contient les propriétés suivantes :</p>
+<table>
+<thead>
+<tr><th>Propriété</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>__KEY</td><td>Chaine</td><td>Clé primaire de l'entité</td></tr>
+<tr><td>__STAMP</td><td>Longint</td><td>Stamp de l'entité dans la base de données</td></tr>
+<tr><td>__TIMESTAMP</td><td>Chaine</td><td>Timestamp de l'entité dans la base de données (le format est YYYY-MM-DDTHH:MM:SS:ms:Z)</td></tr>
+<tr><td>dataClassAttributeName</td><td>Variant</td><td>S'il y a des données dans le cache pour un attribut de dataclass, il est retourné dans une propriété du même type que dans la base de données.</td></tr>
+</tbody>
+</table>
+<p>Les données concernant les entités liées sont stockées dans le cache de l'objet data.</p>
+<h4><a class="anchor" aria-hidden="true" id="exemple-9"></a><a href="#exemple-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<p>Dans l'exemple suivant, <code>$ds.Persons.all()</code> charge la première entité avec tous ses attributs. Ensuite, l'optimiseur de requêtes entre en jeu, et seuls <code>firstname</code> et <code>address.city</code> sont chargés.</p>
+<p>Notez que <code>address.city</code> est chargé dans le cache de la dataclass <code>Persons</code>.</p>
+<p>Seule la première entité de la dataclass <code>Address</code> est stockée dans le cache. Elle est chargée durant la première itération de la boucle.</p>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$ds </span>: 4D.DataStoreImplementation<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$persons </span>: cs.PersonsSelection<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$p </span>: cs.PersonsEntity<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$cachePersons</span>; <span class="hljs-variable">$cacheAddress </span>: Object<span class="hljs-keyword">
+var</span> <span class="hljs-variable">$text </span>: Text
+
+<span class="hljs-variable">$ds</span>:=<span class="hljs-function">Open datastore</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"hostname"</span>; <span class="hljs-string">"www.myserver.com"</span>); <span class="hljs-string">"myDS"</span>)
+
+<span class="hljs-variable">$persons</span>:=<span class="hljs-variable">$ds</span>.Persons.<span class="hljs-function">all</span>()
+
+<span class="hljs-variable">$text</span>:=<span class="hljs-string">""</span><span class="hljs-keyword">
+For each</span> (<span class="hljs-variable">$p</span>; <span class="hljs-variable">$persons</span>)
+    <span class="hljs-variable">$text</span>:=<span class="hljs-variable">$p</span>.firstname+<span class="hljs-string">" lives in "</span>+<span class="hljs-variable">$p</span>.address.city+<span class="hljs-string">" / "</span><span class="hljs-keyword">
+End for each</span>
+
+<span class="hljs-variable">$cachePersons</span>:=<span class="hljs-variable">$ds</span>.Persons.<span class="hljs-function">getRemoteCache</span>()
+<span class="hljs-variable">$cacheAddress</span>:=<span class="hljs-variable">$ds</span>.Adress.<span class="hljs-function">getRemoteCache</span>()
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="voir-aussi-2"></a><a href="#voir-aussi-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Voir aussi</h4>
+<p><a href="#setremotecachesettings">.setRemoteCacheSettings()</a><br/><a href="#clearremotecache">.clearRemoteCache()</a></p>
 <h2><a class="anchor" aria-hidden="true" id="new"></a><a href="#new" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.new()</h2>
 <p><details><summary>Historique</summary></p>
 <table>
@@ -533,7 +698,7 @@
 <tr><td>Résultat</td><td>4D.Entity</td><td>&lt;-</td><td>Nouvelle entité correspondant à la dataclass</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="description-6"></a><a href="#description-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<h4><a class="anchor" aria-hidden="true" id="description-9"></a><a href="#description-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La fonction <code>.new()</code> crée en mémoire et renvoie une nouvelle entité vide pour la dataclass.</p>
 <p>L'objet entité est créé en mémoire et n'est pas sauvegardé dans la base de données tant que la fonction <a href="/docs/Rx/fr/API/EntityClass.html#save"><code>.save( )</code></a> n'est pas appelée. Si l'entité est supprimée avant d'être sauvegardée, elle ne peut pas être récupérée.</p>
 <p><strong>4D Server</strong>: En client-serveur, si la clé primaire de la table correspondante est auto-incrémentée, elle sera calculée au moment de la sauvegarde de l'entité sur le serveur.</p>
@@ -541,7 +706,7 @@
 <blockquote>
 <p>Les attributs peuvent être initialisés à des valeurs par défaut si l'option <strong>Traduire les NULL en valeurs vides</strong> est sélectionnée au niveau de la structure de la base 4D.</p>
 </blockquote>
-<h4><a class="anchor" aria-hidden="true" id="exemple-8"></a><a href="#exemple-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-10"></a><a href="#exemple-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <p>Cet exemple crée une nouvelle entité dans la dataclass &quot;Log&quot; et enregistre les informations dans l'attribut &quot;info&quot; :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$entity </span>: cs.LogEntity
  <span class="hljs-variable">$entity</span>:=ds.Log.<span class="hljs-function">new</span>() <span class="hljs-comment">//crée une référence</span>
@@ -569,14 +734,14 @@
 <tr><td>Résultat</td><td>4D.EntitySelection</td><td>&lt;-</td><td>Nouvelle entity selection vide liée à la dataclass</td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="description-7"></a><a href="#description-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<h4><a class="anchor" aria-hidden="true" id="description-10"></a><a href="#description-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La fonction <code>.newSelection()</code> crée en mémoire une entity selection vide, non partageable, liée à la dataclass.</p>
 <blockquote>
 <p>Pour plus d'informations sur les sélections d'entités non partageables, veuillez vous reporter à <a href="/docs/Rx/fr/ORDA/entities.html#shareable-or-non-shareable-entity-selections">cette section</a>.</p>
 </blockquote>
 <p>Si vous voulez créer une entity selection triée, passez le sélecteur <code>dk keep ordered</code> dans le paramètre <em>keepOrder</em>. Par défaut, si vous omettez ce paramètre ou si vous passez le sélecteur <code>dk non ordered</code> la fonction crée une entity selection non triée. Les entity selections non triées sont plus rapides, mais vous ne pouvez pas vous fier aux positions des entités. Pour plus d'informations, voir <a href="/docs/Rx/fr/ORDA/dsmapping.html#entity-selections-triees-vs-entity-selections-non-triees">Entity selections triées vs Entity selections non-triées</a>.</p>
 <p>Une fois créée, l'entity selection ne contient aucune entité (<code>mySelection.length</code> retourne 0). Cette fonction vous permet de construire progressivement des entity selections en effectuant des appels à la fonction <a href="/docs/Rx/fr/API/EntitySelectionClass.html#add"><code>add()</code></a>.</p>
-<h4><a class="anchor" aria-hidden="true" id="exemple-9"></a><a href="#exemple-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-11"></a><a href="#exemple-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$USelection</span>; <span class="hljs-variable">$OSelection </span>: cs.EmployeeSelection
  <span class="hljs-variable">$USelection</span>:=ds.Employee.<span class="hljs-function">newSelection</span>() <span class="hljs-comment">//crée une entity selection non triée vide</span>
  <span class="hljs-variable">$OSelection</span>:=ds.Employee.<span class="hljs-function">newSelection</span>(dk keep ordered) <span class="hljs-comment">//crée une entity selection triée vide</span>
@@ -607,7 +772,7 @@
 <tr><td>Résultat</td><td>4D.EntitySelection</td><td>&lt;-</td><td>Nouvelle entity selection constituée des entités de la dataclass correspondant au(x) critère(s) de recherche fournis dans <em>queryString</em> ou <em>formula</em></td></tr>
 </tbody>
 </table>
-<h4><a class="anchor" aria-hidden="true" id="description-8"></a><a href="#description-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<h4><a class="anchor" aria-hidden="true" id="description-11"></a><a href="#description-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
 <p>La fonction <code>.query()</code> recherche les entités répondant aux critères de recherche spécifiés dans <em>queryString</em> ou <em>formula</em> et (optionnellement) dans <em>value</em>toutes les entités de la dataclass, et retourne un nouvel objet de type <code>EntitySelection</code> contenant toutes les entités trouvées. Le mode lazy loading est appliqué.</p>
 <p>Si aucune entité correspondante n'est trouvée, une <code>EntitySelection</code> vide est retournée.</p>
 <p><strong>Paramètre queryString</strong></p>
@@ -618,7 +783,7 @@
 </code></pre>
 <p>où :</p>
 <ul>
-<li><strong>attributePath</strong> : Chemin de l'attribut sur lequel vous souhaitez exécuter la recherche. Ce paramètre peut contenir un nom simple (par exemple &quot;pays&quot;) ou un chemin d'attribut valide (par exemple &quot;pays.nom&quot;). Dans le cas d'un chemin d'attribut de type <code>Collection</code>, la notation [ ] est utilisée pour designer toutes les occurrences (par exemple &quot;enfants[ ].age&quot;). Vous pouvez également utiliser <strong>placeholder</strong> (voir ci-dessous).</li>
+<li><strong>attributePath</strong> : Chemin de l'attribut sur lequel vous souhaitez exécuter la recherche. Ce paramètre peut contenir un nom simple (par exemple &quot;pays&quot;) ou un chemin d'attribut valide (par exemple &quot;pays.nom&quot;). Dans le cas d'un chemin d'attribut de type <code>Collection</code>, la notation [ ] est utilisée pour designer toutes les occurrences (par exemple &quot;enfants[ ].age&quot;).</li>
 </ul>
 <blockquote>
 <p>Vous ne pouvez pas utiliser directement des attributs dont les noms contiennent des caractères spéciaux tels que &quot;.&quot;, &quot;[ ]&quot;, ou &quot;=&quot;, &quot;&gt;&quot;, &quot;#&quot;..., car ils ne seront pas correctement évalués dans la chaîne de recherche. Si vous souhaitez rechercher ces attributs, vous devez utiliser des placeholders, qui permettent d'utiliser un ensemble de caractères plus étendu dans les chemins d'attribut (voir * <strong>Utiliser des placeholders</strong> *ci-dessous).</p>
@@ -641,7 +806,7 @@
 <blockquote>
 <ul>
 <li>Vous pouvez également passer directement un paramètre <code>formula</code> au lieu d'un paramètre <code>queryString</code> (recommandé lorsque les formules sont plus complexes). Voir le paragraphe <strong>Paramètre formula</strong> ci-dessous.</li>
-<li>Pour des raisons de sécurité, il est possible de désactiver les appels de formules dans les fonctions <code>query()</code>. Voir la description du paramètre <code>querySettings</code>.</li>
+<li>Pour des raisons de sécurité, les appels de formule dans les fonctions <code>query()</code> peuvent être interdits. Voir la description du paramètre <code>querySettings</code>.</li>
 </ul>
 </blockquote>
 <ul>
@@ -669,9 +834,10 @@
 <ul>
 <li>Les valeurs constantes de type <strong>texte</strong> peuvent être passées avec ou sans guillemets (voir <strong>Utilisation des guillemets</strong> ci-dessous). Pour rechercher une chaîne dans une chaîne (recherche de type &quot;contient&quot;), utilisez le symbole joker (@) dans valeur pour isoler la chaîne à chercher, comme dans cet exemple : &quot;@Smith@&quot;. Les mots-clés suivants sont interdits pour des constantes de type texte : true, false.</li>
 <li>Valeurs constantes de type<strong>booléen</strong>: <strong>true</strong> or <strong>false</strong> (sensible à la casse).</li>
-<li>Valeurs constantes de type <strong>numérique</strong> : les décimales doivent être séparées par un '.' Valeurs constantes de type date: format &quot;YYYY-MM-DD&quot;</li>
+<li>Valeurs constantes de type <strong>numérique</strong> : les décimales doivent être séparées par un '.'</li>
+<li>Constantes de type <strong>date</strong> : &quot;YYYY-MM-DD&quot; format</li>
 <li>Constantes <strong>null</strong> : en utilisant le mot-clé &quot;null&quot;, la recherche trouvera les propriétés ayant la valeur <strong>null</strong> et <strong>undefined</strong>.</li>
-<li>Dans le cas d'une recherche avec un comparateur IN, value doit être une collection, ou des valeurs du même type que les données du chemin d'attribut, fournies entre [ ] et séparées par des virgules (pour les chaînes, les caractères &quot; doivent être échappés avec des &quot;&quot;).</li>
+<li>Dans le cas d'une recherche avec un comparateur IN, <em>value</em>doit être une collection, ou des valeurs du même type que les données du chemin d'attribut, fournies entre [ ] et séparées par des virgules (pour les chaînes, les caractères <code>&quot;</code> doivent être échappés avec des <code>\</code>).</li>
 </ul></li>
 <li><p><strong>logicalOperator</strong> : utilisé pour relier des conditions multiples dans la recherche (optionnel). Vous pouvez utiliser un des opérateurs logiques suivants (le nom ou le symbole peut être passé) :</p>
 <table>
@@ -687,7 +853,7 @@
 <li><p><strong>order by attributePath</strong> : vous pouvez inclure une déclaration order by <em>attributePath</em> dans la requête afin que les données résultantes soient triées selon cette déclaration. Vous pouvez utiliser plusieurs tris par déclaration, en les séparant par des virgules (e.g., order by <em>attributePath1</em> desc, <em>attributePath2</em> asc). Par défaut, le tri est par ordre croissant. Passez 'desc' pour définir un tri par ordre décroissant et 'asc' pour définir un tri par ordre croissant.</p></li>
 </ul>
 <blockquote>
-<p>*Si vous utilisez cette déclaration, l'entity selection retournée est triée (pour plus d'informations, veuillez consulter <a href="/docs/Rx/fr/ORDA/dsmapping.html#entity-selections-triees-vs-entity-selections-non-triees">Entity selections triées vs Entity selection non triées</a>).</p>
+<p>Si vous utilisez cette déclaration, l'entity selection retournée est triée (pour plus d'informations, veuillez consulter <a href="/docs/Rx/fr/ORDA/dsmapping.html#entity-selections-triees-vs-entity-selections-non-triees">Entity selections triées vs Entity selection non triées</a>).</p>
 </blockquote>
 <p><strong>Utilisation des guillemets</strong></p>
 <p>Lorsque vous utilisez des guillemets dans les recherches, vous devez utiliser des apostrophes ' ' à l'intérieur des requêtes et des guillemets &quot; &quot; pour encadrer la recherche complète, sinon une erreur est générée. Par exemple :</p>
@@ -705,11 +871,11 @@
 <p>Il existe deux types de placeholders : les <strong>placeholders indexés</strong> et les <strong>placeholders nommés</strong> :</p>
 <table>
 <thead>
-<tr><th>-</th><th>Placeholders indexés</th><th>Placeholders nommés</th></tr>
+<tr><th></th><th>Placeholders indexés</th><th>Placeholders nommés</th></tr>
 </thead>
 <tbody>
-<tr><td>Définition</td><td>Les paramètres sont insérés sous la forme :paramIndex (par exemple :1, :2...) dans queryString et leurs valeurs sont fournies par la séquence de paramètre(s) value. Vous pouvez utiliser jusqu'à 128 paramètres value</td><td>Les paramètres sont insérés sous la forme :paramName (par exemple :myparam) et leurs valeurs sont fournies dans les objets attributes et/ou parameters dans le paramètre querySettings</td></tr>
-<tr><td>Exemple</td><td>$r:=class.query(&quot;:1=:2&quot;;&quot;city&quot;;&quot;Chicago&quot;)</td><td>$o.attributes:=New object(&quot;att&quot;;&quot;city&quot;)<br> $o.parameters:=New object(&quot;name&quot;;&quot;Chicago&quot;)<br> $r:=class.query(&quot;:att=:name&quot;;$o)</td></tr>
+<tr><td>Définition</td><td>Vous pouvez combiner tous les types d'arguments dans <em>queryString</em>. Une <em>queryString</em> peut contenir, pour les paramètres <em>attributePath</em>, <em>formula</em> et <em>value</em> :</td><td>Les paramètres sont insérés sous la forme <code>:paramName</code> (par exemple :myparam) et leurs valeurs sont fournies dans les objets attributes et/ou parameters dans le paramètre <em>querySettings</em></td></tr>
+<tr><td>Exemple</td><td><code>$r:=class.query(&quot;:1=:2&quot;;&quot;city&quot;;&quot;Chicago&quot;)</code></td><td><code>$o.attributes:=New object(&quot;att&quot;;&quot;city&quot;)</code><br> <code>$o.parameters:=New object(&quot;name&quot;;&quot;Chicago&quot;)</code><br> <code>$r:=class.query(&quot;:att=:name&quot;;$o)</code></td></tr>
 </tbody>
 </table>
 <p>Vous pouvez combiner tous les types d'arguments dans <em>queryString</em>. Une <em>queryString</em> peut contenir, pour les paramètres <em>attributePath</em>, <em>formula</em> et <em>value</em> :</p>
@@ -717,7 +883,7 @@
 <li>des valeurs directes (pas de placeholders)</li>
 <li>des placeholders indexés et/ou nommés.</li>
 </ul>
-<p><strong>Utiliser des placeholders dans les recherches est recommandé</strong> pour les raisons suivantes :</p>
+<p>L'utilisation de placeholders dans les recherches <strong>est recommandée</strong> pour les raisons suivantes :</p>
 <ol>
 <li><p>Cela empêche l'injection de code malveillant : si vous utilisez dans la chaîne de recherche des variables dont le contenu provient directement de la saisie de l'utilisateur, celui-ci pourrait modifier les conditions de recherche en saisissant des arguments de recherche supplémentaires. Par exemple, imaginez une chaîne de recherche du type :</p>
 <pre><code class="hljs css language-4d"> <span class="hljs-variable">$vquery</span>:=<span class="hljs-string">"status = 'public' &amp; name = "</span>+myname <span class="hljs-comment">//l'utilisateur saisit son nom</span>
@@ -746,21 +912,21 @@
 <p>Par exemple, avec les deux entités suivantes :</p>
 <pre><code class="hljs">Entity <span class="hljs-number">1</span>:
 ds<span class="hljs-selector-class">.People</span><span class="hljs-selector-class">.name</span>: <span class="hljs-string">"martin"</span>
-ds<span class="hljs-selector-class">.People</span><span class="hljs-selector-class">.places</span>: 
+ds<span class="hljs-selector-class">.People</span><span class="hljs-selector-class">.places</span>:
     { <span class="hljs-string">"locations"</span> : [ {
                 <span class="hljs-string">"kind"</span>:<span class="hljs-string">"home"</span>,
-                <span class="hljs-string">"city"</span>:<span class="hljs-string">"paris"</span> 
+                <span class="hljs-string">"city"</span>:<span class="hljs-string">"paris"</span>
             } ] }
 
 Entity <span class="hljs-number">2</span>:
 ds<span class="hljs-selector-class">.People</span><span class="hljs-selector-class">.name</span>: <span class="hljs-string">"smith"</span>
-ds<span class="hljs-selector-class">.People</span><span class="hljs-selector-class">.places</span>: 
+ds<span class="hljs-selector-class">.People</span><span class="hljs-selector-class">.places</span>:
     { <span class="hljs-string">"locations"</span> : [ {
                 <span class="hljs-string">"kind"</span>:<span class="hljs-string">"home"</span>,
-                <span class="hljs-string">"city"</span>:<span class="hljs-string">"lyon"</span> 
+                <span class="hljs-string">"city"</span>:<span class="hljs-string">"lyon"</span>
             } , {
                 <span class="hljs-string">"kind"</span>:<span class="hljs-string">"office"</span>,
-                <span class="hljs-string">"city"</span>:<span class="hljs-string">"paris"</span> 
+                <span class="hljs-string">"city"</span>:<span class="hljs-string">"paris"</span>
             } ] }
 </code></pre>
 <p>Vous souhaitez trouver des personnes dont le type d'emplacement est &quot;home&quot; dans la ville de &quot;paris&quot;. Si vous écrivez :</p>
@@ -776,18 +942,34 @@ ds<span class="hljs-selector-class">.People</span><span class="hljs-selector-cla
 <pre><code class="hljs css language-4d">ds.People.<span class="hljs-function">query</span>(<span class="hljs-string">"places.locations[a].kind= :1 and places.locations[a].city= :2"</span>;<span class="hljs-string">"home"</span>;<span class="hljs-string">"paris"</span>)
 </code></pre>
 <p>... la requête ne retournera uniquement &quot;martin&quot; car il possède un élément &quot;locations&quot; dont &quot;kind&quot; est &quot;home&quot; et dont &quot;city&quot; est &quot;paris&quot;. La requête ne retournera pas &quot;smith&quot; car les valeurs &quot;home&quot; et &quot;paris&quot; ne sont pas contenus dans le même élément de collection.</p>
+<p><strong>Recherches dans les relations N vers N</strong></p>
+<p>ORDA propose une syntaxe spéciale pour faciliter les recherches dans les relations N vers N. Dans ce contexte, vous pouvez avoir besoin de rechercher des valeurs différentes à l'aide de l'opérateur <code>AND</code> MAIS dans le même attribut. Par exemple, considérez la structure suivante :</p>
+<p><img src="/docs/Rx/assets/en/API/manytomany.png" alt="alt-text"></p>
+<p>Imaginez que vous souhaitiez rechercher tous les films dans lesquels un acteur A <em>Et</em> un acteur B ont joué un rôle. Si vous écrivez une recherche simple utilisant l'opérateur <code>AND</code>, cela ne va pas fonctionner :</p>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// code invalide</span>
+<span class="hljs-variable">$es</span>:=ds.Movie.<span class="hljs-function">query</span>(<span class="hljs-string">"roles.actor.lastName = :1 AND roles.actor.lastName = :2"</span>;<span class="hljs-string">"Hanks"</span>;<span class="hljs-string">"Ryan"</span>)  
+<span class="hljs-comment">// $es est vide</span>
+</code></pre>
+<p>Fondamentalement, le problème vient de la logique interne de la recherche : vous ne pouvez pas rechercher une entité dont un attribut aurait simultanément la valeur &quot;A&quot; et &quot;B&quot;.</p>
+<p>Pour rendre possible ce type de recheche, ORDA prend en charge une syntaxe spéciale : vous devez juste ajouter un <em>class index</em> entre les caractères <strong>{}</strong> dans tous les attributs relationnels utilisés dans la chaîne de recherche :</p>
+<pre><code class="hljs css language-4d"><span class="hljs-string">"relationAttribute.attribute = :1 AND relationAttribute{x}.attribute = :2 [AND relationAttribute{y}.attribute...]"</span>
+</code></pre>
+<p><strong>{x}</strong> indique à ORDA de créer une autre référence pour l'attribut relationnel. Le moteur de requêtes effectuera alors toutes les opérations internes nécessaires. Notez que <strong>x</strong> peut être n'importe quel nombre <strong>à l'exception de 0</strong>: {1}, ou {2}, ou {1540}... ORDA a simplement besoin d'une référence unique dans la recherche pour chaque class index.</p>
+<p>Dans notre exemple, cela pourrait donner :</p>
+<pre><code class="hljs css language-4d"><span class="hljs-comment">// code valide</span>
+<span class="hljs-variable">$es</span>:=ds.Movie.<span class="hljs-function">query</span>(<span class="hljs-string">"roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2"</span>;<span class="hljs-string">"Hanks"</span>;<span class="hljs-string">"Ryan"</span>)  
+<span class="hljs-comment">// $es contient des films (You've Got Mail, Sleepless in Seattle, Joe Versus the Volcano)</span>
+</code></pre>
 <p><strong>Paramètre formula</strong></p>
 <p>Au lieu d'insérer une formule dans le paramètre <em>queryString</em> (voir ci-dessus), vous pouvez directement passer un objet formule en tant que critère de recherche booléen. L'utilisation d'un objet formule pour les requêtes est <strong>recommandée</strong> car vous bénéficiez d'une tokenisation et le code est plus facile à rechercher/lire.</p>
-<p>La formule doit avoir été créée à l'aide de la commande <code>Formula</code> ou <code>Formula from string</code>. Dans ce cas :</p>
+<p>La formule doit avoir été créée à l'aide des commandes <a href="/docs/Rx/fr/API/FunctionClass.html#formula"><code>Formula</code></a> ou <a href="/docs/Rx/fr/API/FunctionClass.html#formula-from-string"><code>Formula from string</code></a>. Dans ce cas :</p>
 <ul>
 <li><em>formula</em> est évaluée pour chaque entité et doit renvoyer vrai ou faux. Lors de l'exécution de la requête, si le résultat de la formule n'est pas un booléen, il est considéré comme faux.</li>
 <li>dans <em>formula</em>, l'entité est disponible via l'objet <code>This</code>.</li>
 <li>si l'objet <code>Formula</code> est <strong>null</strong>, l'erreur 1626 (&quot;Attente d'un texte ou d'une formule&quot;) est générée, que vous pouvez intercepter à l'aide d'une méthode installée avec <code>ON ERR CALL</code>.</li>
 </ul>
 <blockquote>
-<blockquote>
-<p>Pour des raisons de sécurité, les appels de formule dans les fonctions <code>query(</code>) peuvent être interdits. Voir la description du paramètre <em>querySettings</em>.</p>
-</blockquote>
+<p>Pour des raisons de sécurité, les appels de formule dans les fonctions <code>query()</code> peuvent être interdits. Voir la description du paramètre <em>querySettings</em>.</p>
 </blockquote>
 <p><strong>Passer des paramètres aux formules</strong></p>
 <p>Tout paramètre <em>formula</em> appelé par la fonction <code>query()</code> peut recevoir des paramètres :</p>
@@ -1016,10 +1198,65 @@ softwares:{
     <span class="hljs-variable">$es</span>:=ds.Students.<span class="hljs-function">query</span>(<span class="hljs-variable">$queryString</span>;<span class="hljs-variable">$settings</span>) <span class="hljs-comment">//Une erreur est gnérée si $queryString contient une formule</span><span class="hljs-keyword">
  End if</span>
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="voir-aussi-2"></a><a href="#voir-aussi-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Voir aussi</h4>
+<h4><a class="anchor" aria-hidden="true" id="voir-aussi-3"></a><a href="#voir-aussi-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Voir aussi</h4>
 <p><a href="/docs/Rx/fr/API/EntitySelectionClass.html#query"><code>.query()</code></a> pour les entity selections</p>
+<h2><a class="anchor" aria-hidden="true" id="setremotecachesettings"></a><a href="#setremotecachesettings" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.setRemoteCacheSettings()</h2>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v19 R5</td><td>Ajout</td></tr>
+</tbody>
+</table>
+<p></details></p>
+<p><strong>.setRemoteCacheSettings</strong>(<em>settings</em> : Object)</p>
+<table>
+<thead>
+<tr><th>Paramètres</th><th>Type</th><th></th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>settings</td><td>Object</td><td>-&gt;</td><td>Objet définissant le timeout et la taille maximum du cache ORDA pour la dataclass.</td></tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Mode avancé :</strong> Cette fonction est destinée aux développeurs qui souhaitent personnaliser les fonctionnalités par défaut de ORDA dans le cadre de configurations spécifiques. Dans la plupart des cas, vous n'aurez pas besoin de l'utiliser.</p>
+</blockquote>
+<h4><a class="anchor" aria-hidden="true" id="description-12"></a><a href="#description-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
+<p>La fonction <code>.setRemoteCacheSettings()</code> définit le timeout et la taille maximum du cache ORDA pour la dataclass.</p>
+<p>Dans le paramètre <em>settings</em>, passez un objet contenant les propriétés suivantes :</p>
+<table>
+<thead>
+<tr><th>Propriété</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>timeout</td><td>Integer</td><td>Timeout en secondes.</td></tr>
+<tr><td>maxEntries</td><td>Integer</td><td>Nombre maximum d'entités.</td></tr>
+</tbody>
+</table>
+<p><code>timeout</code> définit le timeout du cache ORDA pour la dataclass (30 secondes par défaut). Lorsque le timeout est atteint, les entités de la dataclass dans le cache sont considérées comme expirées. Cela signifie que :</p>
+<ul>
+<li>les données sont toujours présentes</li>
+<li>la prochaine fois que les données seront requises, elles seront demandées au serveur</li>
+<li>4D supprime automatiquement les données expirées lorsque le nombre maximum d'entités est atteint</li>
+</ul>
+<p>Modifier la propriété <code>timeout</code> définit un nouveau timeout pour les entités déjà présentes dans le cache. Cela peut être utile lorsque vous travaillez avec des données qui ne changent pas souvent, et pour lesquelles de nouvelles requêtes au serveur ne sont donc pas nécessaires.</p>
+<p><code>maxEntries</code> définit le nombre maximum d'entités dans le cache ORDA. Par défaut ce nombre est 30 000.</p>
+<p>Le nombre d'entrées minimum est 300, donc la valeur de <code>maxEntries</code> doit être égale ou supérieure à 300. Sinon la valeur est ignorée et le nombre d'entrées maximum est fixé à 300.</p>
+<p>Si aucune propriété valide n'est passée à <code>timeout</code> et <code>maxEntries</code>, le cache n'est pas modifié, il conserve ses valeurs précédentes ou par défaut.</p>
+<p>Lorsqu'une entité est sauvegardée, elle est mise à jour dans le cache expirera lorsque le timeout sera atteint.</p>
+<h4><a class="anchor" aria-hidden="true" id="exemple-12"></a><a href="#exemple-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$ds </span>: 4D.DataStoreImplementation
+
+<span class="hljs-variable">$ds</span>:=<span class="hljs-function">Open datastore</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"hostname"</span>; <span class="hljs-string">"www.myserver.com"</span>); <span class="hljs-string">"myDS"</span>)
+
+<span class="hljs-variable">$ds</span>.Buildings.<span class="hljs-function">setRemoteCacheSettings</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"timeout"</span>; <span class="hljs-number">60</span>; <span class="hljs-string">"maxEntries"</span>; <span class="hljs-number">350</span>))
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="voir-aussi-4"></a><a href="#voir-aussi-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Voir aussi</h4>
+<p><a href="#clearremotecache">.clearRemoteCache()</a><br/><a href="#clearremotecache">.getRemoteCache()</a></p>
 <style> h2 { background: #d9ebff;}</style>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/fr/API/CryptoKeyClass.html"><span class="arrow-prev">← </span><span class="function-name-prevnext">CryptoKey</span></a><a class="docs-next button" href="/docs/Rx/fr/API/DataClassAttributeClass.html"><span class="function-name-prevnext">DataClassAttribute</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#attributename">.<em>attributeName</em></a></li><li><a href="#all">.all()</a></li><li><a href="#fromcollection">.fromCollection()</a></li><li><a href="#get">.get()</a></li><li><a href="#getdatastore">.getDataStore()</a></li><li><a href="#getinfo">.getInfo()</a></li><li><a href="#new">.new()</a></li><li><a href="#newselection">.newSelection()</a></li><li><a href="#query">.query()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/Rx/fr/API/CryptoKeyClass.html"><span class="arrow-prev">← </span><span class="function-name-prevnext">CryptoKey</span></a><a class="docs-next button" href="/docs/Rx/fr/API/DataClassAttributeClass.html"><span class="function-name-prevnext">DataClassAttribute</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#attributename">.<em>attributeName</em></a></li><li><a href="#all">.all()</a></li><li><a href="#clearremotecache">.clearRemoteCache()</a></li><li><a href="#fromcollection">.fromCollection()</a></li><li><a href="#get">.get()</a></li><li><a href="#getcount">.getCount()</a></li><li><a href="#getdatastore">.getDataStore()</a></li><li><a href="#getinfo">.getInfo()</a></li><li><a href="#getremotecache">.getRemoteCache()</a></li><li><a href="#new">.new()</a></li><li><a href="#newselection">.newSelection()</a></li><li><a href="#query">.query()</a></li><li><a href="#setremotecachesettings">.setRemoteCacheSettings()</a></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/Rx/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
