@@ -96,7 +96,7 @@ In the 4D code, dynamic variables can be accessed using a pointer obtained with 
 Este mecanismo tiene dos ventajas:
 
 - On the one hand, it allows the development of "subform" type components that can be used several times in the same host form. Let us take as an example the case of a datepicker subform that is inserted twice in a host form to set a start date and an end date. This subform will use objects for choosing the date of the month and the year. It will be necessary for these objects to work with different variables for the start date and the end date. Letting 4D create their variable with a unique name is a way of resolving this difficulty.
-- Por otra parte, puede utilizarse para limitar el uso de la memoria. In fact, form objects only work with process or inter-process variables. However, in compiled mode, an instance of each process variable is created in all the processes, including the server processes. This instance takes up memory, even when the form is not used during the session. Therefore, letting 4D create variables dynamically when loading the forms can save memory.
+- Por otra parte, puede utilizarse para limitar el uso de la memoria. De hecho, los objetos formulario sólo funcionan con variables proceso o interproceso. However, in compiled mode, an instance of each process variable is created in all the processes, including the server processes. This instance takes up memory, even when the form is not used during the session. Therefore, letting 4D create variables dynamically when loading the forms can save memory.
 
 
 ### List box array
@@ -149,7 +149,7 @@ However, this property has a typing function in the following specific cases:
 ---
 ## Clase CSS
 
-A list of space-separated words used as class selectors in css files.
+Una lista de palabras separadas por espacios que se utilizan como selectores de clase en los archivos css.
 
 
 #### Gramática JSON

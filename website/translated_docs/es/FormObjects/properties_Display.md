@@ -10,11 +10,11 @@ Alpha formats control the way the alphanumeric fields and variables appear when 
 
 ![](assets/en/FormObjects/property_alphaFormat.png)
 
-You can choose a format from this list or use any custom format. The default list contains formats for some of the most common alpha fields that require formats: US telephone numbers (local and long distance), Social Security numbers, and zip codes. You can also enter a custom format name set in the Filters and formats editor of the tool box. In this case, the format cannot be modified in the object properties. Any custom formats or filters that you have created are automatically available, preceded by a vertical bar (|).
+You can choose a format from this list or use any custom format. The default list contains formats for some of the most common alpha fields that require formats: US telephone numbers (local and long distance), Social Security numbers, and zip codes. You can also enter a custom format name set in the Filters and formats editor of the tool box. En este caso, el formato no se puede modificar en las propiedades del objeto. Any custom formats or filters that you have created are automatically available, preceded by a vertical bar (|).
 
-The number sign (#) is the placeholder for an alphanumeric display format. You can include the appropriate dashes, hyphens, spaces, and any other punctuation marks that you want to display. You use the actual punctuation marks you want and the number sign for each character you want to display.
+El signo número (#) es el marcador de posición para un formato de visualización alfanumérico. You can include the appropriate dashes, hyphens, spaces, and any other punctuation marks that you want to display. You use the actual punctuation marks you want and the number sign for each character you want to display.
 
-For example, consider a part number with a format such as "RB-1762-1".
+Por ejemplo, considere un número de parte con un formato como "RB-1762-1".
 
 El formato alfa sería:
 
@@ -101,7 +101,7 @@ La siguiente tabla muestra las opciones disponibles:
 ## Formato de número
 > Number fields include the Integer, Long integer, Integer 64 bits, Real and Float types.
 
-Number formats control the way numbers appear when displayed or printed. For data entry, you enter only the numbers (including a decimal point or minus sign if necessary), regardless of the display format you have chosen.
+Los formatos numéricos controlan la forma en que aparecen los números cuando se muestran o imprimen. For data entry, you enter only the numbers (including a decimal point or minus sign if necessary), regardless of the display format you have chosen.
 
 4D ofrece varios formatos de números por defecto.
 
@@ -144,7 +144,7 @@ Puede utilizar cualquier otro caracter en el formato. When used alone, or placed
 
     $##0
 
-a dollar sign always appears because it is placed before the placeholders.
+siempre aparece un signo de dólar porque se coloca antes de los marcadores de posición.
 
 If characters are placed between placeholders, they appear only if digits are displayed on both sides. Por ejemplo, si define el formato:
 
@@ -163,7 +163,7 @@ A number display format can have up to three parts allowing you to specify displ
 You do not have to specify all three parts of the format. If you use just one part, 4D uses it for all numbers, placing a minus sign in front of negative numbers.
 
 If you use two parts, 4D uses the first part for positive numbers and zero and the second part for negative numbers. If you use three parts, the first is for positive numbers, the second for negative numbers, and the third for zero.
-> The third part (zero) is not interpreted and does not accept replacement characters. If you enter `###;###;#`, the zero value will be displayed “#”. In other words, what you actually enter is what will be displayed for the zero value.
+> The third part (zero) is not interpreted and does not accept replacement characters. Si introduce `###;###;#`, el valor cero se mostrará "#". In other words, what you actually enter is what will be displayed for the zero value.
 
 Here is an example of a number display format that shows dollar signs and commas, places negative values in parentheses, and does not display zeros:
 
@@ -263,7 +263,7 @@ The following table shows how different formats affect the display of numbers. T
 ---
 ## Formato imagen
 
-Picture formats control how pictures appear when displayed or printed. For data entry, the user always enters pictures by pasting them from the Clipboard or by drag and drop, regardless of the display format.
+Los formatos Imagen controlan la apariencia de las imágenes cuando se muestran o se imprimen. For data entry, the user always enters pictures by pasting them from the Clipboard or by drag and drop, regardless of the display format.
 
 The truncation and scaling options do not affect the picture itself. El contenido de un campo Imagen siempre se guarda. Only the display on the particular form is affected by the picture display format.
 
@@ -286,13 +286,13 @@ The **Truncated (non-centered)** format causes 4D to place the upper-left corner
 
 ![](assets/en/FormObjects/property_pictureFormat_Truncated.png)
 
-### Scaled to fit (proportional) and Scaled to fit centered (proportional)
+### Escala de ajuste (proporcional) y Escala de ajuste centrada (proporcional)
 
 `Gramática JSON: "proportionalTopLeft" / "proportionalCenter"`
 
 When you use **Scaled to fit (proportional)**, the picture is reduced proportionally on all sides to fit the area created for the picture. The **Scaled to fit centered (proportional)** option does the same, but centers the picture in the picture area.
 
-If the picture is smaller than the area set in the form, it will not be modified. If the picture is bigger than the area set in the form, it is proportionally reduced. Since it is proportionally reduced, the picture will not appear distorted.
+If the picture is smaller than the area set in the form, it will not be modified. If the picture is bigger than the area set in the form, it is proportionally reduced. Como se reduce proporcionalmente, la imagen no aparecerá distorsionada.
 
 If you have applied the **Scaled to fit centered (proportional)** format, the picture is also centered in the area:
 
@@ -329,7 +329,7 @@ If the field is reduced to a size smaller than that of the original picture, the
 Time formats control the way times appear when displayed or printed. For data entry, you enter times in the 24-hour HH: MM:SS format or the 12-hour HH: MM:SS AM/PM format, regardless of the display format you have chosen.
 > Unlike [Alpha](#alpha-format) and [Number](#number-format) formats, display formats for times must only be selected among the 4D built-in formats.
 
-The table below shows the Time field display formats and gives examples:
+La siguiente tabla muestra los formatos de visualización de los campos de hora y da ejemplos:
 
 | Nombre del formato           | Cadena JSON     | Comentarios                                                                                                                                               | Ejemplo para 04:30:25          |
 | ---------------------------- | --------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
@@ -394,9 +394,9 @@ Las columnas booleanas también pueden mostrarse como menús emergentes. In this
 
 #### Gramática JSON
 
-| Nombre      | Tipos de datos | Valores posibles                                                                                                                                                |
-| ----------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| controlType | cadena         | <li>**number columns**: "automatic" (default) or "checkbox"<li>**boolean columns**: "checkbox" (default) or "popup" |
+| Nombre      | Tipos de datos | Valores posibles                                                                                                                                                      |
+| ----------- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| controlType | cadena         | <li>**number columns**: "automatic" (default) or "checkbox"<li>**columnas booleanas**: "checkbox" (por defecto) o "popup" |
 
 #### Objetos soportados
 
@@ -411,7 +411,7 @@ Las columnas booleanas también pueden mostrarse como menús emergentes. In this
 
 When this property is enabled, the object is not drawn on the form, however it can still be activated.
 
-In particular, this property allows implementing "invisible" buttons.  Los botones no renderizados pueden colocarse sobre los objetos gráficos. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.
+En particular, esta propiedad permite implementar botones "invisibles".  Los botones no renderizados pueden colocarse sobre los objetos gráficos. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.
 
 
 #### Gramática JSON
@@ -497,7 +497,7 @@ This option is available for columns with any type of contents, except pictures 
 *   When the property is enabled (default), if the contents of a list box cell exceed the width of the column, they are truncated and an ellipsis is displayed:
 
     ![](assets/en/FormObjects/property_truncate1.png)
-> La posición de la elipsis depende del sistema operativo. In the above example (Windows), it is added on the right side of the text. En macOS, la elipsis se añade en medio del texto.
+> La posición de la elipsis depende del sistema operativo. En el ejemplo anterior (Windows), se añade a la derecha del texto. En macOS, la elipsis se añade en medio del texto.
 
 *   When the property is disabled, if the contents of a cell exceed the width of the column, they are simply clipped with no ellipsis added:
 
@@ -533,7 +533,7 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 This property allows hiding the object in the Application environment.
 
-You can handle the Visibility property for most form objects. This property is mainly used to simplify dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The developer can then program their display using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/en/page603.html) command when needed.
+You can handle the Visibility property for most form objects. Esta propiedad se utiliza principalmente para simplificar el desarrollo de interfaces dinámicas. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The developer can then program their display using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/en/page603.html) command when needed.
 
 #### Visibilidad automática en los formularios lista
 

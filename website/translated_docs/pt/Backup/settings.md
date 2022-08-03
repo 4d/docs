@@ -71,7 +71,7 @@ A opção **Utilizar o arquivo de histórico**, quando estiver marcada, indica q
 
 Como padrão, todo banco de dados criado com 4D usando um arquivo de histórico (opção marcada na página **Geral** das **Preferências**). O arquivo de histórico é chamado *data.journal* e está na pasta Data.
 
-> Ativar um novo arquivo de histórico exige que tenha sido feita anteriormente uma cópia de segurança dos dados. When you check this option, a warning message informs you that a backup is necessary. A criação dos arquivos de histórico é adiada e será feita somente depois do próximo backup do banco de dados.
+> Ativar um novo arquivo de histórico exige que tenha sido feita anteriormente uma cópia de segurança dos dados. Quando você marcar esta opção, uma mensagem de aviso informa que um backup é necessário. A criação dos arquivos de histórico é adiada e será feita somente depois do próximo backup do banco de dados.
 
 
 ## Cópia de segurança e restauração

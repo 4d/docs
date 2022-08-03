@@ -77,7 +77,7 @@ Los nombres de usuario borrados ya no aparecen en el editor de usuarios. Note th
 
 - **User Kind**: The User Kind field contains "Designer", "Administrator", or (for all other users) "User".
 
-- **Startup Method**: Name of an associated method that will be automatically executed when the user opens the database (optional). This method can be used for example to load the user preferences.
+- **Startup Method**: Name of an associated method that will be automatically executed when the user opens the database (optional). Este método puede utilizarse, por ejemplo, para cargar las preferencias usuario.
 
 
 ## Editor de grupos
@@ -88,7 +88,7 @@ El editor de grupos se encuentra en la caja de herramientas de 4D.
 
 You use the groups editor to set the elements that each group contains (users and/or other groups) and to distribute access to plug-ins.
 
-Keep in mind that once a group has been created, it cannot be deleted. If you want to deactivate a group, you just need to remove any users it contains.
+Tenga en cuenta que una vez que se ha creado un grupo, no se puede eliminar. If you want to deactivate a group, you just need to remove any users it contains.
 
 Para crear un grupo:
 
@@ -113,7 +113,7 @@ To place a user or group in a group, you simply need to check the "Member" optio
 
 ![](assets/en/Users/groups.png)
 
-If you check the name of a user, this user is added to the group. If you check the name of a group, all the users of the group are added to the new group. The affiliated user or group will then have the same access privileges as those assigned to the new group.
+Si se marca el nombre de un usuario, éste se añade al grupo. If you check the name of a group, all the users of the group are added to the new group. The affiliated user or group will then have the same access privileges as those assigned to the new group.
 
 Placing groups into other groups lets you create a user hierarchy. The users of a group placed in another group will have the access privileges of both groups. See "[An access hierarchy scheme](#an-access-hierarchy-scheme)" below.
 
@@ -138,7 +138,7 @@ The **4D Client Web Server** and **4D Client SOAP Server** items lets you contro
 
 The best way to ensure the security of your database and provide users with different levels of access is to use an access hierarchy scheme. Users can be assigned to appropriate groups and groups can be nested to create a hierarchy of access rights. Esta sección describe varios enfoques de este esquema.
 
-In this example, a user is assigned to one of three groups depending on their level of responsibility. Users assigned to the Accounting group are responsible for data entry. Users assigned to the Finances group are responsible for maintaining the data, including updating records and deleting outdated records. Users assigned to the General Management group are responsible for analyzing the data, including performing searches and printing analytical reports.
+In this example, a user is assigned to one of three groups depending on their level of responsibility. Los usuarios asignados al grupo Contabilidad son responsables de la entrada de datos. Users assigned to the Finances group are responsible for maintaining the data, including updating records and deleting outdated records. Users assigned to the General Management group are responsible for analyzing the data, including performing searches and printing analytical reports.
 
 The groups are then nested so that privileges are correctly distributed to the users of each group.
 

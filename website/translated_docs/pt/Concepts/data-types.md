@@ -43,42 +43,42 @@ O valor padrão depende do tipo variável e categoria, seu contexto de educaçã
     - em modo compilado, dependendo da opção **Initialize local variables** das configurações de banco de dados:
         - "em zero": em zero (ver acima),
         - "a um valor aleatório": 0x72677267 para números e horas, sempre True para booleanos, igual que "em zero" para os outros,
-        - "no": no initialization, meaning whatever is in RAM is used for the variables, like values used before for other variables. **Note:** 4D recommends to use "to zero".
+        - "no": nenhuma inicialização, significando o que quer que esteja na RAM é usado para as variáveis, como valores usados antes para outras variáveis. **Nota:** 4D recomenda a utilização de "a zero".
 
-The following table illustrates these default values:
+A tabela a seguir ilustra estes valores padrões:
 
-| Type          | Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero") | Local compiled "random" | Local compiled "no"          |
-| ------------- | ----------------------------------------------------------------------------------- | ----------------------- | ---------------------------- |
-| Booleano      | False                                                                               | True                    | True (varies)                |
-| Date          | 00-00-00                                                                            | 00-00-00                | 00-00-00                     |
-| Inteiro longo | 0                                                                                   | 1919382119              | 909540880 (varies)           |
-| Hora          | 00:00:00                                                                            | 533161:41:59            | 249345:34:24 (varies)        |
-| Imagem        | picture size=0                                                                      | picture size=0          | picture size=0               |
-| Real          | 0                                                                                   | 1.250753659382e+243     | 1.972748538022e-217 (varies) |
-| Ponteiro      | Nil=true                                                                            | Nil=true                | Nil=true                     |
-| Texto         | ""                                                                                  | ""                      | ""                           |
-| Blob          | Blob size=0                                                                         | Blob size=0             | Blob size=0                  |
-| Objeto        | null                                                                                | null                    | null                         |
-| Coleção       | null                                                                                | null                    | null                         |
-| Variant       | indefinido                                                                          | indefinido              | indefinido                   |
+| Type          | Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero") | Compilação local "aleatória | Compilação local "não       |
+| ------------- | ----------------------------------------------------------------------------------- | --------------------------- | --------------------------- |
+| Booleano      | False                                                                               | True                        | True (varía)                |
+| Date          | 00-00-00                                                                            | 00-00-00                    | 00-00-00                    |
+| Inteiro longo | 0                                                                                   | 1919382119                  | 909540880 (varia)           |
+| Hora          | 00:00:00                                                                            | 533161:41:59                | 249345:34:24 (varia)        |
+| Imagem        | tamanho da imagem=0                                                                 | tamanho da imagem=0         | tamanho da imagem=0         |
+| Real          | 0                                                                                   | 1.250753659382e+243         | 1.972748538022e-217 (varia) |
+| Ponteiro      | Nil=true                                                                            | Nil=true                    | Nil=true                    |
+| Texto         | ""                                                                                  | ""                          | ""                          |
+| Blob          | Tamanho do Blob =0                                                                  | Tamanho do Blob =0          | Tamanho do Blob =0          |
+| Objeto        | null                                                                                | null                        | null                        |
+| Coleção       | null                                                                                | null                        | null                        |
+| Variant       | indefinido                                                                          | indefinido                  | indefinido                  |
 
 
-## Converting data types
+## Conversão de tipos de dados
 
-The 4D language contains operators and commands to convert between data types, where such conversions are meaningful. The 4D language enforces data type checking. For example, you cannot write: "abc"+0.5+!12/25/96!-?00:30:45?. This will generate syntax errors.
+A linguagem 4D contém operadores e comandos para converter entre tipos de dados, onde tais conversões são significativas. A língua 4D obriga à verificação do tipo de dados. Por exemplo, não se pode escrever: "abc"+0.5+!12/25/96!-?00:30:45?. Isto irá gerar erros de sintaxe.
 
-The following table lists the basic data types, the data types to which they can be converted, and the commands used to do so:
+O quadro seguinte lista os tipos de dados básicos, os tipos de dados para os quais podem ser convertidos, e os comandos utilizados para o fazer:
 
-| Data Type to Convert | to String | to Number | to Date | to Time | to Boolean |
-| -------------------- | --------- | --------- | ------- | ------- | ---------- |
-| String (1)           |           | Num       | Date    | Hora    | Bool       |
-| Número (2)           | String    |           |         |         | Bool       |
-| Date                 | String    |           |         |         | Bool       |
-| Hora                 | String    |           |         |         | Bool       |
-| Booleano             |           | Num       |         |         |            |
+| Tipo de dados a converter | para String | para Número | para Data | para Tempo | para Booleano |
+| ------------------------- | ----------- | ----------- | --------- | ---------- | ------------- |
+| String (1)                |             | Num         | Date      | Hora       | Bool          |
+| Número (2)                | String      |             |           |            | Bool          |
+| Date                      | String      |             |           |            | Bool          |
+| Hora                      | String      |             |           |            | Bool          |
+| Booleano                  |             | Num         |           |            |               |
 
-(1) Strings formatted in JSON can be converted into scalar data, objects, or collections, using the `JSON Parse` command.
+(1) Strings formatadas em JSON podem ser convertidas em dados escalares, objetos ou coleções, usando o comando `JSON Parse`
 
-(2) Time values can be treated as numbers.
+(2) Os valores de tempo podem ser tratados como números.
 
-**Note:** In addition to the data conversions listed in this table, more sophisticated data conversions can be obtained by combining operators and other commands.
+**Nota:** Além das conversões de dados listadas nesta tabela. Conversões de dados mais sofisticadas podem ser obtidas combinando operadores e outros comandos.

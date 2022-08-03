@@ -5,7 +5,7 @@ title: Componentes
 
 Um componente 4D é um conjunto de métodos e formulários 4D que representam uma ou várias funcionalidades que possam ser instaladas em diferentes bancos de dados. Por exemplo, pode desenvolver um componente 4D de correio eletrônico que gerencie todos os aspectos do envio, a recepção e o armazenamento de correios eletrônicos em bancos de dados 4D.
 
-Creating and installing 4D components is carried out directly from 4D. Basically, components are managed like [plug-ins](Concepts/plug-ins.md) according to the following principles:
+Criar e instalar componentes 4D é realizado diretamente a partir de 4D. Basicamente, os componentes são geridos como [plug-ins](Concepts/plug-ins.md) de acordo com os seguintes princípios:
 
 - Um componente consiste de um arquivo de estrutura regular (compilado ou não) tendo a arquitetura padrão ou na forma de um pacote (ver extensão .4dbase).
 - Para instalar um componente em um banco de dados, basta com copiá-lo na pasta "Componentes" do banco de dados, situada junto ao arquivo de estrutura ou junto a aplicação 4D executável.
@@ -75,11 +75,11 @@ Quando usar ponteiros para que os componentes se comuniquem com o banco de dados
 
 - O comando `Get pointer` não devolverá um ponteiro a uma variável do banco de dados local se for chamada desde um componente e vice versa.
 
-- A arquitetura de componentes permite a coexistência, dentro do mesmo banco de dados interpretado, de componentes interpretados e compilados (por outro lado, em um banco de dados compilado só podem ser usados  componentes compilados). In order to use pointers in this case, you must respect the following principle: the interpreter can unpoint a pointer built in compiled mode; however, in compiled mode, you cannot unpoint a pointer built in interpreted mode. Ilustremos este principio com o exemplo abaixo: dados dois componentes, C (compilado) e I (interpretado), instalados no mesmo banco de dados local.
- - If component C defines the `myCvar` variable, component I can access the value of this variable by using the pointer `->myCvar`.
- - If component I defines the `myIvar` variable, component C cannot access this variable by using the pointer `->myIvar`. This syntax causes an execution error.
+- A arquitetura de componentes permite a coexistência, dentro do mesmo banco de dados interpretado, de componentes interpretados e compilados (por outro lado, em um banco de dados compilado só podem ser usados  componentes compilados). Para utilizar apontadores neste caso, deve respeitar o seguinte princípio: o intérprete pode desconectar um ponteiro construído em modo compilado; no entanto, em modo compilado, não pode deconectar um ponteiro construído em modo interpretado. Ilustremos este principio com o exemplo abaixo: dados dois componentes, C (compilado) e I (interpretado), instalados no mesmo banco de dados local.
+ - Se o componente C definir a variável `myCvar` , o componente I pode acessar ao valor desta variável utilizando o ponteiro `->myCvar`.
+ - Se o componente I definir a variável `myIvar` , o componente C não pode acessar essa variável usando o ponteiro `->myIvar`. Esta sintaxe causa um erro de execução.
 
-- A comparação de ponteiros utilizando o comando `RESOLVE POINTER` não é recomendado com os  componentes, já que o principio de partição de variáveis permite a coexistência de variáveis com o mesmo nome mas com conteúdos radicalmente diferentes em um componente e no banco local (ou outro componente). The type of the variable can even be different in both contexts. If the `myptr1` and `myptr2` pointers each point to a variable, the following comparison will produce an incorrect result:
+- A comparação de ponteiros utilizando o comando `RESOLVE POINTER` não é recomendado com os  componentes, já que o principio de partição de variáveis permite a coexistência de variáveis com o mesmo nome mas com conteúdos radicalmente diferentes em um componente e no banco local (ou outro componente). O tipo da variável pode mesmo ser diferente em ambos os contextos. Se o `myptr1` e `myptr2` apontar cada ponto para uma variável, a comparação seguinte produzirá um resultado incorrecto:
 
 ```4d
      RESOLVE POINTER(myptr1;vVarName1;vtablenum1;vfieldnum1)
@@ -152,7 +152,7 @@ Os comandos abaixo nãoo são compatíveis para seu uso dentro de um componente 
 - O comando `Current form table` devolve `Nil` quando chamado no contexto de um formulário projeto. Por isso não pode ser usado em um componente.
 - Os comandos SQL de definição de dados (`CREATE TABLE`, `DROP TABLE`, etc.) não podem ser utilizados no banco de dados do componente. Entretanto são compatíveis com bancos de dados externos (ver o comando SQL`CREATE DATABASE`).
 
-## Error handling
+## Gestão de erros
 
 Um [método de gestião de erros](Concepts/error-handling.md) instalado pelo comando `ON ERR CALL` só se aplica ao banco de dados em execução. No caso de um erro gerado por um componente, não se chama ao método de gestão de erros `ON ERR CALL` do banco local, e viceversa.
 
@@ -244,7 +244,7 @@ Lendo de um banco externo:
  End SQL
 ```
 
-## Use of resources
+## Uso de recursos
 
 Componentes podem usar recursos. De acordo com o princípio de gestão de recursos, se o componente for de arquitetura  .4dbase (arquitetura recomendada), a pasta Resources deve ser colocada dentro desta pasta.
 

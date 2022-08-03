@@ -102,7 +102,7 @@ In the case of a list box based on the current selection of a table, any modific
 
 ### List box colección o entity selection
 
-In this type of list box, each column must be associated to an expression. The contents of each row is then evaluated per collection element or per entity of the entity selection.
+En este tipo de list box, cada columna debe estar asociada a una expresión. The contents of each row is then evaluated per collection element or per entity of the entity selection.
 
 Each element of the collection or each entity is available as an object that can be accessed through the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command. A column expression can be a project method, a variable, or any formula, accessing each entity or collection element object through `This`, for example `This.<propertyPath>` (or `This.value` in case of a collection of scalar values). You can use the `LISTBOX SET COLUMN FORMULA` and `LISTBOX INSERT COLUMN FORMULA` commands to modify columns programmatically.
 
@@ -294,7 +294,7 @@ The `On Before Data Entry` event is returned before `On Getting Focus`.
 
 In order to preserve data consistency for selection type and entity selection type list boxes, any modified record/entity is automatically saved as soon as the cell is validated, i.e.:
 
-- when the the cell is deactivated (user presses tab, clicks, etc.)
+- cuando se desactiva la celda (el usuario presiona el tabulador, hace clic, etc.)
 - cuando el listbox ya no tiene el foco,
 - cuando el formulario ya no tiene el foco.
 
@@ -361,7 +361,7 @@ You can then define specific background colors, font colors and/or font styles b
 
 To determine which rows are selected, you have to check whether they are included in the set indicated in the [Highlight Set](properties_ListBox.md#highlight-set) property of the list box. You can then define the appearance of selected rows using one or more of the relevant [color or style expression property](#using-arrays-and-expressions).
 
-Keep in mind that expressions are automatically re-evaluated each time the:
+Tenga en cuenta que las expresiones se reevalúan automáticamente cada vez que:
 - la selección de list box cambia.
 - list box obtiene o pierde el foco.
 - form window containing the list box becomes, or ceases to be, the frontmost window.
@@ -461,7 +461,7 @@ You can set the value of the variable (for example, Header2:=2) in order to “f
 There are several different ways to set background colors, font colors and font styles for list boxes:
 
 - at the level of the [list box object properties](#list-box-objects),
-- at the level of the [column properties](#list-box-columns),
+- a nivel de las [propiedades de la columna](#list-box-columns),
 - using [arrays or expressions properties](#using-arrays-and-expressions) for the list box and/or for each column,
 - at the level of the text of each cell (if [multi-style text](properties_Text.md#multi-style)).
 
