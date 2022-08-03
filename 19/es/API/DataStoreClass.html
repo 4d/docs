@@ -334,9 +334,9 @@
 <p>Quiere saber el número de tablas encriptadas en el archivo de datos actual:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$status </span>: Object
 
- <span class="hljs-variable">$status</span>:=dataStore.<span class="hljs-function">encryptionStatus</span>()<span class="hljs-keyword">
+ <span class="hljs-variable">$status</span>:=ds.<span class="hljs-function">encryptionStatus</span>()<span class="hljs-keyword">
 
- If</span>(<span class="hljs-variable">$status</span>.isEncrypted) <span class="hljs-comment">//la base está encriptada</span>
+ If</span>(<span class="hljs-variable">$status</span>.isEncrypted) <span class="hljs-comment">//the database is encrypted</span>
 <span class="hljs-function">    C_LONGINT</span>(<span class="hljs-variable">$vcount</span>)
 <span class="hljs-function">    C_TEXT</span>(<span class="hljs-variable">$tabName</span>)<span class="hljs-keyword">
     For each</span>(<span class="hljs-variable">$tabName</span>;<span class="hljs-variable">$status</span>.tables)<span class="hljs-keyword">
@@ -345,9 +345,6 @@
        End if</span><span class="hljs-keyword">
     End for each</span>
 <span class="hljs-function">    ALERT</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$vcount</span>)+<span class="hljs-string">" encrypted table(s) in this datastore."</span>)<span class="hljs-keyword">
- Else</span>
-<span class="hljs-function">    ALERT</span>(<span class="hljs-string">"This database is not encrypted."</span>)<span class="hljs-keyword">
- End if</span><span class="hljs-keyword">
  Else</span>
 <span class="hljs-function">    ALERT</span>(<span class="hljs-string">"This database is not encrypted."</span>)<span class="hljs-keyword">
  End if</span>

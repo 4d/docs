@@ -1657,7 +1657,7 @@ End if</span>
 <p>... devuelve los mensajes cuyo encabezado content-type contiene &quot; e &quot; y cuyo encabezado Subject no contiene &quot; o &quot; y cuyo encabezado content-type no es &quot; Mixed &quot;.</p>
 <p>En cuanto a los dos últimos ejemplos, observe que el resultado de la búsqueda es diferente cuando se eliminan los paréntesis de la primera lista de llaves de búsqueda.</p>
 <ul>
-<li>The <em>searchCriteria</em> may include the optional [CHARSET] specification. This consists of the &quot;CHARSET&quot; word followed by a registered [CHARSET] (US ASCII, ISO-8859). It indicates the charset of the <em>searchCriteria</em> string. Therefore, you must convert the <em>searchCriteria</em> string into the specified charset if you use the [CHARSET] specification (see the <code>CONVERT FROM TEXT</code> or <code>Convert to text</code> commands). By default, 4D encodes in Quotable Printable the searchCriteria string if it contains extended characters.</li>
+<li>The <em>searchCriteria</em> may include the optional [CHARSET] specification. This consists of the &quot;CHARSET&quot; word followed by a registered [CHARSET] (US ASCII, ISO-8859). Indica el conjunto de caracteres de la cadena <em>searchCriteria</em>. Therefore, you must convert the <em>searchCriteria</em> string into the specified charset if you use the [CHARSET] specification (see the <code>CONVERT FROM TEXT</code> or <code>Convert to text</code> commands). By default, 4D encodes in Quotable Printable the searchCriteria string if it contains extended characters.</li>
 </ul>
 <pre><code class="hljs"><span class="hljs-attr">searchCriteria</span> = CHARSET <span class="hljs-string">"ISO-8859"</span> BODY <span class="hljs-string">"Help"</span>
 </code></pre>
