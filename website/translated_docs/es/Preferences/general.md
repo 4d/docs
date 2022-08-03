@@ -80,7 +80,7 @@ If you check this option, two items are added in the **File > New** menu and the
 
 These items allow you to create binary databases (see [Creating a new database](https://doc.4d.com/4Dv18R6/4D/18-R6/Creating-a-new-database.300-5217610.en.html) section). They are no longer proposed by default because 4D recommends using project-based architecture for new developments.
 
-## When creating a new project
+## Al crear un nuevo proyecto
 
 ### Utilizar archivo historial
 
@@ -132,7 +132,7 @@ This parameter configures the default language used for character string process
 A 4D database can thus operate in a language different from that of the system. When a database is opened, the 4D engine detects the language used by the data file and provides it to the language (interpreter or compiled mode). Text comparisons, regardless of whether they are carried out by the database engine or the language, are done in the same language.
 
 When creating a new data file, 4D uses the language previously set in this menu. When opening a data file that is not in the same language as the structure, the data file language is used and the language code is copied into the structure.
-> You can modify this parameter for the open database using the Database Settings (see [Text comparison](https://doc.4d.com/4Dv18R6/4D/18-R6/DatabaseData-storage-page.300-5217842.en.html#460252)).
+> You can modify this parameter for the open database using the Database Settings (see [Text comparison](../settings/database.md#text-comparison)).
 
 ## Ubicación de la documentation
 
@@ -159,6 +159,6 @@ Define dónde buscará 4D las páginas de documentación.
 
 > This option is only taken into account for command documentation access (excluding class functions).
 
-Indica la ubicación de la documentación HTML estática. By default, this is the \Help\Command\language subfolder. You can view the location by clicking on the menu associated with the area. Si esta subcarpeta no está presente, la ubicación se muestra en rojo.
+Indica la ubicación de la documentación HTML estática. By default, this is the \Help\Command\language subfolder. Puede ver la ubicación haciendo clic en el menú asociado al área. Si esta subcarpeta no está presente, la ubicación se muestra en rojo.
 
 You can modify this location as desired, for example if you want to display the documentation in a language different from that of the application. The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the **[...]** button next to the entry area and choose a documentation root folder (folder corresponding to the language: `fr`, `en`, `es`, `de` or `ja`). 

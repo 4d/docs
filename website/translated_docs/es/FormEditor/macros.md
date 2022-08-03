@@ -220,10 +220,10 @@ Estas son las propiedades devueltas en el parámetro *$editor*:
 | $editor.editor.file              | File       | File object of the form file                                                      |
 | $editor.editor.name              | Cadena     | Nombre del formulario                                                             |
 | $editor.editor.table             | number     | Número de tabla del formulario, 0 para el formulario proyecto                     |
-| $editor.editor.currentPageNumber | number     | The number of the current page                                                    |
+| $editor.editor.currentPageNumber | number     | El número de la página actual                                                     |
 | $editor.editor.currentPage       | Objeto     | The current page, containing all the form objects and the entry order of the page |
 | $editor.editor.currentSelection  | Collection | Colección de nombres de objetos seleccionados                                     |
-| $editor.editor.formProperties    | Objeto     | Properties of the current form                                                    |
+| $editor.editor.formProperties    | Objeto     | Propiedades del formulario actual                                                 |
 | $editor.editor.target            | cadena     | Nombre del objeto bajo el ratón cuando se hace clic en una macro                  |
 
 Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. Todas las propiedades son opcionales:

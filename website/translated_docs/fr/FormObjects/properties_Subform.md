@@ -46,7 +46,7 @@ Cette option permet de désigner un formulaire détaillé à utiliser dans un so
 
 Action to perform in case of a double-click on an empty line of a list subform. Les options suivantes sont disponibles :
 - Ne rien faire : ignore le double-clic.
-- Ajouter un enregistrement : crée un nouvel enregistrement dans le sous-formulaire et passe en mode édition. L'enregistrement sera créé directement dans la liste si la propriété [Saisissable dans la liste] est activée. Sinon, il sera créé en mode page, dans le [formulaire détaillé](detail-form) associé au sous-formulaire.
+- Ajouter un enregistrement : crée un nouvel enregistrement dans le sous-formulaire et passe en mode édition. The record will be created directly in the list if the [Enterable in List](#enterable-in-list) property is enabled. Otherwise, it will be created in page mode, in the [detail form](#detail-form) associated with the subform.
 
 
 #### Grammaire JSON

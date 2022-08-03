@@ -11,7 +11,7 @@ The **Users** page lists the 4D users connected to the server.
 
 The "Users" button indicates, in parentheses, the total number of users connected to the server (this number does not take into account any display filters applied to the window). La página también contiene un área de búsqueda dinámica y botones de control. You can modify the order of the columns by dragging and dropping their header areas.
 
-You can also sort the list of column values by clicking on its header. Click several times to specify in turn an ascending/descending order.
+También puede ordenar la lista de los valores de las columnas haciendo clic en su encabezado. Click several times to specify in turn an ascending/descending order.
 
 ![](assets/en/Admin/server-users-sort.png)
 
@@ -69,7 +69,7 @@ This button can be used to directly show the processes of the user(s) selected o
 
 ### Desconectar
 
-This button can be used to force the selected user(s) to disconnect. When you click on this button, a warning dialog box appears so that you can confirm or cancel this operation (hold down **Alt** key while clicking on the **Drop user** button to disconnect the selected user(s) directly without displaying the confirmation dialog box).
+Este botón puede utilizarse para forzar al usuario(s) seleccionado a desconectarse. When you click on this button, a warning dialog box appears so that you can confirm or cancel this operation (hold down **Alt** key while clicking on the **Drop user** button to disconnect the selected user(s) directly without displaying the confirmation dialog box).
 
 > You can perfom the same action for remote users with the [`DROP REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1633.html) command.
 

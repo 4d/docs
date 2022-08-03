@@ -37,38 +37,38 @@ Quando as variáveis são introduzidas através de uma diretiva do compilador, r
 
 The default value depends on the variable type:
 
-| Type          | Default value  |
-| ------------- | -------------- |
-| Booleano      | False          |
-| Date          | 00-00-00       |
-| Inteiro longo | 0              |
-| Hora          | 00:00:00       |
-| Imagem        | picture size=0 |
-| Real          | 0              |
-| Ponteiro      | Nil=true       |
-| Texto         | ""             |
-| Blob          | Blob size=0    |
-| Objeto        | null           |
-| Coleção       | null           |
-| Variant       | indefinido     |
+| Type          | Default value       |
+| ------------- | ------------------- |
+| Booleano      | False               |
+| Date          | 00-00-00            |
+| Inteiro longo | 0                   |
+| Hora          | 00:00:00            |
+| Imagem        | tamanho da imagem=0 |
+| Real          | 0                   |
+| Ponteiro      | Nil=true            |
+| Texto         | ""                  |
+| Blob          | Tamanho do Blob =0  |
+| Objeto        | null                |
+| Coleção       | null                |
+| Variant       | indefinido          |
 
 
-## Converting data types
+## Conversão de tipos de dados
 
-The 4D language contains operators and commands to convert between data types, where such conversions are meaningful. The 4D language enforces data type checking. For example, you cannot write: "abc"+0.5+!12/25/96!-?00:30:45?. This will generate syntax errors.
+A linguagem 4D contém operadores e comandos para converter entre tipos de dados, onde tais conversões são significativas. A língua 4D obriga à verificação do tipo de dados. Por exemplo, não se pode escrever: "abc"+0.5+!12/25/96!-?00:30:45?. Isto irá gerar erros de sintaxe.
 
-The following table lists the basic data types, the data types to which they can be converted, and the commands used to do so:
+O quadro seguinte lista os tipos de dados básicos, os tipos de dados para os quais podem ser convertidos, e os comandos utilizados para o fazer:
 
-| Data Type to Convert | to String | to Number | to Date | to Time | to Boolean |
-| -------------------- | --------- | --------- | ------- | ------- | ---------- |
-| String (1)           |           | `Num`     | `Date`  | `Hora`  | `Bool`     |
-| Número (2)           | `String`  |           |         |         | `Bool`     |
-| Date                 | `String`  |           |         |         | `Bool`     |
-| Hora                 | `String`  |           |         |         | `Bool`     |
-| Booleano             |           | `Num`     |         |         |            |
+| Tipo de dados a converter | para String | para Número | para Data | para Tempo | para Booleano |
+| ------------------------- | ----------- | ----------- | --------- | ---------- | ------------- |
+| String (1)                |             | `Num`       | `Date`    | `Hora`     | `Bool`        |
+| Número (2)                | `String`    |             |           |            | `Bool`        |
+| Date                      | `String`    |             |           |            | `Bool`        |
+| Hora                      | `String`    |             |           |            | `Bool`        |
+| Booleano                  |             | `Num`       |           |            |               |
 
-(1) Strings formatted in JSON can be converted into scalar data, objects, or collections, using the `JSON Parse` command.
+(1) Strings formatadas em JSON podem ser convertidas em dados escalares, objetos ou coleções, usando o comando `JSON Parse`
 
-(2) Time values can be treated as numbers.
+(2) Os valores de tempo podem ser tratados como números.
 
-**Note:** In addition to the data conversions listed in this table, more sophisticated data conversions can be obtained by combining operators and other commands.
+**Nota:** Além das conversões de dados listadas nesta tabela. Conversões de dados mais sofisticadas podem ser obtidas combinando operadores e outros comandos.

@@ -94,7 +94,7 @@ Para más información, consulte Entidades.
 
 ## Entity selection
 
-An entity selection is an object. When querying the datastore, an entity selection is returned. An entity selection is a set of references to entities related to the same dataclass.
+Una selección de entidades es un objeto. When querying the datastore, an entity selection is returned. An entity selection is a set of references to entities related to the same dataclass.
 
 Una selección de entidades contiene:
 
@@ -207,4 +207,4 @@ Utilizado en tecnología de bloqueo "optimista". All entities have an internal c
 
 ## Atributo de almacenamiento
 
-A storage attribute (sometimes referred to as a scalar attribute) is the most basic type of attribute in a datastore class and most directly corresponds to a field in a relational database. A storage attribute holds a single value for each entity in the class.
+A storage attribute (sometimes referred to as a scalar attribute) is the most basic type of attribute in a datastore class and most directly corresponds to a field in a relational database. Un atributo de almacenamiento contiene un único valor para cada entidad de la clase.

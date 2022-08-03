@@ -20,7 +20,7 @@ title: Restaurar
 
 Puede restaurar manualmente el contenido de un archivo generado por el módulo de copia de seguridad. Una restauración manual puede ser necesaria, por ejemplo, para restaurar todo el contenido de un archivo (archivos de proyecto y archivos adjuntos), o para realizar búsquedas entre los archivos. La restauración manual también puede realizarse junto con la integración del archivo de registro actual.
 
-La restauración manual de las copias de seguridad puede realizarse a través de la caja de diálogo estándar de apertura de documento, o a través de la página [Restitución](MSC/restore) del CSM. La restitución a través del CSM ofrece más opciones y permite previsualizar el contenido del archivo. Por otro lado, sólo se pueden restaurar los archivos asociados a la aplicación abierta.
+The manual restore of backups can be carried out either via the standard Open document dialog box, or via the [Restore](../MSC/restore.md) page of the MSC. La restitución a través del CSM ofrece más opciones y permite previsualizar el contenido del archivo. Por otro lado, sólo se pueden restaurar los archivos asociados a la aplicación abierta.
 
 Para restaurar manualmente una aplicación a través de una caja de diálogo estándar:
 

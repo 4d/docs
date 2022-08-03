@@ -211,7 +211,7 @@ When [HTTPS is enabled](#enable-https), keep in mind that if [HTTP is also enabl
 
 HSTS allows the 4D web server to declare that browsers should only interact with it via secure HTTPS connections. Once activated, the 4D web server will automatically add HSTS-related information to all response headers. Browsers will record the HSTS information the first time they receive a response from the 4D web server, then any future HTTP requests will automatically be transformed into HTTPS requests. The length of time this information is stored by the browser is specified with the Web **HSTS max age** setting.
 
-> HSTS requires that HTTPS is [enabled](enable-https) on the server. [HTTP](enable-http) must also be enabled to allow client initial connections.
+> HSTS requires that [HTTPS is enabled](#enable-https) on the server. [HTTP](#enable-http) must also be enabled to allow client initial connections.
 
 > You can get the current connection mode using the `WEB Is secured connection` command.
 
@@ -289,6 +289,7 @@ HTTP TRACE method activation in the 4D web server. For security reasons, by defa
 | Can be set with  | Name                                           | Kommentare |
 | ---------------- | ---------------------------------------------- | ---------- |
 | webServer object | [`HTTPSPort`](API/WebServerClass.md#httpsport) | number     |
+
 
 |`WEB SET OPTION`|`Web HTTPS port ID`||
 

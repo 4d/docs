@@ -44,7 +44,7 @@ SET DATABASE PARAMETER(4D Server log recording;1)
 SET DATABASE PARAMETER(Client Log Recording;1)
 //côté distant
 ```
-> Cette instruction démarre également le fichier d'historique [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt).
+> This statement also starts the [4DRequestsLog_ProcessInfo.txt](#4drequestslog_processinfotxt) log file.
 
 #### En-têtes
 
@@ -226,6 +226,22 @@ Les champs suivants sont enregistrés pour chaque événement :
 | message            | Description de la saisie de journal                                  |
 
 En fonction de l'événement, d'autres champs peuvent également être enregistrés, tels que task, socket, etc.
+
+### Activation du fichier
+
+The *4DDiagnosticLog.txt* file can log different levels of messages, from `ERROR` (most important) to `TRACE` (less important). By default, the `INFO` level is set, which means that the file will log only important events, including errors and unexpected results (see below).
+
+You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) command, depending on your needs. When you select a level, levels above (which are more important) are implicitely selected also. The following levels are available:
+
+| Colonne # | Description                                                          | When selected, includes         |
+| --------- | -------------------------------------------------------------------- | ------------------------------- |
+| ERROR     | Numéro d'opération séquentiel et unique dans la session d'historique | ERROR                           |
+| WARN      | Date et heure au format RFC3339 (yyyy-mm-ddThh:mm:ss.ms)             | ERROR, WARN                     |
+| INFO      | ID du Process 4D                                                     | ERROR, WARN, INFO               |
+| DEBUG     | ID unique du process                                                 | ERROR, WARN, INFO, DEBUG        |
+| TRACE     | Other internal information (for 4D technical services)               | ERROR, WARN, INFO, DEBUG, TRACE |
+
+
 
 ## 4DSMTPLog.txt, 4DPOP3Log.txt, et 4DIMAPLog.txt
 

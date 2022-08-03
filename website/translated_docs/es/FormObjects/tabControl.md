@@ -51,7 +51,7 @@ Para suministrar las etiquetas de un control de pestañas, puede utilizar:
 
 ### Utilizar un objeto
 
-You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. El objeto debe contener las siguientes propiedades:
+You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](../Concepts/dt_collection.md) as the [data source](properties_Object.md#variable-or-expression) of the tab control. El objeto debe contener las siguientes propiedades:
 
 | Propiedad      | Tipo       | Descripción                                                                                                                                                  |
 | -------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |

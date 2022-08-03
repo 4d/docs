@@ -23,7 +23,7 @@ Les options de taille dépendent de la valeur de l'option **Taille basée sur**.
 
 
 
-> Pour les formulaires de sortie, seul les champs Marge [**hor. **](#hor-margin) ou [**Largeur**](width) sont disponibles.
+> Pour les formulaires de sortie, seul les champs Marge [**hor. margin**](#hor-margin) or [**Width**](#width) fields are available.
 
 
 

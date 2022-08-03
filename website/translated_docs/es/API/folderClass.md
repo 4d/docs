@@ -111,7 +111,7 @@ En el parámetro *folderConstant*, pase una carpeta 4D interna o sistema, utiliz
 | fk user preferences folder | 0     | Carpeta 4D que almacena los archivos de preferencias usuario en el \<userName> directory.          |
 | fk web root folder         | 8     | Current Web root folder of the database: if within the package "/PACKAGE/path", otherwise full path |
 
-If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.
+If the command is called from a component, pass the optional * parameter to get the path of the host database. De lo contrario, si omite el parámetro *, siempre se devuelve un objeto null.
 
 
 ## 4D.Folder.new()
@@ -245,7 +245,7 @@ A `4D.File` object with the `isAlias` property set to **true**.
 
 #### Ejemplo
 
-You want to create an alias to an archive folder in your database folder:
+Quiere crear un alias para una carpeta de archivos en su carpeta principal:
 
 ```4d
 $myFolder:=Folder("C:\\Documents\\Archives\\2019\\January";fk platform path)

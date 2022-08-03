@@ -127,7 +127,7 @@ Used to generate the error file (see [error file](#symbol-file)) at the time of 
 
 #### Generate error file
 
-Used to generate the error file (see [error file](#error-file)) at the time of syntax checking. The error file is created in the [Logs folder](Project/architecture.md#logs) of the project with the name `ProjectName_errors.xml`.
+Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. The error file is created in the [Logs folder](Project/architecture.md#logs) of the project with the name `ProjectName_errors.xml`.
 
 
 #### Compilation Path

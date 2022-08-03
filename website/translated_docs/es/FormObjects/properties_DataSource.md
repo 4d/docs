@@ -158,7 +158,7 @@ Hay tres opciones disponibles:
 Using the **Selected item reference** option requires compliance with the following principles:
 - To be able to store the reference, the field or variable data source must be of the Number type (regardless of the type of value displayed in the list). The [expression](properties_Object.md#expression-type) property is automatically set.
 - Las referencias válidas y únicas deben estar asociadas a los elementos de la lista.
-- The drop-down list must be associated with a field or a variable.
+- La lista desplegable debe estar asociada a un campo o a una variable.
 
 
 #### Gramática JSON
@@ -277,7 +277,7 @@ All database tables can be used, regardless of whether the form is related to a 
 
 This property is available in the following conditions:
 
-- a [choice list](#choice-list) is associated with the object
+- una [lista de selección](#choice-list) está asociada al objeto
 - for [inputs](input_overview.md) and [list box columns](listbox_overview.md#list-box-columns), a [required list](properties_RangeOfValues.md#required-list) is also defined for the object (both options should use usually the same list), so that only values from the list can be entered by the user.
 
 This property specifies, in the context of a field or variable associated with a list of values, the type of contents to save:
@@ -287,7 +287,7 @@ This property specifies, in the context of a field or variable associated with a
 
 This option lets you optimize memory usage: storing numeric values in fields uses less space than storing strings. It also makes it easier to translate applications: you just create multiple lists in different languages but with the same item references, then load the list based on the language of the application.
 
-Using this property requires compliance with the following principles:
+El uso de esta propiedad requiere el cumplimiento de los siguientes principios:
 
 - To be able to store the reference, the field or variable data source must be of the Number type (regardless of the type of value displayed in the list). The [expression](properties_Object.md#expression-type) property is automatically set.
 - Las referencias válidas y únicas deben estar asociadas a los elementos de la lista.

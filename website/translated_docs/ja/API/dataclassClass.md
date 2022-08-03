@@ -10,17 +10,21 @@ title: データクラス
 
 ### 概要
 
-|                                                                                                                                                                                                             |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                                                     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE DataClassClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataClassClass.attributeName.Summary --> |
 | [<!-- INCLUDE #DataClassClass.all().Syntax -->](#all)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.all().Summary -->|
+| [<!-- INCLUDE #DataClassClass.clearRemoteCache().Syntax -->](#clearremotecache)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.clearRemoteCache().Summary -->|
 | [<!-- INCLUDE #DataClassClass.fromCollection().Syntax -->](#fromcollection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.fromCollection().Summary --> |
 | [<!-- INCLUDE #DataClassClass.get().Syntax -->](#get)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.get().Summary --> |
+| [<!-- INCLUDE #DataClassClass.getCount().Syntax -->](#getcount)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.getCount().Summary --> |
 | [<!-- INCLUDE #DataClassClass.getDataStore().Syntax -->](#getdatastore)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.getDataStore().Summary --> |
 | [<!-- INCLUDE #DataClassClass.getInfo().Syntax -->](#getinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.getInfo().Summary --> |
+| [<!-- INCLUDE #DataClassClass.getRemoteCache().Syntax -->](#getremotecache)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.getRemoteCache().Summary --> |
 | [<!-- INCLUDE #DataClassClass.new().Syntax -->](#new)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.new().Summary --> |
 | [<!-- INCLUDE #DataClassClass.newSelection().Syntax -->](#newselection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.newSelection().Summary --> |
 | [<!-- INCLUDE #DataClassClass.query().Syntax -->](#query)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.query().Summary --> |
+| [<!-- INCLUDE #DataClassClass.setRemoteCacheSettings().Syntax -->](#setremotecachesettings)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataClassClass.setRemoteCacheSettings().Summary --> |
 
 
 
@@ -136,11 +140,61 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 | context | Text | エンティティセレクションに適用されている最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能は [ORDA のクライアント/サーバー処理](ORDA/entities.md#クライアント/サーバーの最適化)を想定して設計されています。 |
 
 
+> データクラス内の総エンティティ数を知るには、`ds.myClass.all().length` 式よりも最適化された [`getCount()`](#getcount) 関数を使用することが推奨されます。
+
 #### 例題
 
 ```4d
  var $allEmp : cs.EmployeeSelection
  $allEmp:=ds.Employee.all()
+```
+
+<!-- REF #DataClassClass.clearRemoteCache().Desc -->
+## .clearRemoteCache()
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R5 | 追加 |
+</details>
+
+<!-- REF #DataClassClass.clearRemoteCache().Syntax -->
+**.clearRemoteCache()**<!-- END REF -->
+
+<!-- REF #DataStoreClass.clearRemoteCache().Params -->
+| 引数 | タイプ |  | 説明                |
+| -- | --- |::| ----------------- |
+|    |     |  | このコマンドは引数を必要としません |
+<!-- END REF -->
+
+#### 説明
+
+`.clearRemoteCache()` 関数は、 <!-- REF #DataClassClass.clearRemoteCache().Summary -->データクラスの ORDAキャッシュを空にします<!-- END REF -->。
+
+> この関数は `timeout` および `maxEntries` の値をリセットしません。
+
+#### 例題
+
+```4d
+var $ds : 4D.DataStoreImplementation
+var $persons : cs.PersonsSelection
+var $p : cs.PersonsEntity
+var $cache : Object
+var $info : Collection
+var $text : Text
+
+$ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
+
+$persons:=$ds.Persons.all()
+$text:=""
+For each ($p; $persons)
+    $text:=$p.firstname+" lives in "+$p.address.city+" / "
+End for each
+
+$cache:=$ds.Persons.getRemoteCache()
+
+$ds.Persons.clearRemoteCache()
+// Persons データクラスのキャッシュ = {timeout:30;maxEntries:30000;stamp:255;entries:[]}
 ```
 
 
@@ -420,8 +474,45 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
  $e4:=ds.Employee.get(4;$settings2)
  completeSummary($e4) // completeSummary メソッドには、"summary" コンテキストに付随する最適化が適用されます
-``` 
- 
+```
+
+
+<!-- END REF -->
+
+<!-- REF DataClassClass.getCount.Desc -->
+## .getCount()
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R5 | 追加 |
+</details>
+
+<!-- REF #DataClassClass.getCount().Syntax -->
+**.getCount()** : Integer <!-- END REF -->
+
+<!-- REF #DataClassClass.getCount().Params -->
+| 引数     | タイプ |    | 説明                  |
+| ------ | --- | -- | ------------------- |
+| result | 整数  | <- | データクラスに含まれる全エンティティ数 |
+<!-- END REF -->
+
+#### 説明
+
+`.getCount()` 関数は、 <!-- REF #DataClassClass.getCount().Summary --> データクラスに含まれる総エンティティ数を返します<!-- END REF -->。
+
+トランザクション内でこの関数を使用した場合、トランザクション中に作成されたエンティティは考慮されます。
+
+#### 例題
+
+```4d
+var $ds : 4D.DataStoreImplementation
+var $number : Integer
+
+$ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
+
+$number:=$ds.Persons.getCount()
+```
 
 <!-- END REF -->
 
@@ -517,7 +608,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 #### 例題 1
 
-```4d 
+```4d
  #DECLARE ($entity : Object)  
  var $status : Object
 
@@ -543,7 +634,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 #### 例題 3
 
-```4d 
+```4d
  var $pk : Text
  var $dataClassAttribute : Object
 
@@ -557,6 +648,90 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 <!-- END REF -->
 
+<!-- REF DataClassClass.getRemoteCache().Desc -->
+## .getRemoteCache()
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R5 | 追加 |
+</details>
+
+<!-- REF #DataClassClass.getRemoteCache().Syntax -->
+**.getRemoteCache**() : Object <!-- END REF -->
+
+<!-- REF #DataClassClass.getRemoteCache().Params -->
+| 引数     | タイプ    |    | 説明                               |
+| ------ | ------ | -- | -------------------------------- |
+| result | オブジェクト | <- | データクラスの ORDAキャッシュの内容を記述したオブジェクト。 |
+<!-- END REF -->
+
+> **上級者向け:** この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。
+
+#### 説明
+
+`.getRemoteCache()` 関数は、 <!-- REF #DataClassClass.getRemoteCache().Summary -->データクラスの ORDAキャッシュの内容を記述したオブジェクトを返します<!-- END REF -->。
+
+4D のシングルユーザーアプリケーションからこの関数を呼び出した場合、`Null` が返されます。
+
+戻り値のオブジェクトには、以下のプロパティが格納されています:
+
+| プロパティ      | タイプ    | 説明                                      |
+| ---------- | ------ | --------------------------------------- |
+| maxEntries | 整数     | エントリーコレクションの最大数                         |
+| stamp      | 整数     | キャッシュのスタンプ                              |
+| timeout    | 整数     | キャッシュの新しいエントリーが期限切れとなるまでの残り時間。          |
+| entries    | コレクション | キャッシュ内の各エンティティにつき、1つのエントリーオブジェクトを格納します。 |
+
+エントリーコレクション内の各エントリーオブジェクトは、以下のプロパティを持ちます:
+
+| プロパティ   | タイプ    | 説明                   |
+| ------- | ------ | -------------------- |
+| data    | Object | エントリーのデータを格納するオブジェクト |
+| expired | ブール    | エントリーが期限切れの場合に true  |
+| key     | テキスト   | エンティティのプライマリーキー      |
+
+各エントリーの `data` オブジェクトは、以下のプロパティを持ちます:
+| プロパティ                  | タイプ    | 説明                                                       |
+| ---------------------- | ------ | -------------------------------------------------------- |
+| __KEY                  | String | エンティティのプライマリーキー                                          |
+| __STAMP                | 倍長整数   | データベース内のエンティティのタイムスタンプ                                   |
+| __TIMESTAMP            | String | データベース内のエンティティのスタンプ (形式: YYYY-MM-DDTHH:MM:SS:ms:Z)       |
+| dataClassAttributeName | バリアント  | データクラス属性に対応するデータがキャッシュに存在する場合、それはデータベースと同じ型のプロパティに返されます。 |
+
+リレートエンティティに関するデータは、data オブジェクトのキャッシュに保存されます。
+
+#### 例題
+
+次の例で、`$ds.Persons.all()` は、先頭エンティティをそのすべての属性とともにロードします。 その後リクエストの最適化がおこなわれ、`firstname` と `address.city` のみがロードされます。
+
+`address.city` は、`Persons` データクラスのキャッシュにロードされることに注意してください。
+
+`Address` データクラスの先頭エンティティだけがキャッシュに格納されます。 先頭エンティティは、ループの最初の繰り返しでロードされます。
+
+```4d
+var $ds : 4D.DataStoreImplementation
+var $persons : cs.PersonsSelection
+var $p : cs.PersonsEntity
+var $cachePersons; $cacheAddress : Object
+var $text : Text
+
+$ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
+
+$persons:=$ds.Persons.all()
+
+$text:=""
+For each ($p; $persons)
+    $text:=$p.firstname+" lives in "+$p.address.city+" / "
+End for each
+
+$cachePersons:=$ds.Persons.getRemoteCache()
+$cacheAddress:=$ds.Adress.getRemoteCache()
+```
+
+#### 参照
+
+[.setRemoteCacheSettings()](#setremotecachesettings)<br/>[.clearRemoteCache()](#clearremotecache)
 
 
 <!-- REF DataClassClass.new().Desc -->
@@ -570,6 +745,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 <!-- REF #DataClassClass.new().Syntax -->
 **.new()** : 4D.Entity <!-- END REF -->
+
 
 <!-- REF #DataClassClass.new().Params -->
 | 引数  | タイプ       |    | 説明              |
@@ -594,13 +770,13 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 以下のコードは "Log" データクラスに新しいエンティティを作成し、"info" 属性に情報を記録します:
 
-```4d 
+```4d
  var $entity : cs.LogEntity
  $entity:=ds.Log.new() // 参照を作成します
  $entity.info:="New entry" // 情報を格納します
  $entity.save() // エンティティを保存します
 ```
- 
+
 <!-- END REF -->
 
 
@@ -641,12 +817,12 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 #### 例題
 
 
-```4d 
+```4d
  var $USelection; $OSelection : cs.EmployeeSelection
  $USelection:=ds.Employee.newSelection() // 順列なしの空のエンティティセレクションを作成します
  $OSelection:=ds.Employee.newSelection(dk keep ordered) // 順列ありの空のエンティティセレクションを作成します
 ```
- 
+
 
 <!-- END REF -->
 
@@ -695,7 +871,7 @@ attributePath|formula 比較演算子 値
 
 詳細は以下の通りです:
 
-*   **attributePath**: クエリの実行対象となる属性パス。 この引数は、単純な名前 ("country" など) のほか、あらゆる有効な属性パス ("country.name" など) の形をとることができます。 属性パスが `Collection` 型である場合、すべてのオカレンスを管理するには\[ ] 記法を使用してください (例: "children\[ ].age" など)。 また、**プレースホルダー** を使用することもできます(後述参照)。
+*   **attributePath**: クエリの実行対象となる属性パス。 この引数は、単純な名前 ("country" など) のほか、あらゆる有効な属性パス ("country.name" など) の形をとることができます。 属性パスが `Collection` 型である場合、すべてのオカレンスを管理するには\[ ] 記法を使用してください (例: "children\[ ].age" など)。
 > *".", "\[ ]", や "=", ">", "#"..., などの特殊文字はクエリ文字列の中で正しく評価されないため、これらが含まれた属性名を直接使用することはできません。 このような属性をクエリするには、プレースホルダーの使用を検討します。これにより、属性パス内で使用できる文字の範囲が広がります (後述の* **プレースホルダーの使用** *参照)。*
 
 *   **formula**: テキストまたはオブジェクト形式で渡された有効なフォーミュラ。 フォーミュラは処理されるエンティティごとに評価され、ブール値を返さなくてはなりません。 処理中のエンティティはフォーミュラ内において `This` で参照されます。
@@ -728,9 +904,10 @@ attributePath|formula 比較演算子 値
 *   **値**: コレクションの各要素、あるいはエンティティセレクションの各エンティティのプロパティのカレント値に対して比較する値。 **プレースホルダー** (後述の **プレースホルダーの使用** 参照) か、あるいはデータ型プロパティと同じ型の式を使用することができます。<p><p> 定数値を使用する場合、以下の原則に従う必要があります:
     *   **テキスト** テキスト型の定数値の場合は単一引用符つき、あるいはなしでも渡すことができます(後述の **引用符を使用する** 参照)。 文字列中の文字列を検索する ("含まれる" クエリ) には、ワイルドカード記号 (@) を使用して検索文字列を指定します (例: "@Smith@")。 また以下のキーワードはテキスト定数においては使用できません: true, false。
     *   **ブール** 型の定数値: **true** または **false** (文字の大小を区別します)
-    *   **数値** 型の定数値: 浮動小数点は '.' (ピリオド) で区切られます。 日付型の定数値: "YYYY-MM-DD" フォーマット。
+    *   **数値** 型の定数値: 浮動小数点は '.' (ピリオド) で区切られます。
+    *   **日付** 型の定数値: "YYYY-MM-DD" フォーマット。
     *   **null** 定数値: "null" キーワードを使用した場合、**null** と **undefined** プロパティの両方が検索されます。
-    *   IN 記号を使用したクエリの場合、値はコレクションか、attributePath の型に合致する、\[ ] でくくられたカンマ区切りの値である必要があります (文字列においては、" の記号は"\"でエスケープする必要があります)。
+    *   IN 記号を使用したクエリの場合、*値* はコレクションか、attributePath の型に合致する、\[ ] でくくられたカンマ区切りの値である必要があります (文字列においては、`"` の記号は `\` でエスケープする必要があります)。
 *   **論理演算子**: 複数の条件をクエリ内で結合させるのに使用します(任意)。 以下の論理演算子のいずれか一つを使用できます (名前あるいは記号のどちらかを渡します):
 
     | 結合  | 記号                      |
@@ -739,7 +916,7 @@ attributePath|formula 比較演算子 値
     | OR  | &#124;,&#124;&#124;, or |
 
 *   **order by attributePath**: クエリに "order by attributePath" ステートメントを追加することで、結果をソートすることができます。 カンマで区切ることで、複数の order by ステートメントを使用することもできます (例: order by *attributePath1* desc, *attributePath2* asc)。 デフォルトの並び順は昇順です。 並び順を指定するには、降順の場合は 'desc'、昇順の場合は 'asc' を追加します。
-> * このステートメントを使用した場合、順序ありエンティティセレクションが返されます (詳細については [エンティティセレクションの順列あり/順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください)。
+> このステートメントを使用した場合、順序ありエンティティセレクションが返されます (詳細については [エンティティセレクションの順列あり/順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください)。
 
 **引用符を使用する**
 
@@ -765,10 +942,10 @@ attributePath|formula 比較演算子 値
 
 プレースホルダーには二つの種類があります。**インデックスプレースホルダー** および **命名プレースホルダー** です:
 
-| -  | インデックスプレースホルダー                                                                                                        | 命名プレースホルダー                                                                                                                               |
-| -- | --------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
-| 定義 | queryString に :paramIndex (例 :1, :2...) という形式でパラメーターが挿入され、それに対応する値は後に続く value 引数が提供します。 最大で 128個の value 引数を渡すことができます。 | :paramName (例: myparam など) という形でパラメーターが挿入され、その値は querySettings 引数の attributes または parameters オブジェクトで提供されます。                              |
-| 例題 | $r:=class.query(":1=:2";"city";"Chicago")                                                                             | $o.attributes:=New object("att";"city")<br> $o.parameters:=New object("name";"Chicago")<br> $r:=class.query(":att=:name";$o) |
+|    | インデックスプレースホルダー                                                                                                  | 命名プレースホルダー                                                                                                                                     |
+| -- | --------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| 定義 | *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*attributePath* と *formula* と *値* に以下のものを含めることができます: | `:paramName` (例: myparam など) という形でパラメーターが挿入され、その値は *querySettings* 引数の attributes または parameters オブジェクトで提供されます。                                |
+| 例題 | `$r:=class.query(":1=:2";"city";"Chicago")`                                                                     | `$o.attributes:=New object("att";"city")`<br> `$o.parameters:=New object("name";"Chicago")`<br> `$r:=class.query(":att=:name";$o)` |
 
 *queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*attributePath* と *formula* と *値* に以下のものを含めることができます:
 
@@ -776,7 +953,7 @@ attributePath|formula 比較演算子 値
 *   定数値 (プレースホルダーを使用しない)
 *   インデックスプレースホルダーや命名プレースホルダー
 
-以下の理由から、**クエリでのプレースホルダーの使用が推奨されます**:
+以下の理由から、クエリでのプレースホルダーの使用が**推奨されます**:
 
 1.  悪意あるコードの挿入を防ぎます: ユーザーによって値が代入された変数をクエリ文字列として直接使用した場合、余計なクエリ引数を入力することでユーザーがクエリ条件を変更する可能性があります。 たとえば、以下のようなクエリ文字列を考えます:
 
@@ -828,21 +1005,21 @@ $vSingles:=ds.Person.query("spouse = :1";Null) // 機能しません
 ```
 エンティティ1:
 ds.People.name: "martin"
-ds.People.places: 
+ds.People.places:
     { "locations" : [ {
                 "kind":"home",
-                "city":"paris" 
+                "city":"paris"
             } ] }
 
 エンティティ2:
 ds.People.name: "smith"
-ds.People.places: 
+ds.People.places:
     { "locations" : [ {
                 "kind":"home",
-                "city":"lyon" 
+                "city":"lyon"
             } , {
                 "kind":"office",
-                "city":"paris" 
+                "city":"paris"
             } ] }
 ```
 
@@ -861,6 +1038,7 @@ ds.People.query("places.locations[].kind= :1 and places.locations[].city= :2";"h
 
 上記の 2件のエンティティにおいて、以下のように書いた場合:
 
+
 ```4d
 ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";"home";"paris")
 ```
@@ -868,16 +1046,46 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 ... クエリは、"kind=home" かつ "city=paris" である "locations" 要素を持つエンティティ "martin" のみを返します。 "home" と"paris" が同じコレクション要素内にない "smith" は、クエリの結果に含まれません。
 
 
+**N対Nリレーションのクエリ**
+
+ORDA は、N対Nリレーションにおけるクエリを容易にするための特別な構文を提供します。 このような場合には、`AND` 演算子を使って同じ属性の異なる値を検索する必要があるかもしれません。 たとえば、以下のようなストラクチャーの場合を考えます:
+
+![alt-text](assets/en/API/manytomany.png)
+
+俳優 A と俳優 B の *両方* が出演している映画をすべて検索したいとします。 `AND` 演算子を使った単純なクエリを書いても、うまくいきません:
+
+```4d
+// 無効なコード
+$es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor.lastName = :2";"Hanks";"Ryan")  
+// $es is empty
+```
+基本的に、この問題はクエリの内部ロジックに関連しています。 値が "A" と "B" の両方である属性を検索することはできません。
+
+**比較演算子**: *attributePath* 引数と *value* 引数の比較に使用する記号 以下の記号がサポートされます:
+
+```4d
+"relationAttribute.attribute = :1 AND relationAttribute{x}.attribute = :2 [AND relationAttribute{y}.attribute...]"
+```
+**{x}** は、リレーション属性のために新たな参照を作成するよう、ORDA に指示します。 すると、ORDA は必要なビットマップ操作を内部で実行します。 **x** は **0 以外** の任意の数であることに注意してください ({1}、{2}、{1540}...)。 ORDA は、各クラスインデックス用の一意な参照をクエリ内においてのみ必要とします。
+
+この例では、次のようになります:
+
+```4d
+// 有効なコード
+$es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor{2}.lastName = :2";"Hanks";"Ryan")  
+// $es には映画が格納されます (You've Got Mail, Sleepless in Seattle, Joe Versus the Volcano)
+```
+
 
 **formula 引数**
 
 *queryString* 引数にフォーミュラを挿入 (上記参照) する代わりに、formula オブジェクトをブール検索条件として直接渡すことができます。 トークナイズの利点を生かせる、コードが検索しやすく読みやすい、などといった面から、クエリにおけるフォーミュラオブジェクトの使用は **推奨** されています。
 
-このフォーミュラは、`Formula` または `Formula from string` コマンドによって作成されたものでなくてはなりません。 この場合において:
+このフォーミュラは、[`Formula`](FunctionClass.md#formula) または [`Formula from string`](FunctionClass.md#formula-from-string) コマンドによって作成されたものでなくてはなりません。 この場合において:
 
 *   フォーミュラは処理されるエンティティごとに評価され、true または false を返さなくてはなりません。 クエリの実行中、フォーミュラの結果がブール値でなかった場合、それは false であるとみなされます。
 *   処理中のエンティティはフォーミュラ内において `This` で参照されます。
-*   `Formula` オブジェクトが **null** の場合、エラー1626 ("テキストまたはフォーミュラが必要です") が生成されます。このエラーは `ON ERR CALL` で実装したメソッドを使用して割り込み可能です。
+*   `Formula` オブジェクトが **null** の場合、エラー1626 ("テキストまたはフォーミュラが必要です") が生成されます。
 > セキュリティのため、 `query()` 関数内のフォーミュラ使用を禁止することができます。 *querySettings* パラメーターの説明を参照ください。
 
 **フォーミュラに引数を渡す**
@@ -904,15 +1112,15 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 
 *querySettings* 引数は、追加のオプションを格納したオブジェクトです。 以下のオブジェクトプロパティがサポートされています:
 
-| プロパティ         | タイプ     | 説明                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| parameters    | Object  | *queryString* または *formula* に **値の命名プレースホルダー** を使用した場合に渡すオブジェクト。 値は、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に値の代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、実際に比較される値です。 インデックスプレースホルダー (value引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。                                                                                                                                             |
-| attributes    | Object  | *queryString* または *formula* に **属性パスの命名プレースホルダー** を使用した場合に渡すオブジェクト。 属性パスは、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に属性パスの代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、属性パスを表す文字列または文字列のコレクションです。 値には、データクラスのスカラー属性・リレート属性・オブジェクトフィールド内のプロパティへの属性パスを指定することができます。<p><table><tr><th>タイプ</th><th>説明</th></tr><tr><td>String</td><td>ドット記法を使用して表現された attributePath (例: "name" または "user.address.zipCode")</td></tr><tr><td>文字列のコレクション</td><td>コレクションの各要素が attributePath の階層を表します (例: ["name"] または ["user","address","zipCode"])。 コレクションを使用することで、ドット記法に準じていない名前の属性に対してもクエリすることができます (例: \["4Dv17.1","en/fr"])。</td></tr></table>インデックスプレースホルダー (*value* 引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。 |
-| args          | Object  | フォーミュラに渡す引数。 **args** オブジェクトは、フォーミュラ内の $1 が受け取るので、その値は *$1.property* という形で利用可能です (例題3 参照)。                                                                                                                                                                                                                                                                                                              |
-| allowFormulas | Boolean | クエリ内でフォーミュラの呼び出しを許可するには true (デフォルト)。 フォーミュラ実行を禁止するには false を渡します。 false に設定されているときに、フォーミュラが `query()` に渡された場合、エラーが発生します (1278 - フォーミュラはこのメンバーメソッドでは許可されていません)。                                                                                                                                                                                                                                         |
-| context       | Text    | エンティティセレクションに適用されている自動の最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能はクライアント/サーバー処理を想定して設計されています。詳細な情報については、[**クライアント/サーバーの最適化**](entities.md#クライアントサーバーの最適化) の章を参照ください。                                                                                                                                                                                                             |
-| queryPlan     | Boolean | 戻り値のエンティティコレクションに、実行する直前のクエリの詳細 (クエリプラン) を含めるかどうかを指定します。 返されるプロパティは、クエリプラン あるいはサブクエリ (複合クエリの場合) を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 このオプションは通常 queryPath と組み合わせて使用されます。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query( )` および `dataClass.query( )` 関数においてのみサポートされます。                                                                                                             |
-| queryPath     | Boolean | 戻り値のエンティティコレクションに、実際に実行されたクエリの詳細を含めるかどうかを指定します。 返されたプロパティは、クエリで実際に使用されたパス (通常は queryPlan と同一ですが、エンジンがクエリを最適化した場合には異なる場合があります)、処理時間と検出レコード数を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query( )` および `dataClass.query( )` 関数においてのみサポートされます。                                                                                                       |
+| プロパティ         | タイプ    | 説明                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| parameters    | オブジェクト | *queryString* または *formula* に **値の命名プレースホルダー** を使用した場合に渡すオブジェクト。 値は、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に値の代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、実際に比較される値です。 インデックスプレースホルダー (value引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。                                                                                                                                              |
+| attributes    | オブジェクト | *queryString* または *formula* に **属性パスの命名プレースホルダー** を使用した場合に渡すオブジェクト。 属性パスは、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に属性パスの代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、属性パスを表す文字列または文字列のコレクションです。 値には、データクラスのスカラー属性・リレート属性・オブジェクトフィールド内のプロパティへの属性パスを指定することができます。<p><table><tr><th>タイプ</th><th>説明</th></tr><tr><td>String</td><td>ドット記法を使用して表現された attributePath (例: "name" または "user.address.zipCode")</td></tr><tr><td>文字列のコレクション</td><td>コレクションの各要素が attributePath の階層を表します (例: ["name"] または ["user","address","zipCode"])。 コレクションを使用することで、ドット記法に準じていない名前の属性に対してもクエリすることができます (例: \["4Dv17.1","en/fr"])。</td></tr></table>インデックスプレースホルダー (*value* 引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。 |
+| args          | オブジェクト | フォーミュラに渡す引数。 **args** オブジェクトは、フォーミュラ内の $1 が受け取るので、その値は *$1.property* という形で利用可能です (例題3 参照)。                                                                                                                                                                                                                                                                                                               |
+| allowFormulas | ブール    | クエリ内でフォーミュラの呼び出しを許可するには true (デフォルト)。 フォーミュラ実行を禁止するには false を渡します。 false に設定されているときに、フォーミュラが `query()` に渡された場合、エラーが発生します (1278 - フォーミュラはこのメンバーメソッドでは許可されていません)。                                                                                                                                                                                                                                          |
+| context       | テキスト   | エンティティセレクションに適用されている自動の最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能はクライアント/サーバー処理を想定して設計されています。詳細な情報については、[**クライアント/サーバーの最適化**](entities.md#クライアントサーバーの最適化) の章を参照ください。                                                                                                                                                                                                              |
+| queryPlan     | ブール    | 戻り値のエンティティコレクションに、実行する直前のクエリの詳細 (クエリプラン) を含めるかどうかを指定します。 返されるプロパティは、クエリプラン あるいはサブクエリ (複合クエリの場合) を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 このオプションは通常 queryPath と組み合わせて使用されます。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query()` および `dataClass.query()` 関数においてのみサポートされます。                                                                                                                |
+| queryPath     | ブール    | 戻り値のエンティティコレクションに、実際に実行されたクエリの詳細を含めるかどうかを指定します。 返されたプロパティは、クエリで実際に使用されたパス (通常は queryPlan と同一ですが、エンジンがクエリを最適化した場合には異なる場合があります)、処理時間と検出レコード数を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query()` および `dataClass.query()` 関数においてのみサポートされます。                                                                                                          |
 
 **queryPlan と queryPath について**
 
@@ -1227,5 +1435,66 @@ softwares:{
 
 エンティティセレクションの [`.query()`](EntitySelectionClass.md#query)
 <!-- END REF -->
+
+<!-- REF DataClassClass.setRemoteCacheSettings().Desc -->
+## .setRemoteCacheSettings()
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R5 | 追加 |
+</details>
+
+<!-- REF #DataClassClass.setRemoteCacheSettings().Syntax -->
+**.setRemoteCacheSettings**(*settings* : Object) <!-- END REF -->
+
+<!-- REF #DataClassClass.setRemoteCacheSettings().Params -->
+| 引数       | タイプ    |    | 説明                                            |
+| -------- | ------ | -- | --------------------------------------------- |
+| settings | オブジェクト | -> | データクラスの ORDAキャッシュについて、タイムアウトと最大サイズを指定するオブジェクト |
+<!-- END REF -->
+
+> **上級者向け:** この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。
+
+#### 説明
+
+`.setRemoteCacheSettings()` 関数は、 <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->データクラスの ORDAキャッシュについて、タイムアウトと最大サイズを指定します<!-- END REF -->。
+
+*settings* には、以下のプロパティを持つオブジェクトを渡します:
+
+| プロパティ      | タイプ | 説明           |
+| ---------- | --- | ------------ |
+| timeout    | 整数  | タイムアウト (秒単位) |
+| maxEntries | 整数  | エンティティの最大数   |
+
+`timeout` は、データクラスの ORDAキャッシュのタイムアウトを設定します (デフォルトは 30秒)。 タイムアウトを過ぎると、キャッシュ内のデータクラスのエンティティは期限切れとみなされます。 これは、次のことを意味します:
+
+* データはまだ存在します
+* 次にそのデータが必要になったときには、サーバーに要求します
+* エンティティの最大数に達すると、4D は期限切れのデータを自動的に削除します
+
+`timeout` プロパティを設定すると、すでにキャッシュに存在するエンティティに新しいタイムアウトが設定されます。 これは頻繁に変更されないデータを扱う場合、つまり、サーバーへの新たな要求が必要ない場合に便利です。
+
+`maxEntries` は、ORDAキャッシュ内のエンティティの最大数を設定します。 デフォルトは 30,000 です。
+
+最小エントリー数は 300 のため、`maxEntries` の値は 300以上でなくてはなりません。 それ以外の場合は無視され、最大エントリー数は 300 に設定されます。
+
+`timeout` および `maxEntries` として有効なプロパティが渡されない場合、キャッシュはデフォルト値または以前に設定された値のまま変更されません。
+
+エンティティが保存されると、キャッシュ内で更新され、タイムアウトに達すると期限切れとなります。
+
+#### 例題
+
+```4d
+var $ds : 4D.DataStoreImplementation
+
+$ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
+
+$ds.Buildings.setRemoteCacheSettings(New object("timeout"; 60; "maxEntries"; 350))
+```
+
+#### 参照
+
+[.clearRemoteCache()](#clearremotecache)<br/>[.getRemoteCache()](#clearremotecache)
 
 <style> h2 { background: #d9ebff;}</style>

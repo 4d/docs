@@ -103,7 +103,7 @@ El código 4D es indentado automáticamente para revelar su estructura:
 
 ![](assets/en/Preferences/optionsIndent.png)
 
-Modifying this default value can be useful if your methods contain complex algorithms with many levels of embedding. Narrower indentation can be used in order to limit horizontal scrolling.
+Modifying this default value can be useful if your methods contain complex algorithms with many levels of embedding. Se puede utilizar una indentación más estrecha para limitar el desplazamiento horizontal.
 
 #### Mostrar los números de línea
 

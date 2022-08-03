@@ -4,7 +4,7 @@ title: Comencemos
 ---
 
 
-4D View Pro is a [4D component](Concepts/components.md) that includes a [4D form area](FormObjects/viewProArea_overview.md) and specific [methods](method-list.md). It allows you to embed advanced spreadsheet features in your projects.
+4D View Pro is a [4D component](Concepts/components.md) that includes a [4D form area](FormObjects/viewProArea_overview.md) and specific [methods](method-list.md). Le permite integrar las funcionalidades avanzadas de hoja de cálculo en sus proyectos.
 
 
 ![](assets/en/ViewPro/vpSpreadsheet.PNG)
@@ -126,7 +126,7 @@ For example, to create a range object for the following cells:
 
 ![](assets/en/ViewPro/vp-cells.png)
 
-You can use the [VP Cells](method-list.md#vp-cells) method:
+Puede utilizar el método [VP Cells](method-list.md#vp-cells):
 
 ```4d 
 var $myRange : Object

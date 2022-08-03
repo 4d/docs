@@ -6,13 +6,31 @@ title: Actualizaciones de la documentación
 La lista de las principales actualizaciones de esta documentación. For general information about new features in the 4D products, see the **release notes** on [doc.4d.com](https://doc.4d.com).
 
 
+## 4D v19 R5
+
+- Aplicaciones cliente/servidor generadas:
+    - The project [directory.json file](../Users/handling_users_groups.md#directoryjson-file) can now be [embedded in the server](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) at build time, allowing you to deploy a client/server application with a basic security user and group configuration.
+    - You can now [deselect useless modules](../Desktop/building.md#deselecting-modules) in your built applications.
+
+- [Client/Server optimization](../ORDA/remoteDatastores.md#clientserver-optimization): New class functions allow you to handle the ORDA cache and the contents of an optimization context. See [Preconfiguring contexts](../ORDA/remoteDatastores.md#preconfiguring-contexts) and [ORDA Cache](../ORDA/remoteDatastores.md#orda-cache) for more information.
+
+    > These functions are intended for developers who need to customize ORDA default features for specific configurations. En la mayoría de los casos, no será necesario utilizarlos.
+
+- [DataClass class](../API/DataClassClass.md): The new [.getCount()](../API/DataClassClass.md#getcount) function returns the number of entities in a dataclass.
+
+- 4D View Pro:
+    - The new [VP SET DATA CONTEXT](ViewPro/method-list.md#vp-set-data-context), [VP Get data context](ViewPro/method-list.md#vp-get-data-context), [VP SET BINDING PATH](ViewPro/method-list.md#vp-set-binding-path), [VP Get binding path](ViewPro/method-list.md#vp-get-binding-path) commands allow you to create data contexts and bind their contents to sheet cells.
+    - [VP EXPORT DOCUMENT](ViewPro/method-list.md#vp-get-binding-path) and [VP Export to object](ViewPro/method-list.md#vp-get-binding-path) now accept the new `includeBindingSource` option that exports the contents of a data context as cell values.
+
+
 ## 4D v19 R4
 
 - [Alias attributes](ORDA/ordaClasses.md#alias-attributes-1) are available in ORDA classes.
+
 - Support for [break and continue](Concepts/cf_looping.md#break-and-continue) statements in loops.
 - Support for [return](Concepts/flow-control.md#return-expression) statement and [return expression](Concepts/parameters.md#return-expression) to return values.
 - Support for [compound assignment operators](Concepts/operators.md#compound-assignment-operators), [short-circuit operators](Concepts/operators.md#short-circuit-operators), and [ternary operator](Concepts/operators.md#ternary-operator)
-- The [Code Editor](code-editor/navigation.md) now includes an dropdown tool and supports markers for better code navigation.
+- The [Code Editor](../code-editor/navigation.md) now includes an dropdown tool and supports markers for better code navigation.
 - New Preferences: [**Include tokens in project source files**](Preferences/general.md#include-tokens-in-project-source-files) and [**Show clipboards**](Preferences/methods.md#show-clipboards) option on the Methods page.
 - New REST request to [lock/unlock](REST/$lock.md) entities.
 - [4D View Pro](ViewPro/getting-started.md) chapter added with new commands: [VP Copy to object](ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](ViewPro/method-list.md#vp-paste-from-object).
@@ -61,5 +79,5 @@ La lista de las principales actualizaciones de esta documentación. For general 
 - [IMAP Mail](API/IMAPTransporterClass.md), [POP3 Mail](API/POP3TransporterClass.md) and [SMTP Mail](API/SMTPTransporterClass.md): `authenticationMode` property enables OAuth 2.0
 - [IMAP Mail](API/IMAPTransporterClass.md): new `.expunge()` and `.append()` functions
 - Nuevo componente [WebAdmin](Admin/webAdmin.md) del servidor web
-- Nueva interfaz [DataExplorer](Admin/dataExplorer)
+- New [DataExplorer](../Admin/dataExplorer.md) interface
 - New web [user sessions](WebServer/sessions.md) and [their API](API/SessionClass.md).

@@ -3,11 +3,11 @@ id: number
 title: Number (Real, Longint, Integer)
 ---
 
-Number is a generic term that stands for:
+Número é um termo genérico que significa:
 
-- Real field, variable or expression. The range for the Real data type is ±1.7e±308 (13 significant digits).
-- Long Integer field, variable or expression. The range for the Long Integer data type (4-byte Integer) is -2^31..(2^31)-1.
-- Integer field, array or expression. The range for the Integer data type (2-byte Integer) is -32,768..32,767 (2^15..(2^15)-1).
+- Campo real, variável ou expressão. O intervalo para o tipo de dados Real é de ±1,7e±308 (13 dígitos significativos).
+- Campo Inteiro Longo, variável ou expressão. O intervalo para o tipo de dados Long Integer (4-byte Integer) é -2^31...(2^31)-1.
+- Campo inteiro, array ou expressão. The range for the Integer data type (2-byte Integer) is -32,768..32,767 (2^15..(2^15)-1).
 
 **Note:** Integer field values are automatically converted in Long integers when used in the 4D Language.
 
@@ -38,60 +38,60 @@ Negative numbers are specified with the minus sign (-). Por exemplo:
 
 ## Number operators
 
-| Operação                 | Sintaxe          | Retorna  | Expressão | Value |
-| ------------------------ | ---------------- | -------- | --------- | ----- |
-| Addition                 | Number + Number  | Número   | 2 + 3     | 5     |
-| Subtraction              | Number - Number  | Número   | 3 – 2     | 1     |
-| Multiplication           | Number * Number  | Número   | 5 * 2     | 10    |
-| Division                 | Number / Number  | Número   | 5 / 2     | 2.5   |
-| Longint division         | Number \ Number | Número   | 5 \ 2    | 2     |
-| Módulo                   | Number % Number  | Número   | 5 % 2     | 1     |
-| Exponentiation           | Number ^ Number  | Número   | 2 ^ 3     | 8     |
-| Igual                    | Number = Number  | Booleano | 10 = 10   | True  |
-|                          |                  |          | 10 = 11   | False |
-| Desigualdade             | Number # Number  | Booleano | 10 #11    | True  |
-|                          |                  |          | 10 # 10   | False |
-| Greater than             | Number > Number  | Booleano | 11 > 10   | True  |
-|                          |                  |          | 10 > 11   | False |
-| Menor que                | Number < Number  | Booleano | 10 < 11   | True  |
-|                          |                  |          | 11 < 10   | False |
-| Greater than or equal to | Number >= Number | Booleano | 11 >= 10  | True  |
-|                          |                  |          | 10 >= 11  | False |
-| Less than or equal to    | Number <= Number | Booleano | 10 <= 11  | True  |
-|                          |                  |          | 11 <= 10  | False |
+| Operação             | Sintaxe          | Retorna  | Expressão | Value |
+| -------------------- | ---------------- | -------- | --------- | ----- |
+| Addition             | Number + Number  | Número   | 2 + 3     | 5     |
+| Subtração            | Número - Número  | Número   | 3 – 2     | 1     |
+| Multiplicação        | Número * Número  | Número   | 5 * 2     | 10    |
+| Division             | Número / Número  | Número   | 5 / 2     | 2.5   |
+| Divisão inteira      | Número \ Número | Número   | 5 \ 2    | 2     |
+| Módulo               | Número % Número  | Número   | 5 % 2     | 1     |
+| Exponenciação        | Número ^ Número  | Número   | 2 ^ 3     | 8     |
+| Igual                | Número = Número  | Booleano | 10 = 10   | True  |
+|                      |                  |          | 10 = 11   | False |
+| Desigualdade         | Número # Número  | Booleano | 10 #11    | True  |
+|                      |                  |          | 10 # 10   | False |
+| Maior que            | Number >= Number | Booleano | 11 > 10   | True  |
+|                      |                  |          | 10 > 11   | False |
+| Menor que            | Number <= Number | Booleano | 10 < 11   | True  |
+|                      |                  |          | 11 < 10   | False |
+| Maior ou igual a     | Number >= Number | Booleano | 11 >= 10  | True  |
+|                      |                  |          | 10 >= 11  | False |
+| Menor que ou igual a | Number <= Number | Booleano | 10 <= 11  | True  |
+|                      |                  |          | 11 <= 10  | False |
 
-The modulo operator % divides the first number by the second number and returns a whole number remainder. Here are some examples:
+O operador do módulo % divide o primeiro número pelo segundo número e devolve um número inteiro restante. Aqui estão alguns exemplos:
 
-- 10 % 2 returns 0 because 10 is evenly divided by 2.
-- 10 % 3 returns 1 because the remainder is 1.
-- 10.5 % 2 returns 0 because the remainder is not a whole number.
+- 10 % 2 retorna 0 porque 10 é dividido uniformemente por 2.
+- 10 % 3 devolve 1 porque o resto é 1.
+- 10,5% 2 devolve 0 porque o resto não é um número inteiro.
 
-**WARNING:**
-- The modulo operator % returns significant values with numbers that are in the Long Integer range (from minus 2^31 to 2^31 minus one). To calculate the modulo with numbers outside of this range, use the `Mod` command.
-- The longint division operator \ returns significant values with integer numbers only.
+**AVISO:**
+- O operador do módulo % devolve valores significativos com números que se encontram na gama do Long Integer (de menos 2^31 a 2^31 menos um). Para calcular o modulo com números fora deste intervalo, utilizar o comando `Mod` .
+- O operador da divisão de longint retorna valores significativos apenas com números inteiros.
 
-### Precedence
+### Precedência
 
-The order in which an expression is evaluated is called precedence. 4D has a strict left-to-right precedence, in which algebraic order is not observed. Por exemplo:
+A ordem pela qual uma expressão é avaliada é chamada precedência. 4D tem uma estrita precedência da esquerda para a direita, na qual a ordem algébrica não é observada. Por exemplo:
 
 ```4d
  3+4*5
 ```
 
-returns 35, because the expression is evaluated as 3 + 4, yielding 7, which is then multiplied by 5, with the final result of 35.
+retorna 35, porque a expressão é avaliada como 3 + 4, produzindo 7, que é depois multiplicada por 5, com o resultado final de 35.
 
-To override the left-to-right precedence, you MUST use parentheses. Por exemplo:
+Para anular a precedência da esquerda para a direita, DEVE usar parênteses. Por exemplo:
 
 ```4d
  3+(4*5)
 ```
 
-returns 23 because the expression (4 * 5) is evaluated first, because of the parentheses. The result is 20, which is then added to 3 for the final result of 23.
+retorna 23 porque a expressão (4 * 5) é avaliada em primeiro lugar, por causa dos parênteses. O resultado é 20, que é depois adicionado a 3 para o resultado final de 23.
 
-Parentheses can be nested inside other sets of parentheses. Be sure that each left parenthesis has a matching right parenthesis to ensure proper evaluation of expressions. Lack of, or incorrect use of parentheses can cause unexpected results or invalid expressions. Furthermore, if you intend to compile your applications, you must have matching parentheses—the compiler detects a missing parenthesis as a syntax error.
+Os parênteses podem ser aninhados dentro de outros conjuntos de parênteses. Certifique-se de que cada parêntese esquerdo tem um parêntese direito correspondente para assegurar uma avaliação adequada das expressões. A falta ou utilização incorrecta de parênteses pode causar resultados inesperados ou expressões inválidas. Além disso, se pretende compilar as suas candidaturas, deve ter parênteses correspondentes - o compilador detecta um parêntese em falta como um erro de sintaxe.
 
 
-## Bitwise operators
+## Operadores Bitwise
 
 The bitwise operators operates on **Long Integer** expressions or values.
 

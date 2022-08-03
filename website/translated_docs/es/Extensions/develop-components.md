@@ -16,7 +16,7 @@ You can develop 4D components for your own needs and keep them private. You can 
 
 ## Básicos
 
-Creating and installing 4D components is carried out directly from 4D:
+La creación e instalación de los componentes 4D se realiza directamente desde 4D:
 
 - To install a component, you simply need to copy the component files into the [`Components` folder of the project](Project/architecture.md). Puede utilizar alias o atajos.
 - A project can be both a matrix and a "host", in other words, a matrix project can itself use one or more components. Sin embargo, un componente no puede utilizar subcomponentes por sí mismo.

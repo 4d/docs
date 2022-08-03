@@ -50,28 +50,28 @@ The **User Settings** and **User Settings for Data File** dialog boxes contain a
 
 The following table lists the pages of settings found in the **User Settings** and **User Settings for Data File** dialog boxes and describes their main differences with respect to standard settings:
 
-| **Page of Structure Settings**                                                        | **Page of User Settings**             | **Page of User Settings for Data File** |
-| ------------------------------------------------------------------------------------- | ------------------------------------- | --------------------------------------- |
-| [General page](../settings/general.md)                                                | N/a                                   | N/a                                     |
-| [Interface page](../settings/interface.md)                                            | Identical to standard settings        | Identical to standard settings          |
-| [Compiler page](../settings/compiler.md)                                              | N/a                                   | N/a                                     |
-| [Database/Data storage page](../settings/database.md#data-storage)                    | N/a                                   | N/a                                     |
-| [Database/Memory page](../settings/database.md#memory)                                | Identical to standard settings        | Identical to standard settings          |
-| [Backup/Scheduler page](../settings/backup.md#scheduler)                              | N/a                                   | Identical to standard settings          |
-| [Backup/Configuration page](../settings/backup.md#configuration)                      | N/a                                   | Identical to standard settings          |
-| [Backup/Backup & Restore page](../settings/backup.md/#backup-restore)                 | N/a                                   | Identical to standard settings          |
-| [Client-server/Network options page](../settings/client-server.md/#network-options)   | Identical to standard settings        | Identical to standard settings          |
-| [Client-server/IP configuration page](../settings/client-server.md/#ip-configuration) | Identical to standard settings        | Identical to standard settings          |
-| [Web/Configuration page](../settings/web.md#configuration)                            | Identical to standard settings        | Identical to standard settings          |
-| [Web/Options (I) page](../settings/web.md#options)                                    | Identical to standard settings        | Identical to standard settings          |
-| [Web/Options (II) page](../settings/web.md#options-ii)                                | Identical to standard settings        | Identical to standard settings          |
-| [Web/Log (type) page](../settings/web.md#log)                                         | Identical to standard settings        | Identical to standard settings          |
-| [Web/Log (backup) page](../settings/web.md#log)                                       | Identical to standard settings        | Identical to standard settings          |
-| [Web/Web Services page](../settings/web.md#web-services)                              | Method prefixing option not available | Method prefixing option not available   |
-| [Página SQL](../settings/sql.md)                                                      | Identical to standard settings        | Identical to standard settings          |
-| [PHP page](../settings/php.md)                                                        | Identical to standard settings        | Identical to standard settings          |
-| [Security page](../settings/security.md)                                              | N/a                                   | N/a                                     |
-| [Compatibility page](../settings/compatibility.md)                                    | N/a                                   | N/a                                     |
+| **Page of Structure Settings**                                                       | **Page of User Settings**             | **Page of User Settings for Data File** |
+| ------------------------------------------------------------------------------------ | ------------------------------------- | --------------------------------------- |
+| [General page](../settings/general.md)                                               | N/a                                   | N/a                                     |
+| [Interface page](../settings/interface.md)                                           | Identical to standard settings        | Identical to standard settings          |
+| [Compiler page](../settings/compiler.md)                                             | N/a                                   | N/a                                     |
+| [Database/Data storage page](../settings/database.md#data-storage)                   | N/a                                   | N/a                                     |
+| [Database/Memory page](../settings/database.md#memory)                               | Identical to standard settings        | Identical to standard settings          |
+| [Backup/Scheduler page](../settings/backup.md#scheduler)                             | N/a                                   | Identical to standard settings          |
+| [Backup/Configuration page](../settings/backup.md#configuration)                     | N/a                                   | Identical to standard settings          |
+| [Backup/Backup & Restore page](../settings/backup.md#backup-restore)                 | N/a                                   | Identical to standard settings          |
+| [Client-server/Network options page](../settings/client-server.md#network-options)   | Identical to standard settings        | Identical to standard settings          |
+| [Client-server/IP configuration page](../settings/client-server.md#ip-configuration) | Identical to standard settings        | Identical to standard settings          |
+| [Web/Configuration page](../settings/web.md#configuration)                           | Identical to standard settings        | Identical to standard settings          |
+| [Web/Options (I) page](../settings/web.md#options)                                   | Identical to standard settings        | Identical to standard settings          |
+| [Web/Options (II) page](../settings/web.md#options-ii)                               | Identical to standard settings        | Identical to standard settings          |
+| [Web/Log (type) page](../settings/web.md#log)                                        | Identical to standard settings        | Identical to standard settings          |
+| [Web/Log (backup) page](../settings/web.md#log)                                      | Identical to standard settings        | Identical to standard settings          |
+| [Web/Web Services page](../settings/web.md#web-services)                             | Method prefixing option not available | Method prefixing option not available   |
+| [Página SQL](../settings/sql.md)                                                     | Identical to standard settings        | Identical to standard settings          |
+| [PHP page](../settings/php.md)                                                       | Identical to standard settings        | Identical to standard settings          |
+| [Security page](../settings/security.md)                                             | N/a                                   | N/a                                     |
+| [Compatibility page](../settings/compatibility.md)                                   | N/a                                   | N/a                                     |
 
 When you edit settings in this dialog box, they are automatically stored in the corresponding *settings.4DSettings* file (see below).
 

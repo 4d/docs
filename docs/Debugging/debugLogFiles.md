@@ -45,7 +45,7 @@ SET DATABASE PARAMETER(Client Log Recording;1)
 //remote side
 ```
 
->This statement also starts the [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt) log file.
+>This statement also starts the [4DRequestsLog_ProcessInfo.txt](#4drequestslog_processinfotxt) log file.
 
 #### Headers
 

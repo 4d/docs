@@ -55,7 +55,7 @@ El objeto "__STATUS" devuelto tiene las siguientes propiedades:
 | statusText   |                | texto    | Descripción del error, ver abajo                                                                                                                            |
 | lockKind     |                | number   | Código de bloqueo                                                                                                                                           |
 | lockKindText |                | texto    | "Locked by session" if locked by a REST session, "Locked by record" if locked by a 4D process                                                               |
-| lockInfo     |                | objeto   | Information about the lock origin. Returned properties depend on the lock origin (4D process or REST session).                                              |
+| lockInfo     |                | objeto   | Information about the lock origin. Las propiedades devueltas dependen del origen del bloqueo (proceso 4D o sesión REST).                                    |
 |              |                |          | ***Disponible sólo para un bloqueo por proceso 4D:***                                                                                                       |
 |              | task_id        | number   | ID del Proceso                                                                                                                                              |
 |              | user_name      | texto    | Nombre de usuario de la sesión en la máquina                                                                                                                |

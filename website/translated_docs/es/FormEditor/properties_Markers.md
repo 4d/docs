@@ -45,7 +45,7 @@ Puede hacer el área Detalle más pequeña o más grande. Whatever you place in 
 
 ## Pie del formulario
 
-The Form Footer area is displayed on screen under the list of records. Siempre se imprime al final de cada página de un informe. The Footer area is defined as the area between the Break control line and the Footer control line.
+El área de pie de página del formulario se muestra en pantalla bajo la lista de registros. Siempre se imprime al final de cada página de un informe. The Footer area is defined as the area between the Break control line and the Footer control line.
 Puede hacer que el área del pie de página sea más pequeña o más grande.<p>
 
 You can use the Footer area to print graphics, page numbers, the current date, or any text you want at the bottom of each page of a report. For output forms designed for use on screen, the Footer area typically contains buttons that give the user options such as doing a search or sort, printing records, or putting away the current report. Se aceptan los objetos activos.
@@ -61,7 +61,7 @@ You can use the Footer area to print graphics, page numbers, the current date, o
 
 ## Encabezado del formulario
 
-The form Header area is displayed at the top of each screen and is printed at the top of each page of a report. The Header area is defined as the area above the Header control line.
+The form Header area is displayed at the top of each screen and is printed at the top of each page of a report. El área de encabezado se define como el área por encima de la línea de control del encabezado.
 Puede hacer el área Encabezado más pequeña o más grande. You can use the Header area for column names, for instructions, additional information, or even a graphic such as a company logo or a decorative pattern.<p>
 
 You can also place and use active objects in the Header area of output forms displayed as subforms, in the records display window or using the `DISPLAY SELECTION` and `MODIFY SELECTION` commands. Se pueden insertar los siguientes objetos activos:

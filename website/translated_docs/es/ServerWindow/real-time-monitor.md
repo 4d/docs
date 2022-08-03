@@ -24,7 +24,7 @@ La siguiente información se ofrece para cada línea:
 
 > Real-time monitoring page uses the [`GET ACTIVITY SNAPSHOT`](https://doc.4d.com/4dv19/help/command/en/page1277.html) command internally. More information can be found in this command description.
 
-The page is active and updated permanently as soon as it is displayed. It should be noted that its operation can significantly slow the execution of the application. It is possible to suspend the updating of this page in one of the following ways:
+La página está activa y se actualiza permanentemente en cuanto se muestra. It should be noted that its operation can significantly slow the execution of the application. It is possible to suspend the updating of this page in one of the following ways:
 
 - haciendo clic en el botón **Pausa**,
 - haciendo clic en la lista,

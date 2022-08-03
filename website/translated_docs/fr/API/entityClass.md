@@ -8,8 +8,8 @@ Une [entity](ORDA/dsMapping.md#entity) est une instance d'une [Dataclass](ORDA/d
 
 ### Sommaire
 
-|                                                                                                                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|                                                                                                                                                                                                                                           |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE EntityClass.attributeName.Syntax -->](#attributename)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE EntityClass.attributeName.Summary -->|
 | [<!-- INCLUDE #EntityClass.clone().Syntax -->](#clone)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.clone().Summary -->|
 | [<!-- INCLUDE #EntityClass.diff().Syntax -->](#diff)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.diff().Summary -->|
@@ -18,6 +18,7 @@ Une [entity](ORDA/dsMapping.md#entity) est une instance d'une [Dataclass](ORDA/d
 | [<!-- INCLUDE #EntityClass.fromObject().Syntax -->](#fromobject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.fromObject().Summary -->|
 | [<!-- INCLUDE #EntityClass.getDataClass().Syntax -->](#getdataclass)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getDataClass().Summary -->|
 | [<!-- INCLUDE #EntityClass.getKey().Syntax -->](#getkey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getKey().Summary -->|
+| [<!-- INCLUDE #EntityClass.getRemoteContextAttributes().Syntax -->](#getremotecontextattributes)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getRemoteContextAttributes().Summary -->|
 | [<!-- INCLUDE #EntityClass.getSelection().Syntax -->](#getselection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getSelection().Summary -->|
 | [<!-- INCLUDE #EntityClass.getStamp().Syntax -->](#getstamp)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.getStamp().Summary -->|
 | [<!-- INCLUDE #EntityClass.indexOf().Syntax -->](#indexof)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EntityClass.indexOf().Summary -->|
@@ -653,7 +654,61 @@ Les clés primaires peuvent être des nombres (integer) ou des textes. Vous pouv
 <!-- END REF -->
 
 
+<!-- REF EntityClass.getRemoteContextAttributes().Desc -->
+## .getRemoteContextAttributes()
 
+<details><summary>Historique</summary>
+| Version | Modifications |
+| ------- | ------------- |
+| v19R5   | Ajout         |
+</details>
+
+<!-- REF #EntityClass.getRemoteContextAttributes().Syntax -->
+**.getRemoteContextAttributes()** : Text<!-- END REF -->
+
+<!-- REF #EntityClass.getRemoteContextAttributes().Params -->
+| Paramètres | Type |    | Description                                                        |
+| ---------- | ---- | -- | ------------------------------------------------------------------ |
+| result     | Text | <- | Attirbuts de contexte associés à l'entity, séparés par une virgule |
+<!-- END REF -->
+
+> **Mode avancé :** Cette fonction est destinée aux développeurs qui souhaitent personnaliser les fonctionnalités par défaut de ORDA dans le cadre de configurations spécifiques. Dans la plupart des cas, vous n'aurez pas besoin de l'utiliser.
+
+
+#### Description
+
+La fonction `.getRemoteContextAttributes()` <!-- REF #EntityClass.getRemoteContextAttributes().Summary -->retourne des informations relatives au contexte d'optimisation utilisé par l'entity <!-- END REF -->.
+
+S'il n'existe pas de [contexte d'optimisation](../ORDA/remoteDatastores.md#clientserver-optimization) pour l'entity, la fonction retourne un texte vide.
+
+#### Exemple
+
+```4d
+var $ds : 4D.DataStoreImplementation
+var $address : cs.AddressEntity
+var $p : cs.PersonsEntity
+var $contextA : Object
+var $info : Text
+var $text : Text
+
+$ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
+
+$contextA:=New object("context"; "contextA")
+
+$address:=$ds.Address.get(1; $contextA)
+$text:="" 
+For each ($p; $address.persons)
+    $text:=$p.firstname+" "+$p.lastname
+End for each 
+
+$info:=$address.getRemoteContextAttributes()
+
+//$info = "persons,persons.lastname,persons.firstname"
+```
+
+#### Voir aussi
+
+[EntitySelection.getRemoteContextAttributes()](./EntitySelectionClass.md#getRemoteContextAttributes)<br/>[.clearAllRemoteContexts()](./DataStoreClass.md#clearallremotecontexts)<br/>[.getRemoteContextInfo()](./DataStoreClass.md#getremotecontextinfo)<br/>[.getAllRemoteContexts()](./DataStoreClass.md#getallremotecontexts)<br/>[.setRemoteContextInfo()](./DataStoreClass.md#setremotecontextinfo)
 
 <!-- REF EntityClass.getSelection().Desc -->
 ## .getSelection()
@@ -940,7 +995,7 @@ L'objet retourné par `.lock( )` contient les propriétés suivantes :
 |                  | task_name           | Texte               | Nom du process                                                                                                                                                             |
 |                  | client_version      | Texte               | Version du client                                                                                                                                                          |
 |                  |                     |                     | ***Disponible uniquement pour un verrouillage par session REST :***                                                                                                        |
-|                  | host                | Texte               | URL d'origine du verrouillage de l'entité (ex : "127.0.0.1:8043")                                                                                                          |
+|                  | host                | Texte               | URL ayant verrouillé l'entité (ex : "www.myserver.com")                                                                                                                    |
 |                  | IPAddr              | Texte               | Adresse IP d'origine du verrouillage (ex. 127.0.0.1")                                                                                                                      |
 |                  | userAgent           | Texte               | userAgent de l'origine du verouillage (ex : "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 |                  |                     |                     | ***Disponible uniquement en cas d'erreur critique*** (clé primaire dupliquée, disque plein...) :                                                                           |

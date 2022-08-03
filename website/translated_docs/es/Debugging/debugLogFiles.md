@@ -44,7 +44,7 @@ SET DATABASE PARAMETER(4D Server log recording;1)
 SET DATABASE PARAMETER(Client Log Recording;1)
 ////del lado remoto
 ```
-> Esta instrucción también inicia el archivo de historial [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt).
+> This statement also starts the [4DRequestsLog_ProcessInfo.txt](#4drequestslog_processinfotxt) log file.
 
 #### Encabezados
 
@@ -227,6 +227,22 @@ Los siguientes campos se registran para cada evento:
 
 Dependiendo del evento, se pueden incluir otros campos en el registro, como la tarea, socket, etc.
 
+### Cómo activar el archivo
+
+The *4DDiagnosticLog.txt* file can log different levels of messages, from `ERROR` (most important) to `TRACE` (less important). By default, the `INFO` level is set, which means that the file will log only important events, including errors and unexpected results (see below).
+
+You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) command, depending on your needs. When you select a level, levels above (which are more important) are implicitely selected also. Los siguientes niveles están disponibles:
+
+| Columna # | Descripción                                                                                   | Cuando se selecciona, incluye   |
+| --------- | --------------------------------------------------------------------------------------------- | ------------------------------- |
+| ERROR     | Una parte de la aplicación no funciona                                                        | ERROR                           |
+| WARN      | Potential error, use of a deprecated function, poor uses, undesirable or unexpected situation | ERROR, WARN                     |
+| INFO      | ID Proceso 4D                                                                                 | ERROR, WARN, INFO               |
+| DEBUG     | Detail of application flow (for 4D technical services)                                        | ERROR, WARN, INFO, DEBUG        |
+| TRACE     | Other internal information (for 4D technical services)                                        | ERROR, WARN, INFO, DEBUG, TRACE |
+
+
+
 ## 4DSMTPLog.txt, 4DPOP3Log.txt y 4DIMAPLog.txt
 
 Estos archivos de registro registran cada intercambio entre la aplicación 4D y el servidor de correo (SMTP, POP3, IMAP) que ha sido iniciado por los siguientes comandos:
@@ -348,7 +364,7 @@ Hay varias maneras de activar el archivo de configuración de los logs:
 
 ### Descripción del archivo JSON
 
-The log configuration file is a `.json` file that can contain the following properties:
+El archivo de configuración de log es un archivo `.json` que puede contener las siguientes propiedades:
 
 ```json
 {

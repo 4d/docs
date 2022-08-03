@@ -59,7 +59,7 @@ En 4D Server, las sesiones del servidor web se manejan automáticamente a travé
 
 > To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](Debugging/debugging-remote.md) or [to a remote machine](Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4d-client). Web processes then switch to cooperative mode and the web server code can be debugged.
 
-With 4D single-user, interpreted code always runs in cooperative mode.
+Con 4D monopuesto, el código interpretado siempre se ejecuta en modo cooperativo.
 
 
 ## Compartir información

@@ -57,6 +57,8 @@ Por ejemplo, si quiere definir una clase llamada "Polygon", tiene que crear el s
     + Project
 
 
+
+
         * Sources
             - Clases
                 + Polygon.4dm
@@ -211,7 +213,7 @@ Function getFullname()->$fullname : Text
     $fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
-Para una función clase, el comando `Current method name` devuelve: `<ClassName>.<FunctionName>`, por ejemplo "MyClass.myMethod".
+Para una función clase, el comando `Current method name` devuelve: `<ClassName>.<FunctionName>`, por ejemplo "MyClass.myFunction".
 
 En el código de la aplicación, las funciones de clases se llaman como los métodos miembros de las instancias de objetos y pueden recibir [parámetros](#class-function-parameters) si los hay. Se soportan las siguientes sintaxis:
 
@@ -360,7 +362,6 @@ Function set fullName( $fullName : Text )
     $p:=Position(" "; $fullName)
     This.firstName:=Substring($fullName; 1; $p-1)
     This.lastName:=Substring($fullName; $p+1)
-
 ```
 
 ```4d
@@ -465,6 +466,8 @@ Class constructor ($side : Integer)
     // utilizar 'This'
     This.name:="Square"
 
+
+
     Function getArea()
         C_LONGINT($0)
         $0:=This.height*This.width
@@ -475,7 +478,7 @@ Class constructor ($side : Integer)
 #### Sintaxis
 
 ```4d
-Super {( param{;...;paramN} )} {-> Object} 
+Super {( param{;...;paramN} )} {-> Object}
 ```
 
 | Parámetros | Tipo   |    | Descripción                                           |
@@ -522,9 +525,10 @@ Class constructor($width : Integer; $height : Integer)
 Function sayName()
     ALERT("Hi, I am a "+This.name+".")
 
-// Definición de la función
+// Function definition
 Function getArea()
     var $0 : Integer
+
     $0:=(This.height)*(This.width)
 ```
 
@@ -641,6 +645,7 @@ $o:=cs.ob.new()
 $o.a:=5
 $o.b:=3
 $val:=$o.f() //8
+
 ```
 
 En este ejemplo, el objeto asignado a la variable $o no tiene su propia propiedad *f*, la hereda de su clase. Como *f* es llamado como un método de $o, su `This` se refiere a $o.
@@ -653,13 +658,13 @@ Varios comandos del lenguaje 4D permiten manejar las funcionalidades de las clas
 
 ### `OB Class`
 
-#### OB Class ( object ) -> Object | Null
+#### `OB Class ( object ) -> Object | Null`
 
 `OB Class` devuelve la clase del objeto pasado como parámetro.
 
 
 ### `OB Instance of`
 
-#### OB Instance of ( object ; class ) -> Boolean
+#### `OB Instance of ( object ; class ) -> Boolean`
 
 `OB Instance of` devuelve `true` si `object` pertenece a la `class` o a una de las clases heredadas y `false` de lo contrario.

@@ -117,7 +117,7 @@ When this property is not applied to the splitter, the result is as follows:
 
 #### Objects Supported
 
-[Separador](splitterTabControlOverview#splitters)
+[Separador](splitters.md)
 
 
 

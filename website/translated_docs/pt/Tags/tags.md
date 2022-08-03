@@ -747,7 +747,7 @@ Note that the `$4dtag` syntax supports matching pairs of enclosed quotes or pare
 String(1) + "\"(hello)\""
 ```
 
-You can write:
+Você pode escrever:
 
 ```4d
  input:="$4DEVAL( String(1)+\"\\\"(hello)\\\"\")"

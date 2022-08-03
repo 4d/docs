@@ -13,13 +13,17 @@ title: DataStore
 |                                                                                                                                                                                                                                        |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #DataStoreClass.cancelTransaction().Syntax -->](#canceltransaction)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.cancelTransaction().Summary -->|
+| [<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Syntax -->](#clearallremotecontexts)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Summary -->|
 | [<!-- INCLUDE DataStoreClass.dataclassName.Syntax -->](#dataclassname)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataStoreClass.dataclassName.Summary --> |
 | [<!-- INCLUDE #DataStoreClass.encryptionStatus().Syntax -->](#encryptionstatus)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.encryptionStatus().Summary --> |
+| [<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Syntax -->](#getallremotecontexts)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getInfo().Syntax -->](#getinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getInfo().Summary --> |
+| [<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Syntax -->](#getremotecontextinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.getRequestLog().Syntax -->](#getrequestlog)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRequestLog().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Syntax -->](#makeselectionsalterable)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.provideDataKey().Syntax -->](#providedatakey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.provideDataKey().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.setAdminProtection().Syntax -->](#setadminprotection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setAdminProtection().Summary --> |
+| [<!-- INCLUDE #DataStoreClass.setRemoteContextInfo().Syntax -->](#setremotecontextinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setRemoteContextInfo().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.startRequestLog().Syntax -->](#startrequestlog)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startRequestLog().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.startTransaction().Syntax -->](#starttransaction)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startTransaction().Summary --> |
 | [<!-- INCLUDE #DataStoreClass.stopRequestLog().Syntax -->](#stoprequestlog)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.stopRequestLog().Summary --> |
@@ -205,7 +209,6 @@ user / password / timeout / tls を指定してリモートデータストアに
 エラーが起きた場合、コマンドは **Null** を返します。 リモートデータベースにアクセスできなかった場合 (アドレス違い、Webサーバーが開始されていない、http/https が有効化されていない、等)、エラー1610 "ホスト XXX へのリモートリクエストに失敗しました" が生成されます。 このエラーは `ON ERR CALL` で実装されたメソッドで割り込み可能です。
 
 
-
 <!-- REF DataStoreClass.dataclassName.Desc -->
 ## *.dataclassName*
 
@@ -279,6 +282,35 @@ user / password / timeout / tls を指定してリモートデータストアに
 <!-- END REF -->
 
 
+<!-- REF #DataStoreClass.clearAllRemoteContexts().Desc -->
+## .clearAllRemoteContexts()
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R5 | 追加 |
+</details>
+
+<!-- REF #DataStoreClass.clearAllRemoteContexts().Syntax -->
+**.clearAllRemoteContexts()**<!-- END REF -->
+
+<!-- REF #DataStoreClass.clearAllRemoteContexts().Params -->
+| 引数 | タイプ |  | 説明                |
+| -- | --- |::| ----------------- |
+|    |     |  | このコマンドは引数を必要としません |
+<!-- END REF -->
+
+#### 説明
+
+`.clearAllRemoteContexts()` 関数は、 <!-- REF #DataStoreClass.clearAllRemoteContexts().Summary -->データストアのすべてのアクティブコンテキストの全属性をクリアします<!-- END REF -->。
+
+この機能は主にデバッグで使用されます。 注意しなければならないのは、デバッガーを開くと、デバッガーはサーバーにリクエストを送り、データクラス属性をすべてクエリして表示することです。 このため、不要なデータでコンテキストが過負荷になることがあります。
+
+そのような場合は、`.clearAllRemoteContexts()` を使用してコンテキストをクリアし、クリーンな状態を保つことができます。
+
+#### 参照
+
+[.getRemoteContextInfo()](#getremotecontextinfo)<br/>[.getAllRemoteContexts()](#getallremotecontexts)<br/>[.setRemoteContextInfo()](#setremotecontextinfo)
 
 <!-- REF DataStoreClass.encryptionStatus().Desc -->
 ## .encryptionStatus()
@@ -296,7 +328,7 @@ user / password / timeout / tls を指定してリモートデータストアに
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 | 引数  | タイプ    |    | 説明                           |
 | --- | ------ |:--:| ---------------------------- |
-| 戻り値 | Object | <- | カレントデータストアと、各テーブルの暗号化についての情報 |
+| 戻り値 | オブジェクト | <- | カレントデータストアと、各テーブルの暗号化についての情報 |
 <!-- END REF -->
 
 
@@ -334,7 +366,7 @@ user / password / timeout / tls を指定してリモートデータストアに
 ```4d
  var $status : Object
 
- $status:=dataStore.encryptionStatus()
+ $status:=ds.encryptionStatus()
 
  If($status.isEncrypted) // データベースが暗号化されていれば
     C_LONGINT($vcount)
@@ -352,7 +384,78 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 <!-- END REF -->
 
+<!-- REF DataClassClass.getAllRemoteContexts().Desc -->
+## .getAllRemoteContexts()
 
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R5 | 追加 |
+</details>
+
+<!-- REF #DataStoreClass.getAllRemoteContexts().Syntax -->
+**.getAllRemoteContexts()** : Collection<!-- END REF -->
+
+<!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
+| 引数  | タイプ    |    | 説明                     |
+| --- | ------ | -- | ---------------------- |
+| 戻り値 | オブジェクト | <- | 最適化コンテキストオブジェクトのコレクション |
+<!-- END REF -->
+
+> **上級者向け:** この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。
+
+#### 説明
+
+`.getAllRemoteContexts()` 関数は、 <!-- REF #DataStoreClass.getAllRemoteContexts().Summary -->データストア内のすべてのアクティブな最適化コンテキストに関する情報を格納するオブジェクトのコレクションを返します<!-- END REF -->。
+
+> コンテキストの作成に関する詳細については、[クライアント/サーバーの最適化](../ORDA/remoteDatastores.md#クライアントサーバーの最適化) を参照ください。
+
+返されたコレクション内の各オブジェクトは、[`.getRemoteContextInfo()`](#返されるオブジェクト) セクションに記載されているプロパティを持ちます。
+
+#### 例題
+
+次のコードは 2つのコンテキストを設定し、`.getAllRemoteContexts()` を使用してそれらを取得します:
+
+```4d
+var $ds : 4D.DataStoreImplementation
+var $persons : cs.PersonsSelection
+var $addresses : cs.AddressSelection
+var $p : cs.PersonsEntity
+var $a : cs.AddressEntity
+var $contextA; $contextB : Object
+var $info : Collection
+var $text : Text
+
+// リモートデータストアを開きます
+$ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
+
+// コンテキストA を設定します
+$contextA:=New object("context"; "contextA")
+$persons:=$ds.Persons.all($contextA)
+$text:="" 
+For each ($p; $persons)
+    $text:=$p.firstname+" lives in "+$p.address.city+" / " 
+End for each 
+
+// コンテキストB を設定します
+$contextB:=New object("context"; "contextB")
+$addresses:=$ds.Address.all($contextB)
+$text:="" 
+For each ($a; $addresses)
+    $text:=$a.zipCode
+End for each 
+
+// すべてのリモートコンテキストを取得します (contextA と contextB)
+$info:=$ds.getAllRemoteContexts()
+//$info = [{name:"contextB"; dataclass:"Address"; main:"zipCode"},
+{name:"contextA";dataclass:"Persons";main:"firstname,address.city"}]
+```
+
+> この例はデモンストレーションであり、実際の実装を想定したものではありません。
+
+#### 参照
+
+[.getRemoteContextInfo()](#getremotecontextinfo)<br/>[.setRemoteContextInfo()](#setremotecontextinfo)<br/>[.clearAllRemoteContexts()](#clearallremotecontexts)
 
 <!-- REF DataStoreClass.getInfo().Desc -->
 ## .getInfo()
@@ -370,7 +473,7 @@ user / password / timeout / tls を指定してリモートデータストアに
 <!-- REF #DataStoreClass.getInfo().Params -->
 | 引数  | タイプ    |    | 説明           |
 | --- | ------ |:--:| ------------ |
-| 戻り値 | Object | <- | データストアのプロパティ |
+| 戻り値 | オブジェクト | <- | データストアのプロパティ |
 <!-- END REF -->
 
 #### 説明
@@ -382,7 +485,7 @@ user / password / timeout / tls を指定してリモートデータストアに
 | プロパティ      | タイプ     | 説明                                                                                                                   |
 | ---------- | ------- | -------------------------------------------------------------------------------------------------------------------- |
 | type       | string  | <li>"4D": ds で利用可能なメインデータストア </li><li>"4D Server": Open datastore で開かれたリモートデータストア</li>                                                                   |
-| networked  | boolean | <li>true: ネットワーク接続を介してアクセスされたデータストア</li><li>false: ネットワーク接続を介さずにアクセスしているデータストア (ローカルデータベース)</li>                                                                   |
+| networked  | boolean | <li>true: ネットワーク接続を介してアクセスされたデータストア</li><li>false: ネットワーク接続を介さずにアクセスしているデータストア (ローカルデータベース)</li>                                                                 |
 | localID    | テキスト    | マシン上のデータストアID。 これは、`Open datastore` コマンドで返される localId 文字列です。 メインデータストアの場合は空の文字列 ("") です。                             |
 | connection | object  | リモートデータストア接続の情報を格納したオブジェクト (メインデータストアの場合は返されません)。 次のプロパティを含みます:<p><table><tr><th>プロパティ</th><th>タイプ</th><th>説明</th></tr><tr><td>hostname</td><td>テキスト</td><td>リモートデータストアの IPアドレスまたは名称 + ":" + ポート番号</td></tr><tr><td>tls</td><td>boolean</td><td>リモートデータストアとセキュア接続を利用している場合は true</td></tr><tr><td>idleTimeout</td><td>number</td><td>セッション非アクティブタイムアウト (分単位)。</td></tr><tr><td>user</td><td>テキスト</td><td>リモートデータストアにて認証されたユーザー</td></tr></table> |
 
@@ -424,6 +527,53 @@ user / password / timeout / tls を指定してリモートデータストアに
 <!-- END REF -->
 
 
+<!-- REF #DataStoreClass.getRemoteContextInfo().Desc -->
+## .getRemoteContextInfo()
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R5 | 追加 |
+</details>
+
+<!-- REF #DataStoreClass.getRemoteContextInfo().Syntax -->
+**.getRemoteContextInfo**(*contextName* : Text) : Object <!-- END REF -->
+
+<!-- REF #DataStoreClass.getRemoteContextInfo().Params -->
+| 引数          | タイプ    |    | 説明           |
+| ----------- | ------ | -- | ------------ |
+| contextName | テキスト   | -> | コンテキストの名称    |
+| 戻り値         | オブジェクト | <- | 最適化コンテキストの詳細 |
+<!-- END REF -->
+
+> **上級者向け:** この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。
+
+#### 説明
+
+`.getRemoteContextInfo()` 関数は、 <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> *contextName* で指定したデータストアの最適化コンテキストに関する情報を格納するオブジェクトを返します<!-- END REF -->。
+
+最適化コンテキストの作成に関する詳細については、[クライアント/サーバーの最適化](../ORDA/remoteDatastores.md#クライアントサーバーの最適化) を参照ください。
+
+#### 返されるオブジェクト
+
+戻り値のオブジェクトには、以下のプロパティが格納されています:
+
+| プロパティ            | タイプ  | 説明                                                                                                                                                                                    |
+| ---------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name             | テキスト | コンテキストの名称                                                                                                                                                                             |
+| main             | テキスト | コンテキストに関連する属性 (複数の場合はカンマ区切り)                                                                                                                                                          |
+| dataclass        | テキスト | データクラスの名称                                                                                                                                                                             |
+| currentItem (任意) | テキスト | コンテキストがリストボックスとリンクしている場合の [ページモード](../ORDA/remoteDatastores.md#エンティティセレクション型リストボックス) の属性。 コンテキスト名がリストボックスに使用されていない場合、または currentItem に対応するコンテキストが存在しない場合は、`Null` または空のテキスト要素として返されます。 |
+
+コンテキストは属性に対するフィルターとして動作するため、*main* が空で返された場合、それはフィルターが適用されておらず、サーバーがすべてのデータクラス属性を返すことを意味します。
+
+#### 例題
+
+[.setRemoteContextInfo()](#example-1-3) の例題を参照ください。
+
+#### 参照
+
+[.setRemoteContextInfo()](#setremotecontextinfo)<br/>[.getAllRemoteContexts()](#getallremotecontexts) <br/>[.clearAllRemoteContexts()](#clearallremotecontexts)
 
 <!-- REF DataStoreClass.getRequestLog().Desc -->
 ## .getRequestLog()
@@ -438,9 +588,9 @@ user / password / timeout / tls を指定してリモートデータストアに
 **.getRequestLog()** : Collection<!-- END REF -->
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
-| 引数  | タイプ        |    | 説明                                 |
-| --- | ---------- |:--:| ---------------------------------- |
-| 戻り値 | Collection | <- | オブジェクトのコレクション (要素毎に一つのリクエストを記述します) |
+| 引数  | タイプ    |    | 説明                                 |
+| --- | ------ |:--:| ---------------------------------- |
+| 戻り値 | コレクション | <- | オブジェクトのコレクション (要素毎に一つのリクエストを記述します) |
 <!-- END REF -->
 
 
@@ -477,9 +627,9 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 **.isAdminProtected()** : Boolean<!-- END REF -->
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
-| 引数  | タイプ     |    | 説明                                                         |
-| --- | ------- |:--:| ---------------------------------------------------------- |
-| 戻り値 | Boolean | <- | データエクスプローラーへのアクセスが無効に設定されているの場合は true、有効の場合は false (デフォルト) |
+| 引数  | タイプ |    | 説明                                                         |
+| --- | --- |:--:| ---------------------------------------------------------- |
+| 戻り値 | ブール | <- | データエクスプローラーへのアクセスが無効に設定されているの場合は true、有効の場合は false (デフォルト) |
 <!-- END REF -->
 
 
@@ -548,9 +698,9 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 <!-- REF #DataStoreClass.provideDataKey().Params -->
 | 引数            | タイプ    |    | 説明            |
 | ------------- | ------ | -- | ------------- |
-| curPassPhrase | Text   | -> | カレントのパスフレーズ   |
-| curDataKey    | Object | -> | カレントのデータ暗号化キー |
-| 戻り値           | Object | <- | 暗号化キーのチェックの結果 |
+| curPassPhrase | テキスト   | -> | カレントのパスフレーズ   |
+| curDataKey    | オブジェクト | -> | カレントのデータ暗号化キー |
+| 戻り値           | オブジェクト | <- | 暗号化キーのチェックの結果 |
 <!-- END REF -->
 
 
@@ -574,16 +724,16 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 コマンドの実行結果は、戻り値のオブジェクトに格納されます:
 
-| プロパティ      |                          | タイプ        | 説明                                          |
-| ---------- | ------------------------ | ---------- | ------------------------------------------- |
-| success    |                          | Boolean    | 提供された暗号化キーが暗号化データと合致すれば true、それ以外は false    |
-|            |                          |            | 以下のプロパティは、success が *FALSE* であった場合にのみ返されます。 |
-| status     |                          | Number     | エラーコード (提供された暗号化キーが間違っていた場合には 4)            |
-| statusText |                          | Text       | エラーメッセージ                                    |
-| errors     |                          | Collection | エラーのスタック。 最初のエラーに最も高いインデックスが割り当てられます。       |
-|            | \[ ].componentSignature | Text       | 内部コンポーネント名                                  |
-|            | \[ ].errCode            | Number     | エラー番号                                       |
-|            | \[ ].message            | Text       | エラーメッセージ                                    |
+| プロパティ      |                          | タイプ    | 説明                                          |
+| ---------- | ------------------------ | ------ | ------------------------------------------- |
+| success    |                          | ブール    | 提供された暗号化キーが暗号化データと合致すれば true、それ以外は false    |
+|            |                          |        | 以下のプロパティは、success が *FALSE* であった場合にのみ返されます。 |
+| status     |                          | 数値     | エラーコード (提供された暗号化キーが間違っていた場合には 4)            |
+| statusText |                          | テキスト   | エラーメッセージ                                    |
+| errors     |                          | コレクション | エラーのスタック。 最初のエラーに最も高いインデックスが割り当てられます。       |
+|            | \[ ].componentSignature | テキスト   | 内部コンポーネント名                                  |
+|            | \[ ].errCode            | 数値     | エラー番号                                       |
+|            | \[ ].message            | テキスト   | エラーメッセージ                                    |
 
 *curPassphrase* および *curDataKey* のどちらの引数も渡されなかった場合、`.provideDataKey()` は **null** を返します (この場合エラーは生成されません)。
 
@@ -623,9 +773,9 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
-| 引数     | タイプ     |    | 説明                                                                            |
-| ------ | ------- | -- | ----------------------------------------------------------------------------- |
-| status | Boolean | -> | `webAdmin`ポート上で、データエクスプローラーによるデータアクセスを無効にするには true、アクセスを有効にするには false (デフォルト) |
+| 引数     | タイプ |    | 説明                                                                            |
+| ------ | --- | -- | ----------------------------------------------------------------------------- |
+| status | ブール | -> | `webAdmin`ポート上で、データエクスプローラーによるデータアクセスを無効にするには true、アクセスを有効にするには false (デフォルト) |
 <!-- END REF -->
 
 
@@ -652,6 +802,134 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 <!-- END REF -->
 
+<!-- REF #DataStoreClass.setRemoteContextInfo().Desc -->
+## .setRemoteContextInfo()
+
+<details><summary>履歴</summary>
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R5 | 追加 |
+</details>
+
+<!-- REF #DataStoreClass.setRemoteContextInfo().Syntax -->
+**.setRemoteContextInfo**( *contextName* : Text ; *dataClassName* : Text ; *attributes* : Text {; *contextType* : Text { ; *pageLength* : Integer}})<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassName* : Text; *attributesColl* : Collection {; *contextType* : Text { ; *pageLength* : Integer }} )<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassObject* : 4D.DataClass ; *attributes* : Text {; *contextType* : Text { ; *pageLength* : Integer }})<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassObject* : 4D.DataClass ; *attributesColl* : Collection {; *contextType* : Text { ; *pageLength* : Integer }} )<!-- END REF -->
+
+<!-- REF #DataStoreClass.setRemoteContextInfo().Params -->
+| 引数              | タイプ          |    | 説明                                         |
+| --------------- | ------------ | -- | ------------------------------------------ |
+| contextName     | テキスト         | -> | コンテキストの名称                                  |
+| dataClassName   | テキスト         | -> | データクラスの名称                                  |
+| dataClassObject | 4D.DataClass | -> | DataClass オブジェクト (例: datastore.Employee)   |
+| attributes      | テキスト         | -> | カンマ区切りの属性リスト                               |
+| attributesColl  | コレクション       | -> | 属性名 (テキスト) のコレクション                         |
+| contextType     | テキスト         | -> | 渡す場合、値は "main" または "currentItem" のいずれか     |
+| pageLength      | 整数           | -> | コンテキストにリンクされたエンティティセレクションのページ長 (デフォルトは 80) |
+<!-- END REF -->
+
+
+> **上級者向け:** この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。
+
+
+#### 説明
+
+`.setRemoteContextInfo()` 関数は、 <!-- REF #DataStoreClass.setRemoteContextInfo().Summary -->指定したデータクラス属性を *contextName* の最適化コンテキストにリンクします<!-- END REF -->。 指定した属性に対して最適化コンテキストが既に存在する場合、このコマンドはそれを置き換えます。
+
+ORDAクラスの関数にコンテキストを渡すと、RESTリクエストの最適化が即座に発動します:
+* 自動モードのときとは異なり、先頭エンティティは完全にロードされません。
+* 80件のエンティティ (または `pageLength` に対応するエンティティ数) のページが直ちにサーバーに要求される際、コンテキストの属性のみが要求されます。
+
+> 最適化コンテキストの作成に関する詳細については、[クライアント/サーバーの最適化](../ORDA/remoteDatastores.md#クライアントサーバーの最適化) を参照ください。
+
+*contextName* には、データクラス属性にリンクする最適化コンテキストの名前を渡します。
+
+コンテキストを受け取るデータクラスを指定するために、*dataClassName* または *dataClassObject* を渡すことができます。
+
+コンテキストにリンクする属性を指定するには、*attributes* (テキスト) にカンマ区切りの属性リストを渡すか、属性名のコレクションを *attributesColl* (テキストのコレクション) に渡します。
+
+*attributes* が空のテキスト、または *attributesColl* が空のコレクションの場合、データクラスのすべてのスカラー属性が最適化コンテキストに置かれます。 データクラスに存在しない属性を渡した場合、それは無視され、エラーが返されます。
+
+*contextType* を渡して、コンテキストが標準コンテキストか、リストボックスに表示されているカレントエンティティセレクション項目のコンテキストかを指定することができます。
+* "main" (デフォルト) を渡すと、*contextName* は標準コンテキストを指定します。
+* "currentItem" の場合には、渡された属性はカレント項目のコンテキストに置かれます。  [エンティティセレクション型リストボックス](../ORDA/remoteDatastores.md#エンティティセレクション型リストボックス) を参照ください。
+
+*pageLength* には、サーバーに要求するデータクラスエンティティの数を指定します。
+
+エンティティセレクションであるリレーション属性 (1対N) について、*pageLength* を渡すことができます。 シンタックスは、`relationAttributeName:pageLength` です (例: employees:20)。
+
+#### 例題 1
+
+```4d
+var $ds : 4D.DataStoreImplementation
+var $persons : cs.PersonsSelection
+var $p : cs.PersonsEntity
+var $contextA : Object
+var $info : Object
+var $text : Text
+
+// リモートデータストアを開きます
+$ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
+
+// コンテキストを設定します
+$contextA:=New object("context"; "contextA")
+$ds.setRemoteContextInfo("contextA"; $ds.Persons; "firstname, lastname")
+
+// ループを使い、サーバーにリクエストを送信します
+$persons:=$ds.Persons.all($contextA)
+$text:="" 
+For each ($p; $persons)
+    $text:=$p.firstname + " " + $p.lastname
+End for each 
+
+// コンテキストの情報を確認します
+$info:=$ds.getRemoteContextInfo("contextA")
+// $info = {name:"contextA";dataclass:"Persons";main:"firstname, lastname"} 
+```
+
+> この例はデモンストレーションであり、実際の実装を想定したものではありません。
+
+
+#### 例題 2
+
+以下のコードでは、`Address` データクラスのエンティティ 30件のページをサーバーに要求しています。 返されるエンティティは、`zipCode` 属性のみを含みます。
+
+各 `Address` エンティティに対して、20件の Persons エンティティが返され、それらには `lastname` と `firstname` 属性のみが含まれます:
+
+```4d
+var $ds : 4D.DataStoreImplementation
+
+$ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
+
+$ds.setRemoteContextInfo("contextA"; $ds.Address; "zipCode, persons:20,\
+persons.lastname, persons.firstname"; "main"; 30)
+```
+
+
+#### 例題 3 - リストボックス
+
+```4d
+// フォームのロード時に
+Case of 
+    : (Form event code=On Load)
+
+        Form.ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
+
+       // ページコンテキストの属性を設定します
+        Form.ds.setRemoteContextInfo("LB"; Form.ds.Persons; "age, gender,\
+        children"; "currentItem")
+
+        Form.settings:=New object("context"; "LB")
+        Form.persons:=Form.ds.Persons.all(Form.settings) 
+        // Form.persons がリストボックスに表示されます
+End case 
+
+// カレント項目のコンテキストの属性を取得します
+Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes()
+// Form.currentItemLearntAttributes = "age, gender, children" 
+```
+#### 参照
+
+[.getRemoteContextInfo()](#getremotecontextinfo)<br/>[.getAllRemoteContexts()](#getallremotecontexts)<br/>[.clearAllRemoteContexts()](#clearallremotecontexts)
+
 
 <!-- REF DataStoreClass.startRequestLog().Desc -->
 ## .startRequestLog()
@@ -670,7 +948,7 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 | 引数     | タイプ     |    | 説明               |
 | ------ | ------- | -- | ---------------- |
 | file   | 4D.File | -> | File オブジェクト      |
-| reqNum | Integer | -> | メモリ内に保管するリクエストの数 |
+| reqNum | 整数      | -> | メモリ内に保管するリクエストの数 |
 <!-- END REF -->
 
 
@@ -866,5 +1144,7 @@ ORDA クライアントリクエストをメモリに記録します:
 [`.startTransaction()`](#starttransaction) の例題を参照ください。
 
 <!-- END REF -->
+
+
 
 <style> h2 { background: #d9ebff;}</style>

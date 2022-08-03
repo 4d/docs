@@ -16,7 +16,7 @@ Esta área le permite configurar varias opciones relativas a la visualización.
 
 Click **Select...** to set the font and size for the characters used by the `MESSAGE` command.
 
-The default font and its size depend on the platform where 4D is running.
+La fuente por defecto y su tamaño dependen de la plataforma en la que se ejecute 4D.
 
 > Esta propiedad también afecta a las siguientes partes de 4D: <li>ciertas áreas de vista previa del Explorador</li><li>la regla del editor de formularios</li>
 Other options configure the display of various windows in the Application mode.

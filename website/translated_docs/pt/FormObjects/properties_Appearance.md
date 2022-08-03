@@ -356,7 +356,7 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 #### Veja também
 
-[4D View Pro reference guide](ViewPro/overview.md)
+[4D View Pro reference guide](../ViewPro/getting-started.md)
 
 ---
 ## Barra rolagem vertical

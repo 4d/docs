@@ -393,7 +393,7 @@ Each element of the collection is an object with the following properties:
 | [].message             | texto  | Descripción del error 4D                              |
 | [ ].componentSignature | texto  | Firma del componente interno que ha devuelto el error |
 
-If no error occured, `.errors` contains an empty collection. 
+Si no se ha producido ningún error, `.errors` contiene una colección vacía. 
 
 <!-- END REF -->
 

@@ -6,13 +6,31 @@ title: Mises à jour de la documentation
 La liste des principales mises à jour de cette documentation. Pour des informations générales sur les nouvelles fonctionnalités des produits 4D, consultez les **"release notes"** sur [doc.4d.com](https://doc.4d.com).
 
 
+## 4D v19 R5
+
+- Applications client/serveur générées:
+    - Le [fichier directory.json](../Users/handling_users_groups.md#directoryjson-file) du projet peut désormais être [intégré au serveur](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) au moment de la génération, ce qui vous permet de déployer une application client/serveur avec une configuration de base de la sécurité des utilisateurs et des groupes.
+    - Vous pouvez désormais [décocher les modules inutiles](../Desktop/building.md#deselecting-modules) dans vos applications générées.
+
+- [Optimisation client/serveur](../ORDA/remoteDatastores.md#clientserver-optimization) : De nouvelles fonctions de classe vous permettent de gérer le cache ORDA et le contenu d'un contexte d'optimisation. Pour plus d'informations, consultez [Préconfiguration des contextes](../ORDA/remoteDatastores.md#preconfiguring-contexts) et [cache ORDA](../ORDA/remoteDatastores.md#orda-cache).
+
+    > Ces fonctions sont destinées aux développeurs qui souhaitent personnaliser les fonctions par défaut d'ORDA pour des configurations spécifiques. Dans la plupart des cas, vous n'aurez pas besoin de les utiliser.
+
+- [DataClass class](../API/DataClassClass.md) : La nouvelle fonction [.getCount()](../API/DataClassClass.md#getcount) retourne le nombre d'entités d'une dataclass.
+
+- 4D View Pro :
+    - Les nouvelles commandes [VP SET DATA CONTEXT](ViewPro/method-list.md#vp-set-data-context), [VP Get data context](ViewPro/method-list.md#vp-get-data-context), [VP SET BINDING PATH](ViewPro/method-list.md#vp-set-binding-path), [VP Get binding path](ViewPro/method-list.md#vp-get-binding-path) vous permettent de créer des contextes de données et de lier leur contenu aux cellules de la feuille.
+    - [VP EXPORT DOCUMENT](ViewPro/method-list.md#vp-get-binding-path) et [VP Export to object](ViewPro/method-list.md#vp-get-binding-path) acceptent désormais la nouvelle option `includeBindingSource` qui exporte le contenu d'un contexte de données en tant que valeurs de cellule.
+
+
 ## 4D v19 R4
 
 - [Alias attributes](ORDA/ordaClasses.md#alias-attributes-1) are available in ORDA classes.
+
 - Prise en charge des instructions [break et continue](Concepts/cf_looping.md#break-and-continue) dans les boucles.
 - Prise en charge de l'instruction [return](Concepts/flow-control.md#return-expression) et de [l'expression return](Concepts/parameters.md#return-expression) pour retourner des valeurs.
 - Prise en charge des [opérateurs d'assignation composés](Concepts/operators.md#compound-assignment-operators), des [opérateurs de court-circuit](Concepts/operators.md#short-circuit-operators) et de [l'opérateur ternaire](Concepts/operators.md#ternary-operator)
-- [L'éditeur de code](code-editor/navigation.md) inclut désormais un outil de liste déroulante et prend en charge les marqueurs pour une meilleure navigation dans le code.
+- The [Code Editor](../code-editor/navigation.md) now includes an dropdown tool and supports markers for better code navigation.
 - Nouvelles préférences : [**Inclure les tokens dans les fichiers source du projet**](Preferences/general.md#include-tokens-in-project-source-files) et l'option [**Afficher les presse-papiers**](Preferences/methods.md#show-clipboards) sur la page Méthodes.
 - Nouvelle requête REST pour [verrouiller/déverrouiller](REST/$lock.md) les entités.
 - [4D View Pro](ViewPro/getting-started.md) chapter added with new commands: [VP Copy to object](ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](ViewPro/method-list.md#vp-paste-from-object).
@@ -61,5 +79,5 @@ La liste des principales mises à jour de cette documentation. Pour des informat
 - [IMAP Mail](API/IMAPTransporterClass.md), [POP3 Mail](API/POP3TransporterClass.md) and [SMTP Mail](API/SMTPTransporterClass.md): `authenticationMode` property enables OAuth 2.0
 - [IMAP Mail](API/IMAPTransporterClass.md): new `.expunge()` and `.append()` functions
 - Nouveau composant [WebAdmin](Admin/webAdmin.md) du server web
-- Nouvelle interface [DataExplorer](Admin/dataExplorer)
+- New [DataExplorer](../Admin/dataExplorer.md) interface
 - New web [user sessions](WebServer/sessions.md) and [their API](API/SessionClass.md).

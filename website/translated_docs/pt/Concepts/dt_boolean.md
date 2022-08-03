@@ -3,33 +3,33 @@ id: booleano
 title: Booleano
 ---
 
-A boolean field, variable or expression can be either TRUE or FALSE.
+Um campo booleano, variável ou expressão pode ser VERDADEIRO ou FALSO.
 
-## Boolean functions
+## Funções booleanas
 
-4D provides the Boolean functions `True`, `False`, and `Not` in the dedicated **Boolean** theme. For more information, see the descriptions of these commands.
+4D fornece as funções booleanas `True`, `False`, e `Not` no tema dedicado **Boolean** . For more information, see the descriptions of these commands.
 
 ### Exemplo
 
-This example sets a Boolean variable based on the value of a button. It returns True in myBoolean if the myButton button was clicked and False if the button was not clicked. When a button is clicked, the button variable is set to 1.
+Esse exemplo define uma variável booleana com base no valor de um botão. Retorna verdadeiro em myBoolean se o botão myButton foi clicado e falso se o botão não foi clicado. Quando um botão é clicado, a variável do botão é definida como 1.
 
 ```4d
- If(myButton=1) //If the button was clicked
-    myBoolean:=True //myBoolean is set to True
- Else //If the button was not clicked,
-    myBoolean:=False //myBoolean is set to False
+ If(myButton=1) //Se apertou o botão
+    myBoolean:=True //myBoolean toma o valor True
+ Else //Se o botão não for apertado
+    myBoolean:=False //myBoolean toma o valor False
  End if
 ```
 
-The previous example can be simplified into one line.
+O exemplo anterior pode ser simplificado numa só linha.
 
 ```4d
 myBoolean:=(myButton=1)
 ```
 
-## Logical operators
+## Operação lógica
 
-4D supports two logical operators that work on Boolean expressions: conjunction (AND) and inclusive disjunction (OR). A logical AND returns TRUE if both expressions are TRUE. A logical OR returns TRUE if at least one of the expressions is TRUE. The following table shows the logical operators:
+4D suporta dois operadores lógicos que trabalham com expressões booleanas: conjunção (AND) e disjunção inclusiva (OR). Uma lógica E retorna VERDADEIRA se ambas as expressões forem VERDADEIRAS. Uma lógica OU retorna VERDADEIRA se pelo menos uma das expressões for VERDADEIRA. O quadro seguinte mostra os operadores lógicos:
 
 | Operação | Sintaxe                 | Retorna  | Expressão                    | Value |
 | -------- | ----------------------- | -------- | ---------------------------- | ----- |
@@ -40,7 +40,7 @@ myBoolean:=(myButton=1)
 |          |                         |          | ("A" = "B") &#124;  (15 # 3) | True  |
 |          |                         |          | ("A" = "B") &#124;  (15 = 3) | False |
 
-The following is the truth table for the AND logical operator:
+A tabela seguinte é a tabela da verdade para o operador lógico AND:
 
 | Expr1 | Expr2 | Expr1 & Expr2 |
 | ----- | ----- | ------------- |
@@ -49,7 +49,7 @@ The following is the truth table for the AND logical operator:
 | False | True  | False         |
 | False | False | False         |
 
-The following is the truth table for the OR logical operator:
+A tabela seguinte é a tabela da verdade para o operador lógico OR:
 
 | Expr1 | Expr2 | Expr1 &#124; Expr2 |
 | ----- | ----- | ------------------ |
@@ -58,10 +58,10 @@ The following is the truth table for the OR logical operator:
 | False | True  | True               |
 | False | False | False              |
 
-**Tip:** If you need to calculate the exclusive disjunction between Expr1 and Expr2, evaluate:
+**Dica:** Se você precisa calcular a disjunção exclusiva entre Expr1 e Expr2, avalie:
 
 ```4d
  (Expr1|Expr2) & Not(Expr1 & Expr2)  
 ```
 
-> In boolean contexts, the 4D language also supports [short-circuit operators](operators.md#short-circuit-operators) (`&&` and `||`) and the [trushy and falsy](operators.md#truthy-and-falsy) concept. 
+> In boolean contexts, the 4D language also supports [short-circuit operators](operators.md#short-circuit-operators) (`&&` and `||`) and the [truthy and falsy](operators.md#truthy-and-falsy) concept. 
