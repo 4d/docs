@@ -189,7 +189,7 @@ You can execute methods in two ways:
 
 Each [**Code Editor**](../code-editor/write-class-method.md) window has a button that can be used to run the current method. Using the menu associated with this button, you can choose the type of execution desired:
 
-![](../assets/en/concepts/execute-method.png)
+![](assets/en/concepts/execute-method.png)
 
 This button is only active for project methods and for the following database methods:
 

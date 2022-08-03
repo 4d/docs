@@ -10,7 +10,7 @@ Authenticating users is necessary when you want to provide specific access right
 
 The 4D web server proposes three authentication modes, that you can select in the **Web**/**Options (I)** page of the Settings dialog box:
 
-![](../assets/en/WebServer/authentication.png)
+![](assets/en/WebServer/authentication.png)
 
 > Using a **custom** authentication is recommended.
 
@@ -18,7 +18,7 @@ The 4D web server proposes three authentication modes, that you can select in th
 
 The operation of the 4D web server's access system is summarized in the following diagram:
 
-![](../assets/en/WebServer/serverAccess.png)
+![](assets/en/WebServer/serverAccess.png)
 
 > Requests starting with `rest/` are directly handled by the [REST server](REST/configuration.md).
 
@@ -181,7 +181,7 @@ The `On Web Authentication` database method returns a boolean in $0:
 
 The `On Web Connection` database method is only executed if the connection has been accepted by `On Web Authentication`.
 
->**WARNING**<br/>If no value is set to $0 or if $0 is not defined in the `On Web Authentication` database method, the connection is considered as accepted and the `On Web Connection` database method is executed.
+>**WARNING**<br>If no value is set to $0 or if $0 is not defined in the `On Web Authentication` database method, the connection is considered as accepted and the `On Web Connection` database method is executed.
 
 >*	Do not call any interface elements in the `On Web Authentication` database method (`ALERT`, `DIALOG`, etc.) because otherwise its execution will be interrupted and the connection refused. The same thing will happen if an error occurs during its processing.
 

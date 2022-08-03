@@ -28,7 +28,7 @@ Thanks to this feature, the entire business logic of your 4D application can be 
 
 - By default, all of your data model class functions (including [computed attribute functions](#computed-attributes-1)) and [alias attributes](#alias-attributes-1) are **not exposed** to remote applications and cannot be called from REST requests. You must explicitly declare each public function and alias with the [`exposed`](#exposed-vs-non-exposed-functions) keyword.
 
-![](../assets/en/ORDA/api.png)
+![](assets/en/ORDA/api.png)
 
 
 In addition, 4D [automatically pre-creates](#creating-classes) the classes for each available data model object. 
@@ -38,7 +38,7 @@ In addition, 4D [automatically pre-creates](#creating-classes) the classes for e
 
 ORDA provides **generic classes** exposed through the **`4D`** [class store](Concepts/classes.md#class-stores), as well as **user classes** (extending generic classes) exposed in the **`cs`** [class store](Concepts/classes.md#class-stores):
 
-![](../assets/en/ORDA/ClassDiagramImage.png)
+![](assets/en/ORDA/ClassDiagramImage.png)
 
 All ORDA data model classes are exposed as properties of the **`cs`** class store. The following ORDA classes are available:
 
@@ -149,7 +149,7 @@ Then you can get an entity selection of the "best" companies by executing:
 
 The following *City* catalog is exposed in a remote datastore (partial view):
 
-![](../assets/en/ORDA/Orda_example.png)
+![](assets/en/ORDA/Orda_example.png)
 
 The `City Class` provides an API:
 
@@ -399,6 +399,7 @@ Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
     
 ### `Function set <attributeName>`
 
+
 #### Syntax
 
 ```4d
@@ -637,6 +638,7 @@ Conditional code is necessary in some cases:
 
 ```4d
 Function orderBy age($event : Object)-> $result : Text
+
     If ($event.descending=True)
         $result:="birthday asc" 
     Else 
@@ -668,7 +670,7 @@ You create an alias attribute in a dataclass by using the `Alias` keyword in the
 {exposed} Alias <attributeName> <targetPath>
 ```
 
-*attributeName* must comply with [standard rules for property names](Concepts/identifiers.html#object-properties). 
+*attributeName* must comply with [standard rules for property names](../Concepts/identifiers.md#object-properties). 
 
 *targetPath* is an attribute path containing one or more levels, such as "employee.company.name". If the target attribute belongs to the same dataclass, *targetPath* is the attribute name. 
 
@@ -718,7 +720,7 @@ Alias attributes based upon relations have a specific [`path`](../API/DataClassA
 
 Considering the following model:
 
-![](../assets/en/ORDA/alias1.png)
+![](assets/en/ORDA/alias1.png)
 
 In the Teacher dataclass, an alias attribute returns all students of a teacher:
 
@@ -953,15 +955,15 @@ An ORDA data model user class is defined by adding, at the [same location as reg
 
 4D automatically pre-creates empty classes in memory for each available data model object.
 
-![](../assets/en/ORDA/ORDA_Classes-3.png)
+![](assets/en/ORDA/ORDA_Classes-3.png)
 
 
 > By default, empty ORDA classes are not displayed in the Explorer. To show them you need to select **Show all data classes** from the Explorer's options menu:
-![](../assets/en/ORDA/showClass.png)
+![](assets/en/ORDA/showClass.png)
 
 ORDA user classes have a different icon from regular classes. Empty classes are dimmed:
 
-![](../assets/en/ORDA/classORDA2.png)
+![](assets/en/ORDA/classORDA2.png)
 
 To create an ORDA class file, you just need to double-click on the corresponding predefined class in the Explorer. 4D creates the class file and add the `extends` code. For example, for an Entity class:
 
@@ -976,16 +978,16 @@ Once a class is defined, its name is no longer dimmed in the Explorer.
 
 To open a defined ORDA class in the 4D Code Editor, select or double-click on an ORDA class name and use **Edit...** from the contextual menu/options menu of the Explorer window:
 
-![](../assets/en/ORDA/classORDA4.png)
+![](assets/en/ORDA/classORDA4.png)
 
 For ORDA classes based upon the local datastore (`ds`), you can directly access the class code from the 4D Structure window:
 
-![](../assets/en/ORDA/classORDA5.png)
+![](assets/en/ORDA/classORDA5.png)
 
 
 ### Code Editor
 
 In the 4D Code Editor, variables typed as an ORDA class automatically benefit from autocompletion features. Example with an Entity class variable:
 
-![](../assets/en/ORDA/AutoCompletionEntity.png)
+![](assets/en/ORDA/AutoCompletionEntity.png)
 

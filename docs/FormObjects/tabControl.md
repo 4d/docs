@@ -7,7 +7,7 @@ A tab control creates an object that lets the user choose among a set of virtual
 
 The following multi-page form uses a tab control object:
 
-![](../assets/en/FormObjects/tabControl1.png)
+![](assets/en/FormObjects/tabControl1.png)
 
 To navigate from screen to screen, the user simply clicks the desired tab. 
 
@@ -17,7 +17,7 @@ Another use of the tab control is to control the data that is displayed in a sub
 
 Each tab can display labels or labels and a small icon. If you include icons, they appear to the left of each label. Here is an example of a tab control that uses icons:
 
-![](../assets/en/FormObjects/tabControl2.png)
+![](assets/en/FormObjects/tabControl2.png)
 
 When you create a tab control, 4D manages the spacing and placement of the tabs. You only need to supply the labels in the form of an array, or the icons and labels in the form of a hierarchical list.
 
@@ -51,7 +51,7 @@ To supply the labels for a tab control, you can use:
 
 ### Using an object
 
-You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. The object must contain the following properties:
+You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](../Concepts/dt_collection.md) as the [data source](properties_Object.md#variable-or-expression) of the tab control. The object must contain the following properties:
 
 |Property|Type|Description|
 |---|---|---|

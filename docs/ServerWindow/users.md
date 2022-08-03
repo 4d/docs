@@ -7,13 +7,13 @@ title: Users Page
 The **Users** page lists the 4D users connected to the server.
 
 
-![](../assets/en/Admin/server-users.png)
+![](assets/en/Admin/server-users.png)
 
 The "Users" button indicates, in parentheses, the total number of users connected to the server (this number does not take into account any display filters applied to the window). The page also contains a dynamic search area and control buttons. You can modify the order of the columns by dragging and dropping their header areas.
 
 You can also sort the list of column values by clicking on its header. Click several times to specify in turn an ascending/descending order.
 
-![](../assets/en/Admin/server-users-sort.png)
+![](assets/en/Admin/server-users-sort.png)
 
 ## List of Users
 
@@ -32,7 +32,7 @@ For each user connected to the server, the list provides the following informati
 
 4D Server specifically handles cases where a machine running a 4D remote application switches to sleep mode while its connection to the server machine is still active. In this case, the connected 4D remote application automatically notifies 4D Server of its imminent disconnection. On the server, the connected user changes to a **Sleeping** activity status:
 
-![](../assets/en/Admin/server-sleeping.png)
+![](assets/en/Admin/server-sleeping.png)
 
 This status frees up resources on the server. In addition, the 4D remote application reconnects to 4D Server automatically after waking up from sleep mode.
 
@@ -56,7 +56,7 @@ This page includes three control buttons. These are active if at least one row i
 
 This button can be used to send a message to the 4D users selected in the window. If no user is selected, the button is not active. When you click on this button, a dialog box appears that lets you enter the message. The dialog box indicates the number of users that will receive this message:
 
-![](../assets/en/Admin/server-message.png)
+![](assets/en/Admin/server-message.png)
 
 The message will be displayed as an alert on the remote machines.
 

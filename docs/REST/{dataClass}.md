@@ -1,6 +1,6 @@
 ---
-id: dataClass
-title: dataClass
+id: {dataClass}
+title: {dataClass} 
 ---
 
 

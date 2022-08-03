@@ -6,7 +6,7 @@ title: Progress Indicator
 
 A progress indicator (also called "thermometer") is designed to display or set numeric or date/time values graphically. 
 
-![](../assets/en/FormObjects/progress1.png)
+![](assets/en/FormObjects/progress1.png)
 
 ## Using indicators  
 
@@ -31,7 +31,7 @@ The method assigns the value of the indicator to the Salary field. As the user d
 
 ## Default thermometer
 
-![](../assets/en/FormObjects/indicator_progressBar.png)
+![](assets/en/FormObjects/indicator_progressBar.png)
 
 The thermometer is the basic progress indicator. 
 
@@ -45,7 +45,7 @@ Multiple graphical options are available: minimum/maximum values, graduations, s
 
 ## Barber shop
 
-![](../assets/en/FormObjects/indicator.gif)
+![](assets/en/FormObjects/indicator.gif)
 
 **Barber shop** is a variant of the default thermometer. To enable this variant, you need to set the [Barber shop](properties_Scale.md#barber-shop) property.
 

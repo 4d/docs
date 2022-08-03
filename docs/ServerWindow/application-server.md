@@ -6,7 +6,7 @@ title: Application Server Page
 
 The Application Server page groups together information about the desktop application published by 4D Server and can be used to manage this publication.
 
-![](../assets/en/Admin/server-admin-application-page.png)
+![](assets/en/Admin/server-admin-application-page.png)
 
 
 The upper part of the page provides information about the current status of the 4D Server application server.
@@ -28,7 +28,7 @@ If you click on the **Reject new connections** button:
 - The button title changes to "Accept new connections."
 - No new desktop client can then connect. Clients attempting to connect will receive the following message:
 
-![](../assets/en/Admin/server-error.png)
+![](assets/en/Admin/server-error.png)
 
 - The project name no longer appears in the remote connection dialog box.
 - Desktop clients that are already connected are not disconnected and can continue to work normally.

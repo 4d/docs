@@ -118,7 +118,7 @@ Top coordinate of the object in the form.
 
 Defines the corner roundness (in pixels) of objects of the [rectangle](shapes_overview.md#rectangle) type. By default, the radius value for rectangles is 0 pixels. You can change this property to draw rounded rectangles with custom shapes:
 
-![](../assets/en/FormObjects/shape_rectangle.png)
+![](assets/en/FormObjects/shape_rectangle.png)
 
 Minimum value is 0, in this case a standard non-rounded rectangle is drawn. 
 Maximum value depends on the rectangle size (it cannot exceed half the size of the shortest rectangle side) and is calculated dynamically.
@@ -296,7 +296,7 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 
 Sets a horizontal padding for the cells. The value is set in pixels (default = 0). 
 
-![](../assets/en/FormObjects/padding.png)
+![](assets/en/FormObjects/padding.png)
 
 
 

@@ -5,7 +5,7 @@ title: Button
 
 A button is an active object that can be assigned an action (*e.g.*, a database task or an interface function) to perform when a user clicks on it. 
 
-![](../assets/en/FormObjects/button_regular.png)
+![](assets/en/FormObjects/button_regular.png)
 
 Buttons can fulfill a variety of roles, depending on their style and the action assigned to it. For example, buttons could lead a user through a questionnaire or form to complete, or to make choices. Depending on its settings, a button may be designed to be clicked only once and execute a command, while others may require the user to click more than once to receive the desired result.
 
@@ -40,7 +40,7 @@ With the exception of the [available properties](#supported-properties), many bu
 
 The Regular button style is a standard system button (*i.e.*, a rectangle with a descriptive label) which executes code when a user clicks on it.
 
-![](../assets/en/FormObjects/button_regular.png)
+![](assets/en/FormObjects/button_regular.png)
 
 By default, the Regular style has a light gray background with a label in the center. When the cursor hovers over the Regular button style, the border and background color change to demonstrate that it has the focus. In addition to initiating code execution, the Regular button style mimics a mechanical button by quickly changing background color when being clicked.
 
@@ -69,7 +69,7 @@ Only the Regular and Flat styles offer the [Default Button](properties_Appearanc
 
 The Flat button style is a standard system button (*i.e.*, a rectangle with a descriptive label) which executes code when a user clicks on it.
 
-![](../assets/en/FormObjects/button_flat.png)
+![](assets/en/FormObjects/button_flat.png)
 
 By default, the Flat style has a white background with a label in the center, rounded corners, and a minimalist appearance. The Flat button style's graphic nature is particularly useful for forms that will be printed.
 
@@ -101,7 +101,7 @@ By default, the Toolbar style has a transparent background with a label in the c
 
  - *Windows* - the button is highlighted when it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button. 
 
-![](../assets/en/FormObjects/button_toolbar.png)
+![](assets/en/FormObjects/button_toolbar.png)
 
  - *macOS* - the highlight of the button never appears. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
  
@@ -131,7 +131,7 @@ By default, the Bevel style has a light gray background with a label in the cent
 
  - *Windows* - the button is highlighted. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button. 
 
-![](../assets/en/FormObjects/button_bevel.png)
+![](assets/en/FormObjects/button_bevel.png)
 
  - *macOS* - the highlight of the button never appears. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button. 
  
@@ -161,7 +161,7 @@ By default, the Rounded Bevel style has a light gray background with a label in 
 
  - *Windows* - the button is identical to the Bevel style. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button.   
 
-  ![](../assets/en/FormObjects/button_roundedbevel.png)
+  ![](assets/en/FormObjects/button_roundedbevel.png)
 
  - *macOS* - the corners of the button are rounded. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button. 
 
@@ -191,7 +191,7 @@ By default, the OS X Gradient style has a light gray background with a label in 
 
  - *Windows* - the button is identical to the Bevel style. When it uses the “With Pop-up Menu” property, a triangle is displayed on the right side of the button. 
 
-![](../assets/en/FormObjects/button_osxgradient.png)
+![](assets/en/FormObjects/button_osxgradient.png)
 
  - *macOS* - the button is displayed as a two-tone system button. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
  
@@ -220,7 +220,7 @@ By default, the OS X Textured style appears as:
 
  - *Windows* - a standard system button with a light gray background with a label in the center. It has the special feature of being transparent in Vista.
  
- ![](../assets/en/FormObjects/button_osxtextured.png)
+ ![](assets/en/FormObjects/button_osxtextured.png)
  
  - *macOS* - a standard system button displaying a color change from light to dark gray. Its height is predefined: it is not possible to enlarge or reduce it.
 
@@ -250,7 +250,7 @@ The colors (highlight and background) of a button with the Office XP style are b
 
  - *Windows* - its background only appears when the mouse rolls over it.
 
-![](../assets/en/FormObjects/button_officexp.png)
+![](assets/en/FormObjects/button_officexp.png)
 
  - *macOS* - its background is always displayed.
 
@@ -277,7 +277,7 @@ The colors (highlight and background) of a button with the Office XP style are b
 
 The Help button style can be used to display a standard system help button. By default, the Help style is displayed as a question mark within a circle.
 
-![](../assets/en/FormObjects/button_help.png)
+![](assets/en/FormObjects/button_help.png)
 
 #### JSON Example:    
 
@@ -301,7 +301,7 @@ The Help button style can be used to display a standard system help button. By d
 
 The Circle button style appears as a round system button. This button style is designed for macOS. 
 
-![](../assets/en/FormObjects/button_circleM.png)
+![](assets/en/FormObjects/button_circleM.png)
 
 On Windows, it is identical to the “None” style (the circle in the background is not taken into account).
 
@@ -327,7 +327,7 @@ On Windows, it is identical to the “None” style (the circle in the backgroun
 
 The Custom button style accepts a personalized background picture and allows managing additional parameters such as icon and margin offset. 
 
-![](../assets/en/FormObjects/button_custom.png)
+![](assets/en/FormObjects/button_custom.png)
 
  
 #### JSON Example:    

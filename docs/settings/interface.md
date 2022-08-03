@@ -10,7 +10,7 @@ You use the Interface page to set various options related to the project interfa
 
 This area lets you set various options concerning display.
 
-![](../assets/en/settings/interface-page.png)
+![](assets/en/settings/interface-page.png)
 
 ### Font to use with the MESSAGE command  
 
@@ -43,9 +43,9 @@ This menu lets you select the color scheme to use at the main application level.
 The following schemes are available:
 
 -   **Light**: the application will use the Default Light Theme
-    ![](../assets/en/settings/light-appearance.png)
+    ![](assets/en/settings/light-appearance.png)
 -   **Dark**: the application will use the Default Dark Theme
-    ![](../assets/en/settings/dark-appearance.png)
+    ![](assets/en/settings/dark-appearance.png)
 -   **Inherited** (default): the application will inherit from the higher priority level (i.e., OS user preferences)
 
 > Default themes can be handled using CSS. For more information, please refer to the [Media Queries](../FormEditor/createStylesheet.md#media-queries) section. 
@@ -67,7 +67,7 @@ The default shortcuts are as follows:
 
 To change the shortcut of an operation, click the corresponding **Edit** button. The following dialog box appears:
 
-![](../assets/en/settings/shortcut.png)
+![](assets/en/settings/shortcut.png)
 
 To change the shortcut, type the new key combination on your keyboard and click **OK**. If you prefer not to have a shortcut for an operation, click **Clear**.
 

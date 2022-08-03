@@ -30,4 +30,4 @@ The following properties and functions from the [File](FileClass.md) class are a
 |[<!-- INCLUDE #document.platformPath.Syntax -->](FileClass.md#platformpath)||
 
 
-
+<style> h2 { background: #d9ebff;}</style>

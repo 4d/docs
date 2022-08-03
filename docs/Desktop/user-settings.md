@@ -20,13 +20,13 @@ With this option, you can easily deploy and update several copies of the same de
     
 Consider for example the following configuration, where an application is duplicated and each copy uses a different Port ID setting. If this user setting is linked to the data file, you will be able to update the application without having to manually change the Port ID:
 
-![](../assets/en/settings/user-settings-config.png)
+![](assets/en/settings/user-settings-config.png)
 
 ## Enabling User settings
 
 To enable user settings, you need to check the **Settings** > **Security** > **Enable User Settings** option:
 
-![](../assets/en/settings/user-settings-enable.png)
+![](assets/en/settings/user-settings-enable.png)
 
 When you check this option, the settings are separated into three dialog boxes: 
 
@@ -36,7 +36,7 @@ When you check this option, the settings are separated into three dialog boxes:
 
 You can access these dialog boxes using the **Design > Settings...** menu or the **Settings** button in the toolbar:
 
-![](../assets/en/settings/user-settings-dialog.png)
+![](assets/en/settings/user-settings-dialog.png)
 
 You can also access these dialog boxes using the [OPEN SETTINGS WINDOW](https://doc.4d.com/4dv19R/help/command/en/page903.html) command with the appropriate *settingsType* selector.
 
@@ -46,7 +46,7 @@ The Structure Settings dialog box is identical to the standard Settings, and pro
 
 The **User Settings** and **User Settings for Data File** dialog boxes contain a selection of relevant properties that can be defined for all data files or a single data file:
 
-![](../assets/en/settings/user-settings-2.png)
+![](assets/en/settings/user-settings-2.png)
 
 The following table lists the pages of settings found in the **User Settings** and **User Settings for Data File** dialog boxes and describes their main differences with respect to standard settings:
 
@@ -59,9 +59,9 @@ The following table lists the pages of settings found in the **User Settings** a
 | [Database/Memory page](../settings/database.md#memory) | Identical to standard settings | Identical to standard settings |
 | [Backup/Scheduler page](../settings/backup.md#scheduler) | N/a | Identical to standard settings |
 | [Backup/Configuration page](../settings/backup.md#configuration) | N/a | Identical to standard settings |
-| [Backup/Backup & Restore page](../settings/backup.md/#backup-restore) | N/a | Identical to standard settings |
-| [Client-server/Network options page](../settings/client-server.md/#network-options) | Identical to standard settings | Identical to standard settings |
-| [Client-server/IP configuration page](../settings/client-server.md/#ip-configuration) | Identical to standard settings | Identical to standard settings |
+| [Backup/Backup & Restore page](../settings/backup.md#backup-restore) | N/a | Identical to standard settings |
+| [Client-server/Network options page](../settings/client-server.md#network-options) | Identical to standard settings | Identical to standard settings |
+| [Client-server/IP configuration page](../settings/client-server.md#ip-configuration) | Identical to standard settings | Identical to standard settings |
 | [Web/Configuration page](../settings/web.md#configuration) | Identical to standard settings | Identical to standard settings |
 | [Web/Options (I) page](../settings/web.md#options) | Identical to standard settings | Identical to standard settings |
 | [Web/Options (II) page](../settings/web.md#options-ii) | Identical to standard settings | Identical to standard settings |

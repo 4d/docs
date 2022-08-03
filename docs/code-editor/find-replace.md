@@ -9,7 +9,7 @@ The find area located in the toolbar of each method window can be used to carry 
 
 The Find/Replace commands for methods, classes or functions are located in **Edit** menu of 4D:
 
-![find-replace](../assets/en/code-editor/find-replace-1.png)
+![find-replace](assets/en/code-editor/find-replace-1.png)
 
 > The find commands located above the **Find** submenu are not specific to the Code Editor but may be used to search for a value among all the methods, classes or functions, using the **Find in design** feature in the toolbar or in the **Edit** menu.
 
@@ -17,7 +17,7 @@ The Find/Replace commands for methods, classes or functions are located in **Edi
 
 Selecting the **Find...** command displays the following dialog box:
 
-![find-dialog](../assets/en/code-editor/find-dialog.png)
+![find-dialog](assets/en/code-editor/find-dialog.png)
 
 The search defined in this dialog box will be performed in the method located in the foreground.
 
@@ -49,7 +49,7 @@ For more information about bookmarks, refer to [Using bookmarks](./write-class-m
 
 The **Replace** command displays the following dialog box:
 
-![find-dialog](../assets/en/code-editor/replace-dialog.png)
+![find-dialog](assets/en/code-editor/replace-dialog.png)
 
 - The **Find What:** area is used to define the character string or the expression to be searched for. As in the Find dialog box, this area is a combo-box that stores the last 15 character strings searched for. If you highlight text before choosing the **Replace** command, it will appear in this area.
 - The **Replace with:** area is used to define the character string that will replace the one defined above. This area is also a combo-box storing the last 15 character strings that have been searched for or replaced.
@@ -91,7 +91,7 @@ The **Search references...** command found in the **Method** menu or the context
 
 The current item is either the one selected or the one where the cursor is located. It can be a field name, variable name, command, string, and so on. For example, the following action looks for all the occurrences of the *vlNbCmd* variable in the database:
 
-![find-dialog](../assets/en/code-editor/search-references.png)
+![find-dialog](assets/en/code-editor/search-references.png)
 
 This command displays its results in a new window.
 
@@ -108,3 +108,4 @@ This command displays its results in a new window.
 This specific search command is located in the **Method** menu. It opens a dialog box where you can indicate the line number you want to find. When you click **OK**, the editor finds and highlights that line in the method. This type of search is useful when used in conjunction with the compiler, which flags runtime errors by the line number in which they occur.
 
 You can choose whether or not to display lines numbers in the Code Editor window. This option is described in the [Overview](./write-class-method.md#using-bookmarks) section.
+

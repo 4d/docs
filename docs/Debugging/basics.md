@@ -13,7 +13,8 @@ The 4D development environment provides several debugging tools for all types of
 
 Typing errors are detected by the Code Editor. They are displayed in red and additional information is provided at the bottom of the window. Here's a typing error:
 
-![break-point](../assets/en/Debugging/typing-error.png)
+![break-point](assets/en/Debugging/typing-error.png)
+
 
 Such typing errors usually cause syntax errors (in the above image, the name of the table is unknown). You get the description of the error when you validate the line of code. When this occurs, fix the typing error and type Enter to validate the fix.
 
@@ -21,7 +22,7 @@ Such typing errors usually cause syntax errors (in the above image, the name of 
 
 Some errors can be caught only when you execute the method. The [Syntax Error Window](#syntax-error-window) appears when an error occurs during code execution. For example:
 
-![syntax-error](../assets/en/Debugging/syntax-error.png)
+![syntax-error](assets/en/Debugging/syntax-error.png)
 
 Expand the **Details** area to display the last error and its number.
 
@@ -47,7 +48,7 @@ Sometimes the piece of code that displays the error may be different than the co
 
 In Application mode, you might obtain errors that you don't see in interpreted mode. Here's an example:
 
-![runtime-error](../assets/en/Debugging/runtimeError.png)
+![runtime-error](assets/en/Debugging/runtimeError.png)
 
 To quickly find the origin of the problem, reopen the interpreted version of the structure file, open the method and go to the corresponding line.
 
@@ -58,7 +59,7 @@ The Syntax error window automatically appears when the execution of a method is 
 - an error prevents further code execution
 - the method produces a false assertion (see the `ASSERT` command)
 
-![syntax-error](../assets/en/Debugging/syntax-error.png)
+![syntax-error](assets/en/Debugging/syntax-error.png)
 
 The upper text area displays a message describing the error. The lower text area shows the line that was executing when the error occurred; the area where the error occurred is highlighted. The expanded Details section contains the "stack" of errors related to the process.
 
@@ -74,8 +75,8 @@ The syntax error window proposes several options:
 
 - **Abort**: Stops method execution and returns to the state before the method started executing:
 
-  - If a form method or object method is executing in response to an event, it is stopped and you return to the form.
-  - If the method is executing from within the Application environment, you return to that environment.
+	- If a form method or object method is executing in response to an event, it is stopped and you return to the form.
+	- If the method is executing from within the Application environment, you return to that environment.
 
 - **Copy**: Copies the debugging information into the clipboard. The info describes the internal environment of the error (number, internal component, etc.). It is formatted as tabbed text.
 

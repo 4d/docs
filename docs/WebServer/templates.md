@@ -52,7 +52,7 @@ It is possible to mix tags. For example, the following HTML code is allowed:
 <!--#4DIF ([TABLE]ValNum>10)-->   (If [TABLE]ValNum>10)
    <!--#4DINCLUDE subpage.html-->   (subpage insertion)
 <!--#4DELSE-->   (Else)
-   <B>Value: <!--#4DTEXT [TABLE]ValNum--></B><br/>
+   <B>Value: <!--#4DTEXT [TABLE]ValNum--></B><BR>
       (Field display)
 <!--#4DENDIF-->
 <!--#4DENDLOOP-->   (End for)

@@ -5,7 +5,7 @@ title: Overview
 
 The Settings configure how the current project functions. These parameters may be different for each project. They include the listening ports, backup configurations, security options, Web parameters, etc.
 
-![](../assets/en/settings/main.png)   
+![](assets/en/settings/main.png)   
 
 > 4D provides another set of parameters, called **Preferences**, that apply to the 4D IDE application. For more information, refer to [Preferences](../Preferences/general.md).
 
@@ -38,7 +38,7 @@ In both cases, the settings can be opened in 'Read-only', but cannot be used unt
 
 In the Settings dialog boxes, parameters whose values have been modified appear **in bold**:
 
-![](../assets/en/settings/customize-settings.png)   
+![](assets/en/settings/customize-settings.png)   
 
 Parameters indicated as customized may have been modified directly in the dialog box, or may have been modified previously in the case of a converted project. 
 

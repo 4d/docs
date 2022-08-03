@@ -26,7 +26,7 @@ It is possible to mix several types of tags. For example, the following HTML str
 <!--#4DIF ([TABLE]ValNum>10)-->   (If [TABLE]ValNum>10)
    <!--#4DINCLUDE subpage.html-->   (Subpage insertion)
 <!--#4DELSE-->   (Else)
-   <B>Value: <!--#4DTEXT [TABLE]ValNum--></B><br/>   (Field display)
+   <B>Value: <!--#4DTEXT [TABLE]ValNum--></B><BR>   (Field display)
 <!--#4DENDIF-->
 <!--#4DENDLOOP-->   ](End for)
 </BODY>
@@ -483,7 +483,7 @@ The following code:
 
 ```html
 <!--#4DLOOP [People]-->
-<!--#4DTEXT [People]Name--> <!--#4DTEXT [People]Surname--><br/>
+<!--#4DTEXT [People]Name--> <!--#4DTEXT [People]Surname--><BR>
 <!--#4DENDLOOP-->
 ```
 
@@ -507,7 +507,7 @@ The following code example:
 
 ```html
 <!--#4DLOOP arr_names-->
-<!--#4DTEXT arr_names{arr_names}--><br/>
+<!--#4DTEXT arr_names{arr_names}--><BR>
 <!--#4DENDLOOP-->
 ```
 
@@ -532,7 +532,7 @@ The following code example:
 
 ```html
 <!--#4DLOOP my_method-->
-<!--#4DTEXT var--> <br/> 
+<!--#4DTEXT var--> <BR> 
 <!--#4DENDLOOP-->
 ```
 

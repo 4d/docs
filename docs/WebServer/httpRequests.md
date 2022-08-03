@@ -109,7 +109,7 @@ The $5 and $6 parameters receive the user name and password entered by the user 
 
 ## /4DACTION
 
-**/4DACTION/***MethodName*<br/>
+**/4DACTION/***MethodName*<br>
 **/4DACTION/***MethodName/Param*
 
 |Parameters|Type||Description|
@@ -184,8 +184,8 @@ Here is the HTML code that corresponds to this page:
 
 ```html
 <form action="/4daction/processForm" method=POST>
-<input type=text name=vName value=""><br/>
-<input type=checkbox name=vExact value="Word">Whole word<br/>
+<input type=text name=vName value=""><BR>
+<input type=checkbox name=vExact value="Word">Whole word<BR>
 <input type=submit name=OK value="Search">
 </FORM>
 ```
@@ -215,7 +215,7 @@ OK="Search"
  QUERY([Jockeys];[Jockeys]Name=vName)
  FIRST RECORD([Jockeys])
  While(Not(End selection([Jockeys])))
-    vLIST:=vLIST+[Jockeys]Name+" "+[Jockeys]Tel+"<br/>"
+    vLIST:=vLIST+[Jockeys]Name+" "+[Jockeys]Tel+"<BR>"
     NEXT RECORD([Jockeys])
  End while
  WEB SEND FILE("results.htm") //Send the list to the results.htm form
@@ -283,7 +283,7 @@ return false
 
 When 4D sends the page to a Web Browser, it looks like this:
 
-![](../assets/en/WebServer/spiders.png)
+![](assets/en/WebServer/spiders.png)
 
 The main features of this page are:
 
@@ -345,7 +345,7 @@ The 4D web server provides several low-level web commands allowing you to develo
 
 These commands are summarized in the following graphic:
 
-![](../assets/en/WebServer/httpCommands.png)
+![](assets/en/WebServer/httpCommands.png)
 
 The 4D web server supports files uploaded in chunked transfer encoding from any Web client. Chunked transfer encoding is a data transfer mechanism specified in HTTP/1.1. It allows data to be transferred in a series of "chunks" (parts) without knowing the final data size. The 4D Web Server also supports chunked transfer encoding from the server to Web clients (using `WEB SEND RAW DATA`).
 

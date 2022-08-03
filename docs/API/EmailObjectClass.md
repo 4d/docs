@@ -16,6 +16,7 @@ You send `Email` objects using the SMTP [`.send()`](SMTPTransporterClass.md#send
 
 [`MAIL Convert from MIME`](#mail-convert-from-mime) and [`MAIL Convert to MIME`](#mail-convert-to-mime) commands can be used to convert `Email` objects to and from MIME contents.
 
+
 ### Email Object
 
 Email objects provide the following properties:
@@ -24,28 +25,29 @@ Email objects provide the following properties:
 
 ||
 |---|
-|[<!-- INCLUDE #EmailObjectClass.attachments.Syntax -->](#attachments)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.attachments.Summary -->|
-|[<!-- INCLUDE #EmailObjectClass.bcc.Syntax -->](#bcc)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.bcc.Summary -->|
-|[<!-- INCLUDE #EmailObjectClass.bodyStructure.Syntax -->](#bodystructure)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.bodyStructure.Summary -->|
-|[<!-- INCLUDE #EmailObjectClass.bodyValues.Syntax -->](#bodyvalues)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.bodyValues.Summary -->|
-|[<!-- INCLUDE #EmailObjectClass.cc.Syntax -->](#cc)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.cc.Summary -->|
-|[<!-- INCLUDE #EmailObjectClass.comments.Syntax -->](#comments)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.comments.Summary -->|
-|[<!-- INCLUDE #EmailObjectClass.from.Syntax -->](#from)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.from.Summary -->|
-|[<!-- INCLUDE #EmailObjectClass.headers.Syntax -->](#headers)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.headers.Summary -->|
-|[<!-- INCLUDE #EmailObjectClass.htmlBody.Syntax -->](#htmlbody)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.htmlBody.Summary -->|
-|[<!-- INCLUDE #EmailObjectClass.id.Syntax -->](#id)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.id.Summary -->|
-|[<!-- INCLUDE #EmailObjectClass.inReplyTo.Syntax -->](#inreplyto)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.inReplyTo.Summary -->|
-|[<!-- INCLUDE #EmailObjectClass.keywords.Syntax -->](#keywords)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.keywords.Summary -->|
-|[<!-- INCLUDE #EmailObjectClass.messageId.Syntax -->](#messageid)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.messageId.Summary -->|
-|[<!-- INCLUDE #EmailObjectClass.receivedAt.Syntax -->](#receivedat)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.receivedAt.Summary -->|
-|[<!-- INCLUDE #EmailObjectClass.references.Syntax -->](#references)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.references.Summary -->|
-|[<!-- INCLUDE #EmailObjectClass.replyTo.Syntax -->](#replyto)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.replyTo.Summary -->|
-|[<!-- INCLUDE #EmailObjectClass.sendAt.Syntax -->](#sendat)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.sendAt.Summary -->|
-|[<!-- INCLUDE #EmailObjectClass.sender.Syntax -->](#sender)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.sender.Summary -->|
-|[<!-- INCLUDE #EmailObjectClass.size.Syntax -->](#size)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.size.Summary -->|
-|[<!-- INCLUDE #EmailObjectClass.subject.Syntax -->](#subject)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.subject.Summary -->|
-|[<!-- INCLUDE #EmailObjectClass.textBody.Syntax -->](#textbody)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.textBody.Summary -->|
-|[<!-- INCLUDE #EmailObjectClass.to.Syntax -->](#to)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.to.Summary -->|
+|[<!-- INCLUDE #EmailObjectClass.attachments.Syntax -->](#attachments)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.attachments.Summary -->|
+|[<!-- INCLUDE #EmailObjectClass.bcc.Syntax -->](#bcc)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.bcc.Summary -->|
+|[<!-- INCLUDE #EmailObjectClass.bodyStructure.Syntax -->](#bodystructure)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.bodyStructure.Summary -->|
+|[<!-- INCLUDE #EmailObjectClass.bodyValues.Syntax -->](#bodyvalues)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.bodyValues.Summary -->|
+|[<!-- INCLUDE #EmailObjectClass.cc.Syntax -->](#cc)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.cc.Summary -->|
+|[<!-- INCLUDE #EmailObjectClass.comments.Syntax -->](#comments)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.comments.Summary -->|
+|[<!-- INCLUDE #EmailObjectClass.from.Syntax -->](#from)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.from.Summary -->|
+|[<!-- INCLUDE #EmailObjectClass.headers.Syntax -->](#headers)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.headers.Summary -->|
+|[<!-- INCLUDE #EmailObjectClass.htmlBody.Syntax -->](#htmlbody)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.htmlBody.Summary -->|
+|[<!-- INCLUDE #EmailObjectClass.id.Syntax -->](#id)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.id.Summary -->|
+|[<!-- INCLUDE #EmailObjectClass.inReplyTo.Syntax -->](#inreplyto)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.inReplyTo.Summary -->|
+|[<!-- INCLUDE #EmailObjectClass.keywords.Syntax -->](#keywords)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.keywords.Summary -->|
+|[<!-- INCLUDE #EmailObjectClass.messageId.Syntax -->](#messageid)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.messageId.Summary -->|
+|[<!-- INCLUDE #EmailObjectClass.receivedAt.Syntax -->](#receivedat)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.receivedAt.Summary -->|
+|[<!-- INCLUDE #EmailObjectClass.references.Syntax -->](#references)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.references.Summary -->|
+|[<!-- INCLUDE #EmailObjectClass.replyTo.Syntax -->](#replyto)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.replyTo.Summary -->|
+|[<!-- INCLUDE #EmailObjectClass.sendAt.Syntax -->](#sendat)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.sendAt.Summary -->|
+|[<!-- INCLUDE #EmailObjectClass.sender.Syntax -->](#sender)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.sender.Summary -->|
+|[<!-- INCLUDE #EmailObjectClass.size.Syntax -->](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.size.Summary -->|
+|[<!-- INCLUDE #EmailObjectClass.subject.Syntax -->](#subject)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.subject.Summary -->|
+|[<!-- INCLUDE #EmailObjectClass.textBody.Syntax -->](#textbody)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.textBody.Summary -->|
+|[<!-- INCLUDE #EmailObjectClass.to.Syntax -->](#to)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #EmailObjectClass.to.Summary -->|
+
 
 ### Email Addresses
 
@@ -74,7 +76,7 @@ A collection of address objects.
 
 The [`textBody`](#textbody) and [`htmlBody`](#htmlbody) properties are only used with the [SMTP.send()](SMTPTransporterClass.md#send) function to allow sending simple mails. When both property are filled, the MIME content-type multipart/alternative is used. The email client should then recognize the multipart/alternative part and display the text part or html part as necessary.
 
-[`bodyStructure`](#bodystructure) and [`bodyValues`](#bodyvalues) are used for [SMTP](SMTPTransporterClass.md) when the [Email object](email-object) is built from a MIME document, e.g. when generated by the `MAIL Convert from MIME` command. In this case, both `bodyStructure` and `bodyValues` properties must be passed together, and it is not recommended to use `textBody` and `htmlBody`.
+[`bodyStructure`](#bodystructure) and [`bodyValues`](#bodyvalues) are used for [SMTP](SMTPTransporterClass.md) when the [Email object](#email-object) is built from a MIME document, e.g. when generated by the `MAIL Convert from MIME` command. In this case, both `bodyStructure` and `bodyValues` properties must be passed together, and it is not recommended to use `textBody` and `htmlBody`.
 
 #### Example of bodyStructure and bodyValues objects
 
@@ -102,30 +104,46 @@ The [`textBody`](#textbody) and [`htmlBody`](#htmlbody) properties are only used
 }
 ```
 
+
+
+
+
+
 ## .attachments
 
 <!-- REF #EmailObjectClass.attachments.Syntax -->
 **.attachments** : Collection<!-- END REF -->
 
+
 #### Description
+
+
 
 The `.attachments` property contains a <!-- REF #EmailObjectClass.attachments.Summary -->collection of `4D.MailAttachment` object(s)<!-- END REF -->.
 
 Attachment objects are defined through the [`MAIL New attachment`](MailAttachmentClass.md#mail-new-attachment) command. Attachment objects have specific [properties and functions](MailAttachmentClass.md).
 
+
+
+
 ## .bcc
 
 <!-- REF #EmailObjectClass.bcc.Syntax -->
-**.bcc** : Text<br/>**.bcc** : Object<br/>**.bcc** : Collection<!-- END REF -->
+**.bcc** : Text<br>**.bcc** : Object<br>**.bcc** : Collection<!-- END REF -->
+
 
 #### Description
 
 The `.bcc` property contains the <!-- REF #EmailObjectClass.bcc.Summary -->Blind Carbon Copy (BCC) hidden email recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
 
+
+
+
 ## .bodyStructure
 
 <!-- REF #EmailObjectClass.bodyStructure.Syntax -->
 **.bodyStructure** : Object<!-- END REF -->
+
 
 #### Description
 
@@ -145,10 +163,14 @@ The `.bodyStructure` object contains the following properties:
 |subParts|Collection of objects|Body parts of each child (collection of *EmailBodyPart* objects)|
 |headers|Collection of objects|List of all header fields in the part, in the order they appear in the message (collection of *EmailHeader* objects, see [headers](#headers-) property)|
 
+
+
+
 ## .bodyValues
 
 <!-- REF #EmailObjectClass.bodyValues.Syntax -->
 **.bodyValues** : Object<!-- END REF -->
+
 
 #### Description
 
@@ -161,19 +183,29 @@ The `.bodyValues` object contains the following properties:
 |*partID*.value|text|Value of the body part|
 |*partID*.isEncodingProblem|boolean|True if malformed sections are found while decoding the charset, or unknown charset, or unknown content transfer-encoding. False by default|
 
+
+
+
 ## .cc
 
 <!-- REF #EmailObjectClass.cc.Syntax -->
-**.cc** : Text<br/>**.cc** : Object<br/>**.cc** : Collection<!-- END REF -->
+**.cc** : Text<br>**.cc** : Object<br>**.cc** : Collection<!-- END REF -->
+
 
 #### Description
 
 The `.cc` property contains the <!-- REF #EmailObjectClass.cc.Summary -->Carbon Copy (CC) additional email recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
 
+
+
+
+
+
 ## .comments
 
 <!-- REF #EmailObjectClass.comments.Syntax -->
 **.comments** : Text<!-- END REF -->
+
 
 #### Description
 
@@ -183,14 +215,19 @@ Comments only appear within the header section of the message (keeping the messa
 
 For specific formatting requirements, please consult the [RFC#5322](https://tools.ietf.org/html/rfc5322).
 
+
+
+
 ## .from
 
 <!-- REF #EmailObjectClass.from.Syntax -->
-**.from** : Text<br/>**.from** : Object<br/>**.from** : Collection<!-- END REF -->
+**.from** : Text<br>**.from** : Object<br>**.from** : Collection<!-- END REF -->
+
 
 #### Description
 
 The `.from` property contains the <!-- REF #EmailObjectClass.from.Summary -->Originating [address(es)](#email-addresses) of the email<!-- END REF -->.
+
 
 Each email you send out has both the [sender](#sender) and **from** addresses:
 
@@ -199,10 +236,14 @@ Each email you send out has both the [sender](#sender) and **from** addresses:
 
 For better deliverability, it is recommended to use the same from and sender addresses.
 
+
+
+
 ## .headers
 
 <!-- REF #EmailObjectClass.headers.Syntax -->
 **.headers** : Collection<!-- END REF -->
+
 
 #### Description
 
@@ -217,19 +258,33 @@ Every object of the headers collection can contain the following properties:
 |[].name|text|(mandatory) Header field name as defined in [RFC#5322](https://tools.ietf.org/html/rfc5322). If null or undefined, the header field is not added to the MIME header.|
 |[].value|text|Header field values as defined in [RFC#5322](https://tools.ietf.org/html/rfc5322)|
 
+
+
+
+
+
+
 ## .htmlBody
 
 <!-- REF #EmailObjectClass.htmlBody.Syntax -->
 **.htmlBody** : Text<!-- END REF -->
 
+
 #### Description
 
 The `.htmlBody` property contains the <!-- REF #EmailObjectClass.htmlBody.Summary -->HTML representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
+
+
+
+
+
+
 
 ## .id
 
 <!-- REF #EmailObjectClass.id.Syntax -->
 **.id** : Text<!-- END REF -->
+
 
 #### Description
 
@@ -237,10 +292,16 @@ The `.htmlBody` property contains the <!-- REF #EmailObjectClass.htmlBody.Summar
 
 The `.id` property contains the <!-- REF #EmailObjectClass.id.Summary -->unique ID from the IMAP server<!-- END REF -->.
 
+
+
+
+
+
 ## .inReplyTo
 
 <!-- REF #EmailObjectClass.inReplyTo.Syntax -->
 **.inReplyTo** : Text<!-- END REF -->
+
 
 #### Description
 
@@ -248,10 +309,16 @@ The `.inReplyTo` property contains the <!-- REF #EmailObjectClass.inReplyTo.Summ
 
 For specific formatting requirements, please consult the [RFC#5322](https://tools.ietf.org/html/rfc5322).
 
+
+
+
+
+
 ## .keywords
 
 <!-- REF #EmailObjectClass.keywords.Syntax -->
 **.keywords** : Object<!-- END REF -->
+
 
 #### Description
 
@@ -264,12 +331,11 @@ This property is the "keywords" header (see [RFC#4021](https://tools.ietf.org/ht
 |.\<keyword\>|boolean|Keyword to set (value must be true)|
 
 Reserved keywords:
-
-- $draft - Indicates a message is a draft
-- $seen - Indicates a message has been read
-- $flagged - Indicates a message needs special attention (e.g., Urgent)
-- $answered - Indicates a message has been replied to
-- $deleted - Indicates a message to delete
+* $draft - Indicates a message is a draft
+* $seen - Indicates a message has been read
+* $flagged - Indicates a message needs special attention (e.g., Urgent)
+* $answered - Indicates a message has been replied to
+* $deleted - Indicates a message to delete
 
 #### Example
 
@@ -278,10 +344,14 @@ Reserved keywords:
  $mail.keywords["4d"]:=True
 ```
 
+
+
+
 ## .messageId
 
 <!-- REF #EmailObjectClass.messageId.Syntax -->
 **.messageId** : Text<!-- END REF -->
+
 
 #### Description
 
@@ -289,10 +359,13 @@ The `.messageId` property contains a <!-- REF #EmailObjectClass.messageId.Summar
 
 This header is usually "lettersOrNumbers@domainname", e.g. "abcdef.123456@4d.com". This unique ID is used in particular on forums or public mailing lists. In general, mail servers automatically add this header to the messages they send.
 
+
+
 ## .receivedAt
 
 <!-- REF #EmailObjectClass.receivedAt.Syntax -->
 **.receivedAt** : Text<!-- END REF -->
+
 
 #### Description
 
@@ -300,10 +373,16 @@ This header is usually "lettersOrNumbers@domainname", e.g. "abcdef.123456@4d.com
 
 The `.receivedAt` property contains the <!-- REF #EmailObjectClass.receivedAt.Summary -->timestamp of the email's arrival on the IMAP server in ISO 8601 UTC format (ex: 2020-09-13T16:11:53Z)<!-- END REF -->.
 
+
+
+
+
+
 ## .references
 
 <!-- REF #EmailObjectClass.references.Syntax -->
 **.references** : Collection<!-- END REF -->
+
 
 #### Description
 
@@ -311,32 +390,46 @@ The `.references` property contains the <!-- REF #EmailObjectClass.references.Su
 
 For specific formatting requirements, please consult the [RFC#5322](https://tools.ietf.org/html/rfc5322).
 
+
+
+
 ## .replyTo
 
 <!-- REF #EmailObjectClass.replyTo.Syntax -->
-**.replyTo** : Text<br/>**.replyTo** : Object<br/>**.replyTo** : Collection<!-- END REF -->
+**.replyTo** : Text<br>**.replyTo** : Object<br>**.replyTo** : Collection<!-- END REF -->
+
 
 #### Description
 
 The `.replyTo` property contains the <!-- REF #EmailObjectClass.replyTo.Summary -->[addresse(s)](#email-addresses) for responses<!-- END REF -->.
+
+
+
+
 
 ## .sendAt
 
 <!-- REF #EmailObjectClass.sendAt.Syntax -->
 **.sendAt** : Text<!-- END REF -->
 
+
 #### Description
 
 The `.sendAt` property contains the <!-- REF #EmailObjectClass.sendAt.Summary -->Email timestamp in ISO 8601 UTC format<!-- END REF -->.
 
+
+
+
 ## .sender
 
 <!-- REF #EmailObjectClass.sender.Syntax -->
-**.sender** : Text<br/>**.sender** : Object<br/>**.sender** : Collection<!-- END REF -->
+**.sender** : Text<br>**.sender** : Object<br>**.sender** : Collection<!-- END REF -->
+
 
 #### Description
 
 The `.sender` property contains the <!-- REF #EmailObjectClass.sender.Summary -->email source [addresse(s)](#email-addresses) of the email<!-- END REF -->.
+
 
 Each email you send out has both the **sender** and **[from](#from)** addresses:
 
@@ -345,10 +438,14 @@ Each email you send out has both the **sender** and **[from](#from)** addresses:
 
 For better deliverability, it is recommended to use the same from and sender addresses.
 
+
+
+
 ## .size
 
 <!-- REF #EmailObjectClass.size.Syntax -->
 **.size** : Integer<!-- END REF -->
+
 
 #### Description
 
@@ -356,45 +453,56 @@ For better deliverability, it is recommended to use the same from and sender add
 
 The `.size` property contains the <!-- REF #EmailObjectClass.size.Summary -->size (expressed in bytes) of the Email object returned by the IMAP server<!-- END REF -->.
 
+
+
+
 ## .subject
 
 <!-- REF #EmailObjectClass.subject.Syntax -->
 **.subject** : Text<!-- END REF -->
 
+
 #### Description
 
 The `.subject` property contains the <!-- REF #EmailObjectClass.subject.Summary -->description of topic<!-- END REF -->.
+
+
+
+
 
 ## .textBody
 
 <!-- REF #EmailObjectClass.textBody.Syntax -->
 **.textBody** : Text<!-- END REF -->
 
+
 #### Description
 
 The `.textBody` property contains the <!-- REF #EmailObjectClass.textBody.Summary -->Plain text representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. See [Handling body part](#handling-body-part) section.
 
+
+
 ## .to
 
 <!-- REF #EmailObjectClass.to.Syntax -->
-**.to** : Text<br/>**.to** : Object<br/>**.to** : Collection<!-- END REF -->
+**.to** : Text<br>**.to** : Object<br>**.to** : Collection<!-- END REF -->
+
 
 #### Description
 
 The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
 
+
 ## MAIL Convert from MIME
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18|Added|
-
 </details>
 
 <!-- REF #_command_.MAIL_Convert_from_MIME.Syntax -->
-**MAIL Convert from MIME**( *mime* : Blob ) : Object<br/>**MAIL Convert from MIME**( *mime* : Text ) : Object<!-- END REF -->
+**MAIL Convert from MIME**( *mime* : Blob ) : Object<br>**MAIL Convert from MIME**( *mime* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_command_.MAIL_Convert_from_MIME.Params -->
 |Parameter|Type||Description|
@@ -468,16 +576,19 @@ $transporter:=SMTP New transporter($server)
 $status:=$transporter.send($email)
 ```
 
+
+
+
+
 ## MAIL Convert to MIME
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R4|Added|
 |v17 R5|Modified|
-
 </details>
+
 
 <!-- REF #_command_.MAIL_Convert_to_MIME.Syntax -->
 **MAIL Convert to MIME**( *mail* : Object { ; *options* : Object } ) : Text<!-- END REF -->
@@ -500,12 +611,13 @@ In *mail*, pass the content and the structure details of the email to convert. T
 
 In *options*, you can set a specific charset and encoding configuration for the mail. The following properties are available:
 
-|Property| Type| Description|
+|Property|	Type|	Description|
 |---|---|---|
-|headerCharset| Text|Charset and encoding used for the following parts of the email: subject, attachment filenames, and email name attribute(s). Possible values:<table><tr><th>Constant</th><th>Value</th><th>Comment</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li><i>bodyCharset</i>: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 & Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 & 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (**default value**)</td></tr><tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII if possible, otherwise UTF-8 & base64</td></tr></table>|
-|bodyCharset| Text| Charset and encoding used for the html and text body contents of the email. Possible values: Same as for headerCharset (see above)|
+|headerCharset|	Text|Charset and encoding used for the following parts of the email: subject, attachment filenames, and email name attribute(s). Possible values:<p><p><table><tr><th>Constant</th><th>Value</th><th>Comment</th></tr><tr><td>mail mode ISO2022JP</td><td>US-ASCII_ISO-2022-JP_UTF8_QP</td><td><ul><li><i>headerCharset</i>: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li><i>bodyCharset</i>: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul></td></tr><tr><td>mail mode ISO88591</td><td>ISO-8859-1</td><td><ul><li><i>headerCharset</i>: ISO-8859-1 & Quoted-printable</li><li><i>bodyCharset</i>: ISO-8859-1 & 8-bit</li></ul></td></tr><tr><td>mail mode UTF8</td><td>US-ASCII_UTF8_QP</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII if possible, otherwise UTF-8 & Quoted-printable (**default value**)</tr><tr><td>mail mode UTF8 in base64</td><td>US-ASCII_UTF8_B64</td><td><i>headerCharset</i> & <i>bodyCharset</i>: US-ASCII if possible, otherwise UTF-8 & base64</td></tr></table>|
+|bodyCharset|	Text|	Charset and encoding used for the html and text body contents of the email. Possible values: Same as for headerCharset (see above)|
 
 If the *options* parameter is omitted, the mail mode UTF8 configuration is used for header and body parts.
+
 
 #### Example
 
@@ -549,3 +661,6 @@ $mime:=MAIL Convert to MIME($mail)
 // <html><body>HTML format email</body></html>
 // --E0AE5773D5E95245BBBD80DD0687E218--
 ```
+
+
+<style> h2 { background: #d9ebff;}</style>

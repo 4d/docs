@@ -16,10 +16,10 @@ A 4D project can start and monitor a web server for the main (host) application 
 The main 4D web server can be started in different ways:
 
 *	Using a button/menu command.
-	*	4D: **Run\>Start Web Server** menu<br/>![](../assets/en/WebServer/start1.png)
-	*	4D Server: **Start HTTP server** button of the HTTP Server page<br/>![](../assets/en/WebServer/start2.png)
+	*	4D: **Run\>Start Web Server** menu<br>![](assets/en/WebServer/start1.png)
+	*	4D Server: **Start HTTP server** button of the HTTP Server page<br>![](assets/en/WebServer/start2.png)
 	
-*	Automatically starting it each time the 4D application is opened. To do this, display the **Web\/Configuration** page of the Settings and select the **Launch Web Server at Startup** check box:<br/>![](../assets/en/WebServer/config.png)
+*	Automatically starting it each time the 4D application is opened. To do this, display the **Web\/Configuration** page of the Settings and select the **Launch Web Server at Startup** check box:<br>![](assets/en/WebServer/config.png)
 	
 *	Programmatically, by calling the [`webServer.start()`](API/WebServerClass.md#start) function or `WEB START SERVER` command.
 
@@ -42,12 +42,12 @@ The web server of any component can be stopped by calling the `webServer.stop()`
  
 The **Test Web Server** command can be used to make sure the built-in web server is functioning correctly (4D only). This command is accessible in the **Run** menu when the web server is launched:
 
-![](../assets/en/WebServer/test1.png)
+![](assets/en/WebServer/test1.png)
 
 
 When you select this command, the home page of the website published by the 4D application is displayed in a window of your default web browser:
 
-![](../assets/en/WebServer/defaultHomePage.png)
+![](assets/en/WebServer/defaultHomePage.png)
 
 
 This command lets you verify that the web server, home page display, etc. work correctly. The page is called using the *localhost* URL, which is the standard shortcut designating the IP address of the machine on which the web browser is executed. The command takes into account the [TCP publication port](#http-port) number specified in the settings.
@@ -60,8 +60,8 @@ At any moment, you can clear the cache of the pages and images that it contains 
 
 To do so, you can:
 
--	4D: click on the **Clear Cache** button in the Web/Options (I) page of the Settings dialog box. 
--	4D Server: click on the **Clear Cache** button in the HTTP page of the [4D Server Administration window](Admin/server-admin.md#http-server-page).
+-	4D: click on the **Clear Cache** button in the [Web/Options (I) page](../settings/web.md) of the Settings dialog box. 
+-	4D Server: click on the **Clear Cache** button in the HTTP page of the 4D Server Administration window.
 
 The cache is then immediately cleared.
 
@@ -239,7 +239,7 @@ The archived file is renamed based on the following example: “DYYYY_MM_DD_Thh_
 
 The automatic backup parameters for the logweb.txt are set on the **Web/Log (backup)** page of the Settings:
 
-![](../assets/en/WebServer/backup.png)
+![](assets/en/WebServer/backup.png)
 
 First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. You must then specify the precise moment of the backup if necessary.
 

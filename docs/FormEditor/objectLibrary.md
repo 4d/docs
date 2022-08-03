@@ -15,17 +15,17 @@ You can use object librairies in your forms. An object library offers a collecti
 ## Using the standard object library
 
 The standard object library is available from the Form editor: click on the last button of the toolbar:  
-![](../assets/en/FormEditor/library1.png)
+![](assets/en/FormEditor/library1.png)
 
 The library is displayed in a separate window:
 
-![](../assets/en/FormEditor/library2.png)
+![](assets/en/FormEditor/library2.png)
 
 The window has the following main features:
 
 - Preview area with tips: The central area displays a preview of each object. You can hover on an object to obtain information about the object in a tip.
 - You can filter the window contents by using the **Categories** menu:
-![](../assets/en/FormEditor/library3.png)
+![](assets/en/FormEditor/library3.png)
 - To use an object from the library to your form, you can either:
 	- right-click on an object and select **Copy** in the contextual menu
 	- or drag and drop the object from the library
@@ -51,7 +51,7 @@ To create an object library, select **New>Object Library...** from the 4D **File
 
 Once you validate the dialog box, 4D creates a new object library on your disk and displays its window (empty by default).
 
-![](../assets/en/FormEditor/library4.png)
+![](assets/en/FormEditor/library4.png)
 
 You can create as many libraries as desired per project. A library created and built under macOS can be used under Windows and vice-versa.
 
@@ -77,7 +77,7 @@ Objects are placed in an object library using drag-and-drop or a cut-copy-paste 
 
 Basic operations are available in the context menu or the options menu of the window:
 
-![](../assets/en/FormEditor/library5.png)
+![](assets/en/FormEditor/library5.png)
 
 - **Cut** or **Copy** to the pasteboard
 - **Paste** an object from the pasteboard
@@ -87,7 +87,7 @@ Basic operations are available in the context menu or the options menu of the wi
 
 You can place individual objects (including subforms) or sets of objects in an object library. Each object or set is grouped into a single item:
 
-![](../assets/en/FormEditor/library6.png)
+![](assets/en/FormEditor/library6.png)
 
 An object library can contain up to 32,000 items.
 

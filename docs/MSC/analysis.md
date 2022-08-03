@@ -8,7 +8,7 @@ The Activity analysis page allows viewing the contents of the current log file. 
 
 >It is also possible to rollback the operations carried out on the data of the database. For more information, refer to [Rollback page](rollback.md).
 
-![](../assets/en/MSC/MSC_analysis.png)
+![](assets/en/MSC/MSC_analysis.png)
 
 Every operation recorded in the log file appears as a row. The columns provide various information on the operation. You can reorganize the columns as desired by clicking on their headers.
 

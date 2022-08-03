@@ -5,7 +5,7 @@ title: Combo Box
 
 A combo box is similar to a [drop-down list](dropdownList_Overview.md#overview), except that it accepts text entered from the keyboard and has additional options. 
 
-![](../assets/en/FormObjects/combo_box.png)
+![](assets/en/FormObjects/combo_box.png)
 
 Fundamentally, you treat a combo box as an enterable area that uses its object, array or a choice list as the set of default values.
 
@@ -19,7 +19,7 @@ You initialize a combo box in exactly the same way as a [drop-down list](dropdow
 
 > This feature is only available in 4D projects.
 
-An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a combo box. The object must contain the following properties:
+An [object](Concepts/dt_object.md) encapsulating a [collection](../Concepts/dt_collection.md) can be used as the data source of a combo box. The object must contain the following properties:
 
 |Property|Type|Description|
 |---|---|---|
