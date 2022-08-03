@@ -187,7 +187,7 @@ In the `formMacros.json` file:
 }
 ```
 
-You can write:
+Você pode escrever:
 
 ```4d  
 // Class "AlignOnTarget" Class constructor($macro : Object)

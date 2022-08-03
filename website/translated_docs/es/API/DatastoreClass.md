@@ -337,9 +337,9 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 ```4d
  var $status : Object
 
- $status:=dataStore.encryptionStatus()
+ $status:=ds.encryptionStatus()
 
- If($status.isEncrypted) //la base está encriptada
+ If($status.isEncrypted) //the database is encrypted
     C_LONGINT($vcount)
     C_TEXT($tabName)
     For each($tabName;$status.tables)
@@ -348,9 +348,6 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
        End if
     End for each
     ALERT(String($vcount)+" encrypted table(s) in this datastore.")
- Else
-    ALERT("This database is not encrypted.")
- End if
  Else
     ALERT("This database is not encrypted.")
  End if

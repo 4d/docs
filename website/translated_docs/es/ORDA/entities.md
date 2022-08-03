@@ -182,7 +182,7 @@ You can create an object of type [entity selection](dsMapping.md#entity-selectio
 *   Using one of the various functions from the [Entity selection class](API/EntitySelectionClass.md) that returns a new entity selection, such as [`.or()`](API/EntitySelectionClass.md#or);
 *   Using a relation attribute of type "related entities" (see below).
 
-You can simultaneously create and use as many different entity selections as you want for a dataclass. Keep in mind that an entity selection only contains references to entities. Different entity selections can contain references to the same entities.
+You can simultaneously create and use as many different entity selections as you want for a dataclass. Tenga en cuenta que una selección de entidades sólo contiene referencias a entidades. Diferentes selecciones de entidades pueden contener las referencias a las mismas entidades.
 
 ### Entity selections compartibles o modificables
 
@@ -367,7 +367,7 @@ Esto también puede ilustrarse con el siguiente código:
  $result:=$person2.save() //$result.success=false, change not saved
 ```
 
-En este ejemplo, asignamos a $person1 una referencia a la entidad person con una llave de 1. Then, we assign another reference of the same entity to variable $person2. Using $person1, we change the first name of the person and save the entity. When we attempt to do the same thing with $person2, 4D checks to make sure the entity on disk is the same as when the reference in $person1 was first assigned. Since it isn't the same, it returns false in the success property and doesn’t save the second modification.
+En este ejemplo, asignamos a $person1 una referencia a la entidad person con una llave de 1. Then, we assign another reference of the same entity to variable $person2. Con $person1, cambiamos el nombre de la persona y guardamos la entidad. When we attempt to do the same thing with $person2, 4D checks to make sure the entity on disk is the same as when the reference in $person1 was first assigned. Since it isn't the same, it returns false in the success property and doesn’t save the second modification.
 
 When this situation occurs, you can, for example, reload the entity from the disk using the `entity.reload()` method so that you can try to make the modification again. The `entity.save()` method also proposes an "automerge" option to save the entity in case processes modified attributes that were not the same.
 
@@ -377,12 +377,12 @@ When this situation occurs, you can, for example, reload the entity from the dis
 
 Puede bloquear y desbloquear las entidades bajo pedido cuando acceda a los datos. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. The entity can only be loaded in read-only mode in these processes; its values cannot be edited or saved.
 
-This feature is based upon two methods of the `Entity` class:
+Esta funcionalidad se basa en dos métodos de la clase `Entity`:
 
 *   `entity.lock()`
 *   `entity.unlock()`
 
-For more information, please refer to the descriptions for these functions.
+Para más información, consulte las descripciones de estas funciones.
 
 > Pessimistic locks can also be handled through the [REST API](../REST/$lock.md).
 

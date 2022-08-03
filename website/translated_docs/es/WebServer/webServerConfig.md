@@ -186,7 +186,7 @@ For more information about CORS, please refer to the [Cross-origin resource shar
 | `WEB SET OPTION`              | `Web HTTP enabled`                                 |             |
 | Caja de diálogo de parámetros | Configuración/Activar HTTP                         |             |
 
-Indicates whether or not the web server will accept non-secure connections.
+Indica si el servidor web acepta o no conexiones no seguras.
 
 
 ## Activar HTTPS
@@ -317,7 +317,7 @@ Por defecto: 480 minutos (pase 0 para restaurar el valor por defecto)
 | objeto webServer    | [`inactiveSessionTimeout`](API/WebServerClass.md#inactivesessiontimeout) |             |
 | `WEB SET OPTION`    | `Web inactive session timeout`                                           |             |
 
-Life duration (in minutes) of inactive sessions (duration set in cookie). Al final de este periodo, la cookie de sesión expira y deja de ser enviada por el cliente HTTP.
+Duración de vida (en minutos) de las sesiones inactivas (duración definida en la cookie). Al final de este periodo, la cookie de sesión expira y deja de ser enviada por el cliente HTTP.
 
 Por defecto: 480 minutos (pase 0 para restaurar el valor por defecto)
 
@@ -514,7 +514,7 @@ Otro ejemplo:
 En este caso, los robots no pueden acceder a todo el sitio.
 
 
-## Root Folder
+## Carpeta raíz
 
 | Puede ajustarse con           | Nombre                                           | Comentarios                                                                                                                           |
 | ----------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -578,7 +578,7 @@ Campo "path" de la cookie de sesión. Se utiliza para controlar el alcance de la
 | ------------------- | ---------------------------------------------------------------------- | ----------- |
 | objeto webServer    | [`sessionCookieSameSite`](API/WebServerClass.md#sessioncookiesamesite) |             |
 
-Value of the `SameSite` attribute value of the session cookie. This attribute allows you to declare if your cookie should be restricted to a first-party or same-site context, as a protection from some cross-site request forgery ([CSRF](https://developer.mozilla.org/en-US/docs/Glossary/CSRF)) attacks.
+Valor del atributo `SameSite` de la cookie de sesión. This attribute allows you to declare if your cookie should be restricted to a first-party or same-site context, as a protection from some cross-site request forgery ([CSRF](https://developer.mozilla.org/en-US/docs/Glossary/CSRF)) attacks.
 
 > For a detailed description of the `SameSite` attribute, please refer to the [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie/SameSite) or [this web.dev page](https://web.dev/samesite-cookies-explained/).
 
@@ -623,7 +623,7 @@ Estado de validación de la dirección IP para las cookies de sesión. For secur
 
 Allows you to optimize the operation of the 4D Web Server in remote mode by reusing web processes created for processing previous web requests. In fact, the web server in 4D needs a specific web process for the handling of each web request; in remote mode, when necessary, this process connects to the 4D Server machine in order to access the data and database engine. It thus generates a temporary context using its own variables, selections, etc. Once the request has been dealt with, this process is killed.
 
-When the **Reuse Temporary Contexts** option is checked, in remote mode 4D maintains the specific web processes and reuses them for subsequent requests. By removing the process creation stage, web server performance is improved.
+When the **Reuse Temporary Contexts** option is checked, in remote mode 4D maintains the specific web processes and reuses them for subsequent requests. Al eliminar la etapa de creación del proceso, se mejora el rendimiento del servidor web.
 
 In return, you must make sure in this case to systematically initialize the variables used in 4D methods in order to avoid getting incorrect results. Similarly, it is necessary to erase any current selections or records defined during the previous request.
 > * This option is checked (and locked) automatically when the **Automatic Session Management** option is checked. In fact, the session management mechanism is actually based on the principle of recycling web processes: each session uses the same process that is maintained during the lifespan of the session. However, note that session processes cannot be "shared" between different sessions: once the session is over, the process is automatically killed (and not reused). It is therefore unnecessary to reset the selections or variables in this case.
@@ -647,7 +647,7 @@ The 4D Web Server keep-alive function concerns all TCP/IP connections (HTTP, HTT
 
 En algunos casos, se pueden invocar otras funciones internas optimizadas. Keep-alive connections are useful mainly for static pages.
 
-Two options allow you to set how the keep-alive connections work:
+Dos opciones le permiten definir cómo funcionan las conexiones persistentes:
 
 *   **Número de peticiones por conexión**: permite definir el número máximo de peticiones y de respuestas capaces de viajar por una conexión persistente. Limitar el número de peticiones por conexión permite evitar la inundación del servidor debido a un gran número de peticiones entrantes (una técnica utilizada por los hackers).<p> El valor por defecto (100) puede ser aumentado o disminuido en función de los recursos de la máquina que aloja el servidor 4D web.
 

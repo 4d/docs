@@ -150,7 +150,7 @@
         "title": "Date"
       },
       "Concepts/null-undefined": {
-        "title": "Null and Undefined"
+        "title": "Null e indefinido"
       },
       "Concepts/number": {
         "title": "Number (Real, Longint, Integer)"
@@ -174,7 +174,7 @@
         "title": "Variant"
       },
       "Concepts/error-handling": {
-        "title": "Error handling"
+        "title": "Gestão de erros"
       },
       "Concepts/control-flow": {
         "title": "Control flow overview"

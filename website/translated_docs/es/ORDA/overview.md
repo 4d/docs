@@ -3,7 +3,7 @@ id: overview
 title: '¿Qué es ORDA?'
 ---
 
-ORDA stands for **Object Relational Data Access**. It is an enhanced technology allowing to access both the model and the data of a database through objects.
+ORDA significa **Object Relational Data Access**. It is an enhanced technology allowing to access both the model and the data of a database through objects.
 
 Relations are transparently included in the concept, in combination with [lazy loading](glossary.md#lazy-loading), to remove all the typical hassles of data selection or transfer from the developer.
 

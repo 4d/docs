@@ -337,7 +337,7 @@ Vous souhaitez connaitre le nombre de tables chiffr√©es dans le fichier de donn√
 ```4d
  var $status : Object
 
- $status:=dataStore.encryptionStatus()
+ $status:=ds.encryptionStatus()
 
  If($status.isEncrypted) //the database is encrypted
     C_LONGINT($vcount)
@@ -347,10 +347,7 @@ Vous souhaitez connaitre le nombre de tables chiffr√©es dans le fichier de donn√
           $vcount:=$vcount+1
        End if
     End for each
-    ALERT(String($vcount)+" table(s) chiffr√©e(s) dans ce datastore.")
- Else
-    ALERT("This database is not encrypted.")
- End if
+    ALERT(String($vcount)+" encrypted table(s) in this datastore.")
  Else
     ALERT("This database is not encrypted.")
  End if

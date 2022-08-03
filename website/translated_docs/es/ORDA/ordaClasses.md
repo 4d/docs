@@ -332,11 +332,11 @@ However, it could happen that a function is fully executable on the client side 
 local Function <functionName>   
 ```
 
-With this keyword, the function will always be executed on the client side.
+Con esta palabra clave, la función se ejecutará siempre del lado del cliente.
 
 > The `local` keyword can only be used with data model class functions. If used with a [regular user class](Concepts/classes.md) function, it is ignored and an error is returned by the compiler.
 
-Note that the function will work even if it eventually requires to access the server (for example if the ORDA cache is expired). However, it is highly recommended to make sure that the local function does not access data on the server, otherwise the local execution could not bring any performance benefit. A local function that generates many requests to the server is less efficient than a function executed on the server that would only return the resulting values. For example, consider the following function on the Schools entity class:
+Note that the function will work even if it eventually requires to access the server (for example if the ORDA cache is expired). However, it is highly recommended to make sure that the local function does not access data on the server, otherwise the local execution could not bring any performance benefit. A local function that generates many requests to the server is less efficient than a function executed on the server that would only return the resulting values. Por ejemplo, considere la siguiente función en la entidad Schools:
 
 ```4d
 // Get the youngest students  
@@ -436,7 +436,7 @@ To create an ORDA class file, you just need to double-click on the corresponding
 Class extends Entity
 ```
 
-Once a class is defined, its name is no longer dimmed in the Explorer.
+Una vez definida una clase, su nombre ya no aparece atenuado en el Explorador.
 
 
 ### Editar las clases

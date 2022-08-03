@@ -98,14 +98,14 @@ You can choose to access the 4D online documentation site directly or to access 
 
 ### Carpeta local
 
-Indica la ubicación de la documentación HTML estática. By default, this is the \Help\Command\language subfolder. You can view the location by clicking on the menu associated with the area. Si esta subcarpeta no está presente, la ubicación se muestra en rojo.
+Indica la ubicación de la documentación HTML estática. By default, this is the \Help\Command\language subfolder. Puede ver la ubicación haciendo clic en el menú asociado al área. Si esta subcarpeta no está presente, la ubicación se muestra en rojo.
 
 You can modify this location as desired, for example if you want to display the documentation in a language different from that of the application. The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the [...] button next to the entry area and choose a documentation root folder (folder corresponding to the language: fr, en, es, de or ja).
 
 
 ### Sitio Web
 
-URL access to the on-line documentation for the version on 4D Doc Center. 4D builds calls to the pages of the documentation based on this URL. You can modify it, for example if you want to display documentation in a different language from the application language. The test button to the right of the area launches the default browser to go to the URL specified.
+Acceso URL a la documentación en línea de la versión en el 4D Doc Center. 4D builds calls to the pages of the documentation based on this URL. You can modify it, for example if you want to display documentation in a different language from the application language. The test button to the right of the area launches the default browser to go to the URL specified.
 
 ### Primero buscar en la carpeta local
 

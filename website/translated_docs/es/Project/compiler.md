@@ -164,7 +164,7 @@ Se proponen dos opciones de objetivo. The result depends on the processor of the
 
 Use this area to set the default type for ambiguous database objects.
 
-- **Numeric**: Used to force numeric typing in an unambiguous manner, either in real or longint. This will not override the directives you may have set in your project. You can optimize the running of your database by choosing the Longint type.
+- **Numeric**: Used to force numeric typing in an unambiguous manner, either in real or longint. This will not override the directives you may have set in your project. Puede optimizar el funcionamiento de su base de datos eligiendo el tipo Longint.
 - **Button**: Used to force button typing in an unambiguous manner, either in real or longint. This will not override the directives you may have set in your project. This type applies to buttons as well as check boxes, picture buttons, button grids, radio buttons, picture pop-up menus and drop-down lists.
 
 ### Métodos Compilador para...
@@ -281,7 +281,7 @@ To do this, you must surround the code to be excluded from range checking with t
 
 4D incluye dos compiladores:
 
-- a "classic" compiler, used to compile native code for Intel/AMD processors;
+- un compilador "clásico", utilizado para compilar código nativo para los procesadores Intel/AMD;
 - a Silicon compiler, used to compile native code for Apple Silicon processors.
 
 The classic compiler can be used on any platform, while the Silicon compiler can only be used on a Mac machine:

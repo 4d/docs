@@ -7,7 +7,7 @@ A [datastore](dsMapping.md#datastore) exposed on a 4D application can be accesse
 
 - 4D remote applications using ORDA to access the main datastore with the `ds` command. Note that the 4D remote application can still access the database in classic mode. These accesses are handled by the **4D application server**.
 - Other 4D applications (4D remote, 4D Server) opening a session on the remote datastore through the `Open datastore` command. These accesses are handled by the **HTTP REST server**.
-- Las peticiones 4D for iOS para actualizar las aplicaciones iOS. These accesses are handled by the **HTTP server**.
+- Las peticiones 4D for iOS para actualizar las aplicaciones iOS. Estos accesos son gestionados por el **servidor HTTP**.
 
 
 When you work with a remote datastore referenced through calls to the `Open datastore` command, the connection between the requesting processes and the remote datastore is handled via sessions.

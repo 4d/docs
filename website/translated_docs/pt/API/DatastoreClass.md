@@ -338,9 +338,9 @@ Se quiser saber o número de tabelas criptografadas no arquivo de dados atual:
 ```4d
  var $status : Object
 
- $status:=dataStore.encryptionStatus()
+ $status:=ds.encryptionStatus()
 
- If($status.isEncrypted) //o banco de dados está encriptado
+ If($status.isEncrypted) //the database is encrypted
     C_LONGINT($vcount)
     C_TEXT($tabName)
     For each($tabName;$status.tables)
