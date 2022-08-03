@@ -281,7 +281,7 @@
 <p>When <a href="#enable-https">HTTPS is enabled</a>, keep in mind that if <a href="#enable-http">HTTP is also enabled</a>, the browser can still switch between HTTPS and HTTP (for example, in the browser URL area, the user can replace &quot;https&quot; by &quot;http&quot;). To forbid http redirections, you can <a href="#enable-http">disable HTTP</a>, however in this case an error message is displayed to client HTTP requests.</p>
 <p>HSTS allows the 4D web server to declare that browsers should only interact with it via secure HTTPS connections. Once activated, the 4D web server will automatically add HSTS-related information to all response headers. Browsers will record the HSTS information the first time they receive a response from the 4D web server, then any future HTTP requests will automatically be transformed into HTTPS requests. The length of time this information is stored by the browser is specified with the Web <strong>HSTS max age</strong> setting.</p>
 <blockquote>
-<p>HSTS requires that HTTPS is <a href="enable-https">enabled</a> on the server. <a href="enable-http">HTTP</a> must also be enabled to allow client initial connections.</p>
+<p>HSTS requires that <a href="#enable-https">HTTPS is enabled</a> on the server. <a href="#enable-http">HTTP</a> must also be enabled to allow client initial connections.</p>
 </blockquote>
 <blockquote>
 <p>You can get the current connection mode using the <code>WEB Is secured connection</code> command.</p>

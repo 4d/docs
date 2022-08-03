@@ -75,7 +75,7 @@
 <li><strong>Formulario heredado</strong>: objetos formulario heredados (si hay un <a href="/docs/es/FormEditor/forms.html#inherited-forms">formulario heredado</a>).</li>
 <li><strong>Página 0</strong>: objetos de <a href="/docs/es/FormEditor/forms.html#form-pages">página 0</a>. Esta opción permite distinguir entre los objetos de la página actual del formulario y los de la página 0.</li>
 <li><strong>Papel</strong>: bordes de la página de impresión, que se muestran como líneas grises. This element can only be displayed by default in <a href="/docs/es/FormEditor/propertiesForm.html#form-type">&quot;for printing&quot; type</a> forms.</li>
-<li><strong>Rulers</strong>: Rulers of the Form editor’s window.</li>
+<li><strong>Reglas</strong>: Reglas de la ventana del editor de formularios.</li>
 <li><strong>Markers</strong>: Output control lines and associated markers that show the limits of the form’s different areas. This element can only be displayed by default in <a href="/docs/es/FormEditor/propertiesForm.html#form-type">list forms</a>.</li>
 <li><strong>Etiquetas de los marcadores</strong>: etiquetas de los marcadores, disponibles sólo cuando se muestran las líneas de control de salida. This element can only be displayed by default in <a href="/docs/es/FormEditor/propertiesForm.html#form-type">list forms</a>.</li>
 <li><strong>Límites</strong>: límites del formulario. Cuando se selecciona esta opción, el formulario se muestra en el editor de formularios tal y como aparece en el modo Aplicación. De esta manera puede ajustar su formulario sin tener que cambiar al modo Aplicación para ver el resultado.</li>
@@ -89,7 +89,7 @@
 <p>When a form is opened in the editor, interface elements are displayed or hidden by default, depending on:</p>
 <ul>
 <li>the <strong>New form default display</strong> options set in the Preferences - unchecked options cannot be displayed by default.</li>
-<li>the current <a href="/docs/es/FormEditor/propertiesForm.html#form-type">form type</a>:
+<li>el <a href="/docs/es/FormEditor/propertiesForm.html#form-type">tipo de formulario</a> actual:
 <ul>
 <li>Markers and marker labels are always displayed by default on list forms</li>
 <li>Papel aparece por defecto en los formularios &quot;a imprimir&quot;.</li>
@@ -128,7 +128,7 @@
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="barra-de-objetos"></a><a href="#barra-de-objetos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Barra de objetos</h3>
-<p>The object bar contains all the active and inactive objects that can be used in 4D forms. Algunos objetos se agrupan por temas. Each theme includes several alternatives that you can choose between. When the object bar has the focus, you can select the buttons using the keys of the keyboard. The following table describes the object groups available and their associated shortcut key.</p>
+<p>The object bar contains all the active and inactive objects that can be used in 4D forms. Algunos objetos se agrupan por temas. Cada tema incluye varias alternativas entre las que puede elegir. When the object bar has the focus, you can select the buttons using the keys of the keyboard. The following table describes the object groups available and their associated shortcut key.</p>
 <table>
 <thead>
 <tr><th>Botón</th><th>Agrupar</th><th style="text-align:center">Llave</th></tr>
@@ -272,7 +272,7 @@
 <h4><a class="anchor" aria-hidden="true" id="utilizar-las-herramientas-de-alineación-directa"></a><a href="#utilizar-las-herramientas-de-alineación-directa" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utilizar las herramientas de alineación directa</h4>
 <p>Las herramientas de alineación de la barra de herramientas y del submenú Alinear del menú Objeto permiten alinear rápidamente los objetos seleccionados.</p>
 <p><img src="/docs/assets/en/FormEditor/alignmentMenu.png" alt=""></p>
-<p>Cuando 4D alinea los objetos, deja un objeto seleccionado en su lugar y alinea el resto de los objetos a ese. This object is the “anchor.” Utiliza el objeto que está más lejos en la dirección de la alineación como ancla y alinea los otros objetos a ese objeto. Por ejemplo, si quiere realizar una alineación a la derecha en un conjunto de objetos, el objeto más a la derecha se utilizará como ancla. La figura siguiente muestra objetos sin alineación, &quot;alineados a la izquierda&quot;, &quot;alineados horizontalmente por centros&quot; y &quot;alineados a la derecha&quot;:</p>
+<p>Cuando 4D alinea los objetos, deja un objeto seleccionado en su lugar y alinea el resto de los objetos a ese. Este objeto es el &quot;ancla.&quot; Utiliza el objeto que está más lejos en la dirección de la alineación como ancla y alinea los otros objetos a ese objeto. Por ejemplo, si quiere realizar una alineación a la derecha en un conjunto de objetos, el objeto más a la derecha se utilizará como ancla. La figura siguiente muestra objetos sin alineación, &quot;alineados a la izquierda&quot;, &quot;alineados horizontalmente por centros&quot; y &quot;alineados a la derecha&quot;:</p>
 <p><img src="/docs/assets/en/FormEditor/alignmentTools.png" alt=""></p>
 <h4><a class="anchor" aria-hidden="true" id="utilizar-el-asistente-de-alineación"></a><a href="#utilizar-el-asistente-de-alineación" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Utilizar el asistente de alineación</h4>
 <p>El Asistente de Alineación permite realizar cualquier tipo de alineación y/o distribución de objetos.</p>

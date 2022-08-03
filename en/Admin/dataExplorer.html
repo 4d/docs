@@ -121,17 +121,21 @@ or
 <img src="/docs/assets/en/Admin/dataExplorer3.png" alt="alt-text"></p></li>
 <li><p>The central part contains the <strong>Search area</strong> and the <strong>Data grid</strong> (list of entities of the selected dataclass). Each column of the grid represents a datastore attribute.</p>
 <ul>
-<li><p>By default, all entities are displayed. You can filter the displayed entities using the search area. Two query modes are available: <a href="#query-on-attributes">Query on attributes</a> (selected by default), and the <a href="#advanced-query-with-expression">Advanced query with expression</a>. You select the query mode by clicking on the corresponding button (the <strong>X</strong> button allows you to reset the query area and thus stop filtering):
-<img src="/docs/assets/en/Admin/dataExplorer4b.png" alt="alt-text"></p></li>
-<li><p>The name of the selected dataclass is added as a tab above the data grid. Using these tabs, you can switch between dataclasses that have been already selected. You can remove a referenced dataclass by clicking the &quot;remove&quot; icon at the right of the dataclass name.</p></li>
-<li><p>You can reduce the number of columns by unchecking attributes in the left side. You can also switch the columns in the data grid using drag and drop. You can click on a column header to <a href="#ordering-entities">sort entities</a> according to its values (when possible).</p></li>
-<li><p>If an operation requires a long time, a progress bar is displayed. You can stop the running operation at any moment by clicking on the red button:</p></li>
+<li>By default, all entities are displayed. You can filter the displayed entities using the search area. Two query modes are available: <a href="#query-on-attributes">Query on attributes</a> (selected by default), and the <a href="#advanced-query-with-expression">Advanced query with expression</a>. You select the query mode by clicking on the corresponding button (the <strong>X</strong> button allows you to reset the query area and thus stop filtering):<br>
+<img src="/docs/assets/en/Admin/dataExplorer4b.png" alt="alt-text"></li>
+<li>The name of the selected dataclass is added as a tab above the data grid. Using these tabs, you can switch between dataclasses that have been already selected. You can remove a referenced dataclass by clicking the &quot;remove&quot; icon at the right of the dataclass name.</li>
+<li>You can reduce the number of columns by unchecking attributes in the left side. You can also switch the columns in the data grid using drag and drop. You can click on a column header to <a href="#ordering-entities">sort entities</a> according to its values (when possible).</li>
+<li>If an operation requires a long time, a progress bar is displayed. You can stop the running operation at any moment by clicking on the red button:<br>
+<img src="/docs/assets/en/Admin/dataExplorer5.png" alt="alt-text"></li>
 </ul></li>
-</ul>
-<p><img src="/docs/assets/en/Admin/dataExplorer5.png" alt="alt-text"></p>
+<li><p>On the right side is the <strong>Details area</strong>: it displays the attribute values of the currently selected entity as well as <strong>related data</strong>, if any. You can browse between the entities of the dataclass by clicking the <strong>First</strong> / <strong>Previous</strong> / <strong>Next</strong> / <strong>Last</strong> links at the bottom of the area.</p>
 <ul>
-<li>On the right side is the <strong>Details area</strong>: it displays the attribute values of the currently selected entity.
-All attribute types are displayed, including pictures and objects (expressed in json). You can browse between the entities of the dataclass by clicking the <strong>First</strong> / <strong>Previous</strong> / <strong>Next</strong> / <strong>Last</strong> links at the bottom of the area.</li>
+<li>All attribute types are displayed, including pictures, objects (expressed in json) as well as <a href="/docs/en/ORDA/ordaClasses.html#computed-attributes-1">computed</a> and <a href="/docs/en/ORDA/ordaClasses.html#alias-attributes-1">alias</a> attributes.</li>
+<li>Related data (many-to-one and one-to-many relations) can be displayed through expandable/collapsable areas:<br>
+<img src="/docs/assets/en/Admin/dataExplorerRelated.png" alt="alt-text"></li>
+<li><strong>Ctrl+Click</strong> (Windows) or <strong>Command+Click</strong> (macOS) on a related attribute name in the right side area displays the values of the attribute in an independant, floating area:<br>
+<img src="/docs/assets/en/Admin/dataExplorerFloat.png" alt="alt-text"></li>
+</ul></li>
 </ul>
 <h3><a class="anchor" aria-hidden="true" id="updating-contents"></a><a href="#updating-contents" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Updating contents</h3>
 <p>When the ORDA model or data is modified on the database side (table added, record edited or deleted, etc.), you just need to refresh the Data Explorer page in the browser (using the F5 key, for example).</p>

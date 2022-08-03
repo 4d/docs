@@ -281,7 +281,7 @@
 <p>Lorsque <a href="#enable-https">HTTPS est activé</a>, n'oubliez pas que si <a href="#enable-http">HTTP est également activé</a>, le navigateur peut toujours basculer entre HTTPS et HTTP (par exemple, dans la zone URL du navigateur, l'utilisateur peut remplacer &quot;https&quot; par &quot;http&quot;). Pour interdire les redirections http, vous pouvez <a href="#enable-http">désactiver le HTTP</a>, cependant dans ce cas un message d'erreur est affiché lors des requêtes HTTP du client.</p>
 <p>HSTS permet au serveur web 4D de déclarer que les navigateurs ne doivent interagir avec lui que par des connexions HTTPS sécurisées. Une fois activé, le serveur Web 4D ajoutera automatiquement des informations relatives au HSTS à tous les en-têtes des réponses. Les navigateurs enregistreront les informations HSTS la première fois qu'ils recevront une réponse du serveur web 4D, puis toutes les futures demandes HTTP seront automatiquement transformées en demandes HTTPS. La durée de stockage de ces informations par le navigateur est spécifiée avec le paramètre Web <strong>HSTS max age</strong>.</p>
 <blockquote>
-<p>Activer le HSTS requiert que HTTPS soit <a href="enable-https">activé</a> sur le serveur. <a href="enable-http">Le HTTP</a> doit également être activé pour permettre les connexions initiales du client.</p>
+<p>HSTS requires that <a href="#enable-https">HTTPS is enabled</a> on the server. <a href="#enable-http">HTTP</a> must also be enabled to allow client initial connections.</p>
 </blockquote>
 <blockquote>
 <p>Vous pouvez vérifier le mode de connexion utilisé en utilisant la commande <code>WEB Is secured connection</code>.</p>

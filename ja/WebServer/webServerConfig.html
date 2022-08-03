@@ -281,7 +281,7 @@
 <p><a href="#httpsを有効にする">HTTPSを有効</a> にした場合、同時に <a href="#httpを有効化">HTTPも有効</a>になっていると、ブラウザー上では HTTPS と HTTP を切り替えることができることに注意が必要です (たとえば、ブラウザーのアドレスバーで、ユーザーは &quot;https&quot; を &quot;http&quot; に置き換えることができます)。 HTTP へのリダイレクトを禁止するには、<a href="#httpを有効化">HTTPを無効</a> にすることもできますが、この場合、クライアントの HTTPリクエストに対してエラーメッセージが表示されてしまいます。</p>
 <p>HSTS によって、4D Webサーバーはブラウザーに対し、セキュアな HTTPS接続のみを許可すると宣言できます。 HSTS を有効にすると、4D Webサーバーはすべてのレスポンスヘッダーに HSTS 関連の情報を自動的に追加します。 4D Webサーバーからの初回レスポンスを受け取った際にブラウザーは HSTS情報を記録し、以降の HTTPリクエストは自動的に HTTPSリクエストに変換されます。 ブラウザー側でこの情報が保存される時間は <strong>HSTS max age</strong> 設定によって指定されます。</p>
 <blockquote>
-<p>HSTS のためには、サーバー上で <a href="httpsを有効にする">HTTPS が有効</a>になっていなくてはなりません。 また、クライアントの初回接続を許可するために、<a href="httpを有効化">HTTP も有効</a> でなくてはなりません。</p>
+<p>HSTS のためには、サーバー上で <a href="#httpsを有効にする">HTTPS が有効</a>になっていなくてはなりません。 また、クライアントの初回接続を許可するために、<a href="#httpを有効化">HTTP も有効</a> でなくてはなりません。</p>
 </blockquote>
 <blockquote>
 <p>現在の接続モードは、<code>WEB Is secured connection</code> コマンドで取得できます。</p>
