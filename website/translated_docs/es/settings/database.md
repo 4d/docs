@@ -55,7 +55,7 @@ Se ofrecen tres opciones de ubicación:
 
     A 4D project can thus operate in a language different from that of the system. When a project is opened, the 4D engine detects the language used by the data file and provides it to the language (interpreter or compiled mode). Text comparisons, regardless of whether they are carried out by the project engine or the language, are done in the same language.
 
-    > You can modify this setting in the application Preferences (see [General Page](../Preferences/general.md)). In this case, the setting applies to all the new databases created by 4D.
+    > You can modify this setting in the application Preferences (see [General Page](../Preferences/general.md)). En este caso, la configuración se aplica a todas las nuevas bases creadas por 4D.
 
 -   **Consider only non-alphanumeric chars for keywords**: Modifies the algorithm used by 4D to identify keyword separators and hence build their indexes. By default, when this option is not checked, 4D uses a sophisticated algorithm that takes linguistic characteristics into account.
 

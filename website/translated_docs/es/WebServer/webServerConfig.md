@@ -211,7 +211,7 @@ Cuando [HTTPS está activado](#enable-https), recuerde que si [HTTP está tambi�
 
 HSTS permite al servidor web 4D declarar que los navegadores sólo deben interactuar con él a través de conexiones HTTPS seguras. Una vez activado, el servidor web 4D añadirá automáticamente información relacionada con HSTS a todos los encabezadoss de las respuestas. Los navegadores registrarán la información HSTS la primera vez que reciban una respuesta del servidor web 4D, luego cualquier solicitud HTTP futura se transformará automáticamente en solicitudes HTTPS. El tiempo que esta información es almacenada por el navegador se especifica con el parámetro web **HSTS max age**.
 
-> HSTS requiere que HTTPS esté [activado](enable-https) en el servidor. [El HTTP](enable-http) también debe estar activado para permitir las conexiones iniciales del cliente.
+> HSTS requires that [HTTPS is enabled](#enable-https) on the server. [HTTP](#enable-http) must also be enabled to allow client initial connections.
 
 > Puede obtener el modo de conexión actual utilizando el comando `WEB Is secured connection`.
 
@@ -289,6 +289,7 @@ Activación del método HTTP TRACE en el servidor web 4D. Por razones de segurid
 | Puede ajustarse con | Nombre                                         | Comentarios |
 | ------------------- | ---------------------------------------------- | ----------- |
 | objeto webServer    | [`HTTPSPort`](API/WebServerClass.md#httpsport) | number      |
+
 
 |`WEB SET OPTION`|`Web HTTPS port ID`||
 
@@ -487,7 +488,7 @@ Verdadero si PFS está disponible en el servidor web (ver la sección [TLS](Admi
 
 Permite optimizar el funcionamiento del Servidor Web 4D en modo remoto reutilizando los procesos web creados para procesar peticiones web anteriores. In fact, the web server in 4D needs a specific web process for the handling of each web request; in remote mode, when necessary, this process connects to the 4D Server machine in order to access the data and database engine. It thus generates a temporary context using its own variables, selections, etc. Once the request has been dealt with, this process is killed.
 
-When the **Reuse Temporary Contexts** option is checked, in remote mode 4D maintains the specific web processes and reuses them for subsequent requests. By removing the process creation stage, web server performance is improved.
+When the **Reuse Temporary Contexts** option is checked, in remote mode 4D maintains the specific web processes and reuses them for subsequent requests. Al eliminar la etapa de creación del proceso, se mejora el rendimiento del servidor web.
 
 In return, you must make sure in this case to systematically initialize the variables used in 4D methods in order to avoid getting incorrect results. Similarly, it is necessary to erase any current selections or records defined during the previous request.
 

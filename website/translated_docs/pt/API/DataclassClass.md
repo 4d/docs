@@ -888,9 +888,9 @@ onde:
     | Not equal to                         | #, !=       | Supports the wildcard (@)                                                                                      |
     |                                      | !==, IS NOT | Considers the @ as a standard character                                                                        |
     | Menor que                            | <           |                                                                                                                |
-    | Greater than                         | >           |                                                                                                                |
-    | Less than or equal to                | <=          |                                                                                                                |
-    | Greater than or equal to             | >=          |                                                                                                                |
+    | Maior que                            | >           |                                                                                                                |
+    | Menor que ou igual a                 | <=          |                                                                                                                |
+    | Maior ou igual a                     | >=          |                                                                                                                |
     | Included in                          | IN          | Gets data equal to at least one of the values in a collection or in a set of values, supports the wildcard (@) |
     | Not condition applied on a statement | NOT         | Parenthesis are mandatory when NOT is used before a statement containing several operators                     |
     | Contains keyword                     | %           | Keywords can be used in attributes of string or picture type                                                   |

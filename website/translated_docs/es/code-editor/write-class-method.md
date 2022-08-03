@@ -58,7 +58,7 @@ You can enlarge or reduce the relative width of each list area by dragging one o
 
 - To add or remove a list, click in the title area of one of the lists and choose the corresponding command in the pop-up menu. The **Remove this list** command is disabled when you click on the last list. If you want to hide all the lists, you must either click on the **show or hide lists**  button at the bottom right of the window or hide them by default in the **Preferences**.
 
-- You can hide the lists in all the windows in the following ways:
+- Puede ocultar las listas en todas las ventanas de las siguientes maneras:
   - Select the **View > Lists** option in the **Method** menu (a check mark indicates whether lists are displayed)
   - For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes** and/or **tables**. These options are found in **Preferences** > **Methods** > **Options**
 
@@ -102,7 +102,7 @@ To save a Code Editor window as a template, choose **Method** > **Save As Templa
 
 ## Break points area
 
-This area, located to the left of the editing area, allows you to display the line numbers and to insert break points directly next to specific instructions. Break points are useful during the debugging phase of your programming. They stop the execution of your code at specific locations and display the debugger.
+This area, located to the left of the editing area, allows you to display the line numbers and to insert break points directly next to specific instructions. Los puntos de interrupción son útiles durante la fase de depuración de su programación. They stop the execution of your code at specific locations and display the debugger.
 
 For more information on break points, see the [Debugging](../Debugging/breakpoints.md#breakpoints) section.
 
@@ -122,7 +122,7 @@ The status bar located at the bottom right part of the editor window displays th
 
 - **Ln**: Line number
 - **Col**: Column number, i.e., the level in the hierarchy of programming structures. El primer nivel es 0. The column number is useful for debugging since this information can be provided by the interpreter in the event of an error in the code.
-- **Ch**: Location of character in the line.
+- **Ch**: ubicación del caracter en la línea.
 - ![](assets/en/code-editor/show-hide-list.png): Ocultar/mostrar listas.
 
 
@@ -160,11 +160,11 @@ Desde el Explorador, puedes arrastrar y soltar:
 
 When you drag and drop a component, 4D always uses the correct syntax for the component. For example, if you drag the field name "First Name" from the [People] table, it appears in the Code Editor as "[People]First Name." Similarly, if you drag the Form name "Input" from the People table, it appears in the Code Editor as "[People];"Input"."
 
-When you insert a command by dragging it from the **Commands** page of the Explorer, it appears with its syntax (which consists of all of its parameters) in the Code Editor. This feature simply reminds you of the parameters that the command expects. A continuación, puede utilizar una sintaxis que se adapte mejor a su uso.
+When you insert a command by dragging it from the **Commands** page of the Explorer, it appears with its syntax (which consists of all of its parameters) in the Code Editor. Esta funcionalidad simplemente le recuerda los parámetros que espera el comando. A continuación, puede utilizar una sintaxis que se adapte mejor a su uso.
 
 #### Dentro de un método, clase, función o entre dos diferentes
 
-In the Code Editor, the drag-and-drop mechanism is activated as soon as a portion of text is selected. By default, the drag-and-drop mechanism moves the selected text. In order to copy it, hold down the **Ctrl** key (Windows) or the **Option** key (macOS) during the operation.
+In the Code Editor, the drag-and-drop mechanism is activated as soon as a portion of text is selected. Por defecto, el mecanismo de arrastrar y soltar mueve el texto seleccionado. In order to copy it, hold down the **Ctrl** key (Windows) or the **Option** key (macOS) during the operation.
 
 ### Entrada en varias líneas
 
@@ -187,7 +187,7 @@ The **Swap Expression** function can be used to reverse the arguments of an expr
 
 `variable1:=variable2`
 
-becomes
+se convierte en
 
 `variable2:=variable1`
 
@@ -197,7 +197,7 @@ This function is extremely useful for reversing a set of assignments used to get
 
 In addition to the standard copy-paste operation, 4D offers two additional functions that let you work with the contents of different clipboards:
 
-* The program stores the last 10 "copy" or "cut" actions that were performed in the Code Editor in memory during the current session. Each of the different contents saved in this way can be reused at any time. To do this, use the **Clipboard History** command of the Code Editor context menu or the "Last Clipboard values" button of the toolbar:
+* The program stores the last 10 "copy" or "cut" actions that were performed in the Code Editor in memory during the current session. Cada uno de los diferentes contenidos guardados de esta manera puede ser reutilizado en cualquier momento. To do this, use the **Clipboard History** command of the Code Editor context menu or the "Last Clipboard values" button of the toolbar:
 
     ![](assets/en/code-editor/last-clipboard-values-2.png)
 
@@ -226,7 +226,7 @@ The change bars change colors to indicate whether or not the modifications were 
 * amarillo: la línea fue modificada y el método aún no ha sido guardado.
 * verde: la línea fue modificada y el método ha sido guardado.
 
-## Using the autocomplete functions
+## Uso de las funciones de autocompletar
 
 El editor de código ofrece funciones de autocompletado. 4D automatically displays suggestions based on the first few characters typed.
 
@@ -256,7 +256,7 @@ You can press the **Esc** key to close the pop-up list or you can continue typin
 
 If the characters typed correspond to different types of objects, the list displays them in their current style. Se pueden mostrar los siguientes tipos de objetos:
 
-* 4D commands
+* Comandos 4D
 * Comandos SQL
 * User methods
 * Table names
@@ -264,7 +264,7 @@ If the characters typed correspond to different types of objects, the list displ
 * Constantes
 * Local, process or interprocess variable, declared in the method
 * Nombres de propiedad objeto
-* Plug-in commands
+* Comandos del Plug-in
 * 4D keywords
 * Palabras clave SQL
 * Macros (mostradas entre < >)
@@ -331,7 +331,7 @@ Standard keyboard shortcuts to navigate the code are available in 4D's Code Edit
 | [Ctrl]+[Home]                                       | Place the insertion point at the beginning of the method                                                                               |
 | [Ctrl]+[End]                                        | Coloca el punto de inserción al final del método                                                                                       |
 | [Shift]+[Home]                                      | Select all the characters in the line that are to the left of the cursor                                                               |
-| [Shift]+[End]                                       | Select all the characters in the line that are to the right of the cursor                                                              |
+| [Shift]+[End]                                       | Selecciona todos los caracteres de la línea que están a la derecha del cursor                                                          |
 | [PgUp]                                              | Scroll the contents of the method, page by page, from the bottom to the top (doesn't modify the insertion point)                       |
 | [PgDn]                                              | Scroll the contents of the method, page by page, from the top to the bottom (doesn't modify the insertion point)                       |
 | [Ctrl]+[K] en el nombre de un método proyecto       | Abrir el método proyecto en una nueva ventana                                                                                          |
@@ -414,7 +414,7 @@ Both inline and multiline comment blocks begin with /*and end with*/.
 
 - *Inline comments* -  can be anywhere in the code.The length of inline comments is limited to the maximum size of a line (32,000 characters). ![](assets/en/code-editor/inline-comment.png)
 
--   *Multiline comment blocks* - can be collapsed or expanded. Multiline comment blocks can be nested and each block  is expandable/collapsable. The comments on the first line of an expandable/collapsable block will remain visible when the block is collapsed. The length of multiline comments is limited to the maximum size of 32,000 characters per line. No hay límite en el número de líneas. ![](assets/en/code-editor/multiline-comment.png)
+-   *Bloques de comentarios multilínea* - pueden ser contraídoos o expandidos. Multiline comment blocks can be nested and each block  is expandable/collapsable. The comments on the first line of an expandable/collapsable block will remain visible when the block is collapsed. The length of multiline comments is limited to the maximum size of 32,000 characters per line. No hay límite en el número de líneas. ![](assets/en/code-editor/multiline-comment.png)
 
 > No se admiten los comentarios multilínea al final de una línea.-
 
@@ -443,7 +443,7 @@ En 4D, se pueden utilizar las siguientes secuencias de escape:
 | `\"`                             | " (Comillas)         |
 
 
-> It is possible to use either upper or lower case in escape sequences.
+> Es posible utilizar mayúsculas o minúsculas en las secuencias de escape.
 
 In the following example, the **Carriage return** character (escape sequence \r) is inserted in a statement in order to obtain the dialog box shown:
 
@@ -467,7 +467,7 @@ Several functions in the Code Editor make code easier to read and facilitate bro
 
 If you place the mouse over the expand button [...], a help tip appears, displaying the first lines of the hidden code.
 
-A collapsed portion of code can be selected, copied, pasted or deleted. All the lines included therein will be copied, pasted or deleted respectively. When a portion of code is pasted, it is automatically expanded.
+Se puede seleccionar, copiar, pegar o eliminar una porción de código contraída. All the lines included therein will be copied, pasted or deleted respectively. When a portion of code is pasted, it is automatically expanded.
 
 Hay varias formas de expandir y contraer código:
 

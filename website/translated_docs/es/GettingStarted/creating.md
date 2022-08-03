@@ -3,7 +3,7 @@ id: creating
 title: Trabajar con un proyecto
 ---
 
-4D projects are created and developed using the **4D** application, which provides a comprehensive Integrated Development Environment (IDE). **4D Server** can also create new, empty projects.
+4D projects are created and developed using the **4D** application, which provides a comprehensive Integrated Development Environment (IDE). **4D Server** también puede crear nuevos proyectos vacíos.
 
 Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications.
 

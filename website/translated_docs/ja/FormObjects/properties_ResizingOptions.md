@@ -117,7 +117,7 @@ title: リサイズオプション
 
 #### 対象オブジェクト
 
-[スプリッター](splitterTabControlOverview#スプリッター)
+[スプリッター](splitters.md)
 
 
 

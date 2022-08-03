@@ -7,7 +7,7 @@ A [datastore](dsMapping.md#datastore) exposed on a 4D application can be accesse
 
 - 4D remote applications using ORDA to access the main datastore with the `ds` command. Note that the 4D remote application can still access the database in classic mode. These accesses are handled by the **4D application server**.
 - Other 4D applications (4D remote, 4D Server) opening a session on the remote datastore through the [`Open datastore`](../API/DataStoreClass.md#open-datastore) command. These accesses are handled by the **HTTP REST server**.
-- [4D for iOS or 4D for Android](https://developer.4d.com/go-mobile/) queries for updating mobile applications. These accesses are handled by the **HTTP server**.
+- [4D for iOS or 4D for Android](https://developer.4d.com/go-mobile/) queries for updating mobile applications. Estos accesos son gestionados por el **servidor HTTP**.
 
 
 
@@ -15,7 +15,7 @@ A [datastore](dsMapping.md#datastore) exposed on a 4D application can be accesse
 
 When you work with a remote datastore referenced through calls to the `Open datastore` command, the connection between the requesting processes and the remote datastore is handled via sessions.
 
-A session in created on the remote datastore to handle the connection. This session is identified using a internal session ID which is associated to the `localID` on the 4D application side. This session automatically manages access to data, entity selections, or entities.
+Se crea una sesión en el datastore remoto para gestionar la conexión. This session is identified using a internal session ID which is associated to the `localID` on the 4D application side. This session automatically manages access to data, entity selections, or entities.
 
 The `localID` is local to the machine that connects to the remote datastore, which means:
 
@@ -49,7 +49,7 @@ ORDA features related to entity locking and transaction are managed at process l
 *   Transactions can be started, validated or cancelled separately on each remote datastore using the `dataStore.startTransaction()`, `dataStore.cancelTransaction()`, and `dataStore.validateTransaction()` functions. No afectan a otros almacenes de datos.
 *   Classic 4D language commands (`START TRANSACTION`, `VALIDATE TRANSACTION`, `CANCEL TRANSACTION`) only apply to the main datastore (returned by `ds`). If an entity from a remote datastore is hold by a transaction in a process, other processes cannot update it, even if these processes share the same session.
 *   Locks on entities are removed and transactions are rollbacked:
-    *   when the process is killed.
+    *   cuando el proceso es eliminado.
     *   cuando la sesión se cierra en el servidor
     *   cuando la sesión es terminada desde la ventana de administración del servidor.
 
@@ -174,7 +174,7 @@ If you want to deliver final applications with the highest level of optimization
 
 ### Caché ORDA
 
-For optimization reasons, data requested from the server via ORDA is loaded in the ORDA remote cache (which is different from the 4D cache). The ORDA cache is organized by dataclass, and expires after 30 seconds.
+For optimization reasons, data requested from the server via ORDA is loaded in the ORDA remote cache (which is different from the 4D cache). La caché ORDA está organizada por dataclass y vence después de 30 segundos.
 
 The data contained in the cache is considered as expired when the timeout is reached. Any access to expired data will send a request to the server. Los datos caducados permanecen en la caché hasta que se necesite el espacio.
 

@@ -44,7 +44,7 @@ SET DATABASE PARAMETER(4D Server log recording;1)
 SET DATABASE PARAMETER(Client Log Recording;1)
 ////del lado remoto
 ```
-> Esta instrucción también inicia el archivo de historial [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt).
+> This statement also starts the [4DRequestsLog_ProcessInfo.txt](#4drequestslog_processinfotxt) log file.
 
 #### Encabezados
 
@@ -364,7 +364,7 @@ Hay varias maneras de activar el archivo de configuración de los logs:
 
 ### Descripción del archivo JSON
 
-The log configuration file is a `.json` file that can contain the following properties:
+El archivo de configuración de log es un archivo `.json` que puede contener las siguientes propiedades:
 
 ```json
 {

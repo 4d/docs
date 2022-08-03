@@ -39,7 +39,7 @@ La liste des principales mises à jour de cette documentation. Pour des informat
 - Prise en charge des instructions [break et continue](Concepts/cf_looping.md#break-and-continue) dans les boucles.
 - Prise en charge de l'instruction [return](Concepts/flow-control.md#return-expression) et de [l'expression return](Concepts/parameters.md#return-expression) pour retourner des valeurs.
 - Prise en charge des [opérateurs d'assignation composés](Concepts/operators.md#compound-assignment-operators), des [opérateurs de court-circuit](Concepts/operators.md#short-circuit-operators) et de [l'opérateur ternaire](Concepts/operators.md#ternary-operator)
-- [L'éditeur de code](code-editor/navigation.md) inclut désormais un outil de liste déroulante et prend en charge les marqueurs pour une meilleure navigation dans le code.
+- The [Code Editor](../code-editor/navigation.md) now includes an dropdown tool and supports markers for better code navigation.
 - Nouvelles préférences : [**Inclure les tokens dans les fichiers source du projet**](Preferences/general.md#include-tokens-in-project-source-files) et l'option [**Afficher les presse-papiers**](Preferences/methods.md#show-clipboards) sur la page Méthodes.
 - Nouvelle requête REST pour [verrouiller/déverrouiller](REST/$lock.md) les entités.
 - [4D View Pro](ViewPro/getting-started.md) chapter added with new commands: [VP Copy to object](ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](ViewPro/method-list.md#vp-paste-from-object).
@@ -88,5 +88,5 @@ La liste des principales mises à jour de cette documentation. Pour des informat
 - [IMAP Mail](API/IMAPTransporterClass.md), [POP3 Mail](API/POP3TransporterClass.md) and [SMTP Mail](API/SMTPTransporterClass.md): `authenticationMode` property enables OAuth 2.0
 - [IMAP Mail](API/IMAPTransporterClass.md): new `.expunge()` and `.append()` functions
 - Nouveau composant [WebAdmin](Admin/webAdmin.md) du server web
-- Nouvelle interface [DataExplorer](Admin/dataExplorer)
+- New [DataExplorer](../Admin/dataExplorer.md) interface
 - New web [user sessions](WebServer/sessions.md) and [their API](API/SessionClass.md).

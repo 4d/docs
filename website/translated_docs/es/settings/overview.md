@@ -14,7 +14,7 @@ The Settings configure how the current project functions. These parameters may b
 
 Puede acceder a la caja de diálogo Parámetros:
 
--   using the **Design > Settings...** menu option
+-   utilizando la opción de menú **Diseño > Parámetros...**
 -   haciendo clic en **Parámetros** en la barra de herramientas 4D
 -   on 4D Server, using the **Edit > Settings...** menu option
 
@@ -27,7 +27,7 @@ When [**User settings** mode is enabled](../Desktop/user-settings.md), **Setting
 
 Locking can occur in both Project and Client/server modes when:
 
--   The *settings.4DSettings* file is 'Read-only' (Projects only). Modifying a setting will display an alert to unlock it, if possible.
+-   The *settings.4DSettings* file is 'Read-only' (Projects only). Al modificar un parámetro se mostrará una alerta para desbloquearlo, si es posible.
 -   Two or more users attempt to modify the same settings at the same time. The settings cannot be used until the first user frees it by closing the window. (Cliente/servidor únicamente)
 
 In both cases, the settings can be opened in 'Read-only', but cannot be used until the lock is removed.

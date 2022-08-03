@@ -76,7 +76,7 @@ Email オブジェクトは次のプロパティを提供します:
 
 [`textBody`](#textbody) および [`htmlBody`](#htmlbody) はどちらも[SMTP.send()](SMTPTransporterClass.md#send) でのみ使用され、これによって単純なメールの送信が可能になります。 プロパティが両方ともある場合、MIME content-type の multipart/alternative が使用されます。 メールクライアントは multipart/alternative パートを認識し、必要に応じてテキスト部または html 部を表示します。
 
-[Email オブジェクト](email-オブジェクト) が MIME ドキュメントからビルドされた場合 (例: `MAIL Convert from MIME` コマンドで生成されたとき) は、[`bodyStructure`](#bodystructure) および [`bodyValues`](#bodyvalues) が [SMTP](SMTPTransporterClass.md) に使用されます。 この場合、`bodyStructure` および `bodyValues` プロパティは両方一緒に渡される必要があり、`textBody` および `htmlBody` の使用は推奨されません。
+[Email オブジェクト](#email-オブジェクト) が MIME ドキュメントからビルドされた場合 (例: `MAIL Convert from MIME` コマンドで生成されたとき) は、[`bodyStructure`](#bodystructure) および [`bodyValues`](#bodyvalues) が [SMTP](SMTPTransporterClass.md) に使用されます。 この場合、`bodyStructure` および `bodyValues` プロパティは両方一緒に渡される必要があり、`textBody` および `htmlBody` の使用は推奨されません。
 
 #### bodyStructure および bodyValues オブジェクトの例
 
@@ -587,6 +587,7 @@ $status:=$transporter.send($email)
 | v17 R4 | 追加 |
 | v17 R5 | 変更 |
 </details>
+
 
 <!-- REF #_command_.MAIL_Convert_to_MIME.Syntax -->
 **MAIL Convert to MIME**( *mail* : Object { ; *options* : Object } ) : Text<!-- END REF -->

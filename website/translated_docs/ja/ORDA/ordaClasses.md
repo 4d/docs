@@ -397,6 +397,7 @@ Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
 
 ### `Function set <attributeName>`
 
+
 #### シンタックス
 
 ```4d
@@ -632,6 +633,7 @@ Function orderBy fullName($event : Object)-> $result : Text
 
 ```4d
 Function orderBy age($event : Object)-> $result : Text
+
     If ($event.descending=True)
         $result:="birthday asc" 
     Else 
@@ -663,7 +665,7 @@ Function orderBy age($event : Object)-> $result : Text
 {exposed} Alias <attributeName> <targetPath>
 ```
 
-*attributeName* は、[プロパティ名の命名規則](Concepts/identifiers.html#オブジェクトプロパティ) に準拠している必要があります。
+*attributeName* は、[プロパティ名の命名規則](../Concepts/identifiers.md#オブジェクトプロパティ) に準拠している必要があります。
 
 *targetPath* は、"employee.company.name" のような、1つ以上のレベルを含む属性パスです。 ターゲット属性が同じデータクラスに属している場合、*targetPath* は属性名となります。
 

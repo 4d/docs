@@ -21,7 +21,7 @@ La imagen original debe estar almacenada en un formato gestionado de forma nativ
 
 Se pueden utilizar dos ubicaciones principales para la trayectoria de la imagen estática:
 
-- in the **Resources** folder of the project. Appropriate when you want to share static pictures between several forms in the project. En este caso, la ruta de acceso está en "/RESOURCES/\<picture path\>".
+- en la carpeta **Resources** del proyecto. Appropriate when you want to share static pictures between several forms in the project. En este caso, la ruta de acceso está en "/RESOURCES/\<picture path\>".
 - en una carpeta de imágenes (por ejemplo, llamada **Images**) dentro de la carpeta del formulario. Conveniente cuando las imágenes estáticas se utilizan sólo en el formulario y/o se quiere poder mover o duplicar todo el formulario dentro del proyecto o de diferentes proyectos. En este caso, el nombre de la ruta es "<\picture path\>" y se resuelve desde la raíz de la carpeta del formulario.
 
 

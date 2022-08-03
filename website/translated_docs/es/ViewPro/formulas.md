@@ -5,7 +5,7 @@ title: Fórmulas y funciones
    
 ## Utilización de las fórmulas
 
-A spreadsheet formula is an expression that calculates the value of a cell.
+Una fórmula de hoja de cálculo es una expresión que calcula el valor de una celda.
 
 ### Entrada de las fórmulas
 
@@ -40,7 +40,7 @@ Todas las fórmulas tienen operandos y operadores:
 
 ## Valores y operadores
 
-4D View Pro soporta cinco tipos de datos. For each data type, specific literal values and operators are supported.
+4D View Pro soporta cinco tipos de datos. Para cada tipo de datos, se soportan valores literales y de operadores específicos.
 
 | Tipos de datos                     | Valores                                            | Operadores                                                                                                                                                                                                                                        |
 | ---------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -124,7 +124,7 @@ The following table shows the effect of the different notations:
 
 ## Funciones integradas
 
-Spreadsheet functions are preset formulas used to calculate cell values. When you type the first letter of the function to enter, a pop-up menu listing the available functions and references appears, allowing you to select the desired elements:
+Las funciones de hoja de cálculo son fórmulas predefinidas utilizadas para calcular los valores de las celdas. When you type the first letter of the function to enter, a pop-up menu listing the available functions and references appears, allowing you to select the desired elements:
 
 ![](assets/en/ViewPro/vpFormula2.PNG)
 
@@ -139,7 +139,7 @@ See [**SpreadJS's extented list of functions**](https://www.grapecity.com/spread
 
 - variables proceso 4D,
 - campos,
-- project methods,
+- métodos proyecto,
 - comandos del lenguaje 4D,
 - o cualquier expresión válida de 4D.
 

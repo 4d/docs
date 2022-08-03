@@ -4,7 +4,7 @@ title: Comencemos
 ---
 
 
-4D View Pro is a [4D component](Concepts/components.md) that includes a [4D form area](FormObjects/viewProArea_overview.md) and specific [methods](method-list.md). It allows you to embed advanced spreadsheet features in your projects.
+4D View Pro is a [4D component](Concepts/components.md) that includes a [4D form area](FormObjects/viewProArea_overview.md) and specific [methods](method-list.md). Le permite integrar las funcionalidades avanzadas de hoja de cálculo en sus proyectos.
 
 
 ![](assets/en/ViewPro/vpSpreadsheet.png)
@@ -40,7 +40,7 @@ You can [configure the area](configuring.md) using the Property List and 4D View
 
 Las hojas de cálculo se componen de líneas y columnas. A cada línea se le asocia un número. A letter (or group of letters once the number of columns surpasses the number of letters in the alphabet) is associated with each column. La intersección de una línea y de una columna constituye una celda. Las celdas pueden ser seleccionadas y sus contenidos editados.
 
-### Selecting cells, columns and rows
+### Selección de celdas, columnas y líneas
 
 *   To select a cell, simply click on it or use the direction arrows on the keyboard. Su contenido (o fórmula) se muestra dentro de la celda.
 
@@ -126,7 +126,7 @@ For example, to create a range object for the following cells:
 
 ![](assets/en/ViewPro/vp-cells.png)
 
-You can use the [VP Cells](method-list.md#vp-cells) method:
+Puede utilizar el método [VP Cells](method-list.md#vp-cells):
 
 ```4d 
 var $myRange : Object

@@ -270,9 +270,9 @@ La propriété `.logFile` contient <!-- REF #transporter.logFile.Summary -->le c
 
 Contrairement aux fichiers log habituels (activés via la commande `SET DATABASE PARAMETER`), les fichiers log étendus stockent le contenu MIME de tous les emails envoyés et n'ont pas de limite de taille. Pour plus d'informations sur les fichiers log étendus, reportez-vous à :
 
-*   **Connexions SMTP** - [4DSMTPLog.txt](Admin/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
-*   **Connexions POP3** - [4DPOP3Log.txt](Admin/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
-*   **Connexions IMAP** - [4DIMAPLog.txt](Admin/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+*   **SMTP connections** - [4DSMTPLog.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+*   **POP3 connections** - [4DPOP3Log.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+*   **IMAP connections** - [4DIMAPLog.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 
 
 

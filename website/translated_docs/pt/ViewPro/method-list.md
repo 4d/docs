@@ -3317,7 +3317,7 @@ You want to define a range object for the row shown below (on the current spread
 
 ![](assets/en/ViewPro/cmd_vpRow.PNG)
 
-You can write:
+Você pode escrever:
 
 ```4d
 $row:=VP Row("ViewProArea";9) // row 10

@@ -3,9 +3,9 @@ id: onWindowOpeningDenied
 title: On Window Opening Denied
 ---
 
-| コード | 呼び出し元                                     | 定義                  |
-| --- | ----------------------------------------- | ------------------- |
-| 53  | [Webエリア](FormObjects/webArea_overview.md) | ポップアップウィンドウがブロックされた |
+| コード | 呼び出し元                                        | 定義                  |
+| --- | -------------------------------------------- | ------------------- |
+| 53  | [Webエリア](../FormObjects/webArea_overview.md) | ポップアップウィンドウがブロックされた |
 
 <details><summary>履歴</summary>
 | バージョン  | 内容         |
@@ -19,7 +19,7 @@ title: On Window Opening Denied
 
 `WA Get last filtered URL` コマンドコマンドを使用してブロックされた URL を知ることができます。
 
-このイベントは、Webエリア (埋め込みおよび Windowsシステム [エンジン](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用)) で [ドラッグ＆ドロップ](FormObjects/webArea_Overview.md#ユーザーインターフェース) オプションが有効になっている場合に、ドロップ操作がおこなわれたときにも発生します。 次を呼び出すことで、ドロップを受け入れることができます:
+このイベントは、Webエリア (埋め込みおよび Windowsシステム [エンジン](../FormObjects/properties_WebArea.md#埋め込みwebレンダリングエンジンを使用)) で [ドラッグ＆ドロップ](../FormObjects/webArea_Overview.md#ユーザーインターフェース) オプションが有効になっている場合に、ドロップ操作がおこなわれたときにも発生します。 次を呼び出すことで、ドロップを受け入れることができます:
 
 ```4d
 // Webエリアオブジェクトメドッド

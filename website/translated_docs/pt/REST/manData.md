@@ -20,7 +20,7 @@ Com o REST API, pode realizar todas as manipulações de dados que quiser em 4D.
 
 Para adicionar e modificar entidades, pode chamar [`$method=update`]($method.md#methodupdate). Se quiser apagar uma ou mais entidades, pode usar [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving a single entity in a dataclass using [{dataClass}({key})](%7BdataClass%7D_%7Bkey%7D.html), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
+Besides retrieving a single entity in a dataclass using [{dataClass}({key})]({dataClass}.md#key.md), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
 
 Before returning a selection, you can also sort it by using [`$orderby`]($orderby.md) one one or more attributes (even relation attributes).
 

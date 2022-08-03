@@ -336,7 +336,7 @@ Within computed attribute functions, [`This`](Concepts/classes.md#this) designat
 ```
 The *getter* function is mandatory to declare the *attributeName* computed attribute. Whenever the *attributeName* is accessed, 4D evaluates the `Function get` code and returns the *$result* value.
 
-> A computed attribute can use the value of other computed attribute(s). Las llamadas recursivas generan errores.
+> Un atributo calculado puede utilizar el valor de otro(s) atributo(s) calculado(s). Las llamadas recursivas generan errores.
 
 The *getter* function defines the data type of the computed attribute thanks to the *$result* parameter. Se permiten los siguientes tipos resultantes:
 
@@ -344,10 +344,10 @@ The *getter* function defines the data type of the computed attribute thanks to 
 - Objeto
 - Imagen
 - BLOB
-- Entity (i.e. cs.EmployeeEntity)
+- Entity (por ejemplo, cs.EmployeeEntity)
 - Entity selection (p.e. cs.EmployeeeSelection)
 
-The *$event* parameter contains the following properties:
+El parámetro *$event* contiene las siguientes propiedades:
 
 | Propiedad     | Tipo    | Descripción                                                                               |
 | ------------- | ------- | ----------------------------------------------------------------------------------------- |
@@ -397,6 +397,7 @@ Function get coWorkers($event : Object)-> $result: cs.EmployeeSelection
 
 ### `Function set <attributeName>`
 
+
 #### Sintaxis
 
 ```4d
@@ -409,7 +410,7 @@ The *setter* function executes whenever a value is assigned to the attribute. Th
 
 The *$value* parameter receives the value assigned to the attribute.
 
-The *$event* parameter contains the following properties:
+El parámetro *$event* contiene las siguientes propiedades:
 
 | Propiedad     | Tipo    | Descripción                              |
 | ------------- | ------- | ---------------------------------------- |
@@ -457,7 +458,7 @@ The `query` function executes whenever a query using the computed attribute is l
 
 > The following features are not supported: - calling a `query` function on computed attributes of type Entity or Entity selection, - using the `order by` keyword in the resulting query string.
 
-The *$event* parameter contains the following properties:
+El parámetro *$event* contiene las siguientes propiedades:
 
 | Propiedad     | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                       |
 | ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -465,7 +466,7 @@ The *$event* parameter contains the following properties:
 | dataClassName | Texto   | Nombre de la clase de datos                                                                                                                                                                                                                                                                                                                                       |
 | kind          | Texto   | "query"                                                                                                                                                                                                                                                                                                                                                           |
 | value         | Variant | Valor a tratar por el atributo calculado                                                                                                                                                                                                                                                                                                                          |
-| operator      | Texto   | Query operator (see also the [`query` class function](API/DataClassClass.md#query)). Valores posibles:<li>== (es igual a, @ es comodín)</li><li>=== (equal to, @ is not wildcard)</li><li>!= (no es igual a, @ es comodín)</li><li>!== (no es igual a, @ no es comodín)</li><li>< (menor que)</li><li><= (less than or equal to)</li><li>> (mayor que)</li><li>>= (greater than or equal to)</li><li>IN (incluído en)</li><li>% (contiene palabra clave)</li> |
+| operator      | Texto   | Query operator (see also the [`query` class function](API/DataClassClass.md#query)). Valores posibles:<li>== (es igual a, @ es comodín)</li><li>=== (igual a, @ no es comodín)</li><li>!= (no es igual a, @ es comodín)</li><li>!== (no es igual a, @ no es comodín)</li><li>< (menor que)</li><li><= (less than or equal to)</li><li>> (mayor que)</li><li>>= (greater than or equal to)</li><li>IN (incluído en)</li><li>% (contiene palabra clave)</li> |
 | result        | Variant | Valor a tratar por el atributo calculado. Pass `Null` in this property if you want to let 4D execute the default query (always sequential for computed attributes).                                                                                                                                                                                               |
 
 > If the function returns a value in *$result* and another value is assigned to the `$event.result` property, the priority is given to `$event.result`.
@@ -563,17 +564,17 @@ The `orderBy` function executes whenever the computed attribute needs to be orde
 
 > Calling an `orderBy` function on computed attributes of type Entity class or Entity selection class **is not supported**.
 
-The *$event* parameter contains the following properties:
+El parámetro *$event* contiene las siguientes propiedades:
 
-| Propiedad     | Tipo     | Descripción                                                                                           |
-| ------------- | -------- | ----------------------------------------------------------------------------------------------------- |
-| attributeName | Texto    | Nombre de atributo calculado                                                                          |
-| dataClassName | Texto    | Nombre de la clase de datos                                                                           |
-| kind          | Texto    | "orderBy"                                                                                             |
-| value         | Variant  | Valor a tratar por el atributo calculado                                                              |
-| operator      | Texto    | "desc" o "asc" (por defecto)                                                                          |
-| descending    | Booleano | `true` for descending order, `false` for ascending order                                              |
-| result        | Variant  | Valor a tratar por el atributo calculado. Pass `Null` if you want to let 4D execute the default sort. |
+| Propiedad     | Tipo     | Descripción                                                                                              |
+| ------------- | -------- | -------------------------------------------------------------------------------------------------------- |
+| attributeName | Texto    | Nombre de atributo calculado                                                                             |
+| dataClassName | Texto    | Nombre de la clase de datos                                                                              |
+| kind          | Texto    | "orderBy"                                                                                                |
+| value         | Variant  | Valor a tratar por el atributo calculado                                                                 |
+| operator      | Texto    | "desc" o "asc" (por defecto)                                                                             |
+| descending    | Booleano | `true` for descending order, `false` for ascending order                                                 |
+| result        | Variant  | Valor a tratar por el atributo calculado. Pase `Null` si desea que 4D ejecute la ordenación por defecto. |
 
 > You can use either the `operator` or the `descending` property. Es esencialmente una cuestión de estilo de programación (ver ejemplos).
 
@@ -582,7 +583,7 @@ You can return the `orderBy` string either in the `$event.result` object propert
 
 #### Ejemplo
 
-You can write conditional code:
+Puedes escribir código condicional:
 
 ```4d
 Function orderBy fullName($event : Object)-> $result : Text
@@ -605,6 +606,7 @@ El código condicional es necesario en algunos casos:
 
 ```4d
 Function orderBy age($event : Object)-> $result : Text
+
     If ($event.descending=True)
         $result:="birthday asc" 
     Else 
@@ -620,7 +622,7 @@ Function orderBy age($event : Object)-> $result : Text
 
 An **alias** attribute is built above another attribute of the data model, named **target** attribute. The target attribute can belong to a related dataclass (available through any number of relation levels) or to the same dataclass. An alias attribute stores no data, but the path to its target attribute. Puede definir tantos atributos de alias como desee en una clase de datos.
 
-Alias attributes are particularly useful to handle N to N relations. They bring more readability and simplicity in the code and in queries by allowing to rely on business concepts instead of implementation details.
+Los atributos del alias son particularmente útiles para manejar las relaciones N a N. They bring more readability and simplicity in the code and in queries by allowing to rely on business concepts instead of implementation details.
 
 ### Cómo definir los atributos alias
 
@@ -636,7 +638,7 @@ You create an alias attribute in a dataclass by using the `Alias` keyword in the
 {exposed} Alias <attributeName> <targetPath>
 ```
 
-*attributeName* must comply with [standard rules for property names](Concepts/identifiers.html#object-properties).
+*attributeName* must comply with [standard rules for property names](../Concepts/identifiers.md#object-properties).
 
 *targetPath* is an attribute path containing one or more levels, such as "employee.company.name". If the target attribute belongs to the same dataclass, *targetPath* is the attribute name.
 
@@ -644,7 +646,7 @@ Un alias puede ser utilizado como parte de una ruta de otro alias.
 
 A [computed attribute](#computed-attributes-1) can be used in an alias path, but only as the last level of the path, otherwise, an error is returned. For example, if "fullName" is a computed attribute, an alias with path "employee.fullName" is valid.
 
-> ORDA alias attributes are **not exposed** by default. You must add the [`exposed`](#exposed-vs-non-exposed-functions) keyword before the `Alias` keyword if you want the alias to be available to remote requests.
+> Los atributos alias de ORDA por defecto son **no expuestos**. You must add the [`exposed`](#exposed-vs-non-exposed-functions) keyword before the `Alias` keyword if you want the alias to be available to remote requests.
 
 
 ### Uso de los atributos alias
@@ -670,7 +672,7 @@ Alias attributes are read-only (except when based upon a scalar attribute of the
 
 > Tenga en cuenta que los atributos alias se calculan en el servidor. In remote configurations, updating alias attributes in entities requires that entities are reloaded from the server.
 
-### Alias properties
+### Propiedades del alias
 
 Alias attribute [`kind`](../API/DataClassAttributeClass.md#kind) is "alias".
 
@@ -751,7 +753,7 @@ ds. Teacher.query("students.name = :1";"Martin")
 ```
 
 
-You can also edit the value of the *courseName* alias:
+También puede editar el valor del alias *courseName*:
 
 ```4d
 // Rename a course using its alias attribute
@@ -835,11 +837,11 @@ However, it could happen that a function is fully executable on the client side 
 local Function <functionName>   
 ```
 
-With this keyword, the function will always be executed on the client side.
+Con esta palabra clave, la función se ejecutará siempre del lado del cliente.
 
 > The `local` keyword can only be used with data model class functions. If used with a [regular user class](Concepts/classes.md) function, it is ignored and an error is returned by the compiler.
 
-Note that the function will work even if it eventually requires to access the server (for example if the ORDA cache is expired). However, it is highly recommended to make sure that the local function does not access data on the server, otherwise the local execution could not bring any performance benefit. A local function that generates many requests to the server is less efficient than a function executed on the server that would only return the resulting values. For example, consider the following function on the Schools entity class:
+Note that the function will work even if it eventually requires to access the server (for example if the ORDA cache is expired). However, it is highly recommended to make sure that the local function does not access data on the server, otherwise the local execution could not bring any performance benefit. A local function that generates many requests to the server is less efficient than a function executed on the server that would only return the resulting values. Por ejemplo, considere la siguiente función en la entidad Schools:
 
 ```4d
 // Get the youngest students  
@@ -934,13 +936,13 @@ ORDA user classes have a different icon from regular classes. Las clases vacías
 
 ![](assets/en/ORDA/classORDA2.png)
 
-To create an ORDA class file, you just need to double-click on the corresponding predefined class in the Explorer. 4D creates the class file and add the `extends` code. For example, for an Entity class:
+To create an ORDA class file, you just need to double-click on the corresponding predefined class in the Explorer. 4D creates the class file and add the `extends` code. Por ejemplo, para una clase Entity:
 
 ```
 Class extends Entity
 ```
 
-Once a class is defined, its name is no longer dimmed in the Explorer.
+Una vez definida una clase, su nombre ya no aparece atenuado en el Explorador.
 
 
 ### Editar las clases

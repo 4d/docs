@@ -676,12 +676,12 @@ Llamar a esta función desde una aplicación monopuesto de 4D devuelve `Null`.
 
 El objeto devuelto tiene las siguientes propiedades:
 
-| Propiedad  | Tipo       | Descripción                                                               |
-| ---------- | ---------- | ------------------------------------------------------------------------- |
-| maxEntries | Integer    | Número máximo de colecciones "entries".                                   |
-| stamp      | Integer    | Marcador de la caché.                                                     |
-| timeout    | Integer    | Time remaining before the new entries in the cache are marked as expired. |
-| entries    | Collection | Contains an entry object for each entity in the cache.                    |
+| Propiedad  | Tipo       | Descripción                                                                            |
+| ---------- | ---------- | -------------------------------------------------------------------------------------- |
+| maxEntries | Integer    | Número máximo de colecciones "entries".                                                |
+| stamp      | Integer    | Marcador de la caché.                                                                  |
+| timeout    | Integer    | Tiempo restante antes de que las nuevas entradas de la caché se marquen como vencidas. |
+| entries    | Collection | Contains an entry object for each entity in the cache.                                 |
 
 Each entry object in the `entries` collection has the following properties:
 
@@ -699,7 +699,7 @@ El objeto `data` de cada entrada contiene las siguientes propiedades:
 | __TIMESTAMP            | Cadena       | Stamp of the entity in the database (format is YYYY-MM-DDTHH:MM:SS:ms:Z)                                                     |
 | dataClassAttributeName | Variant      | If there is data in the cache for a dataclass attribute, it is returned in a property with the same type as in the database. |
 
-Data concerning related entities is stored in the cache of the data object.
+Los datos relativos a las entidades relacionadas se almacenan en la caché del objeto de datos.
 
 #### Ejemplo
 
@@ -1066,7 +1066,7 @@ To make it possible to perform such queries, ORDA allows a special syntax: you j
 ```4d
 "relationAttribute.attribute = :1 AND relationAttribute{x}.attribute = :2 [AND relationAttribute{y}.attribute...]"
 ```
-**{x}** tells ORDA to create another reference for the relation attribute. It will then perform all the necessary bitmap operations internally. Note that **x** can be any number **except 0**: {1}, or {2}, or {1540}... ORDA only needs a unique reference in the query for each class index.
+**{x}** tells ORDA to create another reference for the relation attribute. A continuación, realizará todas las operaciones de mapa de bits internas necesarias. Note that **x** can be any number **except 0**: {1}, or {2}, or {1540}... ORDA only needs a unique reference in the query for each class index.
 
 En nuestro ejemplo, sería:
 
@@ -1470,7 +1470,7 @@ In the *settings* parameter, pass an object with the following properties:
 `timeout` sets the timeout of the ORDA cache for the dataclass (default is 30 seconds). Once the timeout has passed, the entities of the dataclass in the cache are considered as expired. Esto significa que:
 
 * los datos siguen estando ahí
-* the next time the data is needed, it will be asked to the server
+* la próxima vez que se necesiten los datos, se le pedirán al servidor
 * 4D automatically removes expired data when the maximum number of entities is reached
 
 Setting a `timeout` property sets a new timeout for the entities already present in the cache. It is useful when working with data that does not change very frequently, and thus when new requests to the server are not necessary.

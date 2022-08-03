@@ -366,7 +366,7 @@ user / password / timeout / tls を指定してリモートデータストアに
 ```4d
  var $status : Object
 
- $status:=dataStore.encryptionStatus()
+ $status:=ds.encryptionStatus()
 
  If($status.isEncrypted) // データベースが暗号化されていれば
     C_LONGINT($vcount)

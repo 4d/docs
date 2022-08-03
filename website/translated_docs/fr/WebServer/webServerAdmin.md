@@ -59,8 +59,8 @@ Cette commande vous permet de vérifier que le serveur web, l'affichage de la pa
 
 Pour ce faire, vous pouvez :
 
--   4D : cliquez sur le bouton **Vider le cache** dans la page Web/Options (I) de la boîte de dialogue des Paramètres.
--   4D Server : cliquez sur le bouton **Vider le cache** dans la page HTTP de la fenêtre [Administration de 4D Server](Admin/server-admin.md#http-server-page).
+-   4D: click on the **Clear Cache** button in the [Web/Options (I) page](../settings/web.md) of the Settings dialog box.
+-   4D Server: click on the **Clear Cache** button in the HTTP page of the 4D Server Administration window.
 
 Le cache est alors immédiatement effacé.
 > Vous pouvez aussi utiliser l'url [/4DCACHECLEAR](#cacheclear).

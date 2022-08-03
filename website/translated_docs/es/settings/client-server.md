@@ -42,7 +42,7 @@ To update any other client machines that are not connected, you just need to ent
 
 -   **SQL Server**: 19812 by default (can be modified via the "SQL/Configuration" page of the Preferences).
 -   **Application Server**: 19813 by default (can be modified via the "Client-Server/Configuration" page of the Preferences, see above).
--   **DB4D Server** (database server): 19814 by default . This port number cannot be modified directly but it always consists of the application server port number + 1.\ When a 4D client connects to 4D Server, it uses the TCP port of the application server (19813 or the port indicated after the colon ':' in the IP address shown in the connection dialog box). Connection to other servers via their respective ports is then automatic; it is no longer necessary to specify them.\ Note that in the case of access via a router or a firewall, the three TCP ports must be opened explicitly.
+-   **Servidor DB4D** (servidor de base de datos): 19814 por defecto. This port number cannot be modified directly but it always consists of the application server port number + 1.\ When a 4D client connects to 4D Server, it uses the TCP port of the application server (19813 or the port indicated after the colon ':' in the IP address shown in the connection dialog box). Connection to other servers via their respective ports is then automatic; it is no longer necessary to specify them.\ Note that in the case of access via a router or a firewall, the three TCP ports must be opened explicitly.
 
 #### Autenticación del usuario con el servidor de dominio
 
@@ -54,7 +54,7 @@ When Single Sign On (SSO) is enabled (see above), you must fill in this field if
 
 #### Tiempo de espera de conexiones Cliente-Servidor
 
-This device is used to set the timeout (period of inactivity beyond which the connection is closed) between 4D Server and the client machines connecting to it. La opción ilimitada elimina el tiempo de espera. When this option is selected, client activity control is eliminated.
+This device is used to set the timeout (period of inactivity beyond which the connection is closed) between 4D Server and the client machines connecting to it. La opción ilimitada elimina el tiempo de espera. Cuando se selecciona esta opción, se elimina el control de la actividad del cliente.
 
 When a timeout is selected, the server will close the connection of a client if it does not receive any requests from the latter during the specified time limit.
 
@@ -87,9 +87,9 @@ This table allows you to set access control rules for the database depending on 
 
 El funcionamiento de la tabla de configuración es el siguiente:
 
-- The "Allow-Deny" column allows selecting the type of rule to apply (Allow or Deny) using a pop-up menu. Para añadir una regla, haga clic en el botón Añadir. A new row appears in the table. The **Delete** button lets you remove the current row.
+- The "Allow-Deny" column allows selecting the type of rule to apply (Allow or Deny) using a pop-up menu. Para añadir una regla, haga clic en el botón Añadir. Aparece una nueva línea en la tabla. The **Delete** button lets you remove the current row.
 - The "IP Address" column allows setting the IP address(es) concerned by the rule. To specify an address, click in the column and enter the address in the following form: 123.45.67.89 (IPv4 format) or 2001:0DB8:0000:85A3:0000:0000:AC1F:8001 (IPv6 format). You can use an * (asterisk) character to specify "starts with" type addresses. For example, 192.168.* indicates all addresses starting with 192.168.
-- The application of rules is based on the display order of the table. If two rules are contradictory, priority is given to the rule located highest in the table. You can re-order rows by modifying the current sort (click the header of the column to alternate the direction of the sort). También puede mover las líneas utilizando arrastrar y soltar.
+- La aplicación de las reglas se basa en el orden de visualización de la tabla. If two rules are contradictory, priority is given to the rule located highest in the table. You can re-order rows by modifying the current sort (click the header of the column to alternate the direction of the sort). También puede mover las líneas utilizando arrastrar y soltar.
 - For security reasons, only addresses that actually match a rule will be allowed to connect. In other words, if the table only contains one or more Deny rules, all addresses will be refused because none will match at least one rule. If you want to deny only certain addresses (and allow others), add an Allow * rule at the end of the table. Por ejemplo:
     - Denegar 192.168.* (denegar todas las direcciones que empiecen por 192.168)
     - Autorizar * (y permitir todas las demás direcciones)

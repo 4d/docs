@@ -129,7 +129,7 @@
         "title": "Creación y uso de macros"
       },
       "code-editor/find-replace": {
-        "title": "Find and replace"
+        "title": "Buscar y reemplazar"
       },
       "code-editor/overview": {
         "title": "Sobre el código 4D"
@@ -938,7 +938,7 @@
         "title": "Programación avanzada con Javascript"
       },
       "ViewPro/configuring": {
-        "title": "Configuring 4D View Pro Areas"
+        "title": "Configuración de las áreas de 4D View Pro"
       },
       "ViewPro/formulas": {
         "title": "Fórmulas y funciones"

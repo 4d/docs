@@ -16,7 +16,7 @@ Multiple plug-ins have already been written by the 4D community. Published plug-
 
 ## Installing plug-ins
 
-You install plug-ins in the 4D environment by copying their files into the **Plugins** folder, at the [same level as the Project folder](Project/architecture#plugins).  
+You install plug-ins in the 4D environment by copying their files into the **Plugins** folder, at the [same level as the Project folder](../Project/architecture.md#plugins).  
 
 Plug-ins are loaded by 4D when the application is launched so you will need to quit your 4D application before installing them. If a plug-in requires a specific license for use, it will be loaded but not available for use.
 

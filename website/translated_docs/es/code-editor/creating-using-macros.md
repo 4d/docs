@@ -5,7 +5,7 @@ title: Creación y uso de macros
 
 Puede utilizar macrocomandos en sus métodos. El uso de macrocomandos permite ahorrar mucho tiempo durante la entrada de código.
 
-## What is a macro?
+## ¿Qué es una macro?
 
 A macro-command is a section of 4D code that is permanently accessible and that can be inserted anywhere in your methods, whatever the type of database open. Macros can contain all types of 4D text, commands and constants, as well as special tags which are replaced at the time of macro insertion by values derived from the method context. For instance, a macro may contain the tag `<method_name/>;` at the time of macro insertion, this tag will be replaced by the name of the current project method.
 
@@ -36,7 +36,7 @@ You can modify this file or the contents of the folder subsequently as desired (
 
 You can add customized macros in the "Macros.xml" file using a standard text editor or by programming. You can also add XML files of customized macros in this folder.
 
-In local mode, the macros file can be open while using 4D. The list of available macros is updated on each event activating 4D. For instance, it is possible to bring the text editor to the foreground, modify the macro file, then return to the method: the new macro is then available in the Code Editor.
+In local mode, the macros file can be open while using 4D. La lista de macros disponibles se actualiza en cada evento de activación de 4D. For instance, it is possible to bring the text editor to the foreground, modify the macro file, then return to the method: the new macro is then available in the Code Editor.
 
 No se muestran macros vacías o erróneas.
 
@@ -51,7 +51,7 @@ If a macros file does not contain the declaration statements or cannot be valida
 
 ## Syntax of 4D macros
 
-4D macros are built using customized XML tags called "elements."
+Las macros 4D se crean utilizando etiquetas XML personalizadas llamadas "elementos"
 
 Some tags indicate the start and end of the definition (double tags of the type `<tag> </tag>`), others are replaced by insertion context values (`<tag/>`).
 
@@ -139,7 +139,7 @@ By default, all macros can be called via the context menu of the Code Editor (us
 
 The *in_menu* attribute of the `<macro>` tag is used to set whether or not the macro appears in this menu.
 
-In the context menu, macros are displayed in the order of the "Macros.xml" file and any additional XML files. It is thus possible to change the order by modifying these files.
+In the context menu, macros are displayed in the order of the "Macros.xml" file and any additional XML files. Por lo tanto, es posible cambiar el orden modificando estos archivos.
 
 ### Autocompletar
 
@@ -149,7 +149,7 @@ By default, all macros are accessible using the autocomplete (aka type-ahead) fu
 
 ### Lista del editor de código
 
-You can display your macros in a list of the Code Editor (see [Writing a method](./write-class-method.md)). Simply double-click on the name of a macro in the list in order to call it. No es posible excluir una macro específica de esta lista.
+You can display your macros in a list of the Code Editor (see [Writing a method](./write-class-method.md)). Basta con hacer doble clic en el nombre de una macro de la lista para llamarla. No es posible excluir una macro específica de esta lista.
 
 ## Compatibility notes
 

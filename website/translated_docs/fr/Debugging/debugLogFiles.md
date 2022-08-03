@@ -44,7 +44,7 @@ SET DATABASE PARAMETER(4D Server log recording;1)
 SET DATABASE PARAMETER(Client Log Recording;1)
 //côté distant
 ```
-> Cette instruction démarre également le fichier d'historique [4DRequestsLog_ProcessInfo.txt](l#4drequestslog_processinfotxt).
+> This statement also starts the [4DRequestsLog_ProcessInfo.txt](#4drequestslog_processinfotxt) log file.
 
 #### En-têtes
 

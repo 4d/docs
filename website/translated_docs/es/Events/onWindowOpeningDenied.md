@@ -3,9 +3,9 @@ id: onWindowOpeningDenied
 title: On Window Opening Denied
 ---
 
-| Code | Puede ser llamado por                       | Definición                            |
-| ---- | ------------------------------------------- | ------------------------------------- |
-| 53   | [Área Web](FormObjects/webArea_overview.md) | Se ha bloqueado una ventana emergente |
+| Code | Puede ser llamado por                          | Definición                            |
+| ---- | ---------------------------------------------- | ------------------------------------- |
+| 53   | [Área Web](../FormObjects/webArea_overview.md) | Se ha bloqueado una ventana emergente |
 
 <details><summary>Histórico</summary>
 | Versión | Modificaciones     |
@@ -19,7 +19,7 @@ Este evento se genera cuando la apertura de una ventana emergente es bloqueada p
 
 Puede identificar la URL bloqueada utilizando el comando `WA Get last filtered URL`.
 
-This event is also triggered when a drop operation has been done in the Web area (with embedded and Wwindows system [engines](properties_WebArea.md#use-embedded-web-rendering-engine)) if the [Drag and drop](FormObjects/webArea_Overview.md#user-interface) option is also enabled for the area. Puede aceptar la acción de soltar llamando:
+This event is also triggered when a drop operation has been done in the Web area (with embedded and Wwindows system [engines](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine)) if the [Drag and drop](../FormObjects/webArea_overview.md#user-interface) option is also enabled for the area. Puede aceptar la acción de soltar llamando:
 
 ```4d
 //web area object method

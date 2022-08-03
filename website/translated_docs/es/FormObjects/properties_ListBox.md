@@ -14,7 +14,7 @@ Colección de columnas del list box.
 | ------- | ---------------------------- | ---------------------------------------------------- |
 | columns | colección de objetos columna | Contiene las propiedades de las columnas de list box |
 
-Para ver una lista de las propiedades que soportan los objetos columna, consulte la sección [Propiedades específicas de la columna](listbox_overview#column-specific-properties).
+For a list of properties supported by column objects, please refer to the [Column Specific Properties](listbox_overview.md#column-specific-properties) section.
 
 #### Objetos soportados
 
@@ -110,7 +110,7 @@ Estas propiedades interactúan de la siguiente manera:
 
 *   If you set columns that are only static, they cannot be moved.
 
-*   If you set columns that are locked but not static, you can still change their position freely within the locked area. However, a locked column cannot be moved outside of this locked area.
+*   If you set columns that are locked but not static, you can still change their position freely within the locked area. Sin embargo, una columna bloqueada no puede moverse fuera de esta área bloqueada.
 
 ![](assets/en/FormObjects/property_lockedStaticColumns1.png)
 
@@ -180,7 +180,7 @@ Define el número de columnas del list box.
 
 Un array 4D que controla la visualización de las líneas del list box.
 
-You can set the "hidden", "disabled" and "selectable" interface properties for each row in an array-based list box using this array. It can also be designated using the `LISTBOX SET ARRAY` command.
+You can set the "hidden", "disabled" and "selectable" interface properties for each row in an array-based list box using this array. También puede ser designado utilizando el comando `LISTBOX SET ARRAY`.
 
 The row control array must be of the Longint type and include the same number of rows as the list box. Each element of the *Row Control Array* defines the interface status of its corresponding row in the list box. Three interface properties are available using constants in the "List Box" constant theme:
 
@@ -188,9 +188,9 @@ The row control array must be of the Longint type and include the same number of
 | ------------------------ | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | lk row is disabled       | 2     | The corresponding row is disabled. El texto y los controles, como las casillas de selección, aparecen atenuados o en gris. Las áreas de entrada de texto introducibles ya no lo son. Valor por defecto: Activado                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | lk row is hidden         | 1     | La línea correspondiente está oculta. Ocultar las líneas sólo afecta a la visualización del list box. The hidden rows are still present in the arrays and can be managed by programming. The language commands, more particularly `LISTBOX Get number of rows` or `LISTBOX GET CELL POSITION`, do not take the displayed/hidden status of rows into account. For example, in a list box with 10 rows where the first 9 rows are hidden, `LISTBOX Get number of rows` returns 10. From the user’s point of view, the presence of hidden rows in a list box is not visibly discernible. Only visible rows can be selected (for example using the Select All command). Valor por defecto: Visible |
-| lk row is not selectable | 4     | The corresponding row is not selectable (highlighting is not possible). Enterable text input areas are no longer enterable unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. Controls such as check boxes and lists are still functional however. This setting is ignored if the list box selection mode is "None". Valor por defecto: Seleccionable                                                                                                                                                                                                                                                                                                    |
+| lk row is not selectable | 4     | The corresponding row is not selectable (highlighting is not possible). Enterable text input areas are no longer enterable unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. Controls such as check boxes and lists are still functional however. Esta configuración se ignora si el modo de selección del list box es "Ninguno". Valor por defecto: Seleccionable                                                                                                                                                                                                                                                                                      |
 
-To change the status for a row, you just need to set the appropriate constant(s) to the corresponding array element. For example, if you do not want row #10 to be selectable, you can write:
+To change the status for a row, you just need to set the appropriate constant(s) to the corresponding array element. Por ejemplo, si no quiere que la línea #10 sea seleccionable, puede escribir:
 
 ```4d
  aLControlArr{10}:=lk row is not selectable

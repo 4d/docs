@@ -92,7 +92,7 @@ La función `4D.HTTPRequest.new()` <!-- REF #4D.HTTPRequest.new().Summary -->cre
 
 The returned `HTTPRequest` object is used to process responses from the HTTP server and call methods.
 
-In *url*, pass the URL where you want to send the request. La sintaxis a utilizar es:
+En *url*, pase la URL a la que desea enviar la petición. La sintaxis a utilizar es:
 
 ```
 {http://}[{user}:[{password}]@]host[:{port}][/{path}][?{queryString}]
@@ -218,7 +218,7 @@ La propiedad `.encoding` contiene <!-- REF #4D.HTTPRequest.encoding.Summary -->t
 
 #### Descripción
 
-La propiedad `.errors` contiene <!-- REF #4D.HTTPRequest.errors.Summary -->the collection of all the errors if at least one error has been triggered<!-- END REF -->.
+La propiedad `.errors` contiene <!-- REF #4D.HTTPRequest.errors.Summary -->la colección de todos los errores si se ha producido al menos un error<!-- END REF -->.
 
 Here is the contents of the `.errors` property:
 
@@ -315,9 +315,11 @@ The `.returnResponseBody` property contains <!-- REF #4D.HTTPRequest.returnRespo
 **.terminate()**<!-- END REF -->
 
 <!-- REF #4D.HTTPRequest.terminate().Params -->
+
 | Parámetros | Tipo |  | Descripción                  |
-| ---------- | ---- |::| ---------------------------- |
+| ---------- | ---- |  | ---------------------------- |
 |            |      |  | No requiere ningún parámetro |
+
 <!-- END REF -->
 
 

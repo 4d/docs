@@ -21,7 +21,7 @@ You can choose this option when you want to use active objects placed in an offs
 *	**\<object name>**: The size of the form will be based on the position of the selected form object. For example, if you choose an object that is placed in the bottom-right part of the area to be displayed, the form size will consist of a rectangle whose upper left corner will be the origin of the form and the lower right corner will correspond to that of the selected object, plus any margin values.
 	
 
-> For output forms, only the [**Hor. margin**](#hor-margin) or [**Width**](width) fields are available.
+> For output forms, only the [**Hor. margin**](#hor-margin) or [**Width**](#width) fields are available.
 
 
 #### JSON Grammar
@@ -47,6 +47,7 @@ Height of the form (in pixels) when the [form size](#size-based-on) is **Set siz
 ## Hor. Margin
 
 Value to add (in pixels) to the right margin of the form when the [form size](#size-based-on) is **Automatic size** or **\<object name>**
+
 
 This value also determines the right-hand margins of forms used in the Label editor.
 

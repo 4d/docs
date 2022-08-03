@@ -46,7 +46,7 @@ You use this property to declare the detail form to use in the subform. It can b
 
 Action to perform in case of a double-click on an empty line of a list subform. The following options are available:
 - Do nothing: Ignores double-click.
-- Add Record: Creates a new record in the subform and changes to editing mode. The record will be created directly in the list if the [Enterable in List] property is enabled. Otherwise, it will be created in page mode, in the [detail form](detail-form) associated with the subform.
+- Add Record: Creates a new record in the subform and changes to editing mode. The record will be created directly in the list if the [Enterable in List](#enterable-in-list) property is enabled. Otherwise, it will be created in page mode, in the [detail form](#detail-form) associated with the subform.
 
 
 #### JSON Grammar

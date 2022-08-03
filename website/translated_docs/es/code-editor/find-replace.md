@@ -1,6 +1,6 @@
 ---
 id: find-replace
-title: Find and replace
+title: Buscar y reemplazar
 ---
 
 The Code Editor has specific find and replace functions that apply to the current window.

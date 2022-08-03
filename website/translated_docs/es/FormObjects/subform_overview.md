@@ -78,7 +78,7 @@ If (Form event code=On Bound Variable Change) //bound variable or expression was
 End if
 ```
 
-It updates the value of `Form.clockValue` in the subform:
+Actualiza el valor de `Form.clockValue` en el subformulario:
 
 ![](assets/en/FormObjects/update-subform.png)
 
@@ -151,7 +151,7 @@ If you modify a value either in the parent form or in the subform, it is automat
 
 ### Uso de punteros (compatibilidad)
 
-In versions prior to 4D v19 R5, synchronization between parent forms and subforms was handled through **pointers**. For example, to update a subform object, you could call the following code:
+In versions prior to 4D v19 R5, synchronization between parent forms and subforms was handled through **pointers**. Por ejemplo, para actualizar un objeto subformulario, podría llamar al siguiente código:
 
 ```4d  
 // Subform form method

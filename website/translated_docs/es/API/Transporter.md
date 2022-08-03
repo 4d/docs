@@ -270,9 +270,9 @@ La propiedad `.logFile` contiene <!-- REF #transporter.logFile.Summary -->la rut
 
 A diferencia de los archivos de registro clásicos (habilitados mediante el comando `SET DATABASE PARAMETER`), los archivos de registro extendidos almacenan el contenido MIME de todos los correos enviados y no tienen ningún límite de tamaño. Para más información sobre los archivos de registro extendidos, consulte:
 
-*   **Conexiones SMTP** - [4DSMTPLog.txt](Admin/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
-*   **Conexiones POP3 ** - [4DSMTPLog.txt](Admin/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
-*   **Conexiones IMAP** - [4DIMAPLog.txt](Admin/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+*   **SMTP connections** - [4DSMTPLog.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+*   **POP3 connections** - [4DPOP3Log.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
+*   **IMAP connections** - [4DIMAPLog.txt](../Debugging/debugLogFiles.md#4dsmtplogtxt-4dpop3logtxt-and-4dimaplogtxt)
 
 
 

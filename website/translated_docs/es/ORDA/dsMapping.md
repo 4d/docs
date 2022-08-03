@@ -96,7 +96,7 @@ The main (default) datastore is always available through the `ds` command, but t
 
 ### Dataclass
 
-Una dataclass es el equivalente de una tabla. It is used as an object model and references all fields as attributes, including relational attributes (attributes built upon relations between dataclasses). Relational attributes can be used in queries like any other attribute.
+Una dataclass es el equivalente de una tabla. It is used as an object model and references all fields as attributes, including relational attributes (attributes built upon relations between dataclasses). Los atributos relacionales pueden utilizarse en las peticiones como cualquier otro atributo.
 
 All dataclasses in a 4D project are available as a property of the `ds` datastore. For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each exposed table that you want to be exposed as dataclass in the datastore.
 
@@ -142,7 +142,7 @@ Dataclass properties are attribute objects describing the underlying fields or r
  $revenuesAttribute:=ds.Company["revenues"] //alternate way
 ```
 
-This code assigns to `$nameAttribute` and `$revenuesAttribute` references to the name and revenues attributes of the `Company` class. Esta sintaxis NO devuelve los valores mantenidos dentro del atributo, sino que devuelve referencias a los propios atributos. To handle values, you need to go through [Entities](#entity).
+This code assigns to `$nameAttribute` and `$revenuesAttribute` references to the name and revenues attributes of the `Company` class. Esta sintaxis NO devuelve los valores mantenidos dentro del atributo, sino que devuelve referencias a los propios atributos. Para manejar los valores, es necesario pasar por [Entidades](#entity).
 
 All eligible fields in a table are available as attributes of their parent [dataclass](#dataclass). For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each field that you want to be exposed as a dataclass attribute.
 
@@ -177,7 +177,7 @@ Keep in mind that these objects describe attributes, but do not give access to d
 
 #### Atributos calculados
 
-[Computed attributes](ordaClasses.md#computed-attributes) are declared using a `get <attributeName>` function in the [Entity class definition](ordaClasses.md#entity-class). Their value is not stored but evaluated each time they are accessed. They do not belong to the underlying database structure, but are built upon it and can be used as any attribute of the data model.
+[Computed attributes](ordaClasses.md#computed-attributes) are declared using a `get <attributeName>` function in the [Entity class definition](ordaClasses.md#entity-class). Su valor no se guarda, sino que se evalúa cada vez que se accede a ellos. They do not belong to the underlying database structure, but are built upon it and can be used as any attribute of the data model.
 
 
 ### Entity

@@ -369,6 +369,7 @@ Function get coWorkers($event : Object)-> $result: cs. EmployeeSelection
 
 ### `Function set <attributeName>`
 
+
 #### Sintaxe
 
 ```4d
@@ -603,6 +604,7 @@ Conditional code is necessary in some cases:
 
 ```4d
 Function orderBy age($event : Object)-> $result : Text
+
     If ($event.descending=True)
         $result:="birthday asc" 
     Else 
@@ -634,7 +636,7 @@ You create an alias attribute in a dataclass by using the `Alias` keyword in the
 {exposed} Alias <attributeName> <targetPath>
 ```
 
-*attributeName* must comply with [standard rules for property names](Concepts/identifiers.html#object-properties).
+*attributeName* must comply with [standard rules for property names](../Concepts/identifiers.md#object-properties).
 
 *targetPath* is an attribute path containing one or more levels, such as "employee.company.name". If the target attribute belongs to the same dataclass, *targetPath* is the attribute name.
 

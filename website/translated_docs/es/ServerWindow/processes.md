@@ -11,7 +11,7 @@ The **Processes** page lists all the processes underway.
 
 The "Processes" button indicates, in parentheses, the total number of processes running in the server (this number does not take into account any display filters applied to the window nor the state of the **Display processes by groups** option).
 
-You can change the order of the columns by simply dragging and dropping the column header areas. You can also sort the list of column values by clicking on its header.
+You can change the order of the columns by simply dragging and dropping the column header areas. También puede ordenar la lista de los valores de las columnas haciendo clic en su encabezado.
 
 Like the Users page, this page contains a dynamic [search/filtering area](users.md#searchfiltering-area) that can be used to reduce the number of rows displayed in the list to those that correspond to the text entered in the search area. The search/filtering is carried out in the Session and Process name columns.
 
@@ -44,7 +44,7 @@ The activity of the process is the percentage of time that 4D Server has devoted
 - Number of the process (as returned by the [`New process`](https://doc.4d.com/4dv19/help/command/en/page317.html) command for example). El número de proceso es el número asignado en el servidor. In the case of a global process, this number may be different from that assigned on the client machine.
 - Estado actual del proceso,
 - Tiempo de ejecución (en segundos) del proceso desde su creación,
-- Percentage of time that 4D Server has devoted to this process (ratio).
+- Porcentaje de tiempo que 4D Server ha dedicado a este proceso (ratio).
 
 ## Tipo del proceso
 

@@ -54,7 +54,7 @@ Repeat
     {break}  
     {continue} Until(Boolean_Expression)
 ```
-A outra diferença com um loop `Repeat... Until` é que o loop continua até que a expressão seja TRUE.
+A `Repeat...Until` loop is similar to a [While...End while](flow-control.md#whileend-while) loop, except that it tests the Boolean expression after the loop rather than before. Until</code> é que o loop continua até que a expressão seja TRUE.
 
 Um loop `Repeat... Until` é similar a um loop [While... End while](flow-control#whileend-while), exceto que comprova a expressão booleana depois do loop  e não antes.
 
@@ -395,7 +395,7 @@ Se quiser trocar os nomes para maiúsculas no objeto a seguir:
     "age": 20
 }
 ```
-You can write:
+Você pode escrever:
 
 ```4d
  For each(property;vObject)
@@ -419,14 +419,14 @@ Pode definir limites para a iteração usando os parâmetros opcionais inicio e 
 **Nota:**os parâmetros *inicio* e *fim* só podem ser utilizados em iterações através de coleções e seleções de entidades (são ignoradas nas propriedades de objetos).
 
 - No parâmetro *begin*, passe l posilçao do elemento em *Expression* na que se iniciará a iteração (se inclui *begin*).
-- In the *end* parameter, you can also pass the element position in *Expression* at which to stop the iteration (*end* is excluded).
+- No *parâmetro* final, você também pode passar a posição do elemento na *Expressão* a qual vai parar a iteração (*end* é excluído).
 
 Se omitir *end* ou se *fim* for maior que o número de elementos em *Expression*, os elementos são iteragids de *begin* até o último elemento (incluído). Se os parâmetros *inicio* e*fim* forem valores positivos, representam posições reais de elementos em *Expression*. Se *begin* for um valor negativo, é recalculado como `begin:=begin+Expression size` (é considerado como o deslocamento offset desde o final de *Expression*). Se o valor calculado for negativo, *inicio* toma o valor 0. **Nota:** mesmo se inicio for negativo, a iteração continua sendo realizada na ordem normal. Se *fim* for um  valor negativo, se recalcula como `fim:=fim+tamanho da expressão`
 
 Por exemplo:
-- a collection contains 10 elements (numbered from 0 to 9)
-- begin=-4 -> begin=-4+10=6 -> iteration starts at the 6th element (#5)
-- end=-2 -> end=-2+10=8 -> iteration stops before the 8th element (#7), i.e. at the 7th element.
+- uma coleção contém 10 elementos (numerada de 0 a 9)
+- begin=-4 -> begin=-4+10=6 -> iteração começa no sexto elemento (#5)
+- end=-2 -> end=-2+10=8 -> iteração para antes do oitavo elemento (#7), ou seja, no sétimo elemento.
 
 #### Exemplo
 
@@ -445,14 +445,14 @@ Por exemplo:
   //$col2=[1,2,3,"a","b","c","d"]
 ```
 
-### Until and While conditions
+### Condições Until e While
 
 Pode controlar a execução de `For each... End for each` adicionando uma condição `Until` ou uma condição `While` ao loop. Quando uma instrução `Until(condição)` estiver associada ao loop, a iteração vai parar logo que a condição seja avaliada como `True`, mas no caso de uma instrução `While(condición)`, a iteração para quando a condição for avaliada, pela primeira vez, como `False`.
 
 Pode passar qualquer uma das duas palavras chave em função das suas necessidades:
 
-- The `Until` condition is tested at the end of each iteration, so if the *Expression* is not empty or null, the loop will be executed at least once.
-- The `While` condition is tested at the beginning of each iteration, so according to the condition result, the loop may not be executed at all.
+- A condição `Until` é testada no final de cada iteração, portanto, se a *Expressão* não for vazia ou nula, o loop será executado pelo menos uma vez.
+- A condição `While` é testada no início de cada iteração, então de acordo com o resultado da condição, o loop não poderá ser executado de forma alguma.
 
 #### Exemplo
 
@@ -460,13 +460,13 @@ Pode passar qualquer uma das duas palavras chave em função das suas necessidad
  $colNum:=New collection(1;2;3;4;5;6;7;8;9;10)
 
  $total:=0
- For each($num;$colNum)While($total<30) //tested at the beginning
+ For each($num;$colNum)While($total<30) //testado no começo
     $total:=$total+$num
  End for each
  ALERT(String($total)) //$total = 36 (1+2+3+4+5+6+7+8)
 
  $total:=1000
- For each($num;$colNum)Until($total>30) //tested at the end
+ For each($num;$colNum)Until($total>30) //testado no final
     $total:=$total+$num
  End for each
  ALERT(String($total)) //$total = 1001 (1000+1)
