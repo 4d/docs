@@ -33,8 +33,8 @@ The HTML login page:
 
 <div id="demo">
 	<FORM name="myForm">
-Email: <INPUT TYPE=TEXT NAME=userId VALUE=""><BR>
-Password: <INPUT TYPE=TEXT NAME=password VALUE=""><BR>
+Email: <INPUT TYPE=TEXT NAME=userId VALUE=""><br/>
+Password: <INPUT TYPE=TEXT NAME=password VALUE=""><br/>
 <button type="button" onclick="onClick()">
 Login
 </button>

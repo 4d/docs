@@ -10,8 +10,8 @@ A collection is initialized with:
 
 ||
 |---|
-|[<!-- INCLUDE #_command_.New collection.Syntax -->](#new-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #_command_.New collection.Summary -->|
-|[<!-- INCLUDE #_command_.New shared collection.Syntax -->](#new-shared-collection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #_command_.New shared collection.Summary -->|
+|[<!-- INCLUDE #_command_.New collection.Syntax -->](#new-collection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #_command_.New collection.Summary -->|
+|[<!-- INCLUDE #_command_.New shared collection.Syntax -->](#new-shared-collection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #_command_.New shared collection.Summary -->|
 
 
 ### Example 
@@ -27,45 +27,45 @@ A collection is initialized with:
 
 ||
 |---|
-|[<!-- INCLUDE #collection.average().Syntax -->](#average)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.average().Summary -->|
-|[<!-- INCLUDE #collection.clear().Syntax -->](#clear)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.clear().Summary --> |
-|[<!-- INCLUDE #collection.combine().Syntax -->](#combine)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.combine().Summary --> |
-|[<!-- INCLUDE #collection.concat().Syntax -->](#concat)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.concat().Summary -->|
-|[<!-- INCLUDE #collection.copy().Syntax -->](#copy)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.copy().Summary -->|
-|[<!-- INCLUDE #collection.count().Syntax -->](#count)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.count().Summary -->|
-|[<!-- INCLUDE #collection.countValues().Syntax -->](#countvalues)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.countValues().Summary -->|
-|[<!-- INCLUDE #collection.distinct().Syntax -->](#distinct)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.distinct().Summary -->|
-|[<!-- INCLUDE #collection.equal().Syntax -->](#equal)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.equal().Summary -->|
-|[<!-- INCLUDE #collection.every().Syntax -->](#every)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.every().Summary -->|
-|[<!-- INCLUDE #collection.extract().Syntax -->](#extract)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.extract().Summary -->|
-|[<!-- INCLUDE #collection.fill().Syntax -->](#fill)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.fill().Summary -->|
-|[<!-- INCLUDE #collection.filter().Syntax -->](#filter)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.filter().Summary -->|
-|[<!-- INCLUDE #collection.find().Syntax -->](#find)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.find().Summary -->|
-|[<!-- INCLUDE #collection.findIndex().Syntax -->](#find)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.findIndex().Summary -->|
-|[<!-- INCLUDE #collection.indexOf().Syntax -->](#indexof)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.indexOf().Summary -->|
-|[<!-- INCLUDE #collection.indices().Syntax -->](#indices)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.indices().Summary -->|
-|[<!-- INCLUDE #collection.insert().Syntax -->](#insert)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.insert().Summary -->|
-|[<!-- INCLUDE #collection.join().Syntax -->](#join)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.join().Summary -->|
-|[<!-- INCLUDE #collection.lastIndexOf().Syntax -->](#lastindexof)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.lastIndexOf().Summary -->|
-|[<!-- INCLUDE #collection.length.Syntax -->](#length)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.length.Summary -->|
-|[<!-- INCLUDE #collection.map().Syntax -->](#map)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.map().Summary -->|
-|[<!-- INCLUDE #collection.max().Syntax -->](#max)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.max().Summary -->|
-|[<!-- INCLUDE #collection.min().Syntax -->](#min)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.min().Summary -->|
-|[<!-- INCLUDE #collection.orderBy().Syntax -->](#orderby)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.orderBy().Summary -->|
-|[<!-- INCLUDE #collection.orderByMethod().Syntax -->](#orderbymethod)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.orderByMethod().Summary -->|
-|[<!-- INCLUDE #collection.pop().Syntax -->](#pop)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.pop().Summary -->|
-|[<!-- INCLUDE #collection.push().Syntax -->](#push)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.push().Summary -->|
-|[<!-- INCLUDE #collection.query().Syntax -->](#query)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.query().Summary -->|
-|[<!-- INCLUDE #collection.reduce().Syntax -->](#reduce)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.reduce().Summary -->|
-|[<!-- INCLUDE #collection.remove().Syntax -->](#remove)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.remove().Summary -->|
-|[<!-- INCLUDE #collection.resize().Syntax -->](#resize)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.resize().Summary -->|
-|[<!-- INCLUDE #collection.reverse().Syntax -->](#reverse)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.reverse().Summary -->|
-|[<!-- INCLUDE #collection.shift().Syntax -->](#shift)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.shift().Summary -->|
-|[<!-- INCLUDE #collection.slice().Syntax -->](#slice)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.slice().Summary -->|
-|[<!-- INCLUDE #collection.some().Syntax -->](#some)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.some().Summary -->|
-|[<!-- INCLUDE #collection.sort().Syntax -->](#sort)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.sort().Summary -->|
-|[<!-- INCLUDE #collection.sum().Syntax -->](#sum)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.sum().Summary -->|
-|[<!-- INCLUDE #collection.unshift().Syntax -->](#unshift)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.unshift().Summary -->|
+|[<!-- INCLUDE #collection.average().Syntax -->](#average)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.average().Summary -->|
+|[<!-- INCLUDE #collection.clear().Syntax -->](#clear)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.clear().Summary --> |
+|[<!-- INCLUDE #collection.combine().Syntax -->](#combine)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.combine().Summary --> |
+|[<!-- INCLUDE #collection.concat().Syntax -->](#concat)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.concat().Summary -->|
+|[<!-- INCLUDE #collection.copy().Syntax -->](#copy)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.copy().Summary -->|
+|[<!-- INCLUDE #collection.count().Syntax -->](#count)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.count().Summary -->|
+|[<!-- INCLUDE #collection.countValues().Syntax -->](#countvalues)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.countValues().Summary -->|
+|[<!-- INCLUDE #collection.distinct().Syntax -->](#distinct)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.distinct().Summary -->|
+|[<!-- INCLUDE #collection.equal().Syntax -->](#equal)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.equal().Summary -->|
+|[<!-- INCLUDE #collection.every().Syntax -->](#every)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.every().Summary -->|
+|[<!-- INCLUDE #collection.extract().Syntax -->](#extract)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.extract().Summary -->|
+|[<!-- INCLUDE #collection.fill().Syntax -->](#fill)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.fill().Summary -->|
+|[<!-- INCLUDE #collection.filter().Syntax -->](#filter)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.filter().Summary -->|
+|[<!-- INCLUDE #collection.find().Syntax -->](#find)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.find().Summary -->|
+|[<!-- INCLUDE #collection.findIndex().Syntax -->](#find)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.findIndex().Summary -->|
+|[<!-- INCLUDE #collection.indexOf().Syntax -->](#indexof)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.indexOf().Summary -->|
+|[<!-- INCLUDE #collection.indices().Syntax -->](#indices)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.indices().Summary -->|
+|[<!-- INCLUDE #collection.insert().Syntax -->](#insert)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.insert().Summary -->|
+|[<!-- INCLUDE #collection.join().Syntax -->](#join)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.join().Summary -->|
+|[<!-- INCLUDE #collection.lastIndexOf().Syntax -->](#lastindexof)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.lastIndexOf().Summary -->|
+|[<!-- INCLUDE #collection.length.Syntax -->](#length)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.length.Summary -->|
+|[<!-- INCLUDE #collection.map().Syntax -->](#map)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.map().Summary -->|
+|[<!-- INCLUDE #collection.max().Syntax -->](#max)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.max().Summary -->|
+|[<!-- INCLUDE #collection.min().Syntax -->](#min)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.min().Summary -->|
+|[<!-- INCLUDE #collection.orderBy().Syntax -->](#orderby)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.orderBy().Summary -->|
+|[<!-- INCLUDE #collection.orderByMethod().Syntax -->](#orderbymethod)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.orderByMethod().Summary -->|
+|[<!-- INCLUDE #collection.pop().Syntax -->](#pop)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.pop().Summary -->|
+|[<!-- INCLUDE #collection.push().Syntax -->](#push)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.push().Summary -->|
+|[<!-- INCLUDE #collection.query().Syntax -->](#query)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.query().Summary -->|
+|[<!-- INCLUDE #collection.reduce().Syntax -->](#reduce)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.reduce().Summary -->|
+|[<!-- INCLUDE #collection.remove().Syntax -->](#remove)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.remove().Summary -->|
+|[<!-- INCLUDE #collection.resize().Syntax -->](#resize)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.resize().Summary -->|
+|[<!-- INCLUDE #collection.reverse().Syntax -->](#reverse)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.reverse().Summary -->|
+|[<!-- INCLUDE #collection.shift().Syntax -->](#shift)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.shift().Summary -->|
+|[<!-- INCLUDE #collection.slice().Syntax -->](#slice)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.slice().Summary -->|
+|[<!-- INCLUDE #collection.some().Syntax -->](#some)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.some().Summary -->|
+|[<!-- INCLUDE #collection.sort().Syntax -->](#sort)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.sort().Summary -->|
+|[<!-- INCLUDE #collection.sum().Syntax -->](#sum)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.sum().Summary -->|
+|[<!-- INCLUDE #collection.unshift().Syntax -->](#unshift)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.unshift().Summary -->|
 
 
 
@@ -79,8 +79,7 @@ A collection is initialized with:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value|Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer|->|Collection's value(s)|
-|Result|Collection|<-|New collection|
-<!-- END REF -->
+|Result|Collection|<-|New collection|<!-- END REF -->
 
 
 #### Description
@@ -164,8 +163,7 @@ You create a new collection and then add a new element:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value|Number, Text, Date, Time, Boolean, Shared object, Shared collection|->|Shared collection's value(s)|
-|Result|Collection|<-|New shared collection|
-<!-- END REF -->
+|Result|Collection|<-|New shared collection|<!-- END REF -->
 
 
 #### Description
@@ -229,8 +227,7 @@ You can pass any number of values of the following supported types:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |propertyPath|Text|->|Object property path to be used for calculation|
-|Result|Real, Undefined|<-|Arithmetic mean (average) of collection values|
-<!-- END REF -->
+|Result|Real, Undefined|<-|Arithmetic mean (average) of collection values|<!-- END REF -->
 
 
 
@@ -289,8 +286,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 <!-- REF #collection.clear().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Collection|<-|Original collection with all elements removed|
-<!-- END REF -->
+|Result|Collection|<-|Original collection with all elements removed|<!-- END REF -->
 
 
 #### Description
@@ -332,8 +328,7 @@ $vSize:=$col.length //$vSize=0
 |---------|--- |:---:|------|
 |col2|Collection|->|Collection to combine|
 |index|Integer|->|Position to which insert elements to combine in collection (default=length+1)|
-|Result|Collection|<-|Original collection containing combined element(s)|
-<!-- END REF -->
+|Result|Collection|<-|Original collection containing combined element(s)|<!-- END REF -->
 
 
 #### Description
@@ -382,8 +377,7 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |value|Number, Text, Object, Collection, Date, Time, Boolean, Picture|->|Value(s) to concatenate. If *value* is a collection, all collection elements are added to the original collection|
-|Result|Collection|<-|New collection with value(s) added to the original collection|
-<!-- END REF -->
+|Result|Collection|<-|New collection with value(s) added to the original collection|<!-- END REF -->
 
 
 #### Description
@@ -422,17 +416,16 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 </details>
 
 <!-- REF #collection.copy().Syntax -->
-**.copy**() : Collection<br>**.copy**( *option* : Integer ) : Collection<br>**.copy**( *option* : Integer ; *groupWithCol* : Collection ) : Collection<br>**.copy**( *option* : Integer ; *groupWithObj* : Object ) : Collection<!-- END REF -->
+**.copy**() : Collection<br/>**.copy**( *option* : Integer ) : Collection<br/>**.copy**( *option* : Integer ; *groupWithCol* : Collection ) : Collection<br/>**.copy**( *option* : Integer ; *groupWithObj* : Object ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.copy().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|option|Integer|->|`ck resolve pointers`: resolve pointers before copying,<br>`ck shared`: return a shared collection|
+|option|Integer|->|`ck resolve pointers`: resolve pointers before copying,<br/>`ck shared`: return a shared collection|
 |groupWithCol |Collection|->|Shared collection to be grouped with the resulting collection|
 |groupWithObj |Object|->|Shared object to be grouped with the resulting collection|
-|Result|Collection|<-|Deep copy of the original collection|
-<!-- END REF -->
+|Result|Collection|<-|Deep copy of the original collection|<!-- END REF -->
 
 
 #### Description
@@ -555,8 +548,7 @@ This example illustrates the use of the `ck resolve pointers` option:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |propertyPath|Text|->|Object property path to be used for calculation|
-|Result|Real|<-|Number of elements in the collection|
-<!-- END REF -->
+|Result|Real|<-|Number of elements in the collection|<!-- END REF -->
 
 
 #### Description
@@ -604,8 +596,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter. I
 |---------|--- |:---:|------|
 |value|Text, Number, Boolean, Date, Object, Collection|->|Value to count|
 |propertyPath|Text|->|Object property path to be used for calculation|
-|Result|Real|<-|Number of occurrences of the value	|
-<!-- END REF -->
+|Result|Real|<-|Number of occurrences of the value	|<!-- END REF -->
 
 
 #### Description
@@ -678,7 +669,7 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 </details>
 
 <!-- REF #collection.distinct().Syntax -->
-**.distinct**( {*option* : Integer} ) : Collection<br>**.distinct**( *propertyPath* : Text {; *option* : Integer } ) : Collection<!-- END REF -->
+**.distinct**( {*option* : Integer} ) : Collection<br/>**.distinct**( *propertyPath* : Text {; *option* : Integer } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.distinct().Params -->
@@ -686,8 +677,7 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 |---------|--- |:---:|------|
 |option|Integer|->|`ck diacritical`: diacritical evaluation ("A" # "a" for example)|
 |propertyPath|Text|->|Path of attribute whose distinct values you want to get|
-|Result|Collection|<-|New collection with only distinct values|
-<!-- END REF -->
+|Result|Collection|<-|New collection with only distinct values|<!-- END REF -->
 
 
 #### Description
@@ -741,8 +731,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter to
 |---------|--- |:---:|------|
 |collection2|Collection|->|Collection to compare|
 |option|Integer|->|`ck diacritical`: diacritical evaluation ("A" # "a" for example)
-|Result|Boolean|<-|True if collections are identical, false otherwise|
-<!-- END REF -->
+|Result|Boolean|<-|True if collections are identical, false otherwise|<!-- END REF -->
 
 
 #### Description
@@ -792,7 +781,7 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 </details>
 
 <!-- REF #collection.every().Syntax -->
-**.every**( { *startFrom* : Integer ; } *formula* : 4D.Function { ;*...param* : any } ) : Boolean<br>**.every**( { *startFrom* : Integer ; } *methodName* : Text { ;*...param* : any } ) : Boolean<!-- END REF -->
+**.every**( { *startFrom* : Integer ; } *formula* : 4D.Function { ;*...param* : any } ) : Boolean<br/>**.every**( { *startFrom* : Integer ; } *methodName* : Text { ;*...param* : any } ) : Boolean<!-- END REF -->
 
 <!-- REF #collection.every().Params -->
 |Parameter|Type||Description|
@@ -801,8 +790,7 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 |formula|4D.Function|->|Formula object|
 |methodName|Text|->|Name of a method|
 |param|Mixed|->|Parameter(s) to pass to *formula* or *methodName*|
-|Result|Boolean|<-|True if all elements successfully passed the test|
-<!-- END REF -->
+|Result|Boolean|<-|True if all elements successfully passed the test|<!-- END REF -->
 
 
 #### Description
@@ -886,7 +874,7 @@ $b:=$c.every($f;Is real) //$b=false
 </details>
 
 <!-- REF #collection.extract().Syntax -->
-**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathN* : Text ;... *targetPathN* : Text } ) : Collection<!-- END REF -->
+**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathN* : Text ;... *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.extract().Params -->
@@ -895,8 +883,7 @@ $b:=$c.every($f;Is real) //$b=false
 |propertyPath|Text|->|Object property path whose values must be extracted to the new collection|
 |targetpath|Text|->|Target property path or property name|
 |option|Integer|->|`ck keep null`: include null properties in the returned collection (ignored by default). Parameter ignored if *targetPath* passed.|
-|Result|Collection|<-|New collection containing extracted values|
-<!-- END REF -->
+|Result|Collection|<-|New collection containing extracted values|<!-- END REF -->
 
 
 #### Description
@@ -962,7 +949,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 </details>
 
 <!-- REF #collection.fill().Syntax -->
-**.fill**( *value* : any ) : Collection<br>**.fill**( *value* : any ;  *startFrom*  : Integer { ; *end* : Integer } ) : Collection<!-- END REF -->
+**.fill**( *value* : any ) : Collection<br/>**.fill**( *value* : any ;  *startFrom*  : Integer { ; *end* : Integer } ) : Collection<!-- END REF -->
 
 
 
@@ -972,8 +959,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 |value|number, Text, Collection, Object, Date, Boolean|->|Filling value|
 |startFrom|Integer|->|Start index (included)|
 |end|Integer|->|End index (not included)|
-|Result|collection|<-|Original collection with filled values|
-<!-- END REF -->
+|Result|collection|<-|Original collection with filled values|<!-- END REF -->
 
 
 #### Description
@@ -1021,7 +1007,7 @@ In case of inconsistency, the following rules apply:
 </details>
 
 <!-- REF #collection.filter().Syntax -->
-**.filter**( *formula* : 4D.Function { ; *...param* : any } ) : Collection<br>**.filter**( *methodName* : Text { ; *...param* : any } ) : Collection<!-- END REF -->
+**.filter**( *formula* : 4D.Function { ; *...param* : any } ) : Collection<br/>**.filter**( *methodName* : Text { ; *...param* : any } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.filter().Params -->
@@ -1030,8 +1016,7 @@ In case of inconsistency, the following rules apply:
 |formula|4D.Function|->|Formula object|
 |methodName|Text|->|Name of a method|
 |param|any|->|Parameter(s) to pass to *formula* or *methodName*|
-|Result|Collection|<-|New collection containing filtered elements (shallow copy)|
-<!-- END REF -->
+|Result|Collection|<-|New collection containing filtered elements (shallow copy)|<!-- END REF -->
 
 
 #### Description
@@ -1104,7 +1089,7 @@ You want to filter elements according to their value type:
 </details>
 
 <!-- REF #collection.find().Syntax -->
-**.find**( { *startFrom* : Integer ; }  *formula* : 4D.Function { ; *...param* : any } ) : any<br>**.find**( { *startFrom* : Integer ; }  *methodName* : Text { ; *...param* : any } ) : any<!-- END REF -->
+**.find**( { *startFrom* : Integer ; }  *formula* : 4D.Function { ; *...param* : any } ) : any<br/>**.find**( { *startFrom* : Integer ; }  *methodName* : Text { ; *...param* : any } ) : any<!-- END REF -->
 
 
 <!-- REF #collection.find().Params -->
@@ -1114,8 +1099,7 @@ You want to filter elements according to their value type:
 |formula|4D.Function|->|Formula object|
 |methodName|Text|->|Name of a method|
 |param|any|->|Parameter(s) to pass to *formula* or *methodName*|
-|Result|any |<-|First value found, or Undefined if not found|
-<!-- END REF -->
+|Result|any |<-|First value found, or Undefined if not found|<!-- END REF -->
 
 
 #### Description
@@ -1196,7 +1180,7 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 
 
 <!-- REF #collection.findIndex().Syntax -->
-**.findIndex**( { *startFrom* : Integer ; }  *formula* : 4D.Function { ; *...param* : any } ) : Integer<br>**.findIndex**( { *startFrom* : Integer ; }  *methodName* : Text { ; *...param* : any } ) : Integer<!-- END REF -->
+**.findIndex**( { *startFrom* : Integer ; }  *formula* : 4D.Function { ; *...param* : any } ) : Integer<br/>**.findIndex**( { *startFrom* : Integer ; }  *methodName* : Text { ; *...param* : any } ) : Integer<!-- END REF -->
 
 
 <!-- REF #collection.findIndex().Params -->
@@ -1206,8 +1190,7 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 |formula|4D.Function|->|Formula object|
 |methodName|Text|->|Name of a method|
 |param|any|->|Parameter(s) to pass to *formula* or *methodName*|
-|Result|Integer |<-|Index of first value found, or -1 if not found|
-<!-- END REF -->
+|Result|Integer |<-|Index of first value found, or -1 if not found|<!-- END REF -->
 
 
 #### Description
@@ -1281,8 +1264,7 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 |---------|--- |:---:|------|
 |toSearch|expression|->|Expression to search in the collection|
 |startFrom|Integer|->|Index to start the search at|
-|Result|Integer |<-|Index of the first occurrence of toSearch in the collection, -1 if not found|
-<!-- END REF -->
+|Result|Integer |<-|Index of the first occurrence of toSearch in the collection, -1 if not found|<!-- END REF -->
 
 
 #### Description
@@ -1351,8 +1333,7 @@ Optionally, you can pass the index of collection from which to start the search 
 |---------|--- |:---:|------|
 |queryString|Text|->|Search criteria|
 |value|any|->|Value(s) to compare when using placeholder(s)|
-|Result|Collection |<-|Element index(es) matching queryString in the collection|
-<!-- END REF -->
+|Result|Collection |<-|Element index(es) matching queryString in the collection|<!-- END REF -->
 
 
 #### Description
@@ -1407,8 +1388,7 @@ For a detailed description of the *queryString* and *value* parameters, please r
 |---------|--- |:---:|------|
 |index|Integer|->|Where to insert the element|
 |element|any|->|Element to insert in the collection|
-|Result|Collection |<-|Original collection containing inserted element|
-<!-- END REF -->
+|Result|Collection |<-|Original collection containing inserted element|<!-- END REF -->
 
 
 #### Description
@@ -1460,8 +1440,7 @@ Any type of element accepted by a collection can be inserted, even another colle
 |---------|--- |:---:|------|
 |delimiter|Text|->|Separator to use between elements|
 |option|Integer|->|`ck ignore null or empty`: ignore null and empty strings in the result|
-|Result|Text |<-|String containing all elements of the collection, separated by delimiter|
-<!-- END REF -->
+|Result|Text |<-|String containing all elements of the collection, separated by delimiter|<!-- END REF -->
 
 
 #### Description
@@ -1505,8 +1484,7 @@ By default, null or empty elements of the collection are returned in the resulti
 |---------|--- |:---:|------|
 |toSearch|expression|->|The element that is to be searched for within the collection|
 |startFrom|Integer|->|Index to start the search at|
-|Result|Integer |<-|Index of last occurrence of toSearch in the collection, -1 if not found|
-<!-- END REF -->
+|Result|Integer |<-|Index of last occurrence of toSearch in the collection, -1 if not found|<!-- END REF -->
 
 
 #### Description
@@ -1596,7 +1574,7 @@ The `.length` property is initialized when the collection is created. Adding or 
 </details>
 
 <!-- REF #collection.map().Syntax -->
-**.map**( *formula* : 4D.Function { ; *...param* : any } ) : Collection<br>**.map**( *methodName* : Text { ; *...param* : any } ) : Collection <!-- END REF -->
+**.map**( *formula* : 4D.Function { ; *...param* : any } ) : Collection<br/>**.map**( *methodName* : Text { ; *...param* : any } ) : Collection <!-- END REF -->
 
 
 <!-- REF #collection.map().Params -->
@@ -1605,8 +1583,7 @@ The `.length` property is initialized when the collection is created. Adding or 
 |formula|4D.Function|->|Formula object|
 |methodName|Text|->|Name of a method|
 |param|any|->|Parameter(s) to pass to *formula* or *methodName*|
-|Result|Collection |<-|Collection of transformed values|
-<!-- END REF -->
+|Result|Collection |<-|Collection of transformed values|<!-- END REF -->
 
 
 #### Description
@@ -1667,8 +1644,7 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |propertyPath|Text|->|Object property path to be used for evaluation|
-|Result|Boolean, Text, Number, Collection, Object, Date |<-|Maximum value in the collection|
-<!-- END REF -->
+|Result|Boolean, Text, Number, Collection, Object, Date |<-|Maximum value in the collection|<!-- END REF -->
 
 
 #### Description
@@ -1719,8 +1695,7 @@ If the collection is empty, `.max()` returns *Undefined*.
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |propertyPath|Text|->|Object property path to be used for evaluation|
-|Result|Boolean, Text, Number, Collection, Object, Date |<-|Minimum value in the collection|
-<!-- END REF -->
+|Result|Boolean, Text, Number, Collection, Object, Date |<-|Minimum value in the collection|<!-- END REF -->
 
 
 #### Description
@@ -1764,7 +1739,7 @@ If the collection is empty, `.min()` returns *Undefined*.
 </details>
 
 <!-- REF #collection.orderBy().Syntax -->
-**.orderBy**( ) : Collection<br>**.orderBy**( *pathStrings* : Text ) : Collection<br>**.orderBy**( *pathObjects* : Collection ) : Collection<br>**.orderBy**( *ascOrDesc* : Integer ) : Collection <!-- END REF -->
+**.orderBy**( ) : Collection<br/>**.orderBy**( *pathStrings* : Text ) : Collection<br/>**.orderBy**( *pathObjects* : Collection ) : Collection<br/>**.orderBy**( *ascOrDesc* : Integer ) : Collection <!-- END REF -->
 
 
 <!-- REF #collection.orderBy().Params -->
@@ -1773,8 +1748,7 @@ If the collection is empty, `.min()` returns *Undefined*.
 |pathStrings|Text|->|Property path(s) on which to order the collection|
 |pathObjects|Collection|->|Collection of criteria objects|
 |ascOrDesc|Integer|->|`ck ascending` or `ck descending` (scalar values)|
-|Result|Collection |<-|Ordered copy of the collection (shallow copy)|
-<!-- END REF -->
+|Result|Collection |<-|Ordered copy of the collection (shallow copy)|<!-- END REF -->
 
 
 #### Description
@@ -1906,7 +1880,7 @@ Ordering with a property path:
 </details>
 
 <!-- REF #collection.orderByMethod().Syntax -->
-**.orderByMethod**( *formula* : 4D.Function { ; ...*extraParam* : expression } ) : Collection<br>**.orderByMethod**( *methodName* : Text { ; ...*extraParam* : expression } ) : Collection<!-- END REF -->
+**.orderByMethod**( *formula* : 4D.Function { ; ...*extraParam* : expression } ) : Collection<br/>**.orderByMethod**( *methodName* : Text { ; ...*extraParam* : expression } ) : Collection<!-- END REF -->
 
 
 <!-- REF #collection.orderByMethod().Params -->
@@ -1915,8 +1889,7 @@ Ordering with a property path:
 |formula|4D.Function|->|Formula object|
 |methodName|Text|->|Name of a method|
 |extraParam|any|->|Parameter(s) to pass |
-|Result|Collection |<-|Sorted copy of the collection (shallow copy)|
-<!-- END REF -->
+|Result|Collection |<-|Sorted copy of the collection (shallow copy)|<!-- END REF -->
 
 
 #### Description
@@ -2017,8 +1990,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 <!-- REF #collection.pop().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|any |<-|Last element of collection|
-<!-- END REF -->
+|Result|any |<-|Last element of collection|<!-- END REF -->
 
 
 #### Description
@@ -2066,8 +2038,7 @@ When applied to an empty collection, `.pop()` returns ***undefined***.
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |element|Mixed|->|Element(s) to add to the collection|
-|Result|Collection |<-|Original collection containing added elements|
-<!-- END REF -->
+|Result|Collection |<-|Original collection containing added elements|<!-- END REF -->
 
 
 #### Description
@@ -2120,7 +2091,7 @@ You want to sort the resutling collection:
 </details>
 
 <!-- REF #collection.query().Syntax -->
-**.query**( *queryString* : Text ; *...value* : any ) : Collection<br>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection <!-- END REF -->
+**.query**( *queryString* : Text ; *...value* : any ) : Collection<br/>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection <!-- END REF -->
 
 
 <!-- REF #collection.query().Params -->
@@ -2129,8 +2100,7 @@ You want to sort the resutling collection:
 |queryString|Text|->|Search criteria|
 |value|Mixed|->|Value(s) to compare when using placeholder(s)|
 |querySettings|Object|->|Query options: parameters, attributes|
-|Result|Collection |<-|Element(s) matching queryString in the collection|
-<!-- END REF -->
+|Result|Collection |<-|Element(s) matching queryString in the collection|<!-- END REF -->
 
 
 #### Description
@@ -2231,7 +2201,7 @@ More examples of queries can be found in the `dataClass.query()` page.
 </details>
 
 <!-- REF #collection.reduce().Syntax -->
-**.reduce**( *formula* : 4D.Function { ; *initValue* : any { ; *...param* : expression }} ) : any<br>**.reduce**( *methodName* : Text { ; *initValue* : any { ; *...param* : expression }} ) : any <!-- END REF -->
+**.reduce**( *formula* : 4D.Function { ; *initValue* : any { ; *...param* : expression }} ) : any<br/>**.reduce**( *methodName* : Text { ; *initValue* : any { ; *...param* : expression }} ) : any <!-- END REF -->
 
 
 <!-- REF #collection.reduce().Params -->
@@ -2241,8 +2211,7 @@ More examples of queries can be found in the `dataClass.query()` page.
 |methodName|Text|->|Name of a method|
 |initValue |Text, Number, Object, Collection, Date, Boolean|->|Value to use as the first argument to the first call of *formula* or *methodName*|
 |param |expression|->|Parameter(s) to pass|
-|Result|Text, Number, Object, Collection, Date, Boolean |<-|Result of the accumulator value|
-<!-- END REF -->
+|Result|Text, Number, Object, Collection, Date, Boolean |<-|Result of the accumulator value|<!-- END REF -->
 
 
 #### Description
@@ -2329,8 +2298,7 @@ With the following ***Flatten*** method:
 |---------|--- |:---:|------|
 |index |Integer|->|Element at which to start removal|
 |howMany |Integer|->|Number of elements to remove, or 1 element if omitted|
-|Result|Collection|<-|Original collection without removed element(s)|
-<!-- END REF -->
+|Result|Collection|<-|Original collection without removed element(s)|<!-- END REF -->
 
 
 #### Description
@@ -2393,8 +2361,7 @@ If you try to remove an element from an empty collection, the method does nothin
 |---------|--- |:---:|------|
 |size |Integer|->|New size of the collection|
 |defaultValue |Number, Text, Object, Collection, Date, Boolean|->|Default value to fill new elements|
-|Result|Collection|<-|Resized original collection|
-<!-- END REF -->
+|Result|Collection|<-|Resized original collection|<!-- END REF -->
 
 
 #### Description
@@ -2449,8 +2416,7 @@ By default, new elements are filled will **null** values. You can specify the va
 <!-- REF #collection.reverse().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Collection|<-|Inverted copy of the collection|
-<!-- END REF -->
+|Result|Collection|<-|Inverted copy of the collection|<!-- END REF -->
 
 
 #### Description
@@ -2489,8 +2455,7 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 <!-- REF #collection.shift().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|any|<-|First element of collection|
-<!-- END REF -->
+|Result|any|<-|First element of collection|<!-- END REF -->
 
 
 #### Description
@@ -2538,8 +2503,7 @@ If the collection is empty, this method does nothing.
 |---------|--- |:---:|------|
 |startFrom |Integer |->|Start index (included)|
 |end |Integer |->|End index (not included)|
-|Result|Collection|<-|New collection containing sliced elements (shallow copy)|
-<!-- END REF -->
+|Result|Collection|<-|New collection containing sliced elements (shallow copy)|<!-- END REF -->
 
 
 #### Description
@@ -2584,7 +2548,7 @@ The returned collection contains the element specified by *startFrom* and all su
 </details>
 
 <!-- REF #collection.some().Syntax -->
-**.some**( { *startFrom* : Integer ; } *formula* : 4D.Function { ; *...param* : any } ) : Boolean<br>**.some**( { *startFrom* : Integer ; } *methodName* : Text { ; *...param* : any } ) : Boolean<!-- END REF -->
+**.some**( { *startFrom* : Integer ; } *formula* : 4D.Function { ; *...param* : any } ) : Boolean<br/>**.some**( { *startFrom* : Integer ; } *methodName* : Text { ; *...param* : any } ) : Boolean<!-- END REF -->
 
 
 <!-- REF #collection.some().Params -->
@@ -2594,8 +2558,7 @@ The returned collection contains the element specified by *startFrom* and all su
 |formula|4D.Function|->|Formula object|
 |methodName|Text|->|Name of a method|
 |param |Mixed |->|Parameter(s) to pass|
-|Result|Boolean|<-|True if at least one element successfully passed the test|
-<!-- END REF -->
+|Result|Boolean|<-|True if at least one element successfully passed the test|<!-- END REF -->
 
 
 #### Description
@@ -2668,7 +2631,7 @@ You want to know if at least one collection value is >0.
 </details>
 
 <!-- REF #collection.sort().Syntax -->
-**.sort**( *formula* : 4D.Function { ; *...extraParam* : any } ) : Collection<br>**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
+**.sort**( *formula* : 4D.Function { ; *...extraParam* : any } ) : Collection<br/>**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
 
 
 <!-- REF #collection.sort().Params -->
@@ -2677,8 +2640,7 @@ You want to know if at least one collection value is >0.
 |formula|4D.Function|->|Formula object|
 |methodName|Text|->|Name of a method|
 |extraParam |any |->|Parameter(s) for the method|
-|Result|Collection|<-|Original collection sorted|
-<!-- END REF -->
+|Result|Collection|<-|Original collection sorted|<!-- END REF -->
 
 
 #### Description
@@ -2760,8 +2722,7 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //alphabetical sor
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |propertyPath |Text |->|Object property path to be used for calculation|
-|Result|Real|<-|Sum of collection values|
-<!-- END REF -->
+|Result|Real|<-|Sum of collection values|<!-- END REF -->
 
 
 #### Description
@@ -2823,8 +2784,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 |---------|--- |:---:|------|
 |value |Text, Number, Object, Collection, Date |->|Value(s) to insert at the beginning of the collection|
 |Result|Real|<-|Collection containing added element(s)	
-|
-<!-- END REF -->
+|<!-- END REF -->
 
 
 #### Description
@@ -2850,4 +2810,4 @@ If several values are passed, they are inserted all at once, which means that th
 <!-- END REF -->
 
 
-<style> h2 { background: #d9ebff;}</style>
+

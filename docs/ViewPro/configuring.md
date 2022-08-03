@@ -203,7 +203,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 To create your own date and time patterns, in your current localization, you can use combinations of the following codes:
  
 
-||Code<br>(not case-sensitive)|	Description|Example|
+||Code<br/>(not case-sensitive)|	Description|Example|
 |---|---|---|---|
 |Date|		|	|(January 1, 2019)|
 ||m	|Month number without leading zero|	1|
@@ -312,7 +312,7 @@ The following special characters allow the automatic addition or formatting of i
 |N	|Page count|	printInfo.headerLeft:="There are &N pages."|	There are 10 pages. |
 |D	|Current date (yyyy/mm/dd format)|	printInfo.headerLeft:="It is &D."|	It is 2015/6/19. |
 |T	|Current time|	printInfo.headerLeft:="It is &T."|	It is 16:30:36.|
-|G	|Image|	printInfo.headerLeftImage:=smiley<br>printInfo.headerLeft:="&G"	|![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
+|G	|Image|	printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G"	|![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
 |S	|Strikethrough|	printInfo.headerLeft:="&SThis is text."	|~~This is text.~~|
 |U	|Underline	|printInfo.headerLeft:="&UThis is text."|	<ins>This is text.</ins>|
 |B|	Bold|	printInfo.headerLeft:="&BThis is text."	|**This is text.**|

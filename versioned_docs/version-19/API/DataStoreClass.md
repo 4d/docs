@@ -43,8 +43,7 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 |Parameter|Type||Description|
 |---|---|---|---|
 |localID|Text|->|Local ID of the remote datastore to return|
-|Result |cs.DataStore|<-|Reference to the datastore|
-<!-- END REF -->
+|Result |cs.DataStore|<-|Reference to the datastore|<!-- END REF -->
 
 #### Description
 
@@ -115,8 +114,7 @@ Using the main datastore on the 4D database:
 |---|---|---|---|
 |connectionInfo|Object|->|Connection properties used to reach the remote datastore|
 |localID |Text|->|Id to assign to the opened datastore on the local application (mandatory)|
-|Result |cs.DataStore|<-|Datastore object|
-<!-- END REF -->
+|Result |cs.DataStore|<-|Datastore object|<!-- END REF -->
 
 #### Description
 
@@ -251,8 +249,7 @@ Each dataclass in a datastore is available as a property of the [DataStore objec
 <!-- REF #DataStoreClass.cancelTransaction().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
-<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
 
 #### Description
 
@@ -285,8 +282,7 @@ See example for the [`.startTransaction()`](#starttransaction) function.
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Object|<-|Information about the encryption of the current datastore and of each table|
-<!-- END REF -->
+|Result|Object|<-|Information about the encryption of the current datastore and of each table|<!-- END REF -->
 
 #### Description
 
@@ -357,8 +353,7 @@ You want to know the number of encrypted tables in the current data file:
 <!-- REF #DataStoreClass.getInfo().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Object|<-|Datastore properties|
-<!-- END REF -->
+|Result|Object|<-|Datastore properties|<!-- END REF -->
 
 #### Description
 
@@ -425,8 +420,7 @@ On a remote datastore:
 <!-- REF #DataStoreClass.getRequestLog().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Collection|<-|Collection of objects, where each object describes a request|
-<!-- END REF -->
+|Result|Collection|<-|Collection of objects, where each object describes a request|<!-- END REF -->
 
 #### Description
 
@@ -463,8 +457,7 @@ See Example 2 of [`.startRequestLog()`](#startrequestlog).
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if the Data Explorer access is disabled, False if it is enabled (default)|
-<!-- END REF -->
+|Result|Boolean|<-|True if the Data Explorer access is disabled, False if it is enabled (default)|<!-- END REF -->
 
 #### Description
 
@@ -495,8 +488,7 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
-<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
 
 #### Description
 
@@ -530,8 +522,7 @@ On the other hand, using this method in new projects created in 4D v18 R5 and hi
 |---|---|---|---|
 |curPassPhrase |Text|->|Current encryption passphrase|
 |curDataKey |Object|->|Current data encryption key|
-|Result|Object|<-|Result of the encryption key matching|
-<!-- END REF -->
+|Result|Object|<-|Result of the encryption key matching|<!-- END REF -->
 
 #### Description
 
@@ -601,8 +592,7 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|status|Boolean|->|True to disable Data Explorer access to data on the `webAdmin` port, False (default) to grant access|
-<!-- END REF -->
+|status|Boolean|->|True to disable Data Explorer access to data on the `webAdmin` port, False (default) to grant access|<!-- END REF -->
 
 #### Description
 
@@ -644,8 +634,7 @@ You create a *protectDataFile* project method to call before deployments for exa
 |Parameter|Type||Description|
 |---|---|---|---|
 |file |4D.File|->|File object|
-|reqNum |Integer|->|Number of requests to keep in memory|
-<!-- END REF -->
+|reqNum |Integer|->|Number of requests to keep in memory|<!-- END REF -->
 
 #### Description
 
@@ -720,8 +709,7 @@ You want to log ORDA client requests in memory:
 <!-- REF #DataStoreClass.startTransaction().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-||||Does not require any parameters|
-<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
 
 #### Description
 
@@ -783,8 +771,7 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-||||Does not require any parameters|
-<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
 
 #### Description
 
@@ -815,8 +802,7 @@ See examples for [`.startRequestLog()`](#startrequestlog).
 <!-- REF #DataStoreClass.validateTransaction().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-||||Does not require any parameters|
-<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
 
 #### Description
 

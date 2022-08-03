@@ -189,10 +189,10 @@ You can view and use a web inspector within web areas in your forms or in offscr
 
 To display the Web inspector, you can either execute the `WA OPEN WEB INSPECTOR` command, or use the context menu of the web area. 
 
-- **Execute the `WA OPEN WEB INSPECTOR` command**<br>
+- **Execute the `WA OPEN WEB INSPECTOR` command**<br/>
 	This command can be used directly with onscreen (form object) and offscreen web areas. 
 
-- **Use the web area context menu**<br>
+- **Use the web area context menu**<br/>
 	This feature can only be used with onscreen web areas and requires that the following conditions are met:
 	- the [context menu](properties_Entry.md#context-menu) for the web area is enabled
 	- the use of the inspector is expressly enabled in the area by means of the following statement:

@@ -12,14 +12,14 @@ For detailed information about the session implementation, please refer to the [
 
 ||
 |---|
-|[<!-- INCLUDE #SessionClass.clearPrivileges().Syntax -->](#clearprivileges)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.clearPrivileges().Summary -->|
-|[<!-- INCLUDE #SessionClass.expirationDate.Syntax -->](#expirationdate)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.expirationDate.Summary -->|
-|[<!-- INCLUDE #SessionClass.hasPrivilege().Syntax -->](#hasprivilege)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.hasPrivilege().Summary -->|
-|[<!-- INCLUDE #SessionClass.idleTimeout.Syntax -->](#idletimeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.idleTimeout.Summary -->|
-|[<!-- INCLUDE #SessionClass.isGuest().Syntax -->](#isguest)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.isGuest().Summary -->|
-|[<!-- INCLUDE #SessionClass.setPrivileges().Syntax -->](#setprivileges)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.setPrivileges().Summary -->|
-|[<!-- INCLUDE #SessionClass.storage.Syntax -->](#storage)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.storage.Summary -->|
-|[<!-- INCLUDE #SessionClass.userName.Syntax -->](#username)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.userName.Summary -->|
+|[<!-- INCLUDE #SessionClass.clearPrivileges().Syntax -->](#clearprivileges)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.clearPrivileges().Summary -->|
+|[<!-- INCLUDE #SessionClass.expirationDate.Syntax -->](#expirationdate)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.expirationDate.Summary -->|
+|[<!-- INCLUDE #SessionClass.hasPrivilege().Syntax -->](#hasprivilege)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.hasPrivilege().Summary -->|
+|[<!-- INCLUDE #SessionClass.idleTimeout.Syntax -->](#idletimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.idleTimeout.Summary -->|
+|[<!-- INCLUDE #SessionClass.isGuest().Syntax -->](#isguest)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.isGuest().Summary -->|
+|[<!-- INCLUDE #SessionClass.setPrivileges().Syntax -->](#setprivileges)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.setPrivileges().Summary -->|
+|[<!-- INCLUDE #SessionClass.storage.Syntax -->](#storage)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.storage.Summary -->|
+|[<!-- INCLUDE #SessionClass.userName.Syntax -->](#username)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.userName.Summary -->|
 
 
 
@@ -39,8 +39,7 @@ For detailed information about the session implementation, please refer to the [
 <!-- REF #_command_.Session.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Session|<-|Session object|
-<!-- END REF -->
+|Result|4D.Session|<-|Session object|<!-- END REF -->
 
 
 #### Description
@@ -98,8 +97,7 @@ IP:port/4DACTION/action_Session
 <!-- REF #SessionClass.clearPrivileges().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
-<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
 
 
 #### Description
@@ -168,8 +166,7 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |privilege|Text|<-|Name of the privilege to verify|
-|Result|Boolean|<-|True if session has *privilege*, False otherwise|
-<!-- END REF -->
+|Result|Boolean|<-|True if session has *privilege*, False otherwise|<!-- END REF -->
 
 
 #### Description
@@ -250,8 +247,7 @@ End if
 <!-- REF #SessionClass.isGuest().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if session is a Guest one, False otherwise|
-<!-- END REF -->
+|Result|Boolean|<-|True if session is a Guest one, False otherwise|<!-- END REF -->
 
 #### Description
 
@@ -283,15 +279,14 @@ End if
 </details>
 
 <!-- REF #SessionClass.setPrivileges().Syntax -->
-**.setPrivileges**( *privilege* : Text )<br>**.setPrivileges**( *privileges* : Collection )<br>**.setPrivileges**( *settings* : Object )<!-- END REF -->
+**.setPrivileges**( *privilege* : Text )<br/>**.setPrivileges**( *privileges* : Collection )<br/>**.setPrivileges**( *settings* : Object )<!-- END REF -->
 
 <!-- REF #SessionClass.setPrivileges().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |privilege|Text|->|Privilege name|
 |privileges|Collection|->|Collection of privilege names|
-|settings|Object|->|Object with a "privileges" property (string or collection)|
-<!-- END REF -->
+|settings|Object|->|Object with a "privileges" property (string or collection)|<!-- END REF -->
 
 #### Description
 
@@ -405,4 +400,4 @@ This property is **read only**.
 <!-- END REF -->
 
 
-<style> h2 { background: #d9ebff;}</style>
+

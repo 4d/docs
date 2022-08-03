@@ -109,7 +109,7 @@ The $5 and $6 parameters receive the user name and password entered by the user 
 
 ## /4DACTION
 
-**/4DACTION/***MethodName*<br>
+**/4DACTION/***MethodName*<br/>
 **/4DACTION/***MethodName/Param*
 
 |Parameters|Type||Description|
@@ -184,8 +184,8 @@ Here is the HTML code that corresponds to this page:
 
 ```html
 <form action="/4daction/processForm" method=POST>
-<input type=text name=vName value=""><BR>
-<input type=checkbox name=vExact value="Word">Whole word<BR>
+<input type=text name=vName value=""><br/>
+<input type=checkbox name=vExact value="Word">Whole word<br/>
 <input type=submit name=OK value="Search">
 </FORM>
 ```
@@ -215,7 +215,7 @@ OK="Search"
  QUERY([Jockeys];[Jockeys]Name=vName)
  FIRST RECORD([Jockeys])
  While(Not(End selection([Jockeys])))
-    vLIST:=vLIST+[Jockeys]Name+" "+[Jockeys]Tel+"<BR>"
+    vLIST:=vLIST+[Jockeys]Name+" "+[Jockeys]Tel+"<br/>"
     NEXT RECORD([Jockeys])
  End while
  WEB SEND FILE("results.htm") //Send the list to the results.htm form

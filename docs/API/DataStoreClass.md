@@ -12,22 +12,22 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 
 ||
 |---|
-|[<!-- INCLUDE #DataStoreClass.cancelTransaction().Syntax -->](#canceltransaction)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.cancelTransaction().Summary -->|
-|[<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Syntax -->](#clearallremotecontexts)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Summary -->|
-|[<!-- INCLUDE DataStoreClass.dataclassName.Syntax -->](#dataclassname)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataStoreClass.dataclassName.Summary --> |
-|[<!-- INCLUDE #DataStoreClass.encryptionStatus().Syntax -->](#encryptionstatus)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.encryptionStatus().Summary --> |
-|[<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Syntax -->](#getallremotecontexts)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Summary --> |
-|[<!-- INCLUDE #DataStoreClass.getInfo().Syntax -->](#getinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getInfo().Summary --> |
-|[<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Syntax -->](#getremotecontextinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Summary --> |
-|[<!-- INCLUDE #DataStoreClass.getRequestLog().Syntax -->](#getrequestlog)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRequestLog().Summary --> |
-|[<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Syntax -->](#makeselectionsalterable)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Summary --> |
-|[<!-- INCLUDE #DataStoreClass.provideDataKey().Syntax -->](#providedatakey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.provideDataKey().Summary --> |
-|[<!-- INCLUDE #DataStoreClass.setAdminProtection().Syntax -->](#setadminprotection)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setAdminProtection().Summary --> |
-|[<!-- INCLUDE #DataStoreClass.setRemoteContextInfo().Syntax -->](#setremotecontextinfo)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setRemoteContextInfo().Summary --> |
-|[<!-- INCLUDE #DataStoreClass.startRequestLog().Syntax -->](#startrequestlog)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startRequestLog().Summary --> |
-|[<!-- INCLUDE #DataStoreClass.startTransaction().Syntax -->](#starttransaction)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startTransaction().Summary --> |
-|[<!-- INCLUDE #DataStoreClass.stopRequestLog().Syntax -->](#stoprequestlog)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.stopRequestLog().Summary --> |
-|[<!-- INCLUDE #DataStoreClass.validateTransaction().Syntax -->](#validatetransaction)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.validateTransaction().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.cancelTransaction().Syntax -->](#canceltransaction)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.cancelTransaction().Summary -->|
+|[<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Syntax -->](#clearallremotecontexts)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.clearAllRemoteContexts().Summary -->|
+|[<!-- INCLUDE DataStoreClass.dataclassName.Syntax -->](#dataclassname)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE DataStoreClass.dataclassName.Summary --> |
+|[<!-- INCLUDE #DataStoreClass.encryptionStatus().Syntax -->](#encryptionstatus)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.encryptionStatus().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Syntax -->](#getallremotecontexts)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getAllRemoteContexts().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.getInfo().Syntax -->](#getinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getInfo().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Syntax -->](#getremotecontextinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRemoteContextInfo().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.getRequestLog().Syntax -->](#getrequestlog)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.getRequestLog().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Syntax -->](#makeselectionsalterable)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.makeSelectionsAlterable().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.provideDataKey().Syntax -->](#providedatakey)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.provideDataKey().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.setAdminProtection().Syntax -->](#setadminprotection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setAdminProtection().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.setRemoteContextInfo().Syntax -->](#setremotecontextinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.setRemoteContextInfo().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.startRequestLog().Syntax -->](#startrequestlog)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startRequestLog().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.startTransaction().Syntax -->](#starttransaction)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.startTransaction().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.stopRequestLog().Syntax -->](#stoprequestlog)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.stopRequestLog().Summary --> |
+|[<!-- INCLUDE #DataStoreClass.validateTransaction().Syntax -->](#validatetransaction)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #DataStoreClass.validateTransaction().Summary --> |
 
 
 
@@ -49,8 +49,7 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 |Parameter|Type||Description|
 |---|---|---|---|
 |localID|Text|->|Local ID of the remote datastore to return|
-|Result |cs.DataStore|<-|Reference to the datastore|
-<!-- END REF -->
+|Result |cs.DataStore|<-|Reference to the datastore|<!-- END REF -->
 
 
 #### Description
@@ -120,8 +119,7 @@ Using the main datastore on the 4D database:
 |---|---|---|---|
 |connectionInfo|Object|->|Connection properties used to reach the remote datastore|
 |localID |Text|->|Id to assign to the opened datastore on the local application (mandatory)|
-|Result |cs.DataStore|<-|Datastore object|
-<!-- END REF -->
+|Result |cs.DataStore|<-|Datastore object|<!-- END REF -->
 
 
 #### Description
@@ -262,8 +260,7 @@ Each dataclass in a datastore is available as a property of the [DataStore objec
 <!-- REF #DataStoreClass.cancelTransaction().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
-<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
 
 
 #### Description
@@ -298,8 +295,7 @@ See example for the [`.startTransaction()`](#starttransaction) function.
 <!-- REF #DataStoreClass.clearAllRemoteContexts().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
-<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
 
 #### Description
 
@@ -329,8 +325,7 @@ In such cases, you can use `.clearAllRemoteContexts()` to clear your contexts an
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Object|<-|Information about the encryption of the current datastore and of each table|
-<!-- END REF -->
+|Result|Object|<-|Information about the encryption of the current datastore and of each table|<!-- END REF -->
 
 
 #### Description
@@ -401,8 +396,7 @@ You want to know the number of encrypted tables in the current data file:
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Object|<-|Collection of optimization context objects|
-<!-- END REF -->
+|Result|Object|<-|Collection of optimization context objects|<!-- END REF -->
 
 > **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
 
@@ -475,8 +469,7 @@ $info:=$ds.getAllRemoteContexts()
 <!-- REF #DataStoreClass.getInfo().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Object|<-|Datastore properties|
-<!-- END REF -->
+|Result|Object|<-|Datastore properties|<!-- END REF -->
 
 #### Description
 
@@ -545,8 +538,7 @@ On a remote datastore:
 |Parameter|Type||Description|
 |---|---|---|---|
 |contextName|Text|->|Name of the context|
-|Result|Object|<-|Description of the optimization context|
-<!-- END REF -->
+|Result|Object|<-|Description of the optimization context|<!-- END REF -->
 
 > **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
 
@@ -593,8 +585,7 @@ See the example from the [.setRemoteContextInfo()](#example-1-3) section.
 <!-- REF #DataStoreClass.getRequestLog().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Collection|<-|Collection of objects, where each object describes a request|
-<!-- END REF -->
+|Result|Collection|<-|Collection of objects, where each object describes a request|<!-- END REF -->
 
 
 #### Description
@@ -632,8 +623,7 @@ See Example 2 of [`.startRequestLog()`](#startrequestlog).
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if the Data Explorer access is disabled, False if it is enabled (default)|
-<!-- END REF -->
+|Result|Boolean|<-|True if the Data Explorer access is disabled, False if it is enabled (default)|<!-- END REF -->
 
 
 #### Description
@@ -666,8 +656,7 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
-<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
 
 
 #### Description
@@ -696,7 +685,7 @@ On the other hand, using this method in new projects created in 4D v18 R5 and hi
 </details>
 
 <!-- REF #DataStoreClass.provideDataKey().Syntax -->
-**.provideDataKey**( *curPassPhrase* : Text ) : Object <br>**.provideDataKey**( *curDataKey* : Object ) : Object <!-- END REF -->
+**.provideDataKey**( *curPassPhrase* : Text ) : Object <br/>**.provideDataKey**( *curDataKey* : Object ) : Object <!-- END REF -->
 
 
 <!-- REF #DataStoreClass.provideDataKey().Params -->
@@ -704,8 +693,7 @@ On the other hand, using this method in new projects created in 4D v18 R5 and hi
 |---|---|---|---|
 |curPassPhrase |Text|->|Current encryption passphrase|
 |curDataKey |Object|->|Current data encryption key|
-|Result|Object|<-|Result of the encryption key matching|
-<!-- END REF -->
+|Result|Object|<-|Result of the encryption key matching|<!-- END REF -->
 
 
 #### Description
@@ -780,8 +768,7 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|status|Boolean|->|True to disable Data Explorer access to data on the `webAdmin` port, False (default) to grant access|
-<!-- END REF -->
+|status|Boolean|->|True to disable Data Explorer access to data on the `webAdmin` port, False (default) to grant access|<!-- END REF -->
 
 
 #### Description
@@ -828,8 +815,7 @@ You create a *protectDataFile* project method to call before deployments for exa
 |attributes|Text|->|Attribute list separated by a comma|
 |attributesColl|Collection|->|Collection of attribute names (text)|
 |contextType|Text|->|If provided, value must be "main" or "currentItem"|
-|pageLength|Integer|->|Page length of the entity selection linked to the context (default is 80)|
-<!-- END REF -->
+|pageLength|Integer|->|Page length of the entity selection linked to the context (default is 80)|<!-- END REF -->
 
 
 > **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
@@ -946,15 +932,14 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 </details>
 
 <!-- REF #DataStoreClass.startRequestLog().Syntax -->
-**.startRequestLog**()<br>**.startRequestLog**( *file* : 4D.File )<br>**.startRequestLog**( *reqNum* : Integer )<!-- END REF -->
+**.startRequestLog**()<br/>**.startRequestLog**( *file* : 4D.File )<br/>**.startRequestLog**( *reqNum* : Integer )<!-- END REF -->
 
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
 |file |4D.File|->|File object|
-|reqNum |Integer|->|Number of requests to keep in memory|
-<!-- END REF -->
+|reqNum |Integer|->|Number of requests to keep in memory|<!-- END REF -->
 
 
 #### Description
@@ -965,11 +950,11 @@ This function must be called on a remote 4D, otherwise it does nothing. It is de
 
 The ORDA request log can be sent to a file or to memory, depending on the parameter type:
 
-*	If you passed a *file* object created with the `File` command, the log data is written in this file as a collection of objects (JSON format). Each object represents a request.<br>If the file does not already exist, it is created. Otherwise if the file already exists, the new log data is appended to it.
+*	If you passed a *file* object created with the `File` command, the log data is written in this file as a collection of objects (JSON format). Each object represents a request.<br/>If the file does not already exist, it is created. Otherwise if the file already exists, the new log data is appended to it.
 If `.startRequestLog( )` is called with a file while a logging was previously started in memory, the memory log is stopped and emptied.
 	>A \] character must be manually appended at the end of the file to perform a JSON validation
 
-*	If you passed a *reqNum* integer, the log in memory is emptied (if any) and a new log is initialized. It will keep *reqNum* requests in memory until the number is reached, in which case the oldest entries are emptied (FIFO stack).<br>If `.startRequestLog()` is called with a *reqNum* while a logging was previously started in a file, the file logging is stopped.
+*	If you passed a *reqNum* integer, the log in memory is emptied (if any) and a new log is initialized. It will keep *reqNum* requests in memory until the number is reached, in which case the oldest entries are emptied (FIFO stack).<br/>If `.startRequestLog()` is called with a *reqNum* while a logging was previously started in a file, the file logging is stopped.
 
 *	If you did not pass any parameter, the log is started in memory. If `.startRequestLog()` was previously called with a *reqNum* (before a `.stopRequestLog()`), the log data is stacked in memory until the next time the log is emptied or `.stopRequestLog()` is called.
 
@@ -1030,8 +1015,7 @@ You want to log ORDA client requests in memory:
 <!-- REF #DataStoreClass.startTransaction().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-||||Does not require any parameters|
-<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
 
 
 #### Description
@@ -1099,8 +1083,7 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-||||Does not require any parameters|
-<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
 
 
 #### Description
@@ -1134,8 +1117,7 @@ See examples for [`.startRequestLog()`](#startrequestlog).
 <!-- REF #DataStoreClass.validateTransaction().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-||||Does not require any parameters|
-<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
 
 
 #### Description
@@ -1155,4 +1137,4 @@ See example for [`.startTransaction()`](#starttransaction).
 
 
 
-<style> h2 { background: #d9ebff;}</style>
+

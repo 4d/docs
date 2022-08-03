@@ -16,10 +16,10 @@ A 4D project can start and monitor a web server for the main (host) application 
 The main 4D web server can be started in different ways:
 
 *	Using a button/menu command.
-	*	4D: **Run\>Start Web Server** menu<br>![](../assets/en/WebServer/start1.png)
-	*	4D Server: **Start HTTP server** button of the HTTP Server page<br>![](../assets/en/WebServer/start2.png)
+	*	4D: **Run\>Start Web Server** menu<br/>![](../assets/en/WebServer/start1.png)
+	*	4D Server: **Start HTTP server** button of the HTTP Server page<br/>![](../assets/en/WebServer/start2.png)
 	
-*	Automatically starting it each time the 4D application is opened. To do this, display the **Web\/Configuration** page of the Settings and select the **Launch Web Server at Startup** check box:<br>![](../assets/en/WebServer/config.png)
+*	Automatically starting it each time the 4D application is opened. To do this, display the **Web\/Configuration** page of the Settings and select the **Launch Web Server at Startup** check box:<br/>![](../assets/en/WebServer/config.png)
 	
 *	Programmatically, by calling the [`webServer.start()`](API/WebServerClass.md#start) function or `WEB START SERVER` command.
 

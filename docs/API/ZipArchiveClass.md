@@ -34,7 +34,7 @@ End if
 
 ||
 |---|
-|[<!-- INCLUDE #ZipArchiveClass.root.Syntax -->](#root)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ZipArchiveClass.root.Summary -->|
+|[<!-- INCLUDE #ZipArchiveClass.root.Syntax -->](#root)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #ZipArchiveClass.root.Summary -->|
 
 
 ## ZIP Create archive
@@ -47,7 +47,7 @@ End if
 </details>
 
 <!-- REF #_command_.ZIP Create archive.Syntax -->
-**ZIP Create archive** ( *fileToZip* : 4D.File ; *destinationFile* : 4D.File ) : Object<br>**ZIP Create archive** ( *folderToZip* : 4D.Folder ; *destinationFile* : 4D.File { ; *options* : Integer }) : Object<br>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D.File ) : Object<!-- END REF -->
+**ZIP Create archive** ( *fileToZip* : 4D.File ; *destinationFile* : 4D.File ) : Object<br/>**ZIP Create archive** ( *folderToZip* : 4D.Folder ; *destinationFile* : 4D.File { ; *options* : Integer }) : Object<br/>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D.File ) : Object<!-- END REF -->
 
 <!-- REF #_command_.ZIP Create archive.Params -->
 |Parameter|Type||Description|
@@ -57,8 +57,7 @@ End if
 |zipStructure|Object|->|File or Folder object to compress|
 |destinationFile|4D.File|->|Destination file for the archive|
 |options|Integer|->|*folderToZip* option: `ZIP Without enclosing folder`|
-|Result|Object|<-|Status object|
-<!-- END REF -->
+|Result|Object|<-|Status object|<!-- END REF -->
 
 
 #### Description
@@ -210,8 +209,7 @@ $err:=ZIP Create archive($zip; $destination)
 |---------|--- |:---:|------|
 |zipFile|4D.File|->|Zip archive file|
 |password|Text|->|ZIP archive password if any|
-|Result|4D.ZipArchive|<-|Archive object|
-<!-- END REF -->
+|Result|4D.ZipArchive|<-|Archive object|<!-- END REF -->
 
 
 #### Description
@@ -288,4 +286,4 @@ The `root` folder and its contents can be manipulated with the [ZipFile](ZipFile
 This property is **read-only**. 
 
 
-<style> h2 { background: #d9ebff;}</style>
+

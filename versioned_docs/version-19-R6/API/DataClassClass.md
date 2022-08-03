@@ -111,8 +111,7 @@ Considering the following table properties:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |settings|Object|->|Build option: context|
-|Result|4D.EntitySelection|<-|References on all entities related to the Dataclass|
-<!-- END REF -->
+|Result|4D.EntitySelection|<-|References on all entities related to the Dataclass|<!-- END REF -->
 
 #### Description
 
@@ -158,8 +157,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 <!-- REF #DataStoreClass.clearRemoteCache().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
-<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
 
 #### Description
 
@@ -213,8 +211,7 @@ $ds.Persons.clearRemoteCache()
 |---------|--- |:---:|------|
 |objectCol |Collection|->|Collection of objects to be mapped with entities|
 |settings  |Object|->|Build option: context|
-|Result|4D.EntitySelection|<-|Entity selection filled from the collection|
-<!-- END REF -->
+|Result|4D.EntitySelection|<-|Entity selection filled from the collection|<!-- END REF -->
 
 #### Description
 
@@ -412,8 +409,7 @@ In this example, the first entity will be created and saved but the second will 
 |---------|--- |:---:|------|
 |primaryKey |Integer OR Text|->|Primary key value of the entity to retrieve|
 |settings  |Object|->|Build option: context|
-|Result|4D.Entity|<-|Entity matching the designated primary key|
-<!-- END REF -->
+|Result|4D.Entity|<-|Entity matching the designated primary key|<!-- END REF -->
 
 #### Description
 
@@ -485,8 +481,7 @@ This example illustrates the use of the *context* property:
 <!-- REF #DataClassClass.getCount().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|result|Integer|<-|Number of entities in the dataclass|
-<!-- END REF -->
+|result|Integer|<-|Number of entities in the dataclass|<!-- END REF -->
 
 #### Description
 
@@ -524,8 +519,7 @@ $number:=$ds.Persons.getCount()
 <!-- REF #DataClassClass.getDataStore().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|cs.DataStore|<-|Datastore of the dataclass|
-<!-- END REF -->
+|Result|cs.DataStore|<-|Datastore of the dataclass|<!-- END REF -->
 
 #### Description
 
@@ -577,8 +571,7 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 <!-- REF #DataClassClass.getInfo().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Object|<-|Information on the dataclass|
-<!-- END REF -->
+|Result|Object|<-|Information on the dataclass|<!-- END REF -->
 
 #### Description
 
@@ -652,8 +645,7 @@ The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|result|Object|<-|Object describing the contents of the ORDA cache for the dataclass.|
-<!-- END REF -->
+|result|Object|<-|Object describing the contents of the ORDA cache for the dataclass.|<!-- END REF -->
 
 > **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
 
@@ -739,8 +731,7 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 <!-- REF #DataClassClass.new().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|4D.Entity|<-|New entity matching the Dataclass|
-<!-- END REF -->
+|Result|4D.Entity|<-|New entity matching the Dataclass|<!-- END REF -->
 
 #### Description
 
@@ -785,8 +776,7 @@ This example creates a new entity in the "Log" Dataclass and records information
 |Parameter|Type||Description|
 |---|---|---|---|
 |keepOrder |Integer |-> |`dk keep ordered`: creates an ordered entity selection,<br/>`dk non ordered`: creates an unordered entity selection (default if omitted) |
-|Result|4D.EntitySelection|<-|New blank entity selection related to the dataclass|
-<!-- END REF -->
+|Result|4D.EntitySelection|<-|New blank entity selection related to the dataclass|<!-- END REF -->
 
 #### Description
 
@@ -831,8 +821,7 @@ When created, the entity selection does not contain any entities (`mySelection.l
 |formula |Object |-> |Search criteria as formula object|
 |value|any|->|Value(s) to use for indexed placeholder(s)|
 |querySettings|Object|->|Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan|
-|Result|4D.EntitySelection|<-|New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula*|
-<!-- END REF -->
+|Result|4D.EntitySelection|<-|New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula*|<!-- END REF -->
 
 #### Description
 
@@ -1432,8 +1421,7 @@ We want to disallow formulas, for example when the user enters their query:
 <!-- REF #DataClassClass.setRemoteCacheSettings().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|settings|Object|->|Object that sets the timeout and maximum size of the ORDA cache for the dataclass.|
-<!-- END REF -->
+|settings|Object|->|Object that sets the timeout and maximum size of the ORDA cache for the dataclass.|<!-- END REF -->
 
 > **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
 

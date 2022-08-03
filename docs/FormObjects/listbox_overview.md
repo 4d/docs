@@ -212,7 +212,7 @@ Supported properties depend on the list box type.
 |---|---|---|
 |On After Edit|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
 |On After Keystroke|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
-|On After Sort|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[headerName](#additional-properties)</li>|*Compound formulas cannot be sorted. <br>(e.g., This.firstName + This.lastName)*|
+|On After Sort|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[headerName](#additional-properties)</li>|*Compound formulas cannot be sorted. <br/>(e.g., This.firstName + This.lastName)*|
 |On Alternative Click|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>|*Arrays list boxes only*|
 |On Before Data Entry|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
 |On Before Keystroke|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
@@ -293,7 +293,7 @@ You can set standard properties (text, background color, etc.) for each column o
 |---|---|---|
 |On After Edit|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
 |On After Keystroke|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
-|On After Sort|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[headerName](#additional-properties)</li>|*Compound formulas cannot be sorted. <br>(e.g., This.firstName + This.lastName)*|
+|On After Sort|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[headerName](#additional-properties)</li>|*Compound formulas cannot be sorted. <br/>(e.g., This.firstName + This.lastName)*|
 |On Alternative Click|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>|*Arrays list boxes only*|
 |On Before Data Entry|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
 |On Before Keystroke|<li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>||
@@ -1050,7 +1050,7 @@ The behavior attribute provides variations to the regular representation of valu
 
 |Attribute	|Available value(s)|	valueType(s)|	Description|
 |---|---|---|---|
-|behavior|	threeStates	|integer|	Represents a numeric value as a three-states check box.<br> 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled|
+|behavior|	threeStates	|integer|	Represents a numeric value as a three-states check box.<br/> 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled|
 
 ```4d
  C_OBJECT($ob3)

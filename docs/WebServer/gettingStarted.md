@@ -77,7 +77,7 @@ The most simple solution to display data is to call a [template page](templates.
 <body>
 <!--#4DCODE ALL RECORDS([Friends])-->
 <!--#4DLOOP [Friends]-->
-<!--#4DTEXT [Friends]lastName--> <!--#4DTEXT [Friends]firstName--><BR>
+<!--#4DTEXT [Friends]lastName--> <!--#4DTEXT [Friends]firstName--><br/>
 <!--#4DENDLOOP-->
 </body>
 </html>

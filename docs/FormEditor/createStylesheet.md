@@ -222,8 +222,8 @@ Available media features:
 
 Available media feature expressions:
 
-*	**light**<br>For using a light scheme
-*	**dark**<br>For using a dark scheme
+*	**light**<br/>For using a light scheme
+*	**dark**<br/>For using a dark scheme
 
 > Color schemes are only supported on macOS.
 

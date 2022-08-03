@@ -131,8 +131,8 @@ http://localhost:8044/authenticate.shtml
 <html>
 <body bgcolor="#ffffff">
 <FORM ACTION="/4DACTION/authenticate" METHOD=POST>
-	UserId: <INPUT TYPE=TEXT NAME=userId VALUE=""><BR>
-	Password: <INPUT TYPE=TEXT NAME=password VALUE=""><BR>
+	UserId: <INPUT TYPE=TEXT NAME=userId VALUE=""><br/>
+	Password: <INPUT TYPE=TEXT NAME=password VALUE=""><br/>
 <INPUT TYPE=SUBMIT NAME=OK VALUE="Log In">
 </FORM>
 </body>

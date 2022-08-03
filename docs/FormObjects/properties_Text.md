@@ -25,7 +25,7 @@ Sets the selected text to appear darker and heavier.
 
 You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command. 
 
->This is normal text.<br>
+>This is normal text.<br/>
 **This is bold text.**
 
 #### JSON Grammar
@@ -46,7 +46,7 @@ Sets the selected text to slant slightly to the right.
 
 You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT-STYLE.301-4128244.en.html) command. 
 
->This is normal text.<br>
+>This is normal text.<br/>
 *This is text in italics.*
 
 #### JSON Grammar
@@ -66,7 +66,7 @@ You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4
 ## Underline
 Sets the text to have a line running beneath it.
 
->This is normal text.<br>
+>This is normal text.<br/>
 >This is <span style="text-decoration:underline">underlined</span> text.
 
 #### JSON Grammar
@@ -135,8 +135,8 @@ There are two types of font family names:
 
 You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html) command.  
 
-><span style="font-family:Times New Roman; font-size:20pt"> This is Times New Roman font.</span><br>
-<span style="font-family:Calibri; font-size:20pt"> This is Calibri font.</span><br>
+><span style="font-family:Times New Roman; font-size:20pt"> This is Times New Roman font.</span><br/>
+<span style="font-family:Calibri; font-size:20pt"> This is Calibri font.</span><br/>
 <span style="font-family:Papyrus; font-size:20pt"> This is Papyrus font.</span>
 
 #### JSON Grammar

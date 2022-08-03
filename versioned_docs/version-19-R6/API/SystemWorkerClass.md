@@ -263,8 +263,7 @@ Function _createFile($title : Text; $textBody : Text)
 <!-- REF #SystemWorkerClass.closeInput().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
-<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
 
 #### Description
 
@@ -417,8 +416,7 @@ This property is **read-only**.
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |message|Text|->|Text to write on the input stream (stdin) of the external process|
-|messageBLOB|Blob|->|Bytes write on the input stream|
-<!-- END REF -->
+|messageBLOB|Blob|->|Bytes write on the input stream|<!-- END REF -->
 
 #### Description
 
@@ -464,8 +462,7 @@ The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary 
 <!-- REF #SystemWorkerClass.terminate().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
-<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
 
 #### Description
 
@@ -519,8 +516,7 @@ This property is **read-only**.
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |timeout|Real|->|Waiting time (in seconds)|
-|Result|4D.SystemWorker|<-|SystemWorker object|
-<!-- END REF -->
+|Result|4D.SystemWorker|<-|SystemWorker object|<!-- END REF -->
 
 #### Description
 

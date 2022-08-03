@@ -440,8 +440,7 @@ This property is **read-only**.
 |destinationFolder |4D.Folder |->|Destination folder|
 |newName|Text|->|Name for the copy|
 |overwrite|Integer|->|`fk overwrite` to replace existing elements|
-|Result|4D.Folder|<-|Copied file or folder|
-<!-- END REF -->
+|Result|4D.Folder|<-|Copied file or folder|<!-- END REF -->
 
 
 #### Description
@@ -494,8 +493,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 |Parameter|Type||Description|
 |---|----|---|---|
 |path|Text|->|Relative POSIX file pathname|
-|Result|4D.File|<-|`File` object (null if invalid path)|
-<!-- END REF -->
+|Result|4D.File|<-|`File` object (null if invalid path)|<!-- END REF -->
 
 #### Description
 
@@ -534,8 +532,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 |Parameter|Type||Description|
 |---|----|---|---|
 |options|Integer|->|File list options|
-|Result|Collection|<-|Collection of children file objects|
-<!-- END REF -->
+|Result|Collection|<-|Collection of children file objects|<!-- END REF -->
 
 #### Description
 
@@ -596,8 +593,7 @@ You want to get all files that are not invisible in the Documents folder:
 |Parameter|Type||Description|
 |---|----|---|---|
 |path|Text|->|Relative POSIX file pathname|
-|Result|4D.Folder|<-|Created folder object (null if invalid *path*)|
-<!-- END REF -->
+|Result|4D.Folder|<-|Created folder object (null if invalid *path*)|<!-- END REF -->
 
 #### Description
 
@@ -636,8 +632,7 @@ A `Folder` object or null if *path* is invalid.
 |Parameter|Type||Description|
 |---|----|---|---|
 |options|Integer|->|Folder list options|
-|Result|Collection|<-|Collection of children folder objects|
-<!-- END REF -->
+|Result|Collection|<-|Collection of children folder objects|<!-- END REF -->
 
 #### Description
 
@@ -683,8 +678,7 @@ You want the collection of all folders and subfolders of the database folder:
 |Parameter|Type||Description|
 |---|----|---|---|
 |size|Integer|->|Side length for the returned picture (pixels)|
-|Result|Picture|<-|Icon|
-<!-- END REF -->
+|Result|Picture|<-|Icon|<!-- END REF -->
 
 
 #### Description

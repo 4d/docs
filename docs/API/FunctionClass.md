@@ -100,9 +100,9 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 
 ||
 |---|
-|[<!-- INCLUDE #FunctionClass.apply().Syntax -->](#apply)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FunctionClass.apply().Summary -->|
-|[<!-- INCLUDE #FunctionClass.call().Syntax -->](#call)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FunctionClass.call().Summary --> |
-|[<!-- INCLUDE #FunctionClass.source.Syntax -->](#source)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FunctionClass.source.Summary --> |
+|[<!-- INCLUDE #FunctionClass.apply().Syntax -->](#apply)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FunctionClass.apply().Summary -->|
+|[<!-- INCLUDE #FunctionClass.call().Syntax -->](#call)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FunctionClass.call().Summary --> |
+|[<!-- INCLUDE #FunctionClass.source.Syntax -->](#source)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FunctionClass.source.Summary --> |
 
 
 
@@ -123,8 +123,7 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |formulaExp|Expression|->|Formula to be returned as object|
-|Result|4D.Function|<-|Native function encapsulating the formula|
-<!-- END REF -->
+|Result|4D.Function|<-|Native function encapsulating the formula|<!-- END REF -->
 
 
 #### Description
@@ -258,8 +257,7 @@ Calling a formula using object notation:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |formulaString|Text|->|Text formula to be returned as object|
-|Result|4D.Function|<-|Native object encapsulating the formula|
-<!-- END REF -->
+|Result|4D.Function|<-|Native object encapsulating the formula|<!-- END REF -->
 
 
 #### Description
@@ -308,15 +306,14 @@ The following code will create a dialog accepting a formula in text format:
 </details>
 
 <!-- REF #FunctionClass.apply().Syntax -->
-**.apply**() : any<br>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any<!-- END REF -->
+**.apply**() : any<br/>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.apply().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |thisObj|Object|->|Object to be returned by the This command in the formula|
 |formulaParams |Collection|->|Collection of values to be passed as $1...$n when `formula` is executed|
-|Result|any|<-|Value from formula execution|
-<!-- END REF -->
+|Result|any|<-|Value from formula execution|<!-- END REF -->
 
 
 #### Description
@@ -369,15 +366,14 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 </details>
 
 <!-- REF #FunctionClass.call().Syntax -->
-**.call**() : any<br>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
+**.call**() : any<br/>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.call().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
 |thisObj|Object|->|Object to be returned by the This command in the formula|
 |params |any|->|Value(s) to be passed as $1...$n when formula is executed|
-|Result|any|<-|Value from formula execution|
-<!-- END REF -->
+|Result|any|<-|Value from formula execution|<!-- END REF -->
 
 
 #### Description
@@ -442,4 +438,4 @@ This property is **read-only**.
 
 <!-- END REF -->
 
-<style> h2 { background: #d9ebff;}</style>
+

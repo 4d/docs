@@ -81,8 +81,7 @@ HTTPRequest objects provide the following properties and functions:
 |---------|--- |:---:|------|
 |url|Text|->|URL to which to send the request|
 |options|Object|->|Request configuration properties|
-|Result|4D.HTTPRequest|<-|New HTTPRequest object|
-<!-- END REF -->
+|Result|4D.HTTPRequest|<-|New HTTPRequest object|<!-- END REF -->
 
 #### Description
 
@@ -297,8 +296,7 @@ The `.returnResponseBody` property contains <!-- REF #4D.HTTPRequest.returnRespo
 <!-- REF #4D.HTTPRequest.terminate().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
-<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
 
 #### Description
 
@@ -354,8 +352,7 @@ The `.url` property contains <!-- REF #4D.HTTPRequest.url.Summary -->the URL of 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |time|Real|->|Maximum time in seconds to wait for the response|
-|Result|4D.HTTPRequest|<-|HTTPRequest object|
-<!-- END REF -->
+|Result|4D.HTTPRequest|<-|HTTPRequest object|<!-- END REF -->
 
 #### Description
 

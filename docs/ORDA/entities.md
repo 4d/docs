@@ -356,11 +356,11 @@ This automatic mechanism is based on the concept of "optimistic locking" which i
 
 The following diagram illustrates optimistic locking:
 
-1. Two processes load the same entity.<br><br>![](../assets/en/ORDA/optimisticLock1.png)
+1. Two processes load the same entity.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
 
-2. The first process modifies the entity and validates the change. The `entity.save( )` method is called. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.<br><br>![](../assets/en/ORDA/optimisticLock2.png)
+2. The first process modifies the entity and validates the change. The `entity.save( )` method is called. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
 
-3. The second process also modifies the loaded entity and validates its changes. The `entity.save( )` method is called. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.<br><br>![](../assets/en/ORDA/optimisticLock3.png)
+3. The second process also modifies the loaded entity and validates its changes. The `entity.save( )` method is called. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.<br/><br/>![](../assets/en/ORDA/optimisticLock3.png)
 
 
 This can also be illustrated by the following code:
@@ -408,5 +408,5 @@ These principles are shown in the following diagram:
 
 **Transaction locks** also apply to both classic and ORDA commands. In a multiprocess or a multi-user application, a lock set within a transaction on a record by a classic command will result in preventing any other processes to lock entities related to this record (or conversely), until the transaction is validated or canceled.
 
-*	Example with a lock set by a classic command:<br><br>![](../assets/en/ORDA/concurrent2.png)
-*	Example with a lock set by an ORDA function:<br><br>![](../assets/en/ORDA/concurrent3.png)
+*	Example with a lock set by a classic command:<br/><br/>![](../assets/en/ORDA/concurrent2.png)
+*	Example with a lock set by an ORDA function:<br/><br/>![](../assets/en/ORDA/concurrent3.png)

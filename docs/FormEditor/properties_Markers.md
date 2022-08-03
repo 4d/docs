@@ -25,7 +25,7 @@ You can make Break areas smaller or larger. You can use a Break area to display 
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|markerBreak|integer &#x7c; integer collection|Break marker position or collection of break marker positions in pixels.<br>Minimum value: 0|
+|markerBreak|integer &#x7c; integer collection|Break marker position or collection of break marker positions in pixels.<br/>Minimum value: 0|
 
 ---
 
@@ -84,7 +84,7 @@ The form can contains [additional header areas](#additional-areas) to be associa
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|markerHeader|integer &#x7c; integer collection|Header marker position or collection of header marker positions in pixels.<br>Minimum value: 0|
+|markerHeader|integer &#x7c; integer collection|Header marker position or collection of header marker positions in pixels.<br/>Minimum value: 0|
 
 
 

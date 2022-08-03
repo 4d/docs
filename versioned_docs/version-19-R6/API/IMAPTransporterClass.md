@@ -59,8 +59,7 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |server|Object|->|Mail server information|
-|Result|4D.IMAPTransporter|<-|[IMAP transporter object](#imap-transporter-object)|
-<!-- END REF -->
+|Result|4D.IMAPTransporter|<-|[IMAP transporter object](#imap-transporter-object)|<!-- END REF -->
 
 #### Description
 
@@ -117,8 +116,7 @@ End if
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |server|Object|->|Mail server information|
-|Result|4D.IMAPTransporter|<-|[IMAP transporter object](#imap-transporter-object)|
-<!-- END REF -->
+|Result|4D.IMAPTransporter|<-|[IMAP transporter object](#imap-transporter-object)|<!-- END REF -->
 
 #### Description
 
@@ -145,8 +143,7 @@ The `4D.IMAPTransporter.new()` function <!-- REF #4D.IMAPTransporter.new().Summa
 |---------|--- |:---:|------|
 |msgIDs|Collection|->|Collection of strings: Message unique IDs (text)<br/>Text: Unique ID of a message<br/>Longint (IMAP all): All messages in the selected mailbox|
 |keywords|Object|->|Keyword flags to add|
-|Result|Object|<-|Status of the addFlags operation|
-<!-- END REF -->
+|Result|Object|<-|Status of the addFlags operation|<!-- END REF -->
 
 #### Description
 
@@ -233,8 +230,7 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 |mailObj|Object|->|Email object|
 |destinationBox|Text|->|Mailbox to receive Email object|
 |options|Object|->|Object containing charset info |
-|Result|Object|<-|Status of the append operation|
-<!-- END REF -->
+|Result|Object|<-|Status of the append operation|<!-- END REF -->
 
 #### Description
 
@@ -346,8 +342,7 @@ The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.che
 |msgsIDs|Collection|->|Collection of message unique IDs (strings)|
 |allMsgs|Integer|->|`IMAP all`: All messages in the selected mailbox|
 |destinationBox|Text|->|Mailbox to receive copied messages|
-|Result|Object|<-|Status of the copy operation|
-<!-- END REF -->
+|Result|Object|<-|Status of the copy operation|<!-- END REF -->
 
 #### Description
 
@@ -444,8 +439,7 @@ To copy all messages in the current mailbox:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |name|Text|->|Name of the new mailbox|
-|Result|Object|<-|Status of the mailbox creation operation|
-<!-- END REF -->
+|Result|Object|<-|Status of the mailbox creation operation|<!-- END REF -->
 
 #### Description
 
@@ -521,8 +515,7 @@ End if
 |---------|--- |:---:|------|
 |msgsIDs|Collection|->|Collection of message unique IDs (strings)|
 |allMsgs|Integer|->|`IMAP all`: All messages in the selected mailbox|
-|Result|Object|<-|Status of the delete operation|
-<!-- END REF -->
+|Result|Object|<-|Status of the delete operation|<!-- END REF -->
 
 #### Description
 
@@ -619,8 +612,7 @@ To delete all messages in the current mailbox:
 |---------|--- |:---:|------|
 |name|Text|->|Name of the mailbox to delete|
 
-|Result|Object|<-|Status of the mailbox deletion operation|
-<!-- END REF -->
+|Result|Object|<-|Status of the mailbox deletion operation|<!-- END REF -->
 
 #### Description
 
@@ -694,8 +686,7 @@ End if
 <!-- REF IMAPTransporterClass.expunge().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Object|<-|Status of the expunge operation |
-<!-- END REF -->
+|Result|Object|<-|Status of the expunge operation |<!-- END REF -->
 
 #### Description
 
@@ -763,8 +754,7 @@ $status:=$transporter.expunge()
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |name|Text|->|Name of the mailbox|
-|Result|Object|<-|boxInfo object|
-<!-- END REF -->
+|Result|Object|<-|boxInfo object|<!-- END REF -->
 
 #### Description
 
@@ -815,8 +805,7 @@ The `boxInfo` object returned contains the following properties:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |parameters|Object|->|Parameter object|
-|Result|Collection|<-|Collection of mailbox objects|
-<!-- END REF -->
+|Result|Collection|<-|Collection of mailbox objects|<!-- END REF -->
 
 #### Description
 
@@ -879,8 +868,7 @@ If the account does not contain any mailboxes, an empty collection is returned.
 <!-- REF #IMAPTransporterClass.getDelimiter().Params -->
 |Parameter|Type||Description|
 |-----|--- |:---:|------|
-|Result|Text|<-|Hierarchy delimiter character|
-<!-- END REF -->
+|Result|Text|<-|Hierarchy delimiter character|<!-- END REF -->
 
 #### Description
 
@@ -936,8 +924,7 @@ Mailbox name delimiter character.
 |msgNumber|Integer|->|Sequence number of the message|
 |msgID|Text|->|Unique ID of the message|
 |options|Object|->|Message handling instructions|
-|Result|Object|<-|[Email object](EmailObjectClass.md#email-object)|
-<!-- END REF -->
+|Result|Object|<-|[Email object](EmailObjectClass.md#email-object)|<!-- END REF -->
 
 #### Description
 
@@ -1011,8 +998,7 @@ You want to get the message with ID = 1:
 |startMsg|Integer|->|Sequence number of the first message|
 |endMsg |Integer|->|Sequence number of the last message|
 |options|Object|->|Message handling instructions|
-|Result|Object|<-|Object containing:<br/><ul><li>a collection of [Email objects](EmailObjectClass.md#email-object) and</li><li>a collection of IDs or numbers for missing messages, if any</li></ul>|
-<!-- END REF -->
+|Result|Object|<-|Object containing:<br/><ul><li>a collection of [Email objects](EmailObjectClass.md#email-object) and</li><li>a collection of IDs or numbers for missing messages, if any</li></ul>|<!-- END REF -->
 
 #### Description
 
@@ -1111,8 +1097,7 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
 |msgNumber|Integer|-> |Sequence number of the message|
 |msgID|Text|-> |Unique ID of the message|
 |updateSeen|Boolean|->|If True, the message is marked "seen" in the mailbox. If False the message is left untouched.|
-|Result|BLOB|<-|Blob of the MIME string returned from the mail server|
-<!-- END REF -->
+|Result|BLOB|<-|Blob of the MIME string returned from the mail server|<!-- END REF -->
 
 #### Description
 
@@ -1186,8 +1171,7 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 |msgsIDs|Collection|->|Collection of message unique IDs (strings)|
 |allMsgs|Integer|->|`IMAP all`: All messages in the selected mailbox|
 |destinationBox|Text|->|Mailbox to receive moved messages|
-|Result|Object|<-|Status of the move operation|
-<!-- END REF -->
+|Result|Object|<-|Status of the move operation|<!-- END REF -->
 
 #### Description
 
@@ -1286,8 +1270,7 @@ To move all messages in the current mailbox:
 |-----|--- |:---:|------|
 |startMsg|Integer|-> |Sequence number of the first message|
 |endMsg|Integer|->|Sequence number of the last message|
-|Result|Collection|<-|Collection of unique IDs|
-<!-- END REF -->
+|Result|Collection|<-|Collection of unique IDs|<!-- END REF -->
 
 #### Description
 
@@ -1347,8 +1330,7 @@ The function returns a collection of strings (unique IDs).
 |---------|--- |:---:|------|
 |msgIDs|Collection|->|Collection of strings: Message unique IDs (text)<br/>Text: Unique ID of a message<br/>Longint (IMAP all): All messages in the selected mailbox|
 |keywords|Object|->|Keyword flags to remove|
-|Result|Object|<-|Status of the removeFlags operation|
-<!-- END REF -->
+|Result|Object|<-|Status of the removeFlags operation|<!-- END REF -->
 
 #### Description
 
@@ -1433,8 +1415,7 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 |---------|--- |:---:|------|
 |currentName|Text|->|Name of the current mailbox|
 |newName|Text|->|New mailbox name|
-|Result|Object|<-|Status of the renaming operation|
-<!-- END REF -->
+|Result|Object|<-|Status of the renaming operation|<!-- END REF -->
 
 #### Description
 
@@ -1509,8 +1490,7 @@ End if
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |searchCriteria|Text|-> |Search criteria|
-|Result|Collection|<-|Collection of message numbers|
-<!-- END REF -->
+|Result|Collection|<-|Collection of message numbers|<!-- END REF -->
 
 #### Description
 
@@ -1656,8 +1636,7 @@ Examples:
 |---------|--- |:---:|------|
 |name|Text|-> |Name of the mailbox|
 |state|Integer|->|Mailbox access status|
-|Result|Object|<-|boxInfo object|
-<!-- END REF -->
+|Result|Object|<-|boxInfo object|<!-- END REF -->
 
 #### Description
 
@@ -1722,8 +1701,7 @@ The `boxInfo` object returned contains the following properties:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |name|Text|-> |Name of the mailbox|
-|Result|Object|<-|Status of the subscribe operation|
-<!-- END REF -->
+|Result|Object|<-|Status of the subscribe operation|<!-- END REF -->
 
 #### Description
 
@@ -1793,8 +1771,7 @@ End if
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |name|Text|-> |Name of the mailbox|
-|Result|Object|<-|Status of the unsubscribe operation|
-<!-- END REF -->
+|Result|Object|<-|Status of the unsubscribe operation|<!-- END REF -->
 
 #### Description
 

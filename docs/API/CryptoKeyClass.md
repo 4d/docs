@@ -29,16 +29,16 @@ ASSERT($status.success)
 ### Summary
 ||
 |---|
-|[<!-- INCLUDE #4D.CryptoKey.new().Syntax -->](#4dcryptokeynew)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.CryptoKey.new().Summary --></p>|
-|[<!-- INCLUDE #CryptoKey.curve.Syntax -->](#curve)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.curve.Summary --> </p>|
-|[<!-- INCLUDE #CryptoKey.decrypt().Syntax -->](#decrypt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.decrypt().Summary --></p>|
-|[<!-- INCLUDE #CryptoKey.encrypt().Syntax -->](#encrypt)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.encrypt().Summary --></p>|
-|[<!-- INCLUDE #CryptoKey.getPrivateKey().Syntax -->](#getprivatekey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.getPrivateKey().Summary --></p>|
-|[<!-- INCLUDE #CryptoKey.getPublicKey().Syntax -->](#getpublickey)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.getPublicKey().Summary --></p>|
-|[<!-- INCLUDE #CryptoKey.sign().Syntax -->](#sign)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.sign().Summary --> </p>|
-|[<!-- INCLUDE #CryptoKey.size.Syntax -->](#size)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.size.Summary --> </p>|
-|[<!-- INCLUDE #CryptoKey.type.Syntax -->](#type)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.type.Summary --> </p>|
-|[<!-- INCLUDE #CryptoKey.verify().Syntax -->](#verify)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.verify().Summary --></p>|
+|[<!-- INCLUDE #4D.CryptoKey.new().Syntax -->](#4dcryptokeynew)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.CryptoKey.new().Summary --></p>|
+|[<!-- INCLUDE #CryptoKey.curve.Syntax -->](#curve)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.curve.Summary --> </p>|
+|[<!-- INCLUDE #CryptoKey.decrypt().Syntax -->](#decrypt)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.decrypt().Summary --></p>|
+|[<!-- INCLUDE #CryptoKey.encrypt().Syntax -->](#encrypt)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.encrypt().Summary --></p>|
+|[<!-- INCLUDE #CryptoKey.getPrivateKey().Syntax -->](#getprivatekey)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.getPrivateKey().Summary --></p>|
+|[<!-- INCLUDE #CryptoKey.getPublicKey().Syntax -->](#getpublickey)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.getPublicKey().Summary --></p>|
+|[<!-- INCLUDE #CryptoKey.sign().Syntax -->](#sign)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.sign().Summary --> </p>|
+|[<!-- INCLUDE #CryptoKey.size.Syntax -->](#size)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.size.Summary --> </p>|
+|[<!-- INCLUDE #CryptoKey.type.Syntax -->](#type)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.type.Summary --> </p>|
+|[<!-- INCLUDE #CryptoKey.verify().Syntax -->](#verify)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #CryptoKey.verify().Summary --></p>|
 
 
 
@@ -117,8 +117,7 @@ Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised
 |---|---|----|---|
 |message|Text|->|Message string to be decoded using `options.encodingEncrypted` and decrypted.|  
 |options|Object|->|Decoding options|
-|Result|Object|<-|Status|
-<!-- END REF -->
+|Result|Object|<-|Status|<!-- END REF -->
 
 
 
@@ -166,8 +165,7 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 |---|---|----|---|
 |message|Text|->|Message string to be encoded using `options.encodingDecrypted` and encrypted.|  
 |options|Object|->|Encoding options|
-|Result|Text|<-|Message encrypted and encoded using the `options.encodingEncrypted`|
-<!-- END REF -->
+|Result|Text|<-|Message encrypted and encoded using the `options.encodingEncrypted`|<!-- END REF -->
 
 The `.encrypt()` function <!-- REF #CryptoKey.encrypt().Summary -->encrypts the *message* parameter using the **public** key<!-- END REF -->. The algorithm used depends on the type of the key.
 
@@ -206,8 +204,7 @@ The returned value is an encrypted message.
 <!-- REF #CryptoKey.getPrivateKey().Params -->
 |Parameter|Type||Description|
 |---|---|----|---|
-|Result|Text|<-|Private key in PEM format|
-<!-- END REF -->
+|Result|Text|<-|Private key in PEM format|<!-- END REF -->
 
 The `.getPrivateKey()` function  <!-- REF #CryptoKey.getPrivateKey().Summary -->returns the private key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
 
@@ -233,8 +230,7 @@ The returned value is the private key.
 <!-- REF #CryptoKey.getPublicKey().Params -->
 |Parameter|Type||Description|
 |---|----|---|---|
-|Result|Text|<-|Public key in PEM format|
-<!-- END REF -->
+|Result|Text|<-|Public key in PEM format|<!-- END REF -->
 
 
 The `.getPublicKey()` function <!-- REF #CryptoKey.getPublicKey().Summary -->returns the public key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
@@ -279,8 +275,7 @@ The returned value is the public key.
 |---|----|---|---|
 |message|Text|->|Message string to sign|  
 |options|Object|->|Signing options|
-|Result|Text|<-|Signature in Base64 or Base64URL representation, depending on "encoding" option|
-<!-- END REF -->
+|Result|Text|<-|Signature in Base64 or Base64URL representation, depending on "encoding" option|<!-- END REF -->
 
 The `.sign()` function <!-- REF #CryptoKey.sign().Summary -->signs the utf8 representation of a *message* string<!-- END REF --> using the `CryptoKey` object keys and provided *options*. It returns its signature in base64 or base64URL format, depending on the value of the `options.encoding` attribute you passed.
 
@@ -352,8 +347,7 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 |message|Text|->|Message string that was used to produce the signature|  
 |signature|Text|->|Signature to verify, in Base64 or Base64URL representation, depending on `options.encoding` value|
 |options|Object|->|Signing options|
-|Result|Object|<-|Status of the verification|
-<!-- END REF -->
+|Result|Object|<-|Status of the verification|<!-- END REF -->
 
 The `.verify()` function <!-- REF #CryptoKey.verify().Summary -->verifies the base64 signature against the utf8 representation of *message*<!-- END REF --> using the `CryptoKey` object keys and provided *options*.
 
@@ -378,7 +372,6 @@ In case the signature couldn't be verified because it was not signed with the sa
 |Property|Type|Description|
 |---|---|---|
 |success|boolean|True if the signature matches the message|
-|errors|collection|If `success` is `false`, may contain a collection of errors|
-<!-- END REF -->
+|errors|collection|If `success` is `false`, may contain a collection of errors|<!-- END REF -->
 
-<style> h2 { background: #d9ebff;}</style>
+

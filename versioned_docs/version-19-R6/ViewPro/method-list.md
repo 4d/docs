@@ -526,8 +526,7 @@ Selecting the columns and running this code:
 |---|---|---|---|
 |rangeObj| Object|->|Range object|
 |otherRangeObj| Object|->|Range object|
-|Result| Object|<-|Object containing a combined range|
-<!-- END REF -->
+|Result| Object|<-|Object containing a combined range|<!-- END REF -->
 
 #### Description
 
@@ -594,8 +593,7 @@ $vpObj:=VP Convert from 4D View($pvblob)
 |---|---|---|---|
 |vpObject| Object|->|4D View Pro object containing the area to convert|
 |rangeObj| Object|->|Range object|
-|Result| Object|<-|SVG picture of the area|
-<!-- END REF -->
+|Result| Object|<-|SVG picture of the area|<!-- END REF -->
 
 #### Description
 
@@ -1314,8 +1312,7 @@ $activeCell:=VP Get active cell("myVPArea")
 |Parameter|Type||Description|
 |---|---|---|---|
 | rangeObj | Object | -> | Range object |
-| Result  | Text | <- | Name of the attribute bound to the cell |
-<!-- END REF -->
+| Result  | Text | <- | Name of the attribute bound to the cell |<!-- END REF -->
 
 #### Description
 
@@ -1528,8 +1525,7 @@ $index:=VP Get current sheet("ViewProArea")
 |---|---|---|---|
 |vpAreaName |Object|->|4D View Pro area form object name|
 |sheet|Integer|->|Index of the sheet to get the data context from|
-|Result |Object &#124; Collection |<-|Data context|
-<!-- END REF -->
+|Result |Object &#124; Collection |<-|Data context|<!-- END REF -->
 
 #### Description
 
@@ -2477,8 +2473,7 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 |---|---|---|---|
 |vpAreaName   |Text|->|4D View Pro area form object name|
 |filePath   |Text|->|Pathname of the document|
-|paramObj   |Object|->|Import options|
-<!-- END REF -->
+|paramObj   |Object|->|Import options|<!-- END REF -->
 
 #### Description
 
@@ -2562,8 +2557,7 @@ Here's the result:
 |Parameter|Type||Description|
 |---|---|---|---|
 |vpAreaName   |Text|->|4D View Pro area form object name|
-|viewPro   |Object|->|4D View Pro object|
-<!-- END REF -->
+|viewPro   |Object|->|4D View Pro object|<!-- END REF -->
 
 #### Description
 
@@ -2596,8 +2590,7 @@ VP IMPORT FROM OBJECT("ViewProArea1";[VPWorkBooks]SPBook)
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|rangeObj   |Object|->|Range object|
-<!-- END REF -->
+|rangeObj   |Object|->|Range object|<!-- END REF -->
 
 #### Description
 
@@ -2631,8 +2624,7 @@ The results is:
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|rangeObj   |Object|->|Range object|
-<!-- END REF -->
+|rangeObj   |Object|->|Range object|<!-- END REF -->
 
 #### Description
 
@@ -2677,8 +2669,7 @@ The results is:
 |---|---|---|---|
 |originRange|Object|->|Cell range to copy from|
 |targetRange|Object|->|Target range for the values, formatting and formulas|
-|options|Object|->|Additional options|
-<!-- END REF -->
+|options|Object|->|Additional options|<!-- END REF -->
 
 #### Description
 
@@ -2734,8 +2725,7 @@ VP MOVE CELLS($originRange; $targetRange; $options)
 |vpAreaName|Text|->|4D View Pro area form object name|
 |rangeName|Text|->|Existing range name|
 |sheet|Integer|->|Range location (current sheet if omitted)|
-|Result|Object|<-|Range object of name|
-<!-- END REF -->
+|Result|Object|<-|Range object of name|<!-- END REF -->
 
 #### Description
 
@@ -2773,8 +2763,7 @@ VP SET NUM VALUE($name;285;"$#,###.00")
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|vpAreaName   |Text|->|4D View Pro area form object name|
-<!-- END REF -->
+|vpAreaName   |Text|->|4D View Pro area form object name|<!-- END REF -->
 
 #### Description
 
@@ -2807,8 +2796,7 @@ VP NEW DOCUMENT("myVPArea")
 |Parameter|Type||Description|
 |---|---|---|---|
 |fontObj   |Object|->|Font object|
-|Result   |Text|<-|Font shorthand|
-<!-- END REF -->
+|Result   |Text|<-|Font shorthand|<!-- END REF -->
 
 #### Description
 
@@ -2865,8 +2853,7 @@ $cellStyle.font:=VP Object to font($font)
 |---|---|---|---|
 |rangeObj|Object|->|Cell range object|
 |dataObject|Object|->|Object containing the data to be pasted|
-|options|Longint|->|Specifies what is pasted|
-<!-- END REF -->
+|options|Longint|->|Specifies what is pasted|<!-- END REF -->
 
 #### Description
 
@@ -2908,8 +2895,7 @@ See example the example from [VP Copy to object](#vp-copy-to-object)
 |Parameter|Type||Description|
 |---|---|---|---|
 |vpAreaName   |Text|->|4D View Pro area form object name|
-|sheet   |Integer|->|Sheet index (current sheet if omitted)|
-<!-- END REF -->
+|sheet   |Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
 #### Description
 
@@ -2954,8 +2940,7 @@ The following code:
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|vpAreaName   |Text|->|4D View Pro area form object name|
-<!-- END REF -->
+|vpAreaName   |Text|->|4D View Pro area form object name|<!-- END REF -->
 
 #### Description
 
@@ -2987,8 +2972,7 @@ VP RECOMPUTE FORMULAS("ViewProArea")
 |---|---|---|---|
 |vpAreaName|Text|->|4D View Pro area form object name|
 |name|Text|->|Name of the named range or named formula to remove|
-|scope|Integer|->|Target scope (default=current sheet)|
-<!-- END REF -->
+|scope|Integer|->|Target scope (default=current sheet)|<!-- END REF -->
 
 #### Description
 
@@ -3065,8 +3049,7 @@ VP REMOVE SHEET("ViewProArea";2)
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|rangeObj   |Object|->|Range object|
-<!-- END REF -->
+|rangeObj   |Object|->|Range object|<!-- END REF -->
 #### Description
 
 The `VP REMOVE SPAN` command <!-- REF #_method_.VP REMOVE SPAN.Summary -->removes the span from the cells in *rangeObj*<!-- END REF -->.
@@ -3106,8 +3089,7 @@ Result:
 |---|---|---|---|
 |vpAreaName   |Text|->|4D View Pro area form object name|
 |styleName   |Text|->|Name of style to remove|
-|sheet|Integer|->|Sheet index (current sheet if omitted)|
-<!-- END REF -->
+|sheet|Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
 #### Description
 
@@ -3193,8 +3175,7 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 |Parameter|Type||Description|
 |---|---|---|---|
 |vpAreaName   |Text|->|4D View Pro area form object name|
-|sheet    |Integer|->|Sheet index (current sheet if omitted)|
-<!-- END REF -->
+|sheet    |Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
 #### Description
 
@@ -3228,8 +3209,7 @@ VP RESET SELECTION("myVPArea")
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|vpAreaName   |Text|->|4D View Pro area form object name|
-<!-- END REF -->
+|vpAreaName   |Text|->|4D View Pro area form object name|<!-- END REF -->
 
 #### Description
 
@@ -3261,8 +3241,7 @@ See example in [VP SUSPEND COMPUTING](#vp-suspend-computing).
 |row|Integer|->|Row index|
 |rowCount  |Integer|->|Number of rows|
 |sheet  |Integer|->|Sheet index (current sheet if omitted)|
-|Result |Object|<-|Range object of row(s)|
-<!-- END REF -->
+|Result |Object|<-|Range object of row(s)|<!-- END REF -->
 
 #### Description
 
@@ -3302,8 +3281,7 @@ $row:=VP Row("ViewProArea";9) // row 10
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|rangeObj  |Object|->|Range object|
-<!-- END REF -->
+|rangeObj  |Object|->|Range object|<!-- END REF -->
 
 #### Description
 
@@ -3338,8 +3316,7 @@ Result:
 |Parameter|Type||Description|
 |---|---|---|---|
 |parameters   |Object|->|Object containing the offscreen area's attributes|
-|Result   |Mixed|<-|`.result` property of the `.onEvent` object, or Null if does not return a value|
-<!-- END REF -->
+|Result   |Mixed|<-|`.result` property of the `.onEvent` object, or Null if does not return a value|<!-- END REF -->
 
 #### Description
 
@@ -3465,8 +3442,7 @@ $result:=VP Run offscreen area($o)
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|rangeObj   |Object|->|Range object|
-<!-- END REF -->
+|rangeObj   |Object|->|Range object|<!-- END REF -->
 
 #### Description
 
@@ -3497,8 +3473,7 @@ VP SET ACTIVE CELL($activeCell)
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|methodObj   |Object|->|Allowed methods in the 4D View Pro areas|
-<!-- END REF -->
+|methodObj   |Object|->|Allowed methods in the 4D View Pro areas|<!-- END REF -->
 
 >**Compatibility**  
 >
@@ -3575,8 +3550,7 @@ After this code is executed, the defined functions can be used in 4D View Pro fo
 |Parameter|Type||Description|
 |---|---|---|---|
 | rangeObj | Object | -> | Range object |
-| dataContextAttribute  | Text | -> | Name of the attribute to bind to *rangeObj* |
-<!-- END REF -->
+| dataContextAttribute  | Text | -> | Name of the attribute to bind to *rangeObj* |<!-- END REF -->
 
 #### Description
 
@@ -3623,8 +3597,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj   |Object|->|Range object|
-|boolValue    |Boolean|->|Boolean value to set|
-<!-- END REF -->
+|boolValue    |Boolean|->|Boolean value to set|<!-- END REF -->
 
 #### Description
 
@@ -3655,8 +3628,7 @@ VP SET BOOLEAN VALUE(VP Cell("ViewProArea";3;2);False)
 |---|---|---|---|
 |rangeObj   |Object|->|Range object|
 |borderStyleObj    |Object|->|Object containing border line style|
-|borderPosObj    |Object|->|Object containing border placement|
-<!-- END REF -->
+|borderPosObj    |Object|->|Object containing border placement|<!-- END REF -->
 
 #### Description
 
@@ -3729,8 +3701,7 @@ VP SET CELL STYLE(VP Cells("ViewProArea";4;4;3;3);$cellStyle)
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj   |Object|->|Range object|
-|styleObj    |Object|->|Style object|
-<!-- END REF -->
+|styleObj    |Object|->|Style object|<!-- END REF -->
 
 #### Description
 
@@ -3779,8 +3750,7 @@ VP SET CELL STYLE(VP Cell("ViewProArea";1;1);$style)
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj   |Object|->|Range object|
-|propertyObj |Object|->|Object containing column properties|
-<!-- END REF -->
+|propertyObj |Object|->|Object containing column properties|<!-- END REF -->
 
 #### Description
 
@@ -3827,8 +3797,7 @@ VP SET COLUMN ATTRIBUTES($column;$properties)
 |---|---|---|---|
 |vpAreaName|Text|->|4D View Pro area form object name|
 |columnCount|Integer|->|Number of columns|
-|sheet|Integer|->|Sheet index (current sheet if omitted)|
-<!-- END REF -->
+|sheet|Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
 #### Description
 
@@ -3904,8 +3873,7 @@ VP SET CURRENT SHEET("ViewProArea";2)
 |Parameter|Type||Description|
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
-|formulaObj |Object|->|Formula object|
-<!-- END REF -->
+|formulaObj |Object|->|Formula object|<!-- END REF -->
 
 #### Description
 
@@ -3997,8 +3965,7 @@ End case
 |dataObj|Object|->|Data object to load in the data context|
 |dataColl|Object|->|Data collection to load in the data context|
 |options |Object|->|Additional options|
-|sheet|Integer|->|Sheet index|
-<!-- END REF -->
+|sheet|Integer|->|Sheet index|<!-- END REF -->
 
 #### Description
 
@@ -4127,8 +4094,7 @@ Here's the result once the columns are generated:
 |rangeObj |Object|->|Range object|
 |dateValue |Date|->|Date value to set|
 |timeValue |Time|->|Time value to set|
-|formatPattern |Text|->|Format of value|
-<!-- END REF -->
+|formatPattern |Text|->|Format of value|<!-- END REF -->
 
 #### Description
 
@@ -4166,8 +4132,7 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
 |dateValue |Date|->|Date value to set|
-|formatPattern |Text|->|Format of value|
-<!-- END REF -->
+|formatPattern |Text|->|Format of value|<!-- END REF -->
 
 #### Description
 
@@ -4213,8 +4178,7 @@ VP SET DATE VALUE(VP Cell("ViewProArea";4;6);!2005-01-15!;vk pattern month day)
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |styleObj |Object|->|Style object|
-|sheet|Integer|->|Sheet index (default = current sheet)|
-<!-- END REF -->
+|sheet|Integer|->|Sheet index (default = current sheet)|<!-- END REF -->
 
 #### Description
 
@@ -4255,8 +4219,7 @@ VP SET DEFAULT STYLE("myDoc";$style)
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
 |field |Pointer|->|Reference to field in virtual structure|
-|formatPattern |Text|->|Format of field|
-<!-- END REF -->
+|formatPattern |Text|->|Format of field|<!-- END REF -->
 
 #### Description
 
@@ -4288,8 +4251,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
 |formula |Text|->|Formula or 4D method|
-|formatPattern |Text|->|Format of field|
-<!-- END REF -->
+|formatPattern |Text|->|Format of field|<!-- END REF -->
 
 #### Description
 
@@ -4339,8 +4301,7 @@ VP SET FORMULA($range;"SUM(A1,B7,C11)") //"," to separate parameters
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Cell range object|
-|formulasCol |Collection|->|Collection of formulas|
-<!-- END REF -->
+|formulasCol |Collection|->|Collection of formulas|<!-- END REF -->
 
 #### Description
 
@@ -4402,8 +4363,7 @@ VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // Assign to cells
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |paneObj |Object|->|Object containing frozen column and row information|
-|sheet|Integer|->|Sheet index (current sheet if omitted)|
-<!-- END REF -->
+|sheet|Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
 #### Description
 
@@ -4458,8 +4418,7 @@ VP SET FROZEN PANES("ViewProArea";$panes)
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
 |numberValue |Number|->|Number value to set|
-|formatPattern |Text|->|Format of value|
-<!-- END REF -->
+|formatPattern |Text|->|Format of value|<!-- END REF -->
 
 #### Description
 
@@ -4495,8 +4454,7 @@ VP SET NUM VALUE(VP Cell("ViewProArea";3;2);12.356;"_($* #,##0.00_)")
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area name|
 |printInfo |Object|->|Object containing printing attributes|
-|sheet|Integer|->|Sheet index (current sheet if omitted)|
-<!-- END REF -->
+|sheet|Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
 #### Description
 
@@ -4566,8 +4524,7 @@ The PDF:
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Range of rows|
-|propertyObj |Object|->|Object containing row properties|
-<!-- END REF -->
+|propertyObj |Object|->|Object containing row properties|<!-- END REF -->
 
 #### Description
 
@@ -4614,8 +4571,7 @@ VP SET ROW ATTRIBUTES($row;$properties)
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |rowCount |Integer|->|Number of rows|
-|sheet|Integer|->|Sheet index (current sheet if omitted)|
-<!-- END REF -->
+|sheet|Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
 #### Description
 
@@ -4651,8 +4607,7 @@ VP SET ROW COUNT("ViewProArea";5)
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|rangeObj |Object|->|Range object of cells|
-<!-- END REF -->
+|rangeObj |Object|->|Range object of cells|<!-- END REF -->
 
 #### Description
 
@@ -4682,8 +4637,7 @@ VP SET SELECTION($currentSelection)
 |Parameter|Type||Description|
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
-|number |Integer|->|Number of sheets|
-<!-- END REF -->
+|number |Integer|->|Number of sheets|<!-- END REF -->
 
 #### Description
 
@@ -4721,8 +4675,7 @@ VP SET SHEET COUNT("ViewProArea";3)
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |name|Text|->|New name for the sheet|
-|sheet|Integer|->|Index of the sheet to be renamed|
-<!-- END REF -->
+|sheet|Integer|->|Index of the sheet to be renamed|<!-- END REF -->
 
 #### Description
 
@@ -4767,8 +4720,7 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 |---|---|---|---|
 |vpAreaName |Object|->|4D View Pro area name|
 |sheetOptions |Object|->|Sheet option(s) to set|
-|sheet |Object|->|Sheet index (current sheet if omitted)|
-<!-- END REF -->
+|sheet |Object|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
 #### Description
 
@@ -4885,8 +4837,7 @@ Result:
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |visible|Boolean|->|Print lines displayed if True (default), hidden if False|
-|sheet|Integer|->|Sheet index (current sheet if omitted)|
-<!-- END REF -->
+|sheet|Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
 #### Description
 
@@ -4931,8 +4882,7 @@ With a page break:
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
 |textValue |Text|->|Text value to set|
-|formatPattern |Text|->|Format of value|
-<!-- END REF -->
+|formatPattern |Text|->|Format of value|<!-- END REF -->
 
 #### Description
 
@@ -4964,8 +4914,7 @@ VP SET TEXT VALUE(VP Cell("ViewProArea";3;2);"Test 4D View Pro")
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
 |timeValue |Text|->|Time value to set|
-|formatPattern |Text|->|Format of value|
-<!-- END REF -->
+|formatPattern |Text|->|Format of value|<!-- END REF -->
 
 #### Description
 
@@ -5000,8 +4949,7 @@ VP SET TIME VALUE(VP Cell("ViewProArea";5;2);?12:15:06?;vk pattern long time)
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
-|valueObj  |Object|->|Cell values and format options|
-<!-- END REF -->
+|valueObj  |Object|->|Cell values and format options|<!-- END REF -->
 
 #### Description
 
@@ -5060,8 +5008,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";Null))
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
-|valuesCol  |Collection|->|Collection of values|
-<!-- END REF -->
+|valuesCol  |Collection|->|Collection of values|<!-- END REF -->
 
 #### Description
 
@@ -5214,8 +5161,7 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
 |vPos  |Integer|->|Vertical view position of cell or row|
-|hPos  |Integer|->|Horizontal view position of cell or row|
-<!-- END REF -->
+|hPos  |Integer|->|Horizontal view position of cell or row|<!-- END REF -->
 
 #### Description
 
@@ -5274,8 +5220,7 @@ Result:
 
 |Parameter|Type||Description|
 |---|---|---|---|
-|vpAreaName |Text|->|4D View Pro area form object name|
-<!-- END REF -->
+|vpAreaName |Text|->|4D View Pro area form object name|<!-- END REF -->
 
 #### Description
 

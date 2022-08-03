@@ -57,20 +57,20 @@ File handle objects cannot be shared.
 
 ||
 |---|
-|[<!-- INCLUDE #FileHandleClass.breakModeRead.Syntax -->](#breakmoderead)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.breakModeRead.Summary -->|
-|[<!-- INCLUDE #FileHandleClass.breakModeWrite.Syntax -->](#breakmodewrite)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.breakModeWrite.Summary -->|
-|[<!-- INCLUDE #FileHandleClass.charset.Syntax -->](#charset)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.charset.Summary -->|
-|[<!-- INCLUDE #FileHandleClass.eof.Syntax -->](#eof)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.eof.Summary -->|
-|[<!-- INCLUDE #FileHandleClass.getSize().Syntax -->](#getsize)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.getSize().Summary -->|
-|[<!-- INCLUDE #FileHandleClass.mode.Syntax -->](#mode)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.mode.Summary -->|
-|[<!-- INCLUDE #FileHandleClass.offset.Syntax -->](#offset)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.offset.Summary -->|
-|[<!-- INCLUDE #FileHandleClass.readBlob().Syntax -->](#readblob)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.readBlob().Summary -->|
-|[<!-- INCLUDE #FileHandleClass.readLine().Syntax -->](#readline)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.readLine().Summary -->|
-|[<!-- INCLUDE #FileHandleClass.readText().Syntax -->](#readtext)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.readText().Summary -->|
-|[<!-- INCLUDE #FileHandleClass.setSize().Syntax -->](#setsize)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.setSize().Summary -->|
-|[<!-- INCLUDE #FileHandleClass.writeBlob().Syntax -->](#writeblob)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.writeBlob().Summary -->|
-|[<!-- INCLUDE #FileHandleClass.writeLine().Syntax -->](#writeline)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.writeLine().Summary -->|
-|[<!-- INCLUDE #FileHandleClass.writeText().Syntax -->](#writetext)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.writeText().Summary -->|
+|[<!-- INCLUDE #FileHandleClass.breakModeRead.Syntax -->](#breakmoderead)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.breakModeRead.Summary -->|
+|[<!-- INCLUDE #FileHandleClass.breakModeWrite.Syntax -->](#breakmodewrite)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.breakModeWrite.Summary -->|
+|[<!-- INCLUDE #FileHandleClass.charset.Syntax -->](#charset)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.charset.Summary -->|
+|[<!-- INCLUDE #FileHandleClass.eof.Syntax -->](#eof)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.eof.Summary -->|
+|[<!-- INCLUDE #FileHandleClass.getSize().Syntax -->](#getsize)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.getSize().Summary -->|
+|[<!-- INCLUDE #FileHandleClass.mode.Syntax -->](#mode)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.mode.Summary -->|
+|[<!-- INCLUDE #FileHandleClass.offset.Syntax -->](#offset)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.offset.Summary -->|
+|[<!-- INCLUDE #FileHandleClass.readBlob().Syntax -->](#readblob)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.readBlob().Summary -->|
+|[<!-- INCLUDE #FileHandleClass.readLine().Syntax -->](#readline)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.readLine().Summary -->|
+|[<!-- INCLUDE #FileHandleClass.readText().Syntax -->](#readtext)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.readText().Summary -->|
+|[<!-- INCLUDE #FileHandleClass.setSize().Syntax -->](#setsize)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.setSize().Summary -->|
+|[<!-- INCLUDE #FileHandleClass.writeBlob().Syntax -->](#writeblob)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.writeBlob().Summary -->|
+|[<!-- INCLUDE #FileHandleClass.writeLine().Syntax -->](#writeline)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.writeLine().Summary -->|
+|[<!-- INCLUDE #FileHandleClass.writeText().Syntax -->](#writetext)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileHandleClass.writeText().Summary -->|
 
 
 
@@ -193,8 +193,7 @@ This property is **read-only**.
 <!--REF #FileHandleClass.getSize().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Real|<-|Size of the document in bytes|
-<!-- END REF -->
+|Result|Real|<-|Size of the document in bytes|<!-- END REF -->
 
 #### Description
 
@@ -279,8 +278,7 @@ This property is **read/write**.
 |Parameter|Type||Description|
 |---|---|---|---|
 |*bytes*|Real|->|Number of bytes to be read|
-|Result|[4D.Blob](BlobClass)|<-|Bytes read from the file|
-<!-- END REF -->
+|Result|[4D.Blob](BlobClass)|<-|Bytes read from the file|<!-- END REF -->
 
 #### Description
 
@@ -312,8 +310,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 <!--REF #FileHandleClass.readLine().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Text|<-|Line of text|
-<!-- END REF -->
+|Result|Text|<-|Line of text|<!-- END REF -->
 
 #### Description
 
@@ -347,8 +344,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 |Parameter|Type||Description|
 |---|---|---|---|
 |*stopChar*|Text|->|Character(s) at which to stop reading|
-|Result|Text|<-|Text from the file|
-<!-- END REF -->
+|Result|Text|<-|Text from the file|<!-- END REF -->
 
 #### Description
 
@@ -386,8 +382,7 @@ If the *stopChar* parameter is passed and not found, `.readText()` returns an em
 <!--REF #FileHandleClass.setSize().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|size|Real|->|New size of the document in bytes|
-<!-- END REF -->
+|size|Real|->|New size of the document in bytes|<!-- END REF -->
 
 #### Description
 
@@ -417,8 +412,7 @@ If the *size* value is less than the current document size, the document content
 <!--REF #FileHandleClass.writeBlob().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|*blob*|[4D.Blob](BlobClass)|->|Blob to write in the file|
-<!-- END REF -->
+|*blob*|[4D.Blob](BlobClass)|->|Blob to write in the file|<!-- END REF -->
 
 #### Description
 
@@ -449,8 +443,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 <!--REF #FileHandleClass.writeLine().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|*lineOfText*|Text|->|Text to write|
-<!-- END REF -->
+|*lineOfText*|Text|->|Text to write|<!-- END REF -->
 
 #### Description
 
@@ -480,8 +473,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 <!--REF #FileHandleClass.writeText().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|*textToWrite*|Text|->|Text to write|
-<!-- END REF -->
+|*textToWrite*|Text|->|Text to write|<!-- END REF -->
 
 #### Description
 
@@ -499,4 +491,4 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 
 
-<style> h2 { background: #d9ebff;}</style>
+

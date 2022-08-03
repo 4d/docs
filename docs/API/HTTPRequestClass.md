@@ -55,19 +55,19 @@ HTTPRequest objects provide the following properties and functions:
 
 ||
 |---|
-|[<!-- INCLUDE #4D.HTTPRequest.dataType.Syntax -->](#dataType)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.dataType.Summary -->|
-|[<!-- INCLUDE #4D.HTTPRequest.encoding.Syntax -->](#encoding)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.encoding.Summary -->|
-|[<!-- INCLUDE #4D.HTTPRequest.errors.Syntax -->](#errors)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.errors.Summary -->|
-|[<!-- INCLUDE #4D.HTTPRequest.headers.Syntax -->](#headers)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.headers.Summary -->|
-|[<!-- INCLUDE #4D.HTTPRequest.method.Syntax -->](#method)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.method.Summary -->|
-|[<!-- INCLUDE #4D.HTTPRequest.protocol.Syntax -->](#protocol)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.protocol.Summary -->|
-|[<!-- INCLUDE #4D.HTTPRequest.response.Syntax -->](#response)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.response.Summary -->|
-|[<!-- INCLUDE #4D.HTTPRequest.returnResponseBody.Syntax -->](#returnResponseBody)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.returnResponseBody.Summary -->|
-|[<!-- INCLUDE #4D.HTTPRequest.terminate().Syntax -->](#terminate)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.terminate().Summary -->|
-|[<!-- INCLUDE #4D.HTTPRequest.terminated.Syntax -->](#terminated)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.terminated.Summary -->|
-|[<!-- INCLUDE #4D.HTTPRequest.timeout.Syntax -->](#timeout)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.timeout.Summary -->|
-|[<!-- INCLUDE #4D.HTTPRequest.url.Syntax -->](#url)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.url.Summary -->|
-|[<!-- INCLUDE #4D.HTTPRequest.wait().Syntax -->](#wait)<p>&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.wait().Summary -->|
+|[<!-- INCLUDE #4D.HTTPRequest.dataType.Syntax -->](#dataType)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.dataType.Summary -->|
+|[<!-- INCLUDE #4D.HTTPRequest.encoding.Syntax -->](#encoding)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.encoding.Summary -->|
+|[<!-- INCLUDE #4D.HTTPRequest.errors.Syntax -->](#errors)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.errors.Summary -->|
+|[<!-- INCLUDE #4D.HTTPRequest.headers.Syntax -->](#headers)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.headers.Summary -->|
+|[<!-- INCLUDE #4D.HTTPRequest.method.Syntax -->](#method)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.method.Summary -->|
+|[<!-- INCLUDE #4D.HTTPRequest.protocol.Syntax -->](#protocol)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.protocol.Summary -->|
+|[<!-- INCLUDE #4D.HTTPRequest.response.Syntax -->](#response)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.response.Summary -->|
+|[<!-- INCLUDE #4D.HTTPRequest.returnResponseBody.Syntax -->](#returnResponseBody)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.returnResponseBody.Summary -->|
+|[<!-- INCLUDE #4D.HTTPRequest.terminate().Syntax -->](#terminate)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.terminate().Summary -->|
+|[<!-- INCLUDE #4D.HTTPRequest.terminated.Syntax -->](#terminated)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.terminated.Summary -->|
+|[<!-- INCLUDE #4D.HTTPRequest.timeout.Syntax -->](#timeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.timeout.Summary -->|
+|[<!-- INCLUDE #4D.HTTPRequest.url.Syntax -->](#url)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.url.Summary -->|
+|[<!-- INCLUDE #4D.HTTPRequest.wait().Syntax -->](#wait)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #4D.HTTPRequest.wait().Summary -->|
 
 
 
@@ -82,8 +82,7 @@ HTTPRequest objects provide the following properties and functions:
 |---------|--- |:---:|------|
 |url|Text|->|URL to which to send the request|
 |options|Object|->|Request configuration properties|
-|Result|4D.HTTPRequest|<-|New HTTPRequest object|
-<!-- END REF -->
+|Result|4D.HTTPRequest|<-|New HTTPRequest object|<!-- END REF -->
 
 
 #### Description
@@ -383,8 +382,7 @@ The `.url` property contains <!-- REF #4D.HTTPRequest.url.Summary -->the URL of 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |time|Real|->|Maximum time in seconds to wait for the response|
-|Result|4D.HTTPRequest|<-|HTTPRequest object|
-<!-- END REF -->
+|Result|4D.HTTPRequest|<-|HTTPRequest object|<!-- END REF -->
 
 
 #### Description
@@ -401,4 +399,4 @@ If the response from the server has already arrived, the function returns immedi
 
 
 
-<style> h2 { background: #d9ebff;}</style>
+

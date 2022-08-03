@@ -118,8 +118,7 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |formulaExp|Expression|->|Formula to be returned as object|
-|Result|4D.Function|<-|Native function encapsulating the formula|
-<!-- END REF -->
+|Result|4D.Function|<-|Native function encapsulating the formula|<!-- END REF -->
 
 #### Description
 
@@ -247,8 +246,7 @@ Calling a formula using object notation:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |formulaString|Text|->|Text formula to be returned as object|
-|Result|4D.Function|<-|Native object encapsulating the formula|
-<!-- END REF -->
+|Result|4D.Function|<-|Native object encapsulating the formula|<!-- END REF -->
 
 #### Description
 
@@ -297,8 +295,7 @@ The following code will create a dialog accepting a formula in text format:
 |---------|--- |:---:|------|
 |thisObj|Object|->|Object to be returned by the This command in the formula|
 |formulaParams |Collection|->|Collection of values to be passed as $1...$n when `formula` is executed|
-|Result|any|<-|Value from formula execution|
-<!-- END REF -->
+|Result|any|<-|Value from formula execution|<!-- END REF -->
 
 #### Description
 
@@ -355,8 +352,7 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 |---|---|---|---|
 |thisObj|Object|->|Object to be returned by the This command in the formula|
 |params |any|->|Value(s) to be passed as $1...$n when formula is executed|
-|Result|any|<-|Value from formula execution|
-<!-- END REF -->
+|Result|any|<-|Value from formula execution|<!-- END REF -->
 
 #### Description
 

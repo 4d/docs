@@ -145,11 +145,11 @@ When the **Focusable** property is enabled for an object, the object can have th
 
 > An [input object](input_overview.md) is always focusable if it has the [Enterable](#enterable) property. 
 
-* ![](../assets/en/FormObjects/property_focusable1.png)<br>Check box shows focus when selected
+* ![](../assets/en/FormObjects/property_focusable1.png)<br/>Check box shows focus when selected
 <p>
 <p>
 
-* ![](../assets/en/FormObjects/property_focusable2.png)<br>Check box is selected but cannot show focus|
+* ![](../assets/en/FormObjects/property_focusable2.png)<br/>Check box is selected but cannot show focus|
 
 
 When the **Focusable** property is selected for a non-enterable object, the user can select, copy or even drag-and-drop the contents of the area.

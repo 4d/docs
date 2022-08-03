@@ -107,8 +107,7 @@ Considering the following table properties:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |settings|Object|->|Build option: context|
-|Result|4D.EntitySelection|<-|References on all entities related to the Dataclass|
-<!-- END REF -->
+|Result|4D.EntitySelection|<-|References on all entities related to the Dataclass|<!-- END REF -->
 
 #### Description
 
@@ -157,8 +156,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 |---------|--- |:---:|------|
 |objectCol |Collection|->|Collection of objects to be mapped with entities|
 |settings  |Object|->|Build option: context|
-|Result|4D.EntitySelection|<-|Entity selection filled from the collection|
-<!-- END REF -->
+|Result|4D.EntitySelection|<-|Entity selection filled from the collection|<!-- END REF -->
 
 #### Description
 
@@ -354,8 +352,7 @@ In this example, the first entity will be created and saved but the second will 
 |---------|--- |:---:|------|
 |primaryKey |Integer OR Text|->|Primary key value of the entity to retrieve|
 |settings  |Object|->|Build option: context|
-|Result|4D.Entity|<-|Entity matching the designated primary key|
-<!-- END REF -->
+|Result|4D.Entity|<-|Entity matching the designated primary key|<!-- END REF -->
 
 #### Description
 
@@ -427,8 +424,7 @@ This example illustrates the use of the *context* property:
 <!-- REF #DataClassClass.getDataStore().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|cs.DataStore|<-|Datastore of the dataclass|
-<!-- END REF -->
+|Result|cs.DataStore|<-|Datastore of the dataclass|<!-- END REF -->
 
 #### Description
 
@@ -479,8 +475,7 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 <!-- REF #DataClassClass.getInfo().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Object|<-|Information on the dataclass|
-<!-- END REF -->
+|Result|Object|<-|Information on the dataclass|<!-- END REF -->
 
 #### Description
 
@@ -549,8 +544,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 <!-- REF #DataClassClass.new().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|4D.Entity|<-|New entity matching the Dataclass|
-<!-- END REF -->
+|Result|4D.Entity|<-|New entity matching the Dataclass|<!-- END REF -->
 
 #### Description
 
@@ -591,8 +585,7 @@ This example creates a new entity in the "Log" Dataclass and records information
 |Parameter|Type||Description|
 |---|---|---|---|
 |keepOrder |Integer |-> |`dk keep ordered`: creates an ordered entity selection,<br/>`dk non ordered`: creates an unordered entity selection (default if omitted) |
-|Result|4D.EntitySelection|<-|New blank entity selection related to the dataclass|
-<!-- END REF -->
+|Result|4D.EntitySelection|<-|New blank entity selection related to the dataclass|<!-- END REF -->
 
 #### Description
 
@@ -637,8 +630,7 @@ When created, the entity selection does not contain any entities (`mySelection.l
 |formula |Object |-> |Search criteria as formula object|
 |value|any|->|Value(s) to use for indexed placeholder(s)|
 |querySettings|Object|->|Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan|
-|Result|4D.EntitySelection|<-|New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula*|
-<!-- END REF -->
+|Result|4D.EntitySelection|<-|New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula*|<!-- END REF -->
 
 #### Description
 
