@@ -28,7 +28,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 |[<!-- INCLUDE #document.extension.Syntax -->](#extension)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.extension.Summary -->|
 |[<!-- INCLUDE #document.fullName.Syntax -->](#fullname)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.fullName.Summary -->|
 |[<!-- INCLUDE #FileClass.getAppInfo().Syntax -->](#getappinfo)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.getAppInfo().Summary -->|
-|[<!-- INCLUDE #document.getContent().Syntax -->](#getcontent)<p><!-- INCLUDE #document.getContent().Summary -->|
+|[<!-- INCLUDE #document.getContent().Syntax -->](#getcontent)<!-- INCLUDE #document.getContent().Summary -->|
 |[<!-- INCLUDE #document.getIcon().Syntax -->](#geticon)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getIcon().Summary -->|
 |[<!-- INCLUDE #document.getText().Syntax -->](#gettext)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getText().Summary -->|
 |[<!-- INCLUDE #document.hidden.Syntax -->](#hidden)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.hidden.Summary -->|
@@ -51,8 +51,6 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 |[<!-- INCLUDE #FileClass.setText().Syntax -->](#settext)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.setText().Summary -->|
 |[<!-- INCLUDE #document.size.Syntax -->](#size)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.size.Summary -->|
 
-
-
 ## File
 
 <details><summary>History</summary>
@@ -64,7 +62,6 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 <!-- REF #_command_.File.Syntax -->
 **File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
 
-
 <!-- REF #_command_.File.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
@@ -73,7 +70,6 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 |pathType|Integer|->|`fk posix path` (default) or `fk platform path`|
 |*||->|* to return file of host database|
 |Result|4D.File|<-|New file object|<!-- END REF -->
-
 
 #### Description
 
@@ -112,7 +108,7 @@ In the *fileConstant* parameter, pass a 4D built-in or system file, using one of
 |HTTP debug log file|9|Log file created by the `WEB SET OPTION(Web debug log)` command. Stored in the Logs folder. |
 |HTTP log file|8|Log file created by the `WEB SET OPTION(Web log recording)` command. Stored in Logs folder.|
 |IMAP Log file|23|Log file created by the `SET DATABASE PARAMETER(IMAP Log)` command. Stored in the Logs folder.|  
-|Last backup file|2|Last backup file, named \<applicationName>[bkpNum].4BK, stored at a custom location.|
+|Last backup file|2|Last backup file, named `\<applicationName>[bkpNum].4BK`, stored at a custom location.|
 |Last journal integration log file|22|Full pathname of the last journal integration log file (stored in the Logs folder of the restored application), if any. This file is created, in auto-repair mode, as soon as a log file integration occurred|
 |Repair log file|7|Log file of database repairs made on the database in the Maintenance and Security Center (MSC). Stored in the Logs folder.|
 |Request log file|10|Standard client/server request log file (excluding Web requests) created by the `SET DATABASE PARAMETER(4D Server log recording)` or `SET DATABASE PARAMETER(Client log recording)` commands. If executed on the server, the server log file is returned (stored in the Logs folder on the server). If executed on the client, the client log file is returned (stored in the client local Logs folder). |
@@ -123,8 +119,7 @@ In the *fileConstant* parameter, pass a 4D built-in or system file, using one of
 
 If the target *fileConstant* does not exist, a null object is returned. No errors are raised.
 
-If the command is called from a component, pass the optional * parameter to get the path of the host database. Otherwise, if you omit the * parameter, a null object is always returned.  
-
+If the command is called from a component, pass the optional *parameter to get the path of the host database. Otherwise, if you omit the* parameter, a null object is always returned.  
 
 ## 4D.File.new()
 
@@ -136,17 +131,13 @@ If the command is called from a component, pass the optional * parameter to get 
 
 <!-- REF #4D.File.new().Syntax -->**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br/>**4D.File.new** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
 
-
 #### Description
 
 The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. It is identical to the [`File`](#file) command (shortcut).
 
 > It is recommended to use the [`File`](#file) shortcut command instead of `4D.File.new()`.
 
-
 <!-- INCLUDE document.copyTo().Desc -->
-
-
 
 <!-- REF file.create().Desc -->
 ## .create()
@@ -159,7 +150,6 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 
 <!--REF file.create().Note -->
 **Not available for ZIP archives**<!-- END REF -->
-
 
 <!--REF #FileClass.create().Syntax -->
 **.create()** : Boolean <!-- END REF -->
@@ -177,8 +167,8 @@ If necessary, the function creates the folder hierachy as described in the [plat
 
 **Returned value**
 
-*	**True** if the file is created successfully;
-*	**False** if a file with the same name already exists or if an error occured.
+* **True** if the file is created successfully;
+* **False** if a file with the same name already exists or if an error occured.
 
 #### Example
 
@@ -190,10 +180,6 @@ Creation of a preferences file in the database folder:
 ```
 <!-- END REF -->
 
-
-
-
-
 <!-- REF file.createAlias().Desc -->
 ## .createAlias()
 
@@ -202,7 +188,6 @@ Creation of a preferences file in the database folder:
 |---|---|
 |v17 R5|Added
 </details>
-
 
 <!--REF #FileClass.createAlias().Syntax -->
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
@@ -214,7 +199,6 @@ Creation of a preferences file in the database folder:
 |aliasName|Text|->|Name of the alias or shortcut|
 |aliasType|Integer|->|Type of the alias link|
 |Result|4D.File|<-|Alias or shortcut file reference|<!-- END REF -->
-
 
 #### Description
 
@@ -231,7 +215,6 @@ By default on macOS, the function creates a standard alias. You can also create 
 
 On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
 
-
 **Returned object**
 
 A `4D.File` object with the `isAlias` property set to **true**.
@@ -246,17 +229,9 @@ You want to create an alias to a file in your database folder:
 ```
 <!-- END REF -->
 
-
-
-
 <!-- INCLUDE document.creationDate.Desc -->
 
-
-
-
 <!-- INCLUDE document.creationTime.Desc -->
-
-
 
 <!-- REF file.delete().Desc -->
 ## .delete()
@@ -267,16 +242,13 @@ You want to create an alias to a file in your database folder:
 |v17 R5|Added
 </details>
 
-
 <!--REF #FileClass.delete().Syntax -->
 **.delete( )**<!-- END REF -->
-
 
 <!-- REF #FileClass.delete().Params -->
 |Parameter|Type||Description|
 |---|----|---|---|
 | |  ||Does not require any parameters|<!-- END REF -->
-
 
 #### Description
 
@@ -301,21 +273,11 @@ You want to delete a specific file in the database folder:
 ```
 <!-- END REF -->
 
-
-
-
 <!-- INCLUDE document.exists.Desc -->
-
-
-
 
 <!-- INCLUDE document.extension.Desc -->
 
-
-
-
 <!-- INCLUDE document.fullName.Desc -->
-
 
 <!-- REF file.getAppInfo().Desc -->
 ## .getAppInfo()
@@ -334,12 +296,11 @@ You want to delete a specific file in the database folder:
 |---|---|---|---|
 |Result|Object|<-|Contents of .exe/.dll version resource or .plist file|<!-- END REF -->
 
-
 #### Description
 
 The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe**, **.dll** or **.plist** file information as an object<!-- END REF -->.
 
-The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function returns an empty object (no error is generated). 
+The function must be used with an existing .exe, .dll or .plist file. If the file does not exist on disk or is not a valid .exe, .dll or .plist file, the function returns an empty object (no error is generated).
 
 > The function only supports .plist files in xml format (text-based). An error is returned if it is used with a .plist file in binary format.  
 
@@ -367,7 +328,7 @@ The xml file contents is parsed and keys are returned as properties of the objec
 #### Example
 
 ```4d
-	// display copyright info of application .exe file (windows)
+ // display copyright info of application .exe file (windows)
 var $exeFile : 4D.File
 var $info : Object
 $exeFile:=File(Application file; fk platform path)
@@ -388,52 +349,25 @@ ALERT($info.Copyright)
 
 <!-- END REF -->
 
-
 <!-- INCLUDE document.getContent().Desc -->
-
-
-
 
 <!-- INCLUDE document.getIcon().Desc -->
 
-
 <!-- INCLUDE document.getText().Desc -->
-
-
-
 
 <!-- INCLUDE document.hidden.Desc -->
 
-
-
 <!-- INCLUDE document.isAlias.Desc -->
-
-
 
 <!-- INCLUDE document.isFile.Desc -->
 
-
-
-
 <!-- INCLUDE document.isFolder.Desc -->
-
-
-
 
 <!-- INCLUDE document.isWritable.Desc -->
 
-
-
-
 <!-- INCLUDE document.modificationDate.Desc -->
 
-
-
-
 <!-- INCLUDE document.modificationTime.Desc -->
-
-
-
 
 <!-- REF file.moveTo().Desc -->
 ## .moveTo()
@@ -443,7 +377,6 @@ ALERT($info.Copyright)
 |---|---|
 |v17 R5|Added
 </details>
-
 
 <!--REF #FileClass.moveTo().Syntax -->
 **.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
@@ -455,7 +388,6 @@ ALERT($info.Copyright)
 |newName|Text|->|Full name for the moved file|
 |Result|4D.File|<-|Moved file|<!-- END REF -->
 
-
 #### Description
 
 The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
@@ -464,13 +396,11 @@ The *destinationFolder* must exist on disk, otherwise an error is generated.
 
 By default, the file retains its name when moved. If you want to rename the moved file, pass the new full name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
 
-
 **Returned object**
 
 The moved `File` object.
 
 #### Example
-
 
 ```4d
 $DocFolder:=Folder(fk documents folder)
@@ -479,12 +409,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 ```
 <!-- END REF -->
 
-
-
-
 <!-- INCLUDE document.name.Desc -->
-
-
 
 <!-- REF file.open().Desc -->
 ## .open()
@@ -494,7 +419,6 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 |---|---|
 |v19 R7|Added
 </details>
-
 
 <!--REF #FileClass.open().Syntax -->
 **.open**( { *mode* : Text } ) : 4D.FileHandle<br/>**.open**( { *options* : Object } ) : 4D.FileHandle<!-- END REF -->
@@ -508,7 +432,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 #### Description
 
-The `.open()` function <!-- REF #FileClass.open().Summary -->creates and returns a new [4D.FileHandle](FileHandleClass) object on the file, in the specified *mode* or with the specified *options*<!-- END REF -->. You can use functions and properties of the [4D.FileHandle](FileHandleClass) class to write, read, or append contents to the file. 
+The `.open()` function <!-- REF #FileClass.open().Summary -->creates and returns a new [4D.FileHandle](FileHandleClass) object on the file, in the specified *mode* or with the specified *options*<!-- END REF -->. You can use functions and properties of the [4D.FileHandle](FileHandleClass) class to write, read, or append contents to the file.
 
 If you use the *mode* (text) parameter, pass the opening mode for the file handle:
 
@@ -556,19 +480,11 @@ $fhandle:=$f.open("read")
 
 <!-- INCLUDE document.original.Desc -->
 
-
-
 <!-- INCLUDE document.parent.Desc -->
-
-
 
 <!-- INCLUDE document.path.Desc -->
 
-
-
 <!-- INCLUDE document.platformPath.Desc -->
-
-
 
 <!-- REF file.rename().Desc -->
 ## .rename()
@@ -578,7 +494,6 @@ $fhandle:=$f.open("read")
 |---|---|
 |v17 R5|Added
 </details>
-
 
 <!--REF #FileClass.rename().Syntax -->
 **.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
@@ -597,7 +512,6 @@ The *newName* parameter must comply with naming rules (e.g., it must not contain
 
 Note that the function modifies the full name of the file, i.e. if you do not pass an extension in *newName*, the file will have a name without an extension.
 
-
 **Returned object**
 
 The renamed `File` object.
@@ -611,7 +525,6 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
  $newName:=$toRename.rename($toRename.name+"_new"+$toRename.extension)
 ```
 <!-- END REF -->
-
 
 <!-- REF file.setAppInfo().Desc -->
 ## .setAppInfo()
@@ -629,7 +542,6 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 |Parameter|Type||Description|
 |---|---|---|---|
 |info|Object|->|Properties to write in .exe/.dll version resource or .plist file|<!-- END REF -->
-
 
 #### Description
 
@@ -657,7 +569,6 @@ Each valid property set in the *info* object parameter is written in the version
 |OriginalFilename|Text|
 
 If you pass a null or empty text as value, an empty string is written in the property. If you pass a value type different from text, it is stringified.
-
 
 ***info* parameter object with a .plist file**
 
@@ -705,7 +616,6 @@ $infoPlistFile.setAppInfo($info)
 |v17 R5|Added
 </details>
 
-
 <!--REF #FileClass.setContent().Syntax -->
 **.setContent** ( *content* : Blob ) <!-- END REF -->
 
@@ -714,11 +624,9 @@ $infoPlistFile.setAppInfo($info)
 |---|---|---|---|
 |content|BLOB|->|New contents for the file|<!-- END REF -->
 
-
 #### Description
 
 The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. For information on BLOBs, please refer to the [BLOB](Concepts/dt_blob.md) section.
-
 
 #### Example
 
@@ -728,13 +636,8 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 ```
 <!-- END REF -->
 
-
-
-
-
 <!-- REF file.setText().Desc -->
 ## .setText()
-
 
 <details><summary>History</summary>
 |Version|Changes|
@@ -743,10 +646,8 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 |v17 R5|Added|
 </details>
 
-
 <!--REF #FileClass.setText().Syntax -->
 **.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br/>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } ) <!-- END REF -->
-
 
 <!--REF #FileClass.setText().Params -->
 |Parameter|Type||Description|
@@ -766,8 +667,8 @@ In *text*, pass the text to write to the file. It can be a literal ("my text"), 
 
 Optionally, you can designate the character set to be used for writing the contents. You can pass either:
 
-- in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or "UTF-8"),
-- or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
+* in *charSetName*, a string containing the standard set name (for example "ISO-8859-1" or "UTF-8"),
+* or in *charSetNum*, the MIBEnum ID (number) of the standard set name.
 
 > For the list of character sets supported by 4D, refer to the description of the `CONVERT FROM TEXT` command.
 
@@ -795,12 +696,4 @@ $myFile.setText("Hello world")
 ```
 <!-- END REF -->
 
-
-
-
-
 <!-- INCLUDE document.size.Desc -->
-
-
-
-
