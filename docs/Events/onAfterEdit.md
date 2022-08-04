@@ -7,7 +7,6 @@ title: On After Edit
 |---|---|---|
 |45|[4D View Pro area](../FormObjects/viewProArea_overview.md) - [4D Write Pro area](../FormObjects/writeProArea_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [Hierarchical List](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns)|The contents of the enterable object that has the focus has just been modified|
 
-
 ## Description
 
 ### General case
@@ -18,7 +17,7 @@ When it is used, this event is generated after each change made to the contents 
 
 - Standard editing actions which modify content like paste, cut, delete or cancel;
 - Dropping a value (action similar to paste);
-- Any keyboard entry made by the user; in this case, the `On After Edit` event is generated after the [`On Before Keystroke`](onBeforeKeystroke.md) and [`On After Keystroke`](onAfterKeystroke.md) events, if they are used. 
+- Any keyboard entry made by the user; in this case, the `On After Edit` event is generated after the [`On Before Keystroke`](onBeforeKeystroke.md) and [`On After Keystroke`](onAfterKeystroke.md) events, if they are used.
 - Any modification made using a language command that simulates a user action (i.e., `POST KEY`).
 
 Within the `On After Edit` event, text data being entered is returned by the [`Get edited text`](https://doc.4d.com/4dv19/help/command/en/page655.html) command.  
@@ -34,7 +33,7 @@ The object returned by the `FORM Event` command contains:
 |objectName|text|4D View Pro area name|
 |sheetName|text|Name of the sheet of the event|
 |action|text|"editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted"|
- 
+
 Depending on the `action` property value, the [event object](overview.md#event-object) will contain additional properties.
 
 #### action = editChange
@@ -52,7 +51,6 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 |oldValue|variant|Value of cell before change|
 |newValue|variant|Value of cell after change|
 
-
 #### action = DragDropBlock
 
 |Property|Type|Description|
@@ -62,15 +60,13 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 |copy|boolean|Specifies if the source range is copied or not|
 |insert|boolean|Specifies if the source range is inserted or not|
 
-
 #### action = DragFillBlock
 
 |Property|Type|Description|
 |---|---|---|
 |fillRange|object|Range used for fill |
-autoFillType|longint|Value used for the fill.<li>0: Cells are filled with all data (values, formatting, and formulas)<li>1: Cells are filled with automatically sequential data<li>2: Cells are filled with formatting only<li>3: Cells are filled with values but not formatting<li>4: Values are removed from the cells<li>5: Cells are filled automatically|
-|fillDirection|longint|Direction of the fill.<li>0: The cells to the left are filled<li>1: The cells to the right are filled<li>2: The cells above are filled<li>3: The cells below are filled|
-
+autoFillType|longint|Value used for the fill.<li>0: Cells are filled with all data (values, formatting, and formulas)</li><li>1: Cells are filled with automatically sequential data</li><li>2: Cells are filled with formatting only</li><li>3: Cells are filled with values but not formatting</li><li>4: Values are removed from the cells</li><li>5: Cells are filled automatically</li>|
+|fillDirection|longint|Direction of the fill.<li>0: The cells to the left are filled</li><li>1: The cells to the right are filled</li><li>2: The cells above are filled</li><li>3: The cells below are filled</li>|
 
 #### action = formulaChanged
 
@@ -84,9 +80,8 @@ autoFillType|longint|Value used for the fill.<li>0: Cells are filled with all da
 |Property|Type|Description|
 |---|---|---|
 |range|object|Cell range|
-|pasteOption|longint|Specifies what is pasted from the clipboard:<li>0: Everything is pasted (values, formatting, and formulas)<li>1: Only values are pasted<li>2: Only the formatting is pasted<li>3: Only formulas are pasted<li>4: Values and formatting are pasted (not formulas)<li>5: Formulas and formatting are pasted (not values)|
-|pasteData|object|The data from the clipboard to be pasted<li>"text" (text): The text from the clipboard<li>"html" (text): The HTML from the clipboard|
-
+|pasteOption|longint|Specifies what is pasted from the clipboard:<li>0: Everything is pasted (values, formatting, and formulas)</li><li>1: Only values are pasted</li><li>2: Only the formatting is pasted</li><li>3: Only formulas are pasted</li><li>4: Values and formatting are pasted (not formulas)</li><li>5: Formulas and formatting are pasted (not values)</li>|
+|pasteData|object|The data from the clipboard to be pasted<li>"text" (text): The text from the clipboard</li><li>"html" (text): The HTML from the clipboard</li>|
 
 #### Example
 
