@@ -93,7 +93,7 @@ This property designates the [form to inherit](forms.md#inherited-forms) in the 
 
 To inherit from a table form, set the table in the [Inherited Form Table](#inherited-form-table) property.
 
-To remove inheritance, select **\<None>** in the Property List (or " " in JSON).
+To remove inheritance, select `\<None>` in the Property List (or " " in JSON).
 
 
 #### JSON Grammar
@@ -109,7 +109,7 @@ To remove inheritance, select **\<None>** in the Property List (or " " in JSON).
 
 This property specifies the database table from which to [inherit a form](forms.md#inherited-forms) in the current form.
 
-Set to **\<None>** in the Property List (or " " in JSON) to inherited from a project form.
+Set to `\<None>` in the Property List (or " " in JSON) to inherited from a project form.
 
 
 #### JSON Grammar
@@ -169,7 +169,7 @@ You can use dynamic references to set the window titles for forms, *i.e.*:
 
 *	A standard XLIFF reference stored in the Resources folder.
 *	A table or field label: The syntax to apply is <?[TableNum]FieldNum> or <?[TableName]FieldName>.
-*	A variable or a field: The syntax to apply is \<VariableName> or <[TableName]FieldName>. The current value of the field or variable will be displayed in the window title.
+*	A variable or a field: The syntax to apply is `\<VariableName>` or `<[TableName]FieldName>`. The current value of the field or variable will be displayed in the window title.
 
 > The number of characters for a window title is limited to 31.
 

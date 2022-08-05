@@ -103,7 +103,7 @@ The 4D code editor displays a part of a method's documentation in its help tip.
 
 ![](../assets/en/Project/codeEditor_Comments.png)
 
-If a file named "\<MethodName>.md" exists in "\<package>/documentation" folder, the code editor displays (by priority):
+If a file named `\<MethodName>.md` exists in the `\<package>/documentation` folder, the code editor displays (by priority):
 
 - Any text entered in an HTML `comment` tag (*\<!-- command documentation -->*) at the top of the markdown file.
 

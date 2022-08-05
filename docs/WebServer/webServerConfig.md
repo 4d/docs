@@ -344,7 +344,8 @@ Possible values: IP address string. Both IPv6 string formats (e.g. "2001:0db8:00
 #### About IPv6 support
 
 *	**No warning when TCP port is occupied**<br/>
-When the server is set to respond on "Any" IP addresses, if the TCP port is being used by another application, this is not indicated when the server is started. In fact, 4D server does not detect any error in this case because the port remains free on the IPv6 address. However, it is not possible to access it using the IPv4 address of the machine, nor by means of the local address: 127.0.0.1.<p>
+When the server is set to respond on "Any" IP addresses, if the TCP port is being used by another application, this is not indicated when the server is started. In fact, 4D server does not detect any error in this case because the port remains free on the IPv6 address. However, it is not possible to access it using the IPv4 address of the machine, nor by means of the local address: 127.0.0.1.
+
 If your 4D server does not seem to be responding on the port defined, you can test the address [::1] on the server machine (equivalent to 127.0.0.1 for IPv6, add [:portNum] to test another port number). If 4D responds, it is likely that another application is using the port in IPv4.
 
 *	**IPv4-mapped IPv6 addresses**<br/>
@@ -675,8 +676,8 @@ In some cases, other optimized internal functions may be invoked. Keep-alive con
 Two options allow you to set how the keep-alive connections work:
 
 *	**Number of requests by connection**: Allows you to set the maximum number of requests and responses able to travel over a connection keep alive. Limiting the number of requests per connection allows you to prevent server flooding due to a large number of incoming requests (a technique used by hackers).<p>
-The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.
+The default value (100) can be increased or decreased depending on the resources of the machine hosting the 4D Web Server.</p>
 
 *	**Timeout**: This value defines the maximum wait period (in seconds) during which the web server maintains an open TCP connection without receiving any requests from the web browser. Once this period is over, the server closes the connection.<p>
-If the web browser sends a request after the connection is closed, a new TCP connection is automatically created. This operation is not visible for the user.
+If the web browser sends a request after the connection is closed, a new TCP connection is automatically created. This operation is not visible for the user.</p>
 

@@ -26,7 +26,7 @@ If you open the page without setting any tables as **Encryptable**, the followin
 Otherwise, the following message is displayed:
 ![](../assets/en/MSC/MSC_encrypt2.png)<p>
 This means that the **Encryptable** status for at least one table has been modified and the data file still has not been encrypted.
-**Note: **The same message is displayed when the **Encryptable** status has been modified in an already encrypted data file or after the data file has been decrypted (see below).
+**Note: **The same message is displayed when the **Encryptable** status has been modified in an already encrypted data file or after the data file has been decrypted (see below).</p>
 3. Click on the Encrypt picture button.  
 ![](../assets/en/MSC/MSC_encrypt3.png)  
 You will be prompted to enter a passphrase for your data file:

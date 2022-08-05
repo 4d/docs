@@ -354,7 +354,7 @@ Page attributes are used to specify general document print settings.
 |---|---|---|
 |blackAndWhite|	boolean	|Printing in black and white only. <p>Default value = false</p><p>**Note**: PDFs are not affected by this attribute. Colors in PDFs remain.</p>|
 |centering|	longint|	How the contents are centered on the printed page. Available values: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (default), `vk print centering vertical`|
-|firstPageNumber|longint|The page number to print on the first page.<p>Default value = 1|
+|firstPageNumber|longint|The page number to print on the first page.Default value = 1|
 |pageOrder|	longint	|The order pages are printed. Available values: `vk print page order auto` (default), `vk print page order down then over`, `vk print page order over then down`.|
 |pageRange	|text|	The range of pages for printing|
 |qualityFactor	|longint|	The quality factor for printing (1 - 8).  The higher the quality factor, the better the printing quality, however printing performance may be affected.<p>Default value = 2</p>|
@@ -388,10 +388,10 @@ Scale attributes are used to specify printing optimization and adjustments.
 
 |Property|	Type|	Description|
 |---|---|---|
-|bestFitColumns|	boolean|	Column width is adjusted to fit the largest text width for printing.<p>Default value = "false"|
-|bestFitRows|	boolean|	Row height is adjusted to fit the tallest text height for printing. <p>Default value = "false"  | 
-|fitPagesTall|	longint|	The number of vertical pages (portrait orientation) to check when optimizing printing.<p> Default value = -1|
-|fitPagesWide	|longint|	The number of horizontal pages (landscape orientation) to check when optimizing printing. <p>Default value = -1|
+|bestFitColumns|	boolean|	Column width is adjusted to fit the largest text width for printing. Default value = "false"|
+|bestFitRows|	boolean|	Row height is adjusted to fit the tallest text height for printing. Default value = "false"  | 
+|fitPagesTall|	longint|	The number of vertical pages (portrait orientation) to check when optimizing printing. Default value = -1|
+|fitPagesWide	|longint|	The number of horizontal pages (landscape orientation) to check when optimizing printing. Default value = -1|
 
 ### Show / Hide 
  
@@ -401,7 +401,7 @@ Show / Hide attributes are used to specify the visibility (printing) of 4D View 
 |---|---|---|
 |showBorder|	boolean	|Prints the outline border.Default value = "true"|
 |showColumnHeader	|longint	|Column header print settings. Available values: `vk print visibility hide`, `vk print visibility inherit` (default), `vk print visibility show`, `vk print visibility show once`|
-|showGridLine|	boolean	|Prints the gridlines.<p>Default value = "false"|
+|showGridLine|	boolean	|Prints the gridlines. Default value = "false"|
 |showRowHeader	|longint	|Row headers print settings. Available values: `vk print visibility hide`, `vk print visibility inherit` (default), `vk print visibility show`, `vk print visibility show once`|
 
 ### Watermark  
@@ -410,10 +410,10 @@ Watermark attributes are used to superimpose text or an image onto the 4D View P
 
 |Property||	Type|	Description|
 |---|---|---|---|
-|watermark||	collection	|Collection of watermark settings. <p>Default value: undefined|
+|watermark||	collection	|Collection of watermark settings.  Default value: undefined|
 ||\[ ].height|longint|The height of the watermark text / image.|
 ||\[ ].imageSrc|picture &#124; text*|The watermark text / image.|
-||\[ ].page|text|The page(s) where the watermark is printed.<p>For all pages: "all". For specific pages: page numbers or page ranges separated by commas. Ex.: "1,3,5-12"|
+||\[ ].page|text|The page(s) where the watermark is printed. For all pages: "all". For specific pages: page numbers or page ranges separated by commas. Ex.: "1,3,5-12"|
 ||\[ ].width|longint|The width of the watermark text / image.
 ||\[ ].x|longint|The horizontal coordinate of the top left point of the watermark text / image.|
 ||\[ ].y|longint|The vertical coordinate of the top left point of the watermark text / image.|
@@ -472,7 +472,7 @@ Example:
 
 |Property||	Type|	Description|	Possible values|
 |---|---|---|---|---|
-|font|		|text|	Specifies the font characteristics in CSS font shorthand ("font-style font-variant font-weight font-size/line-height font-family"). Example: "14pt Century Gothic". The font-size and font-family values are mandatory. If one of the other values is missing, their default values are used. Note: If a font name contains a space, the name must be within quotes.|	A CSS font shorthand.<p>4D provides utility commands to handle font characteristics as objects: [`VP Font to object`](method-list.md#vp-font-to-object) and [`VP Object to font`](method-list.md#vp-object-to-font)|
+|font|		|text|	Specifies the font characteristics in CSS font shorthand ("font-style font-variant font-weight font-size/line-height font-family"). Example: "14pt Century Gothic". The font-size and font-family values are mandatory. If one of the other values is missing, their default values are used. Note: If a font name contains a space, the name must be within quotes.|	A CSS font shorthand. 4D provides utility commands to handle font characteristics as objects: [`VP Font to object`](method-list.md#vp-font-to-object) and [`VP Object to font`](method-list.md#vp-object-to-font)|
 |formatter|		|text|Pattern for value/time property.|Number/text/date/time formats, special characters. See [Cell Format](#cell-format).|
 |isVerticalText|		|boolean|Specifies text direction.|True = vertical text, False = horizontal text.|
 |labelOptions|		|object|	Defines cell label options (watermark options).| |	

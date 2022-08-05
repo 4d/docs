@@ -28,7 +28,6 @@ These three locations can be used simultaneously: it is possible to install a "M
 
 ## Default macros  
 
-
 4D offers a set of default macros corresponding, in particular, to the list of keywords in previous versions of 4D. These macros are included in the default "*Macros.xml*" file, placed in the "Macros v2" folder that is created in the active 4D folder of the machine during the initial startup of 4D.
 
 You can modify this file or the contents of the folder subsequently as desired (see the following paragraph). In the event of problems with this folder, it can be deleted and 4D will re-create it on the next startup.
@@ -61,8 +60,8 @@ In conformity with XML specifications, some element tags can include attributes.
 - Double tags: `<tag attribute="value"> </macro>`
 - Single tags: `<tag attribute="value"/>`
 
-If the element accepts several attributes, you can group them in the same line of command, separated by a space:\
-<tag attribute1="value" attribute2="value" attribute3="value"... >
+If the element accepts several attributes, you can group them in the same line of command, separated by a space:
+`\<tag attribute1="value" attribute2="value" attribute3="value"... >`
 
 Here is the list of tags and their mode of use:
 
@@ -170,5 +169,5 @@ If you do not pass this attribute, the previous mode is kept.
 Strict syntax rules must be observed in order for macros files to respect the XML standard. This may lead to incompatibilities with the code of macros created with previous versions and prevent the loading of XML files. The following are the main sources of malfunctioning:
 
 - Comments of the "// my comment" type, allowed inside `<macro>` elements in previous versions of 4D, are not compatible with the XML syntax. The lines of comments must respect the standard `"<!-- my comment -->"` form.
-- The `<>` symbols used more particularly for interprocess object names must be encoded. For example, the *<>params* variable must be written `&lt;>params`.
+- The `<>` symbols used more particularly for interprocess object names must be encoded. For example, the `<>params` variable must be written `&lt;>params`.
 - The initial `<macros>` declaration tag could be omitted in previous versions of 4D. It is now mandatory; otherwise, the file will not be loaded.

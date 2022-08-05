@@ -125,7 +125,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|entryFilter|string	|<li>Entry filter code or <li>Entry filter name (filter names start with &#124; )|
+|entryFilter|string	|<li>Entry filter code</li> or <li>Entry filter name (filter names start with &#124; )</li>|
 
 
 #### Objects Supported
@@ -146,8 +146,6 @@ When the **Focusable** property is enabled for an object, the object can have th
 > An [input object](input_overview.md) is always focusable if it has the [Enterable](#enterable) property. 
 
 * ![](../assets/en/FormObjects/property_focusable1.png)<br/>Check box shows focus when selected
-<p>
-<p>
 
 * ![](../assets/en/FormObjects/property_focusable2.png)<br/>Check box is selected but cannot show focus|
 
@@ -307,7 +305,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 |shortcutControl	|boolean	|true, false (macOS Control)|
 |shortcutShift	|boolean	|true, false|  
 ||||
-|shortcutKey	|string	|<li>any character key: "a", "b"...<li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"|
+|shortcutKey	|string	|<li>any character key: "a", "b"...</li><li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li>|
 
 
 #### Objects Supported

@@ -35,7 +35,7 @@ The specified form is displayed:
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-|detailForm |string |<li>Name (string) of table or project form<li>POSIX path (string) to a .json file describing the form<li>Object describing the form |
+|detailForm |string |<li>Name (string) of table or project form</li><li>POSIX path (string) to a .json file describing the form</li><li>Object describing the form</li>|
 
 #### Objects Supported
 
