@@ -98,9 +98,11 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R4|Added|
+
 </details>
 
 <!-- REF #_command_.New signal.Syntax -->
@@ -169,9 +171,11 @@ The ***doSomething*** method could be like:
 ## .description 
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R4|Added|
+
 </details>
 
 <!-- REF #SignalClass.description.Syntax -->
@@ -193,6 +197,7 @@ This property is **read-write**.
 ## .signaled   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R4|Added|
@@ -216,9 +221,11 @@ This property is **read-only**.
 ## .trigger()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R4|Added|
+
 </details>
 
 <!-- REF #SignalClass.trigger().Syntax -->
@@ -244,9 +251,11 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 ## .wait()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R4|Added|
+
 </details>
 
 <!-- REF #SignalClass.wait().Syntax -->

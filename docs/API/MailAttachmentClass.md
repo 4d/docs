@@ -25,6 +25,7 @@ Attachment objects provide the following read-only properties and functions:
 ## MAIL New attachment
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R2|Accepts 4D.File, 4D.ZipFile, 4D.Blob
@@ -169,6 +170,7 @@ $transporter.send($email)
 ## 4D.MailAttachment.new()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R2|Accepts 4D.File, 4D.ZipFile, 4D.Blob
@@ -263,6 +265,7 @@ The `.path` property contains <!-- REF #MailAttachmentClass.path.Summary -->the 
 ## .platformPath
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19|Added

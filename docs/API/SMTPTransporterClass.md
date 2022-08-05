@@ -28,11 +28,13 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 ## SMTP New transporter
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18|New logFile property|
 |v17 R5|New bodyCharset and headerCharset properties|
 |v17 R4|Added|
+
 </details>
 
 <!-- REF #_command_.SMTP New transporter.Syntax -->
@@ -165,6 +167,7 @@ For information about SMTP status codes, please refer to [this page](https://www
 ## .keepAlive
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R4|Added
@@ -189,10 +192,12 @@ The SMTP connection is automatically closed:
 ## .send()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Support of mime contents|
 |v17 R4|Added|
+
 </details>
 
 <!-- REF #SMTPTransporterClass.send().Syntax -->

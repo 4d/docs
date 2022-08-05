@@ -27,9 +27,11 @@ For detailed information about the session implementation, please refer to the [
 ## Session
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R6|Added|
+
 </details>
 
 <!-- REF #_command_.Session.Syntax -->
@@ -85,6 +87,7 @@ IP:port/4DACTION/action_Session
 ## .clearPrivileges()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R6|Added|
@@ -123,6 +126,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 ## .expirationDate
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R6|Added|
@@ -154,9 +158,11 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 ## .hasPrivilege()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R6|Added|
+
 </details>
 
 <!-- REF #SessionClass.hasPrivilege().Syntax -->
@@ -193,6 +199,7 @@ End if
 ## .idleTimeout
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R6|Added|
@@ -235,6 +242,7 @@ End if
 ## .isGuest()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R6|Added|
@@ -272,6 +280,7 @@ End if
 ## .setPrivileges()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R6|Added|
@@ -336,6 +345,7 @@ End if
 ## .storage
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R6|Added|
@@ -378,6 +388,7 @@ End if
 ## .userName
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R6|Added|

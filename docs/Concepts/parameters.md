@@ -214,6 +214,7 @@ Tables or array expressions can only be passed [as reference using a pointer](dt
 ## `return {expression}`
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R4|Added

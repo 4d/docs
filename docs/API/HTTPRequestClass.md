@@ -4,9 +4,11 @@ title: HTTPRequest
 ---
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R6|Class added|
+
 </details>
 
 

@@ -43,6 +43,7 @@ ASSERT($status.success)
 ## 4D.CryptoKey.new()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added
@@ -75,6 +76,7 @@ The returned `CryptoKey` object encapsulates an encryption key pair. It is a sha
 ## .curve
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added
@@ -88,6 +90,7 @@ Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised
 ## .decrypt()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added
@@ -130,6 +133,7 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 ## .encrypt()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added
@@ -165,6 +169,7 @@ The returned value is an encrypted message.
 ## .getPrivateKey()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added
@@ -188,6 +193,7 @@ The returned value is the private key.
 ## .getPublicKey()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added
@@ -212,6 +218,7 @@ The returned value is the public key.
 ## .pem
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added
@@ -225,6 +232,7 @@ The returned value is the public key.
 ## .sign()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added
@@ -262,6 +270,7 @@ The utf8 representation of the *message* string.
 <!-- END REF -->
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added
@@ -276,6 +285,7 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 <!-- END REF -->
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added
@@ -289,6 +299,7 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 ## .verify()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added

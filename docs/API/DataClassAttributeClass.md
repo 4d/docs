@@ -40,9 +40,11 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 ## .autoFilled
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF DataClassAttributeClass.autoFilled.Syntax -->
@@ -65,9 +67,11 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 ## .exposed
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R3|Added|
+
 </details>
 
 <!-- REF DataClassAttributeClass.exposed.Syntax -->
@@ -87,9 +91,11 @@ The `.exposed` property is <!-- REF DataClassAttributeClass.exposed.Summary -->t
 ## .fieldNumber
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF DataClassAttributeClass.fieldNumber.Syntax -->
@@ -109,10 +115,12 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 ## .fieldType  
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R4|Support of alias attributes|
 |v19 R3|Support of computed attributes|
+
 </details>
 
 <!-- REF DataClassAttributeClass.fieldType.Syntax -->
@@ -142,9 +150,11 @@ The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->
 ## .indexed  
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF DataClassAttributeClass.indexed.Syntax -->
@@ -164,9 +174,11 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 ## .inverseName  
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF DataClassAttributeClass.inverseName.Syntax -->
@@ -186,9 +198,11 @@ This property is not returned if `.kind` = "storage". It must be of the "related
 ## .keywordIndexed  
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF DataClassAttributeClass.keywordIndexed.Syntax -->
@@ -208,10 +222,12 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 ## .kind  
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R4|Added "alias"|
 |v19 R3|Added "calculated"|
+
 </details>
 
 <!-- REF DataClassAttributeClass.kind.Syntax -->
@@ -246,9 +262,11 @@ Given the following table and relation:
 ## .mandatory  
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF DataClassAttributeClass.mandatory.Syntax -->
@@ -270,9 +288,11 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 ## .name  
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF DataClassAttributeClass.name.Syntax -->
@@ -295,9 +315,11 @@ The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->returns th
 ## .path  
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R4|Added|
+
 </details>
 
 <!-- REF DataClassAttributeClass.path.Syntax -->
@@ -320,6 +342,7 @@ The `.path` property <!-- REF DataClassAttributeClass.path.Summary -->returns th
 ## .readOnly  
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R3|Added|
@@ -341,6 +364,7 @@ For example, computed attributes without [`set` function](ORDA/ordaClasses.md#fu
 ## .relatedDataClass  
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
@@ -374,9 +398,11 @@ Given the following tables and relations:
 ## .type  
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R3|Support of computed attributes|
+
 </details>
 
 <!-- REF DataClassAttributeClass.type.Syntax -->
@@ -407,9 +433,11 @@ The conceptual value type depends on the attribute [`.kind`](#kind).
 ## .unique  
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF DataClassAttributeClass.unique.Syntax -->

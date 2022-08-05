@@ -8,6 +8,7 @@ title: On Window Opening Denied
 |53|[Web Area](../FormObjects/webArea_overview.md)|A pop-up window has been blocked|
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R5|Triggered on drop

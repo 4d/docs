@@ -45,9 +45,11 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 ## IMAP New transporter
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added|
+
 </details>
 
 <!-- REF #_command_.IMAP New transporter.Syntax -->
@@ -126,9 +128,11 @@ The `4D.IMAPTransporter.new()` function <!-- REF #4D.IMAPTransporter.new().Summa
 ## .addFlags()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R6|Added|
+
 </details>
 
 <!-- REF #IMAPTransporterClass.addFlags().Syntax -->
@@ -210,9 +214,11 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 ## .append()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R6|Added|
+
 </details>
 
 <!-- REF #IMAPTransporterClass.append().Syntax -->
@@ -296,9 +302,11 @@ $status:=$imap.append($msg; "Drafts")
 ## .checkConnectionDelay
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added|
+
 </details>
 
 <!-- REF #IMAPTransporterClass.checkConnectionDelay.Syntax -->
@@ -318,9 +326,11 @@ The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.che
 ## .copy()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R5|Added|
+
 </details>
 
 <!-- REF #IMAPTransporterClass.copy().Syntax -->
@@ -415,9 +425,11 @@ To copy all messages in the current mailbox:
 ## .createBox()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19|Added|
+
 </details>
 
 <!-- REF #IMAPTransporterClass.createBox().Syntax -->
@@ -488,9 +500,11 @@ End if
 ## .delete()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R5|Added|
+
 </details>
 
 <!-- REF #IMAPTransporterClass.delete().Syntax -->
@@ -583,9 +597,11 @@ To delete all messages in the current mailbox:
 ## .deleteBox()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19|Added|
+
 </details>
 
 <!-- REF #IMAPTransporterClass.deleteBox().Syntax -->
@@ -657,9 +673,11 @@ End if
 ## .expunge()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R6|Added|
+
 </details>
 
 <!-- REF #IMAPTransporterClass.expunge().Syntax -->
@@ -720,11 +738,13 @@ $status:=$transporter.expunge()
 ## .getBoxInfo()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R5|*name* is optional|
 
 |v18 R4|Added|
+
 </details>
 
 <!-- REF #IMAPTransporterClass.getBoxInfo().Syntax -->
@@ -770,10 +790,12 @@ The `boxInfo` object returned contains the following properties:
 ## .getBoxList()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added|
 |v19|Add `isSubscribed` parameter|
+
 </details>
 
 <!-- REF #IMAPTransporterClass.getBoxList().Syntax -->
@@ -833,9 +855,11 @@ If the account does not contain any mailboxes, an empty collection is returned.
 ## .getDelimiter()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added|
+
 </details>
 
 <!-- REF #IMAPTransporterClass.getDelimiter().Syntax -->
@@ -884,9 +908,11 @@ Mailbox name delimiter character.
 ## .getMail()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added|
+
 </details>
 
 <!-- REF #IMAPTransporterClass.getMail().Syntax -->
@@ -955,9 +981,11 @@ You want to get the message with ID = 1:
 ## .getMails()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R5|Added|
+
 </details>
 
 <!-- REF #IMAPTransporterClass.getMails().Syntax -->
@@ -1053,9 +1081,11 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
 ## .getMIMEAsBlob()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added|
+
 </details>
 
 <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Syntax -->
@@ -1125,9 +1155,11 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 ## .move()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R5|Added|
+
 </details>
 
 <!-- REF #IMAPTransporterClass.move().Syntax -->
@@ -1223,9 +1255,11 @@ To move all messages in the current mailbox:
 ## .numToID()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R5|Added|
+
 </details>
 
 <!-- REF #IMAPTransporterClass.numToID().Syntax -->
@@ -1281,9 +1315,11 @@ The function returns a collection of strings (unique IDs).
 ## .removeFlags()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R6|Added|
+
 </details>
 
 <!-- REF #IMAPTransporterClass.removeFlags().Syntax -->
@@ -1364,9 +1400,11 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 ## .renameBox()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19|Added|
+
 </details>
 
 <!-- REF #IMAPTransporterClass.renameBox().Syntax -->
@@ -1438,9 +1476,11 @@ End if
 ## .searchMails()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R5|Added|
+
 </details>
 
 <!-- REF #IMAPTransporterClass.searchMails().Syntax -->
@@ -1581,9 +1621,11 @@ Examples:
 ## .selectBox()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R4|Added|
+
 </details>
 
 <!-- REF #IMAPTransporterClass.selectBox().Syntax -->
@@ -1645,9 +1687,11 @@ The `boxInfo` object returned contains the following properties:
 ## .subscribe()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19|Added|
+
 </details>
 
 <!-- REF #IMAPTransporterClass.subscribe().Syntax -->
@@ -1713,9 +1757,11 @@ End if
 ## .unsubscribe()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19|Added|
+
 </details>
 
 <!-- REF #IMAPTransporterClass.unsubscribe().Syntax -->

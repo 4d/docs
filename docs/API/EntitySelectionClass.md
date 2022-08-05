@@ -122,6 +122,7 @@ USE ENTITY SELECTION($entitySel) //The current selection of the Employee table i
 ## &#91;*index*&#93; 
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -176,9 +177,11 @@ Note that the corresponding entity is reloaded from the datastore.
 ## .*attributeName*
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
+
 </details>
 
 <!-- REF EntitySelectionClass.attributeName.Syntax -->
@@ -261,10 +264,12 @@ The resulting object is an entity selection of Employee with duplications remove
 ## .add() 
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R5|Only supports alterable entity selections|
 |v17|Added|
+
 </details>
 
 
@@ -330,9 +335,11 @@ Calls to the function can be chained:
 ## .and() 
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
+
 </details>
 
 <!-- REF #EntitySelectionClass.and().Syntax -->
@@ -396,6 +403,7 @@ We want to have a selection of employees named "Jones" who live in New York:
 ## .average()   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R6|Returns undefined if empty entity selection|
@@ -449,6 +457,7 @@ We want to obtain a list of employees whose salary is higher than the average sa
 ## .contains()   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -496,6 +505,7 @@ If *entity* and the entity selection do not belong to the same dataclass, an err
 ## .count()   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -541,6 +551,7 @@ We want to find out the total number of employees for a company without counting
 ## .copy()   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R5|Added|
@@ -603,6 +614,7 @@ Then this entity selection is updated with products and you want to share the pr
 ## .distinct()   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -664,6 +676,7 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 ## .drop()   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -725,6 +738,7 @@ Example with the `dk stop dropping on first error` option:
 ## .extract()   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R3|Added|
@@ -832,6 +846,7 @@ Given the following table and relation:
 ## .first()   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -888,6 +903,7 @@ There is, however, a difference between both statements when the selection is em
 ## .getDataClass()   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
@@ -936,9 +952,11 @@ The following generic code duplicates all entities of the entity selection:
 ## .getRemoteContextAttributes()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19R5|Added|
+
 </details>
 
 <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Syntax -->
@@ -1083,6 +1101,7 @@ For more information, please refer to [Ordered or unordered entity selection](OR
 ## .last()   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1130,6 +1149,7 @@ If the entity selection is empty, the function returns Null.
 ## .length   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1164,6 +1184,7 @@ Entity selections always have a `.length` property.
 ## .max()   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1215,6 +1236,7 @@ We want to find the highest salary among all the female employees:
 ## .min()   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1264,6 +1286,7 @@ In this example, we want to find the lowest salary among all the female employee
 ## .minus()   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1330,6 +1353,7 @@ We want to have a selection of female employees named "Jones" who live in New Yo
 ## .or()   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1390,6 +1414,7 @@ If the original entity selection and the parameter are not related to the same d
 ## .orderBy()   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1466,6 +1491,7 @@ You can add as many objects in the criteria collection as necessary.
 ## .orderByFormula()   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R6|Added|
@@ -1588,6 +1614,7 @@ In this example, the "marks" object field in the **Students** dataClass contains
 ## .query()   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R6|Support of Formula parameters|
@@ -1647,6 +1674,7 @@ More examples of queries can be found in the DataClass [`.query()`](DataClassCla
 ## .queryPath   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1671,6 +1699,7 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 ## .queryPlan   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1695,6 +1724,7 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 ## .refresh()   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R3|Added|
@@ -1774,6 +1804,7 @@ A list box displays the Form.students entity selection and several clients work 
 ## .selected()   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R3|Added|
@@ -1844,6 +1875,7 @@ $result2:=$invoices.selected($creditSel)
 ## .slice()   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1903,6 +1935,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 ## .sum()   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -1954,6 +1987,7 @@ $sum:=$sel.sum("salary")
 ## .toCollection()   
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17|Added|

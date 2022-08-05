@@ -9,6 +9,7 @@ title: Transporter Class
 ## .acceptUnsecureConnection
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R4|Added
@@ -44,9 +45,11 @@ Available secured ports are:
 ## .authenticationMode
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R4|Added|
+
 </details>
 
 <!-- REF #transporter.authenticationMode.Syntax -->
@@ -75,9 +78,11 @@ Possible values are:
 ## .authenticationMode
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R4|Added|
+
 </details>
 
 **.authenticationMode** : Text
@@ -106,9 +111,11 @@ Possible values are:
 ## .authenticationMode
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R4|Added|
+
 </details>
 
 **.authenticationMode** : Text
@@ -136,10 +143,12 @@ Possible values are:
 ## .bodyCharset
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18|Support for UTF8 base64|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF #transporter.bodyCharset.Syntax -->
@@ -170,9 +179,11 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 ## .connectionTimeOut
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF #transporter.connectionTimeOut.Syntax -->
@@ -190,9 +201,11 @@ The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeO
 ## .headerCharset
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF #transporter.headerCharset.Syntax -->
@@ -223,9 +236,11 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 ## .host
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF #transporter.host.Syntax -->
@@ -243,9 +258,11 @@ The `.host` property contains <!-- REF #transporter.host.Summary -->the name or 
 ## .logFile
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF #transporter.logFile.Syntax -->
@@ -269,9 +286,11 @@ Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), ext
 ## .port
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R4|Added|
+
 </details>
 
 <!-- REF #transporter.port.Syntax -->
@@ -293,6 +312,7 @@ The `.port` property contains <!-- REF #transporter.port.Summary --> the port nu
 ## .sendTimeOut
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R4|Added
@@ -313,9 +333,11 @@ The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary -
 ## .user
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R4|Added|
+
 </details>
 
 <!-- REF #transporter.user.Syntax -->
@@ -333,9 +355,11 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 ## .checkConnection()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R4|Added|
+
 </details>
 
 <!-- REF #transporter.checkConnection().Syntax -->

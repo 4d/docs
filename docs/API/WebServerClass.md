@@ -59,6 +59,7 @@ They provide the following properties and functions:
 ## WEB Server
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R3|Added|
@@ -106,6 +107,7 @@ From your component, you want to know if the Web server of the host database is 
 ## WEB Server list
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R3|Added
@@ -634,9 +636,11 @@ The <!-- REF #WebServerClass.sessionCookiePath.Summary -->"path" field of the se
 ## .sessionCookieSameSite
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19|Added|
+
 </details>
 
 <!-- REF #WebServerClass.sessionCookieSameSite.Syntax -->
@@ -672,6 +676,7 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 ## .start()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R3|Added
@@ -734,6 +739,7 @@ The function returns an object describing the Web server launch status. This obj
 ## .stop()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R3|Added

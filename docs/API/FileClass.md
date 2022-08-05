@@ -54,9 +54,11 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 ## File
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF #_command_.File.Syntax -->
@@ -124,6 +126,7 @@ If the command is called from a component, pass the optional *parameter to get t
 ## 4D.File.new()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R6|Added
@@ -143,6 +146,7 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 ## .create()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -184,6 +188,7 @@ Creation of a preferences file in the database folder:
 ## .createAlias()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -237,6 +242,7 @@ You want to create an alias to a file in your database folder:
 ## .delete()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -283,6 +289,7 @@ You want to delete a specific file in the database folder:
 ## .getAppInfo()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19|Added
@@ -373,6 +380,7 @@ ALERT($info.Copyright)
 ## .moveTo()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -415,6 +423,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 ## .open()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R7|Added
@@ -490,6 +499,7 @@ $fhandle:=$f.open("read")
 ## .rename()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -530,6 +540,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 ## .setAppInfo()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19|Added
@@ -611,6 +622,7 @@ $infoPlistFile.setAppInfo($info)
 ## .setContent()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -640,10 +652,12 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 ## .setText()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R3|Default for new projects: no BOM and (macOS) LF for EOL|
 |v17 R5|Added|
+
 </details>
 
 <!--REF #FileClass.setText().Syntax -->

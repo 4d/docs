@@ -78,6 +78,7 @@ File handle objects cannot be shared.
 ## .breakModeRead
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R7|Added
@@ -106,6 +107,7 @@ This property is **read-only**.
 ## .breakModeWrite
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R7|Added
@@ -134,6 +136,7 @@ This property is **read-only**.
 ## .charset
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R7|Added
@@ -158,6 +161,7 @@ This property is **read-only**.
 ## .eof
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R7|Added
@@ -181,6 +185,7 @@ This property is **read-only**.
 ## .getSize()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R7|Added
@@ -212,6 +217,7 @@ The `.getSize()` function <!-- REF #FileHandleClass.getSize().Summary -->returns
 ## .mode
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R7|Added
@@ -237,6 +243,7 @@ This property is **read-only**.
 ## .offset
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R7|Added
@@ -266,6 +273,7 @@ This property is **read/write**.
 ## .readBlob()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R7|Added
@@ -299,6 +307,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 ## .readLine()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R7|Added
@@ -332,6 +341,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 ## .readText()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R7|Added
@@ -371,6 +381,7 @@ If the *stopChar* parameter is passed and not found, `.readText()` returns an em
 ## .setSize()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R7|Added
@@ -401,6 +412,7 @@ If the *size* value is less than the current document size, the document content
 ## .writeBlob()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R7|Added
@@ -432,6 +444,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 ## .writeLine()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R7|Added
@@ -462,6 +475,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 ## .writeText()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v19 R7|Added

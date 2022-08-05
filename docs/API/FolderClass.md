@@ -52,9 +52,11 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 ## Folder
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
+
 </details>
 
 <!-- REF #_command_.Folder.Syntax -->
@@ -113,6 +115,7 @@ If the command is called from a component, pass the optional *parameter to get t
 ## 4D.Folder.new()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v18 R6|Added
@@ -132,6 +135,7 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 ## .create()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -184,6 +188,7 @@ End if
 ## .createAlias()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -237,6 +242,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 ## .delete()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -311,6 +317,7 @@ macOS: -45 (The file is locked or the pathname is not correct)
 ## .moveTo()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -364,6 +371,7 @@ You want to move and rename a folder:
 ## .rename()
 
 <details><summary>History</summary>
+
 |Version|Changes|
 |---|---|
 |v17 R5|Added
