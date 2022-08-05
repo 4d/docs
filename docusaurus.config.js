@@ -79,9 +79,6 @@ module.exports = {
     },
   },
   "plugins": [
-    [require.resolve('@cmfcmf/docusaurus-search-local'), {
-      // Options here
-    }],
     [
       "@docusaurus/plugin-client-redirects",
       {
@@ -92,6 +89,12 @@ module.exports = {
     ]
   ],
   "themeConfig": {
+    algolia: {
+      appId: 'YOUR_APP_ID',
+      apiKey: 'YOUR_SEARCH_API_KEY',
+      indexName: 'YOUR_INDEX_NAME',
+      contextualSearch: true
+    },
     prism: {
       theme: require("./src/theme/highlight/themes/palenight"),
     },
