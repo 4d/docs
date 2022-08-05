@@ -49,11 +49,9 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 ## 4D.SystemWorker.new()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v19 R4|Added|
-
 </details>
 
 <!-- REF #4D.SystemWorker.new().Syntax -->**4D.SystemWorker.new** ( *commandLine* : Text { ; options : Object } ) : 4D.SystemWorker<!-- END REF -->
@@ -251,7 +249,6 @@ Function _createFile($title : Text; $textBody : Text)
 ## .closeInput()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v19 R4|Added|
@@ -263,8 +260,7 @@ Function _createFile($title : Text; $textBody : Text)
 <!-- REF #SystemWorkerClass.closeInput().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
-<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
 
 #### Description
 
@@ -417,8 +413,7 @@ This property is **read-only**.
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |message|Text|->|Text to write on the input stream (stdin) of the external process|
-|messageBLOB|Blob|->|Bytes write on the input stream|
-<!-- END REF -->
+|messageBLOB|Blob|->|Bytes write on the input stream|<!-- END REF -->
 
 #### Description
 
@@ -464,8 +459,7 @@ The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary 
 <!-- REF #SystemWorkerClass.terminate().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
-<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
 
 #### Description
 
@@ -505,7 +499,6 @@ This property is **read-only**.
 ## .wait()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 
@@ -519,8 +512,7 @@ This property is **read-only**.
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |timeout|Real|->|Waiting time (in seconds)|
-|Result|4D.SystemWorker|<-|SystemWorker object|
-<!-- END REF -->
+|Result|4D.SystemWorker|<-|SystemWorker object|<!-- END REF -->
 
 #### Description
 

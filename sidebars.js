@@ -78,6 +78,7 @@ module.exports =
 			"API/EntityClass",
 			"API/EntitySelectionClass",
 			"API/FileClass",
+			"API/FileHandleClass",
 			"API/FolderClass",
 			"API/FunctionClass",
 			"API/HTTPRequestClass",
@@ -422,5 +423,4 @@ module.exports =
 			"ViewPro/advanced-programming"
 		]
 	}
-
 }

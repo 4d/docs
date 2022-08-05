@@ -9,7 +9,6 @@ title: Document Class
 ## .creationDate
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -23,13 +22,13 @@ title: Document Class
 The `.creationDate` property returns <!-- REF #document.creationDate.Summary -->the creation date of the file<!-- END REF -->.
 
 This property is **read-only**.
+
 <!-- END REF -->
 
 <!-- REF document.creationTime.Desc -->
 ## .creationTime
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -50,7 +49,6 @@ This property is **read-only**.
 ## .exists
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -72,7 +70,6 @@ This property is **read-only**.
 ## .extension
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -93,7 +90,6 @@ This property is **read-only**.
 ## .fullName
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -114,7 +110,6 @@ This property is **read-only**.
 ## .hidden
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -135,7 +130,6 @@ This property is **read-only**.
 ## .isAlias
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -156,7 +150,6 @@ This property is **read-only**.
 ## .isFile
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -177,7 +170,6 @@ This property is **read-only**.
 ## .isFolder
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -198,7 +190,6 @@ This property is **read-only**.
 ## .isWritable
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -230,7 +221,6 @@ This property is **read-only**.
 ## .modificationDate
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -251,7 +241,6 @@ This property is **read-only**.
 ## .modificationTime
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -272,7 +261,6 @@ This property is **read-only**.
 ## .name
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -293,7 +281,6 @@ This property is **read-only**.
 ## .original
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -319,7 +306,6 @@ This property is **read-only**.
 ## .parent
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -340,7 +326,6 @@ This property is **read-only**.
 ## .path
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -361,7 +346,6 @@ This property is **read-only**.
 ## .platformPath
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -382,7 +366,6 @@ This property is **read-only**.
 ## .size
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -418,8 +401,7 @@ This property is **read-only**.
 |destinationFolder | 4D.Folder |->|Destination folder|
 |newName|Text|->|Name for the copy|
 |overwrite|Integer|->|`fk overwrite` to replace existing elements|
-|Result|4D.File|<-|Copied file|
-<!-- END REF -->
+|Result|4D.File|<-|Copied file|<!-- END REF -->
 
 #### Description
 
@@ -455,7 +437,6 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 ## .getContent()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v19 R2|Returns 4D.Blob
@@ -468,8 +449,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 <!-- REF #document.getContent().Params -->
 |Parameter|Type||Description|
 |---|----|---|---|
-|Result | 4D.Blob |<-|File content|
-<!-- END REF -->
+|Result | 4D.Blob |<-|File content|<!-- END REF -->
 
 #### Description
 
@@ -497,7 +477,6 @@ To save a document's contents in a `BLOB` field:
 ## .getIcon()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -510,8 +489,7 @@ To save a document's contents in a `BLOB` field:
 |Parameter|Type||Description|
 |---|----|---|---|
 |size|Integer|->|Side length for the returned picture (pixels)|
-|Result|Picture|<-|Icon|
-<!-- END REF -->
+|Result|Picture|<-|Icon|<!-- END REF -->
 
 #### Description
 
@@ -531,7 +509,6 @@ File icon [picture](../Concepts/picture.html).
 ## .getText()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -546,8 +523,7 @@ File icon [picture](../Concepts/picture.html).
 |charSetName |Text |-> |Name of character set|
 |charSetNum |Integer |-> |Number of character set|
 |breakMode|Integer |-> |Processing mode for line breaks|
-|Result |Text  |<- |Text from the document|
-<!-- END REF -->
+|Result |Text  |<- |Text from the document|<!-- END REF -->
 
 #### Description
 

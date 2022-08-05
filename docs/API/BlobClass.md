@@ -16,11 +16,9 @@ The Blob class lets you create and manipulate [blob objects](../Concepts/dt_blob
 ## 4D.Blob.new()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v19 R2|Added|
-
 </details>
 
 <!-- REF #4D.Blob.new().Syntax -->
@@ -31,8 +29,7 @@ The Blob class lets you create and manipulate [blob objects](../Concepts/dt_blob
 | Parameter | Type            |     | Description  |
 | --------- | --------------- | :-: | ------------ |
 | blob      | Blob or 4D.Blob | ->  | Blob to copy |
-| Result    | 4D.Blob         | <-  | New 4D.Blob  |
-<!-- END REF -->
+| Result    | 4D.Blob         | <-  | New 4D.Blob  |<!-- END REF -->
 
 #### Description
 
@@ -46,17 +43,14 @@ If the `blob` parameter is omitted, the method returns an empty 4D.Blob.
 **.size** : Real<!-- END REF -->
 
 #### Description
-
 The `.size` property <!-- REF #Blob.size.Summary -->returns the size of a `4D.Blob`, expressed in bytes.<!-- END REF -->
 
 ## .slice()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v19 R2|Added|
-
 </details>
 
 <!-- REF #Blob.slice().Syntax -->
@@ -71,7 +65,7 @@ The `.size` property <!-- REF #Blob.size.Summary -->returns the size of a `4D.Bl
 
 #### Description
 
-`.slice()` <!-- REF #Blob.slice().Summary --> creates and returns a `4D.Blob` that references data from a subset of the blob on which it's called. The original blob is not altered.<!-- END REF -->
+`.slice()` <!-- REF #Blob.slice().Summary --> creates and returns a `4D.Blob ` that references data from a subset of the blob on which it's called. The original blob is not altered.<!-- END REF -->
 
 The `start` parameter is an index into the blob indicating the first byte to include in the new `4D.Blob`. If you specify a negative value, 4D treats it as an offset from the end of the blob toward the beginning. For example, -10 would be the 10th from last byte in the blob. The default value is 0. If you specify a value for start that is larger than the size of the source blob, the returned `4D.Blob`'s size is 0, and it contains no data.
 

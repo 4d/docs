@@ -9,6 +9,7 @@ For detailed information about the session implementation, please refer to the [
 
 ### Summary
 
+
 ||
 |---|
 |[<!-- INCLUDE #SessionClass.clearPrivileges().Syntax -->](#clearprivileges)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.clearPrivileges().Summary -->|
@@ -20,37 +21,41 @@ For detailed information about the session implementation, please refer to the [
 |[<!-- INCLUDE #SessionClass.storage.Syntax -->](#storage)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.storage.Summary -->|
 |[<!-- INCLUDE #SessionClass.userName.Syntax -->](#username)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #SessionClass.userName.Summary -->|
 
+
+
+
 ## Session
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R6|Added|
-
 </details>
 
 <!-- REF #_command_.Session.Syntax -->
 **Session** : 4D.Session<!-- END REF -->
 
+
 <!-- REF #_command_.Session.Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|4D.Session|<-|Session object|
-<!-- END REF -->
+|Result|4D.Session|<-|Session object|<!-- END REF -->
+
 
 #### Description
 
-The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current scalable user web session<!-- END REF -->.
+The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current scalable user web session<!-- END REF -->. 
 
-This command only works when [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions). It returns *Null* when sessions are disabled or when legacy sessions are used.
+This command only works when [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions). It returns *Null* when sessions are disabled or when legacy sessions are used. 
 
 When scalable sessions are enabled, the `Session` object is available from any web processes in the following contexts:
 
 - `On Web Authentication`, `On Web Connection`, and `On REST Authentication` database methods,
+- [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) and [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action) database methods for mobile requests,
 - ORDA [Data Model Class functions](ORDA/ordaClasses.md) called with REST requests,
 - code processed through 4D tags in semi-dynamic pages (4DTEXT, 4DHTML, 4DEVAL, 4DSCRIPT/, 4DCODE)
 - project methods with the "Available through 4D tags and URLs (4DACTION...)" attribute and called through 4DACTION/ urls.
+
 
 #### Example
 
@@ -74,11 +79,12 @@ IP:port/4DACTION/action_Session
  End case
 ```
 
+
+
 <!-- REF SessionClass.clearPrivileges().Desc -->
 ## .clearPrivileges()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R6|Added|
@@ -91,12 +97,13 @@ IP:port/4DACTION/action_Session
 <!-- REF #SessionClass.clearPrivileges().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
-<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
+
 
 #### Description
 
 The `.clearPrivileges()` function <!-- REF #SessionClass.clearPrivileges().Summary -->removes all the privileges associated to the session<!-- END REF -->. As a result, the session automatically becomes a Guest session.
+
 
 #### Example
 
@@ -110,11 +117,12 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 <!-- END REF -->
 
+
+
 <!-- REF SessionClass.expirationDate.Desc -->
 ## .expirationDate
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R6|Added|
@@ -128,7 +136,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 The `.expirationDate` property contains <!-- REF #SessionClass.expirationDate.Summary -->the expiration date and time of the session cookie<!-- END REF -->. The value is expressed as text in the ISO 8601 format: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
 
-This property is **read-only**. It is automatically recomputed if the [`.idleTimeout`](#idletimeout) property value is modified.
+This property is **read-only**. It is automatically recomputed if the [`.idleTimeout`](#idletimeout) property value is modified. 
 
 #### Example
 
@@ -139,15 +147,16 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 <!-- END REF -->
 
+
+
+
 <!-- REF SessionClass.hasPrivilege().Desc -->
 ## .hasPrivilege()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R6|Added|
-
 </details>
 
 <!-- REF #SessionClass.hasPrivilege().Syntax -->
@@ -157,12 +166,13 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |privilege|Text|<-|Name of the privilege to verify|
-|Result|Boolean|<-|True if session has *privilege*, False otherwise|
-<!-- END REF -->
+|Result|Boolean|<-|True if session has *privilege*, False otherwise|<!-- END REF -->
+
 
 #### Description
 
-The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the privilege is associated to the session, and False otherwise<!-- END REF -->.
+The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the privilege is associated to the session, and False otherwise<!-- END REF -->. 
+
 
 #### Example
 
@@ -170,9 +180,9 @@ You want to check if the "WebAdmin" privilege is associated to the session:
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
- //Access is granted, do nothing
+	//Access is granted, do nothing
 Else
- //Display an authentication page
+	//Display an authentication page
 
 End if
 ```
@@ -183,7 +193,6 @@ End if
 ## .idleTimeout
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R6|Added|
@@ -195,36 +204,37 @@ End if
 
 #### Description
 
-The `.idleTimeout` property contains <!-- REF #SessionClass.idleTimeout.Summary -->the inactivity session timeout (in minutes), after which the session is automatically closed by 4D<!-- END REF -->.
+The `.idleTimeout` property contains <!-- REF #SessionClass.idleTimeout.Summary -->the inactivity session timeout (in minutes), after which the session is automatically closed by 4D<!-- END REF -->. 
 
-If this property is not set, the default value is 60 (1h).
+If this property is not set, the default value is 60 (1h). 
 
-When this property is set, the [`.expirationDate`](#expirationdate) property is updated accordingly.
+When this property is set, the [`.expirationDate`](#expirationdate) property is updated accordingly. 
 
 > The value cannot be less than 60: if a lower value is set, the timeout is raised up to 60.
 
-This property is **read write**.
+ 
+This property is **read write**. 
 
 #### Example
 
 ```4d
 If (Session.isGuest())
-  // A Guest session will close after 60 minutes of inactivity
- Session.idleTimeout:=60
+		// A Guest session will close after 60 minutes of inactivity
+	Session.idleTimeout:=60
 Else
-  // Other sessions will close after 120 minutes of inactivity
- Session.idleTimeout:=120
+		// Other sessions will close after 120 minutes of inactivity
+	Session.idleTimeout:=120
 End if
 
 ```
 
 <!-- END REF -->
 
+
 <!-- REF SessionClass.isGuest().Desc -->
 ## .isGuest()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R6|Added|
@@ -237,12 +247,12 @@ End if
 <!-- REF #SessionClass.isGuest().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Boolean|<-|True if session is a Guest one, False otherwise|
-<!-- END REF -->
+|Result|Boolean|<-|True if session is a Guest one, False otherwise|<!-- END REF -->
 
 #### Description
 
 The `.isGuest()` function <!-- REF #SessionClass.isGuest().Summary -->returns True if the session is a Guest session (i.e. it has no privileges)<!-- END REF -->.
+
 
 #### Example
 
@@ -250,17 +260,18 @@ In the `On Web Connection` database method:
 
 ```4d
 If (Session.isGuest())
- //Do something for Guest user
+	//Do something for Guest user
 End if
 ```
 
+
 <!-- END REF -->
+
 
 <!-- REF SessionClass.setPrivileges().Desc -->
 ## .setPrivileges()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R6|Added|
@@ -275,8 +286,7 @@ End if
 |---------|--- |:---:|------|
 |privilege|Text|->|Privilege name|
 |privileges|Collection|->|Collection of privilege names|
-|settings|Object|->|Object with a "privileges" property (string or collection)|
-<!-- END REF -->
+|settings|Object|->|Object with a "privileges" property (string or collection)|<!-- END REF -->
 
 #### Description
 
@@ -297,9 +307,9 @@ If the `privileges` property contains an invalid privilege name, it is ignored.
 
 > In the current implementation, only the "WebAdmin" privilege is available.
 
-By default when no privilege is associated to the session, the session is a [Guest session](#isguest).
+By default when no privilege is associated to the session, the session is a [Guest session](#isguest). 
 
-The [`userName`](#username) property is available at session object level (read-only).
+The [`userName`](#username) property is available at session object level (read-only). 
 
 #### Example
 
@@ -319,13 +329,13 @@ End if
 
 ```
 
+
 <!-- END REF -->
 
 <!-- REF SessionClass.storage.Desc -->
 ## .storage
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R6|Added|
@@ -337,11 +347,11 @@ End if
 
 #### Description
 
-The `.storage` property contains <!-- REF #SessionClass.storage.Summary -->a shared object that can be used to store information available to all requests of the web client<!-- END REF -->.
+The `.storage` property contains <!-- REF #SessionClass.storage.Summary -->a shared object that can be used to store information available to all requests of the web client<!-- END REF -->. 
 
-When a `Session` object is created, the `.storage` property is empty. Since it is a shared object, this property will be available in the `Storage` object of the server.
+When a `Session` object is created, the `.storage` property is empty. Since it is a shared object, this property will be available in the `Storage` object of the server. 
 
-> Like the `Storage` object of the server, the `.storage` property is always "single": adding a shared object or a shared collection to `.storage` does not create a shared group.
+> Like the `Storage` object of the server, the `.storage` property is always "single": adding a shared object or a shared collection to `.storage` does not create a shared group. 
 
 This property is **read only** itself but it returns a read-write object.
 
@@ -360,11 +370,14 @@ End if
 
 <!-- END REF -->
 
+
+
+
+
 <!-- REF SessionClass.userName.Desc -->
 ## .userName
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R6|Added|
@@ -380,6 +393,11 @@ The `.userName` property contains <!-- REF #SessionClass.userName.Summary -->the
 
 This property is an empty string by default. It can be set using the `privileges` property of the [`setPrivileges()`](#setprivileges) function.
 
-This property is **read only**.
+This property is **read only**. 
+
+
 
 <!-- END REF -->
+
+
+

@@ -12,7 +12,6 @@ title: On Before Keystroke
 |Version|Changes|
 |---|---|
 |v18 R5|- Support in non-enterable list boxes - The event is now triggered after IME validation
-
 </details>
 
 ## Description

@@ -341,7 +341,7 @@ userInterface|text|"none" (default), "ribbon", "toolbar" |
 
 #### See also
 
-[4D View Pro reference guide](ViewPro/overview.md)
+[4D View Pro reference guide](../ViewPro/getting-started.md)
 
 ---
 ## Vertical Scroll Bar  

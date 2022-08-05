@@ -15,6 +15,7 @@ Typing errors are detected by the Code Editor. They are displayed in red and add
 
 ![break-point](../assets/en/Debugging/typing-error.png)
 
+
 Such typing errors usually cause syntax errors (in the above image, the name of the table is unknown). You get the description of the error when you validate the line of code. When this occurs, fix the typing error and type Enter to validate the fix.
 
 ### Syntax Errors
@@ -74,8 +75,8 @@ The syntax error window proposes several options:
 
 - **Abort**: Stops method execution and returns to the state before the method started executing:
 
-  - If a form method or object method is executing in response to an event, it is stopped and you return to the form.
-  - If the method is executing from within the Application environment, you return to that environment.
+	- If a form method or object method is executing in response to an event, it is stopped and you return to the form.
+	- If the method is executing from within the Application environment, you return to that environment.
 
 - **Copy**: Copies the debugging information into the clipboard. The info describes the internal environment of the error (number, internal component, etc.). It is formatted as tabbed text.
 

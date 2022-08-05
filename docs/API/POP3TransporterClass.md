@@ -31,11 +31,9 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 ## POP3 New transporter
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R2|Added|
-
 </details>
 
 <!-- REF #_command_.POP3 New transporter.Syntax -->
@@ -45,8 +43,7 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |server|object|->|Mail server information|
-|Result|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|
-<!-- END REF -->
+|Result|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|<!-- END REF -->
 
 #### Description
 
@@ -57,12 +54,12 @@ In the *server* parameter, pass an object containing the following properties:
 |*server*|Default value (if omitted)|
 |---|---|
 |[<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->|False|
-|.**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object <br/> Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[SMTP transporter](#smtptransporterobject)* object.|none|
+|.**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[SMTP transporter](#smtptransporterobject)* object.|none|
 |[<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->|the most secure authentication mode supported by the server is used|
 |[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->|30|
 |[<!-- INCLUDE #transporter.host.Syntax -->](#host)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->|*mandatory*
 |[<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->|none|
-|**.password** : Text <br/> User password for authentication on the server. Not returned in *[SMTP transporter](#smtptransporterobject)* object.|none|
+|**.password** : Text<br/>User password for authentication on the server. Not returned in *[SMTP transporter](#smtptransporterobject)* object.|none|
 |[<!-- INCLUDE #transporter.port.Syntax -->](#port)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->|995|
 |[<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|none|
 
@@ -103,8 +100,7 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |server|Object|->|Mail server information|
-|Result|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|
-<!-- END REF -->
+|Result|4D.POP3Transporter|<-|[POP3 transporter object](#pop3-transporter-object)|<!-- END REF -->
 
 #### Description
 
@@ -146,11 +142,9 @@ The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summa
 ## .delete()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R2|Added|
-
 </details>
 
 <!-- REF #POP3TransporterClass.delete().Syntax -->
@@ -159,8 +153,7 @@ The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summa
 <!-- REF #POP3TransporterClass.delete().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|msgNumber|Integer|->|Number of the message to delete|
-<!-- END REF -->
+|msgNumber|Integer|->|Number of the message to delete|<!-- END REF -->
 
 ##### Description
 
@@ -192,11 +185,9 @@ Executing this method does not actually remove any email. The flagged email will
 ## .getBoxInfo()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R2|Added|
-
 </details>
 
 <!-- REF #POP3TransporterClass.getBoxInfo().Syntax -->
@@ -205,8 +196,7 @@ Executing this method does not actually remove any email. The flagged email will
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Object|<-|boxInfo object|
-<!-- END REF -->
+|Result|Object|<-|boxInfo object|<!-- END REF -->
 
 ##### Description
 
@@ -240,11 +230,9 @@ The `boxInfo` object returned contains the following properties:
 ## .getMail()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R2|Added|
-
 </details>
 
 <!-- REF #POP3TransporterClass.getMail().Syntax -->
@@ -254,8 +242,7 @@ The `boxInfo` object returned contains the following properties:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |msgNumber|Integer|->|Number of the message in the list |
-|Result|Object|<-|[Email object](EmailObjectClass.md#email-object)|
-<!-- END REF -->
+|Result|Object|<-|[Email object](EmailObjectClass.md#email-object)|<!-- END REF -->
 
 ##### Description
 
@@ -296,11 +283,9 @@ You want to know the sender of the first mail of the mailbox:
 ## .getMailInfo()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R2|Added|
-
 </details>
 
 <!-- REF #POP3TransporterClass.getMailInfo().Syntax -->
@@ -310,8 +295,7 @@ You want to know the sender of the first mail of the mailbox:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |msgNumber|Integer|->|Number of the message in the list |
-|Result|Object|<-|mailInfo object|
-<!-- END REF -->
+|Result|Object|<-|mailInfo object|<!-- END REF -->
 
 ##### Description
 
@@ -355,11 +339,9 @@ The method returns **Null** if:
 ## .getMailInfoList()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R2|Added|
-
 </details>
 
 <!-- REF #POP3TransporterClass.getMailInfoList().Syntax -->
@@ -368,8 +350,7 @@ The method returns **Null** if:
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|Collection|<-|Collection of `mailInfo` objects|
-<!-- END REF -->
+|Result|Collection|<-|Collection of `mailInfo` objects|<!-- END REF -->
 
 ##### Description
 
@@ -419,11 +400,9 @@ You want to know the total number and size of emails in the mailbox:
 ## .getMIMEAsBlob()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R3|Added|
-
 </details>
 
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Syntax -->
@@ -433,8 +412,7 @@ You want to know the total number and size of emails in the mailbox:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |msgNumber|Integer|-> |Number of the message in the list|
-|Result|Blob|<-|Blob of the MIME string returned from the mail server|
-<!-- END REF -->
+|Result|Blob|<-|Blob of the MIME string returned from the mail server|<!-- END REF -->
 
 ##### Description
 
@@ -483,11 +461,9 @@ You want to know the total number and size of emails in the mailbox:
 ## .undeleteAll()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18 R2|Added|
-
 </details>
 
 <!-- REF #POP3TransporterClass.undeleteAll().Syntax -->
@@ -496,8 +472,7 @@ You want to know the total number and size of emails in the mailbox:
 <!-- REF #POP3TransporterClass.undeleteAll().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
-<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
 
 ##### Description
 

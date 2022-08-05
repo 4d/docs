@@ -3,8 +3,6 @@ id: dataClass
 title: dataClass
 ---
 
-
-
 Dataclass names can be used directly in the REST requests to work with entities and entity selections, or class functions of the dataclass.
 
 ## Available syntaxes

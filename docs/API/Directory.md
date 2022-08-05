@@ -9,7 +9,6 @@ title: Directory Class
 ## .creationDate
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -26,10 +25,11 @@ This property is **read-only**.
 
 <!-- END REF -->
 
+---
+
 ## .creationTime
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -44,11 +44,14 @@ The `.creationTime` property returns <!-- REF #directory.creationTime.Summary --
 
 This property is **read-only**.
 
+<!-- END REF -->
+
+---
+
 <!-- REF directory.exists.Desc -->
 ## .exists
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -71,7 +74,6 @@ This property is **read-only**.
 ## .extension
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -94,7 +96,6 @@ This property is **read-only**.
 ## .fullName
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -117,7 +118,6 @@ This property is **read-only**.
 ## .hidden
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -140,7 +140,6 @@ This property is **read-only**.
 ## .isAlias
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -163,7 +162,6 @@ This property is **read-only**.
 ## .isFile
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -186,7 +184,6 @@ This property is **read-only**.
 ## .isFolder
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -209,7 +206,6 @@ This property is **read-only**.
 ## .isPackage
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -234,7 +230,6 @@ This property is **read-only**.
 ## .modificationDate
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -257,7 +252,6 @@ This property is **read-only**.
 ## .modificationTime
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -280,7 +274,6 @@ This property is **read-only**.
 ## .name
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -303,7 +296,6 @@ This property is **read-only**.
 ## .original
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -328,7 +320,6 @@ This property is **read-only**.
 ## .parent
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -353,7 +344,6 @@ This property is **read-only**.
 ## .path
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -376,7 +366,6 @@ This property is **read-only**.
 ## .platformPath
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -399,7 +388,6 @@ This property is **read-only**.
 ## .copyTo()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -414,8 +402,7 @@ This property is **read-only**.
 |destinationFolder |4D.Folder |->|Destination folder|
 |newName|Text|->|Name for the copy|
 |overwrite|Integer|->|`fk overwrite` to replace existing elements|
-|Result|4D.Folder|<-|Copied file or folder|
-<!-- END REF -->
+|Result|4D.Folder|<-|Copied file or folder|<!-- END REF -->
 
 #### Description
 
@@ -453,7 +440,6 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 ## .file()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -466,8 +452,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 |Parameter|Type||Description|
 |---|----|---|---|
 |path|Text|->|Relative POSIX file pathname|
-|Result|4D.File|<-|`File` object (null if invalid path)|
-<!-- END REF -->
+|Result|4D.File|<-|`File` object (null if invalid path)|<!-- END REF -->
 
 #### Description
 
@@ -494,7 +479,6 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 ## .files()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -507,8 +491,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 |Parameter|Type||Description|
 |---|----|---|---|
 |options|Integer|->|File list options|
-|Result|Collection|<-|Collection of children file objects|
-<!-- END REF -->
+|Result|Collection|<-|Collection of children file objects|<!-- END REF -->
 
 #### Description
 
@@ -557,7 +540,6 @@ You want to get all files that are not invisible in the Documents folder:
 ## .folder()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -570,8 +552,7 @@ You want to get all files that are not invisible in the Documents folder:
 |Parameter|Type||Description|
 |---|----|---|---|
 |path|Text|->|Relative POSIX file pathname|
-|Result|4D.Folder|<-|Created folder object (null if invalid *path*)|
-<!-- END REF -->
+|Result|4D.Folder|<-|Created folder object (null if invalid *path*)|<!-- END REF -->
 
 #### Description
 
@@ -598,7 +579,6 @@ A `Folder` object or null if *path* is invalid.
 ## .folders()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -611,8 +591,7 @@ A `Folder` object or null if *path* is invalid.
 |Parameter|Type||Description|
 |---|----|---|---|
 |options|Integer|->|Folder list options|
-|Result|Collection|<-|Collection of children folder objects|
-<!-- END REF -->
+|Result|Collection|<-|Collection of children folder objects|<!-- END REF -->
 
 #### Description
 
@@ -646,7 +625,6 @@ You want the collection of all folders and subfolders of the database folder:
 ## .getIcon()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added
@@ -659,8 +637,7 @@ You want the collection of all folders and subfolders of the database folder:
 |Parameter|Type||Description|
 |---|----|---|---|
 |size|Integer|->|Side length for the returned picture (pixels)|
-|Result|Picture|<-|Icon|
-<!-- END REF -->
+|Result|Picture|<-|Icon|<!-- END REF -->
 
 #### Description
 

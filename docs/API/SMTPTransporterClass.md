@@ -28,13 +28,11 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 ## SMTP New transporter
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18|New logFile property|
 |v17 R5|New bodyCharset and headerCharset properties|
 |v17 R4|Added|
-
 </details>
 
 <!-- REF #_command_.SMTP New transporter.Syntax -->
@@ -44,8 +42,7 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |server|Object|->|Mail server information|
-|Result|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|
-<!-- END REF -->
+|Result|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|<!-- END REF -->
 
 #### Description
 
@@ -63,7 +60,7 @@ In the *server* parameter, pass an object containing the following properties:
 |*server*|Default value (if omitted)|
 |---|---|
 |[<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->|False|
-|.**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object <br/> Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[SMTP transporter](#smtp-transporter-object)* object.|none|
+|.**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>Text string or token object representing OAuth2 authorization credentials. Used only with OAUTH2 `authenticationMode`. If `accessTokenOAuth2` is used but `authenticationMode` is omitted, the OAuth 2 protocol is used (if allowed by the server). Not returned in *[SMTP transporter](#smtp-transporter-object)* object.|none|
 |[<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->|the most secure authentication mode supported by the server is used|
 |[<!-- INCLUDE #transporter.bodyCharset.Syntax -->](#bodycharset)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.bodyCharset.Summary -->|`mail mode UTF8` (US-ASCII_UTF8_QP)|
 |[<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->|30|
@@ -119,8 +116,7 @@ The function returns a [**SMTP transporter object**](#smtp-transporter-object). 
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |server|Object|->|Mail server information|
-|Result|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|
-<!-- END REF -->
+|Result|4D.SMTPTransporter|<-|[SMTP transporter object](#smtp-transporter-object)|<!-- END REF -->
 
 #### Description
 
@@ -169,7 +165,6 @@ For information about SMTP status codes, please refer to [this page](https://www
 ## .keepAlive
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R4|Added
@@ -194,12 +189,10 @@ The SMTP connection is automatically closed:
 ## .send()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Support of mime contents|
 |v17 R4|Added|
-
 </details>
 
 <!-- REF #SMTPTransporterClass.send().Syntax -->
@@ -209,8 +202,7 @@ The SMTP connection is automatically closed:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |mail|Object|->|[Email](EmailObjectClass.md#email-object) to send|
-|Result|Object|<-|SMTP status|
-<!-- END REF -->
+|Result|Object|<-|SMTP status|<!-- END REF -->
 
 #### Description
 

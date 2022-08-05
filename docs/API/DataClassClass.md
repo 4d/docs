@@ -28,11 +28,9 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 ## .*attributeName*
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17|Added|
-
 </details>
 
 <!-- REF DataClassClass.attributeName.Syntax -->
@@ -96,12 +94,10 @@ Considering the following table properties:
 ## .all()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Support of the *settings* parameter|
 |v17|Added|
-
 </details>
 
 <!-- REF #DataClassClass.all().Syntax -->
@@ -111,8 +107,7 @@ Considering the following table properties:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |settings|Object|->|Build option: context|
-|Result|4D.EntitySelection|<-|References on all entities related to the Dataclass|
-<!-- END REF -->
+|Result|4D.EntitySelection|<-|References on all entities related to the Dataclass|<!-- END REF -->
 
 #### Description
 
@@ -145,11 +140,9 @@ In the optional *settings* parameter, you can pass an object containing addition
 ## .clearRemoteCache()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v19 R5|Added|
-
 </details>
 
 <!-- REF #DataClassClass.clearRemoteCache().Syntax -->
@@ -158,8 +151,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 <!-- REF #DataStoreClass.clearRemoteCache().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-||||Does not require any parameters|
-<!-- END REF -->
+||||Does not require any parameters|<!-- END REF -->
 
 #### Description
 
@@ -197,12 +189,10 @@ $ds.Persons.clearRemoteCache()
 ## .fromCollection()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Support of the *settings* parameter|
 |v17|Added|
-
 </details>
 
 <!-- REF #DataClassClass.fromCollection().Syntax -->
@@ -213,8 +203,7 @@ $ds.Persons.clearRemoteCache()
 |---------|--- |:---:|------|
 |objectCol |Collection|->|Collection of objects to be mapped with entities|
 |settings  |Object|->|Build option: context|
-|Result|4D.EntitySelection|<-|Entity selection filled from the collection|
-<!-- END REF -->
+|Result|4D.EntitySelection|<-|Entity selection filled from the collection|<!-- END REF -->
 
 #### Description
 
@@ -397,7 +386,6 @@ In this example, the first entity will be created and saved but the second will 
 ## .get()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17|Added|
@@ -412,8 +400,7 @@ In this example, the first entity will be created and saved but the second will 
 |---------|--- |:---:|------|
 |primaryKey |Integer OR Text|->|Primary key value of the entity to retrieve|
 |settings  |Object|->|Build option: context|
-|Result|4D.Entity|<-|Entity matching the designated primary key|
-<!-- END REF -->
+|Result|4D.Entity|<-|Entity matching the designated primary key|<!-- END REF -->
 
 #### Description
 
@@ -472,11 +459,9 @@ This example illustrates the use of the *context* property:
 ## .getCount()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v19 R5|Added|
-
 </details>
 
 <!-- REF #DataClassClass.getCount().Syntax -->
@@ -485,8 +470,7 @@ This example illustrates the use of the *context* property:
 <!-- REF #DataClassClass.getCount().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|result|Integer|<-|Number of entities in the dataclass|
-<!-- END REF -->
+|result|Integer|<-|Number of entities in the dataclass|<!-- END REF -->
 
 #### Description
 
@@ -511,11 +495,9 @@ $number:=$ds.Persons.getCount()
 ## .getDataStore()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R5|Added|
-
 </details>
 
 <!-- REF #DataClassClass.getDataStore().Syntax -->
@@ -524,8 +506,7 @@ $number:=$ds.Persons.getCount()
 <!-- REF #DataClassClass.getDataStore().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|Result|cs.DataStore|<-|Datastore of the dataclass|
-<!-- END REF -->
+|Result|cs.DataStore|<-|Datastore of the dataclass|<!-- END REF -->
 
 #### Description
 
@@ -563,12 +544,10 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 ## .getInfo()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v19 R3|Added exposed property|
 |v17 R5|Added|
-
 </details>
 
 <!-- REF #DataClassClass.getInfo().Syntax -->
@@ -577,8 +556,7 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 <!-- REF #DataClassClass.getInfo().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|Object|<-|Information on the dataclass|
-<!-- END REF -->
+|Result|Object|<-|Information on the dataclass|<!-- END REF -->
 
 #### Description
 
@@ -639,11 +617,9 @@ The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns 
 ## .getRemoteCache()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v19 R5|Added|
-
 </details>
 
 <!-- REF #DataClassClass.getRemoteCache().Syntax -->
@@ -652,8 +628,7 @@ The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|result|Object|<-|Object describing the contents of the ORDA cache for the dataclass.|
-<!-- END REF -->
+|result|Object|<-|Object describing the contents of the ORDA cache for the dataclass.|<!-- END REF -->
 
 > **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
 
@@ -726,11 +701,9 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 ## .new()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17|Added|
-
 </details>
 
 <!-- REF #DataClassClass.new().Syntax -->
@@ -739,8 +712,7 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 <!-- REF #DataClassClass.new().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|Result|4D.Entity|<-|New entity matching the Dataclass|
-<!-- END REF -->
+|Result|4D.Entity|<-|New entity matching the Dataclass|<!-- END REF -->
 
 #### Description
 
@@ -771,11 +743,9 @@ This example creates a new entity in the "Log" Dataclass and records information
 ## .newSelection()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17|Added|
-
 </details>
 
 <!-- REF #DataClassClass.newSelection().Syntax -->
@@ -785,8 +755,7 @@ This example creates a new entity in the "Log" Dataclass and records information
 |Parameter|Type||Description|
 |---|---|---|---|
 |keepOrder |Integer |-> |`dk keep ordered`: creates an ordered entity selection,<br/>`dk non ordered`: creates an unordered entity selection (default if omitted) |
-|Result|4D.EntitySelection|<-|New blank entity selection related to the dataclass|
-<!-- END REF -->
+|Result|4D.EntitySelection|<-|New blank entity selection related to the dataclass|<!-- END REF -->
 
 #### Description
 
@@ -812,13 +781,11 @@ When created, the entity selection does not contain any entities (`mySelection.l
 ## .query()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v17 R6|Support of Formula parameters|
 |v17 R5|Support of placeholders for values|
 |v17|Added|
-
 </details>
 
 <!-- REF #DataClassClass.query().Syntax -->
@@ -831,8 +798,7 @@ When created, the entity selection does not contain any entities (`mySelection.l
 |formula |Object |-> |Search criteria as formula object|
 |value|any|->|Value(s) to use for indexed placeholder(s)|
 |querySettings|Object|->|Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan|
-|Result|4D.EntitySelection|<-|New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula*|
-<!-- END REF -->
+|Result|4D.EntitySelection|<-|New entity selection made up of entities from dataclass meeting the search criteria specified in *queryString* or *formula*|<!-- END REF -->
 
 #### Description
 
@@ -893,7 +859,7 @@ When using a constant value, the following rules must be respected:
   * **date** type constants: "YYYY-MM-DD" format
   * **null** constant: using the "null" keyword will find **null** and **undefined** properties.  
   * in case of a query with an IN comparator, *value* must be a collection, or values matching the type of the attribute path between \[ ] separated by commas (for strings, `"` characters must be escaped with `\`).
-  * **logicalOperator**: used to join multiple conditions in the query (optional). You can use one of the following logical operators (either the name or the symbol can be used):
+* **logicalOperator**: used to join multiple conditions in the query (optional). You can use one of the following logical operators (either the name or the symbol can be used):
 
  |Conjunction|Symbol(s)|
  |---|---|
@@ -901,7 +867,6 @@ When using a constant value, the following rules must be respected:
  |OR | &#124;,&#124;&#124;, or|
 
 * **order by attributePath**: you can include an order by *attributePath* statement in the query so that the resulting data will be sorted according to that statement. You can use multiple order by statements, separated by commas (e.g., order by *attributePath1* desc, *attributePath2* asc). By default, the order is ascending. Pass 'desc' to define a descending order and 'asc' to define an ascending order.
-
  >If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
 
 **Using quotes**
@@ -1419,11 +1384,9 @@ We want to disallow formulas, for example when the user enters their query:
 ## .setRemoteCacheSettings()
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v19 R5|Added|
-
 </details>
 
 <!-- REF #DataClassClass.setRemoteCacheSettings().Syntax -->
@@ -1432,8 +1395,7 @@ We want to disallow formulas, for example when the user enters their query:
 <!-- REF #DataClassClass.setRemoteCacheSettings().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
-|settings|Object|->|Object that sets the timeout and maximum size of the ORDA cache for the dataclass.|
-<!-- END REF -->
+|settings|Object|->|Object that sets the timeout and maximum size of the ORDA cache for the dataclass.|<!-- END REF -->
 
 > **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
 

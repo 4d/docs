@@ -95,7 +95,7 @@ Saves the current configuration of the debugger window  and makes it the default
 
 These parameters are stored in the project.
 
-This action is not available in remote debugging mode (see [Debugging from Remote Machines](./debugging-remote.md)).
+This action is not available in remote debugging mode (see [Debugging from Remote Machines](./debugging-remote)).
 
 ## Watch Pane
 

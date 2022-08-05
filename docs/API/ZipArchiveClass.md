@@ -38,12 +38,10 @@ End if
 ## ZIP Create archive
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v19 R3|Added `ZIP Compression LZMA`, `ZIP Compression xy`, `.level` property|
 |v18|Added|
-
 </details>
 
 <!-- REF #_command_.ZIP Create archive.Syntax -->
@@ -57,8 +55,7 @@ End if
 |zipStructure|Object|->|File or Folder object to compress|
 |destinationFile|4D.File|->|Destination file for the archive|
 |options|Integer|->|*folderToZip* option: `ZIP Without enclosing folder`|
-|Result|Object|<-|Status object|
-<!-- END REF -->
+|Result|Object|<-|Status object|<!-- END REF -->
 
 #### Description
 
@@ -192,11 +189,9 @@ $err:=ZIP Create archive($zip; $destination)
 ## ZIP Read archive
 
 <details><summary>History</summary>
-
 |Version|Changes|
 |---|---|
 |v18|Added|
-
 </details>
 
 <!-- REF #_command_.ZIP Read archive.Syntax -->
@@ -207,8 +202,7 @@ $err:=ZIP Create archive($zip; $destination)
 |---------|--- |:---:|------|
 |zipFile|4D.File|->|Zip archive file|
 |password|Text|->|ZIP archive password if any|
-|Result|4D.ZipArchive|<-|Archive object|
-<!-- END REF -->
+|Result|4D.ZipArchive|<-|Archive object|<!-- END REF -->
 
 #### Description
 

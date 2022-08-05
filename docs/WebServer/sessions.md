@@ -14,6 +14,7 @@ Web server user sessions allow to:
 
 > **Note:** The current implementation is only the first step of an upcoming comprehensive feature allowing developers to manage hierarchical user permissions through sessions in the whole web application.
 
+
 ## Enabling sessions
 
 The session management feature can be enabled and disabled on your 4D web server. There are different ways to enable session management:
@@ -30,6 +31,7 @@ This option is selected by default in new projects. It can however be disabled b
 In any cases, the setting is local to the machine; so it can be different on the 4D Server Web server and the Web servers of remote 4D machines.
 
 > **Compatibility**: A **Legacy sessions** option is available in projects created with a 4D version prior to 4D v18 R6 (for more information, please refer to the [doc.4d.com](https://doc.4d.com) web site).
+
 
 ## Session implementation
 
@@ -50,7 +52,7 @@ The current `Session` object can then be accessed through the [`Session`](API/Se
 
 ![alt-text](../assets/en/WebServer/schemaSession.png)
 
-Web processes usually do not end, they are recycled in a pool for efficiency. When a process finishes executing a request, it is put back in the pool and made available for the next request. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv18/help/command/en/page89.html) for example). This cleanup is necessary for any process related information, such as a reference to an opened file. This is the reason why **it is recommended** to use the [Session](API/SessionClass.md) object when you want to keep session related information.
+Web processes usually do not end, they are recycled in a pool for efficiency. When a process finishes executing a request, it is put back in the pool and made available for the next request. Since a web process can be reused by any session, [process variables](Concepts/variables.md#process-variables) must be cleared by your code at the end of its execution (using [`CLEAR VARIABLE`](https://doc.4d.com/4dv18/help/command/en/page89.html) for example). This cleanup is necessary for any process related information, such as a reference to an opened file. This is the reason why **it is recommended** to use the [Session](API/SessionClass.md) object when you want to keep session related information. 
 
 ### Preemptive mode
 
@@ -59,6 +61,7 @@ On 4D Server, Web server sessions are automatically handled through preemptive p
 > To debug interpreted web code on the server machine, make sure the debugger is [attached to the server](Debugging/debugging-remote.md) or [to a remote machine](Debugging/debugging-remote.md#attaching-the-debugger-to-a-remote-4d-client). Web processes then switch to cooperative mode and the web server code can be debugged.
 
 With 4D single-user, interpreted code always runs in cooperative mode.
+
 
 ## Sharing information
 
@@ -81,6 +84,7 @@ When a scalable web session is closed, if the [`Session`](API/SessionClass.md#se
 - the [`.storage`](API/SessionClass.md#storage) property is empty
 - a new session cookie is associated to the session
 
+
 ## Privileges
 
 Privileges can be associated to sessions. On the web server, you can provide specific access or features depending on the privileges of the session.
@@ -93,11 +97,12 @@ Example:
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
- //Access is granted, do nothing
+	//Access is granted, do nothing
 Else
- //Display an authentication page
+	//Display an authentication page
 End if
 ```
+
 
 ## Example
 
@@ -107,6 +112,7 @@ In a CRM application, each salesperson manages their own client portfolio. The d
 
 We want a salesperson to authenticate, open a session on the web server, and have the top 3 customers be loaded in the session.
 
+
 1. We run this URL to open a session:
 
 ```
@@ -115,15 +121,18 @@ http://localhost:8044/authenticate.shtml
 
 > In a production environment, it it necessary to use a [HTTPS connection](API/WebServerClass.md#httpsenabled) to avoid any uncrypted information to circulate on the network.  
 
+
 2. The `authenticate.shtml` page is a form containing *userId* et *password* input fields and sending a 4DACTION POST action:
+
+
 
 ```html
 <!DOCTYPE html>
 <html>
 <body bgcolor="#ffffff">
 <FORM ACTION="/4DACTION/authenticate" METHOD=POST>
- UserId: <INPUT TYPE=TEXT NAME=userId VALUE=""><br/>
- Password: <INPUT TYPE=TEXT NAME=password VALUE=""><br/>
+	UserId: <INPUT TYPE=TEXT NAME=userId VALUE=""><br/>
+	Password: <INPUT TYPE=TEXT NAME=password VALUE=""><br/>
 <INPUT TYPE=SUBMIT NAME=OK VALUE="Log In">
 </FORM>
 </body>

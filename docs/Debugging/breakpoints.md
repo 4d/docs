@@ -4,16 +4,20 @@ title: Breakpoints and Command Catching
 ---
 
 ## Overview
+ 
 
-Breakpoints and command catching are very efficient debugging techniques. Both have the same effect: they pause the code execution (and display the debugger window if not already displayed) at a desired step.
+Breakpoints and command catching are very efficient debugging techniques. Both have the same effect: they pause the code execution (and display the debugger window if not already displayed) at a desired step. 
 
-You set breakpoints on any line of code where you want the execution to be paused. You can associate a condition to the break point.
+You set breakpoints on any line of code where you want the execution to be paused. You can associate a condition to the break point. 
 
-Catching a command enables you to start tracing the execution of any process as soon as a command is called by that process.
+Catching a command enables you to start tracing the execution of any process as soon as a command is called by that process. 
 
+
+  
 ## Breakpoints
 
-To create a break point, click in the left margin of the Source Code pane in the debugger or in the Code Editor.
+
+To create a break point, click in the left margin of the Source Code pane in the debugger or in the Code Editor. 
 
 In the following example, a break point (the red bullet) has been set, in the debugger, on the line `If ($in.dataClass#Null)`:
 
@@ -23,6 +27,7 @@ In the above example, clicking the [**No Trace**](./debugger.md/#no-trace) butto
 
 To remove a break point, click the corresponding bullet.
 
+
 ### Breakpoint Properties
 
 You can edit the behavior of a breakpoint using the Breakpoint Properties window:
@@ -31,31 +36,32 @@ You can edit the behavior of a breakpoint using the Breakpoint Properties window
 
 This window is available from the Code Editor or the [Source Code Pane](debugger.md#source-code-pane). You can:
 
-- right-click a line and select **Edit Breakpoint** in the contextual menu, or
+- right-click a line and select **Edit Breakpoint** in the contextual menu, or 
 - `Alt+click` (Windows) or `Option+click` (macOS) in the left margin.
-
+ 
 If a break point already exists, the window is displayed for that break point. Otherwise, a break point is created and the window is displayed for the newly created break point.
 
 Here is a description of the properties:
 
-- **Location**: indicates the name of the method and the line number attached to the breakpoint.
-- **Break when following expression is true**: You can create **conditional breakpoints** by entering a 4D formula that returns `True` or `False`. For example, insert `Records in selection(\[aTable])=0` to make sure the break occurs only if there no record selected for the table \[aTable]. Breakpoint conditions are available in the **Condition** column of the [Break list](#break-list).
-- **Number of times to skip before breaking**: You can attach a breakpoint to a line located in a loop structure (While, Repeat, or For) or located in subroutine or function called from within a loop.
-- **Breakpoint is disabled**: If you currently do not need a break point, but might need it later, you can temporarily disable it. A disabled break point appears as a dash (-) instead of a bullet (•)|
+* **Location**: indicates the name of the method and the line number attached to the breakpoint.
+* **Break when following expression is true**: You can create **conditional breakpoints** by entering a 4D formula that returns `True` or `False`. For example, insert `Records in selection(\[aTable])=0` to make sure the break occurs only if there no record selected for the table \[aTable]. Breakpoint conditions are available in the **Condition** column of the [Break list](#break-list). 
+* **Number of times to skip before breaking**: You can attach a breakpoint to a line located in a loop structure (While, Repeat, or For) or located in subroutine or function called from within a loop.
+* **Breakpoint is disabled**: If you currently do not need a break point, but might need it later, you can temporarily disable it. A disabled break point appears as a dash (-) instead of a bullet (•)|
+
 
 ### Breakpoints in remote debugging
 
-The break point list is stored locally. In remote debugging mode, if the attached debugger is a remote 4D, the remote break point list replaces temporarily the server break point list during the debugging session.
+The break point list is stored locally. In remote debugging mode, if the attached debugger is a remote 4D, the remote break point list replaces temporarily the server break point list during the debugging session. 
 
-The server break point list is automatically restored if it becomes again the attached debugger.
+The server break point list is automatically restored if it becomes again the attached debugger. 
 
-### Break List
+### Break List 
 
 The Break list is a page of the Runtime Explorer that lets you manage the breakpoints created in the Debugger Window or in the Code Editor. For more information on the Runtime Explorer, see its dedicated page in [the Design reference manual](https://doc.4d.com/4Dv19/4D/19/Runtime-Explorer.200-5416614.en.html).
 
 To open the Break list page:
 
-1. From the **Run menu**, click **Runtime Explorer...**
+1. From the **Run menu**, click **Runtime Explorer...** 
 
 2. Click the **Break** tab to display the Break list:
 
@@ -63,12 +69,13 @@ To open the Break list page:
 
 Using this window, you can:
 
-- Set conditions for breakpoints in the **Conditions** column
-- Enable or disable breakpoints by clicking the bullets in the margin. Disabled breakpoints display transparent bullets
-- Delete breakpoints by pressing the `Delete` or `Backspace` key, or click on the **Delete** button below the list.
-- Open the methods where the breakpoint are located by double-clicking any line in the list
+* Set conditions for breakpoints in the **Conditions** column
+* Enable or disable breakpoints by clicking the bullets in the margin. Disabled breakpoints display transparent bullets
+* Delete breakpoints by pressing the `Delete` or `Backspace` key, or click on the **Delete** button below the list.
+* Open the methods where the breakpoint are located by double-clicking any line in the list
 
 You cannot add new breakpoints from this window. Breakpoints can only be created from within the Debugger window or the Code Editor.
+
 
 ## Catching Commands
 
@@ -88,8 +95,8 @@ To open the Caught Commands page:
 
 This page lists the commands to be caught during execution. It is composed of two columns:
 
-- The left column displays the Enable/Disable status of the caught command, followed by the name of the command
-- The right column displays the condition associated with the caught command, if any
+* The left column displays the Enable/Disable status of the caught command, followed by the name of the command
+* The right column displays the condition associated with the caught command, if any
 
 To add a command to be caught:
 
@@ -106,7 +113,7 @@ To delete a caught command:
 1. Select a command in the list.
 2. Press **Backspace** or **Delete** on your keyboard or click on the **Delete** button beneath the list (**Delete All** removes all commands in the list).
 
-### Setting a Condition for catching a command
+### Setting a Condition for catching a command 
 
 1. Click on the entry in the right column
 2. Enter a 4D formula (expression, command call or project method) that returns a Boolean value.
@@ -116,3 +123,4 @@ To delete a caught command:
 Adding conditions allows you to stop execution when the command is invoked only if the condition is met. For example, if you associate the condition `Records in selection(\[Emp]>10)` with the break point on the `DELETE SELECTION` command, the code will not be stopped during execution of the `DELETE SELECTION` command if the current selection of the \[Emp] table only contains 9 records (or less).
 
 Adding conditions to caught commands slows the execution, because the condition has to be evaluated each time an exception is met. On the other hand, adding conditions accelerates the debugging process, because 4D automatically skips occurrences that do not match the conditions.
+

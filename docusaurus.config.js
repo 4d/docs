@@ -35,11 +35,25 @@ module.exports = {
           path: './docs',
           // Sidebars file relative to website dir.
           sidebarPath: require.resolve('./sidebars.js'),
+          versions: {
+            '19-R6': {
+              label: 'v19 R6',
+              banner: 'none',
+            },
+            '19': {
+              label: 'v19',
+              banner: 'none',
+            },
+            '18': {
+              label: 'v18',
+              banner: 'none',
+            },
+          },
+          includeCurrentVersion: true, // false for prod only
         },
         theme: {
           customCss: [require.resolve('./src/css/customTheme.css')],
         },
-        // ...
       },
     ],
   ],
