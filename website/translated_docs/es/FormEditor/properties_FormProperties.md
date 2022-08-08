@@ -71,7 +71,7 @@ Los tipos soportados dependen de la categoría de formulario:
 | Formulario detallado            | detailScreen     | Un formulario de visualización para introducir y modificar datos | Formularios proyecto - Formularios tabla |
 | Formulario detallado imprimible | detailPrinter    | Un informe impreso con una página por registro, como una factura | Formularios proyecto - Formularios tabla |
 | Formulario listado              | listScreen       | Un formulario para listar los registros en la pantalla           | Formularios tabla                        |
-| Formulario de lista imprimible  | listPrinter      | A printed report that list records                               | Formularios tabla                        |
+| Formulario de lista imprimible  | listPrinter      | Un informe impreso que lista los registros                       | Formularios tabla                        |
 | Ninguno                         | *no destination* | A form with no specific feature                                  | Formularios proyecto - Formularios tabla |
 
 

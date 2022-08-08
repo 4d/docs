@@ -9,7 +9,7 @@ L'environnement de développement 4D fournit plusieurs outils de débogage pour 
 
 ## Types d'erreurs
 
-### Erreurs de typage
+### Erreurs de saisie
 
 Les erreurs de frappe sont détectées par l'éditeur de méthode. Elles sont affichées en rouge et des informations complémentaires sont fournies en bas de la fenêtre. Voici une erreur de frappe :
 
@@ -84,7 +84,7 @@ La fenêtre d'erreur de syntaxe propose plusieurs options :
 
 ## Débogueur
 
-Une erreur courante des débutants en matière de détection d'erreurs est de cliquer sur **Abandon** dans la fenêtre d'erreur de syntaxe, de retourner à l'éditeur de méthode et d'essayer de comprendre comment les erreurs sont détectées. Attention à ne pas faire cela ! Vous économiserez beaucoup de temps et d'énergie en utilisant toujours le **Débogueur**.
+Une erreur courante des débutants en matière de détection d'erreurs est de cliquer sur **Abandon** dans la fenêtre d'erreur de syntaxe, de retourner à l'éditeur de méthode et d'essayer de comprendre comment les erreurs sont détectées. Ne faites pas ça ! Vous économiserez beaucoup de temps et d'énergie en utilisant toujours le **Débogueur**.
 
 Le débogueur vous permet d'avancer lentement dans les méthodes. Il affiche toutes les informations dont vous avez besoin pour comprendre pourquoi une erreur s'est produite. Une fois que vous avez ces informations, vous savez comment corriger l'erreur.
 
@@ -94,4 +94,4 @@ Une autre raison d'utiliser le débogueur est le développement du code. Il peut
 
 Dans le processus de débogage, vous pouvez avoir besoin de sauter le traçage de certaines parties du code jusqu'à une certaine ligne. Ou bien, vous pouvez vouloir tracer le code lorsqu'une expression donnée a une certaine valeur (par exemple "$myVar > 1000"), ou chaque fois qu'une commande 4D spécifique est appelée.
 
-Ces besoins sont couverts par les **points d'arrêt** et les fonctions de **capture de commande**. Ils peuvent être configurés à partir de l'éditeur de méthode, du débogueur ou de l'explorateur de temps d'exécution.
+Ces besoins sont couverts par les fonctions **points d'arrêt** et **points d'arrêt sur commande**. Ils peuvent être configurés à partir de l'éditeur de méthode, du débogueur ou de l'explorateur de temps d'exécution.

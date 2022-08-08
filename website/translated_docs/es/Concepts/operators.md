@@ -287,7 +287,7 @@ If $myObject is Null, the second argument is not executed, thus no error is thro
 
 El operador || devuelve el valor de uno de los operandos especificados. The expression is evaluated left to right and tested for possible "short-circuit" evaluation using the following rule:
 
-Given `Expr1 || Expr2`:
+Dado `Expr1 || Expr2`:
 
 If Expr1 is [truthy](#truthy-and-falsy), Expr2 is not evaluated and the calculation returns Expr1.
 
@@ -390,7 +390,7 @@ As well as a type, each value also has an inherent Boolean value, generally know
 
 > **truthy** and **falsy** values are only evaluated by [short-circuit](#short-circuit-operators) and [ternary](#ternary-operator) operators.
 
-The following values are **falsy**:
+Los siguientes valores son **falsy**:
 
 * false
 * Null

@@ -7,9 +7,9 @@ title: Comencemos
 4D View Pro is a [4D component](Concepts/components.md) that includes a [4D form area](FormObjects/viewProArea_overview.md) and specific [methods](method-list.md). Le permite integrar las funcionalidades avanzadas de hoja de cálculo en sus proyectos.
 
 
-![](assets/en/ViewPro/vpSpreadsheet.PNG)
+![](assets/en/ViewPro/vpSpreadsheet.png)
 
-Una hoja de cálculo es una aplicación que contiene una cuadrícula de celdas en las que se puede introducir información, ejecutar cálculos o mostrar imágenes. 4D View Pro is powered by the [SpreadJS spreadsheet solution](https://www.grapecity.com/spreadjs/docs/v14/online/overview.html) integrated in 4D.
+Una hoja de cálculo es una aplicación que contiene una cuadrícula de celdas en las que se puede introducir información, ejecutar cálculos o mostrar imágenes. 4D View Pro is powered by the [SpreadJS spreadsheet solution](https://www.grapecity.com/spreadjs/docs/versions/v14/online/overview.html) integrated in 4D.
 
 Embedding 4D View Pro areas in your forms allows you to import and export spreadsheets documents using the 4D View Pro commands.
 
@@ -40,7 +40,7 @@ You can [configure the area](configuring.md) using the Property List and 4D View
 
 Las hojas de cálculo se componen de líneas y columnas. A cada línea se le asocia un número. A letter (or group of letters once the number of columns surpasses the number of letters in the alphabet) is associated with each column. La intersección de una línea y de una columna constituye una celda. Las celdas pueden ser seleccionadas y sus contenidos editados.
 
-### Selecting cells, columns and rows
+### Selección de celdas, columnas y líneas
 
 *   To select a cell, simply click on it or use the direction arrows on the keyboard. Su contenido (o fórmula) se muestra dentro de la celda.
 
@@ -83,7 +83,7 @@ The direction keys (arrows) allow you to move a cell in the direction indicated 
 
 *   click on a column or row header: **Insert**, **Delete**, **Hide**, or **Unhide** the contents
 *   haga clic en una celda o en un rango de celdas:
-    *   **Filter**: allows hiding row through filters (see [Filtering rows](http://help.grapecity.com/spread/SpreadSheets11/webframe.html#filter.html) in the SpreadJS documentation).
+    *   **Filter**: allows hiding row through filters (see [Filtering rows](https://www.grapecity.com/spreadjs/docs/versions/v14/online/filter.html) in the SpreadJS documentation).
     *   **Ordenar**: ordena el contenido de la columna.
     *   **Insert Comment**: allows user to enter a comment for an area. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:  
       ![](assets/en/ViewPro/vpContext2.PNG)
@@ -142,8 +142,8 @@ You can then pass `$myRange` to another 4D View Pro method to modify these cells
 
 | Propiedad |                   | Tipo      | Descripción                                                                         | Disponible para                                                |
 | --------- | ----------------- | --------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------- |
-| area      |                   | texto     | Nombre de objeto formulario área 4D View Pro                                        | always available                                               |
-| ranges    |                   | colección | Colección de rangos                                                                 | always available                                               |
+| area      |                   | texto     | Nombre de objeto formulario área 4D View Pro                                        | siempre disponible                                             |
+| ranges    |                   | colección | Colección de rangos                                                                 | siempre disponible                                             |
 |           | \[ ].name        | texto     | Nombre de rango                                                                     | name                                                           |
 |           | \[ ].sheet       | number    | Índice de la hoja (por defecto, índice de la hoja actual) (el conteo comienza en 0) | celda, celdas, línea, líneas, columna, columnas, todos, nombre |
 |           | \[ ].row         | number    | Índice de la línea (el conteo comienza en 0)                                        | celda, celdas, línea, líneas                                   |

@@ -5,7 +5,7 @@ title: Fórmulas y funciones
    
 ## Utilización de las fórmulas
 
-A spreadsheet formula is an expression that calculates the value of a cell.
+Una fórmula de hoja de cálculo es una expresión que calcula el valor de una celda.
 
 ### Entrada de las fórmulas
 
@@ -139,7 +139,7 @@ See [**SpreadJS's extented list of functions**](https://www.grapecity.com/spread
 
 - variables proceso 4D,
 - campos,
-- project methods,
+- métodos proyecto,
 - comandos del lenguaje 4D,
 - o cualquier expresión válida de 4D.
 

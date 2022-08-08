@@ -24,7 +24,7 @@ This button toggles and can be used to control the activation of the 4D Server S
 
 > The SQL server can also be launched automatically on application startup (option in the Settings) or by programming.
 
-## Information
+## Información
 
 ### Configuración
 

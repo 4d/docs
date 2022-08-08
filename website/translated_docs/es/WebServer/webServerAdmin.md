@@ -213,7 +213,7 @@ The following table lists the fields available for each format (in alphabetical 
 | METHOD         | X   | X   | Método HTTP utilizado para la petición enviada al servidor                                                                                       |
 | PATH_ARGS      |     | X   | Parámetros CGI: cadena situada después del caracter "$"                                                                                          |
 | STATUS         | X   | X   | Respuesta ofrecida por el servidor                                                                                                               |
-| TIME           | X   | X   | HH: hour, MM: minutes, SS: seconds                                                                                                               |
+| TIME           | X   | X   | HH: hora, MM: minutos, SS: segundos                                                                                                              |
 | TRANSFER_TIME  | X   | X   | Tiempo solicitado por el servidor para generar la respuesta                                                                                      |
 | USER           | X   | X   | Nombre de usuario si está autenticado; en caso contrario, - (signo menos). If the user name contains spaces, they are replaced by _ (underlines) |
 | URL            |     | X   | URL solicitado por el cliente                                                                                                                    |

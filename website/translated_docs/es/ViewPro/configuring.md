@@ -1,6 +1,6 @@
 ---
 id: configuring
-title: Configuring 4D View Pro Areas
+title: Configuración de las áreas de 4D View Pro
 ---
 
 The 4D View Pro area properties can be configured using the Property list. Las propiedades de las hojas de cálculo están disponibles a través del lenguaje.
@@ -45,7 +45,7 @@ Both the Ribbon and the Toolbar interfaces group related features into tabs:
 | File     | Gestión de archivos             |       X        |                                |
 | Inicio   | Apariencia del texto            |       X        |               X                |
 | Insertar | Añadir elementos                |       X        |               X                |
-| Fórmulas | Formula calculation and library |       X        |               X                |
+| Fórmulas | Cálculos de fórmulas y librería |       X        |               X                |
 | Datos    | Gestión de los datos            |       X        |               X                |
 | Mostrar  | Presentación visual             |       X        |               X                |
 | Settings | Presentación de la hoja         |       X        |                                |
@@ -145,15 +145,15 @@ Number formats apply to all number types (e.g., positive, negative, and zeros).
 
 | Caracter  | Descripción                                                                                                                                                                                                                                                                                          | Ejemplo                                                                                                                    |
 | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| 0         | Marcador de posición que muestra ceros.                                                                                                                                                                                                                                                              | #.00 will display 1.1 as 1.10                                                                                              |
-| .         | Muestra un punto decimal                                                                                                                                                                                                                                                                             | 0.00 will display 1999 as 1999.00                                                                                          |
+| 0         | Marcador de posición que muestra ceros.                                                                                                                                                                                                                                                              | #.00 mostrará 1.1 como 1.10                                                                                                |
+| .         | Muestra un punto decimal                                                                                                                                                                                                                                                                             | 0.00 mostrará 1999 como 1999.00                                                                                            |
 | ,         | Muestra el separador de miles en un número.<p><p> Thousands are separated by commas if the format contains a comma enclosed by number signs "#" or by zeros. Una coma a continuación de un marcador de posición de dígitos escala el número por 1.000. | #,0 mostrará 12200000 como 12,200,000                                                                                      |
 | \_      | Salta el ancho del siguiente caracter.                                                                                                                                                                                                                                                               | Usually used in combination with parentheses to add left and right indents, \_( and _) respectively.                     |
 | @         | Formatter for text. Aplica el formato a todo el texto de la celda                                                                                                                                                                                                                                    | "\[Red]@" aplica el color de fuente rojo para los valores de texto.                                                       |
-| *         | Repeats the next character to fill the column width.                                                                                                                                                                                                                                                 | 0*- will include enough dashes after a number to fill the cell, whereas *0 before any format will include leading zeros. |
+| *         | Repite el siguiente caracter para llenar el ancho de la columna.                                                                                                                                                                                                                                     | 0*- will include enough dashes after a number to fill the cell, whereas *0 before any format will include leading zeros. |
 | " "       | Muestra el texto entre comillas sin interpretarlo.                                                                                                                                                                                                                                                   | "8%" será mostrado como: 8%                                                                                                |
 | %         | Muestra los números como un porcentaje de 100.                                                                                                                                                                                                                                                       | El 8% se mostrará como 0,08                                                                                                |
-| \#      | Digit placeholder that does not display extra zeros. If a number has more digits to the right of the decimal than there are placeholders, the number is rounded up.                                                                                                                                  | #.# mostrará 1.54 como 1.5                                                                                                 |
+| \#      | Marcador de posición de dígitos que no muestra ceros adicionales. If a number has more digits to the right of the decimal than there are placeholders, the number is rounded up.                                                                                                                     | #.# mostrará 1.54 como 1.5                                                                                                 |
 | ?         | Digit placeholder that leaves space for extra zeros, but does not display them. Normalmente se utiliza para alinear números por punto decimal.                                                                                                                                                       | $?? displays a maximum of 2 decimals and causes dollar signs to line up for varying amounts.                               |
 | \        | Muestra el caracter que lo sigue.                                                                                                                                                                                                                                                                    | #.00\? #.00\? #.00\? #.00\? #.00\? will display 123 as 123.00?                                                        |
 | /         | Cuando se utiliza con números, los muestra como fracciones. Cuando se utiliza con códigos de texto, fecha u hora, se muestra "tal cual".                                                                                                                                                             | #/# mostrará .75 como 3/4                                                                                                  |
@@ -178,9 +178,9 @@ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_
 | ----------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `vk pattern full date time`               | "_fullDateTimePattern_"              | Formato ISO 8601 para la fecha y la hora completas en la localización actual.<p><p>Patrón por defecto USA: "dddd, dd MMMM yyyy HH:mm:ss"                                            |
 | `vk pattern long date`                    | "_longDatePattern_"                  | Formato ISO 8601 para la fecha completa en la localización actual.<p><p>Patrón por defecto USA: "dddd, dd MMMM yyyy"                                                                |
-| `vk pattern long time`                    | "_longTimePattern_"                  | Formato ISO 8601 para la hora en la localización actual.<p><p>USA default pattern: "HH:mm:ss"                                                                                       |
+| `vk pattern long time`                    | "_longTimePattern_"                  | Formato ISO 8601 para la hora en la localización actual.<p><p>Patrón por defecto USA: "HH:mm:ss"                                                                                    |
 | `vk pattern month day`                    | "_monthDayPattern_"                  | ISO 8601 format for the month and day in current localization.<p><p>USA default pattern: "MMMM dd"                                                                                 |
-| `vk pattern short date`                   | "_shortDatePattern_"                 | Formato abreviado ISO 8601 para la fecha en la localización actual.<p><p>USA default pattern: "MM/dd/yyyy"                                                                        |
+| `vk pattern short date`                   | "_shortDatePattern_"                 | Formato abreviado ISO 8601 para la fecha en la localización actual.<p><p>Patrón por defecto USA: "MM/dd/yyyy"                                                                     |
 | `vk pattern short time`                   | "_shortTimePattern_"                 | Formato abreviado ISO 8601 para la hora en la localización actual.<p><p>Patrón por defecto USA: "HH:mm"                                                                           |
 | `vk pattern sortable date time`           | "_sortableDateTimePattern_"          | ISO 8601 format for the date and time in current localization which can be sorted.<p><p>USA default pattern: "yyyy\'-\'MM\'-\'dd\'T\'HH\':\'mm\':\'ss"                  |
 | `vk pattern universal sortable date time` | "_universalSortableDateTimePattern_" | ISO 8601 format for the date and time in current localization using UTC which can be sorted.<p><p>Patrón por defecto de USA: "yyyy\'-\'MM\'-\'dd HH\':\'mm\':\'ss\'Z\'" |
@@ -203,11 +203,11 @@ To create your own date and time patterns, in your current localization, you can
 |       | Code<br>(no distingue entre mayúsculas y minúsculas) | Descripción                                                     | Ejemplo               |
 | ----- | ---------------------------------------------------------- | --------------------------------------------------------------- | --------------------- |
 | Fecha |                                                            |                                                                 | (January 1, 2019)     |
-|       | m                                                          | Month number without leading zero                               | 1                     |
+|       | m                                                          | Número de mes sin cero inicial                                  | 1                     |
 |       | mm                                                         | Número de mes con cero precedente                               | 01                    |
 |       | mmm                                                        | Nombre del mes, corto                                           | Jan                   |
 |       | mmmm                                                       | Nombre del mes, long                                            | January               |
-|       | d                                                          | Day number without leading zero                                 | 1                     |
+|       | d                                                          | Número del día sin el cero inicial                              | 1                     |
 |       | dd                                                         | Número de días con cero precedente                              | 01                    |
 |       | ddd                                                        | Día de la semana, corto                                         | Tue                   |
 |       | dddd                                                       | Día de la semana, largo                                         | Tuesday               |
@@ -216,9 +216,9 @@ To create your own date and time patterns, in your current localization, you can
 | Hora  |                                                            |                                                                 | (2:03:05 PM)          |
 |       | h                                                          | Hora sin cero precedente. 0-23                                  | 2                     |
 |       | hh                                                         | Hora con cero precedente. 00-23                                 | 02                    |
-|       | m                                                          | Minutes without leading zero. 0-59                              | 3                     |
+|       | m                                                          | Minutos sin cero inicial. 0-59                                  | 3                     |
 |       | mm                                                         | Minutos con cero precedente. 00-59                              | 03                    |
-|       | s                                                          | Seconds without leading zero. 0-59                              | 5                     |
+|       | s                                                          | Segundos sin cero a la izquierda. 0-59                          | 5                     |
 |       | ss                                                         | Segundo con cero precedente. 00-59                              | 05                    |
 |       | \[h]                                                      | Tiempo transcurrido en horas                                    | 14 (puede superar 24) |
 |       | \[mm]                                                     | Tiempo transcurrido en minutos                                  | 843                   |
@@ -249,7 +249,7 @@ In addition to the special characters and codes described in the previous sectio
 | £        | Libra esterlina                                                                             | £###.00              |
 | ¥        | Yen japonés                                                                                 | ¥###.00              |
 | $        | Signo dólar                                                                                 | $###.00              |
-| ¢        | Cent sign                                                                                   | .00¢                 |
+| ¢        | Signo de centavo                                                                            | .00¢                 |
 
 
 
@@ -264,16 +264,16 @@ In addition to the special characters and codes described in the previous sectio
 
 Column and row attributes are used to specify the beginning, end, and repetition of columns and rows.
 
-| Propiedad         | Tipo         | Descripción                                                                                                         |
-| ----------------- | ------------ | ------------------------------------------------------------------------------------------------------------------- |
-| columnEnd         | entero largo | The last row to print in a cell range. Default value = -1 (all rows)                                                |
-| columnStart       | entero largo | The first row to print in a cell range. Default value = -1 (all rows)                                               |
-| repeatColumnEnd   | entero largo | La última columna de un rango de columnas a imprimir a la izquierda de cada página. Default value = -1 (all rows)   |
-| repeatColumnStart | entero largo | La primera columna de un rango de columnas a imprimir a la izquierda de cada página. Default value = -1 (all rows)  |
-| repeatRowEnd      | entero largo | La última línea de un rango de líneas a imprimir en la parte superior de cada página. Default value = -1 (all rows) |
-| repeatRowStart    | entero largo | The first row of a range of rows to print at the top of each page. Default value = -1 (all rows)                    |
-| rowEnd            | entero largo | The last column to print in a cell range. Default value = -1 (all rows)                                             |
-| rowStart          | entero largo | The first column to print in a cell range. Default value = -1 (all rows)                                            |
+| Propiedad         | Tipo         | Descripción                                                                                                                     |
+| ----------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| columnEnd         | entero largo | The last row to print in a cell range. Default value = -1 (all rows)                                                            |
+| columnStart       | entero largo | The first row to print in a cell range. Default value = -1 (all rows)                                                           |
+| repeatColumnEnd   | entero largo | La última columna de un rango de columnas a imprimir a la izquierda de cada página. Default value = -1 (all rows)               |
+| repeatColumnStart | entero largo | La primera columna de un rango de columnas a imprimir a la izquierda de cada página. Default value = -1 (all rows)              |
+| repeatRowEnd      | entero largo | La última línea de un rango de líneas a imprimir en la parte superior de cada página. Valor por defecto = -1 (todas las líneas) |
+| repeatRowStart    | entero largo | The first row of a range of rows to print at the top of each page. Valor por defecto = -1 (todas las líneas)                    |
+| rowEnd            | entero largo | The last column to print in a cell range. Valor por defecto = -1 (todas las líneas)                                             |
+| rowStart          | entero largo | The first column to print in a cell range. Valor por defecto = -1 (todas las líneas)                                            |
 
 ### Encabezados / Pies de página
 
@@ -320,7 +320,7 @@ The following special characters allow the automatic addition or formatting of i
 
 ### Márgenes
 
-Margin attributes are used to specify the 4D View Pro area margins for printing. Expressed in hundreds of an inch.
+Margin attributes are used to specify the 4D View Pro area margins for printing. Expresado en centésimas de pulgada.
 
 | Propiedad |        | Tipo         | Descripción                                                     |
 | --------- | ------ | ------------ | --------------------------------------------------------------- |
@@ -347,11 +347,11 @@ Los atributos página se utilizan para especificar la configuración general de 
 
 | Propiedad       | Tipo         | Descripción                                                                                                                                                                                                  |
 | --------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| blackAndWhite   | booleano     | Printing in black and white only. <p>Valor por defecto: false</p><p>**Nota**: los PDFs no se ven afectados por este atributo. Los colores en PDFs permanecen.</p>                                                                                                                          |
+| blackAndWhite   | booleano     | Impresión sólo en blanco y negro. <p>Valor por defecto: false</p><p>**Nota**: los PDFs no se ven afectados por este atributo. Los colores en PDFs permanecen.</p>                                                                                                                          |
 | centering       | entero largo | Como se centran los contenidos en la página impresa. Valores disponibles: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (por defecto), `vk print centering vertical` |
 | firstPageNumber | entero largo | El número de página a imprimir en la primera página.<p>Por defecto = 1                                                                                                               |
 | pageOrder       | entero largo | Las páginas del pedido se imprimen. Valores disponibles: `vk print page order auto` (por defecto), `vk print page order down then over`, `vk print page order over then down`.                               |
-| pageRange       | texto        | The range of pages for printing                                                                                                                                                                              |
+| pageRange       | texto        | El rango de páginas a imprimir                                                                                                                                                                               |
 | qualityFactor   | entero largo | El factor de calidad para la impresión (1 - 8).  The higher the quality factor, the better the printing quality, however printing performance may be affected.<p>Por defecto = 2</p>                      |
 | useMax          | booleano     | Sólo se imprimen columnas y líneas con datos.<p>Valor por defecto: true</p>                                                                                                                                       |
 | zoomFactor      | real         | La cantidad para ampliar o reducir la página impresa.<p>Por defecto = 1</p>                                                                                                                               |
@@ -372,7 +372,7 @@ Paper size attributes are used to specify the dimensions or model of paper to us
 
 ### Escala
 
-Scale attributes are used to specify printing optimization and adjustments.
+El atributo de escala se utiliza para la optimización y el ajuste de la impresión.
 
 | Propiedad      | Tipo         | Descripción                                                                                                                                           |
 | -------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -385,12 +385,12 @@ Scale attributes are used to specify printing optimization and adjustments.
 
 Show / Hide attributes are used to specify the visibility (printing) of 4D View Pro area elements.
 
-| Propiedad        | Tipo         | Descripción                                                                                                                                                                             |
-| ---------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| showBorder       | booleano     | Imprime el borde del contorno.<p><p>Valor por defecto: "true"                                                                           |
-| showColumnHeader | entero largo | Column header print settings. Valores disponibles: `vk print visibility hide`, `vk print visibility inherit` (por defecto), `vk print visibility show`, `vk print visibility show once` |
-| showGridLine     | booleano     | Imprime las líneas de la cuadrícula.<p>Valor por defecto: "false"                                                                                               |
-| showRowHeader    | entero largo | Row headers print settings. Valores disponibles: `vk print visibility hide`, `vk print visibility inherit` (por defecto), `vk print visibility show`, `vk print visibility show once`   |
+| Propiedad        | Tipo         | Descripción                                                                                                                                                                                                     |
+| ---------------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| showBorder       | booleano     | Imprime el borde del contorno.<p><p>Valor por defecto: "true"                                                                                                   |
+| showColumnHeader | entero largo | Parámetros de impresión del encabezado de la columna. Valores disponibles: `vk print visibility hide`, `vk print visibility inherit` (por defecto), `vk print visibility show`, `vk print visibility show once` |
+| showGridLine     | booleano     | Imprime las líneas de la cuadrícula.<p>Valor por defecto: "false"                                                                                                                       |
+| showRowHeader    | entero largo | Parámetros de impresión de los encabezados de línea. Valores disponibles: `vk print visibility hide`, `vk print visibility inherit` (por defecto), `vk print visibility show`, `vk print visibility show once`  |
 
 ### Marca de agua
 
@@ -398,9 +398,9 @@ Watermark attributes are used to superimpose text or an image onto the 4D View P
 
 | Propiedad     |                | Tipo                 | Descripción                                                                                                                                                                                                      |
 | ------------- | -------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| marca de agua |                | colección            | Collection of watermark settings. <p>Valor por defecto: indefinido                                                                                                                       |
+| marca de agua |                | colección            | Colección de parámetros de marcas de agua. <p>Valor por defecto: indefinido                                                                                                              |
 |               | \[ ].height   | entero largo         | La altura del texto/imagen de la marca de agua.                                                                                                                                                                  |
-|               | \[ ].imageSrc | picture &#124; text* | The watermark text / image.                                                                                                                                                                                      |
+|               | \[ ].imageSrc | picture &#124; text* | El texto/imagen de la marca de agua.                                                                                                                                                                             |
 |               | \[ ].page     | texto                | La(s) página(s) donde se imprime la marca de agua.<p>Para todas las páginas: "all". Para páginas específicas: números de página o rangos de páginas separados por comas. Ej.: "1,3,5-12" |
 |               | \[ ].width    | entero largo         | El ancho del texto/imagen marca de agua.                                                                                                                                                                         |
 |               | \[ ].x        | entero largo         | The horizontal coordinate of the top left point of the watermark text / image.                                                                                                                                   |
@@ -417,7 +417,7 @@ Watermark attributes are used to superimpose text or an image onto the 4D View P
 
 ### Objetos de estilo & Hojas de estilo
 
-Style objects contain the style settings. They can be used either in a style sheet or on their own. Style objects can also be used in addition to a style sheet so that different settings can be specified for individual cell ranges without affecting the rest of the document. You can use style objects directly with the [VP SET CELL STYLE](method-list.md#vp-set-cell-style) and [VP SET DEFAULT STYLE](method-list.md#vp-set-default-style) commands.
+Style objects contain the style settings. Se pueden utilizar en una hoja de estilo o por su cuenta. Style objects can also be used in addition to a style sheet so that different settings can be specified for individual cell ranges without affecting the rest of the document. You can use style objects directly with the [VP SET CELL STYLE](method-list.md#vp-set-cell-style) and [VP SET DEFAULT STYLE](method-list.md#vp-set-default-style) commands.
 
 A **style sheet** groups together a combination of properties in a style object to specify the look of all of the cells in your 4D View Pro documents. Style sheets saved with the document can be used to set the properties for a single sheet, multiple sheets, or an entire workbook. When created, a 4D View Pro style sheet is given a name which is saved within the style sheet in the "name" property. This allows a style sheet to be easily used and, if thoughtfully selected, can facilitate its identification and purpose (e.g., Letterhead\_internal, Letterhead_external).
 
@@ -460,7 +460,7 @@ Ejemplo:
 
 | Propiedad       |            | Tipo         | Descripción                                                                                                                                                                                                                                                                                                                                                                         | Valores posibles                                                                                                                                                                                                                            |
 | --------------- | ---------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| font            |            | texto        | Specifies the font characteristics in CSS font shorthand ("font-style font-variant font-weight font-size/line-height font-family"). Example: "14pt Century Gothic". Los valores font-size y font-family son obligatorios. If one of the other values is missing, their default values are used. Nota: si un nombre de fuente contiene un espacio, el nombre debe ir entre comillas. | A CSS font shorthand.<p>4D provides utility commands to handle font characteristics as objects: [`VP Font to object`](method-list.md#vp-font-to-object) and [`VP Object to font`](method-list.md#vp-object-to-font) |
+| font            |            | texto        | Specifies the font characteristics in CSS font shorthand ("font-style font-variant font-weight font-size/line-height font-family"). Ejemplo: "14pt Century Gothic". Los valores font-size y font-family son obligatorios. If one of the other values is missing, their default values are used. Nota: si un nombre de fuente contiene un espacio, el nombre debe ir entre comillas. | A CSS font shorthand.<p>4D provides utility commands to handle font characteristics as objects: [`VP Font to object`](method-list.md#vp-font-to-object) and [`VP Object to font`](method-list.md#vp-object-to-font) |
 | formatter       |            | texto        | Patrón de propiedad valor/tiempo.                                                                                                                                                                                                                                                                                                                                                   | Formatos número/texto/fecha/hora, caracteres especiales. Ver [Formato de celda](#cell-format).                                                                                                                                              |
 | isVerticalText  |            | booleano     | Especifica la dirección del texto.                                                                                                                                                                                                                                                                                                                                                  | True = texto vertical, False = texto horizontal.                                                                                                                                                                                            |
 | labelOptions    |            | objeto       | Define las opciones de etiqueta de celda (opciones de marca de agua).                                                                                                                                                                                                                                                                                                               |                                                                                                                                                                                                                                             |
@@ -476,14 +476,14 @@ Ejemplo:
 
 #### Disposición
 
-| Propiedad   | Tipo         | Descripción                                                                                                         | Valores posibles                                                                                                     |
-| ----------- | ------------ | ------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| cellPadding | texto        | Define el relleno de la celda                                                                                       |                                                                                                                      |
-| hAlign      | entero largo | Define la alineación horizontal del contenido de la celda.                                                          | `vk horizontal align center`, `vk horizontal align general`, `vk horizontal align left`, `vk horizontal align right` |
-| locked      | booleano     | Specifies cell protection status. Note, this is only available if [sheet protection](#sheet-protection) is enabled. | True = bloqueado, False = desbloqueado.                                                                              |
-| shrinkToFit | booleano     | Especifica si el contenido de la celda debe ser reducido.                                                           | True = contenido reducido, False = sin reducción.                                                                    |
-| tabStop     | booleano     | Specifies if the focus to the cell can be set using the Tab key.                                                    | True = Tab key sets focus, False = Tab key does not set focus.                                                       |
-| vAlign      | entero largo | Especifica la alineación vertical del contenido de la celda.                                                        | `vk vertical align bottom`, `vk vertical align center`, `vk vertical align top`                                      |
+| Propiedad   | Tipo         | Descripción                                                                                                                       | Valores posibles                                                                                                     |
+| ----------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| cellPadding | texto        | Define el relleno de la celda                                                                                                     |                                                                                                                      |
+| hAlign      | entero largo | Define la alineación horizontal del contenido de la celda.                                                                        | `vk horizontal align center`, `vk horizontal align general`, `vk horizontal align left`, `vk horizontal align right` |
+| locked      | booleano     | Especifica el estado de protección de la celda. Note, this is only available if [sheet protection](#sheet-protection) is enabled. | True = bloqueado, False = desbloqueado.                                                                              |
+| shrinkToFit | booleano     | Especifica si el contenido de la celda debe ser reducido.                                                                         | True = contenido reducido, False = sin reducción.                                                                    |
+| tabStop     | booleano     | Specifies if the focus to the cell can be set using the Tab key.                                                                  | True = Tab key sets focus, False = Tab key does not set focus.                                                       |
+| vAlign      | entero largo | Especifica la alineación vertical del contenido de la celda.                                                                      | `vk vertical align bottom`, `vk vertical align center`, `vk vertical align top`                                      |
 
 
 #### Información de estilo

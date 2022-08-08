@@ -21,9 +21,6 @@ Tous les enregistrements et tous les index de la base sont vérifiés. Si vous s
 
 A l’issue de la vérification, un fichier de compte-rendu est généré au format XML sur le serveur, dans le dossier [maintenance Logs](Project/architecture.md#logs). Le bouton **Voir le compte rendu** (nommé **Télécharger le compte rendu** si l’opération a été effectuée depuis un poste distant) vous permet d’afficher le fichier dans votre navigateur.
 
-
-Cette zone indique la date, l’heure et le statut de la dernière opération de vérification/compactage des données de la base.
-
 ### Compacter les données...
 
 Ce bouton permet de lancer directement une opération de compactage des données. Cette opération nécessite de stopper le serveur : lorsque vous cliquez sur le bouton, la boîte de dialogue de fermeture de la base 4D Server apparaît, vous permettant de choisir le mode d’interruption de l’exploitation :

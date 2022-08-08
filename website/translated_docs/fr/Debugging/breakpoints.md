@@ -44,12 +44,12 @@ Si un point d'arrêt existe déjà, la fenêtre s'affiche pour ce point d'arrêt
 Voici une description des propriétés :
 
 * **Emplacement** : indique le nom de la méthode et le numéro de ligne associés au point d'arrêt.
-* **Break when following expression is true** : Vous pouvez créer des **points d'arrêt conditionnels** en saisissant une formule 4D qui retourne `True` ou `False`. Par exemple, insérez `Records in selection(\[aTable])=0` pour vous assurer que l'arrêt se produit uniquement si aucun enregistrement n'est sélectionné pour la table \[aTable]. Les conditions d'arrêt sont disponibles dans la colonne **Condition** de la [liste des arrêts](#break-list).
-* **Number of times to skip before breaking** : Vous pouvez associer un point d'arrêt à une ligne située dans une boucle (While, Repeat ou For) ou située dans une sous-routine ou une fonction appelée depuis une boucle.
-* **Breakpoint is disabled** : Si vous n'avez actuellement pas besoin d'un point d'arrêt, mais que vous pourriez en avoir besoin plus tard, vous pouvez le désactiver temporairement. Un point d'arrêt désactivé apparaît sous la forme d'un tiret (-) au lieu d'une puce (•)|
+* **Arrêt lorsque l’expression suivante est vraie** : Vous pouvez créer des **points d'arrêt conditionnels** en saisissant une formule 4D qui retourne `Vrai` ou `Faux`. Par exemple, insérez `Records in selection(\[aTable])=0` pour vous assurer que l'arrêt se produit uniquement si aucun enregistrement n'est sélectionné pour la table \[aTable]. Les conditions d'arrêt sont disponibles dans la colonne **Condition** de la [liste des arrêts](#break-list).
+* **Nombre d’occurrences exécutées avant arrêt** : Vous pouvez associer un point d'arrêt à une ligne située dans une boucle (While, Repeat ou For) ou située dans une sous-routine ou une fonction appelée depuis une boucle.
+* **Point d’arrêt désactivé** : Si vous n'avez actuellement pas besoin d'un point d'arrêt, mais que vous pourriez en avoir besoin plus tard, vous pouvez le désactiver temporairement. Un point d'arrêt désactivé apparaît sous la forme d'un tiret (-) au lieu d'une puce (•)|
 
 
-### Points d'arrêt dans le débogage à distance
+### Points d'arrêt dans le débogueur distant
 
 La liste des points d'arrêt est stockée localement. En mode de débogage à distance, si le débogueur connecté est un 4D distant, la liste des points d'arrêt distants remplace temporairement la liste des points d'arrêt du serveur pendant la session de débogage.
 
@@ -77,7 +77,7 @@ Pour ouvrir la page de la liste des points d'arrêt :
 Vous ne pouvez pas ajouter de nouveaux points d'arrêt à partir de cette fenêtre. Les points d'arrêt ne peuvent être créés qu'à partir de la fenêtre du débogueur ou de l'éditeur de méthodes.
 
 
-## Points d'arrêts sur les commandes
+## Points d'arrêts sur commandes
 
 L'onglet **Catch** de l'Explorateur d'exécution vous permet d'ajouter des points d'arrêt supplémentaires à votre code via des appels aux commandes 4D. Contrairement à un point d'arrêt, qui est situé dans une méthode de projet particulière (et qui déclenche donc une exception de traçage uniquement lorsqu'il est atteint), la portée de la capture d'une commande inclut tous les process qui exécutent le code 4D et appellent cette commande.
 

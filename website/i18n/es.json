@@ -919,8 +919,11 @@
       "Users/overview": {
         "title": "Presentación del control de acceso"
       },
+      "ViewPro/advanced-programming": {
+        "title": "Programación avanzada con Javascript"
+      },
       "ViewPro/configuring": {
-        "title": "Configuring 4D View Pro Areas"
+        "title": "Configuración de las áreas de 4D View Pro"
       },
       "ViewPro/formulas": {
         "title": "Fórmulas y funciones"
@@ -982,6 +985,7 @@
       "Class API Reference": "Clases API",
       "Code Editor": "Editor de código",
       "Debugging": "Depuración",
+      "Transformation Tags": "Etiquetas Transformación",
       "Settings": "Settings",
       "Preferences": "Preferencias",
       "4D Server Administration Window": "Ventana de administración de 4D Server",
@@ -1047,8 +1051,9 @@
     "Developing Plugins|no description given": "Plugins de desarrollo",
     "Working with a project|no description given": "Trabajar con un proyecto",
     "Settings|no description given": "Settings",
+    "Transformation Tags|no description given": "Etiquetas Transformación",
     "User Settings|no description given": "Propiedades usuario",
-    "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.en.html|no description given": "https://doc.4d.com/4Dv19R3/4D/19-R3/4D-Language-Reference.100-5582450.en.html",
+    "https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html|no description given": "https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html",
     "Getting started|no description given": "Comencemos",
     "Core Development|no description given": "Desarrollo",
     "Administration|no description given": "Administración",

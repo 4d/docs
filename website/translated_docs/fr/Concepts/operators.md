@@ -126,28 +126,28 @@ $t2*=2 // $t2="HelloHello"
 
 
 
-## Short-circuit operators
+## Opérateurs en court-circuit
 
-The **&&** and **||** operators are **short circuit operators**. A short circuit operator is one that doesn't necessarily evaluate all of its operands.
+Les opérateurs **&&** et **||** sont des **opérateurs en court-circuit**. Un opérateur en court-circuit est un opérateur qui n'évalue pas nécessairement toutes ses opérandes.
 
-The difference with the single [**&** and **|** boolean operators](dt_boolean.md#logical-operators) is that the short-circuit operators **&&** and **||** don't return a boolean value. They evaluate expressions as [truthy or falsy](#truthy-and-falsy), then return one of the expressions.
+La différence avec les opérateurs booléens simples [**&** et **||**](dt_boolean.md#logical-operators) est que les opérateurs en court-circuit **&&** et **||** ne renvoient pas de valeur booléenne. Ils évaluent les expressions comme étant [truthy ou falsy](#truthy-and-falsy), puis retournent l'une des expressions.
 
-### Short-circuit AND operator (&&)
+### Opérateur en court-circuit AND (&&)
 
-The rule is as follows:
+La règle est la suivante :
 
-Given `Expr1 && Expr2`:
+Soit `Expr1 && Expr2` :
 
-The short-circuit AND operator evaluates operands from left to right, returning immediately with the value of the first falsy operand it encounters; if all values are [truthy](#truthy-and-falsy), the value of the last operand is returned.
+L'opérateur en court-circuit AND évalue les opérandes de gauche à droite, retournant immédiatement avec la valeur du premier opérande "falsy" qu'il rencontre ; si toutes les valeurs sont [truthy](#truthy-and-falsy), la valeur du dernier opérande est retournée.
 
-The following table summarizes the different cases for the **&&** operator:
+Le tableau suivant résume les différents cas de figure pour l'opérateur **&&** :
 
-| Expr1  | Expr2  | Value returned |
-| ------ | ------ | -------------- |
-| truthy | truthy | Expr2          |
-| truthy | falsy  | Expr2          |
-| falsy  | truthy | Expr1          |
-| falsy  | falsy  | Expr1          |
+| Expr1  | Expr2  | Valeur retournée |
+| ------ | ------ | ---------------- |
+| truthy | truthy | Expr2            |
+| truthy | falsy  | Expr2            |
+| falsy  | truthy | Expr1            |
+| falsy  | falsy  | Expr1            |
 
 #### Exemple 1
 
@@ -163,11 +163,11 @@ $v := 5 && 10 && "hello" //"hello"
 
 #### Exemple 2
 
-Say you have an online store, and some products have a tax rate applied, and others don't.
+Supposons que vous ayez une boutique en ligne et que certains produits soient soumis à une taxe, alors que d'autres ne le sont pas.
 
-To calculate the tax, you multiply the price by the tax rate, which may not have been specified.
+Pour calculer la taxe, vous multipliez le prix par le taux de taxe, qui peut ne pas avoir été spécifié.
 
-So you can write this:
+Vous pouvez donc écrire ceci :
 
 ```4d
 var $tax : Variant
@@ -175,11 +175,11 @@ var $tax : Variant
 $tax:=$item.taxRate && ($item.price*$item.taxRate)
 ```
 
-`$tax` will be NULL if taxRate is NULL (or undefined), otherwise it will store the result of the calculation.
+`$tax` sera NULL si le taxRate est NULL (ou undefined), sinon il stockera le résultat du calcul.
 
 #### Exemple 3
 
-Short-circuit operators are useful in tests such as:
+Les opérateurs en court-circuit sont utiles dans les tests tels que :
 
 ```4d
 If(($myObject#Null) && ($myObject.value>10))
@@ -187,30 +187,30 @@ If(($myObject#Null) && ($myObject.value>10))
 End if
 ```
 
-If $myObject is Null, the second argument is not executed, thus no error is thrown.
+Si $myObject est Null, le second argument n'est pas exécuté, donc aucune erreur n'est levée.
 
-### Short-circuit OR operator (||)
+### Opérateur en court-circuit OR (||)
 
-The || operator returns the value of one of the specified operands. The expression is evaluated left to right and tested for possible "short-circuit" evaluation using the following rule:
+L'opérateur || retourne la valeur d'une des opérandes spécifiées. L'expression est évaluée de gauche à droite et testée pour une éventuelle évaluation en "court-circuit" en utilisant la règle suivante :
 
-Given `Expr1 || Expr2`:
+Soit `Expr1 || Expr2` :
 
-If Expr1 is [truthy](#truthy-and-falsy), Expr2 is not evaluated and the calculation returns Expr1.
+Si Expr1 est [truthy](#truthy-and-falsy), Expr2 n'est pas évalué et le calcul renvoie Expr1.
 
-If Expr1 is [falsy](#truthy-and-falsy), the calculation returns Expr2.
+Si Expr1 est [falsy](#truthy-and-falsy), le calcul renvoie Expr2.
 
-The following table summarizes the different cases and the value returned for the **||** operator:
+Le tableau suivant résume les différents cas de figure et la valeur retournée pour l'opérateur **||**:
 
-| Expr1  | Expr2  | Value returned |
-| ------ | ------ | -------------- |
-| truthy | truthy | Expr1          |
-| truthy | falsy  | Expr1          |
-| falsy  | truthy | Expr2          |
-| falsy  | falsy  | Expr2          |
+| Expr1  | Expr2  | Valeur retournée |
+| ------ | ------ | ---------------- |
+| truthy | truthy | Expr1            |
+| truthy | falsy  | Expr1            |
+| falsy  | truthy | Expr2            |
+| falsy  | falsy  | Expr2            |
 
 #### Exemple 1
 
-Say you have a table called Employee. Some employees have entered a phone number, and others haven't. This means that `$emp.phone` could be NULL, and you cannot assign NULL to a Text variable. But you can write the following:
+Supposons que vous avez une table appelée Employee. Certains employés ont saisi un numéro de téléphone, d'autres non. Cela signifie que `$emp.phone` pourrait être NULL, et vous ne pouvez pas assigner NULL à une variable texte. Mais vous pouvez écrire :
 
 ```4d
 var $phone : Text
@@ -218,13 +218,13 @@ var $phone : Text
 $phone:=$emp.phone || "n/a"
 ```
 
-In which case `$phone` will store either a phone number or the "n/a" string.
+Dans ce cas, `$phone` stockera soit un numéro de téléphone, soit la chaîne "n/a".
 
 #### Exemple 2
 
-Given a table called Person with a *name* field, as well as a *maiden name* field for married women.
+On dispose d'une table appelée Person avec un champ *name* , ainsi qu'un champ *maiden name* pour les femmes mariées.
 
-The following example checks if there is a maiden name and stores it in a variable, otherwise it simply stores the person's name:
+L'exemple suivant vérifie s'il y a un nom de jeune fille et le stocke dans une variable, sinon il stocke simplement le nom de la personne :
 
 ```4d
 var $name: Text
@@ -234,9 +234,9 @@ $name:=$person.maidenName || $person.name
 
 ### Priorité
 
-The `&&` and `||` operators have the same precedence as the logical operators `&` and `|`, and are evaluated left to right.
+Les opérateurs `&&` et `||` ont la même priorité que les opérateurs logiques `&` et `|`, et sont évalués de gauche à droite.
 
-This means that `a || b && c` is evaluated as `(a || b) && c`.
+Cela signifie que `a || b && c` est évalué comme `(a || b) && c`.
 
 
 ## Opérateur ternaire
@@ -255,11 +255,11 @@ La syntaxe est la suivante :
 
 `condition ? exprIfTruthy : exprIfFalsy`
 
-> Since the [token syntax](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html) uses colons, we recommend inserting a space after the colon `:` or enclosing tokens using parentheses to avoid any conflicts.
+> Étant donné que la [syntaxe avec tokens](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html) utilise des deux-points, nous recommandons d'insérer un espace après les deux-points `:` ou d'entourer les tokens à l'aide de parenthèses pour éviter tout conflit.
 
 ### Exemples
 
-#### A simple example
+#### Exemple simple
 
 ```4d
 var $age : Integer
@@ -271,14 +271,14 @@ $beverage:=($age>=21) ? "Beer" : "Juice"
 ALERT($beverage) // "Beer"
 ```
 
-#### Handling data from a table
+#### Traitement des données depuis une table
 
-This example stores a person's full name in a variable, and handles the case when no first name or last name has been specified:
+Cet exemple stocke le nom complet d'une personne dans une variable, et gère le cas où aucun prénom ou nom de famille n'a été spécifié :
 
 ```4d
 var $fullname : Text
 
-// If one of the names is missing, store the one that exists, otherwise store an empty string
+// Si un des noms est manquant, stocker celui qui existe, sinon stocker une chaîne vide
 $fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$person.lastname) : ($person.lastname || $person.firstname) || ""
 ```
 
@@ -286,7 +286,7 @@ $fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$per
 
 En plus d'un type, chaque valeur possède également une valeur booléenne inhérente, généralement connue sous le nom de **truthy** ou **falsy**.
 
-> **truthy** and **falsy** values are only evaluated by [short-circuit](#short-circuit-operators) and [ternary](#ternary-operator) operators.
+> Les valeurs **truthy** et **falsy ** ne sont évaluées que par les opérateurs [en court-circuit](#operateurs-en-court-circuit) et [ternaires](#operateurs-ternaires).
 
 Les valeurs suivantes sont **falsy**:
 
@@ -302,21 +302,21 @@ Les valeurs suivantes sont **falsy**:
 * [] - Collections vides
 * {} - Objets vides
 
-Toutes les autres valeurs sont considérées comme **truthy**, y compris :
+Toutes les autres valeurs sont considérées comme **truthy**, notamment :
 
 * 0 - zéro numérique (Entier ou autre)
 
-In 4D, **truthy** and **falsy** evaluation reflects the **usability** of a value, which means that a truthy value exists and can be processed by the code without generating errors or unexpected results. The rationale behind this is to provide a convenient way to handle *undefined* and *null* values in objects and collections, so that a reduced number of [If…Else](./cf_branching.md#ifelseend-if) statements are necessary to avoid runtime errors.
+Dans 4D, l'évaluation à **truthy** et **falsy** reflète la **possibilité d'utilisation** d'une valeur, ce qui signifie qu'une valeur truthy existe et peut être traitée par le code sans générer d'erreurs ou de résultats inattendus. La raison d'être de ce principe est de fournir un moyen pratique de gérer les valeurs *undefined* et *null* dans les objets et les collections, afin qu'un nombre réduit d'instructions [If…Else](./cf_branching.md#ifelseend-if) soient nécessaires pour éviter les erreurs d'exécution.
 
-For example, when you use a [short-circuit OR operator](#short-circuit-or-operator-):
+Par exemple, lorsque vous utilisez un opérateur en [court-circuit OR](#short-circuit-or-operator-) :
 
 ```4d
 $value:=$object.value || $defaultValue
 ```
 
-... you get the default value whenever *$object* does not contain the `value` property OR when it is *null*. So this operator checks the existence or usability of the value instead of a specific value. Note that because the numerical value 0 exists and is usable, it is not treated specially, thus it is **truthy**.
+... vous obtenez la valeur par défaut chaque fois que *$object* ne contient pas la propriété `value` OU quand elle est *null*. Cet opérateur vérifie donc l'existence ou la possibilité d'utilisation de la valeur et non une valeur spécifique. Notez que puisque la valeur numérique 0 existe et est utilisable, elle n'est pas traitée spécialement, donc elle est **truthy**.
 
-Regarding values representing collections, objects, or strings, "empty" values are considered **falsy**. It is handy when you want to assign a default value whenever an empty one is encountered.
+En ce qui concerne les valeurs représentant des collections, des objets ou des chaînes, les valeurs "vides" sont considérées comme **falsy**. C'est pratique lorsque vous voulez assigner une valeur par défaut chaque fois qu'une valeur vide est rencontrée.
 
 ```4d
 $phone:=$emp.phone || "n/a"

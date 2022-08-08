@@ -1017,7 +1017,7 @@ En cas d'incohérence, les règles suivantes sont appliquées :
 
 #### Description
 
-La fonction `.filter()` <!-- REF #collection.filter().Summary -->retourne une nouvelle collection contenant tous les éléments de la collection d'origine pour lesquels le résultat de la méthode *methodName* est **true**<!-- END REF -->. Cette méthode retourne une ***shallow copy*** (copie superficielle), ce qui signifie que les objets ou les collections présents dans les deux collections partagent la même référence. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
+La fonction `.filter()` <!-- REF #collection.filter().Summary -->retourne une nouvelle collection contenant tous les éléments de la collection d'origine pour lesquels le résultat de la méthode *methodName* est **true**<!-- END REF -->. Cette fonction retourne une ***shallow copy*** (copie superficielle), ce qui signifie que les objets ou les collections présents dans les deux collections partagent la même référence. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.
 > Cette fonction ne modifie pas la collection d'origine.
 
 Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel). *methodName* peut effectuer tout test, avec ou sans paramètres. Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les éléments de la collection, ainsi que son ou ses paramètre(s) dans *param* (optionnel).
@@ -1031,7 +1031,7 @@ Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les é
 *methodName* doit fixer le(s) paramètre(s) suivant(s) :
 
 *   *$1.result* (booléen) : **true** si l'élément satisfait à la condition de filtrage et doit être conservé.
-*   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.
+*   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel. La valeur retournée est la dernière calculée.
 
 
 #### Exemple 1
@@ -1125,7 +1125,7 @@ Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les é
 *methodName* doit fixer le(s) paramètre(s) suivant(s) :
 
 *   *$1.result* (booléen) : **true** si l'élément satisfait à la condition de recherche et doit être conservé.
-*   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.
+*   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel. La valeur retournée est la dernière calculée.
 
 Par défaut, `.find()` effectue une recherche dans la totalité de la collection. Optionnellement, vous pouvez passer dans *startFrom* le numéro de l'élément auquel démarrer la recherche.
 
@@ -1224,7 +1224,7 @@ Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les é
 *methodName* doit fixer le(s) paramètre(s) suivant(s) :
 
 *   *$1.result* (booléen) : **true** si l'élément satisfait à la condition de recherche et doit être conservé.
-*   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.
+*   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel. La valeur retournée est la dernière calculée.
 
 Par défaut, `.findIndex()` effectue une recherche dans la totalité de la collection. Optionnellement, vous pouvez passer dans *startFrom* le numéro de l'élément auquel démarrer la recherche.
 
@@ -1908,7 +1908,7 @@ Dans *methodName*, passez le nom d'une méthode qui compare deux valeurs et reto
         *   *$1.value2* (tout type) : valeur du second élément à comparer
     *   $2...$N (tout type) : paramètres supplémentaires (extraParam)
 *   *methodName* doit fixer le paramètre suivant :
-    *   *$1.result* (booléen): **vrai** si *$1.value < $1.value2*, **faux** sinon
+    *   *$1.result* (booléen): **true** si *$1.value < $1.value2*, **false** sinon
 
 #### Exemple 1
 
@@ -1950,7 +1950,7 @@ Vous souhaitez trier une collection par code de caractère ou par langage :
 
 #### Exemple 3
 
-La méthode ***sortCollection*** :
+Vous souhaitez trier une collection par code de caractère ou par langage :
 
 ```4d
 var $strings1; $strings2 : Collection
@@ -2236,7 +2236,7 @@ Vous pouvez passer la valeur pour initialiser l'accumulateur dans *initValue*. S
 *methodName* doit fixer le(s) paramètre(s) suivant(s) :
 
 *   *$1.accumulator*: valeur à modifier par la fonction et qui est initialisée par *initValue*.
-*   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.
+*   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel. La valeur retournée est la dernière calculée.
 
 
 #### Exemple 1
@@ -2571,7 +2571,7 @@ Dans *methodName*, passez le nom de la méthode à utiliser pour évaluer les é
 *methodName* doit fixer le(s) paramètre(s) suivant(s) :
 
 *   *$1.result* (booléen) : **true** si l'évaluation de la valeur de l'élément est réussie, sinon **false**.
-*   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.
+*   *$1.stop* (booléen, optionnel) : **true** pour stopper le rétroappel. La valeur retournée est la dernière calculée.
 
 La fonction `.lastIndexOf()` <!-- REF #collection.lastIndexOf().Summary -->recherche l'expression *toSearch* parmi les éléments de la collection et retourne le numéro d'élément de la dernière occurrence trouvée<!-- END REF -->, ou -1 si aucune occurrence n'a été trouvée.
 
@@ -2649,7 +2649,7 @@ Si vous souhaitez trier les éléments de la collection dans un autre ordre ou t
     *   $2...$N (tout type) : paramètres supplémentaires (extraParam)
 
 *methodName* doit fixer le paramètre suivant :
-    *   *$1.result* (booléen): **vrai** si *$1.value < $1.value2*, **faux** sinon
+    *   *$1.result* (booléen): **true** si *$1.value < $1.value2*, **false** sinon
 
 Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Si *attributePath* est un attribut d'objet qui contient des valeurs de types différents, elles sont groupées par type et triées ensuite.
 

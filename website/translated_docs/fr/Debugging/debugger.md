@@ -3,7 +3,7 @@ id: debugger
 title: Débogueur
 ---
 
-Le débogueur est utile lorsque vous devez repérer des erreurs ou surveiller l'exécution de méthodes. It allows you to step through your code slowly and examine the information. Ce processus est appelé le "traçage".
+Le débogueur est utile lorsque vous devez repérer des erreurs ou surveiller l'exécution de méthodes. Il vous permet d'avancer pas à pas dans le code et d'examiner les informations. Ce processus est appelé le "traçage".
 
 ![debugger-window-local](assets/en/Debugging/debugger-window-intro.png)
 
@@ -19,7 +19,7 @@ Il existe plusieurs façons d'afficher le débogueur :
 
 ![open-debugger](assets/en/Debugging/openDebugger.png)
 
-* Cliquez sur le bouton **Trace** lorsqu'un process est sélectionné dans la page Process de l'Explorateur d'exécution.
+* En cliquant sur le bouton **Trace** lorsqu'un process est sélectionné dans la page Process de l'Explorateur d'exécution.
 * Ajout d'un point d'arrêt dans la fenêtre de l'éditeur de méthode ou dans les pages Break et Catch de l'explorateur d'exécution.
 
 Lorsqu'il est appelé, la fenêtre du débogueur fournit le nom de la méthode ou de la fonction de classe que vous êtes en train de tracer, ainsi que l'action qui a provoqué l'apparition initiale de la fenêtre du débogueur. Par exemple, dans la fenêtre du débogueur ci-dessus :
@@ -30,20 +30,20 @@ Lorsqu'il est appelé, la fenêtre du débogueur fournit le nom de la méthode o
 
 L'affichage d'une nouvelle fenêtre de débogage utilise la même configuration que la dernière fenêtre affichée dans la même session. Si vous exécutez plusieurs process utilisateur, vous pouvez les tracer indépendamment et avoir une fenêtre de débogage ouverte pour chaque process.
 
-La fenêtre du débogueur est généralement affichée sur la machine où le code est exécuté. With a single-user application, it is always displayed on the machine running the application. With a client/server application, it is displayed:
+La fenêtre du débogueur est généralement affichée sur la machine où le code est exécuté. Avec une application mono-utilisateur, elle est toujours affichée sur la machine qui exécute l'application. Avec une application client/serveur, elle est affichée :
 
-- on the remote 4D for code running locally
-- on the server machine for code running on the server (for example, a method with the **execute on server** option).
+- sur le 4D distant pour le code s'exécutant localement
+- sur la machine du serveur pour le code exécuté sur le serveur (par exemple, une méthode avec l'option **Exécuter sur serveur**).
 
-> If the server is running headless, no debugger window can be displayed on the server, you need to use the remote debugger. See [Debugging from remote machines](./debugging-remote.md).
+> Si le serveur fonctionne en mode headless, aucune fenêtre de débogage ne peut être affichée sur le serveur, vous devez utiliser le débogueur distant. Voir [Débogage depuis des machines distantes](./debugging-remote.md).
 
-## Tool bar Buttons
+## Boutons de la barre d'outils
 
-The debugger's tool bar includes several buttons, associated with default shortcuts:
+La barre d'outils du débogueur comprend plusieurs boutons, associés aux raccourcis par défaut :
 
 ![execution-control-toolbar-buttons](assets/en/Debugging/executionToolbarButtons.png)
 
-> Default shortcuts can be customized in the Shortcuts Page of the Preferences dialog box.
+> Les raccourcis par défaut peuvent être personnalisés dans la page Raccourcis de la boîte de dialogue Préférences.
 
 #### Bouton 'Reprendre exécution'
 
@@ -73,7 +73,7 @@ La méthode s’arrête et vous retournez là où vous étiez avant son exécuti
 * Si vous tracez une méthode formulaire ou une méthode objet s’exécutant en réponse à un événement, elle s’arrête et vous retournez au formulaire.
 * Si vous tracez une méthode s’exécutant à partir du mode Application, vous retournez à ce mode.
 
-#### Bouton 'Stopper et éditer'
+#### Bouton 'Exécuter et sortir'
 
 
 La méthode s’arrête comme lorsque vous cliquez sur Stopper exécution. The method that is executing when you click the **Abort and Edit** button opens in the Method Editor.

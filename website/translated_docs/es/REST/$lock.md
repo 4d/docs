@@ -16,7 +16,7 @@ Para bloquear una entidad para las otras sesiones y procesos 4D:
 ```
 
 
-To unlock the entity for other sessions and 4D processes:
+Para desbloquear la entidad para las otras sesiones y procesos 4D:
 
 ```
 /?$lock=false
@@ -48,14 +48,14 @@ El objeto "__STATUS" devuelto tiene las siguientes propiedades:
 
 | Propiedad    |                | Tipo     | Descripción                                                                                                                                                 |
 | ------------ | -------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|              |                |          | ***Available only in case of success:***                                                                                                                    |
+|              |                |          | ***Disponible sólo en caso de éxito:***                                                                                                                     |
 | success      |                | booleano | true if the lock action is successful (or if the entity is already locked in the current session), false otherwise (not returned in this case).             |
 |              |                |          | ***Disponible sólo en caso de error:***                                                                                                                     |
 | status       |                | number   | Código de error, ver abajo                                                                                                                                  |
 | statusText   |                | texto    | Descripción del error, ver abajo                                                                                                                            |
 | lockKind     |                | number   | Código de bloqueo                                                                                                                                           |
 | lockKindText |                | texto    | "Locked by session" if locked by a REST session, "Locked by record" if locked by a 4D process                                                               |
-| lockInfo     |                | objeto   | Information about the lock origin. Las propiedades devueltas dependen del origen del bloqueo (proceso 4D o sesión REST).                                    |
+| lockInfo     |                | objeto   | Información sobre el origen del bloqueo. Las propiedades devueltas dependen del origen del bloqueo (proceso 4D o sesión REST).                              |
 |              |                |          | ***Disponible sólo para un bloqueo por proceso 4D:***                                                                                                       |
 |              | task_id        | number   | ID del Proceso                                                                                                                                              |
 |              | user_name      | texto    | Nombre de usuario de la sesión en la máquina                                                                                                                |
@@ -67,7 +67,7 @@ El objeto "__STATUS" devuelto tiene las siguientes propiedades:
 |              |                |          | ***Disponible sólo para un bloqueo por sesión REST:***                                                                                                      |
 |              | host           | texto    | URL que bloqueó la entidad (por ejemplo, "127.0.0.1:8043")                                                                                                  |
 |              | IPAddr         | texto    | Dirección IP del bloqueo (por ejemplo: "127.0.0.1")                                                                                                         |
-|              | recordNumber   | number   | Record number of the locked record                                                                                                                          |
+|              | recordNumber   | number   | Número del registro bloqueado                                                                                                                               |
 |              | userAgent      | texto    | userAgent of the locker (e.g. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 
 

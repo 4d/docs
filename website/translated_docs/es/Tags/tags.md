@@ -3,11 +3,11 @@ id: etiquetas
 title: Etiquetas de transformación
 ---
 
-4D provides a set of transformation tags which allow you to insert references to 4D variables or expressions, or to perform different types of processing within a source text, referred to as a "template". These tags are interpreted when the source text is executed and generate an output text.
+4D ofrece un conjunto de etiquetas de transformación que le permiten insertar referencias a las variables o a las expresiones 4D, o efectuar diferentes tipos de procesamiento en un texto fuente, llamado "plantilla". These tags are interpreted when the source text is executed and generate an output text.
 
 This principle is used in particular by the 4D Web server to build [web template pages](WebServer/templates.md).
 
-These tags are generally to be inserted as HTML type comments (`<!--#Tag Contents-->`) but an [xml-compliant alternative syntax](#alternative-syntax-for-4dtext-4dhtml-4deval) is available for some of them.
+Estas etiquetas deben insertarse generalmente como comentarios de tipo HTML (`<!--#Tag Contents-->`) pero [una sintaxis alternativa conforme a la norma xml](#alternative-syntax-for-4dtext-4dhtml-4deval) está disponible para algunas de ellas.
 
 Es posible mezclar varios tipos de etiquetas. Por ejemplo, la siguiente estructura HTML es totalmente factible:
 
@@ -48,7 +48,7 @@ Parsing the contents of a *template* source is done in two contexts:
 
 ### Tratamiento recursivo
 
-4D tags are interpreted recursively: 4D always attempts to reinterpret the result of a transformation and, if a new transformation has taken place, an additional interpretation is performed, and so on until the product obtained no longer requires any further transformation. Por ejemplo, dada la siguiente instrucción:
+Las etiquetas 4D se interpretan de manera recursiva: 4D siempre intenta reinterpretar el resultado de una transformación y, si se ha producido una nueva transformación, se realiza una interpretación adicional, y así sucesivamente hasta que el producto obtenido ya no requiera ninguna otra transformación. Por ejemplo, dada la siguiente instrucción:
 
 ```html
 <!--#4DHTML [Mail]Letter_type-->
@@ -679,7 +679,7 @@ In case of an evaluation error, the inserted text will appear as `<!--#4DTEXT my
 
 ## Sintaxis alternativa para 4DTEXT, 4DHTML, 4DEVAL
 
-Several existing 4D transformation tags can be expressed using a $-based syntax:
+Varias etiquetas de transformación 4D existentes pueden expresarse utilizando una sintaxis basada en el símbolo $:
 
 #### $4dtag (expression)
 puede utilizarse en lugar de

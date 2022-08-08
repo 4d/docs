@@ -64,11 +64,11 @@ Also, object instances from ORDA data model user classes benefit from their pare
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                                                                                     |
-| ------- | -------------------------------------------------------------------------------------------------- |
-| v19 R4  | Alias attributes in the Entity Class                                                               |
-| v19 R3  | Atributos calculados en la Entity Class                                                            |
-| v18 R5  | Data model class functions are not exposed to REST by default. New `exposed` and `local` keywords. |
+| Versión | Modificaciones                                                                                            |
+| ------- | --------------------------------------------------------------------------------------------------------- |
+| v19 R4  | Alias attributes in the Entity Class                                                                      |
+| v19 R3  | Atributos calculados en la Entity Class                                                                   |
+| v18 R5  | Data model class functions are not exposed to REST by default. Nuevas palabras clave `exposed` y `local`. |
 </details>
 
 
@@ -227,8 +227,8 @@ Each table exposed with ORDA offers an Entity class in the `cs` class store.
 
 Entity classes allow you to define **computed attributes** using specific keywords:
 
-- `Function get` *attributeName*
-- `Function set` *attributeName*
+- `Función get` *attributeName*
+- `Función set` *attributeName*
 - `Function query` *attributeName*
 - `Function orderBy` *attributeName*
 

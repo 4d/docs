@@ -67,18 +67,15 @@ Trois options d’emplacement sont proposées :
 
 #### Prise en charge de Mecab (version japonaise)
 
-Sur les systèmes japonais, 4D prend en charge la bibliothèque *Mecab*, avec un algorithme d'indexation pour les mots-clés particulièrement adaptés à la langue japonaise.
+En système japonais, 4D prend en charge la librairie *MeCab*, comportant un algorithme d’indexation des mots-clés particulièrement adapté à la langue japonaise.
 
-Cet algorithme est utilisé par défaut dans les versions japonaises de 4D. Les fichiers requis pour la bibliothèque *Mecab* sont installés dans le dossier **mecab** du dossier **Resources** pour les applications 4D (versions japonaises uniquement).
+Cet algorithme est utilisé par défaut dans les versions japonaises de 4D. Si vous le souhaitez, vous pouvez désactiver l’utilisation de l’algorithme *MeCab*et utiliser la librairie classique *ICU*.
 
-Si nécessaire, vous pouvez désactiver l'utilisation de l'algorithme *Mecab* et utiliser la bibliothèque conventionnelle *ICU* (International Components for Unicode).
-
-Pour désactiver *Mecab*, il suffit de cocher la case **N'utiliser que les caractères non alphanumériques pour les mots clés** :
+Pour désactiver *MeCab*, il vous suffit de cocher l’option **N’utiliser que les caractères non alphanumériques pour les mots-clés** :
 
 
 ![](assets/en/settings/non-alphanumeric-chars.png)
 
-> **Note :** Vous pouvez également désactiver l'utilisation de Mecab en supprimant ou en renommant le dossier Resources/mecab de votre application japonaise 4D.
 
 ## Page Mémoire
 
@@ -103,7 +100,7 @@ Utilisez les paramètres de cet onglet pour configurer la mémoire cache de la b
 
     La taille de mémoire cache que vous saisissez sera réservée pour la base 4D, quel que soit l’état des ressources de la machine. Ce paramétrage peut être utilisé dans certaines configurations spécifiques, ou lorsque la base est destinée à fonctionner sur des systèmes disparates en termes de mémoire. Dans la plupart des cas, le cache adaptatif est plus performant.
 
--   **Ecriture cache toutes les… minutes/secondes**: spécifie la fréquence de sauvegarde automatique du cache de données, c’est-à-dire son écriture sur le disque. 4D écrit les données placées dans le cache à intervalles fixes. Vous pouvez définir tout intervalle compris entre 1 seconde et 500 minutes. Par défaut, 4D stocke vos données toutes les 20 secondes. L’application écrit aussi vos données sur disque lorsque vous changez de mode ou quittez l’application. Vous pouve aussi appeler la commande [FLUSH CACHE](https://doc.4d.com/4dv19/help/command/en/page297.html) pour déclencher l'écriture du cache à tout moment.
+-   **Ecriture cache toutes les… Minutes/secondes** : spécifie la fréquence de sauvegarde automatique du cache de données, c’est-à-dire son écriture sur le disque. 4D écrit les données placées dans le cache à intervalles fixes. Vous pouvez définir tout intervalle compris entre 1 seconde et 500 minutes. Par défaut, 4D stocke vos données toutes les 20 secondes. L’application écrit aussi vos données sur disque lorsque vous changez de mode ou quittez l’application. Vous pouve aussi appeler la commande [FLUSH CACHE](https://doc.4d.com/4dv19/help/command/en/page297.html) pour déclencher l'écriture du cache à tout moment.
 
     Quand vous prévoyez de saisir beaucoup de données, il est souhaitable de fixer un intervalle court. En effet, en cas de coupure de courant, vous ne perdriez que les données saisies depuis la dernière écriture (si la base fonctionne sans fichier d’historique).
 

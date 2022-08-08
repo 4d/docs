@@ -142,10 +142,10 @@ Resultado:
 
 [VP Get active cell](#vp-get-active-cell)<br/>[VP Get selection](#vp-get-selection)<br/>[VP RESET SELECTION](#vp-reset-selection)<br/>[VP SET ACTIVE CELL](#vp-set-active-cell)<br/>[VP SET SELECTION](#vp-set-selection)<br/>[VP SHOW CELL](#vp-show-cell)
 
-### VP ADD SHEET 
+### VP ADD SHEET
 
 <!-- REF #_method_.VP ADD SHEET.Syntax -->**VP ADD SHEET** ( *vpAreaName* : Text )<br>**VP ADD SHEET** ( *vpAreaName* : Text ; *index* : Integer )<br>**VP ADD SHEET** ( *vpAreaName* : Text ; *index* : Integer ; *name* : Text )
-<!-- END REF --> 
+<!-- END REF -->
 
 <!-- REF #_method_.VP ADD SHEET.Params -->
 
@@ -153,12 +153,12 @@ Resultado:
 | ---------- | ------- | -- | --------------------------------- |
 | vpAreaName | Texto   | -> | 4D View Pro area form object name |
 | index      | Integer | -> | Index of the new sheet            |
-| name       | Texto   | -> | Sheet name                        |	
-<!-- END REF --> 
+| name       | Texto   | -> | Sheet name                        |
+<!-- END REF -->
 
 #### Descrição
 
-The `VP ADD SHEET` command<!-- REF #_method_.VP ADD SHEET. Summary -->inserts a sheet in the document loaded in *vpAreaName*.<!-- END REF --> 
+The `VP ADD SHEET` command<!-- REF #_method_.VP ADD SHEET. Summary -->inserts a sheet in the document loaded in *vpAreaName*.<!-- END REF -->
 
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
@@ -188,14 +188,14 @@ VP ADD SHEET("ViewProArea";2;"March")
 ### VP ADD SPAN
 
 <!-- REF #_method_.VP ADD SPAN.Syntax -->**VP ADD SPAN** ( *rangeObj* : Object )
-<!-- END REF --> 
+<!-- END REF -->
 
 <!-- REF #_method_.VP ADD SPAN.Params -->
 
 | Parameter | Type   |    | Descrição    |
 | --------- | ------ | -- | ------------ |
 | rangeObj  | Objeto | -> | Range object |
-<!-- END REF --> 
+<!-- END REF -->
 
 #### Descrição
 
@@ -234,7 +234,7 @@ To span the First quarter and Second quarter cells across the two cells beside t
 
 ### VP ADD STYLESHEET
 
-<!-- REF #_method_.VP ADD STYLESHEET.Syntax -->**VP ADD STYLESHEET** ( *vpAreaName* : Text ; *styleName* : Text ; *styleObj* : Object { ; *scope* : Integer } ) 
+<!-- REF #_method_.VP ADD STYLESHEET.Syntax -->**VP ADD STYLESHEET** ( *vpAreaName* : Text ; *styleName* : Text ; *styleObj* : Object { ; *scope* : Integer } )
 <!-- END REF -->  
 
 <!-- REF #_method_.VP ADD STYLESHEET.Params -->
@@ -530,6 +530,7 @@ Selecting the columns and running this code:
 
 ![](assets/en/ViewPro/cmd_vpColumnAutoFit2.PNG)
 
+
 #### Veja também
 
 [VP ROW AUTOFIT](#vp-row-autofit)
@@ -584,7 +585,7 @@ You want to combine cell, column, and row range objects in a new, distinct range
 | Parameter      | Type   |    | Descrição          |
 | -------------- | ------ | -- | ------------------ |
 | 4DViewDocument | Blob   | -> | 4D View document   |
-| Resultado      | Objeto | <- | 4D View Pro object |	
+| Resultado      | Objeto | <- | 4D View Pro object |
 
 
 <!-- END REF -->  
@@ -620,7 +621,7 @@ $vpObj:=VP Convert from 4D View($pvblob)
 | --------- | ------ | -- | ------------------------------------------------- |
 | vpObject  | Objeto | -> | 4D View Pro object containing the area to convert |
 | rangeObj  | Objeto | -> | Range object                                      |
-| Resultado | Objeto | <- | SVG picture of the area                           |	
+| Resultado | Objeto | <- | SVG picture of the area                           |
 
 
 <!-- END REF -->  
@@ -728,6 +729,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 ```
 
 #### Veja também
+
 
 [VP PASTE FROM OBJECT](#vp-paste-from-object)<br/>[VP MOVE CELLS](#vp-move-cells)<br/>[VP Get workbook options](#vp-get-workbook-options)<br/>[VP SET WORKBOOK OPTIONS](#vp-set-workbook-options)
 
@@ -846,17 +848,18 @@ If the extension is not included, but the format is specified in *paramObj*, the
 The optional *paramObj* parameter allows you to define multiple properties for the exported 4D View Pro object, as well as launch a callback method when the export has completed.
 
 
-| Propriedade        | Type     | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| ------------------ | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| format             | texto    | (optional) When present, designates the exported file format: ".4vp" (default), ".csv", ".xlsx", or ".pdf". You can use the following constants:<li>`vk 4D View Pro format`</li><li>`vk csv format`</li><li>`vk MS Excel format`</li><li>`vk pdf format`</li>4D adds the appropriate extension to the file name if needed. If the format specified doesn't correspond with the extension in *filePath*, it will be added to the end of *filePath*. If a format is not specified and no extension is provided in *filePath*, the default file format is used. |
-| senha              | texto    | Microsoft Excel only (optional) - Password used to protect the MS Excel document                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| formula            | object   | Callback method to be launched when the export has completed. Using a callback method is necessary when the export is asynchronous (which is the case for PDF and Excel formats) if you need some code to be executed after the export. The callback method must be used with the [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html) command (see below for more information).                                                                                                                                                      |
-| valuesOnly         | booleano | Specifies that only the values from formulas (if any) will be exported.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-| includeFormatInfo  | booleano | True to include formatting information, false otherwise (default is true). Formatting information is useful in some cases, e.g. for export to SVG. On the other hand, setting this property to **false** allows reducing export time.                                                                                                                                                                                                                                                                                                                |
-| sheetIndex         | number   | PDF only (optional) - Index of sheet to export (starting from 0). -2=all visible sheets (**default**), -1=current sheet only                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| pdfOptions         | object   | PDF only (optional) - Options for pdf export <p><table><tr><th>Propriedade</th><th>Type</yh><th>Descrição</th></tr><tr><td>creator</td><td>texto</td><td>name of the application that created the original document from which it was converted.</td></tr><tr><td>title</td><td>texto</td><td>title of the document.</td></tr><tr><td>autor</td><td>texto</td><td>name of the person who created that document.</td></tr><tr><td>keywords</td><td>texto</td><td>keywords associated with the document.</td></tr><tr><td>subject</td><td>texto</td><td>subject of the document.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| csvOptions         | object   | CSV only (optional) - Options for csv export <p><table><tr><th>Propriedade</th><th>Type</th><th>Descrição</th></tr><tr><td>range</td><td>object</td><td>Range object of cells</td></tr><tr><td>rowDelimiter</td><td>texto</td><td>Row delimiter. Default: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>texto</td><td>Column delimiter. Default: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| \<customProperty> | any      | Any custom property that will be available through the $3 parameter in the callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| Propriedade          | Type     | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| -------------------- | -------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| format               | texto    | (optional) When present, designates the exported file format: ".4vp" (default), ".csv", ".xlsx", or ".pdf". You can use the following constants:<li>`vk 4D View Pro format`</li><li>`vk csv format`</li><li>`vk MS Excel format`</li><li>`vk pdf format`</li>4D adds the appropriate extension to the file name if needed. If the format specified doesn't correspond with the extension in *filePath*, it will be added to the end of *filePath*. If a format is not specified and no extension is provided in *filePath*, the default file format is used. |
+| senha                | texto    | Microsoft Excel only (optional) - Password used to protect the MS Excel document                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| formula              | object   | Callback method to be launched when the export has completed. Using a callback method is necessary when the export is asynchronous (which is the case for PDF and Excel formats) if you need some code to be executed after the export. The callback method must be used with the [`Formula`](https://doc.4d.com/4dv19/help/command/en/page1597.html) command (see below for more information).                                                                                                                                                      |
+| valuesOnly           | booleano | Specifies that only the values from formulas (if any) will be exported.                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| includeFormatInfo    | booleano | True to include formatting information, false otherwise (default is true). Formatting information is useful in some cases, e.g. for export to SVG. On the other hand, setting this property to **false** allows reducing export time.                                                                                                                                                                                                                                                                                                                |
+| includeBindingSource | Booleano | 4DVP únicamente. True (default) to export the current data context values as cell values in the exported document (data contexts themselves are not exported). False otherwise. Cell binding is always exported. For data context and cell binding management, see [VP SET DATA CONTEXT](#vp-set-data-context) and [VP SET BINDING PATH](#vp-set-binding-path).                                                                                                                                                                                      |
+| sheetIndex           | number   | PDF only (optional) - Index of sheet to export (starting from 0). -2=all visible sheets (**default**), -1=current sheet only                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| pdfOptions           | object   | PDF only (optional) - Options for pdf export <p><table><tr><th>Propriedade</th><th>Type</yh><th>Descrição</th></tr><tr><td>creator</td><td>texto</td><td>name of the application that created the original document from which it was converted.</td></tr><tr><td>title</td><td>texto</td><td>title of the document.</td></tr><tr><td>autor</td><td>texto</td><td>name of the person who created that document.</td></tr><tr><td>keywords</td><td>texto</td><td>keywords associated with the document.</td></tr><tr><td>subject</td><td>texto</td><td>subject of the document.</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| csvOptions           | object   | CSV only (optional) - Options for csv export <p><table><tr><th>Propriedade</th><th>Type</th><th>Descrição</th></tr><tr><td>range</td><td>object</td><td>Range object of cells</td></tr><tr><td>rowDelimiter</td><td>texto</td><td>Row delimiter. Default: "\r\n"</td></tr><tr><td>columnDelimiter</td><td>texto</td><td>Column delimiter. Default: ","</td></tr></table></p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| \<customProperty>   | any      | Any custom property that will be available through the $3 parameter in the callback method.                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
 **Notes about Excel format**:
 
@@ -953,7 +956,7 @@ You want to export the current sheet to a `.txt` file with pipe-separated values
 
 ![example-export-csv](assets/en/ViewPro/vp-export-document-csv.png)
 
-```4d 
+```4d
 var $params : Object
 $params:=New object
 $params.range:=VP Cells("ViewProArea";0;0;2;5)
@@ -971,14 +974,14 @@ Here's the result:
 
 ### VP Export to object
 
-<!-- REF #_method_.VP Export to object.Syntax -->**VP Export to object** ( *vpAreaName* : Text {; *option* : Object} ) : Object<!-- END REF -->  
+<!-- REF #_method_.VP Export to object.Syntax -->**VP Export to object** ( *vpAreaName* : Text {; *options* : Object} ) : Object<!-- END REF -->  
 
 <!-- REF #_method_.VP Export to object.Params -->
 
 | Parameter  | Type   |    | Descrição                         |
 | ---------- | ------ | -- | --------------------------------- |
 | vpAreaName | Texto  | -> | 4D View Pro area form object name |
-| option     | Objeto | -> | Export option                     |
+| options    | Objeto | -> | Export options                    |
 | Resultado  | Objeto | <- | 4D View Pro object                |
 <!-- END REF -->  
 
@@ -988,12 +991,13 @@ The `VP Export to object` command<!-- REF #_method_.VP Export to object. Summary
 
 In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
-In the *option* parameter, you can pass the following export option, if required:
+In the *options* parameter, you can pass the following export options, if required:
 
 
-| Propriedade       | Type     | Descrição                                                                                                                                                                                                                                 |
-| ----------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| includeFormatInfo | booleano | True to include formatting information, false otherwise (default is **true**). Formatting information is useful in some cases, e.g. for export to SVG. On the other hand, setting this property to **false** allows reducing export time. |
+| Propriedade          | Type     | Descrição                                                                                                                                                                                                                 |
+| -------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| includeFormatInfo    | Booleano | True (default) to include formatting information, false otherwise. Formatting information is useful in some cases, e.g. for export to SVG. On the other hand, setting this property to False allows reducing export time. |
+| includeBindingSource | Booleano | True (default) to export the current data context values as cell values in the exported object (data contexts themselves are not exported). False otherwise. Cell binding is always exported.                             |
 
 For more information on 4D View Pro objects, please refer to the [4D View Pro object](configuring.md#4d-view-pro-object) paragraph.
 
@@ -1099,7 +1103,8 @@ $condition.flags:=vk find flag exact match
   // Replace the cells containing only 'Total' in the current sheet with "Grand Total"
 $result:=VP Find($range;"Total";$condition;"Grand Total")
 
-  // Check for empty range object If($result.ranges.length=0)
+  // Check for empty range object
+If($result.ranges.length=0)
     ALERT("No result found")
 Else
     ALERT($result.ranges.length+" results found")
@@ -1226,7 +1231,7 @@ The following code will retrieve the coordinates of the active cell:
 ```4d
 $activeCell:=VP Get active cell("myVPArea")
 
-  //returns a range object containing: 
+  //returns a range object containing:
   //$activeCell.ranges[0].column=3
   //$activeCell.ranges[0].row=4
   //$activeCell.ranges[0].sheet=0
@@ -1236,6 +1241,51 @@ $activeCell:=VP Get active cell("myVPArea")
 
 [VP ADD SELECTION](#vp-add-selection)<br/>[VP Get selection](#vp-get-selection)<br/>[VP RESET SELECTION](#vp-reset-selection)<br/>[VP SET ACTIVE CELL](#vp-set-active-cell)<br/>[VP SET SELECTION](#vp-set-selection)<br/>[VP SHOW CELL](#vp-show-cell)
 
+
+### VP Get binding path
+
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R5 | Adicionado |
+</details>
+
+<!-- REF #_method_.VP Get binding path.Syntax -->**VP Get binding path** ( *rangeObj* : Object ) : Text<!-- END REF -->  
+
+<!-- REF #_method_.VP Get binding path.Params -->
+
+| Parameter | Type   |    | Descrição                               |
+| --------- | ------ | -- | --------------------------------------- |
+| rangeObj  | Objeto | -> | Range object                            |
+| Resultado | Texto  | <- | Name of the attribute bound to the cell |
+
+<!-- END REF -->  
+
+#### Descrição
+
+The `VP Get binding path` command<!-- REF #_method_.VP Get binding path. Summary -->returns the name of the attribute bound to the cell specified in *rangeObj*<!-- END REF -->.
+
+In *rangeObj*, pass an object that is either a cell range or a combined range of cells. Note that:
+* If *rangeObj* is a range with several cells, the command returns the attribute name linked to the first cell in the range.
+* If *rangeObj* contains several ranges of cells, the command returns the attribute name linked to the first cell of the first range.
+
+#### Exemplo
+
+```4d
+var $p; $options : Object
+var $myAttribute : Text
+
+$p:=New object
+$p.firstName:="Freehafer"
+$p.lastName:="Nancy" VP SET DATA CONTEXT("ViewProArea"; $p) VP SET BINDING PATH(VP Cell("ViewProArea"; 0; 0); "firstName")
+VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
+
+$myAttribute:=VP Get binding path(VP Cell("ViewProArea"; 1; 0)) // "lastName"
+```
+
+#### Veja também
+
+[VP SET BINDING PATH](#vp-set-binding-path)<br/>[VP Get data context](#vp-get-data-context)<br/>[VP SET DATA CONTEXT](#vp-get-data-context)
 
 
 ### VP Get cell style
@@ -1374,7 +1424,7 @@ $colCount:=VP Get column count("ViewProarea")
 ### VP Get current sheet
 
 <!-- REF #_method_.VP Get current sheet.Syntax -->**VP Get current sheet** ( *vpAreaName* : Text )
-<!-- END REF --> 
+<!-- END REF -->
 
 <!-- REF #_method_.VP Get current sheet.Params -->
 
@@ -1382,12 +1432,12 @@ $colCount:=VP Get column count("ViewProarea")
 | --------------- | ------- | -- | --------------------------------- |
 | vpAreaName      | Texto   | -> | 4D View Pro area form object name |
 | Function result | Integer | <- | Index of the current sheet        |
-<!-- END REF --> 
+<!-- END REF -->
 
 #### Descrição
 
 The `VP Get current sheet` command<!-- REF #_method_.VP Get current sheet. Summary -->returns the index of the current sheet in *vpAreaName*. The current sheet is the selected sheet in the document.
-<!-- END REF --> 
+<!-- END REF -->
 
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
@@ -1408,6 +1458,51 @@ $index:=VP Get current sheet("ViewProArea")
 #### Veja também
 
 [VP SET CURRENT SHEET](#vp-set-current-sheet)
+
+### VP Get data context
+
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R5 | Adicionado |
+</details>
+
+<!-- REF #_method_.VP Get data context.Syntax -->**VP Get data context** ( *vpAreaName* : Text {; *sheetIndex* : Integer } ) : Object<br/>**VP Get data context** ( *vpAreaName* : Text {; *sheetIndex* : Integer } ) : Collection<!-- END REF -->
+
+
+<!-- REF #_method_.VP Get data context.Params -->
+
+| Parameter  | Type                     |    | Descrição                                       |
+| ---------- | ------------------------ | -- | ----------------------------------------------- |
+| vpAreaName | Objeto                   | -> | 4D View Pro area form object name               |
+| sheetIndex | Integer                  | -> | Index of the sheet to get the data context from |
+| Resultado  | Object &#124; Collection | <- | Data context                                    |
+
+<!-- END REF -->  
+
+#### Descrição
+
+The `VP SET DATA CONTEXT` command<!-- REF #_method_.VP SET DATA CONTEXT. Summary -->sets the data context of a sheet<!-- END REF -->. A data context is an object or a collection bound to a worksheet, and whose contents can be used to automatically fill the sheet cells, either by using an autogenerate option or the [VP SET BINDING PATH](#vp-set-binding-path) method. The returned context includes any modifications made to the contents of the data context.
+
+In *sheetIndex*, pass the index of the sheet to get the data context from. If no index is passed, the command returns the data context of the current worksheet. If there is no context for the worksheet, the command returns `Null`.
+
+The function returns an object or a collection depending on the type of data context set with [VP SET DATA CONTEXT](#vp-set-data-context).
+
+#### Exemplo
+
+To get the data context bound to the following cells:
+
+![](assets/en/ViewPro/vp-set-data-context-bind.png)
+
+```4d
+var $dataContext : Object
+
+$dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastName:Nancy}
+```
+
+#### Veja também
+
+[VP SET DATA CONTEXT](#vp-set-data-context)<br/>[VP Get binding path](#vp-get-binding-path)<br/>[VP SET BINDING PATH](#vp-set-binding-path)
 
 ### VP Get default style
 
@@ -1893,7 +1988,7 @@ $currentSelection:=VP Get selection("myVPArea")
 ### VP Get sheet count
 
 <!-- REF #_method_.VP Get sheet count.Syntax -->**VP Get sheet count** ( *vpAreaName* : Text ) : Integer
-<!-- END REF --> 
+<!-- END REF -->
 
 <!-- REF #_method_.VP Get sheet count.Params -->
 
@@ -1901,12 +1996,12 @@ $currentSelection:=VP Get selection("myVPArea")
 | --------------- | ------- | -- | --------------------------------- |
 | vpAreaName      | Texto   | -> | 4D View Pro area form object name |
 | Function result | Integer | <- | Number of sheets                  |
-<!-- END REF --> 
+<!-- END REF -->
 
 #### Descrição
 
 The `VP Get sheet count` command<!-- REF #_method_.VP Get sheet count. Summary -->returns the number of sheets in the document loaded in *vpAreaName*.
-<!-- END REF --> 
+<!-- END REF -->
 
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
@@ -1933,7 +2028,7 @@ Get the sheet count and set the current sheet to the last sheet:
 ### VP Get sheet index
 
 <!-- REF #_method_.VP Get sheet index.Syntax -->**VP Get sheet index** ( *vpAreaName* : Text ; *name* : Text ) : Integer
-<!-- END REF --> 
+<!-- END REF -->
 
 <!-- REF #_method_.VP Get sheet index.Params -->
 
@@ -1942,12 +2037,12 @@ Get the sheet count and set the current sheet to the last sheet:
 | vpAreaName      | Texto   | -> | 4D View Pro area form object name |
 | name            | Texto   | -> | Sheet name                        |
 | Function result | Integer | <- | Sheet index                       |
-<!-- END REF --> 
+<!-- END REF -->
 
 #### Descrição
 
 The `VP Get sheet index` command<!-- REF #_method_.VP Get sheet index. Summary -->returns the index of a sheet based on its name in *vpAreaName*.
-<!-- END REF --> 
+<!-- END REF -->
 
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
@@ -1973,7 +2068,7 @@ $index:=VP Get sheet index("ViewProArea";"Total first quarter") //returns 2
 ### VP Get sheet name
 
 <!-- REF #_method_.VP Get sheet name.Syntax -->**VP Get sheet name** ( *vpAreaName* : Text ; *sheet* : Integer ) : Text
-<!-- END REF --> 
+<!-- END REF -->
 
 
 <!-- REF #_method_.VP Get sheet name.Params -->
@@ -1983,12 +2078,12 @@ $index:=VP Get sheet index("ViewProArea";"Total first quarter") //returns 2
 | vpAreaName      | Texto   | -> | 4D View Pro area form object name |
 | sheet           | Integer | -> | Sheet index                       |
 | Function result | Texto   | <- | Sheet name                        |
-<!-- END REF --> 
+<!-- END REF -->
 
 #### Descrição
 
 The `VP Get sheet name` command<!-- REF #_method_.VP Get sheet name. Summary -->returns the name of a sheet based on its index in *vpAreaName*.
-<!-- END REF --> 
+<!-- END REF -->
 
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
@@ -2052,7 +2147,7 @@ If($options.colHeaderVisible) //column headers are visible
 ### VP Get show print lines
 
 <!-- REF #_method_.VP Get show print lines.Syntax -->**VP Get show print lines** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Boolean
-<!-- END REF --> 
+<!-- END REF -->
 
 <!-- REF #_method_.VP Get show print lines.Params -->
 
@@ -2061,12 +2156,12 @@ If($options.colHeaderVisible) //column headers are visible
 | vpAreaName      | Texto    | -> | 4D View Pro area form object name                |
 | sheet           | Integer  | <- | Sheet index                                      |
 | Function result | Booleano | <- | True if print lines are visible, False otherwise |
-<!-- END REF --> 
+<!-- END REF -->
 
 #### Descrição
 
 The `VP Get show print lines` command<!-- REF #_method_.VP Get show print lines. Summary -->returns `True` if the print preview lines are visible and `False` if they are hidden.
-<!-- END REF --> 
+<!-- END REF -->
 
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
@@ -2113,7 +2208,7 @@ You want to center the text for the spanned cells in this document:
 ![](assets/en/ViewPro/cmd_vpGetSpans.PNG)
 
 ```4d
-// Search for all cell spans 
+// Search for all cell spans
 $range:=VP Get spans(VP All("ViewProArea"))
 
 //center text
@@ -2192,7 +2287,7 @@ borderTop:{color:green,style:10}
 
 #### Descrição
 
-The `VP Get stylesheets` command<!-- REF #_method_.VP Get stylesheets. Summary -->returns the collection of defined style sheet objects from the designated *scope*<!-- END REF -->.
+The `VP Get stylesheets` command <!-- REF #_method_.VP Get stylesheets.Summary -->returns the collection of defined style sheet objects from the designated *scope*<!-- END REF -->.
 
 In *vpAreaName*, pass the name property of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
 
@@ -2215,10 +2310,10 @@ In this case, the current sheet uses two style objects:
 [
    {
      backColor:green,
-     borderLeft:{color:green,style:10}, 
-     borderTop:{color:green,style:10}, 
-     borderRight:{color:green,style:10}, 
-     borderBottom:{color:green,style:10}, 
+     borderLeft:{color:green,style:10},
+     borderTop:{color:green,style:10},
+     borderRight:{color:green,style:10},
+     borderBottom:{color:green,style:10},
      name:GreenDashDotStyle
    },
    {
@@ -2364,7 +2459,7 @@ var $workbookOptions : Object
 $workbookOptions:=VP Get workbook options("ViewProArea")
 ```
 
-#### Ver Também
+#### Veja também
 
 [VP SET WORKBOOK OPTIONS](#vp-set-workbook-options)
 
@@ -2847,7 +2942,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet to p
 *   `vk workbook`
 
 
-> * 4D View Pro areas can only be printed with the `VP PRINT` command. 
+> * 4D View Pro areas can only be printed with the `VP PRINT` command.
 > * Commands from the 4D **Printing** language theme are not supported by `VP PRINT`.
 > * This command is intended for individual printing by the final end user. For automated print jobs, it is advised to export the 4D View Pro area as a PDF with the [VP EXPORT DOCUMENT](#vp-export-document) method.
 
@@ -2906,7 +3001,7 @@ VP RECOMPUTE FORMULAS("ViewProArea")
 
 ### VP REMOVE NAME
 
-<!-- REF #_method_.VP REMOVE NAME.Syntax -->**VP REMOVE NAME** ( *vpAreaName* : Text  ; *name*  : Text { ; *scope* : Integer } ) 
+<!-- REF #_method_.VP REMOVE NAME.Syntax -->**VP REMOVE NAME** ( *vpAreaName* : Text  ; *name*  : Text { ; *scope* : Integer } )
 <!-- END REF -->  
 
 <!-- REF #_method_.VP REMOVE NAME.Params -->
@@ -2982,7 +3077,7 @@ The document currently has three sheets:
 
 Remove the third sheet:
 
-```4d 
+```4d
 VP REMOVE SHEET("ViewProArea";2)
 ```
 
@@ -3276,10 +3371,12 @@ You want to create an offscreen 4D View Pro area and get the value of a cell:
 
 
 ```4d
-// cs. OffscreenArea class declaration Class constructor ($path : Text)
+// cs.OffscreenArea class declaration
+Class constructor ($path : Text)
     This.filePath:=$path
 
-// This function will be called on each event of the offscreen area Function onEvent()
+// This function will be called on each event of the offscreen area
+Function onEvent()
     Case of
         :(FORM Event.code=On VP Ready)
             VP IMPORT DOCUMENT(This.area;This.filePath)
@@ -3304,10 +3401,13 @@ You want to load a large document offscreen, wait for all calculations to comple
 
 
 ```4d
-//cs. OffscreenArea class declaration Class constructor($pdfPath : Text)
+//cs.OffscreenArea class declaration
+Class constructor($pdfPath : Text)
     This.pdfPath:=$pdfPath
     This.autoQuit:=False
-    This.isWaiting:=False Function onEvent()
+    This.isWaiting:=False
+
+Function onEvent()
     Case of
         :(FORM Event.code=On VP Ready)
     // Document import
@@ -3336,7 +3436,7 @@ You want to load a large document offscreen, wait for all calculations to comple
             VP EXPORT DOCUMENT(This.area;This.pdfPath;New object("formula";Formula(ACCEPT)))
 
         :(FORM Event.code=On URL Loading Error)
-            CANCEL 
+            CANCEL
     End case
 ```
 
@@ -3462,6 +3562,56 @@ After this code is executed, the defined functions can be used in 4D View Pro fo
 
 [4D functions](formulas.md#4d-functions)<br/>[VP SET CUSTOM FUNCTIONS](#vp-set-custom-functions)
 
+### VP SET BINDING PATH
+
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R5 | Adicionado |
+</details>
+
+<!-- REF #_method_.VP SET BINDING PATH.Syntax -->**VP SET BINDING PATH** ( *rangeObj* : Object  ; *dataContextAttribute*  : Text) <!-- END REF -->  
+
+<!-- REF #_method_.VP SET BINDING PATH.Params -->
+
+| Parameter            | Type   |    | Descrição                                   |
+| -------------------- | ------ | -- | ------------------------------------------- |
+| rangeObj             | Objeto | -> | Range object                                |
+| dataContextAttribute | Texto  | -> | Name of the attribute to bind to *rangeObj* |
+
+<!-- END REF -->  
+
+#### Descrição
+
+The `VP SET BINDING PATH` command<!-- REF #_method_.VP SET BINDING PATH. Summary -->binds an attribute from a sheet's data context to *rangeObj*<!-- END REF -->. After you set a data context using the [SET DATA CONTEXT](#vp-set-data-context) method. When loaded, if the data context contains the attribute, the value of *dataContextAttribute* is automatically displayed in the cells in *rangeObj*.
+
+In *rangeObj*, pass an object that is either a cell range or a combined range of cells.
+* If *rangeObj* is a range with several cells, the command binds the attribute to the first cell of the range.
+* If *rangeObj* contains several ranges of cells, the command binds the attribute to the first cell of each range.
+
+In *dataContextAttribute*, pass the name of the attribute to bind to *cellRange*. If *dataContextAttribute* is an empty string, the function removes the current binding.
+
+> Attributes of type collection are not supported. When you pass the name of a collection attribute, the command does nothing.
+
+#### Exemplo
+
+Set a data context and bind the `firstName` and `lastName` attribute to cells:
+
+```4d
+var $p : Object
+
+$p:=New object
+$p.firstName:="Freehafer"
+$p.lastName:="Nancy" VP SET DATA CONTEXT("ViewProArea"; $p) VP SET BINDING PATH(VP Cell("ViewProArea"; 0; 0); "firstName")
+VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
+```
+
+![](assets/en/ViewPro/vp-set-data-context-bind.png)
+
+#### Veja também
+
+[VP Get binding path](#vp-get-binding-path)<br/>[VP Get data context](#vp-get-data-context)<br/>[VP SET DATA CONTEXT](#vp-get-data-context)
+
 ### VP SET BOOLEAN VALUE
 
 <!-- REF #_method_.VP SET BOOLEAN VALUE.Syntax -->**VP SET BOOLEAN VALUE** ( *rangeObj* : Object  ; *boolValue* : Boolean) <!-- END REF -->  
@@ -3575,6 +3725,7 @@ VP SET CELL STYLE(VP Cells("ViewProArea";4;4;3;3);$cellStyle)
 #### Veja também
 
 [VP SET CELL STYLE](#vp-set-cell-style)
+
 
 ### VP SET CELL STYLE
 
@@ -3719,7 +3870,7 @@ VP SET COLUMN COUNT("ViewProArea";5)
 ### VP SET CURRENT SHEET
 
 <!-- REF #_method_.VP SET CURRENT SHEET.Syntax -->**VP SET CURRENT SHEET** ( *vpAreaName* : Text ; *index* : Integer)
-<!-- END REF --> 
+<!-- END REF -->
 
 <!-- REF #_method_.VP SET CURRENT SHEET.Params -->
 
@@ -3727,7 +3878,7 @@ VP SET COLUMN COUNT("ViewProArea";5)
 | ---------- | ------- | -- | --------------------------------- |
 | vpAreaName | Texto   | -> | 4D View Pro area form object name |
 | index      | Integer | <- | Index of the new current sheet    |
-<!-- END REF --> 
+<!-- END REF -->
 
 #### Descrição
 
@@ -3835,6 +3986,136 @@ Case of
 #### Veja também
 
 [VP SET ALLOWED METHODS](#vp-set-allowed-methods)
+
+### VP SET DATA CONTEXT
+
+<details><summary>Histórico</summary>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R5 | Adicionado |
+</details>
+
+<!-- REF #_method_.VP SET DATA CONTEXT.Syntax -->**VP SET DATA CONTEXT** ( *vpAreaName* : Text ; *dataObj* : Object {; *options* : Object {; *sheetIndex* : Integer}} )<br/>**VP SET DATA CONTEXT** ( *vpAreaName* : Text ; *dataColl* : Collection ; {*options* : Object {; *sheetIndex* : Integer}} )<!-- END REF -->
+
+
+<!-- REF #_method_.VP SET DATA CONTEXT.Params -->
+
+| Parameter  | Type    |    | Descrição                                   |
+| ---------- | ------- | -- | ------------------------------------------- |
+| vpAreaName | Objeto  | -> | 4D View Pro area form object name           |
+| dataObj    | Objeto  | -> | Data object to load in the data context     |
+| dataColl   | Objeto  | -> | Data collection to load in the data context |
+| options    | Objeto  | -> | Additional options                          |
+| sheetIndex | Integer | -> | Sheet index                                 |
+
+<!-- END REF -->
+
+#### Descrição
+
+The `VP SET DATA CONTEXT` command<!-- REF #_method_.VP SET DATA CONTEXT. Summary -->sets the data context of a sheet<!-- END REF -->. A data context is an object or a collection bound to a worksheet, and whose contents can be used to automatically fill the sheet cells, either by using an autogenerate option or the [VP SET BINDING PATH](#vp-set-binding-path) method. On the other hand, the [VP Get data context](#vp-get-data-context) command can return a context containing user modifications.
+
+In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that does not exist, an error is returned.
+
+In *dataObj* or *dataColl*, pass an object or a collection containing the data to load in the data context. Images are converted to data URI schemes.
+
+To pass a time value in *dataObj* or *dataColl*, encapsulate it in an object with the following properties (see [example 4](#example-4---date-and-time-syntax)):
+
+| Propriedade | Type                                     | Descrição                                     |
+| ----------- | ---------------------------------------- | --------------------------------------------- |
+| value       | Integer, Real, Boolean, Text, Date, Null | Value to put in the context                   |
+| time        | Real                                     | Time value (in seconds) to put in the context |
+
+In *options*, you can pass an object that specifies additional options. Possible properties are:
+
+| Propriedade         | Type   | Descrição                                                                                                                                                                                                      |
+| ------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| reset               | Objeto | True to reset the sheet's contents before loading the new context, False (default) otherwise.                                                                                                                  |
+| autoGenerateColumns | Objeto | Only used when data is a collection. True (default) to specify that columns must be generated automatically when the data context is bound. In this case, the following rules apply: <ul><li>If *dataColl* is a collection of objects, attribute names are used as column titles (see example 2).</li><li>If *dataColl* contains subcollections of scalar values, each subcollection defines the values in a row (see example 3). The first subcollection determines how many columns are created.</li></ul> |
+
+In *sheetIndex*, pass the index of the sheet that will receive the data context. If no index is passed, the context is applied to the current sheet.
+
+If you export your document to an object using [VP Export to object](#vp-export-to-object), or to a 4DVP document using [VP EXPORT DOCUMENT](#vp-export-document), the `includeBindingSource` option lets you copy the contents of the current contexts as cell values in the exported object or document. For more details, refer to the description of those methods.
+
+#### Exemplo
+
+Pass an object and bind the context data to cells in the first row:
+
+```4d
+var $data : Object
+
+$data:=New object
+$data.firstName:="Freehafer"
+$data.lastName:="Nancy" VP SET DATA CONTEXT("ViewProArea"; $data) VP SET BINDING PATH(VP Cell("ViewProArea"; 0; 0); "firstName")
+VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
+```
+
+![](assets/en/ViewPro/vp-set-data-context-bind.png)
+
+
+#### Exemplo 2
+
+Pass a collection of objects and generate columns automatically:
+
+```4d
+var $options : Object
+var $data : Collection
+
+$data:=New collection()
+$data.push(New object("firstname"; "John"; "lastname"; "Smith"))
+$data.push(New object("firstname"; "Mary"; "lastname"; "Poppins"))
+
+$options:=New object("autoGenerateColumns"; True) VP SET DATA CONTEXT("ViewProArea"; $data; $options)
+```
+![](assets/en/ViewPro/vp-set-data-context-2.png)
+
+#### Exemplo 3
+
+The *data* passed as a parameter is a collection that contains subcollections. Each subcollection defines the contents of a row:
+
+```4d
+var $data : Collection
+var $options : Object
+
+$data:=New collection
+$data.push(New collection(1; 2; 3; False; ""))  // 5 columns are created
+$data.push(New collection)  // Second row is empty
+$data.push(New collection(4; 5; Null; "hello"; "world"))  // Third row has 5 values
+$data.push(New collection(6; 7; 8; 9))  // Fourth row has 4 values
+
+$options:=New object("autoGenerateColumns"; True) VP SET DATA CONTEXT("ViewProArea"; $data; $options)
+```
+
+![](assets/en/ViewPro/vp-set-data-context-3.png)
+
+#### Example 4 - Date and time syntax
+
+```4d
+var $data : Collection
+var $options : Object
+
+$data:= New collection()
+
+// Dates can be passed as scalar values
+$data.push(New collection("Date"; Current date))
+
+// Time values must be passed as object attributes
+$data.push(New collection("Time"; New object("time"; 5140)))
+
+// Date + time example
+$data.push(New collection("Date + Time"; New object("value"; Current date; "time"; 5140)))
+
+$options:=New object("autoGenerateColumns"; True)
+
+VP SET DATA CONTEXT("ViewProArea"; $data; $options)
+```
+
+Here's the result once the columns are generated:
+
+![](assets/en/ViewPro/vp-set-data-context-date-time.png)
+
+#### Veja também
+
+[VP SET BINDING PATH](#vp-set-binding-path)<br/>[VP Get binding path](#vp-get-binding-path)<br/>[VP Get data context](#vp-get-data-context)
 
 ### VP SET DATE TIME VALUE
 
@@ -4020,7 +4301,9 @@ The `VP SET FORMULA` command<!-- REF #_method_.VP SET FORMULA. Summary -->assign
 
 In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify. In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify.
 
-The *formula* parameter specifies a formula or 4D method name to be assigned to the *rangeObj*. If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](#vp-set-allowed-method) command.
+The *formula* parameter specifies a formula or 4D method name to be assigned to the *rangeObj*.
+
+> If the *formula* is a string, use the period `.` as numerical separator and the comma `,` as parameter separator. If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](#vp-set-allowed-method) command.
 
 The optional *formatPattern* defines a [pattern](configuring.md#cell-format) for the *formula*.
 
@@ -4038,6 +4321,12 @@ To remove the formula:
 
 ```4d
 VP SET FORMULA(VP Cell("ViewProArea";5;2);"")
+```
+
+#### Exemplo 3
+
+```4d
+VP SET FORMULA($range;"SUM(A1,B7,C11)") //"," to separate parameters
 ```
 
 #### Veja também
@@ -4065,8 +4354,10 @@ In *rangeObj*, pass a range of the cell (created with [VP Cell](#vp-cell)) whose
 
 The *formulasCol* is a two-dimensional collection:
 
-*   The first-level collection contains subcollections of formulas. Each subcollection defines a row.
-*   Each subcollection defines cell values for the row. Values must be text elements containing the formulas to assign to the cells. >If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](#vp-set-allowed-methods) command.
+* The first-level collection contains subcollections of formulas. Each subcollection defines a row.
+* Each subcollection defines cell values for the row. Values must be text elements containing the formulas to assign to the cells.
+
+> If the formula is a string, use the period `.` as numerical separator and the comma `,` as parameter separator. If a 4D method is used, it must be allowed with the [`VP SET ALLOWED METHODS`](#vp-set-allowed-method) command.
 
 You remove the formulas in *rangeObj* by replacing them with an empty string ("").
 
@@ -4427,7 +4718,7 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 ### VP SET SHEET NAME
 
-<!-- REF #_method_.VP SET SHEET NAME.Syntax -->**VP SET SHEET NAME** ( *vpAreaName* : Text ; *name* : Text {; index: Integer} ) 
+<!-- REF #_method_.VP SET SHEET NAME.Syntax -->**VP SET SHEET NAME** ( *vpAreaName* : Text ; *name* : Text {; index: Integer} )
 <!-- END REF -->  
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
@@ -4587,7 +4878,7 @@ Resultado:
 
 ### VP SET SHOW PRINT LINES
 
-<!-- REF #_method_.VP SET SHOW PRINT LINES.Syntax -->**VP SET SHOW PRINT LINES** ( *vpAreaName* : Text {; visible : Boolean}{; index : Integer} ) 
+<!-- REF #_method_.VP SET SHOW PRINT LINES.Syntax -->**VP SET SHOW PRINT LINES** ( *vpAreaName* : Text {; visible : Boolean}{; index : Integer} )
 <!-- END REF -->  
 
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Params -->
@@ -4799,7 +5090,7 @@ $param.push(New collection(Null;New object("value";Current date;"time";42))) //f
 
 [VP Get formulas](configuring.md#vp-get-formulas)<br/>[VP Get value](#vp-get-value)<br/>[VP Get Values](#vp-get-values)<br/>[VP SET FORMULAS](#vp-set-formulas)<br/>[VP SET VALUE](#vp-set-value)
 
-### VP SET WORKBOOK OPTIONS 
+### VP SET WORKBOOK OPTIONS
 
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Syntax -->**VP SET WORKBOOK OPTIONS** ( *vpAreaName* : Text ; *optionObj* : Object)<!-- END REF -->  
 
@@ -4896,7 +5187,7 @@ $workbookOptions:= New Object
 $workbookOptions.allowExtendPasteRange:=True VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 ```
 
-#### Ver Também
+#### Veja também
 
 [VP Get workbook options](#vp-get-workbook-options)
 
@@ -5004,7 +5295,7 @@ If(FORM Event.code=On Clicked)
 
     VP RESUME COMPUTING("ViewProArea") End if
 ```
-#### Ver Também
+#### Veja também
 
 [VP RECOMUTE FORMULAS](#vp-recompute-formulas)<br/>[VP RESUME COMPUTING](#vp-resume-computing)
 

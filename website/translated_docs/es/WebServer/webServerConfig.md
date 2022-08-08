@@ -428,7 +428,7 @@ Valores posibles: 500 000 a 2 147 483 648.
 
 Número máximo de sesiones simultáneas. When you reach the limit set, the oldest session is closed (and `On Web Close Process` database method is called) if the Web server needs to create a new one. The number of simultaneous sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default).
 
-Default value: 100 (pass 0 to restore the default value).
+Valor por defecto: 100 (pase 0 para restaurar el valor por defecto).
 
 
 ## Versión TLS mínima

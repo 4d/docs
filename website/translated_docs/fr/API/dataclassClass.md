@@ -575,10 +575,10 @@ La méthode projet ***SearchDuplicate*** recherche des valeurs dupliquées dans 
 ## .getInfo()
 
 <details><summary>Historique</summary>
-| Version | Modifications          |
-| ------- | ---------------------- |
-| v19 R3  | Added exposed property |
-| v17 R5  | Ajout                  |
+| Version | Modifications           |
+| ------- | ----------------------- |
+| v19 R3  | Ajout propriété exposed |
+| v17 R5  | Ajout                   |
 </details>
 
 <!-- REF #DataClassClass.getInfo().Syntax -->

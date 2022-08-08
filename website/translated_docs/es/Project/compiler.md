@@ -88,7 +88,7 @@ When this option is checked, the warnings (if any) are displayed in the window, 
 
 ![](assets/en/Project/compilerWin5.png)
 
-Double-clicking a warning opens the corresponding method.
+Al hacer doble clic en un aviso se abre el método correspondiente.
 
 #### Desactivar las advertencias durante la compilación
 
