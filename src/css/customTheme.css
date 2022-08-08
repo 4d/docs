@@ -10,6 +10,13 @@
   --ifm-link-color: #1e90ff;
 }
 
+
+[data-theme='dark'] {
+  --ifm-color-primary: #1e90ff;
+
+}
+
+
 .container {
   max-width: 90%;
   margin: 0 auto;
