@@ -8,14 +8,34 @@
   --ifm-color-primary-darkest: #002E60;
 
   --ifm-link-color: #1e90ff;
+  --ifm-color-info-contrast-background: white;
 }
-
 
 [data-theme='dark'] {
   --ifm-color-primary: #1e90ff;
-
+  --ifm-color-info-contrast-background: #1B1B1D !important;
 }
 
+/* details {
+  font-size: 11px !important;
+  border: none !important;
+  color: black !important;
+} */
+
+
+details {
+  --docusaurus-details-summary-arrow-size: 0.20rem !important;
+  --docusaurus-details-decoration-color: black !important;
+  font-size: 11px !important;
+  border: none !important;
+}
+
+.details>summary {
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+  padding-left: 1rem;
+}
 
 .container {
   max-width: 90%;
