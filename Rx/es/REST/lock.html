@@ -71,7 +71,7 @@
 <p>Para bloquear una entidad para las otras sesiones y procesos 4D:</p>
 <pre><code class="hljs">/?<span class="hljs-symbol">$loc</span>k=<span class="hljs-literal">true</span>
 </code></pre>
-<p>To unlock the entity for other sessions and 4D processes:</p>
+<p>Para desbloquear la entidad para las otras sesiones y procesos 4D:</p>
 <pre><code class="hljs">/?<span class="hljs-symbol">$loc</span>k=<span class="hljs-literal">false</span>
 </code></pre>
 <p>The <a href="../API/EntityClass.html#lock"><code>lockKindText</code> property</a> is &quot;Locked by session&quot;.</p>
@@ -95,14 +95,14 @@
 <tr><th>Propiedad</th><th></th><th>Tipo</th><th>Descripción</th></tr>
 </thead>
 <tbody>
-<tr><td></td><td></td><td></td><td><strong><em>Available only in case of success:</em></strong></td></tr>
+<tr><td></td><td></td><td></td><td><strong><em>Disponible sólo en caso de éxito:</em></strong></td></tr>
 <tr><td>success</td><td></td><td>booleano</td><td>true if the lock action is successful (or if the entity is already locked in the current session), false otherwise (not returned in this case).</td></tr>
 <tr><td></td><td></td><td></td><td><strong><em>Disponible sólo en caso de error:</em></strong></td></tr>
 <tr><td>status</td><td></td><td>number</td><td>Código de error, ver abajo</td></tr>
 <tr><td>statusText</td><td></td><td>texto</td><td>Descripción del error, ver abajo</td></tr>
 <tr><td>lockKind</td><td></td><td>number</td><td>Código de bloqueo</td></tr>
 <tr><td>lockKindText</td><td></td><td>texto</td><td>&quot;Locked by session&quot; if locked by a REST session, &quot;Locked by record&quot; if locked by a 4D process</td></tr>
-<tr><td>lockInfo</td><td></td><td>objeto</td><td>Information about the lock origin. Las propiedades devueltas dependen del origen del bloqueo (proceso 4D o sesión REST).</td></tr>
+<tr><td>lockInfo</td><td></td><td>objeto</td><td>Información sobre el origen del bloqueo. Las propiedades devueltas dependen del origen del bloqueo (proceso 4D o sesión REST).</td></tr>
 <tr><td></td><td></td><td></td><td><strong><em>Disponible sólo para un bloqueo por proceso 4D:</em></strong></td></tr>
 <tr><td></td><td>task_id</td><td>number</td><td>ID del Proceso</td></tr>
 <tr><td></td><td>user_name</td><td>texto</td><td>Nombre de usuario de la sesión en la máquina</td></tr>
@@ -114,7 +114,7 @@
 <tr><td></td><td></td><td></td><td><strong><em>Disponible sólo para un bloqueo por sesión REST:</em></strong></td></tr>
 <tr><td></td><td>host</td><td>texto</td><td>URL que bloqueó la entidad (por ejemplo, &quot;127.0.0.1:8043&quot;)</td></tr>
 <tr><td></td><td>IPAddr</td><td>texto</td><td>Dirección IP del bloqueo (por ejemplo: &quot;127.0.0.1&quot;)</td></tr>
-<tr><td></td><td>recordNumber</td><td>number</td><td>Record number of the locked record</td></tr>
+<tr><td></td><td>recordNumber</td><td>number</td><td>Número del registro bloqueado</td></tr>
 <tr><td></td><td>userAgent</td><td>texto</td><td>userAgent of the locker (e.g. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36&quot;)</td></tr>
 </tbody>
 </table>
