@@ -363,7 +363,7 @@ To avoid this confusion, we recommend using the [ ] notation whenever you combin
 | `WEB SET OPTION`              | `Web keep session`                                 |             |
 | Caja de diálogo de parámetros | Options (I) page/Automatic Session Management      |             |
 
-Session management enabling status for the 4D web server. Session mechanism is described in the [Session Management](sessions.md) section.
+Estado de la gestión de sesión para el servidor web 4D. Session mechanism is described in the [Session Management](sessions.md) section.
 
 True por defecto (activado).
 
@@ -429,7 +429,7 @@ Valores posibles: 500 000 a 2 147 483 648.
 
 Número máximo de sesiones simultáneas. When you reach the limit set, the oldest session is closed (and `On Web Close Process` database method is called) if the Web server needs to create a new one. The number of simultaneous sessions cannot exceed the [maximum number of Web processes](#maximum-concurrent-web-processes) (100 by default).
 
-Default value: 100 (pass 0 to restore the default value).
+Valor por defecto: 100 (pase 0 para restaurar el valor por defecto).
 
 
 ## Versión TLS mínima
@@ -612,7 +612,7 @@ The following settings are still supported but rely on deprecated features or te
 
 This option controls the support of HTTP synchronization requests containing deprecated */4DSYNC* URLs.
 
-#### Session IP Address Validation
+#### Validación de la dirección IP de la sesión
 
 > This option is not not available in [scalable sessions mode](WebServer/sessions.md) (there is no validation).
 

@@ -234,7 +234,7 @@ Check this option to generate the server part of your application during the bui
 
 #### Ubicación de 4D Server
 
-Click on the **[...]** button and use the *Browse for folder* dialog box to locate the 4D Server application. In macOS, you must select the 4D Server package directly.
+Click on the **[...]** button and use the *Browse for folder* dialog box to locate the 4D Server application. En macOS, debe seleccionar directamente el paquete 4D Server.
 
 #### Versión actual
 
@@ -270,7 +270,7 @@ The 4D Volume Desktop must correspond to the current platform (which will also b
 
 If you want the client application to connect to the server using a specific address (other than the server name published on the sub-network), you must use the `IPAddress` XML key in the buildapp.4DSettings file. Para más información sobre este archivo, consulte la descripción del comando [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html). También puede implementar mecanismos específicos en caso de fallo de la conexión. También puede implementar mecanismos específicos en caso de fallo de la conexión.
 
-#### Copy of client applications inside the server application
+#### Copia de las aplicaciones clientes en la aplicación servidor
 
 The options of this area set up the mechanism for updating the client part(s) of your client/server applications using the network each time a new version of the application is generated. These options are only enabled when the **Build client application** option is checked.
 
@@ -538,7 +538,7 @@ For more information on the notarization concept, please refer to [this page on 
 
     Your icon file must have the same name as the project file and include the *.ico* extension. 4D automatically takes this file into account when building the double-clickable application.
 
-You can also set specific [XML keys](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) in the buildApp.4DSettings file to designate each icon to use. The following keys are available:
+You can also set specific [XML keys](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-XML-Keys-BuildApplication.100-4465602.en.html) in the buildApp.4DSettings file to designate each icon to use. Están disponibles las siguientes llaves:
 
 - RuntimeVLIconWinPath
 - RuntimeVLIconMacPath
@@ -582,7 +582,7 @@ Thanks to this architecture, when you provide an update of your application, the
 
 Este mecanismo suele ser adecuado para los despliegues estándar. However, for specific needs, for example if you duplicate your merged applications, you might want to change the way that the data file is linked to the application (described below).
 
-#### Configuring the data linking mode
+#### Configurar el modo de enlace de los datos
 
 With your compiled applications, 4D automatically uses the last data file opened. By default, the path of the data file is stored in the application's user preferences folder and is linked to the **application name**.
 

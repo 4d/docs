@@ -16,7 +16,7 @@ Para bloquear una entidad para las otras sesiones y procesos 4D:
 ```
 
 
-To unlock the entity for other sessions and 4D processes:
+Para desbloquear la entidad para las otras sesiones y procesos 4D:
 
 ```
 /?$lock=false

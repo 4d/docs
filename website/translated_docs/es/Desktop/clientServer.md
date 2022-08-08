@@ -64,7 +64,7 @@ Once a connection to the server has been established, the remote project will be
 
 - An updated .4dz version of the project is automatically produced when necessary, *i.e.* when the project has been modified and reloaded by 4D Server. El proyecto se recarga:
     - automatically, when the 4D Server application window comes to the front of the OS or when the 4D application on the same machine saves a modification (see below).
-    - when the `RELOAD PROJECT` command is executed. Calling this command is necessary for example when you have pulled a new version of the project from the source control platform.
+    - cuando se ejecuta el comando `RELOAD PROJECT`. Calling this command is necessary for example when you have pulled a new version of the project from the source control platform.
 
 
 

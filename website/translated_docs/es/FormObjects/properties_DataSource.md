@@ -256,7 +256,7 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 ## Tabla principal
 `Current selection list boxes`
 
-Specifies the table whose current selection will be used. This table and its current selection will form the reference for the fields associated with the columns of the list box (field references or expressions containing fields). Even if some columns contain fields from other tables, the number of rows displayed will be defined by the master table.
+Especifica la tabla cuya selección actual se utilizará. This table and its current selection will form the reference for the fields associated with the columns of the list box (field references or expressions containing fields). Even if some columns contain fields from other tables, the number of rows displayed will be defined by the master table.
 
 All database tables can be used, regardless of whether the form is related to a table (table form) or not (project form).
 

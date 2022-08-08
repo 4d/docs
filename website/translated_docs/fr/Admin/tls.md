@@ -15,7 +15,7 @@ Le protocole TLS (successeur du SSL) a pour but de sécuriser les informations d
 
 Au niveau de l'architecture réseau, le protocole de sécurité s'insère entre la couche TCP/IP (bas niveau) et le protocole de haut niveau HTTP, pour lequel il est principalement destiné.
 
-Network configuration using TLS:
+Configuration du réseau avec TLS :
 
 ![](assets/en/WebServer/tls1.png)
 

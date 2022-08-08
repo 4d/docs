@@ -15,7 +15,7 @@ El protocolo TLS (sucesor de SSL) ha sido diseñado para asegurar los intercambi
 
 A nivel de red, el protocolo de seguridad se inserta entre la capa TCP/IP (nivel bajo) y el protocolo de alto nivel HTTP. Ha sido diseñado principalmente para trabajar con HTTP.
 
-Network configuration using TLS:
+Configuración de red utilizando TLS:
 
 ![](assets/en/WebServer/tls1.png)
 

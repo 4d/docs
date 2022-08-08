@@ -70,7 +70,7 @@ You can also place and use active objects in the Header area of output forms dis
 - Combo boxes, listas desplegables, menús emergentes de imágenes,
 - listas jerárquicas, list boxes
 - Botones de radio, casillas de selección, casillas de selección 3D,
-- Progress indicators, rulers, steppers, spinners.
+- Indicadores de progreso, reglas, steppers, spinners.
 
 Standard actions such as `Add Subrecord`, `Cancel` (lists displayed using `DISPLAY SELECTION` and `MODIFY SELECTION`) or `Automatic splitter` can be assigned to the inserted buttons. The following events apply to the active objects you insert in the Header area: `On Load`, `On Clicked`, `On Header`, `On Printing Footer`, `On Double Clicked`, `On Drop`, `On Drag Over`, `On Unload`. Keep in mind that the form method is called with the `On Header` event after calling the object methods of the area.
 
