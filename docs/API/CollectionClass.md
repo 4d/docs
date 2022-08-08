@@ -879,10 +879,11 @@ $b:=$c.every($f;Is real) //$b=false
 ## .extract()
 
 <details><summary>History</summary>
-|Version|Changes|
 
+|Version|Changes|
 |---|---|
 |v16 R6|Added|
+
 </details>
 
 <!-- REF #collection.extract().Syntax -->

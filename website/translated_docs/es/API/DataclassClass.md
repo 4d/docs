@@ -681,7 +681,7 @@ El objeto devuelto tiene las siguientes propiedades:
 | maxEntries | Integer    | Número máximo de colecciones "entries".                                                |
 | stamp      | Integer    | Marcador de la caché.                                                                  |
 | timeout    | Integer    | Tiempo restante antes de que las nuevas entradas de la caché se marquen como vencidas. |
-| entries    | Collection | Contains an entry object for each entity in the cache.                                 |
+| entries    | Collection | Contiene un objeto de entrada para cada entidad en la caché.                           |
 
 Each entry object in the `entries` collection has the following properties:
 

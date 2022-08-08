@@ -43,7 +43,7 @@ Data is collected during the following events:
 | dataFileSize            | 419430400                                               | Data file size in bytes                                                               |
 | indexesSize             | 419430400                                               | Index size in bytes                                                                   |
 | cacheSize               | 419430400                                               | Cache size in bytes                                                                   |
-| usingLegacyNetworkLayer | fasle                                                   | True if legacy network layer used for the application server                          |
+| usingLegacyNetworkLayer | false                                                   | True if legacy network layer used for the application server                          |
 | isEncrypted             | true                                                    | True if the data file is encrypted                                                    |
 | isCompiled              | true                                                    | True if the application is compiled                                                   |
 | isEngined               | true                                                    | True if the application is merged with 4D Volume Desktop                              |

@@ -77,7 +77,7 @@ La siguiente tabla muestra las opciones disponibles:
 | Internal date short           | short           | 03/25/2020                     |
 | ISO Date Time *(3)*           | iso8601         | 2020-03-25T00:00:00            |
 
-*(1)* To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July. This particularity only applies to French versions of 4D.
+*(1)* To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July. Esta particularidad sólo se aplica a las versiones francesas de 4D.
 
 *(2)* The year is displayed using two digits when it belongs to the interval (1930;2029) otherwise it will be displayed using four digits. This is by default but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html) command.
 
@@ -160,7 +160,7 @@ A number display format can have up to three parts allowing you to specify displ
 
     Positivo;Negativo;Cero
 
-You do not have to specify all three parts of the format. If you use just one part, 4D uses it for all numbers, placing a minus sign in front of negative numbers.
+No es necesario especificar las tres partes del formato. If you use just one part, 4D uses it for all numbers, placing a minus sign in front of negative numbers.
 
 If you use two parts, 4D uses the first part for positive numbers and zero and the second part for negative numbers. If you use three parts, the first is for positive numbers, the second for negative numbers, and the third for zero.
 > The third part (zero) is not interpreted and does not accept replacement characters. Si introduce `###;###;#`, el valor cero se mostrará "#". In other words, what you actually enter is what will be displayed for the zero value.
@@ -362,7 +362,7 @@ La siguiente tabla muestra los formatos de visualización de los campos de hora 
 ## Texto cuando False/Texto cuando True
 
 When a [boolean expression](properties_Object.md#expression-type) is displayed as:
-- a text in an [input object](input_overview.md)
+- un texto en un [objeto de entrada](input_overview.md)
 - a ["popup"](properties_Display.md#display-type) in a [list box column](listbox_overview.md#list-box-columns),
 
 ... puede seleccionar el texto que se mostrará para cada valor:
@@ -475,9 +475,9 @@ In that cases, the title of the check box can be entered using this property.
 
 #### Gramática JSON
 
-| Nombre       | Tipos de datos | Valores posibles                   |
-| ------------ | -------------- | ---------------------------------- |
-| controlTitle | cadena         | Any custom label for the check box |
+| Nombre       | Tipos de datos | Valores posibles                                         |
+| ------------ | -------------- | -------------------------------------------------------- |
+| controlTitle | cadena         | Toda etiqueta personalizada para la casilla de selección |
 
 #### Objetos soportados
 

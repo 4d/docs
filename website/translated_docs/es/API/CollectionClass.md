@@ -866,10 +866,13 @@ $b:=$c.every($f;Is real) //$b=false
 <!-- REF collection.extract().Desc -->
 ## .extract()
 
-<details><summary>History</summary>
-|Version|Changes|
+<details><summary>Histórico</summary>
 
-|---|---| |v16 R6|Added| </details>
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v16 R6  | Añadidos       |
+
+</details>
 
 
 <!-- REF #collection.extract().Syntax --> **.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathN* : Text ;... *targetPathN* : Text } ) : Collection<!-- END REF -->

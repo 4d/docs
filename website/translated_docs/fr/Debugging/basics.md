@@ -9,9 +9,9 @@ L'environnement de développement 4D fournit plusieurs outils de débogage pour 
 
 ## Types d'erreurs
 
-### Erreurs de typage
+### Erreurs de saisie
 
-Typing errors are detected by the Code Editor. Elles sont affichées en rouge et des informations complémentaires sont fournies en bas de la fenêtre. Voici une erreur de frappe :
+Les fautes de frappe sont détectées par l'éditeur de méthode. Elles sont affichées en rouge et des informations complémentaires sont fournies en bas de la fenêtre. Voici une erreur de frappe :
 
 ![break-point](assets/en/Debugging/typing-error.png)
 
@@ -65,7 +65,7 @@ La zone de texte supérieure affiche un message décrivant l'erreur. La zone de 
 
 La fenêtre d'erreur de syntaxe propose plusieurs options :
 
-- **Modifier** : arrête l'exécution de toutes les méthodes. 4D switches to the Design environment and the method with the error opens in the Code Editor, allowing you to fix it. Utilisez cette option lorsque vous reconnaissez immédiatement l'erreur et que vous pouvez la corriger sans autre forme de procès.
+- **Modifier** : arrête l'exécution de toutes les méthodes. 4D bascule en mode Développement et la méthode comportant l'erreur s'ouvre dans l'éditeur de code, ce qui vous permet de la corriger. Utilisez cette option lorsque vous reconnaissez immédiatement l'erreur et que vous pouvez la corriger sans autre forme de procès.
 
 - **Trace** : Accède au mode Trace/Debugger. La fenêtre du [débogueur](debugger.md) s'affiche. Si la ligne en cours n'a été exécutée que partiellement, vous devrez peut-être cliquer plusieurs fois sur le bouton **Trace**.
 
@@ -84,7 +84,7 @@ La fenêtre d'erreur de syntaxe propose plusieurs options :
 
 ## Débogueur
 
-A common beginner mistake in dealing with error detection is to click **Abort** in the Syntax Error Window, go back to the Code Editor, and try to figure out what's going by looking at the code. Attention à ne pas faire cela ! Vous économiserez beaucoup de temps et d'énergie en utilisant toujours le **Débogueur**.
+Une erreur courante des débutants en matière de détection des erreurs consiste à cliquer sur **Abandonner** dans la fenêtre d'erreur de syntaxe, à revenir à l'éditeur de code et à essayer de comprendre ce qui se passe en regardant le code. Ne faites pas ça ! Vous économiserez beaucoup de temps et d'énergie en utilisant toujours le **Débogueur**.
 
 Le débogueur vous permet d'avancer lentement dans les méthodes. Il affiche toutes les informations dont vous avez besoin pour comprendre pourquoi une erreur s'est produite. Une fois que vous avez ces informations, vous savez comment corriger l'erreur.
 
@@ -94,4 +94,4 @@ Une autre raison d'utiliser le débogueur est le développement du code. Il peut
 
 Dans le processus de débogage, vous pouvez avoir besoin de sauter le traçage de certaines parties du code jusqu'à une certaine ligne. Ou bien, vous pouvez vouloir tracer le code lorsqu'une expression donnée a une certaine valeur (par exemple "$myVar > 1000"), ou chaque fois qu'une commande 4D spécifique est appelée.
 
-Ces besoins sont couverts par les **points d'arrêt** et les fonctions de **capture de commande**. They can be configured from the Code Editor, the debugger, or the Runtime Explorer.
+Ces besoins sont couverts par les fonctions **points d'arrêt** et **points d'arrêt sur commande**. Ils peuvent être configurés à partir de l'éditeur de code, du débogueur ou de l'explorateur d'exécution.

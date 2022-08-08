@@ -238,8 +238,8 @@ You can select the level of messages using the `Diagnostic log level` selector o
 | ERROR     | Una parte de la aplicación no funciona                                                        | ERROR                           |
 | WARN      | Potential error, use of a deprecated function, poor uses, undesirable or unexpected situation | ERROR, WARN                     |
 | INFO      | ID Proceso 4D                                                                                 | ERROR, WARN, INFO               |
-| DEBUG     | Detail of application flow (for 4D technical services)                                        | ERROR, WARN, INFO, DEBUG        |
-| TRACE     | Other internal information (for 4D technical services)                                        | ERROR, WARN, INFO, DEBUG, TRACE |
+| DEBUG     | Detalle del flujo de aplicación (para los servicios técnicos 4D)                              | ERROR, WARN, INFO, DEBUG        |
+| TRACE     | Otra información interna (para los servicios técnicos de 4D)                                  | ERROR, WARN, INFO, DEBUG, TRACE |
 
 
 

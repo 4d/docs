@@ -368,7 +368,7 @@ Vous souhaitez connaitre le nombre de tables chiffrées dans le fichier de donn�
 
  $status:=ds.encryptionStatus()
 
- If($status.isEncrypted) //the database is encrypted
+ If($status.isEncrypted) //la base est chiffrée
     C_LONGINT($vcount)
     C_TEXT($tabName)
     For each($tabName;$status.tables)

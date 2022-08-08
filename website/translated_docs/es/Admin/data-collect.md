@@ -43,7 +43,7 @@ Los datos se recogen durante los siguientes eventos:
 | dataFileSize            | 419430400                                               | Tamaño del archivo de datos en bytes                                                             |
 | indexesSize             | 419430400                                               | Tamaño del índice en bytes                                                                       |
 | cacheSize               | 419430400                                               | Tamaño de caché en bytes                                                                         |
-| usingLegacyNetworkLayer | fasle                                                   | True si se utiliza la capa de red heredada para el servidor de aplicaciones                      |
+| usingLegacyNetworkLayer | false                                                   | True si se utiliza la capa de red heredada para el servidor de aplicaciones                      |
 | isEncrypted             | true                                                    | True si el archivo de datos está encriptado                                                      |
 | isCompiled              | true                                                    | True si la aplicación está compilada                                                             |
 | isEngined               | true                                                    | True si la aplicación se fusiona con 4D Volume Desktop                                           |

@@ -862,9 +862,12 @@ $b:=$c.every($f;Is real) //$b=false
 ## .extract()
 
 <details><summary>履歴</summary>
-|バージョン|内容|
 
-|---|---| |v16 R6|追加| </details>
+| バージョン  | 内容 |
+| ------ | -- |
+| v16 R6 | 追加 |
+
+</details>
 
 
 <!-- REF #collection.extract().Syntax --> **.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathN* : Text ;... *targetPathN* : Text } ) : Collection<!-- END REF -->

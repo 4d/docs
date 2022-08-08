@@ -867,9 +867,12 @@ $b:=$c.every($f;Is real) //$b=false
 ## .extract()
 
 <details><summary>History</summary>
-|Version|Changes|
 
-|---|---| |v16 R6|Added| </details>
+| Version | Changes |
+| ------- | ------- |
+| v16 R6  | Added   |
+
+</details>
 
 <!-- REF #collection.extract().Syntax -->
 **.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathN* : Text ;... *targetPathN* : Text } ) : Collection<!-- END REF -->

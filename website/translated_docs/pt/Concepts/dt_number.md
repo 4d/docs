@@ -7,18 +7,18 @@ Número é um termo genérico que significa:
 
 - Campo real, variável ou expressão. O intervalo para o tipo de dados Real é de ±1,7e±308 (13 dígitos significativos).
 - Campo Inteiro Longo, variável ou expressão. O intervalo para o tipo de dados Long Integer (4-byte Integer) é -2^31...(2^31)-1.
-- Campo inteiro, array ou expressão. The range for the Integer data type (2-byte Integer) is -32,768..32,767 (2^15..(2^15)-1).
+- Campo inteiro, array ou expressão. O intervalo para o tipo de dados Integer (Inteiro 2 bytes) é -32.768...32.767(2^15...(2^25)-1).
 
-**Note:** Integer field values are automatically converted in Long integers when used in the 4D Language.
+**Nota:** Valores de campo inteiro são automaticamente convertidos em inteiros longos quando usados na linguagem 4D.
 
-You can assign any Number data type to another; 4D does the conversion, truncating or rounding if necessary. However, when values are out of range, the conversion will not return a valid value. You can mix Number data types in expressions.
+Pode atribuir qualquer tipo de dados Number a outro; 4D faz a conversão, truncagem ou arredondamento, se necessário. No entanto, quando os valores estiverem fora do intervalo, a conversão não retornará um valor válido. Pode misturar tipos de dados numéricos em expressões.
 
-**Note:** In the 4D Language Reference manual, no matter the actual data type, the Real, Integer, and Long Integer parameters in command descriptions are denoted as number, except when marked otherwise.
+**Nota:** No manual de Referência de Idioma 4D, não importa o tipo de dado real, a Real, Inteiro, e parâmetros longos de números inteiros nas descrições de comandos são indicados como número, exceto quando marcados de outra forma.
 
 
-## Number literals
+## Números literais
 
-A numeric literal constant is written as a real number. Here are some examples of numeric constants:
+Uma constante literal numérica é escrita como um número real. Aqui estão alguns exemplos de constantes numéricas:
 
 ```4d
 27
@@ -26,9 +26,9 @@ A numeric literal constant is written as a real number. Here are some examples o
 0.0076
 ```
 
-> The default decimal separator is a period (.), regardless of the system language. If you have checked the "Use regional system settings" option in the Methods Page of the Preferences, you must use the separator defined in your system.
+> O separador decimal padrão é um ponto (.), independente do idioma do sistema. Se você marcou a opção "Usar configurações regionais do sistema" na Página de Métodos das Preferências, você deve usar o separador definido no seu sistema.
 
-Negative numbers are specified with the minus sign (-). Por exemplo:
+Números negativos são especificados com o sinal de menos (-). Por exemplo:
 
 ```4d
 -27
@@ -36,11 +36,11 @@ Negative numbers are specified with the minus sign (-). Por exemplo:
 -0.0076
 ```
 
-## Number operators
+## Operadores de números
 
 | Operação             | Sintaxe          | Retorna  | Expressão | Value |
 | -------------------- | ---------------- | -------- | --------- | ----- |
-| Addition             | Number + Number  | Número   | 2 + 3     | 5     |
+| Addition             | Número + Número  | Número   | 2 + 3     | 5     |
 | Subtração            | Número - Número  | Número   | 3 – 2     | 1     |
 | Multiplicação        | Número * Número  | Número   | 5 * 2     | 10    |
 | Division             | Número / Número  | Número   | 5 / 2     | 2.5   |
@@ -93,46 +93,46 @@ Os parênteses podem ser aninhados dentro de outros conjuntos de parênteses. Ce
 
 ## Operadores Bitwise
 
-The bitwise operators operates on **Long Integer** expressions or values.
+Os operadores bitwise operam em **Long Integer** expressões ou valores.
 
-> If you pass an Integer or a Real value to a bitwise operator, 4D evaluates the value as a Long Integer value before calculating the expression that uses the bitwise operator.
+> Se passar um valor Inteiro ou Real a um operador bitwise, 4D avalia o valor como um valor Long Integer antes de calcular a expressão que utiliza o operador bitwise.
 
-While using the bitwise operators, you must think about a Long Integer value as an array of 32 bits. The bits are numbered from 0 to 31, from right to left.
+Ao utilizar os operadores bitwise, deve pensar num valor Long Integer como um array de 32 bits. Os bits são numerados de 0 a 31, da direita para a esquerda.
 
-Because each bit can equal 0 or 1, you can also think about a Long Integer value as a value where you can store 32 Boolean values. A bit equal to 1 means **True** and a bit equal to 0 means **False**.
+Já que cada bit pode ser igual a 0 ou 1, também se pode pensar num valor Long Integer como um valor onde se pode armazenar 32 valores booleanos. Um bit igual a 1 significa **True** e um bit igual a 0 significa **False**.
 
-An expression that uses a bitwise operator returns a Long Integer value, except for the Bit Test operator, where the expression returns a Boolean value. The following table lists the bitwise operators and their syntax:
+Uma expressão que utilizar um operador Bitwise retorna um valor Long Integer, exceto para o operador Bit Test, onde a expressão retorna um valor Booleano. A tabela a seguir lista os operadores bitwise e sua sintaxe:
 
 | Operação               | Operator  | Sintaxe                | Retorna              |
 | ---------------------- | --------- | ---------------------- | -------------------- |
 | Bitwise AND            | &         | Long & Long            | Long                 |
 | Bitwise OR (inclusive) | &#124;    | Long &#124; Long       | Long                 |
-| Bitwise OR (exclusive) | \^&#124; | Long \^&#124; E. long | Long                 |
-| Left Bit Shift         | <<        | Long << Long           | Long (see note 1)    |
-| Right Bit Shift        | >>        | Long >> Long           | Long (see note 1)    |
-| Bit Set                | ?+        | Long ?+ Long           | Long (see note 2)    |
-| Bit Clear              | ?-        | Long ?- Long           | Long (see note 2)    |
-| Bit Test               | ??        | Long ?? Long           | Boolean (see note 2) |
+| Bitwise OR (exclusivo) | \^&#124; | Long \^&#124; E. long | Long                 |
+| Left Bit Shift         | <<        | Long << Long           | Long (ver nota 1)    |
+| Right Bit Shift        | >>        | Long >> Long           | Long (ver nota 1)    |
+| Bit Set                | ?+        | Long ?+ Long           | Long (ver nota 2)    |
+| Bit Clear              | ?-        | Long ?- Long           | Long (ver nota 2)    |
+| Bit Test               | ??        | Long ?? Long           | Boolean (ver nota 2) |
 
 #### Notas
 
-1. For the `Left Bit Shift` and `Right Bit Shift` operations, the second operand indicates the number of positions by which the bits of the first operand will be shifted in the resulting value. Therefore, this second operand should be between 0 and 31. Note however, that shifting by 0 returns an unchanged value and shifting by more than 31 bits returns 0x00000000 because all the bits are lost. If you pass another value as second operand, the result is non-significant.
-2. For the `Bit Set`, `Bit Clear` and `Bit Test` operations , the second operand indicates the number of the bit on which to act. Therefore, this second operand must be between 0 and 31; otherwise, the result of the expression is non-significant.
+1. Para as operações `Left Bit Shift` e `Right Bit Shift` , o segundo operador indica o número de posições pelas quais os bits do primeiro operador serão deslocados no valor resultante. Portanto, este segundo operador deve estar entre 0 e 31. Note-se, no entanto, que o deslocamento por 0 retorna um valor inalterado e o deslocamento por mais de 31 bits retorna 0x00000000 porque todos os bits são perdidos. Se passar outro valor como segundo operando, o resultado não é significativo.
+2. Para o conjunto de bits ``, `Bit Clear` e `Bit Test` operações , o segundo operando indica o número do bit sobre o qual se deve agir. Portanto, este segundo operador deve situar-se entre 0 e 31; caso contrário, o resultado da expressão não é significativo.
 
 
 
-The following table lists the bitwise operators and their effects:
+O quadro seguinte lista os operadores bitwise e os seus efeitos:
 
-| Operação               | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Bitwise AND            | Each resulting bit is the logical AND of the bits in the two operands. <p>Here is the logical AND table:<li>1 & 1 --> 1<li>0 & 1 --> 0<li>1 & 0 --> 0<li>0 & 0 --> 0<p>In other words, the resulting bit is 1 if the two operand bits are 1; otherwise the resulting bit is 0.                                           |
-| Bitwise OR (inclusive) | Each resulting bit is the logical OR of the bits in the two operands.<p>Here is the logical OR table:<li>1 &#124; 1 --> 1<li>0 &#124; 1 --> 1<li>1 &#124; 0 --> 1<li>0 &#124; 0 --> 0<p>In other words, the resulting bit is 1 if at least one of the two operand bits is 1; otherwise the resulting bit is 0.           |
-| Bitwise OR (exclusive) | Each resulting bit is the logical XOR of the bits in the two operands.<p>Here is the logical XOR table:<li>1 \^&#124; 1 --> 0<li>0 \^&#124; 1 --> 1<li>1 \^&#124; 0 --> 1<li>0 \^&#124; 0 --> 0<p>In other words, the resulting bit is 1 if only one of the two operand bits is 1; otherwise the resulting bit is 0. |
-| Left Bit Shift         | The resulting value is set to the first operand value, then the resulting bits are shifted to the left by the number of positions indicated by the second operand. The bits on the left are lost and the new bits on the right are set to 0. <p>**Note:** Taking into account only positive values, shifting to the left by N bits is the same as multiplying by 2^N.                                                                   |
-| Right Bit Shift        | The resulting value is set to the first operand value, then the resulting bits are shifted to the right by the number of position indicated by the second operand. The bits on the right are lost and the new bits on the left are set to 0.<p>**Note:** Taking into account only positive values, shifting to the right by N bits is the same as dividing by 2^N.                                                                      |
-| Bit Set                | The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 1. The other bits are left unchanged.                                                                                                                                                                                                                                                                                |
-| Bit Clear              | The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 0. The other bits are left unchanged.                                                                                                                                                                                                                                                                                |
-| Bit Test               | Returns True if, in the first operand, the bit whose number is indicated by the second operand is equal to 1. Returns False if, in the first operand, the bit whose number is indicated by the second operand is equal to 0.                                                                                                                                                                                                                                   |
+| Operação               | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Bitwise AND            | Cada bit resultante é o E lógico dos bits nos dois operandos. <p>Aqui está a tabela lógica AND:<li>1 & 1 --> 1<li>0 & 1 --> 0<li>1 & 0 --> 0<li>0 & 0 --> 0<p>Por outras palavras, o bit resultante é 1 se os dois bits do operando forem 1; caso contrário, o bit resultante é 0.                                   |
+| Bitwise OR (inclusive) | Cada bit resultante é o OU lógico dos bits nos dois operandos.<p>Aqui está a tabela lógica OR:<li>1 &#124; 1 --> 1<li>0 &#124; 1 --> 1<li>1 &#124; 0 --> 1<li>0 &#124; 0 --> 0<p>Por outras palavras, o bit resultante é 1 se pelo menos um dos dois cobres for 1; caso contrário, o bit resultante é 0.             |
+| Bitwise OR (exclusivo) | Cada bit resultante é o XOR lógico dos bits nos dois operandos.<p>Aqui está a tabela lógica XOR:<li>1 \^&#124; 1 --> 0<li>0 \^&#124; 1 --> 1<li>1 \^&#124; 0 --> 1<li>0 \^&#124; 0 --> 0<p>Em outras palavras, o bit resultante é 1 se apenas um dos dois operandos for 1; caso contrário, o bit resultante é 0. |
+| Left Bit Shift         | O valor resultante é definido para o primeiro operando, depois os bits resultantes são deslocados para a esquerda pelo número de posições indicado pelo segundo operando. Os bits à esquerda são perdidos e os novos bits à direita são estabelecidos como 0. <p>**Nota:** Levar em consideração apenas valores positivos e deslocar para a esquerda por N bits é o mesmo que multiplicar por 2^N.                                  |
+| Right Bit Shift        | O valor resultante é definido para o primeiro operando, depois os bits resultantes são deslocados para a esquerda pelo número de posições indicado pelo segundo operando. Os bits à direita são perdidos e os novos bits à esquerda são estabelecidos como 0.<p>**Nota:** Levar em consideração apenas valores positivos e deslocar para a direita por N bits é o mesmo que dividir por 2^N.                                        |
+| Bit Set                | O valor resultante é definido para o primeiro operando, depois o bit resultante, cujo número é indicado pelo segundo operando, é definido para 1. As outras partes são deixadas inalteradas.                                                                                                                                                                                                                                                               |
+| Bit Clear              | O valor resultante é definido para o primeiro operando, depois o bit resultante, cujo número é indicado pelo segundo operando, é definido para 0. As outras partes são deixadas inalteradas.                                                                                                                                                                                                                                                               |
+| Bit Test               | Retorna Verdadeiro se, no primeiro operando, o bit cujo número é indicado pelo segundo operando for igual a 1. Retorna Falso se, no primeiro operando, o bit cujo número é indicado pelo segundo operando for igual a 0.                                                                                                                                                                                                                                   |
 
 ### Exemplos
 
@@ -140,7 +140,7 @@ The following table lists the bitwise operators and their effects:
 | ---------------------- | ------------------------------- | ---------- |
 | Bitwise AND            | 0x0000FFFF & 0xFF00FF00         | 0x0000FF00 |
 | Bitwise OR (inclusive) | 0x0000FFFF &#124; 0xFF00FF00    | 0xFF00FFFF |
-| Bitwise OR (exclusive) | 0x0000FFFF \^&#124; 0xFF00FF00 | 0xFF0000FF |
+| Bitwise OR (exclusivo) | 0x0000FFFF \^&#124; 0xFF00FF00 | 0xFF0000FF |
 | Left Bit Shift         | 0x0000FFFF << 8                 | 0x00FFFF00 |
 | Right Bit Shift        | 0x0000FFFF >> 8                 | 0x000000FF |
 | Bit Set                | 0x00000000 ?+ 16                | 0x00010000 |

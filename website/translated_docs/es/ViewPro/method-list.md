@@ -1005,7 +1005,7 @@ When including the optional *paramObj* parameter, the `VP EXPORT DOCUMENT` comma
 | $1       |               | texto    | El nombre del objeto 4D View Pro                          |
 | $2       |               | texto    | Ruta de acceso del objeto 4D View Pro exportado           |
 | $3       |               | objeto   | Referencia al *paramObj* del comando                      |
-| $4       |               | objeto   | An object returned by the method with a status message    |
+| $4       |               | objeto   | Un objeto devuelto por el método con un mensaje de estado |
 |          | .success      | booleano | True si exporta con éxito, de lo contrario False.         |
 |          | .errorCode    | integer  | Código de error. Puede ser devuelto por 4D o JavaScript.  |
 |          | .errorMessage | texto    | Mensaje de error. Puede ser devuelto por 4D o JavaScript. |
@@ -1784,7 +1784,7 @@ In *rangeObj*, pass a range whose formulas you want to retrieve. If *rangeObj* d
 La colección devuelta es bidimensional:
 
 * The first-level collection contains subcollections of formulas. Cada subcolección representa una línea.
-* Cada subcolección define los valores de las celdas para la línea. Values are text elements containing the cell formulas.
+* Cada subcolección define los valores de las celdas para la línea. Los valores son elementos textuales que contienen las fórmulas de las celdas.
 
 #### Ejemplo
 
@@ -1835,7 +1835,7 @@ The command returns an object describing the frozen columns and rows. Este objet
 | Propiedad           | Tipo    | Descripción                                                    |
 | ------------------- | ------- | -------------------------------------------------------------- |
 | columnCount         | Integer | El número de columnas congeladas a la izquierda de la hoja     |
-| trailingColumnCount | Integer | The number of frozen columns on the right of the sheet         |
+| trailingColumnCount | Integer | El número de columnas congeladas a la derecha de la hoja       |
 | rowCount            | Integer | El número de líneas congeladas en la parte superior de la hoja |
 | trailingRowCount    | Integer | El número de líneas congeladas en la parte inferior de la hoja |
 
@@ -2489,7 +2489,7 @@ The object returned will contain the `value` property, and, in case of a js date
 
 | Propiedad | Tipo                               | Descripción                                                  |
 | --------- | ---------------------------------- | ------------------------------------------------------------ |
-| value     | Integer, Real, Boolean, Text, Date | Value in the *rangeObj* (except- time)                       |
+| value     | Integer, Real, Boolean, Text, Date | Valor de *rangeObj* (excepto- time)                          |
 | time      | Real                               | Valor hora (en segundos) si el valor es del tipo de fecha js |
 
 If the object returned includes a date or time, it is treated as a datetime and completed as follows:
@@ -2822,11 +2822,11 @@ El resultado es:
 
 <!-- REF #_method_.VP MOVE CELLS.Params -->
 
-| Parámetros  | Tipo   |    | Descripción                                          |
-| ----------- | ------ | -- | ---------------------------------------------------- |
-| originRange | Objeto | -> | Rango de celdas desde donde copiar                   |
-| targetRange | Objeto | -> | Target range for the values, formatting and formulas |
-| options     | Objeto | -> | Opciones adicionales                                 |
+| Parámetros  | Tipo   |    | Descripción                                                  |
+| ----------- | ------ | -- | ------------------------------------------------------------ |
+| originRange | Objeto | -> | Rango de celdas desde donde copiar                           |
+| targetRange | Objeto | -> | Rango de destino para los valores, el formato y las fórmulas |
+| options     | Objeto | -> | Opciones adicionales                                         |
 
 
 <!-- END REF -->
@@ -3677,7 +3677,7 @@ In *rangeObj*, pass a range containing a single cell as an object (see [VP Cell]
 
 #### Ejemplo
 
-To set the cell in column D, row 5 as the active cell:
+Para definir la celda de la columna D, línea 5 como celda activa:
 
 ```4d
 $activeCell:=VP Cell("myVPArea";3;4)
@@ -4664,7 +4664,7 @@ You can pass an object defining the columns and rows to freeze in the *paneObj* 
 | Propiedad           | Tipo    | Descripción                                                    |
 | ------------------- | ------- | -------------------------------------------------------------- |
 | columnCount         | Integer | El número de columnas congeladas a la izquierda de la hoja     |
-| trailingColumnCount | Integer | The number of frozen columns on the right of the sheet         |
+| trailingColumnCount | Integer | El número de columnas congeladas a la derecha de la hoja       |
 | rowCount            | Integer | El número de líneas congeladas en la parte superior de la hoja |
 | trailingRowCount    | Integer | El número de líneas congeladas en la parte inferior de la hoja |
 
@@ -5053,7 +5053,7 @@ In the optional *sheet* parameter, you can designate a specific spreadsheet (cou
 
 #### Ejemplo 1
 
-You want to protect all cells except the range C5:D10:
+Quiere proteger todas las celdas excepto el rango C5:D10:
 
 ```4d
 // Activate protection on the current sheet
@@ -5413,7 +5413,7 @@ In *optionObj*, pass the workbook options to apply to *vpAreaName*.
 
 Si *optionObj* está vacío, el comando no hace nada.
 
-Modified workbook options are saved with the document.
+Las opciones modificadas del libro de trabajo se guardan con el documento.
 
 The following table lists the available workbook options:
 
@@ -5523,7 +5523,7 @@ Los siguientes selectores están disponibles:
 | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | --------------------- |
 | `vk position bottom`  | Alineación vertical a la parte inferior de la celda o de la línea.                                                                                                                                                                                                                                   | X                     |                       |
 | `vk position center`  | Alineación al centro. The alignment will be to the cell, row, or column limit according to the view position indicated:<li>Posición vertical de la vista - celda o línea</li><li>Posición horizontal de la vista - celda o columna</li>                                                                                                                         | X                     | X                     |
-| `vk position left`    | Horizontal alignment to the left of the cell or column                                                                                                                                                                                                                                               |                       | X                     |
+| `vk position left`    | Alineación horizontal a la izquierda de la celda o columna                                                                                                                                                                                                                                           |                       | X                     |
 | `vk position nearest` | Alineación al límite más cercano (arriba, abajo, izquierda, derecha, centro). The alignment will be to the cell, row, or column limit according to the view position indicated:<li>Vertical view position (top, center, bottom) - cell or row </li><li>Horizontal view position (left, center, right) - cell or column | X                     | X                     |
 | `vk position right`   | Alineación horizontal a la derecha de la celda o de la columna                                                                                                                                                                                                                                       |                       | X                     |
 | `vk position top`     | Alineación vertical a la parte superior de la celda o de la línea                                                                                                                                                                                                                                    | X                     |                       |

@@ -67,6 +67,17 @@ The new method becomes the current (top) method in the [Call Chain Pane](#call-c
 
 When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
 
+#### Step Out
+
+If you are tracing subroutines and functions, clicking on this button allows you to execute the entire method currently being traced and to step back to the caller method. The Debugger window is brought back to the previous method in the call chain. If the current method is the last method in the call chain, the Debugger window is closed.
+
+In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the **No Trace** button.
+
+#### Step Into Process
+
+On execution of a line that creates a new process (i.e., calling the `New process` command), this button opens a new Debugger window that allows you to trace the process method of the newly created process. On execution of a line that does not creates a new process, this button acts in the same manner as the **Step Over** button.
+
+
 #### Abortar
 
 Stops method execution, and returns to the state before the method started executing:
@@ -77,7 +88,7 @@ Stops method execution, and returns to the state before the method started execu
 
 
 Pausa la ejecución del método. The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
-> **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. After you're finished with the changes, rerun the method.
+> **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. Una vez haya terminado con los cambios, vuelva a ejecutar el método.
 
 #### Editar
 
@@ -103,7 +114,7 @@ The **Watch pane** is displayed in the top left corner of the Debugger window, b
 
 ![watch-pane](assets/en/Debugging/watchPane.png)
 
-> This pane is not available in remote debugging mode.
+> Este panel no está disponible en el modo de depuración remota.
 
 The **Watch Pane** displays useful general information about the system, the 4D environment, and the execution environment.
 
@@ -137,7 +148,7 @@ $c:=a+b
 
     La variable `$a` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
-2. You click the **Step Over** button. El contador del programa se pone ahora en la línea `b:=a+1`. En este punto, el tema muestra:
+2. Haga clic en el botón **Step Over**. El contador del programa se pone ahora en la línea `b:=a+1`. En este punto, el tema muestra:
 
     | $a | 1          |
     | -- | ---------- |
@@ -210,7 +221,7 @@ This theme lists the sets defined in the current process (the one you're current
 
 This theme lists the named selections that are defined in the current process (the one you’re currently tracing); it also lists the interprocess named selections. For each named selection, the Value column displays the number of records and the table name. Las expresiones de este tema no pueden ser modificadas.
 
-#### Information
+#### Información
 
 This theme contains general information regarding database operation, such as the current default table (if one exists), physical, virtual, free and used memory space, query destination, etc.
 
@@ -254,7 +265,7 @@ En la imagen de arriba:
 * `thirdMethod` no ha recibido ningún parámetro
 * `$0` is currently undefined, as the method did not assign any value to `$0` (because it has not executed this assignment yet or because the method is a subroutine and not a function)
 * `secondMethod` has received three parameters from `firstMethod`:
-    * $1 is a pointer to the `[Employee]` table
+    * $1 es un puntero a la tabla `[Employee]`
     * $2 is a pointer to the `ID` field in the  `[Employee]` table
     * $3 es un parámetro alfanumérico cuyo valor es "Z"
 
@@ -284,7 +295,7 @@ The Custom Watch Pane is useful for evaluating expressions. It is similar to the
 
 ![custom-Watch-pane](assets/en/Debugging/custom-watch-pane.png)
 
-Puede evaluar toda expresión que pueda mostrarse en forma de texto. This does not cover picture and BLOB fields or variables. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](https://doc.4d.com/4dv19/help/command/en/page555.html).
+Puede evaluar toda expresión que pueda mostrarse en forma de texto. Esto no cubre los campos o variables Imagen y BLOB. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](https://doc.4d.com/4dv19/help/command/en/page555.html).
 
 ### Gestión de expresiones
 
@@ -363,7 +374,7 @@ By default, the program counter line (also called the running line) is highlight
 
 For debugging purposes, you can move the program counter for the method at the top of the call chain (the method currently executing). Para ello, haga clic y arrastre la flecha amarilla a otra línea.
 
-This only tells the debugger to pursue tracing or executing from a different point. It does not execute lines or cancel their execution. Todos los ajustes, campos, variables, etc. actuales no se ven afectados.
+This only tells the debugger to pursue tracing or executing from a different point. No ejecuta líneas ni cancela su ejecución. Todos los ajustes, campos, variables, etc. actuales no se ven afectados.
 
 Por ejemplo:
 
@@ -389,7 +400,7 @@ The contextual menu of the Source Code Pane provides access to several functions
   * *Project methods:* displays method contents in a new window of the Code Editor
   * *Fields:* Displays field properties in the inspector of the Structure window
   * *Tables:* Displays table properties in the inspector of the Structure window
-  * *Forms:* Displays form in the Form editor
+  * *Formularios:* muestra el formulario en el editor de formularios
   * *Variables* (local, process, interprocess or $n parameter): displays the line in the current method or among the compiler methods where the variable is declared
 * **Search References** (also available in Code Editor): Searches all project objects (methods and forms) in which the current element of the method is referenced. The current element is the one selected or the one where the cursor is located. Este puede ser el nombre de un campo, variable, comando, cadena, etc. Search results are displayed in a new standard results window.
 * **Copy**: Standard copy of the selected expression to the pasteboard.

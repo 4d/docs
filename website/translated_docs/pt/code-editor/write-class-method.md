@@ -271,7 +271,7 @@ If the characters typed correspond to different types of objects, the list displ
 
 > For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes** and/or **tables**. These options are found in **Preferences** > **Methods** > **Options**
 
-### Object properties
+### Propriedades dos objectos
 
 4D automatically displays case-sensitive suggestions of all valid object property names in 4D code when you:
 

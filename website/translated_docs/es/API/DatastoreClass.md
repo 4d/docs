@@ -304,7 +304,7 @@ Ver el ejemplo de la función [`.startTransaction()`](#starttransaction).
 
 The `.clearAllRemoteContexts()` function <!-- REF #DataStoreClass.clearAllRemoteContexts().Summary -->clears all the attributes for all the active contexts in the datastore<!-- END REF -->.
 
-This function is mainly used in the context of debugging. One thing to keep in mind is that when you open the debugger, it sends requests to the server and queries all the dataclass attributes to display them. This can overload your contexts with unnecessary data.
+Esta función se utiliza principalmente en el contexto de la depuración. One thing to keep in mind is that when you open the debugger, it sends requests to the server and queries all the dataclass attributes to display them. Esto puede sobrecargar sus contextos con datos innecesarios.
 
 In such cases, you can use `.clearAllRemoteContexts()` to clear your contexts and keep them clean.
 

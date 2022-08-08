@@ -12,6 +12,7 @@ La lista de las principales actualizaciones de esta documentación. For general 
 - Collection functions that can call code now support function objects as *formula* parameter: [`.every()`](API/CollectionClass.md#every), [`.filter()`](API/CollectionClass.md#filter), [`.find()`](API/CollectionClass.md#find), [`.findIndex()`](API/CollectionClass.md#findindex), [`.map()`](API/CollectionClass.md#map), [`.orderByMethod()`](API/CollectionClass.md#orderbymethod), [`.reduce()`](API/CollectionClass.md#reduce), [`.some()`](API/CollectionClass.md#some), [`.sort()`](API/CollectionClass.md#sort)
 - Listbox cells support [horizontal](FormObjects/properties_CoordinatesAndSizing.md#horizontal-padding) and [vertical](FormObjects/properties_CoordinatesAndSizing.md#vertical-padding) padding.
 - 4D View Pro: new [VP CREATE TABLE](ViewPro/method-list.md#vp-create-table) and [VP REMOVE TABLE](ViewPro/method-list.md#vp-remove-table) commands to handle tables in sheets.
+- Ability to see related, computed, and alias attributes in the [Web Data Explorer](Admin/dataExplorer.md#basics).
 - New page explaining [why and how 4D collects data](Admin/data-collect.md).
 
 
@@ -70,23 +71,23 @@ La lista de las principales actualizaciones de esta documentación. For general 
 
 ## 4D v19
 
-- [IMAPTransporter Class](API/IMAPTransporterClass.md): new `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, and `.unsubscribe()` functions.
-- [File Class](API/FileClass.md): new `setAppInfo()` and `getAppInfo()` functions.
-- New [4DEACH](Tags/tags.md#4deach-and-4dendeach) transformation tag.
-- Web Server: new [SameSite session cookie](WebServer/webServerConfig.md#session-cookie-samesite) setting.
-- Dark and light color scheme support for [forms](FormEditor/properties_FormProperties.md#color-scheme) and [style sheets](FormEditor/createStylesheet.md#media-queries)
+- [IMAPTransporter Class](API/IMAPTransporterClass.md): nuevas funciones `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()` y `.unsubscribe()`.
+- [File Class](API/FileClass.md): nuevas funciones `setAppInfo()` y `getAppInfo()`.
+- Nueva etiqueta de transformación [4DEACH](Tags/tags.md#4deach-and-4dendeach).
+- Servidor web: nuevo parámetro [Cookie de sesión SameSite](WebServer/webServerConfig.md#session-cookie-samesite).
+- Soporte de esquema de color oscuro y claro para los [formularios](FormEditor/properties_FormProperties.md#color-scheme) y [hojas de estilo](FormEditor/createStylesheet.md#media-queries)
 - New default dark and light themes in [Code Editor preferences](Preferences/methods.md#theme-list).
-- [Native compilation](Project/compiler.md#compiler-methods-for) for Silicon processors.
-- [Variable calculation](FormObjects/properties_Object.md#variable-calculation) property is now supported by entity selection list box columns.
+- [Compilación nativa](Project/compiler.md#compiler-methods-for) para procesadores Silicon.
+- La propiedad [cálculo de variables](FormObjects/properties_Object.md#variable-calculation) es ahora soportada por las columnas list box de la selección de entidades.
 - Nueva, página [CLI](Admin/cli.md) completa.
 
 
 
 ## 4D v18 R6
 
-- [Entity Selection Class](API/EntitySelectionClass.md): `.average()`, `.max()` and `.min()` functions now return *undefined* if the entity selection is empty.
-- [IMAP Mail](API/IMAPTransporterClass.md), [POP3 Mail](API/POP3TransporterClass.md) and [SMTP Mail](API/SMTPTransporterClass.md): `authenticationMode` property enables OAuth 2.0
-- [IMAP Mail](API/IMAPTransporterClass.md): new `.expunge()` and `.append()` functions
+- [Entity Selection Class](API/EntitySelectionClass.md): las funciones `.average()`, `.max()` y `.min()` ahora devuelven *undefined* si la selección de entidades está vacía.
+- [IMAP Mail](API/IMAPTransporterClass.md), [POP3 Mail](API/POP3TransporterClass.md) y [SMTP Mail](API/SMTPTransporterClass.md): la propiedad `authenticationMode` activa a OAuth 2.0
+- [IMAP Mail](API/IMAPTransporterClass.md): nuevas funciones `.expunge()` y `.append()`
 - Nuevo componente [WebAdmin](Admin/webAdmin.md) del servidor web
 - New [DataExplorer](../Admin/dataExplorer.md) interface
-- New web [user sessions](WebServer/sessions.md) and [their API](API/SessionClass.md).
+- Nuevas [sesiones de usuario](WebServer/sessions.md) web y [su API](API/SessionClass.md).

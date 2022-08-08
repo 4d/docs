@@ -60,7 +60,7 @@ The following table lists the pages of settings found in the **User Settings** a
 | [Page Backup/Periodicidad](../settings/backup.md#scheduler)                               | N/a                                                | Idéntica a las Propiedades estándar                     |
 | [Página Backup/Configuración](../settings/backup.md#configuration)                        | N/a                                                | Idéntica a las Propiedades estándar                     |
 | [Página Backup & Backup y restaurar](../settings/backup.md#backup-restore)                | N/a                                                | Idéntica a las Propiedades estándar                     |
-| [Client-server/Network options page](../settings/client-server.md#network-options)        | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
+| [Página Cliente-Servidor/Opciones red](../settings/client-server.md#network-options)      | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
 | [Página Cliente-Servidor/Configuración IP](../settings/client-server.md#ip-configuration) | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
 | [Página Web/Configuración](../settings/web.md#configuration)                              | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |
 | [Página Web/Opciones (I)](../settings/web.md#options)                                     | Idéntica a las Propiedades estándar                | Idéntica a las Propiedades estándar                     |

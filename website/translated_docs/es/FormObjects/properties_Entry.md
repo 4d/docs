@@ -116,7 +116,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | !_&9(###)!0###-####                    | Número de teléfono de larga distancia. Display underscores in first three entry spaces, zeros in remainder.                                                              |
 | !0&9###-###-###                        | Número de teléfono de larga distancia. Mostrar ceros en los espacios de entrada. Permitir cualquier número. Tres entradas, guión, tres entradas, guión, cuatro entradas. |
 | !0&9###-##-###                         | Número de la Seguridad Social. Mostrar ceros en los espacios de entrada. Permitir cualquier número.                                                                      |
-| ~"A-Z;0-9; ;,;.;-"                     | Uppercase letters and punctuation. Permita sólo letras mayúsculas, números, espacios, comas, puntos y guiones.                                                           |
+| ~"A-Z;0-9; ;,;.;-"                     | Letras mayúsculas y puntuación. Permita sólo letras mayúsculas, números, espacios, comas, puntos y guiones.                                                              |
 | &"a-z;0-9; ;,;.;-"                     | Letras mayúsculas y minúsculas y puntuación. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                                                     |
 | &"0-9;.;-"                             | Números. Sólo se permiten números, puntos decimales y guiones (signo menos).                                                                                             |
 

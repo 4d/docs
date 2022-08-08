@@ -259,7 +259,7 @@ Se utiliza para indicar el número de versión actual de la aplicación generada
 When you check this option, the project directory file is copied to the application directory file at build time.
 
 Cuando ejecute una aplicación de servidor 4D generada:
-* If the server has a data directory file, it is loaded.
+* Si el servidor tiene un archivo de directorio de datos, se carga.
 * If the server does not have a data directory file, the application directory file is loaded.
 
 El archivo de directorio de la aplicación es de sólo lectura. Modifications made to users, groups and permissions during server execution are stored in the data directory file. Si ya no existe ningún archivo de directorio de datos, se creará automáticamente. If the application directory file was embedded, it is duplicated as data directory file.
@@ -310,7 +310,7 @@ The 4D Volume Desktop must correspond to the current platform (which will also b
 
 If you want the client application to connect to the server using a specific address (other than the server name published on the sub-network), you must use the `IPAddress` XML key in the buildapp.4DSettings file. Para más información sobre este archivo, consulte la descripción del comando [`BUILD APPLICATION`](https://doc.4d.com/4dv19/help/command/en/page871.html). También puede implementar mecanismos específicos en caso de fallo de la conexión. También puede implementar mecanismos específicos en caso de fallo de la conexión.
 
-#### Copy of client applications inside the server application
+#### Copia de las aplicaciones clientes en la aplicación servidor
 
 The options of this area set up the mechanism for updating the client part(s) of your client/server applications using the network each time a new version of the application is generated. These options are only enabled when the **Build client application** option is checked.
 

@@ -3,7 +3,7 @@ id: debugger
 title: Débogueur
 ---
 
-Le débogueur est utile lorsque vous devez repérer des erreurs ou surveiller l'exécution de méthodes. It allows you to step through your code slowly and examine the information. Ce processus est appelé le "traçage".
+Le débogueur est utile lorsque vous devez repérer des erreurs ou surveiller l'exécution de méthodes. Il vous permet d'avancer pas à pas dans le code et d'examiner les informations. Ce processus est appelé le "traçage".
 
 ![debugger-window-local](assets/en/Debugging/debugger-window-intro.png)
 
@@ -14,13 +14,13 @@ Il existe plusieurs façons d'afficher le débogueur :
 
 * En cliquant sur le bouton **Trace** dans [la fenêtre des erreurs de syntaxe](basics.md#syntax-error-window)
 * En utilisant la commande [`TRACE`](https://doc.4d.com/4dv19/help/command/en/page157.html)
-* Clicking the **Debug** button in the Execute Method window or selecting **Run and debug...** button in the Code Editor
+* En cliquant sur le bouton **Debug** dans la fenêtre d'exécution de méthode ou en sélectionnant le bouton **Run and debug...** dans l'éditeur de code
 * En utilisant **Alt+Shift+Clic** droit (Windows) ou **Ctrl+Option+Cmd+Clic (macOS)** pendant l'exécution d'une méthode, puis en sélectionnant le processus à suivre dans le menu contextuel :
 
 ![open-debugger](assets/en/Debugging/openDebugger.png)
 
-* Cliquez sur le bouton **Trace** lorsqu'un process est sélectionné dans la page Process de l'Explorateur d'exécution.
-* Adding a break point in the Code Editor window or in the Break and Catch pages of the Runtime Explorer.
+* En cliquant sur le bouton **Trace** lorsqu'un process est sélectionné dans la page Process de l'Explorateur d'exécution.
+* En ajoutant un point d'arrêt dans la fenêtre de l'éditeur de code ou dans les pages Break et Catch de l'explorateur d'exécution.
 
 Lorsqu'il est appelé, la fenêtre du débogueur fournit le nom de la méthode ou de la fonction de classe que vous êtes en train de tracer, ainsi que l'action qui a provoqué l'apparition initiale de la fenêtre du débogueur. Par exemple, dans la fenêtre du débogueur ci-dessus :
 
@@ -30,20 +30,20 @@ Lorsqu'il est appelé, la fenêtre du débogueur fournit le nom de la méthode o
 
 L'affichage d'une nouvelle fenêtre de débogage utilise la même configuration que la dernière fenêtre affichée dans la même session. Si vous exécutez plusieurs process utilisateur, vous pouvez les tracer indépendamment et avoir une fenêtre de débogage ouverte pour chaque process.
 
-La fenêtre du débogueur est généralement affichée sur la machine où le code est exécuté. With a single-user application, it is always displayed on the machine running the application. With a client/server application, it is displayed:
+La fenêtre du débogueur est généralement affichée sur la machine où le code est exécuté. Avec une application mono-utilisateur, elle est toujours affichée sur la machine qui exécute l'application. Avec une application client/serveur, elle est affichée :
 
-- on the remote 4D for code running locally
-- on the server machine for code running on the server (for example, a method with the **execute on server** option).
+- sur le 4D distant pour le code s'exécutant localement
+- sur la machine du serveur pour le code exécuté sur le serveur (par exemple, une méthode avec l'option **Exécuter sur serveur**).
 
-> If the server is running headless, no debugger window can be displayed on the server, you need to use the remote debugger. See [Debugging from remote machines](./debugging-remote.md).
+> Si le serveur fonctionne en mode headless, aucune fenêtre de débogage ne peut être affichée sur le serveur, vous devez utiliser le débogueur distant. Voir [Débogage depuis des machines distantes](./debugging-remote.md).
 
-## Tool bar Buttons
+## Boutons de la barre d'outils
 
-The debugger's tool bar includes several buttons, associated with default shortcuts:
+La barre d'outils du débogueur comprend plusieurs boutons, associés aux raccourcis par défaut :
 
 ![execution-control-toolbar-buttons](assets/en/Debugging/executionToolbarButtons.png)
 
-> Default shortcuts can be customized in the Shortcuts Page of the Preferences dialog box.
+> Les raccourcis par défaut peuvent être personnalisés dans la page Raccourcis de la boîte de dialogue Préférences.
 
 #### Bouton 'Reprendre exécution'
 
@@ -67,13 +67,24 @@ La nouvelle méthode devient la méthode courante (en haut) dans la sous-fenêtr
 
 Lors de l’exécution d’une ligne qui n’appelle pas une autre méthode, ce bouton se comporte comme le bouton **Exécuter pas à pas**.
 
+#### Step Out
+
+If you are tracing subroutines and functions, clicking on this button allows you to execute the entire method currently being traced and to step back to the caller method. The Debugger window is brought back to the previous method in the call chain. If the current method is the last method in the call chain, the Debugger window is closed.
+
+In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the **No Trace** button.
+
+#### Step Into Process
+
+On execution of a line that creates a new process (i.e., calling the `New process` command), this button opens a new Debugger window that allows you to trace the process method of the newly created process. On execution of a line that does not creates a new process, this button acts in the same manner as the **Step Over** button.
+
+
 #### Bouton 'Exécuter et sortir'
 
 La méthode s’arrête et vous retournez là où vous étiez avant son exécution :
 * Si vous tracez une méthode formulaire ou une méthode objet s’exécutant en réponse à un événement, elle s’arrête et vous retournez au formulaire.
 * Si vous tracez une méthode s’exécutant à partir du mode Application, vous retournez à ce mode.
 
-#### Bouton 'Stopper et éditer'
+#### Bouton 'Exécuter et sortir'
 
 
 La méthode s’arrête comme lorsque vous cliquez sur Stopper exécution. The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.

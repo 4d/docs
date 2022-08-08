@@ -67,6 +67,17 @@ title: デバッガー
 
 別のメソッドを呼び出していない行が実行される場合には、このボタンは **次行に進む** ボタンと同じように振る舞います。
 
+#### 呼び出し元に進む
+
+サブルーチンや関数をトレースしている場合にこのボタンをクリックすると、現在トレース中のメソッド全体を実行し、呼び出し元メソッドに戻ることができます。 デバッガーウィンドウは、コールチェーンの一つ前のメソッドに戻ります。 If the current method is the last method in the call chain, the Debugger window is closed.
+
+In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the **No Trace** button.
+
+#### 別プロセスもトレース
+
+On execution of a line that creates a new process (i.e., calling the `New process` command), this button opens a new Debugger window that allows you to trace the process method of the newly created process. On execution of a line that does not creates a new process, this button acts in the same manner as the **Step Over** button.
+
+
 #### 中断
 
 メソッドは中断され、メソッドの実行を開始する前の状態に戻ります。
@@ -81,7 +92,7 @@ title: デバッガー
 
 #### 編集
 
-メソッドは一時停止されます。 コードエディターウィンドウが開いて、編集ボタンがクリックされた時点で実行していたメソッドを表示します。
+メソッドは中断されます。 コードエディターウィンドウが開いて、編集ボタンがクリックされた時点で実行していたメソッドを表示します。
 
 このボタンをクリックしてメソッドを編集した場合には、現在の実行は中断されないため、編集内容の反映は次回実行時になります。
 

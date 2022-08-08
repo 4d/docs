@@ -97,7 +97,7 @@ Los siguientes parámetros se almacenan en la plantilla:
 - Ubicación y contenido de cada lista
 - Ancho relativo de cada lista
 
-To save a Code Editor window as a template, choose **Method** > **Save As Template**. The template is saved immediately (no dialog box appears). It is stored in the **Preferences** of the 4D application. If a previous template already exists, it is replaced.
+To save a Code Editor window as a template, choose **Method** > **Save As Template**. The template is saved immediately (no dialog box appears). It is stored in the **Preferences** of the 4D application. Si ya existe una plantilla anterior, se sustituye.
 
 
 ## Break points area
@@ -120,7 +120,7 @@ The status bar located at the bottom right part of the editor window displays th
 
 ![](assets/en/code-editor/status-bar.png)
 
-- **Ln**: Line number
+- **Ln**: número de línea
 - **Col**: Column number, i.e., the level in the hierarchy of programming structures. El primer nivel es 0. The column number is useful for debugging since this information can be provided by the interpreter in the event of an error in the code.
 - **Ch**: ubicación del caracter en la línea.
 - ![](assets/en/code-editor/show-hide-list.png): Ocultar/mostrar listas.
@@ -326,7 +326,7 @@ Standard keyboard shortcuts to navigate the code are available in 4D's Code Edit
 | [Ctrl]+[Shift]+[flecha izquierda]                   | Reduce the selection, word for word, from the right, or create and enlarge the selection, word by word, from the left                  |
 | [Ctrl]+[flecha derecha]                             | Move the insertion point, word by word, from left to right                                                                             |
 | [Ctrl]+[left arrow]                                 | Move the insertion point, word by word, from right to left                                                                             |
-| [Home]                                              | Place the insertion point at the beginning of the line                                                                                 |
+| [Home]                                              | Colocar el punto de inserción al comienzo de la línea                                                                                  |
 | [End]                                               | Coloca el punto de inserción al final de la línea                                                                                      |
 | [Ctrl]+[Home]                                       | Place the insertion point at the beginning of the method                                                                               |
 | [Ctrl]+[End]                                        | Coloca el punto de inserción al final del método                                                                                       |

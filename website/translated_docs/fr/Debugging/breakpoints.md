@@ -17,7 +17,7 @@ Les points d'arrêt sur commande vous permettent de commencer à tracer l'exécu
 ## Points d'arrêt
 
 
-To create a break point, click in the left margin of the Source Code pane in the debugger or in the Code Editor.
+Pour créer un point d'arrêt, cliquez dans la marge gauche de la fenêtre d'évaluation du code du débogueur ou dans l'éditeur de code.
 
 Dans l'exemple suivant, un point d'arrêt (la puce rouge) a été défini dans le débogueur, sur la ligne `If ($in.dataClass#Null)` :
 
@@ -34,7 +34,7 @@ Vous pouvez modifier le comportement d'un point d'arrêt à l'aide de la fenêtr
 
 ![breakpoint-properties](assets/en/Debugging/breakpoint-properties.png)
 
-This window is available from the Code Editor or the [Source Code Pane](debugger.md#source-code-pane). Vous pouvez :
+Cette fenêtre est disponible depuis l'éditeur de code ou la [fenêtre d'évaluation du code](debugger.md#source-code-pane). Vous pouvez :
 
 - faites un clic droit sur une ligne et sélectionnez **Modifier le point d'arrêt** dans le menu contextuel, ou
 - .`Alt+clic` (Windows) ou `Option+clic` (macOS) dans la marge de gauche.
@@ -44,12 +44,12 @@ Si un point d'arrêt existe déjà, la fenêtre s'affiche pour ce point d'arrêt
 Voici une description des propriétés :
 
 * **Emplacement** : indique le nom de la méthode et le numéro de ligne associés au point d'arrêt.
-* **Break when following expression is true** : Vous pouvez créer des **points d'arrêt conditionnels** en saisissant une formule 4D qui retourne `True` ou `False`. Par exemple, insérez `Records in selection(\[aTable])=0` pour vous assurer que l'arrêt se produit uniquement si aucun enregistrement n'est sélectionné pour la table \[aTable]. Les conditions d'arrêt sont disponibles dans la colonne **Condition** de la [liste des arrêts](#break-list).
-* **Number of times to skip before breaking** : Vous pouvez associer un point d'arrêt à une ligne située dans une boucle (While, Repeat ou For) ou située dans une sous-routine ou une fonction appelée depuis une boucle.
-* **Breakpoint is disabled** : Si vous n'avez actuellement pas besoin d'un point d'arrêt, mais que vous pourriez en avoir besoin plus tard, vous pouvez le désactiver temporairement. Un point d'arrêt désactivé apparaît sous la forme d'un tiret (-) au lieu d'une puce (•)|
+* **Arrêt lorsque l’expression suivante est vraie** : Vous pouvez créer des **points d'arrêt conditionnels** en saisissant une formule 4D qui retourne `Vrai` ou `Faux`. Par exemple, insérez `Records in selection(\[aTable])=0` pour vous assurer que l'arrêt se produit uniquement si aucun enregistrement n'est sélectionné pour la table \[aTable]. Les conditions d'arrêt sont disponibles dans la colonne **Condition** de la [liste des arrêts](#break-list).
+* **Nombre d’occurrences exécutées avant arrêt** : Vous pouvez associer un point d'arrêt à une ligne située dans une boucle (While, Repeat ou For) ou située dans une sous-routine ou une fonction appelée depuis une boucle.
+* **Point d’arrêt désactivé** : Si vous n'avez actuellement pas besoin d'un point d'arrêt, mais que vous pourriez en avoir besoin plus tard, vous pouvez le désactiver temporairement. Un point d'arrêt désactivé apparaît sous la forme d'un tiret (-) au lieu d'une puce (•)|
 
 
-### Points d'arrêt dans le débogage à distance
+### Points d'arrêt dans le débogueur distant
 
 La liste des points d'arrêt est stockée localement. En mode de débogage à distance, si le débogueur connecté est un 4D distant, la liste des points d'arrêt distants remplace temporairement la liste des points d'arrêt du serveur pendant la session de débogage.
 
@@ -57,7 +57,7 @@ La liste de points d'arrêt du serveur est automatiquement restaurée s'il redev
 
 ### Liste des points d'arrêt
 
-The Break list is a page of the Runtime Explorer that lets you manage the breakpoints created in the Debugger Window or in the Code Editor. Pour plus d'informations sur l'Explorateur d'exécution, voir sa page dédiée dans [le manuel de Développement](https://doc.4d.com/4Dv19/4D/19/Runtime-Explorer.200-5416614.en.html).
+La liste des points d'arrêt est une page de l'Explorateur d'exécution qui vous permet de gérer les points d'arrêt créés dans la fenêtre du débogueur ou dans l'éditeur de code. Pour plus d'informations sur l'Explorateur d'exécution, voir sa page dédiée dans [le manuel de Développement](https://doc.4d.com/4Dv19/4D/19/Runtime-Explorer.200-5416614.en.html).
 
 Pour ouvrir la page de la liste des points d'arrêt :
 
@@ -74,10 +74,10 @@ Pour ouvrir la page de la liste des points d'arrêt :
 * Supprimer des points d'arrêt en appuyant sur la touche `Delete` ou `Backspace`, ou en cliquant sur le bouton **Delete** sous la liste.
 * Ouvrez les méthodes où se trouvent les points d'arrêt en doube-cliquant sur n'importe quelle ligne de la liste
 
-Vous ne pouvez pas ajouter de nouveaux points d'arrêt à partir de cette fenêtre. Breakpoints can only be created from within the Debugger window or the Code Editor.
+Vous ne pouvez pas ajouter de nouveaux points d'arrêt à partir de cette fenêtre. Les points d'arrêt ne peuvent être créés qu'à partir de la fenêtre du débogueur ou de l'éditeur de code.
 
 
-## Points d'arrêts sur les commandes
+## Points d'arrêts sur commandes
 
 L'onglet **Catch** de l'Explorateur d'exécution vous permet d'ajouter des points d'arrêt supplémentaires à votre code via des appels aux commandes 4D. Contrairement à un point d'arrêt, qui est situé dans une méthode de projet particulière (et qui déclenche donc une exception de traçage uniquement lorsqu'il est atteint), la portée de la capture d'une commande inclut tous les process qui exécutent le code 4D et appellent cette commande.
 

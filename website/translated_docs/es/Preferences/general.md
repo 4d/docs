@@ -58,7 +58,7 @@ This menu lets you select the color scheme to use for the **4D development** env
 Hay tres opciones disponibles:
 
 *   **According to System Color Scheme Preferences** (default): Use the color scheme defined in the macOS System Preferences.
-*   **Light**: Use the Light Theme
+*   **Claro**: utilizar el tema claro
 *   **Sombra**: utilizar el tema Sombra
 
 > Esta preferencia sólo es compatible en macOS. En Windows, se utiliza siempre el esquema "Light".
@@ -159,6 +159,6 @@ Define dónde buscará 4D las páginas de documentación.
 
 > This option is only taken into account for command documentation access (excluding class functions).
 
-Indica la ubicación de la documentación HTML estática. By default, this is the \Help\Command\language subfolder. Puede ver la ubicación haciendo clic en el menú asociado al área. Si esta subcarpeta no está presente, la ubicación se muestra en rojo.
+Indica la ubicación de la documentación HTML estática. Por defecto, se trata de la subcarpeta \Help\Command\language. Puede ver la ubicación haciendo clic en el menú asociado al área. Si esta subcarpeta no está presente, la ubicación se muestra en rojo.
 
 You can modify this location as desired, for example if you want to display the documentation in a language different from that of the application. The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the **[...]** button next to the entry area and choose a documentation root folder (folder corresponding to the language: `fr`, `en`, `es`, `de` or `ja`). 

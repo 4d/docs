@@ -854,10 +854,13 @@ $b:=$c.every($f;Is real) //$b=false
 <!-- REF collection.extract().Desc -->
 ## .extract()
 
-<details><summary>History</summary>
-|Version|Changes|
+<details><summary>Histórico</summary>
 
-|---|---| |v16 R6|Added| </details>
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v16 R6 | Adicionado |
+
+</details>
 
 
 <!-- REF #collection.extract().Syntax --> *$1.result* (boolean): **true** se *$1.value < $1.value2*, **false** do contrário<!-- END REF -->
