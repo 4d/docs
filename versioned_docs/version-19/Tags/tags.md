@@ -1,5 +1,6 @@
 ---
 id: tags
+slug: tags
 title: Transformation tags
 ---
 

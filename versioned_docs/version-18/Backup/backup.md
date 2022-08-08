@@ -1,5 +1,6 @@
 ---
 id: backup
+slug: backup
 title: Backup
 ---
 
