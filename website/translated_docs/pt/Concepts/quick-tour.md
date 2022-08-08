@@ -160,7 +160,7 @@ You can also use a string within square brackets, for example:
 $vName:=employee["name"]
 ```
 
-Since an object property value can be an object or a collection, object notation accepts a sequence of symbols to access sub-properties, for example:
+Uma vez que um valor de propriedade de objeto pode ser um objeto ou uma coleção, a notação de objeto aceita uma sequência de símbolos para acessar subpropriedades, por exemplo:
 
 ```4d
 $vAge:=employee.children[2].age
@@ -260,7 +260,7 @@ $myVar:="Hello" //assign "Hello" to myVar
 In general, expressions that use an operator are non-assignable. For example, `[Person]FirstName+" "+[Person]LastName` is not assignable.
 
 
-## Pointers
+## Ponteiro
 
 The 4D language provides an advanced implementation of pointers, that allow writing powerful and modular code. You can use pointers to reference tables, fields, variables, arrays, and array elements.
 

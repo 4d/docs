@@ -154,9 +154,9 @@ Una lista de palabras separadas por espacios que se utilizan como selectores de 
 
 #### Gramática JSON
 
-| Nombre | Tipos de datos | Valores posibles                                          |
-| ------ | -------------- | --------------------------------------------------------- |
-| class  | cadena         | One string with CSS name(s) separated by space characters |
+| Nombre | Tipos de datos | Valores posibles                                                          |
+| ------ | -------------- | ------------------------------------------------------------------------- |
+| class  | cadena         | Una cadena con los nombres de los CSS separados por caracteres de espacio |
 
 
 #### Objetos soportados
