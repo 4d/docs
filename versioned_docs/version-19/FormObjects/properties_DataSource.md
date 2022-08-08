@@ -2,7 +2,7 @@
 id: propertiesDataSource
 title: Data Source 
 ---
----
+
 
 ## Automatic Insertion
 

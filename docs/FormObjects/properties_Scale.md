@@ -2,10 +2,10 @@
 id: propertiesScale
 title: Scale
 ---
----
+
 ## Barber shop
 
-Enables the "barber shop" variant for the thermometer. 
+Enables the "barber shop" variant for the thermometer.
 
 #### JSON Grammar
 
@@ -17,9 +17,8 @@ Enables the "barber shop" variant for the thermometer.
 
 [Barber shop](progressIndicator.md#barber-shop)
 
-
-
 ---
+
 ## Display graduation
 
 Displays/Hides the graduations next to the labels.
@@ -32,14 +31,13 @@ Displays/Hides the graduations next to the labels.
 
 #### Objects Supported
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) 
-
-
+[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
 
 ---
+
 ## Graduation step
 
-Scale display measurement.	
+Scale display measurement. 
 
 #### JSON Grammar
 
@@ -47,14 +45,12 @@ Scale display measurement.
 |:---:|:---:|---|
 |graduationStep| integer|minimum: 0|
 
-
 #### Objects Supported
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) 
-
-
+[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
 
 ---
+
 ## Label Location
 
 Specifies the location of an object's displayed text.
@@ -73,15 +69,14 @@ Specifies the location of an object's displayed text.
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
 
-
-
 ---
+
 ## Maximum
 
-Maximum value of an indicator. 
+Maximum value of an indicator.
 
-- For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
-- To enable [Barber shop thermometers](progressIndicator.md#barber-shop), this property must be omitted. 
+* For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
+* To enable [Barber shop thermometers](progressIndicator.md#barber-shop), this property must be omitted.
 
 #### JSON Grammar
 
@@ -93,9 +88,8 @@ Maximum value of an indicator.
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
 
-
-
 ---
+
 ## Minimum
 
 Minimum value of an indicator. For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
@@ -110,10 +104,8 @@ Minimum value of an indicator. For numeric steppers, this property represent sec
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
 
-
-
-
 ---
+
 ## Step
 
 Minimum interval accepted between values during use. For numeric steppers, this property represents seconds when the object is associated with a time type value and days when it is associated with a date type value.
@@ -124,13 +116,6 @@ Minimum interval accepted between values during use. For numeric steppers, this 
 |:---:|:---:|---|
 |step| integer|minimum: 1|
 
-
 #### Objects Supported
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
-
-
-
-
-
-

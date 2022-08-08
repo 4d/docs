@@ -2,7 +2,7 @@
 id: propertiesCoordinatesAndSizing
 title: Coordinates & Sizing
 ---
----
+
 
 ## Automatic Row Height
 

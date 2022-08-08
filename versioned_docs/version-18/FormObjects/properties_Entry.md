@@ -2,7 +2,7 @@
 id: propertiesEntry
 title: Entry
 ---
----
+
 
 ## Auto Spellcheck
 

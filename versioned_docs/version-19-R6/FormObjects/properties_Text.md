@@ -2,7 +2,7 @@
 id: propertiesText
 title: Text 
 ---
----
+
 
 ## Allow font/color picker
 

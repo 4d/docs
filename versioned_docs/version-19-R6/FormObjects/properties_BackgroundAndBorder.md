@@ -2,7 +2,7 @@
 id: propertiesBackgroundAndBorder
 title: Background and Border
 ---
----
+
 
 ## Alternate Background Color
 

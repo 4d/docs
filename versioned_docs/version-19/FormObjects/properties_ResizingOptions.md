@@ -2,7 +2,7 @@
 id: propertiesResizingOptions
 title: Resizing Options 
 ---
----
+
 
 ## Column Auto-Resizing
 

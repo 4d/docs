@@ -2,7 +2,7 @@
 id: propertiesHelp
 title: Help
 ---
----
+
 
 ## Help Tip
 

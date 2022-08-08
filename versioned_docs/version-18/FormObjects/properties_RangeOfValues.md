@@ -2,12 +2,13 @@
 id: propertiesRangeOfValues
 title: Range of Values
 ---
----
+
 ## Default value
 
 You can assign a default value to be entered in an input object. This property is useful for example when the input [data source](properties_Object.md#variable-or-expression) is a field: the default value is entered when a new record is first displayed. You can change the value unless the input area has been defined as [non-enterable](properties_Entry.md#enterable).
 
 The default value can only be used if the [data source type](properties_Object.md#expression-type) is:
+
 - text/string
 - number/integer
 - date
@@ -16,7 +17,7 @@ The default value can only be used if the [data source type](properties_Object.m
 
 4D provides stamps for generating default values for the date, time, and sequence number. The date and time are taken from the system date and time. 4D automatically generates any sequence numbers needed. The table below shows the stamp to use to generate default values automatically:
 
-|Stamp|	Meaning|
+|Stamp| Meaning|
 |---|---|
 |#D|Current date|
 |#H|Current time|
@@ -36,8 +37,6 @@ You can use a sequence number to create a unique number for each record in the t
 
 [Input](input_overview.md)
 
-
-
 ---
 
 ## Excluded List
@@ -55,8 +54,6 @@ Allows setting a list whose values cannot be entered in the object. If an exclud
 #### Objects Supported
 
 [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
-
-
 
 ---
 

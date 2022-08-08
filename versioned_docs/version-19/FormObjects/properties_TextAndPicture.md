@@ -2,7 +2,7 @@
 id: propertiesTextAndPicture
 title: Text and Picture 
 ---
----
+
 
 ## Background pathname
 

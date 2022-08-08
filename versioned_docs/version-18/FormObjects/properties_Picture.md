@@ -2,7 +2,7 @@
 id: propertiesPicture
 title: Picture
 ---
----
+
 
 ## Pathname
 
