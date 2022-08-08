@@ -40,6 +40,10 @@
   color: white;
 }
 
+.navbar a:hover {
+  color: white;
+}
+
 .navbar .dsla-search-field svg {
   color: #807ea3;
 }
