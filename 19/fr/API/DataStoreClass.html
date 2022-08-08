@@ -336,7 +336,7 @@
 
  <span class="hljs-variable">$status</span>:=ds.<span class="hljs-function">encryptionStatus</span>()<span class="hljs-keyword">
 
- If</span>(<span class="hljs-variable">$status</span>.isEncrypted) <span class="hljs-comment">//the database is encrypted</span>
+ If</span>(<span class="hljs-variable">$status</span>.isEncrypted) <span class="hljs-comment">//la base est chiffrée</span>
 <span class="hljs-function">    C_LONGINT</span>(<span class="hljs-variable">$vcount</span>)
 <span class="hljs-function">    C_TEXT</span>(<span class="hljs-variable">$tabName</span>)<span class="hljs-keyword">
     For each</span>(<span class="hljs-variable">$tabName</span>;<span class="hljs-variable">$status</span>.tables)<span class="hljs-keyword">

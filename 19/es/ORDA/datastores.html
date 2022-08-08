@@ -103,7 +103,7 @@
 <li>Classic 4D language commands (<code>START TRANSACTION</code>, <code>VALIDATE TRANSACTION</code>, <code>CANCEL TRANSACTION</code>) only apply to the main datastore (returned by <code>ds</code>). If an entity from a remote datastore is hold by a transaction in a process, other processes cannot update it, even if these processes share the same session.</li>
 <li>Locks on entities are removed and transactions are rollbacked:
 <ul>
-<li>when the process is killed.</li>
+<li>cuando el proceso es eliminado.</li>
 <li>cuando la sesión se cierra en el servidor</li>
 <li>cuando la sesión es terminada desde la ventana de administración del servidor.</li>
 </ul></li>

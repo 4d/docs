@@ -70,32 +70,32 @@
 <ul>
 <li>Campo real, variável ou expressão. O intervalo para o tipo de dados Real é de ±1,7e±308 (13 dígitos significativos).</li>
 <li>Campo Inteiro Longo, variável ou expressão. O intervalo para o tipo de dados Long Integer (4-byte Integer) é -2^31...(2^31)-1.</li>
-<li>Campo inteiro, array ou expressão. The range for the Integer data type (2-byte Integer) is -32,768..32,767 (2^15..(2^15)-1).</li>
+<li>Campo inteiro, array ou expressão. O intervalo para o tipo de dados Integer (Inteiro 2 bytes) é -32.768...32.767(2^15...(2^25)-1).</li>
 </ul>
-<p><strong>Note:</strong> Integer field values are automatically converted in Long integers when used in the 4D Language.</p>
-<p>You can assign any Number data type to another; 4D does the conversion, truncating or rounding if necessary. However, when values are out of range, the conversion will not return a valid value. You can mix Number data types in expressions.</p>
-<p><strong>Note:</strong> In the 4D Language Reference manual, no matter the actual data type, the Real, Integer, and Long Integer parameters in command descriptions are denoted as number, except when marked otherwise.</p>
-<h2><a class="anchor" aria-hidden="true" id="number-literals"></a><a href="#number-literals" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Number literals</h2>
-<p>A numeric literal constant is written as a real number. Here are some examples of numeric constants:</p>
+<p><strong>Nota:</strong> Valores de campo inteiro são automaticamente convertidos em inteiros longos quando usados na linguagem 4D.</p>
+<p>Pode atribuir qualquer tipo de dados Number a outro; 4D faz a conversão, truncagem ou arredondamento, se necessário. No entanto, quando os valores estiverem fora do intervalo, a conversão não retornará um valor válido. Pode misturar tipos de dados numéricos em expressões.</p>
+<p><strong>Nota:</strong> No manual de Referência de Idioma 4D, não importa o tipo de dado real, a Real, Inteiro, e parâmetros longos de números inteiros nas descrições de comandos são indicados como número, exceto quando marcados de outra forma.</p>
+<h2><a class="anchor" aria-hidden="true" id="números-literais"></a><a href="#números-literais" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Números literais</h2>
+<p>Uma constante literal numérica é escrita como um número real. Aqui estão alguns exemplos de constantes numéricas:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-number">27</span>
 <span class="hljs-number">123.76</span>
 <span class="hljs-number">0.0076</span>
 </code></pre>
 <blockquote>
-<p>The default decimal separator is a period (.), regardless of the system language. If you have checked the &quot;Use regional system settings&quot; option in the Methods Page of the Preferences, you must use the separator defined in your system.</p>
+<p>O separador decimal padrão é um ponto (.), independente do idioma do sistema. Se você marcou a opção &quot;Usar configurações regionais do sistema&quot; na Página de Métodos das Preferências, você deve usar o separador definido no seu sistema.</p>
 </blockquote>
-<p>Negative numbers are specified with the minus sign (-). Por exemplo:</p>
+<p>Números negativos são especificados com o sinal de menos (-). Por exemplo:</p>
 <pre><code class="hljs css language-4d"><span class="hljs-number">-27</span>
 <span class="hljs-number">-123.76</span>
 <span class="hljs-number">-0.0076</span>
 </code></pre>
-<h2><a class="anchor" aria-hidden="true" id="number-operators"></a><a href="#number-operators" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Number operators</h2>
+<h2><a class="anchor" aria-hidden="true" id="operadores-de-números"></a><a href="#operadores-de-números" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Operadores de números</h2>
 <table>
 <thead>
 <tr><th>Operação</th><th>Sintaxe</th><th>Retorna</th><th>Expressão</th><th>Value</th></tr>
 </thead>
 <tbody>
-<tr><td>Addition</td><td>Number + Number</td><td>Número</td><td>2 + 3</td><td>5</td></tr>
+<tr><td>Addition</td><td>Número + Número</td><td>Número</td><td>2 + 3</td><td>5</td></tr>
 <tr><td>Subtração</td><td>Número - Número</td><td>Número</td><td>3 – 2</td><td>1</td></tr>
 <tr><td>Multiplicação</td><td>Número * Número</td><td>Número</td><td>5 * 2</td><td>10</td></tr>
 <tr><td>Division</td><td>Número / Número</td><td>Número</td><td>5 / 2</td><td>2.5</td></tr>
@@ -138,13 +138,13 @@
 <p>retorna 23 porque a expressão (4 * 5) é avaliada em primeiro lugar, por causa dos parênteses. O resultado é 20, que é depois adicionado a 3 para o resultado final de 23.</p>
 <p>Os parênteses podem ser aninhados dentro de outros conjuntos de parênteses. Certifique-se de que cada parêntese esquerdo tem um parêntese direito correspondente para assegurar uma avaliação adequada das expressões. A falta ou utilização incorrecta de parênteses pode causar resultados inesperados ou expressões inválidas. Além disso, se pretende compilar as suas candidaturas, deve ter parênteses correspondentes - o compilador detecta um parêntese em falta como um erro de sintaxe.</p>
 <h2><a class="anchor" aria-hidden="true" id="operadores-bitwise"></a><a href="#operadores-bitwise" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Operadores Bitwise</h2>
-<p>The bitwise operators operates on <strong>Long Integer</strong> expressions or values.</p>
+<p>Os operadores bitwise operam em <strong>Long Integer</strong> expressões ou valores.</p>
 <blockquote>
-<p>If you pass an Integer or a Real value to a bitwise operator, 4D evaluates the value as a Long Integer value before calculating the expression that uses the bitwise operator.</p>
+<p>Se passar um valor Inteiro ou Real a um operador bitwise, 4D avalia o valor como um valor Long Integer antes de calcular a expressão que utiliza o operador bitwise.</p>
 </blockquote>
-<p>While using the bitwise operators, you must think about a Long Integer value as an array of 32 bits. The bits are numbered from 0 to 31, from right to left.</p>
-<p>Because each bit can equal 0 or 1, you can also think about a Long Integer value as a value where you can store 32 Boolean values. A bit equal to 1 means <strong>True</strong> and a bit equal to 0 means <strong>False</strong>.</p>
-<p>An expression that uses a bitwise operator returns a Long Integer value, except for the Bit Test operator, where the expression returns a Boolean value. The following table lists the bitwise operators and their syntax:</p>
+<p>Ao utilizar os operadores bitwise, deve pensar num valor Long Integer como um array de 32 bits. Os bits são numerados de 0 a 31, da direita para a esquerda.</p>
+<p>Já que cada bit pode ser igual a 0 ou 1, também se pode pensar num valor Long Integer como um valor onde se pode armazenar 32 valores booleanos. Um bit igual a 1 significa <strong>True</strong> e um bit igual a 0 significa <strong>False</strong>.</p>
+<p>Uma expressão que utilizar um operador Bitwise retorna um valor Long Integer, exceto para o operador Bit Test, onde a expressão retorna um valor Booleano. A tabela a seguir lista os operadores bitwise e sua sintaxe:</p>
 <table>
 <thead>
 <tr><th>Operação</th><th>Operator</th><th>Sintaxe</th><th>Retorna</th></tr>
@@ -152,33 +152,33 @@
 <tbody>
 <tr><td>Bitwise AND</td><td>&amp;</td><td>Long &amp; Long</td><td>Long</td></tr>
 <tr><td>Bitwise OR (inclusive)</td><td>|</td><td>Long | Long</td><td>Long</td></tr>
-<tr><td>Bitwise OR (exclusive)</td><td>^|</td><td>Long ^| E. long</td><td>Long</td></tr>
-<tr><td>Left Bit Shift</td><td>&lt;&lt;</td><td>Long &lt;&lt; Long</td><td>Long (see note 1)</td></tr>
-<tr><td>Right Bit Shift</td><td>&gt;&gt;</td><td>Long &gt;&gt; Long</td><td>Long (see note 1)</td></tr>
-<tr><td>Bit Set</td><td>?+</td><td>Long ?+ Long</td><td>Long (see note 2)</td></tr>
-<tr><td>Bit Clear</td><td>?-</td><td>Long ?- Long</td><td>Long (see note 2)</td></tr>
-<tr><td>Bit Test</td><td>??</td><td>Long ?? Long</td><td>Boolean (see note 2)</td></tr>
+<tr><td>Bitwise OR (exclusivo)</td><td>^|</td><td>Long ^| E. long</td><td>Long</td></tr>
+<tr><td>Left Bit Shift</td><td>&lt;&lt;</td><td>Long &lt;&lt; Long</td><td>Long (ver nota 1)</td></tr>
+<tr><td>Right Bit Shift</td><td>&gt;&gt;</td><td>Long &gt;&gt; Long</td><td>Long (ver nota 1)</td></tr>
+<tr><td>Bit Set</td><td>?+</td><td>Long ?+ Long</td><td>Long (ver nota 2)</td></tr>
+<tr><td>Bit Clear</td><td>?-</td><td>Long ?- Long</td><td>Long (ver nota 2)</td></tr>
+<tr><td>Bit Test</td><td>??</td><td>Long ?? Long</td><td>Boolean (ver nota 2)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="notas"></a><a href="#notas" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Notas</h4>
 <ol>
-<li>For the <code>Left Bit Shift</code> and <code>Right Bit Shift</code> operations, the second operand indicates the number of positions by which the bits of the first operand will be shifted in the resulting value. Therefore, this second operand should be between 0 and 31. Note however, that shifting by 0 returns an unchanged value and shifting by more than 31 bits returns 0x00000000 because all the bits are lost. If you pass another value as second operand, the result is non-significant.</li>
-<li>For the <code>Bit Set</code>, <code>Bit Clear</code> and <code>Bit Test</code> operations , the second operand indicates the number of the bit on which to act. Therefore, this second operand must be between 0 and 31; otherwise, the result of the expression is non-significant.</li>
+<li>Para as operações <code>Left Bit Shift</code> e <code>Right Bit Shift</code> , o segundo operador indica o número de posições pelas quais os bits do primeiro operador serão deslocados no valor resultante. Portanto, este segundo operador deve estar entre 0 e 31. Note-se, no entanto, que o deslocamento por 0 retorna um valor inalterado e o deslocamento por mais de 31 bits retorna 0x00000000 porque todos os bits são perdidos. Se passar outro valor como segundo operando, o resultado não é significativo.</li>
+<li>Para o conjunto de bits ``, <code>Bit Clear</code> e <code>Bit Test</code> operações , o segundo operando indica o número do bit sobre o qual se deve agir. Portanto, este segundo operador deve situar-se entre 0 e 31; caso contrário, o resultado da expressão não é significativo.</li>
 </ol>
-<p>The following table lists the bitwise operators and their effects:</p>
+<p>O quadro seguinte lista os operadores bitwise e os seus efeitos:</p>
 <table>
 <thead>
 <tr><th>Operação</th><th>Descrição</th></tr>
 </thead>
 <tbody>
-<tr><td>Bitwise AND</td><td>Each resulting bit is the logical AND of the bits in the two operands. <p>Here is the logical AND table:<li>1 &amp; 1 --&gt; 1<li>0 &amp; 1 --&gt; 0<li>1 &amp; 0 --&gt; 0<li>0 &amp; 0 --&gt; 0<p>In other words, the resulting bit is 1 if the two operand bits are 1; otherwise the resulting bit is 0.</td></tr>
-<tr><td>Bitwise OR (inclusive)</td><td>Each resulting bit is the logical OR of the bits in the two operands.<p>Here is the logical OR table:<li>1 | 1 --&gt; 1<li>0 | 1 --&gt; 1<li>1 | 0 --&gt; 1<li>0 | 0 --&gt; 0<p>In other words, the resulting bit is 1 if at least one of the two operand bits is 1; otherwise the resulting bit is 0.</td></tr>
-<tr><td>Bitwise OR (exclusive)</td><td>Each resulting bit is the logical XOR of the bits in the two operands.<p>Here is the logical XOR table:<li>1 ^| 1 --&gt; 0<li>0 ^| 1 --&gt; 1<li>1 ^| 0 --&gt; 1<li>0 ^| 0 --&gt; 0<p>In other words, the resulting bit is 1 if only one of the two operand bits is 1; otherwise the resulting bit is 0.</td></tr>
-<tr><td>Left Bit Shift</td><td>The resulting value is set to the first operand value, then the resulting bits are shifted to the left by the number of positions indicated by the second operand. The bits on the left are lost and the new bits on the right are set to 0. <p><strong>Note:</strong> Taking into account only positive values, shifting to the left by N bits is the same as multiplying by 2^N.</td></tr>
-<tr><td>Right Bit Shift</td><td>The resulting value is set to the first operand value, then the resulting bits are shifted to the right by the number of position indicated by the second operand. The bits on the right are lost and the new bits on the left are set to 0.<p><strong>Note:</strong> Taking into account only positive values, shifting to the right by N bits is the same as dividing by 2^N.</td></tr>
-<tr><td>Bit Set</td><td>The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 1. The other bits are left unchanged.</td></tr>
-<tr><td>Bit Clear</td><td>The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 0. The other bits are left unchanged.</td></tr>
-<tr><td>Bit Test</td><td>Returns True if, in the first operand, the bit whose number is indicated by the second operand is equal to 1. Returns False if, in the first operand, the bit whose number is indicated by the second operand is equal to 0.</td></tr>
+<tr><td>Bitwise AND</td><td>Cada bit resultante é o E lógico dos bits nos dois operandos. <p>Aqui está a tabela lógica AND:<li>1 &amp; 1 --&gt; 1<li>0 &amp; 1 --&gt; 0<li>1 &amp; 0 --&gt; 0<li>0 &amp; 0 --&gt; 0<p>Por outras palavras, o bit resultante é 1 se os dois bits do operando forem 1; caso contrário, o bit resultante é 0.</td></tr>
+<tr><td>Bitwise OR (inclusive)</td><td>Cada bit resultante é o OU lógico dos bits nos dois operandos.<p>Aqui está a tabela lógica OR:<li>1 | 1 --&gt; 1<li>0 | 1 --&gt; 1<li>1 | 0 --&gt; 1<li>0 | 0 --&gt; 0<p>Por outras palavras, o bit resultante é 1 se pelo menos um dos dois cobres for 1; caso contrário, o bit resultante é 0.</td></tr>
+<tr><td>Bitwise OR (exclusivo)</td><td>Cada bit resultante é o XOR lógico dos bits nos dois operandos.<p>Aqui está a tabela lógica XOR:<li>1 ^| 1 --&gt; 0<li>0 ^| 1 --&gt; 1<li>1 ^| 0 --&gt; 1<li>0 ^| 0 --&gt; 0<p>Em outras palavras, o bit resultante é 1 se apenas um dos dois operandos for 1; caso contrário, o bit resultante é 0.</td></tr>
+<tr><td>Left Bit Shift</td><td>O valor resultante é definido para o primeiro operando, depois os bits resultantes são deslocados para a esquerda pelo número de posições indicado pelo segundo operando. Os bits à esquerda são perdidos e os novos bits à direita são estabelecidos como 0. <p><strong>Nota:</strong> Levar em consideração apenas valores positivos e deslocar para a esquerda por N bits é o mesmo que multiplicar por 2^N.</td></tr>
+<tr><td>Right Bit Shift</td><td>O valor resultante é definido para o primeiro operando, depois os bits resultantes são deslocados para a esquerda pelo número de posições indicado pelo segundo operando. Os bits à direita são perdidos e os novos bits à esquerda são estabelecidos como 0.<p><strong>Nota:</strong> Levar em consideração apenas valores positivos e deslocar para a direita por N bits é o mesmo que dividir por 2^N.</td></tr>
+<tr><td>Bit Set</td><td>O valor resultante é definido para o primeiro operando, depois o bit resultante, cujo número é indicado pelo segundo operando, é definido para 1. As outras partes são deixadas inalteradas.</td></tr>
+<tr><td>Bit Clear</td><td>O valor resultante é definido para o primeiro operando, depois o bit resultante, cujo número é indicado pelo segundo operando, é definido para 0. As outras partes são deixadas inalteradas.</td></tr>
+<tr><td>Bit Test</td><td>Retorna Verdadeiro se, no primeiro operando, o bit cujo número é indicado pelo segundo operando for igual a 1. Retorna Falso se, no primeiro operando, o bit cujo número é indicado pelo segundo operando for igual a 0.</td></tr>
 </tbody>
 </table>
 <h3><a class="anchor" aria-hidden="true" id="exemplos"></a><a href="#exemplos" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemplos</h3>
@@ -189,7 +189,7 @@
 <tbody>
 <tr><td>Bitwise AND</td><td>0x0000FFFF &amp; 0xFF00FF00</td><td>0x0000FF00</td></tr>
 <tr><td>Bitwise OR (inclusive)</td><td>0x0000FFFF | 0xFF00FF00</td><td>0xFF00FFFF</td></tr>
-<tr><td>Bitwise OR (exclusive)</td><td>0x0000FFFF ^| 0xFF00FF00</td><td>0xFF0000FF</td></tr>
+<tr><td>Bitwise OR (exclusivo)</td><td>0x0000FFFF ^| 0xFF00FF00</td><td>0xFF0000FF</td></tr>
 <tr><td>Left Bit Shift</td><td>0x0000FFFF &lt;&lt; 8</td><td>0x00FFFF00</td></tr>
 <tr><td>Right Bit Shift</td><td>0x0000FFFF &gt;&gt; 8</td><td>0x000000FF</td></tr>
 <tr><td>Bit Set</td><td>0x00000000 ?+ 16</td><td>0x00010000</td></tr>
@@ -197,7 +197,7 @@
 <tr><td>Bit Test</td><td>0x00010000 ?? 16</td><td>True</td></tr>
 </tbody>
 </table>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/19/pt/Concepts/null-undefined.html"><span class="arrow-prev">← </span><span>Null e indefinido</span></a><a class="docs-next button" href="/docs/19/pt/Concepts/object.html"><span>Objeto</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#number-literals">Number literals</a></li><li><a href="#number-operators">Number operators</a><ul class="toc-headings"><li><a href="#precedência">Precedência</a></li></ul></li><li><a href="#operadores-bitwise">Operadores Bitwise</a><ul class="toc-headings"><li><a href="#exemplos">Exemplos</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/19/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/docs/19/pt/Concepts/null-undefined.html"><span class="arrow-prev">← </span><span>Null e indefinido</span></a><a class="docs-next button" href="/docs/19/pt/Concepts/object.html"><span>Objeto</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#números-literais">Números literais</a></li><li><a href="#operadores-de-números">Operadores de números</a><ul class="toc-headings"><li><a href="#precedência">Precedência</a></li></ul></li><li><a href="#operadores-bitwise">Operadores Bitwise</a><ul class="toc-headings"><li><a href="#exemplos">Exemplos</a></li></ul></li></ul></nav></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="https://www.4d.com" class="nav-home"><img src="/docs/19/img/logohome.png" alt="4D Documentation"/></a><div><h5>Community</h5><a href="https://developer.4D.com">4D Developer Center</a><a href="https://blog.4d.com/">4D Blog</a><a href="https://discuss.4d.com">4D Forum</a><a href="https://www.facebook.com/4Dsoftware/">Facebook</a><a href="https://twitter.com/4Dsoftware">Twitter</a><a href="https://www.youtube.com/user/4Dsoftware">Youtube</a><a href="https://github.com/4D/">GitHub</a></div><div><h5>Support</h5><a href="https://doc.4d.com/">4D Doc Center <i>(Where It All Began)</i></a><a href="http://kb.4d.com/">Knowledge Base</a><a href="https://us.4d.com/product-download">Downloads</a><a href="https://us.4d.com/resources">Resources</a><a href="https://us.4d.com/4d-technical-support">Get Support</a></div><div><h5>Company</h5><a href="https://us.4d.com/about-us">About 4D</a><a href="https://us.4d.com/contact-us">Contact us</a><a href="https://us.4d.com/4d-around-the-world">4D around the world</a><a href="https://us.4d.com/careers">Careers</a></div></section><section class="copyright">© 2022 4D SAS - All rights reserved</section><section class="copyright"><a class="cp2" href="https://us.4d.com/terms-and-conditions">Terms &amp; Conditions</a> | <a class="cp2" href="https://us.4d.com/legal-notices">Legal Notices</a> | <a class="cp2" href="https://us.4d.com/data-policy">Data Policy</a> | <a class="cp2" href="https://us.4d.com/cookies-policy">Cookie Policy</a> | <a class="cp2" href="https://us.4d.com/license-0">Product license</a></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;

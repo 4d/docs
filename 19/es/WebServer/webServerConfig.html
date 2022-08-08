@@ -426,7 +426,7 @@
 <tr><td>Caja de diálogo de parámetros</td><td>Options (I) page/Automatic Session Management</td><td></td></tr>
 </tbody>
 </table>
-<p>Session management enabling status for the 4D web server. Session mechanism is described in the <a href="/docs/19/es/WebServer/sessions.html">Session Management</a> section.</p>
+<p>Estado de la gestión de sesión para el servidor web 4D. Session mechanism is described in the <a href="/docs/19/es/WebServer/sessions.html">Session Management</a> section.</p>
 <p>True por defecto (activado).</p>
 <blockquote>
 <p>Cuando esta opción está marcada, la opción &quot;Reutilización de los contextos temporales&quot; se marca automáticamente (y se bloquea).</p>
@@ -496,7 +496,7 @@
 </tbody>
 </table>
 <p>Número máximo de sesiones simultáneas. When you reach the limit set, the oldest session is closed (and <code>On Web Close Process</code> database method is called) if the Web server needs to create a new one. The number of simultaneous sessions cannot exceed the <a href="#maximum-concurrent-web-processes">maximum number of Web processes</a> (100 by default).</p>
-<p>Default value: 100 (pass 0 to restore the default value).</p>
+<p>Valor por defecto: 100 (pase 0 para restaurar el valor por defecto).</p>
 <h2><a class="anchor" aria-hidden="true" id="versión-tls-mínima"></a><a href="#versión-tls-mínima" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Versión TLS mínima</h2>
 <table>
 <thead>
@@ -670,7 +670,7 @@
 <p>The following settings are still supported but rely on deprecated features or technologies. Generalmente se recomienda mantener los valores por defecto.</p>
 <h4><a class="anchor" aria-hidden="true" id="permitir-el-acceso-a-la-base-de-datos-a-través-de-las-url-4dsync"></a><a href="#permitir-el-acceso-a-la-base-de-datos-a-través-de-las-url-4dsync" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Permitir el acceso a la base de datos a través de las URL 4DSYNC</h4>
 <p>This option controls the support of HTTP synchronization requests containing deprecated <em>/4DSYNC</em> URLs.</p>
-<h4><a class="anchor" aria-hidden="true" id="session-ip-address-validation"></a><a href="#session-ip-address-validation" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Session IP Address Validation</h4>
+<h4><a class="anchor" aria-hidden="true" id="validación-de-la-dirección-ip-de-la-sesión"></a><a href="#validación-de-la-dirección-ip-de-la-sesión" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Validación de la dirección IP de la sesión</h4>
 <blockquote>
 <p>This option is not not available in <a href="/docs/19/es/WebServer/sessions.html">scalable sessions mode</a> (there is no validation).</p>
 </blockquote>
