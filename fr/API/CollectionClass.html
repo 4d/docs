@@ -96,39 +96,81 @@
 <tr><td><a href="#countvalues"> <strong>.countValues</strong>( <em>value</em> : any {; <em>propertyPath</em> : Text } ) : Real</a><p>    retourne le nombre d'occurrences de value dans la collection</td></tr>
 <tr><td><a href="#distinct"> <strong>.distinct</strong>( {<em>option</em> : Integer} ) : Collection<br><strong>.distinct</strong>( <em>propertyPath</em> : Text {; <em>option</em> : Integer } ) : Collection</a><p>    </td></tr>
 <tr><td><a href="#equal"> <strong>.equal</strong>( <em>collection2</em> : Collection {; <em>option</em> : Integer } ) : Boolean</a><p>    compare la collection avec collection2</td></tr>
-<tr><td><a href="#every"> <strong>.every</strong>( { <em>startFrom</em> : Integer ; } <em>formula</em> : 4D.Function { ;<em>...param</em> : any } ) : Boolean<br><strong>.every</strong>( { <em>startFrom</em> : Integer ; } <em>methodName</em> : Text { ;<em>...param</em> : any } ) : Boolean</a><p>    returns <strong>true</strong> if all elements in the collection successfully passed a test implemented in the provided <em>formula</em> object or <em>methodName</em> name</td></tr>
+<tr><td><a href="#every"> <strong>.every</strong>( { <em>startFrom</em> : Integer ; } <em>formula</em> : 4D.Function { ;<em>...param</em> : any } ) : Boolean<br><strong>.every</strong>( { <em>startFrom</em> : Integer ; } <em>methodName</em> : Text { ;<em>...param</em> : any } ) : Boolean</a><p>    retourne <strong>vrai</strong> si tous les éléments de la collection ont été évalués à vrai par le test implémenté dans l'objet <em>formula</em> ou la méthode <em>methodName</em> passée en paramètre</td></tr>
 <tr><td><a href="#extract"> Paramètre(s) à passer à <em>methodName</em></a><p>    crée et retourne une nouvelle collection contenant les valeurs de <em>propertyPath</em> extraites depuis la collection d'objets d'origine</td></tr>
 <tr><td><a href="#fill"> <strong>.fill</strong>( <em>value</em> : any ) : Collection<br><strong>.fill</strong>( <em>value</em> : any ;  <em>startFrom</em>  : Integer { ; <em>end</em> : Integer } ) : Collection</a><p>    remplit les éléments de la collection avec <em>value</em>, optionnellement depuis l'élément <em>startFrom</em> et jusqu'à l'élément <em>end</em> (non inclus), et retourne la collection résultante</td></tr>
-<tr><td><a href="#filter"> <strong>.filter</strong>( <em>formula</em> : 4D.Function { ; <em>...param</em> : any } ) : Collection<br><strong>.filter</strong>( <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Collection</a><p>    returns a new collection containing all elements of the original collection for which the <em>formula</em> or <em>methodName</em> result is <strong>true</strong></td></tr>
-<tr><td><a href="#find"> <strong>.find</strong>( { <em>startFrom</em> : Integer ; }  <em>formula</em> : 4D.Function { ; <em>...param</em> : any } ) : any<br><strong>.find</strong>( { <em>startFrom</em> : Integer ; }  <em>methodName</em> : Text { ; <em>...param</em> : any } ) : any</a><p>    returns the first value in the collection for which <em>formula</em> or <em>methodName</em> result, applied on each element, returns <strong>true</strong></td></tr>
-<tr><td><a href="#find"> <strong>.findIndex</strong>( { <em>startFrom</em> : Integer ; }  <em>formula</em> : 4D.Function { ; <em>...param</em> : any } ) : Integer<br><strong>.findIndex</strong>( { <em>startFrom</em> : Integer ; }  <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Integer</a><p>    returns the index, in the collection, of the first value for which <em>formula</em> or <em>methodName</em>, applied on each element, returns <strong>true</strong></td></tr>
-<tr><td><a href="#indexof"> <strong>.indexOf</strong>(  <em>toSearch</em> : expression { ; <em>startFrom</em> : Integer } ) : Integer </a><p>    recherche l'expression <em>toSearch</em> parmi les éléments de la collection et retourne le numéro d'élément de la première occurrence trouvée, ou -1 si aucune occurrence n'a été trouvée</td></tr>
-<tr><td><a href="#indices"> <strong>.indices</strong>(  <em>queryString</em> : Text { ; <em>...value</em> : any } ) : Collection </a><p>    retourne les positions, dans la collection d'origine, des éléments répondant au(x) critère(s) de recherche de <em>queryString</em></td></tr>
-<tr><td><a href="#insert"> <strong>.insert</strong>( <em>index</em> : Integer ; <em>element</em> : any ) : Collection </a><p>     insère <em>element</em> dans la collection à la position spécifiée par <em>index</em> et retourne la collection modifiée</td></tr>
-<tr><td><a href="#join"> <strong>.join</strong>( <em>delimiter</em> : Text { ; <em>option</em> : Integer } ) : Text </a><p>    </td></tr>
-<tr><td><a href="#lastindexof"> <strong>.lastIndexOf</strong>( <em>toSearch</em> : expression { ; <em>startFrom</em> : Integer } ) : Integer </a><p>    recherche l'expression <em>toSearch</em> parmi les éléments de la collection et retourne le numéro d'élément de la dernière occurrence trouvée</td></tr>
-<tr><td>[ <strong>.length</strong> : Integer</td></tr>
-<tr><td>](#length)<p>    retourne le nombre d'éléments contenus dans la collection</td></tr>
-<tr><td><a href="#map"> <strong>.map</strong>( <em>formula</em> : 4D.Function { ; <em>...param</em> : any } ) : Collection<br><strong>.map</strong>( <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Collection </a><p>    creates a new collection based upon the result of the call of the <em>formula</em> 4D function or <em>methodName</em> method on each element of the original collection</td></tr>
-<tr><td><a href="#max"> <strong>.max</strong>( { <em>propertyPath</em> : Text } ) : any </a><p>    </td></tr>
-<tr><td><a href="#min"> <strong>.min</strong>( { <em>propertyPath</em> : Text } ) : any </a><p>    </td></tr>
-<tr><td><a href="#orderby"> <strong>.orderBy</strong>( ) : Collection<br><strong>.orderBy</strong>( <em>pathStrings</em> : Text ) : Collection<br><strong>.orderBy</strong>( <em>pathObjects</em> : Collection ) : Collection<br><strong>.orderBy</strong>( <em>ascOrDesc</em> : Integer ) : Collection </a><p>    retourne une nouvelle collection contenant tous les éléments de la collection d'origine triés selon les critères définis</td></tr>
-<tr><td><a href="#orderbymethod"> <strong>.orderByMethod</strong>( <em>formula</em> : 4D.Function { ; ...<em>extraParam</em> : expression } ) : Collection<br><strong>.orderByMethod</strong>( <em>methodName</em> : Text { ; ...<em>extraParam</em> : expression } ) : Collection</a><p>    returns a new collection containing all elements of the collection in the order defined through the <em>formula</em> 4D function or <em>methodName</em> method</td></tr>
-<tr><td><a href="#pop"> <strong>.pop()</strong> : any </a><p>    supprime le dernier élément de la collection et le retourne comme résultat de la fonction</td></tr>
-<tr><td><a href="#push"> <strong>.push</strong>( <em>element</em> : any { ;...<em>elementN</em> } ) : Collection </a><p>    </td></tr>
-<tr><td><a href="#query"> <strong>.query</strong>( <em>queryString</em> : Text ; <em>...value</em> : any ) : Collection<br><strong>.query</strong>( <em>queryString</em> : Text ; <em>querySettings</em> : Object ) : Collection </a><p>    retourne tous les éléments d'une collection d'objets qui correspondent aux critères de recherche</td></tr>
-<tr><td><a href="#reduce"> <strong>.reduce</strong>( <em>formula</em> : 4D.Function { ; <em>initValue</em> : any { ; <em>...param</em> : expression }} ) : any<br><strong>.reduce</strong>( <em>methodName</em> : Text { ; <em>initValue</em> : any { ; <em>...param</em> : expression }} ) : any </a><p>    applies the <em>formula</em> or <em>methodName</em> callback against an accumulator and each element in the collection (from left to right) to reduce it to a single value</td></tr>
-<tr><td><a href="#remove"> <strong>.remove</strong>( <em>index</em> : Integer { ; <em>howMany</em> : Integer } ) : Collection </a><p>    supprime un ou plusieurs élément(s) de la position d'<em>index</em> spécifiée dans la collection et retourne la collection modifiée</td></tr>
-<tr><td><a href="#resize"> <strong>.resize</strong>( <em>size</em> : Integer { ; <em>defaultValue</em> : any } ) : Collection </a><p>    définit la longueur de la collection sur la nouvelle taille spécifiée et retourne la collection redimensionnée</td></tr>
-<tr><td><a href="#reverse"> <strong>.reverse( )</strong> : Collection </a><p>    retourne une copie complète de la collection avec tous ses éléments dans l'ordre inverse</td></tr>
-<tr><td><a href="#shift"> <strong>.shift()</strong> : any</a><p>    </td></tr>
-<tr><td><a href="#slice"> <strong>.slice</strong>( <em>startFrom</em> : Integer { ; <em>end</em> : Integer } ) : Collection</a><p>    retourne une partie d'une collection dans une nouvelle collection</td></tr>
-<tr><td><a href="#some"> <strong>.some</strong>( { <em>startFrom</em> : Integer ; } <em>formula</em> : 4D.Function { ; <em>...param</em> : any } ) : Boolean<br><strong>.some</strong>( { <em>startFrom</em> : Integer ; } <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Boolean</a><p>    retourne true si au moins un élément de la collection a réussi un test</td></tr>
-<tr><td><a href="#sort"> <strong>.sort</strong>( <em>formula</em> : 4D.Function { ; <em>...extraParam</em> : any } ) : Collection<br><strong>.sort</strong>( <em>methodName</em> : Text { ; <em>...extraParam</em> : any } ) : Collection </a><p>    sorts the elements of the original collection and also returns the sorted collection</td></tr>
-<tr><td><a href="#sum"> <strong>.sum</strong>( { <em>propertyPath</em> : Text } ) : Real</a><p>    </td></tr>
-<tr><td><a href="#unshift"> <strong>.unshift</strong>( <em>value</em> : any { ;...<em>valueN</em> : any } ) : Collection</a><p>    insère la ou les <em>valeur(s)</em> données au début de la collection</td></tr>
+<tr><td><a href="#filter"> <strong>.filter</strong>( <em>formula</em> : 4D.Function { ; <em>...param</em> : any } ) : Collection<br><strong>.filter</strong>( <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Collection</a><p>    retourne une nouvelle collection contenant tous les éléments de la collection d'origine pour lesquels le résultat de <em>formula</em> ou <em>methodName</em> est <strong>true</strong>&lt;! -- END REF --&gt;. Cette fonction retourne une <strong><em>shallow copy</em></strong> (copie superficielle), ce qui signifie que les objets ou les collections présents dans les deux collections partagent la même référence. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.</td></tr>
 </tbody>
 </table>
+<blockquote>
+<p>Cette fonction ne modifie pas la collection d'origine.</p>
+</blockquote>
+<p>Vous désignez le code de rétroappel (callback) à exécuter pour filtrer les éléments de la collection en utilisant soit :</p>
+<ul>
+<li><em>formula</em> (syntaxe recommandée), un <a href="/docs/fr/API/FunctionClass.html">objet formule</a> qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;</li>
+<li><em>methodName</em>, le nom d'une méthode projet (texte).</li>
+</ul>
+<p>La callback est appelée avec le(s) paramètre(s) passés dans <em>param</em> (facultatif). La callback peut effectuer n'importe quel test, avec ou sans le(s) paramètre(s) et doit retourner <strong>true</strong> pour chaque élément remplissant la condition et donc, devant être ajouté à la nouvelle collection. Elle reçoit un <code>objet</code> en premier paramètre ($1).</p>
+<p>La callback reçoit les paramètres suivants :</p>
+<ul>
+<li>dans <em>$1.value</em> : valeur de l'élément à évaluer</li>
+<li>in <em>$2</em>: param</li>
+<li>in <em>$N...</em>: paramN...</li>
+</ul>
+<p>Elle peut définir le(s) paramètre(s) suivant(s) :</p>
+<ul>
+<li>(obligatoire si vous avez utilisé une méthode) <em>$1.result</em> (booléen) : <strong>true</strong> si l'élément doit être conservé car sa la valeur correspond à la condition du filtre, <strong>false</strong> sinon.</li>
+<li><em>$1.stop</em> (booléen, optionnel) : <strong>true</strong> pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.</li>
+</ul>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1"></a><a href="#exemple-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<p>Vous voulez obtenir la collection des éléments de type texte dont la longueur est inférieure à 6 :</p>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$col</span>;<span class="hljs-variable">$colNew </span>: Collection
+<span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-string">"hello"</span>;<span class="hljs-string">"world"</span>;<span class="hljs-string">"red horse"</span>;<span class="hljs-number">66</span>;<span class="hljs-string">"tim"</span>;<span class="hljs-string">"san jose"</span>;<span class="hljs-string">"miami"</span>)
+<span class="hljs-variable">$colNew</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">filter</span>(<span class="hljs-function">Formula</span>((<span class="hljs-function">Value type</span>(<span class="hljs-variable">$1</span>.value)=Is text) &amp;&amp; (<span class="hljs-function">Length</span>(<span class="hljs-variable">$1</span>.value)&lt;<span class="hljs-variable">$2</span>)); <span class="hljs-number">6</span>)
+  <span class="hljs-comment">//$colNew=["hello","world","tim","miami"]</span>
+</code></pre>
+<h4><a class="anchor" aria-hidden="true" id="exemple-2"></a><a href="#exemple-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
+<p>Vous voulez filtrer les éléments de la collection en fonction de leur type :</p>
+<pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c</span>;<span class="hljs-variable">$c2</span>;<span class="hljs-variable">$c3 </span>: Collection<span class="hljs-keyword">
+ var</span> <span class="hljs-variable">$f </span>: 4D.<span class="hljs-keyword">Function</span>
+
+ <span class="hljs-variable">$f</span>:=<span class="hljs-function">Formula</span>(<span class="hljs-function">OB Get type</span>(<span class="hljs-variable">$1</span>;<span class="hljs-string">"value"</span>)=<span class="hljs-variable">$2</span>)
+ <span class="hljs-variable">$c</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">5</span>;<span class="hljs-number">3</span>;<span class="hljs-number">1</span>;<span class="hljs-number">4</span>;<span class="hljs-number">6</span>;<span class="hljs-number">2</span>)
+ <span class="hljs-variable">$c</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"Cleveland"</span>;<span class="hljs-string">"zc"</span>;<span class="hljs-number">35049</span>))
+ <span class="hljs-variable">$c</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"Blountsville"</span>;<span class="hljs-string">"zc"</span>;<span class="hljs-number">35031</span>))
+ <span class="hljs-variable">$c2</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">filter</span>(<span class="hljs-variable">$f</span>;Is real) <span class="hljs-comment">// $c2=[5,3,1,4,6,2]</span>
+ <span class="hljs-variable">$c3</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">filter</span>(<span class="hljs-variable">$f</span>;Is object)
+  <span class="hljs-comment">// $c3=[{name:Cleveland,zc:35049},{name:Blountsville,zc:35031}]</span>
+</code></pre>
+<pre><code class="hljs">                  |
+</code></pre>
+<p>| <a href="#find"> <strong>.find</strong>( { <em>startFrom</em> : Integer ; }  <em>formula</em> : 4D.Function { ; <em>...param</em> : any } ) : any<br><strong>.find</strong>( { <em>startFrom</em> : Integer ; }  <em>methodName</em> : Text { ; <em>...param</em> : any } ) : any</a><p>    retourne la première valeur dans la collection pour laquelle <em>formula</em> ou <em>methodName</em> retourne <strong>true</strong>                            |
+| <a href="#find"> <strong>.findIndex</strong>( { <em>startFrom</em> : Integer ; }  <em>formula</em> : 4D.Function { ; <em>...param</em> : any } ) : Integer<br><strong>.findIndex</strong>( { <em>startFrom</em> : Integer ; }  <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Integer</a><p>    retourne le numéro, dans la collection, du premier élément pour lequel <em>formula</em> ou <em>methodName</em> retourne <strong>true</strong>                  |
+| <a href="#indexof"> <strong>.indexOf</strong>(  <em>toSearch</em> : expression { ; <em>startFrom</em> : Integer } ) : Integer </a><p>    recherche l'expression <em>toSearch</em> parmi les éléments de la collection et retourne le numéro d'élément de la première occurrence trouvée, ou -1 si aucune occurrence n'a été trouvée                   |
+| <a href="#indices"> <strong>.indices</strong>(  <em>queryString</em> : Text { ; <em>...value</em> : any } ) : Collection </a><p>    retourne les positions, dans la collection d'origine, des éléments répondant au(x) critère(s) de recherche de <em>queryString</em>                   |
+| <a href="#insert"> <strong>.insert</strong>( <em>index</em> : Integer ; <em>element</em> : any ) : Collection </a><p>     insère <em>element</em> dans la collection à la position spécifiée par <em>index</em> et retourne la collection modifiée                      |
+| <a href="#join"> <strong>.join</strong>( <em>delimiter</em> : Text { ; <em>option</em> : Integer } ) : Text </a><p>                                |
+| <a href="#lastindexof"> <strong>.lastIndexOf</strong>( <em>toSearch</em> : expression { ; <em>startFrom</em> : Integer } ) : Integer </a><p>    recherche l'expression <em>toSearch</em> parmi les éléments de la collection et retourne le numéro d'élément de la dernière occurrence trouvée       |
+| <a href="#length"> <strong>.length</strong> : Integer
+</a><p>    retourne le nombre d'éléments contenus dans la collection                          |
+| <a href="#map"> <strong>.map</strong>( <em>formula</em> : 4D.Function { ; <em>...param</em> : any } ) : Collection<br><strong>.map</strong>( <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Collection </a><p>    crée une nouvelle collection basée sur le résultat de l'exécution de la fonction 4D <em>formula</em> ou de la méthode <em>methodName</em> sur chaque élément de la collection d'origine                               |
+| <a href="#max"> <strong>.max</strong>( { <em>propertyPath</em> : Text } ) : any </a><p>                                   |
+| <a href="#min"> <strong>.min</strong>( { <em>propertyPath</em> : Text } ) : any </a><p>                                   |
+| <a href="#orderby"> <strong>.orderBy</strong>( ) : Collection<br><strong>.orderBy</strong>( <em>pathStrings</em> : Text ) : Collection<br><strong>.orderBy</strong>( <em>pathObjects</em> : Collection ) : Collection<br><strong>.orderBy</strong>( <em>ascOrDesc</em> : Integer ) : Collection </a><p>    retourne une nouvelle collection contenant tous les éléments de la collection d'origine triés selon les critères définis                   |
+| <a href="#orderbymethod"> <strong>.orderByMethod</strong>( <em>formula</em> : 4D.Function { ; ...<em>extraParam</em> : expression } ) : Collection<br><strong>.orderByMethod</strong>( <em>methodName</em> : Text { ; ...<em>extraParam</em> : expression } ) : Collection</a><p>    retourne une nouvelle collection contenant tous les éléments de la collection d'origine triés selon les critères définis par la fonction 4D <em>formula</em> ou la méthode <em>methodName</em> |
+| <a href="#pop"> <strong>.pop()</strong> : any </a><p>    supprime le dernier élément de la collection et le retourne comme résultat de la fonction                               |
+| <a href="#push"> <strong>.push</strong>( <em>element</em> : any { ;...<em>elementN</em> } ) : Collection </a><p>                                |
+| <a href="#query"> <strong>.query</strong>( <em>queryString</em> : Text ; <em>...value</em> : any ) : Collection<br><strong>.query</strong>( <em>queryString</em> : Text ; <em>querySettings</em> : Object ) : Collection </a><p>    retourne tous les éléments d'une collection d'objets qui correspondent aux critères de recherche                          |
+| <a href="#reduce"> <strong>.reduce</strong>( <em>formula</em> : 4D.Function { ; <em>initValue</em> : any { ; <em>...param</em> : expression }} ) : any<br><strong>.reduce</strong>( <em>methodName</em> : Text { ; <em>initValue</em> : any { ; <em>...param</em> : expression }} ) : any </a><p>    applique la callback <em>formula</em> ou <em>methodName</em> à un accumulateur et chaque élément de la collection (de gauche à droite) pour la réduire à une valeur unique                      |
+| <a href="#remove"> <strong>.remove</strong>( <em>index</em> : Integer { ; <em>howMany</em> : Integer } ) : Collection </a><p>    supprime un ou plusieurs élément(s) de la position d'<em>index</em> spécifiée dans la collection et retourne la collection modifiée                      |
+| <a href="#resize"> <strong>.resize</strong>( <em>size</em> : Integer { ; <em>defaultValue</em> : any } ) : Collection </a><p>    définit la longueur de la collection sur la nouvelle taille spécifiée et retourne la collection redimensionnée                      |
+| <a href="#reverse"> <strong>.reverse( )</strong> : Collection </a><p>    retourne une copie complète de la collection avec tous ses éléments dans l'ordre inverse                   |
+| <a href="#shift"> <strong>.shift()</strong> : any</a><p>                             |
+| <a href="#slice"> <strong>.slice</strong>( <em>startFrom</em> : Integer { ; <em>end</em> : Integer } ) : Collection</a><p>    retourne une partie d'une collection dans une nouvelle collection                         |
+| <a href="#some"> <strong>.some</strong>( { <em>startFrom</em> : Integer ; } <em>formula</em> : 4D.Function { ; <em>...param</em> : any } ) : Boolean<br><strong>.some</strong>( { <em>startFrom</em> : Integer ; } <em>methodName</em> : Text { ; <em>...param</em> : any } ) : Boolean</a><p>    retourne true si au moins un élément de la collection a réussi un test                            |
+| <a href="#sort"> <strong>.sort</strong>( <em>formula</em> : 4D.Function { ; <em>...extraParam</em> : any } ) : Collection<br><strong>.sort</strong>( <em>methodName</em> : Text { ; <em>...extraParam</em> : any } ) : Collection </a><p>    trie les éléments de la collection d'origine et retourne également la collection triée                            |
+| <a href="#sum"> <strong>.sum</strong>( { <em>propertyPath</em> : Text } ) : Real</a><p>                                   |
+| <a href="#unshift"> <strong>.unshift</strong>( <em>value</em> : any { ;...<em>valueN</em> : any } ) : Collection</a><p>    insère la ou les <em>valeur(s)</em> données au début de la collection                    |</p>
 <h2><a class="anchor" aria-hidden="true" id="new-collection"></a><a href="#new-collection" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>New collection</code></h2>
 <p><strong>New collection</strong> {( <em>...value</em> : any )} : Collection</p>
 <table>
@@ -159,13 +201,13 @@
 <li>Les dates sont stockées sous la forme de date « aaaa-mm-jj » ou des chaînes au format « AAAA-MM-JJTHH: ss.SSSZ: mm » , selon la configuration actuelle « dates à l'intérieur des objets » de la base de données. Lors de la conversion de dates 4D en texte avant de les stocker dans la collection, par défaut le programme prend en compte le fuseau horaire local. Vous pouvez modifier ce comportement à l'aide du sélecteur <code>Dates inside objects</code> de la commande <code>SET DATABASE PARAMETER</code>.</li>
 <li>Si vous passez une heure, elle est stockée sous la forme d'un nombre de millisecondes (Réel).</li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1"></a><a href="#exemple-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-1"></a><a href="#exemple-1-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <p>Vous souhaitez créer une nouvelle collection vide et l'assigner à une variable collection 4D :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$myCol </span>: Collection
  <span class="hljs-variable">$myCol</span>:=New collection
   <span class="hljs-comment">//$myCol=[]</span>
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="exemple-2"></a><a href="#exemple-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-2-1"></a><a href="#exemple-2-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
 <p>Vous souhaitez créer une collection pré-remplie :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$filledColl </span>: Collection
  <span class="hljs-variable">$filledColl</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">33</span>;<span class="hljs-string">"mike"</span>;<span class="hljs-string">"november"</span>;-&gt;myPtr;Current date)
@@ -266,12 +308,12 @@
 <li>la collection ne contient pas d'éléments numériques,</li>
 <li><em>propertyPath</em> n'est pas trouvé dans la collection.</li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-1"></a><a href="#exemple-1-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-2"></a><a href="#exemple-1-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col </span>: Collection
  <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">10</span>;<span class="hljs-number">20</span>;<span class="hljs-string">"Monday"</span>;<span class="hljs-literal">True</span>;<span class="hljs-number">6</span>)
  <span class="hljs-variable">$vAvg</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">average</span>() <span class="hljs-comment">//12</span>
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="exemple-2-1"></a><a href="#exemple-2-1" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-2-2"></a><a href="#exemple-2-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col </span>: Collection
  <span class="hljs-variable">$col</span>:=New collection
  <span class="hljs-variable">$col</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"Smith"</span>;<span class="hljs-string">"salary"</span>;<span class="hljs-number">10000</span>))
@@ -427,7 +469,7 @@
 </tbody>
 </table>
 <p>Les paramètres <em>groupWithCol</em> ou <em>groupWithObj</em> vous permettent de désigner une collection ou un objet auquel/à laquelle la collection résultante sera associée.</p>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-2"></a><a href="#exemple-1-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-3"></a><a href="#exemple-1-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <p>Nous souhaitons copier la collection standard (non partagée) <em>$lastnames</em> dans l'objet partagé <em>$sharedObject</em>. Pour ce faire, nous devons créer une copie partagée de la collection (<em>$sharedLastnames</em>).</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$sharedObject </span>: Object<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$lastnames</span>;<span class="hljs-variable">$sharedLastnames </span>: Collection<span class="hljs-keyword">
@@ -445,7 +487,7 @@ Use</span>(<span class="hljs-variable">$sharedObject</span>)
     <span class="hljs-variable">$sharedObject</span>.lastnames:=<span class="hljs-variable">$sharedLastnames</span><span class="hljs-keyword">
 End use</span>
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="exemple-2-2"></a><a href="#exemple-2-2" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-2-3"></a><a href="#exemple-2-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
 <p>Nous souhaitons combiner <em>$sharedColl1</em> et <em>$sharedColl2</em>. Etant donné qu'ils appartiennent à différents groupes partagés, une combinaison directe pourrait générer une erreur. Nous devons effectuer une copie partagée de <em>$sharedColl1</em> et désigner <em>$sharedColl2</em> comme étant un groupe partagé pour la copie.</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$sharedColl1</span>;<span class="hljs-variable">$sharedColl2</span>;<span class="hljs-variable">$copyColl </span>: Collection
 
@@ -560,13 +602,13 @@ End use</span>
 <blockquote>
 <p>Cette fonction ne modifie pas la collection d'origine.</p>
 </blockquote>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-3"></a><a href="#exemple-1-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-4"></a><a href="#exemple-1-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$vCount </span>: Integer
  <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">1</span>;<span class="hljs-number">2</span>;<span class="hljs-number">5</span>;<span class="hljs-number">5</span>;<span class="hljs-number">5</span>;<span class="hljs-number">3</span>;<span class="hljs-number">6</span>;<span class="hljs-number">4</span>)
  <span class="hljs-variable">$vCount</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">countValues</span>(<span class="hljs-number">5</span>) <span class="hljs-comment">// $vCount=3</span>
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="exemple-2-3"></a><a href="#exemple-2-3" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-2-4"></a><a href="#exemple-2-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$vCount </span>: Integer
  <span class="hljs-variable">$col</span>:=New collection
@@ -682,7 +724,7 @@ End use</span>
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v19 R6</td><td>Support of formula</td></tr>
+<tr><td>v19 R6</td><td>Prise en charge des formules</td></tr>
 <tr><td>v16 R6</td><td>Ajout</td></tr>
 </tbody>
 </table>
@@ -695,38 +737,38 @@ End use</span>
 <tbody>
 <tr><td>startFrom</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Elément à partir duquel débuter l'évaluation</td></tr>
 <tr><td>formula</td><td>4D.Function</td><td style="text-align:center">-&gt;</td><td>Objet formule</td></tr>
-<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Name of a method</td></tr>
-<tr><td>param</td><td>Mixed</td><td style="text-align:center">-&gt;</td><td>Parameter(s) to pass to <em>formula</em> or <em>methodName</em></td></tr>
+<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Nom de méthode</td></tr>
+<tr><td>param</td><td>Mixed</td><td style="text-align:center">-&gt;</td><td>Paramètre(s) à passer à <em>formula</em> ou à <em>methodName</em></td></tr>
 <tr><td>Résultat</td><td>Booléen</td><td style="text-align:center">&lt;-</td><td>Vrai si tous les éléments sont évalués à vrai</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-11"></a><a href="#description-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.every()</code> function returns <strong>true</strong> if all elements in the collection successfully passed a test implemented in the provided <em>formula</em> object or <em>methodName</em> name.</p>
-<p>You designate the callback to be executed to evaluate collection elements using either:</p>
+<p>La fonction <code>.every()</code> retourne <strong>vrai</strong> si tous les éléments de la collection ont été évalués à vrai par le test implémenté dans l'objet <em>formula</em> ou la méthode <em>methodName</em> passée en paramètre.</p>
+<p>Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les éléments de la collection en utilisant soit :</p>
 <ul>
-<li><em>formula</em> (recommended syntax), a <a href="/docs/fr/API/FunctionClass.html">Formula object</a> that can encapsulate any executable expressions, including functions and project methods;</li>
-<li>or <em>methodName</em>, the name of a project method (text).</li>
+<li><em>formula</em> (syntaxe recommandée), un <a href="/docs/fr/API/FunctionClass.html">objet formule</a> qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;</li>
+<li><em>methodName</em>, le nom d'une méthode projet (texte).</li>
 </ul>
-<p>The callback is called with the parameter(s) passed in <em>param</em> (optional). The callback can perform any test, with or without the parameter(s) and must return <strong>true</strong> for every element fulfilling the test. It receives an <code>Object</code> in first parameter ($1).</p>
-<p>The callback receives the following parameters:</p>
+<p>La callback est appelée avec le(s) paramètre(s) passés dans <em>param</em> (facultatif). La callback peut effectuer n'importe quel test, avec ou sans le(s) paramètre(s) et doit retourner <strong>true</strong> pour chaque élément remplissant le test. Elle reçoit un <code>objet</code> en premier paramètre ($1).</p>
+<p>La callback reçoit les paramètres suivants :</p>
 <ul>
 <li>dans <em>$1.value</em> : valeur de l'élément à évaluer</li>
 <li>in <em>$2</em>: param</li>
 <li>in <em>$N...</em>: paramN...</li>
 </ul>
-<p>It can set the following parameter(s):</p>
+<p>Elle peut définir le(s) paramètre(s) suivant(s) :</p>
 <ul>
-<li>(mandatory if you used a method) <em>$1.result</em> (Boolean): <strong>true</strong> if the element value evaluation is successful, <strong>false</strong> otherwise.</li>
+<li>(obligatoire si vous avez utilisé une méthode) <em>$1.result</em> (booléen) : <strong>true</strong> si l'évaluation de la valeur de l'élément est à vrai, <strong>false</strong> sinon.</li>
 <li><em>$1.stop</em> (booléen, optionnel) : <strong>true</strong> pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.</li>
 </ul>
-<p>In all cases, at the point when the <code>.every()</code> function encounters the first collection element evaluated to <strong>false</strong>, it stops calling the callback and returns <strong>false</strong>.</p>
+<p>Dans tous les cas, lorsque la fonction <code>.every()</code> rencontre le premier élément de collection évalué à <strong>false</strong>, elle cesse d'appeler la fonction de rétroappel et renvoie <strong>false</strong>.</p>
 <p>Par défaut, <code>.every()</code> évalue l'ensemble de la collection. Optionnellement, vous pouvez passer dans <em>startFrom</em> le numéro de l'élément auquel démarrer l'évaluation.</p>
 <ul>
 <li>Si <em>startFrom</em> &gt;= la longueur de la collection, <strong>False</strong> est retourné, ce qui signifie que la collection n'est pas testée.</li>
 <li>Si <em>startFrom</em> &lt; 0, la fin de la collection est considérée comme point de départ du calcul de la position( <em>startFrom:=startFrom+length</em>).</li>
 <li>Si <em>startFrom</em> = 0, l'ensemble de la collection est évalué (défaut).</li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-4"></a><a href="#exemple-1-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-5"></a><a href="#exemple-1-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$c </span>: Collection<span class="hljs-keyword">  
 var</span> <span class="hljs-variable">$b </span>: Boolean<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$f </span>: 4D.<span class="hljs-keyword">Function</span>
@@ -734,11 +776,11 @@ var</span> <span class="hljs-variable">$f </span>: 4D.<span class="hljs-keyword"
 <span class="hljs-variable">$f</span>:=<span class="hljs-function">Formula</span>(<span class="hljs-variable">$1</span>.value&gt;<span class="hljs-number">0</span>)
 <span class="hljs-variable">$c</span>:=New collection
 <span class="hljs-variable">$c</span>.<span class="hljs-function">push</span>(<span class="hljs-number">5</span>;<span class="hljs-number">3</span>;<span class="hljs-number">1</span>;<span class="hljs-number">4</span>;<span class="hljs-number">6</span>;<span class="hljs-number">2</span>)
-<span class="hljs-variable">$b</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">every</span>(<span class="hljs-variable">$f</span>) <span class="hljs-comment">//returns true</span>
+<span class="hljs-variable">$b</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">every</span>(<span class="hljs-variable">$f</span>) <span class="hljs-comment">//retourne true</span>
 <span class="hljs-variable">$c</span>.<span class="hljs-function">push</span>(<span class="hljs-number">-1</span>)
-<span class="hljs-variable">$b</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">every</span>(<span class="hljs-variable">$f</span>) <span class="hljs-comment">//returns false</span>
+<span class="hljs-variable">$b</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">every</span>(<span class="hljs-variable">$f</span>) <span class="hljs-comment">//retourne false</span>
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="exemple-2-4"></a><a href="#exemple-2-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-2-5"></a><a href="#exemple-2-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
 <p>Cet exemple vérifie que tous les éléments de la collection sont de type réel :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$c </span>: Collection<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$b </span>: Boolean<span class="hljs-keyword">
@@ -753,9 +795,16 @@ var</span> <span class="hljs-variable">$f </span>: 4D.<span class="hljs-keyword"
 <span class="hljs-variable">$b</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">every</span>(<span class="hljs-variable">$f</span>;Is real) <span class="hljs-comment">//$b=false</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="extract"></a><a href="#extract" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.extract()</h2>
-<p><details><summary>History</summary>
-|Version|Changes|</p>
-<p>|---|---| |v16 R6|Added| </details></p>
+<p><details><summary>Historique</summary></p>
+<table>
+<thead>
+<tr><th>Version</th><th>Modifications</th></tr>
+</thead>
+<tbody>
+<tr><td>v16 R6</td><td>Ajout</td></tr>
+</tbody>
+</table>
+<p></details></p>
 <p>Paramètre(s) à passer à <em>methodName</em></p>
 <table>
 <thead>
@@ -781,7 +830,7 @@ var</span> <span class="hljs-variable">$f </span>: 4D.<span class="hljs-keyword"
 <ul>
 <li>Si un ou plusieurs paramètre(s) <em>targetPath</em> sont passés, <code>.extract()</code> remplit la nouvelle collection avec les propriétés <em>propertyPath</em> et chaque élément de la nouvelle collection est un objet contenant les propriétés <em>targetPath</em> dont les valeurs sont celles des propriétés <em>propertyPath</em> correspondantes. Les valeurs null sont conservées (le paramètre <em>option</em> est ignoré avec cette syntaxe).</li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-5"></a><a href="#exemple-1-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-6"></a><a href="#exemple-1-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$c </span>: Collection
 <span class="hljs-variable">$c</span>:=New collection
 <span class="hljs-variable">$c</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"Cleveland"</span>))
@@ -791,7 +840,7 @@ var</span> <span class="hljs-variable">$f </span>: 4D.<span class="hljs-keyword"
 <span class="hljs-variable">$c2</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">extract</span>(<span class="hljs-string">"name"</span>) <span class="hljs-comment">// $c2=[Cleveland,Blountsville]</span>
 <span class="hljs-variable">$c2</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">extract</span>(<span class="hljs-string">"name"</span>;ck keep null) <span class="hljs-comment">//$c2=[Cleveland,null,Blountsville,null]</span>
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="exemple-2-5"></a><a href="#exemple-2-5" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-2-6"></a><a href="#exemple-2-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$c </span>: Collection
 <span class="hljs-variable">$c</span>:=New collection
 <span class="hljs-variable">$c</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"zc"</span>;<span class="hljs-number">35060</span>))
@@ -858,7 +907,7 @@ var</span> <span class="hljs-variable">$f </span>: 4D.<span class="hljs-keyword"
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v19 R6</td><td>Support of formula</td></tr>
+<tr><td>v19 R6</td><td>Prise en charge des formules</td></tr>
 <tr><td>v16 R6</td><td>Ajout</td></tr>
 </tbody>
 </table>
@@ -870,41 +919,41 @@ var</span> <span class="hljs-variable">$f </span>: 4D.<span class="hljs-keyword"
 </thead>
 <tbody>
 <tr><td>formula</td><td>4D.Function</td><td style="text-align:center">-&gt;</td><td>Objet formule</td></tr>
-<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Name of a method</td></tr>
-<tr><td>param</td><td>any</td><td style="text-align:center">-&gt;</td><td>Parameter(s) to pass to <em>formula</em> or <em>methodName</em></td></tr>
+<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Nom de méthode</td></tr>
+<tr><td>param</td><td>any</td><td style="text-align:center">-&gt;</td><td>Paramètre(s) à passer à <em>formula</em> ou à <em>methodName</em></td></tr>
 <tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Nouvelle collection contenant les éléments filtrés (shallow copy)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-14"></a><a href="#description-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.filter()</code> function returns a new collection containing all elements of the original collection for which the <em>formula</em> or <em>methodName</em> result is <strong>true</strong>. Cette méthode retourne une <strong><em>shallow copy</em></strong> (copie superficielle), ce qui signifie que les objets ou les collections présents dans les deux collections partagent la même référence. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.</p>
+<p>La fonction <code>.filter()</code> retourne une nouvelle collection contenant tous les éléments de la collection d'origine pour lesquels le résultat de <em>formula</em> ou <em>methodName</em> est <strong>true</strong>&lt;! -- END REF --&gt;. Cette fonction retourne une <strong><em>shallow copy</em></strong> (copie superficielle), ce qui signifie que les objets ou les collections présents dans les deux collections partagent la même référence. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.</p>
 <blockquote>
 <p>Cette fonction ne modifie pas la collection d'origine.</p>
 </blockquote>
-<p>You designate the callback to be executed to filter collection elements using either:</p>
+<p>Vous désignez le code de rétroappel (callback) à exécuter pour filtrer les éléments de la collection en utilisant soit :</p>
 <ul>
-<li><em>formula</em> (recommended syntax), a <a href="/docs/fr/API/FunctionClass.html">Formula object</a> that can encapsulate any executable expressions, including functions and project methods;</li>
-<li>or <em>methodName</em>, the name of a project method (text).</li>
+<li><em>formula</em> (syntaxe recommandée), un <a href="/docs/fr/API/FunctionClass.html">objet formule</a> qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;</li>
+<li><em>methodName</em>, le nom d'une méthode projet (texte).</li>
 </ul>
-<p>The callback is called with the parameter(s) passed in <em>param</em> (optional). The callback can perform any test, with or without the parameter(s) and must return <strong>true</strong> for each element fulfilling the condition and thus, to push to the new collection. It receives an <code>Object</code> in first parameter ($1).</p>
-<p>The callback receives the following parameters:</p>
+<p>La callback est appelée avec le(s) paramètre(s) passés dans <em>param</em> (facultatif). La callback peut effectuer n'importe quel test, avec ou sans le(s) paramètre(s) et doit retourner <strong>true</strong> pour chaque élément remplissant la condition et donc, devant être ajouté à la nouvelle collection. Elle reçoit un <code>objet</code> en premier paramètre ($1).</p>
+<p>La callback reçoit les paramètres suivants :</p>
 <ul>
 <li>dans <em>$1.value</em> : valeur de l'élément à évaluer</li>
 <li>in <em>$2</em>: param</li>
 <li>in <em>$N...</em>: paramN...</li>
 </ul>
-<p>It can set the following parameter(s):</p>
+<p>Elle peut définir le(s) paramètre(s) suivant(s) :</p>
 <ul>
-<li>(mandatory if you used a method) <em>$1.result</em> (Boolean): <strong>true</strong> if the element value matches the filter condition and must be kept, <strong>false</strong> otherwise.</li>
+<li>(obligatoire si vous avez utilisé une méthode) <em>$1.result</em> (booléen) : <strong>true</strong> si l'élément doit être conservé car sa la valeur correspond à la condition du filtre, <strong>false</strong> sinon.</li>
 <li><em>$1.stop</em> (booléen, optionnel) : <strong>true</strong> pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.</li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-6"></a><a href="#exemple-1-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-7"></a><a href="#exemple-1-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <p>Vous voulez obtenir la collection des éléments de type texte dont la longueur est inférieure à 6 :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$col</span>;<span class="hljs-variable">$colNew </span>: Collection
 <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-string">"hello"</span>;<span class="hljs-string">"world"</span>;<span class="hljs-string">"red horse"</span>;<span class="hljs-number">66</span>;<span class="hljs-string">"tim"</span>;<span class="hljs-string">"san jose"</span>;<span class="hljs-string">"miami"</span>)
 <span class="hljs-variable">$colNew</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">filter</span>(<span class="hljs-function">Formula</span>((<span class="hljs-function">Value type</span>(<span class="hljs-variable">$1</span>.value)=Is text) &amp;&amp; (<span class="hljs-function">Length</span>(<span class="hljs-variable">$1</span>.value)&lt;<span class="hljs-variable">$2</span>)); <span class="hljs-number">6</span>)
   <span class="hljs-comment">//$colNew=["hello","world","tim","miami"]</span>
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="exemple-2-6"></a><a href="#exemple-2-6" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-2-7"></a><a href="#exemple-2-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
 <p>Vous voulez filtrer les éléments de la collection en fonction de leur type :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c</span>;<span class="hljs-variable">$c2</span>;<span class="hljs-variable">$c3 </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$f </span>: 4D.<span class="hljs-keyword">Function</span>
@@ -924,7 +973,7 @@ var</span> <span class="hljs-variable">$f </span>: 4D.<span class="hljs-keyword"
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v19 R6</td><td>Support of formula</td></tr>
+<tr><td>v19 R6</td><td>Prise en charge des formules</td></tr>
 <tr><td>v16 R6</td><td>Ajout</td></tr>
 </tbody>
 </table>
@@ -937,31 +986,31 @@ var</span> <span class="hljs-variable">$f </span>: 4D.<span class="hljs-keyword"
 <tbody>
 <tr><td>startFrom</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Elément à partir duquel débuter la recherche</td></tr>
 <tr><td>formula</td><td>4D.Function</td><td style="text-align:center">-&gt;</td><td>Objet formule</td></tr>
-<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Name of a method</td></tr>
-<tr><td>param</td><td>any</td><td style="text-align:center">-&gt;</td><td>Parameter(s) to pass to <em>formula</em> or <em>methodName</em></td></tr>
+<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Nom de méthode</td></tr>
+<tr><td>param</td><td>any</td><td style="text-align:center">-&gt;</td><td>Paramètre(s) à passer à <em>formula</em> ou à <em>methodName</em></td></tr>
 <tr><td>Résultat</td><td>any</td><td style="text-align:center">&lt;-</td><td>Première valeur trouvée (Undefined si non trouvée)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-15"></a><a href="#description-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.find()</code> function returns the first value in the collection for which <em>formula</em> or <em>methodName</em> result, applied on each element, returns <strong>true</strong>.</p>
+<p>La fonction <code>.find()</code> retourne la première valeur dans la collection pour laquelle <em>formula</em> ou <em>methodName</em> retourne <strong>true</strong>.</p>
 <blockquote>
 <p>Cette fonction ne modifie pas la collection d'origine.</p>
 </blockquote>
-<p>You designate the callback to be executed to evaluate collection elements using either:</p>
+<p>Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les éléments de la collection en utilisant soit :</p>
 <ul>
-<li><em>formula</em> (recommended syntax), a <a href="/docs/fr/API/FunctionClass.html">Formula object</a> that can encapsulate any executable expressions, including functions and project methods;</li>
-<li>or <em>methodName</em>, the name of a project method (text).</li>
+<li><em>formula</em> (syntaxe recommandée), un <a href="/docs/fr/API/FunctionClass.html">objet formule</a> qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;</li>
+<li><em>methodName</em>, le nom d'une méthode projet (texte).</li>
 </ul>
-<p>The callback is called with the parameter(s) passed in <em>param</em> (optional). The callback can perform any test, with or without the parameter(s) and must return <strong>true</strong> for the first element fulfilling the condition. It receives an <code>Object</code> in first parameter ($1).</p>
-<p>The callback receives the following parameters:</p>
+<p>La callback est appelée avec le(s) paramètre(s) passés dans <em>param</em> (facultatif). La callback peut effectuer n'importe quel test, avec ou sans le(s) paramètre(s) et doit retourner <strong>true</strong> pour le premier élément remplissant le test. Elle reçoit un <code>objet</code> en premier paramètre ($1).</p>
+<p>La callback reçoit les paramètres suivants :</p>
 <ul>
 <li>dans <em>$1.value</em> : valeur de l'élément à évaluer</li>
 <li>in <em>$2</em>: param</li>
 <li>in <em>$N...</em>: paramN...</li>
 </ul>
-<p>It can set the following parameter(s):</p>
+<p>Elle peut définir le(s) paramètre(s) suivant(s) :</p>
 <ul>
-<li>(mandatory if you used a method) <em>$1.result</em> (Boolean): <strong>true</strong> if the element value matches the search condition, <strong>false</strong> otherwise.</li>
+<li>(obligatoire si vous avez utilisé une méthode) <em>$1.result</em> (booléen) : <strong>true</strong> si la valeur de l'élément correspond à la condition de recherche, <strong>false</strong> sinon.</li>
 <li><em>$1.stop</em> (booléen, optionnel) : <strong>true</strong> pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.</li>
 </ul>
 <p>Par défaut, <code>.find()</code> effectue une recherche dans la totalité de la collection. Optionnellement, vous pouvez passer dans <em>startFrom</em> le numéro de l'élément auquel démarrer la recherche.</p>
@@ -970,13 +1019,13 @@ var</span> <span class="hljs-variable">$f </span>: 4D.<span class="hljs-keyword"
 <li>Si <em>startFrom</em> &lt; 0, la fin de la collection est considérée comme point de départ du calcul de la position (<em>startFrom:=startFrom+length</em>). <strong>Note</strong> : Même si <em>startFrom</em> est négatif, la recherche est effectuée de la gauche vers la droite.</li>
 <li>Si <em>startFrom</em> = 0, l'ensemble de la collection est évalué (défaut).</li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-7"></a><a href="#exemple-1-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
-<p>You want to get the first text element with a length smaller than 5:</p>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-8"></a><a href="#exemple-1-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<p>Vous souhaitez obtenir le premier élément de texte dont la taille est inférieure à 5 caractères :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$col </span>: Collection
 <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-string">"hello"</span>;<span class="hljs-string">"world"</span>;<span class="hljs-number">4</span>;<span class="hljs-string">"red horse"</span>;<span class="hljs-string">"tim"</span>;<span class="hljs-string">"san jose"</span>)
 <span class="hljs-variable">$value</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">find</span>(<span class="hljs-function">Formula</span>((<span class="hljs-function">Value type</span>(<span class="hljs-variable">$1</span>.value)=Is text) &amp;&amp; (<span class="hljs-function">Length</span>(<span class="hljs-variable">$1</span>.value)&lt;<span class="hljs-variable">$2</span>)); <span class="hljs-number">5</span>) <span class="hljs-comment">//$value="tim"</span>
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="exemple-2-7"></a><a href="#exemple-2-7" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-2-8"></a><a href="#exemple-2-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
 <p>Vous souhaitez trouver un nom de ville dans une collection :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$c </span>: Collection<span class="hljs-keyword">
 var</span> <span class="hljs-variable">$c2 </span>: Object
@@ -997,7 +1046,7 @@ var</span> <span class="hljs-variable">$c2 </span>: Object
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v19 R6</td><td>Support of formula</td></tr>
+<tr><td>v19 R6</td><td>Prise en charge des formules</td></tr>
 <tr><td>v16 R6</td><td>Ajout</td></tr>
 </tbody>
 </table>
@@ -1010,31 +1059,31 @@ var</span> <span class="hljs-variable">$c2 </span>: Object
 <tbody>
 <tr><td>startFrom</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Elément à partir duquel débuter la recherche</td></tr>
 <tr><td>formula</td><td>4D.Function</td><td style="text-align:center">-&gt;</td><td>Objet formule</td></tr>
-<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Name of a method</td></tr>
-<tr><td>param</td><td>any</td><td style="text-align:center">-&gt;</td><td>Parameter(s) to pass to <em>formula</em> or <em>methodName</em></td></tr>
+<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Nom de méthode</td></tr>
+<tr><td>param</td><td>any</td><td style="text-align:center">-&gt;</td><td>Paramètre(s) à passer à <em>formula</em> ou à <em>methodName</em></td></tr>
 <tr><td>Résultat</td><td>Integer</td><td style="text-align:center">&lt;-</td><td>Numéro du premier élément trouvé (-1 si non trouvé)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-16"></a><a href="#description-16" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.findIndex()</code> function returns the index, in the collection, of the first value for which <em>formula</em> or <em>methodName</em>, applied on each element, returns <strong>true</strong>.</p>
+<p>La fonction <code>.findIndex()</code> retourne le numéro, dans la collection, du premier élément pour lequel <em>formula</em> ou <em>methodName</em> retourne <strong>true</strong>.</p>
 <blockquote>
 <p>Cette fonction ne modifie pas la collection d'origine.</p>
 </blockquote>
-<p>You designate the callback to be executed to evaluate collection elements using either:</p>
+<p>Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les éléments de la collection en utilisant soit :</p>
 <ul>
-<li><em>formula</em> (recommended syntax), a <a href="/docs/fr/API/FunctionClass.html">Formula object</a> that can encapsulate any executable expressions, including functions and project methods;</li>
-<li><em>methodName</em>, the name of a project method (text).</li>
+<li><em>formula</em> (syntaxe recommandée), un <a href="/docs/fr/API/FunctionClass.html">objet formule</a> qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;</li>
+<li><em>methodName</em>, le nom d'une méthode projet (texte).</li>
 </ul>
-<p>The callback is called with the parameter(s) passed in <em>param</em> (optional). The callback can perform any test, with or without the parameter(s) and must return <strong>true</strong> for the first element fulfilling the condition. It receives an <code>Object</code> in first parameter ($1).</p>
-<p>The callback receives the following parameters:</p>
+<p>La callback est appelée avec le(s) paramètre(s) passés dans <em>param</em> (facultatif). La callback peut effectuer n'importe quel test, avec ou sans le(s) paramètre(s) et doit retourner <strong>true</strong> pour le premier élément remplissant le test. Elle reçoit un <code>objet</code> en premier paramètre ($1).</p>
+<p>La callback reçoit les paramètres suivants :</p>
 <ul>
 <li>dans <em>$1.value</em> : valeur de l'élément à évaluer</li>
 <li>in <em>$2</em>: param</li>
 <li>in <em>$N...</em>: paramN...</li>
 </ul>
-<p>It can set the following parameter(s):</p>
+<p>Elle peut définir le(s) paramètre(s) suivant(s) :</p>
 <ul>
-<li>(mandatory if you used a method) <em>$1.result</em> (Boolean): <strong>true</strong> if the element value matches the search condition, <strong>false</strong> otherwise.</li>
+<li>(obligatoire si vous avez utilisé une méthode) <em>$1.result</em> (booléen) : <strong>true</strong> si la valeur de l'élément correspond à la condition de recherche, <strong>false</strong> sinon.</li>
 <li><em>$1.stop</em> (booléen, optionnel) : <strong>true</strong> pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.</li>
 </ul>
 <p>Par défaut, <code>.findIndex()</code> effectue une recherche dans la totalité de la collection. Optionnellement, vous pouvez passer dans <em>startFrom</em> le numéro de l'élément auquel démarrer la recherche.</p>
@@ -1305,7 +1354,7 @@ var</span> <span class="hljs-variable">$val2</span>;<span class="hljs-variable">
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v19 R6</td><td>Support of formula</td></tr>
+<tr><td>v19 R6</td><td>Prise en charge des formules</td></tr>
 <tr><td>v16 R6</td><td>Ajout</td></tr>
 </tbody>
 </table>
@@ -1317,31 +1366,31 @@ var</span> <span class="hljs-variable">$val2</span>;<span class="hljs-variable">
 </thead>
 <tbody>
 <tr><td>formula</td><td>4D.Function</td><td style="text-align:center">-&gt;</td><td>Objet formule</td></tr>
-<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Name of a method</td></tr>
-<tr><td>param</td><td>any</td><td style="text-align:center">-&gt;</td><td>Parameter(s) to pass to <em>formula</em> or <em>methodName</em></td></tr>
+<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Nom de méthode</td></tr>
+<tr><td>param</td><td>any</td><td style="text-align:center">-&gt;</td><td>Paramètre(s) à passer à <em>formula</em> ou à <em>methodName</em></td></tr>
 <tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Collection de valeurs transformées</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-23"></a><a href="#description-23" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.map()</code> function creates a new collection based upon the result of the call of the <em>formula</em> 4D function or <em>methodName</em> method on each element of the original collection. Optionally, you can pass parameters to <em>formula</em> or <em>methodName</em> using the <em>param</em> parameter(s). <code>.map()</code> retourne toujours une collection de taille égale à celle de la collection d'origine.</p>
+<p>La fonction <code>.map()</code> crée une nouvelle collection basée sur le résultat de l'exécution de la fonction 4D <em>formula</em> ou de la méthode <em>methodName</em> sur chaque élément de la collection d'origine. Optionnellement, vous pouvez passer un ou plusieurs paramètre(s) à <em>formula</em> ou <em>methodName</em> via le paramètre <em>param</em>. <code>.map()</code> retourne toujours une collection de taille égale à celle de la collection d'origine.</p>
 <blockquote>
 <p>Cette fonction ne modifie pas la collection d'origine.</p>
 </blockquote>
-<p>You designate the callback to be executed to evaluate collection elements using either:</p>
+<p>Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les éléments de la collection en utilisant soit :</p>
 <ul>
-<li><em>formula</em> (recommended syntax), a <a href="/docs/fr/API/FunctionClass.html">Formula object</a> that can encapsulate any executable expressions, including functions and project methods;</li>
-<li>or <em>methodName</em>, the name of a project method (text).</li>
+<li><em>formula</em> (syntaxe recommandée), un <a href="/docs/fr/API/FunctionClass.html">objet formule</a> qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;</li>
+<li><em>methodName</em>, le nom d'une méthode projet (texte).</li>
 </ul>
-<p>The callback is called with the parameter(s) passed in <em>param</em> (optional). The callback can perform any operation, with or without the parameter(s) and must return new transformed value to add to the resulting collection. It receives an <code>Object</code> in first parameter ($1).</p>
-<p>The callback receives the following parameters:</p>
+<p>La callback est appelée avec le(s) paramètre(s) passés dans <em>param</em> (facultatif). Le callback peut effectuer n'importe quelle opération, avec ou sans le(s) paramètre(s) et doit retourner une nouvelle valeur transformée à ajouter à la collection résultante. Elle reçoit un <code>objet</code> en premier paramètre ($1).</p>
+<p>La callback reçoit les paramètres suivants :</p>
 <ul>
 <li>dans <em>$1.value</em> : valeur de l'élément à évaluer</li>
 <li>in <em>$2</em>: param</li>
 <li>in <em>$N...</em>: paramN...</li>
 </ul>
-<p>It can set the following parameter(s):</p>
+<p>Elle peut définir le(s) paramètre(s) suivant(s) :</p>
 <ul>
-<li>(mandatory if you used a method) <em>$1.result</em> (any type): new transformed value to add to the resulting collection</li>
+<li>(obligatoire si vous avez utilisé une méthode) <em>$1.result</em> (n'importe quel type) : nouvelle valeur transformée à ajouter à la collection résultante</li>
 <li><em>$1.stop</em> (booléen, optionnel) : <strong>true</strong> pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="exemple-19"></a><a href="#exemple-19" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
@@ -1491,7 +1540,7 @@ var</span> <span class="hljs-variable">$val2</span>;<span class="hljs-variable">
 <li>collections</li>
 <li>dates</li>
 </ol>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-8"></a><a href="#exemple-1-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-9"></a><a href="#exemple-1-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <p>Tri d'une collection d'objets basé sur une formule de texte avec noms de propriétés :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c</span>; <span class="hljs-variable">$c2</span>; <span class="hljs-variable">$3 </span>: Collection 
  <span class="hljs-variable">$c</span>:=New collection<span class="hljs-keyword">
@@ -1501,7 +1550,7 @@ var</span> <span class="hljs-variable">$val2</span>;<span class="hljs-variable">
  <span class="hljs-variable">$c2</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">orderBy</span>(ck ascending)
  <span class="hljs-variable">$c3</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">orderBy</span>(ck descending)
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="exemple-2-8"></a><a href="#exemple-2-8" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-2-9"></a><a href="#exemple-2-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
 <p>Tri d'une collection d'objets sur des propriétés :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c</span>; <span class="hljs-variable">$c2 </span>: Collection
  <span class="hljs-variable">$c</span>:=New collection<span class="hljs-keyword">
@@ -1547,7 +1596,7 @@ var</span> <span class="hljs-variable">$val2</span>;<span class="hljs-variable">
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v19 R6</td><td>Support of formula</td></tr>
+<tr><td>v19 R6</td><td>Prise en charge des formules</td></tr>
 <tr><td>v16 R6</td><td>Ajout</td></tr>
 </tbody>
 </table>
@@ -1559,24 +1608,24 @@ var</span> <span class="hljs-variable">$val2</span>;<span class="hljs-variable">
 </thead>
 <tbody>
 <tr><td>formula</td><td>4D.Function</td><td style="text-align:center">-&gt;</td><td>Objet formule</td></tr>
-<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Name of a method</td></tr>
-<tr><td>extraParam</td><td>any</td><td style="text-align:center">-&gt;</td><td>Parameter(s) to pass</td></tr>
+<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Nom de méthode</td></tr>
+<tr><td>extraParam</td><td>any</td><td style="text-align:center">-&gt;</td><td>Paramètre(s) à passer</td></tr>
 <tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Copie triée de la collection (shallow copy)</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-27"></a><a href="#description-27" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.orderByMethod()</code> function returns a new collection containing all elements of the collection in the order defined through the <em>formula</em> 4D function or <em>methodName</em> method.</p>
+<p>La fonction <code>.orderByMethod()</code> retourne une nouvelle collection contenant tous les éléments de la collection d'origine triés selon les critères définis par la fonction 4D <em>formula</em> ou la méthode <em>methodName</em>.</p>
 <p>Cette fonction retourne une **shallow copy (copie superficielle), ce qui signifie que les objets ou les collections présents dans les deux collections partagent la même référence. Si la collection d'origine est une collection partagée, la collection retournée est également une collection partagée.</p>
 <blockquote>
 <p>Cette fonction ne modifie pas la collection d'origine.</p>
 </blockquote>
-<p>You designate the callback to be executed to evaluate collection elements using either:</p>
+<p>Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les éléments de la collection en utilisant soit :</p>
 <ul>
-<li><em>formula</em> (recommended syntax), a <a href="/docs/fr/API/FunctionClass.html">Formula object</a> that can encapsulate any executable expressions, including functions and project methods;</li>
-<li>or <em>methodName</em>, the name of a project method (text).</li>
+<li><em>formula</em> (syntaxe recommandée), un <a href="/docs/fr/API/FunctionClass.html">objet formule</a> qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;</li>
+<li><em>methodName</em>, le nom d'une méthode projet (texte).</li>
 </ul>
-<p>In the callback, pass some code that compares two values and returns <strong>true</strong> if the first value is lower than the second value. You can provide <em>extraParam</em> parameters to the callback if necessary.</p>
-<p>The callback receives the following parameters:</p>
+<p>Dans la callback, passez votre code qui compare deux valeurs et retourne <strong>true</strong> si la première valeur est inférieure à la seconde valeur. Vous pouvez fournir des paramètres <em>extraParam</em> à la callback si nécessaire.</p>
+<p>La callback reçoit les paramètres suivants :</p>
 <ul>
 <li>$1 (object), où :
 <ul>
@@ -1585,19 +1634,19 @@ var</span> <span class="hljs-variable">$val2</span>;<span class="hljs-variable">
 <li>$2...$N (tout type) : paramètres supplémentaires (extraParam)</li>
 </ul></li>
 </ul>
-<p>If you used a method, it must set the following parameter:</p>
+<p>Si vous avez utilisé une méthode, elle doit définir le paramètre suivant :</p>
 <ul>
-<li><em>$1.result</em> (booléen): <strong>vrai</strong> si <em>$1.value &lt; $1.value2</em>, <strong>faux</strong> sinon</li>
+<li><em>$1.result</em> (booléen): <strong>true</strong> si <em>$1.value &lt; $1.value2</em>, <strong>false</strong> sinon</li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-9"></a><a href="#exemple-1-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-10"></a><a href="#exemple-1-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <p>Voici le code de la méthode <strong><em>NumAscending</em></strong> :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c</span>; <span class="hljs-variable">$c2</span>; <span class="hljs-variable">$c3 </span>: Collection
  <span class="hljs-variable">$c</span>:=New collection
  <span class="hljs-variable">$c</span>.<span class="hljs-function">push</span>(<span class="hljs-string">"33"</span>;<span class="hljs-string">"4"</span>;<span class="hljs-string">"1111"</span>;<span class="hljs-string">"222"</span>)
- <span class="hljs-variable">$c2</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">orderBy</span>() <span class="hljs-comment">//$c2=["1111","222","33","4"], alphabetical order</span>
+ <span class="hljs-variable">$c2</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">orderBy</span>() <span class="hljs-comment">//$c2=["1111","222","33","4"], ordre alphabétique</span>
  <span class="hljs-variable">$c3</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">orderByMethod</span>(<span class="hljs-function">Formula</span>(<span class="hljs-function">Num</span>(<span class="hljs-variable">$1</span>.value)&lt;<span class="hljs-function">Num</span>(<span class="hljs-variable">$1</span>.value2))) <span class="hljs-comment">// $c3=["4","33","222","1111"]</span>
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="exemple-2-9"></a><a href="#exemple-2-9" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-2-10"></a><a href="#exemple-2-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
 <p>Voici le code de la méthode <strong><em>WordLength</em></strong> :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$fruits</span>; <span class="hljs-variable">$c2 </span>: Collection
  <span class="hljs-variable">$fruits</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-string">"Orange"</span>;<span class="hljs-string">"Apple"</span>;<span class="hljs-string">"Grape"</span>;<span class="hljs-string">"pear"</span>;<span class="hljs-string">"Banana"</span>;<span class="hljs-string">"fig"</span>;<span class="hljs-string">"Blackberry"</span>;<span class="hljs-string">"Passion fruit"</span>)
@@ -1605,7 +1654,7 @@ var</span> <span class="hljs-variable">$val2</span>;<span class="hljs-variable">
   <span class="hljs-comment">//$c2=[Passion fruit,Blackberry,Orange,Banana,Apple,Grape,pear,fig]</span>
 </code></pre>
 <h4><a class="anchor" aria-hidden="true" id="exemple-3-4"></a><a href="#exemple-3-4" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 3</h4>
-<p>La méthode <strong><em>sortCollection</em></strong> :</p>
+<p>Vous souhaitez trier une collection par code de caractère ou par langage :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$strings1</span>; <span class="hljs-variable">$strings2 </span>: Collection
 <span class="hljs-variable">$strings1</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-string">"Alpha"</span>;<span class="hljs-string">"Charlie"</span>;<span class="hljs-string">"alpha"</span>;<span class="hljs-string">"bravo"</span>;<span class="hljs-string">"Bravo"</span>;<span class="hljs-string">"charlie"</span>)
 
@@ -1619,7 +1668,7 @@ var</span> <span class="hljs-variable">$val2</span>;<span class="hljs-variable">
 </code></pre>
 <p>Paramètre(s) à passer à <em>methodName</em></p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$1 </span>: Object<span class="hljs-keyword">
-var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comment">// sort option</span>
+var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comment">// option de tri</span>
 
 <span class="hljs-variable">$1</span>.result:=(<span class="hljs-function">Compare strings</span>(<span class="hljs-variable">$1</span>.value;<span class="hljs-variable">$1</span>.value2;<span class="hljs-variable">$2</span>)&lt;<span class="hljs-number">0</span>)
 </code></pre>
@@ -1685,14 +1734,14 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 <blockquote>
 <p>Cette fonction modifie la collection d'origine.</p>
 </blockquote>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-10"></a><a href="#exemple-1-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-11"></a><a href="#exemple-1-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col </span>: Collection
  <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">1</span>;<span class="hljs-number">2</span>) <span class="hljs-comment">//$col=[1,2]</span>
  <span class="hljs-variable">$col</span>.<span class="hljs-function">push</span>(<span class="hljs-number">3</span>) <span class="hljs-comment">//$col=[1,2,3]</span>
  <span class="hljs-variable">$col</span>.<span class="hljs-function">push</span>(<span class="hljs-number">6</span>;<span class="hljs-function">New object</span>(<span class="hljs-string">"firstname"</span>;<span class="hljs-string">"John"</span>;<span class="hljs-string">"lastname"</span>;<span class="hljs-string">"Smith"</span>))
   <span class="hljs-comment">//$col=[1,2,3,6,{firstname:John,lastname:Smith}</span>
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="exemple-2-10"></a><a href="#exemple-2-10" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-2-11"></a><a href="#exemple-2-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
 <p>Vous souhaitez trier une collection de chaînes contenant des nombres par valeur plutôt que par ordre alphabétique :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col</span>; <span class="hljs-variable">$sortedCol </span>: Collection
  <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">5</span>;<span class="hljs-number">3</span>;<span class="hljs-number">9</span>) <span class="hljs-comment">//$col=[5,3,9]</span>
@@ -1736,7 +1785,7 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 <blockquote>
 <p>Cette fonction ne modifie pas la collection d'origine.</p>
 </blockquote>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-11"></a><a href="#exemple-1-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-12"></a><a href="#exemple-1-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c</span>; <span class="hljs-variable">$c2</span>; <span class="hljs-variable">$c3 </span>: Collection
  <span class="hljs-variable">$c</span>:=New collection
  <span class="hljs-variable">$c</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"Cleveland"</span>;<span class="hljs-string">"zc"</span>;<span class="hljs-number">35049</span>))
@@ -1747,7 +1796,7 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
  <span class="hljs-variable">$c2</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">query</span>(<span class="hljs-string">"name = :1"</span>;<span class="hljs-string">"Cleveland"</span>) <span class="hljs-comment">//$c2=[{name:Cleveland,zc:35049}]</span>
  <span class="hljs-variable">$c3</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">query</span>(<span class="hljs-string">"zc &gt; 35040"</span>) <span class="hljs-comment">//$c3=[{name:Cleveland,zc:35049},{name:Clanton,zc:35046},{name:Clanton,zc:35045}]</span>
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="exemple-2-11"></a><a href="#exemple-2-11" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-2-12"></a><a href="#exemple-2-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c </span>: Collection
  <span class="hljs-variable">$c</span>:=New collection
  <span class="hljs-variable">$c</span>.<span class="hljs-function">push</span>(<span class="hljs-function">New object</span>(<span class="hljs-string">"name"</span>;<span class="hljs-string">"Smith"</span>;<span class="hljs-string">"dateHired"</span>;<span class="hljs-literal">!22-05-2002!</span>;<span class="hljs-string">"age"</span>;<span class="hljs-number">45</span>))
@@ -1791,7 +1840,7 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v19 R6</td><td>Support of formula</td></tr>
+<tr><td>v19 R6</td><td>Prise en charge des formules</td></tr>
 <tr><td>v16 R6</td><td>Ajout</td></tr>
 </tbody>
 </table>
@@ -1803,41 +1852,41 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 </thead>
 <tbody>
 <tr><td>formula</td><td>4D.Function</td><td style="text-align:center">-&gt;</td><td>Objet formule</td></tr>
-<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Name of a method</td></tr>
-<tr><td>initValue</td><td>Text, Number, Object, Collection, Date, Boolean</td><td style="text-align:center">-&gt;</td><td>Value to use as the first argument to the first call of <em>formula</em> or <em>methodName</em></td></tr>
-<tr><td>param</td><td>expression</td><td style="text-align:center">-&gt;</td><td>Parameter(s) to pass</td></tr>
+<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Nom de méthode</td></tr>
+<tr><td>initValue</td><td>Text, Number, Object, Collection, Date, Boolean</td><td style="text-align:center">-&gt;</td><td>Valeur à utiliser comme premier argument du premier appel de <em>formula</em> ou <em>methodName</em></td></tr>
+<tr><td>param</td><td>expression</td><td style="text-align:center">-&gt;</td><td>Paramètre(s) à passer</td></tr>
 <tr><td>Résultat</td><td>Text, Number, Object, Collection, Date, Boolean</td><td style="text-align:center">&lt;-</td><td>Résultat de la valeur de l'accumulateur</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-31"></a><a href="#description-31" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.reduce()</code> function applies the <em>formula</em> or <em>methodName</em> callback against an accumulator and each element in the collection (from left to right) to reduce it to a single value.</p>
+<p>La fonction <code>.reduce()</code> applique la callback <em>formula</em> ou <em>methodName</em> à un accumulateur et chaque élément de la collection (de gauche à droite) pour la réduire à une valeur unique.</p>
 <blockquote>
 <p>Cette fonction ne modifie pas la collection d'origine.</p>
 </blockquote>
-<p>You designate the callback to be executed to evaluate collection elements using either:</p>
+<p>Vous désignez le code de rétroappel (callback) à exécuter pour évaluer les éléments de la collection en utilisant soit :</p>
 <ul>
-<li><em>formula</em> (recommended syntax), a <a href="/docs/fr/API/FunctionClass.html">Formula object</a> that can encapsulate any executable expressions, including functions and project methods;</li>
-<li>or <em>methodName</em>, the name of a project method (text).</li>
+<li><em>formula</em> (syntaxe recommandée), un <a href="/docs/fr/API/FunctionClass.html">objet formule</a> qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;</li>
+<li><em>methodName</em>, le nom d'une méthode projet (texte).</li>
 </ul>
-<p>The callback takes each collection element and performs any desired operation to accumulate the result into <em>$1.accumulator</em>, which is returned in <em>$1.value</em>.</p>
+<p>La callback prend chaque élément de la collection et effectue toutes les opérations souhaitées pour accumuler le résultat dans <em>$1.accumulator</em>, qui est retourné dans <em>$1.value</em>.</p>
 <p>Vous pouvez passer la valeur pour initialiser l'accumulateur dans <em>initValue</em>. S'il est omis, <em>$1.accumulator</em> commence par <em>Undefined</em>.</p>
-<p>The callback receives the following parameters:</p>
+<p>La callback reçoit les paramètres suivants :</p>
 <ul>
 <li>dans <em>$1.value</em> : valeur de l'élément à évaluer</li>
 <li>dans $2 : <em>param</em></li>
 <li>dans <em>$N...</em> : <em>paramN...</em></li>
 </ul>
-<p>The callback sets the following parameter(s):</p>
+<p>Elle peut définir le(s) paramètre(s) suivant(s) :</p>
 <ul>
 <li><em>$1.accumulator</em>: valeur à modifier par la fonction et qui est initialisée par <em>initValue</em>.</li>
-<li><em>$1.stop</em> (booléen, optionnel) : <strong>true</strong> pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.</li>
+<li><em>$1.stop</em> (booléen, optionnel) : <strong>true</strong> pour stopper le rétroappel. La valeur retournée est la dernière calculée.</li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-12"></a><a href="#exemple-1-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-13"></a><a href="#exemple-1-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$c </span>: Collection
 <span class="hljs-variable">$c</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">5</span>;<span class="hljs-number">3</span>;<span class="hljs-number">5</span>;<span class="hljs-number">1</span>;<span class="hljs-number">3</span>;<span class="hljs-number">4</span>;<span class="hljs-number">4</span>;<span class="hljs-number">6</span>;<span class="hljs-number">2</span>;<span class="hljs-number">2</span>)
-<span class="hljs-variable">$r</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">reduce</span>(<span class="hljs-function">Formula</span>(<span class="hljs-variable">$1</span>.accumulator:=<span class="hljs-variable">$1</span>.accumulator*<span class="hljs-variable">$1</span>.value); <span class="hljs-number">1</span>)  <span class="hljs-comment">//returns 86400</span>
+<span class="hljs-variable">$r</span>:=<span class="hljs-variable">$c</span>.<span class="hljs-function">reduce</span>(<span class="hljs-function">Formula</span>(<span class="hljs-variable">$1</span>.accumulator:=<span class="hljs-variable">$1</span>.accumulator*<span class="hljs-variable">$1</span>.value); <span class="hljs-number">1</span>)  <span class="hljs-comment">//renvoie 86400</span>
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="exemple-2-12"></a><a href="#exemple-2-12" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-2-13"></a><a href="#exemple-2-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
 <p>Avec la méthode <strong><em>Flatten</em></strong> suivante :</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c</span>;<span class="hljs-variable">$r </span>: Collection
  <span class="hljs-variable">$c</span>:=New collection
@@ -2059,7 +2108,7 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v19 R6</td><td>Support of formula</td></tr>
+<tr><td>v19 R6</td><td>Prise en charge des formules</td></tr>
 <tr><td>v16 R6</td><td>Ajout</td></tr>
 </tbody>
 </table>
@@ -2072,31 +2121,31 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 <tbody>
 <tr><td>startFrom</td><td>Integer</td><td style="text-align:center">-&gt;</td><td>Elément à partir duquel débuter l'évaluation</td></tr>
 <tr><td>formula</td><td>4D.Function</td><td style="text-align:center">-&gt;</td><td>Objet formule</td></tr>
-<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Name of a method</td></tr>
-<tr><td>param</td><td>Mixed</td><td style="text-align:center">-&gt;</td><td>Parameter(s) to pass</td></tr>
+<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Nom de méthode</td></tr>
+<tr><td>param</td><td>Mixed</td><td style="text-align:center">-&gt;</td><td>Paramètre(s) à passer</td></tr>
 <tr><td>Résultat</td><td>Booléen</td><td style="text-align:center">&lt;-</td><td>Vrai si au moins un élément a réussi le test</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-37"></a><a href="#description-37" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.some()</code> function returns true if at least one element in the collection successfully passed a test implemented in the provided <em>formula</em> or <em>methodName</em> code.</p>
-<p>You designate the 4D code (callback) to be executed to evaluate collection elements using either:</p>
+<p>La fonction <code>.some()</code> retourne true si au moins un élément de la collection a réussi un test implémenté dans <em>formula</em> ou <em>methodName</em>.</p>
+<p>Vous désignez le code 4D de rétroappel (callback) à exécuter pour évaluer les éléments de la collection en utilisant soit :</p>
 <ul>
-<li><em>formula</em> (recommended syntax), a <a href="/docs/fr/API/FunctionClass.html">Formula object</a> that can encapsulate any executable expressions, including functions and project methods;</li>
-<li>or <em>methodName</em>, the name of a project method (text).</li>
+<li><em>formula</em> (syntaxe recommandée), un <a href="/docs/fr/API/FunctionClass.html">objet formule</a> qui peut encapsuler toute expression exécutable, y compris des fonctions et des méthodes projet ;</li>
+<li><em>methodName</em>, le nom d'une méthode projet (texte).</li>
 </ul>
-<p>The callback is called with the parameter(s) passed in <em>param</em> (optional). The callback can perform any test, with or without the parameter(s) and must return <strong>true</strong> for every element fulfilling the test. It receives an <code>Object</code> in first parameter ($1).</p>
-<p>The callback receives the following parameters:</p>
+<p>La callback est appelée avec le(s) paramètre(s) passés dans <em>param</em> (facultatif). La callback peut effectuer n'importe quel test, avec ou sans le(s) paramètre(s) et doit retourner <strong>true</strong> pour chaque élément remplissant le test. Elle reçoit un <code>objet</code> en premier paramètre ($1).</p>
+<p>La callback reçoit les paramètres suivants :</p>
 <ul>
 <li>dans <em>$1.value</em> : valeur de l'élément à évaluer</li>
 <li>dans $2 : <em>param</em></li>
 <li>dans <em>$N...</em> : <em>paramN...</em></li>
 </ul>
-<p>It can set the following parameter(s):</p>
+<p>Elle peut définir le(s) paramètre(s) suivant(s) :</p>
 <ul>
-<li>(mandatory if you used a method) <em>$1.result</em> (boolean): <strong>true</strong> if the element value evaluation is successful, <strong>false</strong> otherwise.</li>
-<li><em>$1.stop</em> (booléen, optionnel) : <strong>true</strong> pour stopper le rétroappel de méthode. La valeur retournée est la dernière calculée.</li>
+<li>(obligatoire si vous avez utilisé une méthode) <em>$1.result</em> (booléen) : <strong>true</strong> si l'évaluation de la valeur de l'élément est à vrai, <strong>false</strong> sinon.</li>
+<li><em>$1.stop</em> (booléen, optionnel) : <strong>true</strong> pour stopper le rétroappel. La valeur retournée est la dernière calculée.</li>
 </ul>
-<p>In any case, at the point where <code>.some()</code> function encounters the first collection element returning true, it stops calling the callback and returns <strong>true</strong>.</p>
+<p>Dans tous les cas, au moment où la fonction <code>.some()</code> rencontre le premier élément de la collection retournant true, elle arrête d'appeler la callback et retourne <strong>true</strong>.</p>
 <p>By default, <code>.every()</code> tests the whole collection. Optionally, you can pass in <em>startFrom</em> the index of the element from which to start the test.</p>
 <ul>
 <li>Si <em>startFrom</em> &gt;= la longueur de la collection, <strong>False</strong> est retourné, ce qui signifie que la collection n'est pas testée.</li>
@@ -2104,7 +2153,7 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 <li>Si <em>startFrom</em> = 0, l'ensemble de la collection est évalué (défaut).</li>
 </ul>
 <h4><a class="anchor" aria-hidden="true" id="exemple-28"></a><a href="#exemple-28" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple</h4>
-<p>You want to know if at least one collection value is &gt;0.</p>
+<p>Vous voulez savoir si au moins une valeur de la collection est &gt;0.</p>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$c </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$b </span>: Boolean
  <span class="hljs-variable">$c</span>:=New collection
@@ -2125,7 +2174,7 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 <tr><th>Version</th><th>Modifications</th></tr>
 </thead>
 <tbody>
-<tr><td>v19 R6</td><td>Support of formula</td></tr>
+<tr><td>v19 R6</td><td>Prise en charge des formules</td></tr>
 <tr><td>v16 R6</td><td>Ajout</td></tr>
 </tbody>
 </table>
@@ -2137,19 +2186,19 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 </thead>
 <tbody>
 <tr><td>formula</td><td>4D.Function</td><td style="text-align:center">-&gt;</td><td>Objet formule</td></tr>
-<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Name of a method</td></tr>
+<tr><td>methodName</td><td>Text</td><td style="text-align:center">-&gt;</td><td>Nom de méthode</td></tr>
 <tr><td>extraParam</td><td>any</td><td style="text-align:center">-&gt;</td><td>Paramètre(s) à passer à la méthode</td></tr>
 <tr><td>Résultat</td><td>Collection</td><td style="text-align:center">&lt;-</td><td>Collection d'origine triée</td></tr>
 </tbody>
 </table>
 <h4><a class="anchor" aria-hidden="true" id="description-38"></a><a href="#description-38" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Description</h4>
-<p>The <code>.sort()</code> function sorts the elements of the original collection and also returns the sorted collection .</p>
+<p>La fonction <code>.sort()</code> trie les éléments de la collection d'origine et retourne également la collection triée.</p>
 <blockquote>
 <p>Cette fonction modifie la collection d'origine.</p>
 </blockquote>
 <p>Si <code>.sort()</code> est appelé sans paramètre, seules les valeurs scalaires (numérique, texte, date, booléens) sont triées. Les éléments sont triés par défaut par ordre croissant, en fonction de leur type.</p>
-<p>If you want to sort the collection elements in some other order or sort any type of element, you must supply in <em>formula</em> (<a href="/docs/fr/API/FunctionClass.html">Formula object</a>) or <em>methodName</em> (Text) a comparison callback that compares two values and returns <strong>true</strong> if the first value is lower than the second value. You can provide additional parameters to the callback if necessary.</p>
-<p>The callback receives the following parameters:</p>
+<p>Si vous souhaitez trier les éléments de la collection dans un autre ordre ou trier n'importe quel type d'élément, vous devez fournir, dans <em>formula</em> (<a href="/docs/fr/API/FunctionClass.html">objet Formula</a>) ou <em>methodName</em> (texte), une callback de comparaison qui compare deux valeurs et retourne <strong>true</strong> si la première valeur est inférieure à la deuxième valeur. Vous pouvez fournir des paramètres supplémentaires à la callback si nécessaire.</p>
+<p>La callback reçoit les paramètres suivants :</p>
 <ul>
 <li>$1 (object), où :
 <ul>
@@ -2158,9 +2207,9 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 </ul></li>
 <li>$2...$N (tout type) : paramètres supplémentaires (extraParam)</li>
 </ul>
-<p>If you used a method, you must set the folllowing parameter:</p>
+<p>Si vous avez utilisé une méthode, elle doit définir le paramètre suivant :</p>
 <ul>
-<li><em>$1.result</em> (boolean): <strong>true</strong> if <em>$1.value &lt; $1.value2</em>, <strong>false</strong> otherwise.</li>
+<li><em>$1.result</em> (booléen) : <strong>true</strong> si <em>$1.value &lt; $1.value2</em>, <strong>false</strong> sinon.</li>
 </ul>
 <p>Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Si <em>attributePath</em> est un attribut d'objet qui contient des valeurs de types différents, elles sont groupées par type et triées ensuite.</p>
 <ol>
@@ -2172,13 +2221,13 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 <li>collections</li>
 <li>dates</li>
 </ol>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-13"></a><a href="#exemple-1-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-14"></a><a href="#exemple-1-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col</span>; <span class="hljs-variable">$col2 </span>: Collection
  <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-string">"Tom"</span>;<span class="hljs-number">5</span>;<span class="hljs-string">"Mary"</span>;<span class="hljs-number">3</span>;<span class="hljs-string">"Henry"</span>;<span class="hljs-number">1</span>;<span class="hljs-string">"Jane"</span>;<span class="hljs-number">4</span>;<span class="hljs-string">"Artie"</span>;<span class="hljs-number">6</span>;<span class="hljs-string">"Chip"</span>;<span class="hljs-number">2</span>)
  <span class="hljs-variable">$col2</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">sort</span>() <span class="hljs-comment">// $col2=["Artie","Chip","Henry","Jane","Mary","Tom",1,2,3,4,5,6]</span>
   <span class="hljs-comment">// $col=["Artie","Chip","Henry","Jane","Mary","Tom",1,2,3,4,5,6]</span>
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="exemple-2-13"></a><a href="#exemple-2-13" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-2-14"></a><a href="#exemple-2-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col</span>; <span class="hljs-variable">$col2 </span>: Collection
  <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">10</span>;<span class="hljs-number">20</span>)
  <span class="hljs-variable">$col2</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">push</span>(<span class="hljs-number">5</span>;<span class="hljs-number">3</span>;<span class="hljs-number">1</span>;<span class="hljs-number">4</span>;<span class="hljs-number">6</span>;<span class="hljs-number">2</span>).<span class="hljs-function">sort</span>() <span class="hljs-comment">//$col2=[1,2,3,4,5,6,10,20]</span>
@@ -2187,7 +2236,7 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 <pre><code class="hljs css language-4d"><span class="hljs-keyword">var</span> <span class="hljs-variable">$col</span>; <span class="hljs-variable">$col2</span>; <span class="hljs-variable">$col3 </span>: Collection
 <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">33</span>;<span class="hljs-number">4</span>;<span class="hljs-number">66</span>;<span class="hljs-number">1111</span>;<span class="hljs-number">222</span>)
 <span class="hljs-variable">$col2</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">sort</span>() <span class="hljs-comment">//numerical sort: [4,33,66,222,1111]</span>
-<span class="hljs-variable">$col3</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">sort</span>(<span class="hljs-function">Formula</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$1</span>.value)&lt;<span class="hljs-function">String</span>(<span class="hljs-variable">$1</span>.value2))) <span class="hljs-comment">//alphabetical sort: [1111,222,33,4,66]</span>
+<span class="hljs-variable">$col3</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">sort</span>(<span class="hljs-function">Formula</span>(<span class="hljs-function">String</span>(<span class="hljs-variable">$1</span>.value)&lt;<span class="hljs-function">String</span>(<span class="hljs-variable">$1</span>.value2))) <span class="hljs-comment">//tri alphabétique : [1111,222,33,4,66]</span>
 </code></pre>
 <h2><a class="anchor" aria-hidden="true" id="sum"></a><a href="#sum" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>.sum()</h2>
 <p><details><summary>Historique</summary></p>
@@ -2220,13 +2269,13 @@ var</span> <span class="hljs-variable">$2</span>: Integer <span class="hljs-comm
 <li>la collection ne contient pas d'éléments numériques,</li>
 <li><em>propertyPath</em> n'est pas trouvé dans la collection.</li>
 </ul>
-<h4><a class="anchor" aria-hidden="true" id="exemple-1-14"></a><a href="#exemple-1-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-1-15"></a><a href="#exemple-1-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 1</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$vSum </span>: Real
  <span class="hljs-variable">$col</span>:=<span class="hljs-function">New collection</span>(<span class="hljs-number">10</span>;<span class="hljs-number">20</span>;<span class="hljs-string">"Monday"</span>;<span class="hljs-literal">True</span>;<span class="hljs-number">2</span>)
  <span class="hljs-variable">$vSum</span>:=<span class="hljs-variable">$col</span>.<span class="hljs-function">sum</span>() <span class="hljs-comment">//32</span>
 </code></pre>
-<h4><a class="anchor" aria-hidden="true" id="exemple-2-14"></a><a href="#exemple-2-14" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
+<h4><a class="anchor" aria-hidden="true" id="exemple-2-15"></a><a href="#exemple-2-15" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Exemple 2</h4>
 <pre><code class="hljs css language-4d"><span class="hljs-keyword"> var</span> <span class="hljs-variable">$col </span>: Collection<span class="hljs-keyword">
  var</span> <span class="hljs-variable">$vSum </span>: Real
  <span class="hljs-variable">$col</span>:=New collection

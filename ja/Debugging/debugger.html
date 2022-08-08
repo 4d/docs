@@ -114,6 +114,11 @@
 <p>別のメソッド (サブルーチンまたは関数) を呼び出す行が実行される時にこのボタンを使用すると、呼び出されたメソッドがデバッガーウィンドウに表示され、ステップ実行できます。</p>
 <p>デバッガーウィンドウの <a href="#呼び出し連鎖エリア">呼び出し連鎖エリア</a> では、新しく呼び出されたメソッドがカレント (一番上) となります。</p>
 <p>別のメソッドを呼び出していない行が実行される場合には、このボタンは <strong>次行に進む</strong> ボタンと同じように振る舞います。</p>
+<h4><a class="anchor" aria-hidden="true" id="呼び出し元に進む"></a><a href="#呼び出し元に進む" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>呼び出し元に進む</h4>
+<p>サブルーチンや関数をトレースしている場合にこのボタンをクリックすると、現在トレース中のメソッド全体を実行し、呼び出し元メソッドに戻ることができます。 デバッガーウィンドウは、コールチェーンの一つ前のメソッドに戻ります。 If the current method is the last method in the call chain, the Debugger window is closed.</p>
+<p>In remote debugging, on execution of the last line of the method, if the method is executed on the server, the parent method is called. If the parent method is executed on the remote side, the button acts in the same manner as the <strong>No Trace</strong> button.</p>
+<h4><a class="anchor" aria-hidden="true" id="別プロセスもトレース"></a><a href="#別プロセスもトレース" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>別プロセスもトレース</h4>
+<p>On execution of a line that creates a new process (i.e., calling the <code>New process</code> command), this button opens a new Debugger window that allows you to trace the process method of the newly created process. On execution of a line that does not creates a new process, this button acts in the same manner as the <strong>Step Over</strong> button.</p>
 <h4><a class="anchor" aria-hidden="true" id="中断"></a><a href="#中断" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>中断</h4>
 <p>メソッドは中断され、メソッドの実行を開始する前の状態に戻ります。</p>
 <ul>
@@ -126,7 +131,7 @@
 <p><strong>Tip</strong>: このボタンは、コードにどのような変更が必要かが明らかであり、メソッドのテストを続行するためにその変更が必要な場合に使用してください。 変更が完了したら、メソッドを再実行できます。</p>
 </blockquote>
 <h4><a class="anchor" aria-hidden="true" id="編集"></a><a href="#編集" aria-hidden="true" class="hash-link"><svg class="hash-link-icon" aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>編集</h4>
-<p>メソッドは一時停止されます。 コードエディターウィンドウが開いて、編集ボタンがクリックされた時点で実行していたメソッドを表示します。</p>
+<p>メソッドは中断されます。 コードエディターウィンドウが開いて、編集ボタンがクリックされた時点で実行していたメソッドを表示します。</p>
 <p>このボタンをクリックしてメソッドを編集した場合には、現在の実行は中断されないため、編集内容の反映は次回実行時になります。</p>
 <blockquote>
 <p><strong>Tip</strong>: このボタンは、コードに必要な変更内容がわかっている場合で、その変更がコードの残り部分の実行やトレースの妨げにならない場合に使用します。</p>
