@@ -112,8 +112,9 @@ To compress a `4D.File`:
 
 To compress a `4D.Folder` without the folder itself:
 
-```4D
+```4d
  var $folder : 4D.Folder
+
  var $destination : 4D.File
  var $status : Object
 
