@@ -15,7 +15,7 @@ Using the area's property list, you can set [4D View Pro object properties](Form
 
 You can select the interface to use with your 4D View Pro form areas in the **Property List**, under **Appearance**:  
 
-![](../assets/en/ViewPro/vpUserInterface.png)
+![](../assets/en/ViewPro/vpUserInterface.PNG)
 
 > You can also use the [`userInterface`](FormObjects/properties_Appearance.md#user-interface) and [`withFormulaBar`](FormObjects/properties_Appearance.md#show-formula-bar)(only with the "toolbar" interface) JSON properties.  
 
