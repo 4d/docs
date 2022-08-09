@@ -4,9 +4,9 @@ title: Methods
 ---
 
 
-A method is basically a piece of code that executes one or several actions. A method is composed of statements; each statement consists of one line in the method. A statement performs an action, and may be simple or complex. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks). 
+A method is basically a piece of code that executes one or several actions. A method is composed of statements; each statement consists of one line in the method. A statement performs an action, and may be simple or complex. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks).
 
-The maximum size of a method is limited to 2 GB of text or 32,000 lines of code.	 
+The maximum size of a method is limited to 2 GB of text or 32,000 lines of code.  
 
 ## Method Types
 
@@ -20,16 +20,14 @@ In the 4D Language, there are several categories of methods. The category depend
 |**Trigger** (aka *Table method*)|Automatic, each time that you manipulate the records of a table (Add, Delete and Modify)|No|Property of a table. Triggers are methods that can prevent “illegal” operations with the records of your database.|
 |**Database method**|Automatic, when a working session event occurs|Yes (predefined)|There are 16 database methods in 4D. See Database methods section|
 
-
-> The 4D Language also supports **Class functions**, that can be called in the context of an object instance. Class functions can be built-in (*e.g.* `collection.orderBy()` or `entity.save()`), or [created by the 4D developer](classes.md#class-function). 
-
+> The 4D Language also supports **Class functions**, that can be called in the context of an object instance. Class functions can be built-in (*e.g.* `collection.orderBy()` or `entity.save()`), or [created by the 4D developer](classes.md#class-function).
 
 ## Calling Project Methods
 
 A project method can have one of the following roles, depending on how it is executed and used:
 
 - Subroutine
-- Object formula 
+- Object formula
 - Menu method
 - Process method
 - Event or Error catching method
@@ -81,14 +79,13 @@ Using subroutines, you make your code modular. This simply means dividing your c
  PRINT_CHECK_BOOK_REPORT //Print a checkbook report
 ```
 
-Even for someone who doesn’t know the project, it is clear what this code does. It is not necessary to examine each subroutine. Each subroutine might be many lines long and perform some complex operations, but here it is only important that it performs its task. We recommend that you divide your code into logical tasks, or modules, whenever possible. 
-
+Even for someone who doesn’t know the project, it is clear what this code does. It is not necessary to examine each subroutine. Each subroutine might be many lines long and perform some complex operations, but here it is only important that it performs its task. We recommend that you divide your code into logical tasks, or modules, whenever possible.
 
 ### Object formulas
 
 You can encapsulate your project methods in **formula** objects and call them from your objects.
 
-The `Formula` or `Formula from string` commands allow you to create native formula objects that you can encapsulate in object properties. It allows you to implement custom object methods. 
+The `Formula` or `Formula from string` commands allow you to create native formula objects that you can encapsulate in object properties. It allows you to implement custom object methods.
 
 To execute a method stored in an object property, use the **( )** operator after the property name. For example:
 
@@ -148,8 +145,6 @@ $result:=$o.fullName()
 //$result = "Jim Wesson"
 ```
 
-
-
 Note that, even if it does not have parameters, an object method to be executed must be called with ( ) parenthesis. Calling only the object property will return a new reference to the formula (and will not execute it):
 
 ```4d
@@ -157,46 +152,44 @@ $o:=$f.message //returns the formula object in $o
 ```
 
 ### Menu Methods
-A menu method is invoked when you select the custom menu command to which it is attached. You assign the method to the menu command using the Menu editor or a command of the "Menus" theme. The method executes when the menu command is chosen. By creating custom menus with menu methods that perform specific actions, you create custom interfaces for your desktop applications. 
+
+A menu method is invoked when you select the custom menu command to which it is attached. You assign the method to the menu command using the Menu editor or a command of the "Menus" theme. The method executes when the menu command is chosen. By creating custom menus with menu methods that perform specific actions, you create custom interfaces for your desktop applications.
 
 Custom menu commands can cause one or more activities to take place. For example, a menu command for entering records might call a method that performs two tasks: displaying the appropriate input form, and calling the `ADD RECORD` command until the user cancels the data entry activity.
 
 Automating sequences of activities is a very powerful capability of the programming language. Using custom menus, you can automate task sequences and thus provide more guidance to users of the application.
 
-
-### Process Methods 
+### Process Methods
 
 A **process method** is a project method that is called when a process is started. The process lasts only as long as the process method continues to execute, except if it is a Worker process. Note that a menu method attached to a menu command with *Start a New Process* property is also the process method for the newly started process.
 
 ### Event and Error catching Methods
+
 An **event catching method** runs in a separate process as the process method for catching events. Usually, you let 4D do most of the event handling for you. For example, during data entry, 4D detects keystrokes and clicks, then calls the correct object and form methods so you can respond appropriately to the events from within these methods. For more information, see the description of the command `ON EVENT CALL`.
 
 An **error catching method** is an interrupt-based project method. Each time an error or an exception occurs, it executes within the process in which it was installed. For more information, see the description of the command `ON ERR CALL`.
 
+### Manual Execution
 
-### Manual Execution 
-
-Project methods written in your application are usually called automatically during the use of the application via menu commands, buttons, other methods, and so on. As for database methods, they are executed in relation to specific events that occur in the application. 
+Project methods written in your application are usually called automatically during the use of the application via menu commands, buttons, other methods, and so on. As for database methods, they are executed in relation to specific events that occur in the application.
 
 However, for testing and debugging purposes, 4D lets you manually execute project methods and certain database methods in Design mode. In this case, it is possible to run the method in a new process and/or directly in Debug mode, in order to check its execution step by step.
 
 You can execute methods in two ways:
 
--   From the Code Editor window,
--   From the Execute Method dialog box (project methods only).
+- From the Code Editor window,
+- From the Execute Method dialog box (project methods only).
 
-#### From the Code Editor 
+#### From the Code Editor
 
-Each [**Code Editor**](../code-editor/write-class-method.md) window has a button that can be used to run the current method. Using the menu associated with this button, you can choose the type of execution desired:
-
-![](../assets/en/concepts/execute-method.png)
+Each [**Code Editor**](../code-editor/write-class-method.md) window has a button that can be used to run the current method. Using the menu associated with this button, you can choose the type of execution desired
 
 This button is only active for project methods and for the following database methods:
 
--   On Startup
--   On Exit
--   On Server Startup
--   On Server Shutdown
+- On Startup
+- On Exit
+- On Server Startup
+- On Server Shutdown
 
 For more information, see [Toolbar](../code-editor/write-class-method.md#toolbar).
 
@@ -204,19 +197,18 @@ For more information, see [Toolbar](../code-editor/write-class-method.md#toolbar
 
 When you select the **Method...** command of the **Run** menu,  displays the **Execute Method** dialog.
 
-This dialog box lists all the project methods of the database, including shared project methods of components. On the other hand, project methods that have been declared invisible will not appear. 
+This dialog box lists all the project methods of the database, including shared project methods of components. On the other hand, project methods that have been declared invisible will not appear.
 
-To execute a project method, simply select its name in the list and click on **Execute**. To run a method step by step in Debug mode, click on **Debug**. For more information about the 4D debugger, refer to the [Debugging](../Debugging/basics.md) section. 
+To execute a project method, simply select its name in the list and click on **Execute**. To run a method step by step in Debug mode, click on **Debug**. For more information about the 4D debugger, refer to the [Debugging](../Debugging/basics.md) section.
 
 If you check the **New Process** check box, the method you selected executes in another process. If the method is performing a time-consuming task such as printing a large set of records, you can continue to work with your database, adding records to a table, creating a graph to display data, and so on. For more information about processes, refer to [Processes](https://doc.4d.com/4Dv19R5/4D/19-R5/Processes.300-5830912.en.html) the 4D *Language Reference* manual.
 
 **4D Server Notes**:
 
--   If you want the method to be executed on the server machine rather than on the client machine, select the **On 4D Server** option in the To be executed menu. In this case, a new process, call a *stored procedure*, is created on the server machine in order to execute the method. This option can be used to reduce network traffic and optimize the functioning of 4D Server, in particular for methods that call data stored on the disk. All types of methods can be executed on the server machine or on another client machine, except for those that modify the user interface. In this case, stored procedures are ineffective.
--   You can also choose to run the method on another client workstation. Other client workstations will not appear in the menu, unless they have been previously "registered" (for more information, refer to the description of the [REGISTER CLIENT](https://doc.4d.com/4dv19/help/command/en/page648.html).
+- If you want the method to be executed on the server machine rather than on the client machine, select the **On 4D Server** option in the To be executed menu. In this case, a new process, call a *stored procedure*, is created on the server machine in order to execute the method. This option can be used to reduce network traffic and optimize the functioning of 4D Server, in particular for methods that call data stored on the disk. All types of methods can be executed on the server machine or on another client machine, except for those that modify the user interface. In this case, stored procedures are ineffective.
+- You can also choose to run the method on another client workstation. Other client workstations will not appear in the menu, unless they have been previously "registered" (for more information, refer to the description of the [REGISTER CLIENT](https://doc.4d.com/4dv19/help/command/en/page648.html).
 
 By default, the **locally** option is selected. With the 4D single-user version, this is the only option available.
-
 
 ## Recursive Project Methods
 
@@ -228,6 +220,7 @@ Project methods can call themselves. For example:
 This is called recursion. The 4D language fully supports recursion.
 
 Here is an example. Let’s say you have a `[Friends and Relatives]` table composed of this extremely simplified set of fields:
+
 - `[Friends and Relatives]Name`
 - `[Friends and Relatives]ChildrensName`
 

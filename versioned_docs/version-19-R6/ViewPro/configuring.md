@@ -9,7 +9,7 @@ The 4D View Pro area properties can be configured using the Property list. Sprea
 
 Using the area's property list, you can set [4D View Pro object properties](FormObjects/viewProArea_overview.md#supported-properties) such as **Object Name**, [**Variable or Expression**](#4d-view-pro-form-object-variable), **Appearance**, **Action**, and **Events**.
 
-![](../assets/en/ViewPro/vpPropertyList.PNG)
+![](../assets/en/ViewPro/vpPropertyList.png)
 
 ### Selecting a user interface
 
