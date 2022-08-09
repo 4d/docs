@@ -66,9 +66,6 @@ You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4
 
 Sets the text to have a line running beneath it.
 
->This is normal text.<br/>
->This is <span style="text-decoration:underline">underlined</span> text.
-
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
@@ -124,10 +121,6 @@ There are two types of font family names:
 - *generic-family:* The name of a generic-family, like "serif", "sans-serif", "cursive", "fantasy", "monospace".
 
 You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-FONT.301-4054834.en.html) command.  
-
-><span style="font-family:Times New Roman; font-size:20pt"> This is Times New Roman font.</span><br/>
-<span style="font-family:Calibri; font-size:20pt"> This is Calibri font.</span><br/>
-<span style="font-family:Papyrus; font-size:20pt"> This is Papyrus font.</span>
 
 #### JSON Grammar
 
