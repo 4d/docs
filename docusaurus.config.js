@@ -24,8 +24,8 @@ module.exports = {
       }
     ]
   },
-  "onBrokenLinks": "log",
-  "onBrokenMarkdownLinks": "log",
+  "onBrokenLinks": "ignore",
+  "onBrokenMarkdownLinks": "ignore",
   presets: [
     [
       '@docusaurus/preset-classic',
@@ -155,7 +155,7 @@ module.exports = {
             },
             {
               label: 'Knowledgebase',
-              to: 'kd.4d.com',
+              to: 'https://kb.4d.com',
             },
             {
               label: 'Downloads',
