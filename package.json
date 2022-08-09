@@ -7,7 +7,7 @@
     "start": "docusaurus start",
     "syntaxViewPro": "doc_preprocess --path ./docs/ViewPro/ --syntax='./syntax/ViewPro/' && doc_preprocess --path 'translated_docs/*/ViewPro/' --syntax='./syntax/ViewPro/'",
     "syntax": "doc_preprocess --path ./docs/API/ --syntax='./syntax/4D/' --config='./docs/preprocessing.conf' && doc_preprocess --path 'translated_docs/*/API/' --syntax='./syntax/4D/' --config='../docs/preprocessing.conf'",
-    "build": "doc_preprocess --path ./docs/ --config='./docs/preprocessing.conf' --output ./docs/  && docusaurus build",
+    "build": "docusaurus build",
     "publish-gh-pages": "docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",
