@@ -38,6 +38,7 @@ SMTP Transporter objects are instantiated with the [SMTP New transporter](#smtp-
 </details>
 
 <!-- REF #_command_.SMTP New transporter.Syntax -->
+
 **SMTP New transporter**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
 <!-- REF #_command_.SMTP New transporter.Params -->
@@ -112,6 +113,7 @@ The function returns a [**SMTP transporter object**](#smtp-transporter-object). 
 ## 4D.SMTPTransporter.new()
 
 <!-- REF #4D.SMTPTransporter.new().Syntax -->
+
 **4D.SMTPTransporter.new**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
 <!-- REF #4D.SMTPTransporter.new().Params -->
@@ -174,6 +176,7 @@ For information about SMTP status codes, please refer to [this page](https://www
 </details>
 
 <!-- REF #SMTPTransporterClass.keepAlive.Syntax -->
+
 **.keepAlive** : Boolean<!-- END REF -->
 
 #### Description
@@ -201,6 +204,7 @@ The SMTP connection is automatically closed:
 </details>
 
 <!-- REF #SMTPTransporterClass.send().Syntax -->
+
 **.send**( *mail* : Object ) : Object<!-- END REF -->
 
 <!-- REF #SMTPTransporterClass.send().Params -->

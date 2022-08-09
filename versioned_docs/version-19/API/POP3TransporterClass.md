@@ -1,6 +1,6 @@
 ---
 id: POP3TransporterClass
-title: POP3Transporter 
+title: POP3Transporter
 ---
 
 The `POP3Transporter` class allows you to retrieve messages from a POP3 email server.
@@ -39,6 +39,7 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 </details>
 
 <!-- REF #_command_.POP3 New transporter.Syntax -->
+
 **POP3 New transporter**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
 <!-- REF POP3TransporterClass.POP3 New transporter.Params -->
@@ -81,10 +82,10 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
  $server.logFile:="LogTest.txt" //log to save in the Logs folder
- 
+
  var $transporter : 4D.POP3Transporter
  $transporter:=POP3 New transporter($server)
- 
+
  $status:=$transporter.checkConnection()
  If(Not($status.success))
     ALERT("An error occurred receiving the mail: "+$status.statusText)
@@ -96,6 +97,7 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
 ## 4D.POP3Transporter.new()
 
 <!-- REF #4D.POP3Transporter.new().Syntax -->
+
 **4D.POP3Transporter.new**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
 <!-- REF #4D.POP3Transporter.new().Params -->
@@ -120,16 +122,16 @@ The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summa
  var $pw :  Text
  var $options : Object
  $options:=New object
- 
+
  $pw:=Request("Please enter your password:")
  if(OK=1)
     $options.host:="pop3.gmail.com"
- 
+
     $options.user:="test@gmail.com"
     $options.password:=$pw
- 
+
     $transporter:=POP3 New transporter($options)
- 
+
     $status:=$transporter.checkConnection()
     If($status.success)
        ALERT("POP3 connection check successful!")
@@ -152,6 +154,7 @@ The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summa
 </details>
 
 <!-- REF #POP3TransporterClass.delete().Syntax -->
+
 **.delete**( *msgNumber* : Integer )<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.delete().Params -->
@@ -197,6 +200,7 @@ Executing this method does not actually remove any email. The flagged email will
 </details>
 
 <!-- REF #POP3TransporterClass.getBoxInfo().Syntax -->
+
 **.getBoxInfo()** : Object<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
@@ -219,15 +223,15 @@ The `boxInfo` object returned contains the following properties:
 
 ```4d
  var $server; $boxinfo : Object
- 
+
  $server:=New object
  $server.host:="pop.gmail.com" //Mandatory
  $server.port:=995
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
- 
+
  $transporter:=POP3 New transporter($server)
- 
+
   //mailbox info
  $boxInfo:=$transporter.getBoxInfo()
  ALERT("The mailbox contains "+String($boxInfo.mailCount)+" messages.")
@@ -244,6 +248,7 @@ The `boxInfo` object returned contains the following properties:
 </details>
 
 <!-- REF #POP3TransporterClass.getMail().Syntax -->
+
 **.getMail**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMail().Params -->
@@ -275,15 +280,15 @@ You want to know the sender of the first mail of the mailbox:
  var $server; $transporter : Object
  var $mailInfo : Collection
  var $sender : Variant
- 
+
  $server:=New object
  $server.host:="pop.gmail.com" //Mandatory
  $server.port:=995
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
- 
+
  $transporter:=POP3 New transporter($server)
- 
+
  $mailInfo:=$transporter.getMailInfoList()
  $sender:=$transporter.getMail($mailInfo[0].number).from
 ```
@@ -299,6 +304,7 @@ You want to know the sender of the first mail of the mailbox:
 </details>
 
 <!-- REF #POP3TransporterClass.getMailInfo().Syntax -->
+
 **.getMailInfo**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMailInfo().Params -->
@@ -330,15 +336,15 @@ The method returns **Null** if:
 ```4d
  var $server; $mailInfo : Object
  var $mailNumber : Integer
- 
+
  $server.host:="pop.gmail.com" //Mandatory
  $server.port:=995
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
- 
+
  var $transporter : 4D.POP3Transporter
  $transporter:=POP3 New transporter($server)
- 
+
   //message info
  $mailInfo:=$transporter.getMailInfo(1) //get the first mail
  If($mailInfo #Null)
@@ -357,6 +363,7 @@ The method returns **Null** if:
 </details>
 
 <!-- REF #POP3TransporterClass.getMailInfoList().Syntax -->
+
 **.getMailInfoList()** : Collection<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
@@ -395,17 +402,17 @@ You want to know the total number and size of emails in the mailbox:
  $server.port:=995
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
- 
+
  var $transporter : 4D.POP3Transporter
  $transporter:=POP3 New transporter($server)
- 
+
  C_COLLECTION($mailInfo)
  C_LONGINT($vNum;$vSize)
- 
+
  $mailInfo:=$transporter.getMailInfoList()
  $vNum:=$mailInfo.length
  $vSize:=$mailInfo.sum("size")
- 
+
  ALERT("The mailbox contains "+String($vNum)+" message(s) for "+String($vSize)+" bytes.")
 ```
 
@@ -420,6 +427,7 @@ You want to know the total number and size of emails in the mailbox:
 </details>
 
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Syntax -->
+
 **.getMIMEAsBlob**( *msgNumber* : Integer ) : Blob<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Params -->
@@ -452,15 +460,15 @@ You want to know the total number and size of emails in the mailbox:
  var $mailInfo : Collection
  var $blob : Blob
  var $transporter : 4D.POP3Transporter
- 
+
  $server:=New object
  $server.host:="pop.gmail.com"
  $server.port:=995
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
- 
+
  $transporter:=POP3 New transporter($server)
- 
+
  $mailInfo:=$transporter.getMailInfoList()
  $blob:=$transporter.getMIMEAsBlob($mailInfo[0].number)
 ```
@@ -483,6 +491,7 @@ You want to know the total number and size of emails in the mailbox:
 </details>
 
 <!-- REF #POP3TransporterClass.undeleteAll().Syntax -->
+
 **.undeleteAll()**<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.undeleteAll().Params -->

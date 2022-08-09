@@ -51,7 +51,8 @@ ASSERT($status.success)
 
 </details>
 
-<!-- REF #4D.CryptoKey.new().Syntax -->**4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
+<!-- REF #4D.CryptoKey.new().Syntax -->
+**4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
 
 <!-- REF #4D.CryptoKey.new().Params -->
 |Parameter|Type||Description|
@@ -86,7 +87,8 @@ The returned `CryptoKey` object encapsulates an encryption key pair. It is a sha
 
 </details>
 
-<!-- REF #CryptoKey.curve.Syntax -->**.curve** : Text<!-- END REF -->
+<!-- REF #CryptoKey.curve.Syntax -->
+**.curve** : Text<!-- END REF -->
 
 Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised curve name of the key<!-- END REF -->. Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512.
 <!-- END REF -->
@@ -102,7 +104,8 @@ Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised
 
 </details>
 
-<!-- REF #CryptoKey.decrypt().Syntax -->**.decrypt**( *message* : Text ; *options* : Object ) : Object<!-- END REF -->
+<!-- REF #CryptoKey.decrypt().Syntax -->
+**.decrypt**( *message* : Text ; *options* : Object ) : Object<!-- END REF -->
 
 <!-- REF #CryptoKey.decrypt().Params -->
 |Parameter|Type||Description|
@@ -147,7 +150,8 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 
 </details>
 
-<!-- REF #CryptoKey.encrypt().Syntax -->**.encrypt**( *message* : Text ; *options* : Object ) : Text<!-- END REF -->
+<!-- REF #CryptoKey.encrypt().Syntax -->
+**.encrypt**( *message* : Text ; *options* : Object ) : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.encrypt().Params -->
 |Parameter|Type||Description|
@@ -185,7 +189,8 @@ The returned value is an encrypted message.
 
 </details>
 
-<!-- REF #CryptoKey.getPrivateKey().Syntax -->**.getPrivateKey()** : Text<!-- END REF -->
+<!-- REF #CryptoKey.getPrivateKey().Syntax -->
+**.getPrivateKey()** : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
 |Parameter|Type||Description|
@@ -211,7 +216,8 @@ The returned value is the private key.
 
 </details>
 
-<!-- REF #CryptoKey.getPublicKey().Syntax -->**.getPublicKey( )** : Text<!-- END REF -->
+<!-- REF #CryptoKey.getPublicKey().Syntax -->
+**.getPublicKey( )** : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
 |Parameter|Type||Description|
@@ -236,7 +242,8 @@ The returned value is the public key.
 |v18 R4|Added
 </details>
 
-<!-- REF #CryptoKey.pem.Syntax -->**.pem** : Text<!-- END REF -->
+<!-- REF #CryptoKey.pem.Syntax -->
+**.pem** : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.pem.Summary -->PEM definition of an encryption key to load. If the key is a private key, the RSA or ECDSA public key will be deduced from it. <!-- END REF -->
 
@@ -252,7 +259,8 @@ The returned value is the public key.
 
 </details>
 
-<!-- REF #CryptoKey.sign().Syntax -->**.sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
+<!-- REF #CryptoKey.sign().Syntax -->
+**.sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.sign().Params -->
 |Parameter|Type||Description|
@@ -292,7 +300,8 @@ The utf8 representation of the *message* string.
 
 </details>
 
-<!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
+<!-- REF #CryptoKey.size.Syntax -->
+**.size** : Integer<!-- END REF -->
 
 Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the key in bits<!-- END REF -->. Typically 2048 (default).
 
@@ -307,7 +316,8 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 |v18 R4|Added
 </details>
 
-<!-- REF #CryptoKey.type.Syntax -->**.type** : Text<!-- END REF -->
+<!-- REF #CryptoKey.type.Syntax -->
+**.type** : Text<!-- END REF -->
 
 <!-- REF #CryptoKey.type.Summary --> Name of the key type - "RSA", "ECDSA", "PEM" <!-- END REF -->.<li>"RSA": an RSA key pair, using `settings.size` as [.size](#size).</li><li>"ECDSA": an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as [.curve](#curve). Note that ECDSA keys cannot be used for encryption but only for signature.</li><li>"PEM": a key pair definition in PEM format, using `settings.pem` as [.pem](#pem).</li><!-- END REF -->
 
@@ -322,7 +332,8 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 
 </details>
 
-<!-- REF #CryptoKey.verify().Syntax -->**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
+<!-- REF #CryptoKey.verify().Syntax -->
+**.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
 
 <!-- REF #CryptoKey.verify().Params -->
 |Parameter|Type||Description|

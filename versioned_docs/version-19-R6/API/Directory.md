@@ -16,6 +16,7 @@ title: Directory Class
 </details>
 
 <!-- REF #directory.creationDate.Syntax -->
+
 **.creationDate** : Date<!-- END REF -->
 
 #### Description
@@ -36,6 +37,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.creationTime.Syntax -->
+
 **.creationTime** : Time<!-- END REF -->
 
 #### Description
@@ -55,6 +57,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.exists.Syntax -->
+
 **.exists** : Boolean<!-- END REF -->
 
 #### Description
@@ -78,6 +81,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.extension.Syntax -->
+
 **.extension** : Text<!-- END REF -->
 
 #### Description
@@ -101,6 +105,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.fullName.Syntax -->
+
 **.fullName** : Text<!-- END REF -->
 
 #### Description
@@ -124,6 +129,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.hidden.Syntax -->
+
 **.hidden** : Boolean<!-- END REF -->
 
 #### Description
@@ -147,6 +153,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.isAlias.Syntax -->
+
 **.isAlias** : Boolean<!-- END REF -->
 
 #### Description
@@ -170,6 +177,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.isFile.Syntax -->
+
 **.isFile** : Boolean<!-- END REF -->
 
 #### Description
@@ -193,6 +201,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.isFolder.Syntax -->
+
 **.isFolder** : Boolean<!-- END REF -->
 
 #### Description
@@ -216,6 +225,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.isPackage.Syntax -->
+
 **.isPackage** : Boolean<!-- END REF -->
 
 #### Description
@@ -241,6 +251,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.modificationDate.Syntax -->
+
 **.modificationDate** : Date<!-- END REF -->
 
 #### Description
@@ -264,6 +275,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.modificationTime.Syntax -->
+
 **.modificationTime** : Time<!-- END REF -->
 
 #### Description
@@ -287,6 +299,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.name.Syntax -->
+
 **.name** : Text<!-- END REF -->
 
 #### Description
@@ -310,6 +323,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.original.Syntax -->
+
 **.original** : 4D.Folder<!-- END REF -->
 
 #### Description
@@ -335,6 +349,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.parent.Syntax -->
+
 **.parent** : 4D.Folder<!-- END REF -->
 
 #### Description
@@ -360,6 +375,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.path.Syntax -->
+
 **.path** : Text<!-- END REF -->
 
 #### Description
@@ -383,6 +399,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.platformPath.Syntax -->
+
 **.platformPath** : Text<!-- END REF -->
 
 #### Description
@@ -406,6 +423,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.copyTo().Syntax -->
+
 **.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D Folder<!-- END REF -->
 
 <!-- REF #directory.copyTo().Params -->
@@ -459,6 +477,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 </details>
 
 <!-- REF #directory.file().Syntax -->
+
 **.file**( *path* : Text ) : 4D.File<!-- END REF -->
 
 <!-- REF #directory.file().Params -->
@@ -499,6 +518,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 </details>
 
 <!-- REF #directory.files().Syntax -->
+
 **.files**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.files().Params -->
@@ -561,6 +581,7 @@ You want to get all files that are not invisible in the Documents folder:
 </details>
 
 <!-- REF #directory.folder().Syntax -->
+
 **.folder**( *path* : Text ) : 4D.Folder<!-- END REF -->
 
 <!-- REF #directory.folder().Params -->
@@ -601,6 +622,7 @@ A `Folder` object or null if *path* is invalid.
 </details>
 
 <!-- REF #directory.folders().Syntax -->
+
 **.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.folders().Params -->
@@ -648,6 +670,7 @@ You want the collection of all folders and subfolders of the database folder:
 </details>
 
 <!-- REF #directory.getIcon().Syntax -->
+
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #directory.getIcon().Params -->

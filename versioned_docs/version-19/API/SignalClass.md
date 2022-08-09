@@ -41,17 +41,17 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 
 ```4d
  var $signal : 4D.Signal
- 
+
   // Creation of a signal
  $signal:=New signal
- 
+
   // call main process and execute OpenForm method
  CALL WORKER(1;"OpenForm";$signal)
   // do another calculation
  ...
   // Waiting for the end of the process
  $signaled:=$signal.wait()
- 
+
   // Processing of the results
  $calc:=$signal.result+...
 ```
@@ -62,17 +62,17 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
  #DECLARE ($signal : 4D.Signal)  
  var $form : Object
  $form:=New object("value";0)
- 
+
   // Open the form
  $win:=Open form window("Information";Movable form dialog box)
  DIALOG("Information";$form)
  CLOSE WINDOW($win)
- 
+
   // Add a new attribute to your $signal shared object to pass your result to the other process:
  Use($signal)
     $signal.result:=$form.value
  End use
- 
+
   // Trigger the signal to the waiting process
  $signal.trigger()
 ```
@@ -98,6 +98,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 </details>
 
 <!-- REF #_command_.New signal.Syntax -->
+
 **New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
 
 <!-- REF SignalClass.New signal.Params -->
@@ -130,10 +131,10 @@ Here is a typical example of a worker that sets a signal:
 ```4d
  var $signal : 4D.Signal
  $signal:=New signal("This is my first signal")
- 
+
  CALL WORKER("myworker";"doSomething";$signal)
  $signaled:=$signal.wait(1) //wait for 1 second max
- 
+
  If($signaled)
     ALERT("myworker finished the work. Result: "+$signal.myresult)
  Else
@@ -167,6 +168,7 @@ The ***doSomething*** method could be like:
 </details>
 
 <!-- REF #SignalClass.description.Syntax -->
+
 **.description** : Text<!-- END REF -->
 
 #### Description
@@ -191,6 +193,7 @@ This property is **read-write**.
 </details>
 
 <!-- REF #SignalClass.signaled.Syntax -->
+
 **.signaled** : Boolean<!-- END REF -->
 
 #### Description
@@ -213,6 +216,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #SignalClass.trigger().Syntax -->
+
 **.trigger( )**<!-- END REF -->
 
 <!-- REF #SignalClass.trigger().Params -->
@@ -240,6 +244,7 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 </details>
 
 <!-- REF #SignalClass.wait().Syntax -->
+
 **.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
 
 <!-- REF #SignalClass.wait().Params -->

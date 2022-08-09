@@ -45,6 +45,7 @@ An [entity](ORDA/dsMapping.md#entity) is an instance of a [Dataclass](ORDA/dsMap
 </details>
 
 <!-- REF EntityClass.attributeName.Syntax -->
+
 ***.attributeName*** : any<!-- END REF -->
 
 #### Description
@@ -86,6 +87,7 @@ The attribute value type depends on the attribute [kind](DataClassAttributeClass
 </details>
 
 <!-- REF #EntityClass.clone().Syntax -->
+
 **.clone()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntityClass.clone().Params -->
@@ -107,7 +109,7 @@ This function can only be used with entities already saved in the database. It c
  var $emp; $empCloned : cs.EmployeeEntity
  $emp:=ds.Employee.get(672)
  $empCloned:=$emp.clone()
- 
+
  $emp.lastName:="Smith" //Updates done on $emp are not done on $empCloned
 
 ```
@@ -126,12 +128,13 @@ This function can only be used with entities already saved in the database. It c
 </details>
 
 <!-- REF #EntityClass.diff().Syntax -->
+
 **.diff**( *entityToCompare* : 4D.Entity { ; *attributesToCompare* : Collection } ) : Collection<!-- END REF -->
 
 <!-- REF #EntityClass.diff().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|entityToCompare|4D.Entity|->|Entity to be compared with the original entity| 
+|entityToCompare|4D.Entity|->|Entity to be compared with the original entity|
 |attributesToCompare|Collection|-> |Name of attributes to be compared |
 |Result|Collection|<-|Differences between the entities|<!-- END REF -->
 
@@ -215,20 +218,20 @@ $diff2:
  vCompareResult2:=New collection
  vCompareResult3:=New collection
  $attributesToInspect:=New collection
- 
+
  $e1:=ds.Employee.get(636)
  $e2:=ds.Employee.get(636)
- 
+
  $e1.firstName:=$e1.firstName+" update"
  $e1.lastName:=$e1.lastName+" update"
- 
+
  $c:=ds.Company.get(117)
  $e1.employer:=$c
  $e2.salary:=100
- 
+
  $attributesToInspect.push("firstName")
  $attributesToInspect.push("lastName")
- 
+
  vCompareResult1:=$e1.diff($e2)
  vCompareResult2:=$e1.diff($e2;$attributesToInspect)
  vCompareResult3:=$e1.diff($e2;$e1.touchedAttributes())
@@ -306,7 +309,7 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
         "attributeName": "employer",
         "value": "[object Entity]",// Entity 117 from Company
         "otherValue": "[object Entity]"// Entity 118 from Company
- 
+
     }
 ]
 ```
@@ -325,6 +328,7 @@ vCompareResult3 (only differences on $e1 touched attributes are returned)
 </details>
 
 <!-- REF #EntityClass.drop().Syntax -->
+
 **.drop**( {*mode* : Integer} ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.drop().Params -->
@@ -429,6 +433,7 @@ Example with `dk force drop if stamp changed` option:
 </details>
 
 <!-- REF #EntityClass.first().Syntax -->
+
 **.first()**: 4D.Entity<!-- END REF -->
 
 <!-- REF #EntityClass.first().Params -->
@@ -466,6 +471,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 </details>
 
 <!-- REF #EntityClass.fromObject().Syntax -->
+
 **.fromObject**( *filler* : Object )<!-- END REF -->
 
 <!-- REF #EntityClass.fromObject().Params -->
@@ -550,6 +556,7 @@ You could also use a related entity given as an object:
 </details>
 
 <!-- REF #EntityClass.getDataClass().Syntax -->
+
 **.getDataClass()** : 4D.DataClass<!-- END REF -->
 
 <!-- REF #EntityClass.getDataClass().Params -->
@@ -566,13 +573,13 @@ The `.getDataClass()` function <!-- REF #EntityClass.getDataClass().Summary -->r
 The following generic code duplicates any entity:
 
 ```4d
-  //duplicate_entity method 
-  //duplicate_entity($entity) 
-  
+  //duplicate_entity method
+  //duplicate_entity($entity)
+
  #DECLARE($entity : 4D.Entity)  
  var $entityNew : 4D.Entity
  var $status : Object
-  
+
  $entityNew:=$entity.getDataClass().new() //create a new entity in the parent dataclass
  $entityNew.fromObject($entity.toObject()) //get all attributes
  $entityNew[$entity.getDataClass().getInfo().primaryKey]:=Null //reset the primary key
@@ -593,6 +600,7 @@ The following generic code duplicates any entity:
 </details>
 
 <!-- REF #EntityClass.getKey().Syntax -->
+
 **.getKey**( { *mode* : Integer } ) : Text<br/>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
 
 <!-- REF #EntityClass.getKey().Params -->
@@ -634,6 +642,7 @@ Primary keys can be numbers (Integer) or strings. You can "force" the returned p
 </details>
 
 <!-- REF #EntityClass.getRemoteContextAttributes().Syntax -->
+
 **.getRemoteContextAttributes()** : Text<!-- END REF -->
 
 <!-- REF #EntityClass.getRemoteContextAttributes().Params -->
@@ -664,10 +673,10 @@ $ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
 $contextA:=New object("context"; "contextA")
 
 $address:=$ds.Address.get(1; $contextA)
-$text:="" 
+$text:=""
 For each ($p; $address.persons)
     $text:=$p.firstname+" "+$p.lastname
-End for each 
+End for each
 
 $info:=$address.getRemoteContextAttributes()
 
@@ -690,6 +699,7 @@ $info:=$address.getRemoteContextAttributes()
 </details>
 
 <!-- REF #EntityClass.getSelection().Syntax -->
+
 **.getSelection()**: 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntityClass.getSelection().Params -->
@@ -710,10 +720,10 @@ If the entity does not belong to an entity selection, the function returns Null.
  var $employees; $employees2 : cs.EmployeeSelection
  $emp:=ds.Employee.get(672) // This entity does not belong to any entity selection
  $employees:=$emp.getSelection() // $employees is Null
- 
+
  $employees2:=ds.Employee.query("lastName=:1";"Smith") //This entity selection contains 6 entities
  $emp:=$employees2[0]  // This entity belongs to an entity selection
- 
+
  ALERT("The entity selection contains "+String($emp.getSelection().length)+" entities")
 ```
 
@@ -731,6 +741,7 @@ If the entity does not belong to an entity selection, the function returns Null.
 </details>
 
 <!-- REF #EntityClass.getStamp().Syntax -->
+
 **.getStamp()** : Integer<!-- END REF -->
 
 <!-- REF #EntityClass.getStamp().Params -->
@@ -751,12 +762,12 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 ```4d
  var $entity : cs.EmployeeEntity
  var $stamp : Integer
- 
+
  $entity:=ds.Employee.new()
  $entity.lastname:="Smith"
  $entity.save()
  $stamp:=$entity.getStamp() //$stamp=1
- 
+
  $entity.lastname:="Wesson"
  $entity.save()
  $stamp:=$entity.getStamp() //$stamp=2
@@ -776,6 +787,7 @@ The internal stamp is automatically incremented by 4D each time the entity is sa
 </details>
 
 <!-- REF #EntityClass.indexOf().Syntax -->
+
 **.indexOf**( { *entitySelection* : 4D.EntitySelection } ) : Integer<!-- END REF -->
 
 <!-- REF #EntityClass.indexOf().Params -->
@@ -803,7 +815,7 @@ The resulting value is included between 0 and the length of the entity selection
  $employees:=ds.Employee.query("lastName = :1";"H@") //This entity selection contains 3 entities
  $employee:=$employees[1] //This entity belongs to an entity selection
  ALERT("The index of the entity in its own entity selection is "+String($employee.indexOf())) //1
- 
+
  $employee:=ds.Employee.get(725) //This entity does not belong to an entity selection
  ALERT("The index of the entity is "+String($employee.indexOf())) // -1
 ```
@@ -822,6 +834,7 @@ The resulting value is included between 0 and the length of the entity selection
 </details>
 
 <!-- REF #EntityClass.isNew().Syntax -->
+
 **.isNew()** : Boolean<!-- END REF -->
 
 <!-- REF #EntityClass.isNew().Params -->
@@ -837,9 +850,9 @@ The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True i
 
 ```4d
  var $emp : cs.EmployeeEntity
- 
+
  $emp:=ds.Employee.new()
- 
+
  If($emp.isNew())
     ALERT("This is a new entity")
  End if
@@ -859,6 +872,7 @@ The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True i
 </details>
 
 <!-- REF #EntityClass.last().Syntax -->
+
 **.last()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntityClass.last().Params -->
@@ -896,6 +910,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 </details>
 
 <!-- REF #EntityClass.lock().Syntax -->
+
 **.lock**( { *mode* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.lock().Params -->
@@ -1011,6 +1026,7 @@ Example with `dk reload if stamp changed` option:
 </details>
 
 <!-- REF #EntityClass.next().Syntax -->
+
 **.next()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntityClass.next().Params -->
@@ -1051,6 +1067,7 @@ If there is no valid next entity in the entity selection (i.e. you are on the la
 </details>
 
 <!-- REF #EntityClass.previous().Syntax -->
+
 **.previous()**  : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntityClass.previous().Params -->
@@ -1090,6 +1107,7 @@ If there is no valid previous entity in the entity selection (i.e. you are on th
 </details>
 
 <!-- REF #EntityClass.reload().Syntax -->
+
 **.reload()** : Object<!-- END REF -->
 
 <!-- REF #EntityClass.reload().Params -->
@@ -1124,7 +1142,7 @@ The object returned by `.reload( )` contains the following properties:
  var $employee : cs.EmployeeEntity
  var $employees : cs.EmployeeSelection
  var $result : Object
- 
+
  $employees:=ds.Employee.query("lastName=:1";"Hollis")
  $employee:=$employees[0]
  $employee.firstName:="Mary"
@@ -1151,6 +1169,7 @@ The object returned by `.reload( )` contains the following properties:
 </details>
 
 <!-- REF #EntityClass.save().Syntax -->
+
 **.save**( { *mode* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.save().Params -->
@@ -1193,9 +1212,9 @@ The object returned by `.save()` contains the following properties:
 ||user4d_alias| text| User alias if defined by `SET USER ALIAS`, otherwise user name in the 4D directory|
 ||host_name |text |Machine name|
 ||task_name| text| Process name|
-||client_version| text|| 
+||client_version| text||
 ||||***Available only in case of serious error*** (serious error - can be trying to duplicate a primary key, disk full...):|
-|errors || collection of objects|| 
+|errors || collection of objects||
 ||message| text |Error message|
 ||componentSignature| text| Internal component signature (e.g. "dmbg" stands for the database component)|
 ||errCode| number| Error code|
@@ -1257,7 +1276,7 @@ Updating an entity with `dk auto merge` option:
 
  var $employee : cs.EmployeeEntity
  var $employees : cs.EmployeeSelection
- 
+
  $employees:=ds.Employee.query("lastName=:1";"Smith")
  $employee:=$employees.first()
  $employee.lastName:="Mac Arthur"
@@ -1284,13 +1303,14 @@ Updating an entity with `dk auto merge` option:
 </details>
 
 <!-- REF #EntityClass.toObject().Syntax -->
+
 **.toObject**() : Object<br/>**.toObject**( *filterString* : Text { ; *options* : Integer}  ) : Object<br/>**.toObject**( *filterCol* : Collection { ; *options* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #EntityClass.toObject().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
-|filterString |Text |->|Attribute(s) to extract (comma-separated string)| 
-|filterCol |Collection |->|Collection of attribute(s) to extract| 
+|filterString |Text |->|Attribute(s) to extract (comma-separated string)|
+|filterCol |Collection |->|Collection of attribute(s) to extract|
 |options|Integer|->|`dk with primary key`: adds the \_KEY property;<br/>`dk with stamp`: adds the \_STAMP property|
 |Result|Object|<-|Object built from the entity|<!-- END REF -->
 
@@ -1564,6 +1584,7 @@ Returns:
 </details>
 
 <!-- REF #EntityClass.touched().Syntax -->
+
 **.touched()** : Boolean<!-- END REF -->
 
 <!-- REF #EntityClass.touched().Params -->
@@ -1587,7 +1608,7 @@ In this example, we check to see if it is necessary to save the entity:
  var $emp : cs.EmployeeEntity
  $emp:=ds.Employee.get(672)
  $emp.firstName:=$emp.firstName //Even if updated with the same value, the attribute is marked as touched
- 
+
  If($emp.touched()) //if at least one of the attributes has been changed
     $emp.save()
  End if // otherwise, no need to save the entity
@@ -1607,6 +1628,7 @@ In this example, we check to see if it is necessary to save the entity:
 </details>
 
 <!-- REF #EntityClass.touchedAttributes().Syntax -->
+
 **.touchedAttributes()** : Collection<!-- END REF -->
 
 <!-- REF #EntityClass.touchedAttributes().Params -->
@@ -1629,7 +1651,7 @@ If no entity attribute has been touched, the method returns an empty collection.
 ```4d
  var $touchedAttributes : Collection
  var $emp : cs.EmployeeEntity
- 
+
  $touchedAttributes:=New collection
  $emp:=ds.Employee.get(725)
  $emp.firstName:=$emp.firstName //Even if updated with the same value, the attribute is marked as touched
@@ -1644,18 +1666,18 @@ If no entity attribute has been touched, the method returns an empty collection.
  var $touchedAttributes : Collection
  var $emp : cs.EmployeeEntity
  var $company : cs.CompanyEntity
- 
+
  $touchedAttributes:=New collection
- 
+
  $emp:=ds.Employee.get(672)
  $emp.firstName:=$emp.firstName
  $emp.lastName:="Martin"
- 
+
  $company:=ds.Company.get(121)
  $emp.employer:=$company
- 
+
  $touchedAttributes:=$emp.touchedAttributes()
- 
+
   //collection $touchedAttributes: ["firstName","lastName","employer","employerID"]
 ```
 
@@ -1679,6 +1701,7 @@ In this case:
 </details>
 
 <!-- REF #EntityClass.unlock().Syntax -->
+
 **.unlock()** : Object<!-- END REF -->
 
 <!-- REF #EntityClass.unlock().Params -->
@@ -1717,7 +1740,7 @@ The object returned by `.unlock()` contains the following property:
 ```4d
  var $employee : cs.EmployeeEntity
  var $status : Object
- 
+
  $employee:=ds.Employee.get(725)
  $status:=$employee.lock()
  ... //processing

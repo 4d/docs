@@ -3,13 +3,13 @@ id: FileHandleClass
 title: FileHandle
 ---
 
-The `FileHandle` class has functions that allow you to sequentially read from or append contents to an opened [`File`](FileClass) object. A file handle can access any part of a document. 
+The `FileHandle` class has functions that allow you to sequentially read from or append contents to an opened [`File`](FileClass) object. A file handle can access any part of a document.
 
-File handle objects are created with the [`file.open()`](FileClass#open) function. 
+File handle objects are created with the [`file.open()`](FileClass#open) function.
 
-> To read or write a whole document at once, you might consider using the [file.getText()](FileClass.md#gettext) and [file.setText()](FileClass.md#settext) functions. 
+> To read or write a whole document at once, you might consider using the [file.getText()](FileClass.md#gettext) and [file.setText()](FileClass.md#settext) functions.
 
-Thanks to the standard 4D object *refcounting*, a file handle is automatically deleted when it is no longer referenced and thus, the requested [`File`](FileClass) object is automatically closed. Consequently, with file handles you don't need to worry about closing documents. 
+Thanks to the standard 4D object *refcounting*, a file handle is automatically deleted when it is no longer referenced and thus, the requested [`File`](FileClass) object is automatically closed. Consequently, with file handles you don't need to worry about closing documents.
 
 
 ### Example
@@ -17,7 +17,7 @@ Thanks to the standard 4D object *refcounting*, a file handle is automatically d
 ```code4d
 var $f : 4D.File
 var $fhandle : 4D.FileHandle
-$f:=Folder(Database folder).file("example.txt") 
+$f:=Folder(Database folder).file("example.txt")
 
 //Writing line by line from the start
 $fhandle:=$f.open("write")
@@ -85,6 +85,7 @@ File handle objects cannot be shared.
 </details>
 
 <!-- REF #FileHandleClass.breakModeRead.Syntax -->
+
 **.breakModeRead** : Text<!-- END REF -->
 
 
@@ -93,12 +94,12 @@ File handle objects cannot be shared.
 The `.breakModeRead` property returns <!-- REF #FileHandleClass.breakModeRead.Summary -->the processing mode for line breaks used when reading the file<!-- END REF -->.
 
 
-The `.breakModeRead` property can be defined at the handle creation with the [`file.open()`](FileClass.md#open) function (see [the `.open()` function](FileClass.md#open) for more information). Default is "native". 
+The `.breakModeRead` property can be defined at the handle creation with the [`file.open()`](FileClass.md#open) function (see [the `.open()` function](FileClass.md#open) for more information). Default is "native".
 
 > The `.breakModeRead` property always contains a text value, even if the `.open()` option was set using a number (constant).
 
 
-This property is **read-only**. 
+This property is **read-only**.
 
 <!-- END REF -->
 
@@ -114,6 +115,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #FileHandleClass.breakModeWrite.Syntax -->
+
 **.breakModeWrite** : Text<!-- END REF -->
 
 
@@ -126,7 +128,7 @@ The `.breakModeWrite` property can be defined at the handle creation with the [`
 > The `.breakModeWrite` property always contains a text value, even if the `.open()` option was set using a number (constant).
 
 
-This property is **read-only**. 
+This property is **read-only**.
 
 <!-- END REF -->
 
@@ -143,6 +145,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #FileHandleClass.charset.Syntax -->
+
 **.charset** : Text<!-- END REF -->
 
 
@@ -152,7 +155,7 @@ The `.charset` property returns <!-- REF #FileHandleClass.charset.Summary -->the
 
 The charset can be defined at the handle creation with the [`file.open()`](FileClass#open) function. Default is "UTF-8".
 
-This property is **read-only**. 
+This property is **read-only**.
 
 <!-- END REF -->
 
@@ -168,6 +171,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #FileHandleClass.eof.Syntax -->
+
 **.eof** : Boolean<!-- END REF -->
 
 
@@ -175,7 +179,7 @@ This property is **read-only**.
 
 The `.eof` property returns <!-- REF #FileHandleClass.eof.Summary -->True is the `offset` has reached the end of the file, and False otherwise<!-- END REF -->.
 
-This property is **read-only**. 
+This property is **read-only**.
 
 <!-- END REF -->
 
@@ -192,6 +196,7 @@ This property is **read-only**.
 </details>
 
 <!--REF #FileHandleClass.getSize().Syntax -->
+
 **.getSize()** : Real <!-- END REF -->
 
 
@@ -224,6 +229,7 @@ The `.getSize()` function <!-- REF #FileHandleClass.getSize().Summary -->returns
 </details>
 
 <!-- REF #FileHandleClass.mode.Syntax -->
+
 **.mode** : Text<!-- END REF -->
 
 
@@ -233,7 +239,7 @@ The `.mode` property returns <!-- REF #FileHandleClass.mode.Summary -->the mode 
 
 The mode can be defined at the handle creation with the [`file.open()`](FileClass#open) function. Default is "read".
 
-This property is **read-only**. 
+This property is **read-only**.
 
 <!-- END REF -->
 
@@ -250,6 +256,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #FileHandleClass.offset.Syntax -->
+
 **.offset** : Real<!-- END REF -->
 
 
@@ -258,11 +265,11 @@ This property is **read-only**.
 The `.offset` property returns <!-- REF #FileHandleClass.offset.Summary -->the current offset of the data stream (position inside the document)<!-- END REF -->. The offset value is automatically updated after read and write operations.
 
 Setting the `.offset` will change its current value.
- 
-- If the passed value is negative, the `.offset` is set to the start of the file (zero). 
+
+- If the passed value is negative, the `.offset` is set to the start of the file (zero).
 - If the passed value is higher than the size of the file,  the `.offset` is set to the end of the file (size of file).
 
-This property is **read/write**. 
+This property is **read/write**.
 
 
 <!-- END REF -->
@@ -280,6 +287,7 @@ This property is **read/write**.
 </details>
 
 <!--REF #FileHandleClass.readBlob().Syntax -->
+
 **.readBlob**( *bytes* : Real ) : [4D.Blob](BlobClass) <!-- END REF -->
 
 <!--REF #FileHandleClass.readBlob().Params -->
@@ -314,6 +322,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 </details>
 
 <!--REF #FileHandleClass.readLine().Syntax -->
+
 **.readLine()** : Text <!-- END REF -->
 
 <!--REF #FileHandleClass.readLine().Params -->
@@ -327,7 +336,7 @@ The `.readLine()` function <!-- REF #FileHandleClass.readLine().Summary -->retur
 
 When this function is executed, the current position ([.offset](#offset)) is updated.
 
-> When this function is executed for the first time on a file handle, the whole document contents is loaded in a buffer. 
+> When this function is executed for the first time on a file handle, the whole document contents is loaded in a buffer.
 
 
 #### See also
@@ -348,6 +357,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 </details>
 
 <!--REF #FileHandleClass.readText().Syntax -->
+
 **.readText**( { *stopChar* : Text } ) : Text <!-- END REF -->
 
 <!--REF #FileHandleClass.readText().Params -->
@@ -364,11 +374,11 @@ This function replaces all original end-of-line delimiters. By default, the nati
 
 The *stopChar* character string is not included in the returned text. If you omit the *stopChar* parameter, the whole document text is returned.  
 
-When this function is executed, the ([.offset](#offset)) is placed just after the *stopChar* string. 
+When this function is executed, the ([.offset](#offset)) is placed just after the *stopChar* string.
 
-If the *stopChar* parameter is passed and not found, `.readText()` returns an empty string and the [.offset](#offset) is left untouched. 
+If the *stopChar* parameter is passed and not found, `.readText()` returns an empty string and the [.offset](#offset) is left untouched.
 
-> When this function is executed for the first time on a file handle, the whole document contents is loaded in a buffer. 
+> When this function is executed for the first time on a file handle, the whole document contents is loaded in a buffer.
 
 #### See also
 
@@ -388,6 +398,7 @@ If the *stopChar* parameter is passed and not found, `.readText()` returns an em
 </details>
 
 <!--REF #FileHandleClass.setSize().Syntax -->
+
 **.setSize**( *size* : Real )<!-- END REF -->
 
 <!--REF #FileHandleClass.setSize().Params -->
@@ -399,7 +410,7 @@ If the *stopChar* parameter is passed and not found, `.readText()` returns an em
 
 The `.setSize()` function <!-- REF #FileHandleClass.setSize().Summary -->sets a new *size* in bytes for the document<!-- END REF -->.
 
-If the *size* value is less than the current document size, the document content is truncated from the beginning to get the new *size* . 
+If the *size* value is less than the current document size, the document content is truncated from the beginning to get the new *size* .
 
 #### See also
 
@@ -419,6 +430,7 @@ If the *size* value is less than the current document size, the document content
 </details>
 
 <!--REF #FileHandleClass.writeBlob().Syntax -->
+
 **.writeBlob**( *blob* : 4D.Blob ) <!-- END REF -->
 
 <!--REF #FileHandleClass.writeBlob().Params -->
@@ -451,6 +463,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 </details>
 
 <!--REF #FileHandleClass.writeLine().Syntax -->
+
 **.writeLine**( *lineOfText* : Text ) <!-- END REF -->
 
 <!--REF #FileHandleClass.writeLine().Params -->
@@ -482,6 +495,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 </details>
 
 <!--REF #FileHandleClass.writeText().Syntax -->
+
 **.writeText**( *textToWrite* : Text )<!-- END REF -->
 
 <!--REF #FileHandleClass.writeText().Params -->
@@ -500,9 +514,3 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 [.breakModeWrite](#breakmodewrite), [.readText()](#readtext), [.writeLine()](#writeline)
 
 <!-- END REF -->
-
-
-
-
-
-

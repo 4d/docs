@@ -31,6 +31,7 @@ For detailed information about the session implementation, please refer to the [
 </details>
 
 <!-- REF #_command_.Session.Syntax -->
+
 **Session** : 4D.Session<!-- END REF -->
 
 <!-- REF #_command_.Session.Params -->
@@ -85,6 +86,7 @@ IP:port/4DACTION/action_Session
 </details>
 
 <!-- REF #SessionClass.clearPrivileges().Syntax -->
+
 **.clearPrivileges()**<!-- END REF -->
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
@@ -120,6 +122,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 </details>
 
 <!-- REF #SessionClass.expirationDate.Syntax -->
+
 **.expirationDate** : Text<!-- END REF -->
 
 #### Description
@@ -149,6 +152,7 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 </details>
 
 <!-- REF #SessionClass.hasPrivilege().Syntax -->
+
 **.hasPrivilege**( *privilege* : Text ) : Boolean<!-- END REF -->
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
@@ -188,6 +192,7 @@ End if
 </details>
 
 <!-- REF #SessionClass.idleTimeout.Syntax -->
+
 **.idleTimeout** : Integer<!-- END REF -->
 
 #### Description
@@ -229,6 +234,7 @@ End if
 </details>
 
 <!-- REF #SessionClass.isGuest().Syntax -->
+
 **.isGuest()** : Boolean<!-- END REF -->
 
 <!-- REF #SessionClass.isGuest().Params -->
@@ -264,6 +270,7 @@ End if
 </details>
 
 <!-- REF #SessionClass.setPrivileges().Syntax -->
+
 **.setPrivileges**( *privilege* : Text )<br/>**.setPrivileges**( *privileges* : Collection )<br/>**.setPrivileges**( *settings* : Object )<!-- END REF -->
 
 <!-- REF #SessionClass.setPrivileges().Params -->
@@ -328,6 +335,7 @@ End if
 </details>
 
 <!-- REF #SessionClass.storage.Syntax -->
+
 **.storage** : Object<!-- END REF -->
 
 #### Description
@@ -348,8 +356,8 @@ You want to store the client IP in the `.storage` property. You can write in the
 If (Session.storage.clientIP=Null) //first access
     Use (Session.storage)
         Session.storage.clientIP:=New shared object("value"; $clientIP)
-    End use 
-End if 
+    End use
+End if
 
 ```
 
@@ -367,6 +375,7 @@ End if
 </details>
 
 <!-- REF #SessionClass.userName.Syntax -->
+
 **.userName** : Text<!-- END REF -->
 
 #### Description

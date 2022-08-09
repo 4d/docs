@@ -14,9 +14,9 @@ A signal is a shared object that must be passed as a parameter to commands that 
 
 A `4D.Signal` object contains the following built-in methods and properties:
 
-- [`.wait()`](#wait) 
+- [`.wait()`](#wait)
 - [`.trigger()`](#trigger)
-- [`.signaled`](#signaled) 
+- [`.signaled`](#signaled)
 - [`.description`](#description).
 
 Any worker/process calling the `.wait()` method will suspend its execution until the `.signaled` property is true. While waiting for a signal, the calling process does not use any CPU. This can be very interesting for performance in multiprocess applications. The `.signaled` property becomes true when any worker/process calls the `.trigger()` method.
@@ -44,38 +44,38 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 
 ```4d
  var $signal : 4D.Signal
- 
+
   // Creation of a signal
  $signal:=New signal
- 
+
   // call main process and execute OpenForm method
  CALL WORKER(1;"OpenForm";$signal)
   // do another calculation
  ...
   // Waiting for the end of the process
  $signaled:=$signal.wait()
- 
+
   // Processing of the results
  $calc:=$signal.result+...
 ```
- 
+
 ***OpenForm*** method :
 
 ```4d
  #DECLARE ($signal : 4D.Signal)  
  var $form : Object
  $form:=New object("value";0)
- 
+
   // Open the form
  $win:=Open form window("Information";Movable form dialog box)
  DIALOG("Information";$form)
  CLOSE WINDOW($win)
- 
+
   // Add a new attribute to your $signal shared object to pass your result to the other process:
  Use($signal)
     $signal.result:=$form.value
  End use
- 
+
   // Trigger the signal to the waiting process
  $signal.trigger()
 ```
@@ -94,7 +94,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 
 
 <!-- REF SignalClass.New signal.Desc -->
-## New signal 
+## New signal
 
 
 <details><summary>History</summary>
@@ -106,6 +106,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 </details>
 
 <!-- REF #_command_.New signal.Syntax -->
+
 **New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
 
 <!-- REF SignalClass.New signal.Params -->
@@ -117,33 +118,33 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 
 #### Description
 
-The `New signal` command <!-- REF #_command_.New signal.Summary -->creates a `4D.Signal` object<!-- END REF -->. 
+The `New signal` command <!-- REF #_command_.New signal.Summary -->creates a `4D.Signal` object<!-- END REF -->.
 
 A signal is a shared object which can be passed as parameter from a worker or process to another worker or process, so that:
 
 *	the called worker/process can update the signal object after specific processing has completed
-*	the calling worker/process can stop its execution and wait until the signal is updated, without consuming any CPU resources. 
+*	the calling worker/process can stop its execution and wait until the signal is updated, without consuming any CPU resources.
 
 Optionally, in the *description* parameter you can pass a custom text describing the signal. This text can also be defined after signal creation.
 
 Since the signal object is a shared object, it can also be used to maintain user properties, including the [`.description`](#description) property, by calling the `Use...End use` structure.
- 
+
 
 **Returned value**
 
 A new [`4D.Signal` object](#signal-object).
 
-#### Example 
+#### Example
 
 Here is a typical example of a worker that sets a signal:
 
 ```4d
  var $signal : 4D.Signal
  $signal:=New signal("This is my first signal")
- 
+
  CALL WORKER("myworker";"doSomething";$signal)
  $signaled:=$signal.wait(1) //wait for 1 second max
- 
+
  If($signaled)
     ALERT("myworker finished the work. Result: "+$signal.myresult)
  Else
@@ -168,7 +169,7 @@ The ***doSomething*** method could be like:
 
 
 <!-- REF SignalClass.description.Desc -->
-## .description 
+## .description
 
 <details><summary>History</summary>
 
@@ -179,6 +180,7 @@ The ***doSomething*** method could be like:
 </details>
 
 <!-- REF #SignalClass.description.Syntax -->
+
 **.description** : Text<!-- END REF -->
 
 #### Description
@@ -187,7 +189,7 @@ The `.description` property <!-- REF #SignalClass.description.Summary -->contain
 
 `.description` can be set at the creation of the signal object or at any moment. Note that since the `Signal` object is a shared object, any write-mode access to the `.description` property must be surrounded by a `Use...End use` structure.
 
-This property is **read-write**. 
+This property is **read-write**.
 
 <!-- END REF -->
 
@@ -205,13 +207,14 @@ This property is **read-write**.
 </details>
 
 <!-- REF #SignalClass.signaled.Syntax -->
+
 **.signaled** : Boolean<!-- END REF -->
 
 #### Description
 
 The `.signaled` property <!-- REF #SignalClass.signaled.Summary -->contains the current state of the `Signal` object<!-- END REF -->. When the signal is created, `.signaled` is **False**. It becomes **True** when the `.trigger( )` is called on the object.
 
-This property is **read-only**. 
+This property is **read-only**.
 
 <!-- END REF -->
 
@@ -229,6 +232,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #SignalClass.trigger().Syntax -->
+
 **.trigger( )**<!-- END REF -->
 
 <!-- REF #SignalClass.trigger().Params -->
@@ -259,6 +263,7 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 </details>
 
 <!-- REF #SignalClass.wait().Syntax -->
+
 **.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
 
 <!-- REF #SignalClass.wait().Params -->
@@ -270,9 +275,9 @@ If the signal is already in the signaled state (i.e., the `signaled` property is
 
 #### Description
 
-The `.wait( )` function <!-- REF #SignalClass.wait().Summary -->makes the current process wait until the `.signaled` property of the signal object to become **true** or the optional *timeout* to expire<!-- END REF -->. 
+The `.wait( )` function <!-- REF #SignalClass.wait().Summary -->makes the current process wait until the `.signaled` property of the signal object to become **true** or the optional *timeout* to expire<!-- END REF -->.
 
-To prevent blocking code, you can pass a maximum waiting time in seconds in the *timeout* parameter (decimals are accepted). 
+To prevent blocking code, you can pass a maximum waiting time in seconds in the *timeout* parameter (decimals are accepted).
 
 >**Warning**: Calling `.wait( )` without a *timeout* in the 4D main process is not recommended because it could freeze the whole 4D application.
 
@@ -284,5 +289,3 @@ The function returns the value of the `.signaled` property. Evaluating this valu
 
 
 <!-- END REF -->
-
-

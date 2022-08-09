@@ -32,6 +32,7 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 </details>
 
 <!-- REF DataClassClass.attributeName.Syntax -->
+
 ***.attributeName*** : DataClassAttribute<!-- END REF -->
 
 #### Description
@@ -57,16 +58,16 @@ Considering the following database structure:
 
 ```4d
 var $firstnameAtt;$employerAtt;$employeesAtt : Object
- 
+
  $firstnameAtt:=ds.Employee.firstname
   //{name:firstname,kind:storage,fieldType:0,type:string,fieldNumber:2,indexed:true,
   //keyWordIndexed:false,autoFilled:false,mandatory:false,unique:false}
- 
+
  $employerAtt:=ds.Employee.employer
   //{name:employer,kind:relatedEntity,relatedDataClass:Company,
   //fieldType:38,type:Company,inverseName:employees}
   //38=Is object
- 
+
  $employeesAtt:=ds.Company.employees
   //{name:employees,kind:relatedEntities,relatedDataClass:Employee,
   //fieldType:42,type:EmployeeSelection,inverseName:employer}
@@ -101,6 +102,7 @@ Considering the following table properties:
 </details>
 
 <!-- REF #DataClassClass.all().Syntax -->
+
 **.all** ( { *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #DataClassClass.all().Params -->
@@ -149,6 +151,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 </details>
 
 <!-- REF #DataClassClass.fromCollection().Syntax -->
+
 **.fromCollection**( *objectCol* : Collection { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #DataClassClass.fromCollection().Params -->
@@ -209,7 +212,7 @@ We want to update an existing entity. The \_\_NEW property is not given, the emp
  var $empsCollection : Collection
  var $emp : Object
  var $employees : cs.EmployeeSelection
- 
+
  $empsCollection:=New collection
  $emp:=New object
  $emp.ID:=668 //Existing PK in Employee table
@@ -229,7 +232,7 @@ We want to update an existing entity. The \_\_NEW property is not given, the emp
  var $empsCollection : Collection
  var $emp : Object
  var $employees : cs.EmployeeSelection
- 
+
  $empsCollection:=New collection
  $emp:=New object
  $emp.__KEY:=1720 //Existing PK in Employee table
@@ -249,7 +252,7 @@ We want to simply create a new entity from a collection:
  var $empsCollection : Collection
  var $emp : Object
  var $employees : cs.EmployeeSelection
- 
+
  $empsCollection:=New collection
  $emp:=New object
  $emp.firstName:="Victor"
@@ -266,7 +269,7 @@ We want to create an entity. The \_\_NEW property is True, the employee primary 
  var $empsCollection : Collection
  var $emp : Object
  var $employees : cs.EmployeeSelection
- 
+
  $empsCollection:=New collection
  $emp:=New object
  $emp.firstName:="Mary"
@@ -289,7 +292,7 @@ We want to create an entity. The \_\_NEW property is omitted, the employee prima
  var $empsCollection : Collection
  var $emp : Object
  var $employees : cs.EmployeeSelection
- 
+
  $empsCollection:=New collection
  $emp:=New object
  $emp.ID:=10000 //Unexisting primary key
@@ -307,7 +310,7 @@ In this example, the first entity will be created and saved but the second will 
  var $empsCollection : Collection
  var $emp; $emp2 : Object
  var $employees : cs.EmployeeSelection
- 
+
  $empsCollection:=New collection
  $emp:=New object
  $emp.ID:=10001 // Unexisting primary key
@@ -315,7 +318,7 @@ In this example, the first entity will be created and saved but the second will 
  $emp.lastName:="Martin"
  $emp.__NEW:=True
  $empsCollection.push($emp)
- 
+
  $emp2:=New object
  $emp2.ID:=10001 // Same primary key, already existing
  $emp2.firstName:="Marc"
@@ -345,6 +348,7 @@ In this example, the first entity will be created and saved but the second will 
 </details>
 
 <!-- REF #DataClassClass.get().Syntax -->
+
 **.get**( *primaryKey* : Integer { ; *settings* : Object } ) : 4D.Entity<br/>**.get**( *primaryKey* : Text { ; *settings* : Object } ) : 4D.Entity<!-- END REF -->
 
 <!-- REF #DataClassClass.get().Params -->
@@ -388,19 +392,19 @@ This example illustrates the use of the *context* property:
 ```4d
  var $e1; $e2; $e3; $e4 : cs.EmployeeEntity
  var $settings; $settings2 : Object
- 
+
  $settings:=New object("context";"detail")
  $settings2:=New object("context";"summary")
- 
+
  $e1:=ds.Employee.get(1;$settings)
  completeAllData($e1) // In completeAllData method, an optimization is triggered and associated to context "detail"
- 
+
  $e2:=ds.Employee.get(2;$settings)
  completeAllData($e2) // In completeAllData method, the optimization associated to context "detail" is applied
- 
+
  $e3:=ds.Employee.get(3;$settings2)
  completeSummary($e3) //In completeSummary method, an optimization is triggered and associated to context "summary"
- 
+
  $e4:=ds.Employee.get(4;$settings2)
  completeSummary($e4) //In completeSummary method, the optimization associated to context "summary" is applied
 ```
@@ -419,6 +423,7 @@ This example illustrates the use of the *context* property:
 </details>
 
 <!-- REF #DataClassClass.getDataStore().Syntax -->
+
 **.getDataStore()** : cs.DataStore<!-- END REF -->
 
 <!-- REF #DataClassClass.getDataStore().Params -->
@@ -448,10 +453,10 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 ```4d
   // SearchDuplicate method
   // SearchDuplicate(entity_to_search;dataclass_name)
-   
+
  #DECLARE ($pet : Object ; $dataClassName : Text)
  var $dataStore; $duplicates : Object  
- 
+
  $dataStore:=$pet.getDataClass().getDataStore()
  $duplicates:=$dataStore[$dataClassName].query("name=:1";$pet.name)
 ```
@@ -470,6 +475,7 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 </details>
 
 <!-- REF #DataClassClass.getInfo().Syntax -->
+
 **.getInfo()** : Object <!-- END REF -->
 
 <!-- REF #DataClassClass.getInfo().Params -->
@@ -494,9 +500,9 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 ```4d
  #DECLARE ($entity : Object)  
  var $status : Object
- 
+
  computeEmployeeNumber($entity) //do some actions on entity
- 
+
  $status:=$entity.save()
  if($status.success)
     ALERT("Record updated in table "+$entity.getDataClass().getInfo().name)
@@ -508,7 +514,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 ```4d
  var $settings : Object
  var $es : cs.ClientsSelection
- 
+
  $settings:=New object
  $settings.parameters:=New object("receivedIds";getIds())
  $settings.attributes:=New object("pk";ds.Clients.getInfo().primaryKey)
@@ -520,7 +526,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 ```4d
  var $pk : Text
  var $dataClassAttribute : Object
- 
+
  $pk:=ds.Employee.getInfo().primaryKey
  $dataClassAttribute:=ds.Employee[$pk] // If needed the attribute matching the primary key is accessible
 ```
@@ -539,6 +545,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 </details>
 
 <!-- REF #DataClassClass.new().Syntax -->
+
 **.new()** : 4D.Entity <!-- END REF -->
 
 <!-- REF #DataClassClass.new().Params -->
@@ -579,6 +586,7 @@ This example creates a new entity in the "Log" Dataclass and records information
 </details>
 
 <!-- REF #DataClassClass.newSelection().Syntax -->
+
 **.newSelection**( { *keepOrder* : Integer } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #DataClassClass.newSelection().Params -->
@@ -621,6 +629,7 @@ When created, the entity selection does not contain any entities (`mySelection.l
 </details>
 
 <!-- REF #DataClassClass.query().Syntax -->
+
 **.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br/>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #DataClassClass.query().Params -->
@@ -787,21 +796,21 @@ For example, with the following two entities:
 ```
 Entity 1:
 ds.People.name: "martin"
-ds.People.places: 
+ds.People.places:
     { "locations" : [ {
                 "kind":"home",
-                "city":"paris" 
+                "city":"paris"
             } ] }
 
 Entity 2:
 ds.People.name: "smith"
-ds.People.places: 
+ds.People.places:
     { "locations" : [ {
                 "kind":"home",
-                "city":"lyon" 
+                "city":"lyon"
             } , {
                 "kind":"office",
-                "city":"paris" 
+                "city":"paris"
             } ] }
 ```
 
@@ -965,7 +974,7 @@ Query with queryPlan and queryPath objects:
 
 ```4d
 $entitySelection:=ds.Employee.query("(firstName = :1 or firstName = :2) and (lastName = :3 or lastName = :4)";"D@";"R@";"S@";"K@";New object("queryPlan";True;"queryPath";True))
- 
+
   //you can then get these properties in the resulting entity selection
 var $queryPlan; $queryPath : Object
 $queryPlan:=$entitySelection.queryPlan

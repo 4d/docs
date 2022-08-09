@@ -28,6 +28,3 @@ The following properties and functions from the [File](FileClass.md) class are a
 |[<!-- INCLUDE #document.parent.Syntax -->](FileClass.md#parent)||
 |[<!-- INCLUDE #document.path.Syntax -->](FileClass.md#path)|Returns a path relative to the archive|
 |[<!-- INCLUDE #document.platformPath.Syntax -->](FileClass.md#platformpath)||
-
-
-

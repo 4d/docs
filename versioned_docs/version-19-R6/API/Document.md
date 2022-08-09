@@ -16,6 +16,7 @@ title: Document Class
 </details>
 
 <!-- REF #document.creationDate.Syntax -->
+
 **.creationDate** : Date<!-- END REF -->
 
 #### Description
@@ -36,6 +37,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.creationTime.Syntax -->
+
 **.creationTime** : Time<!-- END REF -->
 
 #### Description
@@ -57,6 +59,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.exists.Syntax -->
+
 **.exists** : Boolean<!-- END REF -->
 
 #### Description
@@ -79,6 +82,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.extension.Syntax -->
+
 **.extension** : Text<!-- END REF -->
 
 #### Description
@@ -100,6 +104,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.fullName.Syntax -->
+
 **.fullName** : Text<!-- END REF -->
 
 #### Description
@@ -121,6 +126,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.hidden.Syntax -->
+
 **.hidden** : Boolean<!-- END REF -->
 
 #### Description
@@ -142,6 +148,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.isAlias.Syntax -->
+
 **.isAlias** : Boolean<!-- END REF -->
 
 #### Description
@@ -163,6 +170,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.isFile.Syntax -->
+
 **.isFile** : Boolean<!-- END REF -->
 
 #### Description
@@ -184,6 +192,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.isFolder.Syntax -->
+
 **.isFolder** : Boolean<!-- END REF -->
 
 #### Description
@@ -205,6 +214,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.isWritable.Syntax -->
+
 **.isWritable** : Boolean<!-- END REF -->
 
 #### Description
@@ -237,6 +247,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.modificationDate.Syntax -->
+
 **.modificationDate** : Date<!-- END REF -->
 
 #### Description
@@ -258,6 +269,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.modificationTime.Syntax -->
+
 **.modificationTime** : Time<!-- END REF -->
 
 ##### Description
@@ -279,6 +291,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.name.Syntax -->
+
 **.name** : Text<!-- END REF -->
 
 #### Description
@@ -300,6 +313,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.original.Syntax -->
+
 **.original** : 4D.File<br/>**.original** : 4D.Folder<!-- END REF -->
 
 #### Description
@@ -326,6 +340,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.parent.Syntax -->
+
 **.parent** : 4D.Folder<!-- END REF -->
 
 #### Description
@@ -347,6 +362,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.path.Syntax -->
+
 **.path** : Text<!-- END REF -->
 
 #### Description
@@ -368,6 +384,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.platformPath.Syntax -->
+
 **.platformPath** : Text<!-- END REF -->
 
 #### Description
@@ -389,6 +406,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.size.Syntax -->
+
 **.size** : Real<!-- END REF -->
 
 #### Description
@@ -410,6 +428,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #document.copyTo().Syntax -->
+
 **.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File<!-- END REF -->
 
 <!-- REF #document.copyTo().Params -->
@@ -462,6 +481,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 </details>
 
 <!-- REF #document.getContent().Syntax -->
+
 **.getContent( )** : 4D.Blob<!-- END REF -->
 
 <!-- REF #document.getContent().Params -->
@@ -502,6 +522,7 @@ To save a document's contents in a `BLOB` field:
 </details>
 
 <!-- REF #document.getIcon().Syntax -->
+
 **.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #document.getIcon().Params -->
@@ -535,6 +556,7 @@ File icon [picture](../Concepts/picture.html).
 </details>
 
 <!-- REF #document.getText().Syntax -->
+
 **.getText**( { *charSetName* : Text { ; *breakMode* : Integer } } ) : Text<br/>**.getText**( { *charSetNum* : Integer { ; *breakMode* : Integer } } ) : Text<!-- END REF -->
 
 <!-- REF #document.getText().Params -->

@@ -5,7 +5,7 @@ title: Formula
 
 
 
-The [Formula](#formula) and [Formula from string](#formula-from-string) commands allow you to create native [`4D.Function` objects](#about-4dfunction-objects) to execute any 4D expression or code expressed as text. 
+The [Formula](#formula) and [Formula from string](#formula-from-string) commands allow you to create native [`4D.Function` objects](#about-4dfunction-objects) to execute any 4D expression or code expressed as text.
 
 
 ### Formula Objects
@@ -33,7 +33,7 @@ Syntax with brackets is also supported:
 Note that, even if it does not have parameters (see below), an object function to be executed must be called with ( ) parenthesis. Calling only the object property will return a new reference to the formula (and will not execute it):
 
 ```4d
- $o:=$f.message //returns the formula object in $o 
+ $o:=$f.message //returns the formula object in $o
 ```
 
 You can also execute a function using the [`apply()`](#apply) and [`call()`](#call) functions:
@@ -73,7 +73,7 @@ For more convenience, when the formula is made of a single project method, param
   //Writing Formula(myMethod($1;$2)) is not necessary
  $text:=$f.call(Null;"Hello";"World") //returns "Hello World"
  $text:=$f.call() //returns "How are you?"
- 
+
   //myMethod
  #DECLARE ($param1 : Text; $param2 : Text)->$return : Text
  If(Count parameters=2)
@@ -107,7 +107,7 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 
 
 
-## Formula 
+## Formula
 
 <details><summary>History</summary>
 
@@ -119,6 +119,7 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 </details>
 
 <!-- REF #_command_.Formula.Syntax -->
+
 **Formula** ( *formulaExp* : Expression ) : 4D.Function<!-- END REF -->
 
 <!-- REF #_command_.Formula.Params -->
@@ -143,7 +144,7 @@ The returned formula can be called with:
  var $f : 4D.Function
  $f:=Formula(1+2)
  $o:=New object("myFormula";$f)
- 
+
   //three different ways to call the formula
  $f.call($o) //returns 3
  $f.apply($o) //returns 3
@@ -166,10 +167,10 @@ A simple formula:
 ```4d
  var $f : 4D.Function
  $f:=Formula(1+2)
- 
+
  var $o : Object
  $o:=New object("f";$f)
- 
+
  $result:=$o.f() // returns 3
 ```
 
@@ -183,7 +184,7 @@ A formula using local variables:
  $value:=10
  $o:=New object("f";Formula($value))
  $value:=20
- 
+
  $result:=$o.f() // returns 10
 ```
 
@@ -228,13 +229,13 @@ Calling a formula using object notation:
  var $calc : 4D.Function
  $robot:=New object("name";"Robot";"price";543;"quantity";2)
  $feta:=New object("name";"Feta";"price";12.5;"quantity";5)
- 
+
  $calc:=Formula(This.total:=This.price*This.quantity)
- 
+
   //sets the formula to object properties
  $feta.calc:=$calc
  $robot.calc:=$calc
- 
+
   //call the formula
  $feta.calc() // $feta={name:Feta,price:12.5,quantity:5,total:62.5,calc:"[object Formula]"}
  $robot.calc() // $robot={name:Robot,price:543,quantity:2,total:1086,calc:"[object Formula]"}
@@ -243,7 +244,7 @@ Calling a formula using object notation:
 
 
 
-## Formula from string 
+## Formula from string
 
 <details><summary>History</summary>
 
@@ -255,6 +256,7 @@ Calling a formula using object notation:
 </details>
 
 <!-- REF #_command_.Formula from string.Syntax -->
+
 **Formula from string**( *formulaString* : Text ) : 4D.Function<!-- END REF -->
 
 <!-- REF #_command_.Formula from string.Params -->
@@ -312,6 +314,7 @@ The following code will create a dialog accepting a formula in text format:
 </details>
 
 <!-- REF #FunctionClass.apply().Syntax -->
+
 **.apply**() : any<br/>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.apply().Params -->
@@ -339,10 +342,10 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 ```4d
  var $f : 4D.Function
  $f:=Formula($1+$2+$3)
- 
+
  $c:=New collection(10;20;30)
  $result:=$f.apply(Null;$c) // returns 60
-``` 
+```
 
 
 #### Example 2
@@ -352,12 +355,12 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
  var $feta; $robot : Object
  $robot:=New object("name";"Robot";"price";543;"quantity";2)
  $feta:=New object("name";"Feta";"price";12.5;"quantity";5)
- 
+
  $calc:=Formula(This.total:=This.price*This.quantity)
- 
+
  $calc.apply($feta) // $feta={name:Feta,price:12.5,quantity:5,total:62.5}
  $calc.apply($robot) // $robot={name:Robot,price:543,quantity:2,total:1086}
-``` 
+```
 
 <!-- END REF -->
 
@@ -374,6 +377,7 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 </details>
 
 <!-- REF #FunctionClass.call().Syntax -->
+
 **.call**() : any<br/>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.call().Params -->
@@ -400,7 +404,7 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
  var $f : 4D.Function
  $f:=Formula(Uppercase($1))
  $result:=$f.call(Null;"hello") // returns "HELLO"
-``` 
+```
 
 #### Example 2
 
@@ -408,7 +412,7 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
  $o:=New object("value";50)
  $f:=Formula(This.value*2)
  $result:=$f.call($o) // returns 100
-``` 
+```
 
 <!-- END REF -->
 
@@ -426,14 +430,15 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 </details>
 
 <!-- REF #FunctionClass.source.Syntax -->
+
 **.source** : Text <!-- END REF -->
 
 
 #### Description
 
-The `.source` property <!-- REF #FunctionClass.source.Summary -->contains the source expression of the `formula` as text<!-- END REF -->. 
+The `.source` property <!-- REF #FunctionClass.source.Summary -->contains the source expression of the `formula` as text<!-- END REF -->.
 
-This property is **read-only**. 
+This property is **read-only**.
 
 #### Example
 
@@ -442,10 +447,8 @@ This property is **read-only**.
  var $tf : Text
  $of:=Formula(String(Current time;HH MM AM PM))
  $tf:=$of.source //"String(Current time;HH MM AM PM)"
-``` 
+```
 
 
 
 <!-- END REF -->
-
-

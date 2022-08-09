@@ -16,6 +16,7 @@ title: Transporter Class
 </details>
 
 <!-- REF #transporter.acceptUnsecureConnection.Syntax -->
+
 **.acceptUnsecureConnection** : Boolean<!-- END REF -->
 
 #### Description
@@ -51,6 +52,7 @@ Available secured ports are:
 </details>
 
 <!-- REF #transporter.authenticationMode.Syntax -->
+
 **.authenticationMode** : Text<!-- END REF -->
 
 #### Description
@@ -150,6 +152,7 @@ Possible values are:
 </details>
 
 <!-- REF #transporter.bodyCharset.Syntax -->
+
 **.bodyCharset** : Text<!-- END REF -->
 
 #### Description
@@ -185,6 +188,7 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 </details>
 
 <!-- REF #transporter.connectionTimeOut.Syntax -->
+
 **.connectionTimeOut** : Integer<!-- END REF -->
 
 #### Description
@@ -207,6 +211,7 @@ The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeO
 </details>
 
 <!-- REF #transporter.headerCharset.Syntax -->
+
 **.headerCharset** : Text<!-- END REF -->
 
 #### Description
@@ -242,6 +247,7 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 </details>
 
 <!-- REF #transporter.host.Syntax -->
+
 **.host** : Text<!-- END REF -->
 
 #### Description
@@ -264,6 +270,7 @@ The `.host` property contains <!-- REF #transporter.host.Summary -->the name or 
 </details>
 
 <!-- REF #transporter.logFile.Syntax -->
+
 **.logFile** : Text<!-- END REF -->
 
 #### Description
@@ -292,6 +299,7 @@ Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), ext
 </details>
 
 <!-- REF #transporter.port.Syntax -->
+
 **.port** : Integer<!-- END REF -->
 
 #### Description
@@ -317,6 +325,7 @@ The `.port` property contains <!-- REF #transporter.port.Summary --> the port nu
 </details>
 
 <!-- REF #transporter.sendTimeOut.Syntax -->
+
 **.sendTimeOut** : Integer<!-- END REF -->
 
 #### Description
@@ -339,6 +348,7 @@ The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary -
 </details>
 
 <!-- REF #transporter.user.Syntax -->
+
 **.user** : Text<!-- END REF -->
 
 #### Description
@@ -361,6 +371,7 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 </details>
 
 <!-- REF #transporter.checkConnection().Syntax -->
+
 **.checkConnection()** : Object<!-- END REF -->
 
 <!-- REF #transporter.checkConnection().Params -->

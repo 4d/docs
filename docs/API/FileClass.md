@@ -62,6 +62,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 </details>
 
 <!-- REF #_command_.File.Syntax -->
+
 **File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
 
 <!-- REF #_command_.File.Params -->
@@ -132,7 +133,8 @@ If the command is called from a component, pass the optional *parameter to get t
 |v18 R6|Added
 </details>
 
-<!-- REF #4D.File.new().Syntax -->**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br/>**4D.File.new** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
+<!-- REF #4D.File.new().Syntax -->
+**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br/>**4D.File.new** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
 
 #### Description
 
@@ -156,6 +158,7 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 **Not available for ZIP archives**<!-- END REF -->
 
 <!--REF #FileClass.create().Syntax -->
+
 **.create()** : Boolean <!-- END REF -->
 
 <!--REF #FileClass.create().Params -->
@@ -195,6 +198,7 @@ Creation of a preferences file in the database folder:
 </details>
 
 <!--REF #FileClass.createAlias().Syntax -->
+
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.createAlias().Params -->
@@ -249,6 +253,7 @@ You want to create an alias to a file in your database folder:
 </details>
 
 <!--REF #FileClass.delete().Syntax -->
+
 **.delete( )**<!-- END REF -->
 
 <!-- REF #FileClass.delete().Params -->
@@ -296,6 +301,7 @@ You want to delete a specific file in the database folder:
 </details>
 
 <!--REF #FileClass.getAppInfo().Syntax -->
+
 **.getAppInfo**() : Object<!-- END REF -->
 
 <!--REF #FileClass.getAppInfo().Params -->
@@ -387,6 +393,7 @@ ALERT($info.Copyright)
 </details>
 
 <!--REF #FileClass.moveTo().Syntax -->
+
 **.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.moveTo().Params -->
@@ -430,6 +437,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 </details>
 
 <!--REF #FileClass.open().Syntax -->
+
 **.open**( { *mode* : Text } ) : 4D.FileHandle<br/>**.open**( { *options* : Object } ) : 4D.FileHandle<!-- END REF -->
 
 <!--REF #FileClass.open().Params -->
@@ -506,6 +514,7 @@ $fhandle:=$f.open("read")
 </details>
 
 <!--REF #FileClass.rename().Syntax -->
+
 **.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.rename().Params -->
@@ -547,6 +556,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->
+
 **.setAppInfo**( *info* : Object )<!-- END REF -->
 
 <!--REF #FileClass.setAppInfo().Params -->
@@ -629,6 +639,7 @@ $infoPlistFile.setAppInfo($info)
 </details>
 
 <!--REF #FileClass.setContent().Syntax -->
+
 **.setContent** ( *content* : Blob ) <!-- END REF -->
 
 <!--REF #FileClass.setContent().Params -->
@@ -661,6 +672,7 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 </details>
 
 <!--REF #FileClass.setText().Syntax -->
+
 **.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br/>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } ) <!-- END REF -->
 
 <!--REF #FileClass.setText().Params -->

@@ -31,13 +31,14 @@ When a user class is [defined](Concepts/classes.md#class-definition) in the proj
 </details>
 
 <!-- REF #ClassClass.name.Syntax -->
+
 **.name** : Text<!-- END REF -->
 
 #### Description
 
 The `.name` property <!-- REF #ClassClass.name.Summary -->contains the name of the `4D.Class` object<!-- END REF -->. Class names are case sensitive.  
 
-This property is **read-only**. 
+This property is **read-only**.
 
 <!-- END REF -->
 
@@ -55,6 +56,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #ClassClass.new().Syntax -->
+
 **.new**( *param* : any { *;...paramN* } ) : 4D.Class<!-- END REF -->
 
 <!-- REF #ClassClass.new().Params -->
@@ -66,7 +68,7 @@ This property is **read-only**.
 
 #### Description
 
-The `.new()` function <!-- REF #ClassClass.new().Summary -->creates and returns a `cs.className` object which is a new instance of the class on which it is called<!-- END REF -->. This function is automatically available on all classes from the [`cs` class store](Concepts/classes.md#cs). 
+The `.new()` function <!-- REF #ClassClass.new().Summary -->creates and returns a `cs.className` object which is a new instance of the class on which it is called<!-- END REF -->. This function is automatically available on all classes from the [`cs` class store](Concepts/classes.md#cs).
 
 You can pass one or more optional *param* parameters, which will be passed to the [class constructor](Concepts/classes.md#class-constructor) function (if any) in the className class definition. Within the constructor function, the [`This`](Concepts/classes.md#this) is bound to the new object being constructed.
 
@@ -118,15 +120,16 @@ $person:=cs.Person.new("John";"Doe";40)
 </details>
 
 <!-- REF #ClassClass.superclass.Syntax -->
+
 **.superclass** : 4D.Class<!-- END REF -->
 
 #### Description
 
-The `.superclass` property <!-- REF #ClassClass.superclass.Summary -->returns the parent class of the class<!-- END REF -->. A superclass can be a `4D.Class` object, or a `cs.className` object. If the class does not have a parent class, the property returns **null**. 
+The `.superclass` property <!-- REF #ClassClass.superclass.Summary -->returns the parent class of the class<!-- END REF -->. A superclass can be a `4D.Class` object, or a `cs.className` object. If the class does not have a parent class, the property returns **null**.
 
 A superclass of a user class is declared in a class by using the [`Class extends <superclass>`](Concepts/classes.md#class-extends-classname) keyword.
 
-This property is **read-only**. 
+This property is **read-only**.
 
 #### Examples
 
@@ -137,7 +140,7 @@ $sup:=4D.Object.superclass //null
 
 // If you created a MyFile class  
 // with `Class extends File`
-$sup:=cs.MyFile.superclass //File 
+$sup:=cs.MyFile.superclass //File
 
 ```
 
@@ -145,5 +148,3 @@ $sup:=cs.MyFile.superclass //File
 
 **See also:** [Super](Concepts/classes.md#super)
 <!-- END REF -->
-
-

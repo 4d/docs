@@ -35,6 +35,7 @@ For detailed information about the session implementation, please refer to the [
 </details>
 
 <!-- REF #_command_.Session.Syntax -->
+
 **Session** : 4D.Session<!-- END REF -->
 
 
@@ -46,9 +47,9 @@ For detailed information about the session implementation, please refer to the [
 
 #### Description
 
-The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current scalable user web session<!-- END REF -->. 
+The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current scalable user web session<!-- END REF -->.
 
-This command only works when [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions). It returns *Null* when sessions are disabled or when legacy sessions are used. 
+This command only works when [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions). It returns *Null* when sessions are disabled or when legacy sessions are used.
 
 When scalable sessions are enabled, the `Session` object is available from any web processes in the following contexts:
 
@@ -95,6 +96,7 @@ IP:port/4DACTION/action_Session
 </details>
 
 <!-- REF #SessionClass.clearPrivileges().Syntax -->
+
 **.clearPrivileges()**<!-- END REF -->
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
@@ -134,13 +136,14 @@ $isGuest:=Session.isGuest() //$isGuest is True
 </details>
 
 <!-- REF #SessionClass.expirationDate.Syntax -->
+
 **.expirationDate** : Text<!-- END REF -->
 
 #### Description
 
 The `.expirationDate` property contains <!-- REF #SessionClass.expirationDate.Summary -->the expiration date and time of the session cookie<!-- END REF -->. The value is expressed as text in the ISO 8601 format: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
 
-This property is **read-only**. It is automatically recomputed if the [`.idleTimeout`](#idletimeout) property value is modified. 
+This property is **read-only**. It is automatically recomputed if the [`.idleTimeout`](#idletimeout) property value is modified.
 
 #### Example
 
@@ -166,6 +169,7 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 </details>
 
 <!-- REF #SessionClass.hasPrivilege().Syntax -->
+
 **.hasPrivilege**( *privilege* : Text ) : Boolean<!-- END REF -->
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
@@ -177,7 +181,7 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 #### Description
 
-The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the privilege is associated to the session, and False otherwise<!-- END REF -->. 
+The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the privilege is associated to the session, and False otherwise<!-- END REF -->.
 
 
 #### Example
@@ -207,20 +211,21 @@ End if
 </details>
 
 <!-- REF #SessionClass.idleTimeout.Syntax -->
+
 **.idleTimeout** : Integer<!-- END REF -->
 
 #### Description
 
-The `.idleTimeout` property contains <!-- REF #SessionClass.idleTimeout.Summary -->the inactivity session timeout (in minutes), after which the session is automatically closed by 4D<!-- END REF -->. 
+The `.idleTimeout` property contains <!-- REF #SessionClass.idleTimeout.Summary -->the inactivity session timeout (in minutes), after which the session is automatically closed by 4D<!-- END REF -->.
 
-If this property is not set, the default value is 60 (1h). 
+If this property is not set, the default value is 60 (1h).
 
-When this property is set, the [`.expirationDate`](#expirationdate) property is updated accordingly. 
+When this property is set, the [`.expirationDate`](#expirationdate) property is updated accordingly.
 
 > The value cannot be less than 60: if a lower value is set, the timeout is raised up to 60.
 
- 
-This property is **read write**. 
+
+This property is **read write**.
 
 #### Example
 
@@ -250,6 +255,7 @@ End if
 </details>
 
 <!-- REF #SessionClass.isGuest().Syntax -->
+
 **.isGuest()** : Boolean<!-- END REF -->
 
 <!-- REF #SessionClass.isGuest().Params -->
@@ -288,6 +294,7 @@ End if
 </details>
 
 <!-- REF #SessionClass.setPrivileges().Syntax -->
+
 **.setPrivileges**( *privilege* : Text )<br/>**.setPrivileges**( *privileges* : Collection )<br/>**.setPrivileges**( *settings* : Object )<!-- END REF -->
 
 <!-- REF #SessionClass.setPrivileges().Params -->
@@ -316,9 +323,9 @@ If the `privileges` property contains an invalid privilege name, it is ignored.
 
 > In the current implementation, only the "WebAdmin" privilege is available.
 
-By default when no privilege is associated to the session, the session is a [Guest session](#isguest). 
+By default when no privilege is associated to the session, the session is a [Guest session](#isguest).
 
-The [`userName`](#username) property is available at session object level (read-only). 
+The [`userName`](#username) property is available at session object level (read-only).
 
 #### Example
 
@@ -353,15 +360,16 @@ End if
 </details>
 
 <!-- REF #SessionClass.storage.Syntax -->
+
 **.storage** : Object<!-- END REF -->
 
 #### Description
 
-The `.storage` property contains <!-- REF #SessionClass.storage.Summary -->a shared object that can be used to store information available to all requests of the web client<!-- END REF -->. 
+The `.storage` property contains <!-- REF #SessionClass.storage.Summary -->a shared object that can be used to store information available to all requests of the web client<!-- END REF -->.
 
-When a `Session` object is created, the `.storage` property is empty. Since it is a shared object, this property will be available in the `Storage` object of the server. 
+When a `Session` object is created, the `.storage` property is empty. Since it is a shared object, this property will be available in the `Storage` object of the server.
 
-> Like the `Storage` object of the server, the `.storage` property is always "single": adding a shared object or a shared collection to `.storage` does not create a shared group. 
+> Like the `Storage` object of the server, the `.storage` property is always "single": adding a shared object or a shared collection to `.storage` does not create a shared group.
 
 This property is **read only** itself but it returns a read-write object.
 
@@ -373,8 +381,8 @@ You want to store the client IP in the `.storage` property. You can write in the
 If (Session.storage.clientIP=Null) //first access
     Use (Session.storage)
         Session.storage.clientIP:=New shared object("value"; $clientIP)
-    End use 
-End if 
+    End use
+End if
 
 ```
 
@@ -396,6 +404,7 @@ End if
 </details>
 
 <!-- REF #SessionClass.userName.Syntax -->
+
 **.userName** : Text<!-- END REF -->
 
 #### Description
@@ -404,11 +413,8 @@ The `.userName` property contains <!-- REF #SessionClass.userName.Summary -->the
 
 This property is an empty string by default. It can be set using the `privileges` property of the [`setPrivileges()`](#setprivileges) function.
 
-This property is **read only**. 
+This property is **read only**.
 
 
 
 <!-- END REF -->
-
-
-

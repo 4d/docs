@@ -36,6 +36,7 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 </details>
 
 <!-- REF DataClassClass.attributeName.Syntax -->
+
 ***.attributeName*** : DataClassAttribute<!-- END REF -->
 
 #### Description
@@ -105,6 +106,7 @@ Considering the following table properties:
 </details>
 
 <!-- REF #DataClassClass.all().Syntax -->
+
 **.all** ( { *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #DataClassClass.all().Params -->
@@ -152,6 +154,7 @@ In the optional *settings* parameter, you can pass an object containing addition
 </details>
 
 <!-- REF #DataClassClass.clearRemoteCache().Syntax -->
+
 **.clearRemoteCache()**<!-- END REF -->
 
 <!-- REF #DataStoreClass.clearRemoteCache().Params -->
@@ -204,6 +207,7 @@ $ds.Persons.clearRemoteCache()
 </details>
 
 <!-- REF #DataClassClass.fromCollection().Syntax -->
+
 **.fromCollection**( *objectCol* : Collection { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #DataClassClass.fromCollection().Params -->
@@ -402,6 +406,7 @@ In this example, the first entity will be created and saved but the second will 
 </details>
 
 <!-- REF #DataClassClass.get().Syntax -->
+
 **.get**( *primaryKey* : Integer { ; *settings* : Object } ) : 4D.Entity<br/>**.get**( *primaryKey* : Text { ; *settings* : Object } ) : 4D.Entity<!-- END REF -->
 
 <!-- REF #DataClassClass.get().Params -->
@@ -476,6 +481,7 @@ This example illustrates the use of the *context* property:
 </details>
 
 <!-- REF #DataClassClass.getCount().Syntax -->
+
 **.getCount()** : Integer <!-- END REF -->
 
 <!-- REF #DataClassClass.getCount().Params -->
@@ -514,6 +520,7 @@ $number:=$ds.Persons.getCount()
 </details>
 
 <!-- REF #DataClassClass.getDataStore().Syntax -->
+
 **.getDataStore()** : cs.DataStore<!-- END REF -->
 
 <!-- REF #DataClassClass.getDataStore().Params -->
@@ -566,6 +573,7 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 </details>
 
 <!-- REF #DataClassClass.getInfo().Syntax -->
+
 **.getInfo()** : Object <!-- END REF -->
 
 <!-- REF #DataClassClass.getInfo().Params -->
@@ -640,6 +648,7 @@ The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns 
 </details>
 
 <!-- REF #DataClassClass.getRemoteCache().Syntax -->
+
 **.getRemoteCache**() : Object <!-- END REF -->
 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
@@ -726,6 +735,7 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 </details>
 
 <!-- REF #DataClassClass.new().Syntax -->
+
 **.new()** : 4D.Entity <!-- END REF -->
 
 <!-- REF #DataClassClass.new().Params -->
@@ -770,6 +780,7 @@ This example creates a new entity in the "Log" Dataclass and records information
 </details>
 
 <!-- REF #DataClassClass.newSelection().Syntax -->
+
 **.newSelection**( { *keepOrder* : Integer } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #DataClassClass.newSelection().Params -->
@@ -812,6 +823,7 @@ When created, the entity selection does not contain any entities (`mySelection.l
 </details>
 
 <!-- REF #DataClassClass.query().Syntax -->
+
 **.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br/>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #DataClassClass.query().Params -->
@@ -1416,6 +1428,7 @@ We want to disallow formulas, for example when the user enters their query:
 </details>
 
 <!-- REF #DataClassClass.setRemoteCacheSettings().Syntax -->
+
 **.setRemoteCacheSettings**(*settings* : Object) <!-- END REF -->
 
 <!-- REF #DataClassClass.setRemoteCacheSettings().Params -->

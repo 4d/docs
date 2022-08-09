@@ -60,6 +60,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 </details>
 
 <!-- REF #_command_.Folder.Syntax -->
+
 **Folder** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
 
 <!-- REF FolderClass.Folder.Params -->
@@ -121,7 +122,8 @@ If the command is called from a component, pass the optional *parameter to get t
 |v18 R6|Added
 </details>
 
-<!-- REF #4D.Folder.new().Syntax -->**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br/>**4D.Folder.new** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
+<!-- REF #4D.Folder.new().Syntax -->
+**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br/>**4D.Folder.new** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
 
 #### Description
 
@@ -142,6 +144,7 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 </details>
 
 <!--REF #FolderClass.create().Syntax -->
+
 **.create()** : Boolean<!-- END REF -->
 
 <!--REF #FolderClass.create().Params -->
@@ -195,6 +198,7 @@ End if
 </details>
 
 <!--REF #FolderClass.createAlias().Syntax -->
+
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 <!--REF #FolderClass.createAlias().Params -->
@@ -249,6 +253,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 </details>
 
 <!--REF #FolderClass.delete().Syntax -->
+
 **.delete**( { *option* : Integer } )<!-- END REF -->
 
 <!-- REF #FolderClass.delete().Params -->
@@ -324,6 +329,7 @@ macOS: -45 (The file is locked or the pathname is not correct)
 </details>
 
 <!--REF #FolderClass.moveTo().Syntax -->
+
 **.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
 
 <!--REF #FolderClass.moveTo().Params -->
@@ -378,6 +384,7 @@ You want to move and rename a folder:
 </details>
 
 <!--REF #FolderClass.rename().Syntax -->
+
 **.rename**( *newName* : Text ) : 4D.Folder<!-- END REF -->
 
 <!--REF #FolderClass.rename().Params -->

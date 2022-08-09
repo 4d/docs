@@ -37,7 +37,7 @@ You can now create your request:
 ```4d
 var $headers : Object
 $headers:=New object()
-$headers["field1"]:="value1" 
+$headers["field1"]:="value1"
 
 var myHttpRequestOptions : cs.MyHttpRequestOptions
 myHttpRequestOptions := cs.MyHttpRequestOptions.new("GET"; $headers; "")
@@ -74,6 +74,7 @@ HTTPRequest objects provide the following properties and functions:
 ## 4D.HTTPRequest.new()
 
 <!-- REF #4D.HTTPRequest.new().Syntax -->
+
 **4D.HTTPRequest.new**( *url* : Text { ; *options* : Object } ) : 4D.HTTPRequest<!-- END REF -->
 
 <!-- REF #4D.HTTPRequest.new().Params -->
@@ -118,17 +119,17 @@ In the *options* parameter, pass an object that can contain the following proper
 |Property|Type|Description|Default|
 |---|---|---|---|
 |body|Variant|Body of the request (required in case of `post` or `put` requests). Can be a text, a blob, or an object. The content-type is determined from the type of this property unless it is set inside the headers|undefined|
-|certificatesFolder|[Folder](#FolderClass.md)|Sets the active client certificates folder|undefined|
+|certificatesFolder|[Folder](FolderClass.md)|Sets the active client certificates folder|undefined|
 |dataType|Text|Type of the response body attribute. Values: "text", "blob", "object", or "auto". If "auto", the type of the body content will be deduced from its MIME type (object for JSON, text for text, javascript, xml, http message and url encoded form, blob otherwise)|"auto"|
 |encoding|Text|Used only in case of requests with a `body` (`post` or `put` methods). Encoding of the request body content if it's a text, ignored if content-type is set inside the headers|"UTF-8"|
 |headers|Object|Headers of the request. Syntax: `headers.key=value` (*value* can be a Collection if the same key must appear multiple times)|Empty object|
 |method|Text|"POST", "GET", or other method|"GET"|
 |minTLSVersion|Text|Sets the minimum version of TLS: "`TLSv1_0`", "`TLSv1_1`", "`TLSv1_2`", "`TLSv1_3`"|"`TLSv1_2`"|
-|onData|[Function](#FunctionClass.md)|Callback when data from the body is received. It receives two objects as parameters (see below)|undefined|
-|onError|[Function](#FunctionClass.md)|Callback when an error occurs. It receives two objects as parameters (see below)|undefined|
-|onHeaders|[Function](#FunctionClass.md)|Callback when the headers are received. It receives two objects as parameters (see below)|undefined|
-|onResponse|[Function](#FunctionClass.md)|Callback when a response is received. It receives two objects as parameters (see below)|undefined|
-|onTerminate|[Function](#FunctionClass.md)|Callback when the request is over. It receives two objects as parameters (see below)|undefined|
+|onData|[Function](FunctionClass.md)|Callback when data from the body is received. It receives two objects as parameters (see below)|undefined|
+|onError|[Function](FunctionClass.md)|Callback when an error occurs. It receives two objects as parameters (see below)|undefined|
+|onHeaders|[Function](FunctionClass.md)|Callback when the headers are received. It receives two objects as parameters (see below)|undefined|
+|onResponse|[Function](FunctionClass.md)|Callback when a response is received. It receives two objects as parameters (see below)|undefined|
+|onTerminate|[Function](FunctionClass.md)|Callback when the request is over. It receives two objects as parameters (see below)|undefined|
 |protocol|Text|"auto" or "HTTP1". "auto" means HTTP1 in the current implementation|"auto"|
 |proxyAuthentication|[authentication object](#authentication-object)|Object handling proxy authentication|undefined|
 |serverAuthentication|[authentication object](#authentication-object)|Object handling server authentication|undefined|
@@ -177,6 +178,7 @@ An authentication object handles the `options.serverAuthentication` or `options.
 ## .dataType
 
 <!-- REF #4D.HTTPRequest.dataType.Syntax -->
+
 **dataType** : Text<!-- END REF -->
 
 #### Description
@@ -189,6 +191,7 @@ The `.dataType` property contains <!-- REF #4D.HTTPRequest.dataType.Summary -->t
 ## .encoding
 
 <!-- REF #4D.HTTPRequest.encoding.Syntax -->
+
 **encoding** : Text<!-- END REF -->
 
 #### Description
@@ -201,6 +204,7 @@ The `.encoding` property contains <!-- REF #4D.HTTPRequest.encoding.Summary -->t
 ## .errors
 
 <!-- REF #4D.HTTPRequest.errors.Syntax -->
+
 **errors** : Collection<!-- END REF -->
 
 #### Description
@@ -222,6 +226,7 @@ Here is the contents of the `.errors` property:
 ## .headers
 
 <!-- REF #4D.HTTPRequest.headers.Syntax -->
+
 **headers** : Object<!-- END REF -->
 
 #### Description
@@ -234,6 +239,7 @@ The `.headers` property contains <!-- REF #4D.HTTPRequest.headers.Summary -->the
 ## .method
 
 <!-- REF #4D.HTTPRequest.method.Syntax -->
+
 **method** : Text<!-- END REF -->
 
 #### Description
@@ -246,6 +252,7 @@ The `.method` property contains <!-- REF #4D.HTTPRequest.method.Summary -->the `
 ## .protocol
 
 <!-- REF #4D.HTTPRequest.protocol.Syntax -->
+
 **protocol** : Text<!-- END REF -->
 
 #### Description
@@ -258,6 +265,7 @@ The `.protocol` property contains <!-- REF #4D.HTTPRequest.protocol.Summary -->t
 ## .response
 
 <!-- REF #4D.HTTPRequest.response.Syntax -->
+
 **response** : Object<!-- END REF -->
 
 #### Description
@@ -279,6 +287,7 @@ A `response` object is a non-sharable object. It provides the following properti
 ## .returnResponseBody
 
 <!-- REF #4D.HTTPRequest.returnResponseBody.Syntax -->
+
 **returnResponseBody** : Boolean<!-- END REF -->
 
 #### Description
@@ -291,6 +300,7 @@ The `.returnResponseBody` property contains <!-- REF #4D.HTTPRequest.returnRespo
 ## .terminate()
 
 <!-- REF #4D.HTTPRequest.terminate().Syntax -->
+
 **.terminate()**<!-- END REF -->
 
 <!-- REF #4D.HTTPRequest.terminate().Params -->
@@ -310,6 +320,7 @@ The `.terminate()` function <!-- REF #4D.HTTPRequest.terminate().Summary -->abor
 ## .terminated
 
 <!-- REF #4D.HTTPRequest.terminated.Syntax -->
+
 **terminated** : Boolean<!-- END REF -->
 
 #### Description
@@ -322,6 +333,7 @@ The `.terminated` property contains <!-- REF #4D.HTTPRequest.terminated.Summary 
 ## .timeout
 
 <!-- REF #4D.HTTPRequest.timeout.Syntax -->
+
 **timeout** : Real<!-- END REF -->
 
 #### Description
@@ -334,6 +346,7 @@ The `.timeout` property contains <!-- REF #4D.HTTPRequest.timeout.Summary -->the
 ## .url
 
 <!-- REF #4D.HTTPRequest.url.Syntax -->
+
 **url** : Text<!-- END REF -->
 
 #### Description
@@ -346,6 +359,7 @@ The `.url` property contains <!-- REF #4D.HTTPRequest.url.Summary -->the URL of 
 ## .wait()
 
 <!-- REF #4D.HTTPRequest.wait().Syntax -->
+
 **.wait**( { *time* : Real } ) : 4D.HTTPRequest<!-- END REF -->
 
 <!-- REF #4D.HTTPRequest.wait().Params -->
