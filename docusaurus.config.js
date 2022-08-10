@@ -5,7 +5,7 @@ module.exports = {
   url: "https://doc4d.github.io/",
   organizationName: "4D",
   projectName: "docs",
-  favicon: "static/img/favicon/4d.gif",
+  favicon: "img/favicon/4d.gif",
   onBrokenLinks: "ignore",
   onBrokenMarkdownLinks: "ignore",
   presets: [
