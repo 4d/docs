@@ -21,6 +21,12 @@ details {
   --docusaurus-details-decoration-color: black !important;
   font-size: 11px !important;
   border: none !important;
+  padding: 0 auto !important;
+  margin: 2px auto !important;
+}
+
+h2 {
+  margin-bottom: 0 !important;
 }
 
 .details>summary {
