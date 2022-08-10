@@ -22,7 +22,9 @@ a {
   /* Les liens seront en rouge au lieu de bleu */
 }
 
-
+details {
+  padding-top: 0px;
+}
 
 
 .copyright {
