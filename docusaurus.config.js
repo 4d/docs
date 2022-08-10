@@ -1,7 +1,7 @@
 module.exports = {
   title: "4D Docs",
   tagline: "Documentation for 4D developers",
-  baseUrl: "/",
+  baseUrl: "/docs/",
   url: "https://doc4d.github.io/",
   organizationName: "4D",
   projectName: "docs",
@@ -15,6 +15,7 @@ module.exports = {
         docs: {
           // Docs folder path relative to website dir.
           path: 'docs',
+          routeBasePath: '/',
           // Sidebars file relative to website dir.
           sidebarPath: require.resolve('./sidebars.js'),
           versions: {
