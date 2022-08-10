@@ -12,7 +12,7 @@ module.exports = {
     "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js",
     "/docs/18/js/code-blocks-buttons.js"
   ],
-  "favicon": "../assets/en/4d.gif",
+  "favicon": "static/img/favicon/4d.gif",
   "customFields": {
     "users": [
       {
