@@ -15,10 +15,10 @@ const Sections = [
     },
     links: (
       <div className="homepageLinks">
-        <Link to="/docs/GettingStarted/installation" >
+        <Link to="GettingStarted/installation" >
           <Translate>Installation</Translate>
         </Link>
-        <Link to="/docs/GettingStarted/creating" >
+        <Link to="GettingStarted/creating" >
           <Translate>Working with a project</Translate>
         </Link>
       </div>
@@ -35,31 +35,31 @@ const Sections = [
     },
     links: (
       <div className="homepageLinks">
-        <Link to="/docs/Project/overview" >
+        <Link to="Project/overview" >
           <Translate>Project Management</Translate>
         </Link>
-        <Link to="/docs/Concepts/about">
+        <Link to="Concepts/about">
           <Translate>Language Concepts</Translate>
         </Link>
         <Link to="https://doc.4d.com/4Dv19R4/4D/19-R4/4D-Language-Reference.100-5738429.en.html" >
           <Translate>Language Reference (4D Doc Center)</Translate>
         </Link>
-        <Link to="/docs/ORDA/overview" >
+        <Link to="ORDA/overview" >
           <Translate>Object Relational Data Access (ORDA)</Translate>
         </Link>
-        <Link to="/docs/API/overview" >
+        <Link to="API/overview" >
           <Translate>Class API Reference</Translate>
         </Link>
-        <Link to="/docs/code-editor/overview" >
+        <Link to="code-editor/overview" >
           <Translate>Handling code</Translate>
         </Link>
-        <Link to="/docs/Debugging/basics" >
+        <Link to="Debugging/basics" >
           <Translate>Debugging</Translate>
         </Link>
-        <Link to="/docs/settings/overview" >
+        <Link to="settings/overview" >
           <Translate>Settings</Translate>
         </Link>
-        <Link to="/docs/Preferences/overview" >
+        <Link to="Preferences/overview" >
           <Translate>Preferences</Translate>
         </Link>
       </div>
@@ -77,28 +77,28 @@ const Sections = [
     },
     links: (
       <div className="homepageLinks">
-        <Link to="/docs/ServerWindow/overview" >
+        <Link to="ServerWindow/overview" >
           <Translate>4D Server Administration Window</Translate>
         </Link>
-        <Link to="/docs/Admin/webAdmin">
+        <Link to="Admin/webAdmin">
           <Translate>Web Administration</Translate>
         </Link>
-        <Link to="/docs/Admin/cli">
+        <Link to="Admin/cli">
           <Translate>Command Line Interface</Translate>
         </Link>
-        <Link to="/docs/Admin/tls">
+        <Link to="Admin/tls">
           <Translate>TLS Protocol</Translate>
         </Link>
-        <Link to="/docs/Admin/licenses">
+        <Link to="Admin/licenses">
           <Translate>Licenses & Data Collection</Translate>
         </Link>
-        <Link to="/docs/Users/overview">
+        <Link to="Users/overview">
           <Translate>Access Rights</Translate>
         </Link>
-        <Link to="/docs/MSC/overview">
+        <Link to="MSC/overview">
           <Translate>Maintenance and Security Center</Translate>
         </Link>
-        <Link to="/docs/Backup/overview">
+        <Link to="Backup/overview">
           <Translate>Backup and Restore</Translate>
         </Link>
       </div>
@@ -116,10 +116,10 @@ const Sections = [
     },
     links: (
       <div className="homepageLinks">
-        <Link to="/docs/Extensions/overview">
+        <Link to="Extensions/overview">
           <Translate>Overview</Translate>
         </Link>
-        <Link to="/docs/ViewPro/getting-started">
+        <Link to="ViewPro/getting-started">
           <Translate>4D View Pro</Translate>
         </Link>
         <Link to="https://github.com/4d/4D-Mobile-App-Server">
@@ -161,13 +161,13 @@ const Sections = [
     },
     links: (
       <div className="homepageLinks">
-        <Link to="/docs/WebServer/overview">
+        <Link to="WebServer/overview">
           <Translate>Web Server</Translate>
         </Link>
-        <Link to="/docs/WebServer/gettingStarted">
+        <Link to="WebServer/gettingStarted">
           <Translate>Web Development</Translate>
         </Link>
-        <Link to="/docs/REST/gettingStarted">
+        <Link to="REST/gettingStarted">
           <Translate>REST Server</Translate>
         </Link>
       </div>
@@ -185,31 +185,31 @@ const Sections = [
     },
     links: (
       <div className="homepageLinks">
-        <Link to="/docs/Desktop/clientServer" >
+        <Link to="Desktop/clientServer" >
           <Translate>Client/Server</Translate>
         </Link>
-        <Link to="/docs/FormEditor/forms" >
+        <Link to="FormEditor/forms" >
           <Translate>Forms</Translate>
         </Link>
-        <Link to="/docs/FormEditor/jsonReference" >
+        <Link to="FormEditor/jsonReference" >
           <Translate>Form Properties</Translate>
         </Link>
-        <Link to="/docs/FormObjects/formObjectsOverview" >
+        <Link to="FormObjects/formObjectsOverview" >
           <Translate>Form Objects</Translate>
         </Link>
-        <Link to="/docs/FormObjects/propertiesReference" >
+        <Link to="FormObjects/propertiesReference" >
           <Translate>Form Object Properties</Translate>
         </Link>
-        <Link to="/docs/Events/overview" >
+        <Link to="Events/overview" >
           <Translate>Form Events</Translate>
         </Link>
-        <Link to="/docs/Menus/overview" >
+        <Link to="Menus/overview" >
           <Translate>Menus</Translate>
         </Link>
-        <Link to="/docs/Desktop/user-settings" >
+        <Link to="Desktop/user-settings" >
           <Translate>User Settings</Translate>
         </Link>
-        <Link to="/docs/Desktop/building" >
+        <Link to="Desktop/building" >
           <Translate>Build Application</Translate>
         </Link>
       </div>
