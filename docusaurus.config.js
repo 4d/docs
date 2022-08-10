@@ -1,30 +1,14 @@
+const mainBaseURL = process.env.BASE_URL ?? '/';
+
 module.exports = {
-  "title": "4D Docs",
-  "tagline": "Documentation for 4D developers",
-  "url": "https://4d.github.io/",
-  "baseUrl": "/main/",
-  "organizationName": "4D",
-  "projectName": "docs",
-  "scripts": [
-    "https://code.jquery.com/jquery-3.5.1.min.js",
-    "/docs/18/js/comment.js",
-    "https://buttons.github.io/buttons.js",
-    "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js",
-    "/docs/18/js/code-blocks-buttons.js"
-  ],
-  "favicon": "static/img/favicon/4d.gif",
-  "customFields": {
-    "users": [
-      {
-        "caption": "User1",
-        "image": "/../assets/en/4DLogo.gif",
-        "infoLink": "https://www.facebook.com",
-        "pinned": true
-      }
-    ]
-  },
-  "onBrokenLinks": "ignore",
-  "onBrokenMarkdownLinks": "ignore",
+  title: "4D Docs",
+  tagline: "Documentation for 4D developers",
+  baseUrl: mainBaseURL,
+  organizationName: "4D",
+  projectName: "docs",
+  favicon: "static/img/favicon/4d.gif",
+  onBrokenLinks: "ignore",
+  onBrokenMarkdownLinks: "ignore",
   presets: [
     [
       '@docusaurus/preset-classic',
