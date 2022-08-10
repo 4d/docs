@@ -140,10 +140,10 @@ const Sections = [
         <Link to="https://github.com/4d/4D-WritePro-Interface">
           <Translate>4D Write Pro Interface</Translate>
         </Link>
-        <Link to="https://developer.4d.com/docs/en/Extensions/develop-components.html">
+        <Link to="Extensions/develop-components">
           <Translate>Developing Components</Translate>
         </Link>
-        <Link to="https://developer.4d.com/docs/en/Extensions/develop-plug-ins.html">
+        <Link to="Extensions/develop-plug-ins">
           <Translate>Developing Plugins</Translate>
         </Link>
       </div>
