@@ -4,6 +4,7 @@ module.exports = {
   title: "4D Docs",
   tagline: "Documentation for 4D developers",
   baseUrl: mainBaseURL,
+  url: "https://doc4d.github.io/",
   organizationName: "4D",
   projectName: "docs",
   favicon: "static/img/favicon/4d.gif",
