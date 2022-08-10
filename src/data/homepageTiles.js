@@ -80,25 +80,25 @@ const Sections = [
         <Link to="/docs/ServerWindow/overview" >
           <Translate>4D Server Administration Window</Translate>
         </Link>
-        <Link to="docs/Admin/webAdmin">
+        <Link to="/docs/Admin/webAdmin">
           <Translate>Web Administration</Translate>
         </Link>
-        <Link to="docs/Admin/cli">
+        <Link to="/docs/Admin/cli">
           <Translate>Command Line Interface</Translate>
         </Link>
-        <Link to="docs/Admin/tls">
+        <Link to="/docs/Admin/tls">
           <Translate>TLS Protocol</Translate>
         </Link>
-        <Link to="docs/Admin/licenses">
+        <Link to="/docs/Admin/licenses">
           <Translate>Licenses & Data Collection</Translate>
         </Link>
-        <Link to="docs/Users/overview">
+        <Link to="/docs/Users/overview">
           <Translate>Access Rights</Translate>
         </Link>
-        <Link to="docs/MSC/overview">
+        <Link to="/docs/MSC/overview">
           <Translate>Maintenance and Security Center</Translate>
         </Link>
-        <Link to="docs/Backup/overview">
+        <Link to="/docs/Backup/overview">
           <Translate>Backup and Restore</Translate>
         </Link>
       </div>
