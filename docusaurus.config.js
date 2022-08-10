@@ -14,7 +14,6 @@ module.exports = {
   ],
   "favicon": "../assets/en/4d.gif",
   "customFields": {
-    "docsUrl": "",
     "users": [
       {
         "caption": "User1",
@@ -32,7 +31,7 @@ module.exports = {
       {
         docs: {
           // Docs folder path relative to website dir.
-          path: './docs',
+          routeBasePath: './docs',
           // Sidebars file relative to website dir.
           sidebarPath: require.resolve('./sidebars.js'),
           versions: {
