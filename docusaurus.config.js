@@ -31,7 +31,7 @@ module.exports = {
       {
         docs: {
           // Docs folder path relative to website dir.
-          routeBasePath: './docs',
+          path: 'docs',
           // Sidebars file relative to website dir.
           sidebarPath: require.resolve('./sidebars.js'),
           versions: {
