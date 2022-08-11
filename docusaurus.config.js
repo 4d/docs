@@ -7,7 +7,7 @@ module.exports = {
   projectName: "docs",
   favicon: "img/favicon/4d.gif",
   onBrokenLinks: "ignore",
-  onBrokenMarkdownLinks: "ignore",
+  onBrokenMarkdownLinks: "warn",
   presets: [
     [
       '@docusaurus/preset-classic',

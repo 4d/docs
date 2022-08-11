@@ -11,6 +11,13 @@
   --ifm-color-info-contrast-background: white;
 }
 
+.menu__link{
+	font-weight: 400;
+}
+.menu__link--sublist{
+	font-weight: 600;
+}
+
 [data-theme='dark'] {
   --ifm-color-primary: #1e90ff;
   --ifm-color-info-contrast-background: #1B1B1D !important;
@@ -22,7 +29,7 @@ details {
   font-size: 11px !important;
   border: none !important;
   padding: 0 auto !important;
-  margin: 2px auto !important;
+  margin: 1px auto !important;
 }
 
 h2 {
@@ -61,6 +68,7 @@ h2 {
   background-color: #004289;
   padding: 0 20px;
 }
+
 
 .navbar button svg {
   color: white;
