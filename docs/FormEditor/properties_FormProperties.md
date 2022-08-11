@@ -112,6 +112,7 @@ This property specifies the database table from which to [inherit a form](forms.
 Set to `\<None>` in the Property List (or " " in JSON) to inherited from a project form.
 
 
+
 #### JSON Grammar
 
 |Name|Data Type|Possible Values|
@@ -168,7 +169,7 @@ The window title is used when the form is opened using the `Open form window` an
 You can use dynamic references to set the window titles for forms, *i.e.*:
 
 *	A standard XLIFF reference stored in the Resources folder.
-*	A table or field label: The syntax to apply is <?[TableNum]FieldNum> or <?[TableName]FieldName>.
+*	A table or field label: The syntax to apply is `<?[TableNum]FieldNum>` or `<?[TableName]FieldName>`.
 *	A variable or a field: The syntax to apply is `\<VariableName>` or `<[TableName]FieldName>`. The current value of the field or variable will be displayed in the window title.
 
 > The number of characters for a window title is limited to 31.
