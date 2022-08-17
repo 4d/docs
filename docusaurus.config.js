@@ -40,6 +40,16 @@ module.exports = {
       },
     ],
   ],
+  webpack: {
+    jsLoader: (isServer) => ({
+      loader: require.resolve('esbuild-loader'),
+      options: {
+        loader: 'tsx',
+        format: isServer ? 'cjs' : undefined,
+        target: isServer ? 'node16' : 'es2017',
+      },
+    }),
+  },
   i18n: {
     defaultLocale: "en",
     locales: ["en", "fr", "es", "ja", "pt"],
