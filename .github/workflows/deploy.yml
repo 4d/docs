@@ -47,7 +47,7 @@ jobs:
           else
           npm i
           fi
-          export NODE_OPTIONS="--max-old-space-size=4096"
+          export NODE_OPTIONS="--max-old-space-size=14336"
           npm run build
       - name: Release to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
