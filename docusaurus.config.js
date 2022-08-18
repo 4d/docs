@@ -90,7 +90,7 @@ module.exports = {
             return [
               existingPath.replace('/docs', '/docs/en'),
             ];
-          }
+          },
           return undefined, // Return a falsy value: no redirect created
 			},
 		},
