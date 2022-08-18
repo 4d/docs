@@ -82,15 +82,14 @@ module.exports = {
     [
       "@docusaurus/plugin-client-redirects",
       {
-        "fromExtensions":
-			["html"],
+        "fromExtensions":["html"],
 		createRedirects(existingPath) {
           if (existingPath.includes('/docs/en')) {
             // Redirect from /docs/en to /docs
             return [
               existingPath.replace('/docs', '/docs/en'),
-            ];
-          },
+				],
+			},
           return undefined, // Return a falsy value: no redirect created
 			},
 		},
