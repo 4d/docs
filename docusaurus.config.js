@@ -82,12 +82,9 @@ module.exports = {
     [
       "@docusaurus/plugin-client-redirects",
       {
-        "fromExtensions": ["html"],
-		"redirects": [
-		 { "to": "/docs",
-			"from": "/docs/en"
-		 }
-		 ]
+        "fromExtensions": [
+          "html"
+        ]
       }
     ]
   ],
