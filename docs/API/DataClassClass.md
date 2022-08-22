@@ -982,6 +982,12 @@ You will not get the expected result because the null value will be evaluated by
 
 **Linking collection attribute query arguments**
 
+:::info
+
+This feature is only available in queries on dataclasses and [entity selections](EntitySelectionClass.md#query). It cannot be used in queries on [collections](CollectionClass.md#query). 
+
+:::
+
 When searching in collections within object attributes using multiple query arguments joined by the AND operator, you may want to make sure that only entities containing elements that match all arguments are returned, and not entities where arguments can be found in different elements. To do this, you need to link query arguments to collection elements, so that only single elements containing linked arguments are found.
 
 For example, with the following two entities:
@@ -1027,6 +1033,7 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 ```
 
 ... the query will only return "martin" because it has a "locations" element whose "kind" is "home" and whose "city" is "paris". The query will not return "smith" because the values "home" and "paris" are not in the same collection element.
+
 
 **Queries in many-to-many relations**  
 
@@ -1313,6 +1320,7 @@ Query with named placeholders for attributes:
 ```
 
 Query with named placeholders for attributes and values:
+
 
 ```4d
  var $querySettings : Object
