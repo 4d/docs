@@ -84,7 +84,7 @@ module.exports = {
       {
         "fromExtensions":["html"],
 		createRedirects(existingPath) {
-          if (existingPath.includes('/docs/en')) 
+          if (existingPath.includes('/docs')) 
 			{
             // Redirect from /docs/en to /docs
 				return [
