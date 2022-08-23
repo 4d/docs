@@ -20,8 +20,8 @@
     "highlightjs-4d": "^1.0.0"
   },
   "dependencies": {
-    "@4dsas/doc_preprocessing": "^1.0.15",
     "@docusaurus/core": "^2.0.1",
+    "@4dsas/doc_preprocessing": "1.0.15",
     "@docusaurus/plugin-client-redirects": "^2.0.1",
     "@docusaurus/preset-classic": "^2.0.1",
     "@swc/core": "^1.2.158",
