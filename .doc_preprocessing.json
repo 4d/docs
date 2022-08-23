@@ -10,6 +10,24 @@
     "build_translate": {
         "path":"./i18n/%language%/docusaurus-plugin-content-docs/*",
         "languages":["de", "es", "fr", "ja", "pt"]
+    },
+    "build_syntax": {
+        "path":"./docs/API/",
+        "config":"../preprocessing.conf"
+    },
+    "build_syntax_translated": {
+        "path":"./i18n/%language%/docusaurus-plugin-content-docs/current/API/",
+        "languages":["de", "es", "fr", "ja", "pt"],
+        "config":"../preprocessing.conf"
+    },
+    "build_syntax_viewPro": {
+        "path":"./docs/ViewPro/",
+        "config":"../preprocessing.conf"
+    },
+    "build_syntax_viewPro_translated": {
+        "path":"./i18n/%language%/docusaurus-plugin-content-docs/current/ViewPro/",
+        "languages":["de", "es", "fr", "ja", "pt"],
+        "config":"../preprocessing.conf"
     }
 
 }
