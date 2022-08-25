@@ -1,5 +1,7 @@
 files:
   - source: /docs/**/*
+    ignore:
+      - /docs/preprocessing.conf
     translation: /i18n/%two_letters_code%/docusaurus-plugin-content-docs/current/**/%original_file_name%
   - source: /i18n/en/docusaurus-plugin-content-docs/*.json
     translation: /i18n/%two_letters_code%/docusaurus-plugin-content-docs/%original_file_name%

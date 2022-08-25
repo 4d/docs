@@ -5,9 +5,9 @@
     "crowdin-download": "crowdin --config ../crowdin.yaml download -b master",
     "examples": "docusaurus-examples",
     "start": "docusaurus start",
-    "syntaxViewPro": "doc_preprocess --path ./docs/ViewPro/ --syntax='./syntax/ViewPro/' && doc_preprocess --path 'translated_docs/*/ViewPro/' --syntax='./syntax/ViewPro/'",
-    "syntax": "doc_preprocess --path ./docs/API/ --syntax='./syntax/4D/' --config='./docs/preprocessing.conf' && doc_preprocess --path 'translated_docs/*/API/' --syntax='./syntax/4D/' --config='../docs/preprocessing.conf'",
-    "build": "docusaurus build",
+    "syntaxViewPro": "doc_preprocess --settings_type='build_syntax_viewPro' && doc_preprocess --settings_type='build_syntax_viewPro_translated'",
+    "syntax": "doc_preprocess --settings_type='build_syntax' && doc_preprocess --settings_type='build_syntax_translated'",
+    "build": "doc_preprocess && doc_preprocess --settings_type='build_versioned_docs' && doc_preprocess --settings_type='build_translate' && docusaurus build",
     "publish-gh-pages": "docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",
@@ -20,15 +20,15 @@
     "highlightjs-4d": "^1.0.0"
   },
   "dependencies": {
-    "@4dsas/doc_preprocessing": "1.0.14",
     "@docusaurus/core": "^2.0.1",
+    "@4dsas/doc_preprocessing": "1.0.15",
     "@docusaurus/plugin-client-redirects": "^2.0.1",
     "@docusaurus/preset-classic": "^2.0.1",
+    "@swc/core": "^1.2.158",
     "clsx": "^1.1.1",
+    "esbuild-loader": "^2.19.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "@swc/core": "^1.2.158",
-    "esbuild-loader": "^2.19.0",
     "swc-loader": "^0.1.15"
   }
 }
