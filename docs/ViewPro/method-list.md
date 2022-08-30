@@ -677,6 +677,8 @@ $vPict:=VP Convert to picture($vpAreaObj) //export the whole area
 |rangeObj|Object|->|Range object|
 |options|Object|->|Additional options|
 |Result|Object|<-|Object returned. Contains the copied data|<!-- END REF -->
+
+
 #### Description
 
 The `VP Copy to object` command <!-- REF #_method_.VP Copy to object.Summary -->copies the contents, style and formulas from *rangeObj* to an object<!-- END REF -->.
@@ -726,7 +728,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 |Version|Changes|
 |---|---|
-|v19 R7|Support of `allowAutoExpandState` option
+|v19 R7|Support of `allowAutoExpand` option
 |v19 R6|Added
 </details>
 
@@ -2429,7 +2431,7 @@ In *sheet*, pass the index of the target sheet. If no index is specified, the co
 
 >Indexing starts at 0.
 
-
+If *tableName* is not found, the command returns **null**. 
 
 #### See also
 
@@ -2847,16 +2849,16 @@ In the *insertAfter* parameter, you can pass one of the following constants to i
 
 This command inserts some columns in the *tableName* table, NOT in the sheet. The total number of columns of the sheet is not impacted by the command. Data present at the right of the table (if any) are automatically moved right according to the number of added columns.
 
-If the *tableName* table is bound to a collection, the command inserts new, empty element(s) in the collection. If *tableName* does not exist, nothing happens.
+If *tableName* does not exist or if there is not enough space in the sheet, nothing happens.
 
 
 
 #### Example
 
-To insert two columns in the "dataContext" table before the 3rd row: 
+To insert two columns in the "dataTable" table before the 3rd row: 
 
 ```4d
-VP INSERT TABLE COLUMNS("ViewProArea"; "dataContext"; 3;2)
+VP INSERT TABLE COLUMNS("ViewProArea"; "dataTable"; 3;2)
 ```
 
 #### See also
@@ -2901,16 +2903,17 @@ In the *insertAfter* parameter, you can pass one of the following constants to i
 
 This command inserts some rows in the *tableName* table, NOT in the sheet. The total number of rows of the sheet is not impacted by the command. Data present below the table (if any) are automatically moved down according to the number of added rows.
 
-If the *tableName* table is bound to a collection, the command inserts new, empty element(s) in the collection. If *tableName* does not exist, nothing happens.
+If the *tableName* table is bound to a [data context](#vp-set-data-context), the command inserts new, empty element(s) in the collection. 
 
+If *tableName* does not exist or if there is not enough space in the sheet, nothing happens.
 
 
 #### Example
 
-To insert one row in the "dataContext" table before the 2nd row:
+To insert one row in the "dataTable" table before the 2nd row:
 
 ```4d
-VP INSERT TABLE ROWS("ViewProArea"; "dataContext"; 2)
+VP INSERT TABLE ROWS("ViewProArea"; "dataTable"; 2)
 ```
 
 #### See also
@@ -3478,16 +3481,16 @@ The `VP REMOVE TABLE COLUMNS` command <!-- REF #_method_.VP REMOVE TABLE COLUMNS
 
 The command removes columns from the *tableName* table, NOT from the sheet. The total number of columns of the sheet is not impacted by the command. Data present at the right of the table (if any) are automatically moved letf according to the number of removed columns.
 
-If the *tableName* table is bound to a collection, the command removes element(s) from the collection. If *tableName* does not exist, nothing happens.
+If *tableName* does not exist, nothing happens.
 
 
 
 #### Example
 
-To remove two columns from 3rd column of the "dataContext" table:
+To remove two columns from 3rd column of the "dataTable" table:
 
 ```4d
-VP REMOVE TABLE COLUMNS("ViewProArea"; "dataContext"; 3; 2)
+VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 ```
 
 #### See also
@@ -3524,16 +3527,17 @@ The `VP REMOVE TABLE ROWS` command <!-- REF #_method_.VP REMOVE TABLE ROWS.Summa
 
 This command removes rows from the *tableName* table, NOT from the sheet. The total number of rows of the sheet is not impacted by the command. Data present below the table (if any) are automatically moved up according to the number of removed rows.
 
-If the *tableName* table is bound to a collection, the command removes element(s) from the collection. If *tableName* does not exist, nothing happens.
+If the *tableName* table is bound to a [data context](#vp-set-data-context), the command removes element(s) from the collection. 
 
+If *tableName* does not exist, nothing happens.
 
 
 #### Example
 
-To remove two rows from 3rd row of the "dataContext" table:
+To remove two rows from 3rd row of the "dataTable" table:
 
 ```4d
-VP REMOVE TABLE ROWS("ViewProArea"; "dataContext"; 3; 2)
+VP REMOVE TABLE ROWS("ViewProArea"; "dataTable"; 3; 2)
 ```
 
 #### See also
@@ -3606,7 +3610,7 @@ The `VP RESIZE TABLE` command <!-- REF #_method_.VP RESIZE TABLE.Summary -->chan
 The following rules apply:
 
 - Headers must remain in the same row and the resulting table range must overlap the original table range.
-- If the row count of the resized table is inferior to the initial row count, values inside cropped rows or columns are kept if they were not bound, otherwise they are removed.
+- If the row count of the resized table is inferior to the initial row count, values inside cropped rows or columns are kept if they were not bound to a [data context](#vp-set-data-context), otherwise they are deleted.
 - If the table expands on cells containing data:
 	- if rows are added, data is deleted,
 	- if columns are added, data are kept and are displayed in new columns.
