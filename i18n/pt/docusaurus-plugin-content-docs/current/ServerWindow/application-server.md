@@ -41,7 +41,7 @@ This feature permits, for example, an administrator to carry out various mainten
 
 ## Information
 
-### Configuration
+### Configuração
 
 This area provides information about the 4D project published by the server: name and location of data and structure files and name of database log file. You can click on the structure or data file name in order to view its complete pathname.
 
