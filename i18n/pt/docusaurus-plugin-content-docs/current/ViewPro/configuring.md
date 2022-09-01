@@ -74,7 +74,7 @@ The 4D View Pro sheet options object allows you to control various options of yo
 
 ### Sheet appearance
 
-| Propriedade          |                        | Tipo          | Descrção                                                                                                                                                                                                                                                                                                   |
+| Propriedade          |                        | Tipo          | Descrição                                                                                                                                                                                                                                                                                                  |
 | -------------------- | ---------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | allowCellOverflow    |                        | boolean       | Specifies whether data can overflow into adjacent empty cells.                                                                                                                                                                                                                                             |
 | sheetTabColor        |                        | string        | A color string used to represent the sheet tab color, such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on.                                                                                                                                                                                     |
@@ -99,7 +99,7 @@ The 4D View Pro sheet options object allows you to control various options of yo
 
 To lock the whole sheet, you only need to set the *isProtected* property to **true**. You can then unlock cells individually by setting the [locked](#layout) cell style property.
 
-| Propriedade       |                          | Tipo    | Descrção                                                                                                                          |
+| Propriedade       |                          | Tipo    | Descrição                                                                                                                         |
 | ----------------- | ------------------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | isProtected       |                          | boolean | Specifies whether cells on this sheet that are marked as protected cannot be edited.                                              |
 | protectionOptions |                          | object  | A value that indicates the elements that you want users to be able to change. If null : the protectionOptions parameter is reset. |
@@ -134,7 +134,7 @@ Note that when creating your own format patterns, only the display of the data i
 
 Number formats apply to all number types (e.g., positive, negative, and zeros).
 
-| Character | Descrção                                                                                                                                                                                                                   | Exemplo                                                                                                                    |
+| Character | Descrição                                                                                                                                                                                                                  | Exemplo                                                                                                                    |
 | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | 0         | Placeholder that displays zeros.                                                                                                                                                                                           | #.00 will display 1.1 as 1.10                                                                                              |
 | .         | Displays a decimal point                                                                                                                                                                                                   | 0.00 will display 1999 as 1999.00                                                                                          |
@@ -184,7 +184,7 @@ Number formats apply to all number types (e.g., positive, negative, and zeros).
 
 To create your own date and time patterns, in your current localization, you can use combinations of the following codes:
 
-|      | Code<br/>(not case-sensitive) | Descrção                                       | Exemplo            |
+|      | Code<br/>(not case-sensitive) | Descrição                                      | Exemplo            |
 | ---- | ----------------------------------- | ---------------------------------------------- | ------------------ |
 | Date |                                     |                                                | (January 1, 2019)  |
 |      | m                                   | Month number without leading zero              | 1                  |
@@ -214,7 +214,7 @@ To create your own date and time patterns, in your current localization, you can
 
 In addition to the special characters and codes described in the previous sections, there are additional characters and symbols that can be used in your format patterns. These additional characters and symbols do not require a \ or "" and do not impact the interpretation of the format pattern. They appear "as-is" within the pattern.
 
-| Character   | Descrção                                                           | Exemplo              |
+| Character   | Descrição                                                          | Exemplo              |
 | ----------- | ------------------------------------------------------------------ | -------------------- |
 | + and -     | Plus and minus signs                                               | ### + ### = ###,### |
 | ( )         | Left and right parenthesis                                         | (-###.##)            |
@@ -246,7 +246,7 @@ In addition to the special characters and codes described in the previous sectio
 
 Column and row attributes are used to specify the beginning, end, and repetition of columns and rows.
 
-| Propriedade       | Tipo          | Descrção                                                                                                   |
+| Propriedade       | Tipo          | Descrição                                                                                                  |
 | ----------------- | ------------- | ---------------------------------------------------------------------------------------------------------- |
 | columnEnd         | inteiro longo | The last column to print in a cell range. Default value = -1 (all columns)                                 |
 | columnStart       | inteiro longo | The first column to print in a cell range. Default value = -1 (all columns)                                |
@@ -261,7 +261,7 @@ Column and row attributes are used to specify the beginning, end, and repetition
 
 Header and footer attributes are used to specify text or images in the left, right, and center header/footer sections.
 
-| Propriedade       | Tipo                 | Descrção                                                   |
+| Propriedade       | Tipo                 | Descrição                                                  |
 | ----------------- | -------------------- | ---------------------------------------------------------- |
 | footerCenter      | text                 | The text and format of the center footer on printed pages. |
 | footerCenterImage | picture &#124; text* | The image for the center section of the footer.            |
@@ -282,7 +282,7 @@ Header and footer attributes are used to specify text or images in the left, rig
 
 The following special characters allow the automatic addition or formatting of information in the header and footer when the 4D View Pro area is printed.
 
-| Character | Descrção                         | Exemplo                                                                | Resultados                                           |
+| Character | Descrição                        | Exemplo                                                                | Resultados                                           |
 | --------- | -------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
 | &         | Escape character                 | (see examples below)                                                   |                                                      |
 | P         | Current page                     | printInfo.headerLeft:="This is page &P."                               | This is page 5.|                                     |
@@ -303,7 +303,7 @@ The following special characters allow the automatic addition or formatting of i
 
 Margin attributes are used to specify the 4D View Pro area margins for printing. Expressed in hundreds of an inch.
 
-| Propriedade |         | Tipo          | Descrção                                                    |
+| Propriedade |         | Tipo          | Descrição                                                   |
 | ----------- | ------- | ------------- | ----------------------------------------------------------- |
 | margin      |         | object        | The print margins                                           |
 |             | top     | inteiro longo | Top margin, in hundredths of an inch. Default value = 75    |
@@ -318,7 +318,7 @@ Margin attributes are used to specify the 4D View Pro area margins for printing.
 Orientation attributes are used to specify the direction the printed page layout.
 > This attribute defines rendering information only.
 
-| Propriedade | Tipo          | Descrção                                                                                                                  |
+| Propriedade | Tipo          | Descrição                                                                                                                 |
 | ----------- | ------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | orientation | inteiro longo | Page orientation. Available values: `vk print page orientation landscape`, `vk print page orientation portrait` (default) |
 
@@ -326,7 +326,7 @@ Orientation attributes are used to specify the direction the printed page layout
 
 Page attributes are used to specify general document print settings.
 
-| Propriedade     | Tipo          | Descrção                                                                                                                                                                                            |
+| Propriedade     | Tipo          | Descrição                                                                                                                                                                                           |
 | --------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | blackAndWhite   | boolean       | Printing in black and white only. <p>Default value = false</p><p>**Note**: PDFs are not affected by this attribute. Colors in PDFs remain.</p>                                                                                                                 |
 | centering       | inteiro longo | How the contents are centered on the printed page. Available values: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (default), `vk print centering vertical` |
@@ -344,7 +344,7 @@ Paper size attributes are used to specify the dimensions or model of paper to us
 * Custom size - height and width attributes
 * Standard size - kind attribute
 
-| Propriedade |        | Tipo          | Descrção                                                                                                         |
+| Propriedade |        | Tipo          | Descrição                                                                                                        |
 | ----------- | ------ | ------------- | ---------------------------------------------------------------------------------------------------------------- |
 | paperSize   |        | object        | Paper dimensions (height, width) or specific format (kind) for printing.                                         |
 |             | height | inteiro longo | Height of the paper, in hundredths of an inch.                                                                   |
@@ -361,7 +361,7 @@ Paper size attributes are used to specify the dimensions or model of paper to us
 
 Scale attributes are used to specify printing optimization and adjustments.
 
-| Propriedade    | Tipo          | Descrção                                                                                                     |
+| Propriedade    | Tipo          | Descrição                                                                                                    |
 | -------------- | ------------- | ------------------------------------------------------------------------------------------------------------ |
 | bestFitColumns | boolean       | Column width is adjusted to fit the largest text width for printing. Default value = "false"                 |
 | bestFitRows    | boolean       | Row height is adjusted to fit the tallest text height for printing. Default value = "false"                  |
@@ -372,7 +372,7 @@ Scale attributes are used to specify printing optimization and adjustments.
 
 Show / Hide attributes are used to specify the visibility (printing) of 4D View Pro area elements.
 
-| Propriedade      | Tipo          | Descrção                                                                                                                                                                         |
+| Propriedade      | Tipo          | Descrição                                                                                                                                                                        |
 | ---------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | showBorder       | boolean       | Prints the outline border. Default value = "true"                                                                                                                                |
 | showColumnHeader | inteiro longo | Column header print settings. Available values: `vk print visibility hide`, `vk print visibility inherit` (default), `vk print visibility show`, `vk print visibility show once` |
@@ -383,7 +383,7 @@ Show / Hide attributes are used to specify the visibility (printing) of 4D View 
 
 Watermark attributes are used to superimpose text or an image onto the 4D View Pro area.
 
-| Propriedade |                | Tipo                 | Descrção                                                                                                                                               |
+| Propriedade |                | Tipo                 | Descrição                                                                                                                                              |
 | ----------- | -------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | watermark   |                | collection           | Collection of watermark settings.  Default value: undefined                                                                                            |
 |             | \[ ].height   | inteiro longo        | The height of the watermark text / image.                                                                                                              |
@@ -424,7 +424,7 @@ Exemplo:
 
 #### Background & Foreground
 
-| Propriedade           | Tipo          | Descrção                                     | Valores possíveis                                                                                                                                                                                                                                                                                                                                                         |
+| Propriedade           | Tipo          | Descrição                                    | Valores possíveis                                                                                                                                                                                                                                                                                                                                                         |
 | --------------------- | ------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | backColor             | text          | Defines the color of the background.         | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                                        |
 | backgroundImage       | picture, text | Specifies a background image.                | Can be specified directly or via the image path (full path or file name only). If the file name only is used, the file must be located next to the database structure file. No matter how set (picture or text), a picture is saved with the document. This could impact the size of a document if the image is large. Note for Windows: File extension must be included. |
@@ -433,7 +433,7 @@ Exemplo:
 
 #### Borders
 
-| Propriedade                                                                |       | Tipo          | Descrção                                                                       | Valores possíveis                                                                                                                                                                                                                                                                                                                                                |
+| Propriedade                                                                |       | Tipo          | Descrição                                                                      | Valores possíveis                                                                                                                                                                                                                                                                                                                                                |
 | -------------------------------------------------------------------------- | ----- | ------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | borderBottom, borderLeft, borderRight, borderTop, diagonalDown, diagonalUp |       | object        | Defines the corresponding border line                                          |                                                                                                                                                                                                                                                                                                                                                                  |
 |                                                                            | color | text          | Defines the color of the border. Default = black.                              | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                               |
@@ -441,7 +441,7 @@ Exemplo:
 
 #### Fonts and text
 
-| Propriedade     |              | Tipo          | Descrção                                                                                                                                                                                                                                                                                                                                                             | Valores possíveis                                                                                                                                                                                                 |
+| Propriedade     |              | Tipo          | Descrição                                                                                                                                                                                                                                                                                                                                                            | Valores possíveis                                                                                                                                                                                                 |
 | --------------- | ------------ | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | font            |              | text          | Specifies the font characteristics in CSS font shorthand ("font-style font-variant font-weight font-size/line-height font-family"). Example: "14pt Century Gothic". The font-size and font-family values are mandatory. If one of the other values is missing, their default values are used. Note: If a font name contains a space, the name must be within quotes. | A CSS font shorthand. 4D provides utility commands to handle font characteristics as objects: [`VP Font to object`](method-list.md#vp-font-to-object) and [`VP Object to font`](method-list.md#vp-object-to-font) |
 | formatter       |              | text          | Pattern for value/time property.                                                                                                                                                                                                                                                                                                                                     | Number/text/date/time formats, special characters. See [Cell Format](#cell-format).                                                                                                                               |
@@ -459,7 +459,7 @@ Exemplo:
 
 #### Layout
 
-| Propriedade | Tipo          | Descrção                                                                                                            | Valores possíveis                                                                                                    |
+| Propriedade | Tipo          | Descrição                                                                                                           | Valores possíveis                                                                                                    |
 | ----------- | ------------- | ------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
 | cellPadding | text          | Defines the cell padding                                                                                            |                                                                                                                      |
 | hAlign      | inteiro longo | Defines the horizontal alignment of cell contents.                                                                  | `vk horizontal align center`, `vk horizontal align general`, `vk horizontal align left`, `vk horizontal align right` |
@@ -470,7 +470,7 @@ Exemplo:
 
 #### Style information
 
-| Propriedade | Tipo | Descrção                                                                                                                                                                                                                                                                         |
+| Propriedade | Tipo | Descrição                                                                                                                                                                                                                                                                        |
 | ----------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name        | text | Defines the name of the style                                                                                                                                                                                                                                                    |
 | parentName  | text | Specifies the style that the current style is based on. Values from the parent style will be applied, then any values from the current style are applied. Changes made in the current style will not be refelected in the parent style. Only available when using a style sheet. |
@@ -481,7 +481,7 @@ The 4D View Pro [object](Concepts/dt_object.md) stores the whole spreadsheet con
 
 It contains the following properties:
 
-| Propriedade  | Tipo de valor | Descrção                                     |
+| Propriedade  | Tipo de valor | Descrição                                    |
 | ------------ | ------------- | -------------------------------------------- |
 | version      | Longint       | Internal component version                   |
 | dateCreation | Timestamp     | Creation date                                |
@@ -496,7 +496,7 @@ The 4D View Pro form object variable is the [object](Concepts/dt_object.md) vari
 
 It contains the following properties:
 
-| Propriedade            | Tipo de valor | Descrção                                                                                                                                                                                                                                                                                                                     |
+| Propriedade            | Tipo de valor | Descrição                                                                                                                                                                                                                                                                                                                    |
 | ---------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ViewPro.area           | Text          | 4D View Pro area name                                                                                                                                                                                                                                                                                                        |
 | ViewPro.callbacks      | Objeto        | Stores temporary information necessary for commands requiring callbacks such as importing and exporting.                                                                                                                                                                                                                     |
