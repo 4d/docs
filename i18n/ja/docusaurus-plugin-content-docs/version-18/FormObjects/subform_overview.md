@@ -1,91 +1,91 @@
 ---
 id: subformOverview
-title: Subform
+title: サブフォーム
 ---
 
-## Overview
+## 概要
 
-A subform is a form included in another form.
+サブフォームとは、他のフォームに組み込まれるフォームのことです。
 
-### Terminology
+### 用語
 
-In order to clearly define the concepts implemented with subforms, here are some definitions for certain terms used:
+サブフォームに実装されたコンセプトを明確に説明するために、いくつかの用語についてここで定義します:
 
-* **Subform**: a form intended for inclusion in another form, itself called the parent form.
-* **Parent form**: a form containing one or more subform(s).
-* **Subform container**: an object included in the parent form, displaying an instance of the subform.
-* **Subform instance**: the representation of a subform in a parent form. This concept is important because it is possible to display several instances of the same subform in a parent form.
-* **List form**: instance of subform displayed as a list.
-* **Detail form**: page-type input form associated with a list-type subform that can be accessed by double-clicking in the list.
+* **サブフォーム**: 他のフォームに組み込まれることを意図したフォーム。
+* **親フォーム**: 1つ以上のサブフォームを含むフォーム。
+* **サブフォームコンテナー**: 親フォームに組み込まれた、サブフォームのインスタンスを表示するオブジェクト。
+* **サブフォームインスタンス**: 親フォームに表示されたサブフォームの実体。 このコンセプトはとても重要です。親フォームには、同じサブフォームのインスタンスを複数表示することができるからです。
+* **リストフォーム**: データをリストとして表示するサブフォームインスタンス。
+* **詳細フォーム**: リストサブフォームをダブルクリックすることでアクセスすることができる、ページタイプの入力フォーム。
 
-## List subforms
+## リストサブフォーム
 
-A list subform lets you enter, view, and modify data in other tables. You usually use list subforms in databases in which you have established One to Many relations. A list subform on a form in a related One table lets you view, enter, and modify data in a related Many table. You can have several subforms coming from different tables in the same form. However, it is not possible to place two subforms that belong to the same table on the same page of a form.
+リストサブフォームを使うことで、他のテーブルのデータを入力、表示、および更新することができます。 通常は 1対Nリレーションが設定されたデータベースでリストサブフォームを使用します。 リレートされた 1テーブルのフォーム上のリストサブフォームでは、リレートされた Nテーブルのデータを入力・表示・更新します。 一つのフォーム上に、それぞれ異なるテーブルに属する複数のサブフォームを配置できます。 しかし、フォームの同じページ上には、同じテーブルに属するサブフォームを複数配置することはできません。
 
-For example, a Contacts manager database might use a list subform to display all the telephone numbers for a particular contact. Although the telephone numbers appear on the Contacts screen, the information is actually stored in a related table. Using a One to Many relation, this database design makes it easy to store an unlimited number of telephone numbers per contact. With automatic relations, you can support data entry directly into the related Many table without programming.
+たとえば、連絡先管理データベースでは、ある連絡先のすべての電話番号を表示するためにリストサブフォームが使用されるでしょう。 連絡先テーブルの画面に電話番号が表示されますが、情報はリレートテーブルに格納されています。 1対Nリレーションを使用することで、このデータベース設計は連絡先ごとに複数の電話番号を簡単に格納できるようになっています。 自動リレーションにより、リレートされている Nテーブルへのデータ入力がプログラムなしで直接おこなうことができます。
 
-Although list subforms are generally associated with Many tables, a subform instance can display the records of any other database table.
+リストサブフォームは通常 Nテーブルに結び付けられますが、それだけでなく他の任意のデータベーステーブルのレコードをサブフォームのインスタンスに表示することもできます。
 
-You can also allow the user to enter data in the List form. Depending on the configuration of the subform, the user may display the detail form by double-clicking on a subrecord or by using the commands for adding and editing subrecords.
+また、ユーザーがリストサブフォームに直接データを入力するようにもできます。 サブフォームの設定に基づき、ユーザーがサブレコード上でダブルクリックするか、サブレコードを追加/編集するコマンドを使用すると、詳細フォームが表示されます。
 
-> 4D offers three standard actions to meet the basic needs for managing subrecords: `Edit Subrecord`, `Delete Subrecord`, and `Add Subrecord`. When the form includes several subform instances, the action will apply to the subform that has the focus.
+> 4Dはサブレコードを管理する基本的なニーズに応える 3つの標準アクション `editSubrecord` (サブレコード編集)、`deleteSubrecord` (サブレコード削除) および `addSubrecord` (サブレコード追加) を提供しています。 フォームに複数のサブフォームインスタンスが含まれる場合、フォーカスを持っているサブフォームにアクションが適用されます。
 
-## Page subforms
+## ページサブフォーム
 
-Page subforms can display the data of the current subrecord or any type of pertinent value depending on the context (variables, pictures, and so on). One of the main advantages of using page subforms is that they can include advanced functionalities and can interact directly with the parent form (widgets). Page subforms also have their own specific properties and events; you can manage them entirely by programming.
+ページサブフォームは、カレントサブレコードのデータや、コンテキストに基づく関連する値 (変数やピクチャーなど) を表示できます。 ページサブフォームを使用する利点の一つは、それらが高度な機能を提供したり、親フォームと相互作用したりできることです (ウィジェット)。 ページサブフォームには専用のプロパティやイベントがあり、プログラムから完全に制御することができます。
 
-The page subform uses the input form indicated by the [Detail Form](properties_Subform.md#detail-form) property. Unlike a list subform, the form used can come from the same table as the parent form. It is also possible to use a project form. When executed, a page subform has the same standard display characteristics as an input form.
+ページサブフォームは [詳細フォーム](properties_Subform.md#詳細フォーム) プロパティで指定された入力フォームを使用します。 リストサブフォームと異なり、使用されるフォームは親フォームと同じテーブルに所属していてもかまいません。 また、プロジェクトフォームを使用することもできます。 実行時、ページサブフォームは入力フォームと同じ標準の表示特性を持ちます。
 
-> 4D Widgets are predefined compound objects based upon page subforms. They are described in detail in a separate manual, [4D Widgets](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Widgets.100-4465257.en.html).
+> 4Dウィジェットは、ページサブフォームに基づいた定義済みの複合オブジェクトです。 詳細は専用のドキュメント [4D Widgets (ウィジェット)](https://doc.4d.com/4Dv18/4D/18/4D-Widgets.100-4690706.ja.html) を参照してください。
 
-### Managing the bound variable
+### バインドされた変数の管理
 
-The [variable](properties_Object.md#variable-or-expression) bound to a page subform lets you link the parent form and subform contexts to put the finishing touches on sophisticated interfaces. For example, imagine a subform representing a dynamic clock, inserted into a parent form containing an enterable variable of the Time type:
+サブフォームにバインドされた [変数](properties_Object.md#変数あるいは式) を使用して 2つのコンテキスト (親フォームとサブフォーム) をリンクし、洗練されたインターフェースを作成することができます。 たとえば、動的な時計を提供するサブフォームを置くとします。このサブフォームが置かれる親フォームには入力可の時間型変数が置かれています:
 
 ![](../assets/en/FormObjects/subforms1.png)
 
-Both objects (time variable and subform container) *have the same variable name*. In this case, when you open the parent form, 4D synchronizes both values automatically. If the variable value is set at several locations, 4D uses the value that was loaded last. It applies the following loading order: 1-Object methods of subform 2-Form method of subform 3-Object methods of parent form 4-Form method of parent form
+両オブジェクト (時間変数とサブフォームコンテナー) には *同じ変数名* が割り当てられています。 この場合、親フォームを開いたとき、4Dは自動で両方の値を同期化します。 変数の値が複数の場所で設定されている場合、4Dは最後にロードされた値を使用します。 以下のロード順が適用されます:<br /> 1 - サブフォームのオブジェクトメソッド<br /> 2 - サブフォームのフォームメソッド<br /> 3 - 親フォームのオブジェクトメソッド<br /> 4 - 親フォームのフォームメソッド
 
-When the parent form is executed, the developer must take care to synchronize the variables using appropriate form events. Two types of interactions can occur: form to subform and vice versa.
+親フォームが実行されるとき、開発者は適切なフォームイベントを使用して変数の同期を処理しなければなりません。 2タイプの相互作用 (親フォーム → サブフォーム、サブフォーム → 親フォーム) が可能です。
 
-#### Updating subform contents
+#### サブフォームの内容の更新
 
-Case 1: The value of the parent form variable is modified and this modification must be passed on to the subform. In our example, the time of ParisTime changes to 12:15:00, either because the user entered it, or because it was updated dynamically (via the `Current time` command for example).
+ケース1: 親フォームの変数の値が更新され、この更新をサブフォームに反映させる必要があります。 この例では ParisTime 変数の値がユーザー入力、あるいは動的に (たとえば `Current time` コマンドで) 12:15:00 に変更されました。
 
-In this case, you must use the On Bound Variable Change form event. This event must be selected in the subform properties; it is generated in the form method of the subform.
+この場合には、`On bound variable change` フォームイベントを使用します。 このイベントは、サブフォームプロパティ内で選択されていなければなりません。このイベントはサブフォームのフォームメソッドで生成されます。
 
 ![](../assets/en/FormObjects/subforms2.png)
 
-The `On Bound Variable Change` form event is generated:
+`On Bound Variable Change` フォームイベントは以下のときに生成されます:
 
-* as soon as a value is assigned to the variable of the parent form, even if the same value is reassigned,
-* if the subform belongs to the current form page or to page 0.
+* 親フォームの変数に値が割り当てられたとき (同じ値が再代入された場合でも) で、
+* サブフォームが 0ページまたはカレントフォームページに置かれているとき。
 
-Note that, as in the above example, it is preferable to use the `OBJECT Get pointer` command which returns a pointer to the subform container rather than its variable because it is possible to insert several subforms in the same parent form (for example, a window displaying different time zones contains several clocks). In this case, only a pointer lets you know which subform container is at the origin of the event.
+先の例のとおり、直接変数名を使用するのではなく、サブフォームコンテナーへのポインターを返す `OBJECT Get pointer` コマンドの利用が推奨されます。親フォームに同じサブフォームを複数配置することが可能だからです (たとえば、複数のタイムゾーンを表示するために時計を複数表示するウィンドウ)。 この場合ポインターを使用することでのみ、どのサブフォームコンテナーがイベントの生成元かを知ることができます。
 
-#### Updating parent form contents
+#### 親フォームの内容の更新
 
-Case 2: The contents of the subform are modified and this modification must be passed on to the parent form. In our example, imagine that the subform interface lets the user "manually" move the hands of the clock.
+ケース2: サブフォームの内容が更新され、その更新を親フォームに反映させる必要があります。 この例では、ユーザーが時計の針を手動で動かすことができるようなサブフォームを使ったケースです。
 
-In this case, from the subform, you must assign the object value to the variable of the parent subform container. As in the previous example, we recommend that you use the `OBJECT Get pointer` command with the `Object subform container` selector which returns a pointer to the subform container.
+この場合、サブフォームから、親サブフォームコンテナーの変数にオブジェクトの値を割り当てなければなりません。 先の例の通り、`OBJECT Get pointer` コマンドを `Object subform container` セレクターとともに使用し、サブフォームコンテナーのポインターを得る方法が推奨されます。
 
-Assigning the value to the variable generates the `On Data Change` form event in the object method of the parent subform container, which lets you perform any type of action. The event must be selected in the properties of the subform container.
+変数に値を割り当てると、親サブフォームコンテナーのオブジェクトメソッドで `On Data Change` フォームイベントが生成され、メソッドによるアクションを実行できます。 このイベントは、サブフォームコンテナーのプロパティリストで選択されていなければなりません。
 
 ![](../assets/en/FormObjects/subforms3.png)
 
-> If you "manually" move the hands of the clock, this also generates the `On Data Change` form event in the object method of the *clockValue* variable in the subform.
+> 時計の針を手動で動かすと、サブフォーム中の *clockValue* 変数のオブジェクトメソッドで `On Data Change` フォームイベントが生成されます。
 
-### Using the subform bound object
+### サブフォームにバインドされたオブジェクトの使用
 
-4D automatically binds an object (`C_OBJECT`) to each subform. The contents of this object can be read and/or modified from within the context of the subform, allowing you to share values in a local context.
+4Dは自動的にオブジェクト (`C_OBJECT`) をそれぞれのサブフォームとバインドします。 このオブジェクトの中身はサブフォームのコンテキストから読み書き可能なため、ローカルなコンテキストにおいて値を共有することができます。
 
-The object can be created automatically or be the parent container variable, if explicitely named and typed as Object (see below). In all cases, the object is returned by the `Form` command, which can be called directy the subform (using a pointer is useless). Since objects are always passed by reference, if the user modifies a property value in the subform, it will automatically be saved in the object itself.
+オブジェクトは自動的に作成することもできますし、明示的に命名しオブジェクトとして型指定された場合には、親コンテナーの変数として使用できます (以下参照)。 いずれの場合にも、オブジェクトは `Form` コマンドによって返され、サブフォームから直接呼び出すことが可能です (ポインターの使用は不要です)。 オブジェクトは常に参照によって渡されるため、ユーザーがサブフォーム内でプロパティ値を変更した場合には、その値は自動的にオブジェクト自身に保存されます。
 
-For example, in your subform, field labels are stored in the bound object so that you can display different languages:
+たとえば、サブフォームにおいて異なる言語での表示を可能にするために、バインドされたオブジェクトにフィールドラベルが保存されている場合を考えます:
 
 ![](../assets/en/FormObjects/subforms4.png)
 
-You can modify the labels from the subform by assigning values to the *InvoiceAddress* object:
+*InvoiceAddress* オブジェクトに値を割り当てることで、サブフォームのラベルを変更することができます:
 
 ```4d
  C_OBJECT($lang)
@@ -102,50 +102,50 @@ You can modify the labels from the subform by assigning values to the *InvoiceAd
 
 ![](../assets/en/FormObjects/subforms5.png)
 
-### Advanced inter-form programming
+### 高度なフォーム間通信プログラム
 
-Communication between the parent form and the instances of the subform may require going beyond the exchange of a value through the bound variable. In fact, you may want to update variables in subforms according to the actions carried out in the parent form and vice versa. If we use the previous example of the "dynamic clock" type subform, we may want to set one or more alarm times for each clock.
+親フォームとサブフォームインスタンス間の通信では、バインドした変数を通して値を交換する以上のことをおこなう必要がある場合があります。 実際、親フォームでおこなわれたアクションに基づきサブフォーム中の変数を更新したり、その逆の処理をしたい場合があるでしょう。 先の "動的な時計" タイプのサブフォームの例で言えば、各時計ごとにアラーム時刻を複数設定したい場合が考えられます。
 
-4D has implemented the following mechanisms to meet these needs:
+このようなニーズにこたえるため、4Dは以下のメカニズムを実装しています:
 
-* Use of the "subform" parameter with the `OBJECT Get name` command to specify the subform object and the `OBJECT Get pointer` command.
-* Calling of a container object from the subform using the `CALL SUBFORM CONTAINER` command,
-* Execution of a method in the context of the subform via the `EXECUTE METHOD IN SUBFORM` command.
+* `OBJECT Get name` コマンドで "subform" 引数を使用してサブフォームオブジェクトを指定し、`OBJECT Get pointer` コマンドを使用する、
+* `CALL SUBFORM CONTAINER` コマンドを使用してサブフォームからコンテナーオブジェクトを呼び出す、
+* `EXECUTE METHOD IN SUBFORM` コマンドを使用してサブフォームのコンテキストでメソッドを実行する。
 
-#### Object get pointer and Object get name commands
+#### Object get pointer と Object get name コマンド
 
-In addition to the `Object subform container` selector, the `OBJECT Get pointer` command accepts a parameter that indicates in which subform to search for the object whose name is specified in the second parameter. This syntax can only be used when the Object named selector is passed.
+`OBJECT Get pointer` コマンドは `Object subform container` セレクターを使う方法以外にも、第二引数に指定した名前を持つオブジェクトを検索する際に、どのサブフォーム内を検索するかを指定するための引数を渡す方法でも利用できます。 このシンタックスは `Object named` セレクターが渡された場合のみ使用できます。
 
-For example, the following statement:
+たとえば、以下の式は:
 
 ```4d
  $ptr:=OBJECT Get pointer(Object named;"MyButton";"MySubForm")
 ```
 
-... retrieves a pointer to the "MyButton" variable that is located in the "MySubForm" subform object. This syntax can be used to access from the parent form any object found in a subform. Also note the `OBJECT Get name` command which can be used to retrieve the name of the object that has the focus.
+"MySubForm" サブフォームオブジェクト中の "MyButton" オブジェクトに割り当てられた変数へのポインターを返します。 このシンタックスを使用すれば、親フォームからサブフォーム内のオブジェクトにアクセスできます。 また、`OBJECT Get name` コマンドを使用すればフォーカスを持つオブジェクトの名前を取得できます。
 
-#### CALL SUBFORM CONTAINER command
+#### CALL SUBFORM CONTAINER コマンド
 
-The `CALL SUBFORM CONTAINER` command lets a subform instance send an event to the subform container object, which can then process it in the context of the parent form. The event is received in the container object method. It may be at the origin of any event detected by the subform (click, drag-and-drop, etc.).
+`CALL SUBFORM CONTAINER` コマンドを使用すると、サブフォームインスタンスからサブフォームコンテナーオブジェクトにイベントを送信できます。その結果、親フォームのコンテキストで処理が可能となります。 イベントはコンテナーオブジェクトメソッドで受信されます。 (クリックやドラッグ＆ドロップなど) サブフォームにより検知されたすべてのイベントの発生元となりえます。
 
-The code of the event is unrestricted (for example, 20000 or -100). You can use a code that corresponds to an existing event (for example, 3 for `On Validate`), or use a custom code. In the first case, you can only use events that you have checked in the Property List for subform containers. In the second case, the code must not correspond to any existing form event. It is recommended to use a negative value to be sure that this code will not be used by 4D in future versions.
+送信するイベントコードに制限はありません (たとえば 20000 や -100 など)。 既存のイベントに対応するコード (たとえば `On Validate` に対応する 3) を使用することも、カスタムコードを使用することもできます。 前者のケースでは、サブフォームコンテナーのプロパティリストでチェックを入れたイベントのみを使用できます。 後者の場合、使用するコードは既存のフォームイベントに対応してはいけません。 将来の 4Dバージョンで番号が衝突しないようにするために、負数の使用が推奨されます。
 
-For more information, refer to the description of the `CALL SUBFORM CONTAINER` command.
+詳細は `CALL SUBFORM CONTAINER` コマンドの説明を参照してください。
 
-#### EXECUTE METHOD IN SUBFORM command
+#### EXECUTE METHOD IN SUBFORM コマンド
 
-The `EXECUTE METHOD IN SUBFORM` command lets a form or one of its objects request the execution of a method in the context of the subform instance, which gives it access to the subform variables, objects, etc. This method can also receive parameters.
+`EXECUTE METHOD IN SUBFORM` コマンドを使用すると、親フォームやそのオブジェクトから、サブフォームインスタンスのコンテキストにおけるメソッド実行をリクエストできます。これにより、サブフォームの変数やオブジェクト等にアクセスすることができます。 このメソッドは引数も受け取れます。
 
-This mechanism is illustrated in the following diagram:
+このメカニズムを図示すると以下のようになります:
 
 ![](../assets/en/FormObjects/subforms6.png)
 
-For more information, refer to the description of the `EXECUTE METHOD IN SUBFORM` command.
+詳細は `EXECUTE METHOD IN SUBFORM` コマンドの説明を参照してください。
 
-#### GOTO OBJECT command
+#### GOTO OBJECT コマンド
 
-The `GOTO OBJECT` command looks for the destination object in the parent form even if it is executed from a subform.
+`GOTO OBJECT` はサブフォームから実行されても、親フォーム内にて目的のオブジェクトを検索します。
 
-## Supported Properties
+## プロパティ一覧
 
-[Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Detail Form](properties_Subform.md#detail-form) - [Double click on empty row](properties_Subform.md#double-click-on-empty-row) - [Double click on row](properties_Subform.md#double-click-on-row) - [Enterable in list](properties_Subform.md#enterable-in-list) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Height](properties_CoordinatesAndSizing.md#height) - [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) - [Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [List Form](properties_Subform.md#list-form) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Print Frame](properties_Print.md#print-frame) - [Right](properties_CoordinatesAndSizing.md#right) - [Selection mode](properties_Subform.md#selection-mode) - [Source](properties_Subform.md#source) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型) - [CSSクラス](properties_Object.md#cssクラス) - [ソース](properties_Subform.md#ソース) - [リストフォーム ](properties_Subform.md#リストフォーム) - [詳細フォーム](properties_Subform.md#詳細フォーム) - [選択モード](properties_Subform.md#選択モード) - [リスト更新可](properties_Subform.md#リスト更新可) - [行をダブルクリック](properties_Subform.md#行をダブルクリック) - [空行をダブルクリック](properties_Subform.md#空行をダブルクリック) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [フォーカス可](properties_Entry.md#フォーカス可) - [表示状態](properties_Display.md#表示状態) - [フォーカスの四角を隠す](properties_Appearance.md#フォーカスの四角を隠す) - [横スクロールバー](properties_Appearance.md#横スクロールバー) - [縦スクロールバー](properties_Appearance.md#縦スクロールバー) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [印刷時可変](properties_Print.md#印刷時可変) - [メソッド](properties_Action.md#メソッド)
