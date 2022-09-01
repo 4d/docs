@@ -5,55 +5,55 @@ title: "{dataClass}"
 
 
 
-Dataclass names can be used directly in the REST requests to work with entities, entity selections, or methods of the dataclass.
+エンティティやセンティティセレクション、データクラスのメソッドを利用するにあたって、RESTリクエスト内にデータクラス名を直接使用することができます。
 
-## Available syntaxes
+## 使用可能なシンタックス
 
-| Syntax                                                                     | Example                     | Description                                                                                          |
-| -------------------------------------------------------------------------- | --------------------------- | ---------------------------------------------------------------------------------------------------- |
-| [**{dataClass}**](#dataClass)                                              | `/Employee`                 | Returns all the data (by default the first 100 entities) for the dataclass                           |
-| [**{dataClass}({key})**](#dataclasskey)                                    | `/Employee(22)`             | Returns the data for the specific entity defined by the dataclass's primary key                      |
-| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)             | `/Employee:firstName(John)` | Returns the data for one entity in which the attribute's value is defined                            |
-| [**{dataClass}/{method}**](#dataclassmethod-and-dataclasskeymethod)        | `/Employee/getHighSalaries` | Executes a project method and returns an object or a collection (the project method must be exposed) |
-| [**{dataClass}({key})/{method}**](#dataclassmethod-and-dataclasskeymethod) | `/Employee(22)/getAge`      | Returns a value based on an entity method                                                            |
+| シンタックス                                                                     | 例題                          | 詳細                                                              |
+| -------------------------------------------------------------------------- | --------------------------- | --------------------------------------------------------------- |
+| [**{dataClass}**](#dataClass)                                              | `/Employee`                 | データクラスの全データ (デフォルトでは先頭の 100エンティティ) を返します                        |
+| [**{dataClass}({key})**](#dataclasskey)                                    | `/Employee(22)`             | データクラスのプライマリーキーによって特定されるエンティティのデータを返します                         |
+| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)             | `/Employee:firstName(John)` | 指定した属性値を持つ 1件のエンティティのデータを返します                                   |
+| [**{dataClass}/{method}**](#dataclassmethod-and-dataclasskeymethod)        | `/Employee/getHighSalaries` | プロジェクトメソッドを実行し、オブジェクトまたはコレクションを返します (プロジェクトメソッドは公開されている必要があります) |
+| [**{dataClass}({key})/{method}**](#dataclassmethod-and-dataclasskeymethod) | `/Employee(22)/getAge`      | エンティティメソッドに基づいて値を返します                                           |
 
 ## {dataClass}
 
-Returns all the data (by default the first 100 entities) for a specific dataclass (*e.g.*, `Company`)
+特定のデータクラス (*例:* `Company`) の全データ (デフォルトでは先頭の 100エンティティ) を返します。
 
-### Description
+### 詳細
 
-When you call this parameter in your REST request, the first 100 entities are returned unless you have specified a value using [`$top/$limit`]($top_$limit.md).
+RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limit`]($top_$limit.md) を使って指定しない限り) デフォルトで先頭の 100件のエンティティが返されます。
 
-Here is a description of the data returned:
+返されるデータの説明です:
 
-| Property      | Type       | Description                                                                                                                                                                                     |
-| ------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| __entityModel | String     | Name of the dataclass.                                                                                                                                                                          |
-| __COUNT       | Number     | Number of entities in the dataclass.                                                                                                                                                            |
-| __SENT        | Number     | Number of entities sent by the REST request. This number can be the total number of entities if it is less than the value defined by `$top/$limit`.                                             |
-| __FIRST       | Number     | Entity number that the selection starts at. Either 0 by default or the value defined by `$skip`.                                                                                                |
-| __ENTITIES    | Collection | This collection of objects contains an object for each entity with all its attributes. All relational attributes are returned as objects with a URI to obtain information regarding the parent. |
+| プロパティ         | タイプ        | 詳細                                                                                         |
+| ------------- | ---------- | ------------------------------------------------------------------------------------------ |
+| __entityModel | String     | データクラスの名称。                                                                                 |
+| __COUNT       | Number     | データクラスに含まれる全エンティティ数                                                                        |
+| __SENT        | Number     | RESTリクエストが返すエンティティの数。 総エンティティ数が `$top/$limit` で指定された数より少なければ、総エンティティの数になります。               |
+| __FIRST       | Number     | セレクションの先頭エンティティの番号。 デフォルトでは 0; または `$skip` で指定された値。                                        |
+| __ENTITIES    | Collection | エンティティ毎にその属性をすべて格納したオブジェクトのコレクションです。 リレーション属性は、リレーション先の情報を取得するための URI を格納したオブジェクトとして返されます。 |
 
-Each entity contains the following properties:
+各エンティティには次のプロパティが含まれます:
 
-| Property    | Type   | Description                                                                                                |
-| ----------- | ------ | ---------------------------------------------------------------------------------------------------------- |
-| __KEY       | String | Value of the primary key defined for the dataclass.                                                        |
-| __TIMESTAMP | Date   | Timestamp of the last modification of the entity                                                           |
-| __STAMP     | Number | Internal stamp that is needed when you modify any of the values in the entity when using `$method=update`. |
+| プロパティ       | タイプ    | 詳細                                                 |
+| ----------- | ------ | -------------------------------------------------- |
+| __KEY       | String | データクラスにおいて定義されているプライマリーキーの値                        |
+| __TIMESTAMP | Date   | エンティティが最後に編集された日時を記録するタイムスタンプ                      |
+| __STAMP     | Number | `$method=update` を使ってエンティティの属性値を更新するときに必要となる内部スタンプ |
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
+取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 例:
 
  `GET  /rest/Company/name,address`
 
-### Example
+### 例題
 
-Return all the data for a specific dataclass.
+特定のデータクラスの全データを取得します。
 
  `GET  /rest/Company`
 
-**Result**:
+**結果**:
 
 ````
 {
@@ -134,29 +134,29 @@ Return all the data for a specific dataclass.
 
 ## {dataClass}({key})
 
-Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company(22) or Company("IT0911AB2200")`
+データクラスのプライマリーキーによって特定されるエンティティのデータを返します (*例*: `Company(22) または Company("IT0911AB2200")` など)。
 
-### Description
+### 詳細
 
-By passing the dataclass and a key, you can retrieve all the public information for that entity. The key is the value in the attribute defined as the Primary Key for your dataclass. For more information about defining a primary key, refer to the **Modifying the Primary Key** section in the **Data Model Editor**.
+データクラスとキーを渡すことで、公開されているエンティティの情報を取得することができます。 キー (key) は、データクラスに定義されているプライマリーキーの値です。 プライマリーキーの定義についての詳細は、デザインリファレンスマニュアルの **[主キーを設定、削除する](https://doc.4d.com/4Dv18/4D/18/Table-properties.300-4575566.ja.html#1282230)** を参照ください。
 
-For more information about the data returned, refer to [{datastoreClass}](#datastoreclass).
+返されるデータについての詳細は [{dataClass}](#dataclass) を参照ください。
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
+取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 例:
 
  `GET  /rest/Company(1)/name,address`
 
-If you want to expand a relation attribute using `$expand`, you do so by specifying it as shown below:
+`$expand` を使ってリレーション属性を展開するには、次のように指示します:
 
  `GET  /rest/Company(1)/name,address,staff?$expand=staff`
 
-### Example
+### 例題
 
-The following request returns all the public data in the Company dataclass whose key is 1.
+次のリクエストは、Company データクラスで主キーが 1 であるエンティティの公開データをすべて返します。
 
  `GET  /rest/Company(1)`
 
-**Result**:
+**結果**:
 
 ````
 {
@@ -181,82 +181,82 @@ The following request returns all the public data in the Company dataclass whose
 
 ## {dataClass}:{attribute}(value)
 
-Returns the data for one entity in which the attribute's value is defined
+指定した属性値を持つ 1件のエンティティのデータを返します
 
-### Description
+### 詳細
 
-By passing the *dataClass* and an *attribute* along with a value, you can retrieve all the public information for that entity. The value is a unique value for attribute, but is not the primary key.
+*dataClass* に加えて *attribute (属性)* および *value (値)*を渡すことで、当該エンティティの公開データをすべて取得できます。 指定する値は、その属性において一意のものですが、主キーではありません。
 
  `GET  /rest/Company:companyCode(Acme001)`
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
+取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 例:
 
  `GET  /rest/Company:companyCode(Acme001)/name,address`
 
-If you want to use a relation attribute using [$attributes]($attributes.md), you do so by specifying it as shown below:
+[$attributes]($attributes.md) を使ってリレーション属性を使用するには、次のように指示します:
 
  `GET  /rest/Company:companyCode(Acme001)?$attributes=name,address,staff.name`
 
-### Example
+### 例題
 
-The following request returns all the public data of the employee named "Jones".
+次のリクエストは、名前が "Jones" である社員 (Employee) の公開データをすべて返します。
 
  `GET  /rest/Employee:lastname(Jones)`
 
-## {dataClass}/{method} and {dataClass}({key})/{method}
+## {dataClass}/{method} と {dataClass}({key})/{method}
 
-Returns an object or a collection based on a project method.
+プロジェクトメソッドに基づいて、オブジェクトまたはコレクションを返します.
 
-### Description
+### 詳細
 
-Project methods are called through a dataclass (table) or an entity (record), and must return either an object or a collection.
+プロジェクトメソッドは、データクラス (テーブル) またはエンティティ (レコード) を介して呼び出され、オブジェクトまたはコレクションを返さねばなりません。
 
 `POST  /rest/Employee/getHighSalaries`
 
 `POST  /rest/Employee(52)/getFullName`
 
-### 4D Configuration
+### 4D の設定
 
-To be called in a REST request, a method must:
+RESTリクエストによってメソッドを呼び出せるようにするには:
 
-- have been declared as "Available through REST server" in 4D,
-- have its master table and scope defined accordingly:
-  - **Table**: 4D table (i.e. dataclass) on which the method is called. The table must be [exposed to REST](configuration.md#exposing-tables-and-fields).
-  - **Scope**: This setting is useful when the method uses the 4D classic language and thus, needs to have a database context on the server side.
-    - **Table** -for methods applied to the whole table (dataclass)
-    - **Current record** -for methods applied to the current record (entity) using the `{dataClass}(key)/{method}` syntax.
-    - **Current selection** -for methods applied to the current selection
+- そのメソッドプロパティの "公開オプション" で RESTサーバーが選択されていなければなりません。
+- そのメソッドのマスターテーブルとスコープが定義されている必要があります:
+  - **テーブル**: メソッドコールを介する 4D テーブル (データクラス)。 このテーブルも [RESTリソースとして公開](configuration.md#テーブルやフィールドの公開) されている必要があります。
+  - **スコープ**: メソッドがクラシックな 4Dランゲージを使用しており、サーバーサイドにおいてデータベースのコンテキストが必要な場合に、この設定が適用されます。
+    - **テーブル** - テーブル (データクラス) 全体に対して適用されるメソッドの場合
+    - **カレントレコード** - `{dataClass}(key)/{method}` シンタックスを使って、カレントレコード (エンティティ) に対して適用されるメソッドの場合
+    - **カレントセレクション** - カレントセレクションに対して適応されるメソッドの場合
 
 ![alt-text](../assets/en/REST/MethodProp.png)
 
-### Passing Parameters to a Method
+### メソッドへの引数の渡し方
 
-You can also pass parameters to a method in a POST.
+POST を使って、メソッドに引数を渡すことができます。
 
 `POST  /rest/Employee/addEmployee`
 
-You can POST data in the body part of the request, for example:
+POSTリクエストの本文にデータを含めます。たとえば:
 
 ["John","Smith"]
 
-### Examples
+### 例題
 
-#### Table scope
+#### テーブルスコープ
 
-Call of a `getAverage` method:
+`getAverage` メソッドをコールします:
 
-- on [Employee] table
-- with **Table** scope
+- マスターテーブルは [Employee]
+- スコープは **テーブル**
 
 ```4d
- //getAverage  
+ // getAverage メソッド  
 ALL RECORDS([Employee])
 $0:=New object("ageAverage";Average([Employee]age))
 ```
 
 `POST  /rest/Employee/getAverage`
 
-Result:
+結果:
 
 ```
 {
@@ -266,21 +266,21 @@ Result:
 }
 ```
 
-#### Current record scope
+#### カレントレコードスコープ
 
-Call of a `getFullName` method:
+`getFullName` メソッドをコールします:
 
-- on [Employee] table
-- with **Current record** scope
+- マスターテーブルは [Employee]
+- スコープは **カレントレコード**
 
 ```4d
- //getFullName  
+ // getFullName メソッド  
 $0:=New object("fullName";[Employee]firstname+" "+[Employee]lastname)
 ```
 
 `POST  /rest/Employee(3)/getFullName`
 
-Result:
+結果:
 
 ```
 {
@@ -290,15 +290,15 @@ Result:
 }
 ```
 
-#### Current selection scope
+#### カレントセレクションスコープ
 
-Call of a `updateSalary` method:
+`updateSalary` メソッドをコールします:
 
-- on [Employee] table
-- with **Current selection** scope
+- マスターテーブルは [Employee]
+- スコープは **カレントセレクション**
 
 ```4d
- //updateSalary  
+ // updateSalary メソッド  
 C_REAL($1;$vCount)
 READ WRITE([Employee])
 $vCount:=0
@@ -317,7 +317,7 @@ $0:=New object("updates";$vCount)
 
 POST data (in the request body): [1.5]
 
-Result:
+結果:
 
 ```
 {
