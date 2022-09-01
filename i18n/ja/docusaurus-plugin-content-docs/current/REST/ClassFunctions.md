@@ -1,129 +1,129 @@
 ---
 id: classFunctions
-title: Calling ORDA class functions
+title: ORDAクラス関数の呼び出し
 ---
 
 
-You can call [data model class functions](ORDA/ordaClasses.md) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application.
+RESTリクエストを使って、ORDAデータモデルに定義されている [データモデルクラス関数](ORDA/ordaClasses.md) を呼び出すことで、ターゲット 4Dアプリケーションの公開API を活用できます。
 
-Functions are simply called in POST requests on the appropriate ORDA interface, without (). For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
+関数を呼び出すには () を省き、適切な ORDA のコンテキストにおいて POST リクエストでおこないます。 たとえば、City DataClassクラスに `getCity()` 関数を定義した場合、次のリクエストで呼び出すことができます:
 
 `/rest/City/getCity`
 
-with data in the body of the POST request: `["Aguada"]`
+POST リクエストのボディに関数に渡す引数を含めます: `["Aguada"]`
 
-In 4D language, this call is equivalent to, :
+この呼び出しは、4Dランゲージでは次のステートメントに相当します:
 
 ```4d
 $city:=ds.City.getCity("Aguada")
 ```
 
-> Only functions with the `exposed` keyword can be directly called from REST requests. See [Exposed vs non-exposed functions](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) section.
+> RESTリクエストで直接呼び出せるのは `exposed` キーワードが付いた関数のみです。 [公開vs非公開関数](ORDA/ordaClasses.md#公開vs非公開関数) の章を参照ください。
 
-## Function calls
+## 関数の呼び出し
 
-Functions must always be called using REST **POST** requests (a GET request will receive an error).
+関数は必ず REST の **POST** リクエストで呼び出さなくてはなりません (GETリクエストの場合はエラーが返されます)。
 
-Functions are called on the corresponding object on the server datastore.
+サーバーのデータストアーの対応するオブジェクトを対象に、関数は呼び出されます。
 
-| Class function                                                     | Syntax                                                                      |
-| ------------------------------------------------------------------ | --------------------------------------------------------------------------- |
-| [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                     |
-| [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/DataClassClassFunction`                                  |
-| [entitySelection class](ORDA/ordaClasses.md#entityselection-class) | `/rest/{dataClass}/EntitySelectionClassFunction`                            |
-|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
-|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                    |
-|                                                                    | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                   |
-| [entity class](ORDA/ordaClasses.md#entity-class)                   | `/rest/{dataClass}(key)/EntityClassFunction/`                               |
-
-
-
-> `/rest/{dataClass}/Function` can be used to call either a dataclass or an entity selection function (`/rest/{dataClass}` returns all entities of the DataClass as an entity selection).   
-> The function is searched in the entity selection class first. If not found, it is searched in the dataclass. In other words, if a function with the same name is defined in both the DataClass class and the EntitySelection class, the dataclass class function will never be executed.
-
-
-> All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) is ignored by the REST Server).
-
-
-## Parameters
+| クラス関数                                                            | シンタックス                                                                      |
+| ---------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| [DataStore クラス](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                     |
+| [DataClass クラス](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/DataClassClassFunction`                                  |
+| [EntitySelection クラス](ORDA/ordaClasses.md#entityselection-class) | `/rest/{dataClass}/EntitySelectionClassFunction`                            |
+|                                                                  | `/rest/{dataClass}/EntitySelectionClassFunction/$entityset/entitySetNumber` |
+|                                                                  | `/rest/{dataClass}/EntitySelectionClassFunction/$filter`                    |
+|                                                                  | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                   |
+| [Entity クラス](ORDA/ordaClasses.md#entity-class)                   | `/rest/{dataClass}(key)/EntityClassFunction/`                               |
 
 
 
-You can send parameters to functions defined in ORDA user classes. On the server side, they will be received in the class functions in regular $1, $2, etc. parameters.
-
-The following rules apply:
-
-- Parameters must be passed in the **body of the POST request**
-- Parameters must be enclosed within a collection (JSON format)
-- All scalar data types supported in JSON collections can be passed as parameters.
-- Entity and entity selection can be passed as parameters. The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: __DATACLASS, __ENTITY, __ENTITIES, __DATASET.
-
-See [this example](#request-receiving-an-entity-as-parameter) and [this example](#request-receiving-an-entity-selection-as-parameter).
+> `/rest/{dataClass}/Function` は DataClassクラスまたは EntitySelectionクラスの関数を呼び出すのに使えます (`/rest/{dataClass}` はデータクラスの全エンティティをエンティティセレクションに返します)。   
+> EntitySelection クラスの関数が先に探されます。 見つからない場合に、DataClassクラスを探します。 つまり、同じ名称の関数が DataClassクラスと EntitySelectionクラスの両方に定義されている場合、DataClassクラスの関数が実行されることはありません。
 
 
-### Scalar value parameter
-
-Parameter(s) must simply be enclosed in a collection defined in the body. For example, with a  dataclass function `getCities()` receiving text parameters: `/rest/City/getCities`
-
-**Parameters in body:** ["Aguada","Paris"]
-
-All JSON data types are supported in parameters, including JSON pointers. Dates can be passed as strings in ISO 8601 date format (e.g. "2020-08-22T22:00:000Z").
+> プロジェクトがコンパイル済みモードで実行される場合、RESTサーバーは常にプリエンプティブプロセスを使用するため、RESTリクエストから呼び出されるすべての 4Dコードは **スレッドセーフでなければなりません** ([*プリエンプティブプロセスを使用* の設定値](../WebServer/preemptiveWeb.md#webサーバーにおいてプリエンプティブモードを有効化する) は、RESTサーバーによって無視されます)。
 
 
-### Entity parameter
-
-Entities passed in parameters are referenced on the server through their key (*i.e.* __KEY property). If the key parameter is omitted in a request, a new entity is loaded in memory  the server. You can also pass values for any attributes of the entity. These values will automatically be used for the entity handled on the server.
-
-> If the request sends modified attribute values for an existing entity on the server, the called ORDA data model function will be automatically executed on the server with modified values. This feature allows you, for example, to check the result of an operation on an entity, after applying all business rules, from the client application. You can then decide to save or not the entity on the server.
+## パラメーター
 
 
-| Properties               | Type                                 | Description                                                                |
-| ------------------------ | ------------------------------------ | -------------------------------------------------------------------------- |
-| Attributes of the entity | mixed                                | Optional - Values to modify                                                |
-| __DATACLASS              | String                               | Mandatory - Indicates the Dataclass of the entity                          |
-| __ENTITY                 | Boolean                              | Mandatory - True to indicate to the server that the parameter is an entity |
-| __KEY                    | mixed (same type as the primary key) | Optional - Primary key of the entity                                       |
 
-- If __KEY is not provided, a new entity is created on the server with the given attributes.
-- If __KEY is provided, the entity corresponding to __KEY is loaded on the server with the given attributes
+ORDAユーザークラスに定義された関数には、引数を渡すことができます。 サーバーサイドでこれらの引数は、クラス関数の $1, $2 などのパラメーターに受け渡されます。
 
-See examples for [creating](#creating-an-entity) or [updating](#updating-an-entity) entities.
+次のルールが適用されます:
 
-#### Related entity parameter
+- 引数はすべて、**POSTリクエストのボディ** に渡す必要があります:
+- 引数はコレクション (JSON形式) の中に格納する必要があります。
+- JSON コレクションがサポートしているスカラーなデータ型はすべて引数として渡せます。
+- エンティティやエンティティセレクションも引数として受け渡せます。 この際、対応する ORDAオブジェクトにデータを割り当てるために RESTサーバーが使用する専用の属性 (__DATACLASS, __ENTITY, __ENTITIES, __DATASET) を JSONオブジェクトに含めなくてはなりません。
 
-Same properties as for an [entity parameter](#entity-parameter). In addition, the related entity must exist and is referenced by __KEY containing its primary key.
-
-See examples for [creating](#creating-an-entity-with-a-related-entity) or [updating](#updating-an-entity-with-a-related-entity) entities with related entities.
+[エンティティを引数として受け取る例題](#エンティティを引数として受け取る) と [エンティティセレクションを引数として受け取る例題](#エンティティセレクションを引数として受け取る) を参照ください。
 
 
-### Entity selection parameter
+### スカラー値の引数
 
-The entity selection must have been defined beforehand using [$method=entityset]($method.md#methodentityset).
+引数は、ボディに定義されたコレクションに格納します。 For example, with a  dataclass function `getCities()` receiving text parameters: `/rest/City/getCities`
 
-> If the request sends a modified entity selection to the server, the called ORDA data model function will be automatically executed on the server with the modified entity selection.
+**ボディの引数:** ["Aguada","Paris"]
 
-
-| Properties               | Type    | Description                                                                          |
-| ------------------------ | ------- | ------------------------------------------------------------------------------------ |
-| Attributes of the entity | mixed   | Optional - Values to modify                                                          |
-| __DATASET                | String  | Mandatory - entitySetID (UUID) of the entity selection                               |
-| __ENTITIES               | Boolean | Mandatory - True to indicate to the server that the parameter is an entity selection |
-
-See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter).
+引数としてサポートされるのは、JSONポインターを含むすべての JSON のデータ型です。 日付は ISO 8601形式の文字列として渡せます (例: "2020-08-22T22:00:000Z")。
 
 
-## Request examples
+### エンティティ引数
 
-This database is exposed as a remote datastore on localhost (port 8111):
+引数として渡されたエンティティは、キー (__KEY プロパティ) によってサーバー上で参照されます。 リクエストにおいてキーが省略されていれば、サーバーのメモリに新規エンティティが読み込まれます。 エンティティが持つ属性について、値を受け渡すことも可能です。 サーバー上でこれらの値は自動的に当該エンティティ用に使用されます。
+
+> サーバー上の既存エンティティについて変更された属性値をリクエストが送信した場合、呼び出した ORDAデータモデル関数は自動的に変更後の値で実行されます。 この機能によって、たとえばエンティティに対する処理の、すべてのビジネスルールを適用した後の結果をクライアントアプリケーションから確認することが可能です。 その結果をもとにエンティティをサーバー上で保存するかどうかを判断できます。
+
+
+| プロパティ       | タイプ               | 詳細                                   |
+| ----------- | ----------------- | ------------------------------------ |
+| エンティティの属性   | 混合                | 任意 - 変更する値                           |
+| __DATACLASS | String            | 必須 - エンティティのデータクラスを指定します             |
+| __ENTITY    | ブール               | 必須 - true は引数がエンティティであることをサーバーに通知します |
+| __KEY       | 混合 (プライマリーキーと同じ型) | 任意 - エンティティのプライマリーキー                 |
+
+- __KEY が省略された場合、指定した属性を持つ新規エンティティがサーバー上で作成されます。
+- __KEY が提供された場合、__KEY が合致するエンティティが指定した属性とともにサーバー上に読み込まれます。
+
+エンティティを [作成](#エンティティを作成する) または [更新](#エンティティを更新する) する例題を参照ください。
+
+#### リレートエンティティ引数
+
+[エンティティ引数](#エンティティ引数) と同じプロパティを持ちます。 異なる点は、リレートエンティティは存在していなければならないため、プライマリーキーを格納する __KEY を省略できません。
+
+リレートエンティティを持つエンティティを [作成](#リレートエンティティを持つエンティティを作成する) または [更新](#リレートエンティティを持つエンティティを更新する) する例題を参照ください。
+
+
+### エンティティセレクション引数
+
+引数として渡すエンティティセレクションはあらかじめ [$method=entityset]($method.md#methodentityset) によって定義されている必要があります。
+
+> 変更されたエンティティセレクションをリクエストがサーバーに送信した場合、呼び出した ORDAデータモデル関数は自動的に変更後のエンティティセレクションで実行されます。
+
+
+| プロパティ      | タイプ    | 詳細                                         |
+| ---------- | ------ | ------------------------------------------ |
+| エンティティの属性  | 混合     | 任意 - 変更する値                                 |
+| __DATASET  | String | 必須 - エンティティセレクションのエンティティセットID (UUID)       |
+| __ENTITIES | ブール    | 必須 - true は引数がエンティティセレクションであることをサーバーに通知します |
+
+[エンティティセレクションを引数として受け取る例題](#エンティティセレクションを引数として受け取る) を参照ください。
+
+
+## リクエストの例題
+
+このデータベースは、localhost (ポート8111) 上でリモートデータストアーとして公開されています。
 
 ![alt-text](../assets/en/REST/ordastructure.png)
 
-### Using a datastore class function
+### データストアークラス関数を使用する
 
-The US_Cities `DataStore` class provides an API:
+US_Cities `DataStore`クラスは API を提供しています:
 
 ```  
-// DataStore class
+// cs.DataStore クラス
 
 Class extends DataStoreImplementation
 
@@ -131,7 +131,7 @@ exposed Function getName()
     $0:="US cities and zip codes manager" 
 ```
 
-You can then run this request:
+次のリクエストを実行します:
 
 **POST** `127.0.0.1:8111/rest/$catalog/getName`
 
@@ -143,12 +143,12 @@ You can then run this request:
 }
 ```
 
-### Using a dataclass class function
+### DataClassクラス関数を使用する
 
-The Dataclass class `City` provides an API that returns a city entity from a name passed in parameter:
+`City` DataClassクラスは、引数として受け取った名前をもとに City エンティティを返す API を提供しています:
 
 ```
-// City class
+// cs.City クラス
 
 Class extends DataClass
 
@@ -159,15 +159,15 @@ exposed Function getCity()
     $0:=This.query("name = :1";$nameParam).first()
 ```
 
-You can then run this request:
+次のリクエストを実行します:
 
 **POST** `127.0.0.1:8111/rest/City/getCity`
 
-Body of the request: ["Aguada"]
+リクエストのボディ: ["Aguada"]
 
 #### Result
 
-The result is an entity:
+結果は、次のエンティティです:
 ```
 {
     "__entityModel": "City",
@@ -192,12 +192,12 @@ The result is an entity:
 }
 ```
 
-### Using an entity class function
+### Entityクラス関数を使用する
 
-The Entity class `CityEntity` provides an API:
+`CityEntity` Entityクラスは API を提供しています:
 
 ```
-// CityEntity class
+// cs.CityEntity クラス
 
 Class extends Entity
 
@@ -205,7 +205,7 @@ exposed Function getPopulation()
     $0:=This.zips.sum("population")
 ```
 
-You can then run this request:
+次のリクエストを実行します:
 
 **POST** `127.0.0.1:8111/rest/City(2)/getPopulation`
 
@@ -218,12 +218,12 @@ You can then run this request:
 ```
 
 
-### Using an entitySelection class function
+### EntitySelectionクラス関数を使用する
 
-The EntitySelection class `CitySelection` provides an API:
+`CitySelection` EntitySelectionクラスは API を提供しています:
 
 ```
-// CitySelection class
+// cs.CitySelection クラス
 
 Class extends EntitySelection
 
@@ -231,7 +231,7 @@ exposed Function getPopulation()
     $0:=This.zips.sum("population")
 ```
 
-You can then run this request:
+次のリクエストを実行します:
 
 **POST** `127.0.0.1:8111/rest/City/getPopulation/?$filter="ID<3"`
 
@@ -243,12 +243,12 @@ You can then run this request:
 }
 ```
 
-### Using an entitySelection class function and an entitySet
+### EntitySelectionクラス関数とエンティティセットを使用する
 
-The `StudentsSelection` class has a `getAgeAverage` function:
+`StudentsSelection` クラスは `getAgeAverage` 関数を持ちます:
 
 ```  
-// StudentsSelection Class
+// cs.StudentsSelection クラス
 
 Class extends EntitySelection
 
@@ -263,7 +263,7 @@ exposed Function getAgeAverage
     $0:=$sum/This.length
 ```
 
-Once you have created an entityset, you can run this request:
+あらかじめ作成した既存のエンティティセットを使い、次のリクエストを実行します:
 
 **POST** `127.0.0.1:8044/rest/Students/getAgeAverage/$entityset/17E83633FFB54ECDBF947E5C620BB532`
 
@@ -275,12 +275,12 @@ Once you have created an entityset, you can run this request:
 }
 ```
 
-### Using an entitySelection class function and an orderBy
+### EntitySelectionクラス関数と orderBy を使用する
 
-The `StudentsSelection` class has a `getLastSummary` function:
+`StudentsSelection` クラスは `getLastSummary` 関数を持ちます:
 
 ```  
-// StudentsSelection Class
+// cs.StudentsSelection クラス
 
 
 Class extends EntitySelection
@@ -293,7 +293,7 @@ exposed Function getLastSummary
     $0:=$last.firstname+" - "+$last.lastname+" is ... "+String($last.age())
 ```
 
-You can then run this request:
+次のリクエストを実行します:
 
 **POST** `127.0.0.1:8044/rest/Students/getLastSummary/$entityset/?$filter="lastname=b@"&$orderby="lastname"`
 
@@ -307,13 +307,13 @@ You can then run this request:
 ```
 
 
-### Using an entity to be created on the server
+### エンティティを作成する
 
 
-The Dataclass class `Students` has the function `pushData()` receiving an entity containing data from the client. The `checkData()` method runs some controls. If they are OK, the entity is saved and returned.
+`Students` DataClassクラスは、データを含むエンティティをクライアントから受け取る `pushData()` 関数を持ちます。 `checkData()` メソッドはいくつかの検証を実行します。 問題がなければ、エンティティは保存されて返されます。
 
 ```
-// Students Class
+// cs.Students クラス
 
 Class extends DataClass
 
@@ -322,7 +322,7 @@ exposed Function pushData
 
     $entity:=$1
 
-    $status:=checkData($entity) // $status is an object with a success boolean property
+    $status:=checkData($entity) // $status は success ブールプロパティを持つオブジェクトです
 
     $0:=$status
 
@@ -335,11 +335,11 @@ exposed Function pushData
 
 ```
 
-You run this request:
+次のリクエストを実行します:
 
 **POST** `http://127.0.0.1:8044/rest/Students/pushData`
 
-Body of the request:
+リクエストのボディ:
 
 ```
 [{
@@ -350,7 +350,7 @@ Body of the request:
 }]
 ```
 
-Since no `__KEY` is given, a new Students entity is loaded on the server **with the attributes received from the client**. Because the `pushData()` function runs a `save()` action, the new entity is created.
+`__KEY` が提供されていないため、サーバー上では **クライアントから受け取った属性を持つ** 新規の Studentsエンティティが読み込まれます。 `pushData()` 関数が `save()` を実行するため、この新規エンティティは保存されます。
 
 
 #### Result
@@ -370,15 +370,15 @@ Since no `__KEY` is given, a new Students entity is loaded on the server **with 
 }
 ```
 
-### Using an entity to be updated on the server
+### エンティティを更新する
 
-Same as above but with a __KEY attribute
+__KEY 属性を使って、上の例題と同じことをおこなうと、エンティティを更新します。
 
-You run this request:
+次のリクエストを実行します:
 
 **POST:**`http://127.0.0.1:8044/rest/Students/pushData`
 
-Body of the request:
+リクエストのボディ:
 ```
 [{
 "__DATACLASS":"Students",
@@ -388,7 +388,7 @@ Body of the request:
 }]
 ```
 
-Since `__KEY` is given, the Students entity with primary key 55 is loaded **with the lastname value received from the client**. Because the function runs a `save()` action, the entity is updated.
+`__KEY` が提供されているため、**クライアントから受け取った lastname属性値を持つ** プライマリーキーが 55 の Studentsエンティティが読み込まれます。 pushData() 関数が `save()` を実行するため、このエンティティは更新されます。
 
 #### Result
 
@@ -407,15 +407,15 @@ Since `__KEY` is given, the Students entity with primary key 55 is loaded **with
 }
 ```
 
-### Creating an entity with a related entity
+### リレートエンティティを持つエンティティを作成する
 
-In this example, we create a new Students entity with the Schools entity having primary key 2.
+プライマリーキー 2 を持つ Schoolsエンティティをリレートエンティティとして、新規 Studentsエンティティを作成します。
 
-You run this request:
+次のリクエストを実行します:
 
 **POST:**`http://127.0.0.1:8044/rest/Students/pushData`
 
-Body of the request:
+リクエストのボディ:
 ```
 [{
 "__DATACLASS":"Students",
@@ -449,22 +449,22 @@ Body of the request:
 ```
 
 
-### Updating an entity with a related entity
+### リレートエンティティを持つエンティティを更新する
 
-In this example, we associate an existing school to a Students entity. The `StudentsEntity` class has an API:
+既存の Schools エンティティを既存の Studentsエンティティに紐付けます。 `StudentsEntity` クラスは次の API を提供しています:
 
 ```
-// StudentsEntity class
+// cs.StudentsEntity クラス
 
 Class extends Entity
 
 exposed Function putToSchool()
     var $1, $school , $0, $status : Object
 
-        //$1 is a Schools entity
+        // $1 は Schools エンティティ
     $school:=$1
-        //Associate the related entity school to the current Students entity
-    This.school:=$school
+        // Schools リレートエンティティをカレントの Students エンティティに紐付けます
+    This.school:=$school // このとき、school は N対1リレーション名です
 
     $status:=This.save()
 
@@ -491,12 +491,12 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 ```
 
 
-### Receiving an entity selection as parameter
+### エンティティセレクションを引数として受け取る
 
-In the `Students` Dataclass class, the `setFinalExam()` function updates a received entity selection ($1). It actually updates the *finalExam* attribute with the received value ($2). It returns the primary keys of the updated entities.
+`Students` DataClassクラスは、受け取ったエンティティセレクション ($1) を更新する `setFinalExam()` 関数を持ちます。 実際には、エンティティセレクション内の各エンティティの *finalExam* 属性値を、2つ目に渡した引数 ($2) に更新します。 最後に、更新されたエンティティのプライマリーキーを返します。
 
 ```
-// Students class
+// cs.Students クラス
 
 Class extends DataClass
 
@@ -507,14 +507,14 @@ exposed Function setFinalExam()
 
     var $keys, $0 : Collection
 
-      //Entity selection
+      // エンティティセレクション
     $es:=$1
 
     $examResult:=$2
 
     $keys:=New collection()
 
-      //Loop on the entity selection
+      // エンティティセレクションをループします
     For each ($student;$es)
         $student.finalExam:=$examResult
         $status:=$student.save()
@@ -526,15 +526,15 @@ exposed Function setFinalExam()
     $0:=$keys
 ```
 
-An entity set is first created with this request:
+次のようなリクエストでエンティティセットをあらかじめ作成します:
 
 `http://127.0.0.1:8044/rest/Students/?$filter="ID<3"&$method=entityset`
 
-Then you can run this request:
+次のリクエストを実行します:
 
 **POST** `http://127.0.0.1:8044/rest/Students/setFinalExam`
 
-Body of the request:
+リクエストのボディ:
 
 ```
 [
@@ -549,7 +549,7 @@ Body of the request:
 
 #### Result
 
-The entities with primary keys 1 and 2 have been updated.
+プライマリーキー 1と2 のエンティティが更新されました:
 
 ```
 {
@@ -560,9 +560,9 @@ The entities with primary keys 1 and 2 have been updated.
 }
 ```
 
-### Using an entity selection updated on the client
+### クライアント側で更新されたエンティティセレクションを使用する
 
-Using the `getAgeAverage()` function [defined above](#using-an-entityselection-class-function-and-an-entityset).
+[前述](#EntitySelectionクラス関数とエンティティセットを使用する) の `getAgeAverage()` 関数を使います。
 
 ```4d
 var $remoteDS, $newStudent, $students : Object
@@ -570,13 +570,13 @@ var $ageAverage : Integer
 
 $remoteDS:=Open datastore(New object("hostname";"127.0.0.1:8044");"students")
 
-// $newStudent is a student entity to procees
+// $newStudent は処理する Studentsエンティティです
 $newStudent:=...
 $students:=$remoteDS.Students.query("school.name = :1";"Math school")
-// We add an entity to the $students entity selection on the client
+// クライアント側で $students エンティティセレクションにエンティティを追加します
 $students.add($newStudent) 
 
-// We call a function on the StudentsSelection class returning the age average of the students in the entity selection
-// The function is executed on the server on the updated $students entity selection which included the student added from the client
+// StudentsSelectionクラスに対して、同セレクション内の生徒エンティティの平均年齢を返す関数を呼び出します
+// この関数は、クライアント側の追加エンティティを含む更新された内容の $students エンティティセレクションに対して、サーバー上で実行されます
 $ageAverage:=$students.getAgeAverage()
 ```
