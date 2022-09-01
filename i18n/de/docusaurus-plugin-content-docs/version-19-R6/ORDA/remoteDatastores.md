@@ -93,7 +93,7 @@ The optimization context is based upon the following implementations:
 
 
 
-#### Example
+#### Beispiel
 
 Given the following code:
 
@@ -111,7 +111,7 @@ Thanks to the optimization, this request will only get data from used attributes
 You can increase the benefits of the optimization by using the **context** property. This property references an optimization context "learned" for an entity selection. It can be passed as parameter to ORDA functions that return new entity selections, so that entity selections directly request used attributes to the server and bypass the learning phase.
 > You can also create contexts using the [`.setRemoteContextInfo()`](../API/DataStoreClass.md#setremotecontextinfo) function.
 
-The same optimization context property can be passed to unlimited number of entity selections on the same dataclass. All ORDA functions that handle entity selections support the **context** property (for example [`dataClass.query()`](../API/DataClassClass.md#query) or [`dataClass.all()`](../API/DataClassClass.md#all)). Keep in mind, however, that a context is automatically updated when new attributes are used in other parts of the code. Reusing the same context in different codes could result in overloading the context and then, reduce its efficiency.
+All ORDA functions that handle entity selections support the **context** property (for example [`dataClass.query()`](../API/DataClassClass.md#query) or [`dataClass.all()`](../API/DataClassClass.md#all)). The same optimization context property can be passed to unlimited number of entity selections on the same dataclass. Keep in mind, however, that a context is automatically updated when new attributes are used in other parts of the code. Reusing the same context in different codes could result in overloading the context and then, reduce its efficiency.
 > A similar mechanism is implemented for entities that are loaded, so that only used attributes are requested (see the [`dataClass.get()`](../API/DataClassClass.md#get) function).
 
 **Example with `dataClass.query()`:**
@@ -178,7 +178,7 @@ For optimization reasons, data requested from the server via ORDA is loaded in t
 
 The data contained in the cache is considered as expired when the timeout is reached. Any access to expired data will send a request to the server. Expired data remains in the cache until space is needed.
 
-By default, the ORDA cache is transparently handled by 4D. However, you can control its contents using the following ORDA class functions:
+By default, the ORDA cache is transparently handled by 4D. However, you can control its contents using the following ORDA class functions: By default, the ORDA cache is transparently handled by 4D. However, you can control its contents using the following ORDA class functions: However, you can control its contents using the following ORDA class functions:
 
 * [dataClass.setRemoteCacheSettings()](../API/DataClassClass.md#setremotecachesettings)
 * [dataClass.getRemoteCache()](../API/DataClassClass.md#getremotecache)
