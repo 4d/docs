@@ -1,9 +1,9 @@
 ---
 id: updates
-title: Documentation updates
+title: Actualizaciones de la documentación
 ---
 
-The list of main updates in this documentation. For general information about new features in the 4D products, see the **release notes** on [doc.4d.com](https://doc.4d.com).
+La lista de las principales actualizaciones de esta documentación. Para obtener información general sobre las nuevas funcionalidades de los productos 4D, consulte las **release notes** en [doc.4d.com](https://doc.4d.com).
 
 
 ## 4D v19 R7
@@ -14,7 +14,7 @@ The list of main updates in this documentation. For general information about ne
 
 ## 4D v19 R6
 
-- New [HTTPRequest](API/HTTPRequestClass.md) class.
+- Nueva clase [HTTPRequest](API/HTTPRequestClass.md).
 - Collection functions that can call code now support function objects as *formula* parameter: [`.every()`](API/CollectionClass.md#every), [`.filter()`](API/CollectionClass.md#filter), [`.find()`](API/CollectionClass.md#find), [`.findIndex()`](API/CollectionClass.md#findindex), [`.map()`](API/CollectionClass.md#map), [`.orderByMethod()`](API/CollectionClass.md#orderbymethod), [`.reduce()`](API/CollectionClass.md#reduce), [`.some()`](API/CollectionClass.md#some), [`.sort()`](API/CollectionClass.md#sort)
 - Listbox cells support [horizontal](FormObjects/properties_CoordinatesAndSizing.md#horizontal-padding) and [vertical](FormObjects/properties_CoordinatesAndSizing.md#vertical-padding) padding.
 - 4D View Pro: new [VP CREATE TABLE](ViewPro/method-list.md#vp-create-table) and [VP REMOVE TABLE](ViewPro/method-list.md#vp-remove-table) commands to handle tables in sheets.
@@ -24,13 +24,13 @@ The list of main updates in this documentation. For general information about ne
 
 ## 4D v19 R5
 
-- Built Client/Server applications:
+- Aplicaciones cliente/servidor generadas:
     - The project [directory.json file](../Users/handling_users_groups.md#directoryjson-file) can now be [embedded in the server](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) at build time, allowing you to deploy a client/server application with a basic security user and group configuration.
     - You can now [deselect useless modules](../Desktop/building.md#deselecting-modules) in your built applications.
 
 - [Client/Server optimization](../ORDA/remoteDatastores.md#clientserver-optimization): New class functions allow you to handle the ORDA cache and the contents of an optimization context. See [Preconfiguring contexts](../ORDA/remoteDatastores.md#preconfiguring-contexts) and [ORDA Cache](../ORDA/remoteDatastores.md#orda-cache) for more information.
 
-    > These functions are intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use them.
+    > These functions are intended for developers who need to customize ORDA default features for specific configurations. En la mayoría de los casos, no será necesario utilizarlos.
 
 - [DataClass class](../API/DataClassClass.md): The new [.getCount()](../API/DataClassClass.md#getcount) function returns the number of entities in a dataclass.
 
@@ -50,7 +50,7 @@ The list of main updates in this documentation. For general information about ne
 - New Preferences: [**Include tokens in project source files**](Preferences/general.md#include-tokens-in-project-source-files) and [**Show clipboards**](Preferences/methods.md#show-clipboards) option on the Methods page.
 - New REST request to [lock/unlock](REST/$lock.md) entities.
 - [4D View Pro](ViewPro/getting-started.md) chapter added with new commands: [VP Copy to object](ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](ViewPro/method-list.md#vp-paste-from-object).
-- New [SystemWorker class](API/SystemWorkerClass.md).
+- Nuevo [Clase SystemWorker](API/SystemWorkerClass.md).
 
 
 ## 4D v19 R3
@@ -77,23 +77,23 @@ The list of main updates in this documentation. For general information about ne
 
 ## 4D v19
 
-- [IMAPTransporter Class](API/IMAPTransporterClass.md): new `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()`, and `.unsubscribe()` functions.
-- [File Class](API/FileClass.md): new `setAppInfo()` and `getAppInfo()` functions.
-- New [4DEACH](Tags/tags.md#4deach-and-4dendeach) transformation tag.
-- Web Server: new [SameSite session cookie](WebServer/webServerConfig.md#session-cookie-samesite) setting.
-- Dark and light color scheme support for [forms](FormEditor/properties_FormProperties.md#color-scheme) and [style sheets](FormEditor/createStylesheet.md#media-queries)
+- [IMAPTransporter Class](API/IMAPTransporterClass.md): nuevas funciones `.createBox()`, `.deleteBox()`, `.renameBox()`, `.subscribe()` y `.unsubscribe()`.
+- [File Class](API/FileClass.md): nuevas funciones `setAppInfo()` y `getAppInfo()`.
+- Nueva etiqueta de transformación [4DEACH](Tags/tags.md#4deach-and-4dendeach).
+- Servidor web: nuevo parámetro [Cookie de sesión SameSite](WebServer/webServerConfig.md#session-cookie-samesite).
+- Soporte de esquema de color oscuro y claro para los [formularios](FormEditor/properties_FormProperties.md#color-scheme) y [hojas de estilo](FormEditor/createStylesheet.md#media-queries)
 - New default dark and light themes in [Code Editor preferences](Preferences/methods.md#theme-list).
-- [Native compilation](Project/compiler.md#compiler-methods-for) for Silicon processors.
-- [Variable calculation](FormObjects/properties_Object.md#variable-calculation) property is now supported by entity selection list box columns.
-- New, comprehensive [CLI](Admin/cli.md) page.
+- [Compilación nativa](Project/compiler.md#compiler-methods-for) para procesadores Silicon.
+- La propiedad [cálculo de variables](FormObjects/properties_Object.md#variable-calculation) es ahora soportada por las columnas list box de la selección de entidades.
+- Nueva, página [CLI](Admin/cli.md) completa.
 
 
 
 ## 4D v18 R6
 
-- [Entity Selection Class](API/EntitySelectionClass.md): `.average()`, `.max()` and `.min()` functions now return *undefined* if the entity selection is empty.
-- [IMAP Mail](API/IMAPTransporterClass.md), [POP3 Mail](API/POP3TransporterClass.md) and [SMTP Mail](API/SMTPTransporterClass.md): `authenticationMode` property enables OAuth 2.0
-- [IMAP Mail](API/IMAPTransporterClass.md): new `.expunge()` and `.append()` functions
-- New [WebAdmin](Admin/webAdmin.md) web server component
+- [Entity Selection Class](API/EntitySelectionClass.md): las funciones `.average()`, `.max()` y `.min()` ahora devuelven *undefined* si la selección de entidades está vacía.
+- [IMAP Mail](API/IMAPTransporterClass.md), [POP3 Mail](API/POP3TransporterClass.md) y [SMTP Mail](API/SMTPTransporterClass.md): la propiedad `authenticationMode` activa a OAuth 2.0
+- [IMAP Mail](API/IMAPTransporterClass.md): nuevas funciones `.expunge()` y `.append()`
+- Nuevo componente [WebAdmin](Admin/webAdmin.md) del servidor web
 - New [DataExplorer](../Admin/dataExplorer.md) interface
-- New web [user sessions](WebServer/sessions.md) and [their API](API/SessionClass.md).
+- Nuevas [sesiones de usuario](WebServer/sessions.md) web y [su API](API/SessionClass.md).
