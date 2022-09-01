@@ -1,24 +1,24 @@
 ---
 id: propertiesHierarchy
-title: Hierarchy
+title: 階層
 ---
 
-## Hierarchical List Box
+## 階層リストボックス
 
-`Array type list boxes`
+`配列型リストボックス`
 
-This property specifies that the list box must be displayed in hierarchical form. In the JSON form, this feature is triggered [when the *dataSource* property value is an array](properties_Object.md#hierarchical-list-box), i.e. a collection.
+このプロパティを使用してリストボックスの階層表示を設定します。 JSON フォームにおいては、リストボックス列の [*dataSource* プロパティの値が配列名のコレクションであるとき](properties_Object.md#階層リストボックス) に階層化します。
 
-Additional options (**Variable 1...10**) are available when the *Hierarchical List Box* option is selected, corresponding to each *dataSource* array to use as break column. Each time a value is entered in a field, a new row is added. Up to 10 variables can be specified. These variables set the hierarchical levels to be displayed in the first column.
+*階層リストボックス* プロパティが選択されると、追加プロパティである **Variable 1...10** が利用可能になります。これらには階層の各レベルとして使用するデータソース配列を指定します。これが *dataSource* の値である配列名のコレクションとなります。 入力欄に値が入力されると、新しい入力欄が追加されます。 10個までの変数を指定できます。 これらの変数は先頭列に表示される階層のレベルを設定します。
 
-See [Hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes)
+[階層リストボックス](listbox_overview.md#階層リストボックス) 参照
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name       | Data Type    | Possible Values                                  |
-| ---------- | ------------ | ------------------------------------------------ |
-| datasource | string array | Collection of array names defining the hierarchy |
+| 名称         | データタイプ     | とりうる値             |
+| ---------- | ---------- | ----------------- |
+| datasource | 文字列のコレクション | 階層を定義する配列名のコレクション |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
