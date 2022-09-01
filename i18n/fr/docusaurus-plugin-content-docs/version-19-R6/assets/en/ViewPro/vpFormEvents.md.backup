@@ -3,8 +3,8 @@ id: vpFormEvents
 title: 4D View Pro Form Events
 ---
 
-The following form events are available in the Property List for 4D View Pro areas:
+Les événements formulaire suivants sont disponibles dans la Liste de propriétés des zones 4D View Pro:
 
 ![](vpFormEvents.PNG)
 
-Some of the events are standard form events (available to all active objects) and some are specific 4D View Pro form events. The specific 4D View Pro form events provide additional information in the object returned by the `FORM Event` command when they are generated for 4D View Pro areas. The following table shows which events are standard and which are specific 4D View Pro form events:
+Certains de ces événements sont des événements formulaire standard (disponibles pour tous les objets actifs) et d'autres sont des événements formulaire spécifiques à 4D View Pro. The specific 4D View Pro form events provide additional information in the object returned by the `FORM Event` command when they are generated for 4D View Pro areas. The following table shows which events are standard and which are specific 4D View Pro form events:
