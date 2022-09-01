@@ -1,96 +1,96 @@
 ---
 id: error-handling
-title: Error handling
+title: Gestion des erreurs
 ---
 
-Error handling is the process of anticipating and responding to errors that might occur in your application. 4D provides a comprehensive support for catching and reporting errors at runtime, as well as for investigating their conditions.
+Le traitement des erreurs consiste à anticiper les erreurs pouvant survenir dans votre application et à y répondre. 4D fournit un support complet pour la détection et la signalisation des erreurs lors de l'exécution, ainsi que pour l'analyse de leurs conditions.
 
-Error handling meets two main needs:
+La gestion des erreurs répond à deux besoins principaux :
 
-- finding out and fixing potential errors and bugs in your code during the development phase,
-- catching and recovering from unexpected errors in deployed applications; in particular, you can replace system error dialogs (disk full, missing file, etc.) with you own interface.
-> It is highly recommended to install an error-handling method on 4D Server, for all code running on the server. This method would avoid unexpected dialog boxes to be displayed on the server machine, and could log errors in a dedicated file for further analyses.
-
-
-## Error or status
-
-Many 4D class functions, such as `entity.save()` or `transporter.send()`, return a *status* object. This object is used to store "predictable" errors in the runtime context, e.g. invalid password, locked entity, etc., that do not stop program execution. This category of errors can be handled by regular code.
-
-Other "unpredictable" errors include disk write error, network failure, or in general any unexpected interruption. This category of errors generates exceptions and needs to be handled through an error-handling method.
+- rechercher et corriger les éventuels bugs et erreurs dans votre code pendant la phase de développement,
+- détecter et récupérer des erreurs inattendues dans les applications déployées; vous pouvez notamment remplacer les boîtes de dialogue d'erreur système (disque plein, fichier manquant, etc.) par votre propre interface.
+> > It is highly recommended to install an error-handling method on 4D Server, for all code running on the server. Cette méthode éviterait d'afficher des boîtes de dialogue inattendues sur le serveur et pourrait consigner les erreurs dans un fichier consacré en vue d'analyses ultérieures.
 
 
-## Installing an error-handling method
+## Erreur ou statut
 
-In 4D, all errors can be caught and handled in a specific project method, the **error-handling** (or **error-catching**) method.
+De nombreuses fonctions de classe 4D, telles que `entity.save()` ou `transporter.send()`, retournent un objet *status*. Cet objet permet de stocker les erreurs "prévisibles" dans le contexte d'exécution, telles qu'un mot de passe invalide, une entité verrouillée, etc., qui ne stoppe pas l'exécution du programme. Cette catégorie d'erreurs peut être gérée par du code habituel.
 
-This project method is installed for the current process and will be automatically called for any error that occurs in the process, in interpreted or compiled mode. To *install* this project method, you just need to call the `ON ERR CALL` command with the project method name as parameter. For example:
+D'autres erreurs "imprévisibles" peuvent inclure une erreur en écriture sur le disque, une panne de réseau ou toute interruption inattendue. Cette catégorie d'erreurs génère des exceptions et doit être traitée par une méthode de gestion des erreurs.
+
+
+## Installer une méthode de gestion des erreurs
+
+Dans 4D, toutes les erreurs peuvent être capturées et traitées dans une méthode projet spécifique, la méthode de **gestion des erreurs** (ou méthode de **capture d'erreurs**).
+
+Cette méthode projet est installée pour le process en cours et sera automatiquement appelée pour toute erreur survenant dans le process, en mode interprété ou compilé. Pour *installer* cette méthode projet, il vous suffit d’appeler la commande `APPELER SUR ERREUR` avec le nom de la méthode projet en paramètre.
 
 ```4d
-ON ERR CALL("IO_ERRORS") //Installs the error-handling method
+APPELER SUR ERREUR("IO_ERRORS") //Installe la méthode de gestion des erreurs
 ```
 
-To stop catching errors and give back hand to 4D, call `ON ERR CALL` with an empty string:
+Pour ne plus détecter d'erreurs et redonner le contrôle à 4D, appelez la méthode `ON ERR CALL` à l'aide d'une chaîne vide :
 ```4d
-ON ERR CALL("") //gives back control to 4D
+ON ERR CALL("") //redonne le contrôle à 4D
 ```
 
-The  `Method called on error` command allows you to know the name of the method installed by `ON ERR CALL` for the current process. It is particularly useful in the context of generic code because it enables you to temporarily change and then restore the error-catching method:
+La commande `Method called on error` vous permet de connaître le nom de la méthode installée par `ON ERR CALL` pour le process courant. Cela est particulièrement utile dans le contexte du code générique car il vous permet de modifier temporairement puis de restaurer la méthode de capture d'erreur :
 
 ```4d
  $methCurrent:=Method called on error
  ON ERR CALL("NewMethod")
-  //If the document cannot be opened, an error is generated
+  //Si le document ne peut pas être ouvert, une erreur est générée
  $ref:=Open document("MyDocument")
-  //Reinstallation of previous method
+  //Rétablissement de la méthode précédente
  ON ERR CALL($methCurrent)
 
 ```
 
-### Scope and components
+### Portée et composants
 
-You can define a single error-catching method for the whole application or different methods per application module. However, only one method can be installed per process.
+Vous pouvez définir une seule méthode d'erreur pour l'ensemble de l'application ou différentes méthodes par module d'application. Cependant, une seule méthode peut être installée par processus.
 
-An error-handling method installed by the `ON ERR CALL` command only applies to the running application. In the case of an error generated by a **component**, the `ON ERR CALL` error-handling method of the host application is not called, and vice versa.
-
-
-### Handling errors within the method
-
-Within the custom error method, you have access to several pieces of information that will help you identifying the error:
-
-- dedicated system variables(*):
-
-  - `Error` (longint): error code
-  - `Error method` (text): name of the method that triggered the error
-  - `Error line` (longint): line number in the method that triggered the error
-  - `Error formula` (text): formula of the 4D code (raw text) which is at the origin of the error.
-
-(*) 4D automatically maintains a number of variables called **system variables**, meeting different needs. See the *4D Language Reference manual*.
-
-- the `GET LAST ERROR STACK` command that returns information about the current stack of errors of the 4D application.
-- the `Get call chain` command that returns a collection of objects describing each step of the method call chain within the current process.
+Une méthode de gestion des erreurs installée par la commande `APPELER SUR ERREUR` s'applique uniquement à l'application en cours d'exécution. En cas d'erreur générée par un **composant**, la méthode `APPELER SUR ERREUR` de l'application hôte n'est pas appelée, et inversement.
 
 
-#### Example
+### Gérer les erreurs dans une méthode
 
-Here is a simple error-handling system:
+Dans la méthode d'erreur personnalisée, vous pouvez accéder à plusieurs informations qui vous aideront à identifier l'erreur :
+
+- Variables système (*) :
+
+  - `Error` (entier long): Code d'erreur
+  - `Error method` (texte) : nom de la méthode ayant engendré l'erreur
+  - `Error line` (entier long) : Numéro de ligne de la méthode ayant généré l'erreur
+  - `Error formula` (texte) : formule du code 4D (texte brut) à l'origine de l'erreur.
+
+(*) 4D conserve automatiquement le nombre de variables appelées **variables système**, qui répondent à différents besoins. Consultez le manuel Language de 4D*.
+
+- La commande `GET LAST ERROR STACK` qui retourne les informations sur la pile d'erreur courant de l'application 4D.
+- la commande `Get call chain` qui retourne une collection d'objets décrivant chaque étape de la chaîne d'appel de la méthode dans le process courant.
+
+
+#### Exemple
+
+Voici un système de gestion des erreurs simple :
 
 ```4d
-//installing the error handling method
- ON ERR CALL("errorMethod")
- //... executing code
- ON ERR CALL("") //giving control back to 4D
+//installer la méthode de gestion d'erreur
+ON ERR CALL("errorMethod")
+ //... exécuter le code
+ ON ERR CALL("") //redonner le contrôle à 4D
 ```
 
 ```4d
-// errorMethod project method
- If(Error#1006) //this is not a user interruption
-    ALERT("The error "+String(Error)+" occurred". The code in question is: \""+Error formula+"\"")
+// méthode projet errorMethod
+ If(Error#1006) //ceci n'est pas une interruption générée par l'utilisateur
+    ALERT("L'erreur "+String(Error)+" s'est produite". Le code en question est : \""+Error formula+"\"")
  End if
 ```
 
-### Using an empty error-handling method
+### Utiliser une méthode de gestion des erreurs vide
 
-If you mainly want the standard error dialog box to be hidden, you can install an empty error-handling method. The `Error` system variable can be tested in any method, i.e. outside of the error-handling method:
+Si vous souhaitez cacher la boite de dialogue d'erreur standard, vous pouvez installer une méthode de gestion d'erreurs vide. La variable système `Error` peut être testée dans n'importe quelle méthode, c'est-à-dire en dehors de la méthode de gestion d'erreurs :
 
 ```4d
 ON ERR CALL("emptyMethod") //emptyMethod exists but is empty
@@ -99,6 +99,8 @@ If (Error=-43)
     ALERT("File not found.")
 End if
 ON ERR CALL("")
+End if
+ON ERR CALL.("")
 ```
 
 
