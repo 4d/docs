@@ -1,27 +1,27 @@
 ---
 id: splitters
-title: Splitter
+title: スプリッター
 ---
 
 
 
-A splitter divides a form into two areas, allowing the user to enlarge and reduce the areas by moving the splitter one way or the other. A splitter can be either horizontal or vertical. The splitter takes into account each object’s resizing properties, which means that you can completely customize your application's interface. A splitter may or may not be a “pusher.”
+スプリッターはフォームを2つのエリアに分割します。ユーザーはいずれかの方向へスプリッターを移動してエリアを拡げたり縮めたりすることができます。 水平方向または垂直方向のスプリッターを作成できます。 スプリッターでは各オブジェクトのサイズ調整プロパティが考慮されます。つまり作成するアプリケーションのインタフェースをすべてカスタマイズすることができます。 また、スプリッターは “プッシャー” (押し込みタイプ) にすることも可能です。
 
-Splitter are used for example in output forms so that columns can be resized:
+たとえば、スプリッターは列のサイズを変更できるよう、リストフォームで使用されます:
 
 ![](../assets/en/FormObjects/split1.png)
 
 
-Some of the splitter’s general characteristics:
+スプリッターの一般的な特徴をいくつか次に説明します:
 
-*   You can place as many splitters as you want in any type of form and use a mixture of horizontal and vertical splitters in the same form.
-*   A splitter can cross (overlap) an object. This object will be resized when the splitter is moved.
-*   Splitter stops are calculated so that the objects moved remain entirely visible in the form or do not pass under/next to another splitter. When the [Pusher](properties_ResizingOptions.md#pusher) property is associated with a splitter, its movement to the right or downward does not encounter any stops.
-*   If you resize a form using a splitter, the new dimensions of the form are saved only while the form is being displayed. Once a form is closed, the initial dimensions are restored.
+*   あらゆるタイプのフォーム上にスプリッターを必要なだけ設置可能であり、一つのフォーム上で水平と垂直のスプリッターを一緒に使用することができます。
+*   スプリッターはオブジェクトを横切ることができます (オーバーラップ)。 スプリッターを動かすと、このオブジェクトのサイズが変更されます。
+*   フォーム上で移動されたオブジェクトが完全に表示されたままになるように、また別のスプリッターを超えないように、スプリッターの停止位置が計算されます。 [以降のオブジェクトを移動する](properties_ResizingOptions.md#以降のオブジェクトを移動する) (プッシャー) プロパティをスプリッターに割り当てると、スプリッターを右方向または下方向へ動かしても停止することはありません。
+*   スプリッターを使用するフォームのサイズを変更すると、フォームが表示されている間だけ、フォームの新しいサイズが保存されます。 フォームを閉じると、最初の大きさに戻ります。
 
-Once it is inserted, the splitter appears as a line. You can modify its [border style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) to obtain a thinner line or [change its color](properties_BackgroundAndBorder.md##font-color-line-color).
+スプリッターは挿入されると線として表示されます。 その [線のスタイル](properties_BackgroundAndBorder.md#境界線スタイル) を変更してさらに細い線に設定したり、線の種類によっては [線の色](properties_BackgroundAndBorder.md#線カラー) を設定したりすることができます。
 
-#### JSON Example:
+#### JSON 例:
 
 ```4d
 "mySplitter": {
@@ -30,37 +30,37 @@ Once it is inserted, the splitter appears as a line. You can modify its [border 
     "top": 160,   
     "width": 100,  
     "height": 20,  
-    "splitterMode": "move"  //pusher
+    "splitterMode": "move"  // プッシャー
     }
 ```
 
 
-### Supported Properties
+### プロパティ一覧
 
-[Border Line Style](properties_BackgroundAndBorder.md##border-line-style-dotted-line-type) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md##font-color-line-color) - [Object Name](properties_Object.md#object-name) - [Pusher](properties_ResizingOptions.md#pusher) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Variable or Expression](properties_Object.md#variable-or-expression) -  [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [CSSクラス](properties_Object.md#cssクラス) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [以降のオブジェクトを移動する](properties_ResizingOptions.md#以降のオブジェクトを移動する) - [表示状態](properties_Display.md#表示状態) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [線カラー](properties_BackgroundAndBorder.md#線カラー) - [ヘルプTips](properties_Help.md#ヘルプtips)
 
-## Interaction with the properties of neighboring objects
+## 隣接するオブジェクトのプロパティとの相互作用
 
-In a form, splitters interact with the objects that are around them according to these objects’ resizing options:
+フォーム上では、スプリッター周辺にある各オブジェクトのリサイズオプションに基づいて、スプリッターとこれらのオブジェクトとが作用しあいます:
 
-| Resizing options for the object(s) | Object(s) above an horizontal splitter or to the left of a vertical splitter (1)    | Object(s) below an horizontal *non-Pusher* splitter or to the right of a vertical *non-Pusher* splitter                                                                                              | Object(s) below an horizontal *Pusher* splitter or to the right of a vertical *Pusher* splitter                                           |
-| ---------------------------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| None                               | Remain as is                                                                        | Are moved with the splitter (position relative to the splitter is not modified) until the next stop. The stop when moving to the bottom or right is either the window’s border, or another splitter. | Are moved with the splitter (position relative to the splitter is not modified) indefinitely. No stop is applied (see the next paragraph) |
-| Resize                             | Keep original position(s), but are resized according to the splitter’s new position |                                                                                                                                                                                                      |                                                                                                                                           |
-| Move                               | Are moved with the splitter                                                         |                                                                                                                                                                                                      |                                                                                                                                           |
+| オブジェクトのリサイズオプション | 水平スプリッターの上、または垂直スプリッターの左にあるオブジェクト(1) | 水平スプリッターの下、または垂直スプリッターの右にあるオブジェクト (非 "プッシャー" の場合)                                  | 水平スプリッターの下、または垂直スプリッターの右にあるオブジェクト ("プッシャー" の場合)          |
+| ---------------- | ------------------------------------ | ---------------------------------------------------------------------------------- | -------------------------------------------------------- |
+| なし               | そのまま変わらない                            | 次に停止するまでスプリッターとともに移動 (スプリッターとの相対的な位置は変更されない)。 下または右への移動時の停止位置はウインドウの境界または別のスプリッター。 | 無制限にスプリッターとともに移動 (スプリッターとの相対的な位置は変更されない)。 停止しない (次節を参照)。 |
+| 拡大               | 元の位置のままだが、スプリッターの新しい位置に基づいてサイズが調整される |                                                                                    |                                                          |
+| 移動               | スプリッターとともに移動する                       |                                                                                    |                                                          |
 
-*(1) You cannot drag the splitter past the right (horizontal) or bottom (vertical) side of an object located in this position.*
-> An object completely contained in the rectangle that defines the splitter is moved at the same time as the splitter.
+*(1) この位置にあるオブジェクトを超えて、右側 (水平)、または下側 (垂直) へスプリッターをドラッグすることはできません。*
+> スプリッターが定義される矩形内にすべて納まるオブジェクトは、スプリッターと一緒に移動します。
 
-## Managing splitters programmatically
+## プログラムによるスプリッターの管理
 
 
-You can associate an object method with a splitter and it will be called with the `On Clicked` event throughout the entire movement.
+オブジェクトメソッドをスプリッターに指定することができます。スプリッターを移動する間 `On Clicked` イベントでこのメソッドが呼び出されます。
 
-A [variable](properties_Object.md#variable-or-expression) of the *Longint* type is associated with each splitter. This variable can be used in your object and/or form methods. Its value indicates the splitter’s current position, in pixels, in relation to its initial position.
+各スプリッターには *倍長整数* 型の [変数](properties_Object.md#変数あるいは式) が割り当てられます。 この変数はオブジェクトメソッドやフォームメソッドで使用することができます。 この変数の値により、スプリッターの最初の位置に対する現在位置がピクセル単位で示されます。
 
-*   If the value is negative: the splitter was moved toward the top or toward the left,
-*   If the value is positive: the splitter was moved toward the bottom or toward the right,
-*   If the value is 0: the splitter was moved to its original position.
+*   この値が負数の場合: スプリッターは上または左方向へ移動されました。
+*   この値が正数の場合: スプリッターは下または右方向へ移動されました。
+*   この値が 0 の場合: スプリッターは元の位置に移動されました。
 
-You can also move the splitter programmatically: you just have to set the value of the associated variable. For example, if a vertical splitter is associated with a variable named `split1`, and if you execute the following statement: `split1:=-10`, the splitter will be moved 10 pixels to the left — as if the user did it manually. The move is actually performed at the end of the execution of the form or object method containing the statement. 
+プログラムによってスプリッターを移動させることも可能です。これをおこなうには、関連付けた変数の値を設定します。 たとえば、垂直スプリッターに `split1` という名前の変数が関連付けられている場合、`split1:=-10` という命令を実行すると、ユーザーが手動で動かす場合と同じように、スプリッターは 10ピクセル左方向へ移動します。 移動が実際におこなわれるのは、この命令文が記述されているフォームメソッドまたはオブジェクトメソッドを実行しおわったときです。 
