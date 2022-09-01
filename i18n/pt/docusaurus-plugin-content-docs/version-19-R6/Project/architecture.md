@@ -3,11 +3,11 @@ id: architecture
 title: Architecture of a project
 ---
 
-A 4D project is made of several folders and files, stored within a single parent application folder (package folder). For example:
+A 4D project is made of several folders and files, stored within a single parent application folder (package folder). Por exemplo:
 
 - MyProject
-  - `Components`
-  - `Data`
+  - `Componentes`
+  - `Dados`
     - `Logs`
     - `Settings`
   - `Documentation`
@@ -31,8 +31,8 @@ The Project folder typically contains the following hierarchy:
 - `Sources`
   - `Classes`
   - `DatabaseMethods`
-  - `Methods`
-  - `Forms`
+  - `Métodos`
+  - `Formulários`
   - `TableForms`
   - `Triggers`
 - `DerivedData`
@@ -51,40 +51,40 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 
 ### `Sources`
 
-| Contents                | Description                                                                                                                                                                                   | Format |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| catalog.4DCatalog       | Table and field definitions                                                                                                                                                                   | XML    |
-| folders.json            | Explorer folder definitions                                                                                                                                                                   | JSON   |
-| menus.json              | Menu definitions                                                                                                                                                                              | JSON   |
-| settings.4DSettings     | *Structure* database settings. They are not taken into account if *[user settings](#settings-folder-1)* or *[user settings for data](#settings-folder)* are defined.<p>**Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to use *user settings* or *user settings for data* to define custom settings.</p> | XML    |
-| tips.json               | Defined tips                                                                                                                                                                                  | JSON   |
-| lists.json              | Defined lists                                                                                                                                                                                 | JSON   |
-| filters.json            | Defined filters                                                                                                                                                                               | JSON   |
-| styleSheets.css         | CSS style sheets                                                                                                                                                                              | CSS    |
-| styleSheets_mac.css     | Mac css style sheets (from converted binary database)                                                                                                                                         | CSS    |
-| styleSheets_windows.css | Windows css style sheets (from converted binary database)                                                                                                                                     | CSS    |
+| Conteúdos               | Descrção                                                                                                                                                                                      | Formato |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| catalog.4DCatalog       | Table and field definitions                                                                                                                                                                   | XML     |
+| folders.json            | Explorer folder definitions                                                                                                                                                                   | JSON    |
+| menus.json              | Menu definitions                                                                                                                                                                              | JSON    |
+| settings.4DSettings     | *Structure* database settings. They are not taken into account if *[user settings](#settings-folder-1)* or *[user settings for data](#settings-folder)* are defined.<p>**Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to use *user settings* or *user settings for data* to define custom settings.</p> | XML     |
+| tips.json               | Defined tips                                                                                                                                                                                  | JSON    |
+| lists.json              | Defined lists                                                                                                                                                                                 | JSON    |
+| filters.json            | Defined filters                                                                                                                                                                               | JSON    |
+| styleSheets.css         | CSS style sheets                                                                                                                                                                              | CSS     |
+| styleSheets_mac.css     | Mac css style sheets (from converted binary database)                                                                                                                                         | CSS     |
+| styleSheets_windows.css | Windows css style sheets (from converted binary database)                                                                                                                                     | CSS     |
 
 #### `DatabaseMethods`
 
-| Contents                 | Description                                                           | Format |
-| ------------------------ | --------------------------------------------------------------------- | ------ |
-| *databaseMethodName*.4dm | Database methods defined in the project. One file per database method | text   |
+| Conteúdos                | Descrção                                                              | Formato |
+| ------------------------ | --------------------------------------------------------------------- | ------- |
+| *databaseMethodName*.4dm | Database methods defined in the project. One file per database method | text    |
 
-#### `Methods`
+#### `Métodos`
 
-| Contents         | Description                                                 | Format |
-| ---------------- | ----------------------------------------------------------- | ------ |
-| *methodName*.4dm | Project methods defined in the project. One file per method | text   |
+| Conteúdos        | Descrção                                                    | Formato |
+| ---------------- | ----------------------------------------------------------- | ------- |
+| *methodName*.4dm | Project methods defined in the project. One file per method | text    |
 
 #### `Classes`
 
-| Contents        | Description                                                                                                                        | Format |
-| --------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| *className*.4dm | User class definition method, allowing to instantiate specific objects. One file per class, the name of the file is the class name | text   |
+| Conteúdos       | Descrção                                                                                                                           | Formato |
+| --------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| *className*.4dm | User class definition method, allowing to instantiate specific objects. One file per class, the name of the file is the class name | text    |
 
-#### `Forms`
+#### `Formulários`
 
-| Contents                                  | Description                                | Format  |
+| Conteúdos                                 | Descrção                                   | Formato |
 | ----------------------------------------- | ------------------------------------------ | ------- |
 | *formName*/form.4DForm                    | Project form description                   | json    |
 | *formName*/method.4dm                     | Project form method                        | text    |
@@ -93,7 +93,7 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 
 #### `TableForms`
 
-| Contents                                             | Description                                            | Format  |
+| Conteúdos                                            | Descrção                                               | Formato |
 | ---------------------------------------------------- | ------------------------------------------------------ | ------- |
 | *n*/Input/*formName*/form.4DForm                     | Input table form description (n is the table number)   | json    |
 | *n*/Input/*formName*/Images/*pictureName*            | Input table form static pictures                       | picture |
@@ -106,9 +106,9 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 
 #### `Triggers`
 
-| Contents      | Description                                                                                | Format |
-| ------------- | ------------------------------------------------------------------------------------------ | ------ |
-| table_*n*.4dm | Trigger methods defined in the project. One trigger file per table (n is the table number) | text   |
+| Conteúdos     | Descrção                                                                                   | Formato |
+| ------------- | ------------------------------------------------------------------------------------------ | ------- |
+| table_*n*.4dm | Trigger methods defined in the project. One trigger file per table (n is the table number) | text    |
 
 **Note:** The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools.
 
@@ -116,8 +116,8 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 
 The Trash folder contains methods and forms that were deleted from the project (if any). It can contain the following folders:
 
-- `Methods`
-- `Forms`
+- `Métodos`
+- `Formulários`
 - `TableForms`
 
 Within these folders, deleted element names are in parentheses, e.g. "(myMethod).4dm". The folder organization is identical to the [Sources](#sources) folder.
@@ -136,22 +136,22 @@ The Librairies folder contains the file resulting from a compilation with the [S
 
 The Resources folder contains any custom project resource files and folders. In this folder, you can place all the files needed for the translation or customization of the application interface (picture files, text files, XLIFF files, etc.). 4D uses automatic mechanisms to work with the contents of this folder, in particular for the handling of XLIFF files and static pictures. For using in remote mode, the Resources folder lets you share files between the server machine and all the client machines. See the *4D Server Reference Manual*.
 
-| Contents              | Description                                                                                                                                           | Format  |
+| Conteúdos             | Descrção                                                                                                                                              | Formato |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | *item*                | Project resource files and folders                                                                                                                    | various |
 | Images/Library/*item* | Pictures from the Picture Library as separate files(*). Names of these items become file names. If a duplicate exists, a number is added to the name. | picture |
 
 (*) only if the project was exported from a .4db binary database.
 
-## `Data`
+## `Dados`
 
 The data folder contains the data file and all files and folders relating to the data.
 
-| Contents     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          | Format |
-| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| data.4dd(*)  | Data file containing data entered in the records and all the data belonging to the records. When you open a 4D project, the application opens the current data file by default. If you change the name or location of this file, the *Open data file* dialog box will then appear so that you can select the data file to use or create a new one                                                                                                                                                                                                                                                                                                                                                                                                    | binary |
-| data.journal | Created only when the database uses a log file. The log file is used to ensure the security of the data between backups. All operations carried out on the data are recorded sequentially in this file. Therefore, each operation on the data causes two simultaneous actions: the first on the data (the statement is executed normally) and the second in the log file (a description of the operation is recorded). The log file is constructed independently, without disturbing or slowing down the user’s work. A database can only work with a single log file at a time. The log file records operations such as additions, modifications or deletions of records, transactions, etc. It is generated by default when a database is created. | binary |
-| data.match   | (internal) UUID matching table number                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | XML    |
+| Conteúdos    | Descrção                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Formato |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| data.4dd(*)  | Data file containing data entered in the records and all the data belonging to the records. When you open a 4D project, the application opens the current data file by default. If you change the name or location of this file, the *Open data file* dialog box will then appear so that you can select the data file to use or create a new one                                                                                                                                                                                                                                                                                                                                                                                                                                                           | binary  |
+| data.journal | Created only when the database uses a log file. The log file is used to ensure the security of the data between backups. All operations carried out on the data are recorded sequentially in this file. Therefore, each operation on the data causes two simultaneous actions: the first on the data (the statement is executed normally) and the second in the log file (a description of the operation is recorded). The log file is constructed independently, without disturbing or slowing down the user’s work. A database can only work with a single log file at a time. The log file records operations such as additions, modifications or deletions of records, transactions, etc. It is generated by default when a database is created. It is generated by default when a database is created. | binary  |
+| data.match   | (internal) UUID matching table number                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | XML     |
 
 (*) When the project is created from a .4db binary database, the data file is left untouched. Thus, it can be named differently and placed in another location.
 
@@ -161,11 +161,11 @@ This folder contains **user settings files for data** used for application admin
 
 > These settings take priority over **[user settings files](#settings-1)** and **[structure settings](#sources)** files.
 
-| Contents            | Description                                                                                                                                                                                                         | Format |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------ |
-| directory.json      | Description of 4D groups, users, and their access rights when the application is run with this data file.                                                                                                           | JSON   |
-| Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md) when the database is run with this data file. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML    |
-| settings.4DSettings | Custom database settings for this data file.                                                                                                                                                                        | XML    |
+| Conteúdos           | Descrção                                                                                                                                                                                                            | Formato |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| directory.json      | Description of 4D groups, users, and their access rights when the application is run with this data file.                                                                                                           | JSON    |
+| Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md) when the database is run with this data file. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML     |
+| settings.4DSettings | Propriedades personalizadas de o banco de dados para este arquivo de dados.                                                                                                                                         | XML     |
 
 ### `Logs`
 
@@ -177,7 +177,7 @@ The Logs folder contains all log files used by the project. Log files include, i
 - command debugging,
 - 4D Server requests (generated on client machines and on the server).
 
-> An additional Logs folder is available in the system user preferences folder (active 4D folder, see [Get 4D folder](https://doc.4d.com/4Dv18R4/4D/18-R4/Get-4D-folder.301-4982857.en.html) command) for maintenance log files and in cases where data folder is read-only.
+> Uma pasta Logs adicional está disponível na pasta de preferências do usuário do sistema (pasta 4D ativa, ver [Obter pasta 4D](https://doc.4d.com/4Dv18R4/4D/18-R4/Get-4D-folder.301-4982857.en.html) comando) para os arquivos de registro de manutenção e nos casos em que a pasta de dados for de apenas leitura.
 
 ## `Settings`
 
@@ -185,29 +185,29 @@ This folder contains **user settings files** used for application administration
 
 > These settings take priority over **[structure settings](#sources)** files. However, if a **[user settings file for data](#settings)** exists, it takes priority over user settings file.
 
-| Contents            | Description                                                                                                                                                                                                                                                                                                                          | Format |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------ |
-| directory.json      | Description of 4D groups and users for the application, as well as their access rights                                                                                                                                                                                                                                               | JSON   |
-| Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md)) when each backup is launched. This file can also be used to read or set additional options, such as the amount of information stored in the *backup journal*. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML    |
-| BuildApp.4DSettings | Build settings file, created automatically when using the application builder dialog box or the `BUILD APPLICATION` command                                                                                                                                                                                                          | XML    |
-| settings.4DSettings | Custom settings for this project (all data files)                                                                                                                                                                                                                                                                                    | XML    |
+| Conteúdos           | Descrção                                                                                                                                                                                                                                                                                                                             | Formato |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| directory.json      | Description of 4D groups and users for the application, as well as their access rights                                                                                                                                                                                                                                               | JSON    |
+| Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md)) when each backup is launched. This file can also be used to read or set additional options, such as the amount of information stored in the *backup journal*. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML     |
+| BuildApp.4DSettings | Build settings file, created automatically when using the application builder dialog box or the `BUILD APPLICATION` command                                                                                                                                                                                                          | XML     |
+| settings.4DSettings | Custom settings for this project (all data files)                                                                                                                                                                                                                                                                                    | XML     |
 
 ## `userPreferences.<userName>`
 
-This folder contains files that memorize user configurations, e.g. break point or window positions. You can just ignore this folder. It contains for example:
+Esta pasta contém arquivos que memorizam as configurações do usuário, por exemplo, o ponto de ruptura ou as posições das janelas. You can just ignore this folder. It contains for example:
 
-| Contents                   | Description                                                 | Format |
-| -------------------------- | ----------------------------------------------------------- | ------ |
-| methodPreferences.json     | Current user Code Editor preferences                        | JSON   |
-| methodWindowPositions.json | Current user window positions for methods                   | JSON   |
-| formWindowPositions.json   | Current user window positions for forms                     | JSON   |
-| workspace.json             | List of opened windows; on macOS, order of tab windows      | JSON   |
-| debuggerCatches.json       | Caught calls to commands                                    | JSON   |
-| recentTables.json          | Ordered list of tables                                      | JSON   |
-| preferences.4DPreferences  | Current data path and main window positions                 | XML    |
-| CompilerIntermediateFiles  | Intermediate files resulting from Apple Silicon compilation | Folder |
+| Conteúdos                  | Descrção                                                    | Formato |
+| -------------------------- | ----------------------------------------------------------- | ------- |
+| methodPreferences.json     | Current user Code Editor preferences                        | JSON    |
+| methodWindowPositions.json | Current user window positions for methods                   | JSON    |
+| formWindowPositions.json   | Current user window positions for forms                     | JSON    |
+| workspace.json             | List of opened windows; on macOS, order of tab windows      | JSON    |
+| debuggerCatches.json       | Caught calls to commands                                    | JSON    |
+| recentTables.json          | Ordered list of tables                                      | JSON    |
+| preferences.4DPreferences  | Rota de dados atual e posições da janela principal          | XML     |
+| CompilerIntermediateFiles  | Intermediate files resulting from Apple Silicon compilation | Folder  |
 
-## `Components`
+## `Componentes`
 
 This folder contains the components to be available in the application project. It must be stored at the same level as the Project folder.
 
@@ -228,7 +228,7 @@ For more information, refer to [Documenting a project](Project/documentation.md)
 
 ## `WebFolder`
 
-Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time.
+Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time. It is automatically created when the Web server is launched for the first time.
 
 ## `.gitignore` file (optional)
 
