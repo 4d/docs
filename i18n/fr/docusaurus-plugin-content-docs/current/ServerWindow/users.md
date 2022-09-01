@@ -1,75 +1,75 @@
 ---
 id: users
-title: Users Page
+title: Page Utilisateurs
 ---
 
 
-The **Users** page lists the 4D users connected to the server.
+La page **Utilisateurs** liste les utilisateurs 4D connectés au serveur.
 
 
 ![](../assets/en/Admin/server-users.png)
 
-The "Users" button indicates, in parentheses, the total number of users connected to the server (this number does not take into account any display filters applied to the window). The page also contains a dynamic search area and control buttons. You can modify the order of the columns by dragging and dropping their header areas.
+Le bouton "Utilisateurs" indique entre parenthèses le nombre total d’utilisateurs connectés au serveur (ce nombre ne tient pas compte des éventuels filtres d’affichage appliqués à la fenêtre). La page contient également une zone de recherche dynamique et des boutons de commande. Vous pouvez modifier l’ordre des colonnes par simple glisser-déposer de la zone d’en-tête des colonnes.
 
-You can also sort the list of column values by clicking on its header. Click several times to specify in turn an ascending/descending order.
+Vous pouvez également trier la liste sur les valeurs d’une colonne en cliquant sur son en-tête. Cliquez plusieurs fois pour définir alternativement un ordre croissant/décroissant.
 
 ![](../assets/en/Admin/server-users-sort.png)
 
-## List of Users
+## Liste des utilisateurs
 
-For each user connected to the server, the list provides the following information:
+Pour chaque utilisateur connecté à la base, la liste fournit les informations suivantes :
 
-- System of the client machine (macOS or Windows) as an icon.
-- **4D User**: Name of the 4D user, or alias if set with the [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) command on the user machine. If passwords are not activated and no alias has been set, all users are named "Designer".
-- **Machine name**: Name of the remote machine.
-- **Session name**: Name of the session opened on the remote machine.
-- **IP Address**: IP address of the remote machine.
-- **Login date**: Date and time of the remote machine connection.
-- **CPU Time**: CPU time consumed by this user since connecting.
-- **Activity**: Ratio of time that 4D Server devotes to this user (dynamic display). "Sleeping" if the remote machine has switched to sleep mode (see below).
+- Système de la machine cliente (macOS ou Windows) sous forme d’icône.
+- **Utilisateur 4D** : Nom d’utilisateur 4D ou alias s'il est défini avec la commande [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) sur le poste de l'utilisateur. Si les mots de passe ne sont pas activés et si aucun alias n'a été défini, tous les utilisateurs 4D sont nommés "Super_Utilisateur".
+- **Nom de machine** : Nom de la machine distante.
+- **Nom de session** : Nom de la session ouverte sur la machine distante.
+- **Adresse IP** : Adresse IP de la machine distante.
+- **Connexion** : Date et heure de la connexion de la machine distante.
+- **Temps CPU** : Temps processeur consommé par cet utilisateur depuis la connexion.
+- **Activité** : Ratio du temps que 4D Server consacre à cet utilisateur (affichage dynamique). "Endormi" si la machine du poste client est passée en veille (cf. ci-dessous).
 
-### Managing sleeping users
+### Gestion des utilisateurs endormis
 
-4D Server specifically handles cases where a machine running a 4D remote application switches to sleep mode while its connection to the server machine is still active. In this case, the connected 4D remote application automatically notifies 4D Server of its imminent disconnection. On the server, the connected user changes to a **Sleeping** activity status:
+4D Server gère spécifiquement le cas où la machine d'une application distante 4D passe en mode veille alors que la connexion au serveur est toujours active. Dans ce cas, l'application distante 4D connectée notifie automatiquement 4D Server de sa déconnexion imminente. Sur le serveur, l'utilisateur connecté prend le statut d'activité **Endormi** :
 
 ![](../assets/en/Admin/server-sleeping.png)
 
-This status frees up resources on the server. In addition, the 4D remote application reconnects to 4D Server automatically after waking up from sleep mode.
+Ce statut libère les ressources sur le serveur. En outre, l'application 4D distante se reconnecte automatiquement à 4D Server après la sortie du mode veille.
 
-The following scenario is supported: a remote user stops working for awhile, for example during a lunch break, but keeps the connection to the server open. The machine switches to sleep mode. When the user returns, they wake the machine up and the 4D remote application automatically recovers its connection to the server as well as the session context.
+Le scénario suivant est pris en charge : un utilisateur distant cesse de travailler durant un certain laps de temps, par exemple durant la pause déjeuner, mais garde ouverte la connexion au serveur. La machine passe en mode veille. Au retour de l'utilisateur, la machine sort du mode veille et l'application 4D distante récupère automatiquement sa connexion au serveur ainsi que son contexte de session.
 
-> A sleeping remote session is automatically dropped by the server after 48 hours of inactivity. You can modify this default timeout using the [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv19/help/command/en/page642.html) command with the `Remote connection sleep timeout` selector.
-
-
-## Search/filtering Area
-
-This feature can be used to reduce the number of rows displayed in the list to those that correspond to the text entered in the search area. The area indicates the columns where the search/filtering will be carried out. On the Users page, it will be the 4D User, Machine name and Session name columns.
-
-The list is updated in real time as you enter text in the area. It is possible to enter more than one value to be searched for: separate the values with a semi-colon. The `OR` type operator is used in this case. For example, if you enter "John;Mary;Peter," only rows with John OR Mary OR Peter in the target columns will be kept.
+> Une session distante en veille est automatiquement abandonnée par le serveur après 48 heures d'inactivité. Vous pouvez modifier ce timeout par défaut à l'aide de la commande [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv19/help/command/en/page642.html) avec le sélecteur `Remote connection sleep timeout`.
 
 
-## Administration Buttons
+## Zone de recherche/filtrage
 
-This page includes three control buttons. These are active if at least one row is selected. You can select several rows by holding down the **Shift** key for an adjacent selection or **Ctrl** (Windows) / **Command** (macOS) key for a non-adjacent selection.
+Cette fonction permet de réduire le nombre de lignes affichées dans la liste à celles qui correspondent au texte saisi dans la zone de recherche. La zone indique les colonnes dans lesquelles la recherche/le filtrage sera effectué(e). Dans la page Utilisateurs, il s’agit des colonnes Utilisateur 4D, Nom de machine et Nom de session.
 
-### Send message
+La mise à jour de la liste est effectuée en temps réel à mesure que vous saisissez du texte dans la zone. Il est possible de saisir plus d’une valeur à chercher. Utilisez un point-virgule pour séparer les valeurs. L’opérateur utilisé dans ce cas est du type `OU`. Par exemple, si vous saisissez "Jean;Marie;Pierre", seules les lignes comportant Jean OU Marie OU Pierre dans l’une des colonnes cibles seront conservées.
 
-This button can be used to send a message to the 4D users selected in the window. If no user is selected, the button is not active. When you click on this button, a dialog box appears that lets you enter the message. The dialog box indicates the number of users that will receive this message:
+
+## Boutons d’administration
+
+La page comporte trois boutons de commande. Ces boutons sont actifs si au moins une ligne est sélectionnée. Vous pouvez sélectionner plusieurs lignes en appuyant sur la touche **Maj** pour une sélection continue ou **Ctrl** (Windows) / **Commande** (macOS) pour une sélection discontinue.
+
+### Envoyer message
+
+Ce bouton permet d’envoyer un message aux utilisateurs 4D sélectionnés dans la fenêtre. Si aucun utilisateur 4D n’est sélectionné, le bouton est désactivé. Lorsque vous cliquez sur le bouton, une boîte de dialogue apparaît, vous permettant saisir le message. La boîte de dialogue indique le nombre d’utilisateurs qui recevront le message :
 
 ![](../assets/en/Admin/server-message.png)
 
-The message will be displayed as an alert on the remote machines.
+Le message sera affiché sous forme d’alerte sur les postes distants.
 
-> You can perfom the same action for remote users with the [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1632.html) command.
+> Vous pouvez effectuer la même opération pour les utilisateurs distants à l'aide de la commande [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1632.html).
 
 
-### Watch Processes
+### Visualiser process
 
-This button can be used to directly show the processes of the user(s) selected on the [**Processes** page](processes.md) of the window. When you click on this button, 4D Server switches to the Processes page and enters the selected user names in the search/filtering area.
+Ce bouton permet de visualiser directement les process du ou des utilisateur(s) sélectionné(s) dans la [page **Process**](processes.md) de la fenêtre d’administration. Lorsque vous cliquez sur ce bouton, 4D Server bascule sur la page Process et pré-remplit la zone de recherche/filtrage de cette page avec les noms des utilisateurs sélectionnés.
 
-### Drop user
+### Déconnecter
 
-This button can be used to force the selected user(s) to disconnect. When you click on this button, a warning dialog box appears so that you can confirm or cancel this operation (hold down **Alt** key while clicking on the **Drop user** button to disconnect the selected user(s) directly without displaying the confirmation dialog box).
+Ce bouton permet de forcer la déconnexion du ou des utilisateur(s) sélectionné(s). Lorsque vous cliquez sur ce bouton, une boîte de dialogue d’alerte apparaît, vous permettant de confirmer ou d’annuler l’opération (appuyez sur la touche **Alt** avant de cliquer sur le bouton **Déconnecter** pour déconnecter directement les utilisateurs sélectionnés sans afficher la boîte de dialogue de confirmation).
 
-> You can perfom the same action for remote users with the [`DROP REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1633.html) command.
+> Vous pouvez effectuer la même opération pour les utilisateurs distants à l'aide de la commande [`DROP REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1633.html).
 
