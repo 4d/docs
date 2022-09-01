@@ -1,71 +1,71 @@
 ---
 id: quickTour
-title: A Quick Tour in ORDA
+title: Tour d'horizon d'ORDA
 ---
 
-Since ORDA is object-based, using ORDA requires basic knowledge in object programmming.
+Étant donné qu'ORDA est basé sur des objets, l'utilisation d'ORDA nécessite des connaissances de base en programmation d'objets.
 
-## Exploring the datastore
+## Explorer le datastore
 
-The ORDA datastore is automatically based upon a 4D database structure, provided it complies with the [ORDA prerequisites](overview.md#orda-prerequisites).
+Le datastore ORDA est automatiquement basé sur une structure de base de données 4D, à condition qu'elle soit conforme aux [prérequis d'ORDA](overview.md#orda-prerequisites).
 
-This example will use the following simple 4D database structure:
+Cet exemple utilisera la structure de base de données 4D simple suivante :
 
 ![](../assets/en/ORDA/struc.png)
 
-To know what is exposed as the datastore, create a new project method, write the following line:
+Pour savoir ce qui est exposé en tant que datastore, créez une nouvelle méthode projet, écrivez la ligne suivante :
 
 ```code4d
 TRACE
 ```
 
-Execute the method -- it simply calls the debugger window. In the Expression area, double-click to insert an expression and enter `ds`. It returns the datastore object. Deploy the object, you can see that tables and fields are automatically exposed by ORDA as properties of the `ds` object:
+Exécutez la méthode - elle appelle simplement la fenêtre du débogueur. Dans la zone d'Expression, double-cliquez pour insérer une expression et entrez `ds`. Elle retourne l'objet du datastore. Déployez l'objet, vous pouvez voir que les tables et les champs sont automatiquement exposés par ORDA en tant que propriétés de l'objet `ds` :
 
 ![](../assets/en/ORDA/debug1.png)
 
-It means for example that, whenever you need to refer to the city field of the [Company] table, in ORDA you just need to write:
+Cela signifie par exemple que, chaque fois que vous avez besoin de vous référer au champ city de la table [Company], dans ORDA il vous suffit d'écrire :
 
 ```code4d
-ds.Company.city //returns the name of the city
+ds.Company.city // retourne le nom de la ville
 ```
 
-> In the ORDA world, ds.Company is a **dataclass**. ds.Company.city is an **attribute**.
+> Dans le monde d'ORDA, ds.Company est une **dataclass**. ds.Company.city est un **attribut**.
 
-> ORDA is case sensitive. `ds.company.city` will not refer to the ds.Company.city attribute.
+> ORDA est sensible à la casse. `ds.company.city` ne fera pas référence à l'attribut ds.Company.city.
 
-You have also noticed the extra `hires` property in the ds.Company dataclass. It does not correspond to a field. `hires` is actually the name of the *One to many* relation between Company and Employee:
+Vous avez également remarqué la propriété extra `hires` dans la dataclass ds.Company. Cela ne correspond pas à un champ. `hire`est en fait le nom de la relation *1 vers N* entre Company et Employee :
 
-![](../assets/en/ORDA/struc2s.png) *Name of the relation as defined in the Inspector*
+![](../assets/en/ORDA/struc2s.png) *Nom de la relation tel que défini dans l'inspecteur*
 
-It means that, whenever you need to access the list of employees working for a company, in ORDA you just need to write:
+Cela signifie que, chaque fois que vous avez besoin d'accéder à la liste des employés travaillant pour une entreprise, il vous suffit d'écrire, dans ORDA :
 
 ```code4d
-ds.Company.hires //returns the list of employees
+ds.Company.hires // retourne la liste des employés
 ```
 
-But don't go too fast. Let's see now how to record data in ORDA dataclasses.
+Mais n'allez pas trop vite. Voyons maintenant comment enregistrer des données dans des dataclass ORDA.
 
 
-## Adding data
+## Ajouter des données
 
-In ORDA, you can add a record to a dataclass using the `new()` command.
-> In the ORDA world, a record is an **entity** -- an entity is itself an object. A command that is attached to a specific object is called a **member method**.
+Avec ORDA, vous pouvez ajouter un enregistrement à une dataclass à l'aide de la commande `new()`.
+> Dans le monde d'ORDA, un enregistrement est une **entité** (entity) - une entité est elle-même un objet. Une commande attachée à un objet spécifique est appelée une **méthode membre**.
 
 ```code4d
-$entity:=ds.Company.new() //create a new entity reference
-//in the Company dataclass  
-//and assign it to the $entity variable
+$entity:=ds.Company.new() //créer une nouvelle référence d'entité
+//dans la dataclass Company  
+//et l'assigner à la variable $entity
 ```
 
-A new entity object contains a "copy" of all attributes of its parent dataclass, thus you can assign values to them:
+Un nouvel objet entité contient une "copie" de tous les attributs de sa dataclass parente, vous pouvez donc leur assigner des valeurs :
 
 ```code4d
 $entity.name:="ACME, inc."  
 $entity.city:="London"  
-//$entity.ID is automatically filled
+//$entity.ID est automatiquement rempli
 ```
 
-Right now, the entity only exists in memory. To store it in the data file, you need to save it using the `save()` member method:
+Pour le moment, l'entité n'existe qu'en mémoire. Pour la stocker dans le fichier de données, vous devez l'enregistrer à l'aide de la méthode membre `save()` :
 
 ```code4d
 $status:=$entity.save()
