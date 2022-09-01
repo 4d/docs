@@ -1,71 +1,71 @@
 ---
 id: entities
-title: Working with data
+title: Travailler avec des données
 ---
 
-In ORDA, you access data through [entities](dsMapping.md#entity) and [entity selections](dsMapping.md#entity-selection). These objects allow you to create, update, query, or sort the data of the datastore.
+Dans ORDA, vous accédez aux données via des [entités](dsMapping.md#entity) (entities) et des [sélections d'entités](dsMapping.md#entity-selection) (entity selections). Ces objets vous permettent de créer, mettre à jour, rechercher ou trier les données du datastore.
 
 
-## Creating an entity
+## Créer une entité
 
-There are two ways to create a new entity in a dataclass:
+Il existe deux façons de créer une nouvelle entité dans une dataclass :
 
-*   Since entities are references to database records, you can create entities by creating records using the "classic" 4D language and then reference them with ORDA methods such as `entity.next( )` or `entitySelection.first( )`.
-*   You can also create an entity using the `dataClass.new( )` method.
+*   Les entités étant des références à des enregistrements de base de données, vous pouvez créer des entités en créant des enregistrements en utilisant le langage 4D "classique", puis les référencer avec des méthodes ORDA telles que `entity.next()` ou `entitySelection.first()`.
+*   Vous pouvez également créer une entité à l'aide de la méthode `dataClass.new()`.
 
-Keep in mind that the entity is only created in memory. If you want to add it to the datastore, you must call the `entity.save( )` method.
+Gardez à l'esprit que l'entité est créée uniquement en mémoire. Si vous souhaitez l'ajouter à la banque de données, vous devez appeler la méthode `entity.save ()`.
 
-Entity attributes are directly available as properties of the entity object. For more information, please refer to [Using entity attributes](#using-entity-attributes).
+Les attributs de l'entité sont directement disponibles en tant que propriétés de l'objet entité. Pour plus d'informations, reportez-vous à [Utilisation des attributs d'entité](#using-entity-attributes).
 
-For example, we want to create a new entity in the "Employee" dataclass in the current datastore with "John" and "Dupont" assigned to the firstname and name attributes:
+Par exemple, nous voulons créer une nouvelle entité dans la dataclass "Employee" dans le datastore courant avec "John" et "Dupont" affectés aux attributs de prénom et de nom :
 
 ```4d
 var $myEntity : cs.EmployeeEntity
-$myEntity:=ds.Employee.new() //Create a new object of the entity type
-$myEntity.name:="Dupont" //assign 'Dupont' to the 'name' attribute
-$myEntity.firstname:="John" //assign 'John' to the 'firstname' attribute
-$myEntity.save() //save the entity
+$myEntity:=ds.Employee.new() //Créer un nouvel objet de type entité
+$myEntity.name:="Dupont" //assigner 'Dupont' à l'attribut 'name'
+$myEntity.firstname:="John" //assigner 'John' à l'attribut 'firstname' 
+$myEntity.save() //sauvegarder l'entité
 ```
-> An entity is defined only in the process where it was created. You cannot, for example, store a reference to an entity in an interprocess variable and use it in another process.
+> Une entité est définie uniquement dans le processus où elle a été créée. Vous ne pouvez pas, par exemple, stocker une référence à une entité dans une variable interprocess et l'utiliser dans un autre processus.
 
-## Entities and references
+## Entités et références
 
-An entity contains a reference to a 4D record. Different entities can reference the same 4D record. Also, since an entity can be stored in a 4D object variable, different variables can contain a reference to the same entity.
+Une entité contient une référence à un enregistrement 4D. Différentes entités peuvent référencer le même enregistrement 4D. De plus, comme une entité peut être stockée dans une variable objet 4D, différentes variables peuvent contenir une référence à la même entité.
 
-If you execute the following code:
+Si vous exécutez le code suivant :
 
 ```4d
  var $e1; $e2 : cs.EmployeeEntity
- $e1:=ds.Employee.get(1) //access the employee with ID 1
+ $e1:=ds.Employee.get(1) //accéder à l'employé avec ID 1
  $e2:=$e1
  $e1.name:="Hammer"
-  //both variables $e1 and $e2 share the reference to the same entity
-  //$e2.name contains "Hammer"
+  //les variables $e1 et $e2 partagent la référence à la même entité
+  //$e2.name contient "Hammer"
 ```
 
-This is illustrated by the following graphic:
+Ceci est illustré par le graphique suivant :
 
 ![](../assets/en/ORDA/entityRef1.png)
 
-Now if you execute:
+Maintenant, si vous exécutez :
 
 ```4d
  var $e1; $e2 : cs.EmployeeEntity
  $e1:=ds.Employee.get(1)
  $e2:=ds.Employee.get(1)
  $e1.name:="Hammer"
-  //variable $e1 contains a reference to an entity
-  //variable $e2 contains another reference to another entity
-  //$e2.name contains "smith"
+  //la variable $e1 contient une référence vers une entité
+  //variable $e2 contient une autre référence vers une autre entité
+  //$e2.name contient "smith"
 ```
 
-This is illustrated by the following graphic:
+Ceci est illustré par le graphique suivant :
 
 ![](../assets/en/ORDA/entityRef2.png)
 
-Note however that entities refer to the same record. In all cases, if you call the `entity.save( )` method, the record will be updated (except in case of conflict, see [Entity locking](#entity-locking)).
+A noter cependant que les entités font référence au même enregistrement. Dans tous les cas, si vous appelez la méthode `entity.save()`, l'enregistrement sera mis à jour (sauf en cas de conflit, voir [Verrouillage d'entité](#entity-locking)).
 
-In fact, `$e1` and `$e2` are not the entity itself, but a reference to the entity. It means that you can pass them directly to any function or method, and it will act like a pointer, and faster than a 4D pointer. For example:
+En fait, `$e1` et `$e2` ne sont pas l'entité elle-même, mais des références à l'entité. Cela signifie que vous pouvez les passer directement à n'importe quelle fonction ou méthode, et qu'elle agira comme un pointeur, et plus rapidement qu'un pointeur 4D.
 
 ```4d
  For each($entity;$selection)
@@ -73,7 +73,7 @@ In fact, `$e1` and `$e2` are not the entity itself, but a reference to the entit
  End for each
 ```
 
-And the method is:
+Et la méthode est :
 
 ```4d
  $entity:=$1
@@ -84,140 +84,140 @@ And the method is:
  $entity.lastname:=$name
 ```
 
-You can handle entities like any other object in 4D and pass their references directly as [parameters](Concepts/parameters.md).
-> With the entities, there is no concept of "current record" as in the classic 4D language. You can use as many entities as you need, at the same time. There is also no automatic lock on an entity (see [Entity locking](#entity-locking)). When an entity is loaded, it uses the [lazy loading](glossary.md#lazy-loading) mechanism, which means that only the needed information is loaded. Nevertheless, in client/server, the entity can be automatically loaded directly if necessary.
+Vous pouvez gérer les entités comme n'importe quel autre objet dans 4D et passer leurs références directement en tant que [paramètres](Concepts/parameters.md).
+> Avec les entités, il n'y a pas de notion de "enregistrement courant" comme dans le langage classique de 4D. Vous pouvez utiliser autant d'entités que nécessaire, en même temps. Il n'existe pas non plus de verrouillage automatique d'une entité (voir [Verrouillage d'une entité](#entity-locking)). Lorsqu'une entité est chargée, elle utilise le mécanisme de [lazy loading](glossary.md#lazy-loading), ce qui signifie que seules les informations nécessaires sont chargées. Néanmoins, en mode client/serveur, l'entité peut être automatiquement chargée directement si nécessaire.
 
 
-## Using entity attributes
+## Utilisation des attributs d'entités
 
-Entity attributes store data and map corresponding fields in the corresponding table. Entity attributes of the storage kind can be set or get as simple properties of the entity object, while entity of the **relatedEntity** or **relatedEntities** kind will return an entity or an entity selection.
-> For more information on the attribute kind, please refer to the [Storage and Relation attributes](dsMapping.md#storage-and-relation-attributes) paragraph.
+Les attributs d'entité stockent les données et mappent les champs correspondants dans la table correspondante. Les attributs d'entité du type de stockage peuvent être définis ou obtenus sous forme de propriétés simples de l'objet entité, tandis que l'entité de type **relatedEntity** ou **relatedEntities** renverra une entité ou une sélection d'entité.
+> Pour plus d'informations sur le type d'attribut, reportez-vous au paragraphe [Attributs de stockage et de relation](dsMapping.md#storage-and-relation-attributes).
 
-For example, to set a storage attribute:
+Par exemple, pour définir un attribut de stockage :
 
 ```4d
- $entity:=ds.Employee.get(1) //get employee attribute with ID 1
- $name:=$entity.lastname //get the employee name, e.g. "Smith"
- $entity.lastname:="Jones" //set the employee name
- $entity.save() //save the modifications
+ $entity:=ds.Employee.get(1) //obtenir l'attribut d'Employee avec l'ID 1
+ $name:=$entity.lastname //obtenir le nom de l'employé, par exemple "Smith"
+$entity.lastname:="Jones" //définir le nom de l'employé
+$entity.save() //sauvegarder les modifications
 ```
 
-> Database Blob fields ([scalar blobs](Concepts/dt_blob.md) are automatically converted to and from blob object attributes ([`4D.Blob`](Concepts/dt_blob.md)) when handled through ORDA. When saving a blob object attribute, keep in mind that, unlike blob object size which is only limited by the available memory, Blob field size is limited to 2GB.
+> Les champs Blob des bases de données (les [blobs scalaires](Concepts/dt_blob.md) sont automatiquement convertis en attributs d'objets blob ([`4D.Blob`](Concepts/dt_blob.md)) lorsqu'ils sont traités par ORDA. Lorsque vous sauvegardez un attribut d'objet blob, gardez à l'esprit que, contrairement à la taille de l'objet blob qui n'est limitée que par la mémoire disponible, la taille du champ Blob est limitée à 2 Go.
 
-Accessing a related attribute depends on the attribute kind. For example, with the following structure:
+L'accès à un attribut associé dépend du type d'attribut. Par exemple, avec la structure suivante :
 
 ![](../assets/en/ORDA/entityAttributes.png)
 
-You can access data through the related object(s):
+Vous pouvez accéder aux données via le ou les objets associé(s) :
 
 ```4d
- $entity:=ds.Project.all().first().theClient //get the Company entity associated to the project
- $EntitySel:=ds.Company.all().first().companyProjects //get the selection of projects for the company
+ $entity:=ds.Project.all().first().theClient //récupérer l'entité Company associée au projet
+ $EntitySel:=ds.Company.all().first().companyProjects //récupère la sélection de projets pour l'entreprise(Company)
 ```
 
-Note that both *theClient* and *companyProjects* in the above example are primary relation attributes and represent a direct relationship between the two dataclasses. However, relation attributes can also be built upon paths through relationships at several levels, including circular references. For example, consider the following structure:
+Notez que dans l'exemple ci-dessus, *theClient* et *companyProjects* sont des attributs de relation et représentent une relation directe entre les deux dataclasses. Cependant, les attributs de relation peuvent également être créés sur des chemins via des relations à plusieurs niveaux, y compris des références circulaires. Par exemple, considérons la structure suivante :
 
 ![](../assets/en/ORDA/entityAttributes2.png)
 
-Each employee can be a manager and can have a manager. To get the manager of the manager of an employee, you can simply write:
+Chaque employé peut être un manager et peut avoir un manager. Pour obtenir le manager du manager d'un employé, vous pouvez simplement écrire :
 
 ```4d
  $myEmp:=ds.Employee.get(50)
  $manLev2:=$myEmp.manager.manager.lastname
 ```
 
-## Assigning values to relation attributes
+## Assigner des valeurs aux attributs de relation
 
-In the ORDA architecture, relation attributes directly contain data related to entities:
+Dans l'architecture ORDA, les attributs de relation contiennent directement des données liées aux entités :
 
-*   An N->1 type relation attribute (**relatedEntity** kind) contains an entity
-*   A 1->N type relation attribute (**relatedEntities** kind) contains an entity selection
+*   Un attribut de relation de type N-> 1 (type **relatedEntity**) contient une entité
+*   Un attribut de relation de type 1-> N (type **relatedEntities**) contient une sélection d'entité
 
-Let's look at the following (simplified) structure:
+Regardons la structure (simplifiée) suivante :
 
 ![](../assets/en/ORDA/entityAttributes3.png)
 
-In this example, an entity in the "Employee" dataclass contains an object of type Entity in the "employer" attribute (or a null value). An entity in the "Company" dataclass contains an object of type EntitySelection in the "staff" attribute (or a null value).
-> In ORDA, the Automatic or Manual property of relations has no effect.
+Dans cet exemple, une entité de la dataclass "Employee" contient un objet de type Entité dans l'attribut "employer" (ou une valeur nulle). Une entité de la dataclass "Company" contient un objet de type EntitySelection dans l'attribut "staff" (ou une valeur nulle).
+> Dans ORDA, la propriété Automatic ou Manual des relations ne produit aucun effet.
 
-To assign a value directly to the "employer" attribute, you must pass an existing entity from the "Company" dataclass. For example:
+Pour attribuer une valeur directement à l'attribut "employer", vous devez passer une entité existante de la dataclass "Company".
 
 ```4d
- $emp:=ds.Employee.new() // create an employee
- $emp.lastname:="Smith" // assign a value to an attribute
- $emp.employer:=ds.Company.query("name =:1";"4D")[0]  //assign a company entity
+ $emp:=ds.Employee.new() // créer un employé
+ $emp.lastname:="Smith" // attribuer une valeur à un attribut
+ $emp.employer:=ds.Company.query("name =:1";"4D")[0]  //attribuer une entité de "company"
  $emp.save()
 ```
 
-4D provides an additional facility for entering a relation attribute for an N entity related to a "1" entity: you pass the primary key of the "1" entity directly when assigning a value to the relation attribute. For this to work, you pass data of type Number or Text (the primary key value) to the relation attribute. 4D then automatically takes care of searching for the corresponding entity in the dataclass. For example:
+4D fournit une fonctionnalité supplémentaire pour saisir un attribut de relation pour une entité N liée à une entité "1": vous passez directement la clé primaire de l'entité "1" lors de l'attribution d'une valeur à l'attribut de relation. Pour que cela fonctionne, passez des données de type Numérique ou Texte (la valeur de la clé primaire) à l'attribut de relation. 4D se charge alors automatiquement de rechercher l'entité correspondante dans la dataclass.
 
 ```4d
  $emp:=ds.Employee.new()
  $emp.lastname:="Wesson"
- $emp.employer:=2 // assign a primary key to the relation attribute
-  //4D looks for the company whose primary key (in this case, its ID) is 2
-  //and assigns it to the employee
+ $emp.employer:=2 // attribuer une clé primaire à l'attribut relation
+  //4D recherche l'entreprise dont la clé primaire (dans ce cas, son ID) est 2
+  //et l'attribue à l'employé
  $emp.save()
 ```
 
-This is particularly useful when you are importing large amounts of data from a relational database. This type of import usually contains an "ID" column, which references a primary key that you can then assign directly to a relation attribute.
+Ceci est particulièrement utile lorsque vous importez un grand nombre de données à partir d'une base de données relationnelle. Ce type d'import contient généralement une colonne "ID", qui référence une clé primaire que vous pouvez ensuite affecter directement à un attribut de relation.
 
-This also means that you can assign primary keys in the N entities without corresponding entities having already been created in the 1 datastore class. If you assign a primary key that does not exist in the related datastore class, it is nevertheless stored and assigned by 4D as soon as this "1" entity is created.
+Cela signifie également que vous pouvez attribuer des clés primaires dans les N entités sans que les entités correspondantes aient déjà été créées dans la 1e classe de datastore. Si vous affectez une clé primaire qui n'existe pas dans la classe de datastore associée, elle est néanmoins stockée et affectée par 4D dès que cette entité "1" est créée.
 
-You can assign or modify the value of a "1" related entity attribute from the "N" dataclass directly through the related attribute. For example, if you want to modify the name attribute of a related Company entity of an Employee entity, you can write:
+Vous pouvez attribuer ou modifier la valeur d'un attribut d'entité associé "1" à partir de la dataclass "N" directement via l'attribut associé. Par exemple, si vous souhaitez modifier l'attribut de nom d'une entité "Company" associée d'une entité "Employee", vous pouvez écrire :
 
 ```code4d
- $emp:=ds.Employee.get(2) // load the Employee entity with primary key 2
- $emp.employer.name:="4D, Inc." //modify the name attribute of the related Company
- $emp.employer.save() //save the related attribute
-  //the related entity is updated
+ $emp:=ds.Employee.get(2) // charge l'entité Employee avec la clé primaire 2
+ $emp.employer.name:="4D, Inc." //modifier l'attribut de nom de la société associée
+ $emp.employer.save() //sauvegarder l'attribut associé
+  //l'entité associée est mise à jour
 ```
 
-## Creating an entity selection
+## Créer une sélection d'entité (entity selection)
 
-You can create an object of type [entity selection](dsMapping.md#entity-selection) as follows:
+Vous pouvez créer un objet de type [entity selection](dsMapping.md#entity-selection) comme suit :
 
-*   Querying the entities [in a dataclass](API/DataClassClass.md#query) or in an [existing entity selection](API/EntitySelectionClass.md#query);
-*   Using the [`.all()`](API/DataClassClass.md#all) dataclass function to select all the entities in a dataclass;
-*   Using the `Create entity selection` command or the [`.newSelection()`](API/DataClassClass.md#newselection) dataclass function to create a blank entity selection;
-*   Using the [`.copy()`](API/EntitySelectionClass.md#copy) function to duplicate an existing entity selection;
-*   Using one of the various functions from the [Entity selection class](API/EntitySelectionClass.md) that returns a new entity selection, such as [`.or()`](API/EntitySelectionClass.md#or);
-*   Using a relation attribute of type "related entities" (see below).
+*   Lancez une requête sur les entités [dans une dataclass](API/DataClassClass.md#query) ou dans une [sélection d'entités existante](API/EntitySelectionClass.md#query);
+*   Utilisez la fonction de dataclass [`.all()`](API/DataClassClass.md#all) pour sélectionner toutes les entités d'une dataclass;
+*   Utilisez la commande `Create entity selection` ou la fonction de dataclass [`.newSelection()`](API/DataClassClass.md#newselection) pour créer une sélection d'entités vide;
+*   Utilisez la fonction [`.copy()`](API/EntitySelectionClass.md#copy) pour dupliquer une sélection d'entités existante;
+*   Utilisez l'une des diverses fonctions de [Entity selection class](API/EntitySelectionClass.md) qui retourne une nouvelle sélection d'entité, telle que [`entitySelection.or()`](API/EntitySelectionClass.md#or);
+*   Utilisez un attribut de relation de type "related entities" ("entités liées") (voir ci-dessous).
 
-You can simultaneously create and use as many different entity selections as you want for a dataclass. Keep in mind that an entity selection only contains references to entities. Different entity selections can contain references to the same entities.
+Vous pouvez créer et utiliser simultanément autant de sélections d'entités différentes que vous le souhaitez pour une dataclass. A noter qu'une sélection d'entité ne contient que des références à des entités. Différentes sélections d'entités peuvent contenir des références vers les mêmes entités.
 
-### Shareable or alterable entity selections
+### Entity selections partageables ou modifiables
 
-An entity selection can be **shareable** (readable by multiple processes, but not alterable after creation) or **alterable** (supports the [`.add()`](API/EntitySelectionClass.md#add) function, but only usable by the current process).
+Une "entity selection" peut être **partageable** (lisible par plusieurs processus, mais non modifiable après sa création) ou **modifiable** (supporte la fonction [`.add()`](API/EntitySelectionClass.md#add), mais utilisable uniquement par le processus actuel).
 
-#### Properties
+#### Propriétés
 
-A **shareable** entity selection has the following characteristics:
+Une entity selection **partageable** a les caractéristiques suivantes :
 
-- it can be stored in a shared object or shared collection, and can be passed as parameter between several processes or workers;
-- it can be stored in several shared objects or collections, or in a shared object or collection which already belongs to a group (it does not have a *locking identifier*);
-- it does not allow the addition of new entities. Trying to add an entity to a shareable entity selection will trigger an error (1637 - This entity selection cannot be altered). To add an entity to a shareable entity selection, you must first transform it into a non-shareable entity selection using the [`.copy()`](API/EntitySelectionClass.md#copy) function, before calling [`.add()`](API/EntitySelectionClass.md#add).
+- elle peut être stockée dans un objet partagé ou une collection partagée, et peut être passée comme paramètre entre plusieurs process ou workers ;
+- elle peut être stockée dans plusieurs objets partagés ou collections partagées, ou dans un objet partagé ou une collection partagée qui appartient déjà à un groupe (elle n'a pas de *locking identifier*) ;
+- elle ne permet pas d'ajouter de nouvelles entités. Essayer d'ajouter une entité à une entity selection partageable génèrera une erreur (1637 - Cette entity selection ne peut pas être modifiée). Pour ajouter une entité à une entity selection partageable, vous devez d'abord la transformer en une entity selection non partageable à l'aide de la fonction [`.copy()`](API/EntitySelectionClass.md#copy), avant d'appeler [`.add()`](API/EntitySelectionClass.md#add).
 
-> Most entity selection functions (such as [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) support shareable entity selections since they do not need to alter the original entity selection (they return a new one).
+> the new entity selection results from one of the various ORDA class functions applied to an existing entity selection ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
 
-An **alterable** entity selection has the following characteristics:
+Une entity selection **modifiable** a les caractéristiques suivantes :
 
-- it cannot be shared between processes, nor be stored in a shared object or collection. Trying to store a non-shareable entity selection in a shared object or collection will trigger an error (-10721 - Not supported value type in a shared object or shared collection);
-- it accepts the addition of new entities, i.e. it is supports the [`.add()`](API/EntitySelectionClass.md#add) function.
-
-
-#### How are they defined?
-
-The **shareable** or **alterable** nature of an entity selection is defined when the entity selection is created (it cannot be modified afterwards). You can know the nature of an entity selection using the [.isAlterable()](API/EntitySelectionClass.md#isalterable) function or the `OB Is shared` command.
+- elle ne peut pas être partagée entre les process, ni être stockée dans un objet partagé ou une collection partagée. Essayer de stocker une entity selection non partageable dans un objet partagé ou une collection partagée génèrera une erreur (-10721 - Type de valeur non pris en charge dans un objet partagé ou une collection partagée) ;
+- elle accepte l'ajout de nouvelles entités, c'est-à-dire qu'elle supporte la fonction [`.add()`](API/EntitySelectionClass.md#add).
 
 
-A new entity selection is **shareable** in the following cases:
+#### Comment les définir ?
 
-- the new entity selection results from an ORDA class function applied to a dataClass: [dataClass.all()](API/DataClassClass.md#all), [dataClass.fromCollection()](API/DataClassClass.md#fromcollection), [dataClass.query()](API/DataClassClass.md#query),
-- the new entity selection is based upon a relation [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. "company.employees") when *attributeName* is a one-to-many related attribute but the entity does not belong to an entity selection.
-- the new entity selection is explicitely copied as shareable with [entitySelection.copy()](API/EntitySelectionClass.md#copy) or `OB Copy` (i.e. with the `ck shared` option).
+La nature **partageable** ou **modifiable** d'une entity selection est définie lors de sa création (elle ne peut pas être modifiée par la suite). Vous pouvez connaître la nature d'une entity selection à l'aide de la fonction [.isAlterable()](API/EntitySelectionClass.md#isalterable) ou de la commande `OB Is shared`.
 
-Example:
+
+Une nouvelle entity selection est **partageable** dans les cas suivants :
+
+- la nouvelle entity selection résulte d'une fonction de classe ORDA appliquée à une dataClass : [dataClass.all()](API/DataClassClass.md#all), [dataClass.fromCollection()](API/DataClassClass.md#fromcollection), [dataClass.query()](API/DataClassClass.md#query),
+- la nouvelle entity selection est fondée sur une relation [entity.*attributeName*](API/EntityClass.md#attributename) (par exemple, "company.employees") lorsque *attributeName* est un attribut lié1 vers N mais que l'entity n'appartient pas à une entity selection.
+- la nouvelle entity selection est explicitement copiée comme partageable avec [entitySelection.copy()](API/EntitySelectionClass.md#copy) ou `OB Copy` (c'est-à-dire avec l'option `ck shared`).
+
+Voici un exemple :
 ```4d
 $myComp:=ds.Company.get(2) //$myComp does not belong to an entity selection
 $employees:=$myComp.employees //$employees is shareable
@@ -225,10 +225,10 @@ $employees:=$myComp.employees //$employees is shareable
 
 A new entity selection is **alterable** in the following cases:
 
-- the new entity selection created blank using the [dataClass.newSelection()](API/DataClassClass.md#newselection) function or `Create entity selection` command,
-- the new entity selection is explicitely copied as alterable with [entitySelection.copy()](API/EntitySelectionClass.md#copy) or `OB Copy` (i.e. without the `ck shared` option).
+- la nouvelle "entity selection" crée un espace vide à l'aide de la fonction [dataClass.newSelection()](API/DataClassClass.md#newselection) ou de la commande `Create entity selection`,
+- la nouvelle "entity selection" est explicitement copiée comme modifiable avec [entitySelection.copy()](API/EntitySelectionClass.md#copy) ou `OB Copy` (c'est-à-dire sans l'option `ck shared`).
 
-Example:
+Voici un exemple :
 ```4d
 $toModify:=ds.Company.all().copy() //$toModify is alterable
 ```
@@ -236,13 +236,13 @@ $toModify:=ds.Company.all().copy() //$toModify is alterable
 
 A new entity selection **inherits** from the original entity selection nature in the following cases:
 
-- the new entity selection results from one of the various ORDA class functions applied to an existing entity selection ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
+- Most entity selection functions (such as [`.slice()`](API/EntitySelectionClass.md#slice), [`.and()`](API/EntitySelectionClass.md#and)...) .
 - the new entity selection is based upon a relation:
-    - [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. "company.employees") when *attributeName* is a one-to-many related attribute and the entity belongs to an entity selection (same nature as [.getSelection()](API/EntityClass.md#getselection) entity selection),
-    - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (e.g. "employees.employer") when *attributeName* is a related attribute (same nature as the entity selection),
-    - [.extract()](API/EntitySelectionClass.md#extract) when the resulting collection contains entity selections (same nature as the entity selection).
+    - [entity.*attributeName*](API/EntityClass.md#attributename) (par exemple, "company.employees") lorsque *attributeName* est un attribut lié1 vers N mais que l'entity appartient à une "entity selection" (de même nature que [getSelection](API/EntityClass.md#getselection)
+    - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (e.g. "employees.employer") lorsque *attributeName* est un attribut lié (de même nature que celle de la "entity selection"),
+    - [.extract()](API/EntitySelectionClass.md#extract), lorsque la collection résultante contient des sélections d'entités (de même nature que l'entity selection'").
 
-Examples:
+Exemple :
 
 ```4d
 $highSal:=ds.Employee.query("salary >= :1"; 1000000)   
@@ -293,7 +293,6 @@ The `sendMails` method:
  For each($invoice;$paid)
     $email.to:=$invoice.customer.address // email address of the customer
     $email.subject:="Payment OK for invoice # "+String($invoice.number)
-
     $status:=$transporter.send($email)
  End for each
 
@@ -305,9 +304,9 @@ The `sendMails` method:
 ```
 
 
-### Entity selections and Storage attributes
+### Sélections d'entités et attributs de stockage
 
-All storage attributes (text, number, boolean, date) are available as properties of entity selections as well as entities. When used in conjunction with an entity selection, a scalar attribute returns a collection of scalar values. For example:
+Tous les attributs de stockage (texte, numérique, booléen, date) sont disponibles en tant que propriétés des sélections d'entités et en tant qu'entités. Lorsqu'il est utilisé avec une sélection d'entité, un attribut scalaire retourne une collection de valeurs scalaires.
 
 ```4d
  $locals:=ds.Person.query("city = :1";"San Jose") //entity selection of people
@@ -316,9 +315,9 @@ All storage attributes (text, number, boolean, date) are available as properties
 
 This code returns in *$localEmails* a collection of email addresses as strings.
 
-### Entity selections and Relation attributes
+### Sélections d'entités et attributs de relation
 
-In addition to the variety of ways you can query, you can also use relation attributes as properties of entity selections to return new entity selections. For example, consider the following structure:
+Outre la variété de méthodes de recherche, vous pouvez également utiliser des attributs de relation comme propriétés des sélections d'entités pour retourner de nouvelles sélections d'entités. Par exemple, considérons la structure suivante :
 
 ![](../assets/en/ORDA/entitySelectionRelationAttributes.png)
 
@@ -328,81 +327,80 @@ In addition to the variety of ways you can query, you can also use relation attr
   //All invoices with at least one line item related to a part in $myParts
 ```
 
-The last line will return in $myInvoices an entity selection of all invoices that have at least one invoice item related to a part in the entity selection myParts. When a relation attribute is used as a property of an entity selection, the result is always another entity selection, even if only one entity is returned. When a relation attribute is used as a property of an entity selection and no entities are returned, the result is an empty entity selection, not null.
+La dernière ligne renverra, dans $myInvoices, une sélection d'entité de toutes les factures qui ont au moins un poste de facture lié à une partie de la sélection d'entités myParts. Lorsqu'un attribut de relation est utilisé comme propriété d'une entity selection, le résultat est toujours une autre entity selection, même si une seule entité est retournée. When a relation attribute is used as a property of an entity selection, the result is always another entity selection, even if only one entity is returned.
 
 
-## Entity Locking
+## Verrouillage d'une entité
 
-You often need to manage possible conflicts that might arise when several users or processes load and attempt to modify the same entities at the same time. Record locking is a methodology used in relational databases to avoid inconsistent updates to data. The concept is to either lock a record upon read so that no other process can update it, or alternatively, to check when saving a record to verify that some other process hasn’t modified it since it was read. The former is referred to as **pessimistic record locking** and it ensures that a modified record can be written at the expense of locking records to other users. The latter is referred to as **optimistic record locking** and it trades the guarantee of write privileges to the record for the flexibility of deciding write privileges only if the record needs to be updated. In pessimistic record locking, the record is locked even if there is no need to update it. In optimistic record locking, the validity of a record’s modification is decided at update time.
+Vous devez souvent gérer d'éventuels conflits pouvant survenir lorsque plusieurs utilisateurs ou process se chargent et tentent de modifier les mêmes entités en même temps. Le verrouillage des enregistrements est une méthodologie utilisée dans les bases de données relationnelles pour éviter les mises à jour incohérentes des données. Le concept consiste soit à verrouiller un enregistrement lors de sa lecture afin qu'aucun autre processus ne puisse le mettre à jour, soit à vérifier lors de la sauvegarde d'un enregistrement qu'un autre processus ne l'a pas modifié depuis sa lecture. Le premier est appelé **verrouillage d'enregistrement pessimiste** et garantit qu'un enregistrement modifié peut être écrit au détriment du verrouillage des enregistrements pour d'autres utilisateurs. Ce dernier est appelé **verrouillage d'enregistrement optimiste** et il échange la garantie des privilèges d'écriture sur l'enregistrement contre la flexibilité de décider des privilèges d'écriture uniquement si l'enregistrement doit être mis à jour. Dans le verrouillage d'enregistrement pessimiste, l'enregistrement est verrouillé même s'il n'est pas nécessaire de le mettre à jour. Dans le verrouillage d'enregistrement optimiste, la validité de la modification d'un enregistrement est fixée au moment de la mise à jour.
 
-ORDA provides you with two entity locking modes:
+ORDA vous propose deux modes de verrouillage d'entité :
 
-- an automatic "optimistic" mode, suitable for most applications,
-- a "pessimistic" mode allowing you to lock entities prior to their access.
+- un mode automatique "optimiste", adapté à la plupart des applications,
+- un mode "pessimiste" permettant de verrouiller les entités avant d'y accéder.
 
-### Automatic optimistic lock
+### Verrouillage optimiste automatique
 
-This automatic mechanism is based on the concept of "optimistic locking" which is particularly suited to the issues of web applications. This concept is characterized by the following operating principles:
+Ce mécanisme automatique est basé sur le concept de "verrouillage optimiste" qui est particulièrement adapté aux problématiques des applications web. Ce concept se caractérise par les principes de fonctionnement suivants :
 
-*   All entities can always be loaded in read-write; there is no *a priori* "locking" of entities.
-*   Each entity has an internal locking stamp that is incremented each time it is saved.
-*   When a user or process tries to save an entity using the `entity.save( )` method, 4D compares the stamp value of the entity to be saved with that of the entity found in the data (in the case of a modification):
-    *   When the values match, the entity is saved and the internal stamp value is incremented.
-    *   When the values do not match, it means that another user has modified this entity in the meantime. The save is not performed and an error is returned.
+*   Toutes les entités peuvent toujours être chargées en lecture-écriture; il n'y a pas de «verrouillage» *a priori* des entités.
+*   Chaque entité possède un marqueur de verrouillage interne qui est incrémenté à chaque fois qu'il est enregistré.
+*   Lorsqu'un utilisateur ou un process tente de sauvegarder une entité à l'aide de la méthode `entity.save()`, 4D compare la valeur du marqueur de l'entité à sauvegarder avec celle de l'entité trouvée dans les données (en cas de modification) :
+    *   Lorsque les valeurs correspondent, l'entité est enregistrée et la valeur du marqueur interne est incrémentée.
+    *   Lorsque les valeurs ne correspondent pas, cela signifie qu'un autre utilisateur a modifié cette entité entre-temps. La sauvegarde n'est pas effectuée et une erreur est retournée.
 
-The following diagram illustrates optimistic locking:
+Le diagramme suivant illustre le verrouillage optimiste :
 
-1. Two processes load the same entity.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
+1. Deux process chargent la même entité.<br/><br/>![](../assets/en/ORDA/optimisticLock1.png)
 
-2. The first process modifies the entity and validates the change. The `entity.save( )` method is called. The 4D engine automatically compares the internal stamp value of the modified entity with that of the entity stored in the data. Since they match, the entity is saved and its stamp value is incremented.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
+2. Le premier process modifie l'entité et valide le changement. La méthode `entity.save()` est appelée. Le moteur 4D compare automatiquement la valeur du marqueur interne de l'entité modifiée avec celle de l'entité stockée dans les données. Puisqu'ils correspondent, l'entité est enregistrée et la valeur de son marqueur est incrémentée.<br/><br/>![](../assets/en/ORDA/optimisticLock2.png)
 
-3. The second process also modifies the loaded entity and validates its changes. The `entity.save( )` method is called. Since the stamp value of the modified entity does not match the one of the entity stored in the data, the save is not performed and an error is returned.<br/><br/>![](../assets/en/ORDA/optimisticLock3.png)
+3. Le deuxième process modifie également l'entité chargée et valide ses modifications. La méthode `entity.save()` est appelée. Etant donné que la valeur de marqueur de l'entité modifiée ne correspond pas à celle de l'entité stockée dans les données, la sauvegarde n'est pas effectuée et une erreur est retournée.<br/><br/>![](../assets/en/ORDA/optimisticLock3.png)
 
 
-This can also be illustrated by the following code:
+Cela peut également être illustré par le code suivant :
 
 ```4d
- $person1:=ds.Person.get(1) //Reference to entity
- $person2:=ds.Person.get(1) //Other reference to same entity
+ $person1:=ds.Person.get(1) //Référence à l'entité
+ $person2:=ds.Person.get(1) //Autre référence à la même entité
  $person1.name:="Bill"
- $result:=$person1.save() //$result.success=true, change saved
+ $result:=$person1.save() //$result.success=true, modification enregistrée
  $person2.name:="William"
- $result:=$person2.save() //$result.success=false, change not saved
 ```
 
-In this example, we assign to $person1 a reference to the person entity with a key of 1. Then, we assign another reference of the same entity to variable $person2. Using $person1, we change the first name of the person and save the entity. When we attempt to do the same thing with $person2, 4D checks to make sure the entity on disk is the same as when the reference in $person1 was first assigned. Since it isn't the same, it returns false in the success property and doesn’t save the second modification.
+Dans cet exemple, nous attribuons à $person1 une référence à l'entité "person" avec une clé de 1. Nous attribuons ensuite une autre référence de la même entité à la variable $person2. Avec $person1, nous modifions le prénom de la personne et sauvegardons l'entité. Lorsque nous essayons de faire de même avec $person2, 4D vérifie que l'entité sur le disque est la même que lors de la première attribution de la référence dans $person1. Puisqu'elles ne sont pas identiques, 4D retourne "faux" dans la propriété "success" et ne sauvegarde pas la deuxième modification.
 
 When this situation occurs, you can, for example, reload the entity from the disk using the `entity.reload()` method so that you can try to make the modification again. The `entity.save()` method also proposes an "automerge" option to save the entity in case processes modified attributes that were not the same.
 
 > Record stamps are not used in **transactions** because only a single copy of a record exists in this context. Whatever the number of entities that reference a record, the same copy is modified thus `entity.save()` operations will never generate stamp errors.
 
-### Pessimistic lock
+### Verrouillage pessimiste
 
-You can lock and unlock entities on demand when accessing data. When an entity is getting locked by a process, it is loaded in read/write in this process but it is locked for all other processes. The entity can only be loaded in read-only mode in these processes; its values cannot be edited or saved.
+Vous pouvez verrouiller et déverrouiller des entités à la demande lorsque vous accédez aux données. Lorsqu'une entité est verrouillée par un process, elle est chargée en lecture/écriture dans ce process mais elle est verrouillée pour tous les autres process. L'entité peut être chargée uniquement en mode lecture seule dans ces process; ses valeurs ne peuvent pas être modifiées ou enregistrées.
 
-This feature is based upon two functions of the `Entity` class:
+This feature is based upon two methods of the `Entity` class:
 
 *   [`entity.lock()`](../API/EntityClass.md#lock)
 *   [`entity.unlock()`](../API/EntityClass.md#unlock)
 
-For more information, please refer to the descriptions for these functions.
+Pour plus d'informations, reportez-vous aux descriptions de ces méthodes.
 
 > Pessimistic locks can also be handled through the [REST API](../REST/$lock.md).
 
 
 
-### Concurrent use of 4D classic locks and ORDA pessimistic locks
+### Utilisation simultanée des verrouillages classiques 4D et des verrouillages pessimistes ORDA
 
-Using both classic and ORDA commands to lock records is based upon the following principles:
+L'utilisation des commandes classiques et ORDA pour le verrouillage des enregistrements est basé sur les principes suivants :
 
-*   A lock set with a classic 4D command on a record prevents ORDA to lock the entity matching the record.
-*   A lock set with ORDA on an entity prevents classic 4D commands to lock the record matching the entity.
+*   Un verrouillage défini avec une commande 4D classique sur un enregistrement empêche ORDA de verrouiller l'entité correspondant à l'enregistrement.
+*   Un verrouillage défini avec ORDA sur une entité empêche les commandes 4D classiques de verrouiller l'enregistrement correspondant à l'entité.
 
-These principles are shown in the following diagram:
+Ces principes sont illustrés dans le diagramme suivant :
 
 ![](../assets/en/ORDA/concurrent1.png)
 
-**Transaction locks** also apply to both classic and ORDA commands. In a multiprocess or a multi-user application, a lock set within a transaction on a record by a classic command will result in preventing any other processes to lock entities related to this record (or conversely), until the transaction is validated or canceled.
+Les **verrouillages de transaction** s'appliquent également aux commandes classiques et aux commandes ORDA. Dans une application multiprocess ou multi-utilisateurs, un verrouillage défini dans une transaction sur un enregistrement par une commande classique aura pour effet d'empêcher tout autre process de verrouiller les entités liées à cet enregistrement (ou inversement), jusqu'à ce que la transaction soit validée ou annulée.
 
-*   Example with a lock set by a classic command:<br/><br/>![](../assets/en/ORDA/concurrent2.png)
-*   Example with a lock set by an ORDA function:<br/><br/>![](../assets/en/ORDA/concurrent3.png)
+*   Exemple avec un verrouillage défini par une commande classique :<br/><br/>![](../assets/en/ORDA/concurrent2.png)
+*   Exemple avec un verrouillage défini par une méthode ORDA :<br/><br/>![](../assets/en/ORDA/concurrent3.png)
