@@ -1,58 +1,58 @@
 ---
 id: overview
-title: Overview
+title: Vue d’ensemble
 ---
 
-If more than one person uses a database, which is usually the case in client-server architecture or Web interfaces, you need to control access or provide different features according to the connected users. It is also essential to provide security for sensitive data. You can provide this security by assigning passwords to users and creating access groups that have different levels of access to information in the database or to database operations.
+Si différentes personnes utilisent votre base de données, vous pouvez souhaiter contrôler ses accès ou proposer différentes fonctionnalités ou interfaces aux utilisateurs connectés. Il peut être également essentiel de protéger des données importantes. Vous pouvez fournir cette protection en affectant des mots de passe aux utilisateurs et en créant des groupes qui possèdent des niveaux d’accès correspondant à des degrés de confidentialité différents.
 
-> For an overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
+> Consultez le document [4D Security guide](https://blog.4d.com/4d-security-guide/) pour une vue d'ensemble des fonctions de sécurité de 4D.
 
-## Assigning group access
+## Définition des accès aux groupes
 
-4D’s password access system is based on users and groups. You create users and assign passwords, put users in groups, and assign each group access rights to appropriate parts of the database.
+Le système de gestion des accès de 4D est basé sur les notions d’utilisateurs et de groupes. Vous créez des noms d’utilisateurs et vous leur affectez un mot de passe, vous placez les utilisateurs dans des groupes, et vous assignez à chaque groupe les privilèges d’accès appropriés aux objets de la base.
 
-Groups can then be assigned access privileges to specific parts or features of the database (Design access, HTTP server, SQL server, etc.), or any custom part.
+Les groupes peuvent alors se voir affecter des privilèges d'accès à des parties spécifiques ou des fonctionnalités de la base (accès au mode Développement, serveur HTTP, serveur SQL, etc.), ou à toute partie personnalisée.
 
-The following example shows Design and Runtime explorer access rights being assigned to the "Devs" group:
+L'exemple suivant présente les droits d'accès à l'explorateur d'exécution et au Développement assignés au groupe "Devs" :
 
 ![](../assets/en/Users/Access1.png)
 
-## Activating access control
+## Activer le contrôle des accès
 
-You initiate the 4D password access control system in client-server by **assigning a password to the Designer**.
+Le contrôle effectif des accès par mots de passe de 4D est activé par **l’affectation d’un mot de passe au Super_Utilisateur**.
 
-Until you give the Designer a password, all database access are done with the Designer's access rights, even if you have set up users and groups (when the database opens, no ID is required). Any part of the database can be opened.
+Tant que le Super_Utilisateur n’a pas de mot de passe, 4D permet à tout utilisateur d’accéder à toutes les parties de la base, même si vous avez défini des utilisateurs et des groupes (à l'ouverture de la base, aucune identification n'est requise).
 
-When a password is assigned to the Designer, all the access privileges take effect. In order to connect to the database, remote users must enter a password.
+Lorsqu’un mot de passe est affecté au Super_Utilisateur, tous les privilèges d’accès que vous avez affectés prennent effet. Pour pouvoir utiliser la base, les utilisateurs distants doivent alors saisir un mot de passe.
 
-To disable the password access system, you just need to remove the Designer password.
+Pour désactiver le système de restriction d’accès, il suffit de supprimer (mettre à blanc) le mot de passe du Super_Utilisateur.
 
-## Users and groups in project architecture
+## Utilisateurs et groupes dans l'architecture projet
 
-In project databases (.4DProject or .4dz files), 4D users and groups can be configured in both single-user and client-server environments. However, access control is only effective in 4D Server databases. The following table lists the main users and groups features and their availability:
+Dans les bases projet (fichiers .4DProject ou .4dz), les utilisateurs et groupes 4D peuvent être configurés à la fois en monoposte ou en client-serveur. Toutefois, le contrôle d'accès ne prend effet que dans les bases 4D Server. Le tableau suivant liste les principales fonctionnalités des utilisateurs et groupes ainsi que leur disponibilité :
 
-|                                                               | 4D Developer (single-user)   | 4D Server |
-| ------------------------------------------------------------- | ---------------------------- | --------- |
-| Adding/editing users and groups                               | yes                          | yes       |
-| Assigning user/group access to servers                        | yes                          | yes       |
-| User identification                                           | no (all users are Designer)  | yes       |
-| Access control once the Designer has been assigned a password | no (all access are Designer) | yes       |
+|                                                                                 | 4D Developer (monoposte)                                | 4D Server |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------- | --------- |
+| Ajouter/modifier des utilisateurs et groupes                                    | oui                                                     | oui       |
+| Affecter l'accès des utilisateurs/groupes aux serveurs                          | oui                                                     | oui       |
+| Identification de l'utilisateur                                                 | non (tous les utilisateurs sont des Super_Utilisateur)  | oui       |
+| Contrôle d'accès une fois qu'un mot de passe a été affecté au Super_Utilisateur | non (tous les accès sont accordés au Super_Utilisateur) | oui       |
 
-## Toolbox editor
+## Éditeur de boîte à outils
 
-The editors for users and groups are located in the toolbox of 4D. These editors can be used to create both users and groups, assign passwords to users, place users in groups, etc.
+Les éditeurs des utilisateurs et groupes sont placés dans la boîte à outils de 4D. Ces éditeurs peuvent être utilisés pour la création d'utilisateurs et de groupes, l'affectation de mots de passe aux utilisateurs, le placement d'utilisateurs dans des groupes, etc.
 
 ![](../assets/en/Users/editor.png)
 
-> Users and groups editor can be displayed at runtime using the [EDIT ACCESS](https://doc.4d.com/4Dv18/4D/18/EDIT-ACCESS.301-4504687.en.html) command.
+> L'éditeur d'utilisateurs et de groupes peut s'afficher à l'exécution à l'aide de la commande [EDIT ACCESS](https://doc.4d.com/4Dv18/4D/18/EDIT-ACCESS.301-4504687.en.html).
 
-## Directory.json file
+## Fichier directory.json
 
-Users, groups, as well as their access rights are stored in a specific database file named **directory.json**.
+Les utilisateurs, les groupes ainsi que leurs droits d'accès sont stockés dans un fichier spécifique de la base nommé **directory.json**.
 
-This file can be stored at the following locations:
+Ce fichier peut être stocké dans les emplacements suivants :
 
-- in the user database settings folder, i.e. in the "Settings" folder at the same level as the "Project" folder. These settings are used by default for the database.
-- in the data settings folder,  i.e. in the "Settings" folder in the "Data" folder. If a directory.json file is present at this location, it takes priority over the file in the user database settings folder. This feature allows you to define custom/local Users and Groups configurations. The custom configuration will left untouched by a database upgrade.
+- dans le dossier de propriétés de la base utilisateur, c'est-à-dire le dossier "Settings", au même niveau que le dossier "Project". Ces propriétés sont utilisées par défaut dans la base.
+- dans le dossier de propriétés des données, c'est-à-dire dans le dossier "Settings" du dossier "Data". Si un fichier directory.json se trouve à cet emplacement, il est prioritaire par rapport au fichier du dossier Settings de la base utilisateur. Cette fonctionnalité vous permet de définir des configurations Utilisateurs et Groupes personnalisées/locales. La configuration personnalisée ne sera pas affectée par des mises à niveau de la base.
 
-> If users and groups management is not active, the directory.json is not created.
+> Si la gestion des groupes et utilisateurs est inactive, le fichier directory.json n'est pas créé.
