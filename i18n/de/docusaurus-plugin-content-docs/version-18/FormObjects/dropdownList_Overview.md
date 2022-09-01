@@ -3,7 +3,7 @@ id: dropdownListOverview
 title: Drop-down List
 ---
 
-## Overview
+## Überblick
 
 Drop-down lists are objects that allow the user to select from a list. You manage the items displayed in the drop-down list using an array, a choice list, or a standard action.
 
@@ -19,7 +19,7 @@ Drop-down list objects are initialized by loading a list of values into an array
 
 * Enter a list of default values in the object properties by selecting `"\&#060;Static List&#062;"` in the [Data Source](properties_DataSource.md) theme of the Property List. The default values are loaded into an array automatically. You can refer to the array using the name of the variable associated with the object.
 
-* Before the object is displayed, execute code that assigns values to the array elements. For example:
+* Before the object is displayed, execute code that assigns values to the array elements. Beispiel:
 
 ```4d
   ARRAY TEXT($aCities;6)
@@ -33,7 +33,7 @@ Drop-down list objects are initialized by loading a list of values into an array
 
 In this case, the name of the variable associated with the object in the form must be *$aCities*. This code could be placed in the form method and be executed when the `On Load` form event runs.
 
-* Before the object is displayed, load the values of a list into the array using the [LIST TO ARRAY](https://doc.4d.com/4Dv17R5/4D/17-R5/LIST-TO-ARRAY.301-4127385.en.html) command. For example:
+* Before the object is displayed, load the values of a list into the array using the [LIST TO ARRAY](https://doc.4d.com/4Dv17R5/4D/17-R5/LIST-TO-ARRAY.301-4127385.en.html) command. Beispiel:
 
 ```4d
    LIST TO ARRAY("Cities";$aCities)
