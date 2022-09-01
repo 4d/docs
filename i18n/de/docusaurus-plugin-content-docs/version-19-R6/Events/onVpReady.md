@@ -8,7 +8,7 @@ title: On VP Ready
 | 9    | [4D View Pro Area](FormObjects/viewProArea_overview.md) | The loading of the 4D View Pro area is complete |
 
 
-## Description
+## Beschreibung
 
 This event is generated when the 4D View Pro area loading is complete.
 
