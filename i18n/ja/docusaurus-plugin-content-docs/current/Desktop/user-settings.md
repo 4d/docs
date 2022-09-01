@@ -1,125 +1,125 @@
 ---
 id: user-settings
-title: User Settings
+title: ユーザー設定
 ---
 
-4D provides two modes of operation for project Settings:
+4Dでは、プロジェクトの設定について 2つの運用モードが提供されています:
 
-*   **Standard** mode: all [settings](../settings/overview.md) are stored in the [*settings.4DSettings* file at the project level](../Project/architecture.md#sources) and are applied in all cases. This is the default mode, suitable for development phase (all applications).
+*   **標準** モード：すべての [設定](../settings/overview.md) は、[プロジェクトレベルの *settings.4DSettings*](../Project/architecture.md#sources) ファイルに保存され、すべてのケースに適用されます。 これはデフォルトのモードで、開発段階 (すべてのアプリケーション) に適しています。
 
-*  **User settings** mode: part of the custom settings are stored in a *settings.4DSettings* file [in the Settings folder](../Project/architecture.md#settings-1) (for all data files) or [in the Data folder](../Project/architecture.md#settings) (for this data file) and are used instead of the structure settings. This mode is suitable for deployment phase for Desktop applications. You enable this mode using an option located on the [Security page](../settings/security.md) of the Settings.
+*  **ユーザー設定** モード：カスタム設定の一部は、[Settingsフォルダー](../Project/architecture.md#settings-1) (すべてのデータファイル用)、または [Dataフォルダー](../Project/architecture.md#settings) (特定のデータファイル用) に置かれた *settings.4DSettings* ファイルに保存され、ストラクチャー設定の代わりに使用されます。 このモードは、デスクトップアプリケーションの運用段階に適しています。 このモードは、設定の [セキュリティページ](../settings/security.md) にあるオプションを使用して有効にします。
 
-By defining user settings, you can keep custom settings between updates of your 4D applications, or manage different settings for the same 4D application deployed on several different sites. It also makes it possible to use programming to manage setting files using XML.
+ユーザー設定を定義することで、4D アプリケーションを更新しても、カスタム設定を保持できるようになります。 あるいは、異なる場所に展開する同じアプリケーションに対し、異なる設定を適用することが可能になります。 また、設定ファイルの内容は XML で記述されるため、プログラムによる設定の管理もできるようになります。
 
-4D can generate and use two types of user settings:
+4D は 2種類のユーザー設定を生成し使用することができます:
 
--   **User Settings (standard)**: They are used instead of structure settings for any data file opened with the application.
--   **User Settings for Data file**: They can be defined specifically for each data file used with your application, configuring for example the port ID or the server cache.
+-   **ユーザー設定 (標準)**: これらのユーザー設定は、アプリケーションでどのデータファイルを開いたかにかかわらず、ストラクチャー設定の代わりに使用されます。
+-   **データファイル用のユーザー設定**: これらのユーザー設定は、アプリケーションで使用される各データファイルに対してそれぞれ関連づけられており、たとえばサーバーキャッシュのポートID などを設定します。
 
-With this option, you can easily deploy and update several copies of the same desktop application with several data files, each containing different settings.
+このオプションを使用すると、それぞれが異なる設定を持つデータファイルを複数使用する同じデスクトップアプリケーションのコピーを複数配布したりアップデートしたりすることが容易になります。
 
-Consider for example the following configuration, where an application is duplicated and each copy uses a different Port ID setting. If this user setting is linked to the data file, you will be able to update the application without having to manually change the Port ID:
+とあるアプリケーションが複製され、それぞれで異なる設定 (ポートID) を使用します。 このユーザー設定がデータファイルとリンクしていた場合、ポートID を手動で変えることななくアプリケーションをアップデートすることができます:
 
 ![](../assets/en/settings/user-settings-config.png)
 
-## Enabling User settings
+## ユーザー設定の有効化
 
-To enable user settings, you need to check the **Settings** > **Security** > **Enable User Settings** option:
+ユーザー設定を有効にするには、**設定** ＞ **セキュリティ** ＞ **外部ファイルのユーザー設定を有効にする** オプションを選択します:
 
 ![](../assets/en/settings/user-settings-enable.png)
 
-When you check this option, the settings are separated into three dialog boxes:
+このオプションをチェックすると、設定が 3つのダイアログに分けられます:
 
-* **Structure Settings**
-* **User Settings**
-* **User Settings for Data file**
+* **ストラクチャー設定**
+* **ユーザー設定**
+* **データファイル用のユーザー設定**
 
-You can access these dialog boxes using the **Design > Settings...** menu or the **Settings** button in the toolbar:
+これらのダイアログボックスは、**デザイン ＞ 設定** メニュー、あるいはツールバーの **設定** ボタンからアクセスできます:
 
 ![](../assets/en/settings/user-settings-dialog.png)
 
-You can also access these dialog boxes using the [OPEN SETTINGS WINDOW](https://doc.4d.com/4dv19R/help/command/en/page903.html) command with the appropriate *settingsType* selector.
+これらのダイアログボックスは、[OPEN SETTINGS WINDOW](https://doc.4d.com/4dv19R/help/command/ja/page903.html) コマンドに適切な *settingsType* セレクターを渡して使用することでもアクセスできます。
 
-The Structure Settings dialog box is identical to the standard Settings, and provides access to all its properties (which can be overriden by user settings).
+ストラクチャー設定ダイアログボックスは、標準の設定ダイアログと同じで、そのすべてのプロパティにアクセスできます (これらの設定はユーザー設定によってオーバーライドできます)。
 
-## User Settings and User Settings for Data file
+## ユーザー設定とデータファイル用のユーザー設定
 
-The **User Settings** and **User Settings for Data File** dialog boxes contain a selection of relevant properties that can be defined for all data files or a single data file:
+**ユーザー設定** と **データファイル用のユーザー設定** ダイアログボックスには、すべてのデータファイルまたは 1つのデータファイルに対して定義できる関連プロパティが含まれています:
 
 ![](../assets/en/settings/user-settings-2.png)
 
-The following table lists the pages of settings found in the **User Settings** and **User Settings for Data File** dialog boxes and describes their main differences with respect to standard settings:
+**ユーザー設定** および **データファイル用のユーザー設定** ダイアログボックスに含まれる設定ページのリストと、標準設定との主な違いを以下の表にまとめます:
 
-| **Page of Structure Settings**                                                       | **Page of User Settings**             | **Page of User Settings for Data File** |
-| ------------------------------------------------------------------------------------ | ------------------------------------- | --------------------------------------- |
-| [General page](../settings/general.md)                                               | N/a                                   | N/a                                     |
-| [Interface page](../settings/interface.md)                                           | Identical to standard settings        | Identical to standard settings          |
-| [Compiler page](../settings/compiler.md)                                             | N/a                                   | N/a                                     |
-| [Database/Data storage page](../settings/database.md#data-storage)                   | N/a                                   | N/a                                     |
-| [Database/Memory page](../settings/database.md#memory)                               | Identical to standard settings        | Identical to standard settings          |
-| [Backup/Scheduler page](../settings/backup.md#scheduler)                             | N/a                                   | Identical to standard settings          |
-| [Backup/Configuration page](../settings/backup.md#configuration)                     | N/a                                   | Identical to standard settings          |
-| [Backup/Backup & Restore page](../settings/backup.md#backup-restore)                 | N/a                                   | Identical to standard settings          |
-| [Client-server/Network options page](../settings/client-server.md#network-options)   | Identical to standard settings        | Identical to standard settings          |
-| [Client-server/IP configuration page](../settings/client-server.md#ip-configuration) | Identical to standard settings        | Identical to standard settings          |
-| [Web/Configuration page](../settings/web.md#configuration)                           | Identical to standard settings        | Identical to standard settings          |
-| [Web/Options (I) page](../settings/web.md#options)                                   | Identical to standard settings        | Identical to standard settings          |
-| [Web/Options (II) page](../settings/web.md#options-ii)                               | Identical to standard settings        | Identical to standard settings          |
-| [Web/Log (type) page](../settings/web.md#log)                                        | Identical to standard settings        | Identical to standard settings          |
-| [Web/Log (backup) page](../settings/web.md#log)                                      | Identical to standard settings        | Identical to standard settings          |
-| [Web/Web Services page](../settings/web.md#web-services)                             | Method prefixing option not available | Method prefixing option not available   |
-| [SQL page](../settings/sql.md)                                                       | Identical to standard settings        | Identical to standard settings          |
-| [PHP page](../settings/php.md)                                                       | Identical to standard settings        | Identical to standard settings          |
-| [Security page](../settings/security.md)                                             | N/a                                   | N/a                                     |
-| [Compatibility page](../settings/compatibility.md)                                   | N/a                                   | N/a                                     |
+| **ストラクチャー設定のページ**                                                          | **ユーザー設定のページ**       | **データファイル用のユーザー設定のページ** |
+| -------------------------------------------------------------------------- | -------------------- | ----------------------- |
+| [一般ページ](../settings/general.md)                                            | N/a                  | N/a                     |
+| [インターフェースページ](../settings/interface.md)                                    | 標準設定と同じ              | 標準設定と同じ                 |
+| [コンパイラーページ](../settings/compiler.md)                                       | N/a                  | N/a                     |
+| [データベース/データストレージページ](../settings/database.md#data-storage)                 | N/a                  | N/a                     |
+| [データベース/メモリページ](../settings/database.md#memory)                            | 標準設定と同じ              | 標準設定と同じ                 |
+| [バックアップ/スケジューラーページ](../settings/backup.md#scheduler)                       | N/a                  | 標準設定と同じ                 |
+| [バックアップ/設定ページ](../settings/backup.md#configuration)                        | N/a                  | 標準設定と同じ                 |
+| [バックアップ/バックアップ＆復旧ページ](../settings/backup.md#backup-restore)                | N/a                  | 標準設定と同じ                 |
+| [クライアント-サーバー/ネットワークオプションページ](../settings/client-server.md#network-options) | 標準設定と同じ              | 標準設定と同じ                 |
+| [クライアント-サーバー/IP設定ページ](../settings/client-server.md#ip-configuration)       | 標準設定と同じ              | 標準設定と同じ                 |
+| [Web/設定ページ](../settings/web.md#configuration)                              | 標準設定と同じ              | 標準設定と同じ                 |
+| [Web/オプション (I) ページ](../settings/web.md#options)                            | 標準設定と同じ              | 標準設定と同じ                 |
+| [Web/オプション (II) ページ](../settings/web.md#options-ii)                        | 標準設定と同じ              | 標準設定と同じ                 |
+| [Web/ログ (タイプ) ページ](../settings/web.md#log)                                 | 標準設定と同じ              | 標準設定と同じ                 |
+| [Web/ログ (バックアップ) ページ](../settings/web.md#log)                              | 標準設定と同じ              | 標準設定と同じ                 |
+| [Web/Webサービスページ](../settings/web.md#web-services)                          | メソッドプリフィクスオプションは使用不可 | メソッドプリフィクスオプションは使用不可    |
+| [SQL ページ](../settings/sql.md)                                              | 標準設定と同じ              | 標準設定と同じ                 |
+| [PHP ページ](../settings/php.md)                                              | 標準設定と同じ              | 標準設定と同じ                 |
+| [セキュリティページ](../settings/security.md)                                       | N/a                  | N/a                     |
+| [互換性ページ](../settings/compatibility.md)                                     | N/a                  | N/a                     |
 
-When you edit settings in this dialog box, they are automatically stored in the corresponding *settings.4DSettings* file (see below).
+このダイアログボックスでの設定を編集した場合、それらの変更は対応する *settings.4DSettings* ファイルに自動的に保存されます (後述参照)。
 
-## `SET DATABASE PARAMETER` and user settings
+## `SET DATABASE PARAMETER` とユーザー設定
 
-Some of the user settings are also available through the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html) command. User settings are parameters with the **Kept between two sessions** property set to **Yes**.
+ユーザー設定の一部は [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/ja/page642.html) コマンドでも利用可能です。 ユーザー設定は、**2セッション間で設定を保持** プロパティが **Yes** になっているパラメーターです。
 
-When the **User Settings** feature is enabled, user settings edited by the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html) command are automatically saved in the user settings for the data file.
+**ユーザー設定** 機能が有効化されている場合、[SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/ja/page642.html) コマンドで編集されたユーザー設定はデータファイル用のユーザー設定に自動的に保存されます。
 
-> `Table sequence number` is an exception; this setting value is always saved in the data file itself.
+> `Table sequence number` は例外です。 この設定値は常にデータファイル自身に保存されます。
 
-## settings.4DSettings files
+## settings.4DSettings ファイル
 
-When you [check the **Enable User Settings** option](#enabling-user-settings), user settings files are automatically created. Their location depends on the type of user settings defined.
+データベース設定において [**外部ファイルのユーザー設定を有効にするオプション**をチェック](#ユーザー設定の有効化)した場合、ユーザー設定ファイルは自動的に作成されます。 これらのファイルの場所は、ユーザー設定の種類に応じて決まります。
 
-### User Settings (standard)
+### ユーザー設定 (標準)
 
-The standard user settings file is automatically created and placed in a settings folder at the following location:
+標準のユーザー設定ファイルは自動的に作成され、以下の場所にある Settingsフォルダー内に保存されます:
 
 [`ProjectFolder/Settings/settings.4DSettings`](../Project/architecture.md#settings-1)
 
-... where *ProjectFolder* is the name of the folder containing the project structure file.
+*ProjectFolder* は、プロジェクトストラクチャーファイルが格納されているフォルダーの名前です。
 
-In merged applications, the user settings file is placed at the following location:
+組み込みアプリケーションでは、ユーザー設定ファイルは以下の場所に配置されます:
 
-* In single-user versions: ProjectFolder/Database/Settings/settings.4DSettings
-* In client/server versions: ProjectFolder/Server Database/Settings/settings.4DSettings
+* シングルユーザー版の場合: ProjectFolder/Database/Settings/settings.4DSettings
+* クライアント‐サーバー版の場合: ProjectFolder/Server Database/Settings/settings.4DSettings
 
-### User Settings for Data File
+### データファイル用のユーザー設定
 
-The user settings file linked to the data file is automatically created and placed in a settings folder at the following location:
+データファイルにリンクされているユーザー設定ファイルは自動的に作成され、以下の場所にある Settingsフォルダー内に保存されます:
 
 [`Data/Settings/settings.4DSettings`](../Project/architecture.md#settings)
 
-... where *Data* is the name of the folder containing the current data file of the application.
+*Data* は、アプリケーションのカレントデータファイルが格納されているフォルダーの名前です。
 
-> When the data file is located at the same level as the project structure file, structure-based and data-based user settings files share the same location and file. The **User Settings for Data File...** menu command is not proposed.
+> データファイルがプロジェクトストラクチャーファイルと同階層に位置している場合、ストラクチャー用とデータ用のユーザー設定ファイルは同じ場所の同じファイルを共有します。 **データファイル用のユーザー設定...** メニューは表示されません。
 
-Settings files are XML files; they can be read and modified using integrated 4D XML commands or using an XML editor. This means that you can manage settings by programming, particularly in the context of applications compiled and merged with 4D Volume Desktop. When you modify this file by programming, the changes are only taken into account the next time the database is opened.
+設定ファイルは XMLファイルであり、4D の XMLコマンドや、XMLエディターを使用して読み込んだり変更したりすることができます。 つまり、特にコンパイルされて 4D Volume Desktop と組み込まれたアプリケーションにおいて、設定内容をプログラムで管理することが可能です。 このファイルをプログラムで編集した場合、変更内容が反映されるのはデータベース再起動後です。
 
-## Priority of settings
+## 設定の優先順位
 
-Settings can be stored at three levels. Each setting defined at one level overrides the same setting defined at a previous level, if any:
+設定は 3つの階層に保存することが可能です。 ある階層で定義されたそれぞれの設定は、前のレベルで定義された設定を上書きします (あれば):
 
-| **Priority level** | **Name**                                                                  | **Location**                                                                                                                                                  | **Comments**                                                                                                         |
-| ------------------ | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| 3 (lowest)         | Structure settings (or Settings when "User settings" feature not enabled) | ***settings.4DSettings*** file in the Sources folder (project databases) or in the Settings folder as the same level as the structure file (binary databases) | Unique location when user settings are not enabled. Applied to all copies of the application.                        |
-| 2                  | User settings (all data files)                                            | ***settings.4DSettings*** file in the Settings folder at the same level as the Project folder                                                                 | Overrides Structure settings. Stored within the application package.                                                 |
-| 1 (highest)        | User settings (current data file)                                         | ***settings.4DSettings*** file in the Settings folder at the same level as the data file                                                                      | Overrides Structure settings and User settings. Applied only when the linked data file is used with the application. |
+| **優先度** | **名称**                             | **場所**                                                                                                                      | **コメント**                                                              |
+| ------- | ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| 3 (低)   | ストラクチャー設定 (あるいは、"ユーザー設定" 機能無効時の設定) | Sourcesフォルダー内の ***settings.4DSettings*** ファイル (プロジェクトモードデータベースの場合)、またはストラクチャーファイルと同階層にある Settingsフォルダー内 (バイナリーモードデータベースの場合) | ユーザー設定が有効化されていない場合の固有の保存位置。 アプリケーションの複製すべてに適用。                        |
+| 2       | ユーザー設定 (全データファイル)                  | プロジェクトフォルダーと同階層にある Settingsフォルダー内の ***settings.4DSettings*** ファイル                                                           | ストラクチャー設定を上書きします。 アプリケーションパッケージ内に保存されます。                              |
+| 1 (高)   | ユーザー設定 (カレントデータファイル)               | データファイルと同階層にある Settingsフォルダー内の ***settings.4DSettings*** ファイル                                                               | ストラクチャー設定とユーザー設定を上書きします。 その設定とリンクされたデータファイルがアプリケーションによって使用されたときにのみ適用。 |
 
-Keep in mind that user settings files only contain a subset of relevant settings, while the structure file contains all custom settings, including core settings.
+ユーザー設定ファイルには関連した設定の一部しか含まれない一方、ストラクチャーファイルには、コア設定を含めたカスタム設定がすべて格納されているという点に注意してください。
