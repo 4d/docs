@@ -4,40 +4,40 @@ title: List Box
 ---
 
 ---
-## Columns
+## Columnas
 
-Collection of columns of the list box.
+Colección de columnas del list box.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name    | Data Type                    | Possible Values                                  |
-| ------- | ---------------------------- | ------------------------------------------------ |
-| columns | collection of column objects | Contains the properties for the list box columns |
+| Nombre  | Tipos de datos               | Valores posibles                                     |
+| ------- | ---------------------------- | ---------------------------------------------------- |
+| columns | colección de objetos columna | Contiene las propiedades de las columnas de list box |
 
-For a list of properties supported by column objects, please refer to the [Column Specific Properties](listbox_overview.md#column-specific-properties) section.
+Para ver una lista de las propiedades que soportan los objetos columna, consulte la sección [Propiedades específicas de la columna](listbox_overview.md#column-specific-properties).
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
 ---
-## Detail Form Name
-`Selection type list box`
+## Nombre formulario detallado
+`List box del tipo selección`
 
-Specifies the form to use for modifying or displaying individual records of the list box.
+Especifica el formulario que se utilizará para modificar o mostrar los registros individuales del list box.
 
-The specified form is displayed:
+Se muestra el formulario especificado:
 
 *   when using `Add Subrecord` and `Edit Subrecord` standard actions applied to the list box (see [Using standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Using-standard-actions.300-4354811.en.html)),
 *   when a row is double-clicked and the [Double-click on Row](#double-click-on-row) property is set to "Edit Record" or "Display Record".
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name       | Data Type | Possible Values                                                             |
-| ---------- | --------- | --------------------------------------------------------------------------- |
-| detailForm | string    | <li>Name (string) of table or project form</li><li>POSIX path (string) to a .json file describing the form</li><li>Object describing the form</li> |
+| Nombre     | Tipos de datos | Valores posibles                                                            |
+| ---------- | -------------- | --------------------------------------------------------------------------- |
+| detailForm | string         | <li>Nombre (cadena) de la tabla o formulario proyecto</li><li>POSIX path (string) to a .json file describing the form</li><li>Objeto que describe el formulario</li> |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -47,27 +47,27 @@ The specified form is displayed:
 
 
 ---
-## Double-click on row
-`Selection type list box`
+## Doble clic en línea
+`List box del tipo selección`
 
-Sets the action to be performed when a user double-clicks on a row in the list box. The available options are:
+Define la acción a realizar cuando un usuario haga doble clic en una línea en el list box. Las opciones disponibles son:
 
-*   **Do nothing** (default): Double-clicking a row does not trigger any automatic action.
-*   **Edit Record**: Double-clicking a row displays the corresponding record in the detail form defined [for the list box](#detail-form-name). The record is opened in read-write mode so it can be modified.
-*   **Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified.
-> Double-clicking an empty row is ignored in list boxes.
+*   **No hacer nada** (por defecto): hacer doble clic en una línea no desencadena ninguna acción automática.
+*   **Editar registro**: al hacer doble clic en una línea se muestra el registro correspondiente en el formulario detallado definido [ para el list box](#detail-form-name). El registro se abre en modo de lectura-escritura para que pueda ser modificado.
+*   **Mostrar registro**: idéntica a la acción anterior, salvo que el registro se abre en modo de sólo lectura para que no pueda ser modificado.
+> > Double-clicking an empty row is ignored in list boxes.
 
-Regardless of the action selected/chosen, the `On Double clicked` form event is generated.
+Independientemente de la acción seleccionada/elegida, se genera el evento de formulario `On Double clicked`.
 
-For the last two actions, the On `Open Detail` form event is also generated. The `On Close Detail` is then generated when a record displayed in the detail form associated with the list box is about to be closed (regardless of whether or not the record was modified).
+Para las dos últimas acciones, también se genera el evento de formulario `On Open Detail`. `On Close Detail` se genera cuando un registro mostrado en el formulario detallado asociado al list box está a punto de cerrarse (independientemente de que el registro se haya modificado o no).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name                   | Data Type | Possible Values                     |
-| ---------------------- | --------- | ----------------------------------- |
-| doubleClickInRowAction | string    | "editSubrecord", "displaySubrecord" |
+| Nombre                 | Tipos de datos | Valores posibles                    |
+| ---------------------- | -------------- | ----------------------------------- |
+| doubleClickInRowAction | string         | "editSubrecord", "displaySubrecord" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -75,42 +75,42 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 
 ---
-## Highlight Set
+## Conjunto resaltado
 
-`Selection type list box`
+`List box del tipo selección`
 
 This property is used to specify the set to be used to manage highlighted records in the list box (when the **Arrays** data source is selected, a Boolean array with the same name as the list box is used).
 
-4D creates a default set named *ListBoxSetN* where *N* starts at 0 and is incremented according to the number of list boxes in the form. If necessary, you can modify the default set. It can be a local, process or interprocess set (we recommend using a local set, for example *$LBSet*, in order to limit network traffic). It is then maintained automatically by 4D. If the user selects one or more rows in the list box, the set is updated immediately. If you want to select one or more rows by programming, you can apply the commands of the “Sets” theme to this set.
+4D creates a default set named *ListBoxSetN* where *N* starts at 0 and is incremented according to the number of list boxes in the form. Si es necesario, puede modificar el conjunto por defecto. It can be a local, process or interprocess set (we recommend using a local set, for example *$LBSet*, in order to limit network traffic). A continuación, 4D lo mantiene automáticamente. If the user selects one or more rows in the list box, the set is updated immediately. If you want to select one or more rows by programming, you can apply the commands of the “Sets” theme to this set.
 > * The highlighted status of the list box rows and the highlighted status of the table records are completely independent.
 > * If the “Highlight Set” property does not contain a name, it will not be possible to make selections in the list box.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name         | Data Type | Possible Values |
-| ------------ | --------- | --------------- |
-| highlightSet | string    | Name of the set |
+| Nombre       | Tipos de datos | Valores posibles    |
+| ------------ | -------------- | ------------------- |
+| highlightSet | string         | Nombre del conjunto |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
 
 
 ---
-## Locked columns and static columns
+## Columnas bloqueadas y columnas estáticas
 
 Locked columns and static columns are two separate and independent functionalities in list boxes:
 
 *   Locked columns always stay displayed to the left of the list box; they do not scroll horizontally.
 *   Static columns cannot be moved by drag and drop within the list box.
-> You can set static and locked columns by programming, refer to [List Box](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box.201-4310263.en.html) in the [4D Language Reference](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Language-Reference.100-4310216.en.html) manual.
+> > You can set static and locked columns by programming, refer to [List Box](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box.201-4310263.en.html) in the [4D Language Reference](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Language-Reference.100-4310216.en.html) manual.
 
-These properties interact as follows:
+Estas propiedades interactúan de la siguiente manera:
 
-*   If you set columns that are only static, they cannot be moved.
+*   Si define columnas que sólo son estáticas, no se pueden mover.
 
-*   If you set columns that are locked but not static, you can still change their position freely within the locked area. However, a locked column cannot be moved outside of this locked area.
+*   If you set columns that are locked but not static, you can still change their position freely within the locked area. Sin embargo, una columna bloqueada no puede moverse fuera de esta área bloqueada.
 
 ![](../assets/en/FormObjects/property_lockedStaticColumns1.png)
 
@@ -120,32 +120,32 @@ These properties interact as follows:
 
 *   You can set a combination of locked and static columns according to your needs. For example, if you set three locked columns and one static column, the user can swap the two right-most columns within the locked area (since only the first column is static).
 
-### Number of Locked Columns
+### Número de columnas bloqueadas
 
 Number of columns that must stay permanently displayed in the left part of the list box, even when the user scrolls through the columns horizontally.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name              | Data Type | Possible Values |
-| ----------------- | --------- | --------------- |
-| lockedColumnCount | integer   | minimum: 0      |
+| Nombre            | Tipos de datos | Valores posibles |
+| ----------------- | -------------- | ---------------- |
+| lockedColumnCount | integer        | mínimo: 0        |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
 
-### Number of Static Columns
+### Número de columnas estáticas
 
-Number of columns that cannot be moved during execution.
+Número de columnas que no se pueden mover durante la ejecución.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name              | Data Type | Possible Values |
-| ----------------- | --------- | --------------- |
-| staticColumnCount | integer   | minimum: 0      |
+| Nombre            | Tipos de datos | Valores posibles |
+| ----------------- | -------------- | ---------------- |
+| staticColumnCount | integer        | mínimo: 0        |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -155,18 +155,18 @@ Number of columns that cannot be moved during execution.
 
 
 ---
-## Number of Columns
+## Número de columnas
 
-Sets the number of columns of the list box.
-> You can add or remove columns dynamically by programming, using commands such as [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.en.html) or [LISTBOX DELETE COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.en.html).
+Define el número de columnas del list box.
+> Puede añadir o eliminar columnas de forma dinámica por programación, utilizando comandos como [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.en.html) o [LISTBOX DELETE COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.en.html).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name        | Data Type | Possible Values |
-| ----------- | --------- | --------------- |
-| columnCount | integer   | minimum: 1      |
+| Nombre      | Tipos de datos | Valores posibles |
+| ----------- | -------------- | ---------------- |
+| columnCount | integer        | mínimo: 1        |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
@@ -174,23 +174,23 @@ Sets the number of columns of the list box.
 
 
 ---
-## Row Control Array
+## Array de control de líneas
 
-`Array type list box`
+`List box de tipo array`
 
-A 4D array controlling the display of list box rows.
+Un array 4D que controla la visualización de las líneas del list box.
 
-You can set the "hidden", "disabled" and "selectable" interface properties for each row in an array-based list box using this array. It can also be designated using the `LISTBOX SET ARRAY` command.
+You can set the "hidden", "disabled" and "selectable" interface properties for each row in an array-based list box using this array. También puede ser designado utilizando el comando `LISTBOX SET ARRAY`.
 
 The row control array must be of the Longint type and include the same number of rows as the list box. Each element of the *Row Control Array* defines the interface status of its corresponding row in the list box. Three interface properties are available using constants in the "List Box" constant theme:
 
-| Constant                 | Value | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| ------------------------ | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| lk row is disabled       | 2     | The corresponding row is disabled. The text and controls such as check boxes are dimmed or grayed out. Enterable text input areas are no longer enterable. Default value: Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| lk row is hidden         | 1     | The corresponding row is hidden. Hiding rows only affects the display of the list box. The hidden rows are still present in the arrays and can be managed by programming. The language commands, more particularly `LISTBOX Get number of rows` or `LISTBOX GET CELL POSITION`, do not take the displayed/hidden status of rows into account. For example, in a list box with 10 rows where the first 9 rows are hidden, `LISTBOX Get number of rows` returns 10. From the user’s point of view, the presence of hidden rows in a list box is not visibly discernible. Only visible rows can be selected (for example using the Select All command). Default value: Visible |
-| lk row is not selectable | 4     | The corresponding row is not selectable (highlighting is not possible). Enterable text input areas are no longer enterable unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. Controls such as check boxes and lists are still functional however. This setting is ignored if the list box selection mode is "None". Default value: Selectable                                                                                                                                                                                                                                                                                        |
+| Constante                | Value | Comentario                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ------------------------ | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| lk row is disabled       | 2     | La línea correspondiente está desactivada. El texto y los controles, como las casillas de selección, aparecen atenuados o en gris. Las áreas de entrada de texto introducibles ya no lo son. Valor por defecto: Activado                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| lk row is hidden         | 1     | La línea correspondiente está oculta. Ocultar las líneas sólo afecta a la visualización del list box. The hidden rows are still present in the arrays and can be managed by programming. The language commands, more particularly `LISTBOX Get number of rows` or `LISTBOX GET CELL POSITION`, do not take the displayed/hidden status of rows into account. For example, in a list box with 10 rows where the first 9 rows are hidden, `LISTBOX Get number of rows` returns 10. From the user’s point of view, the presence of hidden rows in a list box is not visibly discernible. Only visible rows can be selected (for example using the Select All command). Valor por defecto: Visible |
+| lk row is not selectable | 4     | The corresponding row is not selectable (highlighting is not possible). Enterable text input areas are no longer enterable unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. Controls such as check boxes and lists are still functional however. Esta configuración se ignora si el modo de selección del list box es "Ninguno". Valor por defecto: Seleccionable                                                                                                                                                                                                                                                                                      |
 
-To change the status for a row, you just need to set the appropriate constant(s) to the corresponding array element. For example, if you do not want row #10 to be selectable, you can write:
+To change the status for a row, you just need to set the appropriate constant(s) to the corresponding array element. Por ejemplo, si no quiere que la línea #10 sea seleccionable, puede escribir:
 
 ```4d
  aLControlArr{10}:=lk row is not selectable
@@ -198,7 +198,7 @@ To change the status for a row, you just need to set the appropriate constant(s)
 
 ![](../assets/en/FormObjects/listbox_styles5.png)
 
-You can define several interface properties at once:
+Puede definir varias propiedades de la interfaz a la vez:
 
 ```4d
  aLControlArr{8}:=lk row is not selectable + lk row is disabled
@@ -206,7 +206,7 @@ You can define several interface properties at once:
 
 ![](../assets/en/FormObjects/listbox_styles6.png)
 
-Note that setting properties for an element overrides any other values for this element (if not reset). For example:
+Note that setting properties for an element overrides any other values for this element (if not reset). Por ejemplo:
 
 ```4d
  aLControlArr{6}:=lk row is disabled + lk row is not selectable 
@@ -216,34 +216,34 @@ Note that setting properties for an element overrides any other values for this 
 ```
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name             | Data Type | Possible Values        |
-| ---------------- | --------- | ---------------------- |
-| rowControlSource | string    | Row control array name |
+| Nombre           | Tipos de datos | Valores posibles                      |
+| ---------------- | -------------- | ------------------------------------- |
+| rowControlSource | string         | Nombre del array de control de líneas |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
 
 
 ---
-## Selection Mode
+## Modo de selección
 
-Designates the option for allowing users to select rows:
-- **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
-- **Single**: One row at a time can be selected in this mode. Clicking on a row will select it. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
-  The Up and Down arrow keys select the previous/next row in the list. The other navigation keys scroll the list. The `On Selection Change` form event is generated every time the current row is changed.
-- **Multiple**: Several rows can be selected simultaneously in this mode.
+Designa la opción para permitir a los usuarios seleccionar líneas:
+- **Ninguna**: las líneas no se pueden seleccionar si se elige este modo. Hacer clic en la lista no tendrá ningún efecto a menos que la opción [Edición con un solo clic](properties_Entry.md#single-click-edit) esté activada. Las teclas de navegación sólo hacen que la lista se desplace; no se genera el evento de formulario `On Selection Change`.
+- **Simple**: en este modo se puede seleccionar una línea a la vez. Si hace clic en una línea, la seleccionará. Un **Ctrl+clic** (Windows) o **Comando+clic** (macOS) en una línea cambia su estado (entre seleccionada o no).  
+  Las teclas de flecha arriba y abajo seleccionan la línea anterior/siguiente de la lista. Las otras teclas de navegación se desplazan por la lista. El evento de formulario `On Selection Change` se genera cada vez que se cambia la línea actual.
+- **Múltiple**: en este modo se pueden seleccionar varias líneas simultáneamente.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name          | Data Type | Possible Values              |
-| ------------- | --------- | ---------------------------- |
-| selectionMode | string    | "multiple", "single", "none" |
+| Nombre        | Tipos de datos | Valores posibles             |
+| ------------- | -------------- | ---------------------------- |
+| selectionMode | string         | "multiple", "single", "none" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
