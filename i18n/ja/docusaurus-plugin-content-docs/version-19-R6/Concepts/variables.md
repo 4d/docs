@@ -3,100 +3,100 @@ id: variables
 title: Variables
 ---
 
-Data in 4D is stored in two fundamentally different ways. **Fields** store data permanently on disk; **variables** store data temporarily in memory.
+4D のデータは、根本的に異なっている 2つの方法で保持されます。 **フィールド** はディスクに永続的にデータを保存するのに対し、**変数** はメモリ上に一時的にデータを格納します。
 
-When you set up your 4D database, you specify the names and types of fields that you want to use. Variables are much the same—you also give them names and different types (see [Data types](Concepts/data-types.md)).
+データベースを作成する際には、フィールドに名前とデータタイプを指定します。 同様に、変数にも名前と [データタイプ](Concepts/data-types.md) を指定します。
 
-Once created, you can use a variable wherever you need it in your application. For example, you might need to store a text variable in a field of same type:
+いったん作成された変数は、アプリケーションで必要とされる場所に使用できます。 たとえば、テキスト変数を同じタイプのフィールドに格納するには次のように書きます:
 
 ```4d
  [MyTable]MyField:=MyText
 ```
 
-Variables are language objects; you can create and use variables that will never appear on the screen. In your forms, you can display variables (except Pointer and BLOB) on the screen, enter data into them, and print them in reports. In this way, enterable and non-enterable area variables act just like fields, and the same built-in controls are available when you create them. Form variables can also control buttons, list boxes, scrollable areas, picture buttons, and so on, or display results of calculations that do not need to be saved.
+変数はランゲージの要素です。画面上に表示されることのない、裏方に徹した変数を作成・利用することができます。 もちろん、フォーム上に変数の値を表示することもできます (ポインターやBLOBを除く)。また、変数に値を入力したり、変数の値をレポートに印刷したりすることも可能です。 このとき、入力可や入力不可の変数オブジェクトはフィールドオブジェクトと同様に振舞い、提供されるコントロールも類似しています。 フォーム上のボタン、リストボックス、スクロールエリア、ピクチャーボタンなどのオブジェクトも変数を使って制御することができるほか、保存不要な計算結果を表示させることもできます。
 
-## Declaring Variables
+## 変数の宣言
 
-You create variables by declaring them. The 4D language offers two ways to declare variables:
+変数は宣言によって作成されます。 4D ランゲージでは、変数の宣言方法は2つあります:
 
-- using the `var` keyword (recommended, specially if your code uses objects and classes),
-- using one of the "Compiler" or "Arrays" theme 4D language commands (classic language only).
+- `var` キーワードを使った宣言 (推奨、とくにオブジェクトやクラスをコードで使用する場合)
+- "コンパイラー" や "配列" テーマの 4D ランゲージコマンドを使った宣言 (クラシックランゲージのみ)
 
-**Note:** Although it is usually not recommended, you can create basic variables simply by using them; you do not necessarily need to formally define them. For example, to declare a variable that will hold the current date plus 30 days, you can write:
+**注:** この方法は推奨されませんが、単純に使用することによって変数を宣言することもできます。正式にそれらを定義することは必須ではありません。 たとえば、今日の日付に30日足した値を格納した変数を宣言するには、次のように書くことができます:
 
 ```4d
- MyDate:=Current date+30 //MyDate is created  
- // 4D guesses it is of date type  
- // and assigns the current date plus 30 days
+ MyDate:=Current date+30 //  MyDateを作成します
+ // これは日付型の変数であると 4D は推測します 
+ // 30日後の日付が代入されます
 ```
 
-### Using the `var` keyword
+### `var` キーワードによる宣言
 
-Declaring variables using the `var` keyword is recommended since this syntax allows you to bind object variables with classes. Using this syntax enhances code editor suggestions and type-ahead features.
+オブジェクト変数をクラスに紐づけることができるため、`var` キーワードを使った変数宣言が推奨されます。 このシンタックスはコードエディターの自動補完機能を強化します。
 
-To declare a variable of any type with the `var` keyword, use the following syntax:
+`var` キーワードを使って変数を宣言するには、次のシンタックスを用います:
 
 `var <varName>{; <varName2>;...}{ : <varType>}`
 
-For example:
+例:
 
 ```4d
-var $myText : Text  //a text variable
-var myDate1; myDate2 : Date  //several date variables
-var $myFile : 4D.File  //a file class object variable
-var $myVar //a variant variable
+var $myText : Text  // テキスト変数
+var myDate1; myDate2 : Date  // 複数の日付変数
+var $myFile : 4D.File  // File クラスオブジェクト変数
+var $myVar // バリアント型変数
 ```
 
 `varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers. This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md).
 
-`varType` can be:
+`varType` には次が指定できます:
 
-- a [basic type](Concepts/data-types.md), in which case the variable contains a value of the declared type,
-- a [class reference](Concepts/classes.md) (4D class or user class), in which case the variable contains a reference to an object of the defined class.
+- [基本のデータ型](Concepts/data-types.md): 変数には、宣言された型の値が格納されます
+- [クラス参照](Concepts/classes.md) (4Dクラスまたはユーザークラス): 変数には、定義されたクラスのオブジェクトへの参照が格納されます
 
-If `varType` is omitted, a variable of the **variant** type is created.
+`varType` を省略すると、**variant** 型の変数が作成されます。
 
-The following table lists all supported `varType` values:
+サポートされている `varType` 値の一覧です:
 
-| varType                | Contents                              |
-| ---------------------- | ------------------------------------- |
-| `Text`                 | Text value                            |
-| `Date`                 | Date value                            |
-| `Time`                 | Time value                            |
-| `Boolean`              | Boolean value                         |
-| `Integer`              | Long integer value                    |
-| `Real`                 | Real value                            |
-| `Pointer`              | Pointer value                         |
-| `Picture`              | Picture value                         |
-| `Blob`                 | Scalar Blob value                     |
-| `Collection`           | Collection value                      |
-| `Variant`              | Variant value                         |
-| `Object`               | Object with default class (4D.Object) |
-| `4D.<className>` | Object of the 4D class name           |
-| `cs.<className>` | Object of the user class name         |
+| varType                | 内容                           |
+| ---------------------- | ---------------------------- |
+| `テキスト`                 | テキスト値                        |
+| `日付`                   | 日付値                          |
+| `時間`                   | 時間値                          |
+| `ブール`                  | ブール値                         |
+| `整数`                   | 倍長整数値                        |
+| `実数`                   | 実数値                          |
+| `Pointer`              | ポインター値                       |
+| `Picture`              | ピクチャー値                       |
+| `Blob`                 | スカラーBLOB値                    |
+| `コレクション`               | コレクション値                      |
+| `Variant`              | バリアント値                       |
+| `Object`               | デフォルトクラス (4D.Object) のオブジェクト |
+| `4D.<className>` | 4Dクラス名のオブジェクト                |
+| `cs.<className>` | ユーザークラス名のオブジェクト              |
 
-#### Examples
+#### 例題
 
-- To declare local and process basic variables:
+- 基本のデータ型の、ローカル変数およびプロセス変数の宣言:
 
 ```4d
 var $myText; myText; $vt : Text
 var myVar //variant
 
 var $o : Object    
-//equivalent to:  
+// 次と同義です:
 var $o : 4D.Object
-//also equivalent to C_OBJECT($o)
+// C_OBJECT($o) とも同義です
 ```
 
-- To declare object variables of 4D class:
+- 4Dクラス型のオブジェクト変数の宣言:
 
 ```4d
 var $myFolder : 4D.Folder
 var $myFile : 4D.File
 ```
 
-- To declare object variables of user class:
+- ユーザークラス型のオブジェクト変数の宣言:
 
 ```4d
 var $myClass : cs.MyClass
@@ -104,111 +104,110 @@ var $dataclass : cs.Employee
 var $entity : cs.EmployeeEntity
 ```
 
-### Using a C_ directive
+### C_ 指示子による宣言
 
-> **Compatibility Note:** This feature is not recommended to declare variables inside methods. It is recommended to use the [var](#using-the-var-keyword) keyword.
+> **互換性に関する注記:** メソッド内で変数を宣言するにあたって、この方法は推奨されません。 [var](#using-the-var-keyword) キーワードの使用が推奨されます。
 
-Directives from the "Compiler" theme commands allow you to declare variables of basic types.
+"コンパイラー" テーマコマンドの指示子を使って、基本のデータ型の変数を宣言することができます。
 
-For example, if you want to define a text variable, you write:
+たとえば、テキスト変数を宣言するには次のように書きます:
 
 ```4d
  C_TEXT(myText)
 ```
 
-The following are some basic variable declarations:
+いくつかの基本的な変数宣言の例です:
 
 ```4d
- C_BLOB(vxMyBlob) // The process variable vxMyBlob is declared as a variable of type BLOB
- C_DATE($vdCurDate) // The local variable $vdCurDate is declared as a variable of type Date
- C_LONGINT(vg1;vg2;vg3) // The 3 process variables vg1, vg2 and vg3 are declared as variables of type longint  
- C_OBJECT($vObj) // The local variable $vObj is declared as a variable of type Object
- C_COLLECTION($vCol) // The local variable $vCol is declared as a variable of type Collection
+ C_BLOB(vxMyBlob) // プロセス変数 vxMyBlob を BLOB型として宣言します C_DATE($vdCurDate) // ローカル変数 $vdCurDate を日付型として宣言します
+ C_LONGINT(vg1;vg2;vg3) // 3つのプロセス変数 vg1, vg2, vg3 を倍長整数型として宣言します
+ C_OBJECT($vObj) // ローカル変数 $vObj をオブジェクト型として宣言します
+ C_COLLECTION($vCol) // ローカル変数 $vCol をコレクション型として宣言します
 ```
 
-**Note:** Arrays are a particular type of variables (an array is an ordered series of variables of the same type). Arrays are declared with specific commands, such as `ARRAY LONGINT(alAnArray;10)`. For more information, please refer to [Arrays](Concepts/arrays.md).
+**注:** 配列とは変数の一種で、同じタイプの変数を番号付きで並べたものです。 配列は、配列宣言コマンド (例: `ARRAY LONGINT(alAnArray;10)`) を使用して作成します。 詳細については [配列](Concepts/arrays.md) を参照ください。
 
-## Assigning Data
+## 変数への代入
 
-Data can be put into and copied out of variables and arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields.
+変数を対象に、データを格納したり、格納したデータを別の対象にコピーしたりすることができます。 変数にデータを格納することを、**変数にデータを代入する**と言い、代入演算子 (:=) を使っておこないます。 代入演算子はフィールドに対してデータを代入する場合にも使います。
 
-The assignment operator is a primary way to create a variable and to put data into it. You write the name of the variable that you want to create on the left side of the assignment operator. For example:
+代入演算子は、変数を作成し、変数にデータを代入するために使用します。 作成する変数名を代入演算子の左側に書きます。 例:
 
 ```4d
 MyNumber:=3
 ```
 
-creates the variable _MyNumber_ and puts the number 3 into it. If MyNumber already exists, then the number 3 is just put into it.
+は変数 _MyNumber_ を作成し、数値 3を代入します。 MyNumber が既に存在していれば、そこに数値 3が代入されます。
 
-> It is usually not recommended to create variables without [declaring their type](#creating-variables).
+> [データ型の宣言](#変数の作成) をせずに変数を作成することは通常推奨されません。
 
-Of course, variables would not be very useful if you could not get data out of them. Once again, you use the assignment operator. If you need to put the value of MyNumber in a field called [Products]Size, you would write _MyNumber_ on the right side of the assignment operator:
+もちろん、変数からデータを取り出すことができなければ、便利とはいえません。 再度代入演算子を使用します。 [Products]Size というフィールドに _MyNumber_ 変数の値を代入するには、代入演算子の右側に MyNumber を書きます:
 
 ```4d
 [Products]Size:=MyNumber
 ```
 
-In this case, _[Products]Size_ would be equal to 3. This example is rather simple, but it illustrates the fundamental way that data is transferred from one place to another by using the language.
+これで、_[Products]Size_ の値は3になります。 この例はとても単純ですが、ある場所から別の場所へランゲージによってデータを転送させる基本的な手順を表しています。
 
-You assign data to array elements by using curly braces ({...}):
+配列要素にデータを代入するには中カッコ ({...}) を使用します:
 
 ```4d
 atNames{1}:="Richard"
 ```
 
-## Local, Process, and Interprocess variables
+## ローカル、プロセス、およびインタープロセス変数
 
-You can create three types of variables: **local**, **process**, and **interprocess**. The difference between the three types of elements is their scope, or the objects to which they are available.
+**ローカル**、**プロセス**、および **インタープロセス** という、3種類の変数の変数を作成することができます。 これらの変数の違いは使用できるスコープにあります。また、それらを使用することのできるオブジェクトも異なります。
 
-### Local variables
+### ローカル変数
 
-A local variable is, as its name implies, local to a method—accessible only within the method in which it was created and not accessible outside of that method. Being local to a method is formally referred to as being “local in scope.” Local variables are used to restrict a variable so that it works only within the method.
+ローカル変数はその名のとおりメソッド内でローカルであり、変数が作成されたメソッドの範囲内でのみ使用可能で、その他のメソッドからはアクセスできません。 メソッド内でローカルであるというのは、正式には「スコープがローカルである」といいます。 ローカル変数は、その使用範囲をメソッド内に限定するために用います。
 
-You may want to use a local variable to:
+ローカル変数は、以下のような目的のために使用されます:
 
-- Avoid conflicts with the names of other variables
-- Use data temporarily
-- Reduce the number of process variables
+- 他の変数名との重複を避ける。
+- データを一時的に使用する。
+- プロセス変数の数を減らす。
 
-The name of a local variable always starts with a dollar sign ($) and can contain up to 31 additional characters. If you enter a longer name, 4D truncates it to the appropriate length.
+ローカル変数の名前は必ずドル記号 ($) で始め、この記号を除く31文字までの文字を指定できます。 これより長い名前を指定すると、4D は余分の32文字以降を切り捨てます。
 
-When you are working in an application project with many methods and variables, you often find that you need to use a variable only within the method on which you are working. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.
+多くのメソッドや変数を持つアプリケーションプロジェクトで作業する場合、現在作業しているメソッドの範囲内で一時的に変数が必要となる場合がよくあります。 この場合、同じ変数名が他で使用されていないかどうかを気にすることなくローカル変数を作成することができます。
 
-Frequently, in an application, small pieces of information are needed from the user. The `Request` command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Here is an example:
+アプリケーションではしばしば、ユーザーによる少量のデータ入力を必要とする場合があります。 `Request` コマンドを使って、この情報を取得することができます。 このコマンドはデータ入力を求めるダイアログボックスを表示し、 ユーザーがデータを入力すると、その情報を戻り値として返します。 このようなデータは通常、メソッド内で長期間維持する必要はありません。 これは、ローカル変数を使用する典型的な例といえます。 次に例を示します:
 
 ```4d
- $vsID:=Request("Please enter your ID:")
+ $vsID:=Request("ID を入力してください:")
  If(OK=1)
     QUERY([People];[People]ID =$vsID)
  End if
 ```
 
-This method simply asks the user to enter an ID. It puts the response into a local variable, $vsID, and then searches for the ID that the user entered. When this method finishes, the $vsID local variable is erased from memory. This is fine, because the variable is needed only once and only in this method.
+このメソッドは、ユーザーに ID を入力するように要求します。 ローカル変数 $vsID にレスポンスが代入され、ユーザーが入力した ID に基づいた検索がおこなわれます。 このメソッドが終了した時点で、$vsID ローカル変数はメモリから消去されます。 この変数は 1回のみ、このメソッド内でしか使われないため、これ以上維持する必要はありません。
 
-**Note:** Parameters $1, $2... passed to methods are local variables. For more information, please refer to [Parameters](Concepts/parameters.md).
+**注:** メソッドに渡される $1, $2...等の引数はローカル変数です。 詳細については [パラメーター](Concepts/parameters.md) を参照ください。
 
-### Process variables
+### プロセス変数
 
-A process variable is available only within a process. It is accessible to the process method and any other method called from within the process.
+プロセス変数は、同じプロセスの範囲内に限り使用可能です。 この変数はプロセスメソッドと、そのプロセス内で呼び出された他のメソッドで使用することができます。
 
-A process variable does not have a prefix before its name. A process variable name can contain up to 31 characters.
+プロセス変数には名前に付ける接頭辞がありません。 プロセス変数の名前は、最大31文字までの長さで指定できます。
 
-In interpreted mode, variables are maintained dynamically; they are created and erased from memory “on the fly.” In compiled mode, all processes you create (user processes) share the same definition of process variables, but each process has a different instance for each variable. For example, the variable myVar is one variable in the process P_1 and another one in the process P_2.
+インタープリターモードでは、変数は動的にメモリ上に作成・消去されます。 これに対してコンパイルモードでは、作成したすべてのプロセス (ユーザープロセス) で同じプロセス変数定義が共有されますが、変数のインスタンスはプロセス毎に異なるものとなります。 たとえば、プロセスP_1 とプロセスP_2 の両方においてプロセス変数 myVar が存在していても、それらはそれぞれ別のインスタンスです。
 
-A process can “peek and poke” process variables from another process using the commands `GET PROCESS VARIABLE` and `SET PROCESS VARIABLE`. It is good programming practice to restrict the use of these commands to the situation for which they were added to 4D:
+バージョン6より、`GET PROCESS VARIABLE` や `SET PROCESS VARIABLE` を使用して、あるプロセスから他のプロセスのプロセス変数の値を取得したり、設定したりできるようになりました。 これらのコマンドの利用は、以下のような状況に限定することが、良いプログラミングの作法です:
 
-- Interprocess communication at specific places or your code
-- Handling of interprocess drag and drop
-- In Client/Server, communication between processes on client machines and the stored procedures running on the server machines
+- コード内の特定の箇所におけるプロセス間通信
+- プロセス間のドラッグ＆ドロップ処理
+- クライアント/サーバーにおいて、クライアントマシン上のプロセスとサーバーマシン上のストアドプロシージャー間の通信
 
-For more information, see the chapter **Processes** and the description of these commands.
+詳細については **プロセス** の章と、各コマンドの説明を参照ください。
 
-### Interprocess variables
+### インタープロセス変数
 
-Interprocess variables are available throughout the project and are shared across all cooperative processes. They are primarily used to share information between processes.
+インタープロセス変数はプロジェクト全体で使用することができ、すべてのコオペラティブプロセスで共有されます。 これらは主としてプロセス間で情報を共有するために使われます。
 
-> Use of interprocess variables is not recommended since they are not available from preemptive processes and tend to make the code less maintainable.
+> プリエンプティブプロセスにおいては使用できないことと、コードの保守管理を煩雑にすることから、インタープロセス変数の使用は推奨されません。
 
 The name of an interprocess variable always begins with the symbols `<>` — a “less than” sign followed by a “greater than” sign— followed by 31 characters.
 
-In Client/Server, each machine (Client machines and Server machine) share the same definition of interprocess variables, but each machine has a different instance for each variable.
+クライアント/サーバーでは、各マシン (クライアントマシンとサーバーマシン) で同じインタープロセス変数定義を共有しますが、マシンごとに各変数のインスタンスが存在します。
