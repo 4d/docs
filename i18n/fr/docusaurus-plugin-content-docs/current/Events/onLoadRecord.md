@@ -1,18 +1,18 @@
 ---
 id: onLoadRecord
-title: On Load Record
+title: Sur chargement ligne
 ---
 
-| Code | Can be called by | Definition                                                          |
-| ---- | ---------------- | ------------------------------------------------------------------- |
-| 40   | Form             | During user entry in list, a record is loaded and a field is edited |
+| Code | Peut être appelé par | Définition                                                                                           |
+| ---- | -------------------- | ---------------------------------------------------------------------------------------------------- |
+| 40   | Formulaire           | Lors de la saisie de l'utilisateur dans la liste, un enregistrement est chargé et un champ est édité |
 
 
 ## Description
 
-The `On Load Record` event can only be used in the context of an **output form**. It is triggered during data entry in list, after a record is highlighted and a field changes to editing mode.
+L'événement `On Load Record` ne peut être utilisé que dans le contexte d'un **formulaire de sortie**. Il est déclenché lors de la saisie des données dans la liste, après la mise en surbrillance d'un enregistrement et le passage d'un champ en mode d'édition.
 
-> This event cannot be selected for project forms, it is only available with **table forms**.
+> Cet événement ne peut pas être sélectionné pour les formulaires projet, il est uniquement disponible avec les **formulaires table**.
 
 
 
