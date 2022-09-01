@@ -3,13 +3,13 @@ id: onBoundVariableChange
 title: On Bound Variable Change
 ---
 
-| Code | Can be called by | Definition                                  |
-| ---- | ---------------- | ------------------------------------------- |
-| 54   | Form             | The variable bound to a subform is modified |
+| コード | 呼び出し元 | 定義                     |
+| --- | ----- | ---------------------- |
+| 54  | フォーム  | サブフォームにバインドされた変数が更新された |
 
 
-## Description
+## 詳細
 
-This event is generated in the context of the form method of a [subform](FormObjects/subform_overview.md) as soon as a value is assigned to the variable bound with the subform in the parent form (even if the same value is reassigned) and if the subform belongs to the current form page or to page 0.
+このイベントは、親フォーム中のサブフォームにバインドされた変数の値が更新され (同じ値が代入された場合でも) 、かつサブフォームがカレントフォームページまたはページ0 に属している場合に、[サブフォーム](FormObjects/subform_overview.md) のフォームメソッドのコンテキストで生成されます。
 
-Form more information, refer to the [Managing the bound variable](FormObjects/subform_overview.md#managing-the-bound-variable) section.
+詳細について、[バインドされた変数の管理](FormObjects/subform_overview.md#バインドされた変数の管理) を参照してください。
