@@ -1,46 +1,46 @@
 ---
 id: propertiesWebArea
-title: Web Area
+title: Webエリア
 ---
 
 ---
-## Access 4D methods
+## 4Dメソッドコールを許可
 
-You can call 4D methods from the JavaScript code executed in a Web area and get values in return. To be able to call 4D methods from a Web area, you must activate the 4D methods accessibility property ("all").
+Webエリアで実行される JavaScripe コードから 4Dメソッドを呼び出して、戻り値を取得することができます。 4Dメソッドを Webエリアから呼び出せるようにするには、プロパティリストの "4Dメソッドコールを許可" にチェックをする必要があります。
 
-> This property is only available if the Web area [uses the embedded Web rendering engine](#use-embedded-web-rendering-engine).
+> この機能は Webエリアが [埋め込みWebレンダリングエンジンを使用](#埋め込みwebレンダリングエンジンを使用) している場合に限り、使用可能です。
 
-When this property is on, a special JavaScript object named `$4d` is instantiated in the Web area, which you can [use to manage calls to 4D project methods](webArea_overview.md#4d-object).
+このプロパティがチェックされている場合、特別な JavaScript オブジェクト `$4d` が Webエリア内にインスタンス化され、これを使用して[4Dプロジェクトメソッドの呼び出しを管理](webArea_overview.md#4dオブジェクトの使用) できるようになります。
 
 
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name                 | Data Type | Possible Values         |
-| -------------------- | --------- | ----------------------- |
-| methodsAccessibility | string    | "none" (default), "all" |
+| 名称                   | データタイプ | とりうる値                 |
+| -------------------- | ------ | --------------------- |
+| methodsAccessibility | string | "none" (デフォルト), "all" |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Web Area](webArea_overview.md)
+[Webエリア](webArea_overview.md)
 
 
 ---
-## Progression
+## 進捗状況変数
 
-Name of a Longint type variable. This variable will receive a value between 0 and 100, representing the page load completion percentage in the Web area. Automatically updated by 4D, cannot be modified manually.
+倍長整数型変数の名前です。 この変数には 0 から 100 までの値が格納され、この数値は Webエリアに表示されるページのロードされたパーセンテージを表します。 この変数は 4D が自動で更新します。手動で変更することはできません。
 
-> As of 4D v19 R5, this variable is only updated on Windows if the Web area [uses the embedded Web rendering engine](#use-embedded-web-rendering-engine).
+> As of 4D v19 R5, this variable is no longer updated in Web Areas using the [Windows system rendering engine](./webArea_overview.md#web-rendering-engine).
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name           | Data Type | Possible Values            |
-| -------------- | --------- | -------------------------- |
-| progressSource | string    | Name of a Longint variable |
+| 名称             | データタイプ | とりうる値      |
+| -------------- | ------ | ---------- |
+| progressSource | string | 倍長整数型変数の名前 |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Web Area](webArea_overview.md)
+[Webエリア](webArea_overview.md)
 
 
 
@@ -48,30 +48,30 @@ Name of a Longint type variable. This variable will receive a value between 0 an
 ---
 ## URL
 
-A String type variable that designates the URL loaded or being loading by the associated Web area. The association between the variable and the Web area works in both directions:
+文字列型の変数で、Webエリアにロードされた URL またはロード中の URL が格納されます。 変数と Webエリア間の連携は双方向でおこなわれます。
 
-*   If the user assigns a new URL to the variable, this URL is automatically loaded by the Web area.
-*   Any browsing done within the Web area will automatically update the contents of the variable.
+*   ユーザーが新しい URL を変数に割り当てると、その URL は自動で Webエリアにロードされます。
+*   Webエリアでブラウズされると、自動で変数の内容が更新されます。
 
-Schematically, this variable functions like the address area of a Web browser. You can represent it via a text area above the Web area.
+このエリアは Webブラウザーのアドレスバーのように機能します。 Webエリアの上側にテキストエリアを置いて、内容を表示させることができます。
 
-### URL Variable and WA OPEN URL command
+### URL変数と WA OPEN URL コマンド
 
-The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) command. The following differences should nevertheless be noted:
-- For access to documents, this variable only accepts URLs that are RFC-compliant ("file://c:/My%20Doc") and not system pathnames ("c:\MyDoc"). The [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) command accepts both notations.
-- If the URL variable contains an empty string, the Web area does not attempt to load the URL. The [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) command generates an error in this case.
-- If the URL variable does not contain a protocol (http, mailto, file, etc.), the Web area adds "http://", which is not the case for the [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) command.
-- When the Web area is not displayed in the form (when it is located on another page of the form), executing the [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) command has no effect, whereas assigning a value to the URL variable can be used to update the current URL.
+URL変数は [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html) コマンドと同じ効果をもたらします。 しかしながら、以下の違いに注意してください。
+- ドキュメントにアクセスする場合、この変数は RFC準拠 ("file://c:/My%20Doc") な URL のみを受け付け、システムパス名 ("c:\MyDoc") は受け付けません。 [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html) コマンドは両方の記法を受け付けます。
+- URL変数が空の文字列の場合、Webエリアは URL をロードしません。 [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html) コマンドはこれを付加しません。
+- [WA SET PAGE CONTENT](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PAGE-CONTENT.301-5232965.ja.html): このコマンドを使用する場合、([WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.ja.html) コマンドを呼び出すかあるいはエリアに割り当てられた URL変数への代入を通して) 少なくとも既に 1ページがエリア内に読み込まれている必要があります。
+- Webエリアがフォーム上で表示されていない場合 (フォームの別ページに Webエリアがある場合等)、[WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.ja.html) コマンドを実行しても効果はありません。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name      | Data Type | Possible Values |
-| --------- | --------- | --------------- |
-| urlSource | string    | A URL.          |
+| 名称        | データタイプ | とりうる値 |
+| --------- | ------ | ----- |
+| urlSource | string | URL   |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Web Area](webArea_overview.md)
+[Webエリア](webArea_overview.md)
 
 
 
@@ -79,27 +79,27 @@ The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.c
 
 
 ---
-## Use embedded Web rendering engine
+## 埋め込みWebレンダリングエンジンを使用
 
-This option allows choosing between two rendering engines for the Web area, depending on the specifics of your application:
+このオプションを使用して、Webエリアで使用する描画エンジンを 2つのうちから選択することができます:
 
-*   **unchecked** - `JSON value: system` (default): In this case, 4D uses the "best" engine corresponding to the system. This means that you automatically benefit from the latest advances in Web rendering, through HTML5 or JavaScript. However, you may notice some rendering differences between platforms. On Windows, 4D uses Microsoft Edge WebView2. On macOS, 4D uses the current version of WebKit (Safari).
+*   **チェックなし** - `JSON値: system` (デフォルト): この場合、4Dはシステムの最適なエンジンを使用します。 この結果、HTML5 や JavaScript の最新 Web描画エンジンを自動的に利用できることになります。 しかし、プラットフォーム間で若干描画に違いがでることがあります。 Windows では、4Dは Microsoft Edge WebView2 を使用します。 macOS では、カレントバージョンの WebKit (Safari) です。
 
-> On Windows, if Microsoft Edge WebView2 is not installed, 4D uses the embedded engine as system rendering engine. To know if it is installed in your system, look for "Microsoft Edge WebView2 Runtime" in your applications panel.
+> Windows で Microsoft Edge WebView2がインストールされていない場合、4D はシステムのレンダリングエンジンとして埋め込みエンジンを使用します。 システムにインストールされているかどうかを確認するには、アプリケーションパネルで "Microsoft Edge WebView2 Runtime" を検索してください。
 
-*   **checked** - `JSON value: embedded`: In this case, 4D uses the Chromium Embedded Framework (CEF). Using the embedded Web engine means that Web area rendering and their functioning in your application are identical regardless of the platform used to run 4D (slight variations of pixels or differences related to network implementation may nevertheless be observed). When this option is chosen, you no longer benefit from automatic updates of the Web engine performed by the operating system; however, new versions of the engines are regularly provided through 4D.
+*   **チェックあり** - `JSON値: embedded`: この場合、4D は Chromium Embedded Framework (CEF) を使用します。 埋め込みWebレンダリングエンジンを使用すると、Webエリアの描画とその動作が (ピクセル単位での若干の相違やネットワーク実装に関連する違いを除き) プラットフォームに関わらず同じになります。 このオプションが選択されると、OS によりおこなわれる自動更新などの利点を得ることができなくなります。 使用エンジンの新バージョンは 4D のリリースを通して定期的に提供されます。
 
-The CEF engine has the following limitations:
+CEFエンジンには以下のような制約があります:
 
-- [WA SET PAGE CONTENT](https://doc.4d.com/4dv19/help/command/en/page1037.html): using this command requires that at least one page is already loaded in the area (through a call to [`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/en/page1020.html) or an assignment to the URL variable associated to the area).
-- When URL drops are enabled by the `WA enable URL drop` selector of the [WA SET PREFERENCE](https://doc.4d.com/4dv19/help/command/en/page1041.html) command, the first drop must be preceded by at least one call to [WA OPEN URL](https://doc.4d.com/4dv19/help/command/en/page1020.html) or one assignment to the URL variable associated to the area.
+- [WA SET PAGE CONTENT](https://doc.4d.com/4dv19/help/command/ja/page1037.html): このコマンドを使用する場合、([`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/ja/page1020.html) コマンドを呼び出すかあるいはエリアに割り当てられた URL変数への代入を通して) 少なくとも既に 1ページがエリア内に読み込まれている必要があります。
+- [WA SET PREFERENCE](https://doc.4d.com/4dv19/help/command/ja/page1041.html) コマンドの `WA enable URL drop` セレクターによって URLドロップが許可されている場合、最初のドロップをする前に少なくとも 1度は [WA OPEN URL](https://doc.4d.com/4dv19/help/command/ja/page1020.html) コマンドを呼び出すか、またはエリアに割り当てられている URL変数に URL が渡されている必要があります。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name      | Data Type | Possible Values      |
-| --------- | --------- | -------------------- |
-| webEngine | string    | "embedded", "system" |
+| 名称        | データタイプ | とりうる値                |
+| --------- | ------ | -------------------- |
+| webEngine | string | "embedded", "system" |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Web Area](webArea_overview.md)
+[Webエリア](webArea_overview.md)
