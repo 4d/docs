@@ -29,7 +29,7 @@ Quando uma classe de usuário for [definida](Concepts/classes.md#class-definitio
 
 **.name** : Text<!-- END REF -->
 
-#### Descrção
+#### Descrição
 
 The `.name` property <!-- REF #ClassClass.name.Summary -->contains the name of the `4D. Class` object<!-- END REF -->. Nomes de classe diferenciam minúsculas de maiúsculas.
 
@@ -53,14 +53,14 @@ Essa propriedade é**apenas leitura**.
 **.new**( *param* : any { *;...paramN* } ) : 4D. Class<!-- END REF -->
 
 <!-- REF #ClassClass.new().Params -->
-| Parameter  | Tipo      |    | Descrção                                         |
+| Parâmetros | Tipo      |    | Descrição                                        |
 | ---------- | --------- |:--:| ------------------------------------------------ |
 | param      | any       | -> | Parâmetros a passar à função constructor         |
 | Resultados | 4D. Class | <- | Novo objeto da classe|<!-- END REF -->
 
 |
 
-#### Descrção
+#### Descrição
 
 The `.new()` function <!-- REF #ClassClass.new().Summary -->creates and returns a `cs.className` object which is a new instance of the class on which it is called<!-- END REF -->. Essa função está disponível automaticamente para todas as classes da classe store [`cs`](Concepts/classes.md#cs).
 
@@ -113,7 +113,7 @@ $person:=cs. Person.new("John";"Doe";40)
 
 **.superclass** : 4D. Class<!-- END REF -->
 
-#### Descrção
+#### Descrição
 
 The `.superclass` property <!-- REF #ClassClass.superclass.Summary -->returns the parent class of the class<!-- END REF -->. A superclass can be a `4D. Class` object, or a `cs.className` object. Se a classe não tiver uma classe pai, a propriedade retorna **null**.
 
