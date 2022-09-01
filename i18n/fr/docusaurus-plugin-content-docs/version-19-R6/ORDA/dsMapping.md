@@ -1,254 +1,254 @@
 ---
 id: dsmapping
-title: Data Model Objects
+title: Objets Data Model
 ---
 
-The ORDA technology is based upon an automatic mapping of an underlying database structure. It also provides access to data through entity and entity selection objects. As a result, ORDA exposes the whole database as a set of data model objects.
+La technologie ORDA est fondée sur une cartographie automatique d'une structure de base sous-jacente. Elle permet également d'accéder aux données via des objets sélection d'entités (entity selection) et entité (entity). Par conséquent, ORDA expose la base de données entière comme un ensemble d'objets de modèle de données.
 
 
-## Structure mapping
+## Correspondance de la structure
 
-When you call a datastore using the [`ds`](API/DataStoreClass.md#ds) or the [`Open datastore`](API/DataStoreClass.md#open-datastore) command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
+Lorsque vous appelez un datastore à l'aide de la commande [`ds`](API/DataStoreClass.md#ds) ou [`Open datastore`](API/DataStoreClass.md#open-datastore), 4D référence automatiquement les tables et les champs de la structure 4D correspondante en tant que propriétés de l'objet [datastore](#datastore) retourné :
 
-*   Tables are mapped to dataclasses.
-*   Fields are mapped to storage attributes.
-*   Relations are mapped to relation attributes - relation names, defined in the Structure editor, are used as relation attribute names.
+*   Les tables correspondent à des dataclasses.
+*   Les champs correspondent à des attributs de stockage.
+*   Les relations correspondent à des attributs de relation - les noms de relation, définis dans l'éditeur de structure, sont utilisés comme noms d'attribut de relation.
 
 ![](../assets/en/ORDA/datastoreMapping.png)
 
 
-### General rules
+### Règles générales
 
-The following rules are applied for any conversions:
+Les règles suivantes s'appliquent à toutes les conversions :
 
-* Table, field, and relation names are mapped to object property names. Make sure that such names comply with general object naming rules, as explained in the [object naming conventions](Concepts/identifiers.md) section.
-*   A datastore only references tables with a single primary key. The following tables are not referenced:
-    *   Tables without a primary key
-    *   Tables with composite primary keys.
-*   BLOB fields are automatically available as attributes of the [Blob object](Concepts/dt_blob.md#blob-types) type.
+* Les noms de table, de champ et de relation correspondent à des noms de propriété d'objet. Assurez-vous que ces noms sont conformes aux règles générales de dénomination des objets, comme expliqué dans la section [Conventions de dénomination des objets](Concepts/identifiers.md).
+*   Un datastore ne référence que les tables avec une seule clé primaire. Les tables suivantes ne sont pas référencées :
+    *   Tables sans clé primaire
+    *   Tables avec clés primaires composites.
+*   Les champs BLOB sont automatiquement disponibles comme attributs de type [objet Blob](Concepts/dt_blob.md#blob-types).
 
 > ORDA mapping does not take into account:  
 > - the "Invisible" option for tables or fields, - the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`, - the "Manual" or "Automatic" property of relations.
 
 
-### Rules for remote access control
+### Règles de contrôle d'accès à distance
 
-When accessing a remote datastore through the `Open datastore` command or [REST requests](REST/gettingStarted.md), only tables and fields with the **Expose as REST resource** property are available remotely.
+Lorsque vous accédez à un datastore distant via la commande `Ouvrir datastore` ou des [requêtes REST](REST/gettingStarted.md), seules les tables et les champs avec la propriété de ressource **Expose as REST resource** sont disponibles à distance.
 
-This option must be selected at the 4D structure level for each table and each field that you want to be exposed as dataclass and attribute in the datastore:
+Cette option doit être choisie au niveau de la structure 4D pour chaque table et chaque champ que vous souhaitez voir apparaître comme dataclass et attribut dans le datastore :
 
 ![](../assets/en/ORDA/ExposeDataclass.png)
 
 
-### Data model update
+### Mise à jour des données
 
-Any modifications applied at the level of the database structure invalidate the current ORDA model layer. These modifications include:
+Toute modification apportée à la structure de la base invalide la couche courante de données ORDA. Ces modifications incluent :
 
-*   adding or removing a table, a field, or a relation
-*   renaming of a table, a field, or a relation
-*   changing a core property of a field (type, unique, index, autoincrement, null value support)
+*   l'ajout ou la suppression d'une table, d'un champ ou d'une relation
+*   le renommage d'une table, d'un champ ou d'une relation
+*   la modification d'une propriété principale d'un champ (type, unique, index, autoincrement, valeur null)
 
-When the current ORDA model layer has been invalidated, it is automatically reloaded and updated in subsequent calls of the local `ds` datastore on 4D and 4D Server. Note that existing references to ORDA objects such as entities or entity selections will continue to use the model from which they have been created, until they are regenerated.
+Lorsque la couche courante de données ORDA est invalidée, elle est automatiquement rechargée et mise à jour dans les prochains appels du datastore local `ds` vers 4D et 4D Server. A noter que les références existantes vers des objets ORDA tels que des entités ou des sélections d'entités continueront d'utiliser les données à partir desquelles elles ont été créées, et ce jusqu'à ce qu'elles soient regénérées.
 
-However, the updated ORDA model layer is not automatically available in the following contexts:
+Toutefois, la couche de données ORDA mise à jour n'est pas automatiquement disponible dans les contextes suivants :
 
-*   a remote 4D application connected to 4D Server -- the remote application must reconnect to the server.
-*   a remote datastore opened using `Open datastore` or through [REST calls](REST/gettingStarted.md) -- a new session must be opened.
+*   une application 4D distante connectée à 4D Server -- l'application distante doit être reconnectée au serveur.
+*   un datastore distant ouvert à l'aide de `Ouvrir datastore` ou des [appels REST](REST/gettingStarted.md) -- une nouvelle session doit être ouverte.
 
 
-## Object definition
+## Définitions des objets
 
 ### Datastore
 
-The datastore is the interface object to a database. It builds a representation of the whole database as object. A datastore is made of a **model** and **data**:
+Un datastore est l'objet d'interface d'une base de données. Il crée une représentation de toute la base sous forme d'objet. Un datastore est constitué d'un **modèle** et à de **données** :
 
-- The model contains and describes all the dataclasses that make up the datastore. It is independant from the underlying database itself.
-- Data refers to the information that is going to be used and stored in this model. For example, names, addresses, and birthdates of employees are pieces of data that you can work with in a datastore.
+- Le modèle contient et décrit toutes les dataclasses qui composent le datastore. Il est indépendant de la base de données sous-jacente.
+- Les données se réfèrent à l'information qui va être utilisée et stockée dans ce modèle. Par exemple, les noms, adresses et dates de naissance des employés sont des éléments de données que vous pouvez utiliser dans un datastore.
 
-When handled through the code, the datastore is an object whose properties are all of the [dataclasses](#dataclass) which have been specifically exposed.
+Lorsqu'il est géré via le code, le datastore est un objet dont les propriétés sont toutes les [dataclasses](#dataclass) ayant été spécifiquement exposées.
 
-4D allows you to handle the following datastores:
+4d vous permet de gérer les datastores suivants :
 
-- the local datastore, based on the current 4D database, returned by the `ds` command (the main datastore).
-- one or more remote datastore(s) exposed as REST resources in remote 4D databases, returned by the `Open datastore` command.
+- le datastore local, fondé sur la base 4D courante, retourné par la commande `ds` (le datastore principal).
+- un ou plusieurs datastores distants, exposés en tant que ressources RESET dans des bases 4D distantes, retournés par la commande `Ouvrir datastore`.
 
-A datastore references only a single local or remote database.
+Un datastore ne référence qu'une seule base de données locale ou distante.
 
-The datastore object itself cannot be copied as an object:
+L'objet datastore lui-même ne peut pas être copié en tant qu'objet :
 
 ```4d 
-$mydatastore:=OB Copy(ds) //returns null
+$mydatastore:=OB Copy(ds) //retourne null
 ```
 
 
-The datastore properties are however enumerable:
+Les propriétés du datastore sont toutefois énumérables :
 
 
 ```4d 
  ARRAY TEXT($prop;0)
  OB GET PROPERTY NAMES(ds;$prop)
-  //$prop contains the names of all the dataclasses
+  //$prop contient les noms de toutes les dataclasses
 ```
 
 
 
-The main (default) datastore is always available through the `ds` command, but the `Open datastore` command allows referencing any remote datastore.
+Le datastore principal (par défaut) est toujours disponible via la commande `ds`, mais la commande `Ouvrir datastore` permet de référencer n'importe quel datastore distant.
 
 ### Dataclass
 
-A dataclass is the equivalent of a table. It is used as an object model and references all fields as attributes, including relational attributes (attributes built upon relations between dataclasses). Relational attributes can be used in queries like any other attribute.
+Une dataclasse est l'équivalent d'une table. Elle est utilisée comme modèle d'objet et référence tous les champs comme attributs, y compris les attributs relationnels (attributs construits à partir des relations entre les dataclasses). Les attributs relationnels peuvent être utilisés dans les requêtes comme tout autre attribut.
 
-All dataclasses in a 4D project are available as a property of the `ds` datastore. For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each exposed table that you want to be exposed as dataclass in the datastore.
+Toutes les dataclasses d'un projet 4D sont disponibles en tant que propriété du datastore `ds`. Pour les datastores distants accédés via `Ouvrir datastore` ou les [requêtes REST](REST/gettingStarted.md), l'option **Exposer comme ressource REST** doit être sélectionnée au niveau de la structure 4D pour chaque table que vous souhaitez exposer en tant que dataclass du datastore.
 
-For example, consider the following table in the 4D structure:
+Par exemple, considérons cette table dans la structure suivante :
 
 ![](../assets/en/ORDA/companyTable.png)
 
-The `Company` table is automatically available as a dataclass in the `ds` datastore. You can write:
+La table `Company` est automatiquement disponible en tant que dataclasse dans la banque de données `ds`. Vous pouvez écrire :
 
 ```4d 
-var $compClass : cs.Company //declares a $compClass object variable of the Company class
-$compClass:=ds.Company //assigns the Company dataclass reference to $compClass
+var $compClass : cs.Company //déclare une variable objet $compClass de la classe Company
+$compClass:=ds.Company //affecte la référence de dataclasse Company à $compClass
 ```
 
-A dataclass object can contain:
+Un objet dataclass peut contenir :
 
 *   attributes
-*   relation attributes
+*   des attributs relationnels
 
-The dataclass offers an abstraction of the physical database and allows handling a conceptual data model. The dataclass is the only means to query the datastore. A query is done from a single dataclass. Queries are built around attributes and relation attribute names of the dataclasses. So the relation attributes are the means to involve several linked tables in a query.
+La dataclass offre une abstraction de la base de données physique et permet de gérer un modèle de données conceptuel. La dataclass est le seul moyen d'interroger le datastore. Une requête est effectuée à partir d'une seule dataclass. Les requêtes sont construites autour des attributs et des noms d'attributs relationnels des dataclasses. Les attributs relationnels sont ainsi les moyens d'impliquer plusieurs tables liées dans une requête.
 
-The dataclass object itself cannot be copied as an object:
+L'objet dataclass lui-même ne peut pas être copié en tant qu'objet :
 
 ```4d 
-$mydataclass:=OB Copy(ds.Employee) //returns null
+$mydataclass:=OB Copy(ds.Employee) //retourne null
 ```
 
-The dataclass properties are however enumerable:
+Les propriétés de la dataclass sont toutefois énumérables :
 
 ```code4d 
 ARRAY TEXT($prop;0)
 OB GET PROPERTY NAMES(ds.Employee;$prop)
-//$prop contains the names of all the dataclass attributes
+//$prop contient les noms de tous les attributs de dataclass
 ```
 
 
-### Attribute
+### Attribut
 
-Dataclass properties are attribute objects describing the underlying fields or relations. For example:
+Les propriétés de dataclass sont des objets attribut décrivant les champs ou relations sous-jacents.
 
 ```4d 
- $nameAttribute:=ds.Company.name //reference to class attribute
- $revenuesAttribute:=ds.Company["revenues"] //alternate way
+ $nameAttribute:=ds.Company.name //référence à un attribut de classe
+ $revenuesAttribute:=ds.Company["revenues"] //méthode alternative
 ```
 
-This code assigns to `$nameAttribute` and `$revenuesAttribute` references to the name and revenues attributes of the `Company` class. This syntax does NOT return values held inside of the attribute, but instead returns references to the attributes themselves. To handle values, you need to go through [Entities](#entity).
+Ce code attribue à `$nameAttribute` et `$revenuesAttribute` des références aux attributs name et revenues de la classe `Company`. Cette syntaxe ne retourne PAS les valeurs contenues dans l'attribut, mais retourne plutôt des références aux attributs eux-mêmes. Cette syntaxe ne retourne PAS les valeurs contenues dans l'attribut, mais retourne plutôt des références aux attributs eux-mêmes.
 
-All eligible fields in a table are available as attributes of their parent [dataclass](#dataclass). For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each field that you want to be exposed as a dataclass attribute.
+Tous les fichiers éligibles d'une table sont disponibles en tant qu'attributs de leur [dataclass](#dataclass) parente. Pour les datastores distants accédés via `Ouvrir datastore` ou les [requêtes REST](REST/gettingStarted.md), l'option **Exposer comme ressource REST** doit être sélectionnée au niveau de la structure 4D pour chaque champ que vous souhaitez exposer en tant qu'attribut de dataclass.
 
 
-#### Storage and Relation attributes
+#### Attributs de stockage et relationnels
 
-Dataclass attributes come in several kinds: storage, relatedEntity, and relatedEntities. Attributes that are scalar (*i.e.*, provide only a single value) support all the standard 4D data types (integer, text, object, etc.).
+Les attributs de la Dataclass sont de plusieurs types : storage, relatedEntity et relatedEntities. Les attributs scalaires (c'est-à-dire qui ne fournissent qu'une seule valeur) prennent en charge tous les types de données standard 4D (Entier, texte, objet, etc.).
 
-*   A **storage attribute** is equivalent to a field in the 4D database and can be indexed. Values assigned to a storage attribute are stored as part of the entity when it is saved. When a storage attribute is accessed, its value comes directly from the datastore. Storage attributes are the most basic building block of an entity and are defined by name and data type.
-*   A **relation attribute** provides access to other entities. Relation attributes can result in either a single entity (or no entity) or an entity selection (0 to N entities). Relation attributes are built upon "classic" relations in the relational structure to provide direct access to related entity or related entities. Relation attributes are directy available in ORDA using their names.
+*   Un **attribut de stockage** (storage) est équivalent à un champ dans la base de données 4D et peut être indexé. Les valeurs affectées à un attribut de stockage sont stockées en tant que partie de l'entité lors de son enregistrement. Lorsqu'on accède à un attribut de stockage, sa valeur provient directement du datastore. Les attributs de stockage sont le bloc de construction le plus élémentaire d'une entité et sont définis par un nom et un type de données.
+*   Un **attribut relationnel** (relatedEntity et relatedEntities) donne accès à d'autres entités. Les attributs relationnels peuvent aboutir soit à une entité unique (ou à aucune entité), soit à une sélection d'entité (0 à N entités). Les attributs relationnels s'appuient sur les relations "classiques" dans la structure relationnelle pour fournir un accès direct à une entité ou à des entités reliées. Tous les attributs relationnels sont directement disponibles dans ORDA si vous utilisez leurs noms.
 
-For example, consider the following partial database structure and the relation properties:
+Prenons l'exemple de la structure de base de données partielle suivante et les propriétés relationnelles :
 
 ![](../assets/en/ORDA/relationProperties.png)
 
-All storage attributes will be automatically available:
+Tous les attributs relationnels seront disponibles automatiquement :
 
-*   in the Project dataclass: "ID", "name", and "companyID"
-*   in the Company dataclass: "ID", "name", and "discount"
+*   dans la dataclass Project : "ID", "name", et "companyID"
+*   dans la dataclass Company : "ID", "name", et "discount"
 
-In addition, the following relation attributes will also be automatically available:
+En outre, les attributs relationnels suivant seront également disponibles automatiquement :
 
-*   in the Project dataclass: **theClient** attribute, of the "relatedEntity" kind; there is at most one Company for each Project (the client)
-*   in the Company dataclass: **companyProjects** attribute, of the "relatedEntities" kind; for each Company there is any number of related Projects.
-> The Manual or Automatic property of a database relation has no effect in ORDA.
+*   dans la dataclass Project : l'attribut **theClient**, du type "relatedEntity" ; il y a au plus une compagnie pour chaque projet (le client)
+*   dans la dataclass Company : l'attribut **companyProjects**, du type "relatedEntities" ; pour chaque compagnie, il existe un certain nombre de projets reliés.
+> > The Manual or Automatic property of a database relation has no effect in ORDA.
 
-All dataclass attributes are exposed as properties of the dataclass:
+Tous les attributs de la dataclass sont exposés en tant que propriétés de la dataclass :
 
 ![](../assets/en/ORDA/dataclassProperties.png)
 
-Keep in mind that these objects describe attributes, but do not give access to data. Reading or writing data is done through [entity objects](entities.md#using-entity-attributes).
+Gardez à l'esprit que ces objets décrivent des attributs, mais ne donnent pas accès aux données. La lecture ou l'écriture des données se fait à travers des [objets entité](entities.md#using-entity-attributes).
 
-#### Computed attributes
+#### Champs calculés
 
-[Computed attributes](ordaClasses.md#computed-attributes) are declared using a `get <attributeName>` function in the [Entity class definition](ordaClasses.md#entity-class). Their value is not stored but evaluated each time they are accessed. They do not belong to the underlying database structure, but are built upon it and can be used as any attribute of the data model.
+dans la [définition de la classe Entity](ordaClasses.md#entity-class). Leur valeur n'est pas stockée mais évaluée à chaque fois qu'on y accède. Ils n'appartiennent pas à la structure sous-jacente de la base, mais ils se basent sur elle et peuvent être utilisés comme n'importe quel champ du modèle de données.
 
 
-### Entity
+### Entité (entity)
 
-An entity is the equivalent of a record. It is actually an object that references a record in the database. It can be seen as an instance of a [dataclass](#dataclass), like a record of the table matching the dataclass. However, an entity also contains data correlated to the database related to the datastore.
+Une entité est l'équivalent d'un enregistrement. Il s'agit d'un objet qui fait référence à un enregistrement de la base de données. Elle peut être perçue comme une instance de la [dataclass](#dataclass), comme un enregistrement de la table correspondante à la dataclass. Toutefois, une entité contient également des données corrélées à la base de données liée au datastore.
 
-The purpose of the entity is to manage data (create, update, delete). When an entity reference is obtained by means of an entity selection, it also retains information about the entity selection which allows iteration through the selection.
+Le but de l'entité est de gérer les données (créer, mettre à jour, supprimer). Lorsqu'une référence d'entité est obtenue au moyen d'une sélection d'entité, elle conserve également des informations sur la sélection d'entité qui permet une itération à travers la sélection.
 
-The entity object itself cannot be copied as an object:
+L'objet entité lui-même ne peut pas être copié en tant qu'objet :
 
 ```4d
- $myentity:=OB Copy(ds.Employee.get(1)) //returns null
+ $myentity:=OB Copy(ds.Employee.get(1)) //retourne null
 ```
 
-The entity properties are however enumerable:
+Les propriétés de l'entité sont toutefois énumérables :
 
 ```4d
  ARRAY TEXT($prop;0)
  OB GET PROPERTY NAMES(ds.Employee.get(1);$prop)
-  //$prop contains the names of all the entity attributes
+  //$prop contient les noms de tous les attributs de l'entité
 ```
 
 
 ### Entity selection
 
-An entity selection is an object containing one or more reference(s) to entities belonging to the same dataclass. It is usually created as a result of a query or returned from a relation attribute. An entity selection can contain 0, 1 or X entities from the dataclass -- where X can represent the total number of entities contained in the dataclass.
+Une sélection d'entité est un objet contenant une ou plusieurs référence(s) à des entités appartenant à la même dataclasse. Elle est généralement créée à la suite d'une requête ou retournée à partir d'un attribut relationnel. Une entity selection peut contenir 0, 1 ou X entités de la dataclass - où X peut représenter le nombre total d'entités contenues dans la dataclass.
 
-Example:
-
-```4d
-var $e : cs.EmployeeSelection //declares a $e object variable of the EmployeeSelection class type
-$e:=ds.Employee.all() //assigns the resulting entity selection reference to the $e variable
-```
-
-Entity selections can be "sorted" or "unsorted" ([see below](#ordered-or-unordered-entity-selection)).
-
-> Entity selections can also be "shareable" or "non-shareable", depending on [how they have been created](entities.md#shareable-or-alterable-entity-selections).
-
-The entity selection object itself cannot be copied as an object:
+Voici un exemple :
 
 ```4d
- $myentitysel:=OB Copy(ds.Employee.all()) //returns null
+var $e : cs.EmployeeSelection //déclare une variable objet $e de type de classe EmployeeSelection
+$e:=ds.Employee.all() //assigne la référence de la sélection d'entité résultante à la variable $e
 ```
 
-The entity selection properties are however enumerable:
+Les entity selections peuvent être "triées" ou "non triées" ([voir ci-dessous](#ordered-or-unordered-entity-selection)).
+
+> > Les entity selections peuvent également être "partageables" ou "non partageables", selon [la façon dont elles ont été créées](entities.md#shareable-or-alterable-entity-selections).
+
+L'objet sélection d'entités lui-même ne peut pas être copié en tant qu'objet :
+
+```4d
+ $myentitysel:=OB Copy(ds.Employee.all()) //retourne null
+```
+
+Les propriétés des sélections d'entités sont toutefois énumérables :
 
 ```4d
  ARRAY TEXT($prop;0)
  OB GET PROPERTY NAMES(ds.Employee.all();$prop)
-  //$prop contains the names of the entity selection properties
-  //("length", 00", "01"...)
+  //$prop contient les noms des propriétés des sélections d'entités
+  //("length", "00", "01"...)
 ```
 
 
-#### Ordered or unordered entity selection
+#### Entity selections triées vs Entity selections non-triées
 
-For optimization reasons, by default 4D ORDA usually creates unordered entity selections, except when you use the `orderBy( )` method or use specific options. In this documentation, unless specified, "entity selection" usually refers to an "unordered entity selection".
+Pour des raisons d'optimisation, par défaut, 4D ORDA crée généralement des sélections d'entités non-ordonnées, sauf lorsque vous utilisez la méthode `orderBy( )` ou si vous utilisez les options appropriées. Dans cette documentation, sauf indication contraire, "sélection d'entités" fait généralement référence à une "sélection d'entités non-ordonnée".
 
-Ordered entity selections are created only when necessary or when specifically requested using options, i.e. in the following cases:
+Les sélections d'entités ordonnées sont créées uniquement lorsque cela est nécessaire ou lorsqu'elles sont spécifiquement demandées à l'aide d'options, c'est-à-dire dans les cas suivants :
 
-*   result of an `orderBy()` on a selection (of any type) or an `orderBy()` on a dataclass
-*   result of the `newSelection()` method with the `dk keep ordered` option
+*   résultat d'un `orderBy( )` sur une sélection (de n'importe quel type) ou un `orderBy( )` sur une dataclass,
+*   résultat de la méthode `newSelection( )` avec l'option `dk keep ordered`
 
-Unordered entity selections are created in the following cases:
+Les sélections d'entités non-triées sont créées dans les cas suivants :
 
-*   result of a standard `query()` on a selection (of any type) or a `query()` on a dataclass,
-*   result of the `newSelection()` method without option,
-*   result of any of the comparison methods, whatever the input selection types: `or()`, `and()`, `minus()`.
-> The following entity selections are always **ordered**:
+*   résultat d'un `query()` standard sur une sélection (de n'importe quel type) ou un `query()` sur une dataclass,
+*   résultat de la méthode `newSelection()` sans option,
+*   résultat de l'une des méthodes de comparaison, quel que soit le type de sélection saisi : `or()`, `and()`, `minus()`.
+> > The following entity selections are always **ordered**: > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
 > 
-> * entity selections returned by 4D Server to a remote client
-> * entity selections built upon remote datastores.
+> * sélections d'entités retournées par 4D Server vers un client distant
+> * sélections d'entités fondées sur des datastores distants.
 
-Note that when an ordered entity selection becomes an unordered entity selection, any repeated entity references are removed.
+Notez que lorsqu'une sélection d'entités ordonnée devient une sélection non-ordonnée, toute référence d'entité répétée est supprimée.
