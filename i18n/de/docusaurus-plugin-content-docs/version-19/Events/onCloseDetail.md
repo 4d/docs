@@ -8,7 +8,7 @@ title: On Close Detail
 | 26   | Form - [List Box](FormObjects/listbox_overview.md) | You left the detail form and are going back to the output form |
 
 
-## Description
+## Beschreibung
 
 The `On Close Detail` event can be used in the following contexts:
 
