@@ -1,32 +1,32 @@
 ---
 id: propertiesPrint
-title: Print
+title: 印刷
 ---
 
-## Print frame
+## 印刷時可変
 
-This property handles the print mode for objects whose size can vary from one record to another depending on their contents. These objects can be set to print with either a fixed or variable frame. Fixed frame objects print within the confines of the object as it was created on the form. Variable frame objects expand during printing to include the entire contents of the object. Note that the width of objects printed as a variable size is not affected by this property; only the height varies automatically based on the contents of the object.
+このプロパティは、レコードの中身に応じてサイズが変化しうるオブジェクトの印刷モードを管理します。 これらのオブジェクト固定長フレームまたは可変長フレームでの印刷を設定することができます。 固定長フレームオブジェクトは、フォーム上でオブジェクト作成するように、オブジェクトのサイズの制限内で印刷をします。 可変長フレームオブジェクトはオブジェクトの中身をすべて印刷するために、印刷時に展開します。 可変サイズとして印刷されるオブジェクト幅 (オブジェクトプロパティによって定義) はこのオプションによって影響はされないという点に注意してください。オブジェクトの中身に応じて、高さのみが変化します。
 
-You cannot place more than one variable frame object side-by-side on a form. You can place non-variable frame objects on either side of an object that will be printed with a variable size provided that the variable frame object is at least one line longer than the object beside it and that all objects are aligned on the top. If this condition is not respected, the contents of the other fields will be repeated for every horizontal slice of the variable frame object.
+フォーム内において複数の可変長フレームを隣同士に配置することはできません。 非可変長フレームオブジェクトであれば、可変サイズで印刷されるオブジェクトのどちら側でも配置することができます。ただし、可変長フレームオブジェクトが最低でも横のオブジェクトより一行分長く、すべてのオブジェクトが上揃えで配置されていなければなりません。 この条件が遵守されない場合、可変長フレームオブジェクトの水平方向の部分ごとに、ほかのフィールドのコンテンツが繰り返されます。
 
-> The `Print object` and `Print form` commands do not support this property.
+> `Print object` と `Print form` コマンドはこのプロパティをサポートしません。
 
-The print options are:
+印刷オプションは次の通りです:
 
-- **Variable** option / **Print Variable Frame** checked: 4D enlarges or reduces the form object area in order to print all the subrecords.
+- **可変** オプション (**印刷時可変** 選択時): すべてのサブレコードが印刷されるよう、4D はフォームオブジェクトエリアを拡大あるいは縮小します。
 
-- **Fixed (Truncation)** option / **Print Variable Frame** unchecked: 4D only prints the contents that appear in the object area. The form is only printed once and the contents not printed are ignored.
+- **固定 (切り捨て)** オプション (**印刷時可変** 非選択時): オブジェクトエリアに表示されている内容のみを 4D は印刷します。 フォームが印刷されるのは一度のみで、印刷されなかった内容は無視されます。
 
-- **Fixed (Multiple Records)** (subforms only): the initial size of the subform area is kept but 4D prints the form several times in order to print all the records.
+- **固定 (複数レコード)** (サブフォームのみ): サブフォームの初期サイズを維持しますが、4D はすべてのレコードが印刷されるまで複数回にわたってフォームを印刷します。
 
-> This property can be set by programming using the `OBJECT SET PRINT VARIABLE FRAME` command.
+> このプロパティは `OBJECT SET PRINT VARIABLE FRAME` コマンドによって設定することができます。
 
-#### JSON Grammar
+#### JSON 文法
 
-|    Name    | Data Type | Possible Values                                     |
-|:----------:|:---------:| --------------------------------------------------- |
-| printFrame |  string   | "fixed", "variable", (subform only) "fixedMultiple" |
+|     名称     | データタイプ | とりうる値                                           |
+|:----------:|:------:| ----------------------------------------------- |
+| printFrame | string | "fixed", "variable", (サブフォームのみ) "fixedMultiple" |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Input](input_overview.md) - [Subforms](subform_overview.md) (list subforms only) - [4D Write Pro areas](writeProArea_overview.md)
+[入力](input_overview.md) - [サブフォーム](subform_overview.md) (リストサブフォームのみ) - [4D Write Pro エリア](writeProArea_overview.md)
