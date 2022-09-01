@@ -3,7 +3,7 @@ id: breakpoints
 title: Breakpoints and Command Catching
 ---
 
-## Overview
+## Visão Geral
 
 
 Breakpoints and command catching are very efficient debugging techniques. Both have the same effect: they pause the code execution (and display the debugger window if not already displayed) at a desired step.
@@ -34,7 +34,7 @@ You can edit the behavior of a breakpoint using the Breakpoint Properties window
 
 ![breakpoint-properties](../assets/en/Debugging/breakpoint-properties.png)
 
-This window is available from the Code Editor or the [Source Code Pane](debugger.md#source-code-pane). You can:
+This window is available from the Code Editor or the [Source Code Pane](debugger.md#source-code-pane). Pode:
 
 - right-click a line and select **Edit Breakpoint** in the contextual menu, or
 - `Alt+click` (Windows) or `Option+click` (macOS) in the left margin.
