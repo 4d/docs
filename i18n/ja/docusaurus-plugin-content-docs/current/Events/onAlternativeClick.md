@@ -3,27 +3,27 @@ id: onAlternativeClick
 title: On Alternative Click
 ---
 
-| Code | Can be called by                                                                                                                                             | Definition                                         |
-| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------- |
-| 38   | [Button](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | <li>Buttons: The "arrow" area of a button is clicked</li><li>List boxes: In a column of an object array, an ellipsis button ("alternateButton" attribute) is clicked</li> |
+| コード | 呼び出し元                                                                                                                                     | 定義                                                 |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| 38  | [ボタン](FormObjects/button_overview.md) - [リストボックス](FormObjects/listbox_overview.md) - [リストボックス列](FormObjects/listbox_overview.md#リストボックス列) | <li>ボタン: ボタンの "矢印" のエリアがクリックされた</li><li>リストボックス: オブジェクト配列のカラム内において、エリプシスボタン ("alternateButton" 属性) がクリックされた</li> |
 
-## Description
+## 詳細
 
-### Buttons
+### ボタン
 
-Some button styles can be [linked to a pop-up menu](FormObjects/properties_TextAndPicture.md#with-pop-up-menu) and display an triangle. Clicking on this triangle causes a selection pop-up to appear that provides a set of alternative actions in relation to the primary button action.
+いくつかのボタンスタイルには、[ポップアップメニュー](FormObjects/properties_TextAndPicture.md#ポップアップメニューあり) をリンクし、矢印を表示させることができます。 この矢印をクリックすると、ボタンの主たるアクションの代わりのアクションを提供するポップアップを表示します。
 
-4D allows you to manage this type of button using the `On Alternative Click` event. This event is generated when the user clicks on the triangle (as soon as the mouse button is held down):
+4D では `On Alternative Click` イベントを使用してこの動作を管理できます。 このイベントは。 ユーザーが矢印をクリックすると、マウスボタンが押されてすぐに生成されます:
 
-- If the pop-up menu is **separated**,the event is only generated when a click occurs on the portion of the button with the arrow.
-- If the pop-up menu is **linked**, the event is generated when a click occurs on any part of the button. Note that the [`On Long Click`](onLongClick.md) event cannot be generated with this type of button.
+- ポップアップメニューが **分離** されている場合、このイベントはボタン中で矢印のあるエリアがクリックされた場合のみ生成されます。
+- ポップアップメニューが **リンク** されている場合、このイベントはボタン上どこをクリックしても生成されます。 このタイプのボタンでは [`On Long Click`](onLongClick.md) イベントが生成されないことに注意してください。
 
 ![](../assets/en/Events/clickevents.png)
 
-### List box
+### リストボックス
 
-This event is generated in columns of [object array type list boxes](FormObjects/listbox_overview.md#object-arrays-in-columns-4d-view-pro), when the user clicks on a widget ellipsis button ("alternateButton" attribute).
+このイベントは [オブジェクト配列型のリストボックス](FormObjects/listbox_overview.md#オブジェクト配列カラムの設定) のカラムにおいて、ユーザーがウィジェットのエリプシスボタン ("alternateButton" 属性) をクリックしたときに生成されます。
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 
-See the [description of the "alternateButton" attribute](FormObjects/listbox_overview.md#alternatebutton).
+["alternateButton" 属性の説明](FormObjects/listbox_overview.md#alternatebutton) を参照ください。
