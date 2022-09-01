@@ -1,14 +1,14 @@
 ---
 id: shortcuts
-title: Shortcuts Page
+title: Page Raccourcis
 ---
 
-This page lists all the shortcuts used in the 4D Design environment (except for standard "system" shortcuts, such as Ctrl+C/Command+C for the Copy command).
+Cette page affiche la liste de tous les raccourcis-clavier utilisés dans le mode Développement de 4D (hormis les raccourcis "système" standard, tels que Ctrl+c/Commande+c pour la commande Copier).
 
 ![](../assets/en/Preferences/shortcuts.png)
 
-To modify a shortcut, you can select/deselect the item to modify (Shift, Alt or letter key) in the list. You can also double-click on a shortcut to configure it using a specific dialog box.
+Pour modifier un raccourci, il suffit de sélectionner/désélectionner l’élément à modifier (Majuscule, Option ou touche du clavier) dans la liste des raccourcis. Vous pouvez également double-cliquer sur la ligne d’un raccourci afin de le configurer dans la boîte de dialogue.
 
-Note that each shortcut implicitly includes the **Ctrl** (Windows) or **Command** (macOS) key.
+A noter que chaque raccourci clavier inclut implicitement la touche **Ctrl** (Windows) ou **Commande** (macOS).
 
-If you edit this list, your custom shortcuts settings are stored in a *4DShortcutsvXX.xml* file, created at the same level as the [user preferences file](overview.md#storage). Hence, each time 4D is updated your keyboard shortcut preferences remain. 
+Si vous modifiez cette liste, vos paramètres de raccourcis personnalisés sont stockés dans un fichier *4DShortcutsvXX.xml*, créé au même niveau que [le fichier de préférences utilisateur](overview.md#storage). Ainsi, à chaque mise à jour de 4D, vous conservez vos préférences de raccourcis clavier. 
