@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Overview
+title: Überblick
 ---
 
 The 4D [project architecture](../Project/architecture.md) is modular. You can provide additional functionalities to your 4D projects by installing [**components**](Concepts/components.md) and [**plug-ins**](../Concepts/plug-ins.md). Components are made of 4D code, while plug-ins can be built using any language.
@@ -11,7 +11,7 @@ The 4D [project architecture](../Project/architecture.md) is modular. You can pr
 4D includes by default a set of built-in 4D components, that you can see in the **Component Methods** theme of the Explorer's Methods page.
 
 
-| Component Name                                                                | Description                                                                                                    | Main Features                                                                                            |
+| Component Name                                                                | Beschreibung                                                                                                   | Main Features                                                                                            |
 | ----------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
 | 4D Labels                                                                     | Internal component required to build label templates                                                           |                                                                                                          |
 | [4D Mobile App Server](https://github.com/4d-go-mobile/4D-Mobile-App-Server)  | Set of utility classes and functions to authenticate, manage sessions, and develop mobile applications         | `.Action`, `.Authentication`, `.PushNotification`, `.WebHandler`, Authentication with email confirmation |
@@ -34,7 +34,7 @@ Browse Github to have a list of public 4D components gathered with the [`4d-comp
 
 ## Plugins
 
-Plugins do things that 4D does not natively (e.g., specific platform technology), or would be very hard to write just using 4D. As described in [this page](develop-plug-ins.md), you can develop your own plug-ins.
+Plugins do things that 4D does not natively (e.g., specific platform technology), or would be very hard to write just using 4D. As described in [this page](develop-plug-ins.md), you can develop your own plug-ins. As described in [this page](develop-plug-ins.md), you can develop your own plug-ins.
 
 A lot of functionnalities are covered by the existing 4D plug-ins. Browse Github to have a list of public 4D plugins gathered with the [`4d-plugin`](https://github.com/topics/4d-plugin) topic.
 
