@@ -1,27 +1,27 @@
 ---
 id: null-undefined
-title: Null and Undefined
+title: Null und Undefiniert
 ---
 
-Null and Undefined are data types that handle cases where the value of an expression is not known.
+Null und Undefiniert werden verwendet, wenn der Wert eines Ausdrucks unbekannt ist.
 
 ## Null
 
-Null is a special data type with only one possible value: **null**. This value is returned by an expression that does not contain any value.
+Null ist ein spezieller Datentyp mit nur einem möglichen Wert: **Null**. Dieser Wert wird von einem Ausdruck zurückgegeben, der gar keinen Wert enthält.
 
-In the 4D language and for object field attributes, null values are managed through the `Null` function. This function can be used with the following expressions for setting or comparing the null value:
+In der 4D Programmiersprache und für Objekt Feldattribute werden Nullwerte über die Funktion `Null` verwaltet. Sie lässt sich mit folgenden Ausdrücken zum Setzen oder Vergleichen des Nullwerts verwenden:
 
-- object attributes
-- collection elements
-- variables of the object, collection, pointer, picture, or variant type.
+- Objekt Attribute
+- Collection Elemente
+- Variablen vom Typ Objekt, Collection, Zeiger, Bild oder Variant.
 
-## Undefined
+## Undefiniert
 
-Undefined is not actually a data type. It denotes a variable that has not yet been defined. A function (a project method that returns a result) can return an undefined value if, within the method, the function result ($0) is assigned an undefined expression (an expression calculated with at least one undefined variable). A field cannot be undefined (the `Undefined` command always returns False for a field). A variant variable has **undefined** as default value.
+Undefiniert ist kein Datentyp. Er bezeichnet eine Variable, die noch nicht definiert ist. Eine Funktion (eine Projektmethode, die ein Ergebnis zurückgibt) kann einen undefinierten Wert zurückgeben, wenn in der Methode dem Ergebnis der Funktion ($0) ein undefinierter Ausdruck zugewiesen wurde (Ausdruck mit mindestens einer undefinierten Variablen). Ein Datenfeld kann nicht undefiniert sein (die Funktion `Undefined` gibt für ein Datenfeld immer Falsch zurück). Eine Variable vom Typ Variant hat **undefiniert** als Standardwert.
 
-## Examples
+## Beispiele
 
-Here are the different results of the `Undefined` command as well as the `Null` command with object properties, depending on the context:
+Hier sehen Sie je nach Kontext unterschiedliche Ergebnisse mit `Undefined` sowie dem Befehl `Null` mit Objekteigenschaften:
 
 ```4d
 C_OBJECT($vEmp)
