@@ -3,15 +3,15 @@ id: onCloseDetail
 title: On Close Detail
 ---
 
-| Code | Can be called by                                   | Definition                                                     |
-| ---- | -------------------------------------------------- | -------------------------------------------------------------- |
-| 26   | Form - [List Box](FormObjects/listbox_overview.md) | You left the detail form and are going back to the output form |
+| Code | Puede ser llamado por                                    | Definición                                                                 |
+| ---- | -------------------------------------------------------- | -------------------------------------------------------------------------- |
+| 26   | Formulario - [List Box](FormObjects/listbox_overview.md) | Ha dejado el formulario detallado y está volviendo al formulario de salida |
 
 
-## Description
+## Descripción
 
-The `On Close Detail` event can be used in the following contexts:
+El evento `On Close Detail` puede utilizarse en los siguientes contextos:
 
-- **Output forms**: the detail form is closed and the user goes back to the list form. This event cannot be selected for project forms, it is only available with **table forms**.
-- List box of the [**selection type**](FormObjects/listbox_overview.md#selection-list-boxes): This event is generated when a record displayed in the [detail form](FormObjects/properties_ListBox.md#detail-form-name) associated with a selection type list box is about to be closed (regardless of whether or not the record was modified).
+- **Formularios de salida**: el formulario detallado se cierra y el usuario vuelve al formulario listado. Este evento no se puede seleccionar para los formularios proyecto, sólo está disponible con los **formularios tabla**.
+- List box [**de tipo selección**](FormObjects/listbox_overview.md#selection-list-boxes): este evento se genera cuando un registro mostrado en el [formulario detallado](FormObjects/properties_ListBox.md#detail-form-name) asociado a un list box de tipo selección está a punto de cerrarse (independientemente de que el registro se haya modificado o no).
 
