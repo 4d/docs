@@ -3,15 +3,15 @@ id: onActivate
 title: On Activate
 ---
 
-| Code | Can be called by | Definition                                                                               |
-| ---- | ---------------- | ---------------------------------------------------------------------------------------- |
-| 11   | Form             | The form's window becomes the frontmost window or the subform's container gets the focus |
+| コード | 呼び出し元 | 定義                                         |
+| --- | ----- | ------------------------------------------ |
+| 11  | フォーム  | フォームウィンドウが最前面のウィンドウになった、またはサブフォームがフォーカスを得た |
 
 
-## Description
+## 詳細
 
-If the window of a form was sent to the background, this event is called when the window becomes the frontmost window.
+フォームのウィンドウが背面に送られていた場合、そのウィンドウが最前面になったときにこのイベントが呼ばれます。
 
-This event applies to the form as a whole and not to a particular object. Consequently, if the `On Activate` form event property is selected, only the form will have its form method called.
+このイベントは個々のオブジェクトには適用されず、フォーム全体に適用されます。 ゆえに `On Activate` フォームイベントプロパティが選択されていれば、そのフォームのメソッドのみが呼び出されます。
 
-In the case of a subform, this event is passed to the subform when the container gets the focus (if it has the [focusable](FormObjects/properties_Entry.md#focusable) property). 
+サブフォームの場合には、コンテナーがフォーカスを得たとき ([フォーカス可](FormObjects/properties_Entry.md#フォーカス可) プロパティが設定されている場合) に、このイベントがサブフォームに渡されます。 
