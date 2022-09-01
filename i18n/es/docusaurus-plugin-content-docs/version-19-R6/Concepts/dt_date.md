@@ -1,49 +1,55 @@
 ---
 id: date
-title: Date
+title: Fecha
 ---
 
-A Date field, variable or expression can be in the range of 1/1/100 to 12/31/32,767.
+Las variables, campos o expresiones de tipo fecha pueden estar comprendidas entre 1/1/100 y 31/12/32.767.
 
-Although the representation mode for dates by can work with dates up to the year 32 767, certain operations passing through the system impose a lower limit.
+Aunque el modo de representación de fechas por C_DATE permite trabajar con fechas hasta el año 32 767, ciertas operaciones que pasan por el sistema imponen un límite inferior.
 
-**Note:** In the 4D Language Reference manual, Date parameters in command descriptions are denoted as Date, except when marked otherwise.
+**Nota:** en el manual de Referencia del Lenguaje 4D, los parámetros de tipo Fecha en las descripciones de los comandos se denominan Fecha, salvo que se indique lo contrario.
 
-## Date literals
+## Constantes literales de tipo fecha
 
-A date literal constant is enclosed by exclamation marks (!…!). A date must be structured using the ISO format (!YYYY-MM-DD!). Here are some examples of date constants:
+Una constante literal de tipo fecha está rodeada de signos de exclamación (!...!). Una fecha debe estar estructurada utilizando el formato ISO (!AAAA-MM-DD!). Estos son algunos ejemplos de constantes de fechas:
 
 ```4d
+!1976-01-01!
+!2004-09-29!
+!1976-01-01!
+!2004-09-29!
+!2015-12-31!
+!2004-09-29!
 !1976-01-01!
 !2004-09-29!
 !2015-12-31!
 ```
 
-A null date is specified by _!00-00-00!_.
+Una fecha nula es especificada por _!00-00-00!_.
 
-**Tip:** The Code Editor includes a shortcut for entering a null date. To type a null date, enter the exclamation (!) character and press Enter.
+**Consejo:** el Editor de código incluye un acceso directo para introducir una fecha null. Para escribir una fecha nula, introduzca el carácter de exclamación (!) y pulse Intro.
 
-**Notes:**
+**Notas:**
 
-- For compatibility reasons, 4D accepts two-digit years to be entered. A two-digit year is assumed to be in the 20th or 21st century based on whether it is greater or less than 30, unless this default setting has been changed using the `SET DEFAULT CENTURY` command.
-- If you have checked the "Use regional system settings" option (see Methods Page), you must use the date format defined in your system. Generally, in a US environment, dates are entered in the form month/day/year, with a slash "/" separating the values.
+- Por razones de compatibilidad, 4D acepta que se introduzcan años de dos dígitos. Se asume que un año de dos dígitos se encuentra en el siglo XX o en el XXI según sea mayor o menor de 30, a menos que esta configuración por defecto se haya cambiado utilizando el comando `SET DEFAULT CENTURY`.
+- Si ha marcado la opción "Utilizar la configuración regional del sistema" ( ver Página Métodos), debe utilizar el formato de fecha definido en su sistema. Generalmente, en un entorno estadounidense, las fechas se introducen en la forma mes/día/año, con una barra "/" que separa los valores.
 
-## Date operators
+## Operadores de fechas
 
-| Operation                | Syntax         | Returns | Expression                   | Value        |
-| ------------------------ | -------------- | ------- | ---------------------------- | ------------ |
-| Date difference          | Date – Date    | Number  | !2017-01-20! - !2017-01-01!  | 19           |
-| Day addition             | Date + Number  | Date    | !2017-01-20! + 9             | !2017-01-29! |
-| Day subtraction          | Date – Number  | Date    | !2017-01-20! - 9             | !2017-01-11! |
-| Equality                 | Date = Date    | Boolean | !2017-01-01! =!2017-01-01!   | True         |
-|                          |                |         | !2017-01-20! = !2017-01-01!  | False        |
-| Inequality               | Date # Date    | Boolean | !2017-01-20! # !2017-01-01!  | True         |
-|                          |                |         | !2017-01-20! # !2017-01-20!  | False        |
-| Greater than             | Date > Date    | Boolean | !2017-01-20! > !2017-01-01!  | True         |
-|                          |                |         | !2017-01-20! > !2017-01-20!  | False        |
-| Less than                | Date < Date    | Boolean | !2017-01-01! < !2017-01-20!  | True         |
-|                          |                |         | !2017-01-20! < !2017-01-20!  | False        |
-| Greater than or equal to | Date >= Date   | Boolean | !2017-01-20! >=!2017-01-01!  | True         |
-|                          |                |         | !2017-01-01!>=!2017-01-20!   | False        |
-| Less than or equal to    | Date \<= Date | Boolean | !2017-01-01!\<=!2017-01-20! | True         |
-|                          |                |         | !2017-01-20!\<=!2017-01-01! | False        |
+| Operación         | Sintaxis         | Devuelve | Expression                                 | Value        |
+| ----------------- | ---------------- | -------- | ------------------------------------------ | ------------ |
+| Diferencia        | Fecha – Fecha    | Number   | !2017-01-20! - !2017-01-01!                | 19           |
+| Adición           | Fecha + Número   | Fecha    | !2017-01-20! + 9                           | !2017-01-29! |
+| Resta             | Fecha - Número   | Fecha    | !2017-01-20! - 9                           | !2017-01-11! |
+| Igual             | Fecha = Fecha    | Boolean  | !2017-01-20! - !2017-01-01! =!2017-01-01!  | True         |
+|                   |                  |          | !2017-01-20! !2017-01-01! =!2017-01-01!    | False        |
+| Desigualdad       | Fecha # Fecha    | Boolean  | !2017-01-20! !2017-01-20! # !2017-01-01!   | True         |
+|                   |                  |          | !2017-01-20! !2017-01-20! # !2017-01-20!   | False        |
+| Mayor que         | Fecha > Fecha    | Boolean  | !2017-01-20! !2017-01-20! > !2017-01-01!   | True         |
+|                   |                  |          | !2017-01-20! !2017-01-20! > !2017-01-20!   | False        |
+| Menor que         | Fecha < Fecha    | Boolean  | !2017-01-20! - !2017-01-01! < !2017-01-20! | True         |
+|                   |                  |          | !2017-01-20! < !2017-01-20!                | False        |
+| Mayor o igual que | Fecha >= Fecha   | Boolean  | !2017-01-20! !2017-01-20! >=!2017-01-01!   | True         |
+|                   |                  |          | !2017-01-01!>=!2017-01-20!                 | False        |
+| Menor o igual que | Fecha \<= Fecha | Boolean  | !2017-01-01!\<=!2017-01-20!               | True         |
+|                   |                  |          | !2017-01-20!\<=!2017-01-01!               | False        |
