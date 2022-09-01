@@ -10,9 +10,9 @@ When this property is enabled, the [OPEN FONT PICKER](https://doc.4d.com/4Dv18/4
 
 #### JSON Grammar
 
-| Property             | Data Type | Possible Values       |
-| -------------------- | --------- | --------------------- |
-| allowFontColorPicker | boolean   | false (default), true |
+| Property             | Datentyp | Possible Values       |
+| -------------------- | -------- | --------------------- |
+| allowFontColorPicker | boolean  | false (default), true |
 
 #### Objects Supported
 
@@ -29,9 +29,9 @@ You can set this property using the [**OBJECT SET FONT STYLE**](https://doc.4d.c
 
 #### JSON Grammar
 
-| Property   | Data Type | Possible Values  |
-| ---------- | --------- | ---------------- |
-| fontWeight | text      | "normal", "bold" |
+| Property   | Datentyp | Possible Values  |
+| ---------- | -------- | ---------------- |
+| fontWeight | Text     | "normal", "bold" |
 
 #### Objects Supported
 
@@ -48,9 +48,9 @@ You can also set this property via the [**OBJECT SET FONT STYLE**](https://doc.4
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values    |
-| --------- | --------- | ------------------ |
-| fontStyle | string    | "normal", "italic" |
+| Name      | Datentyp | Possible Values    |
+| --------- | -------- | ------------------ |
+| fontStyle | string   | "normal", "italic" |
 
 #### Objects Supported
 
@@ -64,9 +64,9 @@ Sets the text to have a line running beneath it.
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values       |
-| -------------- | --------- | --------------------- |
-| textDecoration | string    | "normal", "underline" |
+| Name           | Datentyp | Possible Values       |
+| -------------- | -------- | --------------------- |
+| textDecoration | string   | "normal", "underline" |
 
 #### Objects Supported
 
@@ -100,9 +100,9 @@ Three font themes are available:
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values                |
-| --------- | --------- | ------------------------------ |
-| fontTheme | string    | "normal", "main", "additional" |
+| Name      | Datentyp | Possible Values                |
+| --------- | -------- | ------------------------------ |
+| fontTheme | string   | "normal", "main", "additional" |
 
 #### Objects Supported
 
@@ -119,9 +119,9 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values      |
-| ---------- | --------- | -------------------- |
-| fontFamily | string    | CSS font family name |
+| Name       | Datentyp | Possible Values      |
+| ---------- | -------- | -------------------- |
+| fontFamily | string   | CSS font family name |
 > 4D recommends using only [web safe](https://www.w3schools.com/cssref/css_websafe_fonts.asp) fonts.
 
 #### Objects Supported
@@ -138,9 +138,9 @@ Allows defining the object's font size in points.
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values                       |
-| -------- | --------- | ------------------------------------- |
-| fontSize | integer   | Font size in points. Minimum value: 0 |
+| Name     | Datentyp | Possible Values                       |
+| -------- | -------- | ------------------------------------- |
+| fontSize | ganzzahl | Font size in points. Minimum value: 0 |
 
 #### Objects Supported
 
@@ -164,9 +164,9 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values                           |
-| ------ | --------- | ----------------------------------------- |
-| stroke | string    | any css value, "transparent", "automatic" |
+| Name   | Datentyp | Possible Values                           |
+| ------ | -------- | ----------------------------------------- |
+| stroke | string   | any css value, "transparent", "automatic" |
 
 #### Objects Supported
 
@@ -194,9 +194,9 @@ Foreground color;Dark shadow color)
 
 #### JSON Grammar
 
-| Name            | Data Type | Possible Values       |
-| --------------- | --------- | --------------------- |
-| rowStrokeSource | string    | Font color expression |
+| Name            | Datentyp | Possible Values       |
+| --------------- | -------- | --------------------- |
+| rowStrokeSource | string   | Font color expression |
 
 #### Objects Supported
 
@@ -212,7 +212,7 @@ Used to apply a custom character style to each row of the list box or each cell 
 
 You must enter an expression or a variable (array type variables cannot be used). The expression or variable will be evaluated for each row displayed (if applied to the list box) or each cell displayed (if applied to a column). You can use the constants of the [Font Styles](https://doc.4d.com/4Dv17R6/4D/17-R6/Font-Styles.302-4310343.en.html) theme.
 
-Example:
+Beispiel:
 
 ```4d
 Choose([Companies]ID;Bold;Plain;Italic;Underline)
@@ -223,9 +223,9 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values                                 |
-| -------------- | --------- | ----------------------------------------------- |
-| rowStyleSource | string    | Style expression to evaluate for each row/cell. |
+| Name           | Datentyp | Possible Values                                 |
+| -------------- | -------- | ----------------------------------------------- |
+| rowStyleSource | string   | Style expression to evaluate for each row/cell. |
 
 #### Objects Supported
 
@@ -239,9 +239,9 @@ Horizontal location of text within the area that contains it.
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values                                   |
-| --------- | --------- | ------------------------------------------------- |
-| textAlign | string    | "automatic", "right", "center", "justify", "left" |
+| Name      | Datentyp | Possible Values                                   |
+| --------- | -------- | ------------------------------------------------- |
+| textAlign | string   | "automatic", "right", "center", "justify", "left" |
 
 #### Objects Supported
 
@@ -262,9 +262,9 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                        |
-| ------------- | --------- | -------------------------------------- |
-| verticalAlign | string    | "automatic", "top", "middle", "bottom" |
+| Name          | Datentyp | Possible Values                        |
+| ------------- | -------- | -------------------------------------- |
+| verticalAlign | string   | "automatic", "top", "middle", "bottom" |
 
 #### Objects Supported
 
@@ -278,20 +278,20 @@ This property can also be handled by the [OBJECT Get vertical alignment](https:/
 
 Specifies an expression or a variable which will be evaluated for each row displayed. It allows defining a whole set of row text attributes. You must pass an **object variable** or an **expression that returns an object**. The following properties are supported:
 
-| Property name               | Type    | Description                                                                                                                                                                                                                                                                                                                                                                |
-| --------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| stroke                      | string  | Font color. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                      |
-| fill                        | string  | Background color. Any CSS color (ex: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                |
-| fontStyle                   | string  | "normal","italic"                                                                                                                                                                                                                                                                                                                                                          |
-| fontWeight                  | string  | "normal","bold"                                                                                                                                                                                                                                                                                                                                                            |
-| textDecoration              | string  | "normal","underline"                                                                                                                                                                                                                                                                                                                                                       |
-| unselectable                | boolean | Designates the corresponding row as not being selectable (*i.e.*, highlighting is not possible). Enterable areas are no longer enterable if this option is enabled unless the "Single-Click Edit" option is also enabled. Controls such as checkboxes and lists remain functional. This setting is ignored if the list box selection mode is "None". Default value: False. |
-| disabled                    | boolean | Disables the corresponding row. Enterable areas are no longer enterable if this option is enabled. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. Default value: False.                                                                                                                                                                          |
-| cell.`\<columnName>` | object  | Allows applying the property to a single column. Pass in `\<columnName>` the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object                                                                                                               |
+| Property name               | Typ     | Beschreibung                                                                                                                                                                                                                                                                                                                                                                                                           |
+| --------------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| stroke                      | string  | Font color. Any CSS color (ex: "#FF00FF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                                  |
+| fill                        | string  | Background color. Any CSS color (ex: "#F00FFF"), "automatic", "transparent"                                                                                                                                                                                                                                                                                                                                            |
+| fontStyle                   | string  | "normal","italic"                                                                                                                                                                                                                                                                                                                                                                                                      |
+| fontWeight                  | string  | "normal","bold"                                                                                                                                                                                                                                                                                                                                                                                                        |
+| textDecoration              | string  | "normal","underline"                                                                                                                                                                                                                                                                                                                                                                                                   |
+| unselectable                | boolean | Designates the corresponding row as not being selectable (*i.e.*, highlighting is not possible). Enterable areas are no longer enterable if this option is enabled unless the "Single-Click Edit" option is also enabled. Controls such as checkboxes and lists remain functional. This setting is ignored if the list box selection mode is "None". This setting is ignored if the list box selection mode is "None". |
+| disabled                    | boolean | Disables the corresponding row. Enterable areas are no longer enterable if this option is enabled. Text and controls (checkboxes, lists, etc.) appear dimmed or grayed out. This setting is ignored if the list box selection mode is "None".                                                                                                                                                                          |
+| cell.`\<columnName>` | object  | Allows applying the property to a single column. Pass in `\<columnName>` the object name of the list box column. **Note**: "unselectable" and "disabled" properties can only be defined at row level. They are ignored if passed in the "cell" object                                                                                                                                                           |
 
 > Style settings made with this property are ignored if other style settings are already defined through expressions (*i.e.*, [Style Expression](#style-expression), [Font Color Expression](#font-color-expression), [Background Color Expression](#background-color-expression)).
 
-**Example**
+**Beispiel**
 
 In the *Color* project method, write the following code:
 
@@ -324,6 +324,8 @@ Then, the *Color* method would contain:
 ```4d
   //Color method
  ...
+ //Color method
+ ...
  If(This.ID>5)
     Form.meta.stroke:="purple"
     Form.meta.cell:=Form.colStyle //reuse the same object for better performance
@@ -333,9 +335,9 @@ Then, the *Color* method would contain:
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                  |
-| ---------- | --------- | ------------------------------------------------ |
-| metaSource | string    | Object expression to evaluate for each row/cell. |
+| Name       | Datentyp | Possible Values                                  |
+| ---------- | -------- | ------------------------------------------------ |
+| metaSource | string   | Object expression to evaluate for each row/cell. |
 
 #### Objects Supported
 
@@ -351,9 +353,9 @@ By default, this option is not enabled.
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values |
-| ---------- | --------- | --------------- |
-| styledText | boolean   | true, false     |
+| Name       | Datentyp | Possible Values |
+| ---------- | -------- | --------------- |
+| styledText | boolean  | true, false     |
 
 #### Objects Supported
 
@@ -365,7 +367,7 @@ By default, this option is not enabled.
 
 Modifies the orientation (rotation) of a text area. Text areas can be rotated by increments of 90°. Each orientation value is applied while keeping the same lower left starting point for the object:
 
-| Orientation value | Result                                         |
+| Orientation value | Ergebnis                                       |
 | ----------------- | ---------------------------------------------- |
 | 0 (default)       | ![](../assets/en/FormObjects/orientation1.png) |
 | 90                | ![](../assets/en/FormObjects/orientation2.png) |
@@ -376,9 +378,9 @@ In addition to [static text areas](text.md), [input](input_overview.md) text obj
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values |
-| --------- | --------- | --------------- |
-| textAngle | number    | 0, 90, 180, 270 |
+| Name      | Datentyp | Possible Values |
+| --------- | -------- | --------------- |
+| textAngle | Zahl     | 0, 90, 180, 270 |
 
 #### Objects Supported
 
@@ -396,9 +398,9 @@ The name of a Longint array must be used. Each element of this array corresponds
 
 #### JSON Grammar
 
-| Name            | Data Type | Possible Values             |
-| --------------- | --------- | --------------------------- |
-| rowStrokeSource | string    | The name of a longint array |
+| Name            | Datentyp | Possible Values             |
+| --------------- | -------- | --------------------------- |
+| rowStrokeSource | string   | The name of a longint array |
 
 #### Objects Supported
 
@@ -416,9 +418,9 @@ The name of a Longint array must be used. Each element of this array corresponds
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values              |
-| -------------- | --------- | ---------------------------- |
-| rowStyleSource | string    | The name of a longint array. |
+| Name           | Datentyp | Possible Values              |
+| -------------- | -------- | ---------------------------- |
+| rowStyleSource | string   | The name of a longint array. |
 
 #### Objects Supported
 
@@ -448,9 +450,9 @@ When the property is enabled, the area stores all the formatting information. Th
 
 #### JSON Grammar
 
-| Name              | Data Type | Possible Values        |
-| ----------------- | --------- | ---------------------- |
-| storeDefaultStyle | boolean   | true, false (default). |
+| Name              | Datentyp | Possible Values        |
+| ----------------- | -------- | ---------------------- |
+| storeDefaultStyle | boolean  | true, false (default). |
 
 #### Objects Supported
 
