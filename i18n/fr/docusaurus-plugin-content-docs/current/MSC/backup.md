@@ -1,19 +1,19 @@
 ---
 id: backup
-title: Backup Page
-sidebar_label: Backup Page
+title: Page Sauvegarde
+sidebar_label: Page Sauvegarde
 ---
 
-You can use the Backup page to view some backup parameters of the database and to launch a manual backup:
+La page Sauvegarde du CSM permet de visualiser les paramètres de sauvegarde de la base et de lancer une sauvegarde manuelle :
 
 ![](../assets/en/MSC/msc_Backup.png)
 
-This page consists of the following three areas:
+Cette page est constituée des zones suivantes :
 
-- **Backup File Destination**: displays information about the location of the application backup file. It also indicates the free/used space on the backup disk.
-- **Last Backup Information**: provides the date and time of the last backup (automatic or manual) carried out on the application.
-- **Contents of the backup file**: lists the files and folders included in the backup file.
+- **Emplacement du fichier de sauvegarde** : affiche les informations relatives à l’emplacement du fichier de sauvegarde de l'application. Elle indique également l’espace occupé et l’espace disponible sur le volume de sauvegarde.
+- **Informations sur la dernière sauvegarde** : fournit la date et l’heure de la dernière sauvegarde (automatique ou manuelle) réalisée sur l'application.
+- **Contenu du fichier de sauvegarde** : liste les fichiers et dossiers inclus dans le fichier de sauvegarde.
 
-The **Backup** button is used to launch a manual backup.
+Le bouton **Sauvegarde** permet de lancer une sauvegarde manuelle.
 
-This page cannot be used to modify the backup parameters. To do this, you must click on the **Database properties...** button.
+Cette page ne permet pas de modifier les paramètres de sauvegarde. Pour cela, vous devez cliquer sur le bouton **Propriétés de la base...**.
