@@ -4,21 +4,21 @@ title: '$distinct'
 ---
 
 
-Returns the distinct values for a specific attribute in a collection (*e.g.*, `Company/name?$filter="name=a*"&$distinct=true`)
+指定した属性について、重複しない値のコレクションを取得します (*例*: `Company/name?$filter="name=a*"&$distinct=true`)
 
 
-## Description
+## 詳細
 
-`$distinct` allows you to return a collection containing the distinct values for a query on a specific attribute. Only one attribute in the dataclass can be specified. Generally, the String type is best; however, you can also use it on any attribute type that could contain multiple values.
+`$distinct` を使って、指定した属性における重複しない値を格納したコレクションを取得することができます。 その際、データクラスの属性を一つのみを指定することができます。 通常は文字列型の属性を対象に使用しますが、複数の値を持つ属性であれば、その型に制限はありません。
 
-You can also use `$skip` and `$top/$limit` as well, if you'd like to navigate the selection before it's placed in an array.
+対象となる要素を制限するのに `$skip` および `$top/$limit` も組み合わせて使用することができます。
 
-## Example
-In our example below, we want to retrieve the distinct values for a company name starting with the letter "a":
+## 例題
+"a" で始まる会社名について、重複しない値のコレクションを取得するには、次のように書きます:
 
  `GET  /rest/Company/name?$filter="name=a*"&$distinct=true`
 
-**Response**:
+**レスポンス**:
 
 ````
 [
