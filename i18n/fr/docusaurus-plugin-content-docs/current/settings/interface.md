@@ -1,71 +1,71 @@
 ---
 id: interface
-title: Interface page
+title: Page Interface
 ---
 
  
-You use the Interface page to set various options related to the project interface.
+La page Interface vous permet de régler diverses options liées à l'interface du projet.
 
-## General
+## Général
 
-This area lets you set various options concerning display.
+Cette zone vous permet de personnaliser diverses options d'affichage.
 
 ![](../assets/en/settings/interface-page.png)
 
-### Font to use with the MESSAGE command
+### Police à utiliser avec la commande MESSAGE
 
-Click **Select...** to set the font and size for the characters used by the `MESSAGE` command.
+Le bouton **Sélectionner...** vous permet de définir la police et la taille des caractères utilisés par la commande `MESSAGE`.
 
-The default font and its size depend on the platform where 4D is running.
+La police et la taille de police par défaut dépendent de la plate-forme d'exécution de 4D.
 
-> This property also affects the following parts of 4D: <li>certain preview areas of the Explorer</li><li>the ruler of the Form editor</li>
-Other options configure the display of various windows in the Application mode.
+> Les parties suivantes de 4D sont également affectées par cette propriété : <li>certaines zones d’aperçu de l’Explorateur,</li><li>la règle de L'Editeur de formulaires</li>
+D'autres options permettent de configurer l'affichage de diverses fenêtres du mode Application.
 
--   **Splash screen**: When this option is deselected, the [splash screen of the current menu bar](Menus/bars.md#splash-screen) does not appear in the Application mode. When you hide this window, it is up to you to manage the display of all your windows by programming, for example in the `On Startup` database method.
+-   **Accueil** : lorsque cette option est désélectionnée, la [fenêtre d’accueil (ou “splash screen”) de la barre de menus courante](Menus/bars.md#splash-screen) en mode Application n’apparaît pas. Lorsque vous masquez cette fenêtre, c'est à vous de gérer l'affichage de toutes vos fenêtres par programmation, par exemple dans la méthode base `On Startup`.
 
--   **Flushing progress**: When this option is checked, 4D displays a window at the bottom left of the screen while the data in the cache is flushed. Since this operation momentarily blocks user actions, displaying this window lets them know that flushing is underway.
+-   **Ecriture du cache** : Lorsque cette option est cochée, 4D affiche une fenêtre en bas à gauche de l'écran pendant que les données du cache sont vidées. Etant donné que cette opération bloque momentanément les actions de l'utilisateur, l'affichage de cette fenêtre lui permet de savoir que l'écriture du cache est en cours.
 
-    > You can set the [frequency for cache flushing](database.md#memory-page) in **Settings** > **Database** > **Memory**.
+    > Vous pouvez définir la [fréquence d'écriture du cache](database.md#memory-page) dans **Propriétés** > **Base de données** > **Mémoire**.
 
--   **Printing progress**: Lets you enable or disable the display of the printing progress dialog box when printing.
+-   **Progression de l'impression** : permet, lors de l'impression, d'activer ou de désactiver l'affichage de la boîte de dialogue de progression de l'impression.
 
--   **Use SDI mode on Windows**: When this option checked, 4D enables automatically the SDI mode (Single-Document Interface) in your merged application if executed in a supported context.
+-   **Utiliser le mode SDI sous Windows** : Lorsque cette option est cochée, 4D active automatiquement le mode SDI (Single-Document Interface) dans votre application fusionnée si elle est exécutée dans un contexte pris en charge.
 
-    > This option can be selected on macOS but will be ignored when the application is executed on this platform.
+    > Cette option peut être sélectionnée sur macOS mais sera ignorée lorsque l'application sera exécutée sur cette plateforme.
 
-### Appearance
+### Apparence
 
-This menu lets you select the color scheme to use at the main application level. A color scheme defines a global set of interface colors for texts, backgrounds, windows, etc., used in your forms.
+Ce menu vous permet de sélectionner la palette de couleurs à utiliser au niveau de l'application principale. Une palette de couleurs définit un ensemble global de couleurs d'interface pour les textes, les arrière-plans, les fenêtres, etc., utilisés dans vos formulaires.
 
-> This option only works on macOS. On Windows, the "Light" scheme is always used.
+> Cette option fonctionne uniquement sur macOS. Sous Windows, la palette "Light" est toujours utilisée.
 
-The following schemes are available:
+Les palettes suivants sont disponibles :
 
--   **Light**: the application will use the Default Light Theme ![](../assets/en/settings/light-appearance.png)
--   **Dark**: the application will use the Default Dark Theme ![](../assets/en/settings/dark-appearance.png)
--   **Inherited** (default): the application will inherit from the higher priority level (i.e., OS user preferences)
+-   **Clair** : l'application utilisera le thème clair par défaut ![](../assets/en/settings/light-appearance.png)
+-   **Foncé**: l'application utilisera le thème foncé par défaut ![](../assets/en/settings/dark-appearance.png)
+-   **Héritée** (par défaut) : l'application hérite du niveau de priorité le plus élevé (c'est-à-dire les préférences de l'utilisateur du système d'exploitation)
 
-> Default themes can be handled using CSS. For more information, please refer to the [Media Queries](../FormEditor/createStylesheet.md#media-queries) section.
+> Les thèmes par défaut peuvent être gérés par du CSS. Pour plus d'informations, veuillez consulter la section [Media Queries](../FormEditor/createStylesheet.md#media-queries).
 
-The main application scheme will be applied to forms by default. However, it can be overriden:
+La palette d'application principale sera appliquée aux formulaires par défaut. Toutefois, elle peut être remplacée :
 
--   by the [SET APPLICATION COLOR SCHEME](https://doc.4d.com/4dv19R/help/command/en/page1762.html) command at the working session level;
--   using by the [Color Scheme](../FormEditor/propertiesForm.html#color-scheme) form property at each form level (highest priority level). **Note:** When printed, forms always use the "Light" scheme.
+-   par la commande [SET APPLICATION COLOR SCHEME](https://doc.4d.com/4dv19R/help/command/en/page1762.html) au niveau de la session de travail ;
+-   en utilisant la propriété de formulaire [Color Scheme](../FormEditor/propertiesForm.html#color-scheme) à chaque niveau de formulaire (niveau de priorité le plus élevé). **Note** : à l'impression, les formulaires utilisent toujours la palette "Light".
 
-## Shortcuts
+## Raccourcis
 
-You use the Shortcuts area for viewing and modifying default shortcuts for three basic 4D form operations in your desktop applications. These shortcuts are identical for both platforms. Key icons indicate the corresponding Windows and macOS keys.
+La zone Raccourcis clavier permet d'afficher et de modifier les raccourcis clavier par défaut pour trois opérations de base du formulaire 4D dans vos applications desktop. Ces raccourcis clavier sont identiques pour les deux plateformes. Les icônes des touches indiquent les touches correspondant à Windows et à macOS.
 
-The default shortcuts are as follows:
+Les raccourcis clavier par défaut sont les suivants :
 
--   Accept input form: **Enter**
--   Cancel input form: **Esc**
--   Add to subform: **Ctrl+Shift+/** (Windows) or **Command+Shift+/** (macOS)
+-   Acceptation de saisie : **Entrée**
+-   Annulation de saisie : **Echap**
+-   Ajout d'un sous-formulaire : **Ctrl+Shift+/** (Windows) ou **Command+Shift+/** (macOS)
 
-To change the shortcut of an operation, click the corresponding **Edit** button. The following dialog box appears:
+Pour modifier le raccourci d'une opération, cliquez sur le bouton **Modifier** correspondant. La boîte de dialogue suivante apparaît :
 
 ![](../assets/en/settings/shortcut.png)
 
-To change the shortcut, type the new key combination on your keyboard and click **OK**. If you prefer not to have a shortcut for an operation, click **Clear**.
+Pour modifier le raccourci clavier, tapez la nouvelle combinaison de touches sur votre clavier et cliquez sur **OK**. Si vous préférez ne pas avoir de raccourci pour une opération, cliquez sur **Effacer**.
 
 
