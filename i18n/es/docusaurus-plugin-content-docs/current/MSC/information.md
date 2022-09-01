@@ -1,52 +1,52 @@
 ---
 id: information
-title: Information Page
-sidebar_label: Information Page
+title: Página de información
+sidebar_label: Página de información
 ---
 
-The Information page provides information about the 4D and system environments, as well as the database and application files. Each page can be displayed using tab controls at the top of the window.
+La página Información proporciona información sobre los entornos 4D y sistema, así como sobre los archivos de la base de datos y de la aplicación. Cada página puede visualizarse mediante los controles de pestañas en la parte superior de la ventana.
 
-## Program
+## Programa
 
-This page indicates the name, version and location of the application as well as the active 4D folder (for more information about the active 4D folder, refer to the description of the `Get 4D folder` command in the *4D Language Reference* manual).
+Esta página indica el nombre, la versión y la ubicación de la aplicación, así como la carpeta 4D activa (para más información sobre la carpeta 4D activa, consulte la descripción del comando `Get 4D folder` en el manual *Lenguaje 4D*).
 
-The central part of the window indicates the name and location of the project and data files as well as the log file (if any). The lower part of the window indicates the name of the 4D license holder, the type of license, and the name of the current 4D user.
+La parte central de la ventana indica el nombre y la ubicación del proyecto y de los os archivos de datos, así como también el archivo de historial (si lo hay). La parte inferior de la ventana indica el nombre del titular de la licencia 4D, el tipo de licencia y el nombre del usuario 4D actual.
 
-- **Display and selection of pathnames**: On the **Program** tab, pathnames are displayed in pop-up menus containing the folder sequence as found on the disk:  
-  ![](../assets/en/MSC/MSC_popup.png) If you select a menu item (disk or folder), it is displayed in a new system window. The **Copy the path** command copies the complete pathname as text to the clipboard, using the separators of the current platform.
+- **Visualización y selección de nombres de ruta**: en la pestaña **Programa**, los nombres de ruta se muestran en menús emergentes que contienen la secuencia de carpetas tal y como se encuentran en el disco:  
+  ![](../assets/en/MSC/MSC_popup.png) Si selecciona un elemento del menú (disco o carpeta), se muestra en una nueva ventana del sistema. El comando **Copiar la ruta** copia el nombre completo de la ruta en el portapapeles como texto, utilizando los separadores de la plataforma actual.
 
-- **"Licenses" Folder** The **"Licenses" Folder** button displays the contents of the active Licenses folder in a new system window. All the license files installed in your 4D environment are grouped together in this folder, on your hard disk. When they are opened with a Web browser, these files display information concerning the licenses they contain and their characteristics. The location of the "Licenses" folder can vary depending on the version of your operating system. For more information about the location of this folder, refer to the `Get 4D folder` command. ***Note:** You can also access this folder from the “Update License” dialog box (available in the Help menu).*
+- **"Licenses" Folder** The **"Licenses" Folder** button displays the contents of the active Licenses folder in a new system window. Todos los archivos de licencia instalados en su entorno 4D están agrupados en esta carpeta, en su disco duro. Cuando se abren con un navegador web, estos archivos muestran información sobre las licencias que contienen y sus características. La ubicación de la carpeta "Licenses" puede variar en función de la versión de su sistema operativo. Para obtener más información sobre la ubicación de esta carpeta, consulte el comando `Get 4D folder`. ***Nota:** también puede acceder a esta carpeta desde la caja de diálogo "Actualizar licencias" (disponible en el menú Ayuda).*
 
-## Tables
+## Tablas
 
-This page provides an overview of the tables in your database:
+Esta página ofrece una visión general de las tablas de su base:
 
 ![](../assets/en/MSC/MSC_Tables.png)
-> Information on this page is available in both standard and maintenance modes.
+> La información de esta página está disponible tanto en el modo estándar como en el de mantenimiento.
 
-The page lists all the tables of the database (including invisible tables) as well as their characteristics:
+La página lista todas las tablas de la base (incluidas las tablas invisibles), así como sus características:
 
-- **ID**: Internal number of the table.
-- **Tables**: Name of the table. Names of deleted tables are displayed with parenthesis (if they are still in the trash).
-- **Records**: Total number of records in the table. If a record is damaged or cannot be read, *Error* is displayed instead of the number. In this case, you can consider using the verify and repair tools.
-- **Fields**: Number of fields in the table. Invisible fields are counted, however, deleted fields are not counted.
-- **Indexes**: Number of indexes of any kind in the table
-- **Encryptable**: If checked, the **Encryptable** attribute is selected for the table at the structure level (see "Encryptable" paragraph in the Design Reference Manual).
-- **Encrypted**: If checked, the records of the table are encrypted in the data file. ***Note**: Any inconstency between Encryptable and Encrypted options requires that you check the encryption status of the data file in the Encrypt page of the MSC.*
-- **Address Table Size**: Size of the address table for each table. The address table is an internal table which stores one element per record created in the table. It actually links records to their physical address. For performance reasons, it is not resized when records are deleted, thus its size can be different from the current number of records in the table. If this difference is significant, a data compacting operation with the "Compact address table" option checked can be executed to optimize the address table size (see [Compact](compact.md) page). ***Note:** Differences between address table size and record number can also result from an incident during the cache flush.*
+- **ID**: número internos de la tabla.
+- **Tablas**: nombres de las tablas. Los nombres de las tablas borradas se muestran entre paréntesis (si todavía están en la papelera).
+- **Registros**: número total de registros en la tabla. Si un registro está dañado o no se puede leer, se muestra *Error* en lugar del número. En este caso, puede considerar el uso de las herramientas de verificación y de reparación.
+- **Campos**: número de campos en la tabla. Los campos invisibles se cuentan, sin embargo, los campos borrados no se cuentan.
+- **Índices**: número de índices de todo tipo en la tabla
+- **Encriptable**: si el atributo **Encriptable** se marca para la tabla al nivel de la estructura (ver el párrafo "Encriptable" en el Manual de Diseño).
+- **Encriptado**: si se marca, los registros de la tabla se cifran en el archivo de datos. **Encriptado**: si se marca, los registros de la tabla se cifran en el archivo de datos.
+- **Tamaño tabla direcciones**: tamaño de la tabla de direcciones para cada tabla. La tabla de direcciones es una tabla interna que almacena un elemento por cada registro creado en la tabla. De hecho, vincula los registros a su dirección física. Por razones de rendimiento, no se redimensiona cuando se eliminan registros, por lo que su tamaño puede ser diferente del número de registros actual de la tabla. Si esta diferencia es significativa, se puede ejecutar una operación de compactación de datos con la opción "Compactar la tabla de direcciones" marcada para optimizar el tamaño de la tabla de direcciones (ver la página [Compactar](compact.md)). ***Nota:** las diferencias entre el tamaño de la tabla de direcciones y el número de registros también pueden ser el resultado de un incidente durante la escritura de la caché en el disco.*
 
 
 
-## Data
+## Datos
 
-The **Data** page provides information about the available and used storage space in the data file.
-> This page cannot be accessed in maintenance mode
+La página **Datos** ofrece información sobre el espacio de almacenamiento disponible y utilizado en el archivo de datos.
+> No se puede acceder a esta página en modo mantenimiento
 
-The information is provided in graph form:
+La información se ofrece en forma gráfica:
 
 ![](../assets/en/MSC/MSC_Data.png)
-> This page does not take into account any data that may be stored outside of the data file (see "External storage").
+> Esta página no tiene en cuenta los datos que puedan estar almacenados fuera del archivo de datos (ver "Almacenamiento externo").
 
-Files that are too fragmented reduce disk, and thus, database performance. If the occupation rate is too low, 4D will indicate this by a warning icon (which is displayed on the Information button and on the tab of the corresponding file type) and specify that compacting is necessary:![](../assets/en/MSC/MSC_infowarn.png)
+Los archivos demasiado fragmentados reducen el rendimiento del disco y, por tanto, de la base. Si la tasa de ocupación es demasiado baja, 4D lo indicará con un icono de advertencia (que aparece en el botón de información y en la pestaña del tipo de archivo correspondiente) y especificará que es necesario compactar:![](../assets/en/MSC/MSC_infowarn.png)
 
-A warning icon is also displayed on the button of the [Compact](compact.md) page: ![](../assets/en/MSC/MSC_compactwarn.png)
+También aparece un icono de advertencia en el botón de la página [Compactar](compact.md): ![](../assets/en/MSC/MSC_compactwarn.png)
