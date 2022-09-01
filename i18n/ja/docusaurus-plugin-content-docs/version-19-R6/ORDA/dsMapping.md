@@ -1,254 +1,254 @@
 ---
 id: dsmapping
-title: Data Model Objects
+title: データモデルオブジェクト
 ---
 
-The ORDA technology is based upon an automatic mapping of an underlying database structure. It also provides access to data through entity and entity selection objects. As a result, ORDA exposes the whole database as a set of data model objects.
+ORDA は、下地であるデータベースストラクチャーへの自動マッピングに基づいた技術です。 ORDA は、エンティティやエンティティセレクションオブジェクトを介してデータへのアクセスも提供します。 結果的に ORDA は、データモデルオブジェクト一式の形でデータベース全体を公開します。
 
 
-## Structure mapping
+## ストラクチャーマッピング
 
-When you call a datastore using the [`ds`](API/DataStoreClass.md#ds) or the [`Open datastore`](API/DataStoreClass.md#open-datastore) command, 4D automatically references tables and fields of the corresponding 4D structure as properties of the returned [datastore](#datastore) object:
+[`ds`](API/DataStoreClass.md#ds) および [`Open datastore`](API/DataStoreClass.md#open-datastore) コマンドを使ってデータストアを呼び出すと、戻り値の [データストア](#データストア) オブジェクトには、対応する 4D ストラクチャーのテーブルとフィールドへの参照が属性として格納されています:
 
-*   Tables are mapped to dataclasses.
-*   Fields are mapped to storage attributes.
-*   Relations are mapped to relation attributes - relation names, defined in the Structure editor, are used as relation attribute names.
+*   テーブルはデータクラスへとマップされます。
+*   フィールドはストレージ属性へとマップされます。
+*   リレーションはリレーション属性へとマップされます。ストラクチャーエディター内で定義されたリレーション名はリレーション属性名として使用されます。
 
 ![](../assets/en/ORDA/datastoreMapping.png)
 
 
-### General rules
+### 変換のルール
 
-The following rules are applied for any conversions:
+変換の際には以下のルールが適用されます:
 
-* Table, field, and relation names are mapped to object property names. Make sure that such names comply with general object naming rules, as explained in the [object naming conventions](Concepts/identifiers.md) section.
-*   A datastore only references tables with a single primary key. The following tables are not referenced:
-    *   Tables without a primary key
-    *   Tables with composite primary keys.
-*   BLOB fields are automatically available as attributes of the [Blob object](Concepts/dt_blob.md#blob-types) type.
+* テーブル、フィールド、そしてリレーション名はオブジェクトプロパティ名へとマップされます。 それらの名前が標準のオブジェクト命名規則に則っているようにしてください ([識別子の命名規則](Concepts/identifiers.md) 参照)。
+*   データストアは単一のプライマリーキーを持つテーブルのみを参照します。 以下のテーブルは参照されません:
+    *   プライマリーキーがないテーブル
+    *   複合プライマリーキーを持つテーブル
+*   BLOBフィールドは、[BLOB オブジェクト](Concepts/dt_blob.md#blob-の種類) 型の属性として利用可能です。
 
 > ORDA mapping does not take into account:  
 > - the "Invisible" option for tables or fields, - the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`, - the "Manual" or "Automatic" property of relations.
 
 
-### Rules for remote access control
+### リモートデータストアの利用
 
-When accessing a remote datastore through the `Open datastore` command or [REST requests](REST/gettingStarted.md), only tables and fields with the **Expose as REST resource** property are available remotely.
+`Open datastore` コマンドまたは [REST リクエスト](REST/gettingStarted.md) によってリモートデータストアにアクセスする場合、**RESTリソースとして公開** プロパティが設定されているテーブルとフィールドのみ利用可能です。
 
-This option must be selected at the 4D structure level for each table and each field that you want to be exposed as dataclass and attribute in the datastore:
+このプロパティは、データストアにデータクラスおよび属性として公開したい各テーブルおよびフィールドについて 4D ストラクチャーのレベルで設定する必要があります:
 
 ![](../assets/en/ORDA/ExposeDataclass.png)
 
 
-### Data model update
+### データモデルのアップデート
 
-Any modifications applied at the level of the database structure invalidate the current ORDA model layer. These modifications include:
+データベースストラクチャーレベルで変更がおこなわれると、カレントの ORDA モデルレイヤーは無効化されます。 これらの変更には、以下のものが含まれます:
 
-*   adding or removing a table, a field, or a relation
-*   renaming of a table, a field, or a relation
-*   changing a core property of a field (type, unique, index, autoincrement, null value support)
+*   テーブル、フィールド、リレーションの追加または削除
+*   テーブル、フィールド、リレーションの名称変更
+*   フィールドの核となるプロパティ (型、重複不可、インデックス、自動インクリメント、null値サポートなど) の変更
 
-When the current ORDA model layer has been invalidated, it is automatically reloaded and updated in subsequent calls of the local `ds` datastore on 4D and 4D Server. Note that existing references to ORDA objects such as entities or entity selections will continue to use the model from which they have been created, until they are regenerated.
+カレントの ORDA モデルレイヤーが無効化されると、その後 4D または 4D Server のローカルの `ds` データストアを呼び出した時にモデルレイヤーが自動的に再読み込みされ、更新されます。 ただし、エンティティやエンティティセレクションなど、ORDA オブジェクトへの既存の参照は、再生成されるまではそれらが作成されたときのモデルを使用し続けるという点に注意してください。
 
-However, the updated ORDA model layer is not automatically available in the following contexts:
+また、アップデートされた ORDA モデルレイヤーは、以下のコンテキストにおいては自動的には利用可能にはなりません:
 
-*   a remote 4D application connected to 4D Server -- the remote application must reconnect to the server.
-*   a remote datastore opened using `Open datastore` or through [REST calls](REST/gettingStarted.md) -- a new session must be opened.
+*   4D Server に接続したリモートの 4D -- リモートのアプリケーションはサーバーに再接続する必要があります
+*   `Open datastore` または [REST 呼び出し](REST/gettingStarted.md) を使用して開かれたリモートデータストア -- 新しいセッションを開く必要があります
 
 
-## Object definition
+## オブジェクトの定義
 
-### Datastore
+### データストア
 
-The datastore is the interface object to a database. It builds a representation of the whole database as object. A datastore is made of a **model** and **data**:
+データストアは、データベースへのインターフェースオブジェクトです。 データベース全体を反映したものをオブジェクトとしてビルドします。 データストアは **モデル** と **データ** から構成されています:
 
-- The model contains and describes all the dataclasses that make up the datastore. It is independant from the underlying database itself.
-- Data refers to the information that is going to be used and stored in this model. For example, names, addresses, and birthdates of employees are pieces of data that you can work with in a datastore.
+- モデルにはデータストアを構成するすべてのデータクラスが格納され、その詳細な情報も含まれます。 これはその下地にあるデータベース自体からは独立した存在です。
+- データとは、そのモデル内で使用・保存される情報を指します。 たとえば、従業員の名前、住所、生年月日などはデータストア内で扱うことができるデータに含まれます。
 
-When handled through the code, the datastore is an object whose properties are all of the [dataclasses](#dataclass) which have been specifically exposed.
+コード内で扱うにあたっては、データストアはオブジェクトであり、公開されているすべての [データクラス](#dataclass) をプロパティとして持ちます。
 
-4D allows you to handle the following datastores:
+4D では次のデータストアを扱うことができます:
 
-- the local datastore, based on the current 4D database, returned by the `ds` command (the main datastore).
-- one or more remote datastore(s) exposed as REST resources in remote 4D databases, returned by the `Open datastore` command.
+- カレント 4D データベースに基づいた、ローカルデータストア。これは、`ds` コマンドで返されるメインデータストアです。
+- リモートデータベースによって REST リソースとして公開された、一つ以上のリモートデータストア。これらは、`Open datastore` コマンドで返されます。
 
-A datastore references only a single local or remote database.
+データストアは単一の、ローカルあるいはリモートのデータベースを参照します。
 
-The datastore object itself cannot be copied as an object:
+データストアオブジェクト自身は、オブジェクトとしてコピーすることはできません:
 
 ```4d 
-$mydatastore:=OB Copy(ds) //returns null
+$mydatastore:=OB Copy(ds) // null を返します
 ```
 
 
-The datastore properties are however enumerable:
+しかしながらデータストアプロパティは取得可能です:
 
 
 ```4d 
  ARRAY TEXT($prop;0)
  OB GET PROPERTY NAMES(ds;$prop)
-  //$prop contains the names of all the dataclasses
+  // $prop にはすべてのデータクラスの名前が格納されます
 ```
 
 
 
-The main (default) datastore is always available through the `ds` command, but the `Open datastore` command allows referencing any remote datastore.
+メイン (デフォルト) のデータストアは `ds` コマンドを通して常に利用可能です。`Open datastore` コマンドを使えば、あらゆるリモートデータストアを参照することができます。
 
-### Dataclass
+### DataClass
 
-A dataclass is the equivalent of a table. It is used as an object model and references all fields as attributes, including relational attributes (attributes built upon relations between dataclasses). Relational attributes can be used in queries like any other attribute.
+データクラスとは、テーブルに相当するものです。 オブジェクトモデルとして使用され、リレーショナル属性 (データクラス間のリレーションに基づいてビルドされた属性) を含めてすべてのフィールドを属性として参照します。 リレーショナル属性はクエリにおいて通常の属性のように使用することができます。
 
-All dataclasses in a 4D project are available as a property of the `ds` datastore. For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each exposed table that you want to be exposed as dataclass in the datastore.
+4D プロジェクト内のすべてのデータクラスは、`ds` データストアのプロパティとして利用可能です。 `Open datastore` コマンドまたは [REST リクエスト](REST/gettingStarted.md) によってアクセスするリモートデータストアの場合、データストアのデータクラスとして公開したい各テーブルについて 4D ストラクチャーのレベルで **RESTリソースとして公開** プロパティを設定する必要があります。
 
-For example, consider the following table in the 4D structure:
+たとえば、4D ストラクチャー内の以下のテーブルについて考えます。
 
 ![](../assets/en/ORDA/companyTable.png)
 
-The `Company` table is automatically available as a dataclass in the `ds` datastore. You can write:
+`Company` テーブルは `ds` データストア内のデータクラスとして自動的に利用可能です。 以下のように書くことができます:
 
 ```4d 
-var $compClass : cs.Company //declares a $compClass object variable of the Company class
-$compClass:=ds.Company //assigns the Company dataclass reference to $compClass
+var $compClass : cs.Company // Company クラスのオブジェクト変数として $compClass を宣言します
+$compClass:=ds.Company // Company データクラスへの参照を $compClass に代入します
 ```
 
-A dataclass object can contain:
+データクラスオブジェクトは以下のものを格納することができます:
 
 *   attributes
-*   relation attributes
+*   リレーション属性
 
-The dataclass offers an abstraction of the physical database and allows handling a conceptual data model. The dataclass is the only means to query the datastore. A query is done from a single dataclass. Queries are built around attributes and relation attribute names of the dataclasses. So the relation attributes are the means to involve several linked tables in a query.
+データクラスは実際のデータベースの概略を提供し、概念的なデータモデルの管理を可能にします。 データクラスはデータストアをクエリする唯一の方法です。 クエリは単一のデータクラスを通して実行されます。 クエリはデータクラスの属性およびリレーション属性名に基づいてビルドされます。 リレーション属性は、一つのクエリ内で複数のリンクされたテーブルを用いる手段です。
 
-The dataclass object itself cannot be copied as an object:
+データクラスオブジェクト自身は、オブジェクトとしてコピーすることはできません:
 
 ```4d 
-$mydataclass:=OB Copy(ds.Employee) //returns null
+$mydataclass:=OB Copy(ds.Employee) // null を返します
 ```
 
-The dataclass properties are however enumerable:
+しかしながらデータクラスプロパティは取得可能です:
 
 ```code4d 
 ARRAY TEXT($prop;0)
 OB GET PROPERTY NAMES(ds.Employee;$prop)
-//$prop contains the names of all the dataclass attributes
+// $prop にはすべてのデータクラス属性の名前が格納されます
 ```
 
 
-### Attribute
+### 属性
 
-Dataclass properties are attribute objects describing the underlying fields or relations. For example:
+データクラスプロパティは、下地にあるフィールドやリレーションを説明する属性オブジェクトです。 例:
 
 ```4d 
- $nameAttribute:=ds.Company.name //reference to class attribute
- $revenuesAttribute:=ds.Company["revenues"] //alternate way
+ $nameAttribute:=ds.Company.name // クラス属性への参照
+ $revenuesAttribute:=ds.Company["revenues"] // 別の書き方
 ```
 
-This code assigns to `$nameAttribute` and `$revenuesAttribute` references to the name and revenues attributes of the `Company` class. This syntax does NOT return values held inside of the attribute, but instead returns references to the attributes themselves. To handle values, you need to go through [Entities](#entity).
+このコードは、`$nameAttribute` および `$revenuesAttribute` に、`Company` クラスの name および revenues 属性の参照をそれぞれ代入します。 このシンタックスは属性内に保管されている値を返すのではありません。その代わりに、属性自身への参照を返します。 値を管理するためには、[エンティティ](#エンティティ) を使用する必要があります。
 
-All eligible fields in a table are available as attributes of their parent [dataclass](#dataclass). For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each field that you want to be exposed as a dataclass attribute.
+テーブル内の適格なフィールドはすべて、親 [データクラス](#データクラス) の属性として利用可能です。 `Open datastore` コマンドまたは [REST リクエスト](REST/gettingStarted.md) によってアクセスするリモートデータストアの場合、データクラスの属性として公開したい各フィールドについて 4D ストラクチャーのレベルで **RESTリソースとして公開** プロパティを設定する必要があります。
 
 
-#### Storage and Relation attributes
+#### ストレージ属性とリレーション属性
 
-Dataclass attributes come in several kinds: storage, relatedEntity, and relatedEntities. Attributes that are scalar (*i.e.*, provide only a single value) support all the standard 4D data types (integer, text, object, etc.).
+データクラス属性にはいくつかの種類があります。ストレージ、リレートエンティティ、リレートエンティティズです。 スカラーである属性 (単一の値のみを提供するもの) は標準の 4D データ型 (整数、テキスト、オブジェクトなど) をサポートします。
 
-*   A **storage attribute** is equivalent to a field in the 4D database and can be indexed. Values assigned to a storage attribute are stored as part of the entity when it is saved. When a storage attribute is accessed, its value comes directly from the datastore. Storage attributes are the most basic building block of an entity and are defined by name and data type.
-*   A **relation attribute** provides access to other entities. Relation attributes can result in either a single entity (or no entity) or an entity selection (0 to N entities). Relation attributes are built upon "classic" relations in the relational structure to provide direct access to related entity or related entities. Relation attributes are directy available in ORDA using their names.
+*   **ストレージ属性** は4D データベース内のフィールドに相当するもので、インデックスをつけることができます。 ストレージ属性に割り当てられた値は、保存時にエンティティの一部として保存されます。 ストレージ属性にアクセスしたとき、その値はデータストアから直接取り出されます。 ストレージ属性はエンティティを構成するもっとも基礎的な要素であり、名前とデータ型により定義されます。
+*   **リレーション属性** は他のエンティティへのアクセスを提供します。 リレーション属性は単一のエンティティ (あるいはエンティティなし) あるいはエンティティセレクション (0からNまでのエンティティ) のどちらかになります。 リレーション属性はリレーショナルストラクチャーの "クラシックな" リレーションに基づいており、リレートエンティティあるいはリレートエンティティズへの直接的なアクセスを提供します。 リレーション属性は、ORDA においては名前を使用することで直接的に利用可能です。
 
-For example, consider the following partial database structure and the relation properties:
+たとえば、以下の部分的なデータベースストラクチャーと、そのリレーションプロパティについて考えます:
 
 ![](../assets/en/ORDA/relationProperties.png)
 
-All storage attributes will be automatically available:
+すべてのストレージ属性は自動的に利用可能です:
 
-*   in the Project dataclass: "ID", "name", and "companyID"
-*   in the Company dataclass: "ID", "name", and "discount"
+*   Project データクラス内: "ID", "name", および "companyID"
+*   Company データクラス内: "ID", "name", および "discount"
 
-In addition, the following relation attributes will also be automatically available:
+これに加えて、以下のリレーション属性もまた自動的に利用可能になります:
 
-*   in the Project dataclass: **theClient** attribute, of the "relatedEntity" kind; there is at most one Company for each Project (the client)
-*   in the Company dataclass: **companyProjects** attribute, of the "relatedEntities" kind; for each Company there is any number of related Projects.
-> The Manual or Automatic property of a database relation has no effect in ORDA.
+*   Project データクラス内: "リレートエンティティ" 型の **theClient** 属性。各 Project (クライアント) に対して最大 1つの Companyが あります。
+*   Company データクラス内: "リレートエンティティズ" 型の**companyProjects** 属性。各 Company に対して不定数の Project があります。
+> > The Manual or Automatic property of a database relation has no effect in ORDA.
 
-All dataclass attributes are exposed as properties of the dataclass:
+すべてのデータクラス属性はデータクラスのプロパティとして公開されています:
 
 ![](../assets/en/ORDA/dataclassProperties.png)
 
-Keep in mind that these objects describe attributes, but do not give access to data. Reading or writing data is done through [entity objects](entities.md#using-entity-attributes).
+これらのオブジェクトは属性を表しますが、データへのアクセスは与えないという点に注意してください。 データの読み書きは [エンティティオブジェクト](entities.md#エンティティ属性の使用) を通しておこなわれます。
 
-#### Computed attributes
+#### 計算属性
 
-[Computed attributes](ordaClasses.md#computed-attributes) are declared using a `get <attributeName>` function in the [Entity class definition](ordaClasses.md#entity-class). Their value is not stored but evaluated each time they are accessed. They do not belong to the underlying database structure, but are built upon it and can be used as any attribute of the data model.
+[計算属性](ordaClasses.md#計算属性) は、[Entity クラスの定義](ordaClasses.md#entity-クラス) で `get <attributeName>` 関数を使用して宣言されます。 この属性値はアクセスされるたびに評価され、保存されません。 計算属性は、基礎となるデータベースストラクチャーには属しませんが、その上に構築され、データモデルの属性と同様に使用することができます。
 
 
 ### Entity
 
-An entity is the equivalent of a record. It is actually an object that references a record in the database. It can be seen as an instance of a [dataclass](#dataclass), like a record of the table matching the dataclass. However, an entity also contains data correlated to the database related to the datastore.
+エンティティとは、レコードに相当するものです。 実際にはデータベース内のレコードを参照するオブジェクトです。 エンティティは、[データクラス](#データクラス) のインスタンスとも解釈可能なオブジェクトです。 同時にエンティティは、データストアがもとにしているデータベースに相関するデータも格納しています。
 
-The purpose of the entity is to manage data (create, update, delete). When an entity reference is obtained by means of an entity selection, it also retains information about the entity selection which allows iteration through the selection.
+エンティティの目的はデータの管理 (作成、更新、削除) です。 エンティティセレクションを用いてエンティティ参照を取得した場合、その参照にはエンティティセレクションについての情報も保持されるため、セレクションを走査することが可能です。
 
-The entity object itself cannot be copied as an object:
+エンティティオブジェクト自身は、オブジェクトとしてコピーすることはできません:
 
 ```4d
- $myentity:=OB Copy(ds.Employee.get(1)) //returns null
+ $myentity:=OB Copy(ds.Employee.get(1)) // null を返します
 ```
 
-The entity properties are however enumerable:
+しかしながらエンティティプロパティは取得可能です:
 
 ```4d
  ARRAY TEXT($prop;0)
  OB GET PROPERTY NAMES(ds.Employee.get(1);$prop)
-  //$prop contains the names of all the entity attributes
+  // $prop にはすべてのエンティティ属性の名前が格納されます
 ```
 
 
-### Entity selection
+### エンティティセレクション
 
-An entity selection is an object containing one or more reference(s) to entities belonging to the same dataclass. It is usually created as a result of a query or returned from a relation attribute. An entity selection can contain 0, 1 or X entities from the dataclass -- where X can represent the total number of entities contained in the dataclass.
+エンティティセレクションとは、同じデータクラスに所属する一つ以上のエンティティへの参照を格納しているオブジェクトのことです。 通常、クエリの結果として、あるいはリレーション属性の戻り値として作成されます。 エンティティセレクションは、データクラスから 0個、1個、あるいは X個のエンティティを格納することができます (X はデータクラスに格納されているエンティティの総数です)。
 
-Example:
+例:
 
 ```4d
-var $e : cs.EmployeeSelection //declares a $e object variable of the EmployeeSelection class type
-$e:=ds.Employee.all() //assigns the resulting entity selection reference to the $e variable
+var $e : cs.EmployeeSelection // EmployeeSelection クラスのオブジェクト変数として $e を宣言します
+$e:=ds.Employee.all() // 結果のエンティティセレクションへの参照を $e に代入します
 ```
 
-Entity selections can be "sorted" or "unsorted" ([see below](#ordered-or-unordered-entity-selection)).
+エンティティセレクションは "順列あり" あるいは "順列なし" 状態のどちらかです ([後述参照](#エンティティセレクションの順列あり順列なし))。
 
-> Entity selections can also be "shareable" or "non-shareable", depending on [how they have been created](entities.md#shareable-or-alterable-entity-selections).
+> また、[どのように作成されたか](entities.md#共有可能追加可能なエンティティセレクション) に応じて、エンティティセレクションは "共有可能" あるいは "追加可能" 状態のどちらかです。
 
-The entity selection object itself cannot be copied as an object:
+エンティティセレクションオブジェクト自身は、オブジェクトとしてコピーすることはできません:
 
 ```4d
- $myentitysel:=OB Copy(ds.Employee.all()) //returns null
+ $myentitysel:=OB Copy(ds.Employee.all()) // null を返します
 ```
 
-The entity selection properties are however enumerable:
+しかしながらエンティティセレクションプロパティは取得可能です:
 
 ```4d
  ARRAY TEXT($prop;0)
  OB GET PROPERTY NAMES(ds.Employee.all();$prop)
-  //$prop contains the names of the entity selection properties
-  //("length", 00", "01"...)
+  // $prop にはエンティティセレクションのプロパティ名が格納されます
+  // ("length", "00", "01"...)
 ```
 
 
-#### Ordered or unordered entity selection
+#### エンティティセレクションの順列あり/順列なし
 
-For optimization reasons, by default 4D ORDA usually creates unordered entity selections, except when you use the `orderBy( )` method or use specific options. In this documentation, unless specified, "entity selection" usually refers to an "unordered entity selection".
+`orderBy( )` メソッドを使用した場合、あるいは特定のオプションを使用した場合は除き、4D ORDA は最適化の観点からデフォルトで順列なしのエンティティセレクションを作成します。 このドキュメントでは、指定されている場合を除き、"エンティティセレクション" は "順列なしのエンティティセレクション" を指すこととします。
 
-Ordered entity selections are created only when necessary or when specifically requested using options, i.e. in the following cases:
+順列ありのエンティティセレクションは、必要な場合において、あるいはオプションを使用して特別に要求した場合に限り作成されます。たとえば、以下のような場合です:
 
-*   result of an `orderBy()` on a selection (of any type) or an `orderBy()` on a dataclass
-*   result of the `newSelection()` method with the `dk keep ordered` option
+*   セレクション (タイプを問わず) に対して、あるいはデータクラスに対して `orderBy( )` を使った場合の戻り値
+*   `newSelection( )` メソッドに `dk keep ordered` オプションを渡した場合の戻り値
 
-Unordered entity selections are created in the following cases:
+順列なしのエンティティセレクションは以下のような場合に作成されます:
 
-*   result of a standard `query()` on a selection (of any type) or a `query()` on a dataclass,
-*   result of the `newSelection()` method without option,
-*   result of any of the comparison methods, whatever the input selection types: `or()`, `and()`, `minus()`.
-> The following entity selections are always **ordered**:
+*   セレクション (タイプを問わず) に対して、あるいはデータクラスに対して標準の `query( )` を使った場合の戻り値
+*   オプションなしで `newSelection( )` メソッドを使用した場合の戻り値
+*   任意の演算メソッド (or( ), and( ), minus( ) ) を使った場合の戻り値 (入力セレクションタイプは問いません)。
+> > The following entity selections are always **ordered**: > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
 > 
-> * entity selections returned by 4D Server to a remote client
-> * entity selections built upon remote datastores.
+> * 4D Server からリモートクライアントに返されるエンティティセレクション
+> * リモートデータストアにおいて作成されるエンティティセレクション
 
-Note that when an ordered entity selection becomes an unordered entity selection, any repeated entity references are removed.
+順列ありのエンティティセレクションが順列なしのエンティティセレクションになった場合、重複したエンティティ参照はすべて削除されます。
