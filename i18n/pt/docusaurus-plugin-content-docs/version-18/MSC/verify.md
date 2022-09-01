@@ -1,7 +1,7 @@
 ---
 id: verify
-title: Verify Page
-sidebar_label: Verify Page
+title: Página Verificação
+sidebar_label: Página Verificação
 ---
 
 You use this page to verify data integrity. The verification can be carried out on records and/or indexes. This page only checks the data integrity. If errors are found and repairs are needed, you will be advised to use the [Repair page](repair.md).
@@ -14,13 +14,13 @@ The page contains action buttons that provide direct access to the verification 
 - **Verify the records and the indexes:** Starts the total data verification procedure.
 - **Verify the records only**: Starts the verification procedure for records only (indexes are not verified).
 - **Verify the indexes only**: Starts the verification procedure for indexes only (records are not verified).
-> Verification of records and indexes can also be carried out in detail mode, table by table (see the Details section below).
+> > Verification of records and indexes can also be carried out in detail mode, table by table (see the Details section below).
 
 ## Open log file
 
-Regardless of the verification requested, 4D generates a log file in the `Logs` folder of the database. This file lists all the verifications carried out and indicates any errors encountered, when applicable ([OK] is displayed when the verification is correct). It is created in XML format and is named: *DatabaseName**Verify_Log**yyyy-mm-dd hh-mm-ss*.xml where:
+Independente da verificação solicitada, 4D gera um arquivo de histórico na pasta `Logs` do banco de dados. This file lists all the verifications carried out and indicates any errors encountered, when applicable ([OK] is displayed when the verification is correct). It is created in XML format and is named: *DatabaseName**Verify_Log**yyyy-mm-dd hh-mm-ss*.xml where:
 
-- *DatabaseName* is the name of the project file without any extension, for example "Invoices",
+- *NomBase* é o nome do arquivo de estrutura sem extensão, por exemplo "Faturas",
 - *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
 
 When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
