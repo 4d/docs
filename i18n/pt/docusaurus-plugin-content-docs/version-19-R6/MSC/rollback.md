@@ -1,7 +1,7 @@
 ---
 id: rollback
-title: Rollback Page
-sidebar_label: Rollback Page
+title: Página Retrocesso
+sidebar_label: Página Retrocesso
 ---
 
 You use the Rollback page to access the rollback function among the operations carried out on the data file. It resembles an undo function applied over several levels. It is particularly useful when a record has been deleted by mistake in a database.
