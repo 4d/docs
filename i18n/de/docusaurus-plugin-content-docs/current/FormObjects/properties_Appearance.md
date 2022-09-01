@@ -21,9 +21,9 @@ On Windows, the concept of "recommended choice" is not supported: only the focus
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  defaultButton|boolean|true, false |
 
 #### Objects Supported
@@ -38,9 +38,9 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values |
-| ------------- | --------- | --------------- |
-| hideFocusRing | boolean   | true, false     |
+| Name          | Datentyp | Possible Values |
+| ------------- | -------- | --------------- |
+| hideFocusRing | boolean  | true, false     |
 
 #### Objects Supported
 
@@ -60,9 +60,9 @@ By default, this option is not enabled.
 
 #### JSON Grammar
 
-| Name                | Data Type | Possible Values |
-| ------------------- | --------- | --------------- |
-| hideSystemHighlight | boolean   | true, false     |
+| Name                | Datentyp | Possible Values |
+| ------------------- | -------- | --------------- |
+| hideSystemHighlight | boolean  | true, false     |
 
 #### Objects Supported
 
@@ -76,19 +76,19 @@ An interface tool allowing the user to move the viewing area to the left or righ
 
 Available values:
 
-| Property List | JSON value  | Description                                                                                                                                              |
+| Property List | JSON value  | Beschreibung                                                                                                                                             |
 | ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Yes           | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
-| No            | "hidden"    | The scrollbar is never visible                                                                                                                           |
+| Ja            | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
+| Nein          | "hidden"    | The scrollbar is never visible                                                                                                                           |
 | Automatic     | "automatic" | The scrollbar appears automatically whenever necessary and the user can enter text larger than the object width                                          |
 
 > Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
 
 #### JSON Grammar
 
-| Name                | Data Type | Possible Values                  |
-| ------------------- | --------- | -------------------------------- |
-| scrollbarHorizontal | text      | "visible", "hidden", "automatic" |
+| Name                | Datentyp | Possible Values                  |
+| ------------------- | -------- | -------------------------------- |
+| scrollbarHorizontal | Text     | "visible", "hidden", "automatic" |
 
 #### Objects Supported
 
@@ -106,9 +106,9 @@ Sets the screen resolution for the 4D Write Pro area contents. By default, it is
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  dpi|number|0=automatic, 72, 96 |
 
 #### Objects Supported
@@ -123,9 +123,9 @@ Displays/hides both background images and background color.
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  showBackground|boolean|true (default), false|
 
 #### Objects Supported
@@ -140,9 +140,9 @@ Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  showFooters|boolean|true (default), false|
 
 #### Objects Supported
@@ -159,9 +159,9 @@ When enabled, the formula bar is visible below the Toolbar interface in the 4D V
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  withFormulaBar|boolean|true (default), false|
 
 #### Objects Supported
@@ -176,9 +176,9 @@ Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  showHeaders|boolean|true (default), false|
 
 #### Objects Supported
@@ -193,9 +193,9 @@ Displays/hides invisible characters
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  showHiddenChars|boolean|true (default), false|
 
 #### Objects Supported
@@ -210,9 +210,9 @@ Displays/hides the horizontal ruler when the document view is in [Page mode](#vi
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  showHorizontalRuler|boolean|true (default), false|
 
 #### Objects Supported
@@ -227,9 +227,9 @@ Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attri
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  showHTMLWysiwyg|boolean|true, false (default)|
 
 #### Objects Supported
@@ -244,9 +244,9 @@ Displays/hides the page frame when [Page view mode](#view-mode) is set to "Page"
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  showPageFrames|boolean|true, false|
 
 #### Objects Supported
@@ -271,9 +271,9 @@ With the Show references property on, the reference is displayed:
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  showReferences|boolean|true, false (default)|
 
 #### Objects Supported
@@ -288,9 +288,9 @@ Displays/hides the vertical ruler when the document view is in [Page mode](#view
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  showVerticalRuler|boolean|true (default), false|
 
 #### Objects Supported
@@ -307,9 +307,9 @@ When tab controls with a custom direction are displayed under Windows, they auto
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  labelsPlacement|boolean|"top", "bottom" |
 
 #### Objects Supported
@@ -324,9 +324,9 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  userInterface|text|"none" (default), "ribbon", "toolbar" |
 
 #### Objects Supported
@@ -345,10 +345,10 @@ An interface tool allowing the user to move the viewing area up and down.
 
 Available values:
 
-| Property List | JSON value  | Description                                                                                                                                              |
+| Property List | JSON value  | Beschreibung                                                                                                                                             |
 | ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Yes           | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
-| No            | "hidden"    | The scrollbar is never visible                                                                                                                           |
+| Ja            | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
+| Nein          | "hidden"    | The scrollbar is never visible                                                                                                                           |
 | Automatic     | "automatic" | The scrollbar appears automatically whenever necessary (in other words, when the size of the object contents is greater than that of the frame)          |
 
 > Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
@@ -357,9 +357,9 @@ Available values:
 
 #### JSON Grammar
 
-| Name              | Data Type | Possible Values                  |
-| ----------------- | --------- | -------------------------------- |
-| scrollbarVertical | text      | "visible", "hidden", "automatic" |
+| Name              | Datentyp | Possible Values                  |
+| ----------------- | -------- | -------------------------------- |
+| scrollbarVertical | Text     | "visible", "hidden", "automatic" |
 
 #### Objects Supported
 
@@ -377,15 +377,15 @@ Sets the mode for displaying the 4D Write Pro document in the form area. Three v
 
 - **Page**: the most complete view mode, which includes page outlines, orientation, margins, page breaks, headers and footers, etc.
 - **Draft**: draft mode with basic document properties
-- **Embedded**: view mode suitable for embedded areas; it does not display margins, footers, headers, page frames, etc. This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties).
+- **Embedded**: view mode suitable for embedded areas; it does not display margins, footers, headers, page frames, etc. This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties). This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties).
 
 > The View mode property is only used for onscreen rendering. Regarding printing settings, specific rendering rules are automatically used.
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  layoutMode|text|"page", "draft", "embedded"|
 
 #### Objects Supported
@@ -400,9 +400,9 @@ Sets the zoom percentage for displaying 4D Write Pro area contents.
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+|      |          |                 |
  zoom|number|minimum = 0 |
 
 #### Objects Supported
