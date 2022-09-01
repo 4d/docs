@@ -27,9 +27,9 @@ $answer:=WA Evaluate JavaScript(*; "ViewProArea"; $js)
 
 You can tap into the SpreadJS library of Javascript methods and call them directly to control your spreadsheets.
 
-4D has a built-in `Utils.spread` property that gives access to the spreadsheet document (also called workbook) inside the 4D View Pro area, making it simpler to call the SpreadJS [Workbook methods](https://www.grapecity.com/spreadjs/docs/latest/online/SpreadJS~GC.Spread.Sheets.Workbook.html).
+4D has a built-in `Utils.spread` expression that points at the spreadsheet (also called workbook) inside the 4D View Pro area, making it simpler to call the SpreadJS [Workbook methods](https://www.grapecity.com/spreadjs/docs/latest/online/SpreadJS~GC.Spread.Sheets.Workbook.html).
 
-#### Example
+#### Exemplo
 
 The following code undoes the last action in the spreadsheet:
 
