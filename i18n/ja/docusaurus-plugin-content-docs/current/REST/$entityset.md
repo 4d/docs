@@ -3,73 +3,73 @@ id: entityset
 title: '$entityset'
 ---
 
-After [creating an entity set]($method.md#methodentityset) by using `$method=entityset`, you can then use it subsequently.
+`$method=entityset` を使って [エンティティセットを作成]($method.md#methodentityset) すると、それを後で再利用することができます。
 
 
-## Available syntaxes
+## 使用可能なシンタックス
 
-| Syntax                                                                                                     | Example                                                                            | Description                                                  |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| [**$entityset/{entitySetID}**](#entitysetentitySetID)                                                      | `/People/$entityset/0ANUMBER`                                                      | Retrieves an existing entity set                             |
-| [**$entityset/{entitySetID}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER` | Creates a new entity set from comparing existing entity sets |
+| シンタックス                                                                                                     | 例題                                                                                 | 詳細                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | --------------------------------- |
+| [**$entityset/{entitySetID}**](#entitysetentitySetID)                                                      | `/People/$entityset/0ANUMBER`                                                      | 既存のエンティティセットを取得します                |
+| [**$entityset/{entitySetID}?$operator...&$otherCollection**](#entitysetentitysetidoperatorothercollection) | `/Employee/$entityset/0ANUMBER?$logicOperator=AND &$otherCollection=C0ANUMBER` | 既存エンティティセットの比較から新規エンティティセットを作成します |
 
 
 
 
 ## $entityset/{entitySetID}
 
-Retrieves an existing entity set (*e.g.*, `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
+既存のエンティティセットを取得します(*例*: `People/$entityset/0AF4679A5C394746BFEB68D2162A19FF`)
 
 
-### Description
+### 詳細
 
-This syntax allows you to execute any operation on a defined entity set.
+このシンタックスを使って、定義されたエンティティセットに対してあらゆる操作を実行できます。
 
-Because entity sets have a time limit on them (either by default or after calling `$timeout` with your own limit), you can call `$savedfilter` and `$savedorderby` to save the filter and order by statements when you create an entity set.
+エンティティセットには (デフォルトの、または `$timeout` で指定した) タイムリミットが設定されるため、`$savedfilter` や `$savedorderby` を使って、エンティティセットを作成する際に使用したフィルターや並べ替えの詳細を保存しておくこともできます。
 
-When you retrieve an existing entity set stored in 4D Server's cache, you can also apply any of the following to the entity set: [`$expand`]($expand.md), [`$filter`]($filter.md), [`$orderby`]($orderby.md), [`$skip`]($skip.md), and [`$top/$limit`]($top_$limit.md).
+4D Server のキャッシュに保存された既存のエンティティセットを取得する際に、次のいずれもエンティティセットに適用することができます: [`$expand`]($expand.md), [`$filter`]($filter.md), [`$orderby`]($orderby.md), [`$skip`]($skip.md), [`$top/$limit`]($top_$limit.md)。
 
-### Example
+### 例題
 
-After you create an entity set, the entity set ID is returned along with the data. You call this ID in the following manner:
+エンティティセットを作成すると、データとともにエンティティセットIDが返されます。 このIDは次のように使います:
 
  `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7`
 
 
 ## $entityset/{entitySetID}?$operator...&$otherCollection
 
-Create another entity set based on previously created entity sets
+複数の既存エンティティセットに基づいて新たなエンティティセットを作成します。
 
-| Parameter        | Type   | Description                                                    |
-| ---------------- | ------ | -------------------------------------------------------------- |
-| $operator        | String | One of the logical operators to test with the other entity set |
-| $otherCollection | String | Entity set ID                                                  |
+| 引数               | タイプ    | 詳細                        |
+| ---------------- | ------ | ------------------------- |
+| $operator        | String | 既存のエンティティセットに対して使用する論理演算子 |
+| $otherCollection | String | エンティティセットID               |
 
 
 
-### Description
+### 詳細
 
-After creating an entity set (entity set #1) by using `$method=entityset`, you can then create another entity set by using the `$entityset/{entitySetID}?$operator... &$otherCollection` syntax, the `$operator` property (whose values are shown below), and another entity set (entity set #2) defined by the `$otherCollection` property. The two entity sets must be in the same dataclass.
+`$method=entityset` を使ってエンティティセット (エンティティセット#1) を作成したあとで、`$entityset/{entitySetID}?$operator... &$otherCollection` シンタックスを使って新たなエンティティセットを作成できます。このとき、`$operator` に指定できる値は後述のとおりで、2つ目のエンティティセット (エンティティセット#2) は `$otherCollection` プロパティに指定します。 2つのエンティティセットは同じデータクラスに属していなければなりません。
 
-You can then create another entity set containing the results from this call by using the `$method=entityset` at the end of the REST request.
+このリクエストの結果を格納するエンティティセットを作成する場合は、RESTリクエストの最後に `$method=entityset` を追加します。
 
-Here are the logical operators:
+下記は、論理演算子の一覧です:
 
-| Operator  | Description                                                                                                                                                |
-| --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| AND       | Returns the entities in common to both entity sets                                                                                                         |
-| OR        | Returns the entities in both entity sets                                                                                                                   |
-| EXCEPT    | Returns the entities in entity set #1 minus those in entity set #2                                                                                         |
-| INTERSECT | Returns either true or false if there is an intersection of the entities in both entity sets (meaning that least one entity is common in both entity sets) |
-> The logical operators are not case-sensitive, so you can write "AND" or "and".
+| 演算子       | 詳細                                                     |
+| --------- | ------------------------------------------------------ |
+| AND       | 両方のエンティティセットに共通して含まれるエンティティのみを返します。                    |
+| または       | 両エンティティセットのいずれか、あるいは両方に含まれているエンティティを返します。              |
+| EXCEPT    | エンティティセット#1 から、エンティティセット#2にも含まれているエンティティを除外した残りを返します。  |
+| INTERSECT | 両方のエンティティセットに共通して含まれるエンティティがあれば true、なければ false を返します。 |
+> 論理演算子の文字の大小は区別されないため、"AND" とも "and" とも書けます。
 
-Below is a representation of the logical operators based on two entity sets. The red section is what is returned.
+2つのエンティティセットを対象に論理演算子を使用した場合のベン図は下のとおりです。 赤く塗られた部分が返されるものです。
 
 **AND**
 
 ![](../assets/en/REST/and.png)
 
-**OR**
+**または**
 
 ![](../assets/en/REST/or.png)
 
@@ -78,21 +78,21 @@ Below is a representation of the logical operators based on two entity sets. The
 ![](../assets/en/REST/except.png)
 
 
-The syntax is as follows:
+シンタックスは次のとおりです:
 
  `GET  /rest/dataClass/$entityset/entitySetID?$logicOperator=AND&$otherCollection=entitySetID`
 
-### Example
-In the example below, we return the entities that are in both entity sets since we are using the AND logical operator:
+### 例題
+次の例では AND論理演算子を使用するため、両方のエンティティセットに共通して含まれるエンティティが返されます:
 
  `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=AND&$otherCollection=C05A0D887C664D4DA1B38366DD21629B`
 
-If we want to know if the two entity sets intersect, we can write the following:
+2つのエンティティセットが交差するかどうかを確認するには、次のように書きます:
 
  `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=intersect&$otherCollection=C05A0D887C664D4DA1B38366DD21629B`
 
-If there is an intersection, this query returns true. Otherwise, it returns false.
+共通のエンティティが存在する場合、このクエリは true を返します。 .
 
-In the following example we create a new entity set that combines all the entities in both entity sets:
+次の例では、2つのエンティティセットのいずれかあるいは両方に含まれているエンティティすべてを格納した新しいエンティティセットを作成します:
 
 `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=OR&$otherCollection=C05A0D887C664D4DA1B38366DD21629B&$method=entityset`
