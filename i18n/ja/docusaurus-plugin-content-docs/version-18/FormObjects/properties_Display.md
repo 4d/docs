@@ -1,208 +1,208 @@
 ---
 id: propertiesDisplay
-title: Display
+title: 表示
 ---
 
 ---
 
-## Alpha Format
+## 文字フォ－マット
 
-Alpha formats control the way the alphanumeric fields and variables appear when displayed or printed. Here is a list of formats provided for alphanumeric fields:
+文字フォーマットは、表示や印刷時に文字フィールドや変数にデータを表示する方法を制御します。 以下は文字フィールド用に提供されるフォーマットのリストです:
 
 ![](../assets/en/FormObjects/property_alphaFormat.png)
 
-You can choose a format from this list or use any custom format. The default list contains formats for some of the most common alpha fields that require formats: US telephone numbers (local and long distance), Social Security numbers, and zip codes. You can also enter a custom format name set in the Filters and formats editor of the tool box. In this case, the format cannot be modified in the object properties. Any custom formats or filters that you have created are automatically available, preceded by a vertical bar (|).
+このリストからフォーマットを選択するか、コンボボックスに入力すことができます。 フォーマットポップアップメニューには、主に使用される文字フォーマット (電話番号等) が用意されています。 また、ツールボックスのフィルターとフォーマットで設定したカスタムフォーマットを選択することもできます。 この場合、そのフォーマットをオブジェクトプロパティで変更することはできません。 開発者が作成したカスタムフォーマットやフィルターはリストの先頭に表示されます。
 
-The number sign (#) is the placeholder for an alphanumeric display format. You can include the appropriate dashes, hyphens, spaces, and any other punctuation marks that you want to display. You use the actual punctuation marks you want and the number sign for each character you want to display.
+シャープ (#) は文字表示フォーマットのプレースホルダーです。 ハイフンやスペース、その他の句読点を表示したい場所に挿入できます。 表示したい実際の句読点と、文字データを表示する場所には # を置きます。
 
-For example, consider a part number with a format such as "RB-1762-1".
+たとえば部品番号が "RB-1762-1" のようなフォーマットの時、
 
-The alpha format would be:
+文字フォーマットを以下のように書けます:
 
  ##-####-#
 
-When the user enters "RB17621," the field displays:
+ユーザーが “RB17621” と入力すると、フィールドには以下の通りに表示されます:
 
  RB-1762-1
 
-The field actually contains "RB17621".
+フィールドに実際に格納される値は “RB17621” です。
 
-If the user enters more characters than the format allows, 4D displays the last characters. For example, if the format is:
+フォーマットが許可するよりも多くの文字が入力されると、4Dは最後の文字を表示します。 たとえばフォーマットが以下の時:
 
  (#######)
 
-and the user enters "proportion", the field displays:
+そしてユーザーが “proportion” と入力すると、フィールドには以下のように表示されます:
 
  (portion)
 
-The field actually contains "proportion". 4D accepts and stores the entire entry no matter what the display format. No information is lost.
+フィールドには “proportion” が格納されます。 表示フォーマットにかかわらず、4Dは入力された文字を受け入れ、格納します。 データが失われることはありません。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name       | Data Type | Possible Values                                                                      |
-| ---------- | --------- | ------------------------------------------------------------------------------------ |
-| textFormat | string    | "### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", custom formats |
+| 名称         | データタイプ | とりうる値                                                                            |
+| ---------- | ------ | -------------------------------------------------------------------------------- |
+| textFormat | string | "### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", カスタムフォーマット |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
 
 ---
 
-## Date Format
+## 日付フォーマット
 
-Date formats control the way dates appear when displayed or printed. For data entry, you enter dates in the MM/DD/YYYY format, regardless of the display format you have chosen.
-> Unlike [Alpha](#alpha-format) and [Number](#number-format) formats, display formats for dates must only be selected among the 4D built-in formats.
+日付フォーマットは、表示や印刷時に日付を表示する方法を制御します。 データ入力の際は選択した表示フォーマットとは関係なく、YYYY/MM/DD 形式で日付を入力します。
+> [数値フォーマット](#数値フォーマット) や [文字フォ－マット](#文字フォ－マット) と異なり、日付表示フォ－マットは4Dの組み込みフォーマットのなかから選択しなければなりません。
 
-The table below shows choices available:
+利用可能な日付表示フォーマットは以下のとおりです:
 
-| Format name                     | JSON String  | Example (US system)           |
+| フォーマット                          | JSON 文字列     | 例                             |
 | ------------------------------- | ------------ | ----------------------------- |
-| System date short               | - (default)  | 03/25/20                      |
-| System date abbreviated *(1)*   | systemMedium | Wed, Mar 25, 2020             |
-| System date long                | systemLong   | Wednesday, March 25, 2020     |
+| System date short               | - (デフォルト)    | 20/03/25                      |
+| System date abbreviated *(1)*   | systemMedium | 2020/03/25                    |
+| System date long                | systemLong   | 2020年3月25日 水曜日                |
 | RFC 822                         | rfc822       | Tue, 25 Mar 2020 22:00:00 GMT |
-| Short Century                   | shortCentury | 03/25/20 but 04/25/2032 *(2)* |
+| Short Century                   | shortCentury | 03/25/20、ただし 04/25/2032 *(2)* |
 | Internal date long              | long         | March 25, 2020                |
 | Internal date abbreviated *(1)* | abbreviated  | Mar 25, 2020                  |
 | Internal date short             | short        | 03/25/2020                    |
 | ISO Date Time *(3)*             | iso8601      | 2020-03-25T00:00:00           |
 
-*(1)* To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July. This particularity only applies to French versions of 4D.
+*(1)* "June" は "Jun"、”July” は "Jul" に省略されます。
 
-*(2)* The year is displayed using two digits when it belongs to the interval (1930;2029) otherwise it will be displayed using four digits. This is by default but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html) command.
+*(2)* 年は、1930年~2029年の間は2桁の数字で表示されますが、それ以外の場合は4桁で表示されます。 これはデフォルト設定ですが、[SET DEFAULT CENTURY](https://doc.4d.com/4Dv18/4D/18/SET-DEFAULT-CENTURY.301-4505667.ja.html) コマンドで変更することができます。
 
-*(3)* The `ISO Date Time` format corresponds to the XML date and time representation standard (ISO8601). It is mainly intended to be used when importing/exporting data in XML format and in Web Services.
-> Regardless of the display format, if the year is entered with two digits then 4D assumes the century to be the 21st if the year belongs to the interval (00;29) and the 20th if it belongs to the interval (30;99). This is the default setting but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html) command.
+*(3)* `ISO Date Time` フォーマットは XML の日付と時間表現の標準 (ISO8601) に対応します。 これは主に XML フォーマットや Web サービスのデータを読み込んだり書き出したりするために使用します。
+> 表示フォーマットにかかわらず、年度を2 桁で入力すると、4D は年が00~29 の間であれば 21 世紀とみなし、30~99 の間であれば 20 世紀とみなします。 これはデフォルト設定ですが、[SET DEFAULT CENTURY](https://doc.4d.com/4Dv18/4D/18/SET-DEFAULT-CENTURY.301-4505667.ja.html) コマンドで変更することができます。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name       | Data Type | Possible Values                                                                                                                                                                  |
-| ---------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dateFormat | string    | "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values) |
+| 名称         | データタイプ | とりうる値                                                                                                                                               |
+| ---------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dateFormat | string | "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (他の値と組み合わせることができます) |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
 
 ---
 
-## Number Format
-> Number fields include the Integer, Long integer, Integer 64 bits, Real and Float types.
+## 数値フォーマット
+> 数値フィールドには整数、倍長整数、整数64bit、実数、そしてフロート型が含まれます。
 
-Number formats control the way numbers appear when displayed or printed. For data entry, you enter only the numbers (including a decimal point or minus sign if necessary), regardless of the display format you have chosen.
+数値フォーマットは表示や印刷時に数値を表示する方法を制御します。 選択した表示フォーマットとは関係なく、データ入力の際は数値だけを (必要に応じ小数点やマイナス記号も) 入力します。
 
-4D provides various default number formats.
+4Dは様々なデフォルトの数値表示フォーマットを提供しています。
 
-### Placeholders
+### プレースホルダー
 
-In each of the number display formats, the number sign (#), zero (0), caret (^), and asterisk (*) are used as placeholders. You create your own number formats by using one placeholder for each digit you expect to display.
+それぞれの数値表示フォーマットでは、数値記号 (#)、ゼロ (0)、キャレット (^)、アスタリスク (*) をプレースホルダーとして使用します。 表示しようとする各桁に対して 1つのプレースホルダーを使用し、独自の数値表示フォーマットを作成できます。
 
-| Placeholder | Effect for leading or trailing zero |
-| ----------- | ----------------------------------- |
-| #           | Displays nothing                    |
-| 0           | Displays 0                          |
-| ^           | Displays a space (1)                |
-| *           | Displays an asterisk                |
+| プレースホルダー | 千項及び末尾のゼロ   |
+| -------- | ----------- |
+| #        | 何も表示しない     |
+| 0        | 0を表示        |
+| ^        | スペースを表示 (1) |
+| *        | アスタリスクを表示   |
 
-(1) The caret (^) generates a space character that occupies the same width as a digit in most fonts.
+(1) キャレット (^) は、ほとんどのフォントの数字と同じ幅を占めるスペースを生成します。
 
-For example, if you want to display three-digit numbers, you could use the format ###. If the user enters more digits than the format allows, 4D displays <<< in the field to indicate that more digits were entered than the number of digits specified in the display format.
+たとえば、3桁の数字を表示する場合、###というフォーマットを使用できます。 フォーマットにより許可された桁数を超えて入力すると、4Dは <<< をフィールドに表示し、表示フォーマットで指定された桁数を超える入力がおこなわれたことを示します。
 
-If the user enters a negative number, the leftmost character is displayed as a minus sign (unless a negative display format has been specified). If ##0 is the format, minus 26 is displayed as –26 and minus 260 is displayed as <<< because the minus sign occupies a placeholder and there are only three placeholders.
-> No matter what the display format, 4D accepts and stores the number entered in the field. No information is lost.
+ユーザーがマイナスの数値を入力すると、左端の文字はマイナス記号として表示されます (負数の表示フォーマットが指定されていない場合)。 ##0というフォーマットであれば、マイナス 26 は -26 と表示されます。マイナス260 は <<< と表示されますが、これはプレースホルダーが 3桁分しか指定されていないところに、マイナス記号により 1つのプレースホルダが使用されてしまい、桁あふれしたためです。
+> 表示フォ－マットとは関係なく、4Dはフィ－ルドに入力された数値を受け入れ、保存します。 データが失われることはありません。
 
-Each placeholder character has a different effect on the display of leading or trailing zeros. A leading zero is a zero that starts a number before the decimal point; a trailing zero is a zero that ends a number after the decimal point.
+各プレースホルダー文字は、先行のゼロや末尾のゼロを表示する上で、その効果に違いがあります。 先行のゼロとは小数点より左側の数値の先頭にあるゼロのことです。末尾のゼロは小数点より右側の数値の終わりにあるゼロのことです。
 
-Suppose you use the format ##0 to display three digits. If the user enters nothing in the field, the field displays 0. If the user enters 26, the field displays 26.
+たとえば ##0 というフォーマットを使用して 3桁の数字を表示するものとします。 ユーザーがフィールドに何も入力しないと、フィールドには 0 が表示されます。 26 と入力すると、フィールドには 26 と表示されます。
 
-### Separator characters
+### 区切り文字
 
-The numeric display formats (except for scientific notations) are automatically based on regional system parameters. 4D replaces the “.” and “,” characters by, respectively, the decimal separator and the thousand separator defined in the operating system. The period and comma are thus considered as placeholder characters, following the example of 0 or #.
-> On Windows, when using the decimal separator key of the numeric keypad, 4D makes a distinction depending on the type of field where the cursor is located:
+数値表示フォーマット (科学的記数法を除く) は自動でシステムの地域パラメーターに基づきます。 4D は OS に定義された小数点と千の位区切り文字を使用して “.” と “,” 文字をそれぞれ置き換えます。 0 や # に続くピリオドとコンマはプレースホルダー文字として扱われます。
+> Windows 環境下で、テンキーの小数点キーを使用した際、4D はカーソルが位置しているフィールドの型に応じて挙動が変化します:
 > 
-> * in a Real type field, using this key will insert the decimal separator defined in the system,
-> * in any other type of field, this key inserts the character associated with the key, usually a period (.) or comma (,).
+> * 実数型のフィールドの場合、このキーを使用するとシステムによって定義された浮動小数点を挿入します。
+> * それ以外の型のフィールドの場合、このキーを使用するとそのキーに割り当てられた文字を挿入します。通常はピリオド (.) またはカンマ (,) です。
 
-### Decimal points and other display characters
+### 小数点とその他の表示文字
 
-You can use a decimal point in a number display format. If you want the decimal to display regardless of whether the user types it in, it must be placed between zeros.
+表示フォーマット内では 1つの小数点を使用することができます。 ユーザーが小数点を入力するかどうかに関係なく、小数点を表示したい場合、ゼロの間に小数点を置かなければなりません。
 
-You can use any other characters in the format. When used alone, or placed before or after placeholders, the characters always appear. For example, if you use the following format:
+フォーマット内で他の文字を使用することもできます。 文字を単独で使用したりプレースホルダーの前後に配置すると、その文字が常に表示されます。 たとえば次のようなフォーマットの場合:
 
- $##0
+ ￥##0
 
-a dollar sign always appears because it is placed before the placeholders.
+円記号はプレースホルダーの前に置かれているため、常に表示されます。
 
-If characters are placed between placeholders, they appear only if digits are displayed on both sides. For example, if you define the format:
+文字がプレースホルダーの間に置かれている場合、両側に数字が表示される場合のみ、その文字が表示されます。 たとえばフォーマットを次のように指定したとき:
 
  ###.##0
 
-the point appears only if the user enters at least four digits.
+ポイント (点) は、ユーザが少なくとも4桁以上の数値を入力した場合にのみ表示されます。
 
-Spaces are treated as characters in number display formats.
+数値表示フォーマットにおいて、スペースは文字として扱われます。
 
-### Formats for positive, negative, and zero
+### 正数、負数、ゼロのフォーマット
 
-A number display format can have up to three parts allowing you to specify display formats for positive, negative, and zero values. You specify the three parts by separating them with semicolons as shown below:
+数値表示フォーマットは最大で 3つの部分に分けられ、それぞれ正数、負数、ゼロの値に対応する表示フォーマットを指定できます。 それぞれの部分は以下のように並び、セミコロンで区切られます:
 
- Positive;Negative;Zero
+ 正数;負数;ゼロ
 
-You do not have to specify all three parts of the format. If you use just one part, 4D uses it for all numbers, placing a minus sign in front of negative numbers.
+3つの部分すべてを指定する必要はありません。 1つの部分だけを使用する場合、4Dはすべての数値に対してそのフォーマットを使用し、負の数の先頭にマイナス記号を配置します。
 
-If you use two parts, 4D uses the first part for positive numbers and zero and the second part for negative numbers. If you use three parts, the first is for positive numbers, the second for negative numbers, and the third for zero.
-> The third part (zero) is not interpreted and does not accept replacement characters. If you enter `###;###;#`, the zero value will be displayed “#”. In other words, what you actually enter is what will be displayed for the zero value.
+2つの部分を指定する場合、4D は 1番目のフォーマットを正数とゼロに対して使用し、負数には 2番目のフォーマットを使用します。 3つの部分をすべて指定すると、1番目のフォーマットを正数、2 番目を負数、3 番目をゼロに使用します。
+> 3番目の部分 (ゼロ) は解釈されず、文字の置き換えをおこないません。 `###;###;#` と指定した場合、ゼロ値は "#" と表示されます。 言い換えると、表示フォーマットとして実際に指定されたものが、ゼロ値として表示されます。
 
-Here is an example of a number display format that shows dollar signs and commas, places negative values in parentheses, and does not display zeros:
+次の数値表示フォーマットの例は、円記号とカンマを表示し、負の数値はカッコ内に入れ、ゼロを表示しません:
 
- $###,##0.00;($###,##0.00);
+ ￥###,##0.00;(￥###,##0.00);
 
-Notice that the presence of the second semicolon instructs 4D to use nothing to display zero. The following format is similar except that the absence of the second semicolon instructs 4D to use the positive number format for zero:
+2つ目のセミコロンにより、ゼロの表示には何も使用しないことを 4Dに指示している点に注目してください。 次のフォーマットは前の例と似ていますが、2つ目のセミコロンが指定されていません。これにより、ゼロに対して正数のフォーマットを使用するよう 4Dに指示しています:
 
- $###,##0.00;($###,##0.00)
+ ￥###,##0.00;(￥###,##0.00)
 
-In this case, the display for zero would be $0.00.
+この場合、ゼロは “￥0.00” と表示されます。
 
-### Scientific notation
+### 科学的記数法
 
-If you want to display numbers in scientific notation, use the **ampersand** (&) followed by a number to specify the number of digits you want to display. For example, the format:
+科学的記数法で数値を表示したい場合には、**アンパサンド** (&) に続けて表示したい桁数を指定します。 たとえば次のフォーマットを指定すると:
 
  &3
 
-would display 759.62 as:
+759.62 は以下のように表示されます:
 
  7.60e+2
 
-The scientific notation format is the only format that will automatically round the displayed number. Note in the example above that the number is rounded up to 7.60e+2 instead of truncating to 7.59e+2.
+科学的記数法フォーマットは、表示される数値を自動的に丸める唯一のフォーマットです。 前述の例では、数値が 7.59e+2 と切り捨てられずに 7.60e+2 に丸められている点に注意してください。
 
-### Hexadecimal formats
+### 16進フォーマット
 
-You can display a number in hexadecimal using the following display formats:
+次の表示フォーマットを使用して、数値を 16進表記で表示することができます:
 
-* `&x`: This format displays hexadecimal numbers using the “0xFFFF” format.
-* `&$`: This format displays hexadecimal numbers using the “$FFFF” format.
+* `&x`: このフォーマットでは 16進数が “0xFFFF” 形式で表示されます。
+* `&$`: このフォーマットでは 16進数が “$FFFF” 形式で表示されます。
 
-### XML notation
+### XML記法
 
-The `&xml` format will make a number compliant with XML standard rules. In particular, the decimal separator character will be a period "." in all cases, regardless of the system settings.
+`&xml` フォーマットを使用すると、数字を XML 標準ルールに沿ったものにします。 特に小数点がシステム設定に関係なくすべての場合においてポイント (ピリオド) に変換されます。
 
-### Displaying a number as a time
+### 数値を時間として表示する
 
-You can display a number as a time (with a time format) by using `&/` followed by a digit. Time is determined by calculating the number of seconds since midnight that the value represents. The digit in the format corresponds to the order in which the time format appears in the Format drop-down menu.
+`&/`の後に数字を指定することにより、数値を時間として (時間フォーマットで) 表示することができます。 時間は午前0 時を基点とした秒数として計算されます。 フォーマット内の数字は表示フォーマットドロップダウンメニュー上でその時間フォーマットが表示される順番に相当します。
 
-For example, the format:
+たとえば次のフォーマットを指定すると:
 
- &/5
+ &/7
 
-corresponds to the 5th time format in the pop-up menu, specifically the AM/PM time. A number field with this format would display 25000 as:
+ドロップダウンメニューの7番目の時間フォーマット (AM/PM で表わす時間) に対応します。 このフォーマットが指定された数値フィールドの場合、25000 は次のように表示されます:
 
  6:56 AM
 
-### Examples
+### 例題
 
-The following table shows how different formats affect the display of numbers. The three columns — Positive, Negative, and Zero — each show how 1,234.50, –1,234.50, and 0 would be displayed.
+次の表は各種フォーマットの数値表示への効果を表わしています。 正数、負数、ゼロという 3つの欄では 1234.50、-1234.50、0 がそれぞれどのように表示されるかを示しています。
 
-| Format Entered                         | Positive         | Negative      | Zero                         |
+| 入力されたフォーマット                            | 正数               | 負数            | ゼロ                           |
 | -------------------------------------- | ---------------- | ------------- | ---------------------------- |
 | ###                                    | <<<              | <<<           |                              |
 | ####                                   | 1234             | <<<<          |                              |
@@ -232,339 +232,339 @@ The following table shows how different formats affect the display of numbers. T
 | &5                                     | 1.23450e+3       | -1.23450e+3   | 0.00000                      |
 | &xml                                   | 1234.5           | -1234.5       | 0                            |
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name         | Data Type | Possible Values                                                |
-| ------------ | --------- | -------------------------------------------------------------- |
-| numberFormat | string    | Numbers (including a decimal point or minus sign if necessary) |
+| 名称           | データタイプ | とりうる値                      |
+| ------------ | ------ | -------------------------- |
+| numberFormat | string | 数値 (必要に応じて小数点およびマイナス記号を含む) |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Progress Indicators](progressIndicator.md)
+[コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [進捗インジケーター](progressIndicator.md)
 
 ---
 
-## Picture Format
+## ピクチャーフォーマット
 
-Picture formats control how pictures appear when displayed or printed. For data entry, the user always enters pictures by pasting them from the Clipboard or by drag and drop, regardless of the display format.
+ピクチャーフォーマットはピクチャーが表示あるいは印刷される際の表示方法を制御します。 データ入力時はフォーマットに関わらず、ユーザーはクリップボードからのペーストやドラッグ＆ドロップでピクチャーを入力します。
 
-The truncation and scaling options do not affect the picture itself. The contents of a Picture field are always saved. Only the display on the particular form is affected by the picture display format.
+トランケートとスケーリングオプションを選択しても、ピクチャーが変更されることはなく、 ピクチャーフィールドのデータは失われません。 ピクチャー表示フォーマットはピクチャーの表示にのみ影響します。
 
-### Scaled to fit
+### スケーリング
 
-`JSON grammar: "scaled"`
+`JSON 文法では: "scaled"`
 
-The **Scaled to fit** format causes 4D to resize the picture to fit the dimensions of the area.
+**スケーリング** を選択すると、ピクチャーはフィールドエリアの大きさに合うようにリサイズされます。
 
 ![](../assets/en/FormObjects/property_pictureFormat_ScaledToFit.png)
 
-### Truncated (centered and non-centered)
+### トランケート (中央合わせ/中央合わせしない)
 
-`JSON grammar: "truncatedCenter" / "truncatedTopLeft"`
+`JSON 文法では: "truncatedCenter" / "truncatedTopLeft"`
 
-The **Truncated (centered)** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 4D crops equally from each edge and from the top and bottom.
+**トランケート (中央合わせ)** フォーマットを選択すると、4D はエリアの中央にピクチャーを配置し、収まらない部分はエリアからはみ出します。 上下、および左右のはみ出し量は同じになります。
 
-The **Truncated (non-centered)** format causes 4D to place the upper-left corner of the picture in the upper-left corner of the area and crop any portion that does not fit within the area. 4D crops from the right and bottom.
-> When the picture format is **Truncated (non-centered)**, it is possible to add scroll bars to the input area.
+**トランケート (中央合わせしない)** フォーマットを選択すると、4D はピクチャーの左上角をフィールドの左上角に合わせて配置し、フィールドエリアに収まらない部分はエリアからはみ出します。 ピクチャーは右と下にはみ出します。
+> ピクチャーフォーマットが **トランケート (中央合わせしない)** の場合、入力エリアにスクロールバーを追加できます。
 
 ![](../assets/en/FormObjects/property_pictureFormat_Truncated.png)
 
-### Scaled to fit (proportional) and Scaled to fit centered (proportional)
+### スケーリング (プロポーショナル) とスケーリング (中央合わせ・プロポーショナル)
 
-`JSON grammar: "proportionalTopLeft" / "proportionalCenter"`
+`JSON 文法では: "proportionalTopLeft" / "proportionalCenter"`
 
-When you use **Scaled to fit (proportional)**, the picture is reduced proportionally on all sides to fit the area created for the picture. The **Scaled to fit centered (proportional)** option does the same, but centers the picture in the picture area.
+**スケーリング (プロポーショナル)** を使用すると、ピクチャーエリアに収まるよう、比率を保ったままサイズが調整されます。 **スケーリング (中央合わせ・プロポーショナル)** オプションも同様ですが、ピクチャーはエリアの中央に配置されます。
 
-If the picture is smaller than the area set in the form, it will not be modified. If the picture is bigger than the area set in the form, it is proportionally reduced. Since it is proportionally reduced, the picture will not appear distorted.
+ピクチャーがエリアよりも小さい場合、サイズは変更されません。 ピクチャーがエリアよりも大きい場合、そのエリア内に全体が表示されるよう、比率を保ったままサイズが小さくなります。 比率が保たれるため、ピクチャーは歪むことなく表示されます。
 
-If you have applied the **Scaled to fit centered (proportional)** format, the picture is also centered in the area:
+**中央合わせ** を選択した場合、画像はエリアの中央に配置されます:
 
 ![](../assets/en/FormObjects/property_pictureFormat_ScaledProportional.png)
 
-### Replicated
+### 繰り返し
 
-`JSON grammar: "tiled"`
+`JSON 文法では: "tiled"`
 
-When the area that contains a picture with the **Replicated** format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.
+**繰り返し** フォーマットを持つピクチャーが含まれるエリアが拡大されると、ピクチャーは変形されず、エリア全体を埋めるのに必要なだけピクチャーが繰り返されます。
 
 ![](../assets/en/FormObjects/property_pictureFormat_Replicated.png)
 
-If the field is reduced to a size smaller than that of the original picture, the picture is truncated (non-centered).
+フィールドがオリジナルのピクチャーよりも小さいサイズにされた場合、ピクチャーはトランケート (中央合わせなし) されます。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name          | Data Type | Possible Values                                                                                       |
-| ------------- | --------- | ----------------------------------------------------------------------------------------------------- |
-| pictureFormat | string    | "truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft", "proportionalCenter" |
+| 名称            | データタイプ | とりうる値                                                                                                 |
+| ------------- | ------ | ----------------------------------------------------------------------------------------------------- |
+| pictureFormat | string | "truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft", "proportionalCenter" |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
-
----
-
-## Time Format
-
-Time formats control the way times appear when displayed or printed. For data entry, you enter times in the 24-hour HH:MM:SS format or the 12-hour HH:MM:SS AM/PM format, regardless of the display format you have chosen.
-> Unlike [Alpha](#alpha-format) and [Number](#number-format) formats, display formats for times must only be selected among the 4D built-in formats.
-
-The table below shows the Time field display formats and gives examples:
-
-| Format name                  | JSON string  | Comments                                                                                                                                         | Example for 04:30:25          |
-| ---------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
-| HH:MM:SS                     | hh_mm_ss   |                                                                                                                                                  | 04:30:25                      |
-| HH:MM                        | hh_mm        |                                                                                                                                                  | 04:30                         |
-| Hour Min Sec                 | HH_MM_SS   |                                                                                                                                                  | 4 hours 30 minutes 25 seconds |
-| Hour Min                     | HH_MM        |                                                                                                                                                  | 4 hours 30 minutes            |
-| HH:MM AM/PM                  | hh_mm_am   |                                                                                                                                                  | 4:30 a.m.                     |
-| MM SS                        | mm_ss        | Time expressed as a duration from 00:00:00                                                                                                       | 270:25                        |
-| Min Sec                      | MM_SS        | Time expressed as a duration from 00:00:00                                                                                                       | 270 Minutes 25 Seconds        |
-| ISO Date Time                | iso8601      | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25           |
-| System time short            | - (default)  | Standard time format defined in the system                                                                                                       | 04:30:25                      |
-| System time long abbreviated | systemMedium | macOS only: Abbreviated time format defined in the system. <br/>Windows: this format is the same as the System time short format           | 4•30•25 AM                    |
-| System time long             | systemLong   | macOS only: Long time format defined in the system. <br/>Windows: this format is the same as the System time short format                  | 4:30:25 AM HNEC               |
-
-#### JSON Grammar
-
-| Name       | Data Type | Possible Values                                                                                                                                                                                          |
-| ---------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| timeFormat | string    | "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (can be combined with the other possible values) |
-
-#### Objects Supported
-
-[Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
 
 ---
 
-## Text when False/Text when True
+## 時間フォーマット
 
-When a [boolean expression](properties_Object.md#expression-type) is displayed as:
+時間フォーマットは、表示や印刷時に時間を表示する方法を制御します。 選択した表示フォーマットとは関係なく、データ入力の際は 24時間制の “HH:MM:SS” フォーマット、または 12時間制の “HH:MM:SS AM/PM” フォーマットで時間を入力します。
+> [文字](#文字フォーマット) や [数値](#数値フォーマット) の表示フォーマットとは異なり、時間の表示フォ－マットはフォーマットポップアップメニューから選択しなければなりません。
 
-* a text in an [input object](input_overview.md)
-* a ["popup"](properties_Display.md#display-type) in a [list box column](listbox_overview.md#list-box-columns),
+次の表は、時間フィールドの表示フォーマットとそれぞれのフォーマットの例を示しています:
 
-... you can select the text to display for each value:
+| フォーマット                       | JSON 文字列     | コメント                                                                               | 04:30:25 の例         |
+| ---------------------------- | ------------ | ---------------------------------------------------------------------------------- | ------------------- |
+| HH:MM:SS                     | hh_mm_ss   |                                                                                    | 04:30:25            |
+| HH:MM                        | hh_mm        |                                                                                    | 04:30               |
+| Hour Min Sec                 | HH_MM_SS   |                                                                                    | 4 時 30 分 25 秒       |
+| Hour Min                     | HH_MM        |                                                                                    | 4 時 30 分            |
+| HH:MM AM/PM                  | hh_mm_am   |                                                                                    | 4:30 AM             |
+| MM SS                        | mm_ss        | 00:00:00からの経過時間                                                                    | 270:25              |
+| Min Sec                      | MM_SS        | 00:00:00からの経過時間                                                                    | 270 分 25 秒          |
+| ISO Date Time                | iso8601      | 時間に関連する XML 標準表現に対応。 主に XML フォーマットでのデータのやり取りに使用します。                                | 0000-00-00T04:30:25 |
+| System time short            | - (デフォルト)    | システムに定義された標準の時間フォーマット                                                              | 04:30:25            |
+| System time long abbreviated | systemMedium | macOSのみ: システムに定義された時間フォーマットの短縮型。 <br/>Windows では System time short フォーマットと同じ | 04:30:25            |
+| System time long             | systemLong   | macOSのみ: システムに定義された時間フォーマット。 <br/>Windows では System time short フォーマットと同じ     | 04:30:25 JST        |
 
-* **Text when True** - the text to be displayed when the value is "true"
-* **Text when False** - the text to be displayed when the value is "false"
+#### JSON 文法
 
-#### JSON Grammar
+| 名称         | データタイプ | とりうる値                                                                                                                                                                       |
+| ---------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| timeFormat | string | "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (他の値と組み合わせることができます) |
 
-| Name          | Data Type | Possible Values                                                          |
-| ------------- | --------- | ------------------------------------------------------------------------ |
-| booleanFormat | string    | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned" |
+#### 対象オブジェクト
 
-#### Objects Supported
-
-[List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
-
----
-
-## Display Type
-
-Used to associate a display format with the column data. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes).
-
-Boolean and number (numeric or integer) columns can be displayed as check boxes. In this case, the [Title](#title) property can be defined.
-
-Boolean columns can also be displayed as pop-up menus. In this case, the [Text when False and Text when True](#text-when-false-text-when-true) properties must be defined.
-
-#### JSON Grammar
-
-| Name        | Data Type | Possible Values                                                                                                        |
-| ----------- | --------- | ---------------------------------------------------------------------------------------------------------------------- |
-| controlType | string    | **number columns**: "automatic" (default) or "checkbox"<br/>**boolean columns**: "checkbox" (default) or "popup" |
-
-#### Objects Supported
-
-[List Box Column](listbox_overview.md#list-box-columns)
+[コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
 
 ---
 
-## Not rendered
+## テキスト (True時)/テキスト (False時)
 
-When this property is enabled, the object is not drawn on the form, however it can still be activated.
+[ブール式](properties_Object.md#式の型) を次のフォームオブジェクトで表示した場合:
 
-In particular, this property allows implementing "invisible" buttons.  Non-rendered buttons can be placed on top of graphic objects. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.
+* [入力オブジェクト](input_overview.md) にテキストとして
+* [リストボックス列](listbox_overview.md#リストボックス列) に表示タイプ ["ポップアップ"](properties_Display.md#表示タイプ) を選択して
 
-#### JSON Grammar
+... 値の代わりに表示するテキストを指定することができます:
 
-| Name    | Data Type | Possible Values |
-| ------- | --------- | --------------- |
-| display | boolean   | true, false     |
+* **テキスト (True時)** - 値が "true" の時に表示するテキスト
+* **テキスト (False時)** - 値が "false" の時に表示するテキスト
 
-#### Objects Supported
+#### JSON 文法
 
-[Button](button_overview.md) - [Drop-down List](dropdownList_Overview.md)
+| 名称            | データタイプ | とりうる値                                                       |
+| ------------- | ------ | ----------------------------------------------------------- |
+| booleanFormat | string | "\<*テキスト (true時)*\>;\<*テキスト (false時)*\>", 例: "済み;未処理" / |
 
----
+#### 対象オブジェクト
 
-## Three-States
-
-Allows a check box object to accept a third state. The variable associated with the check box returns the value 2 when the check box is in the third state.
-
-#### Three-states check boxes in list box columns
-
-List box columns with a numeric [data type](properties_Object.md#expression-type) can be displayed as three-states check boxes. If chosen, the following values are displayed:
-
-* 0 = unchecked box,
-* 1 = checked box,
-* 2 (or any value >0) = semi-checked box (third state). For data entry, this state returns the value 2.
-* -1 = invisible check box,
-* -2 = unchecked box, not enterable,
-* -3 = checked box, not enterable,
-* -4 = semi-checked box, not enterable
-
-In this case as well, the [Title](#title) property is also available so that the title of the check box can be entered.
-
-#### JSON Grammar
-
-| Name       | Data Type | Possible Values |
-| ---------- | --------- | --------------- |
-| threeState | boolean   | true, false     |
-
-#### Objects Supported
-
-[Check box](checkbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[リストボックス列](listbox_overview.md#リストボックス列) - [入力](input_overview.md)
 
 ---
 
-## Title
+## 表示タイプ
 
-This property is available for a list box column if:
+列のデータに表示フォーマットを割り当てるために使用します。 提供されるフォーマットは変数型 (配列型のリストボックス) またはデータ/フィールド型 (セレクションおよびコレクション型のリストボックス) により異なります。
 
-* the [column type](properties_Object.md#expression-type) is **boolean** and its [display type](properties_Display.md#display-type) is "Check Box"
-* the [column type](properties_Object.md#expression-type) is **number** (numeric or integer) and its [display type](properties_Display.md#display-type) is "Three-states Checkbox".
+ブール式および数値 (数値または整数) 式の列はチェックボックスとして表示することができます。 表示タイプにチェックボックスを選択すると、[タイトル](#タイトル)プロパティが表示され、チェックボックスのタイトルを設定できます。
 
-In that cases, the title of the check box can be entered using this property.
+ブール式の列はポップアップメニューとしても表示することができます。 この場合には、[テキスト (True時) とテキスト (False時)](#テキスト-true時-テキスト-false時) プロパティが表示され、ポップアップメニューの対応するタイトルを設定できます。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name         | Data Type | Possible Values                    |
-| ------------ | --------- | ---------------------------------- |
-| controlTitle | string    | Any custom label for the check box |
+| 名称          | データタイプ | とりうる値                                                                                           |
+| ----------- | ------ | ----------------------------------------------------------------------------------------------- |
+| controlType | string | **数値列**: "automatic" (デフォルト) または "checkbox"<br/> **ブール列**: "checkbox" (デフォルト) または "popup" |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[リストボックス列](listbox_overview.md#リストボックス列)
 
 ---
 
-## Truncate with ellipsis
+## レンダリングしない
 
-Controls the display of values when list box columns are too narrow to show their full contents.
+このプロパティが選択されていると、アプリケーションモードでオブジェクトが描画されません (あとから描画することができます)。
 
-This option is available for columns with any type of contents, except pictures and objects.
+このプロパティは、”透明” ボタンの実装を可能にします。  レンダリングされていないボタンは、描画オブジェクトの上に配置することができます。 レンダリングされていないボタンは、クリックされてもハイライトされることはなく非表示のままですが、クリックによるイベントは発生します。
 
-* When the property is enabled (default), if the contents of a list box cell exceed the width of the column, they are truncated and an ellipsis is displayed:
+#### JSON 文法
+
+| 名称      | データタイプ  | とりうる値       |
+| ------- | ------- | ----------- |
+| display | boolean | true, false |
+
+#### 対象オブジェクト
+
+[ボタン](button_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md)
+
+---
+
+## スリーステート
+
+チェックボックスオブジェクトに、3 番目の状態を付加します。 チェックボックスが 3番目の状態になると、チェックボックスに関連付けられた変数は値2を返します。
+
+#### リストボックス列におけるスリーステートチェックボックス
+
+[式タイプ](properties_Object.md#式の型-式タイプ) が数値型のリストボックス列は、スリーステートチェックボックスとして表示できます。 スリーステートチェックボックスタイプを選択すると、以下の値が表示されます:
+
+* 0 = チェックされていない
+* 1 = チェックされている
+* 2 (または2以上の任意の数値) セミチェックボックス (三番目の状態) データ入力時、この状態は2を返します。
+* -1 = 非表示チェックボックス
+* -2 = チェックされていない、入力不可
+* -3 = チェックされている、入力不可
+* -4 = セミチェックボックス、入力不可
+
+スリーステートチェックボックスの場合も、[タイトル](#タイトル)プロパティが表示され、チェックボックスのタイトルを設定できます。
+
+#### JSON 文法
+
+| 名称         | データタイプ  | とりうる値       |
+| ---------- | ------- | ----------- |
+| threeState | boolean | true, false |
+
+#### 対象オブジェクト
+
+[チェックボックス](checkbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
+
+---
+
+## タイトル
+
+タイトルは、リストボックス列のプロパティとして次の場合に提供されます:
+
+* [式タイプ](properties_Object.md#式の型-式タイプ) が **ブール** で [表示タイプ](properties_Display.md#表示タイプ) が "チェックボックス" の場合
+* [式タイプ](properties_Object.md#式の型-式タイプ) が **数値** (数値または整数) で [表示タイプ](properties_Display.md#表示タイプ) が "スリーステートチェックボックス" の場合
+
+これらの場合に、チェックボックスのタイトルをこのプロパティで設定できます。
+
+#### JSON 文法
+
+| 名称           | データタイプ | とりうる値         |
+| ------------ | ------ | ------------- |
+| controlTitle | string | タイトル用のあらゆる文字列 |
+
+#### 対象オブジェクト
+
+[リストボックス列](listbox_overview.md#リストボックス列)
+
+---
+
+## エリプシスを使用して省略
+
+リストボックスのカラムが、中身をすべて表示するのには狭すぎる場合の値の表示を管理します。
+
+このオプションは、どのような型の中身に対しても利用可能です(ただしピクチャーとオブジェクトを除く)。
+
+* このオプションがチェックされているとき (デフォルト)、リストボックスセルの中身がカラムの幅を超えた場合、それらは省略され、エリプシスが表示されます:
 
  ![](../assets/en/FormObjects/property_truncate1.png)
-> The position of the ellipsis depends on the OS. In the above example (Windows), it is added on the right side of the text. On macOS, the ellipsis is added in the middle of the text.
+> エリプシスの位置はOSによって変わります。 上記の例 (Windows) では、テキストの右側に表示されます (テキストの後半が省略されます)。 macOS 上では、テキストの真ん中に表示されます (テキストの中盤が省略されます)。
 
-* When the property is disabled, if the contents of a cell exceed the width of the column, they are simply clipped with no ellipsis added:
+* このオプションのチェックが外れているとき、セルの中身がカラムの幅を超えていた場合、収まりきらない部分は表示されず、エリプシスも表示されません:
 
  ![](../assets/en/FormObjects/property_truncate2.png)
 
-The Truncate with ellipsis option is enabled by default and can be specified with list boxes of the Array, Selection, or Collection type.
+エリプシスで省略オプションはデフォルトではチェックされており、配列、セレクション、コレクション型のリストボックスに対して指定可能です。
 
-> When applied to Text type columns, the Truncate with ellipsis option is available only if the [Wordwrap](#wordwrap) option is not selected. When the Wordwrap property is selected, extra contents in cells are handled through the word-wrapping features so the Truncate with ellipsis property is not available.
+> テキストまたは文字列型のカラムに対して適用した場合、エリプシスで省略オプションは [ワードラップ](#ワードラップ) オプションがチェックされていない場合にのみ使用可能です。 ワードラップオプションがチェックされていた場合、セル内を超えたコンテンツについてはワードラップ機能によって管理されますので、エリプシスで省略オプションは使用できません。
 
-The Truncate with ellipsis property can be applied to Boolean type columns; however, the result differs depending on the [cell format](#display-type):
+エリプシスで省略オプションはブール型のカラムに対しても適用可能です。しかしながら、[セルのフォーマット](#表示タイプ)によって表示される結果は異なります:
 
-* For Pop-up type Boolean formats, labels are truncated with an ellipsis,
-* For Check box type Boolean formats, labels are always clipped.
+* 表示タイプがポップアップに設定されている場合は、エリプシスでラベルが省略されます。
+* 表示タイプがチェックボックスに設定されている場合は、ラベルは常に見切れます (エリプシスで省略されません)。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name         | Data Type | Possible Values        |
-| ------------ | --------- | ---------------------- |
-| truncateMode | string    | "withEllipsis", "none" |
+| 名称           | データタイプ | とりうる値                  |
+| ------------ | ------ | ---------------------- |
+| truncateMode | string | "withEllipsis", "none" |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-footers)
+[リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー)
 
 ---
 
-## Visibility
+## 表示状態
 
-This property allows hiding the object in the Application environment.
+このプロパティが選択されていると、アプリケーションモードでオブジェクトが非表示になります。
 
-You can handle the Visibility property for most form objects. This property is mainly used to simplify dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The Visibility property allows inverting this logic by making certain objects invisible by default. The developer can then program their display using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/en/page603.html) command when needed.
+大部分のオブジェクトに対して、表示状態プロパティを指定することができます。 このプロパティは主に、ダイナミックなインターフェースの開発を容易にするために使用されます。 インターフェースを開発するとき、多くの場合はフォームの `On Load` イベント中にプログラムからオブジェクトを非表示にした後で、一部のオブジェクトを再度表示する必要性が頻繁に生じます。 表示状態プロパティを使用すると、特定オブジェクトをあらかじめ非表示にしておくことにより、このロジックを逆に働かせることができます。 この後、必要に応じて [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/ja/page603.html) コマンドを使用し、これらのオブジェクトを表示するようプログラミングすることができます。
 
-#### Automatic visibility in list forms
+#### リストフォームにおける自動表示
 
-In the context of list forms, the Visibility property supports two specific values:
+リストフォームのコンテキストにおいては、表示状態は次の二つの値をサポートします:
 
-* **If record selected** (JSON name: "selectedRows")
-* **If record not selected** (JSON name: "unselectedRows")
+* **レコード選択時** (JSON名: "selectedRows")
+* **レコード非選択時** (JSON名: "unselectedRows")
 
-This property is only used when drawing objects located in the body of a list form. It tells 4D whether or not to draw the object depending on whether the record being processed is selected/not selected. It allows you to represent a selection of records using visual attributes other than highlight colors:
+これらのプロパティ値は、リストフォームのボディに配置されたオブジェクトを描画する場合にのみ使用されます。 具体的には、処理中のレコードが選択されているかいないかに応じて、当該オブジェクトを描画するかどうかを 4D に指示します。 これにより、ハイライト以外の視覚的属性でもって、レコードの選択を表現することができます:
 
 ![](../assets/en/FormObjects/select-row.png)
 
-4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/en/page603.html) command; in this case, the object remains invisible regardless of whether or not the record is selected.
+オブジェクトが [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/ja/page603.html) コマンドで非表示にされた場合、4D はこのプロパティを無視します。 つまり、レコードの選択状態にかかわらず、当該オブジェクトは非表示のままになります。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name       | Data Type | Possible Values                                                                         |
-| ---------- | --------- | --------------------------------------------------------------------------------------- |
-| visibility | string    | "visible", "hidden", "selectedRows" (list form only), "unselectedRows" (list form only) |
+| 名称         | データタイプ | とりうる値                                                                         |
+| ---------- | ------ | ----------------------------------------------------------------------------- |
+| visibility | string | "visible", "hidden", "selectedRows" (リストフォームのみ), "unselectedRows" (リストフォームのみ) |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
+[4D View Pro エリア](viewProArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [プラグインエリア](pluginArea_overview.md) - [進捗インジケーター](progressIndicator.md) - [ラジオボタン](radio_overview.md) - [スピナー](spinner.md) - [スプリッター](splitters.md) - [スタティックピクチャー](staticPicture.md) - [ステッパー](stepper.md) - [サブフォーム](subform_overview.md) - [タブコントロール](tabControl.md) - [テキストエリア](text.md) - [Web エリア](webArea_overview.md)
 
 ---
 
-## Wordwrap
+## ワードラップ
 
-> For [input](input_overview.md) objects, available when the [Multiline](properties_Entry.md#multiline) property is set to "yes" .
+> [入力](input_overview.md) オブジェクトにおいては、[複数行](properties_Entry.md#複数行) プロパティが "はい"に設定されている場合にのみ、このプロパティは表示されます。
 
-Manages the display of contents when it exceeds the width of the object.
+このオプションは、表示する内容がオブジェクトの幅を超えたときの表示を管理します。
 
-#### Checked for list box/Yes for input
+#### リストボックスにてチェック / 入力オブジェクトで "はい" に設定
 
-`JSON grammar: "normal"`
+`JSON 文法では: "normal"`
 
-When this option is selected, text automatically wraps to the next line whenever its width exceeds that of the column/area, if the column/area height permits it.
+このオプションがチェックされていると、テキストがカラムやエリアの幅を越えたときに、カラムやエリアの高さが許容する範囲内で自動的に次の行へと改行します。
 
-* In single-line columns/areas, only the last word that can be displayed entirely is displayed. 4D inserts line returns; it is possible to scroll the contents of the area by pressing the down arrow key.
+* 一行のカラムやエリアの場合、全体が表示できる最後の単語までが表示されます。 4Dは改行を挿入します。下矢印キーを押すことで、エリアの内容をスクロールできます。
 
-* In multiline columns/areas, 4D carries out automatic line returns.
+* 複数行のカラムやエリアの場合、4Dは自動改行を実行します。
 
 ![](../assets/en/FormObjects/wordwrap2.png)
 
-#### Unchecked for list box/No for input
+#### リストボックスにてチェックなし / 入力オブジェクトで "いいえ" に設定
 
-`JSON grammar: "none"`
+`JSON 文法では: "none"`
 
-When this option is selected, 4D does not do any automatic line returns and the last word that can be displayed may be truncated. In text type areas, carriage returns are supported:
+このオブションの場合、4D はいっさい自動改行をおこないません。表示可能な最後の単語はエリアをはみ出します。 テキストタイプのエリアでは改行がサポートされます:
 
 ![](../assets/en/FormObjects/wordwrap3.png)
 
-In list boxes, any text that is too long is truncated and displayed with an ellipse (...). In the following example, the Wordwrap option is **checked for the left column** and **unchecked for the right column**:
+リストボックスの場合、長すぎるテキストは切り落とされ、省略記号 (...) が表示されます。 以下の例では、左の列ではワードラップのオプションがチェックされていて、右の列ではされていません:
 
 ![](../assets/en/FormObjects/property_wordwrap1.png)
 
-Note that regardless of the Wordwrap option’s value, the row height is not changed. If the text with line breaks cannot be entirely displayed in the column, it is truncated (without an ellipse). In the case of list boxes displaying just a single row, only the first line of text is displayed:
+ワードラップの オプションの値に関わらず、行の高さは変化しないことに注意してください。 改行を含むテキストがカラムの中に表示しきれないとき、表示しきれない部分は 切り落とされ、省略記号も表示されません。 単一の行を表示するリストボックスの場合、テキストの最初の行のみ表示されます:
 
 ![](../assets/en/FormObjects/property_wordwrap2.png)
 
-#### Automatic for input (default option)
+#### 入力オブジェクトで "自動" に設定 (デフォルト)
 
-`JSON grammar: "automatic"`
+`JSON 文法では: "automatic"`
 
-* In single-line areas, words located at the end of lines are truncated and there are no line returns.
-* In multiline areas, 4D carries out automatic line returns.
+* 一行のエリアの場合、行の最後に表示される単語は切り落とされ、改行はされません。
+* 複数行のエリアの場合、4Dは自動改行を実行します。
 
 ![](../assets/en/FormObjects/wordwrap1.png)
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name     | Data Type | Possible Values                                    |
-| -------- | --------- | -------------------------------------------------- |
-| wordwrap | string    | "automatic" (excluding list box), "normal", "none" |
+| 名称       | データタイプ | とりうる値                                      |
+| -------- | ------ | ------------------------------------------ |
+| wordwrap | string | "automatic" (リストボックスを除く), "normal", "none" |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
+[入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター)
