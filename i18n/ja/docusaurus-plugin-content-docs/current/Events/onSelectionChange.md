@@ -3,29 +3,29 @@ id: onSelectionChange
 title: On Selection Change
 ---
 
-| Code | Can be called by                                                                                                                                                                                                                                                      | Definition                              |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
-| 31   | [4D View Pro area](FormObjects/viewProArea_overview.md) - [4D Write Pro area](FormObjects/writeProArea_overview.md) - Form - [Hierarchical List](FormObjects/list_overview.md) - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) | The selection in the object is modified |
+| コード | 呼び出し元                                                                                                                                                                                                                                            | 定義               |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- |
+| 31  | [4D View Pro エリア](FormObjects/viewProArea_overview.md) - [4D Write Pro エリア](FormObjects/writeProArea_overview) - フォーム - [階層リスト](FormObjects/list_overview.md) - [入力](FormObjects/input_overview.md) - [リストボックス](FormObjects/listbox_overview.md) | オブジェクト内で選択が変更された |
 
 
-## Description
+## 詳細
 
-This event can be generated in different contexts.
+このイベントは様々なコンテキストで発生します。
 
 
 ### 4D View Pro
-The current selection of rows or columns is modified. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
+現在の行や列の選択が変更された。 このコンテキストにおいて、`FORM Event` コマンドによって返される [イベントオブジェクト](overview.md#イベントオブジェクト) には以下のプロパティが含まれています:
 
-| Property      | Type    | Description                    |
-| ------------- | ------- | ------------------------------ |
-| code          | longint | 31                             |
-| description   | text    | "On Selection Change"          |
-| objectName    | text    | 4D View Pro area name          |
-| sheetName     | text    | Name of the sheet of the event |
-| oldSelections | object  | Cell range before change       |
-| newSelections | object  | Cell range after change        |
+| プロパティ         | タイプ     | 詳細                    |
+| ------------- | ------- | --------------------- |
+| code          | longint | 31                    |
+| description   | text    | "On Selection Change" |
+| objectName    | text    | 4D View Pro エリア名      |
+| sheetName     | text    | イベントが発生したシート名         |
+| oldSelections | object  | 変更前のセルレンジ             |
+| newSelections | object  | 変更後のセルレンジ             |
 
-#### Example
+#### 例題
 
 ```4d
  If(FORM Event.code=On Selection Change)
@@ -34,21 +34,21 @@ The current selection of rows or columns is modified. In this context, the [even
  End if
 ```
 
-### List form
+### リストフォーム
 
-The current record or the current selection of rows is modified in a list form.
-
-
-### Hierarchical list
-
-This event is generated every time the selection in the hierarchical list is modified after a mouse click or keystroke.
+リストフォームにおいて、カレントレコードあるいはカレントセレクションの行選択が変更された。
 
 
-### Input & 4D Write Pro
+### 階層リスト
 
-The text selection or the position of the cursor in the area is modified following a click or a keystroke.
+階層リスト中の選択がクリックやキーストロークなどで変更された。
 
 
-### List box
-This event is generated each time the current selection of rows or columns of the list box is modified.
+### 入力 & 4D Write Pro
+
+クリックやキーストロークにより、選択されたテキストやカーソルの位置がエリア内で変更された。
+
+
+### リストボックス
+このイベントは、リストボックス内で現在の行や列の選択が変更されるたびに生成されます。
 
