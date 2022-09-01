@@ -3,14 +3,14 @@ id: onResize
 title: On Resize
 ---
 
-| Code | Can be called by | Definition                                                                                                                            |
-| ---- | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| 29   | Form             | The form's window is resized or the subform object is resized (in this case the event is generated in the form method of the subform) |
+| Code | Puede ser llamado por | Definición                                                                                                                                                       |
+| ---- | --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 29   | Formulario            | La ventana del formulario se redimensiona o el objeto subformulario se redimensiona (en este caso el evento se genera en el método formulario del subformulario) |
 
 
-## Description
+## Descripción
 
-This event is called:
+Este evento se llama:
 
-- when the window of the form is resized,
-- in the context of subforms, when the size of the subform object in the parent form has changed. In this this case, this event is sent to the subform form method. 
+- cuando se redimensiona la ventana del formulario,
+- en el contexto de los subformularios, cuando el tamaño del objeto subformulario en el formulario padre ha cambiado. En este caso, este evento se envía al método formulario del subformulario. 
