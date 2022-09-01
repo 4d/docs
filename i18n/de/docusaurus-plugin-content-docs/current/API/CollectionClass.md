@@ -14,7 +14,7 @@ A collection is initialized with:
 | [<!-- INCLUDE #_command_.New shared collection.Syntax -->](#new-shared-collection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #_command_.New shared collection.Summary -->|
 
 
-### Example
+### Beispiel
 
 ```4d
  var $colVar : Collection //creation of collection type 4D variable
@@ -77,16 +77,16 @@ A collection is initialized with:
 **New collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF #_command_.New collection.Params -->
-| Parameter | Type                                                                    |    | Description                               |
+| Parameter | Typ                                                                     |    | Beschreibung                              |
 | --------- | ----------------------------------------------------------------------- |:--:| ----------------------------------------- |
-| value     | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Collection's value(s)                     |
-| Result    | Collection                                                              | <- | New collection|<!-- END REF -->
+| wert      | Number, Text, Date, Time, Boolean, Object, Collection, Picture, Pointer | -> | Collection's value(s)                     |
+| Ergebnis  | Collection                                                              | <- | New collection|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `New collection` command <!-- REF #_command_.New collection.Summary --> creates a new empty or prefilled collection<!-- END REF --> and returns its reference.
 
@@ -97,7 +97,7 @@ You must assign the returned reference to a 4D variable of the Collection type.
 
 Optionally, you can prefill the new collection by passing one or several *value*(s) as parameter(s).
 
-Otherwise, you can add or modify elements subsequently through assignment. For example:
+Otherwise, you can add or modify elements subsequently through assignment. Beispiel:
 
 ```4d
  myCol[10]:="My new element"
@@ -113,7 +113,7 @@ You must pay attention to the following conversion issues:
 *   Dates are stored as "yyyy-mm-dd" dates or strings with the "YYYY-MM-DDTHH:mm:ss.SSSZ" format, according to the current "dates inside objects" database setting. When converting 4D dates into text prior to storing them in the collection, by default the program takes the local time zone into account. You can modify this behavior using the `Dates inside objects` selector of the `SET DATABASE PARAMETER` command.
 *   If you pass a time, it is stored as a number of milliseconds (Real).
 
-#### Example 1
+#### Beispiel 1
 
 
 
@@ -125,7 +125,7 @@ You want to create a new empty collection and assign it to a 4D collection varia
   //$myCol=[]
 ```
 
-#### Example 2
+#### Beispiel 2
 
 You want to create a prefilled collection:
 
@@ -135,7 +135,7 @@ You want to create a prefilled collection:
   //$filledColl=[33,"mike","november","->myPtr","2017-03-28T22:00:00.000Z"]
 ```
 
-#### Example 3
+#### Beispiel 3
 
 You create a new collection and then add a new element:
 
@@ -166,16 +166,16 @@ You create a new collection and then add a new element:
 **New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF #_command_.New shared collection.Params -->
-| Parameter | Type                                                                |    | Description                                      |
+| Parameter | Typ                                                                 |    | Beschreibung                                     |
 | --------- | ------------------------------------------------------------------- |:--:| ------------------------------------------------ |
-| value     | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Shared collection's value(s)                     |
-| Result    | Collection                                                          | <- | New shared collection|<!-- END REF -->
+| wert      | Number, Text, Date, Time, Boolean, Shared object, Shared collection | -> | Shared collection's value(s)                     |
+| Ergebnis  | Collection                                                          | <- | New shared collection|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `New shared collection` command <!-- REF #_command_.New shared collection.Summary --> creates a new empty or prefilled shared collection<!-- END REF --> and returns its reference.
 
@@ -194,18 +194,18 @@ If the new element index is beyond the last existing element of the shared colle
 You can pass any number of values of the following supported types:
 
 *   number (real, longint...). Number values are always stored as reals.
-*   text
+*   Text
 *   boolean
 *   date
 *   time (stored as number of milliseconds - real)
-*   null
+*   Null
 *   shared object(*)
-*   shared collection(*)
+*   shared collection(*) > Unlike standard (not shared) collections, shared collections do not support pictures, pointers, and objects or collections that are not shared.
 > Unlike standard (not shared) collections, shared collections do not support pictures, pointers, and objects or collections that are not shared.
 
 (*)When a shared object or collection is added to a shared collection, they share the same *locking identifier*. For more information on this point, refer to the **4D Developer**'s guide.
 
-#### Example
+#### Beispiel
 
 ```4d
  $mySharedCol:=New shared collection("alpha";"omega")
@@ -233,10 +233,10 @@ You can pass any number of values of the following supported types:
 
 
 <!-- REF #collection.average().Params -->
-| Parameter    | Type            |    | Description                                                               |
+| Parameter    | Typ             |    | Beschreibung                                                              |
 | ------------ | --------------- |:--:| ------------------------------------------------------------------------- |
 | propertyPath | Text            | -> | Object property path to be used for calculation                           |
-| Result       | Real, Undefined | <- | Arithmetic mean (average) of collection values|<!-- END REF -->
+| Ergebnis     | Real, Undefined | <- | Arithmetic mean (average) of collection values|<!-- END REF -->
 
 
 
@@ -244,7 +244,7 @@ You can pass any number of values of the following supported types:
 
 
 
-#### Description
+#### Beschreibung
 
 The `.average()` function <!-- REF #collection.average().Summary -->returns the arithmetic mean (average) of defined values in the collection instance<!-- END REF -->.
 
@@ -261,7 +261,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 *   *propertyPath* is not found in the collection.
 
 
-#### Example 1
+#### Beispiel 1
 
 ```4d
  var $col : Collection
@@ -269,7 +269,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
  $vAvg:=$col.average() //12
 ```
 
-#### Example 2
+#### Beispiel 2
 
 ```4d
  var $col : Collection
@@ -300,20 +300,20 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 **.clear()** : Collection<!-- END REF -->
 
 <!-- REF #collection.clear().Params -->
-| Parameter | Type       |    | Description                                                              |
+| Parameter | Typ        |    | Beschreibung                                                             |
 | --------- | ---------- |:--:| ------------------------------------------------------------------------ |
-| Result    | Collection | <- | Original collection with all elements removed|<!-- END REF -->
+| Ergebnis  | Collection | <- | Original collection with all elements removed|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.clear()` function <!-- REF #collection.clear().Summary -->removes all elements from the collection instance and returns an empty collection<!-- END REF -->.
 > This function modifies the original collection.
 
-#### Example
+#### Beispiel
 
 ```4d
 var $col : Collection
@@ -345,19 +345,19 @@ $vSize:=$col.length //$vSize=0
 
 
 <!-- REF #collection.combine().Params -->
-| Parameter | Type       |    | Description                                                                   |
+| Parameter | Typ        |    | Beschreibung                                                                  |
 | --------- | ---------- |:--:| ----------------------------------------------------------------------------- |
 | col2      | Collection | -> | Collection to combine                                                         |
-| index     | Integer    | -> | Position to which insert elements to combine in collection (default=length+1) |
-| Result    | Collection | <- | Original collection containing combined element(s)|<!-- END REF -->
+| index     | Ganzzahl   | -> | Position to which insert elements to combine in collection (default=length+1) |
+| Ergebnis  | Collection | <- | Original collection containing combined element(s)|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
-The `.combine()` function <!-- REF #collection.combine().Summary -->inserts *col2* elements at the end or at the specified *index* position in the collection instance and returns the edited collection<!-- END REF -->. Unlike the `.insert()` function, `.combine()` adds each value of *col2* in the original collection, and not as a single collection element.
+The `.combine()` function <!-- REF #collection.combine().Summary -->inserts *col2* elements at the end or at the specified *index* position in the collection instance and returns the edited collection<!-- END REF -->. .
 > This function modifies the original collection.
 
 By default, *col2* elements are added at the end of the orginal collection. You can pass in *index* the position where you want the *col2* elements to be inserted in the collection.
@@ -368,7 +368,7 @@ By default, *col2* elements are added at the end of the orginal collection. You 
 *   If the calculated value is negative, *index* is set to 0.
 
 
-#### Example
+#### Beispiel
 
 ```4d
 var $c; $fruits : Collection
@@ -399,16 +399,16 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 **.concat**( *value* : any { *;...valueN* } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.concat().Params -->
-| Parameter | Type                                                           |    | Description                                                                                                       |
+| Parameter | Typ                                                            |    | Beschreibung                                                                                                      |
 | --------- | -------------------------------------------------------------- |:--:| ----------------------------------------------------------------------------------------------------------------- |
-| value     | Number, Text, Object, Collection, Date, Time, Boolean, Picture | -> | Value(s) to concatenate. If *value* is a collection, all collection elements are added to the original collection |
-| Result    | Collection                                                     | <- | New collection with value(s) added to the original collection|<!-- END REF -->
+| wert      | Number, Text, Object, Collection, Date, Time, Boolean, Picture | -> | Value(s) to concatenate. If *value* is a collection, all collection elements are added to the original collection |
+| Ergebnis  | Collection                                                     | <- | New collection with value(s) added to the original collection|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.concat()` function <!-- REF #collection.concat().Summary -->returns a new collection containing the elements of the original collection with all elements of the *value* parameter added to the end<!-- END REF -->.
 > This function does not modify the original collection.
@@ -416,7 +416,7 @@ The `.concat()` function <!-- REF #collection.concat().Summary -->returns a new 
 If *value* is a collection, all its elements are added as new elements at the end of the original collection. If *value* is not a collection, it is added itself as a new element.
 
 
-#### Example
+#### Beispiel
 
 ```4d
 var $c : Collection
@@ -450,25 +450,25 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 
 <!-- REF #collection.copy().Params -->
-| Parameter    | Type       |    | Description                                                                                               |
+| Parameter    | Typ        |    | Beschreibung                                                                                              |
 | ------------ | ---------- |:--:| --------------------------------------------------------------------------------------------------------- |
-| option       | Integer    | -> | `ck resolve pointers`: resolve pointers before copying,<br/>`ck shared`: return a shared collection |
+| option       | Ganzzahl   | -> | `ck resolve pointers`: resolve pointers before copying,<br/>`ck shared`: return a shared collection |
 | groupWithCol | Collection | -> | Shared collection to be grouped with the resulting collection                                             |
-| groupWithObj | Object     | -> | Shared object to be grouped with the resulting collection                                                 |
-| Result       | Collection | <- | Deep copy of the original collection|<!-- END REF -->
+| groupWithObj | Objekt     | -> | Shared object to be grouped with the resulting collection                                                 |
+| Ergebnis     | Collection | <- | Deep copy of the original collection|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.copy()` function <!-- REF #collection.copy().Summary --> returns a deep copy of the collection instance<!-- END REF -->.***Deep copy*** means that objects or collections within the original collection are duplicated and do not share any reference with the returned collection.
 > This function does not modify the original collection.
 
 If passed, the *option* parameter can contain one of the following constants (or both):
 
-| option                | Description                                                                                                                                                                                                                                                                                                         |
+| option                | Beschreibung                                                                                                                                                                                                                                                                                                        |
 | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `ck resolve pointers` | If the original collection contains pointer type values, by default the copy also contains the pointers. However, you can resolve pointers when copying by passing the ck resolve pointers. In this case, each pointer present in the collection is evaluated when copying and its dereferenced value is used.      |
 | `ck shared`           | By default, copy() returns a regular (not shared) collection, even if the command is applied to a shared collection. Pass the ck shared constant to create a shared collection. In this case, you can use the groupWith parameter to associate the shared collection with another collection or object (see below). |
@@ -476,7 +476,7 @@ If passed, the *option* parameter can contain one of the following constants (or
 The *groupWithCol* or *groupWithObj* parameters allow you to designate a collection or an object with which the resulting collection should be associated.
 
 
-#### Example 1
+#### Beispiel 1
 
 We want to copy the *$lastnames* regular (non shared) collection into the *$sharedObject* shared object. To do this, we must create a shared copy of the collection (*$sharedLastnames*).
 
@@ -499,7 +499,7 @@ End use
 ```
 
 
-#### Example 2
+#### Beispiel 2
 
 We want to combine *$sharedColl1* and *$sharedColl2*. Since they belong to different shared groups, a direct combination would result in an error. Therefore, we must make a shared copy of *$sharedColl1* and designate *$sharedColl2* as a shared group for the copy.
 
@@ -516,7 +516,7 @@ $sharedColl2:=New shared collection(New shared object("lastname";"Brown"))
  End use
 ```
 
-#### Example 3
+#### Beispiel 3
 
 We have a regular collection (*$lastnames*) and we want to put it in the **Storage** of the application. To do this, we must create a shared copy beforehand (*$sharedLastnames*).
 
@@ -534,7 +534,7 @@ Use(Storage)
 End use
 ```
 
-#### Example 4
+#### Beispiel 4
 
 This example illustrates the use of the `ck resolve pointers` option:
 
@@ -580,22 +580,22 @@ This example illustrates the use of the `ck resolve pointers` option:
 
 
 <!-- REF #collection.count().Params -->
-| Parameter    | Type |    | Description                                                     |
+| Parameter    | Typ  |    | Beschreibung                                                    |
 | ------------ | ---- |:--:| --------------------------------------------------------------- |
 | propertyPath | Text | -> | Object property path to be used for calculation                 |
-| Result       | Real | <- | Number of elements in the collection|<!-- END REF -->
+| Ergebnis     | Zahl | <- | Number of elements in the collection|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.count()` function <!-- REF #collection.count().Summary -->returns the number of non-null elements in the collection<!-- END REF -->.
 
 If the collection contains objects, you can pass the *propertyPath* parameter. In this case, only elements that contain the *propertyPath* are taken into account.
 
-#### Example
+#### Beispiel
 
 ```4d
  var $col : Collection
@@ -633,17 +633,17 @@ If the collection contains objects, you can pass the *propertyPath* parameter. I
 
 
 <!-- REF #collection.countValues().Params -->
-| Parameter    | Type                                            |    | Description                                                     |
+| Parameter    | Typ                                             |    | Beschreibung                                                    |
 | ------------ | ----------------------------------------------- |:--:| --------------------------------------------------------------- |
-| value        | Text, Number, Boolean, Date, Object, Collection | -> | Value to count                                                  |
+| wert         | Text, Number, Boolean, Date, Object, Collection | -> | Value to count                                                  |
 | propertyPath | Text                                            | -> | Object property path to be used for calculation                 |
-| Result       | Real                                            | <- | Number of occurrences of the value  |<!-- END REF -->
+| Ergebnis     | Zahl                                            | <- | Number of occurrences of the value  |<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.countValues()` function <!-- REF #collection.countValues().Summary -->returns the number of times value is found in the collection<!-- END REF -->.
 
@@ -658,7 +658,7 @@ For an element to be found, the type of *value* must be equivalent to the type o
 The optional *propertyPath* parameter allows you to count values inside a collection of objects: pass in *propertyPath* the path of the property whose values you want to count.
 > This function does not modify the original collection.
 
-#### Example 1
+#### Beispiel 1
 
 ```4d
  var $col : Collection
@@ -668,7 +668,7 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 ```
 
 
-#### Example 2
+#### Beispiel 2
 
 ```4d
  var $col : Collection
@@ -683,7 +683,7 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 ```
 
 
-#### Example 3
+#### Beispiel 3
 
 ```4d
  var $numbers; $letters : Collection
@@ -719,17 +719,17 @@ The optional *propertyPath* parameter allows you to count values inside a collec
 
 
 <!-- REF #collection.distinct().Params -->
-| Parameter    | Type       |    | Description                                                         |
+| Parameter    | Typ        |    | Beschreibung                                                        |
 | ------------ | ---------- |:--:| ------------------------------------------------------------------- |
-| option       | Integer    | -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example)    |
+| option       | Ganzzahl   | -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example)    |
 | propertyPath | Text       | -> | Path of attribute whose distinct values you want to get             |
-| Result       | Collection | <- | New collection with only distinct values|<!-- END REF -->
+| Ergebnis     | Collection | <- | New collection with only distinct values|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.distinct()` function <!-- REF #collection.distinct().Summary -->returns a collection containing only distinct (different) values from the original collection<!-- END REF -->.
 > This function does not modify the original collection.
@@ -742,7 +742,7 @@ If the collection contains objects, you can pass the *propertyPath* parameter to
 
 
 
-#### Example
+#### Beispiel
 
 ```4d
  var $c; $c2 : Collection
@@ -778,24 +778,24 @@ If the collection contains objects, you can pass the *propertyPath* parameter to
 **.equal**( *collection2* : Collection {; *option* : Integer } ) : Boolean<!-- END REF -->
 
 <!-- REF #collection.equal().Params -->
-| Parameter   | Type       |    | Description                                                                   |
+| Parameter   | Typ        |    | Beschreibung                                                                  |
 | ----------- | ---------- |:--:| ----------------------------------------------------------------------------- |
 | collection2 | Collection | -> | Collection to compare                                                         |
-| option      | Integer    | -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example)              |
-| Result      | Boolean    | <- | True if collections are identical, false otherwise|<!-- END REF -->
+| option      | Ganzzahl   | -> | `ck diacritical`: diacritical evaluation ("A" # "a" for example)              |
+| Ergebnis    | Boolean    | <- | True if collections are identical, false otherwise|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.equal()` function <!-- REF #collection.equal().Summary -->compares the collection with collection2 <!-- END REF -->and returns **true** if they are identical (deep comparison).
 
 By default, a non-diacritical evaluation is performed. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `ck diacritical` constant in the option parameter.
 > Elements with **Null** values are not equal to Undefined elements.
 
-#### Example
+#### Beispiel
 
 ```4d
  var $c; $c2 : Collection
@@ -840,19 +840,19 @@ By default, a non-diacritical evaluation is performed. If you want the evaluatio
 **.every**( { *startFrom* : Integer ; } *formula* : 4D.Function { ;*...param* : any } ) : Boolean<br/>**.every**( { *startFrom* : Integer ; } *methodName* : Text { ;*...param* : any } ) : Boolean<!-- END REF -->
 
 <!-- REF #collection.every().Params -->
-| Parameter  | Type        |    | Description                                                                  |
+| Parameter  | Typ         |    | Beschreibung                                                                 |
 | ---------- | ----------- |:--:| ---------------------------------------------------------------------------- |
-| startFrom  | Integer     | -> | Index to start the test at                                                   |
+| startFrom  | Ganzzahl    | -> | Index to start the test at                                                   |
 | formula    | 4D.Function | -> | Formula object                                                               |
 | methodName | Text        | -> | Name of a method                                                             |
 | param      | Mixed       | -> | Parameter(s) to pass to *formula* or *methodName*                            |
-| Result     | Boolean     | <- | True if all elements successfully passed the test|<!-- END REF -->
+| Ergebnis   | Boolean     | <- | True if all elements successfully passed the test|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.every()` function <!-- REF #collection.every().Summary -->returns **true** if all elements in the collection successfully passed a test implemented in the provided *formula* object or *methodName* name<!-- END REF -->.
 
@@ -883,7 +883,7 @@ By default, `.every()` tests the whole collection. Optionally, you can pass in *
 *   If *startFrom* = 0, the whole collection is searched (default).
 
 
-#### Example 1
+#### Beispiel 1
 
 ```4d
 var $c : Collection  
@@ -898,7 +898,7 @@ $c.push(-1)
 $b:=$c.every($f) //returns false
 ```
 
-#### Example 2
+#### Beispiel 2
 
 This example tests that all elements of a collection are of the real type:
 
@@ -939,18 +939,18 @@ $b:=$c.every($f;Is real) //$b=false
 
 
 <!-- REF #collection.extract().Params -->
-| Parameter    | Type       |    | Description                                                                                                                        |
+| Parameter    | Typ        |    | Beschreibung                                                                                                                       |
 | ------------ | ---------- |:--:| ---------------------------------------------------------------------------------------------------------------------------------- |
 | propertyPath | Text       | -> | Object property path whose values must be extracted to the new collection                                                          |
 | targetpath   | Text       | -> | Target property path or property name                                                                                              |
-| option       | Integer    | -> | `ck keep null`: include null properties in the returned collection (ignored by default). Parameter ignored if *targetPath* passed. |
-| Result       | Collection | <- | New collection containing extracted values|<!-- END REF -->
+| option       | Ganzzahl   | -> | `ck keep null`: include null properties in the returned collection (ignored by default). Parameter ignored if *targetPath* passed. |
+| Ergebnis     | Collection | <- | New collection containing extracted values|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.extract()` function <!-- REF #collection.extract().Summary -->creates and returns a new collection containing *propertyPath* values extracted from the original collection of objects<!-- END REF -->.
 > This function does not modify the original collection.
@@ -965,7 +965,7 @@ The contents of the returned collection depends on the *targetPath* parameter:
 *   If one or more *targetPath* parameter(s) are passed, `.extract()` populates the new collection with the *propertyPath* properties and each element of the new collection is an object with *targetPath* properties filled with the corresponding *propertyPath* properties. Null values are kept (*option* parameter is ignored with this syntax).
 
 
-#### Example 1
+#### Beispiel 1
 
 ```4d
 var $c : Collection
@@ -979,7 +979,7 @@ $c2:=$c.extract("name";ck keep null) //$c2=[Cleveland,null,Blountsville,null]
 ```
 
 
-#### Example 2
+#### Beispiel 2
 
 
 ```4d
@@ -1020,18 +1020,18 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 
 <!-- REF #collection.fill().Params -->
-| Parameter | Type                                            |    | Description                                                       |
+| Parameter | Typ                                             |    | Beschreibung                                                      |
 | --------- | ----------------------------------------------- |:--:| ----------------------------------------------------------------- |
-| value     | number, Text, Collection, Object, Date, Boolean | -> | Filling value                                                     |
-| startFrom | Integer                                         | -> | Start index (included)                                            |
-| end       | Integer                                         | -> | End index (not included)                                          |
-| Result    | collection                                      | <- | Original collection with filled values|<!-- END REF -->
+| wert      | number, Text, Collection, Object, Date, Boolean | -> | Filling value                                                     |
+| startFrom | Ganzzahl                                        | -> | Start index (included)                                            |
+| end       | Ganzzahl                                        | -> | End index (not included)                                          |
+| Ergebnis  | collection                                      | <- | Original collection with filled values|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.fill()` function <!-- REF #collection.fill().Summary -->fills the collection with the specified *value*, optionally from *startFrom* index to *end* index, and returns the resulting collection<!-- END REF -->.
 > This function modifies the original collection.
@@ -1047,7 +1047,7 @@ In case of inconsistency, the following rules apply:
 *   If *end* < *startFrom* (passed or calculated values), the method does nothing.
 
 
-#### Example
+#### Beispiel
 
 ```4d
  var $c : Collection
@@ -1082,18 +1082,18 @@ In case of inconsistency, the following rules apply:
 
 
 <!-- REF #collection.filter().Params -->
-| Parameter  | Type        |    | Description                                                                           |
+| Parameter  | Typ         |    | Beschreibung                                                                          |
 | ---------- | ----------- |:--:| ------------------------------------------------------------------------------------- |
 | formula    | 4D.Function | -> | Formula object                                                                        |
 | methodName | Text        | -> | Name of a method                                                                      |
 | param      | any         | -> | Parameter(s) to pass to *formula* or *methodName*                                     |
-| Result     | Collection  | <- | New collection containing filtered elements (shallow copy)|<!-- END REF -->
+| Ergebnis   | Collection  | <- | New collection containing filtered elements (shallow copy)|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.filter()` function <!-- REF #collection.filter().Summary -->returns a new collection containing all elements of the original collection for which the *formula* or *methodName* result is **true**<!-- END REF -->. This function returns a ***shallow copy***, which means that objects or collections in both collections share the same reference. If the original collection is a shared collection, the returned collection is also a shared collection.
 > This function does not modify the original collection.
@@ -1103,7 +1103,7 @@ You designate the callback to be executed to filter collection elements using ei
 - *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
 - or *methodName*, the name of a project method (text).
 
-The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for each element fulfilling the condition and thus, to push to the new collection. It receives an `Object` in first parameter ($1).
+The callback is called with the parameter(s) passed in *param* (optional). The callback is called with the parameter(s) passed in *param* (optional). It receives an `Object` in first parameter ($1).
 
 The callback receives the following parameters:
 
@@ -1117,7 +1117,7 @@ It can set the following parameter(s):
 *   *$1.stop* (Boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
 
 
-#### Example 1
+#### Beispiel 1
 
 You want to get the collection of text elements whose length is smaller than 6:
 
@@ -1128,7 +1128,7 @@ $colNew:=$col.filter(Formula((Value type($1.value)=Is text) && (Length($1.value)
   //$colNew=["hello","world","tim","miami"]
 ```
 
-#### Example 2
+#### Beispiel 2
 
 You want to filter elements according to their value type:
 
@@ -1169,19 +1169,19 @@ You want to filter elements according to their value type:
 
 
 <!-- REF #collection.find().Params -->
-| Parameter  | Type        |    | Description                                                             |
+| Parameter  | Typ         |    | Beschreibung                                                            |
 | ---------- | ----------- |:--:| ----------------------------------------------------------------------- |
-| startFrom  | Integer     | -> | Index to start the search at                                            |
+| startFrom  | Ganzzahl    | -> | Index to start the search at                                            |
 | formula    | 4D.Function | -> | Formula object                                                          |
 | methodName | Text        | -> | Name of a method                                                        |
 | param      | any         | -> | Parameter(s) to pass to *formula* or *methodName*                       |
-| Result     | any         | <- | First value found, or Undefined if not found|<!-- END REF -->
+| Ergebnis   | any         | <- | First value found, or Undefined if not found|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.find()` function <!-- REF #collection.find().Summary -->returns the first value in the collection for which *formula* or *methodName* result, applied on each element, returns **true**<!-- END REF -->.
 > This function does not modify the original collection.
@@ -1191,7 +1191,7 @@ You designate the callback to be executed to evaluate collection elements using 
 - *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
 - or *methodName*, the name of a project method (text).
 
-The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for the first element fulfilling the condition. It receives an `Object` in first parameter ($1).
+The callback is called with the parameter(s) passed in *param* (optional). The callback is called with the parameter(s) passed in *param* (optional). It receives an `Object` in first parameter ($1).
 
 The callback receives the following parameters:
 
@@ -1212,7 +1212,7 @@ By default, `.find()` searches in the whole collection. Optionally, you can pass
 *   If *startFrom* = 0, the whole collection is searched (default).
 
 
-#### Example 1
+#### Beispiel 1
 
 You want to get the first text element with a length smaller than 5:
 
@@ -1222,7 +1222,7 @@ $col:=New collection("hello";"world";4;"red horse";"tim";"san jose")
 $value:=$col.find(Formula((Value type($1.value)=Is text) && (Length($1.value)<$2)); 5) //$value="tim"
 ```
 
-#### Example 2
+#### Beispiel 2
 
 You want to find a city name within a collection:
 
@@ -1264,19 +1264,19 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 
 
 <!-- REF #collection.findIndex().Params -->
-| Parameter  | Type        |    | Description                                                               |
+| Parameter  | Typ         |    | Beschreibung                                                              |
 | ---------- | ----------- |:--:| ------------------------------------------------------------------------- |
-| startFrom  | Integer     | -> | Index to start the search at                                              |
+| startFrom  | Ganzzahl    | -> | Index to start the search at                                              |
 | formula    | 4D.Function | -> | Formula object                                                            |
 | methodName | Text        | -> | Name of a method                                                          |
 | param      | any         | -> | Parameter(s) to pass to *formula* or *methodName*                         |
-| Result     | Integer     | <- | Index of first value found, or -1 if not found|<!-- END REF -->
+| Ergebnis   | Ganzzahl    | <- | Index of first value found, or -1 if not found|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.findIndex()` function <!-- REF #collection.findIndex().Summary -->returns the index, in the collection, of the first value for which *formula* or *methodName*, applied on each element, returns **true**<!-- END REF -->.
 > This function does not modify the original collection.
@@ -1286,7 +1286,7 @@ You designate the callback to be executed to evaluate collection elements using 
 - *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
 - *methodName*, the name of a project method (text).
 
-The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for the first element fulfilling the condition. It receives an `Object` in first parameter ($1).
+The callback is called with the parameter(s) passed in *param* (optional). The callback is called with the parameter(s) passed in *param* (optional). It receives an `Object` in first parameter ($1).
 
 The callback receives the following parameters:
 
@@ -1305,7 +1305,7 @@ By default, `.findIndex()` searches in the whole collection. Optionally, you can
 *   If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*). **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
 *   If *startFrom* = 0, the whole collection is searched (default).
 
-#### Example
+#### Beispiel
 
 You want to find the position of the first city name within a collection:
 
@@ -1344,17 +1344,17 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 **.indexOf**(  *toSearch* : expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
 
 <!-- REF #collection.indexOf().Params -->
-| Parameter | Type       |    | Description                                                                                             |
+| Parameter | Typ        |    | Beschreibung                                                                                            |
 | --------- | ---------- |:--:| ------------------------------------------------------------------------------------------------------- |
 | toSearch  | expression | -> | Expression to search in the collection                                                                  |
-| startFrom | Integer    | -> | Index to start the search at                                                                            |
-| Result    | Integer    | <- | Index of the first occurrence of toSearch in the collection, -1 if not found|<!-- END REF -->
+| startFrom | Ganzzahl   | -> | Index to start the search at                                                                            |
+| Ergebnis  | Ganzzahl   | <- | Index of the first occurrence of toSearch in the collection, -1 if not found|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.indexOf()` function <!-- REF #collection.indexOf().Summary -->searches the *toSearch* expression among collection elements and returns the index of the first found occurrence, or -1 if it was not found<!-- END REF -->.
 > This function does not modify the original collection.
@@ -1373,7 +1373,7 @@ Optionally, you can pass the index of collection from which to start the search 
 *   If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*). **Note**: Even if *startFrom* is negative, the collection is still searched from left to right.
 *   If *startFrom* = 0, the whole collection is searched (default).
 
-#### Example
+#### Beispiel
 
 
 
@@ -1414,17 +1414,17 @@ Optionally, you can pass the index of collection from which to start the search 
 
 
 <!-- REF #collection.indices().Params -->
-| Parameter   | Type       |    | Description                                                                         |
+| Parameter   | Typ        |    | Beschreibung                                                                        |
 | ----------- | ---------- |:--:| ----------------------------------------------------------------------------------- |
 | queryString | Text       | -> | Search criteria                                                                     |
-| value       | any        | -> | Value(s) to compare when using placeholder(s)                                       |
-| Result      | Collection | <- | Element index(es) matching queryString in the collection|<!-- END REF -->
+| wert        | any        | -> | Value(s) to compare when using placeholder(s)                                       |
+| Ergebnis    | Collection | <- | Element index(es) matching queryString in the collection|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.indices()` function works exactly the same as the [`.query()`](#query) function but <!-- REF #collection.indices().Summary -->returns indexes, in the original collection, of object collection elements that match the *queryString* search conditions<!-- END REF -->, and not elements themselves. Indexes are returned in ascending order.
 > This function does not modify the original collection.
@@ -1437,7 +1437,7 @@ propertyPath comparator value {logicalOperator propertyPath comparator value}
 
 For a detailed description of the *queryString* and *value* parameters, please refer to the `dataClass.query()` function.
 
-#### Example
+#### Beispiel
 
 
 ```4d
@@ -1474,17 +1474,17 @@ For a detailed description of the *queryString* and *value* parameters, please r
 **.insert**( *index* : Integer ; *element* : any ) : Collection <!-- END REF -->
 
 <!-- REF #collection.insert().Params -->
-| Parameter | Type       |    | Description                                                                |
+| Parameter | Typ        |    | Beschreibung                                                               |
 | --------- | ---------- |:--:| -------------------------------------------------------------------------- |
-| index     | Integer    | -> | Where to insert the element                                                |
+| index     | Ganzzahl   | -> | Where to insert the element                                                |
 | element   | any        | -> | Element to insert in the collection                                        |
-| Result    | Collection | <- | Original collection containing inserted element|<!-- END REF -->
+| Ergebnis  | Collection | <- | Original collection containing inserted element|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.insert()` function <!-- REF #collection.insert().Summary --> inserts *element* at the specified *index* position in the collection instance and returns the edited collection<!-- END REF -->.
 > This function modifies the original collection.
@@ -1498,7 +1498,7 @@ In *index*, pass the position where you want the element to be inserted in the c
 
 Any type of element accepted by a collection can be inserted, even another collection.
 
-#### Example
+#### Beispiel
 
 ```4d
  var $col : Collection
@@ -1530,24 +1530,24 @@ Any type of element accepted by a collection can be inserted, even another colle
 **.join**( *delimiter* : Text { ; *option* : Integer } ) : Text <!-- END REF -->
 
 <!-- REF #collection.join().Params -->
-| Parameter | Type    |    | Description                                                                                         |
-| --------- | ------- |:--:| --------------------------------------------------------------------------------------------------- |
-| delimiter | Text    | -> | Separator to use between elements                                                                   |
-| option    | Integer | -> | `ck ignore null or empty`: ignore null and empty strings in the result                              |
-| Result    | Text    | <- | String containing all elements of the collection, separated by delimiter|<!-- END REF -->
+| Parameter | Typ      |    | Beschreibung                                                                                        |
+| --------- | -------- |:--:| --------------------------------------------------------------------------------------------------- |
+| delimiter | Text     | -> | Separator to use between elements                                                                   |
+| option    | Ganzzahl | -> | `ck ignore null or empty`: ignore null and empty strings in the result                              |
+| Ergebnis  | Text     | <- | String containing all elements of the collection, separated by delimiter|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.join()` function <!-- REF #collection.join().Summary -->converts all elements of the collection to strings and concatenates them using the specified *delimiter* string as separator<!-- END REF -->.The function returns the resulting string.
 > This function does not modify the original collection.
 
 By default, null or empty elements of the collection are returned in the resulting string. Pass the `ck ignore null or empty` constant in the *option* parameter if you want to remove them from the resulting string.
 
-#### Example
+#### Beispiel
 
 
 ```4d
@@ -1579,17 +1579,17 @@ By default, null or empty elements of the collection are returned in the resulti
 **.lastIndexOf**( *toSearch* : expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
 
 <!-- REF #collection.lastIndexOf().Params -->
-| Parameter | Type       |    | Description                                                                                        |
+| Parameter | Typ        |    | Beschreibung                                                                                       |
 | --------- | ---------- |:--:| -------------------------------------------------------------------------------------------------- |
 | toSearch  | expression | -> | The element that is to be searched for within the collection                                       |
-| startFrom | Integer    | -> | Index to start the search at                                                                       |
-| Result    | Integer    | <- | Index of last occurrence of toSearch in the collection, -1 if not found|<!-- END REF -->
+| startFrom | Ganzzahl   | -> | Index to start the search at                                                                       |
+| Ergebnis  | Ganzzahl   | <- | Index of last occurrence of toSearch in the collection, -1 if not found|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.lastIndexOf()` function <!-- REF #collection.lastIndexOf().Summary -->searches the *toSearch* expression among collection elements and returns the index of the last occurrence<!-- END REF -->, or -1 if it was not found.
 > This function does not modify the original collection.
@@ -1608,7 +1608,7 @@ Optionally, you can pass the index of collection from which to start a reverse s
 *   If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the collection). If the calculated value is negative, -1 is returned (the collection is not searched). **Note:** Even if *startFrom* is negative, the collection is still searched from right to left.
 *   If *startFrom* = 0, -1 is returned, which means the collection is not searched.
 
-#### Example
+#### Beispiel
 
 
 ```4d
@@ -1645,13 +1645,13 @@ Optionally, you can pass the index of collection from which to start a reverse s
 
 
 
-#### Description
+#### Beschreibung
 
 The `.length` property <!-- REF #collection.length.Summary -->returns the number of elements in the collection<!-- END REF -->.
 
 The `.length` property is initialized when the collection is created. Adding or removing elements updates the length, if necessary. This property is **read-only** (you cannot use it to set the size of the collection).
 
-#### Example
+#### Beispiel
 
 
 ```4d
@@ -1684,18 +1684,18 @@ The `.length` property is initialized when the collection is created. Adding or 
 
 
 <!-- REF #collection.map().Params -->
-| Parameter  | Type        |    | Description                                                 |
+| Parameter  | Typ         |    | Beschreibung                                                |
 | ---------- | ----------- |:--:| ----------------------------------------------------------- |
 | formula    | 4D.Function | -> | Formula object                                              |
 | methodName | Text        | -> | Name of a method                                            |
 | param      | any         | -> | Parameter(s) to pass to *formula* or *methodName*           |
-| Result     | Collection  | <- | Collection of transformed values|<!-- END REF -->
+| Ergebnis   | Collection  | <- | Collection of transformed values|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.map()` function <!-- REF #collection.map().Summary -->creates a new collection based upon the result of the call of the *formula* 4D function or *methodName* method on each element of the original collection<!-- END REF -->. Optionally, you can pass parameters to *formula* or *methodName* using the *param* parameter(s). `.map()` always returns a collection with the same size as the original collection.
 > This function does not modify the original collection.
@@ -1706,7 +1706,7 @@ You designate the callback to be executed to evaluate collection elements using 
 - *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
 - or *methodName*, the name of a project method (text).
 
-The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any operation, with or without the parameter(s) and must return new transformed value to add to the resulting collection. It receives an `Object` in first parameter ($1).
+The callback is called with the parameter(s) passed in *param* (optional). The callback is called with the parameter(s) passed in *param* (optional). It receives an `Object` in first parameter ($1).
 
 The callback receives the following parameters:
 
@@ -1720,7 +1720,7 @@ It can set the following parameter(s):
 *   *$1.stop* (Boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
 
 
-#### Example
+#### Beispiel
 
 
 ```4d
@@ -1752,16 +1752,16 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 **.max**( { *propertyPath* : Text } ) : any <!-- END REF -->
 
 <!-- REF #collection.max().Params -->
-| Parameter    | Type                                            |    | Description                                                |
+| Parameter    | Typ                                             |    | Beschreibung                                               |
 | ------------ | ----------------------------------------------- |:--:| ---------------------------------------------------------- |
 | propertyPath | Text                                            | -> | Object property path to be used for evaluation             |
-| Result       | Boolean, Text, Number, Collection, Object, Date | <- | Maximum value in the collection|<!-- END REF -->
+| Ergebnis     | Boolean, Text, Number, Collection, Object, Date | <- | Maximum value in the collection|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.max()` function <!-- REF #collection.max().Summary -->returns the element with the highest value in the collection<!-- END REF --> (the last element of the collection as it would be sorted in ascending order using the [`.sort()`](#sort) function).
 > This function does not modify the original collection.
@@ -1772,7 +1772,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 If the collection is empty, `.max()` returns *Undefined*.
 
-#### Example
+#### Beispiel
 
 
 ```4d
@@ -1807,16 +1807,16 @@ If the collection is empty, `.max()` returns *Undefined*.
 **.min**( { *propertyPath* : Text } ) : any <!-- END REF -->
 
 <!-- REF #collection.min().Params -->
-| Parameter    | Type                                            |    | Description                                                |
+| Parameter    | Typ                                             |    | Beschreibung                                               |
 | ------------ | ----------------------------------------------- |:--:| ---------------------------------------------------------- |
 | propertyPath | Text                                            | -> | Object property path to be used for evaluation             |
-| Result       | Boolean, Text, Number, Collection, Object, Date | <- | Minimum value in the collection|<!-- END REF -->
+| Ergebnis     | Boolean, Text, Number, Collection, Object, Date | <- | Minimum value in the collection|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.min()` function <!-- REF #collection.min().Summary -->returns the element with the smallest value in the collection<!-- END REF --> (the first element of the collection as it would be sorted in ascending order using the [`.sort()`](#sort) function).
 > This function does not modify the original collection.
@@ -1827,7 +1827,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 
 If the collection is empty, `.min()` returns *Undefined*.
 
-#### Example
+#### Beispiel
 
 
 ```4d
@@ -1863,18 +1863,18 @@ If the collection is empty, `.min()` returns *Undefined*.
 
 
 <!-- REF #collection.orderBy().Params -->
-| Parameter   | Type       |    | Description                                                              |
+| Parameter   | Typ        |    | Beschreibung                                                             |
 | ----------- | ---------- |:--:| ------------------------------------------------------------------------ |
 | pathStrings | Text       | -> | Property path(s) on which to order the collection                        |
 | pathObjects | Collection | -> | Collection of criteria objects                                           |
-| ascOrDesc   | Integer    | -> | `ck ascending` or `ck descending` (scalar values)                        |
-| Result      | Collection | <- | Ordered copy of the collection (shallow copy)|<!-- END REF -->
+| ascOrDesc   | Ganzzahl   | -> | `ck ascending` or `ck descending` (scalar values)                        |
+| Ergebnis    | Collection | <- | Ordered copy of the collection (shallow copy)|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.orderBy()` function <!-- REF #collection.orderBy().Summary -->returns a new collection containing all elements of the collection in the specified order<!-- END REF -->.
 
@@ -1898,24 +1898,24 @@ You can also pass a criteria parameter to define how the collection elements mus
 
 *   *ascOrDesc* : Integer. You pass one of the following constants from the **Objects and collections** theme:
 
-    | Constant      | Type    | Value | Comment                                           |
-    | ------------- | ------- | ----- | ------------------------------------------------- |
-    | ck ascending  | Longint | 0     | Elements are ordered in ascending order (default) |
-    | ck descending | Longint | 1     | Elements are ordered in descending order          |
+    | Constant      | Typ            | Wert | Kommentar                                         |
+    | ------------- | -------------- | ---- | ------------------------------------------------- |
+    | ck ascending  | Lange Ganzzahl | 0    | Elements are ordered in ascending order (default) |
+    | ck descending | Lange Ganzzahl | 1    | Elements are ordered in descending order          |
 
     This syntax orders scalar values in the collection only (other element types such as objects or collections are returned unordered).
 
 If the collection contains elements of different types, they are first grouped by type and sorted afterwards. Types are returned in the following order:
 
-1.  null
+1.  Null
 2.  booleans
 3.  strings
 4.  numbers
-5.  objects
+5.  objekte
 6.  collections
 7.  dates
 
-#### Example 1
+#### Beispiel 1
 
 Ordering a collection of numbers in ascending and descending order:
 
@@ -1930,7 +1930,7 @@ Ordering a collection of numbers in ascending and descending order:
 ```
 
 
-#### Example 2
+#### Beispiel 2
 
 Ordering a collection of objects based on a text formula with property names:
 
@@ -1957,7 +1957,7 @@ Ordering a collection of objects with a property path:
 ```
 
 
-#### Example 3
+#### Beispiel 3
 
 Ordering a collection of objects using a collection of criteria objects:
 
@@ -2009,18 +2009,18 @@ Ordering with a property path:
 
 
 <!-- REF #collection.orderByMethod().Params -->
-| Parameter  | Type        |    | Description                                                             |
+| Parameter  | Typ         |    | Beschreibung                                                            |
 | ---------- | ----------- |:--:| ----------------------------------------------------------------------- |
 | formula    | 4D.Function | -> | Formula object                                                          |
 | methodName | Text        | -> | Name of a method                                                        |
 | extraParam | any         | -> | Parameter(s) to pass                                                    |
-| Result     | Collection  | <- | Sorted copy of the collection (shallow copy)|<!-- END REF -->
+| Ergebnis   | Collection  | <- | Sorted copy of the collection (shallow copy)|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.orderByMethod()` function <!-- REF #collection.orderByMethod().Summary -->returns a new collection containing all elements of the collection in the order defined through the *formula* 4D function or *methodName* method<!-- END REF -->.
 
@@ -2046,7 +2046,7 @@ If you used a method, it must set the following parameter:
 
 - *$1.result* (boolean): **true** if *$1.value < $1.value2*, **false** otherwise
 
-#### Example 1
+#### Beispiel 1
 
 You want to sort a collection of strings in numerical order rather than alphabetical order:
 
@@ -2058,7 +2058,7 @@ You want to sort a collection of strings in numerical order rather than alphabet
  $c3:=$c.orderByMethod(Formula(Num($1.value)<Num($1.value2))) // $c3=["4","33","222","1111"]
 ```
 
-#### Example 2
+#### Beispiel 2
 
 You want to sort a collection of strings on their length:
 
@@ -2069,7 +2069,7 @@ You want to sort a collection of strings on their length:
   //$c2=[Passion fruit,Blackberry,Orange,Banana,Apple,Grape,pear,fig]
 ```
 
-#### Example 3
+#### Beispiel 3
 
 You want to sort a collection by character code or language:
 
@@ -2118,22 +2118,22 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 **.pop()** : any <!-- END REF -->
 
 <!-- REF #collection.pop().Params -->
-| Parameter | Type |    | Description                                           |
-| --------- | ---- |:--:| ----------------------------------------------------- |
-| Result    | any  | <- | Last element of collection|<!-- END REF -->
+| Parameter | Typ |    | Beschreibung                                          |
+| --------- | --- |:--:| ----------------------------------------------------- |
+| Ergebnis  | any | <- | Last element of collection|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.pop()` function <!-- REF #collection.pop().Summary -->removes the last element from the collection and returns it as the function result<!-- END REF -->.
 > This function modifies the original collection.
 
 When applied to an empty collection, `.pop()` returns ***undefined***.
 
-#### Example
+#### Beispiel
 
 `.pop()`, used in conjunction with [`.push()`](#push), can be used to implement a first-in, last-out stack feature:
 
@@ -2170,22 +2170,22 @@ When applied to an empty collection, `.pop()` returns ***undefined***.
 **.push**( *element* : any { ;...*elementN* } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.push().Params -->
-| Parameter | Type       |    | Description                                                              |
+| Parameter | Typ        |    | Beschreibung                                                             |
 | --------- | ---------- |:--:| ------------------------------------------------------------------------ |
 | element   | Mixed      | -> | Element(s) to add to the collection                                      |
-| Result    | Collection | <- | Original collection containing added elements|<!-- END REF -->
+| Ergebnis  | Collection | <- | Original collection containing added elements|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.push()` function <!-- REF #collection.push().Summary -->appends one or more *element*(s) to the end of the collection instance and returns the edited collection<!-- END REF -->.
 > This function modifies the original collection.
 
 
-#### Example 1
+#### Beispiel 1
 
 ```4d
  var $col : Collection
@@ -2197,7 +2197,7 @@ The `.push()` function <!-- REF #collection.push().Summary -->appends one or mor
 
 
 
-#### Example 2
+#### Beispiel 2
 
 You want to sort the resutling collection:
 
@@ -2235,18 +2235,18 @@ You want to sort the resutling collection:
 
 
 <!-- REF #collection.query().Params -->
-| Parameter     | Type       |    | Description                                                                  |
+| Parameter     | Typ        |    | Beschreibung                                                                 |
 | ------------- | ---------- |:--:| ---------------------------------------------------------------------------- |
 | queryString   | Text       | -> | Search criteria                                                              |
-| value         | Mixed      | -> | Value(s) to compare when using placeholder(s)                                |
-| querySettings | Object     | -> | Query options: parameters, attributes                                        |
-| Result        | Collection | <- | Element(s) matching queryString in the collection|<!-- END REF -->
+| wert          | Mixed      | -> | Value(s) to compare when using placeholder(s)                                |
+| querySettings | Objekt     | -> | Query options: parameters, attributes                                        |
+| Ergebnis      | Collection | <- | Element(s) matching queryString in the collection|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.query()` function <!-- REF #collection.query().Summary -->returns all elements of a collection of objects that match the search conditions <!-- END REF -->defined by *queryString* and (optionally) *value* or *querySettings*. If the original collection is a shared collection, the returned collection is also a shared collection.
 > This function does not modify the original collection.
@@ -2261,7 +2261,7 @@ For detailed information on how to build a query using *queryString*, *value* an
 
 > Formulas are not supported by the `collection.query()` function, neither in the *queryString* parameter nor as *formula* object parameter.
 
-#### Example 1
+#### Beispiel 1
 
 ```4d
  var $c; $c2; $c3 : Collection
@@ -2276,7 +2276,7 @@ For detailed information on how to build a query using *queryString*, *value* an
 ```
 
 
-#### Example 2
+#### Beispiel 2
 
 
 ```4d
@@ -2284,6 +2284,10 @@ For detailed information on how to build a query using *queryString*, *value* an
  $c:=New collection
  $c.push(New object("name";"Smith";"dateHired";!22-05-2002!;"age";45))
  $c.push(New object("name";"Wesson";"dateHired";!30-11-2017!))
+ $c.push(New object("name";"Winch";"dateHired";!16-05-2018!;"age";36))
+
+ $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
+ $c.push(New object("name";"Mark";"dateHired";!01-01-2002!))
  $c.push(New object("name";"Winch";"dateHired";!16-05-2018!;"age";36))
 
  $c.push(New object("name";"Sterling";"dateHired";!10-5-1999!;"age";Null))
@@ -2316,11 +2320,11 @@ This example returns persons hired more than 90 days ago:
 
 ```4d
  $col:=$c.query("dateHired < :1";(Current date-90))
-  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] if today is 01/10/2018
+  //$col=[{name:Smith...},{name:Sterling...},{name:Mark...}] if today is 01/10/2018 if today is 01/10/2018
 ```
 
 
-#### Example 3
+#### Beispiel 3
 
 More examples of queries can be found in the `dataClass.query()` page.
 
@@ -2348,19 +2352,19 @@ More examples of queries can be found in the `dataClass.query()` page.
 
 
 <!-- REF #collection.reduce().Params -->
-| Parameter  | Type                                            |    | Description                                                                       |
+| Parameter  | Typ                                             |    | Beschreibung                                                                      |
 | ---------- | ----------------------------------------------- |:--:| --------------------------------------------------------------------------------- |
 | formula    | 4D.Function                                     | -> | Formula object                                                                    |
 | methodName | Text                                            | -> | Name of a method                                                                  |
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Value to use as the first argument to the first call of *formula* or *methodName* |
 | param      | expression                                      | -> | Parameter(s) to pass                                                              |
-| Result     | Text, Number, Object, Collection, Date, Boolean | <- | Result of the accumulator value|<!-- END REF -->
+| Ergebnis   | Text, Number, Object, Collection, Date, Boolean | <- | Result of the accumulator value|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 
 The `.reduce()` function <!-- REF #collection.reduce().Summary -->applies the *formula* or *methodName* callback against an accumulator and each element in the collection (from left to right) to reduce it to a single value<!-- END REF -->.
@@ -2387,7 +2391,7 @@ The callback sets the following parameter(s):
 *   *$1.stop* (boolean, optional): **true** to stop the method callback. The returned value is the last calculated.
 
 
-#### Example 1
+#### Beispiel 1
 
 
 ```4d
@@ -2397,7 +2401,7 @@ $r:=$c.reduce(Formula($1.accumulator:=$1.accumulator*$1.value); 1)  //returns 86
 ```
 
 
-#### Example 2
+#### Beispiel 2
 
 This example allows reducing several collection elements to a single one:
 
@@ -2442,23 +2446,23 @@ With the following ***Flatten*** method:
 
 
 <!-- REF #collection.remove().Params -->
-| Parameter | Type       |    | Description                                                               |
+| Parameter | Typ        |    | Beschreibung                                                              |
 | --------- | ---------- |:--:| ------------------------------------------------------------------------- |
-| index     | Integer    | -> | Element at which to start removal                                         |
-| howMany   | Integer    | -> | Number of elements to remove, or 1 element if omitted                     |
-| Result    | Collection | <- | Original collection without removed element(s)|<!-- END REF -->
+| index     | Ganzzahl   | -> | Element at which to start removal                                         |
+| howMany   | Ganzzahl   | -> | Number of elements to remove, or 1 element if omitted                     |
+| Ergebnis  | Collection | <- | Original collection without removed element(s)|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.remove()` function <!-- REF #collection.remove().Summary -->removes one or more element(s) from the specified *index* position in the collection and returns the edited collection<!-- END REF -->.
 > This function modifies the original collection.
 
 In *index*, pass the position where you want the element to be removed from the collection.
-> **Warning**: Keep in mind that collection elements are numbered from 0. If *index* is greater than the length of the collection, actual starting index will be set to the length of the collection.
+> **Warning**: Keep in mind that collection elements are numbered from 0. If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*).
 
 *   If *index* < 0, it is recalculated as *index:=index+length* (it is considered as the offset from the end of the collection).
 *   If the calculated value < 0, *index* is set to 0.
@@ -2471,7 +2475,7 @@ In *howMany*, pass the number of elements to remove from *index*. If *howMany* i
 If you try to remove an element from an empty collection, the method does nothing (no error is generated).
 
 
-#### Example
+#### Beispiel
 
 
 ```4d
@@ -2509,17 +2513,17 @@ If you try to remove an element from an empty collection, the method does nothin
 **.resize**( *size* : Integer { ; *defaultValue* : any } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.resize().Params -->
-| Parameter    | Type                                            |    | Description                                            |
+| Parameter    | Typ                                             |    | Beschreibung                                           |
 | ------------ | ----------------------------------------------- |:--:| ------------------------------------------------------ |
-| size         | Integer                                         | -> | New size of the collection                             |
+| size         | Ganzzahl                                        | -> | New size of the collection                             |
 | defaultValue | Number, Text, Object, Collection, Date, Boolean | -> | Default value to fill new elements                     |
-| Result       | Collection                                      | <- | Resized original collection|<!-- END REF -->
+| Ergebnis     | Collection                                      | <- | Resized original collection|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.resize()` function <!-- REF #collection.resize().Summary -->sets the collection length to the specified new size and returns the resized collection<!-- END REF -->.
 > This function modifies the original collection.
@@ -2529,7 +2533,7 @@ The `.resize()` function <!-- REF #collection.resize().Summary -->sets the colle
 
 By default, new elements are filled will **null** values. You can specify the value to fill in added elements using the *defaultValue* parameter.
 
-#### Example
+#### Beispiel
 
 
 ```4d
@@ -2571,20 +2575,20 @@ By default, new elements are filled will **null** values. You can specify the va
 **.reverse( )** : Collection <!-- END REF -->
 
 <!-- REF #collection.reverse().Params -->
-| Parameter | Type       |    | Description                                                |
+| Parameter | Typ        |    | Beschreibung                                               |
 | --------- | ---------- |:--:| ---------------------------------------------------------- |
-| Result    | Collection | <- | Inverted copy of the collection|<!-- END REF -->
+| Ergebnis  | Collection | <- | Inverted copy of the collection|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a deep copy of the collection with all its elements in reverse order<!-- END REF -->. If the original collection is a shared collection, the returned collection is also a shared collection.
 > This function does not modify the original collection.
 
-#### Example
+#### Beispiel
 
 
 ```4d
@@ -2615,22 +2619,22 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 **.shift()** : any<!-- END REF -->
 
 <!-- REF #collection.shift().Params -->
-| Parameter | Type |    | Description                                            |
-| --------- | ---- |:--:| ------------------------------------------------------ |
-| Result    | any  | <- | First element of collection|<!-- END REF -->
+| Parameter | Typ |    | Beschreibung                                           |
+| --------- | --- |:--:| ------------------------------------------------------ |
+| Ergebnis  | any | <- | First element of collection|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.shift()` function <!-- REF #collection.shift().Summary -->removes the first element of the collection and returns it as the function result<!-- END REF -->.
 > This function modifies the original collection.
 
 If the collection is empty, this method does nothing.
 
-#### Example
+#### Beispiel
 
 
 ```4d
@@ -2666,17 +2670,17 @@ If the collection is empty, this method does nothing.
 **.slice**( *startFrom* : Integer { ; *end* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.slice().Params -->
-| Parameter | Type       |    | Description                                                                         |
+| Parameter | Typ        |    | Beschreibung                                                                        |
 | --------- | ---------- |:--:| ----------------------------------------------------------------------------------- |
-| startFrom | Integer    | -> | Start index (included)                                                              |
-| end       | Integer    | -> | End index (not included)                                                            |
-| Result    | Collection | <- | New collection containing sliced elements (shallow copy)|<!-- END REF -->
+| startFrom | Ganzzahl   | -> | Start index (included)                                                              |
+| end       | Ganzzahl   | -> | End index (not included)                                                            |
+| Ergebnis  | Collection | <- | New collection containing sliced elements (shallow copy)|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portion of a collection into a new collection<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). This function returns a *shallow copy* of the collection. If the original collection is a shared collection, the returned collection is also a shared collection.
 > This function does not modify the original collection.
@@ -2688,7 +2692,7 @@ The returned collection contains the element specified by *startFrom* and all su
 *   If *end* < 0 , it is recalculated as *end:=end+length*.
 *   If *end < startFrom* (passed or calculated values), the method does nothing.
 
-#### Example
+#### Beispiel
 
 
 ```4d
@@ -2724,19 +2728,19 @@ The returned collection contains the element specified by *startFrom* and all su
 
 
 <!-- REF #collection.some().Params -->
-| Parameter  | Type        |    | Description                                                                          |
+| Parameter  | Typ         |    | Beschreibung                                                                         |
 | ---------- | ----------- |:--:| ------------------------------------------------------------------------------------ |
-| startFrom  | Integer     | -> | Index to start the test at                                                           |
+| startFrom  | Ganzzahl    | -> | Index to start the test at                                                           |
 | formula    | 4D.Function | -> | Formula object                                                                       |
 | methodName | Text        | -> | Name of a method                                                                     |
 | param      | Mixed       | -> | Parameter(s) to pass                                                                 |
-| Result     | Boolean     | <- | True if at least one element successfully passed the test|<!-- END REF -->
+| Ergebnis   | Boolean     | <- | True if at least one element successfully passed the test|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.some()` function <!-- REF #collection.some().Summary -->returns true if at least one element in the collection successfully passed a test implemented in the provided *formula* or *methodName* code<!-- END REF -->.
 
@@ -2768,7 +2772,7 @@ By default, `.some()` tests the whole collection. Optionally, you can pass the i
 *   If *startFrom* = 0, the whole collection is searched (default).
 
 
-#### Example
+#### Beispiel
 
 You want to know if at least one collection value is >0.
 
@@ -2813,18 +2817,18 @@ You want to know if at least one collection value is >0.
 
 
 <!-- REF #collection.sort().Params -->
-| Parameter  | Type        |    | Description                                           |
+| Parameter  | Typ         |    | Beschreibung                                          |
 | ---------- | ----------- |:--:| ----------------------------------------------------- |
 | formula    | 4D.Function | -> | Formula object                                        |
 | methodName | Text        | -> | Name of a method                                      |
 | extraParam | any         | -> | Parameter(s) for the method                           |
-| Result     | Collection  | <- | Original collection sorted|<!-- END REF -->
+| Ergebnis   | Collection  | <- | Original collection sorted|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.sort()` function <!-- REF #collection.sort().Summary -->sorts the elements of the original collection and also returns the sorted collection<!-- END REF --> .
 > This function modifies the original collection.
@@ -2846,15 +2850,15 @@ If you used a method, you must set the folllowing parameter:
 
 If the collection contains elements of different types, they are first grouped by type and sorted afterwards. Types are returned in the following order:
 
-1.  null
+1.  Null
 2.  booleans
 3.  strings
 4.  numbers
-5.  objects
+5.  objekte
 6.  collections
 7.  dates
 
-#### Example 1
+#### Beispiel 1
 
 
 ```4d
@@ -2864,7 +2868,7 @@ If the collection contains elements of different types, they are first grouped b
   // $col=["Artie","Chip","Henry","Jane","Mary","Tom",1,2,3,4,5,6]
 ```
 
-#### Example 2
+#### Beispiel 2
 
 ```4d
  var $col; $col2 : Collection
@@ -2872,7 +2876,7 @@ If the collection contains elements of different types, they are first grouped b
  $col2:=$col.push(5;3;1;4;6;2).sort() //$col2=[1,2,3,4,5,6,10,20]
 ```
 
-#### Example 3
+#### Beispiel 3
 
 ```4d
 var $col; $col2; $col3 : Collection
@@ -2902,16 +2906,16 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //alphabetical sor
 **.sum**( { *propertyPath* : Text } ) : Real<!-- END REF -->
 
 <!-- REF #collection.sum().Params -->
-| Parameter    | Type |    | Description                                         |
+| Parameter    | Typ  |    | Beschreibung                                        |
 | ------------ | ---- |:--:| --------------------------------------------------- |
 | propertyPath | Text | -> | Object property path to be used for calculation     |
-| Result       | Real | <- | Sum of collection values|<!-- END REF -->
+| Ergebnis     | Zahl | <- | Sum of collection values|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.sum()` function <!-- REF #collection.sum().Summary -->returns the sum for all values in the collection instance<!-- END REF -->.
 
@@ -2925,7 +2929,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 *   the collection does not contain numerical elements,
 *   *propertyPath* is not found in the collection.
 
-#### Example 1
+#### Beispiel 1
 
 
 ```4d
@@ -2935,7 +2939,7 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
  $vSum:=$col.sum() //32
 ```
 
-#### Example 2
+#### Beispiel 2
 
 ```4d
  var $col : Collection
@@ -2969,17 +2973,17 @@ If the collection contains objects, pass the *propertyPath* parameter to indicat
 **.unshift**( *value* : any { ;...*valueN* : any } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.unshift().Params -->
-| Parameter                  | Type                                   |    | Description                                           |
+| Parameter                  | Typ                                    |    | Beschreibung                                          |
 | -------------------------- | -------------------------------------- |:--:| ----------------------------------------------------- |
-| value                      | Text, Number, Object, Collection, Date | -> | Value(s) to insert at the beginning of the collection |
-| Result                     | Real                                   | <- | Collection containing added element(s)                |
+| wert                       | Text, Number, Object, Collection, Date | -> | Value(s) to insert at the beginning of the collection |
+| Ergebnis                   | Zahl                                   | <- | Collection containing added element(s)                |
 |<!-- END REF -->
 
 
 |                                        |    |                                                       |
 
 
-#### Description
+#### Beschreibung
 
 The `.unshift()` function <!-- REF #collection.unshift().Summary -->inserts the given *value*(s) at the beginning of the collection <!-- END REF -->and returns the modified collection.
 > This function modifies the original collection.
@@ -2987,7 +2991,7 @@ The `.unshift()` function <!-- REF #collection.unshift().Summary -->inserts the 
 If several values are passed, they are inserted all at once, which means that they appear in the resulting collection in the same order as in the argument list.
 
 
-#### Example
+#### Beispiel
 
 
 ```4d
