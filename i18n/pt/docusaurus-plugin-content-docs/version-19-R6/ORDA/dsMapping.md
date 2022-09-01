@@ -22,7 +22,7 @@ When you call a datastore using the [`ds`](API/DataStoreClass.md#ds) or the [`Op
 The following rules are applied for any conversions:
 
 * Table, field, and relation names are mapped to object property names. Make sure that such names comply with general object naming rules, as explained in the [object naming conventions](Concepts/identifiers.md) section.
-*   A datastore only references tables with a single primary key. The following tables are not referenced:
+*   Uma datastore só referencia as tabelas com uma única chave primária. The following tables are not referenced:
     *   Tables without a primary key
     *   Tables with composite primary keys.
 *   BLOB fields are automatically available as attributes of the [Blob object](Concepts/dt_blob.md#blob-types) type.
@@ -104,11 +104,11 @@ For example, consider the following table in the 4D structure:
 
 ![](../assets/en/ORDA/companyTable.png)
 
-The `Company` table is automatically available as a dataclass in the `ds` datastore. You can write:
+The `Company` table is automatically available as a dataclass in the `ds` datastore. Você pode escrever:
 
 ```4d 
-var $compClass : cs.Company //declares a $compClass object variable of the Company class
-$compClass:=ds.Company //assigns the Company dataclass reference to $compClass
+var $compClass : cs. Company //declares a $compClass object variable of the Company class
+$compClass:=ds. Company //assigns the Company dataclass reference to $compClass
 ```
 
 A dataclass object can contain:
@@ -121,28 +121,28 @@ The dataclass offers an abstraction of the physical database and allows handling
 The dataclass object itself cannot be copied as an object:
 
 ```4d 
-$mydataclass:=OB Copy(ds.Employee) //returns null
+$mydataclass:=OB Copy(ds. Employee) //returns null
 ```
 
 The dataclass properties are however enumerable:
 
 ```code4d 
 ARRAY TEXT($prop;0)
-OB GET PROPERTY NAMES(ds.Employee;$prop)
+OB GET PROPERTY NAMES(ds. Employee;$prop)
 //$prop contains the names of all the dataclass attributes
 ```
 
 
-### Attribute
+### Atributo
 
-Dataclass properties are attribute objects describing the underlying fields or relations. For example:
+Dataclass properties are attribute objects describing the underlying fields or relations. Por exemplo:
 
 ```4d 
- $nameAttribute:=ds.Company.name //reference to class attribute
- $revenuesAttribute:=ds.Company["revenues"] //alternate way
+ $nameAttribute:=ds. Company.name //reference to class attribute
+ $revenuesAttribute:=ds. Company["revenues"] //alternate way
 ```
 
-This code assigns to `$nameAttribute` and `$revenuesAttribute` references to the name and revenues attributes of the `Company` class. This syntax does NOT return values held inside of the attribute, but instead returns references to the attributes themselves. To handle values, you need to go through [Entities](#entity).
+This code assigns to `$nameAttribute` and `$revenuesAttribute` references to the name and revenues attributes of the `Company` class. Essa sintaxe NAO devolve valores mantidos dentro do atributo, mas sim devolve referências aos próprios atributos. To handle values, you need to go through [Entities](#entity).
 
 All eligible fields in a table are available as attributes of their parent [dataclass](#dataclass). For remote datastores accessed through `Open datastore` or [REST requests](REST/gettingStarted.md), the **Expose as REST resource** option must be selected at the 4D structure level for each field that you want to be exposed as a dataclass attribute.
 
@@ -167,7 +167,7 @@ In addition, the following relation attributes will also be automatically availa
 
 *   in the Project dataclass: **theClient** attribute, of the "relatedEntity" kind; there is at most one Company for each Project (the client)
 *   in the Company dataclass: **companyProjects** attribute, of the "relatedEntities" kind; for each Company there is any number of related Projects.
-> The Manual or Automatic property of a database relation has no effect in ORDA.
+> > The Manual or Automatic property of a database relation has no effect in ORDA.
 
 All dataclass attributes are exposed as properties of the dataclass:
 
@@ -189,27 +189,27 @@ The purpose of the entity is to manage data (create, update, delete). When an en
 The entity object itself cannot be copied as an object:
 
 ```4d
- $myentity:=OB Copy(ds.Employee.get(1)) //returns null
+ $myentity:=OB Copy(ds. Employee.get(1)) //returns null
 ```
 
 The entity properties are however enumerable:
 
 ```4d
  ARRAY TEXT($prop;0)
- OB GET PROPERTY NAMES(ds.Employee.get(1);$prop)
+ OB GET PROPERTY NAMES(ds. Employee.get(1);$prop)
   //$prop contains the names of all the entity attributes
 ```
 
 
-### Entity selection
+### Seleção de entidades
 
-An entity selection is an object containing one or more reference(s) to entities belonging to the same dataclass. It is usually created as a result of a query or returned from a relation attribute. An entity selection can contain 0, 1 or X entities from the dataclass -- where X can represent the total number of entities contained in the dataclass.
+An entity selection is an object containing one or more reference(s) to entities belonging to the same dataclass. It is usually created as a result of a query or returned from a relation attribute. Uma seleção de entidades pode conter 0, 1 ou X entidades da dataclass -- onde X pode representar o número total de entidades contidas na dataclass.
 
-Example:
+Exemplo:
 
 ```4d
-var $e : cs.EmployeeSelection //declares a $e object variable of the EmployeeSelection class type
-$e:=ds.Employee.all() //assigns the resulting entity selection reference to the $e variable
+var $e : cs. EmployeeSelection //declares a $e object variable of the EmployeeSelection class type
+$e:=ds. Employee.all() //assigns the resulting entity selection reference to the $e variable
 ```
 
 Entity selections can be "sorted" or "unsorted" ([see below](#ordered-or-unordered-entity-selection)).
@@ -219,14 +219,14 @@ Entity selections can be "sorted" or "unsorted" ([see below](#ordered-or-unorder
 The entity selection object itself cannot be copied as an object:
 
 ```4d
- $myentitysel:=OB Copy(ds.Employee.all()) //returns null
+ $myentitysel:=OB Copy(ds. Employee.all()) //returns null
 ```
 
 The entity selection properties are however enumerable:
 
 ```4d
  ARRAY TEXT($prop;0)
- OB GET PROPERTY NAMES(ds.Employee.all();$prop)
+ OB GET PROPERTY NAMES(ds. Employee.all();$prop)
   //$prop contains the names of the entity selection properties
   //("length", 00", "01"...)
 ```
@@ -246,9 +246,9 @@ Unordered entity selections are created in the following cases:
 *   result of a standard `query()` on a selection (of any type) or a `query()` on a dataclass,
 *   result of the `newSelection()` method without option,
 *   result of any of the comparison methods, whatever the input selection types: `or()`, `and()`, `minus()`.
-> The following entity selections are always **ordered**:
+> > The following entity selections are always **ordered**: > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
 > 
-> * entity selections returned by 4D Server to a remote client
+> * > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
 > * entity selections built upon remote datastores.
 
 Note that when an ordered entity selection becomes an unordered entity selection, any repeated entity references are removed.
