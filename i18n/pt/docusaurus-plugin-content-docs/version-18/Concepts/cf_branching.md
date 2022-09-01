@@ -1,11 +1,11 @@
 ---
 id: branching
-title: Branching structures
+title: Estruturas condicionais
 ---
 
-## If...Else...End if
+## If... Else... End if
 
-The formal syntax of the `If...Else...End if` control flow structure is:
+The formal syntax of the `If... Else... End if` control flow structure is:
 
 ```4d
  If(Boolean_Expression)
@@ -15,16 +15,16 @@ The formal syntax of the `If...Else...End if` control flow structure is:
  End if
 ```
 
-Note that the `Else` part is optional; you can write:
+Note que a parte `Else` é opcional; pode escrever:
 ```4d
  If(Boolean_Expression)
     statement(s)
  End if
 ```
 
-The `If...Else...End if` structure lets your method choose between two actions, depending on whether a test (a Boolean expression) is TRUE or FALSE. When the Boolean expression is TRUE, the statements immediately following the test are executed. If the Boolean expression is FALSE, the statements following the Else statement are executed. The `Else` statement is optional; if you omit Else, execution continues with the first statement (if any) following the `End if`.
+The `If... Else... End if` structure lets your method choose between two actions, depending on whether a test (a Boolean expression) is TRUE or FALSE. Quando a expressão Booleana for TRUE, são executadas as declarações que seguem imediatamente ao teste. Se a expressão Booleana for FALSE, são executadas as declarações que seguem a linha Else. A declaração `Else` é opcional; se omitir Else, a execução continua com a primeira instrução (se houver) que seguir `End if`.
 
-Note that the Boolean expression is always fully evaluated. Consider in particular the following test:
+Note que a expressão booleana é sempre avaliada completamente. Considere particularmente o teste abaixo:
 
 ```4d
  If(MethodA & MethodB)
@@ -32,7 +32,7 @@ Note that the Boolean expression is always fully evaluated. Consider in particul
  End if
 ```
 
-he expression is TRUE only if both methods are TRUE. However, even if _MethodA_ returns FALSE, 4D will still evaluate _MethodB_, which is a useless waste of time. In this case, it is more interesting to use a structure like:
+a expressão é TRUE apenas se ambos os métodos forem TRUE. Entretanto, mesmo se _MethodA_ devolver  FALSE, 4D ainda iria avaliar _MethodB_, o que seria uma perda de tempo. Nesse caso, é mais interessante usar uma estrutra como:
 
 ```4d
  If(MethodA)
@@ -42,9 +42,9 @@ he expression is TRUE only if both methods are TRUE. However, even if _MethodA_ 
  End if
 ```
 
-The result is similar and _MethodB_ is evaluated only if necessary.
+O resultado é parecido mas o _MethodB_ é avaliado somente se necessário.
 
-### Example
+### Exemplo
 
 ```4d
   // Ask the user to enter a name
@@ -54,9 +54,10 @@ The result is similar and _MethodB_ is evaluated only if necessary.
  Else
     ALERT("You did not enter a name.")
  End if
+ End if
 ```
 
-**Tip:** Branching can be performed without statements to be executed in one case or the other. When developing an algorithm or a specialized application, nothing prevents you from writing:
+**Dica:** A ramificação pode ser realizada sem que as instruções sejam executadas em um caso ou no outro. Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
 
 ```4d
  If(Boolean_Expression)
@@ -64,7 +65,7 @@ The result is similar and _MethodB_ is evaluated only if necessary.
     statement(s)
  End if
 ```
-or:
+ou :
 
 ```4d
  If(Boolean_Expression)
@@ -73,9 +74,9 @@ or:
  End if
 ```
 
-## Case of...Else...End case
+## Case of... Else... End case
 
-The formal syntax of the `Case of...Else...End case` control flow structure is:
+The formal syntax of the `Case of... Else... End case` control flow structure is:
 ```4d
  Case of
     :(Boolean_Expression)
@@ -93,7 +94,7 @@ The formal syntax of the `Case of...Else...End case` control flow structure is:
  End case
 ```
 
-Note that the `Else` part is optional; you can write:
+Note que a parte `Else` é opcional; pode escrever:
 ```4d
  Case of
     :(Boolean_Expression)
@@ -108,21 +109,68 @@ Note that the `Else` part is optional; you can write:
        statement(s)
  End case
 ```
-As with the `If...Else...End if` structure, the `Case of...Else...End case` structure also lets your method choose between alternative actions. Unlike the `If...Else...End` if structure, the `Case of...Else...End case` structure can test a reasonable unlimited number of Boolean expressions and take action depending on which one is TRUE.
+As with the `If... End if` structure, the `Case of... End case` structure also lets your method choose between alternative actions. Unlike the `If... End` if structure, the `Case of... End case` structure can test a reasonable unlimited number of Boolean expressions and take action depending on which one is TRUE.
 
-Each Boolean expression is prefaced by a colon (`:`). This combination of the colon and the Boolean expression is called a case. For example, the following line is a case:
+Cada expressão booleana é precedida de dois pontos (`:`). A combinação dos dois pontos e da expressão booleana é chamada de um caso. Por exemplo, a linha abaixo é um caso:
 
 ```4d
 :(bValidate=1)
 ```
 
-Only the statements following the first TRUE case (and up to the next case) will be executed. If none of the cases are TRUE, none of the statements will be executed (if no `Else` part is included).
+Só são executadas as instruções que seguem o primeiro caso TRUE (até o próximo caso). Se nenhum dos casos for TRUE, nenhuma das instruções será executada (se nenhuma parte `Else` for incluida).
 
-You can include an Else statement after the last case. If all of the cases are FALSE, the statements following the `Else` will be executed.
+Pode incluir uma instrução Else depois do último caso. Se todos os casos forem FALSE, as instruções que seguem `Else` serão executadas.
 
-### Example
+### Exemplo
 
-This example tests a numeric variable and displays an alert box with a word in it:
+Esse exemplo testa uma variável numérica e exibe uma caixa de alerta com uma apalavra:
+
+```4d
+ Case of
+    :((vResult=1) & (vCondition#2)) //this case will be detected first
+       ... //statement(s)
+    :(vResult=1)
+       ... //Se for 1, mostrar um alerta
+    :(vResult=2) //Testar se o número é 2
+       ALERT("Two.") //Se for 2, exibe um alerta
+    :(vResult=3) //Testa se o número é 3
+       ALERT("Three.") //Se for 3, exibe um alerta
+    Else //Se não for 1, 2, ou 3, exibe um alerta
+       ALERT("It was not one, two, or three.")
+ //statement(s)
+ End case
+```
+
+For comparison, here is the `If... Else... End if` version of the same method:
+
+```4d
+ If(vResult=1) //Teste se o número é 1
+    ALERT("One.") If(vResult=1) //Teste se o número é 1
+    ALERT("One.") //If it is 1, display an alert
+ Else
+    If(vResult=2) //Teste se o número é  2
+       ALERT("Two.") //Se for 2, exibe um alerta
+    Else
+       If(vResult=3) //Teste se o número é 3
+          ALERT("Three.") //Se for 3, exibe um alerta
+       Else //Se não for 1, 2, ou 3,  exibe um alerta
+          ALERT("It was not one, two, or three.")
+       End if
+    End if
+ End if //Se for 2, exibe um alerta
+    Else
+       If(vResult=3) //Teste se o número é 3
+          ALERT("Three.") //Se for 3, exibe um alerta
+       Else //Se não for 1, 2, ou 3,  exibe um alerta
+          ALERT("It was not one, two, or three.")
+       End if
+    End if
+ End if
+```
+
+Remember that with a `Case of... Else... End case` structure, only the first TRUE case is executed. Mesmo se dois ou mais casos forem TRUE, só as instruções que seguirem o primeiro caso TRUE serão executadas.
+
+Dessa maneira, quando quiser implementar testes hierárquicos, deve garantir que as declarações de condição que estejam mais abaixo no esquema hierárquico apareçam primeiro na sequência de testes. Por exemplo, o teste para a presença da condition1 cobre o teste para a preença de condition1&condition2 e portanto deveria estar localizada por último na sequência de testes. Por exemplo, o código abaixo nunca terá sua última condição detectada:
 
 ```4d
  Case of
@@ -137,7 +185,7 @@ This example tests a numeric variable and displays an alert box with a word in i
  End case
 ```
 
-For comparison, here is the `If...Else...End if` version of the same method:
+No código anterior, a presença da segunda condição não é detectada, já que o teste "vResult=1" ramifica o código antes de qualquer outro teste. Para que o código funcione corretamente, pode escrevê-lo assim:
 
 ```4d
  If(vResult=1) //Test if the number is 1
@@ -155,33 +203,9 @@ For comparison, here is the `If...Else...End if` version of the same method:
  End if
 ```
 
-Remember that with a `Case of...Else...End case` structure, only the first TRUE case is executed. Even if two or more cases are TRUE, only the statements following the first TRUE case will be executed.
+Além disso, se quiser implementar teste hierárquico, pode considerar usar um código hierárquico.
 
-Consequently, when you want to implement hierarchical tests, you should make sure the condition statements that are lower in the hierarchical scheme appear first in the test sequence. For example, the test for the presence of condition1 covers the test for the presence of condition1&condition2 and should therefore be located last in the test sequence. For example, the following code will never see its last condition detected:
-
-```4d
- Case of
-    :(vResult=1)
-       ... //statement(s)
-    :((vResult=1) & (vCondition#2)) //this case will never be detected
-       ... //statement(s)
- End case
-```
-
-In the code above, the presence of the second condition is not detected since the test "vResult=1" branches off the code before any further testing. For the code to operate properly, you can write it as follows:
-
-```4d
- Case of
-    :((vResult=1) & (vCondition#2)) //this case will be detected first
-       ... //statement(s)
-    :(vResult=1)
-       ... //statement(s)
- End case
-```
-
-Also, if you want to implement hierarchical testing, you may consider using hierarchical code.
-
-**Tip:** Branching can be performed without statements to be executed in one case or another. When developing an algorithm or a specialized application, nothing prevents you from writing:
+**Dica:** a ramificação|branching pode ser feita sem que as instruções sejam executados em um caso ou outro Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva: Quando desenvolver um algoritmo ou uma aplicação especializada, nada impede que escreva:
 ```4d
  Case of
     :(Boolean_Expression)
@@ -195,10 +219,11 @@ Also, if you want to implement hierarchical testing, you may consider using hier
  End case
 ```
 
-or:
+ou :
 ```4d
  Case of
     :(Boolean_Expression)
+       statement(s)
     :(Boolean_Expression)
        statement(s)
        ...
@@ -209,7 +234,7 @@ or:
  End case
 ```
 
-or:
+ou :
 ```4d
  Case of
     Else
