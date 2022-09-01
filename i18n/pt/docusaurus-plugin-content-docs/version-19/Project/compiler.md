@@ -117,7 +117,7 @@ This area groups the generic options used during the compilation process.
 
 #### Generate symbol file
 
-Used to generate the symbol file (see [symbol file](#symbol-file)). The symbol file is created in the in the [Logs folder](Project/architecture.md#logs) of the project with the name `ProjectName_symbols.txt`.
+Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. Used to generate the symbol file (see [symbol file](#symbol-file)).
 
 #### Generate error file
 
@@ -133,11 +133,11 @@ Used to set the number of passes (code parsing) performed by the compiler and th
 
 #### Compilation Target
 
-<details><summary>History</summary>
+<details><summary>Histórico</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v19     | Added   |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19    | Adicionado |
 
 </details>
 
@@ -297,11 +297,11 @@ The Silicon compiler generates native compiled code for Apple Silicon processors
 
 Resulting compiled code is stored in the [Libraries](architecture.md#libraries) folder of the project.
 
-#### Requirements
+#### Requisitos
 
 - **Apple machine**: The Silicon compiler can only be run from an Apple machine.
 - **4D Project architecture**: The Silicon compiler is only available for 4D developments using [project architecture](architecture.md).
-- **Xcode or Developer Tools**: The Silicon compiler calls the **Clang** open-source macOS compiler to compile the project from C++ code at the [second step](#incremental-compiler) of compilation. *clang* requires Apple native libraries, which are provided by either the **Xcode** or **Developer Tools** package.
+- **Xcode or Developer Tools**: The Silicon compiler calls the **Clang** open-source macOS compiler to compile the project from C++ code at the [second step](#incremental-compiler) of compilation. **Xcode or Developer Tools**: The Silicon compiler calls the **Clang** open-source macOS compiler to compile the project from C++ code at the [second step](#incremental-compiler) of compilation.
   - **If you already have** Xcode or Developer Tools installed on your computer, you only need to make sure that its version is compliant with 4D requirements.
   - **If you do not have** any of these tools installed on your computer, you will need to download one of them from the Apple Developer web site.
 
