@@ -1,20 +1,20 @@
 ---
 id: propertiesPlugIns
-title: Plug-ins
+title: プラグイン
 ---
 
-## Advanced Properties
+## 詳細設定
 
-If advanced options are provided by the author of the plug-in, an **Advanced Properties** button may be enabled in the Property list. In this case, you can click this button to set these options, usually through a custom dialog box.
+プラグインの作成者が詳細オプションを提供していると、プロパティリストにて **詳細設定** ボタンが使用可能になることがあります。 この場合ボタンをクリックすると、プラグインの制作元によるカスタムダイアログにてそれらのオプションを設定することができます。
 
-Because the Advanced properties feature is under the control of the author of the plug-in, information about these Advanced options is the responsibility of the distributor of the plug-in.
+この詳細設定オプションはプラグインの制作元が制御するため、詳細設定オプションに関する情報はそのプラグインの製作者から提供されます。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name             | Data Type | Possible Values                                                                                                              |
-| ---------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| customProperties | text      | Plugin specific properties, passed to plugin as a JSON string if an object, or as a binary buffer if a base64 encoded string |
+| 名称               | データタイプ | とりうる値                                                                          |
+| ---------------- | ------ | ------------------------------------------------------------------------------ |
+| customProperties | text   | プラグイン専用のプロパティです。オブジェクトの場合は JSON 文字列として、バイナリの場合は base64エンコードの文字列としてプラグインに渡されます。 |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Plug-in Area](pluginArea_overview.md)
+[プラグインエリア](pluginArea_overview.md)
