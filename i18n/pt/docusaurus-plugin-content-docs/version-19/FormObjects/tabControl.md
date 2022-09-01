@@ -25,7 +25,7 @@ If the tab control is wide enough to display all the tabs with both the labels a
 
 Under macOS, in addition to the standard position (top), the tab controls can also be aligned to the bottom.
 
-### JSON Example
+### JSON Exemplo
 
 ```4d
  "myTab": {
@@ -42,7 +42,7 @@ Under macOS, in addition to the standard position (top), the tab controls can al
 
 To supply the labels for a tab control, you can use:
 
-- an object
+- um objeto
 - a choice list
 - an array
 
@@ -50,7 +50,7 @@ To supply the labels for a tab control, you can use:
 
 You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. The object must contain the following properties:
 
-| Property       | Type       | Description                                                                                                                           |
+| Propriedade    | Tipo       | Descrção                                                                                                                              |
 | -------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | `values`       | Collection | Mandatory - Collection of scalar values. Only string values are supported. If invalid, empty or not defined, the tab control is empty |
 | `index`        | number     | Index of the currently tab control page (value between 0 and `collection.length-1`)                                                   |
@@ -61,12 +61,11 @@ The initialization code must be executed before the form is presented to the use
 In the following example, `Form.tabControl` has been defined as tab control [expression](properties_Object.md#variable-or-expression). You can associate the [`gotoPage` standard action](#goto-page-action) to the form object:
 
 ```4d
-Form.tabControl:=New object
-Form.tabControl.values:=New collection("Page 1"; "Page 2"; "Page 3")
+Form.tabControl:=New object Form.tabControl.values:=New collection("Page 1"; "Page 2"; "Page 3")
 Form.tabControl.index:=2 //start on page 3
 ```
 
-### Using a choice list
+### Utilizar uma lista de seleção
 
 You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer to a json list ("$ref"). Icons associated with list items in the Lists editor will be displayed in the tab control.
 
@@ -113,6 +112,6 @@ When you assign the `gotoPage` [standard action](properties_Action.md#standard-a
 
 For example, if the user selects the 3rd tab, 4D will display the third page of the current form (if it exists).
 
-## Supported Properties
+## Propriedades compatíveis
 
 [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Choice List](properties_DataSource.md#choice-list-static-list) - [Class](properties_Object.md#css-class) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Save value](properties_Object.md#save-value) - [Standard action](properties_Action.md#standard-action) - [Tab Control Direction](properties_Appearance.md#tab-control-direction) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
