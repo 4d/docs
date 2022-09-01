@@ -38,6 +38,8 @@ It is possible to mix tags. For example, the following HTML code is allowed:
 ```html
 <HTML>
 ...
+<HTML>
+...
 <BODY>
 <!--#4DSCRIPT/PRE_PROCESS-->   (Method call)
 <!--#4DIF (myvar=1)-->   (If condition)
@@ -89,7 +91,7 @@ Executing a 4D method with `4DEACH`, `4DELSEIF`, `4DEVAL`, `4DHTML`, `4DIF`, `4D
 
 ## Prevention of malicious code insertion
 
-4D tags accept different types of data as parameters: text, variables, methods, command names, etc. When this data is provided by your own code, there is no risk of malicious code insertion since you control the input. However, your database code often works with data that was, at one time or another, introduced through an external source (user input, import, etc.).
+4D tags accept different types of data as parameters: text, variables, methods, command names, etc. When this data is provided by your own code, there is no risk of malicious code insertion since you control the input. When this data is provided by your own code, there is no risk of malicious code insertion since you control the input. However, your database code often works with data that was, at one time or another, introduced through an external source (user input, import, etc.).
 
 In this case, it is advisable to **not use** tags such as `4DEVAL` or `4DSCRIPT`, which evaluate parameters, directly with this sort of data.
 
