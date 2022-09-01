@@ -1,38 +1,38 @@
 ---
 id: overview
-title: Overview
+title: 概要
 ---
 
-A 4D project contains all of the source code of a 4D database application, from the database structure to the user interface, including forms, menus, user settings, or any required resources. A 4D project is primarily made of text-based files.
+データベースストラクチャーからユーザーインターフェース (フォームやメニュー、ユーザー設定、その他必要なリソース含む) まで、4D データベースアプリケーションのすべてのソースコードが 4D プロジェクトには格納されています。 4D プロジェクトは主にテキストファイルによって構成されています。
 
-4D projects are created and handled using the 4D Developer application. Project files are then used to build final application deployment files, that can be opened by 4D Server or 4D Volume license (merged applications).
-
-
-## Project files
-
-4D project files are open and edited using regular 4D platform applications. Full-featured editors are available to manage files, including a structure editor, a method editor, a form editor, a menu editor...
-
-Moreover, since projects are in human-readable, plain text files (JSON, XML, etc.), they can be read or edited manually by developers, using any code editor.
+4D プロジェクトは 4D Developer アプリケーションを使って作成・編集します。 プロジェクトファイルをもとにビルドしたアプリケーション運用ファイルは、4D Server や 4D Volume ライセンスで開くことができます (組み込みアプリケーション)。
 
 
-## Source control
+## プロジェクトファイル
 
-4D project files make it easier to program generically, create application templates, and share code.
+4D プロジェクトファイルは 4D で開いて編集します。 ストラクチャーエディター、メソッドエディター、フォームエディター、メニューエディターなど、機能の充実したエディターを使ってファイルを扱うことができます。
 
-The flexibility of developing a 4D project is especially demonstrated when multiple developers need to work on the same part of an application, at the same time. 4D project files are particularly well suited to be managed by a **source control** repository (Perforce, Git, SVN, etc.), allowing development teams to take advantage of features such as:
-
-- Versioning
-- Revision comparisons
-- Rollbacks
+また、人間にも解読可能なテキストファイル (JSON、XML等) 形式で提供されているため、プロジェクトの読み書きは任意のコードエディターでおこなうことも可能です。
 
 
-## Working with projects
+## ソース管理
 
-You create a 4D database project by:
+4D プロジェクトファイルによって、汎用的なコーディング、アプリケーションテンプレートの作成や、コードシェアリングが容易になります。
 
-- creating a new, blank project -- see [Creating a 4D project](creating.md).
-- exporting an existing 4D "binary" development to a project -- see "Export from a 4D database" on [doc.4d.com](https://doc.4d.com).
+4D プロジェクト開発の柔軟性が一番顕著になるのは、複数のデベロッパーがアプリケーションの同じ部分で同時に作業しなければならないときです。 4D プロジェクトファイルの管理には、Perforce、Git、SVNなどの**ソース管理**リポジトリがとくに適しており、これらによって開発チームはつぎのような機能を活用できます:
 
-Project development is done locally, using the 4D Developer application -- see [Developing a project](developing.md). Team development interactions are handled by the source control tool.
+- バージョン管理
+- リビジョン比較
+- ロールバック
 
-4D projects can be compiled and easily deployed as single-user or client-server applications containing compacted versions of your project -- see [Building a project package](building.md).
+
+## プロジェクトで開発する
+
+4D データベースプロジェクトを作成する方法は二つあります:
+
+- まっさらなプロジェクトを新規作成する -- [4D プロジェクトの作成](creating.md) 参照
+- 既存の 4D バイナリデータベースをプロジェクトへと変換する -- doc.4d.com にて "[データベースをプロジェクトモードに変換する](https://doc.4d.com/4Dv18/4D/18/Converting-databases-to-projects.300-4606146.ja.html)" 参照
+
+プロジェクトの開発は 4D Developer アプリケーションを用いて、ローカルにおこないます -- [プロジェクトの開発](developing.md) 参照。 チーム開発によるソースの管理にはソース管理ツールを使います。
+
+4D プロジェクトはコンパイルして圧縮し、シングルユーザーまたはクライアントサーバーアプリケーションとして簡単に運用することができます -- [プロジェクトパッケージのビルド](building.md) 参照。
