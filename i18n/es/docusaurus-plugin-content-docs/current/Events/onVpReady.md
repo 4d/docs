@@ -3,15 +3,15 @@ id: onVpReady
 title: On VP Ready
 ---
 
-| Code | Can be called by                                        | Definition                                      |
-| ---- | ------------------------------------------------------- | ----------------------------------------------- |
-| 9    | [4D View Pro Area](FormObjects/viewProArea_overview.md) | The loading of the 4D View Pro area is complete |
+| Code | Puede ser llamado por                                   | Definición                                  |
+| ---- | ------------------------------------------------------- | ------------------------------------------- |
+| 9    | [Área 4D View Pro](FormObjects/viewProArea_overview.md) | La carga del área 4D View Pro está completa |
 
 
-## Description
+## Descripción
 
-This event is generated when the 4D View Pro area loading is complete.
+Este evento se genera cuando se completa la carga del área 4D View Pro.
 
-You need to use this event to write initialization code for the area. Any 4D View Pro area initialization code, for loading or reading values from or in the area, must be located in the `On VP Ready` form event of the area. This form event is triggered once the area loading is complete. Testing this event makes you sure that the code will be executed in a valid context. An error is returned if a 4D View Pro command is called before the `On VP Ready` form event is generated.
+Es necesario utilizar este evento para escribir el código de inicialización del área. Todo código de inicialización de área 4D View Pro, para cargar o leer valores desde o en el área, debe ubicarse en el evento formulario `On VP Ready` del área. Este evento formulario se activa una vez que se ha completado la carga del área. Probar este evento le asegura que el código se ejecutará en un contexto válido. Se devuelve un error si se llama a un comando 4D View Pro antes de que se genere el evento formulario `On VP Ready`.
 
-> 4D View Pro areas are loaded asynchronously in 4D forms. It means that the standard [On load](onLoad.md) form event cannot be used for 4D View Pro initialization code, since it could be executed before the loading of the area is complete. `On VP Ready` is always generated after [On load](onLoad.md).
+> Las áreas 4D View Pro se cargan de forma asíncrona en los formularios 4D. Esto significa que el evento formulario estándar [On load](onLoad.md) no puede utilizarse para el código de inicialización de 4D View Pro, ya que podría ejecutarse antes de que se complete la carga del área. `On VP Ready` siempre se genera después de [On load](onLoad.md).
