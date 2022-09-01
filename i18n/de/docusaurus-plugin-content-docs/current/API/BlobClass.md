@@ -29,14 +29,14 @@ The Blob class lets you create and manipulate [blob objects](../Concepts/dt_blob
 
 <!-- REF #4D.Blob.new().Params -->
 
-| Parameter | Type            |    | Description                              |
+| Parameter | Typ             |    | Beschreibung                             |
 | --------- | --------------- |:--:| ---------------------------------------- |
 | blob      | Blob or 4D.Blob | -> | Blob to copy                             |
-| Result    | 4D.Blob         | <- | New 4D.Blob  |<!-- END REF -->
+| Ergebnis  | 4D.Blob         | <- | New 4D.Blob  |<!-- END REF -->
 
 |
 
-#### Description
+#### Beschreibung
 
 `4D.Blob.new` <!-- REF #4D.Blob.new().Summary -->creates a new `4D.Blob` object optionally encapsulating a copy of the data from another blob (scalar blob or `4D.Blob`)<!-- END REF -->.
 
@@ -48,7 +48,7 @@ If the `blob` parameter is omitted, the method returns an empty 4D.Blob.
 
 **.size** : Real<!-- END REF -->
 
-#### Description
+#### Beschreibung
 The `.size` property <!-- REF #Blob.size.Summary -->returns the size of a `4D.Blob`, expressed in bytes.<!-- END REF -->
 
 ## .slice()
@@ -66,15 +66,15 @@ The `.size` property <!-- REF #Blob.size.Summary -->returns the size of a `4D.Bl
 **.slice()** : 4D.Blob<br/>**.slice**( *start* : Real ) : 4D.Blob<br/>**.slice**( *start* : Real; *end* : Real ) : 4D.Blob<!-- END REF -->
 
 <!-- REF #Blob.slice().Params -->
-| Parameter | Type    |    | Description                                                            |
+| Parameter | Typ     |    | Beschreibung                                                           |
 | --------- | ------- |:--:| ---------------------------------------------------------------------- |
-| start     | Real    | -> | index of the first byte to include in the new `4D.Blob`.               |
-| end       | Real    | -> | index of the first byte that will not be included in the new `4D.Blob` |
-| Result    | 4D.Blob | <- | New `4D.Blob`|<!-- END REF -->
+| start     | Zahl    | -> | index of the first byte to include in the new `4D.Blob`.               |
+| end       | Zahl    | -> | index of the first byte that will not be included in the new `4D.Blob` |
+| Ergebnis  | 4D.Blob | <- | New `4D.Blob`|<!-- END REF -->
 
 |
 
-#### Description
+#### Beschreibung
 
 `.slice()` <!-- REF #Blob.slice().Summary --> creates and returns a `4D.Blob` that references data from a subset of the blob on which it's called. The original blob is not altered.<!-- END REF -->
 
@@ -82,7 +82,7 @@ The `start` parameter is an index into the blob indicating the first byte to inc
 
 The `end` parameter is an index into the blob indicating the first byte that will not be included in the new `4D.Blob` (i.e. the byte exactly at this index is not included). If you specify a negative value, 4D treats it as an offset from the end of the blob toward the beginning. For example, -10 would be the 10th from last byte in the blob. The default value is the size of the blob.
 
-#### Example
+#### Beispiel
 
 ```4d
 var $myBlob : 4D.Blob
