@@ -1,32 +1,32 @@
 ---
 id: shared
-title: Shared objects and collections
+title: Objetos y colecciones compartidos
 ---
 
-## Overview
-**Shared objects** and **shared collections** are specific [objects](Concepts/dt_object.md) and [collections](Concepts/dt_collection.md) whose contents are shared between processes. In contrast to [interprocess variables](Concepts/variables.md#interprocess-variables), shared objects and shared collections have the advantage of being compatible with **preemptive 4D processes**: they can be passed by reference as parameters to commands such as `New process` or `CALL WORKER`.
+## Generalidades
+**Los objetos compartidos** y **las colecciones compartidas** son [objetos](Concepts/dt_object.md) y [colecciones](Concepts/dt_collection.md) específicas cuyo contenido se comparte entre procesos. A diferencia de las [variables interproceso](Concepts/variables.md#interprocess-variables), los objetos compartidos y las colecciones compartidas tienen la ventaja de ser compatibles con los **procesos 4D apropiativos**: pueden pasarse por referencia como parámetros a comandos como `New process` o `CALL WORKER`.
 
-Shared objects and shared collections can be stored in variables declared with standard `C_OBJECT` and `C_COLLECTION` commands, but must be instantiated using specific commands:
+Los objetos compartidos y las colecciones compartidas pueden almacenarse en variables declaradas con los comandos estándar `C_OBJECT` y `C_COLLECTION`, pero deben instanciarse utilizando comandos específicos:
 
-- to create a shared object, use the `New shared object` command,
-- to create a shared collection, use the `New shared collection` command.
+- para crear un objeto compartido, utilice el comando `New shared object`,
+- para crear una colección compartida, utilice el comando `New shared collection`.
 
-**Note:** Shared objects and collections can be set as properties of standard (not shared) objects or collections.
+**Nota:** los objetos y colecciones compartidos pueden definirse como propiedades de objetos o colecciones estándar (no compartidos).
 
-In order to modify a shared object/collection, the **Use...End use** structure must be called. Reading a shared object/collection value does not require **Use...End use**.
+Para modificar un objeto/colección compartido, se debe llamar a la estructura **Use...End use**. La lectura de un valor de objeto/colección compartido no requiere **Use...End use**.
 
-A unique, global catalog returned by the `Storage` command is always available throughout the database and its components, and can be used to store all shared objects and collections.
+Un catálogo único y global devuelto por el comando `Storage` está siempre disponible en toda la base y sus componentes, y puede utilizarse para almacenar todos los objetos y colecciones compartidos.
 
-## Using shared objects or collections
-Once instantiated with the `New shared object` or `New shared collection` commands, shared object/collection properties and elements can be modified or read from any process of the application.
+## Utilización de objetos o colecciones compartidos
+Una vez instanciado con los comandos `Nuevo objeto compartido` o `Nueva colección compartida`, las propiedades y elementos del objeto compartido/colección pueden ser modificados o leídos desde cualquier proceso de la aplicación.
 
-### Modification
-Modifications can be applied to shared objects and shared collections:
+### Modificación
+Las siguientes modificaciones pueden efectuarse en objetos y colecciones compartidos:
 
-- adding or removing object properties,
-- adding or editing values (provided they are supported in shared objects), including other shared objects or collections (which creates a shared group, see below).
+- añadir o eliminar propiedades de los objetos,
+- añadir o editar valores (siempre que se soporten en objetos compartidos), incluyendo otros objetos compartidos o colecciones (lo que crea un grupo compartido, ver abajo).
 
-However, all modification instructions in a shared object or collection must be surrounded by the `Use...End use` keywords, otherwise an error is generated.
+Sin embargo, todas las instrucciones de modificación en un objeto compartido o colección deben estar rodeadas por las palabras clave `Use...End use`, de lo contrario se genera un error.
 
 ```4d
  $s_obj:=New shared object("prop1";"alpha")
@@ -35,63 +35,63 @@ However, all modification instructions in a shared object or collection must be 
  End Use
 ```
 
-A shared object/collection can only be modified by one process at a time. `Use` locks the shared object/collection from other threads, while the last `End use` unlocks all objects and collections. Trying to modify a shared object/collection without at least one `Use...End use` generates an error. When a process calls `Use...End use` on a shared object/collection that is already in use by another process, it is simply put on hold until the `End use` unlocks it (no error is generated). Consequently, instructions within `Use...End use` structures should execute quickly and unlock the elements as soon as possible. Thus, it is strongly advised to avoid modifying a shared object or collection directly from the interface, e.g. through a dialog box.
+Un objeto/una colección compartido(a) sólo puede modificarse por un proceso a la vez. A shared object/collection can only be modified by one process at a time. Intentar modificar un objeto/colección compartido sin al menos un `Use...End use` genera un error. Cuando un proceso llama a `Use...End use` en un objeto/colección compartido que ya está en uso por otro proceso, simplemente se pone en espera hasta que el `End use` lo desbloquee (no se genera ningún error). En consecuencia, las instrucciones dentro de las estructuras `Use...End use` deben ejecutarse rápidamente y desbloquear los elementos lo antes posible. Por lo tanto, se recomienda enfáticamente evitar modificar un objeto o colección compartido directamente desde la interfaz, por ejemplo, a través de una caja de diálogo.
 
-Assigning shared objects/collections to properties or elements of other shared objects/collections is allowed and creates **shared groups**. A shared group is automatically created when a shared object/collection is set as property value or element of another shared object/collection. Shared groups allow nesting shared objects and collections but enforce additional rules:
+La asignación de objetos/colecciones compartidos a propiedades o elementos de otros objetos/colecciones compartidos está permitida y crea **grupos compartidos**. Un grupo compartido se crea automáticamente cuando un objeto/colección compartido se define como valor de propiedad o elemento de otro objeto/colección compartido. Los grupos compartidos permiten anidar objetos y colecciones compartidos, pero imponen reglas adicionales:
 
-- Calling `Use` on a shared object/collection of a group will lock properties/elements of all shared objects/collections belonging to the same group.
-- A shared object/collection can only belong to one shared group. An error is returned if you try to set an already grouped shared object/collection to a different group.
-- Grouped shared objects/collections cannot be ungrouped. Once included in a shared group, a shared object/collection is linked permanently to that group during the whole session. Even if all references of an object/collection are removed from the parent object/collection, they will remain linked.
+- Al llamar a `Use` en un objeto/colección compartido de un grupo se bloquearán las propiedades/elementos de todos los objetos/colecciones compartidos que pertenezcan al mismo grupo.
+- Un objeto/colección compartido sólo puede pertenecer a un grupo compartido. Se devuelve un error si se intenta asignar un objeto/colección compartido ya agrupado a un grupo diferente.
+- Los objetos/colecciones compartidos agrupados no se pueden desagrupar. Una vez incluido en un grupo compartido, un objeto/colección compartido queda vinculado permanentemente a ese grupo durante toda la sesión. Incluso si todas las referencias de un objeto/colección se eliminan del objeto/colección padre, seguirán vinculadas.
 
-Please refer to example 2 for an illustration of shared group rules.
+Consulte el ejemplo 2 para ver una ilustración de las reglas de los grupos compartidos.
 
-**Note:** Shared groups are managed through an internal property named *locking identifier*. For detailed information on this value, please refer to the 4D Developer's guide.
+**Nota:** Los grupos compartidos se gestionan a través de una propiedad interna llamada *locking identifier*. Para obtener información detallada sobre este valor, consulte la guía del desarrollador de 4D.
 
-### Read
-Reading properties or elements of a shared object/collection is allowed without having to call the `Use...End use` structure, even if the shared object/collection is in use by another process.
+### Lectura
+Se permite la lectura de propiedades o elementos de un objeto/colección compartida sin tener que llamar a la estructura `Use...End use`, incluso si el objeto/colección compartida está en uso por otro proceso.
 
-However, it is necessary to read a shared object/collection within `Use...End use` when several values are linked together and must be read at once, for consistency reasons.
+Sin embargo, cuando varios valores son interdependientes y deben ser leídos simultáneamente, es necesario enmarcar el acceso de lectura con una estructura `Use...End use` por coherencia.
 
 ### Duplication
-Calling `OB Copy` with a shared object (or with an object containing shared object(s) as properties) is possible, but will return a standard (not shared) object including its contained objects (if any).
+Llamar a `OB Copy` con un objeto compartido (o con un objeto cuyas propiedades son objetos compartidos) es posible, pero en este caso se devuelve un objeto estándar (no compartido).
 
 ### Storage
-**Storage** is a unique shared object, automatically available on each application and machine. This shared object is returned by the `Storage` command. You can use this object to reference all shared objects/collections defined during the session that you want to be available from any preemptive or standard processes.
+**Storage** es un objeto compartido único, disponible automáticamente en cada aplicación y máquina. Este objeto compartido es devuelto por el comando `Storage`. Puede utilizar este objeto para hacer referencia a todos los objetos/colecciones compartidos definidos durante la sesión que desee que estén disponibles desde cualquier proceso preventivo o estándar.
 
-Note that, unlike standard shared objects, the `storage` object does not create a shared group when shared objects/collections are added as its properties. This exception allows the **Storage** object to be used without locking all connected shared objects or collections.
+Tenga en cuenta que, a diferencia de los objetos compartidos estándar, el objeto `Storage` no crea un grupo compartido cuando se añaden objetos/colecciones compartidos como sus propiedades. Esta excepción permite utilizar el objeto **Storage** sin bloquear todos los objetos o colecciones compartidos conectados.
 
-For more information, refer to the `Storage` command description.
+Para más información, consulte la descripción del comando `Storage`.
 
 ## Use...End use
-The formal syntax of the `Use...End use` structure is:
+La sintaxis de la estructura `Use...End use` es:
 
 ```4d
  Use(Shared_object_or_Shared_collection)
-    statement(s)
+    instrucción(es)
  End use
 ```
 
-The `Use...End use` structure defines a sequence of statements that will execute tasks on the *Shared_object_or_Shared_collection* parameter under the protection of an internal semaphore. *Shared_object_or_Shared_collection* can be any valid shared object or shared collection.
+La estructura `Use...End use` define una secuencia de instrucciones que ejecutarán tareas sobre el parámetro *Shared_object_or_Shared_collection* bajo la protección de un semáforo interno. *Shared_object_or_Shared_collection* puede ser cualquier objeto o colección compartido válido.
 
-Shared objects and shared collections are designed to allow communication between processes, in particular, **preemptive 4D processes**. They can be passed by reference as parameters from a process to another one. For detailed information on shared objects or shared collections, refer to the **Shared objects and shared collections** page. Surrounding modifications on shared objects or shared collections by the `Use...End use` keywords is mandatory to prevent concurrent access between processes.
+Los objetos compartidos y las colecciones compartidas están diseñados para permitir la comunicación entre procesos, en particular, **procesos 4D preferentes**. Se pueden pasar por referencia como parámetros de un proceso a otro. Para obtener información detallada sobre los objetos compartidos o las colecciones compartidas, consulte la página **Objetos y colecciones compartidos**. Es obligatorio rodear las modificaciones en los objetos o colecciones compartidas con las palabras clave `Use...End use` para evitar el acceso concurrente entre procesos.
 
-- Once the **Use** line is successfully executed, all _Shared_object_or_Shared_collection_ properties/elements are locked for all other process in write access until the corresponding `End use` line is executed.
-- The _statement(s)_ sequence can execute any modification on the Shared_object_or_Shared_collection properties/elements without risk of concurrent access.
-- If another shared object or collection is added as a property of the _Shared_object_or_Shared_collection_ parameter, they become connected within the same shared group (see **Using shared objects or collections**).
-- If another process tries to access one of the _Shared_object_or_Shared_collection_ properties or connected properties while a **Use...End use** sequence is being executed, it is automatically put on hold and waits until the current sequence is terminated.
-- The **End use** line unlocks the _Shared_object_or_Shared_collection_ properties and all objects sharing the same locking identifier.
-- Several **Use...End use** structures can be nested in the 4D code. In that case, all locks are stacked and properties/elements will be released only when the last End use call is executed.
+- Una vez que se ejecuta con éxito la línea **Use**, todas las propiedades/elementos de _Shared_object_or_Shared_collection_ se bloquean para el resto de procesos en acceso de escritura hasta que se ejecute la línea `End use` correspondiente.
+- La secuencia _de instrucciones_ puede ejecutar cualquier modificación en las propiedades/elementos de Shared_object_o_Shared_collection sin riesgo de acceso concurrente.
+- Si se añade otro objeto o colección compartida como propiedad del parámetro _Shared_object_or_Shared_collection_, se conectan dentro del mismo grupo compartido (ver **Uso de objetos o colecciones compartidos**).
+- Si otro proceso intenta acceder a una de las propiedades _Objeto_compartido_o_Colección_compartida_ o una propiedad conectad mientras se está ejecutando una secuencia **Use... End use**, se pone automáticamente en espera y espera hasta que la secuencia actual finalice.
+- La línea **End use** desbloquea las propiedades _Shared_object_or_Shared_collection_ y todos los objetos que comparten el mismo identificador de bloqueo.
+- En el código 4D se pueden anidar varias estructuras **Use...End use**. En ese caso, todos los bloqueos se apilan y las propiedades/elementos se liberarán sólo cuando se ejecute la última llamada de End use.
 
-**Note:** If a collection method modifies a shared collection, an internal **Use** is automatically called for this shared collection while the function is executed.
+**Nota:** si un método de una colección modifica una colección compartida, se llama automáticamente un **Use** interno para esta colección compartida mientras se ejecuta la función.
 
 
-## Example 1
+## Ejemplo 1
 
-You want to launch several processes that perform an inventory task on different products and update the same shared object. The main process instantiates an empty shared object and then, launches the other processes, passing the shared object and the products to count as parameters:
+Se desea lanzar varios procesos que realicen una tarea de inventario en diferentes productos y que actualicen el mismo objeto compartido. El proceso principal instancia un objeto compartido vacío y luego, lanza los otros procesos, pasando el objeto compartido y los productos a contar como parámetros:
 
 ```4d
  ARRAY TEXT($_items;0)
- ... //fill the array with items to count
+ ... //llenar el array con los elementos a contar
  $nbItems:=Size of array($_items)
  C_OBJECT($inventory)
  $inventory:=New shared object
@@ -99,59 +99,59 @@ You want to launch several processes that perform an inventory task on different
     $inventory.nbItems:=$nbItems
  End use
 
-  //Create processes
+  //Crear procesos
  For($i;1;$nbItems)
     $ps:=New process("HowMany";0;"HowMany_"+$_items{$i};$_items{$i};$inventory)
   //$inventory object sent by reference
  End for
 ```
 
-In the "HowMany" method, inventory is done and the $inventory shared object is updated as soon as possible:
+En el método "HowMany", el inventario se realiza y el objeto compartido $inventory se actualiza lo antes posible:
 
 ```4d
  C_TEXT($1)
  C_TEXT($what)
  C_OBJECT($2)
  C_OBJECT($inventory)
- $what:=$1 //for better readability
+ $what:=$1 //para una mejor legibilidad
  $inventory:=$2
 
- $count:=CountMethod($what) //method to count products
- Use($inventory) //use shared object
-    $inventory[$what]:=$count  //save the results for this item
+ $count:=CountMethod($what) //método para contar productos
+ Use($inventory) //utilizar el objeto compartido
+    $inventory[$what]:=$count  //guardar los resultados de este artículo
  End use
 ```
 
-## Example 2
+## Ejemplo 2
 
-The following examples highlight specific rules when handling shared groups:
+Los siguientes ejemplos ilustran las reglas específicas para el manejo de los grupos compartidos:
 
 ```4d
  $ob1:=New shared object
  $ob2:=New shared object
  Use($ob1)
-    $ob1.a:=$ob2  //group 1 is created
+    $ob1.a:=$ob2  //se crea el grupo 1
  End use
 
  $ob3:=New shared object
  $ob4:=New shared object
  Use($ob3)
-    $ob3.a:=$ob4  //group 2 is created
+    $ob3.a:=$ob4  //se crea el grupo 2
  End use
 
- Use($ob1) //use an object from group 1
+ Use($ob1) //utilizar un objeto del grupo 1
     $ob1.b:=$ob4  //ERROR
-  //$ob4 already belongs to another group
-  //assignment is not allowed
+  //$ob4 ya pertenece a otro grupo
+  //la asignación no está permitida
  End use
 
  Use($ob3)
-    $ob3.a:=Null //remove any reference to $ob4 from group 2
+    $ob3.a:=Null //eliminar cualquier referencia a $ob4 del grupo 2
  End use
 
- Use($ob1) //use an object from group 1
+ Use($ob1) //utilizar un objeto del grupo 1
     $ob1.b:=$ob4  //ERROR
-  //$ob4 still belongs to group 2
-  //assignment is not allowed
+  //$ob4 aún pertenece al grupo 2
+  //la asignación no está permitida
  End use
 ```
