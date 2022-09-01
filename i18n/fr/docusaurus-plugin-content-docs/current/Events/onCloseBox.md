@@ -3,27 +3,28 @@ id: onCloseBox
 title: On Close Box
 ---
 
-| Code | Can be called by | Definition                              |
-| ---- | ---------------- | --------------------------------------- |
-| 22   | Form             | The window’s close box has been clicked |
+| Code | Peut être appelé par | Définition                                       |
+| ---- | -------------------- | ------------------------------------------------ |
+| 22   | Formulaire           | La case de fermeture de la fenêtre a été cliquée |
 
 
 ## Description
 
-The `On Close Box` event is generated when the user clicks on the clos box of the window.
+L'événement `On Close Box` est généré lorsque l'utilisateur clique sur la case fermeture de la fenêtre.
 
-### Example
+### Exemple
 
-This example shows how to respond to a close window event with a form used for record data entry:
+Cet exemple illustre comment vous pouvez répondre à un événement de fermeture de fenêtre à l'aide d'un formulaire utilisé pour la saisie de données d'enregistrement :
 
 ```4d
-  //Method for an input form
+  //Méthode pour un formulaire d'entrée
  $vpFormTable:=Current form table
  Case of
   //...
     :(Form event code=On Close Box)
        If(Modified record($vpFormTable->))
           CONFIRM("This record has been modified. Save Changes?")
+          Save Changes?")
           If(OK=1)
              ACCEPT
           Else
@@ -33,5 +34,6 @@ This example shows how to respond to a close window event with a form used for r
           CANCEL
        End if
   //...
+ //statement(s)
  End case
 ```
