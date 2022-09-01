@@ -1,18 +1,18 @@
 ---
 id: advanced-programming
-title: Advanced programming with Javascript
+title: Programmation avancée avec Javascript
 ---
 
-A 4D View Pro Area is a [Web Area form object](../FormObjects/webArea_overview.md) that uses the [embedded web rendering engine](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine). As such, it behaves just like any other web area, and you can get it to execute Javascript code by calling the [`WA Evaluate Javascript`](https://doc.4d.com/4dv19/help/command/en/page1029.html) 4D command.
+Une zone 4D View Pro est un [objet de formulaire de zone Web](../FormObjects/webArea_overview.md) qui utilise le [moteur de rendu Web intégré](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine). En tant que telle, elle se comporte comme n'importe quelle autre zone Web, à laquelle vous pouvez faire exécuter du code Javascript en appelant la commande 4D [`WA Evaluate Javascript`](https://doc.4d.com/4dv19/help/command/en/page1029.html).
 
-Since 4D View Pro is powered by the [SpreadJS spreadsheet solution](https://www.grapecity.com/spreadjs/docs/versions/v14/online/overview.html), you can also call SpreadJS Javascript methods in 4D View Pro areas.
+Etant donné que 4D View Pro est alimenté par la [solution de feuille de calcul SpreadJS](https://www.grapecity.com/spreadjs/docs/versions/v14/online/overview.html), vous pouvez également appeler les méthodes Javascript de SpreadJS dans les zones 4D View Pro.
 
-## Hands-on example: Hiding the Ribbon
+## Exemple concret : masquer le ruban
 
-Since 4D View Pro is a web area, you can select a webpage element and modify its behavior using Javascript. The following example hides the spreadJS [Ribbon](./configuring.md#ribbon):
+4D View Pro étant une zone Web, vous pouvez sélectionner un élément de page Web et modifier son comportement à l'aide de Javascript. L'exemple suivant permet de masquer le [ruban](./configuring.md#ribbon) spreadJS :
 
 ```4d
-//Button's object method
+//Méthode objet du bouton
 
 var $js; $answer : Text
 
@@ -23,20 +23,20 @@ $js+="window.dispatchEvent(new Event('resize'));"
 $answer:=WA Evaluate JavaScript(*; "ViewProArea"; $js)
 ```
 
-## Calling SpreadJS Javascript methods
+## Appeler des méthodes JavaScript de SpreadJS
 
-You can tap into the SpreadJS library of Javascript methods and call them directly to control your spreadsheets.
+Vous pouvez exploiter la bibliothèque de méthodes Javascript de SpreadJS et les appeler directement pour gérer vos feuilles de calcul.
 
-4D has a built-in `Utils.spread` property that gives access to the spreadsheet document (also called workbook) inside the 4D View Pro area, making it simpler to call the SpreadJS [Workbook methods](https://www.grapecity.com/spreadjs/docs/latest/online/SpreadJS~GC.Spread.Sheets.Workbook.html).
+4D dispose d'une propriété `Utils.spread` intégrée qui pointe vers la feuille de calcul (également appelée workbook) dans la zone 4D View Pro, ce qui simplifie l'appel des [méthodes de Workbook](https://www.grapecity.com/spreadjs/docs/latest/online/SpreadJS~GC.Spread.Sheets.Workbook.html) SpreadJS.
 
-#### Example
+#### Exemple
 
-The following code undoes the last action in the spreadsheet:
+Le code suivant annule la dernière action dans la feuille de calcul :
 
 ```4d
 WA Evaluate JavaScript(*; "ViewProArea"; "Utils.spread.undoManager().undo()")
 ```
 
-## 4D View Pro Tips repository
+## Dépôt 4D View Pro Tips
 
-[4D-View-Pro-Tips](https://github.com/4d-depot/4D-View-Pro-Tips) is a GitHub repository that contains a project full of useful functions, allowing to manage floating pictures, sort columns or rows, create a custom culture, and much more! Feel free to clone it and experiment with the project. 
+[4D-View-Pro-Tips](https://github.com/4d-depot/4D-View-Pro-Tips) est un dépôt GitHub qui contient un projet rempli de fonctions utiles pour vous permettre de gérer les images flottantes, de trier les colonnes ou les lignes, de créer une culture personnalisée, et bien plus encore ! N'hésitez pas à le cloner et à l'expérimenter ! 
