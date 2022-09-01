@@ -1,19 +1,19 @@
 ---
 id: onPageChange
-title: On Page Change
+title: Sur changement page
 ---
 
-| Code | Can be called by | Definition                              |
-| ---- | ---------------- | --------------------------------------- |
-| 56   | Form             | The current page of the form is changed |
+| Code | Peut être appelé par | Définition                                  |
+| ---- | -------------------- | ------------------------------------------- |
+| 56   | Formulaire           | La page courante du formulaire est modifiée |
 
 
 ## Description
 
-This event is only available at the form level (it is called in the form method). It is generated each time the current page of the form changes (following a call to the `FORM GOTO PAGE` command or a standard navigation action).
+Cet événement n'est disponible qu'au niveau du formulaire (il est appelé dans la méthode formulaire). Il est généré à chaque fois que la page courante du formulaire change (suite à un appel à la commande `FORM GOTO PAGE` ou à une action de navigation standard).
 
-Note that it is generated after the page is fully loaded, i.e. once all the objects it contains are initialized, including [Web areas](FormObjects/webArea_overview.md).
+A noter qu'il est généré après le chargement complet de la page, c'est-à-dire une fois tous les objets qu'elle contient sont initialisés, y compris les [zones Web](FormObjects/webArea_overview.md).
 
-> The only exception is 4D View Pro areas, for which you need to call the [On VP Ready](onVpReady.md) specific event.
+> La seule exception concerne les zones 4D View Pro, pour lesquelles vous devez appeler l'événement spécifique [On VP Ready](onVpReady.md).
 
-The `On Page Change` event is useful for executing code that requires all objects to be initialized beforehand. You can also use it to optimize the application by executing code (for example, a search) only after a specific page of the form is displayed and not just as soon as page 1 is loaded. If the user does not go to this page, the code is not executed.
+L'événement `On Page Change` est utile pour exécuter du code qui nécessite que tous les objets soient préalablement initialisés. Vous pouvez également l'utiliser pour optimiser l'application en exécutant du code (par exemple, une recherche) uniquement après l'affichage d'une page spécifique du formulaire et pas seulement dès que la page 1 est chargée. Si l'utilisateur ne va pas sur cette page, le code n'est pas exécuté.
