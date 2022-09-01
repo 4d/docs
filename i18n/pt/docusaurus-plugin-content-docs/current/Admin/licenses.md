@@ -124,7 +124,7 @@ You can use projects to organize your licenses according to your needs:
 
 If the installation or activation process fails, please check the following table, which gives the most common causes of malfunctioning:
 
-| Symptoms                                                      | Possible causes                                            | Solution(s)                                                                                                                                     |
+| Sintomas                                                      | Possible causes                                            | Solution(s)                                                                                                                                     |
 | ------------------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | Impossible to download product from 4D Internet site          | Internet site unavailable, antivirus application, firewall | 1- Try again later OR 2- Temporarily disable your antivirus application or your firewall.                                                       |
 | Impossible to install product on disk (installation refused). | Insufficient user access rights                            | Open a session with access rights allowing you to install applications (administrator access)                                                   |
@@ -133,7 +133,7 @@ If the installation or activation process fails, please check the following tabl
 If this information does not help you resolve your problem, please contact 4D or your local distributor.
 
 
-## Contacts
+## Contactos
 
 For any questions about the installation or activation of your product, please contact 4D, Inc. or your local distributor.
 
