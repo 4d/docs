@@ -1,30 +1,30 @@
 ---
 id: macros
-title: Form Editor Macros
+title: フォームエディターマクロ
 ---
 
 
-The 4D Form editor supports macros. A macro is a set of instructions to perform an action or a sequence of actions. When called upon, the macro will execute its instructions and automatically perform the action(s).
+4D のフォームエディターはマクロをサポートしています。 1つ以上のアクションを実行するための指示をマクロと呼びます。 呼び出されると、マクロは登録された指示を実行し、自動的に指定のアクションをおこないます。
 
-For example if you have a recurring report with specific formatting (e.g., certain text must appear in red and certain text must appear in green), you can create a macro to automatically set the color. You can create macros for the 4D Form editor that can:
+たとえば、定期レポートに特定のフォーマットが指定されている場合 (例: テキストによってフォントカラーが赤や緑であるなど)、マクロを作成してフォントカラーの設定を自動でおこなうことができます。 4Dフォームエディターのマクロでは、次のことがおこなえます:
 
-* Create and execute 4D code
-* Display dialogs
-* Select form objects
-* Add / delete / modify forms, form objects as well as their properties
-* Modify project files (update, delete)
+* 4Dコードを作成・実行する
+* ダイアログを表示する
+* オブジェクトを選択する
+* フォームやフォームオブジェクトおよびそれらのプロパティを追加・編集・削除する
+* プロジェクトファイルを編集する (更新・削除)
 
-Macros code supports [class functions](Concepts/classes.md) and [form object properties in JSON](FormObjects/properties_Reference.md) to let you define any custom feature in the Form editor.
+フォームエディター用のカスタム機能を定義するため、マクロコードは [クラス関数](Concepts/classes.md) と [JSON のフォームオブジェクトプロパティ](FormObjects/properties_Reference.md) を使用できます。
 
-Macros can been defined for the host project or for components within the project. Usually, you will create a macro and install it within the components you use for development.
+ホストプロジェクトおよび、プロジェクト内のコンポーネントにてマクロを定義することができます。 通常は開発用のコンポーネントにマクロをインストールして使用します。
 
-When called, a macro overrides any previously specified behaviors.
+マクロが呼び出されると、指定されている既存の動作はマクロによってオーバーライドされます。
 
-## Hands-on example
+## 例題
 
-In this short example, you'll see how to create and call a macro that adds a "Hello World!" alert button in the top left corner of your form.
+フォームの左上に "Hello World" アラートボタンを追加するマクロを作成します。
 
-1. In a `formMacros.json` file within the `Sources` folder of your project, you write:
+1. プロジェクトの `Sources` フォルダー内に配置された `formMacros.json` ファイルに、次のように書きます:
 
 ```js
 {
@@ -36,9 +36,9 @@ In this short example, you'll see how to create and call a macro that adds a "He
 }
 ```
 
-2. Create a 4D class named `AddButton`.
+2. 次に、`AddButton` という名前の 4Dクラスを作成します。
 
-3. Within the `AddButton` class, write the following function:
+3. `AddButton` クラスに次の関数を定義します:
 
 ```4d
 Function onInvoke($editor : Object)->$result : Object
@@ -69,29 +69,29 @@ Function onInvoke($editor : Object)->$result : Object
 
 You can then call the macro: ![](../assets/en/FormEditor/macroex1.png) ![](../assets/en/FormEditor/macroex2.png)
 
-## Calling macros in the Form editor
+## フォームエディターでマクロを呼び出す
 
-When macros are defined in your 4D project, you can call a macro using the contextual menu of the Form editor:
+4Dプロジェクトにマクロが定義されていると、フォームエディターのコンテキストメニューを使ってマクロを呼び出すことができます:
 
 ![](../assets/en/FormEditor/macroSelect.png)
 
-This menu is built upon the `formMacros.json` [macro definition file(s)](#location-of-macros). Macro items are sorted in alphabetical order.
+このメニューは `formMacros.json` [マクロ定義ファイル](#マクロファイルの場所) をもとに作成されています。 マクロメニュー項目はABC順に表示されます。
 
-This menu can be called in an empty area or a selection in the form. Selected object are passed to `$editor.currentSelection` or `$editor.target` in the [`onInvoke`](#oninvoke) function of the macro.
+このメニューは、フォームエディター内で右クリックにより開くことができます。 選択オブジェクトがある状態や、フォームオブジェクトの上でマクロを呼び出した場合は、それらのオブジェクト名がマクロの [`onInvoke`](#oninvoke) 関数の `$editor.currentSelection` や `$editor.target` パラメーターに受け渡されます。
 
-A single macro can execute several operations. If selected, the **Undo** feature of the Form editor can be used to reverse macro operations globally.
+1つのマクロによって複数の処理を実行することができます。 マクロで実行した処理は、フォームエディターの **取り消し** 機能でもとに戻すことができます。
 
-## Location of macro file
+## マクロファイルの場所
 
-All 4D Form Editor macros are defined within a single JSON file per project or component: `FormMacros.json`.
+4Dフォームエディターマクロは、プロジェクトあるいはコンポーネントごとに 1つの JSONファイルによって定義されます: `FormMacros.json`。
 
-This file must be located in the host or component's **Project** > **Sources** folder:
+このファイルは、ホストまたはコンポーネントプロジェクトの **Project** > **Sources** フィルダーに配置しなければなりません:
 
 ![](../assets/en/FormEditor/macroStructure.png)
 
-## Declaring macros
+## マクロの宣言
 
-The structure of the `formMacros.json` file is the following:
+`formMacros.json` ファイルの構造は次の通りです:
 
 ```js
 {
@@ -104,18 +104,18 @@ The structure of the `formMacros.json` file is the following:
 }
 ```
 
-Here is the description of the JSON file contents:
+JSONファイルの説明です:
 
-| Attribute |                     |                          | Type   | Description                                            |
-| --------- | ------------------- | ------------------------ | ------ | ------------------------------------------------------ |
-| macros    |                     |                          | object | list of defined macros                                 |
-|           | `<macroName>` |                          | object | macro definition                                       |
-|           |                     | class                    | string | macro class name                                       |
-|           |                     | `<customProperty>` | any    | (optional) custom value to retrieve in the constructor |
+| 属性     |                     |                          | タイプ    | 詳細                         |
+| ------ | ------------------- | ------------------------ | ------ | -------------------------- |
+| macros |                     |                          | object | 定義されたマクロのリスト               |
+|        | `<macroName>` |                          | object | マクロ定義                      |
+|        |                     | クラスの新規オブジェクト             | string | マクロクラス名                    |
+|        |                     | `<customProperty>` | any    | (任意) コンストラクターによって取得するカスタム値 |
 
-Custom properties, when used, are passed to the [constructor](#class-constructor) function of the macro.
+カスタムプロパティはマクロの [constructor](#class-constructor) 関数に受け渡されます。
 
-### Example
+### 例題
 
 ```js
 {
@@ -135,40 +135,40 @@ Custom properties, when used, are passed to the [constructor](#class-constructor
 }
 ```
 
-## Instantiating macros in 4D
+## マクロのインスタンス化
 
-Each macro you want to instantiate in your project or component must be declared as a [4D class](Concepts/classes.md).
+プロジェクトおよびコンポーネントにおいてインスタンス化するマクロは、それぞれ [4Dクラス](Concepts/classes.md) として宣言する必要があります。
 
-The class name must match the name defined using the [class](#creating-macros) attribute of the `formMacros.json` file.
+クラスの名称は、`formMacros.json` ファイルで [class](#マクロの宣言) 属性に定義した名前と同一でなくてはなりません。
 
-Macros are instantiated at application startup. Consequently, if you modify the macro class structure (add a function, modify a parameter...) or the [constructor](#class-constructor), you will have to restart the application to apply the changes.
+マクロは、アプリケーションの起動時にインスタンス化されます。 そのため、関数の追加やパラメーターの編集など、マクロクラスになんらかの変更を加えた場合には、それらを反映するにはアプリケーションを再起動する必要があります。
 
-## Macro Functions
+## マクロ関数
 
-Every macro class can contain a `Class constructor` and two functions: `onInvoke()` and `onError()`.
+マクロクラスは、1つの `Class constructor` のほかに、`onInvoke()` および `onError()` という 2つの関数を持つことができます。
 
 ### Class constructor
 
 #### Class constructor($macro : Object)
 
-| Parameter | Type   | Description                                              |
-| --------- | ------ | -------------------------------------------------------- |
-| $macro    | Object | Macro declaration object (in the `formMacros.json` file) |
+| 引数     | タイプ    | 詳細                                 |
+| ------ | ------ | ---------------------------------- |
+| $macro | Object | `formMacros.json` ファイルのマクロ宣言オブジェクト |
 
-Macros are instantiated using a [class constructor](Concepts/classes.md#class-constructor) function, if it exists.
+[Class constructor](Concepts/classes.md#class-constructor) 関数が定義されている場合、マクロはそれによってインスタンス化されます。
 
-The class constructor is called once during class instantiation, which occurs at application startup.
+アプリケーションの起動時にクラスがインスタンス化される際に、このコンストラクターが呼び出されます。
 
-Custom properties added to the [macro declaration](#declaring-macros) are returned in the parameter of the class contructor function.
+[マクロの宣言](#マクロの宣言) に追加したカスタムプロパティは、クラスコンストラクターが引数として受け取ります。
 
-#### Example
+#### 例題
 
-In the `formMacros.json` file:
+`formMacros.json` ファイルに次のようなマクロ宣言をした場合:
 
 ```js
 {
    "macros": {
-     "Align to Left on Target Object": {
+     "最後に選択したオブジェクトを基準に左揃え": {
        "class": "AlignOnTarget",
        "myParam": "left"
      }
@@ -176,56 +176,55 @@ In the `formMacros.json` file:
 }
 ```
 
-You can write:
+以下のように書くことができます:
 
 ```4d  
-// Class "AlignOnTarget"
+// クラス "AlignOnTarget"
 Class constructor($macro : Object)
-    This.myParameter:=$macro.myParam //left
-    ...
+    This.myParameter:=$macro.myParam // left    ...
 ```
 
 ### onInvoke()
 
 #### onInvoke($editor : Object) -> $result : Object
 
-| Parameter | Type   | Description                                                                          |
-| --------- | ------ | ------------------------------------------------------------------------------------ |
-| $editor   | Object | Form Editor Macro Proxy object containing the form properties                        |
-| $result   | Object | Form Editor Macro Proxy object returning properties modified by the macro (optional) |
+| 引数      | タイプ    | 詳細                                            |
+| ------- | ------ | --------------------------------------------- |
+| $editor | Object | フォームプロパティを格納する Form Editor Macro Proxy オブジェクト |
+| $result | Object | マクロによって変更されたフォームプロパティ (任意)                    |
 
-The `onInvoke` function is automatically executed each time the macro is called.
+マクロが呼び出されるたびに、`onInvoke` 関数が自動的に実行されます。
 
-When the function is called, it receives in the `$editor.editor` property a copy of all the elements of the form with their current values. You can then execute any operation on these properties.
+呼び出しの際、関数は `$editor.editor` プロパティに、フォームの全要素とそれらの現在値のコピーを受け取ります。 つまり、これらのプロパティに対して、任意の処理を実行することができます。
 
-Once operations are completed, if the macro results in modifying, adding, or removing objects, you can pass the resulting edited properties in `$result`. The macro processor will parse the returned properties and apply necessary operations in the form. Obviously, the less properties you return, the less time processing will require.
+マクロによってオブジェクトを変更・追加・削除した場合、操作を反映させるには最後に結果のプロパティを `$result` に返します。 返されたプロパティは解析され、フォームに対して変更が適用されます。 戻り値に含まれるプロパティが少ないほど、この処理にかかる時間も削減されます。
 
-Here are the properties returned in the *$editor* parameter:
+*$editor* 引数にて渡されるプロパティは次の通りです:
 
-| Property                         | Type       | Description                                                                       |
-| -------------------------------- | ---------- | --------------------------------------------------------------------------------- |
-| $editor.editor.form              | Object     | The entire form                                                                   |
-| $editor.editor.file              | File       | File object of the form file                                                      |
-| $editor.editor.name              | String     | Name of the form                                                                  |
-| $editor.editor.table             | number     | Table number of the form, 0 for project form                                      |
-| $editor.editor.currentPageNumber | number     | The number of the current page                                                    |
-| $editor.editor.currentPage       | Object     | The current page, containing all the form objects and the entry order of the page |
-| $editor.editor.currentSelection  | Collection | Collection of names of selected objects                                           |
-| $editor.editor.formProperties    | Object     | Properties of the current form                                                    |
-| $editor.editor.target            | string     | Name of the object under the mouse when clicked on a macro                        |
+| プロパティ                            | タイプ    | 詳細                               |
+| -------------------------------- | ------ | -------------------------------- |
+| $editor.editor.form              | Object | フォーム全体                           |
+| $editor.editor.file              | File   | フォームファイルの Fileオブジェクト             |
+| $editor.editor.name              | String | フォームの名称                          |
+| $editor.editor.table             | number | フォームのテーブル番号。プロジェクトフォームの場合は 0。    |
+| $editor.editor.currentPageNumber | number | 現在のページの番号                        |
+| $editor.editor.currentPage       | Object | 現在のページ (フォームオブジェクトおよび入力順序を格納)    |
+| $editor.editor.currentSelection  | コレクション | 選択されているオブジェクトの名称のコレクション          |
+| $editor.editor.formProperties    | Object | カレントフォームのプロパティ                   |
+| $editor.editor.target            | string | マクロ呼び出し時にマウスカーソルが置かれているオブジェクトの名称 |
 
-Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. All properties are optional:
+マクロによる変更をフォームに反映させたい場合に、`$result` オブジェクトに渡せるプロパティの一覧です。 いずれのプロパティも任意です:
 
-| Property          | Type       | Description                                                 |
-| ----------------- | ---------- | ----------------------------------------------------------- |
-| currentPage       | Object     | currentPage including objects modified by the macro, if any |
-| currentSelection  | Collection | currentSelection if modified by the macro                   |
-| formProperties    | Object     | formProperties if modified by the macro                     |
-| editor.groups     | Object     | group info, if groups are modified by the macro             |
-| editor.views      | Object     | view info, if views are modified by the macro               |
-| editor.activeView | String     | Active view name                                            |
+| プロパティ             | タイプ    | 詳細                                |
+| ----------------- | ------ | --------------------------------- |
+| currentPage       | Object | マクロによって変更されたオブジェクトを含む currentPage |
+| currentSelection  | コレクション | マクロによって変更された currentSelection     |
+| formProperties    | Object | マクロによって変更された formProperties       |
+| editor.groups     | Object | マクロによって変更されたグループ情報                |
+| editor.views      | Object | マクロによって変更されたビュー情報                 |
+| editor.activeView | String | 有効なビュー名                           |
 
-For example, if objects of the current page and groups have been modified, you can write:
+たとえば、currentPage と editor.groups の内容が変わった場合には、戻り値を次のように設定します:
 
 ```4d
  $result:=New object("currentPage"; $editor.editor.currentPage ; \ 
@@ -233,32 +232,32 @@ For example, if objects of the current page and groups have been modified, you c
 
 ```
 
-#### `method` attribute
+#### `method` 属性
 
-When handling the `method` attribute of form objects, you can define the attribute value in two ways in macros:
+フォームオブジェクトの `method` 属性を操作する場合、属性値は2通りの方法で定義できます:
 
-* Using a [string containing the method file name/path](FormObjects/properties_Action.md#method).
+* [メソッドファイル名あるいはパスを指定する文字列](FormObjects/properties_Action.md#メソッド) の使用
 
-* Using an object with the following structure:
+* 次の構造を持つオブジェクトの使用:
 
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-|          |      |             |
- source|String|method code|
+| プロパティ | タイプ | 詳細 |
+| ----- | --- | -- |
+|       |     |    |
+ source|文字列|メソッドコード|
 
-4D will create a file using the object name in the "objectMethods" folder with the content of `source` attribute. This feature is only available for macro code.
+後者の場合、4D は "objectMethods" フォルダー内に当該オブジェクト名を冠したファイルを作成し、`source` 属性に指定したメソッドコードを格納します。 この機能はマクロコードの場合にのみ有効です。
 
-#### `$4dId` property in `currentPage.objects`
+#### `currentPage.objects` の `$4dId` プロパティ
 
-The `$4dId` property defines a unique ID for each object in the current page. This key is used by the macro processor to control changes in `$result.currentPage`:
+`$4dId` プロパティは、現在のページにある各オブジェクトについて一意のIDを定義します。 このキーは`$result.currentPage` の変更を反映させるのに使用されます:
 
-* if the `$4dId` key is missing in both the form and an object in `$result`, the object is created.
-* if the `$4dId` key exists in the form but is missing in `$result`, the object is deleted.
-* if the `$4dId` key exists in both the form and an object in `$result`, the object is modified.
+* フォーム上および `$result` 内のオブジェクトの両方で `$4dId` キーが存在しない場合、そのオブジェクトは作成されます。
+* フォーム上で存在する `$4dId` キーが、`$result` 内には存在しない場合、当該オブジェクトは削除されます。
+* フォーム上および `$result` 内のオブジェクトの両方で `$4dId` キーが存在する場合、そのオブジェクトは変更されます。
 
-#### Example
+#### 例題
 
-You want to define a macro function that will apply the red color and italic font style to any selected object(s).
+選択されているオブジェクトに対して、フォントカラーを赤に、フォントスタイルをイタリックに変更するマクロ関数を定義します。
 
 ```4d
 Function onInvoke($editor : Object)->$result : Object
@@ -284,25 +283,25 @@ Function onInvoke($editor : Object)->$result : Object
 
 #### onError($editor : Object; $resultMacro : Object ; $error : Collection)
 
-| Parameter    |                       | Type       | Description                              |
-| ------------ | --------------------- | ---------- | ---------------------------------------- |
-| $editor      |                       | Object     | Object send to [onInvoke](#oninvoke)     |
-| $resultMacro |                       | Object     | Object returned by [onInvoke](#oninvoke) |
-| $error       |                       | Collection | Error stack                              |
-|              | [].errCode            | Number     | Error code                               |
-|              | [].message            | Text       | Description of the error                 |
-|              | [].componentSignature | Text       | Internal component signature             |
+| 引数           |                       | タイプ    | 詳細                                   |
+| ------------ | --------------------- | ------ | ------------------------------------ |
+| $editor      |                       | Object | [onInvoke](#oninvoke) に渡されたオブジェクト    |
+| $resultMacro |                       | Object | [onInvoke](#oninvoke) によって返されたオブジェクト |
+| $error       |                       | コレクション | エラースタック                              |
+|              | [].errCode            | 数値     | エラーコード                               |
+|              | [].message            | テキスト   | エラーの詳細                               |
+|              | [].componentSignature | テキスト   | 内部コンポーネントのシグネチャー                     |
 
-The `onError` function is executed when the macros processor encounters an error.
+マクロの実行時にエラーが発生した場合、`onError` 関数が実行されます。
 
-When executing a macro, if 4D encounters an error which prevents the macro from being cancelled, it does not execute the macro. It is the case for example if executing a macro would result in:
+マクロの実行時に発生したエラーが、マクロの取り消しを不可能にする内容の場合、マクロは実行されません。 たとえば次のような場合が該当します:
 
-* deleting or modifying a script whose file is read-only.
-* creating two objects with the same internal ID.
+* 読み取り専用ファイルのスクリプトを変更・削除しようとしたとき
+* 同じ内部ID を持つオブジェクトを複数作成しようとしたとき
 
-#### Example
+#### 例題
 
-In a macro class definition, you can write the following generic error code:
+マクロクラス定義に、次のような汎用的なエラーコードを書くことができます:
 
 ```4d
 Function onError($editor : Object; $resultMacro : Object; $error : Collection)
