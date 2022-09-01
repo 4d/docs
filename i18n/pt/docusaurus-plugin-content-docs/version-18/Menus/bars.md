@@ -1,6 +1,6 @@
 ---
 id: bars
-title: Menu bar features
+title: Barras de menus
 ---
 
 Menu bars provide the major interface for custom applications. For each custom application, you must create at least one menu bar with at least one menu. By default, Menu Bar #1 is the menu bar displayed in the Application environment. You can change which menu bar is displayed using the `SET MENU BAR` command.
@@ -24,7 +24,7 @@ The splash screen picture can be set only in the Menu editor: select the menu ba
 
 You can view the final result by testing the menu bar (see the following section). In Application mode, the picture is displayed in the splash screen with the "Truncated (Centered)" type format.
 
-> You can choose whether to display or hide this window using the **Display toolbar** option in the Database Settings.
+> Pode escolher se quer exibir ou esconder a janela usando a opção **Mostrar a barra de ferramentas** nas Propriedades do Banco de Dados.
 
 To remove the custom picture and display the default one instead, click on the **Clear** button or select **Clear** in the area pop-up menu.
 
