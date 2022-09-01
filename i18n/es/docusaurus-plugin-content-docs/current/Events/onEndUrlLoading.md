@@ -3,11 +3,11 @@ id: onEndUrlLoading
 title: On End URL Loading
 ---
 
-| Code | Can be called by                            | Definition                                    |
-| ---- | ------------------------------------------- | --------------------------------------------- |
-| 49   | [Web Area](FormObjects/webArea_overview.md) | All the resources of the URL have been loaded |
+| Code | Puede ser llamado por                       | Definición                                  |
+| ---- | ------------------------------------------- | ------------------------------------------- |
+| 49   | [Área Web](FormObjects/webArea_overview.md) | Se han cargado todos los recursos de la URL |
 
 
-## Description
+## Descripción
 
-This event is generated once the loading of all resources of the URL is complete. You can call the `WA Get current URL` command in order to find out the URL that was loaded.
+Este evento se genera una vez que se ha completado la carga de todos los recursos de la URL. Puedes llamar al comando `WA Get current URL` para conocer la URL que se cargó.
