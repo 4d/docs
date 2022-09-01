@@ -1,19 +1,19 @@
 ---
 id: variables
-title: Variables
+title: Variáveis
 ---
 
-Data in 4D is stored in two fundamentally different ways. **Fields** store data permanently on disk; **variables** store data temporarily in memory.
+Os dados em 4D são armazenados de duas formas fundamentalmente diferentes. **Os campos** armazenam os dados permanentemente no disco; **as variáveis** armazenam os dados na memória de forma temporal.
 
-When you set up your 4D database, you specify the names and types of fields that you want to use. Variables are much the same—you also give them names and different types (see [Data types](Concepts/data-types.md)).
+Quando cria a sua base de dados 4D, especifica os nomes e tipos de campos que pretende utilizar. Com as variáveis é mais ou menos a mesma coisa, também se lhes dá nomes e tipos diferentes (ver [Tipos de dados](Concepts/data-types.md)).
 
-Once created, you can use a variable wherever you need it in your application. For example, you might need to store a text variable in a field of same type:
+Após a criação pode usar a variável onde quiser na sua aplicação. Por exemplo, pode precisar armazenar uma variável texto em um campo do mesmo tipo
 
 ```4d
  [MyTable]MyField:=MyText
 ```
 
-Variables are language objects; you can create and use variables that will never appear on the screen. In your forms, you can display variables (except Pointer and BLOB) on the screen, enter data into them, and print them in reports. In this way, enterable and non-enterable area variables act just like fields, and the same built-in controls are available when you create them. Form variables can also control buttons, list boxes, scrollable areas, picture buttons, and so on, or display results of calculations that do not need to be saved.
+As variáveis são objetos da linguagem; pode criar e utilizar variables que nunca aparecerão na tela. In your forms, you can display variables (except Pointer and BLOB) on the screen, enter data into them, and print them in reports. In this way, enterable and non-enterable area variables act just like fields, and the same built-in controls are available when you create them. Form variables can also control buttons, list boxes, scrollable areas, picture buttons, and so on, or display results of calculations that do not need to be saved.
 
 ## Declaring Variables
 
@@ -38,12 +38,12 @@ To declare a variable of any type with the `var` keyword, use the following synt
 
 `var <varName>{; <varName2>;...}{ : <varType>}`
 
-For example:
+Por exemplo:
 
 ```4d
 var $myText : Text  //a text variable
 var myDate1; myDate2 : Date  //several date variables
-var $myFile : 4D.File  //a file class object variable
+var $myFile : 4D. File  //a file class object variable
 var $myVar //a variant variable
 ```
 
@@ -58,24 +58,24 @@ If `varType` is omitted, a variable of the **variant** type is created.
 
 The following table lists all supported `varType` values:
 
-| varType                | Contents                              |
-| ---------------------- | ------------------------------------- |
-| `Text`                 | Text value                            |
-| `Date`                 | Date value                            |
-| `Time`                 | Time value                            |
-| `Boolean`              | Boolean value                         |
-| `Integer`              | Long integer value                    |
-| `Real`                 | Real value                            |
-| `Pointer`              | Pointer value                         |
-| `Picture`              | Picture value                         |
-| `Blob`                 | Scalar Blob value                     |
-| `Collection`           | Collection value                      |
-| `Variant`              | Variant value                         |
-| `Object`               | Object with default class (4D.Object) |
-| `4D.<className>` | Object of the 4D class name           |
-| `cs.<className>` | Object of the user class name         |
+| varType                | Conteúdos                              |
+| ---------------------- | -------------------------------------- |
+| `Text`                 | Text value                             |
+| `Date`                 | Date value                             |
+| `Hora`                 | Time value                             |
+| `Booleano`             | Boolean value                          |
+| `Integer`              | Long integer value                     |
+| `Real`                 | Real value                             |
+| `Ponteiro`             | Pointer value                          |
+| `Imagem`               | Picture value                          |
+| `Blob`                 | Scalar Blob value                      |
+| `Collection`           | Collection value                       |
+| `Variant`              | Variant value                          |
+| `Objeto`               | Object with default class (4D. Object) |
+| `4D.<className>` | Object of the 4D class name            |
+| `cs.<className>` | Object of the user class name          |
 
-#### Examples
+#### Exemplos
 
 - To declare local and process basic variables:
 
@@ -85,23 +85,23 @@ var myVar //variant
 
 var $o : Object    
 //equivalent to:  
-var $o : 4D.Object
+var $o : 4D. Object
 //also equivalent to C_OBJECT($o)
 ```
 
 - To declare object variables of 4D class:
 
 ```4d
-var $myFolder : 4D.Folder
-var $myFile : 4D.File
+var $myFolder : 4D. Folder
+var $myFile : 4D. File
 ```
 
 - To declare object variables of user class:
 
 ```4d
-var $myClass : cs.MyClass
-var $dataclass : cs.Employee
-var $entity : cs.EmployeeEntity
+var $myClass : cs. MyClass
+var $dataclass : cs. Employee
+var $entity : cs. EmployeeEntity
 ```
 
 ### Using a C_ directive
@@ -132,7 +132,7 @@ The following are some basic variable declarations:
 
 Data can be put into and copied out of variables and arrays. Putting data into a variable is called **assigning the data to the variable** and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields.
 
-The assignment operator is a primary way to create a variable and to put data into it. You write the name of the variable that you want to create on the left side of the assignment operator. For example:
+The assignment operator is a primary way to create a variable and to put data into it. You write the name of the variable that you want to create on the left side of the assignment operator. Por exemplo:
 
 ```4d
 MyNumber:=3
@@ -174,7 +174,7 @@ The name of a local variable always starts with a dollar sign ($) and can contai
 
 When you are working in an application project with many methods and variables, you often find that you need to use a variable only within the method on which you are working. You can create and use a local variable in the method without worrying about whether you have used the same variable name somewhere else.
 
-Frequently, in an application, small pieces of information are needed from the user. The `Request` command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. Here is an example:
+Frequently, in an application, small pieces of information are needed from the user. The `Request` command can obtain this information. It displays a dialog box with a message prompting the user for a response. When the user enters the response, the command returns the information the user entered. You usually do not need to keep this information in your methods for very long. This is a typical way to use a local variable. This is a typical way to use a local variable. Aqui um exemplo simples:
 
 ```4d
  $vsID:=Request("Please enter your ID:")
