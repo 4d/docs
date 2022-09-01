@@ -3,18 +3,18 @@ id: binary
 title: '$binary'
 ---
 
-Pass "true" to save the BLOB as a document (must also pass `$expand={blobAttributeName}`)
+ドキュメントを BLOB として保存するには "true" を渡します (`$expand={blobAttributeName}` も渡す必要があります)
 
-## Description
+## 詳細
 
-`$binary` allows you to save the BLOB as a document.  You must also use the [`$expand`]($expand.md) command in conjunction with it.
+`$binary` を使うと、ドキュメントを BLOB として保存できます。  [`$expand`]($expand.md) コマンドとの組み合わせで使う必要があります。
 
-When you make the following request:
+以下のリクエストを実行した場合:
 
 ```
 GET  /rest/Company(11)/blobAtt?$binary=true&$expand=blobAtt
 ```
 
-You will be asked where to save the BLOB to disk:
+ディスク上の BLOB の保存先を聞かれます:
 
 ![](../assets/en/REST/binary.png)
