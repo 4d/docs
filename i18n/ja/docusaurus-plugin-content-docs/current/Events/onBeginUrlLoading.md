@@ -3,13 +3,13 @@ id: onBeginUrlLoading
 title: On Begin URL Loading
 ---
 
-| Code | Can be called by                            | Definition                          |
-| ---- | ------------------------------------------- | ----------------------------------- |
-| 47   | [Web Area](FormObjects/webArea_overview.md) | A new URL is loaded in the Web area |
+| コード | 呼び出し元                                     | 定義                       |
+| --- | ----------------------------------------- | ------------------------ |
+| 47  | [Webエリア](FormObjects/webArea_overview.md) | 新しい URL が Web エリアにロードされた |
 
 
-## Description
+## 詳細
 
-This event is generated at the start of loading a new URL in the Web area. The `URL` variable associated with the Web area can be used to find out the URL being loaded.
+このイベントは、Webエリアに新しい URL のロードを開始した時に生成されます。 Webエリアに関連付けられた `URL` 変数を使用してロード中の URL を知ることができます。
 
-> The URL being loaded is different from the [current URL](FormObjects/properties_WebArea.md#url-variable-and-wa-open-url-command) (refer to the description of the `WA Get current URL` command).
+> ロード中の URL は [カレントURL](FormObjects/properties_WebArea.md#url変数と-wa-open-url-コマンド) とは異なります (`WA Get current URL` コマンドの説明参照)。
