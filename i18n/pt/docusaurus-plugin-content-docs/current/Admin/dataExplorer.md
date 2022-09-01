@@ -3,36 +3,36 @@ id: dataExplorer
 title: Web Data Explorer
 ---
 
-> **Preview**: The Web Data Explorer is provided as a preview feature. Using this feature in production is not recommended. The final implementation could be slightly different.
+> **Preview**: O Web Data Explorer está sendo oferecido como uma funcionalidade em modo preview. Using this feature in production is not recommended. The final implementation could be slightly different.
 
-The Data Explorer provides a web interface to view and query data in your project datastore. Using this tool, you can easily browse among all your entities and search, order, or filter attribute values. It helps you to control data and quickly identify issues at any step of the development process.
+O Data Explorer oferece uma interface web para ver e pesquisar dados em sua datastore de projeto. Ao usar esta ferramente, pode navegar facilmente entre todas suas entidades e pesquisar, ordenar ou filtrar valores de atributos. It helps you to control data and quickly identify issues at any step of the development process.
 
 ![alt-text](../assets/en/Admin/dataExplorer1.png)
 
-## Access Configuration
+## Configuração
 
-The Data Explorer relies on the [`WebAdmin`](webAdmin.md) web server component for the configuration and authentication settings.
+O Data Explorer depende do componente web server [`WebAdmin`](webAdmin.md) para a configuração e preferências de autentificação.
 
-- **configuration**: the Data Explorer configuration reuses the [`WebAdmin` web server settings](webAdmin.md#webadmin-settings),
-- **authentication**: access to the Data Explorer is granted when the [session user is authenticated](webAdmin.md#authentication-and-session) and has the "WebAdmin" privilege. When the Data Explorer is accessed through the **Data Explorer** menu item (see below), an automatic authentication is provided.
+- **configuration**: a configuração de Data Explorer reutiliza as configurações [`WebAdmin` de web server](webAdmin.md#webadmin-settings),
+- **authentication**: acesso ao Data Explorer é oferecido quando  [a sessão de usuário for autenticada](webAdmin.md#authentication-and-session) e tem o privilégio "WebAdmin". Quando o Data Explorer for acessado através do item de menu**Data Explorer** (ver abaixo), uma autenticação automática é oferecida.
 
-> The Data Explorer access can be disabled using the [`.setAdminProtection()`](API/DataStoreClass.md#setadminprotection) function.
+> O acesso ao Data Explorer pode ser desativado usando a função [`.setAdminProtection()`](API/DataStoreClass.md#setadminprotection).
 
-## Opening the Data Explorer
+## Abrindo o Data Explorer
 
-The Data Explorer page is automatically available when [the `WebAdmin` web server is started](webAdmin.md#starting-the-webadmin-web-server).
+A página do Data Explorer está disponível automaticamente quando o web server [the `WebAdmin` for iniciado](webAdmin.md#starting-the-webadmin-web-server).
 
-To connect to the Data Explorer web page:
+Para se conectar à página web do Data Explorer:
 
-- if you use a 4D application with interface, select **Data Explorer...** command from:
-  - the **Records** menu (in 4D stand-alone)
-  - the **Window** menu (in 4D Server)
+- Se usar a aplicação 4D com interface, selecione o comando **Data Explorer...** :
+  - no menu **Records**  (em 4D monousuário)
+  - no menu **Window**  (em 4D Server)
 
-- whether you use a headless 4D application or not, you can open your web browser and enter the following address:
+- mesmo se usar uma aplicação 4D headless, pode abrir seu navegador web e digitar o endereço abaixo:
 
  `IPaddress:HTTPPort/dataexplorer` or `IPaddress:HTTPSPort/dataexplorer`
 
- In this context, you will be prompted to enter the [access key](webAdmin.md#access-key) to open a `WebAdmin` session on the server:
+ Neste contexto será pedido que digite a [chave de acesso](webAdmin.md#access-key) para abrir uma sessão `WebAdmin` no servidor:
 
 ![alt-text](../assets/en/Admin/accessKeyEnter.png)
 
@@ -42,7 +42,7 @@ To connect to the Data Explorer web page:
 
 In addition to a comprehensive and customizable view of your data, the Data Explorer allows you to query and order your data.
 
-### Requirements
+### Requisitos
 
 The Data Explorer supports the following web browsers:
 
@@ -53,7 +53,7 @@ The Data Explorer supports the following web browsers:
 
 The minimum resolution to use the Data Explorer is 1280x720. Recommended resolution is 1920x1080.
 
-### Basics
+### Básicos
 
 The Data Explorer provides an overall access to the ORDA data model with respect to the [ORDA mapping rules](ORDA/dsMapping.md#general-rules).
 
@@ -114,7 +114,7 @@ With numeric, date, and time attributes, the "=" operator is selected by default
 
 ![alt-text](../assets/en/Admin/DEFilter1.png)
 
-#### Dates
+#### Datas
 
 With date attributes, you can enter the date to use through a datepicker widget (click on the date area to display the calendar):
 
@@ -135,9 +135,9 @@ Text filters are not diacritic (a = A).
 
 The filter is of the "starts with" type. For example, entering "Jim" will show "Jim" and "Jimmy" values.
 
-You can also use the wildcard character (@) to replace one or more starting characters. For example:
+You can also use the wildcard character (@) to replace one or more starting characters. Por exemplo:
 
-| A filter with | Finds                                              |
+| A filter with | Resultados                                         |
 | ------------- | -------------------------------------------------- |
 | Bel           | All values beginning with “Bel”                    |
 | @do           | All values containing “do”                         |
