@@ -1,90 +1,90 @@
 ---
 id: subformOverview
-title: Subform
+title: Sous-formulaire
 ---
 
 
-A subform is a form included in another form.
+Un sous-formulaire est un formulaire inclus dans un autre formulaire.
 
-## Terminology
+## Terminologie
 
-In order to clearly define the concepts implemented with subforms, here are some definitions for certain terms used:
+Afin de bien définir les notions mises en oeuvre avec les sous-formulaires, voici quelques définitions relatives aux termes employés :
 
-* **Subform**: a form intended for inclusion in another form, itself called the parent form.
-* **Parent form**: a form containing one or more subform(s).
-* **Subform container**: an object included in the parent form, displaying an instance of the subform.
-* **Subform instance**: the representation of a subform in a parent form. This concept is important because it is possible to display several instances of the same subform in a parent form.
-* **List form**: instance of subform displayed as a list.
-* **Detail form**: page-type input form associated with a list-type subform that can be accessed by double-clicking in the list.
+* **Sous-formulaire** : formulaire destiné à être inclus dans un autre formulaire, lui-même nommé formulaire parent.
+* **Formulaire parent** : formulaire contenant un ou plusieurs sous-formulaire(s).
+* **Conteneur de sous-formulaire** : objet inclus dans le formulaire parent, contenant une instance du sous-formulaire.
+* **Instance de sous-formulaire** : la représentation d’un sous-formulaire dans un formulaire parent. Cette notion est importante car il est possible d’afficher plusieurs instances d’un même sous-formulaire dans un formulaire parent.
+* **Formulaire liste écran** : instance de sous-formulaire en liste.
+* **Formulaire détaillé** : formulaire de saisie en page associé au sous-formulaire en liste et accessible via un double-clic dans la liste.
 
-## List subforms
+## Sous-formulaires en liste
 
-A list subform lets you enter, view, and modify data in other tables. You usually use list subforms in databases in which you have established One to Many relations. A list subform on a form in a related One table lets you view, enter, and modify data in a related Many table. You can have several subforms coming from different tables in the same form. However, it is not possible to place two subforms that belong to the same table on the same page of a form.
+Un sous-formulaire en liste vous permet de saisir, visualiser et modifier des données dans d’autres tables. Les sous-formulaires en liste sont généralement utilisés avec les bases de données utilisant des liens de type 1 vers N. Un sous-formulaire en liste affiche les enregistrements de la table N liée par un lien automatique de type 1 vers N. Vous pouvez disposer de plusieurs sous-formulaires provenant de différentes tables dans le même formulaire. En revanche, il n’est pas possible de placer deux sous-formulaires appartenant à la même table dans une même page de formulaire.
 
-For example, a Contacts manager database might use a list subform to display all the telephone numbers for a particular contact. Although the telephone numbers appear on the Contacts screen, the information is actually stored in a related table. Using a One to Many relation, this database design makes it easy to store an unlimited number of telephone numbers per contact. With automatic relations, you can support data entry directly into the related Many table without programming.
+Par exemple, une base de gestion de contacts peut utiliser une instance de sous-formulaire en liste pour afficher tous les contacts d’une société. Bien que les contacts apparaissent dans l’écran général, l’information est en fait stockée dans la table liée. A l’aide d’un lien 1 vers N, la conception de cette base de données rend facile le stockage d’un nombre illimité de contacts pour chacune des sociétés. Avec des liens automatiques, vous pouvez permettre la saisie de données dans la table liée sans programmation.
 
-Although list subforms are generally associated with Many tables, a subform instance can display the records of any other database table.
+Bien que les sous-formulaires en liste soient généralement associés aux tables N, une instance de sous-formulaire peut afficher des enregistrements de toute autre table de la base de données.
 
-You can also allow the user to enter data in the List form. Depending on the configuration of the subform, the user may display the detail form by double-clicking on a subrecord or by using the commands for adding and editing subrecords.
+Vous pouvez également permettre à l’utilisateur de saisir des données dans le formulaire liste. Suivant la configuration du sous-formulaire, l’utilisateur pourra afficher le formulaire détaillé en double-cliquant sur un sous-enregistrement ou en utilisant les commandes d’ajout et de modification des sous-enregistrements.
 
-> 4D offers three standard actions to meet the basic needs for managing subrecords: `Edit Subrecord`, `Delete Subrecord`, and `Add Subrecord`. When the form includes several subform instances, the action will apply to the subform that has the focus.
+> 4D propose trois actions standard, permettant de répondre aux besoins élémentaires de gestion des sous-enregistrements : `Modifier sous-enregistrement`, `Supprimer sous-enregistrement` et `Ajouter sous-enregistrement`. Lorsque le formulaire comporte plusieurs instances de sous-formulaires, l’action s’applique au sous-formulaire ayant le focus.
 
-## Page subforms
+## Sous-formulaires en page
 
-Page subforms can display the data of the current subrecord or any type of pertinent value depending on the context (variables, pictures, and so on). One of the main advantages of using page subforms is that they can include advanced functionalities and can interact directly with the parent form (widgets). Page subforms also have their own specific properties and events; you can manage them entirely by programming.
+Les sous-formulaires en mode page peuvent afficher des données relatives à l'enregistrement courant ou toute valeur pertinente en fonction du contexte (variables, images, etc.). Il peuvent également, et c'est là leur intérêt majeur, comporter des fonctionnalités avancées et interagir avec le formulaire parent (widgets). Les sous-formulaires en page bénéficient de propriétés et d'événements spécifiques, et peuvent être entièrement contrôlés par programmation.
 
-The page subform uses the input form indicated by the [Detail Form](properties_Subform.md#detail-form) property. Unlike a list subform, the form used can come from the same table as the parent form. It is also possible to use a project form. When executed, a page subform has the same standard display characteristics as an input form.
+Le sous-formulaire en page utilise le formulaire entrée désigné par la propriété [Formulaire détaillé](properties_Subform.md#detail-form). A la différence d’un sous-formulaire en mode liste, le formulaire utilisé peut provenir de la même table que le formulaire parent. Il est également possible d’utiliser un formulaire projet. En exécution, un sous-formulaire en mode page dispose des caractéristiques d’affichage standard d’un formulaire entrée.
 
-> 4D Widgets are predefined compound objects based upon page subforms. They are described in detail in a separate manual, [4D Widgets](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Widgets.100-4465257.en.html).
+> Les widgets 4D sont des objets composés prédéfinis. Pour plus de détails sur les widgets, consultez le manuel [4D Widgets](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Widgets.100-4465257.en.html).
 
-### Managing the bound variable
+### Gestion de la variable liée
 
-The [variable](properties_Object.md#variable-or-expression) bound to a page subform lets you link the parent form and subform contexts to put the finishing touches on sophisticated interfaces. For example, imagine a subform representing a dynamic clock, inserted into a parent form containing an enterable variable of the Time type:
+La [variable](properties_Object.md#variable-or-expression) liée au sous-formulaire permet de relier les deux contextes (formulaire et sous-formulaire) pour mettre au point des interfaces sophistiquées. Imaginons par exemple un sous-formulaire représentant une pendule dynamique, inséré dans un formulaire parent contenant une variable saisissable de type heure :
 
 ![](../assets/en/FormObjects/subforms1.png)
 
-Both objects (time variable and subform container) *have the same variable name*. In this case, when you open the parent form, 4D synchronizes both values automatically. If the variable value is set at several locations, 4D uses the value that was loaded last. It applies the following loading order: 1-Object methods of subform 2-Form method of subform 3-Object methods of parent form 4-Form method of parent form
+Les deux objets (variable heure et conteneur du sous-formulaire) *ont le même nom de variable*. Dans ce cas, à l’ouverture du formulaire parent, les deux valeurs sont automatiquement synchronisées par 4D. Si la valeur de la variable est définie à plusieurs emplacements, la valeur utilisée sera celle qui aura été chargée en dernier lieu. It applies the following loading order: 1-Object methods of subform 2-Form method of subform 3-Object methods of parent form 4-Form method of parent form
 
-When the parent form is executed, the developer must take care to synchronize the variables using appropriate form events. Two types of interactions can occur: form to subform and vice versa.
+A l’exécution du formulaire parent, la synchronisation des variables doit être effectuée par le développeur à l’aide des événements formulaires adéquats. Deux types d’interactions peuvent se produire : du formulaire vers le sous-formulaire et inversement.
 
-#### Updating subform contents
+#### Mise à jour du contenu du sous-formulaire
 
-Case 1: The value of the parent form variable is modified and this modification must be passed on to the subform. In our example, the time of ParisTime changes to 12:15:00, either because the user entered it, or because it was updated dynamically (via the `Current time` command for example).
+Scénario 1 : La valeur de la variable du formulaire parent est modifiée et cette modification doit être répercutée dans le sous-formulaire. Dans notre exemple, l’heure de Heureparis passe à 12:15:00, soit parce que l’utilisateur l’a saisie, soit parce qu’elle est mise à jour dynamiquement (via la commande `Current time` par exemple).
 
-In this case, you must use the On Bound Variable Change form event. This event must be selected in the subform properties; it is generated in the form method of the subform.
+Dans ce cas, vous devez utiliser l'événement formulaire Sur modif variable liée. Cet événement doit être coché dans les propriétés du sous-formulaire, il sera généré dans la méthode formulaire du sous-formulaire.
 
 ![](../assets/en/FormObjects/subforms2.png)
 
-The `On Bound Variable Change` form event is generated:
+L’événement formulaire `Sur modif variable liée` est généré :
 
-* as soon as a value is assigned to the variable of the parent form, even if the same value is reassigned,
-* if the subform belongs to the current form page or to page 0.
+* dès qu’une valeur est affectée à la variable du formulaire parent, même si la même valeur est réaffectée,
+* si le sous-formulaire appartient à la page formulaire courante ou à la page 0.
 
-Note that, as in the above example, it is preferable to use the `OBJECT Get pointer` command which returns a pointer to the subform container rather than its variable because it is possible to insert several subforms in the same parent form (for example, a window displaying different time zones contains several clocks). In this case, only a pointer lets you know which subform container is at the origin of the event.
+A noter que, comme dans l’exemple ci-dessus, il est préférable d’utiliser la commande `OBJECT Get pointer` qui retourne un pointeur vers le conteneur de sous-formulaire plutôt que sa variable car il est possible d’insérer plusieurs sous-formulaires dans un même formulaire parent (par exemple, une fenêtre affichant des fuseaux horaires contiendrait plusieurs pendules). Dans ce cas, seul un pointeur permet de connaître le conteneur de sous-formulaire à l’origine de l’événement.
 
-#### Updating parent form contents
+#### Mise à jour du contenu du formulaire parent
 
-Case 2: The contents of the subform are modified and this modification must be passed on to the parent form. In our example, imagine that the subform interface lets the user "manually" move the hands of the clock.
+Scénario 2 : Le contenu du sous-formulaire est modifié et cette modification doit être répercutée dans le formulaire parent. Dans notre exemple, imaginons que l’interface du sous-formulaire permette à l’utilisateur de déplacer "manuellement" les aiguilles.
 
-In this case, from the subform, you must assign the object value to the variable of the parent subform container. As in the previous example, we recommend that you use the `OBJECT Get pointer` command with the `Object subform container` selector which returns a pointer to the subform container.
+Dans ce cas, vous devez affecter la valeur de l’objet à la variable du conteneur du sous-formulaire parent depuis le sous-formulaire. Comme dans l’exemple précédent, il est conseillé d’utiliser pour cela la commande `OBJECT Get pointer` avec le sélecteur `Objet conteneur sous formulaire` qui retourne un pointeur vers le conteneur du sous-formulaire.
 
-Assigning the value to the variable generates the `On Data Change` form event in the object method of the parent subform container, which lets you perform any type of action. The event must be selected in the properties of the subform container.
+Cette affectation génère l’événement formulaire `Sur données modifiées` dans la méthode de l’objet conteneur du sous-formulaire parent, ce qui vous permet d’effectuer tout type d’action. L’événement doit être coché dans les propriétés du conteneur de sous-formulaire.
 
 ![](../assets/en/FormObjects/subforms3.png)
 
-> If you "manually" move the hands of the clock, this also generates the `On Data Change` form event in the object method of the *clockValue* variable in the subform.
+> Si vous déplacez "manuellement" les aiguilles, cela génère également l’événement formulaire `Sur données modifiées` de l'événement formulaire dans la méthode objet de la variable *clockValue* du sous-formulaire.
 
-### Using the subform bound object
+### Utiliser l'objet associé au sous-formulaire
 
-4D automatically binds an object (`C_OBJECT`) to each subform. The contents of this object can be read and/or modified from within the context of the subform, allowing you to share values in a local context.
+4D associe automatiquement un objet de langage (`C_OBJECT`) à chaque sous-formulaire. Le contenu de cet objet peut être lu et/ou modifié depuis le contexte du sous-formulaire, ce qui vous permet de partager des valeurs dans un contexte local.
 
-The object can be created automatically or be the parent container variable, if explicitely named and typed as Object (see below). In all cases, the object is returned by the `Form` command, which can be called directy the subform (using a pointer is useless). Since objects are always passed by reference, if the user modifies a property value in the subform, it will automatically be saved in the object itself.
+L'objet peut être créé automatiquement ou être la variable du conteneur parent, si elle a été explicitement nommée et typée Objet (voir ci-dessus). Dans tous les cas, l'objet est retourné par la commande `Form`, qui peut être appelée directement dans le sous-formulaire (l'usage d'un pointeur est inutile). Comme les objets sont toujours passés par référence, si l'utilisateur modifie une valeur de propriété dans le sous-formulaire, elle sera automatiquement mise à jour dans l'objet lui-même.
 
-For example, in your subform, field labels are stored in the bound object so that you can display different languages:
+Par exemple, dans votre sous-formulaire, les libellés des champs sont stockés dans l'objet associé afin de vous permettre d'afficher différentes langues :
 
 ![](../assets/en/FormObjects/subforms4.png)
 
-You can modify the labels from the subform by assigning values to the *InvoiceAddress* object:
+Vous pouvez modifier les libellés depuis le sous-formulaire en affectant des valeurs à l'objet *InvoiceAddress* :
 
 ```4d
  C_OBJECT($lang)
@@ -101,50 +101,50 @@ You can modify the labels from the subform by assigning values to the *InvoiceAd
 
 ![](../assets/en/FormObjects/subforms5.png)
 
-### Advanced inter-form programming
+### Programmation inter-formulaires avancée
 
-Communication between the parent form and the instances of the subform may require going beyond the exchange of a value through the bound variable. In fact, you may want to update variables in subforms according to the actions carried out in the parent form and vice versa. If we use the previous example of the "dynamic clock" type subform, we may want to set one or more alarm times for each clock.
+La communication entre le formulaire parent et les instances des sous-formulaires peut nécessiter d’aller au-delà de l’échange d’une valeur via la variable associée. En effet, vous pouvez souhaiter mettre à jour des variables dans les sous-formulaires en fonction d’actions effectuées dans le formulaire parent et inversement. Si l’on reprend l’exemple du sous-formulaire de type "pendule dynamique", on peut souhaiter définir une ou plusieurs heures d’alerte par pendule.
 
-4D has implemented the following mechanisms to meet these needs:
+Pour répondre à ces besoins, 4D propose les mécanismes suivants :
 
-* Use of the "subform" parameter with the `OBJECT Get name` command to specify the subform object and the `OBJECT Get pointer` command.
-* Calling of a container object from the subform using the `CALL SUBFORM CONTAINER` command,
-* Execution of a method in the context of the subform via the `EXECUTE METHOD IN SUBFORM` command.
+* Utilisation du paramètre "sous-formulaire" avec la commande `OBJECT Get name` afin de désigner l’objet sous-formulaire et commande `OBJECT Get pointer`.
+* Appel de l’objet conteneur depuis le sous-formulaire via la commande `CALL SUBFORM CONTAINER`,
+* Exécution d’une méthode dans le contexte du sous-formulaire via la commande `EXECUTE METHOD IN SUBFORM`.
 
-#### Object get pointer and Object get name commands
+#### Commandes Object get pointer et Object get name
 
-In addition to the `Object subform container` selector, the `OBJECT Get pointer` command accepts a parameter that indicates in which subform to search for the object whose name is specified in the second parameter. This syntax can only be used when the Object named selector is passed.
+Outre le sélecteur `Objet conteneur sous formulaire`, la commande `OBJECT Get pointer` admet un paramètre permettant de préciser dans quel sous-formulaire chercher l’objet dont le nom est passé en deuxième paramètre. Cette syntaxe n’est utilisable que lorsque le sélecteur Objet nommé est passé.
 
-For example, the following statement:
+Par exemple, l’instruction suivante :
 
 ```4d
  $ptr:=OBJECT Get pointer(Object named;"MyButton";"MySubForm")
 ```
 
-... retrieves a pointer to the "MyButton" variable that is located in the "MySubForm" subform object. This syntax can be used to access from the parent form any object found in a subform. Also note the `OBJECT Get name` command which can be used to retrieve the name of the object that has the focus.
+... retrieves a pointer to the "MyButton" variable that is located in the "MySubForm" subform object. Cette syntaxe permet d’accéder depuis le formulaire parent à tout objet se trouvant dans un sous-formulaire. A noter également la commande `OBJECT Get name` qui permet de récupérer le nom de l’objet ayant le focus.
 
-#### CALL SUBFORM CONTAINER command
+#### Commande CALL SUBFORM CONTAINER
 
-The `CALL SUBFORM CONTAINER` command lets a subform instance send an event to the subform container object, which can then process it in the context of the parent form. The event is received in the container object method. It may be at the origin of any event detected by the subform (click, drag-and-drop, etc.).
+La commande `CALL SUBFORM CONTAINER` permet à une instance de sous-formulaire d’envoyer un événement à l’objet conteneur du sous-formulaire, qui peut alors le traiter dans le contexte du formulaire parent. L’événement est reçu dans la méthode de l’objet conteneur. Il peut s’agir à l’origine de tout événement détecté par le sous-formulaire (clic, glisser-déposer, etc.).
 
-The code of the event is unrestricted (for example, 20000 or -100). You can use a code that corresponds to an existing event (for example, 3 for `On Validate`), or use a custom code. In the first case, you can only use events that you have checked in the Property List for subform containers. In the second case, the code must not correspond to any existing form event. It is recommended to use a negative value to be sure that this code will not be used by 4D in future versions.
+Le code de l’événement est libre (par exemple, 20000 ou -100). Vous pouvez soit utiliser un code correspondant à un événement existant (par exemple, 3 pour `Sur validation`), soit utiliser un code personnalisé. Dans le premier cas, seuls les événements présents dans la liste des événements "cochables" des conteneurs de sous-formulaire peuvent être utilisés (cf. Liste des propriétés). Dans le second cas, le code ne doit correspondre à aucun événement formulaire existant. Il est conseillé d’utiliser une valeur négative pour avoir l’assurance que 4D n’utilisera pas ce code dans les versions futures.
 
-For more information, refer to the description of the `CALL SUBFORM CONTAINER` command.
+Pour plus d'informations, reportez-vous à la description de la commande `CALL SUBFORM CONTAINER`.
 
-#### EXECUTE METHOD IN SUBFORM command
+#### Commande EXECUTE METHOD IN SUBFORM
 
-The `EXECUTE METHOD IN SUBFORM` command lets a form or one of its objects request the execution of a method in the context of the subform instance, which gives it access to the subform variables, objects, etc. This method can also receive parameters.
+La commande `EXECUTE METHOD IN SUBFORM` permet à un formulaire ou à l’un de ses objets de demander l’exécution d’une méthode dans le contexte de l’instance du sous-formulaire, ce qui lui donne accès aux variables, objets, etc., du sous-formulaire. Cette méthode peut en outre recevoir des paramètres.
 
-This mechanism is illustrated in the following diagram:
+Ce mécanisme est illustré dans le schéma suivant :
 
 ![](../assets/en/FormObjects/subforms6.png)
 
-For more information, refer to the description of the `EXECUTE METHOD IN SUBFORM` command.
+Pour plus d'informations, reportez-vous à la description de la commande `EXECUTE METHOD IN SUBFORM`.
 
-#### GOTO OBJECT command
+#### Commande GOTO OBJECT
 
-The `GOTO OBJECT` command looks for the destination object in the parent form even if it is executed from a subform.
+La commande `GOTO OBJECT` peut rechercher l’objet de destination dans le formulaire parent même si elle exécutée depuis un sous-formulaire.
 
-## Supported Properties
+## Propriétés prises en charge
 
 [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Detail Form](properties_Subform.md#detail-form) - [Double click on empty row](properties_Subform.md#double-click-on-empty-row) - [Double click on row](properties_Subform.md#double-click-on-row) - [Enterable in list](properties_Subform.md#enterable-in-list) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Height](properties_CoordinatesAndSizing.md#height) - [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) - [Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [List Form](properties_Subform.md#list-form) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Print Frame](properties_Print.md#print-frame) - [Right](properties_CoordinatesAndSizing.md#right) - [Selection mode](properties_Subform.md#selection-mode) - [Source](properties_Subform.md#source) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
