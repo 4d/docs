@@ -1,57 +1,57 @@
 ---
 id: httpRequests
-title: Processing HTTP requests
+title: HTTPリクエストの処理
 ---
 
-The 4D web server provides several features to handle HTTP requests:
+4D Webサーバーは、HTTPリクエストを処理するための機能を複数備えています:
 
-- the `On Web Connection` database method, a router for your web application,
-- the `/4DACTION` URL to call server-side code
-- `WEB GET VARIABLES` to get values from HTML objects sent to the server
-- other commands such as `WEB GET HTTP BODY`, `WEB GET HTTP HEADER`, or `WEB GET BODY PART` allow to customize the request processing, including cookies.
-- the *COMPILER_WEB* project method, to declare your variables.
+- Webアプリケーションのルーターとなる `On Web Connection` データベースメソッド。
+- サーバーサイドコードを呼び出すための `/4DACTION` URL。
+- サーバーに送信された HTMLオブジェクトから値を取得する `WEB GET VARIABLES`。
+- `WEB GET HTTP BODY`、`WEB GET HTTP HEADER`、`WEB GET BODY PART` などのコマンドによって、リクエスト処理をカスタマイズすることができます (cookie 含む)。
+- 変数を宣言するための *COMPILER_WEB* プロジェクトメソッド。
 
 
 ## On Web Connection
 
-The `On Web Connection` database method can be used as the entry point for the 4D Web server.
+`On Web Connection` データベースメソッドは、4D Webサーバーのエントリーポイントとして使用できます。
 
-### Database method calls
+### データベースメソッドの呼び出し
 
-The `On Web Connection` database method is automatically called when the server reveives any URL that is not a path to an existing page on the server. The database method is called with the URL.
+`On Web Connection` データベースメソッドは、サーバー上に存在しないページへのパスをサーバーが URL として受け取った場合に、自動的に呼び出されます。 データベースメソッドは、URL とともに呼び出されます。
 
-For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*" will not call the database method if the page "c.html" exists in the "a/b" subfolder of the [WebFolder](webServerConfig.md#root-folder).
+たとえば、"*a/b/c*" という URL はデータベースメソッドを呼び出しますが、[WebFolder](webServerConfig.md#ルートフォルダー) の "a/b" サブフォルダーに "c.html" というページが存在する場合、"*a/b/c.html*" はデータベースメソッドを呼び出しません。
 
-> The request should have previously been accepted by the [`On Web Authentication`](authentication.md#on-web-authentication) database method (if it exists) and the web server must be launched.
+> このリクエストは、事前に [`On Web Authentication`](authentication.md#on-web-authentication) データベースメソッド (あれば) に受け入れられているべきで、Webサーバーも起動している必要があります。
 
-### Syntax
+### シンタックス
 
 **On Web Connection**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text )
 
-| Parameters | Type |    | Description                                  |
-| ---------- | ---- |:--:| -------------------------------------------- |
-| $1         | Text | <- | URL                                          |
-| $2         | Text | <- | HTTP headers + HTTP body (up to 32 kb limit) |
-| $3         | Text | <- | IP address of the web client (browser)       |
-| $4         | Text | <- | IP address of the server                     |
-| $5         | Text | <- | User name                                    |
-| $6         | Text | <- | Password                                     |
+| パラメーター | タイプ  |    | 詳細                           |
+| ------ | ---- |:--:| ---------------------------- |
+| $1     | テキスト | <- | URL                          |
+| $2     | テキスト | <- | HTTPヘッダー + HTTPボディ (32 KBまで) |
+| $3     | テキスト | <- | Webクライアント (ブラウザー) の IPアドレス   |
+| $4     | テキスト | <- | サーバーの IPアドレス                 |
+| $5     | テキスト | <- | ユーザー名                        |
+| $6     | テキスト | <- | パスワード                        |
 
 
-You must declare these parameters as shown below:
+これらの引数を以下のように宣言しなければなりません:
 
 ```4d
-//On Web Connection database method
+// On Web Connection データベースメソッド
 
  C_TEXT($1;$2;$3;$4;$5;$6)
 
-//Code for the method
+// メソッドのコード
 ```
 
-Alternatively, you can use the [named parameters](Concepts/parameters.md#named-parameters) syntax:
+あるいは、[名前付き引数](Concepts/parameters.md#名前付き引数) シンタックスを利用することもできます:
 
 ```4d
-// On Web Connection database method
+// On Web Connection データベースメソッド
 #DECLARE ($url : Text; $header : Text; \
   $BrowserIP : Text; $ServerIP : Text; \
   $user : Text; $password : Text)
@@ -59,16 +59,16 @@ Alternatively, you can use the [named parameters](Concepts/parameters.md#named-p
 ```
 
 
-> Calling a 4D command that displays an interface element (`DIALOG`, `ALERT`, etc.) is not allowed and ends the method processing.
+> インターフェース要素 を表示する 4Dコマンド (`DIALOG`、`ALERT` など) の呼び出しは許可されず、メソッドの処理を終了します。
 
 
-### $1 - URL extra data
+### $1 - URL追加データ
 
-The first parameter ($1) is the URL entered by users in the address area of their web browser, without the host address.
+最初の引数 ($1) は、ユーザーが Webブラウザーのアドレスエリアに入力した URL からホストのアドレスを取り除いたものです。
 
-Let’s use an intranet connection as an example. Suppose that the IP address of your 4D Web Server machine is 123.4.567.89. The following table shows the values of $1 depending on the URL entered in the web browser:
+イントラネット接続の場合を見てみましょう。 4D Webサーバーマシンの IPアドレスを 123.4.567.89 とします。 以下の表は Webブラウザーに入力された URL に対して、$1 が受け取る値を示しています:
 
-| URL entered in web browser           | Value of parameter $1    |
+| Webブラウザーに入力された値                      | $1 の値                    |
 | ------------------------------------ | ------------------------ |
 | 123.4.567.89                         | /                        |
 | http://123.4.567.89                  | /                        |
@@ -76,30 +76,30 @@ Let’s use an intranet connection as an example. Suppose that the IP address of
 | http://123.4.567.89/Customers/Add    | /Customers/Add           |
 | 123.4.567.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
 
-Note that you are free to use this parameter at your convenience. 4D simply ignores the value passed beyond the host part of the URL. For example, you can establish a convention where the value "*/Customers/Add*" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
+この引数は必要に応じて自由に利用できます。 4D は単に URL のホスト部より後の部分を無視し、$1 に渡します。 たとえば、値 "*/Customers/Add*" が "`[Customers]` テーブルに新規レコードを直接追加する" ということを意味するような、オリジナルのルールを作成できます。 利用可能な値やデフォルトブックマークを Webユーザーに提供することで、アプリケーションの異なる部分へのショートカットを提供できます。 このようにして、Webユーザーは新しく接続するたびにナビゲーションを通過することなく、素早く Webサイトのリソースにアクセスできます。
 
 
-### $2 - Header and Body of the HTTP request
+### $2 - HTTPリクエストのヘッダーとボディ
 
-The second parameter ($2) is the header and the body of the HTTP request sent by the web browser. Note that this information is passed to your `On Web Connection` database method "as is". Its contents will vary depending on the nature of the web browser attempting the connection.
+二番目の引数 ($2) は、Webブラウザーから送信された HTTPリクエストのヘッダーとボディです。 この情報は `On Web Connection` データベースメソッドに "そのまま" 渡されることに留意してください。 その内容は、接続を試みた Webブラウザーの仕様により異なります。
 
-If your application uses this information, it is up to you to parse the header and the body. You can use the `WEB GET HTTP HEADER` and the `WEB GET HTTP BODY` commands.
-> For performance reasons, the size of data passing through the $2 parameter must not exceed 32 KB. Beyond this size, they are truncated by the 4D HTTP server.
+アプリケーションでこの情報を使用するには、開発者がヘッダーとボディを解析しなければなりません。 `WEB GET HTTP HEADER` や `WEB GET HTTP BODY` コマンドを使うことができます。
+> パフォーマンス上の理由により、$2 を介して渡されるデータのサイズは 32KB 以下でなくてはなりません。 これを超過する分は、4D HTTPサーバーにより切り取られます。
 
 
-### $3 - Web client IP address
+### $3 - Webクライアントの IPアドレス
 
-The $3 parameter receives the IP address of the browser’s machine. This information can allow you to distinguish between intranet and internet connections.
-> 4D returns IPv4 addresses in a hybrid IPv6/IPv4 format written with a 96-bit prefix, for example ::ffff:192.168.2.34 for the IPv4 address 192.168.2.34. For more information, refer to the [IPv6 Support](webServerConfig.md#about-ipv6-support) section.
+$3 引数はブラウザーマシンの IPアドレスを受け取ります。 この情報を使用して、イントラネットアクセスとインターネットアクセスを区別できます。
+> 4D は IPv4 アドレスを、96-bit の接頭辞付きのハイブリッド型 IPv6/IPv4 フォーマットで返します。 たとえば、::ffff:192.168.2.34 は、192.168.2.34 という IPv4 アドレスを意味します。 詳細については、[IPv6 のサポートについて](webServerConfig.md#IPv6-のサポートについて) の章を参照ください。
 
-### $4 - Server IP address
+### $4 - サーバー IPアドレス
 
-The $4 parameter receives the IP address requested by the 4D Web Server. 4D allows for multi-homing, which allows you to use machines with more than one IP address. For more information, please refer to the [Configuration page](webServerConfig.html#ip-address-to-listen).
+$4 引数は 4D Webサーバーによってリクエストされた IPアドレスを受け取ります。 4D はマルチホーミングをサポートしており、複数の IPアドレスを持つマシンを使用できます。 詳細は [設定ページ](webServerConfig.md#リクエストを受け付ける-IPアドレス) を参照ください。
 
-### $5 and $6 - User Name and Password
+### $5 と $6 - ユーザー名とパスワード
 
-The $5 and $6 parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser, if applicable (see the [authentication page](authentication.md)).
-> If the user name sent by the browser exists in 4D, the $6 parameter (the user’s password) is not returned for security reasons.
+`$5` と `$6` 引数は、ブラウザーが表示する標準の認証ダイアログにユーザーが入力したユーザー名とパスワードを受け取ります (入力されていれば; [認証ページ](authentication.md) 参照)。
+> ブラウザーから送信されたユーザー名が 4D に存在する場合、$6 引数 (ユーザーパスワード) はセキュリティのため渡されません。
 
 
 
@@ -108,75 +108,75 @@ The $5 and $6 parameters receive the user name and password entered by the user 
 
 ***/4DACTION/***MethodName***<br/> **/4DACTION/******MethodName/Param*
 
-| Parameters | Type |    | Description                                  |
-| ---------- | ---- |:--:| -------------------------------------------- |
-| MethodName | Text | -> | Name of the 4D project method to be executed |
-| Param      | Text | -> | Text parameter to pass to the project method |
+| パラメーター     | タイプ  |    | 詳細                    |
+| ---------- | ---- |:--:| --------------------- |
+| MethodName | テキスト | -> | 実行する 4Dプロジェクトメソッド名    |
+| Param      | テキスト | -> | プロジェクトメソッドに渡されるテキスト引数 |
 
-**Usage:** URL or Form action.
+**利用法**: URL またはフォームアクション
 
-This URL allows you to call the *MethodName* 4D project method with an optional *Param* text parameter. The method will receive this parameter in *$1*.
+この URL を使用して、任意の *Param* テキスト引数とともに *MethodName* に指定した 4Dプロジェクトメソッドを呼び出すことができます。 このメソッドは引数を *$1* に受け取ります。
 
-- The 4D project method must have been [allowed for web requests](allowProject.md): the “Available through 4D tags and URLs (4DACTION...)” attribute value must have been checked in the properties of the method. If the attribute is not checked, the web request is rejected.
-- When 4D receives a `/4DACTION/MethodName/Param` request, the `On Web Authentication` database method (if it exists) is called.
+- 4Dプロジェクトメソッドは、[Webリクエスト用に許可](allowProject.md)されていなければなりません。 メソッドのロパティで "公開オプション: 4DタグとURL(4DACTION...)" 属性がチェックされている必要があります。 属性がチェックされていない場合、Webリクエストは拒否されます。
+- `/4DACTION/MyMethod/Param` リクエストを受け取ると、4D は `On Web Authentication` データベースメソッド (あれば) を呼び出します。
 
-`4DACTION/` can be associated with a URL in a static Web page:
+`4DACTION/` は、スタティックな Webページの URL に割り当てることもできます:
 
 ```html
 <A HREF="/4DACTION/MyMethod/hello">Do Something</A>
 ```
 
-The `MyMethod` project method should generally return a "reply" (sending of an HTML page using `WEB SEND FILE` or `WEB SEND TEXT`, etc.). Be sure to make the processing as short as possible in order not to block the browser.
+`MyMethod` プロジェクトメソッドは通常レスポンスを返すべきです (`WEB SEND FILE` や `WEB SEND BLOB` で HTMLページを送信するなど)。 ブラウザーをブロックしないように、処理は可能な限り短時間でおこなわれるようにします。
 
-> A method called by `/4DACTION` must not call interface elements (`DIALOG`, `ALERT`, etc.).
+> `4DACTION/` から呼び出されるメソッドは、インタフェース要素 (`DIALOG`, `ALERT` など) を呼び出してはいけません。
 
-#### Example
+#### 例題
 
-This example describes the association of the `/4DACTION` URL with an HTML picture object in order to dynamically display a picture in the page. You insert the following instructions in a static HTML page:
+この例題は、HTMLピクチャーオブジェクトに `/4DACTION/` URL を割り当て、ページ上でピクチャーを動的に表示する方法を説明しています。 スタティック HTMLページに以下のコードを記述します:
 
 ```html
 <IMG SRC="/4DACTION/getPhoto/smith">
 ```
 
-The `getPhoto` method is as follows:
+`getPhoto` メソッドは以下のとおりです:
 
 ```4d
-C_TEXT($1) // This parameter must always be declared
+C_TEXT($1) // この引数は常に宣言する必要があります
 var $path : Text
 var $PictVar : Picture
 var $BlobVar : Blob
 
- //find the picture in the Images folder within the Resources folder 
+ // Resources フォルダー内の Images フォルダー内でピクチャーを探します 
 $path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".psd"
 
-READ PICTURE FILE($path;$PictVar) //put the picture in the picture variable
-PICTURE TO BLOB($PictVar;$BLOB;".png") //convert the picture to ".png" format
+READ PICTURE FILE($path;$PictVar) // ピクチャーをピクチャー変数に入れます
+PICTURE TO BLOB($PictVar;$BLOB;".png") // ピクチャーを ".png" 形式に変換します
 WEB SEND BLOB($BLOB;"image/png")
 ```
 
-### 4DACTION to post forms
+### 4DACTION を使用してフォームをポスト
 
-The 4D Web server also allows you to use “posted” forms, which are static HTML pages that send data to the Web server, and to easily retrieve all the values. The POST type must be associated to them and the form’s action must imperatively start with /4DACTION/MethodName.
+4D Webサーバーでは、ポストされたフォームを使用することもできます。 これはスタティックなページから Webサーバーにデータを送信し、すべての値を簡単に取得するというものです。 POSTタイプを使用し、フォームのアクションは /4DACTION/MethodName で始まっていなければなりません。
 
-A form can be submitted through two methods (both can be used with 4D):
-- POST, usually used to send data to the Web server,
-- GET, usually used to request data from the Web server.
+フォームは 2つのメソッドを使用してサブミットできます (4D では両方のタイプを使用できます):
+- POST は通常 Webサーバーにデータを送信するのに使用します。
+- GET は通常 Webサーバーからデータをリクエストするのに使用します。
 
-> When the Web server receives a posted form, it calls the `On Web Authentication` database method (if it exists).
+> この場合、Webサーバーがポストされたフォームを受信すると、`On Web Authentication` データベースメソッドが (あれば) 呼び出されます。
 
-In the called method, you must call the `WEB GET VARIABLES` command in order to [retrieve the names and values](#getting-values-from-the-requests) of all the fields included in an HTML page submitted to the server.
+サーバーに投稿された HTMLページに含まれるすべてのフィールドの [名前と値を取得](#httpリクエストから値を取得する) するには、このメソッド内で `WEB GET VARIABLES` コマンドを呼び出す必要があります。
 
-Example to define the action of a form:
+フォームのアクションを定義する例:
 
 ```html
 <FORM ACTION="/4DACTION/MethodName" METHOD=POST>
 ```
 
-#### Example
+#### 例題
 
-In a Web application, we would like for the browsers to be able to search among the records by using a static HTML page. This page is called “search.htm”. The application contains other static pages that allow you to, for example, display the search result (“results.htm”). The POST type has been associated to the page, as well as the `/4DACTION/SEARCH` action.
+Webアプリケーションにおいて、スタティックなHTMLページを使い、ブラウザーからレコードを検索できるようにしたいとします。 このページを "search.htm" とします。 アプリケーションには、検索結果を表示するためのスタティックページ ("results.htm") もあるとします。 POSTメソッドと `/4DACTION/PROCESSFORM` アクションがページに割り当てられています。
 
-Here is the HTML code that corresponds to this page:
+以下はこのページの HTMLコードです:
 
 ```html
 <form action="/4daction/processForm" method=POST>
@@ -186,7 +186,7 @@ Here is the HTML code that corresponds to this page:
 </FORM>
 ```
 
-During data entry, type “ABCD” in the data entry area, check the "Whole word" option and validate it by clicking the **Search** button. In the request sent to the Web server:
+データ入力エリアに "ABCD" とタイプし、"Whole word (句として検索)" オプションをチェックして **Search** (検索) ボタンをクリックします。 Webサーバーに送信されるリクエスト内部は以下の通りです:
 
 ```
 vName="ABCD"
@@ -194,7 +194,7 @@ vExact="Word"
 OK="Search"
 ```
 
-4D calls the `On Web Authentication` database method (if it exists), then the `processForm` project method is called, which is as follows:
+4D は `On Web Authentication` データベースメソッドを (あれば) 呼び出し、そして以下の`processForm` プロジェクトメソッドを呼び出します:
 
 ```4d
  C_TEXT($1) //mandatory for compiled mode
@@ -224,15 +224,15 @@ End if
 
 
 
-## Getting values from HTTP requests
+## HTTPリクエストから値を取得する
 
-4D's Web server lets you recover data sent through POST or GET requests, using Web forms or URLs.
+4D Web サーバーでは、Webフォームや URL を介して POST や GET リクエストで送信されたデータを復元することができます。
 
-When the Web server receives a request with data in the header or in the URL, 4D can retrieve the values of any HTML objects it contains. This principle can be implemented in the case of a Web form, sent for example using `WEB SEND FILE` or `WEB SEND BLOB`, where the user enters or modifies values, then clicks on the validation button.
+ヘッダーや URL にデータが含まれたリクエストを Webサーバーが受信すると、4D はそれに含まれる HTMLオブジェクトの値を受け取ることができます。 たとえば `WEB SEND FILE` コマンドまたは `WEB SEND BLOB` コマンドで送信され、ユーザーが値を入力・修正して確定ボタンをクリックするような Webフォームにおいてもこの原理は使用可能です。
 
-In this case, 4D can retrieve the values of the HTML objects found in the request using the `WEB GET VARIABLES` command. The `WEB GET VARIABLES` command retrieves the values as text.
+この場合 4D は `WEB GET VARIABLES` コマンドを使って、リクエスト内の HTMLオブジェクトの値を取得することができます。 `WEB GET VARIABLES` コマンドは、値をテキストとして受け取ります。
 
-Consider the following HTML page source code:
+以下の HTMLページのソースコードがあるとき:
 
 ```html
 <html>
@@ -277,20 +277,20 @@ return false
 </html>
 ```
 
-When 4D sends the page to a Web Browser, it looks like this:
+4D が Webブラウザーにページを送信すると、以下のように表示されます:
 
 ![](../assets/en/WebServer/spiders.png)
 
-The main features of this page are:
+このページの主な特徴は:
 
-- It includes three **Submit** buttons: `vsbLogOn`, `vsbRegister` and `vsbInformation`.
-- When you click **Log On**, the submission of the form is first processed by the JavaScript function `LogOn`. If no name is entered, the form is not even submitted to 4D, and a JavaScript alert is displayed.
-- The form has a POST 4D method as well as a Submit script (*GetBrowserInformation*) that copies the browser properties to the four hidden objects whose names starts with *vtNav_App*. It also includes the `vtUserName` object.
+- 送信のための **Submit** ボタンが 3つあります: `vsbLogOn`, `vsbRegister` そして `vsbInformation`。
+- **Log On** をクリックすると、フォームからの送信はまず初めに JavaScript関数 `LogOn` によって処理されます。 名前が入力されていない場合、フォームは 4Dに送信すらされず、JavaScript による警告が表示されます。
+- フォームは POST 4Dメソッドに加えて、ブラウザープロパティを *vtNav_App* から始まる名称の 4つの隠しオブジェクトへとコピーする投稿スクリプト (*GetBrowserInformation*) を持っています。 また、このページには `vtUserName` オブジェクトも含まれます。
 
-Let’s examine the 4D method `WWW_STD_FORM_POST` that is called when the user clicks on one of the buttons on the HTML form.
+ユーザーが HTMLフォーム上のボタンのどれかをクリックした際に呼び出される `WWW_STD_FORM_POST` という 4Dメソッドを検証してみましょう。
 
 ```4d
-  // Retrieval of value of variables
+  // 変数の値を取得します
  ARRAY TEXT($arrNames;0)
  ARRAY TEXT($arrValues;0)
  WEB GET VARIABLES($arrNames;$arrValues)
@@ -298,56 +298,56 @@ Let’s examine the 4D method `WWW_STD_FORM_POST` that is called when the user c
 
  Case of
 
-  // The Log On button was clicked
+  // Log On ボタンがクリックされた場合
     :(Find in array($arrNames;"vsbLogOn")#-1)
        $user :=Find in array($arrNames;"vtUserName")
        QUERY([WWW Users];[WWW Users]UserName=$arrValues{$user})
        $0:=(Records in selection([WWW Users])>0)
        If($0)
           WWW POST EVENT("Log On";WWW Log information)
-  // The WWW POST EVENT method saves the information in a database table
+  // WWW POST EVENT メソッドが情報をデータベースのテーブルに保存します
        Else
 
           $0:=WWW Register
-  // The WWW Register method lets a new Web user register
+  // WWW Register メソッドは新規 Webユーザーの登録を処理します
        End if
 
-  // The Register button was clicked
+  // Register ボタンがクリックされた場合
     :(Find in array($arrNames;"vsbRegister")#-1)
        $0:=WWW Register
 
-  // The Information button was clicked
+  // Information ボタンがクリックされた場合
     :(Find in array($arrNames;"vsbInformation")#-1)
        WEB SEND FILE("userinfos.html")
  End case
 ```
 
-The features of this method are:
+このメソッドの機能は:
 
-- The values of the variables *vtNav_appName*, *vtNav_appVersion*, *vtNav_appCodeName*, and *vtNav_userAgent* (bound to the HTML objects having the same names) are retrieved using the `WEB GET VARIABLES` command from HTML objects created by the *GetBrowserInformation* JavaScript script.
-- Out of the *vsbLogOn*, *vsbRegister* and *vsbInformation* variables bound to the three Submit buttons, only the one corresponding to the button that was clicked will be retrieved by the `WEB GET VARIABLES` command. When the submit is performed by one of these buttons, the browser returns the value of the clicked button to 4D. This tells you which button was clicked.
+- 変数 *vtNav_appName*, *vtNav_appVersion*, *vtNav_appCodeName*, そして *vtNav_userAgent* の値 (同じ名前を持つ HTMLオブジェクトにそれぞれバインドされています) は 、`WEB GET VARIABLES` コマンドを使用することによって JavaScript のスクリプト *GetBrowserInformation* で作成された HTMLオブジェクトから取得することができます。
+- 3つの投稿ボタンにバインドされている変数 *vsbLogOn*, *vsbRegister* と *vsbInformation* のうち、クリックされたボタンに対応するもののみが `WEB GET VARIABLES` コマンドによって取得されます。 この 3つのうちいずれかのボタンによって投稿がおこなわれたとき、ブラウザーはクリックされたボタンの値を 4D に返します。 これにより、どのボタンがクリックされたのかが分かります。
 
-Keep in main that with HTML, all objects are text objects. If you use a SELECT object, it is the value of the highlighted element in the object that is returned in the `WEB GET VARIABLES` command, and not the position of the element in the array as in 4D. `WEB GET VARIABLES` always returns values of the Text type.
+HTMLではすべてのオブジェクトがテキストオブジェクトであることに留意が必要です。 SELECT要素を使用した場合、 `WEB GET VARIABLES` コマンドで返されるのはオブジェクト内でハイライトされている要素の値であり、4D のように配列内の要素の位置を返すわけではありません。 `WEB GET VARIABLES` コマンドは必ずテキスト型の値を返します。
 
 
-## Other Web Server Commands
+## その他の Webサーバーコマンド
 
-The 4D web server provides several low-level web commands allowing you to develop custom processing of requests:
+4D Webサーバーには、リクエストの処理をカスタマイズするための、低レベル Webコマンドがいくつか用意されています。
 
-- the `WEB GET HTTP BODY` command returns the body as raw text, allowing any parsing you may need
-- the `WEB GET HTTP HEADER` command return the headers of the request. It is useful to handle custom cookies, for example (along with the `WEB SET HTTP HEADER` command).
-- the `WEB GET BODY PART` and `WEB Get body part count` commands to parse the body part of a multi-part request and retrieve text values, but also files posted, using BLOBs.
+- `WEB GET HTTP BODY` コマンドは、ボディをそのままの状態でテキストとして返します。
+- `WEB GET HTTP HEADER` コマンドは、リクエストのヘッダーを返します。 カスタムcookie などを処理するのに便利です (`WEB SET HTTP HEADER` コマンドも使用できます)。
+- `WEB GET BODY PART` と `WEB Get body part count` コマンドは、マルチパートリクエストのボディパートを解析して、テキスト値を取得するだけでなく、ポストされたファイルもBLOBに取得します。
 
-These commands are summarized in the following graphic:
+これらのコマンドは次の図にまとめられています:
 
 ![](../assets/en/WebServer/httpCommands.png)
 
-The 4D web server supports files uploaded in chunked transfer encoding from any Web client. Chunked transfer encoding is a data transfer mechanism specified in HTTP/1.1. It allows data to be transferred in a series of "chunks" (parts) without knowing the final data size. The 4D Web Server also supports chunked transfer encoding from the server to Web clients (using `WEB SEND RAW DATA`).
+4D Webサーバーは、どの Webクライアントからでもチャンクド・エンコーディングでアップロードされたファイルをサポートするようになりました。 チャンクド・エンコーディングは HTTP/1.1 にて定義されているデータ転送方式です。 これを使用することにより、最終的なデータサイズを知る事なく、データを複数の "チャンク" (部分) に分けて転送することができます。 4D Webサーバーでは、サーバーから Webクライアントへのチャンクド・エンコーディングもサポートしています (`WEB SEND RAW DATA` を使用します)。
 
-## COMPILER_WEB Project Method
+## COMPILER_WEB プロジェクトメソッド
 
-The COMPILER\_WEB method, if it exists, is systematically called when the HTTP server receives a dynamic request and calls the 4D engine. This is the case, for example, when the 4D Web server receives a posted form or a URL to process in [`On Web Connection`](#on-web-connection). This method is intended to contain typing and/or variable initialization directives used during Web exchanges. It is used by the compiler when the application is compiled. The COMPILER\_WEB method is common to all the Web forms. By default, the COMPILER_WEB method does not exist. You must explicitly create it.
+COMPILER_WEB メソッドが存在する場合、それは HTTPサーバーが動的なリクエストを受け取り、4Dエンジンを呼び出した場合に、システムを通して呼び出されます。 これはたとえば 4D Webサーバーが、ポストされたフォーム、または処理すべき URL を [`<On Web Connection`](#on-web-connection) に受け取る場合が該当します。 このメソッドは Web通信時に使用される型指定または変数初期化指示子を含めることを目的としています。 これはデータベースのコンパイル時にコンパイラーによって使用されます。 COMPILER_WEB メソッドはすべての Webフォームで共通です。 デフォルトでは、COMPILER_WEB メソッドは存在しません。 明示的に作成する必要があります。
 
-> The COMPILER_WEB project method is also called, if it exists, for each SOAP request accepted.
+> COMPILER_WEB プロジェクトメソッドは (存在すれば)、SOAPリクエストが受け入れられるごとに実行されます。
 
 
