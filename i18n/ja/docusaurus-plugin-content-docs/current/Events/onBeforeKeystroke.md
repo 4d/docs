@@ -3,39 +3,39 @@ id: onBeforeKeystroke
 title: On Before Keystroke
 ---
 
-| Code | Can be called by                                                                                                                                                                                                                                                           | Definition                                                                                                                                   |
-| ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| 17   | [4D Write Pro area](FormObjects/writeProArea_overview) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A character is about to be entered in the object that has the focus. `Get edited text` returns the object's text **without** this character. |
+| コード | 呼び出し元                                                                                                                                                                                                                                                | 定義                                                                                 |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| 17  | [4D Write Pro エリア](FormObjects/writeProArea_overview) - [コンボボックス](FormObjects/comboBox_overview.md) - フォーム - [入力](FormObjects/input_overview.md) - [リストボックス](FormObjects/listbox_overview.md) - [リストボックス列](FormObjects/listbox_overview.md#リストボックス列) | フォーカスのあるオブジェクトに文字が入力されようとしている。 `Get edited text` はこの文字を **含まない** オブジェクトのテキストを返します。 |
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes                                                                                 |
-| ------- | --------------------------------------------------------------------------------------- |
-| v18 R5  | - Support in non-enterable list boxes - The event is now triggered after IME validation |
+| バージョン  | 内容                                                                                      |
+| ------ | --------------------------------------------------------------------------------------- |
+| v18 R5 | - Support in non-enterable list boxes - The event is now triggered after IME validation |
 </details>
 
-## Description
+## 詳細
 
-After the `On Before Keystroke` and [`On After Keystroke event`](onAfterKeystroke.md) events are selected for an object, you can detect and handle the keystrokes within the object, using the `Form event code` command that will return `On Before Keystroke` and then [`On After Keystroke event`](onAfterKeystroke.md) (for more information, please refer to the description of the `Get edited text` command). Within the `On Before Keystroke` event, the `FILTER KEYSTROKE` command can be used to filter typed chars.
+`On Before Keystroke` と [`On After Keystroke`](onAfterKeystroke.md) イベントプロパティを選択すると、`FORM Event` コマンドを使用して返される `On Before Keystroke` と [`On After Keystroke`](onAfterKeystroke.md) イベントを検知し、オブジェクトへのキーストロークを処理できます (詳細は `Get edited text` コマンドの説明を参照ください)。 `On Before Keystroke` イベント内では、`FILTER KEYSTROKE` コマンドを使って、入力された文字をフィルターできます。
 
-> These events are also activated by language commands that simulate a user action like `POST KEY`.
+> これらのイベントは `POST KEY` のようなユーザーアクションをシミュレートするコマンドによっても生成されます。
 
-The `On Before Keystroke` event is not generated:
+`On Before Keystroke` イベントは次の場合には生成されません:
 
-- in a [list box column](FormObjects/listbox_overview.md#list-box-columns) method except when a cell is being edited (however it is generated in any cases in the [list box](FormObjects/listbox_overview.md) method),
-- when user modifications are not carried out using the keyboard (paste, drag-and-drop, checkbox, drop down list, combo box). To process these events, you must use [`On After Edit`](onAfterEdit.md).
+- [リストボックス列](FormObjects/listbox_overview.md#リストボックス列) メソッドの場合、ただし、セルを編集している場合を除きます ([リストボックス](FormObjects/listbox_overview.md) メソッドではどのような場合でも生成されます)。
+- キーボードを使用せずに (ペーストやドラッグ＆ドロップ、チェックボックス、ドロップダウンリスト、コンボボックス) おこなわれた変更の場合。 これらのイベントを処理するには [`On After Edit`](onAfterEdit.md) を使用します。
 
-### Non-enterable objects
+### 入力不可オブジェクト
 
-The `On Before Keystroke` event can be generated in non-enterable objects, e.g. in a list box even if the list box cells are not enterable, or rows are not selectable. This allows you to build interfaces where the user can scroll dynamically to a specific row in a list box by entering the first letters of a value. In case where the list box cells are enterable, you can use the `Is editing text` command to know if the user is actually entering text in a cell or is using the type-ahead feature and then, execute appropriate code.
+`On Before Keystroke` イベントは、入力不可能なオブジェクトでも発生させることができます。 たとえば、リストボックスのセルが入力不可能であったり、行が選択不可能であったりしても、リストボックスで発生させることができます。 これにより、ユーザーが値の最初の文字を入力することで、リストボックスの特定の行に動的にスクロールできるようなインターフェースを構築することができます。 リストボックスのセルが入力可能な場合は、`Is editing text` コマンドを使用して、ユーザーが実際にセルにテキストを入力しているのか、タイプアヘッド機能を使用しているのかを確認し、適切なコードを実行することができます。
 
-### Keystroke sequence
+### キーストロークシーケンス
 
-When an entry requires a sequence of keystrokes, the `On Before Keystroke` and [`On After Keystroke`](onAfterKeystroke.md) events are generated only when the entry is fully validaded by the user. The `Keystroke` command returns the validated character. This case mainly occurs:
+入力に一連のキーストロークが必要な場合、`On Before Keystroke` と [`On After Keystroke`](onAfterKeystroke.md) イベントは、入力がユーザーによって完全に確定されたときにのみ生成されます。 `Keystroke` コマンドは、確定済みの文字を返します。 このケースは主に以下のように発生します:
 
-- when using "dead" keys such as ^ or ~: events are generated only when the extended character is eventuelly entered (e.g. "ê" or ñ),
-- when an IME (Input Code Editor) displays an intermediary dialog box where the user can enter a combination of characters: events are generated only when the IME dialog is validated.
+- ^ や ~ のような特殊キーが使用された場合: その後に拡張された文字が入力された場合にのみ生成されます (例: "ê" や "ñ")。
+- IME (Input Method Editor) が、文字の組み合わせを入力するための中間的なダイアログボックスを表示している場合: IME のダイアログが確定されたときにのみイベントが発生します。
 
-### See also
+### 参照
 
-[On After Keystroke](onAfterKeystroke.md).
+[On After Keystroke](onAfterKeystroke.md)。
