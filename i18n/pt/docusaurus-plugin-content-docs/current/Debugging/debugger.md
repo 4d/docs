@@ -1,6 +1,6 @@
 ---
 id: debugger
-title: Debugger
+title: Depurador
 ---
 
 The debugger is useful when you need to spot errors or monitor the execution of methods. It allows you to step through your code slowly and examine the information. This process is called "tracing".
@@ -65,7 +65,7 @@ The new method becomes the current (top) method in the [Call Chain Pane](#call-c
 
 When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
 
-#### Abort
+#### Abortar
 
 Stops method execution, and returns to the state before the method started executing:
 
@@ -77,7 +77,7 @@ Stops method execution, and returns to the state before the method started execu
 Pauses method execution. The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
 > **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. After you're finished with the changes, rerun the method.
 
-#### Edit
+#### Editar
 
 Pauses method execution. The method that is executing at the time you click the Edit button opens in the Code Editor.
 
@@ -98,7 +98,7 @@ This action is not available in remote debugging mode (see [Debugging from Remot
 
 ## Watch Pane
 
-The **Watch pane** is displayed in the top left corner of the Debugger window, below the Execution Control Tool Bar. Here is an example:
+The **Watch pane** is displayed in the top left corner of the Debugger window, below the Execution Control Tool Bar. Aqui um exemplo simples:
 
 ![watch-pane](../assets/en/Debugging/watchPane.png)
 
@@ -130,39 +130,39 @@ $c:=a+b
 
 1. A Debugger window opens with the program counter set to the line with `a:=1`. At this point the **Line Objects** theme displays:
 
-    | $a | Undefined |
-    | -- | --------- |
-    |    |           |
+    | $a | Indefinido |
+    | -- | ---------- |
+    |    |            |
 
     The `$a` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 
 2. You click the **Step Over** button. The program counter is now set to the line `b:=a+1`. At this point, the theme displays:
 
-    | $a | 1         |
-    | -- | --------- |
-    | $b | Undefined |
+    | $a | 1          |
+    | -- | ---------- |
+    | $b | Indefinido |
 
     The value of the `$a` variable is now 1. The `$b` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 
 3. You click the **Step Over** button again. The program counter is now set on the line with c:=a+b. At this point the Line Objects theme displays:
 
-    | $c | Undefined |
-    | -- | --------- |
-    | $a | 1         |
-    | $b | 2         |
+    | $c | Indefinido |
+    | -- | ---------- |
+    | $a | 1          |
+    | $b | 2          |
 
     The value of the `$b` variable is now 2. The `$c` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 
-#### Variables
+#### Variáveis
 
 This theme is composed of the following subthemes:
 
-| Subtheme     | Description                                                  | Can the values be modified? |
+| Subtema      | Descrção                                                     | Can the values be modified? |
 | ------------ | ------------------------------------------------------------ | --------------------------- |
-| Interprocess | List of interprocess variables being used at this point      | Yes                         |
-| Process      | List of process variables used by the current process        | Yes                         |
-| Local        | List of local variables used by the method being traced      | Yes                         |
-| Parameters   | List of parameters received by the method                    | Yes                         |
+| Interprocess | List of interprocess variables being used at this point      | Sim                         |
+| Processo     | List of process variables used by the current process        | Sim                         |
+| Local        | List of local variables used by the method being traced      | Sim                         |
+| Parâmetros   | List of parameters received by the method                    | Sim                         |
 | Self         | Pointer to the current object, when tracing an Object Method | No                          |
 
 Arrays, like other variables, appear in the Interprocess, Process, and Local subthemes, depending on their scope. The debugger displays the first 100 elements. Inside the **Value** column, you can modify the values of array elements, but not the size of the arrays.
@@ -183,15 +183,15 @@ This theme contains the name of each dynamic object included in the current form
 
 Some objects, such as list box arrays, can be presented as two distinct objects, the variable of the object itself and its data source.
 
-#### Constants
+#### Constantes
 
 Like the Constants page of the Explorer window, this theme displays predefined constants provided by 4D. The expressions from this theme cannot be modified.
 
 #### Semaphores
 
-This theme lists the local semaphores currently being set. For each semaphore, the Value column provides the name of the process that sets the semaphore. The expressions from this theme cannot be modified. Global semaphores are not displayed.
+This theme lists the local semaphores currently being set. For each semaphore, the Value column provides the name of the process that sets the semaphore. The expressions from this theme cannot be modified. The expressions from this theme cannot be modified.
 
-#### Processes
+#### Processos
 
 This theme lists the processes started since the beginning of the working session. The value column displays the time used and the current state for each process (i.e., Executing, Paused, and so on). The expressions from this theme cannot be modified.
 
@@ -201,11 +201,11 @@ This theme lists the tables and fields in the 4D database. For each Table item, 
 
 For each Field item, the Value column displays the value of the field for the current record (except picture and BLOB). You can modify the field values but not the the tables' information.
 
-#### Sets
+#### Conjuntos
 
 This theme lists the sets defined in the current process (the one you're currently tracing) and the interprocess sets. For each set, the Value column displays the number of records and the table name. The expressions from this theme cannot be modified.
 
-#### Named Selections
+#### Seleções temporárias
 
 This theme lists the named selections that are defined in the current process (the one you’re currently tracing); it also lists the interprocess named selections. For each named selection, the Value column displays the number of records and the table name. The expressions from this theme cannot be modified.
 
@@ -273,8 +273,8 @@ You can also use the [Get call chain](https://doc.4d.com/4dv19/help/command/en/p
 
 The Custom Watch Pane is useful for evaluating expressions. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Any type of expression can be evaluated:
 
-* field
-* variable
+* campo
+* variável
 * pointer
 * calculation
 * 4D command
@@ -331,7 +331,7 @@ The Source Code Pane shows the source code of the method or function currently b
 
 This area also allows you to add or remove [**break points**](breakpoints.md).
 
-### Tool tip
+### Tips
 
 Hover your pointer over any expression to display a tool tip that indicates:
 
@@ -366,7 +366,7 @@ For debugging purposes, you can move the program counter for the method at the t
 
 This only tells the debugger to pursue tracing or executing from a different point. It does not execute lines or cancel their execution. All current settings, fields, variables, etc. are not impacted.
 
-For example:
+Por exemplo:
 
 ```4d
   // ...
