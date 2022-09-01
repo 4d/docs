@@ -4,19 +4,19 @@ title: '$atomic/$atonce'
 ---
 
 
-Allows the actions in the REST request to be in a transaction. If there are no errors, the transaction is validated. Otherwise, the transaction is cancelled.
+RESTリクエストに含まれる操作をトランザクション内で処理します。 エラーがなかった場合、トランザクションは受け入れられます。 それ以外の場合、トランザクションはキャンセルされます。
 
 
-## Description
-When you have multiple actions together, you can use `$atomic/$atonce` to make sure that none of the actions are completed if one of them fails. You can use either `$atomic` or `$atonce`.
+## 詳細
+複数の操作を一回のリクエストで処理する際には `$atomic/$atonce` を使うことで、１つでも操作に問題があった場合にすべての操作をキャンセルすることができます。 `$atomic` および `$atonce` のどちらでも利用できます。
 
 
-## Example
-We call the following REST request in a transaction.
+## 例題
+次の RESTリクエストをトランザクション内で呼び出します。
 
  `POST  /rest/Employee?$method=update&$atomic=true`
 
-**POST data**:
+**POST データ**:
 
 ````
 [
@@ -31,7 +31,7 @@ We call the following REST request in a transaction.
 ]
 ````
 
-We get the following error in the second entity and therefore the first entity is not saved either:
+2つ目のエンティティの操作中に次のエラーが発生します。そのため、1つ目のエンティティも保存されません:
 
 ````
 {
@@ -64,4 +64,4 @@ We get the following error in the second entity and therefore the first entity i
     ]
 }
 ````
-> Even though the salary for the first entity has a value of 45000, this value was not saved to the server and the *timestamp (__STAMP)* was not modified either. If we reload the entity, we will see the previous value.
+> 1つ目のエンティティの名前は "John" ですが、この値はサーバー上に保存されず、タイムスタンプも変更されません。 したがって、エンティティをリロードすると、もとの値に戻ります。
