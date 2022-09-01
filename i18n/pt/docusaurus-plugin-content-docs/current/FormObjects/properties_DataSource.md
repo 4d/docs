@@ -1,6 +1,6 @@
 ---
 id: propertiesDataSource
-title: Data Source
+title: Fonte de dados
 ---
 
 ## Automatic Insertion
@@ -22,9 +22,9 @@ For example, given a choice list containing "France, Germany, Italy" that is ass
 
 #### JSON Grammar
 
-| Name               | Data Type | Possible Values |
-| ------------------ | --------- | --------------- |
-| automaticInsertion | boolean   | true, false     |
+| Nome               | Tipo de dados | Possible Values |
+| ------------------ | ------------- | --------------- |
+| automaticInsertion | boolean       | true, false     |
 
 #### Objects Supported
 
@@ -40,10 +40,10 @@ You can also associate choice lists to objects using the [OBJECT SET LIST BY NAM
 
 #### JSON Grammar
 
-| Name       | Data Type        | Possible Values                                     |
+| Nome       | Tipo de dados    | Possible Values                                     |
 | ---------- | ---------------- | --------------------------------------------------- |
 | choiceList | list, collection | A list of possible values                           |
-| list       | list, collection | A list of possible values (hierarchical lists only) |
+| lista      | list, collection | A list of possible values (hierarchical lists only) |
 
 #### Objects Supported
 
@@ -57,7 +57,7 @@ List of static values to use as labels for the tab control object.
 
 #### JSON Grammar
 
-| Name   | Data Type        | Possible Values                          |
+| Nome   | Tipo de dados    | Possible Values                          |
 | ------ | ---------------- | ---------------------------------------- |
 | labels | list, collection | A list of values to fill the tab control |
 
@@ -67,7 +67,7 @@ List of static values to use as labels for the tab control object.
 
 ---
 
-## Current item
+## Item atual
 
 `Collection or entity selection list boxes`
 
@@ -76,9 +76,9 @@ Specifies a variable or expression that will be assigned the collection element/
 
 #### JSON Grammar
 
-| Name              | Data Type | Possible Values   |
-| ----------------- | --------- | ----------------- |
-| currentItemSource | string    | Object expression |
+| Nome              | Tipo de dados | Possible Values   |
+| ----------------- | ------------- | ----------------- |
+| currentItemSource | string        | Object expression |
 
 #### Objects Supported
 
@@ -86,7 +86,7 @@ Specifies a variable or expression that will be assigned the collection element/
 
 ---
 
-## Current item position
+## Posição item atual
 
 `Collection or entity selection list boxes`
 
@@ -99,9 +99,9 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 #### JSON Grammar
 
-| Name                      | Data Type | Possible Values   |
-| ------------------------- | --------- | ----------------- |
-| currentItemPositionSource | string    | Number expression |
+| Nome                      | Tipo de dados | Possible Values   |
+| ------------------------- | ------------- | ----------------- |
+| currentItemPositionSource | string        | Number expression |
 
 #### Objects Supported
 
@@ -120,9 +120,9 @@ See also [**Expression Type**](properties_Object.md#expression-type) section.
 
 #### JSON Grammar
 
-| Name               | Data Type | Possible Values                                    |
-| ------------------ | --------- | -------------------------------------------------- |
-| dataSourceTypeHint | string    | <li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li><li>**drop-down lists:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
+| Nome               | Tipo de dados | Possible Values                                    |
+| ------------------ | ------------- | -------------------------------------------------- |
+| dataSourceTypeHint | string        | <li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li><li>**drop-down lists:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
 
 #### Objects Supported
 
@@ -151,9 +151,9 @@ Using the **Selected item reference** option requires compliance with the follow
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values      |
-| ------ | --------- | -------------------- |
-| saveAs | string    | "value", "reference" |
+| Nome   | Tipo de dados | Possible Values      |
+| ------ | ------------- | -------------------- |
+| saveAs | string        | "value", "reference" |
 
 > Setting only `"dataSourceTypeHint" : "integer"` with a `"type": "dropdown"` form object will declare a hierarchical drop-down list.
 
@@ -177,9 +177,9 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 
 #### JSON Grammar
 
-| Name   | Data Type  | Possible Values                                                  |
-| ------ | ---------- | ---------------------------------------------------------------- |
-| values | collection | A collection of default values (strings), ex: "a", "b", "c", "d" |
+| Nome   | Tipo de dados | Possible Values                                                  |
+| ------ | ------------- | ---------------------------------------------------------------- |
+| values | collection    | A collection of default values (strings), ex: "a", "b", "c", "d" |
 
 #### Objects Supported
 
@@ -199,8 +199,8 @@ A 4D expression to be associated with a column. You can enter:
   - String
   - Numeric
   - Date
-  - Time
-  - Picture
+  - Hora
+  - Imagem
   - Boolean  
     You can use fields from the Master Table or from other tables.
 
@@ -208,8 +208,8 @@ A 4D expression to be associated with a column. You can enter:
   - String
   - Numeric
   - Date
-  - Picture
-  - Boolean
+  - Imagem
+  - Booleano
 
  For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.  
 When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` is a dedicated 4D command that returns a reference to the currently processed element. For example, you can use `This.\&#060;propertyPath&#062;` where `\&#060;propertyPath&#062;` is the path of a property in the collection or an entity attribute path to access the current value of each element/entity. If you use a collection of scalar values, 4D will create an object for each collection element with a single property (named "value"), filled with the element value. In this case, you will use `This.value` as expression.
@@ -220,9 +220,9 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                                         |
-| ---------- | --------- | ----------------------------------------------------------------------- |
-| dataSource | string    | A 4D variable, field name, or an arbitrary complex language expression. |
+| Nome       | Tipo de dados | Possible Values                                                         |
+| ---------- | ------------- | ----------------------------------------------------------------------- |
+| dataSource | string        | A 4D variable, field name, or an arbitrary complex language expression. |
 
 #### Objects Supported
 
@@ -230,7 +230,7 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 ---
 
-## Master Table
+## Tabela mestre
 
 `Current selection list boxes`
 
@@ -240,9 +240,9 @@ All database tables can be used, regardless of whether the form is related to a 
 
 #### JSON Grammar
 
-| Name  | Data Type | Possible Values |
-| ----- | --------- | --------------- |
-| table | number    | Table number    |
+| Nome   | Tipo de dados | Possible Values  |
+| ------ | ------------- | ---------------- |
+| tabela | number        | Número de tabela |
 
 #### Objects Supported
 
@@ -250,7 +250,7 @@ All database tables can be used, regardless of whether the form is related to a 
 
 ---
 
-## Save as
+## Salvar como
 
 This property is available in the following conditions:
 
@@ -271,9 +271,9 @@ Using this property requires compliance with the following principles:
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values      |
-| ------ | --------- | -------------------- |
-| saveAs | string    | "value", "reference" |
+| Nome   | Tipo de dados | Possible Values      |
+| ------ | ------------- | -------------------- |
+| saveAs | string        | "value", "reference" |
 
 #### Objects Supported
 
@@ -281,7 +281,7 @@ Using this property requires compliance with the following principles:
 
 ---
 
-## Selected Items
+## Itens selecionados
 
 `Collection or entity selection list boxes`
 
@@ -293,9 +293,9 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 #### JSON Grammar
 
-| Name                | Data Type | Possible Values       |
-| ------------------- | --------- | --------------------- |
-| selectedItemsSource | string    | Collection expression |
+| Nome                | Tipo de dados | Possible Values       |
+| ------------------- | ------------- | --------------------- |
+| selectedItemsSource | string        | Collection expression |
 
 #### Objects Supported
 
@@ -313,9 +313,9 @@ Specifies the named selection to be used. You must enter the name of a valid nam
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values      |
-| -------------- | --------- | -------------------- |
-| namedSelection | string    | Named selection name |
+| Nome           | Tipo de dados | Possible Values      |
+| -------------- | ------------- | -------------------- |
+| namedSelection | string        | Named selection name |
 
 #### Objects Supported
 
