@@ -1,71 +1,71 @@
 ---
 id: quickTour
-title: A Quick Tour in ORDA
+title: ORDA の概要
 ---
 
-Since ORDA is object-based, using ORDA requires basic knowledge in object programmming.
+ORDA はオブジェクトベースであるため、ORDA を使うにはオブジェクト指向プログラミングの基本的な知識が必要です。
 
-## Exploring the datastore
+## データストアの説明
 
-The ORDA datastore is automatically based upon a 4D database structure, provided it complies with the [ORDA prerequisites](overview.md#orda-prerequisites).
+4Dデータベースストラクチャーが [ORDA の前提条件](overview.md#orda-prerequisites) に準拠していれば、ORDA のデータストアは自動的にこれに基づいて機能します。
 
-This example will use the following simple 4D database structure:
+この例題では、以下の単純な 4Dデータベースストラクチャーを使用します:
 
 ![](../assets/en/ORDA/struc.png)
 
-To know what is exposed as the datastore, create a new project method, write the following line:
+データストアとして公開されているものを知るために、新しいプロジェクトメソッドを作成し、以下の行を記述します:
 
 ```code4d
 TRACE
 ```
 
-Execute the method -- it simply calls the debugger window. In the Expression area, double-click to insert an expression and enter `ds`. It returns the datastore object. Deploy the object, you can see that tables and fields are automatically exposed by ORDA as properties of the `ds` object:
+このメソッドを実行すると、デバッガーウィンドウが呼び出されます。 式を挿入するために式エリアをダブルクリックし、`ds` と入力します。 これは、データストアオブジェクトを返します。 オブジェクトを展開すると、`ds` オブジェクトのプロパティとしてテーブルとフィールドが ORDA によって自動的に公開されることがわかります。
 
 ![](../assets/en/ORDA/debug1.png)
 
-It means for example that, whenever you need to refer to the city field of the [Company] table, in ORDA you just need to write:
+これはつまり、たとえば [Company]テーブルの cityフィールドを参照する必要がある場合、ORDA では次のように書くだけ事足ります:
 
 ```code4d
-ds.Company.city //returns the name of the city
+ds.Company.city // 都市の名前を返します
 ```
 
-> In the ORDA world, ds.Company is a **dataclass**. ds.Company.city is an **attribute**.
+> ORDA の世界では，ds.Company は **データクラス** です。 ds.Company.city は **属性** です。
 
-> ORDA is case sensitive. `ds.company.city` will not refer to the ds.Company.city attribute.
+> ORDA は大文字と小文字を区別します。 `ds.company.city` が ds.Company.city 属性を参照することはありません。
 
-You have also noticed the extra `hires` property in the ds.Company dataclass. It does not correspond to a field. `hires` is actually the name of the *One to many* relation between Company and Employee:
+また、ds.Company データクラスに `hires` プロパティが追加されていることにお気づきでしょうか。 これはフィールドに対応した属性ではありません。 `hires` は、実際には Company と Employee の間の *1対N* リレーションの名前です:
 
-![](../assets/en/ORDA/struc2s.png) *Name of the relation as defined in the Inspector*
+![](../assets/en/ORDA/struc2s.png) *インスペクターで定義されているリレーションの名前*
 
-It means that, whenever you need to access the list of employees working for a company, in ORDA you just need to write:
+つまり、ある会社で働く従業員のリストにアクセスしたいとき、ORDA では次のように書きます:
 
 ```code4d
-ds.Company.hires //returns the list of employees
+ds.Company.hires // 従業員のリストを返します
 ```
 
-But don't go too fast. Let's see now how to record data in ORDA dataclasses.
+しかし、急ぎすぎてはいけません。 まずは、ORDA のデータクラスにデータを記録する方法を見ていきましょう。
 
 
-## Adding data
+## データの追加
 
-In ORDA, you can add a record to a dataclass using the `new()` command.
-> In the ORDA world, a record is an **entity** -- an entity is itself an object. A command that is attached to a specific object is called a **member method**.
+ORDA では、`new()` コマンドを使ってデータクラスにレコードを追加することができます。
+> ORDA の世界では、レコードは **エンティティ** であり、エンティティはそれ自体がオブジェクトです。 特定のオブジェクトに付随するコマンドを **メンバーメソッド** と呼びます。
 
 ```code4d
-$entity:=ds.Company.new() //create a new entity reference
-//in the Company dataclass  
-//and assign it to the $entity variable
+$entity:=ds.Company.new() // Company データクラスに
+// 新しいエンティティ参照を作成し、  
+// それを $entity 変数に代入します
 ```
 
-A new entity object contains a "copy" of all attributes of its parent dataclass, thus you can assign values to them:
+新しいエンティティオブジェクトには、その親データクラスのすべての属性の "コピー" が含まれているので、それらに値を代入することができます:
 
 ```code4d
 $entity.name:="ACME, inc."  
 $entity.city:="London"  
-//$entity.ID is automatically filled
+//$entity.ID は自動的に設定されます
 ```
 
-Right now, the entity only exists in memory. To store it in the data file, you need to save it using the `save()` member method:
+今のところ、エンティティはメモリ上にしか存在しません。 データファイルに保存するには、`save()` メンバーメソッドを使って保存する必要があります。
 
 ```code4d
 $status:=$entity.save()
