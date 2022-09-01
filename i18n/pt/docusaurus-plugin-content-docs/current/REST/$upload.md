@@ -6,7 +6,7 @@ title: '$upload'
 
 Returns an ID of the file uploaded to the server
 
-## Description
+## Descrção
 
 Post this request when you have a file that you want to upload to the Server. If you have an image, you pass `$rawPict=true`. For all other files, you pass `$binary=true`.
 
@@ -72,23 +72,16 @@ The following example shows how to upload a *.pdf* file to the server using the 
 var $params : Text
 var $response : Object
 var $result : Integer
-var $blob : Blob
-
-
-ARRAY TEXT($headerNames; 1)
+var $blob : Blob ARRAY TEXT($headerNames; 1)
 ARRAY TEXT($headerValues; 1)
 
 $url:="localhost:80/rest/$upload?$binary=true" //prepare the REST request
 
 $headerNames{1}:="Content-Type"
-$headerValues{1}:="application/octet-stream"
-
-DOCUMENT TO BLOB("c:\\invoices\\inv003.pdf"; $blob) //Load the binary 
+$headerValues{1}:="application/octet-stream" DOCUMENT TO BLOB("c:\\invoices\\inv003.pdf"; $blob) //Load the binary 
 
  //Execute the first POST request to upload the file
-$result:=HTTP Request(HTTP POST method; $url; $blob; $response; $headerNames; $headerValues)
-
-If ($result=200) 
+$result:=HTTP Request(HTTP POST method; $url; $blob; $response; $headerNames; $headerValues) If ($result=200) 
     var $data : Object
     $data:=New object
     $data.__KEY:="3"
