@@ -3,12 +3,12 @@ id: onOpenDetail
 title: On Open Detail
 ---
 
-| Code | Can be called by                                   | Definition                                                                                  |
+| Code | Can be called by                                   | Definição                                                                                   |
 | ---- | -------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | 25   | Form - [List Box](FormObjects/listbox_overview.md) | The detail form associated with the output form or with the list box is about to be opened. |
 
 
-## Description
+## Descrção
 
 The `On Open Detail` event can be used in the following contexts:
 
