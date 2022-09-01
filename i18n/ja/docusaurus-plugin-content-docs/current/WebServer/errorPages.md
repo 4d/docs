@@ -1,44 +1,44 @@
 ---
 id: errorPages
-title: Custom HTTP Error Pages
+title: カスタム HTTPエラーページ
 ---
 
-The 4D Web Server allows you to customize HTTP error pages sent to clients, based on the status code of the server response. Error pages refer to:
+4D Web Server を使って、サーバーレスポンスのステータスコードに基づいて、クライアントに送信される HTTPエラーページをカスタマイズすることができます。 エラーページとは、以下のものを指します:
 
-*   status codes starting with 4 (client errors), for example 404
+*   4 から始まるステータスコード (クライアントエラー)。 たとえば 404 など。
 
-*   status codes starting with 5 (server errors), for example 501.
+*   5 から始まるステータスコード (サーバーエラー)。 たとえば 501 など。
 
-For a full description of HTTP error status codes, you can refer to the [List of HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) (Wikipedia).
+HTTPエラーステータスコードの完全な詳細については、[HTTPステータスコード](https://ja.wikipedia.org/wiki/HTTP%E3%82%B9%E3%83%86%E3%83%BC%E3%82%BF%E3%82%B9%E3%82%B3%E3%83%BC%E3%83%89) (Wikipedia) を参照してください。
 
 
-## Replacing default pages
+## デフォルトページの置換
 
-To replace default 4D Web Server error pages with your own pages you just need to:
+デフォルトの 4D Web Server エラーページを独自のページで置き換えるためには、以下のようにします:
 
-*   put custom HTML pages at the first level of the application's web folder,
+*   カスタム HTMLページをアプリケーションの WebFolder フォルダーの第1レベルに置きます。
 
-*   name the custom pages "{statusCode}.html" (for example, "404.html").
+*   カスタムページを "{statusCode}.html" (例: "404.html") という名前にします。
 
-You can define one error page per status code and/or a generic error page for a range of errors, named "{number}xx.html". For example, you can create "4xx.html" for generic client errors. The 4D Web Server will first look for a {statusCode}.html page then, if it does not exist, a generic page.
+一つのステータスコードにつき、一つのエラーページを定義することができるほか、"{number}xx.html" と名前をつけることで複数のエラーに汎用的なエラーページを定義することもできます。 たとえば、クライアントエラー全般に対するページとして、"4xx.html" というファイルを作成できます。 4D Web Server は最初に {statusCode}.html のページを探し、それが存在しない場合には汎用的なページを探します。
 
-For example, when an HTTP response returns a status code 404:
+たとえば、HTTPレスポンスがステータスコード 404 を返す場合:
 
-1.  4D Web Server tries to send a "404.html" page located in the application's web folder.
+1.  4D Web Server は、アプリケーションの WebFolder フォルダー内にある "404.html" ページを送信しようとします。
 
-2.  If it is not found, 4D Web Server tries to send a "4xx.html" page located in the application's web folder.
+2.  それが見つからない場合、4D Web Server はアプリケーションの WebFolder フォルダー内にある "4xx.html" ページを送信しようとします。
 
-3.  If not found, 4D Web Server then uses its default error page.
+3.  それも見つからない場合、4D Web Server はデフォルトのエラーページを使用します。
 
-## Example
+## 例題
 
-If you define the following custom pages in your web folder:
+WebFolder フォルダーに、以下のようにカスタムページを定義している場合:
 
 ![](../assets/en/WebServer/errorPage.png)
 
-*   the "403.html" or "404.html" pages will be served when 403 or 404 HTTP responses are returned respectively,
+*   403、404 HTTPレスポンスに対しては、"403.html" および "404.html" ページがそれぞれ返されます。
 
-*   the "4xx.html" page will be served for any other 4xx error status (400, 401, etc.),
+*   他の 4xx エラーステータス (400、401など) に対しては、"4xx.html" ページが返されます。
 
-*   the "5xx.html" page will be served for any 5xx error status.
+*   5xx エラーステータス全般に対しては"5xx.html" ページが返されます。
 
