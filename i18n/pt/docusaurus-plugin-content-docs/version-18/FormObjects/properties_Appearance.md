@@ -1,6 +1,6 @@
 ---
 id: propertiesAppearance
-title: Appearance
+title: Aparência
 ---
 
 
@@ -22,9 +22,9 @@ On Windows, the concept of "recommended choice" is not supported: only the focus
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Nome | Tipo de dados | Possible Values |
+| ---- | ------------- | --------------- |
+|      |               |                 |
  defaultButton|boolean|true, false |
 
 #### Objects Supported
@@ -33,15 +33,15 @@ On Windows, the concept of "recommended choice" is not supported: only the focus
 
 ---
 
-## Hide focus rectangle
+## Esconder retangulo foco
 
 During execution, a field or any enterable area is outlined by a selection rectangle when it has the focus (via the Tab key or a single click). You can hide this rectangle by enabling this property. Hiding the focus rectangle may be useful in the case of specific interfaces.
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values |
-| ------------- | --------- | --------------- |
-| hideFocusRing | boolean   | true, false     |
+| Nome          | Tipo de dados | Possible Values |
+| ------------- | ------------- | --------------- |
+| hideFocusRing | boolean       | true, false     |
 
 #### Objects Supported
 
@@ -49,7 +49,7 @@ During execution, a field or any enterable area is outlined by a selection recta
 
 ---
 
-## Hide selection highlight
+## Esconder ressalte seleção
 
 `Selection type list boxes`
 
@@ -61,9 +61,9 @@ By default, this option is not enabled.
 
 #### JSON Grammar
 
-| Name                | Data Type | Possible Values |
-| ------------------- | --------- | --------------- |
-| hideSystemHighlight | boolean   | true, false     |
+| Nome                | Tipo de dados | Possible Values |
+| ------------------- | ------------- | --------------- |
+| hideSystemHighlight | boolean       | true, false     |
 
 #### Objects Supported
 
@@ -71,50 +71,50 @@ By default, this option is not enabled.
 
 ---
 
-## Horizontal Scroll Bar
+## Barra rolagem horizontal
 
 An interface tool allowing the user to move the viewing area to the left or right.
 
 Available values:
 
-| Property List | JSON value  | Description                                                                                                                                              |
+| Property List | Valor JSON  | Descrção                                                                                                                                                 |
 | ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Yes           | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
+| Sim           | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
 | No            | "hidden"    | The scrollbar is never visible                                                                                                                           |
-| Automatic     | "automatic" | The scrollbar appears automatically whenever necessary and the user can enter text larger than the object width                                          |
+| Automático    | "automatic" | The scrollbar appears automatically whenever necessary and the user can enter text larger than the object width                                          |
 
 > Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
 
 #### JSON Grammar
 
-| Name                | Data Type | Possible Values                  |
-| ------------------- | --------- | -------------------------------- |
-| scrollbarHorizontal | text      | "visible", "hidden", "automatic" |
+| Nome                | Tipo de dados | Possible Values                  |
+| ------------------- | ------------- | -------------------------------- |
+| scrollbarHorizontal | text          | "visible", "hidden", "automatic" |
 
 #### Objects Supported
 
 [Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
-#### See also
+#### Veja também
 
 [Vertical scroll bar](#vertical-scroll-bar)
 
 ---
 
-## Resolution
+## Resolução
 
 Sets the screen resolution for the 4D Write Pro area contents. By default, it is set to 72 dpi (macOS), which is the standard resolution for 4D forms on all platforms. Setting this property to 96 dpi will set a windows/web rendering on both macOS and Windows platforms. Setting this property to **automatic** means that document rendering will differ between macOS and Windows platforms.
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Nome | Tipo de dados | Possible Values |
+| ---- | ------------- | --------------- |
+|      |               |                 |
  dpi|number|0=automatic, 72, 96 |
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -124,14 +124,14 @@ Displays/hides both background images and background color.
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Nome | Tipo de dados | Possible Values |
+| ---- | ------------- | --------------- |
+|      |               |                 |
  showBackground|boolean|true (default), false|
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -141,14 +141,14 @@ Displays/hides the footers when [Page view mode](#view-mode) is set to "Page".
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Nome | Tipo de dados | Possible Values |
+| ---- | ------------- | --------------- |
+|      |               |                 |
  showFooters|boolean|true (default), false|
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -160,14 +160,14 @@ When enabled, the formula bar is visible below the Toolbar interface in the 4D V
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Nome | Tipo de dados | Possible Values |
+| ---- | ------------- | --------------- |
+|      |               |                 |
  withFormulaBar|boolean|true (default), false|
 
 #### Objects Supported
 
-[4D View Pro area](viewProArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md)
 
 ---
 
@@ -177,14 +177,14 @@ Displays/hides the headers when [Page view mode](#view-mode) is set to "Page".
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Nome | Tipo de dados | Possible Values |
+| ---- | ------------- | --------------- |
+|      |               |                 |
  showHeaders|boolean|true (default), false|
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -194,14 +194,14 @@ Displays/hides invisible characters
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Nome | Tipo de dados | Possible Values |
+| ---- | ------------- | --------------- |
+|      |               |                 |
  showHiddenChars|boolean|true (default), false|
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -211,14 +211,14 @@ Displays/hides the horizontal ruler when the document view is in [Page mode](#vi
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Nome | Tipo de dados | Possible Values |
+| ---- | ------------- | --------------- |
+|      |               |                 |
  showHorizontalRuler|boolean|true (default), false|
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -228,14 +228,14 @@ Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attri
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Nome | Tipo de dados | Possible Values |
+| ---- | ------------- | --------------- |
+|      |               |                 |
  showHTMLWysiwyg|boolean|true, false (default)|
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -245,14 +245,14 @@ Displays/hides the page frame when [Page view mode](#view-mode) is set to "Page"
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Nome | Tipo de dados | Possible Values |
+| ---- | ------------- | --------------- |
+|      |               |                 |
  showPageFrames|boolean|true, false|
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -272,14 +272,14 @@ With the Show references property on, the reference is displayed:
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Nome | Tipo de dados | Possible Values |
+| ---- | ------------- | --------------- |
+|      |               |                 |
  showReferences|boolean|true, false (default)|
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -289,14 +289,14 @@ Displays/hides the vertical ruler when the document view is in [Page mode](#view
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Nome | Tipo de dados | Possible Values |
+| ---- | ------------- | --------------- |
+|      |               |                 |
  showVerticalRuler|boolean|true (default), false|
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -308,9 +308,9 @@ When tab controls with a custom direction are displayed under Windows, they auto
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Nome | Tipo de dados | Possible Values |
+| ---- | ------------- | --------------- |
+|      |               |                 |
  labelsPlacement|boolean|"top", "bottom" |
 
 #### Objects Supported
@@ -325,32 +325,32 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Nome | Tipo de dados | Possible Values |
+| ---- | ------------- | --------------- |
+|      |               |                 |
  userInterface|text|"none" (default), "ribbon", "toolbar" |
 
 #### Objects Supported
 
-[4D View Pro area](viewProArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md)
 
-#### See also
+#### Veja também
 
 [4D View Pro reference guide](https://doc.4d.com/4Dv18/4D/18/4D-View-Pro-Reference.100-4522233.en.html)
 
 ---
 
-## Vertical Scroll Bar
+## Barra rolagem vertical
 
 An interface tool allowing the user to move the viewing area up and down.
 
 Available values:
 
-| Property List | JSON value  | Description                                                                                                                                              |
+| Property List | Valor JSON  | Descrção                                                                                                                                                 |
 | ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Yes           | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
+| Sim           | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
 | No            | "hidden"    | The scrollbar is never visible                                                                                                                           |
-| Automatic     | "automatic" | The scrollbar appears automatically whenever necessary (in other words, when the size of the object contents is greater than that of the frame)          |
+| Automático    | "automatic" | The scrollbar appears automatically whenever necessary (in other words, when the size of the object contents is greater than that of the frame)          |
 
 > Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
 
@@ -358,40 +358,40 @@ Available values:
 
 #### JSON Grammar
 
-| Name              | Data Type | Possible Values                  |
-| ----------------- | --------- | -------------------------------- |
-| scrollbarVertical | text      | "visible", "hidden", "automatic" |
+| Nome              | Tipo de dados | Possible Values                  |
+| ----------------- | ------------- | -------------------------------- |
+| scrollbarVertical | text          | "visible", "hidden", "automatic" |
 
 #### Objects Supported
 
 [Hierarchical List](list_overview.md#overview) - [Subform](subform_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Input](input_overview.md) - [4D Write Pro area](writeProArea_overview.md)
 
-#### See also
+#### Veja também
 
 [Horizontal scroll bar](#horizontal-scroll-bar)
 
 ---
 
-## View mode
+## Modo de visualização
 
 Sets the mode for displaying the 4D Write Pro document in the form area. Three values are available:
 
 - **Page**: the most complete view mode, which includes page outlines, orientation, margins, page breaks, headers and footers, etc.
 - **Draft**: draft mode with basic document properties
-- **Embedded**: view mode suitable for embedded areas; it does not display margins, footers, headers, page frames, etc. This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties).
+- **Embedded**: view mode suitable for embedded areas; it does not display margins, footers, headers, page frames, etc. This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties). This mode can also be used to produce a web-like view output (if you also select the [96 dpi resolution](#resolution) and the [Show HTML WYSIWYG](#show-html-wysiwyg) properties).
 
 > The View mode property is only used for onscreen rendering. Regarding printing settings, specific rendering rules are automatically used.
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Nome | Tipo de dados | Possible Values |
+| ---- | ------------- | --------------- |
+|      |               |                 |
  layoutMode|text|"page", "draft", "embedded"|
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
 
 ---
 
@@ -401,11 +401,11 @@ Sets the zoom percentage for displaying 4D Write Pro area contents.
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-|      |           |                 |
+| Nome | Tipo de dados | Possible Values |
+| ---- | ------------- | --------------- |
+|      |               |                 |
  zoom|number|minimum = 0 |
 
 #### Objects Supported
 
-[4D Write Pro area](writeProArea_overview.md)
+[Área 4D Write Pro](writeProArea_overview.md)
