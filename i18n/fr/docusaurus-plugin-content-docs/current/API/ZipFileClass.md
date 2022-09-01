@@ -3,9 +3,9 @@ id: ZipFileClass
 title: ZIPFile
 ---
 
-The following properties and functions from the [File](FileClass.md) class are available to `ZIPFile` objects:
+Les propriétés et fonctions suivantes de la classe [File](FileClass.md) sont disponibles pour les objets `ZIPFile` :
 
-| Available [File](FileClass.md) APIs for ZIPFile                                               | Comment                                |
+| API disponibles de [File](FileClass.md) API des ZIPFile                                       | Commentaire                            |
 | --------------------------------------------------------------------------------------------- | -------------------------------------- |
 | [<!-- INCLUDE #document.copyTo().Syntax -->](FileClass.md#copyto)                   |                                        |
 | [<!-- INCLUDE #document.creationDate.Syntax -->](FileClass.md#creationdate)         |                                        |
@@ -20,11 +20,11 @@ The following properties and functions from the [File](FileClass.md) class are a
 | [<!-- INCLUDE #document.isAlias.Syntax -->](FileClass.md#isalias)                   |                                        |
 | [<!-- INCLUDE #document.isFile.Syntax -->](FileClass.md#isfile)                     |                                        |
 | [<!-- INCLUDE #document.isFolder.Syntax -->](FileClass.md#isfolder)                 |                                        |
-| [<!-- INCLUDE #document.isWritable.Syntax -->](FileClass.md#iswritable)             | Always false with ZIP archive          |
+| [<!-- INCLUDE #document.isWritable.Syntax -->](FileClass.md#iswritable)             | Toujours Faux avec ZIP archive         |
 | [<!-- INCLUDE #document.modificationDate.Syntax -->](FileClass.md#modificationdate) |                                        |
 | [<!-- INCLUDE #document.modificationTime.Syntax -->](FileClass.md#modificationtime) |                                        |
 | [<!-- INCLUDE #document.name.Syntax -->](FileClass.md#name)                         |                                        |
 | [<!-- INCLUDE #document.original.Syntax -->](FileClass.md#original)                 |                                        |
 | [<!-- INCLUDE #document.parent.Syntax -->](FileClass.md#parent)                     |                                        |
-| [<!-- INCLUDE #document.path.Syntax -->](FileClass.md#path)                         | Returns a path relative to the archive |
+| [<!-- INCLUDE #document.path.Syntax -->](FileClass.md#path)                         | Retourne un chemin relatif à l'archive |
 | [<!-- INCLUDE #document.platformPath.Syntax -->](FileClass.md#platformpath)         |                                        |
