@@ -31,9 +31,9 @@ If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https:/
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values         |
-| ------------ | --------- | ----------------------- |
-| resizingMode | string    | "rightToLeft", "legacy" |
+| Name         | Datentyp | Possible Values         |
+| ------------ | -------- | ----------------------- |
+| resizingMode | string   | "rightToLeft", "legacy" |
 
 #### Objects Supported
 
@@ -47,7 +47,7 @@ This property specifies if the horizontal size of an object should be moved or r
 
 Three options are available:
 
-| Option | JSON value | Result                                                                                                                 |
+| Option | JSON value | Ergebnis                                                                                                               |
 | ------ | ---------- | ---------------------------------------------------------------------------------------------------------------------- |
 | Grow   | "grow"     | The same percentage is applied to the object’s width when the user resizes the width of the window,                    |
 | Move   | "move"     | The object is moved the same amount left or right as the width increase when the user resizes the width of the window, |
@@ -56,9 +56,9 @@ Three options are available:
 
 #### JSON Grammar
 
-| Name    | Data Type | Possible Values         |
-| ------- | --------- | ----------------------- |
-| sizingX | string    | "grow", "move", "fixed" |
+| Name    | Datentyp | Possible Values         |
+| ------- | -------- | ----------------------- |
+| sizingX | string   | "grow", "move", "fixed" |
 
 #### Objects Supported
 
@@ -72,7 +72,7 @@ This property specifies if the vertical size of an object should be moved or res
 
 Three options are available:
 
-| Option | JSON value | Result                                                                                                               |
+| Option | JSON value | Ergebnis                                                                                                             |
 | ------ | ---------- | -------------------------------------------------------------------------------------------------------------------- |
 | Grow   | "grow"     | The same percentage is applied to the object's height when the user resizes the width of the window,                 |
 | Move   | "move"     | The object is moved the same amount up or down as the height increase when the user resizes the width of the window, |
@@ -81,9 +81,9 @@ Three options are available:
 
 #### JSON Grammar
 
-| Name    | Data Type | Possible Values         |
-| ------- | --------- | ----------------------- |
-| sizingY | string    | "grow", "move", "fixed" |
+| Name    | Datentyp | Possible Values         |
+| ------- | -------- | ----------------------- |
+| sizingY | string   | "grow", "move", "fixed" |
 
 #### Objects Supported
 
@@ -105,9 +105,9 @@ When this property is not applied to the splitter, the result is as follows:
 
 #### JSON Grammar
 
-| Name         | Data Type |           Possible Values            |
-|:------------ |:---------:|:------------------------------------:|
-| splitterMode |  string   | "move" (pusher), "resize" (standard) |
+| Name         | Datentyp |           Possible Values            |
+|:------------ |:--------:|:------------------------------------:|
+| splitterMode |  string  | "move" (pusher), "resize" (standard) |
 
 #### Objects Supported
 
@@ -121,9 +121,9 @@ Designates if the size of the column can be modified by the user.
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values |
-|:--------- |:---------:|:---------------:|
-| resizable |  boolean  | "true", "false" |
+| Name      | Datentyp | Possible Values |
+|:--------- |:--------:|:---------------:|
+| resizable | boolean  | "true", "false" |
 
 #### Objects Supported
 
