@@ -15,7 +15,7 @@ An attribute is the smallest storage cell in a relational database (see also [Re
 
 *   In a dataclass object, each property is a dataclass attribute that maps to a corresponding field in the corresponding table (same name and type).
 *   In an entity object, entity attributes are properties that contain values for the corresponding datastore attributes.
-> *Attributes* and *properties* are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.
+> Attributes and properties are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.
 
 ## AttributePath
 
@@ -92,7 +92,7 @@ An entity can be seen as an instance of the dataclass, like a record of the tabl
 
 For more information, see Entities.
 
-## Entity selection
+## Entity-Selection
 
 An entity selection is an object. When querying the datastore, an entity selection is returned. An entity selection is a set of references to entities related to the same dataclass.
 
@@ -130,16 +130,16 @@ $myClass.query("name = smith")
 
 ## Mixed data type
 
-In this documentation, "Mixed" data type is used to designate the various type of values that can be stored within dataclass attributes. It includes:
+In this documentation, "Mixed" data type is used to designate the various type of values that can be stored within dataclass attributes. Das gilt für:
 
-*   number
-*   text
-*   null
+*   Zahl
+*   Text
+*   Null
 *   boolean
 *   date
 *   object
 *   collection
-*   picture(\*)
+*   Bild (\*)
 
 *(\*) picture type is not supported by statistical methods such as* `entitySelection.max( )`.
 
@@ -154,7 +154,7 @@ A "pessimistic lock" means that an entity is locked prior to its being accessed,
 ## Property
 
 See [Attribute](#attribute).
-> Attributes and properties are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.
+> > *Attributes* and *properties* are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.
 
 ## PropertyPath
 
@@ -201,7 +201,7 @@ Inactive sessions are automatically closed after a timeout. The default timeout 
 
 A shallow copy only duplicates the structure of elements, and keeps the same internal references. After a shallow copy, two collections will both share the individual elements. See also Deep copy.
 
-## Stamp
+## Stempel
 
 Used in "optimistic" locking technology. All entities have an internal counter, the stamp, which is incremented each time the entity is saved. By automatically comparing stamps between an entity being saved and its version stored on disk, 4D can prevent concurrent modifications on the same entities.
 
