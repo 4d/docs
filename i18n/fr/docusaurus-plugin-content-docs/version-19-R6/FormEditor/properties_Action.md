@@ -4,17 +4,17 @@ title: Action
 ---
 
 
-## Method
+## Méthode
 
-Reference of a method attached to the form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. See [Specialized methods](Concepts/methods.md#specialized-methods).
+Référence d'une méthode associée au formulaire. Vous pouvez utiliser une méthode formulaire pour gérer les données et les objets, mais il est généralement plus simple et plus efficace d'utiliser une méthode objet dans ces cas de figure. Voir [Méthodes spécialisées](Concepts/methods.md#specialized-methods).
 
-You do not call a form method—4D calls it automatically when an event involves the form to which the method is attached.
+Vous n'appelez pas de méthode formulaire - 4D l'appelle automatiquement lorsqu'un événement implique le formulaire auquel la méthode est associée.
 
-Several types of method references are supported:
+Plusieurs types de références de méthode sont pris en charge :
 
-- a standard project method file path, i.e. that uses the following pattern:  
+- un chemin de fichier de méthode projet standard, c'est-à-dire qui utilise le modèle suivant :  
   `method.4dm`  
-  This type of reference indicates that the method file is located at the default location ("sources/{TableForms/*numTable*} | {Forms}/*formName*/"). In this case, 4D automatically handles the form method when operations are executed on the form (renaming, duplication, copy/paste...)
+  Ce type de référence indique que le fichier de méthode se trouve à l'emplacement par défaut ("sources/{TableForms/*numTable*} | {Forms}/*formName*/"). Dans ce cas, 4D gère automatiquement la méthode formulaire lorsque des opérations sont exécutées sur le formulaire (renommage, duplication, copier/coller, etc.)
 
 - a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for form operations.
 
@@ -23,9 +23,9 @@ Several types of method references are supported:
   `/RESOURCES/Forms/FormMethod.4dm` In this case, 4D does not provide automatic support for object operations.
 
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name   | Data Type | Possible Values                                                  |
-| ------ | --------- | ---------------------------------------------------------------- |
-| method | text      | Form method standard or custom file path, or project method name |
+| Nom    | Type de données | Valeurs possibles                                                                    |
+| ------ | --------------- | ------------------------------------------------------------------------------------ |
+| method | text            | Chemin standard ou personnalisé de la méthode formulaire ou nom de la méthode projet |
 
