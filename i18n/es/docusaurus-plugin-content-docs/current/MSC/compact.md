@@ -1,71 +1,71 @@
 ---
 id: compact
-title: Compact Page
-sidebar_label: Compact Page
+title: Página compactado
+sidebar_label: Página compactado
 ---
 
-You use this page to access the data file compacting functions.
+Esta página permite acceder a las funciones de compactación del archivos de datos.
 
-## Why compact your files?
+## ¿Por qué compactar los archivos?
 
-Compacting files meets two types of needs:
+La compactación de archivos responde a dos tipos de necesidades:
 
-- **Reducing size and optimization of files**: Files may contain unused spaces (“holes”). In fact, when you delete records, the space that they occupied previously in the file becomes empty. 4D reuses these empty spaces whenever possible, but since data size is variable, successive deletions or modifications will inevitably generate unusable space for the program. The same goes when a large quantity of data has just been deleted: the empty spaces remain unassigned in the file. The ratio between the size of the data file and the space actually used for the data is the occupation rate of the data. A rate that is too low can lead, in addition to a waste of space, to the deterioration of database performance. Compacting can be used to reorganize and optimize storage of the data in order to remove the “holes”. The “Information” area summarizes the data concerning the fragmentation of the file and suggests operations to be carried out. The [Data](information.md#data) tab on the “Information” page of the MSC indicates the fragmentation of the current data file.
+- **Reducción del tamaño y optimización de los archivos**: los archivos pueden contener espacios no utilizados ("huecos"). De hecho, cuando se eliminan los registros, el espacio que ocupaban anteriormente en el archivo queda vacío. 4D reutiliza estos espacios vacíos siempre que es posible, pero como el tamaño de los datos es variable, las sucesivas eliminaciones o modificaciones generarán inevitablemente espacio inutilizable para el programa. Lo mismo ocurre cuando se acaba de borrar una gran cantidad de datos: los espacios vacíos quedan sin asignar en el archivo. La relación entre el tamaño del archivo de datos y el espacio realmente utilizado para los datos es la tasa de ocupación de los datos. Una tasa demasiado baja puede provocar, además de un desperdicio de espacio, el deterioro del rendimiento de la base. La compactación puede utilizarse para reorganizar y optimizar el almacenamiento de los datos con el fin de eliminar los "huecos". El área "Información" resume los datos relativos a la fragmentación de los archivos y sugiere las operaciones a realizar. La pestaña [Datos](information.md#data) de la página "Información" del CSM indica la fragmentación del archivo de datos actual.
 
-- **Complete updating of data** by applying the current formatting set in the structure file. This is useful when data from the same table were stored in different formats, for example after a change in the database structure.
-> Compacting is only available in maintenance mode. If you attempt to carry out this operation in standard mode, a warning dialog box will inform you that the application will be closed and restarted in maintenance mode. You can compact a data file that is not opened by the application (see [Compact records and indexes](#compact-records-and-indexes) below).
+- **Actualización completa de los datos** aplicando el formato actual definido en el archivo de estructura. Esto es útil cuando los datos de una misma tabla se almacenan en diferentes formatos, por ejemplo, después de un cambio en la estructura de la base.
+> La compactación sólo está disponible en el modo mantenimiento. Si intenta realizar esta operación en modo estándar, una caja de diálogo de advertencia le informará que la aplicación se cerrará y se reiniciará en modo mantenimiento. Puede compactar un archivo de datos que no esté abierto por la aplicación (ver [Compactar los registros y los índices](#compact-records-and-indexes) abajo).
 
-## Standard compacting
+## Compactación estándar
 
-To directly begin the compacting of the data file, click on the compacting button in the MSC window.
+Para iniciar directamente la compactación del archivo de datos, haga clic en el botón de compactación de la ventana del CSM.
 
 ![](../assets/en/MSC/MSC_compact.png)
-> Since compacting involves the duplication of the original file, the button is disabled when there is not adequate space available on the disk containing the file.
+> Como la compactación implica la duplicación del archivo original, el botón se desactiva cuando no hay espacio suficiente en el disco que contiene el archivo.
 
-This operation compacts the main file as well as any index files. 4D copies the original files and puts them in a folder named **Replaced Files (Compacting)**, which is created next to the original file. If you have carried out several compacting operations, a new folder is created each time. It will be named “Replaced Files (Compacting)_1”, “Replaced Files (Compacting)_2”, and so on. You can modify the folder where the original files are saved using the advanced mode.
+Esta operación compacta el archivo principal y los archivos de índice. 4D copia los archivos originales y los coloca en una carpeta llamada **Archivos Reemplazados (Compactando)**, que se crea junto al archivo original. Si ha realizado varias operaciones de compactación, se crea una nueva carpeta cada vez. Se llamará "Archivos reemplazados (compactando)_1", "Archivos reemplazados (compactando)_2", y así sucesivamente. Puede modificar la carpeta donde se guardan los archivos originales utilizando el modo avanzado.
 
-When the operation is completed, the compacted files automatically replace the original files. The application is immediately operational without any further manipulation.
-> When the database is encrypted, compacting includes decryption and encryption steps and thus, requires the current data encryption key. If no valid data key has already been provided, a dialog box requesting the passphrase or the data key is displayed.
+Una vez finalizada la operación, los archivos compactados sustituyen automáticamente a los originales. La aplicación es inmediatamente operacional sin ninguna otra manipulación.
+> Cuando la base está encriptada, la compactación incluye pasos de encriptación y desencriptación y, por tanto, requiere la llave de encriptación de datos actual. Si no se ha suministrado una llave de datos válida, aparecerá una caja de diálogo solicitando la frase secreta o la llave de datos.
 
-**Warning:** Each compacting operation involves the duplication of the original file which increases the size of the application folder. It is important to take this into account (especially under macOS where 4D applications appear as packages) so that the size of the application does not increase excessively. Manually removing the copies of the original file inside the package can be useful in order to keep the package size down.
+**Atención:** cada operación de compactación implica la duplicación del archivo original, lo que aumenta el tamaño de la carpeta de la aplicación. Es importante tener esto en cuenta (especialmente en macOS, donde las aplicaciones 4D aparecen como paquetes) para que el tamaño de la aplicación no aumente excesivamente. Eliminar manualmente las copias del archivo original dentro del paquete puede ser útil para mantener el tamaño del paquete.
 
-## Open log file
+## Abrir archivo de historial
 
-After compacting is completed, 4D generates a log file in the Logs folder of the project. This file allows you to view all the operations carried out. It is created in XML format and named:  *ApplicationName**_Compact_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
+Una vez finalizada la compactación, 4D genera un archivo de historial en la carpeta Logs del proyecto. Este archivo permite ver todas las operaciones realizadas. Se crea en formato XML y se llama:  *ApplicationName**_Compact_Log_yyyy-mm-dd hh-mm-ss.xml*" donde:
 
-- *ApplicationName* is the name of the project file without any extension, for example "Invoices",
-- *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
+- *ApplicationName* es el nombre del archivo del proyecto sin ninguna extensión, por ejemplo "Facturas",
+- *yyyy-mm-dd hh-mm-ss* es la marca de tiempo del archivo, basada en la hora del sistema local cuando se inició la operación de mantenimiento, por ejemplo "2019-02-11 15-20-45".
 
-When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
+Al presionar el botón **Abrir archivo de historial**, 4D muestra el archivo de historial más reciente en el navegador por defecto de la máquina.
 
 
-## Advanced mode
+## Modo avanzado
 
-The Compact page contains an **Advanced>** button, which can be used to access an options page for compacting data file.
+La página Compactar contiene un botón **Avanzado>**, con el que se puede acceder a una página de opciones para compactar el archivo de datos.
 
-### Compact records and indexes
+### Compactar los registros y los índices
 
-The **Compact records and indexes** area displays the pathname of the current data file as well as a **[...]** button that can be used to specify another data file. When you click on this button, a standard Open document dialog box is displayed so that you can designate the data file to be compacted. You must select a data file that is compatible with the open structure file. Once this dialog box has been validated, the pathname of the file to be compacted is indicated in the window.
+El área **Compactar los registros y los índices** muestra el nombre de la ruta del archivo de datos actual, así como un botón **[...]** que puede utilizarse para especificar otro archivo de datos. Al hacer clic en este botón, se muestra una caja de diálogo estándar de ápertura de documentos para que pueda designar el archivo de datos a compactar. Debe seleccionar un archivo de datos que sea compatible con el archivo de estructura abierto. Una vez validada esta caja de diálogo, se indica en la ventana el nombre de la ruta del archivo a compactar.
 
-The second **[...]** button can be used to specify another location for the original files to be saved before the compacting operation. This option can be used more particularly when compacting voluminous files while using different disks.
+El segundo botón **[...]** se puede utilizar para especificar otra ubicación para guardar los archivos originales antes de la operación de compactación. Esta opción se puede utilizar más particularmente cuando se compactan archivos voluminosos mientras se utilizan diferentes discos.
 
-### Force updating of the records
+### Forzar la actualización de los registros
 
-When this option is checked, 4D rewrites every record for each table during the compacting operation, according to its description in the structure. If this option is not checked, 4D just reorganizes the data storage on disk. This option is useful in the following cases:
+Cuando esta opción está marcada, 4D reescribe cada registro de cada tabla durante la operación de compactación, según su descripción en la estructura. Si esta opción no está marcada, 4D sólo reorganiza el almacenamiento de datos en el disco. Esta opción es útil en los siguientes casos:
 
-- When field types are changed in the application structure after data were entered. For example, you may have changed a Longint field to a Real type. 4D even allows changes between two very different types (with risks of data loss), for instance a Real field can be changed to Text and vice versa. In this case, 4D does not convert data already entered retroactively; data is converted only when records are loaded and then saved. This option forces all data to be converted.
+- Cuando los tipos de campo se modifican en la estructura de la aplicación después de haber introducido los datos. Por ejemplo, puede haber cambiado un campo Longint a un tipo Real. 4D permite incluso cambios entre dos tipos muy diferentes (con riesgo de pérdida de datos), por ejemplo, un campo Real puede cambiarse a Texto y viceversa. En este caso, 4D no convierte los datos ya introducidos de forma retroactiva; los datos se convierten sólo cuando se cargan los registros y luego se guardan. Esta opción obliga a convertir todos los datos.
 
-- When an external storage option for Text, Picture or BLOB data has been changed after data were entered. This can happen when databases are converted from a version prior to v13. As is the case with the retyping described above, 4D does not convert data already entered retroactively. To do this, you can force records to be updated in order to apply the new storage mode to records that have already been entered.
+- Cuando una opción de almacenamiento externo para datos de Texto, Imagen o BLOB ha sido cambiada después de haber introducido los datos. Esto puede ocurrir cuando se convierten las bases de datos desde una versión anterior a la v13. Como en el caso de la reescritura descrita anteriormente, 4D no convierte los datos ya introducidos con carácter retroactivo. Para ello, puede forzar la actualización de los registros para aplicar el nuevo modo de almacenamiento a los registros ya introducidos.
 
-- When tables or fields were deleted. In this case, compacting with updating of records recovers the space of these removed data and thus reduces file size.
-> All the indexes are updated when this option is selected.
+- Cuando se han eliminado las tablas o los campos. En este caso, la compactación con actualización de registros recupera el espacio de estos datos eliminados y reduce así el tamaño del archivo.
+> Todos los índices se actualizan cuando se selecciona esta opción.
 
-### Compact address table
-(option only active when preceding option is checked)
+### Compactar la tabla de direcciones
+(opción activa únicamente cuando la opción anterior está marcada)
 
-This option completely rebuilds the address table for the records during compacting. This optimizes the size of the address table and is mainly used for databases where large volumes of data were created and then deleted. In other cases, optimization is not a decisive factor.
+Esta opción reconstruye completamente la tabla de direcciones para los registros durante la compactación. Esto optimiza el tamaño de la tabla de direcciones y se utiliza principalmente para las bases de datos en las que se crearon grandes volúmenes de datos y luego se borraron. En otros casos, la optimización no es un factor decisivo.
 
-Note that this option substantially slows compacting and invalidates any sets saved using the `SAVE SET` command. Moreover, we strongly recommend deleting saved sets in this case because their use can lead to selections of incorrect data.
-> - Compacting takes records of tables that have been put into the Trash into account. If there are a large number of records in the Trash, this can be an additional factor that may slow down the operation.
-> - Using this option makes the address table, and thus the database, incompatible with the current journal file (if there is one). It will be saved automatically and a new journal file will have to be created the next time the application is launched.
-> - You can decide if the address table needs to be compacted by comparing the total number of records and the address table size in the [Information](information.md) page of the MSC.
+Tenga en cuenta que esta opción ralentiza sustancialmente la compactación e invalida cualquier conjunto guardado mediante el comando `SAVE SET`. Además, recomendamos especialmente que se borren los conjuntos guardados en este caso, ya que su uso puede dar lugar a selecciones de datos incorrectas.
+> - La compactación tiene en cuenta los registros de las tablas que se han puesto en la Papelera. Si hay un gran número de registros en la Papelera, esto puede ser un factor adicional que puede ralentizar la operación.
+> - El uso de esta opción hace que la tabla de direcciones, y por tanto la base de datos, sea incompatible con el archivo de diario actual (si existe). Se guardará automáticamente y habrá que crear un nuevo archivo de historial la próxima vez que se inicie la aplicación.
+> - Puede decidir si la tabla de direcciones necesita ser compactada comparando el número total de registros y el tamaño de la tabla de direcciones en la página [Información](information.md) del CSM.
