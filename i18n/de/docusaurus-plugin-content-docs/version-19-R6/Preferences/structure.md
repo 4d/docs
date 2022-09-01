@@ -1,5 +1,5 @@
 ---
-id: structure
+id: struktur
 title: Structure Page
 ---
 
