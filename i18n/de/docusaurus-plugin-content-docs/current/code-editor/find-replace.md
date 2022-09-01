@@ -26,7 +26,7 @@ The search defined in this dialog box will be performed in the method located in
 - The **Case Sensitive** option is used to take the case of characters as they were entered in the "Find What:" area into account. For instance, a search for "MyVar" will not find "myVar."
 - The **Previous/Next** radio buttons are used to set the direction of the search: towards the beginning or end of the current method, starting from the initial location of the cursor.
 
-When you click on **OK**, 4D begins searching from the current text insertion point and continues to the end of the method. The first item corresponding to the set criteria is thus selected in the Code Editor window. It is then possible to continue the search using the **Find Next** and **Find Previous** commands of the **Edit** menu.
+When you click on **OK**, 4D begins searching from the current text insertion point and continues to the end of the method. The first item corresponding to the set criteria is thus selected in the Code Editor window. It is then possible to continue finding/replacing using the **Replace Next** and **Replace Previous** commands of the **Edit** menu.
 
 ### Find Same
 
@@ -56,7 +56,7 @@ The **Replace** command displays the following dialog box:
 - The **Case Sensitive** option is used to find/replace only character strings having the same case as that of the entered string. For instance, a search for "MyVar" will not find "myVar."
 - As in the Find dialog box, the **Previous** and **Next** buttons are used to set the direction of the search: towards the beginning or end of the current method, starting from the initial location of the cursor.
 
-The **Replace** button is used to launch the search and replace the first occurrence found. 4D begins searching from the current text insertion point and continues to the end of the method. It is then possible to continue finding/replacing using the **Replace Next** and **Replace Previous** commands of the **Edit** menu.
+The **Replace** button is used to launch the search and replace the first occurrence found. 4D begins searching from the current text insertion point and continues to the end of the method. It is then possible to continue the search using the **Find Next** and **Find Previous** commands of the **Edit** menu.
 
 The **Everywhere** button is used to replace all the occurrences corresponding to the search criteria directly in the open method.
 
@@ -66,7 +66,7 @@ The **Goto Definition** command opens the definition of an element referenced in
 
 **Note:** This feature is also available through the keyboard shortcut **Ctrl+K** (Windows) or **Command+K** (macOS).
 
-The effect varies depending on the target element. For example:
+The effect varies depending on the target element. Beispiel:
 
 - Selecting a project method and choosing **Goto Definition...** displays the contents of the method in a new window of the Code Editor
 - Selecting a class name or class attribute and choosing **Goto Definition...** opens the class in the the Code Editor
@@ -77,7 +77,7 @@ The **Reveal in Explorer...** command opens an Explorer window with the target e
 
 ## Show documentation
 
-The **Show documentation...** command opens the documentation for the target element. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Show documentation...** or use the contextual menu. The effect varies depending on the target element. For example:
+The **Show documentation...** command opens the documentation for the target element. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Show documentation...** or use the contextual menu. The effect varies depending on the target element. Beispiel:
 
 - Selecting a project method or a user class and choosing **Show documentation...** selects the method in the Explorer and switches to the documentation tab
 - Selecting a 4D command or a 4D class name and choosing **Show documentation...** displays the online documentation
