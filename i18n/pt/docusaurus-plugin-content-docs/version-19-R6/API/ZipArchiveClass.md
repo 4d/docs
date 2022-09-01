@@ -50,7 +50,7 @@ End if
 
 
 <!-- REF #_command_.ZIP Create archive.Params -->
-| Parameter       | Tipo       |    | Descrção                                             |
+| Parâmetros      | Tipo       |    | Descrição                                            |
 | --------------- | ---------- |:--:| ---------------------------------------------------- |
 | fileToZip       | 4D. File   | -> | Objeto File ou Folder a comprimir                    |
 | folderToZip     | 4D. Folder | -> | Objeto File ou Folder a comprimir                    |
@@ -59,7 +59,7 @@ End if
 | options         | Integer    | -> | *folderToZip* option: `ZIP Without enclosing folder` |
 | Resultados      | Objeto     | <- | Objeto de estado|<!-- END REF -->          |
 
-#### Descrção
+#### Descrição
 
 The `ZIP Create archive` command <!-- REF #_command_.ZIP Create archive.Summary -->creates a compressed ZIP archive object and returns the status of the operation<!-- END REF -->.
 
@@ -71,13 +71,13 @@ You can pass a 4D. File, a 4D. Folder, or a zip structure object as first parame
 
 - *zipStructure*: pode passar um objeto descrevendo o objeto ZIP archive. As propriedades abaixo estão disponíveis para definir a estrutura:
 
-| Propriedade | Tipo         | Descrção                                                                                                                                                                                                                                                                                                                          |
+| Propriedade | Tipo         | Descrição                                                                                                                                                                                                                                                                                                                         |
 | ----------- | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | compression | Integer      | <li>`ZIP Compression standard`: Reduz a compactação (padrão)</li><li>`ZIP Compression LZMA`: compactação LZMA</li><li>`ZIP Compression XZ`: compactação XZ</li><li>`ZIP Compression none`: Sem compactação</li>                                                                                                                                                                                                                              |
 | level       | Integer      | Nível de compressão. Valores possíveis: de 1 a 10. Um valor pequeno produz um arquivo de maior tamanho, enquanto um valor grande produz um arquivo de tamanho menor. O nível de compactação tem um impacto na performance. Valores padrão se omitidos: <li>`ZIP Compression standard`: 6</li><li>`ZIP Compression LZMA`: 4</li><li>`ZIP Compression XZ`: 4</li> |
 | encryption  | Integer      | A criptografia a usar se uma senha for estabelecida:<li>`ZIP Encryption AES128`: criptografia AES com uma chave de 128-bits.</li><li>`ZIP Encryption AES192`: criptografia AES com uma chave de 192-bits.</li><li>`ZIP Encryption AES256`: criptografia AES com chave de 256-bits (padrão se uma senha for estabelecida).</li><li>`ZIP Encryption none`: os dados não são criptografados (padrão se não estabelecer uma senha)</li>                                                                                                                                                                        |
 | senha       | Text         | Uma senha a usar se a criptografia for necessária.                                                                                                                                                                                                                                                                                |
-| files       | Collection   | <li>a collection of `4D. File` or `4D. Folder` objects or</li><li>uma coleção de objetos com as propriedades abaixo:</li><table><tr><td>Propriedade</td><td>Tipo</td><td>Descrção</td></tr><tr><td>source</td><td>4D. File or 4D. Folder</td><td>File ou Folder</td></tr><tr><td>destination</td><td>Text</td><td>(opcional) especifique uma rota de arquivo relativa para mudar a organização dos conteúdos do arquivo</td></tr><tr><td>option</td><td>number</td><td>(opcional) - 'ZIP ignore invisible files' ou 0 para compactar o arquivo inteiro</td></tr></table>                                                                                                                                                                                                                                                    |
+| files       | Collection   | <li>a collection of `4D. File` or `4D. Folder` objects or</li><li>uma coleção de objetos com as propriedades abaixo:</li><table><tr><td>Propriedade</td><td>Tipo</td><td>Descrição</td></tr><tr><td>source</td><td>4D. File or 4D. Folder</td><td>File ou Folder</td></tr><tr><td>destination</td><td>Text</td><td>(opcional) especifique uma rota de arquivo relativa para mudar a organização dos conteúdos do arquivo</td></tr><tr><td>option</td><td>number</td><td>(opcional) - 'ZIP ignore invisible files' ou 0 para compactar o arquivo inteiro</td></tr></table>                                                                                                                                                                                                                                                    |
 | callback    | 4D. Function | Uma fórmula de callback (retrochamada) que recebe o progresso da compactação (0-100) em $1.                                                                                                                                                                                                                                       |
 
 In the *destinationFile* parameter, pass a `4D. File` object describing the ZIP archive to create (name, location, etc.). É recomendado usar a extensão ".zip" se quiser que o arquivo ZIP seja processado automaticamente por um software.
@@ -88,7 +88,7 @@ Quando um arquivo for criado, pode usar o comando [ZIP Read archive](#zip-read-a
 
 O estado do objeto retornado contém as propriedades abaixo:
 
-| Propriedade | Tipo     | Descrção                                                                                                    |
+| Propriedade | Tipo     | Descrição                                                                                                   |
 | ----------- | -------- | ----------------------------------------------------------------------------------------------------------- |
 | statusText  | Text     | Mensagem de erro (se houver):<li>Impossível abrir o arquivo ZIP</li><li>IMpossível criar o arquivo ZIP</li><li>Uma senha é necessária para criptografia</li> |
 | status      | Integer  | Código de estado                                                                                            |
@@ -204,13 +204,13 @@ $err:=ZIP Create archive($zip; $destination)
 
 
 <!-- REF #_command_.ZIP Read archive.Params -->
-| Parameter  | Tipo           |    | Descrção                                  |
+| Parâmetros | Tipo           |    | Descrição                                 |
 | ---------- | -------------- |:--:| ----------------------------------------- |
 | zipFile    | 4D. File       | -> | Arquivos Zip                              |
 | senha      | Text           | -> | Senha do arquivo ZIP, se houver           |
 | Resultados | 4D. ZipArchive | <- | Objeto arquivo|<!-- END REF --> |
 
-#### Descrção
+#### Descrição
 
 The `.root` property contains <!-- REF #_command_.ZIP Read archive.Summary -->a virtual folder providing access to the contents of the ZIP archive<!-- END REF -->.
 
@@ -270,7 +270,7 @@ Para extrair da pasta root:
 
 **.root** : 4D. ZipFolder<!-- END REF -->
 
-#### Descrção
+#### Descrição
 
 The `.root` property contains <!-- REF #ZipArchiveClass.root.Summary -->a virtual folder providing access to the contents of the ZIP archive<!-- END REF -->.
 
