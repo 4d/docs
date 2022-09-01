@@ -1,322 +1,322 @@
 ---
 id: propertiesDataSource
-title: Data Source
+title: データソース
 ---
 
-## Automatic Insertion
+## 自動挿入
 
-When this option is selected, if a user enters a value that is not found in the list associated with the object, this value is automatically added to the list stored in memory.
+このオプションがチェックされていると、オブジェクトに関連付けられたリストにない値をユーザーが入力した場合に、その値が自動的にメモリー内のリストに追加されます。
 
-When the **automatic insertion** option is not set (default), the value entered is stored in the form object but not in the list in memory.
+**自動挿入** のオプションが設定されていない場合、入力された値はフォームオブジェクトの中には保存されますが、メモリー内のリストには入力されません。
 
-This property is supported by:
+このプロパティは次のフォームオブジェクトでサポートされています:
 
-- [Combo box](comboBox_overview.md) and [list box column](listbox_overview.md#list-box-columns) form objects associated to a choice list.
-- [Combo box](comboBox_overview.md) form objects whose associated list is filled by their array or object datasource.
+- 選択リストと紐づけられている [コンボボックス](comboBox_overview.md) および [リストボックス列](listbox_overview.md#リストボックス列) フォームオブジェクト。
+- 配列またはオブジェクトデータソースにより、紐づけられたリストが生成されている [コンボボックス](comboBox_overview.md) フォームオブジェクト。
 
-For example, given a choice list containing "France, Germany, Italy" that is associated with a "Countries" combo box: if the **automatic insertion** property is set and a user enters "Spain", then the value "Spain" is automatically added to the list in memory:
+たとえば、"France, Germany, Italy" という値を含む選択リストが "Countries" というコンボボックスに関連付けられていた場合を考えます。**自動挿入** のオプションがチェックをされていて、ユーザーが "Spain" という値を入力すると、"Spain" という値が自動的にメモリー内のリストに追加されます:
 
 ![](../assets/en/FormObjects/comboBox_AutomaticInsertion_example.png)
 
-> If the choice list was created from a list defined in Design mode, the original list is not modified.
+> デザインモードで定義された選択リストが関連付けられている場合、自動挿入によって、その元のリストが変更されることはありません。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name               | Data Type | Possible Values |
-| ------------------ | --------- | --------------- |
-| automaticInsertion | boolean   | true, false     |
+| 名称                 | データタイプ  | とりうる値       |
+| ------------------ | ------- | ----------- |
+| automaticInsertion | boolean | true, false |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
-
----
-
-## Choice List
-
-Associates a choice list with an object. It can be a choice list name (a list reference) or a collection of default values.
-
-You can also associate choice lists to objects using the [OBJECT SET LIST BY NAME](https://doc.4d.com/4dv19/help/command/en/page237.html) or [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4dv19/help/command/en/page1266.html) commands.
-
-#### JSON Grammar
-
-| Name       | Data Type        | Possible Values                                     |
-| ---------- | ---------------- | --------------------------------------------------- |
-| choiceList | list, collection | A list of possible values                           |
-| list       | list, collection | A list of possible values (hierarchical lists only) |
-
-#### Objects Supported
-
-[Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[コンボボックス](comboBox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
 
 ---
 
-## Choice List (static list)
+## 選択リスト
 
-List of static values to use as labels for the tab control object.
+選択リストをフォームオブジェクトに関連づけます。 指定できるのは選択リスト名 (リストの参照) またはデフォルト値のコレクションです。
 
-#### JSON Grammar
+選択リストをオブジェクトに紐づけるには、[OBJECT SET LIST BY NAME](https://doc.4d.com/4dv19/help/command/ja/page237.html) または [OBJECT SET LIST BY REFERENCE](https://doc.4d.com/4dv19/help/command/ja/page1266.html) コマンドを使ってもおこなえます。
 
-| Name   | Data Type        | Possible Values                          |
-| ------ | ---------------- | ---------------------------------------- |
-| labels | list, collection | A list of values to fill the tab control |
+#### JSON 文法
 
-#### Objects Supported
+| 名称         | データタイプ     | とりうる値                |
+| ---------- | ---------- | -------------------- |
+| choiceList | リスト、コレクション | 選択可能な値のリスト           |
+| list       | リスト、コレクション | 選択可能な値のリスト (階層リストのみ) |
 
-[Tab Control](tabControl.md)
+#### 対象オブジェクト
 
----
-
-## Current item
-
-`Collection or entity selection list boxes`
-
-Specifies a variable or expression that will be assigned the collection element/entity selected by the user. You must use an object variable or an assignable expression that accepts objects. If the user does not select anything or if you used a collection of scalar values, the Null value is assigned.
-> This property is "read-only", it is automatically updated according to user actions in the list box. You cannot edit its value to modify the list box selection status.
-
-#### JSON Grammar
-
-| Name              | Data Type | Possible Values   |
-| ----------------- | --------- | ----------------- |
-| currentItemSource | string    | Object expression |
-
-#### Objects Supported
-
-[List Box](listbox_overview.md#overview)
+[ドロップダウンリスト](dropdownList_Overview.md) - [コンボボックス](comboBox_overview.md) - [階層リスト](list_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
 
 ---
 
-## Current item position
+## 選択リスト (静的リスト)
 
-`Collection or entity selection list boxes`
+タブコントロールオブジェクトのラベルとして使用する静的な値のリスト。
 
-Specifies a variable or expression that will be assigned a longint indicating the position of the collection element/entity selected by the user.
+#### JSON 文法
 
-- if no element/entity is selected, the variable or expression receives zero,
-- if a single element/entity is selected, the variable or expression receives its location,
-- if multiple elements/entities are selected, the variable or expression receives the position of element/entity that was last selected.
-> This property is "read-only", it is automatically updated according to user actions in the list box. You cannot edit its value to modify the list box selection status.
+| 名称     | データタイプ     | とりうる値                  |
+| ------ | ---------- | ---------------------- |
+| labels | リスト、コレクション | タブコントロールラベルに使用する値のリスト。 |
 
-#### JSON Grammar
+#### 対象オブジェクト
 
-| Name                      | Data Type | Possible Values   |
-| ------------------------- | --------- | ----------------- |
-| currentItemPositionSource | string    | Number expression |
-
-#### Objects Supported
-
-[List Box](listbox_overview.md)
+[タブコントロール](tabControl.md)
 
 ---
 
-## Data Type (expression type)
+## カレントの項目
 
-Defines the data type for the displayed expression. This property is used with:
+`コレクションまたはエンティティセレクションリストボックス`
 
-- [List box columns](listbox_overview.md#list-box-columns) of the selection and collection types.
-- [Drop-down lists](dropdownList_Overview.md) associated to objects or arrays.
+ユーザーによって選択されたコレクション要素/エンティティが割り当てられる変数あるいは式を指定します。 オブジェクト変数あるいはオブジェクトを受け入れる割り当て可能な式を使用する必要があります。 ユーザーが何も選択しなかった場合、あるいはスカラー値のコレクションを使用した場合、Null 値が割り当てられます。
+> このプロパティは「読み取り専用」であり、リストボックスにおけるユーザーアクションに基づいて自動的に更新されます。 この値を編集してリストボックスの選択状態を変更することはできません。
 
-See also [**Expression Type**](properties_Object.md#expression-type) section.
+#### JSON 文法
 
-#### JSON Grammar
+| 名称                | データタイプ | とりうる値     |
+| ----------------- | ------ | --------- |
+| currentItemSource | string | オブジェクト型の式 |
 
-| Name               | Data Type | Possible Values                                    |
-| ------------------ | --------- | -------------------------------------------------- |
-| dataSourceTypeHint | string    | <li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li><li>**drop-down lists:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
+#### 対象オブジェクト
 
-#### Objects Supported
-
-[Drop-down Lists](dropdownList_Overview.md) associated to objects or arrays - [List Box column](listbox_overview.md#list-box-columns)
+[リストボックス](listbox_overview.md#概要)
 
 ---
 
-## Data Type (list)
+## カレントの項目の位置
 
-Defines the type of data to save in the field or variable associated to the [drop-down list](dropdownList_Overview.md). This property is used with:
+`コレクションまたはエンティティセレクションリストボックス`
 
-- Drop-down lists [associated to a choice list](dropdownList_Overview.md#using-a-choice-list).
-- Drop-down lists [associated to a hierarchical choice list](dropdownList_Overview.md#using-a-hierarchical-choice-list).
+ユーザーによって選択されたコレクション要素/エンティティの位置を表す倍長整数が割り当てられる変数あるいは式を指定します。
 
-Three options are available:
+- 要素/エンティティが選択されていない場合、変数あるいは式は 0 を受け取ります。
+- 単一の要素/エンティティが選択されている場合、変数あるいは式はその位置を受け取ります。
+- 複数の要素/エンティティが選択されている場合、変数あるいは式は最後に選択された要素/エンティティの位置を受け取ります。
+> このプロパティは「読み取り専用」であり、リストボックスにおけるユーザーアクションに基づいて自動的に更新されます。 この値を編集してリストボックスの選択状態を変更することはできません。
 
-- **List reference**: declares that the drop-down list is hierarchical. It means that the drop-down list can display up to two hierarchical levels and its contents can be managed by the 4D language commands of the **Hierarchical Lists** theme.
-- **Selected item value** (default): the drop-down list is not hierarchical and the value of the item chosen in the list by the user is saved directly. For example, if the user chooses the value "Blue", then this value is saved in the field.
-- **Selected item reference**: the drop-down list is not hierarchical and the reference of the choice list item is saved in the object. This reference is the numeric value associated with each item either through the *itemRef* parameter of the [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) or [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html) commands, or in the list editor. This option lets you optimize memory usage: storing numeric values in fields uses less space than storing strings. It also makes it easier to translate applications: you just create multiple lists in different languages but with the same item references, then load the list based on the language of the application.
+#### JSON 文法
 
-Using the **Selected item reference** option requires compliance with the following principles:
+| 名称                        | データタイプ | とりうる値 |
+| ------------------------- | ------ | ----- |
+| currentItemPositionSource | string | 数値型の式 |
 
-- To be able to store the reference, the field or variable data source must be of the Number type (regardless of the type of value displayed in the list). The [expression](properties_Object.md#expression-type) property is automatically set.
-- Valid and unique references must be associated with list items.
-- The drop-down list must be associated with a field or a variable.
+#### 対象オブジェクト
 
-#### JSON Grammar
-
-| Name   | Data Type | Possible Values      |
-| ------ | --------- | -------------------- |
-| saveAs | string    | "value", "reference" |
-
-> Setting only `"dataSourceTypeHint" : "integer"` with a `"type": "dropdown"` form object will declare a hierarchical drop-down list.
-
-#### Objects Supported
-
-[Drop-down Lists](dropdownList_Overview.md) associated to lists
+[リストボックス](listbox_overview.md)
 
 ---
 
-## Default (list of) values
+## データタイプ (式の型)
 
-List of values that will be used as default values for the list box column (array type only). These values are automatically available in the [array variable](properties_Object.md#variable-or-expression) associated with this column when the form is executed. Using the language, you can manage the object by referring to this array.
+表示される式のデータタイプを定義します。 このプロパティは次のフォームオブジェクトで使用されます:
 
-> Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-list-of-values)" property that allows to define a field value in new records.
+- セレクションおよびコレクション型の [リストボックス列](listbox_overview.md#リストボックス列)。
+- オブジェクトまたは配列と紐づいた [ドロップダウンリスト](dropdownList_Overview.md)。
 
-You must enter a list of values. In the Form editor, a specific dialog box allows you to enter values separated by carriage returns:
+[式タイプ](properties_Object.md#式の型式タイプ) の章も参照ください。
+
+#### JSON 文法
+
+| 名称                 | データタイプ | とりうる値                                              |
+| ------------------ | ------ | -------------------------------------------------- |
+| dataSourceTypeHint | string | <li>**リストボックス列:** "boolean", "number", "picture", "text", date", "time"。 *配列/セレクションリストボックスのみ*: "integer", "object"</li><li>**ドロップダウンリスト:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
+
+#### 対象オブジェクト
+
+オブジェクトまたは配列と紐づいた [ドロップダウンリスト](dropdownList_Overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
+
+---
+
+## データタイプ (リスト)
+
+[ドロップダウンリスト](dropdownList_Overview.md) に関連づけられたフィールドまたは変数に保存するデータの種類を定義します。 このプロパティは次のフォームオブジェクトで使用されます:
+
+- [選択リストと紐づいた](dropdownList_Overview.md#選択リストの使用) ドロップダウンリスト。
+- [階層型の選択リストと紐づいた](dropdownList_Overview.md#階層型選択リストの使用) ドロップダウンリスト
+
+次の値が提供されています:
+
+- **リスト参照**: ドロップダウンリストが階層型であることを宣言します。 このドロップダウンリストは最大で 2つの階層レベルを表示することができ、その内容は **Hierarchical Lists** テーマの4Dランゲージコマンドで管理することができます。
+- **選択された項目値** (デフォルト): ドロップダウンリストは階層型でなく、ユーザーによって選択された項目の値が直接保存されます。 たとえば、ユーザーが "Blue" という値を選択した場合、この値がフィールドに保存されます。
+- **選択された項目参照**: ドロップダウンリストは階層型でなく、選択リスト項目の参照がオブジェクトに保存されます。 この参照番号とは [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/ja/page376.html) または [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/ja/page385.html) コマンドの *itemRef* パラメーター、またはリストエディターを通してそれぞれの項目と関連付けされた数値です。 このオプションにより、メモリーを節約することができます。フィールドに数値を保存するのは文字列を保存するより容量が軽いからです。 また、これによりアプリケーションの翻訳が簡単になります。同じ項目の参照値を持つ、異なる言語で書かれた複数のリストを用意しておいて、アプリケーションの言語に応じたリストをロードするだけで多言語に対応できるからです。
+
+**選択された項目参照** オプションの使用の際には、以下の点に注意する必要があります:
+
+- 参照を保存するには、データソースのフィールドまたは変数は、数値型である必要があります (リスト内に表示されている値の型とは関係ありません)。 [式の型](properties_Object.md#式の型式タイプ) プロパティは自動的に設定されます。
+- リストの項目には有効かつ固有の参照が関連付けられている必要があります。
+- ドロップダウンリストはフィールドまたは変数と紐づいている必要があります。
+
+#### JSON 文法
+
+| 名称     | データタイプ | とりうる値                |
+| ------ | ------ | -------------------- |
+| saveAs | string | "value", "reference" |
+
+> このプロパティと、新規レコードのフィールド値を定義するのに使える入力オブジェクトの [デフォルト値](properties_RangeOfValues.md#デフォルト値) を混同しないようにしてください。
+
+#### 対象オブジェクト
+
+リストと紐づいた [ドロップダウンリスト](dropdownList_Overview.md)
+
+---
+
+## デフォルト値
+
+配列型リストボックスにおいて、リストボックス列のデフォルト値として使用される値のリストです。 これらの値は自動で、フォームを実行したときにその列に割り当てられた [配列変数](properties_Object.md#変数あるいは式) に代入されます。 この配列を参照することで、ランゲージを使ってオブジェクトを管理することができます。
+
+> このプロパティと、新規レコードのフィールド値を定義するのに使える入力オブジェクトの [デフォルト値](properties_RangeOfValues.md#デフォルト値) を混同しないようにしてください。
+
+デフォルト値のリストを入力します。 フォームエディター上で専用のダイアログが開き、改行で区切られた値を入力することができます。
 
 ![](../assets/en/FormObjects/defaultValues.png)
 
-> You can also define a [choice list](properties_DataSource.md#choice-list) with the list box column. However, a choice list will be used as list of selectable values for each column row, whereas the default list fill all column rows.
+> リストボックス列に [選択リスト](properties_DataSource.md#選択リスト) を定義することもできます。 選択リストは列の各行において選択可能な値の候補として使用されますが、デフォルト値のリストはカラムの各行に上から順に割り当てられます。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name   | Data Type  | Possible Values                                                  |
-| ------ | ---------- | ---------------------------------------------------------------- |
-| values | collection | A collection of default values (strings), ex: "a", "b", "c", "d" |
+| 名称     | データタイプ     | とりうる値                                      |
+| ------ | ---------- | ------------------------------------------ |
+| values | collection | デフォルト値 (文字列) のコレクション。例: "a", "b", "c", "d" |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[List Box Column (array type only)](listbox_overview.md#list-box-columns)
+[リストボックス列 (配列型のみ)](listbox_overview.md#リストボックス列)
 
 ---
 
-## Expression
+## 式
 
-This description is specific to [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns. See also **[Variable or Expression](properties_Object.md#variable-or-expression)** section.
+[セレクション型](listbox_overview.md#セレクションリストボックス) および [コレクション / エンティティセレクション型](listbox_overview.md#コレクションまたはエンティティセレクションリストボックス) リストボックスのプロパティです。 **[変数あるいは式](properties_Object.md#変数あるいは式)** の章も参照ください。
 
-A 4D expression to be associated with a column. You can enter:
+列に割り当てる 4D式です。 以下のものを指定できます:
 
-- A **simple variable** (in this case, it must be explicitly declared for compilation). You can use any type of variable except BLOBs and arrays. The value of the variable will be generally calculated in the `On Display Detail` event.
+- **単純な変数** (この場合、コンパイル用に明示的に型宣言されている必要があります)。 BLOB と配列型以外のどんな型の変数も使用することができます。 変数の値は通常 `On Display Detail` イベントで計算されます。
 
-- A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes) only), for example: `[Employees]LastName`. The following types of fields can be used:
+- 標準の [Table]Field シンタックスを使用した **フィールド** ([セレクション型リストボックス](listbox_overview.md#セレクションリストボックス) のみ)。例: `[Employees]LastName`。 以下の型のフィールドを使用できます:
   - String
-  - Numeric
-  - Date
-  - Time
+  - 数値
+  - 日付
+  - 時間
   - Picture
-  - Boolean  
-    You can use fields from the Master Table or from other tables.
+  - ブール  
+    マスターテーブルおよび他のテーブルのフィールドを指定できます。
 
-- A **4D expression** (simple expression, formula or 4D method). The expression must return a value. The value will be evaluated in the `On Display Detail` and `On Data Change` events. The result of the expression will be automatically displayed when you switch to Application mode. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). If it is empty, the column will not display any results. The following expression types are supported:
+- **4D式** (単純な式、フォーミュラ、または 4Dメソッド)。 式は値を返す必要があります。 値は `On Display Detail` および `On Data Change` イベントで評価されます。 式の結果は、アプリケーションモードでフォームを実行すると自動で表示されます。 式は、セレクション型リストボックスではマスターテーブルの (カレントまたは命名) セレクションの各レコードごとに、コレクション型リストボックスではコレクションの各要素ごとに、エンティティセレクション型リストボックスではセレクションのエンティティごとに評価されます。 空の場合、列には何も表示されません。 以下の型の式がサポートされています:
   - String
-  - Numeric
-  - Date
+  - 数値
+  - 日付
   - Picture
-  - Boolean
+  - ブール
 
- For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.  
-When using collections or entity selections, you will usually declare the element property or entity attribute associated to a column within an expression containing [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html). `This` is a dedicated 4D command that returns a reference to the currently processed element. For example, you can use `This.\&#060;propertyPath&#062;` where `\&#060;propertyPath&#062;` is the path of a property in the collection or an entity attribute path to access the current value of each element/entity. If you use a collection of scalar values, 4D will create an object for each collection element with a single property (named "value"), filled with the element value. In this case, you will use **This.value** as expression.
+ コレクション/エンティティセレクション型リストボックスにおいては、Null あるいはサポートされない型は空の文字列として表示されます。  
+コレクションあるいはエンティティセレクションを使用する場合、カラムに割り当てられた要素プロパティ/エンティティ属性は、通常 [This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.ja.html) を含む式を用いて宣言します。 この `This` は現在処理中の要素への参照を返す、専用の 4Dコマンドです。 たとえば、`This.\<propertyPath>` (ここでの `\<propertyPath>` はコレクションのプロパティパス、あるいはエンティティ属性パス) を使用することで、各要素/エンティティのカレントの値にアクセスすることができます。 スカラー値のコレクションを使用した場合、4D は各コレクション要素に対して、単一のプロパティ (名前は "value") を持つオブジェクトを作成し、それに要素の値を格納します。 この場合、**This.value** を式として使用します。
 
- If a [non-assignable expression](Concepts/quick-tour.md#expressions) is used (e.g. `[Person]FirstName+" "+[Person]LastName`), the column is never enterable even if the [Enterable](properties_Entry.md#enterable) property is enabled.
+ [代入不可な式](Concepts/quick-tour.md#式) (例: `[Person]FirstName+" "+[Person]LastName` など) を使用した場合、[入力可](properties_Entry.md#入力か) オプションが選択されていても、その列に値を入力することはできません。
 
-If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is used, the column can be enterable or not depending on the [Enterable](properties_Entry.md#enterable) property.
+フィールド、変数、あるいは代入可能な式 (*例: Person.lastName*) を使用した場合、[入力可](properties_Entry.md#入力可) プロパティの設定に基づき列への入力可/不可が決定されます。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name       | Data Type | Possible Values                                                         |
-| ---------- | --------- | ----------------------------------------------------------------------- |
-| dataSource | string    | A 4D variable, field name, or an arbitrary complex language expression. |
+| 名称         | データタイプ | とりうる値                     |
+| ---------- | ------ | ------------------------- |
+| dataSource | string | 4D変数、フィールド名、あるいは任意のランゲージ式 |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[List Box Column](listbox_overview.md#list-box-columns)
-
----
-
-## Master Table
-
-`Current selection list boxes`
-
-Specifies the table whose current selection will be used. This table and its current selection will form the reference for the fields associated with the columns of the list box (field references or expressions containing fields). Even if some columns contain fields from other tables, the number of rows displayed will be defined by the master table.
-
-All database tables can be used, regardless of whether the form is related to a table (table form) or not (project form).
-
-#### JSON Grammar
-
-| Name  | Data Type | Possible Values |
-| ----- | --------- | --------------- |
-| table | number    | Table number    |
-
-#### Objects Supported
-
-[List Box](listbox_overview.md#overview)
+[リストボックス列](listbox_overview.md#リストボックス列)
 
 ---
 
-## Save as
+## マスターテーブル
 
-This property is available in the following conditions:
+`カレントセレクションリストボックス`
 
-- a [choice list](#choice-list) is associated with the object
-- for [inputs](input_overview.md) and [list box columns](listbox_overview.md#list-box-columns), a [required list](properties_RangeOfValues.md#required-list) is also defined for the object (both options should use usually the same list), so that only values from the list can be entered by the user.
+使用するカレントセレクションが属するテーブルを指定します。 このテーブルとそのカレントセレクションが、リストボックスの列に割り当てられたフィールドの参照を形成します (フィールド参照やフィールドを含む式)。 ある列が他のテーブルのフィールドを参照しているとしても、表示される行の数はマスターテブルのカレントレコード数となります。
 
-This property specifies, in the context of a field or variable associated with a list of values, the type of contents to save:
+すべてのデータベーステーブルが利用できます。フォームがテーブルに属しているか (テーブルフォームの場合) あるいは属していないか (プロジェクトフォーム) は関係ありません。
 
-- **Save as Value** (default option): the value of the item chosen in the list by the user is saved directly. For example, if the user chooses the value "Blue", then this value is saved in the field.
-- **Save as Reference**: the reference of the choice list item is saved in the object. This reference is the numeric value associated with each item either through the *itemRef* parameter of the [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/en/page376.html) or [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/en/page385.html) commands, or in the list editor.
+#### JSON 文法
 
-This option lets you optimize memory usage: storing numeric values in fields uses less space than storing strings. It also makes it easier to translate applications: you just create multiple lists in different languages but with the same item references, then load the list based on the language of the application.
+| 名称    | データタイプ | とりうる値  |
+| ----- | ------ | ------ |
+| table | number | テーブル番号 |
 
-Using this property requires compliance with the following principles:
+#### 対象オブジェクト
 
-- To be able to store the reference, the field or variable data source must be of the Number type (regardless of the type of value displayed in the list). The [expression](properties_Object.md#expression-type) property is automatically set.
-- Valid and unique references must be associated with list items.
-
-#### JSON Grammar
-
-| Name   | Data Type | Possible Values      |
-| ------ | --------- | -------------------- |
-| saveAs | string    | "value", "reference" |
-
-#### Objects Supported
-
-[Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[リストボックス](listbox_overview.md#概要)
 
 ---
 
-## Selected Items
+## 関連付け
 
-`Collection or entity selection list boxes`
+このプロパティは以下の場合に表示されます:
 
-Specifies a variable or expression that will be assigned the elements or entities selected by the user.
+- オブジェクトに対して [選択リスト](#選択リスト) が割り当てられている
+- [入力](input_overview.md) および [リストボックス列](listbox_overview.md#リストボックス列) の場合には、ユーザーがリスト内の値のみ入力できるように、オブジェクトに対して [指定リスト](properties_RangeOfValues.md#指定リスト) も定義されている (通常は両方のオプションで同じリストを使用しているはずです)。
 
-- for a collection list box, you must use a collection variable or an assignable expression that accepts collections,
-- for an entity selection list box, an entity selection object is built. You must use an object variable or an assignable expression that accepts objects.
-> This property is "read-only", it is automatically updated according to user actions in the list box. You cannot edit its value to modify the list box selection status.
+このプロパティは、選択リストに関連付けされたフィールドまたは変数において、フィールドに保存する内容の型を指定します:
 
-#### JSON Grammar
+- **リスト項目の値** (デフォルトのオプション): ユーザーによって選択された項目の値が直接保存されます。 たとえば、ユーザーが "Blue" という値を選択した場合、この値がフィールドに保存されます。
+- **リスト項目の参照番号**: 選択リスト項目の参照がオブジェクトに保存されます。 この参照番号とは [`APPEND TO LIST`](https://doc.4d.com/4dv19/help/command/ja/page376.html) または [`SET LIST ITEM`](https://doc.4d.com/4dv19/help/command/ja/page385.html) コマンドの *itemRef* パラメーター、またはリストエディターを通してそれぞれの項目と関連付けされた数値です。
 
-| Name                | Data Type | Possible Values       |
-| ------------------- | --------- | --------------------- |
-| selectedItemsSource | string    | Collection expression |
+このオプションにより、メモリーを節約することができます。フィールドに数値を保存するのは文字列を保存するより容量が軽いからです。 また、これによりアプリケーションの翻訳が簡単になります。同じ項目の参照値を持つ、異なる言語で書かれた複数のリストを用意しておいて、アプリケーションの言語に応じたリストをロードするだけで多言語に対応できるからです。
 
-#### Objects Supported
+リスト項目の参照番号の使用の際には、以下の点に注意する必要があります:
 
-[List Box](listbox_overview.md#overview)
+- 参照を保存するには、データソースのフィールドまたは変数は、数値型である必要があります (リスト内に表示されている値の型とは関係ありません)。 [式の型](properties_Object.md#式の型式タイプ) プロパティは自動的に設定されます。
+- リストの項目には有効かつ固有の参照が関連付けられている必要があります。
+
+#### JSON 文法
+
+| 名称     | データタイプ | とりうる値                |
+| ------ | ------ | -------------------- |
+| saveAs | string | "value", "reference" |
+
+#### 対象オブジェクト
+
+[入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
 
 ---
 
-## Selection Name
+## 選択された項目
 
-`Named selection list boxes`
+`コレクションまたはエンティティセレクションリストボックス`
 
-Specifies the named selection to be used. You must enter the name of a valid named selection. It can be a process or interprocess named selection. The contents of the list box will be based on this selection. The named selection chosen must exist and be valid at the time the list box is displayed, otherwise the list box will be displayed blank.
+ユーザーによって選択されている一つ以上のコレクション要素/エンティティが割り当てられる変数あるいは式を指定します。
 
-> Named selections are ordered lists of records. They are used to keep the order and current record of a selection in memory. For more information, refer to **Named Selections** section in the *4D Language Reference manual*.
+- コレクションリストボックスにおいては、コレクション変数あるいはコレクションを受け入れる割り当て可能な式を使用する必要があります。
+- エンティティセレクションリストボックスにおいては、エンティティセレクションオブジェクトがビルドされます。 オブジェクト変数あるいはオブジェクトを受け入れる割り当て可能な式を使用する必要があります。
+> このプロパティは「読み取り専用」であり、リストボックスにおけるユーザーアクションに基づいて自動的に更新されます。 この値を編集してリストボックスの選択状態を変更することはできません。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name           | Data Type | Possible Values      |
-| -------------- | --------- | -------------------- |
-| namedSelection | string    | Named selection name |
+| 名称                  | データタイプ | とりうる値   |
+| ------------------- | ------ | ------- |
+| selectedItemsSource | string | コレクション式 |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[List Box](listbox_overview.md#overview)
+[リストボックス](listbox_overview.md#概要)
+
+---
+
+## 命名セレクション
+
+`命名セレクションリストボックス`
+
+使用する命名セレクションを指定します。 有効な命名セレクションの名前を入力しなければなりません。 使用できるのはプロセスあるいはインタープロセス命名セレクションです。 リストボックスの内容はこのセレクションに基づきます。 選択された命名セレクションは、リストボックスが表示される時点で存在し、有効でなければなりません。そうでない場合、リストボックスは空で表示されます。
+
+> 命名セレクションはソート済みのレコードリストです。 これはセレクション中のカレントレコードと並び順をメモリーに保持するために使用されます。 詳細は、*4Dランゲージリファレンス マニュアル* の **命名セレクション** を参照してください。
+
+#### JSON 文法
+
+| 名称             | データタイプ | とりうる値       |
+| -------------- | ------ | ----------- |
+| namedSelection | string | 命名セレクションの名前 |
+
+#### 対象オブジェクト
+
+[リストボックス](listbox_overview.md#概要)
