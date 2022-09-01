@@ -26,7 +26,7 @@ This button toggles and can be used to control the activation of the 4D Server S
 
 ## Information
 
-### Configuration
+### Configuração
 
 This area provides information about the SQL server configuration parameters: automatic launching on startup, listening IP address, TCP port (19812 by default) and enabling of SSL for SQL connections (does not concern 4D nor HTTP connections).
 
