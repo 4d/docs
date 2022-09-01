@@ -15,7 +15,7 @@ title: On After Keystroke
 
 </details>
 
-## Description
+## Beschreibung
 
 > The `On After Keystroke` event can generally be replaced by the [`On After Edit`](onAfterEdit.md) event (see below).
 
