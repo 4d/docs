@@ -1,39 +1,39 @@
 ---
 id: templates
-title: Template pages
+title: テンプレートページ
 ---
 
-4D's Web server allows you to use HTML template pages containing tags, i.e. a mix of static HTML code and 4D references added by means of [transformation tags](Tags/tags.md) such as 4DTEXT, 4DIF, or 4DINCLUDE. These tags are usually inserted as HTML type comments (`<!--#4DTagName TagValue-->`) into the HTML source code.
+4D の Webサーバーでは、タグを含む HTMLテンプレートページを使用することができます。 つまり、静的な HTMLコードと、4DTEXT、4DIF、4DINCLUDEなどの [変換タグ](Tags/tags.md) によって追加された 4D参照の組み合わせです。 これらのタグは通常、HTMLタイプのコメント (`<!--#4DTagName TagValue-->`) として、HTMLソースコードに挿入されます。
 
-When these pages are sent by the HTTP server, they are parsed and the tags they contain are executed and replaced with the resulting data. The pages received by the browsers are thus a combination of static elements and values coming from 4D processing.
+これらのページが HTTPサーバーから送信される際、ページは解析され、含まれているタグが実行され、結果のデータに置き換えられます。 このように、ブラウザーが受け取るページは、静的な要素と 4D の処理による値が組み合わさったものです。
 
-For example, if you write in an HTML page:
+たとえば、HTMLページ内にて以下のように記述すると:
 
 ```html
-<P>Welcome to <!--#4DTEXT vtSiteName-->!</P>
+<P><!--#4DTEXT vtSiteName--> へようこそ！ </P>
 ```
 
-The value of the 4D variable *vtSiteName* will be inserted in the HTML page.
+4D変数 *vtSiteName* の値が HTMLページに挿入されます。
 
 
-## Tags for templates
+## テンプレート用タグ
 
-The following 4D tags are available:
+以下の 4Dタグを使用することができます:
 
-- 4DTEXT, to insert 4D variables and expressions as text,
-- 4DHTML, to insert HTML code,
-- 4DEVAL, to evaluate any 4D expression,
-- 4DSCRIPT, to execute a 4D method,
-- 4DINCLUDE, to include a page within another one,
-- 4DBASE, to modify the default folder used by the 4DINCLUDE tag,
-- 4DCODE, to insert 4D code,
-- 4DIF, 4DELSE, 4DELSEIF and 4DENDIF, to insert conditions in the HTML code,
-- 4DLOOP and 4DENDLOOP, to make loops in the HTML code,
-- 4DEACH and 4DENDEACH, to loop in collections, entity selections, or object properties.
+- 4DTEXT: 4D変数および式をテキストとして挿入します。
+- 4DHTML: HTMLコードを挿入します。
+- 4DEVAL: 4D式を評価します。
+- 4DSCRIPT: 4Dメソッドを実行します。
+- 4DINCLUDE: ページを他のページに含めます。
+- 4DBASE: 4DINCLUDE タグが使用するデフォルトフォルダーを変更します。
+- 4DCODE: 4Dコードを挿入します。
+- 4DIF, 4DELSE, 4DELSEIF, 4DENDIF: HTMLコードに条件式を挿入します。
+- 4DLOOP, 4DENDLOOP: HTMLコードにループを挿入します。
+- 4DEACH, 4DENDEACH: コレクション内、エンティティセレクション内、またはオブジェクトのプロパティをループします。
 
-These tags are described in the [Transformation Tags](Tags/tags.md) page.
+これらのタグについては、[変換タグ](Tags/tags.md) のページで説明しています。
 
-It is possible to mix tags. For example, the following HTML code is allowed:
+タグは混在させることが可能です。 たとえば、次のような HTMLコードが認められています:
 
 ```html
 <HTML>
@@ -61,36 +61,36 @@ It is possible to mix tags. For example, the following HTML code is allowed:
 ```
 
 
-## Tag parsing
+## タグの解析
 
-For optimization reasons, the parsing of the HTML source code is not carried out by the 4D Web server when HTML pages are called using simple URLs that are suffixed with “.HTML” or “.HTM”.
+最適化のため、".HTML" または ".HTM" を末尾に持つ単純な URL で HTMLページを呼び出した場合、4D Webサーバーは HTMLソースコードの解析をおこないません。
 
-Parsing of the contents of template pages sent by 4D web server takes place when `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB) or `WEB SEND TEXT` commands are called, as well as when sending pages called using URLs. In this last case, for reasons of optimization, pages that are suffixed with “.htm” and “.html” are NOT parsed. In order to "force" the parsing of HTML pages in this case, you must add the suffix “.shtm” or “.shtml” (for example, `http://www.server.com/dir/page.shtm`). An example of the use of this type of page is given in the description of the `WEB GET STATISTICS` command. XML pages (.xml, .xsl) are also supported and always parsed by 4D.
+4D Web サーバーが送信するテンプレートページの解析は、`WEB SEND FILE` (.htm, .html, .sthtm, .shtml)、`WEB SEND BLOB` (text/html type BLOB)、または `WEB SEND TEXT` コマンドが呼び出されたとき、および URL を使用して呼び出されたページを送信するときにおこなわれます。 URL で呼び出す場合、".htm" と ".html" で終わるページは最適化のため解析されません。 この場合に HTMLページの解析を強制するには、末尾を ".shtm" または ".shtml" とする必要があります (例: `http://www.server.com/dir/page.shtm`)。 このタイプのページの使用例は、`WEB GET STATISTICS` コマンドの説明に記載されています。 XMLページ (.xml、.xsl) もサポートされており、常に 4D によって解析されます。
 
-You can also carry out parsing outside of the Web context when you use the `PROCESS 4D TAGS` command.
+`PROCESS 4D TAGS` コマンドを使用すると、Webコンテキスト外でも解析をおこなうことができます。
 
-Internally, the parser works with UTF-16 strings, but the data to parse may have been encoded differently. When tags contain text (for example `4DHTML`), 4D converts the data when necessary depending on its origin and the information available (charset). Below are the cases where 4D parses the tags contained in the HTML pages, as well as any conversions carried out:
+内部的には、パーサーは UTF-16 文字列で動作しますが、解析するデータは異なる方法でエンコードされている場合があります。 タグにテキストが含まれている場合 (`4DHTML` など)、提供されている情報 (charset) や出所に応じて、4D は必要に応じてデータを変換します。 以下に、HTMLページに含まれるタグを 4D が解析する場合と、おこなわれる変換を示します:
 
-| Action / Command                               | Content analysis of the sent pages                    | Support of $ syntax(*)                                | Character set used for parsing tags                                                                                                                                                                         |
-| ---------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pages called via URLs                          | X, except for pages with “.htm” or “.html” extensions | X, except for pages with “.htm” or “.html” extensions | Use of charset passed as parameter of the "Content-Type" header of the page. If there is none, search for a META-HTTP EQUIV tag with a charset. Otherwise, use of default character set for the HTTP server |
-| `WEB SEND FILE`                                | X                                                     | -                                                     | Use of charset passed as parameter of the "Content-Type" header of the page. If there is none, search for a META-HTTP EQUIV tag with a charset. Otherwise, use of default character set for the HTTP server |
-| `WEB SEND TEXT`                                | X                                                     | -                                                     | No conversion necessary                                                                                                                                                                                     |
-| `WEB SEND BLOB`                                | X, if BLOB is of the “text/html” type                 | -                                                     | Use of charset set in the "Content-Type" header of the response. Otherwise, use of default character set for the HTTP server                                                                                |
-| Inclusion by the `<!--#4DINCLUDE-->` tag | X                                                     | X                                                     | Use of charset passed as parameter of the "Content-Type" header of the page. If there is none, search for a META-HTTP EQUIV tag with a charset. Otherwise, use of default character set for the HTTP server |
-| `PROCESS 4D TAGS`                              | X                                                     | X                                                     | Text data: no conversion. BLOB data: automatic conversion from the Mac-Roman character set for compatibility                                                                                                |
+| 動作 / コマンド                         | 送信ページの解析                             | $シンタックスのサポート(*)                      | タグ解析に使用される文字セット                                                                                                     |
+| --------------------------------- | ------------------------------------ | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
+| URL で呼び出されたページ                    | ○、ただし拡張子が ".htm" または ".html" のページを除く | ○、ただし拡張子が ".htm" または ".html" のページを除く | ページの "Content-Type" ヘッダーのパラメーターに渡された文字セットに従います。 それが無い場合は、META-HTTP EQUIVタグを探します。 それも無ければ、HTTPサーバーのデフォルト文字セットを使用します。 |
+| `WEB SEND FILE`                   | X                                    | -                                    | ページの "Content-Type" ヘッダーのパラメーターに渡された文字セットに従います。 それが無い場合は、META-HTTP EQUIVタグを探します。 それも無ければ、HTTPサーバーのデフォルト文字セットを使用します。 |
+| `WEB SEND TEXT`                   | X                                    | -                                    | 変換は不要です。                                                                                                            |
+| `WEB SEND BLOB`                   | ○ (BLOBが "text/html" 型の場合)           | -                                    | レスポンスの "Content-Type" ヘッダーに指定された文字セットを使います。 それも無ければ、HTTPサーバーのデフォルト文字セットを使用します。                                      |
+| `<!--4DINCLUDE -->` タグによる挿入 | X                                    | X                                    | ページの "Content-Type" ヘッダーのパラメーターに渡された文字セットに従います。 それが無い場合は、META-HTTP EQUIVタグを探します。 それも無ければ、HTTPサーバーのデフォルト文字セットを使用します。 |
+| `PROCESS 4D TAGS`                 | X                                    | X                                    | テキストデータは変換しません。 BLOBデータは、互換性のために Mac-Roman 文字セットから自動変換されます。                                                         |
 
-(*) The alternative $-based syntax is available for 4DHTML, 4DTEXT and 4DEVAL tags.
+(*) 4DHTML、4DTEXT、4DEVALタグにおいては、代替の $ベースシンタックスが利用可能です。
 
-## Accessing 4D methods via the Web
+## Webから 4Dメソッドへのアクセス
 
-Executing a 4D method with `4DEACH`, `4DELSEIF`, `4DEVAL`, `4DHTML`, `4DIF`, `4DLOOP`, `4DSCRIPT`, or `4DTEXT` from a web request is subject to the [Available through 4D tags and URLs (4DACTION...)](allowProject.md) attribute value defined in the properties of the method. If the attribute is not checked for the method, it can not be called from a web request.
+`4DEACH`、`4DELSEIF`、`4DEVAL`、`4DHTML`、`4DIF`、`4DLOOP`、`4DSCRIPT`、または `4DTEXT` で Webリクエストから 4Dメソッドを実行できるか否かは、メソッドプロパティの "公開オプション: 4D タグと URL(4DACTION...)" この属性がチェックされていないメソッドは、Webリクエストから呼び出すことができません。
 
 
-## Prevention of malicious code insertion
+## 悪意あるコードの侵入を防止
 
-4D tags accept different types of data as parameters: text, variables, methods, command names, etc. When this data is provided by your own code, there is no risk of malicious code insertion since you control the input. However, your database code often works with data that was, at one time or another, introduced through an external source (user input, import, etc.).
+4D変換タグは様々なタイプのデータを引数として受け入れます: テキスト、変数、メソッド、コマンド名、…。 これらのデータが自分で書いたコードから提供される場合、その受け渡しを自分でコントロールできるので、悪意あるコードの侵入のリスクは無いと言っていいでしょう。 しかしながら、 データベースのコード扱うデータは多くの場合、外部ソース (ユーザー入力、読み込み、等) から導入されたものです。
 
-In this case, it is advisable to **not use** tags such as `4DEVAL` or `4DSCRIPT`, which evaluate parameters, directly with this sort of data.
+この場合、`4DEVAL` や `4DSCRIPT` などの変換タグは **使用しない** のが賢明です。
 
-In addition, according to the [principle of recursion](Tags/tags.md#recursive-processing), malicious code may itself include transformation tags. In this case, it is imperative to use the `4DTEXT` tag. Imagine, for example, a Web form field named "Name", where users must enter their name. This name is then displayed using a `<!--#4DHTML vName-->` tag in the page. If text of the "\<!--#4DEVAL QUIT 4D-->" type is inserted instead of the name, interpreting this tag will cause the application to be exited. To avoid this risk, you can just use the `4DTEXT` tag systematically in this case. Since this tag escapes the special HTML characters, any malicious recursive code that may have been inserted will not be reinterpreted. To refer to the previous example, the "Name" field will contain, in this case, "`&lt;!--#4DEVAL QUIT 4D--&gt;`" which will not be transformed.
+これに加え、[繰り返しの原則](Tags/tags.md#再起的処理) に従い、悪意あるコード自身が変換タグを含んでいる可能性もあります。 この場合、`4DTEXT` タグを使用しなくてはなりません。 例として、"Name" という名前の Webフォームフィールドがあり、ユーザーがそこに名前を入力する場合を考えます。 この名前は `<!--#4DHTML vName-->` タグを使用してページ内に表示されます。 If text of the "\<!--#4DEVAL QUIT 4D-->" type is inserted instead of the name, interpreting this tag will cause the application to be exited. このリスクを避けるには、`4DTEXT` タグを使用することで対応できます。 このタグは特殊 HTML文字をエスケープするため、挿入された悪意ある再起的コードが解釈されることはありません。 前の例でいうと、"Name" フィールドには "`<!--#4DEVAL QUIT 4D-->`" が含まれることになり、これは変換されません。
