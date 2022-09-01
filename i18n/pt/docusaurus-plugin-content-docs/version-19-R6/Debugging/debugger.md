@@ -157,7 +157,7 @@ $c:=a+b
 
 This theme is composed of the following subthemes:
 
-| Subtema      | Descrção                                                     | Can the values be modified? |
+| Subtema      | Descrição                                                    | Can the values be modified? |
 | ------------ | ------------------------------------------------------------ | --------------------------- |
 | Interprocess | List of interprocess variables being used at this point      | Sim                         |
 | Processo     | List of process variables used by the current process        | Sim                         |
