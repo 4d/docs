@@ -1,125 +1,125 @@
 ---
 id: user-settings
-title: User Settings
+title: Propriétés utilisateur
 ---
 
-4D provides two modes of operation for project Settings:
+4D propose deux modes de fonctionnement pour les Propriétés des projets :
 
-*   **Standard** mode: all [settings](../settings/overview.md) are stored in the [*settings.4DSettings* file at the project level](../Project/architecture.md#sources) and are applied in all cases. This is the default mode, suitable for development phase (all applications).
+*   Mode **standard** : tous les [paramètres](../settings/overview.md) sont stockés dans le fichier [*settings.4DSettings* au niveau du projet](../Project/architecture.md#sources) et sont appliqués dans tous les cas. C'est le mode par défaut, adapté à la phase de développement (toutes les applications).
 
-*  **User settings** mode: part of the custom settings are stored in a *settings.4DSettings* file [in the Settings folder](../Project/architecture.md#settings-1) (for all data files) or [in the Data folder](../Project/architecture.md#settings) (for this data file) and are used instead of the structure settings. This mode is suitable for deployment phase for Desktop applications. You enable this mode using an option located on the [Security page](../settings/security.md) of the Settings.
+*  Mode **propriétés utilisateur** : une partie des paramètres personnalisés sont stockés dans un fichier *settings.4DSettings* [dans le dossier Settings](../Project/architecture.md#settings-1) (pour tous les fichiers de données) ou [dans le dossier Data](../Project/architecture.md#settings) (pour ce fichier de données) et sont utilisés à la place des paramètres de structure. Ce mode convient à la phase de déploiement pour les applications Desktop. Activez ce mode à l'aide d'une option située sur la [page Sécurité](../settings/security.md) des Propriétés.
 
-By defining user settings, you can keep custom settings between updates of your 4D applications, or manage different settings for the same 4D application deployed on several different sites. It also makes it possible to use programming to manage setting files using XML.
+En définissant des propriétés utilisateur, vous pouvez conserver des paramètres personnalisés entre les mises à jour de vos applications 4D, ou gérer des paramètres différents pour une même application 4D déployée sur plusieurs sites différents. Cela permet également d'utiliser la programmation pour gérer les fichiers de paramètres à l'aide de XML.
 
-4D can generate and use two types of user settings:
+4D peut générer et utiliser deux types de propriétés utilisateur :
 
--   **User Settings (standard)**: They are used instead of structure settings for any data file opened with the application.
--   **User Settings for Data file**: They can be defined specifically for each data file used with your application, configuring for example the port ID or the server cache.
+-   **Les propriétés utilisateur (standard)** : elles sont utilisées à la place des propriétés de structure pour tout fichier de données ouvert avec l'application.
+-   **Propriétés utilisateur pour le fichier de données** : elles peuvent être définies spécifiquement pour chaque fichier de données utilisé avec votre application, en configurant par exemple l'ID du port ou le cache du serveur.
 
-With this option, you can easily deploy and update several copies of the same desktop application with several data files, each containing different settings.
+Avec cette option, vous pouvez facilement déployer et mettre à jour plusieurs copies de la même application Desktop avec plusieurs fichiers de données, chacun contenant des propriétés différentes.
 
-Consider for example the following configuration, where an application is duplicated and each copy uses a different Port ID setting. If this user setting is linked to the data file, you will be able to update the application without having to manually change the Port ID:
+Prenons par exemple la configuration suivante, où une application est dupliquée et où chaque copie utilise un paramètre d'ID de port différent. Si ce paramètre utilisateur est lié au fichier de données, vous pourrez mettre à jour l'application sans avoir à modifier manuellement l'ID du port :
 
 ![](../assets/en/settings/user-settings-config.png)
 
-## Enabling User settings
+## Activer les propriétés utilisateur
 
-To enable user settings, you need to check the **Settings** > **Security** > **Enable User Settings** option:
+Pour activer les paramètres utilisateur, vous devez cocher l'option **Paramètres** > **Sécurité** > **Autoriser les propriétés utilisateur** :
 
 ![](../assets/en/settings/user-settings-enable.png)
 
-When you check this option, the settings are separated into three dialog boxes:
+Lorsque vous cochez cette option, les paramètres sont séparés en trois boîtes de dialogue :
 
-* **Structure Settings**
-* **User Settings**
-* **User Settings for Data file**
+* **Propriétés structure**
+* **Propriétés utilisateur**
+* **Propriétés utilisateur pour le fichier de données**
 
-You can access these dialog boxes using the **Design > Settings...** menu or the **Settings** button in the toolbar:
+Vous pouvez accéder à ces boîtes de dialogue en utilisant le menu **Développement > Propriétés...** ou le bouton **Propriétés** dans la barre d'outils :
 
 ![](../assets/en/settings/user-settings-dialog.png)
 
-You can also access these dialog boxes using the [OPEN SETTINGS WINDOW](https://doc.4d.com/4dv19R/help/command/en/page903.html) command with the appropriate *settingsType* selector.
+Vous pouvez également accéder à ces boîtes de dialogue à l'aide de la commande [OPEN SETTINGS WINDOW](https://doc.4d.com/4dv19R/help/command/en/page903.html) avec le sélecteur *settingsType* approprié.
 
-The Structure Settings dialog box is identical to the standard Settings, and provides access to all its properties (which can be overriden by user settings).
+La boîte de dialogue Propriétés de structure est identique à la boîte de dialogue Propriétés standard et permet d'accéder à toutes ses propriétés (qui peuvent être écrasées par des propriétés utilisateur).
 
-## User Settings and User Settings for Data file
+## Propriétés utilisateur et propriétés utilisateur pour le fichier de données
 
-The **User Settings** and **User Settings for Data File** dialog boxes contain a selection of relevant properties that can be defined for all data files or a single data file:
+Les boîtes de dialogue **Propriétés utilisateur** et **Propriétés utilisateur pour le fichier de données** contiennent une sélection de propriétés pertinentes qui peuvent être définies pour tous les fichiers de données ou pour un seul fichier de données :
 
 ![](../assets/en/settings/user-settings-2.png)
 
-The following table lists the pages of settings found in the **User Settings** and **User Settings for Data File** dialog boxes and describes their main differences with respect to standard settings:
+Le tableau suivant répertorie les pages de paramètres que l'on trouve dans les boîtes de dialogue **Paramètres utilisateur** et **Paramètres utilisateur pour le fichier de données** et décrit leurs principales différences par rapport aux paramètres standard :
 
-| **Page of Structure Settings**                                                       | **Page of User Settings**             | **Page of User Settings for Data File** |
-| ------------------------------------------------------------------------------------ | ------------------------------------- | --------------------------------------- |
-| [General page](../settings/general.md)                                               | N/a                                   | N/a                                     |
-| [Interface page](../settings/interface.md)                                           | Identical to standard settings        | Identical to standard settings          |
-| [Compiler page](../settings/compiler.md)                                             | N/a                                   | N/a                                     |
-| [Database/Data storage page](../settings/database.md#data-storage)                   | N/a                                   | N/a                                     |
-| [Database/Memory page](../settings/database.md#memory)                               | Identical to standard settings        | Identical to standard settings          |
-| [Backup/Scheduler page](../settings/backup.md#scheduler)                             | N/a                                   | Identical to standard settings          |
-| [Backup/Configuration page](../settings/backup.md#configuration)                     | N/a                                   | Identical to standard settings          |
-| [Backup/Backup & Restore page](../settings/backup.md#backup-restore)                 | N/a                                   | Identical to standard settings          |
-| [Client-server/Network options page](../settings/client-server.md#network-options)   | Identical to standard settings        | Identical to standard settings          |
-| [Client-server/IP configuration page](../settings/client-server.md#ip-configuration) | Identical to standard settings        | Identical to standard settings          |
-| [Web/Configuration page](../settings/web.md#configuration)                           | Identical to standard settings        | Identical to standard settings          |
-| [Web/Options (I) page](../settings/web.md#options)                                   | Identical to standard settings        | Identical to standard settings          |
-| [Web/Options (II) page](../settings/web.md#options-ii)                               | Identical to standard settings        | Identical to standard settings          |
-| [Web/Log (type) page](../settings/web.md#log)                                        | Identical to standard settings        | Identical to standard settings          |
-| [Web/Log (backup) page](../settings/web.md#log)                                      | Identical to standard settings        | Identical to standard settings          |
-| [Web/Web Services page](../settings/web.md#web-services)                             | Method prefixing option not available | Method prefixing option not available   |
-| [SQL page](../settings/sql.md)                                                       | Identical to standard settings        | Identical to standard settings          |
-| [PHP page](../settings/php.md)                                                       | Identical to standard settings        | Identical to standard settings          |
-| [Security page](../settings/security.md)                                             | N/a                                   | N/a                                     |
-| [Compatibility page](../settings/compatibility.md)                                   | N/a                                   | N/a                                     |
+| **Page des Propriétés structure**                                                     | **Page des Propriétés utilisateur**             | **Page des Propriétés utilisateur pour fichier de données** |
+| ------------------------------------------------------------------------------------- | ----------------------------------------------- | ----------------------------------------------------------- |
+| [Page Général](../settings/general.md)                                                | N/a                                             | N/a                                                         |
+| [Page Interface](../settings/interface.md)                                            | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Compilateur](../settings/compiler.md)                                           | N/a                                             | N/a                                                         |
+| [Page Base de données/Stockage des données](../settings/database.md#data-storage)     | N/a                                             | N/a                                                         |
+| [Page Base de données/Mémoire](../settings/database.md#memory)                        | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Sauvegarde/Périodicité](../settings/backup.md#scheduler)                        | N/a                                             | Identique aux Propriétés structure                          |
+| [Page Sauvegarde/Configuration](../settings/backup.md#configuration)                  | N/a                                             | Identique aux Propriétés structure                          |
+| [Page Sauvegarde/Sauvegarde et restitution](../settings/backup.md#backup-restore)     | N/a                                             | Identique aux Propriétés structure                          |
+| [Page Client-Serveur/Options réseau](../settings/client-server.md#network-options)    | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Client-Serveur/Configuration IP](../settings/client-server.md#ip-configuration) | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Web/Configuration](../settings/web.md#configuration)                            | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Web/Options (I)](../settings/web.md#options)                                    | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Web/Options (II)](../settings/web.md#options-ii)                                | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Web/Journal (format)](../settings/web.md#log)                                   | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Web/Journal (périodicité)](../settings/web.md#log)                              | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page Web/Web services](../settings/web.md#web-services)                              | Option de préfixage des méthodes non disponible | Option de préfixage des méthodes non disponible             |
+| [Page SQL](../settings/sql.md)                                                        | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page PHP](../settings/php.md)                                                        | Identique aux Propriétés structure              | Identique aux Propriétés structure                          |
+| [Page sécurité](../settings/security.md)                                              | N/a                                             | N/a                                                         |
+| [Page de compatibilité](../settings/compatibility.md)                                 | N/a                                             | N/a                                                         |
 
-When you edit settings in this dialog box, they are automatically stored in the corresponding *settings.4DSettings* file (see below).
+Lorsque vous modifiez des paramètres dans cette boîte de dialogue, ils sont automatiquement enregistrés dans le fichier *settings.4DSettings* correspondant (voir ci-dessous).
 
-## `SET DATABASE PARAMETER` and user settings
+## `SET DATABASE PARAMETER` et propriétés utilisateur
 
-Some of the user settings are also available through the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html) command. User settings are parameters with the **Kept between two sessions** property set to **Yes**.
+Certaines propriétés utilisateur sont aussi disponibles via la commande [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html). Pour les propriétés utilisateur, la propriété **Conservé entre deux sessions** est fixée à **Oui**.
 
-When the **User Settings** feature is enabled, user settings edited by the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html) command are automatically saved in the user settings for the data file.
+Lorsque la fonctionnalité **Propriétés utilisateur** est activée, les propriétés utilisateur modifiées par la commande [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html) sont automatiquement stockées dans les Propriétés utilisateur pour le fichier de données.
 
-> `Table sequence number` is an exception; this setting value is always saved in the data file itself.
+> `Numéro automatique table` est une exception ; cette valeur de réglage est toujours stockée dans le fichier de données lui-même.
 
-## settings.4DSettings files
+## Fichiers settings.4DSettings
 
-When you [check the **Enable User Settings** option](#enabling-user-settings), user settings files are automatically created. Their location depends on the type of user settings defined.
+Lorsque vous [cochez l'option **Autoriser les propriétés utilisateur**](#enabling-user-settings), des fichiers de propriétés utilisateur sont automatiquement créés. Leur emplacement dépend du type de propriété utilisateur définie.
 
-### User Settings (standard)
+### Paramètres utilisateur (standard)
 
-The standard user settings file is automatically created and placed in a settings folder at the following location:
+Le fichier de propriété utilisateur standard est automatiquement créé et placé dans un dossier de propriétés à l'emplacement suivant :
 
 [`ProjectFolder/Settings/settings.4DSettings`](../Project/architecture.md#settings-1)
 
-... where *ProjectFolder* is the name of the folder containing the project structure file.
+... où *ProjectFolder* est le nom du dossier contenant le fichier de structure du projet.
 
-In merged applications, the user settings file is placed at the following location:
+Dans les applications fusionnées, le fichier de propriétés utilisateur est placé à l'emplacement suivant :
 
-* In single-user versions: ProjectFolder/Database/Settings/settings.4DSettings
-* In client/server versions: ProjectFolder/Server Database/Settings/settings.4DSettings
+* Dans les versions mono-utilisateur : ProjectFolder/Database/Settings/settings.4DSettings
+* Dans les versions client/serveur : ProjectFolder/Database/Settings/settings.4DSettings
 
-### User Settings for Data File
+### Propriétés utilisateur pour fichier de données
 
-The user settings file linked to the data file is automatically created and placed in a settings folder at the following location:
+Le fichier de propriétés utilisateur lié au fichier de données est automatiquement créé et placé dans un dossier de propriétés à l'emplacement suivant :
 
 [`Data/Settings/settings.4DSettings`](../Project/architecture.md#settings)
 
-... where *Data* is the name of the folder containing the current data file of the application.
+... où *Data* est le nom du dossier contenant le fichier de données actuel de l'application.
 
-> When the data file is located at the same level as the project structure file, structure-based and data-based user settings files share the same location and file. The **User Settings for Data File...** menu command is not proposed.
+> Lorsque le fichier de données est situé au même niveau que le fichier de structure du projet, les fichiers de propriétés utilisateur basés sur la structure et sur les données partagent le même emplacement et le même fichier. La commande de menu **Propriétés utilisateur pour le fichier de données...** n'est pas proposée.
 
-Settings files are XML files; they can be read and modified using integrated 4D XML commands or using an XML editor. This means that you can manage settings by programming, particularly in the context of applications compiled and merged with 4D Volume Desktop. When you modify this file by programming, the changes are only taken into account the next time the database is opened.
+Les fichiers de propriétés sont des fichiers XML ; ils peuvent être lus et modifiés à l'aide des commandes XML intégrées de 4D ou d'un éditeur XML. Cela signifie que vous pouvez gérer les paramètres par programmation, notamment dans le cadre d'applications compilées et fusionnées avec 4D Volume Desktop. Lorsque vous modifiez ce fichier par programmation, les changements ne sont pris en compte que lors de la prochaine ouverture de la base de données.
 
-## Priority of settings
+## Priorité des paramètres
 
-Settings can be stored at three levels. Each setting defined at one level overrides the same setting defined at a previous level, if any:
+Les propriétés peuvent être stockées à trois niveaux. Chaque paramètre défini à un niveau a priorité sur le même paramètre défini à un niveau précédent, le cas échéant :
 
-| **Priority level** | **Name**                                                                  | **Location**                                                                                                                                                  | **Comments**                                                                                                         |
-| ------------------ | ------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| 3 (lowest)         | Structure settings (or Settings when "User settings" feature not enabled) | ***settings.4DSettings*** file in the Sources folder (project databases) or in the Settings folder as the same level as the structure file (binary databases) | Unique location when user settings are not enabled. Applied to all copies of the application.                        |
-| 2                  | User settings (all data files)                                            | ***settings.4DSettings*** file in the Settings folder at the same level as the Project folder                                                                 | Overrides Structure settings. Stored within the application package.                                                 |
-| 1 (highest)        | User settings (current data file)                                         | ***settings.4DSettings*** file in the Settings folder at the same level as the data file                                                                      | Overrides Structure settings and User settings. Applied only when the linked data file is used with the application. |
+| **Niveau de priorité** | **Nom**                                                                                                | **Emplacement**                                                                                                                                                  | **Commentaires**                                                                                                                                                |
+| ---------------------- | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 3 (le plus faible)     | Paramètres de structure (ou Paramètres lorsque la fonction "Paramètres utilisateur" n'est pas activée) | Fichier ***settings.4DSettings*** dans le dossier Sources (bases projet) ou dans le dossier Settings au même niveau que le fichier de structure (bases binaires) | Emplacement unique lorsque les paramètres utilisateur ne sont pas activés. Appliqué à toutes les copies de l'application.                                       |
+| 2                      | Propriétés utilisateur (tous les fichiers de données)                                                  | Fichier ***settings.4DSettings*** dans le dossier Settings au même niveau que le dossier Project                                                                 | Remplace les propriétés de structure. Stocké dans le package de l'application.                                                                                  |
+| 1 (le plus élevé)      | Propriétés utilisateur (fichier de données courant)                                                    | Fichier ***settings.4DSettings*** dans le dossier Settings au même niveau que le fichier de données                                                              | Remplace les propriétés de structure et les propriétés utilisateur. S'applique uniquement lorsque le fichier de données associé est utilisé avec l'application. |
 
-Keep in mind that user settings files only contain a subset of relevant settings, while the structure file contains all custom settings, including core settings.
+A noter que les fichiers de propriétés utilisateur ne contiennent qu'un sous-ensemble de paramètres pertinents, tandis que le fichier de structure contient tous les paramètres personnalisés, y compris les paramètres de bas niveau.
