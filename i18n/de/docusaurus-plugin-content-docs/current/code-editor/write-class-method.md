@@ -17,7 +17,7 @@ The 4D Code Editor provides basic syntax error-checking. Additional error-checki
 
 Each Code Editor window has a toolbar that provides instant access to basic functions related to code execution and editing.
 
-| Element                       | Icon                                                                              | Description                                                                                                                                                                                                                                                                                                                                    |
+| Element                       | Icon                                                                              | Beschreibung                                                                                                                                                                                                                                                                                                                                   |
 | ----------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Method execution**          | ![execute-method](../assets/en/code-editor/execute-method.png)                    | When working with methods, each Code Editor window has a button that can be used to run the current method. Using the menu associated with this button, you can choose the type of execution:<ul><li> **Run new process**: Creates a process and runs the method in standard mode in this process.</li><li>**Run and debug new process**: Creates a new process and displays the method in the Debugger window for step by step execution in this process.</li><li>**Run in Application process**: Runs the method in standard mode in the context of the Application process (in other words, the record display window).</li><li>**Run and debug in Application process**: Displays the method in the Debugger window for step by step execution in the context of the Application process (in other words, the record display window).</li></ul>For more information on method execution, see [Calling Project Methods](../Concepts/methods.md#calling-project-methods). |
 | **Search**                    | ![search-icon](../assets/en/code-editor/search.png)                               | Allows performing a search in the current window.                                                                                                                                                                                                                                                                                              |
@@ -34,13 +34,13 @@ This is where you [write and edit](write-class-method.md) your code. The editor 
 
 You can customize the display of the editing area. Any customization is automatically passed on to all the windows of the code editor:
 
-| Option                                 | Description                                                                                                                                                                                                 | Set in...                                                                                                                                      |
-| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| **font** and **font size**             | Sets the character font and size to be used in the editing area                                                                                                                                             | **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**                          |
-| **style and color of syntax elements** | assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on). | Right-click on a language element (variable, keyword, etc.) > **Style** submenu. Or **Preferences** > [**Methods**](../Preferences/methods.md) |
-| **spaces**                             | You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.).                                   | **Method > View > White Spaces**                                                                                                               |
-| **themes**                             | You can select the Dark or Light theme, or set a custom one                                                                                                                                                 | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                     |
-| **width of code indentations**         | Set the width of code indentations                                                                                                                                                                          | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                     |
+| Option                                 | Beschreibung                                                                                                                                                                                                | Set in...                                                                                                                                                                                                  |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **font** and **font size**             | Sets the character font and size to be used in the editing area                                                                                                                                             | **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**                                                                                      |
+| **style and color of syntax elements** | assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on). | Right-click on a language element (variable, keyword, etc.) Right-click on a language element (variable, keyword, etc.) > **Style** submenu. Or **Preferences** > [**Methods**](../Preferences/methods.md) |
+| **spaces**                             | You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.).                                   | **Method > View > White Spaces**                                                                                                                                                                           |
+| **themes**                             | You can select the Dark or Light theme, or set a custom one                                                                                                                                                 | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                                                 |
+| **width of code indentations**         | Set the width of code indentations                                                                                                                                                                          | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                                                 |
 
 ## Lists area
 
@@ -59,7 +59,7 @@ You can enlarge or reduce the relative width of each list area by dragging one o
 
 - You can hide the lists in all the windows in the following ways:
   - Select the **View > Lists** option in the **Method** menu (a check mark indicates whether lists are displayed)
-  - Uncheck the **Preferences** > **Methods** > **Options** > **Show Lists** option. For the modifications made in the **Preferences** dialog box to be taken into account, any open methods, classes or functions must first be closed then reopened.
+  - Uncheck the **Preferences** > **Methods** > **Options** > **Show Lists** option. These options are found in **Preferences** > **Methods** > **Options**
 
 #### Available lists of items
 
@@ -228,7 +228,7 @@ In the example given below, typing the string "cop" causes the display of a blue
 
 ![](../assets/en/code-editor/autocomplete-1.png)
 
-When the characters you enter correspond to a single possibility, this suggested value appears greyed out (and is inserted if you hit the **Tab** key): ![](../assets/en/code-editor/autocomplete-2.png) ---> ![](../assets/en/code-editor/autocomplete-3.png)
+Autocompletion also works with code structures (e.g. If..End if, For each...End for each): when you enter the first part of the structure, the Code Editor will automatically suggest the closing part:  ![](../assets/en/code-editor/autocomplete-3.png)
 
 > If you checked the **Insert () and closing } ) ] "** option in the **Methods** page of the **Preferences**, 4D will also automatically add **()** after a 4D command, keyword or project method that requires one or more mandatory arguments (after accepting a suggestion or completion): ![](../assets/en/code-editor/insert-and-closing-1.png) -> ![](../assets/en/code-editor/insert-and-closing-2.png)
 
@@ -255,7 +255,7 @@ If the characters typed correspond to different types of objects, the list displ
 - User methods
 - Table names
 - Field names
-- Constants
+- Konstanten
 - Local, process or interprocess variable, declared in the method
 - Object property names
 - Plug-in commands
@@ -265,7 +265,7 @@ If the characters typed correspond to different types of objects, the list displ
 
 > For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes** and/or **tables**. These options are found in **Preferences** > **Methods** > **Options**
 
-### Object properties
+### Objekteigenschaften
 
 4D automatically displays case-sensitive suggestions of all valid object property names in 4D code when you:
 
@@ -309,7 +309,7 @@ Standard keyboard shortcuts to navigate the code are available in 4D's Code Edit
 
 **Note:** Under macOS, use the **Command** key instead of the **Ctrl** key mentioned (Windows).
 
-| **Shortcut**                                | **Action**                                                                                                                             |
+| **Shortcut**                                | **Aktion**                                                                                                                             |
 | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | [Shift]+[right arrow]                       | Create and enlarge the selection, character by character, to the right, or Reduce the selection, character by character, from the left |
 | [Shift]+[left arrow]                        | Reduce the selection, character by character, from the right or Create and enlarge the selection, character by character, to the left  |
@@ -378,20 +378,22 @@ You can display the HTML documentation of a 4D "classic" language command at any
 
 ## Comment/Uncomment
 
-Comments are inactive lines of code. These lines are not interpreted by the program (4D does not apply any particular style within comments) and are not executed when the method or function is called.
+Kommentare sind inaktive Zeilen von Code. These lines are not interpreted by the program (4D does not apply any particular style within comments) and are not executed when the method or function is called.
 
-There are two ways to create comments:
+Es gibt zwei Varianten zum Erstellen von Kommentaren:
 
 #### `//comment`
 
 Used to create a single line comment. Inserting // at the beginning of a line will create a single line comment. The length of single line comments is limited to the maximum size of a line (32,000 characters).
 
 <pre>&lt;code class="//This is a comment\" spaces=">
+ &lt;code class="//This is a comment\" spaces=">
  For(vCounter;1;2)\
   //comment\
   //comment\
   //comment\
  End for
+&lt;/code>
 &lt;/code></pre>
 
 #### `/*comment*/`
@@ -422,13 +424,13 @@ The sequence consists of a backslash `\`, followed by a character. For instance,
 
 In 4D, the following escape sequences can be used:
 
-| Escape sequence               | Character replaced   |
-| ----------------------------- | -------------------- |
-| `\n`                         | LF (Line feed)       |
-| `\t`                         | HT (Tab)             |
-| `\r`                         | CR (Carriage return) |
-| ``\\` |``&#96; (Backslash) |                      |
-| `\"`                         | " (Quotation marks)  |
+| Escape Sequenz                | Ersetzte Zeichen                      |
+| ----------------------------- | ------------------------------------- |
+| `\n`                         | LF (Line feed - Zeilenvorschub)       |
+| `\t`                         | HT (Tabulator)                        |
+| `\r`                         | CR (Carriage return -Zeilenschaltung) |
+| ``\\` |``&#96; (Backslash) |                                       |
+| `\"`                         | " (Anführungszeichen)                 |
 
 > It is possible to use either upper or lower case in escape sequences.
 
