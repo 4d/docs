@@ -68,7 +68,7 @@ To display the **Method Properties** dialog box for a project method, you can ei
 
 > A batch setting function allows you to modify a property for all or part of the database project methods in a single operation (see [Batch setting for method attributes](#batch-setting-for-method-attributes)).
 
-#### Name
+#### Nome
 
 You can change the name of a project method in the **Name** area of the **Method Properties** window or in the Explorer.
 
@@ -162,7 +162,7 @@ When it is checked, this option allows the project method to be executed by the 
 
 This property applies to all internal and external SQL queries --- executed via the ODBC driver, SQL code inserted between the [Begin SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/Begin-SQL.301-5830074.en.html)/[End SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/End-SQL.301-5830073.en.html)  tags or the [QUERY BY SQL](https://doc.4d.com/4Dv19R5/4D/19-R5/QUERY-BY-SQL.301-5830079.en.html) command.
 
-**Notes:**
+**Notas:**
 
 -   Even if a method has the "SQL" attribute, access rights set at the level of the database settings and method properties are taken into account for the execution of the method.
 -   The ODBC **SQLProcedure** function only returns project methods with the "SQL" attribute.
@@ -190,7 +190,7 @@ Use the wildcard character @ to help define groups of methods:
 - To designate methods whose names end with..., type @ at the beginning of the string. For example: `@write`
 - To designate all of the methods, just type @ in the area.
 
-**Notes:**
+**Notas:**
 - The search does not take upper/lower case into account.
 - You can enter several @ characters in the string, for example `dtro_@web@pro.@`
 
