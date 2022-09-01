@@ -1,11 +1,11 @@
 ---
 id: properties
-title: Menu item properties
+title: Propriedades dos menus
 ---
 
 You can set various properties for menu items such as action, font style, separator lines, keyboard shortcuts or icons.
 
-## Title
+## Título
 
 The **Title** property contains the label of a menu or menu item as it will be displayed on the application interface.
 
@@ -22,7 +22,7 @@ You can set some properties of the menu commands by using control characters (me
 
 Control characters do not appear in the menu command labels. You should therefore avoid using them so as not to have any undesirable effects. The control characters are the following:
 
-| Character   | Description                 | Usage                                                         |
+| Character   | Descrção                    | Usage                                                         |
 | ----------- | --------------------------- | ------------------------------------------------------------- |
 | (           | open parenthese             | Disable item                                                  |
 | <B          | less than B                 | Bold font                                                     |
@@ -37,7 +37,7 @@ You can associate a custom parameter with each menu item. A menu item parameter 
 
 Menu item parameters are useful with programmed management of menus, in particular when using the `Dynamic pop up menu`, `Get menu item parameter` and `Get selected menu item parameter` commands.
 
-## Action
+## Ação
 
 Each menu command can have a project method or a standard action attached to it. When the menu command is chosen, 4D executes the associated standard action or project method. For example, a **Monthly Report** menu command can call a project method that prepares a monthly report from a table containing financial data. The **Cut** menu command usually calls the `cut` standard action in order to move the selection to the clipboard and erase it from the window in the foreground.
 
@@ -114,14 +114,14 @@ You can use any alphanumeric keys as a keyboard shortcut, except for the keys re
 
 These reserved key combinations are listed in the following table:
 
-| Key (Windows)   | Key (macOS)        | Operation   |
+| Key (Windows)   | Key (macOS)        | Operação    |
 | --------------- | ------------------ | ----------- |
-| Ctrl+C          | Command+C          | Copy        |
-| Ctrl+Q          | Command+Q          | Quit        |
-| Ctrl+V          | Command+V          | Paste       |
-| Ctrl+X          | Command+X          | Cut         |
-| Ctrl+Z          | Command+Z          | Undo        |
-| Ctrl+. (period) | Command+. (period) | Stop action |
+| Ctrl+C          | Comando+C          | Copiar      |
+| Ctrl+Q          | Comando+Q          | Salir       |
+| Ctrl+V          | Comando+V          | Paste       |
+| Ctrl+X          | Comando+X          | Cortar      |
+| Ctrl+Z          | Comando+Z          | Deshacer    |
+| Ctrl+. (period) | Comando+. (period) | Stop action |
 
 To assign a keyboard shortcut in the Menu editor:
 
@@ -143,7 +143,7 @@ In the Menu editor, you can specify whether a menu item will appear enabled or d
 
 Unless you specify otherwise, 4D automatically enables each menu item you add to a custom menu. You can disable an item in order, for example, to enable it only using programming with `ENABLE MENU ITEM` and `DISABLE MENU ITEM` commands.
 
-### Check mark
+### Marca de verificação
 
 This Menu editor option can be used to associate a system check mark with a menu item. You can then manage the display of the check mark using language commands (`SET MENU ITEM MARK` and `Get menu item mark`).
 
