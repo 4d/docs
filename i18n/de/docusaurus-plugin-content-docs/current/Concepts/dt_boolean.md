@@ -3,15 +3,15 @@ id: boolean
 title: Boolean
 ---
 
-A boolean field, variable or expression can be either TRUE or FALSE.
+Ein Datenfeld, Ausdruck oder eine Variable vom Typ Boolean kann entweder WAHR oder FALSCH sein.
 
-## Boolean functions
+## Boolean Funktionen
 
-4D provides the Boolean functions `True`, `False`, and `Not` in the dedicated **Boolean** theme. For more information, see the descriptions of these commands.
+4D bietet die Boolean Funktionen `True`, `False` und `Not`. For more information, see the descriptions of these commands.
 
-### Example
+### Beispiel
 
-This example sets a Boolean variable based on the value of a button. It returns True in myBoolean if the myButton button was clicked and False if the button was not clicked. When a button is clicked, the button variable is set to 1.
+Dieses Beispiel setzt die Boolean Variable je nach Wert der Schaltfläche. Sie gibt Wahr zurück, wenn die Schaltfläche myButton angeklickt wurde und Falsch, wenn sie nicht angeklickt wurde. Ist die Schaltfläche angeklickt, hat die Variable für die Schaltfläche den Wert 1.
 
 ```4d
  If(myButton=1) //If the button was clicked
@@ -21,44 +21,44 @@ This example sets a Boolean variable based on the value of a button. It returns 
  End if
 ```
 
-The previous example can be simplified into one line.
+Obiges Beispiel lässt sich auch in einer Zeile zusammenfassen.
 
 ```4d
 myBoolean:=(myButton=1)
 ```
 
-## Logical operators
+## Logische Operatoren
 
-4D supports two logical operators that work on Boolean expressions: conjunction (AND) and inclusive disjunction (OR). A logical AND returns TRUE if both expressions are TRUE. A logical OR returns TRUE if at least one of the expressions is TRUE. The following table shows the logical operators:
+4D unterstützt für Boolean Ausdrücke die beiden logischen Operatoren UND und ODER. Ein logisches UND ergibt WAHR, wenn beide Ausdrücke wahr sind. Ein logisches ODER ergibt WAHR, wenn mindestens einer der Ausdrücke wahr ist. Die folgende Übersicht erläutert die logischen Operatoren:
 
-| Operation | Syntax                  | Returns | Expression                   | Value |
-| --------- | ----------------------- | ------- | ---------------------------- | ----- |
-| AND       | Boolean & Boolean       | Boolean | ("A" = "A") & (15 # 3)       | True  |
-|           |                         |         | ("A" = "B") & (15 # 3)       | False |
-|           |                         |         | ("A" = "B") & (15 = 3)       | False |
-| OR        | Boolean  &#124; Boolean | Boolean | ("A" = "A") &#124; (15 # 3)  | True  |
-|           |                         |         | ("A" = "B") &#124;  (15 # 3) | True  |
-|           |                         |         | ("A" = "B") &#124;  (15 = 3) | False |
+| Operation | Syntax                 | Ergibt  | Ausdruck                    | Wert   |
+| --------- | ---------------------- | ------- | --------------------------- | ------ |
+| UND       | Boolean & Boolean      | Boolean | ("A" = "A") & (15 # 3)      | Wahr   |
+|           |                        |         | ("A" = "B") & (15 # 3)      | Falsch |
+|           |                        |         | ("A" = "B") & (15 = 3)      | Falsch |
+| ODER      | Boolean &#124; Boolean | Boolean | ("A" = "A") &#124; (15 # 3) | Wahr   |
+|           |                        |         | ("A" = "B") &#124; (15 # 3) | Wahr   |
+|           |                        |         | ("A" = "B") &#124; (15 # 3) | Falsch |
 
-The following is the truth table for the AND logical operator:
+Für das logische UND gilt:
 
-| Expr1 | Expr2 | Expr1 & Expr2 |
-| ----- | ----- | ------------- |
-| True  | True  | True          |
-| True  | False | False         |
-| False | True  | False         |
-| False | False | False         |
+| Expr1  | Expr2  | Expr1 & Expr2 |
+| ------ | ------ | ------------- |
+| Wahr   | Wahr   | Wahr          |
+| Wahr   | Falsch | Falsch        |
+| Falsch | Wahr   | Falsch        |
+| Falsch | Falsch | Falsch        |
 
-The following is the truth table for the OR logical operator:
+Für das logische ODER gilt:
 
-| Expr1 | Expr2 | Expr1 &#124; Expr2 |
-| ----- | ----- | ------------------ |
-| True  | True  | True               |
-| True  | False | True               |
-| False | True  | True               |
-| False | False | False              |
+| Expr1  | Expr2  | Expr1 &#124; Expr2 |
+| ------ | ------ | ------------------ |
+| Wahr   | Wahr   | Wahr               |
+| Wahr   | Falsch | Wahr               |
+| Falsch | Wahr   | Wahr               |
+| Falsch | Falsch | Falsch             |
 
-**Tip:** If you need to calculate the exclusive disjunction between Expr1 and Expr2, evaluate:
+**Tipp:** Zum Berechnen eines ausschließenden ODER zwischen Expr1 and Expr2 schreiben Sie:
 
 ```4d
  (Expr1|Expr2) & Not(Expr1 & Expr2)  
