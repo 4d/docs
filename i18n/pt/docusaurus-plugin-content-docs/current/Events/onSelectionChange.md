@@ -3,12 +3,12 @@ id: onSelectionChange
 title: On Selection Change
 ---
 
-| Code | Can be called by                                                                                                                                                                                                                                                      | Definition                              |
+| Code | Can be called by                                                                                                                                                                                                                                                      | Definição                               |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
 | 31   | [4D View Pro area](FormObjects/viewProArea_overview.md) - [4D Write Pro area](FormObjects/writeProArea_overview.md) - Form - [Hierarchical List](FormObjects/list_overview.md) - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) | The selection in the object is modified |
 
 
-## Description
+## Descrção
 
 This event can be generated in different contexts.
 
@@ -16,16 +16,16 @@ This event can be generated in different contexts.
 ### 4D View Pro
 The current selection of rows or columns is modified. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
-| Property      | Type    | Description                    |
-| ------------- | ------- | ------------------------------ |
-| code          | longint | 31                             |
-| description   | text    | "On Selection Change"          |
-| objectName    | text    | 4D View Pro area name          |
-| sheetName     | text    | Name of the sheet of the event |
-| oldSelections | object  | Cell range before change       |
-| newSelections | object  | Cell range after change        |
+| Propriedade   | Tipo          | Descrção                       |
+| ------------- | ------------- | ------------------------------ |
+| code          | inteiro longo | 31                             |
+| description   | text          | "On Selection Change"          |
+| objectName    | text          | 4D View Pro area name          |
+| sheetName     | text          | Name of the sheet of the event |
+| oldSelections | object        | Cell range before change       |
+| newSelections | object        | Cell range after change        |
 
-#### Example
+#### Exemplo
 
 ```4d
  If(FORM Event.code=On Selection Change)
@@ -34,7 +34,7 @@ The current selection of rows or columns is modified. In this context, the [even
  End if
 ```
 
-### List form
+### Formulário lista
 
 The current record or the current selection of rows is modified in a list form.
 
