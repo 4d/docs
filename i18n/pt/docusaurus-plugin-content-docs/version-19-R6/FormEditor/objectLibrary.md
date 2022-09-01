@@ -1,6 +1,6 @@
 ---
 id: objectLibrary
-title: Object libraries
+title: Bibliotecas de objetos
 ---
 
 
@@ -12,7 +12,7 @@ You can use object librairies in your forms. An object library offers a collecti
 - custom object librairies, that you can use to store your favorite form objects or full project forms.
 
 
-## Using the standard object library
+## Utilização da biblioteca de objetos padrão
 
 The standard object library is available from the Form editor: click on the last button of the toolbar:  
 ![](../assets/en/FormEditor/library1.png)
@@ -34,9 +34,9 @@ This library is read-only. If you want to edit default objects or create your ow
 All objects proposed in the standard object library are described on [this section on doc.4d.com](https://doc.4d.com/4Dv17R6/4D/17-R6/Library-objects.200-4354586.en.html).
 
 
-## Creating and using custom object libraries
+## Criar e utilizar bibliotecas de objetos personalizadas
 
-You can create and use custom object libraries in 4D. A custom object library is a 4D project where you can store your favorite objects (buttons, texts, pictures, etc.) You can then reuse these objects in different forms and different projects.
+You can create and use custom object libraries in 4D. A custom object library is a 4D project where you can store your favorite objects (buttons, texts, pictures, etc.) You can then reuse these objects in different forms and different projects. You can then reuse these objects in different forms and different projects.
 
 Objects are stored with all their properties, including their object methods. Libraries are put together and used by simple drag-and-drop or copy-paste operations.
 
@@ -96,9 +96,9 @@ Using copy-paste or drag-and-drop with certain library objects also causes their
 
 The following is a list of dependent objects that will be pasted into the library at the same time as the main object that uses them (when applicable):
 
-- Lists
+- Listas
 - Formats/Filters
-- Pictures
+- Imagens
 - Help Tips (linked to a field)
 - Object methods
 
