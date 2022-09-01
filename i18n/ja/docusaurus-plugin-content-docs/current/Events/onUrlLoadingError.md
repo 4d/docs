@@ -3,17 +3,17 @@ id: onUrlLoadingError
 title: On URL Loading Error
 ---
 
-| Code | Can be called by                            | Definition                                 |
-| ---- | ------------------------------------------- | ------------------------------------------ |
-| 50   | [Web Area](FormObjects/webArea_overview.md) | An error occurred when the URL was loading |
+| コード | 呼び出し元                                     | 定義                 |
+| --- | ----------------------------------------- | ------------------ |
+| 50  | [Webエリア](FormObjects/webArea_overview.md) | URL をロード中にエラーが発生した |
 
 
-## Description
+## 詳細
 
-This event is generated when an error is detected during the loading of a URL.
+このイベントは、URL のロード中にエラーを検出すると生成されます。
 
-You can call the `WA GET LAST URL ERROR` command in order to get information about the error.
+`WA GET LAST URL ERROR` コマンドを使用して、エラーに関する情報を取得できます。
 
 
-### See also
+### 参照
 [`On Open External Link`](onOpenExternalLink.md)
