@@ -1,27 +1,27 @@
 ---
 id: components
-title: Components
+title: コンポーネント
 ---
 
-A 4D component is a set of 4D methods and forms representing one or more functionalities that you can install and use in your projects. For example, the [4D SVG component](https://doc.4d.com/4Dv19R3/4D/19-R3/4D-SVG-Component.100-5681501.en.html) adds advanced commands and an integrated rendering engine that can be used to display SVG files.
+4D のコンポーネントとは、プロジェクトにインストール可能な、1つ以上の機能を持つ 4Dメソッドやフォームの一式です。 たとえば、[4D SVGコンポーネント](https://doc.4d.com/4Dv19R3/4D/19-R3/4D-SVG-Component.100-5681501.ja.html) は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。
 
-## Where to find components?
+## コンポーネントの見つけ方
 
-Several components are [preinstalled in the 4D development environment](Extensions/overview.md), but a lot of 4D components from the 4D community [can be found on GitHub](https://github.com/search?q=4d-component&type=Repositories). Additionnally, you can [develop your own 4D components](Extensions/develop-components.md).
+いくつかのコンポーネントは [4D開発環境にプリインストール](Extensions/overview.md) されていますが、4Dコミュニティによる多くの 4Dコンポーネントが [GitHub 上に公開](https://github.com/search?q=4d-component&type=Repositories) されています。 また、[独自の 4Dコンポーネントを開発](Extensions/develop-components.md) することもできます。
 
 
-## Installing components
+## コンポーネントのインストール
 
-To install a component, you simply need to copy the component files into the [`Components` folder of the project](Project/architecture.md). You can use aliases or shortcuts.
+コンポーネントをインストールするには、[プロジェクトの `Components` フォルダー](Project/architecture.md) にコンポーネントファイルをコピーします。 エイリアスまたはショートカットも使用できます。
 
-A host project running in interpreted mode can use either interpreted or compiled components. A host project running in compiled mode cannot use interpreted components. In this case, only compiled components can be used.
+インタープリターモードで動作するホストプロジェクトは、インタープリターまたはコンパイル済みどちらのコンポーネントも使用できます。 コンパイルモードで実行されるホストデータベースでは、インタープリターのコンポーネントを使用できません。 この場合、コンパイル済みコンポーネントのみが利用可能です。
 
-## Using components
+## コンポーネントの使い方
 
-Component methods and forms can be used as standard elements in your 4D development.
+コンポーネントメソッドやフォームは、4D開発において標準の要素として使用できます。
 
-When an installed component contains methods, they appear in the **Component Methods** theme of the Explorer's Methods page.
+インストールされたコンポーネントにメソッドが含まれている場合、それらはエクスプローラーのメソッドページの **コンポーネントメソッド** テーマに表示されます。
 
-You can select a component method and click on the **Documentation** button of the Explorer to get information about it, [if any](Project/documentation.md).
+コンポーネントメソッドを選択し、エクスプローラーの**ドキュメント** ボタンをクリックすると、そのメソッドに関する情報が得られます ([あれば](Project/documentation.md))。
 
 ![alt-text](../assets/en/Project/compDoc.png)
