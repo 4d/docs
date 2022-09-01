@@ -3,41 +3,41 @@ id: propertiesPicture
 title: Picture
 ---
 
-## Pathname
+## Ruta de acceso
 
-Pathname of a static source picture for a [picture button](pictureButton_overview.md), [picture pop-up Menu](picturePopupMenu_overview.md), or [static picture](staticPicture.md). You must use the POSIX syntax.
+Ruta de una imagen source estática para un [botón imagen](pictureButton_overview.md), [menú emergente de imagen](picturePopupMenu_overview.md), o [imagen estática](staticPicture.md). Debe utilizar la sintaxis POSIX.
 
-The following locations can be used for static pictures:
+Las siguientes ubicaciones pueden utilizarse para las imágenes estáticas:
 
-- in the **Resources** folder of the project. Appropriate when you want to share static pictures between several forms in the project. In this case, the Pathname is "/RESOURCES/\<picture path\>".
-- in an image folder (e.g. named **Images**) within the form folder. Appropriate when the static pictures are used only in the form and/or you want to be able to move or duplicate the whole form within the project or different projects. In this case, the Pathname is "\<picture path\>" and is resolved from the root of the form folder.
-- in a 4D picture variable. The picture must be loaded in memory when the form is executed. In this case, the Pathname is "var:\<variableName\>".
+- en la carpeta **Resources** del proyecto. Appropriate when you want to share static pictures between several forms in the project. In this case, the Pathname is "/RESOURCES/\<picture path\>".
+- en una carpeta de imágenes (por ejemplo, llamada **Images**) dentro de la carpeta del formulario. Apropiado cuando las imágenes estáticas se utilizan sólo en el formulario y/o se quiere poder mover o duplicar todo el formulario dentro del proyecto o de diferentes proyectos. In this case, the Pathname is "\<picture path\>" and is resolved from the root of the form folder.
+- en una variable imagen 4D. La imagen debe cargarse en la memoria cuando se ejecuta el formulario. In this case, the Pathname is "var:\<variableName\>".
 
-#### JSON Grammar
+#### Gramática JSON
 
-|  Name   | Data Type | Possible Values                                                                               |
-|:-------:|:---------:| --------------------------------------------------------------------------------------------- |
-| picture |   text    | Relative or filesystem path in POSIX syntax, or "var:\<variableName\>" for picture variable |
+| Nombre  | Tipos de datos | Valores posibles                                                                                                    |
+|:-------:|:--------------:| ------------------------------------------------------------------------------------------------------------------- |
+| picture |      text      | Ruta relativa o del sistema de archivos en sintaxis POSIX, o "var:\<variableName\>" para una variable tipo imagen |
 
-#### Objects Supported
+#### Objetos soportados
 
-[Picture button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Static Picture](staticPicture.md)
+[Botón imagen](pictureButton_overview.md) - [Menú emergente imagen](picturePopupMenu_overview.md) - [Imagen estática](staticPicture.md)
 
 ---
 
-## Display
+## Visualización
 
-### Scaled to fit
+### A escala para ajustarse
 
-`JSON grammar: "scaled"`
+`Gramática JSON: "scaled"`
 
 The **Scaled to fit** format causes 4D to resize the picture to fit the dimensions of the area.
 
 ![](../assets/en/FormObjects/property_pictureFormat_ScaledToFit.png)
 
-### Replicated
+### Replicado
 
-`JSON grammar: "tiled"`
+`Gramática JSON: "tiled"`
 
 When the area that contains a picture with the **Replicated** format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.
 
@@ -45,23 +45,23 @@ When the area that contains a picture with the **Replicated** format is enlarged
 
 If the field is reduced to a size smaller than that of the original picture, the picture is truncated (non-centered).
 
-### Center / Truncated (non-centered)
+### Centrado / Truncado (no centrado)
 
-`JSON grammar: "truncatedCenter" / "truncatedTopLeft"`
+`Gramática JSON: "truncatedCenter" / "truncatedTopLeft"`
 
-The **Center** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 4D crops equally from each edge and from the top and bottom.
+El formato **Centro** hace que 4D centre la imagen en el área y recorte cualquier parte que no quepa dentro del área. 4D recorta por igual desde cada borde y desde la parte superior e inferior.
 
 The **Truncated (non-centered)** format causes 4D to place the upper-left corner of the picture in the upper-left corner of the area and crop any portion that does not fit within the area. 4D crops from the right and bottom.
 > When the picture format is **Truncated (non-centered)**, it is possible to add scroll bars to the input area.
 
 ![](../assets/en/FormObjects/property_pictureFormat_Truncated.png)
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name          | Data Type | Possible Values                                          |
-| ------------- | --------- | -------------------------------------------------------- |
-| pictureFormat | string    | "scaled", "tiled", "truncatedCenter", "truncatedTopLeft" |
+| Nombre        | Tipos de datos | Valores posibles                                         |
+| ------------- | -------------- | -------------------------------------------------------- |
+| pictureFormat | string         | "scaled", "tiled", "truncatedCenter", "truncatedTopLeft" |
 
-#### Objects Supported
+#### Objetos soportados
 
-[Static Picture](staticPicture.md)
+[Imagen estática](staticPicture.md)
