@@ -1,169 +1,169 @@
 ---
 id: creating-using-macros
-title: Creating and using macros
+title: マクロの作成と利用
 ---
 
-You can use macro-commands in your methods. Using macro-commands saves a lot of time during code entry.
+メソッド内でマクロコマンドを利用することができます。 マクロを利用すれば、コードの入力にかかる時間を大幅に短縮することができます。
 
-## What is a macro?
+## マクロとは
 
-A macro-command is a section of 4D code that is permanently accessible and that can be inserted anywhere in your methods, whatever the type of database open. Macros can contain all types of 4D text, commands and constants, as well as special tags which are replaced at the time of macro insertion by values derived from the method context. For instance, a macro may contain the tag `<method_name/>;` at the time of macro insertion, this tag will be replaced by the name of the current project method.
+マクロコマンドは 4Dコードのパーツで、どのデータベースが開かれているかにかかわらず、あらゆるメソッドのどんな場所にでも挿入することができます。 マクロにはすべてのタイプの 4Dテキスト、コマンド、定数、さらにマクロ実行時のメソッドコンテキストにより値が置換される特別なタグを記述することができます。 たとえば、マクロに `<method_name/>;` というタグを記述しておくと、マクロ挿入時にこのタグはカレントのプロジェクトメソッド名に置換されます。
 
-Macros are stored in one or more XML format (text) file(s). They can be placed in a Code Editor list; they can also be called using the context menu of the editor or using the autocomplete function.
+マクロは 1つ以上の XMLフォーマットのテキストファイルに格納されます。 マクロはコードエディターリスト、またはエディター内のコンテキストメニュー、さらに自動補完機能から呼び出すことが可能です。
 
-4D macros are written in XML format. You can use the 4D default macro file as is or modify it.
+4Dマクロは XMLフォーマットで記述されます。 4Dが提供するデフォルトのマクロファイルをそのまま使用することも、変更することもできます。
 
-## Location of macros
+## マクロの場所
 
-4D loads the macros from a folder named **Macros v2**. Macros must be in the form of one or more XML files that are placed in this folder.
+4D は **Macros v2** という名前のフォルダーからマクロを読み込みます。 マクロは XMLファイルとしてこのフォルダーに配置しなければなりません。
 
-The "Macros v2" folder can be located:
+"Macros v2" フォルダーは以下の場所に配置できます:
 
-- In the active 4D folder of the machine. Macros are then shared for all the databases. **Note:** The location of the active 4D folder varies according to the operating system used. For more information, refer to the description of the [Get 4D folder](https://doc.4d.com/4Dv19R4/4D/19-R4/Get-4D-folder.301-5739515.en.html) command in the 4D *Language Reference* manual.
-- Next to the database structure file. Macros are only loaded for this structure.
-- For components: in the **Components** folder of the database. Macros are then only loaded if the component is installed.
+- マシンのアクティブ4Dフォルダー。 この場合、マクロはすべてのデータベースで共有されます。 **注:** アクティブ4Dフォルダーの位置は OS により異なります。 詳細については、*4Dランゲージリファレンス* マニュアルの [Get 4D folder](https://doc.4d.com/4Dv19R4/4D/19-R4/Get-4D-folder.301-5739515.ja.html) コマンドの説明を参照ください。
+- データベースストラクチャーファイルと同階層。 マクロは、このストラクチャーにのみ読み込まれます。
+- コンポーネントの場合: データベースの **Components** フォルダーと同階層。 この場合マクロは、コンポーネントがインストールされている場合のみ利用できます。
 
-These three locations can be used simultaneously: it is possible to install a "Macros v2" folder in each location. The macros will be loaded in the following order: 4D folder, structure file, component 1... component X.
+これら 3つの場所は同時に利用可能です。各場所に "Macros v2" フォルダーをインストールできます。 マクロは以下の順番でロードされます: 4Dフォルダー、ストラクチャーファイル、コンポーネント1 ... コンポーネントX。
 
-## Default macros
+## デフォルトマクロ
 
-4D offers a set of default macros corresponding, in particular, to the list of keywords in previous versions of 4D. These macros are included in the default "*Macros.xml*" file, placed in the "Macros v2" folder that is created in the active 4D folder of the machine during the initial startup of 4D.
+4D は、以前のバージョンの 4D におけるキーワードリストに対応するマクロをデフォルトで提供しています。 このマクロは 4Dを初回起動する際、マシンのアクティブ4Dフォルダー内の "Macros v2" フォルダーに作成される*Macros.xml* ファイルに含まれます。
 
-You can modify this file or the contents of the folder subsequently as desired (see the following paragraph). In the event of problems with this folder, it can be deleted and 4D will re-create it on the next startup.
+このファイルを変更することができます。また、フォルダー内に別のマクロファイルを追加することもできます (後述参照)。 このフォルダーに問題が発生した場合は、フォルダーを削除すると次回の 4D起動時に新たに作成されます。
 
-## Adding customized macros
+## カスタマイズしたマクロを追加する
 
-You can add customized macros in the "Macros.xml" file using a standard text editor or by programming. You can also add XML files of customized macros in this folder.
+標準のテキストエディターやプログラムを使用して、"Macros.xml" ファイルにカスタマイズしたマクロを追加できます。 またフォルダー内に、カスタマイズしたマクロを記述した XMLファイルを追加することもできます。
 
-In local mode, the macros file can be open while using 4D. The list of available macros is updated on each event activating 4D. For instance, it is possible to bring the text editor to the foreground, modify the macro file, then return to the method: the new macro is then available in the Code Editor.
+ローカルモードでは、4D を使用中にマクロファイルを開くことができます。 利用可能なマクロのリストは 4Dがアクティブになるたびに更新されます。 たとえば、テキストエディターを最前面にしてマクロファイルを更新し、その後メソッドの編集に戻ると、新しいマクロがコードエディターで利用可能になっています。
 
-Empty or erroneous macros are not displayed.
+空およびエラーのあるマクロは表示されません。
 
-### Checking the syntax of customized macros
+### カスタマイズしたマクロのシンタックスを検証する
 
-The macro-command files of 4D must be in conformity with the XML standard. This means more particularly that XML declaration `<?xml version="1.0" ...?>` and document declaration `<!DOCTYPE macros SYSTEM "http://www.4d.com/dtd/2007/macros.dtd">` statements are mandatory at the beginning of a macro file in order for it to be loaded. The different types of XML encoding are supported. However, it is recommended to use encoding that is Mac/PC (UTF-8) compatible. 4D provides a DTD that can be used to validate the macro files. This file is found in the following location:
+4Dのマクロコマンドファイルは XML標準に準拠していなければなりません。 つまりXML宣言 `<?xml version="1.0" ...?>` とドキュメント宣言 `<!DOCTYPE macros SYSTEM "http://www.4d.com/dtd/2007/macros.dtd">` 文がマクロファイルの先頭になければならず、そうでない場合、マクロは読み込まれません。 異なるタイプの XMLエンコーディングがサポートされています。 しかし、Mac/PC (UTF-8) 互換のエンコーディングを使用することが推奨されます。 4D はマクロファイルを検証するための DTD を提供しています。 ファイルは以下の場所にあります:
 
 - Windows: \Resources\DTD\macros.dtd
-- Mac OS: :Contents:Resources:DTD:macros.dtd
+- macOS: :Contents:Resources:DTD:macros.dtd
 
-If a macros file does not contain the declaration statements or cannot be validated, it is not loaded.
+マクロファイルに宣言文が含まれない場合や検証に失敗する場合、マクロはロードされません。
 
-## Syntax of 4D macros
+## 4Dマクロのシンタックス
 
-4D macros are built using customized XML tags called "elements."
+4Dマクロは "要素" と呼ばれるカスタマイズされた XMLタグを使用して構築されます。
 
-Some tags indicate the start and end of the definition (double tags of the type `<tag> </tag>`), others are replaced by insertion context values (`<tag/>`).
+いくつかのタグは定義の開始と終了を表し (`<tag>` と `</tag>` のようなペア)、その他のタグは実行コンテキストにより置換されます (`<tag/>`)。
 
-In conformity with XML specifications, some element tags can include attributes. Unless otherwise indicated, these attributes are optional and a default value is used when they are omitted. The syntax of elements with attributes is as follows:
+XML仕様に準拠し、いくつかのタグは属性を含むことがあります。 明示されない限り属性の指定は任意であり、省略された場合はデフォルト値が使用されます。 要素および属性のシンタックスは以下の通りです:
 
-- Double tags: `<tag attribute="value"> </macro>`
-- Single tags: `<tag attribute="value"/>`
+- 開始および終了タグのペア: `<tag attribute="value"> </tag>`
+- 置換されるタグ: `<tag attribute="value"/>`
 
 If the element accepts several attributes, you can group them in the same line of command, separated by a space: `\&#060;tag attribute1="value" attribute2="value" attribute3="value"... &#062;`
 
-Here is the list of tags and their mode of use:
+利用可能なタグのリストと利用モードは以下の通りです:
 
-| **Element tags**                 | **Description**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| -------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `<macros> </macros>` | Start and end of macro file (mandatory tag).                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `<macro> </macro>`   | Start and end of the definition of a macro and its attributes.                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-|                                  | *Attributes*:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-|                                  | - name: Name**of macro as it appears in menus and Code Editor lists (mandatory attribute).                                                                                                                                                                                                                                                                                                                                                                                                               |
-|                                  | - type_ahead_text: Character string** to be entered to call the macro using the type-ahead (aka autocomplete) function*.                                                                                                                                                                                                                                                                                                                                                                             |
-|                                  | - in_menu: Boolean indicating whether the macro can be called using the context menu*. Values = "true" (default) or "false."                                                                                                                                                                                                                                                                                                                                                                             |
-|                                  | - type_ahead: Boolean indicating whether the macro can be called using the type-ahead (aka autocomplete) function*. Values = "true" (default) or "false."                                                                                                                                                                                                                                                                                                                                                |
-|                                  | - method_event: Used to trigger the automatic calling of the macro depending on the current handling phase of each method (creation, closing, and so on). Values = "on_load": The macro is triggered on the opening of each method, "on_save": The macro is triggered when each method is saved (closing of a modified method or saving using the File>Save command, "on_create": The macro is triggered when each method is created, "on_close": The macro is triggered when each method is closed. |
-|                                  | "on_save" and "on_close" can be used jointly --- in other words, both of these events are generated when a modified method is closed. On the other hand, "on_create" and "on_load" are never generated in a consecutive manner. This attribute can be used, for example, to preformat methods when they are created (comments in header area) or to record information such as the date and time when they are closed.                                                                               |
-|                                  | - version: Used to activate the new mode of supporting text selections for the macro (see the "About the `<method>` Tag" section below). To activate this new mode, pass the value "2". If you omit this attribute or pass version="1", the former mode is kept.                                                                                                                                                                                                                                   |
-|                                  | - in_toolbar: Boolean indicating if the macro must be present in the menu of the Macro button of the toolbar. Values= "true" (default) or "false".                                                                                                                                                                                                                                                                                                                                                       |
-| `<selection/>`             | Tag replaced by the selected text when the macro is inserted. The selection may be empty.                                                                                                                                                                                                                                                                                                                                                                                                                |
-| `<text> </text>`     | Start and end of code that must be inserted in the method. A carriage return will be added before and after the code.                                                                                                                                                                                                                                                                                                                                                                                    |
-| `<method> </method>` | Start and end of the name of the project method and its (optional) parameter. The method is executed when the macro is called. You can pass a parameter in the form ("param1;param2;..."). This parameter will be received in the method using the variables $1, $2, etc. For additional information about this tag, refer to the "About the `<method>` Tag" section below.                                                                                                                        |
-| `<caret/>`                 | Location of the insertion point in the code after the macro has been inserted.                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| `<user_4D/>`               | Tag replaced by the name of the current 4D user.                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `<user_os/>`               | Tag replaced by the current system user name.                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
-| `<method_name/>`           | Tag replaced by the current project method name.                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `<method_path/>`           | Tag replaced by full pathname of the current project method.                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `<date/>`                  | Tag replaced by the current date.                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-|                                  | *Attribute*:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-|                                  | - format: 4D format used to display the date. If no format is set, the default format is used. Values = number of 4D format (0 to 8).                                                                                                                                                                                                                                                                                                                                                                    |
-| `<time/>`                  | Tag replaced by the current time.                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-|                                  | *Attribute*:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-|                                  | - format: 4D format used to display the time. If no format is set, the default format is used. Values = number of 4D format (0 to 6).                                                                                                                                                                                                                                                                                                                                                                    |
-| `<clipboard/>`             | Tag replaced by the contents of the clipboard.                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-|                                  | *Attribute*:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-|                                  | - index: Clipboard to be pasted. Values = number of the clipboard (0 to 9).                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| **要素タグ**                         | **詳細**                                                                                                                                                                                                                                                           |
+| -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `<macros> </macros>` | マクロファイルの開始と終了 (必須)。                                                                                                                                                                                                                                              |
+| `<macro> </macro>`   | マクロとその属性の定義の開始と終了。                                                                                                                                                                                                                                               |
+|                                  | *属性*:                                                                                                                                                                                                                                                            |
+|                                  | - name: メニューやコードエディターリストに表示されるマクロの名前** (必須)。                                                                                                                                                                                                                     |
+|                                  | - type_ahead_text: タイプアヘッド (自動補完) 機能*を使用してマクロを呼び出すために入力する文字列**。                                                                                                                                                                                              |
+|                                  | - in_menu: コンテキストメニュー*からマクロを呼び出すことを許可するかを指定するブール値。 値は "true" (デフォルト) または "false"。                                                                                                                                                                                |
+|                                  | - type_ahead: タイプアヘッド (自動補完) 機能*を使用してマクロを呼び出すことを許可するかを指定するブール値。 値は "true" (デフォルト) または "false"。                                                                                                                                                                   |
+|                                  | - method_event: メソッドごとの現在の処理フェーズ (作成、閉じる等) に応じてマクロの自動呼出しを実行するために使用します。 値 = "on_load": マクロはメソッドを開くたびに実行されます, "on_save": マクロはメソッドが保存されるたびに実行されます (メソッドを閉じるまたはファイル＞保存コマンドを使用して保存する), "on_create": マクロはメソッドが作成されるたびに実行されます, "on_close": マクロはメソッドが閉じられるたびに実行されます。 |
+|                                  | "on_save" と "on_close" は組み合わせて使用できます — 言い換えれば、これらのイベントは更新されたメソッドが閉じられるときに両方とも生成されます。 他方、"on_create" と "on_load" が連続して実行されることはありません。 この属性は、たとえばメソッド作成時にデフォルトのフォーマット (ヘッダーエリアのコメント等) を適用したり、メソッドを閉じる際にタイムスタンプを記録するために使用することができます。                              |
+|                                  | - version: マクロ用にテキスト選択の新しいモードを有効化するために使用します (後述の "`<method>`タグについて" 参照)。 新しいモードを有効にするには "2" を指定します。 この属性を省略するか version="1" を指定すると、以前のモードが保持されます。                                                                                                           |
+|                                  | - in_toolbar: ツールバーのマクロボタンメニューにマクロを表示するかどうかを指定するブール値。 値="true" (デフォルト) または "false"。                                                                                                                                                                              |
+| `<selection/>`             | マクロが挿入される時点で選択されていたテキストを使用して、タグが置換されます。 選択テキストは空の場合もあります。                                                                                                                                                                                                        |
+| `<text> </text>`     | メソッドに挿入されるコードの開始と終了タグ。 コードの先頭と最後には改行が追加されます。                                                                                                                                                                                                                     |
+| `<method> </method>` | プロジェクトメソッド名とその引数 (オプション) の開始と終了。 マクロが呼び出されたとき、メソッドが実行されます。 ("param1;param2;...") の形式で引数を渡せます。 この引数は、呼び出されたメソッド内で $1, $2...変数に渡されます。 このタグに関する追加情報は後述の "`<method>` タグについて" を参照ください。                                                                          |
+| `<caret/>`                 | マクロが挿入された後のコード中の挿入ポイントの場所。                                                                                                                                                                                                                                       |
+| `<user_4D/>`               | カレント4Dユーザー名で置換されるタグ。                                                                                                                                                                                                                                             |
+| `<user_os/>`               | カレントのシステムユーザー名で置換されるタグ。                                                                                                                                                                                                                                          |
+| `<method_name/>`           | カレントのプロジェクトメソッド名で置換されるタグ。                                                                                                                                                                                                                                        |
+| `<method_path/>`           | カレントプロジェクトメソッドのフルパス名で置換されるタグ。                                                                                                                                                                                                                                    |
+| `<date/>`                  | カレントの日付で置換されるタグ。                                                                                                                                                                                                                                                 |
+|                                  | *属性*:                                                                                                                                                                                                                                                            |
+|                                  | - format: 4D の日付フォーマット。 フォーマットが設定されていない場合、デフォルトのフォーマットが使用されます。 値 = 4Dフォーマットの数字 (0 - 8)。                                                                                                                                                                          |
+| `<time/>`                  | カレントの時間で置換されるタグ。                                                                                                                                                                                                                                                 |
+|                                  | *属性*:                                                                                                                                                                                                                                                            |
+|                                  | - format: 4D の時間フォーマット。 フォーマットが設定されていない場合、デフォルトのフォーマットが使用されます。 値 = 4Dフォーマットの数字 (0 - 6)。                                                                                                                                                                          |
+| `<clipboard/>`             | クリップボードの内容で置換されるタグ。                                                                                                                                                                                                                                              |
+|                                  | *属性*:                                                                                                                                                                                                                                                            |
+|                                  | - index: ペーストするクリップボード。 値 = クリップボード番号 (0 - 9)。                                                                                                                                                                                                                   |
 
-- Macros can be called using the context menu of the Code Editor or using the type-ahead function (see the following section).
-- If you want to conform to XML language specifications, you must not use extended characters (accented characters, quotation marks, etc.).
+- * マクロは、コードエディターのコンテキストメニューやタイプアヘッド機能を使用して呼び出すことができます (後述参照)。
+- ** XML言語仕様に準拠するには、拡張文字 (アクセント文字や引用符など) を使用してはなりません。
 
-Here is an example of a macro definition:
+以下はマクロ定義の例です:
 
-| **Content of macro**                                 | **Comments**                                                                                                                                    |
-| ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `<?xml version="1.0"...?>`                     | XML declaration                                                                                                                                 |
-| `<!DOCTYPE macros SYSTEM>`                     | Document declaration                                                                                                                            |
-| `<macros>`                                     | Start of macros XML file                                                                                                                        |
-| `<macro name="RecordLoop">`                    | Start of macro definition and name                                                                                                              |
-| `<text>`                                       | Start of macro code                                                                                                                             |
-| For($i;1;Records in selection(`<Selection/>`)) | The `<Selection/>` tag will be replaced by the selected code in the 4D method at the time of macro insertion (for instance, a table name) |
-| SAVE RECORD(`<Selection/>`)                    |                                                                                                                                                 |
-| NEXT RECORD(`<Selection/>`)                    |                                                                                                                                                 |
-| End for                                              |                                                                                                                                                 |
-| `</text>`                                      | End of macro code                                                                                                                               |
-| `</macro>`                                     | End of macro definition                                                                                                                         |
-| `</macros>`                                    | End of macros XML file                                                                                                                          |
+| **マクロの内容**                                           | **コメント**                                                                 |
+| ---------------------------------------------------- | ------------------------------------------------------------------------ |
+| `<?xml version="1.0"...?>`                     | XML宣言                                                                    |
+| `<!DOCTYPE macros SYSTEM>`                     | ドキュメント宣言                                                                 |
+| `<macros>`                                     | マクロXMLファイルの開始                                                            |
+| `<macro name="RecordLoop">`                    | マクロ定義の開始と名前                                                              |
+| `<text>`                                       | マクロコードの開始                                                                |
+| For($i;1;Records in selection(`<Selection/>`)) | `<Selection/>` タグは、マクロ挿入時に 4Dメソッド内で選択されているコードにより置換されます (たとえばテーブル名) |
+| SAVE RECORD(`<Selection/>`)                    |                                                                          |
+| NEXT RECORD(`<Selection/>`)                    |                                                                          |
+| End for                                              |                                                                          |
+| `</text>`                                      | マクロコードの終了                                                                |
+| `</macro>`                                     | マクロ定義の終了                                                                 |
+| `</macros>`                                    | マクロXMLファイルの終了                                                            |
 
-## About the `<method>` tag
+## `<method>` タグについて
 
-The `<method>` tag allows you to generate and use macro-commands that execute 4D project methods. This allows developers to create sophisticated functions that can be distributed via macro-commands which are associated with components. For example, the following macro will cause the *MyMethod* method to be executed with the name of the current method as parameter:
+`<method>` タグを使用すると、4Dプロジェクトメソッドを実行するマクロコマンドを作成して使用することができます。 これにより開発者はコンポーネントにマクロコマンドを添付して配布し、洗練された機能を提供することが可能になります。 たとえば、以下のマクロはカレントのメソッド名を引数にとり、*MyMethod* メソッドを実行します:
 
 `<method>MyMethod("<method_name/>")</method>`
 
-The code of a called method is executed in a new process. This process is killed once the method is executed.
+呼び出されたメソッドコードは新規プロセスで実行されます。 このプロセスはメソッド実行後に消失します。
 
-> The structure process remains frozen until the called method execution is completed. You must make sure that the execution is quick and that there is no risk of it blocking the application. If this occurs, use the **Ctrl+F8** (Windows) or **Command+F8** (Mac OS) command to "kill" the process.
+> 呼び出されたメソッドの実行が終了するまでストラクチャープロセスは停止されます。 メソッドの実行は素早く終了し、アプリケーションをブロックするリスクがないことを確認しなければなりません。 ブロックしてしまった場合には、**Ctrl+F8** (Windows) または **Command+F8** (macOS) でこのプロセスをアボートできます。
 
-## Calling macros
+## マクロを呼び出す
 
-By default, macros can be called using the context menu or toolbar of the Code Editor, the autocomplete function, or a specific list at the bottom of the Code Editor window.
+デフォルトでマクロはコードエディターのコンテキストメニューまたはツールバー、自動補完機能、またはコードエディターウィンドウ下部のマクロリストから呼び出すことができます。
 
-Note that for each macro it is possible to restrict the possibility of calling it using the context menu and/or the autocomplete function.
+各マクロごとにコンテキストメニューや自動補完機能を使用した呼び出しを禁止できる点に留意してください。
 
-### Context menu and toolbar
+### コンテキストメニューとツールバー
 
-By default, all macros can be called via the context menu of the Code Editor (using the **Insert macro** hierarchical command) or the **Macros** button of the toolbar.
+デフォルトでは、すべてのマクロをコードエディターのコンテキストメニュー (**マクロ挿入** 階層コマンド) またはツールバーの **マクロ** ボタンから呼び出すことができます。
 
-The *in_menu* attribute of the `<macro>` tag is used to set whether or not the macro appears in this menu.
+`<macro>` タグの *in_menu* 属性を使用して、マクロをこのメニューに表示するかどうかを指定できます。
 
-In the context menu, macros are displayed in the order of the "Macros.xml" file and any additional XML files. It is thus possible to change the order by modifying these files.
+コンテキストメニュー内で、マクロは "Macros.xml" ファイル (および追加の XMLファイル) に記述された順番で表示されます。 つまりファイルを編集することでこの順番を変更できます。
 
-### Autocomplete
+### 自動補完
 
-By default, all macros are accessible using the autocomplete (aka type-ahead) function (see [Writing a method](./write-class-method.md)). The *type_ahead* attribute of the `<macro>` tag can be used to exclude a macro from this type of operation.
+デフォルトでは、すべてのマクロは自動補完 (タイプアヘッド) 機能からアクセスできます ([コードエディター](./write-class-method.md) 参照)。 `<macro>` タグの *type_ahead* 属性を使用して、特定のマクロをこの動作の対象から外すことができます。
 
-**Note:** If the macro contains the `<selection/>` tag, it will not appear in the autocomplete pop-up window.
+**注:** マクロに `<selection/>` タグが含まれている場合、このマクロは自動補完ポップアップウィンドウには表示されません。
 
-### Code Editor list
+### コードエディターリスト
 
-You can display your macros in a list of the Code Editor (see [Writing a method](./write-class-method.md)). Simply double-click on the name of a macro in the list in order to call it. It is not possible to exclude a specific macro from this list.
+コードエディターのリストにマクロを表示させることができます ([コードエディター](./write-class-method.md) 参照)。 リスト中でマクロをダブルクリックし、呼び出すことができます。 特定のマクロをこのリストから除外することはできません。
 
-## Compatibility notes
+## 互換性に関する注意
 
-Macro support can change from one version of 4D to another. In order to keep the different versions compatible while maintaining your customizations, 4D does not remove any previous versions. If you want to use the latest features available, you must adapt your version accordingly.
+マクロのサポートは 4Dのバージョンごとに変わることがあります。 カスタマイズされたマクロを管理しつつ、異なるバージョンの互換性を保持するために、4Dは以前のバージョンのマクロを取り除くことはしません。 最新機能を使用したい場合は、適切にバージョンを調整する必要があります。
 
-### Text selection variables for methods
+### method の選択テキスト変数
 
-It is recommended to manage text selections using the [GET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/en/page997.html) and [SET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/en/page998.html) commands. These commands can be used to overcome the partitioning of the host project/component execution spaces and thus allow the creation of components dedicated to the management of macros. In order to activate this mode for a macro, you must declare the Version attribute with the value 2 in the Macro element. In this case, 4D no longer manages the predefined variables _textSel,_textReplace, etc. and the [GET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/en/page997.html) and [SET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/en/page998.html) commands are used. This attribute must be declared as follows:
+選択されたテキストは [GET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page997.html) と [SET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page998.html) コマンドを使用して管理することが推奨されます。 これらのコマンドを使用すると、ホストプロジェクトとコンポーネント間でテキストを相互に交換することができ、マクロの管理専用のコンポーネントを作成することができます。 マクロでこのモードを有効にするには、macro 要素内で version 属性に値 2 を指定しなければなりません。 この場合、4D は旧式の _textSel, _textReplace 等の定義済み変数を管理しなくなり、[GET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page997.html) と [SET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page998.html) が利用可能になります。 属性は以下のように定義します:
 
 `<macro name="MyMacro" version="2">`<br/> `--- Text of the macro ---`<br/> `</macro>`
 
-If you do not pass this attribute, the previous mode is kept.
+この属性を指定しない場合、以前のモードが保持されます。
 
-### Incompatibilities related to the XML standard
+### XML標準に関連する非互換性
 
-Strict syntax rules must be observed in order for macros files to respect the XML standard. This may lead to incompatibilities with the code of macros created with previous versions and prevent the loading of XML files. The following are the main sources of malfunctioning:
+マクロファイルは XML標準に準拠しなければならず、厳密なシンタックスルールが適用されます。 以前のバージョンで作成されたマクロコードの場合、これにより非互換が発生することがあり、また XMLファイルの読み込みが妨げられる可能性があります。 異常な動作が起こるのは以下のケースです:
 
-- Comments of the "// my comment" type, allowed inside `<macro>` elements in previous versions of 4D, are not compatible with the XML syntax. The lines of comments must respect the standard `"<!-- my comment -->"` form.
-- The `<>` symbols used more particularly for interprocess object names must be encoded. For example, the `<>params` variable must be written `&lt;>params`.
-- The initial `<macros>` declaration tag could be omitted in previous versions of 4D. It is now mandatory; otherwise, the file will not be loaded.
+- 以前のバージョンの 4Dでは `<macro>` 要素内で "// my comment" 形式のコメントが許可されていました。これは XMLのシンタックスに適合していません。 このような行は標準の `"<!-- my comment -->"` 形式に書きなおさなければなりません。
+- インタープロセス変数名を表す `<>` 記号はエンコードされなければなりません。 For example, the `<>params` variable must be written `&lt;>params`.
+- 以前のバージョンの 4D ではルート要素である `<macros>` を省略できました。 現在このタグは必須です。このタグがない場合、ファイルをロードできません。
