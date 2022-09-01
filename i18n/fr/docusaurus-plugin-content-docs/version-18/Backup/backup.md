@@ -1,95 +1,95 @@
 ---
 id: backup
 slug: backup
-title: Backup
+title: Sauvegarde
 ---
 
 
-## Starting a backup
+## Lancer une sauvegarde
 
-A backup can be started in three ways:
+Une sauvegarde peut être déclenchée de trois manières :
 
-- Manually, using the **Backup...** item of the 4D **File** menu or the **Backup** button of the [Maintenance and Security Center](MSC/backup.md).
-- Automatically, using the scheduler that can be set in the Database Settings,
-- Programmatically, using the `BACKUP` command.
+- Manuellement, via la commande **Sauvegarde...** du menu **Fichier** de 4D ou le bouton **Sauvegarde** du [Centre de sécurité et de maintenance (CSM)](MSC/backup.md).
+- Automatiquement, via le programmateur paramétrable dans les Propriétés de la base,
+- Par programmation, à l’aide de la commande `BACKUP`.
 
-> 4D Server: A backup can be started manually from a remote machine using a method that calls the `BACKUP` command. The command will be executed, in all cases, on the server.
+> 4D Server : Il est possible de déclencher “manuellement” une sauvegarde depuis un poste distant, via une méthode appelant la commande `BACKUP`. Dans tous les cas, la commande sera exécutée sur le serveur.
 
-### Manual backup
+### Sauvegarde manuelle
 
-1. Select the **Backup...** command in the 4D **File** menu. The backup window appears: ![](../assets/en/Backup/backup01.png) You can see the location of the backup folder using the pop-up menu next to the "Backup destination" area. This location is set on the **Backup/Configuration** page of the Database Settings.
+1. Choisissez la commande **Sauvegarde...** dans le menu **Fichier** de 4D. The backup window appears: ![](../assets/en/Backup/backup01.png) You can see the location of the backup folder using the pop-up menu next to the "Backup destination" area. Cet emplacement est défini dans la Page **Sauvegarde/Configuration** des Propriétés de la base.
 
-- You can also open the [Maintenance and Security Center](MSC/overview.md) of 4D and display the [Backup page](MSC/backup.md).
+- Vous pouvez également sélectionner [Centre de sécurité et de maintenance](MSC/overview.md) de 4D et afficher la [Page Sauvegarde](MSC/backup.md).
 
-The **Database properties...** button causes the Backup/Configuration page of the Database Settings to be displayed.
+Le bouton **Propriétés de la base...** provoque l’affichage de la boîte de dialogue des Propriétés de la base (page Page Sauvegarde/Périodicité).
 
- 2. Click **Backup** to start the backup using current parameters.
+ 2. Cliquez sur le bouton **Sauvegarde** pour déclencher la sauvegarde avec les paramètres courants.
 
-### Scheduled automatic backup
+### Sauvegarde automatique périodique
 
-Scheduled backups are started automatically. They are configured in the **Backup/Scheduler** page of the **Database Settings**.
+Les sauvegardes périodiques sont déclenchées automatiquement. Elles sont configurées dans la Page **Sauvegarde/Périodicité** des **Propriétés de la base**.
 
-Backups are automatically performed at the times defined on this page without any type of user intervention. For more information on using this dialog box, refer to [Scheduler in backup settings](settings.md#scheduler).
+Les sauvegardes s'effectuent automatiquement au moment défini, sans intervention de l’utilisateur. Pour plus d’informations sur le fonctionnement de cette boîte de dialogue, reportez-vous à la section [Définir des sauvegardes périodiques](settings.md#scheduler).
 
-### BACKUP command
+### Commande BACKUP
 
-When the `BACKUP` 4D language command is executed from any method, the backup starts using the current parameters as defined in the Database settings. You can use the `On Backup Startup` and `On Backup Shutdown` database methods for handling the backup process (see the *4D Language Reference* manual).
+Lorsque la commande `BACKUP` est exécutée depuis une méthode, la sauvegarde est alors déclenchée avec les paramètres courants définis dans les propriétés de la base. Vous pouvez utiliser la Méthode base `On Backup Startup` et `On Backup Shutdown` afin de contrôler le déroulement de la sauvegarde (cf. le manuel *Langage de 4D*).
 
-## Managing the backup processing
+## Déroulement de la sauvegarde
 
-Once a backup is started, 4D displays a dialog box with a thermometer indicating the progress of the backup:
+Une fois qu’une sauvegarde a été déclenchée, 4D affiche une boîte de dialogue comportant un thermomètre indiquant la progression de l’opération :
 
 ![](../assets/en/Backup/backupProgress.png)
 
-This thermometer is also displayed on the [Backup page of the MSC](MSC/backup.md) if you have used this dialog box.
+Le thermomètre est également affiché en bas de la page [“Sauvegarde” du CSM](MSC/backup.md) si vous avez utilisé cette boîte de dialogue.
 
-The **Stop** button lets the user interrupt the backup at any time (refer to [Handling backup issues](backup.md#handling-backup-issues) below).
+Le bouton **Arrêter** permet à l’utilisateur d’interrompre la sauvegarde à tout instant (cf. paragraphe [En cas de problème au cours de la sauvegarde](backup.md#handling-backup-issues)).
 
-The status of the last backup (successful or failed) is stored in the Last Backup Information area of the [Backup page in the MSC](MSC/backup.md) or in the **Maintenance page** of 4D Server. It is also recorded in the database **Backup journal.txt**.
+Le compte-rendu de la dernière sauvegarde (succès ou échec) est stocké dans la zone "Informations sur la dernière sauvegarde" dans la [Page Sauvegarde du CSM](MSC/backup.md) ou dans la **Page de maintenance** de 4D Server. Il est également enregistré dans le **Backup journal.txt**.
 
-### Accessing the database during backup
+### Accès à la base durant la sauvegarde
 
-During a backup, access to the database is restricted by 4D according to the context. 4D locks any processes related to the types of files included in the backup: if only the project files are being backed up, access to the structure is not possible but access to the data will be allowed.
+Pendant la sauvegarde, les accès à la base sont restreints par 4D en fonction du contexte. Pendant la sauvegarde, les accès à l'application sont restreints par 4D en fonction du contexte.
 
-Conversely, if only the data file is being backed up, access to the structure is still allowed. In this case, the database access possibilities are as follows:
+A l’inverse, si seul le fichier de données est sauvegardé, l’accès à la structure reste autorisé. Dans ce cas, les possibilités d’accès aux données sont les suivantes :
 
-- With the 4D single-user version, the database is locked for both read and write; all processes are frozen. No actions can be performed.
-- With 4D Server, the database is only write locked; client machines can view data. If a client machine sends an add, remove or change request to the server, a window appears asking the user to wait until the end of the backup. Once the database is saved, the window disappears and the action is performed. To cancel the request in process and not wait for the end of the backup, simply click the **Cancel operation** button. However, if the action waiting to be executed comes from a method launched prior to the backup, you should not cancel it because only operations remaining to be performed are cancelled. Also, a partially executed method can cause logical inconsistencies in the database.
+- Avec 4D version monoposte, la base est verrouillée en lecture et en écriture, tous les process sont gelés. Toute action est alors impossible.
+- Avec 4D Server, la base est verrouillée uniquement en écriture, les postes clients peuvent consulter les données. Si un poste client envoie une requête d’ajout, de suppression ou de modification au serveur, il obtient une fenêtre l’invitant à attendre la fin de la sauvegarde. Une fois la base sauvegardée, la fenêtre disparaît d’elle-même et l’action est effectuée. Pour annuler la requête en cours et ne pas avoir à attendre la fin de la sauvegarde, il suffit de cliquer sur le bouton **Annuler l’opération**. Cependant, si l’action en attente provient d’une méthode lancée avant la sauvegarde, il est déconseillé de l’annuler car seules les opérations restant à effectuer seront annulées. Or, une méthode “à moitié” exécutée peut conduire à des incohérences logiques dans la base.
 
 > When the action waiting to be executed comes from a method and the user clicks the **Cancel operation** button, 4D Server returns error -9976 (This command cannot be executed because the database backup is in progress).
 
-### Handling backup issues
+### En cas de problème au cours de la sauvegarde
 
-It may happen that a backup is not executed properly. There may be several causes of a failed backup: user interruption, attached file not found, destination disk problems, incomplete transaction, etc. 4D processes the incident according to the cause.
+Il est possible qu'une sauvegarde ne s’effectue pas correctement. Les causes de l’échec peuvent être diverses : interruption par l’utilisateur, fichier joint introuvable, disque de destination défaillant, transaction non terminée, etc. 4D traite l'incident selon la cause de l'échec.
 
-In all cases, keep in mind that the status of the last backup (successful or failed) is stored in the Last Backup Information area of the [Backup page in the MSC](MSC/backup.md) or in the **Maintenance page** of 4D Server, as well as in the database **Backup journal.txt**.
+Dans tous les cas, le statut de la dernière sauvegarde (succès ou échec) est stocké dans la zone "Informations sur la dernière sauvegarde" dans la [Page Sauvegarde du CSM](MSC/backup.md) ou dans la **Page Maintenance** de 4D Server, ainsi que dans le **Journal de sauvegarde**.
 
-- **User interruption**: The **Stop** button in the progress dialog box allows users to interrupt the backup at any time. In this case, the copying of elements is stopped and the error 1406 is generated. You can intercept this error in the `On Backup Shutdown` database method.
-- **Attached file not found**: When an attached file cannot be found, 4D performs a partial backup (backup of database files and accessible attached files) and returns an error.
-- **Backup impossible** (disk is full or write-protected, missing disk, disk failure, incomplete transaction, database not launched at time of scheduled automatic backup, etc.): If this is a first-time error, 4D will then make a second attempt to perform the backup. The wait between the two attempts is defined on the **Backup/Backup & Restore** page of the Database Settings. If the second attempt fails, a system alert dialog box is displayed and an error is generated. You can intercept this error in the `On Backup Shutdown` database method.
+- **Interruption par l’utilisateur** : le bouton **Arrêter** de la boîte de dialogue de progression de la sauvegarde permet aux utilisateurs d’interrompre la sauvegarde à tout instant. Dans ce cas, la copie des éléments est stoppée et l'erreur 1406 est générée. Vous pouvez intercepter cette erreur dans la Méthode base `On Backup Shutdown`.
+- **Fichier joint introuvable** : lorsqu’un fichier joint est introuvable, 4D effectue une sauvegarde partielle (sauvegarde des fichiers de la base et des fichiers joints accessibles) et retourne une erreur.
+- **Backup impossible** (disk is full or write-protected, missing disk, disk failure, incomplete transaction, database not launched at time of scheduled automatic backup, etc.): If this is a first-time error, 4D will then make a second attempt to perform the backup. Le délai d’attente entre les deux tentatives est défini dans la Page **Sauvegarde/Sauvegarde& et Restitution** des Propriétés de la base. Si la seconde tentative échoue également, une boîte de dialogue d’alerte système est affichée et une erreur est générée. Vous pouvez intercepter cette erreur dans la Méthode base `On Backup Shutdown`.
 
-## Backup Journal
+## Journal de sauvegarde (Backup Journal)
 
-To make following up and verifying database backups easier, the backup module writes a summary of each operation performed in a special file, which is similar to an activity journal. Like an on-board manual, all database operations (backups, restores, log file integrations) are logged in this file whether they were scheduled or performed manually. The date and time that these operations occurred are also noted in the journal.
+Pour faciliter le suivi et la vérification des sauvegardes de la base de données, le module de sauvegarde résume chaque opération effectuée dans un fichier spécial, similaire à un journal d'activité. Comme un manuel intégré, toutes les opérations de la base de données (sauvegardes, restaurations, intégrations de fichiers d'historique) sont consignées dans ce fichier, qu’elles aient été planifiées ou exécutées manuellement. La date et l'heure auxquelles ces opérations ont eu lieu sont également notées dans le journal.
 
-The backup journal is named "Backup Journal[001].txt" and is placed in the "Logs" folder of the database. The backup journal can be opened with any text editor.
+Le journal de sauvegarde s'appelle "Backup Journal[001].txt" et se trouve dans le dossier "Logs" de la base de données. Le journal de sauvegarde peut être ouvert avec n'importe quel éditeur de texte.
 
-#### Management of backup journal size
+#### Gestion de la taille du journal de sauvegarde
 
-In certain backup strategies (for example, in the case where numerous attached files are being backed up), the backup journal can quickly grow to a large size. Two mechanisms can be used to control this size:
+Dans certaines stratégies de sauvegarde (par exemple, dans le cas où de nombreuses pièces jointes sont sauvegardées), le journal de sauvegarde peut rapidement atteindre une taille importante. Deux mécanismes peuvent être utilisés pour gérer cette taille :
 
-- **Automatic backup**: Before each backup, the application examines the size of the current backup journal file. If it is greater than 10 MB, the current file is archived and a new file is created with the [xxx] number incremented, for example "Backup Journal[002].txt”. Once file number 999 is reached, the numbering begins at 1 again and the existing files will be replaced.
-- **Possibility of reducing the amount of information recorded**: To do this, simply modify the value of the `VerboseMode` key in the *Backup.4DSettings* file of the database. By default, this key is set to True. If you change the value of this key to False, only the main information will be stored in the backup journal: date and time of start of operation and any errors encountered. The XML keys concerning backup configuration are described in the *4D XML Keys Backup* manual.
+- **Sauvegarde automatique** : Avant chaque sauvegarde, l'application examine la taille du fichier backup journal courant. Si elle est supérieure à 10 Mo, le fichier courant est archivé et un nouveau fichier est créé avec le numéro [xxx] incrémenté, par exemple "Backup Journal[002] .txt”. Une fois le numéro de fichier 999 atteint, la numérotation reprend à 1 et les fichiers existants seront remplacés.
+- **Possibilité de réduire la quantité d'informations enregistrées** : Pour ce faire, il suffit de modifier la valeur de la clé `VerboseMode` dans le fichier *Backup.4DSettings* de la base. Par défaut, cette clé est définie sur True. Si vous définissez la valeur de cette clé sur False, seules les informations principales sont stockées dans le journal de sauvegarde : la date et l'heure du début de l'opération et les éventuelles erreurs générées. Les clés XML concernant la configuration de la sauvegarde sont décrites dans le manuel *Sauvegarde des clés XML 4D*.
 
 ## backupHistory.json
 
-All information regarding the latest backup and restore operations are stored in the database's **backupHistory.json** file. It logs the path of each saved file (including attachments) as well as number, date, time, duration, and status of each operation. To limit the size of the file, the number of logged operations is the same as the number of available backups ("Keep only the last X backup files") defined in the backup settings.
+Toutes les informations concernant les dernières opérations de sauvegarde et de restitution sont stockées dans le fichier **backupHistory.json** de la base. Ce dernier enregistre le chemin de chaque fichier sauvegardé (y compris les pièces jointes) ainsi que le numéro, la date, l'heure, la durée et le statut de chaque opération. Afin de limiter la taille du fichier, le nombre d'opérations enregistrées et le nombre de sauvegardes disponibles ("Keep only the last X backup files") définies dans les propriétés de sauvegarde est identique.
 
-The **backupHistory.json** file is created in the current backup destination folder. You can get the actual path for this file using the following statement:
+Le fichier **backupHistory.json** se situe dans le dossier de destination de sauvegarde courant. Vous pouvez obtenir le chemin de ce fichier à l'aide de la déclaration suivante :
 
 ```4d
 $backupHistory:=Get 4D file(Backup history file)
 ```
-> **WARNING**  
-> Deleting or moving the **backupHistory.json** file will cause the next backup number to be reset.
-> The **backupHistory.json** file is formatted to be used by the 4D application. If you are looking for a human-readable report on backup operations, you might find the Backup journal more accurate.
+> **ATTENTION**  
+> La suppression ou le déplacement du fichier **backupHistory.json** entraînera la réinitialisation du prochain numéro de sauvegarde.
+> Le fichier **backupHistory.json** est formaté afin d'être utilisé par l'application 4D. Si vous recherchez un état lisible sur les opérations de sauvegarde, le journal de sauvegarde sera plus précis.
