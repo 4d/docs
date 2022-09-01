@@ -1,12 +1,12 @@
 ---
 id: action
-title: Action
+title: Ação
 ---
 
 
-## Method
+## Métodos
 
-Reference of a method attached to the form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. See [Specialized methods](Concepts/methods.md#specialized-methods).
+Reference of a method attached to the form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. Ver [Métodos especializados](Concepts/methods.md#specialized-methods).
 
 You do not call a form method—4D calls it automatically when an event involves the form to which the method is attached.
 
@@ -25,7 +25,7 @@ Several types of method references are supported:
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values                                                  |
-| ------ | --------- | ---------------------------------------------------------------- |
-| method | text      | Form method standard or custom file path, or project method name |
+| Nome   | Tipo de dados | Possible Values                                                  |
+| ------ | ------------- | ---------------------------------------------------------------- |
+| method | text          | Form method standard or custom file path, or project method name |
 
