@@ -1,23 +1,23 @@
 ---
 id: menu
-title: Menu
+title: メニュー
 ---
 
 
-## Associated Menu Bar
+## 連結メニューバー
 
-When a menu bar is associated to a form, it is added to the right of the current menu bar when the form is displayed in Application environment.
+メニューバーをフォームに割り当てると、アプリケーションモードでフォームが表示されたときにカレントメニューバーの右側に追加されます。
 
-The selection of a menu command causes an `On Menu Selected` event to be sent to the form method; you can then use the `Menu selected` command to test the selected menu.
+メニューコマンドが選択されると、`On Menu Selected` イベントがフォームメソッドに送られます。 コード内では、`Menu selected` コマンドを使って、選択されたメニューを確認することができます。
 
-> If the menu bar of the form is identical to the current menu bar, it is not added.
+> フォームのメニューバーとカレントメニューバーが同じ場合、追加はされません。
 
-The form menu bar will operate for both input and output forms.
+フォームメニューバーは、入力および出力フォームの両方で動作します。
 
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name    | Data Type | Possible Values    |
-| ------- | --------- | ------------------ |
-| menuBar | string    | Name of a menu bar |
+| 名称      | データタイプ | とりうる値     |
+| ------- | ------ | --------- |
+| menuBar | string | メニューバーの名称 |
 
