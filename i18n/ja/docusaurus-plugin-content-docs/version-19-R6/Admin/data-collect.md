@@ -1,87 +1,87 @@
 ---
 id: data-collect
-title: About Data Collection
+title: データ収集について
 ---
 
-To help us make our products always better, we automatically collect data regarding usage statistics on running 4D Server applications. Collected data is completely anonymous and data is transferred with no impact on the user experience.
+4D製品を改善し続けるために、実行中の 4D Server アプリケーションの使用状況データを自動的に収集します。 収集されるデータは完全に匿名で、データ収集がユーザーエクスペリエンスに影響を与えることはありません。
 
-This page explains:
+このページは以下を説明します:
 
-- what information is collected
-- where information is stored and when it is sent to 4D
-- how to disable automatic data collection in client/server built applications.
-
-
-## Collected information
-
-Data is collected during the following events:
-
-- 4D Server startup,
-- database opening,
-- database closure,
-- web server startup.
-
-### Collected at 4D Server startup
-
-| Data          | Example                                                                                              | Notes                                                        |
-| ------------- | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------ |
-| CPU           | Intel(R) Core(TM) i7-2600 CPU @ 3.40GH 3.39GHz                                                       | Name, type, and speed of the processor                       |
-| numberOfCores | 4                                                                                                    | Total number of cores                                        |
-| memory        | 419430400                                                                                            | Volume of memory storage (in bytes) available on the machine |
-| system        | Microsoft Windows 10 Pro 1809 (17763.253)                                                            | Operating system version and build number                    |
-| headless      | false                                                                                                | True if the application is running in headless mode          |
-| version       | 1960                                                                                                 | Version number of the 4D application                         |
-| buildNumber   | 123456                                                                                               | Build number of the 4D application                           |
-| license       | {"name":"4D Developer Professional 19R6","products":[{"id":808464433,"name":"4D","allowedCount":1}]} | Commercial name and description of product licenses          |
+- どのような情報が収集されるか
+- どこに情報が保存され、いつ 4Dに送信されるか
+- ビルドされたクライアント/サーバーアプリケーションで自動データ収集を無効にする方法。
 
 
-### Collected per database at opening
+## 収集される情報
 
-| Data                    | Example                                                 | Notes                                                                                 |
-| ----------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| id                      | hashed string                                           | Unique id associated to the database (*Polynomial Rolling hash of the database name*) |
-| dataFileSize            | 419430400                                               | Data file size in bytes                                                               |
-| indexesSize             | 419430400                                               | Index size in bytes                                                                   |
-| cacheSize               | 419430400                                               | Cache size in bytes                                                                   |
-| usingLegacyNetworkLayer | fasle                                                   | True if legacy network layer used for the application server                          |
-| isEncrypted             | true                                                    | True if the data file is encrypted                                                    |
-| isCompiled              | true                                                    | True if the application is compiled                                                   |
-| isEngined               | true                                                    | True if the application is merged with 4D Volume Desktop                              |
-| isProjectMode           | true                                                    | True if the application is a project                                                  |
-| mobile                  | [{"os":"iOS", "version":"12.465", "simulator":"false"}] | Information on mobile sessions                                                        |
+以下のイベント中にデータが収集されます:
 
+- 4D Server が起動される
+- データベースが開かれる
+- データベースが閉じられる
+- Webサーバーが起動される
 
-### Collected per database at closure
+### 4D Server 起動時に収集される情報
 
-| Data   | Example | Notes                                                        |
-| ------ | ------- | ------------------------------------------------------------ |
-| uptime | 123456  | Time elapsed (in seconds) since local 4D database was opened |
-
-
-### Collected per database at web server startup
-
-| Data      | Example          | Notes       |
-| --------- | ---------------- | ----------- |
-| webServer | {"started":true} | Always true |
+| データ           | 例題                                                                                                   | 注記                                |
+| ------------- | ---------------------------------------------------------------------------------------------------- | --------------------------------- |
+| CPU           | Intel(R) Core(TM) i7-2600 CPU @ 3.40GH 3.39GHz                                                       | プロセッサーの名前、種類、および速度                |
+| numberOfCores | 4                                                                                                    | コアの合計数                            |
+| memory        | 419430400                                                                                            | マシン上で利用可能なメモリ容量 (バイト単位)           |
+| system        | Microsoft Windows 10 Pro 1809 (17763.253)                                                            | OS のバージョンとビルド番号                   |
+| headless      | false                                                                                                | アプリケーションがヘッドレスモードで実行されている場合は true |
+| version       | 1960                                                                                                 | 4Dアプリケーションのバージョン番号                |
+| buildNumber   | 123456                                                                                               | 4Dアプリケーションのビルド番号                  |
+| license       | {"name":"4D Developer Professional 19R6","products":[{"id":808464433,"name":"4D","allowedCount":1}]} | 製品ライセンスの名称と説明                     |
 
 
+### データベースが開かれる際に収集される情報
 
-## When is it stored and sent?
+| データ                     | 例題                                                      | 注記                                            |
+| ----------------------- | ------------------------------------------------------- | --------------------------------------------- |
+| id                      | ハッシュ文字列                                                 | データベースに関連付けられた一意の id (*データベース名の多項式ローリングハッシュ*) |
+| dataFileSize            | 419430400                                               | データファイルのサイズ (バイト単位)                           |
+| indexesSize             | 419430400                                               | インデックスのサイズ (バイト単位)                            |
+| cacheSize               | 419430400                                               | キャッシュのサイズ (バイト単位)                             |
+| usingLegacyNetworkLayer | fasle                                                   | アプリケーションサーバーに旧式ネットワークレイヤーが使用されている場合は true     |
+| isEncrypted             | true                                                    | データファイルが暗号化されていれば true                        |
+| isCompiled              | true                                                    | アプリケーションがコンパイル済みの場合は true                     |
+| isEngined               | true                                                    | アプリケーションに 4D Volume Desltop が組み込まれている場合は true |
+| isProjectMode           | true                                                    | アプリケーションがプロジェクトの場合は true                      |
+| mobile                  | [{"os":"iOS", "version":"12.465", "simulator":"false"}] | モバイルセッションに関する情報                               |
 
-Collected data is written in a text file (JSON format) when 4D Server quits. The file is stored inside the [active 4D folder](https://doc.4d.com/4dv19/help/command/en/page485.html), i.e.:
 
-- on Windows: `Users\[userName]\AppData\Roaming\4D Server`
-- on macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
+### データベースが閉じられる際に収集される情報
 
-Once a week, the file is automatically sent over the network to 4D. The file is then deleted from the active 4D folder.
+| データ    | 例題     | 注記                             |
+| ------ | ------ | ------------------------------ |
+| uptime | 123456 | ローカル4Dデータベースが開かれてからの経過時間 (秒単位) |
+
+
+### Webサーバー起動時に収集される情報
+
+| データ       | 例題               | 注記      |
+| --------- | ---------------- | ------- |
+| webServer | {"started":true} | 常に true |
+
+
+
+## 保存と送信のタイミング
+
+収集されたデータは、4D Server の終了時にテキストファイル (JSON形式) に書き込まれます。 このファイルは、[Active 4D Folder](https://doc.4d.com/4dv19/help/command/ja/page485.html) に格納されます。 つまり:
+
+- Windows: `Users\[userName]\AppData\Roaming\4D Server`
+- macOS: `/Users/[userName]/Library/ApplicationSupport/4D Server`
+
+週に一度、ファイルはネットワーク経由で自動的に 4D に送信されます。 その後、ファイルは Active 4D Folder から削除されます。
 
 ![](../assets/en/Admin/data-collect.png)
 
-> If the file could not be sent for some reason, it is nevertheless deleted and no error message is displayed on the 4D Server side.
+> 何らかの理由でファイルを送信できなかった場合でも、ファイルは削除され、4D Server にエラーメッセージは表示されません。
 
 
-## Disabling data collection in client/server built applications
+## ビルドされたクライアント/サーバーアプリケーションで自動データ収集を無効にする
 
-You can disable the automatic data collection in [client/server built applications](../Desktop/building.md#clientserver-page).
+[ビルドされたクライアント/サーバーのアプリケーション](../Desktop/building.md#クライアントサーバーページ) で、自動データ収集を無効にすることができます。
 
-To disable the collection, pass the value **False** to the [`ServerDataCollection`](https://doc.4d.com/4Dv19R6/4D/19-R6/ServerDataCollection.300-6011712.en.html) key in the `buildApp.4DSettings` file, used to build the client/server application.
+データ収集を無効にするには、クライアント/サーバーアプリケーションのビルドに使用する `buildApp.4DSettings` ファイル内の [`ServerDataCollection`](https://doc.4d.com/4Dv19R6/4D/19-R6/ServerDataCollection.300-6011712.ja.html) キーに値 **False** を渡します。
