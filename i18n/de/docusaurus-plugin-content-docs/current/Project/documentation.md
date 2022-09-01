@@ -11,7 +11,7 @@ The following project elements accept documentation:
 
 - Methods (database methods, component methods, project methods, form methods, 4D Mobile methods, triggers, and classes)
 - Forms
-- Tables and Fields
+- Tabellen und Felder
 
 Your documentation files are written in Markdown syntax (.md files) using any editor that supports Markdown. They are stored as independant files within your project folder.
 
@@ -38,7 +38,7 @@ All documentation files are stored in the `Documentation` folder, located at the
 The `Documentation` folder architecture is the following:
 
 - `Documentation`
-    + `Classes`
+    + `Klassen`
         * myClass.md
     + `DatabaseMethods`
         * onStartup.md
@@ -54,7 +54,7 @@ The `Documentation` folder architecture is the following:
             - input.md
             - ...
         * ...
-    + `Triggers`
+    + `Trigger`
         * table1.md
         * ...
 
@@ -124,11 +124,11 @@ New documentation files are created with the following default contents:
 
 ![](../assets/en/Project/comments-explo4.png)
 
-| Line                                                | Description                                                                                                                                          |
+| Line                                                | Beschreibung                                                                                                                                         |
 | --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
 | "\<!-- Type your summary here -->"       | HTML comment. Used in priority as the method description in the [code editor tips](#viewing-documentation-in-the-code-editor)                        |
 | ## Description                                     | Heading level 2 in Markdown. The first sentence after this tag is used as the method description in the code editor tips if HTML comment is not used |
-| ## Example                                         | Heading level 2, you can use this area to show sample code                                                                                           |
+| ## Beispiel                                        | Heading level 2, you can use this area to show sample code                                                                                           |
 | \``` 4D <br/>Type your example here \` `` | Used to format 4D code examples (uses highlight.js library)                                                                                          |
 
 
@@ -153,8 +153,8 @@ _italic_
 - The code block tag (\```4d ... ```) is supported with 4D code highlight:
 
     \``` 4d  
-  C_TEXT($txt)  
-  $txt:="Hello world!"  
+C_TEXT($txt)  
+$txt:="Hello world!"  
   \` ``
 
 
@@ -196,7 +196,7 @@ The [documentation](https://doc.4d.com) of the command ....
 
 
 
-## Example
+## Beispiel
 
 In the `WP SwitchToolbar.md` file, you can write:
 
