@@ -8,7 +8,7 @@ title: On Display Detail
 | 8    | Form - [List Box](FormObjects/listbox_overview.md) | A record is about to be displayed in a list form or a row is about to be displayed in a list box. |
 
 
-## Description
+## Beschreibung
 
 The `On Display Detail` event can be used in the following contexts:
 
