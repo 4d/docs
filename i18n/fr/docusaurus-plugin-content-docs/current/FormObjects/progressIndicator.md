@@ -1,67 +1,67 @@
 ---
 id: progressIndicator
-title: Progress Indicator
+title: Indicateurs de progression
 ---
 
 
-A progress indicator (also called "thermometer") is designed to display or set numeric or date/time values graphically.
+Un indicateur de progression (également appelé "thermomètre") est conçu pour afficher ou définir graphiquement des valeurs numériques ou date/heure.
 
 ![](../assets/en/FormObjects/progress1.png)
 
-## Using indicators
+## Utiliser des indicateurs
 
-You can use indicators either to display or set values. For example, if a progress indicator is given a value by a method, it displays the value. If the user drags the indicator point, the value changes. The value can be used in another object such as a field or an enterable or non-enterable object.
+Vous pouvez utiliser les jauges pour afficher ou définir des valeurs. Par exemple, si un indicateur de progression se voit affecter une valeur par une méthode, il affiche la valeur. Si l’utilisateur modifie manuellement la valeur indiquée par la jauge, la valeur contenue par l’objet est modifiée. Cette valeur peut être utilisée pour un autre objet tel qu’un champ, un objet saisissable ou un objet non saisissable.
 
-The variable associated with the indicator controls the display. You place values into, or use values from, the indicator using methods. For example, a method for a field or enterable object could be used to control a progress indicator:
+La variable associée à l'indicateur contrôle l’affichage. Vous pouvez y placer des valeurs ou utiliser les valeurs qu’il stocke à l’aide des méthodes. Par exemple, la méthode suivante peut être utilisée pour contrôler un thermomètre :
 
 ```4d
  vTherm:=[Employees]Salary
 ```
 
-This method assigns the value of the Salary field to the vTherm variable. This method would be attached to the Salary field.
+Cette méthode affecte à la variable vTherm la valeur du champ Salaire. Cette méthode est associée au champ Salaire.
 
-Conversely, you could use the indicator to control the value in a field. The user drags the indicator to set the value. In this case the method becomes:
+Réciproquement, vous pouvez utiliser un indicateur pour contrôler la valeur d’un champ. L’utilisateur se sert alors de l'indicateur pour saisir la valeur du champ. Dans ce cas la méthode devient :
 
 ```4d
  [Employees]Salary:=vTherm
 ```
 
-The method assigns the value of the indicator to the Salary field. As the user drags the indicator, the value in the Salary field changes.
+La méthode affecte la valeur de l'indicateur au champ Salaire. Lorsque l’utilisateur modifie la valeur affichée par l'indicateur, la valeur du champ Salaire est modifiée.
 
 
-## Default thermometer
+## Le thermomètre par défaut
 
 ![](../assets/en/FormObjects/indicator_progressBar.png)
 
-The thermometer is the basic progress indicator.
+Le thermomètre est l'indicateur de progression standard.
 
-You can display horizontal or vertical thermometers bars. This is determined by the shape of the object that you draw.
+Vous pouvez afficher une barre de progression horizontale ou verticale. Ce paramètre est déterminé par la forme de l’objet que vous dessinez.
 
-Multiple graphical options are available: minimum/maximum values, graduations, steps.
+Plusieurs options graphiques sont disponibles : valeurs minimales/maximales, graduations, paliers.
 
-### Supported Properties
-[Barber shop](properties_Scale.md#barber-shop) - [Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) -[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Display graduation](properties_Scale.md#display-graduation) - [Enterable](properties_Entry.md#enterable) - [Execute object method](properties_Action.md#execute-object-method) - [Expression Type](properties_Object.md#expression-type) (only "integer", "number", "date", or "time") - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Italic](properties_Text.md#italic) - [Graduation step](properties_Scale.md#graduation-step) -[Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Label Location](properties_Scale.md#label-location) - [Left](properties_CoordinatesAndSizing.md#left) - [Maximum](properties_Scale.md#maximum) - [Minimum](properties_Scale.md#minimum) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Step](properties_Scale.md#step) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+### Propriétés prises en charge
+[Barber shop](properties_Scale.md#barber-shop) - [Gras](properties_Text.md#bold) - [Style de bordure](properties_BackgroundAndBorder.md#border-line-style) -[Bas](properties_CoordinatesAndSizing.md#bottom) - [Classe](properties_Object.md#css-class) - [Afficher graduation](properties_Scale.md#display-graduation) - [Saisissable](properties_Entry.md#enterable) - [Exécuter méthode objet](properties_Action.md#execute-object-method) - [Type d'expression](properties_Object.md#expression-type) (uniquement "integer", "number", "date", ou "time") - [Police](properties_Text.md#font) - [Couleur de police](properties_Text.md#font-color) - [Taille de police](properties_Text.md#font-size) - [Hauteur](properties_CoordinatesAndSizing.md#height) - [Italique](properties_Text.md#italic) - [Unité de graduation](properties_Scale.md#graduation-step) -[Message d'aide](properties_Help.md#help-tip) - [Dimensionnement horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Emplacement étiquette](properties_Scale.md#label-location) - [Gauche](properties_CoordinatesAndSizing.md#left) - [Maximum](properties_Scale.md#maximum) - [Minimum](properties_Scale.md#minimum) - [Format numérique](properties_Display.md#number-format) - [Nom objet](properties_Object.md#object-name) - [Droite](properties_CoordinatesAndSizing.md#right) - [Step](properties_Scale.md#step) - [Haut](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Souligné](properties_Text.md#underline) - [Variable ou Expression](properties_Object.md#variable-or-expression) - [Dimensionnement Vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilité](properties_Display.md#visibility) - [Largeur](properties_CoordinatesAndSizing.md#width)
 
 
 ## Barber shop
 
 ![](../assets/en/FormObjects/indicator.gif)
 
-**Barber shop** is a variant of the default thermometer. To enable this variant, you need to set the [Barber shop](properties_Scale.md#barber-shop) property.
-> In JSON code, just remove "max" property from a default thermometer object to enable the Barber shop variant.
+**Le barber shop** est une variante du thermomètre par défaut. Pour active cette variante, vous devez définir la propriété du [Barber shop](properties_Scale.md#barber-shop).
+> En code JSON, supprimez simplement la propriété "max" de l'objet thermomètre par défaut pour activer le barber shop.
 
-Barber shop displays a continuous animation, like the [spinner](spinner.md). These thermometers are generally used to indicate to the user that the program is in the process of carrying out a long operation. When this thermometer variant is selected, [graphical Scale properties](properties_Scale.md) are not available.
+Le barber shop affiche une animation continue, telle que le [spinner](spinner.md). Les thermomètres “Barber shop” sont généralement utilisés pour indiquer à l’utilisateur que le programme est en train d’effectuer une opération longue. Lorsque le thermomètre est sélectionné, le thème ["Graduations"](properties_Scale.md) de la liste des propriétés est masqué.
 
-When the form is executed, the object is not animated. You manage the animation by passing a value to its [associated variable or expression](properties_Object.md#variable-or-expression):
+A l’exécution du formulaire, l'objet n’est pas animé. Vous devez gérer l’animation en passant une valeur à [la variable ou expression qui lui est associée](properties_Object.md#variable-or-expression) :
 
-* 1 (or any value other than 0) = Start animation,
-* 0 = Stop animation.
-
-
-### Supported Properties
-[Barber shop](properties_Scale.md#barber-shop) - [Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) -[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Enterable](properties_Entry.md#enterable) - [Execute object method](properties_Action.md#execute-object-method) - [Expression Type](properties_Object.md#expression-type) (only "integer", "number", "date", or "time") - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+* 1 (ou toute valeur différente de 0) = Démarrer l’animation,
+* 0 = Stopper l’animation.
 
 
-## See also
-- [rulers](ruler.md)
-- [steppers](stepper.md)
+### Propriétés prises en charge
+[Barber shop](properties_Scale.md#barber-shop) - [Gras](properties_Text.md#bold) - [Style de bordure](properties_BackgroundAndBorder.md#border-line-style) -[Bas](properties_CoordinatesAndSizing.md#bottom) - [Classe](properties_Object.md#css-class) - [Saisissable](properties_Entry.md#enterable) - [Executer méthode objet](properties_Action.md#execute-object-method) - [Type d'expression](properties_Object.md#expression-type) (uniquement "integer", "number", "date", ou "time") - [Police](properties_Text.md#font) - [Couleur de police](properties_Text.md#font-color) - [Taille de police](properties_Text.md#font-size) - [Hauteur](properties_CoordinatesAndSizing.md#height) - [Message d'aide](properties_Help.md#help-tip) - [Dimensionnement horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Italique](properties_Text.md#italic) - [Gauche](properties_CoordinatesAndSizing.md#left) - [Nom d'objet](properties_Object.md#object-name) - [Droite](properties_CoordinatesAndSizing.md#right) - [Haut](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Souligné](properties_Text.md#underline) - [Variable ou Expression](properties_Object.md#variable-or-expression) - [Dimensionnement vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilité](properties_Display.md#visibility) - [Largeur](properties_CoordinatesAndSizing.md#width)
+
+
+## Voir également
+- [règle](ruler.md)
+- [stepper](stepper.md)
