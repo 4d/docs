@@ -144,7 +144,7 @@ Especifique o tipo de atributo entre colchetes, depois entre chaves, declare os 
 
 #### Sintaxes compatíveis
 
-| Sintaxe                   | Descrção                                                                                                                   |
+| Sintaxe                   | Descrição                                                                                                                  |
 | ------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | [attribute]               | coincide com objetos com o `attribute`                                                                                     |
 | [attribute="value"]       | coincide com objetos cujo valor do `attribute` conteha exatamente o "valor" especificado                                   |
