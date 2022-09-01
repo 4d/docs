@@ -49,7 +49,7 @@ Uma entidade [](ORDA/dsMapping.md#entity) é uma instância de um [Dataclass](OR
 
 ***.attributeName*** : DataClassAttribute<!-- END REF -->
 
-#### Descrção
+#### Descrição
 
 Any dataclass attribute is available as a property of an entity, which <!-- REF EntityClass.attributeName.Summary -->stores the attribute value for the entity<!-- END REF -->.
 > Atributos de Dataclass também podem ser alcançados usando a sintaxe alternativa com \[ ].
@@ -90,11 +90,11 @@ O tipo de valor do atributo depende do tipo do atributo [atributo](DataClassAttr
 
 
 <!-- REF #EntityClass.clone().Params -->
-| Parameter  | Tipo       |    | Descrção                                                          |
+| Parâmetros | Tipo       |    | Descrição                                                         |
 | ---------- | ---------- |:--:| ----------------------------------------------------------------- |
 | Resultados | 4D. Entity | <- | Nova entidade referenciando o registro|<!-- END REF --> |
 
-#### Descrção
+#### Descrição
 
 The `.clone()` function <!-- REF #EntityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->. Esta função permite que você atualize as entidades separadamente.
 > Tenha em mente que quaisquer modificações feitas a entidades serão salvas no registro referenciado somente quando o [`. ave( )`](#save) função for executada.
@@ -132,13 +132,13 @@ Esta função só pode ser usada com entidades já salvas no banco de dados. Ele
 
 
 <!-- REF #EntityClass.diff().Params -->
-| Parameter           | Tipo       |    | Descrção                                                 |
+| Parâmetros          | Tipo       |    | Descrição                                                |
 | ------------------- | ---------- |:--:| -------------------------------------------------------- |
 | entityToCompare     | 4D. Entity | -> | Entidade a ser comparada com a entidade original         |
 | attributesToCompare | Collection | -> | Nome dos atributos a serem comparados                    |
 | Resultados          | Collection | <- | Diferenças entre as entidades|<!-- END REF --> |
 
-#### Descrção
+#### Descrição
 
 The `.diff()` function <!-- REF #EntityClass.diff().Summary -->compares the contents of two entities and returns their differences<!-- END REF -->.
 
@@ -148,7 +148,7 @@ Em *attributesToCompare*, pode designar atributos específicos para comparar. Se
 
 As diferenças são retornadas como uma coleção de objetos cujas propriedades são:
 
-| Nome da propriedade | Tipo                              | Descrção                               |
+| Nome da propriedade | Tipo                              | Descrição                              |
 | ------------------- | --------------------------------- | -------------------------------------- |
 | attributeName       | String                            | Nome do atributo                       |
 | value               | any - Depende do tipo de atributo | Valor do atributo na entidade          |
@@ -334,12 +334,12 @@ vCompareResult3 (apenas as diferenças em $e1 atributos tocados são retornadas)
 
 
 <!-- REF #EntityClass.drop().Params -->
-| Parameter  | Tipo    |    | Descrção                                                                        |
+| Parâmetros | Tipo    |    | Descrição                                                                       |
 | ---------- | ------- |:--:| ------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk force drop if stamp changed`: Força a queda mesmo se a estampa tiver mudado |
 | Resultados | Objeto  | <- | Result of drop operation|<!-- END REF -->                             |
 
-#### Descrção
+#### Descrição
 
 The `.drop()` function <!-- REF #EntityClass.drop().Summary -->deletes the data contained in the entity from the datastore<!-- END REF -->, from the table related to its Dataclass. Note-se que a entidade permanece na memória.
 
@@ -353,7 +353,7 @@ Caso contrário, pode passar a opção `dk force drop if stamp changed` no parâ
 
 O objecto devolvido por `.drop( )` contém as seguintes propriedades:
 
-| Propriedade   |                           | Tipo                   | Descrção                                                                                                                |
+| Propriedade   |                           | Tipo                   | Descrição                                                                                                               |
 | ------------- | ------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | success       |                           | boolean                | verdadeiro se a ação de queda for bem-sucedida, falso caso contrário.                                                   |
 |               |                           |                        | ***Disponível apenas em caso de erro:***                                                                                |
@@ -441,11 +441,11 @@ Exemplo com a opção`dk force drop if stamp changed`:
 
 
 <!-- REF #EntityClass.first().Params -->
-| Parameter  | Tipo       |    | Descrção                                                                                        |
+| Parâmetros | Tipo       |    | Descrição                                                                                       |
 | ---------- | ---------- |:--:| ----------------------------------------------------------------------------------------------- |
 | Resultados | 4D. Entity | <- | Reference to first entity of an entity selection (Null if not found)|<!-- END REF --> |
 
-#### Descrção
+#### Descrição
 
 The `.first()` function <!-- REF #EntityClass.first().Summary -->returns a reference to the entity in first position of the entity selection which the entity belongs to<!-- END REF -->.
 
@@ -481,11 +481,11 @@ Se a entidade não pertence a nenhuma seleção de entidade existente (ex: [.get
 
 
 <!-- REF #EntityClass.fromObject().Params -->
-| Parameter | Tipo   |    | Descrção                                                        |
-| --------- | ------ |:--:| --------------------------------------------------------------- |
-| filler    | Objeto | -> | Object from which to fill the entity|<!-- END REF --> |
+| Parâmetros | Tipo   |    | Descrição                                                       |
+| ---------- | ------ |:--:| --------------------------------------------------------------- |
+| filler     | Objeto | -> | Object from which to fill the entity|<!-- END REF --> |
 
-#### Descrção
+#### Descrição
 
 The `.fromObject()` function <!-- REF #EntityClass.fromObject().Summary -->fills an entity with the *filler* content<!-- END REF -->.
 > Essa função modifica a entidade original.
@@ -567,11 +567,11 @@ Você também poderia usar uma entidade relacionada dada como um objeto:
 
 
 <!-- REF #EntityClass.getDataClass().Params -->
-| Parameter  | Tipo          |    | Descrção                                                                |
+| Parâmetros | Tipo          |    | Descrição                                                               |
 | ---------- | ------------- |:--:| ----------------------------------------------------------------------- |
 | Resultados | 4D. DataClass | <- | DataClass object to which the entity belongs|<!-- END REF --> |
 
-#### Descrção
+#### Descrição
 
 The `.getDataClass()` function <!-- REF #EntityClass.getDataClass().Summary -->returns the dataclass of the entity<!-- END REF -->. Esta função é útil para configurar o código genérico.
 
@@ -613,7 +613,7 @@ O seguinte código genérico duplica qualquer entidade:
 
 
 <!-- REF #EntityClass.getKey().Params -->
-| Parameter  | Tipo    |    | Descrção                                                                                               |
+| Parâmetros | Tipo    |    | Descrição                                                                                              |
 | ---------- | ------- |:--:| ------------------------------------------------------------------------------------------------------ |
 | mode       | Integer | -> | `dk key as string`: a chave primária se devolve como uma string, sem importar o tipo de chave primária |
 | Resultados | Text    | <- | Valor do texto chave primária da entidade                                                              |
@@ -622,7 +622,7 @@ O seguinte código genérico duplica qualquer entidade:
 
 <!-- END REF -->
 
-#### Descrção
+#### Descrição
 
 The `.getKey()` function <!-- REF #EntityClass.getKey().Summary -->returns the primary key value of the entity<!-- END REF -->.
 
@@ -658,13 +658,13 @@ As chaves primárias podem ser números (Inteiro) ou strings. Você pode "força
 
 
 <!-- REF #EntityClass.getRemoteContextAttributes().Params -->
-| Parameter | Tipo |    | Descrção                                                                                 |
-| --------- | ---- | -- | ---------------------------------------------------------------------------------------- |
-| result    | Text | <- | Context attributes linked to the entity, separated by a comma|<!-- END REF --> |
+| Parâmetros | Tipo |    | Descrição                                                                                |
+| ---------- | ---- | -- | ---------------------------------------------------------------------------------------- |
+| result     | Text | <- | Context attributes linked to the entity, separated by a comma|<!-- END REF --> |
 
 > **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
 
-#### Descrção
+#### Descrição
 
 The `.getRemoteContextAttributes()` function <!-- REF #EntityClass.getRemoteContextAttributes().Summary -->returns information about the optimization context used by the entity <!-- END REF -->.
 
@@ -714,11 +714,11 @@ $info:=$address.getRemoteContextAttributes()
 
 
 <!-- REF #EntityClass.getSelection().Params -->
-| Parameter  | Tipo                |    | Descrção                                                                                    |
+| Parâmetros | Tipo                |    | Descrição                                                                                   |
 | ---------- | ------------------- |:--:| ------------------------------------------------------------------------------------------- |
 | Resultados | 4D. EntitySelection | <- | Entity selection to which the entity belongs (Null if not found)|<!-- END REF --> |
 
-#### Descrção
+#### Descrição
 
 The `.getSelection()` function <!-- REF #EntityClass.getSelection().Summary -->returns the entity selection which the entity belongs to<!-- END REF -->.
 
@@ -758,11 +758,11 @@ Se a entidade não pertence à seleção de uma entidade, a função retorna Nul
 
 
 <!-- REF #EntityClass.getStamp().Params -->
-| Parameter  | Tipo    |    | Descrção                                                                           |
+| Parâmetros | Tipo    |    | Descrição                                                                          |
 | ---------- | ------- |:--:| ---------------------------------------------------------------------------------- |
 | Resultados | Integer | <- | Stamp of the entity (0 if entity has just been created)|<!-- END REF --> |
 
-#### Descrção
+#### Descrição
 
 The `.getStamp()` function <!-- REF #EntityClass.getStamp().Summary --> returns the current value of the stamp of the entity<!-- END REF -->.
 
@@ -805,12 +805,12 @@ O selo interno é automaticamente incrementado por 4D cada vez que a entidade é
 
 
 <!-- REF #EntityClass.indexOf().Params -->
-| Parameter       | Tipo                |    | Descrção                                                                 |
+| Parâmetros      | Tipo                |    | Descrição                                                                |
 | --------------- | ------------------- |:--:| ------------------------------------------------------------------------ |
 | entitySelection | 4D. EntitySelection | -> | A posição da entidade é dada de acordo com a selecção desta entidade     |
 | Resultados      | Integer             | <- | Posição da entidade numa selecção de entidade|<!-- END REF --> |
 
-#### Descrção
+#### Descrição
 
 The `.indexOf()` function <!-- REF #EntityClass.indexOf().Summary -->returns the position of the entity in an entity selection<!-- END REF -->.
 
@@ -854,11 +854,11 @@ O valor resultante é incluído entre 0 e o comprimento da selecção da entidad
 
 
 <!-- REF #EntityClass.isNew().Params -->
-| Parameter  | Tipo     |    | Descrção                                                                                                              |
+| Parâmetros | Tipo     |    | Descrição                                                                                                             |
 | ---------- | -------- |:--:| --------------------------------------------------------------------------------------------------------------------- |
 | Resultados | Booleano | <- | É verdade se a entidade acabou de ser criada e ainda não foi salva. Caso contrário, Falso.|<!-- END REF --> |
 
-#### Descrção
+#### Descrição
 
 The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True if the entity to which it is applied has just been created and has not yet been saved in the datastore<!-- END REF -->. .
 
@@ -894,11 +894,11 @@ The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True i
 
 
 <!-- REF #EntityClass.last().Params -->
-| Parameter  | Tipo       |    | Descrção                                                                                                             |
+| Parâmetros | Tipo       |    | Descrição                                                                                                            |
 | ---------- | ---------- |:--:| -------------------------------------------------------------------------------------------------------------------- |
 | Resultados | 4D. Entity | <- | Referência para a última entidade de uma seleção de entidade (Null se não for encontrado)|<!-- END REF --> |
 
-#### Descrção
+#### Descrição
 
 The `.last()` function <!-- REF #EntityClass.last().Summary -->returns a reference to the entity in last position of the entity selection which the entity belongs to<!-- END REF -->.
 
@@ -934,12 +934,12 @@ Se a entidade não pertence a nenhuma seleção de entidade existente (ex: [.get
 
 
 <!-- REF #EntityClass.lock().Params -->
-| Parameter  | Tipo    |    | Descrção                                                                             |
+| Parâmetros | Tipo    |    | Descrição                                                                            |
 | ---------- | ------- |:--:| ------------------------------------------------------------------------------------ |
 | mode       | Integer | -> | `dk reload if stamp changed`: Recarregar antes de bloquear se o carimbo for alterado |
 | Resultados | Objeto  | <- | Resultado da operação de bloqueio|<!-- END REF -->                         |
 
-#### Descrção
+#### Descrição
 
 The `.lock()` function <!-- REF #EntityClass.lock().Summary -->puts a pessimistic lock on the record referenced by the entity<!-- END REF -->. O bloqueio de [é definido](ORDA/entities.md#entity-locking) para um registro e todas as referências da entidade no processo atual.
 
@@ -960,7 +960,7 @@ Caso contrário, você pode passar o parâmetro`dk reload if stamp changed` no p
 
 O objeto retornado por `.lock( )` contém as seguintes propriedades:
 
-| Propriedade      |                           | Tipo                   | Descrção                                                                                                                                                    |
+| Propriedade      |                           | Tipo                   | Descrição                                                                                                                                                   |
 | ---------------- | ------------------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | success          |                           | boolean                | true se a ação de bloqueio for bem sucedida (ou se a entidade já estiver bloqueada no processo atual), falso caso contrário.                                |
 |                  |                           |                        | ***Disponível apenas se a opção`dk reload if stamp changed` for usada:***                                                                                   |
@@ -1052,11 +1052,11 @@ Exemplo com `dk reload se o selo mudou a opção`:
 
 
 <!-- REF #EntityClass.next().Params -->
-| Parameter  | Tipo       |    | Descrção                                                                                                              |
+| Parâmetros | Tipo       |    | Descrição                                                                                                             |
 | ---------- | ---------- |:--:| --------------------------------------------------------------------------------------------------------------------- |
 | Resultados | 4D. Entity | <- | Referência para a próxima entidade de uma seleção de entidade (Null se não for encontrado)|<!-- END REF --> |
 
-#### Descrção
+#### Descrição
 
 The `.next()` function <!-- REF #EntityClass.next().Summary -->returns a reference to the next entity in the entity selection which the entity belongs to<!-- END REF -->.
 
@@ -1095,11 +1095,11 @@ Se não houver entidade seguinte válida na selecção da entidade (ou seja, se 
 
 
 <!-- REF #EntityClass.previous().Params -->
-| Parameter  | Tipo       |    | Descrção                                                                                                      |
+| Parâmetros | Tipo       |    | Descrição                                                                                                     |
 | ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------------------------- |
 | Resultados | 4D. Entity | <- | Referência a entidade anterior na seleção da entidade (Null se não for encontrado)|<!-- END REF --> |
 
-#### Descrção
+#### Descrição
 
 The `.previous()` function <!-- REF #EntityClass.previous().Summary --> returns a reference to the previous entity in the entity selection which the entity belongs to<!-- END REF -->.
 
@@ -1137,11 +1137,11 @@ Se não houver nenhuma entidade anterior válida na seleção da entidade (ou se
 
 
 <!-- REF #EntityClass.reload().Params -->
-| Parameter  | Tipo   |    | Descrção                                    |
+| Parâmetros | Tipo   |    | Descrição                                   |
 | ---------- | ------ |:--:| ------------------------------------------- |
 | Resultados | Objeto | <- | Objeto de estado|<!-- END REF --> |
 
-#### Descrção
+#### Descrição
 
 The `.reload()` function <!-- REF #EntityClass.reload().Summary -->reloads the content of the entity in memory<!-- END REF -->, according to information stored in the table related to the dataclass in the datastore. A recarga só é feita se a entidade ainda existir com a mesma chave primária.
 
@@ -1149,7 +1149,7 @@ The `.reload()` function <!-- REF #EntityClass.reload().Summary -->reloads the c
 
 O objeto retornado por `.reload( )` contém as seguintes propriedades:
 
-| Propriedade      | Tipo    | Descrção                                                                                                         |
+| Propriedade      | Tipo    | Descrição                                                                                                        |
 | ---------------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
 | success          | boolean | Verdadeiro se a ação de recarga for bem-sucedida, Falso caso contrário. ***Disponível apenas em caso de erro***: |
 | status(\*)     | number  | Código de erro, ver abaixo                                                                                       |
@@ -1201,12 +1201,12 @@ O objeto retornado por `.reload( )` contém as seguintes propriedades:
 
 
 <!-- REF #EntityClass.save().Params -->
-| Parameter  | Tipo    |    | Descrção                                                       |
+| Parâmetros | Tipo    |    | Descrição                                                      |
 | ---------- | ------- |:--:| -------------------------------------------------------------- |
 | mode       | Integer | -> | `dk auto merge`: Permite o modo de fusão automática            |
 | Resultados | Objeto  | <- | Resultado da operação de salvamento|<!-- END REF --> |
 
-#### Descrção
+#### Descrição
 
 The `.save()` function <!-- REF #EntityClass.save().Summary -->saves the changes made to the entity<!-- END REF --> in the table related to its dataClass. You must call this method after creating or modifying an entity if you want to save the changes made to it.
 
@@ -1223,7 +1223,7 @@ Otherwise, you can pass the `dk auto merge` option in the *mode* parameter: when
 
 The object returned by `.save()` contains the following properties:
 
-| Propriedade  |                    | Tipo                   | Descrção                                                                                                                |
+| Propriedade  |                    | Tipo                   | Descrição                                                                                                               |
 | ------------ | ------------------ | ---------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | success      |                    | boolean                | True if the save action is successful, False otherwise.                                                                 |
 |              |                    |                        | ***Available only if `dk auto merge` option is used***:                                                                 |
@@ -1336,14 +1336,14 @@ Updating an entity with `dk auto merge` option:
 
 
 <!-- REF #EntityClass.toObject().Params -->
-| Parameter    | Tipo       |    | Descrção                                                                                                 |
+| Parâmetros   | Tipo       |    | Descrição                                                                                                |
 | ------------ | ---------- |:--:| -------------------------------------------------------------------------------------------------------- |
 | filterString | Text       | -> | Attribute(s) to extract (comma-separated string)                                                         |
 | filterCol    | Collection | -> | Collection of attribute(s) to extract                                                                    |
 | options      | Integer    | -> | `dk with primary key`: adds the \_KEY property;<br/>`dk with stamp`: adds the \_STAMP property |
 | Resultados   | Objeto     | <- | Object built from the entity|<!-- END REF -->                                                  |
 
-#### Descrção
+#### Descrição
 
 The `.toObject()` function <!-- REF #EntityClass.toObject().Summary -->returns an object which has been built from the entity<!-- END REF -->. Summary -->returns the names of the attributes that have been modified since the entity was loaded into memory<!-- END REF -->.
 
@@ -1619,11 +1619,11 @@ Retorna:
 
 
 <!-- REF #EntityClass.touched().Params -->
-| Parameter  | Tipo     |    | Descrção                                                                                                         |
+| Parâmetros | Tipo     |    | Descrição                                                                                                        |
 | ---------- | -------- |:--:| ---------------------------------------------------------------------------------------------------------------- |
 | Resultados | Booleano | <- | True if at least one entity attribute has been modified and not yet saved, else False|<!-- END REF --> |
 
-#### Descrção
+#### Descrição
 
 The `.touched()` function <!-- REF #EntityClass.touched().Summary -->tests whether or not an entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->.
 
@@ -1665,11 +1665,11 @@ In this example, we check to see if it is necessary to save the entity:
 
 
 <!-- REF #EntityClass.touchedAttributes().Params -->
-| Parameter  | Tipo       |    | Descrção                                                                    |
+| Parâmetros | Tipo       |    | Descrição                                                                   |
 | ---------- | ---------- |:--:| --------------------------------------------------------------------------- |
 | Resultados | Collection | <- | Names of touched attributes, or empty collection|<!-- END REF --> |
 
-#### Descrção
+#### Descrição
 
 The `.touchedAttributes()` function <!-- REF #EntityClass.touchedAttributes().Summary -->returns the names of the attributes that have been modified since the entity was loaded into memory<!-- END REF -->.
 
@@ -1739,11 +1739,11 @@ Nesse modo:
 
 
 <!-- REF #EntityClass.unlock().Params -->
-| Parameter  | Tipo   |    | Descrção                                    |
+| Parâmetros | Tipo   |    | Descrição                                   |
 | ---------- | ------ |:--:| ------------------------------------------- |
 | Resultados | Objeto | <- | Objeto de estado|<!-- END REF --> |
 
-#### Descrção
+#### Descrição
 
 The `.unlock()` function <!-- REF #EntityClass.unlock().Summary -->removes the pessimistic lock on the record matching the entity<!-- END REF --> in the datastore and table related to its dataclass.
 
@@ -1764,7 +1764,7 @@ A record is automatically unlocked when it is no longer referenced by any entiti
 
 The object returned by `.unlock()` contains the following property:
 
-| Propriedade | Tipo     | Descrção                                                                                                                                                                                           |
+| Propriedade | Tipo     | Descrição                                                                                                                                                                                          |
 | ----------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | success     | Booleano | True if the unlock action is successful, False otherwise. If the unlock is done on a dropped entity, on a non locked record, or on a record locked by another process or entity, success is False. |
 
