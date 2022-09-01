@@ -3,20 +3,20 @@ id: DataClassAttributeClass
 title: DataClassAttribute
 ---
 
-Dataclass attributes are available as properties of their respective classes. For example:
+データクラス属性は、それぞれのクラスのプロパティとして利用可能です。 例:
 
 ```4d
- nameAttribute:=ds.Company.name //reference to class attribute
- revenuesAttribute:=ds.Company["revenues"] //alternate way
+ nameAttribute:=ds.Company.name // クラス属性への参照
+ revenuesAttribute:=ds.Company["revenues"] // 別の書き方
 ```
 
-This code assigns to *nameAttribute* and *revenuesAttribute* references to the name and revenues attributes of the Company class. This syntax does NOT return values held inside of the attribute, but instead returns references to the attributes themselves. To handle values, you need to go through [**Entities**](EntityClass.md).
+このコードは、*nameAttribute* および *revenuesAttribute* 変数に、`Company` クラスの name および revenues 属性の参照をそれぞれ代入します。 このシンタックスは属性内に保管されている値を返すのではありません。その代わりに、属性自身への参照を返します。 値を管理するには、[**エンティティ**](EntityClass.md) を使用する必要があります。
 
-`DataClassAttribute` objects have properties that you can read to get information about your dataclass attributes.
+`DataClassAttribute` オブジェクトが持つプロパティを読み取ることによって、データクラス属性に関する情報が取得できます。
 
-> Dataclass attribute objects can be modified, but the underlying database structure will not be altered.
+> データクラス属性オブジェクトを編集することは可能ですが、元となるデータベースストラクチャーは変更されません。
 
-### Summary
+### 概要
 
 |                                                                                                                                                                                                    |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -39,11 +39,11 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 <!-- REF DataClassAttributeClass.autoFilled.Desc -->
 ## .autoFilled
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
 
 </details>
 
@@ -51,26 +51,26 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 
 **.autoFilled** : Boolean<!-- END REF -->
 
-#### Description
+#### 詳細
 
-The `.autoFilled` property <!-- REF DataClassAttributeClass.autoFilled.Summary -->contains True if the attribute value is automatically filled by 4D<!-- END REF -->. This property corresponds to the following 4D field properties:
+The `.autoFilled` property <!-- REF DataClassAttributeClass.autoFilled.Summary -->contains True if the attribute value is automatically filled by 4D<!-- END REF -->. このプロパティは以下の 4Dフィールドプロパティに対応しています:
 
-* "Autoincrement", for numeric type fields
-* "Auto UUID", for UUID (alpha type) fields.
+* 数値型フィールドの "自動インクリメント"
+* UUID (文字型)フィールドの "自動UUID"
 
-This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
-> For generic programming, you can use **Bool**(dataClassAttribute.autoFilled) to get a valid value (false) even if `.autoFilled` is not returned.
+`.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。
+> 汎用的なプログラミングのために、`.autoFilled` が返されない場合でも **Bool** (dataClassAttribute.autoFilled) と書くことで、有効な値 (false) を受け取ることができます。
 
 <!-- END REF -->
 
 <!-- REF DataClassAttributeClass.exposed.Desc -->
 ## .exposed
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v19 R3  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R3 | 追加 |
 
 </details>
 
@@ -78,11 +78,11 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 
 **.exposed** : Boolean<!-- END REF -->
 
-#### Description
+#### 詳細
 
 The `.exposed` property is <!-- REF DataClassAttributeClass.exposed.Summary -->true if the attribute is exposed in REST<!-- END REF -->.
 
-#### See also
+#### 参照
 
 [DataClass.getInfo()](DataClassClass.md#getinfo)
 
@@ -91,11 +91,11 @@ The `.exposed` property is <!-- REF DataClassAttributeClass.exposed.Summary -->t
 <!-- REF DataClassAttributeClass.fieldNumber.Desc -->
 ## .fieldNumber
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
 
 </details>
 
@@ -103,24 +103,24 @@ The `.exposed` property is <!-- REF DataClassAttributeClass.exposed.Summary -->t
 
 **.fieldNumber** : Integer<!-- END REF -->
 
-#### Description
+#### 詳細
 
 The `.fieldNumber` property <!-- REF DataClassAttributeClass.fieldNumber.Summary -->contains the internal 4D field number of the attribute<!-- END REF -->.
 
-This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
-> For generic programming, you can use **Num**(dataClassAttribute.fieldNumber) to get a valid value (0) even if `.fieldNumber` is not returned.
+`.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。
+> 汎用的なプログラミングのために、`.fieldNumber` が返されない場合でも **Num** (dataClassAttribute.fieldNumber) と書くことで、有効な値 (0) を受け取ることができます。
 
 <!-- END REF -->
 
 <!-- REF DataClassAttributeClass.fieldType.Desc -->
 ## .fieldType
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes                        |
-| ------- | ------------------------------ |
-| v19 R4  | Support of alias attributes    |
-| v19 R3  | Support of computed attributes |
+| バージョン  | 内容           |
+| ------ | ------------ |
+| v19 R4 | エイリアス属性をサポート |
+| v19 R3 | 計算属性をサポート    |
 
 </details>
 
@@ -128,34 +128,34 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 
 **.fieldType** : Integer<!-- END REF -->
 
-#### Description
+#### 詳細
 
-The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->contains the 4D database type of the attribute<!-- END REF -->. It depends on the attribute kind (see [`.kind`](#kind)).
+The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->contains the 4D database type of the attribute<!-- END REF -->. .
 
-**Possible values:**
+**とりうる値:**
 
-| dataClassAttribute.kind | fieldType                                                                                               |
-| ----------------------- | ------------------------------------------------------------------------------------------------------- |
-| storage                 | Corresponding 4D field type, see [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html) |
-| relatedEntity           | 38 (`Is object`)                                                                                        |
-| relatedEntities         | 42 (`Is collection`)                                                                                    |
-| calculated              | <li>scalar: corresponding 4D field type, see [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>entity: 38 (`Is object`)</li><li>entity selection: 42 (`Is collection)`</li>                             |
-| alias                   | <li>scalar: corresponding 4D field type, see [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>entity: 38 (`Is object`)</li><li>entity selection: 42 (`Is collection)`</li>                             |
+| dataClassAttribute.kind | fieldType                                                                                   |
+| ----------------------- | ------------------------------------------------------------------------------------------- |
+| storage                 | 4Dフィールドタイプに対応、[`Value type`](https://doc.4d.com/4dv19/help/command/ja/page1509.html) コマンド参照 |
+| relatedEntity           | 38 (`Is object`)                                                                            |
+| relatedEntities         | 42 (`Is collection`)                                                                        |
+| calculated              | <li>スカラー: 4Dフィールドタイプに対応、[`Value type`](https://doc.4d.com/4dv19/help/command/ja/page1509.html) コマンド参照</li><li>エンティティ: 38 (`Is object`)</li><li>entity selection: 42 (`Is collection)`</li>                 |
+| alias                   | <li>スカラー: 4Dフィールドタイプに対応、[`Value type`](https://doc.4d.com/4dv19/help/command/ja/page1509.html) コマンド参照</li><li>エンティティ: 38 (`Is object`)</li><li>entity selection: 42 (`Is collection)`</li>                 |
 
 <!-- END REF -->
 
-#### See also
+#### 参照
 
 [.type](#type)
 
 <!-- REF DataClassAttributeClass.indexed.Desc -->
 ## .indexed
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
 
 </details>
 
@@ -163,23 +163,23 @@ The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->
 
 **.indexed** : Boolean<!-- END REF -->
 
-#### Description
+#### 詳細
 
 The `.indexed` property <!-- REF DataClassAttributeClass.indexed.Summary -->contains **True** if there is a B-tree or a Cluster B-tree index on the attribute<!-- END REF -->.
 
-This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
-> For generic programming, you can use **Bool**(dataClassAttribute.indexed) to get a valid value (false) even if `.indexed` is not returned.
+`.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。
+> 汎用的なプログラミングのために、`.indexed` が返されない場合でも **Bool** (dataClassAttribute.indexed) と書くことで、有効な値 (false) を受け取ることができます。
 
 <!-- END REF -->
 
 <!-- REF DataClassAttributeClass.inverseName.Desc -->
 ## .inverseName
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
 
 </details>
 
@@ -187,23 +187,23 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 
 **.inverseName** : Text<!-- END REF -->
 
-#### Description
+#### 詳細
 
 The `.inverseName` property <!-- REF DataClassAttributeClass.inverseName.Summary -->returns the name of the attribute which is at the other side of the relation<!-- END REF -->.
 
-This property is not returned if `.kind` = "storage". It must be of the "relatedEntity" or "relatedEntities" kind.
-> For generic programming, you can use **String**(dataClassAttribute.inverseName) to get a valid value ("") even if `.inverseName` is not returned.  
+`.kind` が "storage" の場合には、このプロパティは返されません。 .kind は "relatedEntity" または "relatedEntities" でなくてはなりません。
+> 汎用的なプログラミングのために、`.inverseName` が返されない場合でも **String** (dataClassAttribute.inverseName) と書くことで、有効な値 ("") を受け取ることができます。  
 
 <!-- END REF -->
 
 <!-- REF DataClassAttributeClass.keywordIndexed.Desc -->
 ## .keywordIndexed
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
 
 </details>
 
@@ -211,24 +211,24 @@ This property is not returned if `.kind` = "storage". It must be of the "related
 
 **.keywordIndexed** : Boolean<!-- END REF -->
 
-#### Description
+#### 詳細
 
 The `.keywordIndexed` property <!-- REF DataClassAttributeClass.keywordIndexed.Summary -->contains **True** if there is a keyword index on the attribute<!-- END REF -->.
 
-This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedEntities".
-> For generic programming, you can use **Bool**(dataClassAttribute.keywordIndexed) to get a valid value (false) even if `.keywordIndexed` is not returned.
+[`.kind`](#kind) が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。
+> 汎用的なプログラミングのために、`.keywordIndexed` が返されない場合でも **Bool** (dataClassAttribute.keywordIndexed) と書くことで、有効な値 (false) を受け取ることができます。
 
 <!-- END REF -->
 
 <!-- REF DataClassAttributeClass.kind.Desc -->
 ## .kind
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes            |
-| ------- | ------------------ |
-| v19 R4  | Added "alias"      |
-| v19 R3  | Added "calculated" |
+| バージョン  | 内容               |
+| ------ | ---------------- |
+| v19 R4 | "alias" を追加      |
+| v19 R3 | "calculated" を追加 |
 
 </details>
 
@@ -236,19 +236,19 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 
 **.kind** : Text<!-- END REF -->
 
-#### Description
+#### 詳細
 
-The `.kind` property <!-- REF DataClassAttributeClass.kind.Summary -->returns the category of the attribute<!-- END REF -->. Returned value can be one of the following:
+The `.kind` property <!-- REF DataClassAttributeClass.kind.Summary -->returns the category of the attribute<!-- END REF -->. 以下のいずれかの値が返されます:
 
-* "storage": storage (or scalar) attribute, i.e. attribute storing a value, not a reference to another attribute
-* "calculated": computed attribute, i.e. defined through a [`get` function](ORDA/ordaClasses.md#function-get-attributename)
-* "alias": attribute built upon [another attribute](ORDA/ordaClasses.md#alias-attributes-1)
-* "relatedEntity": N -> 1 relation attribute (reference to an entity)
-* "relatedEntities": 1 -> N relation attribute (reference to an entity selection)
+* "storage": ストレージ (あるいはスカラー) 属性。つまり、属性は値を保存しており、他の属性への参照ではありません。
+* "calculated": 計算属性。 [`get` 関数](ORDA/ordaClasses.md#function-get-attributename) によって定義されます。
+* "alias": [他の属性](ORDA/ordaClasses.md#エイリアス属性-1) を指し示す属性。
+* "relatedEntity": N対1 リレーション属性 (エンティティへの参照)
+* "relatedEntities": 1対N リレーション属性 (エンティティセレクションへの参照)
 
-#### Example
+#### 例題
 
-Given the following table and relation:
+以下のテーブルとリレーションを前提とします:
 
 ![](../assets/en/API/dataclassAttribute3.png)
 
@@ -264,11 +264,11 @@ Given the following table and relation:
 <!-- REF DataClassAttributeClass.mandatory.Desc -->
 ## .mandatory
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
 
 </details>
 
@@ -276,24 +276,24 @@ Given the following table and relation:
 
 **.mandatory** : Boolean<!-- END REF -->
 
-#### Description
+#### 詳細
 
 The `.mandatory` property <!-- REF DataClassAttributeClass.mandatory.Summary -->contains True if Null value input is rejected for the attribute<!-- END REF -->.
 
-This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedEntities".
-> For generic programming, you can use **Bool**(dataClassAttribute.mandatory) to get a valid value (false) even if `.mandatory` is not returned.
-> **Warning**: This property corresponds to the "Reject NULL value input" field property at the 4D database level. It is unrelated to the existing "Mandatory" property which is a data entry control option for a table.
+[`.kind`](#kind) が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。
+> 汎用的なプログラミングのために、`.mandatory` が返されない場合でも **Bool** (dataClassAttribute.mandatory) と書くことで、有効な値 (false) を受け取ることができます。
+> **警告**: このプロパティは、4Dデータベースレベルの "Null値の入力を拒否" フィールドプロパティと対応しています。 フィールドのデータ入力制御オプションである既存の "必須入力" プロパティとは無関係です。
 
 <!-- END REF -->
 
 <!-- REF DataClassAttributeClass.name.Desc -->
 ## .name
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
 
 </details>
 
@@ -301,11 +301,11 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 
 **.name** : Text<!-- END REF -->
 
-#### Description
+#### 詳細
 
-The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->returns the name of the `dataClassAttribute` object as string<!-- END REF -->.
+The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->The `.name` property<!-- END REF -->.
 
-#### Example
+#### 例題
 
 ```4d
  var $attName : Text
@@ -317,11 +317,11 @@ The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->returns th
 <!-- REF DataClassAttributeClass.path.Desc -->
 ## .path
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v19 R4  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R4 | 追加 |
 
 </details>
 
@@ -329,15 +329,15 @@ The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->returns th
 
 **.path** : Text<!-- END REF -->
 
-#### Description
+#### 詳細
 
 The `.path` property <!-- REF DataClassAttributeClass.path.Summary -->returns the path of an alias attribute based upon a relation<!-- END REF -->.
 
-#### Example
+#### 例題
 
 ```4d
  var $path : Text
- $path:=ds.Teacher.students.path //$path="courses.student"
+ $path:=ds.Teacher.students.path // $path="courses.student"
 ```
 
 <!-- END REF -->
@@ -345,11 +345,11 @@ The `.path` property <!-- REF DataClassAttributeClass.path.Summary -->returns th
 <!-- REF DataClassAttributeClass.readOnly.Desc -->
 ## .readOnly
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v19 R3  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R3 | 追加 |
 
 </details>
 
@@ -357,22 +357,22 @@ The `.path` property <!-- REF DataClassAttributeClass.path.Summary -->returns th
 
 **.readOnly** : Boolean<!-- END REF -->
 
-#### Description
+#### 詳細
 
 The `.readOnly` property is <!-- REF DataClassAttributeClass.readOnly.Summary -->true if the attribute is read-only<!-- END REF -->.
 
-For example, computed attributes without [`set` function](ORDA/ordaClasses.md#function-set-attributename) are read-only.
+たとえば、[`set` 関数](ORDA/ordaClasses.md#function-set-attributename) を持たない計算属性は読み取り専用です。
 
 <!-- END REF -->
 
 <!-- REF DataClassAttributeClass.relatedDataClass.Desc -->
 ## .relatedDataClass
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
 
 </details>
 
@@ -380,14 +380,14 @@ For example, computed attributes without [`set` function](ORDA/ordaClasses.md#fu
 
 **.relatedDataClass** : Text<!-- END REF -->
 
-#### Description
-> This property is only available with attributes of the "relatedEntity" or "relatedEntities" [`.kind`](#kind) property.
+#### 詳細
+> このプロパティは、[`.kind`](#kind) プロパティ値が "relatedEntity" または "relatedEntities" である属性においてのみ利用可能です。
 
 The `.relatedDataClass` property <!-- REF DataClassAttributeClass.relatedDataClass.Summary -->returns the name of the dataclass related to the attribute<!-- END REF -->.
 
-#### Example
+#### 例題
 
-Given the following tables and relations:
+以下のテーブルとリレーションを前提とします:
 
 ![](../assets/en/API/dataclassAttribute4.png)
 
@@ -402,11 +402,11 @@ Given the following tables and relations:
 <!-- REF DataClassAttributeClass.type.Desc -->
 ## .type
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes                        |
-| ------- | ------------------------------ |
-| v19 R3  | Support of computed attributes |
+| バージョン  | 内容        |
+| ------ | --------- |
+| v19 R3 | 計算属性をサポート |
 
 </details>
 
@@ -414,35 +414,35 @@ Given the following tables and relations:
 
 **.type** : Text<!-- END REF -->
 
-#### Description
+#### 詳細
 
 The `.type` property <!-- REF DataClassAttributeClass.type.Summary -->contains the conceptual value type of the attribute<!-- END REF -->, useful for generic programming.
 
-The conceptual value type depends on the attribute [`.kind`](#kind).
+この概念的な値タイプは属性の種類 ([`.kind`](#kind)) によります。
 
-**Possible values:**
+**とりうる値:**
 
-| dataClassAttribute.kind | type                                                                           | Comment                                                                                                                                                                                                                                               |
-| ----------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| storage                 | "blob", "bool", "date", "image", "number", "object", or "string"               | "number" is returned for any numeric types including duration. "string" is returned for uuid, alpha and text field types. "blob" attributes are [blob objects](Concepts/dt_blob.md#blob-type), they are handled using the [Blob class](BlobClass.md). |
-| relatedEntity           | related dataClass name                                                         | Ex: "Companies"                                                                                                                                                                                                                                       |
-| relatedEntities         | related dataClass name + "Selection" suffix                                    | Ex: "EmployeeSelection"                                                                                                                                                                                                                               |
-| calculated              | <li>storage: type ("blob", "number", etc.)</li><li>entity: dataClass name</li><li>entity selection: dataClass name + "Selection"</li> |                                                                                                                                                                                                                                                       |
+| dataClassAttribute.kind | type                                                                           | 説明                                                                                                                                                                    |
+| ----------------------- | ------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| storage                 | "blob", "bool", "date", "image", "number", "object", または "string"              | 数値型の場合 "number" が返されます (期間を含む)。 UUID、文字およびテキスト型フィールドの場合 "string" が返されます。 "blob" 属性は [BLOB オブジェクト](Concepts/dt_blob.md#blob-の種類) で、[Blob クラス](BlobClass.md) によって扱われます。 |
+| relatedEntity           | リレートされたデータクラス名                                                                 | 例: "Companies"                                                                                                                                                        |
+| relatedEntities         | リレートされたデータクラス名 + "Selection"                                                   | 例: "EmployeeSelection"                                                                                                                                                |
+| calculated              | <li>ストレージ: データ型 ("blob", "number", など)</li><li>エンティティ: データクラス名</li><li>エンティティセレクション: データクラス名 + "Selection"</li> |                                                                                                                                                                       |
 
 <!-- END REF -->
 
-#### See also
+#### 参照
 
 [`.fieldType`](#fieldtype)
 
 <!-- REF DataClassAttributeClass.unique.Desc -->
 ## .unique
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
 
 </details>
 
@@ -450,11 +450,11 @@ The conceptual value type depends on the attribute [`.kind`](#kind).
 
 **.unique** : Boolean<!-- END REF -->
 
-#### Description
+#### 詳細
 
-The `.unique` property <!-- REF DataClassAttributeClass.unique.Summary -->contains True if the attribute value must be unique<!-- END REF -->. This property corresponds to the "Unique" 4D field property.
+The `.unique` property <!-- REF DataClassAttributeClass.unique.Summary -->contains True if the attribute value must be unique<!-- END REF -->. このプロパティは、4Dフィールドプロパティの "重複不可" に対応しています.
 
-This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedEntities".
-> For generic programming, you can use **Bool**(dataClassAttribute.unique) to get a valid value (false) even if `.unique` is not returned.
+[`.kind`](#kind) が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。
+> 汎用的なプログラミングのために、`.unique` が返されない場合でも **Bool** (dataClassAttribute.unique) と書くことで、有効な値 (false) を受け取ることができます。
 
 <!-- END REF -->
