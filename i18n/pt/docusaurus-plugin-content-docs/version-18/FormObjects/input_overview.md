@@ -1,9 +1,9 @@
 ---
 id: inputOverview
-title: Input
+title: Entrada
 ---
 
-## Overview
+## Visão Geral
 
 Inputs allow you to add enterable or non-enterable expressions such as database [fields](Concepts/identifiers.md#fields) and [variables](Concepts/variables.md) to your forms. Inputs can handle character-based data (text, dates, numbers...) or pictures:
 
@@ -15,7 +15,7 @@ In addition, inputs can be [enterable or non-enterable](properties_Entry.md#ente
 
 You can manage the data with object or form [methods](Concepts/methods.md).
 
-### JSON Example
+### JSON Exemplo
 
 ```4d
  "myText": {
@@ -28,13 +28,13 @@ You can manage the data with object or form [methods](Concepts/methods.md).
   }
 ```
 
-## Supported Properties
+## Propriedades compatíveis
 
-[Alpha Format](properties_Display.md#alpha-format) - [Auto Spellcheck](properties_Entry.md#auto-spellcheck) - [Bold](properties_Text.md#bold) - [Boolean Format](properties_Display.md#boolean-format) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Context Menu](properties_Entry.md#context-menu) - [Date Format](properties_Display.md#date-format) - [Default value](properties_RangeOfValues.md#default-value) - [Draggable](properties_Action.md#draggable) - [Droppable](properties_Action.md#droppable) - [Enterable](properties_Entry.md#enterable) - [Entry Filter](properties_Entry.md#entry-filter) - [Excluded List](properties_RangeOfValues.md#excluded-list) - [Expression type](properties_Object.md#expression-type) - [Fill Color](properties_BackgroundAndBorder.md#fill-color) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Width](properties_BackgroundAndBorder.md#line-width) - [Multiline](properties_Entry.md#multiline) - [Multi-style](properties_Text.md#multi-style) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Orientation](properties_Text.md#orientation) - [Picture Format](properties_Display.md#picture-format) - [Placeholder](properties_Entry.md#placeholder) - [Print Frame](properties_Print.md#print-frame) - [Required List](properties_RangeOfValues.md#required-list) - [Right](properties_CoordinatesAndSizing.md#right) - [Save as](properties_DataSource.md#save-as) - [Selection always visible](properties_Entry.md#selection-always-visible) - [Store with default style tags](properties_Text.md#store-with-default-style-tags) - [Text when False/Text when True](properties_Display.md#text-when-false-text-when-true) - [Time Format](properties_Display.md#time-format) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
+[Formato Alfa](properties_Display.md#alpha-format) - [Comprovação ortográfica automática](properties_Entry.md#auto-spellcheck) - [Negrita](properties_Text.md#bold) - \[Formato booleano\](properties_Display. md#boolean-format) - [Estilo de linha de borda](properties_BackgroundAndBorder.md#border-line-style) - [Fundo](properties_CoordinatesAndSizing.md#bottom) - \[Lista de opções\](properties_DataSource. md#choice-list) - [Classe](properties_Object.md#css-class) - [Menú de contexto](properties_Entry.md#context-menu) - \[Formato de data\](properties_Display. md#date-format) - [Valor por padrão](properties_RangeOfValues.md#default-value) - [Arrastável](properties_Action.md#draggable) - [Soltável](properties_Action.md#droppable) - \[Editável\](properties_Entry. md#enterable) - [Filtro de entrada](properties_Entry.md#entry-filter) - [Lista de exclusão](properties_RangeOfValues.md#excluded-list) - \[Tipo de expressão\](properties_Object. md#expression-type) - [Cor de preenchimento](properties_BackgroundAndBorder.md#fill-color) - [Fonte](properties_Text.md#font) - [Cor de fonte](properties_Text.md#font-color) - \[Tamanho da fonte\](properties_Text. md#font-size) - [Altura](properties_CoordinatesAndSizing.md#height) - [Ocultar retângulo de enfoque](properties_Appearance.md#hide-focus-rectangle) - \[Alinhamento horizontal\](properties_Text. md#horizontal-alignment) - [Barra de deslocamento horizontal](properties_Appearance.md#horizontal-scroll-bar) - [Tamanho horizontal](properties_ResizingOptions.md#horizontal-sizing) - \[Itálica\](properties_Text. md#italic) - [Esquerda](properties_CoordinatesAndSizing.md#left) - [Largura de linha](properties_BackgroundAndBorder.md#line-width) - [Multiline](properties_Entry.md#multiline) - \[Multi-estilo\](properties_Text. md#multi-style) - [Formato numérico](properties_Display.md#number-format) - [Nome de objeto](properties_Object.md#object-name) - \[Orientação\](properties_Text. md#orientation) - [Formato de imagem](properties_Display.md#picture-format) - [Titular](properties_Entry.md#placeholder) - \[Marco de impressão\](properties_Print. md#print-frame) - [Lista requerida](properties_RangeOfValues.md#required-list) - [Direita](properties_CoordinatesAndSizing.md#right) - [Salvar como](properties_DataSource.md#save-as) - \[Seleção sempre visível\](properties_Entry. md#selection-always-visible) - [Salvar com etiquetas de estilo por padrão](properties_Text.md#store-with-default-style-tags) - \[Texto quando for falso/Texto quando for verdadeiro\](properties_Display. md#text-when-false-text-when-true) - [Formato de tempo](properties_Display.md#time-format) - [Superior](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - \[Sublinhado\](properties_Text. md#underline) - [Variável ou expressão](properties_Object.md#variable-or-expression) - [Barra de deslocamento vertical](properties_Appearance.md#vertical-scroll-bar) - \[Tamanho vertical\](properties_ResizingOptions. md#vertical-sizing) - [Visibilidade](properties_Display.md#visibility) - [Largura](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
 
 ---
 
-## Input alternatives
+## Alternativas
 
 You can also represent field and variable expressions in your forms using alternative objects, more particularly:
 
