@@ -274,7 +274,7 @@ Expressions rarely “stand alone.” There are several places in 4D where an ex
 
 You refer to an expression by the data type it returns. There are several expression types. The following table gives examples of each type of expression.
 
-| Expression               | Tipo               | Descrção                                                                                                                                                                        |
+| Expression               | Tipo               | Descrição                                                                                                                                                                       |
 | ------------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | “Hello”                  | String             | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
 | “Hello ” + “there”       | String             | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
