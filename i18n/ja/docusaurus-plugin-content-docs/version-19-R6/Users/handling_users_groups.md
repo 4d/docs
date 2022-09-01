@@ -1,200 +1,200 @@
 ---
 id: editing
-title: Managing 4D users and groups
+title: 4Dユーザー＆グループの管理
 ---
 
 
-In multi-user applications, 4D provides users with certain standard access privileges and certain powers. Once a users and groups system has been initiated, these standard privileges take effect.
+マルチユーザーアプリケーションにおいて、4Dはユーザーに対して標準的なアクセス権と特定の権限を与えます。 ユーザー＆グループシステムが起動されると、これらの標準的な権限が有効になります。
 
 
-## Users and groups in projects
+## プロジェクトにおけるユーザー＆グループ
 
-In project applications (.4DProject or .4dz files), 4D users and groups can be configured in both single-user and multi-user environments. However, **access control** is only effective with 4D Server. The following table lists the main users and groups features and their availability:
+プロジェクトアプリケーション (.4DProject および .4dz ファイル) では、シングルユーザーおよびマルチユーザー環境の両方でユーザーとグループを設定することができます。 ただし、**アクセスシステム** は 4D Server でのみ有効です。 次の表は、主なユーザーとグループの機能と、それらが利用かどうかを一覧に示します:
 
-|                                                               | 4D (single-user)             | 4D Server |
-| ------------------------------------------------------------- | ---------------------------- | --------- |
-| Adding/editing users and groups                               | yes                          | yes       |
-| Assigning user/group access to servers                        | yes                          | yes       |
-| User identification                                           | no (all users are Designer)  | yes       |
-| Access control once the Designer has been assigned a password | no (all access are Designer) | yes       |
+|                              | 4D (シングルユーザー)        | 4D Server |
+| ---------------------------- | -------------------- | --------- |
+| ユーザーとグループの追加/編集              | ◯                    | ◯         |
+| ユーザー/グループにサーバーアクセスを割り振る      | ◯                    | ◯         |
+| ユーザー認証                       | × (すべてのユーザーがデザイナーです) | ◯         |
+| デザイナーへのパスワード設定によるアクセスシステムの起動 | × (すべてのアクセスがデザイナーです) | ◯         |
 
-> For information about user identification and access control in single-user deployments, see [this paragraph](overview.md#access-control-in-single-user-applications).
+> シングルユーザー環境でのユーザー認証とアクセスコントロールについては、[シングルユーザーアプリケーションのアクセスコントロール](overview.md#シングルユーザーアプリケーションのアクセスコントロール) を参照ください。
 
-## Designer and Administrator
+## デザイナーと管理者
 
-The most powerful user is named **Designer**. No aspect of the application is closed to the Designer. The Designer can:
-- access all application servers without restriction,
-- create users and groups,
-- assign access privileges to groups,
-- access the Design environment. In single-user environment, Designer access rights are always used. In client/server environment, assigning a password to the Designer activates the display of the 4D user login dialog.  Access to Design environment is read-only.
+最も強力なユーザーは **デザイナー (Designer)** です。 デザイナーは、アプリケーションに関するあらゆる操作をおこなうことができます。 デザイナーは次のことができます:
+- 制限なく、すべてのアプリケーションサーバーにアクセスする。
+- ユーザーやグループを作成する。
+- グループにアクセス権を割り当てる。
+- デザインモードを使用する。 シングルユーザー環境では、常にデザイナーアクセス権が使用されます。 クライアント/サーバー環境においては、デザイナーにパスワードを割り当てることで、4Dユーザーログインダイアログが表示されるようになります。  この環境では、デザインモードは読み取り専用です。
 
-After the Designer, the next most powerful user is the **Administrator**, who is usually given the tasks of managing the access system and administration features.
+デザイナーの次に強力なユーザーは **管理者 (Administrator)**であり、通常はパスワードアクセスシステムや管理機能を扱う役割を与えられています。
 
-The Administrator can:
-- create users and groups,
-- access the 4D Server Administration window and monitor
-- access the MSC window to monitor backup, restore, or server.
+管理者は次のことができます:
+- ユーザーやグループを作成する。
+- 4D Server 管理ウィンドウとモニターにアクセスする。
+- バックアップ、復元、サーバーの監視のため、MSC にアクセスする。
 
-The Administrator cannot:
-- edit the Designer user
-- by default, access to protected parts of the application. In particular, the Administrator cannot access to the Design mode if it is restricted. The Administrator must be part of one or more groups to have access privileges in the application. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
+管理者は次のことができません:
+- デザイナーユーザーを編集する。
+- アプリケーションの保護された領域にアクセスする。 とくにデザインモードが制限されている場合には、管理者はアクセスすることができません。 管理者がアプリケーション内でアクセス権を得るには、1つ以上のグループに属さなければなりません。 管理者はすべての新規グループに含まれますが、任意のグループから管理者の名前を取り除くことができます。
 
-Both the Designer and Administrator are available by default in all applications. In the [user management dialog box](#users-and-groups-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
+デザイナーと管理者は、すべてのアプリケーションにおいてデフォルトで利用可能です。 [ユーザー管理のダイアログボックス](#ユーザーエディター)において、デザイナーと管理者のアイコンは、それぞれ赤色と緑色で表示されます:
 
-- Designer icon: ![](../assets/en/Users/iconDesigner.png)
-- Administrator icon: ![](../assets/en/Users/iconAdmin.png)
+- デザイナーアイコン: ![](../assets/en/Users/iconDesigner.png)
+- 管理者アイコン: ![](../assets/en/Users/iconAdmin.png)
 
-You can rename the Designer and Administrator users. In the language, the Designer ID is always 1 and the Administrator ID is always 2.
+デザイナーと管理者の名前は変更することができます。 ランゲージにおいて、デザイナーと管理者の ID値は、常に 1 と 2 に設定されます。
 
-The Designer and Administrator can each create up to 16,000 groups and 16,000 users.
+デザイナーと管理者は、それぞれ 16,000 のグループと 16,000 のユーザーを作成することができます。
 
 
 
-## Users editor
+## ユーザーエディター
 
-The editor for users is located in the Toolbox of 4D.
+ユーザーのエディターは 4Dのツールボックスにあります。
 
 ![](../assets/en/Users/editor.png)
 
-> Users and groups editor can be displayed at runtime using the [EDIT ACCESS](https://doc.4d.com/4dv19R/help/command/en/page281.html) command. The whole users and groups configuration can also be edited during application execution using 4D language commands of the `Users and Groups` theme.
+> ランタイムにおいてユーザーとグループのエディターを表示させるには [EDIT ACCESS](https://doc.4d.com/4dv19R/help/command/ja/page281.html) コマンドを使用します。 ユーザーとグループの設定は、アプリケーション実行中でも `Users and Groups` テーマの 4Dランゲージコマンドを使って編集することができます。
 
-### Adding and modifying users
+### ユーザーの追加と変更
 
-You use the users editor to create user accounts, set their properties and assign them to various groups.
+ユーザーエディターを使用して、ユーザーアカウントの作成やプロパティの設定、各グループへの割り当てをおこないます。
 
-To add a user from the Toolbox :
+ユーザーを追加するには:
 
-1. Select **Tool Box > Users** from the **Design** menu or click on the **Tool Box** button of the 4D toolbar. 4D displays the users editor.
+1. **デザイン** メニューから **ツールボックス＞ユーザー** を選択、または 4Dツールバーの **ツールボックス** ボタンをクリックします。 4Dはユーザーエディターを表示します。
 
-The list of users displays all the users, including the [Designer and the Administrator](#designer-and-administrator).
+ユーザーリストには、[デザイナーと管理者](#デザイナーと管理者) を含むすべてのユーザーが表示されます:
 
-2. Click on the ![](../assets/en/Users/PlussNew.png) button located below the list of users. OR Right-click in the list of users and choose **Add** or **Duplicate** in the context menu.
+2. ユーザーリストの下にある追加ボタン ![](../assets/en/Users/PlussNew.png) をクリックします。 または <br /> ユーザーリスト上で右クリックし、コンテキストメニューから **追加** または **複製** を選択する。
 
-> The **Duplicate** command can be used to create several users having the same characteristics quickly.
+> **複製** コマンドを使用すると、同じ特性を持つ複数のユーザーを素早く作成することができます。
 
-4D adds a new user to the list, named "New userX" by default.
+4D は新規ユーザーをリストに追加し、デフォルトとして "新規ユーザーX" という名前を設定します。
 
-3. Enter the user name. This name will be used by the user to open the application. You can rename a user at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
+3. 新しいユーザー名を入力します。 この名前は、ユーザーがアプリケーションを開く際に使用されます。 ユーザー名をいつでも変更することができます。変更するにはコンテキストメニューの **名称変更** コマンドを使用するか、Alt+クリック (Windows) または Option+クリック (macOS) ショートカットを使用、または変更したい名前を 2回クリックします。
 
-4. To enter a password for the user, click the **Edit...** button in the user properties area and enter the password twice in the dialog box. You can use up to 15 alphanumeric characters for a password. The password editor is case sensitive.
+4. ユーザーのパスワードを設定するには、プロパティエリアで **編集...** ボタンをクリックして、ダイアログボックスの 2つのパスワード欄に同じパスワードをそれぞれ入力します。 パスワードには 15桁までの英数字を使用することができます。 パスワードでは文字の大小が区別されます。
 
-> Users can change their password at any time according to the options in the "Security" page of the structure settings, or using the `CHANGE PASSWORD` command.
+> ストラクチャー設定の "セキュリティ" ページで許可されていれば、ユーザーは自分のパスワードを変更できます。また、パスワードは `CHANGE PASSWORD` コマンドを使って変更することもできます。
 
-5. Set the group(s) to which the user belongs using the "Member of Groups" table. You can add or remove the selected user to/from a group by checking the corresponding option in the Member column.
+5. グループメンバー表を用いて、そのユーザーが所属するグループを設定します。 メンバーカラムの該当するオプションをチェックして、選択したユーザーをグループに対して追加・削除することができます。
 
-The membership of users to different groups can also be set by group on the [Groups page](#configuring-access-groups).
+[グループページ](#グループの設定) を使用して、各グループの所属ユーザーを設定することもできます。
 
-### Deleting a user
-
-
-To delete a user, select it then click the deletion button or use the **Delete** command of the context menu. ![](../assets/en/Users/MinussNew.png)
-
-Deleted user names no longer appear in the Users editor. Note that the IDs for deleted users are reassigned when new user accounts are created.
-
-### User properties
-
-- **User Kind**: The User Kind field contains "Designer", "Administrator", or (for all other users) "User".
-
-- **Startup Method**: Name of an associated method that will be automatically executed when the user opens the application (optional). This method can be used for example to load the user preferences.
+### ユーザーの削除
 
 
-## Groups editor
+ユーザーを削除するには、そのユーザーを選択してから削除ボタンをクリックするか、またはコンテキストメニューの **削除** コマンドを使用します。 ![](../assets/en/Users/MinussNew.png)
 
-The editor for groups is located in the Toolbox of 4D.
+削除されたユーザー名は、その後ユーザーエディターには表示されません。 削除されたユーザーの ID番号は、新規アカウント作成の際に再度割り当てられるという点に注意してください。
 
-### Configuring groups
+### ユーザープロパティ
 
-You use the groups editor to set the elements that each group contains (users and/or other groups) and to distribute access to plug-ins.
+- **ユーザーの種類**: "デザイナー"、"管理者"、または (それ以外のすべてのユーザーの場合にあ) "ユーザー"
 
-Keep in mind that once a group has been created, it cannot be deleted. If you want to deactivate a group, you just need to remove any users it contains.
-
-To create a group:
-
-1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button. 4D displays the groups editor window. The list of groups displays all the groups of the application project.
-
-2. Click on the ![](../assets/en/Users/PlussNew.png) button located below the list of groups.  
-   OR  
-   Right-click in the list of groups and choose the **Add** or **Duplicate** command in the context menu.
-
-> The Duplicate command can be used to create several groups having the same characteristics quickly.
-
-4D adds a new group to the list, named "New groupX" by default.
-
-3. Enter the name of the new group. The group name can be up to 15 characters long. You can rename a group at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
+- **開始メソッド**: ユーザーがアプリケーションを開いたときに自動実行されるメソッドの名称 (任意) このメソッドを使って、たとえばユーザー設定をロードできます。
 
 
-### Placing users or groups into groups
+## グループエディター
+
+グループのエディターは 4Dのツールボックスにあります。
+
+### グループの設定
+
+グループエディターを使用して、各グループ内に納める要素 (ユーザーや他のグループ) を設定したり、プラグインへのアクセス権を割り当てることができます。
+
+グループは一旦作成されると、削除できないということに留意が必要です。 グループを使用したくない場合は、そのグループの所属ユーザーをすべて取り除きます。
+
+グループを作成するには:
+
+1. **デザイン** メニューから **ツールボックス＞ユーザーグループ** を選択、または 4Dツールバーの **ツールボックス** ボタンをクリックし、**グループ** ページを開きます。 4D はグループエディターウインドウを表示します: グループリストには、アプリケーションプロジェクトのすべてのグループが表示されます。
+
+2. グループリストの下にある追加ボタン ![](../assets/en/Users/PlussNew.png) をクリックします。  
+   または  
+   グループリスト上で右クリックし、コンテキストメニューから **追加** または **複製** を選択します。
+
+> 複製コマンドを使用すると、同じ特性を持つ複数のグループを素早く作成することができます。
+
+4D は新規グループをリストに追加し、デフォルトとして "新規グループX" という名前を設定します。
+
+3. 新しいグループの名前を入力します。 グループ名には 15桁までの文字を使用できます。 グループ名をいつでも変更することができます。変更するにはコンテキストメニューの **名称変更** コマンドを使用するか、Alt+クリック (Windows) または Option+クリック (macOS) ショートカットを使用、または変更したい名前を 2回クリックします。
 
 
-You can place any user or group into a group, and you can also place the group itself into several other groups. It is not mandatory to place a user in a group.
+### ユーザーやグループをグループに入れる
 
-To place a user or group in a group, you simply need to check the "Member" option for each user or group in the member attribution area:
+
+任意のユーザーやグループをグループ内に配置することができます。さらに、そのグループ自体を他のいくつかのグループ内に入れることも可能です。 必ずしもユーザーをグループに入れる必要はありません。
+
+ユーザーやグループをグループに配置するには、当該グループのユーザー/グループ一覧にてメンバーカラムにチェックを入れます:
 
 ![](../assets/en/Users/groups.png)
 
-If you check the name of a user, this user is added to the group. If you check the name of a group, all the users of the group are added to the new group. The affiliated user or group will then have the same access privileges as those assigned to the new group.
+ユーザー名をチェックすると、そのユーザーがグループに追加されます。 グループ名をチェックした場合は、そのグループの全ユーザーがグループへ追加されます。 メンバーの一員となったユーザーやグループには、そのグループに割り当てられたものと同じアクセス権が与えられます。
 
-Placing groups into other groups lets you create a user hierarchy. The users of a group placed in another group will have the access privileges of both groups. See "[An access hierarchy scheme](#an-access-hierarchy-scheme)" below.
+グループを別のグループ内に入れることにより、ユーザーの階層構造が作成されます。 別のグループの配下に入れられたグループのユーザーは、両グループのアクセス権を保持します。 後述の [アクセス権の階層構造](#アクセス権の階層構造) を参照してください。
 
-To remove a user or group from another group, you just need to deselect the corresponding option in the member attribution area.
+ユーザーやグループをグループから取り除くには、ユーザー/グループ一覧でチェックを解除します。
 
-### Assigning a group to a plug-in or to a server
+### プラグインやサーバーにグループを割り当てる
 
-You can assign a group privileges to any plug-ins installed in the project. This includes all the 4D plug-ins and any third-party plug-ins.
+プロジェクトにインストールされたプラグインへのアクセス権をグループに割り当てることができます。 これには 4D のプラグインと任意のサードパーティープラグインが含まれます。
 
-Distributing access to the plug-ins lets you control the use of the licenses you possess for these plug-ins. Any users that do not belong to the access group of a plug-in cannot load this plug-in.
+プラグインへのアクセス権を割り当てると、所有するプラグインライセンスの使用を管理できるようになります。 プラグインのアクセスグループに属さないユーザーは、そのプラグインをロードすることができません。
 
-> Used licenses remain attached to 4D user accounts in the group for the whole 4D session.
+> 使用されたライセンスは 4Dセッションの間、当該グループに所属する 4Dユーザーアカウントに紐づけられます。
 
-The “Plug-in” area on the Groups page of the tool box lists all the plug-ins loaded by the 4D application. To give a group access to a plug-in, you simply need to check the corresponding option.
+ツールボックスのグループページにある "プラグイン" エリアには、4Dアプリケーションによりロードされたプラグインがすべて表示されます。 プラグインへのアクセス権をグループに与えるには、該当するオプションをチェックします。
 
 ![](../assets/en/Users/plugins.png)
 
-The **4D Client Web Server** and **4D Client SOAP Server** items lets you control the possibility of Web and SOAP (Web Services) publication for each 4D in remote mode. These licenses are considered as plug-in licenses by 4D Server. Therefore, in the same way as for plug-ins, you can restrict the right to use these licenses to a specific group of users.
+**4D Client Web Server** や **4D Client SOAP Server** 項目を使用し、リモートモードの 4D がそれぞれ Web および SOAP (Webサービス) 公開をおこなえるかどうかを管理することができます。 これらのライセンスは 4D Server 側ではプラグインライセンスとしてみなされます。 したがって、プラグインと同じ方法で、これらのライセンスの使用権を特定のユーザーグループに限定することができます。
 
 
-### An access hierarchy scheme
+### アクセス権の階層構造
 
-The best way to ensure the security of your application and provide users with different levels of access is to use an access hierarchy scheme. Users can be assigned to appropriate groups and groups can be nested to create a hierarchy of access rights. This section discusses several approaches to such a scheme.
+アプリケーションのセキュリティを確保し、ユーザーに異なるアクセスレベルを提供する最も効果的な方法は、アクセス権の階層構造を利用することです。 ユーザーを適切なグループに割り振り、各グループをネストすることで、アクセス権の階層構造を形成できます。 この節では、このような構造の取り扱い方について説明します。
 
-In this example, a user is assigned to one of three groups depending on their level of responsibility. Users assigned to the Accounting group are responsible for data entry. Users assigned to the Finances group are responsible for maintaining the data, including updating records and deleting outdated records. Users assigned to the General Management group are responsible for analyzing the data, including performing searches and printing analytical reports.
+この例題では、ユーザーは担当業務に応じて 3つあるグループの 1つに割り振られます。 データ入力担当のユーザーは、Accounting (会計) グループに割り当てます。 レコードの更新や無効データの削除などデータ管理を担当するユーザーは、Finances (財務) グループに割り当てます。 検索の実行や分析レポートの印刷などデータ分析を担当するユーザーは、General Management (総合管理) グループに割り当てます。
 
-The groups are then nested so that privileges are correctly distributed to the users of each group.
+割り当て完了後は、各グループのユーザーに権限が正しく配分されるようにグループをネストします。
 
-- The General Management group contains only “high-level” users. ![](../assets/en/Users/schema1.png)
+- General Management グループには "高レベル" のユーザーだけが含まれます。 ![](../assets/en/Users/schema1.png)
 
-- The Finances group contains data maintenance users as well as General Management users, thus the users in General Management have the privileges of the Finances group as well. ![](../assets/en/Users/schema2.png)
+- Finances グループには、データ管理ユーザーと General Management グループが含まれます。したがって、General Management グループのユーザーは Finances グループの権限も保持します。 ![](../assets/en/Users/schema2.png)
 
-- The Accounting group contains data entry users as well as Finances group users, so the users who belong to the Finances group and the General Management group enjoy the privileges of the Accounting group as well. ![](../assets/en/Users/schema3.png)
+- Accounting グループには、データ入力をおこなうユーザーと Finances グループが含まれます。したがって、Finances グループのユーザーと General Management グループのユーザーは Accounting グループの権限も利用できます。 ![](../assets/en/Users/schema3.png)
 
-You can decide which access privileges to assign to each group based on the level of responsibility of the users it includes.
+所属ユーザーの責務に基づいて、各グループに割り当てるアクセス権を決定します。
 
-Such a hierarchical system makes it easy to remember to which group a new user should be assigned. You only have to assign each user to one group and use the hierarchy of groups to determine access.
+このような階層システムを使用すると、新規ユーザーに割り当てるべきグループがわかりやすくなります。 各ユーザーを 1つのグループに割り当てるだけで、グループの階層を介してアクセス権を決定できます。
 
 
-## Assigning group access
+## 権限を割り当てる
 
-Groups are assigned access privileges to specific parts or features of the application:
+グループには、アプリケーションの特定機能へのアクセス権が割り当てられます:
 
-- Design and Runtime Explorer access,
-- HTTP server,
-- REST server,
-- SQL server.
+- デザイン環境やランタイムエクスプローラー
+- HTTPサーバー
+- RESTサーバー
+- SQLサーバー
 
-These accesses are defined in the Settings dialog. The following example shows Design and Runtime explorer access rights being assigned to the "Devs" group:
+これらのアクセス権はストラクチャー設定で定義します。 次の図は、デザインおよびランタイムエクスプローラーアクセス権を "Devs" グループに割り当てている様子を表しています (データベース設定の "セキュリティ" タブ):
 
 ![](../assets/en/Users/Access1.png)
 
-You also use groups to [distribute available licenses](#assigning-a-group-to-a-plug-in-or-to-a-server). This distribution is defined in the Groups editor.
+また、グループを使って [利用可能なライセンスを割り当てる](#プラグインやサーバーにグループを割り当てる) こともできます。 この割り当ては、グループエディターで定義します。
 
-## Directory.json file
+## Directory.json ファイル
 
-Users, groups, as well as their access rights are stored in a specific project file named **directory.json**.
+ユーザー、グループ、およびそれらのアクセス権は、**directory.json** という名称の専用のプロジェクトファイルに保存されます。
 
-This file can be stored at the following locations, depending on your needs:
+必要に応じて、このフォルダーは次の場所に保存することができます:
 
-- If you want to use the same directory for all data files (or if you use a single data file), store the **directory.json** file in the user settings folder, i.e. in the "Settings" folder at the [same level as the "Project" folder](Project/architecture.md#project-folder) (default location).
-- If you want to use a specific directory file per data file, store the **directory.json** file in the data settings folder, i.e. in the ["Settings" folder of the "Data" folder](Project/architecture.md#settings). If a **directory.json** file is present at this location, it takes priority over the file in the user settings folder. This custom/local Users and Groups configuration will left untouched by an application upgrade.
+- すべてのデータファイルについて同じディレクトリを使用する場合 (または 1つのデータファイルだけを使用する場合)、ユーザー設定フォルダー (["Project" フォルダーと同じ階層](Project/architecture.md#project-フォルダー) の "Settings" フォルダー) に **directory.json** ファイルをに保存します (デフォルトの場所)。
+- データファイルごとに特定のディレクトリファイルを使用する場合は、**directory.json** ファイルをデータ設定フォルダー、つまり ["Data" フォルダーの "Settings" フォルダー](Project/architecture.md#settings) に格納します。 **directory.json** ファイルがこの場所に保存されている場合、ユーザー設定フォルダーのファイルよりも優先されます。 アプリケーションをアップグレードしても、このカスタム/ローカルなユーザー＆グループ設定はそのままです。
 
-> To allow for safe changes of passwords and group memberships in a deployed environment, you can include your **directory.json** file in the server application during the build, using the [corresponding build application option](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application).
+> パスワードやグループメンバーシップを運用環境において安全に変更できるようにするには、ビルド時に [対応するビルドアプリケーションオプション](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) を使用して、サーバーアプリケーションに **directory.json** ファイルを含めることができます。
 
