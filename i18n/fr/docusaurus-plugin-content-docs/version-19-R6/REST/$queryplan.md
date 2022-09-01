@@ -4,24 +4,24 @@ title: '$queryplan'
 ---
 
 
-Returns the query as it was passed to 4D Server (*e.g.*, `$queryplan=true`)
+Retourne la requête telle qu'elle a été passée au 4D Server (par exemple, `$queryplan=true`)
 
 ## Description
-$queryplan returns the query plan as it was passed to 4D Server.
+$queryplan retourne le plan de la requête telle qu'il a été exécuté par 4D Server.
 
-| Property | Type   | Description                                                                                 |
-| -------- | ------ | ------------------------------------------------------------------------------------------- |
-| item     | String | Actual query executed                                                                       |
-| subquery | Array  | If there is a subquery, an additional object containing an item property (as the one above) |
+| Propriété | Type    | Description                                                                                                              |
+| --------- | ------- | ------------------------------------------------------------------------------------------------------------------------ |
+| item      | String  | Requête exécutée                                                                                                         |
+| subquery  | Tableau | S'il existe une sous-requête, un objet supplémentaire contenant une propriété d'élément (comme celle indiquée ci-dessus) |
 
-For more information about query plans, refer to [queryPlan and queryPath](genInfo.md#querypath-and-queryplan).
+Pour plus d'informations sur les plans de requête, reportez-vous à [queryPlan ete queryPath](genInfo.md#querypath-and-queryplan).
 
-## Example
-If you pass the following query:
+## Exemple
+Si vous passez la requête suivante :
 
  `GET  /rest/People/$filter="employer.name=acme AND lastName=Jones"&$queryplan=true`
 
-#### Response:
+#### Réponse :
 
 ```
 __queryPlan: {
