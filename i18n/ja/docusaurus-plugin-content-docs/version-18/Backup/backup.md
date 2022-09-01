@@ -1,95 +1,95 @@
 ---
 id: backup
 slug: backup
-title: Backup
+title: バックアップ
 ---
 
 
-## Starting a backup
+## バックアップの開始
 
-A backup can be started in three ways:
+4D では、次の 3つの方法でバックアップを開始することができます:
 
-- Manually, using the **Backup...** item of the 4D **File** menu or the **Backup** button of the [Maintenance and Security Center](MSC/backup.md).
-- Automatically, using the scheduler that can be set in the Database Settings,
-- Programmatically, using the `BACKUP` command.
+- 手動による方法: 4D の **ファイル** メニューから **バックアップ...** コマンドを使用します。または、[Maintenance ＆ Security Center (MSC)](MSC/backup.md) の **バックアップ** ボタンをクリックします。
+- 自動的に行う方法: データベース設定からスケジューラーを使用します。
+- プログラムによる方法: `BACKUP` コマンドを使用します。
 
-> 4D Server: A backup can be started manually from a remote machine using a method that calls the `BACKUP` command. The command will be executed, in all cases, on the server.
+> 4D Server: リモートマシンから `BACKUP` を呼び出すメソッドを使用して、手動でバックアップを開始することができます。 いかなる場合でも、このコマンドはサーバー上で実行されます。
 
-### Manual backup
+### 手動バックアップ
 
-1. Select the **Backup...** command in the 4D **File** menu. The backup window appears: ![](../assets/en/Backup/backup01.png) You can see the location of the backup folder using the pop-up menu next to the "Backup destination" area. This location is set on the **Backup/Configuration** page of the Database Settings.
+1. 4D の **ファイル** メニューから **バックアップ...** を選択します。 バックアップウインドウが表示されます: ![](../assets/en/Backup/backup01.png) "バックアップファイルの保存先" エリアの隣のポップアップメニューを使用して、バックアップファイルの保存場所を確認することができます。 この場所はデータベース設定の **バックアップ/設定** ページにて、設定されています。
 
-- You can also open the [Maintenance and Security Center](MSC/overview.md) of 4D and display the [Backup page](MSC/backup.md).
+- 4D の [Maintenance ＆ Security Center (MSC)](MSC/overview.md) を開いて、[バックアップページ](MSC/backup.md) から操作することもできます。
 
-The **Database properties...** button causes the Backup/Configuration page of the Database Settings to be displayed.
+**データベースプロパティ...** ボタンをクリックすると、データベース設定のバックアップ/設定ページが表示されます。
 
- 2. Click **Backup** to start the backup using current parameters.
+ 2. **バックアップ** をクリックし、現在のパラメーターを用いてバックアップを開始します。
 
-### Scheduled automatic backup
+### 定期的な自動バックアップ
 
-Scheduled backups are started automatically. They are configured in the **Backup/Scheduler** page of the **Database Settings**.
+自動バックアップは指定されたスケジュールに基づいて自動的に実行されます。 バックアップの周期は、**データベース設定** の **バックアップ/スケジューラー** ページにて設定します。
 
-Backups are automatically performed at the times defined on this page without any type of user intervention. For more information on using this dialog box, refer to [Scheduler in backup settings](settings.md#scheduler).
+ユーザーが一切操作しなくても、このページで指定された時間にバックアップが自動実行されます。 このダイアログボックスに関する詳細は、[バックアップ設定のスケジューラー](settings.md#スケジューラー) の項目を参照してください。
 
-### BACKUP command
+### BACKUP コマンド
 
-When the `BACKUP` 4D language command is executed from any method, the backup starts using the current parameters as defined in the Database settings. You can use the `On Backup Startup` and `On Backup Shutdown` database methods for handling the backup process (see the *4D Language Reference* manual).
+任意のメソッドにて `BACKUP` 4Dランゲージコマンドを実行すると、データベース設定に定義されている現在のパラメーターを用いてバックアップを開始します。 バックアッププロセスを処理するため、`On Backup Startup` および `On Backup Shutdown` データベースメソッド使用することができます (詳細は、*4Dランゲージリファレンス* マニュアルを参照ください)。
 
-## Managing the backup processing
+## バックアップ処理の管理
 
-Once a backup is started, 4D displays a dialog box with a thermometer indicating the progress of the backup:
+バックアップが開始すると 4Dは、バックアップの進捗状況を知らせるサーモメーターのあるダイアログボックスを表示します:
 
 ![](../assets/en/Backup/backupProgress.png)
 
-This thermometer is also displayed on the [Backup page of the MSC](MSC/backup.md) if you have used this dialog box.
+MSC を使用している場合、この進捗インジケーターは [MSC のバックアップページ](MSC/backup.md) に表示されます。
 
-The **Stop** button lets the user interrupt the backup at any time (refer to [Handling backup issues](backup.md#handling-backup-issues) below).
+**中止** ボタンをクリックすると、いつでもバックアップを中断することができます ([バックアップ中に問題が発生した場合](backup.md#バックアップ中に問題が発生した場合) 参照)。
 
-The status of the last backup (successful or failed) is stored in the Last Backup Information area of the [Backup page in the MSC](MSC/backup.md) or in the **Maintenance page** of 4D Server. It is also recorded in the database **Backup journal.txt**.
+前回のバックアップの結果 (成功または不成功) は、[MSC のバックアップページ](MSC/backup.md) の "前回のバックアップの情報" エリア、または 4D Server の **メンテナンスページ** で確認できます。 また、データベースの **バックアップジャーナル** (Backup Journal.txt) にも記録されます。
 
-### Accessing the database during backup
+### バックアップ中のデータベースへのアクセス
 
-During a backup, access to the database is restricted by 4D according to the context. 4D locks any processes related to the types of files included in the backup: if only the project files are being backed up, access to the structure is not possible but access to the data will be allowed.
+バックアップ実行中のデータベースへのアクセスは、4D によって制限されます。 4D は、バックアップに含まれたファイルタイプに関連するプロセルはすべてロックします: プロジェクトファイルだけがバックアップされている場合、ストラクチャーにはアクセスできませんが、データにはアクセス可能です。
 
-Conversely, if only the data file is being backed up, access to the structure is still allowed. In this case, the database access possibilities are as follows:
+反対に、データだけがバックアップされているのであれば、ストラクチャーへのアクセスは許可されます。 この場合に、データベースへのアクセスが可能かどうかを次に示します:
 
-- With the 4D single-user version, the database is locked for both read and write; all processes are frozen. No actions can be performed.
-- With 4D Server, the database is only write locked; client machines can view data. If a client machine sends an add, remove or change request to the server, a window appears asking the user to wait until the end of the backup. Once the database is saved, the window disappears and the action is performed. To cancel the request in process and not wait for the end of the backup, simply click the **Cancel operation** button. However, if the action waiting to be executed comes from a method launched prior to the backup, you should not cancel it because only operations remaining to be performed are cancelled. Also, a partially executed method can cause logical inconsistencies in the database.
+- シングルユーザー版の 4D の場合、データベースは読み込み、書き込みともにロックされ、すべてのプロセスが停止します。 実行できるアクションはありません。
+- 4D Server の場合、データベースへの書き込みだけがロックされ、クライアントマシンはデータを照会することができます。 クライアントマシンからサーバーへ追加・削除・変更のリクエストが送信されると、ウィンドウが表示され、バックアップの終了まで待機するよう要求されます。 データベースが保存されるとウィンドウが閉じられ、要求したアクションが実行されます。 バックアップの終了まで待機せずに、処理中のリクエストをキャンセルするには、**処理をキャンセル** ボタンをクリックします。 ただし、バックアップ前に開始したメソッドから要求されたアクションが実行待機中である場合、このアクションをキャンセルすべきではありません。この場合、実行すべき残りの処理だけがキャンセルされてしまうためです。 しかも、メソッドの一部は実行済みなので、データベースにおいて論理上の不整合が生じる可能性があります。
 
-> When the action waiting to be executed comes from a method and the user clicks the **Cancel operation** button, 4D Server returns error -9976 (This command cannot be executed because the database backup is in progress).
+> 実行待機中のアクションが、メソッドから要求されたものである場合に、ユーザーが **処理をキャンセル** ボタンをクリックすると、4D Server はエラー -9976 (データベースのバックアップが進行中なので、このコマンドは実行されません) を返します。
 
-### Handling backup issues
+### バックアップ中に問題が発生した場合
 
-It may happen that a backup is not executed properly. There may be several causes of a failed backup: user interruption, attached file not found, destination disk problems, incomplete transaction, etc. 4D processes the incident according to the cause.
+バックアップが正常に実行されない場合もあります。 バックアップが不成功に終わる原因としては、ユーザーによる中断、添付ファイルが見つからない場合、保存先ディスクのトラブル、不完全なトランザクションなど、いくつか考えられます。4D は原因に応じて問題に対処します。
 
-In all cases, keep in mind that the status of the last backup (successful or failed) is stored in the Last Backup Information area of the [Backup page in the MSC](MSC/backup.md) or in the **Maintenance page** of 4D Server, as well as in the database **Backup journal.txt**.
+すべての場合において、前回のバックアップのステータス (成功または不成功) は、[MSC のバックアップページ](MSC/backup.md) の "前回のバックアップの情報" エリア、4D Server の **メンテナンスページ**、およびデータベースの **バックアップジャーナル** (Backup Journal.txt) に表示されます。
 
-- **User interruption**: The **Stop** button in the progress dialog box allows users to interrupt the backup at any time. In this case, the copying of elements is stopped and the error 1406 is generated. You can intercept this error in the `On Backup Shutdown` database method.
-- **Attached file not found**: When an attached file cannot be found, 4D performs a partial backup (backup of database files and accessible attached files) and returns an error.
-- **Backup impossible** (disk is full or write-protected, missing disk, disk failure, incomplete transaction, database not launched at time of scheduled automatic backup, etc.): If this is a first-time error, 4D will then make a second attempt to perform the backup. The wait between the two attempts is defined on the **Backup/Backup & Restore** page of the Database Settings. If the second attempt fails, a system alert dialog box is displayed and an error is generated. You can intercept this error in the `On Backup Shutdown` database method.
+- **ユーザーによる中断**: 進捗ダイアログボックスの **中止** ボタンをクリックすると、いつでもバックアップを中断することができます。 この場合、各項目のコピーが中止されてエラー 1406 が生成されます。 このエラーは `On Backup Shutdown` データベースメソッドで遮ることができます。
+- **添付ファイルが見つからない**: 添付ファイルが見つからない場合、4D はバックアップを部分的に実行し (データベースファイルおよびアクセス可能な添付ファイルのバックアップ)、エラーを返します。
+- **バックアップ不可能** (ディスクフル、ディスクの書き込み保護、ディスクが見つからない、ディスク障害、不完全なトランザクション、定期的な自動バックアップ時にデータベースが起動されていない、など): 初回のエラーの場合には、4D はもう一度バックアップの実行を試みます。 この 2回のバックアップ間の待機時間は、データベース設定の **バックアップ/バックアップ＆復旧** ページで指定します。 再試行にも失敗した場合、システムの警告ダイアログボックスが表示されてエラーが生成されます。 このエラーは `On Backup Shutdown` データベースメソッドで遮ることができます。
 
-## Backup Journal
+## バックアップジャーナル
 
-To make following up and verifying database backups easier, the backup module writes a summary of each operation performed in a special file, which is similar to an activity journal. Like an on-board manual, all database operations (backups, restores, log file integrations) are logged in this file whether they were scheduled or performed manually. The date and time that these operations occurred are also noted in the journal.
+データベースバックアップの追跡や検証を容易にするため、バックアップモジュールは実行された各処理の概要を特別なファイルに書き込みます。このファイルは、いわゆる活動記録のようなものです。 処理が定期的または手動のいずれでおこなわれていても、すべてのデータベース操作 (バックアップ、復元、ログファイルの統合) がこのファイルに、日誌のごとく記録されます。 これらの処理が実行された日付と時刻もこのジャーナルに記述されます。
 
-The backup journal is named "Backup Journal[001].txt" and is placed in the "Logs" folder of the database. The backup journal can be opened with any text editor.
+バックアップジャーナルには "Backup Journal[001].txt"という名前が付けられ、データベースの "Logs" フォルダーに配置されます。 バックアップジャーナルは、任意のテキストエディターで開くことができます。
 
-#### Management of backup journal size
+#### バックアップジャーナルのサイズ管理
 
-In certain backup strategies (for example, in the case where numerous attached files are being backed up), the backup journal can quickly grow to a large size. Two mechanisms can be used to control this size:
+バックアップ方法によっては、バックアップジャーナルのサイズがすぐに大きくなってしまうことがあります (たとえば、添付ファイルが一緒にバックアップされる場合)。 このサイズを管理するには、2つの方法があります:
 
-- **Automatic backup**: Before each backup, the application examines the size of the current backup journal file. If it is greater than 10 MB, the current file is archived and a new file is created with the [xxx] number incremented, for example "Backup Journal[002].txt”. Once file number 999 is reached, the numbering begins at 1 again and the existing files will be replaced.
-- **Possibility of reducing the amount of information recorded**: To do this, simply modify the value of the `VerboseMode` key in the *Backup.4DSettings* file of the database. By default, this key is set to True. If you change the value of this key to False, only the main information will be stored in the backup journal: date and time of start of operation and any errors encountered. The XML keys concerning backup configuration are described in the *4D XML Keys Backup* manual.
+- **自動バックアップ**: 4D はバックアップを実行する前にカレントバックアップジャーナルファイルのサイズを確認します。 10MB よりも大きい場合、カレントファイルはアーカイブされ、[xxx] の番号がインクリメントされた新しいファイルを作成します (例: "Backup Journal[002].txt”)。 ファイル番号が 999 を超えると、ナンバリングは 1 に戻り、既存ファイルが置換されます。
+- **記録する情報量を削減する**: このためには、データベースの *backup.4DSettings* ファイルの `VerboseMode` キーの値を変更します。 デフォルトでは、true の値が設定されています。 この値を false に変更すると、バックアップジャーナルには主要な情報のみが記録されます (スタート時の日付と時刻、そしてエラーの有無)。 バックアップ設定に使われる XMLキーについての説明は [バックアップ設定ファイル](https://doc.4d.com/4Dv18/4D/18/4D-XML-Keys-Backup.100-4673706.ja.html) マニュアルを参照ください。
 
 ## backupHistory.json
 
-All information regarding the latest backup and restore operations are stored in the database's **backupHistory.json** file. It logs the path of each saved file (including attachments) as well as number, date, time, duration, and status of each operation. To limit the size of the file, the number of logged operations is the same as the number of available backups ("Keep only the last X backup files") defined in the backup settings.
+最新のバックアップと復元処理についての情報はすべて、データベースの **backupHistory.json** ファイルに記録されます。 記録されるのは、保存されたファイル (添付含む) のパスのほか、回数、日付、時刻、所要時間、各処理のステータスです。 ファイルサイズを制限するため、バックアップ＆復旧ページの一般設定にある "最新のバックアップのみ保存 X バックアップファイル" に指定した数と同じ分だけ、処理のログを保持します。
 
-The **backupHistory.json** file is created in the current backup destination folder. You can get the actual path for this file using the following statement:
+**backupHistory.json** ファイルはカレントのバックアップ保存先フォルダーに作成されます。 以下のコードを実行することで、このファイルの実際のパスを取得することができます:
 
 ```4d
 $backupHistory:=Get 4D file(Backup history file)
 ```
-> **WARNING**  
-> Deleting or moving the **backupHistory.json** file will cause the next backup number to be reset.
-> The **backupHistory.json** file is formatted to be used by the 4D application. If you are looking for a human-readable report on backup operations, you might find the Backup journal more accurate.
+> **警告**  
+> **backupHistory.json** ファイルを削除または移動した場合、次のバックアップ番号はリセットされるという点に注意してください。
+> **backupHistory.json** ファイルは 4D用にフォーマットされています。 バックアップ処理のレポートを直接読んで確認するには、バックアップジャーナルの方が適切です。
