@@ -1,46 +1,46 @@
 ---
 id: propertiesHelp
-title: Help
+title: Aide
 ---
 
-## Help Tip
+## Infobulle
 
-This property allows associating help messages with active objects in your forms. They can be displayed at runtime:
+Cette propriété permet d'associer les messages d'aide aux objets actifs de vos formulaires. Ils peuvent être affichés au moment de l'exécution :
 
 ![](../assets/en/FormObjects/property_helpTip.png)
 
-> - The display delay and maximum duration of help tips can be controlled using the `Tips delay` and `Tips duration` selectors of the **[SET DATABASE PARAMETER](https://doc.4d.com/4Dv17R5/4D/17-R5/SET-DATABASE-PARAMETER.301-4128139.en.html)** command.
-> - Help tips can be globally disabled or enabled for the application using the Tips enabled selector of the [**SET DATABASE PARAMETER**](https://doc.4d.com/4Dv17R5/4D/17-R5/SET-DATABASE-PARAMETER.301-4128139.en.html) command.
+> - Le délai d'affichage et la durée maximale des messages d'aide peuvent être définis à l'aide des sélecteurs de délai et de durée des conseils de la commande **[SET DATABASE PARAMETER](https://doc.4d.com/4Dv17R5/4D/17-R5/SET-DATABASE-PARAMETER.301-4128139.en.html)**.
+> - Ces infobulles peuvent être désactivées ou activées pour l'application à l'aide du sélecteur de la commande [**SET DATABASE PARAMETER**](https://doc.4d.com/4Dv17R5/4D/17-R5/SET-DATABASE-PARAMETER.301-4128139.en.html).
 
-You can either:
+Vous pouvez soit :
 
-- designate an existing help tip, previously specified in the [Help tips](https://doc.4d.com/4Dv17R5/4D/17-R5/Help-tips.200-4163423.en.html) editor of 4D.
-- or enter the help message directly as a string. This allows you to take advantage of XLIFF architecture. You can enter an XLIFF reference here in order to display a message in the application language (for more information about XLIFF, refer to [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html). You can also use 4D references ([see Using references in static text](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html)).
-> In macOS, displaying help tips is not supported in pop-up type windows.
+- désigner une info-bulle existante, préalablement spécifiée dans l'éditeur de [messages d'aide](https://doc.4d.com/4Dv17R5/4D/17-R5/Help-tips.200-4163423.en.html) de 4D.
+- ou saisir directement le message d'aide sous forme de chaîne. Cela vous permet de profiter de l'architecture XLIFF. Vous pouvez saisir ici une référence XLIFF afin d'afficher un message dans le langage de l'application (pour plus d'informations sur XLIFF, reportez-vous à [l'Annexe B: Architecture XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html). Vous pouvez également utiliser des références 4D ([voir Utilisation de références en texte statique](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-references-in-static-text.300-4163725.en.html)).
+> > In macOS, displaying help tips is not supported in pop-up type windows.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-|  Name   | Data Type | Possible Values                       |
-|:-------:|:---------:| ------------------------------------- |
-| tooltip |   text    | additional information to help a user |
+|   Nom   | Type de données | Valeurs possibles                                            |
+|:-------:|:---------------:| ------------------------------------------------------------ |
+| tooltip |      text       | informations supplémentaires destinées à aider l'utilisateur |
 
-#### Objects Supported
+#### Objets pris en charge
 
-[Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md)  - [Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md#overview) - [Hierarchical List](list_overview.md#overview) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up menu](picturePopupMenu_overview.md) - [Radio Button](radio_overview.md)
+[Bouton](button_overview.md) - [Grille de boutons](buttonGrid_overview.md) - [Check Box](checkbox_overview.md)  - [Liste déroulante](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md#overview) - [Liste hiérarchique ](list_overview.md#overview) - [En-tête List Box](listbox_overview.md#list-box-headers) - [Pied List Box](listbox_overview.md#list-box-footers) - [Bouton image](pictureButton_overview.md) - [Pop-up menu image](picturePopupMenu_overview.md) - [Bouton Radio](radio_overview.md)
 
-#### Other help features
+#### Autres fonctionnalités d'aide
 
-You can also associate help messages with form objects in two other ways:
+Vous pouvez aussi associer des messages d'aides aux objets formulaire de deux autres façons :
 
-- at the level of the database structure (fields only). In this case, the help tip of the field is displayed in every form where it appears. For more information, refer to “Help Tips” in [Field properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Field-properties.300-4163580.en.html).
-- using the **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)** command, for the current process.
+- au niveau de la structure de la base (champs uniquement). Dans ce cas, le message d'aide du champ apparaîtra sur les autres formulaires. Pour plus d'informations, référez-vous à la section [Propriétés des champs](https://doc.4d.com/4Dv17R5/4D/17-R5/Field-properties.300-4163580.en.html).
+- en utilisant la commande **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)**, pour le process courant.
 
-When different tips are associated with the same object in several locations, the following priority order is applied:
+Lorsque différentes astuces sont associées au même objet à plusieurs emplacements, l'ordre de priorité suivant est appliqué :
 
-1. structure level (lowest priority)
-2. form editor level
-3. **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)** command (highest priority)
+1. structure (priorité la plus faible)
+2. éditeur de formulaire
+3. Commande **[OBJECT SET HELP TIP](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-HELP-TIP.301-4128221.en.html)** (haute priorité)
 
-#### See also
+#### Voir également
 
-[Placeholder](properties_Entry.md#placeholder)
+[Le placeholder](properties_Entry.md#placeholder)
