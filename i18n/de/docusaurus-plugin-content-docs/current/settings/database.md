@@ -46,7 +46,7 @@ Three location options are provided:
 
     When the option is checked, the at sign is regarded as a simple character if it is located within a word. This setting is especially useful when searching for E-mail addresses, where the @ sign is used internally. This option has an influence on searches, sorts, string comparisons, as well as on data stored in tables and data found in memory, like arrays. Fields and variables of the alpha (indexed or not) and text type are concerned by how the @ character is interpreted in searches and sorts.
 
-     **Notes:**
+     **Hinweise:**
     -   For searches, if the search criteria begins or ends with @, the "@" character will be treated as a wildcard. Only if the "@" character is placed in the middle of a word (for example: bill@cgi.com) does 4D treat it differently.
     -   This option can also have an influence on the behavior of the commands in the [Objects (Forms)](https://doc.4d.com/4Dv19/4D/19/Objects-Forms.201-5391558.en.html) theme that accept the wildcard character ("@") in the object parameter.
     -   For security reasons, only the Administrator or Designer of the database can modify this parameter.
@@ -69,7 +69,7 @@ Three location options are provided:
 
 On Japanese systems, 4D supports the *MeCab* library, with a indexing algorithm for keywords that is particularly suited for the Japanese language.
 
-This algorithm is used by default in Japanese versions of 4D. If needed, you can disable the use of the *MeCab* algorithm and use the conventional *ICU* library.
+This algorithm is used by default in Japanese versions of 4D. This algorithm is used by default in Japanese versions of 4D. If needed, you can disable the use of the *MeCab* algorithm and use the conventional *ICU* library.
 
 To disable *MeCab*, just check the **Consider only non-alphanumeric chars for keywords** option:
 
@@ -100,10 +100,10 @@ You use the settings on this tab to configure the cache memory for the database.
 
     The size of the memory cache that you enter will be reserved for the 4D database, regardless of the state of machine resources. This setting can be used in certain specific configurations, or when the database is designed to be used on dissimilar systems in terms of memory. In most cases, the adaptive cache offers better performance.
 
--   **Flush Cache every ... Seconds/Minutes**: Specifies the time period between each automatic saving of the data cache, i.e., its writing to disk. 4D saves the data placed in the cache at regular intervals. You can specify any time interval between 1 second and 500 minutes. By default, 4D saves your data every 20 seconds. The application also saves your data to disk each time you change to another environment or exit the application. You can also call the [FLUSH CACHE](https://doc.4d.com/4dv19R/help/command/en/page297.html) command to trigger the flush at any moment.
+-   **Flush Cache every ... **Flush Cache every ... Seconds/Minutes**: Specifies the time period between each automatic saving of the data cache, i.e., its writing to disk. 4D saves the data placed in the cache at regular intervals. You can specify any time interval between 1 second and 500 minutes. By default, 4D saves your data every 20 seconds. The application also saves your data to disk each time you change to another environment or exit the application. You can also call the [FLUSH CACHE](https://doc.4d.com/4dv19R/help/command/en/page297.html) command to trigger the flush at any moment.</p>
 
     When you anticipate heavy data entry, consider setting a short time interval between saves. In case of a power failure, you will only lose the data entered since the previous save (if the database is running without a log file).
 
     If there is a noticeable slowing down of the database each time the cache is flushed, you need to adjust the frequency. This slowness means that a huge amount of records is being saved. A shorter period between saves would therefore be more efficient since each save would involve fewer records and hence be faster.
 
-    By default, 4D displays a small window when the cache is flushed. If you do not want this visual reminder, you can uncheck the **Flushing progress** option on the [Interface page](./interface.md).
+    By default, 4D displays a small window when the cache is flushed. If you do not want this visual reminder, you can uncheck the **Flushing progress** option on the [Interface page](./interface.md).</li> </ul>
