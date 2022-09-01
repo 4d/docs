@@ -13,9 +13,9 @@ On macOS, drop-down lists are also sometimes called "pop-up menu". Both names re
 
 You can create different types of drop-down lists with different features. To define a type, select the appropriate **Expression Type** and **Data Type** values in the Property list, or use their JSON equivalent.
 
-| Type                           | Features                                         | Expression Type | Data Type                    | JSON definition                                                                                                                                               |
+| Typ                            | Features                                         | Expression Type | Datentyp                     | JSON definition                                                                                                                                               |
 | ------------------------------ | ------------------------------------------------ | --------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Object                         | Built upon a collection                          | Object          | Numeric, Text, Date, or Time | `dataSourceTypeHint: object` + `numberFormat: <format>` or `textFormat: <format>` or `dateFormat: <format>` or `timeFormat: <format>` |
+| Objekt                         | Built upon a collection                          | Objekt          | Numeric, Text, Date, or Time | `dataSourceTypeHint: object` + `numberFormat: <format>` or `textFormat: <format>` or `dateFormat: <format>` or `timeFormat: <format>` |
 | Array                          | Built upon an array                              | Array           | Numeric, Text, Date, or Time | `dataSourceTypeHint: arrayNumber` or `arrayText` or `arrayDate` or `arrayTime`                                                                                |
 | Choice list saved as value     | Built upon a choice list (standard)              | List            | Selected item value          | `dataSourceTypeHint: text` + `saveAs: value`                                                                                                                  |
 | Choice list saved as reference | Built upon a choice list. Item position is saved | List            | Selected item reference      | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                                           |
@@ -30,10 +30,10 @@ You can create different types of drop-down lists with different features. To de
 
 An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a drop-down list. The object must contain the following properties:
 
-| Property       | Type               | Description                                                                                                                                                                                                                                            |
+| Property       | Typ                | Beschreibung                                                                                                                                                                                                                                           |
 | -------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `values`       | Collection         | Mandatory - Collection of scalar values. All values must be of the same type. Supported types:<li>strings</li><li>numbers</li><li>dates</li><li>times</li>If empty or not defined, the drop-down list is empty |
-| `index`        | number             | Index of the currently selected item (value between 0 and `collection.length-1`). If you set -1, `currentValue` is displayed as a placeholder string                                                                                                   |
+| `index`        | Zahl               | Index of the currently selected item (value between 0 and `collection.length-1`). If you set -1, `currentValue` is displayed as a placeholder string                                                                                                   |
 | `currentValue` | same as Collection | Currently selected item (used as placeholder value if set by code)                                                                                                                                                                                     |
 
 If the object contains other properties, they are ignored.
@@ -75,7 +75,7 @@ To initialize the array associated to the drop-down list, you can:
 
 * Enter a list of default values in the object properties by selecting `\&#060;Static List&#062;` in the [Data Source](properties_DataSource.md) theme of the Property List. The default values are loaded into an array automatically. You can refer to the array using the name of the variable associated with the object.
 
-* Before the object is displayed, execute code that assigns values to the array elements. For example:
+* Before the object is displayed, execute code that assigns values to the array elements. Beispiel:
 
 ```4d
   ARRAY TEXT(aCities;6) 
@@ -89,7 +89,7 @@ To initialize the array associated to the drop-down list, you can:
 
 In this case, the name of the [variable](properties_Object.md#variable-or-expression) associated with the object in the form must be `aCities`. This code could be placed in the form method and be executed when the `On Load` form event runs.
 
-* Before the object is displayed, load the values of a list into the array using the [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html) command. For example:
+* Before the object is displayed, load the values of a list into the array using the [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html) command. Beispiel:
 
 ```4d
    LIST TO ARRAY("Cities";aCities)
@@ -124,7 +124,7 @@ You must select each event that you test for in your Case statement. Arrays alwa
 If you want to use a drop-down list to manage the values of an input area (listed field or variable), 4D lets you reference the field or variable directly as the drop-down list's [data source](properties_Object.md#variable-or-expression). This makes it easier to manage listed fields/variables.
 
 For example, in the case of a "Color" field that can only contain the values "White", "Blue", "Green" or "Red", it is possible to create a list containing these values and associate it with a drop-down list that references the 4D "Color" field. 4D then automatically takes care of managing the input and display of the current value in the form.
-> If you use a hierarchical list, only the first level is displayed and can be selected. If you want to display hierarchical contents, you need to use a [hierarchical choice list](#using-a-hierarchical-choice-list).
+> If you use a hierarchical list, only the first level is displayed and can be selected. If you use a hierarchical list, only the first level is displayed and can be selected.
 
 To associate a drop-down list with a field or variable, enter the name of the field or variable directly as the [Variable or Expression](properties_Object.md#variable-or-expression) field of the drop-down list in the Property List.
 > It is not possible to use this feature with an object or an array drop-down list. If you enter a field name in the "Variable or Expression" area, then you must use a choice list.
