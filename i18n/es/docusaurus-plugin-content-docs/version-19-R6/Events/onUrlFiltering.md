@@ -3,16 +3,16 @@ id: onUrlFiltering
 title: On URL Filtering
 ---
 
-| Code | Can be called by                            | Definition                        |
-| ---- | ------------------------------------------- | --------------------------------- |
-| 51   | [Web Area](FormObjects/webArea_overview.md) | A URL was blocked by the Web area |
+| Code | Puede ser llamado por                       | Definición                            |
+| ---- | ------------------------------------------- | ------------------------------------- |
+| 51   | [Área Web](FormObjects/webArea_overview.md) | Una URL fue bloqueada por el área web |
 
 
-## Description
+## Descripción
 
-This event is generated when the loading of a URL is blocked by the Web area because of a filter set up using the `WA SET URL FILTERS` command.
+Este evento se genera cuando la carga de una URL es bloqueada por el área web debido a un filtro configurado mediante el comando `WA SET URL FILTERS`.
 
-You can find out the blocked URL using the `WA Get last filtered URL` command.
+Puede identificar la URL bloqueada utilizando el comando `WA Get last filtered URL`.
 
-### See also
+### Ver también
 [`On Open External Link`](onOpenExternalLink.md)
