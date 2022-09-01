@@ -22,9 +22,9 @@ For example, given a choice list containing "France, Germany, Italy" that is ass
 
 #### JSON Grammar
 
-| Name               | Data Type | Possible Values |
-| ------------------ | --------- | --------------- |
-| automaticInsertion | boolean   | true, false     |
+| Name               | Datentyp | Possible Values |
+| ------------------ | -------- | --------------- |
+| automaticInsertion | boolean  | true, false     |
 
 #### Objects Supported
 
@@ -40,7 +40,7 @@ You can also associate choice lists to objects using the [OBJECT SET LIST BY NAM
 
 #### JSON Grammar
 
-| Name       | Data Type        | Possible Values                                     |
+| Name       | Datentyp         | Possible Values                                     |
 | ---------- | ---------------- | --------------------------------------------------- |
 | choiceList | list, collection | A list of possible values                           |
 | list       | list, collection | A list of possible values (hierarchical lists only) |
@@ -57,7 +57,7 @@ List of static values to use as labels for the tab control object.
 
 #### JSON Grammar
 
-| Name   | Data Type        | Possible Values                          |
+| Name   | Datentyp         | Possible Values                          |
 | ------ | ---------------- | ---------------------------------------- |
 | labels | list, collection | A list of values to fill the tab control |
 
@@ -76,9 +76,9 @@ Specifies a variable or expression that will be assigned the collection element/
 
 #### JSON Grammar
 
-| Name              | Data Type | Possible Values   |
-| ----------------- | --------- | ----------------- |
-| currentItemSource | string    | Object expression |
+| Name              | Datentyp | Possible Values   |
+| ----------------- | -------- | ----------------- |
+| currentItemSource | string   | Object expression |
 
 #### Objects Supported
 
@@ -99,9 +99,9 @@ Specifies a variable or expression that will be assigned a longint indicating th
 
 #### JSON Grammar
 
-| Name                      | Data Type | Possible Values   |
-| ------------------------- | --------- | ----------------- |
-| currentItemPositionSource | string    | Number expression |
+| Name                      | Datentyp | Possible Values   |
+| ------------------------- | -------- | ----------------- |
+| currentItemPositionSource | string   | Number expression |
 
 #### Objects Supported
 
@@ -120,9 +120,9 @@ See also [**Expression Type**](properties_Object.md#expression-type) section.
 
 #### JSON Grammar
 
-| Name               | Data Type | Possible Values                                    |
-| ------------------ | --------- | -------------------------------------------------- |
-| dataSourceTypeHint | string    | <li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li><li>**drop-down lists:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
+| Name               | Datentyp | Possible Values                                    |
+| ------------------ | -------- | -------------------------------------------------- |
+| dataSourceTypeHint | string   | <li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li><li>**drop-down lists:** "object", "arrayText", "arrayDate", "arrayTime", "arrayNumber"</li> |
 
 #### Objects Supported
 
@@ -151,9 +151,9 @@ Using the **Selected item reference** option requires compliance with the follow
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values      |
-| ------ | --------- | -------------------- |
-| saveAs | string    | "value", "reference" |
+| Name   | Datentyp | Possible Values      |
+| ------ | -------- | -------------------- |
+| saveAs | string   | "value", "reference" |
 
 > Setting only `"dataSourceTypeHint" : "integer"` with a `"type": "dropdown"` form object will declare a hierarchical drop-down list.
 
@@ -177,7 +177,7 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 
 #### JSON Grammar
 
-| Name   | Data Type  | Possible Values                                                  |
+| Name   | Datentyp   | Possible Values                                                  |
 | ------ | ---------- | ---------------------------------------------------------------- |
 | values | collection | A collection of default values (strings), ex: "a", "b", "c", "d" |
 
@@ -187,7 +187,7 @@ You must enter a list of values. In the Form editor, a specific dialog box allow
 
 ---
 
-## Expression
+## Ausdruck
 
 This description is specific to [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns. See also **[Variable or Expression](properties_Object.md#variable-or-expression)** section.
 
@@ -198,17 +198,17 @@ A 4D expression to be associated with a column. You can enter:
 - A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes) only), for example: `[Employees]LastName`. The following types of fields can be used:
   - String
   - Numeric
-  - Date
-  - Time
-  - Picture
+  - Datum
+  - Zeit
+  - Bild
   - Boolean  
     You can use fields from the Master Table or from other tables.
 
 - A **4D expression** (simple expression, formula or 4D method). The expression must return a value. The value will be evaluated in the `On Display Detail` and `On Data Change` events. The result of the expression will be automatically displayed when you switch to Application mode. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). If it is empty, the column will not display any results. The following expression types are supported:
   - String
   - Numeric
-  - Date
-  - Picture
+  - Datum
+  - Bild
   - Boolean
 
  For collection/entity selection list boxes, Null or unsupported types are displayed as empty strings.  
@@ -220,9 +220,9 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                                         |
-| ---------- | --------- | ----------------------------------------------------------------------- |
-| dataSource | string    | A 4D variable, field name, or an arbitrary complex language expression. |
+| Name       | Datentyp | Possible Values                                                         |
+| ---------- | -------- | ----------------------------------------------------------------------- |
+| dataSource | string   | A 4D variable, field name, or an arbitrary complex language expression. |
 
 #### Objects Supported
 
@@ -240,9 +240,9 @@ All database tables can be used, regardless of whether the form is related to a 
 
 #### JSON Grammar
 
-| Name  | Data Type | Possible Values |
-| ----- | --------- | --------------- |
-| table | number    | Table number    |
+| Name    | Datentyp | Possible Values |
+| ------- | -------- | --------------- |
+| tabelle | Zahl     | Table number    |
 
 #### Objects Supported
 
@@ -271,9 +271,9 @@ Using this property requires compliance with the following principles:
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values      |
-| ------ | --------- | -------------------- |
-| saveAs | string    | "value", "reference" |
+| Name   | Datentyp | Possible Values      |
+| ------ | -------- | -------------------- |
+| saveAs | string   | "value", "reference" |
 
 #### Objects Supported
 
@@ -293,9 +293,9 @@ Specifies a variable or expression that will be assigned the elements or entitie
 
 #### JSON Grammar
 
-| Name                | Data Type | Possible Values       |
-| ------------------- | --------- | --------------------- |
-| selectedItemsSource | string    | Collection expression |
+| Name                | Datentyp | Possible Values       |
+| ------------------- | -------- | --------------------- |
+| selectedItemsSource | string   | Collection expression |
 
 #### Objects Supported
 
@@ -313,9 +313,9 @@ Specifies the named selection to be used. You must enter the name of a valid nam
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values      |
-| -------------- | --------- | -------------------- |
-| namedSelection | string    | Named selection name |
+| Name           | Datentyp | Possible Values      |
+| -------------- | -------- | -------------------- |
+| namedSelection | string   | Named selection name |
 
 #### Objects Supported
 
