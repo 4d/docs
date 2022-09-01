@@ -1,99 +1,99 @@
 ---
 id: preemptiveWeb
-title: Using preemptive web processes
+title: Uso de procesos web apropiativos
 ---
 
 
-The 4D Web Server allows you to take full advantage of multi-core computers by using preemptive web processes in your applications. You can configure your web-related code, including 4D tags, web database methods or ORDA REST class functions to run simultaneously on as many cores as possible.
+El servidor web de 4D le permite aprovechar al máximo los ordenadores multinúcleo utilizando procesos web apropiativos en sus aplicaciones. Puede configurar su código relacionado con la web, incluyendo las etiquetas 4D, los métodos base Web o las funciones de clase REST de ORDA para que se ejecuten simultáneamente en tantos núcleos como sea posible.
 
-For in-depth information on preemptive process in 4D, please refer to the *Preemptive 4D processes* section in the [*4D Language Reference*](https://doc.4d.com).
+Para obtener información detallada sobre los procesos apropiativos en 4D, consulte la sección *Procesos 4D apropiativos* del [*manual de lenguaje*](https://doc.4d.com).
 
-## Availability of preemptive mode for web processes
+## Disponibilidad del modo apropiativo para los procesos web
 
-The following table indicates whether the preemptive mode is used or is available, depending on the execution context:
+La siguiente tabla indica si el modo apropiativo se utiliza o está disponible, dependiendo del contexto de ejecución:
 
-| 4D Server           | Interpreted ([debugger attached](../Debugging/debugging-remote.md)) | Interpreted (debugger detached) | Compiled      |
-| ------------------- | ------------------------------------------------------------------- | ------------------------------- | ------------- |
-| REST Server         | cooperative                                                         | preemptive                      | preemptive    |
-| Web Server          | cooperative                                                         | *web setting*                   | *web setting* |
-| Web Services Server | cooperative                                                         | *web setting*                   | *web setting* |
+| 4D Server             | Interpretado ([asociado al depurador](../Debugging/debugging-remote.md)) | Interpretado (no asociado al depurador) | Compilado       |
+| --------------------- | ------------------------------------------------------------------------ | --------------------------------------- | --------------- |
+| Servidor REST         | cooperativo                                                              | apropiativo                             | apropiativo     |
+| Servidor Web          | cooperativo                                                              | *parámetro web*                         | *parámetro web* |
+| Servidor Web Services | cooperativo                                                              | *parámetro web*                         | *parámetro web* |
 
-| 4D remote/single-user | Interpreted | Compiled      |
-| --------------------- | ----------- | ------------- |
-| REST Server           | cooperative | preemptive    |
-| Web Server            | cooperative | *web setting* |
-| Web Services Server   | cooperative | *web setting* |
+| 4D remoto/monopuesto  | Interpretado | Compilado       |
+| --------------------- | ------------ | --------------- |
+| Servidor REST         | cooperativo  | apropiativo     |
+| Servidor Web          | cooperativo  | *parámetro web* |
+| Servidor Web Services | cooperativo  | *parámetro web* |
 
-- REST Server: handles [ORDA data model class functions](../REST/ClassFunctions.md)
-- Web Server: handles [web templates](templates.md), [4DACTION and database methods](httpRequests.md)
-- Web Service Server: handles SOAP requests
-- ***web setting*** means that the preemptive mode depends on a setting value:
-    - when [**Scalable sessions**](sessions.md#enabling-sessions) option is selected, the [preemptive mode is automatically used](sessions.md#preemptive-mode) for web processes.
-    - otherwise, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.
-    - regarding Web service processes (server or client), preemptive mode is supported at method level. You just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv19/4D/19/Publishing-a-Web-Service-with-4D.300-5416868.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv19/4D/19/Subscribing-to-a-Web-Service-in-4D.300-5416870.en.html)) and make sure they are confirmed thread-safe by the compiler.
-
-
+- Servidor REST: gestiona las [funciones de clase del modelo de datos ORDA](../REST/ClassFunctions.md)
+- Servidor web: maneja las [plantillas web](templates.md), [4DACTION y los métodos base](httpRequests.md)
+- Servidor de servicios web: gestiona las peticiones SOAP
+- ***web setting*** significa que el modo apropiativo depende de un valor de configuración:
+    - cuando la opción [**sesiones escalables**](sessions.md#enabling-sessions) está seleccionada, el [modo apropiativo se utiliza automáticamente](sessions.md#preemptive-mode) para los procesos web.
+    - de lo contrario, la opción [**Utilizar procesos apropiativos**](webServerConfig.md#use-preemptive-processes) se tiene en cuenta.
+    - en lo que respecta a los procesos de servicios web (servidor o cliente), se soporta el modo apropiativo a nivel del método. Sólo tiene que seleccionar la propiedad " Puede ejecutarse en procesos apropiativos " para los métodos del servidor SOAP publicados (ver [Publicación de un servicio web con 4D](https://doc.4d.com/4Dv19/4D/19/Publishing-a-Web-Service-with-4D.300-5416868.en.html)) o los métodos del cliente proxy (ver [Suscripción a un servicio web en 4D](https://doc.4d.com/4Dv19/4D/19/Subscribing-to-a-Web-Service-in-4D.300-5416870.en.html)) y asegurarse de que el compilador confirme que son hilo seguro.
 
 
-## Writing thread-safe web server code
 
-All 4D code executed by the web server must be thread-safe if you want your web processes to be run in preemptive mode. When the [preemptive mode is enabled](#availability-of-preemptive-mode-for-web-processes), the following parts of the application will be automatically evaluated by the 4D compiler:
 
-*   All web-related database methods:
+## Escribir código servidor web hilo seguro
+
+Todo el código 4D ejecutado por el servidor web debe ser hilo seguro si quiere que sus procesos web se ejecuten en modo apropiativo. Cuando el [modo apropiativo está activo](#availability-of-preemptive-mode-for-web-processes), las siguientes partes de la aplicación serán evaluadas automáticamente por el compilador 4D:
+
+*   Todos los métodos base relacionados con la web:
     *   [`On Web Authentication`](authentication.md#on-web-authentication)
     *   [`On Web Connection`](httpRequests.md#on-web-connection)
     *   [`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method)
-    *   [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) and [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action)
+    *   [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) y [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action)
 
-*   The `compiler_web` project method (regardless of its actual "Execution mode" property);
+*   El método proyecto `compilador_web` (independientemente de su propiedad real "Modo de ejecución");
 
-*   Basically any code processed by the [`PROCESS 4D TAGS`](https://doc.4d.com/4dv19R/help/command/en/page816.html) command in the web context, for example through .shtml pages
+*   Básicamente cualquier código procesado por el comando [`PROCESS 4D TAGS`](https://doc.4d.com/4dv19R/help/command/en/page816.html) en el contexto web, por ejemplo a través de páginas .shtml
 
-*   Any project method with the "Available through 4D tags and URLS (`4DACTION`, etc.)" attribute
+*   Todo método proyecto con el atributo "Disponible a través de etiquetas 4D y URLs (`4DACTION`, etc.)
 
-*   Triggers for tables with "Expose as REST resource" attribute
+*   Triggers para tablas con el atributo "Exponer como recurso REST"
 
-*   [ORDA data model class functions](../REST/ClassFunctions.md) called via REST
+*   [funciones de clase del modelo de datos ORDA](../REST/ClassFunctions.md) llamadas vía REST
 
-For each of these methods and code parts, the compiler will check if the thread-safety rules are respected, and will return errors in case of issues. For more information about thread-safety rules, please refer to the *Writing a thread-safe method* paragraph in the *Processes* chapter of the [4D Language Reference](https://doc.4d.com) manual.
+Para cada uno de estos métodos y partes de código, el compilador comprobará si se respetan las reglas de seguridad de hilos, y devolverá errores en caso de que haya problemas. Para más información sobre las reglas hilo seguro, consulte el párrafo *Escribir un método hilo seguro* en el capítulo *Procesos* del manual de [Lenguaje 4D](https://doc.4d.com).
 
-## Thread-safety of 4D web code
+## Código web 4D hilo seguro
 
-Most of the web-related 4D commands and functions, database methods and URLs are thread-safe and can be used in preemptive mode.
+La mayoría de los comandos y funciones 4D relacionados con la web, los métodos base y las URL son hilo seguro y pueden utilizarse en modo apropiativo.
 
-### 4D commands and database methods
+### Comandos 4D y métodos base
 
-All 4D web-related commands are thread-safe, *i.e.*:
+Todos los comandos 4D relativos a la web son hilo seguro, *es decir*:
 
-*   all commands from the *Web Server* theme,
-*   all commands from the *HTTP Client* theme.
+*   todos los comandos del tema *Servidor Web*,
+*   todos los comandos del tema *Cliente HTTP*.
 
-The web-related database methods are thread-safe and can be used in preemptive mode (see above): `On Web Authentication`, `On Web Connection`, `On REST Authentication`...).
+Los métodos base relacionados con la web son hilo seguro y pueden utilizarse en modo apropiativo (ver arriba): `On Web Authentication`, `On Web Connection`, `On REST Authentication`...).
 
-Of course, the code executed by these methods must also be thread-safe.
+Por supuesto, el código ejecutado por estos métodos también debe ser hilo seguro.
 
 
-### Web Server URLs
+### URLs del servidor web
 
-The following 4D Web Server URLs are thread-safe and can be used in preemptive mode:
+Las siguientes URLs 4D Web Server son hilo seguro y pueden ser utilizadas en modo apropiativo:
 
-*   *4daction/* (the called project method must also be thread-safe)
-*   *4dcgi/* (the called database methods must also be thread-safe)
+*   *4daction/* (el método proyecto llamado también debe ser hilo seguro)
+*   *4dcgi/* (los métodos base llamados también deben ser hilo seguro)
 *   *4dwebtest/*
 *   *4dblank/*
 *   *4dstats/*
 *   *4dhtmlstats/*
 *   *4dcacheclear/*
 *   *rest/*
-*   *4dimgfield/* (generated by `PROCESS 4D TAGS` for web request on picture fields)
-*   *4dimg/* (generated by `PROCESS 4D TAGS` for web request on picture variables)
+*   *4dimgfield/* (generado por `PROCESS 4D TAGS` para la petición web en los campos imagen)
+*   *4dimg/* (generado por `PROCESS 4D TAGS` para la petición web en las variables imagen)
 
-### Preemptive web process icon
+### Icono de proceso web apropiativo
 
-Both the Runtime Explorer and the 4D Server administration window display a specific icon for preemptive web processes:
+Tanto el Explorador de ejecución como la ventana de administración de 4D Server muestran un icono específico para los procesos web apropiativos:
 
-| Process type          | Icon                                        |
-| --------------------- | ------------------------------------------- |
-| Preemptive web method | ![](../assets/en/WebServer/processIcon.png) |
+| Tipo de proceso                  | Icono                                       |
+| -------------------------------- | ------------------------------------------- |
+| Método Web (proceso apropiativo) | ![](../assets/en/WebServer/processIcon.png) |
 
 
