@@ -3,17 +3,17 @@ id: skip
 title: '$skip'
 ---
 
-Starts the entity defined by this number in the collection (*e.g.*, `$skip=10`)
+Démarre l'entité définie par ce numéro dans la collection (par exemple, `$skip=10`)
 
 
 ## Description
 
-`$skip` defines which entity in the collection to start with. By default, the collection sent starts with the first entity. To start with the 10th entity in the collection, pass 10.
+`$skip` définit l'entité de la collection par laquelle commencer. Par défaut, la collection envoyée commence par la première entité. Pour commencer avec la 10e entité de la collection, passez 10.
 
-`$skip`  is generally used in conjunction with [`$top/$limit`]($top_$limit.md) to navigate through an entity collection.
+`$skip` est généralement utilisé avec
 
-## Example
+## Exemple
 
-In the following example, we go to the 20th entity in our entity set:
+[`$top/$limit`]($top_$limit.md) pour naviguer dans une entity collection.
 
  `GET  /rest/Employee/$entityset/CB1BCC603DB0416D939B4ED379277F02?$skip=20`
