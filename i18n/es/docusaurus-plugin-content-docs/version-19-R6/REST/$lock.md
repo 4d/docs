@@ -7,16 +7,16 @@ title: '$lock'
 Locks and unlocks an entity using the [pessimistic mechanism](../ORDA/entities.md#pessimistic-lock).
 
 
-## Syntax
+## Sintaxis
 
-To lock an entity for other sessions and 4D processes:
+Para bloquear una entidad para las otras sesiones y procesos 4D:
 
 ```
 /?$lock=true
 ```
 
 
-To unlock the entity for other sessions and 4D processes:
+Para desbloquear la entidad para las otras sesiones y procesos 4D:
 
 ```
 /?$lock=false
@@ -26,73 +26,73 @@ To unlock the entity for other sessions and 4D processes:
 The [`lockKindText` property](../API/EntityClass.html#lock) is "Locked by session".
 
 
-### Description
+### Descripción
 
 The locks triggered by the REST API are put at the [session](authUsers.md#opening-sessions) level.
 
 A locked entity is seen as *locked* (i.e. lock / unlock / update / delete actions are not possible) by:
 
-- other REST sessions
+- otras sesiones REST
 - 4D processes (client/server, remote datastore, standalone) running on the REST server.
 
-An entity locked by the REST API can only be unlocked:
+Una entidad bloqueada por la API REST sólo puede ser desbloqueada:
 
 - by its locker, i.e. a `/?$lock=false` in the REST session that sets `/?$lock=true`
 - or if the session's [inactivity timeout]($directory.md) is reached (the session is closed).
 
-### Response
+### Respuesta
 
 A `?$lock` request returns a JSON object with `"result"=true` if the lock operation was successful and `"result"=false` if it failed.
 
-The returned "__STATUS" object has the following properties:
+El objeto "__STATUS" devuelto tiene las siguientes propiedades:
 
-| Property     |                | Type    | Description                                                                                                                                                 |
-| ------------ | -------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
-|              |                |         | ***Available only in case of success:***                                                                                                                    |
-| success      |                | boolean | true if the lock action is successful (or if the entity is already locked in the current session), false otherwise (not returned in this case).             |
-|              |                |         | ***Available only in case of error:***                                                                                                                      |
-| status       |                | number  | Error code, see below                                                                                                                                       |
-| statusText   |                | text    | Description of the error, see below                                                                                                                         |
-| lockKind     |                | number  | Lock code                                                                                                                                                   |
-| lockKindText |                | text    | "Locked by session" if locked by a REST session, "Locked by record" if locked by a 4D process                                                               |
-| lockInfo     |                | object  | Information about the lock origin. Returned properties depend on the lock origin (4D process or REST session).                                              |
-|              |                |         | ***Available only for a 4D process lock:***                                                                                                                 |
-|              | task_id        | number  | Process ID                                                                                                                                                  |
-|              | user_name      | text    | Session user name on the machine                                                                                                                            |
-|              | user4d_alias   | text    | Name or alias of the 4D user                                                                                                                                |
-|              | user4d_id      | number  | User id in the 4D database directory                                                                                                                        |
-|              | host_name      | text    | Machine name                                                                                                                                                |
-|              | task_name      | text    | Process name                                                                                                                                                |
-|              | client_version | text    | Version of the client                                                                                                                                       |
-|              |                |         | ***Available only for a REST session lock:***                                                                                                               |
-|              | host           | text    | URL that locked the entity (e.g. "127.0.0.1:8043")                                                                                                          |
-|              | IPAddr         | text    | IP address of the locker (e.g. "127.0.0.1")                                                                                                                 |
-|              | recordNumber   | number  | Record number of the locked record                                                                                                                          |
-|              | userAgent      | text    | userAgent of the locker (e.g. Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
+| Propiedad    |                | Type    | Descripción                                                                                                                                                          |
+| ------------ | -------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|              |                |         | ***Disponible sólo en caso de éxito:***                                                                                                                              |
+| success      |                | boolean | true if the lock action is successful (or if the entity is already locked in the current session), false otherwise (not returned in this case).                      |
+|              |                |         | ***Disponible sólo en caso de error:***                                                                                                                              |
+| status       |                | number  | Código de error, ver abajo                                                                                                                                           |
+| statusText   |                | text    | Descripción del error, ver abajo                                                                                                                                     |
+| lockKind     |                | number  | Código de bloqueo                                                                                                                                                    |
+| lockKindText |                | text    | "Locked by session" if locked by a REST session, "Locked by record" if locked by a 4D process                                                                        |
+| lockInfo     |                | object  | Información sobre el origen del bloqueo. Las propiedades devueltas dependen del origen del bloqueo (proceso 4D o sesión REST).                                       |
+|              |                |         | ***Disponible sólo para un bloqueo por proceso 4D:***                                                                                                                |
+|              | task_id        | number  | ID del Proceso                                                                                                                                                       |
+|              | user_name      | text    | Nombre de usuario de la sesión en la máquina                                                                                                                         |
+|              | user4d_alias   | text    | Nombre o alias del usuario 4D                                                                                                                                        |
+|              | user4d_id      | number  | ID del usuario en el directorio de la base de datos 4D                                                                                                               |
+|              | host_name      | text    | Nombre de la máquina                                                                                                                                                 |
+|              | task_name      | text    | Nombre del proceso                                                                                                                                                   |
+|              | client_version | text    | Versión del cliente                                                                                                                                                  |
+|              |                |         | ***Disponible sólo para un bloqueo por sesión REST:***                                                                                                               |
+|              | host           | text    | URL que bloqueó la entidad (por ejemplo, "127.0.0.1:8043")                                                                                                           |
+|              | IPAddr         | text    | Dirección IP del bloqueo (por ejemplo: "127.0.0.1")                                                                                                                  |
+|              | recordNumber   | number  | Número del registro bloqueado                                                                                                                                        |
+|              | userAgent      | text    | userAgent del origin del bloqueo (ej: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 
 
 The following values can be returned in the *status* and *statusText* properties of the *__STATUS* object in case of error:
 
-| status | statusText                      | Comment                                                                                                           |
-| ------ | ------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| 2      | "Stamp has changed"             | The internal stamp value of the entity does not match the one of the entity stored in the data (optimistic lock). |
-| 3      | "Already locked"                | The entity is locked by a pessimistic lock.                                                                       |
-| 4      | "Other error"                   | A serious error is a low-level database error (e.g. duplicated key), a hardware error, etc.                       |
-| 5      | "Entity does not exist anymore" | The entity no longer exists in the data.                                                                          |
+| status | statusText                      | Comentario                                                                                                               |
+| ------ | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| 2      | "Stamp has changed"             | El valor del sello interno de la entidad no coincide con el de la entidad almacenada en los datos (bloqueo optimista).   |
+| 3      | "Already locked"                | La entidad está bloqueada por un bloqueo pesimista.                                                                      |
+| 4      | "Other error"                   | Un error grave es un error de base de datos de bajo nivel (por ejemplo, una llave duplicada), un error de hardware, etc. |
+| 5      | "Entity does not exist anymore" | La entidad ya no existe en los datos.                                                                                    |
 
 
 
 
-## Example
+## Ejemplo
 
 
-We lock an entity in a first browser:
+Bloqueamos una entidad en un primer navegador:
 
 ```
 GET /rest/Customers(1)/?$lock=true
 ```
 
-**Response:**
+**Respuesta:**
 
 ```
 {
@@ -103,9 +103,9 @@ GET /rest/Customers(1)/?$lock=true
 }
 ```
 
-In a second browser (other session), we send the same request.
+En un segundo navegador (otra sesión), enviamos la misma petición.
 
-**Response:**
+**Respuesta:**
 
 ```
 {
