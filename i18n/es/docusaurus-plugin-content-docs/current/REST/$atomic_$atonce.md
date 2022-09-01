@@ -4,19 +4,19 @@ title: '$atomic/$atonce'
 ---
 
 
-Allows the actions in the REST request to be in a transaction. If there are no errors, the transaction is validated. Otherwise, the transaction is cancelled.
+Permite que las acciones de la solicitud REST estén en una transacción. Si no hay errores, la transacción se valida. En caso contrario, la transacción se cancela.
 
 
-## Description
-When you have multiple actions together, you can use `$atomic/$atonce` to make sure that none of the actions are completed if one of them fails. You can use either `$atomic` or `$atonce`.
+## Descripción
+Cuando tiene varias acciones juntas, puede utilizar `$atomic/$atonce` para asegurarse de que ninguna de las acciones se complete si una de ellas falla. Puede utilizar `$atomic` o `$atonce`.
 
 
-## Example
-We call the following REST request in a transaction.
+## Ejemplo
+Llamamos a la siguiente petición REST en una transacción.
 
  `POST  /rest/Employee?$method=update&$atomic=true`
 
-**POST data**:
+**Datos POST**:
 
 ````
 [
@@ -31,7 +31,7 @@ We call the following REST request in a transaction.
 ]
 ````
 
-We get the following error in the second entity and therefore the first entity is not saved either:
+Obtenemos el siguiente error en la segunda entidad y por lo tanto la primera entidad tampoco se guarda:
 
 ````
 {
@@ -64,4 +64,4 @@ We get the following error in the second entity and therefore the first entity i
     ]
 }
 ````
-> Even though the salary for the first entity has a value of 45000, this value was not saved to the server and the *timestamp (__STAMP)* was not modified either. If we reload the entity, we will see the previous value.
+> Aunque el salario de la primera entidad tiene un valor de 45000, este valor no se guardó en el servidor y tampoco se modificó el *timestamp (__STAMP)*. Si recargamos la entidad, veremos el valor anterior.
