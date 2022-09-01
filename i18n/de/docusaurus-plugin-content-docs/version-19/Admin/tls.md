@@ -9,7 +9,7 @@ All 4D servers can communicate in secured mode through the TLS (Transport Layer 
 - the application server (client-server desktop applications)
 - the SQL server
 
-## Overview
+## Überblick
 
 The TLS protocol (successor of SSL) has been designed to secure data exchanges between two applications —mainly between a web server and a browser. This protocol is widely used and is compatible with most web browsers.
 
@@ -69,7 +69,7 @@ To be able to use the TLS protocol with the server, you must install the **key.p
 - with 4D in remote mode, these files must be located in the client database folder on the remote machine (for more information about the location of this folder, see the `Get 4D folder` command).
 
 You must copy these files manually on the remote machine.
-> Default *key.pem* and *cert.pem* files are provided with 4D. For a higher level of security, we strongly recommend that you replace these files with your own certificates.
+> Default *key.pem* and *cert.pem* files are provided with 4D. Default *key.pem* and *cert.pem* files are provided with 4D. For a higher level of security, we strongly recommend that you replace these files with your own certificates.
 
 ### Enabling TLS
 
