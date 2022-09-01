@@ -3,13 +3,13 @@ id: onRowMoved
 title: On Row Moved
 ---
 
-| Code | Can be called by                                                                                                                                     | Definition                                            |
-| ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| 34   | [List Box of the array type](FormObjects/listbox_overview.md#array-list-boxes) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A list box row is moved by the user via drag and drop |
+| コード | 呼び出し元                                                                                                          | 定義                             |
+| --- | -------------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| 34  | [配列型リストボックス](FormObjects/listbox_overview.md#配列リストボックス) - [リストボックス列](FormObjects/listbox_overview.md#リストボックス列) | リストボックスの行がユーザーのドラッグ＆ドロップで移動された |
 
 
-## Description
+## 詳細
 
-This event is generated when a row of the list box ([array type only](FormObjects/listbox_overview.md#array-list-boxes)) is moved by the user using drag and drop ([if allowed](FormObjects/properties_Action.md#movable-rows). It is not generated if the row is dragged and then dropped in its initial location.
+このイベントは、ユーザーのドラッグ＆ドロップ ([許可されていれば](FormObjects/properties_Action.md#行の移動可)) で、リストボックス ([配列型のみ](FormObjects/listbox_overview.md#配列リストボックス)) の行が移動されたときに生成されます。 ただし、元の場所にドロップされた場合には生成されません。
 
-The `LISTBOX MOVED ROW NUMBER` command returns the new position of the row. 
+`LISTBOX MOVED ROW NUMBER` コマンドは行の新しい位置を返します。 
