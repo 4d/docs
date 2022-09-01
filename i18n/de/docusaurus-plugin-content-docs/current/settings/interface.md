@@ -6,7 +6,7 @@ title: Interface page
  
 You use the Interface page to set various options related to the project interface.
 
-## General
+## Allgemein
 
 This area lets you set various options concerning display.
 
