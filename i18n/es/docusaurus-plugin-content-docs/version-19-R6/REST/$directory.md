@@ -3,27 +3,27 @@ id: directory
 title: '$directory'
 ---
 
-The directory handles user access through REST requests.
+El directorio gestiona el acceso de los usuarios a través de peticiones REST.
 
 
 ## $directory/login
 
-Opens a REST session on your 4D application and logs in the user.
+Abre una sesión REST en su aplicación 4D y conecta al usuario.
 
-### Description
-Use `$directory/login` to open a session in your 4D application through REST and login a user. You can also modify the default 4D session timeout.
+### Descripción
+Utilice `$directory/login` para abrir una sesión en su aplicación 4D a través de REST y conecte un usuario. También puede modificar el tiempo de espera por defecto de la sesión 4D.
 
-All parameters must be passed in **headers** of a POST method:
+Todos los parámetros deben pasarse en **encabezados**de un método POST:
 
-| Header key         | Header value                                                                 |
-| ------------------ | ---------------------------------------------------------------------------- |
-| username-4D        | User - Not mandatory                                                         |
-| password-4D        | Password - Not mandatory                                                     |
-| hashed-password-4D | Hashed password - Not mandatory                                              |
-| session-4D-length  | Session inactivity timeout (minutes). Cannot be less than 60 - Not mandatory |
+| Llave de encabezado | Valor del encabezado                                                                         |
+| ------------------- | -------------------------------------------------------------------------------------------- |
+| username-4D         | Usuario - No obligatorio                                                                     |
+| password-4D         | Contraseña - No obligatorio                                                                  |
+| hashed-password-4D  | Contraseña hashed - No obligatorio                                                           |
+| session-4D-length   | Tiempo de inactividad de la sesión (minutos). No puede ser inferior a 60 - No es obligatorio |
 
 
-### Example
+### Ejemplo
 
 ```4d
 C_TEXT($response;$body_t)
@@ -38,9 +38,9 @@ $hValues{3}:=120
 $httpStatus:=HTTP Request(HTTP POST method;"app.example.com:9000/rest/$directory/login";$body_t;$response;$hKey;$hValues)
 ```
 
-**Result**:
+**Resultado**:
 
-If the login was successful, the result will be:
+Si la conexión fue exitosa, el resultado será:
 
 ```
 {
@@ -48,7 +48,7 @@ If the login was successful, the result will be:
 }
 ```
 
-Otherwise, the response will be:
+De lo contrario, la respuesta será:
 
 ```
 {
