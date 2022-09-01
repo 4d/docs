@@ -6,7 +6,7 @@ title: Interface page
  
 You use the Interface page to set various options related to the project interface.
 
-## General
+## Geral
 
 This area lets you set various options concerning display.
 
@@ -33,7 +33,7 @@ Other options configure the display of various windows in the Application mode.
 
     > This option can be selected on macOS but will be ignored when the application is executed on this platform.
 
-### Appearance
+### Aparência
 
 This menu lets you select the color scheme to use at the main application level. A color scheme defines a global set of interface colors for texts, backgrounds, windows, etc., used in your forms.
 
