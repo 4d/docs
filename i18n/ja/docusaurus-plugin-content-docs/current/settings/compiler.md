@@ -1,6 +1,6 @@
 ---
 id: compiler
-title: Compiler page
+title: コンパイラーページ
 ---
 
-These parameters are detailed in the [**Compiler Settings**](../Project/compiler.md#compiler-settings) section.
+これらのパラメーターは、[**コンパイラー設定**](../Project/compiler.md#コンパイラー設定) で詳しく説明されています。
