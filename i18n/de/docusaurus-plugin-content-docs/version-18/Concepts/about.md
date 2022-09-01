@@ -1,62 +1,62 @@
 ---
 id: about
-title: About the 4D Language
+title: Über die 4D Programmiersprache
 ---
 
-The 4D built-in language, consisting of more than 1300 commands, makes 4D a powerful development tool for database applications on desktop computers. You can use the 4D language for many different tasks—from performing simple calculations to creating complex custom user interfaces. For example, you can:
+Die in 4D integrierte Sprache mit mehr als 1300 Befehlen macht 4D zu einem leistungsstarken Entwicklungswerkzeug für Datenbankanwendungen auf Desktop-Computern. Sie können die 4D Sprache für ganz unterschiedliche Aufgaben verwenden - von der Durchführung einfacher Berechnungen bis hin zum Erstellen komplexer individueller Benutzeroberflächen. Sie können zum Beispiel:
 
-- Programmatically access any of the record management editors (order by, query, and so on),
-- Create and print complex reports and labels with the information from the database,
-- Communicate with other devices,
-- Send emails,
-- Manage documents and web pages,
-- Import and export data between 4D databases and other applications,
-- Incorporate procedures written in other languages into the 4D programming language.
+- Den Zugriff auf jeden Editor zur Datensatzverwaltung (Sortieren, Suchen, usw.) per Programmierung steuern
+- Komplexe Berichte und Etiketten mit den Informationen aus der Datenbank erstellen und drucken,
+- mit anderen Geräten kommunizieren,
+- E-Mails senden,
+- Dokumente und Web Seiten verwalten,
+- Daten zwischen 4D Datenbanken und anderen Applikationen importieren und exportieren,
+- Abläufe, die in anderen Sprachen geschrieben wurden, in die 4D Programmiersprache integrieren.
 
-The flexibility and power of the 4D programming language make it the ideal tool for all levels of users and developers to accomplish a complete range of information management tasks. Novice users can quickly perform calculations. Experienced users without programming experience can customize their databases. Experienced developers can use this powerful programming language to add sophisticated features and capabilities to their databases, including file transfer, communications, monitoring. Developers with programming experience in other languages can add their own commands to the 4D language.
+Die Flexibilität und Leistungsfähigkeit der 4D Programmiersprache macht sie zum idealen Werkzeug für Anwender und Entwickler auf unterschiedlichem Niveau, um eine ganze Reihe von Aufgaben im Informationsmanagement zu erfüllen. Anfänger können schnell Berechnungen durchführen. Erfahrene Benutzer ohne Programmierkenntnisse können ihre Datenbanken selbst anpassen. Erfahrene Entwickler können diese leistungsstarke Programmiersprache nutzen, um ihre Datenbanken mit anspruchsvollen Features und Funktionsweisen auszurüsten, einschließlich Dateiübertragung, Kommunikation und Überwachung. Entwickler mit Programmiererfahrung in anderen Sprachen können der 4D Sprache eigene Befehle hinzufügen.
 
 
-## What is a Language?
+## Was ist eine Sprache?
 
-The 4D language is not very different from the spoken language we use every day. It is a form of communication used to express ideas, inform, and instruct. Like a spoken language, 4D has its own vocabulary, grammar, and syntax; you use it to tell 4D how to manage your database and data.
+Die Sprache von 4D unterscheidet sich kaum von der gesprochenen Sprache im Alltag. Es ist eine Form der Kommunikation, um Ideen auszudrücken, zu informieren und zu instruieren. Wie die gesprochene Sprache hat 4D ein eigenes Vokabular, eine eigene Grammatik und Syntax; damit definieren Sie, wie 4D Ihre Datenbank und Ihre Daten verwalten soll.
 
-You do not need to know everything in the language in order to work effectively with 4D. In order to speak, you do not need to know the entire English language; in fact, you can have a small vocabulary and still be quite eloquent. The 4D language is much the same—you only need to know a small part of the language to become productive, and you can learn the rest as the need arises.
+You do not need to know everything in the language in order to work effectively with 4D. In order to speak, you do not need to know the entire English language; in fact, you can have a small vocabulary and still be quite eloquent. Zum Sprechen müssen Sie auch nicht die gesamte englische Sprache beherrschen; Sie können ein kleines Vokabular haben und trotzdem ziemlich eloquent sein. Die 4D Sprache ist ganz ähnlich — Sie müssen nur einen kleinen Teil der Sprache kennen, um produktiv zu werden, und können den Rest bei Bedarf dazulernen.
 
-## Why use a Language?
+## Warum eine Sprache verwenden?
 
-At first it may seem that there is little need for a programming language in 4D. In the Design environment, 4D provides flexible tools that require no programming to perform a wide variety of data management tasks. Fundamental tasks, such as data entry, queries, sorting, and reporting are handled with ease. In fact, many extra capabilities are available, such as data validation, data entry aids, graphing, and label generation.
+Auf den ersten Blick mag es scheinen, dass es wenig Bedarf für eine Programmiersprache in 4D gibt. At first it may seem that there is little need for a programming language in 4D. In the Design environment, 4D provides flexible tools that require no programming to perform a wide variety of data management tasks. Grundlegende Operationen wie Daten eingeben, Berichte erstellen, Suchen und Sortieren lassen sich mühelos durchführen. Außerdem gibt es viele weitere Funktionalitäten, wie Bestätigen der Daten, Unterstützung bei der Dateneingabe, Generieren von Diagrammen und Etiketten.
 
-Then why do we need a 4D language? Here are some of its uses:
+Wozu brauchen wir also eine 4D Sprache? Hier sind einige Anwendungsbereiche:
 
-- Automate repetitive tasks: These tasks include data modification, generation of complex reports, and unattended completion of long series of operations.
-- Control the user interface: You can manage windows and menus, and control forms and interface objects.
-- Perform sophisticated data management: These tasks include transaction processing, complex data validation, multi-user management, sets, and named selection operations.
-- Control the computer: You can control serial port communications, document management, and error management.
-- Create applications: You can create easy-to-use, customized databases that run in the Application environment.
-- Add functionality to the built-in 4D Web server: build and update dynamic web pages filled with your data.
+- Wiederkehrende Aufgaben automatisieren: beispielsweise Daten aktualisieren, komplexe Berichte erstellen und selbstständige Durchführung langwieriger Operationen.
+- Die Benutzeroberfläche steuern: Fenster und Menüs verwalten, Formulare und Objekte der Oberfläche steuern.
+- Anspruchsvolles Datenmanagement durchführen: beispielsweise Abwicklung von Transaktionen, komplexe Datenvalidierung, Multiuser-Management, Erzeugen von Mengen und Operationen temporärer Auswahlen.
+- Den Computer steuern: Sie können die Kommunikation über die serielle Schnittstelle, die Dokumenten- und die Fehlerverwaltung steuern.
+- Anwendungen erstellen: Sie können leicht-bedienbare, kundenspezifische Datenbanken erstellen, die in der Anwendungsumgebung laufen.
+- Den in 4D integrierten Web Server weiter ausbauen: Dynamische Webseiten, die mit Ihren Daten gefüllt sind, erstellen und aktualisieren.
 
-The language lets you take complete control over the design and operation of your database. 4D provides powerful “generic” editors, but the language lets you customize your database to whatever degree you require.
+Mit der Sprache haben Sie die volle Kontrolle über das Design und die Arbeitsweise Ihrer Datenbank. 4D bietet leistungsstarke "generische" Editoren. Außerdem können Sie mit der Sprache Ihre Datenbank in jedem gewünschten Umfang an Ihre Bedürfnisse anpassen.
 
-## Taking Control of Your Data
+## Kontrolle über Ihre Daten
 
-The 4D language lets you take complete control of your data in a powerful and elegant manner. The language is easy enough for a beginner, and sophisticated enough for an experienced application developer. It provides smooth transitions from built-in database functions to a completely customized database.
+Mit der 4D Sprache können Sie die vollständige Kontrolle über Ihre Daten auf eine leistungsstarke und elegante Weise übernehmen. Sie eignet sich für Einsteiger und für erfahrene Anwendungsentwickler gleichermaßen. Sie bietet einen reibungslosen Übergang von den vorgegebenen Funktionen der Datenbank zu einer vollständig angepassten Datenbank.
 
-The commands in the 4D language provide access to the standard record management editors. For example, when you use the command, you are presented with the Query Editor (which can be accessed in the Design mode using the Query command in the Records menu. You can tell the command to search for explicitly described data. For example, ([People];[People]Last Name="Smith") will find all the people named Smith in your database.
+Die Befehle der 4D Sprache bieten Zugriff auf die standardmäßigen Editoren zur Datenverwaltung. Verwenden Sie zum Beispiel den Befehl `QUERY`, erhalten Sie den Sucheditor (Er lässt sich auch in der Designumgebung über den Befehl Suchen im Menü Datensätze aufrufen). Mit dem Programmierbefehl können Sie nach spezifischen Daten suchen. So findet die Anweisung `QUERY`([People];[People]Last Name="Smith") in Ihrer Datenbank alle Personen mit dem Nachnamen Smith.
 
-The 4D language is very powerful—one command often replaces hundreds or even thousands of lines of code written in traditional computer languages. Surprisingly enough, with this power comes simplicity—commands have plain English names. For example, to perform a query, you use the `QUERY` command; to add a new record, you use the `ADD RECORD` command.
+Die 4D Programmiersprache ist sehr leistungsstark — ein Befehl ersetzt oft hunderte oder sogar tausende Zeilen Code in herkömmlichen Computersprachen. Und gleichzeitig ist die Sprache einfach — denn die Befehle haben ganze englische Namen. Zum Durchführen einer Suche verwenden Sie den Befehl `QUERY`; um einen neuen Datensatz hinzuzufügen, verwenden Sie den Befehl `ADD RECORD`.
 
-The language is designed for you to easily accomplish almost any task. Adding a record, sorting records, searching for data, and similar operations are specified with simple and direct commands. But the language can also control the serial ports, read disk documents, control sophisticated transaction processing, and much more.
+Die Sprache ist so konzipiert, dass Sie fast jede Aufgabe problemlos erfüllen können. Operationen wie einen Datensatz hinzufügen, Datensätze sortieren, nach Daten suchen, u. ä. werden mit einfachen und direkten Befehlen spezifiziert. Die Sprache kann aber genauso serielle Schnittstellen steuern, Dokumente auf der Festplatte lesen, komplexe Übertragungsprozesse kontrollieren u. v. m.
 
-The 4D language accomplishes even the most sophisticated tasks with relative simplicity. Performing these tasks without using the language would be unimaginable for many. Even with the language’s powerful commands, some tasks can be complex and difficult. A tool by itself does not make a task possible; the task itself may be challenging and the tool can only ease the process. For example, a word processor makes writing a book faster and easier, but it will not write the book for you. Using the 4D language will make the process of managing your data easier and will allow you to approach complicated tasks with confidence.
+Die 4D Programmiersprache führt selbst überaus komplexe Aufgaben relativ einfach aus. Die Durchführung solcher Tasks ohne die Programmiersprache wäre für viele schier unvorstellbar. Trotz der leistungsstarken Programmierbefehle können manche Vorgänge umfassend und schwierig sein. Ein Tool allein kann eine Aufgabe nicht realisieren; die Aufgabe selbst kann eine Herausforderung sein und das Tool kann den Prozess nur erleichtern. So lässt sich ein Buch mit einen Textprogramm zwar schneller und einfacher erstellen, das Programm schreibt aber nicht das Buch für Sie. Mit der 4D Sprache lassen sich Ihre Daten leichter verwalten und komplizierte Vorgänge vereinfachen.
 
-## Is it a “Traditional” Computer Language?
+## Ist 4D eine "traditionelle" Computersprache?
 
-If you are familiar with traditional computer languages, this section may be of interest. If not, you may want to skip it.
+Wenn Sie traditionelle Computersprachen kennen, ist dieser Abschnitt sicher interessant für Sie. Wenn nicht, können Sie ihn überspringen.
 
-The 4D language is not a traditional computer language. It is one of the most innovative and flexible languages available on a computer today. It is designed to work the way you do, and not the other way around.
+Die 4D Programmiersprache ist keine traditionelle Computersprache. Sie ist eine der innovativsten und flexibelsten Sprachen, die heutzutage für Rechner zur Verfügung stehen. Sie ist so konzipiert, dass sie nach Ihrer Art und Weise arbeitet und nicht umgekehrt.
 
-To use traditional languages, you must do extensive planning. In fact, planning is one of the major steps in development. 4D allows you to start using the language at any time and in any part of your database. You may start by adding a method to a form, then later add a few more methods. As your database becomes more sophisticated, you might add a project method controlled by a menu. You can use as little or as much of the language as you want. It is not “all or nothing,” as is the case with many other databases.
+Bei traditionellen Sprachen müssen Sie ausführlich planen. Natürlich zählt Planen zu den wichtigsten Schritten beim Entwickeln. Mit 4D können Sie die Sprache zu jeder Zeit und an beliebiger Stelle in Ihrer Datenbank einsetzen. Sie können z. B. einem Formular zuerst eine Methode hinzufügen, und später weitere dazunehmen. Wird Ihre Datenbank komplexer, können Sie eine über Menü gesteuerte Projektmethode anfügen. Sie können so viel oder so wenig von der Sprache einsetzen, wie Sie gerade benötigen. Sie müssen nicht – wie in vielen anderen Datenbanken – nach der Devise "Alles oder nichts" arbeiten.
 
-Traditional languages force you to define and pre-declare objects in formal syntactic terms. In 4D, you simply create an object, such as a button, and use it. 4D automatically manages the object for you. For example, to use a button, you draw it on a form and name it. When the user clicks the button, the language automatically notifies your methods.
+In traditionellen Sprachen sind Sie gezwungen, Formularobjekte in formalen syntaktischen Begriffen zu definieren und vorab zu deklarieren. In 4D erstellen Sie einfach ein Objekt, wie z. B. eine Schaltfläche und verwenden sie. 4D verwaltet das Objekt automatisch für Sie. Sie zeichnen Ihre Schaltfläche in einem Formular und geben ihr einen Namen. Klickt der Benutzer auf die Schaltfläche, ruft die Sprache automatisch die entsprechenden Methoden auf.
 
-Traditional languages are often rigid and inflexible, requiring commands to be entered in a very formal and restrictive style. The 4D language breaks with tradition, and the benefits are yours.
+Traditionelle Sprachen sind oft starr und unflexibel, Befehle müssen in genau vorgeschriebener Form und Stil eingegeben werden. Die 4D Programmiersprache macht Schluss damit und Sie profitieren davon.
