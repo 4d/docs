@@ -1,58 +1,58 @@
 ---
 id: overview
-title: Overview
+title: 概要
 ---
 
-If more than one person uses an application, which is usually the case in client-server architecture or Web interfaces, you need to control access or provide different features according to the connected users. It is also essential to provide security for sensitive data. You can provide this security by assigning passwords to users and creating access groups that have different levels of access to information in the application or to application operations.
+クライアントサーバーアーキテクチャーや Webインターフェースなど、複数のユーザーがアプリケーションを使用する場合は、アクセスを制御したり、接続ユーザーに応じて異なる機能を提供したりする必要が生じます。 機密性の高いデータを保護することは重要です。 ユーザーにパスワードを割り当て、データやアプリケーション操作へのアクセスレベルが異なるアクセスグループを作成することで、これらのデータを保護することができます。
 
-> For an overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
+> 4Dのセキュリティ機能の概要については、[4D Security guide](https://blog.4d.com/4d-security-guide/) をご覧ください。
 
-## Assigning group access
+## 権限を割り当てる
 
-4D’s password access system is based on users and groups. You create users and assign passwords, put users in groups, and assign each group access rights to appropriate parts of the application.
+4D のパスワードアクセスシステムは、ユーザーとグループに基づいています。 ユーザーを作成してパスワードを割り当てたり、ユーザーをグループに入れて、各グループに対しアプリケーションの適切な部分へのアクセス権を割り当てます。
 
-Groups can then be assigned access privileges to specific parts or features of the application (Design access, HTTP server, SQL server, etc.), or any custom part.
+グループには、アクセス可能なメソッドや、HTTPサーバー、SQLサーバーなど、任意の機能へのアクセス権が割り当てられます。
 
-The following example shows Design and Runtime explorer access rights being assigned to the "Devs" group:
+次の図は、デザインおよびランタイムエクスプローラーアクセス権を "Devs" グループに割り当てている様子を表しています (データベース設定の "セキュリティ" タブ):
 
 ![](../assets/en/Users/Access1.png)
 
-## Activating access control
+## アクセスシステムを起動する
 
-You initiate the 4D password access control system in client-server by **assigning a password to the Designer**.
+クライアントサーバーにおいて、4D のパスワードアクセスシステムを起動するには、**デザイナー (Designer) にパスワードを割り当て** ます。
 
-Until you give the Designer a password, all application access are done with the Designer's access rights, even if you have set up users and groups (when the application opens, no ID is required). Any part of the application can be opened.
+ユーザー＆グループを作成したとしても、デザイナーにパスワードが指定されるまでは、すべてのアプリケーションアクセスがデザイナーアクセス権でおこなわれます (アプリケーションを開く際に ID を求められません)。 つまり、アプリケーションのあらゆる部分を開くことができます。
 
-When a password is assigned to the Designer, all the access privileges take effect. In order to connect to the application, remote users must enter a password.
+デザイナーにパスワードが指定されると、すべてのアクセス権が有効になります。 リモートユーザーがアプリケーションを開くには、パスワードを入力しなければなりません。
 
-To disable the password access system, you just need to remove the Designer password.
+パスワードアクセスシステムを無効にするには、デザイナーのパスワードを削除します。
 
-## Users and groups in project architecture
+## プロジェクトアーキテクチャーにおけるユーザー＆グループ
 
-In project applications (.4DProject or .4dz files), 4D users and groups can be configured in both single-user and client-server environments. However, access control is only effective with 4D Server. The following table lists the main users and groups features and their availability:
+プロジェクトアプリケーション (.4DProject および .4dz ファイル) では、シングルユーザーおよびクライアントサーバー環境の両方でユーザーとグループを設定することができます。 ただし、アクセスシステムは 4D Server でのみ有効です。 次の表は、主なユーザーとグループの機能と、それらが利用かどうかを一覧に示します:
 
-|                                                               | 4D (single-user)             | 4D Server |
-| ------------------------------------------------------------- | ---------------------------- | --------- |
-| Adding/editing users and groups                               | yes                          | yes       |
-| Assigning user/group access to servers                        | yes                          | yes       |
-| User identification                                           | no (all users are Designer)  | yes       |
-| Access control once the Designer has been assigned a password | no (all access are Designer) | yes       |
+|                              | 4D (シングルユーザー)        | 4D Server |
+| ---------------------------- | -------------------- | --------- |
+| ユーザーとグループの追加/編集              | ◯                    | ◯         |
+| ユーザー/グループにサーバーアクセスを割り振る      | ◯                    | ◯         |
+| ユーザー認証                       | × (すべてのユーザーがデザイナーです) | ◯         |
+| デザイナーへのパスワード設定によるアクセスシステムの起動 | × (すべてのアクセスがデザイナーです) | ◯         |
 
-## Toolbox editor
+## ツールボックス
 
-The editors for users and groups are located in the toolbox of 4D. These editors can be used to create both users and groups, assign passwords to users, place users in groups, etc.
+ユーザーとグループのエディターは 4Dのツールボックスにあります。 ユーザーとグループを作成し、ユーザーにパスワードを設定し、ユーザーをグループに所属させるといった操作はこのエディターにて可能です。
 
 ![](../assets/en/Users/editor.png)
 
-> Users and groups editor can be displayed at runtime using the [EDIT ACCESS](https://doc.4d.com/4Dv18/4D/18/EDIT-ACCESS.301-4504687.en.html) command. The whole users and groups configuration can also be edited during application execution using 4D language commands of the [Users and Groups](https://doc.4d.com/4Dv18R3/4D/18-R3/Users-and-Groups.201-4900438.en.html) theme.
+> ランタイムにおいてユーザーとグループのエディターを表示させるには [EDIT ACCESS](https://doc.4d.com/4Dv18/4D/18/EDIT-ACCESS.301-4504687.ja.html) コマンドを使用します。 Users and groups editor can be displayed at runtime using the [EDIT ACCESS](https://doc.4d.com/4Dv18/4D/18/EDIT-ACCESS.301-4504687.en.html) command.
 
-## Directory.json file
+## Directory.json ファイル
 
-Users, groups, as well as their access rights are stored in a specific project file named **directory.json**.
+ユーザー、グループ、およびそれらのアクセス権は、**directory.json** という名称の専用のプロジェクトファイルに保存されます。
 
-This file can be stored at the following locations:
+このフォルダーは次の場所に保存することができます:
 
-- in the user settings folder, i.e. in the "Settings" folder at the same level as the "Project" folder. These settings are used by default for the application.
-- in the data settings folder,  i.e. in the "Settings" folder in the "Data" folder. If a **directory.json** file is present at this location, it takes priority over the file in the user settings folder. This feature allows you to define custom/local Users and Groups configurations. The custom configuration will left untouched by an application upgrade.
+- ユーザー設定フォルダー (つまり "Project" フォルダーと同階層にある "Settings" フォルダー) 内。 これらの設定はアプリケーションによりデフォルトで使用されます。
+- データ設定フォルダー (つまり "Data" フォルダーの中の "Settings" フォルダー) 内。 **directory.json** ファイルがこの場所に保存されている場合、ユーザー設定フォルダーのファイルよりも優先されます。 この機能により、カスタム/ローカルなユーザー＆グループ設定を定義することができます。 アプリケーションをアップグレードしても、カスタム設定はそのままです。
 
-> If 4D password access control is not enabled, the **directory.json** is not created.
+> 4Dパスワードとアクセスコントロールが有効化されていない場合、**directory.json** ファイルは生成されません。
