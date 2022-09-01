@@ -4,30 +4,30 @@ title: '$queryplan'
 ---
 
 
-Returns the query as it was passed to 4D Server (*e.g.*, `$queryplan=true`)
+Devuelve la petición tal y como se pasó a 4D Server (*por ejemplo, *, `$queryplan=true`)
 
-## Description
-$queryplan returns the query plan as it was passed to 4D Server.
+## Descripción
+$queryplan devuelve el plan de la petición tal y como se pasó a 4D Server.
 
-| Property | Type   | Description                                                                                 |
-| -------- | ------ | ------------------------------------------------------------------------------------------- |
-| item     | String | Actual query executed                                                                       |
-| subquery | Array  | If there is a subquery, an additional object containing an item property (as the one above) |
+| Propiedad | Type   | Descripción                                                                                           |
+| --------- | ------ | ----------------------------------------------------------------------------------------------------- |
+| item      | String | Petición ejecutada                                                                                    |
+| subquery  | Array  | Si hay una subconsulta, un objeto adicional que contiene una propiedad de elemento (como la anterior) |
 
-For more information about query plans, refer to [queryPlan and queryPath](genInfo.md#querypath-and-queryplan).
+Para más información sobre los planes de petición, consulte [queryPlan y queryPath](genInfo.md#querypath-and-queryplan).
 
-## Example
-If you pass the following query:
+## Ejemplo
+Si pasas la siguiente petición:
 
  `GET  /rest/People/$filter="employer.name=acme AND lastName=Jones"&$queryplan=true`
 
-#### Response:
+#### Respuesta:
 
 ```
 __queryPlan: {
     And: [
         {
-            item: "Join on Table : Company : People.employer = Company.ID",
+            item: "Join on Table : Company : People.employer = Company. ID",
             subquery: [
                 {
                     item: "Company.name = acme"
