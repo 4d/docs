@@ -3,62 +3,62 @@ id: dataClass
 title: dataClass
 ---
 
-Dataclass names can be used directly in the REST requests to work with entities and entity selections, or class functions of the dataclass.
+Los nombres de dataclass pueden utilizarse directamente en las peticiones REST para trabajar con entidades, selecciones de entidades o funciones de clase de la dataclass.
 
-## Available syntaxes
+## Sintaxis disponible
 
-| Syntax                                                                             | Example                                  | Description                                                                     |
-| ---------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------- |
-| [**{dataClass}**](#dataClass)                                                      | `/Employee`                              | Returns all the data (by default the first 100 entities) for the dataclass      |
-| [**{dataClass}({key})**](#dataclasskey)                                            | `/Employee(22)`                          | Returns the data for the specific entity defined by the dataclass's primary key |
-| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)                     | `/Employee:firstName(John)`              | Returns the data for one entity in which the attribute's value is defined       |
-| [**{dataClass}/{DataClassClassFunction}**](ClassFunctions.md#function-calls)       | `/City/getCity`                          | Executes a dataclass class function                                             |
-| [**{dataClass}({EntitySelectionClassFunction}**](ClassFunctions.md#function-calls) | `/City/getPopulation/?$filter="ID<3"` | Executes an entity selection class function                                     |
-| [**{dataClass}({key})/{EntityClassFunction}**](ClassFunctions.md#function-calls)   | `City(2)/getPopulation`                  | Executes an entity class function                                               |
+| Sintaxis                                                                           | Ejemplo                                  | Descripción                                                                                     |
+| ---------------------------------------------------------------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| [**{dataClass}**](#dataClass)                                                      | `/Employee`                              | Devuelve todos los datos (por defecto las 100 primeras entidades) de la clase de datos          |
+| [**{dataClass}({key})**](#dataclasskey)                                            | `/Employee(22)`                          | Devuelve los datos de la entidad específica definida por la llave primaria de la clase de datos |
+| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)                     | `/Employee:firstName(John)`              | Devuelve los datos de una entidad en la que está definido el valor del atributo                 |
+| [**{dataClass}/{DataClassClassFunction}**](ClassFunctions.md#function-calls)       | `/City/getCity`                          | Ejecuta una función de clase de una dataclass                                                   |
+| [**{dataClass}({EntitySelectionClassFunction}**](ClassFunctions.md#function-calls) | `/City/getPopulation/?$filter="ID<3"` | Ejecuta una función de clase de una selección de entidades                                      |
+| [**{dataClass}({key})/{EntityClassFunction}**](ClassFunctions.md#function-calls)   | `City(2)/getPopulation`                  | Ejecuta una función de clase de una entidad                                                     |
 
-> Function calls are detailed in the [Calling ORDA class functions](ClassFunctions.md) section.
+> Las llamadas a las funciones se detallan en la sección [Llamar las funciones de la clase ORDA](ClassFunctions.md).
 
 
 
 ## {dataClass}
 
-Returns all the data (by default the first 100 entities) for a specific dataclass (*e.g.*, `Company`)
+Devuelve todos los datos (por defecto las 100 primeras entidades) para una clase de datos específica (*por ejemplo*, `Company`)
 
-### Description
+### Descripción
 
-When you call this parameter in your REST request, the first 100 entities are returned unless you have specified a value using [`$top/$limit`]($top_$limit.md).
+Cuando se llama a este parámetro en la petición REST, se devuelven las 100 primeras entidades, a menos que se haya especificado un valor con [`$top/$limit`]($top_$limit.md).
 
-Here is a description of the data returned:
+A continuación se describen los datos devueltos:
 
-| Property      | Type       | Description                                                                                                                                                                                     |
-| ------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| __entityModel | String     | Name of the dataclass.                                                                                                                                                                          |
-| __COUNT       | Number     | Number of entities in the dataclass.                                                                                                                                                            |
-| __SENT        | Number     | Number of entities sent by the REST request. This number can be the total number of entities if it is less than the value defined by `$top/$limit`.                                             |
-| __FIRST       | Number     | Entity number that the selection starts at. Either 0 by default or the value defined by `$skip`.                                                                                                |
-| __ENTITIES    | Collection | This collection of objects contains an object for each entity with all its attributes. All relational attributes are returned as objects with a URI to obtain information regarding the parent. |
+| Propiedad     | Type       | Descripción                                                                                                                                                                                             |
+| ------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| __entityModel | String     | Nombre de la dataclass.                                                                                                                                                                                 |
+| __COUNT       | Number     | Número de entidades en la clase de datos.                                                                                                                                                               |
+| __SENT        | Number     | Número de entidades enviadas por la petición REST. Este número puede ser el número total de entidades si es menor que el valor definido por `$top/$limit`.                                              |
+| __FIRST       | Number     | Número de entidad en la que comienza la selección. O bien 0 por defecto o el valor definido por `$skip`.                                                                                                |
+| __ENTITIES    | Collection | Esta colección de objetos contiene un objeto para cada entidad con todos sus atributos. Todos los atributos relacionales se devuelven como objetos con una URI para obtener información sobre el padre. |
 
-Each entity contains the following properties:
+Cada entidad contiene las siguientes propiedades:
 
-| Property    | Type   | Description                                                                                                |
-| ----------- | ------ | ---------------------------------------------------------------------------------------------------------- |
-| __KEY       | String | Value of the primary key defined for the dataclass.                                                        |
-| __TIMESTAMP | Date   | Timestamp of the last modification of the entity                                                           |
-| __STAMP     | Number | Internal stamp that is needed when you modify any of the values in the entity when using `$method=update`. |
+| Propiedad   | Type   | Descripción                                                                                                        |
+| ----------- | ------ | ------------------------------------------------------------------------------------------------------------------ |
+| __KEY       | String | Valor de la llave primaria definida para la clase de datos.                                                        |
+| __TIMESTAMP | Fecha  | Marca de tiempo de la última modificación de la entidad                                                            |
+| __STAMP     | Number | Sello interno que se necesita cuando se modifica alguno de los valores de la entidad al utilizar `$method=update`. |
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
+Si quiere especificar qué atributos quiere devolver, defínalos utilizando la siguiente sintaxis [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). Por ejemplo:
 
  `GET  /rest/Company/name,address`
 
 
 
-### Example
+### Ejemplo
 
-Return all the data for a specific dataclass.
+Devuelve todos los datos de una clase de datos específica.
 
  `GET  /rest/Company`
 
-**Result**:
+**Resultado**:
 
 ````
 {
@@ -140,29 +140,29 @@ Return all the data for a specific dataclass.
 
 ## {dataClass}({key})
 
-Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company(22) or Company("IT0911AB2200")`
+Devuelve los datos de la entidad específica definida por la llave primaria de la clase de datos, *p. ej.*, `Company(22) o Company("IT0911AB2200")`
 
-### Description
+### Descripción
 
-By passing the dataclass and a key, you can retrieve all the public information for that entity. The key is the value in the attribute defined as the Primary Key for your dataclass. For more information about defining a primary key, refer to the **Modifying the Primary Key** section in the **Data Model Editor**.
+Pasando la clase de datos y una llave, se puede recuperar toda la información pública de esa entidad. Pasando la clase de datos y una llave, se puede recuperar toda la información pública de esa entidad. Para más información sobre la definición de una llave primaria, consulte la sección **Modifying the Primary Key** en el **Editor del modelo de datos**.
 
-For more information about the data returned, refer to [{DataStoreClass}](#datastoreclass).
+Para más información sobre los datos devueltos, consulte [{DataStoreClass}](#datastoreclass).
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
+Si quiere especificar qué atributos quiere devolver, defínalos utilizando la siguiente sintaxis [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). Por ejemplo:
 
  `GET  /rest/Company(1)/name,address`
 
-If you want to expand a relation attribute using `$expand`, you do so by specifying it as shown below:
+Si desea expandir un atributo de relación utilizando `$expand`, lo hará especificándolo como se muestra a continuación:
 
  `GET  /rest/Company(1)/name,address,staff?$expand=staff`
 
-### Example
+### Ejemplo
 
-The following request returns all the public data in the Company dataclass whose key is 1.
+La siguiente petición devuelve todos los datos públicos de la clase de datos Company cuya llave es 1.
 
  `GET  /rest/Company(1)`
 
-**Result**:
+**Resultado**:
 
 ````
 {
@@ -189,25 +189,25 @@ The following request returns all the public data in the Company dataclass whose
 
 ## {dataClass}:{attribute}(value)
 
-Returns the data for one entity in which the attribute's value is defined
+Devuelve los datos de una entidad en la que está definido el valor del atributo
 
-### Description
+### Descripción
 
-By passing the *dataClass* and an *attribute* along with a value, you can retrieve all the public information for that entity. The value is a unique value for attribute, but is not the primary key.
+Pasando la *clase de datos* y un *atributo* junto con un valor, se puede recuperar toda la información pública de esa entidad. El valor es un valor único para el atributo, pero no es la llave primaria.
 
  `GET  /rest/Company:companyCode(Acme001)`
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
+Si quiere especificar qué atributos quiere devolver, defínalos utilizando la siguiente sintaxis [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). Por ejemplo:
 
  `GET  /rest/Company:companyCode(Acme001)/name,address`
 
-If you want to use a relation attribute using [$attributes]($attributes.md), you do so by specifying it as shown below:
+Si desea utilizar un atributo relacional utilizando [$attributes.md">]($attributes.md), lo hará especificándolo como se muestra a continuación:
 
  `GET  /rest/Company:companyCode(Acme001)?$attributes=name,address,staff.name`
 
-### Example
+### Ejemplo
 
-The following request returns all the public data of the employee named "Jones".
+La siguiente petición devuelve todos los datos públicos del empleado llamado "Jones".
 
  `GET  /rest/Employee:lastname(Jones)`
 
