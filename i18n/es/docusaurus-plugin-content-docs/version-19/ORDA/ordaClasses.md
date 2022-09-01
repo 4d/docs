@@ -1,13 +1,13 @@
 ---
 id: ordaClasses
-title: Data Model Classes
+title: Clases del modelo de datos
 ---
 
 
 
 ORDA allows you to create high-level class functions above the data model. This allows you to write business-oriented code and "publish" it just like an API. Datastore, dataclasses, entity selections, and entities are all available as class objects that can contain functions.
 
-For example, you could create a `getNextWithHigherSalary()` function in the `EmployeeEntity` class to return employees with a salary higher than the selected one. It would be as simple as calling:
+For example, you could create a `getNextWithHigherSalary()` function in the `EmployeeEntity` class to return employees with a salary higher than the selected one. Sería tan sencillo como llamar:
 
 ```4d
 $nextHigh:=ds.Employee(1).getNextWithHigherSalary()
@@ -16,7 +16,7 @@ $nextHigh:=ds.Employee(1).getNextWithHigherSalary()
 Developers can not only use these functions in local datastores, but also in client/server and remote architectures:
 
 ```4d
- //$cityManager is the reference of a remote datastore
+ //$cityManager es la referencia de un datastore remoto
 Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 ```
 
@@ -38,11 +38,11 @@ ORDA provides **generic classes** exposed through the **`4D`** [class store](Con
 
 ![](../assets/en/ORDA/ClassDiagramImage.png)
 
-All ORDA data model classes are exposed as properties of the **`cs`** class store. The following ORDA classes are available:
+All ORDA data model classes are exposed as properties of the **`cs`** class store. Las clases ORDA siguientes están disponibles:
 
-| Class                       | Example name         | Instantiated by                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| Class                       | Nombre del ejemplo   | Instanciado por                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | --------------------------- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| cs.DataStore                | cs.DataStore         | [`ds`](API/DataStoreClass.md#ds) command                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| cs.DataStore                | cs.DataStore         | comando [`ds`](API/DataStoreClass.md#ds)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | cs.*DataClassName*          | cs.Employee          | [`dataStore.DataClassName`](API/DataStoreClass.md#dataclassname), `dataStore["DataClassName"]`                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | cs.*DataClassName*Entity    | cs.EmployeeEntity    | [`dataClass.get()`](API/DataClassClass.md#get), [`dataClass.new()`](API/DataClassClass.md#new), [`entitySelection.first()`](API/EntitySelectionClass.md#first), [`entitySelection.last()`](API/EntitySelectionClass.md#last), [`entity.previous()`](API/EntityClass.md#previous), [`entity.next()`](API/EntityClass.md#next), [`entity.first()`](API/EntityClass.md#first), [`entity.last()`](API/EntityClass.md#last), [`entity.clone()`](API/EntityClass.md#clone)                                                                                                                                                                                                                                                                                                                                                                                                   |
 | cs.*DataClassName*Selection | cs.EmployeeSelection | [`dataClass.query()`](API/DataClassClass.md#query), [`entitySelection.query()`](API/EntitySelectionClass.md#query), [`dataClass.all()`](API/DataClassClass.md#all), [`dataClass.fromCollection()`](API/DataClassClass.md#fromcollection), [`dataClass.newSelection()`](API/DataClassClass.md#newselection), [`entitySelection.drop()`](API/EntitySelectionClass.md#drop), [`entity.getSelection()`](API/EntityClass.md#getselection), [`entitySelection.and()`](API/EntitySelectionClass.md#and), [`entitySelection.minus()`](API/EntitySelectionClass.md#minus), [`entitySelection.or()`](API/EntitySelectionClass.md#or), [`entitySelection.orderBy()`](API/EntitySelectionClass.md#or), [`entitySelection.orderByFormula()`](API/EntitySelectionClass.md#orderbyformula), [`entitySelection.slice()`](API/EntitySelectionClass.md#slice), `Create entity selection` |
@@ -56,25 +56,25 @@ Also, object instances from ORDA data model user classes benefit from their pare
 - an Entity selection class object can call functions from the [ORDA Entity selection generic class](API/EntitySelectionClass.md).
 - an Entity class object can call functions from the [ORDA Entity generic class](API/EntityClass.md).
 
-## Class Description
+## Descripción de la clase
 
-<details><summary>History</summary>
+<details><summary>Histórico</summary>
 
-| Version | Changes                                                                                            |
-| ------- | -------------------------------------------------------------------------------------------------- |
-| v18 R5  | Data model class functions are not exposed to REST by default. New `exposed` and `local` keywords. |
+| Versión | Modificaciones                                                                                            |
+| ------- | --------------------------------------------------------------------------------------------------------- |
+| v18 R5  | Data model class functions are not exposed to REST by default. Nuevas palabras clave `exposed` y `local`. |
 </details>
 
-### DataStore Class
+### Clase DataStore
 
 A 4D database exposes its own DataStore class in the `cs` class store.
 
 - **Extends**: 4D.DataStoreImplementation
-- **Class name**: cs.DataStore
+- **Nombre de clase**: cs.DataStore
 
 You can create functions in the DataStore class that will be available through the `ds` object.
 
-#### Example
+#### Ejemplo
 
 ```4d  
 // cs.DataStore class
@@ -85,21 +85,21 @@ Function getDesc
   $0:="Database exposing employees and their companies"
 ```
 
-This function can then be called:
+Esta función puede ser llamada:
 
 ```4d
 $desc:=ds.getDesc() //"Database exposing..."
 ```
 
-### DataClass Class
+### Clase DataClass
 
 Each table exposed with ORDA offers a DataClass class in the `cs` class store.
 
 - **Extends**: 4D.DataClass
 - **Class name**: cs.*DataClassName* (where *DataClassName* is the table name)
-- **Example name**: cs.Employee
+- **Ejemplo**: cs.Employee
 
-#### Example
+#### Ejemplo
 
 ```4D
 // cs.Company class
@@ -122,13 +122,13 @@ Then you can get an entity selection of the "best" companies by executing:
  $best:=ds.Company.GetBestOnes()
 ```
 
-#### Example with a remote datastore
+#### Ejemplo con un datastore remoto
 
 The following *City* catalog is exposed in a remote datastore (partial view):
 
 ![](../assets/en/ORDA/Orda_example.png)
 
-The `City Class` provides an API:
+La clase `City` ofrece una API:
 
 ```4d  
 // cs.City class
@@ -149,7 +149,7 @@ Function getCityName()
  End if
 ```
 
-The client application opens a session on the remote datastore:
+La aplicación cliente abre una sesión en el datastore remoto:
 
 ```4d
 $cityManager:=Open datastore(New object("hostname";"127.0.0.1:8111");"CityManager")
@@ -162,15 +162,15 @@ Form.comp.city:=$cityManager.City.getCityName(Form.comp.zipcode)
 
 ```
 
-### EntitySelection Class
+### Clase EntitySelection
 
 Each table exposed with ORDA offers an EntitySelection class in the `cs` class store.
 
 - **Extends**: 4D.EntitySelection
 - **Class name**: *DataClassName*Selection (where *DataClassName* is the table name)
-- **Example name**: cs.EmployeeSelection
+- **Ejemplo**: cs.EmployeeSelection
 
-#### Example
+#### Ejemplo
 
 ```4d
 // cs.EmployeeSelection class
@@ -198,9 +198,9 @@ Each table exposed with ORDA offers an Entity class in the `cs` class store.
 
 - **Extends**: 4D.Entity
 - **Class name**: *DataClassName*Entity (where *DataClassName* is the table name)
-- **Example name**: cs.CityEntity
+- **Ejemplo**: cs.CityEntity
 
-#### Example
+#### Ejemplo
 
 ```4d
 // cs.CityEntity class
@@ -217,7 +217,7 @@ C_BOOLEAN($0)
 $0:=This.getPopulation()>50000
 ```
 
-Then you can call this code:
+Luego puede llamar este código:
 
 ```4d
 var $cityManager; $city : Object
@@ -230,13 +230,13 @@ If ($city.isBigCity())
 End if
 ```
 
-### Specific rules
+### Reglas específicas
 
 When creating or editing data model classes, you must pay attention to the following rules:
 
-- Since they are used to define automatic DataClass class names in the **cs** [class store](Concepts/classes.md#class-stores), 4D tables must be named in order to avoid any conflict in the **cs** namespace. In particular:
+- Since they are used to define automatic DataClass class names in the **cs** [class store](Concepts/classes.md#class-stores), 4D tables must be named in order to avoid any conflict in the **cs** namespace. En particular:
   - Do not give the same name to a 4D table and to a [user class name](Concepts/classes.md#class-names). If such a case occurs, the constructor of the user class becomes unusable (a warning is returned by the compiler).
-  - Do not use a reserved name for a 4D table (e.g., "DataClass").
+  - No utilice un nombre reservado para una tabla 4D (por ejemplo, "DataClass").
 
 - When defining a class, make sure the [`Class extends`](Concepts/classes.md#class-extends-classnameclass) statement exactly matches the parent class name (remember that they're case sensitive). For example, `Class extends EntitySelection` for an entity selection class.
 
@@ -244,20 +244,20 @@ When creating or editing data model classes, you must pay attention to the follo
 
 - You cannot override a native ORDA class function from the **`4D`** [class store](Concepts/classes.md#class-stores) with a data model user class function.
 
-## Exposed vs non-exposed functions
+## Funciones expuestas y no expuestas
 
 For security reasons, all of your data model class functions are **not exposed** (i.e., private) by default to remote requests.
 
-Remote requests include:
+Las peticiones remotas incluyen:
 
 - Requests sent by remote 4D applications connected through `Open datastore`
-- REST requests
+- Peticiones REST
 
-> Regular 4D client/server requests are not impacted. Data model class functions are always available in this architecture.
+> Las peticiones cliente/servidor 4D estándar no se ven afectadas. Data model class functions are always available in this architecture.
 
 A function that is not exposed is not available on remote applications and cannot be called on any object instance from a REST request. If a remote application tries to access a non-exposed function, the "-10729 - Unknown member method" error is returned.
 
-To allow a data model class function to be called by a remote request, you must explicitly declare it using the `exposed` keyword. The formal syntax is:
+To allow a data model class function to be called by a remote request, you must explicitly declare it using the `exposed` keyword. La sintaxis formal es:
 
 ```4d  
 // declare an exposed function
@@ -266,7 +266,7 @@ exposed Function <functionName>
 
 > The `exposed` keyword can only be used with Data model class functions. If used with a [regular user class](Concepts/classes.md) function, it is ignored and an error is returned by the compiler.
 
-### Example
+### Ejemplo
 
 You want an exposed function to use a private function in a dataclass class:
 
@@ -291,7 +291,7 @@ $id:=...
 
 ```
 
-When the code is called:
+Cuando se llama al código:
 
 ```4d
 var $remoteDS; $student; $status : Object
@@ -304,22 +304,22 @@ $status:=$remoteDS.Schools.registerNewStudent($student) // OK
 $id:=$remoteDS.Schools.computeIDNumber() // Error "Unknown member method" 
 ```
 
-## Local functions
+## Funciones locales
 
 By default in client/server architecture, ORDA data model functions are executed **on the server**. It usually provides the best performance since only the function request and the result are sent over the network.
 
-However, it could happen that a function is fully executable on the client side (e.g., when it processes data that's already in the local cache). In this case, you can save requests to the server and thus, enhance the application performance by inserting the `local` keyword. The formal syntax is:
+However, it could happen that a function is fully executable on the client side (e.g., when it processes data that's already in the local cache). In this case, you can save requests to the server and thus, enhance the application performance by inserting the `local` keyword. La sintaxis formal es:
 
 ```4d  
 // declare a function to execute locally in client/server
 local Function <functionName>   
 ```
 
-With this keyword, the function will always be executed on the client side.
+Con esta palabra clave, la función se ejecutará siempre del lado del cliente.
 
 > The `local` keyword can only be used with data model class functions. If used with a [regular user class](Concepts/classes.md) function, it is ignored and an error is returned by the compiler.
 
-Note that the function will work even if it eventually requires to access the server (for example if the ORDA cache is expired). However, it is highly recommended to make sure that the local function does not access data on the server, otherwise the local execution could not bring any performance benefit. A local function that generates many requests to the server is less efficient than a function executed on the server that would only return the resulting values. For example, consider the following function on the Schools entity class:
+Note that the function will work even if it eventually requires to access the server (for example if the ORDA cache is expired). However, it is highly recommended to make sure that the local function does not access data on the server, otherwise the local execution could not bring any performance benefit. A local function that generates many requests to the server is less efficient than a function executed on the server that would only return the resulting values. Por ejemplo, considere la siguiente función en la entidad Schools:
 
 ```4d
 // Get the youngest students  
@@ -332,27 +332,55 @@ local Function getYoungest
 - **without** the `local` keyword, the result is given using a single request
 - **with** the `local` keyword, 4 requests are necessary: one to get the Schools entity students, one for the `query()`, one for the `orderBy()`, and one for the `slice()`. In this example, using the `local` keyword is inappropriate.
 
-### Examples
+### Ejemplos
 
-#### Calculating age
+#### Cálculo de la edad
 
 Given an entity with a *birthDate* attribute, we want to define an `age()` function that would be called in a list box. This function can be executed on the client, which avoids triggering a request to the server for each line of the list box.
 
-On the *StudentsEntity* class:
+En la classe *StudentsEntity*:
 
 ```4d
-Class extends Entity
+Function query age($event : Object)->$result : Object
 
-local Function age() -> $age: Variant
+    var $operator : Text
+    var $age : Integer
+    var $_ages : Collection
 
-If (This.birthDate#!00-00-00!)
-    $age:=Year of(Current date)-Year of(This.birthDate)
-Else 
-    $age:=Null
-End if
+    $operator:=$event.operator
+
+    $age:=Num($event.value)  // integer
+    $d1:=Add to date(Current date; -$age-1; 0; 0)
+    $d2:=Add to date($d1; 1; 0; 0)
+    $parameters:=New collection($d1; $d2)
+
+    Case of 
+
+        : ($operator="==")
+            $query:="birthday > :1 and birthday <= :2"  // after d1 and before or egal d2
+
+        : ($operator="===") 
+
+            $query:="birthday = :2"  // d2 = second calculated date (= birthday date)
+
+        : ($operator=">=")
+            $query:="birthday <= :2"
+
+            //...
+    other operators           
+
+
+    End case 
+
+
+    If (Undefined($event.result))
+        $result:=New object
+        $result.query:=$query
+        $result.parameters:=$parameters
+    End if
 ```
 
-#### Checking attributes
+#### Verificación de los atributos
 
 We want to check the consistency of the attributes of an entity loaded on the client and updated by the user before requesting the server to save them.
 
@@ -375,7 +403,7 @@ Case of
 End case
 ```
 
-Calling code:
+Código de llamada:
 
 ```4d
 var $status : Object
@@ -387,33 +415,33 @@ If ($status.success)
 End if
 ```
 
-## Support in 4D projects
+## Soporte en proyectos 4D
 
-### Class files
+### Archivos de clase (class files)
 
 An ORDA data model user class is defined by adding, at the [same location as regular class files](Concepts/classes.md#class-files) (*i.e.* in the `/Sources/Classes` folder of the project folder), a .4dm file with the name of the class. For example, an entity class for the `Utilities` dataclass will be defined through a `UtilitiesEntity.4dm` file.
 
-### Creating classes
+### Crear clases
 
 4D automatically pre-creates empty classes in memory for each available data model object.
 
 ![](../assets/en/ORDA/ORDA_Classes-3.png)
 
-> By default, empty ORDA classes are not displayed in the Explorer. To show them you need to select **Show all data classes** from the Explorer's options menu: ![](../assets/en/ORDA/showClass.png)
+> Por defecto, las clases ORDA vacías no se muestran en el Explorador. To show them you need to select **Show all data classes** from the Explorer's options menu: ![](../assets/en/ORDA/showClass.png)
 
-ORDA user classes have a different icon from regular classes. Empty classes are dimmed:
+Las clases de usuarios ORDA tienen un icono diferente de las otras clases. Las clases vacías se atenúan:
 
 ![](../assets/en/ORDA/classORDA2.png)
 
-To create an ORDA class file, you just need to double-click on the corresponding predefined class in the Explorer. 4D creates the class file and add the `extends` code. For example, for an Entity class:
+To create an ORDA class file, you just need to double-click on the corresponding predefined class in the Explorer. 4D crea el archivo de clase y añade el código `extends`. Por ejemplo, para una clase Entity:
 
 ```
 Class extends Entity
 ```
 
-Once a class is defined, its name is no longer dimmed in the Explorer.
+Una vez definida una clase, su nombre ya no aparece atenuado en el Explorador.
 
-### Editing classes
+### Editar las clases
 
 To open a defined ORDA class in the 4D method editor, select or double-click on an ORDA class name and use **Edit...** from the contextual menu/options menu of the Explorer window:
 
@@ -423,8 +451,8 @@ For ORDA classes based upon the local datastore (`ds`), you can directly access 
 
 ![](../assets/en/ORDA/classORDA5.png)
 
-### Method editor
+### Editor de método
 
-In the 4D method editor, variables typed as an ORDA class automatically benefit from autocompletion features. Example with an Entity class variable:
+In the 4D method editor, variables typed as an ORDA class automatically benefit from autocompletion features. Ejemplo con una variable de clase Entity:
 
 ![](../assets/en/ORDA/AutoCompletionEntity.png)
