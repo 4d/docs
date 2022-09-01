@@ -1,138 +1,138 @@
 ---
 id: editing
-title: Managing 4D users and groups
+title: Gestão de usuários e grupos 4D
 ---
 
 
-In multi-user applications, 4D provides users with certain standard access privileges and certain powers. Once a users and groups system has been initiated, these standard privileges take effect.
+In multi-user applications, 4D provides users with certain standard access privileges and certain powers. Quando o usuário e sistema de grupos tiver sido iniciado, esses privilégios começam a funcionar.
 
 
 ## Users and groups in projects
 
-In project applications (.4DProject or .4dz files), 4D users and groups can be configured in both single-user and multi-user environments. However, **access control** is only effective with 4D Server. The following table lists the main users and groups features and their availability:
+In project applications (.4DProject or .4dz files), 4D users and groups can be configured in both single-user and multi-user environments. However, **access control** is only effective with 4D Server. A tabela abaixo lista as principais funcionalidades de usuários e grupos e sua disponibilidade:
 
-|                                                               | 4D (single-user)             | 4D Server |
-| ------------------------------------------------------------- | ---------------------------- | --------- |
-| Adding/editing users and groups                               | yes                          | yes       |
-| Assigning user/group access to servers                        | yes                          | yes       |
-| User identification                                           | no (all users are Designer)  | yes       |
-| Access control once the Designer has been assigned a password | no (all access are Designer) | yes       |
+|                                                            | 4D (single-user)                     | 4D Server |
+| ---------------------------------------------------------- | ------------------------------------ | --------- |
+| Adicionar/editar usuários e grupos                         | sim                                  | sim       |
+| Atribuir acesso de usuário/grupo a servidores              | sim                                  | sim       |
+| Identificação de usuário                                   | não (todos os usuários são Designer) | sim       |
+| Controle de acesso quando o Designer for atribuído a senha | não (todos os acessos são Designer)  | sim       |
 
 > For information about user identification and access control in single-user deployments, see [this paragraph](overview.md#access-control-in-single-user-applications).
 
-## Designer and Administrator
+## Designer e Administrador
 
-The most powerful user is named **Designer**. No aspect of the application is closed to the Designer. The Designer can:
+O usuário mais poderoso é chamado **Designer**. No aspect of the application is closed to the Designer. O Designer pode:
 - access all application servers without restriction,
-- create users and groups,
-- assign access privileges to groups,
-- access the Design environment. In single-user environment, Designer access rights are always used. In client/server environment, assigning a password to the Designer activates the display of the 4D user login dialog.  Access to Design environment is read-only.
+- criar usuários e grupos,
+- atribuir privilégios de acesso a grupos,
+- acessar o ambiente Design. Em ambiente monousuário, direitos de acesso de Designer são sempre usados. Em ambiente cliente/servidor, atribuir uma senha ao Designer ativa a exibição do diálogo de login de usuário 4D.  Acesso ao ambiente Design é apenas leitura.
 
-After the Designer, the next most powerful user is the **Administrator**, who is usually given the tasks of managing the access system and administration features.
+Depois do Designer, o usuário mais poderoso é o **Administrador**, ao qual é geralmente dada a tarefa de gerenciamento de acesso ao sistema e administração de funcionalidades.
 
-The Administrator can:
-- create users and groups,
-- access the 4D Server Administration window and monitor
-- access the MSC window to monitor backup, restore, or server.
+O administrador pode:
+- criar usuários e grupos,
+- acessar ao monitor e janela de Administração 4D Server
+- acessar a janela MSC para gerenciar cópias de segurança, restaurações ou servidor.
 
-The Administrator cannot:
-- edit the Designer user
-- by default, access to protected parts of the application. In particular, the Administrator cannot access to the Design mode if it is restricted. The Administrator must be part of one or more groups to have access privileges in the application. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
+O Administrador não pode:
+- editar o usuário Designer
+- by default, access to protected parts of the application. O Administrador não pode acessar o modo Design se for restringido. O Administrador não pode acessar o modo Design se for restringido. O administrador é inscrito em todo novo grupo, mas é possível remover o nome do Administrador de qualquer grupo.
 
-Both the Designer and Administrator are available by default in all applications. In the [user management dialog box](#users-and-groups-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
+Both the Designer and Administrator are available by default in all applications. No diálogo de [gestão de usuários](#users-and-groups-editor), os ícones de Designer e Administrator são exibidos em verde e vermelho, respectivamentes:
 
-- Designer icon: ![](../assets/en/Users/iconDesigner.png)
-- Administrator icon: ![](../assets/en/Users/iconAdmin.png)
+- Ícone Designer: ![](../assets/en/Users/iconDesigner.png)
+- Ícone de Administrador: ![](../assets/en/Users/iconAdmin.png)
 
-You can rename the Designer and Administrator users. In the language, the Designer ID is always 1 and the Administrator ID is always 2.
+Pode renomear os usuários Designer e Administardor. Na linguagem, o ID de Designer é sempre 1 e a ID de Administrador é sempre 2.
 
-The Designer and Administrator can each create up to 16,000 groups and 16,000 users.
+O Designer e Administrador podem cada um criar até 16.000 grupos e 16 mil usuários.
 
 
 
-## Users editor
+## Editor de usuários
 
-The editor for users is located in the Toolbox of 4D.
+O editor de usuários está na Barra de Ferramentas de 4D.
 
 ![](../assets/en/Users/editor.png)
 
-> Users and groups editor can be displayed at runtime using the [EDIT ACCESS](https://doc.4d.com/4dv19R/help/command/en/page281.html) command. The whole users and groups configuration can also be edited during application execution using 4D language commands of the `Users and Groups` theme.
+> O editor de usuários e grupos pode ser exibido em execução com ajuda do comando [EDIT ACCESS](https://doc.4d.com/4dv19R/help/command/en/page281.html). The whole users and groups configuration can also be edited during application execution using 4D language commands of the `Users and Groups` theme.
 
-### Adding and modifying users
+### Adicionar e modificar usuários
 
-You use the users editor to create user accounts, set their properties and assign them to various groups.
+Para usar o editor de usuários para criar contas de usuário, estabeleça as propriedades e atribua aos vários grupos.
 
-To add a user from the Toolbox :
+Para adicionar um usuário da Barra de Ferramentas:
 
-1. Select **Tool Box > Users** from the **Design** menu or click on the **Tool Box** button of the 4D toolbar. 4D displays the users editor.
+1. Selecione **Tool Box > Users** do menu**Design** ou clique no botão **Tool Box** da barra 4D. 4D exibe o editor de usuários.
 
-The list of users displays all the users, including the [Designer and the Administrator](#designer-and-administrator).
+A lista de usuários exibe todos os usuários, incluindo o[Designer and the Administrator](#designer-and-administrator).
 
-2. Click on the ![](../assets/en/Users/PlussNew.png) button located below the list of users. OR Right-click in the list of users and choose **Add** or **Duplicate** in the context menu.
+2. Clique no botão ![](../assets/en/Users/PlussNew.png) que está abaixo da lista de usuários. OR Right-click in the list of users and choose **Add** or **Duplicate** in the context menu.
 
-> The **Duplicate** command can be used to create several users having the same characteristics quickly.
+> O comando **Duplicate** pode ser usado para criar rapidamente vários usuários com as mesmas características.
 
-4D adds a new user to the list, named "New userX" by default.
+4D adiciona um novo usuário para a lista, chamado "Novo usuárioX" como padrão.
 
-3. Enter the user name. This name will be used by the user to open the application. You can rename a user at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
+3. Digite o nome de usuário. Digite o nome de usuário. Pode renomear um usuário a qualquer momento usando o comando **Rename** do menu contextual ou usando os atalhos Alt+clique (Windows) ou Opção+clique (macOS), ou ainda clicando duas vezes no nome que quiser mudar.
 
-4. To enter a password for the user, click the **Edit...** button in the user properties area and enter the password twice in the dialog box. You can use up to 15 alphanumeric characters for a password. The password editor is case sensitive.
+4. Para digitar uma senha para o usuário, clique o botão **Edit...** na área de propriedades de usuário e digite a senha daus vezes na caixa de diálogo. Pode usar até 15 caracteres alfanuméricos para a senha. O editor de senhas é sensível a maiúsculas ou minúsculas.
 
 > Users can change their password at any time according to the options in the "Security" page of the structure settings, or using the `CHANGE PASSWORD` command.
 
-5. Set the group(s) to which the user belongs using the "Member of Groups" table. You can add or remove the selected user to/from a group by checking the corresponding option in the Member column.
+5. Estabeleça os grupos aos quais o usuário vai pertencer com a tabela "Membro de Grupos". Pode adicionar ou remover os usuários selecionados de ou para um grupo marcando a opção correspondente na coluna Membro.
 
-The membership of users to different groups can also be set by group on the [Groups page](#configuring-access-groups).
+A adesão do usuário aos diferentes grupos também pode ser estabelecida por grupo na página [Grupos](#configuring-access-groups).
 
-### Deleting a user
-
-
-To delete a user, select it then click the deletion button or use the **Delete** command of the context menu. ![](../assets/en/Users/MinussNew.png)
-
-Deleted user names no longer appear in the Users editor. Note that the IDs for deleted users are reassigned when new user accounts are created.
-
-### User properties
-
-- **User Kind**: The User Kind field contains "Designer", "Administrator", or (for all other users) "User".
-
-- **Startup Method**: Name of an associated method that will be automatically executed when the user opens the application (optional). This method can be used for example to load the user preferences.
+### Apagar um usuário
 
 
-## Groups editor
+Para apagar um usuário, selecione-o e clique no botão apagar ou use o comando **Delete** no menu contextual. ![](../assets/en/Users/MinussNew.png)
 
-The editor for groups is located in the Toolbox of 4D.
+Usuários deletados não aparecem mais no editor de Usuários. Note que as IDs de usuários deletados são retribuídas quando novas contas de usuário forem criadas.
 
-### Configuring groups
+### Propriedades de usuário
 
-You use the groups editor to set the elements that each group contains (users and/or other groups) and to distribute access to plug-ins.
+- **Tipo de usuário**: O campo Tipo de usuário/User Kind contém "Designer", "Administrador", ou (Para todos os outros usuários) "Usuário".
 
-Keep in mind that once a group has been created, it cannot be deleted. If you want to deactivate a group, you just need to remove any users it contains.
+- **Startup Method**: Name of an associated method that will be automatically executed when the user opens the application (optional). Esse método pode ser usado por exemplo para carregar as preferências de usuário.
 
-To create a group:
 
-1. Select **Tool Box > Groups** in the **Design** menu or click  on the **Tool Box** button of the 4D toolbar then on the **Groups** button. 4D displays the groups editor window. The list of groups displays all the groups of the application project.
+## Editor de grupos
+
+O editor para grupos está na Barra de ferramentas de 4D.
+
+### Grupos de configuração
+
+Pode usar o editor de grupos para estabelecer os elementos que cada grupo conter (usuários ou outros grupos) e distribuir acesso aos plug-ins.
+
+Lembre que se um grupo for criado não pode ser apagado. Se quiser desativar um grupo, precisa remover primeiro todos seus usuários.
+
+Para criar um gurpo:
+
+1. Selecione **Tool Box > Grupos** no menu **Design** ou clique no botão **Tool Box** da barra 4D e depois no botão **Grupos**. 4D exibe a janela de editor de grupos. The list of groups displays all the groups of the application project.
 
 2. Click on the ![](../assets/en/Users/PlussNew.png) button located below the list of groups.  
    OR  
    Right-click in the list of groups and choose the **Add** or **Duplicate** command in the context menu.
 
-> The Duplicate command can be used to create several groups having the same characteristics quickly.
+> O comando Dupplicate/Duplicar pode ser usado para criar vários grupos tendo as mesmas características.
 
-4D adds a new group to the list, named "New groupX" by default.
+4D adiciona um novo grupo para a lista, chamado "Novo grupoX".
 
-3. Enter the name of the new group. The group name can be up to 15 characters long. You can rename a group at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
-
-
-### Placing users or groups into groups
+3. Digite o nome do novo grupo. O nome de grupo pode ter até 15 caracteres. The group name can be up to 15 characters long. You can rename a group at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
 
 
-You can place any user or group into a group, and you can also place the group itself into several other groups. It is not mandatory to place a user in a group.
+### Colocar usuários ou grupos dentro de grupos
 
-To place a user or group in a group, you simply need to check the "Member" option for each user or group in the member attribution area:
+
+Pode colocar qualquer usuário ou grupo dentro de um grupo, e pode também colocar um grupo dentro de vários outros grupos. Não é obrigatório colocar um usuário em um grupo.
+
+Para colocar um usuário ou grupo em um grupo, precisa marcar a opção "Membro" para cada usuário ou grupo na área de atribuição de membros:
 
 ![](../assets/en/Users/groups.png)
 
-If you check the name of a user, this user is added to the group. If you check the name of a group, all the users of the group are added to the new group. The affiliated user or group will then have the same access privileges as those assigned to the new group.
+Se marcar o nome de usuário, esse usuário é adicionado ao grupo. Se marcar o nome de um grupo, todos os usuários do grupo serão adicionados ao novo grupo. The affiliated user or group will then have the same access privileges as those assigned to the new group.
 
 Placing groups into other groups lets you create a user hierarchy. The users of a group placed in another group will have the access privileges of both groups. See "[An access hierarchy scheme](#an-access-hierarchy-scheme)" below.
 
@@ -172,7 +172,7 @@ You can decide which access privileges to assign to each group based on the leve
 Such a hierarchical system makes it easy to remember to which group a new user should be assigned. You only have to assign each user to one group and use the hierarchy of groups to determine access.
 
 
-## Assigning group access
+## Atribuir grupos de acesso
 
 Groups are assigned access privileges to specific parts or features of the application:
 
@@ -181,7 +181,7 @@ Groups are assigned access privileges to specific parts or features of the appli
 - REST server,
 - SQL server.
 
-These accesses are defined in the Settings dialog. The following example shows Design and Runtime explorer access rights being assigned to the "Devs" group:
+These accesses are defined in the Settings dialog. O exemplo abaixo mostra direitos de acesso ao explorador de Execução e ao Design sendo atribuidos ao grupo "Devs":
 
 ![](../assets/en/Users/Access1.png)
 
