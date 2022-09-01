@@ -1,100 +1,100 @@
 ---
 id: client-server
-title: Client-server page
+title: クライアント-サーバーページ
 ---
 
-The Client-server pages group together parameters related to the use of the database in client-server mode. Naturally, these settings are only taken into account when the database is used in remote mode.
+クライアント/サーバーページには、クライアント/サーバーモードでデータベースを使用する際に使用されるパラメーターが集められています。 これらの設定は、リモートモードでデータベースが使用されるときにのみ使用されます。
 
-## Network options page
+## ネットワークオプションページ
 
-### Network
+### ネットワーク
 
-#### Publish database at startup
+#### 起動時にデータベースを公開する
 
-This option lets you indicate whether or not the 4D Server database will appear in the list of published databases.
+このオプションを使用して、起動された 4D Server データベースが公開データベースのリストに表示されるかどうかを指定できます。
 
--   When this option is checked (default), the database is made public and appears in the list of published databases (**Available** tab).
--   When the option is not checked, the database is not made public and it does not appear in the list of published databases. To connect, users must manually enter the address of the database on the **Custom** tab of the connection dialog box.
+-   このオプションが選択されていると (デフォルト)、データベースは公開され、公開データベースの一覧に表示されます (リモート4D の **利用可能**タブ)。
+-   このオプションがチェックされていないと、データベースは公開されず、公開データベースの一覧に表示されません。 接続するには、接続ダイアログボックスの **カスタム** タブにデータベースのアドレスを手入力しなければなりません。
 
-> If you modify this parameter, you must restart the server database in order for it to be taken into account.
+> この設定を変更した場合、変更を反映するためサーバデータベースを再起動する必要があります。
 
-#### Publication name
+#### 公開名
 
-This option lets you change the publication name of a 4D Server database, *i.e.*, the name displayed on the dynamic **Available** tab of the connection dialog box (see the [Connecting to a 4D Server Database](https://doc.4d.com/4Dv19/4D/19/Connecting-to-a-4D-Server-Database.300-5422486.en.html) section). By default, 4D Server uses the name of the project file. You can enter any custom name you want.
+このオプションでは、4D Server データベースの公開名を変更できます。 この名前は接続ダイアログボックスの **利用可能** ページに表示されます ([4D Serverデータベースへの接続](https://doc.4d.com/4Dv19/4D/19/Connecting-to-a-4D-Server-Database.300-5422486.ja.html) 参照)。 デフォルトで 4D Server はプロジェクトファイル名を使用します。 これを好きな名前に変更できます。
 
-> This parameter is not taken into account in custom client-server applications. In theory, the client application connects directly to the server application, without passing by the connection dialog box. However, in the event of an error, this dialog box can appear; in this case, the publication name of the server application is the name of the compiled project.
+> このパラメーターはカスタムのクライアント-サーバーアプリケーションでは使用されません。 クライアントアプリケーションは接続ダイアログを経由せずにサーバーに直接接続します。 しかしエラーが発生すると、このダイアログが表示されます。 この場合、サーバーアプリケーションの公開名はコンパイルされたプロジェクトの名前です。
 
-#### Port Number
+#### ポート番号
 
-This option lets you change the TCP port number on which 4D Server publishes the database. This information is stored in the project and on each client machine. By default, the TCP port number used by 4D Server and 4D in remote mode is 19813.
+このオプションで、4D Server がデータベースを公開する TCPポート番号を変更できます。 この情報は、プロジェクト及び各クライアントマシンに格納されます。 4D Server とリモートモードの 4D が使用するデフォルトの TCPポート番号は 19813 です。
 
-Customizing this value is necessary when you want to use several 4D applications on the same machine; in this case, you must specify a different port number for each application. When you modify this value from 4D Server or 4D, it is automatically passed on to all the 4D machines connected to the database.
+TCPプロトコルを使用して、1台のマシン上で複数の 4Dアプリケーションを同時に使用したい場合にこの値の変更が必要です。 この場合、アプリケーションごとに異なるポート番号を割り当てなければなりません。 4D Server または 4D からこの値を変更すると、データベースに接続しているすべての 4Dマシンに変更が通知されます。
 
-To update any other client machines that are not connected, you just need to enter the new port number (preceded by a colon) after the IP address of the server machine on the **Custom** tab of the connection dialog box at the time of the next connection. For example, if the new port number is 19888:
+接続していないクライアントを更新するには、次回の接続時に接続ダイアログボックスの **カスタム** ページにて、サーバーマシンの IPアドレスに続けてコロン、そして新しいポート番号を入力します。 たとえば、新しいポート番号が 19888 あるとき:
 
 ![](../assets/en/settings/client-server-network.png)
 
-> Only databases published on the same port as the one set in 4D client are visible on the TCP/IP dynamic publication page.
+> 4Dクライアントと同じポート番号で公開されているデータベースだけが、接続ダイアログの利用可能ページに表示されます。
 
-#### 4D Server and port numbers
+#### 4D Server とポート番号
 
-4D Server uses three TCP ports for communications between internal servers and clients:
+4D Server は 3つの TCPポートを使用して、内部サーバーとクライアントの通信をおこないます:
 
--   **SQL Server**: 19812 by default (can be modified via the "SQL/Configuration" page of the Preferences).
--   **Application Server**: 19813 by default (can be modified via the "Client-Server/Configuration" page of the Preferences, see above).
--   **DB4D Server** (database server): 19814 by default . This port number cannot be modified directly but it always consists of the application server port number + 1.\
+-   **SQLサーバー**: デフォルトで 19812 (設定の "SQL" ページで変更可)。
+-   **アプリケーションサーバー**: デフォルトで 19813 (設定の "クライアント-サーバー" ページで変更可)。
+-   **DB4Dサーバー** (データベースサーバー): デフォルトで 19814。 This port number cannot be modified directly but it always consists of the application server port number + 1.\
   When a 4D client connects to 4D Server, it uses the TCP port of the application server (19813 or the port indicated after the colon ':' in the IP address shown in the connection dialog box). Connection to other servers via their respective ports is then automatic; it is no longer necessary to specify them.\
   Note that in the case of access via a router or a firewall, the three TCP ports must be opened explicitly.
 
-#### Authentication of user with domain server
+#### ドメインサーバーによるユーザーの認証
 
-This option allows you to implement SSO (*Single Sign On*) capabilities in your 4D Server database on Windows. When you check this option, 4D transparently connects to the Active directory of the Windows domain server and gets the available authentication tokens. This option is described in the [Single Sign On (SSO) on Windows](https://doc.4d.com/4Dv19/4D/19/Single-Sign-On-SSO-on-Windows.300-5422467.en.html) section.
+このオプションは Windows上の 4D Server データベースにおいて SSO (*Single Sign On*) 機能の実装を可能にします。 このオプションを有効にすると、4D はバックグラウンドで Windows ドメインサーバーの Active Directory に接続し、提供されている認証トークンを取得します。 このオプションの詳細については [Windowsでのシングルサインオン(SSO)](https://doc.4d.com/4Dv19/4D/19/Single-Sign-On-SSO-on-Windows.300-5422467.ja.html) を参照ください。
 
-#### Service Principal Name
+#### サービスプリンシパル名 (SPN)
 
-When Single Sign On (SSO) is enabled (see above), you must fill in this field if you want to use Kerberos as your authentication protocol. This option is described in the [Single Sign On (SSO) on Windows](https://doc.4d.com/4Dv19/4D/19/Single-Sign-On-SSO-on-Windows.300-5422467.en.html) section.
+Single Sign On (SSO) が有効になっている場合 (上述参照)、認証プロトコルにケルベロスを使用するには、このフィールドを設定する必要があります。 このオプションの詳細については [Windowsでのシングルサインオン(SSO)](https://doc.4d.com/4Dv19/4D/19/Single-Sign-On-SSO-on-Windows.300-5422467.ja.html) を参照ください。
 
-#### Client-Server Connections Timeout
+#### クライアント/サーバー接続タイムアウト
 
-This device is used to set the timeout (period of inactivity beyond which the connection is closed) between 4D Server and the client machines connecting to it. The Unlimited option removes the timeout. When this option is selected, client activity control is eliminated.
+このサーモメーターで、4D Server とクライアントマシン間の (一定時間活動がないときに接続を閉じる) タイムアウトを設定できます。 無制限オプションは、タイムアウトを設定しないことを意味します。 このオプションが選択されると、クライアントのアクティビティコントロールはおこなわれません。
 
-When a timeout is selected, the server will close the connection of a client if it does not receive any requests from the latter during the specified time limit.
+タイムアウト時間が選択されると、その間にリクエストを受信しなかった場合、サーバーはそのクライアントとの接続を閉じます。
 
-### Client-Server Communication
+### クライアント-サーバー通信
 
-#### Register Clients at Startup For Execute On Client
+#### Execute On Clientのために起動時にクライアント登録
 
-When this option is checked, all the 4D remote machines connecting to the database can execute methods remotely. This mechanism is detailed in the section [Stored procedures on client machines](https://doc.4d.com/4Dv19/4D/19/Stored-procedures-on-client-machines.300-5422461.en.html).
+このオプションが選択されていると、データベースに接続するすべての 4Dリモートマシン上でメソッドをリモート実行できます。 このメカニズムについては [クライアントマシン上でのストアドプロシージャ](https://doc.4d.com/4Dv19/4D/19/Stored-procedures-on-client-machines.300-5422461.ja.html) で説明しています。
 
-#### Encrypt Client-Server Communications
+#### クライアント-サーバー通信の暗号化
 
-This option lets you activate the secured mode for communications between the server machine and the 4D remote machines. This option is detailed in the [Encrypting Client/Server Connections](https://doc.4d.com/4Dv19/4D/19/Encrypting-ClientServer-Connections.300-5422465.en.html) section.
+このオプションを使用して、サーバーマシンと 4Dリモートマシン間通信の保護モードを有効にできます。 このオプションについては [クライアント/サーバー接続の暗号化](https://doc.4d.com/4Dv19/4D/19/Encrypting-ClientServer-Connections.300-5422465.ja.html) で説明しています。
 
-#### Update Resources folder during a session
+#### セッション中に "Resources" フォルダーを更新
 
-This setting can be used to globally set the updating mode for the local instance of the **Resources** folder on the connected 4D machines when the **Resources** folder of the database is modified during the session (the **Resources** folder is automatically synchronized on the remote machine each time a session is opened). Three settings are available:
+この設定は、データベースの **Resources** フォルダーがセッション中に更新された場合について、接続中のクライアントマシンにおける同フォルダーのローカルインスタンスの更新モードを包括的に指定します (**Resources** フォルダーは、セッションが開かれるたびにリモートマシン上で自動的に同期されます)。 3つの選択肢があります:
 
--   **Never**: The local **Resources** folder is not updated during the session. The notification sent by the server is ignored. The local **Resources** folder may be updated manually using the **Update Local Resources** action menu command (see [Using the Resources explorer](https://doc.4d.com/4Dv19/4D/19/Using-the-Resources-explorer.300-5416788.en.html)).
--   **Always**: The synchronization of the local **Resources** folder is automatically carried out during the session whenever notification is sent by the server.
--   **Ask**: When the notification is sent by the server, a dialog box is displayed on the client machines, indicating the modification. The user can then accept or refuse the synchronization of the local **Resources** folder.\
-  The **Resources** folder centralizes the custom files required for the database interface (translation files, pictures, etc.). Automatic or manual mechanisms can be used to notify each client when the contents of this folder have been modified. For more information, please refer to the [Managing the Resources folder](https://doc.4d.com/4Dv19/4D/19/Managing-the-Resources-folder.300-5422466.en.html) section.
+-   **しない**: ローカルの **Resources** フォルダーはセッション中に更新されません。 サーバーから送信される通知は無視されます。 **ローカルリソースを更新** アクションメニューコマンド [(リソースエクスプローラーを使用する](https://doc.4d.com/4Dv19/4D/19/Using-the-Resources-explorer.300-5416788.ja.html) 参照) を使用すれば、ローカルの **Resources**フォルダーを手動で更新することができます。
+-   **常に**: セッション中にサーバーから通知が送信されると、ローカルの **Resources** フォルダーは自動で同期されます。
+-   **その都度指定**: サーバーから通知を受け取ると、クライアントマシン上でダイアログボックスが表示されます。 The user can then accept or refuse the synchronization of the local **Resources** folder.\
+  The **Resources** folder centralizes the custom files required for the database interface (translation files, pictures, etc.). このフォルダーの内容が更新されたときには、自動又は手動メカニズムを使用して各クライアントに通知できます。 詳細については、[リソースフォルダの管理](https://doc.4d.com/4Dv19/4D/19/Managing-the-Resources-folder.300-5422466.ja.html) を参照ください。
 
 
-## IP configuration page
+## IP設定ページ
 
-### Allow-Deny Configuration Table
+### 許可-拒否設定表
 
-This table allows you to set access control rules for the database depending on 4D remote machine IP addresses. This option allows reinforcing security, for example, for strategic applications.
+この表を使用して、4Dリモートマシンの IPアドレスに基づき、データベースへのアクセスコントロールルールを設定できます。 このオプションを使用して、たとえば戦略アプリケーションなどのセキュリティを高めることができます。
 
-> This configuration table does not control Web connections.
+> Web接続は、この設定表でコントロールされません。
 
-The behavior of the configuration table is as follows:
+設定表の動作は以下のとおりです:
 
-- The "Allow-Deny" column allows selecting the type of rule to apply (Allow or Deny) using a pop-up menu. To add a rule, click on the Add button. A new row appears in the table. The **Delete** button lets you remove the current row.
-- The "IP Address" column allows setting the IP address(es) concerned by the rule. To specify an address, click in the column and enter the address in the following form: 123.45.67.89 (IPv4 format) or 2001:0DB8:0000:85A3:0000:0000:AC1F:8001 (IPv6 format). You can use an * (asterisk) character to specify "starts with" type addresses. For example, 192.168.* indicates all addresses starting with 192.168.
-- The application of rules is based on the display order of the table. If two rules are contradictory, priority is given to the rule located highest in the table. You can re-order rows by modifying the current sort (click the header of the column to alternate the direction of the sort). You can also move rows using drag and drop.
-- For security reasons, only addresses that actually match a rule will be allowed to connect. In other words, if the table only contains one or more Deny rules, all addresses will be refused because none will match at least one rule. If you want to deny only certain addresses (and allow others), add an Allow * rule at the end of the table. For example:
-    - Deny 192.168.* (deny all addresses beginning with 192.168)
-    - Allow * (but allow all other addresses)
+- "許可-拒否" 列では、ポップアップメニューを使用して適用するルールを選択します (許可または拒否)。 ルールを追加するには、追加ボタンをクリックします。 すると、新しい行が表に追加されます。 **削除** ボタンで選択した行を削除できます。
+- "IPアドレス" 列で、ルールに関連する IPアドレスを指定します。 アドレスを指定するには、選択した行のセルをクリックし、以下の形式でアドレスを入力します: 123.45.67.89 (IPv4) または 2001:0DB8:0000:85A3:0000:0000:AC1F:8001 (IPv6)。 * (アスタリスク) 文字をアドレスの末尾に使用して、範囲を指定することもできます。 たとえば、192.168.* は 192.168 で始まるすべてのアドレスを示します。
+- ルールの適用は、表中の表示順に基づきます。 2つのルールが矛盾する設定の場合、より上に設定されているルールが優先されます。 行の順番を変更するには、列のヘッダーをクリックしてソートをおこなったり、 ドラッグ＆ドロップで移動したりすることができます。 ドラッグ＆ドロップで移動したりすることができます。
+- セキュリティのため、ルールにより明示的に許可されたアドレスのみが接続を許可されます。 言い換えれば、表に拒否ルールしか定義されていない場合、許可ルールに適合するアドレスがないため、すべてのアドレスからの接続が拒否されます。 特定のアドレスからの接続のみを拒否したい場合 (そして他を許可したい場合)、許可 * ルールを表の最後に追加します。 例:
+    - 拒否 192.168.* (192.168 で始まるアドレスを拒否)
+    - 許可 * (他のアドレスはすべて許可)
 
-By default, no connection restrictions are applied by 4D Server: the first row of the table contains the Allow label and the * (all addresses) character.
+デフォルトでは、4D Server にアクセス制限はありません。 最初の行には * (すべてのアドレス) に対する許可ルールが設定されています。
