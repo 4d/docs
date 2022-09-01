@@ -1,31 +1,31 @@
 ---
 id: creating-using-macros
-title: Creating and using macros
+title: Créer et utiliser des macros
 ---
 
-You can use macro-commands in your methods. Using macro-commands saves a lot of time during code entry.
+Vous pouvez utiliser des macro-commandes dans vos méthodes. Les macro-commandes permettent de gagner beaucoup de temps lors de la saisie de code.
 
-## What is a macro?
+## Qu’est-ce qu’une macro ?
 
-A macro-command is a section of 4D code that is permanently accessible and that can be inserted anywhere in your methods, whatever the type of database open. Macros can contain all types of 4D text, commands and constants, as well as special tags which are replaced at the time of macro insertion by values derived from the method context. For instance, a macro may contain the tag `<method_name/>;` at the time of macro insertion, this tag will be replaced by the name of the current project method.
+Une macro-commande est une partie de code 4D accessible en permanence et pouvant être insérée à tout endroit de vos méthodes, quelle que soit la base ouverte. Les macro-commandes peuvent contenir tout type de texte, des commandes et des constantes 4D, ainsi que des balises spéciales, remplacées au moment de l’insertion de la macro par des valeurs issues du contexte de la méthode. Par exemple, une macro-commande peut contenir la balise `<method_name/>;` au moment de son insertion, cette balise sera remplacée par le nom de la méthode projet courante.
 
-Macros are stored in one or more XML format (text) file(s). They can be placed in a Code Editor list; they can also be called using the context menu of the editor or using the autocomplete function.
+Les macro-commandes sont stockées dans un ou plusieurs fichier(s) au format XML (texte). Elles peuvent être affichées dans une liste de l’éditeur de code; elle peuvent également être appelées à l’aide du menu contextuel de l’éditeur ou à l’aide de la fonction de saisie prédictive.
 
-4D macros are written in XML format. You can use the 4D default macro file as is or modify it.
+Les macro-commandes de 4D sont écrites au format XML. Vous pouvez utiliser “tel quel” le fichier de macro-commandes par défaut de 4D ou le modifier.
 
-## Location of macros
+## Emplacement des macros
 
-4D loads the macros from a folder named **Macros v2**. Macros must be in the form of one or more XML files that are placed in this folder.
+4D charge les macros à partir d’un dossier nommé **Macros v2**. Les macros doivent être présentes sous forme d’un ou plusieurs fichiers XML placés dans ce dossier.
 
-The "Macros v2" folder can be located:
+Le dossier “Macros v2” peut être situé :
 
-- In the active 4D folder of the machine. Macros are then shared for all the databases. **Note:** The location of the active 4D folder varies according to the operating system used. For more information, refer to the description of the [Get 4D folder](https://doc.4d.com/4Dv19R4/4D/19-R4/Get-4D-folder.301-5739515.en.html) command in the 4D *Language Reference* manual.
-- Next to the database structure file. Macros are only loaded for this structure.
-- For components: in the **Components** folder of the database. Macros are then only loaded if the component is installed.
+- Dans le dossier 4D actif de la machine. Les macros sont alors partagées pour toutes les bases. **Note :** L’emplacement du dossier 4D actif varie en fonction du système d’exploitation. Pour plus d’informations, reportez-vous à la description de la commande [Get 4D folder](https://doc.4d.com/4Dv19R4/4D/19-R4/Get-4D-folder.301-5739515.en.html) dans le *manuel Langage de 4D*.
+- A côté du fichier de structure de la base. Les macros ne sont chargées que pour cette structure.
+- Pour les composants : dans le dossier **Components** de la base. Les macros ne sont alors chargées que si le composant est installé.
 
-These three locations can be used simultaneously: it is possible to install a "Macros v2" folder in each location. The macros will be loaded in the following order: 4D folder, structure file, component 1... component X.
+Ces trois emplacements peuvent être utilisés simultanément : il est possible d’installer un dossier “Macros v2” à chaque emplacement. Les macros seront chargées dans l’ordre suivant : dossier 4D, fichier de structure, composant 1... composant N.
 
-## Default macros
+## Macros par défaut
 
 4D offers a set of default macros corresponding, in particular, to the list of keywords in previous versions of 4D. These macros are included in the default "*Macros.xml*" file, placed in the "Macros v2" folder that is created in the active 4D folder of the machine during the initial startup of 4D.
 
@@ -94,12 +94,13 @@ Here is the list of tags and their mode of use:
 |                                  | *Attribute*:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |                                  | - index: Clipboard to be pasted. Values = number of the clipboard (0 to 9).                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
-- Macros can be called using the context menu of the Code Editor or using the type-ahead function (see the following section).
+- Macros can be called using the context menu of the Code Editor or using the type-ahead function (see the following section).\
+  ** If you want to conform to XML language specifications, you must not use extended characters (accented characters, quotation marks, etc.).
 - If you want to conform to XML language specifications, you must not use extended characters (accented characters, quotation marks, etc.).
 
 Here is an example of a macro definition:
 
-| **Content of macro**                                 | **Comments**                                                                                                                                    |
+| **Content of macro**                                 | **Commentaires**                                                                                                                                |
 | ---------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | `<?xml version="1.0"...?>`                     | XML declaration                                                                                                                                 |
 | `<!DOCTYPE macros SYSTEM>`                     | Document declaration                                                                                                                            |
@@ -116,13 +117,13 @@ Here is an example of a macro definition:
 
 ## About the `<method>` tag
 
-The `<method>` tag allows you to generate and use macro-commands that execute 4D project methods. This allows developers to create sophisticated functions that can be distributed via macro-commands which are associated with components. For example, the following macro will cause the *MyMethod* method to be executed with the name of the current method as parameter:
+The `<method>` tag allows you to generate and use macro-commands that execute 4D project methods. This allows developers to create sophisticated functions that can be distributed via macro-commands which are associated with components. For example, the following macro will cause the *MyMethod* method to be executed with the name of the current method as parameter:
 
 `<method>MyMethod("<method_name/>")</method>`
 
 The code of a called method is executed in a new process. This process is killed once the method is executed.
 
-> The structure process remains frozen until the called method execution is completed. You must make sure that the execution is quick and that there is no risk of it blocking the application. If this occurs, use the **Ctrl+F8** (Windows) or **Command+F8** (Mac OS) command to "kill" the process.
+> **Note:** The structure process remains frozen until the called method execution is completed. You must make sure that the execution is quick and that there is no risk of it blocking the application. If this occurs, use the **Ctrl+F8** (Windows) or **Command+F8** (Mac OS) command to "kill" the process.
 
 ## Calling macros
 
@@ -132,21 +133,21 @@ Note that for each macro it is possible to restrict the possibility of calling i
 
 ### Context menu and toolbar
 
-By default, all macros can be called via the context menu of the Code Editor (using the **Insert macro** hierarchical command) or the **Macros** button of the toolbar.
+By default, all macros can be called via the context menu of the Code Editor (using the **Insert macro** hierarchical command) or the **Macros** button of the toolbar.
 
-The *in_menu* attribute of the `<macro>` tag is used to set whether or not the macro appears in this menu.
+The *in_menu* attribute of the `<macro>` tag is used to set whether or not the macro appears in this menu.
 
 In the context menu, macros are displayed in the order of the "Macros.xml" file and any additional XML files. It is thus possible to change the order by modifying these files.
 
 ### Autocomplete
 
-By default, all macros are accessible using the autocomplete (aka type-ahead) function (see [Writing a method](./write-class-method.md)). The *type_ahead* attribute of the `<macro>` tag can be used to exclude a macro from this type of operation.
+By default, all macros are accessible using the autocomplete (aka type-ahead) function (see [Writing a method](./write-class-method.md)). The *type_ahead* attribute of the `<macro>` tag can be used to exclude a macro from this type of operation.
 
-**Note:** If the macro contains the `<selection/>` tag, it will not appear in the autocomplete pop-up window.
+**Note:** If the macro contains the `<selection/>` tag, it will not appear in the autocomplete pop-up window.
 
 ### Code Editor list
 
-You can display your macros in a list of the Code Editor (see [Writing a method](./write-class-method.md)). Simply double-click on the name of a macro in the list in order to call it. It is not possible to exclude a specific macro from this list.
+You can display your macros in a list of the Code Editor (see [Writing a method](./write-class-method.md)). Simply double-click on the name of a macro in the list in order to call it. It is not possible to exclude a specific macro from this list.
 
 ## Compatibility notes
 
@@ -154,7 +155,7 @@ Macro support can change from one version of 4D to another. In order to keep the
 
 ### Text selection variables for methods
 
-It is recommended to manage text selections using the [GET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/en/page997.html) and [SET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/en/page998.html) commands. These commands can be used to overcome the partitioning of the host project/component execution spaces and thus allow the creation of components dedicated to the management of macros. In order to activate this mode for a macro, you must declare the Version attribute with the value 2 in the Macro element. In this case, 4D no longer manages the predefined variables _textSel,_textReplace, etc. and the [GET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/en/page997.html) and [SET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/en/page998.html) commands are used. This attribute must be declared as follows:
+It is recommended to manage text selections using the [GET MACRO PARAMETER](https://doc.4d.com/4Dv19R4/4D/19-R4/GET-MACRO-PARAMETER.301-5739797.en.html)and [SET MACRO PARAMETER](https://doc.4d.com/4Dv19R4/4D/19-R4/SET-MACRO-PARAMETER.301-5739788.en.html) commands. These commands can be used to overcome the partitioning of the host project/component execution spaces and thus allow the creation of components dedicated to the management of macros. In order to activate this mode for a macro, you must declare the Version attribute with the value 2 in the Macro element. In this case, 4D no longer manages the predefined variables _textSel,_textReplace, etc. and the [GET MACRO PARAMETER](https://doc.4d.com/4Dv19R4/4D/19-R4/GET-MACRO-PARAMETER.301-5739797.en.html)and [SET MACRO PARAMETER](https://doc.4d.com/4Dv19R4/4D/19-R4/SET-MACRO-PARAMETER.301-5739788.en.html) are used. This attribute must be declared as follows:
 
 `<macro name="MyMacro" version="2">`<br/> `--- Text of the macro ---`<br/> `</macro>`
 
