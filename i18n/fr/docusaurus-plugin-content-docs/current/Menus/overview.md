@@ -1,34 +1,34 @@
 ---
 id: overview
-title: Overview
+title: Vue d’ensemble
 ---
 
-You can create menu bars and menus for your 4D applications. Because pull-down menus are a standard feature of any desktop application, their addition will make your applications easier to use and will make them feel familiar to users.
+4D vous permet de créer des barres de menus et des menus pour vos applications 4D. Etant donné que les menus sont une fonctionnalité standard de toute application, leur présence dans votre base facilite son utilisation.
 
 ![](../assets/en/Menus/menubar.png)
 
-A **menu bar** is a group of menus that can be displayed on a screen together. Each **menu** on a menu bar can have numerous menu commands in it, including some that call cascading submenus (or hierarchical submenus). When the user chooses a menu or submenu command, it calls a project method or a standard action that performs an operation.
+Une **barre de menus** est un groupe de menus qui peuvent être affichés dans le même écran. Chaque **menu** d’une barre de menus peut posséder plusieurs commandes dont certaines peuvent faire appel à des sous-menus en cascade (on parle alors de sous-menus hiérarchiques). Lorsque l’utilisateur choisit une commande de menu ou de sous-menu, il appelle une méthode projet ou une action standard qui réalise une opération.
 
-You can have many separate menu bars for each application. For example, you can use one menu bar that contains menus for standard operations on the database and another that becomes active only for reporting. One menu bar may contain a menu with menu commands for entering records. The menu bar appearing with the input form may contain the same menu, but the menu commands are disabled because the user doesn’t need them during data entry.
+Vous pouvez disposer de différentes barres de menus dans la même application. Par exemple, vous pouvez utiliser une barre de menus pour les opérations standard de votre base de données et une autre qui n’est active que pour la réalisation d’états. Une barre de menus peut contenir des commandes destinées à la saisie d’enregistrements. La barre de menus qui apparaît avec le formulaire de saisie peut contenir le même menu, mais ses commandes peuvent être désactivées car inutiles pour la saisie dans le formulaire.
 
-You can use the same menu in several menu bars or other menus, or you can leave it unattached and manage it only by programming (in this case, it is known as an independent menu).
+Vous pouvez utiliser le même menu dans plusieurs barres de menus et menus, ou ne pas l’attacher et le gérer uniquement par programmation (on parle dans ce cas de menu indépendant).
 
-When you design menus, keep the following two rules in mind:
-- Use menus for functions that are suited to menus: Menu commands should perform tasks such as adding a record, searching for records, or printing a report.
-- Group menu commands by function: For example, all menu commands that print reports should be in the same menu. For another example, you might have all the operations for a certain table in one menu.
+Lorsque vous créez des menus, il est utile de garder à l’esprit les deux règles suivantes :
+- N’utilisez les menus que pour des tâches qui leurs sont adaptées : Les commandes de menus doivent réaliser des tâches telles que l’ajout d’un enregistrement, les recherches ou les impressions.
+- Groupez les commandes de menus par fonctions : l’utilisateur doit pouvoir être capable de s’orienter dans un ordre logique de menus. Par exemple, toutes les commandes de menu qui permettent de naviguer dans la base doivent être placées dans le même menu.
 
-To create menus and menu bars, you can use either:
+Pour créer des menus et des barres de menus, vous pouvez utiliser soit :
 
-- the Menu editor from the Toolbox,
-- language commands for the "Menus" theme,
-- a combination of both.
+- l’éditeur de menus,
+- les commandes du langage,
+- un mélange des deux.
 
 
-## Menu editor
-The Menu editor is accessed using the **Menus** button of the Toolbox.
+## Éditeur de menus
+L’éditeur de menus est accessible via le bouton **Menus** de la Boîte à outils.
 
 ![](../assets/en/Menus/editor1.png)
 
-Menus and menu bars are displayed as two items of the same hierarchical list, on the left side of the dialog box. Each menu can be attached to a menu bar or to another menu. In the second case, the menu becomes a sub-menu.
+Les barres de menus et les menus sont affichés sous forme de deux éléments d’une même liste hiérarchique, dans la partie gauche de la fenêtre. Chaque menu peut être attaché à une barre de menus ou à un autre menu. Dans le deuxième cas, le menu devient un sous-menu.
 
-4D assigns menu bar numbers sequentially — Menu Bar #1 appears first. You can rename menu bars but you cannot change their numbers. These numbers are used by the language commands.
+4D affecte des numéros de barre de menus séquentiellement -- Menu Bar #1 apparait en premier. Vous pouvez renommer des barres de menu mais vous ne pouvez pas modifier leur numéro. Ces derniers sont utilisés par les commandes du langage.
