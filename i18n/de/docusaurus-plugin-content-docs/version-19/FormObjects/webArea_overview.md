@@ -4,7 +4,7 @@ title: Web Area
 ---
 
 
-Web areas can display various types of web content within your forms: HTML pages with static or dynamic contents, files, pictures, JavaScript, etc. The rendering engine of the web area depends on the execution platform of the application and the selected [rendering engine option](properties_WebArea.md#use-embedded-web-rendering-engine).
+Web areas can display various types of web content within your forms: HTML pages with static or dynamic contents, files, pictures, JavaScript, etc. The rendering engine of the web area depends on the execution platform of the application and the selected [rendering engine option](properties_WebArea.md#use-embedded-web-rendering-engine). The rendering engine of the web area depends on the execution platform of the application and the selected [rendering engine option](properties_WebArea.md#use-embedded-web-rendering-engine).
 
 It is possible to create several web areas in the same form. Note, however, that the use of web areas must follow [several rules](#web-areas-rules).
 
@@ -57,7 +57,7 @@ $4d.4DMethodName(param1,paramN,function(result){})
 
 > By default, 4D works in UTF-8. When you return text containing extended characters, for example characters with accents, make sure the encoding of the page displayed in the Web area is declared as UTF-8, otherwise the characters may be rendered incorrectly. In this case, add the following line in the HTML page to declare the encoding: `<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />`
 
-#### Example 1
+#### Beispiel 1
 
 Given a 4D project method named `today` that does not receive parameters and returns the current date as a string.
 
@@ -95,7 +95,7 @@ $4d.today(function(dollarZero)
 </html>
 ```
 
-#### Example 2
+#### Beispiel 2
 
 The 4D project method `calcSum` receives parameters (`$1...$n`) and returns their sum in `$0`:
 
