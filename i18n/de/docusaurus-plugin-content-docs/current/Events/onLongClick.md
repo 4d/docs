@@ -8,7 +8,7 @@ title: On Long Click
 | 39   | [Button](FormObjects/button_overview.md) | A button is clicked and the mouse button remains pushed for a certain length of time |
 
 
-## Description
+## Beschreibung
 
 This event is generated when a button receives a click and the mouse button is held for a certain length of time. In theory, the length of time for which this event is generated is equal to the maximum length of time separating a double-click, as defined in the system preferences.
 
