@@ -1,35 +1,35 @@
 ---
 id: propertiesCrop
-title: Crop
+title: Corte
 ---
 
 
-## Columns
+## Columnas
 
-Sets the number of columns in a thumbnail table.
+Define el número de columnas de una tabla de miniaturas.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name        | Data Type | Possible Values |
-|:----------- |:---------:| --------------- |
-| columnCount |  integer  | minimum: 1      |
+| Nombre      | Tipos de datos | Valores posibles |
+|:----------- |:--------------:| ---------------- |
+| columnCount |    integer     | mínimo: 1        |
 
-#### Objects Supported
+#### Objetos soportados
 
-[Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
+[Botón imagen](pictureButton_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Menú desplegable imagen](picturePopupMenu_overview.md)
 
 ---
 
 ## Rows
 
-Sets the number of rows in a thumbnail table.
+Define el número de líneas de una tabla de miniaturas.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name     | Data Type | Possible Values |
-|:-------- |:---------:| --------------- |
-| rowCount |  integer  | minimum: 1      |
+| Nombre   | Tipos de datos | Valores posibles |
+|:-------- |:--------------:| ---------------- |
+| rowCount |    integer     | mínimo: 1        |
 
-#### Objects Supported
+#### Objetos soportados
 
-[Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
+[Botón imagen](pictureButton_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Menú desplegable imagen](picturePopupMenu_overview.md)
