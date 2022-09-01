@@ -39,9 +39,9 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                                                      |
-| ---------- | --------- | ------------------------------------------------------------------------------------ |
-| textFormat | string    | "### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", custom formats |
+| Name       | Datentyp | Possible Values                                                                      |
+| ---------- | -------- | ------------------------------------------------------------------------------------ |
+| textFormat | string   | "### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", custom formats |
 
 #### Objects Supported
 
@@ -63,7 +63,7 @@ The table below shows choices available:
 | System date long                | systemLong   | Wednesday, March 25, 2020     |
 | RFC 822                         | rfc822       | Tue, 25 Mar 2020 22:00:00 GMT |
 | Short Century                   | shortCentury | 03/25/20 but 04/25/2032 *(2)* |
-| Internal date long              | long         | March 25, 2020                |
+| Internal date long              | lang         | March 25, 2020                |
 | Internal date abbreviated *(1)* | abbreviated  | Mar 25, 2020                  |
 | Internal date short             | short        | 03/25/2020                    |
 | ISO Date Time *(3)*             | iso8601      | 2020-03-25T00:00:00           |
@@ -77,9 +77,9 @@ The table below shows choices available:
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                                                                                                                                                  |
-| ---------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dateFormat | string    | "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values) |
+| Name       | Datentyp | Possible Values                                                                                                                                                                  |
+| ---------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dateFormat | string   | "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values) |
 
 #### Objects Supported
 
@@ -198,7 +198,7 @@ corresponds to the 5th time format in the pop-up menu, specifically the AM/PM ti
 
  6:56 AM
 
-### Examples
+### Beispiele
 
 The following table shows how different formats affect the display of numbers. The three columns — Positive, Negative, and Zero — each show how 1,234.50, –1,234.50, and 0 would be displayed.
 
@@ -234,9 +234,9 @@ The following table shows how different formats affect the display of numbers. T
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values                                                |
-| ------------ | --------- | -------------------------------------------------------------- |
-| numberFormat | string    | Numbers (including a decimal point or minus sign if necessary) |
+| Name         | Datentyp | Possible Values                                                |
+| ------------ | -------- | -------------------------------------------------------------- |
+| numberFormat | string   | Numbers (including a decimal point or minus sign if necessary) |
 
 #### Objects Supported
 
@@ -293,9 +293,9 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                                                                                       |
-| ------------- | --------- | ----------------------------------------------------------------------------------------------------- |
-| pictureFormat | string    | "truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft", "proportionalCenter" |
+| Name          | Datentyp | Possible Values                                                                                       |
+| ------------- | -------- | ----------------------------------------------------------------------------------------------------- |
+| pictureFormat | string   | "truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft", "proportionalCenter" |
 
 #### Objects Supported
 
@@ -310,7 +310,7 @@ Time formats control the way times appear when displayed or printed. For data en
 
 The table below shows the Time field display formats and gives examples:
 
-| Format name                  | JSON string  | Comments                                                                                                                                         | Example for 04:30:25          |
+| Format name                  | JSON string  | Kommentare                                                                                                                                       | Example for 04:30:25          |
 | ---------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
 | HH:MM:SS                     | hh_mm_ss   |                                                                                                                                                  | 04:30:25                      |
 | HH:MM                        | hh_mm        |                                                                                                                                                  | 04:30                         |
@@ -326,9 +326,9 @@ The table below shows the Time field display formats and gives examples:
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                                                                                                                                                                          |
-| ---------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| timeFormat | string    | "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (can be combined with the other possible values) |
+| Name       | Datentyp | Possible Values                                                                                                                                                                                          |
+| ---------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| timeFormat | string   | "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (can be combined with the other possible values) |
 
 #### Objects Supported
 
@@ -350,9 +350,9 @@ When a [boolean expression](properties_Object.md#expression-type) is displayed a
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                                                          |
-| ------------- | --------- | ------------------------------------------------------------------------ |
-| booleanFormat | string    | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned" |
+| Name          | Datentyp | Possible Values                                                          |
+| ------------- | -------- | ------------------------------------------------------------------------ |
+| booleanFormat | string   | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned" |
 
 #### Objects Supported
 
@@ -360,7 +360,7 @@ When a [boolean expression](properties_Object.md#expression-type) is displayed a
 
 ---
 
-## Display Type
+## Anzeigetyp
 
 Used to associate a display format with the column data. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes).
 
@@ -370,9 +370,9 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values                                                                                                        |
-| ----------- | --------- | ---------------------------------------------------------------------------------------------------------------------- |
-| controlType | string    | **number columns**: "automatic" (default) or "checkbox"<br/>**boolean columns**: "checkbox" (default) or "popup" |
+| Name        | Datentyp | Possible Values                                                                                                        |
+| ----------- | -------- | ---------------------------------------------------------------------------------------------------------------------- |
+| controlType | string   | **number columns**: "automatic" (default) or "checkbox"<br/>**boolean columns**: "checkbox" (default) or "popup" |
 
 #### Objects Supported
 
@@ -388,9 +388,9 @@ In particular, this property allows implementing "invisible" buttons.  Non-rende
 
 #### JSON Grammar
 
-| Name    | Data Type | Possible Values |
-| ------- | --------- | --------------- |
-| display | boolean   | true, false     |
+| Name    | Datentyp | Possible Values |
+| ------- | -------- | --------------- |
+| display | boolean  | true, false     |
 
 #### Objects Supported
 
@@ -418,9 +418,9 @@ In this case as well, the [Title](#title) property is also available so that the
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values |
-| ---------- | --------- | --------------- |
-| threeState | boolean   | true, false     |
+| Name       | Datentyp | Possible Values |
+| ---------- | -------- | --------------- |
+| threeState | boolean  | true, false     |
 
 #### Objects Supported
 
@@ -439,9 +439,9 @@ In that cases, the title of the check box can be entered using this property.
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values                    |
-| ------------ | --------- | ---------------------------------- |
-| controlTitle | string    | Any custom label for the check box |
+| Name         | Datentyp | Possible Values                    |
+| ------------ | -------- | ---------------------------------- |
+| controlTitle | string   | Any custom label for the check box |
 
 #### Objects Supported
 
@@ -475,9 +475,9 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values        |
-| ------------ | --------- | ---------------------- |
-| truncateMode | string    | "withEllipsis", "none" |
+| Name         | Datentyp | Possible Values        |
+| ------------ | -------- | ---------------------- |
+| truncateMode | string   | "withEllipsis", "none" |
 
 #### Objects Supported
 
@@ -489,7 +489,7 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 This property allows hiding the object in the Application environment.
 
-You can handle the Visibility property for most form objects. This property is mainly used to simplify dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The Visibility property allows inverting this logic by making certain objects invisible by default. The developer can then program their display using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/en/page603.html) command when needed.
+You can handle the Visibility property for most form objects. This property is mainly used to simplify dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The developer can then program their display using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv18/help/command/en/page603.html) command when needed.
 
 #### Automatic visibility in list forms
 
@@ -506,9 +506,9 @@ This property is only used when drawing objects located in the body of a list fo
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                                                                         |
-| ---------- | --------- | --------------------------------------------------------------------------------------- |
-| visibility | string    | "visible", "hidden", "selectedRows" (list form only), "unselectedRows" (list form only) |
+| Name       | Datentyp | Possible Values                                                                         |
+| ---------- | -------- | --------------------------------------------------------------------------------------- |
+| visibility | string   | "visible", "hidden", "selectedRows" (list form only), "unselectedRows" (list form only) |
 
 #### Objects Supported
 
@@ -561,9 +561,9 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values                                    |
-| -------- | --------- | -------------------------------------------------- |
-| wordwrap | string    | "automatic" (excluding list box), "normal", "none" |
+| Name     | Datentyp | Possible Values                                    |
+| -------- | -------- | -------------------------------------------------- |
+| wordwrap | string   | "automatic" (excluding list box), "normal", "none" |
 
 #### Objects Supported
 
