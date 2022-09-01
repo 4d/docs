@@ -1,59 +1,59 @@
 ---
 id: cli
-title: Command Line Interface
+title: コマンドライン・インターフェース
 ---
 
-You can use the macOS Terminal or the Windows console to drive your 4D applications (4D and 4D Server) using command lines. More particularly, this functionality allows you to:
+macOS のターミナルまたは Windows のコンソールを使用して、コマンドラインによる 4Dアプリケーション (4D および 4D Server) の起動ができます。 この機能により、以下のことが可能になります:
 
-- launch a database remotely, which can be especially useful for administering Web servers.
-- run automatic tests for your applications.
+- リモートからのデータベース起動。これは特に Webサーバーとして動作する 4D の管理に便利です。
+- アプリケーションの自動テストの実行
 
-## Basic information
+## 基本情報
 
-You can execute command lines for 4D applications using the macOS Terminal or the Windows Console.
+4Dアプリケーションのコマンドラインは、macOS のターミナルまたは Windows のコンソールで実行できます。
 
-- Under macOS, you should use the `open` command.
-- Under Windows, you can just pass the arguments directly.
+- macOS では、`open` コマンドを使用します。
+- Windows では、引数を直接渡すことができます。
 
-> Under macOS, you can pass the arguments directly by going to the folder where the application is found inside the package (Contents/MacOS path), which allows to address the stderr stream. For example, if the 4D package is located in the `MyFolder` folder, you must write the command line as follows: `/MyFolder/4D.app/Contents/MacOS/4D`. However, we recommend that you use the `open` command whenever you do not need to access the stderr stream.
+> macOS でも、パッケージ内のアプリケーションがあるフォルダー (Contents/MacOS パス) に移動することによって、引数を直接渡すことができ、エラーストリーム (stderr) にアクセスできるようになります。 たとえば、4Dパッケージが `MyFolder` フォルダーにある場合、次のようにコマンドラインを書く必要があります: `/MyFolder/4D.app/Contents/MacOS/4D`。 しかしながら、エラーストリーム(stderr) にアクセスする必要がない場合には、`open` コマンドの使用が推奨されます。
 
-## Launch a 4D application
+## 4Dアプリケーションの起動
 
-Here is a description of command lines and the arguments supported to launch 4D applications.
+ここでは、4Dアプリケーションを起動するためのコマンドラインとサポートされている引数について説明します。
 
-Syntax:
+シンタックス:
 ```
 <applicationPath> [--version] [--help] [--project] [<projectPath | packagePath | 4dlinkPath> [--data <dataPath>]] 
 [--opening-mode interpreted | compiled] [--create-data] [--user-param <user string>] [--headless] [--dataless]
 [--webadmin-settings-file] [--webadmin-access-key] [--webadmin-auto-start] [--webadmin-store-settings]
 ```
-| Argument&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Value                                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `applicationPath`                                                                                                                                                                            | Path of the 4D, 4D Server or merged application  | Launches the application. Identical to double-clicking the 4D application. When called without structure file argument, the application is executed and the 'select database' dialog box appears.                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `--version`                                                                                                                                                                                  |                                                  | Dispays application version and exits                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `--help`                                                                                                                                                                                     |                                                  | Dispays help and exits. Alternate arguments: -?, -h                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `--project`                                                                                                                                                                                  | projectPath &#124; packagePath &#124; 4dlinkPath | Project file to open with the current data file. No dialog box appears.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| `--data`                                                                                                                                                                                     | dataPath                                         | Data file to open with the designated project file. If not specified, 4D uses the last opened data file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| `--opening-mode`                                                                                                                                                                             | interpreted &#124; compiled                      | Requests database to open in interpreted or compiled mode. No error is thrown if the requested mode is unavailable.                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-| `--create-data`                                                                                                                                                                              |                                                  | Automatically creates a new data file if no valid data file is found. No dialog box appears. 4D uses the file name passed in the "--data" argument if any (generates an error if a file with the same name already exists).                                                                                                                                                                                                                                                                                                                                                                       |
-| `--user-param`                                                                                                                                                                               | Custom user string                               | A string that will be available within the 4D application through the Get database parameter command (the string must not start with a "-" character, which is reserved).                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `--headless`                                                                                                                                                                                 |                                                  | Launches the 4D, 4D Server or merged application without interface (headless mode). In this mode:<li> The Design mode is not available, database starts in Application mode</li><li> No toolbar, menu bar, MDI window or splash screen is displayed</li><li>No icon is displayed in the dock or task bar</li><li>The opened database is not registered in the "Recent databases" menu</li><li>The diagnostic log is automatically started (see [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html), selector 79)</li><li>Every call to a dialog box is intercepted and an automatic response it provided (e.g. OK for the [ALERT](https://doc.4d.com/4dv19/help/command/en/page41.html) command, Abort for an error dialog...). All intercepted commands(*) are logged in the diagnostic log.</li><br/>For maintenance needs, you can send any text to standard output streams using the [LOG EVENT](https://doc.4d.com/4dv19/help/command/en/page667.html) command. Note that headless 4D applications can only be closed by a call to [QUIT 4D](https://doc.4d.com/4dv19/help/command/en/page291.html) or using the OS task manager. |
-| `--dataless`                                                                                                                                                                                 |                                                  | Launches 4D, 4D Server or merged application in dataless mode. Dataless mode is useful when 4D runs tasks with no need for data (project compilation for example). In this mode: <li>No file containing data is opened, even if specified in the command line or the `.4DLink` file, or when using the `CREATE DATA FILE` and `OPEN DATA FILE` commands.</li><li>Commands that manipulate data will throw an error. For example, `CREATE RECORD` throws “no table to apply the command to”.</li><br/>**Note**:<li>If passed in the command line, dataless mode applies to all databases opened in 4D, as long as the application is not closed.</li><li>If passed using the `.4DLink` file, dataless mode only applies to the database specified in the `.4DLink` file. For more information on `.4DLink` files, see [Project opening shortcuts](../GettingStarted/creating.md#project-opening-shortcuts).</li>                                                                                                                                                                                                                                                                                          |
-| `--webadmin-settings-file`                                                                                                                                                                   | File path                                        | Path of the custom WebAdmin `.4DSettings` file for the [WebAdmin web server](webAdmin.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-| `--webadmin-access-key`                                                                                                                                                                      | String                                           | Access key for the [WebAdmin web server](webAdmin.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| `--webadmin-auto-start`                                                                                                                                                                      | Boolean                                          | Status of the automatic startup for the [WebAdmin web server](webAdmin.md)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
-| `--webadmin-store-settings`                                                                                                                                                                  |                                                  | Store the access key and automatic starting parameters in the currently used settings file (i.e. the default [`WebAdmin.4DSettings`](webAdmin.md#webadmin-settings) file or a custom file designated with the `--webadmin-settings-path` parameter). Use the `--webadmin-store-settings` argument to save these settings if necessary                                                                                                                                                                                                                                                             |
- (*) Some dialogs are displayed before the database is opened, so that it's impossible to write into the 
+| 引数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | Value                                            | 詳細                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `applicationPath`                                                                                                                                                                      | 4D、4D Server、または組み込みアプリケーションへのパス。                | アプリケーションを起動します。 4Dアプリケーションをダブルクリックするのと同じ動作をします。 ストラクチャーファイルを指定する引数なしで呼び出された場合、アプリケーションが実行され、データベースを選択するためのダイアログボックスが表示されます。                                                                                                                                                                                                                                                                                                                                                                |
+| `--version`                                                                                                                                                                            |                                                  | アプリケーションのバージョンを表示して終了します。                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `--help`                                                                                                                                                                               |                                                  | ヘルプを表示して終了します。 代替引数: -?, -h                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `--project`                                                                                                                                                                            | projectPath &#124; packagePath &#124; 4dlinkPath | カレントデータファイルを開くプロジェクトファイル。 ダイアログボックスは表示されません。                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| `--data`                                                                                                                                                                               | dataPath                                         | 指定されたプロジェクトファイルで開くデータファイル。 指定しない場合、4D は最後に開いたデータファイルを使用します。                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| `--opening-mode`                                                                                                                                                                       | interpreted &#124; compiled                      | データベースをインタープリタモードまたはコンパイルモードで開くように指示します。 指定のモードが利用できない場合でも、エラーは発生しません。                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| `--create-data`                                                                                                                                                                        |                                                  | 有効なデータファイルが見つからない場合、新しいデータファイルを自動的に作成します。 ダイアログボックスは表示されません。 "-data" 引数で渡されたファイルがあれば、4D はそれを使用します (同じ名前のファイルが既に存在する場合にはエラーが生成されます)。                                                                                                                                                                                                                                                                                                                                                        |
+| `--user-param`                                                                                                                                                                         | カスタムのユーザー文字列                                     | Get database parameter コマンドを通して 4Dアプリケーションで利用可能な任意の文字列 (ただし文字列は予約文字である "-" から始まってはいけません)。                                                                                                                                                                                                                                                                                                                                                                                                  |
+| `--headless`                                                                                                                                                                           |                                                  | 4D、4D Server、または組み込みアプリケーションをインターフェースなし (ヘッドレスモード) で起動します。 このモードでは:<li> デザインモードは使えません。 データベースはアプリケーションモードで起動します。</li><li> ツールバー、メニューバー、MDI ウィンドウやスプラッシュスクリーンは表示されません。</li><li>Dock またはタスクバーにはアイコンは表示されません。</li><li>開かれたデータベースは、"最近使用したデータベース" メニューに登録されません。</li><li>4D診断ファイルの記録が自動的に開始されます ([SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page642.html)、値79 参照)</li><li>ダイアログボックスへのコールはすべてインターセプトされ、自動的にレスポンスが返されます (例: [ALERT](https://doc.4d.com/4dv19/help/command/ja/page41.html) コマンドの場合は OK、エラーダイアログの場合は Abort など)。 インターセプトされたコマンド (*) は、診断ファイルに記録されます。</li><br/>保守上の理由から、[LOG EVENT](https://doc.4d.com/4dv19/help/command/ja/page667.html) コマンドを使用して任意のテキストを標準の出力ストリームに送ることができます。 ヘッドレスモードの 4Dアプリケーションは、[QUIT 4D](https://doc.4d.com/4dv19/help/command/ja/page291.html) を呼び出すか OSタスクマネージャーを使用することでしか終了できない点に注意が必要です。 |
+| `--dataless`                                                                                                                                                                           |                                                  | 4D、4D Server、または組み込みアプリケーションをデータレスモードで起動します。 データレスモードは、4D がデータを必要としないタスク (プロジェクトのコンパイルなど) を実行する場合に便利です。 このモードでは: <li>コマンドラインや `.4DLink` ファイルで指定されていても、また `CREATE DATA FILE` や `OPEN DATA FILE` コマンドを使用していても、データを含むファイルは開かれません。</li><li>データを操作するコマンドはエラーを生成します。 たとえば、`CREATE RECORD` は "このコマンドの対象となるテーブルがありません" というエラーを生成します。</li><br/>**注記**:<li>コマンドラインで引数が渡された場合、アプリケーションを終了しない限り、4D で開かれているすべてのデータベースにデータレスモードが適用されます。</li><li>`.4DLink` ファイルを使って引数が渡された場合には、データレスモードは `.4DLink` ファイルで指定されたデータベースにのみ適用されます。 `.4DLink` ファイルの詳細については、[プロジェクトを開く (その他の方法)](../GettingStarted/creating.md#プロジェクトを開く-その他の方法) を参照ください。</li>                                                                                                                                                                                                                                                     |
+| `--webadmin-settings-file`                                                                                                                                                             | ファイルパス                                           | [WebAdmin Webサーバー](webAdmin.md) 用のカスタム WebAdmin `.4DSettings` ファイルのパス                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| `--webadmin-access-key`                                                                                                                                                                | String                                           | [WebAdmin Webサーバー](webAdmin.md) 用のアクセスキー                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| `--webadmin-auto-start`                                                                                                                                                                | ブール                                              | [WebAdmin Webサーバー](webAdmin.md) 用の自動スタートアップ設定の状態                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| `--webadmin-store-settings`                                                                                                                                                            |                                                  | アクセスキーと自動スタートアップパラメーターを、現在使用している設定ファイル (デフォルトの [`WebAdmin.4DSettings`](webAdmin.md#webadmin-設定) ファイル、または `--webadmin-settings-path` パラメーターで指定されたカスタムファイル) に保存します。 必要に応じて `--webadmin-store-settings` 引数を使用して、これらの設定を保存します。                                                                                                                                                                                                                                                                 |
 
-[Diagnostic log file](Debugging/debugLogFiles.md#4ddiagnosticlogtxt) (licence alert, conversion dialog, database selection, data file selection). In such case, an error message is thrown both in the stderr stream and the system event log, and then the application quits.
 
-### Examples
+[Diagnostic log file](Debugging/debugLogFiles.md#4ddiagnosticlogtxt) (licence alert, conversion dialog, database selection, data file selection). このような場合、エラーストリーム (stderr) とシステムのイベントログにエラーが投げられ、アプリケーションが終了します。
 
-These examples assume that your 4D application is stored on the desktop and that the database to be opened is found in the "Documents" folder.
+### 例題
 
-> The current folder of the user is reached using the "~ " command under macOS and the "%HOMEPATH%" command under Windows.
+以下の例題では、4Dアプリケーションがデスクトップに保存されており、開こうとしているデータベースが "Documents" フォルダーにあるものとします。
 
-Launch application:
+> ユーザーのカレントフォルダーは、macOS では "~" コマンドを、Windows では "%HOMEPATH%" コマンドを使用することで取得することができます。
+
+以下の例題では、4Dアプリケーションがデスクトップに保存されており、開こうとしているデータベースが "Documents" フォルダーにあるものとします。
 
 *   macOS:
 
@@ -69,13 +69,13 @@ open ~/Desktop/4D.app
 %HOMEPATH%\Desktop\4D\4D.exe
 ```
 
-Launch application with a package file on macOS:
+アプリケーションを起動:
 
 ```bash
 yarn open ~/Desktop/4D.app --args ~/Documents/myDB.4dbase
 ```
 
-Launch application with a project file:
+macOS上でパッケージファイルを指定してアプリケーションを起動:
 
 *   macOS:
 
@@ -94,7 +94,7 @@ yarn open ~/Desktop/4D.app --args ~/Documents/myProj/Project/myProj.4DProject
 
 
 
-Launch application with a project file and a data file:
+プロジェクトファイルを指定してアプリケーションを起動:
 
 *   macOS:
 
@@ -108,11 +108,11 @@ open ~/Desktop/4D.app --args --project ~/Documents/myProj/Project/myProj.4DProje
 
 ```bash
 %HOMEPATH%\Desktop\4D\4D.exe --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD
-or:
+または
 %HOMEPATH%\Desktop\4D\4D.exe /project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject /data %HOMEPATH%\Documents\data\myData.4DD
 ```
 
-Launch application with a .4DLink file:
+プロジェクトファイルとデータファイルを指定してアプリケーションを起動:
 
 *   macOS:
 
@@ -136,7 +136,7 @@ open "~/Desktop/4D Server.app" MyDatabase.4DLink
 %HOMEPATH%\Desktop\4D Server.exe" MyDatabase.4DLink
 ```
 
-Launch application in compiled mode and create a data file if not available:
+.4DLink ファイルを指定してアプリケーションを起動:
 
 *   macOS:
 
@@ -152,7 +152,7 @@ open ~/Desktop/4D.app ~/Documents/myBase.4dbase --args --opening-mode compiled -
 %HOMEPATH%\Desktop\4D\4D.exe %HOMEPATH%\Documents\myBase.4dbase\myDB.4db --opening-mode compiled --create-data true
 ```
 
-Launch application with a project file and a data file and pass a string as a user parameter:
+アプリケーションをコンパイルモードで起動し、データファイルが利用できない場合には作成する:
 
 *   macOS:
 
@@ -168,7 +168,7 @@ open ~/Desktop/4D.app --args --project ~/Documents/myProj/Project/myProj.4DProje
 %HOMEPATH%\Desktop\4D\4D.exe --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD --user-param "Hello world"
 ```
 
-Launch application without interface (headless mode):
+プロジェクトファイルとデータファイルを指定してアプリケーションを起動し、ユーザー引数として文字列を渡す:
 
 *   macOS:
 
