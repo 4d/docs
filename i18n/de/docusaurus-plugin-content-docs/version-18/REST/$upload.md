@@ -6,7 +6,7 @@ title: "$upload"
 
 Returns an ID of the file uploaded to the server
 
-## Description
+## Beschreibung
 Post this request when you have a file that you want to upload to the Server. If you have an image, you pass `$rawPict=true`. For all other files, you pass `$binary=true`.
 
 You can modify the timeout, which by default is 120 seconds, by passing a value to the `$timeout parameter`.
