@@ -1,27 +1,27 @@
 ---
 id: overview
-title: Class API Overview
+title: Generalidades - API de clases
 ---
 
-This section describes the built-in 4D class API as well as the associated constructor commands. 4D class functions and properties are available through class instance objects.
+Esta sección describe la API de las clases 4D integradas, así como los comandos de constructor asociados. Las funciones y propiedades de clase 4D están disponibles a través de los objetos de instancia de clase.
 
-- functions must be called on instances with the () operator. For example, `collection.sort()`.
+- las funciones deben llamarse en las instancias con el operador (). Por ejemplo, `collection.sort()`.
 
-- properties are accessed without parentheses, for example `file.creationTime`. You can also use the \[] syntax, for example `file["creationTime"]`.
+- se accede a las propiedades sin paréntesis, por ejemplo `file.creationTime`. También puede utilizar la sintaxis \[], por ejemplo `file["creationTime"]`.
 
-## Writing conventions
+## Convenciones de escritura
 
-The following conventions are used in the function syntax:
+En la sintaxis de la función se utilizan las siguientes convenciones:
 
-- the `{ }` characters (braces) indicate optional parameters. For example, `.delete( { option : Integer } )` means that the *option* parameter may be omitted when calling the function.
-- the `{ ; ...param }` notation indicates an unlimited number of parameters. For example, `.concat( value : any { ;...valueN } ) : Collection` means that an unlimited number of values of any type can be passed to the function.
-- the `any` keyword is used for parameters that can be of any type that can be stored within attributes (number, text, boolean, date, time, object, collection...).
+- los caracteres `{ }` indican los parámetros opcionales. Por ejemplo, `.delete( { option : Integer } )` significa que el parámetro *option* puede omitirse al llamar a la función.
+- la notación `{ ; ...param }` indica un número ilimitado de parámetros. Por ejemplo, `.concat( value : any { ;...valueN } ) : Collection` significa que se puede pasar a la función un número ilimitado de valores de cualquier tipo.
+- la palabra clave `any` se utiliza para parámetros que pueden ser de cualquier tipo que se pueda almacenar dentro de los atributos (número, texto, booleano, fecha, hora, objeto, colección...).
 
-## Other resources
+## Otros recursos
 
-For an overall presentation of the 4D Language basics and concepts, please go to the [4D Language Concepts](Concepts/about.md) section.
+Para una presentación general de los fundamentos y conceptos del lenguaje 4D, por favor consulte la sección [Conceptos de Lenguaje 4D](Concepts/about.md).
 
-For a description of the 4D "classic" language, please go to the *4D Language Reference* on [doc.4d.com](https://doc.4d.com). 
+Para una descripción del lenguaje "clásico" de 4D, por favor consulte el manual de *Lenguaje 4D* en [doc.4d.com](https://doc.4d.com). 
 
 
 
