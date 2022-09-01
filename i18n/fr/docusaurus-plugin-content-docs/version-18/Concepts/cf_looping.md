@@ -1,53 +1,53 @@
 ---
 id: looping
-title: Looping structures
+title: Structures répétitives (ou "boucles")
 ---
 
 ## While...End while
-The formal syntax of the `While...End while` control flow structure is:
+La syntaxe de la structure répétitive (ou boucle) `While...End while` est la suivante :
 ```4d
- While(Boolean_Expression)
-    statement(s)
+ While(Expression_booléenne)
+    instruction(s)
  End while
 ```
-A `While...End while` loop executes the statements inside the loop as long as the Boolean expression is TRUE. It tests the Boolean expression at the beginning of the loop and does not enter the loop at all if the expression is FALSE.
+Une boucle `While...End while` exécute les instructions comprises entre `While` et `End while` aussi longtemps que l’expression booléenne est TRUE. Elle teste l’expression booléenne initiale et n’entre pas dans la boucle (et donc n'exécute aucune instruction) si l’expression est à FALSE.
 
-It is common to initialize the value tested in the Boolean expression immediately before entering the `While...End while` loop. Initializing the value means setting it to something appropriate, usually so that the Boolean expression will be TRUE and `While...End while` executes the loop.
+Il est utile d’initialiser la valeur testée dans l’expression booléenne juste avant d’entrer dans la boucle `While...End while`. Initialiser la valeur signifie lui affecter un contenu approprié, généralement pour que l’expression booléenne soit TRUE et que le programme entre dans la boucle.
 
-The Boolean expression must be set by something inside the loop or else the loop will continue forever. The following loop continues forever because _NeverStop_ is always TRUE:
+La valeur de l'expression booléenne doit pouvoir être modifiée par un élément situé à l'intérieur de la boucle, sinon elle s'exécutera indéfiniment. La boucle suivante est sans fin car _NeverStop_ est toujours TRUE :
 ```4d
  NeverStop:=True
  While(NeverStop)
  End while
 ```
 
-If you find yourself in such a situation, where a method is executing uncontrolled, you can use the trace facilities to stop the loop and track down the problem. For more information about tracing a method, see the [Error handling](error-handling.md) page.
+Si vous vous retrouvez dans une telle situation (où une méthode s'exécute de manière incontrôlée), vous pouvez utiliser les fonctions de débogage de 4D et remonter à la source du problème. Pour plus d'informations sur ce point, reportez-vous à la section [Débogueur](error-handling.md).
 
-### Example
+### Exemple
 
 ```4d
- CONFIRM("Add a new record?") //The user wants to add a record?
- While(OK=1) //Loop as long as the user wants to
-    ADD RECORD([aTable]) //Add a new record
- End while //The loop always ends with End while
+ CONFIRM("Add a new record?") //L'utilisateur souhaite-t-il ajouter un enregistrement ? CONFIRM("Add a new record?") //The user wants to add a record?
+ While(OK=1) // Tant que l'utilisateur accepte
+    ADD RECORD([aTable]) // Ajouter un nouvel enregistrement
+End while // Une boucle While se termine toujours par End while
 ```
 
-In this example, the `OK` system variable is set by the `CONFIRM` command before the loop starts. If the user clicks the **OK** button in the confirmation dialog box, the `OK` system variable is set to 1 and the loop starts. Otherwise, the `OK` system variable is set to 0 and the loop is skipped. Once the loop starts, the `ADD RECORD` command keeps the loop going because it sets the `OK` system variable to 1 when the user saves the record. When the user cancels (does not save) the last record, the `OK` system variable is set to 0 and the loop stops.
+Dans cet exemple, la valeur de la variable système `OK` est définie par la commande `CONFIRM` avant que le programme n’entre dans la boucle. Si l’utilisateur clique sur le bouton **OK** dans la boîte de dialogue de confirmation, la variable `OK` prend la valeur 1 et la boucle est exécutée. Dans le cas contraire, la variable `OK` prend la valeur 0 et la boucle est ignorée. Une fois que le programme entre dans la boucle, la commande `ADD RECORD` permet de continuer à l’exécuter car elle met la variable système `OK` à 1 lorsque l’utilisateur sauvegarde l’enregistrement. Lorsque l’utilisateur annule (ne valide pas) le dernier enregistrement, la variable système `OK` prend la valeur 0 et la boucle s’arrête.
 
 ## Repeat...Until
 
-The formal syntax of the `Repeat...Until` control flow structure is:
+La syntaxe de la structure répétitive (ou boucle) `Repeat...Until` est la suivante :
 ```4d
  Repeat
-    statement(s)
+    instruction(s)
  Until(Boolean_Expression)
 ```
-A `Repeat...Until` loop is similar to a [While...End while](flow-control#whileend-while) loop, except that it tests the Boolean expression after the loop rather than before. Thus, a `Repeat...Until` loop always executes the loop once, whereas if the Boolean expression is initially False, a `While...End while` loop does not execute the loop at all.
+La boucle `Repeat...Until` est semblable à la boucle [While...End while](flow-control#whileend-while), à la différence qu’elle teste la valeur de l’expression booléenne après l’exécution de la boucle et non avant. Ainsi, la boucle est toujours exécutée au moins une fois, tandis que si l’expression booléenne est initialement à Faux, la boucle `While...End while` ne s’exécute pas du tout.
 
-The other difference with a `Repeat...Until` loop is that the loop continues until the Boolean expression is TRUE.
+L'autre particularité de la boucle `Repeat...Until` est qu’elle se poursuit jusqu’à ce que l’expression booléenne soit à TRUE.
 
-### Example
-Compare the following example with the example for the `While...End while` loop. Note that the Boolean expression does not need to be initialized—there is no `CONFIRM` command to initialize the `OK` variable.
+### Exemple
+Comparez l’exemple suivant avec celui de la boucle `While...End while`. Vous constatez qu’il n’est pas nécessaire d’initialiser l’expression booléenne — il n’y a pas de commande `CONFIRM` pour initialiser la variable `OK`.
 
 ```4d
  Repeat
@@ -56,193 +56,193 @@ Compare the following example with the example for the `While...End while` loop.
 ```
 
 ## For...End for
-The formal syntax of the `For...End for` control flow structure is:
+La syntaxe de la structure répétitive `For...End for` est la suivante :
 
 ```4d
  For(Counter_Variable;Start_Expression;End_Expression{;Increment_Expression})
-    statement(s)
+    instruction(s)
  End for
 ```
 
-The `For...End for` loop is a loop controlled by a counter variable:
+La structure `For...End for` est une boucle contrôlée par un compteur :
 
-- The counter variable *Counter_Variable* is a numeric variable (Real or Long Integer) that the `For...End for` loop initializes to the value specified by *Start_Expression*.
-- Each time the loop is executed, the counter variable is incremented by the value specified in the optional value *Increment_Expression*. If you do not specify *Increment_Expression*, the counter variable is incremented by one (1), which is the default.
-- When the counter variable passes the *End_Expression* value, the loop stops.
+- La variable compteur *Counter_Variable* est une variable numérique (Réel ou Entier long) initialisée par `For...End for` à la valeur spécifiée par *Start_Expression*.
+- La variable Variable_Compteur est incrémentée de la valeur spécifiée par le paramètre optionnel *Increment_Expression* à chaque fois que la boucle est exécutée. Si vous ne passez pas de valeur dans *Increment_Expression*, la variable compteur est incrémentée par défaut de un (1).
+- Lorsque le compteur atteint la valeur définie par *End_Expression*, la boucle s'arrête.
 
-**Important:** The numeric expressions *Start_Expression*, *End_Expression* and *Increment_Expression* are evaluated once at the beginning of the loop. If these expressions are variables, changing one of these variables within the loop will not affect the loop.
+**Important :** Les expressions numériques *Start_Expression*, *End_Expression* et *Increment_Expression* sont évaluées une seule fois, au début de la boucle. Si ces expressions sont des variables, leur modification depuis l'intérieur de la boucle n'affectera pas l'exécution de la boucle.
 
-**Tip:** However, for special purposes, you can change the value of the counter variable *Counter_Variable* within the loop; this will affect the loop.
+**Astuce :** En revanche, vous pouvez, si vous le souhaitez, modifier la valeur de la variable *Counter_Variable* depuis l'intérieur de la boucle et cela affectera l'exécution de la boucle.
 
-- Usually *Start_Expression* is less than *End_Expression*.
-- If *Start_Expression* and *End_Expression* are equal, the loop will execute only once.
-- If *Start_Expression* is greater than *End_Expression*, the loop will not execute at all unless you specify a negative *Increment_Expression*. See the examples.
+- Généralement, *Start_Expression* est inférieure à *End_Expression*.
+- Si les deux expressions sont égales, la boucle ne sera exécutée qu'une fois.
+- Si *Start_Expression* est supérieure à *End_Expression*, la boucle ne s'exécutera pas du tout, à moins que vous ne spécifiiez une *Increment_Expression* négative. Reportez-vous ci-dessous au paragraphe décrivant ce point.
 
-### Basic examples
-1. The following example executes 100 iterations:
+### Exemples élémentaires
+1. La boucle suivante s'exécute 100 fois :
 
 ```4d
  For(vCounter;1;100)
-  //Do something
+  //Faire quelque chose
  End for
 ```
 
-2. The following example goes through all elements of the array anArray:
+2. L'exemple suivant permet de traiter tous les éléments du tableau anArray :
 
 ```4d
  For($vlElem;1;Size of array(anArray))
-  //Do something with the element
+  //Faire quelque chose avec l'élément
     anArray{$vlElem}:=...
  End for
 ```
 
-3. The following example goes through all the characters of the text vtSomeText:
+3. L'exemple suivant permet d'examiner chaque caractère du texte vtSomeText :
 
 ```4d
  For($vlChar;1;Length(vtSomeText))
-  //Do something with the character if it is a TAB
+  //Faire quelque chose avec le caractère si c'est une tabulation
     If(Character code(vtSomeText[[$vlChar]])=Tab)
   //...
     End if
  End for
 ```
 
-4. The following example goes through the selected records for the table [aTable]:
+4. L'exemple suivant permet de traiter tous les enregistrements de la sélection de la table [aTable] :
 
 ```4d
  FIRST RECORD([aTable])
  For($vlRecord;1;Records in selection([aTable]))
-  //Do something with the record
+  //Faire quelque chose avec chaque enregistrement
     SEND RECORD([aTable])
   //...
-  //Go to the next record
+  // Passer à l'enregistrement suivant
     NEXT RECORD([aTable])
  End for
 ```
 
-Most of the `For...End for` loops you will write in your databases will look like the ones listed in these examples.
+La plupart des structures `For...End for` que vous écrirez dans vos bases ressembleront à celles présentées ci-dessus.
 
-### Decrementing variable counter
+### Décrémenter la variable Compteur
 
-In some cases, you may want to have a loop whose counter variable is decreasing rather than increasing. To do so, you must specify *Start_Expression* greater than *End_Expression* and a negative *Increment_Expression*. The following examples do the same thing as the previous examples, but in reverse order:
+Dans certains cas, vous pouvez souhaiter disposer d'une boucle dont la valeur de la variable compteur décroît au lieu de croître. Pour cela, *Start_Expression* doit être supérieure à *End_Expression* et *Increment_Expression* doit être négative. Les exemples suivants effectuent les mêmes tâches que les précédents, mais en sens inverse :
 
-5. The following example executes 100 iterations:
+5. La boucle suivante s'exécute 100 fois :
 
 ```4d
  For(vCounter;100;1;-1)
-  //Do something
+  //Faire quelque chose
  End for
 ```
 
-6. The following example goes through all elements of the array anArray:
+6. L'exemple suivant permet de traiter tous les éléments du tableau anArray :
 
 ```4d
  For($vlElem;Size of array(anArray);1;-1)
-  //Do something with the element
+  //Faire quelque chose avec l'élément
     anArray{$vlElem}:=...
  End for
 ```
 
-7. The following example goes through all the characters of the text vtSomeText:
+7. L'exemple suivant permet d'examiner chaque caractère du texte vtSomeText :
 
 ```4d
  For($vlChar;Length(vtSomeText);1;-1)
-  //Do something with the character if it is a TAB
+  //Faire quelque chose avec le caractère si c'est une tabulation
     If(Character code(vtSomeText[[$vlChar]])=Tab)
   //...
     End if
  End for
 ```
 
-8. The following example goes through the selected records for the table [aTable]:
+8. L'exemple suivant permet de traiter tous les enregistrements de la sélection de la table [aTable] :
 
 ```4d
  LAST RECORD([aTable])
  For($vlRecord;Records in selection([aTable]);1;-1)
-  //Do something with the record
+  //Faire quelque chose avec chaque enregistrement
     SEND RECORD([aTable])
   //...
-  //Go to the previous record
+  //Passer à l'enregistrement précédent
     PREVIOUS RECORD([aTable])
  End for
 ```
 
-### Incrementing the counter variable by more than one
+### Incrementer la variable compteur de plus de 1
 
-If you need to, you can use an *Increment_Expression* (positive or negative) whose absolute value is greater than one.
+Si vous le souhaitez, vous pouvez passer dans *Increment_Expression* une valeur (positive ou négative) dont la valeur absolue est supérieure à un.
 
-9. The following loop addresses only the even elements of the array anArray:
+9. La boucle suivante ne traite que les éléments pairs du tableau anArray :
 
 ```4d
  For($vlElem;2;Size of array(anArray);2)
-  //Do something with the element #2,#4...#2n
+  //Faire quelque chose avec l'élément 2,4...2n
     anArray{$vlElem}:=...
  End for
 ```
 
 
-### Comparing looping structures
+### Comparaison des structures répétitives
 
-Let's go back to the first `For...End for` example. The following example executes 100 iterations:
+Revenons au premier exemple `For...End for`. La boucle suivante s'exécute 100 fois :
 ```4d
  For(vCounter;1;100)
-  //Do something
+  //Faire quelque chose
  End for
 ```
 
-It is interesting to see how the `While...End while` loop and `Repeat...Until` loop would perform the same action. Here is the equivalent `While...End while` loop:
+Il est intéressant d'examiner la manière dont les boucles `While...End while` et `Repeat...Until` effectuent la même action. Voici la boucle `While...End while` équivalente :
 ```4d
- $i:=1 //Initialize the counter
- While($i<=100) //Loop 100 times
-  //Do something
-    $i:=$i+1 //Need to increment the counter
+ $i :=1 // Initialisation du compteur
+While ($i<=100) // Boucle 100 fois
+  // Faire quelque chose
+    $i :=$i +1 // Il faut incrémenter le compteur
  End while
 ```
 
-Here is the equivalent `Repeat...Until` loop:
+Voici la boucle `Repeat...Until` équivalente :
 ```4d
- $i:=1 //Initialize the counter
+ $i :=1 // Initialisation du compteur
  Repeat
-  //Do something
-    $i:=$i+1 //Need to increment the counter
- Until($i=100) //Loop 100 times
+  // Faire quelque chose
+    $i :=$i +1 // Il faut incrémenter le compteur
+Until($i=100) // Boucle 100 fois
 ```
-**Tip:** The `For...End for` loop is usually faster than the `While...End while` and `Repeat...Until` loops, because 4D tests the condition internally for each cycle of the loop and increments the counter. Therefore, use the `For...End for` loop whenever possible.
+**Astuce :** La boucle `For...End for` est généralement plus rapide que les boucles `While...End while` et `Repeat...Until` car 4D teste la condition en interne pour chaque cycle de la boucle et incrémente lui-même le compteur. Par conséquent, nous vous conseillons de préférer à chaque fois que c'est possible la structure `For...End for`.
 
-### Optimizing the execution of the For...End for loops
+### Optimiser l'exécution de For...End for
 
-You can use Real and Long Integer variables as well as interprocess, process, and local variable counters. For lengthy repetitive loops, especially in compiled mode, use local Long Integer variables.
+Vous pouvez utiliser comme compteur une variable interprocess, process ou locale, et lui attribuer le type Réel, Entier ou Entier long. Pour des boucles longues, et particulièrement en mode compilé, nous vous conseillons d'employer des variables locales de type Entier long.
 
-10. Here is an example:
+10. Voici un exemple :
 
 ```4d
- C_LONGINT($vlCounter) //use local Long Integer variables
- For($vlCounter;1;10000)
-  //Do something
- End for
+ C_LONGINT($vlCounter) // Utilisons une variable locale de type Entier long
+For($vlCounter;1;10000)
+  // Faire quelque chose
+  End for
 ```
 
-### Nested For...End for looping structures
+### Structures For...End for emboîtées
 
-You can nest as many control structures as you (reasonably) need. This includes nesting `For...End for` loops. To avoid mistakes, make sure to use different counter variables for each looping structure.
+Vous pouvez emboîter autant de structures répétitives que vous voulez (dans les limites du raisonnable). Cela s'applique aux structures de type `For...End for`. Il y a dans ce cas une erreur courante à éviter : assurez-vous d'utiliser une variable compteur différente par structure de boucle.
 
-Here are two examples:
+Voici deux exemples :
 
-11. The following example goes through all the elements of a two-dimensional array:
+11. L'exemple suivant permet de traiter tous les éléments d'un tableau à deux dimensions :
 
 ```4d
  For($vlElem;1;Size of array(anArray))
   //...
-  //Do something with the row
-  //...
+  // Faire quelque chose avec la ligne
+  // ...
     For($vlSubElem;1;Size of array(anArray{$vlElem}))
-  //Do something with the element
+  //Faire quelque chose avec l'élément
        anArray{$vlElem}{$vlSubElem}:=...
     End for
  End for
 ```
 
-12. The following example builds an array of pointers to all the date fields present in the database:
+12. L'exemple suivant construit un tableau de pointeurs vers tous les champs de type Date présents dans la base :
 
 ```4d
  ARRAY POINTER($apDateFields;0)
@@ -264,51 +264,51 @@ Here are two examples:
 ```
 
 ## For each...End for each
-The formal syntax of the `For each...End for each` control flow structure is:
+La syntaxe de la structure répétitive (ou boucle) `For each...End for each` est la suivante :
 
 ```4d
- For each(Current_Item;Expression{;begin{;end}}){Until|While}(Boolean_Expression)}
-    statement(s)
+ For each(Element_courant;Expression{;debut{;fin}}){Until|While}(Expression_booléenne)}
+    instruction(s)
  End for each
 ```
 
-The `For each...End for each` structure iterates a specified *Current_item* over all values of the *Expression*. The *Current_item* type depends on the *Expression* type. The `For each...End for each` loop can iterate through three *Expression* types:
+La structure `For each...End for each` exécute le cycle d'instructions définies pour chaque *Elément_courant* de *Expression*. Le type de *Elément_courant* dépend du type de *Expression*. La boucle `For each...End for each` peut itérer parmi trois types d'*Expression* :
 
-- collections: loop through each element of the collection,
-- entity selections: loop through each entity,
-- objects: loop through each object property.
+- collections : boucle sur chaque élément de la collection,
+- entity selections : boucle sur chaque entity,
+- objets : boucle sur chaque propriété d'objet.
 
-The following table compares the three types of `For each...End for each`:
+Le tableau suivant compare les trois types de `Pour chaque...Fin de chaque` :
 
-|                                   | Loop through collections                         | Loop through entity selections      | Loop through objects        |
-| --------------------------------- | ------------------------------------------------ | ----------------------------------- | --------------------------- |
-| Current_Item type                 | Variable of the same type as collection elements | Entity                              | Text variable               |
-| Expression type                   | Collection (with elements of the same type)      | Entity selection                    | Object                      |
-| Number of loops (by default)      | Number of collection elements                    | Number of entities in the selection | Number of object properties |
-| Support of begin / end parameters | Yes                                              | Yes                                 | No                          |
+|                                           | Boucle sur collections                                  | Boucle sur entity selections       | Boucle sur objets             |
+| ----------------------------------------- | ------------------------------------------------------- | ---------------------------------- | ----------------------------- |
+| Type Elément_courant                      | Variable du même type que les éléments de la collection | Entité (entity)                    | Variable texte                |
+| Types d’expressions                       | Collection (avec des éléments du même type)             | Entity selection                   | Object                        |
+| Nombre de boucles (par défaut)            | Nombre d'éléments de la collection                      | Nombre d'entités dans la sélection | Nombre de propriétés d'objets |
+| Prise en charge de Paramètres début / fin | Oui                                                     | Oui                                | Non                           |
 
-- The number of loops is evaluated at startup and will not change during the processing. Adding or removing items during the loop is usually not recommended since it may result in missing or redundant iterations.
-- By default, the enclosed _statement(s)_ are executed for each value in *Expression*. It is, however, possible to exit the loop by testing a condition either at the begining of the loop (`While`) or at the end of the loop (`Until`).
-- The *begin* and *end* optional parameters can be used with collections and entity selections to define boundaries for the loop.
-- The `For each...End for each` loop can be used on a **shared collection** or a **shared object**. If your code needs to modify one or more element(s) of the collection or object properties, you need to use the `Use...End use` keywords. Depending on your needs, you can call the `Use...End use` keywords:
-    - before entering the loop, if items should be modified together for integrity reasons, or
-    - within the loop when only some elements/properties need to be modified and no integrity management is required.
+- Le nombre de boucles est évalué au démarrage et ne changera pas en cours de traitement. L'ajout ou la suppression d'éléments pendant la boucle est donc déconseillé car il pourra en résulter une redondance ou un manque d'itérations.
+- Par défaut, les _instructions_ incluses sont exécutées pour chaque valeur de *Expression*. Il est toutefois possible de sortir de la boucle en testant une condition soit au début de chaque itération (`While`) ou à la fin de chaque itération (`Until`).
+- Les paramètres optionnels *début* et *fin* peuvent être utilisés avec les collections et les entity selections afin de définir des bornes pour la boucle.
+- La boucle `For each...End for each` peut être utilisée sur une **collection partagée** ou un **objet partagé**. Si vous souhaitez modifier un ou plusieurs éléments des propriétés d'objets ou de la collection dans le code, vous devez utiliser les mots-clés `Use...End use`. Vous pouvez, si vous le souhaitez, appeler les mots-clés `Use...End use` :
+    - avant de saisir la boucle, si les éléments doivent être modifiés ensemble pour des raisons d'intégrité, ou bien
+    - dans la boucle, lorsque quelques éléments/propriétés seulement doivent être modifiés et qu'aucune gestion de l'intégrité n'est requise.
 
-### Loop through collections
+### Boucle sur collections
 
-When `For each...End for each` is used with an _Expression_ of the _Collection_ type, the _Current_Item_ parameter is a variable of the same type as the collection elements. By default, the number of loops is based on the number of items of the collection.
+Lorsque `For each...End for each` est utilisée avec une _Expression_ de type _Collection_, le paramètre _Elément_courant_ est une variable du même type que les éléments de la collection. Par défaut, le nombre de boucles est basé sur le nombre d'éléments de la collection.
 
-The collection must contain only elements of the same type, otherwise an error will be returned as soon as the _Current_Item_ variable is assigned the first mismatched value type.
+La collection doit contenir uniquement des éléments du même type. Dans le cas contraire, une erreur sera retournée dès que la première valeur de type différent sera assignée à la variable _Elément_courant_.
 
-At each loop iteration, the _Current_Item_ variable is automatically filled with the matching element of the collection. The following points must be taken into account:
+A chaque itération de la boucle, la variable _Elément_courant_ reçoit automatiquement l'élément correspondant de la collection. Vous devez tenir compte des points suivants :
 
-- If the _Current_Item_ variable is of the object type or collection type (i.e. if _Expression_ is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). If the variable is of a scalar type, only the variable will be modified.
 - The _Current_Item_ variable must be of the same type as the collection elements. If any collection item is not of the same type as the variable, an error is generated and the loop stops.
-- If the collection contains elements with a **Null** value, an error will be generated if the _Current_Item_ variable type does not support **Null** values (such as longint variables).
+- If the _Current_Item_ variable is of the object type or collection type (i.e. Si un seul élément de la collection n'est pas du même type que la variable, une erreur est générée et la boucle s'arrête.
+- Si la collection contient des éléments de valeur **Null**, une erreur sera générée si le type de la variable _Elément_courant_ ne prend pas en charge la valeur **Null** (comme par exemple les variables entier long).
 
-#### Example
+#### Exemple
 
-You want to compute some statistics for a collection of numbers:
+Vous souhaitez calculer quelques statistiques sur une collection de nombres :
 ```4d
  C_COLLECTION($nums)
  $nums:=New collection(10;5001;6665;33;1;42;7850)
@@ -330,19 +330,19 @@ You want to compute some statistics for a collection of numbers:
   //$vUnder=4,$vOver=2
 ```
 
-### Loop through entity selections
+### Boucle sur entity selections
 
-When `For each...End for each` is used with an _Expression_ of the _Entity selection_ type, the _Current_Item_ parameter is the entity that is currently processed.
+Lorsque `For each...End for each` est utilisée avec une _Expression_ de type _Entity selection_, le paramètre _Elément_courant_ contient l'entity en cours de traitement.
 
-The number of loops is based on the number of entities in the entity selection. On each loop iteration, the *Current_Item* parameter is automatically filled with the entity of the entity selection that is currently processed.
+Le nombre de boucles est basé sur le nombre d'entities présentes dans l'entity selection. A chaque itération de la boucle, le paramètre *Elément_courant* reçoit automatiquement l'entity qui est en cours de traitement.
 
-**Note:** If the entity selection contains an entity that was removed meanwhile by another process, it is automatically skipped during the loop.
+**Note :** Si l'entity selection contient une entity qui a été supprimée entre-temps par un autre process, elle est automatiquement ignorée durant la boucle.
 
-Keep in mind that any modifications applied on the current entity must be saved explicitly using `entity.save( )`.
+N'oubliez pas que toute modification effectuée sur l'entity en cours de traitement doit être explicitement sauvegardée (si nécessaire) à l'aide de la méthode `entity.save( )`.
 
-#### Example
+#### Exemple
 
-You want to raise the salary of all British employees in an entity selection:
+Vous souhaitez augmenter le salaire de tous les employés britanniques dans une entity selection :
 ```4d
  C_OBJECT(emp)
  For each(emp;ds.Employees.query("country='UK'"))
@@ -351,15 +351,15 @@ You want to raise the salary of all British employees in an entity selection:
  End for each
 ```
 
-### Loop through object properties
+### Boucles sur des propriétés d'objets
 
-When `For each...End for each` is used with an *Expression* of the Object type, the *Current_Item* parameter is a text variable automatically filled with the name of the currently processed property.
+Lorsque `For each...End for each` est utilisée avec une *Expression* de type Objet, le paramètre *Elément_courant* est une variable texte qui reçoit automatiquement le nom de la propriété en cours de traitement.
 
-The properties of the object are processed according to their order of creation. During the loop, properties can be added to or removed from the object, without modifying the number of loops that will remain based on the original number of properties of the object.
+Les propriétés de l'objet sont itérées en fonction de leur ordre de création. Pendant la boucle, il est possible d'ajouter ou de supprimer des propriétés dans l'objet, sans pour autant modifier le nombre de boucles qui reste basé sur le nombre de propriétés initial de l'objet.
 
-#### Example
+#### Exemple
 
-You want to switch the names to uppercase in the following object:
+Vous souhaitez passer en majuscules les propriétés contenant des noms dans l'objet suivant :
 ```4d
 {
     "firstname": "gregory",
@@ -367,7 +367,7 @@ You want to switch the names to uppercase in the following object:
     "age": 20
 }
 ```
-You can write:
+Vous pouvez écrire :
 ```4d
  For each(property;vObject)
     If(Value type(vObject[property])=Is text)
@@ -382,23 +382,21 @@ You can write:
     "age": 20
 }
 ```
-### begin / end parameters
+### Paramètres début / fin
 
-You can define bounds to the iteration using the optional begin and end parameters.
+Vous pouvez définir des bornes pour l'itération à l'aide des paramètres optionnels début et fin.
 
-**Note:** The *begin* and *end* parameters can only be used in iterations through collections and entity selections (they are ignored on object properties).
+**Note :** Les paramètres *début* et *fin* sont utilisables uniquement avec les boucles sur des collections et des entity selections (ils sont ignorés avec les boucles sur des propriétés d'objets).
 
-- In the *begin* parameter, pass the element position in *Expression* at which to start the iteration (*begin* is included).
-- In the *end* parameter, you can also pass the element position in *Expression* at which to stop the iteration (*end* is excluded).
+- Dans le paramètre *début*, passez la position de l'élément de *Expression* auquel démarrer l'itération (*début* est inclus).
+- Dans le paramètre *fin*, vous pouvez passer la position de l'élément de *Expression* auquel stopper l'itération (*fin* est exclus).
 
-If *end* is omitted or if *end* is greater than the number of elements in *Expression*, elements are iterated from *begin* until the last one (included). If the *begin* and *end* parameters are positive values, they represent actual positions of elements in *Expression*. If *begin* is a negative value, it is recalculed as `begin:=begin+Expression size` (it is considered as the offset from the end of *Expression*). If the calculated value is negative, *begin* is set to 0. **Note:** Even if begin is negative, the iteration is still performed in the standard order. If *end* is a negative value, it is recalculed as `end:=end+Expression size`
+Si *fin* est omis ou si *fin* est plus grand que le nombre d'éléments de *Expression*, les éléments sont itérés depuis *début* jusqu'au dernier inclus. Si les paramètres *début* et *fin* sont des valeurs positives, ils représentent des positions d'éléments dans *Expression*. Si *begin* est une valeur négative, elle est recalculée comme `begin:=begin+Taille expression` (elle est considérée comme un décalage à partir de la fin de *Expression*). Si la valeur calculée est négative, *begin* prend la valeur 0. **Note :** Même si début est une valeur négative, l'itération est toujours effectuée dans le même ordre. Si *fin* est une valeur négative, elle est recalculée comme `fin:=fin+Taille expression`
+- une collection contient 10 éléments (numérotés de 0 à 9)
+- début=-4 > début=-4+10=6 > l'itération démarre au 6e élément (numéro 5)
+- fin=-2 > fin=-2+10=8 > l'itération stoppe avant le 8e élément (numéro 7), i.e.
 
-For example:
-- a collection contains 10 elements (numbered from 0 to 9)
-- begin=-4 -> begin=-4+10=6 -> iteration starts at the 6th element (#5)
-- end=-2 -> end=-2+10=8 -> iteration stops before the 8th element (#7), i.e. at the 7th element.
-
-#### Example
+#### Exemple
 
 ```4d
  C_COLLECTION($col;$col2)
@@ -414,27 +412,27 @@ For example:
  End for each
   //$col2=[1,2,3,"a","b","c","d"]
 ```
-### Until and While conditions
-You can control the `For each...End for each` execution by adding an `Until` or a `While` condition to the loop. When an `Until(condition)` statement is associated to the loop, the iteration will stop as soon as the condition is evaluated to `True`, whereas when is case of a `While(condition)` statement, the iteration will stop when the condition is first evaluated to `False`.
+### Conditions Until et While
+Vous pouvez contrôler l'exécution de `For each...End for each` en ajoutant une condition `Jusque` ou `Tant que` à la boucle. Lorsqu'une instruction `Until(condition)` est associée à la boucle, l'itération stoppe dès que la condition est évaluée à `True`, tandis que dans le cas d'une instruction `While(condition)`, l'itération stoppe dès que la condition est évaluée à `False`.
 
-You can pass either keyword depending on your needs:
+Vous pouvez passer un mot-clé ou l'autre en fonction de vos besoins :
 
-- The `Until` condition is tested at the end of each iteration, so if the *Expression* is not empty or null, the loop will be executed at least once.
-- The `While` condition is tested at the beginning of each iteration, so according to the condition result, the loop may not be executed at all.
+- La condition `Until` est testée à la fin de chaque itération, donc si *Expression* n'est ni vide ni Null, la boucle sera exécutée au moins une fois.
+- La condition `While` est testée au début de chaque itération, donc en fonction du résultat de la condition, la boucle peut ne pas être exécutée du tout.
 
-#### Example
+#### Exemple
 
 ```4d
  $colNum:=New collection(1;2;3;4;5;6;7;8;9;10)
 
  $total:=0
- For each($num;$colNum)While($total<30) //tested at the beginning
+ For each($num;$colNum)While($total<30) //testé au début
     $total:=$total+$num
  End for each
  ALERT(String($total)) //$total = 36 (1+2+3+4+5+6+7+8)
 
  $total:=1000
- For each($num;$colNum)Until($total>30) //tested at the end
+ For each($num;$colNum)Until($total>30) //testé à la fin
     $total:=$total+$num
  End for each
  ALERT(String($total)) //$total = 1001 (1000+1)
