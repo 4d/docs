@@ -1,74 +1,74 @@
 ---
 id: data-types
-title: Data types overview
+title: データタイプの概要
 ---
 
-In 4D, data are handled according to their type in two places: database fields and the 4D language.
+4D においてデータは、主にデータベースフィールドと 4D ランゲージという2つの場所で、そのタイプに応じて扱われます。
 
-Although they are usually equivalent, some data types available at the database level are not directly available in the language and are automatically converted. Conversely, some data types can only be handled through the language. The following table lists all available data types and how they are supported/declared:
+この2つはおおよそ同じものですが、データベースレベルで提供されているいくつかのデータタイプはランゲージにおいては直接利用可能ではなく、自動的に適宜変換されます。 同様に、いくつかのデータタイプはランゲージでしか利用できません。 各場所で利用可能なデータタイプと、ランゲージでの宣言の仕方の一覧です:
 
-| Data Types                                 | Database support(1) | Language support     | [`var` declaration](variables.md#using-the-var-keyword) | [`C_` or `ARRAY` declaration](variables.md#using-a-c_-directive) |
-| ------------------------------------------ | ------------------- | -------------------- | ------------------------------------------------------- | ---------------------------------------------------------------- |
-| [Alphanumeric](dt_string.md)               | Yes                 | Converted to text    | -                                                       | -                                                                |
-| [Text](Concepts/dt_string.md)              | Yes                 | Yes                  | `Text`                                                  | `C_TEXT`, `ARRAY TEXT`                                           |
-| [Date](Concepts/dt_date.md)                | Yes                 | Yes                  | `Date`                                                  | `C_DATE`, `ARRAY DATE`                                           |
-| [Time](Concepts/dt_time.md)                | Yes                 | Yes                  | `Time`                                                  | `C_TIME`, `ARRAY TIME`                                           |
-| [Boolean](Concepts/dt_boolean.md)          | Yes                 | Yes                  | `Boolean`                                               | `C_BOOLEAN`, `ARRAY BOOLEAN`                                     |
-| [Integer](Concepts/dt_number.md)           | Yes                 | Converted to longint | `Integer`                                               | `ARRAY INTEGER`                                                  |
-| [Longint](Concepts/dt_number.md)           | Yes                 | Yes                  | `Integer`                                               | `C_LONGINT`, `ARRAY LONGINT`                                     |
-| [Longint 64 bits](Concepts/dt_number.md)   | Yes (SQL)           | Converted to real    | -                                                       | -                                                                |
-| [Real](Concepts/dt_number.md)              | Yes                 | Yes                  | `Real`                                                  | `C_REAL`, `ARRAY REAL`                                           |
-| [Undefined](Concepts/dt_null_undefined.md) | -                   | Yes                  | -                                                       | -                                                                |
-| [Null](Concepts/dt_null_undefined.md)      | -                   | Yes                  | -                                                       | -                                                                |
-| [Pointer](Concepts/dt_pointer.md)          | -                   | Yes                  | `Pointer`                                               | `C_POINTER`, `ARRAY POINTER`                                     |
-| [Picture](Concepts/dt_picture.md)          | Yes                 | Yes                  | `Picture`                                               | `C_PICTURE`, `ARRAY PICTURE`                                     |
-| [BLOB](Concepts/dt_blob.md)                | Yes                 | Yes                  | `Blob`, `4D.Blob`                                       | `C_BLOB`, `ARRAY BLOB`                                           |
-| [Object](Concepts/dt_object.md)            | Yes                 | Yes                  | `Object`                                                | `C_OBJECT`, `ARRAY OBJECT`                                       |
-| [Collection](Concepts/dt_collection.md)    | -                   | Yes                  | `Collection`                                            | `C_COLLECTION`                                                   |
-| [Variant](Concepts/dt_variant.md)(2)       | -                   | Yes                  | `Variant`                                               | `C_VARIANT`                                                      |
+| データタイプ                                | データベース  | ランゲージ   | [`var` 宣言](variables.md#using-the-var-keyword) | [`C_` または `ARRAY` 宣言](variables.md#using-a-c_-directive) |
+| ------------------------------------- | ------- | ------- | ---------------------------------------------- | -------------------------------------------------------- |
+| [文字列](dt_string.md)                   | ◯       | テキストに変換 | -                                              | -                                                        |
+| [テキスト](Concepts/dt_string.md)         | ◯       | ◯       | `テキスト`                                         | `C_TEXT`, `ARRAY TEXT`                                   |
+| [日付](Concepts/dt_date.md)             | ◯       | ◯       | `日付`                                           | `C_DATE`, `ARRAY DATE`                                   |
+| [時間](Concepts/dt_time.md)             | ◯       | ◯       | `時間`                                           | `C_TIME`, `ARRAY TIME`                                   |
+| [ブール](Concepts/dt_boolean.md)         | ◯       | ◯       | `ブール`                                          | `C_BOOLEAN`, `ARRAY BOOLEAN`                             |
+| [整数](Concepts/dt_number.md)           | ◯       | 倍長整数に変換 | `整数`                                           | `ARRAY INTEGER`                                          |
+| [Longint](Concepts/dt_number.md)      | ◯       | ◯       | `整数`                                           | `C_LONGINT`, `ARRAY LONGINT`                             |
+| [64ビット整数](Concepts/dt_number.md)      | ◯ (SQL) | 実数に変換   | -                                              | -                                                        |
+| [実数](Concepts/dt_number.md)           | ◯       | ◯       | `実数`                                           | `C_REAL`, `ARRAY REAL`                                   |
+| [未定義](Concepts/dt_null_undefined.md)  | -       | ◯       | -                                              | -                                                        |
+| [Null](Concepts/dt_null_undefined.md) | -       | ◯       | -                                              | -                                                        |
+| [Pointer](Concepts/dt_pointer.md)     | -       | ◯       | `Pointer`                                      | `C_POINTER`, `ARRAY POINTER`                             |
+| [Picture](Concepts/dt_picture.md)     | ◯       | ◯       | `Picture`                                      | `C_PICTURE`, `ARRAY PICTURE`                             |
+| [BLOB](Concepts/dt_blob.md)           | ◯       | ◯       | `Blob`, `4D.Blob`                              | `C_BLOB`, `ARRAY BLOB`                                   |
+| [Object](Concepts/dt_object.md)       | ◯       | ◯       | `Object`                                       | `C_OBJECT`, `ARRAY OBJECT`                               |
+| [コレクション](Concepts/dt_collection.md)   | -       | ◯       | `コレクション`                                       | `C_COLLECTION`                                           |
+| [バリアント](Concepts/dt_variant.md)(2)    | -       | ◯       | `Variant`                                      | `C_VARIANT`                                              |
 
-(1) Note that ORDA handles database fields through objects (entities) and thus, only supports data types available to these objects. For more information, see the [Object](Concepts/dt_object.md) data type description.
+(1) ORDA では、オブジェクト (エンティティ) を介してデータベースフィールドを扱うため、オブジェクトにおいて利用可能なデータタイプのみがサポートされます。 詳細については [オブジェクト](Concepts/dt_object.md) のデータタイプの説明を参照ください。
 
-(2) Variant is actually not a *data* type but a *variable* type that can contain a value of any other data type.
+(2) バリアントは実際のところ *データ* タイプではなく、あらゆるデータタイプの値を格納することのできる *変数* タイプです。
 
-## Default values
+## デフォルト値
 
-When variables are typed by means of a compiler directive, they receive a default value, which they will keep during the session as long as they have not been assigned.
+コンパイラー指示子によって変数の型が決まるとき、変数はデフォルトの値を受け取り、割り当てがされない限りセッションの間はその値を保ち続けます。
 
-The default value depends on the variable type:
+デフォルト値は変数の型に依存します:
 
-| Type       | Default value  |
-| ---------- | -------------- |
-| Booleen    | False          |
-| Date       | 00-00-00       |
-| Longint    | 0              |
-| Time       | 00:00:00       |
-| Picture    | picture size=0 |
-| Real       | 0              |
-| Pointer    | Nil=true       |
-| Text       | ""             |
-| Blob       | Blob size=0    |
-| Object     | null           |
-| Collection | null           |
-| Variant    | undefined      |
+| タイプ     | デフォルト値     |
+| ------- | ---------- |
+| ブール     | False      |
+| 日付      | 00-00-00   |
+| Longint | 0          |
+| 時間      | 00:00:00   |
+| Picture | ピクチャーサイズ=0 |
+| 実数      | 0          |
+| Pointer | Nil=true   |
+| テキスト    | ""         |
+| Blob    | Blob サイズ=0 |
+| Object  | null       |
+| コレクション  | null       |
+| Variant | undefined  |
 
 
-## Converting data types
+## データタイプの変換
 
-The 4D language contains operators and commands to convert between data types, where such conversions are meaningful. The 4D language enforces data type checking. For example, you cannot write: "abc"+0.5+!12/25/96!-?00:30:45?. This will generate syntax errors.
+4D ランゲージには、データタイプ間の変換をおこなう演算子やコマンドがあります。 4D ランゲージはデータタイプをチェックします。 たとえば、"abc"+0.5+!12/25/96!-?00:30:45?のように記述することはできません。 これは、シンタックス (構文) エラーになります。
 
-The following table lists the basic data types, the data types to which they can be converted, and the commands used to do so:
+次の表は、基本のデータタイプ、変換できるデータタイプ、それを実行する際に使用するコマンドを示しています:
 
-| Data Type to Convert | to String | to Number | to Date | to Time | to Boolean |
-| -------------------- | --------- | --------- | ------- | ------- | ---------- |
-| String (1)           |           | `Num`     | `Date`  | `Time`  | `Bool`     |
-| Number (2)           | `String`  |           |         |         | `Bool`     |
-| Date                 | `String`  |           |         |         | `Bool`     |
-| Time                 | `String`  |           |         |         | `Bool`     |
-| Boolean              |           | `Num`     |         |         |            |
+| データタイプ  | 文字列に変換   | 数値に変換 | 日付に変換 | 時間に変換 | ブールに変換 |
+| ------- | -------- | ----- | ----- | ----- | ------ |
+| 文字列 (1) |          | `数値`  | `日付`  | `時間`  | `ブール`  |
+| 数値 (2)  | `String` |       |       |       | `ブール`  |
+| 日付      | `String` |       |       |       | `ブール`  |
+| 時間      | `String` |       |       |       | `ブール`  |
+| ブール     |          | `数値`  |       |       |        |
 
-(1) Strings formatted in JSON can be converted into scalar data, objects, or collections, using the `JSON Parse` command.
+(1) JSON形式の文字列は `JSON Parse` コマンドを使ってスカラーデータ、オブジェクト、あるいはコレクションに変換することができます。
 
-(2) Time values can be treated as numbers.
+(2) 時間は数値として扱うことができます。
 
-**Note:** In addition to the data conversions listed in this table, more sophisticated data conversions can be obtained by combining operators and other commands.
+**注:** この表に示すデータ変換の他に、演算子と他のコマンドを組み合せることで、より洗練されたデータ変換を実行することができます。
