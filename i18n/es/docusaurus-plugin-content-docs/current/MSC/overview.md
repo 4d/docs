@@ -1,40 +1,40 @@
 ---
 id: overview
-title: Overview
-sidebar_label: Overview
+title: Generalidades
+sidebar_label: Generalidades
 ---
 
-The Maintenance and Security Center (MSC) window contains all the tools needed for verification, analysis, maintenance, backup, compacting, and encrypting of data files. The MSC window is available in all 4D applications: 4D single user, 4D Server or 4D Desktop.
+La ventana del Centro de Mantenimiento y Seguridad (CSM) contiene todas las herramientas necesarias para la verificación, el análisis, el mantenimiento, la copia de seguridad, la compactación y el cifrado de los archivos de datos. La ventana CSM está disponible en todas las aplicaciones 4D: 4D monousuario, 4D Server o 4D Desktop.
 
-**Note:** The MSC window is not available from a 4D remote connection.
+**Nota:** la ventana del CSM no está disponible desde una conexión remota 4D.
 
-There are several ways to open the MSC window. The way it is accessed also determines the way the application project is opened: in “maintenance” mode or “standard” mode. In maintenance mode, the project is not opened by 4D, only its reference is provided to the MSC. In standard mode, the project is opened by 4D.
+Hay varias formas de abrir la ventana del CSM. The way it is accessed also determines the way the application project is opened: in “maintenance” mode or “standard” mode. In maintenance mode, the project is not opened by 4D, only its reference is provided to the MSC. En modo estándar, el proyecto es abierto por 4D.
 
 
-## Display in maintenance mode
+## Acceso en modo de mantenimiento
 
 In maintenance mode, only the MSC window is displayed (the project is not opened by the 4D application). This means that projects that are too damaged to be opened in standard mode by 4D can nevertheless be accessed. Moreover, certain operations (compacting, repair, and so on) require the project to be opened in maintenance mode (see [Feature availability](#feature-availability)).
 
-You can open the MSC in maintenance mode from two locations:
+Puede abrir el CSM en modo mantenimiento desde dos lugares:
 
 - **From the standard project opening dialog box** The standard Open dialog includes the **Maintenance Security Center** option from the menu associated with the **Open** button: ![](../assets/en/MSC/MSC_standardOpen.png)
 - **Help/Maintenance Security Center** menu or **MSC** button in the tool bar (project not open)  
   ![](../assets/en/MSC/mscicon.png)   
-  When you call this function, a standard Open file dialog appears so that you can select the *.4DProject* or *.4dz* file of the to be examined. The project will not be opened by 4D.
+  When you call this function, a standard Open file dialog appears so that you can select the *.4DProject* or *.4dz* file of the to be examined. El proyecto no será abierto por 4D.
 
-## Display in standard mode
+## Acceso al modo estándar
 
-In standard mode, a project is open. In this mode, certain maintenance functions are not available. You have several possibilities for accessing the MSC window:
+En modo estándar, un proyecto se abre. En este modo, algunas funciones de mantenimiento no están disponibles. Tiene varias posibilidades para acceder a la ventana del CSM:
 
-- Use the **Help/Maintenance Security Center** menu or the **MSC** button in the 4D toolbar:  
+- Utilice el menú **Centro de seguridad y mantenimiento** o el botón **CSM** de la barra de herramientas de 4D:  
   ![](../assets/en/MSC/mscicon.png)
 - Use the “msc” standard action that it is possible to associate with a menu command or a form object.
-- Use the `OPEN SECURITY CENTER` language command.
+- Utilice el comando `OPEN SECURITY CENTER`.
 
-## Feature availability
+## Disponibilidad de las funcionalidades
 
-Certain MSC functions are not available depending on the MSC opening mode:
+Algunas funciones del CSM no están disponibles dependiendo del modo de apertura del CSM:
 
 - Backup function is only available when the project is open (the MSC must have been opened in standard mode).
-- Data compacting, rollback, restore, repair, and encryption functions can only be used with data files that are not open (the MSC must have been opened in maintenance mode). If these functions are tried while the project is open in standard mode, a dialog warns you that it implies that the application be closed and restarted in maintenance mode.
-- In encrypted databases, access to encrypted data or to the .journal file requires that a valid encryption data key be provided (see [Encrypt page](encrypt.md)). Otherwise, encrypted data is not visible. 
+- Las funciones de compactación, reversión, restauración, reparación y cifrado de datos sólo pueden utilizarse con archivos de datos que no estén abiertos (el CSM debe haberse abierto en modo de mantenimiento). If these functions are tried while the project is open in standard mode, a dialog warns you that it implies that the application be closed and restarted in maintenance mode.
+- En las bases encriptadas, el acceso a los datos encriptados o al archivo .journal requiere que se proporcione una clave de datos de encriptación válida (ver [Página cifrado](encrypt.md)). De lo contrario, los datos encriptados no son visibles. 
