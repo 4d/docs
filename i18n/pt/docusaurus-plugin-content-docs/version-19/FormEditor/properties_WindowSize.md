@@ -14,9 +14,9 @@ If this option is not selected, the width of the form window can be modified. In
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values     |
-| ------------- | --------- | ------------------- |
-| windowSizingY | string    | "fixed", "variable" |
+| Nome          | Tipo de dados | Possible Values     |
+| ------------- | ------------- | ------------------- |
+| windowSizingY | string        | "fixed", "variable" |
 
 
 ---
@@ -31,9 +31,9 @@ If this option is not selected, the width of the form window can be modified. In
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values     |
-| ------------- | --------- | ------------------- |
-| windowSizingX | string    | "fixed", "variable" |
+| Nome          | Tipo de dados | Possible Values     |
+| ------------- | ------------- | ------------------- |
+| windowSizingX | string        | "fixed", "variable" |
 
 ---
 
@@ -45,10 +45,10 @@ Maximum and minimum height (in pixels) of a resizeable form window if the [Fixed
 
 ##### JSON Grammar
 
-| Name            | Data Type | Possible Values |
-| --------------- | --------- | --------------- |
-| windowMinHeight | number    | integer value   |
-| windowMaxHeight | number    | integer value   |
+| Nome            | Tipo de dados | Possible Values |
+| --------------- | ------------- | --------------- |
+| windowMinHeight | number        | integer value   |
+| windowMaxHeight | number        | integer value   |
 
 
 ## Maximum Width, Minimum Width
@@ -58,8 +58,8 @@ Maximum and minimum width (in pixels) of a resizeable form window if the [Fixed 
 
 #### JSON Grammar
 
-| Name           | Data Type | Possible Values |
-| -------------- | --------- | --------------- |
-| windowMinWidth | number    | integer value   |
-| windowMaxWidth | number    | integer value   |
+| Nome           | Tipo de dados | Possible Values |
+| -------------- | ------------- | --------------- |
+| windowMinWidth | number        | integer value   |
+| windowMaxWidth | number        | integer value   |
 
