@@ -1,25 +1,25 @@
 ---
 id: dropdownListOverview
-title: Drop-down List
+title: Liste déroulante
 ---
 
-## Overview
+## Vue d’ensemble
 
-Drop-down lists are objects that allow the user to select from a list. You manage the items displayed in the drop-down list using an array, a choice list, or a standard action.
+Les pop-up/listes déroulantes sont des objets qui permettent à l’utilisateur de sélectionner un élément dans une liste. Vous gérez les éléments qui apparaissent dans les listes déroulantes à l’aide de tableaux, d’énumérations ou d'actions standard.
 
-On macOS, drop-down lists are also sometimes called "pop-up menu". Both names refer to the same objects. As the following example shows, the appearance of these objects can differ slightly according to the platform:
+Sous macOS, les listes déroulantes sont aussi parfois appelées "pop-up menu". Les deux noms font référence aux mêmes objets. Comme le montre l'exemple suivant, l'apparence de ces objets peut différer légèrement selon la plateforme :
 
 ![](../assets/en/FormObjects/popupDropdown_appearance.png)
 
-## Using an array
+## Utiliser un tableau
 
-An [array](Concepts/arrays.md) is a list of values in memory that is referenced by the name of the array. A drop-down list displays an array as a list of values when you click on it.
+Un [tableau](Concepts/arrays.md) est une liste de valeurs gardées en mémoire qui sont référencées par le nom du tableau. Un pop-up/liste déroulante affiche le tableau sous la forme d’une liste de valeurs qui apparaît lorsqu’on clique dessus.
 
-Drop-down list objects are initialized by loading a list of values into an array. You can do this in several ways:
+Les objets pop-up/listes déroulantes peuvent être initialisés par le chargement d’une liste de valeurs dans un tableau. Vous pouvez réaliser cette opération de plusieurs manières :
 
-* Enter a list of default values in the object properties by selecting `"\&#060;Static List&#062;"` in the [Data Source](properties_DataSource.md) theme of the Property List. The default values are loaded into an array automatically. You can refer to the array using the name of the variable associated with the object.
+* Enter a list of default values in the object properties by selecting `"\&#060;Static List&#062;"` in the [Data Source](properties_DataSource.md) theme of the Property List. Les valeurs par défaut sont automatiquement chargées dans un tableau. Vous pouvez faire référence à ce tableau par l’intermédiaire du nom de la variable associée à l’objet.
 
-* Before the object is displayed, execute code that assigns values to the array elements. For example:
+* Avant que l’objet ne soit affiché, exécutez une méthode qui affecte des valeurs au tableau.
 
 ```4d
   ARRAY TEXT($aCities;6)
@@ -31,29 +31,29 @@ Drop-down list objects are initialized by loading a list of values into an array
   $aCities{6}:="Green Bay"
 ```
 
-In this case, the name of the variable associated with the object in the form must be *$aCities*. This code could be placed in the form method and be executed when the `On Load` form event runs.
+Dans ce cas, le nom de la variable associée à l’objet dans le formulaire doit être *tVilles*. Ce code peut être placé dans la méthode formulaire et être exécuté lorsque l’événement formulaire `Sur chargement` se produit.
 
-* Before the object is displayed, load the values of a list into the array using the [LIST TO ARRAY](https://doc.4d.com/4Dv17R5/4D/17-R5/LIST-TO-ARRAY.301-4127385.en.html) command. For example:
+* Avant que l’objet ne soit affiché, chargez les valeurs d’une énumération dans le tableau à l’aide de la commande [LIST TO ARRAY](https://doc.4d.com/4Dv17R5/4D/17-R5/LIST-TO-ARRAY.301-4127385.en.html).
 
 ```4d
    LIST TO ARRAY("Cities";$aCities)
 ```
 
- In this case also, the name of the variable associated with the object in the form must be *$aCities*. This code would be run in place of the assignment statements shown above.
+ Dans ce cas aussi, le nom de la variable associée à l’objet dans le formulaire doit être *tVilles*. Ce code peut être exécuté à la place de celui proposé plus haut.
 
-If you need to save the user’s choice into a field, you would use an assignment statement that runs after the record is accepted. The code might look like this:
+Si vous voulez stocker dans un champ le choix de l’utilisateur, il est nécessaire d’écrire du code pour affecter les valeurs et de l’exécuter après la validation de l’enregistrement. Ce code pourrait être le suivant :
 
 ```4d
   Case of
     :(Form event=On Load)
        LIST TO ARRAY("Cities";aCities)
-       If(Record number([People])<0) `new record
-          aCities:=3 `display a default value
-       Else `existing record, display stored value
+       If(Record number([People])<0) /Nouvel enregistrement
+          aCities:=3 /affiche une valeur par défaut
+       Else /enregistrement existant, on affiche une valeur stockée
           aCities:=Find in array(aCities;City)
        End if
-    :(Form event=On Clicked) `user modified selection
-       City:=aCities{aCities} `field gets new value
+    :(Form event=On Clicked) /La sélection a été modifiée
+       City:=aCities{aCities} /La nouvelle valeur est assignée au champ
     :(Form event=On Validate)
        City:=aCities{aCities}
     :(Form event=On Unload)
@@ -61,32 +61,32 @@ If you need to save the user’s choice into a field, you would use an assignmen
  End case
 ```
 
-You must select each [event] that you test for in your Case statement. Arrays always contain a finite number of items. The list of items is dynamic and can be changed by a method. Items in an array can be modified, sorted, and added to.
+Vous devez cocher chaque [événement] pris en compte dans les structures "For" de votre code. Les tableaux contiennent toujours un nombre fini d’éléments. La liste des éléments est dynamique et peut être modifiée par programmation. Les éléments d’un tableau peuvent être modifiés et triés.
 
-## Using a choice list
+## Utiliser une énumération
 
-If you want to use a drop-down list to manage the values of a listed field or variable, 4D lets you reference the field or variable directly as the object's data source. This makes it easier to manage listed fields/variables.
-> If you use a hierarchical list, only the first level is displayed and can be selected.
+Si vous souhaitez utiliser un pop-up/liste déroulante pour gérer les valeurs d'un champ ou d'une variable énuméré(e), 4D vous permet de référencer directement le champ ou la variable comme source de données de l'objet. Cette possibilité facilite la gestion des champs/variables énuméré(e) s.
+> Si vous utilisez une énumération hiérarchique, seul le premier niveau sera affiché et sélectionnable.
 
-For example, in the case of a "Color" field that can only contain the values "White", "Blue", "Green" or "Red", it is now possible to create a list containing these values and associate it with a pop-up menu object that references the 4D "Color" field. 4D then automatically takes care of managing the input and display of the current value in the form.
+Par exemple, dans le cas d’un champ "Couleur" pouvant contenir uniquement les valeurs "White", "Blue", "Green" or "Red", vous pouvez créer une liste contenant ces valeurs et l’associer à un objet pop up menu qui référence le champ "Couleur". 4D se charge alors de gérer automatiquement la saisie et l’affichage de la valeur courante dans le formulaire.
 
-To associate a pop-up menu/drop-down list or a combo box with a field or variable, you can just enter the name of the field or variable directly in the [Variable or Expression](properties_Object.md#variable-or-expression) of the object in the Property List.
+Pour associer un popup/liste déroulante à un champ ou une variable énuméré(e), il suffit de saisir directement le nom du champ ou de la variable dans la zone [Variable ou expression](properties_Object.md#variable-or-expression) de l’objet dans la liste de propriétés .
 
-When the form is executed, 4D automatically manages the pop-up menu or combo box during input or display: when a user chooses a value, it is saved in the field; this field value is shown in the pop-up menu when the form is displayed:
+A l’exécution du formulaire, 4D gère automatiquement le pop up menu ou la combo box en saisie ou à l’affichage : lorsque l’utilisateur choisit une valeur, elle est stockée dans le champ ; à l’affichage, la valeur du champ est affichée dans le pop up menu :
 
 ![](../assets/en/FormObjects/popupDropdown_choiceList.png)
-> It is not possible to combine this principle with using an array to initialize the object. If you enter a field name in the Variable Name area, then you must use a choice list.
+> Il n'est pas possible de mixer ce principe avec l'initialisation de l'objet à l'aide d'un tableau. Si vous saisissez un nom de champ dans la zone Nom de la variable, il est nécessaire d'utiliser une énumération.
 
-### Save as
+### Enregistrer comme
 
-When you have associated a pop-up menu/drop-down list with a choice list and with a field, you can use the [Save as Value/Reference property](properties_DataSource.md#save-as). This option lets you optimize the size of the data saved.
+Lorsque vous avez associé un objet pop-up/liste déroulante à une liste de choix (énumération) et à un champ, vous pouvez utiliser l'option [Enregistrer comme Valeur/Référence](properties_DataSource.md#save-as) dans le thème "Sources de données" de la Liste des propriétés. Cette option permet d'optimiser la taille des données stockées.
 
-## Using a standard action
+## Utiliser une action standard
 
-You can assign a standard action to a pop-up menu/drop-down list ([Action](properties_Action.md#standard-action) theme of the Property List). Only actions that display a sublist of items (except the goto page action) are supported by this object. For example, if you select the `backgroundColor` standard action, at runtime the object will display an automatic list of background colors. You can can override this automatic list by assigning in addition a choice list in which each item has been assigned a custom standard action.
+Vous pouvez assigner une action standard à un objet pop up menu/liste déroulante (thème [Action](properties_Action.md#standard-action) de la Liste des propriétés). Seules les actions qui affichent une sous-liste d'éléments (à l'exception de l'action Aller à page) sont prises en charge par ce type d'objet. Par exemple, si vous sélectionnez l'action standard `backgroundColor`, à l'exécution l'objet affichera une liste automatique de couleurs de fond. Vous pouvez remplacer cette liste automatique par une liste personnalisée en associant à l'objet une énumération dans laquelle chaque élément a lui-même été assigné à une action standard.
 
-For more information, please refer to the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section.
+Pour plus d'informations, reportez-vous à la section [Actions standard](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html).
 
-## Supported Properties
+## Propriétés prises en charge
 
-[Alpha Format](properties_Display.md#alpha-format) - [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Standard action](properties_Action.md#standard-action) - [Save as](properties_DataSource.md#save-as) - [Time Format](properties_Display.md#time-format) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)  
+[Format alpha ](properties_Display.md#alpha-format) - [Gras](properties_Text.md#bold) - [Bas](properties_CoordinatesAndSizing.md#bottom) - [Style de bouton](properties_TextAndPicture.md#button-style) - [Enumération](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Format date ](properties_Display.md#date-format) - [Type d'expression](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Police](properties_Text.md#font) - [Couleur de la police](properties_Text.md#font-color) - [Taille](properties_Text.md#font-size) - [Hauteur](properties_CoordinatesAndSizing.md#height) - [Message d'aide](properties_Help.md#help-tip) - [Dim. horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Italique](properties_Text.md#italic) - [Gauche](properties_CoordinatesAndSizing.md#left) - [Non représenté](properties_Display.md#not-rendered) - [Nom](properties_Object.md#object-name) - [Droite](properties_CoordinatesAndSizing.md#right) - [Action standard ](properties_Action.md#standard-action) - [Enregistrer comme](properties_DataSource.md#save-as) - [Format heure](properties_Display.md#time-format) - [Haut](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Souligné](properties_Text.md#underline) - [Variable ou expression](properties_Object.md#variable-or-expression) - [Dim. vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilité](properties_Display.md#visibility) - [Largeur](properties_CoordinatesAndSizing.md#width)  
