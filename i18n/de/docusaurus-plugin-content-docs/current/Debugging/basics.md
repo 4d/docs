@@ -20,7 +20,7 @@ Such typing errors usually cause syntax errors (in the above image, the name of 
 
 ### Syntax Errors
 
-Some errors can be caught only when you execute the method. The [Syntax Error Window](#syntax-error-window) appears when an error occurs during code execution. For example:
+Some errors can be caught only when you execute the method. The [Syntax Error Window](#syntax-error-window) appears when an error occurs during code execution. Beispiel:
 
 ![syntax-error](../assets/en/Debugging/syntax-error.png)
 
@@ -32,7 +32,7 @@ Occasionally, there may not be enough memory to create a BLOB. Or, when you acce
 
 ### Design or Logic Errors
 
-These are generally the most difficult type of error to find. Except for typing errors, all the error types listed above are to a certain extent covered by the expression "Design or logic error". Use the [Debugger](debugger.md) to detect them. For example:
+These are generally the most difficult type of error to find. Except for typing errors, all the error types listed above are to a certain extent covered by the expression "Design or logic error". Use the [Debugger](debugger.md) to detect them. Beispiel:
 
 - A *syntax error* may occur when you try to use a variable that is not yet initialized.
 - An *environmental error* can occur when you try to open a document, because that document's name is received by a subroutine that did not get the right value as a parameter.

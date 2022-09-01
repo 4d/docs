@@ -10,13 +10,13 @@ Picture buttons can be used in two ways:
 * As command buttons in a form. In this case, the picture button generally includes four different states: enabled, disabled, clicked and rolled over.      
   For example, a table of thumbnails that has one row of four columns, each thumbnail corresponds to the Default, Clicked, Roll over, and Disabled states.
 
-  | Property                   | JSON name              | Value |
-  | -------------------------- | ---------------------- | ----- |
-  | Rows                       | rowCount               | 1     |
-  | Columns                    | columnCount            | 4     |
-  | Switch back when Released  | switchBackWhenReleased | true  |
-  | Switch when Roll Over      | switchWhenRollover     | true  |
-  | Use Last Frame as Disabled | useLastFrameAsDisabled | true  |
+  | Property                   | JSON name              | Wert |
+  | -------------------------- | ---------------------- | ---- |
+  | Rows                       | rowCount               | 1    |
+  | Columns                    | columnCount            | 4    |
+  | Switch back when Released  | switchBackWhenReleased | wahr |
+  | Switch when Roll Over      | switchWhenRollover     | wahr |
+  | Use Last Frame as Disabled | useLastFrameAsDisabled | wahr |
 
 * As a picture button letting the user choose among several choices. In this case, a picture button can be used in place of a pop-up picture menu. With [Picture Pop-up Menus](picturePopupMenu_overview.md), all choices are displayed simultaneously (as the items in the pop-up menu), while the picture button displays the choices consecutively (as the user clicks the button).   
   Here is an example of a picture button. Suppose you want to give the users of a custom application the opportunity to choose the interface language for the application. You implement the option as a picture button in a custom properties dialog box:
@@ -56,7 +56,7 @@ The following other modes are available:
 - [Switch continuously on clicks](properties_Animation.md#switch-continuously-on-clicks)
 - [Use Last Frame as Disabled](properties_Animation.md#use-last-frame-as-disabled)
 - [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled)
-> The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displayed. The numbering of pictures in the table begins with 0.
+> [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled) > The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displayed. The numbering of pictures in the table begins with 0.
 
 ## Supported Properties
 

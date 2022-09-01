@@ -1,43 +1,43 @@
 ---
 id: analysis
-title: Activity analysis Page
-sidebar_label: Activity analysis Page
+title: Página Análisis de actividades
+sidebar_label: Página Análisis de actividades
 ---
 
-The Activity analysis page allows viewing the contents of the current log file. This function is useful for parsing the use of an application or detecting the operation(s) that caused errors or malfunctions. In the case of an application in client-server mode, it allows verifying operations performed by each client machine.
-> It is also possible to rollback the operations carried out on the data of the database. For more information, refer to [Rollback page](rollback.md).
+La página Análisis de actividades permite ver el contenido del archivo de registro actual. This function is useful for parsing the use of an application or detecting the operation(s) that caused errors or malfunctions. In the case of an application in client-server mode, it allows verifying operations performed by each client machine.
+> También es posible revertir las operaciones realizadas sobre los datos de la base. Para más información, consulte [Página de retroceso](rollback.md).
 
 ![](../assets/en/MSC/MSC_analysis.png)
 
-Every operation recorded in the log file appears as a row. The columns provide various information on the operation. You can reorganize the columns as desired by clicking on their headers.
+Cada operación registrada en el archivo de registro aparece como una línea. Las columnas ofrecen información variada sobre la operación. Puede reorganizar las columnas como desee haciendo clic en sus encabezados.
 
-This information allows you to identify the source and context of each operation:
+Esta información permite identificar la fuente y el contexto de cada operación:
 
-- **Operation**: Sequence number of operation in the log file.
-- **Action**: Type of operation performed on the data. This column can contain one of the following operations:
-    - Opening of Data File: Opening of a data file.
-    - Closing of Data File: Closing of an open data file.
-    - Creation of a Context: Creation of a process that specifies an execution context.
-    - Closing of a Context: Closing of process.
-    - Addition: Creation and storage of a record.
-    - Adding a BLOB: Storage of a BLOB in a BLOB field.
-    - Deletion: Deletion of a record.
-    - Modification: Modification of a record.
-    - Start of Transaction: Transaction started.
-    - Validation of Transaction: Transaction validated.
-    - Cancellation of Transaction: Transaction cancelled.
+- **Operación**: número de secuencia de la operación en el archivo de historial.
+- **Acción**: tipo de operación realizada sobre los datos. Esta columna puede contener una de las siguientes operaciones:
+    - Apertura del archivo de datos: apertura de un archivo de datos.
+    - Cierre del archivo de datos: cierre de un archivo de datos abierto.
+    - Creación de un contexto: creación de un proceso que especifica un contexto de ejecución.
+    - Cierre de un contexto: cierre de un proceso.
+    - Adición: creación y almacenamiento de un registro.
+    - Añadir un BLOB: almacenamiento de un BLOB en un campo BLOB.
+    - Eliminación: eliminación de un registro.
+    - Modificación: modificación de un registro.
+    - Inicio de la transacción: transacción iniciada.
+    - Validación de transacción: transacción validada.
+    - Cancelación de transacción: transacción cancelada.
     - Update context: Change in extra data (e.g. a call to `CHANGE CURRENT USER` or `SET USER ALIAS`).
 
-- **Table**: Table to which the added/deleted/modified record or BLOB belongs.
-- **Primary Key/BLOB**: contents of the primary key for each record (when the primary key consists of several fields, the values are separated by semi-colons) or sequence number of the BLOB involved in the operation.
-- **Process**: Internal number of process in which the operation was carried out. This internal number corresponds to the context of the operation.
-- **Size**: Size (in bytes) of data processed by the operation.
-- **Date and Hour**: Date and hour when the operation was performed.
+- **Tabla**: tabla a la que pertenece el registro añadido/borrado/modificado o el BLOB.
+- **Llave primaria/BLOB**: contenido de la llave primaria de cada registro (cuando la llave primaria se compone de varios campos, los valores se separan con punto y coma) o número de secuencia del BLOB implicado en la operación.
+- **Proceso**: número interno del proceso en el que se realizó la operación. Este número interno corresponde al contexto de la operación.
+- **Tamaño**: tamaño (en bytes) de los datos procesados por la operación.
+- **Fecha y hora**: fecha y hora en que se realizó la operación.
 - **System User**: System name of the user that performed the operation. In client-server mode, the name of the client-side machine is displayed; in single-user mode, the session name of the user is displayed.
 - **4D User**: 4D user name of the user that performed the operation. If an alias is defined for the user, the alias is displayed instead of the 4D user name.
-- **Values**: Values of fields for the record in the case of addition or modification. The values are separated by “;”. Only values represented in alphanumeric form are displayed.  
-  ***Note:** If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column.*
-- **Records**: Record number.
+- **Valores**: valores de los campos del registro en caso de adición o de modificación. Los valores están separados por ";". Sólo se muestran los valores representados en forma alfanumérica.  
+  ***Nota:** si la base está encriptada y no se ha ofrecido una llave de datos válida correspondiente al archivo de historial abierto, los valores encriptados no se muestran en esta columna.*
+- **Registros**: número del registro.
 
-Click on **Analyze** to update the contents of the current log file of the selected application (named by default dataname.journal). The Browse button can be used to select and open another log file for the application. The **Export...** button can be used to export the contents of the file as text.
+Click on **Analyze** to update the contents of the current log file of the selected application (named by default dataname.journal). The Browse button can be used to select and open another log file for the application. El botón **Exportar...** puede utilizarse para exportar el contenido del archivo como texto.
 

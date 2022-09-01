@@ -25,7 +25,7 @@ Interfaces allow for basic modifications and data manipulation. User-defined mod
 
 ![](../assets/en/ViewPro/vpRibbon.png)
 
-#### Toolbar
+#### Barra de ferramentas
 
 Enabling the Toolbar interface displays the [**Show Formula Bar**](FormObjects/properties_Appearance.md#show-formula-bar) option. When selected, the formula bar is visible below the Toolbar interface.
 
@@ -33,18 +33,18 @@ With visible formula bar:
 
 ![](../assets/en/ViewPro/vpToolbar.png)
 
-#### Features
+#### Funcionalidades
 
 Both the Ribbon and the Toolbar interfaces group related features into tabs:
 
 | Tab      | Actions                         | Ribbon Interface | Toolbar Interface |
 | -------- | ------------------------------- |:----------------:|:-----------------:|
 | File     | File manipulation               |        X         |                   |
-| Home     | Text appearance                 |        X         |         X         |
+| Inicio   | Text appearance                 |        X         |         X         |
 | Insert   | Add items                       |        X         |         X         |
 | Formulas | Formula calculation and library |        X         |         X         |
-| Data     | Data manipulation               |        X         |         X         |
-| View     | Visual presentation             |        X         |         X         |
+| Dados    | Data manipulation               |        X         |         X         |
+| Mostrar  | Visual presentation             |        X         |         X         |
 | Settings | Sheet presentation reference    |        X         |                   |
 
 ## Form Events
@@ -74,48 +74,48 @@ The 4D View Pro sheet options object allows you to control various options of yo
 
 ### Sheet appearance
 
-| Property             |                        | Type    | Description                                                                                                                                                                                                                                                                                             |
-| -------------------- | ---------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| allowCellOverflow    |                        | boolean | Specifies whether data can overflow into adjacent empty cells.                                                                                                                                                                                                                                          |
-| sheetTabColor        |                        | string  | A color string used to represent the sheet tab color, such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on.                                                                                                                                                                                  |
-| frozenlineColor      |                        | string  | A color string used to represent the frozen line color, such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on.                                                                                                                                                                                |
-| clipBoardOptions     |                        | longint | The clipboard option. Available values: `vk clipboard paste options all`, `vk clipboard paste options formatting`, `vk clipboard paste options formulas`, `vk clipboard paste options formulas and formatting`, `vk clipboard paste options values`, `vk clipboard paste options values and formatting` |
-| gridline             |                        | object  | The grid line's options.                                                                                                                                                                                                                                                                                |
-|                      | color                  | string  | A color string used to represent the grid line color, such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on.                                                                                                                                                                                  |
-|                      | showVerticalGridline   | boolean | Specifies whether to show the vertical grid line.                                                                                                                                                                                                                                                       |
-|                      | showHorizontalGridline | boolean | Specifies whether to show the horizontal grid line.                                                                                                                                                                                                                                                     |
-| rowHeaderVisible     |                        | boolean | Specifies whether the row header is visible.                                                                                                                                                                                                                                                            |
-| colHeaderVisible     |                        | boolean | Specifies whether the column header is visible.                                                                                                                                                                                                                                                         |
-| rowHeaderAutoText    |                        | longint | Specifies whether the row header displays letters or numbers or is blank. Available values: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                   |
-| colHeaderAutoText    |                        | longint | Specifies whether the column header displays letters or numbers or is blank. Available values: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                |
-| selectionBackColor   |                        | string  | The selection's background color for the sheet. (preferred RGBA format)                                                                                                                                                                                                                                 |
-| selectionBorderColor |                        | string  | The selection's border color for the sheet.                                                                                                                                                                                                                                                             |
-| sheetAreaOffset      |                        | object  | The sheetAreaOffset's options.                                                                                                                                                                                                                                                                          |
-|                      | left                   | longint | The offset left of sheet from host.                                                                                                                                                                                                                                                                     |
-|                      | top                    | longint | The offset top of sheet from host.                                                                                                                                                                                                                                                                      |
+| Propriedade          |                        | Tipo          | Descrção                                                                                                                                                                                                                                                                                                   |
+| -------------------- | ---------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| allowCellOverflow    |                        | boolean       | Specifies whether data can overflow into adjacent empty cells.                                                                                                                                                                                                                                             |
+| sheetTabColor        |                        | string        | A color string used to represent the sheet tab color, such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on.                                                                                                                                                                                     |
+| frozenlineColor      |                        | string        | A color string used to represent the frozen line color, such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on.                                                                                                                                                                                   |
+| clipBoardOptions     |                        | inteiro longo | The clipboard option. Valores disponibles: `vk clipboard paste options all`, `vk clipboard paste options formatting`, `vk clipboard paste options formulas`, `vk clipboard paste options formulas and formatting`, `vk clipboard paste options values`, `vk clipboard paste options values and formatting` |
+| gridline             |                        | object        | The grid line's options.                                                                                                                                                                                                                                                                                   |
+|                      | color                  | string        | A color string used to represent the grid line color, such as "red", "#FFFF00", "rgb(255,0,0)", "Accent 5", and so on.                                                                                                                                                                                     |
+|                      | showVerticalGridline   | boolean       | Specifies whether to show the vertical grid line.                                                                                                                                                                                                                                                          |
+|                      | showHorizontalGridline | boolean       | Specifies whether to show the horizontal grid line.                                                                                                                                                                                                                                                        |
+| rowHeaderVisible     |                        | boolean       | Specifies whether the row header is visible.                                                                                                                                                                                                                                                               |
+| colHeaderVisible     |                        | boolean       | Specifies whether the column header is visible.                                                                                                                                                                                                                                                            |
+| rowHeaderAutoText    |                        | inteiro longo | Specifies whether the row header displays letters or numbers or is blank. Available values: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                      |
+| colHeaderAutoText    |                        | inteiro longo | Specifies whether the column header displays letters or numbers or is blank. Available values: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                   |
+| selectionBackColor   |                        | string        | The selection's background color for the sheet. (preferred RGBA format)                                                                                                                                                                                                                                    |
+| selectionBorderColor |                        | string        | The selection's border color for the sheet.                                                                                                                                                                                                                                                                |
+| sheetAreaOffset      |                        | object        | The sheetAreaOffset's options.                                                                                                                                                                                                                                                                             |
+|                      | left                   | inteiro longo | The offset left of sheet from host.                                                                                                                                                                                                                                                                        |
+|                      | top                    | inteiro longo | The offset top of sheet from host.                                                                                                                                                                                                                                                                         |
 > All properties are optional.
 
 ### Sheet protection
 
 To lock the whole sheet, you only need to set the *isProtected* property to **true**. You can then unlock cells individually by setting the [locked](#layout) cell style property.
 
-| Property          |                          | Type    | Description                                                                                                                       |
+| Propriedade       |                          | Tipo    | Descrção                                                                                                                          |
 | ----------------- | ------------------------ | ------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | isProtected       |                          | boolean | Specifies whether cells on this sheet that are marked as protected cannot be edited.                                              |
 | protectionOptions |                          | object  | A value that indicates the elements that you want users to be able to change. If null : the protectionOptions parameter is reset. |
 |                   | allowSelectLockedCells   | boolean | Specifies whether the user can select locked cells, optional. True by default.                                                    |
 |                   | allowSelectUnlockedCells | boolean | Specifies whether the user can select unlocked cells, optional. True by default.                                                  |
-|                   | allowSort                | boolean | Specifies whether the user can sort ranges, optional. False by default.                                                           |
-|                   | allowFilter              | boolean | Specifies whether the user can filter ranges, optional. False by default.                                                         |
-|                   | allowEditObjects         | boolean | Specifies whether the user can edit floating objects, optional. False by default.                                                 |
-|                   | allowResizeRows          | boolean | Specifies whether the user can resize rows, optional. False by default.                                                           |
-|                   | allowResizeColumns       | boolean | Specifies whether the user can resize columns, optional. False by default.                                                        |
-|                   | allowDragInsertRows      | boolean | Specifies whether the user can perform the drag operation to insert rows, optional. False by default.                             |
-|                   | allowDragInsertColumns   | boolean | Specifies whether the user can perform the drag operation to insert columns, optional. False by default.                          |
-|                   | allowInsertRows          | boolean | Specifies whether the user can insert rows, optional. False by default.                                                           |
-|                   | allowInsertColumns       | boolean | Specifies whether the user can insert columns, optional. False by default.                                                        |
-|                   | allowDeleteRows          | boolean | Specifies whether the user can delete rows, optional. False by default.                                                           |
-|                   | allowDeleteColumns       | boolean | Specifies whether the user can delete columns, optional. False by default.                                                        |
+|                   | allowSort                | boolean | Specifies whether the user can sort ranges, optional. Padrão é falso.                                                             |
+|                   | allowFilter              | boolean | Specifies whether the user can filter ranges, optional. Padrão é falso.                                                           |
+|                   | allowEditObjects         | boolean | Specifies whether the user can edit floating objects, optional. Padrão é falso.                                                   |
+|                   | allowResizeRows          | boolean | Specifies whether the user can resize rows, optional. Padrão é falso.                                                             |
+|                   | allowResizeColumns       | boolean | Specifies whether the user can resize columns, optional. Padrão é falso.                                                          |
+|                   | allowDragInsertRows      | boolean | Specifies whether the user can perform the drag operation to insert rows, optional. Padrão é falso.                               |
+|                   | allowDragInsertColumns   | boolean | Specifies whether the user can perform the drag operation to insert columns, optional. Padrão é falso.                            |
+|                   | allowInsertRows          | boolean | Specifies whether the user can insert rows, optional. Padrão é falso.                                                             |
+|                   | allowInsertColumns       | boolean | Specifies whether the user can insert columns, optional. Padrão é falso.                                                          |
+|                   | allowDeleteRows          | boolean | Specifies whether the user can delete rows, optional. Padrão é falso.                                                             |
+|                   | allowDeleteColumns       | boolean | Specifies whether the user can delete columns, optional. Padrão é falso.                                                          |
 > All properties are optional.
 
 ## Cell Format
@@ -134,7 +134,7 @@ Note that when creating your own format patterns, only the display of the data i
 
 Number formats apply to all number types (e.g., positive, negative, and zeros).
 
-| Character | Description                                                                                                                                                                                                                | Example                                                                                                                    |
+| Character | Descrção                                                                                                                                                                                                                   | Exemplo                                                                                                                    |
 | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | 0         | Placeholder that displays zeros.                                                                                                                                                                                           | #.00 will display 1.1 as 1.10                                                                                              |
 | .         | Displays a decimal point                                                                                                                                                                                                   | 0.00 will display 1999 as 1999.00                                                                                          |
@@ -152,18 +152,17 @@ Number formats apply to all number types (e.g., positive, negative, and zeros).
 | E         | Scientific notation format.                                                                                                                                                                                                | #E+# - will display 1,500,500 as 2E+6                                                                                      |
 | \[color] | Formats the text or number in the color specified                                                                                                                                                                          | \[Green]###.##\[Red]-###.###                                                                                             |
 
-#### Example
+#### Exemplo
 
 ```4d
-//Set the cell value as $125,571.35
-VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_($* #,##0.00_)")
+//Set the cell value as $125,571.35 VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_($* #,##0.00_)")
 ```
 
 ### Date and time formats
 
 4D View Pro provides the following constants for ISO 8601 date and time patterns:
 
-| Constant                                  | Value                                | Comment                                                                                                                                                               |
+| Constante                                 | Value                                | Comentário                                                                                                                                                            |
 | ----------------------------------------- | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `vk pattern full date time`               | "*fullDateTimePattern*"              | ISO 8601 format for the full date and time in current localization.USA default pattern: "dddd, dd MMMM yyyy HH:mm:ss"                                                 |
 | `vk pattern long date`                    | "*longDatePattern*"                  | ISO 8601 format for the full date in current localization.USA default pattern: "dddd, dd MMMM yyyy"                                                                   |
@@ -175,18 +174,17 @@ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_
 | `vk pattern universal sortable date time` | "*universalSortableDateTimePattern*" | ISO 8601 format for the date and time in current localization using UTC which can be sorted.USA default pattern: "yyyy\'-\'MM\'-\'dd HH\':\'mm\':\'ss\'Z\'" |
 | `vk pattern year month`                   | "*yearMonthPattern*"                 | ISO 8601 format for the month and year in current localization.USA default pattern: "yyyy MMMM"                                                                       |
 
-#### Example
+#### Exemplo
 
 ```4d
-//Set the cell value as specific date and time
-VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";?14:30:10?;"format";vk pattern full date time))
+//Set the cell value as specific date and time VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";?14:30:10?;"format";vk pattern full date time))
 ```
 
 ### Custom date and time formats
 
 To create your own date and time patterns, in your current localization, you can use combinations of the following codes:
 
-|      | Code<br/>(not case-sensitive) | Description                                    | Example            |
+|      | Code<br/>(not case-sensitive) | Descrção                                       | Exemplo            |
 | ---- | ----------------------------------- | ---------------------------------------------- | ------------------ |
 | Date |                                     |                                                | (January 1, 2019)  |
 |      | m                                   | Month number without leading zero              | 1                  |
@@ -199,7 +197,7 @@ To create your own date and time patterns, in your current localization, you can
 |      | dddd                                | Day of week, long                              | Tuesday            |
 |      | yy                                  | Year, short                                    | 19                 |
 |      | yyyy                                | Year, long                                     | 2019               |
-| Time |                                     |                                                | (2:03:05 PM)       |
+| Hora |                                     |                                                | (2:03:05 PM)       |
 |      | h                                   | Hour without leading zero. 0-23                | 2                  |
 |      | hh                                  | Hour with leading zero. 00-23                  | 02                 |
 |      | m                                   | Minutes without leading zero. 0-59             | 3                  |
@@ -216,11 +214,11 @@ To create your own date and time patterns, in your current localization, you can
 
 In addition to the special characters and codes described in the previous sections, there are additional characters and symbols that can be used in your format patterns. These additional characters and symbols do not require a \ or "" and do not impact the interpretation of the format pattern. They appear "as-is" within the pattern.
 
-| Character   | Description                                                        | Example              |
+| Character   | Descrção                                                           | Exemplo              |
 | ----------- | ------------------------------------------------------------------ | -------------------- |
 | + and -     | Plus and minus signs                                               | ### + ### = ###,### |
 | ( )         | Left and right parenthesis                                         | (-###.##)            |
-| :           | Colon                                                              | hh:mm:ss             |
+| :           | Dois pontos                                                        | hh:mm:ss             |
 | ^           | Caret                                                              | #\^#                |
 | '           | Apostrophe                                                         | '######              |
 | { }         | Curly brackets                                                     | {###,###,###}        |
@@ -248,22 +246,22 @@ In addition to the special characters and codes described in the previous sectio
 
 Column and row attributes are used to specify the beginning, end, and repetition of columns and rows.
 
-| Property          | Type    | Description                                                                                                |
-| ----------------- | ------- | ---------------------------------------------------------------------------------------------------------- |
-| columnEnd         | longint | The last column to print in a cell range. Default value = -1 (all columns)                                 |
-| columnStart       | longint | The first column to print in a cell range. Default value = -1 (all columns)                                |
-| repeatColumnEnd   | longint | The last column of a range of columns to print on the left of each page. Default value = -1 (all columns)  |
-| repeatColumnStart | longint | The first column of a range of columns to print on the left of each page. Default value = -1 (all columns) |
-| repeatRowEnd      | longint | The last row of a range of rows to print on the top of each page. Default value = -1 (all rows)            |
-| repeatRowStart    | longint | The first row of a range of rows to print at the top of each page. Default value = -1 (all rows)           |
-| rowEnd            | longint | The last row to print in a cell range. Default value = -1 (all rows)                                       |
-| rowStart          | longint | The first row to print in a cell range. Default value = -1 (all rows)                                      |
+| Propriedade       | Tipo          | Descrção                                                                                                   |
+| ----------------- | ------------- | ---------------------------------------------------------------------------------------------------------- |
+| columnEnd         | inteiro longo | The last column to print in a cell range. Default value = -1 (all columns)                                 |
+| columnStart       | inteiro longo | The first column to print in a cell range. Default value = -1 (all columns)                                |
+| repeatColumnEnd   | inteiro longo | The last column of a range of columns to print on the left of each page. Default value = -1 (all columns)  |
+| repeatColumnStart | inteiro longo | The first column of a range of columns to print on the left of each page. Default value = -1 (all columns) |
+| repeatRowEnd      | inteiro longo | The last row of a range of rows to print on the top of each page. Default value = -1 (all rows)            |
+| repeatRowStart    | inteiro longo | The first row of a range of rows to print at the top of each page. Default value = -1 (all rows)           |
+| rowEnd            | inteiro longo | The last row to print in a cell range. Default value = -1 (all rows)                                       |
+| rowStart          | inteiro longo | The first row to print in a cell range. Default value = -1 (all rows)                                      |
 
 ### Headers / Footers
 
 Header and footer attributes are used to specify text or images in the left, right, and center header/footer sections.
 
-| Property          | Type                 | Description                                                |
+| Propriedade       | Tipo                 | Descrção                                                   |
 | ----------------- | -------------------- | ---------------------------------------------------------- |
 | footerCenter      | text                 | The text and format of the center footer on printed pages. |
 | footerCenterImage | picture &#124; text* | The image for the center section of the footer.            |
@@ -284,18 +282,18 @@ Header and footer attributes are used to specify text or images in the left, rig
 
 The following special characters allow the automatic addition or formatting of information in the header and footer when the 4D View Pro area is printed.
 
-| Character | Description                      | Example                                                                | Result                                               |
+| Character | Descrção                         | Exemplo                                                                | Resultados                                           |
 | --------- | -------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
 | &         | Escape character                 | (see examples below)                                                   |                                                      |
 | P         | Current page                     | printInfo.headerLeft:="This is page &P."                               | This is page 5.|                                     |
 | N         | Page count                       | printInfo.headerLeft:="There are &N pages."                            | There are 10 pages.                                  |
 | D         | Current date (yyyy/mm/dd format) | printInfo.headerLeft:="It is &D."                                      | It is 2015/6/19.                                     |
 | T         | Current time                     | printInfo.headerLeft:="It is &T."                                      | It is 16:30:36.                                      |
-| G         | Image                            | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
+| G         | Imagem                           | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
 | S         | Strikethrough                    | printInfo.headerLeft:="&SThis is text."                                | ~~This is text.~~                                    |
-| U         | Underline                        | printInfo.headerLeft:="&UThis is text."                                | This is text. (Underlined)                           |
-| B         | Bold                             | printInfo.headerLeft:="&BThis is text."                                | **This is text.**                                    |
-| I         | Italic                           | printInfo.headerLeft:="&IThis is text."                                | *This is text.*                                      |
+| U         | Sublinhado                       | printInfo.headerLeft:="&UThis is text."                                | This is text. (Underlined)                           |
+| B         | Negrito                          | printInfo.headerLeft:="&BThis is text."                                | **This is text.**                                    |
+| I         | Itálico                          | printInfo.headerLeft:="&IThis is text."                                | *This is text.*                                      |
 | "         | Font prefix                      | printInfo.headerLeft:="&\"Lucida Console\"&14This is text."          | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG) |
 | K         | Text Color prefix                | printInfo.headerLeft:="&KFF0000This is text."                          | This is text (in red).                               |
 | F         | Workbook name                    | printInfo.headerLeft:="&F"                                             | 2019 Monthly Revenue Forecasts                       |
@@ -305,39 +303,39 @@ The following special characters allow the automatic addition or formatting of i
 
 Margin attributes are used to specify the 4D View Pro area margins for printing. Expressed in hundreds of an inch.
 
-| Property |        | Type    | Description                                                 |
-| -------- | ------ | ------- | ----------------------------------------------------------- |
-| margin   |        | object  | The print margins                                           |
-|          | top    | longint | Top margin, in hundredths of an inch. Default value = 75    |
-|          | bottom | longint | Bottom margin, in hundredths of an inch. Default value = 75 |
-|          | left   | longint | Left margin, in hundredths of an inch. Default value = 70   |
-|          | right  | longint | Right margin, in hundredths of an inch. Default value = 70  |
-|          | header | longint | Header offset, in hundredths of an inch. Default value = 30 |
-|          | footer | longint | Footer offset, in hundredths of an inch. Default value = 30 |
+| Propriedade |         | Tipo          | Descrção                                                    |
+| ----------- | ------- | ------------- | ----------------------------------------------------------- |
+| margin      |         | object        | The print margins                                           |
+|             | top     | inteiro longo | Top margin, in hundredths of an inch. Default value = 75    |
+|             | bottom  | inteiro longo | Bottom margin, in hundredths of an inch. Default value = 75 |
+|             | left    | inteiro longo | Left margin, in hundredths of an inch. Default value = 70   |
+|             | direita | inteiro longo | Right margin, in hundredths of an inch. Default value = 70  |
+|             | header  | inteiro longo | Header offset, in hundredths of an inch. Default value = 30 |
+|             | footer  | inteiro longo | Footer offset, in hundredths of an inch. Default value = 30 |
 
 ### Orientation
 
 Orientation attributes are used to specify the direction the printed page layout.
 > This attribute defines rendering information only.
 
-| Property    | Type    | Description                                                                                                               |
-| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------- |
-| orientation | longint | Page orientation. Available values: `vk print page orientation landscape`, `vk print page orientation portrait` (default) |
+| Propriedade | Tipo          | Descrção                                                                                                                  |
+| ----------- | ------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| orientation | inteiro longo | Page orientation. Available values: `vk print page orientation landscape`, `vk print page orientation portrait` (default) |
 
-### Page
+### Página
 
 Page attributes are used to specify general document print settings.
 
-| Property        | Type    | Description                                                                                                                                                                                         |
-| --------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| blackAndWhite   | boolean | Printing in black and white only. <p>Default value = false</p><p>**Note**: PDFs are not affected by this attribute. Colors in PDFs remain.</p>                                                                                                                 |
-| centering       | longint | How the contents are centered on the printed page. Available values: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (default), `vk print centering vertical` |
-| firstPageNumber | longint | The page number to print on the first page.Default value = 1                                                                                                                                        |
-| pageOrder       | longint | The order pages are printed. Available values: `vk print page order auto` (default), `vk print page order down then over`, `vk print page order over then down`.                                    |
-| pageRange       | text    | The range of pages for printing                                                                                                                                                                     |
-| qualityFactor   | longint | The quality factor for printing (1 - 8).  The higher the quality factor, the better the printing quality, however printing performance may be affected.<p>Default value = 2</p>                    |
-| useMax          | boolean | Only columns and rows with data are printed.<p>Default value = true</p>                                                                                                                               |
-| zoomFactor      | real    | The amount to enlarge or reduce the printed page.<p>Default value = 1</p>                                                                                                                          |
+| Propriedade     | Tipo          | Descrção                                                                                                                                                                                            |
+| --------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| blackAndWhite   | boolean       | Printing in black and white only. <p>Default value = false</p><p>**Note**: PDFs are not affected by this attribute. Colors in PDFs remain.</p>                                                                                                                 |
+| centering       | inteiro longo | How the contents are centered on the printed page. Available values: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (default), `vk print centering vertical` |
+| firstPageNumber | inteiro longo | The page number to print on the first page. Default value = 1                                                                                                                                       |
+| pageOrder       | inteiro longo | The order pages are printed. Available values: `vk print page order auto` (default), `vk print page order down then over`, `vk print page order over then down`.                                    |
+| pageRange       | text          | The range of pages for printing                                                                                                                                                                     |
+| qualityFactor   | inteiro longo | The quality factor for printing (1 - 8).  The higher the quality factor, the better the printing quality, however printing performance may be affected.<p>Default value = 2</p>                    |
+| useMax          | boolean       | Only columns and rows with data are printed.<p>Default value = true</p>                                                                                                                               |
+| zoomFactor      | real          | The amount to enlarge or reduce the printed page.<p>Default value = 1</p>                                                                                                                          |
 
 ### Paper Size
 
@@ -346,12 +344,12 @@ Paper size attributes are used to specify the dimensions or model of paper to us
 * Custom size - height and width attributes
 * Standard size - kind attribute
 
-| Property  |        | Type    | Description                                                                                                      |
-| --------- | ------ | ------- | ---------------------------------------------------------------------------------------------------------------- |
-| paperSize |        | object  | Paper dimensions (height, width) or specific format (kind) for printing.                                         |
-|           | height | longint | Height of the paper, in hundredths of an inch.                                                                   |
-|           | width  | longint | Width of the paper, in hundredths of an inch.                                                                    |
-|           | kind   | text    | Name of standard paper size (e.g., A2, A4, legal, etc.) returned by `Get Print Option`. Default value = "letter" |
+| Propriedade |        | Tipo          | Descrção                                                                                                         |
+| ----------- | ------ | ------------- | ---------------------------------------------------------------------------------------------------------------- |
+| paperSize   |        | object        | Paper dimensions (height, width) or specific format (kind) for printing.                                         |
+|             | height | inteiro longo | Height of the paper, in hundredths of an inch.                                                                   |
+|             | width  | inteiro longo | Width of the paper, in hundredths of an inch.                                                                    |
+|             | kind   | text          | Name of standard paper size (e.g., A2, A4, legal, etc.) returned by `Get Print Option`. Default value = "letter" |
 
 * If the paper size is specified using the `height` and `width` properties,  [`VP Get print info`](./method-list.md#vp-get-print-info) returns a paper size with `custom` as value for `kind`.
 
@@ -359,41 +357,41 @@ Paper size attributes are used to specify the dimensions or model of paper to us
   * one of the formats in the [SpreadJS format list](https://www.grapecity.com/spreadjs/docs/latest/online/SpreadJS~GC.Spread.Sheets.Print.PaperKind.html)
   * one of the formats returned by the [`PRINT OPTION VALUES`](https://doc.4d.com/4dv19/help/command/en/page785.html) command. In that case, [`VP Get print info`](./method-list.md#vp-get-print-info) returns the corresponding format with the height and width.
 
-### Scale
+### Escala
 
 Scale attributes are used to specify printing optimization and adjustments.
 
-| Property       | Type    | Description                                                                                                  |
-| -------------- | ------- | ------------------------------------------------------------------------------------------------------------ |
-| bestFitColumns | boolean | Column width is adjusted to fit the largest text width for printing. Default value = "false"                 |
-| bestFitRows    | boolean | Row height is adjusted to fit the tallest text height for printing. Default value = "false"                  |
-| fitPagesTall   | longint | The number of vertical pages (portrait orientation) to check when optimizing printing. Default value = -1    |
-| fitPagesWide   | longint | The number of horizontal pages (landscape orientation) to check when optimizing printing. Default value = -1 |
+| Propriedade    | Tipo          | Descrção                                                                                                     |
+| -------------- | ------------- | ------------------------------------------------------------------------------------------------------------ |
+| bestFitColumns | boolean       | Column width is adjusted to fit the largest text width for printing. Default value = "false"                 |
+| bestFitRows    | boolean       | Row height is adjusted to fit the tallest text height for printing. Default value = "false"                  |
+| fitPagesTall   | inteiro longo | The number of vertical pages (portrait orientation) to check when optimizing printing. Default value = -1    |
+| fitPagesWide   | inteiro longo | The number of horizontal pages (landscape orientation) to check when optimizing printing. Default value = -1 |
 
 ### Show / Hide
 
 Show / Hide attributes are used to specify the visibility (printing) of 4D View Pro area elements.
 
-| Property         | Type    | Description                                                                                                                                                                      |
-| ---------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| showBorder       | boolean | Prints the outline border.Default value = "true"                                                                                                                                 |
-| showColumnHeader | longint | Column header print settings. Available values: `vk print visibility hide`, `vk print visibility inherit` (default), `vk print visibility show`, `vk print visibility show once` |
-| showGridLine     | boolean | Prints the gridlines. Default value = "false"                                                                                                                                    |
-| showRowHeader    | longint | Row headers print settings. Available values: `vk print visibility hide`, `vk print visibility inherit` (default), `vk print visibility show`, `vk print visibility show once`   |
+| Propriedade      | Tipo          | Descrção                                                                                                                                                                         |
+| ---------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| showBorder       | boolean       | Prints the outline border. Default value = "true"                                                                                                                                |
+| showColumnHeader | inteiro longo | Column header print settings. Available values: `vk print visibility hide`, `vk print visibility inherit` (default), `vk print visibility show`, `vk print visibility show once` |
+| showGridLine     | boolean       | Prints the gridlines. Default value = "false"                                                                                                                                    |
+| showRowHeader    | inteiro longo | Row headers print settings. Available values: `vk print visibility hide`, `vk print visibility inherit` (default), `vk print visibility show`, `vk print visibility show once`   |
 
 ### Watermark
 
 Watermark attributes are used to superimpose text or an image onto the 4D View Pro area.
 
-| Property  |                | Type                 | Description                                                                                                                                            |
-| --------- | -------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| watermark |                | collection           | Collection of watermark settings.  Default value: undefined                                                                                            |
-|           | \[ ].height   | longint              | The height of the watermark text / image.                                                                                                              |
-|           | \[ ].imageSrc | picture &#124; text* | The watermark text / image.                                                                                                                            |
-|           | \[ ].page     | text                 | The page(s) where the watermark is printed. For all pages: "all". For specific pages: page numbers or page ranges separated by commas. Ex.: "1,3,5-12" |
-|           | \[ ].width    | longint              | The width of the watermark text / image.                                                                                                               |
-|           | \[ ].x        | longint              | The horizontal coordinate of the top left point of the watermark text / image.                                                                         |
-|           | \[ ].y        | longint              | The vertical coordinate of the top left point of the watermark text / image.                                                                           |
+| Propriedade |                | Tipo                 | Descrção                                                                                                                                               |
+| ----------- | -------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| watermark   |                | collection           | Collection of watermark settings.  Default value: undefined                                                                                            |
+|             | \[ ].height   | inteiro longo        | The height of the watermark text / image.                                                                                                              |
+|             | \[ ].imageSrc | picture &#124; text* | The watermark text / image.                                                                                                                            |
+|             | \[ ].page     | text                 | The page(s) where the watermark is printed. For all pages: "all". For specific pages: page numbers or page ranges separated by commas. Ex.: "1,3,5-12" |
+|             | \[ ].width    | inteiro longo        | The width of the watermark text / image.                                                                                                               |
+|             | \[ ].x        | inteiro longo        | The horizontal coordinate of the top left point of the watermark text / image.                                                                         |
+|             | \[ ].y        | inteiro longo        | The vertical coordinate of the top left point of the watermark text / image.                                                                           |
 
 \* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. In Windows, the file extension must be indicated. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by [VP Get print info](method-list.md#vp-get-print-info).
 
@@ -413,7 +411,7 @@ The [VP Get stylesheet](method-list.md#vp-get-stylesheet) command can be used to
 
 ### Style object properties
 
-Example:
+Exemplo:
 
 ```4d
  $style:=New object
@@ -426,56 +424,56 @@ Example:
 
 #### Background & Foreground
 
-| Property              | Type          | Description                                  | Possible values                                                                                                                                                                                                                                                                                                                                                           |
+| Propriedade           | Tipo          | Descrção                                     | Valores possíveis                                                                                                                                                                                                                                                                                                                                                         |
 | --------------------- | ------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | backColor             | text          | Defines the color of the background.         | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                                        |
 | backgroundImage       | picture, text | Specifies a background image.                | Can be specified directly or via the image path (full path or file name only). If the file name only is used, the file must be located next to the database structure file. No matter how set (picture or text), a picture is saved with the document. This could impact the size of a document if the image is large. Note for Windows: File extension must be included. |
-| backgroundImageLayout | longint       | Defines the layout for the background image. | `vk image layout center`, `vk image layout none`, `vk image layout stretch`, `vk image layout zoom`                                                                                                                                                                                                                                                                       |
+| backgroundImageLayout | inteiro longo | Defines the layout for the background image. | `vk image layout center`, `vk image layout none`, `vk image layout stretch`, `vk image layout zoom`                                                                                                                                                                                                                                                                       |
 | foreColor             | text          | Defines the color of the foreground.         | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                                        |
 
 #### Borders
 
-| Property                                                                   |       | Type    | Description                                                                    | Possible values                                                                                                                                                                                                                                                                                                                                                  |
-| -------------------------------------------------------------------------- | ----- | ------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| borderBottom, borderLeft, borderRight, borderTop, diagonalDown, diagonalUp |       | object  | Defines the corresponding border line                                          |                                                                                                                                                                                                                                                                                                                                                                  |
-|                                                                            | color | text    | Defines the color of the border. Default = black.                              | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                               |
-|                                                                            | style | longint | Defines the style of the border. Default = empty. Cannot be null or undefined. | `vk line style dash dot`, `vk line style dash dot dot`, `vk line style dashed`, `vk line style dotted`, `vk line style double`, `vk line style empty`, `vk line style hair`, `vk line style medium`, `vk line style medium dash dot`, `vk line style medium dash dot dot`,`vk line style medium dashed`, `vk line style slanted dash dot`, `vk line style thick` |
+| Propriedade                                                                |       | Tipo          | Descrção                                                                       | Valores possíveis                                                                                                                                                                                                                                                                                                                                                |
+| -------------------------------------------------------------------------- | ----- | ------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| borderBottom, borderLeft, borderRight, borderTop, diagonalDown, diagonalUp |       | object        | Defines the corresponding border line                                          |                                                                                                                                                                                                                                                                                                                                                                  |
+|                                                                            | color | text          | Defines the color of the border. Default = black.                              | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                                                                                                                                                               |
+|                                                                            | style | inteiro longo | Defines the style of the border. Default = empty. Cannot be null or undefined. | `vk line style dash dot`, `vk line style dash dot dot`, `vk line style dashed`, `vk line style dotted`, `vk line style double`, `vk line style empty`, `vk line style hair`, `vk line style medium`, `vk line style medium dash dot`, `vk line style medium dash dot dot`,`vk line style medium dashed`, `vk line style slanted dash dot`, `vk line style thick` |
 
 #### Fonts and text
 
-| Property        |            | Type    | Description                                                                                                                                                                                                                                                                                                                                                          | Possible values                                                                                                                                                                                                   |
-| --------------- | ---------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| font            |            | text    | Specifies the font characteristics in CSS font shorthand ("font-style font-variant font-weight font-size/line-height font-family"). Example: "14pt Century Gothic". The font-size and font-family values are mandatory. If one of the other values is missing, their default values are used. Note: If a font name contains a space, the name must be within quotes. | A CSS font shorthand. 4D provides utility commands to handle font characteristics as objects: [`VP Font to object`](method-list.md#vp-font-to-object) and [`VP Object to font`](method-list.md#vp-object-to-font) |
-| formatter       |            | text    | Pattern for value/time property.                                                                                                                                                                                                                                                                                                                                     | Number/text/date/time formats, special characters. See [Cell Format](#cell-format).                                                                                                                               |
-| isVerticalText  |            | boolean | Specifies text direction.                                                                                                                                                                                                                                                                                                                                            | True = vertical text, False = horizontal text.                                                                                                                                                                    |
-| labelOptions    |            | object  | Defines cell label options (watermark options).                                                                                                                                                                                                                                                                                                                      |                                                                                                                                                                                                                   |
-|                 | alignment  | longint | Specifies the position of the cell label. Optional property.                                                                                                                                                                                                                                                                                                         | `vk label alignment top left`, `vk label alignment bottom left`, `vk label alignment top center`, `vk label alignment bottom center`, `vk label alignment top right`, `vk label alignment bottom right`           |
-|                 | visibility | longint | Specifies the visibility of the cell label. Optional property.                                                                                                                                                                                                                                                                                                       | `vk label visibility auto`, `vk label visibility hidden`, `vk label visibility visible`                                                                                                                           |
-|                 | foreColor  | text    | Defines the color of the foreground. Optional property.                                                                                                                                                                                                                                                                                                              | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                |
-|                 | font       | text    | Specifies the font characteristics with CSS font shorthand ("font-style font-variant font-weight font-size/line-height font-family"). The font-size and font-family values are mandatory.                                                                                                                                                                            |                                                                                                                                                                                                                   |
-| textDecoration  |            | longint | Specifies the decoration added to text.                                                                                                                                                                                                                                                                                                                              | `vk text decoration double underline`, `vk text decoration line through`, `vk text decoration none`, `vk text decoration overline`, `vk text decoration underline`                                                |
-| textIndent      |            | longint | Defines the unit of text indention. 1 = 8 pixels                                                                                                                                                                                                                                                                                                                     |                                                                                                                                                                                                                   |
-| textOrientation |            | longint | Defines the rotation angle of the text in a cell. Number between -90 and 90                                                                                                                                                                                                                                                                                          |                                                                                                                                                                                                                   |
-| watermark       |            | text    | Defines the watermark (cell label) content                                                                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                   |
-| wordWrap        |            | boolean | Specifies if text should be wrapped.                                                                                                                                                                                                                                                                                                                                 | True = wrapped text, False = unwrapped text                                                                                                                                                                       |
+| Propriedade     |              | Tipo          | Descrção                                                                                                                                                                                                                                                                                                                                                             | Valores possíveis                                                                                                                                                                                                 |
+| --------------- | ------------ | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| font            |              | text          | Specifies the font characteristics in CSS font shorthand ("font-style font-variant font-weight font-size/line-height font-family"). Example: "14pt Century Gothic". The font-size and font-family values are mandatory. If one of the other values is missing, their default values are used. Note: If a font name contains a space, the name must be within quotes. | A CSS font shorthand. 4D provides utility commands to handle font characteristics as objects: [`VP Font to object`](method-list.md#vp-font-to-object) and [`VP Object to font`](method-list.md#vp-object-to-font) |
+| formatter       |              | text          | Pattern for value/time property.                                                                                                                                                                                                                                                                                                                                     | Number/text/date/time formats, special characters. See [Cell Format](#cell-format).                                                                                                                               |
+| isVerticalText  |              | boolean       | Specifies text direction.                                                                                                                                                                                                                                                                                                                                            | True = vertical text, False = horizontal text.                                                                                                                                                                    |
+| labelOptions    |              | object        | Defines cell label options (watermark options).                                                                                                                                                                                                                                                                                                                      |                                                                                                                                                                                                                   |
+|                 | alignment    | inteiro longo | Specifies the position of the cell label. Optional property.                                                                                                                                                                                                                                                                                                         | `vk label alignment top left`, `vk label alignment bottom left`, `vk label alignment top center`, `vk label alignment bottom center`, `vk label alignment top right`, `vk label alignment bottom right`           |
+|                 | visibilidade | inteiro longo | Specifies the visibility of the cell label. Optional property.                                                                                                                                                                                                                                                                                                       | `vk label visibility auto`, `vk label visibility hidden`, `vk label visibility visible`                                                                                                                           |
+|                 | foreColor    | text          | Defines the color of the foreground. Optional property.                                                                                                                                                                                                                                                                                                              | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                |
+|                 | font         | text          | Specifies the font characteristics with CSS font shorthand ("font-style font-variant font-weight font-size/line-height font-family"). The font-size and font-family values are mandatory.                                                                                                                                                                            |                                                                                                                                                                                                                   |
+| textDecoration  |              | inteiro longo | Specifies the decoration added to text.                                                                                                                                                                                                                                                                                                                              | `vk text decoration double underline`, `vk text decoration line through`, `vk text decoration none`, `vk text decoration overline`, `vk text decoration underline`                                                |
+| textIndent      |              | inteiro longo | Defines the unit of text indention. 1 = 8 pixels                                                                                                                                                                                                                                                                                                                     |                                                                                                                                                                                                                   |
+| textOrientation |              | inteiro longo | Defines the rotation angle of the text in a cell. Number between -90 and 90                                                                                                                                                                                                                                                                                          |                                                                                                                                                                                                                   |
+| watermark       |              | text          | Defines the watermark (cell label) content                                                                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                   |
+| wordWrap        |              | boolean       | Specifies if text should be wrapped.                                                                                                                                                                                                                                                                                                                                 | True = wrapped text, False = unwrapped text                                                                                                                                                                       |
 
 #### Layout
 
-| Property    | Type    | Description                                                                                                         | Possible values                                                                                                      |
-| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| cellPadding | text    | Defines the cell padding                                                                                            |                                                                                                                      |
-| hAlign      | longint | Defines the horizontal alignment of cell contents.                                                                  | `vk horizontal align center`, `vk horizontal align general`, `vk horizontal align left`, `vk horizontal align right` |
-| locked      | boolean | Specifies cell protection status. Note, this is only available if [sheet protection](#sheet-protection) is enabled. | True = locked, False = unlocked.                                                                                     |
-| shrinkToFit | boolean | Specifies if the contents of the cell should be reduced.                                                            | True = reduced content, False = no reduction.                                                                        |
-| tabStop     | boolean | Specifies if the focus to the cell can be set using the Tab key.                                                    | True = Tab key sets focus, False = Tab key does not set focus.                                                       |
-| vAlign      | longint | Specifies the vertical alignment of cell contents.                                                                  | `vk vertical align bottom`, `vk vertical align center`, `vk vertical align top`                                      |
+| Propriedade | Tipo          | Descrção                                                                                                            | Valores possíveis                                                                                                    |
+| ----------- | ------------- | ------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| cellPadding | text          | Defines the cell padding                                                                                            |                                                                                                                      |
+| hAlign      | inteiro longo | Defines the horizontal alignment of cell contents.                                                                  | `vk horizontal align center`, `vk horizontal align general`, `vk horizontal align left`, `vk horizontal align right` |
+| locked      | boolean       | Specifies cell protection status. Note, this is only available if [sheet protection](#sheet-protection) is enabled. | True = locked, False = unlocked.                                                                                     |
+| shrinkToFit | boolean       | Specifies if the contents of the cell should be reduced.                                                            | True = reduced content, False = no reduction.                                                                        |
+| tabStop     | boolean       | Specifies if the focus to the cell can be set using the Tab key.                                                    | True = Tab key sets focus, False = Tab key does not set focus.                                                       |
+| vAlign      | inteiro longo | Specifies the vertical alignment of cell contents.                                                                  | `vk vertical align bottom`, `vk vertical align center`, `vk vertical align top`                                      |
 
 #### Style information
 
-| Property   | Type | Description                                                                                                                                                                                                                                                                      |
-| ---------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name       | text | Defines the name of the style                                                                                                                                                                                                                                                    |
-| parentName | text | Specifies the style that the current style is based on. Values from the parent style will be applied, then any values from the current style are applied. Changes made in the current style will not be refelected in the parent style. Only available when using a style sheet. |
+| Propriedade | Tipo | Descrção                                                                                                                                                                                                                                                                         |
+| ----------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name        | text | Defines the name of the style                                                                                                                                                                                                                                                    |
+| parentName  | text | Specifies the style that the current style is based on. Values from the parent style will be applied, then any values from the current style are applied. Changes made in the current style will not be refelected in the parent style. Only available when using a style sheet. |
 
 ## 4D View Pro Object
 
@@ -483,13 +481,13 @@ The 4D View Pro [object](Concepts/dt_object.md) stores the whole spreadsheet con
 
 It contains the following properties:
 
-| Property     | Value type | Description                                  |
-| ------------ | ---------- | -------------------------------------------- |
-| version      | Longint    | Internal component version                   |
-| dateCreation | Timestamp  | Creation date                                |
-| dateModified | Timestamp  | Last modification date                       |
-| meta         | Object     | Free contents, reserved for the 4D developer |
-| spreadJS     | Object     | Reserved for the 4D View Pro component       |
+| Propriedade  | Tipo de valor | Descrção                                     |
+| ------------ | ------------- | -------------------------------------------- |
+| version      | Longint       | Internal component version                   |
+| dateCreation | Timestamp     | Creation date                                |
+| dateModified | Timestamp     | Last modification date                       |
+| meta         | Objeto        | Free contents, reserved for the 4D developer |
+| spreadJS     | Objeto        | Reserved for the 4D View Pro component       |
 
 ## 4D View Pro Form Object Variable
 
@@ -498,12 +496,12 @@ The 4D View Pro form object variable is the [object](Concepts/dt_object.md) vari
 
 It contains the following properties:
 
-| Property               | Value type | Description                                                                                                                                                                                                                                                                                                                  |
-| ---------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ViewPro.area           | Text       | 4D View Pro area name                                                                                                                                                                                                                                                                                                        |
-| ViewPro.callbacks      | Object     | Stores temporary information necessary for commands requiring callbacks such as importing and exporting.                                                                                                                                                                                                                     |
-| ViewPro.commandBuffers | Collection | Stores sequentially the commands called by the method and executes them as a batch (rather than individually) upon exiting the method, or if a command returns a value or the [VP FLUSH COMMANDS](method-list.md#vp-flush-commands) is called. This mechanism increases performance by reducing the number of requests sent. |
-| ViewPro.events         | Object     | [Event](#form-events) list.                                                                                                                                                                                                                                                                                                  |
-| ViewPro.formulaBar     | Boolean    | Indicates whether or not the formula bar is displayed. Available only for the "toolbar" interface.                                                                                                                                                                                                                           |
-| ViewPro.inited         | Boolean    | Indicates whether or not the 4D View Pro area has been initialized (see [On VP Ready](Events/onVpReady.md) event).                                                                                                                                                                                                           |
-| ViewPro.interface      | Text       | Specifies the type of user interface:"ribbon", "toolbar", "none".                                                                                                                                                                                                                                                            |
+| Propriedade            | Tipo de valor | Descrção                                                                                                                                                                                                                                                                                                                     |
+| ---------------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ViewPro.area           | Text          | 4D View Pro area name                                                                                                                                                                                                                                                                                                        |
+| ViewPro.callbacks      | Objeto        | Stores temporary information necessary for commands requiring callbacks such as importing and exporting.                                                                                                                                                                                                                     |
+| ViewPro.commandBuffers | Collection    | Stores sequentially the commands called by the method and executes them as a batch (rather than individually) upon exiting the method, or if a command returns a value or the [VP FLUSH COMMANDS](method-list.md#vp-flush-commands) is called. This mechanism increases performance by reducing the number of requests sent. |
+| ViewPro.events         | Objeto        | [Event](#form-events) list.                                                                                                                                                                                                                                                                                                  |
+| ViewPro.formulaBar     | Booleano      | Indicates whether or not the formula bar is displayed. Available only for the "toolbar" interface.                                                                                                                                                                                                                           |
+| ViewPro.inited         | Booleano      | Indicates whether or not the 4D View Pro area has been initialized (see [On VP Ready](Events/onVpReady.md) event).                                                                                                                                                                                                           |
+| ViewPro.interface      | Text          | Specifies the type of user interface:"ribbon", "toolbar", "none".                                                                                                                                                                                                                                                            |

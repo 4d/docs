@@ -1,14 +1,14 @@
 ---
 id: shortcuts
-title: Shortcuts Page
+title: ショートカットページ
 ---
 
-This page lists all the shortcuts used in the 4D Design environment (except for standard "system" shortcuts, such as Ctrl+C/Command+C for the Copy command).
+このページには 4Dのデザインモードで使用されるすべてのショートカットがリストされています (コピー (Ctrl+C/Command+C) などのシステムショートカットを除く)。
 
 ![](../assets/en/Preferences/shortcuts.png)
 
-To modify a shortcut, you can select/deselect the item to modify (Shift, Alt or letter key) in the list. You can also double-click on a shortcut to configure it using a specific dialog box.
+ショートカットを変更するには、設定する項目のモディファイアキー (Shift および Alt) および文字をリスト中で変更します。 またダブルクリックすると専用のダイアログボックスでショートカットの編集をおこなうことができます:
 
-Note that each shortcut implicitly includes the **Ctrl** (Windows) or **Command** (macOS) key.
+それぞれのショートカットには暗黙に **Ctrl** (Windows) または **Command** (macOS) キーが含まれることに留意してください。
 
-If you edit this list, your custom shortcuts settings are stored in a *4DShortcutsvXX.xml* file, created at the same level as the [user preferences file](overview.md#storage). Hence, each time 4D is updated your keyboard shortcut preferences remain.
+このリストを編集すると、カスタムのショートカット設定は [ユーザー Preferences ファイル](overview.md#ストレージ) と同じ階層にある *4D Shortcuts vXX.xml* ファイルに保存されます。 そのため、4Dがアップデートされても、ショートカット環境設定は残されます。

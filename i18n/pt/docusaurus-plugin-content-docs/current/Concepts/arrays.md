@@ -3,34 +3,34 @@ id: arrays
 title: Arrays
 ---
 
-An **array** is an ordered series of **variables** of the same type. Each variable is called an **element** of the array. An array is given its size when it is created; you can then resize it as many times as needed by adding, inserting, or deleting elements, or by resizing the array using the same command used to create it. Array elements are numbered from 1 to N, where N is the size of the array. An array always has a special [element zero](#using-the-element-zero-of-an-array). Arrays are 4D variables. Like any variable, an array has a scope and follows the rules of the 4D language, though with some unique differences.
+Um **array** é uma série ordenada de**variáveis** do mesmo tipo. Cada variável é um **elemento** do array. Um array recebe seu tamanho quando é criado, depois pode ser redimensionado quantas vezes sejam necessário, adicionando, inserindo ou eliminado elementos, ou redimensionando o array através do mesmo comando usado para criá-lo. Elementos do array são numerados de 1 a N, onde N é o tamanho do array. Um array sempre tem um elemento especial [elemento zero](#using-the-element-zero-of-an-array). Arrays são variáveis 4D. Como qualquer variável, um array tem um alcance/escopo e segue as regras da linguagem 4D, mas com algumas diferenças únicas.
 
-> In most cases, it is recommended to use **collections** instead of **arrays**. Collections are more flexible and provide a wide range of dedicated methods. For more information, please refer to the [Collection](Concepts/dt_collection.md) section.
+> Na maioria dos casos é recomendado usar **collections** ao invés de **arrays**. Collections são mais flexíveis e oferecem uma maior gama de métodos dedicados. Para saber mais veja [Collection](Concepts/dt_collection.md).
 
 
-## Creating Arrays
+## Criar Arrays
 
-You create an array with one of the array declaration commands from the "Array" theme. Each array declaration command can create or resize one-dimensional or two-dimensional arrays. For more information about two-dimensional arrays, see the [two dimensional arrays](#two-dimensional-arrays) section.
+Pode criar um array com um dos comandos de declaração de array no tema "Array". Cada comando de declaração de array pode criar ou redimensionar arrays unidimensionais ou bidimensionais. Para mais informação sobre arrays bidimensionais, consulte [arrays bidimensionais](#two-dimensional-arrays).
 
-The following line of code creates (declares) an Integer array of 10 elements:
+A linha de código abaixo cria (declara) um array Inteiro de 10 elementos:
 
 ```4d
  ARRAY INTEGER(aiAnArray;10)
 ```
 
-Then, the following code resizes that same array to 20 elements:
+Depois, o código a seguir redimensiona o mesmo array para 20 elementos:
 ```4d
 ARRAY INTEGER(aiAnArray;20)
 ```
 
-Then, the following code resizes that same array to no elements:
+Depois, o código a seguir redimensiona o mesmo array para 0 elementos:
 ```4d
 ARRAY INTEGER(aiAnArray;0)
 ```
 
-## Assigning values in arrays
+## Atribuir valores em arrays
 
-You reference the elements in an array by using curly braces ({…}). A number is used within the braces to address a particular element; this number is called the element number. The following lines put five names into the array called atNames and then display them in alert windows:
+Pode referenciar os elementos em um array usando chaves ({…}). Dentro das chaves se utiliza um número para dirigir-se a um elemento concreto; este número se denomina número de elemento. As linhas abaixo põe cinco nomes em um array chamado atNames e então exibe-os na janela de alerta:
 
 ```4d
  ARRAY TEXT(atNames;5)
@@ -43,28 +43,28 @@ You reference the elements in an array by using curly braces ({…}). A number i
     ALERT("The element #"+String($vlElem)+" is equal to: "+atNames{$vlElem})
  End for
 ```
-Note the syntax atNames{$vlElem}. Rather than specifying a numeric literal such as atNames{3}, you can use a numeric variable to indicate which element of an array you are addressing. Using the iteration provided by a loop structure (`For...End for`, `Repeat...Until` or `While...End while`), compact pieces of code can address all or part of the elements in an array.
+Lembre da sintaxe atNames{$vlElem}. Ao invés de especificar um literal numérico como atNames{3}, pode usar uma variável numérica para indicar a quais elementos de um array se dirige. Using the iteration provided by a loop structure (`For... End for`, `Repeat... Until` or `While... End while`), compact pieces of code can address all or part of the elements in an array.
 
-**Important:** Be careful not to confuse the assignment operator (:=) with the comparison operator, equal (=). Assignment and comparison are very different operations.
-
-
-### Assigning an array to another array
-Unlike text or string variables, you cannot assign one array to another. To copy (assign) an array to another one, use `COPY ARRAY`.
+**Importante:** Não confunda o operador de atribuição := com o operador de comparação de igualdade (=). As operações de atribuição e comparação são bem diferentes.
 
 
-## Using the element zero of an array
+### Atribuindo um array para outro array
+Diferente de variáveis texto ou strings, não pode atribuir um array para outro. Para copiar (atribuir) um array para outro, use `COPY ARRAY`.
 
-An array always has an element zero. While element zero is not shown when an array supports a form object, there is no restriction(*) in using it with the language.
 
-Here is another example: you want to initialize a form object with a text value but without setting a default value. You can use the element zero of the array:
+## Usar o elemento zero de um array
+
+Um array sempre tem um elemento zero. Apesar do elemento zero não ser mostrado quando um array for compatível com um objeto formulário, não há restrições (*) ao usá-lo com a linguagem.
+
+Aqui há outro exemplo: se quiser inicializar um objeto formulário com um valor texto mas sem estabelecer um valor padrão. Pode usar o elemento zero do array:
 
 ```4d
-  // method for a combo box or drop-down list  
-  // bound to atName variable array
+  // método para um combo box ou lista drop down
+  // vinculado ao array de variável atName
  Case of
     :(Form event code=On Load)
-  // Initialize the array (as shown further above)  
-  // But use the element zero
+  // Initializar o array (como mostrado acima)  
+  // Mas use o elemento zero
         ARRAY TEXT(atName;5)
         atName{0}:=Please select an item"
         atName{1}:="Text1"
@@ -72,52 +72,52 @@ Here is another example: you want to initialize a form object with a text value 
         atName{3}:="Text3"
         atName{4}:="Text4"
         atName{5}:="Text5"
-    // Position the array to element 0
+    // Posiciona o array para elemento 0
         atName:=0
  End case
 ```
 
-(*) However, there is one exception: in an array type List Box, the zero element is used internally to store the previous value of an element being edited, so it is not possible to use it in this particular context.
+(*) Entretanto, há uma excepção: em um array tipo List Box o elemento zero se usa internamente para armazenar o valor anterior de um elemento que se está editando, não é possível para usar no seu contexto particular.
 
 
-## Two-dimensional Arrays
+## Arrays de duas dimensões
 
-Each of the array declaration commands can create or resize one-dimensional or two-dimensional arrays. Example:
+Cada comando de declaração de comandos pode criar ou redimensionar arrays unidimensionais ou bidimensionais. Exemplo:
 
 ```4d
- ARRAY TEXT(atTopics;100;50) // Creates a text array composed of 100 rows of 50 columns
+ ARRAY TEXT(atTopics;100;50) // Cria um array de texto composto de 100 linhas de 50 colunas
 ```
 
-Two-dimensional arrays are essentially language objects; you can neither display nor print them.
+Os arrays de duas dimensões são essencialmente objetos de linguagem; não podem se mostrar nem imprimir.
 
-In the previous example:
+No exemplo anterior:
 
-- atTopics is a two-dimensional array
-- atTopics{8}{5} is the 5th element (5th column...) of the 8th row
-- atTopics{20} is the 20th row and is itself a one-dimensional array
-- `Size of array(atTopics)` returns 100, which is the number of rows
-- `Size of array(atTopics{17})` returns 50, which the number of columns for the 17th row
+- atTopics é um array de duas dimensõees
+- atTopics{8}{5} é o elemento 5a (5a coluna...) da 8a fila
+- atTopics{20} é a 20a linha é por sua vez um array dimensão
+- `Tamanho do array(atTopics)` devolve 100, que é o número de filas
+- `Tamanho de array(atTopics{17})` devolve 50, que é o número de colunas da linha 17
 
-In the following example, a pointer to each field of each table in the database is stored in a two-dimensional array:
+No seguinte exemplo, um ponteiro a cada campo de cada tabela do banco de dados se armazena em um array de duas dimensões:
 
 ```4d
  C_LONGINT($vlLastTable;$vlLastField)
  C_LONGINT($vlFieldNumber)
-  // Create as many rows (empty and without columns) as there are tables
+  // Criar tantas linhas (vazias e sem colunas) como tabelas 
  $vlLastTable:=Get last table number
- ARRAY POINTER(<>apFields;$vlLastTable;0) //2D array with X rows and zero columns
-  // For each table
+ ARRAY POINTER(<>apFields;$vlLastTable;0) /Array 2D com X linhas e zero colunas
+  // Para cada tabela
  For($vlTable;1;$vlLastTable)
     If(Is table number valid($vlTable))
        $vlLastField:=Get last field number($vlTable)
-  // Give value of elements
+  // Dar valor aos elementos
        $vlColumnNumber:=0
        For($vlField;1;$vlLastField)
           If(Is field number valid($vlTable;$vlField))
              $vlColumnNumber:=$vlColumnNumber+1
-  //Insert a column in a row of the table underway
+  //Insere uma coluna em uma linha da tabela em curso
              INSERT IN ARRAY(<>apFields{$vlTable};$vlColumnNumber;1)
-  //Assign the "cell" with the pointer
+  //Atribuir à "célula" com o ponteiro
              <>apFields{$vlTable}{$vlColumnNumber}:=Field($vlTable;$vlField)
           End if
        End for
@@ -125,12 +125,12 @@ In the following example, a pointer to each field of each table in the database 
  End for
 ```
 
-Provided that this two-dimensional array has been initialized, you can obtain the pointers to the fields for a particular table in the following way:
+Sempre que tiver inicializado este array de duas dimensôes, se pedem obter os ponteiros aos campos de uma tabela concreta da seguinte maneira:
 
 ```4d
-  // Get the pointers to the fields for the table currently displayed at the screen:
+  // Obter os ponteiros aos campos para a tabela que se mostra atualmente na tela:
  COPY ARRAY(◊apFields{Table(Current form table)};$apTheFieldsIamWorkingOn)
-  // Initialize Boolean and Date fields
+  // Inicializar os campos booleanos e de data
  For($vlElem;1;Size of array($apTheFieldsIamWorkingOn))
     Case of
        :(Type($apTheFieldsIamWorkingOn{$vlElem}->)=Is date)
@@ -141,40 +141,40 @@ Provided that this two-dimensional array has been initialized, you can obtain th
  End for
 ```
 
-**Note:** As this example suggests, rows of a two-dimensional arrays can be the same size or different sizes.
+**Nota:** como sugere este exemplo, as linhas de um array de duas dimensões podem ter o mesmo tamanho ou diferentes tamanhos.
 
-## Arrays and Memory
+## Arrays e memória
 
-Unlike the data you store on disk using tables and records, an array is always held in memory in its entirety.
+A diferença dos dados que se armazenam no disco mediante tabelas e registros, um array se mantém sempre na memória em sua totalidade.
 
-For example, if all US zip codes were entered in the [Zip Codes] table, it would contain about 100,000 records. In addition, that table would include several fields: the zip code itself and the corresponding city, county, and state. If you select only the zip codes from California, the 4D database engine creates the corresponding selection of records within the [Zip Codes] table, and then loads the records only when they are needed (i.e., when they are displayed or printed). In order words, you work with an ordered series of values (of the same type for each field) that is partially loaded from the disk into the memory by the database engine of 4D.
+Por exemplo, se introduzir todos os códigos postais dos EUA na tabela [Zip Codes], conteria por volta de 100.000 registros. Além disso essa tabela incluiria vários campos: o código cep e a cidade, região e estado correspondentes. Se selecionar todos os ceps (zip codes) da Califórnia, o motor de banco de dados 4D cria a seleção correspondente de registros dentro da tabela [Zip Codes] e então carrega os registros só quando forem necessários (ou seja quando forem exibidos ou impressos). Ou seja, você trabalha com uma série ordenada de valores (do mesmo tipo para cada campo) que é carregada parcialmente desde o disco à memória pelo motor do banco de dados 4D.
 
-Doing the same thing with arrays would be prohibitive for the following reasons:
+Fazer a mesma coisa com arrays seria impossível pelas razões abaixo:
 
-- In order to maintain the four information types (zip code, city, county, state), you would have to maintain four large arrays in memory.
-- Because an array is always held in memory in its entirety, you would have to keep all the zip codes information in memory throughout the whole working session, even though the data is not always in use.
-- Again, because an array is always held in memory in its entirety, each time the application is started and then quit, the four arrays would have to be loaded and then saved on the disk, even though the data is not used or modified during the working session.
+- Para manter os quatro tipos de informação (código postal, cidade, região e estado) teria que manter quatro arrays grandes na memória.
+- Como um array sempre é mantido na memória inteiramente, teria que manter toda a informação de códigos postais na memória durante a sessão inteira, mesmo quando os dados não estivessem sendo usados.
+- De novo, como um array é sempre mantido na memória em sua totalidade, a cada vez que a aplicação for iniciada, os quatro arrays teriam que ser carregados e então salvos no disco, mesmo se os dados não forem usados ou modificados na sessão de trabalho.
 
-**Conclusion:** Arrays are intended to hold reasonable amounts of data for a short period of time. On the other hand, because arrays are held in memory, they are easy to handle and quick to manipulate.
+**Conclusão:** os arrays estão pensados para manter quantidades razoáveis de dados durante um curto período de tempo. Por outro lado, como os arrays são mantidos na memória, são fáceis de manejar e rápidos de manipular.
 
-However, in some circumstances, you may need to work with arrays holding hundreds or thousands of elements. The following table lists the formulas used to calculate the amount of memory used for each array type:
+Entretanto, em algumas circunstâncias, pode precisar trabalhar com arrays que contenham centenas ou milhares de elementos. A tabela abaixo lista as fórmulas usadas para calcular a quantidade de memória usada para cada tipo de array:
 
-| Array Type      | Formula for determining Memory Usage in Bytes                        |
-| --------------- | -------------------------------------------------------------------- |
-| Blob            | (1+number of elements) * 12 + Sum of the size of each blob           |
-| Boolean         | (31+number of elements)\8                                           |
-| Date            | (1+number of elements) * 6                                           |
-| Integer         | (1+number of elements) * 2                                           |
-| Long Integer    | (1+number of elements) * 4                                           |
-| Object          | (1+number of elements) * 8 + Sum of the size of each object          |
-| Picture         | (1+number of elements) * 8 + Sum of the size of each picture         |
-| Pointer         | (1+number of elements) * 8 + Sum of the size of each pointer         |
-| Real            | (1+number of elements) * 8                                           |
-| Text            | (1+number of elements) * 20 + (Sum of the length of each text) * 2 |
-| Time            | (1+number of elements) * 4                                           |
-| Two-dimensional | (1+number of elements) * 16 + Sum of the size of each array          |
+| Tipo de array   | Fórmula para determinar o uso da memoria em bytes                      |
+| --------------- | ---------------------------------------------------------------------- |
+| Blob            | (1+número de elementos) * 12 + Soma de tamanho de cada blob            |
+| Booleano        | (31+número de elementos)\N8                                           |
+| Date            | (1+número de elementos) * 6                                            |
+| Integer         | (1+número de elementos) * 2                                            |
+| Long Integer    | (1+número de elementos) * 4                                            |
+| Objeto          | (1+número de elementos) * 8 + Soma de tamanho de cada objeto           |
+| Imagem          | (1+número de elementos) * 8 + Soma do tamanho de cada imagem           |
+| Ponteiro        | (1+número de elementos) * 8 + Soma de tamanho de cada ponteiro         |
+| Real            | (1+número de elementos) * 8                                            |
+| Text            | (1+número de elementos) * 20 + (soma da longitude de cada texto) * 2 |
+| Hora            | (1+número de elementos) * 4                                            |
+| Dois dimensõees | (1+número de elementos) * 16 + Soma do tamanho de cada array           |
 
-**Notes:**
+**Notas:**
 
-- The size of a text in memory is calculated using this formula: ((Length + 1) * 2)
-- A few additional bytes are required to keep track of the selected element, the number of elements, and the array itself.
+- O tamanho de um texto em memoria se calcula com esta fórmula ((Longitude + 1) * 2)
+- São necessários alguns bytes adicionais para acompanhar o elemento selecionado, o número de elementos, e o próprio array.

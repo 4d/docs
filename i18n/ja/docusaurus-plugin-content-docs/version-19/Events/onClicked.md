@@ -3,46 +3,46 @@ id: onClicked
 title: On Clicked
 ---
 
-| Code | Can be called by                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Definition                    |
-| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
-| 4    | [4D View Pro Area](FormObjects/viewProArea_overview.md) - [4D Write Pro area](FormObjects/writeProArea_overview) - [Button](FormObjects/button_overview.md) - [Button Grid](FormObjects/buttonGrid_overview.md) - [Check Box](FormObjects/checkbox_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - [Dropdown list](FormObjects/dropdownList_Overview.md) - Form - [Hierarchical List](FormObjects/list_overview.md#overview) - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) - [Picture Button](FormObjects/pictureButton_overview.md) - [Picture Pop up menu](FormObjects/picturePopupMenu_overview.md) - [Plug-in Area](FormObjects/pluginArea_overview.md#overview) - [Progress Indicators](FormObjects/progressIndicator.md) - [Radio Button](FormObjects/radio_overview.md) - [Ruler](FormObjects/ruler.md) - [Spinner](FormObjects/spinner.md) - [Splitter](FormObjects/splitters.md) - [Stepper](FormObjects/stepper.md) - [Tab control](FormObjects/tabControl.md) | A click occurred on an object |
+| コード | 呼び出し元                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | 定義              |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
+| 4   | [4D View Pro エリア](FormObjects/viewProArea_overview.md) - [4D Write Pro エリア](FormObjects/writeProArea_overview) - [ボタン](FormObjects/button_overview.md) - [ボタングリッド](FormObjects/buttonGrid_overview.md) - [チェックボックス](FormObjects/checkbox_overview.md) - [コンボボックス](FormObjects/comboBox_overview.md) - [ドロップダウンリスト](FormObjects/dropdownList_Overview.md) - フォーム - [階層リスト](FormObjects/list_overview.md) - [入力](FormObjects/input_overview.md) - [リストボックス](FormObjects/listbox_overview.md) - [リストボックス列](FormObjects/listbox_overview.md#リストボックス列) - [ピクチャーボタン](FormObjects/pictureButton_overview.md) - [ピクチャーポップアップメニュー](FormObjects/picturePopupMenu_overview.md) - [プラグインエリア](FormObjects/pluginArea_overview.md) - [進捗インジケーター](FormObjects/progressIndicator.md) - [ラジオボタン](FormObjects/radio_overview.md) - [ルーラー](FormObjects/ruler.md) - [スピナー](FormObjects/spinner.md) - [スプリッター](FormObjects/splitters.md) - [ステッパー](FormObjects/stepper.md) - [タブコントロール](FormObjects/tabControl.md) | オブジェクト上でクリックされた |
 
 
-## Description
+## 詳細
 
-The `On Clicked` event is generated when the user clicks on an object.
+`On Clicked` イベントは、ユーザーがオブジェクト上でクリックしたときに発生します。
 
-> Some form objects can be activated with the keyboard. For example, once a check box gets the focus, it can be entered using the space bar. In such a case, the `On Clicked` event is still generated.
+> いくつかのフォームオブジェクトはキーボードからも操作可能です。 たとえば、チェックボックスがフォーカスを得ると、スペースバーでオン/オフを切り替えることができます。 この場合でも `On Clicked` イベントは生成されます。
 
-The `On Clicked` event usually occurs once the mouse button is released. However, there are several exceptions:
+`On Clicked` イベントは通常、マウスボタンが離されたときに生成されます。 しかし、いくつか例外があります:
 
-- [Invisible buttons](FormObjects/properties_Display.md#not-rendered): The `On Clicked` event occurs as soon as the click is made and does not wait for the mouse button to be released.
-- [Rulers](FormObjects/ruler.md): If the [Execute object method](FormObjects/properties_Action.md#execute-object-method) option is set to **true**, the `On Clicked` event occurs as soon as the click is made.
-- [Combo boxes](FormObjects/comboBox_overview.md): The `On Clicked` event occurs only if the user selects another value in the associated menu. A [combo box](FormObjects/comboBox_overview.md) must be treated as an enterable text area whose associated drop-down list provides default values. Consequently, you handle data entry within a combo box through the `On Before Keystroke`, `On After Keystroke` and `On Data Change` events.
-- [Drop-down lists](FormObjects/dropdownList_Overview.md): The `On Clicked` event occurs only if the user selects another value in the menu. The `On Data Change` event allows you to detect the activation of the object when a value different from the current value is selected
-- When a list box input cell is [being edited](FormObjects/listbox_overview.md#managing-entry), the `On Clicked` event is generated when the mouse button is pressed, allowing to use the `Contextual click` command for example.
+- [非表示ボタン](FormObjects/properties_Display.md#レンダリングしない): マウスがクリックされると、ボタンが離されるのを待たずに `On Clicked` イベントが生成されます。
+- [ルーラー](FormObjects/ruler.md): [オブジェクトメソッド実行](FormObjects/properties_Action.md#オブジェクトメソッド実行) オプションが **true** に設定されていると、`On Clicked` イベントはクリックがおこなわれるとすぐに生成されます。
+- [コンボボックス](FormObjects/comboBox_overview.md): `On Clicked`イベントは、割り当てられたメニューでユーザーが別の値を選択した場合にのみ発生します。 [コンボボックス](FormObjects/comboBox_overview.md) は、割り当てられたドロップダウンリストにデフォルト値が提供された、入力可能なテキストエリアとして扱われます。 つまり、コンボボックス内におけるデータ入力処理は、`On Before Keystroke` や `On After Keystroke`、`On Data Change` イベントを使用しておこなう必要があります。
+- [ドロップダウンリスト](FormObjects/dropdownList_Overview.md): `On Clicked` イベントは、ユーザーがメニューで別の値を選択した場合にのみ発生します。 `On Data Change` イベントは、現在の値とは異なる値が選択されたときに、オブジェクトが操作されたことを検出することができます。
+- リストボックスの入力セルが [編集中](FormObjects/listbox_overview.md#入力の管理) のとき、マウスボタンが押されると `On Clicked` イベントが発生するので、`Contextual click` コマンドなどを使用することができます。
 
-In the context of an `On Clicked` event, you can test the number of clicks made by the user by means of the `Clickcount` command.
+`On Clicked` イベントのコンテキストにおいては `Clickcount` コマンドを使うことによってユーザーがおこなったクリック数をテストすることができます。
 
-### On Clicked and On Double Clicked
+### On Clicked と On Double Clicked
 
-After the `On Clicked` or [`On Double Clicked`](onDoubleClicked.md) object event property is selected for an object, you can detect and handle the clicks within or on the object, using the `FORM event` command that returns `On Clicked` or [`On Double Clicked`](onDoubleClicked.md), depending on the case.
+`On Clicked` や [`On Double Clicked`](onDoubleClicked.md) オブジェクトイベントプロパティを選択したのち、`FORM Event` コマンドを使用してオブジェクト上でのクリックを検知し処理することができます。 `FORM Event` コマンドはユーザーアクションに応じ、`On Clicked` または [`On Double Clicked`](onDoubleClicked.md)を返します。
 
-If both events are selected for an object, the `On Clicked` and then the `On Double Clicked` events will be generated when the user double-clicks the object.
+両イベントがオブジェクトに対し選択されている場合、ダブルクリックがおこなわれるとまず `On Clicked` が、そして `On Double Clicked` イベントが生成されます。
 
 ### 4D View Pro
 
-This event is generated when the user clicks anywhere on a 4D View Pro document. On this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
+このイベントは、4D View Pro ドキュメント上でクリックが発生したときに生成されます。 このコンテキストにおいて、`FORM Event` コマンドによって返される [イベントオブジェクト](overview.md#イベントオブジェクト) には以下のプロパティが含まれています:
 
-| Property    | Type    | Description                    |
-| ----------- | ------- | ------------------------------ |
-| code        | longint | On Clicked                     |
-| description | text    | "On Clicked"                   |
-| objectName  | text    | 4D View Pro area name          |
-| sheetName   | text    | Name of the sheet of the event |
-| range       | object  | Cell range                     |
+| プロパティ       | タイプ     | 詳細               |
+| ----------- | ------- | ---------------- |
+| code        | longint | On Clicked       |
+| description | text    | "On Clicked"     |
+| objectName  | text    | 4D View Pro エリア名 |
+| sheetName   | text    | イベントが発生したシート名    |
+| range       | object  | セルのレンジ           |
 
-#### Example
+#### 例題
 
 ```4d
  If(FORM Event.code=On Clicked)

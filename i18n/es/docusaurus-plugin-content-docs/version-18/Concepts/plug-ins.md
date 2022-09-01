@@ -3,58 +3,58 @@ id: plug-ins
 title: Plug-ins
 ---
 
-As you develop a 4D application, you will discover many capabilities that you did not notice when you started. You can even augment the standard version of 4D by adding **plug-ins** to your 4D development environment.
+A medida que desarrolle una aplicación 4D, descubrirá muchas funcionalidades de las que no se percató cuando empezó. Incluso puede extender la versión estándar de 4D añadiendo **plug-ins** a su entorno de desarrollo 4D.
 
-## Why the need for a plug-in?
+## ¿Por qué es necesario un plug-in?
 
-Although 4D provides hundred of built-in methods used to manipulate objects, records and implement user interface, some special use or feature (sometimes platform dependant) may be needed: one may need ODBC under Windows, another may need Apple services under macOS, while yet another may want to implement specific statistics tools, social network login, payment platform, file access over the network, a special user interface, or a private picture structure.
+Aunque 4D ofrece cientos de métodos integrados para manipular objetos, registros e implementar la interfaz de usuario, es posible que se necesite algún uso o característica especial (que a veces depende de la plataforma): uno puede necesitar ODBC en Windows, otro puede necesitar los servicios de Apple en macOS, mientras que otro puede querer implementar herramientas estadísticas específicas, inicio de sesión en redes sociales, plataforma de pago, acceso a archivos a través de la red, una interfaz de usuario especial o una estructura de imagen privada.
 
-It is obvious that covering all areas of both the macOS and Windows operating systems by way of 4D commands would certainly lead to a product with thousands of commands, and at the same time, most users would have no need for such a large set of capabilities. Also, creating such an all-encompassing tool would make the 4D environment incredibly complex and would take most users months of study before useful results could be expected.
+Es evidente que cubrir todas las áreas de los sistemas operativos macOS y Windows por medio de los comandos de 4D sin duda conduciría a un producto con miles de comandos, y al mismo tiempo, la mayoría de los usuarios no tendrían necesidad de un conjunto tan grande de funcionalidades. Además, la creación de una herramienta tan completa haría que el entorno 4D fuera increíblemente complejo y llevaría a la mayoría de los usuarios meses de estudio antes de poder esperar resultados útiles.
 
-The modular nature of the 4D environment allows the creation of basic applications but does not preclude the development of highly complex systems. The 4D Plug-in architecture opens the 4D environment to any type of application or user. 4D Plug-ins multiply that application or user's power and productivity.
+La naturaleza modular del entorno 4D permite la creación de aplicaciones básicas, pero no impide el desarrollo de sistemas muy complejos. La arquitectura del plug-in 4D abre el entorno 4D a todo tipo de aplicaciones o de usuario. Los plug-ins 4D multiplican la potencia y la productividad de la aplicación o del usuario.
 
-## What is a plug-in and what can it do?
+## ¿Qué es un plug-in y qué puede hacer?
 
-A plug-in is a piece of code that 4D launches at start up. It adds functionality to 4D and thus increases its capacity.
+Un plug-in es una pieza de código que 4D lanza al inicio. Añade funcionalidad a 4D y aumenta así su capacidad.
 
-Usually, a plug-in does things that:
-- 4D cannot do (ie, specific platform technology),
-- will be very hard to write just using 4D,
-- are only available as Plug-in Entrypoint
+Normalmente, un plug-in hace cosas que:
+- 4D no puede efectuar (es decir, una tecnología de plataforma específica),
+- será muy difícil de escribir sólo con 4D,
+- sólo están disponibles como punto de entrada del plug-in
 
-A plug-in usually contains a set of routines given to the 4D Developer. It can handle an External Area and run an external process.
+Un plug-in suele contener un conjunto de rutinas entregadas al desarrollador 4D. Puede manejar un Área Externa y ejecutar un proceso externo.
 
-- A **plug-in routine** is a routine written in native language (usually C or C++) that causes an action.
-- An **external area** is a part of a form that can display almost everything and interact with the user when necessary.
-- An **external process** is a process that runs alone, usually in a loop, doing almost everything it wants. All process code belongs to the plug-in, 4D is simply present to receive/send events to the process.
+- Una **rutina de conexión** es una rutina escrita en lenguaje nativo (normalmente C o C++) que provoca una acción.
+- Un **área externa** es una parte de un formulario que puede mostrar casi todo e interactuar con el usuario cuando sea necesario.
+- Un **proceso externo** es un proceso que se ejecuta solo, normalmente en un bucle, haciendo casi todo lo que quiere. Todo el código del proceso pertenece al plug-in, 4D simplemente está presente para recibir/enviar eventos al proceso.
 
-### Important note
+### Nota importante
 
-A plug-in can be very simple, with just one routine performing a very small task, or it can be very complex, involving hundred of routines and areas. There is virtually no limit to what a plug-in can do, however every plug-in developer should remember that a plug-in is a "sample" piece of code. It is the plug-in that runs within 4D, not the opposite. As a piece of code, it is the host of 4D; it is not a stand-alone application. It shares CPU time and memory with 4D and other plug-ins, thus, it should be a polite code, using just what is necessary to run. For example, in long loops, a plug-in should call `PA_Yield()` to give time to the 4D scheduler unless its task is critical for both it and the database.
+Un plug-in puede ser muy sencillo, con una sola rutina que realice una tarea muy pequeña, o puede ser muy complejo, con cientos de rutinas y áreas. Prácticamente no hay límite para lo que puede hacer un plug-in, sin embargo todo desarrollador de plug-ins debe recordar que un plug-in es una parte de código "de muestra". Es el plug-in que se ejecuta dentro de 4D, no lo contrario. Como parte de código, es el anfitrión de 4D; no es una aplicación independiente. Comparte el tiempo de la CPU y la memoria con 4D y otros plug-ins, por lo tanto, debería ser un código conciso, utilizando sólo lo necesario para funcionar. Por ejemplo, en los bucles largos, un plug-in debe llamar a `PA_Yield()` para dar tiempo al planificador 4D a menos que su tarea sea crítica tanto para él como para la base de datos.
 
-## How to create a plug-in?
+## ¿Cómo crear un plug-in?
 
-4D provides on GitHub an open-source [**plug-in SDK**](https://github.com/4d/4D-Plugin-SDK), containing the 4D Plugin API and the 4D Plugin Wizard:
+4D ofrece en GitHub un código abierto [**plug-in SDK**](https://github.com/4d/4D-Plugin-SDK), que contiene el plug-in API 4D y el asistente de plugins 4D:
 
-- the [**4D Plugin API**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20API), written in C, adds more than 400 functions that help you to easily create your own plug-ins to add new functionnalities to your 4D application. 4D Plug-in API functions manage all the interactions between the 4D application and your plug-in.
-- The [**4D Plugin Wizard**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20Wizard) is an essential tool that simplifies the task of developing 4D plug-ins. It writes the code 4D needs to correctly load and interact with a plug-in, allowing you to concentrate on your own code.
+- el [**Plugin API de 4D **](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20API), escrito en C, añade más de 400 funciones que le ayudan a crear fácilmente sus propios plug-ins para añadir nuevas funcionalidades a su aplicación 4D. Las funciones del plug-in de API de 4D gestionan todas las interacciones entre la aplicación 4D y su plug-in.
+- [**El Asistente de plug-in 4D**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20Wizard) es una herramienta esencial que simplifica la tarea de desarrollar plugins 4D. Escribe el código que 4D necesita para cargar e interactuar correctamente con un plug-in, permitiéndole concentrarse en su propio código.
 
-## How to install a plug-in?
+## ¿Cómo instalar un plug-in?
 
-You install plug-ins in the 4D environment by copying their files into the appropriate folder.
+Los plug-ins se instalan en el entorno 4D copiando sus archivos en la carpeta correspondiente.
 
-“PluginName.bundle” folders contain both Windows and macOS versions of 4D plug-ins. Their specific internal architecture lets 4D Server load the appropriate version according to the platform where the client machine will be run. To install a plug-in in your environment, you just need to put the “PluginName.bundle” folder or package concerned into the desired **PlugIns** folder.
+Las carpetas "PluginName.bundle" contienen las versiones para Windows y macOS de los plug-ins 4D. Su arquitectura interna específica permite a 4D Server cargar la versión adecuada según la plataforma en la que se ejecutará la máquina cliente. Para instalar un plug-in en su entorno, sólo tiene que poner la carpeta "PluginName.bundle" o el paquete correspondiente en la carpeta **PlugIns** deseada.
 
-You can put the PlugIns folder in two different places:
+Puede colocar la carpeta PlugIns en dos lugares diferentes:
 
-- At the level of the 4D executable application, i.e.:
-  - Under Windows: next to the .exe file
-  - Under macOS: at the first level of the Contents folder inside the application package.   
-    In this case, plug-ins are available in every database opened by this application.
-- At the same level as the database structure file. In this case,  plug-ins are only available in this particular database.
+- A nivel de la aplicación 4D ejecutable, es decir:
+  - En Windows: junto al archivo .exe
+  - En macOS: en el primer nivel de la carpeta Contents dentro del paquete de la aplicación.   
+    En este caso, los plug-ins están disponibles en todas las bases de datos abiertas por esta aplicación.
+- En el mismo nivel que el archivo de estructura de la base. En este caso, los plug-ins sólo están disponibles en esta base de datos en particular.
 
-The choice of location depends on how you want to use the plug-in.
+La elección de la ubicación depende de cómo quiera utilizar el plug-in.
 
-If the same plug-in is placed in both locations, 4D will only load the one located next to the structure. In an application that is compiled and merged using 4D Volume Desktop, if there are several instances of the same plug-in present, this will prevent the application from opening.
+Si se coloca el mismo plug-in en ambas ubicaciones, 4D sólo cargará el que esté situado junto a la estructura. En una aplicación compilada y fusionada con 4D Volume Desktop, si hay varias instancias del mismo plug-in presentes, esto impedirá que la aplicación se abra.
 
-Plug-ins are loaded by 4D when the application is launched so you will need to quit your 4D application before installing them. Then open your database with 4D. If any plug-in requires a specific license for use, it will be loaded but not available for use.
+Los plug-ins son cargados por 4D cuando se lanza la aplicación, por lo que tendrá que salir de su aplicación 4D antes de instalarlos. Los plug-ins son cargados por 4D cuando se lanza la aplicación, por lo que tendrá que salir de su aplicación 4D antes de instalarlos. Si algún plug-in requiere una licencia específica, se cargará pero no estará disponible para su uso.

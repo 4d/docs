@@ -7,7 +7,7 @@ title: On After Edit
 | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | 45   | [4D View Pro area](../FormObjects/viewProArea_overview.md) - [4D Write Pro area](../FormObjects/writeProArea_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [Hierarchical List](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | The contents of the enterable object that has the focus has just been modified |
 
-## Description
+## Beschreibung
 
 ### General case
 
@@ -26,26 +26,26 @@ Within the `On After Edit` event, text data being entered is returned by the [`G
 
 The object returned by the `FORM Event` command contains:
 
-| Property    | Type    | Description                                                                                         |
-| ----------- | ------- | --------------------------------------------------------------------------------------------------- |
-| code        | longint | On After Edit                                                                                       |
-| description | text    | "On After Edit"                                                                                     |
-| objectName  | text    | 4D View Pro area name                                                                               |
-| sheetName   | text    | Name of the sheet of the event                                                                      |
-| action      | text    | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
+| Property     | Typ            | Beschreibung                                                                                        |
+| ------------ | -------------- | --------------------------------------------------------------------------------------------------- |
+| code         | Lange Ganzzahl | On After Edit                                                                                       |
+| beschreibung | Text           | "On After Edit"                                                                                     |
+| objectName   | Text           | 4D View Pro area name                                                                               |
+| sheetName    | Text           | Name of the sheet of the event                                                                      |
+| aktion       | Text           | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
 
 Depending on the `action` property value, the [event object](overview.md#event-object) will contain additional properties.
 
 #### action = editChange
 
-| Property    | Type    | Description                       |
+| Property    | Typ     | Beschreibung                      |
 | ----------- | ------- | --------------------------------- |
 | range       | object  | Cell range                        |
 | editingText | variant | The value from the current editor |
 
 #### action = valueChanged
 
-| Property | Type    | Description                 |
+| Property | Typ     | Beschreibung                |
 | -------- | ------- | --------------------------- |
 | range    | object  | Cell range                  |
 | oldValue | variant | Value of cell before change |
@@ -53,7 +53,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### action = DragDropBlock
 
-| Property  | Type    | Description                                         |
+| Property  | Typ     | Beschreibung                                        |
 | --------- | ------- | --------------------------------------------------- |
 | fromRange | object  | Range of source cell range (being dragged)          |
 | toRange   | object  | Range of the destination cell range (drop location) |
@@ -62,27 +62,27 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### action = DragFillBlock
 
-| Property  | Type   | Description         |
+| Property  | Typ    | Beschreibung        |
 | --------- | ------ | ------------------- |
 | fillRange | object | Range used for fill |
  autoFillType|longint|Value used for the fill.<li>0: Cells are filled with all data (values, formatting, and formulas)</li><li>1: Cells are filled with automatically sequential data</li><li>2: Cells are filled with formatting only</li><li>3: Cells are filled with values but not formatting</li><li>4: Values are removed from the cells</li><li>5: Cells are filled automatically</li>| |fillDirection|longint|Direction of the fill.<li>0: The cells to the left are filled</li><li>1: The cells to the right are filled</li><li>2: The cells above are filled</li><li>3: The cells below are filled</li>|
 
 #### action = formulaChanged
 
-| Property | Type   | Description         |
+| Property | Typ    | Beschreibung        |
 | -------- | ------ | ------------------- |
 | range    | object | Cell range          |
-| formula  | text   | The formula entered |
+| formula  | Text   | The formula entered |
 
 #### action = clipboardPasted
 
-| Property    | Type    | Description                                                                                                                                                                                              |
-| ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| range       | object  | Cell range                                                                                                                                                                                               |
-| pasteOption | longint | Specifies what is pasted from the clipboard:<li>0: Everything is pasted (values, formatting, and formulas)</li><li>1: Only values are pasted</li><li>2: Only the formatting is pasted</li><li>3: Only formulas are pasted</li><li>4: Values and formatting are pasted (not formulas)</li><li>5: Formulas and formatting are pasted (not values)</li> |
-| pasteData   | object  | The data from the clipboard to be pasted<li>"text" (text): The text from the clipboard</li><li>"html" (text): The HTML from the clipboard</li>                                                                                                             |
+| Property    | Typ            | Beschreibung                                                                                                                                                                                             |
+| ----------- | -------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| range       | object         | Cell range                                                                                                                                                                                               |
+| pasteOption | Lange Ganzzahl | Specifies what is pasted from the clipboard:<li>0: Everything is pasted (values, formatting, and formulas)</li><li>1: Only values are pasted</li><li>2: Only the formatting is pasted</li><li>3: Only formulas are pasted</li><li>4: Values and formatting are pasted (not formulas)</li><li>5: Formulas and formatting are pasted (not values)</li> |
+| pasteData   | object         | The data from the clipboard to be pasted<li>"text" (text): The text from the clipboard</li><li>"html" (text): The HTML from the clipboard</li>                                                                                                             |
 
-#### Example
+#### Beispiel
 
 Here is an example handling an `On After Edit` event:
 
@@ -92,6 +92,8 @@ Here is an example handling an `On After Edit` event:
        ALERT("WARNING: You are currently changing the value\  
        from "+String(FORM Event.oldValue)+\  
        " to "+String(FORM Event.newValue)+"!")
+    End if
+ End if
     End if
  End if
 ```

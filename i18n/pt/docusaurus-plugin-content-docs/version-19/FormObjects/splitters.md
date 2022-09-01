@@ -1,6 +1,6 @@
 ---
 id: splitters
-title: Splitter
+title: Separador
 ---
 
 
@@ -20,7 +20,7 @@ Some of the splitter’s general characteristics:
 
 Once it is inserted, the splitter appears as a line. You can modify its [border style](properties_BackgroundAndBorder.md#border-line-style-dotted-line-type) to obtain a thinner line or [change its color](properties_BackgroundAndBorder.md##font-color-line-color).
 
-#### JSON Example
+#### JSON Exemplo
 
 ```4d
 "mySplitter": {
@@ -33,24 +33,24 @@ Once it is inserted, the splitter appears as a line. You can modify its [border 
  }
 ```
 
-### Supported Properties
+### Propriedades compatíveis
 
 [Border Line Style](properties_BackgroundAndBorder.md##border-line-style-dotted-line-type) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md##font-color-line-color) - [Object Name](properties_Object.md#object-name) - [Pusher](properties_ResizingOptions.md#pusher) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Variable or Expression](properties_Object.md#variable-or-expression) -  [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
 
-## Interaction with the properties of neighboring objects
+## Interação com as propriedades dos objetos vizinhos
 
 In a form, splitters interact with the objects that are around them according to these objects’ resizing options:
 
 | Resizing options for the object(s) | Object(s) above an horizontal splitter or to the left of a vertical splitter (1)    | Object(s) below an horizontal *non-Pusher* splitter or to the right of a vertical *non-Pusher* splitter                                                                                              | Object(s) below an horizontal *Pusher* splitter or to the right of a vertical *Pusher* splitter                                           |
 | ---------------------------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| None                               | Remain as is                                                                        | Are moved with the splitter (position relative to the splitter is not modified) until the next stop. The stop when moving to the bottom or right is either the window’s border, or another splitter. | Are moved with the splitter (position relative to the splitter is not modified) indefinitely. No stop is applied (see the next paragraph) |
-| Resize                             | Keep original position(s), but are resized according to the splitter’s new position |                                                                                                                                                                                                      |                                                                                                                                           |
-| Move                               | Are moved with the splitter                                                         |                                                                                                                                                                                                      |                                                                                                                                           |
+| Nenhum                             | Remain as is                                                                        | Are moved with the splitter (position relative to the splitter is not modified) until the next stop. The stop when moving to the bottom or right is either the window’s border, or another splitter. | Are moved with the splitter (position relative to the splitter is not modified) indefinitely. No stop is applied (see the next paragraph) |
+| Redimensionar                      | Keep original position(s), but are resized according to the splitter’s new position |                                                                                                                                                                                                      |                                                                                                                                           |
+| Mover                              | Are moved with the splitter                                                         |                                                                                                                                                                                                      |                                                                                                                                           |
 
 *(1) You cannot drag the splitter past the right (horizontal) or bottom (vertical) side of an object located in this position.*
 > An object completely contained in the rectangle that defines the splitter is moved at the same time as the splitter.
 
-## Managing splitters programmatically
+## Gestão programada dos separadores
 
 You can associate an object method with a splitter and it will be called with the `On Clicked` event throughout the entire movement.
 

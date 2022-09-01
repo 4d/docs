@@ -12,7 +12,7 @@ File handle objects are created with the [`file.open()`](FileClass#open) functio
 Thanks to the standard 4D object *refcounting*, a file handle is automatically deleted when it is no longer referenced and thus, the requested [`File`](FileClass) object is automatically closed. Consequently, with file handles you don't need to worry about closing documents.
 
 
-### Example
+### Exemplo
 
 ```code4d
 var $f : 4D.File
@@ -77,11 +77,11 @@ File handle objects cannot be shared.
 <!-- REF FileHandleClass.breakModeRead.Desc -->
 ## .breakModeRead
 
-<details><summary>History</summary>
+<details><summary>Histórico</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v19 R7  | Added   |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R7 | Adicionado |
 </details>
 
 <!-- REF #FileHandleClass.breakModeRead.Syntax -->
@@ -89,7 +89,7 @@ File handle objects cannot be shared.
 **.breakModeRead** : Text<!-- END REF -->
 
 
-#### Description
+#### Descrção
 
 The `.breakModeRead` property returns <!-- REF #FileHandleClass.breakModeRead.Summary -->the processing mode for line breaks used when reading the file<!-- END REF -->.
 
@@ -99,7 +99,7 @@ The `.breakModeRead` property can be defined at the handle creation with the [`f
 > The `.breakModeRead` property always contains a text value, even if the `.open()` option was set using a number (constant).
 
 
-This property is **read-only**.
+Essa propriedade é**apenas leitura**.
 
 <!-- END REF -->
 
@@ -107,11 +107,11 @@ This property is **read-only**.
 <!-- REF FileHandleClass.breakModeWrite.Desc -->
 ## .breakModeWrite
 
-<details><summary>History</summary>
+<details><summary>Histórico</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v19 R7  | Added   |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R7 | Adicionado |
 </details>
 
 <!-- REF #FileHandleClass.breakModeWrite.Syntax -->
@@ -119,7 +119,7 @@ This property is **read-only**.
 **.breakModeWrite** : Text<!-- END REF -->
 
 
-#### Description
+#### Descrção
 
 The `.breakModeWrite` property returns <!-- REF #FileHandleClass.breakModeWrite.Summary -->the processing mode for line breaks used when writing to the file<!-- END REF -->.
 
@@ -128,7 +128,7 @@ The `.breakModeWrite` property can be defined at the handle creation with the [`
 > The `.breakModeWrite` property always contains a text value, even if the `.open()` option was set using a number (constant).
 
 
-This property is **read-only**.
+Essa propriedade é**apenas leitura**.
 
 <!-- END REF -->
 
@@ -137,11 +137,11 @@ This property is **read-only**.
 <!-- REF FileHandleClass.charset.Desc -->
 ## .charset
 
-<details><summary>History</summary>
+<details><summary>Histórico</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v19 R7  | Added   |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R7 | Adicionado |
 </details>
 
 <!-- REF #FileHandleClass.charset.Syntax -->
@@ -149,13 +149,13 @@ This property is **read-only**.
 **.charset** : Text<!-- END REF -->
 
 
-#### Description
+#### Descrção
 
 The `.charset` property returns <!-- REF #FileHandleClass.charset.Summary -->the charset used when reading from or writing to the file<!-- END REF -->.
 
-The charset can be defined at the handle creation with the [`file.open()`](FileClass#open) function. Default is "UTF-8".
+The charset can be defined at the handle creation with the [`file.open()`](FileClass#open) function. Por padrão é "UTF-8".
 
-This property is **read-only**.
+Essa propriedade é**apenas leitura**.
 
 <!-- END REF -->
 
@@ -163,11 +163,11 @@ This property is **read-only**.
 <!-- REF FileHandleClass.eof.Desc -->
 ## .eof
 
-<details><summary>History</summary>
+<details><summary>Histórico</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v19 R7  | Added   |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R7 | Adicionado |
 </details>
 
 <!-- REF #FileHandleClass.eof.Syntax -->
@@ -175,11 +175,11 @@ This property is **read-only**.
 **.eof** : Boolean<!-- END REF -->
 
 
-#### Description
+#### Descrção
 
 The `.eof` property returns <!-- REF #FileHandleClass.eof.Summary -->True is the `offset` has reached the end of the file, and False otherwise<!-- END REF -->.
 
-This property is **read-only**.
+Essa propriedade é**apenas leitura**.
 
 <!-- END REF -->
 
@@ -188,11 +188,11 @@ This property is **read-only**.
 <!-- REF FileHandleClass.getSize().Desc -->
 ## .getSize()
 
-<details><summary>History</summary>
+<details><summary>Histórico</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v19 R7  | Added   |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R7 | Adicionado |
 </details>
 
 <!--REF #FileHandleClass.getSize().Syntax -->
@@ -201,19 +201,19 @@ This property is **read-only**.
 
 
 <!--REF #FileHandleClass.getSize().Params -->
-| Parameter | Type |    | Description                                              |
-| --------- | ---- | -- | -------------------------------------------------------- |
-| Result    | Real | <- | Size of the document in bytes|<!-- END REF -->
+| Parameter  | Tipo |    | Descrção                                                 |
+| ---------- | ---- | -- | -------------------------------------------------------- |
+| Resultados | Real | <- | Size of the document in bytes|<!-- END REF -->
 
 |
 
-#### Description
+#### Descrção
 
 The `.getSize()` function <!-- REF #FileHandleClass.getSize().Summary -->returns the current size of the document, expressed in bytes<!-- END REF -->.
 
 > This function returns the same value as the ([.size](FileClass#size)) property of the `File` class.
 
-#### See also
+#### Veja também
 
 [.setSize()](#setsize), [file.size](FileClass#size)
 
@@ -223,11 +223,11 @@ The `.getSize()` function <!-- REF #FileHandleClass.getSize().Summary -->returns
 <!-- REF FileHandleClass.mode.Desc -->
 ## .mode
 
-<details><summary>History</summary>
+<details><summary>Histórico</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v19 R7  | Added   |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R7 | Adicionado |
 </details>
 
 <!-- REF #FileHandleClass.mode.Syntax -->
@@ -235,13 +235,13 @@ The `.getSize()` function <!-- REF #FileHandleClass.getSize().Summary -->returns
 **.mode** : Text<!-- END REF -->
 
 
-#### Description
+#### Descrção
 
 The `.mode` property returns <!-- REF #FileHandleClass.mode.Summary -->the mode in which the file handle was created: "read", "write", or "append"<!-- END REF -->.
 
 The mode can be defined at the handle creation with the [`file.open()`](FileClass#open) function. Default is "read".
 
-This property is **read-only**.
+Essa propriedade é**apenas leitura**.
 
 <!-- END REF -->
 
@@ -250,11 +250,11 @@ This property is **read-only**.
 <!-- REF FileHandleClass.offset.Desc -->
 ## .offset
 
-<details><summary>History</summary>
+<details><summary>Histórico</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v19 R7  | Added   |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R7 | Adicionado |
 </details>
 
 <!-- REF #FileHandleClass.offset.Syntax -->
@@ -262,7 +262,7 @@ This property is **read-only**.
 **.offset** : Real<!-- END REF -->
 
 
-#### Description
+#### Descrção
 
 The `.offset` property returns <!-- REF #FileHandleClass.offset.Summary -->the current offset of the data stream (position inside the document)<!-- END REF -->. The offset value is automatically updated after read and write operations.
 
@@ -281,11 +281,11 @@ This property is **read/write**.
 <!-- REF FileHandleClass.readBlob().Desc -->
 ## .readBlob()
 
-<details><summary>History</summary>
+<details><summary>Histórico</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v19 R7  | Added   |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R7 | Adicionado |
 </details>
 
 <!--REF #FileHandleClass.readBlob().Syntax -->
@@ -293,20 +293,20 @@ This property is **read/write**.
 **.readBlob**( *bytes* : Real ) : [4D.Blob](BlobClass) <!-- END REF -->
 
 <!--REF #FileHandleClass.readBlob().Params -->
-| Parameter | Type                 |    | Description                                         |
-| --------- | -------------------- | -- | --------------------------------------------------- |
-| *bytes*   | Real                 | -> | Number of bytes to be read                          |
-| Result    | [4D.Blob](BlobClass) | <- | Bytes read from the file|<!-- END REF -->
+| Parameter  | Tipo                 |    | Descrção                                            |
+| ---------- | -------------------- | -- | --------------------------------------------------- |
+| *bytes*    | Real                 | -> | Number of bytes to be read                          |
+| Resultados | [4D.Blob](BlobClass) | <- | Bytes read from the file|<!-- END REF -->
 
 |
 
-#### Description
+#### Descrção
 
 The `.readBlob()` function <!-- REF #FileHandleClass.readBlob().Summary -->returns a blob a *bytes* size from the file, starting from the current position <!-- END REF -->.
 
 When this function is executed, the current position ([.offset](#offset)) is updated after the last byte read.
 
-#### See also
+#### Veja também
 
 [.writeBlob()](#writeblob)
 
@@ -318,11 +318,11 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 <!-- REF FileHandleClass.readLine().Desc -->
 ## .readLine()
 
-<details><summary>History</summary>
+<details><summary>Histórico</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v19 R7  | Added   |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R7 | Adicionado |
 </details>
 
 <!--REF #FileHandleClass.readLine().Syntax -->
@@ -330,13 +330,13 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 **.readLine()** : Text <!-- END REF -->
 
 <!--REF #FileHandleClass.readLine().Params -->
-| Parameter | Type |    | Description                             |
-| --------- | ---- | -- | --------------------------------------- |
-| Result    | Text | <- | Line of text|<!-- END REF -->
+| Parameter  | Tipo |    | Descrção                                |
+| ---------- | ---- | -- | --------------------------------------- |
+| Resultados | Text | <- | Line of text|<!-- END REF -->
 
 |
 
-#### Description
+#### Descrção
 
 The `.readLine()` function <!-- REF #FileHandleClass.readLine().Summary -->returns a line of text from the current position until an end-of-line delimiter is encountered or the end of the document is reached<!-- END REF -->.
 
@@ -345,7 +345,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 > When this function is executed for the first time on a file handle, the whole document contents is loaded in a buffer.
 
 
-#### See also
+#### Veja também
 
 [.readText()](#readtext), [.writeLine()](#writeline)
 
@@ -355,11 +355,11 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 <!-- REF FileHandleClass.readText().Desc -->
 ## .readText()
 
-<details><summary>History</summary>
+<details><summary>Histórico</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v19 R7  | Added   |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R7 | Adicionado |
 </details>
 
 <!--REF #FileHandleClass.readText().Syntax -->
@@ -367,14 +367,14 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 **.readText**( { *stopChar* : Text } ) : Text <!-- END REF -->
 
 <!--REF #FileHandleClass.readText().Params -->
-| Parameter  | Type |    | Description                                   |
+| Parameter  | Tipo |    | Descrção                                      |
 | ---------- | ---- | -- | --------------------------------------------- |
 | *stopChar* | Text | -> | Character(s) at which to stop reading         |
-| Result     | Text | <- | Text from the file|<!-- END REF -->
+| Resultados | Text | <- | Text from the file|<!-- END REF -->
 
 |
 
-#### Description
+#### Descrção
 
 The `.readText()` function <!-- REF #FileHandleClass.readText().Summary -->returns text from the file, starting from the current position until the first *stopChar* string is encountered (if passed) or the end of file is reached<!-- END REF -->.
 
@@ -388,7 +388,7 @@ If the *stopChar* parameter is passed and not found, `.readText()` returns an em
 
 > When this function is executed for the first time on a file handle, the whole document contents is loaded in a buffer.
 
-#### See also
+#### Veja também
 
 [.readLine()](#readline), [.writeText()](#writetext)
 
@@ -398,11 +398,11 @@ If the *stopChar* parameter is passed and not found, `.readText()` returns an em
 <!-- REF FileHandleClass.setSize().Desc -->
 ## .setSize()
 
-<details><summary>History</summary>
+<details><summary>Histórico</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v19 R7  | Added   |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R7 | Adicionado |
 </details>
 
 <!--REF #FileHandleClass.setSize().Syntax -->
@@ -410,19 +410,19 @@ If the *stopChar* parameter is passed and not found, `.readText()` returns an em
 **.setSize**( *size* : Real )<!-- END REF -->
 
 <!--REF #FileHandleClass.setSize().Params -->
-| Parameter | Type |    | Description                                                  |
+| Parameter | Tipo |    | Descrção                                                     |
 | --------- | ---- | -- | ------------------------------------------------------------ |
 | size      | Real | -> | New size of the document in bytes|<!-- END REF -->
 
 |
 
-#### Description
+#### Descrção
 
 The `.setSize()` function <!-- REF #FileHandleClass.setSize().Summary -->sets a new *size* in bytes for the document<!-- END REF -->.
 
 If the *size* value is less than the current document size, the document content is truncated from the beginning to get the new *size* .
 
-#### See also
+#### Veja também
 
 [.getSize()](#getsize), [file.size](FileClass#size)
 
@@ -432,11 +432,11 @@ If the *size* value is less than the current document size, the document content
 <!-- REF FileHandleClass.writeBlob().Desc -->
 ## .writeBlob()
 
-<details><summary>History</summary>
+<details><summary>Histórico</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v19 R7  | Added   |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R7 | Adicionado |
 </details>
 
 <!--REF #FileHandleClass.writeBlob().Syntax -->
@@ -444,19 +444,19 @@ If the *size* value is less than the current document size, the document content
 **.writeBlob**( *blob* : 4D.Blob ) <!-- END REF -->
 
 <!--REF #FileHandleClass.writeBlob().Params -->
-| Parameter | Type                 |    | Description                                          |
+| Parameter | Tipo                 |    | Descrção                                             |
 | --------- | -------------------- | -- | ---------------------------------------------------- |
 | *blob*    | [4D.Blob](BlobClass) | -> | Blob to write in the file|<!-- END REF -->
 
 |
 
-#### Description
+#### Descrção
 
 The `.writeBlob()` function <!-- REF #FileHandleClass.writeBlob().Summary -->writes *blob* into the file, starting from the current position <!-- END REF -->.
 
 When this function is executed, the current position ([.offset](#offset)) is updated after the last byte written.
 
-#### See also
+#### Veja também
 
 [.readBlob()](#readblob)
 
@@ -467,11 +467,11 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 <!-- REF FileHandleClass.writeLine().Desc -->
 ## .writeLine()
 
-<details><summary>History</summary>
+<details><summary>Histórico</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v19 R7  | Added   |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R7 | Adicionado |
 </details>
 
 <!--REF #FileHandleClass.writeLine().Syntax -->
@@ -479,19 +479,19 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 **.writeLine**( *lineOfText* : Text ) <!-- END REF -->
 
 <!--REF #FileHandleClass.writeLine().Params -->
-| Parameter    | Type |    | Description                              |
+| Parameter    | Tipo |    | Descrção                                 |
 | ------------ | ---- | -- | ---------------------------------------- |
 | *lineOfText* | Text | -> | Text to write|<!-- END REF -->
 
 |
 
-#### Description
+#### Descrção
 
 The `.writeLine()` function <!-- REF #FileHandleClass.writeLine().Summary -->writes *lineOfText* content at the current position and inserts an end-of-line delimiter<!-- END REF --> (unlike the [.writeText()](#writetext) function). By default, a native end-of-line delimiter is used, but you can define another delimiter when [opening the file handle](FileClass.md#open) by setting the [`.breakModeWrite`](#breakmodewrite) property.
 
 When this function is executed, the current position ([.offset](#offset)) is updated after the end-of-line delimiter.
 
-#### See also
+#### Veja também
 
 [.breakModeWrite](#breakmodewrite), [.readLine()](#readline), [.writeText()](#writetext)
 
@@ -501,11 +501,11 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 <!-- REF FileHandleClass.writeText().Desc -->
 ## .writeText()
 
-<details><summary>History</summary>
+<details><summary>Histórico</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v19 R7  | Added   |
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R7 | Adicionado |
 </details>
 
 <!--REF #FileHandleClass.writeText().Syntax -->
@@ -513,19 +513,19 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 **.writeText**( *textToWrite* : Text )<!-- END REF -->
 
 <!--REF #FileHandleClass.writeText().Params -->
-| Parameter     | Type |    | Description                              |
+| Parameter     | Tipo |    | Descrção                                 |
 | ------------- | ---- | -- | ---------------------------------------- |
 | *textToWrite* | Text | -> | Text to write|<!-- END REF -->
 
 |
 
-#### Description
+#### Descrção
 
 The `.writeText()` function <!-- REF #FileHandleClass.writeText().Summary -->writes *textToWrite* content at the current position and does not insert a final end-of-line delimiter<!-- END REF --> (unlike the [.writeLine()](#writeline) function). This function replaces all original end-of-line delimiters. By default, the native delimiter is used, but you can define another delimiter when [opening the file handle](FileClass.md#open) by setting the [`.breakModeWrite`](#breakmodewrite) property.
 
 When this function is executed, the current position ([.offset](#offset)) is updated after the next end-of-line delimiter.
 
-#### See also
+#### Veja também
 
 [.breakModeWrite](#breakmodewrite), [.readText()](#readtext), [.writeLine()](#writeline)
 

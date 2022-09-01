@@ -1,57 +1,57 @@
 ---
 id: http-server
-title: HTTP Server Page
+title: HTTPサーバーページ
 ---
 
 
-The **HTTP Server** page groups together information about the operation of the Web server and SOAP server of 4D Server. The Web server lets you publish Web content such as HTML pages or pictures for Web browsers, and to handle REST requests. The SOAP server manages the publication of Web Services. These servers rely on the internal HTTP server of 4D Server.
+**HTTPサーバー** ページには、4D Server の Webサーバーや SOAPサーバーに関する情報が集められています。 Webサーバーは、HTMLページやピクチャーなどの Webコンテンツの公開を可能にします。 SOAPサーバーは Webサービスの公開を管理します。 これら 2つのサーバーは、4D Server の内部的な HTTPサーバーに依存しています。
 
 ![](../assets/en/Admin/server-admin-web-page.png)
 
 
-The upper part of the page provides information about the current status of the HTTP server of 4D Server.
+ページの上部には、4D Server の HTTPサーバーの現在の状況が表示されます。
 
-- **State**: Started or Stopped
-- **Starting time**: Date and time the HTTP server was last launched.
-- **Uptime**: Time elapsed since last startup of the HTTP server.
-- **Total HTTP hits**: Number of (low level) HTTP hits received by the HTTP server since it was started.
+- **状況**: 開始または停止
+- **開始時刻**: HTTPサーバーの起動日と時刻。
+- **動作時間**: HTTPサーバーが最後に開始されてからの経過時間。
+- **総HTTPヒット数**: HTTPサーバーが開始されてから、サーバーが受信したローレベルの HTTPヒット数。
 
 
-## Start/Stop HTTP Server
+## HTTPサーバー開始/停止
 
-This button toggles and can be used to control the activation of the 4D Server HTTP server.
+このボタンは切り替え表示され、4D Server HTTPサーバーをコントロールするために使用します。
 
-- When the HTTP server state is "Started," the button is titled **Stop HTTP Server**. If you click on this button, the 4D Server HTTP server is immediately stopped; the Web server, REST server, and SOAP server no longer accept any requests.
-- When the HTTP server state is "Stopped," the button is titled **Start HTTP Server**. If you click on this button, the 4D Server HTTP server is immediately started; Web, REST, and SOAP requests are accepted.
+- HTTPサーバーの状態が "開始" の場合、ボタンのタイトルは **HTTPサーバー停止** になります。 このボタンをクリックすると、4D Server HTTPサーバーは即座に停止し、Webサーバー、RESTサーバー、および SOAPサーバーはリクエストを受け付けなくなります。
+- HTTPサーバーの状態が "停止" の場合、ボタンのタイトルは **HTTPサーバー開始** になります。 このボタンをクリックすると、4D Server HTTPサーバーは即座に開始し、Web、REST、および SOAPリクエストを受け付けます。
 
-> You must have a suitable license in order to be able to start the HTTP server.
+> HTTPサーバーを開始するには適切なライセンスが必要です。
 > 
-> The HTTP server can also be launched automatically on application startup (Settings) or by programming.
+> ストラクチャー設定で設定してアプリケーション起動と同時に、またはプログラムを使用して必要な時に、HTTPサーバーを自動で開始することができます。
 
-## Web Information
+## Web情報
 
-This area provides specific information about the Web server of 4D Server.
+このエリアには、4D Server の Webサーバーに関する情報が表示されます。
 
-- **Web requests**: Accepted or Rejected. This information indicates whether the Web server is activated. Since the Web server is directly linked to the HTTP server, Web requests are accepted when the HTTP server is started and rejected when it is stopped.
-- **Maximum connections**: Maximum number of Web connections allowed. This value depends on the license installed on the server machine.
+- **Web リクエスト**: 受け入れ、または拒否。 この情報は Webサーバーが有効かどうかを示します。 Webサーバーは直接 HTTPサーバーにリンクしているため、HTTPサーバーが開始されていれば Webリクエストは受信され、停止されていれば拒否されます。
+- **最大接続数**: 許可される Web接続の最大数。 この値は、サーバーマシンにインストールされているライセンスによります。
 
-## SOAP Information
+## SOAP情報
 
-This area provides specific information about the SOAP server of 4D Server and includes a control button.
+このエリアには、4D Server の SOAPサーバーに関する情報が表示され、コントロールボタンも一つ含まれます。
 
-- **SOAP requests**: Accepted or Rejected. This information indicates whether the SOAP server is activated. In order for SOAP requests to be accepted, the HTTP server must be started and the SOAP server must explicitly accept the requests (see the Accept/Reject button).
-- **Maximum connections**: Maximum number of SOAP connections allowed. This value depends on the license installed on the server machine.
-- **Accept/Reject SOAP requests** button: This button toggles and can be used to control the activation of the 4D Server SOAP server. This button modifies the value of the **Allow Web Services Requests** option on the "Web Services" page of the Settings (and vice versa). You can also use the [`SOAP REJECT NEW REQUESTS`](https://doc.4d.com/4dv19/help/command/en/page1636.html) command to refuse new SOAP requests, however this does not modify the value of the **Allow Web Services Requests** option.
+- **SOAP リクエスト**: 受け入れ、または拒否。 この情報は SOAPサーバーが有効かどうかを示します。 SOAPリクエストを受け入れるためには、HTTPサーバーが開始され、かつ SOAPサーバーが明示的にリクエストを受け入れなければなりません (ボタンの説明参照)。
+- **最大接続数**: 許可される SOAP接続の最大数。 この値は、サーバーマシンにインストールされているライセンスによります。
+- **SOAPリクエストを受け入れる/受け入れない** ボタン: このボタンは切り替え表示され、4D Server SOAPサーバーのコントロールに使用します。 このボタンをクリックすると、ストラクチャー設定の "Webサービス" ページの **Webサービスリクエストを許可する** オプションが変更されます。 また、[`SOAP REJECT NEW REQUESTS`](https://doc.4d.com/4dv19/help/command/ja/page1636.html) コマンドを使って新規の SOAPリクエストを拒否することもできますが、このコマンドは **Webサービスリクエストを許可する** オプションの値を変更しません。
 
-If you click on the **Accept SOAP requests** button and the HTTP server is stopped, 4D automatically starts it.
+HTTPサーバー停止中に **SOAPリクエスト受け入れる** ボタンをクリックすると、4D は自動で HTTPサーバーを開始します。
 
-## HTTP Server Configuration
+## HTTPサーバー設定
 
-This area provides information about the configuration parameters and operation of the HTTP server:
+このエリアには、HTTPサーバーの設定パラメーターや動作に関する情報が表示されます。
 
-- **Auto-launched at startup**: parameter set via the Settings.
-- **HTTP Server processes (used/total)**: number of HTTP processes created on the server (current number of processes / total of all processes created).
-- **Cache memory**: size of HTTP server cache memory, when it is activated (size actually used by cache / maximum size theoretically allocated to the cache in the Settings). You can click on the **Clear Cache** button to empty the current cache.
-- **Listening to IP**, **HTTP Port** (80 by default), **TLS enabled** for HTTP connections (does not concern 4D nor SQL connections) and **HTTPS Port** used: current [configuration parameters](WebServer/webServerConfig.md) of the HTTP server, specified through the Settings or by programming.
-- **Log file information**: name, format and date of the next automatic log backup of the HTTP server (logweb.txt file).
+- **開始時に自動起動**: ストラクチャー設定で設定されたパラメーター。
+- **HTTP サーバープロセス (使用/総計)**: サーバー上で作成されたHTTPプロセス数 (現在のプロセス数 / 作成されたプロセスの総数)。
+- **キャッシュメモリ**: HTTPサーバーキャッシュメモリのサイズ ( キャッシュが実際に使用しているサイズ / ストラクチャー設定で理論的にキャッシュに割り当てられた最大サイズ)。 **キャッシュクリア** ボタンをクリックすると、現在のキャッシュを空にすることができます。
+- **待受IP**、**HTTPポート** (デフォルトは 80)、HTTP接続用の **TSL有効** (4D と SQL接続は別設定)、および **HTTPSポート**: これらは、ストラクチャー設定またはプログラミングにより設定された、HTTPサーバーの現在の [設定パラメーター](WebServer/webServerConfig.md) を表示します。
+- **ログファイル情報**: 名称、フォーマット、および HTTPサーバーの次回の自動ログバックアップの日付 (logweb.txt ファイル)。
 

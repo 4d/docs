@@ -1,71 +1,71 @@
 ---
 id: interface
-title: Interface page
+title: インターフェースページ
 ---
 
  
-You use the Interface page to set various options related to the project interface.
+インターフェースページでは、プロジェクトインターフェースに関するさまざまな設定をおこないます。
 
-## General
+## 一般
 
-This area lets you set various options concerning display.
+このエリアでは、表示に関する様々なオプションを設定します。
 
 ![](../assets/en/settings/interface-page.png)
 
-### Font to use with the MESSAGE command
+### MESSAGEコマンドで使用されるフォント
 
-Click **Select...** to set the font and size for the characters used by the `MESSAGE` command.
+**選択...** をクリックして、 `MESSAGE` コマンドで使用される文字のフォントとサイズを設定します。
 
-The default font and its size depend on the platform where 4D is running.
+4D が実行されているプラットフォームによって、デフォルトのフォントとサイズは異なります。
 
-> This property also affects the following parts of 4D: <li>certain preview areas of the Explorer</li><li>the ruler of the Form editor</li>
-Other options configure the display of various windows in the Application mode.
+> このプロパティは 4D の以下の部分にも影響します: <li>エクスプローラーの特定のプレビューエリア</li><li>フォームエディターのルーラー</li>
+他のオプションでは、アプリケーションモードでのさまざまなウィンドウの表示を設定します。
 
--   **Splash screen**: When this option is deselected, the [splash screen of the current menu bar](Menus/bars.md#splash-screen) does not appear in the Application mode. When you hide this window, it is up to you to manage the display of all your windows by programming, for example in the `On Startup` database method.
+-   **スプラッシュスクリーン**: このオプションが選択解除されていると、アプリケーションモードにおいて、[カレントメニューバーのスプラッシュスクリーン](Menus/bars.md#スプラッシュスクリーン) は表示されません。 このウィンドウを非表示にした場合、ウィンドウの表示は、たとえば `On Startup` データベースメソッドによってプログラムで管理しなければなりません。
 
--   **Flushing progress**: When this option is checked, 4D displays a window at the bottom left of the screen while the data in the cache is flushed. Since this operation momentarily blocks user actions, displaying this window lets them know that flushing is underway.
+-   **フラッシュの進捗状況**: このオプションがチェックされていると、キャッシュデータがフラッシュされる際、4D は画面左下にウィンドウを表示します。 この処理はユーザー操作を一時的にブロックするため、ウィンドウを表示することでフラッシュがおこなわれていることをユーザーに通知することができます。
 
-    > You can set the [frequency for cache flushing](database.md#memory-page) in **Settings** > **Database** > **Memory**.
+    > **設定 ＞ データベース ＞ メモリ** ページで [キャッシュフラッシュの周期](database.md#メモリページ) を設定できます。
 
--   **Printing progress**: Lets you enable or disable the display of the printing progress dialog box when printing.
+-   **印刷の進捗状況**: 印刷時の印刷進捗状況を表示するダイアログを有効または無効にします。
 
--   **Use SDI mode on Windows**: When this option checked, 4D enables automatically the SDI mode (Single-Document Interface) in your merged application if executed in a supported context.
+-   **WindowsでSDIモードを使用する**: このオプションが選択されていると、対応している環境で組み込みアプリが実行された場合に、4D は自動で SDIモード (Single-Document Interface) を有効にします。
 
-    > This option can be selected on macOS but will be ignored when the application is executed on this platform.
+    > このオプションは macOS でも有効にできますが、同プラットフォーム上で実行の際には無視されます。
 
-### Appearance
+### アピアランス
 
-This menu lets you select the color scheme to use at the main application level. A color scheme defines a global set of interface colors for texts, backgrounds, windows, etc., used in your forms.
+このメニューで、メインアプリケーションレベルにおいて使用するカラースキームを選択します。 カラースキームは、フォーム内で使用されるテキスト、背景、ウィンドウなどのインターフェースカラーのグローバルなセットを定義します。
 
-> This option only works on macOS. On Windows, the "Light" scheme is always used.
+> このオプションは macOS でのみ使用できます。 Windows上では、"Light" テーマが常に使用されます。
 
-The following schemes are available:
+以下のスキームが利用可能です:
 
--   **Light**: the application will use the Default Light Theme ![](../assets/en/settings/light-appearance.png)
--   **Dark**: the application will use the Default Dark Theme ![](../assets/en/settings/dark-appearance.png)
--   **Inherited** (default): the application will inherit from the higher priority level (i.e., OS user preferences)
+-   **ライト**: アプリケーションはデフォルトのライトテーマを使用します。 ![](../assets/en/settings/light-appearance.png)
+-   **ダーク**: アプリケーションはデフォルトのダークテーマを使用します。 ![](../assets/en/settings/dark-appearance.png)
+-   **継承する** (デフォルト): アプリケーションは次の優先レベル (例: OSユーザー設定) のテーマを継承します。
 
-> Default themes can be handled using CSS. For more information, please refer to the [Media Queries](../FormEditor/createStylesheet.md#media-queries) section.
+> デフォルトのテーマは CSS で管理可能です。 詳細については、[メディアクエリ](../FormEditor/createStylesheet.md#メディアクエリ) を参照してください。
 
-The main application scheme will be applied to forms by default. However, it can be overriden:
+メインアプリケーションスキームはデフォルトでフォームに適用されます。 その一方で、それを以下の方法で上書きすることもできます:
 
--   by the [SET APPLICATION COLOR SCHEME](https://doc.4d.com/4dv19R/help/command/en/page1762.html) command at the working session level;
--   using by the [Color Scheme](../FormEditor/propertiesForm.html#color-scheme) form property at each form level (highest priority level). **Note:** When printed, forms always use the "Light" scheme.
+-   ワーキングセッションレベルでは [SET APPLICATION COLOR SCHEME](https://doc.4d.com/4dv19R/help/command/ja/page1762.html) コマンドを使用できます。
+-   各フォームレベル (最優先レベル) では、[カラースキーム](../FormEditor/propertiesForm.html#カラースキーム) プロパティを使用できます。 **注記**: 印刷時には、フォームは常に "ライト" スキームを使用します。
 
-## Shortcuts
+## ショートカット
 
-You use the Shortcuts area for viewing and modifying default shortcuts for three basic 4D form operations in your desktop applications. These shortcuts are identical for both platforms. Key icons indicate the corresponding Windows and macOS keys.
+ショートカットエリアでは、4D のデスクトップアプリケーションにおける 3つの基本のフォーム操作に使うデフォルトショートカットを確認し、変更することができます。 これらのショートカットは両プラットフォームで同じです。 キーの形をしたアイコンは、Windows と macOS の対応するキーの組み合わせを示します。
 
-The default shortcuts are as follows:
+デフォルトのショートカットは以下のとおりです:
 
--   Accept input form: **Enter**
--   Cancel input form: **Esc**
--   Add to subform: **Ctrl+Shift+/** (Windows) or **Command+Shift+/** (macOS)
+-   入力フォーム確定: **Enter**
+-   入力フォームキャンセル: **Esc**
+-   サブフォームに追加: **Ctrl+Shift+/** (Windows) または **Command+Shift+/** (macOS)
 
-To change the shortcut of an operation, click the corresponding **Edit** button. The following dialog box appears:
+操作のショートカットを変更するには、対応する **編集** ボタンをクリックします。 以下のダイアログボックスが表示されます:
 
 ![](../assets/en/settings/shortcut.png)
 
-To change the shortcut, type the new key combination on your keyboard and click **OK**. If you prefer not to have a shortcut for an operation, click **Clear**.
+ショートカットを変更するにはキーボードで新しいキーの組み合わせをタイプし、**OK** をクリックします。 ショートカットを無効にするには、**クリア** ボタンをクリックします。
 
 

@@ -6,17 +6,17 @@ title: '$queryplan'
 
 Returns the query as it was passed to 4D Server (*e.g.*, `$queryplan=true`)
 
-## Description
+## Beschreibung
 $queryplan returns the query plan as it was passed to 4D Server.
 
-| Property | Type   | Description                                                                                 |
+| Property | Typ    | Beschreibung                                                                                |
 | -------- | ------ | ------------------------------------------------------------------------------------------- |
 | item     | String | Actual query executed                                                                       |
 | subquery | Array  | If there is a subquery, an additional object containing an item property (as the one above) |
 
 For more information about query plans, refer to [queryPlan and queryPath](genInfo.md#querypath-and-queryplan).
 
-## Example
+## Beispiel
 If you pass the following query:
 
  `GET  /rest/People/$filter="employer.name=acme AND lastName=Jones"&$queryplan=true`

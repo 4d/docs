@@ -29,7 +29,7 @@ The **language object** is referenced by an unique internal ID of the Longint ty
 
 The **form object** is not necessarily unique: there may be several representations of the same hierarchical list in the same form or in different ones. As with other form objects, you specify the object in the language using the syntax (*;"ListName", etc.).
 
-You connect the hierarchical list "language object" with the hierarchical list "form object" by the intermediary of the variable containing the ListRef value. For example, if you have associated the mylist [variable](properties_Object.md#variable-or-expression) to the form object, you can write:
+You connect the hierarchical list "language object" with the hierarchical list "form object" by the intermediary of the variable containing the ListRef value. You connect the hierarchical list "language object" with the hierarchical list "form object" by the intermediary of the variable containing the ListRef value.
 
 ```4d
 mylist:=New list

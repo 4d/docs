@@ -3,88 +3,88 @@ id: onAfterEdit
 title: On After Edit
 ---
 
-| Code | Can be called by                                                                                                                                                                                                                                                                                                                                                                                  | Definition                                                                     |
-| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| 45   | [4D View Pro area](../FormObjects/viewProArea_overview.md) - [4D Write Pro area](../FormObjects/writeProArea_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [Hierarchical List](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | The contents of the enterable object that has the focus has just been modified |
+| コード | 呼び出し元                                                                                                                                                                                                                                                                                                                                                                         | 定義                          |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| 45  | [4D View Pro エリア](../FormObjects/viewProArea_overview.md) - [4D Write Pro エリア](../FormObjects/writeProArea_overview.md) - [コンボボックス](../FormObjects/comboBox_overview.md) - フォーム - [入力](../FormObjects/input_overview.md) - [階層リスト](../FormObjects/list_overview.md) - [リストボックス](../FormObjects/listbox_overview.md) - [リストボックス列](../FormObjects/listbox_overview.md#リストボックス列) | フォーカスのある入力可能オブジェクトの内容が更新された |
 
-## Description
+## 詳細
 
-### General case
+### 一般的なケース
 
-This event can be used filter the data entry in keyboard enterable objects at the lowest level.
+このイベントは、キーボード入力可能なオブジェクトへのデータ入力を最も低レベルでフィルターするために使用できます。
 
-When it is used, this event is generated after each change made to the contents of an enterable object, regardless of the action that caused the change, *i.e.*:
+このイベントは、変更がおこなわれた方法に関係なく、入力可能オブジェクトの内容が変更されるたびに生成されます。 *つまり*:
 
-- Standard editing actions which modify content like paste, cut, delete or cancel;
-- Dropping a value (action similar to paste);
-- Any keyboard entry made by the user; in this case, the `On After Edit` event is generated after the [`On Before Keystroke`](onBeforeKeystroke.md) and [`On After Keystroke`](onAfterKeystroke.md) events, if they are used.
-- Any modification made using a language command that simulates a user action (i.e., `POST KEY`).
+- ペーストやカット、削除、キャンセルなどの標準の編集アクション
+- 値のドロップ (ペーストと同様のアクション)
+- ユーザーがおこなったキーボードからの入力。 この場合、`On After Edit` イベントは [`On Before Keystroke`](onBeforeKeystroke.md) と [`On After Keystroke`](onAfterKeystroke.md) イベントの後に生成されます。
+- ユーザーアクションをシミュレートするランゲージコマンドによる変更 (例: `POST KEY`)。
 
-Within the `On After Edit` event, text data being entered is returned by the [`Get edited text`](https://doc.4d.com/4dv19/help/command/en/page655.html) command.
+`On After Edit` イベント内において、入力テキストは [`Get edited text`](https://doc.4d.com/4dv19/help/command/ja/page655.html) コマンドによって返されます。
 
 ### 4D View Pro
 
-The object returned by the `FORM Event` command contains:
+`FORM Event` によって返されるオブジェクトには以下のプロパティが格納されます:
 
-| Property    | Type    | Description                                                                                         |
+| プロパティ       | タイプ     | 詳細                                                                                                  |
 | ----------- | ------- | --------------------------------------------------------------------------------------------------- |
 | code        | longint | On After Edit                                                                                       |
 | description | text    | "On After Edit"                                                                                     |
-| objectName  | text    | 4D View Pro area name                                                                               |
-| sheetName   | text    | Name of the sheet of the event                                                                      |
+| objectName  | text    | 4D View Pro エリア名                                                                                    |
+| sheetName   | text    | イベントが発生したシート名                                                                                       |
 | action      | text    | "editChange", "valueChanged", "DragDropBlock", "DragFillBlock", "formulaChanged", "clipboardPasted" |
 
-Depending on the `action` property value, the [event object](overview.md#event-object) will contain additional properties.
+`action` プロパティの値に応じて、[イベントオブジェクト](overview.md#イベントオブジェクト) には追加のプロパティが含まれます。
 
 #### action = editChange
 
-| Property    | Type    | Description                       |
-| ----------- | ------- | --------------------------------- |
-| range       | object  | Cell range                        |
-| editingText | variant | The value from the current editor |
+| プロパティ       | タイプ     | 詳細           |
+| ----------- | ------- | ------------ |
+| range       | object  | セルのレンジ       |
+| editingText | variant | カレントエディターでの値 |
 
 #### action = valueChanged
 
-| Property | Type    | Description                 |
-| -------- | ------- | --------------------------- |
-| range    | object  | Cell range                  |
-| oldValue | variant | Value of cell before change |
-| newValue | variant | Value of cell after change  |
+| プロパティ    | タイプ     | 詳細       |
+| -------- | ------- | -------- |
+| range    | object  | セルのレンジ   |
+| oldValue | variant | 変更前のセルの値 |
+| newValue | variant | 変更後のセルの値 |
 
 #### action = DragDropBlock
 
-| Property  | Type    | Description                                         |
-| --------- | ------- | --------------------------------------------------- |
-| fromRange | object  | Range of source cell range (being dragged)          |
-| toRange   | object  | Range of the destination cell range (drop location) |
-| copy      | boolean | Specifies if the source range is copied or not      |
-| insert    | boolean | Specifies if the source range is inserted or not    |
+| プロパティ     | タイプ     | 詳細                        |
+| --------- | ------- | ------------------------- |
+| fromRange | object  | ソースセルレンジ (ドラッグされる範囲) のレンジ |
+| toRange   | object  | 移行先セルレンジ (ドロップされる場所) のレンジ |
+| copy      | boolean | ソースレンジがコピーされたかどうかを表します    |
+| insert    | boolean | ソースレンジが挿入されたかどうかを表します     |
 
 #### action = DragFillBlock
 
-| Property  | Type   | Description         |
-| --------- | ------ | ------------------- |
-| fillRange | object | Range used for fill |
- autoFillType|longint|Value used for the fill.<li>0: Cells are filled with all data (values, formatting, and formulas)</li><li>1: Cells are filled with automatically sequential data</li><li>2: Cells are filled with formatting only</li><li>3: Cells are filled with values but not formatting</li><li>4: Values are removed from the cells</li><li>5: Cells are filled automatically</li>| |fillDirection|longint|Direction of the fill.<li>0: The cells to the left are filled</li><li>1: The cells to the right are filled</li><li>2: The cells above are filled</li><li>3: The cells below are filled</li>|
+| プロパティ     | タイプ    | 詳細               |
+| --------- | ------ | ---------------- |
+| fillRange | object | 自動入力のために使用されるレンジ |
+ autoFillType|longint|自動入力のために使用される値<li>0: 全データ (値、書式、フォーミュラ) がセルに入力された</li><li>1: 自動シーケンシャルデータがセルに入力された</li><li>2: 書式のみがセルに入力された</li><li>3: 値のみがセルに入力され、書式は入力されていない</li><li>4: セルから値が除去された</li><li>5: Cells are filled automatically</li>| |fillDirection|longint|Direction of the fill.<li>0: 左側のセルに自動入力された</li><li>1: 右側のセルに自動入力された</li><li>2: 上側のセルに自動入力された</li><li>3: 下側のセルに自動入力された</li>|
 
 #### action = formulaChanged
 
-| Property | Type   | Description         |
-| -------- | ------ | ------------------- |
-| range    | object | Cell range          |
-| formula  | text   | The formula entered |
+| プロパティ  | タイプ    | 詳細          |
+| ------ | ------ | ----------- |
+| range  | object | セルのレンジ      |
+| フォーミュラ | text   | 入力されたフォーミュラ |
 
 #### action = clipboardPasted
 
-| Property    | Type    | Description                                                                                                                                                                                              |
-| ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| range       | object  | Cell range                                                                                                                                                                                               |
-| pasteOption | longint | Specifies what is pasted from the clipboard:<li>0: Everything is pasted (values, formatting, and formulas)</li><li>1: Only values are pasted</li><li>2: Only the formatting is pasted</li><li>3: Only formulas are pasted</li><li>4: Values and formatting are pasted (not formulas)</li><li>5: Formulas and formatting are pasted (not values)</li> |
-| pasteData   | object  | The data from the clipboard to be pasted<li>"text" (text): The text from the clipboard</li><li>"html" (text): The HTML from the clipboard</li>                                                                                                             |
+| プロパティ       | タイプ     | 詳細                                                                                                                                                                                    |
+| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| range       | object  | セルのレンジ                                                                                                                                                                                |
+| pasteOption | longint | クリップボードから何をペーストされたかを表します:<li>0: すべて (値、書式、フォーミュラ) がペーストされた</li><li>1: 値のみがペーストされた</li><li>2: 書式のみがペーストされた</li><li>3: フォーミュラのみがペーストされた</li><li>4: 値と書式がペーストされた (フォーミュラはペーストされなかった)</li><li>5: フォーミュラと書式のみがペーストされた (値はペーストされなかった)</li> |
+| pasteData   | object  | クリップボードからペーストされるデータ<li>"text" (テキスト): クリップボードからのテキスト</li><li>"html" (テキスト): クリップボードからの HTML</li>                                                                                                               |
 
-#### Example
+#### 例題
 
-Here is an example handling an `On After Edit` event:
+以下は `On After Edit` イベントを管理する例です:
 
 ```4d
  If(FORM Event.code=On After Edit)
@@ -96,7 +96,7 @@ Here is an example handling an `On After Edit` event:
  End if
 ```
 
-The above example could generate an event object like this:
+上記のコードにより生成されたイベントオブジェクトは、以下のような形式をしています:
 
 ```
 {

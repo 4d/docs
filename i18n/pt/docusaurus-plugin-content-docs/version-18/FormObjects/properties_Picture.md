@@ -1,6 +1,6 @@
 ---
 id: propertiesPicture
-title: Picture
+title: Imagem
 ---
 
 
@@ -10,14 +10,14 @@ Pathname of a static source picture for a [picture button](pictureButton_overvie
 
 Two main locations can be used for static picture path:
 
-- in the **Resources** folder of the project database. Appropriate when you want to share static pictures between several forms in the database. In this case, the Pathname is "/RESOURCES/\<picture path\>".
+- na pasta **Resources** do banco de dados projeto. Apropriado quando quiser compartir imagens estáticas entre vários formulários do banco de dados. In this case, the Pathname is "/RESOURCES/\<picture path\>".
 - in an image folder (e.g. named **Images**) within the form folder. Appropriate when the static pictures are used only in the form and/or you want to be able to move or duplicate the whole form within the project or different projects. In this case, the Pathname is "\<picture path\>" and is resolved from the root of the form folder.
 
 #### JSON Grammar
 
-|  Name   | Data Type | Possible Values                             |
-|:-------:|:---------:| ------------------------------------------- |
-| picture |   text    | Relative or filesystem path in POSIX syntax |
+|  Nome   | Tipo de dados | Possible Values                             |
+|:-------:|:-------------:| ------------------------------------------- |
+| picture |     text      | Relative or filesystem path in POSIX syntax |
 
 #### Objects Supported
 
@@ -25,7 +25,7 @@ Two main locations can be used for static picture path:
 
 ---
 
-## Display
+## Visualização
 
 ### Scaled to fit
 
@@ -35,7 +35,7 @@ The **Scaled to fit** format causes 4D to resize the picture to fit the dimensio
 
 ![](../assets/en/FormObjects/property_pictureFormat_ScaledToFit.png)
 
-### Replicated
+### Replicado
 
 `JSON grammar: "tiled"`
 
@@ -58,9 +58,9 @@ The **Truncated (non-centered)** format causes 4D to place the upper-left corner
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                                          |
-| ------------- | --------- | -------------------------------------------------------- |
-| pictureFormat | string    | "scaled", "tiled", "truncatedCenter", "truncatedTopLeft" |
+| Nome          | Tipo de dados | Possible Values                                          |
+| ------------- | ------------- | -------------------------------------------------------- |
+| pictureFormat | string        | "scaled", "tiled", "truncatedCenter", "truncatedTopLeft" |
 
 #### Objects Supported
 

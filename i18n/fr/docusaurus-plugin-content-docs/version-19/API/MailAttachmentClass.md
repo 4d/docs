@@ -3,21 +3,21 @@ id: MailAttachmentClass
 title: MailAttachment
 ---
 
-Attachment objects allow referencing files within a [`Email`](EmailObjectClass.md) object. Attachment objects are created using the [`MAIL New attachment`](#mail-new-attachment) command.
+Les objets pièces jointes permettent de référencer des fichiers dans un objet [`Email`](EmailObjectClass.md). Les objets Attachment (pièce jointe) sont créés à l'aide de la commande [`MAIL New attachment`](#mail-new-attachment).
 
-### Attachment Object
+### Objet Attachment
 
-Attachment objects provide the following read-only properties and functions:
+Les objets Attachment fournissent les propriétés et fonctions suivantes en lecture seule :
 
 |                                                                                                                                                                                  |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [<!-- INCLUDE #MailAttachmentClass.cid.Syntax -->](#cid)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.cid.Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.disposition.Syntax -->](#disposition)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.disposition.Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.getContent().Syntax -->](#getcontent)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.getContent().Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.name.Syntax -->](#name)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.name.Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.path.Syntax -->](#path)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.path.Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.platformPath.Syntax -->](#platformpath)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.platformPath.Summary -->|
-| [<!-- INCLUDE #MailAttachmentClass.type.Syntax -->](#type)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.type.Summary -->|
+| [<!-- INCLUDE #MailAttachmentClass.cid.Syntax -->](#cid)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.cid.Summary -->                            |
+| [<!-- INCLUDE #MailAttachmentClass.disposition.Syntax -->](#disposition)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.disposition.Summary -->    |
+| [<!-- INCLUDE #MailAttachmentClass.getContent().Syntax -->](#getcontent)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.getContent().Summary -->   |
+| [<!-- INCLUDE #MailAttachmentClass.name.Syntax -->](#name)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.name.Summary -->                         |
+| [<!-- INCLUDE #MailAttachmentClass.path.Syntax -->](#path)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.path.Summary -->                         |
+| [<!-- INCLUDE #MailAttachmentClass.platformPath.Syntax -->](#platformpath)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.platformPath.Summary --> |
+| [<!-- INCLUDE #MailAttachmentClass.type.Syntax -->](#type)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #MailAttachmentClass.type.Summary -->                         |
 
 ## MAIL New attachment
 
@@ -27,38 +27,36 @@ Attachment objects provide the following read-only properties and functions:
 
 <!-- REF #_command_.MAIL_New_attachment.Params -->
 
-| Parameter   | Type              |    | Description                                                          |
-| ----------- | ----------------- |:--:| -------------------------------------------------------------------- |
-| path        | Text              | -> | Path of the attachment file                                          |
-| blob        | Blob              | -> | BLOB containing the attachment                                       |
-| name        | Text              | -> | Name + extension used by the mail client to designate the attachment |
-| cid         | Text              | -> | ID of attachment (HTML messages only), or " " if no cid is required  |
-| type        | Text              | -> | Value of the content-type header                                     |
-| disposition | Text              | -> | Value of the content-disposition header: "inline" or "attachment".   |
-| Result      | 4D.MailAttachment | <- | Attachment object|<!-- END REF -->
-
-|
+| Paramètres  | Type              |    | Description                                                                        |
+| ----------- | ----------------- |:--:| ---------------------------------------------------------------------------------- |
+| path        | Text              | -> | Chemin de la pièce jointe                                                          |
+| blob        | Blob              | -> | Blob contenant la pièce jointe                                                     |
+| nom         | Text              | -> | Nom + extension utilisés par le client de messagerie pour désigner la pièce jointe |
+| cid         | Text              | -> | ID de la pièce jointe (messages HTML uniquement) ou " " si aucun cid n'est requis  |
+| type        | Text              | -> | Valeur de l'en-tête content-type                                                   |
+| disposition | Text              | -> | Valeur de l'en-tête content-disposition : "inline" ou "attachment"                 |
+| Result      | 4D.MailAttachment | <- | Attachment object|<!-- END REF -->                                       |
 
 #### Description
 
 The `MAIL New attachment` command <!-- REF #_command_.MAIL_New_attachment.Summary -->allows you to create an attachment object that you can add to an [Email object](EmailObjectClass.md#email-object)<!-- END REF -->.
 
-You can pass either a path or a Blob to define the attachment.
+Vous pouvez passer un chemin ou un Blob pour définir la pièce jointe.
 
-- If you use a *path*, pass a **text** value containing the path of the attachment file, expressed with the system syntax. You can pass a full path name or a simple file name (in which case 4D will search for the file in the same directory as the project file).
+- Si vous utilisez un *chemin*, passez une valeur **text** contenant le chemin du fichier joint, exprimé avec la syntaxe système. Vous pouvez passer un nom de chemin complet ou un simple nom de fichier (auquel cas 4D recherchera le fichier dans le même répertoire que le fichier du projet).
 
-- If you use a *blob*, pass a **BLOB** value containing the attachment itself.
+- Si vous utilisez un *blob*, passez une valeur **BLOB** contenant le fichier joint.
 
-The optional *name* parameter lets you pass the name and extension to be used by the mail client to designate the attachment. If *name* is omitted and:
+Le paramètre facultatif *name* vous permet de passer le nom et l'extension à utiliser par le client de messagerie pour désigner la pièce jointe. Si le paramètre *name* est omis et que :
 
-- you passed a file path, the name and extension of the file is used,
-- you passed a BLOB, a random name without extension is automatically generated.
+- vous avez passé un chemin d'accès au fichier, le nom et l'extension du fichier sont utilisés,
+- vous avez passé un BLOB, un nom aléatoire sans extension est automatiquement généré.
 
-The optional *cid* parameter lets you pass an internal ID for the attachment. This ID is the value of the `Content-Id` header, it will be used in HTML messages only. The cid associates the attachment with a reference defined in the message body using an HTML tag such as `\&#060;img src="cid:ID"&#062;`. This means that the contents of the attachment (e.g., a picture) should be displayed within the message on the mail client. The final result may vary depending on the mail client. You can pass an empty string in *cid* if you do not want to use this parameter.
+Le paramètre facultatif *cid* vous permet de passer un ID interne pour la pièce jointe. Cet ID est la valeur de l'en-tête `Content-Id` et sera utilisé dans les messages HTML uniquement. The cid associates the attachment with a reference defined in the message body using an HTML tag such as `\&#060;img src="cid:ID"&#062;`. Cela signifie que le contenu de la pièce jointe (par exemple, une image) doit être affiché dans le message sur le client de messagerie. Le résultat final peut varier en fonction du client de messagerie. Vous pouvez passer une chaîne vide dans *cid* si vous ne souhaitez pas utiliser ce paramètre.
 
-You can use the optional *type* parameter to explicitly set the `content-type` of the attachment file. For example, you can pass a string defining a MIME type ("video/mpeg"). This content-type value will be set for the attachment, regardless of its extension. For more information about MIME types, please refer to the [MIME type page on Wikipedia](https://en.wikipedia.org/wiki/MIME).
+Vous pouvez utiliser le paramètre optionnel *type* pour définir explicitement le `content-type` du fichier joint. Par exemple, vous pouvez passer une chaîne définissant un type MIME ("video/mpeg"). Cette valeur de content-type sera définie pour la pièce jointe, quelle que soit son extension. Pour plus d'informations sur les types MIME, veuillez vous référer à [la page type MIME sur Wikipedia](https://en.wikipedia.org/wiki/MIME).
 
-By default, if the *type* parameter is omitted or contains an empty string, the `content-type` of the attachment file is based on its extension. The following rules are applied for the main MIME types:
+Par défaut, si le paramètre *type* est omis ou contient une chaîne vide, le `content-type` du fichier joint est basé sur son extension. Les règles suivantes sont appliquées pour les principaux types MIME :
 
 | Extension | Content Type                  |
 | --------- | ----------------------------- |
@@ -79,21 +77,21 @@ By default, if the *type* parameter is omitted or contains an empty string, the 
 | mp3       | audio/mpeg                    |
 | *other*   | application/octet-stream      |
 
-The optional *disposition* parameter lets you pass the `content-disposition` header of the attachment. You can pass one of the following constants from the "Mail" constant theme:
+Le paramètre facultatif *disposition* vous permet de passer l'en-tête `content-disposition` de la pièce jointe. Vous pouvez passer l'une des constantes suivantes du thème de constantes "Mail" :
 
-| Constant                    | Value        | Comment                                                                                                                                                                                              |
-| --------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| mail disposition attachment | "attachment" | Set the Content-disposition header value to "attachment", which means that the attachment file must be provided as a link in the message.                                                            |
-| mail disposition inline     | "inline"     | Set the Content-disposition header value to "inline", which means that the attachment must be rendered within the message contents, at the "cid" location. The rendering depends on the mail client. |
+| Constante                   | Value        | Commentaire                                                                                                                                                                                                             |
+| --------------------------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| mail disposition attachment | "attachment" | Définissez la valeur de l'en-tête Content-disposition sur "attachment", ce qui signifie que le fichier joint doit être fourni sous forme de lien dans le message.                                                       |
+| mail disposition inline     | "inline"     | Définissez la valeur de l'en-tête Content-disposition sur "inline", ce qui signifie que la pièce jointe doit être rendue dans le contenu du message, à l'emplacement du "cid". Le rendu dépend du client de messagerie. |
 
-By default, if the *disposition* parameter is omitted:
+Par défaut, si le paramètre *disposition* est omis :
 
-- if the *cid* parameter is used, the `Content-disposition` header is set to "inline",
-- if the *cid* parameter is not passed or empty, the `Content-disposition` header is set to "attachment".
+- si le paramètre *cid* est utilisé, l'en-tête `Content-disposition` est défini sur "inline",
+- si le paramètre *cid* n'est pas passé ou est vide, l'en-tête `Content-disposition` est fixé à "attachment".
 
-#### Example 1
+#### Exemple 1
 
-You want to send an email with a user-selected file as an attachment and an image embedded in the HTML body:
+Vous souhaitez envoyer un e-mail avec un fichier sélectionné par l'utilisateur comme pièce jointe et une image intégrée dans le corps HTML :
 
 ```4d
 $doc:=Select document("";"*";"Please select a file to attach";0)
@@ -124,14 +122,14 @@ $email.htmlBody:="<html>"+\
 "</head>"+\
 "</html>"
 
-$transporter.send($email) //send mail
+$transporter.send($email) //envoyer e-mail
 
 End if
 ```
 
-#### Example 2
+#### Exemple 3
 
-You want to send an email with a 4D Write Pro area as an attachment:
+Vous voulez envoyer un e-mail avec une zone 4D Write Pro en pièce jointe :
 
 ```4d
 C_BLOB($blob)
@@ -163,21 +161,19 @@ $transporter.send($email)
 
 <!-- REF #4D.MailAttachment.new().Params -->
 
-| Parameter   | Type              |    | Description                                                          |
-| ----------- | ----------------- |:--:| -------------------------------------------------------------------- |
-| path        | Text              | -> | Path of the attachment file                                          |
-| blob        | Blob              | -> | BLOB containing the attachment                                       |
-| name        | Text              | -> | Name + extension used by the mail client to designate the attachment |
-| cid         | Text              | -> | ID of attachment (HTML messages only), or " " if no cid is required  |
-| type        | Text              | -> | Value of the content-type header                                     |
-| disposition | Text              | -> | Value of the content-disposition header: "inline" or "attachment".   |
-| Result      | 4D.MailAttachment | <- | Attachment object|<!-- END REF -->
-
-|
+| Paramètres  | Type              |    | Description                                                                        |
+| ----------- | ----------------- |:--:| ---------------------------------------------------------------------------------- |
+| path        | Text              | -> | Chemin de la pièce jointe                                                          |
+| blob        | Blob              | -> | Blob contenant la pièce jointe                                                     |
+| nom         | Text              | -> | Nom + extension utilisés par le client de messagerie pour désigner la pièce jointe |
+| cid         | Text              | -> | ID de la pièce jointe (messages HTML uniquement) ou " " si aucun cid n'est requis  |
+| type        | Text              | -> | Valeur de l'en-tête content-type                                                   |
+| disposition | Text              | -> | Valeur de l'en-tête content-disposition : "inline" ou "attachment"                 |
+| Result      | 4D.MailAttachment | <- | Attachment object|<!-- END REF -->                                       |
 
 #### Description
 
-The `4D.MailAttachment.new()` function <!-- REF #4D.MailAttachment.new().Summary -->creates and returns a new object of the `4D.MailAttachment` type<!-- END REF -->. It is identical to the [`MAIL New attachment`](#mail-new-attachment) command (shortcut).
+The `4D.MailAttachment.new()` function <!-- REF #4D.MailAttachment.new().Summary -->creates and returns a new object of the `4D.MailAttachment` type<!-- END REF -->. La fonction `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->crée et retourne un nouvel objet de type `4D.MailAttachment`<!-- END REF -->.
 
 ## .cid
 
@@ -187,7 +183,7 @@ The `4D.MailAttachment.new()` function <!-- REF #4D.MailAttachment.new().Summary
 
 #### Description
 
-The `.cid` property contains <!-- REF #MailAttachmentClass.cid.Summary --> the ID of the attachment<!-- END REF -->. This property is used in HTML messages only. If this property is missing, the file is handled as a simple attachment (link).
+The `.cid` property contains <!-- REF #MailAttachmentClass.cid.Summary --> the ID of the attachment<!-- END REF -->. Cette propriété est utilisée uniquement dans les messages HTML. Si cette propriété est manquante, le fichier est géré comme une simple pièce jointe (lien).
 
 ## .disposition
 
@@ -197,10 +193,10 @@ The `.cid` property contains <!-- REF #MailAttachmentClass.cid.Summary --> the I
 
 #### Description
 
-The `.disposition` property contains <!-- REF #MailAttachmentClass.disposition.Summary -->the value of the `Content-Disposition` header<!-- END REF -->. Two values are available:
+The `.disposition` property contains <!-- REF #MailAttachmentClass.disposition.Summary -->the value of the `Content-Disposition` header<!-- END REF -->. .
 
-- "inline": the attachment is rendered within the message contents, at the "cid" location. The rendering depends on the mail client.
-- "attachment": the attachment is provided as a link in the message.
+- "inline" : la pièce jointe est rendue dans le contenu du message, à l'emplacement "cid". Le rendu dépend du client de messagerie.
+- "attachment" : la pièce jointe est fournie sous forme de lien dans le message.
 
 ## .getContent()
 
@@ -208,16 +204,15 @@ The `.disposition` property contains <!-- REF #MailAttachmentClass.disposition.S
 
 **.getContent()** : Blob<!-- END REF -->
 
-<!-- REF #MailAttachmentClass.getContent().Params -->
-| Parameter | Type |    | Description                                          |
-| --------- | ---- |:--:| ---------------------------------------------------- |
-| Result    | Blob | <- | Content of the attachment|<!-- END REF -->
 
-|
+<!-- REF #MailAttachmentClass.getContent().Params -->
+| Paramètres | Type |    | Description                                          |
+| ---------- | ---- |:--:| ---------------------------------------------------- |
+| Result     | Blob | <- | Content of the attachment|<!-- END REF --> |
 
 #### Description
 
-The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary -->returns the contents of the attachment object in a BLOB<!-- END REF -->. You can use this method with attachment objects received by the [`MAIL Convert from MIME`](#mail-convert-from-mime) command.
+The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary -->The `.getContent()` function<!-- END REF -->. Vous pouvez utiliser cette fonction avec les objets pièce jointe reçus par la commande [`MAIL Convert from MIME`](#mail-convert-from-mime).
 
 ## .name
 
@@ -227,7 +222,7 @@ The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary 
 
 #### Description
 
-The `.name` property contains <!-- REF #MailAttachmentClass.name.Summary -->the name and extension of the attachment<!-- END REF -->.  By default, it is the name of the file, unless another name was specified in the [`MAIL New attachment`](#mail-new-attachment) command.
+The `.name` property contains <!-- REF #MailAttachmentClass.name.Summary -->the name and extension of the attachment<!-- END REF -->.  Par défaut, c'est le nom du fichier, sauf si un autre nom a été indiqué dans la commande [`MAIL New attachment`](#mail-new-attachment).
 
 ## .path
 
@@ -241,11 +236,11 @@ The `.path` property contains <!-- REF #MailAttachmentClass.path.Summary -->the 
 
 ## .platformPath
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v19     | Added   |
+| Version | Modifications |
+| ------- | ------------- |
+| v19     | Ajoutées      |
 </details>
 
 <!-- REF #MailAttachmentClass.platformPath.Syntax -->
@@ -254,14 +249,14 @@ The `.path` property contains <!-- REF #MailAttachmentClass.path.Summary -->the 
 
 #### Description
 
-The `.platformPath` property returns <!-- REF #MailAttachmentClass.platformPath.Summary -->the path of the attachment file expressed with the current platform syntax<!-- END REF -->.
+The `.platformPath` property returns <!-- REF #MailAttachmentClass.platformPath.Summary -->The `.platformPath` property returns<!-- END REF -->.
 
 ## .type
 
 <!-- REF #MailAttachmentClass.type.Syntax -->
 
-**.type** : Text<!-- END REF -->
+**.type** : Texte<!-- END REF -->
 
 #### Description
 
-The `.type` property contains <!-- REF #MailAttachmentClass.type.Summary -->the `content-type` of the attachment file<!-- END REF -->. If this type is not explicitly passed to the [`MAIL New attachment`](#mail-new-attachment) command, the `content-type` is based on its file extension.
+The `.type` property contains <!-- REF #MailAttachmentClass.type.Summary -->the `content-type` of the attachment file<!-- END REF -->. Si ce type n'est pas explicitement passé à la commande [`MAIL New attachment`](#mail-new-attachment), le `content-type` est fondé sur son extension de fichier.

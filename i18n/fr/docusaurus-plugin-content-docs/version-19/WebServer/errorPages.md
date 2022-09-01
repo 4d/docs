@@ -1,42 +1,42 @@
 ---
 id: errorPages
-title: Custom HTTP Error Pages
+title: Pages d'erreur HTTP personnalisées
 ---
 
-The 4D Web Server allows you to customize HTTP error pages sent to clients, based on the status code of the server response. Error pages refer to:
+4D Web Server vous permet de personnaliser les pages d'erreur HTTP envoyées aux clients, en fonction du code d'état de la réponse du serveur. Les pages d'erreur font référence à :
 
-* status codes starting with 4 (client errors), for example 404
+* les codes d'état commençant par 4 (erreurs du client), par exemple 404
 
-* status codes starting with 5 (server errors), for example 501.
+* les codes d'état commençant par 5 (erreurs du serveur), par exemple 501.
 
-For a full description of HTTP error status codes, you can refer to the [List of HTTP status codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) (Wikipedia).
+Pour une description complète des codes d'état d'erreur HTTP, vous pouvez vous reporter à la [liste des codes d'état HTTP](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes) (Wikipedia).
 
-## Replacing default pages
+## Remplacement des pages par défaut
 
-To replace default 4D Web Server error pages with your own pages you just need to:
+Pour remplacer les pages d'erreur par défaut de 4D Web Server par vos propres pages, il vous suffit de :
 
-* put custom HTML pages at the first level of the application's web folder,
+* placer des pages HTML personnalisées au premier niveau du dossier web de l'application,
 
-* name the custom pages "{statusCode}.html" (for example, "404.html").
+* nommer les pages personnalisées "{statusCode}.html" (par exemple, "404.html").
 
-You can define one error page per status code and/or a generic error page for a range of errors, named "{number}xx.html". For example, you can create "4xx.html" for generic client errors. The 4D Web Server will first look for a {statusCode}.html page then, if it does not exist, a generic page.
+Vous pouvez définir une page d'erreur par code d'état et/ou une page d'erreur générique pour une série d'erreurs, nommée "{number}xx.html". Par exemple, vous pouvez créer "4xx.html" pour les erreurs génériques du client. 4D Web Server recherchera d'abord une page {statusCode}.html puis, si elle n'existe pas, une page générique.
 
-For example, when an HTTP response returns a status code 404:
+Par exemple, lorsqu'une réponse HTTP retourne un code d'état 404 :
 
-1. 4D Web Server tries to send a "404.html" page located in the application's web folder.
+1. 4D Web Server essaie d'envoyer une page "404.html" située dans le dossier web de l'application.
 
-2. If it is not found, 4D Web Server tries to send a "4xx.html" page located in the application's web folder.
+2. Si elle n'est pas trouvée, 4D Web Server essaie d'envoyer une page "4xx.html" située dans le dossier Web de l'application.
 
-3. If not found, 4D Web Server then uses its default error page.
+3. Si elle n'est pas trouvée, 4D Web Server utilise alors sa page d'erreur par défaut.
 
-## Example
+## Exemple
 
-If you define the following custom pages in your web folder:
+Si vous définissez les pages personnalisées suivantes dans votre dossier web :
 
 ![](../assets/en/WebServer/errorPage.png)
 
-* the "403.html" or "404.html" pages will be served when 403 or 404 HTTP responses are returned respectively,
+* les pages "403.html" ou "404.html" seront servies lorsque des réponses HTTP 403 ou 404 sont retournées respectivement,
 
-* the "4xx.html" page will be served for any other 4xx error status (400, 401, etc.),
+* la page "4xx.html" sera servie pour tout autre état d'erreur 4xx (400, 401, etc.),
 
-* the "5xx.html" page will be served for any 5xx error status.
+* la page "5xx.html" sera servie pour tout état d'erreur 5xx.

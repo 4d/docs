@@ -5,13 +5,13 @@ title: List Box
 
 ---
 
-## Columns
+## Colunas
 
 Collection of columns of the list box.
 
 #### JSON Grammar
 
-| Name    | Data Type                    | Possible Values                                  |
+| Nome    | Tipo de dados                | Possible Values                                  |
 | ------- | ---------------------------- | ------------------------------------------------ |
 | columns | collection of column objects | Contains the properties for the list box columns |
 
@@ -23,7 +23,7 @@ For a list of properties supported by column objects, please refer to the [Colum
 
 ---
 
-## Detail Form Name
+## Nome formulário detalhe
 
 `Selection type list box`
 
@@ -36,9 +36,9 @@ The specified form is displayed:
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values           |
-| ---------- | --------- | ------------------------- |
-| detailForm | string    | <ul><li>Name (string) of table or project form</li><li>POSIX path (string) to a .json file describing the form</li><li>Object describing the form</li></ul> |
+| Nome       | Tipo de dados | Possible Values           |
+| ---------- | ------------- | ------------------------- |
+| detailForm | string        | <ul><li>Name (string) of table or project form</li><li>POSIX path (string) to a .json file describing the form</li><li>Object describing the form</li></ul> |
 
 #### Objects Supported
 
@@ -46,7 +46,7 @@ The specified form is displayed:
 
 ---
 
-## Double-click on row
+## Duplo clique em linha
 
 `Selection type list box`
 
@@ -55,7 +55,7 @@ Sets the action to be performed when a user double-clicks on a row in the list b
 * **Do nothing** (default): Double-clicking a row does not trigger any automatic action.
 * **Edit Record**: Double-clicking a row displays the corresponding record in the detail form defined [for the list box](#detail-form-name). The record is opened in read-write mode so it can be modified.
 * **Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified.
-> Double-clicking an empty row is ignored in list boxes.
+> > Double-clicking an empty row is ignored in list boxes.
 
 Regardless of the action selected/chosen, the `On Double clicked` form event is generated.
 
@@ -63,9 +63,9 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 #### JSON Grammar
 
-| Name                   | Data Type | Possible Values                     |
-| ---------------------- | --------- | ----------------------------------- |
-| doubleClickInRowAction | string    | "editSubrecord", "displaySubrecord" |
+| Nome                   | Tipo de dados | Possible Values                     |
+| ---------------------- | ------------- | ----------------------------------- |
+| doubleClickInRowAction | string        | "editSubrecord", "displaySubrecord" |
 
 #### Objects Supported
 
@@ -73,7 +73,7 @@ For the last two actions, the On `Open Detail` form event is also generated. The
 
 ---
 
-## Highlight Set
+## Ressaltar conjunto
 
 `Selection type list box`
 
@@ -85,9 +85,9 @@ This property is used to specify the set to be used to manage highlighted record
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values |
-| ------------ | --------- | --------------- |
-| highlightSet | string    | Name of the set |
+| Nome         | Tipo de dados | Possible Values |
+| ------------ | ------------- | --------------- |
+| highlightSet | string        | Name of the set |
 
 #### Objects Supported
 
@@ -101,7 +101,7 @@ Locked columns and static columns are two separate and independent functionaliti
 
 * Locked columns always stay displayed to the left of the list box; they do not scroll horizontally.
 * Static columns cannot be moved by drag and drop within the list box.
-> You can set static and locked columns by programming, refer to [List Box](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box.201-4310263.en.html) in the [4D Language Reference](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Language-Reference.100-4310216.en.html) manual.
+> > You can set static and locked columns by programming, refer to [List Box](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box.201-4310263.en.html) in the [4D Language Reference](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Language-Reference.100-4310216.en.html) manual.
 
 These properties interact as follows:
 
@@ -117,29 +117,29 @@ These properties interact as follows:
 
 * You can set a combination of locked and static columns according to your needs. For example, if you set three locked columns and one static column, the user can swap the two right-most columns within the locked area (since only the first column is static).
 
-### Number of Locked Columns
+### Número de colunas trancadas
 
 Number of columns that must stay permanently displayed in the left part of the list box, even when the user scrolls through the columns horizontally.
 
 #### JSON Grammar
 
-| Name              | Data Type | Possible Values |
-| ----------------- | --------- | --------------- |
-| lockedColumnCount | integer   | minimum: 0      |
+| Nome              | Tipo de dados | Possible Values |
+| ----------------- | ------------- | --------------- |
+| lockedColumnCount | integer       | mínimo: 0       |
 
 #### Objects Supported
 
 [List Box](listbox_overview.md)
 
-### Number of Static Columns
+### Número de colunas estáticas
 
 Number of columns that cannot be moved during execution.
 
 #### JSON Grammar
 
-| Name              | Data Type | Possible Values |
-| ----------------- | --------- | --------------- |
-| staticColumnCount | integer   | minimum: 0      |
+| Nome              | Tipo de dados | Possible Values |
+| ----------------- | ------------- | --------------- |
+| staticColumnCount | integer       | mínimo: 0       |
 
 #### Objects Supported
 
@@ -147,16 +147,16 @@ Number of columns that cannot be moved during execution.
 
 ---
 
-## Number of Columns
+## Número de colunas
 
 Sets the number of columns of the list box.
 > You can add or remove columns dynamically by programming, using commands such as [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.en.html) or [LISTBOX DELETE COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.en.html).
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values |
-| ----------- | --------- | --------------- |
-| columnCount | integer   | minimum: 1      |
+| Nome        | Tipo de dados | Possible Values |
+| ----------- | ------------- | --------------- |
+| columnCount | integer       | mínimo: 1       |
 
 #### Objects Supported
 
@@ -164,7 +164,7 @@ Sets the number of columns of the list box.
 
 ---
 
-## Row Control Array
+## Array controle linha
 
 `Array type list box`
 
@@ -174,7 +174,7 @@ You can set the "hidden", "disabled" and "selectable" interface properties for e
 
 The row control array must be of the Longint type and include the same number of rows as the list box. Each element of the *Row Control Array* defines the interface status of its corresponding row in the list box. Three interface properties are available using constants in the "List Box" constant theme:
 
-| Constant                 | Value | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Constante                | Value | Comentário                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | ------------------------ | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | lk row is disabled       | 2     | The corresponding row is disabled. The text and controls such as check boxes are dimmed or grayed out. Enterable text input areas are no longer enterable. Default value: Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | lk row is hidden         | 1     | The corresponding row is hidden. Hiding rows only affects the display of the list box. The hidden rows are still present in the arrays and can be managed by programming. The language commands, more particularly `LISTBOX Get number of rows` or `LISTBOX GET CELL POSITION`, do not take the displayed/hidden status of rows into account. For example, in a list box with 10 rows where the first 9 rows are hidden, `LISTBOX Get number of rows` returns 10. From the user’s point of view, the presence of hidden rows in a list box is not visibly discernible. Only visible rows can be selected (for example using the Select All command). Default value: Visible |
@@ -196,20 +196,20 @@ You can define several interface properties at once:
 
 ![](../assets/en/FormObjects/listbox_styles6.png)
 
-Note that setting properties for an element overrides any other values for this element (if not reset). For example:
+Note that setting properties for an element overrides any other values for this element (if not reset). Por exemplo:
 
 ```4d
  aLControlArr{6}:=lk row is disabled + lk row is not selectable
- //sets row 6 as disabled AND not selectable
+ //define a linha 6 como desativada E não selecionável
  aLControlArr{6}:=lk row is disabled
- //sets row 6 as disabled but selectable again
+ //define a linha 6 como desativada mas selecionável novamente
 ```
 
 #### JSON Grammar
 
-| Name             | Data Type | Possible Values        |
-| ---------------- | --------- | ---------------------- |
-| rowControlSource | string    | Row control array name |
+| Nome             | Tipo de dados | Possible Values        |
+| ---------------- | ------------- | ---------------------- |
+| rowControlSource | string        | Row control array name |
 
 #### Objects Supported
 
@@ -217,7 +217,7 @@ Note that setting properties for an element overrides any other values for this 
 
 ---
 
-## Selection Mode
+## Modo seleção
 
 Designates the option for allowing users to select rows:
 
@@ -228,9 +228,9 @@ Designates the option for allowing users to select rows:
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values              |
-| ------------- | --------- | ---------------------------- |
-| selectionMode | string    | "multiple", "single", "none" |
+| Nome          | Tipo de dados | Possible Values              |
+| ------------- | ------------- | ---------------------------- |
+| selectionMode | string        | "multiple", "single", "none" |
 
 #### Objects Supported
 

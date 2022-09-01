@@ -3,27 +3,28 @@ id: onCloseBox
 title: On Close Box
 ---
 
-| Code | Can be called by | Definition                              |
-| ---- | ---------------- | --------------------------------------- |
-| 22   | Form             | The window’s close box has been clicked |
+| コード | 呼び出し元 | 定義                     |
+| --- | ----- | ---------------------- |
+| 22  | フォーム  | ウィンドウのクローズボックスがクリックされた |
 
 
-## Description
+## 詳細
 
-The `On Close Box` event is generated when the user clicks on the clos box of the window.
+`On Close Box` イベントは、ユーザーがウィンドウのクローズボックスをクリックすると生成されます。
 
-### Example
+### 例題
 
-This example shows how to respond to a close window event with a form used for record data entry:
+この例題では、レコードのデータ入力に使われるフォームで、ウィンドウを閉じるイベントを処理する方法を示します:
 
 ```4d
-  //Method for an input form
+  // 入力フォームのメソッド
  $vpFormTable:=Current form table
  Case of
   //...
     :(Form event code=On Close Box)
        If(Modified record($vpFormTable->))
-          CONFIRM("This record has been modified. Save Changes?")
+          CONFIRM("レコードが変更されました。 へんこうを保存しますか？
+          ")
           If(OK=1)
              ACCEPT
           Else

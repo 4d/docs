@@ -65,7 +65,7 @@ This is illustrated by the following graphic:
 
 Note however that entities refer to the same record. In all cases, if you call the `entity.save( )` method, the record will be updated (except in case of conflict, see [Entity locking](#entity-locking)).
 
-In fact, `$e1` and `$e2` are not the entity itself, but a reference to the entity. It means that you can pass them directly to any function or method, and it will act like a pointer, and faster than a 4D pointer. For example:
+In fact, `$e1` and `$e2` are not the entity itself, but a reference to the entity. It means that you can pass them directly to any function or method, and it will act like a pointer, and faster than a 4D pointer. Beispiel:
 
 ```4d
  For each($entity;$selection)
@@ -140,7 +140,7 @@ Let's look at the following (simplified) structure:
 In this example, an entity in the "Employee" dataclass contains an object of type Entity in the "employer" attribute (or a null value). An entity in the "Company" dataclass contains an object of type EntitySelection in the "staff" attribute (or a null value).
 > In ORDA, the Automatic or Manual property of relations has no effect.
 
-To assign a value directly to the "employer" attribute, you must pass an existing entity from the "Company" dataclass. For example:
+To assign a value directly to the "employer" attribute, you must pass an existing entity from the "Company" dataclass. Beispiel:
 
 ```4d
  $emp:=ds.Employee.new() // create an employee
@@ -149,7 +149,7 @@ To assign a value directly to the "employer" attribute, you must pass an existin
  $emp.save()
 ```
 
-4D provides an additional facility for entering a relation attribute for an N entity related to a "1" entity: you pass the primary key of the "1" entity directly when assigning a value to the relation attribute. For this to work, you pass data of type Number or Text (the primary key value) to the relation attribute. 4D then automatically takes care of searching for the corresponding entity in the dataclass. For example:
+4D provides an additional facility for entering a relation attribute for an N entity related to a "1" entity: you pass the primary key of the "1" entity directly when assigning a value to the relation attribute. For this to work, you pass data of type Number or Text (the primary key value) to the relation attribute. 4D then automatically takes care of searching for the corresponding entity in the dataclass. Beispiel:
 
 ```4d
  $emp:=ds.Employee.new()
@@ -217,7 +217,7 @@ A new entity selection is **shareable** in the following cases:
 - the new entity selection is based upon a relation [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. "company.employees") when *attributeName* is a one-to-many related attribute but the entity does not belong to an entity selection.
 - the new entity selection is explicitely copied as shareable with [entitySelection.copy()](API/EntitySelectionClass.md#copy) or `OB Copy` (i.e. with the `ck shared` option).
 
-Example:
+Beispiel:
 ```4d
 $myComp:=ds.Company.get(2) //$myComp does not belong to an entity selection
 $employees:=$myComp.employees //$employees is shareable
@@ -228,7 +228,7 @@ A new entity selection is **alterable** in the following cases:
 - the new entity selection created blank using the [dataClass.newSelection()](API/DataClassClass.md#newselection) function or `Create entity selection` command,
 - the new entity selection is explicitely copied as alterable with [entitySelection.copy()](API/EntitySelectionClass.md#copy) or `OB Copy` (i.e. without the `ck shared` option).
 
-Example:
+Beispiel:
 ```4d
 $toModify:=ds.Company.all().copy() //$toModify is alterable
 ```
@@ -236,13 +236,13 @@ $toModify:=ds.Company.all().copy() //$toModify is alterable
 
 A new entity selection **inherits** from the original entity selection nature in the following cases:
 
-- the new entity selection results from one of the various ORDA class functions applied to an existing entity selection ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) .
+- the new entity selection results from one of the various ORDA class functions applied to an existing entity selection ([.query()](API/EntitySelectionClass.md#query), [.slice()](API/EntitySelectionClass.md#slice), etc.) . .
 - the new entity selection is based upon a relation:
     - [entity.*attributeName*](API/EntityClass.md#attributename) (e.g. "company.employees") when *attributeName* is a one-to-many related attribute and the entity belongs to an entity selection (same nature as [.getSelection()](API/EntityClass.md#getselection) entity selection),
     - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (e.g. "employees.employer") when *attributeName* is a related attribute (same nature as the entity selection),
     - [.extract()](API/EntitySelectionClass.md#extract) when the resulting collection contains entity selections (same nature as the entity selection).
 
-Examples:
+Beispiele:
 
 ```4d
 $highSal:=ds.Employee.query("salary >= :1"; 1000000)   
@@ -307,7 +307,7 @@ The `sendMails` method:
 
 ### Entity selections and Storage attributes
 
-All storage attributes (text, number, boolean, date) are available as properties of entity selections as well as entities. When used in conjunction with an entity selection, a scalar attribute returns a collection of scalar values. For example:
+All storage attributes (text, number, boolean, date) are available as properties of entity selections as well as entities. When used in conjunction with an entity selection, a scalar attribute returns a collection of scalar values. Beispiel:
 
 ```4d
  $locals:=ds.Person.query("city = :1";"San Jose") //entity selection of people
@@ -328,7 +328,7 @@ In addition to the variety of ways you can query, you can also use relation attr
   //All invoices with at least one line item related to a part in $myParts
 ```
 
-The last line will return in $myInvoices an entity selection of all invoices that have at least one invoice item related to a part in the entity selection myParts. When a relation attribute is used as a property of an entity selection, the result is always another entity selection, even if only one entity is returned. When a relation attribute is used as a property of an entity selection and no entities are returned, the result is an empty entity selection, not null.
+The last line will return in $myInvoices an entity selection of all invoices that have at least one invoice item related to a part in the entity selection myParts. When a relation attribute is used as a property of an entity selection, the result is always another entity selection, even if only one entity is returned. When a relation attribute is used as a property of an entity selection, the result is always another entity selection, even if only one entity is returned.
 
 
 ## Entity Locking

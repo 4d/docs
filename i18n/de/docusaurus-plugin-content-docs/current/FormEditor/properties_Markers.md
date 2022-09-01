@@ -22,7 +22,7 @@ You can make Break areas smaller or larger. You can use a Break area to display 
 
 #### JSON Grammar
 
-| Name        | Data Type                         | Possible Values                                                                                     |
+| Name        | Datentyp                          | Possible Values                                                                                     |
 | ----------- | --------------------------------- | --------------------------------------------------------------------------------------------------- |
 | markerBreak | integer &#x7c; integer collection | Break marker position or collection of break marker positions in pixels.<br/>Minimum value: 0 |
 
@@ -36,9 +36,9 @@ You can make the Detail area smaller or larger. Whatever you place in the Detail
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values                    |
-| ---------- | --------- | ---------------------------------- |
-| markerBody | integer   | Detail marker position. Minimum: 0 |
+| Name       | Datentyp | Possible Values                    |
+| ---------- | -------- | ---------------------------------- |
+| markerBody | ganzzahl | Detail marker position. Minimum: 0 |
 
 ---
 
@@ -52,9 +52,9 @@ You can use the Footer area to print graphics, page numbers, the current date, o
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values |
-| ------------ | --------- | --------------- |
-| markerFooter | integer   | minimum: 0      |
+| Name         | Datentyp | Possible Values |
+| ------------ | -------- | --------------- |
+| markerFooter | ganzzahl | minimum: 0      |
 
 ---
 
@@ -78,7 +78,7 @@ The form can contains [additional header areas](#additional-areas) to be associa
 
 #### JSON Grammar
 
-| Name         | Data Type                         | Possible Values                                                                                       |
+| Name         | Datentyp                          | Possible Values                                                                                       |
 | ------------ | --------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | markerHeader | integer &#x7c; integer collection | Header marker position or collection of header marker positions in pixels.<br/>Minimum value: 0 |
 
@@ -96,7 +96,7 @@ Break at level 0 zero takes in all the records; it occurs after all the records 
 
 A Break level 1 occurs after the records grouped by the first sorted field are printed.
 
-| Label        | Description      | Prints after groups created by |
+| Label        | Beschreibung     | Prints after groups created by |
 | ------------ | ---------------- | ------------------------------ |
 | Form Break 1 | Break at level 1 | First sorted field             |
 | Form Break 2 | Break at level 2 | Second sorted field            |
@@ -104,7 +104,7 @@ A Break level 1 occurs after the records grouped by the first sorted field are p
 
 Additional Header areas are associated with Breaks. A level 1 Header is printed just before the records grouped by the first sorted field are printed.
 
-| Label         | Description       | Prints after groups created by |
+| Label         | Beschreibung      | Prints after groups created by |
 | ------------- | ----------------- | ------------------------------ |
 | Form Header 1 | Header at level 1 | First sorted field             |
 | Form Header 2 | Header at level 2 | Second sorted field            |

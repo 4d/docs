@@ -1,54 +1,54 @@
 ---
 id: overview
-title: Overview
+title: 概要
 ---
 
-The Settings configure how the current project functions. These parameters may be different for each project. They include the listening ports, backup configurations, security options, Web parameters, etc.
+ストラクチャー設定では、カレントプロジェクトがどのように機能するかを設定します。 これらのパラメーターは、各プロジェクトごとに異なる設定を保存できます。 設定内容には待ち受けポート、バックアップ設定、セキュリティオプション、Webパラメーターなどが含まれます。
 
 ![](../assets/en/settings/main.png)
 
-> 4D provides another set of parameters, called **Preferences**, that apply to the 4D IDE application. For more information, refer to [Preferences](../Preferences/general.md).
+> 4D は、4D IDE (統合開発環境) アプリケーションに適用される、**環境設定** と呼ばれるもうひとつの設定グループを提供します。 詳細は [環境設定](../Preferences/general.md) を参照ください。
 
 
-## Accessing the settings
+## ストラクチャー設定を開く
 
-You can access the Settings dialog box:
+ストラクチャー設定ダイアログを開くには、以下のいずれかの手順をおこないます:
 
--   using the **Design > Settings...** menu option
--   by clicking **Settings** on the 4D toolbar
--   on 4D Server, using the **Edit > Settings...** menu option
+-   **デザイン ＞ 設定...** メニューオプションを使用する
+-   4Dツールバーの **設定** ボタンをクリックする
+-   4D Server上では、**編集 ＞ 設定...** メニューオプションを使用する
 
-When [**User settings** mode is enabled](../Desktop/user-settings.md), **Settings...** is renamed **Structure Settings...** and two additional menu commands are available at each location:
+[**ユーザー設定** モードが有効化されている](../Desktop/user-settings.md) 場合には、**設定...** は **ストラクチャー設定** に名称変更され、次の 2つのメニューコマンドが追加されます:
 
--   **User Settings...** gives you access to settings that can be stored externally in a user file. If these are modified, they are used instead of structure settings.
--   **User Settings for Data File...** gives you access to settings that can be stored externally in a user file attached to the current data file. If they are modified, they are used instead of user or structure settings.
+-   **ユーザー設定...** は外部のユーザーファイルに保存される設定へのアクセスを提供します。 これらの設定が変更されていると、ストラクチャー設定の代わりに使用されます。
+-   **データファイル用のユーザー設定...** はカレントデータファイルに紐づいた外部のユーザーファイルに保存される設定へのアクセスを提供します。 これらの設定が変更されていると、ユーザー設定やストラクチャー設定の代わりに使用されます。
 
-### Locking information
+### ロック情報
 
-Locking can occur in both Project and Client/server modes when:
+プロジェクトモードおよびクライアント/サーバーモードの両方において、以下のような場合にロックは起こりえます:
 
--   The *settings.4DSettings* file is 'Read-only' (Projects only). Modifying a setting will display an alert to unlock it, if possible.
--   Two or more users attempt to modify the same settings at the same time. The settings cannot be used until the first user frees it by closing the window. (Client/server only)
+-   *settings.4DSettings* ファイルが "読み取り専用" であるとき (プロジェクトモードのみ)。 この場合に設定を変更しようとすると、(それが可能である場合には) アンロックするためのアラートが表示されます。
+-   2人以上のユーザーが同じ設定を同時に編集しようとしたとき。 最初のユーザーがウィンドウを閉じてロックを解除するまで、その設定は使用することができません。 (クライアント/サーバーモードのみ)
 
-In both cases, the settings can be opened in 'Read-only', but cannot be used until the lock is removed.
+どちらのケースにおいても、設定は "読み取り専用" として開くことはできますが、ロックが解除されるまでは使用することができません。
 
 
 
-## Customizing parameters
+## パラメーターのカスタマイズ
 
-In the Settings dialog boxes, parameters whose values have been modified appear **in bold**:
+設定ダイアログボックスでは、変更された設定内容は **太字** で表示されます:
 
 ![](../assets/en/settings/customize-settings.png)
 
-Parameters indicated as customized may have been modified directly in the dialog box, or may have been modified previously in the case of a converted project.
+ダイアログボックスで直接変更されたか、変換されたプロジェクトの場合は以前変更された設定が、カスタマイズ箇所として扱われます。
 
-A parameter still appears in bold even when its value is replaced manually with its default values. This way it is always possible to visually identify any parameters that have been customized.
+パラメーターは手作業でデフォルト値に置き換えられたときにも太字で表示されます。 このように、カスタマイズされたパラメーターはすべて目視で識別することができます。
 
-Most of the settings are applied immediately. However, a few of them (such as the Startup environment setting) only take effect when the database is restarted. In this case, a dialog box appears to inform you that the change will take effect at the next startup.
+ほとんどの設定は即座に有効になります。 しかし、(起動時モードの設定など) いくつかはデータベースが再起動されたときに有効となります。 この場合、変更した設定が次回起動時から有効になることを知らせるダイアログボックスが表示されます。
 
 
-## Resetting the settings
+## 設定のリセット
 
-To reset the parameters to their default values and remove the bold style indicating that they have been customized, click **Reset to factory settings**.
+パラメーターをデフォルト値に戻し、カスタマイズされたことを示す太字スタイルを取り除くためには、**初期設定にリセット** をクリックします.
 
-This button resets all the parameters of the current page. It becomes active when at least one parameter has been modified on the current page.
+このボタンをクリックすると、現在表示されているページの全パラメーターがリセットされます。 現在のページで最低でも一つのパラメーターが変更されると、このボタンはアクティブになります。

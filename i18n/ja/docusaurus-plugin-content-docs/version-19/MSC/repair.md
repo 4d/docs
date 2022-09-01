@@ -1,73 +1,73 @@
 ---
 id: repair
-title: Repair Page
-sidebar_label: Repair Page
+title: 修復ページ
+sidebar_label: 修復ページ
 ---
 
-This page is used to repair the data file when it has been damaged. Generally, you will only use these functions under the supervision of 4D technical teams, when anomalies have been detected while opening the application or following a [verification](verify.md).
+このページは、データファイルが損傷を受けたとき、それを修復するために使用します。 一般的にこれらの機能は、4Dの起動時や MSC による [検査](verify.md) の結果アプリケーションに損傷を見つけたときに、4D技術者の監督下で実行します。
 
-**Warning:** Each repair operation involves the duplication of the original file, which increases the size of the application folder. It is important to take this into account (especially in macOS where 4D applications appear as packages) so that the size of the application does not increase excessively. Manually removing the copies of the original file inside the package can be useful to minimize the package size.
-> Repairing is only available in maintenance mode. If you attempt to carry out this operation in standard mode, a warning dialog will inform you that the application will be closed and restarted in maintenance mode.
-> When the database is encrypted, repairing data includes decryption and encryption steps and thus, requires the current data encryption key. If no valid encryption key has already been provided, a dialog requesting the passphrase or the encryption key is displayed (see Encrypt page).
+**警告**: 修復操作は毎回オリジナルファイルのコピーを伴うため、アプリケーションフォルダーのサイズが大きくなります。 アプリケーションのサイズが過剰に増加しな いよう、これを考慮することが大切です (とくに、4Dアプリケーションがパッケージとして表示される macOS の場合)。 パッケージのサイズを小さく保つには、パッケージ内オリジナルファイルのコピーを手動で削除することも役立ちます。
+> 修復はメンテナンスモードでのみ可能です。 標準モードでこの操作を実行しようとすると、警告ダイアログが表示され、アプリケーションを終了してメンテナンスモードで再起動することを知らせます。
+> データベースが暗号化されている場合、復号化と暗号化のステップが修復過程に含まれるため、カレントデータの暗号化キーが必要になります。 有効な暗号化キーがまだ提供されていない場合、パスフレーズ、あるいは暗号化キーを要求するダイアログが表示されます (暗号化ページ参照)。
 
-## File overview
+## データファイル修復
 
-### Data file to be repaired
+### 修復するデータ
 
-Pathname of the current data file. The **[...]** button can be used to specify another data file. When you click on this button, a standard Open document dialog is displayed so that you can designate the data file to be repaired. If you perform a [standard repair](#standard-repair), you must select a data file that is compatible with the open project file. If you perform a [recover by record headers](#recover-by-record-headers) repair, you can select any data file. Once this dialog has been validated, the pathname of the file to be repaired is indicated in the window.
+カレントデータファイルのパス名。 **[...]** ボタンを使って、他のデータファイルを指定することができます。 このボタンをクリックすると標準のファイルを開くダイアログが表示され、修復するデータファイルを選択することができます。 [標準の修復](#標準の修復) を実行する場合、開かれたストラクチャーに対応するデータファイルを選択しなければなりません。 [レコードヘッダーによる再生](#レコードヘッダーによる再生) を実行する場合、どのデータファイルでも選択できます。 このダイアログを受け入れると、ウィンドウには修復対象のファイルのパス名が表示されます。
 
-### Original files backup folder
+### オリジナルをここに移動
 
-By default, the original data file will be duplicated before the repair operation. It will be placed in a subfolder named “Replaced files (repairing)” in the application folder. The second **[...]** button can be used to specify another location for the original files to be saved before repairing begins. This option can be used more particularly when repairing voluminous files while using different disks.
+デフォルトで修復処理の前に元のデータファイルが複製されます。 このファイルは、アプリケーションフォルダーの "Replaced files (repairing)" サブフォルダーに配置されます。 二つ目の **[...]** ボタンを使用して、複製ファイルの保存先を変更できます。 とくに大きなデータファイルを修復する際、コピー先を別のディスクに変更するためにこのオプションを使用します。
 
-### Repaired files
+### 修復済ファイル
 
-4D creates a new blank data file at the location of the original file. The original file is moved into the folder named "\Replaced Files (Repairing) date time" whose location is set in the "Original files backup folder" area (application folder by default). The blank file is filled with the recovered data.
+4Dは元のファイルの場所に空のデータファイルを新規作成します。 元のファイルは、"\Replaced Files (Repairing) {日付} {時刻}"という名前のフォルダーがオリジナルの移動先に指定したフォルダー内に作成され (デフォルトはアプリケーションフォルダー)、そこに移動されます。 修復されたデータは、新規作成された空のファイルに格納されます。
 
-## Standard repair
+## 標準の修復
 
-Standard repair should be chosen when only a few records or indexes are damaged (address tables are intact). The data is compacted and repaired. This type of repair can only be performed when the data and structure file match.
+少数のレコードやインデックスが損傷を受けているケース (アドレステーブルは損傷を受けていない) では、標準の修復を選択します。 データは圧縮および修復されます。 このタイプの修復をおこなうには、データファイルとストラクチャーファイルが対応していなければなりません。
 
-When the repair procedure is finished, the "Repair" page of the MSC is displayed. A message indicates if the repair was successful. If so, you can open the application immediately. ![](../assets/en/MSC/MSC_RepairOK.png)
+修復操作が完了すると、MSCの "修復" ページが表示され、修復の結果が表示されます。 修復に成功していれば、その旨のメッセージが表示されます。 その場合、アプリケーションをそのまま使い始めることができます。 ![](../assets/en/MSC/MSC_RepairOK.png)
 
-## Recover by record headers
+## レコードヘッダーによる再生
 
-Use this low-level repair option only when the data file is severely damaged and after all other solutions (restoring from a backup, standard repair) have proven to be ineffective.
+このローレベルな修復オプションは、データファイルが大きく損傷していて、バックアップの復元や標準の修復など、他の手段では回復できなかった場合にのみ使用します。
 
-4D records vary in size, so it is necessary to keep the location where they are stored on disk in a specific table, named address table, in order to find them again. The program therefore accesses the address of the record via an index and the address table. If only records or indexes are damaged, the standard repair option is usually sufficient to resolve the problem. However, when the address table itself is affected, it requires a more sophisticated recovery since it will be necessary to reconstitute it. To do this, the MSC uses the marker located in the header of each record. The markers are compared to a summary of the record, including the bulk of their information, and from which it is possible to reconstruct the address table.
+4Dのレコードはサイズが可変です。故に、そのレコードをロードするには、ディスク上のどこに格納されているか、その場所を "アドレステーブル" という専用テーブルに記録しておく必要があります。 プログラムは、インデックスやアドレステーブルを経由して、レコードのアドレスにアクセスします。 レコードやインデックスのみが損傷を受けている場合、標準の修復を使用すれば通常は問題が解決されます。 しかし、アドレステーブル自身が損傷を受けている場合には、これを再構築しなくてはならないため、より高度な修復作業が必要となります。 これをおこなうために、MSC は各レコードのヘッダーに位置するマーカーを使用します。 マーカーがレコード情報のサマリーと比較されることにより、アドレステーブルが再構築可能となります。
 
-> If you have deselected the **Records definitively deleted** option in the properties of a table in the structure, performing a recovery by header markers may cause records that were previously deleted to reappear.
+> ストラクチャーのテーブルプロパティで **レコードを完全に削除** オプションを解除していると、ヘッダーマーカーを使用した復旧によって削除したはずのレコードが復活する原因となります。
 > 
-> Recovery by headers does not take integrity constraints into account. More specifically, after this operation you may get duplicated values with unique fields or NULL values with fields declared **Never Null**.
+> ヘッダーによる再生において、整合性の制約は考慮されません。 この処理をおこなった後、重複不可フィールドに重複する値が現れたり、**NULL値を許可しない** に定義したフィールドに NULL値が現れたりするかもしれません。
 
-When you click on **Scan and repair...**, 4D performs a complete scan of the data file. When the scan is complete, the results appear in the following window:
+**スキャンおよび修復...** ボタンをクリックすると、4Dはデータファイルを完全にスキャンします。 スキャンを完了すると、結果が以下のウィンドウに表示されます:
 
 ![](../assets/en/MSC/mscrepair2.png)
-> If all the records and all the tables have been assigned, only the main area is displayed.
+> すべてのレコードおよびすべてのテーブルに割当先が見つかった場合は、メインエリアのみが表示されます。
 
-The "Records found in the data file" area includes two tables summarizing the information from the scan of the data file.
+"データファイル中で見つかったレコード" エリアには 2つのリストがあり、データスキャン結果の概要が表示されます。
 
-- The first table lists the information from the data file scan. Each row shows a group of recoverable records in the data file:
-  - The **Order** column indicates the recovery order for the group of records.
-  - The **Count** column indicates the number of the records in the table.
-  - The **Destination table** column indicates the names of tables that were automatically assigned to the groups of identified records. The names of tables assigned automatically appear in green. Groups that were not assigned, i.e. tables that could not be associated with any records appear in red.
-  - The **Recover** column lets you indicate, for each group, whether you want to recover the records. By default, this option is checked for every group with records that can be associated with a table.
+- 左のリストには、データファイルスキャンの情報が表示されます。 各行には、データファイル中の再生可能なレコードのグループが表示されます:
+  - **順番** の列には、レコードグループの再生順が表示されます。
+  - **カウント** 列には、グループに含まれるレコード数が表示されます。
+  - **割当先テーブル** 列には、識別されたレコードのグループに割り当てられたテーブルの名前が表示されます。 割り当てられたテーブルの名前は自動で緑色で表示されます。 割り当てされなかったグループ、つまりどのレコードにも関連づけることができなかったテーブルは赤色で表示されます。
+  - **再生** 列では、レコードを再生するかどうかを各グループごとに指定できます。 デフォルトで、テーブルに割り当てられるすべてのグループが選択されています。
 
-- The second table lists the tables of the project file.
+- 右側のリストには、プロジェクトファイルのテーブルが表示されます。
 
-### Manual assigning
+### 手動による割り当て
 
-If several groups of records could not be assigned to tables due to a damaged address table, you can assign them manually. To do this, first select an unassigned group of records in the first table. The "Content of the records" area then displays a preview of the contents of the first records of the group to make it easier to assign them:
+アドレステーブルが損傷を受けているため、テーブルに割り当てることのできないレコードグループがある場合、それらを手動で割り当てることができます。 これにはまず、左側のリストの中で割り当てられていないレコードグループを選択します。 グループ先頭の複数レコードの内容が "レコードの内容" エリアにプレビューされるため、それがどのテーブルのレコードか判断しやすくなります:
 
 ![](../assets/en/MSC/mscrepair3.png)
 
-Next select the table you want to assign to the group in the "Unassigned tables" table and click on the **Identify table** button. You can also assign a table using drag and drop. The group of records is then associated with the table and it will be recovered in this table. The names of tables that are assigned manually appear in black. Use the **Ignore records** button to remove the association made manually between the table and the group of records.
+次に "割り当てられていないテーブル" リストから、グループを割り当てるテーブルを選択し、**テーブルを識別** ボタンをクリックします。 割り当てのためにドラッグ＆ドロップを使用することもできます。 結果そのレコードグループは選択したテーブルに割り当てられ、そのテーブルのレコードとして再生されます。 手動で割り当てられたテーブルはリスト中黒色で表示されます。 **レコードを無視する** ボタンをクリックすると、レコードグループに対するテーブルの割り当てを手動で解除できます。
 
-## Open log file
+## ログファイルを開く
 
-After repair is completed, 4D generates a log file in the Logs folder of the project. This file allows you to view all the operations carried out. It is created in XML format and named: *ApplicationName**_Repair_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
+修復が完了すると、4D はプロジェクトの Logsフォルダーにログファイルを生成します。 このファイルを使用すると実行されたオペレーションをすべて閲覧することができます。 このファイルは XML形式で作成され、*ApplicationName_Repair_Log_yyyy-mm-dd hh-mm-ss.xml* というファイル名がつけられます。
 
-- *ApplicationName* is the name of the project file without any extension, for example "Invoices",
-- *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
+- *ApplicationName* は拡張子を除いたプロジェクトファイルの名前です (例: "Invoices" 等)
+- *yyyy-mm-dd hh-mm-ss* はファイルのタイムスタンプです。これはローカルのシステム時間でメンテナンスオペレーションが開始された時刻に基づいています (例: "2019-02-11 15-20-45")。
 
-When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
+**ログファイルを開く** ボタンをクリックすると、4Dはマシンのデフォルトブラウザーを使用して直近のログファイルを開きます。

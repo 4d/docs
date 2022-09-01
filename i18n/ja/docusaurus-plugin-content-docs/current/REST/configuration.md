@@ -1,92 +1,92 @@
 ---
 id: configuration
-title: Server Configuration
+title: サーバー設定
 ---
 
-Using standard HTTP requests, the 4D REST Server allows external applications to access the data of your application directly, *i.e.* to retrieve information about the dataclasses in your project, manipulate data, log into your web application, and much more.
+4D の RESTサーバーは、標準の HTTPリクエストを用いて外部アプリケーションがアプリケーションのデータにアクセスすることを可能にします。つまり、プロジェクトのデータクラス情報を取得したり、データを操作したり、Webアプリケーションにログインしたり、といったことが可能です。
 
-To start using the REST features, you need to start and configure the 4D REST server.
+REST機能を使い始めるまえに、まずは 4D REST サーバーの設定をおこない、これを起動させる必要があります。
 
-> - On 4D Server, opening a REST session requires that a free 4D client licence is available.<br/>
-> - On 4D single-user, you can open up to three REST sessions for testing purposes.
-> - You need to manage the [session](authUsers.md) for your requesting application.
+> - 4D Server上では、開かれる RESTセッションにつき、4D Client ライセンスが1消費されます。<br/>
+> - シングルユーザーの4D上では、テスト目的で RESTセッションを 3つ開くことができます。
+> - リクエストをおこなうアプリケーションの [セッション](authUsers.md) は別途管理する必要があります。
 
 
 
-## Starting the REST Server
+## RESTサーバーを開始する
 
-For security reasons, by default, 4D does not respond to REST requests. If you want to start the REST Server, you must check the **Expose as REST server** option in the **Web** > **Web Features** page of the structure settings in order for REST requests to be processed.
+セキュリティ上の理由により、デフォルトでは、4D は RESTリクエストに応答しません。 RESTサーバーを開始し、RESTリクエストを処理するには、**ストラクチャー設定** の **Web** ＞ **Web機能** ページにて、**RESTサーバーとして公開** オプションを有効化する必要があります。
 
 ![alt-text](../assets/en/REST/Settings.png)
 
-> REST services use the 4D HTTP server, so you need to make sure that the 4D web server is started.
+> RESTサービスは 4D の HTTPサーバーを使用するため、4D Webサーバーが開始されていることを確認してください。
 
-The warning message "Caution, check the access privileges" is displayed when you check this option to draw your attention to the fact that when REST services are activated, by default access to database objects is free as long as the REST accesses have not been configured.
+このオプションが有効化されると、「警告: アクセス権が正しく設定されているか確認してください。」という警告メッセージが表示されます。これは REST接続の認証設定がされていない限り、デフォルトではデータベースオブジェクトに自由にアクセスできてしまうためです。
 
-> You must restart the 4D application for your changes to take effect.
-
-
-## Configuring REST access
-
-By default, REST accesses are open to all users which is obviously not recommended for security reasons, and also to control client licenses usage.
-
-You can configuring REST accesses with one of the following means:
-- assigning a **Read/Write** user group to REST services in the "**Web** > **Web Features**" page of the Structure Settings;
-- writing an `On REST Authentication` database method to intercept and handle every initial REST request.
-
-> You cannot use both features simultaneously. Once an `On REST Authentication` database method has been defined, 4D fully delegates control of REST requests to it: any setting made using the "Read/Write" menu on the **Web** > **Web Features** page of the Structure Settings is ignored.
+> 変更を反映するには、4Dアプリケーションを再起動する必要があります。
 
 
-### Using the Structure Settings
+## アクセス権の設定
 
-The **Read/Write** menu in the "**Web** > **Web Features**" page of the structure settings specifies a group of 4D users that is authorized to establish the link to the 4D application using REST queries.
+デフォルトでは、REST接続はすべてのユーザーに対してオープンですが、この状態はライセンス管理上もセキュリティ上も推奨されません。
 
-By default, the menu displays `\&#060;Anyone&#062;`, which means that REST accesses are open to all users. Once you have specified a group, only a 4D user account that belongs to this group may be used to [access 4D by means of a REST request](authUsers.md). If an account is used that does not belong to this group, 4D returns an authentication error to the sender of the request.
+REST接続は次の方法で制限することができます:
+- ストラクチャー設定の "**Web** ＞ **Web機能**" ページにて、RESTサービスに割り当てる **読み込み/書き出し** ユーザーグループを設定します;
+- `On REST Authentication` データベースメソッドに、RESTの初期リクエストを処理するコードを書きます。
 
-> In order for this setting to take effect, the `On REST Authentication` database method must not be defined. If it exists, 4D ignores access settings defined in the Structure Settings.
-
-### Using the On REST Authentication database method
-The `On REST Authentication` database method provides you with a custom way of controlling the opening of REST sessions on 4D. This database method is automatically called when a new session is opened through a REST request. When a [request to open a REST session](authUsers.md) is received, the connection identifiers are provided in the header of the request. The `On REST Authentication` database method is called so that you can evaluate these identifiers. You can use the list of users for the 4D application or you can use your own table of identifiers. For more information, refer to the `On REST Authentication` database method [documentation](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.en.html).
-
+> 上に挙げた 2つの方法を同時に使用することはできません。 `On REST Authentication` データベースメソッドを定義した場合、4D は RESTリクエストの処理を同メソッドに委ねます。 つまり、ストラクチャー設定の "**Web** ＞ **Web機能**" ページにて指定した "読み込み/書き出し" の設定は無視されます。
 
 
-## Exposing tables and fields
+### ストラクチャー設定を使用する
 
-Once REST services are enabled in the 4D application, by default a REST session can access all tables and fields of the 4D database through the [datastore interface](ORDA/dsMapping.md#datastore). Thus, it can use their data. For example, if your database contains an [Employee] table, it is possible to write:
+ストラクチャー設定の "**Web** ＞ **Web機能**" ページにある **読み込み/書き出し** 設定は、RESTクエリを使って 4Dアプリケーションへのリンクを設立することのできる 4Dユーザーのグループを指定します。
+
+By default, the menu displays `\&#060;Anyone&#062;`, which means that REST accesses are open to all users. グループを指定すると、そのグループに所属する 4Dユーザーアカウントのみが [RESTリクエストを通して 4D にアクセス](authUsers.md) できるようになります。 このグループに所属していないアカウントの場合、4D はリクエストの送信者に対して認証エラーを返します。
+
+> この設定を使用するには、`On REST Authentication` データベースメソッドを定義してはいけません。 これが定義されている場合は、ストラクチャー設定にて指定したアクセス設定は無視されます。
+
+### On REST Authentication データベースメソッドを使用する
+`On REST Authentication` データベースメソッド は 4D 上で RESTセッションの開始を管理するための方法を提供します。 RESTリクエストによって新規セッションが開始される際、このデータベースメソッドは自動的に呼び出されます。 [RESTセッション開始のリクエスト](authUsers.md) を受信すると、そのリクエストヘッダーには接続の識別子が含まれています。 これらの識別子を評価するために `On REST Authentication` データベースメソッドは呼び出されます。 評価にあたっては、4Dアプリケーションのユーザーリストを使用することもできますし、独自の識別子のテーブルを使用することもできます。 詳細については `On REST Authentication` データベースメソッドの [ドキュメンテーション](https://doc.4d.com/4Dv18/4D/18/On-REST-Authentication-database-method.301-4505004.ja.html) を参照ください。
+
+
+
+## テーブルやフィールドの公開
+
+4Dアプリケーションの RESTサービスが有効化されると、[データストアインターフェース](ORDA/dsMapping.md#データストア) を通して 4Dデータベースのすべてのテーブルとフィールドおよび格納データが RESTセッションによってデフォルトでアクセス可能です。 つまり、すべてのデータにアクセス可能ということです。 たとえば、データベースに [Employee] テーブルが含まれている場合、次のように書くことができます:
 
 ```
 http://127.0.0.1:8044/rest/Employee/?$filter="salary>10000"
 
 ```
-This request will return all employees whose salary field is higher than 10000.
+このリクエストで、salary (給与) フィールドが 10000以上の社員データが取得されます。
 
-> 4D tables and/or fields that have the "Invisible" attribute are also exposed in REST by default.
+> "非表示" 属性を選択されたテーブルやフィールドも、デフォルトで REST に公開されています。
 
-If you want to customize the datastore objects accessible through REST, you must disable the exposure of each table and/or field that you want to hide. When a REST request attempts to access an unauthorized resource, 4D returns an error.
+REST 経由でアクセス可能なデータストアオブジェクトを制限するには、アクセス不可にするテーブルやフィールドについて "RESTリソースとして公開" オプションを選択解除する必要があります。 許可されていないリソースへの RESTリクエストがあった場合、4Dはエラーを返します。
 
-### Exposing tables
+### テーブルの公開
 
-By default, all tables are exposed in REST.
+デフォルトでは、すべてのテーブルが REST に公開されています。
 
-For security reasons, you may want to only expose certain tables of your datastore to REST calls. For instance, if you created a [Users] table storing user names and passwords, it would be better not to expose it.
+セキュリティ上の理由から、データベースの一部のテーブルのみを公開したい状況もあるでしょう。 たとえば、[Users] テーブルを作成し、その中にユーザー名とパスワードが保存されている場合、そのテーブルは公開しない方が賢明でしょう。
 
-To remove the REST exposure for a table:
+テーブルを公開したくない場合は:
 
-1. Display the Table Inspector in the Structure editor and select the table you want to modify.
+1. ストラクチャーエディターにて対象となるテーブルを選択し、右クリックでコンテキストメニューを開いてテーブルプロパティを選択します。
 
 2. Uncheck the **Expose as REST resource** option: ![alt-text](../assets/en/REST/table.png) Do this for each table whose exposure needs to be modified.
 
 
-### Exposing fields
+### フィールドの公開
 
-By default, all 4D database fields are exposed in REST.
+デフォルトでは、すべての 4Dデータベースフィールドが REST に公開されています。
 
-You may not want to expose certain fields of your tables to REST. For example, you may not want to expose the [Employees]Salary field.
+テーブルの一部のフィールドのみを非公開にしたい状況もあるでしょう。 たとえば、[Employees]Salary のようなフィールドは非公開の方がよいでしょう。
 
-To remove the REST exposure for a field:
+フィールドを非公開にするには:
 
-1. Display the Field Inspector in the Structure editor and select the field you want to modify.
+1. ストラクチャーエディターにて対象となるフィールドを選択し、右クリックでコンテキストメニューを開いてフィールドプロパティを選択します。
 
-2. Uncheck the **Expose as REST resource** for the field. ![alt-text](../assets/en/REST/field.png) Repeat this for each field whose exposure needs to be modified.
+2. フィールドの **RESTリソースとして公開** オプションの選択を解除します: ![alt-text](../assets/en/REST/field.png) 公開設定を変更する各フィールドに対してこの手順を繰り返します。
 
-> In order for a field to be accessible through REST, the parent table must be as well. If the parent table is not exposed, none of its fields will be, regardless of their status.
+> あるフィールドが REST を通してアクセス可能であるためには、その親テーブルも公開されている必要があります。 親テーブルが公開されていない場合、各フィールドの公開設定に関わらず、すべてのフィールドがアクセス不可になります。

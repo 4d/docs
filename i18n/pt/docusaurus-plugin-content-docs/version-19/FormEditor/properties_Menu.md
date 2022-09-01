@@ -1,6 +1,6 @@
 ---
 id: menu
-title: Menu
+title: Menú
 ---
 
 
@@ -17,7 +17,7 @@ The form menu bar will operate for both input and output forms.
 
 #### JSON Grammar
 
-| Name    | Data Type | Possible Values    |
-| ------- | --------- | ------------------ |
-| menuBar | string    | Name of a menu bar |
+| Nome    | Tipo de dados | Possible Values    |
+| ------- | ------------- | ------------------ |
+| menuBar | string        | Name of a menu bar |
 

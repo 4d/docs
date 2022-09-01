@@ -1,38 +1,38 @@
 ---
 id: overview
-title: Overview
+title: Vue d’ensemble
 ---
 
-A 4D project contains all of the source code of a 4D database application, from the database structure to the user interface, including forms, menus, user settings, or any required resources. A 4D project is primarily made of text-based files.
+Un projet 4D contient l'intégralité du code source d'une application de base de données 4D, de la structure de la base de données à l'interface utilisateur, en passant par les formulaires, les menus, les paramètres utilisateur ou n'importe quelle ressource requise. Un projet 4D est principalement constitué de fichiers texte.
 
-4D projects are created and handled using the 4D Developer application. Project files are then used to build final application deployment files, that can be opened by 4D Server or 4D Volume license (merged applications).
-
-
-## Project files
-
-4D project files are open and edited using regular 4D platform applications. Full-featured editors are available to manage files, including a structure editor, a method editor, a form editor, a menu editor...
-
-Moreover, since projects are in human-readable, plain text files (JSON, XML, etc.), they can be read or edited manually by developers, using any code editor.
+Les projets 4D sont créés et gérés à l'aide de l'application 4D Developer. Les fichiers de projet sont ensuite utilisés pour créer les fichiers de déploiement d'application finaux, qui peuvent être ouverts avec 4D Server ou une licence 4D Volume (applications fusionnées).
 
 
-## Source control
+## Fichiers du projet
 
-4D project files make it easier to program generically, create application templates, and share code.
+Les fichiers de projet 4D sont ouverts et édités à l'aide d'applications standard de la plate-forme 4D. Des éditeurs complets sont disponibles pour gérer les fichiers, y compris un éditeur de structure, un éditeur de méthode, un éditeur de formulaire, un éditeur de menu, etc.
 
-The flexibility of developing a 4D project is especially demonstrated when multiple developers need to work on the same part of an application, at the same time. 4D project files are particularly well suited to be managed by a **source control** repository (Perforce, Git, SVN, etc.), allowing development teams to take advantage of features such as:
+De plus, les projets étant des fichiers lisibles, en texte brut (JSON, XML, etc.), ils peuvent être lus ou édités manuellement par les développeurs, à l’aide de n’importe quel éditeur de code.
+
+
+## Contrôle de la source
+
+Les fichiers de projet 4D facilitent la programmation générique, la création de modèles d'application et le partage de code.
+
+La flexibilité du développement d'un projet 4D est particulièrement démontrée lorsque plusieurs développeurs doivent travailler simultanément sur la même partie d'une application. Les fichiers de projet 4D sont particulièrement bien adaptés pour être gérés par un système de **contrôle de version** (Perforce, Git, SVN, etc.), permettant aux équipes de développement de tirer parti de fonctionnalités telles que :
 
 - Versioning
-- Revision comparisons
-- Rollbacks
+- Comparaisons de révision
+- Retours en arrière (Rollbacks)
 
 
-## Working with projects
+## Travailler avec des projets
 
-You create a 4D database project by:
+Vous pouvez créer un projet de base de données 4D :
 
-- creating a new, blank project -- see [Creating a 4D project](creating.md).
-- exporting an existing 4D "binary" development to a project -- see "Export from a 4D database" on [doc.4d.com](https://doc.4d.com).
+- en créant un nouveau projet vierge - voir [Créer un projet 4D](creating.md).
+- en exportant un développement "binaire" 4D existant en projet -- voir "Exporter depuis une base 4D" sur [doc.4d.com](https://doc.4d.com).
 
-Project development is done locally, using the 4D Developer application -- see [Developing a project](developing.md). Team development interactions are handled by the source control tool.
+Le développement du projet s'effectue localement, à l'aide de l'application 4D Developer - reportez-vous à la section [Développer un projet](developing.md). Les interactions de développement d'équipe sont gérées par un outil de contrôle de version.
 
-4D projects can be compiled and easily deployed as single-user or client-server applications containing compacted versions of your project -- see [Building a project package](building.md).
+Les projets 4D peuvent être compilés et facilement déployés sur des applications en monoposte ou en client-serveur qui contiennent des versions compactées de votre projet - voir [Créer un package de projet](building.md).

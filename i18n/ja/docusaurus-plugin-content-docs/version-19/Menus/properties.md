@@ -1,171 +1,171 @@
 ---
 id: properties
-title: Menu item properties
+title: メニュープロパティ
 ---
 
-You can set various properties for menu items such as action, font style, separator lines, keyboard shortcuts or icons.
+アクション、フォントスタイルや区切り線、キーボードショートカット、アイコンなど様々なメニュー項目プロパティを設定できます。
 
-## Title
+## タイトル
 
-The **Title** property contains the label of a menu or menu item as it will be displayed on the application interface.
+**タイトル** プロパティには、アプリケーションインターフェースに表示されるメニュー/メニュー項目のラベルを指定します。
 
-In the Menu editor, you can directly enter the label as "hard coded". Or, you can enter a reference for a variable or an XLIFF element, which will facilitate the maintenance and translation of applications. You can use the following types of references:
+メニューエディターを使って、テキストリテラルを直接、ラベルとして入力することができます。 または、変数参照、xliff参照を使用することもできます。これによりアプリケーションの翻訳が容易になります。 次のの参照タイプを使用できます:
 
-- An XLIFF resource reference of the type :xliff:MyLabel. For more information about XLIFF references, refer to *XLIFF Architecture* section in *4D Design Reference*.
-- An interprocess variable name followed by a number, for example: `:<>vlang,3`. Changing the contents of this variable will modify the menu label when it is displayed. In this case, the label will call an XLIFF resource. The value contained in the `<>vlang` variable corresponds to the *id* attribute of the *group* element. The second value (3 in this example) designates the *id* attribute of the *trans-unit* element.
+- :xliff:MyLabel という形の XLIFFリソース参照。 XLIFF参照についての詳細は、*4D デザインリファレンス* の [XLIFF アーキテクチャー](https://doc.4d.com/4Dv18/4D/18/Appendix-B-XLIFF-architecture.300-4575737.ja.html) の章を参照ください。
+- `<>vlang,3` という形のインタープロセス変数名と、それに続く数値。 この変数の内容を変更すると、メニューが表示される際にラベルも変更されます。 この場合、ラベルは XLIFFリソースを呼び出します。 `<>vlang` 変数に含まれる値は *group* 要素の *id* 属性値に対応します。 二つ目の値 (例では3) は *trans-unit* 要素の *id* 属性の値を指定します。
 
-Using the 4D language, you set the title property through the *itemText* parameter of the `APPEND MENU ITEM`, `INSERT MENU ITEM`, and `SET MENU ITEM` commands.
+4Dランゲージを使う場合は、`APPEND MENU ITEM`、`INSERT MENU ITEM`、および `SET MENU ITEM` コマンドの *itemText* パラメーターでタイトルプロパティを設定します。
 
-### Using control characters
+### 制御文字の使用
 
-You can set some properties of the menu commands by using control characters (metacharacters) directly in the menu command labels. For instance, you can assign the keyboard shortcut Ctrl+G (Windows) or Command+G (macOS) for a menu command by placing the "/G" characters in the label of the menu item label.
+メニュータイトルに制御文字 (メタ文字) を直接使用し、メニューのプロパティをいくつか設定することができます。 たとえば、メニュータイトルに "/G" という文字を入れると、キーボードショートカットである Ctrl+G (Windows) または Command+G (macOS) を割り当てることができます。
 
-Control characters do not appear in the menu command labels. You should therefore avoid using them so as not to have any undesirable effects. The control characters are the following:
+制御文字は、表示されるメニューラベルには含まれません。 したがって、制御文字として利用しない場合は、これらの文字の並びをタイトルに使用しないことが推奨されます。 制御文字には次のようなものがあります:
 
-| Character   | Description                 | Usage                                                         |
-| ----------- | --------------------------- | ------------------------------------------------------------- |
-| (           | open parenthese             | Disable item                                                  |
-| <B          | less than B                 | Bold font                                                     |
-| <I          | less than I                 | Italic font                                                   |
-| <U          | less than U                 | Underline font                                                |
-| !+character | exclamation point+character | Add character as check mark (macOS); add check mark (Windows) |
-| /+character | slash+character             | Add character as shortcut                                     |
+| 文字  | 詳細               | 効果                                            |
+| --- | ---------------- | --------------------------------------------- |
+| (   | 開く括弧             | 項目を無効化                                        |
+| <B  | 小なりB             | 太字                                            |
+| <I  | 小なりI             | イタリック                                         |
+| <U  | 小なりU             | 下線                                            |
+| !文字 | エクスクラメーションマーク+文字 | 文字をチェックマークとして追加 (macOS); チェックマークを追加 (Windows) |
+| /文字 | スラッシュ+文字         | 文字をショートカットとして追加                               |
 
-## Parameter
+## 引数
 
-You can associate a custom parameter with each menu item. A menu item parameter is a character string whose contents can be freely chosen. It can be set in the Menu editor, or through the `SET MENU ITEM PARAMETER` command.
+各メニュー項目にカスタム引数を関連付けることができます。 メニュー項目の引数は、その内容を自由に設定できる文字列です。 メニュエディターで設定するほかに、`SET MENU ITEM PARAMETER` コマンドを使う方法もあります。
 
-Menu item parameters are useful with programmed management of menus, in particular when using the `Dynamic pop up menu`, `Get menu item parameter` and `Get selected menu item parameter` commands.
+メニュー項目の引数は、とくに `Dynamic pop up menu`、`Get menu item parameter`、そして `Get selected menu item parameter` コマンドを使用する際など、メニューをプログラムで管理するのに便利です。
 
-## Action
+## 動作
 
-Each menu command can have a project method or a standard action attached to it. When the menu command is chosen, 4D executes the associated standard action or project method. For example, a **Monthly Report** menu command can call a project method that prepares a monthly report from a table containing financial data. The **Cut** menu command usually calls the `cut` standard action in order to move the selection to the clipboard and erase it from the window in the foreground.
+メニューにはプロジェクトメソッドや標準アクションを割り当てることができます。 メニュー項目が選択されると、4D は割り当てられた標準アクションまたはプロジェクトメソッドを実行します。 例えば、**月次報告書** メニューコマンドを設定し、財務データを格納したテーブルをもとに月次報告書を作成するプロジェクトメソッドを呼び出すことができます。 **カット** メニューコマンドは、`cut` 標準アクションを呼び出して、選択項目をクリップボードへ移動し、それを前面にあるウインドウから消去します。
 
-If you do not assign a method or a standard action to a menu command, choosing that menu command causes 4D to exit the Application environment and go to the Design environment. If only the Application environment is available, this means quitting to the Desktop.
+標準アクションやメソッドをメニューに割り当てていない場合、そのメニューを選択すると、4D はアプリケーション環境からデザインモードに戻ります。 デザインモードに移行できない場合は、4D を終了します。
 
-Standard actions can be used to carry out various current operations linked to system functions (copy, quit, etc.) or to those of the database (add record, select all, etc.).
+標準アクションは、システム機能に関連した操作 (コピー、終了、等) や、データベースに関連した操作 (レコード追加、全選択、等) を実行するのに使用します。
 
-You can assign both a standard action and a project method to a menu command. In this case, the standard action is never executed; however, 4D uses this action to enable/disable the menu command according to the current context and to associate a specific operation with it according to the platform. When a menu command is deactivated, the associated project method cannot be executed.
+標準アクションとプロジェクトメソッドの両方をメニューに割り当てることも可能です。 この場合、標準アクションが実行されることはありません。しかし、4D はこのアクションを使用し、状況に合わせてメニューコマンドを使用可／使用不可に設定します。 メニューが使用不可の場合、割り当てられたプロジェクトメソッドは実行されません。
 
-The choice between associating a standard action or a project method with a menu command depends on the type of result desired. In principle, it is preferable to choose a standard action whenever possible since they implement optimized mechanisms, more particularly activation/deactivation according to the context.
+求める結果の種類によって、標準アクションまたはプロジェクトメソッドのいずれを割り当てるかを選択します。 原則として、標準アクションは最適化された方法で実行される (コンテキストに応じたメニューの有効/無効の自動切り替え) ため、できるだけこちらを選ぶ方が良いでしょう。
 
-### Associating a project method or a standard action
+### プロジェクトメソッドまたは標準アクションの割り当て
 
-You can assign a project method and/or a standard action to a selected menu command in the Menu editor:
+メニューエディターにて、標準アクション/プロジェクトメソッドをメニューに割り当てることができます:
 
-- **Method Name**: Select an existing project method name in the combo box. If the project method does not exist, enter its name in the "Method Name" combo box then click on the [...] button. 4D displays a project method creation dialog that is used to access the Method editor.
-- **Associated Standard Action**: Choose or write the action you want to assign in the "Associated Standard Action" combo box. You can enter any supported action and (optionally) parameter you want in the area. For a comprehensive list of standard actions, please refer to the **Standard actions** section in the *Design Reference*. **Note for macOS:** Under macOS, the custom menu commands associated with the *Quit* action are automatically placed in the application menu, in compliance with the platform interface standards.
+- **メソッド名**: 既存のプロジェクトメソッドをコンボボックスで選択します。 プロジェクトメソッドがまだ存在しない場合、"メソッド名" コンボボックスにメソッド名を入力し、[...] ボタンをクリックします。 すると、4D はメソッド作成ダイアログボックスを表示し、メソッドエディターを開きます。
+- **標準アクション**: 割り当てたいアクションを "標準アクション" コンボボックスから選択するか、記述します。 サポートされているアクションと引数 (任意) であれば、エリア内に入力することができます。 標準アクションの一覧については、*デザインリファレンス* の [標準アクション](https://doc.4d.com/4Dv18/4D/18/Standard-actions.300-4575620.ja.html) を参照してください。 **macOS に関する注記:** macOS の場合、プラットフォームインタフェース標準に合わせるために、*quit* (終了) アクションが割り当てられたカスタムメニューコマンドは自動でアプリケーションメニュー内に置かれます。
 
-Using the 4D language, you can associate a project method using the `SET MENU ITEM METHOD` command, and a standard action using the `SET MENU ITEM PROPERTY` command.
+4Dランゲージで割り当てをおこなう場合、プロジェクトメソッドには `SET MENU ITEM METHOD` コマンド、標準アクションには `SET MENU ITEM PROPERTY` コマンドを使います。
 
-### Start a new process
+### 新規プロセスで開始
 
-The **Start a New Process** option is available for menu commands associated to methods. It can be set through a check box in the Menu editor, or through the *property* parameter of the `SET MENU ITEM PROPERTY` command.
+メソッドを割り当てたメニューの場合、**新規プロセスで開始** オプションが利用可能です。 このオプションは、メニューエディターのチェックボックスによって設定するほかに、`SET MENU ITEM PROPERTY` コマンドに *property* 引数を渡して設定することもできます。
 
-When the **Start a New Process** option is enabled, a new process is created when the menu command is chosen. Normally, a method attached to a menu command executes within the current process unless you explicitly call a new process in your code. The **Start a New Process** option makes it easier to start a new process. When enabled, 4D will create a new process when the menu command is chosen.
+**新規プロセスで開始** チェックボックスを選択した場合、4D はそのメニューコマンドが選択されると新しいプロセスを作成します。 通常、メニューコマンドに割り当てたメソッドは、明示的にプログラムから新規プロセスを作成しない限り、カレントプロセスで実行されます。 **新規プロセスで開始** チェックボックスを選択すると、新規プロセスを簡単に開始することができます。 このチェックボックスを選択した場合は、このメニューコマンドを選択すると新規プロセスが作成されます。
 
-In the Process list, 4D assigns the new process a default name using the format "ML_ProcessNumber". The names of processes started from a menu are created by combining the prefix "ML_" with the process number.
+プロセスリストにおいて、4D は "ML_プロセス番号" というフォーマットのデフォルト名を新規プロセスに割り当てます。 このように、メニューから開始されたプロセスの名前は、接頭辞 "ML_" とプロセス番号を組み合わせて設定されます。
 
-### Execute without validating
+### イベントを発生させない
 
-The **Execute without validating** option is available for menu commands associated to standard actions in the Menu editor only.
+標準アクションを割り当てたメニューの場合、**イベントを発生させない** オプションがメニューエディター内で利用可能です。
 
-When this option is checked, 4D does not trigger the "validation" of the field where the cursor is located before executing the associated action. This option is mainly intended for **Edit** menu commands. By default, 4D processes and "validates" the contents of a field before executing a standard action (via a menu command or a shortcut), which has the effect of generating an `On Data Change` form event. This can disrupt the functioning of copy or paste type commands because when they are called, the `On Data Change` form event is generated unexpectedly. In this case, it is useful to check the **Execute without validating** option.
+このオプションを選択すると、4D は関連アクションを実行する前に、カーソルが置かれているフィールドの "確定 (バリデート)" をおこないません。 このオプションは主に **編集** メニューコマンドに使用されます。 デフォルトでは、4D はフィールド内容を処理し、"確定" してから、標準アクションを実行します (メニューコマンドやショートカットを使用)。これにより、`On Data Change` フォームイベントが発生します。 しかし、コピー＆ペーストタイプのコマンドの場合、コマンドを呼び出すたびに `On Data Change` フォームイベントが予想外に生成されてしまい、処理に差し支える可能性があります。 その場合は、**イベントを発生させない** オプションを選択するのが有効です。
 
-## Remote access privileges
+## アクセス権
 
-This Menu editor option allows defining a group to a menu command so that only users in that group can use the menu command from a 4D remote application (see Users and groups).
+このメニューエディターのオプションを使って、メニューコマンドにアクセスグループを設定することができます。4Dリモートアプリケーションで接続する場合、当該アクセスグループのユーザーのみがこのメニューを使うことができます (ユーザー＆グループ参照)。
 
-## Options
+## オプション
 
-### Separator lines
+### 区切り線
 
-Groups of menu commands in a menu can be divided by a separator line. This convention is useful for grouping associated menu commands by function.
+メニュー内のメニューコマンドグループは区切り線を使って分割できます。 この表示方法は、機能ごとにメニューコマンドをグループ化するのに便利です。
 
 ![](../assets/en/Menus/separator.png)
 
-You add a separator line by creating a specific menu command.
+区切り線を追加するには、専用のメニューコマンドを作成します。
 
-In the Menu editor, instead of entering the menu command’s text in the title area, you simply select the **Separator Line** option. Instead of text, a line appears in the current menu bar area. When this option is checked, the other properties have no effect. **Note:** Under macOS, if you use the dash “-” as the first character of a menu item, it will appear as a separator line.
+メニューエディターでは、メニューのタイトルエリアにテキストを入力する代わりに、**区切り線** オプションを選択します。 すると、カレントメニューバーのエリアに線が表示されます。 このオプションが選択されると、ほかのプロパティは無効になります。 **注:** macOS ではメニュー項目タイトルの一文字目を "-" にすると、その行が区切り線になります。
 
-In the 4D language, you insert a separator line by entering `-` or `(-` as itemText for `APPEND MENU ITEM`, `INSERT MENU ITEM`, or `SET MENU ITEM` commands.
+4Dランゲージを使う場合は、`APPEND MENU ITEM`、`INSERT MENU ITEM`、または `SET MENU ITEM` コマンドの itemText パラメーターに `-` あるいは `(-` を受け渡します。
 
-### Keyboard shortcuts
+### ショートカット
 
-You can add keyboard shortcuts to any menu command. If a menu command has one of these keyboard shortcuts, users will see it next to the menu command. For example, "Ctrl+C" (Windows) or "Command+C" (macOS) appears next to the **Copy** menu command in the **Edit** menu.
+メニューコマンドにはショートカットを割り当てることができます。 メニューコマンドにキーボードショートカットが割り当てられると、メニューを開いたときにそれがメニューコマンドの右に表示されます。 たとえば、編集メニューのコピーコマンドの右に "Ctrl+C" (Windows) または "Command+C" (macOS) と表示されます。
 
-You can also add the **Shift** key as well as the **Alt** key (Windows) or **Option** key (macOS) to the shortcut associated with a menu command. This multiplies the number of shortcuts that can be used. The following types of keyboard shortcuts can therefore be defined:
+ショートカットには **Shift** や **Alt** (Windows) または **Option** (macOS) キーを追加できます。 これにより使用できるショートカットの数を増やすことができます。 以下のタイプのショートカットを定義できます:
 
-- Under Windows:
-  - Ctrl+character
-  - Ctrl+Shift+character
-  - Ctrl+Alt+character
-  - Ctrl+Shift+Alt+character
+- Windows:
+  - Ctrl+文字
+  - Ctrl+Shift+文字
+  - Ctrl+Alt+文字
+  - Ctrl+Shift+Alt+文字
 
-- Under macOS:
-  - Command+character
-  - Command+Shift+character
-  - Command+Option+character
-  - Command+Shift+Option+character
+- macOS:
+  - Command+文字
+  - Command+Shift+文字
+  - Command+Option+文字
+  - Command+Shift+Option+文字
 
-> We recommend that you keep the default keyboard shortcuts that are associated with standard actions.
+> 標準アクションに割り当てられたデフォルトのキーボードショートカットは変更しないことをお勧めします。
 
-You can use any alphanumeric keys as a keyboard shortcut, except for the keys reserved by standard menu commands that appear in the **Edit** and **File** menus, and the keys reserved for 4D menu commands.
+**ファイル** や **編集** メニュー、および 4D のメニューコマンドに予約されている標準メニューのショートカットを除き、すべての英数字をキーボードショートカット文字として使用できます。
 
-These reserved key combinations are listed in the following table:
+予約されている組み合わせは以下の通りです:
 
-| Key (Windows)   | Key (macOS)        | Operation   |
-| --------------- | ------------------ | ----------- |
-| Ctrl+C          | Command+C          | Copy        |
-| Ctrl+Q          | Command+Q          | Quit        |
-| Ctrl+V          | Command+V          | Paste       |
-| Ctrl+X          | Command+X          | Cut         |
-| Ctrl+Z          | Command+Z          | Undo        |
-| Ctrl+. (period) | Command+. (period) | Stop action |
+| キー (Windows)  | キー (macOS)       | 処理   |
+| ------------- | ---------------- | ---- |
+| Ctrl+C        | Command+C        | コピー  |
+| Ctrl+Q        | Command+Q        | 終了   |
+| Ctrl+V        | Command+V        | ペースト |
+| Ctrl+X        | Command+X        | カット  |
+| Ctrl+Z        | Command+Z        | 取り消し |
+| Ctrl+. (ピリオド) | Command+. (ピリオド) | 実行停止 |
 
-To assign a keyboard shortcut in the Menu editor:
+メニューエディターでキーボードショートカットを割り当てるには:
 
-Select the menu item to which you want to assign a keyboard shortcut. Click on the [...] button to the right of the "Shortcut" entry area. The following window appears:
+キーボードショートカットを割り当てるメニュー項目を選択します。 "ショートカット" 入力エリアの [...] ボタンをクリックします。 以下のウィンドウが表示されます:
 
 ![](../assets/en/Menus/Shortcut.png)
 
-Enter the character to use then (optional) click the **Shift** and/or **Alt** (**Option**) checkboxes according to the combination desired. You can also directly press the keys that make up the desired combination (do not press the **Ctrl/Command** key).
+文字を入力し、(必要であれば) **Shift** そして **Alt** (**Option**) チェックボックスを選択します。 指定する組み合わせのキーを押すと、押したキーがウィンドウに反映されます (このときには **Ctrl/Command** キーは押しません)。
 
-> You cannot deselect the Ctrl/Command key, which is mandatory for keyboard shortcuts for menus. To start over, click on **Clear**. Click **OK** to validate the changes. The shortcut defined is shown in the "Shortcut" entry area.
+> Ctrl/Command キーの選択を解除することはできません。このキーは必須です。 内容を消去するには **クリア** をクリックします。 **OK** をクリックすると、内容を確定してウィンドウを閉じます。 指定したショートカットが "ショーとカット" 入力エリアに表示されます:
 
-To assign a keyboard shortcut using the 4D language, use the `SET ITEM SHORTCUT` command.
+4Dランゲージでキーボードショートカットを割り当てるには、`SET ITEM SHORTCUT` コマンドを使います。
 
-> An active object can also have a keyboard shortcut. If the **Ctrl/Command** key assignments conflict, the active object takes precedence.
+> アクティブオブジェクトにも、キーボードショートカットを割り当てることができます。 **Ctrl/Command** キーの割り当てが衝突した場合、アクティブオブジェクトが優先されます。
 
-### Enabled item
+### 選択可
 
-In the Menu editor, you can specify whether a menu item will appear enabled or disabled. An enabled menu command can be chosen by the user; a disabled menu command is dimmed and cannot be chosen. When the **Enabled Item** check box is unchecked, the menu command appears dimmed, indicating that it cannot be chosen.
+メニューエディターにて、メニュー項目を有効として表示するか無効として表示するかを選択できます。 ユーザーは有効なメニュー項目を選択できます。無効なメニュー項目は灰色で表示され、選択することはできません。 **選択可** チェックボックスの選択が解除されていると、メニューコマンドは灰色で表示され、選択することができません。
 
-Unless you specify otherwise, 4D automatically enables each menu item you add to a custom menu. You can disable an item in order, for example, to enable it only using programming with `ENABLE MENU ITEM` and `DISABLE MENU ITEM` commands.
+明示的に設定しない限り、4D は自動でカスタムメニュ－に追加された項目を有効にします。 たとえば、特定の条件下で `ENABLE MENU ITEM` コマンドを使用して有効化するために、初期状態を無効にすることができます (無効化には `DISABLE MENU ITEM` コマンドを使います)。
 
-### Check mark
+### チェック
 
-This Menu editor option can be used to associate a system check mark with a menu item. You can then manage the display of the check mark using language commands (`SET MENU ITEM MARK` and `Get menu item mark`).
+このオプションを使用して、メニュー項目にシステムチェックマークを関連付けることができます。 その後チェックマークの表示をランゲージコマンド (`SET MENU ITEM MARK` や `Get menu item mark`) で制御できます。
 
-Check marks are generally used for continuous action menu items and indicate that the action is currently underway.
+通常チェックマークは連続したアクションをおこなうメニュー項目に付けられ、そのアクションを現在実行中であることを示すために使用されます。
 
-### Font styles
+### フォントスタイル
 
-4D lets you customize menus by applying different font styles to the menu commands. You can customize your menus with the Bold, Italic or Underline styles through options in the Menu editor, or using the `SET MENU ITEM STYLE` language command.
+メニューコマンドにフォントスタイル (太字、下線、イタリック) を適用することができます。 メニューエディターのオプションを使用して、または `SET MENU ITEM STYLE` ランゲージコマンドを使って、メニューのスタイルを太字・イタリック・下線でカスタマイズすることができます。
 
-As a general rule, apply font styles sparingly to your menus — too many styles will be distracting to the user and give a cluttered look to your application.
-> You can also apply styles by inserting special characters in the menu title (see [Using control characters](properties.md#using-control-characters) above).
+一般的なルールとして、フォントスタイルの適用は慎重におこなってください。煩雑なスタイルの使用はユーザーの注意をそらし、アプリケーションの見た目を悪くします。
+> メニュータイトルに制御文字を挿入してスタイルを管理することもできます ([制御文字の使用](properties.md#制御文字の使用) 参照)。
 
-### Item icon
+### 項目アイコン
 
-You can associate an icon with a menu item. It will displayed directly in the menu, next to the item:
+メニュー項目にアイコンを関連付けることができます。 設定されたアイコンはメニューの左に表示されます:
 
 ![](../assets/en/Menus/iconMenu.png)
 
-To define the icon in the Menu editor, click on the "Item icon" area and select **Open** to open a picture from the disk. If you select a picture file that is not already stored in the project resources folder, it is automatically copied in that folder. Once set, the item icon appears in the preview area:
+メニューエディターでアイコンを設定するには、"項目アイコン" エリアをクリックし、**開く** を選択してディスクからピクチャーを開きます。 プロジェクトの Resources フォルダーに格納されていないピクチャーファイルを選択した場合、そのファイルは自動的に Resources フォルダーにコピーされます。 項目アイコンを設定すると、プレビューエリアに表示されます:
 
 ![](../assets/en/Menus/iconpreview.png)
 
-To remove the icon from the item, choose the **No Icon** option from the "Item Icon" area.
+項目からアイコンを取り除くには、"項目アイコン" エリアのメニューから **アイコンなし** を選択します。
 
-To define item icons using the 4D language, call the `SET MENU ITEM ICON` command.
+4Dランゲージを使って項目アイコンを設定するには、`SET MENU ITEM ICON` コマンドを使います。

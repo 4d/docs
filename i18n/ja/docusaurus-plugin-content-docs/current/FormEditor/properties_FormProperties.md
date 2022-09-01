@@ -1,178 +1,178 @@
 ---
 id: propertiesForm
-title: Form Properties
+title: フォームプロパティ
 ---
 
 ---
 
-## Color Scheme
-> Color scheme property is only applied on macOS.
+## カラースキーム
+> 配色プロパティは、macOS でのみ適用されます。
 
-This property defines the color scheme for the form. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](https://doc.4d.com/4dv19/help/command/en/page1762.html)). This can be changed for the form to one of the following two options:
+このプロパティは、フォームのカラースキームを定義します。 このプロパティは、フォームのカラースキームを定義します。 これは、フォームに対して以下の 2つのオプションのいずれかに変更することができます:
 
-*   dark - light text on a dark background
-*   light - dark text on a light background
-> A defined color scheme can not be overridden by a CSS.
+*   dark - 暗い背景に明るいテキスト
+*   light - dark text on a light background > A defined color scheme can not be overridden by a CSS.
+> ウィンドウタイトルの最大文字数は 31 です。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name        | Data Type | Possible Values |
-| ----------- | --------- | --------------- |
-| colorScheme | string    | "dark", "light" |
+| 名称          | データタイプ | とりうる値           |
+| ----------- | ------ | --------------- |
+| colorScheme | string | "dark", "light" |
 
 ---
 
 ## Pages
 
-Each form has is made of at least two pages:
+各フォームは、少なくとも 2つのページで構成されています:
 
-- a page 0 (background page)
-- a page 1 (main page)
+- ページ0 (背景ページ)
+- ページ1 (メインページ)
 
-For more information, please refer to [Form pages](forms.md#form-pages).
-
-
-#### JSON Grammar
-
-| Name  | Data Type  | Possible Values                                                          |
-| ----- | ---------- | ------------------------------------------------------------------------ |
-| pages | collection | Collection of pages (each page is an object, page 0 is the first element |
-
----
+詳細については [フォームのページ](forms.md#フォームのページ) を参照ください。
 
 
-## Form Name
+#### JSON 文法
 
-This property is the name of the form itself and is used to refer to the form by name using the 4D language. The form name must comply with the [rules specified for identifiers](Concepts/identifiers.md) in 4D.
-
-
-#### JSON Grammar
-
-The form name is defined by the name of the folder that contains the form.4Dform file. See [project architecture](Project/architecture.md#sources-folder) for more information.
+| 名称    | データタイプ     | とりうる値                                   |
+| ----- | ---------- | --------------------------------------- |
+| pages | collection | ページのコレクション (各ページはオブジェクトで、ページ0 は最初の要素です) |
 
 ---
 
-## Form Type
 
-The form type, *i.e.* its destination, defines the features that will be available to the form. For example, [markers](properties_Markers.md) can only be set for list (output) table forms.
+## フォーム名
 
-Each table in a database generally has at least two table forms. One for listing records on-screen and the other for displaying one record at a time (used for data entry and modifications):
-
-- Output form - the *output form* or *list form* displays a list of records, with a single line per record. The results of queries are shown in an output form and users can double-click a line to display the input form for that record. ![](../assets/en/FormObjects/formOutput.png)
-
-- Input form - used for data entry. It displays a single record per screen and typically has buttons for saving and canceling modifications to the record and for navigating from record to record (*i.e.*, First Record, Last Record, Previous Record, Next Record). ![](../assets/en/FormObjects/formInput.png)
+このプロパティはフォームそのものの名称で、4Dランゲージで名前によってフォームを参照するのに使用されます。 フォーム名は、4Dの [識別子の命名規則](Concepts/identifiers.md) に準じたものでなければなりません。
 
 
-Supported types depend on the form category:
+#### JSON 文法
 
-
-| Form Type                | JSON grammar     | Description                                                   | Supported with              |
-| ------------------------ | ---------------- | ------------------------------------------------------------- | --------------------------- |
-| Detail Form              | detailScreen     | A display form for data entry and modification                | Project forms - Table forms |
-| Detail Form for Printing | detailPrinter    | A printed report with one page per record, such as an invoice | Project forms - Table forms |
-| List Form                | listScreen       | A form for listing records on the screen                      | Table forms                 |
-| List Form for Printing   | listPrinter      | A printed report that list records                            | Table forms                 |
-| None                     | *no destination* | A form with no specific feature                               | Project forms - Table forms |
-
-
-#### JSON Grammar
-
-| Name        | Data Type | Possible Values                                              |
-| ----------- | --------- | ------------------------------------------------------------ |
-| destination | string    | "detailScreen", "listScreen", "detailPrinter", "listPrinter" |
+フォーム名は、form.4Dform ファイルを格納するフォルダーの名前で定義されます。 詳しくは [プロジェクトのアーキテクチャー](Project/architecture.md#sources-フォルダー) を参照ください。
 
 ---
 
-## Inherited Form Name
+## フォームタイプ
 
-This property designates the [form to inherit](forms.md#inherited-forms) in the current form.
+フォームのタイプ、*つまり* その出力先によって、当該フォームで利用できる機能が定義されます。 たとえば、[マーカー](properties_Markers.md) はリスト (出力) テーブルフォームでのみ設定できます。
 
-To inherit from a table form, set the table in the [Inherited Form Table](#inherited-form-table) property.
+データベースの各テーブルは通常、少なくとも 2つのテーブルフォームを持ちます。 1つは画面上にレコードを一覧表示するためのもので、もう 1つはレコードを 1件ずつ表示するためのものです (データ入力や修正に使用):
+
+- 出力フォーム - *出力フォーム* (または *リストフォーム*) は、レコードのリストを、1レコードにつき 1行で表示します。 クエリの結果は出力フォームに表示され、ユーザーが行をダブルクリックすると、そのレコード用に入力フォームが表示されます。 ![](../assets/en/FormObjects/formOutput.png)
+
+- 入力フォーム - データ入力に使用されます。 1つの画面に 1件のレコードが表示され、一般的には、レコードの編集を保存・キャンセルするためのボタンや、レコード間を移動するためのボタン (先頭レコード、最終レコード、前レコード、次レコード等) を備えています。 ![](../assets/en/FormObjects/formInput.png)
+
+
+サポートされるタイプは、フォームのカテゴリーによって異なります:
+
+
+| フォームタイプ    | JSON 文法          | 詳細                           | サポートされているフォーム       |
+| ---------- | ---------------- | ---------------------------- | ------------------- |
+| 詳細フォーム     | detailScreen     | データ入力・修正用の表示フォーム             | プロジェクトフォームとテーブルフォーム |
+| 印刷用詳細フォーム  | detailPrinter    | 1ページにつき 1レコードの印刷レポート (請求書など) | プロジェクトフォームとテーブルフォーム |
+| リストフォーム    | listScreen       | レコードを画面上に一覧表示するフォーム          | テーブルフォーム            |
+| 印刷用リストフォーム | listPrinter      | レコード一覧の印刷レポート                | テーブルフォーム            |
+| なし         | *no destination* | 特定の機能を持たないフォーム               | プロジェクトフォームとテーブルフォーム |
+
+
+#### JSON 文法
+
+| 名称          | データタイプ | とりうる値                                                        |
+| ----------- | ------ | ------------------------------------------------------------ |
+| destination | string | "detailScreen", "listScreen", "detailPrinter", "listPrinter" |
+
+---
+
+## 継承されたフォーム名
+
+このプロパティは、現在のフォームに [継承するフォーム](forms.md#継承フォーム) を指定します。
+
+テーブルフォームを継承する場合は、[継承されたフォームテーブル](#継承されたフォームテーブル) プロパティにテーブルを設定します。
 
 To remove inheritance, select `\&#060;None&#062;` in the Property List (or " " in JSON).
 
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name          | Data Type | Possible Values                                                                                                    |
-| ------------- | --------- | ------------------------------------------------------------------------------------------------------------------ |
-| inheritedForm | string    | Name of table or project form OR a POSIX path to a .json file describing the form OR an object describing the form |
+| 名称            | データタイプ | とりうる値                                                                    |
+| ------------- | ------ | ------------------------------------------------------------------------ |
+| inheritedForm | string | テーブルまたはプロジェクトフォームの名前, フォームを定義する .json ファイルへの POSIXパス, またはフォームを定義するオブジェクト |
 
 ---
 
 
-## Inherited Form Table
+## 継承されたフォームテーブル
 
-This property specifies the database table from which to [inherit a form](forms.md#inherited-forms) in the current form.
+このプロパティは、現在のフォームに [継承するテーブルフォーム](forms.md#継承フォーム) が属するデータベーステーブルを指定します。
 
 Set to `\&#060;None&#062;` in the Property List (or " " in JSON) to inherited from a project form.
 
 
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name               | Data Type        | Possible Values            |
-| ------------------ | ---------------- | -------------------------- |
-| inheritedFormTable | string or number | table name or table number |
-
-
----
-
-## Published as Subform
-
-For a component form to be selected as a [subform](FormObjects/subform_overview.md) in a host application, it must have been explicitly shared. When this property is selected, the form will be published in the host application.
-
-Only project forms can be specified as published subforms.
-
-
-
-#### JSON Grammar
-
-| Name   | Data Type | Possible Values |
-| ------ | --------- | --------------- |
-| shared | boolean   | true, false     |
+| 名称                 | データタイプ            | とりうる値          |
+| ------------------ | ----------------- | -------------- |
+| inheritedFormTable | string または number | テーブル名またはテーブル番号 |
 
 
 ---
 
-## Save Geometry
+## サブフォームとして公開
 
-When the option is used, if the window is opened using the `Open form window` command with the `*` parameter, several form parameters are automatically saved by 4D when the window is closed, regardless of how they were modified during the session:
+コンポーネントフォームをホストアプリケーションの [サブフォーム](FormObjects/subform_overview.md) として選択するには、明示的に共有されている必要があります。 このプロパティが選択されていると、フォームがホストアプリケーションで公開されます。
 
-*   the current page,
-*   the position, size and visibility of each form object (including the size and visibility of list box columns).
-> This option does not take into account objects generated using the `OBJECT DUPLICATE` command. In order for a user to recover their environment when using this command, the developer must repeat the sequence of creation, definition and positioning of the objects.
+公開されたサブフォームとして指定できるのは、プロジェクトフォームのみです。
 
-When this option is selected, the [Save Value](FormObjects/properties_Object.md#save-value) option is available for certain objects.
 
-#### JSON Grammar
 
-| Name             | Data Type | Possible Values |
-| ---------------- | --------- | --------------- |
-| memorizeGeometry | boolean   | true, false     |
+#### JSON 文法
 
-#### See also
-[**Save Value**](FormObjects/properties_Object.md#save-value)
+| 名称     | データタイプ  | とりうる値       |
+| ------ | ------- | ----------- |
+| shared | boolean | true, false |
 
 
 ---
 
-## Window Title
+## 配置を記憶
 
-The window title is used when the form is opened using the `Open form window` and `Open window` 4D commands in Application environment. The window title appears in the Title bar of the window.
+このオプションがチェックされていると、`Open form window` コマンドに `*` 演算子を渡して開かれたウィンドウが閉じられるとき、そのフォームの特定のプロパティ値については、それらがセッション中に変更された場合、4D によって自動的に保存されます:
 
-You can use dynamic references to set the window titles for forms, *i.e.*:
+*   カレントページ
+*   それぞれのフォームオブジェクトの配置・大きさ・表示状態 (リストボックス列のサイズと表示状態も含む)。
+> > This option does not take into account objects generated using the `OBJECT DUPLICATE` command. このコマンドを使用したときに使用環境を復元させるには、デベロッパーがオブジェクトの作成・定義・配置の手順を再現しなければなりません。
 
-*   A standard XLIFF reference stored in the Resources folder.
+このオプションが選択されているとき、一部のオブジェクトに置いては [値を記憶](FormObjects/properties_Object.md#値を記憶) のオプションが選択可能になります。
+
+#### JSON 文法
+
+| 名称               | データタイプ  | とりうる値       |
+| ---------------- | ------- | ----------- |
+| memorizeGeometry | boolean | true, false |
+
+#### 参照
+[**値を記憶**](FormObjects/properties_Object.md#save-value)
+
+
+---
+
+## ウィンドウタイトル
+
+ウィンドウタイトルは、アプリケーションモードで `Open window` や `Open form window` コマンドを用いてフォームを開く際に使用されます。 ウィンドウタイトルはウィンドウのタイトルバーに表示されます。
+
+動的参照を使用して、フォームのウィンドウタイトルを定義することもできます:
+
+*   Resourcesフォルダーに保存された、標準の XLIFF参照
 *   A table or field label: The syntax to apply is `<?[TableNum]FieldNum>` or `<?[TableName]FieldName>`.
-*   A variable or a field: The syntax to apply is `\&#060;VariableName&#062;` or `&#060;[TableName]FieldName&#062;`. The current value of the field or variable will be displayed in the window title.
+*   A variable or a field: The syntax to apply is `\&#060;VariableName&#062;` or `&#060;[TableName]FieldName&#062;`. フィールドや変数の現在の値がウィンドウタイトルとして表示されます。
 
-> The number of characters for a window title is limited to 31.
+> ウィンドウタイトルの最大文字数は 31 です。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name        | Data Type | Possible Values                                        |
-| ----------- | --------- | ------------------------------------------------------ |
-| windowTitle | string    | The name of the window as plain text or as a reference |
+| 名称          | データタイプ | とりうる値               |
+| ----------- | ------ | ------------------- |
+| windowTitle | string | テキストまたは参照としてのウィンドウ名 |
 
 

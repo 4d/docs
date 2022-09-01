@@ -1,23 +1,23 @@
 ---
 id: ruler
-title: Ruler
+title: ルーラー
 ---
 
-## Overview
+## 概要
 
-The ruler is a standard interface object used to set or get values using a cursor moved along its graduations.
+ルーラーは、カーソルを使用して目盛り上を移動することで値を選択する標準のインターフェースオブジェクトです。
 
 ![](../assets/en/FormObjects/indicator_ruler.png)
 
-You can assign its [associated variable or expression](properties_Object.md#expression-type) to an enterable area (field or variable) to store or modify the current value of the object.
+[割り当てられた変数](properties_Object.md#変数あるいは式) の値を入力エリア (フィールドまたは変数) に代入して格納したり、逆にオブジェクトの現在値を設定することもできます。
 
-For more information, please refer to [Using indicators](progressIndicator.md#using-indicatire) in the "Progress Indicator" page.
+詳細については [インジケーターの使用](progressIndicator.md#インジケーターの使用) を参照ください。
 
-### Supported Properties
+### プロパティ一覧
 
-[Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) -[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Display graduation](properties_Scale.md#display-graduation) - [Enterable](properties_Entry.md#enterable) - [Execute object method](properties_Action.md#execute-object-method) - [Expression Type](properties_Object.md#expression-type) - [Height](properties_CoordinatesAndSizing.md#height) - [Graduation step](properties_Scale.md#graduation-step) -[Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Label Location](properties_Scale.md#label-location) - [Left](properties_CoordinatesAndSizing.md#left) - [Maximum](properties_Scale.md#maximum) - [Minimum](properties_Scale.md#minimum) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Step](properties_Scale.md#step) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型) - [CSSクラス](properties_Object.md#cssクラス) - [最小](properties_Scale.md#最小) - [最大](properties_Scale.md#最大) - [目盛りのステップ](properties_Scale.md#目盛りのステップ) - [ステップ](properties_Scale.md#ステップ) - [ラベル位置](properties_Scale.md#ラベル位置) - [目盛りを表示](properties_Scale.md#目盛りを表示) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [入力可](properties_Entry.md#入力可) - [数値フォーマット](properties_Display.md#数値フォーマット) - [表示状態](properties_Display.md#表示状態) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [太字](properties_Text.md#太字) - [ヘルプTips](properties_Help.md#ヘルプtips) - [オブジェクトメソッド実行](properties_Action.md#オブジェクトメソッド実行)
 
-## See also
+## 参照
 
-- [progress indicators](progressIndicator.md)
-- [steppers](stepper.md)
+- [進捗インジケーター](progressIndicator.md)
+- [ステッパー](stepper.md)

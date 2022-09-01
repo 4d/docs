@@ -3,24 +3,24 @@ id: onWindowOpeningDenied
 title: On Window Opening Denied
 ---
 
-| Code | Can be called by                               | Definition                       |
-| ---- | ---------------------------------------------- | -------------------------------- |
-| 53   | [Web Area](../FormObjects/webArea_overview.md) | A pop-up window has been blocked |
+| Code | Puede ser llamado por                          | Definición                            |
+| ---- | ---------------------------------------------- | ------------------------------------- |
+| 53   | [Área Web](../FormObjects/webArea_overview.md) | Se ha bloqueado una ventana emergente |
 
-<details><summary>History</summary>
+<details><summary>Histórico</summary>
 
-| Version | Changes           |
-| ------- | ----------------- |
-| v19 R5  | Triggered on drop |
+| Versión | Modificaciones     |
+| ------- | ------------------ |
+| v19 R5  | Activado al soltar |
 </details>
 
-## Description
+## Descripción
 
-This event is generated when the opening of a pop-up window is blocked by the Web area. 4D Web areas do not allow the opening of pop-up windows.
+Este evento se genera cuando la apertura de una ventana emergente es bloqueada por el área web. Los áreas web de 4D no permiten la apertura de ventanas emergentes.
 
-You can find out the blocked URL using the `WA Get last filtered URL` command.
+Puede identificar la URL bloqueada utilizando el comando `WA Get last filtered URL`.
 
-This event is also triggered when a drop operation has been done in the Web area (with embedded and Wwindows system [engines](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine)) if the [Drag and drop](../FormObjects/webArea_overview.md#user-interface) option is also enabled for the area. You can accept the drop by calling:
+This event is also triggered when a drop operation has been done in the Web area (with embedded and Wwindows system [engines](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine)) if the [Drag and drop](../FormObjects/webArea_overview.md#user-interface) option is also enabled for the area. Puede aceptar la acción de soltar llamando:
 
 ```4d
 //web area object method
@@ -32,5 +32,5 @@ End if
 ```
 
 
-### See also
+### Ver también
 [`On Open External Link`](onOpenExternalLink.md)

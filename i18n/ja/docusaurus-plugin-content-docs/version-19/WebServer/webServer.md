@@ -1,61 +1,61 @@
 ---
 id: webServer
 slug: overview
-title: Overview
+title: 概要
 ---
 
-4D in local mode, 4D in remote mode and 4D Server include a web server engine (aka http server) that enables you to design and publish powerful web applications that can make the most of your 4D databases.
+4D のローカルモード、リモートモード、および 4D Server には Webサーバーエンジン (HTTPサーバー) があります。 この Webサーバーエンジンを使用して、4Dデータベースを最大限に活用できる強力な Webアプリケーションを設計・公開することができます。
 
-## Easy Monitoring
+## 簡単なモニタリング
 
-You can start or stop publication of the web application at any time. To do so, you just need to select a menu command or execute a single line of code.
+Webアプリケーションの公開は、いつでも開始または停止することができます。 メニューコマンドを選択、またはランゲージコマンドを実行するだけで、操作できます。
 
-Monitoring the 4D web server is easy and can be done using the 4D Server administration window or through [special URLs](webServerAdmin.md#administration-urls).
+4D Webサーバーの監視も簡単で、4D Server の管理ウィンドウや [専用URL](webServerAdmin.md#管理用-url) を使っておこなうことができます。
 
-## Ready-to-use
+## すぐに使えます
 
-The 4D web server automatically creates a default root folder and a default home page for an instantaneous availability.
+4D Webサーバーは、デフォルトのルートフォルダーとデフォルトのホームページを自動作成するため、すぐに利用できます。
 
-## Security
+## セキュリティ
 
-Data security is present at every stage of the 4D web server implementations. Security levels are scalable and default settings usually select the most secure options. The 4D web server security is based upon the following elements:
+データセキュリティは、4D Webサーバーの実装のすべての段階に存在します。 セキュリティレベルは調整可能で、デフォルト設定では通常、もっとも安全なオプションが選択されます。 4D Webサーバーのセキュリティは、以下の要素に基づいています:
 
-* Extended support of the [**TLS Protocol (HTTPS)**](Admin/tls.md),
+* [**TLSプロトコル (HTTPS)**](Admin/tls.md) の拡張サポート。
 
-* **Authentication**: flexible and customizable [authentication features](authentication.md) based upon built-it settings as well as fallback database methods ([`On Web Authentication`](authentication.md#on-web-authentication) for the web server and [`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method) for the REST server),
+* **認証**: ビルトインの設定および、フォールバックデータベースメソッド (Webサーバー用の [`On Web Authentication`](authentication.md#on-web-authentication)、RESTサーバー用の [`On REST Authentication`](REST/configuration.md#on-rest-authentication-データベースメソッドを使用する)) に基づく柔軟でカスタマイズ可能な [認証機能](authentication.md)
 
-* **Control of exposed contents**: only elements that you expose explicitely can be available from direct web or REST requests. You must declare:
-  * [Project methods](templates.md#allowing-project-methods) exposed through HTTP requests
-  * [ORDA functions](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) exposed through REST requests
-  * [Tables and fields](REST/configuration.md#exposing-tables-and-fields) that you don't want to be available to REST requests.
+* **公開するコンテンツの管理**: 明示的に公開した要素のみが、Web や RESTリクエストで直接利用できます。 次のものについて、宣言する必要があります:
+  * HTTPリクエストで公開する [プロジェクトメソッド](allowProject.md)
+  * RESTリクエストで公開する [ORDAのデータモデルクラス関数](ORDA/ordaClasses.md#公開vs非公開関数)
+  * RESTリクエストに公開しない [テーブルやフィールド](REST/configuration.md#テーブルやフィールドの公開) テーブルやフィールド
 
-* **Sandboxing** through the definition of a [HTML Root](webServerConfig.md#root-folder) folder by default,
+* [デフォルトHTMLルート](webServerConfig.md#ルートフォルダー) フォルダーを定義することによる **サンドボックス化**
 
-* **Control of server resource usage** (e.g. [maximum concurrent web processes](webServerConfig.html#maximum-concurrent-web-processes) option).
-> For a general overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
+* **サーバーによるリソース使用の管理** (例: [最大同時Webプロセス](webServerConfig.html#最大同時webプロセス)オプション)
+> 4Dのセキュリティ機能の概要については、[4D Security guide](https://blog.4d.com/4d-security-guide/) をご覧ください。
 
-## User Sessions
+## ユーザーセッション
 
-The 4D web server includes complete automatic features for easily managing [web sessions](sessions.md) (user sessions) based on cookies.
+4D Webサーバーには cookie を使用する、完全に自動化された [Webセッション](sessions.md) (ユーザーセッション) 管理機能があります。
 
-## Gateway to REST Requests
+## RESTリクエストへのゲートウェイ
 
-The 4D web server allows accessing data stored in your 4D applications through REST requests. REST requests provide direct access to any database operation such as adding, reading, editing, ordering, or searching data.
+4D Webサーバーにより、4Dアプリケーションに保存されているデータに RESTリクエストを通じてアクセスすることが可能になります。 RESTリクエストによって、データの追加・読み取り・編集・並べ替え・検索など、あらゆるデータベース操作に直接アクセスできます。
 
-REST requests are detailed in the [REST server](REST/gettingStarted.md) section.
+RESTリクエストの詳細については、[RESTサーバー](REST/gettingStarted.md) のセクションを参照ください。
 
-## Extended settings
+## 拡張設定
 
-The 4D web server configuration is defined through a comprehensive set of application-level settings that can also be customized for the session using the `webServer` object properties or the `WEB SET OPTION` command.
+4D Webサーバーの構成は、アプリケーションレベルの包括的な設定によって定義されます。 この設定は、`webServer` オブジェクトのプロパティまたは `WEB SET OPTION` コマンドを使用して、セッション毎にカスタマイズすることもできます。
 
-## Templates and URLs
+## テンプレートとURL
 
-The 4D web server supports access to data stored in your 4D applications through template pages and specific URLs.
+4D Webサーバーは、テンプレートページおよび専用のURLを介して、4Dアプリケーションに保存されているデータへのアクセスを提供します。
 
-* Template pages contain [special tags](templates.md) that initiate web server processing at the time when they are sent to browsers.
+* テンプレートページには、ブラウザーに送信される際に Webサーバーの処理を開始する [特別なタグ](templates.md) が含まれています。
 
-* [specific URLs](httpRequests) enable 4D to be called in order to execute any action; these URLs can also be used as form actions to trigger processing when the user posts HTML forms.
+* [専用のURL](httpRequests) は、任意のアクションを実行するために 4D を呼び出すもので、ユーザーが HTMLフォームを POST したときに処理を開始するフォームアクションとしても使用できます。
 
-## Dedicated Database Methods
+## 専用のデータベースメソッド
 
-`On Web Authentication`, `On Web Connection`, as well as `On REST Authentication` database methods are the entry points of requests in the web server; they can be used to evaluate and route any type of request.
+`On Web Authentication`、`On Web Connection`、および `On REST Authentication` データベースメソッドは、Webサーバーにおいてリクエストのエントリーポイントであり、あらゆるタイプのリクエストを評価・ルーティングするのに使用できます。

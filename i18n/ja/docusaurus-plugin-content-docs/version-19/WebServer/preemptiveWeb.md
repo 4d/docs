@@ -1,98 +1,98 @@
 ---
 id: preemptiveWeb
-title: Using preemptive web processes
+title: プリエンプティブWebプロセスの使用
 ---
 
 
-The 4D Web Server allows you to take full advantage of multi-core computers by using preemptive web processes in your compiled applications. You can configure your web-related code, including 4D tags and web database methods, to run simultaneously on as many cores as possible.
+4D Webサーバーを使って、コンパイル済みアプリケーションでプリエンプティブWebプロセスを使用することによって、マルチコアコンピューターの利点を最大限引き出すことができます。 4D変換タグや Webデータベースメソッドを含めた Web関連コードを、可能な限り多くのコアで同時に実行するよう設定することが可能です。
 
-For in-depth information on preemptive process in 4D, please refer to the *Preemptive 4D processes* section in the [*4D Language Reference*](https://doc.4d.com).
+4D のプリエンプティブプロセスについての詳細は、*ランゲージリファレンス* の [*プリエンプティブ4Dプロセス*](https://doc.4d.com) の章を参照ください。
 
-## Availability of preemptive mode for web processes
+## Webプロセスにおけるプリエンプティブモードの使用可能状況
 
-The following table indicates whether the preemptive mode is used or is available, depending on the execution context:
+実行コンテキストによって、プリエンプティブモードが使用される、または使用可能かを次の表に示します:
 
-| 4D Server           | Interpreted, project ([client connected locally](../Desktop/clientServer.md#using-4d-and-4d-server-on-the-same-machine)) | Interpreted, project (no client connected locally) or binary | Compiled      |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ | ------------- |
-| REST Server         | cooperative                                                                                                              | preemptive                                                   | preemptive    |
-| Web Server          | cooperative                                                                                                              | *web setting*                                                | *web setting* |
-| Web Services Server | cooperative                                                                                                              | *web setting*                                                | *web setting* |
-| Legacy REST         | cooperative                                                                                                              | *web setting*                                                | *web setting* |
+| 4D Server   | インタープリター ([ローカルクライアント接続](../Desktop/clientServer.md#4d-と4d-server-の同じマシン上での使用)) | インタープリター (プロジェクト (ローカルクライアント接続なし) またはバイナリ) | コンパイル済みコード |
+| ----------- | ------------------------------------------------------------------------------- | ------------------------------------------ | ---------- |
+| REST サーバー   | コオペラティブ                                                                         | プリエンプティブ                                   | プリエンプティブ   |
+| Web サーバー    | コオペラティブ                                                                         | *Web設定*                                    | *Web設定*    |
+| Webサービスサーバー | コオペラティブ                                                                         | *Web設定*                                    | *Web設定*    |
+| 旧式REST      | コオペラティブ                                                                         | *Web設定*                                    | *Web設定*    |
 
-| 4D remote/single-user | Interpreted | Compiled      |
-| --------------------- | ----------- | ------------- |
-| REST Server           | cooperative | preemptive    |
-| Web Server            | cooperative | *web setting* |
-| Web Services Server   | cooperative | *web setting* |
-| Legacy REST           | cooperative | *web setting* |
+| 4Dリモート/シングルユーザー | インタープリターコード | コンパイル済みコード |
+| --------------- | ----------- | ---------- |
+| REST サーバー       | コオペラティブ     | プリエンプティブ   |
+| Web サーバー        | コオペラティブ     | *Web設定*    |
+| Webサービスサーバー     | コオペラティブ     | *Web設定*    |
+| 旧式REST          | コオペラティブ     | *Web設定*    |
 
-- REST Server: handles [ORDA data model class functions](../REST/ClassFunctions.md)
-- Web Server: handles [web templates](templates.md), [4DACTION and database methods](httpRequests.md)
-- Web Service Server: handles SOAP requests
-- Legacy REST: direct requests to 4D methods (`/rest/{table}/{methodName}`)
-- ***web setting*** means that the preemptive mode depends on a setting value:
-  - when [**Scalable sessions**](sessions.md#enabling-sessions) option is selected, the [preemptive mode is automatically used](sessions.md#preemptive-mode) for web processes.
-  - otherwise, the [**Use preemptive processes**](webServerConfig.md#use-preemptive-processes) option is taken into account.
-  - regarding Web service processes (server or client), preemptive mode is supported at method level. You just have to select "Can be run in preemptive processes" property for published SOAP server methods (see [Publishing a Web Service with 4D](https://doc.4d.com/4Dv19/4D/19/Publishing-a-Web-Service-with-4D.300-5416868.en.html)) or proxy client methods (see [Subscribing to a Web Service in 4D](https://doc.4d.com/4Dv19/4D/19/Subscribing-to-a-Web-Service-in-4D.300-5416870.en.html)) and make sure they are confirmed thread-safe by the compiler.
+- REST サーバー: REST で呼び出された [ORDA データモデルクラス関数](../REST/ClassFunctions.md) を処理します
+- Web サーバー: [Web テンプレート](templates.md)、[4DACTION とデータベースメソッド](httpRequests.md) を処理します
+- Web サービスサーバー: SOAPリクエストを処理します
+- 旧式REST: 4D メソッドへの直りクエスト (`/rest/{table}/{methodName}`)
+- ***Web設定*** とは、プリエンプティブモード実行が設定によることを表します:
+  - [**スケーラブルセッション**](sessions.md#セッションの有効化) が選択されている場合、Webプロセスにおいて [プリエンプティブモードが自動的に使用されます](sessions.md#プリエンプティブモード)。
+  - それ以外の場合は、[**プリエンプティブプロセスを使用**](webServerConfig.md#プリエンプティブプロセスを使用) オプションが考慮されます。
+  - Webサービスプロセス (サーバーまたはクライアント) のプリエンプティブモードは、メソッドレベルでサポートされています。 公開済みの SOAPサーバーメソッド ([4Dで Web サービスを公開する](https://doc.4d.com/4Dv19/4D/19/Publishing-a-Web-Service-with-4D.300-5416868.ja.html) 参照) あるいはプロキシクライアントメソッド ([4Dから Web サービスへサブスクライブする](https://doc.4d.com/4Dv19/4D/19/Subscribing-to-a-Web-Service-in-4D.300-5416870.ja.html) 参照) の "プリエンプティブプロセスで実行可能" プロパティをチェックし、メソッドがコンパイラーによってスレッドセーフと確認されるようにします。
 
-## Writing thread-safe web server code
+## スレッドセーフなWebサーバーコードの書き方
 
-All 4D code executed by the web server must be thread-safe if you want your web processes to be run in preemptive mode. When the **Use preemptive processes** option is checked in the Settings dialog box, the following parts of the application will be automatically evaluated by the 4D compiler:
+Webプロセスをプリエンプティモードで実行するには、Webサーバーで実行されるすべての 4Dコードがスレッドセーフでなければなりません。 ストラクチャー設定ダイアログボックスにおいて **プリエンプティブプロセスを使用** オプションがチェックされている場合、アプリケーションの以下の部分が 4Dコンパイラーによって自動的に評価されます:
 
-- All web-related database methods:
+- すべての Web関連データベースメソッド:
   - [`On Web Authentication`](authentication.md#on-web-authentication)
   - [`On Web Connection`](httpRequests.md#on-web-connection)
   - [`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method)
   - [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication)
 
-- The `compiler_web` project method (regardless of its actual "Execution mode" property);
+- `compiler_web` プロジェクトメソッド (実際の "実行モード" プロパティに関わらず評価されます)
 
-- Basically any code processed by the `PROCESS 4D TAGS` command in the web context, for example through .shtml pages.
+- Webコンテキストにおいて `PROCESS 4D TAGS` コマンドによって処理される基本的にすべてのコード (.shtmlページを通して実行されるものなど)
 
-- Any project method with the "Available through 4D tags and URLS (`4DACTION`, etc.)" attribute
+- "公開オプション: 4DタグとURL (`4DACTION`)..." 属性が有効なプロジェクトメソッド。
 
-- Triggers for tables with "Expose as REST resource" attribute
+- "RESTリソースとして公開" 属性が有効なテーブルのトリガー
 
-- [ORDA data model class functions](../REST/ClassFunctions.md) called via REST
+- REST で呼び出された [ORDA データモデルクラス関数](../REST/ClassFunctions.md)
 
-- Project methods with "REST Server" property checked (legacy REST calls)
+- "REST サーバー" プロパティを選択されたプロジェクトメソッド (旧式RESTコール)
 
-For each of these methods and code parts, the compiler will check if the thread-safety rules are respected, and will return errors in case of issues. For more information about thread-safety rules, please refer to the *Writing a thread-safe method* paragraph in the *Processes* chapter of the [4D Language Reference](https://doc.4d.com) manual.
+これらそれぞれのメソッドとコードの部分について、スレッドセーフのルールが遵守されているかをコンパイラーがチェックし、問題があった場合にはエラーを返します。 スレッドセーフルールについての詳細は、[4Dランゲージリファレンス](https://doc.4d.com) マニュアルの *プロセス* の章の *スレッドセーフなメソッドの書き方* の段落を参照ください。
 
-## Thread-safety of 4D web code
+## 4D Webコードのスレッドセーフティ
 
-Most of the web-related 4D commands and functions, database methods and URLs are thread-safe and can be used in preemptive mode.
+Web関連のほとんどの 4Dコマンドや関数、データベースメソッド、そして URL がスレッドセーフとなり、プリエンプティモードで使用できます。
 
-### 4D commands and database methods
+### 4Dコマンドとデータベースメソッド
 
-All 4D web-related commands are thread-safe, *i.e.*:
+すべての Web関連コマンドはスレッドセーフです:
 
-- all commands from the *Web Server* theme,
-- all commands from the *HTTP Client* theme.
+- *Webサーバー* テーマの全コマンド
+- *HTTPクライアント* テーマの全コマンド
 
-The web-related database methods are thread-safe and can be used in preemptive mode (see below): `On Web Authentication`, `On Web Connection`, `On REST Authentication`...).
+Web関連のデータベースメソッドもスレッドセーフであり、プリエンプティモードで使用することが可能です: `On Web Authentication`, `On Web Connection`, `On REST Authentication`...)。
 
-Of course, the code executed by these methods must also be thread-safe.
+もちろん、これらのメソッドによって実行されるコードもまたスレッドセーフである必要があります。
 
-### Web Server URLs
+### WebサーバーURL
 
-The following 4D Web Server URLs are thread-safe and can be used in preemptive mode:
+以下の 4D WebサーバーURLはスレッドセーフであり、プリエンプティモードで使用可能です:
 
-- *4daction/* (the called project method must also be thread-safe)
-- *4dcgi/* (the called database methods must also be thread-safe)
+- *4daction/* (呼び出されるプロジェクトメソッドもまたスレッドセーフでなければいけません)
+- *4dcgi/* (呼び出されるデータベースメソッドもまたスレッドセーフでなければいけません)
 - *4dwebtest/*
 - *4dblank/*
 - *4dstats/*
 - *4dhtmlstats/*
 - *4dcacheclear/*
 - *rest/*
-- *4dimgfield/* (generated by `PROCESS 4D TAGS` for web request on picture fields)
-- *4dimg/* (generated by `PROCESS 4D TAGS` for web request on picture variables)
+- *4dimgfield/* (ピクチャーフィールドの Webリクエストに対し `PROCESS 4D TAGS` によって生成されます)
+- *4dimg/* (ピクチャー変数の Webリクエストに対し `PROCESS 4D TAGS` によって生成されます)
 
-### Preemptive web process icon
+### プリエンプティブWebプロセスアイコン
 
-Both the Runtime Explorer and the 4D Server administration window display a specific icon for preemptive web processes:
+ランタイムエクスプローラーと 4D Server管理ウィンドウの両方において、プリエンプティブな Webプロセスに対し専用アイコンが表示されるようになりました:
 
-| Process type          | Icon                                        |
-| --------------------- | ------------------------------------------- |
-| Preemptive web method | ![](../assets/en/WebServer/processIcon.png) |
+| プロセスタイプ         | アイコン                                        |
+| --------------- | ------------------------------------------- |
+| プリエンプティブWebメソッド | ![](../assets/en/WebServer/processIcon.png) |

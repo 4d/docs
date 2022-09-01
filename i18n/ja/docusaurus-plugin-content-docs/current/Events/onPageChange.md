@@ -3,17 +3,17 @@ id: onPageChange
 title: On Page Change
 ---
 
-| Code | Can be called by | Definition                              |
-| ---- | ---------------- | --------------------------------------- |
-| 56   | Form             | The current page of the form is changed |
+| コード | 呼び出し元 | 定義                  |
+| --- | ----- | ------------------- |
+| 56  | フォーム  | フォーム中のカレントページが変更された |
 
 
-## Description
+## 詳細
 
-This event is only available at the form level (it is called in the form method). It is generated each time the current page of the form changes (following a call to the `FORM GOTO PAGE` command or a standard navigation action).
+このイベントは、フォームレベルでのみ利用できます (フォームメソッド内でのみ使用します)。 このイベントは、(`FORM GOTO PAGE` コマンドの呼び出しや標準ナビゲーションアクションに伴い) フォームのカレントページが変更されるたびに生成されます。
 
-Note that it is generated after the page is fully loaded, i.e. once all the objects it contains are initialized, including [Web areas](FormObjects/webArea_overview.md).
+ページが完全にロードされた後 (つまり、([Webエリア](FormObjects/webArea_overview.md) を含む) すべてのオブジェクトが初期化された後) に呼び出されることに留意してください。
 
-> The only exception is 4D View Pro areas, for which you need to call the [On VP Ready](onVpReady.md) specific event.
+> 唯一の例外は 4D View Proエリアで、その場合は専用の [On VP Ready](onVpReady.md) イベントを呼び出す必要があります。
 
-The `On Page Change` event is useful for executing code that requires all objects to be initialized beforehand. You can also use it to optimize the application by executing code (for example, a search) only after a specific page of the form is displayed and not just as soon as page 1 is loaded. If the user does not go to this page, the code is not executed.
+`On Page Change` イベントは、すべてのオブジェクトが初期化済みの状態で実行する必要のあるコードがあるときに有用です。 また、フォームのページ1 がロードされたときにすべてのコードを実行するのではなく、特定のページが開かれたときにのみ (検索などの) コードを実行するようにして、アプリケーションを最適化できます。 ユーザーがそのページを開かなければ、コードは実行されません。

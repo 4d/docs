@@ -5,54 +5,54 @@ title: '$filter'
 
 
  
-Allows to query the data in a dataclass or method *(e.g.*, `$filter="firstName!='' AND salary>30000"`)
+Permet de rechercher les données d'une dataclass ou d'une méthode (par exemple, `$filter="firstName!='' AND salary>30000"`)
 
 
 ## Description
 
-This parameter allows you to define the filter for your dataclass or method.
+Ce paramètre vous permet de définir le filtre de votre dataclass ou de votre méthode.
 
-### Using a simple filter
+### Utiliser un filtre simple
 
-A filter is composed of the following elements:
+Un filtre est composé des éléments suivants :
 
-**{attribute} {comparator} {value}**
+**{attribut} {comparateur} {valeur}**
 
-For example: `$filter="firstName=john"` where `firstName` is the **attribute**, `=` is the **comparator** and `john` is the **value**.
+Par exemple : `$filter="firstName=john"` où `firstName` est l'**attribut**, `=` est le **comparateur** et `john` est la **valeur**.
 
-### Using a complex filter
+### Utiliser un filtre complexe
 
-A more compex filter is composed of the following elements, which joins two queries:
+Un filtre plus complexe est composé des éléments suivants, qui joint deux requêtes :
 
-**{attribute} {comparator} {value} {AND/OR/EXCEPT} {attribute} {comparator} {value}**
+**{attribut} {comparateur} {valeur} {AND/OR/EXCEPT} {attribut} {comparateur} {valeur}**
 
 
-For example: `$filter="firstName=john AND salary>20000"` where `firstName` and `salary` are attributes in the Employee dataclass.
+Par exemple : `$filter="firstName=john AND salary>20000"` où `firstName` et `salary` sont les attributs de la dataclasse "Employee".
 
-### Using the params property
+### Utiliser la propriété params
 
-You can also use 4D's params property.
+Vous pouvez également utiliser la propriété params de 4D.
 
-**{attribute} {comparator} {placeholder} {AND/OR/EXCEPT} {attribute} {comparator} {placeholder}&$params='["{value1}","{value2}"]"'**
+**{attribut} {comparateur} {placeholder} {AND/OR/EXCEPT} {attribut} {comparateur} {placeholder}&$params='["{value1}","{value2}"]"'**
 
-For example: `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'` where firstName and salary are attributes in the Employee dataclass.
+Par exemple : `$filter="firstName=:1 AND salary>:2"&$params='["john",20000]'"` où firstName et salary sont les attributs de la dataclass "Employee".
 
-For more information regarding how to query data in 4D, refer to the [dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.en.html) documentation.
-> When inserting quotes (') or double quotes ("), you must escape them using using their character code:
+Pour plus d'informations sur la façon de rechercher des données dans 4D, reportez-vous à la documentation de [dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.en.html).
+> Lorsque vous insérez des guillemets (') ou des guillemets doubles ("), vous devez les échapper en utilisant leur code de caractère :
 > 
 > <li>Quotes ('): \u0027</li>
-  <li>Double quotes ("): \u0022</li>
+  <li>Guillemets doubles ("): \u0022</li>
 > 
-> For example, you can write the following when passing a value with a quote when using the *params* property:  
+> Par exemple, vous pouvez écrire ce qui suit lors du passage d'une valeur avec un guillemet lors de l'utilisation de la propriété *params* :  
 > `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
 > 
 > If you pass the value directly, you can write the following: `http://127.0.0.1:8081/rest/Person/?$filter="lastName=O'Reilly"`
 
-## Attribute
+## Attribut
 
-If the attribute is in the same dataclass, you can just pass it directly (*e.g.*, `firstName`). However, if you want to query another dataclass, you must include the relation attribute name plus the attribute name, i.e. the path (*e.g.*, employer.name). The attribute name is case-sensitive (`firstName` is not equal to `FirstName`).
+Si l'attribut se trouve dans la même dataclass, vous pouvez simplement le passer directement (par exemple, `firstName`). Cependant, si vous souhaitez lancer une requête dans une autre dataclass, vous devez inclure le nom de l'attribut relationnel et le nom d'attribut, c'est-à-dire le chemin d'accès (par exemple, employeur.nom). Le nom d'attribut est sensible à la casse (`firstName` n'est pas égal à `FirstName`).
 
-You can also query attributes of type Object by using dot-notation. For example, if you have an attribute whose name is "objAttribute" with the following structure:
+Vous pouvez également rechercher des attributs de type Objet en utilisant la notation par points. Par exemple, si vous avez un attribut dont le nom est "objAttribute" avec la structure suivante :
 
 ```
 {
@@ -62,40 +62,40 @@ You can also query attributes of type Object by using dot-notation. For example,
 }
 ```
 
-You can search in the object by writing the following:
+Vous pouvez rechercher dans l'objet en écrivant ce qui suit :
 
 `GET  /rest/Person/?filter="objAttribute.prop2 == 9181"`
 
-## Comparator
+## Comparateur
 
-The comparator must be one of the following values:
+Le comparateur doit être l'une des valeurs suivantes :
 
-| Comparator | Description              |
-| ---------- | ------------------------ |
-| =          | equals to                |
-| !=         | not equal to             |
-| >          | greater than             |
-| >=         | greater than or equal to |
-| <          | less than                |
-| <=         | less than or equal to    |
-| begin      | begins with              |
+| Comparateur | Description         |
+| ----------- | ------------------- |
+| =           | est égal à          |
+| !=          | différent de        |
+| >           | supérieur à         |
+| >=          | supérieur ou égal à |
+|             | inférieur à         |
+| <=          | inférieur ou égal à |
+| begin       | commence avec       |
 
-## Examples
+## Exemples
 
-In the following example, we look for all employees whose last name begins with a "j":
+Dans l'exemple suivant, nous recherchons tous les employés dont le nom de famille commence par un "j" :
 
 ```
  GET  /rest/Employee?$filter="lastName begin j"
 ```
 
-In this example, we search the Employee dataclass for all employees whose salary is greater than 20,000 and who do not work for a company named Acme:
+Dans cet exemple, nous recherchons dans la dataclass "Employee" tous les employés d'une entreprise autre que Acmedont et dont le salaire est supérieur à 20 000 :
 
 ```
  GET  /rest/Employee?$filter="salary>20000 AND  
  employer.name!=acme"&$orderby="lastName,firstName"
 ```
 
-In this example, we search the Person dataclass for all the people whose number property in the anotherobj attribute of type Object is greater than 50:
+Dans cet exemple, nous recherchons dans la dataclass "Person" toutes les personnes dont la propriété numérique, de l'attribut anotherobj de type Objet, est supérieure à 50 :
 
 ```
  GET  /rest/Person/?filter="anotherobj.mynum > 50"

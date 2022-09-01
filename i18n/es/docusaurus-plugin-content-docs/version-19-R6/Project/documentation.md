@@ -1,50 +1,50 @@
 ---
 id: documentation
-title: Documenting a project
+title: Documentar un proyecto
 ---
 
 
 
-In application projects, you can document your methods as well as your forms, tables, or fields. Creating documentation is particularly appropriate for projects being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the application.
+En los proyectos aplicación, puede documentar sus métodos así como sus formularios, tablas o campos. La creación de documentación es especialmente apropiada para proyectos desarrollados por varios programadores y, en general, es una buena práctica de programación. La documentación puede contener una descripción de un elemento, así como cualquier información necesaria para entender cómo funciona el elemento en la aplicación.
 
-The following project elements accept documentation:
+Los siguientes elementos del proyecto aceptan la documentación:
 
-- Methods (database methods, component methods, project methods, form methods, 4D Mobile methods, triggers, and classes)
-- Forms
-- Tables and Fields
+- Métodos (métodos base, métodos componente, métodos proyecto, métodos formulario, métodos 4D Mobile, triggers y clases)
+- Formularios
+- Tablas y campos
 
-Your documentation files are written in Markdown syntax (.md files) using any editor that supports Markdown. They are stored as independant files within your project folder.
+Sus archivos de documentación se escriben en la sintaxis Markdown (archivos .md) utilizando cualquier editor que soporte el Markdown. Se almacenan como archivos independientes dentro de la carpeta Proyecto.
 
-Documentation is displayed in the preview area (right-side panel) of the Explorer:
+La documentación se muestra en el área de vista previa (panel lateral derecho) del Explorador:
 
 ![](../assets/en/Project/explorer_Doc.png)
 
-It can also be partially exposed as [code editor tips](#viewing-documentation-in-the-code-editor).
+También se puede exponer parcialmente como [consejos del editor de código](#viewing-documentation-in-the-code-editor).
 
-## Documentation files
+## Archivos documentación
 
-### Documentation file name
+### Nombre del archivo de documentación
 
-Documentation files have the same name as their attached element, with the ".md" extension. For example, the documentation file attached to the `myMethod.4dm` project method will be named `myMethod.md`.
+Los archivos de documentación tienen el mismo nombre que su elemento adjunto, con la extensión ".md". Por ejemplo, el archivo de documentación adjunto al método proyecto `myMethod.4dm` se llamará `myMethod.md`.
 
-In the Explorer, 4D automatically displays the documentation file with the same name as the selected element (see below).
+En el Explorador, 4D muestra automáticamente el archivo de documentación con el mismo nombre que el elemento seleccionado (ver abajo).
 
-### Documentation file architecture
+### Arquitectura de los archivos de documentación
 
-All documentation files are stored in the `Documentation` folder, located at the first level of the package folder.
+Todos los archivos de documentación se almacenan en la carpeta `Documentación`, situada en el primer nivel de la carpeta Package.
 
-The `Documentation` folder architecture is the following:
+La arquitectura de la carpeta `Documentation` es la siguiente:
 
 - `Documentation`
-  - `Classes`
+  - `Clases`
     - myClass.md
   - `DatabaseMethods`
     - onStartup.md
     - ...
-  - `Forms`
+  - `Formularios`
     - loginDial.md
     - ...
-  - `Methods`
+  - `Métodos`
     - myMethod.md
     - ...
   - `TableForms`
@@ -56,45 +56,45 @@ The `Documentation` folder architecture is the following:
     - table1.md
     - ...
 
-- A project form and its project form method share the same documentation file for form and method.
-- A table form and its table form method share the same documentation file for form and method.
+- Un formulario proyecto y su método de formulario proyecto comparten el mismo archivo de documentación para el formulario y el método.
+- Un formulario tabla y su método de formulario tabla comparten el mismo archivo de documentación para el formulario y el método.
 
-> Renaming or deleting a documented element in your project will also rename or delete the element's associated Markdown file.
+> Renombrar o eliminar un elemento documentado en su proyecto también renombrará o eliminará el archivo Markdown asociado al elemento.
 
-## Documentation in the Explorer
+## Documentación en el Explorador
 
-### Viewing documentation
+### Ver la documentación
 
-To view documentation in the Explorer window:
+Para ver la documentación en la ventana del Explorador:
 
-1. Make sure the preview area is displayed.
-2. Select the documented element in the Explorer list.
-3. Click the **Documentation** button located below the preview area.
+1. Asegúrese de que se muestra el área de vista previa.
+2. Seleccione el elemento documentado en la lista del Explorador.
+3. Haga clic en el botón **Documentation** situado debajo del área de vista previa.
 
 ![](../assets/en/Project/comments-explo2.png)
 
-- If no documentation file was found for the selected element, a **Create** button is displayed (see below).
+- Si no se ha encontrado ningún archivo de documentación para el elemento seleccionado, se muestra un botón **Crear** (ver más abajo).
 
-- Otherwise, if a documentation file exists for the selected element, the contents are displayed in the area. The contents are not directly editable in the pane.
+- De lo contrario, si existe un archivo de documentación para el elemento seleccionado, el contenido se muestra en el área. El contenido no se puede editar directamente en el panel.
 
-### Editing documentation file
+### Modificar el archivo de documentación
 
-You can create and/or edit a Markdown documentation file from the Explorer window for the selected element.
+Puede crear y/o editar un archivo de documentación Markdown desde la ventana del Explorador para el elemento seleccionado.
 
-If there is no documentation file for the selected element, you can:
+Si no existe un archivo de documentación para el elemento seleccionado, puede:
 
-- click on the **Create** button in the `Documentation` pane or,
-- choose the **Edit Documentation...** option in the contextual menu or options menu of the Explorer.
+- haga clic en el botón **Crear** en el panel `Documentation` o,
+- elija la opción **Modificar la documentación...** en el menú contextual o el menú de opciones del Explorador.
 
 ![](../assets/en/Project/comments-explo3.png)
 
-4D automatically creates an appropriately named .md file with a basic template at the relevant location and opens it with your default Markdown editor.
+4D crea automáticamente un archivo .md con el nombre adecuado y una plantilla básica en la ubicación correspondiente y lo abre con su editor Markdown predeterminado.
 
-If a documentation file already exists for the selected element, you can open it with your Markdown editor by choosing the **Edit Documentation...** option in the contextual menu or options menu of the Explorer.
+Si ya existe un archivo de documentación para el elemento seleccionado, puede abrirlo con su editor de Markdown eligiendo la opción **Modificar la documentación...** del menú contextual o del menú de opciones del Explorador.
 
-## Viewing documentation in the code editor
+## Visualizar la documentación en el editor de código
 
-The 4D code editor displays a part of a method's documentation in its help tip.
+El editor de código 4D muestra una parte de la documentación de un método en su consejo de ayuda.
 
 ![](../assets/en/Project/codeEditor_Comments.png)
 
@@ -102,31 +102,31 @@ If a file named `\&#060;MethodName&#062;.md` exists in `\&#060;package&#062;/doc
 
 - Any text entered in an HTML `comment` tag (*\<!-- command documentation -->*) at the top of the markdown file.
 
-- Or, if no html `comment` tag is used, the first sentence after a `# Description` tag of the markdown file.  
-  In this case, the first line contains the **prototype** of the method, automatically generated by the 4D code parser.
+- O, si no se utiliza la etiqueta de `comentario` html, la primera frase después de una etiqueta `# Description` del archivo markdown.  
+  En este caso, la primera línea contiene el **prototipo** del método, generado automáticamente por el analizador de código de 4D.
 
- > Otherwise, the code editor displays [the block comment at the top of the method code](https://doc.4d.com/4Dv18R2/4D/18-R2/Writing-a-method.300-4824019.en.html#4618226).
+ > En caso contrario, el editor de código muestra [el comentario del bloque en la parte superior del código del método](https://doc.4d.com/4Dv18R2/4D/18-R2/Writing-a-method.300-4824019.en.html#4618226).
 
-## Documentation file definition
+## Definición del archivo de documentación
 
-4D uses a basic template to create new documentation files. This template suggests specific features that allow you to [display information in the code editor](#viewing-documentation-in-the-code-editor).
+4D utiliza una plantilla básica para crear nuevos archivos de documentación. Esta plantilla sugiere las funcionalidades específicas que permiten [mostrar la información en el editor de código](#viewing-documentation-in-the-code-editor).
 
-However, you can use any [supported Markdown tags](#supported-markdown).
+Sin embargo, puede utilizar todas las [etiquetas Markdown soportadas](#supported-markdown).
 
-New documentation files are created with the following default contents:
+Los nuevos archivos de documentación se crean con el siguiente contenido por defecto:
 
 ![](../assets/en/Project/comments-explo4.png)
 
-| Line                                                | Description                                                                                                                                          |
-| --------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| "\<!-- Type your summary here -->"       | HTML comment. Used in priority as the method description in the [code editor tips](#viewing-documentation-in-the-code-editor)                        |
-| ## Description                                     | Heading level 2 in Markdown. The first sentence after this tag is used as the method description in the code editor tips if HTML comment is not used |
-| ## Example                                         | Heading level 2, you can use this area to show sample code                                                                                           |
-| \``` 4D <br/>Type your example here \` `` | Used to format 4D code examples (uses highlight.js library)                                                                                          |
+| Línea                                               | Descripción                                                                                                                                                                                 |
+| --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "\<!-- Type your summary here -->"       | Comentario HTML. Se utiliza prioritariamente como descripción del método en los [consejos del editor de código](#viewing-documentation-in-the-code-editor)                                  |
+| ## Description                                     | Título de nivel 2 en Markdown. La primera frase después de esta etiqueta se utiliza como descripción del método en las sugerencias del editor de código si no se utiliza el comentario HTML |
+| ## Ejemplo                                         | Título de nivel 2, puede utilizar esta área para mostrar un ejemplo de código                                                                                                               |
+| \``` 4D <br/>Digite su ejemplo aquí \` `` | Se utiliza para dar formato a los ejemplos de código 4D (utiliza la librería highlight.js)                                                                                                  |
 
-### Supported Markdown
+### Markdown soportado
 
-- The title tag is supported:
+- La etiqueta del título es soportada:
 
 ```
 # Title 1
@@ -134,7 +134,7 @@ New documentation files are created with the following default contents:
 ### Title 3
 ```
 
-- The style tags (italic, bold, strikethrough) are supported:
+- Las etiquetas de estilo (cursiva, negrita, tachado) son compatibles:
 
 ```
 _italic_
@@ -143,14 +143,14 @@ _italic_
 ~~strikethrough~~
 ```
 
-- The code block tag (\```4d ... ```) is supported with 4D code highlight:
+- La etiqueta de bloque de código (\``4d ... ``) es compatible con el resaltado del código 4D:
 
  \``` 4d  
 C_TEXT($txt)  
 $txt:="Hello world!"  
 \` ``
 
-- The table tag is supported:
+- La etiqueta de la tabla es soportada:
 
 ```
 | Parameter | Type   | Description  |
@@ -159,7 +159,7 @@ $txt:="Hello world!"
 | toolbar   | String |Toolbar name  |
 ```
 
-- The link tag is supported:
+- La etiqueta del enlace es soportada:
 
 ```
 // Case 1
@@ -171,7 +171,7 @@ The [documentation](https://doc.4d.com) of the command ....
 [1]: https://blog.4d.com
 ```
 
-- The image tags are supported:
+- Las etiquetas de imagen son soportadas:
 
 ```
 ![image info](pictures/image.png)
@@ -181,16 +181,16 @@ The [documentation](https://doc.4d.com) of the command ....
 [![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
 ```
 
-[![logo 4D blog with link](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
+[![logo blog 4D con enlace](https://blog.4d.com/wp-content/uploads/2016/09/logoOrignal-1.png "4D blog logo")](https://blog.4d.com)
 
-> For more information, see the [GitHub Markdown guide](https://guides.github.com/features/mastering-markdown/).
+> Para más información, consulte la [guía Markdown de GitHub](https://guides.github.com/features/mastering-markdown/).
 
-## Example
+## Ejemplo
 
-In the `WP SwitchToolbar.md` file, you can write:
+En el archivo `WP SwitchToolbar.md`, puede escribir:
 
 ```4d
-<!-- This method returns a different logo depending on the size parameter -->
+<!-- Este método devuelve un logotipo diferente en función del parámetro de tamaño -->
 
 
 GetLogo (size) -> logo
@@ -204,15 +204,15 @@ GetLogo (size) -> logo
 
 ## Description
 
-This method returns a logo of a specific size, depending on the value of the *size* parameter value.
-1 = smallest size, 5 = largest size.
+Este método devuelve un logotipo diferente en función del parámetro *size*.
+1 = tamaño más pequeño, 5 = tamaño más grande.
 
-## Example
+## Ejemplo
 
 C_PICTURE($logo)
 C_LONGINT($size)
 
-//Get the largest logo
+//Obtener el logo más grande
 $logo:=GetLogo(5)
 ```
 

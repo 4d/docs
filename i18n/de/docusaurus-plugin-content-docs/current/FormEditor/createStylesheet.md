@@ -144,14 +144,14 @@ Specify the attribute within brackets, then in curly braces, declare the style(s
 
 #### Supported syntaxes
 
-| Syntax                    | Description                                                                                             |
+| Syntax                    | Beschreibung                                                                                            |
 | ------------------------- | ------------------------------------------------------------------------------------------------------- |
 | [attribute]               | matches objects with the `attribute`                                                                    |
 | [attribute="value"]       | matches objects with the `attribute` value containing exactly the specified "value"                     |
 | [attribute~="value"]      | matches objects with the `attribute` value containing the "value" among a space-separated list of words |
 | [attribute&#124;="value"] | matches objects with an `attribute` whose value starts with "value"                                     |
 
-#### Examples
+#### Beispiele
 
 All objects with the `borderStyle` attribute will have purple lines:
 
@@ -211,7 +211,7 @@ Available media feature expressions:
 
 > Color schemes are only supported on macOS.
 
-##### Example
+##### Beispiel
 
 This CSS defines a color combination for text and text background in the light scheme (default) and another combination when the dark scheme is selected:
 
@@ -235,7 +235,7 @@ This CSS defines a color combination for text and text background in the light s
 
 The majority of form object attributes can be defined within a style sheet, except the following attributes:
  - `method`
- - `type`
+ - `typ`
  - `class`
  - `event`
  - `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (list type)
@@ -275,7 +275,7 @@ icon: url("edit.png"); /* relative path to the form file */
   * Hexa value: `fill: #FF0000;`
   * the `rgb()` function: `fill:rgb(255,0,0)`
 
-* If a string uses forbidden characters in CSS, you can surround the string with simple or double quotes. For example:
+* If a string uses forbidden characters in CSS, you can surround the string with simple or double quotes. Beispiel:
   * a xliff reference: `tooltip: ":xliff:CommonMenuFile";`
   * a datasource with a field expression: `dataSource: "[Table_1:1]ID:1";`
 
@@ -289,13 +289,13 @@ If an attribute is defined in the JSON form description and a style sheet, 4D wi
 
 To override this behavior, the style value must be followed with an `!important` declaration.
 
-**Example 1:**
+**Beispiel 1:**
 
 | JSON form description | Style Sheet   | 4D displays |
 | --------------------- | ------------- | ----------- |
 | `"text": "Button",`   | `text: Edit;` | `"Button"`  |
 
-**Example 2:**
+**Beispiel 2:**
 
 | JSON form description | Style Sheet              | 4D displays |
 | --------------------- | ------------------------ | ----------- |

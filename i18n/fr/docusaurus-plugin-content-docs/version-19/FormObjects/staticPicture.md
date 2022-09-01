@@ -1,26 +1,26 @@
 ---
 id: staticPicture
-title: Static picture
+title: Image statique
 ---
 
 
-Static pictures are [static objects](formObjects_overview.md#active-and-static-objects) that can be used for various purposes in 4D forms, including decoration, background, or user interface:
+Les images statiques sont des [objets statiques](formObjects_overview.md#active-and-static-objects) pouvant être utilisées à des fins diverses dans les formulaires 4D, notamment comme décor, arrière-plan ou interface utilisateur :
 
 ![](../assets/en/FormObjects/StaticPict.png)
 
-Static pictures are stored outside the forms and inserted by reference. In the form editor, static picture objects are created by copy/paste or drag and drop operations.
+Les images statiques sont stockées à l’extérieur des formulaires et insérées par référence. Dans l'éditeur de formules, les objets image statique sont créées par copier-coller ou par glisser-déposer.
 
-> If you place a static picture on page 0 of a multi-page form, it will appear automatically as a background element on all pages. You can also include it in an inherited form, applied in the background of other different forms. Either way, your application will run faster than if the picture was pasted into each page.
+> Si vous placez une image statique dans la page 0 d’un formulaire multi-pages, elle apparaîtra comme élément d’arrière-plan de toutes les pages. Vous pouvez également l’inclure dans un formulaire hérité, qui s'applique à l'arrière-plan de différents autres formulaires. Dans les deux cas, votre application s’exécutera plus rapidement.
 
-## Format and location
+## Format et emplacement
 
-The original picture must be stored in a format managed natively by 4D (4D recognizes the main picture formats: JPEG, PNG, BMP, SVG, GIF, etc.).
+L'image d'origine doit être stockée dans un format géré nativement par 4D (4D reconnaît les principaux formats d'image : JPEG, PNG, BMP, SVG, GIF, etc.).
 
-Two main locations can be used for static picture path:
+Deux emplacements principaux peuvent être utilisés pour le chemin d'image statique :
 
 - in the **Resources** folder of the project. Appropriate when you want to share static pictures between several forms in the project. In this case, the Pathname is in the "/RESOURCES/\<picture path\>".
-- in an image folder (e.g. named **Images**) within the form folder. Appropriate when the static pictures are used only in the form and/or yon want to be able to move or duplicate the whole form within the project or different projects. In this case, the Pathname is "<\picture path\>" and is resolved from the root of the form folder.
+- dans un dossier d'images (nommé **Images** par exemple) dans le dossier du formulaire. Convient lorsque les images statiques sont utilisées uniquement dans le formulaire et/ou lorsque vous souhaitez pouvoir déplacer ou dupliquer le formulaire entier dans un ou plusieurs projets. Dans ce cas, le chemin d'accès est "<\picture path\>" et est résolu à partir de la racine du dossier du formulaire.
 
-## Supported Properties
+## Propriétés prises en charge
 
-[Bottom](properties_CoordinatesAndSizing.md#bottom) - [CSS Class](properties_Object.md#css-class) - [Display](properties_Picture.md#display) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Pathname](properties_Picture.md#pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility)  - [Width](properties_CoordinatesAndSizing.md#width)
+[Bas](properties_CoordinatesAndSizing.md#bottom) - [CSS Class](properties_Object.md#css-class) - [Affichage](properties_Picture.md#display) - [Hauteur](properties_CoordinatesAndSizing.md#height) - [Dim. horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Gauche](properties_CoordinatesAndSizing.md#left) - [Nom](properties_Object.md#object-name) - [Pathname](properties_Picture.md#pathname) - [Droite](properties_CoordinatesAndSizing.md#right) - [Haut](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Dim. vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilité](properties_Display.md#visibility)  - [Largeur](properties_CoordinatesAndSizing.md#width)

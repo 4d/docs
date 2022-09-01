@@ -3,41 +3,41 @@ id: compute
 title: '$compute'
 ---
 
-Calculate on specific attributes (*e.g.*, `Employee/salary/?$compute=sum)` or in the case of an Object attribute (*e.g.*, Employee/objectAtt.property1/?$compute=sum)
+指定した属性を対象に計算をおこないます (*例*: `Employee/salary/?$compute=sum`。オブジェクト属性の例: `Employee/objectAtt.property1/?$compute=sum`)。
 
 
-## Description
+## 詳細
 
-This parameter allows you to do calculations on your data.
+このパラメーターを使って、データを対象に計算をおこなうことができます。
 
-If you want to perform a calculation on an attribute, you write the following:
+属性に対して計算をおこなうには、次のように書きます:
 
  `GET  /rest/Employee/salary/?$compute=$all`
 
-If you want to pass an Object attribute, you must pass one of its property. For example:
+オブジェクト属性の場合は、プロパティを指定します。 例:
 
  `GET  /rest/Employee/objectAtt.property1/?$compute=$all`
 
-You can use any of the following keywords:
+次のキーワードが利用可能です:
 
 
-| Keyword | Description                                                                                                                                                                           |
-| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| $all    | A JSON object that defines all the functions for the attribute (average, count, min, max, and sum for attributes of type Number and count, min, and max for attributes of type String |
-| average | Get the average on a numerical attribute                                                                                                                                              |
-| count   | Get the total number in the collection or dataclass (in both cases you must specify an attribute)                                                                                     |
-| min     | Get the minimum value on a numerical attribute or the lowest value in an attribute of type String                                                                                     |
-| max     | Get the maximum value on a numerical attribute or the highest value in an attribute of type String                                                                                    |
-| sum     | Get the sum on a numerical attribute                                                                                                                                                  |
+| キーワード   | 詳細                                                                                                                                                                   |
+| ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| $all    | 利用可能なすべての計算を属性に対しておこない、結果を格納した JSON オブジェクトを取得します。数値型の属性については平均 (average)、カウント (count)、最小 (min)、最大 (max)、合計 (sum)、文字列型の属性についてはカウント (count)、最小 (min)、最大 (max) が利用可能です。 |
+| average | 数値型属性の平均を取得します。                                                                                                                                                      |
+| count   | コレクション内の要素数またはデータクラス内のエンティティ数を取得します (どちらの場合も属性を指定する必要があります)                                                                                                          |
+| min     | 数値型属性あるいは文字列型属性の最小値を取得します。                                                                                                                                           |
+| max     | 数値型属性あるいは文字列型属性の最大値を取得します。                                                                                                                                           |
+| sum     | 数値型属性の合計を取得します。                                                                                                                                                      |
 
 
-## Example
+## 例題
 
-If you want to get all the computations for an attribute of type Number, you can write:
+数値型の属性を対象にすべての計算値を取得するには、次のように書きます:
 
  `GET  /rest/Employee/salary/?$compute=$all`
 
-**Response**:
+**レスポンス**:
 
 ````
 {
@@ -51,11 +51,11 @@ If you want to get all the computations for an attribute of type Number, you can
 }
 ````
 
-If you want to get all the computations for an attribute of type String, you can write:
+文字列型の属性を対象にすべての計算値を取得するには、次のように書きます:
 
  `GET  /rest/Employee/firstName/?$compute=$all`
 
-**Response**:
+**レスポンス**:
 
 ````
 {
@@ -67,19 +67,19 @@ If you want to get all the computations for an attribute of type String, you can
 }
 ````
 
-If you want to just get one calculation on an attribute, you can write the following:
+属性に対して特定の計算のみをおこなうには、次のように書きます:
 
  `GET  /rest/Employee/salary/?$compute=sum`
 
-**Response**:
+**レスポンス**:
 
 `235000`
 
 
-If you want to perform a calculation on an Object attribute, you can write the following:
+オブジェクト属性に対して特定の計算のみをおこなうには、次のように書きます:
 
  `GET  /rest/Employee/objectAttribute.property1/?$compute=sum`
 
-Response:
+レスポンス:
 
 `45`  

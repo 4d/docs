@@ -1,10 +1,10 @@
 ---
 id: methods
-title: Methods
+title: Métodos
 ---
 
 
-A method is basically a piece of code that executes one or several actions. A method is composed of statements; each statement consists of one line in the method. A statement performs an action, and may be simple or complex. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks).
+A method is basically a piece of code that executes one or several actions. Um método projeto é composto de várias linhas de instruções, cada uma das quais consta de uma linha no método. Uma linha de instrução realiza uma ação e pode ser simples ou complexa. Although a statement is always one line, that one line can be as long as needed (up to 32,000 characters, which is probably enough for most tasks).
 
 The maximum size of a method is limited to 2 GB of text or 32,000 lines of code.
 
@@ -12,9 +12,9 @@ The maximum size of a method is limited to 2 GB of text or 32,000 lines of code.
 
 In the 4D Language, there are several categories of methods. The category depends on how they can be called:
 
-| Type                             | Calling context                                                                                             | Accepts parameters | Description                                                                                                                                                          |
+| Tipo                             | Calling context                                                                                             | Accepts parameters | Descrção                                                                                                                                                             |
 | -------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Project method**               | On demand, when the project method name is called (see [Calling project methods](#calling-project-methods)) | Yes                | Can contain any code to execute any custom actions. Once a project method is created, it becomes part of the language of the project.                                |
+| **Project method**               | On demand, when the project method name is called (see [Calling project methods](#calling-project-methods)) | Sim                | Can contain any code to execute any custom actions. Once a project method is created, it becomes part of the language of the project.                                |
 | **Object (widget) method**       | Automatic, when an event involves the object to which the method is attached                                | No                 | Property of a form object (also called widget)                                                                                                                       |
 | **Form method**                  | Automatic, when an event involves the form to which the method is attached                                  | No                 | Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. |
 | **Trigger** (aka *Table method*) | Automatic, each time that you manipulate the records of a table (Add, Delete and Modify)                    | No                 | Property of a table. Triggers are methods that can prevent “illegal” operations with the records of your database.                                                   |
@@ -22,7 +22,7 @@ In the 4D Language, there are several categories of methods. The category depend
 
 > The 4D Language also supports **Class functions**, that can be called in the context of an object instance. Class functions can be built-in (*e.g.* `collection.orderBy()` or `entity.save()`), or [created by the 4D developer](classes.md#class-function).
 
-## Calling Project Methods
+## Métodos proyecto
 
 A project method can have one of the following roles, depending on how it is executed and used:
 
@@ -58,7 +58,7 @@ For example, let’s say you have a project of customers. As you customize the p
  MODIFY RECORD([Customers])
 ```
 
-If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. If there are ten places in your project where you need to do this, you will have to write the code ten times. If you use subroutines, you will only have to write it once. This is the first advantage of subroutines—to reduce the amount of code.
+If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. If you do not use subroutines, you will have to write the code each time you want to modify a customer’s record. If you use subroutines, you will only have to write it once. This is the first advantage of subroutines—to reduce the amount of code.
 
 If the previously described code was a method called `MODIFY_CUSTOMER`, you would execute it simply by using the name of the method in another method. For example, to modify a customer’s record and then print the record, you would write this method:
 
@@ -67,7 +67,7 @@ If the previously described code was a method called `MODIFY_CUSTOMER`, you woul
  PRINT SELECTION([Customers])
 ```
 
-This capability simplifies your methods dramatically. In the example, you do not need to know how the `MODIFY_CUSTOMER` method works, just what it does. This is the second reason for using subroutines—to clarify your methods. In this way, your methods become extensions to the 4D language.
+This capability simplifies your methods dramatically. This capability simplifies your methods dramatically. This is the second reason for using subroutines—to clarify your methods. In this way, your methods become extensions to the 4D language.
 
 If you need to change your method of finding customers in this example project, you will need to change only one method, not ten. This is the next reason to use subroutines—to facilitate changes to your methods.
 
@@ -87,11 +87,10 @@ You can encapsulate your project methods in **formula** objects and call them fr
 
 The `Formula` or `Formula from string` commands allow you to create native formula objects that you can encapsulate in object properties. It allows you to implement custom object methods.
 
-To execute a method stored in an object property, use the **( )** operator after the property name. For example:
+To execute a method stored in an object property, use the **( )** operator after the property name. Por exemplo:
 
 ```4d
-//myAlert
-ALERT("Hello world!")
+//myAlert ALERT("Hello world!")
 ```
 
 Then `myAlert` can be encapsulated in any object and called:
@@ -102,17 +101,16 @@ $o:=New object("custom_Alert";Formula(myAlert))
 $o.custom_Alert() //displays "Hello world!"
 ```
 
-Syntax with brackets is also supported:
+Também se admite a sintaxe com parênteses:
 
 ```4d
-$o["custom_Alert"]() //displays "Hello world!"
+$o["custom_Alert"]() //exibe "Hello world!"
 ```
 
 You can also [pass parameters](Concepts/parameters.md) to your formula when you call it by using $1, $2… just like with 4D project methods:
 
 ```4d
-//fullName method
-C_TEXT($0;$1;$2)
+//fullName method C_TEXT($0;$1;$2)
 $0:=$1+" "+$2
 ```
 
@@ -126,11 +124,10 @@ $result:=$o.full_name("John";"Smith")
 // equivalent to $result:=fullName("param1";"param2")
 ```
 
-Combined with the `This`function, such object methods allow writing powerful generic code. For example:
+Combined with the `This`function, such object methods allow writing powerful generic code. Por exemplo:
 
 ```4d
-//fullName2 method
-C_TEXT($0)
+//fullName2 method C_TEXT($0)
 $0:=This.firstName+" "+This.lastName
 ```
 
@@ -145,10 +142,10 @@ $result:=$o.fullName()
 //$result = "Jim Wesson"
 ```
 
-Note that, even if it does not have parameters, an object method to be executed must be called with ( ) parenthesis. Calling only the object property will return a new reference to the formula (and will not execute it):
+Note that, even if it does not have parameters, an object method to be executed must be called with ( ) parenthesis. Chamar só a propriedade de objeto devolverá uma nova referência à fórmula (e não a executará):
 
 ```4d
-$o:=$f.message //returns the formula object in $o
+$o:=$f.message //devolve o objeto fórmula em $o
 ```
 
 ### Menu Methods
@@ -210,16 +207,16 @@ If you check the **New Process** check box, the method you selected executes in 
 
 By default, the **locally** option is selected. With the 4D single-user version, this is the only option available.
 
-## Recursive Project Methods
+## Métodos projeto recursivos
 
-Project methods can call themselves. For example:
+Project methods can call themselves. Por exemplo:
 
 - The method A may call the method B which may call A, so A will call B again and so on.
 - A method can call itself.
 
 This is called recursion. The 4D language fully supports recursion.
 
-Here is an example. Let’s say you have a `[Friends and Relatives]` table composed of this extremely simplified set of fields:
+Aqui um exemplo simples. Let’s say you have a `[Friends and Relatives]` table composed of this extremely simplified set of fields:
 
 - `[Friends and Relatives]Name`
 - `[Friends and Relatives]ChildrensName`
@@ -256,6 +253,8 @@ For this example, we assume the values in the fields are unique (there are no tw
     QUERY([Friends and Relatives];[Friends and Relatives]Name=$vsName)
     If(Records in selection([Friends and Relatives])>0)
        ALERT("A friend of mine, "+Genealogy of($vsName)+", does this for a living!")
+    End if
+ End if
     End if
  End if
 ```

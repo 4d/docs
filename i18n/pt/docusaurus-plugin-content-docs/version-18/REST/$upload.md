@@ -6,7 +6,7 @@ title: "$upload"
 
 Returns an ID of the file uploaded to the server
 
-## Description
+## Descrção
 Post this request when you have a file that you want to upload to the Server. If you have an image, you pass `$rawPict=true`. For all other files, you pass `$binary=true`.
 
 You can modify the timeout, which by default is 120 seconds, by passing a value to the `$timeout parameter`.
@@ -18,7 +18,7 @@ Then, we upload the selected image to 4D Server:
 
  `POST  /rest/$upload?$rawPict=true`
 
-**Result**:
+**Resultadoi**:
 
 `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50" }`
 

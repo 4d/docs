@@ -1,51 +1,51 @@
 ---
 id: verify
-title: Verify Page
-sidebar_label: Verify Page
+title: Página Verificación
+sidebar_label: Página Verificación
 ---
 
-You use this page to verify data integrity. The verification can be carried out on records and/or indexes. This page only checks the data integrity. If errors are found and repairs are needed, you will be advised to use the [Repair page](repair.md).
+Esta página se utiliza para verificar la integridad de los datos. La verificación puede llevarse a cabo en los registros y/o índices. Esta página sólo comprueba la integridad de los datos. Si se encuentran errores y es necesario repararlos, se le indicará que utilice la página [Reparación](repair.md).
 
-## Actions
+## Acciones
 
-The page contains action buttons that provide direct access to the verification functions.
-> When the database is encrypted, verification includes validation of encrypted data consistency. If no valid data key has already been provided, a dialog requesting the passphrase or the data key is displayed.
+La página contiene botones de acción que dan acceso directo a las funciones de verificación.
+> Cuando la base está encriptada, la verificación incluye la validación de la consistencia de los datos encriptados. Si no se ha suministrado una llave de datos válida, aparecerá un diálogo solicitando la frase secreta o la llave de datos.
 
-- **Verify the records and the indexes:** Starts the total data verification procedure.
-- **Verify the records only**: Starts the verification procedure for records only (indexes are not verified).
-- **Verify the indexes only**: Starts the verification procedure for indexes only (records are not verified).
-> Verification of records and indexes can also be carried out in detail mode, table by table (see the Details section below).
+- **Verificar los registros y los índices:** inicia el procedimiento de verificación total de los datos.
+- **Verificar sólo los registros**: inicia el procedimiento de verificación sólo para los registros (los índices no se verifican).
+- **Verificar sólo los índices**: inicia el procedimiento de verificación sólo para los índices(los registros no se verifican).
+> > Verification of records and indexes can also be carried out in detail mode, table by table (see the Details section below).
 
-## Open log file
+## Abrir archivo de historial
 
-Regardless of the verification requested, 4D generates a log file in the `Logs` folder of the database. This file lists all the verifications carried out and indicates any errors encountered, when applicable ([OK] is displayed when the verification is correct). It is created in XML format and is named: *DatabaseName**Verify_Log**yyyy-mm-dd hh-mm-ss*.xml where:
+Independientemente de la verificación solicitada, 4D genera un archivo de historial en la carpeta `Logs` de la base. Este archivo lista todas las verificaciones realizadas e indica los errores encontrados, cuando sea el caso (se muestra [OK] cuando la verificación es correcta). It is created in XML format and is named: *DatabaseName**Verify_Log**yyyy-mm-dd hh-mm-ss*.xml where:
 
-- *DatabaseName* is the name of the project file without any extension, for example "Invoices",
-- *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
+- *NomBase* es el nombre del archivo de estructura sin extensión, por ejemplo "Facturas",
+- *yyyy-mm-dd hh-mm-ss* es la marca de tiempo del archivo, basada en la hora del sistema local cuando se inició la operación de mantenimiento, por ejemplo "2019-02-11 15-20-45".
 
-When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
+Al presionar el botón **Abrir archivo de historial**, 4D muestra el archivo de historial más reciente en el navegador por defecto de la máquina.
 
-## Details
+## Detalles
 
-The **Table list** button displays a detailed page that can be used to view and select the actual records and indexes to be checked:
+El botón **Lista de tablas** muestra una página detallada que puede utilizarse para ver y seleccionar los registros e índices reales que se van a verificar:
 
 ![](../assets/en/MSC/MSC_Verify.png)
 
-Specifying the items to be verified lets you save time during the verification procedure.
+La designación de los elementos a verificar le permite ahorrar tiempo durante el procedimiento de verificación.
 
-The main list displays all the tables of the database. For each table, you can limit the verification to the records and/or indexes. Expand the contents of a table or the indexed fields and select/deselect the checkboxes as desired. By default, everything is selected. You can also use the **Select all**, **Deselect all**, **All records** and **All indexes** shortcut buttons.
+La lista principal muestra todas las tablas de la base. Para cada tabla, puede limitar la verificación a los registros y/o índices. Despliegue el contenido de una tabla o los campos indexados y marque/desmarque las casillas de selección como desee. Por defecto, todo está seleccionado. También puede utilizar los botones de acceso directo **Seleccionar todo**, **Deseleccionar todo**, **Todos los registros** y **Todos los índices**.
 
-For each row of the table, the "Action" column indicates the operations to be carried out. When the table is expanded, the "Records" and "Indexed fields" rows indicate the number of items concerned.
+Para cada línea de tabla, la columna "Acción" indica las operaciones a realizar. Cuando se expande la tabla, las filas "Registros" y "Campos indexados" indican el número de elementos en cuestión.
 
-The "Status" column displays the verification status of each item using symbols:
+La columna "Estado" muestra el estado de verificación de cada elemento mediante símbolos:
 
-| ![](../assets/en/MSC/MSC_OK.png)  | Verification carried out with no problem       |
-| --------------------------------- | ---------------------------------------------- |
-| ![](../assets/en/MSC/MSC_KO2.png) | Verification carried out, problems encountered |
-| ![](../assets/en/MSC/MSC_KO3.png) | Verification partially carried out             |
-| ![](../assets/en/MSC/MSC_KO.png)  | Verification not carried out                   |
+| ![](../assets/en/MSC/MSC_OK.png)  | Verificación realizada sin problemas          |
+| --------------------------------- | --------------------------------------------- |
+| ![](../assets/en/MSC/MSC_KO2.png) | Verificación efectuada, problemas encontrados |
+| ![](../assets/en/MSC/MSC_KO3.png) | Verificación realizada parcialmente           |
+| ![](../assets/en/MSC/MSC_KO.png)  | Verificación no efectuada                     |
 
-Click on **Verify** to begin the verification or on **Standard** to go back to the standard page.
+Haga clic en **Verificar** para comenzar la verificación o en **Estándar** para volver a la página estándar.
 
-The **Open log file** button can be used to display the log file in the default browser of the machine (see [Open log file](#open-log-file) above).
-> The standard page will not take any modifications made on the detailed page into account: when you click on a verification button on the standard page, all the items are verified. On the other hand, the settings made on the detailed page are kept from one session to another.
+El botón **Abrir archivo de historial** puede utilizarse para mostrar el archivo de historialen el navegador predeterminado de la máquina (ver [Abrir archivo de historial](#abrir-archivo-de-registro) arriba).
+> La página estándar no tendrá en cuenta las modificaciones realizadas en la página detallada: cuando se presiona un botón de verificación en la página estándar, se verifican todos los elementos. Por otra parte, los parámetros establecidos en la página detallada se conservan de una sesión a otra.

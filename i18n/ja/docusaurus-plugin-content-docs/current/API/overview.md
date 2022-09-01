@@ -1,27 +1,27 @@
 ---
 id: overview
-title: Class API Overview
+title: クラス API の概要
 ---
 
-This section describes the built-in 4D class API as well as the associated constructor commands. 4D class functions and properties are available through class instance objects.
+この章では、ビルトインの 4D クラス API および関連するコンストラクターコマンドを説明します。 4Dクラス関数およびプロパティは、クラスインスタンス オブジェクトによって提供されます。
 
-- functions must be called on instances with the () operator. For example, `collection.sort()`.
+- 関数は、インスタンスに対し、() 演算子を使って呼び出します。 例: `collection.sort()`。
 
-- properties are accessed without parentheses, for example `file.creationTime`. You can also use the \[] syntax, for example `file["creationTime"]`.
+- プロパティにアクセスする場合は、カッコを使いません。 例: `file.creationTime`。 また、\[] シンタックスも使用可能です。 例: `file["creationTime"]`。
 
-## Writing conventions
+## 表記規則
 
-The following conventions are used in the function syntax:
+関数シンタックスでは、次の表記が使われています:
 
-- the `{ }` characters (braces) indicate optional parameters. For example, `.delete( { option : Integer } )` means that the *option* parameter may be omitted when calling the function.
-- the `{ ; ...param }` notation indicates an unlimited number of parameters. For example, `.concat( value : any { ;...valueN } ) : Collection` means that an unlimited number of values of any type can be passed to the function.
-- the `any` keyword is used for parameters that can be of any type that can be stored within attributes (number, text, boolean, date, time, object, collection...).
+- 中カッコ `{ }` は、任意のパラメーターを示します。 たとえば、`.delete( { option : Integer } )` という表記の場合、関数を呼び出す際に *option* パラメーターを省略することができます。
+- `{ ; ...param }` という表記は、パラメーターの数に制限がないことを示します。 たとえば、`.concat( value : any { ;...valueN } ) : Collection` という表記の場合、データ型および数に制限なく関数に引数を渡すことができます。
+- `any` キーワードは、属性として保存可能な範囲 (数値、テキスト、ブール、日付、時間、オブジェクト、コレクション) でデータ型に制限のないパラメーターを示すのに使用されます。
 
-## Other resources
+## その他のリソース
 
-For an overall presentation of the 4D Language basics and concepts, please go to the [4D Language Concepts](Concepts/about.md) section.
+4Dランゲージの基本やコンセプトについての説明は [4Dランゲージコンセプト](Concepts/about.md) の章を参照ください。
 
-For a description of the 4D "classic" language, please go to the *4D Language Reference* on [doc.4d.com](https://doc.4d.com). 
+4D の "クラシック" ランゲージについての詳細は、[doc.4d.com](https://doc.4d.com) の *4Dランゲージリファレンス* を参照ください。 
 
 
 

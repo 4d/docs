@@ -1,106 +1,106 @@
 ---
 id: propertiesObject
-title: Objects
+title: オブジェクト
 ---
 
 ---
 
-## Type
+## タイプ
 
- `MANDATORY SETTING`
+ `必須設定です。`
 
-This property designates the type of the [active or inactive form object](formObjects_overview.md).
+このプロパティは [アクティブまたはスタティックなフォームオブジェクト](formObjects_overview.md) のタイプを指定します。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name | Data Type | Possible Values                                                                                                                                                                                                                                                                                          |
-| ---- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| type | string    | "button", "buttonGrid", "checkbox", "combo", "dropdown", "groupBox", "input", "line", "list", "listbox", "oval", "picture", "pictureButton", "picturePopup", "plugin", "progress", "radio", "rectangle", "ruler", "spinner", "splitter", "stepper", "subform", "tab", "text", "view", "webArea", "write" |
+| 名称   | データタイプ | とりうる値                                                                                                                                                                                                                                                                                                    |
+| ---- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| type | string | "button", "buttonGrid", "checkbox", "combo", "dropdown", "groupBox", "input", "line", "list", "listbox", "oval", "picture", "pictureButton", "picturePopup", "plugin", "progress", "radio", "rectangle", "ruler", "spinner", "splitter", "stepper", "subform", "tab", "text", "view", "webArea", "write" |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) -[Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
-
----
-
-## Object Name
-
-Each active form object is associated with an object name. Each object name must be unique.
-> Object names are limited to a size of 255 bytes.
-
-When using 4D’s language, you can refer to an active form object by its object name (for more information about this, refer to [Object Properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Object-Properties.300-4128195.en.html) in the 4D Language Reference manual).
-
-For more information about naming rules for form objects, refer to [Identifiers](Concepts/identifiers.md) section.
-
-#### JSON Grammar
-
-| Name | Data Type | Possible Values                                                      |
-| ---- | --------- | -------------------------------------------------------------------- |
-| name | string    | Any allowed name which does not belong to an already existing object |
-
-#### Objects Supported
-
-[4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
+[4D View Pro エリア](viewProArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [プラグインエリア](pluginArea_overview.md) - [進捗インジケーター](progressIndicator.md) - [ラジオボタン](radio_overview.md) - [スピナー](spinner.md) - [スプリッター](splitters.md) - [スタティックピクチャー](staticPicture.md) - [ステッパー](stepper.md) - [サブフォーム](subform_overview.md) - [タブコントロール](tabControl.md) - [テキストエリア](text.md) - [Web エリア](webArea_overview.md)
 
 ---
 
-## Save value
+## オブジェクト名
 
-This property is available when the [Save Geometry](FormEditor/properties_FormProperties.md#save-geometry) option is checked for the form.
+各アクティブフォームオブジェクトにはオブジェクト名が関連付けられています。 各オブジェクト名はユニークでなければなりません。
+> オブジェクト名のサイズ上限は 255バイトです。
 
-This feature is only supported for objects that contribute to the overall geometry of the form. For example, this option is available for check boxes because their value can be used to hide or display additional areas in the window.
+4Dランゲージを使用する際、オブジェクト名を使用してアクティブフォームオブジェクトを参照できます (詳細については 4Dランゲージリファレンスの [オブジェクトプロパティ](https://doc.4d.com/4Dv18/4D/18/Object-Properties.300-4505419.ja.html) を参照ください)。
 
-Here is the list of objects whose value can be saved:
+フォームオブジェクトの命名規則については [識別子](Concepts/identifiers.md) の章を参照してください。
 
-| Object                                     | Saved value                                                                            |
-| ------------------------------------------ | -------------------------------------------------------------------------------------- |
-| [Check Box](checkbox_overview.md)          | Value of associated variable (0, 1, 2)                                                 |
-| [Drop-down List](dropdownList_Overview.md) | Number of selected row                                                                 |
-| [Radio Button](radio_overview.md)          | Value of associated variable (1, 0, True or False for buttons according to their type) |
-| [Tab control](tabControl.md)               | Number of selected tab                                                                 |
+#### JSON 文法
 
-#### JSON Grammar
+| 名称   | データタイプ | とりうる値                           |
+| ---- | ------ | ------------------------------- |
+| name | string | 既存オブジェクトによって使用されていない、命名規則に沿った名称 |
 
-| Name          | Data Type | Possible Values |
-| ------------- | --------- | --------------- |
-| memorizeValue | boolean   | true, false     |
+#### 対象オブジェクト
 
-#### Objects Supported
-
-[Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Radio Button](radio_overview.md) - [Tab control](tabControl.md)
+[4D View Pro エリア](viewProArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [プラグインエリア](pluginArea_overview.md) - [進捗インジケーター](progressIndicator.md) - [スピナー](spinner.md) - [スプリッター](splitters.md) - [スタティックピクチャー](staticPicture.md) - [ステッパー](stepper.md) - [ラジオボタン](radio_overview.md) - [サブフォーム](subform_overview.md) - [タブコントロール](tabControl.md) - [テキストエリア](text.md) - [Web エリア](webArea_overview.md)
 
 ---
 
-## Variable or Expression
+## 値を記憶
 
-> See also **[Expression](properties_DataSource.md#expression)** for Selection and collection type list box columns.
+このオプションは、フォームの [配置を記憶](FormEditor/properties_FormProperties.md#配置を記憶) プロパティがチェックされている場合に利用可能です。
 
-This property specifies the source of the data. Each active form object is associated with an object name and a variable name. The variable name can be different from the object’s name. In the same form, you can use the same variable several times while each [object name](#object-name) must be unique.
-> Variable name size is limited to 31 bytes. See [Identifiers](Concepts/identifiers.md) section for more information about naming rules.
+この機能は、フォームの全体的な配置に関係するオブジェクトに対してのみサポートされています。 たとえばチェックボックスは、ウィンドウ内の追加エリアを表示/非表示するのに使用することができるため、このオプションが存在します。
 
-The form object variables allow you to control and monitor the objects. For example, when a button is clicked, its variable is set to 1; at all other times, it is 0. The expression associated with a progress indicator lets you read and change the current setting.
+「値」を保存できるオブジェクトは以下のとおりです:
 
-Variables or expressions can be enterable or non-enterable and can receive data of the Text, Integer, Numeric, Date, Time, Picture, Boolean, or Object type.
+| Object                                 | 保存される値                                       |
+| -------------------------------------- | -------------------------------------------- |
+| [チェックボックス](checkbox_overview.md)       | 関連付けられた変数の値 (0, 1, 2)                        |
+| [ドロップダウンリスト](dropdownList_Overview.md) | 選択されている項目の番号                                 |
+| [ラジオボタン](radio_overview.md)            | 関連付けられた変数の値 (1、0、ボタンにおいては true/false など型による) |
+| [タブコントロール](tabControl.md)              | 選択されているタブの番号                                 |
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name       | Data Type               | Possible Values                                                             |
-| ---------- | ----------------------- | --------------------------------------------------------------------------- |
-| dataSource | string, or string array | <li>4D variable, field name, or any expression. </li><li>Empty string for [dynamic variables](#dynamic-variables). </li><li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column]</li> |
+| 名称            | データタイプ  | とりうる値       |
+| ------------- | ------- | ----------- |
+| memorizeValue | boolean | true, false |
 
-### Expressions
+#### 対象オブジェクト
 
-You can use an [expression](Concepts/quick-tour.md#expressions) as data source for an object. Any valid 4D expression is allowed: simple expression, object property, formula, 4D function, project method name or field using the standard `[Table]Field` syntax. The expression is evaluated when the form is executed and reevaluated for each form event. Note that expressions can be [assignable or non-assignable](Concepts/quick-tour.md#expressions).
-> If the value entered corresponds to both a variable name and a method name, 4D considers that you are indicating the method.
+[チェックボックス](checkbox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [ラジオボタン](radio_overview.md) - [タブコントロール](tabControl.md)
 
-### Dynamic variables
+---
 
-You can leave it up to 4D to create variables associated with your form objects (buttons, enterable variables, check boxes, etc.) dynamically and according to your needs. To do this, simply leave the "Variable or Expression" property (or `dataSource` JSON field) blank.
+## 変数あるいは式
 
-When a variable is not named, when the form is loaded, 4D creates a new variable for the object, with a calculated name that is unique in the space of the process variables of the interpreter (which means that this mechanism can be used even in compiled mode). This temporary variable will be destroyed when the form is closed. In order for this principle to work in compiled mode, it is imperative that dynamic variables are explicitly typed. There are two ways to do this:
+> セレクションおよびコレクション型のリストボックス列に関しては **[式](properties_DataSource.md#式)** の章も参照ください。
 
-- You can set the type using the [Expression type](#expression-type) property.
-- You can use a specific initialization code when the form is loaded that uses, for example, the `VARIABLE TO VARIABLE` command:
+このプロパティは、データのソースを指定します。 各アクティブフォームオブジェクトにはオブジェクト名と変数名が関連付けられています。 変数名とオブジェクト名は違っていてもかまいません。 同じフォーム内で複数のアクティブオブジェクトに同じ変数名を割り当てることができますが、[オブジェクト名](#オブジェクト名) はそれぞれユニークでなければなりません。
+> 変数名の上限は 31バイトです。 命名規則については [識別子](Concepts/identifiers.md) の章を参照してください。
+
+フォームオブジェクト変数を使って、オブジェクトを監視・コントロールすることができます。 たとえば、ボタンがクリックされると、その変数の値は 1 に設定されます。それ以外の場合は 0 です。 進捗インジケーターに関連づけられた式は、現設定の取得・変更を可能にします。
+
+代入可・代入不可の変数および式が使用でき、取得できるデータ型はテキスト、整数、数値、日付、時間、ピクチャー、ブール、そしてオブジェクトです。
+
+#### JSON 文法
+
+| 名称         | データタイプ            | とりうる値                                                                       |
+| ---------- | ----------------- | --------------------------------------------------------------------------- |
+| dataSource | 文字列、または文字列のコレクション | <li>4D変数、フィールド名、あるいは任意の式 </li><li>[ダイナミック変数](#ダイナミック変数) の場合は、空の文字列 </li><li>[階層リストボックス](listbox_overview.md#階層リストボックス) 列の場合に、文字列 (配列名) のコレクション</li> |
+
+### 式
+
+オブジェクトのデータソースとして、[式](Concepts/quick-tour.md#式) を使用することができます。 シンプルな式、オブジェクトプロパティ、フォーミュラ、4D関数、プロジェクトメソッド名、標準の `[Table]Field` シンタックスを使用したフィールド名を使用できます。 式はフォームが実行されたときに評価され、フォームイベント毎に再評価されます。 式には、[代入可および代入不可の式](Concepts/quick-tour.md#式) があることに注意が必要です。
+> 入力された式が、変数名とメソッド名の両方で使用されている場合、4Dはメソッド名が指定されたものと判断します。
+
+### ダイナミック変数
+
+ボタン、入力オブジェクト、チェックボックス等のフォームオブジェクトに割り当てられる変数を、必要に応じて動的に、4Dに作成させることができます。 これをおこなうには、"変あるいは式" プロパティを空にします (あるいは JSON の `dataSource` フィールド):
+
+変数名が与えられていない場合、4D はフォームがロードされたときにインタープリターのプロセス変数の空間内でユニークな名前を計算し、その名前でオブジェクト用の変数を新規作成します (このメカニズムはコンパイルモードでも使用することができます)。 この一時的な変数はフォームが閉じられるときに破棄されます。 この方式をコンパイルモードで動作させるためには、ダイナミック変数の型を明示的に指定しなければなりません。 これをおこなうには 2つの方法があります:
+
+- プロパティリストの [式タイプ](#式の型-式タイプ) を使用して型を指定する。
+- たとえば `VARIABLE TO VARIABLE` コマンドを使用する、専用の初期化コードをフォームロード時に実行する。
 
 ```4d
  If(Form event=On Load)
@@ -111,220 +111,220 @@ When a variable is not named, when the form is loaded, 4D creates a new variable
  End if
 ```
 
-In the 4D code, dynamic variables can be accessed using a pointer obtained with the `OBJECT Get pointer` command. For example:
+4Dコード中では、 `OBJECT Get pointer` コマンドで取得できるポインターを介してダイナミック変数にアクセスできます。 例:
 
 ```4d
-  // assign the time 12:00:00 to the variable for the "tstart" object
+  // "tstart" オブジェクトの変数に時刻 12:00:00 を代入します
  $p :=OBJECT Get pointer(Object named;"tstart")
  $p->:=?12:00:00?
 ```
 
-There are two advantages with this mechanism:
+このメカニズムを使用する利点は 2つあります:
 
-- On the one hand, it allows the development of "subform" type components that can be used several times in the same host form. Let us take as an example the case of a datepicker subform that is inserted twice in a host form to set a start date and an end date. This subform will use objects for choosing the date of the month and the year. It will be necessary for these objects to work with different variables for the start date and the end date. Letting 4D create their variable with a unique name is a way of resolving this difficulty.
-- On the other hand, it can be used to limit memory usage. In fact, form objects only work with process or inter-process variables. However, in compiled mode, an instance of each process variable is created in all the processes, including the server processes. This instance takes up memory, even when the form is not used during the session. Therefore, letting 4D create variables dynamically when loading the forms can save memory.
+- ひとつのホストフォーム上で複数個配置することの可能な "サブフォーム" タイプのコンポーネント開発を可能にします。 たとえば、開始日と終了日を設定する 2つの日付ピッカーサブフォームをホストフォーム上に配置するケースを考えてみましょう。 このサブフォームでは、日付を選択するためのオブジェクトが使用されます。 開始日と終了日をそれぞれ選択できるよう、これらオブジェクトにはそれぞれ別の変数が割り当てられている必要があります。 4Dにダイナミック変数を生成させることでユニークな変数を得ることができ、この問題を解決できます。
+- また、メモリの利用を減少させることができます。 フォームオブジェクトでは、プロセス変数とインタープロセス変数しか使用できません。 しかしコンパイルモードでは、各プロセス変数のインスタンスが (サーバープロセスを含め) すべてのプロセスに対して作成されます。 このインスタンスは、セッション中にフォームが使用されない場合でもメモリを消費します。 フォームのロード時、4Dにダイナミック変数を作成させることで、メモリを節約できます。
 
-### Array List Box
+### 配列リストボックス
 
-For an array list box, the **Variable or Expression** property usually holds the name of the array variable defined for the list box, and for each column. However, you can use a string array (containing arrays names) as *dataSource* value for a list box column to define a [hierarchical list box](listbox_overview.md#hierarchical-list-boxes).
+配列型リストボックスの場合、リストボックスおよびリストボックス各列の **変数あるいは式** プロパティには、それぞれに関連付ける配列変数の名前を指定します。 ただし、リストボックスの JSON定義においては、列の *dataSource* 値として、配列名 (文字列) のコレクションを指定すると [階層リストボックス](listbox_overview.md#階層リストボックス) が定義されます。
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress indicator](progressIndicator.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Tab control](tabControl.md) - [Subform](subform_overview.md#overview) - [Radio Button](radio_overview.md) - [Web Area](webArea_overview.md)
-
----
-
-## Expression Type
-
-> This property is called [**Data Type**](properties_DataSource.md#data-type-expression-type) in the Property List for [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns and for [Drop-down Lists](dropdownList_Overview.md) associated to an [object](FormObjects/dropdownList_Overview.md#using-an-object) or an [array](FormObjects/dropdownList_Overview.md#using-an-array).
-
-Specify the data type for the expression or variable associated to the object. Note that main purpose of this setting is to configure options (such as display formats) available for the data type. It does not actually type the variable itself. In view of project compilation, you must [declare the variable](Concepts/variables.md#declaring-variables).
-
-However, this property has a typing function in the following specific cases:
-
-- **[Dynamic variables](#dynamic-variables)**: you can use this property to declare the type of dynamic variables.
-- **[List Box Columns](listbox_overview.md#list-box-columns)**: this property is used to associate a display format with the column data. The formats provided will depend on the variable type (array type list box) or the data/field type (selection and collection type list boxes). The standard 4D formats that can be used are: Alpha, Numeric, Date, Time, Picture and Boolean. The Text type does not have specific display formats. Any existing custom formats are also available.
-- **[Picture variables](input_overview.md)**: you can use this menu to declare the variables before loading the form in interpreted mode. Specific native mechanisms govern the display of picture variables in forms. These mechanisms require greater precision when configuring variables: from now on, they must have already been declared before loading the form — i.e., even before the `On Load` form event — unlike other types of variables. To do this, you need either for the statement `C_PICTURE(varName)` to have been executed before loading the form (typically, in the method calling the `DIALOG` command), or for the variable to have been typed at the form level using the expression type property. Otherwise, the picture variable will not be displayed correctly (only in interpreted mode).
-
-#### JSON Grammar
-
-| Name               | Data Type | Possible Values                                    |
-| ------------------ | --------- | -------------------------------------------------- |
-| dataSourceTypeHint | string    | <li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Array/selection list box only*: "integer", "object"</li> |
-
-#### Objects Supported
-
-[Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab Control](tabControl.md)
+[4D View Pro エリア](viewProArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [階層リスト](list_overview.md) - [リストボックス](listbox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [プラグインエリア](pluginArea_overview.md) - [進捗インジケーター](progressIndicator.md) - [スピナー](spinner.md) - [スプリッター](splitters.md) - [ステッパー](stepper.md) - [タブコントロール](tabControl.md) - [サブフォーム](subform_overview.md) - [ラジオボタン](radio_overview.md) - [Web エリア](webArea_overview.md)
 
 ---
 
-## CSS Class
+## 式の型/式タイプ
 
-A list of space-separated words used as class selectors in [css files](FormEditor/createStylesheet.md#style-sheet-files).
+> [セレクション型](listbox_overview.md#セレクションリストボックス) および [コレクション型](listbox_overview.md#コレクションまたはエンティティセレクションリストボックス) のリストボックス列や、[オブジェクト](FormObjects/dropdownList_Overview.md#オブジェクトの使用) や [配列](FormObjects/dropdownList_Overview.md#配列の使用) に関連付けられた[ドロップダウンリスト](dropdownList_Overview.md) のプロパティリストでは、このプロパティは、[**データタイプ**](properties_DataSource.md#データタイプ-式の型) と呼ばれています。
 
-#### JSON Grammar
+オブジェクトに関連付けられた式または変数のデータ型を指定します。 この設定の主な目的は、プロパティリスト内で提供されるテーマとオプションが、データの型と対応するようにするためです。 つまり、実際に変数の型そのものを決めるわけではありません。 プロジェクトをコンパイルするには、[変数を宣言](Concepts/variables.md#変数の宣言) する必要があります。
 
-| Name  | Data Type | Possible Values                                           |
-| ----- | --------- | --------------------------------------------------------- |
-| class | string    | One string with CSS name(s) separated by space characters |
+ただし、次の特定の場合には、このプロパティは型宣言の機能を持ちえます:
 
-#### Objects Supported
+- **[ダイナミック変数](#ダイナミック変数)**: このプロパティを使って、ダイナミック変数の型を宣言することができます。
+- **[リストボックス列](listbox_overview.md#リストボックス列)**: このプロパティは列データに表示フォーマットを関連づけるのに使用されます。 提供されるフォーマットは変数型 (配列型のリストボックス) またはデータ/フィールド型 (セレクションおよびコレクション型のリストボックス) により異なります。 使用できる標準の 4D フォーマットはテキスト、数値、整数、日付、時間、ピクチャー、そしてブールです。 テキストの場合は専用の表示フォーマットがありません。 標準フォーマットのほかに、定義したカスタムフォーマットも選択することができます。
+- **[ピクチャー変数](input_overview.md)**: このプロパティを使うと、インタープリタモードにおいてフォームロード前に変数を宣言することができます。 フォーム上のピクチャー変数にピクチャーを表示する際には特別なメカニズムが使用されます。 そのため、他の型の変数とは違って、ピクチャー変数の宣言は、フォームロード前 (`On Load` フォームイベントよりも先) におこなう必要があります。 このため、フォームを呼び出す前 (たとえば `DIALOG` コマンドを呼び出す前) に`C_PICTURE(varName)` を実行するか、あらかじめプロパティリストの式の型にピクチャーを選択しておく必要があります。 このいずれかをおこなわない場合、ピクチャー変数はピクチャーを正しく表示できません (インタープリターモードのみ)。
 
-[4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Radio Button](radio_overview.md) - [Static Picture](staticPicture.md) - [Subform](subform_overview.md#overview) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
+#### JSON 文法
 
----
+| 名称                 | データタイプ | とりうる値                                              |
+| ------------------ | ------ | -------------------------------------------------- |
+| dataSourceTypeHint | string | <li>**標準のオブジェクト**: "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**リストボックス列:** "boolean", "number", "picture", "text", date", "time"。 *配列/セレクションリストボックスのみ*: "integer", "object"</li> |
 
-## Collection or entity selection
+#### 対象オブジェクト
 
-To use collection elements or entities to define the row contents of the list box.
-
-Enter an expression that returns either a collection or an entity selection. Usually, you will enter the name of a variable, a collection element or a property that contain a collection or an entity selection.
-
-The collection or the entity selection must be available to the form when it is loaded. Each element of the collection or each entity of the entity selection will be associated to a list box row and will be available as an object through the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command:
-
-- if you used a collection of objects, you can call `This` in the datasource expression to access each property value, for example `This.\&#060;propertyPath&#062;`.
-- if you used an entity selection, you can call `This` in the datasource expression to access each attribute value, for example  `This.\&#060;attributePath&#062;`.
-> If you used a collection of scalar values (and not objects), 4D allows you to display each value by calling `This.value` in the datasource expression. However in this case you will not be able to modify values or to access the current ite object (see below) Note: For information about entity selections, please refer to the [ORDA](https://doc.4d.com/4Dv17R6/4D/17-R6/ORDA.200-4354624.en.html) chapter.
-
-#### JSON Grammar
-
-| Name       | Data Type | Possible Values                                              |
-| ---------- | --------- | ------------------------------------------------------------ |
-| dataSource | string    | Expression that returns a collection or an entity selection. |
-
-#### Objects Supported
-
-[List Box](listbox_overview.md)
+[チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [リストボックスフッター](listbox_overview.md#リストボックスフッター) - [プラグインエリア](pluginArea_overview.md) - [進捗インジケーター](progressIndicator.md) - [ラジオボタン](radio_overview.md) - [ルーラー](ruler.md) - [スピナー](spinner.md) - [ステッパー](stepper.md) - [サブフォーム](subform_overview.md) - [タブコントロール](tabControl.md)
 
 ---
 
-## Data Source
+## CSSクラス
 
-Specify the type of list box.
+[cssファイル](FormEditor/createStylesheet.md#スタイルシートファイル) にてクラスセレクターとして使用される、(複数の場合は半角スペース区切りの) クラス名のリスト。
+
+#### JSON 文法
+
+| 名称           | データタイプ | とりうる値                       |
+| ------------ | ------ | --------------------------- |
+| クラスの新規オブジェクト | string | (複数の場合は半角スペース区切りの) クラス名の文字列 |
+
+#### 対象オブジェクト
+
+[4D View Pro エリア](viewProArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [チェックボックス](checkbox_overview.md) - [コンボボックス](comboBox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [グループボックス](groupBox.md) - [階層リスト](list_overview.md) - [リストボックス](listbox_overview.md) - [ピクチャーボタン](pictureButton_overview.md) - [ピクチャーポップアップメニュー](picturePopupMenu_overview.md) - [プラグインエリア](pluginArea_overview.md) - [ラジオボタン](radio_overview.md) - [スタティックピクチャー](staticPicture.md) - [サブフォーム](subform_overview.md) - [テキストエリア](text.md) - [Web エリア](webArea_overview.md)
+
+---
+
+## コレクションまたはエンティティセレクション
+
+コレクション要素あるいはエンティティを使用して、リストボックスの行の中身を定義することができます。
+
+コレクションあるいはエンティティセレクションを返す式を入力します。 一般的には、コレクションまたはエンティティセレクションを格納している変数名、コレクション要素、あるいはプロパティを入力します。
+
+コレクションおよびエンティティセレクションは、フォームロード時にフォームから利用可能でなければなりません。 コレクションの各要素、あるいはエンティティセレクションの各エンティティは、リストボックスの行へと割り当てられ、[This](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.ja.html) コマンドを通してオブジェクトとして利用可能です:
+
+- オブジェクトのコレクションを使用した場合、データソース式内で `This` コマンドを呼び出すことで、各プロパティ値にアクセスすることが可能です。例: `This.\<propertyPath>`。
+- エンティティセレクションを使用した場合、データソース式内で `This` コマンドを呼び出すことで、各属性値へとアクセスすることが可能です。例: `This.\<attributePath>`。
+> (オブジェクトでない) スカラー値のコレクションを使用した場合、データソース式内で `This.value` を呼び出すことで、各値にアクセスすることが可能です。 ただし、この場合は値を編集したり、"カレントの項目" オブジェクトにアクセスしたりすることはできません (以下参照)。<br /> 注: エンティティセレクションについての詳細については、[ORDA](https://doc.4d.com/4Dv18/4D/18/ORDA.200-4575453.ja.html) の章を参照ください。
+
+#### JSON 文法
+
+| 名称         | データタイプ | とりうる値                      |
+| ---------- | ------ | -------------------------- |
+| dataSource | string | コレクションあるいはエンティティセレクションを返す式 |
+
+#### 対象オブジェクト
+
+[リストボックス](listbox_overview.md)
+
+---
+
+## データソース
+
+リストボックスの種類を指定します。
 
 ![](../assets/en/FormObjects/listbox_dataSource.png)
 
-- **Arrays**(default): use array elements as the rows of the list box.
-- **Current Selection**: use expressions, fields or methods whose values will be evaluated for each record of the current selection of a table.
-- **Named Selection**: use expressions, fields or methods whose values will be evaluated for each record of a named selection.
-- **Collection or Entity Selection**: use collection elements or entities to define the row contents of the list box. Note that with this list box type, you need to define the [Collection or Entity Selection](properties_Object.md#collection-or-entity-selection) property.
+- **配列** (デフォルト): リストボックスの各行に 配列要素を割り当てます。
+- **カレントセレクション**: 指定したテーブルのカレントセレクションの各レコードごとに式、フィールド、メソッドが評価されます。
+- **命名セレクション**: 指定した命名セレクションに含まれる各レコードごとに式、フィールド、メソッドが評価されます。
+- **コレクションまたはエンティティセレクション**: コレクション要素あるいはエンティティを使用してリストボックスの行の中身を定義します。 この場合 [コレクションまたはエンティティセレクション](properties_Object.md#コレクションまたはエンティティセレクション) プロパティを定義する必要があります。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name        | Data Type | Possible Values                                             |
-| ----------- | --------- | ----------------------------------------------------------- |
-| listboxType | string    | "array", "currentSelection", "namedSelection", "collection" |
+| 名称          | データタイプ | とりうる値                                                       |
+| ----------- | ------ | ----------------------------------------------------------- |
+| listboxType | string | "array", "currentSelection", "namedSelection", "collection" |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[List Box](listbox_overview.md)
-
----
-
-## Plug-in Kind
-
-Name of the [plug-in external area](pluginArea_overview.md) associated to the object. Plug-in external area names are published in the manifest.json file of the plug-in.
-
-#### JSON Grammar
-
-| Name           | Data Type | Possible Values                                               |
-| -------------- | --------- | ------------------------------------------------------------- |
-| pluginAreaKind | string    | Name of the plug-in external area (starts with a % character) |
-
-#### Objects Supported
-
-[Plug-in Area](pluginArea_overview.md)
+[リストボックス](listbox_overview.md)
 
 ---
 
-## Radio Group
+## プラグインの種類
 
-Enables radio buttons to be used in coordinated sets: only one button at a time can be selected in the set.
+オブジェクトに関連付ける [プラグインが提供する外部エリア](pluginArea_overview.md) の名称。 ここで指定する名称は、プラグインの manifest.json ファイルにて公開されています。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name       | Data Type | Possible Values  |
-| ---------- | --------- | ---------------- |
-| radioGroup | string    | Radio group name |
+| 名称             | データタイプ | とりうる値                                                         |
+| -------------- | ------ | ------------------------------------------------------------- |
+| pluginAreaKind | string | プラグインが提供する外部エリアの、% 文字で始まる名称 (プロパティリストの候補表示では、この % 文字は表示されません) |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Radio Button](radio_overview.md)
+[プラグインエリア](pluginArea_overview.md)
 
 ---
 
-## Title
+## ラジオグループ
 
-Allows inserting a label on an object. The font and the style of this label can be specified.
+複数のラジオボタンを連動させるためのプロパティです。同じラジオグループに属している複数のラジオボタンは、一度にその内の一つのみを選択することができます。
 
-You can force a carriage return in the label by using the \ character (backslash).
+#### JSON 文法
+
+| 名称         | データタイプ | とりうる値    |
+| ---------- | ------ | -------- |
+| radioGroup | string | ラジオグループ名 |
+
+#### 対象オブジェクト
+
+[ラジオボタン](radio_overview.md)
+
+---
+
+## タイトル
+
+オブジェクトにラベルを追加します。 このラベルのフォントとスタイルは指定することができます。
+
+\文字 (バックスラッシュまたは円マーク) を使用すると、ラベル内で強制的に改行することができます。
 
 ![](../assets/en/FormObjects/property_title.png)
 
-To insert a \ in the label, enter "&#92;&#92;".
+ラベルに \ を表示したい場合は &#92;&#92; と入力します。
 
-By default, the label is placed in the center of the object. When the object also contains an icon, you can modify the relative location of these two elements using the [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) property.
+デフォルトでラベルはオブジェクトの中央に置かれます。 またオブジェクトにアイコンも含まれている場合、[タイトル/ピクチャー位置](properties_TextAndPicture.md#タイトルピクチャー位置) プロパティを用いて、これら2 つの要素の相対位置を変更することができます。
 
-For application translation purposes, you can enter an XLIFF reference in the title area of a button (see [Appendix B: XLIFF architecture](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
+インターフェースの翻訳の目的で、XLIFF 参照をボタンのタイトルエリアに入力することができます ([付録 B: XLIFFアーキテクチャー](https://doc.4d.com/4Dv18/4D/18/Appendix-B-XLIFF-architecture.300-4575737.ja.html) 参照)。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-| text | string    | any text        |
+| 名称   | データタイプ | とりうる値     |
+| ---- | ------ | --------- |
+| text | string | なんらかのテキスト |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
+[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [ラジオボタン](radio_overview.md) - [テキストエリア](text.md)
 
 ---
 
-## Variable Calculation
+## 変数の計算
 
-This property sets the type of calculation to be done in a [column footer](listbox_overview.md#list-box-footers) area.
-> The calculation for footers can also be set using the [`LISTBOX SET FOOTER CALCULATION`](https://doc.4d.com/4dv19/help/command/en/page1140.html) 4D command.
+このプロパティは、[リストボックスフッター](listbox_overview.md#リストボックスフッター) エリアに適用される計算タイプを設定します。
+> リストボックスのフッターに割り当てる自動計算は [`LISTBOX SET FOOTER CALCULATION`](https://doc.4d.com/4dv19/help/command/ja/page1140.html) 4Dコマンドを使用しても設定できます。
 
-There are several types of calculations available. The following table shows which calculations can be used according to the type of data found in each column and indicates the type automatically affected by 4D to the footer variable (if it is not typed by the code):
+様々な自動計算が利用可能です。 以下の表は、列のデータ型に応じて使用することのできる計算と、(コードで明示的に宣言されていないとき) 4D によってフッター変数に自動で割り当てられる型を示しています:
 
-| Calculation           | Num | Text | Date | Time | Bool | Pict | footer var type     |
-| --------------------- | --- | ---- | ---- | ---- | ---- | ---- | ------------------- |
-| Minimum               | X   | X    | X    | X    | X    |      | Same as column type |
-| Maximum               | X   | X    | X    | X    | X    |      | Same as column type |
-| Sum                   | X   |      |      | X    | X    |      | Same as column type |
-| Count                 | X   | X    | X    | X    | X    | X    | Longint             |
-| Average               | X   |      |      | X    |      |      | Real                |
-| Standard deviation(*) | X   |      |      | X    |      |      | Real                |
-| Variance(*)           | X   |      |      | X    |      |      | Real                |
-| Sum squares(*)        | X   |      |      | X    |      |      | Real                |
-| Custom ("none")       | X   | X    | X    | X    | X    | X    | Any                 |
+| 計算タイプ                 | 数値 | テキスト | 日付 | 時間 | ブール | ピクチャー | フッター変数の型 |
+| --------------------- | -- | ---- | -- | -- | --- | ----- | -------- |
+| 最小                    | X  | X    | X  | X  | X   |       | 列の型と同じ   |
+| 最大                    | X  | X    | X  | X  | X   |       | 列の型と同じ   |
+| 合計                    | X  |      |    | X  | X   |       | 列の型と同じ   |
+| カウント                  | X  | X    | X  | X  | X   | X     | Longint  |
+| 平均                    | X  |      |    | X  |     |       | 実数       |
+| 標準偏差(*)               | X  |      |    | X  |     |       | 実数       |
+| 分散(*)                 | X  |      |    | X  |     |       | 実数       |
+| 平方和(*)                | X  |      |    | X  |     |       | 実数       |
+| カスタム (JSON では "none") | X  | X    | X  | X  | X   | X     | 制限なし     |
 
-(*) Only for array type list boxes.
+(*) 配列型のリストボックスのみ
 
-> Only declared or dynamic [variables](Concepts/variables.md) can be used to display footer calculations. Other kinds of [expressions](Concepts/quick-tour.md#expressions) such as `Form.value` are not supported.
+> フッター計算には、宣言された、あるいは動的な [変数](Concepts/variables.md) のみを使用できます。 その他の [式](Concepts/quick-tour.md#式) (例: `Form.value`) はサポートされていません。
 
-Automatic calculations ignore the shown/hidden state of list box rows. If you want to restrict a calculation to only visible rows, you must use a custom calculation.
+自動計算の際、リストボックス行の表示/非表示状態は考慮されません。 表示行だけを計算対象にしたい場合、カスタムを選択してプログラムコードで計算しなくてはなりません。
 
-*Null* values are not taken into account for any calculations.
+*Null* 値は計算において無視されます。
 
-If the column contains different types of values (collection-based column for example):
+異なる型の値がカラムに含まれる場合 (コレクションに基づいている場合など):
 
-- Average and Sum only take numerical elements into account (other element types are ignored).
-- Minimum and Maximum return a result according to the usual type list order as defined in the [collection.sort()](API/CollectionClass.md#sort) function.
+- 平均と合計は数値のみを計算に含めます (他の型の値は無視されます)。
+- 最小と最大は、[collection.sort()](API/CollectionClass.md#sort) 関数にて定義されるのと同じ最小値と最大値を返します。
 
-Using automatic calculations in footers of columns based upon expressions has the following limitations:
+式に基づいている列のフッターにおいて自動計算を使用するにあたっては、次の制限があります:
 
-- it is **supported** with all list box types when the expression is "simple" (such as `[table]field` or `this.attribute`),
-- it is **supported but not recommended** for performance reasons with collection/entity selection list boxes when the expression is "complex" (other than `this.attribute`) and the list box contains a large number of rows,
-- it is **not supported** with current selection/named selection list boxes when the expression is "complex". You need to use custom calculations.
+- 式が "単純" なものの場合 (`[table]field` や `this.attribute` など) には、すべてのリストボックスタイプで **サポートされます**
+- 式が "複雑" (つまり、`this.attribute` 以外) で、かつリストボックスの行数が多い場合には、コレクション/エンティティセレクションリストボックスにおいて **サポートはされるものの**、パフォーマンス上の理由により **推奨されません**。
+- 式が "複雑" な場合には、カレントセレクション/命名セレクションリストボックスにおいて **サポートされません**。 これらの場合には、カスタム計算を使用する必要があります。
 
-When **Custom** ("none" in JSON) is set, no automatic calculations are performed by 4D and you must assign the value of the variable in this area by programming.
+**カスタム** (JSON では "none") を選択した場合、4D は自動計算をおこないません。プログラムを使用して表示する値をエリアの変数に代入しなければなりません。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name                | Data Type | Possible Values                                                                                       |
-| ------------------- | --------- | ----------------------------------------------------------------------------------------------------- |
-| variableCalculation | string    | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
+| 名称                  | データタイプ | とりうる値                                                                                                 |
+| ------------------- | ------ | ----------------------------------------------------------------------------------------------------- |
+| variableCalculation | string | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[List Box Footer](listbox_overview.md#list-box-footers)
+[リストボックスフッター](listbox_overview.md#リストボックスフッター)

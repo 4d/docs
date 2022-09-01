@@ -1,75 +1,75 @@
 ---
 id: users
-title: Users Page
+title: ユーザーページ
 ---
 
 
-The **Users** page lists the 4D users connected to the server.
+**ユーザー** ページには、サーバーに接続しているユーザーが表示されます:
 
 
 ![](../assets/en/Admin/server-users.png)
 
-The "Users" button indicates, in parentheses, the total number of users connected to the server (this number does not take into account any display filters applied to the window). The page also contains a dynamic search area and control buttons. You can modify the order of the columns by dragging and dropping their header areas.
+"ユーザー" ボタンには、データベースに接続中のユーザ数が括弧内に表示されます (この番号は、ウィンドウに適用される表示フィルターを考慮しません)。 このページには、動的な検索エリアやコントロールボタンもあります。 ヘッダーエリアをドラッグ＆ドロップして、列の順番を入れ替えることができます。
 
-You can also sort the list of column values by clicking on its header. Click several times to specify in turn an ascending/descending order.
+また、ヘッダーをクリックすると、リストの値が並べ替えられます。 クリックするごとに昇順/降順が入れ替わります。
 
 ![](../assets/en/Admin/server-users-sort.png)
 
-## List of Users
+## ユーザーリスト
 
-For each user connected to the server, the list provides the following information:
+サーバーに接続したユーザーごとに、以下の情報がリストに表示されます:
 
-- System of the client machine (macOS or Windows) as an icon.
-- **4D User**: Name of the 4D user, or alias if set with the [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) command on the user machine. If passwords are not activated and no alias has been set, all users are named "Designer".
-- **Machine name**: Name of the remote machine.
-- **Session name**: Name of the session opened on the remote machine.
-- **IP Address**: IP address of the remote machine.
-- **Login date**: Date and time of the remote machine connection.
-- **CPU Time**: CPU time consumed by this user since connecting.
-- **Activity**: Ratio of time that 4D Server devotes to this user (dynamic display). "Sleeping" if the remote machine has switched to sleep mode (see below).
+- システム: クライアントマシンのシステム (macOS/Windows)。
+- **4Dユーザー**: 4Dユーザー名、またはユーザーマシン上で [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/ja/page1666.html) コマンドで設定されていればエイリアス。 パスワードシステムが有効になっていない場合、かつエイリアスも設定されていなければ、すべてのユーザーは "Designer" となります。
+- **マシン名**: リモートマシンの名前。
+- **セッション名**: リモートマシン上で開かれたセッション名。
+- **IP アドレス**: リモートマシンの IPアドレス。
+- **ログイン日**: リモートマシンが接続した日付と時刻。
+- **CPU時間**: 接続してからこのユーザーが消費した CPU の時間
+- **Activity**: 4D Server がこのユーザーのために使用する時間の割合 (動的表示)。 リモートマシンがスリープモードに切り替わっている場合には "スリープ中" と表示 (以下参照)。
 
-### Managing sleeping users
+### スリープ中ユーザーの管理
 
-4D Server specifically handles cases where a machine running a 4D remote application switches to sleep mode while its connection to the server machine is still active. In this case, the connected 4D remote application automatically notifies 4D Server of its imminent disconnection. On the server, the connected user changes to a **Sleeping** activity status:
+4D Server は、サーバーマシンへのアクセスがアクティブである間にスリープモードへと切り替わってしまった 4Dリモートアプリケーションを実行しているマシンについて、特別な管理をします。 この場合、接続されている 4Dリモートアプリケーションはこの急な切断を 4D Server へと自動的に知らせます。 サーバー側では、接続しているユーザーのアクティビティステータスを **スリープ中** へと変更されます:
 
 ![](../assets/en/Admin/server-sleeping.png)
 
-This status frees up resources on the server. In addition, the 4D remote application reconnects to 4D Server automatically after waking up from sleep mode.
+このステータスはサーバー側のリソースを一部解放します。 これに加え、4Dリモートアプリケーションはスリープモードから復帰したときに自動的に 4D Server へと再接続します。
 
-The following scenario is supported: a remote user stops working for awhile, for example during a lunch break, but keeps the connection to the server open. The machine switches to sleep mode. When the user returns, they wake the machine up and the 4D remote application automatically recovers its connection to the server as well as the session context.
+サポートされるシナリオは、以下の様なものです: たとえばお昼休みなどでリモートユーザーが作業を中断するも、サーバーとの接続は開いたままにしたとします。 マシンはスリープモードへと切り替わります。 ユーザーが戻ってきてマシンをスリープから復帰させると、4Dリモートアプリケーションは自動的にサーバーへの接続を復元するとともにセッションコンテキストも復元します。
 
-> A sleeping remote session is automatically dropped by the server after 48 hours of inactivity. You can modify this default timeout using the [`SET DATABASE PARAMETER`](https://doc.4d.com/4dv19/help/command/en/page642.html) command with the `Remote connection sleep timeout` selector.
-
-
-## Search/filtering Area
-
-This feature can be used to reduce the number of rows displayed in the list to those that correspond to the text entered in the search area. The area indicates the columns where the search/filtering will be carried out. On the Users page, it will be the 4D User, Machine name and Session name columns.
-
-The list is updated in real time as you enter text in the area. It is possible to enter more than one value to be searched for: separate the values with a semi-colon. The `OR` type operator is used in this case. For example, if you enter "John;Mary;Peter," only rows with John OR Mary OR Peter in the target columns will be kept.
+> スリープ状態のリモートセッションは、48時間活動しないとサーバーから自動的に切断されます。 このデフォルトのタイムアウトを変更するには、[`SET DATABASE PARAMETER`](https://doc.4d.com/4dv19/help/command/ja/page642.html) コマンドの `Remote connection sleep timeout` セレクターを使用します。
 
 
-## Administration Buttons
+## 検索/フィルターエリア
 
-This page includes three control buttons. These are active if at least one row is selected. You can select several rows by holding down the **Shift** key for an adjacent selection or **Ctrl** (Windows) / **Command** (macOS) key for a non-adjacent selection.
+この機能を使用して、検索エリアに入力されたテキストに対応する行だけをリストに表示させ、行数を減らすことができます。 エリアには、どの列に対して検索/フィルターが実行されるかが表示されています。 ユーザーページでは、4D ユーザー、マシン名、そしてセッション名です。
 
-### Send message
+エリアにテキストが入力されると、リストはリアルタイムで更新されます。 値をセミコロンで区切ることで、一つ以上の値を使用して検索をおこなうことができます。 この場合 `OR` タイプの演算がおこなわれます。 たとえば、"John;Mary;Peter" と入力すると、John または Mary または Peter が対象となる列にある行のみが表示されます。
 
-This button can be used to send a message to the 4D users selected in the window. If no user is selected, the button is not active. When you click on this button, a dialog box appears that lets you enter the message. The dialog box indicates the number of users that will receive this message:
+
+## 管理ボタン
+
+このページには 3つのコントロールボタンがあります。 これらのボタンは、最低 1つの行が選択されているときに有効になります。 **Shift**キーを押しながらクリックして連続した行を、あるいは **Ctrl** (Windows) / **Command** (macOS) キーを押しながらクリックして連続しない行を複数選択できます。
+
+### メッセージ送信
+
+このボタンを使用して、ウィンドウで選択した 4Dユーザーにメッセージを送信できます。 ユーザーが選択されていないと、ボタンを使用できません。 ボタンをクリックするとダイアログボックスが表示され、メッセージを入力できます。 ダイアログにはメッセージを受信するユーザーの数が表示されます:
 
 ![](../assets/en/Admin/server-message.png)
 
-The message will be displayed as an alert on the remote machines.
+クライアントマシン上でこのメッセージは警告メッセージとして表示されます。
 
-> You can perfom the same action for remote users with the [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1632.html) command.
+> [`SEND MESSAGE TO REMOTE USER`](https://doc.4d.com/4dv19/help/command/ja/page1632.html) コマンドを使用することでも、リモートユーザーに対して同じアクションを実行することができます。
 
 
-### Watch Processes
+### プロセス監視
 
-This button can be used to directly show the processes of the user(s) selected on the [**Processes** page](processes.md) of the window. When you click on this button, 4D Server switches to the Processes page and enters the selected user names in the search/filtering area.
+このボタンをクリックすると、選択されたユーザーのプロセスを、管理ウィンドウの [**プロセス** ページ](processes.md) に直接表示させることができます。 ボタンをクリックすると、4D Server はプロセスページに移動し、このページの検索/フィルターエリアに選択されたユーザー名を入力します。
 
-### Drop user
+### ユーザーをドロップ
 
-This button can be used to force the selected user(s) to disconnect. When you click on this button, a warning dialog box appears so that you can confirm or cancel this operation (hold down **Alt** key while clicking on the **Drop user** button to disconnect the selected user(s) directly without displaying the confirmation dialog box).
+このボタンは、選択したユーザーの接続を強制的に解除するために使用します。 確認ダイアログなしに選択ユーザーの接続を解除するには、**Alt**キーを押しながら、**ユーザーをドロップ** ボタンをクリックします。
 
-> You can perfom the same action for remote users with the [`DROP REMOTE USER`](https://doc.4d.com/4dv19/help/command/en/page1633.html) command.
+> [`DROP REMOTE USER`](https://doc.4d.com/4dv19/help/command/ja/page1633.html) コマンドを使用することでも、リモートユーザーに対して同じアクションを実行することができます。
 

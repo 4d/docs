@@ -3,55 +3,55 @@ id: info
 title: '$info'
 ---
 
-Returns information about the entity sets currently stored in 4D Server's cache as well as user sessions
+Renvoie des informations sur les ensembles d'entités stockés couramment dans le cache de 4D Server ainsi que sur les sessions utilisateur
 
 ## Description
-When you call this request for your project, you retrieve information in the following properties:
+En appelant cette requête pour votre projet, vous récupérez des informations dans les propriétés suivantes :
 
-| Property       | Type       | Description                                                                         |
-| -------------- | ---------- | ----------------------------------------------------------------------------------- |
-| cacheSize      | Number     | 4D Server's cache size.                                                             |
-| usedCache      | Number     | How much of 4D Server's cache has been used.                                        |
-| entitySetCount | Number     | Number of entity selections.                                                        |
-| entitySet      | Collection | A collection in which each object contains information about each entity selection. |
-| ProgressInfo   | Collection | A collection containing information about progress indicator information.           |
-| sessionInfo    | Collection | A collection in which each object contains information about each user session.     |
+| Propriété      | Type        | Description                                                                                         |
+| -------------- | ----------- | --------------------------------------------------------------------------------------------------- |
+| cacheSize      | Number      | Taille du cache du serveur 4D.                                                                      |
+| usedCache      | Number      | La quantité de cache du serveur 4D utilisée.                                                        |
+| entitySetCount | Number      | Nombre de sélections d'entités.                                                                     |
+| entitySet      | Collections | Une collection dans laquelle chaque objet contient des informations sur chaque sélection d'entités. |
+| ProgressInfo   | Collections | Une collection contenant des informations sur les indicateurs de progression.                       |
+| sessionInfo    | Collections | Une collection dans laquelle chaque objet contient des informations sur chaque session utilisateur. |
 
 ### entitySet
-For each entity selection currently stored in 4D Server's cache, the following information is returned:
+Pour chaque sélection d'entités stocké dans le cache de 4D Server, les informations retournées sont les suivantes :
 
 
-| Property      | Type    | Description                                                                                                                                                                                                                                                         |
-| ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id            | String  | A UUID that references the entity set.                                                                                                                                                                                                                              |
-| dataClass     | String  | Name of the dataclass.                                                                                                                                                                                                                                              |
-| selectionSize | Number  | Number of entities in the entity selection.                                                                                                                                                                                                                         |
-| sorted        | Boolean | Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.                                                                                                                                                                                  |
-| refreshed     | Date    | When the entity set was created or the last time it was used.                                                                                                                                                                                                       |
-| expires       | Date    | When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. This value is either two hours by default or what you defined using `$timeout`. |
+| Propriété     | Type    | Description                                                                                                                                                                                                                                                                                                                   |
+| ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id            | String  | Un UUID qui référence l'ensemble d'entités.                                                                                                                                                                                                                                                                                   |
+| dataClass     | String  | Nom de la dataclass.                                                                                                                                                                                                                                                                                                          |
+| selectionSize | Number  | Nombre d'entités dans la sélection d'entités.                                                                                                                                                                                                                                                                                 |
+| sorted        | Boolean | Retourne vrai si l'ensemble a été trié (à l'aide de `$orderby`) ou faux s'il n'est pas trié.                                                                                                                                                                                                                                  |
+| refreshed     | Date    | Date de création de l'ensemble d'entités ou de la dernière utilisation.                                                                                                                                                                                                                                                       |
+| expires       | Date    | Date d'expiration de l'ensemble d'entités (cette date/heure change chaque fois que l'ensemble d'entités est actualisé). La différence entre actualisé et expire est le timeout d'un ensemble d'entités. Cette valeur correspond soit à deux heures par défaut, soit à la valeur que vous avez définie à l'aide de `$timeout`. |
 
-For information about how to create an entity selection, refer to `$method=entityset`. If you want to remove the entity selection from 4D Server's cache, use `$method=release`.
-> 4D also creates its own entity selections for optimization purposes, so the ones you create with `$method=entityset` are not the only ones returned.
+Pour plus d'informations sur la création d'une sélection d'entités, reportez-vous à `$method=entityset`. Si vous souhaitez supprimer la sélection d'entités du cache de 4D Server, utilisez `$method=release`.
+> 4D crée également ses propres sélections d'entités à des fins d'optimisation, de sorte que ceux que vous créez avec `$method=entityset` ne soient pas les seuls à être retournés.
 > **IMPORTANT** If your project is in **Controlled Admin Access Mode**, you must first log into the project as a user in the Admin group.
 
 ### sessionInfo
 
-For each user session, the following information is returned in the *sessionInfo* collection:
+Pour chaque session utilisateur, les informations suivantes sont retournées dans la collection *sessionInfo* :
 
-| Property   | Type   | Description                                                  |
-| ---------- | ------ | ------------------------------------------------------------ |
-| sessionID  | String | A UUID that references the session.                          |
-| userName   | String | The name of the user who runs the session.                   |
-| lifeTime   | Number | The lifetime of a user session in seconds (3600 by default). |
-| expiration | Date   | The current expiration date and time of the user session.    |
+| Propriété  | Type   | Description                                                       |
+| ---------- | ------ | ----------------------------------------------------------------- |
+| sessionID  | String | Un UUID qui référence la session.                                 |
+| userName   | String | Nom de l'utilisateur qui lance la session.                        |
+| lifeTime   | Number | La durée d'une session utilisateur en secondes (3600 par défaut). |
+| expiration | Date   | Date et heure d'expiration courante de la session utilisateur.    |
 
-## Example
+## Exemple
 
-Retrieve information about the entity sets currently stored in 4D Server's cache as well as user sessions:
+Retourne des informations sur les ensembles d'entités stockés couramment dans le cache de 4D Server ainsi que sur les sessions utilisateur:
 
 `GET /rest/$info`
 
-**Result**:
+**Résultat** :
 
 ```
 {
@@ -114,4 +114,4 @@ sessionInfo: [
 ]
 }
 ```
-> The progress indicator information listed after the entity selections is used internally by 4D.
+> Les informations de l'indicateur de progression répertoriées après les sélections d'entités sont utilisées en interne par 4D.

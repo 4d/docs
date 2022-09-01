@@ -3,17 +3,17 @@ id: onMouseUp
 title: On Mouse Up
 ---
 
-| Code | Can be called by                                                                                      | Definition                                                           |
-| ---- | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| 2    | [Input](FormObjects/input_overview.md) of the `picture` [Type](FormObjects/properties_Object.md#type) | The user has just released the left mouse button in a Picture object |
+| Code | Puede ser llamado por                                                                                      | Definición                                                                  |
+| ---- | ---------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
+| 2    | [Área de entrada](FormObjects/input_overview.md) de [Tipo](FormObjects/properties_Object.md#type) `imagen` | El usuario acaba de soltar el botón izquierdo del ratón en un objeto Imagen |
 
 
-## Description
+## Descripción
 
-The `On Mouse Up` event is generated when the user has just released the left mouse button while dragging in a picture input. This event is useful, for example, when you want the user to be able to move, resize or draw objects in a SVG area.
+El evento `On Mouse Up` se genera cuando el usuario acaba de soltar el botón izquierdo del ratón mientras arrastra una imagen. Este evento es útil, por ejemplo, cuando se desea que el usuario pueda mover, redimensionar o dibujar objetos en un área SVG.
 
-When the `On Mouse Up` event is generated, you can get the local coordinates where the mouse button was released. These coordinates are returned in the `MouseX` and `MouseY` System variables. The coordinates are expressed in pixels with respect to the top left corner of the picture (0,0).
+Cuando se genera el evento `On Mouse Up`, puede obtener las coordenadas locales donde se soltó el botón del ratón. Estas coordenadas se devuelven en las variables sistema `MouseX` y `MouseY`. Las coordenadas se expresan en píxeles con respecto a la esquina superior izquierda de la imagen (0,0).
 
-When using this event, you must also use the `Is waiting mouse up` command to handle cases where the "state manager" of the form is desynchronized, i.e. when the `On Mouse Up` event is not received after a click. This is the case for example when an alert dialog box is displayed above the form while the mouse button has not been released. For more information and an example of use of the `On Mouse Up` event, please refer to the description of the `Is waiting mouse up` command.
+Cuando se utiliza este evento, también hay que utilizar el comando `Is waiting mouse up` para manejar los casos en los que el "gestor de estado" del formulario está desincronizado, es decir, cuando el evento `On Mouse Up` no se recibe después de un clic. Este es el caso, por ejemplo, cuando se muestra una caja de diálogo de alerta sobre el formulario mientras no se ha soltado el botón del ratón. Para más información y un ejemplo de uso del evento `On Mouse Up`, consulte la descripción del comando `Is waiting mouse up`.
 
-> If the [Draggable](FormObjects/properties_Action.md#draggable) option is enabled for the picture object, the `On Mouse Up` event is never generated. 
+> Si la opción [Draggable](FormObjects/properties_Action.md#draggable) está activada para el objeto imagen, el evento `On Mouse Up` nunca se genera. 

@@ -1,6 +1,6 @@
 ---
 id: gettingStarted
-title: Getting Started
+title: Prise en main
 ---
 
 This "Getting started" section is geared at first-time users who want an overall overview on how to go from zero to a 4D website that handles data from the database. Let's start!
@@ -38,6 +38,9 @@ The default home page is displayed:
 Case of 
  : ($1="/hello")
   WEB SEND TEXT("Hello World!")
+ Else 
+  // Error 404 for example
+End case
  Else 
   // Error 404 for example
 End case 
@@ -208,7 +211,7 @@ $webUser.userId:="john@4d.com"
 $webUser.save()
 ```
 
-### Authenticating users
+### Authentification des utilisateurs
 
 > To be secure from end to end, it is necessary that the whole connection is established via [https](webServerConfig.md#enable-https).
 
@@ -246,6 +249,10 @@ If ($user#Null) //a user was found
         WEB SEND TEXT("Welcome "+Session.userName)
     Else 
         WEB SEND TEXT("Wrong user name or password.")
+    End if 
+Else 
+    WEB SEND TEXT("Wrong user name or password.")
+End if
     End if 
 Else 
     WEB SEND TEXT("Wrong user name or password.")

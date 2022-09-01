@@ -3,7 +3,7 @@ id: installation
 title: Installation
 ---
 
-Welcome to 4D! On this page, you will find all of the necessary information about installing and launching your 4D product.
+Welcome to 4D! Welcome to 4D! On this page, you will find all of the necessary information about installing and launching your 4D product.
 
 ## Required configuration
 

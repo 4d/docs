@@ -1,38 +1,38 @@
 ---
 id: gettingStarted
-title: Getting Started
+title: はじめに
 ---
 
-This "Getting started" section is geared at first-time users who want an overall overview on how to go from zero to a 4D website that handles data from the database. Let's start!
+この章は、データベースのデータを扱う 4D Webサイトをゼロから作成する方法を知りたい、初心者ユーザーを対象としています。 さあ、始めましょう！
 
-## Hello World Example
+## Hello World 例題
 
-Let's start by making the web server send "Hello World" to the browser. The most simple way to do this is to create a project, start the web server and write a small code that returns a text in the `On Web Connection` database method.
+まずは、Webサーバーからブラウザーに向けて "Hello World" を送信するところから始めましょう。 もっとも簡単な方法は、プロジェクトを作成して Webサーバーを開始し、`On Web Connection` データベースメソッドにテキストを返す短いコードを書くことです。
 
-### Starting the web server
+### Webサーバーの開始
 
-To start the 4D web server:
+4D Webサーバーを開始するには:
 
-1. Launch your 4D application and create a new, empty 4D project.
-2. In the **Run** menu, select **Start Web Server**.
+1. 4Dアプリケーションを起動し、新規プロジェクトを作成します。
+2. 上部の **実行** メニューから、**Webサーバー開始** を選択します。
 
-That's all! The web server is started (you can see that the menu item has become **Stop Web Server**). It is now ready to handle requests. To check it, we'll display the default home page.
+これだけです。 Webサーバーが開始します (メニュー項目が **Webサーバー停止** に変わったのが確認できます)。 これでリクエストを処理できるようになりました。 確認のため、デフォルトホームページを表示してみましょう。
 
-### Displaying the default home page
+### デフォルトホームページの表示
 
-The 4D web server creates automatically a default `index.html` page in the default `WebFolder` root folder, created at the same level as the Project folder.
+4D Webサーバーは、Projectフォルダーと同じ階層に作成されたデフォルトの `WebFolder` ルートフォルダーに、デフォルトの `index.html` ページを自動的に作成します。
 
-1. Launch a web browser and connect to the web server IP address (default http port for 4D web server is 80). If the web server and the browser are on the same machine, you can select **Test Web Server** in the **Run** menu.
+1. Webブラウザーを起動し、Webサーバーの IPアドレス (4D Webサーバーのデフォルト httpポートは 80) に接続します。 Webサーバーとブラウザーが同じマシンにある場合は、**実行** メニューから **Webサーバーテスト** を選択します。
 
-The default home page is displayed:
+デフォルトのホームページが表示されます:
 
 ![](../assets/en/WebServer/defaultHomePage.png)
 
-### Displaying Hello World
+### Hello World の表示
 
-1. Open the Explorer, display the Database Methods list and double-click on `On Web Connection`.
+1. エクスプローラーを開いてデータベースメソッドの一覧を表示し、`On Web Connection` をダブルクリックします。
 
-2. Enter the following code:
+2. 次のコードを入力します:
 
 ```4d
 Case of 
@@ -43,31 +43,31 @@ Case of
 End case 
 ```
 
-The [`On Web Connection`](httpRequests.md#on-web-connection) database method is called for incoming requests and receives the target URL in the `$1` parameter. This very simple code only sends the text to the browser.
+[`On Web Connection`](httpRequests.md#on-web-connection) データベースメソッドは、受信リクエストに対して呼び出され、ターゲットURLを引数として `$1` に受け取ります。 この非常にシンプルなコードは、ただテキストをブラウザーに送信します。
 
-3. In your browser, enter the following URL:
+3. ブラウザーで次の URL を入力します:
 
 ```
 http://localhost/hello
 ```
 
-The web server handles the request and returns:
+Webサーバーがリクエストを処理して次を返します:
 
 ![](../assets/en/WebServer/hello.png)
 
-## Getting data from the database
+## データベースのデータを取得する
 
-Now we'll see how simple it is to get data from the database. First, we will create a table and fill it with some data.
+次に、データベースからデータを取得するのが、いかに簡単か見てみましょう。 まず、テーブルを作成し、そこにデータを入力していきます。
 
-Create a basic database with, for example, a single table containing some records:
+たとえば、数件のレコードを含む 1つのテーブルを持つ基本的なデータベースを作成します:
 
 ![](../assets/en/WebServer/hello2.png) ![](../assets/en/WebServer/hello3.png)
 
-### Displaying data in a page
+### ページへのデータ表示
 
-The most simple solution to display data is to call a [template page](templates.md) containing tags.
+データを表示するもっとも簡単な方法は、タグを含む [テンプレートページ](templates.md) を呼び出すことです。
 
-1. Using any text editor, create a file containing the following lines:
+1. 任意のテキストエディターを使用して、以下の行を格納するファイルを作成します:
 
 ```html
 <html>
@@ -80,32 +80,32 @@ The most simple solution to display data is to call a [template page](templates.
 </html>
 ```
 
-2. Name the file "friends.shtml" and save it in the **WebFolder** of your project.
-3. In your browser, enter the following URL:
+2. ファイル名を "friends.shtml" とし、プロジェクトの **WebFolder** に保存します。
+3. ブラウザーで次の URL を入力します:
 
 ```
 http://localhost/friends.shtml
 ```
 
-`.shtml` pages are automatically processed by the web server. Your page filled with data is returned:
+`.shtml` のページは、Webサーバーによって自動的に処理されます。 データを表示するページが返されます:
 
 ![](../assets/en/WebServer/hello3bis.png)
 
-### REST request
+### RESTリクエスト
 
-If we not only want to *display* data, but to *use* it, we can use ORDA and the REST server. Thanks to the [ORDA concept](ORDA/overview.md), the `Friends` table is automatically mapped to a dataclass and is available through [REST](REST/gettingStarted.md).
+データを *表示* するだけでなく、*使用* するには、ORDA と RESTサーバーを使うことができます。 [ORDAコンセプト](ORDA/overview.md) により、`Friends` テーブルは自動的にデータクラスにマッピングされ、[REST](REST/gettingStarted.md) を通じて利用可能です。
 
-1. We will use the REST server to access data: go the "Settings" dialog box, select the "Web/Rest resource" page, and check the **Expose as REST server** option.
+1. RESTサーバーを使ってデータにアクセスしましょう: "ストラクチャー設定" ダイアログボックスで "Web/RESTリソース" ページを選択し、**RESTサーバーとして公開** オプションをチェックします。
 
 ![](../assets/en/WebServer/hello5.png)
 
-2. In your browser, enter the following URL:
+2. ブラウザーで次の URL を入力します:
 
 ```
 http://localhost/rest/$catalog
 ```
 
-The web server returns the results in JSON:
+Webサーバーは結果を JSON で返します:
 
 ```json
 {
@@ -120,17 +120,17 @@ The web server returns the results in JSON:
 }
 ```
 
-You get the catalog, i.e. the list of exposed dataclasses and attributes in the datastore.
+カタログ、つまりデータストアで公開されているデータクラスと属性のリストが取得されます。
 
-You can also get any data.
+任意のデータを取得することもできます。
 
-3. Enter the following URL:
+3. 以下のURLを入力します:
 
 ```
 http://localhost/rest/Friends
 ```
 
-The server returns the entities, i.e. the data, from the Friends dataclass:
+サーバーは、Friendsデータクラスのエンティティ、つまりデータを返します:
 
 ```json
 {
@@ -177,24 +177,24 @@ The server returns the entities, i.e. the data, from the Friends dataclass:
 }
 ```
 
-This very simple example shows how the web server interacts transparently with the [REST server](REST/gettingStarted.md) to return any requested data, provided it is exposed. In your web interfaces, you can easily bind the javascript or html code with returned data. See the built-in [Web Data Explorer](Admin/dataExplorer.md) to have an example of sophisticated web interface bound to dataclasses.
+この非常にシンプルな例では、Webサーバーが [RESTサーバー](REST/gettingStarted.md) と透過的に通信し、要求されたデータが公開されていればそれを返す様子を示しています。 返されたデータは、Webインターフェース内で javascript や html のコードと簡単に結びつけることができます。 データクラスにバインドされている、洗練された Webインターフェースの例として、ビルトインの [Webデータエクスプローラー](Admin/dataExplorer.md) を参照ください。
 
-## Login and session
+## ログインとセッション
 
-In the above sections, we get free access to the application from web requests. However, in the world of web applications, data access security is the first priority. When connecting to the 4D web server, users must be authentified and their navigation controlled.
+上の例で Webリクエストは、アプリケーションへの自由なアクセスを得ています。 しかし、Webアプリケーションの世界では、データアクセスのセキュリティが最優先されます。 4D Webサーバーに接続する際には、ユーザーを認証し、そのナビゲーションを制御する必要があります。
 
-### Creating a table of users
+### ユーザーテーブルの作成
 
-The most simple and secured way to log a user on the 4D web server is based upon the following scenario:
+4D Webサーバーにユーザーをログインさせる、もっともシンプルで安全な方法は、以下のシナリオに基づきます:
 
-- Users are stored in a dedicated, unexposed table (named *WebUsers* for example)
-- The *WebUsers* table could be [encrypted](MSC/encrypt.md) and stores the user login and a hash of their password.
+- ユーザーは、専用の非公開テーブル (例: *WebUsers*) に保存されます。
+- [暗号化](MSC/encrypt.md) することも可能な *WebUsers* テーブルには、ユーザーのログイン名とパスワードのハッシュが保存されています。
 
-1. Create a table with some fields, for example:
+1. いくつかのフィールドを持つテーブルを作成します。 たとえば:
 
 ![](../assets/en/WebServer/helloUsers.png)
 
-2. Write and execute the following code to create a user:
+2. 以下のコードを実行し、ユーザーを作成します:
 
 ```4d
 var $webUser : cs.WebUsersEntity
@@ -202,19 +202,19 @@ var $webUser : cs.WebUsersEntity
 $webUser:=ds.WebUsers.new()
 $webUser.firstName:="John"
 $webUser.lastName:="Doe"
-// the password would be entered by the user
+// パスワードはユーザーが自身で入力します
 $webUser.password:=Generate password hash("123")
 $webUser.userId:="john@4d.com"
 $webUser.save()
 ```
 
-### Authenticating users
+### ユーザー認証
 
-> To be secure from end to end, it is necessary that the whole connection is established via [https](webServerConfig.md#enable-https).
+> 通信が安全であるためには、接続は [https](webServerConfig.md#httpsを有効にする) で確立されている必要があります。
 
-1. Open the Explorer and create a project method named "login".
+1. エクスプローラーを開き、"login" というプロジェクトメソッドを作成します。
 
-3. Write the following code:
+3. 以下のコードを書きます:
 
 ```4d
 var $indexUserId; $indexPassword : Integer
@@ -252,24 +252,24 @@ Else
 End if 
 ```
 
-3. Display the method properties by clicking on the **[i]** button in the code editor, check the `4D tags and URLs (4DACTION...)` option and click **OK**.
+3. コードエディターの **[i]** ボタンでメソッドプロパティを表示し、`4DタグとURL(4DACTION...)` オプションにチェックを入れて **OK** をクリックします。
 
 ![](../assets/en/WebServer/hello0.png)
 
-4. In your browser, enter the following URL:
+4. ブラウザーで次の URL を入力します:
 
 ```
 http://localhost/4DACTION/login/?userID=john@4d.com&password=123
 ```
 
-> Using such URLs is not recommended, it is only presented here to keep the example simple. A more realistic login request must be handled through a web form and a POST request. See [this page](sessions.md#example) for an example of form POST.
+> このような URL の使用は推奨されませんが、ここでは例を簡単にするために使っています。 より現実的なログインリクエストは、Webフォームと POSTリクエストで処理する必要があります。 フォームの POST の例は、[このページ](sessions.md#例題) を参照ください。
 
-Then you will be logged for the session:
+すると、そのセッションでログインされます:
 
 ![](../assets/en/WebServer/login1.png)
 
-Wrong credentials would be rejected:
+間違ったログイン情報は拒否されます:
 
 ![](../assets/en/WebServer/login2.png)
 
-Once a user is logged, you can handle the associated session using the `WEB Get Current Session ID` method. See the [User sessions](sessions.md) page.
+ユーザーがログインすると、`WEB Get Current Session ID` メソッドを使って、関連するセッションを処理することができます。 [ユーザーセッション](sessions.md) のページを参照ください。

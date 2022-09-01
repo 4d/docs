@@ -1,6 +1,6 @@
 ---
 id: operators
-title: Operators
+title: Operadores
 ---
 
 An operator is a symbol or a group of symbols that you use to check, modify, or combine values. You are already familiar with many operators. For example, `1 + 2` uses the addition (or plus sign) operator to add two numbers together, and the result is 3. Comparison operators, like = or >, let you compare two or more values.
@@ -8,7 +8,7 @@ An operator is a symbol or a group of symbols that you use to check, modify, or 
 The 4D language supports the operators you may already know from other languages like C or JavaScript. However, the assignment operator is `:=` to prevent it from being mistakenly used when the equal to operator (`=`) is intended. [Basic operators](#basic-operators) such as arithmetic operators (+, -, *, /, %...) and comparison operators (=, >, >=...) can be used with numbers, but also with boolean, text, date, time, pointer, or picture data types. Like JavaScript, the 4D language supports the concept of [truthy and falsy values](#truthy-and-falsy), which in use in [short-cicrcuit operators](#short-circuit-operators).
 
 
-## Terminology
+## Terminologia
 
 The 4D language supports **binary** and **ternary** operators:
 
@@ -19,7 +19,7 @@ The values that operators affect are operands. In the expression `1 + 2`, the + 
 
 
 
-## Assignment operator
+## Operador de atribuição
 
 The **assignment operator** (`a:=b`) initializes or updates the value of `a` with the value of `b`:
 
@@ -30,7 +30,7 @@ $myLength:=Length("Acme") //assigns the result of the command (4) to $myLength
 $col:=New collection //$col is initialized with an empty collection
 ```
 
-> Do NOT confuse the assignment operator `:=` with the equality comparison operator `=`. A different assignment operator (and not `=`) was deliberately chosen to avoid issues and confusion which often occur with == or === in other programming languages. Such errors are often difficult to recognize by the compiler and lead to time-consuming troubleshooting.
+> Do NOT confuse the assignment operator `:=` with the equality comparison operator `=`. A different assignment operator (and not `=`) was deliberately chosen to avoid issues and confusion which often occur with == or === in other programming languages. Esses erros são geralmente difíceis de reconhecer pelo compilador e geram problemas trabalhosos.
 
 
 ## Basic operators
@@ -38,11 +38,11 @@ $col:=New collection //$col is initialized with an empty collection
 Operator results depend on the **data types** they are applied to. 4D supports different operators on scalar data types. They are described with the data types, in the following sections:
 
 - [**Logical operators**](dt_boolean.md#logical-operators) (on **boolean** expressions)
-- [**Date operators**](dt_date.md#date-operators)
-- [**Time operators**](dt_time.md#time-operators)
-- [**Number operators**](dt_number.md#number-operators)
+- [**Operadores de data**](dt_date.md#date-operators)
+- [**Operadores de horas**](dt_time.md#time-operators)
+- [**Operadores de números**](dt_number.md#number-operators)
 - [**Bitwise operators**](dt_number.md#bitwise-operators) (on **long integer** expressions)
-- [**Picture operators**](dt_picture.md#picture-operators)
+- [**Operadores Bitwise**](dt_picture.md#picture-operators)
 - [**Pointer operators**](dt_pointer.md#pointer-operators)
 - [**String operators**](dt_string.md#string-operators)
 
@@ -59,37 +59,37 @@ $a+=2 // $a=3
 
 The following compound assignment operators are supported:
 
-| Operator       | Syntax             | Assigns | Example                                                             |
-| -------------- | ------------------ | ------- | ------------------------------------------------------------------- |
-| Addition       | Text += Text       | Text    | `$t+=" World"  //$t:=$t+" World"`                                   |
-|                | Number += Number   | Number  | `$n+=5 //$n:=$n+5`                                                  |
-|                | Date += Number     | Date    | `$d+=5 //$d:=$d+5`                                                  |
-|                | Time += Time       | Time    | `$t1+=$t2 //$t1:=$t1+$t2`                                           |
-|                | Time += Number     | Number  | `$t1+=5 //$t1:=$t1+5`                                               |
-|                | Picture += Picture | Picture | `$p1+=$p2 //$p1:=$p1+$p2 (add $p2 to the right of $p1)`             |
-|                | Picture += Number  | Picture | `$p1+=5 //$p1:=$p1+5 (move $p1 horizontally 5 pixels to the right)` |
-| Subtraction    | Number -= Number   | Number  | `$n-=5 //$n:=$n-5`                                                  |
-|                | Date -= Number     | Date    | `$d-=5 //$d:=$d-5`                                                  |
-|                | Time -= Time       | Time    | `$t1-=$t2 //$t1:=$t1-$t2`                                           |
-|                | Time -= Number     | Number  | `$t1-=5 //$t1:=$t1-5`                                               |
-|                | Picture -= Number  | Picture | `$p1-=5 //$p1:=$p1-5 (move $p1 horizontally 5 pixels to the left)`  |
-| Division       | Number /= Number   | Number  | `$n/=5 //$n:=$n/5`                                                  |
-|                | Time /= Time       | Time    | `$t1/=$t2 //$t1:=$t1/$t2`                                           |
-|                | Time /= Number     | Number  | `$t1/=5 //$t1:=$t1/5`                                               |
-|                | Picture /= Picture | Picture | `$p1/=$p2 //$p1:=$p1/$p2 (add $p2 to the bottom of $p1)`            |
-|                | Picture /= Number  | Picture | `$p1/=5 //$p1:=$p1/5 (move $p1 vertically 5 pixels)`                |
-| Multiplication | Text *= Number     | Text    | `$t*="abc"  //$t:=$t*"abc"`                                         |
-|                | Number *= Number   | Number  | `$n*=5 //$n:=$n*5`                                                  |
-|                | Time *= Time       | Time    | `$t1*=$t2 //$t1:=$t1*$t2`                                           |
-|                | Time *= Number     | Number  | `$t1*=5 //$t1:=$t1*5`                                               |
-|                | Picture *= Number  | Picture | `$p1*=5 //$p1:=$p1*5 (resize $p1 by 5)`                             |
+| Operator      | Sintaxe            | Assigns | Exemplo                                                             |
+| ------------- | ------------------ | ------- | ------------------------------------------------------------------- |
+| Adição        | Text += Text       | Text    | `$t+=" World"  //$t:=$t+" World"`                                   |
+|               | Number += Number   | Número  | `$n+=5 //$n:=$n+5`                                                  |
+|               | Date += Number     | Date    | `$d+=5 //$d:=$d+5`                                                  |
+|               | Time += Time       | Hora    | `$t1+=$t2 //$t1:=$t1+$t2`                                           |
+|               | Time += Number     | Número  | `$t1+=5 //$t1:=$t1+5`                                               |
+|               | Picture += Picture | Imagem  | `$p1+=$p2 //$p1:=$p1+$p2 (add $p2 to the right of $p1)`             |
+|               | Picture += Number  | Imagem  | `$p1+=5 //$p1:=$p1+5 (move $p1 horizontally 5 pixels to the right)` |
+| Subtração     | Number -= Number   | Número  | `$n-=5 //$n:=$n-5`                                                  |
+|               | Date -= Number     | Date    | `$d-=5 //$d:=$d-5`                                                  |
+|               | Time -= Time       | Hora    | `$t1-=$t2 //$t1:=$t1-$t2`                                           |
+|               | Time -= Number     | Número  | `$t1-=5 //$t1:=$t1-5`                                               |
+|               | Picture -= Number  | Imagem  | `$p1-=5 //$p1:=$p1-5 (move $p1 horizontally 5 pixels to the left)`  |
+| Divisão       | Number /= Number   | Número  | `$n/=5 //$n:=$n/5`                                                  |
+|               | Time /= Time       | Hora    | `$t1/=$t2 //$t1:=$t1/$t2`                                           |
+|               | Time /= Number     | Número  | `$t1/=5 //$t1:=$t1/5`                                               |
+|               | Picture /= Picture | Imagem  | `$p1/=$p2 //$p1:=$p1/$p2 (add $p2 to the bottom of $p1)`            |
+|               | Picture /= Number  | Imagem  | `$p1/=5 //$p1:=$p1/5 (move $p1 vertically 5 pixels)`                |
+| Multiplicação | Text *= Number     | Text    | `$t*="abc"  //$t:=$t*"abc"`                                         |
+|               | Number *= Number   | Número  | `$n*=5 //$n:=$n*5`                                                  |
+|               | Time *= Time       | Hora    | `$t1*=$t2 //$t1:=$t1*$t2`                                           |
+|               | Time *= Number     | Número  | `$t1*=5 //$t1:=$t1*5`                                               |
+|               | Picture *= Number  | Imagem  | `$p1*=5 //$p1:=$p1*5 (resize $p1 by 5)`                             |
 
 These operators apply on any [assignable expressions](quick-tour.md#assignable-vs-non-assignable-expressions) (except pictures as object properties or collection elements).
 
 The operation "source `operator` value" is not strictly equivalent to "source := source `operator` value" because the expression designating the source (variable, field, object property, collection element) is only evaluated once. For example, in such expression as `getPointer()->+=1` the `getPointer` method is called only once.
 
 > [Character indexing in text](dt_string.md#character-reference-symbols) and [byte indexing in blob](dt_blob.md#accessing-a-scalar-blobs-bytes) do not support these operators.
-#### Examples
+#### Exemplos
 
 ```4d
 // Addition
@@ -149,7 +149,7 @@ The following table summarizes the different cases for the **&&** operator:
 | falsy  | truthy | Expr1          |
 | falsy  | falsy  | Expr1          |
 
-#### Example 1
+#### Exemplo 1
 
 ```4d
 var $v : Variant
@@ -161,7 +161,7 @@ $v:=5 && !00-00-00! // 00/00/00
 $v := 5 && 10 && "hello" //"hello"
 ```
 
-#### Example 2
+#### Exemplo 2
 
 Say you have an online store, and some products have a tax rate applied, and others don't.
 
@@ -177,14 +177,13 @@ $tax:=$item.taxRate && ($item.price*$item.taxRate)
 
 `$tax` will be NULL if taxRate is NULL (or undefined), otherwise it will store the result of the calculation.
 
-#### Example 3
+#### Exemplo 3
 
 Short-circuit operators are useful in tests such as:
 
 ```4d
 If(($myObject#Null) && ($myObject.value>10))
-    //code
-End if
+    //code End if
 ```
 
 If $myObject is Null, the second argument is not executed, thus no error is thrown.
@@ -208,9 +207,9 @@ The following table summarizes the different cases and the value returned for th
 | falsy  | truthy | Expr2          |
 | falsy  | falsy  | Expr2          |
 
-#### Example 1
+#### Exemplo 1
 
-Say you have a table called Employee. Some employees have entered a phone number, and others haven't. This means that `$emp.phone` could be NULL, and you cannot assign NULL to a Text variable. But you can write the following:
+Say you have a table called Employee. Some employees have entered a phone number, and others haven't. Some employees have entered a phone number, and others haven't. This means that `$emp.phone` could be NULL, and you cannot assign NULL to a Text variable. But you can write the following:
 
 ```4d
 var $phone : Text
@@ -220,7 +219,7 @@ $phone:=$emp.phone || "n/a"
 
 In which case `$phone` will store either a phone number or the "n/a" string.
 
-#### Example 2
+#### Exemplo 2
 
 Given a table called Person with a *name* field, as well as a *maiden name* field for married women.
 
@@ -232,7 +231,7 @@ var $name: Text
 $name:=$person.maidenName || $person.name
 ```
 
-### Precedence
+### Precedência
 
 The `&&` and `||` operators have the same precedence as the logical operators `&` and `|`, and are evaluated left to right.
 
@@ -249,7 +248,7 @@ It takes three operands in the following order:
 * an expression to execute if the condition is [truthy](#truthy-and-falsy), followed by a colon (:)
 * an expression to execute if the condition is [falsy](#truthy-and-falsy)
 
-### Syntax
+### Sintaxe
 
 The syntax is as follows:
 
@@ -257,7 +256,7 @@ The syntax is as follows:
 
 > Since the [token syntax](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html) uses colons, we recommend inserting a space after the colon `:` or enclosing tokens using parentheses to avoid any conflicts.
 
-### Examples
+### Exemplos
 
 #### A simple example
 
@@ -266,9 +265,7 @@ var $age : Integer
 var $beverage : Text
 
 $age:=26
-$beverage:=($age>=21) ? "Beer" : "Juice"
-
-ALERT($beverage) // "Beer"
+$beverage:=($age>=21) ? "Beer" : "Juice" ALERT($beverage) // "Beer"
 ```
 
 #### Handling data from a table
@@ -292,7 +289,7 @@ The following values are **falsy**:
 
 * false
 * Null
-* undefined
+* indefinido
 * Null object
 * Null collection
 * Null pointer
@@ -306,7 +303,7 @@ All other values are considered **truthy**, including:
 
 * 0 - numeric zero (Integer or otherwise)
 
-In 4D, **truthy** and **falsy** evaluation reflects the **usability** of a value, which means that a truthy value exists and can be processed by the code without generating errors or unexpected results. The rationale behind this is to provide a convenient way to handle *undefined* and *null* values in objects and collections, so that a reduced number of [If…Else](./cf_branching.md#ifelseend-if) statements are necessary to avoid runtime errors.
+In 4D, **truthy** and **falsy** evaluation reflects the **usability** of a value, which means that a truthy value exists and can be processed by the code without generating errors or unexpected results. The rationale behind this is to provide a convenient way to handle *undefined* and *null* values in objects and collections, so that a reduced number of [If… Else](./cf_branching.md#ifelseend-if) statements are necessary to avoid runtime errors.
 
 For example, when you use a [short-circuit OR operator](#short-circuit-or-operator-):
 

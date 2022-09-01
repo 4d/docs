@@ -1,62 +1,62 @@
 ---
 id: interpreted-compiled
-title: Interpreted and Compiled modes
+title: Interpretierter und kompilierter Modus
 ---
 
-4D applications can work in **interpreted** or **compiled** mode:
+4D Anwendungen können im **interpretierten** oder **kompilierten** Modus laufen:
 
-- in interpreted mode, statements are read and translated in machine language at the moment of their execution. You can add or modify the code whenever you need to, the application is automatically updated.
-- in compiled mode, all methods are read and translated once, at the compilation step. Afterwards, the application only contains assembly level instructions are available, it is no longer possible to edit the code.
+- Im interpretierten Modus werden Anweisungen im Moment der Ausführung gelesen und in Maschinensprache übersetzt. Sie können den Code immer, wenn Sie es benötigen, ergänzen oder verändern, die Anwendung wird automatisch aktualisiert.
+- Im kompilierten Modus werden alle Methoden während dem Kompilieren auf einmal gelesen und übersetzt. Das Ergebnis ist eine neue Datei mit einer Reihe von Anweisungen in Maschinensprache. Der Code lässt sich nicht mehr bearbeiten.
 
-The advantages of the compilation are:
+Die Vorteile von Kompilieren sind:
 
-- **Speed**: Your database can run from 3 to 1,000 times faster.
-- **Code checking**: Your database application is scanned for the consistency of code. Both logical and syntactical conflicts are detected.
-- **Protection**: Once your database is compiled, you can delete the interpreted code. Then, the compiled database is functionally identical to the original, except that the structure and methods cannot be viewed or modified, deliberately or inadvertently.
-- **Stand-alone double-clickable applications**: compiled databases can also be transformed into stand-alone applications (.EXE files) with their own icon.
-- **Preemptive mode**: only compiled code can be executed in preemptive processes.
+- **Geschwindigkeit**: Ihre Datenbank läuft um den Faktor von 3 bis 1000 mal schneller.
+- **Überprüfung des Code**: Ihre Datenbank wird auf Übereinstimmung des Code geprüft. 4D Compiler findet sowohl logische als auch Syntaxfehler.
+- **Schutz**: Ist Ihre Datenbank kompiliert, können Sie den interpretierten Code löschen. Denn die kompilierte Datenbanken hat dieselben Funktionalitäten wie ihr Original. Der Unterschied ist, dass Sie die Struktur und Methoden weder ansehen noch verändern können, sei es gewollt oder versehentlich.
+- **Eigenständige, doppelklickbare Anwendungen**; Kompilierte Datenbanken lassen sich in eigenständige Anwendungen (.EXE Dateien) mit eigenen Icons umwandeln.
+- **Preemptive Modus**: Nur kompilierter Code lässt sich in preemptive Prozessen ausführen.
 
-## Differences between interpreted and compiled code
-Although application will work the same way in interpreted and compiled modes, there are some differences to know when you write code that will be compiled. The 4D interpreter is usually more flexible than the compiler.
+## Unterschiede zwischen interpretiertem und kompiliertem Code
+Auch wenn Anwendungen im interpretierten und kompilierten Modus auf die gleiche Weise funktionieren, gibt es einige Unterschiede, die Sie kennen sollten, wenn Sie Code schreiben, der dann kompiliert wird. Der 4D Interpreter ist in der Regel flexibler als der Compiler.
 
-| Compiled                                                                                                                                                                               | Interpreted                                                                    |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| You cannot have a method with the same name as a variable.                                                                                                                             | No error is generated, but priority is given to the method                     |
-| All variables must by typed, either through a compiler directive (ex: `C_LONGINT`), or by the compiler at compilation time.                                                            | Variables can be typed on-the-fly (not recommended)                            |
-| You cannot change the data type of any variable or array.                                                                                                                              | Changing the data type of a variable or an array is possible (not recommended) |
-| You cannot change a one-dimensional array to a two-dimensional array, or change a two-dimensional array to a one-dimensional array.                                                    | Possible                                                                       |
-| Although the compiler will type the variable for you, you should specify the data type of a variable by using compiler directives where the data type is ambiguous, such as in a form. |                                                                                |
-| The `Undefined` function always returns False for variables. Variables are always defined.                                                                                             |                                                                                |
-| If you have checked the "Can be run in preemptive processes" property for the method, the code must not call any thread-unsafe commands or other thread-unsafe methods.                | Preemptive process properties are ignored                                      |
-| The `IDLE` command is necessary to call 4D in specific loops                                                                                                                           | It is always possible to interrupt 4D                                          |
+| Kompiliert                                                                                                                                                                                         | Interpretiert                                                                        |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Sie können keine Methode mit demselben Name wie eine Variable haben.                                                                                                                               | Es wird kein Fehler generiert, jedoch erhält die Methode Priorität                   |
+| Alle Variablen müssen typisiert sein, entweder über eine Compiler-Direktive (z. B. `C_LONGINT`) oder durch den Compiler beim Kompilieren.                                                          | Variablen lassen sich spontan typisieren (nicht empfohlen)                           |
+| Sie können den Datentyp von Variablen oder Arrays nicht ändern.                                                                                                                                    | Der Datentyp einer Variablen oder eines Array lässt sich verändern (nicht empfohlen) |
+| Sie können ein eindimensionales Array nicht in ein zweidimensionales Array umwandeln und umgekehrt.                                                                                                | Ist möglich                                                                          |
+| Auch wenn der Compiler den Typ der Variablen für Sie festlegt, sollten Sie bei zweideutigen Datentypen, wie z. B. in einem Formular, den Datentyp der Variablen mit Compiler-Befehlen deklarieren. |                                                                                      |
+| Die Funktion `Undefined` gibt für Variablen immer den Wert Falsch zurück. Variablen sind immer definiert.                                                                                          |                                                                                      |
+| Ist für die Methode die Eigenschaft "Als preemptive Prozess starten" markiert, darf der Code weder thread-unsafe Befehle oder andere thread-unsafe Methoden aufrufen.                              | Preemptive Prozesseigenschaften werden ignoriert                                     |
+| Der Befehl `IDLE` ist notwendig, um 4D in spezifischen Schleifen aufzurufen                                                                                                                        | Es ist immer möglich, 4D zu unterbrechen                                             |
 
-## Using Compiler Directives with the Interpreter
+## Compiler-Direktiven mit dem Interpreter verwenden
 
-Compiler directives are not required for uncompiled databases. The interpreter automatically types each variable according to how it is used in each statement, and a variable can be freely retyped throughout the database.
+Für nicht-kompilierte Anwendungen sind keine Compiler-Direktiven erforderlich. Der Interpreter typisiert automatisch jede Variable danach, wie sie in der Anweisung verwendet wird, und der Variablentyp lässt sich im Anwendungsprojekt frei verändern.
 
-Because of this flexibility, it is possible that a database can perform differently in interpreted and compiled modes.
+Aufgrund dieser Flexibilität kann eine Anwendung im interpretierten Modus anders als im kompilierten Modus laufen.
 
-For example, if you write:
+Sie schreiben zum Beispiel:
 
 ```4d
 C_LONGINT(MyInt)
 ```
 
-and elsewhere in the database, you write:
+und an anderer Stelle in der Anwendung:
 ```4d
 MyInt:=3.1416
 ```
 
-In this example, `MyInt` is assigned the same value (3) in both the interpreted and compiled modes, provided the compiler directive is interpreted *prior* to the assignment statement.
+In diesem Beispiel wird `MyInt` im interpretierten und kompilierten Modus derselbe Wert (3) zugewiesen, wenn die Compiler-Direktive *vor* Ausführen der Anweisung interpretiert wird.
 
-The 4D interpreter uses compiler directives to type variables. When the interpreter encounters a compiler directive, it types the variable according to the directive. If a subsequent statement tries to assign an incorrect value (e.g., assigning an alphanumeric value to a numeric variable) the assignment will not take place and will generate an error.
+Der 4D Interpreter verwendet Compiler-Direktiven zum Typisieren der Variablen. Findet der Interpreter eine Compiler-Direktive, typisiert er die Variable gemäß dieser Direktive. Versucht eine nachfolgende Anweisung, einen inkorrekten Wert zuzuweisen (z.B. einer numerischen Variablen einen alphanumerischen Wert), erfolgt keine Zuweisung und es wird ein Fehler generiert.
 
-The order in which the two statements appear is irrelevant to the compiler, because it first scans the entire database for compiler directives. The interpreter, however, is not systematic. It interprets statements in the order in which they are executed. That order, of course, can change from session to session, depending on what the user does. For this reason, it is important to design your database so that your compiler directives are executed prior to any statements containing declared variables.
+Die Reihenfolge, in der zwei Anweisungen erscheinen, ist für den Compiler irrelevant, da er zuerst das gesamte Projekt für Compiler Direktiven scannt. Der Interpreter ist dagegen nicht systematisch. Er interpretiert Anweisungen der Reihe nach. Diese Reihenfolge kann natürlich von Sitzung zu Sitzung anders sein, je nachdem was der Benutzer macht. Aus diesem Grund ist es wichtig, dass Sie Ihr Projekt so gestalten, dass Ihre Compiler-Direktiven vor jeglicher Anweisung mit deklarierten Variablen ausgeführt werden.
 
 
-## Using pointers to avoid retyping
+## Mit Zeigern erneute Typisierung vermeiden
 
-A variable cannot be retyped. However, it is possible to use a pointer to refer to variables of different data types. For example, the following code is allowed in both interpreted and compiled modes:
+Eine Variable kann nicht erneut typisiert werden. Sie können jedoch einen Zeiger verwenden, um auf Variablen mit unterschiedlichen Datentypen zu verweisen. Zum Beispiel ist folgender Code sowohl im interpretierten als auch im kompilierten Modus erlaubt:
 
 ```4d
 C_POINTER($p)
@@ -74,7 +74,7 @@ $p:=->$age
 $p->:=55 //assigns a number value
 ```
 
-Imagine a function that returns the length (number of charaters) of values that can be of any type.
+Stellen Sie sich eine Funktion vor, welche die Länge (Anzahl Zeichen) von Werten zurückgibt, die von beliebigem Typ sein können.
 
 ```4d
   // Calc_Length (how many characters)
@@ -87,7 +87,7 @@ $result:=String($1->)
 $0:=Length($result)
 ```
 
-Then this method can be called:
+Dann lässt sich diese Methode aufrufen:
 ```4d
 $var1:="my text"
 $var2:=5.3

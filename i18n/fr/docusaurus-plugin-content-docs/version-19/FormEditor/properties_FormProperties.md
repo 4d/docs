@@ -1,6 +1,6 @@
 ---
 id: propertiesForm
-title: Form Properties
+title: Propriétés des formulaires
 ---
 
 ---
@@ -8,34 +8,34 @@ title: Form Properties
 ## Color Scheme
 > Color scheme property is only applied on macOS.
 
-This property defines the color scheme for the form. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](https://doc.4d.com/4dv19/help/command/en/1762.html)). This can be changed for the form to one of the following two options:
+This property defines the color scheme for the form. This property defines the color scheme for the form. This can be changed for the form to one of the following two options:
 
 * dark - light text on a dark background
-* light - dark text on a light background
-> A defined color scheme can not be overridden by a CSS.
+* light - dark text on a light background > A defined color scheme can not be overridden by a CSS.
+> Le nombre de caractères pour un nom de fenêtre est limité à 31.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name        | Data Type | Possible Values |
-| ----------- | --------- | --------------- |
-| colorScheme | string    | "dark", "light" |
+| Nom         | Type de données | Valeurs possibles |
+| ----------- | --------------- | ----------------- |
+| colorScheme | string          | "dark", "light"   |
 
 ---
 
 ## Pages
 
-Each form has is made of at least two pages:
+Chaque formulaire est composé d'au moins deux pages :
 
-* a page 0 (background page)
-* a page 1 (main page)
+* une page 0 (page de fond)
+* une page 1 (page principale)
 
-For more information, please refer to [Form pages](forms.md#form-pages).
+Pour plus d'informations, veuillez consulter le thème [Pages formulaire](forms.md#form-pages).
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name  | Data Type  | Possible Values                                                          |
-| ----- | ---------- | ------------------------------------------------------------------------ |
-| pages | collection | Collection of pages (each page is an object, page 0 is the first element |
+| Nom   | Type de données | Valeurs possibles                                                                |
+| ----- | --------------- | -------------------------------------------------------------------------------- |
+| pages | collection      | Collection de pages (chaque page est un objet, la page 0 est le premier élément) |
 
 ---
 
@@ -43,7 +43,7 @@ For more information, please refer to [Form pages](forms.md#form-pages).
 
 This property is the name of the form itself and is used to refer to the form by name using the 4D language. The form name must comply with the [rules specified for identifiers](Concepts/identifiers.md) in 4D.
 
-#### JSON Grammar
+#### Grammaire JSON
 
 The form name is defined by the name of the folder that contains the form.4Dform file. See [project architecture](Project/architecture.md#sources-folder) for more information.
 
@@ -63,17 +63,17 @@ Supported types depend on the form category:
 
 | Form Type                | JSON grammar     | Description                                                   | Supported with              |
 | ------------------------ | ---------------- | ------------------------------------------------------------- | --------------------------- |
-| Detail Form              | detailScreen     | A display form for data entry and modification                | Project forms - Table forms |
+| Formulaire détaillé      | detailScreen     | A display form for data entry and modification                | Project forms - Table forms |
 | Detail Form for Printing | detailPrinter    | A printed report with one page per record, such as an invoice | Project forms - Table forms |
 | List Form                | listScreen       | A form for listing records on the screen                      | Table forms                 |
 | List Form for Printing   | listPrinter      | A printed report that list records                            | Table forms                 |
-| None                     | *no destination* | A form with no specific feature                               | Project forms - Table forms |
+| Aucun                    | *no destination* | A form with no specific feature                               | Project forms - Table forms |
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name        | Data Type | Possible Values                                              |
-| ----------- | --------- | ------------------------------------------------------------ |
-| destination | string    | "detailScreen", "listScreen", "detailPrinter", "listPrinter" |
+| Nom         | Type de données | Valeurs possibles                                            |
+| ----------- | --------------- | ------------------------------------------------------------ |
+| destination | string          | "detailScreen", "listScreen", "detailPrinter", "listPrinter" |
 
 ---
 
@@ -85,11 +85,11 @@ To inherit from a table form, set the table in the [Inherited Form Table](#inher
 
 To remove inheritance, select `\&#060;None&#062;` in the Property List (or " " in JSON).
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name          | Data Type | Possible Values                                                                                                    |
-| ------------- | --------- | ------------------------------------------------------------------------------------------------------------------ |
-| inheritedForm | string    | Name of table or project form OR a POSIX path to a .json file describing the form OR an object describing the form |
+| Nom           | Type de données | Valeurs possibles                                                                                                  |
+| ------------- | --------------- | ------------------------------------------------------------------------------------------------------------------ |
+| inheritedForm | string          | Name of table or project form OR a POSIX path to a .json file describing the form OR an object describing the form |
 
 ---
 
@@ -99,64 +99,64 @@ This property specifies the database table from which to [inherit a form](forms.
 
 Set to `\&#060;None&#062;` in the Property List (or " " in JSON) to inherited from a project form.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name               | Data Type        | Possible Values            |
+| Nom                | Type de données  | Valeurs possibles          |
 | ------------------ | ---------------- | -------------------------- |
 | inheritedFormTable | string or number | table name or table number |
 
 ---
 
-## Published as Subform
+## Publié en tant que sous-formulaire
 
-For a component form to be selected as a [subform](FormObjects/subform_overview.md) in a host application, it must have been explicitly shared. When this property is selected, the form will be published in the host application.
+Pour qu'un formulaire de composant soit sélectionné comme [sous-formulaire](FormObjects/subform_overview.md) dans une base de données hôte, il doit avoir été explicitement partagé. Lorsque cette propriété est sélectionnée, le formulaire sera publié dans le projet hôte.
 
-Only project forms can be specified as published subforms.
+Seuls les projets formulaire peuvent être indiqués comme étant des sous-formulaires publiés.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name   | Data Type | Possible Values |
-| ------ | --------- | --------------- |
-| shared | boolean   | true, false     |
-
----
-
-## Save Geometry
-
-When the option is used, if the window is opened using the `Open form window` command with the `*` parameter, several form parameters are automatically saved by 4D when the window is closed, regardless of how they were modified during the session:
-
-* the current page,
-* the position, size and visibility of each form object (including the size and visibility of list box columns).
-> This option does not take into account objects generated using the `OBJECT DUPLICATE` command. In order for a user to recover their environment when using this command, the developer must repeat the sequence of creation, definition and positioning of the objects.
-
-When this option is selected, the [Save Value](FormObjects/properties_Object.md#save-value) option is available for certain objects.
-
-#### JSON Grammar
-
-| Name             | Data Type | Possible Values |
-| ---------------- | --------- | --------------- |
-| memorizeGeometry | boolean   | true, false     |
-
-#### See also
-
-[**Save Value**](FormObjects/properties_Object.md#save-value)
+| Nom    | Type de données | Valeurs possibles |
+| ------ | --------------- | ----------------- |
+| shared | boolean         | true, false       |
 
 ---
 
-## Window Title
+## Mémoriser géométrie
 
-The window title is used when the form is opened using the `Open form window` and `Open window` 4D commands in Application environment. The window title appears in the Title bar of the window.
+Lorsque cette option est cochée, si la fenêtre est ouverte via la commande `Creer fenetre` formulaire avec le paramètre `*`, plusieurs paramètres du formulaire seront automatiquement mémorisés par 4D au moment de la fermeture de la fenêtre, quelle que soit la manière dont ils ont été modifiés au cours de la session :
 
-You can use dynamic references to set the window titles for forms, *i.e.*:
+* la page courante,
+* la position, la taille et la visibilité de chaque objet du formulaire (y compris la taille et la visibilité des colonnes de list box).
+> > This option does not take into account objects generated using the `OBJECT DUPLICATE` command. Pour que l’utilisateur retrouve son environnement lors de l’utilisation de cette commande, le développeur doit répéter la séquence de création, définition et positionnement des objets.
 
-* A standard XLIFF reference stored in the Resources folder.
+Lorsque cette option est cochée, l’option [Mémoriser valeur](FormObjects/properties_Object.md#save-value) est en outre disponible pour certains objets.
+
+#### Grammaire JSON
+
+| Nom              | Type de données | Valeurs possibles |
+| ---------------- | --------------- | ----------------- |
+| memorizeGeometry | boolean         | true, false       |
+
+#### Voir également
+
+[**Mémoriser valeur**](FormObjects/properties_Object.md#save-value)
+
+---
+
+## Nom de la fenêtre
+
+Le nom de la fenêtre est utilisé lorsque le formulaire est ouvert à l'aide des commandes `Open form window` et `Open window` dans l'environnement d'application. Le nom de la fenêtre apparaît dans la barre de titre de la fenêtre.
+
+Vous pouvez utiliser des références dynamiques pour définir les noms de fenêtre des formulaires, c'est-à-dire :
+
+* Une référence XLIFF standard stockée dans le dossier Resources.
 * A table or field label: The syntax to apply is `<?[TableNum]FieldNum>` or `<?[TableName]FieldName>`.
-* A variable or a field: The syntax to apply is `\&#060;VariableName&#062;` or `&#060;[TableName]FieldName&#062;`. The current value of the field or variable will be displayed in the window title.
+* A variable or a field: The syntax to apply is `\&#060;VariableName&#062;` or `&#060;[TableName]FieldName&#062;`. La valeur du champ ou de la variable sera affichée dans le nom de la fenêtre.
 
-> The number of characters for a window title is limited to 31.
+> > Le nombre de caractères pour un nom de fenêtre est limité à 31.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name        | Data Type | Possible Values                                        |
-| ----------- | --------- | ------------------------------------------------------ |
-| windowTitle | string    | The name of the window as plain text or as a reference |
+| Nom         | Type de données | Valeurs possibles                                             |
+| ----------- | --------------- | ------------------------------------------------------------- |
+| windowTitle | string          | Le nom de la fenêtre sous forme de texte brut ou de référence |

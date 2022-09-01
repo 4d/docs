@@ -1,86 +1,86 @@
 ---
 id: time
-title: Time
+title: 時間
 ---
 
-- A Time field, variable or expression can be in the range of 00:00:00 to 596,000:00:00.
-- Times are in 24-hour format.
-- A time value can be treated as a number. The number returned from a time is the number of seconds since midnight (00:00:00) that time represents.
+- 時間のフィールド・変数・式の範囲は 00:00:00 から 596,000:00:00 までです。
+- 時間は 24時間制です。
+- 時間の値は数値として扱うことができます。 時間から返される数値は、その時間が表す総秒数です。
 
-**Note:** In the 4D Language Reference manual, Time parameters in command descriptions are denoted as Time, except when marked otherwise.
+**注:** このマニュアルでは、コマンド説明における時間引数は特に明記されていない限り、「時間」と表記されています。
 
-## Time literals
+## 時間リテラル
 
-A time literal constant is enclosed by question marks (?...?).
+時間リテラル定数は、疑問符 (? ... ?) で囲んで表します。
 
-A time literal constant is ordered hour:minute:second, with a colon (:) setting off each part. Times are specified in 24-hour format.
+時間は、“時:分:秒” の順で表し、それぞれをコロン (:) で区切ります。 時間は24時間制で指定します。
 
-Here are some examples of time literals:
+時間定数の例を次に示します:
 
 ```4d
-?00:00:00? ` midnight
-?09:30:00? ` 9:30 am
-?13:01:59? ` 1 pm, 1 minute, and 59 seconds
+?00:00:00? // 午前0時
+?09:30:00? // 午前9時30分
+?13:01:59? // 午後1時1分59秒
 ```
 
-A null time is specified by ?00:00:00?
+空の時間は、?00.00.00? のように指定します。
 
-**Tip:** The Method Editor includes a shortcut for entering a null time. To type a null time, enter the question mark (?) character and press Enter.
+**Tip:** メソッドエディターでは空の時間を入力するためのショートカットが提供されています。 空の時間を入力するには、疑問符 (?) の入力後に Enter キーを押します。
 
-## Time operators
+## 時間演算子
 
-| Operation                | Syntax         | Returns | Expression              | Value      |
-| ------------------------ | -------------- | ------- | ----------------------- | ---------- |
-| Addition                 | Time + Time    | Time    | ?02:03:04? + ?01:02:03? | ?03:05:07? |
-| Subtraction              | Time – Time    | Time    | ?02:03:04? – ?01:02:03? | ?01:01:01? |
-| Addition                 | Time + Number  | Number  | ?02:03:04? + 65         | 7449       |
-| Subtraction              | Time – Number  | Number  | ?02:03:04? – 65         | 7319       |
-| Multiplication           | Time * Number  | Number  | ?02:03:04? * 2          | 14768      |
-| Division                 | Time / Number  | Number  | ?02:03:04? / 2          | 3692       |
-| Longint division         | Time \ Number | Number  | ?02:03:04? \ 2         | 3692       |
-| Modulo                   | Time % Time    | Time    | ?20:10:00? % ?04:20:00? | ?02:50:00? |
-| Modulo                   | Time % Number  | Number  | ?02:03:04? % 2          | 0          |
-| Equality                 | Time = Time    | Boolean | ?01:02:03? = ?01:02:03? | True       |
-|                          |                |         | ?01:02:03? = ?01:02:04? | False      |
-| Inequality               | Time # Time    | Boolean | ?01:02:03? # ?01:02:04? | True       |
-|                          |                |         | ?01:02:03? # ?01:02:03? | False      |
-| Greater than             | Time > Time    | Boolean | ?01:02:04? > ?01:02:03? | True       |
-|                          |                |         | ?01:02:03? > ?01:02:03? | False      |
-| Less than                | Time < Time    | Boolean | ?01:02:03? < ?01:02:04? | True       |
-|                          |                |         | ?01:02:03? < ?01:02:03? | False      |
-| Greater than or equal to | Time >= Time   | Boolean | ?01:02:03? >=?01:02:03? | True       |
-|                          |                |         | ?01:02:03? >=?01:02:04? | False      |
-| Less than or equal to    | Time <= Time   | Boolean | ?01:02:03? <=?01:02:03? | True       |
-|                          |                |         | ?01:02:04? <=?01:02:03? | False      |
+| 処理        | シンタックス         | 戻り値     | 式                       | Value      |
+| --------- | -------------- | ------- | ----------------------- | ---------- |
+| 加算 (足し算)  | Time + Time    | Time    | ?02:03:04? + ?01:02:03? | ?03:05:07? |
+| 減算 (引き算)  | Time – Time    | Time    | ?02:03:04? ?01:02:03?   | ?01:01:01? |
+| 加算 (足し算)  | Time + Number  | Number  | ?02:03:04? ?01:02:03?   | 7449       |
+| 減算 (引き算)  | Time – Number  | Number  | ?02:03:04? ?01:02:03?   | 7319       |
+| 乗算 (かけ算)  | Time * Number  | Number  | ?02:03:04? ?01:02:03?   | 14768      |
+| 除算 (割り算)  | Time / Number  | Number  | ?02:03:04? ?02:03:04?   | 3692       |
+| 倍長整数を返す除算 | Time \ Number | Number  | ?02:03:04? ?01:02:03?   | 3692       |
+| モジューロ     | Time % Time    | Time    | ?20:10:00? % ?04:20:00? | ?02:50:00? |
+| モジューロ     | Time % Number  | Number  | ?02:03:04? % 2          | 0          |
+| 等しい       | Time = Time    | Boolean | ?01:02:03? >=?01:02:03? | true       |
+|           |                |         | ?01:02:03? ?01:02:04?   | False      |
+| 異なる       | Time # Time    | Boolean | ?01:02:03? ?01:02:03?   | true       |
+|           |                |         | ?01:02:03? ?01:02:03?   | False      |
+| 大きい       | Time > Time    | Boolean | ?01:02:03? < ?01:02:04? | true       |
+|           |                |         | ?01:02:03? < ?01:02:04? | False      |
+| 小さい       | Time < Time    | Boolean | ?01:02:03? ?01:02:04?   | true       |
+|           |                |         | ?01:02:03? ?01:02:03?   | False      |
+| 以上        | Time >= Time   | Boolean | ?01:02:03? >=?01:02:03? | true       |
+|           |                |         | ?01:02:03? >=?01:02:04? | False      |
+| 以下        | Time <= Time   | Boolean | ?01:02:03? <=?01:02:03? | true       |
+|           |                |         | ?01:02:03? <=?01:02:03? | False      |
 
-### Example 1
+### 例題 1
 
-To obtain a time expression from an expression that combines a time expression with a number, use the commands `Time` and `Time string`.
+時間式を数値と組み合わせた式から時間式を取得するには、`Time` コマンドと `Time string` コマンドを使用します。
 
-You can combine expressions of the time and number types using the `Time` or `Current time` functions:
+`Time` または `Current time` コマンドを使用する際に、時間型と数値型の式を組み合わせることができます:
 
 ```4d
-    //The following line assigns to $vlSeconds the number of seconds   
-    //that will be elapsed between midnight and one hour from now
+    // 以下の行は $vlSeconds に、深夜0時から現在の
+    // 1時間後までに経過した秒数を代入します。
 $vlSeconds:=Current time+3600
-    //The following line assigns to $vHSoon the time it will be in one hour
+    // 以下の行は $vHSoon に 1時間後の時刻を代入します。
 $vhSoon:=Time(Current time+3600)
 ```
 
-The second line could be written in a simpler way:
+2番目の行はより簡単に記述することができます:
 
 ```4d
-  // The following line assigns to $vHSoon the time it will be in one hour
+  // 以下の行は $vHSoon に1時間後の時刻を代入します。
  $vhSoon:=Current time+?01:00:00?
 ```
 
-### Example 2
+### 例題 2
 
-The Modulo operator can be used, more specifically, to add times that take the 24-hour format into account:
+モジューロ演算子を使用できます。とくに24時間フォーマットを考慮した時間の追加に便利です:
 
 ```4d
-$t1:=?23:00:00? // It is 23:00 p.m.
-  // We want to add 2 and a half hours
-$t2:=$t1 +?02:30:00? // With a simple addition, $t2 is ?25:30:00?
-$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 is ?01:30:00? and it is 1:30 a.m. the next morning
+$t1:=?23:00:00? // これは午後11:00です
+  // 2時間30分を追加します
+$t2:=$t1 +?02:30:00? // 単純な追加を行うと $t2 は ?25:30:00? になります。
+$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 は ?01:30:00? と なります。 (翌朝)
 ```

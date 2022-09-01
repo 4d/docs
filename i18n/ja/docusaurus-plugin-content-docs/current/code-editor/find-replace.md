@@ -1,110 +1,110 @@
 ---
 id: find-replace
-title: Find and replace
+title: 検索と置換
 ---
 
-The Code Editor has specific find and replace functions that apply to the current window.
+コードエディターには、カレントウィンドウ専用の検索/置換機能があります。
 
-The find area located in the toolbar of each method window can be used to carry out simple searches.
+各ウィンドウのツールバーにある検索エリアを使用して単純な検索を実行することができます。
 
-The Find/Replace commands for methods, classes or functions are located in **Edit** menu of 4D:
+メソッド用の検索/置換コマンドは **編集** メニューの **検索** サブメニュー内にあります:
 
 ![find-replace](../assets/en/code-editor/find-replace-1.png)
 
-> The find commands located above the **Find** submenu are not specific to the Code Editor but may be used to search for a value among all the methods, classes or functions, using the **Find in design** feature in the toolbar or in the **Edit** menu.
+> **検索** サブメニューの上にある検索コマンドはコードエディター専用のものではなく、すべてのメソッド、クラス、関数を検索対象とするものです。**デザインモードを検索** 機能はツールバーからも簡単にアクセスできます。
 
-## Find
+## 検索
 
-Selecting the **Find...** command displays the following dialog box:
+**検索...** コマンドを選択すると以下のダイアログボックスが表示されます:
 
-![find-dialog](../assets/en/code-editor/find-dialog.png)
+![検索ダイアログ](../assets/en/code-editor/find-dialog.png)
 
-The search defined in this dialog box will be performed in the method located in the foreground.
+このダイアログボックス内で定義された検索は最前面のメソッドに対して適用されます。
 
-- The **Find What:** area enables you to enter the string of characters to be searched for. This area is a combo box that stores the last 15 character strings that have been searched for or replaced during the session. If you highlight text before choosing the **Find...** command, it will appear in this area. You can then either use this text or replace it with another.
-- The **Whole Word** option is used to limit the search to exact occurrences of the word being searched for. When this option is checked, for instance, a search for "client" will not find either "clients" or "myclient." By default, this option is not checked; therefore, a search for "var" will find "Myvar," "variation," etc. Be careful, unlike the **Whole Object Name** option of the Find in Design dialog box, the **Whole Word** option does not take object names into account. For example, with this option, searching for the string "My" in a method will find the "My Variable" variable. This is not the case for an overall search using the **Whole Object Name** option, where the same result will not be found in the context of the above example since the whole object name (of the variable found previously) is "My Variable" and therefore does not correspond exactly to the string entered ("My").
-- The **Case Sensitive** option is used to take the case of characters as they were entered in the "Find What:" area into account. For instance, a search for "MyVar" will not find "myVar."
-- The **Previous/Next** radio buttons are used to set the direction of the search: towards the beginning or end of the current method, starting from the initial location of the cursor.
+- **検索条件** エリアには、検索したい文字列を入力します。 このエリアはコンボボックスで、最新の検索/置換条件を15個、4D が終了するまで保持します。 **検索...** コマンドを選択する前にエディター中でテキストをハイライトすると、このエリアにそのテキストが表示されます。 このテキストを使用するか、別のテキストに置き換えることができます。
+- **単語全体** オプションを選択すると、検索は (部分一致ではなく) 完全一致でおこなわれます。 たとえば、"client" を検索する場合、"clients" や "myclient" は検出されません。 By default, this option is not checked; therefore, a search for "var" will find "Myvar," "variation," etc. Be careful, unlike the **Whole Object Name** option of the Find in Design dialog box, the **Whole Word** option does not take object names into account. たとえば、このオプションを選択した場合、"My" をメソッド中で検索すると "My Variable" 変数が検出されます。 **語全体を含む** オプションを使用してデータベース全体を検索した場合、上記のような結果にはなりません。なぜならオブジェクト (ここでは変数のこと) の名称は "My Variable" であり、"My" とは一致しないからです。
+- **大文字小文字を区別** オプションを使用すると、検索条件エリアに入力された文字の大小が区別されます。 たとえば、"MyVar" を検索した場合 "myVar" は検出されません。
+- **前へ/次へ** ラジオボタンを使用して、現在カーソルのある方向を起点として、検索をおこなう方向を指定できます。
 
-When you click on **OK**, 4D begins searching from the current text insertion point and continues to the end of the method. The first item corresponding to the set criteria is thus selected in the Code Editor window. It is then possible to continue the search using the **Find Next** and **Find Previous** commands of the **Edit** menu.
+4D は現在のカーソル位置から検索を実行します。 **置換** ボタンをクリックすると、最初に見つかった語句に対する置換が実行されます。 その後は、**編集** メニューの **次を置換** / **前を置換** コマンドを使用して、同じ条件の検索/置換を繰り返すことができます。
 
-### Find Same
+### 同じものを検索
 
-The **Find Same** command is used to find character strings identical to the one selected. This command is only active if you have selected at least one character in the Code Editor.
+**同じものを検索** コマンドを使用すると、選択した文字列と同じ文字列を検索することができます。 このコマンドは、コードエディター内で一文字以上選択した場合に利用可能となります。
 
-The search carried out is of the "Find Next" type in the current code editor window.
+実行される検索は、現在のコードエディターウィンドウ内の "次を検索" と同じです。
 
-### Find Same Next/Previous
+### 次の/前の同じものを検索
 
-The **Find Same Next** and **Find Same Previous** commands are used to find character strings *strictly* identical to the ones selected. For example, the case must match.
+**次の同じものを検索** と **前の同じものを検索** コマンドは、選択された文字列と *厳密に* 一致する文字列を検索するのに使用されます。 たとえば、文字の大小は一致しなければなりません。
 
-### Bookmark All
+### すべてをブックマーク
 
-The **Bookmark All** command is enabled when a search has already been specified in the find or replace dialog box. When you select this command, 4D puts a bookmark at each line that contains an item corresponding to the "current" search criteria. This makes it easy to spot all the search results.
+**すべてをブックマーク** コマンドは、検索または置換ダイアログボックスで検索がすでに定義されている場合に利用可能となります。 このコマンドを選択すると、4D は現在設定されている検索条件に当てはまる行にブックマークを設定します。 これにより、すべての検索結果に簡単に印をつけられます。
 
-For more information about bookmarks, refer to [Using bookmarks](./write-class-method.md#using-bookmarks).
+ブックマークに関する詳細は [ブックマークを使用する](./write-class-method.md#ブックマークを使用する) を参照ください。
 
-## Replace
+## 置換
 
-The **Replace** command displays the following dialog box:
+**置換** コマンドを選択すると以下のダイアログボックスが表示されます:
 
-![find-dialog](../assets/en/code-editor/replace-dialog.png)
+![検索ダイアログ](../assets/en/code-editor/replace-dialog.png)
 
-- The **Find What:** area is used to define the character string or the expression to be searched for. As in the Find dialog box, this area is a combo-box that stores the last 15 character strings searched for. If you highlight text before choosing the **Replace** command, it will appear in this area.
-- The **Replace with:** area is used to define the character string that will replace the one defined above. This area is also a combo-box storing the last 15 character strings that have been searched for or replaced.
-- The **Whole Word** option is used to find/replace only character strings that correspond exactly to the string entered. In this case, for instance, a search for "client" will not find the strings "clients" or "myclient," etc.
-- The **Case Sensitive** option is used to find/replace only character strings having the same case as that of the entered string. For instance, a search for "MyVar" will not find "myVar."
-- As in the Find dialog box, the **Previous** and **Next** buttons are used to set the direction of the search: towards the beginning or end of the current method, starting from the initial location of the cursor.
+- **検索条件** エリアには、検索したい文字列や式を入力します。 検索ダイアログ同様、このエリアはコンボボックスで、最新の検索/置換条件を15個、4D が終了するまで保持します。 **置換...** コマンドを選択する前にエディター中でテキストをハイライトすると、このエリアにそのテキストが表示されます。
+- **置換文字** エリアには、検索条件として入力された文字を置換する文字列を入力します。 このエリアもコンボボックスで、最新の検索/置換条件を15個、4D が終了するまで保持します。
+- **単語全体** オプションを選択すると、検索/置換は (部分一致ではなく) 完全一致でおこなわれます。 たとえば、"client" を検索する場合、"clients" や "myclient" は検出されません。
+- **大文字小文字を区別** オプションを使用すると、検索条件エリアに入力された文字の大小が区別されます。 たとえば、"MyVar" を検索した場合 "myVar" は検出されません。
+- 検索ダイアログ同様、**前へ/次へ** ラジオボタンを使用して、現在カーソルのある方向を起点として、検索をおこなう方向を指定できます。
 
-The **Replace** button is used to launch the search and replace the first occurrence found. 4D begins searching from the current text insertion point and continues to the end of the method. It is then possible to continue finding/replacing using the **Replace Next** and **Replace Previous** commands of the **Edit** menu.
+**置換** ボタンをクリックすると、最初に見つかった語句に対する置換が実行されます。 4D は現在のカーソル位置から検索を実行します。 その後は、**編集** メニューの **次を置換** / **前を置換** コマンドを使用して、同じ条件の検索/置換を繰り返すことができます。
 
-The **Everywhere** button is used to replace all the occurrences corresponding to the search criteria directly in the open method.
+**一括置換** ボタンをクリックすると、開かれているメソッド内で検索条件に合致するすべての語句が一度に置換されます。
 
-## Goto Definition
+## 定義を開く
 
-The **Goto Definition** command opens the definition of an element referenced in the Code Editor. To do this, place the cursor inside the object name or select it, and choose **Method** > **Goto Definition...** or use the context menu of the editor.
+**定義を開く...** コマンドは、コードエディター内で参照されている要素の定義を開きます。 これには、カーソルをオブジェクト (ランゲージ要素) 名の中に置き (または選択して)、**メソッド** メニューから **定義を開く...** を選択するか、エディターのコンテキストメニューを使用します。
 
-**Note:** This feature is also available through the keyboard shortcut **Ctrl+K** (Windows) or **Command+K** (macOS).
+**注**: この機能は **Ctrl+K** (Windows) または **Command+K** (macOS) のキーボードショートカットでも利用できます。
 
-The effect varies depending on the target element. For example:
+このコマンドは、ターゲットとなる要素によって効果が変化します。 例:
 
-- Selecting a project method and choosing **Goto Definition...** displays the contents of the method in a new window of the Code Editor
-- Selecting a class name or class attribute and choosing **Goto Definition...** opens the class in the the Code Editor
+- プロジェクトメソッドを選択した状態で **定義を開く...** を選択した場合、コードエディターの新しいウィンドウ内にメソッドのコンテンツが表示されます。
+- クラス名またはクラス属性を選択した状態で **定義を開く...** を選択した場合、コードエディター内にクラスが表示されます。
 
-## Reveal in Explorer
+## エクスプローラーに表示
 
-The **Reveal in Explorer...** command opens an Explorer window with the target element selected. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Reveal in Explorer...** .
+**エクスプローラーに表示...** コマンドは、ターゲット要素が選択された状態のエクスプローラーウィンドウを開きます。 これには、カーソルを要素名の中に置き (または選択して)、**メソッド** メニューから **エクスプローラーに表示...** を選択します。
 
-## Show documentation
+## ドキュメンテーションを表示
 
-The **Show documentation...** command opens the documentation for the target element. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Show documentation...** or use the contextual menu. The effect varies depending on the target element. For example:
+**ドキュメンテーションを表示...** コマンドは、ターゲット要素のドキュメンテーションを開きます。 これには、カーソルを要素名の中に置き (または選択して)、**メソッド** メニューから **ドキュメンテーションを表示...** を選択するか、コンテキストメニューを使用します。 このコマンドは、ターゲットとなる要素によって効果が変化します。 例:
 
-- Selecting a project method or a user class and choosing **Show documentation...** selects the method in the Explorer and switches to the documentation tab
-- Selecting a 4D command or a 4D class name and choosing **Show documentation...** displays the online documentation
+- プロジェクトメソッドまたはユーザークラスを選択した状態で **ドキュメンテーションを表示...** を選択すると、エクスプローラー内でメソッドを選択し、ドキュメンテーションタブを表示します。
+- 4Dコマンドまたは 4Dクラス名を選択した状態で **ドキュメンテーションを表示...** を選択すると、オンラインドキュメントを開きます。
 
-If no element is selected, the command opens the documentation of the method currently opened in the Code Editor.
+何も要素が選択されていない場合、コマンドは現在コードエディターで開かれているメソッドのドキュメンテーションを開きます。
 
-## Search references
+## 参照を検索
 
-The **Search references...** command found in the **Method** menu or the context menu of the Code Editor finds all the objects (methods and forms) in the database where the current item of the method is referenced (used).
+**参照を検索...** コマンドは、**メソッド** メニューまたはコードエディターのコンテキストメニュー内にあり、データベース中で、メソッドの現在の項目が参照されているすべてのオブジェクト (メソッドやフォーム) を検索します。
 
-The current item is either the one selected or the one where the cursor is located. It can be a field name, variable name, command, string, and so on. For example, the following action looks for all the occurrences of the *vlNbCmd* variable in the database:
+現在の項目とは、選択されているもの、あるいはカーソルが置かれているものです。 フィールド名、変数名、コマンド、文字列等が該当します。 たとえば、以下のアクションを実行するとデータベース中で *vlNbCmd* 変数のオカレンスを探します:
 
-![find-dialog](../assets/en/code-editor/search-references.png)
+![検索ダイアログ](../assets/en/code-editor/search-references.png)
 
-This command displays its results in a new window.
+このコマンドの結果は新規ウィンドウに表示されます。
 
-## Search Callers
+## 呼出し元を検索
 
-The **Search Callers** command in the **Method** menu is only enabled for project methods. It searches for all the objects (other methods or menus) that reference the project method.
+**メソッド** メニューの **呼出し元を検索...** コマンドはプロジェクトメソッドでのみ利用可能です。 このコマンドは、開かれているプロジェクトメソッドを参照しているすべてのオブジェクト (他のメソッドやメニュー) を検索します。
 
-**Note:** The **Search Callers...** command is also available in **Explorer** > **Methods**
+**注:** **呼出し元を検索...** コマンドは **エクスプローラー** の **メソッド** ページからも利用できます。
 
-This command displays its results in a new window.
+このコマンドの結果は新規ウィンドウに表示されます。
 
-## Goto Line
+## 行番号を指定して移動
 
-This specific search command is located in the **Method** menu. It opens a dialog box where you can indicate the line number you want to find. When you click **OK**, the editor finds and highlights that line in the method. This type of search is useful when used in conjunction with the compiler, which flags runtime errors by the line number in which they occur.
+この検索コマンドは **メソッド** メニューの中にあります。 このコマンドは、移動したい行番号を指定するためのダイアログボックスを開きます。 **OK** ボタンをクリックすると、コマンドはメソッド内で該当行を検索し、ハイライトします。 このような検索は、実行時エラーでコンパイラーが示すエラー行を表示するのに便利です。
 
-You can choose whether or not to display lines numbers in the Code Editor window. This option is described in the [Overview](./write-class-method.md#using-bookmarks) section.
+コードエディターウィンドウに行番号を表示するかしないかは、選択することができます。 このオプションについては [ブレークポイントエリア](./write-class-method.md#ブレークポイントエリア) を参照ください。
 

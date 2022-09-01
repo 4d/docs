@@ -3,20 +3,20 @@ id: blob
 title: BLOB
 ---
 
-- A BLOB (Binary Large OBjects) field, variable or expression is a contiguous series of bytes which can be treated as one whole object or whose bytes can be addressed individually. A BLOB can be empty (null length) or contain up to 2147483647 bytes (2 GB).
+- BLOB (Binary Large OBjects) sind miteinander zusammenhängende Bytes unterschiedlicher Länge, die Sie als ganze Einheit oder als einzelne Bytes ansprechen können. A BLOB can be empty (null length) or contain up to 2147483647 bytes (2 GB).
 
 > By default, 4D sets the maximum blob size to 2GB, but this size limit may be lower depending on your OS and how much space is available.
 
-- A BLOB is loaded into memory in its entirety. A BLOB variable is held and exists in memory only. A BLOB field is loaded into memory from the disk, like the rest of the record to which it belongs.
-- Like the other field types that can retain a large amount of data (such as the Picture field type), BLOB fields are not duplicated in memory when you modify a record. Consequently, the result returned by the `Old` and `Modified` commands is not significant when applied to a BLOB field.
+- Ein BLOB wird als Ganzes in den Speicher geladen. Eine BLOB Variable existiert und wird nur im Speicher gehalten. Ein BLOB Datenfeld wird von der Festplatte in den Speicher geladen sowie der Rest des Datensatzes, zu dem es gehört.
+- Wie andere Feldtypen mit einer umfangreichen Datenanzahl, z. B. der Typ Bild, werden BLOB-Felder beim Ändern des Datensatzes nicht im Speicher dupliziert. Folglich ist das Ergebnis, das von den Befehlen `Old` und `Modified` bei Anwendung auf ein BLOB-Feld zurückgegeben wird, nicht signifikant.
 
-## Parameter passing, Pointers and function results
+## Parameterübergabe, Zeiger und Funktionsergebnisse
 
-4D BLOBs can be passed as parameters to 4D commands or plug-in routines that expect BLOB parameters. BLOBS can also be passed as parameters to a user method or be returned as a function result.
+Sie können BLOBs von 4D als Parameter an 4D Befehle oder Plug-In Routinen übergeben, die BLOB Parameter erwarten. BLOBS lassen sich auch als Parameter an eine Benutzermethode übergeben oder als Funktionsergebnis zurückgeben.
 
-To pass a BLOB to your own methods, you can also define a pointer to the BLOB and pass the pointer as parameter.
+Wollen Sie ein BLOB für Ihre eigenen Methoden übergeben, können Sie auch einen Zeiger auf das BLOB definieren und den Zeiger als Parameter übergeben.
 
-**Examples:**
+**Beispiele:**
 ```4d
   ` Declare a variable of type BLOB
  C_BLOB(anyBlobVar)
@@ -30,13 +30,13 @@ To pass a BLOB to your own methods, you can also define a pointer to the BLOB an
   ` A pointer to the BLOB is passed as parameter to a user method
  COMPUTE BLOB(->anyBlobVar)
 ```
-**Note for Plug-in developers:** A BLOB parameter is declared as “&O” (the letter “O”, not the digit “0”).
+**Hinweis für Plug-In Entwickler:** Ein BLOB Parameter wird als “&0” deklariert (der Buchstabe “O”, nicht die Ziffer “0”).
 
-## Assignment operator
+## Zuweisung
 
-You can assign BLOBs to each other.
+Sie können BLOBs gegenseitig zuweisen.
 
-**Example:**
+**Beispiel:**
 ```4d
   ` Declare two variables of type BLOB
  C_BLOB(vBlobA;vBlobB)
@@ -46,11 +46,11 @@ You can assign BLOBs to each other.
  vBlobB:=vBlobA
 ```
 
-However, no operator can be applied to BLOBs.
+Sie können jedoch keinen Operator auf BLOBs anwenden.
 
-## Addressing BLOB contents
+## BLOB Inhalt ansprechen
 
-You can address each byte of a BLOB individually using the curly brackets symbols {...}. Within a BLOB, bytes are numbered from 0 to N-1, where N is the size of the BLOB. Example:
+Sie können jedes Byte eines BLOB über geschweifte Klammern {...} individuell ansprechen. Bytes in einem BLOB werden von 0 bis N-1 nummeriert, wobei N die Größe des BLOB ist. Beispiel:
 ```4d
   ` Declare a variable of type BLOB
  C_BLOB(vBlob)
@@ -61,4 +61,4 @@ You can address each byte of a BLOB individually using the curly brackets symbol
     vBlob{vByte}:=0
  End for
 ```
-Because you can address all the bytes of a BLOB individually, you can actually store whatever you want in a BLOB field or variable.
+Da jedes Byte eines BLOB einzeln ansprechbar ist, können Sie in einem Feld bzw. einer Variablen vom Typ BLOB speichern, was Sie möchten.

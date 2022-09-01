@@ -109,7 +109,7 @@ The structure of the `formMacros.json` file is the following:
 
 Here is the description of the JSON file contents:
 
-| Attribute |                     |                          | Type   | Description                                            |
+| Attribute |                     |                          | Typ    | Beschreibung                                           |
 | --------- | ------------------- | ------------------------ | ------ | ------------------------------------------------------ |
 | macros    |                     |                          | object | list of defined macros                                 |
 |           | `<macroName>` |                          | object | macro definition                                       |
@@ -118,7 +118,7 @@ Here is the description of the JSON file contents:
 
 Custom properties, when used, are passed to the [constructor](#class-constructor) function of the macro.
 
-### Example
+### Beispiel
 
 ```js
 {
@@ -160,9 +160,9 @@ Every macro class can contain a `Class constructor` and two functions: `onInvoke
 
 #### Class constructor($macro : Object)
 
-| Parameter | Type   | Description                                              |
+| Parameter | Typ    | Beschreibung                                             |
 | --------- | ------ | -------------------------------------------------------- |
-| $macro    | Object | Macro declaration object (in the `formMacros.json` file) |
+| $macro    | Objekt | Macro declaration object (in the `formMacros.json` file) |
 
 Macros are instantiated using a [class constructor](Concepts/classes.md#class-constructor) function, if it exists.
 
@@ -172,7 +172,7 @@ Custom properties added to the [macro declaration](#declaring-macros) are return
 
 
 
-#### Example
+#### Beispiel
 
 In the `formMacros.json` file:
 
@@ -187,7 +187,7 @@ In the `formMacros.json` file:
 }
 ```
 
-You can write:
+Sie schreiben:
 
 ```4d  
 // Class "AlignOnTarget"
@@ -201,10 +201,10 @@ Class constructor($macro : Object)
 
 #### onInvoke($editor : Object) -> $result : Object
 
-| Parameter | Type   | Description                                                                          |
+| Parameter | Typ    | Beschreibung                                                                         |
 | --------- | ------ | ------------------------------------------------------------------------------------ |
-| $editor   | Object | Form Editor Macro Proxy object containing the form properties                        |
-| $result   | Object | Form Editor Macro Proxy object returning properties modified by the macro (optional) |
+| $editor   | Objekt | Form Editor Macro Proxy object containing the form properties                        |
+| $result   | Objekt | Form Editor Macro Proxy object returning properties modified by the macro (optional) |
 
 The `onInvoke` function is automatically executed each time the macro is called.
 
@@ -214,27 +214,27 @@ Once operations are completed, if the macro results in modifying, adding, or rem
 
 Here are the properties returned in the *$editor* parameter:
 
-| Property                         | Type       | Description                                                                       |
+| Property                         | Typ        | Beschreibung                                                                      |
 | -------------------------------- | ---------- | --------------------------------------------------------------------------------- |
-| $editor.editor.form              | Object     | The entire form                                                                   |
+| $editor.editor.form              | Objekt     | The entire form                                                                   |
 | $editor.editor.file              | File       | File object of the form file                                                      |
 | $editor.editor.name              | String     | Name of the form                                                                  |
-| $editor.editor.table             | number     | Table number of the form, 0 for project form                                      |
-| $editor.editor.currentPageNumber | number     | The number of the current page                                                    |
-| $editor.editor.currentPage       | Object     | The current page, containing all the form objects and the entry order of the page |
+| $editor.editor.table             | Zahl       | Table number of the form, 0 for project form                                      |
+| $editor.editor.currentPageNumber | Zahl       | The number of the current page                                                    |
+| $editor.editor.currentPage       | Objekt     | The current page, containing all the form objects and the entry order of the page |
 | $editor.editor.currentSelection  | Collection | Collection of names of selected objects                                           |
-| $editor.editor.formProperties    | Object     | Properties of the current form                                                    |
+| $editor.editor.formProperties    | Objekt     | Properties of the current form                                                    |
 | $editor.editor.target            | string     | Name of the object under the mouse when clicked on a macro                        |
 
 Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. All properties are optional:
 
-| Property          | Type       | Description                                                 |
+| Property          | Typ        | Beschreibung                                                |
 | ----------------- | ---------- | ----------------------------------------------------------- |
-| currentPage       | Object     | currentPage including objects modified by the macro, if any |
+| currentPage       | Objekt     | currentPage including objects modified by the macro, if any |
 | currentSelection  | Collection | currentSelection if modified by the macro                   |
-| formProperties    | Object     | formProperties if modified by the macro                     |
-| editor.groups     | Object     | group info, if groups are modified by the macro             |
-| editor.views      | Object     | view info, if views are modified by the macro               |
+| formProperties    | Objekt     | formProperties if modified by the macro                     |
+| editor.groups     | Objekt     | group info, if groups are modified by the macro             |
+| editor.views      | Objekt     | view info, if views are modified by the macro               |
 | editor.activeView | String     | Active view name                                            |
 
 
@@ -255,9 +255,9 @@ When handling the `method` attribute of form objects, you can define the attribu
 
 - Using an object with the following structure:
 
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-|          |      |             |
+| Property | Typ | Beschreibung |
+| -------- | --- | ------------ |
+|          |     |              |
  source|String|method code|
 
 4D will create a file using the object name in the "objectMethods" folder with the content of `source` attribute. This feature is only available for macro code.
@@ -271,7 +271,7 @@ The `$4dId` property defines a unique ID for each object in the current page. Th
 - if the `$4dId` key exists in both the form and an object in `$result`, the object is modified.
 
 
-#### Example
+#### Beispiel
 
 You want to define a macro function that will apply the red color and italic font style to any selected object(s).
 
@@ -293,6 +293,10 @@ Function onInvoke($editor : Object)->$result : Object
 
     // Notify to 4D the modification
     $result:=New object("currentPage"; $editor.editor.currentPage)
+    End if 
+
+    // Notify to 4D the modification
+    $result:=New object("currentPage"; $editor.editor.currentPage)
 ```
 
 
@@ -300,12 +304,12 @@ Function onInvoke($editor : Object)->$result : Object
 
 #### onError($editor : Object; $resultMacro : Object ; $error : Collection)
 
-| Parameter    |                       | Type       | Description                              |
+| Parameter    |                       | Typ        | Beschreibung                             |
 | ------------ | --------------------- | ---------- | ---------------------------------------- |
-| $editor      |                       | Object     | Object send to [onInvoke](#oninvoke)     |
-| $resultMacro |                       | Object     | Object returned by [onInvoke](#oninvoke) |
+| $editor      |                       | Objekt     | Object send to [onInvoke](#oninvoke)     |
+| $resultMacro |                       | Objekt     | Object returned by [onInvoke](#oninvoke) |
 | $error       |                       | Collection | Error stack                              |
-|              | [].errCode            | Number     | Error code                               |
+|              | [].errCode            | Zahl       | Error code                               |
 |              | [].message            | Text       | Description of the error                 |
 |              | [].componentSignature | Text       | Internal component signature             |
 
@@ -316,7 +320,7 @@ When executing a macro, if 4D encounters an error which prevents the macro from 
 - deleting or modifying a script whose file is read-only.
 - creating two objects with the same internal ID.
 
-#### Example
+#### Beispiel
 
 In a macro class definition, you can write the following generic error code:
 

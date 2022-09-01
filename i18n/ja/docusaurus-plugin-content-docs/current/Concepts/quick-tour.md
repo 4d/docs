@@ -1,72 +1,72 @@
 ---
 id: quick-tour
-title: A Quick Tour
-sidebar_label: A Quick Tour
+title: 概要
+sidebar_label: 概要
 ---
 
-Using the 4D language, printing the traditional "Hello, world!" message on screen can be done in several ways. The most simple is probably to write the following single line in a project method:
+4D ランゲージを使用して "Hello, world!" メッセージを表示するには複数の方法があります。 一番簡単な方法はおそらく、プロジェクトメソッドにコードを1行、次のように書くやり方です:
 
 ```4d  
 ALERT("Hello, World!")
 ```
 
-This code will display a platform-standard alert dialog box with the "Hello, World!" message, containing an OK button. To execute the code, you just need to click on the execution button in the Code Editor:
+このコードは、 "Hello, World!" メッセージが表示された、OK ボタンの付いたプラットフォームの標準的なアラートダイアログボックスを開きます。 コードを実行するには、コードエディターの左上にある実行ボタンをクリックします:
 
 ![alt-text](../assets/en/Concepts/helloworld.png)
 
-Or, you could attach this code to a button in a form and execute the form, in which case clicking on the button would display the alert dialog box. In any cases, you have just executed your first line of 4D code!
+あるいは、フォーム内のボタンにこのコードを付けた場合、フォームを実行した状態でボタンをクリックすると、その都度アラートメッセージが表示されます。 いずれの方法でも、前述の1行のコードを実行するだけで目的達成です！
 
 
-## Assigning Values
+## 値の代入
 
-Data can be put into and copied out of variables, fields, array elements... Putting data into a variable is called assigning the data to the variable and is done with the assignment operator (:=). The assignment operator is also used to assign data to fields or array elements.
+変数、フィールド、配列要素などを対象に、データを格納したり、格納したデータを別の対象にコピーしたりすることができます。 変数にデータを格納することを、変数にデータを代入すると言い、代入演算子 (:=) を使っておこないます。 代入演算子はフィールドや配列要素に対してデータを代入する場合にも使います。
 
 ```4d
-$MyNumber:=3 //assigns 3 to MyNumber variable  
-[Products]Size:=$MyNumber //assigns MyNumber variable to [Products]Size field
-arrDays{2}:="Tuesday" //assigns "Tuesday" string to the 2nd arrDays element
-MyVar:=Length("Acme") //assigns the result of the function (4) to MyVar
-$myDate:=!2018/01/21! //assigns a date literal
-$myHour:=?08:12:55? //assigns a time literal
+$MyNumber:=3 // MyNumber 変数に数値の3を代入します
+[Products]Size:=$MyNumber // [Products]Size フィールドに MyNumber 変数の値を代入します
+arrDays{2}:="Tuesday" // arrDays 配列の第二要素に文字列 "Tuesday" を代入します
+MyVar:=Length("Acme") // MyVar 変数に関数の結果 (数値の4) を代入します
+$myDate:=!2018/01/21! // 日付リテラルを代入します
+$myHour:=?08:12:55? // 時間リテラルを代入します
 ```
 
-You MUST distinguish the assignment operator := from the other operators. Rather than combining expressions into a new one, the assignment operator copies the value of the expression to the right of the assignment operator into the variable or field to the left of the operator.
+代入演算 (:=) は必ず他の演算と区別しなければなりません。 代入演算子は、被演算子を組み合わせて新しい一つのものにするのではなく、演算子の右側の式の値を左側の変数やフィールドにコピーします。
 
-**Important:** Do NOT confuse the assignment operator := with the equality comparison operator =. A different assignment operator (and not =) was deliberately chosen to avoid issues and confusion which often occur with == or === in other programming languages. Such errors are often difficult to recognize by the compiler and lead to time-consuming troubleshooting.
+**重要:** 代入演算子 (:=) と比較演算子 (=) とを混同しないように注意してください。 (=) とは異なる代入演算子が採用されたのは意図的なことで、他のプログラミング言語で (==) や (===) の使用によって度々起こる間違いを避けるためです。 このような間違いはコンパイラーにとっても発見しにくく、時間を消耗するトラブルシューティングのもとです。
 
 ## Variables
 
-The 4D language is strongly typed, although some flexibility is allowed in many cases. You create a typed variable using the `var` keyword. For example, to create a variable of the date type, you can write:
+4D ランゲージは強い型付けの言語ですが、多くの場合に柔軟性も発揮します。 型指定の変数を作成するには `var` キーワードを使います。 たとえば、日付型の変数を作成するには、次のように書くことができます:
 
 ```4d
 var MyDate : Date 
 ```
 
-The `var` keyword allows declaring object variables of a defined class type, for example:
+`var` キーワードを使って、定義されているクラス型のオブジェクト変数を宣言することができます。例:
 
 ```4d
 var myPerson : cs.Person 
-//variable of the Person user class
+// Person ユーザークラスの変数
 ```
 
 
-Even if it is usually not recommended, you can declare variables simply by using them; you do not necessarily need to formally define them. For example, if you want a variable that will hold the current date plus 30 days, you can write:
+推奨はされませんが、変数を使用することで宣言することもでき、必ずしも正式に宣言する必要はありません。 たとえば、今日の日付に30日足した値を格納した変数が欲しい場合、次のように書くことができます:
 
 ```4d
 MyOtherDate:=Current date+30
 ```
 
-The line of code reads “MyOtherDate gets the current date plus 30 days.” This line declares the variable, assigns it with both the (temporary) date type and a content. A variable declared by assignment is interpreted as typeless, that is, it can be assigned with other types in other lines and then changes the type dynamically. A variable typed with `var` cannot change the type. In [compiled mode](interpreted.md) however, the type can never be changed, regardless of how the variable was declared.
+上のコードは "MyOtherDate に、現在の日付に30日を加算した値を代入します" という意味です。 この1行で変数が宣言され、変数に (仮の) データ型とデータが割り当てられます。 このように代入によって宣言された変数はデータ型が規定されていないと解釈され、コードの違う行では別のデータ型の値を代入することもでき、その際にはデータ型を動的に変化させます。 `var` によって宣言された変数はデータ型を変化させることはできません。 [コンパイルモード](interpreted.md) においては、その宣言方法にかかわらず、変数のデータ型は変更できません。
 
-## Commands
+## コマンド
 
-4D commands are built-in methods to perform an action. All 4D commands, such as `CREATE RECORD`, or `ALERT`, are described in the _4D Language Reference_ manual, grouped by theme. Commands are often used with parameters, which are passed in brackets () and separated by semicolons (;). Example:
+4D コマンドとは、処理を実行するために 4D に組み込まれている命令文のことです。 すべての 4D コマンド、たとえば `CREATE RECORD` や `ALERT` などのコマンドはテーマ別に _4D ランゲージリファレンス_ に記載されています。 コマンドに引数を渡す場合は、コマンド名の後の括弧 () に引数を入れ、セミコロン (;) で区切ります。 例:
 
 ```4d
 COPY DOCUMENT("folder1\\name1";"folder2\\" ; "new")
 ```
 
-Some commands are attached to collections or objects, in which case they are named methods and are used using the dot notation. For example:
+コレクションやオブジェクトにコマンドが属している場合、それらは名前付きメソッドであり、ドット記法を用いて使用します。 例:
 
 ```4d
 $c:=New collection(1;2;3;4;5)
@@ -75,145 +75,145 @@ $nc:=$c.slice(0;3) //$nc=[1,2,3]
 $lastEmployee:=$employee.last()
 ```
 
-You can use 4D plug-ins or 4D components that add new commands to your 4D development environment.
+4D プラグインや 4D コンポーネントを利用して、4D 開発環境に新しくコマンドを追加することもできます。
 
-There are many plug-ins proposed by the 4D user community or 3rd-party developers on the market. For example, using the [4d-plugin-pdf-pages](https://github.com/miyako/4d-plugin-pdf-pages) on macOS:
+4D のユーザーコミュニティーや、サードパーティーデベロッパーによるプラグインが多数存在します。 たとえば, [4d-plugin-pdf-pages](https://github.com/miyako/4d-plugin-pdf-pages) プラグインを macOS で使用した場合は次のコードが書けます:
 
 ```4d
 PDF REMOVE PAGE(path;page)
 ```
 
-4D SVG is an example of a utility component extending the capabilities of your application:
+4D SVG はアプリケーションの機能を拡張するユーティリティコンポーネントの一例です:
 
 ```4d
-//drawing a picture
+// 図の描画
 svgRef:=SVG_New
 objectRef:=SVG_New_arc(svgRef;100;100;90;90;180)
 ```
-4D SVG is included in 4D.
+4D SVG は 4D に含まれています。
 
-## Constants
+## 定数
 
-4D proposes an extensed set of predefined constants, whose values are accessible by name. They allow writing more readable code. For example, `Read Mode` is a constant (value 2).
-
-```4d
-vRef:=Open document("PassFile";"TEXT";Read Mode) // open doc in read only mode
-```
-
-> Predefined constants appear <u>underlined</u> by default in the 4D Code Editor.
-
-## Methods
-
-4D provides a large number of built-in methods (or commands) but also lets you can create your own **project methods**. Project methods are user-defined methods that contain commands, operators, and other parts of the language. Project methods are generic methods, but there are other kinds of methods: Object methods, Form methods, Table methods (Triggers), and Database methods.
-
-A method is composed of statements; each statement consists of one line in the method. A statement performs an action, and may be simple or complex.
-
-For example, the following line is a statement that will display a confirmation dialog box:
+4D では多くの定義済定数が用意されており、それらの値は名前によってアクセスすることができます。 定義済みの定数によって、より可読性の高いコードを書くことができます。 たとえば、`Read Mode` は定数で、その値は 2 です。
 
 ```4d
-CONFIRM("Do you really want to close this account?";"Yes";"No")
+vRef:=Open document("PassFile";"TEXT";Read Mode) // ドキュメントを読み取り専用モードで開きます
 ```
 
-A method also contains tests and loops that control the flow of the execution. 4D methods support `If...Else...End if` and `Case of...Else...End case` branching structures as well as looping structures: `While...End while`, `Repeat...Until`, `For...End for`, and `For each...End for each`:
+> コードエディターにおいて、定義済定数はデフォルトで <u>下線付き</u> で表示されます。
 
-The following example goes through all the characters of the text vtSomeText:
+## メソッド
+
+4D が提供するたくさんのビルトインコマンドを使って、独自の **プロジェクトメソッド** を組み立てることができます。 プロジェクトメソッドとはユーザー定義のメソッドで、コマンドや演算子などの要素から成り立ちます。 プロジェクトメソッドは汎用性のあるメソッドですが、そうではない他の種類のメソッドも存在します: オブジェクトメソッド、フォームメソッド、テーブルメソッド (トリガー)、データベースメソッド。
+
+メソッドは、一つ以上のステートメントで構成されます。ステートメントとは、メソッドの1行のことで1つの命令を実行します。 ステートメントは単純な場合もあれば、複雑な場合もあります。
+
+たとえば、次のステートメントは確認ダイアログボックスを表示します:
+
+```4d
+CONFIRM("このアカウントを本当に閉じますか？";"はい";"いいえ")
+```
+
+メソッドは、テストとループの制御フローの実行を含みます。 `If...Else...End if` および `Case of...Else...End case` の分岐構造が使用できるほか、ループ構造としては `While...End while`、`Repeat...Until`、`For...End for`、そして `For each...End for each` が使用可能です:
+
+テキスト変数 vtSomeText の文字を一つ一つループ処理します:
 
 ```4d
 For($vlChar;1;Length(vtSomeText))
-    //Do something with the character if it is a TAB
+    // 文字がタブであれば
     If(Character code(vtSomeText[[$vlChar]])=Tab)
-        //...
+        // なんらかの処理をします
     End if
 End for
 ```
 
-A project method can call another project method with or without parameters (arguments). The parameters are passed to the method in parentheses, following the name of the method. Each parameter is separated from the next by a semicolon (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. A method can return a single value in the $0 parameter. When you call a method, you just type its name:
+プロジェクトメソッドは他のプロジェクトメソッドを呼び出すことができ、その際に引数を渡すことも可能です。 メソッドに引数を渡す場合は、メソッド名の後の括弧 () に引数を入れ、 セミコロン (;) で区切ります。 引数は受け取り側のメソッドにて、受け取り順に番号を振られたローカル変数 ($1, $2, ...$n) に格納されます。 メソッドの一つの値を戻り値とすることができ、$0 パラメーターを使います。 メソッドを呼び出すには、メソッド名を書きます:
 
 ```4d
 $myText:="hello"
-$myText:=Do_Something($myText) //Call the Do_Something method
+$myText:=Do_Something($myText) // Do_Something メソッドを呼び出します
 ALERT($myText) //"HELLO"
 
-  //Here the code of the method Do_Something
+  // Do_Something メソッドのコードです
 $0:=Uppercase($1)
 ```
 
 
-## Data Types
+## データタイプ
 
-In the language, the various types of data that can be handled are referred to as data types. There are basic data types (string, numeric, date, time, Boolean, picture, pointers, arrays), and also composite data types (BLOBs, objects, collections).
+4D ランゲージで扱うデータにはいくつかの種別があり、これらのデータ種別を "データタイプ" と呼びます。 基本のデータタイプ (文字、数値、日付、時間、ブール、ピクチャー、ポインター、配列) と混合型のデータタイプ (BLOB、オブジェクト、コレクション) があります。
 
-Note that string and numeric data types can be associated with more than one type of field. When data is put into a field, the language automatically converts the data to the correct type for the field. For example, if an integer field is used, its data is automatically treated as numeric. In other words, you need not worry about mixing similar field types when using the language; it will manage them for you.
+データタイプのうち、文字タイプと数値タイプは、複数の類似するフィールドタイプに対応する点に注意してください。 これらのフィールドにデータが格納されるとき、4D ランゲージはフィールドタイプに合致するデータタイプへとデータを自動的に変換します。 反対に、たとえば整数フィールドのデータを呼び出すと、そのデータは自動的に数値タイプとして扱われます。 つまり、4D ランゲージを使用する際に、類似するフィールドタイプを厳密に区別する必要はありません。
 
-However, when using the language it is important that you do not mix different data types. In the same way that it makes no sense to store “ABC” in a Date field, it makes no sense to put “ABC” in a variable used for dates. In most cases, 4D is very tolerant and will try to make sense of what you are doing. For example, if you add a number to a date, 4D will assume that you want to add that number of days to the date, but if you try to add a string to a date, 4D will tell you that the operation cannot work.
+しかし、プログラミングにおいて異なるデータタイプを混同しないようにすることは重要です。 "ABC" を日付フィールドに格納しても意味がないように、日付型の変数に "ABC" を格納することも意味がありません。 4D は、コードに書かれたことをできるだけ有効にしようとします。 たとえば、日付に数値を加算した場合は、日付に日数を加算したいものと認識します。しかし、日付に文字列を加算した場合には、4D はその操作が意味を持たないことを警告します。
 
-There are cases in which you need to store data as one type and use it as another type. The language contains a full complement of commands that let you convert from one data type to another. For example, you may need to create a part number that starts with a number and ends with characters such as “abc”. In this case, you might write:
+あるタイプとして格納したデータを、別のタイプとして使用する場合があります。 4D ランゲージには、データタイプを変換するためのコマンドが用意されています。 たとえば、数値で始まり、"abc" 等の文字で終了する部品番号を作成する場合、 以下のように記述することができます:
 
 ```4d
-[Products]Part Number:=String(Number)+"abc"
+[Products]Part_Number:=String(Number)+"abc"
 ```
 
-If _Number_ is 17, then _[Products]Part Number_ will get the string “17abc”.
+数値変数 _Number_ の値が17であれば、_[Products]Part_Number_ に "17abc" という文字列が代入されます。
 
-The data types are fully defined in the section [Data Types](Concepts/data-types.md).
+データタイプについては [データタイプ](Concepts/data-types.md) の節で詳しく説明しています。
 
-## Objects and collections
+## オブジェクトとコレクション
 
-You can handle 4D language objects and collections using the object notation to get or to set their values. For example:
+4D ランゲージのオブジェクトとコレクションは、オブジェクト記法を使用して値を代入・取得することができます。 例:
 
 ```4d
 employee.name:="Smith"
 ```
 
-You can also use a string within square brackets, for example:
+大カッコ内と文字列の組み合わせを用いることもできます:
 
 ```4d
 $vName:=employee["name"]
 ```
 
-Since an object property value can be an object or a collection, object notation accepts a sequence of symbols to access sub-properties, for example:
+オブジェクトプロパティ値には、オブジェクトやコレクションも設定することが可能です。これらのサブプロパティにアクセスするため、オブジェクト記法では連続した字句を受け入れることができます:
 
 ```4d
 $vAge:=employee.children[2].age
 ```
 
-Note that if the object property value is an object that encapsulates a method (a formula), you need to add parenthesis () to the property name to execute the method:
+オブジェクトのプロパティ値が、メソッド (フォーミュラ) をカプセル化したオブジェクトである場合には、プロパティ名の後に括弧 ( ) をつけることで実行できます:
 
 ```
 $f:=New object
 $f.message:=New formula(ALERT("Hello world!"))
-$f.message() //displays "Hello world!"
+$f.message() // "Hello world!" を表示します
 ```
 
-To access a collection element, you have to pass the element number embedded in square brackets:
+コレクションの要素にアクセスするためには、大カッコでくくった要素番号を渡します:
 
 ```4d
 C_COLLECTION(myColl)
 myColl:=New collection("A";"B";1;2;Current time)
-myColl[3]  //access to 4th element of the collection
+myColl[3]  // コレクションの4番目の要素にアクセスします (0起点)
 ```
 
-## Classes
+## クラス
 
-The 4D language supports object classes. Add a `myClass.4dm` file in the Project/Sources/Classes folder of a project to create a class named "myClass".
+4D ランゲージではオブジェクトクラスがサポートされています。 "myClass" という名称のクラスを作成するには、プロジェクトの Project/Sources/Classes フォルダーに `myClass.4dm` ファイルを追加します。
 
-To instantiate an object of the class in a method, call the user class from the *class store* (`cs`) and use the `new()` member function. You can pass parameters.
+あるメソッドにおいて、クラスのオブジェクトをインスタンス化するには、*クラスストア* (`cs`) よりユーザークラスを呼び出して、`new()` メンバー関数を使います。 引数を渡すこともできます。
 
 ```4d  
-// in a 4D method
+// 4D メソッド内
 $o:=cs.myClass.new() 
 ```
 
-In the `myClass` class method, use the `Function <methodName>`  statement to define the *methodName* class member method. A class member method can receive and return parameters like any method, and use `This` as the object instance.
+`myClass` クラスメソッド内では、*methodName* クラスメンバーメソッドを宣言するのに `Function <methodName>` ステートメントを使います。 ほかのメソッドのように、クラスメンバーメソッドは引数を受け取ったり、値を返すことができ、オブジェクトインスタンスとして `This` を使えます。
 
 ```4d  
-//in the myClass.4dm file
+// myClass.4dm ファイル内
 Function hello
   C_TEXT($0)
   $0:="Hello "+This.who
 ```
 
-To execute a class member method, just use the `()` operator on the member method of the object instance.
+クラスメンバーメソッドを実行するには、オブジェクトインスタンスのメンバーメソッドに `()` 演算子を使います。
 
 ```4d
 $o:=cs.myClass.new()
@@ -222,10 +222,10 @@ $message:=$o.myClass.hello()
 //$message: "Hello World"
 ```
 
-Optionally, use the `Class constructor` keyword to declare properties of the object.
+`Class constructor` キーワードを使用してオブジェクトのプロパティを宣言することもできます (任意)。
 
 ```4d  
-//in the Rectangle.4dm file
+// Rectangle.4dm ファイル内
 Class constructor
 C_LONGINT($1;$2)
 This.height:=$1
@@ -233,107 +233,107 @@ This.width:=$2
 This.name:="Rectangle"
 ```
 
-A class can extend another class by using `Class extends <ClassName>`. Superclasses can be called using the `Super` command. For example:
+クラスはほかのクラスから継承することもできます: `Class extends <ClassName>`。 また、`Super` コマンドを使って、スーパークラスを呼び出すことができます。 例:
 
 ```4d  
-//in the Square.4dm file
-Class extends rectangle
+// Square.4dm ファイル内
+Class extends Rectangle
 
 Class constructor
 C_LONGINT($1)
 
-  // It calls the parent class's constructor with lengths   
-  // provided for the Rectangle's width and height
+  // 親クラスのコンストラクターを呼び出します
+  // 長方形の高さ・幅パラメーターに正方形の一辺の長さを引数として渡します
 Super($1;$1)
 
 This.name:="Square"
 ```
 
 
-## Operators
-When you use the language, it is rare that you will simply want a piece of data. It is more likely that you will want to do something to or with that data. You perform such calculations with operators. Operators, in general, take two pieces of data and perform an operation on them that results in a new piece of data. You are already familiar with many operators. For example, 1 + 2 uses the addition (or plus sign) operator to add two numbers together, and the result is 3. This table shows some familiar numeric operators:
+## 演算子
+プログラミング言語を使用する際に、データのみを必要とする場合は非常に稀です。 データを加工、または何らかの目的のために使用することがほとんどです。 そういった計算は演算子を使っておこないます。 一般的に演算子とは、2つのデータをもとに処理をおこない、1つの新しいデータを生成します。 日常的に使用されている演算子も多くあります。 たとえば、1 + 2 という式は加算演算子 (プラス記号) を使用し、2つの数値を足し合わせて、3という結果を返します。 以下に、よく知られている 4つの演算子を示します:
 
-| Operator | Operation      | Example            |
-| -------- | -------------- | ------------------ |
-| +        | Addition       | 1 + 2 results in 3 |
-| –        | Subtraction    | 3 – 2 results in 1 |
-| *        | Multiplication | 2 * 3 results in 6 |
-| /        | Division       | 6 / 2 results in 3 |
+| 演算子 | 処理       | 例題           |
+| --- | -------- | ------------ |
+| +   | 加算 (足し算) | 1 + 2 の結果は 3 |
+| –   | 減算 (引き算) | 3 - 2 の結果は 1 |
+| *   | 乗算 (かけ算) | 2 * 3 の結果は 6 |
+| /   | 除算 (割り算) | 6 / 2 の結果は 3 |
 
-Numeric operators are just one type of operator available to you. 4D supports many different types of data, such as numbers, text, dates, and pictures, so there are operators that perform operations on these different data types.
+数値演算子は、使用可能な演算子のうちの 1種にすぎません。 4Dは、数値・テキスト・日付・ピクチャー等、異なるタイプのデータを扱うために、各データタイプで演算を実行するための演算子を備えています。
 
-The same symbols are often used for different operations, depending on the data type. For example, the plus sign (+) performs different operations with different data:
+対象のデータタイプによって、同じ記号が異なる処理に使用される場合があります。 例えば、データタイプによってプラス記号 (+) は下記のように異なる演算を実行します:
 
-| Data Type       | Operation     | Example                                                                                              |
-| --------------- | ------------- | ---------------------------------------------------------------------------------------------------- |
-| Number          | Addition      | 1 + 2 adds the numbers and results in 3                                                              |
-| String          | Concatenation | “Hello ” + “there” concatenates (joins together) the strings and results in “Hello there”            |
-| Date and Number | Date addition | !1989-01-01! + 20 adds 20 days to the date January 1, 1989, and results in the date January 21, 1989 |
-
-
-## Expressions
-
-Simply put, expressions return a value. In fact, when using the 4D language, you use expressions all the time and tend to think of them only in terms of the value they represent. Expressions are also sometimes referred to as formulas.
-
-Expressions are made up of almost all the other parts of the language: commands, operators, variables, fields, object properties, and collection elements. You use expressions to build statements (lines of code), which in turn are used to build methods. The language uses expressions wherever it needs a piece of data.
-
-Expressions rarely “stand alone.” There are several places in 4D where an expression can be used by itself. It includes:
-
-- Formula editor (apply formula, query with formula, order by formula)
-- The `EXECUTE FORMULA` command
-- The Property list, where an expression can be used as a data source for most of widgets
-- Debugger where the value of expressions can be checked
-- Quick Report editor as a formula for a column
+| データタイプ | 処理       | 例題                                                         |
+| ------ | -------- | ---------------------------------------------------------- |
+| 数値     | 加算 (足し算) | 1 + 2 は数値を加算し、結果は 3 です。                                    |
+| 文字列    | 連結 (結合)  | "みなさん" + "こんにちは" は文字を連結 (結合) し、結果は "みなさんこんにちは" です。         |
+| 日付と数値  | 日付の加算    | !2006/12/4!  + 20 は、2006年12月4日に 20日を加算し、結果は 2006年12月24日です。 |
 
 
-### Expression types
-You refer to an expression by the data type it returns. There are several expression types. The following table gives examples of each type of expression.
+## 式
 
-| Expression               | Type               | Description                                                                                                                                                                     |
-| ------------------------ | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| “Hello”                  | String             | The word Hello is a string constant, indicated by the double quotation marks.                                                                                                   |
-| “Hello ” + “there”       | String             | Two strings, “Hello ” and “there”, are added together (concatenated) with the string concatenation operator (+). The string “Hello there” is returned.                          |
-| “Mr. ” + [People]Name    | String             | Two strings are concatenated: the string “Mr. ” and the current value of the Name field in the People table. If the field contains “Smith”, the expression returns “Mr. Smith”. |
-| Uppercase("smith")       | String             | This expression uses `Uppercase`, a command from the language, to convert the string “smith” to uppercase. It returns “SMITH”.                                                  |
-| 4                        | Number             | This is a number constant, 4.                                                                                                                                                   |
-| 4 * 2                    | Number             | Two numbers, 4 and 2, are multiplied using the multiplication operator (*). The result is the number 8.                                                                         |
-| myButton                 | Number             | This is a variable associated to a button. It returns the current value of the button: 1 if it was clicked, 0 if not.                                                           |
-| !1997-01-25!             | Date               | This is a date constant for the date 1/25/97 (January 25, 1997).                                                                                                                |
-| Current date+ 30         | Date               | This is a date expression that uses the `Current date` command to get today’s date. It adds 30 days to today’s date and returns the new date.                                   |
-| ?8:05:30?                | Time               | This is a time constant that represents 8 hours, 5 minutes, and 30 seconds.                                                                                                     |
-| ?2:03:04? + ?1:02:03?    | Time               | This expression adds two times together and returns the time 3:05:07.                                                                                                           |
-| True                     | Boolean            | This command returns the Boolean value TRUE.                                                                                                                                    |
-| 10 # 20                  | Boolean            | This is a logical comparison between two numbers. The number sign (#) means “is not equal to”. Since 10 “is not equal to” 20, the expression returns TRUE.                      |
-| “ABC” = “XYZ”            | Boolean            | This is a logical comparison between two strings. They are not equal, so the expression returns FALSE.                                                                          |
-| My Picture + 50          | Picture            | This expression takes the picture in My Picture, moves it 50 pixels to the right, and returns the resulting picture.                                                            |
-| ->[People]Name           | Pointer            | This expression returns a pointer to the field called [People]Name.                                                                                                             |
-| Table (1)                | Pointer            | This is a command that returns a pointer to the first table.                                                                                                                    |
-| JSON Parse (MyString)    | Object             | This is a command that returns MyString as an object (if proper format)                                                                                                         |
-| JSON Parse (MyJSONArray) | Collection         | This is a command that returns MyJSONArray as a collection (if proper format)                                                                                                   |
-| Form.pageNumber          | Object property    | An object property is an expression that can be of any supported type                                                                                                           |
-| Col[5]                   | Collection element | A collection element is an expression that can be of any supported type                                                                                                         |
-| $entitySel[0]            | Entity             | A element of an ORDA entity selection is an expression of the entity type. This kind of expression is **non-assignable**                                                        |
+式は、値を返します。 4D ランゲージでコードを書く際には、意識していなくても常に式を使用しています。 式は、"フォーミュラ" と呼ぶこともあります。
 
-### Assignable vs non-assignable expressions
+コマンド・演算子・変数・フィールド・オブジェクトプロパティ・コレクション要素等、複数のランゲージの要素を組み合わせて式は構成されます。 式により、ステートメント (メソッドの 1文や 1行) を構成します。 データが必要なとき、式が必要になります。
 
-An expression can simply be a literal constant, such as the number 4 or the string "Hello", or a variable like `$myButton`. It can also use operators. For example, 4 + 2 is an expression that uses the addition operator to add two numbers together and return the result 6. In any cases, these expressions are **non-assignable**, which means that you cannot assign a value to them. In 4D, expressions can be **assignable**. An expression is assignable when it can be used on the left side of an assignation. For example:
+式が単独で使われることはほとんどありませんが、 単独で使用できる場合がいくつかあります :
+
+- フォーミュラエディター (フォーミュラによるクエリや並べ替えなど)
+- `EXECUTE FORMULA` コマンド
+- フォームオブジェクトやウィジェットのデータソースとして
+- デバッガー内で式の値を確認することができます
+- クイックレポートエディターでカラムにフォーミュラを使用することができます
+
+
+### 式のタイプ
+生成する値のタイプによって、式のタイプを定義することができます。 式のタイプは複数あります。 様々なタイプの式の例を以下に示します。
+
+| 式                           | タイプ         | 詳細                                                                             |
+| --------------------------- | ----------- | ------------------------------------------------------------------------------ |
+| "こんにちは"                     | String      | これは文字列定数 "こんにちは" です。 文字列定数であることを表すために二重引用符が必要です。                               |
+| "みなさん" + "こんにちは"            | String      | 2つの文字列 "みなさん" と "こんにちは" が + 演算子により結合され、 "みなさんこんにちは" を返します。                     |
+| [People]Name + "様"          | String      | 2つの文字列の結合です。[People]Name フィールドと文字列 "様" が結合されます。 フィールドの値が "小林" の場合、"小林様" を返します。 |
+| Uppercase ("smith")         | String      | この式は `Uppercase` コマンドを使用して、文字列 "smith" を英大文字に変換します。 そして "SMITH" を返します。         |
+| 4                           | Number      | これは数値定数 4です。                                                                   |
+| 4 * 2                       | Number      | 2つの数値、4 と 2 の乗算です。乗算演算子の (*) を使用しています。 数値の 8を返します。                             |
+| myButton                    | Number      | これはボタンに紐づけられた変数です。 ボタンの現在の値を返します: クリックされた場合に 1、それ以外は 0 を返します。                  |
+| !06/12/24! または !2006/12/24! | Date        | この式は日付定数で 2006年12月24日を表します。                                                    |
+| Current date + 30           | Date        | これは日付の計算です。`Current date` コマンドは現在の日付を返します。 現在の日付に 30日を加えた日付を返します。              |
+| ?8:05:30?                   | Time        | これは時間定数で、8時5分30秒を表します。                                                         |
+| ?2:03:04? + ?1:02:03?       | Time        | 2つの時間の足し算をおこない、3時5分7秒を返します。                                                    |
+| true                        | Boolean     | このコマンドはブール値の true (真) を返します。                                                   |
+| 10 # 20                     | Boolean     | これは 2つの数値の論理比較です。 #記号は、"等しくない" を表します。 10と20は "等しくない" ため、この式は true (真) を返します。   |
+| "ABC" = "XYZ"               | Boolean     | これは文字列の論理比較です。 文字列は等しくないため、式は FALSE (偽) を返します。                                 |
+| My Picture + 50             | Picture     | この式は My Picture 変数に入っているピクチャーを右に 50ピクセル移動したピクチャーを返します。                         |
+| ->[People]Name              | Pointer     | この式は [People]Name フィールドへのポインターを返します。                                           |
+| Table (1)                   | Pointer     | このコマンドは一番目に定義されたテーブルへのポインターを返します。                                              |
+| JSON Parse (MyString)       | Object      | このコマンドは MyString が適切なフォーマットであれば、オブジェクトとして返します。                                 |
+| JSON Parse (MyJSONArray)    | Collection  | このコマンドは MyJSONArray が適切なフォーマットであれば、コレクションとして返します。                              |
+| Form.pageNumber             | オブジェクトプロパティ | オブジェクトプロパティは式として、サポートされているいずれのタイプでもありえます。                                      |
+| Col[5]                      | コレクション要素    | コレクション要素は式として、サポートされているいずれのタイプでもありえます。                                         |
+| $entitySel[0]               | Entity      | ORDA のエンティティセレクションの要素である、エンティティを返します。 これは **代入不可の式** です。                       |
+
+### 代入可 vs 代入不可の式
+
+式は、数値の4や"Hello" の文字列のようなリテラル定数であったり、`$myButton` のような変数であったりします。 式には演算子も含められます。 たとえば、4 + 2 という式は加算演算子を使って二つの数値を加算し、結果の 6 を返します。 リテラル定数や演算子を使った式は **代入不可の式**で、式に値を代入することはできません。 **代入可能な式** も存在します。 代入演算子の左側に使えるものが、代入可能な式です。 例:
 
 ```4d  
-//$myVar variable is assignable, you can write:  
-$myVar:="Hello" //assign "Hello" to myVar
-//Form.pageNumber is assignable, you can write:  
-Form.pageNumber:=10 //assign 10 to Form.pageNumber
-//Form.pageTotal-Form.pageNumber is not assignable:
-Form.pageTotal- Form.pageNumber:=10 //error, non-assignable
+// 変数 $myVar は代入可能です:  
+$myVar:="Hello" // $myVar に "Hello" を代入します
+//Form.pageNumber は代入可能です:  
+Form.pageNumber:=10 // Form.pageNumber に 10 を代入します
+//Form.pageTotal-Form.pageNumber は代入不可です:
+Form.pageTotal- Form.pageNumber:=10 // 代入不可のため、エラー
 ```
-In general, expressions that use an operator are non-assignable. For example, `[Person]FirstName+" "+[Person]LastName` is not assignable.
+このように、リテラル定数ではなくても、演算子を使っている式は代入不可です。 たとえば、`[Person]FirstName+" "+[Person]LastName` は代入不可です。
 
 
-## Pointers
+## ポインター
 
-The 4D language provides an advanced implementation of pointers, that allow writing powerful and modular code. You can use pointers to reference tables, fields, variables, arrays, and array elements.
+ポインターは、プログラミングにおいてデータを参照するための高度な方法です。 4D ではテーブル、フィールド、変数、配列、配列要素を参照するためにポインターを使用することができます。
 
-A pointer to an element is created by adding a "->" symbol before the element name, and can be dereferenced by adding the "->" symbol after the pointer name.
+対象へのポインターは、その対象の前にポインター記号 (->) を付けることで取得することができます。反対にポインターから対象を取得するには、ポインター名の後にポインター記号をつけます:
 
 ```4d
 MyVar:="Hello"
@@ -341,50 +341,50 @@ MyPointer:=->MyVar
 ALERT(MyPointer->)
 ```
 
-## Comments
+## コメント
 
-Comments are inactive lines of code. These lines are not interpreted by the 4D language and are not executed when the code is called.
+コメントとは、コード内の実行されないテキストのことです。 これらのテキストは、コード実行時にインタープリターによって無視されます。
 
-There are two ways to create comments:
+コメントの書き方は2通りあります:
 
-- `//` for single line comments
-- `/*...*/` for inline or multiline commnents.
+- `//` 記号の後はすべてコメントとして扱われるため、これを使って1行のコメントが書けます
+- `/*コメント*/` の表記方法でインラインコメント、または複数行にまたがるコメントが書けます
 
-Both styles of comments can be used simultaneously.
+これらの書き方は同時に使用できます。
 
-#### Single line comments (//)
+#### シングルラインコメント (//)
 
-Insert `//` at the beginning of a line or after a statement to add a single line comment. Example:
+コードの後や行の最初に `//` を使うと、その後のテキストはすべてコメントとなります。 例:
 
 ```4d
-//This is a comment
-For($vCounter;1;100) //Starting loop
-  //comment
-  //comment
-  //comment
+// これはコメントです
+For($vCounter;1;100) // ループを開始します
+  // コメント
+  // コメント
+  // コメント
  End for
 ```
 
-#### Inline or multiline comments (/* */)
+#### インライン、およびマルチラインコメント (/* */)
 
-Surround contents with `/*` ... `*/` characters to create inline comments or multiline comment blocks. Both inline and multiline comment blocks begin with `/*` and end with `*/`.
+コメントを `/*` と `*/` で囲むと、そのあいだのテキストはコメントとなります。 この方法でインラインおよびマルチラインコメントが書けます:
 
-- **Inline comments** can be inserted anywhere in the code. Example:
+- **インラインコメント** の 例:
 
 ```4d
-For /* inline comment */ ($vCounter;1;100)
+For /* インラインコメント */ ($vCounter;1;100)
     ...
 End for
 ```
 
-- **Multiline comment blocks** allows commenting an unlimited number of lines. Comment blocks can be nested (useful since the 4D code editor supports block collapsing). Example:
+- **マルチラインコメント** は複数行にわたるコメントのことです。 この形式のコメントは入れ子にすることができ、4D コードエディターではこれを展開したり折りたたんだりすることができます。 例:
 
 ```4d
 For ($vCounter;1;100)
 /*
-comments  
+コメント  
     /* 
-    other comments
+    詳細なコメント
     */
 */
 ...

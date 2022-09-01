@@ -1,74 +1,74 @@
 ---
 id: data-types
-title: Data types overview
+title: Tipos de datos
 ---
 
-In 4D, data are handled according to their type in two places: database fields and the 4D language.
+En 4D, los datos se manejan según su tipo en dos lugares: los campos de la base y el lenguaje 4D.
 
-Although they are usually equivalent, some data types available at the database level are not directly available in the language and are automatically converted. Conversely, some data types can only be handled through the language. The following table lists all available data types and how they are supported/declared:
+Aunque suelen ser equivalentes, algunos tipos de datos disponibles en la base no están disponibles directamente en el lenguaje y se convierten automáticamente. Por el contrario, algunos tipos de datos sólo pueden manejarse a través del lenguaje. La siguiente tabla lista todos los tipos de datos disponibles y cómo se soportan/declaran:
 
-| Data Types                                 | Database support(1) | Language support     | [`var` declaration](variables.md#using-the-var-keyword) | [`C_` or `ARRAY` declaration](variables.md#using-a-c_-directive) |
-| ------------------------------------------ | ------------------- | -------------------- | ------------------------------------------------------- | ---------------------------------------------------------------- |
-| [Alphanumeric](dt_string.md)               | Yes                 | Converted to text    | -                                                       | -                                                                |
-| [Text](Concepts/dt_string.md)              | Yes                 | Yes                  | `Text`                                                  | `C_TEXT`, `ARRAY TEXT`                                           |
-| [Date](Concepts/dt_date.md)                | Yes                 | Yes                  | `Date`                                                  | `C_DATE`, `ARRAY DATE`                                           |
-| [Time](Concepts/dt_time.md)                | Yes                 | Yes                  | `Time`                                                  | `C_TIME`, `ARRAY TIME`                                           |
-| [Boolean](Concepts/dt_boolean.md)          | Yes                 | Yes                  | `Boolean`                                               | `C_BOOLEAN`, `ARRAY BOOLEAN`                                     |
-| [Integer](Concepts/dt_number.md)           | Yes                 | Converted to longint | `Integer`                                               | `ARRAY INTEGER`                                                  |
-| [Longint](Concepts/dt_number.md)           | Yes                 | Yes                  | `Integer`                                               | `C_LONGINT`, `ARRAY LONGINT`                                     |
-| [Longint 64 bits](Concepts/dt_number.md)   | Yes (SQL)           | Converted to real    | -                                                       | -                                                                |
-| [Real](Concepts/dt_number.md)              | Yes                 | Yes                  | `Real`                                                  | `C_REAL`, `ARRAY REAL`                                           |
-| [Undefined](Concepts/dt_null_undefined.md) | -                   | Yes                  | -                                                       | -                                                                |
-| [Null](Concepts/dt_null_undefined.md)      | -                   | Yes                  | -                                                       | -                                                                |
-| [Pointer](Concepts/dt_pointer.md)          | -                   | Yes                  | `Pointer`                                               | `C_POINTER`, `ARRAY POINTER`                                     |
-| [Picture](Concepts/dt_picture.md)          | Yes                 | Yes                  | `Picture`                                               | `C_PICTURE`, `ARRAY PICTURE`                                     |
-| [BLOB](Concepts/dt_blob.md)                | Yes                 | Yes                  | `Blob`, `4D.Blob`                                       | `C_BLOB`, `ARRAY BLOB`                                           |
-| [Object](Concepts/dt_object.md)            | Yes                 | Yes                  | `Object`                                                | `C_OBJECT`, `ARRAY OBJECT`                                       |
-| [Collection](Concepts/dt_collection.md)    | -                   | Yes                  | `Collection`                                            | `C_COLLECTION`                                                   |
-| [Variant](Concepts/dt_variant.md)(2)       | -                   | Yes                  | `Variant`                                               | `C_VARIANT`                                                      |
+| Tipos de datos                                | Soporte para la base (1) | Soporte para el lenguaje   | [declaración `var`](variables.md#using-the-var-keyword) | [declaración `C_` o `ARRAY`](variables.md#using-a-c_-directive) |
+| --------------------------------------------- | ------------------------ | -------------------------- | ------------------------------------------------------- | --------------------------------------------------------------- |
+| [Alfanumérico](dt_string.md)                  | Sí                       | Convertido en texto        | -                                                       | -                                                               |
+| [Text](Concepts/dt_string.md)                 | Sí                       | Sí                         | `Text`                                                  | `C_TEXT`, `ARRAY TEXT`                                          |
+| [Fecha](Concepts/dt_date.md)                  | Sí                       | Sí                         | `Fecha`                                                 | `C_DATE`, `ARRAY DATE`                                          |
+| [Hora](Concepts/dt_time.md)                   | Sí                       | Sí                         | `Hora`                                                  | `C_TIME`, `ARRAY TIME`                                          |
+| [Boolean](Concepts/dt_boolean.md)             | Sí                       | Sí                         | `Boolean`                                               | `C_BOOLEAN`, `ARRAY BOOLEAN`                                    |
+| [Integer](Concepts/dt_number.md)              | Sí                       | Convertido en entero largo | `Integer`                                               | `ARRAY INTEGER`                                                 |
+| [Longint](Concepts/dt_number.md)              | Sí                       | Sí                         | `Integer`                                               | `C_LONGINT`, `ARRAY LONGINT`                                    |
+| [Entero largo 64 bits](Concepts/dt_number.md) | Sí (SQL)                 | Convertido en real         | -                                                       | -                                                               |
+| [Real](Concepts/dt_number.md)                 | Sí                       | Sí                         | `Real`                                                  | `C_REAL`, `ARRAY REAL`                                          |
+| [Indefinido](Concepts/dt_null_undefined.md)   | -                        | Sí                         | -                                                       | -                                                               |
+| [Null](Concepts/dt_null_undefined.md)         | -                        | Sí                         | -                                                       | -                                                               |
+| [Puntero](Concepts/dt_pointer.md)             | -                        | Sí                         | `Puntero`                                               | `C_POINTER`, `ARRAY POINTER`                                    |
+| [Picture](Concepts/dt_picture.md)             | Sí                       | Sí                         | `Picture`                                               | `C_PICTURE`, `ARRAY PICTURE`                                    |
+| [BLOB](Concepts/dt_blob.md)                   | Sí                       | Sí                         | `Blob`, `4D.Blob`                                       | `C_BLOB`, `ARRAY BLOB`                                          |
+| [Object](Concepts/dt_object.md)               | Sí                       | Sí                         | `Object`                                                | `C_OBJECT`, `ARRAY OBJECT`                                      |
+| [Collection](Concepts/dt_collection.md)       | -                        | Sí                         | `Collection`                                            | `C_COLLECTION`                                                  |
+| [Variant](Concepts/dt_variant.md)(2)          | -                        | Sí                         | `Variant`                                               | `C_VARIANT`                                                     |
 
-(1) Note that ORDA handles database fields through objects (entities) and thus, only supports data types available to these objects. For more information, see the [Object](Concepts/dt_object.md) data type description.
+(1) Tenga en cuenta que ORDA maneja los campos de la base a través de objetos (entidades) y por lo tanto, sólo soporta los tipos de datos disponibles para estos objetos. Para más información, consulte la descripción del tipo de datos [Objeto](Concepts/dt_object.md).
 
-(2) Variant is actually not a *data* type but a *variable* type that can contain a value of any other data type.
+(2) La variante no es en realidad un tipo de *datos* sino un tipo de *variable* que puede contener un valor de cualquier otro tipo de datos.
 
-## Default values
+## Valores por defecto
 
-When variables are typed by means of a compiler directive, they receive a default value, which they will keep during the session as long as they have not been assigned.
+Cuando las variables se introducen mediante una directiva del compilador, reciben un valor por defecto, que mantendrán durante la sesión mientras no hayan sido asignadas.
 
-The default value depends on the variable type:
+El valor por defecto depende del tipo de variable:
 
-| Type       | Default value  |
-| ---------- | -------------- |
-| Booleen    | False          |
-| Date       | 00-00-00       |
-| Longint    | 0              |
-| Time       | 00:00:00       |
-| Picture    | picture size=0 |
-| Real       | 0              |
-| Pointer    | Nil=true       |
-| Text       | ""             |
-| Blob       | Blob size=0    |
-| Object     | null           |
-| Collection | null           |
-| Variant    | undefined      |
+| Type       | Valor por defecto |
+| ---------- | ----------------- |
+| Booleano   | False             |
+| Fecha      | 00-00-00          |
+| Longint    | 0                 |
+| Hora       | 00:00:00          |
+| Picture    | picture size=0    |
+| Real       | 0                 |
+| Puntero    | Nil=true          |
+| Text       | ""                |
+| Blob       | Tamaño Blob=0     |
+| Object     | null              |
+| Collection | null              |
+| Variant    | indefinido        |
 
 
-## Converting data types
+## Convertir los tipos de datos
 
-The 4D language contains operators and commands to convert between data types, where such conversions are meaningful. The 4D language enforces data type checking. For example, you cannot write: "abc"+0.5+!12/25/96!-?00:30:45?. This will generate syntax errors.
+El lenguaje 4D contiene operadores y comandos para convertir entre tipos de datos, cuando dichas conversiones tienen sentido. El lenguaje 4D aplica la verificación de tipos de datos. Por ejemplo, no se puede escribir: "abc"+0.5+!12/25/96!-?00:30:45?. Esto generará errores de sintaxis.
 
-The following table lists the basic data types, the data types to which they can be converted, and the commands used to do so:
+La siguiente tabla lista los tipos de datos básicos, los tipos de datos a los que se pueden convertir y los comandos utilizados para hacerlo:
 
-| Data Type to Convert | to String | to Number | to Date | to Time | to Boolean |
-| -------------------- | --------- | --------- | ------- | ------- | ---------- |
-| String (1)           |           | `Num`     | `Date`  | `Time`  | `Bool`     |
-| Number (2)           | `String`  |           |         |         | `Bool`     |
-| Date                 | `String`  |           |         |         | `Bool`     |
-| Time                 | `String`  |           |         |         | `Bool`     |
-| Boolean              |           | `Num`     |         |         |            |
+| Tipos a convertir | en Cadena | en Número | en Fecha | en Hora | en Booleano |
+| ----------------- | --------- | --------- | -------- | ------- | ----------- |
+| String (1)        |           | `Num`     | `Fecha`  | `Hora`  | `Bool`      |
+| Número (2)        | `String`  |           |          |         | `Bool`      |
+| Fecha             | `String`  |           |          |         | `Bool`      |
+| Hora              | `String`  |           |          |         | `Bool`      |
+| Boolean           |           | `Num`     |          |         |             |
 
-(1) Strings formatted in JSON can be converted into scalar data, objects, or collections, using the `JSON Parse` command.
+(1) Las cadenas formateadas en JSON pueden convertirse en datos escalares, objetos o colecciones, utilizando el comando `JSON Parse`.
 
-(2) Time values can be treated as numbers.
+(2) Los valores de tipo Hora pueden tratarse como números.
 
-**Note:** In addition to the data conversions listed in this table, more sophisticated data conversions can be obtained by combining operators and other commands.
+**Nota:** además de las conversiones de datos listadas en esta tabla, se pueden obtener conversiones de datos más sofisticadas combinando operadores y otros comandos.

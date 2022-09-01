@@ -3,13 +3,13 @@ id: onFooterClick
 title: On Footer Click
 ---
 
-| Code | Can be called by                                                                                                  | Definition                                        |
-| ---- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| 57   | [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A click occurs in the footer of a list box column |
+| コード | 呼び出し元                                                                                             | 定義                    |
+| --- | ------------------------------------------------------------------------------------------------- | --------------------- |
+| 57  | [リストボックス](FormObjects/listbox_overview.md) - [リストボックス列](FormObjects/listbox_overview.md#リストボックス列) | リストボックス列のフッターがクリックされた |
 
 
-## Description
+## 詳細
 
-This event is available for a list box or list box column object. It is generated when a click occurs in the footer of a list box column. In this context, the `OBJECT Get pointer` command returns a pointer to the variable of the footer that is clicked. The event is generated for both left and right clicks.
+このイベントはリストボックスやリストボックス列で利用できます。 このイベントは、リストボックスやリストボックス列のフッターエリアがクリックされたときに生成されます。 この場合、`OBJECT Get pointer` コマンドはクリックされたフッター変数へのポインターを返します。 イベントは左および右クリックどちらでも生成されます。
 
-You can test the number of clicks made by the user by means of the `Clickcount` command.
+`Clickcount` コマンドを使うことによってユーザーがおこなったクリック数をテストすることができます。

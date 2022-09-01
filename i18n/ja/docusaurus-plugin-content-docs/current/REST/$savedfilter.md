@@ -3,24 +3,24 @@ id: savedfilter
 title: '$savedfilter'
 ---
 
-Saves the filter defined by $filter when creating an entity set (*e.g.*, `$savedfilter="{filter}"`)
+エンティティセット作成時に、$filter に定義したフィルターを保存します (*例*: `$savedfilter="{filter}"`)
 
-## Description
+## 詳細
 
-When you create an entity set, you can save the filter that you used to create it as a measure of security. If the entity set that you created is removed from 4D Server's cache (due to the timeout, the server's need for space, or your removing it by calling [`$method=release`]($method.md#methodrelease)).
+エンティティセットを作成する際に使用したフィルターを念のために保存しておくことができます。 4D Server のキャッシュからエンティティセットが削除されてしまっても (たとえばタイムアウトや容量の問題、[`$method=release`]($method.md#methodrelease) 操作によって) 、同じエンティティセットを取り戻すことができます。
 
-You use `$savedfilter` to save the filter you defined when creating your entity set and then pass `$savedfilter` along with your call to retrieve the entity set each time.
+`$savedfilter` を使用してエンティティセット作成時に使ったフィルターを保存したあとは、エンティティセットを取得する度に `$savedfilter` も受け渡します。
 
-If the entity set is no longer in 4D Server's cache, it will be recreated with a new default timeout of 10 minutes. The entity set will be refreshed (certain entities might be included while others might be removed) since the last time it was created, if it no longer existed before recreating it.
+4D Server のキャッシュからエンティティセットが消えていた場合、10分のデフォルトタイムアウトで再作成されます。 エンティティセットが消えていた場合、再作成されるエンティティセットの内容は更新されたものです (新しくエンティティが追加されていたり、存在していたエンティティが削除されていたりする場合がありえます)。
 
-If you have used both `$savedfilter` and [`$savedorderby`]($savedorderby.md) in your call when creating an entity set and then you omit one of them, the new entity set, which will have the same reference number, will reflect that.
+エンティティセットの作成時に `$savedfilter` と [`$savedorderby`]($savedorderby.md) の両方を使用したにも関わらず、次の呼び出しでは片方を省略すると、返されるエンティティセットは同じ参照番号を持ちながら、この変更を反映します。
 
-## Example
+## 例題
 
-In our example, we first call ``$savedfilter` with the initial call to create an entity set as shown below:
+エンティティセットを作成する際に `$savedfilter` を使います:
 
 `GET  /rest/People/?$filter="employer.name=Apple"&$savedfilter="employer.name=Apple"&$method=entityset`
 
-Then, when you access your entity set, you write the following to ensure that the entity set is always valid:
+作成したエンティティセットにアクセスする際、そのエンティティセットが有効なのを確実にしたい場合には、次のように書きます:
 
 `GET  /rest/People/$entityset/AEA452C2668B4F6E98B6FD2A1ED4A5A8?$savedfilter="employer.name=Apple"`

@@ -28,14 +28,14 @@ For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*"
 
 **On Web Connection**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text )
 
-| Parameters | Type |    | Description                                  |
-| ---------- | ---- |:--:| -------------------------------------------- |
-| $1         | Text | <- | URL                                          |
-| $2         | Text | <- | HTTP headers + HTTP body (up to 32 kb limit) |
-| $3         | Text | <- | IP address of the web client (browser)       |
-| $4         | Text | <- | IP address of the server                     |
-| $5         | Text | <- | User name                                    |
-| $6         | Text | <- | Password                                     |
+| Parameter | Typ  |    | Beschreibung                                 |
+| --------- | ---- |:--:| -------------------------------------------- |
+| $1        | Text | <- | URL                                          |
+| $2        | Text | <- | HTTP headers + HTTP body (up to 32 kb limit) |
+| $3        | Text | <- | IP address of the web client (browser)       |
+| $4        | Text | <- | IP address of the server                     |
+| $5        | Text | <- | User name                                    |
+| $6        | Text | <- | Password                                     |
 
 
 You must declare these parameters as shown below:
@@ -76,7 +76,7 @@ Let’s use an intranet connection as an example. Suppose that the IP address of
 | http://123.4.567.89/Customers/Add    | /Customers/Add           |
 | 123.4.567.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
 
-Note that you are free to use this parameter at your convenience. 4D simply ignores the value passed beyond the host part of the URL. For example, you can establish a convention where the value "*/Customers/Add*" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
+Note that you are free to use this parameter at your convenience. 4D simply ignores the value passed beyond the host part of the URL. For example, you can establish a convention where the value "*/Customers/Add*" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
 
 
 ### $2 - Header and Body of the HTTP request
@@ -108,7 +108,7 @@ The $5 and $6 parameters receive the user name and password entered by the user 
 
 ***/4DACTION/***MethodName***<br/> **/4DACTION/******MethodName/Param*
 
-| Parameters | Type |    | Description                                  |
+| Parameter  | Typ  |    | Beschreibung                                 |
 | ---------- | ---- |:--:| -------------------------------------------- |
 | MethodName | Text | -> | Name of the 4D project method to be executed |
 | Param      | Text | -> | Text parameter to pass to the project method |
@@ -130,7 +130,7 @@ The `MyMethod` project method should generally return a "reply" (sending of an H
 
 > A method called by `/4DACTION` must not call interface elements (`DIALOG`, `ALERT`, etc.).
 
-#### Example
+#### Beispiel
 
 This example describes the association of the `/4DACTION` URL with an HTML picture object in order to dynamically display a picture in the page. You insert the following instructions in a static HTML page:
 
@@ -172,7 +172,7 @@ Example to define the action of a form:
 <FORM ACTION="/4DACTION/MethodName" METHOD=POST>
 ```
 
-#### Example
+#### Beispiel
 
 In a Web application, we would like for the browsers to be able to search among the records by using a static HTML page. This page is called “search.htm”. The application contains other static pages that allow you to, for example, display the search result (“results.htm”). The POST type has been associated to the page, as well as the `/4DACTION/SEARCH` action.
 
@@ -275,6 +275,30 @@ return false
 </form>
 </body>
 </html>
+return false
+}
+}
+//--></script>
+</head>
+<body>
+<form action="/4DACTION/WWW_STD_FORM_POST" method="post"
+ name="frmWelcome"
+ onsubmit="return GetBrowserInformation(frmWelcome)">
+  <h1>Welcome to Spiders United</h1>
+  <p><b>Please enter your name:</b>
+  <input name="vtUserName" value="" size="30" type="text"></p>
+  <p> 
+<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit"> 
+<input name="vsbRegister" value="Register" type="submit">
+<input name="vsbInformation" value="Information" type="submit"></p>
+<p> 
+<input name="vtNav_appName" value="" type="hidden"> 
+<input name="vtNav_appVersion" value="" type="hidden"> 
+<input name="vtNav_appCodeName" value="" type="hidden">
+<input name="vtNav_userAgent" value="" type="hidden"></p>
+</form>
+</body>
+</html>
 ```
 
 When 4D sends the page to a Web Browser, it looks like this:
@@ -325,9 +349,9 @@ Let’s examine the 4D method `WWW_STD_FORM_POST` that is called when the user c
 The features of this method are:
 
 - The values of the variables *vtNav_appName*, *vtNav_appVersion*, *vtNav_appCodeName*, and *vtNav_userAgent* (bound to the HTML objects having the same names) are retrieved using the `WEB GET VARIABLES` command from HTML objects created by the *GetBrowserInformation* JavaScript script.
-- Out of the *vsbLogOn*, *vsbRegister* and *vsbInformation* variables bound to the three Submit buttons, only the one corresponding to the button that was clicked will be retrieved by the `WEB GET VARIABLES` command. When the submit is performed by one of these buttons, the browser returns the value of the clicked button to 4D. This tells you which button was clicked.
+- Out of the *vsbLogOn*, *vsbRegister* and *vsbInformation* variables bound to the three Submit buttons, only the one corresponding to the button that was clicked will be retrieved by the `WEB GET VARIABLES` command. When the submit is performed by one of these buttons, the browser returns the value of the clicked button to 4D. This tells you which button was clicked. This tells you which button was clicked.
 
-Keep in main that with HTML, all objects are text objects. If you use a SELECT object, it is the value of the highlighted element in the object that is returned in the `WEB GET VARIABLES` command, and not the position of the element in the array as in 4D. `WEB GET VARIABLES` always returns values of the Text type.
+Keep in main that with HTML, all objects are text objects. If you use a SELECT object, it is the value of the highlighted element in the object that is returned in the `WEB GET VARIABLES` command, and not the position of the element in the array as in 4D. `WEB GET VARIABLES` always returns values of the Text type. `WEB GET VARIABLES` always returns values of the Text type.
 
 
 ## Other Web Server Commands

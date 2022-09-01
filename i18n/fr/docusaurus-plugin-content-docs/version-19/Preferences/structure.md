@@ -1,26 +1,26 @@
 ---
 id: structure
-title: Structure Page
+title: Page Structure
 ---
 
-## Primary key
+## Clé primaire
 
-These options in the preferences modify the default name and type of the primary key fields that are added automatically by 4D when new tables are created or by means of the [Primary key manager](https://doc.4d.com/4Dv18R6/4D/18-R6/Primary-key-manager.300-5217742.en.html)).
+Ces options des préférences permettent de modifier le nom et le type par défaut des champs clés primaires ajoutés automatiquement par 4D lors de la création de nouvelles tables ou via le [Gestionnaire de clés primaires](https://doc.4d.com/4Dv18R6/4D/18-R6/Primary-key-manager.300-5217742.en.html)).
 
-The following options are available:
+Les options suivantes sont disponibles :
 
-*   **Name** ("ID" by default): Sets the default name of primary key fields. You can use any name you want, as long as it respects the [4D naming rules](Concepts/identifiers.md#tables-and-fields).
-*   **Type** ([Longint](Concepts/dt_number.md) by default): Sets the default type of primary key fields. You can choose the UUID type. In this case, the primary key fields created by default are of the [Alpha type](Concepts/dt_string.md) and have the **UUID Format** and **Auto UUID** field properties checked.
+*   **Nom** ("ID" par défaut) : Définit le nom par défaut des champs clés primaires. Vous pouvez utiliser le nom que vous souhaitez, dans le respect des [règles de nommage des tables standard de 4D](Concepts/identifiers.md#tables-and-fields).
+*   **Type** ([Entier long](Concepts/dt_number.md) par défaut) : Définit le type des champs clés primaires par défaut. Vous pouvez choisir le type UUID. Dans ce cas, les champs clés primaires créés par défaut seront de [type Alpha](Concepts/dt_string.md) et auront les propriétés **UUID Format** et **Auto UUID** cochées.
 
-## Structure editor
+## Éditeur de structure
 
-This group of options configures the display of the 4D Structure editor.
+Ce groupe d'options permet de configurer l'affichage de l'éditeur de structure de 4D.
 
-### Graphic quality of the structure
+### Qualité graphique de la structure
 
-This option varies the level of graphic detail in the Structure editor. By default, the quality is set to **High**. You can select Standard quality in order to give priority to display speed. The effect of this setting is mainly perceptible when using the zoom function (see the "Zoom" paragraph in [Structure editor](https://doc.4d.com/4Dv18R6/4D/18-R6/Structure-editor.300-5217734.en.html)).
+Cette option permet de faire varier le niveau de détail graphique de l’éditeur de structure. Par défaut, la qualité est définie sur **Haute**. Vous pouvez sélectionner la qualité Standard afin de privilégier la rapidité d’affichage. L’effet de ce paramétrage est principalement perceptible lors de l’utilisation de la fonction de zoom (cf. paragraphe “Zoom” dans la section [Editeur de structure](https://doc.4d.com/4Dv18R6/4D/18-R6/Structure-editor.300-5217734.en.html)).
 
-### When a folder is dimmed, its contents are:
+### Quand un dossier est masqué, son contenu est :
 
-This option sets the appearance of dimmed tables in the Structure editor, when you carry out selections by folder (see [Highlight/dim tables by folder](https://doc.4d.com/4Dv18R6/4D/18-R6/Structure-editor.300-5217734.en.html#4592928)). The possible options are Dimmed (a shadow replaces the table image) and Invisible (the table disappears completely).
+Cette option permet de configurer l’apparence graphique des tables masquées dans l’éditeur de structure, lorsque vous effectuez des sélections par dossier (cf. paragraphe [Filtrage des tables par dossier](https://doc.4d.com/4Dv18R6/4D/18-R6/Structure-editor.300-5217734.en.html#4592928)). Les options possibles sont Atténué (une ombre subsiste à l’emplacement de la table) et Invisible (la table disparaît entièrement).
 

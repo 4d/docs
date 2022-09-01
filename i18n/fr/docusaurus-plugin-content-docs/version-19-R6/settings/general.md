@@ -1,31 +1,31 @@
 ---
 id: general
-title: General page
+title: Page Général
 ---
 
-The General page contains options to configure generic parameters for the 4D project.
+La page Général contient des options permettant de configurer les paramètres génériques du projet 4D.
 
-## Design
+## Développeur
 
-This area contains the **Display toolbar** option. When it is checked, the 4D toolbar is displayed in the Design environment.
+Cette zone comporte l'option **Afficher la barre d'outils**. Lorsqu'elle est cochée, la barre d'outils 4D est affichée dans l'environnement de Développement.
 
-## General
+## Général
 
-You use this area to set options concerning project startup and operation.
+Cette zone vous permet de personnaliser diverses options relatives au démarrage et au fonctionnement du projet.
 
-### Startup Environment
+### Mode de démarrage
 
-You use this menu to select the default startup mode for the database: **Design** or **Application**. Unless specified, 4D opens by default in the Design environment if a password access system is not activated.
+Ce menu permet de sélectionner le mode dans lequel vous souhaitez que la base soit ouverte par défaut : **Développement** ou **Application**. A moins que vous ne le spécifiiez, 4D s'ouvre par défaut en mode Développement s’il n’y a pas de mots de passe en contrôlant l’accès.
 
 
-## Component
+## Composant
 
 This area allows [component developers](../Extensions/develop-components.md) to configure how their component classes and functions will be exposed in the 4D Code Editor once the component is installed.
 
-### Component namespace in the class store
+### Namespace du composant dans le class store
 
-Use this area to declare a namespace for the component classes and functions in the code on host projects. See [Declaring the component namespace](../Extensions/develop-components.md#declaring-the-component-namespace).
+Utilisez cette zone pour déclarer un espace de nommage pour les classes et les fonctions du composant dans le code des projets hôtes. Voir [Déclaration du namespace du composant](../Extensions/develop-components.md#declaring-the-component-namespace).
 
-### Generate syntax file for code completion when compiled
+### Générer le fichier de syntaxe pour l'auto-complétion à la compilation
 
-When you check this option, a syntax file (JSON format) is automatically created during the compilation phase. See [Code completion for compiled components](../Extensions/develop-components.md#code-completion-for-compiled-components). 
+Lorsque vous cochez cette option, un fichier de syntaxe (format JSON) est automatiquement créé lors de la phase de compilation. Voir [Complétion de code pour les composants compilés](../Extensions/develop-components.md#code-completion-for-compiled-components). 

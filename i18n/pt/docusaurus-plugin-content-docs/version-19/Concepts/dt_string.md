@@ -15,7 +15,7 @@ A string literal is enclosed in double, straight quotation marks ("..."). Here a
 ```4d
 "Add Records"
 "No records found."
-"Invoice"
+"Fatura "
 ```
 
 An empty string is specified by two quotation marks with nothing between them ("").
@@ -36,25 +36,25 @@ The following escape sequences can be used within strings:
 
 ## String operators
 
-| Operation                | Syntax           | Returns | Expression              | Value    |
-| ------------------------ | ---------------- | ------- | ----------------------- | -------- |
-| Concatenation            | String + String  | String  | "abc" + "def"           | "abcdef" |
-| Repetition               | String * Number  | String  | "ab" * 3                | "ababab" |
-| Equality                 | String = String  | Boolean | "abc" = "abc"           | True     |
-|                          |                  |         | "abc" = "abd"           | False    |
-| Inequality               | String # String  | Boolean | "abc" # "abd"           | True     |
-|                          |                  |         | "abc" # "abc"           | False    |
-| Greater than             | String > String  | Boolean | "abd" > "abc"           | True     |
-|                          |                  |         | "abc" > "abc"           | False    |
-| Less than                | String < String  | Boolean | "abc" < "abd"           | True     |
-|                          |                  |         | "abc" < "abc"           | False    |
-| Greater than or equal to | String >= String | Boolean | "abd" >= "abc"          | True     |
-|                          |                  |         | "abc" >= "abd"          | False    |
-| Less than or equal to    | String <= String | Boolean | "abc" <= "abd"          | True     |
-|                          |                  |         | "abd" <= "abc"          | False    |
-| Contains keyword         | String % String  | Boolean | "Alpha Bravo" % "Bravo" | True     |
-|                          |                  |         | "Alpha Bravo" % "ravo"  | False    |
-|                          | Picture % String | Boolean | Picture_expr % "Mer"    | True (*) |
+| Operação             | Sintaxe          | Retorna  | Expression              | Value    |
+| -------------------- | ---------------- | -------- | ----------------------- | -------- |
+| Concatenation        | String + String  | String   | "abc" + "def"           | "abcdef" |
+| Repetição            | String * Number  | String   | "ab" * 3                | "ababab" |
+| Igual                | String = String  | Booleano | "abc" = "abc"           | True     |
+|                      |                  |          | "abc" = "abd"           | False    |
+| Desigualdade         | String # String  | Booleano | "abc" # "abd"           | True     |
+|                      |                  |          | "abc" # "abc"           | False    |
+| Maior que            | String > String  | Booleano | "abd" > "abc"           | True     |
+|                      |                  |          | "abc" > "abc"           | False    |
+| Menor que            | String < String  | Booleano | "abc" < "abd"           | True     |
+|                      |                  |          | "abc" < "abc"           | False    |
+| Maior ou igual a     | String >= String | Booleano | "abd" >= "abc"          | True     |
+|                      |                  |          | "abc" >= "abd"          | False    |
+| Menor que ou igual a | String <= String | Booleano | "abc" <= "abd"          | True     |
+|                      |                  |          | "abd" <= "abc"          | False    |
+| Contém palavra chave | String % String  | Booleano | "Alpha Bravo" % "Bravo" | True     |
+|                      |                  |          | "Alpha Bravo" % "ravo"  | False    |
+|                      | Picture % String | Booleano | Picture_expr % "Mer"    | True (*) |
 
 (*) If the keyword "Mer" is associated with the picture stored in the picture expression (field or variable).
 
@@ -140,7 +140,7 @@ Unlike other string comparisons, searching by keywords looks for "words" in "tex
      "Alpha,Bravo,Charlie"%"Alpha" // Returns True
      "Software and Computers"%"comput@" // Returns True
 ```
-> **Notes:**
+> **Notas:**
 > 
 > - 4D uses the ICU library for comparing strings (using `<>=#` operators) and detecting keywords. For more information about the rules implemented, please refer to the following address: <http://www.unicode.org/reports/tr29/#Word_Boundaries>.
 > - In the Japanese version, instead of ICU, 4D uses Mecab by default for detecting keywords.
@@ -159,7 +159,7 @@ If(vsName#"")
 End if
 ```
 
-Otherwise, if the character reference symbols appear within an expression, they return the character (to which they refer) as a 1-character string. For example:
+Otherwise, if the character reference symbols appear within an expression, they return the character (to which they refer) as a 1-character string. Por exemplo:
 
 ```4d
 //The following example tests if the last character of vtText is an At sign "@"
@@ -195,7 +195,7 @@ will trigger the Runtime Error shown here:
 
 ![alt-text](../assets/en/Concepts/Syntax_Error.en.png)
 
-### Example
+### Exemplo
 
 The following project method capitalizes the first character of each word of the text received as parameter and returns the resulting capitalized text:
 

@@ -1,6 +1,6 @@
 ---
 id: propertiesEntry
-title: Entry
+title: Entrada
 ---
 
 ## Auto Spellcheck
@@ -11,9 +11,9 @@ The Auto Spellcheck property activates the spell-check for each object. When use
 
 #### JSON Grammar
 
-| Name       | Data Type | Possible Values |
-| ---------- | --------- | --------------- |
-| spellcheck | boolean   | true, false     |
+| Nome       | Tipo de dados | Possible Values |
+| ---------- | ------------- | --------------- |
+| spellcheck | boolean       | true, false     |
 
 #### Objects Supported
 
@@ -37,9 +37,9 @@ For a [Web Area](webArea_overview.md), the contents of the menu depend of the re
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values                       |
-| ----------- | --------- | ------------------------------------- |
-| contextMenu | string    | "automatic" (used if missing), "none" |
+| Nome        | Tipo de dados | Possible Values                       |
+| ----------- | ------------- | ------------------------------------- |
+| contextMenu | string        | "automatic" (used if missing), "none" |
 
 #### Objects Supported
 
@@ -57,9 +57,9 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values |
-| --------- | --------- | --------------- |
-| enterable | boolean   | true, false     |
+| Nome      | Tipo de dados | Possible Values |
+| --------- | ------------- | --------------- |
+| enterable | boolean       | true, false     |
 
 #### Objects Supported
 
@@ -90,7 +90,7 @@ For information about creating entry filters, see [Filter and format codes](http
 
 Here is a table that explains each of the entry filter choices in the Entry Filter drop-down list:
 
-| Entry Filter                    | Description                                                                                                                                  |
+| Entry Filter                    | Descrção                                                                                                                                     |
 | ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | ~A                              | Allow any letters, but convert to uppercase.                                                                                                 |
 | &9                              | Allow only numbers.                                                                                                                          |
@@ -99,23 +99,23 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | &@                              | Allow only alphanumeric characters. No special characters.                                                                                   |
 | ~a##                            | State name abbreviation (e.g., CA). Allow any two letters, but convert to uppercase.                                                         |
 | !0&9##/##/##                    | Standard date entry format. Display zeros in entry spaces. Allow any numbers.                                                                |
-| !0&9 Day: ## Month: ## Year: ## | Custom date entry format. Display zeros in entry spaces. Allow any numbers. Two entries after each word.                                     |
+| !0&9 Day: ## Month: ## Year: ## | Time entry format. Display zeros in entry spaces. Allow any numbers. Limited to hours and minutes.                                           |
 | !0&9##:##                       | Time entry format. Limited to hours and minutes. Display zeros in entry spaces. Allow any four numbers, separated by a colon.                |
 | !0&9## Hrs ## Mins ## Secs      | Time entry format. Display zeros in entry spaces. Allow any two numbers before each word.                                                    |
 | !0&9Hrs: ## Mins: ## Secs: ##   | Time entry format. Display zeros in entry spaces. Allow any two numbers after each word.                                                     |
 | !0&9##-##-##-##                 | Local telephone number format. Display zeros in entry spaces. Allow any number. Three entries, hyphen, four entries.                         |
 | !_&9(###)!0###-####             | Long distance telephone number. Display underscores in first three entry spaces, zeros in remainder.                                         |
 | !0&9###-###-###                 | Long distance telephone number. Display zeros in entry spaces. Allow any number. Three entries, hyphen, three entries, hyphen, four entries. |
-| !0&9###-##-###                  | Social Security number. Display zeros in entry spaces. Allow any numbers.                                                                    |
+| !0&9###-##-####                 | Social Security number. Display zeros in entry spaces. Allow any numbers.                                                                    |
 | ~"A-Z;0-9; ;,;.;-"              | Uppercase letters and punctuation. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                |
 | &"a-z;0-9; ;,;.;-"              | Upper and lowercase letters and punctuation. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                         |
-| &"0-9;.;-"                      | Numbers. Allow only numbers, decimal points, and hyphens (minus sign).                                                                       |
+| &"0-9;.;-"                      | Números. Allow only numbers, decimal points, and hyphens (minus sign).                                                                       |
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values                                      |
-| ----------- | --------- | ---------------------------------------------------- |
-| entryFilter | string    | <li>Entry filter code</li> or <li>Entry filter name (filter names start with &#124; )</li> |
+| Nome        | Tipo de dados | Possible Values                                      |
+| ----------- | ------------- | ---------------------------------------------------- |
+| entryFilter | string        | <li>Entry filter code</li> or <li>Entry filter name (filter names start with &#124; )</li> |
 
 #### Objects Supported
 
@@ -123,7 +123,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 
 ---
 
-## Focusable
+## Focável
 
 When the **Focusable** property is enabled for an object, the object can have the focus (and can thus be activated by the keyboard for instance). It is outlined by a gray dotted line when it is selected — except when the [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) option has also been selected.
 
@@ -137,9 +137,9 @@ When the **Focusable** property is selected for a non-enterable object, the user
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values |
-| --------- | --------- | --------------- |
-| focusable | boolean   | true, false     |
+| Nome    | Tipo de dados | Possible Values |
+| ------- | ------------- | --------------- |
+| focável | boolean       | true, false     |
 
 #### Objects Supported
 
@@ -157,9 +157,9 @@ By default, the object uses the current keyboard layout.
 
 #### JSON Grammar
 
-| Name            | Data Type | Possible Values                                                             |
-| --------------- | --------- | --------------------------------------------------------------------------- |
-| keyboardDialect | text      | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
+| Nome            | Tipo de dados | Possible Values                                                             |
+| --------------- | ------------- | --------------------------------------------------------------------------- |
+| keyboardDialect | text          | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
 
 #### Objects Supported
 
@@ -171,7 +171,7 @@ By default, the object uses the current keyboard layout.
 
 This property is available for [inputs objects](input_overview.md) containing expressions of the Text type and fields of the Alpha and Text type. It can have three different values: Yes, No, Automatic (default).
 
-#### Automatic
+#### Automático
 
 - In single-line inputs, words located at the end of lines are truncated and there are no line returns.
 - In multiline inputs, 4D carries out automatic line returns:  
@@ -183,23 +183,23 @@ This property is available for [inputs objects](input_overview.md) containing ex
 - There are never line returns: the text is always displayed on a single row. If the Alpha or Text field or variable contains carriage returns, the text located after the first carriage return is removed as soon as the area is modified:  
   ![](../assets/en/FormObjects/multilineNo.png)
 
-#### Yes
+#### Sim
 
 When this value is selected, the property is managed by the [Wordwrap](properties_Display.md#wordwrap) option.
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values                                   |
-| --------- | --------- | ------------------------------------------------- |
-| multiline | text      | "yes", "no", "automatic" (default if not defined) |
+| Nome      | Tipo de dados | Possible Values                                   |
+| --------- | ------------- | ------------------------------------------------- |
+| multiline | text          | "yes", "no", "automatic" (default if not defined) |
 
 #### Objects Supported
 
-[Input](input_overview.md)
+[Entrada](input_overview.md)
 
 ---
 
-## Placeholder
+## Placeholder (valores provisórios)
 
 4D can display placeholder text in the fields of your forms.
 
@@ -223,17 +223,17 @@ You only pass the reference in the "Placeholder" field; it is not possible to co
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values                                                              |
-| ----------- | --------- | ---------------------------------------------------------------------------- |
-| placeholder | string    | Text to be displayed (grayed out) when the object does not contain any value |
+| Nome        | Tipo de dados | Possible Values                                                              |
+| ----------- | ------------- | ---------------------------------------------------------------------------- |
+| placeholder | string        | Text to be displayed (grayed out) when the object does not contain any value |
 
 #### Objects Supported
 
 [Combo Box](comboBox_overview.md) - [Input](input_overview.md)
 
-#### See also
+#### Veja também
 
-[Help tip](properties_Help.md)
+[Dica de ajuda](properties_Help.md)
 
 ---
 
@@ -243,9 +243,9 @@ This property keeps the selection visible within the object after it has lost th
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values |
-| ------------- | --------- | --------------- |
-| showSelection | boolean   | true, false     |
+| Nome          | Tipo de dados | Possible Values |
+| ------------- | ------------- | --------------- |
+| showSelection | boolean       | true, false     |
 
 #### Objects Supported
 
@@ -253,7 +253,7 @@ This property keeps the selection visible within the object after it has lost th
 
 ---
 
-## Shortcut
+## Atalho
 
 This property allows setting special meaning keys (keyboard shortcuts) for [buttons](button_overview.md), [radio buttons](radio_overview.md), and [checkboxes](checkbox_overview.md). They allow the user to use the control using the keyboard instead of having to use the mouse.
 
@@ -266,15 +266,15 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 #### JSON Grammar
 
-| Name            | Data Type | Possible Values                                    |
-| --------------- | --------- | -------------------------------------------------- |
-| shortcutAccel   | boolean   | true, false (Ctrl Windows/Command macOS)           |
-| shortcutAlt     | boolean   | true, false                                        |
-| shortcutCommand | boolean   | true, false                                        |
-| shortcutControl | boolean   | true, false (macOS Control)                        |
-| shortcutShift   | boolean   | true, false                                        |
-|                 |           |                                                    |
-| shortcutKey     | string    | <li>any character key: "a", "b"...</li><li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
+| Nome            | Tipo de dados | Possible Values                                    |
+| --------------- | ------------- | -------------------------------------------------- |
+| shortcutAccel   | boolean       | true, false (Ctrl Windows/Command macOS)           |
+| shortcutAlt     | boolean       | true, false                                        |
+| shortcutCommand | boolean       | true, false                                        |
+| shortcutControl | boolean       | true, false (macOS Control)                        |
+| shortcutShift   | boolean       | true, false                                        |
+|                 |               |                                                    |
+| shortcutKey     | string        | <li>any character key: "a", "b"...</li><li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li> |
 
 #### Objects Supported
 
@@ -282,7 +282,7 @@ To view a list of all the shortcuts used in the 4D Design environment, see the [
 
 ---
 
-## Single-Click Edit
+## Editar com um clique
 
 Enables direct passage to edit mode in list boxes.
 
@@ -292,9 +292,9 @@ When this option is not enabled, users must first select the cell row and then c
 
 #### JSON Grammar
 
-| Name            | Data Type | Possible Values |
-| --------------- | --------- | --------------- |
-| singleClickEdit | boolean   | true, false     |
+| Nome            | Tipo de dados | Possible Values |
+| --------------- | ------------- | --------------- |
+| singleClickEdit | boolean       | true, false     |
 
 #### Objects Supported
 

@@ -1,33 +1,33 @@
 ---
 id: overview
-title: Overview
+title: 概要
 ---
 
-A 4D project contains all of the source code of a 4D application, whatever its deployement type (web, mobile, or desktop), from the database structure to the user interface, including code, forms, menus, user settings, or any required resources. A 4D project is primarily made of text-based files.
+Web やモバイル、デスクトップの運用形態に関わらず、データベースストラクチャーからユーザーインターフェースまで (コード、フォーム、メニュー、ユーザー設定、その他必要なリソース含む) 、4D アプリケーションのすべてのソースコードが 4D プロジェクトには格納されています。 4D プロジェクトは主にテキストファイルによって構成されています。
 
 
-## Project files
+## プロジェクトファイル
 
-4D project files are open and edited using regular 4D platform applications (4D or 4D Server). With 4D, full-featured editors are available to manage files, including a structure editor, a method editor, a form editor, a menu editor...
+4D プロジェクトファイルは 4D または 4D Server で開いて編集します。 4D では、ストラクチャーエディター、メソッドエディター、フォームエディター、メニューエディターなど、機能の充実したエディターを使ってファイルを扱うことができます。
 
-Since projects are in human-readable, plain text files (JSON, XML, etc.), they can be read or edited manually by developers, using any code editor.
+また、人間にも解読可能なテキストファイル (JSON、XML等) 形式で提供されているため、プロジェクトの読み書きは任意のコードエディターでおこなうことも可能です。
 
-In addition, 4D project files make it easier to program generically, create application templates, and share code. Project are organized internally in [folders and files](Project/architecture.md).
-
-
-## Development
-
-4D projects are developed using the **4D** application. It provides an Integrated Development Environment (IDE) for 4D projects as well as a web server, a mobile project generator, and an application runtime, allowing to develop, test, and debug any kind of project.
-
-Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications.
+4D プロジェクトファイルによって、汎用的なコーディング、アプリケーションテンプレートの作成や、コードシェアリングが容易になります。 プロジェクトは内部的に [フォルダーとファイル](Project/architecture.md) で構成されています。
 
 
-## Final application
+## 開発
 
-Project files can be [compiled](compiler.md) and easily deployed. 4D allows you to create three types of applications from your projects:
+4D プロジェクトは **4D** アプリケーションを使って作成します。 4D は 4D プロジェクト用の統合開発環境 (IDE) を提供するだけでなく、Webサーバー、モバイルプロジェクトジェネレーター、およびアプリケーションランタイムも提供し、プロジェクトの開発・テスト・デバッグに使います。
 
-- [web](WebServer/webServer.md) applications,
-- [mobile](https://developer.4d.com/4d-for-ios/) applications,
-- [desktop](Desktop/building.md) applications (client/server or single-user).
+マルチユーザー開発は標準的な **ソース管理** リポジトリツール (Perforce, Git, SVN 等) を使っておこないます。これによって、異なるブランチで開発し、比較してマージまたは変更を戻すといった処理が可能になります。
 
-Back end applications can be deployed using 4D Server, 4D, or merged with 4D Volume license.
+
+## アプリケーションの仕上げ
+
+プロジェクトファイルは [コンパイル](compiler.md) し、簡単に運用することができます。 プロジェクトをもとに、次の 3種のアプリケーションを作成することができます:
+
+- [Web](WebServer/webServer.md) アプリケーション
+- [モバイル](https://developer.4d.com/4d-for-ios/) アプリケーション
+- [デスクトップ](Desktop/building.md) アプリケーション (クライアント/サーバーまたはシングルユーザー)
+
+バックエンドアプリケーションは、4D Server または 4D で運用するほか、4D Volume ライセンスと統合することも可能です。

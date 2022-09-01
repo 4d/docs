@@ -3,13 +3,13 @@ id: onMenuSelected
 title: On Menu Selected
 ---
 
-| Code | Can be called by | Definition                                             |
-| ---- | ---------------- | ------------------------------------------------------ |
-| 18   | Form             | A menu item has been chosen in the associated menu bar |
+| Code | Puede ser llamado por | Definición                                                      |
+| ---- | --------------------- | --------------------------------------------------------------- |
+| 18   | Formulario            | Se ha elegido un elemento de menú en la barra de menús asociada |
 
 
-## Description
+## Descripción
 
-The `On Menu Selected` event is sent to the form method when a command of a menu bar associated to the form is selected. You can then call the `Menu selected` language command to test the selected menu.
+El evento `On Menu Selected` se envía al método del formulario cuando se selecciona un comando de una barra de menú asociada al formulario. A continuación, puede llamar al comando `Menú seleccionado` para probar el menú seleccionado.
 
-> You can associate a menu bar with a form in the Form properties. The menus on a form menu bar are appended to the current menu bar when the form is displayed as an output form in the Application environment.
+> Puede asociar una barra de menú a un formulario en las propiedades del mismo. Los menús de una barra de menús de un formulario se añaden a la barra de menús actual cuando el formulario se muestra como un formulario de salida en el entorno Aplicación.

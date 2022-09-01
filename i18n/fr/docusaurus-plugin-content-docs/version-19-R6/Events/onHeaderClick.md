@@ -1,40 +1,40 @@
 ---
 id: onHeaderClick
-title: On Header Click
+title: Sur clic entête
 ---
 
-| Code | Can be called by                                                                                                                                                            | Definition                        |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
-| 42   | [4D View Pro Area](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A click occurs in a column header |
+| Code | Peut être appelé par                                                                                                                                                            | Définition                                    |
+| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------- |
+| 42   | [Zone 4D View Pro](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Colonne de List Box](FormObjects/listbox_overview.md#list-box-columns) | Un clic se produit dans un en-tête de colonne |
 
 
 ## Description
 
 ### List Box
 
-This event is generated when a click occurs on the header of a column in the list box. In this case, the `Self` command lets you find out the header of the column that was clicked.
+Cet événement est généré lorsqu'un clic se produit sur l'en-tête d'une colonne de list box. Dans ce cas, la commande `Self` vous permet d'identifier l'en-tête de la colonne sur laquelle vous avez cliqué.
 
-If the [Sortable](FormObjects/properties_Action.md#sortable) property was selected for the list box, you can decide whether or not to authorize a standard sort of the column by passing the value 0 or -1 in the `$0` variable:
+Si la propriété [Sortable](FormObjects/properties_Action.md#sortable) a été sélectionnée pour la list box, vous pouvez décider d'autoriser ou non un tri standard de la colonne en passant la valeur 0 ou -1 dans la variable `$0` :
 
-- If `$0` equals 0, a standard sort is performed.
-- If `$0` equals -1, a standard sort is not performed and the header does not display the sort arrow. The developer can still generate a column sort based on customized sort criteria using the 4D language.
+- Si `$0` est égal à 0, un tri standard est effectué.
+- Si `$0` est égal à -1, un tri standard n'est pas effectué et l'en-tête n'affiche pas la flèche de tri. Le développeur peut toujours générer un tri de colonne basé sur des critères de tri personnalisés à l'aide du langage 4D.
 
-If the [Sortable](FormObjects/properties_Action.md#sortable) property is not selected for the list box, the `$0` variable is not used.
+Si la propriété [Sortable](FormObjects/properties_Action.md#sortable) n'est pas sélectionnée pour la list box, la variable `$0` n'est pas utilisée.
 
 ### 4D View Pro
 
-This event is generated when the user clicks on a column or row header in a 4D View Pro document. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
+Cet événement est généré lorsque l'utilisateur clique sur un en-tête de colonne ou de ligne dans un document 4D View Pro. Dans ce contexte, l'[objet événement](overview.md#event-object) retourné par la commande `FORM Event` contient :
 
-| Property    | Type    | Description                                                                                                                          |
-| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| code        | longint | 42                                                                                                                                   |
-| description | text    | "On Header Click"                                                                                                                    |
-| objectName  | text    | 4D View Pro area name                                                                                                                |
-| sheetName   | text    | Name of the sheet of the event                                                                                                       |
-| range       | object  | Cell range                                                                                                                           |
-| sheetArea   | longint | The sheet location where the event took place:<br/><li>0: The crossing area between column number/letter headers (top left of the sheet)</li><li>1: The column headers (area indicating the column numbers/letters)</li><li>2: The row headers (area indicating the row numbers)</li> |
+| Propriété   | Type        | Description                                                                                                                                  |
+| ----------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| code        | entier long | 42                                                                                                                                           |
+| Description | text        | "On Header Click"                                                                                                                            |
+| objectName  | text        | Nom de la zone 4D View Pro                                                                                                                   |
+| sheetName   | text        | Nom de la feuille de l'événement                                                                                                             |
+| range       | object      | Plage de cellule                                                                                                                             |
+| sheetArea   | entier long | L'emplacement de la feuille où l'événement a eu lieu :<br/><li>0 : la zone de croisement entre le numéro de colonne/les en-têtes de lettre (en haut à gauche de la feuille)</li><li>1 : les en-têtes de colonne (zone indiquant les numéros/lettres de colonnes)</li><li>2 : les en-têtes de ligne (zone indiquant les numéros de ligne)</li> |
 
-#### Example
+#### Exemple
 
 ```4d
  If(FORM Event.code=On Header Click)

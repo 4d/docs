@@ -1,32 +1,32 @@
 ---
 id: developing
-title: Developing a project
+title: Desarrollar un proyecto
 ---
 
-## Development tools
+## Herramientas de desarrollo
 
-4D database projects are created locally, using the **4D Developer** application. To open a project from 4D Developer, select the project's main file, named *databaseName.4DProject* (see [Architecture of a 4D project](architecture.md)). Note that you can also work with any text editor since most of the 4D project files are text files. Concurrent file access is handled via a file access manager (see below).
+Las bases proyectos 4D se crean localmente, utilizando la aplicación **4D Developer**. Para abrir un proyecto desde 4D Developer, seleccione el archivo principal del proyecto, llamado *databaseName.4DProject* (ver [Arquitectura de un proyecto 4D](architecture.md)). Tenga en cuenta que también puede trabajar con cualquier editor de texto, ya que la mayoría de los archivos del proyecto 4D son archivos texto. El acceso simultáneo a los archivos se gestiona a través de un gestor de acceso a archivos (ver más adelante).
 
-4D Server can open *databaseName.4DProject* files for testing purposes: remote 4D machines can connect and use the database, but all database structure files are read-only.
+4D Server puede abrir los archivos *nombre de la base de datos.4DProject* para realizar pruebas: las máquinas 4D remotas pueden conectarse y utilizar la base de datos, pero todos los archivos de la estructura de la base de datos son de sólo lectura.
 
-Multi-user development is managed through standard source control tools, which allow developers to work on different branches, and compare, merge, or revert modifications.
+El desarrollo multiusuario se gestiona a través de herramientas estándar de control de versión estándar, que permiten a los desarrolladores trabajar en diferentes ramas y comparar, fusionar o revertir las modificaciones.
 
-## Project file access
+## Acceso al archivo de proyecto
 
-When working on a project in 4D Developer, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. For example, if the same method is edited in a method editor window *and* in a text editor, saving both modifications will result in a conflict.
+Cuando trabaja en un proyecto en 4D Developer, puede utilizar los editores integrados de 4D para crear, modificar o guardar elementos de la estructura, los métodos, los formularios, etc. Dado que los editores utilizan archivos en el disco, podrían producirse conflictos si se modifica el mismo archivo o incluso se borra desde diferentes ubicaciones. Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations.
 
-The 4D Developer framework includes a file access manager to control concurrent access:
+4D Developer incluye un gestor de acceso a los archivos para controlar los accesos simultáneos:
 
 - if an open file which is read-only at the OS level, a locked icon is displayed in the editor: ![](../assets/en/Project/lockicon.png)
-- if an open file is edited concurrently from different locations, 4D displays an alert dialog box when trying to save the changes: ![](../assets/en/Project/projectReload.png)
-  - **Yes**: discard editor changes and reload
-  - **No**: save changes and overwrite the other version
-  - **Cancel**: do not save
+- if an open file is edited concurrently from different locations, 4D displays an alert dialog box when trying to save the changes:![](../assets/en/Project/projectReload.png)
+  - **Sí**: ignorar los cambios del editor y volver a cargar
+  - **No**: guardar los cambios y sobrescribir la otra versión
+  - **Cancelar**: no guardar
 
-This feature is enabled for all built-in editors:
+Esta funcionalidad está habilitada para todos los editores integrados:
 
-- Structure editor
-- Form editor
-- Method editor
-- Settings editor
-- Toolbox editor
+- Editor de estructura
+- Editor de formularios
+- Editor de método
+- Editor de parámetros
+- Editor de la caja de herramientas

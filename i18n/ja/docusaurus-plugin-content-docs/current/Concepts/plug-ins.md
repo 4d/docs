@@ -1,28 +1,28 @@
 ---
 id: plug-ins
-title: Plug-ins
+title: プラグイン
 ---
 
-As you develop a 4D application, you will discover many capabilities that you did not notice when you started. You can even augment the standard version of 4D by adding **plug-ins** to your 4D development environment.
+4Dアプリケーションの開発を進めていくと、最初は気付かなかった数多くの機能を発見することでしょう。 それだけでなく、**プラグイン** を4D開発環境に追加することで、標準の4Dの機能を高めることもできます。
 
-## What is a plug-in and what can it do?
+## プラグインとは何か
 
-A plug-in is a piece of code, written in any language such as C or C++, that 4D launches at start up. It adds functionality to 4D and thus increases its capacity. A plug-in usually contains a set of routines given to the 4D developer. It can handle external areas and run external processes.
+プラグインとは、C や C++ などの言語で書かれた、4D 起動時にロードされるコードのことです。 プラグインは、4D に機能を追加します。 プラグインは、4D に機能を追加します。 プラグインには通常複数のルーチンが含まれています。 プラグインは外部エリアを操作でき、外部プロセスを実行できます。
 
-## Where to find plug-ins?
+## プラグインの見つけ方
 
-Multiple plug-ins have already been written by the 4D community. Published plug-ins [can be found on GitHub](https://github.com/search?q=4d-plugin&type=Repositories). Additionnally, you can [develop your own plug-ins](Extensions/develop-plug-ins.md).
-
-
-## Installing plug-ins
-
-You install plug-ins in the 4D environment by copying their files into the **Plugins** folder, at the [same level as the Project folder](../Project/architecture.md#plugins).
-
-Plug-ins are loaded by 4D when the application is launched so you will need to quit your 4D application before installing them. If a plug-in requires a specific license for use, it will be loaded but not available for use.
+4Dコミュニティによって多数のプラグインが作成されています。 公開されたプラグインは [GitHub](https://github.com/search?q=4d-plugin&type=Repositories) で確認できます。 また、[独自のプラグインを開発](Extensions/develop-plug-ins.md) することもできます。
 
 
-## Using plug-ins
+## プラグインのインストール
 
-Plug-ins commands can be used as regular 4D commands in your 4D development. Plug-in commands appear in the **Plug-ins** page of the Explorer. 
+4D環境にプラグインをインストールするには、プラグインファイルを [Projectフォルダーと同じ階層](../Project/architecture.md#plugins) の **Plugins** フォルダーにコピーします。
+
+プラグインは 4D 起動時にロードされるので、これらをインストールする際には 4Dアプリケーションを終了する必要があります。 プラグインの利用に特別なライセンスが必要な場合、プラグインはロードされますが、ライセンスをインストールするまで使用することはできません。
+
+
+## プラグインの使い方
+
+プラグインコマンドは、4D開発において通常の4Dコマンドと同様に使用できます。 プラグインコマンドは、エクスプローラーの **プラグイン** ページに表示されます。 
 
 

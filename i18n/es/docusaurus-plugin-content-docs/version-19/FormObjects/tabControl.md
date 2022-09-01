@@ -1,31 +1,31 @@
 ---
 id: tabControl
-title: Tab Controls
+title: Pestañas
 ---
 
-A tab control creates an object that lets the user choose among a set of virtual screens that are enclosed by the tab control object. Each screen is accessed by clicking its tab.
+Un control de pestañas crea un objeto que permite al usuario elegir entre un conjunto de pantallas virtuales que están encerradas por el objeto de control de pestañas. Se accede a cada pantalla haciendo clic en su pestaña.
 
-The following multi-page form uses a tab control object:
+El siguiente formulario multipágina utiliza un objeto de control de pestañas:
 
 ![](../assets/en/FormObjects/tabControl1.png)
 
-To navigate from screen to screen, the user simply clicks the desired tab.
+Para navegar de una pantalla a otra, el usuario sólo tiene que hacer clic en la pestaña deseada.
 
-The screens can represent pages in a multi-page form or an object that changes when the user clicks a tab. If the tab control is used as a page navigation tool, then the [`FORM GOTO` PAGE](https://doc.4d.com/4dv19/help/command/en/page247.html) command or the `gotoPage` standard action would be used when a user clicks a tab.
+Las pantallas pueden representar páginas en un formulario de varias páginas o un objeto que cambia cuando el usuario hace clic en una pestaña. If the tab control is used as a page navigation tool, then the [`FORM GOTO` PAGE](https://doc.4d.com/4dv19/help/command/en/page247.html) command or the `gotoPage` standard action would be used when a user clicks a tab.
 
-Another use of the tab control is to control the data that is displayed in a subform. For example, a Rolodex could be implemented using a tab control. The tabs would display the letters of the alphabet and the tab control’s action would be to load the data corresponding to the letter that the user clicked.
+Otro uso del control de pestañas es para controlar los datos que se muestran en un subformulario. Por ejemplo, se podría implementar un Rolodex utilizando un control de pestañas. Las pestañas mostrarían las letras del alfabeto y la acción del control de pestañas sería cargar los datos correspondientes a la letra que el usuario pulsara.
 
-Each tab can display labels or labels and a small icon. If you include icons, they appear to the left of each label. Here is an example of a tab control that uses icons:
+Cada pestaña puede mostrar etiquetas o rótulos y un pequeño icono. Si incluye iconos, éstos aparecen a la izquierda de cada etiqueta. Este es un ejemplo de un control de pestañas que utiliza iconos:
 
 ![](../assets/en/FormObjects/tabControl2.png)
 
-When you create a tab control, 4D manages the spacing and placement of the tabs. You only need to supply the labels in the form of an array, or the icons and labels in the form of a hierarchical list.
+Cuando se crea un control de pestañas, 4D gestiona el espaciado y la colocación de las mismas. Sólo tiene que suministrar las etiquetas en forma de array, o los iconos y etiquetas en forma de lista jerárquica.
 
-If the tab control is wide enough to display all the tabs with both the labels and icons, it displays both. If the tab control is not wide enough to display both the labels and icons, 4D displays the icons only. If it can’t fit all the icons, it places scroll arrows to the right of the last visible tab. The scroll arrows allow the user to scroll the icons to the left or right.
+Si el control de pestañas es lo suficientemente amplio como para mostrar todas las pestañas con las etiquetas y los iconos, muestra ambos. Si el control de pestañas no es lo suficientemente ancho para mostrar tanto las etiquetas como los iconos, 4D muestra sólo los iconos. Si no caben todos los iconos, coloca flechas de desplazamiento a la derecha de la última pestaña visible. Las flechas de desplazamiento permiten al usuario desplazar los iconos hacia la izquierda o la derecha.
 
-Under macOS, in addition to the standard position (top), the tab controls can also be aligned to the bottom.
+En macOS, además de la posición estándar (arriba), los controles de las pestañas también pueden alinearse en la parte inferior.
 
-### JSON Example
+### Ejemplo JSON
 
 ```4d
  "myTab": {
@@ -38,23 +38,23 @@ Under macOS, in addition to the standard position (top), the tab controls can al
  }
 ```
 
-## Adding labels to a tab control
+## Añadir etiquetas a un control de pestañas
 
-To supply the labels for a tab control, you can use:
+Para suministrar las etiquetas de un control de pestañas, puede utilizar:
 
-- an object
-- a choice list
-- an array
+- un objeto
+- una lista de selección
+- un array
 
-### Using an object
+### Utilizar un objeto
 
-You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. The object must contain the following properties:
+You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. El objeto debe contener las siguientes propiedades:
 
-| Property       | Type       | Description                                                                                                                           |
-| -------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `values`       | Collection | Mandatory - Collection of scalar values. Only string values are supported. If invalid, empty or not defined, the tab control is empty |
-| `index`        | number     | Index of the currently tab control page (value between 0 and `collection.length-1`)                                                   |
-| `currentValue` | Text       | Currently selected value                                                                                                              |
+| Propiedad      | Type       | Descripción                                                                                                                                                  |
+| -------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `values`       | Collection | Obligatorio - Colección de valores escalares. Sólo se admiten valores de tipo cadena. Si es inválido, vacío o no definido, el control de pestañas está vacío |
+| `index`        | number     | Index of the currently tab control page (value between 0 and `collection.length-1`)                                                                          |
+| `currentValue` | Text       | Valor actual seleccionado                                                                                                                                    |
 
 The initialization code must be executed before the form is presented to the user.
 
@@ -66,13 +66,13 @@ Form.tabControl.values:=New collection("Page 1"; "Page 2"; "Page 3")
 Form.tabControl.index:=2 //start on page 3
 ```
 
-### Using a choice list
+### Utilizar una lista de selección
 
 You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer to a json list ("$ref"). Icons associated with list items in the Lists editor will be displayed in the tab control.
 
-### Using a Text array
+### Utilizar un array Text
 
-You can create a Text array that contains the names of each page of the form. This code must be executed before the form is presented to the user. For example, you could place the code in the object method of the tab control and execute it when the `On Load` event occurs.
+Puede crear un array Texto que contenga los nombres de cada página del formulario. Este código debe ejecutarse antes de que el formulario se presente al usuario. Por ejemplo, podrías colocar el código en el método del objeto del control de la pestaña y ejecutarlo cuando se produzca el evento `On Load`.
 
 ```4d
  ARRAY TEXT(arrPages;3)
@@ -82,9 +82,9 @@ You can create a Text array that contains the names of each page of the form. Th
 ```
 > You can also store the names of the pages in a hierarchical list and use the [LIST TO ARRAY](https://doc.4d.com/4dv19/help/command/en/page288.html) command to load the values into the array.
 
-## Goto page features
+## Funcionalidades de Goto page
 
-### FORM GOTO PAGE command
+### Comando FORM GOTO PAGE
 
 You can use the [`FORM GOTO PAGE`](https://doc.4d.com/4dv19/help/command/en/page247.html) command in the tab control’s method:
 
@@ -94,7 +94,7 @@ FORM GOTO PAGE(arrPages)
 
 The command is executed when the [`On Clicked`](Events/onClicked.md) event occurs. You should then clear the array when the [`On Unload`](Events/onUnload.md) event occurs.
 
-Here is an example object method:
+He aquí un ejemplo de método objeto:
 
 ```4d
  Case of
@@ -107,12 +107,12 @@ Here is an example object method:
  End case
 ```
 
-### Goto Page action
+### Acción Goto Page
 
-When you assign the `gotoPage` [standard action](properties_Action.md#standard-action) to a tab control, 4D will automatically display the page of the form that corresponds to the number of the tab that is selected.
+Cuando se asigna la acción [acción estándar](properties_Action.md#standard-action) `gotoPage` a un control de pestañas, 4D mostrará automáticamente la página del formulario que corresponde al número de la pestaña que está seleccionada.
 
-For example, if the user selects the 3rd tab, 4D will display the third page of the current form (if it exists).
+Por ejemplo, si el usuario selecciona la tercera pestaña, 4D mostrará la página 3 del formulario actual (si existe).
 
-## Supported Properties
+## Propiedades soportadas
 
 [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Choice List](properties_DataSource.md#choice-list-static-list) - [Class](properties_Object.md#css-class) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Save value](properties_Object.md#save-value) - [Standard action](properties_Action.md#standard-action) - [Tab Control Direction](properties_Appearance.md#tab-control-direction) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)

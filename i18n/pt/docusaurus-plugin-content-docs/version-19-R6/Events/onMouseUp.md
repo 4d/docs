@@ -3,12 +3,12 @@ id: onMouseUp
 title: On Mouse Up
 ---
 
-| Code | Can be called by                                                                                      | Definition                                                           |
+| Code | Can be called by                                                                                      | Definição                                                            |
 | ---- | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
 | 2    | [Input](FormObjects/input_overview.md) of the `picture` [Type](FormObjects/properties_Object.md#type) | The user has just released the left mouse button in a Picture object |
 
 
-## Description
+## Descrção
 
 The `On Mouse Up` event is generated when the user has just released the left mouse button while dragging in a picture input. This event is useful, for example, when you want the user to be able to move, resize or draw objects in a SVG area.
 

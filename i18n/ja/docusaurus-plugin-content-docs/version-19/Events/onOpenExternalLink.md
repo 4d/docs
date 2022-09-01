@@ -3,17 +3,17 @@ id: onOpenExternalLink
 title: On Open External Link
 ---
 
-| Code | Can be called by                            | Definition                                     |
-| ---- | ------------------------------------------- | ---------------------------------------------- |
-| 52   | [Web Area](FormObjects/webArea_overview.md) | An external URL has been opened in the browser |
+| コード | 呼び出し元                                     | 定義                |
+| --- | ----------------------------------------- | ----------------- |
+| 52  | [Webエリア](FormObjects/webArea_overview.md) | 外部URL がブラウザーで開かれた |
 
 
-## Description
+## 詳細
 
-This event is generated when the loading of a URL was blocked by the Web area and the URL was opened with the current system browser, because of a filter set up via the `WA SET EXTERNAL LINKS FILTERS` command.
+このイベントは、`WA SET EXTERNAL LINKS FILTERS` コマンドで設定されたフィルターにより、URL のロードが Webエリアによってブロックされ、URL がカレントのシステムブラウザーで開かれると生成されます。
 
-You can find out the blocked URL using the `WA Get last filtered URL` command.
+`WA Get last filtered URL` コマンドコマンドを使用してブロックされた URL を知ることができます。
 
 
-### See also
+### 参照
 [`On URL Filtering`](onUrlFiltering.md)

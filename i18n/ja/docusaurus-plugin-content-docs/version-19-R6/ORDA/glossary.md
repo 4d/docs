@@ -1,136 +1,136 @@
 ---
 id: glossary
-title: Glossary
+title: 用語集
 ---
 
-## Main concepts at a glance
+## 主なコンセプトの概要
 
 ![](../assets/en/ORDA/mainConcepts.png)
 
 
 
-## Attribute
+## 属性
 
-An attribute is the smallest storage cell in a relational database (see also [Relation attribute](#relation-attribute)). Do not confuse dataclass attributes and entity attributes:
+属性とは、リレーショナルデータベース内における最小の保存セルです ([リレーション属性](#リレーション属性) も参照してください)。 データクラス属性とエンティティ属性を混同しないようにしてください:
 
-*   In a dataclass object, each property is a dataclass attribute that maps to a corresponding field in the corresponding table (same name and type).
-*   In an entity object, entity attributes are properties that contain values for the corresponding datastore attributes.
-> *Attributes* and *properties* are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.
+*   データクラスオブジェクトにおける各プロパティは、対応するテーブルの対応するフィールドへとマップするデータクラス属性です (同じ名前と型)。
+*   エンティティオブジェクトにおけるエンティティ属性は、対応するデータストア属性の値を格納するプロパティです。
+> Attributes and properties are similar concepts. "属性" はデータを保存するデータクラスプロパティを指定するのに使われるのに対し、"プロパティ"はより一般的な概念でオブジェクト内で保存されるデータを定義します。
 
-## AttributePath
+## 属性パス
 
-An attributePath is the path of an attribute inside a given dataclass or entity. See also [PropertyPath](#propertyPath).
-
-
-## Class code
-
-Code for the user class function(s).
+属性パスとは、あるデータクラスあるいはエンティティ内の属性へのパスです。 [プロパティパス](#プロパティパス) も参照してください。
 
 
-## Computed attribute
+## クラスコード
 
-A computed attribute doesn't actually store information. Instead, it determines its value based on other values from the same entity or from other entities, attributes or functions. When a computed attribute is referenced, the underlying "computation" is evaluated to determine the value. Computed attributes may even be assigned values where user-defined code determines what to do during the assignment.
-
-## Data model class
-
-Extended class available for a data model object.
-
-## Data model object
-
-Database objects available through the ORDA concept, i.e. datastore, dataclasses, entities and entity selections.
-
-## Data model function
-
-Function of an ORDA data model class.
-
-## Dataclass
-
-A dataclass is an object model that describes the data. Tables in the database provided by the datastore are handled through dataclasses. Each table in the database provided by the datastore has a corresponding dataclass with the same name. Each field of the table is an attribute of the dataclass.
-
-A dataclass is related to a single datastore.
+ユーザークラス関数のコード。
 
 
-## DataClass class
+## 計算属性
 
-Class for specific dataclass objects, in which you can add custom functions.
+計算属性は、実際には情報を保存しません。 代わりに、同じエンティティや他のエンティティ、属性、関数などから得られる値に基づいて、その属性値を決定します。 計算属性が参照されると、それを定義する "計算" が評価され、値が決定されます。 計算属性の値を算出するにあたっては、ユーザー定義のコードによって、その評価中に評価の仕方を決定することも可能です。
 
-## Datastore
+## データモデルクラス
 
-A datastore is the interface object provided by ORDA to reference a structure and access its data. The main database, returned by the `ds` command, is available as a datastore (the main datastore).
+データモデルオブジェクトに関連して提供される拡張クラス。
 
-A datastore provides:
+## データモデルオブジェクト
 
-*   a connection to the 4D database
-*   a set of dataclasses to work with the database
+ORDA を通して提供されているデータベースオブジェクト (データストア、データクラス、エンティティ、エンティティセレクション)。
 
-The database can be a 4D local database (the Main datastore), or a 4D Server database exposed as REST resource (a Remote datastore).
+## データモデル関数
 
-A datastore references only a single database. It is, however, possible to open several datastores to access several databases.
+ORDA データモデルクラスの関数。
 
-## DataStore class
+## DataClass
 
-Class for datastore objects, in which you can add custom functions.
+データクラスとは、データを記述するオブジェクトモデルです。 データストアによって提供されるデータベースのテーブルは、データクラスを通して管理されます。 データストアから提供されたデータベースの各テーブルは、対応する同名のデータクラスを持ちます。 テーブルの各フィールドは、データクラスの属性です。
+
+データクラスは単一のデータストアにリレートされています。
+
+
+## DataClass クラス
+
+カスタム関数を追加することのできる、特定のデータクラスオブジェクト用のクラス。
+
+## データストア
+
+データストアとは、ORDA によって提供されるインターフェースオブジェクトです。データストアはストラクチャーを参照し、データへのアクセスを提供します。 `ds` コマンドによって返されるメインデータベースは、データストア (メインデータストア) として利用可能です。
+
+データストアは以下のものを提供します:
+
+*   4Dデータベースへの接続
+*   データベースを扱うためのデータクラスのセット
+
+利用できるデータベースは、スタンダロンまたはクライアント/サーバーで開いているメインの 4D データベース (メインデータストア)、および REST リソースとして公開された 4D Server データベースです (リモートデータストア)。
+
+データストアは単一のデータベースのみを参照しますが、 複数のデータベースをアクセスするために複数のデータストアを開くことも可能です。
+
+## DataStore クラス
+
+カスタム関数を追加することのできる、データストアオブジェクト用のクラス。
 
 
 ## DataStoreImplementation
 
-Internal name of the generic DataStore class in the `4D` class store.
+`4D` クラスストア内の DataStore クラスの内部的な名称。
 
-## Deep copy
+## ディープコピー
 
-A deep copy duplicates an object and all the references it contains. After a deep copy, a copied collection contains duplicated elements and thus, new references, of all of the orginal elements. See also Shallow copy.
+ディープコピーは、あるオブジェクトとそこに格納されているすべての参照を複製します。 ディープコピーのあと、コピーされたコレクションには、すべてのオリジナル要素の複製 (つまり新規参照) が格納されています。 [シャロウコピー](#シャロウコピー) も合わせて参照してください。
 
 ## ds
 
-`ds` is the 4D language command that returns a [datastore](dsMapping.md#datastore) object reference. It matches the datastore available upon the 4D main database.
+`ds` は、[データストア](dsMapping.md#データストア) のオブジェクト参照を返す 4Dランゲージコマンドです。 この参照は 4D のメインデータベースが提供するデータストアに合致します。
 
 ## Entity
 
-An entity is an object that corresponds to a dataclass model. An entity contains the same attributes as the dataclass.
+エンティティとは、データクラスモデルに対応するオブジェクトです。 エンンティティには、データクラスと同じ属性が格納されます。
 
-An entity can be seen as an instance of the dataclass, like a record of the table matching the dataclass in its associated datastore. However, an entity also contains related data. The purpose of the entity is to manage data (create, update, delete).
+エンティティは、データクラスのインスタンスとも解釈可能なオブジェクトです。 しかしながら、エンティティはリレートされたデータも格納しています。 エンティティの目的はデータの管理 (作成、更新、削除) です。
 
-For more information, see Entities.
+詳細な情報については、[エンティティ](entities.md) を参照してください。
 
-## Entity selection
+## エンティティセレクション
 
-An entity selection is an object. When querying the datastore, an entity selection is returned. An entity selection is a set of references to entities related to the same dataclass.
+エンティティセレクションは、一つのオブジェクトです。 データストアをクエリすると、エンティティセレクションが返されます。 エンティティセレクションとは、同じデータクラスに所属するエンティティへの参照のセットのことです。
 
-An entity selection contains:
+エンティティセレクションは以下を格納します:
 
-*   a set of 0 to X entity references,
-*   a length property (always),
-*   queryPlan and queryPath properties (if asked while querying).
+*   0 から X までのエンティティ参照のセット
+*   length プロパティ(常に存在します)
+*   queryPlan および queryPath プロパティ (クエリ時に要求した場合に存在します)
 
-An entity selection can also be empty.
-
-
-## Generic class
-
-Built-in class for ORDA objects such as entities, or dataclasses. Functions and properties of generic classes are automatically available in user extended classes, e.g. `EmployeeEntity`.
+エンティティセレクションは空であることもあります。
 
 
-## Lazy loading
+## 汎用クラス
 
-Since entities are managed as references, data is loaded only when necessary, i.e. when accessing it in the code or through interface widgets. This optimization principle is called lazy loading.
+エンティティやデータクラスなどの ORDA オブジェクト用のビルトインクラス。 汎用クラスのプロパティや関数は、ユーザー拡張クラス (例: `EmployeeEntity`) において自動で利用可能です。
 
-## Main datastore
 
-The Datastore object matching the opened 4D database (standalone or client/server). The main datastore is returned by the ds command.
+## レイジーローディング
 
-## Method
+エンティティは参照として管理されているため、データは必要なときにのみロードされます。つまりコードや、インターフェースウィジェットを通してアクセスしたときなどです。 この最適化原理は、レイジーローディングと呼ばれています。
 
-ORDA objects such as datastores, dataclasses, entity selections, and entities, define classes of objects. They provide specific methods to directly interact with them. These methods are also called member functions. Such methods are used by calling them on an instance of the object.
+## メインデータストア
 
-For example, the `query()` method is a dataclass member function. If you have stored a dataclass object in the `$myClass` variable, you can write:
+開かれている 4Dデータベース (シングルユーザーまたはクライアント/サーバー) に対応するデータストアオブジェクト。 メインデータストアは `ds` コマンドによって返されます。
+
+## メソッド
+
+データストア、データクラス、エンティティセレクション、エンティティなどの ORDA オブジェクトは、オブジェクトのクラスを定義します。 これらのクラスには、オブジェクトを直接操作するための専用のメソッドが提供されています。 これらのメソッドはメンバー関数とも呼ばれます。 このメソッドを使用するには、オブジェクトのインスタンスに対して呼び出します。
+
+たとえば、`query()` メソッドはデータクラスのメンバー関数です。 `$myClass` 変数にデータクラスオブジェクトを格納している場合、次のように書くことができます:
 
 ```code4d
 $myClass.query("name = smith")
 ```
 
-## Mixed data type
+## ミックスデータ型
 
-In this documentation, "Mixed" data type is used to designate the various type of values that can be stored within dataclass attributes. It includes:
+このドキュメントでは、データクラス属性に保存可能な値の様々な型を指定するために、"ミックス" データ型が使用されます。 :
 
 *   number
 *   text
@@ -139,72 +139,72 @@ In this documentation, "Mixed" data type is used to designate the various type o
 *   date
 *   object
 *   collection
-*   picture(\*)
+*   ピクチャー (\*)
 
-*(\*) picture type is not supported by statistical methods such as* `entitySelection.max( )`.
+*(\*) ピクチャー型は* `entitySelection.max( )` *などの統計型メソッドではサポートされていません。*
 
-## Optimistic Lock
+## オプティミスティック・ロック
 
-In "optimistic lock" mode, entities are not locked explicitly before updating them. Each entity has an internal stamp that is automatically incremented each time the entity is saved on disk. The entity.save( ) or entity.drop( ) methods will return an error if the stamp of the loaded entity (in memory) and the stamp of the entity on disk do not match, or if the entity has been dropped. Optimistic locking is only available in ORDA implementation. See also "Pessimistic lock".
+"オプティミスティック・ロック" モードでは、エンティティは更新されるまでは明示的にはロックされていません。 各エンティティは、そのエンティティがディスクに保存されるたびに自動でインクリメントされる内部スタンプを持っています。 `entity.save( )` および `entity.drop( )` メソッドは(メモリ内に) ロードされたスタンプと、ディスク上のエンティティのスタンプが合致しない場合、あるいはエンティティがドロップされている場合にはエラーを返します。 オプティミスティック・ロックは ORDA 実装内でのみ使用可能です。 [ペシミスティック・ロック](#ペシミスティック・ロック) も合わせて参照してください。
 
-## Pessimistic Lock
+## ペシミスティック・ロック
 
-A "pessimistic lock" means that an entity is locked prior to its being accessed, using the entity.lock( ) method. Other processes can neither update nor drop the entity until it is unlocked. The classic 4D language only allows pessimistic locks. See "Optimistic lock".
+"ペシミスティック・ロック" とは、`entity.lock( )` メソッドにより、エンティティがアクセスされる前にそれをロックすることを意味します。 ロックが解除されるまで、他のプロセスからはそのエンティティを更新することも、ドロップすることもできません。 クラシック 4Dランゲージにおいてはペシミスティック・ロックのみが利用可能です。 [オプティミスティック・ロック](#オプティミスティック・ロック) も合わせて参照してください。
 
-## Property
+## プロパティ
 
-See [Attribute](#attribute).
-> Attributes and properties are similar concepts. "Attribute" is used to designate dataclass properties that store data, while "property" is more generic and defines a piece of data stored within an object.
+[属性](#属性) を参照してください。
+> > *Attributes* and *properties* are similar concepts. "属性" はデータを保存するデータクラスプロパティを指定するのに使われるのに対し、"プロパティ"はより一般的な概念でオブジェクト内で保存されるデータを定義します。
 
-## PropertyPath
+## プロパティパス
 
-A propertyPath is the path to a property in a given object. If the property is nested in several levels, each level separated is by a dot (".").
+プロパティパスとは、あるオブジェクトのプロパティへのパスです。 プロパティが複数の階層にネストされている場合、各階層はドット (".") によって区切られます。
 
-## Regular class
+## 通常クラス
 
-User class not related to an ORDA object.
+ORDA オブジェクトとは関わりのないユーザークラス。
 
-## Related dataclass
+## リレートされたデータクラス
 
-These are dataclasses linked by relation attributes.
+リレートされたデータクラスとは、リレーション属性によってリンクされたデータクラスのことを指します。
 
-## Relation attribute
+## リレーション属性
 
-Relation attributes are used to conceptualize relations between dataclasses (many-to-one and one-to-many).
+リレーション属性は、データクラス間のリレーション (1対N および N対1) を概念化するものです。
 
-*   Many-to-one relation (dataclassA references an occurrence of dataclassB): a relation attribute is available in dataclassA and references one instance of dataclassB.
-*   One-to-many relation (an occurence of dataclassB references several occurrences of dataclassA): a relation attribute is available in dataclassB and references several instances of dataclassA.
+*   N対1リレーション (データクラスA はデータクラスB のオカレンスを参照します): リレーション属性はデータクラスA 内で利用可能で、データクラスB の一つのインスタンスを参照します。
+*   1対Nリレーション (データクラスB のオカレンスがデータクラスA の複数のオカレンスを参照します): リレーション属性はデータクラスB 内で利用可能で、データクラスA の複数のインスタンスを参照します。
 
-A dataclass can have recursive relation attributes.
+データクラスは再帰的なリレーション属性を持つことができます。
 
-In an entity, the value of a relation attribute can be an entity or an entity selection.
+エンティティ内では、リレーション属性の値はエンティティあるいはエンティティセレクションとなります。
 
-## Related entities
+## リレートエンティティ
 
-A related entity can be seen as the instance of a relation attribute in a dataclass.
+リレートエンティティはデータクラス内のリレーション属性のインスタンスとしてみることができます。
 
-Entity selections may refer to related entities according to the relation attributes defined in the corresponding dataclasses.
+エンティティセレクションは、対応するデータクラス内で定義されたリレーション属性に応じて、複数のリレートエンティティを参照することもあります。
 
-## Remote datastore
+## リモートデータストア
 
-A 4D database opened on a 4D or 4D Server (available through HTTP) and exposed as a REST resource. This database can be referenced locally as a Datastore from other workstations, where it is assigned a locaID. The remote datastore can be used through ORDA concepts (datastore, dataclass, entity selection...). This use is submitted to a licencing system.
+4D または (HTTP経由で利用可能な) 4D Server 上で開かれている、REST リソースとして公開された 4Dデータベース。 このデータベースは他のマシンにおいてデータストアとしてローカルに参照することができ、その際には割り当てられた locaID で識別されます。 リモートデータストアは ORDA の概念 (データストア、データクラス、エンティティセレクション等) を使って利用できます。 利用にあたってはライセンスが消費されます。
 
 ## Session
 
-When the 4D application connects to a Remote datastore, a session is created on the 4D Server (HTTP). A session cookie is generated and associated to the local datastore id.
+4Dアプリケーションがリモートデータストアに接続すると、4D Server (HTTP) 上では セッション が作成されます。 セッションcookie が生成され、ローカルデータストアID と紐づけられます。
 
-Each time a new session is opened, a license is used. Each time a session is closed, the license is freed.
+新規セッションが開始されるごとに、ライセンスが消費されます。 セッションが閉じられると、ライセンスは解放されます。
 
-Inactive sessions are automatically closed after a timeout. The default timeout is 48 hours, it can be set by the developer (it must be >= 60 minutes).
+アクティビティのないセッションはタイムアウト後に自動的に終了します。 デフォルトのタイムアウトは 48時間で、任意に設定することができます (最少時間は 60分)。
 
-## Shallow copy
+## シャロウコピー
 
-A shallow copy only duplicates the structure of elements, and keeps the same internal references. After a shallow copy, two collections will both share the individual elements. See also Deep copy.
+シャロウコピーは、要素の構造のみを複製し、同じ内部参照を保持します。 シャロウコピーのあと、二つのコレクションに格納された個々の要素は同じものが共有されています。 [ディープコピー](#ディープコピー) も合わせて参照してください。
 
-## Stamp
+## 記号
 
-Used in "optimistic" locking technology. All entities have an internal counter, the stamp, which is incremented each time the entity is saved. By automatically comparing stamps between an entity being saved and its version stored on disk, 4D can prevent concurrent modifications on the same entities.
+"オプティミステック" ロックテクノロジーにおいて使用されるものです。 すべてのエンティティにはスタンプと呼ばれる内部カウンターがあり、エンティティが保存されるたびにインクリメントされていきます。 エンティティ内のスタンプとディスク上に保存されているエンティティのスタンプを自動的に比較することで、4D は同じエンティティへの書き込みの衝突を防いでいます。
 
-## Storage attribute
+## ストレージ属性
 
-A storage attribute (sometimes referred to as a scalar attribute) is the most basic type of attribute in a datastore class and most directly corresponds to a field in a relational database. A storage attribute holds a single value for each entity in the class.
+ストレージ属性 (スカラー属性と呼ばれることも) は、データストアクラスの属性の中で最も基本的なタイプであり、リレーショナルデータベースのフィールドに最も直接的に対応するものです。 ストレージ属性は、データクラスのエンティティ毎に 1つの値を持ちます。

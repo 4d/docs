@@ -1,78 +1,78 @@
 ---
 id: buttonOverview
-title: Button
+title: ボタン
 ---
 
-A button is an active object that can be assigned an action (*e.g.*, a database task or an interface function) to perform when a user clicks on it.
+ボタンとは、ユーザーのクリック操作に応じて実行されるアクション (*例* データベースタスクやインターフェース機能) を割り当てることのできるアクティブオブジェクトです。
 
 ![](../assets/en/FormObjects/button_regular.png)
 
-Buttons can fulfill a variety of roles, depending on their style and the action assigned to it. For example, buttons could lead a user through a questionnaire or form to complete, or to make choices. Depending on its settings, a button may be designed to be clicked only once and execute a command, while others may require the user to click more than once to receive the desired result.
+割り当てられたスタイルやアクションに応じて、ボタンはさまざまな役割を果たします。 たとえば、ユーザーがアンケートやフォーム内を移動したり、選択したりといった操作を可能にします。 設定によって、ボタンをワンクリックすることでコマンド実行することもできれば、複数回クリックすることで望む結果を得られるようにすることもできます。
 
-## Handling buttons
+## ボタンの使用
 
-The actions assigned to buttons can originate from predefined [standard actions](properties_Action.md#standard-action) or from custom object methods. Examples of typical actions include letting the user accept, cancel, or delete records, copy or paste data, move from page to page in a multi-page form, open, delete, or add records in a subform, handle font attributes in text areas, etc.
+ボタンには、あらかじめ設定されている [標準アクション](properties_Action.md#standard-action) またはオブジェクトメソッドを割り当てることができます。 典型的なアクションの例は、レコードの受け入れ・削除・編集キャンセルのほか、データのコピー / ペースト、複数ページあるフォームにおけるページ移動、サブフォームのレコード操作、テキストエリアのフォント属性の操作、などです。
 
-Buttons with standard actions are dimmed when appropriate during form execution. For example, if the first record of a table is displayed, a button with the `firstRecord` standard action would appear dimmed.
+フォーム実行時、標準アクションが設定されたボタンは必要に応じてグレー表示されます。 たとえば、あるテーブルの1番目のレコードが表示されていると、先頭レコード (`firstRecord`) 標準アクションがついたボタンはグレー表示されます。
 
-If you want a button to perform an action that's not available as a standard action, leave the standard action field empty and write an object method to specify the button’s action. For more information about object methods and how to create and associate them, see [Using object methods](https://doc.4d.com/4Dv17R5/4D/17-R5/Using-object-methods.300-4163733.en.html). Normally, you would activate the `On Clicked` event and the method would run only when the button is clicked. You can associate a method with any button.
+標準アクションとして提供されていない動作をボタンに実行させたい場合には、標準アクションのフィールドは空欄にしておき、ボタンのアクションを指定するオブジェクトメソッドを書きます オブジェクトメソッドの作成や割り当て方法についての詳細は [オブジェクトメソッドを使用する](https://doc.4d.com/4Dv18/4D/18/Using-object-methods.300-4575722.ja.html) を参照ください。 通常は、イベントテーマで `On Clicked` イベントを有効にして、ボタンのクリック時にのみメソッドを実行します。 どのタイプのボタンにもメソッドを割り当てることができます。
 
-The [variable](properties_Object.md#variable-or-expression) associated with a button is automatically set to **0** when the form is executed for the first time in Design or Application mode. When the user clicks a button, its variable is set to **1**.
-
-
-
-> A button can be assigned both a standard action and a method. In this case, if the button is not disabled by the standard action, the method is executed before the standard action.
+ボタンに関連付けられた変数 ([variable](properties_Object.md#変数あるいは式) 属性) は、デザインモードやアプリケーションモードでフォームが初めて開かれるときに自動で **0** に初期化されます。 ボタンをクリックすると、変数の値は **1** になります。
 
 
 
-## Button Styles
-
-Button styles control a button's general appearance as well as its available properties. It is possible to apply different predefined styles to buttons or to associate pop-up menus with them. A great number of variations can be obtained by combining these properties / behaviors.
-
-With the exception of the [available properties](#supported-properties), many button objects are *structurally* identical. The difference is in the processing of their associated variables.
-
-4D provides buttons in the following predefined styles:
+> ボタンには標準アクションとメソッドの両方を割り当てることもできます。 この場合、標準アクションによってボタンが無効化されていなければ、標準アクションより先にメソッドが実行されます。
 
 
 
-### Regular
+## ボタンスタイル
 
-The Regular button style is a standard system button (*i.e.*, a rectangle with a descriptive label) which executes code when a user clicks on it.
+ボタンスタイルは、ボタンの外観を制御すると同時に、提供されるプロパティをも決定します。 ボタンには、あらかじめ定義されたスタイルやポップアップメニューを割り当てることができます。 これらのプロパティや動作を組み合わせることで、多数のバリエーションが得られます。
+
+スタイルによって [提供されるプロパティ](#プロパティ一覧) は異なりますが、大多数のボタンは *構造上* 同じです。 違いは、関連づけられた変数の処理にあります。
+
+次の既定スタイルが提供されています:
+
+
+
+### 通常
+
+通常スタイルのボタンは、標準的なシステムボタンで (長方形にラベルが付いたもの)、ユーザークリックに応じてコードを実行します。
 
 ![](../assets/en/FormObjects/button_regular.png)
 
-By default, the Regular style has a light gray background with a label in the center. When the cursor hovers over the Regular button style, the border and background color change to demonstrate that it has the focus. In addition to initiating code execution, the Regular button style mimics a mechanical button by quickly changing background color when being clicked.
+通常ボタンは、明るいグレーの背景に中央配置のラベルがデフォルトで付いています。 Windowsの場合は、通常ボタンの上にマウスオーバーすると、境界線色と背景色が変わります。 また、プラットフォームによって表現が異なりますが、クリック時にも背景色が変わるなどして、物理的なボタンを模倣します。
 
-#### JSON Example:
+#### JSON 例:
 
 ```4d
 
     "myButton": {
-        "type": "button",   //define the type of object
-        "style":"regular",  //define the style of the button
-        "defaultButton":"true"  //define button as the default choice
-        "text": "OK",   //text to appear on the button
-        "action": "Cancel", //action to be be performed 
-        "left": 60,  //left position on the form  
-        "top": 160, //top position on the form 
-        "width": 100,  //width of the button
-        "height": 20 //height of the button
+        "type": "button",   // オブジェクトタイプ
+        "style":"regular",  // ボタンスタイル
+        "defaultButton":"true"  // デフォルトボタン
+        "text": "OK",   // タイトル
+        "action": "Cancel", // アクション
+        "left": 60,  // フォーム上の座標 (左)
+        "top": 160, // フォーム上の座標 (上)
+        "width": 100,  // 幅
+        "height": 20 // 高さ
         }
 ```
 
 
-Only the Regular and Flat styles offer the [Default Button](properties_Appearance.md#default-button) property.
+[デフォルトボタン](properties_Appearance.md#デフォルトボタン) プロパティが提供されているのは、通常スタイルとフラットスタイルのみです。
 
 
-### Flat
+### フラット
 
-The Flat button style is a standard system button (*i.e.*, a rectangle with a descriptive label) which executes code when a user clicks on it.
+フラットスタイルのボタンは、標準的なシステムボタンで (長方形にラベルが付いたもの)、ユーザークリックに応じてコードを実行します。
 
 ![](../assets/en/FormObjects/button_flat.png)
 
-By default, the Flat style has a white background with a label in the center, rounded corners, and a minimalist appearance. The Flat button style's graphic nature is particularly useful for forms that will be printed.
+フラットボタンは、白の背景に中央配置のラベルがデフォルトで付いており、角が丸くなっています。 フラットボタンのグラフィック的な装飾は最小限であるため、印刷されるフォームでの使用に適しています。
 
-#### JSON Example:
+#### JSON 例:
 
 ```4d
 
@@ -90,21 +90,21 @@ By default, the Flat style has a white background with a label in the center, ro
 ```
 
 
-Only the Regular and Flat styles offer the [Default Button](properties_Appearance.md#default-button) property.
+[デフォルトボタン](properties_Appearance.md#デフォルトボタン) プロパティが提供されているのは、通常スタイルとフラットスタイルのみです。
 
-### Toolbar
+### ツールバー
 
-The Toolbar button style is primarily intended for integration in a toolbar. It includes the option to add a pop-up menu (indicated by an inverted triangle) which is generally used to display additional choices for the user to select.
+ツールバースタイルのボタンは、主としてツールバーで使用するためのものです。 このスタイルには、複数の選択肢を提示するためのポップアップメニュー (逆三角形で示されます) を追加するオプションがあります。
 
-By default, the Toolbar style has a transparent background with a label in the center. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+ツールバーボタンは、透明の背景に中央配置のラベルがデフォルトで付いています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
- - *Windows* - the button is highlighted when it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button.
+ - *Windows* - ボタンがハイライト表示されます。"ポップアップメニューあり" プロパティを使用ていると、ボタンの右側中央に三角形が表示されます。
 
 ![](../assets/en/FormObjects/button_toolbar.png)
 
- - *macOS* - the highlight of the button never appears. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
+ - *macOS* - ボタンはハイライト表示されません。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右側に三角形が表示されます。
 
-#### JSON Example:
+#### JSON 例:
 
 ```4d
     "myButton": {
@@ -122,19 +122,19 @@ By default, the Toolbar style has a transparent background with a label in the c
 
 
 
-### Bevel
+### ベベル
 
-The Bevel button style combines the appearance of the [Regular](#regular) (*i.e.*, a rectangle with a descriptive label) style with the [Toolbar](#toolbar) style's pop-up menu property option.
+ベベルスタイルは [通常](#通常) スタイルの外観 (四角にラベル) に [ツールバー](#ツールバー) スタイルのポップアップメニューを追加可能にしたものです。
 
-By default, the Bevel style has a light gray background with a label in the center. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+ベベルボタンは、明るいグレーの背景に中央配置のラベルがデフォルトで付いています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
- - *Windows* - the button is highlighted. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button.
+ - *Windows* - ボタンがハイライト表示されます。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右側に三角形が表示されます。
 
 ![](../assets/en/FormObjects/button_bevel.png)
 
- - *macOS* - the highlight of the button never appears. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
+ - *macOS* - ボタンはハイライト表示されません。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右側に三角形が表示されます。
 
-#### JSON Example:
+#### JSON 例:
 
 ```4d
     "myButton": {
@@ -152,19 +152,19 @@ By default, the Bevel style has a light gray background with a label in the cent
 
 
 
-### Rounded Bevel
+### 角の丸いベベル
 
-The Rounded Bevel button style is nearly identical to the [Bevel](#bevel) style except, depending on the OS, the corners of the button may be rounded. As with the Bevel style, the Rounded Bevel style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's pop-up menu property option.
+角の丸いベベルスタイルは [ベベル](#ベベル) スタイルとほぼ同一ですが、OSによっては角が丸く表示されます。 ベベルスタイルと同様に、角の丸いベベルスタイルは [通常](#通常) スタイルの外観 (四角にラベル) に [ツールバー](#ツールバー) スタイルのポップアップメニューを追加可能にしたものです。
 
-By default, the Rounded Bevel style has a light gray background with a label in the center. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+角の丸いベベルボタンは、明るいグレーの背景に中央配置のラベルがデフォルトで付いています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
- - *Windows* - the button is identical to the Bevel style. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and in the center of the button.
+ - *Windows* - ベベルボタンと同じです。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右側に三角形が表示されます。
 
   ![](../assets/en/FormObjects/button_roundedbevel.png)
 
- - *macOS* - the corners of the button are rounded. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
+ - *macOS* - 角が丸くなっています。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右側に三角形が表示されます。
 
-#### JSON Example:
+#### JSON 例:
 
 ```4d
     "myButton": {
@@ -182,19 +182,19 @@ By default, the Rounded Bevel style has a light gray background with a label in 
 
 
 
-### OS X Gradient
+### OS Xグラデーション
 
-The OS X Gradient button style is nearly identical to the [Bevel](#bevel) style. As with the Bevel style, the OS X Gradient style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's pop-up menu property option.
+OS Xグラデーションスタイルは [ベベル](#ベベル) スタイルとほぼ同一です。 ベベルスタイルと同様に、OS Xグラデーションスタイルは [通常](#通常) スタイルの外観 (四角にラベル) に [ツールバー](#ツールバー) スタイルのポップアップメニューを追加可能にしたものです。
 
-By default, the OS X Gradient style has a light gray background with a label in the center. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+OS Xグラデーションボタンは、明るいグレーの背景に中央配置のラベルがデフォルトで付いています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
- - *Windows* - the button is identical to the Bevel style. When it uses the “With Pop-up Menu” property, a triangle is displayed on the right side of the button.
+ - *Windows* - ベベルボタンと同じです。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右側に三角形が表示されます。
 
 ![](../assets/en/FormObjects/button_osxgradient.png)
 
- - *macOS* - the button is displayed as a two-tone system button. When it uses the “With Pop-up Menu” property, a triangle is displayed to the right and at the bottom of the button.
+ - *macOS* - 2トーンのシステムボタンです。 "ポップアップメニューあり" プロパティを使用していると、ボタンの右側に三角形が表示されます。
 
-#### JSON Example:
+#### JSON 例:
 
 ```4d
     "myButton": {
@@ -211,19 +211,19 @@ By default, the OS X Gradient style has a light gray background with a label in 
 ```
 
 
-### OS X Textured
+### OS Xテクスチャー
 
-The OS X Textured button style is nearly identical to the [Bevel](#bevel) style but with a smaller size (maximum size is the size of a standard macOS system button). As with the Bevel style, the OS X Textured style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's pop-up menu property option.
+OS Xテクスチャースタイルは [ベベル](#ベベル) スタイルとほぼ同一ですが、サイズがより小さいです (最大サイズは macOS の標準的なシステムボタンのサイズです)。 ベベルスタイルと同様に、OS Xテクスチャースタイルは [通常](#通常) スタイルの外観 (四角にラベル) に [ツールバー](#ツールバー) スタイルのポップアップメニューを追加可能にしたものです。
 
-By default, the OS X Textured style appears as:
+デフォルトで、OS Xテクスチャーボタンの外観は次の通りです:
 
- - *Windows* - a standard system button with a light gray background with a label in the center. It has the special feature of being transparent in Vista.
+ - *Windows* - 明るいブルーの背景に中央配置のラベルが付いた標準のシステムボタンです。 Vistaにおいては透明になる特別機能を持っています。
 
  ![](../assets/en/FormObjects/button_osxtextured.png)
 
- - *macOS* - a standard system button displaying a color change from light to dark gray. Its height is predefined: it is not possible to enlarge or reduce it.
+ - *macOS* - 灰色のグラデーションを表示する標準のシステムボタンです。 高さは定義済みで、変更できません。
 
-#### JSON Example:
+#### JSON 例:
 
 ```4d
     "myButton": {
@@ -243,17 +243,17 @@ By default, the OS X Textured style appears as:
 
 ### Office XP
 
-The Office XP button style combines the appearance of the [Regular](#regular) style with the [Toolbar](#toolbar) style's transparency and pop-up menu property option.
+ベベルスタイルと同様に、Office XPスタイルは [通常](#通常) スタイルの外観 (四角にラベル) に [ツールバー](#ツールバー) スタイルの透過性を加え、ポップアップメニューを追加可能にしたものです。
 
-The colors (highlight and background) of a button with the Office XP style are based on the system colors. The appearance of the button can be different when the cursor hovers over it depending on the OS:
+Office XPボタンの反転表示と背景のカラーはシステムカラーに基づいています。 ボタンにマウスオーバーしたときの表示は OS によって異なります:
 
- - *Windows* - its background only appears when the mouse rolls over it.
+ - *Windows* - マウスオーバー時にのみ背景が表示されます。
 
 ![](../assets/en/FormObjects/button_officexp.png)
 
- - *macOS* - its background is always displayed.
+ - *macOS* - 背景は常に表示されます。
 
-#### JSON Example:
+#### JSON 例:
 
 ```4d
     "myButton": {
@@ -271,14 +271,14 @@ The colors (highlight and background) of a button with the Office XP style are b
 
 
 
-### Help
+### ヘルプ
 
 
-The Help button style can be used to display a standard system help button. By default, the Help style is displayed as a question mark within a circle.
+このスタイルはシステム標準のヘルプボタンを表示するために使用します。 デフォルトで、ヘルプボタンは丸の中に表示されたハテナマーク (疑問符) です。
 
 ![](../assets/en/FormObjects/button_help.png)
 
-#### JSON Example:
+#### JSON 例:
 
 ```4d
     "myButton": {
@@ -293,19 +293,19 @@ The Help button style can be used to display a standard system help button. By d
                 }
 ```
 
-> The Help style does not support [Number of States](properties_TextAndPicture.md#number-of-states), [Picture pathname](properties_TextAndPicture.md#picture-pathname), and [Title/Picture Position](properties_TextAndPicture.md#title-picture-position) basic properties.
+> ヘルプボタンは次の基本プロパティを持ちません: [状態の数](properties_TextAndPicture.md#状態の数)、[ピクチャーパス名](properties_TextAndPicture.md#ピクチャーパス名)、[タイトル/ピクチャー位置](properties_TextAndPicture.md#タイトルピクチャー位置)。
 
 
-### Circle
+### サークル
 
-The Circle button style appears as a round system button. This button style is designed for macOS.
+サークルスタイルのボタンは、円形のシステムボタンとして表示されます。 このボタンスタイルは macOS 用に用意されています。
 
 ![](../assets/en/FormObjects/button_circleM.png)
 
-On Windows, it is identical to the “None” style (the circle in the background is not taken into account).
+Windows の場合、サークルは表示されません。
 
 
-#### JSON Example:
+#### JSON 例:
 
 ```
     "myButton": {
@@ -322,14 +322,14 @@ On Windows, it is identical to the “None” style (the circle in the backgroun
 
 
 
-### Custom
+### カスタム
 
-The Custom button style accepts a personalized background picture and allows managing additional parameters such as icon and margin offset.
+カスタムスタイルのボタンは、背景ピクチャーを使用できるほか、さまざまな追加パラメーターを管理することができます (アイコンオフセットやマージン)。
 
 ![](../assets/en/FormObjects/button_custom.png)
 
 
-#### JSON Example:
+#### JSON 例:
 
 ```code
     "myButton": {
@@ -349,19 +349,19 @@ The Custom button style accepts a personalized background picture and allows man
 
 
 
-## Supported Properties
+## プロパティ一覧
 
-All buttons share the same set of basic properties:
-
-
-[Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Number of States](properties_TextAndPicture.md#number-of-states)(1) - [Object Name](properties_Object.md#object-name) - [Picture pathname](properties_TextAndPicture.md#picture-pathname)(1) - [Right](properties_CoordinatesAndSizing.md#right) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Title](properties_Object.md#title) - [Title/Picture Position](properties_TextAndPicture.md#title-picture-position)(1) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
-
-> (1) Not supported by the [Help](#help) style.
+すべてのボタンは次の基本プロパティを共有します:
 
 
-Additional specific properties are available, depending on the [button style](#button-styles):
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [タイトル](properties_Object.md#タイトル) - [CSSクラス](properties_Object.md#cssクラス) - [ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル) - [ピクチャーパス名](properties_TextAndPicture.md#ピクチャーパス名)(1) - [状態の数](properties_TextAndPicture.md#状態の数)(1) - [タイトル/ピクチャー位置](properties_TextAndPicture.md#タイトルピクチャー位置)(1) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [フォーカス可](properties_Entry.md#フォーカス可) - [ショートカット](properties_Entry.md#ショートカット) - [表示状態](properties_Display.md#表示状態) - [レンダリングしない](properties_Display.md#レンダリングしない) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [フォント](properties_Text.md#フォント) - [フォントサイズ](properties_Text.md#フォントサイズ) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [ヘルプTips](properties_Help.md#ヘルプtips) - [標準アクション](properties_Action.md#標準アクション) - [ドロップ有効](properties_Action.md#ドロップ有効)
 
-- [Background pathname](properties_TextAndPicture.md#backgroundPathname) - [Horizontal Margin](properties_TextAndPicture.md#horizontalMargin) - [Icon Offset](properties_TextAndPicture.md#icon-offset) - [Vertical Margin](properties_TextAndPicture.md#verticalMargin) (Custom)
-- [Default Button](properties_Appearance.md#default-button) (Flat, Regular)
-- [With pop-up menu](properties_TextAndPicture.md#with-pop-up-menu) (Toolbar, Bevel, Rounded Bevel, OS X Gradient, OS X Textured, Office XP, Circle, Custom)
+> (1) [ヘルプ](#ヘルプ) スタイルは除外
+
+
+[ボタンスタイル](#ボタンスタイル) に応じて、次の追加プロパティが使用できます:
+
+- [背景パス名](properties_TextAndPicture.md#背景パス名) - [アイコンオフセット](properties_TextAndPicture.md#アイコンオフセット) - [横方向マージン](properties_TextAndPicture.md#横方向マージン) - [縦方向マージン](properties_TextAndPicture.md#縦方向マージン) (カスタムスタイル)
+- [デフォルトボタン](properties_Appearance.md#デフォルトボタン) (通常、フラット)
+- [ポップアップメニューあり](properties_TextAndPicture.md#ポップアップメニューあり) (ツールバー、ベベル、角の丸いベベル、OS X グラデーション、OS X テクスチャー、Office XP、サークル、カスタム)
 

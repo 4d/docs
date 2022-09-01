@@ -1,10 +1,10 @@
 ---
 id: analysis
-title: Activity analysis Page
-sidebar_label: Activity analysis Page
+title: Página análise de atividades
+sidebar_label: Página análise de atividades
 ---
 
-The Activity analysis page allows viewing the contents of the current log file. This function is useful for parsing the use of a database or detecting the operation(s) that caused errors or malfunctions. In the case of a database in client-server mode, it allows verifying operations performed by each client machine.
+The Activity analysis page allows viewing the contents of the current log file. Esta função é útil para analisar o uso de um banco de dados ou detectar as operações que causaram erros ou mal funcionamento. No caso de um banco de dados em modo cliente-servidor, permite verificar as operações realizadas por cada máquina cliente.
 > It is also possible to rollback the operations carried out on the data of the database. For more information, refer to [Rollback page](rollback.md).
 
 ![](../assets/en/MSC/MSC_analysis.png)
@@ -32,9 +32,9 @@ This information allows you to identify the source and context of each operation
 - **Process**: Internal number of process in which the operation was carried out. This internal number corresponds to the context of the operation.
 - **Size**: Size (in bytes) of data processed by the operation.
 - **Date and Hour**: Date and hour when the operation was performed.
-- **User**: Name of the user that performed the operation. In client-server mode, the name of the client-side machine is displayed; in single-user mode, the ID of the user is displayed. If the 4D passwords are not enabled, this column is blank.
+- **Usuario**: nome de usuário que realizou a operação. Em modo cliente-servidor, o nome da máquina do lado do cliente é exibido; em modo monousuário, a ID do usuário é exibida. Se as senhas 4D não foram ativadas, esta coluna fica em branco.
 - **Values**: Values of fields for the record in the case of addition or modification. The values are separated by “;”. Only values represented in alphanumeric form are displayed.  
   ***Note:** If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in this column.*
 - **Records**: Record number.
 
-Click on **Analyze** to update the contents of the current log file of the selected database (named by default dataname.journal). The Browse button can be used to select and open another log file for the database. The **Export...** button can be used to export the contents of the file as text.
+Clique em **Analisar** para atualizar o conteúdo do arquivo de histórico atual do banco selecionada (chamado como padrão dataname.journal). O botão Navegar pode ser usado para selecionar e abrir outro arquivo de histórico para o banco de dados. The **Export...** button can be used to export the contents of the file as text.

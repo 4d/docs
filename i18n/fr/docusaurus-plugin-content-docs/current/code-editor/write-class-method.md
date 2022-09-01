@@ -1,6 +1,6 @@
 ---
 id: write-class-method
-title: Code Editor
+title: Éditeur de code
 ---
 
 4D has a powerful built-in code editor that offers a wide set of features for highly productive code editing such as intelligent code completion, code navigation, debugging, searching, and more.
@@ -13,11 +13,11 @@ You can scroll through the contents of methods, classes and functions, which can
 
 The 4D Code Editor provides basic syntax error-checking. Additional error-checking is performed when the code executes. For more information on how to handle errors, see [Debugging](../Debugging/basics.md).
 
-## Toolbar
+## Toolbar (Barre d’outils)
 
 Each Code Editor window has a toolbar that provides instant access to basic functions related to code execution and editing.
 
-| Element                       | Icon                                                                              | Description                                                                                                                                                                                                                                                                                                                                    |
+| Element                       | Icône                                                                             | Description                                                                                                                                                                                                                                                                                                                                    |
 | ----------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Method execution**          | ![execute-method](../assets/en/code-editor/execute-method.png)                    | When working with methods, each Code Editor window has a button that can be used to run the current method. Using the menu associated with this button, you can choose the type of execution:<ul><li> **Run new process**: Creates a process and runs the method in standard mode in this process.</li><li>**Run and debug new process**: Creates a new process and displays the method in the Debugger window for step by step execution in this process.</li><li>**Run in Application process**: Runs the method in standard mode in the context of the Application process (in other words, the record display window).</li><li>**Run and debug in Application process**: Displays the method in the Debugger window for step by step execution in the context of the Application process (in other words, the record display window).</li></ul>For more information on method execution, see [Calling Project Methods](../Concepts/methods.md#calling-project-methods). |
 | **Search**                    | ![search-icon](../assets/en/code-editor/search.png)                               | Allows performing a search in the current window.                                                                                                                                                                                                                                                                                              |
@@ -26,7 +26,7 @@ Each Code Editor window has a toolbar that provides instant access to basic func
 | **Method information**        | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Displays the [Method Properties](../Concepts/methods.md#project-method-properties) dialog box (project methods only).                                                                                                                                                                                                                          |
 | **Last clipboard values**     | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Displays the last values stored in the clipboard.                                                                                                                                                                                                                                                                                              |
 | **Clipboards**                | ![clipboard icons](../assets/en/code-editor/clipboards.png)                       | Nine clipboards available in the code editor. You can [use these clipboards](./write-class-method.md#multiple-copy-paste-and-numbering-of-clipboards) by clicking on them directly or by using keyboard shortcuts. You can use a [Preferences option](Preferences/methods.md#options-1) to hide them.                                          |
-| **Code navigation**           | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Lets you navigate inside methods and classes with automatically tagged content or manually declared markers. See [Navigation dropdown](./write-class-method.md#navigation-dropdown).                                                                                                                                                           |
+| **Navigation dans le code**   | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Lets you navigate inside methods and classes with automatically tagged content or manually declared markers. See [Navigation dropdown](./write-class-method.md#navigation-dropdown).                                                                                                                                                           |
 
 ## Editing area
 
@@ -34,13 +34,13 @@ This is where you [write and edit](write-class-method.md) your code. The editor 
 
 You can customize the display of the editing area. Any customization is automatically passed on to all the windows of the code editor:
 
-| Option                                 | Description                                                                                                                                                                                                 | Set in...                                                                                                                                      |
-| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| **font** and **font size**             | Sets the character font and size to be used in the editing area                                                                                                                                             | **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**                          |
-| **style and color of syntax elements** | assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on). | Right-click on a language element (variable, keyword, etc.) > **Style** submenu. Or **Preferences** > [**Methods**](../Preferences/methods.md) |
-| **spaces**                             | You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.).                                   | **Method > View > White Spaces**                                                                                                               |
-| **themes**                             | You can select the Dark or Light theme, or set a custom one                                                                                                                                                 | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                     |
-| **width of code indentations**         | Set the width of code indentations                                                                                                                                                                          | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                     |
+| Option                                 | Description                                                                                                                                                                                                 | Set in...                                                                                                                                                                                                  |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **font** and **font size**             | Sets the character font and size to be used in the editing area                                                                                                                                             | **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**                                                                                      |
+| **style and color of syntax elements** | assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on). | Right-click on a language element (variable, keyword, etc.) Right-click on a language element (variable, keyword, etc.) > **Style** submenu. Or **Preferences** > [**Methods**](../Preferences/methods.md) |
+| **spaces**                             | You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.).                                   | **Method > View > White Spaces**                                                                                                                                                                           |
+| **thèmes**                             | You can select the Dark or Light theme, or set a custom one                                                                                                                                                 | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                                                 |
+| **width of code indentations**         | Set the width of code indentations                                                                                                                                                                          | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                                                 |
 
 ## Lists area
 
@@ -232,7 +232,7 @@ When the characters you enter correspond to a single possibility, this suggested
 
 > If you checked the **Insert () and closing } ) ] "** option in the **Methods** page of the **Preferences**, 4D will also automatically add **()** after a 4D command, keyword or project method that requires one or more mandatory arguments (after accepting a suggestion or completion): ![](../assets/en/code-editor/insert-and-closing-1.png) -> ![](../assets/en/code-editor/insert-and-closing-2.png)
 
-Autocompletion also works with code structures (e.g. If..End if, For each...End for each): when you enter the first part of the structure, the Code Editor will automatically suggest the closing part: ![](../assets/en/code-editor/autocomplete-code-structures.png)
+Autocompletion also works with code structures (e.g. If..End if, For each...End for each): when you enter the first part of the structure, the Code Editor will automatically suggest the closing part:![](../assets/en/code-editor/autocomplete-code-structures.png)
 
 If there are several suggestions available, 4D displays them in a pop-up list when you hit the **Tab** key:
 
@@ -255,7 +255,7 @@ If the characters typed correspond to different types of objects, the list displ
 - User methods
 - Table names
 - Field names
-- Constants
+- Constantes
 - Local, process or interprocess variable, declared in the method
 - Object property names
 - Plug-in commands
@@ -263,9 +263,9 @@ If the characters typed correspond to different types of objects, the list displ
 - SQL keywords
 - Macros (displayed between < >)
 
-> For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes** and/or **tables**. These options are found in **Preferences** > **Methods** > **Options**
+> For practical reasons, you can disable the automatic display of the list of suggestions for **constants**, **(local or interprocess) variables and object attributes** and/or **tables**. Uncheck the **Preferences** > **Methods** > **Options** > **Show Lists** option.
 
-### Object properties
+### Propriétés des objets
 
 4D automatically displays case-sensitive suggestions of all valid object property names in 4D code when you:
 
@@ -303,7 +303,7 @@ Pressing **Ctrl+Shift+B** (Windows) or **Command+Shift+B** (macOS) enables you t
 
 You can double-click to select individual "words". When the item name referenced (command, constant, method, etc.) contains spaces, you can select the whole name (including spaces) by using the **Alt/Option + Double-click** combination.
 
-### Shortcuts
+### Raccourcis
 
 Standard keyboard shortcuts to navigate the code are available in 4D's Code Editor.
 
@@ -378,20 +378,22 @@ You can display the HTML documentation of a 4D "classic" language command at any
 
 ## Comment/Uncomment
 
-Comments are inactive lines of code. These lines are not interpreted by the program (4D does not apply any particular style within comments) and are not executed when the method or function is called.
+Les commentaires sont des lignes d’instructions inactives. These lines are not interpreted by the program (4D does not apply any particular style within comments) and are not executed when the method or function is called.
 
-There are two ways to create comments:
+Voici deux manières de créer des commentaires :
 
 #### `//comment`
 
 Used to create a single line comment. Inserting // at the beginning of a line will create a single line comment. The length of single line comments is limited to the maximum size of a line (32,000 characters).
 
 <pre>&lt;code class="//This is a comment\" spaces=">
+ &lt;code class="//This is a comment\" spaces=">
  For(vCounter;1;2)\
   //comment\
   //comment\
   //comment\
  End for
+&lt;/code>
 &lt;/code></pre>
 
 #### `/*comment*/`
@@ -422,13 +424,13 @@ The sequence consists of a backslash `\`, followed by a character. For instance,
 
 In 4D, the following escape sequences can be used:
 
-| Escape sequence               | Character replaced   |
-| ----------------------------- | -------------------- |
-| `\n`                         | LF (Line feed)       |
-| `\t`                         | HT (Tab)             |
-| `\r`                         | CR (Carriage return) |
-| ``\\` |``&#96; (Backslash) |                      |
-| `\"`                         | " (Quotation marks)  |
+| Séquence d’échappement        | Caractère remplacé  |
+| ----------------------------- | ------------------- |
+| `\n`                         | LF (Retour ligne)   |
+| `\t`                         | HT (Tabulation)     |
+| `\r`                         | CR (Retour chariot) |
+| ``\\` |``&#96; (Backslash) |                     |
+| `\"`                         | " (Guillemets)      |
 
 > It is possible to use either upper or lower case in escape sequences.
 
@@ -491,68 +493,68 @@ Bookmarks are managed using the **Bookmarks** submenu of the **Method** menu:
 
 **Note:** You can use bookmarks as markers for lines that contain an item found by a search. In this case, 4D automatically adds the bookmarks. For more information, refer to [Find and replace in methods](./find-and-replace-in-methods).
 
-## Navigation dropdown
+## Menu déroulant de navigation
 
-The navigation dropdown helps you organize your code and navigate more easily inside your classes and methods:
+Le menu de navigation vous aide à organiser votre code et à naviguer plus facilement dans vos classes et méthodes :
 
 ![dropdown-list](../assets/en/code-editor/dropdown-list.png)
 
-Some tags are added automatically, and you can complement the dropdown list using [markers](#manual-tagging).
+Certaines balises sont ajoutées automatiquement ; vous pouvez compléter la liste déroulante à l'aide de [marqueurs](#manual-tagging).
 
-### Code navigation
+### Navigation dans le code
 
-Click an item in the dropdown list to go to its first line in the code. You can also navigate with arrow-keys and press **Enter**.
+Cliquez sur un élément de la liste déroulante pour accéder à sa première ligne dans le code. Vous pouvez également naviguer avec les touches fléchées et appuyer sur **Entrée**.
 
-### Automatic tagging
+### Balisage automatique
 
-Constructors, method declarations, functions and computed attributes are automatically tagged and added to the dropdown list.
+Les constructeurs, les déclarations de méthodes, les fonctions et les attributs calculés sont automatiquement balisés et ajoutés à la liste déroulante.
 
-When there is no tag in the class/method, the tool displays "No tag".
+Lorsqu'il n'y a pas de balise dans la classe/méthode, l'outil affiche "No tag".
 
-The following items are added automatically:
+Les éléments suivants sont ajoutés automatiquement :
 
-| Icon                                                                        | Item                                             |
-| --------------------------------------------------------------------------- | ------------------------------------------------ |
-| ![no-tag-icon](../assets/en/code-editor/no-tag.png)                         | No tag                                           |
-| ![constructor-icon](../assets/en/code-editor/constructor.png)               | Class constructor or method declaration          |
-| ![computed-attribute-icon](../assets/en/code-editor/computed-attribute.png) | Computed attribute (get, set, orderBy and query) |
-| ![function-icon](../assets/en/code-editor/function.png)                     | Class function name                              |
+| Icône                                                                       | Élément                                       |
+| --------------------------------------------------------------------------- | --------------------------------------------- |
+| ![no-tag-icon](../assets/en/code-editor/no-tag.png)                         | Pas de balise                                 |
+| ![constructor-icon](../assets/en/code-editor/constructor.png)               | Class constructor ou déclaration de méthode   |
+| ![computed-attribute-icon](../assets/en/code-editor/computed-attribute.png) | Attribut calculé (get, set, orderBy et query) |
+| ![function-icon](../assets/en/code-editor/function.png)                     | Nom de la fonction de classe                  |
 
-### Manual tagging
+### Balisage manuel
 
-By adding markers in your code, you can add the following tags to the dropdown:
+En ajoutant des marqueurs dans votre code, vous pouvez ajouter les balises suivantes à la liste déroulante :
 
-| Icon                                                    | Item       |
-| ------------------------------------------------------- | ---------- |
-| ![mark-tag-icon](../assets/en/code-editor/mark-tag.png) | MARK: tag  |
-| ![todo-tag-icon](../assets/en/code-editor/todo-tag.png) | TODO: tag  |
-| ![fixme-icon](../assets/en/code-editor/fixme-tag.png)   | FIXME: tag |
+| Icône                                                   | Élément        |
+| ------------------------------------------------------- | -------------- |
+| ![mark-tag-icon](../assets/en/code-editor/mark-tag.png) | MARK : balise  |
+| ![todo-tag-icon](../assets/en/code-editor/todo-tag.png) | TODO : balise  |
+| ![fixme-icon](../assets/en/code-editor/fixme-tag.png)   | FIXME : balise |
 
-You declare them by adding comments such as:
+Vous les déclarez en ajoutant des commentaires tels que :
 
 ```4d
-// FIXME: Fix following items
+// FIXME : Corrige les éléments suivants
 ```
 
-Declarations are not case-sensitive; writing `fixme:` has the same effect.
+Les déclarations ne sont pas sensibles à la casse ; écrire `fixme` : a le même effet.
 
-Adding a hyphen after the `MARK:` tag draws a separating line in the code editor and the dropdown menu. So writing this:
+L'ajout d'un trait d'union après la balise `MARK:` trace une ligne de séparation dans l'éditeur de code et dans le menu déroulant. Ainsi, cette saisie :
 
 ![mark-hyphen-image](../assets/en/code-editor/mark-hyphen-editor.png)
 
-Results in this:
+Se traduit par ceci :
 
 ![mark-hyphen-image](../assets/en/code-editor/dropdown-organize.png)
 
-All markers located inside functions are indented in the dropdown list, except for the `MARK:` tags located at the end of functions and not followed by instructions. Those will appear at the first level.
+Tous les marqueurs situés à l'intérieur des fonctions sont indentés dans la liste déroulante, à l'exception des balises `MARK:` situées à la fin des fonctions et non suivies d'instructions. Celles-ci apparaîtront au premier niveau.
 
-### Display order
+### Ordre d'affichage
 
-Tags are displayed in their appearing order inside the method/class.
+Les balises sont affichées dans leur ordre d'apparition à l'intérieur de la méthode/classe.
 
-To display the tags of a method or class in alphabetical order, do one of the following:
+Pour afficher les balises d'une méthode ou d'une classe par ordre alphabétique, effectuez l'une des opérations suivantes :
 
-- **right-click** the dropdown tool
-- hold **Cmd** on macOS or **Alt** on Windows, and click the dropdown tool
+- Faites un **clic droit** sur l'outil déroulant
+- maintenez la touche **Cmd** sous macOS ou **Alt** sous Windows, et cliquez sur l'outil de liste déroulante
 
-> Tags inside functions move with their parent items.
+> Les balises à l'intérieur des fonctions se déplacent avec leurs éléments parents.

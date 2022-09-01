@@ -1,97 +1,97 @@
 ---
 id: basics
-title: Basics
+title: 画面の説明
 ---
 
-Errors are common. It would be unusual to write a substantial number of lines of code without generating any errors. Conversely, treating and/or fixing errors is normal, too!
+エラーは日常的なものです。 相当行数のコードを書いているのに、1つもエラーが出ないというのは非常にまれです。 むしろ、エラーに対応・修正することは普通のことなのです。
 
-The 4D development environment provides several debugging tools for all types of errors.
+4D の開発環境には、あらゆる種類のエラーに対応するためのデバッグツールが用意されています。
 
-## Error types
+## エラーの種類
 
-### Typing errors
+### タイプミス
 
-Typing errors are detected by the Code Editor. They are displayed in red and additional information is provided at the bottom of the window. Here's a typing error:
+タイプミスはコードエディターによって検出されます。 これらは赤色で示され、ウィンドウ下部に追加情報が表示されます。 以下はタイプミスの例です:
 
-![break-point](../assets/en/Debugging/typing-error.png)
+![ブレークポイント](../assets/en/Debugging/typing-error.png)
 
 
-Such typing errors usually cause syntax errors (in the above image, the name of the table is unknown). You get the description of the error when you validate the line of code. When this occurs, fix the typing error and type Enter to validate the fix.
+このようなタイプミスは通常、シンタックスエラーの原因となります (上の例では、テーブル名が間違っています)。 コードの該当行の編集を確定すると、エラーの説明が表示されます。 このような場合タイプミスを修正して Enterキーを押すと、再度コードの検証がおこなわれます。
 
-### Syntax Errors
+### シンタックスエラー
 
-Some errors can be caught only when you execute the method. The [Syntax Error Window](#syntax-error-window) appears when an error occurs during code execution. For example:
+メソッドの実行時に限って、とらえることのできるエラーがあります。 [シンタックスエラーウィンドウ](#シンタックスエラーウィンドウ) はエラーが発生した際に表示されます: たとえば: 例:
 
-![syntax-error](../assets/en/Debugging/syntax-error.png)
+![シンタックスエラー](../assets/en/Debugging/syntax-error.png)
 
-Expand the **Details** area to display the last error and its number.
+**詳細** エリアを展開すると、最新のエラーと番号が表示されます。
 
-### Environmental Errors
+### 環境エラー
 
-Occasionally, there may not be enough memory to create a BLOB. Or, when you access a document on disk, the document may not exist or may already be opened by another application. These environmental errors do not directly occur because of your code or the way you wrote it. Most of the time, these errors are easy to treat with an [error catching method](Concepts/error-handling.md) installed using the `ON ERR CALL` command.
+時に、BLOB を作成するための十分なメモリがない場合があります。 ディスク上のドキュメントにアクセスしようとした時にドキュメントが存在しないか、他のアプリケーションにより既に開かれていることもあります。 このようなエラーは、コードやその書き方を直接の原因として発生するわけではありません。 ほとんどの場合、このようなエラーは `ON ERR CALL` コマンドでインストールされた [エラー処理メソッド](Concepts/error-handling.md) で簡単に対処できます。
 
-### Design or Logic Errors
+### 設計またはロジックエラー
 
-These are generally the most difficult type of error to find. Except for typing errors, all the error types listed above are to a certain extent covered by the expression "Design or logic error". Use the [Debugger](debugger.md) to detect them. For example:
+一般に、これらは発見が最も難しいタイプのエラーです。 これまでに説明しているエラーは、タイプミスを除いて、"設計またはロジックのエラー" という範疇に該当します。 これらを検知するには、[デバッガー](debugger.md) を使用します。 例:
 
-- A *syntax error* may occur when you try to use a variable that is not yet initialized.
-- An *environmental error* can occur when you try to open a document, because that document's name is received by a subroutine that did not get the right value as a parameter.
+- まだ初期化されていない変数を用いようとしたため、*シンタックスエラー* が発生する場合があります。
+- 間違った引数を受け取ったサブルーチンが、その間違った名前によりドキュメントを開こうとしたため、*環境エラー* が発生している場合があります。
 
-Design or logic errors also include such situations as:
+設計またはロジックのエラーには、次のような場合もあります:
 
-- A record is not properly updated because, while calling `SAVE RECORD`, you forgot to first test whether or not the record was locked.
-- A method does not do exactly what you expect, because the presence of an optional parameter is not tested.
+- `SAVE RECORD` コマンドを呼び出す際に、対象となるレコードがロックされているかどうかを最初にテストしなかったために、レコードが正しく更新されない。
+- オプション引数を追加した状態がテストされていないため、メソッドが想定通りに動作しない。
 
-Sometimes the piece of code that displays the error may be different than the code that is actually the origin of the problem.
+場合によって問題の原因は、実際に中断が発生しているコード部分ではなく、外部にあることもあります。
 
-### Runtime Errors
+### ランタイムエラー
 
-In Application mode, you might obtain errors that you don't see in interpreted mode. Here's an example:
+アプリケーションモードでは、インタープリターモードでは決して見られないエラーが発生する場合があります。 次に例を示します:
 
-![runtime-error](../assets/en/Debugging/runtimeError.png)
+![ランタイムエラー](../assets/en/Debugging/runtimeError.png)
 
-To quickly find the origin of the problem, reopen the interpreted version of the structure file, open the method and go to the corresponding line.
+問題の原因を迅速に発見するには、メソッドの名前と行番号を記録し、ストラクチャーファイルのインタープリター版を再び開いて、メソッドの該当行を確認します。
 
-## Syntax Error Window
+## シンタックスエラーウィンドウ
 
-The Syntax error window automatically appears when the execution of a method is interrupted. This can happen when:
+メソッドの実行が停止されるとシンタックスエラーウィンドウが表示されます。 これは以下の理由で起こります:
 
-- an error prevents further code execution
-- the method produces a false assertion (see the `ASSERT` command)
+- 以降のメソッド実行を妨げるエラーが発生した。
+- メソッドが False の表明を生成した (`ASSERT` コマンド参照)。
 
-![syntax-error](../assets/en/Debugging/syntax-error.png)
+![シンタックスエラー](../assets/en/Debugging/syntax-error.png)
 
-The upper text area displays a message describing the error. The lower text area shows the line that was executing when the error occurred; the area where the error occurred is highlighted. The expanded Details section contains the "stack" of errors related to the process.
+上部テキストエリアには、エラーの説明メッセージが表示されます。 下部テキストエリアには、エラーが発生した時の実行行が表示されます。 詳細ボタンをクリックすると、プロセスのエラースタックを表示するエリアを展開できます。
 
-The syntax error window proposes several options:
+シンタックスエラーウィンドウにはいくつかのオプションが用意されています:
 
-- **Edit**: Stops all method execution. 4D switches to the Design environment and the method with the error opens in the Code Editor, allowing you to fix it. Use this option when you immediately recognize the mistake and can fix it without further investigation.
+- **編集**: すべてのメソッド実行が中断されます。 4D はデザインモードに切り替わり、エラーが発生したメソッドがコードエディターで表示され、エラーを修正す ることができます。 原因に心当たりがあり、これ以上調査しなくても修正できる場合にこのオプションを使用します。
 
-- **Trace**: Enters Trace/Debugger mode. The [Debugger](debugger.md) window is displayed. If the current line has only executed partially, you may have to click the **Trace** button several times.
+- **トレース**: トレース/デバッガーモードに入ります。 [デバッガー](debugger.md) ウィンドウが表示されます。 該当行の一部が未実行の場合には、**トレース** ボタンを数回クリックする必要があるかもしれません。
 
-- **Continue**: Execution continues. The line with the error may be partially executed, depending on where the error is located. Continue with caution: the error may prevent the rest of your method from executing properly. We recommend clicking **Continue** only if the error is in a trivial call (such as `SET WINDOW TITLE`) that does not prevent executing and testing the rest of your code.
+- **続行**: 実行が継続されます。 エラーが発生した行は、エラーの位置によっては一部のみ実行済みである場合があります。 慎重に実行を継続してください: エラーが原因で、メソッドの残り部分が正常に実行できない場合があります。 `SET WINDOW TITLE` のように、コードの残りの部分の実行やテストの妨げにならない単純な呼び出しでエラーが発生している場合にのみ、**続行** ボタンをクリックすることを推奨します。
 
-> Tip: To ignore an error that occurs repeatedly (for example, in loops), you can turn the **Continue** button into an **Ignore** button. Hold down **Alt** (Windows) or **Option** (macOS) key and click the **Continue** button the first time it appears. The button label changes to **Ignore** if the dialog is called again for the same error.
+> Tips: ループ中などで繰り返し発生するエラーの場合には、**続行** ボタンを **無視** ボタンに変更できます。 **続行**ボタンが最初に現れたときに、**Alt**キー (Windows) または **Option**キー (macOS) を押しながらボタンをクリックします。 すると、同じエラーによってダイアログが呼び出されたときには、ボタンラベルが **無視** へと変化します。
 
-- **Abort**: Stops method execution and returns to the state before the method started executing:
+- **アボート**: メソッドが中断され、メソッドの実行を開始する前の状態に戻ります:
 
-    - If a form method or object method is executing in response to an event, it is stopped and you return to the form.
-    - If the method is executing from within the Application environment, you return to that environment.
+    - イベントに対してフォームメソッドまたはオブジェクトメソッドが実行されている場合には、これらは停止され、フォームに戻ります。
+    - メソッドがアプリケーションモードから実行されている場合には、このモードに戻ります。
 
-- **Copy**: Copies the debugging information into the clipboard. The info describes the internal environment of the error (number, internal component, etc.). It is formatted as tabbed text.
+- **コピー**: デバッグ情報をクリップボードにコピーします。 この情報はエラーの内部環境 (番号や内部コンポーネント等) を説明します。 情報はタブ区切り形式で記述されます。
 
-- **Save...**: Saves the contents of the syntax error window and the call chain in a `.txt` file.
+- **保存...**: シンタックスエラーウィンドウの内容とコールチェーンを `.txt` ファイルに保存します。
 
-## Debugger
+## デバッガー
 
-A common beginner mistake in dealing with error detection is to click **Abort** in the Syntax Error Window, go back to the Code Editor, and try to figure out what's going by looking at the code. Do not do that! You will save plenty of time and energy by always using the **Debugger**.
+エラー検出の際によくある初歩的な失敗は、シンタックスエラーウィンドウの **アボート** ボタンをクリックし、コードエディターに戻り、コードを表示して原因を確認しようとすることです。 これは止めてください。 **デバッガー** を常に使用すれば、相当の時間と労力を節減することができます。
 
-The Debugger allows you to step through methods slowly. It displays all the information you need in order to understand why an error occurred. Once you have this information, you know how to fix the error.
+デバッガーを使うと、メソッドをステップごとにゆっくりと実行することができます。 デバッガーは、エラーが発生した理由を知るために必要な情報を表示できます。 この情報があれば、エラーの修正方法はわかります。
 
-Another reason to use the Debugger is for developing code. Sometimes you may write an algorithm that is more complex than usual. Despite all feelings of accomplishment, you can't be totally sure that your coding is 100% correct. Instead of running it "blind", you can use the `TRACE` command at the beginning of your code, then execute it step by step to keep an eye on what happens.
+デバッガーを使用するもう 1つの理由は、コードの作成です。 いつも以上に複雑なアルゴリズムを作成してしまう場合があります。 達成感こそありますが、コーディングが正しいかどうかは 100%確かとはいえません。 見当もつかないまま実行するのではなく、コードの最初で `TRACE` コマンドを使用します。 その後、コードをステップごとに実行して、動作を監視することができます。
 
-## Breaks
+## ブレーク
 
-In the debugging process, you may need to skip the tracing of some parts of the code until a certain line. Or, you may want to trace the code when a given expression has a certain value (e.g. "$myVar > 1000"), or every time a specific 4D command is called.
+デバッグ作業では、コードの一部のトレースを特定の行までスキップする必要がある場合があります。 また、ある式が特定の値になった時 (例: "$myVar > 1000") や、特定の 4Dコマンドが呼び出されるたびにコードをトレースしたい場合もあります。
 
-These needs are covered by **breakpoints** and **command catching** features. They can be configured from the Code Editor, the debugger, or the Runtime Explorer.
+このようなニーズに対応するために、**ブレークポイント** と **キャッチコマンド** 機能が用意されています。 これらの機能は、コードエディター、デバッガー、ランタイムエクスプローラーから設定できます。

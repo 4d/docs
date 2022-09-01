@@ -1,37 +1,37 @@
 ---
 id: authUsers
-title: Users and sessions
+title: ユーザーとセッション
 ---
 
 
-## Authenticating users
+## ユーザー認証
 
-As a first step to open a REST session on the 4D server, the user sending the request must be authenticated.
+4D Server上で RESTセッションを開くには、まずリクエストを送信するユーザーが認証されなければなりません。
 
-You log in a user to your application by passing the user's name and password to [`$directory/login`]($directory.md#directorylogin).
+アプリケーションにユーザーをログインするには、ユーザー名とパスワードを [`$directory/login`]($directory.md#directorylogin) に送信します。
 
-Once a user is successfully logged, a session is open. See below to know how to handle the session cookie in subsequent client requests, if necessary.
+ユーザーのログインと同時にセッションが開かれます。 以降のクライアントリクエストにおけるセッションcookie の扱い方については、後述を参照ください。
 
-The session will automatically be closed once the timeout is reached.
+セッションは、タイムアウトすると自動終了します。
 
-## Session cookie
+## セッションcookie
 
-Each REST request is handled through a specific session on the 4D server.
+4D Server上では、各 RESTリクエストは専用セッションを介して処理されます。
 
-When a first valid REST request is received, the server creates the session and sends a session cookie named `WASID4D` in the **"Set-Cookie" response header**, containing the session UUID, for example:
+最初の有効な RESTリクエストを受信すると、サーバーはセッションを生成し、**"Set-Cookie" レスポンスヘッダー** に、セッションUUID を格納した `WASID4D` という名前のセッションcookie を返します。例:
 
 ```
 WASID4D=EA0400C4D58FF04F94C0A4XXXXXX3
 ```
 
-In the subsequent REST requests, make sure this cookie is included in the **"Cookie" request header** so that you will reuse the same session. Otherwise, a new session will be opened, and another license used.
+以降の RESTリクエストにおいては、**"Cookie" リクエストヘッダー** にこの cookie を含めるようにします。これにより、同じセッションを利用し続けることができます。 そうしない場合には新規セッションが開かれることとなり、したがってライセンスが別途消費されます。
 
-### Example
+### 例題
 
-The way to handle session cookies actually depends on your HTTP client. This example shows how to extract and resend the session cookie in the context of requests handled through the 4D `HTTP Request` command.
+実際のところ、セッションcookie の扱いは HTTPクライアントに寄ります。 この例題では、4D の `HTTP Request` コマンドを使ってリクエストを処理する場合に、セッションcookie を抽出し、再送信する方法を示します:
 
 ```4d
-// Creating headers
+// ヘッダーを作成します
 ARRAY TEXT(headerNames;0)
 ARRAY TEXT(headerValues;0)
 
@@ -46,21 +46,21 @@ APPEND TO ARRAY(headerValues;Generate digest("test";4D digest))
 C_OBJECT($response)
 $response:=New object
 
-//This request opens a session for the user "kind user"
+// このリクエストは "kind user" というユーザーのセッションを開きます
 $result:=HTTP Request(HTTP POST method;"127.0.0.1:8044/rest/$directory/login";"";\  
     $response;headerNames;headerValues;*)
 
 
-//Build new arrays for headers with only the cookie WASID4D
+// 以降のリクエストヘッダー用に cookie WASID4D のみを格納した配列を作成します
 buildHeader(->headerNames;->headerValues)
 
-//This other request will not open a new session
+// 次のリクエストは新規セッションを開きません
 $result:=HTTP Request(HTTP GET method;"127.0.0.1:8044/rest/$catalog";"";\  
     $response;headerNames;headerValues;*)
 ```
 
 ```4d
-// buildHeader project method  
+// buildHeader プロジェクトメソッド  
 
 C_POINTER($pointerNames;$1;$pointerValues;$2)
 ARRAY TEXT($headerNames;0)

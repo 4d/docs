@@ -3,27 +3,27 @@ id: directory
 title: '$directory'
 ---
 
-The directory handles user access through REST requests.
+ディレクトリは RESTリクエストを介したユーザーアクセスに対応します。
 
 
 ## $directory/login
 
-Opens a REST session on your 4D application and logs in the user.
+4Dアプリケーション上で RESTセッションを開き、ユーザーをログインします。
 
-### Description
-Use `$directory/login` to open a session in your 4D application through REST and login a user. You can also modify the default 4D session timeout.
+### 詳細
+RESTを介して 4Dアプリケーション上でセッションを開き、ユーザーをログインするには、`$directory/login` を使います。 デフォルトの 4Dセッションタイムアウトを変更することもできます。
 
-All parameters must be passed in **headers** of a POST method:
+パラメーターはすべて、POST の **ヘッダー** に渡す必要があります:
 
-| Header key         | Header value                                                                 |
-| ------------------ | ---------------------------------------------------------------------------- |
-| username-4D        | User - Not mandatory                                                         |
-| password-4D        | Password - Not mandatory                                                     |
-| hashed-password-4D | Hashed password - Not mandatory                                              |
-| session-4D-length  | Session inactivity timeout (minutes). Cannot be less than 60 - Not mandatory |
+| ヘッダーキー             | ヘッダー値                                 |
+| ------------------ | ------------------------------------- |
+| username-4D        | ユーザー (任意)                             |
+| password-4D        | パスワード (任意)                            |
+| hashed-password-4D | ハッシュ化パスワード (任意)                       |
+| session-4D-length  | セッション非アクティブタイムアウト (分単位)。 60 以上の値 (任意) |
 
 
-### Example
+### 例題
 
 ```4d
 C_TEXT($response;$body_t)
@@ -38,9 +38,9 @@ $hValues{3}:=120
 $httpStatus:=HTTP Request(HTTP POST method;"app.example.com:9000/rest/$directory/login";$body_t;$response;$hKey;$hValues)
 ```
 
-**Result**:
+**結果**:
 
-If the login was successful, the result will be:
+ログインに成功した場合の結果:
 
 ```
 {
@@ -48,7 +48,7 @@ If the login was successful, the result will be:
 }
 ```
 
-Otherwise, the response will be:
+それ以外の場合の結果:
 
 ```
 {

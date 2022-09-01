@@ -1,47 +1,47 @@
 ---
 id: monitor
-title: Monitor Page
+title: モニターページ
 ---
 
-The **Monitor** page displays dynamic information concerning database use as well as information about the system and the 4D Server application.
+**モニター** ページには、データベース利用に関する動的な情報のほか、システムや 4D Serverアプリケーションの情報が表示されます。
 
 ![](../assets/en/Admin/server-admin.png)
 
-> On Windows, some of the system information displayed on this page are retrieved via the Windows "Performance Analyzer" tools. These tools can only be accessed when the user that opened the session where 4D Server was launched has the necessary administration authorization.
+> Windows では、このページに表示されるシステム情報の一部は、Windows パフォーマンスアナライザー (WPA) ツールを介して取得されます。 これらのツールは、4D Server を起動したセッションを開いたユーザーが、必要な管理権限を持っている場合にのみアクセスできます。
 
-## Graphic area
+## グラフィックエリア
 
-The graphic area lets you see the evolution in real time of several parameters: the CPU usage, network traffic and memory. You select the parameter to be displayed via a menu found in the center of the window:
+グラフィックエリアでは、複数のパラメーター (CPU使用率、ネットワークトラフィック、およびメモリ) の変化がリアルタイムで表示されます。 ウィンドウの中央にあるメニューから表示する内容を選択します:
 
 ![](../assets/en/Admin/server-graphic.png)
 
-- **CPU Usage**: Overall CPU usage of the machine, for all applications taken together. The specific part of 4D Server in this usage rate is provided in the "Processors" information area.
-- **Network**: Number of bytes received per second by the machine (server or client). The number of bytes sent is provided in the "Network" information area.
-- **Physical memory**: Quantity of RAM memory of machine used by 4D Server. A more detailed view of memory use is provided in the "Memory" information area.
-- **Virtual memory**: Quantity of virtual memory used by the 4D Server application. This memory is allocated by the system according to the application needs. The value found at the bottom right of the area indicates the quantity of memory currently being used. The value found at the top left indicates the maximum quantity of usable virtual memory. The maximum value is calculated dynamically according to the general memory settings of the application.
-- **Cache**: Quantity of cache memory used by the 4D Server application. The value found at the bottom right of the area indicates the quantity of memory currently being used. The value found at the top left indicates the total size of the cache memory, as set via the Settings.
+- **CPU使用率**: すべてのアプリケーションによるマシンの全体的な CPU使用率。 この使用率のうちの 4D Server による使用分は、"プロセッサー" 情報エリアで提供されます。
+- **ネットワーク**: マシン (サーバーまたはクライアント) が 1秒あたりに受信したバイト数。 送信バイト数は "ネットワーク" 情報エリアで提供されます。
+- **物理メモリ**: 4D Server が使用する、マシンの RAM の量。 メモリの利用に関するより詳細な情報は "メモリ" 情報エリアで提供されます。
+- **仮想メモリ**: 4D Server アプリケーションが使用する仮想メモリの量。 このメモリは、アプリケーションのニーズに応じてシステムにより割り当てられます。 エリアの右下に表示される値は、現在使用されているメモリ量を示します。 左上に表示される値は、利用可能な仮想メモリの最大値を示します。 最大値は、アプリケーションの一般メモリ設定に基づき動的に計算されます。
+- **キャッシュ**: 4D Server アプリケーションが使用するキャッシュメモリの量。 エリアの右下に表示される値は、現在使用されているメモリ量を示します。 The value found at the bottom right of the area indicates the quantity of memory currently being used.
 
-Note that when this option is selected, the graph area scrolling is slowed down since an efficient analysis of the cache is generally carried out over a fairly long observation period.
+このオプションが選択されている場合、キャッシュの有効な解析をおこなうために長めの観測時間が必要となるため、グラフエリアのスクロールは遅くなります。
 
 
-## Overview Area
+## 概要エリア
 
-The "Overview" area provides various information concerning the system, application and licenses installed on the 4D Server machine.
+"概要" エリアでは、システム、アプリケーション、そして 4D Server マシンにインストールされたライセンスに関する様々な情報が提供されます。
 
-- **System Information**: Computer, system and IP address of server
-- **Application Information**: Internal version number of 4D Server and Volume Shadow Copy status
-- **Maximum connections**: Number of simultaneous connections allowed by type of server
-- **License**: Description of license. When the product license or one of its attached expansions expires in less than 10 days, e.g. in case of a subscription-license, 4D Server tries to automatically renew the license from the 4D user account. In this case, if the automatic renewal failed for some reason (connection error, invalid account status, non-prolongated contract...), a warning icon is displayed next to the license to alert the server administrator. Additional information about the license renewal status can be displayed in a tip when you hover the mouse over the area:
+- **システム情報**: サーバーのマシン、システムおよび IPアドレス
+- **アプリケーション情報**: 4D Server の内部バージョン番号およびボリュームシャドウコピーステータス
+- **最大接続数**: サーバータイプ毎に可能な同時接続数
+- **ライセンス**: ライセンスの詳細。 プロダクトライセンス、あるいは付随エクスパンションのいずれかが 10日以内に失効するとき (例: サブスクリプション型ライセンスなど)、4D Server は自動的にそのライセンスを 4Dユーザーアカウントから更新しようとします。 この場合、なんらかの理由 (接続エラー、無効なアカウント状態、契約が延長されていないなど) で自動更新が失敗した場合、サーバー管理者に警告を伝えるアイコンがライセンスの隣に表示されます。 エリア上にマウスをホバーさせると、ライセンス更新状態についての追加の情報が tips として表示されます:
 
 ![](../assets/en/Admin/server-licence-failed.png)
 
-Usually, you will need to check the [**Licences Manager**](Admin/licenses.md).
+こういった場合には通常、[**ライセンスマネージャー**](Admin/licenses.md) をチェックする必要があります。
 
-## Details Area
+## 詳細エリア
 
-The "Details" area repeats part of the information displayed in the graphic area and provides additional information as well.
+"詳細" エリアは、すでにグラフィックエリアで表示されている情報の一部と、追加の情報を提供します。
 
-- **Hard drive**: Overall capacity of the hard disk and distribution of the space used by the database data (data file + data index), the space used by other files and the free space available.
-- **Memory**: RAM memory installed on the machine and amount of memory used by 4D Server, by other applications or that is free. The memory used by 4D Server can also be displayed dynamically in the graphic area.
-- **Processors**: Instant occupancy rate for processor(s) of the machine by 4D Server and by other applications. This rate is constantly recalculated. The occupancy rate by 4D Server can also be displayed dynamically in the graphic area.
-- **Network**: Instantaneous number of bytes sent and received by the machine (server or client). This value is updated constantly. The number of bytes received by can also be displayed dynamically in the graphic area.
+- **ハードディスク**: ハードディスク全体、およびデータベースデータ ( データファイルとインデックスファイル) の使用スペース、他のファイルの使用スペース、空きスペースなどを表示します。
+- **メモリ**: マシンにインストールされた RAMメモリ、4D Server による使用量、他のアプリケーションによる使用量、および空き容量。 4D Server が使用するメモリはグラフィックエリアにも動的に表示できます。
+- **プロセッサー**: 4D Server と他のアプリケーションによる、プロセッサーの使用率。 この使用率は絶えず再計算されます。 4D Server による使用率はグラフィックエリアにも動的に表示できます。
+- **ネットワーク**: マシン (サーバーまたはクライアント) が受信および送信したその瞬間のバイト数。 この値は絶えず更新されます。 受信したバイト数はグラフィックエリアにも動的に表示できます。

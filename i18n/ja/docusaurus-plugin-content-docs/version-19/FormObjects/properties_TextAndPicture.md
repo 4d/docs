@@ -1,226 +1,226 @@
 ---
 id: propertiesTextAndPicture
-title: Text and Picture
+title: テキスト、ピクチャー
 ---
 
 
-## Background pathname
+## 背景パス名
 
-Sets the path of the picture that will be drawn in the background of the object. If the object uses an [icon](#picture-pathname) with [different states](#number-of-states), the background picture will automatically support the same number of states.
+オブジェクトの背景として使用するピクチャーのパスを指定します。 [複数の状態](#状態の数) を持つ [アイコン](#ピクチャーパス名) を持つオブジェクトの場合、背景ピクチャーにも同じ状態の数が適用されます。
 
-The pathname to enter is similar as for the [Pathname property for static pictures](properties_Picture.md#pathname).
+パス名は、[スタティックピクチャーのパス名プロパティ](properties_Picture.md#パス名) と同じように指定します。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name                    | Data Type | Possible Values                                                                                              |
-| ----------------------- | --------- | ------------------------------------------------------------------------------------------------------------ |
-| customBackgroundPicture | string    | Relative path in POSIX syntax. Must be used in conjunction with the style property with the "custom" option. |
+| 名称                      | データタイプ | とりうる値                                                       |
+| ----------------------- | ------ | ----------------------------------------------------------- |
+| customBackgroundPicture | string | POSIX シンタックスの相対パス。 style プロパティの "custom" オプションと併用する必要があります。 |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
-
----
-
-## Button Style
-
-General appearance of the button. The button style also plays a part in the availability of certain options.
-
-#### JSON Grammar
-
-| Name  | Data Type | Possible Values                                                                                                                                                    |
-|:-----:|:---------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| style |   text    | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
-
-#### Objects Supported
-
-[Button](button_overview.md) - [Radio Button](radio_overview.md) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
+[カスタムボタン](button_overview.md#カスタム) - [カスタムチェックボックス](checkbox_overview.md#カスタム) - [カスタムラジオボタン](radio_overview.md#カスタム)
 
 ---
 
-## Horizontal Margin
+## ボタンスタイル
 
-This property allows setting the size (in pixels) of the horizontal margins of the button. This margin delimits the area that the button icon and title must not surpass.
+ボタンの外観を設定します。 スタイルによっては、特定のオプションが利用できなくなることもあります。
 
-This parameter is useful, for example, when the background picture contains borders:
+#### JSON 文法
 
-| With / Without       | Example                                                      |
-| -------------------- | ------------------------------------------------------------ |
-| Without margin       | ![](../assets/en/FormObjects/property_horizontalMargin1.png) |
-| With 13-pixel margin | ![](../assets/en/FormObjects/property_horizontalMargin2.png) |
-> This property works in conjunction with the [Vertical Margin](#vertical-margin) property.
+|  名称   | データタイプ | とりうる値                                                                                                                                                              |
+|:-----:|:------:| ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| style |  text  | "regular", "flat", "toolbar", "bevel", "roundedBevel", "gradientBevel", "texturedBevel", "office", "help", "circular", "disclosure", "roundedDisclosure", "custom" |
 
-#### JSON Grammar
+#### 対象オブジェクト
 
-| Name          | Data Type | Possible Values                         |
-| ------------- | --------- | --------------------------------------- |
-| customBorderX | number    | For use with "custom" style. Minimum: 0 |
-
-#### Objects Supported
-
-[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+[ボタン](button_overview.md) - [ラジオボタン](radio_overview.md) - [チェックボックス](checkbox_overview.md)
 
 ---
 
-## Icon Location
+## 横方向マージン
 
-Designates the placement of an icon in relation to the form object.
+ボタン内側の横方向のマージンサイズ (ピクセル単位) を指定します。 マージンにより、ボタンアイコンとタイトルの領域を制限します。
 
-#### JSON Grammar
+背景ピクチャーに境界が含まれるような場合に、このパラメーターを利用します:
 
-| Name          | Data Type | Possible Values         |
-| ------------- | --------- | ----------------------- |
-| iconPlacement | string    | "none", "left", "right" |
+| マージン指定       | 例題                                                           |
+| ------------ | ------------------------------------------------------------ |
+| マージンなし       | ![](../assets/en/FormObjects/property_horizontalMargin1.png) |
+| 13 ピクセルのマージン | ![](../assets/en/FormObjects/property_horizontalMargin2.png) |
+> このプロパティは [縦方向マージン](#縦方向マージン) プロパティとの組み合わせで機能します。
 
-#### Objects Supported
+#### JSON 文法
 
-[List Box Header](listbox_overview.md#list-box-headers)
+| 名称            | データタイプ | とりうる値                   |
+| ------------- | ------ | ----------------------- |
+| customBorderX | number | "カスタム" スタイルで利用可。 最小値: 0 |
 
----
+#### 対象オブジェクト
 
-## Icon Offset
-
-Sets a custom offset value in pixels, which will be used when the button is clicked
-
-The title of the button will be shifted to the right and toward the bottom for the number of pixels entered. This allows applying a customized 3D effect when the button is clicked.
-
-#### JSON Grammar
-
-| Name         | Data Type | Possible Values |
-| ------------ | --------- | --------------- |
-| customOffset | number    | minimum: 0      |
-
-#### Objects Supported
-
-[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+[カスタムボタン](button_overview.md#カスタム) - [カスタムチェックボックス](checkbox_overview.md#カスタム) - [カスタムラジオボタン](radio_overview.md#カスタム)
 
 ---
 
-## Number of States
+## アイコンの場所
 
-This property sets the exact number of states present in the picture used as the icon for a [button with icon](button_overview.md), a [check box](checkbox_overview.md) or a custom [radio button](radio_overview.md). In general, a button icon includes four states: active, clicked, mouse over and inactive.
+フォームオブジェクトに対するアイコンの配置を指定します。
 
-Each state is represented by a different picture. In the source picture, the states must be stacked vertically:
+#### JSON 文法
+
+| 名称            | データタイプ | とりうる値                   |
+| ------------- | ------ | ----------------------- |
+| iconPlacement | string | "none", "left", "right" |
+
+#### 対象オブジェクト
+
+[[リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー)](listbox_overview.md#リストボックスヘッダー)
+
+---
+
+## アイコンオフセット
+
+ボタンクリック時のオフセット値をピクセル単位で指定します。
+
+このプロパティを使用すると、指定したピクセル数だけボタンタイトルが右下へシフトされます。 この機能により、ボタンのクリック時に独自の3D 効果を適用することができます。
+
+#### JSON 文法
+
+| 名称           | データタイプ | とりうる値  |
+| ------------ | ------ | ------ |
+| customOffset | number | 最小値: 0 |
+
+#### 対象オブジェクト
+
+[カスタムボタン](button_overview.md#カスタム) - [カスタムチェックボックス](checkbox_overview.md#カスタム) - [カスタムラジオボタン](radio_overview.md#カスタム)
+
+---
+
+## 状態の数
+
+このプロパティは [ボタン](button_overview.md)、[チェックボックス](checkbox_overview.md)、[ラジオボタン](radio_overview.md) のアイコンとして使用されるピクチャーに含まれる状態の数を指定します。 一般的にボタンアイコンは 4つの状態 (アクティブ、クリック、ロールオーバー、無効) を含んでいます。
+
+一つの状態につき、一つの画像を割り当てます。 ソースピクチャーでは、状態を表すアイコンは縦に並んでいなければなりません:
 
 ![](../assets/en/property_numberOfStates.png)
 
-The following states are represented:
+状態は次の順番で割り当てられます:
 
-1. button not clicked / check box unchecked (variable value=0)
-2. button clicked / check box checked (variable value=1)
-3. roll over
+1. ボタン未クリック / チェックボックス未選択 (変数値=0)
+2. ボタンクリック / チェックボックス選択 (変数値=1)
+3. ロールオーバー
 4. disabled
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name       | Data Type | Possible Values |
-| ---------- | --------- | --------------- |
-| iconFrames | number    | minimum: 1      |
+| 名称         | データタイプ | とりうる値  |
+| ---------- | ------ | ------ |
+| iconFrames | number | 最小値: 1 |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
-
----
-
-## Picture pathname
-
-Sets the path of the picture that will be used as icon for the object.
-
-The pathname to enter is similar as for the [Pathname property for static pictures](properties_Picture.md#pathname).
-
-> When used as icon for active objects, the picture must be designed to support a variable [number of states](#number-of-states).
-
-#### JSON Grammar
-
-| Name | Data Type | Possible Values                              |
-| ---- | --------- | -------------------------------------------- |
-| icon | picture   | Relative or filesystem path in POSIX syntax. |
-
-#### Objects Supported
-
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md)
+[ボタン](button_overview.md) ([ヘルプ](button_overview.md#ヘルプ)ボタンを除く) - [チェックボックス](checkbox_overview.md) - [ラジオボタン](radio_overview.md)
 
 ---
 
-## Title/Picture Position
+## ピクチャーパス名
 
-This property allows modifying the relative location of the button title in relation to the associated icon. This property has no effect when the button contains only a title (no associated picture) or a picture (no title). By default, when a button contains a title and a picture, the text is placed below the picture.
+オブジェクトのアイコンに使用するピクチャーのパスを指定します。
 
-Here are the results using the various options for this property:
+パス名は、[スタティックピクチャーのパス名プロパティ](properties_Picture.md#パス名) と同じように指定します。
 
-| Option       | Description                                                                                                                                      | Example                                                           |
-| ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------- |
-| **Left**     | The text is placed to the left of the icon. The contents of the button are aligned to the right.                                                 | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
-| **Top**      | The text is placed above the icon. The contents of the button are centered.                                                                      | ![](../assets/en/FormObjects/property_titlePosition_top.png)      |
-| **Right**    | The text is placed to the right of the icon. The contents of the button are aligned to the left.                                                 | ![](../assets/en/FormObjects/property_titlePosition_right.png)    |
-| **Bottom**   | The text is placed below the icon. The contents of the button are centered.                                                                      | ![](../assets/en/FormObjects/property_titlePosition_bottom.png)   |
-| **Centered** | The text of the icon is centered vertically and horizontally in the button. This parameter is useful, for example, for text included in an icon. | ![](../assets/en/FormObjects/property_titlePosition_centered.png) |
+> アクティブオブジェクトのアイコンとして使う場合、[状態の数](#状態の数) 変数に対応するよう、デザインされている必要があります。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name          | Data Type | Possible Values                            |
-| ------------- | --------- | ------------------------------------------ |
-| textPlacement | string    | "left", "top", "right", "bottom", "center" |
+| 名称   | データタイプ  | とりうる値                           |
+| ---- | ------- | ------------------------------- |
+| アイコン | picture | POSIX シンタックスの相対パス、またはファイルシステムパス |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Button](button_overview.md) (all styles except [Help](button_overview.md#help)) - [Check Box](checkbox_overview.md) - [Radio Button](radio_overview.md)
+[ボタン](button_overview.md) ([ヘルプ](button_overview.md#ヘルプ)ボタンを除く) - [チェックボックス](checkbox_overview.md) - [リストボックスヘッダー](listbox_overview.md#リストボックスヘッダー) - [ラジオボタン](radio_overview.md)
 
 ---
 
-## Vertical Margin
+## タイトル/ピクチャー位置
 
-This property allows setting the size (in pixels) of the vertical margins of the button. This margin delimits the area that the button icon and title must not surpass.
+このプロパティはアイコンに対するボタンタイトルの相対的な位置を指定します。 ボタン内に、タイトルのみ (関連ピクチャーなし)、またはピクチャーのみ (タイトルなし) が含まれている場合、このプロパティは効果ありません。 デフォルトでは、ピクチャーの下部にタイトルが置かれます。
 
-This parameter is useful, for example, when the background picture contains borders.
+このプロパティの各種オプションの結果を次に示します:
 
-> This property works in conjunction with the [Horizontal Margin](#horizontal-margin) property.
+| オプション     | 詳細                                                        | 例題                                                                |
+| --------- | --------------------------------------------------------- | ----------------------------------------------------------------- |
+| **左**     | テキストはアイコンの左に置かれます。 ボタンの内容は右揃えされます。                        | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
+| **上**     | テキストはアイコンの上に置かれます。 ボタンの内容は中央揃えされます。                       | ![](../assets/en/FormObjects/property_titlePosition_top.png)      |
+| **右**     | テキストはアイコンの右に置かれます。 ボタンの内容は左揃えされます。                        | ![](../assets/en/FormObjects/property_titlePosition_right.png)    |
+| **下**     | テキストはアイコンの下に置かれます。 ボタンの内容は中央揃えされます。                       | ![](../assets/en/FormObjects/property_titlePosition_bottom.png)   |
+| **中央合わせ** | アイコンのテキストはボタン内で縦と横に中央揃えされます。 テキストをアイコンの中に組み込むような場合に利用します。 | ![](../assets/en/FormObjects/property_titlePosition_centered.png) |
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name          | Data Type | Possible Values                         |
-| ------------- | --------- | --------------------------------------- |
-| customBorderY | number    | For use with "custom" style. Minimum: 0 |
+| 名称            | データタイプ | とりうる値                                      |
+| ------------- | ------ | ------------------------------------------ |
+| textPlacement | string | "left", "top", "right", "bottom", "center" |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Custom Button](button_overview.md#custom) - [Custom Check Box](checkbox_overview.md#custom) - [Custom Radio Button](radio_overview.md#custom)
+[ボタン](button_overview.md) ([ヘルプ](button_overview.md#ヘルプ)ボタンを除く) - [チェックボックス](checkbox_overview.md) - [ラジオボタン](radio_overview.md)
 
 ---
 
-## With pop-up menu
+## 縦方向マージン
 
-This property allows displaying a symbol that appears as a triangle in the button to indicate the presence of an attached pop-up menu:
+ボタン内側の縦方向のマージンサイズ (ピクセル単位) を指定します。 マージンにより、ボタンアイコンとタイトルの領域を制限します。
+
+背景ピクチャーに境界が含まれるような場合に、このパラメーターを利用します。
+
+> このプロパティは [横方向マージン](#横方向マージン) プロパティとの組み合わせで機能します。
+
+#### JSON 文法
+
+| 名称            | データタイプ | とりうる値                   |
+| ------------- | ------ | ----------------------- |
+| customBorderY | number | "カスタム" スタイルで利用可。 最小値: 0 |
+
+#### 対象オブジェクト
+
+[カスタムボタン](button_overview.md#カスタム) - [カスタムチェックボックス](checkbox_overview.md#カスタム) - [カスタムラジオボタン](radio_overview.md#カスタム)
+
+---
+
+## ポップアップメニューあり
+
+このプロパティを使用すると、ボタン内に逆三角形として表われるシンボルを表示することができます。このシンボルは、ポップアップメニューが付属することを示します:
 
 ![](../assets/en/FormObjects/property_popup.png)
 
-The appearance and location of this symbol depends on the button style and the current platform.
+このシンボルの外観と位置は、ボタンスタイルとプラットフォームによって変わります。
 
-### Linked and Separated
+### リンクと分離
 
-To attach a pop-up menu symbol to a button, there are two display options available:
+ポップアップメニューシンボルをボタンに付加する際に、リンクと分離という2つのオプションから選択することができます:
 
-|                         Linked                          |                         Separated                          |
+|                           リンク                           |                             分離                             |
 |:-------------------------------------------------------:|:----------------------------------------------------------:|
 | ![](../assets/en/FormObjects/property_popup_linked.png) | ![](../assets/en/FormObjects/property_popup_separated.png) |
-> The actual availability of a "separated" mode depends on the style of the button and the platform.
+> 実際に "分離" モードを利用できるかどうかは、ボタンスタイルとプラットフォームによって決まります。
 
-Each option specifies the relation between the button and the attached pop-up menu:
+それぞれのオプションにより、ボタンとポップアップメニューとの関係が指定されます:
 
 <li>When the pop-up menu is **separated**, clicking on the left part of the button directly executes the current action of the button; this action can be modified using the pop-up menu accessible in the right part of the button.</li>
-<li>When the pop-up menu is **linked**, a simple click on the button only displays the pop-up menu. Only the selection of the action in the pop-up menu causes its execution.</li>
+<li>When the pop-up menu is **linked**, a simple click on the button only displays the pop-up menu. このポップアップメニュー上のアクションを選択しないと、実行はおこなわれません。</li>
 
-### Managing the pop-up menu
+### ポップアップメニューの管理
 
-It is important to note that the "With Pop-up Menu" property only manages the graphic aspect of the button. The display of the pop-up menu and its values must be handled entirely by the developer, more particularly using `form events` and the **[Dynamic pop up menu](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.en.html)** and **[Pop up menu](https://doc.4d.com/4Dv17R5/4D/17-R5/Pop-up-menu.301-4127438.en.html)** commands.
+"ポップアップメニューあり" プロパティは、ボタンのグラフィック面だけを管理するという点に注意が必要です。 ポップアップメニューとその値の表示は、すべて開発者が処理しなくてはなりません。具体的にはフォームイベントや [Dynamic pop up menu](https://doc.4d.com/4Dv18/4D/18/Dynamic-pop-up-menu.301-4505524.ja.html)、[Pop up menu](https://doc.4d.com/4Dv18/4D/18/Pop-up-menu.301-4504659.ja.html) コマンドを使用してこれを処理します。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name           | Data Type | Possible Values                                                             |
-|:-------------- | --------- | --------------------------------------------------------------------------- |
-| popupPlacement | string    | <li>"none"</li><li>"linked"</li><li>"separated"</li> |
+| 名称             | データタイプ | とりうる値                                                                       |
+|:-------------- | ------ | --------------------------------------------------------------------------- |
+| popupPlacement | string | <li>"none"</li><li>"linked"</li><li>"separated"</li> |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Toolbar Button](button_overview.md#toolbar) - [Bevel Button](button_overview.md#bevel) - [Rounded Bevel Button](button_overview.md#Rounded-bevel) - [OS X Gradient Button](button_overview.md#os-x-gradient) - [OS X Textured Button](button_overview.md#os-x-textured) - [Office XP Button](button_overview.md#office-XP) - [Circle Button](button_overview.md#circle) - [Custom](button_overview.md#custom)
+[ツールバーボタン](button_overview.md#ツールバー) - [ベベルボタン](button_overview.md#ベベル) - [角の丸いべべルボタン](button_overview.md#角の丸いベベル) - [OS X グラデーションボタン](button_overview.md#os-x-グラデーション) - [OS X テクスチャーボタン](button_overview.md#os-x-テクスチャー) - [Office XP ボタン](button_overview.md#office-xp) - [サークルボタン](button_overview.md#サークル) - [カスタムボタン](button_overview.md#カスタム)

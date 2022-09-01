@@ -1,5 +1,5 @@
 ---
-id: processes
+id: prozesse
 title: Processes Page
 ---
 
@@ -50,7 +50,7 @@ The activity of the process is the percentage of time that 4D Server has devoted
 
 Each process is identified by an icon as well as a type. The color and form of the icon indicates the type of process:
 
-| icon                                       | type                                                                                                                                                      |
+| icon                                       | typ                                                                                                                                                       |
 | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![](../assets/en/Admin/server-icon-1.png)  | Application server                                                                                                                                        |
 | ![](../assets/en/Admin/server-icon-2.png)  | SQL Server                                                                                                                                                |

@@ -1,31 +1,31 @@
 ---
 id: tabControl
-title: Tab Controls
+title: Onglets
 ---
 
-A tab control creates an object that lets the user choose among a set of virtual screens that are enclosed by the tab control object. Each screen is accessed by clicking its tab.
+Un onglet crée un objet qui permet à l’utilisateur de choisir entre plusieurs écrans virtuels affichés dans les limites de l’onglet. L’utilisateur accède à chaque écran en cliquant sur l’onglet correspondant.
 
-The following multi-page form uses a tab control object:
+Le formulaire multi-pages suivant utilise un onglet :
 
 ![](../assets/en/FormObjects/tabControl1.png)
 
-To navigate from screen to screen, the user simply clicks the desired tab.
+Pour passer d’un écran à l’autre, l’utilisateur clique simplement sur l’onglet correspondant.
 
-The screens can represent pages in a multi-page form or an object that changes when the user clicks a tab. If the tab control is used as a page navigation tool, then the [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) command or the `gotoPage` standard action would be used when a user clicks a tab.
+Un onglet peut être utilisé, entre autres, pour gérer la navigation entre les pages d’un formulaire multi-pages. Dans ce cas, la commande [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) ou l’action standard `gotoPage` devra être appelée lorsque l’utilisateur cliquera sur l’onglet.
 
-Another use of the tab control is to control the data that is displayed in a subform. For example, a Rolodex could be implemented using a tab control. The tabs would display the letters of the alphabet and the tab control’s action would be to load the data corresponding to the letter that the user clicked.
+Un onglet peut aussi être utilisé pour contrôler les données qui sont affichées dans un sous-formulaire. On peut, par exemple, implémenter un rolodex à l’aide d’un onglet. Chaque onglet afficherait alors une des lettres de l’alphabet et l’action de l’onglet serait de charger les informations correspondantes à la lettre sur lequel l’utilisateur a cliqué.
 
-Each tab can display labels or labels and a small icon. If you include icons, they appear to the left of each label. Here is an example of a tab control that uses icons:
+Chaque onglet peut afficher des intitulés ou des intitulés et des petites icônes. Si vous placez des icônes, elles apparaissent à gauche de chaque intitulé. Voici un exemple d’onglet qui utilise des icônes :
 
 ![](../assets/en/FormObjects/tabControl2.png)
 
-When you create a tab control, 4D manages the spacing and placement of the tabs. You only need to supply the labels in the form of an array, or the icons and labels in the form of a hierarchical list.
+Lorsque vous créez un onglet, 4D gère l’espacement et le placement des onglets. Vous n’avez à fournir à 4D que les intitulés sous la forme d’un tableau ou les icônes et intitulés sous la forme d’une énumération hiérarchique.
 
-If the tab control is wide enough to display all the tabs with both the labels and icons, it displays both. If the tab control is not wide enough to display both the labels and icons, 4D displays the icons only. If it can’t fit all the icons, it places scroll arrows to the right of the last visible tab. The scroll arrows allow the user to scroll the icons to the left or right.
+Si l’onglet est assez large, il affiche les intitulés et les icônes. S’il ne peut pas afficher toutes les icônes à la fois, il place des flèches de défilement à droite du dernier onglet visible.   Les flèches de défilement permettent à l’utilisateur de faire défiler des onglets vers la droite ou vers la gauche.
 
-Under macOS, in addition to the standard position (top), the tab controls can also be aligned to the bottom.
+Sous macOS, les onglets peuvent être orientés, en plus de la position standard (en haut), à droite, à gauche ou en bas.
 
-### JSON Example
+### Exemple JSON
 
 ```4d
  "myTab": {
@@ -38,12 +38,12 @@ Under macOS, in addition to the standard position (top), the tab controls can al
  }
 ```
 
-## Adding labels to a tab control
+## Ajouter les intitulés dans un onglet
 
-There are several ways to supply the labels for a tab control:
+Pour placer des intitulés dans un onglet, plusieurs possibilités se présentent à vous :
 
-* You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer ("$ref") to a json list. Icons associated with list items in the Lists editor will be displayed in the tob control.
-* You can create a Text array that contains the names of each page of the form. This code must be executed before the form is presented to the user. For example, you could place the code in the object method of the tab control and execute it when the `On Load` event occurs.
+* Vous pouvez associer à l’onglet [une liste de valeurs](properties_DataSource.md#choice-list-static-list), accessible via une collection (liste statique) ou un pointeur JSON ("$ref") vers une liste json. Les icônes associées à des éléments de liste dans l'éditeur de listes seront affichées dans l'onglet.
+* Vous pouvez créer un tableau Texte qui contient les noms de chaque page du formulaire. Le code doit être exécuté avant que le formulaire soit présenté à l’utilisateur. Par exemple, vous pouvez placer ce code dans l’événement formulaire `Sur chargement`.
 
 ```4d
  ARRAY TEXT(arrPages;3)
@@ -51,21 +51,21 @@ There are several ways to supply the labels for a tab control:
  arrPages{2}:="Address"
  arrPages{3}:="Notes"  
 ```
-> You can also store the names of the pages in a hierarchical list and use the `Load list` command to load the values into the array.
+> Vous pouvez aussi stocker les noms des pages dans une liste hiérarchique et utiliser la commande `Load list` pour charger les valeurs dans le tableau.
 
-## Managing tabs programmatically
+## Gérer les onglets par programmation
 
-### FORM GOTO PAGE command
+### Commande FORM GOTO PAGE
 
-You can use the [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) command in the tab control’s method:
+Vous pouvez utiliser la commande [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) dans la méthode objet de l’onglet pour naviguer parmi les pages du formulaire :
 
 ```4d
 FORM GOTO PAGE(arrPages)
 ```
 
-The command is executed when the `On Clicked` event occurs. You should then clear the array when the `On Unload` event occurs.
+Cette commande devra être exécutée dans l’événement formulaire `Sur clic`. Il est préférable d’effacer le tableau dans l’événement formulaire `Sur libération`.
 
-Here is an example object method:
+Vous pouvez, par exemple, écrire le code suivant :
 
 ```4d
  Case of
@@ -78,12 +78,12 @@ Here is an example object method:
  End case
 ```
 
-### Goto Page action
+### Action Goto Page
 
-When you assign the `gotoPage` [standard action](properties_Action.md#standard-action) to a tab control, 4D will automatically display the page of the form that corresponds to the number of the tab that is selected.
+Lorsque vous associez l’[action standard](properties_Action.md#standard-action) `gotoPage` à un objet de type Onglet, 4D affiche automatiquement la page du formulaire correspondant au numéro de l’onglet sélectionné.
 
-For example, if the user selects the 3rd tab, 4D will display the third page of the current form (if it exists).
+Par exemple, si l’utilisateur clique sur le 3e onglet, 4D affichera la page 3 du formulaire courant (si elle existe).
 
-## Supported Properties
+## Propriétés prises en charge
 
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Choice List](properties_DataSource.md#choice-list-static-list) - [Class](properties_Object.md#css-class) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Size](properties_Text.md#font-size)  - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Standard action](properties_Action.md#standard-action) - [Tab Control Direction](properties_Appearance.md#tab-control-direction) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Gras](properties_Text.md#bold) - [Bas](properties_CoordinatesAndSizing.md#bottom) - [Combo box](properties_DataSource.md#choice-list-static-list) - [Classe](properties_Object.md#css-class) - [Type d'expression](properties_Object.md#expression-type) - [Police](properties_Text.md#font) - [Taille](properties_Text.md#font-size)  - [Hauteur](properties_CoordinatesAndSizing.md#height) - [Message d'aide](properties_Help.md#help-tip) - [Dim. horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Italique](properties_Text.md#italic) - [Gauche](properties_CoordinatesAndSizing.md#left) - [Nom](properties_Object.md#object-name) - [Droite](properties_CoordinatesAndSizing.md#right) - [Action standard ](properties_Action.md#standard-action) - [Orientation onglets](properties_Appearance.md#tab-control-direction) - [Haut](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Souligné](properties_Text.md#underline) - [Dim. vertical](properties_ResizingOptions.md#vertical-sizing) - [Variable ou Expression](properties_Object.md#variable-or-expression) - [Visibilité](properties_Display.md#visibility) - [Largeur](properties_CoordinatesAndSizing.md#width)

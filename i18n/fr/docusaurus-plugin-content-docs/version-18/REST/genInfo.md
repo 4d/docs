@@ -1,36 +1,34 @@
 ---
 id: genInfo
-title: Getting Server Information
+title: Obtenir des informations du serveur
 ---
 
-You can get several information from the REST server:
+Vous pouvez obtenir plusieurs informations du serveur REST :
 
-- the exposed datastores and their attributes
-- the REST server cache contents, including user sessions.
+- les datastores exposées et leurs attributs
+- le contenu du cache du serveur REST, y compris les sessions utilisateur.
 
-## Catalog
+## Catalogue
 
-Use the [`$catalog`]($catalog.md), [`$catalog/{dataClass}`]($catalog.md#catalogdataclass), or [`$catalog/$all`]($catalog.md#catalogall) parameters to get the list of [exposed dataclasses and their attributes](configuration.md#exposing-tables-and-fields).
+Utilisez les paramètres [`$catalog`]($catalog.md),[`$catalog/{dataClass}`]($catalog.md#catalogdataclass), ou [`$catalog/$all`]($catalog.md#catalogall) pour obtenir la liste [des dataclasses exposées et leurs attributs](configuration.md#exposing-tables-and-fields).
 
-To get the collection of all exposed dataclasses along with their attributes:
+Pour obtenir la collection de toutes les dataclass exposées avec leurs attributs :
 
 `GET /rest/$catalog/$all`
 
 
-## Cache info
+## Informations sur le cache
 
-Use the [`$info`]($info.md) parameter to get information about the entity selections currently stored in 4D Server's cache as well as running user sessions.
+Utilisez le paramètre [`$info`]($info.md) pour obtenir des informations sur les sélections d'entités stockées dans le cache du 4D Server et sur l'exécution des sessions utilisateur.
 
-## queryPath and queryPlan
+## queryPath et queryPlan
 
-Entity selections that are generated through queries can have the following two properties: `queryPlan` and `queryPath`. To calculate and return these properties, you just need to add [`$queryPlan`]($queryplan.md) and/or [`$queryPath`]($querypath.md) in the REST request.
-
-For example:
+Les sélections d'entité générées par les requêtes peuvent avoir les deux propriétés suivantes : `queryPlan` et `queryPath`. Pour calculer et retourner ces propriétés, il vous suffit d'ajouter [`$queryPlan`]($queryplan.md) et/ou [`$queryPath`]($querypath.md) dans la demande REST.
 
 `GET /rest/People/$filter="employer.name=acme AND lastName=Jones"&$queryplan=true&$querypath=true`
 
-These properties are objects that contain information about how the server performs composite queries internally through dataclasses and relations:
-- **queryPlan**: object containing the detailed description of the query just before it was executed (i.e., the planned query).
-- **queryPath**: object containing the detailed description of the query as it was actually performed.
+Ces propriétés sont des objets contenant des informations sur la façon dont le serveur exécute les requêtes composites en interne via des dataclass et des relations :
+- **queryPlan** : objet contenant la description détaillée de la requête juste avant son exécution (c'est-à-dire la requête planifiée).
+- **queryPath** : objet contenant la description détaillée de la requête telle qu'elle a été réellement effectuée.
 
-The information recorded includes the query type (indexed and sequential) and each necessary subquery along with conjunction operators. Query paths also contain the number of entities found and the time required to execute each search criterion. You may find it useful to analyze this information while developing your application. Generally, the description of the query plan and its path are identical but they can differ because 4D can implement dynamic optimizations when a query is executed in order to improve performance. For example, the 4D engine can dynamically convert an indexed query into a sequential one if it estimates that it is faster. This particular case can occur when the number of entities being searched for is low.
+Les informations enregistrées incluent le type de requête (indexé et séquentiel) et chaque sous-requête nécessaire ainsi que les opérateurs de conjonction. Les chemins d'accès des requêtes contiennent également le nombre d'entités identifiées et la durée d'exécution de chaque critère de recherche. Query paths also contain the number of entities found and the time required to execute each search criterion. Généralement, la description du plan de requête et son chemin d'accès sont identiques mais ils peuvent différer car 4D peut intégrer des optimisations dynamiques lorsqu'une requête est exécutée, afin d'améliorer les performances. Par exemple, le moteur 4D peut convertir dynamiquement une requête indexée en requête séquentielle s'il estime que ce processus est plus rapide. Ce cas particulier peut se produire lorsque le nombre d'entités recherchées est faible.

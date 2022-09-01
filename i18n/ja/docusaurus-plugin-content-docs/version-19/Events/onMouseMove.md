@@ -3,30 +3,30 @@ id: onMouseMove
 title: On Mouse Move
 ---
 
-| Code | Can be called by                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Definition                                                                                              |
-| ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| 37   | [4D Write Pro area](FormObjects/writeProArea_overview) - [Button](FormObjects/button_overview.md) - [Button Grid](FormObjects/buttonGrid_overview.md) - [Check Box](FormObjects/checkbox_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - [Dropdown list](FormObjects/dropdownList_Overview.md) - Form - [Hierarchical List](FormObjects/list_overview.md#overview) - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Picture Button](FormObjects/pictureButton_overview.md) - [Picture Pop up menu](FormObjects/picturePopupMenu_overview.md) - [Plug-in Area](FormObjects/pluginArea_overview.md#overview) - [Progress Indicators](FormObjects/progressIndicator.md) - [Radio Button](FormObjects/radio_overview.md) - [Ruler](FormObjects/ruler.md) - [Spinner](FormObjects/spinner.md) - [Splitter](FormObjects/splitters.md) - [Stepper](FormObjects/stepper.md) - [Tab control](FormObjects/tabControl.md) | The mouse cursor moves at least one pixel OR a modifier key (Shift, Alt/Option, Shift Lock) was pressed |
+| コード | 呼び出し元                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | 定義                                                                               |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| 37  | [4D Write Pro エリア](FormObjects/writeProArea_overview) - [ボタン](FormObjects/button_overview.md) - [ボタングリッド](FormObjects/buttonGrid_overview.md) - [チェックボックス](FormObjects/checkbox_overview.md) - [コンボボックス](FormObjects/comboBox_overview.md) - [ドロップダウンリスト](FormObjects/dropdownList_Overview.md) - フォーム - [階層リスト](FormObjects/list_overview.md) - [入力](FormObjects/input_overview.md) - [リストボックス](FormObjects/listbox_overview.md) - [ピクチャーボタン](FormObjects/pictureButton_overview.md) - [ピクチャーポップアップメニュー](FormObjects/picturePopupMenu_overview.md) - [プラグインエリア](FormObjects/pluginArea_overview.md) - [進捗インジケーター](FormObjects/progressIndicator.md) - [ラジオボタン](FormObjects/radio_overview.md) - [ルーラー](FormObjects/ruler.md) - [スピナー](FormObjects/spinner.md) - [スプリッター](FormObjects/splitters.md) - [ステッパー](FormObjects/stepper.md) - [タブコントロール](FormObjects/tabControl.md) | マウスカーソルがオブジェクトの描画エリア上で (最低1ピクセル) 動いたか、変更キー (Shift, Alt/Option, Shift Lock) が押された |
 
 
-## Description
+## 詳細
 
-This event is generated:
+このイベントは次の場合に生成されます:
 
-- when the mouse cursor moves at least one pixel
-- OR when a modifier key (**Shift**, **Alt/Option**, **Shift Lock**) was pressed. This makes it possible to manage copy- or move-type drag-and-drop operations.
+- マウスカーソルが 1ピクセル以上動いた
+- または、変更キー (**Shift**, **Alt/Option**, **Shift Lock**) が押された これにより、ドラッグ＆ドロップによるコピーや移動も管理できるようになります これにより、ドラッグ＆ドロップによるコピーや移動も管理できるようになります
 
-If the event is checked for an object only, it is generated only when the cursor is within the graphic area of the object.
+イベントがオブジェクトに対してのみチェックされていた場合は、マウスカーソルがオブジェクトの描画エリア内にあった場合にのみイベントが生成されます。
 
-The `On Mouse Move` event updates the *MouseX* and *MouseY* system variables.
+`On Mouse Move` イベントは、*MouseX* および *MouseY* システム変数を更新します。
 
-Objects that are made invisible using the `OBJECT SET VISIBLE` command or the [Visibility](FormObjects/properties_Display.md#visibility) property do not generate this event.
+`OBJECT SET VISIBLE` コマンドの使用や、[表示状態](FormObjects/properties_Display.md#表示状態) プロパティの設定によって非表示にされたオブジェクトでは、このイベントは生成されません。
 
 
-### Calling stack
+### コールスタック
 
-If the `On Mouse Move` event has been checked for the form, it is generated for each form object. If it is checked for an object, it is generated only for that object. When there are superimposed objects, the event is generated by the first object capable of managing it that is found going in order from top level to bottom.
+`On Mouse Move` イベントがフォームにおいてチェックされている場合、各フォームオブジェクトに対してイベントが生成されます。 あるオブジェクトにおいてチェックされている場合は、そのオブジェクトに対してのみ生成されます。 重なったオブジェクトがある場合はトップレベルから順に、イベントを処理することができる最初のオブジェクトによって生成されます。
 
-### See also
+### 参照
 
 - [`On Mouse Enter`](onMouseEnter.md)
 - [`On Mouse Leave`](onMouseLeave.md)

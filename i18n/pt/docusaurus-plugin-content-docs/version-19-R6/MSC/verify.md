@@ -1,7 +1,7 @@
 ---
 id: verify
-title: Verify Page
-sidebar_label: Verify Page
+title: Página Verificação
+sidebar_label: Página Verificação
 ---
 
 You use this page to verify data integrity. The verification can be carried out on records and/or indexes. This page only checks the data integrity. If errors are found and repairs are needed, you will be advised to use the [Repair page](repair.md).
@@ -16,7 +16,7 @@ The page contains action buttons that provide direct access to the verification 
 - **Verify the records and the indexes:** Starts the total data verification procedure.
 - **Verify the records only**: Starts the verification procedure for records only (indexes are not verified).
 - **Verify the indexes only**: Starts the verification procedure for indexes only (records are not verified).
-> Verification of records and indexes can also be carried out in detail mode, table by table (see the Details section below).
+> > Verification of records and indexes can also be carried out in detail mode, table by table (see the Details section below).
 
 
 ## Open log file

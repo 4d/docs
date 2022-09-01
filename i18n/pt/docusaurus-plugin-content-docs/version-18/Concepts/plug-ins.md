@@ -30,7 +30,7 @@ A plug-in usually contains a set of routines given to the 4D Developer. It can h
 
 ### Important note
 
-A plug-in can be very simple, with just one routine performing a very small task, or it can be very complex, involving hundred of routines and areas. There is virtually no limit to what a plug-in can do, however every plug-in developer should remember that a plug-in is a "sample" piece of code. It is the plug-in that runs within 4D, not the opposite. As a piece of code, it is the host of 4D; it is not a stand-alone application. It shares CPU time and memory with 4D and other plug-ins, thus, it should be a polite code, using just what is necessary to run. For example, in long loops, a plug-in should call `PA_Yield()` to give time to the 4D scheduler unless its task is critical for both it and the database.
+A plug-in can be very simple, with just one routine performing a very small task, or it can be very complex, involving hundred of routines and areas. There is virtually no limit to what a plug-in can do, however every plug-in developer should remember that a plug-in is a "sample" piece of code. It is the plug-in that runs within 4D, not the opposite. As a piece of code, it is the host of 4D; it is not a stand-alone application. It shares CPU time and memory with 4D and other plug-ins, thus, it should be a polite code, using just what is necessary to run. Por exemplo, nos loops longos, um plug-in deve chamar a `PA_Yield()` para dar tempo ao planificador 4D, a menos que sua tarefa seja crítica tanto para ele quanto para o banco de dados.
 
 ## How to create a plug-in?
 
@@ -43,18 +43,18 @@ A plug-in can be very simple, with just one routine performing a very small task
 
 You install plug-ins in the 4D environment by copying their files into the appropriate folder.
 
-“PluginName.bundle” folders contain both Windows and macOS versions of 4D plug-ins. Their specific internal architecture lets 4D Server load the appropriate version according to the platform where the client machine will be run. To install a plug-in in your environment, you just need to put the “PluginName.bundle” folder or package concerned into the desired **PlugIns** folder.
+“PluginName.bundle” folders contain both Windows and macOS versions of 4D plug-ins. Their specific internal architecture lets 4D Server load the appropriate version according to the platform where the client machine will be run. Para instalar um plug-in em seu ambiente, só precisa colocar a pasta "PluginName.bundle" ou o pacote correspondente na pasta **PlugIns** desejada.
 
-You can put the PlugIns folder in two different places:
+Pode colocar a pasta PlugIns em dois lugares diferentes:
 
 - At the level of the 4D executable application, i.e.:
   - Under Windows: next to the .exe file
   - Under macOS: at the first level of the Contents folder inside the application package.   
     In this case, plug-ins are available in every database opened by this application.
-- At the same level as the database structure file. In this case,  plug-ins are only available in this particular database.
+- No mesmo nível que o arquivo de estrutura do banco de dados. Nesse caso, plug-ins só estão disponíveis no banco de dados em particular.
 
 The choice of location depends on how you want to use the plug-in.
 
 If the same plug-in is placed in both locations, 4D will only load the one located next to the structure. In an application that is compiled and merged using 4D Volume Desktop, if there are several instances of the same plug-in present, this will prevent the application from opening.
 
-Plug-ins are loaded by 4D when the application is launched so you will need to quit your 4D application before installing them. Then open your database with 4D. If any plug-in requires a specific license for use, it will be loaded but not available for use.
+Plug-ins are loaded by 4D when the application is launched so you will need to quit your 4D application before installing them. Plug-ins are loaded by 4D when the application is launched so you will need to quit your 4D application before installing them. If any plug-in requires a specific license for use, it will be loaded but not available for use.

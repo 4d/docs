@@ -4,29 +4,29 @@ title: "$upload"
 ---
 
 
-Returns an ID of the file uploaded to the server
+Devuelve un ID del archivo subido al servidor
 
-## Description
-Post this request when you have a file that you want to upload to the Server. If you have an image, you pass `$rawPict=true`. For all other files, you pass `$binary=true`.
+## Descripción
+Publique esta petición cuando tenga un archivo que quiera subir al Servidor. Si tiene una imagen, pase `$rawPict=true`. Para todos los demás archivos, se pasa `$binary=true`.
 
-You can modify the timeout, which by default is 120 seconds, by passing a value to the `$timeout parameter`.
+Puede modificar el tiempo de espera, que por defecto es de 120 segundos, pasando un valor al parámetro `$timeout`.
 
-## Image upload example
-To upload an image, you must first select the file object on the client using the HTML 5 built-in API for using file from a web application. 4D uses the MIME type attribute of the file object so it can handle it appropriately.
+## Ejemplo de carga de imagen
+Para subir una imagen, primero hay que seleccionar el objeto archivo en el cliente utilizando la API integrada HTML 5 para utilizar el archivo desde una aplicación web. 4D utiliza el atributo de tipo MIME del objeto archivo para poder manejarlo adecuadamente.
 
-Then, we upload the selected image to 4D Server:
+A continuación, subimos la imagen seleccionada a 4D Server:
 
  `POST  /rest/$upload?$rawPict=true`
 
-**Result**:
+**Resultado**:
 
 `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50" }`
 
- Afterwards, you use this ID to add it to an attribute using [`$method=update`]($method.md#methodupdate) to add the image to an entity:
+ Después, se utiliza este ID para añadirlo a un atributo utilizando [`$method=update`]($method.md#methodupdate)para añadir la imagen a una entidad:
 
  `POST  /rest/Employee/?$method=update`
 
-**POST data**:
+**Datos POST**:
 
 ````
 {
@@ -36,9 +36,9 @@ Then, we upload the selected image to 4D Server:
 }
 ````
 
-**Response**:
+**Respuesta**:
 
-The modified entity is returned:
+Se devuelve la entidad modificada:
 
 ````
 {

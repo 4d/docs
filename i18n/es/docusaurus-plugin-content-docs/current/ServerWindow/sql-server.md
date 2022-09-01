@@ -1,6 +1,6 @@
 ---
 id: sql-server
-title: SQL Server Page
+title: Página servidor SQL
 ---
 
 
@@ -11,11 +11,11 @@ The **SQL Server** page groups together information about the integrated SQL ser
 
 The upper part of the page provides information about the current status of the SQL server of 4D Server.
 
-- **State**: Started or Stopped
+- **Estado**: Iniciado o Detenido
 - **Starting time**: Date and time the SQL server was last launched.
 - **Uptime**: Time elapsed since last startup of the SQL server.
 
-## Start / Stop SQL Server
+## Iniciar/detener el servidor SQL
 
 This button toggles and can be used to control the activation of the 4D Server SQL server.
 
@@ -24,18 +24,18 @@ This button toggles and can be used to control the activation of the 4D Server S
 
 > The SQL server can also be launched automatically on application startup (option in the Settings) or by programming.
 
-## Information
+## Información
 
-### Configuration
+### Configuración
 
 This area provides information about the SQL server configuration parameters: automatic launching on startup, listening IP address, TCP port (19812 by default) and enabling of SSL for SQL connections (does not concern 4D nor HTTP connections).
 
-These parameters can be modified via the 4D Settings.
+Estos parámetros pueden modificarse a través de las Preferencias de 4D.
 
-### Connections
+### Conecciones
 
-Number of SQL connections currently open on 4D Server.
+Número de conexiones SQL abiertas actualmente en 4D Server.
 
-### Maximum Connections
+### Conexiones máximas
 
-Maximum number of simultaneous SQL connections allowed. This value depends on the license installed on the server machine.
+Número máximo de conexiones SQL simultáneas autorizadas. Este valor depende de la licencia instalada en el equipo servidor.

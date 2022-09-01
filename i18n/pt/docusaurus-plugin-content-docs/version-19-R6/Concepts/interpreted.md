@@ -1,6 +1,6 @@
 ---
 id: interpreted-compiled
-title: Interpreted and Compiled modes
+title: Modos interpretado e compilado
 ---
 
 4D applications can work in **interpreted** or **compiled** mode:
@@ -78,11 +78,8 @@ Imagine a function that returns the length (number of charaters) of values that 
 
 ```4d
   // Calc_Length (how many characters)
-  // $1 = pointer to flexible variable type, numeric, text, time, boolean
-
-C_POINTER($1)
-C_TEXT($result)  
-C_LONGINT($0)
+  // $1 = pointer to flexible variable type, numeric, text, time, boolean C_POINTER($1)
+C_TEXT($result) C_LONGINT($0)
 $result:=String($1->)
 $0:=Length($result)
 ```
@@ -94,7 +91,5 @@ $var2:=5.3
 $var3:=?10:02:24?
 $var4:=True
 
-$vLength:=Calc_Length(->$var1)+Calc_Length(->$var2)+Calc_Length (->$var3)+Calc_Length(->$var4)
-
-ALERT("Total length: "+String($vLength))
+$vLength:=Calc_Length(->$var1)+Calc_Length(->$var2)+Calc_Length (->$var3)+Calc_Length(->$var4) ALERT("Total length: "+String($vLength))
 ```

@@ -8,7 +8,7 @@ title: On Open External Link
 | 52   | [Web Area](FormObjects/webArea_overview.md) | An external URL has been opened in the browser |
 
 
-## Description
+## Beschreibung
 
 This event is generated when the loading of a URL was blocked by the Web area and the URL was opened with the current system browser, because of a filter set up via the `WA SET EXTERNAL LINKS FILTERS` command.
 

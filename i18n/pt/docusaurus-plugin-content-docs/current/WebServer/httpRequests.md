@@ -24,18 +24,18 @@ For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*"
 
 > The request should have previously been accepted by the [`On Web Authentication`](authentication.md#on-web-authentication) database method (if it exists) and the web server must be launched.
 
-### Syntax
+### Sintaxe
 
 **On Web Connection**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text )
 
-| Parameters | Type |    | Description                                  |
+| Parâmetros | Tipo |    | Descrção                                     |
 | ---------- | ---- |:--:| -------------------------------------------- |
 | $1         | Text | <- | URL                                          |
 | $2         | Text | <- | HTTP headers + HTTP body (up to 32 kb limit) |
 | $3         | Text | <- | IP address of the web client (browser)       |
 | $4         | Text | <- | IP address of the server                     |
-| $5         | Text | <- | User name                                    |
-| $6         | Text | <- | Password                                     |
+| $5         | Text | <- | Nome de usuario                              |
+| $6         | Text | <- | Senha                                        |
 
 
 You must declare these parameters as shown below:
@@ -108,7 +108,7 @@ The $5 and $6 parameters receive the user name and password entered by the user 
 
 ***/4DACTION/***MethodName***<br/> **/4DACTION/******MethodName/Param*
 
-| Parameters | Type |    | Description                                  |
+| Parâmetros | Tipo |    | Descrção                                     |
 | ---------- | ---- |:--:| -------------------------------------------- |
 | MethodName | Text | -> | Name of the 4D project method to be executed |
 | Param      | Text | -> | Text parameter to pass to the project method |
@@ -130,7 +130,7 @@ The `MyMethod` project method should generally return a "reply" (sending of an H
 
 > A method called by `/4DACTION` must not call interface elements (`DIALOG`, `ALERT`, etc.).
 
-#### Example
+#### Exemplo
 
 This example describes the association of the `/4DACTION` URL with an HTML picture object in order to dynamically display a picture in the page. You insert the following instructions in a static HTML page:
 
@@ -147,11 +147,7 @@ var $PictVar : Picture
 var $BlobVar : Blob
 
  //find the picture in the Images folder within the Resources folder 
-$path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".psd"
-
-READ PICTURE FILE($path;$PictVar) //put the picture in the picture variable
-PICTURE TO BLOB($PictVar;$BLOB;".png") //convert the picture to ".png" format
-WEB SEND BLOB($BLOB;"image/png")
+$path:=Get 4D folder(Current resources folder)+"Images"+Folder separator+$1+".psd" READ PICTURE FILE($path;$PictVar) //put the picture in the picture variable PICTURE TO BLOB($PictVar;$BLOB;".png") //convert the picture to ".png" format WEB SEND BLOB($BLOB;"image/png")
 ```
 
 ### 4DACTION to post forms
@@ -172,7 +168,7 @@ Example to define the action of a form:
 <FORM ACTION="/4DACTION/MethodName" METHOD=POST>
 ```
 
-#### Example
+#### Exemplo
 
 In a Web application, we would like for the browsers to be able to search among the records by using a static HTML page. This page is called “search.htm”. The application contains other static pages that allow you to, for example, display the search result (“results.htm”). The POST type has been associated to the page, as well as the `/4DACTION/SEARCH` action.
 
@@ -190,8 +186,7 @@ During data entry, type “ABCD” in the data entry area, check the "Whole word
 
 ```
 vName="ABCD"
-vExact="Word"
-OK="Search"
+vExact="Word" OK="Search"
 ```
 
 4D calls the `On Web Authentication` database method (if it exists), then the `processForm` project method is called, which is as follows:
@@ -251,6 +246,30 @@ if(formObj.vtUserName.value!=""){
 return true
 } else {
 alert("Enter your name, then try again.")
+return false
+}
+}
+//--></script>
+</head>
+<body>
+<form action="/4DACTION/WWW_STD_FORM_POST" method="post"
+ name="frmWelcome"
+ onsubmit="return GetBrowserInformation(frmWelcome)">
+  <h1>Welcome to Spiders United</h1>
+  <p><b>Please enter your name:</b>
+  <input name="vtUserName" value="" size="30" type="text"></p>
+  <p> 
+<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit"> 
+<input name="vsbRegister" value="Register" type="submit">
+<input name="vsbInformation" value="Information" type="submit"></p>
+<p> 
+<input name="vtNav_appName" value="" type="hidden"> 
+<input name="vtNav_appVersion" value="" type="hidden"> 
+<input name="vtNav_appCodeName" value="" type="hidden">
+<input name="vtNav_userAgent" value="" type="hidden"></p>
+</form>
+</body>
+</html>
 return false
 }
 }

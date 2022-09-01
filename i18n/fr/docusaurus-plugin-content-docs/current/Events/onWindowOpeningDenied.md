@@ -3,34 +3,34 @@ id: onWindowOpeningDenied
 title: On Window Opening Denied
 ---
 
-| Code | Can be called by                               | Definition                       |
-| ---- | ---------------------------------------------- | -------------------------------- |
-| 53   | [Web Area](../FormObjects/webArea_overview.md) | A pop-up window has been blocked |
+| Code | Peut être appelé par                            | Définition                       |
+| ---- | ----------------------------------------------- | -------------------------------- |
+| 53   | [Zones Web](../FormObjects/webArea_overview.md) | Une fenêtre pop-up a été bloquée |
 
-<details><summary>History</summary>
+<details><summary>Historique</summary>
 
-| Version | Changes           |
+| Version | Modifications     |
 | ------- | ----------------- |
 | v19 R5  | Triggered on drop |
 </details>
 
 ## Description
 
-This event is generated when the opening of a pop-up window is blocked by the Web area. 4D Web areas do not allow the opening of pop-up windows.
+Cet événement est généré lorsque l'ouverture d'une fenêtre pop-up est bloquée par la zone Web. Les zones Web de 4D ne permettent pas l'ouverture de fenêtres contextuelles.
 
-You can find out the blocked URL using the `WA Get last filtered URL` command.
+Vous pouvez identifier l'URL bloquée à l'aide de la commande `WA Get last filtered URL`.
 
-This event is also triggered when a drop operation has been done in the Web area (with embedded and Wwindows system [engines](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine)) if the [Drag and drop](../FormObjects/webArea_overview.md#user-interface) option is also enabled for the area. You can accept the drop by calling:
+Cet événement est également déclenché après une opération de déposer dans la zone Web (avec des [moteurs](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine) système Windows et intégrés) si l'option [Glisser Déposer](../FormObjects/webArea_overview.md#user-interface) est également activée pour la zone. Vous pouvez accepter l'action de déposer en appelant :
 
 ```4d
-//web area object method
+//méthode objet zone web
 If (FORM Event.code=On Window Opening Denied)
     WA OPEN URL(*; "WebArea"; WA Get last filtered URL(*; "WebArea"))  
-    // or UrlVariable:=WA Get last filtered URL(*; "WebArea")  
-    // where UrlVariable is the URL variable associated to the web area
+    // ou UrlVariable:=WA Get last filtered URL(*; "WebArea")  
+    // où UrlVariable est la variable URL associé à la zone web
 End if 
 ```
 
 
-### See also
+### Voir également
 [`On Open External Link`](onOpenExternalLink.md)

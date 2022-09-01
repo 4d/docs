@@ -5,10 +5,10 @@ title: On Menu Selected
 
 | Code | Can be called by | Definition                                             |
 | ---- | ---------------- | ------------------------------------------------------ |
-| 18   | Form             | A menu item has been chosen in the associated menu bar |
+| 18   | Formular         | A menu item has been chosen in the associated menu bar |
 
 
-## Description
+## Beschreibung
 
 The `On Menu Selected` event is sent to the form method when a command of a menu bar associated to the form is selected. You can then call the `Menu selected` language command to test the selected menu.
 

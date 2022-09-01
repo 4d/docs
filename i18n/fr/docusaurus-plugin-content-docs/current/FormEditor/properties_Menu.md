@@ -4,20 +4,20 @@ title: Menu
 ---
 
 
-## Associated Menu Bar
+## Barre de menus associée
 
-When a menu bar is associated to a form, it is added to the right of the current menu bar when the form is displayed in Application environment.
+Lorsqu'une barre de menus est associée à un formulaire, elle est ajoutée à droite de la barre de menus courante lorsque le formulaire est affiché dans l'environnement d'Application.
 
-The selection of a menu command causes an `On Menu Selected` event to be sent to the form method; you can then use the `Menu selected` command to test the selected menu.
+La sélection d'une commande de menu entraîne l'envoi d'un événement `Sur menu sélectionné` à la méthode formulaire; vous pouvez ensuite utiliser la commande `Menu selected` pour tester le menu sélectionné.
 
-> If the menu bar of the form is identical to the current menu bar, it is not added.
+> Si la barre de menus du formulaire est identique à la barre de menus courante, elle n'est pas ajoutée.
 
-The form menu bar will operate for both input and output forms.
+La barre de menus du formulaire fonctionnera pour les formulaires d'entrée et de sortie.
 
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name    | Data Type | Possible Values    |
-| ------- | --------- | ------------------ |
-| menuBar | string    | Name of a menu bar |
+| Nom     | Type de données | Valeurs possibles       |
+| ------- | --------------- | ----------------------- |
+| menuBar | string          | Nom d'une barre de menu |
 

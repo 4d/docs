@@ -1,52 +1,52 @@
 ---
 id: installation
-title: Installation and activation
+title: Instalação e ativação
 ---
 
-Welcome to 4D! You will find below all necessary information about how to install and register your 4D application.
+Welcome to 4D! Vai encontrar abaixo toda informação necessário para instalar e registrar sua aplicação 4D.
 
 ## Required configuration
 
-Refer to the [product download page](https://us.4d.com/product-download) on the 4D web site for minimum Mac / Windows configuration for your 4D series.
+Consulte a [página de descarga de produto](https://us.4d.com/product-download) no web site de 4D para conhecer a configuração mínima de Mac / Windows para sua serie 4D.
 
-All the details are available on the [Resources page](https://us.4d.com/resources/feature-release) of the 4D Web site.
+Todos os detalhes estão disponíveis na [página Recursos](https://us.4d.com/resources/feature-release) do website de 4D.
 
 ## Installation on disk
 
-4D products are installed from the 4D Web site:
+Os produtos 4D são instalados desde o website de 4D:
 
-1. Using your browser, connect to the 4D Web site and go to the [Downloads](https://us.4d.com/product-download/Feature-Release) page.
-2. Click on the download link that corresponds to your product and follow the instructions displayed on screen.
+1. Utilizando seu navegador, conecte-se ao website de 4D e vá à página de [Descargas/downloads](https://us.4d.com/product-download/Feature-Release).
+2. Clique no link de download do seu produto e siga as instruções exibidas na tela.
 
-## Activation of a product
+## Ativação de um produto
 
-Once installed on your disk, you must activate your 4D products in order to be able to use them. You also need to activate any additional licenses you obtain.
+Once installed on your disk, you must activate your 4D products in order to be able to use them. Também é preciso ativar qualquer licença adicional que obter.
 
 No activation is required for the following uses:
 
 - 4D used in remote mode (connection to a 4D Server)
-- 4D used in local mode with an interpreted database with no access to the Design environment.
+- 4D usado em modo local com um banco de dados interpretado, sem acesso ao modo Desenho.
 
-**Important:** You must have an Internet connection and an e-mail account in order to activate your products.
+**Importante:** deve ter uma conexão a Internet e uma conta de correio eletrônico para ativar seus produtos.
 
-### Activate 4D
+### Ativação de 4D
 
-1. Launch the 4D application.
-2. Select the **License Manager...** command from the **Help** menu.
-
-![](../assets/en/getStart/helpMenu.png)
-
-The **License Manager** dialog box is displayed (Instant Activation page is selected by default). See the following section.
-
-> When you open/create a local interpreted application with 4D Developer Edition, an auto-activation mechanism is implemented. In this case, a dialog box informs you that you are going to be connected to our customer database and that your licenses will be activated (you will need to enter the password for your 4D account).
-
-### Activate 4D Server
-
-1. Launch the 4D Server application. The dialog box for choosing the [activation mode](#activation-mode) appears.
+1. Lançar a aplicação 4D.
+2. Selecione o comando **Gestão de licenças...** de menu **Ajuda**.
 
 ![](../assets/en/getStart/helpMenu.png)
 
-## 4D Activation mode
+Se mostra a caixa de diálogo **Gestão de licenças** (a página de Ativação Instantânea está selecionada por padrão). Ver a próxima seção.
+
+> Quando abrir/criar uma aplicação local interpretada com 4D Developer Edition, um mecanismo de autoativação é implementado. Nesse caso, uma caixa de diálogo informa que vai ser conectado a nosso banco de dados de cliente e que suas licenças serão ativadas (deverá introduzir a senha de sua conta 4D).
+
+### Activação de 4D Server
+
+1. Lançar a aplicação 4D Server. The dialog box for choosing the [activation mode](#activation-mode) appears.
+
+![](../assets/en/getStart/helpMenu.png)
+
+## Modo de ativação de 4D
 
 4D offers three activation modes. We recommend **Instant Activation**.
 
@@ -145,7 +145,7 @@ You can use projects to organize your licenses according to your needs:
 
 If the installation or activation process fails, please check the following table, which gives the most common causes of malfunctioning:
 
-| Symptoms                                                      | Possible causes                                            | Solution(s)                                                                                                                                     |
+| Sintomas                                                      | Possible causes                                            | Solution(s)                                                                                                                                     |
 | ------------------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | Impossible to download product from 4D Internet site          | Internet site unavailable, antivirus application, firewall | 1- Try again later OR 2- Temporarily disable your antivirus application or your firewall.                                                       |
 | Impossible to install product on disk (installation refused). | Insufficient user access rights                            | Open a session with access rights allowing you to install applications (administrator access)                                                   |
@@ -153,7 +153,7 @@ If the installation or activation process fails, please check the following tabl
 
 If this information does not help you resolve your problem, please contact 4D or your local distributor.
 
-## Contacts
+## Contactos
 
 For any questions about the installation or activation of your product, please contact 4D, Inc. or your local distributor.
 
@@ -167,4 +167,4 @@ For the UK:
 - Web: [https://uk.4d.com/4d-technical-support](https://uk.4d.com/4d-technical-support)
 - Telephone: 01625 536178
 
-Find the 4D developer community on line here: [https://discuss.4d.com](https://discuss.4d.com).
+Encontre a comunidade de desenvolvedores de 4D online aqui: [https://discuss.4d.com](https://discuss.4d.com).

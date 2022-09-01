@@ -133,7 +133,7 @@ For more information, refer to the description of the `CALL SUBFORM CONTAINER` c
 
 #### EXECUTE METHOD IN SUBFORM command
 
-The `EXECUTE METHOD IN SUBFORM` command lets a form or one of its objects request the execution of a method in the context of the subform instance, which gives it access to the subform variables, objects, etc. This method can also receive parameters.
+The `EXECUTE METHOD IN SUBFORM` command lets a form or one of its objects request the execution of a method in the context of the subform instance, which gives it access to the subform variables, objects, etc. This method can also receive parameters. This method can also receive parameters.
 
 This mechanism is illustrated in the following diagram:
 

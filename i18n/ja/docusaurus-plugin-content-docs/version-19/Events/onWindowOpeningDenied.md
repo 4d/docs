@@ -3,17 +3,17 @@ id: onWindowOpeningDenied
 title: On Window Opening Denied
 ---
 
-| Code | Can be called by                            | Definition                       |
-| ---- | ------------------------------------------- | -------------------------------- |
-| 53   | [Web Area](FormObjects/webArea_overview.md) | A pop-up window has been blocked |
+| コード | 呼び出し元                                     | 定義                  |
+| --- | ----------------------------------------- | ------------------- |
+| 53  | [Webエリア](FormObjects/webArea_overview.md) | ポップアップウィンドウがブロックされた |
 
 
-## Description
+## 詳細
 
-This event is generated when the opening of a pop-up window is blocked by the Web area. 4D Web areas do not allow the opening of pop-up windows.
+このイベントは、Webエリアによりポップアップウィンドウがブロックされると生成されます。 4D Webエリアはポップアップウィンドウを許可しません。
 
-You can find out the blocked URL using the `WA Get last filtered URL` command.
+`WA Get last filtered URL` コマンドコマンドを使用してブロックされた URL を知ることができます。
 
 
-### See also
+### 参照
 [`On Open External Link`](onOpenExternalLink.md)

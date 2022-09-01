@@ -1,43 +1,43 @@
 ---
 id: overview
-title: Overview
+title: 概要
 ---
 
-User preferences specify various settings affecting your working environment, e.g. default options, display themes, Code Editor features, shortcuts, etc. They are applied to all projects opened with your 4D or 4D Server application.
+環境設定は、作業環境に影響する様々なオプションを指定します (例: デフォルトオプション、表示テーマ、コードエディター機能、ショートカット)。 これらの設定は、4D や 4D Server アプリケーションで開くすべてのプロジェクトに適用されます。
 
-**4D Server**: Object locking occurs when two or more users try to modify the settings in the Preferences dialog box at the same time. Only one user can use the Preferences dialog box at a time.
-> 4D offers a different set of parameters specific to the open projet: **Settings** (available from the **Design** menu). For more information, refer to the Settings chapter.
+**4D Server**: 複数のユーザーが同時に環境設定を更新しようとすると、オブジェクトのロックが発生します。 一度に一人のユーザーのみが環境設定ダイアログボックスを使用できます。
+> 4D は開かれているプロジェクト固有の設定をおこなうための **ストラクチャー設定** ダイアログも提供しています (**デザイン** メニューから利用可能です)。 詳細はデータベース設定の章を参照ください。
 
-## Access
+## アクセス権
 
-You can access the Preferences dialog box from the **Edit > Preferences...** menu (Windows) or the **4D** Application menu (macOS):
+環境設定ダイアログボックスにアクセスするには **編集** (Windows) または **4D** アプリケーションメニュー (macOS) から **環境設定...** を選択します:
 
 ![](../assets/en/Preferences/overviewAccess.png)
 
-This menu option is available even when there is no open project.
+このメニューコマンドは、プロジェクトが開かれていない場合でも利用できます。
 
-You can also display the Preferences dialog box in Application mode using the "Preferences" standard action (associated with a menu item or a button) or using the `OPEN SETTINGS WINDOW` command.
+`OPEN SETTINGS WINDOW` コマンドや、"環境設定" 標準アクションを (ボタンやメニューに割り当てて) 使用することで、アプリケーションモードでも環境設定ダイアログボックスを表示できます。
 
-## Storage
+## ストレージ
 
-Settings made in the Preferences dialog box are saved in an XML format preferences file named **4D Preferences vXX.4DPreferences** that is stored in the active 4D folder of the current user, as returned by the [`Get 4D folder`](https://doc.4d.com/4Dv18R6/4D/18-R6/Get-4D-folder.301-5198423.en.html) command:
+環境設定ダイアログに保存された設定は XMLフォーマットで **4D Preferences vXX.4DPreferences** という名称のファイルに保存されます。 このファイルは、[`Get 4D folder`](https://doc.4d.com/4Dv19/4D/19/Get-4D-folder.301-5392528.ja.html) が返す、カレントユーザーの Active 4D Folder に保存されます:
 
 *   Windows: `{disk}\Users\{UserName}\AppData\Roaming\4D`
 *   macOS: `{disk}:Users:{UserName}:Library:Application Support:4D`
 
-## Customizing parameters and reset settings
+## パラメーターのカスタマイズと初期設定
 
-In settings dialog boxes, parameters whose values have been modified appear in bold:
+設定ダイアログボックスでは、変更された設定内容は太字で表示されます:
 
 ![](../assets/en/Preferences/overviewUser.png)
 
-Preferences indicated as customized may have been modified directly in the dialog box, or may have been modified previously in the case of a converted database.
+環境設定においては、ダイアログボックスで直接変更されたか、変換されたデータベースの場合以前のバージョンで変更された設定が、カスタマイズ箇所として扱われます。
 
-A parameter still appears in bold even when its value is replaced manually with its default values. This way it is always possible to visually identify any parameters that have been customized.
+パラメーターは手作業でデフォルト値に置き換えられたときにも太字で表示されます。 このように、カスタマイズされたパラメーターはすべて目視で識別することができます。
 
-To reset the parameters to their default values and remove the bold style indicating that they have been customized, click on the **Reset to factory settings** button:
+パラメーターをデフォルト値に戻し、カスタマイズされたことを示す太字スタイルを取り除くためには、**初期設定にリセット** ボタンをクリックします:
 
 ![](../assets/en/Preferences/overviewSettings.png)
 
-This button resets all the parameters of the current page. It becomes active when at least one parameter has been modified on the current page.
+このボタンをクリックすると、現在表示されているページの全パラメーターがリセットされます。 現在のページで最低でも一つのパラメーターが変更されると、このボタンはアクティブになります。
 

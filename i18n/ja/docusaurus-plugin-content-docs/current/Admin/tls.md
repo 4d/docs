@@ -1,105 +1,105 @@
 ---
 id: tls
-title: TLS Protocol (HTTPS)
+title: TLSプロトコル (HTTPS)
 ---
 
-All 4D servers can communicate in secured mode through the TLS (Transport Layer Security) protocol:
+すべての 4Dサーバーは、TLS (Transport Layer Security) プロトコルを通じて、保護モードで通信する事ができます:
 
-- the web server
-- the application server (client-server desktop applications)
-- the SQL server
+- Webサーバー
+- アプリケーションサーバー (クライアントサーバー・デスクトップアプリケーション)
+- SQLサーバー
 
-## Overview
+## 概要
 
-The TLS protocol (successor of SSL) has been designed to secure data exchanges between two applications —mainly between a web server and a browser. This protocol is widely used and is compatible with most web browsers.
+TLSプロトコル (SSLプロトコルの後継版) は 2つのアプリケーション、主に Webサーバーとブラウザー間でのデータ交換を保護するために設計されています。 このプロトコルは幅広く使用されていて、多くの Webブラウザーとの互換性があります。
 
-At the network level, the security protocol is inserted between the TCP/IP layer (low level) and the HTTP high level protocol. It has been designed mainly to work with HTTP.
+ネットワークレベルにおいては、TLSプロトコルは TCP/IPレイヤー (低レベル) とHTTP高レベルプロトコルとの間に挿入されます。 TLS は主に HTTP で動作するように設計されました。
 
-Network configuration using TLS:
+TLS を用いたネットワーク設定:
 
 ![](../assets/en/WebServer/tls1.png)
 
-The TLS protocol is designed to authenticate the sender and receiver and to guarantee the confidentiality and integrity of the exchanged information:
+TLSプロトコルは、送信者と受信者を認証するために設計され、交換された情報の機密性と整合性を保証します:
 
-- **Authentication**: The sender and receiver identities are confirmed.
-- **Confidentiality**: The sent data is encrypted so that no third person can understand the message.
-- **Integrity**: The received data has not been changed, by accident or malevolently.
+- **認証**: 送信者と受信者の ID を確認します。
+- **機密性**: 送信データを暗号化します。 そのため第三者はメッセージを解読することができません。
+- **整合性**: 受信データが偶発的にまたは故意に修正されることはありません。
 
-TLS uses a public key encryption technique based on a pair of asymmetric keys for encryption and decryption: a public key and a private key. The private key is used to encrypt data. The sender (the website) does not give it to anyone. The public key is used to decrypt the information and is sent to the receivers (web browsers) through a certificate. When using TLS with the Internet, the certificate is delivered through a certification authority, such as Verisign®. The website pays the Certificate Authority to deliver a certificate which guaranties the server authentication and contains the public key allowing to exchange data in a secured mode.
-> For more information on the encryption method and the public and private key issues, refer to the `ENCRYPT BLOB` command description.
+TLS は公開鍵暗号化技術を用います。 これは、暗号化と復号化の非対称鍵のペアである公開鍵と秘密鍵に基づいています。 秘密鍵はデータを暗号化するために使用されます。 送信者 (Webサイト) は、それを誰にも渡しません。 公開鍵は情報を復号化するために使用され、証明書を通して受信者 (Webブラウザー) へ送信されます。 インターネットで TLS を使用する際、証明書は Verisign® などの認証機関を通して発行されます。 この証明書はサーバー認証を保証し、保護モードでのデータ交換を許可する公開鍵を格納しています。
+> 暗号化メソッドと公開鍵および秘密鍵に関する詳細は、`ENCRYPT BLOB` コマンドの記述を参照してください。
 
-## Minimum version
+## 最低バージョン
 
-By default, the minimum version of the secured protocol accepted by the server is TLS 1.2. You can modify this value by using the `Min TLS version` selector with the `SET DATABASE PARAMETER command`.
+デフォルトで、4D でサポートされている最低限のバージョンは TLS 1.2 となります。 この値は `SET DATABASE PARAMETER` コマンドで `Min TLS version` セレクターを使用することで変更可能です。
 
-You can control the level of security of your web server by defining the [minimum TLS version](WebServer/webServerConfig.md#minimum-tls-version) accepted for connections.
+接続時に受け入れる [最低TLSバージョン](WebServer/webServerConfig.md#最低tlsバージョン) を定義することで、Webサーバーのセキュリティレベルを制御することができます。
 
-## How to get a certificate?
+## 証明書の取得方法
 
-A server working in secured mode means that you need a digital certificate from a certification authority. This certificate contains various information such as the site ID as well as the public key used to communicate with the server. This certificate is transmitted to the clients (e.g. Web browsers) connecting to this server. Once the certificate has been identified and accepted, the communication is made in secured mode.
-> Web browsers authorize only the certificates issued by a certification authority referenced in their properties.
+サーバーを保護モードで起動させるには、認証機関の電子証明書が必要です。 この証明書には、サイトID や、サーバーとの通信に使用する公開鍵など、様々な情報が格納されます。 そのサーバーに接続した際に、証明書がクライアント (例: Webブラウザー) へ送られます。 証明書が識別され受け入れられると、保護モードで通信が開始されます。
+> ブラウザーは、ルート証明書がインストールされた認証機関によって発行された証明書のみを許可します。
 
 ![](../assets/en/WebServer/tls2.png)
 
-The certification authority is chosen according to several criteria. If the certification authority is well known, the certificate will be authorized by many browsers, however the price to pay will be expensive.
+認証機関は複数の条件によって選択されます。 認証機関が一般によく知られていると、証明書は多くのブラウザーによって許可されます。 ただし、費用は高くなるかもしれません。
 
-To get a digital certificate:
+デジタル証明書の取得:
 
-1. Generate a private key using the `GENERATE ENCRYPTION KEYPAIR` command.
-> **Warning**: For security reasons, the private key should always be kept secret. Actually, it should always remain with the server machine. For the Web server, the Key.pem file must be placed in the Project folder.
+1. `GENERATE ENCRYPTION KEYPAIR` コマンドを使用して、秘密鍵を作成します。
+> **警告**: セキュリティ上の理由により、秘密鍵は常に機密でなければなりません。 実際、秘密鍵は常にサーバーマシンと一緒に存在しているべきです。 Webサーバーの場合、Key.pem ファイルは Projectフォルダーに保存されていなければなりません。
 
-2. Use the `GENERATE CERTIFICATE REQUEST` command to issue a certificate request.
+2. 証明書のリクエストを発行するために `GENERATE CERTIFICATE REQUEST` コマンドを使用します。
 
-3. Send the certificate request to the chosen certificate authority. To fill in a certificate request, you might need to contact the certification authority. The certification authority checks that the information transmitted are correct. The certificate request is generated in a BLOB using the PKCS format encoded in base64 (PEM format). This principle allows you to copy and paste the keys as text and to send them via E-mail without modifying the key content. For example, you can save the BLOB containing the certificate request in a text document (using the `BLOB TO DOCUMENT` command), then open and copy and paste its content in a mail or a Web form to be sent to the certification authority.
+3. その証明書リクエストを選択された認証機関へ送ります。 証明書リクエストを記入する際、認証機関への問い合わせが必要となる場合があります。 認証機関は送信されてきた情報が正確なものかを確認します。 その証明書リクエストは base64 で暗号化された PKCSフォーマット (PEMフォーマット) を用いて BLOB に作成さ れます。 この原理を使用すると、テキストとしてキーをコピー＆ペーストできます。 キーの内容を修正せずに認証機関に提出します。 たとえば、テキストドキュメントに証明書リクエストを含んでいる BLOB を保存します (`BLOB TO DOCUMENT` コマンドを使用)。 そして、コンテンツを開き、それをコピーして、認証機関へ送信するメールまたは Webフォームにペーストします。
 
-4. Once you get your certificate, create a text file named “cert.pem” and paste the contents of the certificate into it. You can receive a certificate in different ways (usually by email or HTML form). 4D accepts all platform-related text formats for certificates (OS X, PC, Linux, etc.). However, the certificate must be in PEM format, *i.e.*, PKCS encoded in base64.
-> CR line-ending characters are not supported on their own; you must use CRLF or LF.
+4. 証明書を取得したら、"cert.pem" という名前でテキストファイルを作成し、その証明書の内容をそのファイルへコピーします。 証明書は様々な方法で受け取ることができます (通常は Eメールまたは HTML形式で受け取ります)。 4D は証明書に関しては全プラットフォームに関連したテキストフォーマットを受け付けます (OS X、Windows、Linux、等)。 ただし、証明書は PEMフォーマット、つまり base64 で PKCSエンコードされている必要があります。
+> CR改行コードは、それ単体ではサポートされていません。 改行コードは CRLF または LF を使用してください。
 
-5. Place the “cert.pem” file in the [appropriate location](#installation-and-activation).
+5. "cert.pem" ファイルを [適切な場所](#インストールとアクティベーション) に保存します。
 
-The 4D server can now work in a secured mode. A certificate is valid between 3 months to a year.
+4Dサーバーが保護モードで動作するようになります。 証明書は 3ヶ月から1年間の間で有効です。
 
-## Installation and activation
+## インストールとアクティベーション
 
-### Installing `key.pem` and `cert.pem` files
+### `key.pem` と `cert.pem` ファイルのインストール
 
-To be able to use the TLS protocol with the server, you must install the **key.pem** (document containing the private encryption key) and **cert.pem** (document containing the certificate) at the appropriate location(s). Different locations are required depending on the server on which you want to use TLS.
-> Default *key.pem* and *cert.pem* files are provided with 4D. For a higher level of security, we strongly recommend that you replace these files with your own certificates.
+サーバーと一緒に TLSプロトコルを使用するには、**key.pem** (秘密の暗号鍵を含むドキュメント) と **cert.pem** (証明書を含むドキュメント) が所定の場所にインストールされていなければなりません。 TLS を使用するサーバーによって、インストールする場所が異なります。
+> デフォルトの *key.pem* と *cert.pem* は 4D によって提供されています。 より高レベルのセキュリティのためには、これらのファイルをご自身の証明書で置き換えることが強く推奨されます。
 
-#### With the web server
+#### Webサーバーの場合
 
-To be used by the 4D web server, the **key.pem** and **cert.pem** files must be placed:
+4D Webサーバーで使用するには、**key.pem** と **cert.pem** を次の場所に保存します:
 
-- with 4D in local mode or 4D Server, next to the [project folder](Project/architecture.md#project-folder)
-- with 4D in remote mode, in the client database folder on the remote machine (for more information about the location of this folder, see the [`Get 4D folder`](https://doc.4d.com/4dv19/help/command/en/page485.html) command).
+- 4D (ローカル) および 4D Server では、[Project フォルダー](Project/architecture.md#project-フォルダー) と同階層。
+- 4D のリモートモードでは、これらのファイルはリモートマシンの 4D Client Database フォルダーに置かれなければなりません。 このフォルダーの場所に関する情報は、[`Get 4D Folder`](https://doc.4d.com/4dv19/help/command/ja/page485.html) コマンドの説明を参照ください。
 
-You must copy these files manually on the remote machine.
+これらのファイルをリモートマシンに手動でコピーする必要があります。
 
-#### With the application server (client-server desktop applications)
+#### アプリケーションサーバー (クライアントサーバー・デスクトップアプリケーション) の場合
 
-To be used by the 4D application server, the **key.pem** and **cert.pem** files must be placed:
+4D アプリケーションサーバーで使用するには、**key.pem** と **cert.pem** を次の場所に保存します:
 
-- in the [**Resources** folder](Project/architecture.md#resources) of the 4D Server application
-- and in the **Resources** folder on each remote 4D application (for more information about the location of this folder, see the [`Get 4D folder`](https://doc.4d.com/4dv19/help/command/en/page485.html) command).
+- 4D Server アプリケーションの [**Resources**フォルダー](Project/architecture.md#resources)。
+- 各リモート4Dアプリケーションの **Resources** フォルダー (このフォルダーの場所に関する情報は、[`Get 4D Folder`](https://doc.4d.com/4dv19/help/command/ja/page485.html) コマンドの説明を参照ください)。
 
-#### With the SQL server
+#### SQLサーバーの場合
 
-To be used by the 4D SQL server, the **key.pem** and **cert.pem** files must be placed next to the [project folder](Project/architecture.md#project-folder).
+4D SQLサーバーで使用するには、**key.pem** と **cert.pem** ファイルは[Project フォルダー](Project/architecture.md#project-フォルダー) の隣に配置する必要があります。
 
-### Enabling TLS
+### TLSを有効にする
 
-The installation of **key.pem** and **cert.pem** files makes it possible to use TLS with the 4D server. However, in order for TLS connections to be accepted by the server, you must enable them:
+**key.pem** と **cert.pem** ファイルをインストールすることにより、4Dサーバーにおける TLS の使用を可能にします。 ただし、サーバーによって受け入れられるようにするには、TLS接続を有効化しなければなりません:
 
-- With the 4D web server, you must [enable HTTPS](WebServer/webServerConfig.md#enable-https). You can set the [HSTS option](WebServer/webServerConfig.md#enable-hsts) to redirect browsers trying to connect in http mode.
-- With the application server, you must select the **Encrypt Client-Server Communications** option in the "Client-server/Network options" page of the Settings dialog box.
-- With the SQL server, you must select the **Enable TLS** option in the "SQL" page of the Settings dialog box.
+- 4D Webサーバーの場合、[HTTPSを有効](WebServer/webServerConfig.md#httpsを有効にする) にする必要があります。 [HSTSオプション](WebServer/webServerConfig.md#hstsを有効にする) を設定して、HTTPモードで接続しようとするブラウザーをリダイレクトすることができます。
+- アプリケーションサーバーでは、ストラクチャー設定ダイアログボックスの "C/S (クライアントサーバー)" ページで **クライアント-サーバー通信の暗号化** オプションを選択する必要があります。
+- SQLサーバーの場合は、ストラクチャー設定ダイアログボックスの "SQL" ページで **TLSを有効にする** オプションを選択する必要があります。
 
-> The 4D web server also supports [HSTS option](WebServer/webServerConfig.md#enable-hsts) to declare that browsers should only interact with it via secure HTTPS connections.
+> 4D Webサーバーは、セキュアな HTTPS接続のみを許可するとブラウザーに対して宣言するための [HSTSオプション](WebServer/webServerConfig.md#hstsを有効にする) をサポートしています。
 
 ## Perfect Forward Secrecy (PFS)
 
-[PFS](https://en.wikipedia.org/wiki/Forward_secrecy) adds an additional layer of security to your communications. Rather than using pre-established exchange keys, PFS creates session keys cooperatively between the communicating parties using Diffie-Hellman (DH) algorithms. The joint manner in which the keys are constructed creates a "shared secret" which impedes outside parties from being able to compromise them.
+[PFS](https://ja.wikipedia.org/wiki/Forward_secrecy) は通信の中に新たなレイヤーのセキュリティを追加します。 事前準備された交換鍵を使用する代わりに、PFS は Diffie-Hellman (DH) アルゴリズムを用いて通信相手同士で協同的にセッションキーを作成します。 このように協同で鍵を作成することで "共有の秘密" が作成され、外部への漏洩を防ぐことができます。
 
-When TLS is enabled on the server, PFS is automatically enabled. If the *dhparams.pem* file (document containing the server's DH private key) does not already exist, 4D will automatically generate it with a key size of 2048. The initial generation of this file could take several minutes. The file is placed with the [*key.pem* and *cert.pem* files](#key-pem-and-cert-pem-files).
+サーバー上で TLS が有効化されているとき、PFS は自動的に有効されます。 *dhparams.pem* ファイル (サーバーの DH非公開鍵を含むドキュメント) がまだ存在していない場合、4D は 2048 の鍵サイズで自動的にそれを生成します。 このファイルの生成には数分間かかる可能性があります。 このファイルは、[*key.pem* および *cert.pem* ファイル](#key-pem-と-cert-pem-ファイル)と同じ場所に置きます。
 
-If you use a [custom cipher list](WebServer/webServerConfig.md##cipher-list) and want to enable PFS, you must verify that it contains entries with DH or ECDH (Elliptic-curve Diffie–Hellman) algorithms.
+[カスタムの暗号リスト](WebServer/webServerConfig.md#暗号リスト) を使用していて、PFS を有効化したい場合、DH あるいは ECDH (Elliptic-curve Diffie–Hellman) アルゴリズムのエントリーがそのリストに含まれている必要があります。

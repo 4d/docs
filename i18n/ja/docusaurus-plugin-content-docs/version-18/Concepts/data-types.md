@@ -1,84 +1,84 @@
 ---
 id: data-types
-title: Data types overview
+title: データタイプの概要
 ---
 
-In 4D, data are handled according to their type in two places: database fields and the 4D language.
+4D においてデータは、主にデータベースフィールドと 4D ランゲージという2つの場所で、そのタイプに応じて扱われます。
 
-Although they are usually equivalent, some data types available at the database level are not directly available in the language and are automatically converted. Conversely, some data types can only be handled through the language. The following table lists all available data types and how they are supported/declared:
+この2つはおおよそ同じものですが、データベースレベルで提供されているいくつかのデータタイプはランゲージにおいては直接利用可能ではなく、自動的に適宜変換されます。 同様に、いくつかのデータタイプはランゲージでしか利用できません。 各場所で利用可能なデータタイプと、ランゲージでの宣言の仕方の一覧です:
 
-| Data Types                                 | Database support(1) | Language support     | Variable declaration         |
-| ------------------------------------------ | ------------------- | -------------------- | ---------------------------- |
-| [Alphanumeric](dt_string.md)               | Yes                 | Converted to text    | -                            |
-| [Text](Concepts/dt_string.md)              | Yes                 | Yes                  | `C_TEXT`, `ARRAY TEXT`       |
-| [Date](Concepts/dt_date.md)                | Yes                 | Yes                  | `C_DATE`, `ARRAY DATE`       |
-| [Time](Concepts/dt_time.md)                | Yes                 | Yes                  | `C_TIME`, `ARRAY TIME`       |
-| [Boolean](Concepts/dt_boolean.md)          | Yes                 | Yes                  | `C_BOOLEAN`, `ARRAY BOOLEAN` |
-| [Integer](Concepts/dt_number.md)           | Yes                 | Converted to longint | `ARRAY INTEGER`              |
-| [Longint](Concepts/dt_number.md)           | Yes                 | Yes                  | `C_LONGINT`, `ARRAY LONGINT` |
-| [Longint 64 bits](Concepts/dt_number.md)   | Yes (SQL)           | Converted to real    | -                            |
-| [Real](Concepts/dt_number.md)              | Yes                 | Yes                  | `C_REAL`, `ARRAY REAL`       |
-| [Undefined](Concepts/dt_null_undefined.md) | -                   | Yes                  | -                            |
-| [Null](Concepts/dt_null_undefined.md)      | -                   | Yes                  | -                            |
-| [Pointer](Concepts/dt_pointer.md)          | -                   | Yes                  | `C_POINTER`, `ARRAY POINTER` |
-| [Picture](Concepts/dt_picture.md)          | Yes                 | Yes                  | `C_PICTURE`, `ARRAY PICTURE` |
-| [BLOB](Concepts/dt_blob.md)                | Yes                 | Yes                  | `C_BLOB`, `ARRAY BLOB`       |
-| [Object](Concepts/dt_object.md)            | Yes                 | Yes                  | `C_OBJECT`, `ARRAY OBJECT`   |
-| [Collection](Concepts/dt_collection.md)    | -                   | Yes                  | `C_COLLECTION`               |
-| [Variant](Concepts/dt_variant.md)(2)       | -                   | Yes                  | `C_VARIANT`                  |
+| データタイプ                                | データベース  | ランゲージ   | 変数宣言                         |
+| ------------------------------------- | ------- | ------- | ---------------------------- |
+| [文字列](dt_string.md)                   | ◯       | テキストに変換 | -                            |
+| [テキスト](Concepts/dt_string.md)         | ◯       | ◯       | `C_TEXT`, `ARRAY TEXT`       |
+| [日付](Concepts/dt_date.md)             | ◯       | ◯       | `C_DATE`, `ARRAY DATE`       |
+| [時間](Concepts/dt_time.md)             | ◯       | ◯       | `C_TIME`, `ARRAY TIME`       |
+| [ブール](Concepts/dt_boolean.md)         | ◯       | ◯       | `C_BOOLEAN`, `ARRAY BOOLEAN` |
+| [整数](Concepts/dt_number.md)           | ◯       | 倍長整数に変換 | `ARRAY INTEGER`              |
+| [倍長整数](Concepts/dt_number.md)         | ◯       | ◯       | `C_LONGINT`, `ARRAY LONGINT` |
+| [64ビット整数](Concepts/dt_number.md)      | ◯ (SQL) | 実数に変換   | -                            |
+| [実数](Concepts/dt_number.md)           | ◯       | ◯       | `C_REAL`, `ARRAY REAL`       |
+| [未定義](Concepts/dt_null_undefined.md)  | -       | ◯       | -                            |
+| [Null](Concepts/dt_null_undefined.md) | -       | ◯       | -                            |
+| [ポインター](Concepts/dt_pointer.md)       | -       | ◯       | `C_POINTER`, `ARRAY POINTER` |
+| [ピクチャー](Concepts/dt_picture.md)       | ◯       | ◯       | `C_PICTURE`, `ARRAY PICTURE` |
+| [BLOB](Concepts/dt_blob.md)           | ◯       | ◯       | `C_BLOB`, `ARRAY BLOB`       |
+| [オブジェクト](Concepts/dt_object.md)       | ◯       | ◯       | `C_OBJECT`, `ARRAY OBJECT`   |
+| [コレクション](Concepts/dt_collection.md)   | -       | ◯       | `C_COLLECTION`               |
+| [バリアント](Concepts/dt_variant.md)(2)    | -       | ◯       | `C_VARIANT`                  |
 
-(1) Note that ORDA handles database fields through objects (entities) and thus, only supports data types available to these objects. For more information, see the [Object](Concepts/dt_object.md) data type description.
+(1) ORDA では、オブジェクト (エンティティ) を介してデータベースフィールドを扱うため、オブジェクトにおいて利用可能なデータタイプのみがサポートされます。 詳細については [オブジェクト](Concepts/dt_object.md) のデータタイプの説明を参照ください。
 
-(2) Variant is actually not a *data* type but a *variable* type that can contain a value of any other data type.
+(2) バリアントは実際のところ *データ* タイプではなく、あらゆるデータタイプの値を格納することのできる *変数* タイプです。
 
-## Default values
+## デフォルト値
 
-When variables are typed by means of a compiler directive, they receive a default value, which they will keep during the session as long as they have not been assigned.
+コンパイラー指示子によって変数の型が決まるとき、変数はデフォルトの値を受け取り、割り当てがされない限りセッションの間はその値を保ち続けます。
 
-The default value depends on the variable type and category, its execution context (interpreted or compiled), as well as, for compiled mode, the compilation options defined on the Compiler page of the Database settings:
+デフォルトの値は、変数の型とカテゴリ、その実行コンテキスト (インタープリターかコンパイルか) に加え、コンパイルモードではデータベース設定のコンパイラーページで定義されたコンパイルオプションによって決まります:
 
-- Process and interprocess variables are always set "to zero" (which means, depending on the case, "0", an empty string, an empty Blob, a Nil pointer, a blank date (00-00-00), etc.)
-- Local variables are set:
-    - in interpreted mode: to zero
-    - in compiled mode, depending on the **Initialize local variables** option of the Database settings:
-        - "to zero": to zero (see above),
-        - "to a random value": 0x72677267 for numbers and times, always True for Booleans, the same as "to zero" for the others,
-        - "no": no initialization, meaning whatever is in RAM is used for the variables, like values used before for other variables. **Note:** 4D recommends to use "to zero".
+- プロセス変数およびインタープロセス変数は常に "ゼロにする" に設定されます。つまり、型によって、"0"、空の文字列、空のBlob、Nilポインター、空の日付 (00-00-00)、ということです。
+- ローカル変数は以下の様に設定されます:
+    - インタープリタモード: ゼロにする
+    - コンパイルモードにおいては、データベース設定の**ローカル変数初期化オプション**によって異なります:
+        - "ゼロにする" が選択されている場合にはゼロになります。
+        - "ランダム値にする" が選択されている場合には、数値と時間については0x72677267、ブールについては常に true、他のものについては "ゼロにする" の場合と同じです。
+        - "なし" が選択されている場合には、変数は初期化されず、メモリにある値が採用されます。それは、別の変数に以前使われた値かもしれません。 **注:** 4D では "ゼロにする" の設定を推奨しています。
 
-The following table illustrates these default values:
+以下の表はこれらのデフォルトの値をあらわしたものです:
 
-| Type       | Interprocess/Process (interpreted/compiled), Local (interpreted/compiled "to zero") | Local compiled "random" | Local compiled "no"          |
-| ---------- | ----------------------------------------------------------------------------------- | ----------------------- | ---------------------------- |
-| Booleen    | False                                                                               | True                    | True (varies)                |
-| Date       | 00-00-00                                                                            | 00-00-00                | 00-00-00                     |
-| Longint    | 0                                                                                   | 1919382119              | 909540880 (varies)           |
-| Time       | 00:00:00                                                                            | 533161:41:59            | 249345:34:24 (varies)        |
-| Picture    | picture size=0                                                                      | picture size=0          | picture size=0               |
-| Real       | 0                                                                                   | 1.250753659382e+243     | 1.972748538022e-217 (varies) |
-| Pointer    | Nil=true                                                                            | Nil=true                | Nil=true                     |
-| Text       | ""                                                                                  | ""                      | ""                           |
-| Blob       | Blob size=0                                                                         | Blob size=0             | Blob size=0                  |
-| Object     | null                                                                                | null                    | null                         |
-| Collection | null                                                                                | null                    | null                         |
-| Variant    | undefined                                                                           | undefined               | undefined                    |
+| タイプ    | インタープロセス変数 / プロセス変数 / インタープリターモードのローカル変数 / コンパイルモードで "ゼロにする" のローカル変数 | コンパイルモードで "ランダム値にする" のローカル変数 | コンパイルモードで "なし" のローカル変数      |
+| ------ | -------------------------------------------------------------------- | ---------------------------- | --------------------------- |
+| ブール    | False                                                                | true                         | True (場合による)                |
+| 日付     | 00-00-00                                                             | 00-00-00                     | 00-00-00                    |
+| 倍長整数   | 0                                                                    | 1919382119                   | 909540880 (場合による)           |
+| 時間     | 00:00:00                                                             | 533161:41:59                 | 249345:34:24 (場合による)        |
+| ピクチャー  | ピクチャーサイズ=0                                                           | ピクチャーサイズ=0                   | ピクチャーサイズ=0                  |
+| 実数     | 0                                                                    | 1.250753659382e+243          | 1.972748538022e-217 (場合による) |
+| ポインター  | Nil=true                                                             | Nil=true                     | Nil=true                    |
+| テキスト   | ""                                                                   | ""                           | ""                          |
+| Blob   | Blob サイズ=0                                                           | Blob サイズ=0                   | Blob サイズ=0                  |
+| オブジェクト | null                                                                 | null                         | null                        |
+| コレクション | null                                                                 | null                         | null                        |
+| バリアント  | undefined                                                            | undefined                    | undefined                   |
 
 
-## Converting data types
+## データタイプの変換
 
-The 4D language contains operators and commands to convert between data types, where such conversions are meaningful. The 4D language enforces data type checking. For example, you cannot write: "abc"+0.5+!12/25/96!-?00:30:45?. This will generate syntax errors.
+4D ランゲージには、データタイプ間の変換をおこなう演算子やコマンドがあります。 4D ランゲージはデータタイプをチェックします。 たとえば、"abc"+0.5+!12/25/96!-?00:30:45?のように記述することはできません。 これは、シンタックス (構文) エラーになります。
 
-The following table lists the basic data types, the data types to which they can be converted, and the commands used to do so:
+次の表は、基本のデータタイプ、変換できるデータタイプ、それを実行する際に使用するコマンドを示しています:
 
-| Data Type to Convert | to String | to Number | to Date | to Time | to Boolean |
-| -------------------- | --------- | --------- | ------- | ------- | ---------- |
-| String (1)           |           | Num       | Date    | Time    | Bool       |
-| Number (2)           | String    |           |         |         | Bool       |
-| Date                 | String    |           |         |         | Bool       |
-| Time                 | String    |           |         |         | Bool       |
-| Boolean              |           | Num       |         |         |            |
+| データタイプ  | 文字列に変換 | 数値に変換 | 日付に変換 | 時間に変換 | ブールに変換 |
+| ------- | ------ | ----- | ----- | ----- | ------ |
+| 文字列 (1) |        | Num   | Date  | Time  | Bool   |
+| 数値 (2)  | String |       |       |       | Bool   |
+| 日付      | String |       |       |       | Bool   |
+| 時間      | String |       |       |       | Bool   |
+| ブール     |        | Num   |       |       |        |
 
-(1) Strings formatted in JSON can be converted into scalar data, objects, or collections, using the `JSON Parse` command.
+(1) JSON形式の文字列は `JSON Parse` コマンドを使ってスカラーデータ、オブジェクト、あるいはコレクションに変換することができます。
 
-(2) Time values can be treated as numbers.
+(2) 時間は数値として扱うことができます。
 
-**Note:** In addition to the data conversions listed in this table, more sophisticated data conversions can be obtained by combining operators and other commands.
+**注:** この表に示すデータ変換の他に、演算子と他のコマンドを組み合せることで、より洗練されたデータ変換を実行することができます。

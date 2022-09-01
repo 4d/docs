@@ -1,61 +1,61 @@
 ---
 id: listOverview
-title: Hierarchical List
+title: Liste hiérarchique
 ---
 
-## Overview
+## Vue d’ensemble
 
-Hierarchical lists are form objects that can be used to display data as lists with one or more levels that can be expanded or collapsed.
+Les listes hiérarchiques sont des objets de formulaire permettant d'afficher des données sous forme de listes comportant un ou plusieurs niveaux qu'il est possible de déployer ou de contracter.
 
 ![](../assets/en/FormObjects/Hlist1.png)
 
-Where appropriate, the expand/collapse icon is automatically displayed to the left of the item. Hierarchical lists support an unlimited number of sublevels.
+Le cas échéant, l'icône déployer/contractée est automatiquement affichée à gauche de l'élément. Les listes hiérarchiques prennent en charge un nombre illimité de sous-niveaux.
 
-## Hierarchical list data source
+## Sources de données de liste hiérarchique
 
-The contents of a hierarchical list form object can be initialized in one of the following ways:
+Le contenu d'un objet formulaire liste hiérarchique peut être initialisé de l'une des manières suivantes :
 
-- Associate an existing [choice list](properties_DataSource.md#choice-list) to the object. The choice list must have been defined in the List editor in Design mode.
-- Directly assign a hierarchical list  reference to the [variable or expression](properties_Object.md#variable-or-expression) associated with the form object.
+- Associer une [énumération](properties_DataSource.md#choice-list) à l'objet. L'énumération doit avoir été définie dans l'éditeur de listes en mode Développement.
+- Assignez directement une référence de liste hiérarchique à la [variable ou à l'expression](properties_Object.md#variable-or-expression) associée à l'objet formulaire.
 
-In both cases, you manage a hierarchical list at runtime through its *ListRef* reference, using the [Hierarchical list](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) commands in the 4D language.
+Dans les deux cas, vous gérez une liste hiérarchique lors de l'exécution via sa référence *ListRef*, à l'aide des commandes de [liste hiérarchique](https://doc.4d.com/4Dv17R6/4D/17-R6/Hierarchical-Lists.201-4310291.en.html) du langage 4D.
 
-## ListRef and object name
+## RefListe et nom d'objet
 
-A hierarchical list is both a **language object** existing in memory and a **form object**.
+Une liste hiérarchique est à la fois un **objet de langage** existant en mémoire et un **objet de formulaire**.
 
-The **language object** is referenced by an unique internal ID of the Longint type, designated by *ListRef* in the 4D Language Reference. This ID is returned by the commands that can be used to create lists: `New list`, `Copy list`, `Load list`, `BLOB to list`. There is only one instance of the language object in memory and any modification carried out on this object is immediately carried over to all the places where it is used.
+L'**objet de langage** est référencé de manière unique par un identifiant interne, de type Entier long, désigné par *RefListe* dans ce manuel. Cet identifiant est retourné par les commandes permettant de créer des listes `New list`, `Copy list`, `Load list`, `BLOB to list`. Il n’existe qu’une seule instance en mémoire de l’objet de langage et toute modification effectuée sur cet objet est immédiatement répercutée dans tous les endroits où il est utilisé.
 
-The **form object** is not necessarily unique: there may be several representations of the same hierarchical list in the same form or in different ones. As with other form objects, you specify the object in the language using the syntax (*;"ListName", etc.).
+L'**objet de formulaire** n'est pas nécessairement unique : il peut exister plusieurs représentations d’une même liste hiérarchique dans un même formulaire ou dans des formulaires différents. Comme pour les autres objets de formulaire, vous désignez l'objet dans le langage via la syntaxe (*;"NomListe", etc.).
 
-You connect the hierarchical list "language object" with the hierarchical list "form object" by the intermediary of the variable containing the ListRef value. For example, if you have associated the $mylist [variable](properties_Object.md#variable-or-expression) to the form object, you can write:
+Vous connectez l'"objet de langage" liste hiérarchique avec l'"objet de formulaire" liste hiérarchique par l'intermédiaire de la variable contenant la valeur de l'identifiant unique RefListe. Par exemple, si vous avez associé la [variable](properties_Object.md#variable-or-expression) $mylist à l'objet de formulaire, vous écrivez :
 
 ```4d
 $mylist:=New list
 ```
 
-Each representation of the list has its own specific characteristics and shares common characteristics with all the other representations. The following characteristics are specific to each representation of the list:
+Chaque représentation de liste dispose de caractéristiques propres et partage des caractéristiques communes avec l’ensemble des représentations. Les caractéristiques propres à chaque représentation de liste sont les suivantes :
 
-- The selection,
-- The expanded/collapsed state of its items,
-- The position of the scrolling cursor.
+- La sélection,
+- L’état déployé/contracté des éléments,
+- La position du curseur de défilement.
 
-The other characteristics (font, font size, style, entry control, color, list contents, icons, etc.) are common to all the representations and cannot be modified separately. Consequently, when you use commands based on the expanded/collapsed configuration or the current item, for example `Count list items` (when the final `*` parameter is not passed), it is important to be able to specify the representation to be used without any ambiguity.
+Les autres caractéristiques (police, style, filtre de saisie, couleur, contenu de la liste, icônes, etc.) sont communes à toutes les représentations et ne peuvent pas être modifiées séparément. Par conséquent, lorsque vous utilisez des commandes se basant sur la configuration déployé/contracté ou l'élément courant, par exemple `Count list items` (lorsque le paramètre `*` final n’est pas passé), il importe de pouvoir désigner sans ambiguïté la représentation à utiliser.
 
-You must use the `ListRef` ID with language commands when you want to specify the hierarchical list found in memory. On the other hand, if you want to specify the representation of a hierarchical list object at the form level, you must use the object name (string type) in the command, via the standard syntax (*;"ListName", etc.).
+Vous devez utiliser l'identifiant de type `RefListe` avec les commandes du langage lorsque vous souhaitez désigner la liste hiérarchique résidant en mémoire. Par ailleurs, si vous souhaitez désigner la représentation au niveau du formulaire d'un objet Liste hiérarchique, vous devez utiliser le nom de l'objet (type chaîne) dans la commande, via la syntaxe (*;"NomListe"...).
 
-> In the case of commands that set properties, the syntax based on the object name does not mean that only the form object specified will be modified by the command, but rather that the action of the command will be based on the state of this object. The common characteristics of hierarchical lists are always modified in all of their representations. For example, if you execute:
+> Dans le cas des commandes définissant des propriétés, la syntaxe basée sur le nom d’objet ne signifie pas que seul l’objet de formulaire désigné sera modifié par la commande, mais que l’action de la commande sera basée sur l’état de cet objet. Les caractérisques communes des listes hiérarchiques sont toujours modifiées dans toutes les représentations. Par exemple, si vous passez l’instruction :
 
 ```4d
 SET LIST ITEM FONT(*;"mylist1";*;thefont)
 ```
-> ... you are indicating that you want to modify the font of the hierarchical list item associated with the *mylist1* form object. The command will take the current item of the *mylist1* object into account to specify the item to modify, but this modification will be carried over to all the representations of the list in all of the processes.
+> ... vous indiquez que vous souhaitez modifier la police d’un élément de la liste hiérarchique associée à l’objet de formulaire *mylist1*. La commande tiendra compte de l’élément courant de l’objet *mylist1* pour définir l’élément à modifier, mais cette modification sera reportée dans toutes les représentations de la liste dans tous les process.
 
-### Support of @
+### Prise en compte du @
 
-As with other object property management commands, it is possible to use the “@” character in the `ListName` parameter. As a rule, this syntax is used to designate a set of objects in the form. However, in the context of hierarchical list commands, this does not apply in every case. This syntax will have two different effects depending on the type of command:
+Comme pour les autres commandes de gestion des propriété d’objets, il est possible d’utiliser le caractère “@” dans le paramètre `NomListe`. En principe, cette syntaxe permet de désigner un ensemble d’objets dans le formulaire. Toutefois, dans le contexte des commandes de liste hiérarchique, ce principe n’est pas applicable dans tous les cas. Cette syntaxe aura deux effets différents en fonction du type de commande :
 
-- For commands that set properties, this syntax designates all the objects whose name corresponds (standard behavior). For example, the parameter "LH@" designates all objects of the hierarchical list type whose name begins with “LH.”
+- Pour les commandes fixant des propriétés, cette syntaxe désigne tous les objets dont le nom correspond (fonctionnement standard). Par exemple, le paramètre "LH@" désigne tous les objets de type liste hiérarchique dont le nom débute par “LH”
   - `DELETE FROM LIST`
   - `INSERT IN LIST`
   - `SELECT LIST ITEMS BY POSITION`
@@ -65,7 +65,7 @@ As with other object property management commands, it is possible to use the “
   - `SET LIST ITEM PARAMETER`
   - `SET LIST ITEM PROPERTIES`
 
-- For commands retrieving properties, this syntax designates the first object whose name corresponds:
+- Pour les commandes récupérant des propriétés, cette syntaxe désigne le premier objet dont le nom correspond. Ces commandes sont :
   - `Count list items`
   - `Find in list`
   - `GET LIST ITEM`
@@ -77,9 +77,9 @@ As with other object property management commands, it is possible to use the “
   - `List item position`
   - `Selected list items`
 
-## Generic commands to use with hierarchical lists
+## Commandes génériques utilisables avec les listes hiérarchiques
 
-It is possible to modify the appearance of a hierarchical list form objects using several generic 4D commands. You can pass to these commands either the object name of the hierarchical list (using the * parameter), or its variable name (containing the ListRef value):
+Il est possible de modifier l’apparence d’une liste hiérarchique dans un formulaire à l’aide de plusieurs commandes 4D génériques. Vous devez passer à ces commandes soit le nom d’objet de la liste hiérarchique (en utilisant le paramètre *), soit son nom de variable (contenant la valeur RefListe) :
 
 - `OBJECT SET FONT`
 - `OBJECT SET FONT STYLE`
@@ -91,60 +91,60 @@ It is possible to modify the appearance of a hierarchical list form objects usin
 - `OBJECT SET SCROLL POSITION`
 - `OBJECT SET RGB COLORS`
 
-> Reminder: Except `OBJECT SET SCROLL POSITION`, these commands modify all the representations of the same list, even if you only specify a list via its object name.
+> Rappel : A l'exception de la commande `OBJECT SET SCROLL POSITION`, ces commandes modifient toutes les représentations d'une même liste, même si vous désignez une liste via son nom d'objet.
 
-## Priority of property commands
+## Priorité des commandes de propriété
 
-Certain properties of hierarchical lists (for example, the **Enterable** attribute or the color) can be set in different ways: in the form properties, via a command of the “Object Properties” theme or via a command of the “Hierarchical Lists” theme. When all three of these means are used to set list properties, the following order of priority is applied:
+Certaines propriétés d’une liste hiérarchique (par exemple l’attribut **saisissable** ou la couleur) peuvent être définies de trois manières : via la Liste des propriétés en mode Développement, via une commande du thème “Propriétés des objets” ou via une commande du thème “Liste hiérarchique”. Lorsque ces trois moyens sont utilisés pour définir les propriétés d’une liste, l’ordre de priorité suivant est appliqué :
 
-1. Commands of the “Hierarchical Lists” theme
-2. Generic object property commands
-3. Form property
+1. Commandes du thème “Liste hiérarchique”
+2. Commandes générique de propriété d'objet
+3. Propriété formulaire
 
-This principle is applied regardless of the order in which the commands are called. If an item property is modified individually via a hierarchical list command, the equivalent object property command will have no effect on this item even if it is called subsequently. For example, if the color of an item is modified via the `SET LIST ITEM PROPERTIES` command, the `OBJECT SET COLOR` command will have no effect on this item.
+Ce principe est appliqué quel que soit l’ordre d’appel des commandes. Si une propriété d’élément est modifiée individuellement via une commande de liste hiérarchique, la commande de propriété d’objet équivalente sera sans effet sur cet élément même si elle est appelée ultérieurement. Par exemple, si vous modifiez la couleur d’un élément via la commande `SET LIST ITEM PROPERTIES`, la commande `OBJECT SET COLOR` n’aura aucun effet sur cet élément.
 
-## Management of items by position or by reference
+## Gestion des éléments par position ou par référence
 
-You can usually work in two ways with the contents of hierarchical lists: by position or by reference.
+Vous pouvez généralement travailler de deux manières avec le contenu des listes hiérarchiques : par position ou par référence.
 
-- When you work by position, 4D bases itself on the position in relation to the items of the list displayed on screen in order to identify them. The result will differ according to whether or not certain hierarchical items are expanded or collapsed. Note that in the case of multiple representations, each form object has its own configuration of expanded/collapsed items.
-- When you work by reference, 4D bases itself on the *itemRef* ID number of the list items. Each item can thus be specified individually, regardless of its position or its display in the hierarchical list.
+- Lorsque vous travaillez par position, 4D se base sur la position relative des éléments dans la liste affichée à l'écran pour les identifier. Le résultat sera différent selon que certains éléments hiérarchiques sont déployés ou non. A noter qu'en cas de multi-représentation, chaque objet de formulaire comporte sa propre configuration d'éléments contractés/déployés.
+- Lorsque vous travaillez par référence, 4D se base sur le numéro unique *réfElément* des éléments de la liste. Chaque élément peut être ainsi désigné, quelle que soit sa position ou son affichage dans la liste hiérarchique.
 
-### Using item reference numbers (itemRef)
+### Exploiter les numéros de référence des éléments (réfElément)
 
-Each item of a hierarchical list has a reference number (*itemRef*) of the Longint type. This value is only intended for your own use: 4D simply maintains it.
+Chaque élément d'une liste hiérarchique dispose d'un numéro de référence (*réfElément*) de type Entier long. Cette valeur est destinée uniquement à votre propre usage : 4D ne fait que la maintenir.
 
-> Warning: You can use any type of Longint value as a reference number, except for 0. In fact, for most of the commands in this theme, the value 0 is used to specify the last item added to the list.
+> Attention : Vous pouvez utiliser comme numéro de référence toute valeur de type entier long, sauf la valeur 0. En effet, pour la plupart des commandes de ce thème, la valeur 0 permet de désigner le dernier élément ajouté à la liste.
 
-Here are a few tips for using reference numbers:
+Voici quelques astuces quant à l'utilisation du numéro de référence unique :
 
-1. You do not need to identify each item with a unique number (beginner level).
+1. Vous n'avez pas besoin d'identifier chaque élément de façon unique (niveau débutant).
 
- - First example: you build a system of tabs by programming, for example, an address book. Since the system returns the number of the tab selected, you will probably not need more information than this. In this case, do not worry about item reference numbers: pass any value (except 0) in the *itemRef* parameter. Note that for an address book system, you can predefine a list A, B, ..., Z in Design mode. You can also create it by programming in order to eliminate any letters for which there are no records.
- - Second example: while working with a database, you progressively build a list of keywords. You can save this list at the end of each session by using the `SAVE LIST` or `LIST TO BLOB` commands and reload it at the beginning of each new session using the `Load list` or `BLOB to list` commands. You can display this list in a floating palette; when each user clicks on a keyword in the list, the item chosen is inserted into the enterable area that is selected in the foreground process. The important thing is that you only process the item selected, because the `Selected list items` command returns the position of the item that you must process. When using this position value, you obtain the title of the item by means of the `GET LIST ITEM` command. Here again, you do not need to identify each item individually; you can pass any value (except 0) in the *itemRef* parameter.
+ - Premier exemple : vous construisez par programmation un système d'onglets, par exemple, un carnet d'adresses. Comme le système vous retournera le numéro de l'onglet sélectionné, vous n'aurez probablement pas besoin de davantage d'informations. Dans ce cas, ne vous préoccupez pas des numéros de référence des éléments : passez n'importe quelle valeur (hormis 0) dans le paramètre *réfElément*. Notez que pour un système de carnet d'adresses, vous pouvez prédéfinir une liste A, B,..., Z en mode Développement. Vous pouvez également la créer par programmation afin d'éliminer les lettres pour lesquelles il n'y a pas d'enregistrement.
+ - Deuxième exemple : en travaillant avec une base, vous construisez progressivement une liste de mots-clés. Vous pouvez sauvegarder la liste à la fin de chaque session, en utilisant les commandes `SAVE LIST` ou `LIST TO BLOB`, et la recharger au début de chaque session, à l'aide des commandes `Load list` ou `BLOB to list`. Vous pouvez afficher cette liste dans une palette flottante ; lorsque l'utilisateur clique sur un mot-clé de la liste, l'élément choisi est inséré dans la zone saisissable sélectionnée du process de premier plan. En tout état de cause, l'important est que vous ne traitez que l'élément sélectionné (par clic ou glisser-déposer), car la commande `Selected list items`vous retourne la position de l'élément que vous devez traiter. En utilisant cette valeur de position, vous obtenez le libellé de l'élément grâce à la commande `GET LIST ITEM`. Ici aussi, vous n'avez pas besoin d'identifier de façon unique chaque élément ; vous pouvez passer n'importe quelle valeur (hormis 0) dans le paramètre *réfElément*.
 
-2. You need to partially identify the list items (intermediary level).  
-   You use the item reference number to store information needed when you must work with the item; this point is detailed in the example of the `APPEND TO LIST` command. In this example, we use the item reference numbers to store record numbers. However, we must be able to establish a distinction between items that correspond to the [Department] records and those that correspond to the [Employees] records.
+2. Identifiez les éléments de la liste (niveau intermédiaire).  
+   Utilisez le numéro de référence de l'élément pour stocker l'information nécessaire lorsque vous devez agir sur un élément ; ce point est détaillé dans l'exemple de la commande `APPEND TO LIST`. Dans cet exemple, nous utilisons les numéros de référence des éléments pour stocker des numéros d'enregistrements. Cependant, nous devons pouvoir établir une distinction entre les éléments qui correspondent aux enregistrements [Départements] et ceux qui correspondent aux enregistrements [Employés].
 
-3. You need to identify all the list items individually (advanced level).  
-   You program an elaborate management of hierarchical lists in which you absolutely must be able to identify each item individually at every level of the list. A simple way of implementing this is to maintain a personal counter. Suppose that you create a *hlList* list using the `APPEND TO LIST` command. At this stage, you initialize a counter *vhlCounter* to 1. Each time you call `APPEND TO LIST` or `INSERT IN LIST`, you increment this counter `(vhlCounter:=vhlCounter+1)`, and you pass the counter number as the item reference number. The trick consists in never decrementing the counter when you delete items — the counter can only increase. In this way, you guarantee the uniqueness of the item reference numbers. Since these numbers are of the Longint type, you can add or insert more than two billion items in a list that has been reinitialized... (however if you are working with such a great number of items, this usually means that you should use a table rather than a list.)
+3. Identifiez tous les éléments de la liste individuellement (niveau avancé).   
+   Programmez une gestion élaborée des listes hiérarchiques dans lesquelles vous devez absolument pouvoir identifier chaque élément individuellement à tous les niveaux de la liste. Un moyen simple d'implémenter ce fonctionnement est de maintenir un compteur personnel. Supposons que vous créez une liste *hlList* à l'aide de la commande `APPEND TO LIST`. A ce stade, vous initialisez un compteur *vlhCounter* à 1. A chaque fois que vous appelez `APPEND TO LIST` ou `INSERT IN LIST`, vous incrémentez ce compteur `(vlhCounter:=vlhCounter+1)`, et vous passez le compteur comme numéro de référence de l'élément. L'astuce consiste à ne pas décrémenter le compteur lorsque vous détruisez des éléments — le compteur ne peut qu'augmenter. En procédant ainsi, vous garantissez l'unicité des numéros de référence des éléments. Puisque ces nombres sont du type Entier long, vous pouvez ajouter ou insérer plus de deux milliards d'éléments dans une liste qui a été réinitialisée ... (cependant si vous travaillez avec un si grand nombre d'éléments, cela signifie généralement que vous devriez utiliser un tableau plutôt qu'une liste.)
 
-> If you use Bitwise Operators, you can also use item reference numbers for storing information that can be put into a Longint, i.e. 2 Integers, 4-byte values or, yet again, 32 Booleans.
+> Si vous exploitez les Opérateurs sur les bits, vous pouvez également utiliser les numéros de référence des éléments pour stocker des informations qui peuvent être logées dans un Entier long, c'est-à-dire 2 Entiers, des valeurs de 4 octets ou encore 32 Booléens.
 
-### When do you need unique reference numbers?
+### Quand avez-vous besoin de numéros de référence uniques ?
 
-In most cases, when using hierarchical lists for user interface purposes and when only dealing with the selected item (the one that was clicked or dragged), you will not need to use item reference numbers at all. Using `Selected list items` and `GET LIST ITEM` you have all you need to deal with the currently selected item. In addition, commands such as `INSERT IN LIST` and `DELETE FROM LIST` allow you to manipulate the list “relatively” with respect to the selected item.
+Dans la plupart des cas, lorsque vous utilisez des listes hiérarchiques pour des besoins d'interface utilisateur, pour lesquels seul l'élément sélectionné (par un clic ou par glisser-déposer) est important, vous n'avez pas besoin d'utiliser les numéros de référence des éléments. Les commandes `Selected list items` et `GET LIST ITEM`vous fournissent toutes les informations nécessaires à la gestion de l'élément sélectionné. De plus, des commandes telles que `INSERT IN LIST` et `DELETE FROM LIST` vous permettent de manipuler la liste de manière "relative" à l'élément sélectionné.
 
-Basically, you need to deal with item reference numbers when you want direct access to any item of the list programmatically and not necessarily the one currently selected in the list.
+En pratique, vous devez vous préoccuper des numéros de référence d'éléments lorsque vous voulez accéder directement par programmation à n'importe quel élément de la liste, et pas nécessairement à l'élément couramment sélectionné.
 
-## Modifiable element
+## Élément modifiable
 
-You can control whether hierarchical list items can be modified by the user by using the **Alt+click**(Windows) / **Option+click** (macOS) shortcut, or by carrying out a long click on the text of the item.
+Vous pouvez choisir si les éléments de la liste hiérarchique peuvent être modifiés par l'utilisateur à l'aide du raccourci **Alt + clic** (Windows)/ **Option + clic** (macOS), ou en effectuant un clic long sur le texte de l'élément.
 
-- Whatever the hierarchical list data source, you can control the whole object with the [Enterable](properties_Entry.md#enterable) property.
+- Quelle que soit la source de données de la liste hiérarchique, vous pouvez contrôler l'ensemble de l'objet avec la propriété [Saisissable](properties_Entry.md#enterable).
 
-- In addition, if you populate the hierarchical list using a list created in the Lists editor, you control whether an item in a hierarchical list is modifiable using the **Modifiable Element** option in the Lists editor. For more information, see [Setting list properties](https://doc.4d.com/4Dv17R6/4D/17-R6/Setting-list-properties.300-4354625.en.html).
+- En outre, si vous remplissez la liste hiérarchique à l'aide d'une liste créée dans l'éditeur de listes, vous contrôlez si un élément d'une liste hiérarchique est modifiable à l'aide de l'option **Élément modifiable** dans l'éditeur de listes. Pour plus d'informations, consultez [Définir les propriétés des énumérations ](https://doc.4d.com/4Dv18/4D/18/Definir-les-proprietes-des-enumerations.300-4575487.fr.html).
 
-## Supported Properties
+## Propriétés prises en charge
 
-[Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Draggable](properties_Action.md#draggable-and-droppable) - [Droppable](properties_Action.md#draggable-and-droppable) - [Enterable](properties_Entry.md#enterable) - [Entry Filter](properties_Entry.md#entry-filter) - [Fill Color](properties_BackgroundAndBorder.md#background-color-fill-color) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) - [Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Multi-selectable](properties_Action.md#multi-selectable) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Gras](properties_Text.md#bold) - [Style de la bordure](properties_BackgroundAndBorder.md#border-line-style) - [Bas](properties_CoordinatesAndSizing.md#bottom) - [Enumération](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Glissable](properties_Action.md#draggable-and-droppable) - [Déposable](properties_Action.md#draggable-and-droppable) - [Saisissable](properties_Entry.md#enterable) - [Filtre de saisie](properties_Entry.md#entry-filter) - [Couleur de fond](properties_BackgroundAndBorder.md#background-color-fill-color) - [Focusable](properties_Entry.md#focusable) - [Police](properties_Text.md#font) - [Couleur de la police](properties_Text.md#font-color) - [Taille](properties_Text.md#font-size) - [Hauteur](properties_CoordinatesAndSizing.md#height) - [Cacher rectangle de focus](properties_Appearance.md#hide-focus-rectangle) - [Barre de défilement hor.](properties_Appearance.md#horizontal-scroll-bar) - [Dimensionnement horizontal ](properties_ResizingOptions.md#horizontal-sizing) - [Italique](properties_Text.md#italic) - [Gauche](properties_CoordinatesAndSizing.md#left) - [Multi-sélectionnable](properties_Action.md#multi-selectable) - [Nom](properties_Object.md#object-name) - [Droite](properties_CoordinatesAndSizing.md#right) - [Haut](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Souligné](properties_Text.md#underline) - [Barre de défilement verticale](properties_Appearance.md#vertical-scroll-bar) - [Dimensionnement vertical](properties_ResizingOptions.md#vertical-sizing) - [Variable ou expression](properties_Object.md#variable-or-expression) - [Visibilité](properties_Display.md#visibility) - [Largeur](properties_CoordinatesAndSizing.md#width)

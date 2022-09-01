@@ -1,61 +1,61 @@
 ---
 id: webServer
 slug: overview
-title: Overview
+title: Vue d’ensemble
 ---
 
-4D in local mode, 4D in remote mode and 4D Server include a web server engine (aka http server) that enables you to design and publish powerful web applications that can make the most of your 4D databases.
+4D en mode local et remote ainsi que 4D Server disposent d'un moteur de serveur web intégré (aussi appelé serveur HTTP) qui vous permet de créer et publier des applications web afin de tirer le maximum de vos bases de données 4D.
 
-## Easy Monitoring
+## Administration simplifiée
 
-You can start or stop publication of the web application at any time. To do so, you just need to select a menu command or execute a single line of code.
+Vous pouvez démarrer ou arrêter la publication de l'application web à tout moment. Pour ce faire, il suffit de sélectionner une commande dans un menu ou d'exécuter une ligne de code.
 
-Monitoring the 4D web server is easy and can be done using the 4D Server administration window or through [special URLs](webServerAdmin.md#administration-urls).
+Vous pouvez aisément suivre l'activité du serveur web 4D dans la fenêtre d'administration de 4D, ou via des [URLs spéciales](webServerAdmin.md#administration-urls).
 
-## Ready-to-use
+## Prêt à l'emploi
 
-The 4D web server automatically creates a default root folder and a default home page for an instantaneous availability.
+Le serveur web 4D crée automatiquement un dossier racine et une page d'accueil par défaut, disponibles immédiatement.
 
-## Security
+## Sécurité
 
-Data security is present at every stage of the 4D web server implementations. Security levels are scalable and default settings usually select the most secure options. The 4D web server security is based upon the following elements:
+La sécurité des données est présente à tous les stades d'implémentation du serveur web 4D. Les niveaux de sécurité sont évolutifs, et les options les plus sécurisées sont généralement sélectionées par défaut. La sécurité du serveur web 4D est basée sur les éléments suivants :
 
-* Extended support of the [**TLS Protocol (HTTPS)**](Admin/tls.md),
+* **Sandboxing** via la définition d'un [dossier HTML racine](webServerConfig.md#root-folder) par défaut
 
-* **Authentication**: flexible and customizable [authentication features](authentication.md) based upon built-it settings as well as fallback database methods ([`On Web Authentication`](authentication.md#on-web-authentication) for the web server and [`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method) for the REST server),
+* **Contrôle de l'usage des ressources du serveur** (par exemple, via l'option qui détermine [le nombre maximum de process web simultanés](webServerConfig.html#maximum-concurrent-web-processes)).
 
-* **Control of exposed contents**: only elements that you expose explicitely can be available from direct web or REST requests. You must declare:
-  * [Project methods](templates.md#allowing-project-methods) exposed through HTTP requests
-  * [ORDA functions](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) exposed through REST requests
-  * [Tables and fields](REST/configuration.md#exposing-tables-and-fields) that you don't want to be available to REST requests.
+* **Contrôle du contenu exposé** : Seul le contenu que vous exposez explicitement est disponible via des requêtes web directes ou des requêtes REST. Vous devez déclarer :
+  * [Les méthodes projet](templates.md#allowing-project-methods) exposées via requêtes HTTP
+  * [Les fonctions ORDA](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) exposées via requêtes REST
+  * [Les tables et champs](REST/configuration.md#exposing-tables-and-fields) que vous ne voulez pas rendre disponibles via requêtes REST
 
-* **Sandboxing** through the definition of a [HTML Root](webServerConfig.md#root-folder) folder by default,
+* **Sandboxing** via la définition d'un [dossier HTML racine](webServerConfig.md#root-folder) par défaut
 
-* **Control of server resource usage** (e.g. [maximum concurrent web processes](webServerConfig.html#maximum-concurrent-web-processes) option).
-> For a general overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
+* **Contrôle de l'usage des ressources du serveur** (par exemple, via l'option qui détermine [le nombre maximum de process web simultanés](webServerConfig.html#maximum-concurrent-web-processes)).
+> Consultez le document [4D Security guide](https://blog.4d.com/4d-security-guide/) pour une vue d'ensemble des fonctions de sécurité de 4D.
 
-## User Sessions
+## Sessions Utilisateur
 
-The 4D web server includes complete automatic features for easily managing [web sessions](sessions.md) (user sessions) based on cookies.
+Le serveur Web 4D inclut des fonctionnalités automatiques complètes pour une gestion facilitée des [sessions web](sessions.md) (sessions utilisateur) basée sur les cookies.
 
-## Gateway to REST Requests
+## Point d'accès pour requêtes REST
 
-The 4D web server allows accessing data stored in your 4D applications through REST requests. REST requests provide direct access to any database operation such as adding, reading, editing, ordering, or searching data.
+Le serveur web 4D permet d'accéder aux données stockées dans vos applications 4D via des requêtes REST. Les requêtes REST offrent un accès direct à toutes les opérations de bases de données telles que l'ajout, la lecture, la modification, l'organisation ou la recherche.
 
-REST requests are detailed in the [REST server](REST/gettingStarted.md) section.
+Les requêtes REST sont détaillées dans la section [serveur REST](REST/gettingStarted.md).
 
-## Extended settings
+## Extension des paramètres
 
-The 4D web server configuration is defined through a comprehensive set of application-level settings that can also be customized for the session using the `webServer` object properties or the `WEB SET OPTION` command.
+Les requêtes REST sont détaillées dans la section [serveur REST](REST/gettingStarted.md).
 
-## Templates and URLs
+## Templates et URLs
 
-The 4D web server supports access to data stored in your 4D applications through template pages and specific URLs.
+Le serveur web 4D offre un accès aux données stockées dans vos applications 4D à travers des pages de template et des URLs spécifiques.
 
-* Template pages contain [special tags](templates.md) that initiate web server processing at the time when they are sent to browsers.
+* **Authentification** : [fonctionnalités d'authentification](authentication.md) flexibles et personnalisables, basées sur des paramètres intégrés, ainsi que des Méthodes base de secours ([`Sur authentification Web`](authentication.md#on-web-authentication) pour le serveur web et [`Sur authentification REST`](REST/configuration.md#using-the-on-rest-authentication-database-method) pour le serveur REST),
 
-* [specific URLs](httpRequests) enable 4D to be called in order to execute any action; these URLs can also be used as form actions to trigger processing when the user posts HTML forms.
+* [Les URLs spécifiques](httpRequests) permettent à 4D d'être appelé pour exécuter tout type d'action. Ces URLs peuvent également être utilisées comme des actions de formulaire pour déclencher des traitements de données quand l'utilisateur poste des formulaires HTML.
 
-## Dedicated Database Methods
+## Méthodes base dédiées
 
-`On Web Authentication`, `On Web Connection`, as well as `On REST Authentication` database methods are the entry points of requests in the web server; they can be used to evaluate and route any type of request.
+Le serveur web 4D offre un accès aux données stockées dans vos applications 4D à travers des pages de template et des URLs spécifiques.

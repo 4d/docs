@@ -3,18 +3,18 @@ id: onAfterKeystroke
 title: On After Keystroke
 ---
 
-| Code | Can be called by                                                                                                                                                                                                                                                           | Definition                                                                                                                                     |
+| Code | Can be called by                                                                                                                                                                                                                                                           | Definição                                                                                                                                      |
 | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | 28   | [4D Write Pro area](FormObjects/writeProArea_overview) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A character is about to be entered in the object that has the focus. `Get edited text` returns the object's text **including** this character. |
 
-<details><summary>History</summary>
+<details><summary>Histórico</summary>
 
-| Version | Changes                                                                                 |
-| ------- | --------------------------------------------------------------------------------------- |
-| v18 R5  | - Support in non-enterable list boxes - The event is now triggered after IME validation |
+| Versão | Mudanças                                                                                |
+| ------ | --------------------------------------------------------------------------------------- |
+| v18 R5 | - Support in non-enterable list boxes - The event is now triggered after IME validation |
 </details>
 
-## Description
+## Descrção
 
 > The `On After Keystroke` event can generally be replaced by the [`On After Edit`](onAfterEdit.md) event (see below).
 
@@ -34,6 +34,6 @@ When an entry requires a sequence of keystrokes, the [`On Before Keystroke`](onB
 - when using "dead" keys such as ^ or ~: events are generated only when the extended character is eventuelly entered (e.g. "ê" or ñ),
 - when an IME (Input Code Editor) displays an intermediary dialog box where the user can enter a combination of characters: events are generated only when the IME dialog is validated.
 
-### See also
+### Veja também
 
 [On Before Keystroke](onBeforeKeystroke.md).

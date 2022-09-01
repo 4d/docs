@@ -1,29 +1,29 @@
 ---
 id: onAlternativeClick
-title: On Alternative Click
+title: Sur clic alternatif
 ---
 
-| Code | Can be called by                                                                                                                                             | Definition                                         |
-| ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------- |
-| 38   | [Button](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | <li>Buttons: The "arrow" area of a button is clicked</li><li>List boxes: In a column of an object array, an ellipsis button ("alternateButton" attribute) is clicked</li> |
+| Code | Peut être appelé par                                                                                                                                             | Définition                                         |
+| ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| 38   | [Bouton](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [Colonne de List Box](FormObjects/listbox_overview.md#list-box-columns) | <li>Boutons : la zone "flèche" d'un bouton est cliquée</li><li>List box : dans une colonne d'un tableau, un bouton de sélection (attribut "alternateButton") est cliqué</li> |
 
 ## Description
 
-### Buttons
+### Boutons
 
-Some button styles can be [linked to a pop-up menu](FormObjects/properties_TextAndPicture.md#with-pop-up-menu) and display an triangle. Clicking on this triangle causes a selection pop-up to appear that provides a set of alternative actions in relation to the primary button action.
+Certains styles de boutons peuvent être [liés à un menu contextuel](FormObjects/properties_TextAndPicture.md#with-pop-up-menu) et afficher un triangle. En cliquant sur ce triangle, une fenêtre contextuelle de sélection apparait et fournit un ensemble d'actions alternatives en relation avec l'action du bouton principal.
 
-4D allows you to manage this type of button using the `On Alternative Click` event. This event is generated when the user clicks on the triangle (as soon as the mouse button is held down):
+4D vous permet de gérer ce type de bouton à l'aide de l'événement `On Alternative Click`. Cet événement est généré lorsque l'utilisateur clique sur le triangle (dès que le bouton de la souris est maintenu enfoncé) :
 
-- If the pop-up menu is **separated**,the event is only generated when a click occurs on the portion of the button with the arrow.
-- If the pop-up menu is **linked**, the event is generated when a click occurs on any part of the button. Note that the [`On Long Click`](onLongClick.md) event cannot be generated with this type of button.
+- Si le menu pop-up est **séparé**, l'événement n'est généré que lorsqu'un clic se produit sur la partie du bouton avec la flèche.
+- Si le pop-up menu est **lié**, l'événement est généré lorsqu'un clic se produit sur n'importe quelle partie du bouton. A noter que l'événement [`On Long Click`](onLongClick.md) ne peut pas être généré avec ce type de bouton.
 
 ![](../assets/en/Events/clickevents.png)
 
 ### List box
 
-This event is generated in columns of [object array type list boxes](FormObjects/listbox_overview.md#object-arrays-in-columns-4d-view-pro), when the user clicks on a widget ellipsis button ("alternateButton" attribute).
+Cet événement est généré dans des colonnes de [list box de type tableau objets](FormObjects/listbox_overview.md#object-arrays-in-columns-4d-view-pro), lorsque l'utilisateur clique sur un bouton de sélection de widget (attribut "AlternateButton").
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
 
-See the [description of the "alternateButton" attribute](FormObjects/listbox_overview.md#alternatebutton).
+Voir la [description de l'attribut "alternateButton"](FormObjects/listbox_overview.md#alternatebutton).

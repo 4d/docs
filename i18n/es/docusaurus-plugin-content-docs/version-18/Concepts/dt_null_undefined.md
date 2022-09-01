@@ -1,25 +1,25 @@
 ---
 id: null-undefined
-title: Null and Undefined
+title: Null e indefinido
 ---
 
 ## Null
 
-Null is a special data type with only one possible value: **null**. This value is returned by an expression that does not contain any value.
+Null es un tipo de datos especial con un solo valor posible: **null**. Este valor es devuelto por una expresión que no contiene ningún valor.
 
-In the 4D language and for object field attributes, null values are managed through the `Null` function. This function can be used with the following expressions for setting or comparing the null value:
+En el lenguaje 4D y para los atributos de los campos de los objetos, los valores nulos se gestionan a través de la función `Null`. Esta función puede utilizarse con las siguientes expresiones para definir o comparar el valor nulo:
 
-- object attributes
-- collection elements
-- variables of the object, collection, pointer, picture, or variant type.
+- atributos de objetos
+- elementos de colecciones
+- variables de tipo objeto, colección, puntero, imagen o variante.
 
-## Undefined
+## Indefinido
 
-Undefined is not actually a data type. It denotes a variable that has not yet been defined. A function (a project method that returns a result) can return an undefined value if, within the method, the function result ($0) is assigned an undefined expression (an expression calculated with at least one undefined variable). A field cannot be undefined (the `Undefined` command always returns False for a field). A variant variable has **undefined** as default value.
+Indefinido no es realmente un tipo de datos. Denota una variable que aún no ha sido definida. Una función (un método proyecto que devuelve un resultado) puede devolver un valor indefinido si, dentro del método, se asigna al resultado de la función ($0) una expresión indefinida (una expresión calculada con al menos una variable indefinida). Un campo no puede ser indefinido (el comando `Undefined` siempre devuelve False para un campo). Una variable variant tiene **indefinido** como valor por defecto.
 
-## Examples
+## Ejemplos
 
-Here are the different results of the `Undefined` command as well as the `Null` command with object properties, depending on the context:
+Aquí están los diferentes resultados del comando `Undefined` así como del comando `Null` con las propiedades de los objetos, dependiendo del contexto:
 
 ```4d
 C_OBJECT($vEmp)

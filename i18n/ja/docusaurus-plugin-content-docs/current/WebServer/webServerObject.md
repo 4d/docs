@@ -1,137 +1,137 @@
 ---
 id: webServerObject
-title: Web Server object
+title: Webサーバーオブジェクト
 ---
 
 
-A 4D project can start and monitor a web server for the main (host) application as well as each hosted component.
+4Dプロジェクトは、メイン (ホスト) アプリケーションおよび、ホストされた各コンポーネントの Webサーバーを起動して監視することができます。
 
-For example, if you installed two components in your main application, you can start and monitor up to three independant web servers from your application:
+たとえば、メインアプリケーションに 2つのコンポーネントをインストールしている場合、アプリケーションから最大 3つの独立した Webサーバーを起動して監視することができます:
 
-- one web server for the host application,
-- one web server for the component #1,
-- one web server for the component #2.
+- ホストアプリケーションの Webサーバーを1つ
+- コンポーネント#1 の Webサーバーを1つ
+- コンポーネント#2 の Webサーバーを1つ
 
-Other than memory, there is no limit to the number of components and thus, of web servers, that can be attached to a single 4D application project.
+1つの 4Dアプリケーションプロジェクトに接続できるコンポーネントの数、つまり Webサーバーの数には、メモリ以外の制限はありません。
 
-Each 4D web server, including the main application's web server, is exposed as a specific **object** of the `4D.WebServer` class. Once instantiated, a web server object can be handled from the current application or from any component using a [large number of properties and functions](API/WebServerClass.md).
+メインアプリケーションの Webサーバーを含む、各 4D Webサーバーは、`4D.WebServer` クラスの **オブジェクト** として公開されます。 インスタンス化された Webサーバーオブジェクトは、[多数のプロパティや関数](API/WebServerClass.md) を使用して、カレントのアプリケーションまたは任意のコンポーネントから操作することができます。
 
-> The legacy [WEB commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) of the 4D language are supported but cannot select the web server to which they apply (see below).
+> 4Dランゲージの従来の [WEBコマンド](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.ja.html) はサポートされていますが、その対象となる Webサーバーを選択することはできません (後述参照)。
 
-Each web server (host application or component) can be used in its own separate context, including:
-- `On Web Authentication` and `On Web Connection` database method calls
-- 4D tags processing and method calls,
-- web sessions and TLS protocol management.
+各 Webサーバー (ホストアプリケーションまたはコンポーネント) は、個別のコンテキストで使用できます。 これには、以下が含まれます:
+- `On Web Authentication` および `On Web Connection` データベースメソッドの呼び出し
+- 4Dタグの処理とメソッドの呼び出し
+- Webセッションや TLSプロトコルの管理
 
-This allows you to develop independant components and features that come with their own web interfaces.
+これにより、独自の Webインターフェースを備えた独立したコンポーネントや機能を開発することができます。
 
 
-## Instantiating a web server object
+## Webサーバーオブジェクトのインスタンス化
 
-The web server object of the host application (default web server) is automatically loaded by 4D at startup. Thus, if you write in a newly created project:
+ホストアプリケーション (デフォルトWebサーバー) の Webサーバーオブジェクトは、4D 起動時に自動的に読み込まれます。 したがって、新規作成したプロジェクトに次のように書いた場合:
 
 ```4d
 $nbSrv:=WEB Server list.length   
-//$nbSrv value is 1
+//$nbSrv の値は 1
 ```
 
-To instantiate a web server object, call the [`WEB Server`](API/WebServerClass.md#web-server) command:
+Webサーバーオブジェクトをインスタンス化するには、[`WEB Server`](API/WebServerClass.md#web-server) コマンドを呼び出します。
 
 ```4d
-    //create an object variable of the 4D.WebServer class
+    // 4D.WebServer クラスのオブジェクト変数を作成します。
 var webServer : 4D.WebServer 
-    //call the web server from the current context
+    // カレントコンテキストから Webサーバーを呼び出します
 webServer:=WEB Server  
 
-    //equivalent to
+    // 以下と同じです
 webServer:=WEB Server(Web server database)
 ```
 
-If the application uses components and you want to call:
-- the host application's web server from a component or
-- the server that received the request (whatever the server),
+アプリケーションがコンポーネントを使用している場合に:
+- コンポーネントからホストアプリケーションの Webサーバーを呼び出す場合や
+- リクエストを受け取ったサーバー (どのサーバーでも) を呼び出す場合
 
-you can also use:
+次を使うこともできます:
 
 ```4d
 var webServer : 4D.WebServer 
-    //call the host web server from a component  
+    // コンポーネントからホストの Webサーバーを呼び出す  
 webServer:=WEB Server(Web server host database)  
-    //call the target web server
+    // ターゲットの Webサーバーを呼び出す
 webServer:=WEB Server(Web server receiving request)  
 ```
 
 
-## Web server functions
+## Webサーバー関数
 
-A [web server class object](API/WebServerClass.md#web-server-object) contains the following functions:
+[Webサーバークラスのオブジェクト](API/webServerClass.md#webサーバーオブジェクト) には、以下の機能があります。
 
-| Functions                                | Parameter         | Return value    | Description           |
-| ---------------------------------------- | ----------------- | --------------- | --------------------- |
-| [`start()`](API/WebServerClass.md#start) | settings (object) | status (object) | Starts the web server |
-| [`stop()`](API/WebServerClass.md#start)  | -                 | -               | Stops the web server  |
+| 関数                                       | 引数                | 戻り値             | 詳細            |
+| ---------------------------------------- | ----------------- | --------------- | ------------- |
+| [`start()`](API/WebServerClass.md#start) | settings (オブジェクト) | status (オブジェクト) | Webサーバーを開始します |
+| [`stop()`](API/WebServerClass.md#start)  | -                 | -               | Webサーバーを停止します |
 
-To start and stop a web server, just call the [`start()`](API/WebServerClass.md#start) and [`stop()`](API/WebServerClass.md#stop) functions of the web server object:
+Webサーバーを起動・停止するには、Webサーバーオブジェクトの [`start()`](API/WebServerClass.md#start) および [`stop()`](API/WebServerClass.md#stop) 関数を呼び出すだけです。
 
 ```4d
 var $status : Object
-    //to start a web server with default settings
+    // デフォルトの設定で Webサーバーを起動する場合
 $status:=webServer.start()
-    //to start the web server with custom settings  
-    //$settings object contains web server properties
+    // カスタム設定で Webサーバーを開始する場合  
+    // $settings オブジェクトは、Wevサーバープロパティを格納します
 webServer.start($settings)
 
-    //to stop the web server
+    // Webサーバーを停止します
 $status:=webServer.stop()
 ```
 
 
-## Web server properties
+## Webサーバープロパティ
 
-A web server object contains [various properties](API/WebServerClass.md#web-server-object) which configure the web server.
+Webサーバーオブジェクトには、Webサーバーを構成する [さまざまなプロパティ](API/WebServerClass.md#webサーバーオブジェクト) が含まれています。
 
-These properties are defined:
+これらのプロパティは以下のように定義します:
 
-1. using the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function (except for read-only properties, see below),
-2. if not used, using the `WEB SET OPTION` command (host applications only),
-3. if not used, in the settings of the host application or the component.
+1. [`.start()`](API/WebServerClass.md#start) 関数の `settings` パラメーターを使用して定義します (読み取り専用のプロパティを除く、後述参照)。
+2. 上を使用しない場合は、`WEB SET OPTION` コマンドを使用して定義します (ホストアプリケーションのみ)。
+3. 上を使用しない場合は、ホストアプリケーションまたはコンポーネントの設定で定義します。
 
-- If the web server is not started, the properties contain the values that will be used at the next web server startup.
-- If the web server is started, the properties contain the actual values used by the web server (default settings could have been overriden by the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function.
+- Webサーバーを起動していない場合、プロパティには Webサーバーの次回起動時に使用される値が含まれています。
+- Webサーバーが起動されている場合、プロパティには Webサーバーで使用される実際の値が含まれます (デフォルトの定は [`.start()`](API/WebServerClass.md#start) 関数の `settings` パラメーターによって上書きされている可能性があります)。
 
-> *isRunning*, *name*, *openSSLVersion*, and *perfectForwardSecrecy* are read-only properties that cannot be predefined in the `settings` object parameter for the [`start()`](API/WebServerClass.md#start) function.
+> *isRunning*、*name*、*openSSLVersion*、*perfectForwardSecrecy* は読み取り専用のプロパティで、[`start()`](API/WebServerClass.md#start)関数の `settings` オブジェクトパラメーターで事前に定義することはできません。
 
 
-## Scope of the 4D Web commands
+## 4D Webコマンドのスコープ
 
-The 4D Language contains [several commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) that can be used to control the web server. However, these commands are designed to work with a single (default) web server. When using these commands in the context of web server objects, make sure their scope is appropriate.
+4Dランゲージには、Webサーバーの制御に使用できる [いくつかのコマンド](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.ja.html) があります。 ただし、これらのコマンドは 1つの (デフォルト) Webサーバーで動作するように設計されています。 これらのコマンドを Webサーバーオブジェクトのコンテキストで使用する場合は、そのスコープが適切であることを確認してください。
 
-| Command                         | Scope                                |
-| ------------------------------- | ------------------------------------ |
-| `SET DATABASE PARAMETER`        | Host application web server          |
-| `WEB CLOSE SESSION`             | Web server that received the request |
-| `WEB GET BODY PART`             | Web server that received the request |
-| `WEB Get body part count`       | Web server that received the request |
-| `WEB Get Current Session ID`    | Web server that received the request |
-| `WEB GET HTTP BODY`             | Web server that received the request |
-| `WEB GET HTTP HEADER`           | Web server that received the request |
-| `WEB GET OPTION`                | Host application web server          |
-| `WEB Get server info`           | Host application web server          |
-| `WEB GET SESSION EXPIRATION`    | Web server that received the request |
-| `WEB Get session process count` | Web server that received the request |
-| `WEB GET STATISTICS`            | Host application web server          |
-| `WEB GET VARIABLES`             | Web server that received the request |
-| `WEB Is secured connection`     | Web server that received the request |
-| `WEB Is server running`         | Host application web server          |
-| `WEB SEND BLOB`                 | Web server that received the request |
-| `WEB SEND FILE`                 | Web server that received the request |
-| `WEB SEND HTTP REDIRECT`        | Web server that received the request |
-| `WEB SEND RAW DATA`             | Web server that received the request |
-| `WEB SEND TEXT`                 | Web server that received the request |
-| `WEB SET HOME PAGE`             | Host application web server          |
-| `WEB SET HTTP HEADER`           | Web server that received the request |
-| `WEB SET OPTION`                | Host application web server          |
-| `WEB SET ROOT FOLDER`           | Host application web server          |
-| `WEB START SERVER`              | Host application web server          |
-| `WEB STOP SERVER`               | Host application web server          |
-| `WEB Validate digest`           | Web server that received the request |
+| コマンド                            | スコープ                |
+| ------------------------------- | ------------------- |
+| `SET DATABASE PARAMETER`        | ホストアプリケーション Webサーバー |
+| `WEB CLOSE SESSION`             | リクエストを受け取った Webサーバー |
+| `WEB GET BODY PART`             | リクエストを受け取った Webサーバー |
+| `WEB Get body part count`       | リクエストを受け取った Webサーバー |
+| `WEB Get Current Session ID`    | リクエストを受け取った Webサーバー |
+| `WEB GET HTTP BODY`             | リクエストを受け取った Webサーバー |
+| `WEB GET HTTP HEADER`           | リクエストを受け取った Webサーバー |
+| `WEB GET OPTION`                | ホストアプリケーション Webサーバー |
+| `WEB Get server info`           | ホストアプリケーション Webサーバー |
+| `WEB GET SESSION EXPIRATION`    | リクエストを受け取った Webサーバー |
+| `WEB Get session process count` | リクエストを受け取った Webサーバー |
+| `WEB GET STATISTICS`            | ホストアプリケーション Webサーバー |
+| `WEB GET VARIABLES`             | リクエストを受け取った Webサーバー |
+| `WEB Is secured connection`     | リクエストを受け取った Webサーバー |
+| `WEB Is server running`         | ホストアプリケーション Webサーバー |
+| `WEB SEND BLOB`                 | リクエストを受け取った Webサーバー |
+| `WEB SEND FILE`                 | リクエストを受け取った Webサーバー |
+| `WEB SEND HTTP REDIRECT`        | リクエストを受け取った Webサーバー |
+| `WEB SEND RAW DATA`             | リクエストを受け取った Webサーバー |
+| `WEB SEND TEXT`                 | リクエストを受け取った Webサーバー |
+| `WEB SET HOME PAGE`             | ホストアプリケーション Webサーバー |
+| `WEB SET HTTP HEADER`           | リクエストを受け取った Webサーバー |
+| `WEB SET OPTION`                | ホストアプリケーション Webサーバー |
+| `WEB SET ROOT FOLDER`           | ホストアプリケーション Webサーバー |
+| `WEB START SERVER`              | ホストアプリケーション Webサーバー |
+| `WEB STOP SERVER`               | ホストアプリケーション Webサーバー |
+| `WEB Validate digest`           | リクエストを受け取った Webサーバー |

@@ -3,12 +3,12 @@ id: onPageChange
 title: On Page Change
 ---
 
-| Code | Can be called by | Definition                              |
+| Code | Can be called by | Definição                               |
 | ---- | ---------------- | --------------------------------------- |
-| 56   | Form             | The current page of the form is changed |
+| 56   | Formulário       | The current page of the form is changed |
 
 
-## Description
+## Descrção
 
 This event is only available at the form level (it is called in the form method). It is generated each time the current page of the form changes (following a call to the `FORM GOTO PAGE` command or a standard navigation action).
 

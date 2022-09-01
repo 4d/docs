@@ -1,15 +1,15 @@
 ---
 id: onDeleteAction
-title: On Delete Action
+title: Sur action suppression
 ---
 
-| Code | Can be called by                                                                                | Definition                          |
-| ---- | ----------------------------------------------------------------------------------------------- | ----------------------------------- |
-| 58   | [Hierarchical List](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md) | The user attempts to delete an item |
+| Code | Peut être appelé par                                                                             | Définition                                  |
+| ---- | ------------------------------------------------------------------------------------------------ | ------------------------------------------- |
+| 58   | [Liste hiérarchique](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md) | L'utilisateur tente de supprimer un élément |
 
 
 ## Description
 
-This event is generated each time a user attempts to delete the selected item(s) by pressing a deletion key (**Delete** or **Backspace**) or selecting a menu item whose associated standard action is 'Clear' (such as the **Clear** command in the **Edit** menu).
+Cet événement est généré chaque fois qu'un utilisateur tente de supprimer le ou les éléments sélectionnés en appuyant sur une touche de suppression (**Supprimer** ou **Retour en arrière**) ou en sélectionnant un élément de menu dont l'action standard associée est 'Effacer' (telle que la commande **Effacer** dans le menu **Edition**).
 
-Note that generating the event is the only action carried out by 4D: the program does not delete any items. It is up to the developer to handle the deletion and any prior warning messages that are displayed.
+A noter que la génération de l'événement est la seule action réalisée par 4D : le programme ne supprime aucun élément. Il appartient au développeur de gérer la suppression et tous les messages d'avertissement précédents qui sont affichés.

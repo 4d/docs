@@ -1,35 +1,35 @@
 ---
 id: propertiesCrop
-title: Crop
+title: 行列数
 ---
 
 
-## Columns
+## 列
 
-Sets the number of columns in a thumbnail table.
+サムネールテーブルを構成する行数を指定します。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name        | Data Type | Possible Values |
-|:----------- |:---------:| --------------- |
-| columnCount |  integer  | minimum: 1      |
+| 名称          | データタイプ | とりうる値  |
+|:----------- |:------:| ------ |
+| columnCount |   整数   | 最小値: 1 |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
+[ピクチャーボタン](pictureButton_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [ピクチャポップアップメニュー](picturePopupMenu_overview.md)
 
 ---
 
-## Rows
+## 行
 
-Sets the number of rows in a thumbnail table.
+サムネールテーブルを構成する列数を指定します。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name     | Data Type | Possible Values |
-|:-------- |:---------:| --------------- |
-| rowCount |  integer  | minimum: 1      |
+| 名称       | データタイプ | とりうる値  |
+|:-------- |:------:| ------ |
+| rowCount |   整数   | 最小値: 1 |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
+[ピクチャーボタン](pictureButton_overview.md) - [ボタングリッド](buttonGrid_overview.md) - [ピクチャポップアップメニュー](picturePopupMenu_overview.md)

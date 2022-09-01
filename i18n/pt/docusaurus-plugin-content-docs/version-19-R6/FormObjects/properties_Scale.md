@@ -1,6 +1,6 @@
 ---
 id: propertiesScale
-title: Scale
+title: Escala
 ---
 
 ## Barber shop
@@ -9,9 +9,9 @@ Enables the "barber shop" variant for the thermometer.
 
 #### JSON Grammar
 
-|      Name       | Data Type | Possible Values                                             |
-|:---------------:|:---------:| ----------------------------------------------------------- |
-| [max](#maximum) |  number   | NOT passed = enabled; passed = disabled (basic thermometer) |
+|      Nome       | Tipo de dados | Possible Values                                             |
+|:---------------:|:-------------:| ----------------------------------------------------------- |
+| [max](#maximum) |    number     | NOT passed = enabled; passed = disabled (basic thermometer) |
 
 #### Objects Supported
 
@@ -25,9 +25,9 @@ Displays/Hides the graduations next to the labels.
 
 #### JSON Grammar
 
-|      Name       | Data Type | Possible Values |
-|:---------------:|:---------:| --------------- |
-| showGraduations |  boolean  | "true", "false" |
+|      Nome       | Tipo de dados | Possible Values |
+|:---------------:|:-------------:| --------------- |
+| showGraduations |    boolean    | "true", "false" |
 
 #### Objects Supported
 
@@ -41,9 +41,9 @@ Scale display measurement.
 
 #### JSON Grammar
 
-|      Name      | Data Type | Possible Values |
-|:--------------:|:---------:| --------------- |
-| graduationStep |  integer  | minimum: 0      |
+|      Nome      | Tipo de dados | Possible Values |
+|:--------------:|:-------------:| --------------- |
+| graduationStep |    integer    | mínimo: 0       |
 
 #### Objects Supported
 
@@ -61,9 +61,9 @@ Specifies the location of an object's displayed text.
 
 #### JSON Grammar
 
-|      Name       | Data Type | Possible Values                          |
-|:---------------:|:---------:| ---------------------------------------- |
-| labelsPlacement |  string   | "none", "top", "bottom", "left", "right" |
+|      Nome       | Tipo de dados | Possible Values                          |
+|:---------------:|:-------------:| ---------------------------------------- |
+| labelsPlacement |    string     | "none", "top", "bottom", "left", "right" |
 
 #### Objects Supported
 
@@ -71,7 +71,7 @@ Specifies the location of an object's displayed text.
 
 ---
 
-## Maximum
+## Máximo
 
 Maximum value of an indicator.
 
@@ -80,7 +80,7 @@ Maximum value of an indicator.
 
 #### JSON Grammar
 
-| Name |    Data Type    | Possible Values                     |
+| Nome |  Tipo de dados  | Possible Values                     |
 |:----:|:---------------:| ----------------------------------- |
 | max  | string / number | minimum: 0 (for numeric data types) |
 
@@ -90,13 +90,13 @@ Maximum value of an indicator.
 
 ---
 
-## Minimum
+## Mínimo
 
 Minimum value of an indicator. For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
 
 #### JSON Grammar
 
-| Name |    Data Type    | Possible Values                     |
+| Nome |  Tipo de dados  | Possible Values                     |
 |:----:|:---------------:| ----------------------------------- |
 | min  | string / number | minimum: 0 (for numeric data types) |
 
@@ -112,9 +112,9 @@ Minimum interval accepted between values during use. For numeric steppers, this 
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-|:----:|:---------:| --------------- |
-| step |  integer  | minimum: 1      |
+| Nome | Tipo de dados | Possible Values |
+|:----:|:-------------:| --------------- |
+| step |    integer    | mínimo: 1       |
 
 #### Objects Supported
 

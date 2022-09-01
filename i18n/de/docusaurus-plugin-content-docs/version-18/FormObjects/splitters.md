@@ -3,7 +3,7 @@ id: splitters
 title: Splitter
 ---
 
-## Overview
+## Überblick
 
 A splitter divides a form into two areas, allowing the user to enlarge and reduce the areas by moving the splitter one way or the other. A splitter can be either horizontal or vertical. The splitter takes into account each object’s resizing properties, which means that you can completely customize your database’s interface. A splitter may or may not be a “pusher.”
 
@@ -44,7 +44,7 @@ In a form, splitters interact with the objects that are around them according to
 | Resizing options for the object(s) | Object(s) above an horizontal splitter or to the left of a vertical splitter (1)    | Object(s) below an horizontal *non-Pusher* splitter or to the right of a vertical *non-Pusher* splitter                                                                                              | Object(s) below an horizontal *Pusher* splitter or to the right of a vertical *Pusher* splitter                                           |
 | ---------------------------------- | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | None                               | Remain as is                                                                        | Are moved with the splitter (position relative to the splitter is not modified) until the next stop. The stop when moving to the bottom or right is either the window’s border, or another splitter. | Are moved with the splitter (position relative to the splitter is not modified) indefinitely. No stop is applied (see the next paragraph) |
-| Resize                             | Keep original position(s), but are resized according to the splitter’s new position |                                                                                                                                                                                                      |                                                                                                                                           |
+| Zoomen                             | Keep original position(s), but are resized according to the splitter’s new position |                                                                                                                                                                                                      |                                                                                                                                           |
 | Move                               | Are moved with the splitter                                                         |                                                                                                                                                                                                      |                                                                                                                                           |
 
 *(1) You cannot drag the splitter past the right (horizontal) or bottom (vertical) side of an object located in this position.*

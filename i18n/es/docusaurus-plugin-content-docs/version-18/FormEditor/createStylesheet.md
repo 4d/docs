@@ -1,51 +1,51 @@
 ---
 id: stylesheets
-title: Style sheets
+title: Hojas de estilo
 ---
 
-## Overview
+## Generalidades
 
-A style sheet groups together a combination of attributes for form objects —  from text attributes to nearly any available object attribute.
+Una hoja de estilo agrupa una combinación de atributos de objetos formulario, desde los atributos de texto hasta casi todos los atributos de objeto disponibles.
 
-In addition to harmonizing an application's interface, style sheets provide three major advantages:
+Además de armonizar la interfaz de sus aplicaciones, las hojas de estilo ofrecen tres grandes ventajas:
 
-* Saves time during development: Each object has specific group of settings within a single operation.
-* Facilitates maintenance: Style sheets modify the appearance of any objects that uses them, so changing the font size in a style sheet will change the font size for all of the objects that use this same style sheet.
-* Controls multi-platform development: You can have a style sheets that apply to both macOS and Windows platforms, only macOS, or only Windows. When a style sheet is applied, 4D automatically uses the appropriate style sheet.
+* Permite ahorrar tiempo durante el desarrollo: para cada objeto tiene un grupo específico de parámetros dentro de una sola operación.
+* Facilita el mantenimiento: las hojas de estilo modifican la apariencia de todos los objetos que las utilicen, por lo que cambiar el tamaño de la fuente en una hoja de estilo cambiará el tamaño de la fuente para todos los objetos que utilicen esta misma hoja de estilo.
+* Control del desarrollo multiplataforma: las hojas de estilo se pueden aplicar a las plataformas macOS y Windows, sólo a macOS o sólo a Windows. Cuando se aplica una hoja de estilo, 4D utiliza automáticamente la hoja de estilo apropiada.
 
-### Style Sheet Files
+### Archivos hojas de estilo
 
-4D accepts three, specific style sheet files:
+4D acepta tres archivos específicos de hojas de estilo:
 
-| Style Sheet             | Platform                                              |
-| ----------------------- | ----------------------------------------------------- |
-| styleSheets.css         | Default global style sheet for both macOS and Windows |
-| styleSheets_mac.css     | For defining macOS only specific attribute styles     |
-| styleSheets_windows.css | For defining Windows only specific attribute styles   |
+| Hoja de estilo          | Plataforma                                                                |
+| ----------------------- | ------------------------------------------------------------------------- |
+| styleSheets.css         | Hoja de estilo global por defecto para macOS y Windows                    |
+| styleSheets_mac.css     | Para definir los estilos de atributos específicos de macOS únicamente     |
+| styleSheets_windows.css | Para definir los estilos de atributos específicos para Windows únicamente |
 
-These files are stored in the project's "/SOURCES" folder.
+Estos archivos se almacenan en la carpeta "/SOURCES" del proyecto.
 
-### Style Sheet Architecture
+### Arquitectura de las hojas de estilo
 
-While adapted to meet the specific needs of 4D forms, style sheets for project databases generally follow CSS2 syntax and grammar.
+Aunque adaptadas para satisfacer las necesidades específicas de los formularios 4D, las hojas de estilo de las bases proyecto suelen seguir la sintaxis y la gramática CSS2.
 
-Every style rule in a style sheet contains two parts:
+Cada regla de estilo de una hoja de estilo contiene dos partes:
 
-* a *Selector* - A selector defines where to apply the style. 4D supports "object type", "object name", "class", "all objects", as well as "attribute value" selectors.
+* un *selector* - Un selector define dónde aplicar el estilo. 4D soporta los selectores "object type", "object name", "class", "all objects" y "attribute value".
 
-* a *Declaration* - The declaration defines the actual style to apply. Multiple declaration lines can be grouped together to form a declaration block. Each line in a CSS declaration block must end with a semicolon, and the entire block must be surrounded by curly braces.
+* una *declaración* - La declaración define el estilo real a aplicar. Se pueden agrupar varias líneas de declaración para formar un bloque de declaración. Cada línea de un bloque de declaración CSS debe terminar con un punto y coma, y todo el bloque debe estar rodeado de llaves.
 
-## Style Sheet Selectors
+## Selectores de hojas de estilo
 
-### Object Type
+### Tipo de objeto
 
-Corresponding to the CSS element selector, the object type defines the type of object to style.
+El tipo de objeto define el tipo de objeto al que hay que aplicar el estilo, y corresponde al selector de elementos CSS.
 
-Specify the object type, then in curly braces, declare the style(s) to apply.
+Especifique el tipo de objeto, luego entre llaves, declare el estilo o los estilos a aplicar.
 
-> The object type corresponds to the JSON [type](FormObjects/properties_Object.md#type) property of form objects.
+> El tipo objeto corresponde a la propiedad JSON [tipo](FormObjects/properties_Object.md#type) de los objetos formulario.
 
-In the following example, all objects of the *button* type will display text in the Helvetica Neue font, with a size of 20 pixels:
+En el siguiente ejemplo, todos los objetos del tipo *botón* mostrarán el texto en la fuente Helvetica Neue, con un tamaño de 20 píxeles:
 
 ```
 button {
@@ -54,7 +54,7 @@ button {
 }
 ```
 
-To apply the same style to multiple types of objects, specify the object types separated by a "," then in curly braces, declare the style(s) to apply:
+Para aplicar el mismo estilo a varios tipos de objetos, especifique los tipos de objetos separados por un "," y luego, entre llaves, declare el o los estilos a aplicar:
 
 ```
 text, input {
@@ -63,13 +63,13 @@ text, input {
 }
 ```
 
-### Object Name
+### Nombre del objeto
 
-Corresponding to the CSS **ID selector**, the object name defines a specific object to style since the object's name is unique within the form.
+El nombre del objeto corresponde al **selector de ID** CSS y define un objeto específico al que hay que dar estilo, ya que el nombre del objeto es único dentro del formulario.
 
-Designate the object with a "#" character before the object's name, then in curly braces, declare the style(s) to apply.
+Designe el objeto con un carácter "#" antes del nombre del objeto y, a continuación, entre llaves, declare el o los estilos a aplicar.
 
-In the following example, the text of the object with the name "okButton" will be displayed in Helvetica Neue font, with a size of 20 pixels:
+En el siguiente ejemplo, el texto del objeto con el nombre "okButton" se mostrará en fuente Helvetica Neue, con un tamaño de 20 píxeles:
 
 ```
 #okButton {
@@ -80,11 +80,11 @@ In the following example, the text of the object with the name "okButton" will b
 
 ### Class
 
-Corresponding to the CSS **class selector**, the class defines the style for all form objects with the `class` attribute.
+Class corresponde al **selector class** CSS y define el estilo para todos los objetos formulario con el atributo `class`.
 
-You can specify the classes to use with a "." character followed by the name of the class, and in curly braces, declare the style(s) to apply.
+Puede especificar las clases a utilizar con un caracter "." seguido del nombre de la clase, y entre llaves, declarar el o los estilos a aplicar.
 
-In the following example, the text of all objects with the `okButtons` class will be displayed in Helvetica Neue font, with a size of 20 pixels, aligned in the center:
+En el siguiente ejemplo, el texto de todos los objetos con el nombre de la clase `okButtons` se mostrará en la fuente Helvetica Neue, con un tamaño de 20 píxeles, alineado al centro:
 
 ```
 .okButtons {
@@ -94,7 +94,7 @@ In the following example, the text of all objects with the `okButtons` class wil
 }
 ```
 
-To designate that a style should be applied only to objects of a distinct type, specify the type followed by "." and the name of the class, then in curly braces, declare the style(s) to apply.
+Para indicar que un estilo debe aplicarse sólo a los objetos de un tipo determinado, especifique el tipo seguido de "." y el nombre de la clase, y luego, entre llaves, declare el estilo o los estilos a aplicar.
 
 ```
 text.center {
@@ -103,19 +103,19 @@ text.center {
 }
 ```
 
-In the 4D form description, you associate a class name to an object using the `class` attribute. This attribute contains one or several class names, separated by a space character:
+En la descripción del formulario 4D, se asocia un nombre de clase a un objeto mediante el atributo `class`. Este atributo contiene uno o varios nombres de clase, separados por un espacio:
 
 ```
 class: "okButtons important"       
 ```
 
-### All Objects
+### Todos los objetos
 
-Corresponding to the CSS **universal selector**, the "*" character indicates that the following style will be applied to all objects on the form.
+En correspondencia con el selector CSS **universal**, el carácter "*" indica que el siguiente estilo se aplicará a todos los objetos del formulario.
 
-Designate that a style should apply to all form objects with the "*" character, then in curly braces, declare the style(s) to apply.
+Indique que un estilo debe aplicarse a todos los objetos formulario con el carácter "*" y, a continuación, entre llaves, declare el o los estilos que deben aplicarse.
 
-In the following example, all objects will have a gray fill:
+En el siguiente ejemplo, todos los objetos tendrán un fondo gris:
 
 ```
 * {
@@ -123,24 +123,24 @@ In the following example, all objects will have a gray fill:
 }
 ```
 
-### Specific Attribute
+### Atributos específicos
 
-Corresponding to the CSS **attribute selectors**, styles can be applied to all form objects with a specific attribute.
+Los estilos correspondientes a los **selectores de atributos** CSS se pueden aplicar a todos los objetos formulario con un atributo específico.
 
-Specify the attribute within brackets, then in curly braces, declare the style(s) to apply.
+Especifique el atributo entre corchetes y, a continuación, entre llaves, declare el estilo o los estilos a aplicar.
 
-#### Supported syntaxes
+#### Sintaxis soportadas
 
-| Syntax                    | Description                                                                                             |
-| ------------------------- | ------------------------------------------------------------------------------------------------------- |
-| [attribute]               | matches objects with the `attribute`                                                                    |
-| [attribute="value"]       | matches objects with the `attribute` value containing exactly the specified "value"                     |
-| [attribute~="value"]      | matches objects with the `attribute` value containing the "value" among a space-separated list of words |
-| [attribute&#124;="value"] | matches objects with an `attribute` whose value starts with "value"                                     |
+| Sintaxis                  | Descripción                                                                                                                      |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| [attribute]               | coincide con objetos con el `attribute`                                                                                          |
+| [attribute="value"]       | coincide con objetos cuyo valor del `attribute` contenga exactamente el "valor" especificado                                     |
+| [attribute~="value"]      | coincide con los objetos con el valor del `attribute` que contiene el "valor" entre una lista de palabras separadas por espacios |
+| [attribute&#124;="value"] | coincide con objetos con un `attribute` cuyo valor empieza por "valor"                                                           |
 
-#### Examples
+#### Ejemplos
 
-All objects with the `borderStyle` attribute will have purple lines:
+Todos los objetos con el atributo `borderStyle` tendrán líneas moradas:
 
 ```
 [borderStyle]
@@ -149,7 +149,7 @@ All objects with the `borderStyle` attribute will have purple lines:
 }
 ```
 
-All objects of the text type with a text attribute whose value is "Hello" will have blue letters:
+Todos los objetos de tipo texto con un atributo texto cuyo valor sea "Hello" tendrán letras azules:
 
 ```
 text[text=Hello]
@@ -158,7 +158,7 @@ text[text=Hello]
 }
 ```
 
-All objects with a text attribute whose value contains "Hello" will have blue lines:
+Todos los objetos con un atributo texto cuyo valor sea "Hello" tendrán letras azules:
 
 ```
 [text~=Hello]
@@ -168,7 +168,7 @@ All objects with a text attribute whose value contains "Hello" will have blue li
 
 ```
 
-All objects of the text type with a text attribute whose value starts with "Hello" will have yellow letters:
+Todos los objetos de tipo texto con un atributo texto cuyo valor comience por "Hello" tendrán letras azules:
 
 ```
 text[text|=Hello]
@@ -177,20 +177,20 @@ text[text|=Hello]
 }
 ```
 
-## Style Sheet Declarations
+## Declaraciones de hojas de estilo
 
-The majority of form object attributes can be defined within a style sheet, except the following attributes:
+La mayoría de los atributos del objeto formulario pueden ser definidos dentro de una hoja de estilo, excepto los siguientes atributos:
  - "method"
  - "type"
  - "class"
  - "event"
  - choiceList, excludedList, labels, list, requiredList (list type)
 
-Form object attributes can be declared with their JSON name as CSS attributes (not including object types, methods, events, and lists). For more information, see the **Dynamic Forms** page in the Design Reference.
+Los atributos del objeto formulario pueden declararse con su nombre JSON como atributos CSS (sin incluir los tipos de objetos, métodos, eventos y listas). Para más información, consulte la página **Formularios dinámicos** en el Manual de Diseño.
 
-### Attribute Mapping
+### Mapa de atributos
 
-The attributes listed below are able to accept either the 4D name or the CSS name.
+Los atributos listados a continuación pueden aceptar el nombre 4D o el nombre CSS.
 
 | 4D             | CSS              |
 | -------------- | ---------------- |
@@ -204,64 +204,64 @@ The attributes listed below are able to accept either the 4D name or the CSS nam
 | textAlign      | text-align       |
 | textDecoration | text-decoration  |
 | verticalAlign  | vertical-align   |
-> 4D-specific values (*e.g.*, "sunken") are not supported when using CSS attribute names.
+> Los valores específicos 4D (*por ejemplo, *, "hundido") no se soportan cuando se utilizan nombres de atributos CSS.
 
-### Specific Attribute Values
+### Valores de atributos específicos
 
-* For `icon`, `picture`, and `customBackgroundPicture` attributes that support a path to an image, the syntax is:
+* Para los atributos `icon`, `picture` y `customBackgroundPicture` que soportan una ruta a una imagen, la sintaxis es:
 
 ```
-icon: url("/RESOURCES/Images/Buttons/edit.png"); /* absolute path */
-icon: url("edit.png"); /* relative path to the form file */
+icon: url("/RESOURCES/Images/Buttons/edit.png"); /* ruta absoluta */
+icon: url("edit.png"); /* ruta relativa al archivo del formulario */
 ```
 
-* For `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` and `verticalLineStroke`, three syntaxes are supported:
+* Para `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` y `verticalLineStroke`, se soportan tres sintaxis:
 
   * css color name: `fill: red;`
-  * hexa value: `fill: #FF0000;`
-  * the `rgb()` function: `fill:rgb(255,0,0)`
+  * valor hexadécimal: `fill: #FF0000;`
+  * función `rgb()`: `fill:rgb(255,0,0)`
 
-* If a string uses forbidden characters in CSS, you can surround the string with simple or double quotes. For example:
-  * a xliff reference: `tooltip: ":xliff:CommonMenuFile";`
-  * a datasource with a field expression: `dataSource: "[Table_1:1]ID:1";`
+* Si una cadena utiliza caracteres prohibidos en CSS, puede rodear la cadena con comillas simples o dobles. Por ejemplo:
+  * una referencia xliff: `tooltip: ":xliff:CommonMenuFile";`
+  * un datasource con la expresión de campo: `dataSource: "[Table_1:1]ID:1";`
 
-## Priority Order
+## Orden de prioridad
 
-4D projects prioritizes conflicting style definitions first by the form definition, then by the style sheets.
+Los proyectos 4D priorizan las definiciones de estilo en conflicto, primero por la definición del formulario y luego por las hojas de estilo.
 
-### JSON vs Style Sheet
+### JSON vs Hoja de estilo
 
-If an attribute is defined in the JSON form description and a style sheet, 4D will use the value in the JSON file.
+Si un atributo está definido en la descripción del formulario JSON y en una hoja de estilo, 4D utilizará el valor del archivo JSON.
 
-To override this behavior, the style value must be followed with an `!important` declaration.
+Para anular este comportamiento, el valor del estilo debe ir seguido de una declaración `!important`.
 
-**Example 1:**
+**Ejemplo 1:**
 
-| JSON form description | Style Sheet   | 4D displays |
-| --------------------- | ------------- | ----------- |
-| `"text": "Button",`   | `text: Edit;` | `"Button"`  |
+| Descripción del formulario JSON | Hoja de estilo | 4D muestra |
+| ------------------------------- | -------------- | ---------- |
+| `"text": "Button",`             | `text: Edit;`  | `"Button"` |
 
-**Example 2:**
+**Ejemplo 2:**
 
-| JSON form description | Style Sheet              | 4D displays |
-| --------------------- | ------------------------ | ----------- |
-| `"text": "Button",`   | `text: Edit !important;` | `"Edit"`    |
+| Descripción del formulario JSON | Hoja de estilo           | 4D muestra |
+| ------------------------------- | ------------------------ | ---------- |
+| `"text": "Button",`             | `text: Edit !important;` | `"Edit"`   |
 
-### Multiple Style Sheets
+### Hojas de estilo múltiples
 
-At runtime, 4D automatically prioritizes style sheets in the following order:
+Durante la ejecución, 4D prioriza automáticamente las hojas de estilo en el siguiente orden:
 
-1. The 4D form will first load the default CSS file `/SOURCES/styleSheets.css`.
-2. It will then load the CSS file for the current platform `/SOURCES/styleSheets_mac.css` or `/SOURCES/styleSheets_windows.css`.
-3. If it exists, it will then load a specific CSS file defined in the JSON form:
+1. El formulario 4D cargará primero el archivo CSS por defecto `/SOURCES/styleSheets.css`.
+2. Luego cargará el archivo CSS para la plataforma actual `/SOURCES/styleSheets_mac.css` o `/SOURCES/styleSheets_windows.css`.
+3. Si existe, entonces cargará un archivo CSS específico definido en el formulario JSON:
 
- * a file for both platforms:
+ * un archivo para ambas plataformas:
 
  ```
  "css": "<path>"
  ```
 
- * or a list of files for both platforms:
+ * o una lista de archivos para ambas plataformas:
 
  ```
  "css": [
@@ -270,7 +270,7 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
        ],
  ```
 
- * or a list of files per platform:
+ * o una lista de archivos por plataforma:
 
  ```
   "css": [
@@ -279,21 +279,21 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
      ],
  ```
 
-> Filepaths can be relative or absolute.
+> Las rutas de los archivos pueden ser relativas o absolutas.
 > 
 > * Relative paths are resolved relative to the JSON form description file.
 > * For security reasons, only filesystem paths are accepted for absolute paths. (*e.g.*, "/RESOURCES", "/DATA")
 
-## Creating or Editing Style Sheets
+## Creación o modificación de hojas de estilo
 
-You can create style sheets using your preferred text editor and saving the file with a ".css" extension in the project's "/SOURCES" folder.
+Puede crear hojas de estilo utilizando su editor de texto preferido y guardando el archivo con extensión ".css" en la carpeta "/SOURCES" del proyecto.
 
-The 4D Tool Box provides a **Style Sheets** page as a shortcut option to create and edit one of three platform-specific named style sheets.
+La caja de herramientas de 4D ofrece una página **Hojas de estilo** como opción de acceso directo para crear y editar una de las tres hojas de estilo con nombre específicas de la plataforma.
 
-1. Open the **Style Sheets** page by choosing the **Tool Box > Style Sheet** from the Design menu or click on the **Tool Box** icon in the Form Editor toolbar.
+1. Abra la página **Estilos** eligiendo la **Caja de herramientas > Styles** del menú Diseño o haga clic en el icono **Caja de herramientas** de la barra de herramientas del editor de formularios.
 
  ![](../assets/en/FormEditor/stylesheets.png)
 
-2. Select the type of style sheet to create and click on the **Create** or **Edit** button: ![](../assets/en/FormEditor/createButton.png)
+2. Seleccione el tipo de hoja de estilo que desea crear y haga clic en el botón **Crear** o **Editar**: ![](../assets/en/FormEditor/createButton.png)
 
-3. The style sheet will open in your default text editor.  
+3. La hoja de estilo se abrirá en su editor de texto predeterminado.  

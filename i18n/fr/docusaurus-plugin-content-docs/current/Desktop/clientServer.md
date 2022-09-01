@@ -12,78 +12,78 @@ title: Client/Server Management
 
 ![](../assets/en/getStart/localremote.png)
 
-> Connecting to a remote project from the **same machine as 4D Server** allows modifying the project files. This [specific feature](#using-4d-and-4d-server-on-the-same-machine) allows to develop a client/server application in the same context as the deployment context.
+> La connexion à un projet distant à partir de **la même machine que 4D Server** permet de modifier les fichiers du projet. This [specific feature](#using-4d-and-4d-server-on-the-same-machine) allows to develop a client/server application in the same context as the deployment context.
 
 ## Opening a merged client/server application
 
 A merged client/server application is customized and its starting is simplified:
 
-- To launch the server portion, the user simply double-clicks on the server application. The project file does not need to be selected.
-- To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application.
+- Pour lancer la partie serveur, l’utilisateur double-clique simplement sur l’application serveur : il n’est pas nécessaire de sélectionner le fichier projet. il n’est pas nécessaire de sélectionner le fichier projet.
+- Pour lancer la partie cliente, l’utilisateur double-clique simplement sur l’application cliente, qui se connecte directement à l’application serveur : il n’est pas nécessaire de choisir un serveur dans une boîte de dialogue de connexion.
 
 These principles are detailed in the [Build Application](building.md#what-is-a-clientserver-application) page.
 
-## Opening a remote project
+## Ouvrir un projet distant
 
-The first time you connect to a 4D Server project via a remote 4D, you will usually use the standard connection dialog. Thereafter, you will be able to connect directly using the **Open Recent Projects** menu or a 4DLink shortcut file.
+La première fois que vous vous connectez à un projet 4D Server via un 4D distant, vous utiliserez généralement la boîte de dialogue de connexion standard. Thereafter, you will be able to connect directly using the **Open Recent Projects** menu or a 4DLink shortcut file.
 
-To connect remotely to a 4D Server project:
+Pour vous connecter à distance à un projet 4D Server :
 
 1. Do one of the following:
-   - Select **Connect to 4D Server** in the Welcome Wizard dialog
-   - Select **Open/Remote Project...** from the **File** menu or the **Open** toolbar button.
+   - Sélectionnez **Se connecter à 4D Server** dans la boîte de dialogue de l'Assistant de bienvenue
+   - Sélectionnez **Ouvrir > Projet distant...** à partir du menu **Fichier** ou du bouton **Ouvrir** de la barre d'outils.
 
-The 4D Server connection dialog appears. This dialog has three tabs: **Recent**, **Available**, and **Custom**.
+La boîte de dialogue de connexion à 4D Server apparaît. Cette boîte de dialogue comporte trois onglets : **Récent**, **Disponible** et **Personnalisé**.
 
-If 4D Server is connected to the same network as the remote 4D, select **Available**. 4D Server includes a built-in TCP/IP broadcasting system that, by default, publishes the name of the 4D Server projects available over the network. The list is sorted by order of appearance and updated dynamically.
+Si 4D Server est connecté au même réseau que le 4D distant, sélectionnez **Disponible**. 4D Server inclut un système de diffusion TCP/IP intégré qui, par défaut, publie le nom des projets 4D Server disponibles sur le réseau. La liste est triée par ordre d'apparition et est mise à jour dynamiquement.
 
 ![](../assets/en/getStart/serverConnect.png)
 
-To connect to a server from the list, double-click on its name or select it and click the **OK** button.
+Pour vous connecter à un serveur de la liste, double-cliquez sur son nom ou sélectionnez-le et cliquez sur le bouton **OK**.
 
-> A circumflex accent (^) is placed before the name of projects published with the encryption option enabled.
+> Un accent circonflexe (^) est placé avant le nom des projets publiés avec l'option de chiffrement activée.
 
-If the published project is not displayed in the **Available** list, select **Custom**. The Custom page allows you to connect to a published server on the network using its network address and assigning it a customized name.
+Si le projet publié n'est pas affiché dans la liste **Disponible**, sélectionnez **Personnalisé**. La page Personnalisé vous permet de vous connecter à un serveur publié sur le réseau en utilisant son adresse réseau et en lui attribuant un nom personnalisé.
 
 ![](../assets/en/Desktop/serverConnect2.png)
 
-- **Project name**: Defines the local name of the 4D Server project. This name will be used in the **Recent** page when referring to the project.
-- **Network address**: The IP address of the machine where the 4D Server was launched.
-  - If two servers are executed simultaneously on the same machine, the IP address must be followed by a colon and port number, for example: `192.168.92.104:19814`.
-  - By default, the publishing port of a 4D Server is 19813. This number can be modified in the Project settings.
+- **Nom du projet** : définit le nom local du projet 4D Server. Ce nom sera utilisé dans la page **Récent** pour faire référence au projet.
+- **Adresse réseau** : L'adresse IP de la machine sur laquelle le 4D Server a été lancé.
+  - Si deux serveurs sont exécutés simultanément sur la même machine, l'adresse IP doit être suivie de deux points et d'un numéro de port, par exemple : `192.168.92.104:19814`.
+  - Par défaut, le port de publication d'un 4D Server est 19813. Ce numéro peut être modifié dans les paramètres du projet.
 
 > The **Activate development mode** option opens the remote connection in a special read/write mode and requires to access the project folder from the remote 4D (compatibility option).
 
-Once this page assigns a server, clicking the **OK** button will allow you to connect to the server.
+Une fois que cette page attribue un serveur, cliquez sur le bouton **OK** pour vous connecter au serveur.
 
-Once a connection to the server has been established, the remote project will be listed on the **Recent** tab.
+Une fois la connexion au serveur établie, le projet distant sera répertorié dans l'onglet **Récent**.
 
-### Updating project files on the server
+### Mettre à jour des fichiers de projet sur le serveur
 
 4D Server automatically creates and sends the remote machines a [.4dz version](building.md#build-compiled-structure) of the *.4DProject* project file (not compressed) in interpreted mode.
 
-- An updated .4dz version of the project is automatically produced when necessary, *i.e.* when the project has been modified and reloaded by 4D Server. The project is reloaded:
-  - automatically, when the 4D Server application window comes to the front of the OS or when the 4D application on the same machine saves a modification (see below).
-  - when the `RELOAD PROJECT` command is executed. Calling this command is necessary for example when you have pulled a new version of the project from the source control platform.
+- Une version .4dz mise à jour du projet est automatiquement produite lorsque cela est nécessaire, c'est-à-dire lorsque le projet a été modifié et rechargé par 4D Server. Le projet est rechargé :
+  - automatiquement, lorsque la fenêtre de l'application 4D Server arrive à l'avant de l'OS ou lorsque l'application 4D sur la même machine enregistre une modification (voir ci-dessous).
+  - lorsque la commande `RELOAD PROJECT` est exécutée. L'appel de cette commande est nécessaire lorsque, par exemple, vous avez extrait une nouvelle version du projet depuis la plateforme de contrôle de version.
 
-### Updating project files on remote machines
+### Mettre à jour des fichiers de projet sur les machines distantes
 
-When an updated .4dz version of the project has been produced on 4D Server, connected remote 4D machines must log out and reconnect to 4D Server in order to benefit from the updated version.
+Lorsqu'une version .4dz mise à jour du projet a été produite sur 4D Server, les machines 4D distantes connectées doivent se déconnecter et se reconnecter à 4D Server afin de bénéficier de la version mise à jour.
 
 ## Using 4D and 4D Server on the same machine
 
-When 4D connects to a 4D Server on the same machine, the application behaves as 4D in single user mode and the design environment allows you to edit project files. This feature allows you to develop a client/server application in the same context as the deployment context.
+Lorsque 4D se connecte à un 4D Server sur la même machine, l'application se comporte comme 4D en mode monoposte et l'environnement de développement permet d'éditer les fichiers du projet. This feature allows you to develop a client/server application in the same context as the deployment context.
 
 > When 4D connects to a 4D Server on the same machine, the **development mode** is automatically activated, whatever the [opening option](#opening-a-remote-project) status.
 
-Each time 4D performs a **Save all** action from the design environment (explicitly from **File** menu or implicitly by switching to application mode for example), 4D Server synchronously reloads project files. 4D waits for 4D Server to finish reloading the project files before it continues.
+A chaque fois que 4D effectue une action **Enregistrer tout** depuis l'environnement de développement (explicitement depuis le menu **Fichier** ou implicitement en passant en mode application par exemple), 4D Server recharge de manière synchrone les fichiers du projet. 4D attend que 4D Server termine le rechargement des fichiers du projet avant de continuer.
 
-However, you need to pay attention to the following behavior differences compared to [standard project architecture](Project/architecture.md):
+Veillez cependant aux différences de comportement suivantes, comparées à [l'architecture projet standard](Project/architecture.md) :
 
-- the userPreferences.{username} folder used by 4D is not the same folder used by 4D Server in the project folder. Instead, it is a dedicated folder, named "userPreferences", stored in the project system folder (i.e., the same location as when opening a .4dz project).
-- the folder used by 4D for derived data is not the folder named "DerivedData" in the project folder. Instead it is a dedicated folder named "DerivedDataRemote" located in the project system folder.
-- the catalog.4DCatalog file is not edited by 4D but by 4D Server. Catalog information is synchronised using client/server requests
-- the directory.json file is not edited by 4D but by 4D Server. Directory information is synchronised using client/server requests
-- 4D uses its own internal components and plug-ins instead of those in 4D Server.
+- le dossier userPreferences.{username} utilisé par 4D ne correspond pas au même dossier utilisé par 4D Server dans le dossier projet. Au lieu de cela, il s'agit d'un dossier dédié, nommé "userPreferences", stocké dans le dossier système du projet (c'est-à-dire au même emplacement que lors de l'ouverture d'un projet .4dz).
+- le dossier utilisé par 4D pour les données dérivées n'est pas le dossier "DerivedData" du dossier projet. Il s'agit plutôt d'un dossier dédié nommé "DerivedDataRemote" situé dans le dossier système du projet.
+- le fichier catalog.4DCatalog n'est pas édité par 4D mais par 4D Server. Les informations du catalogue sont synchronisées à l'aide des requêtes client/serveur
+- le fichier directory.json n'est pas édité par 4D mais par 4D Server. Les informations du répertoire sont synchronisées à l'aide des requêtes client/serveur
+- 4D utilise ses propres composants internes et plug-ins au lieu de ceux de 4D Server.
 
-> It is not recommended to install plug-ins or components at the 4D or 4D Server application level.
+> Il n'est pas recommandé d'installer des plug-ins ou des composants au niveau de l'application 4D ou 4D Server.

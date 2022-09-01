@@ -1,64 +1,64 @@
 ---
 id: stylesheets
-title: Style sheets
+title: スタイルシート
 ---
 
 
-A style sheet groups together a combination of attributes for form objects —  from text attributes to nearly any available object attribute.
+スタイルシートとは、フォームオブジェクトの属性 (テキスト属性など、提供されているほぼすべての属性) の組み合わせをまとめたものです。
 
-In addition to harmonizing an application's interface, style sheets provide three major advantages:
+アプリケーションのインターフェースを統一するほかにも、スタイルシートの利用には3つの利点があります:
 
-* Saves time during development: Each object has specific group of settings within a single operation.
-* Facilitates maintenance: Style sheets modify the appearance of any objects that uses them, so changing the font size in a style sheet will change the font size for all of the objects that use this same style sheet.
-* Controls multi-platform development: You can have a style sheets that apply to both macOS and Windows platforms, only macOS, or only Windows. When a style sheet is applied, 4D automatically uses the appropriate style sheet.
+* 開発時間の削減: オブジェクトのさまざまな属性を一括で設定できます。
+* メンテナンスの容易化: スタイルシートは、それが使用されているすべてのオブジェクトの外観を一括で設定します。つまり、スタイルシートのフォントサイズを変更するだけで、その変更は同じスタイルシートを使用するすべてのオブジェクトに適用されます。
+* マルチプラットフォーム開発のコントロール: macOS と Windows 両用のほか、macOS 専用、Windows 専用のスタイルシートを作成することができます。 スタイルシートが設定されていると、4Dは自動で適切なスタイルシートを使用します。
 
-## Creating or Editing Style Sheets
+## スタイルシートの作成と編集
 
-You can create style sheets using your preferred text editor and saving the file with a ".css" extension in the project's "/SOURCES" folder.
+スタイルシートを作成するには、任意のテキストエディターを使い、".css" 拡張子をファイル名に追加し、プロジェクトの "/SOURCES" フォルダーに保存します。
 
-The 4D Tool Box provides a **Style Sheets** page as a shortcut option to create and edit one of three platform-specific named style sheets.
+4D のツールボックスの **スタイル** ページでは、プラットフォーム専用のスタイルシートを作成・編集するためのショートカットが提供されています。
 
-1. Open the **Style Sheets** page by choosing the **Tool Box > Style Sheet** from the Design menu or click on the **Tool Box** icon in the Form Editor toolbar.
+1. デザインメニューから **ツールボックス > スタイルシート** を選択するか、ツールバーの **ツールボックス** アイコンをクリックして **スタイル** ページを開きます。
 
  ![](../assets/en/FormEditor/stylesheets.png)
 
-2. Select the type of style sheet to create and click on the **Create** or **Edit** button: ![](../assets/en/FormEditor/createButton.png)
+2. 作成するスタイルシートを選択し、**作成** ボタン (または **編集** ボタン) をクリックします: ![](../assets/en/FormEditor/createButton.png)
 
-3. The style sheet will open in your default text editor.
+3. 既定のテキストエディターでスタイルシートが開かれます。
 
-## Style Sheet Files
+## スタイルシートファイル
 
-4D accepts three, specific style sheet files:
+4D は次の3種のスタイルシートファイルを受け付けます:
 
-| Style Sheet             | Platform                                              |
-| ----------------------- | ----------------------------------------------------- |
-| styleSheets.css         | Default global style sheet for both macOS and Windows |
-| styleSheets_mac.css     | For defining macOS only specific attribute styles     |
-| styleSheets_windows.css | For defining Windows only specific attribute styles   |
+| スタイルシート                 | プラットフォーム                             |
+| ----------------------- | ------------------------------------ |
+| styleSheets.css         | macOS と Windows 両用のデフォルトグローバルスタイルシート |
+| styleSheets_mac.css     | macOS 専用の属性スタイル定義用                   |
+| styleSheets_windows.css | Windows 専用の属性スタイル定義用                 |
 
-These files are stored in the project's "/SOURCES" folder. They can also be accessed directly via the [CSS Preview](formEditor.md#css-preview) in the Form editor toobar.
+これらのファイルはプロジェクトの "/SOURCES" フォルダーに格納されます。 また、フォームエディターのツールバーにある、[スタイルシートプレビュー](formEditor.md#スタイルシートプレビュー) から直接アクセスすることもできます。
 
-## Style Sheet Architecture
+## スタイルシートアーキテクチャー
 
-While adapted to meet the specific needs of 4D forms, style sheets for application projects generally follow CSS2 syntax and grammar.
+4D フォームに適合するよう調整してあるものの、アプリケーションプロジェクトのスタイルシートは基本的に CSS2 のシンタックスと文法に沿っています。
 
-Every style rule in a style sheet contains two parts:
+スタイルシートのスタイル規則は二つの部分から構成されています:
 
-* a *Selector* - A selector defines where to apply the style. 4D supports "object type", "object name", "class", "all objects", as well as "attribute value" selectors.
+* *セレクター* はスタイルの適用対象を指定します。 4D では "オブジェクトタイプ", "オブジェクト名", "クラス", "すべてのオブジェクト", および "属性値" のセレクターが使えます。
 
-* a *Declaration* - The declaration defines the actual style to apply. Multiple declaration lines can be grouped together to form a declaration block. Each line in a CSS declaration block must end with a semicolon, and the entire block must be surrounded by curly braces.
+* *宣言* は対象に適用すべきスタイルを指定します。 複数のまとまった宣言文は宣言ブロックを構成します。 CSS 宣言ブロック内の各文はセミコロン ";" で区切り、ブロック全体は中カッコ { } でくくります。
 
-## Style Sheet Selectors
+## スタイルシートセレクター
 
-### Object Type
+### オブジェクトタイプ
 
-Corresponding to the CSS element selector, the object type defines the type of object to style.
+CSS の **要素セレクター**と同様に、スタイルの適用対象をオブジェクトタイプで指定することができます。
 
-Specify the object type, then in curly braces, declare the style(s) to apply.
+まずオブジェクトタイプを指定した後で、中カッコ { } の中に適用するスタイルを宣言します。
 
-> The object type corresponds to the JSON [type](FormObjects/properties_Object.md#type) property of form objects.
+> オブジェクトタイプとは、フォームオブジェクトの "[タイプ](FormObjects/properties_Object.md#タイプ)" JSON プロパティを指します。
 
-In the following example, all objects of the *button* type will display text in the Helvetica Neue font, with a size of 20 pixels:
+次の例では、*button* タイプのすべてのオブジェクトについて、表示するフォントを Helvetica Neue に、フォントサイズを 20 ピクセルに指定します:
 
 ```
 button {
@@ -67,7 +67,7 @@ button {
 }
 ```
 
-To apply the same style to multiple types of objects, specify the object types separated by a "," then in curly braces, declare the style(s) to apply:
+複数のオブジェクトタイプに同じスタイルを適用するには、それらのオブジェクトタイプをカンマ "," 区切りで併記し、その後の中カッコ { } 内にスタイルを宣言します:
 
 ```
 text, input {
@@ -76,13 +76,13 @@ text, input {
 }
 ```
 
-### Object Name
+### オブジェクト名
 
-Corresponding to the CSS **ID selector**, the object name defines a specific object to style since the object's name is unique within the form.
+オブジェクト名はフォーム上で一意的なもののため、CSS の **ID セレクター** と同様に、スタイルの適用対象を指定するのに使えます。
 
-Designate the object with a "#" character before the object's name, then in curly braces, declare the style(s) to apply.
+シャープ記号 "#" の後にオブジェクト名を指定し、中カッコ { } の中に適用するスタイルを宣言します。
 
-In the following example, the text of the object with the name "okButton" will be displayed in Helvetica Neue font, with a size of 20 pixels:
+次の例では、"okButton" というオブジェクト名を持つすべてのオブジェクトについて、表示するフォントを Helvetica Neue に、フォントサイズを 20 ピクセルに指定します:
 
 ```
 #okButton {
@@ -93,11 +93,11 @@ In the following example, the text of the object with the name "okButton" will b
 
 ### Class
 
-Corresponding to the CSS **class selector**, the class defines the style for all form objects with the `class` attribute.
+CSS の **クラスセレクター**と同様に、スタイルの適用対象をフォームオブジェクトの `クラス` 属性で指定することができます。
 
-You can specify the classes to use with a "." character followed by the name of the class, and in curly braces, declare the style(s) to apply.
+ドット記号 "." の後にクラス名を指定し、中カッコ { } の中に適用するスタイルを宣言します。
 
-In the following example, the text of all objects with the `okButtons` class will be displayed in Helvetica Neue font, with a size of 20 pixels, aligned in the center:
+次の例では、`okButtons` クラスを持つすべてのオブジェクトについて、表示するフォントを Helvetica Neue に、フォントサイズを 20 ピクセルに指定します:
 
 ```
 .okButtons {
@@ -107,7 +107,7 @@ In the following example, the text of all objects with the `okButtons` class wil
 }
 ```
 
-To designate that a style should be applied only to objects of a distinct type, specify the type followed by "." and the name of the class, then in curly braces, declare the style(s) to apply.
+さらに、特定のオブジェクトタイプに限定してスタイルを適用するには、そのオブジェクトタイプの後にドット "." 区切りでクラス名を指定し、その後の中カッコ { } 内にスタイルを宣言します:
 
 ```
 text.center {
@@ -116,19 +116,19 @@ text.center {
 }
 ```
 
-In the 4D form description, you associate a class name to an object using the `class` attribute. This attribute contains one or several class names, separated by a space character:
+4D フォームの JSON式記述においては、フォームオブジェクトにクラス名を設定するには `class` 属性を使います。 この属性には一つ以上のクラス名を指定することができます。複数の場合はクラス名を半角スペースで区切ります:
 
 ```
 class: "okButtons important"       
 ```
 
-### All Objects
+### すべてのオブジェクト
 
-Corresponding to the CSS **universal selector**, the "*" character indicates that the following style will be applied to all objects on the form.
+アスタリスク "*" は、CSS の **全称セレクター** と同様に、すべてのフォームオブジェクトを対象にスタイルを適用します。
 
-Designate that a style should apply to all form objects with the "*" character, then in curly braces, declare the style(s) to apply.
+アスタリスク "*" の後に、中カッコ { } の中に適用するスタイルを宣言します。
 
-In the following example, all objects will have a gray fill:
+次の例では、すべてのオブジェクトの塗りカラーをグレーにします:
 
 ```
 * {
@@ -136,24 +136,24 @@ In the following example, all objects will have a gray fill:
 }
 ```
 
-### Specific Attribute
+### オブジェクト属性
 
-Corresponding to the CSS **attribute selectors**, styles can be applied to all form objects with a specific attribute.
+CSS の **属性セレクター**と同様に、フォームオブジェクトの属性に基づいてスタイルの適用対象を指定することができます。
 
-Specify the attribute within brackets, then in curly braces, declare the style(s) to apply.
+対象とする属性を大カッコ [ ] 内で指定し、中カッコ { } の中に適用するスタイルを宣言します。
 
-#### Supported syntaxes
+#### シンタックスの使い方
 
-| Syntax                    | Description                                                                                             |
-| ------------------------- | ------------------------------------------------------------------------------------------------------- |
-| [attribute]               | matches objects with the `attribute`                                                                    |
-| [attribute="value"]       | matches objects with the `attribute` value containing exactly the specified "value"                     |
-| [attribute~="value"]      | matches objects with the `attribute` value containing the "value" among a space-separated list of words |
-| [attribute&#124;="value"] | matches objects with an `attribute` whose value starts with "value"                                     |
+| シンタックス                    | 詳細                                                                    |
+| ------------------------- | --------------------------------------------------------------------- |
+| [attribute]               | `attribute` 属性を持つオブジェクトが対象です                                          |
+| [attribute="value"]       | `attribute` 属性の値が "value" と合致するオブジェクトが対象です                            |
+| [attribute~="value"]      | `attribute` 属性値 (複数の場合は半角スペース区切り) に "value" と合致するものが含まれているオブジェクトが対象です |
+| [attribute&#124;="value"] | `attribute` 属性の値が "value" で始まるオブジェクトが対象です                             |
 
-#### Examples
+#### 例題
 
-All objects with the `borderStyle` attribute will have purple lines:
+`borderStyle` (境界線スタイル) 属性を持つすべてのオブジェクトの描画色を紫に指定します:
 
 ```
 [borderStyle]
@@ -162,7 +162,7 @@ All objects with the `borderStyle` attribute will have purple lines:
 }
 ```
 
-All objects of the text type with a text attribute whose value is "Hello" will have blue letters:
+テキストタイプかつ、タイトルプロパティ (text属性) の値が "Hello" のオブジェクトの文字色を青に指定します:
 
 ```
 text[text=Hello]
@@ -171,7 +171,7 @@ text[text=Hello]
 }
 ```
 
-All objects with a text attribute whose value contains "Hello" will have blue lines:
+タイトルプロパティ (text属性) の値が "Hello" を含むオブジェクトの描画色を青に指定します:
 
 ```
 [text~=Hello]
@@ -181,7 +181,7 @@ All objects with a text attribute whose value contains "Hello" will have blue li
 
 ```
 
-All objects of the text type with a text attribute whose value starts with "Hello" will have yellow letters:
+テキストタイプかつ、タイトルプロパティ (text属性) の値が "Hello" で始まるオブジェクトの文字色を黄色に指定します:
 
 ```
 text[text|=Hello]
@@ -192,28 +192,28 @@ text[text|=Hello]
 }
 ```
 
-## Style Sheet Declarations
+## スタイルシート宣言
 
-### Media Queries
+### メディアクエリ
 
-Media queries are used to apply color schemes to an application.
+メディアクエリは、アプリケーションにカラースキームを適用するのに利用します。
 
 A media query is composed of a media feature and a value (e.g., `\&#060;media feature&#062;:\&#060;value&#062;` ).
 
-Available media features:
+使用可能なメディア特性:
 
 * `prefers-color-scheme`
 
-Available media feature expressions:
+使用可能なメディア特性の値:
 
-* **light**<br/>For using a light scheme
-* **dark**<br/>For using a dark scheme
+* **light**<br/>ライトモード
+* **dark**<br/>ダークモード
 
-> Color schemes are only supported on macOS.
+> カラースキームは macOS でのみサポートされています。
 
-##### Example
+##### 例題
 
-This CSS defines a color combination for text and text background in the light scheme (default) and another combination when the dark scheme is selected:
+ライトモード (デフォルト) およびダークモードにおける、テキストとテキスト背景の色指定を CSS によっておこないます:
 
 ```
 @media (prefers-color-scheme: light) {
@@ -231,20 +231,20 @@ This CSS defines a color combination for text and text background in the light s
 }
 ```
 
-### Object Attributes
+### オブジェクト属性
 
-The majority of form object attributes can be defined within a style sheet, except the following attributes:
+多くのフォームオブジェクト属性をスタイルシートによって指定することができますが、次の属性は除外されます:
  - `method`
  - `type`
- - `class`
+ - `クラスの新規オブジェクト`
  - `event`
- - `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (list type)
+ - `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (リストタイプ)
 
-Form object attributes can be declared with their [JSON name](FormObjects/properties_Reference.md) as CSS attributes (not including object types, methods, events, and lists).
+フォームオブジェクトの属性は、それらの [JSON名](FormObjects/properties_Reference.md)を使って CSS 属性のように指定できます (オブジェクトタイプやメソッド、イベント、リストなどの属性を除く)。
 
-#### Attribute Mapping
+#### 属性マッピング
 
-The attributes listed below are able to accept either the 4D name or the CSS name.
+次の属性については、4D の名称または CSS の名称を使用することができます:
 
 | 4D               | CSS                |
 | ---------------- | ------------------ |
@@ -254,68 +254,68 @@ The attributes listed below are able to accept either the 4D name or the CSS nam
 | `fontSize`       | `font-size`        |
 | `fontStyle`      | `font-style`       |
 | `fontWeight`     | `font-weight`      |
-| `stroke`         | `color`            |
+| `stroke`         | `カラー`              |
 | `textAlign`      | `text-align`       |
 | `textDecoration` | `text-decoration`  |
 | `verticalAlign`  | `vertical-align`   |
-> 4D-specific values (*e.g.*, `sunken`) are not supported when using CSS attribute names.
+> CSS の属性名を使用する場合、4D に特有の値 (*例* `sunken` (くぼみ)) はサポートされません。
 
-#### Specific Attribute Values
+#### 特殊な属性値
 
-* For `icon`, `picture`, and `customBackgroundPicture` attributes that support a path to an image, the syntax is:
+* `icon`, `picture`, および `customBackgroundPicture` のように、値として画像のパスを受け付ける属性の場合、次のように書きます:
 
 ```
-icon: url("/RESOURCES/Images/Buttons/edit.png"); /* absolute path */
-icon: url("edit.png"); /* relative path to the form file */
+icon: url("/RESOURCES/Images/Buttons/edit.png"); /* 絶対パス */
+icon: url("edit.png"); /* フォームファイルを基準とした相対パス */
 ```
 
-* For `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` and `verticalLineStroke`, three syntaxes are supported:
+* `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` および `verticalLineStroke` の属性は 3種類のシンタックスを受け付けます:
 
-  * CSS color name: `fill: red;`
-  * Hexa value: `fill: #FF0000;`
-  * the `rgb()` function: `fill:rgb(255,0,0)`
+  * CSS カラーネーム: `fill: red;`
+  * 16進数カラーコード: `fill: #FF0000;`
+  * `rgb()` 関数: `fill:rgb(255,0,0)`
 
-* If a string uses forbidden characters in CSS, you can surround the string with simple or double quotes. For example:
-  * a xliff reference: `tooltip: ":xliff:CommonMenuFile";`
-  * a datasource with a field expression: `dataSource: "[Table_1:1]ID:1";`
+* CSS では禁じられている文字を使用している文字列については、その文字列を単一引用符または二重引用符でくくることができます。 例:
+  * xliff 参照の場合: `tooltip: ":xliff:CommonMenuFile";`
+  * データソースがフィールド式の場合: `dataSource: "[Table_1:1]ID:1";`
 
-## Priority Order
+## 優先順位
 
-4D projects prioritizes conflicting style definitions first by the form definition, then by the style sheets.
+4D プロジェクト内でスタイルが競合する場合には、スタイルシートよりもフォームの定義が優先されます。
 
-### JSON vs Style Sheet
+### JSON vs スタイルシート
 
-If an attribute is defined in the JSON form description and a style sheet, 4D will use the value in the JSON file.
+フォームの JSON式記述とスタイルシートの両方において属性が定義されている場合、4D は JSON ファイルの値を採用します。
 
-To override this behavior, the style value must be followed with an `!important` declaration.
+これをオーバーライドするには、スタイルシートの値の後に `!important` 宣言を追加します。
 
-**Example 1:**
+**例 1:**
 
-| JSON form description | Style Sheet   | 4D displays |
-| --------------------- | ------------- | ----------- |
-| `"text": "Button",`   | `text: Edit;` | `"Button"`  |
+| JSON 式記述            | スタイルシート       | 4D の表示     |
+| ------------------- | ------------- | ---------- |
+| `"text": "Button",` | `text: Edit;` | `"Button"` |
 
-**Example 2:**
+**例 2:**
 
-| JSON form description | Style Sheet              | 4D displays |
-| --------------------- | ------------------------ | ----------- |
-| `"text": "Button",`   | `text: Edit !important;` | `"Edit"`    |
+| JSON 式記述            | スタイルシート                  | 4D の表示   |
+| ------------------- | ------------------------ | -------- |
+| `"text": "Button",` | `text: Edit !important;` | `"Edit"` |
 
-### Multiple Style Sheets
+### 複数スタイルシート
 
-At runtime, 4D automatically prioritizes style sheets in the following order:
+ランタイムにおいて複数のスタイルシートが存在する場合、それらの優先順位は次のように決まります:
 
-1. The 4D form will first load the default CSS file `/SOURCES/styleSheets.css`.
-2. It will then load the CSS file for the current platform `/SOURCES/styleSheets_mac.css` or `/SOURCES/styleSheets_windows.css`.
-3. If it exists, it will then load a specific CSS file defined in the JSON form:
+1. 4D フォームはまずデフォルトの CSS ファイル `/SOURCES/styleSheets.css` を読み込みます。
+2. 次に、カレントプラットフォーム専用の CSS ファイル `/SOURCES/styleSheets_mac.css` または `/SOURCES/styleSheets_windows.css` がロードされます。
+3. その後、JSON フォーム内に CSS ファイルが定義されていれば、それを読み込みます:
 
- * a file for both platforms:
+ * 両プラットフォーム用のファイル:
 
  ```
  "css": "<path>" 
  ```
 
- * or a list of files for both platforms:
+ * または、両プラットフォーム用に複数のファイル:
 
  ```
  "css": [
@@ -324,7 +324,7 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
        ],
  ```
 
- * or a list of files per platform:
+ * または、プラットフォームごとのファイルリスト:
 
  ```
   "css": [
@@ -333,11 +333,11 @@ At runtime, 4D automatically prioritizes style sheets in the following order:
      ],
  ```
 
-> Filepaths can be relative or absolute.
+> ファイルパスは相対パスと絶対パスが使えます。
 > 
-> * Relative paths are resolved relative to the JSON form description file.
-> * For security reasons, only filesystem paths are accepted for absolute paths. (*e.g.*, "/RESOURCES", "/DATA")
+> * 相対パスの基準は JSON フォームファイルです。
+> * セキュリティのため、絶対パスとして使用できるのはファイルシステムパスに限られます。 (*例*: "/RESOURCES", "/DATA")
 
-## See also
+## 参照
 
-See the [**CSS for 4D Forms**](https://www.youtube.com/watch?v=3Hk4FUQENyQ) video presentation.
+[**4DフォームとCSS**](https://www.youtube.com/watch?v=f4w7HMyGUJ0) のビデオプレゼンテーションをご覧ください。

@@ -24,14 +24,14 @@ You can modify the following print settings:
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values                                                                      |
-| ----------- | --------- | ------------------------------------------------------------------------------------ |
-| pageFormat  | object    | Available print properties: paperName, paperWidth, paperHeight, orientation, scale   |
-| paperName   | string    | "A4", "US Letter"...                                                                 |
-| paperWidth  | string    | Used if a paper named paperName was not found. Requires unit suffix: pt, in, mm, cm. |
-| paperHeight | string    | Used if a paper named paperName was not found. Requires unit suffix: pt, in, mm, cm. |
-| orientation | string    | "landscape" (default is "portrait")                                                  |
-| scale       | number    | minimum: 0                                                                           |
+| Name        | Datentyp | Possible Values                                                                      |
+| ----------- | -------- | ------------------------------------------------------------------------------------ |
+| pageFormat  | object   | Available print properties: paperName, paperWidth, paperHeight, orientation, scale   |
+| paperName   | string   | "A4", "US Letter"...                                                                 |
+| paperWidth  | string   | Used if a paper named paperName was not found. Requires unit suffix: pt, in, mm, cm. |
+| paperHeight | string   | Used if a paper named paperName was not found. Requires unit suffix: pt, in, mm, cm. |
+| orientation | string   | "landscape" (default is "portrait")                                                  |
+| scale       | Zahl     | minimum: 0                                                                           |
 
 
 ---

@@ -13,10 +13,10 @@ In project applications (.4DProject or .4dz files), 4D users and groups can be c
 
 |                                                               | 4D (single-user)             | 4D Server |
 | ------------------------------------------------------------- | ---------------------------- | --------- |
-| Adding/editing users and groups                               | yes                          | yes       |
-| Assigning user/group access to servers                        | yes                          | yes       |
-| User identification                                           | no (all users are Designer)  | yes       |
-| Access control once the Designer has been assigned a password | no (all access are Designer) | yes       |
+| Adding/editing users and groups                               | ja                           | ja        |
+| Assigning user/group access to servers                        | ja                           | ja        |
+| User identification                                           | no (all users are Designer)  | ja        |
+| Access control once the Designer has been assigned a password | no (all access are Designer) | ja        |
 
 > For information about user identification and access control in single-user deployments, see [this paragraph](overview.md#access-control-in-single-user-applications).
 
@@ -37,7 +37,7 @@ The Administrator can:
 
 The Administrator cannot:
 - edit the Designer user
-- by default, access to protected parts of the application. In particular, the Administrator cannot access to the Design mode if it is restricted. The Administrator must be part of one or more groups to have access privileges in the application. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
+- by default, access to protected parts of the application. In particular, the Administrator cannot access to the Design mode if it is restricted. In particular, the Administrator cannot access to the Design mode if it is restricted. The Administrator is placed in every new group, but you can remove the Administrator’s name from any group.
 
 Both the Designer and Administrator are available by default in all applications. In the [user management dialog box](#users-and-groups-editor), the icons of the Designer and Administrator are displayed in red and green respectively:
 
@@ -74,7 +74,7 @@ The list of users displays all the users, including the [Designer and the Admini
 
 4D adds a new user to the list, named "New userX" by default.
 
-3. Enter the user name. This name will be used by the user to open the application. You can rename a user at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
+3. Enter the user name. Enter the user name. You can rename a user at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
 
 4. To enter a password for the user, click the **Edit...** button in the user properties area and enter the password twice in the dialog box. You can use up to 15 alphanumeric characters for a password. The password editor is case sensitive.
 

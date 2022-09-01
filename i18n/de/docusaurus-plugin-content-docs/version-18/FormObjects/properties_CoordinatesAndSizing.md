@@ -24,13 +24,13 @@ When this property is enabled, the height of every row is automatically calculat
 * The row height calculation ignores:
   * hidden column contents
   * [Row Height](#row-height) and [Row Height Array](#row-height-array) properties (if any) set either in the Property list or by programming.
-> Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
+> > Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values |
-| ------------- | --------- | --------------- |
-| rowHeightAuto | boolean   | true, false     |
+| Name          | Datentyp | Possible Values |
+| ------------- | -------- | --------------- |
+| rowHeightAuto | boolean  | true, false     |
 
 #### Objects Supported
 
@@ -44,9 +44,9 @@ Bottom coordinate of the object in the form.
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values |
-| ------ | --------- | --------------- |
-| bottom | number    | minimum: 0      |
+| Name   | Datentyp | Possible Values |
+| ------ | -------- | --------------- |
+| bottom | Zahl     | minimum: 0      |
 
 #### Objects Supported
 
@@ -60,9 +60,9 @@ Left coordinate of the object on the form.
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-| left | number    | minimum: 0      |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+| left | Zahl     | minimum: 0      |
 
 #### Objects Supported
 
@@ -76,9 +76,9 @@ Right coordinate of the object in the form.
 
 #### JSON Grammar
 
-| Name  | Data Type | Possible Values |
-| ----- | --------- | --------------- |
-| right | number    | minimum: 0      |
+| Name  | Datentyp | Possible Values |
+| ----- | -------- | --------------- |
+| right | Zahl     | minimum: 0      |
 
 #### Objects Supported
 
@@ -92,9 +92,9 @@ Top coordinate of the object in the form.
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-| top  | number    | minimum: 0      |
+| Name | Datentyp | Possible Values |
+| ---- | -------- | --------------- |
+| top  | Zahl     | minimum: 0      |
 
 #### Objects Supported
 
@@ -114,9 +114,9 @@ You can also set this property using the [OBJECT Get corner radius](https://doc.
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values |
-| ------------ | --------- | --------------- |
-| borderRadius | integer   | minimum: 0      |
+| Name         | Datentyp | Possible Values |
+| ------------ | -------- | --------------- |
+| borderRadius | ganzzahl | minimum: 0      |
 
 #### Objects Supported
 
@@ -131,9 +131,9 @@ This property designates an object's vertical size.
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values |
-| ------ | --------- | --------------- |
-| height | number    | minimum: 0      |
+| Name   | Datentyp | Possible Values |
+| ------ | -------- | --------------- |
+| height | Zahl     | minimum: 0      |
 
 #### Objects Supported
 
@@ -150,9 +150,9 @@ This property designates an object's horizontal size.
 
 #### JSON Grammar
 
-| Name  | Data Type | Possible Values |
-| ----- | --------- | --------------- |
-| width | number    | minimum: 0      |
+| Name  | Datentyp | Possible Values |
+| ----- | -------- | --------------- |
+| width | Zahl     | minimum: 0      |
 
 #### Objects Supported
 
@@ -167,9 +167,9 @@ The maximum width of the column (in pixels). The width of the column cannot be i
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values |
-| -------- | --------- | --------------- |
-| maxWidth | number    | minimum: 0      |
+| Name     | Datentyp | Possible Values |
+| -------- | -------- | --------------- |
+| maxWidth | Zahl     | minimum: 0      |
 
 #### Objects Supported
 
@@ -184,9 +184,9 @@ The minimum width of the column (in pixels). The width of the column cannot be r
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values |
-| -------- | --------- | --------------- |
-| minWidth | number    | minimum: 0      |
+| Name     | Datentyp | Possible Values |
+| -------- | -------- | --------------- |
+| minWidth | Zahl     | minimum: 0      |
 
 #### Objects Supported
 
@@ -200,9 +200,9 @@ Sets the height of list box rows (excluding headers and footers). By default, th
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values                          |
-| --------- | --------- | ---------------------------------------- |
-| rowHeight | string    | css value in unit "em" or "px" (default) |
+| Name      | Datentyp | Possible Values                          |
+| --------- | -------- | ---------------------------------------- |
+| rowHeight | string   | css value in unit "em" or "px" (default) |
 
 #### Objects Supported
 
@@ -222,7 +222,7 @@ This property is used to specify the name of a row height array that you want to
 
 When a row height array is defined, each of its elements whose value is different from 0 (zero) is taken into account to determine the height of the corresponding row in the list box, based on the current Row Height unit.
 
-For example, you can write:
+Sie schreiben zum Beispiel:
 
 ```4d
 ARRAY LONGINT(RowHeights;20)
@@ -235,9 +235,9 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 
 #### JSON Grammar
 
-| Name            | Data Type | Possible Values              |
-| --------------- | --------- | ---------------------------- |
-| rowHeightSource | string    | Name of a 4D array variable. |
+| Name            | Datentyp | Possible Values              |
+| --------------- | -------- | ---------------------------- |
+| rowHeightSource | string   | Name of a 4D array variable. |
 
 #### Objects Supported
 

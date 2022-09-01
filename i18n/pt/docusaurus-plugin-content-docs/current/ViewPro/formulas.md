@@ -42,40 +42,40 @@ All formulas have operands and operators:
 
 4D View Pro supports five types of data. For each data type, specific literal values and operators are supported.
 
-| Data types                        | Values                                                | Operators                                                                                                                                                                                                                                              |
-| --------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Number](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (addition)<br/>- (subtraction)<br/>* (multiplication)<br/>/ (division)<br/>^ (exponent, the number of times to multiply a number by itself)<br/>% (percentage -- divide the number before the operator by one hundred) |
-| [Date](Concepts/dt_date.md)       | 10/24/2017                                            | + (date + number of days -> date)<br/>+ (date + time -> date + time of day)<br/>- (date - number of days -> date)<br/>- (date - date -> number of days between the two)                                                              |
-| [Time](Concepts/dt_time.md)       | 10:12:10                                              | Duration operators:<br/>+ (addition)<br/>- (subtraction)<br/>* (duration * number -> duration)<br/>/ (duration / number -> duration)                                                                                         |
-| [String](Concepts/dt_string.md)   | 'Sophie' or "Sophie"                                  | & (concatenation)                                                                                                                                                                                                                                      |
-| [Boolean](Concepts/dt_boolean.md) | TRUE or FALSE                                         | -                                                                                                                                                                                                                                                      |
+| Tipos de dados                     | Values                                                | Operadores                                                                                                                                                                                                                                             |
+| ---------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [Número](Concepts/dt_number.md)    | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (addition)<br/>- (subtraction)<br/>* (multiplication)<br/>/ (division)<br/>^ (exponent, the number of times to multiply a number by itself)<br/>% (percentage -- divide the number before the operator by one hundred) |
+| [Date](Concepts/dt_date.md)        | 10/24/2017                                            | + (date + number of days -> date)<br/>+ (date + time -> date + time of day)<br/>- (date - number of days -> date)<br/>- (date - date -> number of days between the two)                                                              |
+| [Hora](Concepts/dt_time.md)        | 10:12:10                                              | Duration operators:<br/>+ (addition)<br/>- (subtraction)<br/>* (duration * number -> duration)<br/>/ (duration / number -> duration)                                                                                         |
+| [String](Concepts/dt_string.md)    | 'Sophie' or "Sophie"                                  | & (concatenation)                                                                                                                                                                                                                                      |
+| [Booleano](Concepts/dt_boolean.md) | TRUE or FALSE                                         | -                                                                                                                                                                                                                                                      |
 
 
 ### Comparison operators
 
 The following operators can be used with two operands of the same type:
 
-| Operator   | Comparison               |
-| ---------- | ------------------------ |
-| =          | equal to                 |
-| `<>` | different than           |
-| >          | greater than             |
-| <          | less than                |
-| >=         | greater than or equal to |
-| <=         | less than or equal to    |
+| Operator   | Comparação           |
+| ---------- | -------------------- |
+| =          | igual a              |
+| `<>` | different than       |
+| >          | maior que            |
+| <          | menor que            |
+| >=         | maior ou igual a     |
+| <=         | menor que ou igual a |
 
 
 ### Operator precedence
 
 List of operators from most to least important:
 
-| Operator                                      | Description                |
+| Operator                                      | Descrção                   |
 | --------------------------------------------- | -------------------------- |
 | ()                                            | Parenthesis (for grouping) |
 | -                                             | Negate                     |
-| +                                             | Plus                       |
+| +                                             | Mais                       |
 | %                                             | Percent                    |
-| ^                                             | Exponent                   |
+| ^                                             | Expoente                   |
 | * and /                                       | Multiply and divide        |
 | + and -                                       | Add and Subtract           |
 | &                                             | Concatenate                |
@@ -112,13 +112,13 @@ A convenient, fast and accurate way to specify an absolute reference is to name 
 
 The following table shows the effect of the different notations:
 
-| Example   | Type of reference | Description                                                                                                                                    |
+| Exemplo   | Type of reference | Descrção                                                                                                                                       |
 | --------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| C5        | Relative          | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                   |
-| $C$5      | Absolute          | Reference is absolute. Will always refer to cell C5 no matter where it is used.                                                                |
+| C5        | Relativo          | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                   |
+| $C$5      | Absoluto          | Reference is absolute. Will always refer to cell C5 no matter where it is used.                                                                |
 | $C5       | Mixed             | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.           |
 | C$5       | Mixed             | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used            |
-| Cell name | Absolute          | Reference is absolute. Will always refer to the [named cell or range](method-list.md#vp-add-range-name) no matter where the reference is used. |
+| Cell name | Absoluto          | Reference is absolute. Will always refer to the [named cell or range](method-list.md#vp-add-range-name) no matter where the reference is used. |
 
 
 
@@ -138,14 +138,14 @@ See [**SpreadJS's extented list of functions**](https://www.grapecity.com/spread
 4D custom functions provide access, from within your 4D View Pro formulas, to:
 
 - 4D process variables,
-- fields,
-- project methods,
+- campos,
+- métodos projeto,
 - 4D language commands,
 - or any valid 4D expression.
 
 4D custom functions can receive [parameters](#parameters) from the 4D View Pro area, and return values.
 
-You declare all your functions using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method. Examples:
+You declare all your functions using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method. Exemplos:
 
 ```4d
 o:=New object
@@ -166,7 +166,7 @@ $o.DRIVERS_LICENCE.formula:=Formula(DriverLicenceState)
 $o.DRIVERS_LICENCE:=Formula(Choose(DriverLicence; "Obtained"; "Failed"))
 
 //4D expression and parameter
-$o.DRIVERS_LICENCE.formula:=Formula(ds.Users.get($1).DriverLicence)
+$o.DRIVERS_LICENCE.formula:=Formula(ds. Users.get($1). DriverLicence)
 $o.DRIVERS_LICENCE.parameters:=New collection
 $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 ```
@@ -210,7 +210,7 @@ We want to print "Hello World" in a 4D View Pro area cell using a 4D project met
 
 
 
-### Parameters
+### Parâmetros
 
 Parameters can be passed to 4D functions that call project methods using the following syntax:
 
@@ -243,10 +243,10 @@ For more information on supported incoming parameter types, please refer to the 
 * [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg other types converted into png) creates a URI (data:image/png;base64,xxxx) and then used as the background in 4D View Pro in the cell where the formula is executed
 * [object](Concepts/dt_object.md) with the following two properties (allowing passing a date and time):
 
-    | Property | Type | Description     |
-    | -------- | ---- | --------------- |
-    | value    | Date | Date value      |
-    | time     | Real | Time in seconds |
+    | Propriedade | Tipo | Descrção        |
+    | ----------- | ---- | --------------- |
+    | value       | Date | Date value      |
+    | time        | Real | Time in seconds |
 
 If the 4D method returns nothing, an empty string is automatically returned.
 
@@ -255,7 +255,7 @@ An error is returned in the 4D View Pro cell if:
 *   the 4D method returns another type other than those listed above,
 *   an error occurred during 4D method execution (when user clicks on "abort" button).
 
-#### Example
+#### Exemplo
 
 ```4d
 var $o : Object
@@ -266,15 +266,13 @@ $o.BIRTH_INFORMATION.parameters:=New collection
 $o.BIRTH_INFORMATION.parameters.push(New object("name";"First name";"type";Is text))
 $o.BIRTH_INFORMATION.parameters.push(New object("name";"Birthday";"type";Is date))
 $o.BIRTH_INFORMATION.parameters.push(New object("name";"Time of birth";"type";Is time))
-$o.BIRTH_INFORMATION.summary:="Returns a formatted string from given information"
-
-VP SET CUSTOM FUNCTIONS("ViewProArea"; $o)
+$o.BIRTH_INFORMATION.summary:="Returns a formatted string from given information" VP SET CUSTOM FUNCTIONS("ViewProArea"; $o)
 ```
 
 ![](../assets/en/ViewPro/params.png)
 
 
-## Compatibility
+## Compatibidade
 
 Alternate solutions are available to declare fields or methods as functions in your 4D View Pro areas. These solutions are maintained for compatibility reasons and can be used in specific cases. However, using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method is recommended.
 
@@ -285,7 +283,7 @@ Alternate solutions are available to declare fields or methods as functions in y
 
 > **WARNING:** You cannot use the virtual structure and `VP SET CUSTOM FUNCTIONS` simultaneously. As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
 
-#### Requirements
+#### Requisitos
 
 *   The field must belong to the virtual structure of the database, i.e. it must be declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter (see example),
 *   Table and field names must be ECMA compliant (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
@@ -310,7 +308,7 @@ For example, if you declared the "Name" field of the "People" table in the virtu
 
 > If a field has the same name as a [4D method], it takes priority over the method.
 
-#### Example
+#### Exemplo
 
 We want to print the name of a person in a 4D View Pro area cell using a 4D virtual field:
 
@@ -356,12 +354,12 @@ We want to print the name of a person in a 4D View Pro area cell using a 4D virt
 You can call directly 4D project methods from within your 4D View Pro formulas. For security reasons, you must declare explicitly methods that can be called by the user with the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method.
 
 
-#### Requirements
+#### Requisitos
 
 To be called in a 4D View Pro formula, a project method must be:
 
 *   **Allowed**: it was explicitly declared using the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method.
 *   **Runnable**: it belongs to the host project or a loaded component with the "Shared by components and host project" option enabled (see [Sharing of project methods](../Concepts/components.md#sharing-of-project-methods)).
 *   **Not in conflict** with an existing 4D View Pro spreadsheet function: if you call a project method with the same name as a 4D View Pro built-in function, the function is called.
-> If neither the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) nor the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. In this case, the project method names must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see *Data Access*) is ignored in all cases.
+> > If neither the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) nor the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. In this case, the project method names must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see *Data Access*) is ignored in all cases.
 

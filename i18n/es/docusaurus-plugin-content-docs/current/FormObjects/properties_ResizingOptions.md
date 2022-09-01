@@ -1,130 +1,130 @@
 ---
 id: propertiesResizingOptions
-title: Resizing Options
+title: Opciones de redimensionamiento
 ---
 
-## Column Auto-Resizing
+## Redimensionamiento columnas auto
 
-When this property is enabled (`rightToLeft` value in JSON), list box columns are automatically resized along with the list box, within the limits of the [minimum](properties_CoordinatesAndSizing.md#minimum-width) and [maximum](properties_CoordinatesAndSizing.md#maximum-width) widths defined.
+Cuando esta propiedad está activa (valor `rightToLeft` en JSON), las columnas del listbox se redimensionan automáticamente junto con el list box, dentro de los límites de los anchos [mínimo](properties_CoordinatesAndSizing.md#minimum-width) y [máximo](properties_CoordinatesAndSizing.md#maximum-width) definidos.
 
-When this property is disabled (`legacy` value in JSON), only the rightmost column of the list box is resized, even if its width exceeds the maximum value defined.
+Cuando esta propiedad está desactivada (valor `legacy` en JSON), sólo se redimensiona la columna más a la derecha del listbox, aunque su ancho supere el valor máximo definido.
 
-### How column auto-resizing works
+### Cómo funciona el redimensionamiento automático de las columnas
 
-* As the list box width increases, its columns are enlarged, one by one, starting from right to left, until each reaches its [maximum width](properties_CoordinatesAndSizing.md#maximum-width). Only columns with the [Resizable](#resizable) property selected are resized.
+* A medida que el ancho del list box aumenta, sus columnas se amplían, una a una, empezando de derecha a izquierda, hasta que cada una alcanza su [ancho máximo](properties_CoordinatesAndSizing.md#maximum-width). Sólo se redimensionan las columnas con la propiedad [Resizable](#resizable) seleccionada.
 
-* The same procedure applies when the list box width decreases, but in reverse order (*i.e.*, columns are resized starting from left to right). When each column has reached its [minimum width](properties_CoordinatesAndSizing.md#minimum-width), the horizontal scroll bar becomes active again.
+* El mismo procedimiento se aplica cuando el ancho del list box disminuye, pero en orden inverso (*es decir,*, las columnas se redimensionan empezando de izquierda a derecha). Cuando cada columna ha alcanzado su [ancho mínimo](properties_CoordinatesAndSizing.md#minimum-width), la barra de desplazamiento horizontal vuelve a activarse.
 
-* Columns are resized only when the horizontal scroll bar is not "active"; *i.e.*, all columns are fully visible in the list box at its current size. **Note**: If the horizontal scroll bar is hidden, this does not alter its state: a scroll bar may still be active, even though it is not visible.
+* Las columnas se redimensionan sólo cuando la barra de desplazamiento horizontal no está "activa"; *es decir,*, todas las columnas son totalmente visibles en el list box en su tamaño actual. **Nota**: si la barra de desplazamiento horizontal está oculta, esto no altera su estado: una barra de desplazamiento puede seguir estando activa, aunque no sea visible.
 
-* After all columns reach their maximum size, they are no longer enlarged and instead a blank (fake) column is added on the right to fill the extra space. If a fake (blank) column is present, when the list box width decreases, this is the first area to be reduced.
+* Una vez que todas las columnas alcanzan su tamaño máximo, dejan de ampliarse y en su lugar se añade una columna en blanco (falsa) a la derecha para rellenar el espacio extra. Si hay una columna falsa (en blanco), cuando el ancho del list box disminuye, ésta es la primera área que se reduce.
 
 ![](../assets/en/FormObjects/property_columnAutoResizing.png)
 
-#### About the fake (blank) column
+#### Sobre la columna falsa (en blanco)
 
-The appearance of the fake column matches that of the existing columns; it will have a fake header and/or footer if these elements are present in the existing list box columns and it will have the same background color(s) applied.
+La apariencia de la columna falsa coincide con la de las columnas existentes; tendrá un encabezado y/o un pie de página falsos si estos elementos están presentes en las columnas del list box existentes y tendrá aplicados los mismos colores de fondo.
 
-The fake header and/or footer can be clicked but this does not have any effect on the other columns (e.g.: no sort is performed); nevertheless, the `On Clicked`, `On Header Click` and `On Footer Click` events are generated accordingly.
+Se puede hacer clic en el encabezado y/o en el pie de página falsos, pero esto no tiene ningún efecto sobre las otras columnas (por ejemplo: no se realiza ninguna ordenación); no obstante, los eventos se generan en consecuencia `On Clicked`, `On Header Click` y `On Footer Click` se generan en consecuencia.
 
-If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-GET-CELL-POSITION.301-4311145.en.html) command returns "X+1" for its column number (where X is the number of existing columns).
+Si se hace clic en una celda de la columna falsa, el comando [LISTBOX GET CELL POSITION](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-GET-CELL-POSITION.301-4311145.en.html) devuelve "X+1" para su número de columna (donde X es el número de columnas existentes).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name         | Data Type | Possible Values         |
-| ------------ | --------- | ----------------------- |
-| resizingMode | string    | "rightToLeft", "legacy" |
+| Nombre       | Tipos de datos | Valores posibles        |
+| ------------ | -------------- | ----------------------- |
+| resizingMode | string         | "rightToLeft", "legacy" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
 ---
 
-## Horizontal Sizing
+## Dimensionamiento horizontal
 
-This property specifies if the horizontal size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
+Esta propiedad indica si el tamaño horizontal de un objeto debe ser movido o redimensionado cuando un usuario cambia el tamaño del formulario. También puede definirse dinámicamente por el comando del lenguaje `OBJECT SET RESIZING OPTIONS`.
 
-Three options are available:
+Hay tres opciones disponibles:
 
-| Option | JSON value | Result                                                                                                                 |
-| ------ | ---------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Grow   | "grow"     | The same percentage is applied to the object’s width when the user resizes the width of the window,                    |
-| Move   | "move"     | The object is moved the same amount left or right as the width increase when the user resizes the width of the window, |
-| None   | "fixed"    | The object remains stationary when the form is resized                                                                 |
-> This property works in conjunction with the [Vertical Sizing](#vertical-sizing) property.
+| Option   | Valor JSON | Result                                                                                                                                                |
+| -------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Agrandar | "grow"     | El mismo porcentaje se aplica al ancho del objeto cuando el usuario redimensiona el ancho de la ventana,                                              |
+| Mover    | "move"     | El objeto se desplaza la misma cantidad a la izquierda o a la derecha que el aumento del ancho cuando el usuario redimensiona el ancho de la ventana, |
+| Ninguno  | "fixed"    | El objeto permanece inmóvil cuando se cambia el tamaño del formulario                                                                                 |
+> Esta propiedad funciona junto con la propiedad [Dimensionamiento vertical](#tamaño-vertical).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name    | Data Type | Possible Values         |
-| ------- | --------- | ----------------------- |
-| sizingX | string    | "grow", "move", "fixed" |
+| Nombre  | Tipos de datos | Valores posibles        |
+| ------- | -------------- | ----------------------- |
+| sizingX | string         | "grow", "move", "fixed" |
 
-#### Objects Supported
+#### Objetos soportados
 
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md#overview)
-
----
-
-## Vertical Sizing
-
-This property specifies if the vertical size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
-
-Three options are available:
-
-| Option | JSON value | Result                                                                                                               |
-| ------ | ---------- | -------------------------------------------------------------------------------------------------------------------- |
-| Grow   | "grow"     | The same percentage is applied to the object's height when the user resizes the width of the window,                 |
-| Move   | "move"     | The object is moved the same amount up or down as the height increase when the user resizes the width of the window, |
-| None   | "fixed"    | The object remains stationary when the form is resized                                                               |
-> This property works in conjunction with the [Horizontal Sizing](#horizontal-sizing) property.
-
-#### JSON Grammar
-
-| Name    | Data Type | Possible Values         |
-| ------- | --------- | ----------------------- |
-| sizingY | string    | "grow", "move", "fixed" |
-
-#### Objects Supported
-
-[4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Web Area](webArea_overview.md#overview)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Línea](shapes_overview.md#line) - [Columna List Box](listbox_overview.md#list-box-columns) - [Óvalo](shapes_overview.md#oval) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón radio](radio_overview.md) - [Regla](ruler.md) - [ Rectángulo](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) [Stepper](stepper.md) - [Sub-formulario](subform_overview.md) - [Pestaña](tabControl.md) - [Área Web](webArea_overview.md#overview)
 
 ---
 
-## Pusher
+## Dimensionamiento vertical
 
-When a splitter object has this property, other objects to its right (vertical splitter) or below it (horizontal splitter) are pushed at the same time as the splitter, with no stop.
+Esta propiedad indica si el tamaño vertical de un objeto debe ser movido o redimensionado cuando un usuario cambia el tamaño del formulario. También puede definirse dinámicamente por el comando del lenguaje `OBJECT SET RESIZING OPTIONS`.
+
+Hay tres opciones disponibles:
+
+| Option   | Valor JSON | Result                                                                                                                                                |
+| -------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Agrandar | "grow"     | El mismo porcentaje se aplica a la altura del objeto cuando el usuario redimensiona el ancho de la ventana,                                           |
+| Mover    | "move"     | El objeto se desplaza la misma cantidad hacia arriba o hacia abajo que el aumento de la altura cuando el usuario redimensiona el ancho de la ventana, |
+| Ninguno  | "fixed"    | El objeto permanece inmóvil cuando se cambia el tamaño del formulario                                                                                 |
+> Esta propiedad funciona junto con la propiedad [Dimensionamiento horizontal](#horizontal-sizing).
+
+#### Gramática JSON
+
+| Nombre  | Tipos de datos | Valores posibles        |
+| ------- | -------------- | ----------------------- |
+| sizingY | string         | "grow", "move", "fixed" |
+
+#### Objetos soportados
+
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md#overview) - [Área de entrada](input_overview.md) - [List Box](listbox_overview.md#overview) - [Línea](shapes_overview.md#line) - [Columna List Box](listbox_overview.md#list-box-columns) - [Óvalo](shapes_overview.md#oval) - [Botón imagen](pictureButton_overview.md) - [Menú emergente de imagen](picturePopupMenu_overview.md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progreso](progressIndicator.md) - [Botón radio](radio_overview.md) - [Regla](ruler.md) - [ Rectángulo](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) [Stepper](stepper.md) - [Sub-formulario](subform_overview.md) - [Pestaña](tabControl.md) - [Área Web](webArea_overview.md#overview)
+
+---
+
+## Pulsador
+
+Cuando un objeto splitter tiene esta propiedad, los otros objetos a su derecha (splitter vertical) o debajo de él (separador horizontal) son empujados al mismo tiempo que el splitter, sin parar.
 
 Here is the result of a “pusher” splitter being moved: ![](../assets/en/FormObjects/splitter_pusher1.png)
 
 ![](../assets/en/FormObjects/splitter_pusher3.png)
 
-When this property is not applied to the splitter, the result is as follows:
+Cuando esta propiedad no se aplica al splitter, el resultado es el siguiente:
 
 ![](../assets/en/FormObjects/splitter_pusher2.png)
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name         | Data Type |           Possible Values            |
-|:------------ |:---------:|:------------------------------------:|
-| splitterMode |  string   | "move" (pusher), "resize" (standard) |
+| Nombre       | Tipos de datos |           Valores posibles           |
+|:------------ |:--------------:|:------------------------------------:|
+| splitterMode |     string     | "move" (pusher), "resize" (standard) |
 
-#### Objects Supported
+#### Objetos soportados
 
-[Splitter](splitters.md)
+[Separador](splitters.md)
 
 ---
 
-## Resizable
+## Redimensionable
 
-Designates if the size of the column can be modified by the user.
+Designa si el tamaño de la columna puede ser modificado por el usuario.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name      | Data Type | Possible Values |
-|:--------- |:---------:|:---------------:|
-| resizable |  boolean  | "true", "false" |
+| Nombre          | Tipos de datos | Valores posibles |
+|:--------------- |:--------------:|:----------------:|
+| redimensionable |    boolean     | "true", "false"  |
 
-#### Objects Supported
+#### Objetos soportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Columna de list box](listbox_overview.md#list-box-columns)

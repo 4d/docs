@@ -1,6 +1,6 @@
 ---
 id: authentication
-title: Authentication
+title: Autenticação
 ---
 
 Authenticating users is necessary when you want to provide specific access rights to web users. Authentication designates the way the information concerning the user credentials (usually name and password) are collected and processed.
@@ -14,7 +14,7 @@ The 4D web server proposes three authentication modes, that you can select in th
 
 > Using a **custom** authentication is recommended.
 
-### Overview
+### Visão Geral
 
 The operation of the 4D web server's access system is summarized in the following diagram:
 
@@ -90,19 +90,19 @@ The `On Web Authentication` database method is NOT called:
 - when the web server reveives a URL beginning with `rest/` and the REST server is launched (in this case, the authentication is handled through the [`On REST Authentication` database method](REST/configuration.md#using-the-on-rest-authentication-database-method) or [Structure settings](REST/configuration.md#using-the-structure-settings)).
 
 
-### Syntax
+### Sintaxe
 
 **On Web Authentication**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text ) -> $0 : Boolean
 
-| Parameters | Type    |    | Description                                       |
-| ---------- | ------- |:--:| ------------------------------------------------- |
-| $1         | Text    | <- | URL                                               |
-| $2         | Text    | <- | HTTP headers + HTTP body (up to 32 kb limit)      |
-| $3         | Text    | <- | IP address of the web client (browser)            |
-| $4         | Text    | <- | IP address of the server                          |
-| $5         | Text    | <- | User name                                         |
-| $6         | Text    | <- | Password                                          |
-| $0         | Boolean | -> | True = request accepted, False = request rejected |
+| Parâmetros | Tipo     |    | Descrção                                          |
+| ---------- | -------- |:--:| ------------------------------------------------- |
+| $1         | Text     | <- | URL                                               |
+| $2         | Text     | <- | HTTP headers + HTTP body (up to 32 kb limit)      |
+| $3         | Text     | <- | IP address of the web client (browser)            |
+| $4         | Text     | <- | IP address of the server                          |
+| $5         | Text     | <- | Nome de usuario                                   |
+| $6         | Text     | <- | Senha                                             |
+| $0         | Booleano | -> | True = request accepted, False = request rejected |
 
 You must declare these parameters as follows:
 
@@ -165,7 +165,7 @@ The `$4` parameter receives the IP address used to call the web server. 4D allow
 The `$5` and `$6` parameters receive the user name and password entered by the user in the standard identification dialog box displayed by the browser. This dialog box appears for each connection, if [basic](#basic-protocol) or [digest](#digest-protocol) authentication is selected.
 > If the user name sent by the browser exists in 4D, the $6 parameter (the user’s password) is not returned for security reasons.
 
-#### $0 parameter
+#### Parâmetro $0
 
 The `On Web Authentication` database method returns a boolean in $0:
 
@@ -175,10 +175,10 @@ The `On Web Authentication` database method returns a boolean in $0:
 
 The `On Web Connection` database method is only executed if the connection has been accepted by `On Web Authentication`.
 > **WARNING**<br/>If no value is set to $0 or if $0 is not defined in the `On Web Authentication` database method, the connection is considered as accepted and the `On Web Connection` database method is executed.
-> * Do not call any interface elements in the `On Web Authentication` database method (`ALERT`, `DIALOG`, etc.) because otherwise its execution will be interrupted and the connection refused. The same thing will happen if an error occurs during its processing.
+> * * Do not call any interface elements in the `On Web Authentication` database method (`ALERT`, `DIALOG`, etc.) because otherwise its execution will be interrupted and the connection refused. The same thing will happen if an error occurs during its processing.
 
 
-### Example
+### Exemplo
 
 Example of the `On Web Authentication` database method in [DIGEST mode](#digest-protocol):
 
@@ -187,10 +187,10 @@ Example of the `On Web Authentication` database method in [DIGEST mode](#digest-
  #DECLARE ($url : Text; $header : Text; $ipB : Text; $ipS : Text; \
     $user : Text; $pw : Text) -> $valid : Boolean
 
- var $found : cs.WebUserSelection
+ var $found : cs. WebUserSelection
  $valid:=False
 
- $found:=ds.WebUser.query("User === :1";$user)
+ $found:=ds. WebUser.query("User === :1";$user)
  If($found.length=1) // User is found
     $valid:=WEB Validate digest($user;[WebUser]password)
  Else

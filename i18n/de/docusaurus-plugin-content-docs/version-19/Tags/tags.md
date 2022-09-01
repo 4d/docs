@@ -70,7 +70,7 @@ To ensure the correct evaluation of expressions processed via tags, regardless o
 
 The `<!--#4DBASE -->` tag designates the working directory to be used by the `<!--#4DINCLUDE-->` tag.
 
-When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next `<!--........-->, if any. If the`<!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.
+When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next `<!--........-->`, if any. If the`<!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.
 
 The *folderPath* parameter must contain a pathname relative to the current page and it must end with a slash (/). The designated folder must be located inside the Web folder.
 
@@ -178,7 +178,7 @@ The `<!--#4DEACH-->` comment can iterate through three expression types:
 - [entity selections](#--4deach-entity-in-entityselection--): loop through each entity,
 - [objects](#--4deach-property-in-object--): loop through each object property.
 
-The number of iterations is evaluated at startup and will not change during the processing. Adding or removing items during the loop is usually not recommended since it may result in missing or redundant iterations.
+The number of iterations is evaluated at startup and will not change during the processing. Einträge während der Schleife hinzufügen oder entfernen wird generell nicht empfohlen, da dies zu fehlenden oder überflüssigen Wiederholungen führen kann.
 
 ### `<!--#4DEACH item in collection-->`
 
@@ -188,9 +188,9 @@ The *item* parameter is a variable of the same type as the collection elements.
 
 The collection must contain only **elements of the same type**, otherwise an error is returned as soon as the *item* variable is assigned the first mismatched value type.
 
-The number of loops is based on the number of elements of the collection. At each iteration, the *item* variable is automatically filled with the matching element of the collection. The following points must be taken into account:
+The number of loops is based on the number of elements of the collection. At each iteration, the *item* variable is automatically filled with the matching element of the collection. Dabei müssen Sie folgende Punkte berücksichtigen:
 
-- If the *item* variable is of the object type or collection type (i.e. if *expression* is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). If the variable is of a scalar type, only the variable will be modified.
+- If the *item* variable is of the object type or collection type (i.e. if *expression* is a collection of objects or of collections), modifying this variable will automatically modify the matching element of the collection (because objects and collections share the same references). Bei einer Variablen mit einem skalaren Typ wird nur die Variable geändert.
 - The *item* variable gets the same type as the first collection element. If any collection element is not of the same type as the variable, an error is generated and the loop stops.
 - If the collection contains elements with a Null value, an error is generated if the *item* variable type does not support Null values (such as longint variables).
 
@@ -277,7 +277,7 @@ This syntax iterates on each *property* of the *object*. The code portion locate
 
 The *property* parameter is a text variable automatically filled with the name of the currently processed property.
 
-The properties of the object are processed according to their creation order. During the loop, properties can be added to or removed from the object, without modifying the number of loops that will remain based on the original number of properties of the object.
+The properties of the object are processed according to their creation order. Während der Schleife lassen sich Eigenschaften im Objekt hinzufügen oder daraus entfernen. Das verändert nicht die Anzahl Schleifen, diese basiert weiterhin auf der ursprünglichen Anzahl Eigenschaften für das Objekt.
 
 #### Example with the properties of an object
 
@@ -331,7 +331,7 @@ Just like the `4DTEXT` tag, this tag lets you assess a 4D variable or expression
 
 For example, here are the processing results of the 4D text variable myvar with the available tags:
 
-| myvar Value          | Tags                         | Result              |
+| myvar Value          | Tags                         | Ergebnis            |
 | -------------------- | ---------------------------- | ------------------- |
 | `myvar:="<B>"` | `<!--#4DTEXT myvar-->` | `&lt;B&gt;` |
 | `myvar:="<B>"` | `<!--#4DHTML myvar-->` | `<B>`         |
@@ -352,7 +352,7 @@ The `<!--#4DIF expression-->` ... `<!--#4DENDIF-->` blocks can be nested in seve
 
 In case of an interpretation error, the text "`<!--#4DIF expression-->`: A Boolean expression was expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`. Likewise, if there are not as many `<!--#4DENDIF-->` as `<!--#4DIF -->`, the text "`<!--#4DIF expression-->`: 4DENDIF expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`.
 
-Using the `<!--#4DELSEIF-->` tag, you can test an unlimited number of conditions. Only the code that follows the first condition evaluated as `True` is executed. If no conditions are true, no statement is executed (if there is no final `<!--#4DELSE-->`). You can use a <!--#4DELSE--> tag after the last <!--#4DELSEIF-->. If all the conditions are false, the statements following the <!--#4DELSE--> are executed.
+Using the `<!--#4DELSEIF-->` tag, you can test an unlimited number of conditions. Only the code that follows the first condition evaluated as `True` is executed. If no conditions are true, no statement is executed (if there is no final `<!--#4DELSE-->`). You can use a <!--#4DELSE--> tag after the last <!--#4DELSEIF-->. . <!--#4DELSE--> If all the conditions are false, the statements following the
 
 The two following codes are equivalent.
 
@@ -393,12 +393,15 @@ This example of code inserted in a static HTML page displays a different label a
 ```html
 <BODY>
 ...
+<BODY>
+...
 <!--#4DIF (vname#"")-->
 Names starting with <!--#4DTEXT vname-->.
 <!--#4DELSE-->
 No name has been found.
 <!--#4DENDIF-->
 ...
+</BODY>
 </BODY>
 ```
 
@@ -436,7 +439,7 @@ The number of `<!--#4DINCLUDE path-->` within a page is unlimited. However, the 
 
 In case of error, the inserted text is "`<!--#4DINCLUDE path-->` :The document cannot be opened".
 
-Examples:
+Beispiele:
 
 ```html
 <!--#4DINCLUDE subpage.html-->
@@ -476,6 +479,8 @@ The following code:
     ...
     NEXT RECORD([People])
  End while
+    NEXT RECORD([People])
+ End while
 ```
 
 ### `<!--#4DLOOP array-->`
@@ -499,6 +504,7 @@ The following code example:
     arr_names:=$Elem
     ...
  End for
+ End for
 ```
 
 ### `<!--#4DLOOP method-->`
@@ -520,13 +526,17 @@ The following code example:
 ... could be expressed in 4D language in the following way:
 
 ```4d
- If(AuthenticationWebOK)
-    If(my_method(0))
-       $counter:=1
-       While(my_method($counter))
-          ...
-          $counter:=$counter+1
-       End while
+ C_LONGINT($1)
+ C_BOOLEAN($0)
+ If($1=0) `Initialisation
+    $0:=True
+ Else
+    If($1<50)
+       ...
+       var:=...
+          $0:=True
+    Else
+       $0:=False `Stops the loop
     End if
  End if
 ```
@@ -578,7 +588,7 @@ In this case, the `4DLOOP` tag works like it does with an array: it makes a loop
 
 This syntax is useful when you pass an array pointer as a parameter to the `PROCESS 4D TAGS` command.
 
-Example:
+Beispiel:
 
 ```4d
  ARRAY TEXT($array;2)
@@ -671,7 +681,7 @@ This alternative syntax is available only for tags used to return processed valu
 
 (Other tags, such as 4DIF or 4DSCRIPT, must be written with the regular syntax).
 
-For example, you can write:
+Sie schreiben zum Beispiel:
 
 ```html
 $4DEVAL(UserName)
@@ -733,7 +743,7 @@ Note that the `$4dtag` syntax supports matching pairs of enclosed quotes or pare
 String(1) + "\"(hello)\""
 ```
 
-You can write:
+Sie schreiben:
 
 ```4d
  input:="$4DEVAL( String(1)+\"\\\"(hello)\\\"\")"

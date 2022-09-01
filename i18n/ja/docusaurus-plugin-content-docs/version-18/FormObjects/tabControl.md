@@ -1,49 +1,49 @@
 ---
 id: tabControl
-title: Tab Controls
+title: タブコントロール
 ---
 
-A tab control creates an object that lets the user choose among a set of virtual screens that are enclosed by the tab control object. Each screen is accessed by clicking its tab.
+タブコントロールは、ユーザーが複数の仮想画面の中から選択することのできるオブジェクトを作成します。この画面はタブコントロールオブジェクトにより囲まれています。 タブをクリックすることで、各画面にアクセスします。
 
-The following multi-page form uses a tab control object:
+次の複数ページフォームではタブコントロールオブジェクトが使用されています:
 
 ![](../assets/en/FormObjects/tabControl1.png)
 
-To navigate from screen to screen, the user simply clicks the desired tab.
+各画面を移動するには、目的のタブをクリックします。
 
-The screens can represent pages in a multi-page form or an object that changes when the user clicks a tab. If the tab control is used as a page navigation tool, then the [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) command or the `gotoPage` standard action would be used when a user clicks a tab.
+これらの画面は、マルチページフォームの各ページを表わしたり、またはユーザーがタブがクリックすると変化するオブジェクトを表わすこともできます。 タブコントロールをページ移動ツールとして使用する場合、ユーザーがタブをクリックすると [FORM GOTO PAGE](https://doc.4d.com/4Dv18R3/4D/18-R3/FORM-GOTO-PAGE.301-4900983.ja.html) コマンドまたは`gotoPage` 標準アクションを使用します。
 
-Another use of the tab control is to control the data that is displayed in a subform. For example, a Rolodex could be implemented using a tab control. The tabs would display the letters of the alphabet and the tab control’s action would be to load the data corresponding to the letter that the user clicked.
+タブコントロールの他の利用法は、サブフォームやリストボックスに表示されるデータを制御することです。 たとえば、名刺帳はタブコントロールを用いて実現することができます。 タブにはひらがなの各文字を表示し、タブコントロールの動作としてはユーザーがクリックした文字と一致するデータをロードします。
 
-Each tab can display labels or labels and a small icon. If you include icons, they appear to the left of each label. Here is an example of a tab control that uses icons:
+各タブにはラベルだけ、またはラベルと小さなアイコンを表示することができます。 アイコンが含まれる場合、そのアイコンは各ラベルの左側に表示されます。 次の図はアイコンを使用するタブコントロールの例です:
 
 ![](../assets/en/FormObjects/tabControl2.png)
 
-When you create a tab control, 4D manages the spacing and placement of the tabs. You only need to supply the labels in the form of an array, or the icons and labels in the form of a hierarchical list.
+タブコントロールを作成すると、4Dがタブの間隔と配置を管理します。 ラベルは配列形式で定義し、アイコンとラベルは階層リスト形式で定義します。
 
-If the tab control is wide enough to display all the tabs with both the labels and icons, it displays both. If the tab control is not wide enough to display both the labels and icons, 4D displays the icons only. If it can’t fit all the icons, it places scroll arrows to the right of the last visible tab. The scroll arrows allow the user to scroll the icons to the left or right.
+タブコントロールが十分大きく、ラベルとアイコンが設定されたタブをすべて表示できる場合は、その両方が表示されます。 タブコントロールの大きさが足らず、ラベルとアイコンを両方とも表示できない場合には、4Dはアイコンだけを表示します。 すべてのアイコンが収まりきらない場合、表示される最後のタブの右側にスクロール矢印が置かれます。 このスクロール矢印を使用し、アイコンを左右にスクロールできます。
 
-Under macOS, in addition to the standard position (top), the tab controls can also be aligned to the bottom.
+macOSの場合、タブコントロールを標準位置 (上) だけでなく、下にも配置することができます。
 
-### JSON Example
+### JSON 例
 
 ```4d
  "myTab": {
   "type": "tab",
-   "left": 60, 
+  "left": 60, 
   "top": 160,  
-  "width": 100, 
-  "height": 20, 
-  "labelsPlacement": "bottom" //define the direction
+  "width": 100,   
+  "height": 20,   
+  "labelsPlacement": "bottom" // タブコントロールの位置
  }
 ```
 
-## Adding labels to a tab control
+## タブコントロールへのラベルの追加
 
-There are several ways to supply the labels for a tab control:
+タブコントロールにラベルを設定するには、いくつかの方法があります:
 
-* You can assign a [choice list](properties_DataSource.md#choice-list-static-list) to the tab control, either through a collection (static list) or a JSON pointer ("$ref") to a json list. Icons associated with list items in the Lists editor will be displayed in the tob control.
-* You can create a Text array that contains the names of each page of the form. This code must be executed before the form is presented to the user. For example, you could place the code in the object method of the tab control and execute it when the `On Load` event occurs.
+* タブコントロールに [選択リスト](properties_DataSource.md#選択リスト-静的リスト) を関連付けることができます。これにはコレクション (静的リスト)、または json リストへの JSON ポインター ("$ref") を使用します。 リストエディターにてリスト項目に関連付けられたアイコンはタブコントロールに表示されます。
+* フォームの各ページの名前を格納するテキスト配列を作成することができます。 このコードはユーザーにフォームを表示する前に実行しなければなりません。 たとえば、このコードをタブコントロールのオブジェクトメソッドに置いて、`On Load` イベントが生じたときにこのメソッドを実行します。
 
 ```4d
  ARRAY TEXT(arrPages;3)
@@ -51,21 +51,21 @@ There are several ways to supply the labels for a tab control:
  arrPages{2}:="Address"
  arrPages{3}:="Notes"  
 ```
-> You can also store the names of the pages in a hierarchical list and use the `Load list` command to load the values into the array.
+> ページの名前を階層リストに保存し、`Load list` コマンドを使用して値をロードすることも可能です。
 
-## Managing tabs programmatically
+## プログラムによるタブの管理
 
-### FORM GOTO PAGE command
+### FORM GOTO PAGE コマンド
 
-You can use the [FORM GOTO PAGE](https://doc.4d.com/4Dv17R5/4D/17-R5/FORM-GOTO-PAGE.301-4128536.en.html) command in the tab control’s method:
+タブコントロールのメソッドで [FORM GOTO PAGE](https://doc.4d.com/4Dv18R3/4D/18-R3/FORM-GOTO-PAGE.301-4900983.ja.html) コマンドを使用できます:
 
 ```4d
 FORM GOTO PAGE(arrPages)
 ```
 
-The command is executed when the `On Clicked` event occurs. You should then clear the array when the `On Unload` event occurs.
+`On Clicked` イベントが発生すると、このコマンドが実行されます。 この後 `On Unload` イベントの発生時にこの配列をクリアします。
 
-Here is an example object method:
+オブジェクトメソッドの例を次に示します:
 
 ```4d
  Case of
@@ -78,12 +78,12 @@ Here is an example object method:
  End case
 ```
 
-### Goto Page action
+### gotoPage 標準アクション
 
-When you assign the `gotoPage` [standard action](properties_Action.md#standard-action) to a tab control, 4D will automatically display the page of the form that corresponds to the number of the tab that is selected.
+タブコントロールに `gotoPage` [標準アクション](properties_Action.md#標準アクション) を割り当てることができます。すると、4Dはクリックされたタブコントロールの番号に相当するフォームのページを自動的に表示します。
 
-For example, if the user selects the 3rd tab, 4D will display the third page of the current form (if it exists).
+たとえば、ユーザーが 3番目のタブをクリックすると、4Dはカレントフォームの 3ページ目 (存在する場合) を表示します。
 
-## Supported Properties
+## プロパティ一覧
 
-[Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Choice List](properties_DataSource.md#choice-list-static-list) - [Class](properties_Object.md#css-class) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Size](properties_Text.md#font-size)  - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Standard action](properties_Action.md#standard-action) - [Tab Control Direction](properties_Appearance.md#tab-control-direction) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型) - [CSSクラス](properties_Object.md#cssクラス) - [選択リスト](properties_DataSource.md#選択リスト-静的リスト) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [表示状態](properties_Display.md#表示状態) - [タブコントロールの位置](properties_Appearance.md#タブコントロールの位置) - [フォント](properties_Text.md#フォント) - [フォントサイズ](properties_Text.md#フォントサイズ) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [ヘルプTips](properties_Help.md#ヘルプtips) - [標準アクション](properties_Action.md#標準アクション)

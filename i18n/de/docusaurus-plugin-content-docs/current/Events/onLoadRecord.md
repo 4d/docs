@@ -5,10 +5,10 @@ title: On Load Record
 
 | Code | Can be called by | Definition                                                          |
 | ---- | ---------------- | ------------------------------------------------------------------- |
-| 40   | Form             | During user entry in list, a record is loaded and a field is edited |
+| 40   | Formular         | During user entry in list, a record is loaded and a field is edited |
 
 
-## Description
+## Beschreibung
 
 The `On Load Record` event can only be used in the context of an **output form**. It is triggered during data entry in list, after a record is highlighted and a field changes to editing mode.
 

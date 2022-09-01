@@ -1,21 +1,21 @@
 ---
 id: overview
-title: Overview
+title: Visão Geral
 ---
 
-4D includes a full database backup and restore module.
+4D inclui um backup completo e restauração do banco de dados.
 
-This module allows backing up a database currently in use without having to exit it. Each backup can include the project folder, the data file and any additional files or folders. These parameters are first set in the Database Settings.
+Esse módulo permite a cópia de segurança do banco de dados atualmente em uso sem ter que sair dele. Cada cópia de segurança ou backup inclui a pasta de projeto, o arquivo de dados e qualquer arquivo ou pastas adicionais. Esses parâmetros são primeiro estabelecidos nas configurações de banco de dados.
 
-Backups can be started manually or automatically at regular intervals without any user intervention. Specific language commands, as well as specific database methods, allow integrating backup functions into a customized interface.
+Cópias de segurança ou backups podem ser começadas de forma manual ou de forma automatica em intervalores regulares sem qualquer intervenção do usuário. Comandos específicos da linguagem, assim como métodos de bancos de dados específicos, permitem integrar funções de backup em uma interface personalizada.
 
-Databases can be restored automatically when a damaged database is opened.
+Bancos de dados podem ser restaurados automaticamente quando um banco de dados danificado for aberto.
 
-Also, the integrated backup module can take advantage of the .journal file ([database log file](log.md)). This file keeps a record of all operations performed on the data and also ensures total security between two backups. In case of problems with a database in use, any operations missing in the data file are automatically reintegrated the next time the database is opened. You can view the journal file contents at any time.
+Além disso, o módulo de cópia de segurança integrada pode aproveitar o arquivo .journal ([de histórico](log.md)). Esse arquivo mantém um registro de todas as operações realizadas nos dados e também assegura a segurança total entre dois backups. No caso de problemas com um banco de dados em uso, qualquer operação faltando no arquivo de dados são reintegrados automaticamente na próxima vez que o banco de dados for aberto. Pode ver os conteúdos do arquivo journal a qualquer momento.
 
-> You can also implement alternative solutions for replicating and synchronizing data in order to maintain identical versions of databases for backup purposes. These solutions can be based on the following mechanisms and technologies:  
+> Pode implementar também soluções alternativas para replicar e sincronizar dados para manter versões idênticas de bancos de dados por razões de backup. These solutions can be based on the following mechanisms and technologies:  
 > - Setting up a logical mirror with 4D Server (using the integrated backup module mechanisms)  
 > - Synchronization using SQL - Synchronization using HTTP (/rest/url)
 
 
-> For a general overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
+> Para uma visão geral das funções de segurança de 4D, consulte o [Guia de segurança de 4D](https://blog.4d.com/4d-security-guide/).

@@ -1,49 +1,49 @@
 ---
 id: pointer
-title: Pointer
+title: Ponteiro
 ---
 
-A Pointer variable or expression is a reference to another variable (including arrays and array elements), table, field, or object. There is no field of type Pointer.
+Uma variável ou expressão ponteiro é uma referência a outra variável (incluindo matrizes e elementos de matriz), tabela, campo, ou objecto. Não há campo do tipo Pointer.
 
-Pointers provide an advanced way (in programming) to refer to data. When you use the language, you access various objects—in particular, tables, fields, variables, objects, and arrays—by simply using their names. However, it is often useful to refer to these elements and access them without knowing their names. This is what pointers let you do.
+Os apontadores fornecem uma forma avançada (na programação) para se referir aos dados. Quando você usar a linguagem, você acessa vários objetos - em particular, tabelas, campos, variáveis, objetos e matrizes - simplesmente usando seus nomes. No entanto, muitas vezes é útil fazer referência a estes elementos e aceder aos mesmos sem conhecer os seus nomes. Isto é o que os indicadores lhe permitem fazer.
 
-The concept behind pointers is not that uncommon in everyday life. You often refer to something without knowing its exact identity. For example, you might say to a friend, “Let’s go for a ride in your car” instead of “Let’s go for a ride in the car with license plate 123ABD.” In this case, you are referencing the car with license plate 123ABD by using the phrase “your car.” The phrase “car with license plate 123ABD” is like the name of an object, and using the phrase “your car” is like using a pointer to reference the object.
+O conceito subjacente aos ponteiros não é assim tão incomum na vida cotidiana. Muitas vezes você se refere a algo sem saber sua identidade exata. Por exemplo, poderia dizer a um amigo: "Vamos dar uma volta no seu carro" em vez de "Vamos dar uma volta no carro com a placa 123ABD". Neste caso, está a referenciar o carro com a matrícula 123ABD, utilizando a frase "o seu carro". A frase "carro com matrícula 123ABD" é como o nome de um objecto, e utilizar a frase "o seu carro" é como utilizar um ponteiro para fazer referência ao objecto.
 
-Being able to refer to something without knowing its exact identity is very useful. In fact, your friend could get a new car, and the phrase “your car” would still be accurate—it would still be a car and you could still take a ride in it. Pointers work the same way. For example, a pointer could at one time refer to a numeric field called Age, and later refer to a numeric variable called Old Age. In both cases, the pointer references numeric data that could be used in a calculation.
+Ser capaz de se referir a algo sem conhecer a sua identidade exata é muito útil. De facto, o seu amigo poderia obter um carro novo, e a frase "o seu carro" continuaria a ser exata - continuaria a ser um carro e ainda poderia dar uma volta nele. Os ponteiros funcionam da mesma maneira. Por exemplo, um ponteiro poderia, de uma vez, referir-se a um campo numérico chamado Age, e mais tarde referir-se a uma variável numérica chamada Old Age. Em ambos os casos, o ponteiro faz referência a dados numéricos que poderiam ser utilizados num cálculo.
 
-You can use pointers to reference tables, fields, variables, arrays, array elements, and objects. The following table gives an example of each data type:
+Pode usar apontadores para referenciar tabelas, campos, variáveis, matrizes, elementos de array, e objetos. A tabela a seguir dá um exemplo de cada tipo de dado:
 
-| Type          | To Reference            | To Use                   | To Assign                |
-| ------------- | ----------------------- | ------------------------ | ------------------------ |
-| Table         | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
-| Field         | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |
-| Variable      | vpVar:=->Variable       | ALERT(vpVar->)           | vpVar->:="John"          |
-| Array         | vpArr:=->Array          | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
-| Array element | vpElem:=->Array{1}      | ALERT (vpElem->)         | vpElem->:="John"         |
-| Object        | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
+| Tipo           | Referenciação           | Para usar                | Atribuição               |
+| -------------- | ----------------------- | ------------------------ | ------------------------ |
+| Tabela         | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
+| Campo          | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |
+| Variável       | vpVar:=->Variable       | ALERT(vpVar->)           | vpVar->:="John"          |
+| Array          | vpArr:=->Array          | SORT ARRAY(vpArr->;>)    | COPY ARRAY (Arr;vpArr->) |
+| Elemento Array | vpElem:=->Array{1}      | ALERT (vpElem->)         | vpElem->:="John"         |
+| Objeto         | vpObj:=->myObject       | ALERT (vpObj->myProp)    | vpObj->myProp:="John"    |
 
 
-## Using a pointer: Basic example
+## Usando um ponteiro: Exemplo básico
 
-It is easiest to explain the use of pointers through an example. This example shows how to access a variable through a pointer. We start by creating a variable:
+É mais fácil explicar o uso de ponteiros através de um exemplo. Este exemplo mostra como acessar uma variável através de um ponteiro. Começamos por criar uma variável:
 
 ```4d
 $MyVar:="Hello"
 ```
-$MyVar is now a variable containing the string “Hello.” We can now create a pointer to $MyVar:
+$MyVar é agora uma variável que contém a string "Olá". Agora podemos criar um ponteiro para $MyVar:
 
 ```4d
 C_POINTER($MyPointer)  
 $MyPointer:=->$MyVar
 ```
-The -> symbol means “get a pointer to.” This symbol is formed by a dash followed by a “greater than” sign. In this case, it gets the pointer that references or “points to” $MyVar. This pointer is assigned to MyPointer with the assignment operator.
+O símbolo -> significa "fazer um ponteiro para". Este símbolo é formado por um traço seguido por um sinal "maior que". Neste caso, ele recebe o ponteiro que faz referência ou "aponta para" $MyVar. Este ponteiro é atribuído ao MyPointer com o operador de atribuição.
 
-$MyPointer is now a variable that contains a pointer to $MyVar. $MyPointer does not contain “Hello”, which is the value in $MyVar, but you can use $MyPointer to get this value. The following expression returns the value in $MyVar:
+$MyPointer é agora uma variável que contém um ponteiro para $MyVar. $MyPointer não contém "Olá", que é o valor em $MyVar, mas pode usar $MyPointer para obter este valor. A seguinte expressão devolve o valor em $MyVar:
 ```4d
 $MyPointer->
 ```
 
-In this case, it returns the string “Hello”. The -> symbol, when it follows a pointer, references the object pointed to. This is called dereferencing.
+Nesse caso, ela retorna a seqüência de caracteres "Olá". O símbolo -> , quando segue um ponteiro, faz referência ao objecto apontado. This is called dereferencing.
 
 It is important to understand that you can use a pointer followed by the -> symbol anywhere that you could have used the object that the pointer points to. This means that you could use the expression $MyPointer-> anywhere that you could use the original $MyVar variable. For example, the following line displays an alert box with the word Hello in it:
 ```4d
@@ -68,7 +68,7 @@ $MyVar:="Goodbye"
 
 ## Pointer operators
 
-With:
+Con:
 ```4d
   ` vPtrA and vPtrB point to the same object
  vPtrA:=->anObject
@@ -77,12 +77,12 @@ With:
  vPtrC:=->anotherObject
 ```
 
-| Operation  | Syntax            | Returns | Expression    | Value |
-| ---------- | ----------------- | ------- | ------------- | ----- |
-| Equality   | Pointer = Pointer | Boolean | vPtrA = vPtrB | True  |
-|            |                   |         | vPtrA = vPtrC | False |
-| Inequality | Pointer # Pointer | Boolean | vPtrA # vPtrC | True  |
-|            |                   |         | vPtrA # vPtrB | False |
+| Operação     | Sintaxe           | Retorna  | Expression    | Value |
+| ------------ | ----------------- | -------- | ------------- | ----- |
+| Igual        | Pointer = Pointer | Booleano | vPtrA = vPtrB | True  |
+|              |                   |          | vPtrA = vPtrB | False |
+| Desigualdade | Pointer # Pointer | Booleano | vPtrA # vPtrC | True  |
+|              |                   |          | vPtrA # vPtrB | False |
 
 ## Main usages
 ### Pointers to tables
@@ -153,17 +153,17 @@ You can create a pointer to an array. For example, the following lines create an
 ARRAY REAL($anArray;10) //Create an array
 $ArrPtr:=->$anArray //Create a pointer to the array
 ```
-It is important to understand that the pointer points to the array; it does not point to an element of the array. For example, you can use the dereferenced pointer from the preceding lines like this:
+It is important to understand that the pointer points to the array; it does not point to an element of the array. Por exemplo, pode utilizar o ponteiro desreferenciado das linhas anteriores como este:
 ```4d
-SORT ARRAY($ArrPtr->;>) //Sort the array
+ORDENAR ARRAY($ArrPtr->;>) //Ordenar o array
 ```
-If you need to refer to the fourth element in the array by using the pointer, you do this:
+Se precisar de se referir ao quarto elemento do array usando o ponteiro, faça desta maneira:
 ```4d
  ArrPtr->{4}:=84
 ```
 
-### Pointers as parameters to methods
-You can pass a pointer as a parameter to a method. Inside the method, you can modify the object referenced by the pointer. For example, the following method, `takeTwo`, takes two parameters that are pointers. It changes the object referenced by the first parameter to uppercase characters, and the object referenced by the second parameter to lowercase characters. Here is the project method:
+### Indicadores como parâmetros para os métodos
+Pode passar um ponteiro como parâmetro para um método. Dentro do método, você pode modificar o objeto referenciado pelo ponteiro. Por exemplo, o seguinte método, `takeTwo`, toma dois parâmetros que são indicadores. It changes the object referenced by the first parameter to uppercase characters, and the object referenced by the second parameter to lowercase characters. Here is the project method:
 ```4d
   //takeTwo project method
   //$1 – Pointer to a string field or variable. Change this to uppercase.
@@ -198,7 +198,7 @@ Here is an explanation of each line of the example:
 - $PointerOne:=->$MyVar --> $PointerOne now contains a pointer to $MyVar.
 - $PointerTwo:=->$PointerOne --> $PointerTwo (a new variable) contains a pointer to $PointerOne, which in turn points to $MyVar.
 - ($PointerTwo->)->:="Goodbye" --> $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Therefore ($PointerTwo->)-> references the contents of $MyVar. So in this case, $MyVar is assigned "Goodbye".
-- ALERT (($PointerTwo->)->) --> Same thing: $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Therefore ($PointerTwo->)-> references the contents of $MyVar. So in this case, the alert box displays the contents of $MyVar.
+- ALERT (($PointerTwo->)->) --> Same thing: $PointerTwo-> references the contents of $PointerOne, which in turn references $MyVar. Therefore ($PointerTwo->)-> references the contents of $MyVar. Therefore ($PointerTwo->)-> references the contents of $MyVar.
 
 The following line puts "Hello" into $MyVar:
 ```4d

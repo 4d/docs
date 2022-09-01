@@ -4,138 +4,138 @@ title: WebAdmin
 ---
 
 
-An embedded web server component, named `WebAdmin`, is used by 4D and 4D Server to provide a secured web access to specific management features such as the [Data Explorer](dataExplorer.md). You can connect locally or remotely to this web server from a browser or any web application and access the associated 4D application.
+Un componente de servidor web integrado, llamado `WebAdmin`, es utilizado por 4D y 4D Server para dar un acceso web seguro a funciones de gestión específicas como el [Explorador de datos](dataExplorer.md). Puede conectarse local o remotamente a este servidor web desde un navegador o cualquier aplicación web y acceder a la aplicación 4D asociada.
 
-The WebAdmin handles the authentication of users with "WebAdmin" privileges, so that they can open administration sessions and access dedicated interfaces.
+El WebAdmin se encarga de la autenticación de los usuarios con privilegios "WebAdmin", para que puedan abrir sesiones de administración y acceder a las interfaces dedicadas.
 
-This feature can be used in 4D applications running headless as well as 4D applications running with interfaces.
-
-
-## Starting the WebAdmin web server
-
-By default, the `WebAdmin` web server is not launched. You need to configure the launch at startup, or (in versions with interface) launch it manually using a menu item.
+Esta funcionalidad se puede utilizar en aplicaciones 4D que se ejecutan con o sin interfaces.
 
 
-### Launch at startup
+## Iniciar el servidor web WebAdmin
 
-You can configure the `WebAdmin` web server to be launched at 4D or 4D Server application startup (before any project is loaded).
+Por defecto, el servidor web `WebAdmin` no se lanza. Es necesario configurar el lanzamiento al inicio, o (en las versiones con interfaz) lanzarlo manualmente mediante una opción de menú.
 
-- If you use a 4D application with interface, select the **File > Web Administration > Settings...** menu item.
+
+### Lanzamiento al inicio
+
+Puede configurar el servidor web `WebAdmin` para que se lance al inicio de la aplicación 4D o 4D Server (antes de que se cargue cualquier proyecto).
+
+- Si utiliza una aplicación 4D con interfaz, seleccione la opción de menú **Archivo > Administración web > Propiedades...**.
 
 ![alt-text](../assets/en/Admin/waMenu1.png)
 
-Check the **Web server administration automatic startup** option in the settings dialog box:
+Seleccione la opción **Inicio automático de la administración del servidor web** en la caja de diálogo de configuración:
 
 ![alt-text](../assets/en/Admin/waSettings.png)
 
-- Whether you use 4D application which is headless or not, you can enable the automatic startup mode using the following *Command Line Interface* argument:
+- Tanto si utiliza la aplicación 4D con o sin interfaz, puede habilitar el modo de inicio automático utilizando el siguiente argumento *Interfaz de línea de comandos*:
 
 
 ```
 open ~/Desktop/4D.app --webadmin-auto-start true
 ```
 
-> If the TCP port used by the `WebAdmin` web server ([HTTPS](#https-port) or [HTTP](#http-port), depending on the settings) is not free at startup, 4D will try successively the 20 following ports, and use the first one that is available. If no port is available, the web server is not launched and an error is displayed or (headless application) logged in the console.
+> Si el puerto TCP utilizado por el servidor web `WebAdmin` ([HTTPS](#https-port) o [HTTP](#http-port), según la configuración) no está disponible al inicio, 4D intentará sucesivamente los 20 puertos siguientes, y utilizará el primero que esté disponible. Si no hay ningún puerto disponible, el servidor web no se lanza y se muestra un error o para las aplicaciones sin interfaz, aparece en la consola.
 
 
-### Start and stop
+### Iniciar y detener
 
-If you use a 4D application with interface, you can start or stop the `WebAdmin` web server for your project at any moment:
+Si utiliza una aplicación 4D con interfaz, puede iniciar o detener el servidor web `WebAdmin` de su proyecto en cualquier momento:
 
-Select the **File > Web Administration > Start Server** menu item.
+Seleccione la opción de menú **Archivo > Administración web > Iniciar el servidor**.
 
 ![alt-text](../assets/en/Admin/waMenu2.png)
 
-The menu item becomes **Stop Server** when the server is launched; select **Stop Server** to stop the `WebAdmin` web server.
+El elemento de menú se convierte en **Detener el servidor** cuando se lanza el servidor; seleccione **Detener el servidor** para detener el servidor web `WebAdmin`.
 
 
 
-## WebAdmin Settings
+## Propiedades WebAdmin
 
-Configuring the `WebAdmin` component is mandatory in particular to define the [**access key**](#access-key). By default when the access key is not set, access via a URL is not allowed.
+La configuración del componente `WebAdmin` es obligatoria, en particular para definir la[** clave de acceso**](#access-key). Por defecto, cuando la clave de acceso no está configurada, no se permite el acceso a través de una URL.
 
-You can configure the `WebAdmin` component using the [Web Administration settings dialog box](#settings-dialog-box) (see below).
+Puede configurar el componente `WebAdmin` en la [caja de diálogo Configuración de la administración web](#settings-dialog-box) (ver más abajo).
 
-> If you use a headless 4D application, you can use [*Command Line Interface* arguments](#webadmin-headless-configuration) to define basic settings. You will have to customize the settings file to define advanced parameters.
+> Si utiliza una aplicación 4D sin interfaz, puede utilizar los [argumentos de *la interfaz de línea de comandos*](#webadmin-headless-configuration) para definir la configuración básica. Tendrá que personalizar el archivo de configuración para definir los parámetros avanzados.
 
 
-### Settings dialog box
+### Caja de diálogo de parámetros
 
-To open the Web Administration settings dialog box, select the **File > Web Administration > Settings...** menu item.
+Para abrir la caja de diálogo de configuración de administración web, seleccione **Archivo > Administración Web > Configuración...**.
 
 ![alt-text](../assets/en/Admin/waMenu1.png)
 
-The following dialog box is displayed:
+Se muestra la siguiente caja de diálogo:
 
 ![alt-text](../assets/en/Admin/waSettings2.png)
 
-#### Web server administration automatic startup
+#### Inicio automático de la administración del servidor web
 
-Check this option if you want the `WebAdmin` web server to be automatically launched when the 4D or 4D Server application starts ([see above](#launching-at-startup)). By default, this option is not checked.
+Marque esta opción para lanzar el servidor web `WebAdmin` automáticamente cuando se inicie la aplicación 4D o 4D Server (ver [arriba](#lanzamiento-al-inicio)). Por defecto, esta opción no está seleccionada.
 
-#### Accept HTTP connections on localhost
+#### Conexiones HTTP en localhost aceptadas
 
-When this option is checked, you will be able to connect to the `WebAdmin` web server through HTTP on the same machine as the 4D application. By default, this option is checked.
+Cuando esta opción está seleccionada, podrá conectarse al servidor web `WebAdmin` a través de HTTP en la misma máquina que la aplicación 4D. Por defecto, esta opción está seleccionada.
 
-**Notes:**
-- Connections with HTTP other than localhost are never accepted.
-- Even if this option is checked, when [Accept HTTPS](#accept-https) is checked and the TLS configuration is valid, localhost connections use HTTPS.
-
-
-#### HTTP Port
-
-Port number to use for connections through HTTP to the `WebAdmin` web server when the **Accept HTTP connections on localhost** option is checked. Default value is 7080.
+**Notas:**
+- Nunca se aceptan conexiones con HTTP que no sean localhost.
+- Incluso si esta opción está activada, cuando [HTTPS aceptada](#aceptar-https) está activada y la configuración TLS es válida, las conexiones localhost utilizan HTTPS.
 
 
-#### Accept HTTPS
+#### Puerto HTTP
 
-When this option is checked, you will be able to connect to the `WebAdmin` web server through HTTPS. By default, this option is checked.
-
-#### HTTPS Port
-
-Port number to use for connections through HTTPS to the `WebAdmin` web server when the **Accept HTTPS** option is checked. Default value is 7443.
+Número de puerto a utilizar para las conexiones al servidor web `WebAdmin` a través de HTTP cuando la opción **Conexiones HTTP en localhost aceptadas** está marcada. El valor por defecto es 7080.
 
 
-#### Certificate folder path
+#### Aceptar HTTPS
 
-Path of the folder where the TLS certificate files are located. By default, the certificate folder path is empty and 4D or 4D Server uses the certificate files embedded in the 4D application (custom certificates must be stored next to the project folder).
+Cuando esta opción está seleccionada, podrá conectarse al servidor web `WebAdmin` a través de HTTPS. Por defecto, esta opción está seleccionada.
 
-#### Debug log mode
+#### Puerto HTTPS
 
-Status or format of the HTTP request log file (HTTPDebugLog_*nn*.txt, stored in the "Logs" folder of the application -- *nn* is the file number). The following options are available:
+Número de puerto a utilizar para las conexiones al servidor web `WebAdmin` a través de HTTPS cuando la opción **HTTPS aceptada** está marcada. El valor por defecto es 7443.
 
-- **Disable** (default)
-- **With all body parts** - enabled with body parts in response and request
-- **Without body parts** - enabled without body parts (body size is provided)
-- **With request body** - enabled with body part in request only
-- **With response body** - enabled with body part in response only
 
-#### Access Key
+#### Ruta de la carpeta de certificados
 
-Defining an access key is mandatory to unlock access to the `WebAdmin` web server through a URL (access via a 4D menu command does not require an access key). When no access key is defined, no web client is allowed to connect through a URL to a web administration interface like the [Data Explorer page](dataExplorer.md). An error page is returned in case of connection request:
+Ruta de la carpeta donde se encuentran los archivos del certificado TLS. Por defecto, la ruta de la carpeta de certificados está vacía y 4D o 4D Server utiliza los archivos de certificados contenidos en la aplicación 4D (los certificados personalizados deben almacenarse junto a la carpeta de proyecto).
+
+#### Modo de registro de depuración
+
+Estado o formato del archivo de registro de peticiones HTTP (HTTPDebugLog_*nn*.txt, almacenado en la carpeta "Logs" de la aplicación -- *nn* es el número de archivo). Las siguientes opciones están disponibles:
+
+- **Desactivado** (por defecto)
+- **Con todas las partes del cuerpo** - habilitado con partes del cuerpo de las peticiones y respuestas
+- **Sin las partes del cuerpo** - activado sin partes del cuerpo (se indica el tamaño del cuerpo)
+- **Con los cuerpos de las peticiones** - activado con la partes del cuerpo únicamente en las peticiones
+- **Con la respuesta cuerpos** - activado con la partes del cuerpo únicamente en las respuestas
+
+#### Llave de acceso
+
+La configuración de una llave de acceso es obligatoria para desbloquear el acceso al servidor web `WebAdmin` a través de una URL (el acceso a través de un comando del menú 4D no requiere una llave de acceso). Cuando no se define ninguna llave de acceso, no se permite que ningún cliente web se conecte a través de una URL a una interfaz de administración web como la página [Explorador de datos](dataExplorer.md). Se devuelve una página de error en caso de solicitud de conexión:
 
 ![alt-text](../assets/en/Admin/accessKey.png)
 
-An access key is similar to a password but not associated to a login.
+Una llave de acceso es similar a una contraseña pero no está asociada a un inicio de sesión.
 
-- To define a new access key: click the **Define** button, enter the access key string in the dialog box and click **OK**. The button label becomes **Modify**.
-- To modify the access key: click the **Modify** button, enter the new access key string in the dialog box and click **OK**.
-- To delete the access key: click the **Modify** button, let the access key area empty and click **OK**.
+- Para definir una nueva llave de acceso: haga clic en el botón **Definir**, introduzca la cadena de la llave de acceso en la caja de diálogo y haga clic en **OK**. La etiqueta del botón se convierte en **Modificar**.
+- Para modificar la llave de acceso: haga clic en el botón **Modificar**, introduzca la nueva cadena de la llave de acceso en la caja de diálogo y haga clic en **OK**.
+- Para eliminar la llave de acceso: haga clic en el botón **Modificar**, deje vacía el área de la llave de acceso y haga clic en **OK**.
 
 
-## WebAdmin Headless Configuration
+## Configuración de WebAdmin sin interfaz
 
-All [WebAdmin settings](#webadmin-settings) are stored in the `WebAdmin.4DSettings` file. There is one default `WebAdmin.4DSettings` file per 4D and 4D Server application, so that it is possible to deploy multiple applications on the same host machine.
+Todos [los parámetros de WebAdmin](#webadmin-settings) se almacenan en el archivo `WebAdmin.4DSettings`. Hay un archivo `WebAdmin.4DSettings` por defecto por cada aplicación 4D y 4D Server, por lo que es posible desplegar varias aplicaciones en la misma máquina local.
 
-When running a 4D or 4D Server application headless, you can set and use the default `WebAdmin.4DSettings` file, or designate a custom `.4DSettings` file.
+Cuando se ejecuta una aplicación 4D o 4D Server sin interfaz, se puede configurar y utilizar el archivo `WebAdmin.4DSettings` por defecto, o designar un archivo `.4DSettings` personalizado.
 
-To set the file contents, you can use the [WebAdmin settings dialog](#settings-dialog-box) of the 4D application with interface and run it headless afterwards. The default `WebAdmin.4DSettings` file is then used.
+Para establecer el contenido del archivo, puede utilizar la [ventana de parámetros WebAdmin](#settings-dialog-box) de la aplicación 4D con una interfaz y ejecutarla luego sin interfaz. Se utiliza entonces el archivo por defecto `WebAdmin.4DSettings`.
 
-Or, you can set a custom `.4DSettings` file (xml format) and use it instead of the default file. Several dedicated arguments are available in the [Command line interface](cli.md) to support this feature.
+O bien, puede definir un archivo personalizado `.4DSettings` (formato xml) y utilizarlo en lugar del archivo predeterminado. En la [Interfaz de línea de comandos](cli.md) hay varios argumentos dedicados para soportar esta funcionalidad.
 
-> The access key is not stored in clear in the `.4DSettings` file.
+> La clave de acceso no se almacena de manera transparente en el archivo `.4DSettings`.
 
-Example:
+Ejemplo:
 
 ```
 "%HOMEPATH%\Desktop\4D Server.exe" MyApp.4DLink --webadmin-access-key 
@@ -145,12 +145,12 @@ Example:
 ```
 
 
-## Authentication and Session
+## Autenticación y sesión
 
-- When a web management page is accessed by entering a URL and without prior identification, an authentication is required. The user must enter the [access key](#access-key) in an authentication dialog box. If the access key was not defined in the `WebAdmin` settings, no access via URL is possible.
+- Cuando se accede a una página de gestión web introduciendo una URL y sin identificación previa, se requiere una autenticación. El usuario debe introducir la [llave-de-acceso](#access-key) en una ventana de autenticación. Si la llave de acceso no fue definida en la configuración de `WebAdmin`, no es posible el acceso vía URL.
 
-- When a web management page is accessed directly from a 4D or 4D Server menu item (such as **Records > Data Explorer** or **Window > Data Explorer** (4D Server)), access is granted without authentication, the user is automatically authenticated.
+- Cuando se accede a una página de gestión web directamente desde un elemento de menú de 4D o 4D Server (como **Registros > Explorador de datos** o **Ventana > Explorador de datos** (4D Server)), el acceso se concede sin autenticación, el usuario se autentifica automáticamente.
 
-Once the access is granted, a web [session](WebServer/sessions.md) with the "WebAdmin" privilege is created on the 4D application. As long as the current session has "WebAdmin" privilege, the `WebAdmin` component delivers requested pages.
+Una vez concedido el acceso, se crea una [sesión web](WebServer/sessions.md) con el privilegio "WebAdmin" en la aplicación 4D. Mientras la sesión actual tenga el privilegio "WebAdmin", el componente `WebAdmin` entrega las páginas solicitadas.
 
 

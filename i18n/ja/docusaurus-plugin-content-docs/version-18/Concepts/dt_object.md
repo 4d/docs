@@ -1,101 +1,101 @@
 ---
 id: object
-title: Objects
+title: オブジェクト
 ---
 
-Variables, fields or expressions of the Object type can contain various types of data. The structure of "native" 4D objects is based on the classic principle of "property/value" pairs. The syntax of these objects is based on JSON notation:
+オブジェクト型の変数・フィールド・式にはさまざまなデータを格納することができます。 4D のネイティブなオブジェクトの構造は、よくある「プロパティ/値」(または「属性/値」) というペア (連想配列) に基づいています。 これらオブジェクトの記法は JSON をもとにしていますが、完全に同じというわけではありません。
 
-- A property name is always a text, for example "Name".
+- プロパティ名は必ずテキストで表現されます。
 
-- A property value can be of the following type:
-    - number (Real, Integer, etc.)
-    - text
+- プロパティ値は以下のどれかの型で表現されます:
+    - 数値 (実数、整数、等)
+    - テキスト
     - null
-    - Boolean
-    - pointer (stored as such, evaluated using the `JSON Stringify` command or when copying),
-    - date (date type or ISO date format string)
-    - object (objects can be nested on several levels)
-    - picture(*)
-    - collection
+    - ブール
+    - ポインター (`JSON Stringify` コマンドの使用、またはコピーの際に評価されます)
+    - 日付 (日付型あるいは ISO日付フォーマット文字列)
+    - オブジェクト (オブジェクトは入れ子にすることができます)
+    - ピクチャー (*)
+    - コレクション
 
-(*)When exposed as text in the debugger or exported to JSON, picture object properties print "[object Picture]".
+(*) デバッガー内でテキストとして表示したり、JSON へと書き出されたりした場合、ピクチャー型のオブジェクトプロパティは "[object Picture]" と表されます。
 
-**Warning:** Keep in mind that attribute names differentiate between upper and lower case.
+**警告:** 属性名は大文字と小文字を区別するという点に注意してください。
 
-You manage Object type variables, fields or expressions using the commands available in the **Objects (Language)** theme or through the object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)). Note that specific commands of the Queries theme such as `QUERY BY ATTRIBUTE`, `QUERY SELECTION BY ATTRIBUTE`, or `ORDER BY ATTRIBUTE` can be used to carry out processing on object fields.
+オブジェクト型の変数・フィールド・式を操作するには **オブジェクト (ランゲージ)** テーマのコマンドを使用するか、オブジェクト記法 ([オブジェクト記法の使用](Concepts/dt_object.md#オブジェクト記法の使用) 参照)を用います。 オブジェクト型フィールドに対して処理をおこなうには `QUERY BY ATTRIBUTE`、`QUERY SELECTION BY ATTRIBUTE` や `ORDER BY ATTRIBUTE` など、クエリテーマの特定のコマンドも使用することができます。
 
-Each property value accessed through the object notation is considered an expression. When the object notation is enabled in your database (see below), you can use such values wherever 4D expressions are expected:
+オブジェクト記法を使ってアクセスされたそれぞれのプロパティ値は式とみなされます。 データベース内でオブジェクト記法が有効化されている場合 (以下参照)、4D内で式が期待される場所であれば、どこでもこのような値を使用することができます:
 
-- in 4D code, either written in the methods (Method editor) or externalized (formulas, 4D tags files processed by PROCESS 4D TAGS or the Web Server, export files, 4D Write Pro documents...),
-- in the Expression areas of the Debugger and the Runtime explorer,
-- in the Property list of the Form editor for form objects: Variable or Expression field as well as various selection list box and columns expressions (Data Source, background color, style, or font color).
+- 4Dコード内。メソッド (メソッドエディター) に書いても、外部化(フォーミュラ、PROCESS 4D TAGS あるいは Web Server によって処理される 4D tags ファイル、4D Write Proドキュメントなど) しても使用可能です。
+- デバッガー及びランタイムエクスプローラーの式エリア内。
+- フォームエディターにおいて、フォームオブジェクトのプロパティリスト内。変数あるいは式フィールド内の他、様々なセレクションリストボックス及びカラムの式 (データソース、背景色、スタイル、フォントカラー等) において使用可能です。
 
-## Initialization
+## 初期化
 
-Objects must have been initialized, for example using the `New object` command, otherwise trying to read or modify their properties will generate a syntax error.
+`New object` コマンドを使うなどして、オブジェクトはあらかじめ初期化しておく必要があります。初期化しない場合、プロパティ値の取得や変更はシンタックスエラーとなります。
 
-Example:
+例:
 ```4d
- C_OBJECT($obVar) //creation of an object type 4D variable
- $obVar:=New object //initialization of the object and assignment to the 4D variable
+ C_OBJECT($obVar) // オブジェクト型の変数の作成
+ $obVar:=New object // オブジェクトの初期化と変数への代入
 ```
 
-### Regular or shared object
+### 通常オブジェクトと共有オブジェクト
 
-You can create two types of objects:
+二種類のオブジェクトを作成することができます:
 
-- regular (non-shared) objects, using the `New object` command. These objects can be edited without any specific access control but cannot be shared between processes.
-- shared objects, using the `New shared object` command. These objects can be shared between processes, including preemptive threads. Access to these objects is controlled by `Use...End use` structures. For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
+- `New object` コマンドを使用して作成する通常 (非共有) オブジェクト。 通常のオブジェクトは特別なアクセスコントロールをせずに編集可能ですが、プロセス間で共有することはできません。
+- `New shared object` コマンドを使用して作成する共有オブジェクト。 共有オブジェクトはプロセス間 (プリエンティブ・スレッド含む) で共有可能なオブジェクトです。 共有オブジェクトへのアクセスは `Use...End use` 構造によって管理されています。 詳細な情報については、[共有オブジェクトと共有コレクション](Concepts/shared.md) を参照ください。
 
 
-## Syntax basics
+## オブジェクト記法の使用
 
-Object notation can be used to access object property values through a chain of tokens.
+オブジェクト記法を使うと、トークンのチェーンを通してオブジェクトのプロパティ値にアクセスすることができます。
 
-### Object properties
+### オブジェクトプロパティ
 
-With object notation, object properties can be accessed in two ways:
+オブジェクト記法では、オブジェクトプロパティは二通りの方法でアクセスすることができます:
 
-- using a "dot" symbol: > object.propertyName
+- "ドット" 記号を使用する方法: > object.propertyName
 
-Example:
+例:
 ```4d
      employee.name:="Smith"
 ```
 
-- using a string within square brackets: > object["propertyName"]
+- 大カッコと文字列を使用する方法: > object["propertyName"]
 
-Examples:
+例:
 ```4d
      $vName:=employee["name"]
-     //or also:
+     // または:
      $property:="name"
      $vName:=employee[$property]
 
 ```
 
-Since an object property value can be an object or a collection, object notation accepts a sequence of symbols to access sub-properties, for example:
+オブジェクトプロパティ値には、オブジェクトやコレクションも設定することが可能です。これらのサブプロパティにアクセスするため、オブジェクト記法では連続した字句を受け入れることができます:
 ```4d
  $vAge:=employee.children[2].age
 ```
-Object notation is available on any language element that can contains or returns an object, i.e:
+オブジェクトを格納、あるいは返すあらゆるランゲージ要素に対してオブジェクト記法を使用できます。たとえば:
 
-- **Objects** themselves (stored in variables, fields, object properties, object arrays, or collection elements). Examples:
+- **オブジェクト** 自身 (変数、フィールド、オブジェクトプロパティ、オブジェクト配列、コレクション要素などに保存されているもの) 例:
 
 ```4d
-     $age:=$myObjVar.employee.age //variable
-     $addr:=[Emp]data_obj.address //field
-     $city:=$addr.city //property of an object
-     $pop:=$aObjCountries{2}.population //object array
-     $val:=$myCollection[3].subvalue //collection element
+     $age:=$myObjVar.employee.age // 変数
+     $addr:=[Emp]data_obj.address // フィールド
+     $city:=$addr.city // オブジェクトプロパティ
+     $pop:=$aObjCountries{2}.population // オブジェクト配列
+     $val:=$myCollection[3].subvalue // コレクション要素
 ```
-- **4D commands** that return objects. Example:
+- オブジェクトを返す **4D コマンド** 例:
 
 ```4d
      $measures:=Get database measures.DB.tables
 ```
 
-- **Project methods** that return objects. Example:
+- オブジェクトを返す **プロジェクトメソッド** 例:
 
 ```4d
       // MyMethod1
@@ -106,24 +106,24 @@ Object notation is available on any language element that can contains or return
      $result:=MyMethod1.a //10
 ```
 
-- **Collections** Example:
+- **コレクション** 例:
 
 ```4d
-     myColl.length //size of the collection
+     myColl.length // コレクションの長さ
 ```
 
-### Pointers
-**Preliminary Note:** Since objects are always passed by reference, there is usually no need to use pointers. While just passing the object, internally 4D automatically uses a mechanism similar to a pointer, minimizing memory need and allowing you to modify the parameter and to return modifications. As a result, you should not need to use pointers. However, in case you want to use pointers, property values can be accessed through pointers.
+### ポインター
+**注:** オブジェクトは常に参照として渡されるため、通常はポインターを使用する必要はありません。 オブジェクトを引数として渡す際、4D 内部では自動的にポインターに類似したメカニズムを使うことでメモリの消費を最小限に抑え、引数を編集して返すことを可能にします。 つまり、ポインターは必要ないということです。 それでもポインターを使用したい場合には、プロパティ値はポインターを通してアクセスすることができます。
 
-Using object notation with pointers is very similar to using object notation directly with objects, except that the "dot" symbol must be omitted.
+ポインターを使ってオブジェクトプロパティにアクセスするには、直接オブジェクトを使用する場合と方法が似ていますが、"ドット" 記号は省略する必要があります。
 
-- Direct access:
+- オブジェクト記法によるアクセス:
 > pointerOnObject->propertyName
 
-- Access by name:
+- 大カッコを使用する方法:
 > pointerOnObject->["propertyName"]
 
-Example:
+例:
 
 ```4d
  C_OBJECT(vObj)
@@ -134,50 +134,49 @@ Example:
  x:=vPtr->a //x=10
 ```
 
-### Null value
+### Null 値
 
-When using the object notation, the **null** value is supported though the **Null** command. This command can be used to assign or compare the null value to object properties or collection elements, for example:
+オブジェクト記法を使用する場合、**null** 値は **Null** コマンドを通してサポートされています。 このコマンドを使用すると、null 値をオブジェクトプロパティやコレクション要素に割り当てたり、それらと比較したりすることができます。例:
 
 ```4d
  myObject.address.zip:=Null
  If(myColl[2]=Null)
 ```
 
-For more information, please refer to the `Null` command description.
+詳細については、`Null` コマンドの説明を参照してください。
 
-### Undefined value
+### 未定義の値
 
-Evaluating an object property can sometimes produce an undefined value. Typically when trying to read or assign undefined expressions, 4D will generate errors. This does not happen in the following cases:
+オブジェクトプロパティを評価した結果、未定義の値が生成されることがあります。 未定義の式を読み込んだ、または割り当てようとしたときに 4D は通常、エラーを生成します。 ただし以下の場合には生成されません:
 
-- Reading a property of an undefined object or value returns undefined; assigning an undefined value to variables (except arrays) has the same effect as calling with them:
+- 未定義のオブジェクトやプロパティ値を読み込むと未定義 (undefined) が返されます。未定義の値を (配列を除く) 変数に割り当てることは、`CLEAR VARIABLE` コマンドを使うのと同じ効果があります:
 
 ```4d
      C_OBJECT($o)
      C_LONGINT($val)
      $val:=10 //$val=10
-     $val:=$o.a //$o.a is undefined (no error), and assigning this value clears the variable
-      //$val=0
+     $val:=$o.a // $o.a は未定義 (エラーなし) なため、この値を代入すると変数が初期化されます
+      // $val=0
 ```
 
-- Reading the **length** property of an undefined collection produces 0:
+- 未定義のコレクションの **length** プロパティは 0 を返します:
 
 ```4d
-     C_COLLECTION($c) //variable created but no collection is defined
-     $size:=$c.length //$size = 0
+     C_COLLECTION($c) // 変数は作成されたが、コレクションは未定義     $size:=$c.length // $size = 0
 ```
 
-- An undefined value passed as parameter to a project method is automatically converted to 0 or "" according to the declared parameter type.
+- 未定義の値を引数としてプロジェクトメソッドに渡した場合、宣言された引数の型に応じて、0 あるいは "" (空の文字列) へと自動変換されます。
 
 ```4d
      C_OBJECT($o)
-     mymethod($o.a) //pass an undefined parameter
+     mymethod($o.a) // 未定義の引数を渡すと
 
-      //In mymethod method
-     C_TEXT($1) //parameter type is text
-      // $1 contains ""
+      // mymethod メソッド内では
+     C_TEXT($1) // 引数の型はテキスト
+      // $1 の中身は""
 ```
 
-- A condition expression is automatically converted to false when evaluating to undefined with the If and Case of keywords:
+- 条件式で、If あるいは Case of キーワードで未定義と評価された場合には、自動的にfalse へと変換されます:
 
 ```4d
      C_OBJECT($o)
@@ -188,94 +187,94 @@ Evaluating an object property can sometimes produce an undefined value. Typicall
      End case
 ```
 
-- Assigning an undefined value to an existing object property reinitializes or clears its value, depending on its type:
- - Object, collection, pointer: Null
- - Picture: Empty picture
- - Boolean: False
- - String: ""
- - Number: 0
- - Date: !00-00-00! if "Use date type instead of ISO date format in objects" setting is enabled, otherwise ""
- - Time: 0 (number of ms)
- - Undefined, Null: no change
+- 未定義の値を既存のオブジェクトプロパティに代入した場合、その値は型に応じて初期化、あるいは消去されます:
+ - オブジェクト、コレクション、ポインター: Null
+ - ピクチャー: 空のピクチャー
+ - ブール: False
+ - 文字列: ""
+ - 数値: 0
+ - 日付:  "オブジェクトではISO日付フォーマットの代わりに日付型を使用する" 設定が有効化されている場合は !00-00-00!、それ以外の場合には ""
+ - 時間: 0 (ミリ秒単位)
+ - 未定義、Null: 変化なし
 
 ```4d
      C_OBJECT($o)
      $o:=New object("a";2)
-     $o.a:=$o.b //$o.a=0
+     $o.a:=$o.b // $o.a=0
 ```
 
-- Assigning an undefined value to a non existing object property does nothing.
+- 未定義の値を存在しないオブジェクトのプロパティへと代入した場合は、何も起こりません。
 
-When expressions of a given type are expected in your 4D code, you can make sure they have the correct type even when evaluated to undefined by surrounding them with the appropriate 4D cast command: `String`, `Num`, `Date`, `Time`, `Bool`. These commands return an empty value of the specified type when the expression evaluates to undefined. For example:
+4Dコード内の式に対して特定の型であることが要求される場合、その式を適切な 4Dキャストコマンド (`String`, `Num`, `Date`, `Time`, `Bool`) で囲うことで、たとえ未定義に評価されたとしても正しい型を確実に得ることができます。 これらのコマンドは式が未定義と評価された場合に、指定された型の空の値を返します。 例:
 
 ```4d
- $myString:=Lowercase(String($o.a.b)) //make sure you get a string value even if undefined
-  //to avoid errors in the code
+ $myString:=Lowercase(String($o.a.b)) // 未定義の場合でもコード内でエラーが起きないように
+  // 文字列の値が得られるようにします
 ```
 
-## Object property identifiers
+## オブジェクトプロパティ識別子
 
-Token member names (i.e., object property names accessed using the object notation) are more restrictive than standard 4D object names. They must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)):
+トークンメンバー名 (つまり、オブジェクト記法を使用してアクセスしたオブジェクトプロパティ名) には、標準の 4Dオブジェクト名より厳格な規制があります。 プロパティ名は JavaScriptの字句文法に則ってなければなりません ([ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) 参照):
 
-- the first character must be a letter, an underscore (_), or a dollar sign ($),
-- subsequent characters may be any letter, digit, an underscore or dollar sign (space characters are NOT allowed),
-- they are case sensitive.
+- 1文字目は、文字、アンダースコア(_)、あるいはドル記号 ($) でなければなりません。
+- その後の文字には、文字、数字、アンダースコア、またはドル記号を使用することができます (スペース文字は使用することはできません)。
+- 大文字・小文字は区別されます。
 
-**Note:**
+**注:**
 
-- Using a table field as a collection index, for example a.b[[Table1]Id], is not allowed. You must use an intermediary variable.
-- Creating object attributes using a string in square brackets allows you to override the ECMA Script rules. For example, the $o["My Att"] attribute is valid in 4D, despite the space. In this case, however, it will not be possible to use dot notation with this attribute.
+- テーブルフィールドをコレクションインデックスとして使用すること (例: a.b[[Table1]Id] ) は許可されていません。 この場合には媒介として変数を使用する必要があります。
+- 大カッコでくくった文字列を使用してオブジェクト属性を作成すると、ECMAスクリプトのルールを無視することができます。 たとえば、$o["My Att"] という属性はスペースを含みますが、4D において有効です。 しかしながらこの場合、この属性に対してドット記法を使用することは不可能です。
 
 
-## Examples
-Using object notation simplifies the 4D code while handling objects. Note however that the command-based notation is still fully supported.
+## 例題
+オブジェクト記法を使用すると、オブジェクトを扱う際の 4Dコードを単純化することができます。 同時に、コマンドベースの記法も引き続き完全にサポートされています。
 
-- Writing and reading objects (this example compares object notation and command notation):
+- オブジェクトの読み書き (この例題ではオブジェクト記法とコマンド記法を比較します):
 
 ```4d
-  // Using the object notation
- C_OBJECT($myObj) //declares a 4D variable object
- $myObj:=New object //creates an object and assigns to the variable
+  // オブジェクト記法を使用
+ C_OBJECT($myObj) // 4Dオブジェクト変数を宣言
+ $myObj:=New object // オブジェクト作成し、変数に代入
  $myObj.age:=56
- $age:=$myObj.age //56
+ $age:=$myObj.age // 56
 
-  // Using the command notation
- C_OBJECT($myObj2) //declares a 4D variable object
- OB SET($myObj2;"age";42) //creates an object and adds the age property
- $age:=OB Get($myObj2;"age") //42
+  // コマンド記法を使用
+ C_OBJECT($myObj2) // 4Dオブジェクト変数を宣言
+ OB SET($myObj2;"age";42) // オブジェクトを作成し、ageプロパティを追加
+ $age:=OB Get($myObj2;"age") // 42
 
-  // Of course, both notations can be mixed
+  // もちろん両方の記法を混用することもできます
  C_OBJECT($myObj3)
  OB SET($myObj3;"age";10)
- $age:=$myObj3.age //10
+ $age:=$myObj3.age // 10
 ```
 
-- Create a property and assign values, including objects:
+- プロパティの作成と、オブジェクトを含む値の代入:
 
 ```4d
  C_OBJECT($Emp)
  $Emp:=New object
- $Emp.city:="London" //creates the city property and sets its value to "London"
- $Emp.city:="Paris" //modifies the city property
+ $Emp.city:="London" // cityプロパティを作成し、その値を"London"に設定します
+ $Emp.city:="Paris" // cityプロパティを変更します
  $Emp.phone:=New object("office";"123456789";"home";"0011223344")
-  //creates the phone property and sets its value to an object
+  // phoneプロパティを作成し、その値にオブジェクトを設定します
 ```
 
-- Get a value in a sub-object is very simple using the object notation:
+- オブジェクト記法を使用すると、サブオブジェクトの値を簡単に取得できます:
 
 ```4d
- $vCity:=$Emp.city //"Paris"
- $vPhone:=$Emp.phone.home //"0011223344"
+ $vCity:=$Emp.city // "Paris"
+ $vPhone:=$Emp.phone.home // "0011223344"
 ```
-- You can access properties as strings using the [ ] operator
+- 大カッコ [ ] を使用すると文字列を使ってプロパティにアクセスできます:
 
 ```4d
- $Emp["city"]:="Berlin" //modifies the city property
-  //this can be useful for creating properties through variables
+ $Emp["city"]:="Berlin" // city プロパティを変更
+  // これは変数を通してプロパティを作成する場合に便利です
  C_TEXT($addr)
  $addr:="address"
  For($i;1;4)
     $Emp[$addr+String($i)]:=""
  End for
-  // creates 4 empty properties "address1...address4" in the $Emp object
+  // $Emp object には4つの空のプロパティ "address1...address4" が作成されました
 ```

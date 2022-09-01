@@ -1,6 +1,6 @@
 ---
 id: basics
-title: Basics
+title: Básicos
 ---
 
 Errors are common. It would be unusual to write a substantial number of lines of code without generating any errors. Conversely, treating and/or fixing errors is normal, too!
@@ -19,7 +19,7 @@ Such typing errors usually cause syntax errors (in the above image, the name of 
 
 ### Syntax Errors
 
-Some errors can be caught only when you execute the method. The [Syntax Error Window](#syntax-error-window) appears when an error occurs during code execution. For example:
+Some errors can be caught only when you execute the method. The [Syntax Error Window](#syntax-error-window) appears when an error occurs during code execution. Por exemplo:
 
 ![syntax-error](../assets/en/Debugging/syntax-error.png)
 
@@ -31,7 +31,7 @@ Occasionally, there may not be enough memory to create a BLOB. Or, when you acce
 
 ### Design or Logic Errors
 
-These are generally the most difficult type of error to find. Except for typing errors, all the error types listed above are to a certain extent covered by the expression "Design or logic error". Use the [Debugger](debugger.md) to detect them. For example:
+These are generally the most difficult type of error to find. Except for typing errors, all the error types listed above are to a certain extent covered by the expression "Design or logic error". Use the [Debugger](debugger.md) to detect them. Por exemplo:
 
 - A *syntax error* may occur when you try to use a variable that is not yet initialized.
 - An *environmental error* can occur when you try to open a document, because that document's name is received by a subroutine that did not get the right value as a parameter.
@@ -81,7 +81,7 @@ The syntax error window proposes several options:
 
 - **Save...**: Saves the contents of the syntax error window and the call chain in a `.txt` file.
 
-## Debugger
+## Depurador
 
 A common beginner mistake in dealing with error detection is to click **Abort** in the Syntax Error Window, go back to the Code Editor, and try to figure out what's going by looking at the code. Do not do that! You will save plenty of time and energy by always using the **Debugger**.
 

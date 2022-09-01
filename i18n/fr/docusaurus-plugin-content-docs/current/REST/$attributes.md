@@ -3,37 +3,37 @@ id: attributes
 title: '$attributes'
 ---
 
-Allows selecting the related attribute(s) to get from the dataclass (*e.g.*, `Company(1)?$attributes=employees.lastname` or `Employee?$attributes=employer.name`).
+Permet de sélectionner les attributs relationnels à obtenir à partir de la dataclass (par exemple, `Company(1)?$attributes=employees.lastname` or `Employee?$attributes=employer.name`).
 
 
 ## Description
 
-When you have relation attributes in a dataclass, use `$attributes` to define the path of attributes whose values you want to get for the related entity or entities.
+Lorsque vous avez des attributs relationnels dans une dataclass, utilisez `$attributes` pour définir le chemin des attributs dont vous souhaitez obtenir les valeurs pour l'entité ou les entités associées.
 
-You can apply `$attributes` to an entity (*e.g.*, People(1)) or an entity selection (*e.g.*, People/$entityset/0AF4679A5C394746BFEB68D2162A19FF) .
-
-
-- If `$attributes` is not specified in a query, or if the "*" value is passed, all available attributes are extracted. **Related entity** attributes are extracted with the simple form: an object with property `__KEY` (primary key) and `URI`. **Related entities** attributes are not extracted.
-
-- If `$attributes` is specified for **related entity** attributes:
-    - `$attributes=relatedEntity`: the related entity is returned with simple form (deferred __KEY property (primary key)) and `URI`.
-    - `$attributes=relatedEntity.*`: all the attributes of the related entity are returned
-    - `$attributes=relatedEntity.attributePath1, relatedEntity.attributePath2, ...`: only those attributes of the related entity are returned.
+Vous pouvez appliquer des `$attributes` à une entité (par exemple, People (1)) ou à une entity selection (par exemple, People/$entityset/0AF4679A5C394746BFEB68D2162A19FF).
 
 
-- If `$attributes` is specified for **related entities** attributes:
-    - `$attributes=relatedEntities.*`: all the properties of all the related entities are returned
-    - `$attributes=relatedEntities.attributePath1, relatedEntities.attributePath2, ...`: only those attributes of the related entities are returned.
+- Si `$attributes` n'est pas spécifié dans une requête, ou si la valeur "*" est passée, tous les attributs disponibles sont extraits. Les attributs **d'entité relative** sont extraits avec la forme simple : un objet avec la propriété `__KEY` (clé primaire) et `URI`. Les attributs des **entités relatives** ne sont pas extraits.
+
+- Si `$attributes` est spécifié pour les attributs **d'entité relative ** :
+    - `$attributes=relatedEntity` : l'entité relative est retournée sous une forme simple (propriété __KEY différée (clé primaire)) et `URI`.
+    - `$attributes=relatedEntity.*` : tous les attributs de l'entité relative sont retournés
+    - `$attributes=relatedEntity.attributePath1, relatedEntity.attributePath2, ...` : seuls ces attributs de l'entité relative sont retournés.
+
+
+- Si `$attributes` est spécifié pour les attributs **d'entités relatives** :
+    - `$attributes=relatedEntities.*` : toutes les propriétés des entités relatives sont retournées
+    - `$attributes=relatedEntities.attributePath1, relatedEntity.attributePath2, ...` : seuls ces attributs des entités relatives sont retournés.
 
 
 
-## Example with related entities
+## Exemples avec plusieurs entités relatives
 
-If we pass the following REST request for our Company dataclass (which has a relation attribute "employees"):
+Si nous passons la requête REST suivante pour la dataclasse Company (qui possède un attribut de relation "employees"):
 
  `GET  /rest/Company(1)/?$attributes=employees.lastname`
 
-**Response**:
+**Réponse** :
 
 ```
 {
@@ -64,23 +64,23 @@ If we pass the following REST request for our Company dataclass (which has a rel
 }
 ```
 
-If you want to get all attributes from employees:
+Si vous souhaitez obtenir tous les attributs des employés :
 
  `GET  /rest/Company(1)/?$attributes=employees.*`
 
-If you want to get last name and job name attributes from employees:
+Si vous souhaitez obtenir le nom de famille et les attributs de nom de poste des employés :
 
  `GET  /rest/Company(1)/?$attributes=employees.lastname,employees.jobname`
 
 
-## Example with related entity
+## Exemples avec une entité relative
 
-If we pass the following REST request for our Employee dataclass (which has several relation attributes, including "employer"):
+Si nous passons la requête REST suivante pour la dataclass Employee (qui a plusieurs attributs relationnels, y compris "employer") :
 
 
  `GET  /rest/Employee(1)?$attributes=employer.name`
 
-**Response**:
+**Réponse** :
 
 ```
 {
@@ -97,10 +97,10 @@ If we pass the following REST request for our Employee dataclass (which has seve
 }
 ```
 
-If you want to get all attributes of the employer:
+Si vous souhaitez obtenir tous les attributs de l'employeur :
 
  `GET  /rest/Employee(1)?$attributes=employer.*`
 
-If you want to get the last names of all employees of the employer:
+Si vous souhaitez obtenir les noms de famille de tous les employés de l'employeur :
 
  `GET  /rest/Employee(1)?$attributes=employer.employees.lastname`

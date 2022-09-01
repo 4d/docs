@@ -1,15 +1,15 @@
 ---
 id: onFooterClick
-title: On Footer Click
+title: Sur clic pied
 ---
 
-| Code | Can be called by                                                                                                  | Definition                                        |
-| ---- | ----------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| 57   | [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A click occurs in the footer of a list box column |
+| Code | Peut être appelé par                                                                                                  | Définition                                                        |
+| ---- | --------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| 57   | [List Box](FormObjects/listbox_overview.md) - [Colonne de List Box](FormObjects/listbox_overview.md#list-box-columns) | Un clic se produit dans le pied de page d'une colonne de list box |
 
 
 ## Description
 
-This event is available for a list box or list box column object. It is generated when a click occurs in the footer of a list box column. In this context, the `OBJECT Get pointer` command returns a pointer to the variable of the footer that is clicked. The event is generated for both left and right clicks.
+Cet événement est disponible pour un objet list box ou colonne de list box. Il est généré lorsqu'un clic se produit dans le pied de page d'une colonne de list box. Dans ce contexte, la commande `OBJECT Get pointer` retourne un pointeur vers la variable du pied de page sur lequel l'utilisateur a cliqué. L'événement est généré pour les clics gauche et droit.
 
-You can test the number of clicks made by the user by means of the `Clickcount` command.
+Vous pouvez tester le nombre de clics effectués par l'utilisateur à l'aide de la commande `Clickcount`.

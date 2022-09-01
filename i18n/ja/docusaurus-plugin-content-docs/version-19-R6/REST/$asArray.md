@@ -4,19 +4,19 @@ title: '$asArray'
 ---
 
 
-Returns the result of a query in an array (i.e. a collection) instead of a JSON object.
+クエリの結果を、JSONオブジェクトではなく配列 (コレクション) として返します。
 
 
-## Description
+## 詳細
 
-If you want to receive the response in an array, you just have to add `$asArray` to your REST request (*e.g.*, `$asArray=true`).
+レスポンスを配列として取得するには、RESTリクエストに `$asArray` を追加します (*例:* `$asArray=true`)。
 
-## Example
-Here is an example or how to receive the response in an array.
+## 例題
+配列としてレスポンスを取得する例です。
 
  `GET  /rest/Company/?$filter="name begin a"&$top=3&$asArray=true`
 
-**Response**:
+**レスポンス**:
 
 ````
 [
@@ -56,7 +56,7 @@ Here is an example or how to receive the response in an array.
 ]
 ````
 
-The same data in its default JSON format:
+同じデータをデフォルトの JSON形式で取得した場合です:
 
 ````
 {

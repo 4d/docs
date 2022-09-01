@@ -4,15 +4,15 @@ title: Crop
 ---
 
 
-## Columns
+## Colunas
 
 Sets the number of columns in a thumbnail table.
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values |
-|:----------- |:---------:| --------------- |
-| columnCount |  integer  | minimum: 1      |
+| Nome        | Tipo de dados | Possible Values |
+|:----------- |:-------------:| --------------- |
+| columnCount |    integer    | mínimo: 1       |
 
 #### Objects Supported
 
@@ -26,9 +26,9 @@ Sets the number of rows in a thumbnail table.
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values |
-|:-------- |:---------:| --------------- |
-| rowCount |  integer  | minimum: 1      |
+| Nome     | Tipo de dados | Possible Values |
+|:-------- |:-------------:| --------------- |
+| rowCount |    integer    | mínimo: 1       |
 
 #### Objects Supported
 

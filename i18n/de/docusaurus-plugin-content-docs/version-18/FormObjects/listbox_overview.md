@@ -3,7 +3,7 @@ id: listboxOverview
 title: List Box
 ---
 
-## Overview
+## Überblick
 
 List boxes are complex active objects that allow displaying and entering data as synchronized columns. They can be bound to database contents such as entity selections and record sections, or to any language contents such as collections and arrays. They include advanced features regarding data entry, column sorting, event management, customized appearance, moving of columns, etc.
 
@@ -52,7 +52,7 @@ There are several types of list boxes, with their own specific behaviors and pro
 * **Arrays**: each column is bound to a 4D array. Array-based list boxes can be displayed as [hierarchical list boxes](listbox_overview.md#hierarchical-list-boxes).
 * **Selection** (**Current selection** or **Named selection**): each column is bound to an expression (e.g. a field) which is evaluated for every record of the selection.
 * **Collection or Entity selection**: each column is bound to an expression which is evaluated for every element of the collection or every entity of the entity selection.
-> It is not possible to combine different list box types in the same list box object. The data source is set when the list box is created. It is then no longer possible to modify it by programming.
+> > It is not possible to combine different list box types in the same list box object. The data source is set when the list box is created. It is then no longer possible to modify it by programming.
 
 ### Managing list boxes
 
@@ -98,7 +98,7 @@ Each element of the collection or each entity is available as an object that can
 
 When the data source is an entity selection, any modifications made on the list box side are automatically saved in the database. On the other hand, modifications made on the database side are visible in the list box after touched entities have been reloaded.
 
-When the data source is a collection, any modifications made in the list box values are reflected in the collection. On the other hand, if modifications are done on the collection using for example the various methods of the *Collections* theme, you will need to explicitely notify 4D by reassigning the collection variable to itself, so that the list box contents is refreshed. For example:
+When the data source is a collection, any modifications made in the list box values are reflected in the collection. When the data source is a collection, any modifications made in the list box values are reflected in the collection. Beispiel:
 
 ```4d
 myCol:=myCol.push("new value") //display new value in list box
@@ -151,7 +151,7 @@ Supported properties depend on the list box type.
 | [Meta info expression](properties_Text.md#meta-info-expression)                              |                |                    | X                                       |
 | [Method](properties_Action.md#method)                                                        | X              | X                  | X                                       |
 | [Movable Rows](properties_Action.md#movable-rows)                                            | X              |                    |                                         |
-| [Named Selection](properties_DataSource.md#selectionName)                                    |                | X                  |                                         |
+| [Temporäre Auswahl](properties_DataSource.md#selectionName)                                  |                | X                  |                                         |
 | [Number of Columns](properties_ListBox.md#number-of-columns)                                 | X              | X                  | X                                       |
 | [Number of Locked Columns](properties_ListBox.md#number-of-locked-columns)                   | X              | X                  | X                                       |
 | [Number of Static Columns](properties_ListBox.md#number-of-static-columns)                   | X              | X                  | X                                       |
@@ -171,7 +171,7 @@ Supported properties depend on the list box type.
 | [Style Expression](properties_Text.md#style-expression)                                      |                | X                  | X                                       |
 | [Top](properties_CoordinatesAndSizing.md#top)                                                | X              | X                  | X                                       |
 | [Transparent](properties_BackgroundAndBorder.md#transparent)                                 | X              | X                  | X                                       |
-| [Type](properties_Object.md#type)                                                            | X              | X                  | X                                       |
+| [Typ](properties_Object.md#type)                                                             | X              | X                  | X                                       |
 | [Underline](properties_Text.md#underline)                                                    | X              | X                  | X                                       |
 | [Variable or Expression](properties_Object.md#variable-or-expression)                        | X              | X                  |                                         |
 | [Vertical Alignment](properties_Text.md#vertical-alignment)                                  | X              | X                  | X                                       |
@@ -273,7 +273,7 @@ In order to preserve data consistency for selection type and entity selection ty
 
 The typical sequence of events generated during data entry or modification is as follows:
 
-| Action                                                                          | Listbox type(s)             | Sequence of events                                                                                                                                                                                             |
+| Aktion                                                                          | Listbox type(s)             | Sequence of events                                                                                                                                                                                             |
 | ------------------------------------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | A cell switches to edit mode (user action or a call to the `EDIT ITEM` command) | All                         | On Before Data Entry                                                                                                                                                                                           |
 |                                                                                 | All                         | On Getting Focus                                                                                                                                                                                               |
@@ -304,7 +304,7 @@ Selections are managed differently depending on whether the list box is based on
   * [Selected Items](properties_DataSource.md#selected-items) is a collection of selected items
   * [Current item position](properties_DataSource.md#current-item-position) returns the position of the selected element or entity.
 
-* **Array list box**: The `LISTBOX SELECT ROW` command can be used to select one or more rows of the list box by programming. The [variable linked to the List box object](properties_Object.md#variable-or-expression) is used to get, set or store selections of object rows. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. The size of this array is determined by the size of the list box: it contains the same number of elements as the smallest array linked to the columns. Each element of this array contains `True` if the corresponding line is selected and `False` otherwise. 4D updates the contents of this array depending on user actions. Inversely, you can change the value of array elements to change the selection in the list box. On the other hand, you can neither insert nor delete rows in this array; you cannot retype rows either. The `Count in array` command can be used to find out the number of selected lines. For example, this method allows inverting the selection of the first row of the (array type) list box:
+* **Array list box**: The `LISTBOX SELECT ROW` command can be used to select one or more rows of the list box by programming. The [variable linked to the List box object](properties_Object.md#variable-or-expression) is used to get, set or store selections of object rows. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. The size of this array is determined by the size of the list box: it contains the same number of elements as the smallest array linked to the columns. This variable corresponds to a Boolean array that is automatically created and maintained by 4D. The size of this array is determined by the size of the list box: it contains the same number of elements as the smallest array linked to the columns. Each element of this array contains `True` if the corresponding line is selected and `False` otherwise. 4D updates the contents of this array depending on user actions. Inversely, you can change the value of array elements to change the selection in the list box. On the other hand, you can neither insert nor delete rows in this array; you cannot retype rows either. The `Count in array` command can be used to find out the number of selected lines. For example, this method allows inverting the selection of the first row of the (array type) list box:
 
 ```4d
  ARRAY BOOLEAN(tBListBox;10)
@@ -352,7 +352,7 @@ Note that list box arrays used for defining the appearance of selected rows must
 * `On Activate` (form property)
 * `On Deactivate` (form property) ...depending on whether and how you want to visually represent changes of focus in selections.
 
-##### Example
+##### Beispiel
 
 You have chosen to hide the system highlight and want to display list box selections with a green background color, as shown here:
 
@@ -485,7 +485,7 @@ Depending of the list box type, you can use different properties to customize ro
 | ---------------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Background color | [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) | [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression) |
 | Font color       | [Row Font Color Array](properties_Text.md#row-font-color-array)                            | [Font Color Expression](properties_Text.md#font-color-expression)                            | [Font Color Expression](properties_Text.md#font-color-expression) or [Meta info expression](properties_Text.md#meta-info-expression)                            |
- Font style|
+
 
 [Row Style Array](properties_Text.md#row-style-array)|[Style Expression](properties_Text.md#style-expression)|[Style Expression](properties_Text.md#style-expression) or [Meta info expression](properties_Text.md#meta-info-expression)| Display|[Row Control Array](properties_ListBox.md#row-control-array)|-|-|
 
@@ -497,14 +497,14 @@ Two printing modes are available: **preview mode** - which can be used to print 
 
 Printing a list box in preview mode consists of directly printing the list box and the form that contains it using the standard print commands or the **Print** menu command. The list box is printed as it is in the form. This mode does not allow precise control of the printing of the object; in particular, it does not allow you to print all the rows of a list box that contains more rows than it can display.
 
-### Advanced mode
+### Erweiterter Modus
 
 In this mode, the printing of list boxes is carried out by programming, via the `Print object` command (project forms and table forms are supported). The `LISTBOX GET PRINT INFORMATION` command is used to control the printing of the object.
 
 In this mode:
 
 * The height of the list box object is automatically reduced when the number of rows to be printed is less than the original height of the object (there are no "blank" rows printed). On the other hand, the height does not automatically increase according to the contents of the object. The size of the object actually printed can be obtained via the `LISTBOX GET PRINT INFORMATION` command.
-* The list box object is printed "as is", in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc. These parameters also include the first row to be printed: if you call the `OBJECT SET SCROLL POSITION` command before launching the printing, the first row printed in the list box will be the one designated by the command.
+* The list box object is printed "as is", in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc. These parameters also include the first row to be printed: if you call the `OBJECT SET SCROLL POSITION` command before launching the printing, the first row printed in the list box will be the one designated by the command. These parameters also include the first row to be printed: if you call the `OBJECT SET SCROLL POSITION` command before launching the printing, the first row printed in the list box will be the one designated by the command.
 * An automatic mechanism facilitates the printing of list boxes that contain more rows than it is possible to display: successive calls to `Print object` can be used to print a new set of rows each time. The `LISTBOX GET PRINT INFORMATION` command can be used to check the status of the printing while it is underway.
 
 ## Hierarchical list boxes
@@ -575,7 +575,7 @@ If this list box is displayed in hierarchical form (the first three arrays being
 
 The arrays are not sorted before the hierarchy is constructed. If, for example, an array contains the data AAABBAACC, the hierarchy obtained is:
 
-    > A B A C
+    > &gt; A B A C
 
 To expand or collapse a hierarchical "node," you can just click on it. If you **Alt+click** (Windows) or **Option+click** (macOS) on the node, all its sub-elements will be expanded or collapsed as well. These operations can also be carried out by programming using the `LISTBOX EXPAND` and `LISTBOX COLLAPSE` commands.
 
@@ -664,7 +664,7 @@ In hierarchical mode, break levels are not taken into account by the style modif
 ```
 > In this context, only the syntax using the array variable can function with the object property commands because the arrays do not have any associated object.
 
-Result:
+Ergebnis:
 
 ![](../assets/en/FormObjects/hierarch14.png)
 
@@ -707,10 +707,19 @@ the value type (mandatory): text, color, event, etc. the value itself (optional)
 
 ```4d  
 ARRAY OBJECT(obColumn;0) //column array
- C_OBJECT($ob) //first element
- OB SET($ob;"valueType";"text") //defines the value type (mandatory)
- OB SET($ob;"value";"Hello World!") //defines the value
- APPEND TO ARRAY(obColumn;$ob)  
+ C_OBJECT($ob1)
+ $entry:="Hello world!" OB SET($ob1;"valueType";"text")
+ OB SET($ob1;"value";$entry) // if the user enters a new value, $entry will contain the edited value
+ C_OBJECT($ob2)
+ OB SET($ob2;"valueType";"real")
+ OB SET($ob2;"value";2/3)
+ C_OBJECT($ob3)
+ OB SET($ob3;"valueType";"boolean")
+ OB SET($ob3;"value";True)
+
+ APPEND TO ARRAY(obColumn;$ob1)
+ APPEND TO ARRAY(obColumn;$ob2)
+ APPEND TO ARRAY(obColumn;$ob3)  
 ```
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld.png)
@@ -731,11 +740,11 @@ When a list box column is associated with an object array, the way a cell is dis
 
 | valueType | Default widget                                 | Alternative widget(s)                                                                          |
 | --------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| text      | text input                                     | drop-down menu (required list) or combo box (choice list)                                      |
-| real      | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
-| integer   | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
+| Text      | text input                                     | drop-down menu (required list) or combo box (choice list)                                      |
+| Zahl      | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
+| ganzzahl  | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
 | boolean   | check box                                      | drop-down menu (required list)                                                                 |
-| color     | background color                               | text                                                                                           |
+| color     | background color                               | Text                                                                                           |
 | event     | button with label                              |                                                                                                |
 |           |                                                | All widgets can have an additional unit toggle button or ellipsis button attached to the cell. |
 
@@ -747,10 +756,10 @@ You cannot set display formats or entry filters for columns of object-type list 
 
 | Value type | Default format                                             | Entry control           |
 | ---------- | ---------------------------------------------------------- | ----------------------- |
-| text       | same as defined in object                                  | any (no control)        |
-| real       | same as defined in object (using system decimal separator) | "0-9" and "." and "-"   |
+| Text       | same as defined in object                                  | any (no control)        |
+| Zahl       | same as defined in object (using system decimal separator) | "0-9" and "." and "-"   |
 |            |                                                            | "0-9" and "." if min>=0 |
-| integer    | same as defined in object                                  | "0-9" and "-"           |
+| ganzzahl   | same as defined in object                                  | "0-9" and "-"           |
 |            |                                                            | "0-9" if min>=0         |
 | Boolean    | check box                                                  | N/A                     |
 | color      | N/A                                                        | N/A                     |
@@ -762,46 +771,36 @@ Each element of the object array is an object that can contain one or more attri
 
 The only mandatory attribute is "valueType" and its supported values are "text", "real", "integer", "boolean", "color", and "event". The following table lists all the attributes supported in list box object arrays, depending on the "valueType" value (any other attributes are ignored). Display formats are detailed and examples are provided below.
 
-|                       | valueType                               | text | real | integer | boolean | color | event |
-| --------------------- | --------------------------------------- | ---- | ---- | ------- | ------- | ----- | ----- |
-| *Attributes*          | *Description*                           |      |      |         |         |       |       |
-| value                 | cell value (input or output)            | x    | x    | x       |         |       |       |
-| min                   | minimum value                           |      | x    | x       |         |       |       |
-| max                   | maximum value                           |      | x    | x       |         |       |       |
-| behavior              | "threeStates" value                     |      |      | x       |         |       |       |
-| requiredList          | drop-down list defined in object        | x    | x    | x       |         |       |       |
-| choiceList            | combo box defined in object             | x    | x    | x       |         |       |       |
-| requiredListReference | 4D list ref, depends on "saveAs" value  | x    | x    | x       |         |       |       |
-| requiredListName      | 4D list name, depends on "saveAs" value | x    | x    | x       |         |       |       |
-| saveAs                | "reference" or "value"                  | x    | x    | x       |         |       |       |
-| choiceListReference   | 4D list ref, display combo box          | x    | x    | x       |         |       |       |
-| choiceListName        | 4D list name, display combo box         | x    | x    | x       |         |       |       |
-| unitList              | array of X elements                     | x    | x    | x       |         |       |       |
-| unitReference         | index of selected element               | x    | x    | x       |         |       |       |
-| unitsListReference    | 4D list ref for units                   | x    | x    | x       |         |       |       |
-| unitsListName         | 4D list name for units                  | x    | x    | x       |         |       |       |
-| alternateButton       | add an alternate button                 | x    | x    | x       | x       | x     |       |
+|                       | valueType                               | Text | Zahl | ganzzahl | boolean | color | event |
+| --------------------- | --------------------------------------- | ---- | ---- | -------- | ------- | ----- | ----- |
+| *Attributes*          | *Beschreibung*                          |      |      |          |         |       |       |
+| wert                  | cell value (input or output)            | x    | x    | x        |         |       |       |
+| min                   | minimum value                           |      | x    | x        |         |       |       |
+| max                   | maximum value                           |      | x    | x        |         |       |       |
+| verhalten             | "threeStates" value                     |      |      | x        |         |       |       |
+| requiredList          | drop-down list defined in object        | x    | x    | x        |         |       |       |
+| choiceList            | combo box defined in object             | x    | x    | x        |         |       |       |
+| requiredListReference | 4D list ref, depends on "saveAs" value  | x    | x    | x        |         |       |       |
+| requiredListName      | 4D list name, depends on "saveAs" value | x    | x    | x        |         |       |       |
+| saveAs                | "reference" or "value"                  | x    | x    | x        |         |       |       |
+| choiceListReference   | 4D list ref, display combo box          | x    | x    | x        |         |       |       |
+| choiceListName        | 4D list name, display combo box         | x    | x    | x        |         |       |       |
+| unitList              | array of X elements                     | x    | x    | x        |         |       |       |
+| unitReference         | index of selected element               | x    | x    | x        |         |       |       |
+| unitsListReference    | 4D list ref for units                   | x    | x    | x        |         |       |       |
+| unitsListName         | 4D list name for units                  | x    | x    | x        |         |       |       |
+| alternateButton       | add an alternate button                 | x    | x    | x        | x       | x     |       |
 
-#### value
+#### wert
 
 Cell values are stored in the "value" attribute. This attribute is used for input as well as output. It can also be used to define default values when using lists (see below).
 
 ````4d
- ARRAY OBJECT(obColumn;0) //column array
  C_OBJECT($ob1)
- $entry:="Hello world!"
- OB SET($ob1;"valueType";"text")
- OB SET($ob1;"value";$entry) // if the user enters a new value, $entry will contain the edited value
- C_OBJECT($ob2)
- OB SET($ob2;"valueType";"real")
- OB SET($ob2;"value";2/3)
- C_OBJECT($ob3)
- OB SET($ob3;"valueType";"boolean")
- OB SET($ob3;"value";True)
-
- APPEND TO ARRAY(obColumn;$ob1)
- APPEND TO ARRAY(obColumn;$ob2)
- APPEND TO ARRAY(obColumn;$ob3)
+$entry:="Hello world!"
+ OB SET($ob;"valueType";"text")
+OB SET($ob;"alternateButton";True)
+OB SET($ob;"value";$entry)
 ````
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld_value.png)
@@ -824,13 +823,13 @@ These attributes can be used to control the range of input values. When a cell i
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld_minMax.png)
 
-#### behavior
+#### verhalten
 
 The behavior attribute provides variations to the regular representation of values. In 4D v15, a single variation is proposed:
 
-| Attribute | Available value(s) | valueType(s) | Description                                                                                                                                                                                   |
+| Attribute | Available value(s) | valueType(s) | Beschreibung                                                                                                                                                                                  |
 | --------- | ------------------ | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| behavior  | threeStates        | integer      | Represents a numeric value as a three-states check box.<br/> 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled |
+| verhalten | threeStates        | ganzzahl     | Represents a numeric value as a three-states check box.<br/> 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled |
 
 ```4d
  C_OBJECT($ob3)
@@ -854,7 +853,7 @@ When a "choiceList" or a "requiredList" attribute is present inside the object, 
 In both cases, a "value" attribute can be used to preselect a value in the widget.
 > The widget values are defined through an array. If you want to assign an existing 4D list to the widget, you need to use the "requiredListReference", "requiredListName", "choiceListReference", or "choiceListName" attributes.
 
-Examples:
+Beispiele:
 
 * You want to display a drop-down list with only two options: "Open" or "Closed". "Closed" must be preselected:
 
@@ -895,7 +894,7 @@ Use "requiredListName" or "requiredListReference" depending on the origin of the
 > * If you want to define these values through a simple array, you need to use the "requiredList" attribute.
 > * If the list contains text items representing real values, the decimal separator must be a period ("."), regardless of the local settings, e.g.: "17.6" "1234.456".
 
-Examples:
+Beispiele:
 
 * You want to display a drop-down list based on a "colors" list defined in the Tool box (containing the values "blue", "yellow", and "green"), save it as a value and display "blue" by default:
 
@@ -936,7 +935,7 @@ Use "choiceListName" or "choiceListReference" depending on the origin of the lis
 > * If you want to define these values through a simple array, you need to use the "choiceList" attribute.
 > * If the list contains text items representing real values, the decimal separator must be a period ("."), regardless of the local settings, e.g.: "17.6" "1234.456".
 
-Example:
+Beispiel:
 
 You want to display a combo box based on a "colors" list defined in the Tool box (containing the values "blue", "yellow", and "green") and display "green" by default:
 
@@ -965,7 +964,7 @@ Regardless of the way the unit list is defined, it can be associated with the fo
 
 The current unit is displayed as a button that cycles through the "unitList", "unitsListReference" or "unitsListName" values each time it is clicked (e.g., "pixels" -> "rows" -> "cm" -> "pixels" -> etc.)
 
-Example:
+Beispiel:
 
 We want to set up a numeric input followed by two possible units: "rows" or "pixels". The current value is "2" + "lines". We use values defined directly in the object ("unitsList" attribute):
 
@@ -988,14 +987,16 @@ If you want to add an ellipsis button [...] to a cell, you just need to pass the
 
 When this button is clicked by a user, an `On Alternate Click` event will be generated, and you will be able to handle it however you want (see the "Event management" paragraph for more information).
 
-Example:
+Beispiel:
 
 ```4d
 C_OBJECT($ob1)
 $entry:="Hello world!"
-OB SET($ob;"valueType";"text")
-OB SET($ob;"alternateButton";True)
-OB SET($ob;"value";$entry)
+ARRAY OBJECT(obColumn;0) //column array
+ C_OBJECT($ob) //first element
+ OB SET($ob;"valueType";"text") //defines the value type (mandatory)
+ OB SET($ob;"value";"Hello World!") //defines the value
+ APPEND TO ARRAY(obColumn;$ob)
 ```
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_alternateButton.png)
@@ -1004,7 +1005,7 @@ OB SET($ob;"value";$entry)
 
 The "color" valueType allows you to display either a color or a text.
 
-* If the value is a number, a colored rectangle is drawn inside the cell. Example:
+* If the value is a number, a colored rectangle is drawn inside the cell. Beispiel:
 
  ````4d
  C_OBJECT($ob4)
@@ -1022,7 +1023,7 @@ The "event" valueType displays a simple button that generates an `On Clicked` ev
 
 Optionally, you can pass a "label" attribute.
 
-Example:
+Beispiel:
 
 ````4d
 C_OBJECT($ob)

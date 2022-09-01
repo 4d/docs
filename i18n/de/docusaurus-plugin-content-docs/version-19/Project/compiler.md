@@ -117,7 +117,7 @@ This area groups the generic options used during the compilation process.
 
 #### Generate symbol file
 
-Used to generate the symbol file (see [symbol file](#symbol-file)). The symbol file is created in the in the [Logs folder](Project/architecture.md#logs) of the project with the name `ProjectName_symbols.txt`.
+Used to generate the error file (see [error file](#symbol-file)) at the time of syntax checking. Used to generate the symbol file (see [symbol file](#symbol-file)).
 
 #### Generate error file
 
@@ -235,7 +235,7 @@ The length of the error file depends on the number of errors and warnings issued
 
 The structure of the error file is as follows:
 
-- At the top of the file is the list of errors and warnings, sorted by method and in their order of creation in 4D. In the ***General errors*** section, all the typing impossibilities and identity ambiguities are grouped together. These errors and warnings are listed using the following format:
+- At the top of the file is the list of errors and warnings, sorted by method and in their order of creation in 4D. In the ***General errors*** section, all the typing impossibilities and identity ambiguities are grouped together. In the ***General errors*** section, all the typing impossibilities and identity ambiguities are grouped together. These errors and warnings are listed using the following format:
   - line number in the method (0 indicates general errors)
   - warning attribute indicating whether the detected anomaly is a warning (warning="true") or an error (warning="false")
   - diagnostic describing the error
@@ -283,7 +283,7 @@ The classic compiler can be used on any platform, while the Silicon compiler can
 | On Intel Mac   |      &#10003;       |       &#10003;        |        &#10003;         |
 | On Silicon Mac |      &#10003;       |       &#10003;        |        &#10003;         |
 
-Both compilers are integrated into 4D. The appropriate compiler is automatically selected depending on the [compilation target](#compilation-target) option.
+Both compilers are integrated into 4D. Both compilers are integrated into 4D. The appropriate compiler is automatically selected depending on the [compilation target](#compilation-target) option.
 
 ### Classic Compiler
 
@@ -301,7 +301,7 @@ Resulting compiled code is stored in the [Libraries](architecture.md#libraries) 
 
 - **Apple machine**: The Silicon compiler can only be run from an Apple machine.
 - **4D Project architecture**: The Silicon compiler is only available for 4D developments using [project architecture](architecture.md).
-- **Xcode or Developer Tools**: The Silicon compiler calls the **Clang** open-source macOS compiler to compile the project from C++ code at the [second step](#incremental-compiler) of compilation. *clang* requires Apple native libraries, which are provided by either the **Xcode** or **Developer Tools** package.
+- **Xcode or Developer Tools**: The Silicon compiler calls the **Clang** open-source macOS compiler to compile the project from C++ code at the [second step](#incremental-compiler) of compilation. **Xcode or Developer Tools**: The Silicon compiler calls the **Clang** open-source macOS compiler to compile the project from C++ code at the [second step](#incremental-compiler) of compilation.
   - **If you already have** Xcode or Developer Tools installed on your computer, you only need to make sure that its version is compliant with 4D requirements.
   - **If you do not have** any of these tools installed on your computer, you will need to download one of them from the Apple Developer web site.
 

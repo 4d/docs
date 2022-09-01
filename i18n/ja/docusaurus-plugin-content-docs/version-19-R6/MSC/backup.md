@@ -1,19 +1,19 @@
 ---
 id: backup
-title: Backup Page
-sidebar_label: Backup Page
+title: バックアップページ
+sidebar_label: バックアップページ
 ---
 
-You can use the Backup page to view some backup parameters of the database and to launch a manual backup:
+MSC のバックアップページは、データベースのバックアップ設定を表示し、手動のバックアップ処理を開始するのに使用します:
 
 ![](../assets/en/MSC/msc_Backup.png)
 
-This page consists of the following three areas:
+このページは以下の 3つのエリアで構成されています:
 
-- **Backup File Destination**: displays information about the location of the application backup file. It also indicates the free/used space on the backup disk.
-- **Last Backup Information**: provides the date and time of the last backup (automatic or manual) carried out on the application.
-- **Contents of the backup file**: lists the files and folders included in the backup file.
+- **バックアップファイルの保存先**: アプリケーションのバックアップファイルの場所に関する情報を表示します。 また、ここはバックアップディスクの空き/使用スペースも表示します。
+- **前回のバックアップの情報**: アプリケーションで最近おこなわれた (自動または手動の) バックアップの日付および時刻を提供します。
+- **バックアップファイルの内容**: バックアップファイルに含まれるファイルおよびフォルダーをリストアップします。
 
-The **Backup** button is used to launch a manual backup.
+**バックアップ** ボタンは、手動のバックアップを開始するのに使用します。
 
-This page cannot be used to modify the backup parameters. To do this, you must click on the **Database properties...** button.
+このページでバックアップパラメーターを変更することはできません。 これをおこなうには **データベースプロパティ...** ボタンをクリックします。

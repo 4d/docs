@@ -3,16 +3,16 @@ id: onDeactivate
 title: On Deactivate
 ---
 
-| Code | Can be called by | Definition                                          |
-| ---- | ---------------- | --------------------------------------------------- |
-| 12   | Form             | The form’s window ceases to be the frontmost window |
+| コード | 呼び出し元 | 定義                        |
+| --- | ----- | ------------------------- |
+| 12  | フォーム  | フォームウィンドウが最前面のウィンドウでなくなった |
 
 
-## Description
+## 詳細
 
-If the window of a form was the frontmost window, this event is called when the window is sent to the background.
+フォームのウィンドウが最前面にあった場合、そのウィンドウが背面に送られたときにこのイベントが呼ばれます。
 
-This event applies to the form as a whole and not to a particular object. Consequently, if the `On Deactivate` form event property is selected, only the form will have its form method called.
+このイベントは個々のオブジェクトには適用されず、フォーム全体に適用されます。 ゆえに `On Deactivate` フォームイベントプロパティが選択されていれば、そのフォームのメソッドのみが呼び出されます。
 
-### See also
+### 参照
 [On Activate](onActivate.md)

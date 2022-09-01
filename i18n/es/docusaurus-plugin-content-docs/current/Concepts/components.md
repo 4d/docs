@@ -1,27 +1,27 @@
 ---
 id: components
-title: Components
+title: Componentes
 ---
 
-A 4D component is a set of 4D methods and forms representing one or more functionalities that you can install and use in your projects. For example, the [4D SVG component](https://doc.4d.com/4Dv19R3/4D/19-R3/4D-SVG-Component.100-5681501.en.html) adds advanced commands and an integrated rendering engine that can be used to display SVG files.
+Un componente 4D es un conjunto de métodos y formularios 4D que representan una o varias funcionalidades que pueden instalarse y utilizarse en sus proyectos. Por ejemplo, el [componente 4D SVG](https://doc.4d.com/4Dv19R3/4D/19-R3/4D-SVG-Component.100-5681501.en.html) añade comandos avanzados y un motor de renderizado integrado que puede utilizarse para mostrar los archivos SVG.
 
-## Where to find components?
+## ¿Dónde encontrar los componentes?
 
-Several components are [preinstalled in the 4D development environment](Extensions/overview.md), but a lot of 4D components from the 4D community [can be found on GitHub](https://github.com/search?q=4d-component&type=Repositories). Additionnally, you can [develop your own 4D components](Extensions/develop-components.md).
+Varios componentes están [preinstalados en el entorno de desarrollo 4D](Extensions/overview.md), pero muchos componentes 4D de la comunidad 4D [están disponibles en GitHub](https://github.com/search?q=4d-component&type=Repositories). Adicionalmente, puede [desarrollar sus propios componentes 4D](Extensions/develop-components.md).
 
 
-## Installing components
+## Instalación de los componentes
 
-To install a component, you simply need to copy the component files into the [`Components` folder of the project](Project/architecture.md). You can use aliases or shortcuts.
+Para instalar un componente, basta con copiar los archivos del componente en la carpeta [`Components` del proyecto](Project/architecture.md). Puede utilizar alias o atajos.
 
-A host project running in interpreted mode can use either interpreted or compiled components. A host project running in compiled mode cannot use interpreted components. In this case, only compiled components can be used.
+Un proyecto local que se ejecuta en modo interpretado puede utilizar componentes interpretados o compilados. Un proyecto local que se ejecuta en modo compilado no puede utilizar componentes interpretados. En este caso, sólo se pueden utilizar componentes compilados.
 
-## Using components
+## Utilización de los componentes
 
-Component methods and forms can be used as standard elements in your 4D development.
+Los métodos y formularios de los componentes pueden utilizarse como elementos estándar en su desarrollo 4D.
 
-When an installed component contains methods, they appear in the **Component Methods** theme of the Explorer's Methods page.
+Cuando un componente instalado contiene métodos, éstos aparecen en el tema **Métodos componente** de la página Métodos del Explorador.
 
-You can select a component method and click on the **Documentation** button of the Explorer to get information about it, [if any](Project/documentation.md).
+Puede seleccionar un método componente y hacer clic en el botón **Documentación** del Explorador para obtener información sobre el mismo, [si la hay](Project/documentation.md).
 
 ![alt-text](../assets/en/Project/compDoc.png)

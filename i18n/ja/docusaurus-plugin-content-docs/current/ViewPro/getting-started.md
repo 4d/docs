@@ -1,113 +1,113 @@
 ---
 id: getting-started
-title: Getting Started
+title: はじめに
 ---
 
 
-4D View Pro is a [4D component](Concepts/components.md) that includes a [4D form area](FormObjects/viewProArea_overview.md) and specific [methods](method-list.md). It allows you to embed advanced spreadsheet features in your projects.
+4D View Pro は、[4D フォームエリア](FormObjects/viewProArea_overview.md) と専用の [メソッド](method-list.md) が含まれる [4Dコンポーネント](Concepts/components.md) です。 これにより、先進的なスプレッドシート機能をプロジェクトに埋め込むことが可能です。
 
 
 ![](../assets/en/ViewPro/vpSpreadsheet.png)
 
-A spreadsheet is an application containing a grid of cells into which you can enter information, execute calculations, or display pictures. 4D View Pro is powered by the [SpreadJS spreadsheet solution](https://www.grapecity.com/spreadjs/docs/versions/v14/online/overview.html) integrated in 4D.
+スプレッドシートとは、セルのグリッドを格納したアプリケーションのことで、これらのセルに情報を入力したり、計算を実行させたり、あるいはピクチャーを表示したりすることができます。 4D View Proは、4Dに統合された [SpreadJS スプレッドシートソリューション](https://www.grapecity.com/spreadjs/docs/versions/v14/online/overview.html) に基づいて動作します。
 
-Embedding 4D View Pro areas in your forms allows you to import and export spreadsheets documents using the 4D View Pro commands.
+フォームに 4D View Pro エリアを埋め込むことで、4D View Pro コマンドを使ってスプレッドシートドキュメントを読み込んだり書き出したりすることができます。
 
 
-## Installation and activation
+## インストールとアクティベーション
 
-4D View Pro features are directly included in 4D, making it easy to deploy and manage. No additional installation is required.
+4D View Pro 機能は 4D に直接含まれているため、配布と運用が容易です。 追加のインストールは必要ありません。
 
-However, 4D View Pro requires a license. You need to activate this license in your application in order to use its features. When using this component without a license, the contents of an object that requires a 4D View Pro feature are not displayed at runtime, an error message is displayed instead:
+しかしながら、4D View Pro はライセンスを必要とします。 これらの機能を使用するには、アプリケーションにおいて当該ライセンスを有効化しておく必要があります。 4D View ライセンスがインストールされていない場合、4D View Pro 機能を必要とするオブジェクトのコンテンツはランタイムでは表示されず、エラーメッセージだけが表示されます:
 
 ![](../assets/en/ViewPro/licenseError.png)
 
 
-## Inserting a 4D View Pro area
+## 4D View Pro エリアを挿入する
 
-4D View Pro documents are displayed and edited manually in a [4D form object](FormObjects/viewProArea_overview.md) named 4D View Pro. To select this object, click on the last tool in the object bar:
+4D View Pro ドキュメントは 4D View Pro という名前の [4Dフォームオブジェクト](FormObjects/viewProArea_overview.md) 内に表示され、手動で編集されます。 このオブジェクトを選択するには、オブジェクトバーの最後のツールをクリックします:
 
 ![](../assets/en/ViewPro/vpArea.png)
 
-You can also select a preconfigured 4D View Pro area in the [Object library](FormEditor/objectLibrary.md).
+また、[オブジェクトライブラリ](FormEditor/objectLibrary.md) であらかじめ設定された 4D View Pro エリアを選択することもできます。
 
-> 4D View Pro areas can also be [created and used offscreen](method-list.md#vp-run-offscreen-area).
+> 4D View Pro エリアは、[オフスクリーンでも作成・使用する](method-list.md#vp-run-offscreen-area) ことができます。
 
-You can [configure the area](configuring.md) using the Property List and 4D View Pro methods.
+[エリアの設定](configuring.md) は、プロパティリストと 4D View Pro メソッドを使っておこないます。
 
 
-## Selection, Input and Navigation Basics
+## セレクション、入力、およびナビゲージョンの基本
 
-Spreadsheets are composed of rows and columns. A number is associated with each row. A letter (or group of letters once the number of columns surpasses the number of letters in the alphabet) is associated with each column. The intersection of a row and a column makes a cell. Cells can be selected and their contents edited.
+スプレッドシートは行と列から構成されています。 各行には番号が割り当てられています。 各列には文字 (アルファベットの文字数を超えた場合には文字のグループ) が割り当てられています。 行と列の交差する場所がセルと呼ばれます。 セルを選択したり、そのコンテンツを編集したりすることができます。
 
-### Selecting cells, columns and rows
+### セル、列、および行の選択
 
-*   To select a cell, simply click on it or use the direction arrows on the keyboard. Its content (or formula) is displayed within the cell.
+*   セルを選択するには、単にセルをクリックするか、キーボードの矢印キーを使用します。 その中身 (あるいは式) がセル内に表示されます。
 
-*   To select several continuous cells, drag the mouse from one end of the selection to the other. You can also click on the two ends of the selection while holding down the Shift key.
+*   複数の連続したセルを選択するには、マウスをセレクションの端から端へとドラッグします。 また、Shiftキーを押しながらセレクションの二つの端をクリックすることでも選択可能です。
 
 *   To select all cells in the spreadsheet, click on the cell at the top left of the area: ![](../assets/en/ViewPro/vpSelectAll.PNG)
 
-*   To select a column, click on the corresponding letter (or set of letters).
+*   列を選択するには、対応する文字 (アルファベット) をクリックします。
 
-*   To select a row, click on the corresponding number.
+*   行を選択するには、対応する番号をクリックします。
 
-*   To select a group of cells that are not continuous, hold down the **Ctrl** key (Windows) or **Command** key (Mac) and click on each cell to be selected.
+*   連続していないセルを複数選択するには、**Ctrl**キー (Windows) あるいは **Command**キー (macOS) を押しながら、選択したいセルをそれぞれクリックします。
 
-*   To deselect cells, simply click anywhere within the spreadsheet.
+*   セルの選択を解除するには、スプレッドシート内のどこかをクリックすれば選択解除されます。
 
-### Entering data
+### データの入力
 
-Double-clicking on a cell allows passing into input mode in the relevant cell. If the cell is not empty, the insertion cursor is placed after the content of the cell.
+セルをダブルクリックすると、そのセル内で入力モードに入ります。 セルが空でない場合、挿入カーソルはセルのコンテンツの最後に置かれます。
 
 ![](../assets/en/ViewPro/vpInput.PNG)
 
-Data can be entered directly once a cell is already selected, even if the insertion cursor is not visible. The input then replaces the content of the cell.
+セルが選択されていれば、たとえ挿入カーソルが非表示であってもデータを直接入力することができます。 The input then replaces the content of the cell.
 
-The **Tab** key validates the cell input and selects the cell to its right. Combining the **Shift + Tab** keys validates the cell input and selects the cell to its left.
-
-
-The **Carriage return** key validates the cell input and selects the cell below it. Combining the **Shift + Carriage return** keys validates the cell input and selects the cell above it.
-
-The direction keys (arrows) allow you to move a cell in the direction indicated by the arrow.
+**Tab**キーはセルの内容を確定し、一つ右のセルを選択します。 **Shift + Tab**キーの組み合わせでは、セル入力を確定したあと、一つ左のセルを選択します。
 
 
-### Using the Context Menu
+**キャリッジリターン**キーはセルの入力を確定し、一つ下のセルを選択します。 **Shift + キャリッジリターン**キーの組み合わせで、セル入力を確定したあと、一つ上のセルを選択します。
 
-4D View Pro areas benefit from an automatic context menu that offers standard editing features such as copy and paste, but also basic spreadsheet features:
+方向キー (矢印) を使用すると、矢印の方向へとセルの選択を移動することができます。
+
+
+### コンテキストメニューの使い方
+
+4D View Pro エリアでは、コピー/ペーストといた標準の編集機能だけでなく、基本的なスプレッドシート機能も備えている自動コンテキストメニューを利用することができます:
 
 ![](../assets/en/ViewPro/vpContext.PNG)
-> The Copy/Cut and Paste features of the context menu only work within the spreadsheet area, they do not have access to the system pasteboard. System shortcuts such as **Ctrl+c/Ctrl+v** works however and can be used to exchange data between the area and other applications.
+> コンテキストメニューのコピー/カット/ペースト機能はスプレッドシートエリア内でのみ動作し、システムのペーストボードにはアクセスしません。 しかしながら、**Ctrl+c/Ctrl+v** といったシステムショートカットは動作し、エリアと他のアプリケーション間でデータを交換するために使用することが可能です。
 
- Depending on the clicked area, the following options are also available:
+ クリックしたエリアに応じて、メニューには次の選択肢が表示されます:
 
-*   click on a column or row header: **Insert**, **Delete**, **Hide**, or **Unhide** the contents
-*   click on a cell or a cell range:
-    *   **Filter**: allows hiding row through filters (see [Filtering rows](https://www.grapecity.com/spreadjs/docs/versions/v14/online/filter.html) in the SpreadJS documentation).
-    *   **Sort**: sorts the column contents.
-    *   **Insert Comment**: allows user to enter a comment for an area. When a comment has been entered for an area, the top left cell of the area displays a small red triangle:  
+*   列や行のヘッダーをクリックした場合: コンテンツの **挿入**、**削除**、**非表示**、**再表示**
+*   セルあるいはセルレンジのクリック:
+    *   **フィルタリング**: フィルタリングを使用して行を非表示にします (SpreadJS ドキュメントの [Filtering rows](https://www.grapecity.com/spreadjs/docs/versions/v14/online/filter.html) を参照ください)
+    *   **ソート**: 列のコンテンツを並べ替えます。
+    *   **コメントの挿入**: ユーザーコメントを入力できます。 コメントが入力されているセルには、小さな赤い三角形が表示されます:  
       ![](../assets/en/ViewPro/vpContext2.PNG)
 
 
-## Using 4D View Pro methods
+## 4D View Pro メソッドの使い方
 
-4D View Pro methods can be used in the 4D Code Editor, just like 4D language commands.
+4D View Pro メソッドは、ほかの 4Dランゲージコマンドと同様に 4D のコードエディターにて使用することができます。
 
-Since 4D View Pro is a built-in 4D component, you can access its list of methods from the Explorer, in the **Component Methods** section:
+4D View Pro はビルトインの 4Dコンポーネントであるため、そのメソッドの一覧はエクスプローラーにおいて、メソッドページの **コンポーネントメソッド** 内に表示されます:
 
-![component-methods](../assets/en/ViewPro/explorer-methods.png)
+![コンポーネントメソッド](../assets/en/ViewPro/explorer-methods.png)
 
-For a detailed list of component methods, see [Method list](method-list.md).
+コンポーネントメソッドの詳細な一覧については [メソッドリスト](method-list.md) を参照ください。
 
-### Addressing a 4D View Pro area
+### 4D View Proのエリアの操作
 
-A 4D View Pro area handles several objects and elements.
+4D View Pro エリアは、複数のオブジェクトや要素を扱います。
 
 ![](../assets/en/ViewPro/vpDocument.PNG)
 
-Most of 4D View Pro methods require a *vpAreaName* parameter, which is the [**4D View Pro form area name**](FormObjects/viewProArea_overview.md) (4D form object). This name is the [object name](FormObjects/properties_Object.md#object-name) property.
+ほとんどの 4D View Pro メソッドは、[**4D View Pro のフォームエリア名**](FormObjects/viewProArea_overview.md) (4Dフォームオブジェクト) を *vpAreaName* 引数として必要とします。 このエリア名は、[オブジェクト名](FormObjects/properties_Object.md#オブジェクト名) プロパティの値のことです。
 
-For example, if you want to set the total number of columns of an area named "myVpArea", you write:
+たとえば、"myVpArea" という名前の 4D View Pro エリアの列数を設定するには、次のように書きます:
 
 ```4d
 VP SET COLUMN COUNT("myVpArea";5)
@@ -115,55 +115,55 @@ VP SET COLUMN COUNT("myVpArea";5)
 
 
 
-> When loading a 4D View Pro object in a form area, 4D generates the [On VP Ready](../Events/onVpReady.md) form event once the whole area is loaded. You must execute any 4D View Pro code handling the area in this event, otherwise an error is returned.
+> フォームエリアへの 4D View Pro オブジェクトの読み込みが完了すると、4D は [On VP Ready](../Events/onVpReady.md) フォームイベントを生成します。 エリアを操作する 4D View Pro コードはこのイベント内で実行する必要があります。 そうでない場合はエラーが返されます。
 
 
-### Using range objects
+### レンジオブジェクトの使い方
 
-Some 4D View Pro methods require a *rangeObj* parameter. In 4D View Pro, a range is an object that references an area in a spreadsheet. This area can be composed of one or several cells. Using 4D View Pro methods, you can create ranges and pass them to other methods to read from or write to specific locations in your document.
+4D View Pro のメソッドの中には、*rangeObj* 引数を必要とするものがあります。 4D View Pro におけるレンジとは、スプレッドシート内の特定のエリアを参照するオブジェクトです。 このエリアは、1つ以上のセルで構成されます。 4D View Pro メソッドを使って、作成したレンジを他のメソッドに受け渡し、ドキュメントの特定箇所に対して読み取りや書き込み操作をおこなうことができます。
 
-For example, to create a range object for the following cells:
+たとえば、次のセルに対応するレンジオブジェクトを作成したい場合:
 
 ![](../assets/en/ViewPro/vp-cells.png)
 
-You can use the [VP Cells](method-list.md#vp-cells) method:
+[VP Cells](method-list.md#vp-cells) メソッドを使用できます:
 
 ```4d 
 var $myRange : Object
-$myRange:=VP Cells("ViewProArea";2;4;2;3) // C5 to D7
+$myRange:=VP Cells("ViewProArea";2;4;2;3) // C5 から D7
 ```
 
-You can then pass `$myRange` to another 4D View Pro method to modify these cells (for example add a border to the set of cells with [VP SET BORDER](method-list.md#vp-set-border)).
+その後、`$myRange` を別の 4D View Pro メソッドに渡して、これらのセルを変更することができます (たとえば、[VP SET BORDER](method-list.md#vp-set-border) でに境界線を追加します)。
 
-4D View Pro range objects are composed of several properties:
+4D View Pro のレンジオブジェクトは、いくつかのプロパティで構成されます:
 
-*   area - The name of the 4D View Pro area
-*   ranges - A collection of range object(s). Available properties within each range object depend on the range object type. For example, a column range object will only include the *.column* and *.sheet* properties.
+*   area - 4D View Pro エリアの名称
+*   ranges - レンジオブジェクトのコレクション。 各レンジオブジェクトで利用できるプロパティは、レンジオブジェクトの種類によって異なります。 たとえば、列のレンジオブジェクトには、*.column* と *.sheet* プロパティしか含まれません。
 
-| Property |                   | Type       | Description                                                         | Available for                                      |
-| -------- | ----------------- | ---------- | ------------------------------------------------------------------- | -------------------------------------------------- |
-| area     |                   | text       | 4D View Pro area form object name                                   | always available                                   |
-| ranges   |                   | collection | Collection of range(s)                                              | always available                                   |
-|          | \[ ].name        | text       | Range name                                                          | name                                               |
-|          | \[ ].sheet       | number     | Sheet index (current sheet index by default) (counting begins at 0) | cell, cells, row, rows, column, columns, all, name |
-|          | \[ ].row         | number     | Row index (counting begins at 0)                                    | cell, cells, row, rows                             |
-|          | \[ ].rowCount    | number     | Row count                                                           | cells, rows                                        |
-|          | \[ ].column      | number     | Column index (counting begins at 0)                                 | cell, cells, column, columns                       |
-|          | \[ ].columnCount | number     | Column count                                                        | cells, columns                                     |
-
-
+| プロパティ  |                   | タイプ        | 詳細                                      | 利用可能な対象                                            |
+| ------ | ----------------- | ---------- | --------------------------------------- | -------------------------------------------------- |
+| area   |                   | text       | 4D View Pro フォームオブジェクト名                 | 常に利用可能                                             |
+| ranges |                   | collection | レンジのコレクション                              | 常に利用可能                                             |
+|        | \[ ].name        | text       | レンジ名                                    | name                                               |
+|        | \[ ].sheet       | number     | シートのインデックス (デフォルトではカレントシートのインデックス; 0起点) | cell, cells, row, rows, column, columns, all, name |
+|        | \[ ].row         | number     | 行のインデックス (0起点)                          | cell, cells, row, rows                             |
+|        | \[ ].rowCount    | number     | 行の数                                     | cells, rows                                        |
+|        | \[ ].column      | number     | 列のインデックス (0起点)                          | cell, cells, column, columns                       |
+|        | \[ ].columnCount | number     | 列の数                                     | cells, columns                                     |
 
 
 
 
 
-## Importing and exporting documents
 
-4D View Pro supports the import and export of several document formats:
+
+## ドキュメントのインポートとエクスポート
+
+4D View Pro は、複数のドキュメント形式のインポートおよびエクスポートに対応しています:
 
 * .4vp
 * .xlsx
-* .txt and .csv
-* .pdf (for export only)
+* .txt と .csv
+* .pdf (エクスポートのみ)
 
-For more details, check out the description of [VP IMPORT DOCUMENT](method-list.md#vp-import-document) and [VP EXPORT DOCUMENT](method-list.md#vp-export-document).
+詳細については [VP IMPORT DOCUMENT](method-list.md#vp-import-document) と [VP EXPORT DOCUMENT](method-list.md#vp-export-document) の説明を参照ください。

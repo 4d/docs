@@ -3,23 +3,23 @@ id: onVpRangeChanged
 title: On VP Range Changed
 ---
 
-| Code | Can be called by                                        | Definition                                                                                            |
-| ---- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| 61   | [4D View Pro Area](FormObjects/viewProArea_overview.md) | The 4D View Pro cell range has changed (e.g., a formula calculation, value removed from a cell, etc.) |
+| コード | 呼び出し元                                                  | 定義                                                      |
+| --- | ------------------------------------------------------ | ------------------------------------------------------- |
+| 61  | [4D View Pro エリア](FormObjects/viewProArea_overview.md) | 4D Vierw Pro のセルレンジが変更された (例: フォーミュラの計算、値がセルから削除された、など) |
 
-## Description
+## 詳細
 
-This event is generated when a change occurs within a cell range in the 4D View Pro document.
+このイベントは、4D View Pro ドキュメント内でセルレンジが変更されたときに生成されます。
 
-The object returned by the FORM Event command contains:
+FORM Event によって返されるオブジェクトには以下のプロパティが格納されます:
 
-| Property     | Type    | Description                                                                                                                                                                                                                |
-| ------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| objectName   | text    | 4D View Pro area name                                                                                                                                                                                                      |
-| code         | longint | On VP Range Changed                                                                                                                                                                                                        |
-| description  | text    | "On VP Range Changed"                                                                                                                                                                                                      |
-| sheetName    | text    | Name of the sheet of the event                                                                                                                                                                                             |
-| range        | object  | Cell range of the change                                                                                                                                                                                                   |
-| changedCells | object  | Range containing only the changed cells. It can be a combined range.                                                                                                                                                       |
-| action       | text    | The type of operation generating the event:<li>"clear" - A clear range value operation</li><li>"dragDrop" - A drag and drop operation</li><li>"dragFill" - A drag fill operation</li><li>"evaluateFormula" - Setting a formula in a specified cell range</li><li>"paste" - A paste operation</li><li>"setArrayFormula" - Setting a formula in a specified cell range</li><li>"sort" - Sorting a range of cells</li> |
-> See also [On After Edit](onAfterEdit.md). 
+| プロパティ        | タイプ     | 詳細                                                                                                                                                                                             |
+| ------------ | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| objectName   | text    | 4D View Pro エリア名                                                                                                                                                                               |
+| code         | longint | On VP Range Changed                                                                                                                                                                            |
+| description  | text    | "On VP Range Changed"                                                                                                                                                                          |
+| sheetName    | text    | イベントが発生したシート名                                                                                                                                                                                  |
+| range        | object  | 変化したセルレンジ                                                                                                                                                                                      |
+| changedCells | object  | 変化したセルのみを格納したレンジ。 レンジが組み合わされたものである可能性もあります。                                                                                                                                                    |
+| action       | text    | イベント生成した操作のタイプ:<li>"clear" - レンジの値をクリア操作</li><li>"dragDrop" - ドラッグドロップ操作</li><li>"dragFill" - ドラッグによるフィル操作</li><li>"evaluateFormula" - 特定のセルレンジにフォーミュラを設定した</li><li>"paste" - ペースト操作</li><li>"setArrayFormula" - 特定のセルレンジにフォーミュラを設定した</li><li>"sort" - セルのレンジを並べ替えた</li> |
+> [On After Edit](onAfterEdit.md) も参照ください。 

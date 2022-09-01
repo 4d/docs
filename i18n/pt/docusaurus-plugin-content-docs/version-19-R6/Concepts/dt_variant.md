@@ -11,7 +11,7 @@ A variant type variable can contain a value of the following data types:
 - boolean
 - collection
 - date
-- longint
+- inteiro longo
 - object
 - picture
 - pointer
@@ -19,11 +19,11 @@ A variant type variable can contain a value of the following data types:
 - text
 - time
 - null
-- undefined
+- indefinido
 
 > Arrays cannot be stored in variant variables.
 
-In both interpreted and in compiled modes, a same variant variable can be assigned contents of different types. Unlike regular variable types, the variant variable content type is different from the variant variable type itself. For example:
+In both interpreted and in compiled modes, a same variant variable can be assigned contents of different types. Unlike regular variable types, the variant variable content type is different from the variant variable type itself. Por exemplo:
 
 ```4d
 C_VARIANT($variant)
@@ -37,7 +37,7 @@ $vtype:=Type($variant) // 12 (Is variant)
 $vtypeVal:=Value type($variant) // 1 (Is real)
 ```
 
-You can use variant variables wherever variables are expected, you only need to make sure than the variable content data type is of the expected type. When accessing variant variables, only their current value is taken into account. For example:
+You can use variant variables wherever variables are expected, you only need to make sure than the variable content data type is of the expected type. When accessing variant variables, only their current value is taken into account. Por exemplo:
 
 ```4d
 C_VARIANT($v)
@@ -57,7 +57,8 @@ Case of
 ...
 : (Value type($1)=Is text)
 ...
-End case
+//statement(s)
+ End case
 ```
 
 > When variant variables are not necessary (i.e. when the data type is known), it is recommended to use regular typed variables. Regular typed variables provide better performance, make code more clear and are helpful for the compiler to prevent bugs related to passing unexpected data types. 

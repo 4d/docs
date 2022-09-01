@@ -1,34 +1,34 @@
 ---
 id: propertiesGridlines
-title: Gridlines
+title: Rejillas
 ---
 
-## Horizontal Line Color
+## Color líneas horizontales
 
-Defines the color of the horizontal lines in a list box (gray by default).
+Define el color de las líneas horizontales de un list box (gris por defecto).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name                 | Data Type | Possible Values                            |
-| -------------------- | --------- | ------------------------------------------ |
-| horizontalLineStroke | color     | any css value, "'transparent", "automatic" |
+| Nombre               | Tipos de datos | Valores posibles                            |
+| -------------------- | -------------- | ------------------------------------------- |
+| horizontalLineStroke | color          | todo valor css, "'transparent", "automatic" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)
 
 ---
 
-## Vertical Line Color
+## Color líneas verticales
 
-Defines the color of the vertical lines in a list box (gray by default).
+Define el color de las líneas verticales de un list box (gris por defecto).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name               | Data Type | Possible Values                            |
-| ------------------ | --------- | ------------------------------------------ |
-| verticalLineStroke | color     | any css value, "'transparent", "automatic" |
+| Nombre             | Tipos de datos | Valores posibles                            |
+| ------------------ | -------------- | ------------------------------------------- |
+| verticalLineStroke | color          | todo valor css, "'transparent", "automatic" |
 
-#### Objects Supported
+#### Objetos soportados
 
 [List Box](listbox_overview.md)

@@ -1,35 +1,35 @@
 ---
 id: forms
-title: Forms Page
+title: フォームページ
 ---
 
  
-This page lets you set the default operation and display of the 4D Form editor.
+このページでは、4Dフォームエディターのデフォルトの動作と表示を設定できます。
 
-## Move
+## 移動
 
-This group of options sets parameters for moving objects using the keyboard or the mouse in the Form editor.
+このオプショングループでは、キーボードやマウスを使用してフォームエディター上のオブジェクトを移動する際のパラメーターを設定できます。
 
-### Step using keyboard
+### キーボードを使用してステップ
 
-This option allows setting the value (in points) of the step used for moving or resizing an object using the keyboard and the **Shift** key.
+このオプションでは **Shift**キーを押しながらキーボードを使用してオブジェクトを移動あるいはサイズ変更したときのステップ単位をポイントで指定できます。
 
-### When moving beyond window limits
+### ウィンドウの外に移動する場合
 
-This option allows setting the behavior of the Form editor when moving an object using the mouse beyond window limits.
+このオプションは、フォームエディターにおいてウィンドウの境界外にオブジェクトをマウスで移動した際の動作を設定します。
 
-*   **Autoscroll**: When this option is checked, this action causes the scroll of the form in the window, as if you clicked on the scroll bars. This behavior is useful for moving objects in large forms.
-*   **Start drag and drop**: When this option is checked, this action is interpreted as a drag and drop. The form window is not modified and the moved object can be dropped in another window (if its contents are compatible), for example, in another form. This behavior is useful for recycling objects among several forms or using object libraries (see [Creating and using custom object libraries](FormEditor/objectLibrary.md#creating-and-using-custom-object-libraries)).
+*   **自動スクロール**: このオプションが選択されていると、オブジェクトの移動に合わせてウィンドウ内でスクロールがおこなわれます。 この動作は大きなフォーム内でオブジェクトを移動する際に便利です。
+*   **ドラッグ＆ドロップを開始**: このオプションが選択されていると、エディター外へのオブジェクト移動はドラッグ＆ドロップとして解釈されます。 フォームウィンドウは変更されず、移動されたオブジェクトは (たとえば他のフォームなど) 他のウィンドウにドロップできます (アクションに互換性がある場合)。 この動作は、複数フォームでのオブジェクトのリサイクルやオブジェクトライブラリの利用時に便利です ([カスタムオブジェクトライブラリの作成と使用](FormEditor/objectLibrary.md#カスタムオブジェクトライブラリの作成と使用) 参照)。
 
-You can configure this option depending on your work habits and development needs.
+作業慣習や開発ニーズに応じてこのオプションを設定できます。
 
-### Activate auto alignment by default
+### デフォルトで自動揃えを有効にする
 
-This option activates auto alignment by default in each new window of the Form editor. It is possible to modify this option individually in each window (refer to [Using the magnetic grid](FormEditor/formEditor.md#using-the-magnetic-grid)).
+このオプションはフォームエディターでの自動揃えを有効にします。 このオプションはフォームウィンドウ内でも変更できます ([マグネティックグリッドを使用する](FormEditor/formEditor.md#マグネティックグリッドを使用する) 参照)。
 
-## New form default display
+## 新フォームのデフォルト表示
 
-- **Limits**, **Rulers**, ...: check items that must be displayed by default in each new window of the Form editor. It is possible to modify the display of each window individually using the **Display** hierarchical menu of the Form editor.
-- **Color for marker lines**: modifies the color of the marker lines used in the Form editor to define the different areas (header, breaks, detail and footer, etc.). For more information about markers, refer to [Using output control lines](https://doc.4d.com/4Dv18R6/4D/18-R6/Using-output-control-lines.300-5217678.en.html).
-- **Default display shield**: sets which shields to display by default in each new window of the Form editor. For more information about shields, refer to [Using shields](FormEditor/formEditor.md#using-shields).
+- **境界**, **ルーラー**, ...: フォームエディターの各新規ウィンドウにデフォルトで表示する項目をチェックします。 フォームエディターの **表示** 階層メニューを使って、各ウィンドウの表示を個別に変更することができます。
+- **マーカーラインのカラー**: このオプションは、フォームエディター中で (ヘッダー、ブレーク、詳細、フッター) エリアを定義するマーカーラインの色を設定します。 マーカーに関する詳細は [出力コントロールラインを使用する](https://doc.4d.com/4Dv19/4D/19/Using-output-control-lines.300-5416762.ja.html) を参照してください。
+- **デフォルトで表示するバッジ**: このオプションは、フォームエディターの新しいウィンドウを開く際、どのバッジをデフォルトで表示するかを設定します。 バッジに関する詳細は [バッジを使用する](FormEditor/formEditor.md#バッジを使用する) を参照ください。
 

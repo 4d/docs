@@ -90,7 +90,7 @@ The list of users displays all the users, including the [Designer and the Admini
 
 4D adds a new user to the list, named "New userX" by default.
 
-3. Enter the user name. This name will be used by the user to open the database. You can rename a user at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
+3. Enter the user name. Enter the user name. You can rename a user at any time using the **Rename** command of the context menu, or by using the Alt+click (Windows) or Option+click (macOS) shortcuts, or by clicking twice on the name you want to change.
 
 4. To enter a password for the user, click the **Edit...** button in the user properties area and enter the password twice in the dialog box. You can use up to 15 alphanumeric characters for a password. The password editor is case sensitive.
 

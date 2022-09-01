@@ -3,33 +3,33 @@ id: collection
 title: Collection
 ---
 
-Collections are ordered lists of values of similar or mixed types (text, number, object, boolean, collection, or null).
+Eine Collection ist eine Sammlung von Werten unterschiedlicher Typen (Text, Zahl, Objekt, Boolean, Collection oder Null).
 
-To manage Collection type variables you must use object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)).
+Zum Verwalten von Variablen von Typ Collection müssen Sie Objektnotation verwenden (siehe [Grundlagen der Syntax](Concepts/dt_object.md#syntax-basics)).
 
-To access a collection element, you need to pass the element number inside square brackets:
+Um auf ein Element der Collection zuzugreifen, müssen Sie die Elementnummer in eckigen Klammern übergeben:
 
 ```4d
 collectionRef[expression]
 ```
 
-You can pass any valid 4D expression which returns a positive integer in expression. Examples:
+Sie können jeden gültigen 4D Ausdruck übergeben, der in Ausdruck eine positive Ganzzahl zurückgibt. Beispiele:
 
 ```4d
  myCollection[5]  //access to 6th element of the collection
  myCollection[$var]
 ```
 
-**Warning:** Collection elements are numbered from 0.
+**Warnung:** Elemente in Collections werden ab 0 nummeriert.
 
-You can assign a value to a collection element or get a collection element value using object notation:
+Über Objektnotation können Sie einem Element der Collection einen Wert zuweisen oder einen Wert erhalten:
 
 ```4d
  myCol[10]:="My new element"
  $myVar:=myCol[0]
 ```
 
-If you assign an element's index that surpasses the last existing element of the collection, the collection is automatically resized and all new intermediary elements are assigned a null value:
+Ist die Elementnummer höher als das letzte vorhandene Element der Collection, wird die Collection automatisch angepasst und alle dazwischenliegenden neuen Elemente erhalten einen Nullwert:
 
 ```4d
  C_COLLECTION(myCol)
@@ -40,39 +40,39 @@ If you assign an element's index that surpasses the last existing element of the
   //myCol[4]=null
 ```
 
-## Initialization
+## Initialisierung
 
-Collections must have been initialized, for example using the `New collection` command, otherwise trying to read or modify their elements will generate a syntax error.
+Collections müssen initialisiert sein, z. B. mit dem Befehl `New collection`, sonst wird beim Versuch, ihre Elemente zu lesen oder zu modifizieren, ein Syntaxfehler erzeugt.
 
-Example:
+Beispiel:
 ```4d
  C_COLLECTION($colVar) //creation of collection type 4D variable
  $colVar:=New collection //initialization of the collection and assignment to the 4D variable
 ```
 
-### Regular or shared collection
+### Regular oder shared Collection
 
-You can create two types of collections:
+Sie können zwei Arten von Collections erstellen:
 
-- regular (non-shared) collections, using the `New collection` command. These collections can be edited without any specific access control but cannot be shared between processes.
-- shared collections, using the `New shared collection` command. These collections can be shared between processes, including preemptive threads. Access to these collections is controlled by `Use...End use` structures. For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
+- regular (non-shared) Collections mit dem Befehl `New collection`. Diese Collection lassen sich ohne eine spezifische Zugriffskontrolle bearbeiten, aber nicht zwischen Prozessen teilen.
+- shared Collections mit dem Befehl `New shared collection`. Diese Collections lassen sich zwischen Prozessen teilen, inkl. preemptive Threads. These collections can be shared between processes, including preemptive threads. Weitere Informationen dazu finden Sie auf der Seite [Shared Objects und Collections](Concepts/shared.md).
 
-## Collection methods
+## Collection Methoden
 
-4D collection references benefit from special methods (sometimes named *member functions*). Thanks to object notation, these methods can be applied to collection references using the following syntax:
+Referenzen auf 4D Collection können spezifische Methoden, genannt *Member Methods*, nutzen. Sie lassen sich über Objektnotation auf Collection Referenzen mit folgender Syntax verwenden:
 
 > {$result:=}myCollection.memberFunction( {params} )
 
-Note that, even if it does not have parameters, a member function must be called with () parenthesis, otherwise a syntax error is generated.
+Beachten Sie, dass eine Member Method auch ohne definierte Parameter in runden Klammern () stehen muss, sonst wird ein Syntaxfehler erzeugt.
 
-For example:
+Beispiel:
 
 ```4d
 $newCol:=$col.copy() //deep copy of $col to $newCol
 $col.push(10;100) //add 10 and 100 to the collection
 ```
 
-Some methods return the original collection after modification, so that you can run the calls in a sequence:
+Einige Methoden geben nach Änderung die ursprüngliche Collection zurück, so dass die Aufrufe in einer Sequenz ablaufen können:
 
 ```4d
  $col:=New collection(5;20)
@@ -80,15 +80,15 @@ Some methods return the original collection after modification, so that you can 
 ```
 
 
-### propertyPath parameter
+### Parameter propertyPath
 
 
-Several methods accept a _propertyPath_ as parameter. This parameter stands for:
+Einige Collection Methoden akzeptieren als Parameter einen _PropertyPath_. Dieser Parameter steht für:
 
-- either an object property name, for example "lastName"
-- or an object property path, i.e. a hierarchical sequence of sub-properties linked with dot characters, for example "employee.children.firstName".
+- Name der Objekteigenschaft, z. B. "lastName"
+- oder Pfad der Objekteigenschaft, z.B. eine Sequenz von Untereigenschaften, durch Punkte getrennt, z.B. "employee.children.firstName".
 
-**Warning:** When using methods and propertyPath parameters, you cannot use ".", "[ ]", or spaces in property names since it will prevent 4D from correctly parsing the path:
+**Warnung:** Sie können bei Methoden und Parametern PropertyPath in Eigenschaftsnamen keine Leerzeichen oder ".", "[ ]" verwenden, da 4D den Pfad dann nicht korrekt analysieren kann:
 
 ```4d
  $vmin:=$col.min("My.special.property") //undefined

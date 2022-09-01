@@ -1,21 +1,21 @@
 ---
 id: overview
-title: Overview
+title: Vue d’ensemble
 ---
 
-4D includes a full application backup and restore module.
+4D inclut un module complet de sauvegarde et de récupération de l'application en cas d’incident.
 
-This module allows backing up an application currently in use without having to exit it. Each backup can include the project folder, the data file and any additional files or folders. These parameters are first set in the Settings.
+Ce module permet de sauvegarder une application en cours d’exploitation, sans qu’il soit nécessaire de quitter l’application. Chaque sauvegarde peut inclure le dossier du projet, le fichier de données et tout fichier ou dossier supplémentaire. Ces paramètres sont définis au préalable dans les Propriétés.
 
-Backups can be started manually or automatically at regular intervals without any user intervention. Specific language commands, as well as specific database methods, allow integrating backup functions into a customized interface.
+Les sauvegardes peuvent être déclenchées manuellement ou automatiquement, à intervalles réguliers et sans intervention de l’utilisateur. Des commandes de langage ainsi que des méthodes base spécifiques permettent d’intégrer les fonctions de sauvegarde à une interface personnalisée.
 
-Applications can be restored automatically when a damaged application is opened.
+La restitution d’une application après incident peut s’effectuer automatiquement lors de l’ouverture d’une application endommagée.
 
-Also, the integrated backup module can take advantage of the .journal file ([database log file](log.md)). This file keeps a record of all operations performed on the data and also ensures total security between two backups. In case of problems with an application in use, any operations missing in the data file are automatically reintegrated the next time the application is opened. You can view the journal file contents at any time.
+En outre, le module de sauvegarde intégré tire parti du fichier .journal ([ d’historique](log.md)). Ce fichier conserve une trace de chaque opération effectuée sur les données et assure ainsi une sécurité totale entre deux sauvegardes. Vous pouvez visualiser à tout moment le contenu du fichier d’historique. Vous pouvez visualiser à tout moment le contenu du fichier d’historique.
 
-> You can also implement alternative solutions for replicating and synchronizing data in order to maintain identical versions of applications for backup purposes. These solutions can be based on the following mechanisms and technologies:  
+> Vous pouvez également mettre en place des solutions alternatives de réplication et de synchronisation des données permettant de maintenir des versions identiques des applications à des fins de sauvegarde. These solutions can be based on the following mechanisms and technologies:  
 > - Setting up a logical mirror with 4D Server (using the integrated backup module mechanisms)  
 > - Synchronization using SQL - Synchronization using HTTP (/rest/url)
 
 
-> For a general overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
+> Consultez le document [4D Security guide](https://blog.4d.com/4d-security-guide/) pour une vue d'ensemble des fonctions de sécurité de 4D.

@@ -1,20 +1,20 @@
 ---
 id: action
-title: Action
+title: 動作
 ---
 
 
-## Method
+## メソッド
 
-Reference of a method attached to the form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. See [Specialized methods](Concepts/methods.md#specialized-methods).
+フォームに関連づけられたメソッドへの参照。 フォームメソッドを使用してデータとオブジェクトを管理することができます。ただし、これら目的には、オブジェクトメソッドを使用する方が通常は簡単であり、より効果的です。 [特化されたメソッド](Concepts/methods.md#特化されたメソッド) 参照。
 
-You do not call a form method—4D calls it automatically when an event involves the form to which the method is attached.
+メソッドが関連づけられているフォームに関わるイベントが発生した場合、4D は自動的にフォームメソッドを呼び出します。
 
-Several types of method references are supported:
+メソッド参照にはいくつかのタイプが利用可能です:
 
-- a standard project method file path, i.e. that uses the following pattern:  
+- 標準のプロジェクトメソッドファイルパス:   
   `method.4dm`  
-  This type of reference indicates that the method file is located at the default location ("sources/{TableForms/*numTable*} | {Forms}/*formName*/"). In this case, 4D automatically handles the form method when operations are executed on the form (renaming, duplication, copy/paste...)
+  このタイプの参照は、当該メソッドファイルがデフォルトの場所 ("sources/{TableForms/*numTable*} | {Forms}/*formName*/") にあることを示します。 この場合、エディター上でフォームメソッドに対して操作 (名称変更、複製、コピー/ペーストなど) がおこなわれると、4D はこれらの変更を自動的にフォームメソッドに反映させます。
 
 - a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for form operations.
 
@@ -23,9 +23,9 @@ Several types of method references are supported:
   `/RESOURCES/Forms/FormMethod.4dm` In this case, 4D does not provide automatic support for object operations.
 
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name   | Data Type | Possible Values                                                  |
-| ------ | --------- | ---------------------------------------------------------------- |
-| method | text      | Form method standard or custom file path, or project method name |
+| 名称     | データタイプ | とりうる値                                    |
+| ------ | ------ | ---------------------------------------- |
+| method | text   | フォームメソッドの標準またはカスタムのファイルパス、またはプロジェクトメソッド名 |
 

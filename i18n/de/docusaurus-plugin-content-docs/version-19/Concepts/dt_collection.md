@@ -3,33 +3,33 @@ id: collection
 title: Collection
 ---
 
-Collections are ordered lists of values of similar or mixed types (text, number, date, object, boolean, collection, or null).
+Collections sind sortierte Listen von Werten ähnlicher oder unterschiedlicher Typen (Text, Zahl, Datum, Objekt, Boolean, Collection oder Null).
 
-Collection type variables are managed using object notation (see [Syntax basics](Concepts/dt_object.md#syntax-basics)).
+Zum Verwalten von Variablen von Typ Collection müssen Sie Objektnotation verwenden (siehe [Grundlagen der Syntax](Concepts/dt_object.md#syntax-basics)).
 
-To access a collection element, you need to pass the element number inside square brackets:
+Um auf ein Element der Collection zuzugreifen, müssen Sie die Elementnummer in eckigen Klammern übergeben:
 
 ```4d
 collectionRef[expression]
 ```
 
-You can pass any valid 4D expression which returns a positive integer in *expression*. Examples:
+Sie können jeden gültigen 4D Ausdruck übergeben, der in *Ausdruck* eine positive Ganzzahl zurückgibt. Beispiele:
 
 ```4d
  myCollection[5]  //access to 6th element of the collection
  myCollection[$var]
 ```
 
-**Warning:** Collection elements are numbered from 0.
+**Warnung:** Elemente in Collections werden ab 0 nummeriert.
 
-You can assign a value to a collection element or get a collection element value:
+Sie können einem Element der Collection einen Wert zuweisen oder einen Wert erhalten:
 
 ```4d
  myCol[10]:="My new element"
  $myVar:=myCol[0]
 ```
 
-If you assign an element's index that surpasses the last existing element of the collection, the collection is automatically resized and all new intermediary elements are assigned a null value:
+Ist die Elementnummer höher als das letzte vorhandene Element der Collection, wird die Collection automatisch angepasst und alle dazwischenliegenden neuen Elemente erhalten einen Nullwert:
 
 ```4d
  var myCol : Collection
@@ -40,38 +40,38 @@ If you assign an element's index that surpasses the last existing element of the
   //myCol[4]=null
 ```
 
-## Initialization
+## Initialisierung
 
-Collections must have been initialized, for example using the `New collection` command, otherwise trying to read or modify their elements will generate a syntax error.
+Collections müssen initialisiert sein, z. B. mit dem Befehl `New collection`, sonst wird beim Versuch, ihre Elemente zu lesen oder zu modifizieren, ein Syntaxfehler erzeugt.
 
-Example:
+Beispiel:
 
 ```4d
  var $colVar : Collection //creation of collection type 4D variable
  $colVar:=New collection //initialization of the collection and assignment to the 4D variable
 ```
 
-### Regular or shared collection
+### Regular oder shared Collection
 
-You can create two types of collections:
+Sie können zwei Arten von Collections erstellen:
 
-- regular (non-shared) collections, using the [`New collection`](API/CollectionClass.md#new-collection) command. These collections can be edited without any specific access control but cannot be shared between processes.
-- shared collections, using the [`New shared collection`](API/CollectionClass.md#new-shared-collection) command. These collections can be shared between processes, including preemptive threads. Access to these collections is controlled by [`Use...End use`](Concepts/shared.md#useend-use) structures.
+- regular (non-shared) Collections mit dem Befehl [`New collection`](API/CollectionClass.md#new-collection). Diese Collection lassen sich ohne eine spezifische Zugriffskontrolle bearbeiten, aber nicht zwischen Prozessen teilen.
+- shared Collections mit dem Befehl [`New shared collection`](API/CollectionClass.md#new-shared-collection). Diese Collections lassen sich zwischen Prozessen teilen, inkl. preemptive Threads. Der Zugriff auf diese Collections wird über [`Use...End use`](Concepts/shared.md#useend-use) Strukturen gesteuert.
 
-For more information, refer to the [Shared objects and collections](Concepts/shared.md) section.
+Weitere Informationen dazu finden Sie auf der Seite [Shared Objects und Collections](Concepts/shared.md).
 
-## Collection functions
+## Collection Funktionen
 
-4D collection references benefit from special class functions (sometimes named *member functions*). Collection functions are listed in the [Class API Reference](API/CollectionClass.md) section.
+Referenzen auf 4D Collection können spezifische Klassenfunktionen nutzen, manchmal auch *Member Functions* genannt. Collection-Funktionen sind im Abschnitt [Class API Reference](API/CollectionClass.md) aufgelistet.
 
-For example:
+Beispiel:
 
 ```4d
 $newCol:=$col.copy() //deep copy of $col to $newCol
 $col.push(10;100) //add 10 and 100 to the collection
 ```
 
-Some functions return the original collection after modification, so that you can run the calls in a sequence:
+Einige Funktionen geben nach Änderung die ursprüngliche Collection zurück, so dass die Aufrufe in einer Sequenz ablaufen können:
 
 ```4d
  $col:=New collection(5;20)
@@ -79,15 +79,15 @@ Some functions return the original collection after modification, so that you ca
 ```
 
 
-### propertyPath parameter
+### Parameter propertyPath
 
 
-Several functions accept a _propertyPath_ as parameter. This parameter stands for:
+Einige Collection-Funktionen akzeptieren als Parameter einen _PropertyPath_. Dieser Parameter steht für:
 
-- either an object property name, for example "lastName"
-- or an object property path, i.e. a hierarchical sequence of sub-properties linked with dot characters, for example "employee.children.firstName".
+- Name der Objekteigenschaft, z. B. "lastName"
+- oder Pfad der Objekteigenschaft, z.B. eine Sequenz von Untereigenschaften, durch Punkte getrennt, z.B. "employee.children.firstName".
 
-**Warning:** When using functions and propertyPath parameters, you cannot use ".", "[ ]", or spaces in property names since it will prevent 4D from correctly parsing the path:
+**Warnung:** Sie können bei Funktionen und Parametern PropertyPath in Eigenschaftsnamen keine Leerzeichen oder ".", "[ ]" verwenden, da 4D den Pfad dann nicht korrekt analysieren kann:
 
 ```4d
  $vmin:=$col.min("My.special.property") //undefined

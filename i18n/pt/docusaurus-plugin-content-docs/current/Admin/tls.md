@@ -3,68 +3,68 @@ id: tls
 title: TLS Protocol (HTTPS)
 ---
 
-All 4D servers can communicate in secured mode through the TLS (Transport Layer Security) protocol:
+Todos os servidores 4D podem se comunicar em modo seguro através do protocolo TLS (Transport Layer Security):
 
-- the web server
-- the application server (client-server desktop applications)
-- the SQL server
+- o servidor web
+- o servidor de aplicação (aplicações desktop cliente-servidor)
+- o servidor SQL
 
-## Overview
+## Visão Geral
 
-The TLS protocol (successor of SSL) has been designed to secure data exchanges between two applications —mainly between a web server and a browser. This protocol is widely used and is compatible with most web browsers.
+O protocolo TLS (sucessor de SSL) foi criado para assegurar trocas de dados entre duas aplicações - principalmente entre servidor web e um navegador. Esse protocolo é amplamente usado e é compatível com a maioria dos navegadores.
 
-At the network level, the security protocol is inserted between the TCP/IP layer (low level) and the HTTP high level protocol. It has been designed mainly to work with HTTP.
+No nível de rede, o protocolo de segurança é inserido entre a capa TCP/IP (baixo nível) e o protocolo de alto nível HTTP. Foi criado principalmente para trabalhar com HTTP.
 
 Network configuration using TLS:
 
 ![](../assets/en/WebServer/tls1.png)
 
-The TLS protocol is designed to authenticate the sender and receiver and to guarantee the confidentiality and integrity of the exchanged information:
+O protocolo TLS foi criado para autenticar o emissor e o recipiente e assim garantir a confidencialidade e integridade da troca de informações:
 
-- **Authentication**: The sender and receiver identities are confirmed.
-- **Confidentiality**: The sent data is encrypted so that no third person can understand the message.
-- **Integrity**: The received data has not been changed, by accident or malevolently.
+- **Authenticação**: As identidades do emissor e do receptor são confirmadas.
+- **Confidencialidade**: O dado enviado é criptografado para que um terceiro não possa entender a mensagem.
+- **Integridade**: Os dados recebidos não foram modificados, seja por acidente ou com má intenção.
 
-TLS uses a public key encryption technique based on a pair of asymmetric keys for encryption and decryption: a public key and a private key. The private key is used to encrypt data. The sender (the website) does not give it to anyone. The public key is used to decrypt the information and is sent to the receivers (web browsers) through a certificate. When using TLS with the Internet, the certificate is delivered through a certification authority, such as Verisign®. The website pays the Certificate Authority to deliver a certificate which guaranties the server authentication and contains the public key allowing to exchange data in a secured mode.
-> For more information on the encryption method and the public and private key issues, refer to the `ENCRYPT BLOB` command description.
+TLS usa uma técnica de criptografia de chave pública baseado em duas chaves assimétricas para criptografia e descriptografia: uma chave pública e outra privada. A chave privada é usada para criptografar os dados. O emissor (o website) não dá essa chave para ninguém. A chave pública é usada para decriptografar a informação e enviá-la para os recipientes (navegadores web) através de um certificado. Quando usar TLS com a Internet, o certificado é entregue através de uma autoridade de certificação, como Verisign®. O website paga a Autoridade de Certificação para entregar um certificado que garante a autenticação do servidor e contém a chave pública que permite a troca de dados em um modo seguro.
+> Para saber mais sobre o método de criptografia e chaves privadas e públicas, veja a descrição do comando `ENCRYPT BLOB`.
 
-## Minimum version
+## Versão mínima
 
-By default, the minimum version of the secured protocol accepted by the server is TLS 1.2. You can modify this value by using the `Min TLS version` selector with the `SET DATABASE PARAMETER command`.
+Como padrão, a versão mínima de um protocolo de segurança aceito pelo servidor é TLS 1.2. Pode modificar esse valor usando o seletor `Min TLS version` com o comando `SET DATABASE PARAMETER`.
 
-You can control the level of security of your web server by defining the [minimum TLS version](WebServer/webServerConfig.md#minimum-tls-version) accepted for connections.
+Pode controlar o nível de segurança de seu servidor web definindo a versão [TLS mínima](WebServer/webServerConfig.md#minimum-tls-version) aceita para conexões.
 
-## How to get a certificate?
+## Como obter o certificado?
 
-A server working in secured mode means that you need a digital certificate from a certification authority. This certificate contains various information such as the site ID as well as the public key used to communicate with the server. This certificate is transmitted to the clients (e.g. Web browsers) connecting to this server. Once the certificate has been identified and accepted, the communication is made in secured mode.
-> Web browsers authorize only the certificates issued by a certification authority referenced in their properties.
+Um servidor trabalhando em modo seguro significa que precisa de um certificado digital de uma autoridade de certificações. Esse certificado contém várias informações tais como a ID do site assim como a chave pública usada para comunicar com o servidor. Esse certificado é transmitido aos clientes (por exemplo os navegadores Web) conectando a esse servidor. Quando o certificado tiver sido identificado e aceito, a comunicação é feita em modo seguro.
+> Navegadores web autorizam apenas os certificados emitidos por autoridades de certificação referenciados em suas propriedades.
 
 ![](../assets/en/WebServer/tls2.png)
 
-The certification authority is chosen according to several criteria. If the certification authority is well known, the certificate will be authorized by many browsers, however the price to pay will be expensive.
+A autoridade de certificação é escolhida de acordo com vários critérios. Se a autoridade de certificação for bem reconhecida, o certificado será autorizado por vários navegadores, mas o preço pode ser caro.
 
-To get a digital certificate:
+Para obter um certificado digital:
 
-1. Generate a private key using the `GENERATE ENCRYPTION KEYPAIR` command.
-> **Warning**: For security reasons, the private key should always be kept secret. Actually, it should always remain with the server machine. For the Web server, the Key.pem file must be placed in the Project folder.
+1. Crie uma chave privada usando o comando `GENERATE ENCRYPTION KEYPAIR`.
+> **Aviso**: por razões de segurança, a chave privada deve ser sempre mantida em segredo. Na verdade deve ser mantida sempre na máquina servidor. Para o servidor web, o arquivo Key.pem deve ser localizado na pasta Project.
 
-2. Use the `GENERATE CERTIFICATE REQUEST` command to issue a certificate request.
+2. Use o comando `GENERATE CERTIFICATE REQUEST` para emitir uma petição de certificado.
 
-3. Send the certificate request to the chosen certificate authority. To fill in a certificate request, you might need to contact the certification authority. The certification authority checks that the information transmitted are correct. The certificate request is generated in a BLOB using the PKCS format encoded in base64 (PEM format). This principle allows you to copy and paste the keys as text and to send them via E-mail without modifying the key content. For example, you can save the BLOB containing the certificate request in a text document (using the `BLOB TO DOCUMENT` command), then open and copy and paste its content in a mail or a Web form to be sent to the certification authority.
+3. Envie a petição de certificado à autoridade de certificação escolhida. Para preencher uma petição de certificado, pode ser necessário entrar em contato com a autoridade de certificação. A autoridade checa que a informação transmitida seja correta. A petição de certificado é gerada em um BLOB usando o formato PKCS codificado em base64 (formato PEM). Esse princípio permite que copie e cole as chaves como texto e as envie via E-mail sem modificar o conteúdo da chave. Por exemplo pode salvar o BLOB que contém a petição de certificado em um documento texto (usando o comando `BLOB TO DOCUMENT`), e então abrir e copiar e colar seu conteúdo em um mail ou um formulário web a ser enviado para a autoridade de certificação.
 
-4. Once you get your certificate, create a text file named “cert.pem” and paste the contents of the certificate into it. You can receive a certificate in different ways (usually by email or HTML form). 4D accepts all platform-related text formats for certificates (OS X, PC, Linux, etc.). However, the certificate must be in PEM format, *i.e.*, PKCS encoded in base64.
-> CR line-ending characters are not supported on their own; you must use CRLF or LF.
+4. Quando tiver o certificado, crie um arquivo texto chamado "cert.pem" e cole seu conteúdo do certificado dentro dele. Pode receber um certificado de várias maneiras (geralmente por email ou formulário HTML). 4D aceita todos os formatos de texto relacionados à plataformas para certificados (OS X, PC, Linux, etc). Entretanto o certificado deve ser no formato PEM, *ou seja*, PKCS codificado em base64.
+> Caracteres CR final de linha não são compatíveis em si; deve usar ou CRLF ou LF.
 
-5. Place the “cert.pem” file in the [appropriate location](#installation-and-activation).
+5. Coloque o arquivo “cert.pem” no [local apropriado](#installation-and-activation).
 
-The 4D server can now work in a secured mode. A certificate is valid between 3 months to a year.
+O servidor 4D pode trabalhar em modo seguro. Um certificado é válido de 3 meses a um ano.
 
-## Installation and activation
+## Instalação e ativação
 
 ### Installing `key.pem` and `cert.pem` files
 
 To be able to use the TLS protocol with the server, you must install the **key.pem** (document containing the private encryption key) and **cert.pem** (document containing the certificate) at the appropriate location(s). Different locations are required depending on the server on which you want to use TLS.
-> Default *key.pem* and *cert.pem* files are provided with 4D. For a higher level of security, we strongly recommend that you replace these files with your own certificates.
+> Arquivos padrão *key.pem* e *cert.pem* são oferecidos com 4D. Para um maior nível de segurança, recomendamos fortemente que esses arquivos sejam substituídos por seus próprios certificados.
 
 #### With the web server
 
@@ -73,7 +73,7 @@ To be used by the 4D web server, the **key.pem** and **cert.pem** files must be 
 - with 4D in local mode or 4D Server, next to the [project folder](Project/architecture.md#project-folder)
 - with 4D in remote mode, in the client database folder on the remote machine (for more information about the location of this folder, see the [`Get 4D folder`](https://doc.4d.com/4dv19/help/command/en/page485.html) command).
 
-You must copy these files manually on the remote machine.
+Deve copiar esses arquivos manualmente na máquina remota.
 
 #### With the application server (client-server desktop applications)
 
@@ -86,20 +86,20 @@ To be used by the 4D application server, the **key.pem** and **cert.pem** files 
 
 To be used by the 4D SQL server, the **key.pem** and **cert.pem** files must be placed next to the [project folder](Project/architecture.md#project-folder).
 
-### Enabling TLS
+### Ativar TLS
 
-The installation of **key.pem** and **cert.pem** files makes it possible to use TLS with the 4D server. However, in order for TLS connections to be accepted by the server, you must enable them:
+A instalação de arquivos **key.pem** e **cert.pem** torna possível usar TLS com o servidor 4D. Entretanto para que as conexões TLS sejam aceitas pelo servidor, precisa ativá-las:
 
-- With the 4D web server, you must [enable HTTPS](WebServer/webServerConfig.md#enable-https). You can set the [HSTS option](WebServer/webServerConfig.md#enable-hsts) to redirect browsers trying to connect in http mode.
-- With the application server, you must select the **Encrypt Client-Server Communications** option in the "Client-server/Network options" page of the Settings dialog box.
-- With the SQL server, you must select the **Enable TLS** option in the "SQL" page of the Settings dialog box.
+- Com o servidor 4D web, precisa ativar HTTPS [](WebServer/webServerConfig.md#enable-https). Pode estabelecer a opção [HSTS ](WebServer/webServerConfig.md#enable-hsts) para redirigir os navegadores que tentem conectar no modo http.
+- Com o servidor de aplicação, deve selecionar a opção **Encrypt Client-Server Communications** na página "Client-server/Network options" do diálogo de configurações.
+- Com o servidor SQL deve selecionar a opção **Ativar TLS** na página "SQL" do diálogo configurações.
 
 > The 4D web server also supports [HSTS option](WebServer/webServerConfig.md#enable-hsts) to declare that browsers should only interact with it via secure HTTPS connections.
 
 ## Perfect Forward Secrecy (PFS)
 
-[PFS](https://en.wikipedia.org/wiki/Forward_secrecy) adds an additional layer of security to your communications. Rather than using pre-established exchange keys, PFS creates session keys cooperatively between the communicating parties using Diffie-Hellman (DH) algorithms. The joint manner in which the keys are constructed creates a "shared secret" which impedes outside parties from being able to compromise them.
+[PFS](https://en.wikipedia.org/wiki/Forward_secrecy) adiciona mais um nível de segurança para suas comunicações. Ao invés de usar chaves de troca pré-estabelecidas, PFS cria chaves de sessão cooperativamente entre as partes que se comunicam usando os algoritmos Difie-Hellman (DH). A maneira conjunta com a qual essas chaves são construídas cria um "segredo compartilhado" que impede partes externas de as comprometerem.
 
-When TLS is enabled on the server, PFS is automatically enabled. If the *dhparams.pem* file (document containing the server's DH private key) does not already exist, 4D will automatically generate it with a key size of 2048. The initial generation of this file could take several minutes. The file is placed with the [*key.pem* and *cert.pem* files](#key-pem-and-cert-pem-files).
+Quando TLS estiver ativado no servidor, PFS é ativado automaticamente. Se o arquivo *dhparams.pem* (documento que contém a chave privada DH do servidor) ainda não existir, 4D vai gerar o arquivo automaticamente com um tamanho de chave de  2048. A geração inicial deste arquivo pode levar vários minutos. O arquivo é colocado com  os arquivos [*key.pem* e *cert.pem*](#key-pem-and-cert-pem-files).
 
-If you use a [custom cipher list](WebServer/webServerConfig.md##cipher-list) and want to enable PFS, you must verify that it contains entries with DH or ECDH (Elliptic-curve Diffie–Hellman) algorithms.
+Se utilizar uma [lista de cifrado personalizada](WebServer/webServerConfig.md##cipher-list) e quiser habilitar o PFS, deve comprovar que contenha entradas com algoritmos DH ou ECDH (Elliptic-curve Diffie-Hellman).

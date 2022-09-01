@@ -1,25 +1,25 @@
 ---
 id: rollback
-title: Rollback Page
-sidebar_label: Rollback Page
+title: Seite Zurückfahren
+sidebar_label: Seite Zurückfahren
 ---
 
-You use the Rollback page to access the rollback function among the operations carried out on the data file. It resembles an undo function applied over several levels. It is particularly useful when a record has been deleted by mistake in a database.
+Auf dieser Seite können Sie auf die Funktion Rollback für die im Logbuch ausgeführten Operationen zugreifen. Sie arbeitet ähnlich wie die Operation Rückgängig auf mehreren Ebenen. Das ist besonders hilfreich, wenn ein Datensatz versehentlich in der Anwendung gelöscht wurde.
 
-This function is only available when the application functions with a data log file.
+Diese Funktion ist nur verfügbar, wenn die Anwendung mit einem Logbuch arbeitet.
 
 ![](../assets/en/MSC/MSC_rollback1.png)
 
-> If the database is encrypted and no valid data key corresponding to the open log file has been provided, encrypted values are not displayed in the **Values** column and a dialog requesting the passphrase or the data key is displayed if you click the **Rollback** button.
+> Ist die Anwendung verschlüsselt und wird kein gültiger Verschlüsselungscode für das offene Logbuch geliefert, erscheinen verschlüsselte Werte nicht in der Spalte **Werte**. Klicken Sie auf die Schaltfläche **Rollback**, erscheint ein Dialogfenster, das die Passphrase oder den Datenschlüssel anfordert.
 
-The contents and functioning of the list of operations are the same as for the [Activity analysis](analysis.md) window.
+Die Liste ist genauso aufgebaut und funktioniert wie auf der Seite [Aktivitätsanalyse](analysis.md).
 
-To perform a rollback among the operations, select the row after which all operations must be cancelled. The operation of the selected row will be the last kept. If, for example, you wish to cancel a deletion, select the operation located just before it. The deletion operation, as well as all subsequent operations, will be cancelled.
+Um ein Rollback in den Operationen auszuführen, wählen Sie die Zeile, nach der alle Operationen annulliert werden sollen. Die Operation der gewählten Zeile bleibt als letzte erhalten. Wollen Sie z. B. einen Löschvorgang aufheben, wählen Sie die direkt davor liegende Operation. Diese bleibt dann erhalten, alle nachfolgenden Operationen werden annulliert.
 
 ![](../assets/en/MSC/MSC_rollback2.png)
 
-Next click on the **Rollback** button. 4D asks you to confirm the operation. If you click **OK**, the data is then restored to the exact state it was in at the moment of the selected action.
+Als nächstes klicken Sie auf die Schaltfläche **Rollback**. Auf dem Bildschirm erscheint ein Dialogfenster zum Bestätigen. Klicken Sie auf die Schaltfläche **OK**, werden die Daten exakt in dem Stadium wiederhergestellt, das zum Zeitpunkt der gewählten Operation galt.
 
-You use the menu found at the bottom of the window to select a data log file to be used when you apply the rollback function to a database restored from an archive file. In this case, you must specify the data log file corresponding to the archive.
+Über das PopUp-Menü am unteren Rand wählen Sie das passende Logbuch zum Ausführen der Rollback-Funktion in einer wiederhergestellten Datenbank. In diesem Fall müssen Sie das passende Logbuch der Datei im Archiv angeben.
 
-Here is how the rollback function works: when the user clicks the **Rollback** button, 4D shuts the current database and restores the last backup of the database data. The restored database is then opened and 4D integrates the operations of the data log file up through to the selected operation. If the database has not yet been saved, 4D starts with a blank data file.
+Rollback funktioniert folgendermaßen: Klickt der Benutzer auf die Schaltfläche **Rollback**, schließt 4D die aktuelle Anwendung und stellt das letzte Backup der Daten der Anwendung wieder her. Die wiederhergestellte Anwendung wird dann geöffnet. 4D integriert die Operationen des Logbuchs bis zur gewählten Operation. Wurde die Anwendung noch nicht gesichert, startet 4D mit einer leeren Datendatei.

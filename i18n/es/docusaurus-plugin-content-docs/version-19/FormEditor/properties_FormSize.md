@@ -1,79 +1,79 @@
 ---
 id: formSize
-title: Form Size
+title: Tamaño formulario
 ---
 
  
-4D lets you set the size of both the form and the [window](properties_WindowSize.md). These properties are interdependent and your application interface results from their interaction.
+4D permite definir el tamaño tanto del formulario como de la [ventana](properties_WindowSize.md). Estas propiedades son interdependientes y su interfaz de aplicación es el resultado de su interacción.
 
-Size options depend on the value of the **Size based on** option.
-
----
-
-## Size based on
-
-* **Automatic Size**: The size of the form will be that necessary to display all the objects, to which will be added the margin values (in pixels) entered in the [**Hor. Margin**](#hor-margin) and [**Vert. Margin**](#vert-margin) fields. You can choose this option when you want to use active objects placed in an offscreen area (*i.e.*, outside the bounding rectangle of the window) with an automatic size window. Thanks to this option, the presence of these objects will not modify the size of the window.
-
-* **Set Size**: The size of the form will be based on what you enter (in pixels) in the [**Width**](#width) and [**Height**](#height) fields.
-
-* `\&#060;object name&#062;`: The size of the form will be based on the position of the selected form object. For example, if you choose an object that is placed in the bottom-right part of the area to be displayed, the form size will consist of a rectangle whose upper left corner will be the origin of the form and the lower right corner will correspond to that of the selected object, plus any margin values.
-
-> For output forms, only the [**Hor. margin**](#hor-margin) or [**Width**](width) fields are available.
-
-#### JSON Grammar
-
-| Name           | Data Type | Possible Values                                       |
-| -------------- | --------- | ----------------------------------------------------- |
-| formSizeAnchor | string    | Name of object to use to defined the size of the form |
+Las opciones de tamaño dependen del valor de la opción **Tamaño basado en**.
 
 ---
 
-## Height
+## Tamaño basado en
+
+* **Automatic Size**: The size of the form will be that necessary to display all the objects, to which will be added the margin values (in pixels) entered in the [**Hor Margin**](#hor-margin) and [**Vert Margin**](#vert-margin) fields. Puede elegir esta opción cuando desee utilizar objetos activos situados en un área fuera de la pantalla (*es decir*, fuera del rectángulo delimitador de la ventana) con una ventana de tamaño automático. Gracias a esta opción, la presencia de estos objetos no modificará el tamaño de la ventana.
+
+* **Definir tamaño**: el tamaño del formulario se basará en lo que introduzca (en píxeles) en los campos [**Ancho**](#width) y [**Alto**](#height).
+
+* `\&#060;object name&#062;`: The size of the form will be based on the position of the selected form object. Por ejemplo, si elige un objeto situado en la parte inferior derecha del área a mostrar, el tamaño del formulario consistirá en un rectángulo cuya esquina superior izquierda será el origen del formulario y la esquina inferior derecha corresponderá a la del objeto seleccionado, más los valores de los márgenes.
+
+> For output forms, only the [**Hor margin**](#hor-margin) or [**Width**](width) fields are available.
+
+#### Gramática JSON
+
+| Nombre         | Tipos de datos | Valores posibles                                                   |
+| -------------- | -------------- | ------------------------------------------------------------------ |
+| formSizeAnchor | string         | Nombre del objeto a utilizar para definir el tamaño del formulario |
+
+---
+
+## Altura
 
 Height of the form (in pixels) when the [form size](#size-based-on) is **Set size**.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name   | Data Type | Possible Values |
-| ------ | --------- | --------------- |
-| height | number    | integer value   |
+| Nombre | Tipos de datos | Valores posibles   |
+| ------ | -------------- | ------------------ |
+| height | number         | valor entero largo |
 
 ---
 
-## Hor. Margin
+## Margen hor.
 
 Value to add (in pixels) to the right margin of the form when the [form size](#size-based-on) is **Automatic size** or `\&#060;object name&#062;`
 
 This value also determines the right-hand margins of forms used in the Label editor.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name        | Data Type | Possible Values |
-| ----------- | --------- | --------------- |
-| rightMargin | number    | integer value   |
+| Nombre      | Tipos de datos | Valores posibles   |
+| ----------- | -------------- | ------------------ |
+| rightMargin | number         | valor entero largo |
 
 ---
 
-## Vert. Margin
+## Margen hor.
 
 Value to add (in pixels) to the bottom margin of the form when the [form size](#size-based-on) is **Automatic size** or `\&#060;object name&#062;`.
 
 This value also determines the top margins of forms used in the Label editor.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name         | Data Type | Possible Values |
-| ------------ | --------- | --------------- |
-| bottomMargin | number    | integer value   |
+| Nombre       | Tipos de datos | Valores posibles   |
+| ------------ | -------------- | ------------------ |
+| bottomMargin | number         | valor entero largo |
 
 ---
 
-## Width
+## Ancho
 
 Width of the form (in pixels) when the [form size](#size-based-on) is **Set size**.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name  | Data Type | Possible Values |
-| ----- | --------- | --------------- |
-| width | number    | integer value   |
+| Nombre | Tipos de datos | Valores posibles   |
+| ------ | -------------- | ------------------ |
+| ancho  | number         | valor entero largo |

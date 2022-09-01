@@ -3,17 +3,17 @@ id: onUrlResourceLoading
 title: On URL Resource Loading
 ---
 
-| Code | Can be called by                            | Definition                               |
-| ---- | ------------------------------------------- | ---------------------------------------- |
-| 48   | [Web Area](FormObjects/webArea_overview.md) | A new resource is loaded in the Web area |
+| Code | Peut être appelé par                         | Définition                                          |
+| ---- | -------------------------------------------- | --------------------------------------------------- |
+| 48   | [Zones Web](FormObjects/webArea_overview.md) | Une nouvelle ressource est chargée dans la zone Web |
 
 
 ## Description
 
-This event is generated each time a new resource (picture, frame, etc.) is loaded on the current Web page.
+Cet événement est généré chaque fois qu'une nouvelle ressource (image, cadre, etc.) est chargée sur la page Web courante.
 
-The [Progression](FormObjects/properties_WebArea.md#progression) variable associated with the area lets you find out the current state of the loading.
+La variable [Progression](FormObjects/properties_WebArea.md#progression) associée à la zone vous permet de connaître l'état du chargement.
 
 
-### See also
+### Voir également
 [`On Open External Link`](onOpenExternalLink.md)

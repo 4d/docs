@@ -1,302 +1,302 @@
 ---
 id: propertiesEntry
-title: Entry
+title: 入力
 ---
 
 
-## Auto Spellcheck
+## 自動スペルチェック
 
-4D includes an integrated and customizable spell-check utility. Text type [inputs](input_overview.md) can be checked, as well as [4D Write Pro](writeProArea_overview.md) documents.
+4D にはカスタマイズ可能なスペルチェック機能がビルトインされています。 スペルチェックはテキスト型の [入力](input_overview.md) オブジェクト、そして [4D Write Pro](writeProArea_overview.md)ドキュメントに対して実行可能です。
 
-The Auto Spellcheck property activates the spell-check for each object. When used, a spell-check is automatically performed during data entry. You can also execute the `SPELL CHECKING` 4D language command for each object to be checked.
+自動スペルチェックプロパティは、各オブジェクトのスペルチェックを有効にします この場合、スペルチェックはタイプ中に自動的に実行されます。 チェックしたいオブジェクトそれぞれに対して `SPELL CHECKING` 4Dランゲージコマンドを呼び出して実行することもできます。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name       | Data Type | Possible Values |
-| ---------- | --------- | --------------- |
-| spellcheck | boolean   | true, false     |
+| 名称         | データタイプ  | とりうる値       |
+| ---------- | ------- | ----------- |
+| spellcheck | boolean | true, false |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[4D Write Pro area](writeProArea_overview.md) - [Input](input_overview.md)
-
----
-
-## Context Menu
-
-Allows the user access to a standard context menu in the object when the form is executed.
-
-For a picture type [input](input_overview.md), in addition to standard editing commands (Cut, Copy, Paste and Clear), the menu contains the **Import...** command, which can be used to import a picture stored in a file, as well as the **Save as...** command, which can be used to save the picture to disk. The menu can also be used to modify the display format of the picture: the **Truncated non-centered**, **Scaled to fit** and **Scaled to fit centered prop.** options are provided. The modification of the [display format](properties_Display#picture-format) using this menu is temporary; it is not saved with the record.
-
-For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md), in addition to standard editing commands, the context menu provides the following commands:
-
-- **Fonts...**: displays the font system dialog box
-- **Recent fonts**: displays the names of recent fonts selected during the session. The list can store up to 10 fonts (beyond that, the last font used replaces the oldest). By default, this list is empty and the option is not displayed. You can manage this list using the `SET RECENT FONTS` and `FONT LIST` commands.
-- commands for supported style modifications: font, size, style, color and background color. When the user modifies a style attribute via this pop-up menu, 4D generates the `On After Edit` form event.
-
-For a [Web Area](webArea_overview.md), the contents of the menu depend of the rendering engine of the platform. It is possible to control access to the context menu via the [`WA SET PREFERENCE`](https://doc.4d.com/4Dv17R6/4D/17-R6/WA-SET-PREFERENCE.301-4310780.en.html) command.
-
-#### JSON Grammar
-
-| Name        | Data Type | Possible Values                       |
-| ----------- | --------- | ------------------------------------- |
-| contextMenu | string    | "automatic" (used if missing), "none" |
-
-#### Objects Supported
-
-[Input](input_overview.md) - [Web Area](webArea_overview.md) - [4D Write Pro areas](writeProArea_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md) - [入力](input_overview.md)
 
 ---
 
-## Enterable
+## コンテキストメニュー
 
-The Enterable attribute indicates whether users can enter values into the object.
+このプロパティを有効にすると、フォームの実行中にオブジェクトに対して標準のコンテキストメニューが使用できるようになります。
 
-Objects are enterable by default. If you want to make a field or an object non-enterable for that form, you can disable the Enterable property for the object. A non-enterable object only displays data. You control the data by methods that use the field or variable name. You can still use the `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` and `On Losing Focus` form events with non-enterable objects. This makes it easier to manage custom context menus and lets you design interfaces where you can drag-and-drop and select non-enterable variables.
+ピクチャー型の [入力](input_overview.md) オブジェクトの場合、標準の編集コマンド (カット、コピー、ペースト、そしてクリア) に加え、ファイルからピクチャーを読み込むために使用することのできる **読み込み...** コマンド、ピクチャーをディスクに保存するのに使用する **別名で保存...** コマンドなどがあります。 また、メニューを使用してピクチャーの表示フォーマットを変更することもできます。**トランケート (中央合わせなし)**、**スケーリング** そして **スケーリング (中央合わせ/プロポーショナル)** から選択できます。 このメニューを使用した [表示フォーマット](properties_Display#ピクチャーフォーマット) の変更は一時的なものであり、レコードには保存されません。
 
-When this property is disabled, any pop-up menus associated with a list box column via a list are disabled.
+[マルチスタイル](properties_Text.md#マルチスタイル) オプションがチェックされているテキスト型の [入力](input_overview.md) オブジェクトの場合、標準の編集コマンド以外に以下の様なコマンドを使用することができます:
 
-#### JSON Grammar
+- **フォント...**: フォントシステムダイアログボックスを表示させます。
+- **最近使用したフォント**: セッション中に最近使用されたフォント名を表示します。 リストには最大で 10フォントまで表示されます (それ以上は古いものから置き換えられていきます)。 デフォルトではリストは空になっているので、このオプションは表示されません。 このリストは `SET RECENT FONTS` と `FONT LIST` コマンドを使用して管理することができます。
+- スタイルの変更をおこなうためのコマンド: スタイル、サイズ、カラー、背景色。 このポップアップメニューを使用してユーザーがスタイル属性を編集する と、4D は `On After Edit` フォームイベントを生成します。
 
-| Name      | Data Type | Possible Values |
-| --------- | --------- | --------------- |
-| enterable | boolean   | true, false     |
+[Webエリア](webArea_overview.md) の場合、メニューの内容はプラットフォームの描画エンジンにより設定されます。 コンテキストメニューへのアクセスは [`WA SET PREFERENCE`](https://doc.4d.com/4Dv18/4D/18/WA-SET-PREFERENCE.301-4504849.ja.html) コマンドを使用して制御できます。
 
-#### Objects Supported
+#### JSON 文法
 
-[4D Write Pro areas](writeProArea_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Progress Bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
+| 名称          | データタイプ | とりうる値                           |
+| ----------- | ------ | ------------------------------- |
+| contextMenu | string | "automatic" (省略時のデフォルト), "none" |
 
----
+#### 対象オブジェクト
 
-## Entry Filter
-
-An entry filter controls exactly what the user can type during data entry. Unlike [required lists](properties_RangeOfValues.md#required-list) for example, entry filters operate on a character-by-character basis. For example, if a part number always consists of two letters followed by three digits, you can use an entry filter to restrict the user to that pattern. You can even control the particular letters and numbers.
-
-An entry filter operates only during data entry. It has no effect on data display after the user deselects the object. In general, you use entry filters and [display formats](properties_Display.md) together. The filter constrains data entry and the format ensures proper display of the value after data entry.
-
-During data entry, an entry filter evaluates each character as it is typed. If the user attempts to type an invalid character (a number instead of a letter, for example), 4D simply does not accept it. The null character remains unchanged until the user types a valid character.
-
-Entry filters can also be used to display required formatting characters so that the user need not enter them. For example, an American telephone number consists of a three-digit area code, followed by a seven-digit number that is broken up into two groups of three and four digits, respectively. A display format can be used to enclose the area code in parentheses and display a dash after the third digit of the telephone number. When such a format is used, the user does not need to enter the parentheses or the dashes.
-
-### Defining an entry filter
-
-Most of the time, you can use one of the [built-in filters](#default-entry-filters) of 4D for what you need; however, you can also create and use custom filters:
-
-- you can directly enter a filter definition string
-- or you can enter the name of an entry filter created in the Filters editor in the Toolbox. The names of custom filters you create begin with a vertical bar (|).
-
-For information about creating entry filters, see [Filter and format codes](https://doc.4d.com/4Dv18/4D/18/Filter-and-format-codes.300-4575706.en.html).
-
-### Default entry filters
-
-Here is a table that explains each of the entry filter choices in the Entry Filter drop-down list:
-
-| Entry Filter                    | Description                                                                                                                                  |
-| ------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| ~A                              | Allow any letters, but convert to uppercase.                                                                                                 |
-| &9                              | Allow only numbers.                                                                                                                          |
-| &A                              | Allow only capital letters.                                                                                                                  |
-| &a                              | Allow only letters (uppercase and lowercase).                                                                                                |
-| &@                              | Allow only alphanumeric characters. No special characters.                                                                                   |
-| ~a##                            | State name abbreviation (e.g., CA). Allow any two letters, but convert to uppercase.                                                         |
-| !0&9##/##/##                    | Standard date entry format. Display zeros in entry spaces. Allow any numbers.                                                                |
-| !0&9 Day: ## Month: ## Year: ## | Custom date entry format. Display zeros in entry spaces. Allow any numbers. Two entries after each word.                                     |
-| !0&9##:##                       | Time entry format. Limited to hours and minutes. Display zeros in entry spaces. Allow any four numbers, separated by a colon.                |
-| !0&9## Hrs ## Mins ## Secs      | Time entry format. Display zeros in entry spaces. Allow any two numbers before each word.                                                    |
-| !0&9Hrs: ## Mins: ## Secs: ##   | Time entry format. Display zeros in entry spaces. Allow any two numbers after each word.                                                     |
-| !0&9##-##-##-##                 | Local telephone number format. Display zeros in entry spaces. Allow any number. Three entries, hyphen, four entries.                         |
-| !_&9(###)!0###-####             | Long distance telephone number. Display underscores in first three entry spaces, zeros in remainder.                                         |
-| !0&9###-###-###                 | Long distance telephone number. Display zeros in entry spaces. Allow any number. Three entries, hyphen, three entries, hyphen, four entries. |
-| !0&9###-##-###                  | Social Security number. Display zeros in entry spaces. Allow any numbers.                                                                    |
-| ~"A-Z;0-9; ;,;.;-"              | Uppercase letters and punctuation. Allow only capital letters, numbers, spaces, commas, periods, and hyphens.                                |
-| &"a-z;0-9; ;,;.;-"              | Upper and lowercase letters and punctuation. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                         |
-| &"0-9;.;-"                      | Numbers. Allow only numbers, decimal points, and hyphens (minus sign).                                                                       |
-
-#### JSON Grammar
-
-| Name        | Data Type | Possible Values                                                          |
-| ----------- | --------- | ------------------------------------------------------------------------ |
-| entryFilter | string    | Entry filter code or Entry filter name (filter names start with &#124; ) |
-
-#### Objects Supported
-
-[Combo Box](comboBox_overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[入力](input_overview.md) - [Webエリア](webArea_overview.md) - [4D Write Pro エリア](writeProArea_overview.md)
 
 ---
 
-## Focusable
+## 入力可
 
-When the **Focusable** property is enabled for an object, the object can have the focus (and can thus be activated by the keyboard for instance). It is outlined by a gray dotted line when it is selected — except when the [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) option has also been selected.
+入力可属性は、ユーザーがオブジェクトに値を入力できるかどうかを指定します。
 
-> An [input object](input_overview.md) is always focusable if it has the [Enterable](#enterable) property.
+すべてのアクティブオブジェクトはデフォルトで入力可です。 フォーム上の特定のフィールドやオブジェクトを入力不可にしたい場合、入力可チェックボックスの選択を解除します。 入力不可のオブジェクトはデータの表示のみをおこないます。 当該フィールド名や変数名を使用するメソッドによってデータを制御します。 入力不可オブジェクトでも `On Clicked`, `On Double Clicked`, `On Drag Over`, `On Drop`, `On Getting Focus` そして `On Losing Focus` フォームイベントは使用できます。 これらによって、カスタムコンテキストメニューの管理が容易になり、入力不可変数をドラッグ＆ドロップしたり選択したりできるインターフェースをデザインすることができます。
 
-- ![](../assets/en/FormObjects/property_focusable1.png)<br/>Check box shows focus when selected
+このプロパティを無効にした場合、リストによってリストボックス列に関連付けられたポップアップメニューも使用できなくなります。
 
-- ![](../assets/en/FormObjects/property_focusable2.png)<br/>Check box is selected but cannot show focus|
+#### JSON 文法
 
-When the **Focusable** property is selected for a non-enterable object, the user can select, copy or even drag-and-drop the contents of the area.
+| 名称        | データタイプ  | とりうる値       |
+| --------- | ------- | ----------- |
+| enterable | boolean | true, false |
 
-#### JSON Grammar
+#### 対象オブジェクト
 
-| Name      | Data Type | Possible Values |
-| --------- | --------- | --------------- |
-| focusable | boolean   | true, false     |
-
-#### Objects Supported
-
-[4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md) - [Input](input_overview.md) - [List Box](listbox_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md)
+[4D Write Pro エリア](writeProArea_overview.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [進捗インジケーター](progressIndicator.md) - [ルーラー](ruler.md) - [ステッパー](stepper.md)
 
 ---
 
-## Keyboard Layout
+## 入力フィルター
 
-This property associates a specific keyboard layout to an [input object](input_overview.md). For example, in an international application, if a form contains a field whose contents must be entered in Greek characters, you can associate the "Greek" keyboard layout with this field. This way, during data entry, the keyboard configuration is automatically changed when this field has the focus.
+**日本語利用時の注意点**: 入力フィルターは日本語IME と互換性がありません。入力文字種の制限及び#を使用した入力文字数の制限もできません。たとえば半角数字のみを 2文字だけ入力を許可する目的で、入力フィルターに&9##と指定しても、IME経由での全角数字やその他日本語文字の入力を防ぐことはできませんし、任意の数の文字が入力できてしまいます。アプリケーション仕様としてこのような制御が必要な場合は 4Dコマンドを使用する必要があります。<br /><br /> 入力フィルターを使用するとデータ入力中にユーザーがタイプできる文字を制御できます。 [指定リスト](properties_RangeOfValues.md#指定リスト) とは異なり、入力フィルターは文字ごとに処理がおこなわれます。 たとえば、パーツ番号が常に 2つの文字とそれに続く 3つの数字で構成されるとき、入力フィルターを通してそのパターンを強制することができます。 さらに特定の文字や数字のみを使用するよう制御することもできます。
 
-By default, the object uses the current keyboard layout.
+入力フィルターはデータ入力時にのみ動作します。 オブジェクトの選択をユーザーが解除した後のデータ表示には効果がありません。 通常は、入力フィルターを [表示フォーマット](properties_Display.md) と一緒に使用します。 フィルターはデータ入力を制約し、表示フォーマットはデータ入力後の値の表示を制御します。
 
-> You can also set and get the keyboard dynamically using the `OBJECT SET KEYBOARD LAYOUT` and `OBJECT Get keyboard layout` commands.
+データ入力中、タイプされるたびに入力フィルターは文字を評価します。 ユーザーが無効な入力をすると (たとえば文字の代わりに数字)、4D はその入力を受け付けません。 ユーザーが有効な入力をおこなうまで値は変更されません。
 
-#### JSON Grammar
+入力フィルターに表示フォーマットを併用することで、形式的な文字をユーザーが入力しなくてすむようにできます。 たとえば、アメリカ合衆国の電話番号は 3桁のエリアコードに、3桁と4桁に分割される 7桁の番号が続きます。 エリアコードをカッコでくくり、電話番号の3つ目の数字の後にダッシュを表示するような表示フォーマットを利用することができます。 このようなフォーマットが指定されている場合、カッコやダッシュをユーザーが入力する必要はありません。
 
-| Name            | Data Type | Possible Values                                                             |
-| --------------- | --------- | --------------------------------------------------------------------------- |
-| keyboardDialect | text      | Language code, for example "ar-ma" or "cs". See RFC3066, ISO639 and ISO3166 |
+### 入力フィルターの定義
 
-#### Objects Supported
+ほとんどの場合、あらかじめ用意されている 4D の [ビルトインフィルター](#デフォルト入力フィルター) を使用することができます。しかし、カスタマイズされたフィルターを作成することも可能です:
 
-[4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md)
+- 入力フィルターコードを直接入力することができます。
+- ツールボックスのフィルターエディターで入力フィルターを作成し、その名前を指定することもできます。 開発者が作成したカスタムフィルターはリストの先頭に表示されます。
+
+入力フィルターの作成に関する詳細は [フィルターとフォーマットのコード](https://doc.4d.com/4Dv18/4D/18/Filter-and-format-codes.300-4575706.ja.html) を参照ください。
+
+### デフォルト入力フィルター
+
+入力フィルタードロップダウンリストから選択できる入力フィルターの説明は以下の表の通りです:
+
+| 入力フィルター              | 詳細                                                                   |
+| -------------------- | -------------------------------------------------------------------- |
+| ~A                   | すべての文字が入力可能、ただし大文字に変換されます。                                           |
+| &9                   | 数字のみ入力可能。                                                            |
+| &A                   | 大文字の文字だけが入力可能。                                                       |
+| &a                   | 文字だけが入力可能 (大文字と小文字)。                                                 |
+| &@                   | 数字と文字が入力可能。 特殊記号を除きます。                                               |
+| ~a##                 | 2桁の任意の文字が入力可能、大文字に変換されます。 (アメリカ合衆国の州名などに使われます)                       |
+| !0&9##/##/##         | 標準の日付入力フォーマット。 入力領域に 0 を表示します。 任意の数値が入力可能。                           |
+| !0&9##年##月##日        | カスタムの日付入力フォーマット。 入力領域に 0 を表示します。 任意の数値が入力可能。 年月日が 2桁ずつ入力可能。          |
+| !0&9##:##            | 時間入力フォーマット。 時と分だけが入力可能。 入力領域に 0 を表示します。 任意の4桁の数字が入力可能。               |
+| !0&9##時##分           | 時間入力フォーマット。 入力領域に 0 を表示します。 時間と分数を 2桁ずつ入力可能。                         |
+| !0&9##時##分##秒        | 時間入力フォーマット。 入力領域に 0 を表示します。 時間と分数、秒数を 2桁ずつ入力可能。                      |
+| !0&9###-####         | ローカルな郵便番号フォーマット。 入力領域に 0 を表示します。 任意の数値が入力可能。 (3桁の数字と 4桁の数字)          |
+| !_&9(###) !0###-#### | 長距離電話番号フォーマット。 先頭の 3桁の入力領域はカッコで囲み (空の場合はアンダースコアを表示し)、残りの入力領域に 0 を表示。 |
+| !0&9###-###-###      | 長距離電話番号フォーマット。 入力領域に 0 を表示します。 任意の数値が入力可能。 3桁と 3桁と 4桁の数字をハイフンで区分。    |
+| !0&9###-##-####      | アメリカ合衆国の社会保障番号フォーマット。 入力領域に 0 を表示します。 任意の数値が入力可能。                    |
+| ~"A-Z;0-9; ;,;.;-"   | 大文字の文字と句読点。 大文字の文字、数字、スペース、コンマ、ピリオド、ハイフンだけが入力可能。                     |
+| &"a-z;0-9; ;,;.;-"   | 大文字と小文字の文字と句読点。 大小の文字、数字、スペース、コンマ、ピリオド、ハイフンだけが入力可能。                  |
+| &"0-9;.;-"           | 数字。 数字、小数点、ハイフン (マイナス記号) だけが入力可能。                                    |
+
+#### JSON 文法
+
+| 名称          | データタイプ | とりうる値                                          |
+| ----------- | ------ | ---------------------------------------------- |
+| entryFilter | string | 入力フィルターコード、または入力フィルター名 (フィルター名は &#124; で始まります) |
+
+#### 対象オブジェクト
+
+[コンボボックス](comboBox_overview.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列)
 
 ---
 
-## Multiline
+## フォーカス可
 
-This property is available for [inputs objects](input_overview.md) containing expressions of the Text type and fields of the Alpha and Text type. It can have three different values: Yes, No, Automatic (default).
+オブジェクトに対し **フォーカス可** プロパティが選択されていると、そのオブジェクトはフォーカスを得ることができ、キーボードなどを使用してアクティブ化することができます。 オブジェクトはフォーカスを得ると、オブジェクトごとあるいは OS ごとに定められた方法でハイライトされます。ただし [フォーカスの四角を隠す](properties_Appearance.md#hide-focus-rectangle) オプションが選択されている場合を除きます。
 
-#### Automatic
+> [入力可](#入力可) に設定された [入力オブジェクト](input_overview.md) は常にフォーカス可です。
 
-- In single-line inputs, words located at the end of lines are truncated and there are no line returns.
-- In multiline inputs, 4D carries out automatic line returns:  
+- ![](../assets/en/FormObjects/property_focusable1.png)<br/>選択時にフォーカスを表示しているチェックボックス
+
+- ![](../assets/en/FormObjects/property_focusable2.png)<br/>選択されているが、フォーカスを表示していないチェックボックス
+
+入力できないオブジェクトに **フォーカス可** プロパティが設定されていると、ユーザーはエリアの内容を選択、コピー、およびドラッグ＆ドロップすることができます。
+
+#### JSON 文法
+
+| 名称        | データタイプ  | とりうる値       |
+| --------- | ------- | ----------- |
+| focusable | boolean | true, false |
+
+#### 対象オブジェクト
+
+[4D Write Pro エリア](writeProArea_overview.md) - [ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [ドロップダウンリスト](dropdownList_Overview.md) - [階層リスト](list_overview.md) - [入力](input_overview.md) - [リストボックス](listbox_overview.md) - [プラグインエリア](pluginArea_overview.md) - [ラジオボタン](radio_overview.md) - [サブフォーム](subform_overview.md)
+
+---
+
+## キーボードレイアウト
+
+このプロパティは [入力](input_overview.md) オブジェクトに対して特定のキーボードレイアウトを関連付けます。 たとえば、国際的なアプリケーションにおいて、フォーム内にギリシャ文字で入力しなければならないフィールドがあった場合、"ギリシャ語" のキーボードレイアウトをこのフィールドに対して関連付けることができます。 これにより、このフィールドがフォーカスを受けている場合にはデータ入力時にキーボード設定が自動的に変わります。
+
+デフォルトでは、オブジェクトはカレントのキーボードレイアウトを使用します。
+
+> このプロパティは、`OBJECT SET KEYBOARD LAYOUT` と `OBJECT Get keyboard layout` コマンドを使用して動的に設定することが可能です。
+
+#### JSON 文法
+
+| 名称              | データタイプ | とりうる値                                                            |
+| --------------- | ------ | ---------------------------------------------------------------- |
+| keyboardDialect | text   | 言語コード (例: "ar-ma", "cs" など) RFC3066, ISO639 および ISO3166 を参照ください。 |
+
+#### 対象オブジェクト
+
+[4D Write Pro エリア](writeProArea_overview.md) - [入力](input_overview.md)
+
+---
+
+## 複数行
+
+このプロパティは、テキストタイプの式や、文字およびテキストタイプのフィールドが割り当てられている [入力オブジェクト](input_overview.md) で使用できます。 値は、あり・なし・自動 (デフォルト) が選択できます。
+
+#### 自動
+
+- 一行の入力オブジェクトでは、行の最後にある単語はエリアからはみ出し、改行はおこなわれません。
+- 複数行の入力オブジェクトの場合、4D は自動で改行します:  
   ![](../assets/en/FormObjects/multilineAuto.png)
 
-#### No
+#### いいえ
 
-- In single-line inputs, words located at the end of lines are truncated and there are no line returns.
-- There are never line returns: the text is always displayed on a single row. If the Alpha or Text field or variable contains carriage returns, the text located after the first carriage return is removed as soon as the area is modified:  
+- 一行の入力オブジェクトでは、行の最後にある単語はエリアからはみ出し、改行はおこなわれません。
+- 改行はおこなわれません。テキストは常に一行で表示されます。 文字やテキストのフィールドまたは変数が改行文字を含んでいる場合、エリアが更新されるとすぐに最初のキャリッジリターンより後のテキストが取り除かれます:  
   ![](../assets/en/FormObjects/multilineNo.png)
 
-#### Yes
+#### ◯
 
-When this value is selected, the property is managed by the [Wordwrap](properties_Display.md#wordwrap) option.
+この値を選択すると、追加の [ワードラップ](properties_Display.md#ワードラップ) オプションが表示されます。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name      | Data Type | Possible Values                                   |
-| --------- | --------- | ------------------------------------------------- |
-| multiline | text      | "yes", "no", "automatic" (default if not defined) |
+| 名称        | データタイプ | とりうる値                                       |
+| --------- | ------ | ------------------------------------------- |
+| multiline | text   | "yes", "no", "automatic" (定義されていない場合のデフォルト) |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Input](input_overview.md)
+[入力](input_overview.md)
 
 ---
 
-## Placeholder
+## プレースホルダー
 
-4D can display placeholder text in the fields of your forms.
+4D では、フォームのフィールド内にプレースホルダーテキストを表示することができます。
 
-Placeholder text appears as watermark text in a field, supplying a help tip, indication or example for the data to be entered. This text disappears as soon as the user enters a character in the area:
+このテキストはフィールド内で半透明のテキストとして表示され、入力されるデータに関するヘルプ、指示、具体例などを表示します。 このテキストは、ユーザーが文字をエリアに入力した瞬間に表示されなくなります:
 
 ![](../assets/en/FormObjects/property_placeholder.png)
 
-The placeholder text is displayed again if the contents of the field is erased.
+プレースホルダーテキストは、フィールドの中身が消去されると再び表示されます。
 
-A placeholder can be displayed for the following types of data:
+プレースホルダーとして表示できるデータの型は以下の通りです:
 
-- string (text or alpha)
-- date and time when the **Blank if null** property is enabled.
+- 文字列 (テキストまたは文字)
+- 日付または時刻 (**ヌルのときブランクにする** のプロパティがチェックされている場合に限ります)
 
-You can use an XLIFF reference in the ":xliff:resname" form as a placeholder, for example:
+xliff 参照を ":xliff:resname" の形でプレースホルダーとして使用することもできます。たとえば:
 
  :xliff:PH_Lastname
 
-You only pass the reference in the "Placeholder" field; it is not possible to combine a reference with static text.
-> You can also set and get the placeholder text by programming using the [OBJECT SET PLACEHOLDER](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-SET-PLACEHOLDER.301-4128243.en.html) and [OBJECT Get placeholder](https://doc.4d.com/4Dv17R5/4D/17-R5/OBJECT-Get-placeholder.301-4128249.en.html) commands.
+この場合、"プレースホルダー" のフィールドには参照のみを渡します。参照と静的なテキストを組み合わせることはできません。
+> プレースホルダーのテキストは、[OBJECT SET PLACEHOLDER](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-PLACEHOLDER.301-4505467.ja.html) と [OBJECT Get placeholder](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-placeholder.301-4505473.ja.html) コマンドを使って、プログラミングによって設定したり取得したりすることができます。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name        | Data Type | Possible Values                                                              |
-| ----------- | --------- | ---------------------------------------------------------------------------- |
-| placeholder | string    | Text to be displayed (grayed out) when the object does not contain any value |
+| 名称          | データタイプ | とりうる値                            |
+| ----------- | ------ | -------------------------------- |
+| placeholder | string | オブジェクトに値が格納されていない場合に表示する半透明のテキスト |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Combo Box](comboBox_overview.md) - [Input](input_overview.md)
+[コンボボックス](comboBox_overview.md) - [入力](input_overview.md)
 
-#### See also
+#### 参照
 
-[Help tip](properties_Help.md)
-
----
-
-## Selection always visible
-
-This property keeps the selection visible within the object after it has lost the focus. This makes it easier to implement interfaces that allow the text style to be modified (see [Multi-style](properties_Text.md#multi-style)).
-
-#### JSON Grammar
-
-| Name          | Data Type | Possible Values |
-| ------------- | --------- | --------------- |
-| showSelection | boolean   | true, false     |
-
-#### Objects Supported
-
-[4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md)
+[ヘルプTips](properties_Help.md)
 
 ---
 
-## Shortcut
+## 選択を常に表示
 
-This property allows setting special meaning keys (keyboard shortcuts) for [buttons](button_overview.md), [radio buttons](radio_overview.md), and [checkboxes](checkbox_overview.md). They allow the user to use the control using the keyboard instead of having to use the mouse.
+このプロパティを選択すると、オブジェクト中で選択した文字列の反転状態が、フォーカスを失った後も表示されるようになります。 これにより、テキストスタイルを更新するようなインターフェースの実装が容易になります ([マルチスタイル](properties_Text.md#マルチスタイル) 参照)。
 
-You can configure this option by clicking the [...] button in the Shortcuts property in the Property List.
+#### JSON 文法
+
+| 名称            | データタイプ  | とりうる値       |
+| ------------- | ------- | ----------- |
+| showSelection | boolean | true, false |
+
+#### 対象オブジェクト
+
+[4D Write Pro エリア](writeProArea_overview.md) - [入力](input_overview.md)
+
+---
+
+## ショートカット
+
+[ボタン](button_overview.md)、[ラジオボタン](radio_overview.md) および [チェックボックス](checkbox_overview.md) にキーボードショートカットを割り当てることができます。 ショートカットによって、ユーザーはマウスを使用しなくてもキーボードからこれらのコントロールを操作することができます。
+
+ショートカットの設定をおこなうには、プロパティリストのショートカットプロパティの [...] ボタンをクリックします:
 
 ![](../assets/en/FormObjects/property_shortcut.png)
-> You can also assign a shortcut to a custom menu command. If there is a conflict between two shortcuts, the active object has priority. For more information about associating shortcuts with menus, refer to [Setting menu properties](https://doc.4d.com/4Dv17R5/4D/17-R5/Setting-menu-properties.300-4163525.en.html).
+> カスタムメニューコマンドにもショートカットを割り当てることができます。 2つのショートカットに衝突がある場合には、アクティブオブジェクトが優先されます。 メニューへのショートカットの割り当てについては [メニュープロパティを設定する](https://doc.4d.com/4Dv18/4D/18/Setting-menu-properties.300-4575512.ja.html) を参照してください。
 
-To view a list of all the shortcuts used in the 4D Design environment, see the [Shortcuts Page](https://doc.4d.com/4Dv17R5/4D/17-R5/Shortcuts-Page.300-4163701.en.html) in the Preferences dialog box.
+4D のデザイン環境で使用できるショートカットの一覧は、環境設定ダイアログの [ショートカットページ](https://doc.4d.com/4Dv18/4D/18/Shortcuts-Page.300-4575689.ja.html) にて確認できます。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name            | Data Type | Possible Values                          |
-| --------------- | --------- | ---------------------------------------- |
-| shortcutAccel   | boolean   | true, false (Ctrl Windows/Command macOS) |
-| shortcutAlt     | boolean   | true, false                              |
-| shortcutCommand | boolean   | true, false                              |
-| shortcutControl | boolean   | true, false (macOS Control)              |
-| shortcutShift   | boolean   | true, false                              |
-|                 |           |                                          |
-| shortcutKey     | string    | <ul><li>any character key: "a", "b"...</li><li>[F1]" -> "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li></ul>                |
+| 名称              | データタイプ  | とりうる値                                      |
+| --------------- | ------- | ------------------------------------------ |
+| shortcutAccel   | boolean | true, false (Windows: Ctrl/macOS: Command) |
+| shortcutAlt     | boolean | true, false                                |
+| shortcutCommand | boolean | true, false                                |
+| shortcutControl | boolean | true, false (macOS: Control)               |
+| shortcutShift   | boolean | true, false                                |
+|                 |         |                                            |
+| shortcutKey     | string  | <ul><li>任意の文字キー: "a", "b"...</li><li>"[F1]" - "[F15]", "[Return]", "[Enter]", "[Backspace]", "[Tab]", "[Esc]", "[Del]", "[Home]", "[End]", "[Help]", "[Page up]", "[Page down]", "[left arrow]", "[right arrow]", "[up arrow]", "[down arrow]"</li></ul>                  |
 
-#### Objects Supported
+#### 対象オブジェクト
 
 [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Radio Button](radio_overview.md)
 
 ---
 
-## Single-Click Edit
+## シングルクリック編集
 
-Enables direct passage to edit mode in list boxes.
+リストボックスにおいて、編集モードへの直接移行を可能にします。
 
-When this option is enabled, list box cells switch to edit mode after a single user click, regardless of whether or not this area of the list box was selected beforehand. Note that this option allows cells to be edited even when the list box [selection mode](properties_ListBox.md#selection-mode) is set to "None".
+このオプションがチェックされている場合、そのリストボックスの当該エリアが事前に選択されていたかどうかに関わらず、ユーザーのワンクリックだけでリストボックスセルを編集モードへと移行させることができます。 このオプションは、リストボックスの [選択モード](properties_ListBox.md#選択モード) が "なし" に設定されている場合でもセルの編集を可能にすると言う点に注意してください。
 
-When this option is not enabled, users must first select the cell row and then click on a cell in order to edit its contents.
+このオプションがチェックされていない場合、セルの内容を編集するにはユーザーはまず最初に編集したいセルの行を選択し、その次に編集するセルを選択する必要があります。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name            | Data Type | Possible Values |
-| --------------- | --------- | --------------- |
-| singleClickEdit | boolean   | true, false     |
+| 名称              | データタイプ  | とりうる値       |
+| --------------- | ------- | ----------- |
+| singleClickEdit | boolean | true, false |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)

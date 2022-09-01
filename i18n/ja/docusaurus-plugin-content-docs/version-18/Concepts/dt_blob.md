@@ -3,62 +3,66 @@ id: blob
 title: BLOB
 ---
 
-- A BLOB (Binary Large OBjects) field, variable or expression is a contiguous series of bytes which can be treated as one whole object or whose bytes can be addressed individually. A BLOB can be empty (null length) or contain up to 2147483647 bytes (2 GB).
+- BLOB (Binary Large OBjects) フィールド・変数・式とは、連続した可変長バイトであり、各バイトを個々にアドレス指定可能な 1つのまとまったオブジェクトとして取り扱うことができます。 サポートされている BLOB のサイズは空 (長さがNULL) から、最大 2,147,483,647 バイト (2GB) までです。
 
-> By default, 4D sets the maximum blob size to 2GB, but this size limit may be lower depending on your OS and how much space is available.
+> デフォルトで、4D は BLOB の最大サイズを 2GB に設定していますが、OSや空き容量によっては、この制限サイズが小さくなる場合があります。
 
-- A BLOB is loaded into memory in its entirety. A BLOB variable is held and exists in memory only. A BLOB field is loaded into memory from the disk, like the rest of the record to which it belongs.
-- Like the other field types that can retain a large amount of data (such as the Picture field type), BLOB fields are not duplicated in memory when you modify a record. Consequently, the result returned by the `Old` and `Modified` commands is not significant when applied to a BLOB field.
+- BLOB は全体がメモリにロードされます。 BLOB 変数はメモリ内にだけ保持され、存在します。 BLOB フィールドは、レコードの他フィールドと同様に、ディスクからメモリにロードされます。
+- 大量のデータを保持できる他のフィールドタイプ (ピクチャーなど) と同様に、レコードを更新してもBLOBフィールドはメモリに複製されません。 したがって、`Old` および `Modified` コマンドをBLOBフィールドに適用しても、返される結果は意味を持ちません。
 
-## Parameter passing, Pointers and function results
+## 引数渡し、ポインター、および戻り値
 
-4D BLOBs can be passed as parameters to 4D commands or plug-in routines that expect BLOB parameters. BLOBS can also be passed as parameters to a user method or be returned as a function result.
+4D の BLOB は、4D コマンドまたは 4D プラグインの引数として渡すことができます。 また、BLOB はユーザーメソッドのパラメーターに渡したり、関数の戻り値にすることもできます。
 
-To pass a BLOB to your own methods, you can also define a pointer to the BLOB and pass the pointer as parameter.
+ポインターを使用して、BLOB をメソッドに渡すことも出来ます。その場合は BLOB へのポインターを定義し、そのポインターをパラメーターとして渡します。
 
-**Examples:**
+**例: **
 ```4d
-  ` Declare a variable of type BLOB
+  // BLOB タイプの変数を定義します
  C_BLOB(anyBlobVar)
-  ` The BLOB is passed as parameter to a 4D command
+
+// 4Dコマンドに引数として BLOB を渡します
  SET BLOB SIZE(anyBlobVar;1024*1024)
-  ` The BLOB is passed as parameter to an external routine
+
+// プラグインに BLOB を引数として渡します
  $errCode:=Do Something With This BLOB(anyBlobVar)
-  ` The BLOB is passed as a parameter to a method that returns a BLOB
+
+// BLOB を引数として渡し、戻り値をBLOBで受け取ります
  C_BLOB(retrieveBlob)
  retrieveBlob:=Fill_Blob(anyBlobVar)
-  ` A pointer to the BLOB is passed as parameter to a user method
+
+// BLOB のポインターをメソッドに渡します
  COMPUTE BLOB(->anyBlobVar)
 ```
-**Note for Plug-in developers:** A BLOB parameter is declared as “&O” (the letter “O”, not the digit “0”).
+**プラグイン開発にあたっての注意:** BLOB 引数は “&O” (数字の0ではなく、アルファベットの"O") として宣言します。
 
-## Assignment operator
+## 代入
 
-You can assign BLOBs to each other.
+BLOB は相互に代入することができます。
 
-**Example:**
+**例: **
 ```4d
-  ` Declare two variables of type BLOB
+  // BLOB 型の変数を二つ宣言します
  C_BLOB(vBlobA;vBlobB)
-  ` Set the size of the first BLOB to 10K
+// 一つ目の BLOB に10K のサイズを割り当てます
  SET BLOB SIZE(vBlobA;10*1024)
-  ` Assign the first BLOB to the second one
+// 一つ目の BLOB を二つ目の BLOB に代入します
  vBlobB:=vBlobA
 ```
 
-However, no operator can be applied to BLOBs.
+ただし、BLOB に演算子を適用することはできません。
 
-## Addressing BLOB contents
+## BLOB のアドレス指定
 
-You can address each byte of a BLOB individually using the curly brackets symbols {...}. Within a BLOB, bytes are numbered from 0 to N-1, where N is the size of the BLOB. Example:
+中カッコ {...} を使用し、BLOB の各バイトを個別にアドレス指定することができます。 BLOB 内では、各バイトに 0 から N-1 の番号が割り当てられています。N は BLOB のサイズです。 例:
 ```4d
-  ` Declare a variable of type BLOB
+  // BLOB を定義します
  C_BLOB(vBlob)
-  ` Set the size of the BLOB to 256 bytes
+// BLOB のサイズを 256バイトに設定します
  SET BLOB SIZE(vBlob;256)
-  ` The loop below initializes the 256 bytes of the BLOB to zero
+// 次のループは、BLOB の 256バイトをゼロに初期化します
  For(vByte;0;BLOB size(vBlob)-1)
     vBlob{vByte}:=0
  End for
 ```
-Because you can address all the bytes of a BLOB individually, you can actually store whatever you want in a BLOB field or variable.
+BLOB の各バイトはすべて個別にアドレス指定できるため、BLOB フィールドまたは変数には実際のところ何でも格納できます。

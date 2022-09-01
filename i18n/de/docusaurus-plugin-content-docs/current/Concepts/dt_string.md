@@ -3,96 +3,96 @@ id: string
 title: String
 ---
 
-String is a generic term that stands for:
+String ist der Oberbegriff für:
 
-- Text fields or variables: a Text field, variable, or expression may contain from 0 to 2 GB of text.
-- Alphanumeric fields: an Alphanumeric field may contain from 0 to 255 characters (limit set when field is defined).
+- Textfelder bzw. -variablen: Ein Feld, eine Variable oder ein Ausdruck vom Typ Text kann 0 bis 2 GB an Text enthalten.
+- Alphanumerische Felder: Ein Datenfeld vom Typ alphanumerisch kann 0 bis 255 Zeichen enthalten (Limit wird bei der Felddefinition festgelegt).
 
-## String literals
+## Stringformate
 
-A string literal is enclosed in double, straight quotation marks ("..."). Here are some examples of string literals:
+Ein Stringformat steht zwischen geraden doppelten Anführungszeichen ("..."). Hier ein paar Beispiele für Stringformate:
 
 ```4d
-"Add Records"
-"No records found."
-"Invoice"
+"Datensätze hinzufügen"
+"Keine Datensätze gefunden."
+"Rechnung"
 ```
 
-An empty string is specified by two quotation marks with nothing between them ("").
+Ein leerer String wird mit Anführungszeichen ohne etwas dazwischen angegeben ("").
 
-### Escape sequences
+### Escape Sequenzen
 
-The following escape sequences can be used within strings:
+In Strings lassen sich folgende Escape Sequenzen verwenden:
 
-| Escape sequence | Character replaced   |
-| --------------- | -------------------- |
-| \n             | LF (Line feed)       |
-| \t             | HT (Tab)             |
-| \r             | CR (Carriage return) |
-| \\\          | \ (Backslash)       |
-| \\"           | " (Quotation marks)  |
+| Escape Sequenz | Ersetzte Zeichen                          |
+| -------------- | ----------------------------------------- |
+| \n            | LF (Line feed - Zeilenvorschub)           |
+| \t            | HT (Tabulator)                            |
+| \r            | CR (Carriage return -Zeilenschaltung)     |
+| \\\         | \ (Backslash - umgekehrter Schrägstrich) |
+| \\"          | " (Anführungszeichen)                     |
 
-**Note:** The \ (backslash) character is used as a separator in pathnames under Windows. You must therefore use a double backslash \\\ in paths when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D (e.g. "C:\\\MyDocuments\\\New.txt").
+**Hinweis:** Das Zeichen \ (backslash) wird unter Windows als Trenner in Pfadnamen verwendet. Deshalb müssen Sie in Pfaden einen doppelten Backslash \\\ verwenden, wenn Sie einen Backslash vor einem Zeichen haben möchten, das in einer der von 4D erkannten Escape-Sequenzen verwendet wird (z.B. "C:\\\MyDocuments\\\New.txt").
 
-## String operators
+## String Operatoren
 
-| Operation                | Syntax           | Returns | Expression              | Value    |
-| ------------------------ | ---------------- | ------- | ----------------------- | -------- |
-| Concatenation            | String + String  | String  | "abc" + "def"           | "abcdef" |
-| Repetition               | String * Number  | String  | "ab" * 3                | "ababab" |
-| Equality                 | String = String  | Boolean | "abc" = "abc"           | True     |
-|                          |                  |         | "abc" = "abd"           | False    |
-| Inequality               | String # String  | Boolean | "abc" # "abd"           | True     |
-|                          |                  |         | "abc" # "abc"           | False    |
-| Greater than             | String > String  | Boolean | "abd" > "abc"           | True     |
-|                          |                  |         | "abc" > "abc"           | False    |
-| Less than                | String < String  | Boolean | "abc" < "abd"           | True     |
-|                          |                  |         | "abc" < "abc"           | False    |
-| Greater than or equal to | String >= String | Boolean | "abd" >= "abc"          | True     |
-|                          |                  |         | "abc" >= "abd"          | False    |
-| Less than or equal to    | String <= String | Boolean | "abc" <= "abd"          | True     |
-|                          |                  |         | "abd" <= "abc"          | False    |
-| Contains keyword         | String % String  | Boolean | "Alpha Bravo" % "Bravo" | True     |
-|                          |                  |         | "Alpha Bravo" % "ravo"  | False    |
-|                          | Picture % String | Boolean | Picture_expr % "Mer"    | True (*) |
+| Operation               | Syntax           | Ergibt  | Ausdruck                | Wert     |
+| ----------------------- | ---------------- | ------- | ----------------------- | -------- |
+| Zusammenfügung          | String + String  | String  | "abc" + "def"           | "abcdef" |
+| Wiederholung            | String * Zahl    | String  | "ab" * 3                | "ababab" |
+| Gleichheit              | String = String  | Boolean | "abc" = "abc"           | Wahr     |
+|                         |                  |         | "abc" = "abd"           | Falsch   |
+| Ungleichheit            | String # String  | Boolean | "abc" # "abd"           | Wahr     |
+|                         |                  |         | "abc" # "abc"           | Falsch   |
+| Größer als              | String > String  | Boolean | "abd" > "abc"           | Wahr     |
+|                         |                  |         | "abc" > "abc"           | Falsch   |
+| Kleiner als             | String < String  | Boolean | "abc" < "abd"           | Wahr     |
+|                         |                  |         | "abc" < "abc"           | Falsch   |
+| Größer als oder gleich  | String >= String | Boolean | "abd" >= "abc"          | Wahr     |
+|                         |                  |         | "abc" >= "abd"          | Falsch   |
+| Kleiner als oder gleich | String <= String | Boolean | "abc" <= "abd"          | Wahr     |
+|                         |                  |         | "abd" <= "abc"          | Falsch   |
+| Mit Schlüsselwort       | String % String  | Boolean | "Alpha Bravo" % "Bravo" | Wahr     |
+|                         |                  |         | "Alpha Bravo" % "ravo"  | Falsch   |
+|                         | Bild % String    | Boolean | Picture_expr % "Mer"    | Wahr (*) |
 
-(*) If the keyword "Mer" is associated with the picture stored in the picture expression (field or variable).
+(*) Wenn das Schlüsselwort "Mer" dem Bild zugeordnet ist, das im Bildausdruck (Datenfeld oder Variable) gespeichert ist.
 
-## String comparisons
+## String Vergleiche
 
-- Strings are compared on a character-by-character basis (except in the case of searching by [keywords](dt_string.md#keywords), see below).
-- When strings are compared, the case of the characters is ignored; thus, "a"="A" returns `TRUE`. To test if the case of two characters is different, compare their character codes. For example, the following expression returns `FALSE`:
+- Strings werden Zeichen für Zeichen miteinander verglichen (außer bei Suchen nach [Schlüsselwörter](dt_string.md#keywords), siehe unten).
+- Bei String Vergleichen wird die Groß- und Kleinschreibung ignoriert, so gibt "a"="A" `TRUE` zurück. Wollen Sie die Schreibweise von zwei Zeichen überprüfen, vergleichen Sie deren Zeichen Codes. So ergibt z. B. folgender Ausdruck `FALSE`:
 
 ```4d
 Character code("A")=Character code("a") // because 65 is not equal to 97
 ```
 
-- When strings are compared, diacritical characters are taken into account. For example, the following expressions return `TRUE`:
+- Bei String Vergleichen werden diakritische Zeichen wie die entsprechenden Zeichen ohne Akzente behandelt. So ergibt z. B. folgender Ausdruck `TRUE`:
 
 ```4d
      "n"="ñ"
      "n"="Ñ"
-     "A"="å"
+     "A"="ä"
       // and so on
 ```
 
-**Note:** String comparison takes into account specificities of the language **defined for the 4D data file** (which is not always the same as the language defined for the system).
+**Hinweis:** String Vergleiche berücksichtigen die Eigenheiten der Sprache, **die für die 4D Datendatei definiert wurde**. Das ist normalerweise das gleiche Format wie das System, kann aber auf eine andere Sprache eingestellt werden. Je nach Sprache können diakritische Zeichen anders bewertet oder sortiert werden.
 
-### Wilcard character (@)
+### Joker Zeichen (@)
 
-The 4D language supports **@** as a wildcard character. This character can be used in any string comparison to match any number of characters. For example, the following expression is `TRUE`:
+Die 4D Programmiersprache unterstützt **@** als Joker Zeichen. @ kann für beliebig viele Zeichen stehen. So ergibt z. B. folgender Ausdruck `TRUE`:
 
 ```4d
 "abcdefghij"="abc@"
 ```
 
-The wildcard character must be used within the second operand (the string on the right side) in order to match any number of characters. The following expression is `FALSE`, because the @ is considered only as a one character in the first operand:
+Sie können das Jokerzeichen nur für den zweiten Operanden (der String auf der rechten Seite) einsetzen. Demnach ergibt folgender Ausdruck `FALSE`, da @ im ersten Operanden lediglich als 1 Zeichen gewertet wird:
 
 ```4d
     "abc@"="abcdefghij"
 ```
 
-The wildcard means "one or more characters or nothing". The following expressions are `TRUE`:
+Das Jokerzeichen bedeutet "ein Zeichen, viele Zeichen oder gar kein Zeichen". Demnach ergeben folgende Ausdrücke `TRUE`:
 
 ```4d
      "abcdefghij"="abcdefghij@"
@@ -102,36 +102,36 @@ The wildcard means "one or more characters or nothing". The following expression
      "abcdefghij"="@abcde@fghij@"
 ```
 
-On the other hand, whatever the case, a string comparison with two consecutive wildcards will always return `FALSE`. The following expression is `FALSE`:
+Zwei aufeinanderfolgende Jokerzeichen werden dagegen nicht erkannt. Hier gibt der Ausdruck `FALSE` zurück:
 
 ```4d
 "abcdefghij"="abc@@fg"
 ```
 
-When the comparison operator is or contains a < or > symbol, only comparison with a single wildcard located at the end of the operand is supported:
+Enthält der Vergleichsoperator ein < oder > Zeichen, wird nur der Vergleich mit einem Joker am Ende des Operanden unterstützt:
 
 ```4d
      "abcd"<="abc@" // Valid comparison
      "abcd"<="abc@ef" //Not a valid comparison
 ```
 
-If you want to execute comparisons or queries using @ as a character (and not as a wildcard), you need to use the `Character code(At sign)` instruction. Imagine, for example, that you want to know if a string ends with the @ character. The following expression (if $vsValue is not empty) is always `TRUE`:
+Wollen Sie Vergleiche oder Suchläufe mit @ als Zeichen, also nicht als Joker durchführen, müssen Sie die Anweisung `Character code (At sign)` verwenden. Angenommen, Sie wollen wissen, ob ein String mit dem Zeichen @ endet. Der folgende Ausdruck ist immer `TRUE`, außer $vsValue ist leer:
 
 ```4d
 ($vsValue[[Length($vsValue)]]="@")
 ```
 
-The following expression will be evaluated correctly:
+Der folgende Ausdruck wird korrekt interpretiert:
 
 ```4d
 (Character code($vsValue[[Length($vsValue)]])#64)  
 ```
 
-**Note:** A 4D option in the Design environment allows you to define how the @ character is interpreted when it is included in a character string.
+**Hinweis:** In der Designumgebung können Sie festlegen, wie das @ Zeichen interpretiert wird, wenn es innerhalb einer Zeichenkette enthalten ist.
 
-### Keywords
+### Schlüsselwörter
 
-Unlike other string comparisons, searching by keywords looks for "words" in "texts": words are considered both individually and as a whole. The **%** operator always returns `False` if the query concerns several words or only part of a word (for example, a syllable). The “words” are character strings surrounded by “separators,” which are spaces and punctuation characters and dashes. An apostrophe, like in “Today's”, is usually considered as part of the word, but will be ignored in certain cases (see the rules below). Numbers can be searched for because they are evaluated as a whole (including decimal symbols). Other symbols (currency, temperature, and so on) will be ignored.
+Im Gegensatz zu anderen String Vergleichen werden bei der Suche nach Schlüsselwörtern "Wörter" in "Texten" nur im ganzen berücksichtigt. Der Operator **%** gibt immer `Falsch` zurück, wenn die Suche mehr als ein Wort oder nur einen Teil davon betrifft, z. B. eine Vorsilbe. "Wörter" werden definiert als Zeichenketten, umgeben von „Trennern“, also Leerzeichen, Punktzeichen und Bindestriche. Ein Apostroph, z. B. Today's gilt normalerweise als Teil des Wortes, wird aber in bestimmten Fällen ignoriert (siehe Regeln unten). Sie können auch nach Nummern suchen, da sie inkl. Trennzeichen für Tausend oder Dezimalstellen ( . , ) als Ganzes gewertet werden. Andere Zeichen (Währungssymbole, Temperatur, usw.) werden dabei ignoriert.
 
 ```4d
      "Alpha Bravo Charlie"%"Bravo" // Returns True
@@ -140,18 +140,18 @@ Unlike other string comparisons, searching by keywords looks for "words" in "tex
      "Alpha,Bravo,Charlie"%"Alpha" // Returns True
      "Software and Computers"%"comput@" // Returns True
 ```
-> **Notes:**
+> **Hinweise:**
 > 
 > - 4D uses the ICU library for comparing strings (using `<>=#` operators) and detecting keywords. For more information about the rules implemented, please refer to the following address: <http://www.unicode.org/reports/tr29/#Word_Boundaries>.
-> - In the Japanese version, instead of ICU, 4D uses Mecab by default for detecting keywords.
+> - In der japanischen Version verwendet 4D zum Suchen von Schlüsselwörtern anstatt ICU standardmäßig Mecab.
 
-## Character Reference Symbols
+## Symbole für direkten Zeichenzugriff
 
-The character reference symbols: [[...]]
+Mit den Symbolen [[...]]
 
-These symbols are used to refer to a single character within a string. This syntax allows you to individually address the characters of a text variable, string variable, or field.
+können Sie sich auf ein einzelnes Zeichen innerhalb einer Zeichenkette beziehen. So können Sie in einem Feld bzw. einer Variablen vom Typ Text oder String einzelne Zeichen ansprechen.
 
-If the character reference symbols appear on the left side of the assignment operator (:=), a character is assigned to the referenced position in the string. For example, if vsName is not an empty string, the following line sets the first character of vsName to uppercase:
+Diese Syntax auf der linken Seite des Zuweisungsoperators (:=) weist an der angegebenen Position in der Zeichenkette ein Zeichen zu. Beispiel: Ist vsName kein leerer String, setzt folgender Code das erste Zeichen von vsName in Großbuchstaben:
 
 ```4d
 If(vsName#"")
@@ -159,7 +159,7 @@ If(vsName#"")
 End if
 ```
 
-Otherwise, if the character reference symbols appear within an expression, they return the character (to which they refer) as a 1-character string. For example:
+Diese Syntax mit dem gewünschten Zeichen innerhalb eines Ausdrucks gibt es als String mit einem Zeichen zurück. Beispiel:
 
 ```4d
 //The following example tests if the last character of vtText is an At sign "@"
@@ -175,15 +175,17 @@ Otherwise, if the character reference symbols appear within an expression, they 
   // ...
     End if
  End if
+    End if
+ End if
 ```
 
-### Advanced note about invalid character reference
+### Bemerkung zu ungültigem Zeichenzugriff
 
-When you use the character reference symbols, you must address existing characters in the string in the same way you address existing elements of an array. For example if you address the 20th character of a string variable, this variable MUST contain at least 20 characters.
+Beim Einsatz der Symbole für direkten Zeichenzugriff müssen Sie vorhandene Zeichen im String auf dieselbe Weise wie vorhandene Elemente in einem Array ansprechen. Sprechen Sie beispielsweise das 20. Zeichen einer Textvariablen an, muss diese Variable auch mindestens 20 Zeichen enthalten. Ist das nicht der Fall,
 
-- Failing to do so, in interpreted mode, does not cause a syntax error.
-- Failing to do so, in compiled mode (with no options), may lead to memory corruption, if, for instance, you write a character beyond the end of a string or a text.
-- Failing to do so, in compiled mode, causes an error with the option Range Checking On. For example, executing the following code:
+- verursacht das im interpretierten Modus keinen Syntaxfehler.
+- kann das im kompilierten Modus (mit deaktivierter Bereichsprüfung) zu einem Absturz wegen Speicherüberlauf führen, z. B. wenn Sie ein Zeichen nach dem Ende eines String oder Textes schreiben.
+- wird das im kompilierten Modus mit aktivierter Option Bereichsprüfung einen Fehler auslösen. So löst der folgende Code:
 
 ```
 //Very bad and nasty thing to do, boo!
@@ -191,13 +193,13 @@ When you use the character reference symbols, you must address existing characte
  vsAnyText[[1]]:="A"
 ```
 
-will trigger the Runtime Error shown here:
+einen Runtime-Fehler aus:
 
 ![alt-text](../assets/en/Concepts/Syntax_Error.en.png)
 
-### Example
+### Beispiel
 
-The following project method capitalizes the first character of each word of the text received as parameter and returns the resulting capitalized text:
+Folgende Projektmethode schreibt das erste Zeichen jedes Worts im Text groß, der als Parameter übergeben wurde und gibt den Text mit großen Anfangsbuchstaben zurück:
 
 ```4d
   //Capitalize_text project method
@@ -216,12 +218,12 @@ The following project method capitalizes the first character of each word of the
  End if
 ```
 
-For example, the line:
+Die Zeile:
 
 ```4d
 ALERT(Capitalize_text("hello, my name is jane doe and i'm running for president!"))
 ```
 
-displays the alert shown here:
+zeigt folgende Meldung:
 
 ![alt-text](../assets/en/Concepts/Jane_doe.en.png)

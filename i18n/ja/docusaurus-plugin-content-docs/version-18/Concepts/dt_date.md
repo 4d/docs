@@ -1,16 +1,16 @@
 ---
 id: date
-title: Date
+title: 日付
 ---
 
-- A Date field, variable or expression can be in the range of 1/1/100 to 12/31/32,767.
-- Although the representation mode for dates by can work with dates up to the year 32 767, certain operations passing through the system impose a lower limit.
+- 日付フィールド、変数、式として認識できる範囲は、100/1/1 から 32,767/12/31 までです。(日本語版の 4D を使用した場合、日付の順序は年/月/日の順になります。)
+- C_DATE によって宣言された日付は 32767年までの範囲に対応していますが、システムを経由する処理によっては上限にさらなる制限が課せられます。
 
-**Note:** In the 4D Language Reference manual, Date parameters in command descriptions are denoted as Date, except when marked otherwise.
+**注:** 4D ランゲージリファレンスでは、コマンド説明における日付引数はとくに明記されていない限り、「日付」と表記されています。
 
-## Date literals
+## 日付リテラル
 
-A date literal constant is enclosed by exclamation marks (!…!). A date must be structured using the ISO format (!YYYY-MM-DD!). Here are some examples of date constants:
+日付リテラル定数は、エクスクラメーションマークで囲んで表します (! ... !)。 日付は ISOフォーマット (!YYYY-MM-DD!) を使って記述します。 下記に、日付定数の例を示します:
 
 ```4d
 !1976-01-01!
@@ -18,31 +18,31 @@ A date literal constant is enclosed by exclamation marks (!…!). A date must be
 !2015-12-31!
 ```
 
-A null date is specified by _!00-00-00!_.
+空の日付は、 _!00-00-00!_ のように指定します。
 
-**Tip:** The Method Editor includes a shortcut for entering a null date. To type a null date, enter the exclamation (!) character and press Enter.
+**Tip:** メソッドエディターでは空の日付を入力するためのショートカットが提供されています。 空の日付を入力するには、エクスクラメーションマーク (!) の入力後に Enterキーを押します。
 
-**Notes:**
+**注:**
 
-- For compatibility reasons, 4D accepts two-digit years to be entered. A two-digit year is assumed to be in the 20th or 21st century based on whether it is greater or less than 30, unless this default setting has been changed using the `SET DEFAULT CENTURY` command.
-- If you have checked the "Use regional system settings" option (see Methods Page), you must use the date format defined in your system. Generally, in a US environment, dates are entered in the form month/day/year, with a slash "/" separating the values.
+- 互換性の理由から、4D は二桁の年次の入力を受け付けます。 数字が 30以上の場合は 20世紀 (1900年代)、30未満の場合は 21世紀 (2000年代) であると認識します (ただしデフォルト設定が `SET DEFAULT CENTURY` コマンドを使用して変更されていない場合に限ります)。
+- "地域特有のシステム設定を使う" オプション ([メソッドページ](https://doc.4d.com/4Dv18/4D/18/Methods-Page.300-4575690.ja.html) 参照) にチェックがされている場合、システムで定義されている日付フォーマットを使用する必要があります。 一般的に、US環境においては、日付は月/日/年の形式で入力され、値はスラッシュ "/" で区切られます。
 
-## Date operators
+## 日付演算子
 
-| Operation                | Syntax         | Returns | Expression                   | Value        |
-| ------------------------ | -------------- | ------- | ---------------------------- | ------------ |
-| Date difference          | Date – Date    | Number  | !2017-01-20! - !2017-01-01!  | 19           |
-| Day addition             | Date + Number  | Date    | !2017-01-20! + 9             | !2017-01-29! |
-| Day subtraction          | Date – Number  | Date    | !2017-01-20! - 9             | !2017-01-11! |
-| Equality                 | Date = Date    | Boolean | !2017-01-01! =!2017-01-01!   | True         |
-|                          |                |         | !2017-01-20! = !2017-01-01!  | False        |
-| Inequality               | Date # Date    | Boolean | !2017-01-20! # !2017-01-01!  | True         |
-|                          |                |         | !2017-01-20! # !2017-01-20!  | False        |
-| Greater than             | Date > Date    | Boolean | !2017-01-20! > !2017-01-01!  | True         |
-|                          |                |         | !2017-01-20! > !2017-01-20!  | False        |
-| Less than                | Date < Date    | Boolean | !2017-01-01! < !2017-01-20!  | True         |
-|                          |                |         | !2017-01-20! < !2017-01-20!  | False        |
-| Greater than or equal to | Date >= Date   | Boolean | !2017-01-20! >=!2017-01-01!  | True         |
-|                          |                |         | !2017-01-01!>=!2017-01-20!   | False        |
-| Less than or equal to    | Date \<= Date | Boolean | !2017-01-01!\<=!2017-01-20! | True         |
-|                          |                |         | !2017-01-20!\<=!2017-01-01! | False        |
+| 処理    | シンタックス         | 戻り値     | 式                            | Value        |
+| ----- | -------------- | ------- | ---------------------------- | ------------ |
+| 日付の差  | Date – Date    | Number  | !2017-01-20! - !2017-01-01!  | 19           |
+| 日付の加算 | Date + Number  | Date    | !2017-01-20! !2017-01-20!    | !2017-01-29! |
+| 日付の減算 | Date – Number  | Date    | !2017-01-20! !2017-01-01!    | !2017-01-11! |
+| 等しい   | Date = Date    | Boolean | !2017-01-20! = !2017-01-01!  | true         |
+|       |                |         | !2017-01-20! !2017-01-20!    | False        |
+| 異なる   | Date # Date    | Boolean | !2017-01-20! !2017-01-01!    | true         |
+|       |                |         | !2017-01-20! !2017-01-20!    | False        |
+| 大きい   | Date > Date    | Boolean | !2017-01-20! !2017-01-20!    | true         |
+|       |                |         | !2017-01-20! !2017-01-20!    | False        |
+| 小さい   | Date < Date    | Boolean | !2017-01-20! !2017-01-20!    | true         |
+|       |                |         | !2017-01-20! !2017-01-20!    | False        |
+| 以上    | Date >= Date   | Boolean | !2017-01-20! !2017-01-20!    | true         |
+|       |                |         | !2017-01-01!>=!2017-01-20!   | False        |
+| 以下    | Date \<= Date | Boolean | !2017-01-01!\<=!2017-01-20! | true         |
+|       |                |         | !2017-01-20!\<=!2017-01-01! | False        |

@@ -1,372 +1,372 @@
 ---
 id: debugger
-title: Debugger
+title: デバッガー
 ---
 
-The debugger is useful when you need to spot errors or monitor the execution of methods. It allows you to step through your code slowly and examine the information. This process is called "tracing".
+デバッガーは、エラーを発見したり、メソッドの実行を監視する必要がある場合に便利です。 デバッガーを使って、コードをステップごとにゆっくり確認して情報を検証することができます。 このようにメソッドをステップごとに確認する処理はトレースと呼ばれます。
 
-![debugger-window-local](../assets/en/Debugging/debugger-window-intro.png)
+![ローカルデバッガーウィンドウ](../assets/en/Debugging/debugger-window-intro.png)
 
-## Calling the Debugger
+## デバッガーの呼び出し
 
-There are multiple ways to get the Debugger to display:
+デバッガーを開くには、次のような方法があります:
 
-* Clicking the **Trace** button in the [Syntax Error window](basics.md#syntax-error-window)
-* Using the [`TRACE`](https://doc.4d.com/4dv19/help/command/en/page157.html) command
-* Clicking the **Debug** button in the Execute Method window or selecting **Run and debug...** button in the Code Editor
-* Using **Alt+Shift+Right click** (Windows) or **Ctrl+Option+Cmd+Click** (macOS) while a method is executing, then selecting the process to trace in the pop-up menu:
+* [シンタックスエラーウィンドウ](basics.md#シンタックスエラーウィンドウ) で **トレース** ボタンをクリックする。
+* [`TRACE`](https://doc.4d.com/4dv19/help/command/ja/page157.html) コマンドを使用する。
+* メソッド実行ウィンドウで **デバッグ** ボタンをクリックする、またはコードエディターで **実行してデバッグ** ボタンを選択する。
+* メソッド実行中に **Alt+Shift+右クリック** (Windows) または **Ctrl+Option+Cmd+クリック** (Macintosh) をおこない、表示されるポップアップウィンドウ内でトレースするプロセスを選択する:
 
-![open-debugger](../assets/en/Debugging/openDebugger.png)
+![デバッガーを開く](../assets/en/Debugging/openDebugger.png)
 
-* Clicking the **Trace** button when a process is selected in the Process page of the Runtime Explorer.
-* Adding a break point in the Code Editor window or in the Break and Catch pages of the Runtime Explorer.
+* ランタイムエクスプローラーのプロセスページにてプロセスを選択した後、**トレース** ボタンをクリックする。
+* コードエディターウィンドウ、またはランタイムエクスプローラーのブレークおよびキャッチページでブレークポイントを作成する。
 
-When called, the debugger window provides the name of the method or class function you're currently tracing, and the action causing the initial appearance of the Debugger window. For example, in the above debugger window:
+デバッガーウィンドウは、現在トレースしているメソッドまたはクラス関数の名前や、デバッガーが表示される原因となったアクションの情報を表示します。 上のウィンドウの例では、次の情報が表示されています:
 
-* *Clients_BuildLogo* is the method being traced
-* The debugger window appeared because it detected a call to the `C_PICTURE` command and this command was one of the commands to be caught
+* 現在トレースされているメソッドは *Clients_BuildLogo* メソッドです。
+* デバッガーウィンドウが表示されているのは、キャッチコマンドの対象に設定された `C_PICTURE` コマンドへの呼び出しが検出されたためです。
 
-Displaying a new debugger window uses the same configuration as the last window displayed in the same session. If you run several user processes, you can trace them independently and have one debugger window open for each process.
+新しいデバッガーウィンドウの表示には、同じセッション内で表示された最後のデバッガーウィンドウと同じ構成 (ウィンドウのサイズと位置、分割線の配置および式評価エリアの内容) を使用します。 複数のユーザープロセスを実行した場合には、それぞれのプロセスを個別にトレースできます。 つまり、各プロセスにつき 1つのデバッガーウィンドウを表示できます。
 
-The Debugger window is usually displayed on the machine where the code is executed. With a single-user application, it is always displayed on the machine running the application. With a client/server application, it is displayed:
+デバッガーウィンドウは、一般的にそのコードが実行されているマシン上に表示されます。 シングルユーザー版アプリケーションの場合、デバッガーは常にアプリケーションを実行しているマシン上に表示されます。 クライアント/サーバー版アプリケーションの場合は:
 
-* on the remote 4D for code running locally
-* on the server machine for code running on the server (for example, a method with the **execute on server** option).
+* ローカルで実行されているコードの場合には、リモート4D 上に表示されます。
+* サーバー上で実行されているコード (**サーバー上で実行** オプションがつけられたメソッド) の場合には、サーバーマシン上に表示されます。
 
-> If the server is running headless, no debugger window can be displayed on the server, you need to use the remote debugger. See [Debugging from remote machines](./debugging-remote.md).
+> ヘッドレスモードで実行中のサーバーでは、デバッガーウィンドウを表示することはできません。 この場合はリモートデバッガーを使用する必要があります。 [リモートマシンからのデバッグ](./debugging-remote.md) 参照。
 
-## Tool bar Buttons
+## ツールバーボタン
 
-The debugger's tool bar includes several buttons, associated with default shortcuts:
+デバッガーウィンドウの上部にある実行制御ツールバーには、デフォルトショートカットが設定された複数のボタンがあります:
 
-![execution-control-toolbar-buttons](../assets/en/Debugging/executionToolbarButtons.png)
+![実行制御ツールバーボタン](../assets/en/Debugging/executionToolbarButtons.png)
 
-> Default shortcuts can be customized in the Shortcuts Page of the Preferences dialog box.
+> デフォルトのショートカットは、環境設定ダイアログボックスのショートカットページで変更できます。
 
-#### No Trace
+#### トレース終了
 
-Tracing stops and normal method execution resumes.
+トレースが停止され、通常のメソッド実行が再開されます。
 
-> **Shift** + **F5** or **Shift** + clicking the **No Trace** button resumes execution. It also disables all the subsequent TRACE calls for the current process.
+> **Shift** + **F5** または **Shift** を押しながら **トレース終了** ボタンをクリックすると、実行が再開されます。 この操作により、以降のカレントプロセスでの全ての TRACE 呼び出しが無効になります。
 
-#### Step Over
+#### 次行に進む
 
-Executes the current method line, indicated by the program counter (the yellow arrow). The Debugger steps to the next line.
+現在のメソッド行 (プログラムカウンターと呼ばれる黄色い矢印で示されている行) が実行されます。 その後、デバッガは次の行に移動します。
 
-The Step Over button does not step into subroutines and functions, it stays at the level of the method you're currently tracing. If you want to also trace subroutines and functions calls, use the **Step Into** button.
+"次の行に進む" ボタンは、サブルーチンや関数に移動することはなく、現在トレースの対象となっているメソッドのレベルにとどまります。 呼び出されるサブルーチンや関数もトレースしたい場合には、**呼び出しメソッドもトレース** ボタンを使用します。
 
-In remote debugging, if the method executes on the server, the parent method is called after the last line of the child method executes. If the parent method is executed on the remote side, the **Step Over** button has the same effect as the **No Trace** button.
+リモートデバッグにおいて、メソッドがサーバー上で実行されていた場合には、メソッドの最後の行の実行後にその親メソッドが呼ばれます。 その時、親メソッドがリモート側で実行されていた場合には、このボタンは **トレース終了** ボタンと同じように振る舞います。
 
-#### Step Into
+#### 呼び出しメソッドもトレース
 
-When a line that calls another method (subroutine or function) is executed, click this button to display the the other method and step through it.
+別のメソッド (サブルーチンまたは関数) を呼び出す行が実行される時にこのボタンを使用すると、呼び出されたメソッドがデバッガーウィンドウに表示され、ステップ実行できます。
 
-The new method becomes the current (top) method in the [Call Chain Pane](#call-chain-pane) of the Debugger window.
+デバッガーウィンドウの [呼び出し連鎖エリア](#呼び出し連鎖エリア) では、新しく呼び出されたメソッドがカレント (一番上) となります。
 
-When executing a line that does not call another method, this button has the same effect as the **Step Over** button.
+別のメソッドを呼び出していない行が実行される場合には、このボタンは **次行に進む** ボタンと同じように振る舞います。
 
-#### Abort
+#### 中断
 
-Stops method execution, and returns to the state before the method started executing:
+メソッドは中断され、メソッドの実行を開始する前の状態に戻ります。
 
-* When tracing a form or object method executing in response to an event: Stops and returns to the form.
-* When tracing a method executing from within the Application environment: Stops and returns to the environment.
+* イベントに対して実行しているフォームメソッドまたはオブジェクトメソッドをトレースしている場合には、いずれの場合にも停止され、フォームに戻ります。
+* アプリケーションモードから実行しているメソッドをトレースしていた場合には、停止後そのモードに戻ります。
 
-#### Abort and Edit
+#### 中断＆編集
 
-Pauses method execution. The method that is executing when you click the **Abort and Edit** button opens in the Code Editor.
-> **Tip**: Use this button when you know which changes are required in your code, and when these changes are required to pursue the testing of your methods. After you're finished with the changes, rerun the method.
+メソッドは中断されます。 コードエディターウィンドウが開いて、**中断＆編集** ボタンがクリックされた時点で実行していたメソッドを表示します。
+> **Tip**: このボタンは、コードにどのような変更が必要かが明らかであり、メソッドのテストを続行するためにその変更が必要な場合に使用してください。 変更が完了したら、メソッドを再実行できます。
 
-#### Edit
+#### 編集
 
-Pauses method execution. The method that is executing at the time you click the Edit button opens in the Code Editor.
+メソッドは中断されます。 コードエディターウィンドウが開いて、編集ボタンがクリックされた時点で実行していたメソッドを表示します。
 
-If you use this button to modify a method, the modifications are only effective the next time it executes.
+このボタンをクリックしてメソッドを編集した場合には、現在の実行は中断されないため、編集内容の反映は次回実行時になります。
 
-> **Tip:** Use this button when you know which changes are required in your code and when they don't interfere with the rest of the code to be executed or traced.
+> **Tip**: このボタンは、コードに必要な変更内容がわかっている場合で、その変更がコードの残り部分の実行やトレースの妨げにならない場合に使用します。
 
-#### Save Settings
+#### 設定保存
 
-Saves the current configuration of the debugger window  and makes it the default configuration. This includes:
+現在のデバッガウィンドウの構成を、デフォルト構成として保存します。 構成には次の内容が含まれます:
 
-* the size and position of the window
-* the position of the division lines and the contents of the area that evaluates the expressions
+* ウィンドウのサイズと位置
+* 分割線の配置および式評価エリアの内容
 
-These parameters are stored in the project.
+これらは、プロジェクト内に保存されます。
 
 This action is not available in remote debugging mode (see [Debugging from Remote Machines](./debugging-remote)).
 
-## Watch Pane
+## ウォッチエリア
 
-The **Watch pane** is displayed in the top left corner of the Debugger window, below the Execution Control Tool Bar. Here is an example:
+**ウォッチエリア** は実行コントロールツールバーの下、デバッグウィンドウの左上隅に表示されます。 次に例を示します:
 
-![watch-pane](../assets/en/Debugging/watchPane.png)
+![ウォッチエリア](../assets/en/Debugging/watchPane.png)
 
-> This pane is not available in remote debugging mode.
+> このエリアはリモートデバッグモードでは使用できません。
 
-The **Watch Pane** displays useful general information about the system, the 4D environment, and the execution environment.
+**ウォッチエリア** には、システム、4D環境、および実行環境について役立つ一般情報が表示されます。
 
-The **Expression** column displays the names of the objects and expressions. The **Value** column displays their current corresponding values. Clicking on any value on the right side of the pane allows you to modify the value of the object, if this is permitted for that object.
+**式** 欄には、要素や式の名前が表示されます。 **値** 欄には、要素や式に対応する現在の値が表示されます。 エリア右側の値をクリックすると、その値が変更可能な場合には、要素の値を修正できます。
 
-At any point, you can drag and drop themes, theme sublists (if any), and theme items to the [Custom Watch Pane](#custom-watch-pane).
+テーマ、テーマサブリスト (あれば)、テーマ項目は、いつでも [カスタムウォッチエリア](#カスタムウォッチエリア) にドラッグ＆ドロップすることができます。
 
-### Expression list
+### 式リスト
 
-#### Line Objects
+#### ラインオブジェクト
 
-This theme lets you keep track of the values of the objects or expressions:
+このテーマには、次のような要素や式の値が表示されます:
 
-* used in the line of code to be executed (the one marked with the program counter—the yellow arrow in the [Source Code Pane](#source-code-pane)),
-* used in the previous line of code
+* 実行されるコードの行 (プログラムカウンターにより、[ソースコードエリア](#ソースコードエリア) 内で黄色の矢印でマークされている行) で使用されている。
+* コードの前の行で使用されている。
 
-Since the previous line of code is the one that was just executed before, this theme therefore shows the objects or expressions of the current line before and after that the line was executed.  Let's say you execute the following method:
+コードの前の行とは実行直後の行であるため、ラインオブジェクトテーマでは、その行が実行される前または後の現在の行の要素や式が表示されます。  たとえば、次のメソッドを実行した場合を想定します:
 
 ```4d
 TRACE
 $a:=1
-$b:=a+1
-$c:=a+b
+$b:=$a+1
+$c:=$a+$b
 ```
 
-1. A Debugger window opens with the program counter set to the line with `a:=1`. At this point the **Line Objects** theme displays:
+1. ソースコードエリアのプログラムカウンターが `$a:=1` の行にセットされた状態で、デバッグウィンドウが開きます。 この時点では **ラインオブジェクト** テーマには、次のように表示されています:
 
-    | $a | Undefined |
-    | -- | --------- |
-    |    |           |
+    | $a | 未定義 |
+    | -- | --- |
+    |    |     |
 
-    The `$a` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
+    まだ初期化されていない変数 `$a` が表示されているのは、実行の対象となっている行で使用されているためです。
 
-2. You click the **Step Over** button. The program counter is now set to the line `b:=a+1`. At this point, the theme displays:
+2. **次行に進む** ボタンをクリックします。 プログラムカウンターは `$b:=$a+1` の行に設定されます。 この時点では、ラインオブジェクトテーマに次のように表示されます:
 
-    | $a | 1         |
-    | -- | --------- |
-    | $b | Undefined |
+    | $a | 1   |
+    | -- | --- |
+    | $b | 未定義 |
 
-    The value of the `$a` variable is now 1. The `$b` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
+    変数 `$a` の値は 1 になりました。 まだ初期化されていない変数 `$b` が表示されているのは、実行の対象となっている行で使用されているためです。
 
-3. You click the **Step Over** button again. The program counter is now set on the line with c:=a+b. At this point the Line Objects theme displays:
+3. **次行に進む** ボタンをクリックします。 プログラムカウンターは `$c:=$a+$b` の行に設定されます。 この時点では、ラインオブジェクトテーマに次のように表示されます:
 
-    | $c | Undefined |
-    | -- | --------- |
-    | $a | 1         |
-    | $b | 2         |
+    | $c | 未定義 |
+    | -- | --- |
+    | $a | 1   |
+    | $b | 2   |
 
-    The value of the `$b` variable is now 2. The `$c` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
+    変数 `$b` の値が 2 になりました。 まだ初期化されていない変数 `$c` が表示されているのは、実行の対象となっている行で使用されているためです。
 
 #### Variables
 
-This theme is composed of the following subthemes:
+このテーマは、次のサブテーマから構成されます:
 
-| Subtheme     | Description                                                  | Can the values be modified? |
-| ------------ | ------------------------------------------------------------ | --------------------------- |
-| Interprocess | List of interprocess variables being used at this point      | Yes                         |
-| Process      | List of process variables used by the current process        | Yes                         |
-| Local        | List of local variables used by the method being traced      | Yes                         |
-| Parameters   | List of parameters received by the method                    | Yes                         |
-| Self         | Pointer to the current object, when tracing an Object Method | No                          |
+| サブテーマ    | 詳細                                       | 値は編集可能？ |
+| -------- | ---------------------------------------- | ------- |
+| インタープロセス | この時点で使用されているインタープロセス変数のリスト               | ◯       |
+| プロセス     | カレントプロセスで使用されているプロセス変数のリスト               | ◯       |
+| ローカル     | 現在トレースしているメソッドで使用されているローカル変数のリスト         | ◯       |
+| パラメーター   | メソッドが受け取った引数のリスト                         | ◯       |
+| Self     | オブジェクトメソッドをトレースしている場合には、現在のオブジェクトへのポインター | いいえ     |
 
-Arrays, like other variables, appear in the Interprocess, Process, and Local subthemes, depending on their scope. The debugger displays the first 100 elements. Inside the **Value** column, you can modify the values of array elements, but not the size of the arrays.
+他の変数と同様に、配列はそのスコープによって、インタープロセス、プロセス、およびローカルサブテーマに表示されます。 デバッガーは要素ゼロと最初の 100要素を表示します。 **値** 欄で配列要素の値を変更することは可能ですが、配列のサイズを修正することはできません。
 
-To display the variable types and their internal names, right click and check the **Show Types** option in the context menu:
+変数の型や内部名を表示するには、右クリックしてコンテキストメニューを開き、**型を表示** にチェックを入れます:
 
-![show-types-menu-item](../assets/en/Debugging/showTypes.png)
+![型を表示メニュー項目](../assets/en/Debugging/showTypes.png)
 
-Here's the result:
+このようになります:
 
-![dynamic-variable-names](../assets/en/Debugging/dynamicVariableNames.png)
+![ダイナミック変数名](../assets/en/Debugging/dynamicVariableNames.png)
 
-#### Current Form Values
+#### カレントフォーム値
 
-This theme contains the name of each dynamic object included in the current form, as well as the value of its associated variable:
+このテーマには、カレントフォームに含まれる各動的オブジェクトの名前に加えて、そこに関連付けられている値が表示されます:
 
-![current-form-value](../assets/en/Debugging/current-form-values.png)
+![カレントフォーム値](../assets/en/Debugging/current-form-values.png)
 
-Some objects, such as list box arrays, can be presented as two distinct objects, the variable of the object itself and its data source.
+リストボックス配列などの一部のオブジェクトは、二つの異なる項目として表示されることがあります (オブジェクト自身の変数と、そのデータソース)。
 
-#### Constants
+#### 定数
 
-Like the Constants page of the Explorer window, this theme displays predefined constants provided by 4D. The expressions from this theme cannot be modified.
+エクスプローラーウィンドウの定数ページのように、4D が提供する定義済み定数を表示します。 このテーマの式を修正することはできません。
 
-#### Semaphores
+#### セマフォー
 
-This theme lists the local semaphores currently being set. For each semaphore, the Value column provides the name of the process that sets the semaphore. The expressions from this theme cannot be modified. Global semaphores are not displayed.
+現在設定されているローカルセマフォーのリストを表示します。 各セマフォーの値欄には、自身を設定したプロセスの名前が表示されます。 このテーマの式を修正することはできません。 The expressions from this theme cannot be modified.
 
-#### Processes
+#### プロセス
 
-This theme lists the processes started since the beginning of the working session. The value column displays the time used and the current state for each process (i.e., Executing, Paused, and so on). The expressions from this theme cannot be modified.
+作業セッションを開始してから起動されたプロセスのリストを表示します。 値欄には、各プロセスの現在の状態 (実行中、一時停止等) および使用した時間が表示されます。 このテーマの式を修正することはできません。
 
-#### Tables and Fields
+#### テーブルとフィールド
 
-This theme lists the tables and fields in the 4D database. For each Table item, the Value column displays the size of the current selection for the current process as well as the number of **locked records**.
+4Dデータベースのテーブルやフィールドのリストを表示します。 各テーブル項目について、カレントプロセスにおけるカレントセクションのサイズは勿論、**ロックされたレコード** のナンバーも値欄に表示されます。
 
-For each Field item, the Value column displays the value of the field for the current record (except picture and BLOB). You can modify the field values but not the the tables' information.
+各フィールド項目については、カレントレコードのフィールドの値 (ピクチャーと BLOB は除く) が値欄に表示されます。 フィールドの値を修正することはできますが、テーブル情報を修正することはできません。
 
-#### Sets
+#### セット
 
-This theme lists the sets defined in the current process (the one you're currently tracing) and the interprocess sets. For each set, the Value column displays the number of records and the table name. The expressions from this theme cannot be modified.
+カレント (トレース中の) プロセスで定義されているセットとインタープロセスセットのリストを表示します。 各セットについて、レコード数とテーブル名が値欄に表示されます。 このテーマの式を修正することはできません。
 
-#### Named Selections
+#### 命名セレクション
 
-This theme lists the named selections that are defined in the current process (the one you’re currently tracing); it also lists the interprocess named selections. For each named selection, the Value column displays the number of records and the table name. The expressions from this theme cannot be modified.
+カレント (トレース中の) プロセスで定義されている命名セレクションとインタープロセス命名セレクションのリストを表示します。 各命名セレクションについて、レコード数とテーブル名が値欄に表示されます。 このテーマの式を修正することはできません。
 
-#### Information
+#### 情報
 
-This theme contains general information regarding database operation, such as the current default table (if one exists), physical, virtual, free and used memory space, query destination, etc.
+このテーマは、データベースのオペレーションに関わる一般的な情報を表示します。 カレントのデフォルトテーブル (あれば)、物理メモリ、仮想メモリ、空きメモリ、使用中メモリ、クエリ格納先、などです。
 
 #### Web
 
-This theme displays information regarding the main Web server of the application (only available if the Web server is active):
+このテーマは、アプリケーションの メインWebサーバーに関する情報が表示されます (Webサーバーが起動している場合のみ):
 
-* Web File To Send: name of Web file waiting to be sent (if any)
-* Web Cache Usage: number of pages present in Web cache as well as its use percentage
-* Web Server Elapsed Time: duration of Web server use in hours:minutes:seconds format
-* Web Hits Count: total number of HTTP requests received since Web server launch, as well as the instantaneous number of requests per second
-* Number of active Web processes: number of active Web processes, all Web processes together
+* 送信するWebファイル: 送信待機中の Webファイルの名前 (あれば)
+* Webキャッシュ利用: Webキャッシュ内のページ数と、使用率
+* Webサーバー起動時間: Webサーバーの起動時間 ("時間:分:秒" 形式)
+* Webヒット回数: Webサーバー起動以降に受信した HTTPリクエストの総数と、1秒毎の受信数
+* 動作中のWebプロセス数: アクティブな Webプロセスの数と、全Webプロセスの数
 
-The expressions contained within this theme cannot be modified.
+このテーマの式を修正することはできません。
 
-### Contextual Menu
+### コンテキストメニュー
 
-Additional options are available from the contextual menu of the Watch pane.
+ウォッチエリアのコンテキストメニューでは、追加オプションが提供されています。
 
-![context-menu](../assets/en/Debugging/contextual-menu.png)
+![コンテキストメニュー](../assets/en/Debugging/contextual-menu.png)
 
-* **Collapse All**: Collapses all levels of the hierarchical list.
-* **Expand All**: Expand all levels of the hierarchical list.
-* **Show Types**: Displays the type of each item (when appropriate).
-* **Show Field and Table Numbers**: Displays the number of each table or field. Useful if you work with table or field numbers, or with pointers using commands such as `Table` or `Field`.
-* **Show Icons**: Displays an icon denoting the object type for each object. You can turn this option off in order to speed up the display, or just because you prefer to use only the **Show Types** option.
-* **Sorted Tables and Fields**: Sorts the tables and fields in alphabetical order within their respective lists.
-* **Show Integers in Hexadecimal**: Numbers are usually displayed in decimal notation. This option displays them in hexadecimal notation. Note: To enter a numeric value in hexadecimal, type 0x (zero + "x"), followed by the hexadecimal digits.
-* **Enable activity monitoring**: Activates the monitoring of activity (advanced checking of internal activity of the application) and displays the information retrieved in the additional themes: **Scheduler**, **Web** and **Network**.
+* **すべて閉じる**: ウォッチエリアの階層リストの全レベルを縮小します。
+* **すべて拡げる**: ウォッチエリアの階層リストの全レベルを展開します。
+* **型を表示**: 各項目のデータ型を (適切な場合に) 表示します。
+* **フィールド/テーブル番号を表示**: テーブルおよびフィールドの番号を表示します。 テーブル番号やフィールド番号を用いて作業している場合、または `Table` や `Field` コマンドを使用し、ポインターを用いて作業している場合、このオプションは非常に便利です。
+* **アイコンを表示**: 各項目のタイプを示すアイコンを表示します。 表示速度を速くするために、このオプションをオフにすることもできます。
+* **テーブル/フィールドをソート**: テーブルおよびフィールドをそれぞれアルファベット順に並べ替えます。
+* **数値を16進で表示**: 通常、数値は 10進法で表示されます。 このオプションを使用すると、数値が 16進法表記で表示されます。 注: 数値を 16進法で入力するには、0x (ゼロの後にx) とタイプし、その後に 16進数を続けます。
+* **アクティビティモニターを有効にする**: 動作のモニタリング (アプリケーション内部の詳細チェック) を有効にし、追加テーマ (**スケジューラー**、**ネットワーク**) に情報を表示します。
 
-## Call Chain Pane
+## 呼び出し連鎖エリア
 
-A method may call other methods or class functions, which may call other methods or functions. The Call Chain pane lets you keep track of that hierarchy.
+1つのメソッドから他のメソッドまたはクラス関数が呼び出される場合があります。 このエリアは、この呼び出し連鎖のリストを表示します。
 
-![call-chain-pane](../assets/en/Debugging/call-chain-example.png)
+![呼び出し連鎖エリア](../assets/en/Debugging/call-chain-example.png)
 
-Each main level item is the name of a method or class function. The top item is the one you are currently tracing, the next main level item is the name of the caller (the method or function that called the one you are currently tracing), the next one is the caller's caller, and so on.
+それぞれのメインレベルの項目は、メソッドまたはクラス関数の名前です。 最も上にある項目は、現在トレース中のメソッド、次の項目は呼び出し元 (トレース中メソッドを呼び出したメソッドまたはクラス関数)、その次の項目は呼び出し元の呼び出し元、のように続きます。
 
-In the image above:
+上図の例では:
 
-* `thirdMethod` has not received any parameter
-* `$0` is currently undefined, as the method did not assign any value to `$0` (because it has not executed this assignment yet or because the method is a subroutine and not a function)
-* `secondMethod` has received three parameters from `firstMethod`:
-  * $1 is a pointer to the `[Employee]` table
-  * $2 is a pointer to the `ID` field in the  `[Employee]` table
-  * $3 is an alphanumeric parameter whose value is "Z"
+* `thirdMethod` は引数を受け取っていません。
+* `$0` は現在未定義です。 これは、メソッドが `$0` に値を割り当てていないためです (メソッドがこの割り当てをまだ実行していないか、メソッドが関数ではなくサブルーチンなことが原因です)。
+* `secondMethod` は `firstMethod` から 3つの引数を受け取っています:
+  * $1 は `[Employee]` テーブルへのポインター
+  * $2 は `[Employee]` テーブルの `ID` フィールドへのポインター
+  * $3 は値が "Z" の英数字の引数です。
 
-You can double-click the name of any method to display its contents in the [Source Code Pane](#source-code-pane).
+呼び出し連鎖エリアのメソッド名をダブルクリックすると、そのソースコードが[ソースコードエリア](#ソースコードエリア) に表示されます。
 
-Clicking the icon next to a method or function name expands or collapses the parameters and the result (if any). Values appear on the right side of the pane. Clicking on any value on the right side allows you to change the value of any parameter or function result.
+メソッドまたは関数名の隣にあるアイコンをクリックすると、引数および戻り値のリストが展開または縮小されます。 値はエリアの右側に表示されます。 右の値をクリックすると、引数や戻り値の値を変更することができます。
 
-To display the parameter type, check the **Show types** option in the contextual menu:
+コンテキストメニュー内の **型を表示** を選択することで、引数のデータ型を表示することができます:
 
-![call-chain-show-types](../assets/en/Debugging/callChainShowTypes.png)
+![呼び出し連鎖-型を表示](../assets/en/Debugging/callChainShowTypes.png)
 
-After you deploy the list of parameters, you can drag and drop parameters and function results to the [Custom Watch Pane](#custom-watch-pane).
+メソッドの引数リストが展開されていれば、引数や戻り値を [カスタムウォッチエリア](#カスタムウォッチエリア) にドラッグ＆ドロップすることができます。
 
-You can also use the [Get call chain](https://doc.4d.com/4dv19/help/command/en/page1662.html) command to retrieve the call chain programmatically.
+呼び出しチェーンは [Get call chain](https://doc.4d.com/4dv19/help/command/ja/page1662.html) コマンドを使って取得することもできます。
 
-## Custom Watch Pane
+## カスタムウォッチエリア
 
-The Custom Watch Pane is useful for evaluating expressions. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Any type of expression can be evaluated:
+カスタムウォッチエリアは、式を評価するために使用します。 [ウォッチエリア](#ウォッチエリア) と似ていますが、ここでは任意の式を表示することができます。 どのようなタイプの式でも評価できます:
 
 * field
-* variable
+* 変数
 * pointer
-* calculation
-* 4D command
+* 演算
+* 4Dコマンド
 * method
-* and anything else that returns a value
+* ほか値を返すものなら何でも
 
-![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
+![カスタムウォッチエリア](../assets/en/Debugging/custom-watch-pane.png)
 
-You can evaluate any expression that can be shown in text form. This does not cover picture and BLOB fields or variables. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](https://doc.4d.com/4dv19/help/command/en/page555.html).
+テキスト形式で表示できる式であれば、どのような式でも評価することができます。 ピクチャーや BLOBフィールドおよび変数は表示できません。 BLOB の内容を表示するには、[BLOB to text](https://doc.4d.com/4dv19/help/command/ja/page555.html) のような BLOBコマンドを使用してください。
 
-### Handling expressions
+### 新しい式の挿入
 
-There are several ways to add expressions to the list:
+リストに式を追加する方法は複数あります:
 
-* Drag and drop an object or expression from the Watch Pane or the Call Chain Pane
-* Select an expression in the [Source Code pane](#source-code-pane) and press **ctrl+D**  (Windows) or **cmd+D** (macOS)
-* Double-click somewhere in the empty space of the Custom Watch Pane (adds an expression with a placeholder name that you can edit)
+* ウォッチエリアまたは呼び出し連鎖エリアから項目や式をドラッグ＆ドロップします。
+* [ソースコードエリア](#ソースコードエリア) で式を選択し、**ctrl+D**  (Windows) または **cmd+D** (macOS) を押します。
+* カスタムウォッチエリアの空スペースのどこかをダブルクリックします (プレースホルダー名を持つ編集可能な式が追加されます)。
 
-You can enter any formula that returns a result.
+値を返すフォーミュラであれば、なんでも追加できます。
 
-To edit an expression, click on it to select it, then click again or press **Enter** on your keyboard.
+式を編集するには、その式をクリックして選択し、再びクリックすると (または**Enter**キーを押す) 編集モードになります。
 
-To delete an expression, click on it to select it, then press **Backspace** or **Delete** on your keyboard.
-> **Warning:** Be careful when you evaluate a 4D expression modifying the value of one of the System Variables (for instance, the OK variable) because the execution of the rest of the method may be altered.
+式を削除するには、その式をクリックして選択し、**Backspace** または **Delete**キーを押します。
+> **警告**: システム変数 (たとえば OK変数) の値を変更するような 4D式を評価する場合、その後のメソッド実行に影響することに注意してください。
 
-### Contextual Menu
+### コンテキストメニュー
 
-The Custom Watch Pane’s context menu gives you access the 4D formula editor and other options:
+カスタムウォッチエリアのコンテキストメニューを使って、4D のフォーミュラエディターにアクセスできます:
 
-![custom-watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-context-menu.png)
+![カスタムウォッチエリア-コンテキストメニュー1](../assets/en/Debugging/custom-watch-pane-context-menu.png)
 
-**New Expression**: This inserts a new expression and displays the 4D Formula Editor.
+**新しい式...**: 新しい式を挿入し、4D のフォーミュラエディターを表示します。
 
-![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
+![カスタムウォッチエリア-コンテキストメニュー2](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
 
-For more information on the Formula Editor, see the <a href="https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html" target="_blank">4D Design Reference manual.</a>
+フォーミュラエディターに関する詳細は、<a href="https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html" target="_blank">4D Design Reference マニュアル</a> を参照してください。
 
-* **Insert Command**: Shortcut for inserting a 4D command as a new expression.
-* **Delete All**: Removes all expressions from the Custom Watch Pane.
-* **Standard Expressions**: Copies the Watch Pane's list of expressions.
+* **コマンド挿入...**: 4Dコマンドを新しい式として挿入するためのショートカット。
+* **すべて削除**: 現在カスタムウォッチエリアに表示されている式をすべて削除します。
+* **標準式**: ウォッチエリアの式リストをコピーします。
 
-> This option is not available in remote debugging mode (see [Debugging from Remote Machines](https://doc.4d.com/4Dv19/4D/19/Debugging-from-Remote-Machines.300-5422483.en.html)).
+> このオプションはリモートデバッグモードでは利用できません ([リモートマシンからのデバッグ](debugging-remote.md) 参照)。
 
-* **Collapse All/Expand All**: Collapses or Expands all the hierarchical lists.
-* **Show Types**: Displays the type of each item in the list (when appropriate).
-* **Show Field and Table Numbers**: Displays the number of each table or field of the **Fields**. Useful if you work with tables, field numbers or pointers using the commands such as `Table` or `Field`.
-* **Show Icons**: Displays an icon denoting the type of each item.
-* **Sorted Tables and Fields**: Displays the table and fields in alphabetical order.
-* **Show Integers in Hexadecimal**: Displays numbers using hexadecimal notation. To enter a numeric value in hexadecimal, type 0x (zero + "x"), followed by the hexadecimal digits.
+* **すべて閉じる/すべて拡げる**: 階層リストの全レベルを縮小/展開します。
+* **型を表示**: リストの各項目のデータ型を (適切な場合に) 表示します。
+* **フィールド/テーブル番号を表示**: テーブルおよびフィールドの番号を表示します。 テーブル番号やフィールド番号を用いて作業している場合、または `Table` や `Field` コマンドを使用し、ポインターを用いて作業している場合、このオプションは非常に便利です。
+* **アイコンを表示**: 各項目のタイプを示すアイコンを表示します。
+* **テーブル/フィールドをソート**: テーブルおよびフィールドをそれぞれアルファベット順に並べ替えます。
+* **数値を16進で表示**: 数値がを16進法表記で表示します。 数値を 16進法で入力するには、0x (ゼロの後にx) とタイプし、その後に 16進数を続けます。
 
-## Source Code Pane
+## ソースコードエリア
 
-The Source Code Pane shows the source code of the method or function currently being traced.
+ソースコードエリアには、トレース中のメソッドや関数のソースコードが表示されます。
 
-This area also allows you to add or remove [**break points**](breakpoints.md).
+このエリアでは、[**ブレークポイント**](breakpoints.md) の追加や削除も可能です。
 
-### Tool tip
+### Tips
 
-Hover your pointer over any expression to display a tool tip that indicates:
+式の上にマウスカーソルを移動すると、Tipsとして次の内容が表示されます:
 
-* the declared type of the expression
-* the current value of the expression
+* 宣言された式の型
+* 式のカレント値
 
-![source-code-pane](../assets/en/Debugging/sourceCodePane.png)
+![ソースコードエリア](../assets/en/Debugging/sourceCodePane.png)
 
-This also works with selections:
+これはセレクションの場合も機能します:
 
-![source-code-pane-tip](../assets/en/Debugging/sourcePaneTip.png)
+![ソースコードエリア-Tips](../assets/en/Debugging/sourcePaneTip.png)
 
-### Adding expressions to the Custom Watch Pane
+### カスタムウォッチエリアへの式の追加
 
-You can copy any selected expression from the Source Code Pane to the [Custom Watch Pane](#custom-watch-pane).
+ソースコードエリアで選択した式は [カスタムウォッチエリア](#カスタムウォッチエリア) にコピーすることができます。
 
-1. In the Source code pane, select the expression to evaluate
-2. Do one of the following:
-    * Drag and drop the selected text to the Expression area of the Custom Watch Pane
-    * Press **Ctrl+D** (Windows) or **Cmd+D** (macOS)
-    * Right-click the selected text **>** **Copy to Expression Pane**
+1. ソースコードエリア内で評価する式を選択します。
+2. 次のいずれかの方法をおこないます:
+    * 選択したテキストをカスタムウォッチエリアの式欄へドラッグ＆ドロップする。
+    * **Ctrl+D** (Windows) または **Cmd+D** (macOS) を押す。
+    * 選択したテキストを右クリックして、コンテキストメニューから **式ペインにコピー** コマンドを選択する。
 
-### Program Counter
+### プログラムカウンター
 
-The yellow arrow in the left margin of the Source Code pane is called the program counter. It marks the next line to be executed.
+ソースコードエリアの左マージンにある黄色の矢印は、プログラムカウンターと呼ばれます。 これは、実行される次の行を表しています。
 
-By default, the program counter line (also called the running line) is highlighted in the debugger. You can customize the highlight color in the [Methods page of the Preferences](Preferences/methods.md).
+デフォルトでは、プログラムカウンター行 (実行行とも呼ばれます) がデバッガー内でハイライトされています。 [環境設定のメソッドページ](Preferences/methods.md) において、ハイライトカラーをカスタマイズすることができます。
 
-#### Moving the program counter
+#### プログラムカウンターの移動
 
-For debugging purposes, you can move the program counter for the method at the top of the call chain (the method currently executing). To do so, click and drag the yellow arrow to another line.
+デバッグのために、呼び出し連鎖のトップにあるメソッド (実行中のメソッド) のプログラムカウンターの位置を変更することができます。 これには、黄色の矢印をクリックして目的の行まで上下にドラッグします。
 
-This only tells the debugger to pursue tracing or executing from a different point. It does not execute lines or cancel their execution. All current settings, fields, variables, etc. are not impacted.
+これは、その位置からのトレースや実行を追跡するようにデバッガーに指示しているに過ぎません。 カウンターの移動そのものはコードを実行したり、実行をキャンセルしたりしません。 すべての現在の設定内容、フィールド、変数などに影響はありません。
 
-For example:
+例:
 
 ```4d
   // ...
@@ -378,62 +378,62 @@ For example:
   // ...
 ```
 
-Say the program counter is set to the line `If (This condition)`. When you click the **Step over** button, the program counter moves directly to the `DO_SOMETHING_ELSE` line. To examine the results of the `DO_SOMETHING` line, you can move the program counter to that line and execute it.
+行 `If (This condition)` にプログラムカウンターが設定されているとします。 **次行に進む** ボタンをクリックすると、プログラムカウンターが行 `DO SOMETHING ELSE` に直接移動します。 しかし、今回トレースしたかったのは `DO_SOMETHING` 行のコードでした。 このような場合、プログラムカウンターをその行に移動して実行することができます。
 
-### Contextual menu
+### コンテキストメニュー
 
-The contextual menu of the Source Code Pane provides access to several functions that are useful when executing methods in Trace mode:
+ソースコードエリア のコンテキストメニューを使って、トレースモードでメソッドを実行する際に便利な機能にアクセスできます:
 
-![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
+![ソースコードエリア-コンテキストメニュー](../assets/en/Debugging/sourceCodePaneContext.png)
 
-* **Goto Definition**: Goes to where the selected object is defined. This command is available for:
-  * *Project methods:* displays method contents in a new window of the Code Editor
-  * *Fields:* Displays field properties in the inspector of the Structure window
-  * *Tables:* Displays table properties in the inspector of the Structure window
-  * *Forms:* Displays form in the Form editor
-  * *Variables* (local, process, interprocess or $n parameter): displays the line in the current method or among the compiler methods where the variable is declared
-* **Search References** (also available in Code Editor): Searches all project objects (methods and forms) in which the current element of the method is referenced. The current element is the one selected or the one where the cursor is located. This can be the name of a field, variable, command, string, and so on. Search results are displayed in a new standard results window.
-* **Copy**: Standard copy of the selected expression to the pasteboard.
-* **Copy to Expression Pane**: Copy the selected expression to the Custom Watch Pane.
-* **Run to Cursor**:Executes statements found between the program counter and the selected line of the method (where the cursor is found).
-* **Set Next Statement**:Moves program counter to the selected line without executing this line or any intermediate ones. The designated line is only run if the user clicks on one of the execution buttons.
-* **Toggle Breakpoint** (also available in Code Editor): Alternately inserts or removes the breakpoint corresponding to the selected line. This modifies the breakpoint permanently: for instance, if you remove a breakpoint in the debugger, it no longer appears in the original method.
-* **Edit Breakpoint** (also available in Code Editor): Displays the Breakpoint Properties dialog box. Any changes made modify the breakpoint permanently.
+* **定義に移動...**: 選択された要素の定義に移動します。 このコマンドは以下の要素に使用できます:
+  * *プロジェクトメソッド*: 新しいコードエディターウィンドウにメソッドの内容を表示します。
+  * *フィールド*: ストラクチャーウィンドウのインスペクターにフィールドプロパティを表示します。
+  * *テーブル*: ストラクチャーウィンドウのインスペクターにテーブルプロパティを表示します。
+  * *フォーム*: フォームエディターにフォームを表示します。
+  * *変数* (ローカル、プロセス、インタープロセス、$n 引数): カレントメソッド内の宣言行を表示、または変数が宣言されたコンパイラーメソッドを表示します。
+* **参照を検索...** (コードエディターでも利用可能): 現在の要素が参照されているすべてのメソッドとフォームを検索します。 現在の要素とは、選択されているものまたはカーソルが置かれているものをいいます。 これにはフィールド、変数、コマンド、文字列等が含まれます。 検索結果は、標準の検索結果ウィンドウに表示されます。
+* **コピー**: 選択された式が標準のペーストボードへとコピーされます。
+* **式ペインにコピー**: 選択された式をカスタムウォッチエリアにコピーします。
+* **カーソルまで実行**: プログラムカウンターと選択行の間のコードを実行します。
+* **次のステートメントを設定**: 現在の行および途中の行を実行せずに、プログラムカウンターを選択行まで移動します。 選択行は、ユーザーが実行ボタンのいずれかをクリックした際に実行されます。
+* **ブレークポイントをトグル** (コードエディターでも利用可能): 選択行のブレークポイントの有無を切り替えます。 これによりメソッドエディターのブレークポイントの有無も切り替わります。
+* **ブレークポイントを編集...** (コードエディターでも利用可能): ブレークポイントプロパティダイアログボックスを表示します。 ここでおこなわれた変更はメソッドエディターにも反映されます。
 
-### Find Next/Previous
+### 次/前を検索
 
-Specific shortcuts allow you to find strings identical to the one selected:
+専用のショートカットを使用することで選択された文字列を検索することができます:
 
-* To search for the next identical strings, press **Ctrl+E** (Windows) or **Cmd+E** (macOS)
-* To search for the previous identical strings, press **Ctrl+Shift+E** (Windows) or **Cmd+Shift+E** (macOS)
+* 文字列と一致する次の箇所を検索するには、**Ctrl+E** (Windows) または **Cmd+E** (macOS) を使用します。
+* 文字列と一致する前の箇所を検索するには、**Ctrl+Shift+E** (Windows) または **Cmd+Shift+E** (macOS) を使用します。
 
-The search is carried out only if you select at least one character in the Source code pane.
+この検索は、ソースコードエリアにて少なくとも 1文字以上を選択している場合に実行されます。
 
-## Shortcuts
+## ショートカット
 
-This section lists all the shortcuts available in the debugger window.
+この節ではデバッグウィンドウで　利用可能なショートカットをリストしています。
 
-> The tool bar also has [shortcuts](#tool-bar-buttons).
+> 実行制御ツールバーにも [ショートカット](#ツールバーボタン) が設定されています。
 
-#### Watch Pane & Custom Watch Pane
+#### ウォッチエリア & カスタムウォッチエリア
 
-* **Double-click** an item in the Watch Pane to copy it to the Custom Watch Pane
-* **Double-Click** in the Custom Watch Pane to create a new expression
+* ウォッチエリア内の項目を **ダブルクリック** すると、その項目がカスタムウォッチエリアにコピーされます。
+* カスタムウォッチエリア内で **ダブルクリック** すると、新しい式を作成できます。
 
-#### Source Code Pane
+#### ソースコードエリア
 
-* Click in the left margin to set or remove break points.
-* **Alt+Shift+Click** (Windows) or **Option+Shift+Click** (macOS) sets a temporary break point.
-* **Alt-Click** (Windows) or **Option-Click** displays the Edit Break window for a new or existing break point.
-* A selected expression or object can be copied to the Custom Watch Pane by simple drag and drop.
-* **Ctrl+D** (Windows) or **Cmd+D** (macOS) key combinations copy the selected text to the Custom Watch Pane.
-* **Ctrl+E** (Windows) or **Cmd+E** (macOS) key combinations find the next strings identical to the one selected.
-* **Ctrl+Shift+E** (Windows) or **Cmd+Shift+E** (macOS) key combinations find the previous strings identical to the one selected.
+* 左マージンをクリックすると、ブレークポイントが設定・削除されます。
+* **Alt+Shift+クリック** (Windows) または **Option+Shift+クリック** (macOS) により、一時的ブレークポイントが設定されます。
+* **Alt+クリック** (Windows) または **Option+クリック** (macOS) により、ブレーク編集ウィンドウが表示されます。
+* 選択された式や要素をドラック＆ドロップして、カスタムウォッチエリアにコピーできます。
+* **Ctrl+D** (Windows) または **Command+D** (macOS) キーを押すことで、カスタムウォッチエリアに選択テキストがコピーされます。
+* **Ctrl+E** (Windows) または **Cmd+E** (macOS) を押すと、選択文字列に一致する次の箇所を検索します。
+* **Ctrl+Shift+E** (Windows) または **Cmd+Shift+E** (macOS) を押すと、選択文字列に一致する前の箇所を検索します。
 
-#### All Panes
+#### すべてのエリア
 
-* **Ctrl** + **+/-** (Windows) or **Command** + **+/-** (macOS) increases or decreases the font size for a better readability. The modified font size is also applied to the Code Editor and is stored in the Preferences.
-* **Ctrl + \*** (Windows) or **Command + \*** (macOS) forces the updating of the Watch Pane.
-* When no item is selected in any pane, press **Enter** to step over.
-* When an item value is selected, use the arrows keys to navigate through the list.
-* When editing an item, use the arrow keys to move the cursor. Use Ctrl-A/X/C/V (Windows) or Command-A/X/C/V (macOS) as shortcuts to the Select All/Cut/Copy/Paste menu commands of the Edit menu.
+* **Ctrl** + **+/-** (Windows) または **Command** + **+/-** (macOS) を押すと、可読性を向上させるためにフォントサイズが拡大/縮小します。 変更されたフォントサイズはコードエディターにも適用され、環境設定に保存されます。
+* **Ctrl + \*** (Windows) または **Command + \*** (macOS) を押すと、ウォッチエリアが強制的に更新されます。
+* 全エリアでいずれの項目も選択されていない場合に **Enter**キーを押すと、1行ずつ進みます。
+* 項目の値が選択されている場合には、矢印キーでリスト内を移動します。
+* 項目を編集中の場合には、矢印キーでカーソルが移動します。 Ctrl-A/X/C/V (Windows) または Command-A/X/C/V (macOS) を、編集メニューのすべてを選択/切り取り/コピー/貼り付けコマンドへのショートカットとして使用できます。

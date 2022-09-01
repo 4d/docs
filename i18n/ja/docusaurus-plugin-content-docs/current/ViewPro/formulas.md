@@ -1,184 +1,184 @@
 ---
 id: formulas
-title: Formulas and Functions
+title: 式と関数
 ---
    
-## Using formulas
+## フォーミュラの使い方
 
-A spreadsheet formula is an expression that calculates the value of a cell.
+スプレッドシートのフォーミュラとは、セルの値を計算する式のことです。
 
-### Entering formulas
+### フォーミュラの入力
 
-To enter a formula in a 4D View Pro area:
+4D View Pro エリアにフォーミュラを入力するには:
 
-1.  Select the cell into which you will enter the formula or function.
-2.  Enter = (the equal sign).
-3.  Type the formula and hit the **Enter** key.
+1.  フォーミュラを入力するセルを選択します。
+2.  = (等号) を入力します。
+3.  フォーミュラを入力し、**Enter**キーを入力します。
 
-When writing a formula, you can use different shortcuts:
+フォーミュラ入力の際には、次のショートカットを使うことができます:
 
-- click on a cell to enter its reference in the formula:
+- フォーミュラにセル参照を入力する代わりに、参照するセルをクリックします:
 
 ![](../assets/en/ViewPro/formulas.PNG)
 
-- type the first letter of a function to enter. A pop-up menu listing the available functions and references appears, allowing you to select the desired elements:
+- 入力したい関数の頭文字を入力します。 すると、利用可能な関数と参照の一覧がポップアップメニューに表示され、必要な要素を選択することができます:
 
 ![](../assets/en/ViewPro/formula2.png)
 
-You can also create named formulas that can be called via their name. To do so, enter these formulas using the [VP ADD FORMULA NAME](method-list.md#vp-add-formula-name) command.
+また、命名フォーミュラを作成すると、その名前で呼び出すことが可能です。 この場合、[VP ADD FORMULA NAME](method-list.md#vp-add-formula-name) コマンドを使用して命名フォーミュラを入力します。
 
-### Operators and Operands
+### 演算子とオペランド
 
-All formulas have operands and operators:
+すべてのフォーミュラはオペランドと演算子から成り立っています:
 
-*   **Operators**: see [Values and operators](#values-and-operators) below.
-*   **Operands** include several categories:
-    *   [values](#values-and-operators) (5 data types are supported)
-    *   [references to other cells](#cell-references) (relative, absolute, mixed or by name)
-    *   [standard spreadsheet functions](#using-functions)
-    *   [4D functions](#4d-functions) based upon 4D formulas and providing access to 4D variables, fields, methods, commands, or expressions.
+*   **演算子**: 後述の [値と演算子](#値と演算子) 参照。
+*   **オペランド** は、いくつかのカテゴリーに分けられます:
+    *   [値](#値と演算子) (5つのデータ型がサポートされています)
+    *   [他のセルへの参照](#セル参照) (相対参照、絶対参照、ミックス参照、あるいは名前での参照)
+    *   [標準のスプレッドシートファンクション (関数)](#using-functions)
+    *   4Dフォーミュラに基づく [4Dファンクション](#4dファンクション) (4D変数、フィールド、メソッド、コマンド、式が利用可能です)
 
-## Values and operators
+## 値と演算子
 
-4D View Pro supports five types of data. For each data type, specific literal values and operators are supported.
+4D View Pro は 5つのデータ型をサポートします。 それぞれのデータ型について、特定の定数と演算子がサポートされています。
 
-| Data types                        | Values                                                | Operators                                                                                                                                                                                                                                              |
-| --------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Number](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (addition)<br/>- (subtraction)<br/>* (multiplication)<br/>/ (division)<br/>^ (exponent, the number of times to multiply a number by itself)<br/>% (percentage -- divide the number before the operator by one hundred) |
-| [Date](Concepts/dt_date.md)       | 10/24/2017                                            | + (date + number of days -> date)<br/>+ (date + time -> date + time of day)<br/>- (date - number of days -> date)<br/>- (date - date -> number of days between the two)                                                              |
-| [Time](Concepts/dt_time.md)       | 10:12:10                                              | Duration operators:<br/>+ (addition)<br/>- (subtraction)<br/>* (duration * number -> duration)<br/>/ (duration / number -> duration)                                                                                         |
-| [String](Concepts/dt_string.md)   | 'Sophie' or "Sophie"                                  | & (concatenation)                                                                                                                                                                                                                                      |
-| [Boolean](Concepts/dt_boolean.md) | TRUE or FALSE                                         | -                                                                                                                                                                                                                                                      |
-
-
-### Comparison operators
-
-The following operators can be used with two operands of the same type:
-
-| Operator   | Comparison               |
-| ---------- | ------------------------ |
-| =          | equal to                 |
-| `<>` | different than           |
-| >          | greater than             |
-| <          | less than                |
-| >=         | greater than or equal to |
-| <=         | less than or equal to    |
+| データ型                            | 値                                                     | 演算子                                                                                                                                                            |
+| ------------------------------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [数値](Concepts/dt_number.md)     | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (加法)<br/>- (減法)<br/>* (乗法)<br/>/ (除法)<br/>^ (べき乗、数値を自身に対してかける回数)<br/>% (パーセント -- 演算子の前の数値を100で割る)                              |
+| [日付](Concepts/dt_date.md)       | 10/24/2017                                            | + (日付 + 日数 -> 日付)<br/>+ (日付 + 時間 -> 日付 + その日の時間)<br/>- (日付 - 日数 -> 日付)<br/>- (日付 - 日付 -> 2つの日付間の日数)                                          |
+| [時間](Concepts/dt_time.md)       | 10:12:10                                              | Duration operators:<br/>+ (addition)<br/>- (subtraction)<br/>* (duration * number -> duration)<br/>/ (duration / number -> duration) |
+| [String](Concepts/dt_string.md) | 'Sophie' または "Sophie"                                 | & (連結)                                                                                                                                                         |
+| [ブール](Concepts/dt_boolean.md)   | TRUE または FALSE                                        | -                                                                                                                                                              |
 
 
-### Operator precedence
+### 比較演算子
 
-List of operators from most to least important:
+同じ型の 2つのオペランドに対して以下の演算子を使用することができます:
 
-| Operator                                      | Description                |
-| --------------------------------------------- | -------------------------- |
-| ()                                            | Parenthesis (for grouping) |
-| -                                             | Negate                     |
-| +                                             | Plus                       |
-| %                                             | Percent                    |
-| ^                                             | Exponent                   |
-| * and /                                       | Multiply and divide        |
-| + and -                                       | Add and Subtract           |
-| &                                             | Concatenate                |
-| `=`  `>` `<` `>=` `<=` `<>` | Compare                    |
+| 演算子        | 比較  |
+| ---------- | --- |
+| =          | 等しい |
+| `<>` | 異なる |
+| >          | 大きい |
+| <          | 小さい |
+| >=         | 以上  |
+| <=         | 以下  |
 
 
+### 演算子の優先順位
+
+以下は演算子を優先度順に並べたものです (優先度が高い方が上):
+
+| 演算子                                           | 詳細          |
+| --------------------------------------------- | ----------- |
+| ()                                            | カッコ (グループ化) |
+| -                                             | 否定          |
+| +                                             | 追加          |
+| %                                             | パーセント       |
+| ^                                             | べき乗         |
+| * および /                                       | 乗法と除法       |
+| + と -                                         | 加法と減法       |
+| &                                             | 連結          |
+| `=`  `>` `<` `>=` `<=` `<>` | 比較          |
 
 
-## Cell references
 
-Formulas often refer to other cells by cell addresses. You can copy these formulas into other cells. For example, the following formula, entered in cell C8, adds the values in the two cells above it and displays the result.
+
+## セル参照
+
+フォーミュラ (式) は多くの場合、セルアドレスを使って他のセルを参照します。 このような式を他のセルにコピーすることも可能です。 たとえば、C8 に入力された以下の式では、すぐ上にある 2つのセルの値を足して結果を表示します。
 
 ```
 = C6 + C7
 ```
 
-This formula refers to cells C6 and C7. That is, 4D View Pro is instructed to refer to these other cells for values to use in the formula.
+この式はセル C6 と C7 を参照します。 つまり、式内で使用する値については他のセルを参照するよう、4D View Pro に指示しています。
 
-When you copy or move these formulas to new locations, each cell address in that formula will either change or stay the same, depending on how it is typed.
+こういった式を別のセルにコピーあるいは移動させた場合、式内のセルアドレスは参照の仕方によって連動して変化したり変化しなかったりします。
 
-*   A reference that changes is called a **relative reference**, and refers to a cell by how far left/right and up/down it is from the cell with the formula.
-*   A reference that always points to a particular cell is called an **absolute reference**.
-*   You can also create a mixed reference which always points to a fixed row or column.
-
-
-
-### Reference Notation
-
-If you use only cell coordinates, for example, `C5`, 4D View Pro interprets the reference as relative. You may make the reference an absolute reference by putting a dollar sign in front of the letter and the number, as in `$C$5`.
-
-You can mix absolute and relative references by inserting a dollar sign in front of the letter or the number alone, for example, `$C5` or `C$5`. A mixed reference allows you to specify either the row or the column as absolute, while allowing the other portion of the address to refer relatively.
-
-A convenient, fast and accurate way to specify an absolute reference is to name the cell and use that name in place of the cell address. A reference to a named cell is always absolute. You can create or modify named cells or named cell ranges using the [`VP ADD RANGE NAME`](method-list.md#vp-add-range-name) method.
-
-The following table shows the effect of the different notations:
-
-| Example   | Type of reference | Description                                                                                                                                    |
-| --------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| C5        | Relative          | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                   |
-| $C$5      | Absolute          | Reference is absolute. Will always refer to cell C5 no matter where it is used.                                                                |
-| $C5       | Mixed             | Reference is always to column C, but the row reference is relative to the location of the cell in which the reference is first used.           |
-| C$5       | Mixed             | Reference is always to row 5, but the column reference is relative to the location of the cell in which the reference is first used            |
-| Cell name | Absolute          | Reference is absolute. Will always refer to the [named cell or range](method-list.md#vp-add-range-name) no matter where the reference is used. |
+*   参照が変化するものは **相対参照** と呼ばれ、式が入っているセルを基準として、相対的にどれだけ上下左右に離れているかでセルを参照します。
+*   常に特定のセルを参照するものは **絶対参照** と呼ばれます。
+*   また、複合参照といって、特定の行あるいはカラムに参照を固定することもできます。
 
 
 
-## Built-in functions
+### 参照の記法
 
-Spreadsheet functions are preset formulas used to calculate cell values. When you type the first letter of the function to enter, a pop-up menu listing the available functions and references appears, allowing you to select the desired elements:
+セル座標 ( `C5` など) のみを使用すると、4D View Pro はそれを相対参照として解釈します。 文字と数字の前に $ (ドル) 記号を入れることで、参照を絶対参照にすることができます (例: `$C$5`)。
+
+ドル記号を文字あるいは数字の前だけに入れることで相対参照と絶対参照を組み合わせることができます (例: `$C5`、`C$5`)。 複合参照を使用すると、行かカラムを絶対参照として指定しながら、もう片方については相対的に参照させることが可能になります。
+
+素早くかつ正確に絶対参照を指定するには、セルを命名し、その名前をセルアドレス代わりに使用する方法があります。 命名セルへの参照は常に絶対参照です。 命名セルまたは命名セルレンジを作成・編集するには、[`VP ADD RANGE NAME`](method-list.md#vp-add-range-name) メソッドを使用します。
+
+以下の表は異なる記法による効果をまとめたものです:
+
+| 例題   | 参照タイプ | 詳細                                                                                      |
+| ---- | ----- | --------------------------------------------------------------------------------------- |
+| C5   | 相対    | 参照は相対的にセル C5 を指しており、参照が最初に使用されたセルが位置の基準となります。                                           |
+| $C$5 | 絶対    | 参照は絶対参照です。 どこで使用されるかにかかわらず、常にセル C5 を参照します。                                              |
+| $C5  | 複合    | 常にカラム C を参照しますが、行の参照は相対的で、参照が最初に使用されたセルを基準に決まります。                                       |
+| C$5  | 複合    | 常に 5行目を参照しますが、カラムの参照は相対的で、参照が最初に使用されたセルを基準に決まります。                                       |
+| セル名  | 絶対    | 参照は絶対参照です。 どこで使用されるかにかかわらず、常に [命名されたセルまたはレンジ](method-list.md#vp-add-range-name) を参照します。 |
+
+
+
+## ビルトインファンクション
+
+スプレッドシートのファンクションとは、セルの値を計算する規定のフォーミュラのことで、関数とも呼ばれます。 入力したい関数の頭文字を入力すると、利用可能な関数と参照の一覧がポップアップメニューに表示され、必要な要素を選択することができます:
 
 ![](../assets/en/ViewPro/vpFormula2.PNG)
 
-See [**SpreadJS's extented list of functions**](https://www.grapecity.com/spreadjs/docs/v14/online/FormulaFunctions.html) for details and examples.
+詳細や例題については [**SpreadJS's extented list of functions**](https://www.grapecity.com/spreadjs/docs/v14/online/FormulaFunctions.html) (英文) を参照ください。
 
 
-## 4D functions
+## 4Dファンクション
 
-4D View Pro allows you to define and call **4D custom functions**, which execute [4D formulas](API/FunctionClass.md). Using 4D custom functions extends the possibilities of your 4D View Pro documents and allows powerful interactions with the 4D database.
+4D View Pro では、[4Dフォーミュラ](API/FunctionClass.md) を実行する **4Dカスタムファンクション** を定義・使用することができます。 4Dカスタムファンクションを使用すると、4D View Pro ドキュメントの可能性が広がり、4Dデータベースとの強力な連携が可能になります。
 
-4D custom functions provide access, from within your 4D View Pro formulas, to:
+4Dカスタムファンクションを使用すると、4D View Pro のフォーミュラ内で以下が利用可能になります:
 
-- 4D process variables,
-- fields,
-- project methods,
-- 4D language commands,
-- or any valid 4D expression.
+- 4Dプロセス変数
+- フィールド
+- プロジェクトメソッド
+- 4Dランゲージコマンド
+- または、有効な 4D式
 
-4D custom functions can receive [parameters](#parameters) from the 4D View Pro area, and return values.
+4Dカスタムファンクションは、4D View Pro エリアから [引数](#引数) を受け取り、値を返すことができます。
 
-You declare all your functions using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method. Examples:
+これらのカスタムファンクションは [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) メソッドを使って宣言します。 例:
 
 ```4d
 o:=New object
 
-//Name of the function in 4D View Pro: "DRIVERS_LICENCE"
+// 4D View Pro におけるファンクション名: "DRIVERS_LICENCE"
 $o.DRIVERS_LICENCE:=New object
 
-//process variable
+// プロセス変数
 $o.DRIVERS_LICENCE.formula:=Formula(DriverLicence)
 
-//table field
+// テブルフィールド
 $o.DRIVERS_LICENCE.formula:=Formula([Users]DriverLicence)
 
-//project method
+// プロジェクトメソッド
 $o.DRIVERS_LICENCE.formula:=Formula(DriverLicenceState)
 
-//4D command
+// 4Dコマンド
 $o.DRIVERS_LICENCE:=Formula(Choose(DriverLicence; "Obtained"; "Failed"))
 
-//4D expression and parameter
+//4D式と引数
 $o.DRIVERS_LICENCE.formula:=Formula(ds.Users.get($1).DriverLicence)
 $o.DRIVERS_LICENCE.parameters:=New collection
 $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 ```
 
-> **See also** [4D View Pro: Use 4D formulas in your spreadsheet (blog post)](https://blog.4d.com/4d-view-pro-use-4d-formulas-in-your-spreadsheet/)
+> [4D View Pro: Use 4D formulas in your spreadsheet (英文ブログ記事)](https://blog.4d.com/4d-view-pro-use-4d-formulas-in-your-spreadsheet/) も参照ください。
 
 
-### Hello World example
+### Hello World 例題
 
-We want to print "Hello World" in a 4D View Pro area cell using a 4D project method:
+4Dプロジェクトメソッドを使って、4D View Pro エリアのセルに "Hello World" と表示させます。
 
-1.  Create a "myMethod" project method with the following code:
+1.  "myMethod" プロジェクトメソッドを作成し、次のコードを書きます:
 
 ```4d
  #DECLARE->$hw Text
@@ -186,76 +186,76 @@ We want to print "Hello World" in a 4D View Pro area cell using a 4D project met
 
 ```
 
-2.  Execute the following code before opening any form that contains a 4D View Pro area:
+2.  4D View Pro エリアが設置されたフォームを開く前に、以下のコードを実行します:
 
 ```4d
   Case of
     :(Form event code=On Load)
        var $o : Object
        $o:=New object
-  // Define "vpHello" function from the "myMethod" method
+  // "myMethod" メソッドから "vpHello" ファンクションを定義します
        $o.vpHello:=New object
        $o.vpHello.formula:=Formula(myMethod)
        VP SET CUSTOM FUNCTIONS("ViewProArea";$o)
  End case
 ```
 
-3.  Edit the content of a cell in a 4D View Pro area and type:
+3.  4D View Pro エリアのセルに次を入力します:
 
     ![](../assets/en/ViewPro/vpProjMeth1.PNG)
 
-    "myMethod" is then called by 4D and the cell displays:
+    すると、4D によって "myMethod "が呼び出され、セルの表示は次のようになります:
 
     ![](../assets/en/ViewPro/vpProjMeth2.PNG)
 
 
 
-### Parameters
+### パラメーター
 
-Parameters can be passed to 4D functions that call project methods using the following syntax:
+プロジェクトのメソッドを呼び出す 4Dファンクションには、以下のシンタックスで引数を渡すことができます:
 
 ```
 =METHODNAME(param1,param2,...,paramN)
 ```
 
-These parameters are received in *methodName* in $1, $2...$N.
+*methodName* はこれらの引数を $1, $2...$N に受け取ります。
 
-Note that the ( ) are mandatory, even if no parameters are passed:
+引数を渡さない場合でも ( ) の使用は必須です:
 
 ```
 =METHODWITHOUTNAME()
 ```
 
-You can declare the name, type, and number of parameters through the *parameters* collection of the function you declared using the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) method. Optionally, you can control the number of parameters passed by the user through *minParams* and *maxParams* properties.
+[VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) メソッドを使用して宣言したファンクションの *parameters* コレクションを使って、引数の名前、型、数を宣言することができます。 オプションとして、*minParams* および *maxParams* プロパティにより、ユーザーから渡される引数の数を制御することができます。
 
-For more information on supported incoming parameter types, please refer to the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) method description.
+サポートされている引数の型の詳細については、[VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) メソッドの説明を参照ください。
 
-> If you do not declare parameters, values can be sequentially passed to methods (they will be received in $1, $2...) and their type will be automatically converted. Dates in *jstype* will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:   
+> 引数を宣言していない場合には、メソッドに値を順番に渡すことができ ($1、$2... に受け取られます)、それらの型は自動的に変換されます。 Dates in *jstype* will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:   
 > |Property|    Type|   Description| |---|---|---| |value|   Date|   Date value| |time |Real|  Time in seconds|
 
-4D project methods can also return values in the 4D View Pro cell formula via $0. The following data types are supported for returned parameters:
+4Dプロジェクトメソッドは、$0 を介して 4D View Pro のセルフォーミュラに値を返すこともできます。 以下のデータ型の戻り値がサポートされています:
 
-* [text](Concepts/dt_string.md) (converted to string in 4D View Pro)
-* [real](Concepts/dt_number.md)/[longint](Concepts/dt_number.md) (converted to number in 4D View Pro)
-* [date](Concepts/dt_date.md) (converted to JS Date type in 4D View Pro - hour, minute, sec = 0)
-* [time](Concepts/dt_time.md) (converted to JS Date type in 4D View Pro - date in base date, i.e. 12/30/1899)
-* [boolean](Concepts/dt_boolean.md) (converted to bool in 4D View Pro)
-* [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg other types converted into png) creates a URI (data:image/png;base64,xxxx) and then used as the background in 4D View Pro in the cell where the formula is executed
-* [object](Concepts/dt_object.md) with the following two properties (allowing passing a date and time):
+* [テキスト](Concepts/dt_string.md) (4D View Pro 内で文字列に変換)
+* [実数](Concepts/dt_number.md)/[倍長整数](Concepts/dt_number.md) (4D View Pro 内で数値に変換)
+* [日付](Concepts/dt_date.md) (4D View Pro 内で JS日付型に変換 - 時間、分、秒 = 0)
+* [時間](Concepts/dt_time.md) (4D View Pro 内で JS日付型に変換 - 日付は基準日、つまり 1899年12月30日)
+* [ブール](Concepts/dt_boolean.md) (4D View Pro 内でブールに変換)
+* [ピクチャー](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg, その他のタイプは png に変換) の場合、URI (data:image/png;base64,xxxx) が作成され、フォーミュラを実行した 4D View Pro のセルにおいて背景として使用されます。
+* 次の 2つのプロパティを持つ [オブジェクト](Concepts/dt_object.md) (日付と時間の受け渡しを可能にします):
 
-    | Property | Type | Description     |
-    | -------- | ---- | --------------- |
-    | value    | Date | Date value      |
-    | time     | Real | Time in seconds |
+    | プロパティ | タイプ | 詳細       |
+    | ----- | --- | -------- |
+    | value | 日付  | 日付値      |
+    | time  | 実数  | 数値 (秒単位) |
 
-If the 4D method returns nothing, an empty string is automatically returned.
+4Dメソッドが何も返さない場合は、自動的に空の文字列が返されます。
 
-An error is returned in the 4D View Pro cell if:
+以下の場合は、4D View Pro セルにエラーが返されます:
 
-*   the 4D method returns another type other than those listed above,
-*   an error occurred during 4D method execution (when user clicks on "abort" button).
+*   4Dメソッドが上記以外のデータ型を返した場合。
+*   4Dメソッドの実行中にエラーが発生した場合 (ユーザーが "中止" ボタンをクリックした場合)。
 
-#### Example
+#### 例題
 
 ```4d
 var $o : Object
@@ -266,7 +266,7 @@ $o.BIRTH_INFORMATION.parameters:=New collection
 $o.BIRTH_INFORMATION.parameters.push(New object("name";"First name";"type";Is text))
 $o.BIRTH_INFORMATION.parameters.push(New object("name";"Birthday";"type";Is date))
 $o.BIRTH_INFORMATION.parameters.push(New object("name";"Time of birth";"type";Is time))
-$o.BIRTH_INFORMATION.summary:="Returns a formatted string from given information"
+$o.BIRTH_INFORMATION.summary:="渡された情報に基づきフォーマットされた文字列を返します"
 
 VP SET CUSTOM FUNCTIONS("ViewProArea"; $o)
 ```
@@ -274,94 +274,94 @@ VP SET CUSTOM FUNCTIONS("ViewProArea"; $o)
 ![](../assets/en/ViewPro/params.png)
 
 
-## Compatibility
+## 互換性
 
-Alternate solutions are available to declare fields or methods as functions in your 4D View Pro areas. These solutions are maintained for compatibility reasons and can be used in specific cases. However, using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method is recommended.
+4D View Pro エリアでフィールドやメソッドをファンクションとして宣言する場合、代わりの方法も利用可能です。 これらの方法は、互換性のために維持されており、特定のケースで使用することができます。 しかしながら、[`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) の使用が推奨されます。
 
-### Referencing fields using the virtual structure
+### 仮想ストラクチャーを使ったフィールド参照
 
 
-4D View Pro allows you to reference 4D fields using the virtual structure of the database, i.e. declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter. This alternate solution could be useful if your application already relies on a virtual structure (otherwise, [using `VP SET CUSTOM FUNCTIONS`](#4d-functions) is recommended).
+4D View Pro では、データベースの仮想ストラクチャーを使用して 4Dフィールドを参照することができます。 つまり、\*引数とともに [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/ja/page601.html) や [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/ja/page602.html) コマンドで宣言されている場合です。 この代替方法は、アプリケーションがすでに仮想ストラクチャーに依存している場合に便利です (そうでない場合は、[`VP SET CUSTOM FUNCTIONS` の使用](#4dファンクション) が推奨されます)。
 
-> **WARNING:** You cannot use the virtual structure and `VP SET CUSTOM FUNCTIONS` simultaneously. As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
+> **警告**: 仮想ストラクチャーと `VP SET CUSTOM FUNCTIONS` を同時に使用することはできません。 `VP SET CUSTOM FUNCTIONS` が呼び出されると、4D View Pro エリアは `SET TABLE TITLES` や `SET FIELD TITLES` コマンドに基づく機能を無視します。
 
-#### Requirements
+#### 要件
 
-*   The field must belong to the virtual structure of the database, i.e. it must be declared through the [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/en/page601.html) and/or [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/en/page602.html) commands with the \* parameter (see example),
-*   Table and field names must be ECMA compliant (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)),
-*   The field type must be supported by 4D View Pro (see above).
+*   フィールドは、データベースの仮想ストラクチャーに属していること。 つまり、\*引数とともに [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/ja/page601.html) や [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/ja/page602.html) コマンドで宣言されていなくてはなりません。
+*   テーブルとフィールド名は ECMA 準拠であること ([ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) 参照)。
+*   フィールドの型が 4D View Pro でサポートされていること (前述参照)。
 
-An error is returned in the 4D View Pro cell if the formula calls a field which is not compliant.
+準拠していないフィールドがフォーミュラに呼び出されると、4D View Pro セルにエラーが返されます。
 
-#### Calling a virtual field in a formula
+#### フォーミュラでの仮想フィールドの使用
 
-To insert a reference to a virtual field in a formula, enter the field with the following syntax:
+フォーミュラ内に仮想フィールドへの参照を挿入するには、次のシンタックスを使います:
 
 ```
 TABLENAME_FIELDNAME()
 ```
 
-For example, if you declared the "Name" field of the "People" table in the virtual structure, you can call the following functions:
+たとえば、"People" テーブルの "Name" フィールドを仮想ストラクチャーで宣言した場合、以下のようなファンクションを呼び出すことができます:
 
 ```
 =PEOPLE_NAME()
 =LEN(PEOPLE_NAME())
 ```
 
-> If a field has the same name as a [4D method], it takes priority over the method.
+> フィールドが [4Dメソッド] と同名の場合は、フィールド名が優先されます。
 
-#### Example
+#### 例題
 
-We want to print the name of a person in a 4D View Pro area cell using a 4D virtual field:
+4D の仮想フィールドを使用して、4D View Pro エリアのセル内に人の名前を表示します:
 
-1.  Create an "Employee" table with a "L_Name" field:
+1.  "Employee" テーブルと "L_Name" フィールドを作成します:
 
 ![](../assets/en/ViewPro/vpFieldMeth1.PNG)
 
 
-2.  Execute the following code to initialize a virtual structure:
+2.  次のコードを実行して、仮想ストラクチャーを初期化します:
 
     ```4d
     ARRAY TEXT($tableTitles;1)
-    ARRAY LONGINT($tableNum;1)
-    $tableTitles{1}:="Emp"
-    $tableNum{1}:=2
-    SET TABLE TITLES($tableTitles;$tableNum;*)
+        ARRAY LONGINT($tableNum;1)
+        $tableTitles{1}:="Emp"
+        $tableNum{1}:=2
+        SET TABLE TITLES($tableTitles;$tableNum;*)
 
-    ARRAY TEXT($fieldTitles;1)
-    ARRAY LONGINT($fieldNum;1)
-    $fieldTitles{1}:="Name"
-    $fieldNum{1}:=2 //last name
-    SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
+        ARRAY TEXT($fieldTitles;1)
+        ARRAY LONGINT($fieldNum;1)
+        $fieldTitles{1}:="Name"
+        $fieldNum{1}:=2 // ラストネーム
+        SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
     ```
 
-3.  Edit the content of a cell in the 4D View Pro area and enter "=e":
+3.  4D View Pro エリアのセルに "=e" と入力します":
 
 ![](../assets/en/ViewPro/vpFieldMeth2.PNG)
 
 
-4.  Select EMP_NAME (use the Tab key) and enter the closing ).
+4.  (Tabキーを使用して) EMP_NAME を選択し、閉じる ")" を入力します。
 
 ![](../assets/en/ViewPro/vpFieldMeth3.PNG)
 
 
-5.  Validate the field to display the name of the current employee:
+5.  セルを確定すると、カレントの従業員の名前が表示されます:
 
 ![](../assets/en/ViewPro/vpFieldMeth4.PNG)
-> The \[Employee] table must have a current record.
+> \[Employee] テーブルはカレントレコードを持っている必要があります。
 
 
-### Declaring allowed methods
+### 許可されたメソッドの宣言
 
-You can call directly 4D project methods from within your 4D View Pro formulas. For security reasons, you must declare explicitly methods that can be called by the user with the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method.
+4D View Pro のフォーミュラ内にて 4Dプロジェクトメソッドを直接呼び出すことができます。 セキュリティ上の理由から、ユーザーによって呼び出し可能なメソッドは [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) によって明示的に宣言されなくてはなりません。
 
 
-#### Requirements
+#### 要件
 
-To be called in a 4D View Pro formula, a project method must be:
+4D View Pro フォーミュラ内で呼び出すには、プロジェクトメソッドは以下の条件を満たしている必要があります:
 
-*   **Allowed**: it was explicitly declared using the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method.
-*   **Runnable**: it belongs to the host project or a loaded component with the "Shared by components and host project" option enabled (see [Sharing of project methods](../Concepts/components.md#sharing-of-project-methods)).
-*   **Not in conflict** with an existing 4D View Pro spreadsheet function: if you call a project method with the same name as a 4D View Pro built-in function, the function is called.
-> If neither the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) nor the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. In this case, the project method names must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see *Data Access*) is ignored in all cases.
+*   **許可されている**: [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) によって明示的に宣言されていること。
+*   **実行可能**: メソッドがホストデータベースに属している、あるいはロードされたコンポーネントに属しており当該メソッドの "コンポーネントとホストデータベース間で共有" オプションが有効化されていること ([プロジェクトメソッドの共有](../Concepts/components.md#プロジェクトメソッドの共有) 参照)。
+*   既存の 4D View Pro ファンクションと **競合していない**: 4D View Pro ビルトインファンクションと同じ名前のプロジェクトメソッドを呼び出した場合、ファンクションの方が呼び出されます。
+> > If neither the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) nor the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. この場合、プロジェクトメソッド名は JavaScript の字句文法に則ってなければなりません ([ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) 参照)。 ストラクチャー設定のグローバルなフィルタリングオプション (セキュリティページ ＞ データアクセス権) はいずれの場合でも無視されます。
 

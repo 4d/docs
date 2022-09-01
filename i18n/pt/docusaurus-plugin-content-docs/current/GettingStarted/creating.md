@@ -25,7 +25,7 @@ To create a new project:
 
  You can choose any name allowed by your operating system. However, if your project is intended to work on other systems or to be saved via a source control tool, you must take their specific naming recommendations into account.
 
-When you validate the **Save** dialog, 4D closes the current project (if any), creates a project folder at the indicated location, and puts all files needed for the project into it. For more information, refer to [Architecture of a 4D Project](Project/architecture.md).
+When you validate the **Save** dialog, 4D closes the current project (if any), creates a project folder at the indicated location, and puts all files needed for the project into it. Para saber mais, consulte [Arquitetura de um projeto 4D](Project/architecture.md).
 
 You can then start developing your project.
 
@@ -102,9 +102,9 @@ That folder is divided into two subfolders:
 
 ## File saving
 
-When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus.
+When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. When working on a project in 4D, you can use built-in 4D editors to create, modify, or save structure items, methods, forms, etc. Modifications are saved to disk when you select a **Save** menu item, or when the editor's window loses or gets the focus.
 
-Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. For example, if the same method is edited in a Code Editor window *and* in a text editor, saving both modifications will result in a conflict.
+Quando trabalhar em um projeto em 4D Developer, pode usar os editores integrados de 4D para criar, modificar ou salvar elementos da estrutura, os métodos, os formulários, etc. Since the editors use files on the disk, potential conflicts could happen if the same file is modified or even deleted from different locations. For example, if the same method is edited in a Code Editor window *and* in a text editor, saving both modifications will result in a conflict.
 
 The 4D development framework includes a file access manager to control concurrent access:
 

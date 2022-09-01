@@ -1,98 +1,99 @@
 ---
 id: string
-title: String
+title: 文字列
 ---
 
-String is a generic term that stands for:
+文字列とは、以下を示す総称です:
 
-- Text fields or variables: a Text field, variable, or expression may contain from 0 to 2 GB of text.
-- Alphanumeric fields: an Alphanumeric field may contain from 0 to 255 characters (limit set when field is defined).
+- テキストフィールドまたは変数: テキストフィールド、変数、または式には 0～2 GB のテキストを格納することができます。
+- 文字フィールド: 文字フィールドには 0～255 文字までの文字を格納することができます (上限はフィールドが定義されたときに設定されます)。
 
-## String literals
+## 文字列リテラル
 
-A string literal is enclosed in double, straight quotation marks ("..."). Here are some examples of string literals:
-
-```4d
-"Add Records"
-"No records found."
-"Invoice"
-```
-
-An empty string is specified by two quotation marks with nothing between them ("").
-
-### Escape sequences
-
-The following escape sequences can be used within strings:
-
-| Escape sequence | Character replaced   |
-| --------------- | -------------------- |
-| \n             | LF (Line feed)       |
-| \t             | HT (Tab)             |
-| \r             | CR (Carriage return) |
-| \\\          | \ (Backslash)       |
-| \\"           | " (Quotation marks)  |
-
-**Note:** The \ (backslash) character is used as a separator in pathnames under Windows. You must therefore use a double backslash \\\ in paths when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D (e.g. "C:\\\MyDocuments\\\New.txt").
-
-## String operators
-
-| Operation                | Syntax           | Returns | Expression              | Value    |
-| ------------------------ | ---------------- | ------- | ----------------------- | -------- |
-| Concatenation            | String + String  | String  | "abc" + "def"           | "abcdef" |
-| Repetition               | String * Number  | String  | "ab" * 3                | "ababab" |
-| Equality                 | String = String  | Boolean | "abc" = "abc"           | True     |
-|                          |                  |         | "abc" = "abd"           | False    |
-| Inequality               | String # String  | Boolean | "abc" # "abd"           | True     |
-|                          |                  |         | "abc" # "abc"           | False    |
-| Greater than             | String > String  | Boolean | "abd" > "abc"           | True     |
-|                          |                  |         | "abc" > "abc"           | False    |
-| Less than                | String < String  | Boolean | "abc" < "abd"           | True     |
-|                          |                  |         | "abc" < "abc"           | False    |
-| Greater than or equal to | String >= String | Boolean | "abd" >= "abc"          | True     |
-|                          |                  |         | "abc" >= "abd"          | False    |
-| Less than or equal to    | String <= String | Boolean | "abc" <= "abd"          | True     |
-|                          |                  |         | "abd" <= "abc"          | False    |
-| Contains keyword         | String % String  | Boolean | "Alpha Bravo" % "Bravo" | True     |
-|                          |                  |         | "Alpha Bravo" % "ravo"  | False    |
-|                          | Picture % String | Boolean | Picture_expr % "Mer"    | True (*) |
-
-(*) If the keyword "Mer" is associated with the picture stored in the picture expression (field or variable).
-
-## String comparisons
-
-- Strings are compared on a character-by-character basis (except in the case of searching by [keywords](dt_string.md#keywords), see below).
-- When strings are compared, the case of the characters is ignored; thus, "a"="A" returns `TRUE`. To test if the case of two characters is different, compare their character codes. For example, the following expression returns `FALSE`:
+文字列リテラル定数は、次のように二重引用符 ("...") で囲んで表します。 文字列定数の例を次に示します:
 
 ```4d
-Character code("A")=Character code("a") // because 65 is not equal to 97
+"レコード追加"
+"レコードが見つかりません"
+"送り状"
 ```
 
-- When strings are compared, diacritical characters are taken into account. For example, the following expressions return `TRUE`:
+空の文字列は、2つの引用符の間に何も入れない状態 ("") で表します。
+
+### エスケープシーケンス
+
+以下のエスケープシーケンスを文字列内で使用できます:
+
+| エスケープシーケンス | 意味する文字        |
+| ---------- | ------------- |
+| \n        | LF (行送り)      |
+| \t        | HT (タブ)       |
+| \r        | CR (改行)       |
+| \\\     | \ (バックスラッシュ) |
+| \\"      | " (引用符)       |
+
+**注:** \ (バックスラッシュ) は Windows でパス名の区切り文字として使用されています。 通常 4D はコードエディターに入力されたバックスラッシュを自動で "\\\" に置き換えることで、これを正しく解釈します。例えば "C:\Folder" と入力すると "C:\\\Folder" に変換されます。しかし “C:\MyDocuments\New” と入力した場合、4Dは二番目のバックスラッシュは "\N" (行送り) と解釈してしまい、“C:\\\MyDocuments\New”を表示します。このようなケースでは開発者がバックスラッシュを2つ入力するようにしなければなりません。<br /> さらに正規表現のパターン定義でもバックスラッシュがエスケープシーケンスとして使用されます。正規表現パターン "\\\" を4Dのコードエディターに記述する場合は "\\\\\" となる点に注意してください。
+
+## 文字列演算子
+
+| 処理       | シンタックス           | 戻り値     | 式                       | Value    |
+| -------- | ---------------- | ------- | ----------------------- | -------- |
+| 連結 (結合)  | String + String  | String  | "abc" + "def"           | "abcdef" |
+| 繰り返し     | String * Number  | String  | "ab" * 3                | "ababab" |
+| 等しい      | String = String  | Boolean | "abc" = "abc"           | true     |
+|          |                  |         | "abc" = "abd"           | False    |
+| 異なる      | String # String  | Boolean | "abc" # "abd"           | true     |
+|          |                  |         | "abc" # "abc"           | False    |
+| 大きい      | String > String  | Boolean | "abd" > "abc"           | true     |
+|          |                  |         | "abc" > "abc"           | False    |
+| 小さい      | String < String  | Boolean | "abc" < "abd"           | true     |
+|          |                  |         | "abc" < "abc"           | False    |
+| 以上       | String >= String | Boolean | "abd" >= "abc"          | true     |
+|          |                  |         | "abc" >= "abd"          | False    |
+| 以下       | String <= String | Boolean | "abc" <= "abd"          | true     |
+|          |                  |         | "abd" <= "abc"          | False    |
+| キーワードを含む | String % String  | Boolean | "Alpha Bravo" % "Bravo" | true     |
+|          |                  |         | "Alpha Bravo" % "ravo"  | False    |
+|          | Picture % String | Boolean | Picture_expr % "Mer"    | true (*) |
+
+(*) キーワード "Mer" がピクチャー式 (フィールドまたは変数) に格納されたピクチャーの IPTC/Keywords メタデータに含まれている場合。
+
+## 文字列比較の詳細
+
+- 文字列は文字ごとに比較されます (後述の [キーワード](dt_string.md#キーワード) による検索の場合を除きます)。
+- 文字列が比較されるとき文字の大小文字は無視されます。したがって、"a"="A"は `true` を返します。 大文字と小文字を区別して比較するには、文字コードで比較してください。 例えば次の式は `FALSE` です:
 
 ```4d
-     "n"="ñ"
-     "n"="Ñ"
-     "A"="å"
-      // and so on
+Character code("A")=Character code("a")
+// Character code("A") は 65
+// Character code("a") は 97
 ```
 
-**Note:** String comparison takes into account specificities of the language **defined for the 4D data file** (which is not always the same as the language defined for the system).
+- 文字列が比較される場合、アクセント等の発音区別符号は無視されます。 たとえば、日本語においては以下の式は `true` を返します:
 
-### Wilcard character (@)
+```4d
+     "あ"="ア"
+     "ア"="ｱ"
+     "１"="1"
+```
 
-The 4D language supports **@** as a wildcard character. This character can be used in any string comparison to match any number of characters. For example, the following expression is `TRUE`:
+**注:** 文字列比較にあたっては、**4D のデータファイルに定義された** 言語の特性が考慮されます。これは、システムの使用言語とは異なる場合がありえます。
+
+### ワイルドカード記号 (@)
+
+4D ランゲージでは **@** をワイルドカード記号として使用します。 ワイルドカードは、すべての文字列の比較に使用することができ、ワイルドカードによって置き換わる文字の数は指定されません。 たとえば、次の式は `true` になります:
 
 ```4d
 "abcdefghij"="abc@"
 ```
 
-The wildcard character must be used within the second operand (the string on the right side) in order to match any number of characters. The following expression is `FALSE`, because the @ is considered only as a one character in the first operand:
+ただし、複数の文字を比較する目的のワイルドカード記号は、比較演算子の右側の式で使用しなければなりません。 比較演算子の左側の式においては、"@" は単なる文字であると解釈されます。たとえば、次の式は `FALSE` です:
 
 ```4d
     "abc@"="abcdefghij"
 ```
 
-The wildcard means "one or more characters or nothing". The following expressions are `TRUE`:
+ワイルドカードは “0文字以上” を意味します。 以下の式はすべて `true` です:
 
 ```4d
      "abcdefghij"="abcdefghij@"
@@ -102,58 +103,58 @@ The wildcard means "one or more characters or nothing". The following expression
      "abcdefghij"="@abcde@fghij@"
 ```
 
-On the other hand, whatever the case, a string comparison with two consecutive wildcards will always return `FALSE`. The following expression is `FALSE`:
+一方、どのような場合でも、ワイルドカードを 2つ連続して使用した文字列比較は常に `FALSE` を返します。 次の式は `FALSE` になります:
 
 ```4d
 "abcdefghij"="abc@@fg"
 ```
 
-When the comparison operator is or contains a < or > symbol, only comparison with a single wildcard located at the end of the operand is supported:
+比較演算子が < あるいは > 記号である、あるいはこれらを含む場合、演算子の右側の式の終りに置かれた1つのワイルドカードのみサポートされています:
 
 ```4d
-     "abcd"<="abc@" // Valid comparison
-     "abcd"<="abc@ef" //Not a valid comparison
+     "abcd"<="abc@" // 有効な比較です
+     "abcd"<="abc@ef" // 有効な比較ではありません
 ```
 
-If you want to execute comparisons or queries using @ as a character (and not as a wildcard), you need to use the `Character code(At sign)` instruction. Imagine, for example, that you want to know if a string ends with the @ character. The following expression (if $vsValue is not empty) is always `TRUE`:
+文字列の比較または検索において、@ をワイルドカードではなく一般の文字として扱いたい場合、`Character code (At sign)` 指示を使用します。 たとえば、文字列が @ 文字で終わっているかどうかを知りたいとします。 以下の式は ($vsValue が空でなければ) 常に `true` です:
 
 ```4d
 ($vsValue[[Length($vsValue)]]="@")
 ```
 
-The following expression will be evaluated correctly:
+以下のようにすると、式は意図したように評価されます:
 
 ```4d
-(Character code($vsValue[[Length($vsValue)]])#64)  
+(Character code($vsValue[[Length($vsValue)]])=64)  
 ```
 
-**Note:** A 4D option in the Design environment allows you to define how the @ character is interpreted when it is included in a character string.
+**注:** ストラクチャー設定のデータベースページには、文字列に @ 記号が含まれているとき、それをどう解釈するかを指定するオプションが提供されています。
 
-### Keywords
+### キーワード
 
-Unlike other string comparisons, searching by keywords looks for "words" in "texts": words are considered both individually and as a whole. The **%** operator always returns `False` if the query concerns several words or only part of a word (for example, a syllable). The “words” are character strings surrounded by “separators,” which are spaces and punctuation characters and dashes. An apostrophe, like in “Today's”, is usually considered as part of the word, but will be ignored in certain cases (see the rules below). Numbers can be searched for because they are evaluated as a whole (including decimal symbols). Other symbols (currency, temperature, and so on) will be ignored.
+他の文字列比較と異なり、"%" 記号を使ったキーワードによる検索はテキスト中の単語を検索します: 単語は一つのまとまりとして個々に扱われます。 複数の単語や、音節など単語の一部を検索するような場合、**%** 演算子は常に `false` を返します。 区切り文字 (スペースや句読点など) に囲まれた文字列が単語として認識されます。 “Today's” のようにアポストロフィを含む単語は、通常それを含めた 1つの単語として扱われますが、特定の場合には無視されます (以下の注記を参照ください)。 数字も検索できます。小数点は区切り文字ではなく、数字の一部として扱われます。 ただし、通貨や温度などを表す記号は無視されます。
 
 ```4d
-     "Alpha Bravo Charlie"%"Bravo" // Returns True
-     "Alpha Bravo Charlie"%"vo" // Returns False
-     "Alpha Bravo Charlie"%"Alpha Bravo" // Returns False
-     "Alpha,Bravo,Charlie"%"Alpha" // Returns True
-     "Software and Computers"%"comput@" // Returns True
+     "Alpha Bravo Charlie"%"Bravo" // true
+     "Alpha Bravo Charlie"%"vo" // false
+     "Alpha Bravo Charlie"%"Alpha Bravo" // false
+     "Alpha,Bravo,Charlie"%"Alpha" // true
+     "Software and Computers"%"comput@" // true
 ```
 
-**Notes:**
+**注:**
 
-- 4D uses the ICU library for comparing strings (using `<>=#` operators) and detecting keywords. For more information about the rules implemented, refer to the following address: <http://www.unicode.org/reports/tr29/#Word_Boundaries>.
+- 4Dは、`<>=#` 演算子を使った文字列比較や、キーワードの検出に ICUライブラリを使用しています。 実装されているルールの詳細に関しては、以下のアドレスを参照して下さい: [http://www.unicode.org/unicode/reports/tr29/#Word_Boundaries](http://www.unicode.org/reports/tr29/#Word_Boundaries)
 
-- In the Japanese version, instead of ICU, 4D uses Mecab by default for detecting keywords.
+- <br />- 日本語版の 4Dでは、ICU の代わりにデフォルトで Mecab が使用されています。詳細な情報に関しては、 [Mecab のサポート(日本語版)](https://doc.4d.com/4Dv18/4D/18/DatabaseData-storage-page.300-4575463.ja.html#1334024) を参照ください。
 
-## Character Reference Symbols
+## 文字参照記号
 
-The character reference symbols: [[...]]
+文字参照記号: [[...]]
 
-These symbols are used to refer to a single character within a string. This syntax allows you to individually address the characters of a text variable, string variable, or field.
+文字参照記号は、文字列から一文字のみを参照するのに使用します。 この構文は、テキストおよび文字列型の変数やフィールドの任意の位置の文字を指し示します。
 
-If the character reference symbols appear on the left side of the assignment operator (:=), a character is assigned to the referenced position in the string. For example, if vsName is not an empty string, the following line sets the first character of vsName to uppercase:
+文字参照記号が代入演算子 (:=) の左側にある場合、文字列の指定した位置に一文字を代入します。 以下の例は、vsName が空の文字列ではない場合に、vsName の最初の文字を大文字にします。
 
 ```4d
 If(vsName#"")
@@ -161,17 +162,17 @@ If(vsName#"")
 End if
 ```
 
-Otherwise, if the character reference symbols appear within an expression, they return the character (to which they refer) as a 1-character string. For example:
+それ以外の場合には、式内で使用される文字列参照記号は、参照する文字を1文字の独立した文字列として返します。 例:
 
 ```4d
-//The following example tests if the last character of vtText is an At sign "@"
+// 以下の例は vtText の最後の文字が "@" であるかをテストします。
  If(vtText#"")
     If(Character code(Substring(vtText;Length(vtText);1))=At sign)
   //...
     End if
  End if
 
-  //Using the character reference syntax, you would write in a simpler manner:
+  // 文字参照記号を使用し、よりシンプルに記述できます:
  If(vtText#"")
     If(Character code(vtText[[Length(vtText)]])=At sign)
   // ...
@@ -179,32 +180,32 @@ Otherwise, if the character reference symbols appear within an expression, they 
  End if
 ```
 
-### Advanced note about invalid character reference
+### 無効な文字列参照に関する注意
 
-When you use the character reference symbols, you must address existing characters in the string in the same way you address existing elements of an array. For example if you address the 20th character of a string variable, this variable MUST contain at least 20 characters.
+文字列参照記号を使用する際、配列に存在する要素を指定するのと同じ要領で、文字列内に存在する文字を指定しなければなりません。 たとえば、文字列変数の20番目の文字を参照する場合、この変数は必ず、少なくとも20文字以上の長さがなくてはなりません。長さが足りない場合:
 
-- Failing to do so, in interpreted mode, does not cause a syntax error.
-- Failing to do so, in compiled mode (with no options), may lead to memory corruption, if, for instance, you write a character beyond the end of a string or a text.
-- Failing to do so, in compiled mode, causes an error with the option Range Checking On. For example, executing the following code:
+- インタープリターモードでは構文エラーは発生しません。
+- コンパイルモードで範囲チェックオプションを無効にしている場合には、メモリ領域を破壊するおそれがあります。
+- コンパイルモードで範囲チェックオプションを有効にしている場合には、エラーが発生します。 たとえば、次のように文字列やテキストの終点を超えた位置に文字を書き込むコードを実行すると:
 
 ```
-//Very bad and nasty thing to do, boo!
+// 真似をしないでください
  vsAnyText:=""
  vsAnyText[[1]]:="A"
 ```
 
-will trigger the Runtime Error shown here:
+ランタイムにおいてエラーがトリガーされます:
 
 ![alt-text](../assets/en/Concepts/Syntax_Error.en.png)
 
-### Example
+### 例題
 
-The following project method capitalizes the first character of each word of the text received as parameter and returns the resulting capitalized text:
+以下のプロジェクトメソッドは、文字列内の各単語の先頭文字を大文字に変換し、結果の文字列を返します。
 
 ```4d
-  //Capitalize_text project method
-  //Capitalize_text ( Text ) -> Text
-  //Capitalize_text ( Source text ) -> Capitalized text
+  // Capitalize_text プロジェクトメソッド
+  // Capitalize_text ( Text ) -> Text
+  // Capitalize_text ( Source text ) -> Capitalized Text
 
  $0:=$1
  $vlLen:=Length($0)
@@ -218,12 +219,12 @@ The following project method capitalizes the first character of each word of the
  End if
 ```
 
-For example, the line:
+使用例:
 
 ```4d
 ALERT(Capitalize_text("hello, my name is jane doe and i'm running for president!"))
 ```
 
-displays the alert shown here:
+以下のように表示されます:
 
 ![alt-text](../assets/en/Concepts/Jane_doe.en.png)

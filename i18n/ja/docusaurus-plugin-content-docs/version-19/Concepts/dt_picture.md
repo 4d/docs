@@ -3,126 +3,126 @@ id: picture
 title: Picture
 ---
 
-A Picture field, variable or expression can be any Windows or Macintosh picture. In general, this includes any picture that can be put on the pasteboard or read from the disk using 4D commands such as `READ PICTURE FILE`.
+ピクチャーのフィールド・変数・式に格納されるデータは、任意の Windows または Macintosh の画像です。 これらの画像には、ペーストボード上に置いたり、4Dコマンドやプラグインコマンド (`READ PICTURE FILE` など) を使用してディスクから読み出すことのできる画像を含みます。
 
-4D uses native APIs to encode (write) and decode (read) picture fields and variables under both Windows and macOS. These implementations provide access to numerous native formats, including the RAW format, currently used by digital cameras.
+4D は Windows と macOS の両方においてネイティブな API を使用してフィールドや変数のピクチャーをエンコード (書き込み) およびデコード (読み込み) します。 これらの実装は現在デジタルカメラで使用されている RAW フォーマット含め、数多くのネイティブなフォーマットへのアクセスを提供します。
 
-* on Windows, 4D uses WIC (Windows Imaging Component).
-* on macOS, 4D uses ImageIO.
+* Windows では、4DはWIC (Windows Imaging Component) を使用します。
+* macOS では、4D は ImageIO を使用します。
 
-WIC and ImageIO permit the use of metadata in pictures. Two commands, `SET PICTURE METADATA` and `GET PICTURE METADATA`, let you benefit from metadata in your developments.
+WIC および ImageIO はピクチャー内のメタデータの書き込みを許可しています。 `SET PICTURE METADATA` および `GET PICTURE METADATA` コマンドを使用することで、それらのメタデータを開発に役立てることができます。
 
-## Picture Codec IDs
+## ピクチャー Codec ID
 
-4D supports natively a wide set of [picture formats](FormEditor/pictures.md#native-formats-supported), such as .jpeg, .png, or .svg.
+4D は多様な [ピクチャーフォーマット](FormEditor/pictures.md#native-formats-supported) をネイティブにサポートします: .jpeg, .png, .svg 等。
 
-Picture formats recognized by 4D are returned by the `PICTURE CODEC LIST` command as picture Codec IDs.  They can be returned in the following forms:
+4D が認識するピクチャーフォーマットは `PICTURE CODEC LIST` コマンドからピクチャー Codec IDとして返されます。  これは以下の形式で返されます:
 
-* As an extension (for example “.gif”)
-* As a MIME type (for example “image/jpeg”)
+* 拡張子 (例: “.gif”)
+* MIME タイプ (例: “image/jpeg”)
 
-The form returned for each format will depend on the way the Codec is recorded at the operating system level. Note that the list of available codecs for reading and writing can be different since encoding codecs may require specific licenses.
+それぞれのピクチャーフォーマットに対して返される形式は、当該 Codec が OS レベルで記録されている方法に基づきます。 エンコーディング (書き込み) 用コーデックにはライセンスが必要な場合があるため、利用できるコーデックの一覧は、読み込み用と書き込み用で異なる可能性があることに注意してください。
 
-Most of the [4D picture management commands](https://doc.4d.com/4Dv18/4D/18/Pictures.201-4504337.en.html) can receive a Codec ID as a parameter. It is therefore imperative to use the system ID returned by the `PICTURE CODEC LIST` command. Picture formats recognized by 4D are returned by the `PICTURE CODEC LIST` command.
+多くの [4D ピクチャー管理コマンド](https://doc.4d.com/4Dv18/4D/18/Pictures.201-4504337.ja.html) は Codec ID を引数として受けとることができます。 したがって、`PICTURE CODEC LIST` から返されるシステムIDを使用しなければなりません。 4D が認識するピクチャーフォーマットは `PICTURE CODEC LIST` コマンドによって返されます。
 
-## Picture operators
+## ピクチャー演算子
 
-| Operation                 | Syntax                 | Returns | Action                                                                                                                                                             |
-| ------------------------- | ---------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Horizontal concatenation  | Pict1 + Pict2          | Picture | Add Pict2 to the right of Pict1                                                                                                                                    |
-| Vertical concatenation    | Pict1 / Pict2          | Picture | Add Pict2 to the bottom of Pict1                                                                                                                                   |
-| Exclusive superimposition | Pict1 & Pict2          | Picture | Superimposes Pict2 on top of Pict1 (Pict2 in foreground). Produces the same result as `COMBINE PICTURES(pict3;pict1;Superimposition;pict2)`                        |
-| Inclusive superimposition | Pict1 &#124; Pict2     | Picture | Superimposes Pict2 on Pict1 and returns resulting mask if both pictures are the same size. Produces the same result as `$equal:=Equal pictures(Pict1;Pict2;Pict3)` |
-| Horizontal move           | Picture + Number       | Picture | Move Picture horizontally Number pixels                                                                                                                            |
-| Vertical move             | Picture / Number       | Picture | Move Picture vertically Number pixels                                                                                                                              |
-| Resizing                  | Picture * Number       | Picture | Resize Picture by Number ratio                                                                                                                                     |
-| Horizontal scaling        | Picture *+ Number      | Picture | Resize Picture horizontally by Number ratio                                                                                                                        |
-| Vertical scaling          | Picture *&#124; Number | Picture | Resize Picture vertically by Number ratio                                                                                                                          |
+| 処理     | シンタックス             | 戻り値     | 動作                                                                                                                 |
+| ------ | ------------------ | ------- | ------------------------------------------------------------------------------------------------------------------ |
+| 水平連結   | Pict1 + Pict2      | Picture | Pict1 の右側に Pict2 を追加します                                                                                            |
+| 垂直連結   | Pict1 / Pict2      | Picture | Pict1 の下側に Pict2 を追加します                                                                                            |
+| 排他的論理和 | Pict1 & Pict2      | Picture | Pict1 の前面に Pict2 を重ねます (Pict2 が前面) `COMBINE PICTURES(pict3;pict1;Superimposition;pict2)` と同じ結果になります。               |
+| 包括的論理和 | Pict1 &#124; Pict2 | Picture | Pict1 と Pict2 を重ね、そのマスクした結果を返します (両ピクチャーとも同じサイズである必要があります) `$equal:=Equal pictures(Pict1;Pict2;Pict3)` と同じ結果になります。 |
+| 水平移動   | ピクチャー + 数値         | Picture | 指定ピクセル分、ピクチャーを横に移動します。                                                                                             |
+| 垂直移動   | ピクチャー / 数値         | Picture | 指定ピクセル分、ピクチャーを縦に移動します。                                                                                             |
+| リサイズ   | ピクチャー * 数値         | Picture | 割合によってピクチャーをサイズ変更します。                                                                                              |
+| 水平スケール | ピクチャー *+ 数値        | Picture | 割合によってピクチャー幅をサイズ変更します。                                                                                             |
+| 垂直スケール | ピクチャー *&#124; 数値   | Picture | 割合によってピクチャー高さをサイズ変更します。                                                                                            |
 
-**Notes :**
+**注:**
 
-* In order to use the | operator, Pict1 and Pict2 must have exactly the same dimension. If both pictures are a different size, the operation Pict1 | Pict2 produces a blank picture.
-* The `COMBINE PICTURES` command can be used to superimpose pictures while keeping the characteristics of each source picture in the resulting picture.
-* Additional operations can be performed on pictures using the `TRANSFORM PICTURE` command.
-* There is no comparison operators on pictures, however 4D proposes the `Equal picture` command to compare two pictures.
+* | 演算子を使用するためには、Pict1 と Pict2 が完全に同一のサイズでなければなりません。 二つのピクチャーサイズに違いがある場合、Pict1 | Pict2 は空のピクチャーを生成します。
+* `COMBINE PICTURES` コマンドは、それぞれのソースピクチャーの特性を結果ピクチャーに保持しつつ、ピクチャーの重ね合わせをおこないます。
+* `TRANSFORM PICTURE` コマンドを使って、さらなる画像処理をおこなうことができます。
+* ピクチャー用の比較演算子はありませんが、`Equal picture` コマンドを使って 2つのピクチャーを比較することができます。
 
-### Examples
+### 例題
 
-Horizontal concatenation
+水平連結
 
 ```4d
- circle+rectangle //Place the rectangle to the right of the circle
- rectangle+circle //Place the circle to the right of the rectangle
+ circle+rectangle // circle の右に rectangle が追加されます。
+ rectangle+circle // rectangle の右に circle が追加されます。
 ```
 
 ![](../assets/en/Concepts/concatHor.en.png) ![](../assets/en/Concepts/concatHor2.en.png)
 
-Vertical concatenation
+垂直連結
 
 ```4d
- circle/rectangle //Place the rectangle under the circle
- rectangle/circle //Place the circle under the rectangle
+ circle/rectangle // circle の下に rectangle が追加されます。
+ rectangle/circle // rectangle の下に circle が追加されます。
 ```
 
 ![](../assets/en/Concepts/concatVer.en.png) ![](../assets/en/Concepts/concatVer2.en.png)
 
-Exclusive superimposition
+排他的論理和
 
 ```4d
-Pict3:=Pict1 & Pict2 // Superimposes Pict2 on top of  Pict1
+Pict3:=Pict1 & Pict2 // Pict1 の上に Pict2 を重ねます。
 ```
 
 ![](../assets/en/Concepts/superimpoExc.fr.png)
 
-Inclusive superimposition
+包括的論理和
 
 ```4d
-Pict3:=Pict1|Pict2 // Recovers resulting mask from superimposing two pictures of the same size
+Pict3:=Pict1|Pict2 // 同じサイズの二つのピクチャーを重ね合わせた上でそのマスクの結果を返します。
 ```
 
 ![](../assets/en/Concepts/superimpoInc.fr.png)
 
-Horizontal move
+水平移動
 
 ```4d
-rectangle+50 //Move the rectangle 50 pixels to the right
-rectangle-50 //Move the rectangle 50 pixels to the left
+rectangle+50 // rectangle を右に 50ピクセル移動します。
+rectangle-50 // rectangle を左に 50ピクセル移動します。
 ```
 
 ![](../assets/en/Concepts/hormove.en.png)
 
-Vertical move
+垂直移動
 
 ```4d
-rectangle/50 //Move the rectangle down by 50 pixels
-rectangle/-20 //Move the rectangle up by 20 pixels
+rectangle/50 // rectangle を下に 50ピクセル移動します。
+rectangle/-20 // rectangle を上に 20ピクセル移動します。
 ```
 
 ![](../assets/en/Concepts/vertmove.en.png)![](../assets/en/Concepts/vertmove2.en.png)
 
-Resize
+拡大
 
 ```4d
-rectangle*1.5 //The rectangle becomes 50% bigger
-rectangle*0.5 //The rectangle becomes 50% smaller
+rectangle*1.5 // rectangle を 50%拡大します。
+rectangle*0.5 // rectangle を 50%縮小します。
 ```
 
 ![](../assets/en/Concepts/resize.en.png)![](../assets/en/Concepts/resisze2.en.png)
 
-Horizontal scaling
+水平スケール
 
 ```4d
-circle*+3 //The circle becomes 3 times wider
-circle*+0.25 //The circle's width becomes a quarter of what it was
+circle*+3 // circle の幅を 3倍に広げます。
+circle*+0.25 // circle の幅を 25%に縮めます。
 ```
 
 ![](../assets/en/Concepts/Horscaling.en.png)![](../assets/en/Concepts/Horscaling2.en.png)
 
-Vertical scaling
+垂直スケール
 
 ```4d
-circle*|2 //The circle becomes twice as tall
-circle*|0.25 //The circle's height becomes a quarter of what it was
+circle*|2 // circle の高さを 2倍に伸ばします。
+circle*|0.25 // circle の高さを 25%に縮めます。
 ```
 
 ![](../assets/en/Concepts/vertscaling.en.png)![](../assets/en/Concepts/veticalscaling2.en.png)

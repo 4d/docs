@@ -1,59 +1,59 @@
 ---
 id: real-time-monitor
-title: Real Time Monitor Page
+title: リアルタイムモニターページ
 ---
 
 
-The Real Time Monitor page monitors the progress of "long" operations performed by the application in real time. These operations are, for example, sequential queries, execution of formulas, etc.
+リアルタイムモニターは、アプリケーションによって実行された、"長い" オペレーションの状態をリアルタイムでモニターします。 これらのオペレーションとは、たとえばシーケンシャルクエリやフォーミュラの実行などです:
 
 ![](../assets/en/Admin/server-admin-monitor-page.png)
-> This page is available in the administration window of the server machine and also from a remote 4D machine. In the case of a remote machine, this page displays data from operations performed on the server machine.
+> このページは、サーバーマシンの管理ウィンドウにありますが、リモートの 4Dマシンからも見られます。 リモートマシンの場合は、サーバーマシン上で実行されている操作のデータを表示します。
 
-A line is added for each long operation performed on the data. This line automatically disappears when the operation is complete (you can check the **Display operations at least 5 seconds** option to keep quick operations on screen for 5 seconds, see below).
+データに対して実行されている長い処理は、それぞれに行が割り当てられます。 操作が完了すると、この行は消えます (**オペレーションを最低5秒間表示する** オプションをチェックすることで、短いオペレーションでも 5秒間表示したままにできます。
 
-The following information is provided for each line:
+各行について、以下の情報が表示されます:
 
-- **Start Time**: starting time of operation in the format: "dd/mm/yyyy - hh:mm:ss"
-- **Duration** (ms): duration in milliseconds of operation in progress
-- **Information**: title of operation.
-- **Details**: this area displays detailed information which will vary according to the type of operation selected. More specifically:
-    + **Created on**: indidates whether the operation results from a client action (Created on client) or if it was started explicitly on the server by means of a stored procedure or the "Execute on server" option (Created on server).
-    + **Operation Details**: Operation type and (for query operations) query plan.
-    + **Sub-operations** (if any): Dependent operations of the selected operation (e.g. deleting related records before a parent record).
-    + **Process Details**: Additional information concerning the table, field, process or client, depending on the type of operation
+- **開始時刻**: 操作の開始時刻が、"dd/mm/yyyy - hh:mm:ss" というフォーマットで表示されます。
+- **経過時間** (秒): 進行中の操作の経過時間が秒単位で表示されます。
+- **情報**: 操作の説明。
+- **詳細**: このエリアには、選択したオペレーションのタイプに応じて、その詳細な情報が表示されます。 具体的には以下の情報が表示されます:
+    + **作成された場所**: そのオペレーションがクライアントアクションの結果か (クライアント上で作成)、ストアドプロシージャ―または "サーバー上で実行" オプションを使用した結果か (サーバー上で作成) を表示します。
+    + **オペレーション詳細**: オペレーションタイプと、(クエリオペレーションに対しては) クエリプランを表示します。
+    + **サブオペレーション** (あれば): 選択したオペレーションに従属するオペレーションを表示します (例:親レコードの前にリレートレコードを削除する)
+    + **プロセス詳細**: テーブル、フィールド、プロセスやクライアントに関する追加情報が表示されます。
 
-> Real-time monitoring page uses the [`GET ACTIVITY SNAPSHOT`](https://doc.4d.com/4dv19/help/command/en/page1277.html) command internally. More information can be found in this command description.
+> リアルタイムモニターページは、[`GET ACTIVITY SNAPSHOT`](https://doc.4d.com/4dv19/help/command/ja/page1277.html) コマンドを内部的に使用しています。 詳細については、コマンドの説明を参照ください。
 
-The page is active and updated permanently as soon as it is displayed. It should be noted that its operation can significantly slow the execution of the application. It is possible to suspend the updating of this page in one of the following ways:
+このページは表示後すぐにアクティブになり、恒久的に更新され続けます。 ただし、この処理によって、アプリケーションの実行を極端に遅くさせる可能性があることに注意してください。 以下の方法を用いて更新を一時的に停止させることが可能です:
 
-- clicking on the **Pause** button,
-- clicking in the list,
-- pressing the space bar.
+- **停止** ボタンをクリックする
+- リストの中をクリックする
+- スペースバーを押す
 
-When you pause the page, a "PAUSED" message appears and the button label changes to **Resume**. You can resume monitoring of the operations by performing the same action as for pausing.
+ページを停止させると一時停止のメッセージが表示され、ボタンの表示が **再開** に変わります。 モニタリング停止操作と同じ操作をすることでモニタリングを再開させることができます。
 
-## Advanced mode
+## 特殊モード
 
-The RTM page can display additional information, if necessary, for each listed operation.
+必要であれば、RTMページはオペレーションごとに追加の情報を表示することができます。
 
-To access the advanced mode for an operation, press **Shift** and select the desired operation. All available information is then displayed in the "Process Details" area without any filtering (as returned by the `GET ACTIVITY SNAPSHOT` command). Available information depends on the operation selected.
+オペレーションのアドバンスドモードにアクセスするには、**Shift**キーを押しながら、情報を取得したいオペレーションを選択します。 すべての閲覧可能な情報が、フィルタリングなしで "プロセス詳細" エリアに表示されます(`GET ACTIVITY SNAPSHOT` コマンドで返されるものと同じです)。 表示される情報は、選択したオペレーションによって異なります。
 
-Here is an example of information displayed in standard mode:
+標準モードで表示される情報の例です:
 
 ![](../assets/en/Admin/server-admin-monitor-adv1.png)
 
 
-In advanced mode (**Shift+Click** on the operation), additional information is displayed:
+アドバンスドモード (オペレーションを **Shift+クリック**) では、さらなる情報が表示されます:
 
 ![](../assets/en/Admin/server-admin-monitor-adv2.png)
 
-## Snapshot button
+## スナップショットボタン
 
-The **Snapshot** button allows you to copy to the clipboard all the operations displayed in the RTM panel, as well as their related details (process and sub-operation info):
+**コピー** ボタンを使用すると、RTMパネルに表示されている全オペレーションと、それに関連する詳細 (プロセスとサブオペレーション情報) がクリップボードへとコピーされます:
 
 ![](../assets/en/Admin/server-admin-monitor-snapshot.png)
 
 
-## Display operations at least 5 seconds
+## オペレーションを最低5秒間表示する
 
-If you check the **Display operations at least 5 seconds** option, any listed operation will be displayed on the page for at least five seconds, even after its execution is finished. Retained operations appear dimmed in the operation list. This feature is useful for getting information about operations that execute very quickly.
+**オペレーションを最低5秒間表示する** オプションをチェックすると、表示されたオペレーションはどれも (実行が終了した後も) 最低5秒間は表示されたままになります。 このオプションが適用されたオペレーションは、オペレーションリスト中に灰色で表示されます。 この機能は、とても早く終わってしまうオペレーションの情報を取得したい場合に有効です。

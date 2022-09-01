@@ -1,37 +1,37 @@
 ---
 id: authUsers
-title: Users and sessions
+title: Sessions et utilisateurs
 ---
 
 
-## Authenticating users
+## Authentification des utilisateurs
 
-As a first step to open a REST session on the 4D server, the user sending the request must be authenticated.
+La première étape à suivre pour ouvrir une session REST sur le serveur 4D, consiste à authentifier l'utilisateur qui envoie la requête.
 
-You log in a user to your application by passing the user's name and password to [`$directory/login`]($directory.md#directorylogin).
+Connectez un utilisateur à votre application en passant le nom et le mot de passe de l'utilisateur dans [`$directory/login`]($directory.md#directorylogin).
 
-Once a user is successfully logged, a session is open. See below to know how to handle the session cookie in subsequent client requests, if necessary.
+Une fois qu'un utilisateur est connecté, une session est ouverte. Voir ci-dessous pour savoir comment traiter le cookie de session dans les requêtes ultérieures du client, si nécessaire.
 
-The session will automatically be closed once the timeout is reached.
+La session est automatiquement fermée lorsque le timeout est écoulé.
 
-## Session cookie
+## Cookie de session
 
-Each REST request is handled through a specific session on the 4D server.
+Chaque requête REST est gérée via une session spécifique sur le serveur 4D.
 
-When a first valid REST request is received, the server creates the session and sends a session cookie named `WASID4D` in the **"Set-Cookie" response header**, containing the session UUID, for example:
+Lorsqu'une première requête REST valide est reçue, le serveur crée la session et envoie un cookie de session nommé `WASID4D` dans l'**en-tête de réponse "Set-Cookie"**, contenant l'UUID de session, par exemple :
 
 ```
 WASID4D=EA0400C4D58FF04F94C0A4XXXXXX3
 ```
 
-In the subsequent REST requests, make sure this cookie is included in the **"Cookie" request header** so that you will reuse the same session. Otherwise, a new session will be opened, and another license used.
+Assurez-vous, dans les requêtes REST, que ce cookie est inclus dans **l'en-tête "Cookie"** afin de réutiliser la même session. Sinon, une nouvelle session sera ouverte et une autre licence utilisée.
 
-### Example
+### Exemple
 
-The way to handle session cookies actually depends on your HTTP client. This example shows how to extract and resend the session cookie in the context of requests handled through the 4D `HTTP Request` command.
+La gestion des cookies de session dépend de votre client HTTP. Cet exemple montre comment extraire et renvoyer le cookie de session dans le contexte des requêtes traitées via la commande 4D `HTTP Request`.
 
 ```4d
-// Creating headers
+// Créer des en-têtes
 ARRAY TEXT(headerNames;0)
 ARRAY TEXT(headerValues;0)
 
@@ -46,21 +46,21 @@ APPEND TO ARRAY(headerValues;Generate digest("test";4D digest))
 C_OBJECT($response)
 $response:=New object
 
-//This request opens a session for the user "kind user"
+//Cette requête ouvre une session à l'utilisateur "kind user"
 $result:=HTTP Request(HTTP POST method;"127.0.0.1:8044/rest/$directory/login";"";\  
     $response;headerNames;headerValues;*)
 
 
-//Build new arrays for headers with only the cookie WASID4D
+//Créer de nouveaux tableaux pour les en-têtes uniquement avec le cookie WASID4D
 buildHeader(->headerNames;->headerValues)
 
-//This other request will not open a new session
+//Cette autre requête n'ouvrira pas une nouvelle session
 $result:=HTTP Request(HTTP GET method;"127.0.0.1:8044/rest/$catalog";"";\  
     $response;headerNames;headerValues;*)
 ```
 
 ```4d
-// buildHeader project method  
+// méthode projet buildHeader  
 
 C_POINTER($pointerNames;$1;$pointerValues;$2)
 ARRAY TEXT($headerNames;0)

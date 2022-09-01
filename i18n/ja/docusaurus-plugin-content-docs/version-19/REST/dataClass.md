@@ -5,58 +5,58 @@ title: dataClass
 
 
 
-Dataclass names can be used directly in the REST requests to work with entities and entity selections, or class functions of the dataclass.
+エンティティやセンティティセレクション、またはクラス関数を利用するにあたって、RESTリクエスト内にデータクラス名を直接使用することができます。
 
-## Available syntaxes
+## 使用可能なシンタックス
 
-| Syntax                                                                             | Example                                  | Description                                                                     |
-| ---------------------------------------------------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------------- |
-| [**{dataClass}**](#dataClass)                                                      | `/Employee`                              | Returns all the data (by default the first 100 entities) for the dataclass      |
-| [**{dataClass}({key})**](#dataclasskey)                                            | `/Employee(22)`                          | Returns the data for the specific entity defined by the dataclass's primary key |
-| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)                     | `/Employee:firstName(John)`              | Returns the data for one entity in which the attribute's value is defined       |
-| [**{dataClass}/{DataClassClassFunction}**](ClassFunctions.md#function-calls)       | `/City/getCity`                          | Executes a dataclass class function                                             |
-| [**{dataClass}({EntitySelectionClassFunction}**](ClassFunctions.md#function-calls) | `/City/getPopulation/?$filter="ID<3"` | Executes an entity selection class function                                     |
-| [**{dataClass}({key})/{EntityClassFunction}**](ClassFunctions.md#function-calls)   | `City(2)/getPopulation`                  | Executes an entity class function                                               |
+| シンタックス                                                                      | 例題                                       | 詳細                                       |
+| --------------------------------------------------------------------------- | ---------------------------------------- | ---------------------------------------- |
+| [**{dataClass}**](#dataClass)                                               | `/Employee`                              | データクラスの全データ (デフォルトでは先頭の 100エンティティ) を返します |
+| [**{dataClass}({key})**](#dataclasskey)                                     | `/Employee(22)`                          | データクラスのプライマリーキーによって特定されるエンティティのデータを返します  |
+| [**{dataClass}:{attribute}(value)**](#dataclassattributevalue)              | `/Employee:firstName(John)`              | 指定した属性値を持つ 1件のエンティティのデータを返します            |
+| [**{dataClass}/{DataClassClassFunction}**](ClassFunctions.md#関数の呼び出し)       | `/City/getCity`                          | DataClassクラス関数を実行します                     |
+| [**{dataClass}({EntitySelectionClassFunction}**](ClassFunctions.md#関数の呼び出し) | `/City/getPopulation/?$filter="ID<3"` | EntitySelectionクラス関数を実行します               |
+| [**{dataClass}({key})/{EntityClassFunction}**](ClassFunctions.md#関数の呼び出し)   | `City(2)/getPopulation`                  | Entityクラス関数を実行します                        |
 
-> Function calls are detailed in the [Calling ORDA class functions](ClassFunctions.md) section.
+> 関数の呼び出しについての詳細は [ORDAクラス関数](ClassFunctions.md) を参照ください。
 
 ## {dataClass}
 
-Returns all the data (by default the first 100 entities) for a specific dataclass (*e.g.*, `Company`)
+特定のデータクラス (*例:* `Company`) の全データ (デフォルトでは先頭の 100エンティティ) を返します。
 
-### Description
+### 詳細
 
-When you call this parameter in your REST request, the first 100 entities are returned unless you have specified a value using [`$top/$limit`]($top_$limit.md).
+RESTリクエストにこのパラメーターのみを渡すと、([`$top/$limit`]($top_$limit.md) を使って指定しない限り) デフォルトで先頭の 100件のエンティティが返されます。
 
-Here is a description of the data returned:
+返されるデータの説明です:
 
-| Property      | Type       | Description                                                                                                                                                                                     |
-| ------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| __entityModel | String     | Name of the dataclass.                                                                                                                                                                          |
-| __COUNT       | Number     | Number of entities in the dataclass.                                                                                                                                                            |
-| __SENT        | Number     | Number of entities sent by the REST request. This number can be the total number of entities if it is less than the value defined by `$top/$limit`.                                             |
-| __FIRST       | Number     | Entity number that the selection starts at. Either 0 by default or the value defined by `$skip`.                                                                                                |
-| __ENTITIES    | Collection | This collection of objects contains an object for each entity with all its attributes. All relational attributes are returned as objects with a URI to obtain information regarding the parent. |
+| プロパティ         | タイプ    | 詳細                                                                                         |
+| ------------- | ------ | ------------------------------------------------------------------------------------------ |
+| __entityModel | String | データクラスの名称。                                                                                 |
+| __COUNT       | 数値     | データクラスに含まれる全エンティティ数                                                                        |
+| __SENT        | 数値     | RESTリクエストが返すエンティティの数。 総エンティティ数が `$top/$limit` で指定された数より少なければ、総エンティティの数になります。               |
+| __FIRST       | 数値     | セレクションの先頭エンティティの番号。 デフォルトでは 0; または `$skip` で指定された値。                                        |
+| __ENTITIES    | コレクション | エンティティ毎にその属性をすべて格納したオブジェクトのコレクションです。 リレーション属性は、リレーション先の情報を取得するための URI を格納したオブジェクトとして返されます。 |
 
-Each entity contains the following properties:
+各エンティティには次のプロパティが含まれます:
 
-| Property    | Type   | Description                                                                                                |
-| ----------- | ------ | ---------------------------------------------------------------------------------------------------------- |
-| __KEY       | String | Value of the primary key defined for the dataclass.                                                        |
-| __TIMESTAMP | Date   | Timestamp of the last modification of the entity                                                           |
-| __STAMP     | Number | Internal stamp that is needed when you modify any of the values in the entity when using `$method=update`. |
+| プロパティ       | タイプ    | 詳細                                                 |
+| ----------- | ------ | -------------------------------------------------- |
+| __KEY       | String | データクラスにおいて定義されているプライマリーキーの値                        |
+| __TIMESTAMP | 日付     | エンティティが最後に編集された日時を記録するタイムスタンプ                      |
+| __STAMP     | 数値     | `$method=update` を使ってエンティティの属性値を更新するときに必要となる内部スタンプ |
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
+取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 例:
 
  `GET  /rest/Company/name,address`
 
-### Example
+### 例題
 
-Return all the data for a specific dataclass.
+特定のデータクラスの全データを取得します。
 
  `GET  /rest/Company`
 
-**Result**:
+**結果**:
 
 ````
 {
@@ -137,29 +137,29 @@ Return all the data for a specific dataclass.
 
 ## {dataClass}({key})
 
-Returns the data for the specific entity defined by the dataclass's primary key, *e.g.*, `Company(22) or Company("IT0911AB2200")`
+データクラスのプライマリーキーによって特定されるエンティティのデータを返します (*例*: `Company(22) または Company("IT0911AB2200")` など)。
 
-### Description
+### 詳細
 
-By passing the dataclass and a key, you can retrieve all the public information for that entity. The key is the value in the attribute defined as the Primary Key for your dataclass. For more information about defining a primary key, refer to the **Modifying the Primary Key** section in the **Data Model Editor**.
+データクラスとキーを渡すことで、公開されているエンティティの情報を取得することができます。 キー (key) は、データクラスに定義されているプライマリーキーの値です。 プライマリーキーの定義についての詳細は、デザインリファレンスマニュアルの **[主キーを設定、削除する](https://doc.4d.com/4Dv18/4D/18/Table-properties.300-4575566.ja.html#1282230)** を参照ください。
 
-For more information about the data returned, refer to [{DataStoreClass}](#datastoreclass).
+返されるデータについての詳細は [{DataClass}](#dataclass) を参照ください。
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
+取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 例:
 
  `GET  /rest/Company(1)/name,address`
 
-If you want to expand a relation attribute using `$expand`, you do so by specifying it as shown below:
+`$expand` を使ってリレーション属性を展開するには、次のように指示します:
 
  `GET  /rest/Company(1)/name,address,staff?$expand=staff`
 
-### Example
+### 例題
 
-The following request returns all the public data in the Company dataclass whose key is 1.
+次のリクエストは、Company データクラスで主キーが 1 であるエンティティの公開データをすべて返します。
 
  `GET  /rest/Company(1)`
 
-**Result**:
+**結果**:
 
 ````
 {
@@ -184,24 +184,24 @@ The following request returns all the public data in the Company dataclass whose
 
 ## {dataClass}:{attribute}(value)
 
-Returns the data for one entity in which the attribute's value is defined
+指定した属性値を持つ 1件のエンティティのデータを返します
 
-### Description
+### 詳細
 
-By passing the *dataClass* and an *attribute* along with a value, you can retrieve all the public information for that entity. The value is a unique value for attribute, but is not the primary key.
+*dataClass* に加えて *attribute (属性)* および *value (値)*を渡すことで、当該エンティティの公開データをすべて取得できます。 指定する値は、その属性において一意のものですが、主キーではありません。
 
  `GET  /rest/Company:companyCode(Acme001)`
 
-If you want to specify which attributes you want to return, define them using the following syntax [{attribute1, attribute2, ...}](manData.md##selecting-attributes-to-get). For example:
+取得する属性を指定するには、次のシンタックスを使っておこないます: [{attribute1, attribute2, ...}](manData.md#取得する属性の選択)。 例:
 
  `GET  /rest/Company:companyCode(Acme001)/name,address`
 
-If you want to use a relation attribute using [$attributes]($attributes.md), you do so by specifying it as shown below:
+[$attributes]($attributes.md) を使ってリレーション属性を使用するには、次のように指示します:
 
  `GET  /rest/Company:companyCode(Acme001)?$attributes=name,address,staff.name`
 
-### Example
+### 例題
 
-The following request returns all the public data of the employee named "Jones".
+次のリクエストは、名前が "Jones" である社員 (Employee) の公開データをすべて返します。
 
  `GET  /rest/Employee:lastname(Jones)`

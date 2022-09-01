@@ -3,34 +3,34 @@ id: onWindowOpeningDenied
 title: On Window Opening Denied
 ---
 
-| Code | Can be called by                               | Definition                       |
-| ---- | ---------------------------------------------- | -------------------------------- |
-| 53   | [Web Area](../FormObjects/webArea_overview.md) | A pop-up window has been blocked |
+| コード | 呼び出し元                                        | 定義                  |
+| --- | -------------------------------------------- | ------------------- |
+| 53  | [Webエリア](../FormObjects/webArea_overview.md) | ポップアップウィンドウがブロックされた |
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes           |
-| ------- | ----------------- |
-| v19 R5  | Triggered on drop |
+| バージョン  | 内容         |
+| ------ | ---------- |
+| v19 R5 | ドロップ時にトリガー |
 </details>
 
-## Description
+## 詳細
 
-This event is generated when the opening of a pop-up window is blocked by the Web area. 4D Web areas do not allow the opening of pop-up windows.
+このイベントは、Webエリアによりポップアップウィンドウがブロックされると生成されます。 4D Webエリアはポップアップウィンドウを許可しません。
 
-You can find out the blocked URL using the `WA Get last filtered URL` command.
+`WA Get last filtered URL` コマンドコマンドを使用してブロックされた URL を知ることができます。
 
-This event is also triggered when a drop operation has been done in the Web area (with embedded and Wwindows system [engines](../FormObjects/properties_WebArea.md#use-embedded-web-rendering-engine)) if the [Drag and drop](../FormObjects/webArea_overview.md#user-interface) option is also enabled for the area. You can accept the drop by calling:
+このイベントは、Webエリア (埋め込みおよび Windowsシステム [エンジン](../FormObjects/properties_WebArea.md#埋め込みwebレンダリングエンジンを使用)) で [ドラッグ＆ドロップ](../FormObjects/webArea_Overview.md#ユーザーインターフェース) オプションが有効になっている場合に、ドロップ操作がおこなわれたときにも発生します。 次を呼び出すことで、ドロップを受け入れることができます:
 
 ```4d
-//web area object method
+// Webエリアオブジェクトメドッド
 If (FORM Event.code=On Window Opening Denied)
     WA OPEN URL(*; "WebArea"; WA Get last filtered URL(*; "WebArea"))  
-    // or UrlVariable:=WA Get last filtered URL(*; "WebArea")  
-    // where UrlVariable is the URL variable associated to the web area
+    // または UrlVariable:=WA Get last filtered URL(*; "WebArea")  
+    // (UrlVariable は Webエリアに関連づけられた URL変数)
 End if 
 ```
 
 
-### See also
+### 参照
 [`On Open External Link`](onOpenExternalLink.md)

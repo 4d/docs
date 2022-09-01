@@ -3,27 +3,27 @@ id: imageformat
 title: '$imageformat'
 ---
 
-Defines which image format to use for retrieving images (*e.g.*, `$imageformat=png`)
+画像取得の際に使用する画像形式を指定します (*例*: `$imageformat=png`)
 
-## Description
+## 詳細
 
-Define which format to use to display images. By default, the best format for the image will be chosen. You can, however, select one of the following formats:
+画像の表示に使う形式を指定します。 デフォルトでは、画像に最適な形式が選択されます。 指定する場合は、次の形式が指定できます:
 
-| Type | Description                    |
-| ---- | ------------------------------ |
-| GIF  | GIF format                     |
-| PNG  | PNG format                     |
-| JPEG | JPEG format                    |
-| TIFF | TIFF format                    |
-| best | Best format based on the image |
+| タイプ  | 詳細       |
+| ---- | -------- |
+| GIF  | GIF 形式   |
+| PNG  | PNG 形式   |
+| JPEG | JPEG 形式  |
+| TIFF | TIFF 形式  |
+| best | 画像に最適な形式 |
 
-Once you have defined the format, you must pass the image attribute to [`$expand`]($expand.md) to load the photo completely.
+画像を完全に読み込むには、形式を指定するだけでなく、画像属性を [`$expand`]($expand.md) に渡す必要があります。
 
-If there is no image to be loaded or the format doesn't allow the image to be loaded, the response will be empty.
+読み込むべき画像がない場合、または指定した形式では画像が読み込めない場合、レスポンスは空になります。
 
-## Example
+## 例題
 
-The following example defines the image format to JPEG regardless of the actual type of the photo and passes the actual version number sent by the server:
+photo属性の実際の形式に関わらず、画像形式を JPEG に指定し、サーバーより受け取ったバージョン番号を受け渡している例です:
 
 `GET  /rest/Employee(1)/photo?$imageformat=jpeg&$version=3&$expand=photo`
 

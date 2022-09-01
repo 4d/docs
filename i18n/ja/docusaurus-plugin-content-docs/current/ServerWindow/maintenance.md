@@ -1,92 +1,92 @@
 ---
 id: maintenance
-title: Maintenance Page
+title: メンテナンスページ
 ---
 
 
-The **Maintenance** page of the 4D Server Administration window provides information concerning the current operation of the application. It also provides access to basic maintenance functions:
+**メンテナンス** ページには、アプリケーションの現在の動作状況に関する情報が表示されます。 また、基本的なメンテナンス機能にアクセスすることもできます:
 
 ![](../assets/en/Admin/server-maintenance.png)
 
 
-## Last verification/compacting
+## 最新の検査/圧縮:
 
-These areas indicate the date, time and status of the last [data verification](MSC/verify.md) and [compacting operation](MSC/compact.md) carried out on the database.
+このエリアには、データベース上で実行された最新の [データの検査](MSC/verify.md) および [圧縮処理](MSC/compact.md) の日付、時刻、状況が表示されます。
 
-### Verify Records and Indexes
+### レコードとインデックスを検査
 
-This button can be used to launch the verification operation directly, without interrupting the server. Note that the server may be noticeably slowed down during the operation.
+このボタンを使用して、サーバーを止めることなく検査処理を直接起動できます。 検証の間、サーバーの動作が遅くなるかもしれないことに留意してください。
 
-All the records and all the indexes of the database are verified. If you want to be able to target the verification or have additional options available, you will need to use the [Maintenance and Security Center](MSC/overview.md) (MSC).
+データベースのすべてのレコードとすべてのインデックスが検証されます。 検査対象を絞り込んだり、追加のオプションを指定したい場合は、[Maintenance ＆ Security Center](MSC/overview.md) (MSC) を使用します。
 
-After verification, a report file is generated in XML format on the server in the [maintenance Logs](Project/architecture.md#logs) folder. The **View Report** button (named **Download Report** if the operation was carried out from a remote machine) lets you display the file in your browser.
+検査後、サーバー上の [maintenance Logs](Project/architecture.md#logs) フォルダーに、XML形式でレポートファイルが作成されます。 **レポートを表示** (クライアントマシンから処理が実行された場合は **レポートをダウンロード**) ボタンをクリックすると、ブラウザーにレポートを表示できます。
 
-### Compact Data...
+### データ圧縮
 
-Thus button can be used to launch a data compacting operation directly. This operation requires stopping the server: when you click on this button, the 4D Server shutdown dialog box appears so that you can choose how to interrupt the operation:
+このボタンを使用して、データ圧縮処理を直接起動できます。 この処理をおこなうにはサーバーを停止させる必要があります。 ボタンをクリックすると、4D Server の終了ダイアログが表示され、終了方法を選択することができます:
 
 ![](../assets/en/Admin/server-shut.png)
 
-After the actual interruption of the application service, 4D Server carries out a standard compacting operation on the database data. If you want to have additional options available, you will need to use the [MSC](MSC/overview.md).
+アプリケーションが実際に停止された後、4D Server はデータベースのデータに対する標準の圧縮処理をおこないます。 追加のオプションを指定したい場合は、[Maintenance ＆ Security Center](MSC/overview.md) (MSC) を使用します。
 
-Once the compacting is finished, 4D Server automatically restarts the application. The 4D users can then be reconnected.
+圧縮が終了すると、4D Server は自動でデータベースを再開します。 その後、4Dユーザーの再接続が可能になります。
 
-> If the request for compacting was carried out from a remote 4D remote machine, this machine is automatically reconnected by 4D Server.
+> 圧縮リクエストがリモートの 4Dマシンからなされた場合、このマシンは 4D Server により自動で再接続されます。
 
-After verification, a report file is generated in XML format on the server in the [maintenance Logs](Project/architecture.md#logs) folder. The **View Report** button (named **Download Report** if the operation was carried out from a remote machine) lets you display the file in your browser.
-
-
-## Uptime
-
-This area indicates the duration of the 4D Server application execution since the last time it was started (days, hours and minutes).
+検査後、サーバー上の [maintenance Logs](Project/architecture.md#logs) フォルダーに、XML形式でレポートファイルが作成されます。 **レポートを表示** (クライアントマシンから処理が実行された場合は **レポートをダウンロード**) ボタンをクリックすると、ブラウザーにレポートを表示できます。
 
 
-### Restart server...
+## 動作時間
 
-This button can be used to immediately close and restart the project. When you click on this button, the 4D Server shutdown dialog box appears so that you can choose how to interrupt the operation. After validation, 4D Server automatically closes and reopens the project. The 4D users can then be reconnected.
-
-> If the request for restarting was carried out from a remote 4D machine, this machine is automatically reconnected by 4D Server.
-
-## Last backup
-
-This area indicates the date and time of the [last backup](MSC/backup.md) of the database and provides information about the next scheduled automatic backup (if any). Automatic backups are configured using the **Scheduler** page of the structure settings.
-
-- **Last backup**: date and time of last backup.
-- **Next backup**: date and time of next scheduled backup.
-- **Needed space**: estimated space needed for the backup. The actual size of the backup file may vary according to the settings (compression, etc.) and according to variations of the data file.
-- **Available space**: space available on the backup volume.
+このエリアには、サーバーが開始されてからの稼働時間 (日、時、分) が表示されます。
 
 
-The **Start backup** button can be used to backup the database immediately using the current backup parameters (files backed up, location of archives, options, etc.). You can view these parameters by clicking on the **Settings...** button. During a backup on the server, the client machines are "blocked" (but not disconnected) and it is not possible for any new clients to connect.
+### サーバを再起動...
+
+このボタンをクリックするとサーバーを即座に再起動できます。 ボタンをクリックすると、4D Server の終了ダイアログが表示され、終了方法を選択することができます。 再起動後、4D Server は自動でプロジェクトを再度開きます。 その後、4Dユーザーの再接続が可能になります。
+
+> 再起動リクエストがリモートの 4Dマシンからなされた場合、このマシンは 4D Server により自動で再接続されます。
+
+## 前回のバックアップ
+
+このエリアには、データベースの [前回のバックアップ](MSC/backup.md) の日付・時刻と、予定された次のバックアップがあれば、それに関する情報が表示されます。 自動バックアップは、ストラクチャー設定の **スケジューラー** ページで設定します
+
+- **前回のバックアップ**: 前回のバックアップ日時。
+- **次回のバックアップ**: 予定された次のバックアップ日時。
+- **必要なスペース**: バックアップに必要な計算された空き容量。 バックアップファイルの実際のサイズは (圧縮などの) 設定や、データファイルの変化により変わります。
+- **空きスペース**: バックアップボリュームの空き容量。
 
 
-## Request and Debug logs
-
-This area indicates the server log files recording duration (when log files are activated) and allows you to control their activation.
-
-Refer to the [**Description of log files**](Debugging/debugLogFiles.md) section for details on log files.
-
-### Start/Stop Request and Debug Logs
-
-The **Start Request and Debug Logs** button starts log files. Since this may noticeably deteriorate server performance, it is to be reserved for the development phase of the application.
-
-> This button only logs operations that are executed on the server.
-
-When the logs have been activated, the button title changes to **Stop Request and Debug Logs**, so that you can stop recording requests at any time. Pay attention to the fact that restarting the log after stopping it "erases" the previous file.
-
-### View Report
-
-The **View Report** button (named **Download report** if the operation was carried out from a remote desktop client) lets you open a system window displaying the request log file.
-
-### Load logs configuration file
-
-This button allows you to load a special server [log configuration file](Debugging/debugLogFiles.md#using-a-log-configuration-file) (`.json` file). Such a file can be provided by 4D technical services to monitor and study specific cases.
+**バックアップ開始** ボタンを使用して、現在のバックアップパラメーター ( バックアップするファイル、アーカイブの場所、オプションなど) を使用したバックアップを即座に開始できます。 **環境設定...** ボタンをクリックして、これらのパラメーターを確認できます。 サーバー上でのバックアップがおこなわれる間、クライアントマシンはブロックされ (ただし接続解除はされません)、新規のクライアント接続はできなくなります。
 
 
-### Pause logging
+## リクエストとデバッグログ
 
-This button suspends all currently logging operations started on the server. This feature can be useful to temporarily lighten the server tasks.
+このエリアには、(ログファイルが有効化されている場合に) ログファイルの記録に要した時間が表示され、ログの有効化も管理できます。
 
-When the logs have been paused, the button title changes to **Resume logging**, so that you can resume the logging operations.
+ログファイルについては、[**ログファイルの詳細**](Debugging/debugLogFiles.md) を参照ください。
 
-> You can pause and resume logging using the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) command.
+### リクエストとデバッグのログを開始/停止
+
+**リクエストとデバッグのログを開始** ボタンでログファイルが開始されます。 これによりフォーマンスが著しく低下する場合があるため、これはアプリケーションの開発フェーズでのみ使用します。
+
+> このボタンは、サーバー上で実行されているオペレーションしか記録しません。
+
+ログが有効になると、ボタンのタイトルが **リクエストとデバッグのログを停止** に変わり、いつでもリクエストの記録を停止できます。 停止後にログを再開すると、以前のファイルは消去されることに留意してください。
+
+### レポートを表示
+
+**レポートを表示** (リモートのデスクトップクライアントから処理を実行した場合は **レポートをダウンロード**) ボタンをクリックすると、システムウィンドウが開いて、リクエストログファイルが表示されます。
+
+### ログ設定ファイルを読み込む
+
+このボタンを押すと、特殊な [ログ設定ファイル](Debugging/debugLogFiles.md#ログ設定ファイルを使用する) (`.json` ファイル) をサーバーに読み込むことができます。 この特殊ファイルは、特定のケースを監視・調査するために 4Dテクニカルサービスが提供することがあります。
+
+
+### ログを停止する
+
+このボタンを押すと、サーバーで開始されたログを記録する処理がすべて中断されます。 この機能は、サーバーの処理を一時的に軽くするのに便利です。
+
+ログが停止されると、ボタンのタイトルが **ログを再開する** に変わり、これを押すことでログの記録を再開することができます。
+
+> ログの停止や再開は、[SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page642.html) コマンドでおこなうこともできます。

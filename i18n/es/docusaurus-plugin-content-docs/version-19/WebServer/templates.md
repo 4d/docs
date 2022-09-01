@@ -1,38 +1,38 @@
 ---
 id: templates
-title: Template pages
+title: Páginas de plantillas
 ---
 
-4D's Web server allows you to use HTML template pages containing tags, i.e. a mix of static HTML code and 4D references added by means of [transformation tags](Tags/tags.md) such as 4DTEXT, 4DIF, or 4DINCLUDE. These tags are usually inserted as HTML type comments (`<!--#4DTagName TagValue-->`) into the HTML source code.
+El servidor web de 4D le permite utilizar las páginas de plantillas HTML que contengan etiquetas, es decir, una mezcla de código HTML estático y de referencias 4D añadidas mediante [etiquetas de transformación](Tags/tags.md) como 4DTEXT, 4DIF o 4DINCLUDE. Estas etiquetas suelen insertarse como comentarios de tipo HTML (`<!--#4DTagName TagValue-->`) en el código fuente HTML.
 
-When these pages are sent by the HTTP server, they are parsed and the tags they contain are executed and replaced with the resulting data. The pages received by the browsers are thus a combination of static elements and values coming from 4D processing.
+Cuando estas páginas son enviadas por el servidor HTTP, son analizadas y las etiquetas que contienen son ejecutadas y sustituidas por los datos resultantes. Las páginas que reciben los navegadores son una combinación de elementos estáticos y valores procedentes del procesamiento 4D.
 
-For example, if you write in an HTML page:
+Por ejemplo, si se escribe en una página HTML:
 
 ```html
 Welcome to <!--#4DTEXT vtSiteName-->!</P>
 ```
 
-The value of the 4D variable *vtSiteName* will be inserted in the HTML page.
+El valor de la variable 4D *vtSiteName* se insertará en la página HTML.
 
-## Tags for templates
+## Etiquetas para las plantillas
 
-The following 4D tags are available:
+Las siguientes etiquetas 4D están disponibles:
 
-- 4DTEXT, to insert 4D variables and expressions as text,
-- 4DHTML, to insert HTML code,
-- 4DEVAL, to evaluate any 4D expression,
-- 4DSCRIPT, to execute a 4D method,
-- 4DINCLUDE, to include a page within another one,
-- 4DBASE, to modify the default folder used by the 4DINCLUDE tag,
-- 4DCODE, to insert 4D code,
-- 4DIF, 4DELSE, 4DELSEIF and 4DENDIF, to insert conditions in the HTML code,
-- 4DLOOP and 4DENDLOOP, to make loops in the HTML code,
-- 4DEACH and 4DENDEACH, to loop in collections, entity selections, or object properties.
+- 4DTEXT, para insertar variables y expresiones 4D como texto,
+- 4DHTML, para insertar el código HTML,
+- 4DEVAL, para evaluar toda expresión 4D,
+- 4DSCRIPT, para ejecutar un método 4D,
+- 4DINCLUDE, para incluir una página dentro de otra,
+- 4DBASE, para modificar la carpeta por defecto utilizada por la etiqueta 4DINCLUDE,
+- 4DCODE, para insertar el código 4D,
+- 4DIF, 4DELSE, 4DELSEIF y 4DENDIF, para insertar condiciones en el código HTML,
+- 4DLOOP y 4DENDLOOP, para hacer bucles en el código HTML,
+- 4DEACH y 4DENDEACH, para hacer bucles en colecciones, selecciones de entidades o propiedades de objetos.
 
-These tags are described in the [Transformation Tags](Tags/tags.md) page.
+Estas etiquetas se describen en la página [Etiquetas de transformación](Tags/tags.md).
 
-It is possible to mix tags. For example, the following HTML code is allowed:
+Es posible combinar etiquetas. Por ejemplo, el siguiente código HTML es permitido:
 
 ```html
 <HTML>
@@ -59,35 +59,35 @@ It is possible to mix tags. For example, the following HTML code is allowed:
 </HTML>
 ```
 
-## Tag parsing
+## Análisis de etiquetas
 
-For optimization reasons, the parsing of the HTML source code is not carried out by the 4D Web server when HTML pages are called using simple URLs that are suffixed with “.HTML” or “.HTM”.
+Por razones de optimización, el servidor web de 4D no realiza el análisis del código fuente HTML cuando se llama a las páginas HTML utilizando URLs simples con el sufijo ".HTML" o ".HTM".
 
-Parsing of the contents of template pages sent by 4D web server takes place when `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB) or `WEB SEND TEXT` commands are called, as well as when sending pages called using URLs. In this last case, for reasons of optimization, pages that are suffixed with “.htm” and “.html” are NOT parsed. In order to "force" the parsing of HTML pages in this case, you must add the suffix “.shtm” or “.shtml” (for example, `http://www.server.com/dir/page.shtm`). An example of the use of this type of page is given in the description of the `WEB GET STATISTICS` command. XML pages (.xml, .xsl) are also supported and always parsed by 4D.
+El análisis del contenido de las páginas plantillas enviadas por el servidor web de 4D tiene lugar cuando se llaman los comandos `WEB SEND FILE` (.htm, .html, .shtm, .shtml), `WEB SEND BLOB` (text/html type BLOB) o `WEB SEND TEXT`, así como cuando se envían páginas llamadas mediante URLs. En este último caso, por razones de optimización, las páginas con sufijo ".htm" y ".html" NO se analizan. Para "forzar" el análisis de las páginas HTML en este caso, debe añadir el sufijo ".shtm" o ".shtml" (por ejemplo, `http://www.server.com/dir/page.shtm`). Un ejemplo del uso de este tipo de página se da en la descripción del comando `WEB GET STATISTICS`. Las páginas XML (.xml, .xsl) también son compatibles y siempre son analizadas por 4D.
 
-You can also carry out parsing outside of the Web context when you use the `PROCESS 4D TAGS` command.
+También puede llevar a cabo el análisis sintáctico fuera del contexto web cuando utilice el comando `PROCESS 4D TAGS`.
 
-Internally, the parser works with UTF-16 strings, but the data to parse may have been encoded differently. When tags contain text (for example `4DHTML`), 4D converts the data when necessary depending on its origin and the information available (charset). Below are the cases where 4D parses the tags contained in the HTML pages, as well as any conversions carried out:
+Internamente, el analizador funciona con cadenas UTF-16, pero los datos a analizar pueden haber sido codificados de forma diferente. Cuando las etiquetas contienen texto (por ejemplo `4DHTML`), 4D convierte los datos cuando es necesario dependiendo de su origen y de la información disponible (charset). A continuación se muestran los casos en los que 4D analiza las etiquetas contenidas en las páginas HTML, así como las conversiones realizadas:
 
-| Action / Command                               | Content analysis of the sent pages                    | Support of $ syntax(*)                                | Character set used for parsing tags                                                                                                                                                                         |
-| ---------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Pages called via URLs                          | X, except for pages with “.htm” or “.html” extensions | X, except for pages with “.htm” or “.html” extensions | Use of charset passed as parameter of the "Content-Type" header of the page. If there is none, search for a META-HTTP EQUIV tag with a charset. Otherwise, use of default character set for the HTTP server |
-| `WEB SEND FILE`                                | X                                                     | -                                                     | Use of charset passed as parameter of the "Content-Type" header of the page. If there is none, search for a META-HTTP EQUIV tag with a charset. Otherwise, use of default character set for the HTTP server |
-| `WEB SEND TEXT`                                | X                                                     | -                                                     | No conversion necessary                                                                                                                                                                                     |
-| `WEB SEND BLOB`                                | X, if BLOB is of the “text/html” type                 | -                                                     | Use of charset set in the "Content-Type" header of the response. Otherwise, use of default character set for the HTTP server                                                                                |
-| Inclusion by the `<!--#4DINCLUDE-->` tag | X                                                     | X                                                     | Use of charset passed as parameter of the "Content-Type" header of the page. If there is none, search for a META-HTTP EQUIV tag with a charset. Otherwise, use of default character set for the HTTP server |
-| `PROCESS 4D TAGS`                              | X                                                     | X                                                     | Text data: no conversion. BLOB data: automatic conversion from the Mac-Roman character set for compatibility                                                                                                |
+| Acción / Comando                                    | Análisis del contenido de las páginas enviadas          | Soporte de la sintaxis $(*)                             | Conjunto de caracteres utilizados para el análisis sintáctico de las etiquetas                                                                                                                                                                                            |
+| --------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Páginas llamadas a través de URLs                   | X, excepto las páginas con extensiones ".htm" o ".html" | X, excepto las páginas con extensiones ".htm" o ".html" | Uso del conjunto de caracteres pasado como parámetro del encabezado "Content-Type" de la página. Si no hay ninguna, busca una etiqueta META-HTTP EQUIV con un conjunto de caracteres. En caso contrario, uso del conjunto de caracteres por defecto para el servidor HTTP |
+| `WEB SEND FILE`                                     | X                                                       | -                                                       | Uso del conjunto de caracteres pasado como parámetro del encabezado "Content-Type" de la página. Si no hay ninguna, busca una etiqueta META-HTTP EQUIV con un conjunto de caracteres. En caso contrario, uso del conjunto de caracteres por defecto para el servidor HTTP |
+| `WEB SEND TEXT`                                     | X                                                       | -                                                       | No es necesaria la conversión                                                                                                                                                                                                                                             |
+| `WEB SEND BLOB`                                     | X, si el BLOB es de tipo "text/html                     | -                                                       | Uso del conjunto de caracteres definido en el encabezado "Content-Type" de la respuesta. En caso contrario, uso del conjunto de caracteres por defecto para el servidor HTTP                                                                                              |
+| Inclusión por la etiqueta `<!--#4DINCLUDE-->` | X                                                       | X                                                       | Uso del conjunto de caracteres pasado como parámetro del encabezado "Content-Type" de la página. Si no hay ninguna, busca una etiqueta META-HTTP EQUIV con un conjunto de caracteres. En caso contrario, uso del conjunto de caracteres por defecto para el servidor HTTP |
+| `PROCESS 4D TAGS`                                   | X                                                       | X                                                       | Datos de texto: no hay conversión. Datos BLOB: conversión automática del conjunto de caracteres Mac-Roman por compatibilidad                                                                                                                                              |
 
-(*) The alternative $-based syntax is available for 4DHTML, 4DTEXT and 4DEVAL tags.
+(*) La sintaxis alternativa basada en $ está disponible para las etiquetas 4DHTML, 4DTEXT y 4DEVAL.
 
-## Accessing 4D methods via the Web
+## Acceso a los métodos 4D a través de la web
 
-Executing a 4D method with `4DEACH`, `4DELSEIF`, `4DEVAL`, `4DHTML`, `4DIF`, `4DLOOP`, `4DSCRIPT`, or `4DTEXT` from a web request is subject to the [Available through 4D tags and URLs (4DACTION...)](allowProject.md) attribute value defined in the properties of the method. If the attribute is not checked for the method, it can not be called from a web request.
+La ejecución de un método 4D con `4DEACH`, `4DELSEIF`, `4DEVAL`, `4DHTML`, `4DIF`, `4DLOOP`, `4DSCRIPT`, o `4DTEXT` a partir de una petición web está sujeta al valor del atributo [disponible vía las etiquetas 4D y las URL (4DACTION...)](allowProject.md) definida en las propiedades del método. Si no se comprueba el atributo para el método, éste no puede ser llamado desde una petición web.
 
-## Prevention of malicious code insertion
+## Prevención de la inserción de códigos maliciosos
 
-4D tags accept different types of data as parameters: text, variables, methods, command names, etc. When this data is provided by your own code, there is no risk of malicious code insertion since you control the input. However, your database code often works with data that was, at one time or another, introduced through an external source (user input, import, etc.).
+Las etiquetas 4D aceptan diferentes tipos de datos como parámetros: texto, variables, métodos, nombres de comandos, etc. Cuando estos datos son proporcionados por su propio código, no hay riesgo de inserción de código malicioso ya que usted controla la entrada. Sin embargo, el código de su base de datos suele trabajar con datos que, en un momento u otro, fueron introducidos a través de una fuente externa (entrada del usuario, importación, etc.).
 
-In this case, it is advisable to **not use** tags such as `4DEVAL` or `4DSCRIPT`, which evaluate parameters, directly with this sort of data.
+En este caso, es aconsejable **no utilizar** etiquetas como `4DEVAL` o `4DSCRIPT`, que evalúan parámetros, directamente con este tipo de datos.
 
-In addition, according to the [principle of recursion](Tags/tags.md#recursive-processing), malicious code may itself include transformation tags. In this case, it is imperative to use the `4DTEXT` tag. Imagine, for example, a Web form field named "Name", where users must enter their name. This name is then displayed using a `<!--#4DHTML vName-->` tag in the page. If text of the "\<!--#4DEVAL QUIT 4D-->" type is inserted instead of the name, interpreting this tag will cause the application to be exited. To avoid this risk, you can just use the `4DTEXT` tag systematically in this case. Since this tag escapes the special HTML characters, any malicious recursive code that may have been inserted will not be reinterpreted. To refer to the previous example, the "Name" field will contain, in this case, "`&lt;!--#4DEVAL QUIT 4D--&gt;`" which will not be transformed.
+Además, según el [principio de recursividad](Tags/tags.md#recursive-processing), el código malicioso puede incluir a su vez etiquetas de transformación. En este caso, es imprescindible utilizar la etiqueta `4DTEXT`. Imagine, por ejemplo, un campo de formulario web llamado "Name", donde los usuarios deben introducir su nombre. Este nombre se muestra mediante una etiqueta `<!--#4DHTML vName-->` en la página. Si el texto del<!--#4DEVAL QUIT 4D-->tipo "\" se inserta en lugar del nombre, la interpretación de esta etiqueta provocará la salida de la aplicación. Para evitar este riesgo, basta con utilizar sistemáticamente la etiqueta `4DTEXT` en este caso. Como esta etiqueta escapa a los caracteres especiales de HTML, cualquier código recursivo malicioso que pueda haberse insertado no será reinterpretado. Para referirnos al ejemplo anterior, el campo "Name" contendrá, en este caso, "`&lt;!--#4DEVAL QUIT 4D--&gt;`" que no será transformado.

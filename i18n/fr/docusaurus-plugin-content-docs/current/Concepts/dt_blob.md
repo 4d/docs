@@ -3,38 +3,38 @@ id: blob
 title: BLOB
 ---
 
-A BLOB (Binary Large OBject) field, variable or expression is a contiguous series of bytes that can be treated as one whole object, or whose bytes can be addressed individually.
+Un champ, une variable ou une expression de type BLOB (Binary Large OBject) est une série contiguë d'octets qui peut être traitée comme un seul objet ou dont les octets peuvent être adressés individuellement.
 
-A blob is loaded into memory in its entirety. A blob variable is held and exists in memory only. A blob field is loaded into memory from the disk, like the rest of the record to which it belongs.
+Lorsque vous travaillez avec un blob, il est stocké entièrement en mémoire. Si vous travaillez avec une variable, le blob n'existe qu'en mémoire. Si vous travaillez avec un champ de type blob, il est chargé en mémoire à partir du disque, comme le reste de l'enregistrement auquel il appartient.
 
-Like other field types that can retain a large amount of data (such as the Picture field type), Blob fields are not duplicated in memory when you modify a record. Consequently, the result returned by the `Old` and `Modified` commands is not significant when applied to a Blob field.
+A l'instar d'autres types de champs pouvant contenir une grande quantité de données (comme les champs de type Image), les champs de type blob ne sont pas dupliqués en mémoire lorsque vous modifiez un enregistrement. Par conséquent, les résultats renvoyés par `Ancien` et `Modifie` ne sont pas significatifs lorsque ces fonctions sont appliquées à des champs de type blob.
 
-## Blob Types
+## Types de Blob
 
-Using the 4D language, there are two ways to handle a blob:
+Dans le langage 4D, il existe deux façons de manipuler un blob :
 
-- **as a scalar value**: a blob can be stored in a Blob variable or field and altered.
-- **as an object (`4D.Blob`)**: a `4D.Blob` is a blob object. You can encapsulate a blob or part of it in a `4D.Blob` without altering the original blob. This method is called [boxing](https://en.wikipedia.org/wiki/Object_type_(object-oriented_programming)#Boxing). For more info on how to instantiate a `4D.Blob`, see [Blob Class](../API/BlobClass.md).
+- **comme une valeur scalaire** : un blob peut être stocké dans une variable ou un champ Blob et peut être modifié.
+- **comme un objet (`4D.Blob`)** : un `4D.Blob` est un objet blob. Vous pouvez encapsuler un blob ou une partie de celui-ci dans un `4D.Blob` sans modifier le blob d'origine. Cette méthode est appelée ["boxing"](https://en.wikipedia.org/wiki/Object_type_(object-oriented_programming)#Boxing). Pour plus d'informations sur l'instanciation d'un `4D.Blob`, consultez la rubrique [Blob Class](../API/BlobClass.md).
 
-Each blob type has its advantages. Use the following table to determine which one suits your needs:
+Chaque type de blob a ses avantages. Utilisez le tableau suivant pour déterminer celui qui convient à vos besoins :
 
-|                                      | Blob | 4D.Blob |
-| ------------------------------------ |:----:|:-------:|
-| Alterable                            | Yes  |   No    |
-| Shareable in objects and collections |  No  |   Yes   |
-| Passed by reference\*              |  No  |   Yes   |
-| Performance when accessing bytes     |  +   |    -    |
-| Maximum size                         | 2GB  | Memory  |
+|                                         | Blob | 4D.Blob |
+| --------------------------------------- |:----:|:-------:|
+| Modifiable                              | Oui  |   Non   |
+| Partageable en objets et collections    | Non  |   Oui   |
+| Passé par référence\*                 | Non  |   Oui   |
+| Performances lors de l'accès aux octets |  +   |    -    |
+| Taille maximale                         | 2Go  | Mémoire |
 
-\*Unlike the 4D commands designed to take a scalar blob as a parameter, passing a scalar blob to a method duplicates it in memory. When working with methods, using blob objects (`4D.Blob`) is more efficient, as they are passed by reference.
+A noter que, contrairement aux objets blob, qui sont transmis par référence, les blobs scalaires sont dupliqués en mémoire lorsqu'ils sont passés aux méthodes. Vous pouvez passer des blobs et des objets blob (`4D.Blob`) aux méthodes.
 
-> By default, 4D sets the maximum size of scalar blobs to 2GB, but this size limit may be lower depending on your OS and how much space is available.
+> Par défaut, la taille maximale des blobs scalaires est fixée à 2 Go, mais cette limite peut être inférieure en fonction de votre OS et de l'espace disponible.
 
-You cannot use operators on blobs.
+Vous ne pouvez pas utiliser d'opérateurs sur les blobs.
 
-## Checking if a variable holds a scalar blob or a `4D.Blob`
+## Vérifier si une variable contient un blob scalaire ou un `4D.Blob`
 
-Use the [Value type](https://doc.4d.com/4dv19R/help/command/en/page1509.html) command to determine if a value is of type Blob or Object. To check that an object is a blob object (`4D.Blob`), use [OB instance of](https://doc.4d.com/4dv19R/help/command/en/page1731.html):
+Utilisez la commande [Value type](https://doc.4d.com/4dv19R/help/command/en/page1509.html) pour déterminer si une valeur est de type Blob ou Object. Pour vérifier qu'un objet est un objet blob (`4D.Blob`), utilisez [OB instance of](https://doc.4d.com/4dv19R/help/command/en/page1731.html) :
 
 ```4d
 var $myBlob: Blob
@@ -45,13 +45,13 @@ $type:= Value type($myblobObject) // 38 (object)
 $is4DBlob:= OB Instance of($myblobObject; 4D.Blob)  //True
 ```
 
-## Passing blobs as parameters
+## Passer des blobs en tant que paramètres
 
-Scalar blobs and blob objects can be passed as parameters to 4D commands or plug-in routines that expect blob parameters.
+Les blobs scalaires et les objets blob peuvent être passés comme paramètres aux commandes 4D ou aux routines de plug-in qui attendent des paramètres blob.
 
-### Passing blobs and blob objects to 4D commands
+### Passer des blobs et des objets blob aux commandes 4D
 
-You can pass a scalar blob or a `4D.Blob` to any 4D command that takes a blob as a parameter:
+Vous pouvez passer un blob scalaire ou un `4D.Blob` à toute commande 4D qui prend un blob comme paramètre :
 
 ```4d
 var $myBlob: 4D.Blob
@@ -59,7 +59,7 @@ CONVERT FROM TEXT("Hello, World!"; "UTF-8"; $myBlob)
 $myText:= BLOB to text( $myBlob ; UTF8 text without length )
 ```
 
-Some 4D commands alter the original blob, and thus do not support the `4D.Blob` type:
+Certaines commandes 4D modifient le blob d'origine et ne prennent donc pas en charge le type `4D.Blob` :
 
 - [DELETE FROM BLOB](https://doc.4d.com/4dv19/help/command/en/page560.html)
 - [INSERT IN BLOB](https://doc.4d.com/4dv19/help/command/en/page559.html)
@@ -73,109 +73,109 @@ Some 4D commands alter the original blob, and thus do not support the `4D.Blob` 
 - [SOAP DECLARATION](https://doc.4d.com/4dv19/help/command/en/page782.html)
 - [WEB SERVICE SET PARAMETER](https://doc.4d.com/4dv19/help/command/en/page777.html)
 
-### Passing blobs and blob objects to methods
+### Passer des blobs et des objets blob aux méthodes
 
-You can pass blobs and blob objects (`4D.Blob`) to methods. Keep in mind that unlike blob objects, which are passed by reference, scalar blobs are duplicated in memory when passed to methods.
+Lorsque vous travaillez avec des méthodes, l'utilisation d'objets blob (`4D.Blob`) est plus efficace, car ils sont passés par référence. A noter que, contrairement aux objets blob, qui sont transmis par référence, les blobs scalaires sont dupliqués en mémoire lorsqu'ils sont passés aux méthodes.
 
-### Passing a scalar blob by reference using a pointer
+### Passer un blob scalaire par référence en utilisant un pointeur
 
-To pass a scalar blob to your own methods without duplicating it in memory, define a pointer to the variable that stores it and pass the pointer as a parameter.
+Pour passer un blob scalaire à vos propres méthodes sans le dupliquer en mémoire, définissez un pointeur vers la variable qui le stocke et passez le pointeur comme paramètre.
 
-**Examples:**
+**Exemple :**
 
 ```4d
-// Declare a variable of type Blob
+// Déclarer une variable de type Blob
 var $myBlobVar: Blob
-// Pass the blob as parameter to a 4D command
+// Passer le blob (en tant que paramètre) en une commande 4D
  SET BLOB SIZE($myBlobVar;1024*1024)
 ```
 
 ```4d
-// Pass the blob as parameter to an external routine
+// Passer le blob (en tant que paramètre) en routine externe
  $errCode:=Do Something With This blob($myBlobVar)
 ```
 
 ```4d
-// Pass the blob as a parameter to a method that returns a blob
+//Passer le blob (en tant que paramètre) en une méthode qui retourne un blob
  var $retrieveBlob: Blob
  retrieveBlob:=Fill_Blob($myBlobVar)
 ```
 
 ```4d
-// Pass a pointer to the blob as a parameter to your own method,
+// Passer un pointeur au blob (en tant que paramètre) à votre propre méthode,
 COMPUTE BLOB(->$myBlobVar)
 ```
 
-**Note for Plug-in developers:** A BLOB parameter is declared as “&O” (the letter “O”, not the digit “0”).
+**Note pour les développeurs de plug ins 4D :** Un paramètre de type BLOB se déclare “&O” (la lettre “O” et non le chiffre “0”).
 
-## Assigning a blob variable to another
+## Assigner une variable Blob à une autre
 
-You can assign a Blob variable to another:
+Vous pouvez affecter une variable Blob à une autre :
 
-**Example:**
+**Voici un exemple :**
 
 ```4d
-// Declare two variables of type Blob
+// Déclarer deux variables de type Blob
  var $vBlobA; $vBlobB : Blob
-// Set the size of the first blob to 10K
+ // Fixer la taille du premier blob à 10Ko
  SET BLOB SIZE($vBlobA;10*1024)
-// Assign the first blob to the second one
+ // Assigner le premier BLOB au second
  $vBlobB:=$vBlobA
 ```
 
-## Automatic conversion of blob type
+## Conversion automatique du type blob
 
-4D automatically converts scalar blobs to blob objects, and vice versa, when they're assigned to each other. For example:
+4D convertit automatiquement les blobs scalaires en objets blob, et vice versa, lorsqu'ils sont assignés l'un à l'autre.
 
 ```4d
-// Create a variable of type Blob and an object variable
+// Créer une variable de type Blob et une variable objet
 var $myBlob: Blob
 var $myObject : Object
 
-// Assign that blob to a property of $myObject named "blob"
+// Assigner ce blob à une propriété de $myObject nommée "blob"
 $myObject:=New object("blob"; $myBlob)
 
-// The blob stored in $myBlob is automatically converted to a 4D.Blob
+// le blob stocké dans $myBlob est automatiquement converti en un 4D.Blob
 $type:= OB Instance of($myObject.blob; 4D.Blob)  //True
 
-// Conversion from 4D.Blob to Blob
+// Conversion d'un 4D.Blob en Blob
 $myBlob:= $myObject.blob
 $type:= Value type($myBlob) // Blob
 ```
 
-> When converting a `4D.Blob` to a scalar blob, if the size of the `4D.Blob` exceeds the maximum size for scalar blobs, the resulting scalar blob is empty. For example, when the maximum size for scalar blobs is 2GB, if you convert a `4D.Blob` of 2.5GB to a scalar blob, you obtain an empty blob.
+> Lors de la conversion d'un `4D.Blob` en un blob scalaire, si la taille du `4D.Blob` dépasse la taille maximale des blobs scalaires, le blob scalaire résultant est vide. Par exemple, lorsque la taille maximale des blobs scalaires est de 2GB, si vous convertissez un `4D.Blob` de 2,5Go en blob scalaire, vous obtenez un blob vide.
 
-## Modifying a scalar blob
+## Modification d'un blob scalaire
 
-Unlike blob objects, scalar blobs can be altered. For example:
+Contrairement aux objets blob, les blobs scalaires peuvent être modifiés.
 
 ```4d
 var $myBlob : Blob
 SET BLOB SIZE ($myBlob ; 16*1024)
 ```
 
-## Individually accessing bytes in a blob
+## Accéder individuellement aux octets d'un blob
 
-#### Accessing a scalar blob's bytes
+#### Accéder aux octets d'un blob scalaire
 
-You can access individual bytes of a scalar blob using curly brackets `{}`. Within a blob, bytes are numbered from 0 to N-1, where N is the size of the BLOB:
+Vous pouvez accéder aux octets individuels d'un blob scalaire en utilisant des accolades `{}`. Dans un blob, les octets sont numérotés de 0 à N-1, N étant la taille du BLOB:
 
 ```4d
-  // Declare a variable of type Blob
+  // Déclarer une variable de type BLOB
  var $vBlob : Blob
-  // Set the size of the blob to 256 bytes
+  // Fixer la taille du BLOB à 256 octets
  SET BLOB SIZE($vBlob;256)
-  // The following code loops through the blob to set each byte to zero
+  //  Le code suivant initialise les octets du BLOB à zéro
  For(vByte;0;BLOB size($vBlob)-1)
     $vBlob{vByte}:=0
  End for
 ```
 
-Since you can address all the bytes of a blob individually, you can store whatever you want in a Blob variable or field.
+Etant donné que vous pouvez adresser tous les octets d'un blob individuellement, vous pouvez stocker tout ce que vous souhaitez dans une variable ou un champ Blob.
 
-#### Accessing a `4D.Blob`'s bytes
+#### Accéder aux octets d'un `4D.Blob`
 
-Use square brackets `[]` to directly access a specific byte in a `4D.Blob`
+Utilisez les crochets `[]` pour accéder directement à un octet spécifique dans un `4D.Blob`
 
 ```4d
 var $myBlob: 4D.Blob
@@ -184,4 +184,4 @@ $myText:= BLOB to text ( $myBlob ; UTF8 text without length )
 $byte:=$myBlob[5]
 ```
 
-Since a `4D.Blob` cannot be altered, you can read the bytes of a `4D.Blob` using this syntax, but not modify them.
+Etant donné qu'un `4D.Blob` ne peut pas être modifié, vous pouvez lire les octets d'un `4D.Blob` à l'aide de cette syntaxe, mais pas les modifier.

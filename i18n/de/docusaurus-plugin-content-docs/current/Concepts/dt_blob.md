@@ -20,13 +20,13 @@ Each blob type has its advantages. Use the following table to determine which on
 
 |                                      | Blob | 4D.Blob |
 | ------------------------------------ |:----:|:-------:|
-| Alterable                            | Yes  |   No    |
-| Shareable in objects and collections |  No  |   Yes   |
-| Passed by reference\*              |  No  |   Yes   |
+| Alterable                            |  Ja  |  Nein   |
+| Shareable in objects and collections | Nein |   Ja    |
+| Passed by reference\*              | Nein |   Ja    |
 | Performance when accessing bytes     |  +   |    -    |
 | Maximum size                         | 2GB  | Memory  |
 
-\*Unlike the 4D commands designed to take a scalar blob as a parameter, passing a scalar blob to a method duplicates it in memory. When working with methods, using blob objects (`4D.Blob`) is more efficient, as they are passed by reference.
+Keep in mind that unlike blob objects, which are passed by reference, scalar blobs are duplicated in memory when passed to methods. You can pass blobs and blob objects (`4D.Blob`) to methods.
 
 > By default, 4D sets the maximum size of scalar blobs to 2GB, but this size limit may be lower depending on your OS and how much space is available.
 
@@ -75,13 +75,13 @@ Some 4D commands alter the original blob, and thus do not support the `4D.Blob` 
 
 ### Passing blobs and blob objects to methods
 
-You can pass blobs and blob objects (`4D.Blob`) to methods. Keep in mind that unlike blob objects, which are passed by reference, scalar blobs are duplicated in memory when passed to methods.
+When working with methods, using blob objects (`4D.Blob`) is more efficient, as they are passed by reference. Keep in mind that unlike blob objects, which are passed by reference, scalar blobs are duplicated in memory when passed to methods.
 
 ### Passing a scalar blob by reference using a pointer
 
 To pass a scalar blob to your own methods without duplicating it in memory, define a pointer to the variable that stores it and pass the pointer as a parameter.
 
-**Examples:**
+**Beispiele:**
 
 ```4d
 // Declare a variable of type Blob
@@ -106,13 +106,13 @@ var $myBlobVar: Blob
 COMPUTE BLOB(->$myBlobVar)
 ```
 
-**Note for Plug-in developers:** A BLOB parameter is declared as “&O” (the letter “O”, not the digit “0”).
+**Hinweis für Plug-In Entwickler:** Ein BLOB Parameter wird als “&0” deklariert (der Buchstabe “O”, nicht die Ziffer “0”).
 
 ## Assigning a blob variable to another
 
 You can assign a Blob variable to another:
 
-**Example:**
+**Beispiel:**
 
 ```4d
 // Declare two variables of type Blob
@@ -125,7 +125,7 @@ You can assign a Blob variable to another:
 
 ## Automatic conversion of blob type
 
-4D automatically converts scalar blobs to blob objects, and vice versa, when they're assigned to each other. For example:
+4D automatically converts scalar blobs to blob objects, and vice versa, when they're assigned to each other. Beispiel:
 
 ```4d
 // Create a variable of type Blob and an object variable
@@ -147,7 +147,7 @@ $type:= Value type($myBlob) // Blob
 
 ## Modifying a scalar blob
 
-Unlike blob objects, scalar blobs can be altered. For example:
+Unlike blob objects, scalar blobs can be altered. Beispiel:
 
 ```4d
 var $myBlob : Blob

@@ -1,61 +1,61 @@
 ---
 id: application-server
-title: Application Server Page
+title: アプリケーションサーバーページ
 ---
 
 
-The Application Server page groups together information about the desktop application published by 4D Server and can be used to manage this publication.
+アプリケーションサーバーページには、4D Server が公開しているデスクトップアプリケーションについての情報がまとめられていて、公開を管理できます。
 
 ![](../assets/en/Admin/server-admin-application-page.png)
 
 
-The upper part of the page provides information about the current status of the 4D Server application server.
+ページの上部には、4D Server アプリケーションサーバーの現在の状況が表示されます。
 
-- **State**: Started or Stopped.
-- **Starting time**: Date and time the application server was launched. This date corresponds to the opening of the project by 4D Server.
-- **Uptime**: Time elapsed since last opening of the project by the server.
+- **状況**: 開始または停止
+- **開始時刻**: アプリケーションサーバーの起動日と時刻。 これは、4D Server によってプロジェクトが開かれた日付です。
+- **動作時間**: プロジェクトがサーバーによって最後に開かれてからの経過時間。
 
-## Accept/Reject New Connections
+## 新規接続を許可/拒否
 
-This button toggles and can be used to manage the access of new desktop client machines to the application server.
+このボタンは切り替え表示され、アプリケーションサーバーへの新しいデスクトップクライアントの接続を管理します。
 
-By default, when the project is published:
-- The button is titled "Reject new connections."
-- New desktop clients can connect freely (within the limit of the connections permitted by the license).
-- The project name is published in the remote connection dialog box (if the "At Startup Publish Database Name in the Connection Dialog" option is checked in the Preferences).
+プロジェクトが公開された時、デフォルトでは:
+- ボタンのラベルは "新規接続を拒否" です。
+- ライセンスが許可する限り、新規クライアントは自由に接続が可能です。
+- プロジェクト名は接続ダイアログに公開されます ("起動時にデータベースを公開する" オプションがストラクチャー設定で有効になっている場合)。
 
-If you click on the **Reject new connections** button:
-- The button title changes to "Accept new connections."
-- No new desktop client can then connect. Clients attempting to connect will receive the following message:
+**新規接続を拒否** ボタンをクリックすると:
+- ボタンのラベルは "新規接続を許可" に変わります。
+- 新規クライアントは接続不可になります。 接続しようとしたクライアントには以下のメッセージが表示されます:
 
 ![](../assets/en/Admin/server-error.png)
 
-- The project name no longer appears in the remote connection dialog box.
-- Desktop clients that are already connected are not disconnected and can continue to work normally.
+- 接続ダイアログにプロジェクト名が表示されなくなります。
+- すでに接続済みのクライアントは接続解除されず、通常通りに操作が可能です。
 
-> You can perform the same action with the [`REJECT NEW REMOTE CONNECTIONS`](https://doc.4d.com/4dv19/help/command/en/page1635.html) command.
+> [`REJECT NEW REMOTE CONNECTIONS`](https://doc.4d.com/4dv19/help/command/ja/page1635.html) コマンドを使用することでも、同じアクションを実行することができます。
 
-- If you click on the **Accept new connections button**, the application server returns to its default state.
+- **新規接続を許可** ボタンをクリックすると、アプリケーションサーバーはデフォルトに戻ります。
 
-This feature permits, for example, an administrator to carry out various maintenance operations (verification, compacting, etc.) just after having started the server. If the administrator uses a remote connection, they can be certain to be the only one modifying the data. It is also possible to use this function in preparation of a maintenance operation which requires that there be no desktop client machine connected.
+この機能はたとえば、サーバー開始直後に管理者が様々なメンテナンス操作 (検証や圧縮など) をおこなうことを可能にします。 管理者がクライアント接続を使用する場合、この機能により一つのクライアントだけがデータを更新できることを確実にできます。 また、クライアントマシンが接続されていない状態でおこなわなければならないメンテナンス操作の準備のために、この機能を使用することができます。
 
-## Information
+## 情報
 
-### Configuration
+### 設定
 
-This area provides information about the 4D project published by the server: name and location of data and structure files and name of database log file. You can click on the structure or data file name in order to view its complete pathname.
+このエリアには、サーバーが公開する 4Dプロジェクトについての情報 (データやストラクチャーファイルの名称と場所、データベースログファイルの名称) が表示されます。 ストラクチャーやデータファイル名をクリックすると、完全なパス名を表示させることができます。
 
-The **Mode** field indicates the current execution mode of the application: compiled or interpreted.
+**モード** 欄はアプリケーションの現在の実行モード 、コンパイル済みかインタープリターかが表示されます。
 
-The lower part of the area indicates the server configuration parameters (launched as service, port and IP address) and the enabling of TLS for client-server connections (does not concern SQL nor HTTP connections).
+エリアの下部には、サーバー設定パラメーター (サービスとして起動、ポート、IP アドレス) や、クライアント/サーバー接続用の TSL の状態 (SQL や HTTP接続は別設定) が表示されます。
 
-### Memory
+### メモリ
 
-This area indicates the **Total cache memory** (parameter set in the settings) and the **Used cache memory** (dynamic allocation by 4D Server according to its needs).
+このエリアには、**総キャッシュメモリ** (ストラクチャー設定で設定されたパラメーター) と **使用キャッシュメモリ** (必要に応じて 4D Server が動的に割り当て) が表示されます。
 
 
-### Application Server Connections
+### アプリケーションサーバー接続数
 
-- **Maximum**: maximum number of simultaneous client connections allowed for the application server. This value depends on the license installed on the server machine.
-- **Used**: actual number of connections currently being used.
+- **最高**: アプリケーションサーバーに許可された最大のクライアント同時接続数を表します。 この値は、サーバーマシンにインストールされているライセンスによります。
+- **使用中**: 現在使用中の実際の接続数を表します。
 

@@ -7,9 +7,9 @@ title: '$catalog'
 The catalog describes all the dataclasses and attributes available in the datastore.
 
 
-## Available syntaxes
+## Sintaxe
 
-| Syntax                                        | Example              | Description                                                                      |
+| Sintaxe                                       | Exemplo              | Descrção                                                                         |
 | --------------------------------------------- | -------------------- | -------------------------------------------------------------------------------- |
 | [**$catalog**](#catalog)                      | `/$catalog`          | Returns a list of the dataclasses in your project along with two URIs            |
 | [**$catalog/$all**](#catalogall)              | `/$catalog/$all`     | Returns information about all of your project's dataclasses and their attributes |
@@ -20,7 +20,7 @@ The catalog describes all the dataclasses and attributes available in the datast
 Returns a list of the dataclasses in your project along with two URIs: one to access the information about its structure and one to retrieve the data in the dataclass
 
 
-### Description
+### Descrção
 
 When you call `$catalog`, a list of the dataclasses is returned along with two URIs for each dataclass in your project's datastore.
 
@@ -29,18 +29,18 @@ Only the exposed dataclasses are shown in this list for your project's datastore
 Here is a description of the properties returned for each dataclass in your project's datastore:
 
 
-| Property | Type   | Description                                                                      |
-| -------- | ------ | -------------------------------------------------------------------------------- |
-| name     | String | Name of the dataclass.                                                           |
-| uri      | String | A URI allowing you to obtain information about the dataclass and its attributes. |
-| dataURI  | String | A URI that allows you to view the data in the dataclass.                         |
+| Propriedade | Tipo   | Descrção                                                                         |
+| ----------- | ------ | -------------------------------------------------------------------------------- |
+| name        | String | Nome da dataclass.                                                               |
+| uri         | String | A URI allowing you to obtain information about the dataclass and its attributes. |
+| dataURI     | String | A URI that allows you to view the data in the dataclass.                         |
 
 
-### Example
+### Exemplo
 
 `GET  /rest/$catalog`
 
-**Result**:
+**Resultadoi**:
 
 ````
 {
@@ -64,18 +64,18 @@ Here is a description of the properties returned for each dataclass in your proj
 
 Returns information about all of your project's dataclasses and their attributes
 
-### Description
+### Descrção
 
-Calling `$catalog/$all` allows you to receive detailed information about the attributes in each of the dataclasses in your project's active model.
+Chamando `$catalog/$all` pode reciber informação detalhada sobre os atributos de cada uma das classes de dados do modelo ativo de projeto.
 
-For more information about what is returned for each dataclass and its attributes, use [`$catalog/{dataClass}`](#catalogdataClass).
+Para saber mais sobre o que se devolve para cada classe de dados e seus atributos, utilize [`$catalog/{dataClass}`](#catalogdataClass).
 
 
-### Example
+### Exemplo
 
 `GET  /rest/$catalog/$all`
 
-**Result**:
+**Resultadoi**:
 
 ````
 {
@@ -185,9 +185,9 @@ For more information about what is returned for each dataclass and its attribute
 
 Returns information about a dataclass and its attributes
 
-### Description
+### Descrção
 
-Calling `$catalog/{dataClass}` for a specific dataclass will return the following information about the dataclass and the attributes it contains. If you want to retrieve this information for all the dataclasses in your project's datastore, use [`$catalog/$all`](#catalogall).
+Calling `$catalog/{dataClass}` for a specific dataclass will return the following information about the dataclass and the attributes it contains. Se quiser recuperar essa informação para todas as classes de dados do armazém de dados de seu projeto, use [`$catalog/$all`](#catalogall).
 
 The information you retrieve concerns the following:
 
@@ -201,44 +201,44 @@ The information you retrieve concerns the following:
 The following properties are returned for an exposed dataclass:
 
 
-| Property       | Type   | Description                                                                                  |
-| -------------- | ------ | -------------------------------------------------------------------------------------------- |
-| name           | String | Name of the dataclass                                                                        |
-| collectionName | String | Name of an entity selection on the dataclass                                                 |
-| tableNumber    | Number | Table number in the 4D database                                                              |
-| scope          | String | Scope for the dataclass (note that only dataclasses whose **Scope** is public are displayed) |
-| dataURI        | String | A URI to the data in the dataclass                                                           |
+| Propriedade    | Tipo   | Descrção                                                                                                  |
+| -------------- | ------ | --------------------------------------------------------------------------------------------------------- |
+| name           | String | Nome da dataclass                                                                                         |
+| collectionName | String | Name of an entity selection on the dataclass                                                              |
+| tableNumber    | Número | Table number in the 4D database                                                                           |
+| scope          | String | Alcance da classe de dados (lembre que só são mostradas as classes de dados cujo **Alcance** for público) |
+| dataURI        | String | A URI to the data in the dataclass                                                                        |
 
 
 ### Attribute(s)
 
 Here are the properties for each exposed attribute that are returned:
 
-| Property    | Type    | Description                                                                                                                                           |
-| ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name        | String  | Attribute name.                                                                                                                                       |
-| kind        | String  | Attribute type (storage or relatedEntity).                                                                                                            |
-| fieldPos    | Number  | Position of the field in the database table).                                                                                                         |
-| scope       | String  | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                     |
-| indexed     | String  | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                         |
-| type        | String  | Attribute type (bool, blob, byte, date, duration, image, long, long64, number, string, uuid, or word) or the dataclass for a N->1 relation attribute. |
-| identifying | Boolean | This property returns True if the attribute is the primary key. Otherwise, this property does not appear.                                             |
-| path        | String  | Name of the dataclass for a relatedEntity attribute, or name of the relation for a relatedEntities attribute.                                         |
-| foreignKey  | String  | For a relatedEntity attribute, name of the related attribute.                                                                                         |
-| inverseName | String  | Name of the opposite relation for a relatedEntity or relateEntities attribute.                                                                        |
+| Propriedade | Tipo     | Descrção                                                                                                                                                             |
+| ----------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name        | String   | Attribute name.                                                                                                                                                      |
+| kind        | String   | Attribute type (storage or relatedEntity).                                                                                                                           |
+| fieldPos    | Número   | Position of the field in the database table).                                                                                                                        |
+| scope       | String   | Scope of the attribute (only those attributes whose scope is Public will appear).                                                                                    |
+| indexed     | String   | If any **Index Kind** was selected, this property will return true. Otherwise, this property does not appear.                                                        |
+| type        | String   | Tipo de atributo (booleano, blob, byte, data, duração, imagem, long, long64, número, string, uuid ou palavra) ou a classe de dados para um atributo de relação N->1. |
+| identifying | Booleano | This property returns True if the attribute is the primary key. Otherwise, this property does not appear.                                                            |
+| path        | String   | Name of the dataclass for a relatedEntity attribute, or name of the relation for a relatedEntities attribute.                                                        |
+| foreignKey  | String   | For a relatedEntity attribute, name of the related attribute.                                                                                                        |
+| inverseName | String   | Name of the opposite relation for a relatedEntity or relateEntities attribute.                                                                                       |
 
 
 ### Primary Key
 
-The key object returns the **name** of the attribute defined as the **Primary Key** for the dataclass.
+O objeto chave devolve o nome do atributo **name** definido como **chave primária** para a classe de dados.
 
 
-### Example
-You can retrieve the information regarding a specific dataclass.
+### Exemplo
+Pode recuperar a informação relativa a uma classe de dados específica.
 
 `GET  /rest/$catalog/Employee`
 
-**Result**:
+**Resultadoi**:
 
 ````
 {

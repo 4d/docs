@@ -3,16 +3,16 @@ id: top_$limit
 title: '$top/$limit'
 ---
 
-Limits the number of entities to return (e.g., `$top=50`)
+返されるエンティティの数を制限します (例: `$top=50`)
 
-## Description
+## 詳細
 
-`$top/$limit` defines the limit of entities to return. By default, the number is limited to 100. You can use either keyword: `$top` or `$limit`.
+`$top/$limit` は返されるエンティティの数を制限します。 この数字はデフォルトで 100件です。 `$top` および `$limit` のどちらでも利用できます。
 
-When used in conjunction with [`$skip`]($skip.md), you can navigate through the entity selection returned by the REST request.
+[`$skip`]($skip.md) と組み合わせて使用すると、RESTリクエストによって返されるエンティティセレクション内を移動することができます。
 
-## Example
+## 例題
 
-In the following example, we request the next ten entities after the 20th entity:
+エンティティセットから、20番目以降の10件のエンティティを取得します:
 
 `GET  /rest/Employee/$entityset/CB1BCC603DB0416D939B4ED379277F02?$skip=20&$top=10`

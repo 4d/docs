@@ -3,34 +3,34 @@ id: querypath
 title: '$querypath'
 ---
    	
-Returns the query as it was executed by 4D Server (*e.g.*, `$querypath=true`)
+4D Server によって実際に実行されたクエリを返します (*例*: `$querypath=true`)
 
-## Description
+## 詳細
 
-`$querypath` returns the query as it was executed by 4D Server. If, for example, a part of the query passed returns no entities, the rest of the query is not executed. The query requested is optimized as you can see in this `$querypath`.
+`$querypath` は、4D Server によって実際に実行されたクエリを返します。 たとえば、クエリの一部がエンティティを返さなかった場合、残りのクエリは実行されません。 `$querypath` で確認されるとおり、クエリリクエストは最適化されます。
 
-For more information about query paths, refer to [queryPlan and queryPath](genInfo.md#querypath-and-queryplan).
+クエリパスについての詳細は [queryPlan と queryPath](genInfo.md#querypath-と-queryplan) を参照ください。
 
-In the steps collection, there is an object with the following properties defining the query executed:
+実行されたクエリを定義する次のプロパティを格納した steps コレクションが返されます:
 
-| Property      | Type       | Description                                                                 |
-| ------------- | ---------- | --------------------------------------------------------------------------- |
-| description   | String     | Actual query executed or "AND" when there are multiple steps                |
-| time          | Number     | Number of milliseconds needed to execute the query                          |
-| recordsfounds | Number     | Number of records found                                                     |
-| steps         | Collection | An collection with an object defining the subsequent step of the query path |
+| プロパティ         | タイプ    | 詳細                              |
+| ------------- | ------ | ------------------------------- |
+| description   | String | 実際に実行されたクエリ、または複数ステップの場合は "AND" |
+| time          | 数値     | クエリの実行に要した時間 (ミリ秒単位)            |
+| recordsfounds | 数値     | レコードの検出件数                       |
+| steps         | コレクション | クエリパスの後続ステップを定義するオブジェクトのコレクション  |
 
-## Example
+## 例題
 
-If you passed the following query:
+以下のクエリを渡した場合:
 
  `GET  /rest/Employee/$filter="employer.name=acme AND lastName=Jones"&$querypath=true`
 
-And no entities were found, the following query path would be returned, if you write the following:
+エンティティが見つからなかった場合に次のように書くと、後述のクエリパスが返されます:
 
 `GET  /rest/$querypath`
 
-**Response**:
+**レスポンス**:
 
 ```
 __queryPath: {
@@ -64,15 +64,15 @@ __queryPath: {
 }
 ```
 
-If, on the other hand, the first query returns more than one entity, the second one will be executed. If we execute the following query:
+最初のクエリが一つ以上のエンティティを返した場合には、二つめのクエリが実行されます。 以下のクエリを実行した場合:
 
  `GET  /rest/Employee/$filter="employer.name=a* AND lastName!=smith"&$querypath=true`
 
-If at least one entity was found, the following query path would be returned, if you write the following:
+少なくとも1件のエンティティが見つかった場合に次のように書くと、後述のクエリパスが返されます:
 
  `GET  /rest/$querypath`
 
-**Respose**:
+**レスポンス**:
 
 ```
 "__queryPath": {

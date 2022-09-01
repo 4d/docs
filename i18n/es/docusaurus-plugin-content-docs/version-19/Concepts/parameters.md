@@ -1,59 +1,62 @@
 ---
 id: parameters
-title: Parameters
+title: Parámetros
 ---
 
 
-You'll often find that you need to pass data to your methods and functions. This is easily done with parameters.
+A menudo encontrará que necesita pasar datos a sus métodos y funciones. Esto se hace fácilmente con parámetros.
 
-## Overview
+## Generalidades
 
-**Parameters** (or **arguments**) are pieces of data that a method or a class function needs in order to perform its task. The terms *parameter* and *argument* are used interchangeably throughout this manual. Parameters are also passed to built-in 4D commands. In this example, the string “Hello” is an argument to the `ALERT` built-in command:
+**Los parámetros** (o **argumentos**) son piezas de datos que un método o una función de clase necesita para realizar su tarea. Los términos *parámetros* y *argumentos* se utilizan indistintamente en este manual. Los parámetros también se pasan a los comandos integrados de 4D. En este ejemplo, la cadena "Hello" es un argumento para el comando integrado `ALERT`:
 
 ```4d
 ALERT("Hello")
 ```
 
-Parameters are passed to methods or class functions in the same way. For example, if a class function named `getArea()` accepts two parameters, a call to the class function might look like this:
+Los parámetros se pasan de la misma manera a los métodos o las funciones de clase. Por ejemplo, si una función de clase llamada `getArea()` acepta dos parámetros, una llamada a la función de clase podría verse así:
 
 ```
 $area:=$o.getArea(50;100)
 ```
 
-Or, if a project method named `DO_SOMETHING` accepts three parameters, a call to the method might look like this:
+O, si un método proyecto llamado `DO_SOMETHING` acepta tres parámetros, una llamada al método podría verse así:
 
 ```4d
 DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 ```
 
-The input parameters are separated by semicolons (;).
+Los parámetros de entrada están separados por punto y coma (;).
 
-The same principles are used when methods are executed through dedicated commands, for example:
+Los mismos principios se aplican cuando los métodos se ejecutan a través de comandos dedicados, por ejemplo:
 
 ```4d
 EXECUTE METHOD IN SUBFORM("Cal2";"SetCalendarDate";*;!05/05/20!)  
 //pass the !05/05/20! date as parameter to the SetCalendarDate  
-//in the context of a subform
+//in the context of a subform  
+//pase la fecha !05/05/20! como parámetro de SetCalendarDate  
+//en el contexto de un subformulario
 ```
 
-Data can also be **returned** from methods and class functions. For example, the following line is a statement that uses the built-in command, `Length`, to return the length of a string. The statement puts the value returned by `Length` in a variable called *MyLength*. Here is the statement:
+Los datos también pueden ser **devueltos**desde métodos y funciones de clase. Por ejemplo, la siguiente línea de instrucción utiliza el comando integrado, `Length`, para devolver la longitud de una cadena. La instrucción pone el valor devuelto por `Length` en una variable llamada *MyLength*. Esta es la instrucción:
 
 ```4d
 MyLength:=Length("How did I get here?")
 ```
 
-Any subroutine can return a value. Only one single output parameter can be declared per method or class function.
+Toda subrutina puede devolver un valor. Sólo se puede declarar un único parámetro de salida por método o función de clase.
 
-Input and output values are [evaluated](#values-or-references) at the moment of the call and copied into local variables within the called class function or method. Two syntaxes are proposed to declare variable parameters in the called code:
+Los valores de entrada y salida son [evaluados](#values-or-references) en el momento de la llamada y copiados en variables locales dentro de la función o método de la clase llamada. Se proponen dos sintaxis para declarar los parámetros de las variables en el código llamado:
 
-- [named variables](#named-parameters) (recommended in most cases) or
-- [sequentially numbered variables](#sequential-parameters).
+- [named variables](#named-parameters) (recomendado en la mayoría de los casos) o
+- [variables numeradas secuencialmente](#sequential-parameters).
 
 
-Both [named](#named-parameters) and [sequential](#sequential-parameters) syntaxes can be mixed with no restriction to declare parameters. For example:
+Las sintaxis [nombradas](#named-parameters) y [secuenciales](#sequential-parameters) se pueden combinar sin restricción para declarar los parámetros. Por ejemplo:
 
 ```4d
-Function add($x : Integer)
+```4d
+  Function add($x : Integer)
     var $0;$2 : Integer
     $0:=$x+$2
 ```
@@ -61,14 +64,14 @@ Function add($x : Integer)
 
 
 
-## Named parameters
+## Parámetro con nombre
 
-Inside called methods or class functions, parameter values are assigned to local variables. You can declare parameters using a **parameter name** along with a **parameter type**, separated by colon.
+En los métodos llamados o en las funciones de clase, los valores de los parámetros se asignan a las variables locales. Puedes declarar parámetros utilizando un **nombre de parámetro** con un **tipo de parámetro**, separados por dos puntos.
 
-- For class functions, parameters are declared along with the `Function` keyword.
-- For methods (project methods, form object methods, database methods, and triggers), parameters are declared using the `#DECLARE` keyword at the beginning of the method code.
+- Para las funciones de clase, los parámetros se declaran junto con la palabra clave `Function`.
+- Para los métodos (métodos proyecto, métodos objeto formulario, métodos base y triggers), los parámetros se declaran utilizando la palabra clave `#DECLARE` al principio del código del método.
 
-Examples:
+Ejemplos:
 
 ```4d
 Function getArea($width : Integer; $height : Integer) -> $area : Integer
@@ -80,50 +83,50 @@ Function getArea($width : Integer; $height : Integer) -> $area : Integer
 ```
 
 
-The following rules apply:
+Se aplican las siguientes reglas:
 
-- The declaration line must be the first line of the method or function code, otherwise an error is displayed (only comments or line breaks can precede the declaration).
-- Parameter names must start with a `$` character and be compliant with [property naming rules](identifiers.md#object-properties).
-- Multiple parameters (and types) are separated by semicolons (;).
-- Multiline syntaxes are supported (using "\\" character).
+- La línea de declaración debe ser la primera línea del código del método o de la función, de lo contrario se mostrará un error (sólo los comentarios o los saltos de línea pueden preceder la declaración).
+- Los nombres de los parámetros deben comenzar con un carácter `$` y cumplir con [reglas de denominación de las propiedades](identifiers.md#object-properties).
+- Múltiples parámetros (y tipos) están separados por punto y coma (;).
+- Las sintaxis multilínea están soportadas (utilizando el carácter "\\").
 
 
-For example, when you call a `getArea()` function with two parameters:
+Por ejemplo, cuando se llama a una función `getArea()` con dos parámetros:
 
 ```4d
 $area:=$o.getArea(50;100)
 ```
 
-In the class function code, the value of each parameter is copied into the corresponding declared parameter:
+En el código de la función clase, el valor de cada parámetro se copia en el parámetro declarado correspondiente:
 
 ```4d    
 // Class: Polygon
 Function getArea($width : Integer; $height : Integer)-> $area : Integer
     $area:=$width*$height
 ```
-> If the type is not defined, the parameter will be defined as [`Variant`](dt_variant.md).
+> Si no se define el tipo, el parámetro se definirá como [`Variant`](dt_variant.md).
 
-All 4D method kinds support the `#DECLARE` keyword, including database methods. For example, in the `On Web Authentication` database method, you can declare named parameters:
+Todos los tipos de métodos de 4D soportan la palabra clave `#DECLARE`, incluidos los métodos base. Por ejemplo, en el método base `On Web Authentication`, puede declarar parámetros temporales:
 
 ```4d    
-    // On Web Authentication database method
+    // Método base On Web Authentication
 #DECLARE ($url : Text; $header : Text; \
   $BrowserIP : Text; $ServerIP : Text; \
   $user : Text; $password : Text) \
   -> $RequestAccepted : Boolean
 $entitySelection:=ds.User.query("login=:1"; $user)
-// Check hash password...
+// Verificar la contraseña hash...
 ```
 
-### Returned value
+### Valor devuelto
 
-You declare the return parameter of a function by adding an arrow (->) and the parameter definition after the input parameter(s) list. For example:
+El parámetro de retorno de una función se declara añadiendo una flecha (->) y la definición del parámetro después de la lista de parámetros de entrada. Por ejemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer) -> $result : Integer
 ```
 
-You can also declare the return parameter only by adding `: type`, in which case it will automatically be available through `$0` ([see sequential syntax below](#returned-value-1)). For example:
+También puedes declarar el parámetro de retorno sólo añadiendo `: type`, en cuyo caso estará disponible automáticamente a través de `$0` ([ver sintaxis secuencial más abajo](#returned-value-1)). Por ejemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -131,9 +134,9 @@ Function add($x : Variant; $y : Integer): Integer
 ```
 
 
-### Supported data types
+### Tipos de datos soportados
 
-With named parameters, you can use the same data types as those which are [supported by the `var` keyword](variables.md#using-the-var-keyword), including class objects.  For example:
+Con los parámetros con nombre, puede utilizar los mismos tipos de datos [soportados por la palabra clave `var`](variables.md#using-the-var-keyword), incluidos los objetos de las clases.  Por ejemplo:
 
 ```4d
 Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
@@ -143,51 +146,51 @@ Function saveToFile($entity : cs.ShapesEntity; $file : 4D.File)
 
 
 
-## Sequential parameters
+## Parámetros secuenciales
 
-As an alternative to [named parameters](#named-parameters) syntax, you can declare parameters using sequentially numbered variables: **$1**, **$2**, **$3**, and so on. The numbering of the local variables represents the order of the parameters.
+Como alternativa a la sintaxis [parámetros nombrados](#named-parameters), puede declarar los parámetros utilizando variables numeradas secuencialmente: **$1**, **$2**, **$3**, etc. La numeración de las variables locales representa el orden de los parámetros.
 
-> Although this syntax is supported by class functions, it is recommended to use [named parameters](#named-parameters) syntax in this case.
+> Aunque esta sintaxis es soportada por las funciones clase, se recomienda utilizar la sintaxis [parámetros nombrados](#named-parameters) en este caso.
 
-For example, when you call a `DO_SOMETHING` project method with three parameters:
+Por ejemplo, cuando se llama a un método proyecto `DO_SOMETHING` con tres parámetros:
 
 ```4d
 DO_SOMETHING($WithThis;$AndThat;$ThisWay)
 ```
 
-In the method code, the value of each parameter is automatically copied into $1, $2, $3 variables:
+En el código del método, el valor de cada parámetro se copia automáticamente en las variables $1, $2, $3:
 
 ```4d
-  //Code of the method DO_SOMETHING
-  //Assuming all parameters are of the text type
+  //Código del método DO_SOMETHING
+  //Asumiendo que todos los parámetros son de tipo texto
  C_TEXT($1;$2;$3)
  ALERT("I received "+$1+" and "+$2+" and also "+$3)
-  //$1 contains the $WithThis parameter
-  //$2 contains the $AndThat parameter
-  //$3 contains the $ThisWay parameter
+  //$1 contiene el parámetro $WithThis
+  //$2 contiene el parámetro $AndThat
+  //$3 contiene el parámetro $ThisWay
 ```
 
 
-### Returned value
+### Valor devuelto
 
-The value to be returned is automatically put into the local variable `$0`.
+El valor a devolver se pone automáticamente en la variable local `$0`.
 
 
-For example, the following method, called `Uppercase4`, returns a string with the first four characters of the string passed to it in uppercase:
+Por ejemplo, el siguiente método, llamado `Uppercase4`, devuelve una cadena con los cuatro primeros caracteres de la cadena que se han pasado en mayúsculas:
 
 ```4d
 $0:=Uppercase(Substring($1;1;4))+Substring($1;5)
 ```
 
-The following is an example that uses the Uppercase4 method:
+El siguiente es un ejemplo que utiliza el método Uppercase4:
 
 ```4d
 $NewPhrase:=Uppercase4("This is good.")
 ```
 
-In this example, the variable *$NewPhrase* gets “THIS is good.”
+En este ejemplo, la variable *$NewPhrase* recibe “THIS is good.”
 
-The returned value, `$0`, is a local variable within the subroutine. It can be used as such within the subroutine. For example, you can write:
+El valor devuelto, `$0`, es una variable local dentro de la subrutina. Puede utilizarse como tal dentro de la subrutina. Por ejemplo, puede escribir:
 
 ```4d
 // Do_something
@@ -195,29 +198,29 @@ $0:=Uppercase($1)
 ALERT($0)
 ```
 
-In this example, `$0` is first assigned the value of `$1`, then used as parameter to the `ALERT` command. Within the subroutine, you can use `$0` in the same way you would use any other local variable. It is 4D that returns the value of `$0` (as it is when the subroutine ends) to the called method.
+En este ejemplo, `$0` se le asignó primero el valor de `$1`, y luego se usó como parámetro del comando `ALERT`. Dentro de la subrutina, puede utilizar `$0` de la misma manera que utilizaría cualquier otra variable local. Es 4D quien devuelve el valor de `$0` (tal y como está cuando la subrutina termina) al método llamado.
 
 
-### Supported data types
+### Tipos de datos soportados
 
-You can use any [expression](quick-tour.md#expression-types) as sequential parameter, except:
+Puede utilizar toda [expresión](quick-tour.md#expression-types) como parámetro secuencial, excepto:
 
-- tables
+- tablas
 - arrays
 
-Tables or array expressions can only be passed [as reference using a pointer](dt_pointer.md#pointers-as-parameters-to-methods).
+Las expresiones de tablas o arrays sólo pueden pasarse [como referencia utilizando un puntero](dt_pointer.md#pointers-as-parameters-to-methods).
 
-## Parameter indirection (${N})
+## Indirección de parámetros (${N})
 
-4D project methods accept a variable number of parameters. You can address those parameters with a `For...End for` loop, the [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) command and the **parameter indirection syntax**. Within the method, an indirection address is formatted `${N}`, where `N` is a numeric expression. `${N}` is called a **generic parameter**.
+Los métodos proyecto 4D aceptan un número variable de parámetros. Puede dirigirse a esos parámetros con un bucle `For...End for`, el comando [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html)y **la sintaxis de indirección de parámetros**. Dentro del método, una dirección de indirección tiene el formato `${N}`, donde `N` es una expresión numérica. `${N}` se denomina **parámetro genérico**.
 
 
 
-### Using generic parameters
+### Utilización de los parámetros genéricos
 
-For example, consider a method that adds values and returns the sum formatted according to a format that is passed as a parameter. Each time this method is called, the number of values to be added may vary. We must pass the values as parameters to the method and the format in the form of a character string. The number of values can vary from call to call.
+Por ejemplo, considere un método que suma valores y devuelve la suma formateada según un formato que se pasa como parámetro. Cada vez que se llama a este método, el número de valores a sumar puede variar. Debemos pasar los valores como parámetros al método y el formato en forma de cadena de caracteres. El número de valores puede variar de una llamada a otra.
 
-Here is the method, named `MySum`:
+Aquí está el método, llamado `MySum`:
 
 ```4d
  #DECLARE($format : Text) -> $result : Text
@@ -228,76 +231,76 @@ Here is the method, named `MySum`:
  $result:=String($sum;$format)
 ```
 
-The method's parameters must be passed in the correct order, first the format and then a variable number of values:
+Los parámetros del método deben pasarse en el orden correcto, primero el formato y luego un número variable de valores:
 
 ```4d
  Result:=MySum("##0.00";125,2;33,5;24) //"182.70"
  Result:=MySum("000";1;2;200) //"203"
 ```
 
-Note that even if you declared 0, 1, or more parameters in the method, you can always pass the number of parameters that you want. Parameters are all available within the called method through the `${N}` syntax and extra parameters type is [Variant](dt_variant.md) by default (you can declare them using a [compiler directive](#declaring-generic-parameters)). You just need to make sure parameters exist, thanks to the [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html) command. For example:
+Tenga en cuenta que aunque haya declarado 0, 1 o más parámetros en el método, siempre puede pasar el número de parámetros que desee. Los parámetros están disponibles dentro del método llamado a través de la sintaxis `${N}` y el tipo de los parámetros extra es [Variant](dt_variant.md) por defecto (puede declararlos utilizando una [directiva del compilador](#declaring-generic-parameters)). Sólo hay que asegurarse de que los parámetros existen, gracias al comando [`Count parameters`](https://doc.4d.com/4dv19/help/command/en/page259.html). Por ejemplo:
 
 ```4d
-//foo method
+//método foo
 #DECLARE($p1: Text;$p2 : Text; $p3 : Date) 
 For($i;1;Count parameters)
     ALERT("param "+String($i)+" = "+String(${$i}))
 End for
 ```
 
-This method can be called:
+Este método se puede llamar:
 
 ```4d
-foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed
+foo("hello";"world";!01/01/2021!;42;?12:00:00?) //extra parameters are passed //se pasan parámetros adicionales
 ```
 
-> Parameter indirection is best managed if you respect the following convention: if only some of the parameters are addressed by indirection, they should be passed after the others.
+> La indirección de parámetros se gestiona mejor si se respeta la siguiente convención: si sólo algunos de los parámetros se dirigen por indirección, deben pasarse después de los demás.
 
 
-### Declaring generic parameters
+### Declaración de parámetros genéricos
 
-As with other local variables, it is not mandatory to declare generic parameters by compiler directive. However, it is recommended to avoid any ambiguity. Non-declared generic parameters automatically get the [Variant](dt_variant.md) type.
+Al igual que con otras variables locales, no es obligatorio declarar los parámetros genéricos mediante una directiva del compilador. Sin embargo, se recomienda para evitar toda ambigüedad. Los parámetros genéricos no declarados obtienen automáticamente el tipo [Variant](dt_variant.md).
 
-To declare generic parameters, you use a compiler directive to which you pass ${N} as a parameter, where N specifies the first generic parameter.
+Para declarar parámetros genéricos, se utiliza una directiva del compilador a la que se pasa ${N} como parámetro, donde N especifica el primer parámetro genérico.
 
 ```4d
  C_TEXT(${4})
 ```
 
-> Declaring generic parameters can only be done with the [sequential syntax](#sequential-parameters).
+> La declaración de parámetros genéricos sólo puede hacerse con [la sintaxis secuencial](#sequential-parameters).
 
-This command means that starting with the fourth parameter (included), the method can receive a variable number of parameters of text type. $1, $2 and $3 can be of any data type. However, if you use $2 by indirection, the data type used will be the generic type. Thus, it will be of the data type text, even if for you it was, for instance, of the data type Real.
+Este comando significa que a partir del cuarto parámetro (incluido), el método puede recibir un número variable de parámetros de tipo texo. $1, $2 y $3 pueden ser de cualquier tipo de datos. Sin embargo, si se utiliza $2 por indirección, el tipo de datos utilizado será el tipo genérico. Así, será del tipo de datos texto, aunque para usted fuera, por ejemplo, del tipo de datos Real.
 
-> The number in the declaration has to be a constant and not a variable.
-
-
+> El número en la declaración tiene que ser una constante y no una variable.
 
 
 
-## Declaring parameters for compiled mode
 
-Even if it is not mandatory in [interpreted mode](interpreted.md), you must declare each parameter in the called methods or functions to prevent any trouble.
 
-When using the [named variable syntax](#named-parameters), parameters are automatically declared through the `#DECLARE` keyword or `Function` prototype. For example:
+## Declaración de los parámetros para el modo compilado
+
+Aunque no sea obligatorio en [modo interpretado](interpreted.md), debe declarar cada parámetro en los métodos o funciones llamados para evitar problemas.
+
+Cuando se utiliza la [sintaxis de variables nombradas](#named-parameters), los parámetros se declaran automáticamente a través de la palabra clave `#DECLARE` o del prototipo `Function`. Por ejemplo:
 
 ```4d
 Function add($x : Variant; $y : Integer)-> $result : Integer
-    // all parameters are declared with their type
+    // todos los parámetros se declaran con su tipo
 ```
 
 
-When using the [sequential variable syntax](#sequential-parameters), you need to make sure all parameters are properly declared. In the following example, the `Capitalize` project method accepts a text parameter and returns a text result:
+Cuando se utiliza [la sintaxis de la variable secuencial](#sequential-parameters), hay que asegurarse de que todos los parámetros se declaran correctamente. En el siguiente ejemplo, el método `Capitalize` proyecto acepta un parámetro texto y devuelve un resultado texto:
 
 ```4d
-  // Capitalize Project Method
-  // Capitalize ( Text ) -> Text
-  // Capitalize ( Source string ) -> Capitalized string
+  // Método proyecto Mayusculas
+  // Mayusculas( Texto ) -> Texto
+  // Mayusculas( Cadena fuente ) -> Cadena con la primera letra en mayúscula
 
  C_TEXT($0;$1)
  $0:=Uppercase(Substring($1;1;1))+Lowercase(Substring($1;2))
 ```
 
-Using commands such as `New process` with process methods that accept parameters also require that parameters are explicitely declared in the called method. For example:
+La utilización de comandos tales como `New process` con métodos proceso que aceptan parámetros también requiere que los parámetros se declaren explícitamente en el método llamado. Por ejemplo:
 
 ```4d
 C_TEXT($string)
@@ -307,7 +310,7 @@ C_OBJECT($obj)
 $idProc:=New process("foo_method";0;"foo_process";$string;$int;$obj)
 ```
 
-This code can be executed in compiled mode only if "foo_method" declares its parameters:
+Este código puede ser ejecutado en modo compilado sólo si "foo_method" declara sus parámetros:
 
 ```4d
 //foo_method
@@ -317,27 +320,27 @@ C_OBJECT($3)
 ...
 ```
 
-> For compiled mode, you can group all local variable parameters for project methods in a specific method with a name starting with "Compiler". Within this method, you can predeclare the parameters for each method, for example:
+> En modo compilado, puede agrupar todos los parámetros de las variables locales de los métodos proyecto en un método específico con un nombre que empiece por "Compiler". Dentro de este método, se pueden predeclarar los parámetros de cada método, por ejemplo:
 ```4d  
  // Compiler_method
  C_REAL(OneMethodAmongOthers;$1) 
 ```
-See [Interpreted and compiled modes](interpreted.md) page for more information.
+Ver la página [Modos interpretado y compilado](interpreted.md) para más información.
 
-Parameter declaration is also mandatory in the following contexts (these contexts do not support declaration in a "Compiler" method):
+La declaración de parámetros también es obligatoria en los siguientes contextos (estos contextos no soportan la declaración en un método "Compiler"):
 
-- Database methods - For example, the `On Web Connection Database Method` receives six parameters, $1 to $6, of the data type Text. At the beginning of the database method, you must write (even if all parameters are not used):
+- Métodos base - Por ejemplo, el `método base On Web Connection` recibe seis parámetros, de $1 a $6, de tipo Texto. Al principio del método base, debe escribir (incluso si no se utilizan todos los parámetros):
 
 ```4d
 // On Web Connection
 C_TEXT($1;$2;$3;$4;$5;$6)
 ```
 
-> You can also use [named parameters](#named-parameters) with the `#DECLARE` keyword.
+> También puede utilizar [parámetros nombrados](#named-parameters) con la palabra clave `#DECLARE`.
 
-- Triggers - The $0 parameter (Longint), which is the result of a trigger, will be typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the trigger itself.
+- Triggers - El parámetro $0 (Entero largo), que es el resultado de un trigger, será digitado por el compilador si el parámetro no ha sido declarado explícitamente. Sin embargo, si quiere declararlo, debe hacerlo en el propio trigger.
 
-- Form objects that accept the `On Drag Over` form event - The $0 parameter (Longint), which is the result of the `On Drag Over` form event, is typed by the compiler if the parameter has not been explicitly declared. Nevertheless, if you want to declare it, you must do so in the object method. **Note:** The compiler does not initialize the $0 parameter. So, as soon as you use the `On Drag Over` form event, you must initialize $0. For example:
+- Objetos formulario que aceptan el evento formulario `On Drag Over` - El parámetro $0 (Entero largo), que es el resultado del evento formulario `On Drag Over`, será digitado por el compilador si el parámetro no ha sido declarado explícitamente. Sin embargo, si quiere declararlo, debe hacerlo en el propio método proyecto. **Nota:** el compilador no inicializa el parámetro $0. Por lo tanto, tan pronto como utilice el evento formulario `On Drag Over`, debe inicializar $0. Por ejemplo:
 
 ```4d
  C_LONGINT($0)
@@ -351,9 +354,9 @@ C_TEXT($1;$2;$3;$4;$5;$6)
  End if
 ```
 
-## Wrong parameter type
+## Tipo de parámetro equivocado
 
-Calling a parameter with an wrong type is an [error](error-handling.md) that prevents correct execution. For example, if you write the following methods:
+Llamar a un parámetro con un tipo incorrecto es un [error](error-handling.md) que impide la correcta ejecución. Por ejemplo, si escribe los siguientes métodos:
 
 ```4d
 // method1
@@ -362,31 +365,31 @@ Calling a parameter with an wrong type is an [error](error-handling.md) that pre
 
 ```4d
 // method2
-method1(42) //wrong type, text expected
+method1(42) //tipo incorrecto, texto esperado
 ```
 
-This case is handled by 4D depending on the context:
+Este caso es tratado por 4D en función del contexto:
 
-- in [compiled projects](interpreted.md), an error is generated at the compilation step whenever possible. Otherwise, an error is generated when the method is called.
-- in interpreted projects:
-    + if the parameter was declared using the [named syntax](#named-parameters) (`#DECLARE` or `Function`), an error is generated when the method is called.
-    + if the parameter was declared using the [sequential syntax](#sequential-parameters) (`C_XXX`), no error is generated, the called method receives an empty value of the expected type.
-
-
+- en [proyectos compilados](interpreted.md), se genera un error en el paso de compilación siempre que sea posible. En caso contrario, se genera un error cuando se llama al método.
+- en los proyectos interpretados:
+    + si el parámetro se declaró utilizando la [sintaxis nombrada](#named-parameters) (`#DECLARE` o `Function`), se genera un error cuando se llama al método.
+    + si el parámetro fue declarado utilizando [la sintaxis secuencial ](#sequential-parameters)(`C_XXX`), no se genera ningún error, el método llamado recibe un valor vacío del tipo esperado.
 
 
 
-## Input/Output variables
-
-Within the subroutine, you can use the parameters $1, $2... in the same way you would use any other local variable. However, in the case where you use commands that modify the value of the variable passed as parameter (for example `Find in field`), the parameters $1, $2, and so on cannot be used directly. You must first copy them into standard local variables (for example: `$myvar:=$1`).
 
 
+## Variables de entrada/salida
 
-## Using object properties as named parameters
+Dentro de la subrutina, puede utilizar los parámetros $1, $2... de la misma manera que utilizaría cualquier otra variable local. Sin embargo, en el caso de que utilice comandos que modifiquen el valor de la variable pasada como parámetro (por ejemplo `Find in field`), los parámetros $1, $2, etc. no pueden utilizarse directamente. Primero debe copiarlos en las variables locales estándar (por ejemplo: `$myvar:=$1`).
 
-Using objects as parameters allow you to handle **named parameters**. This programming style is simple, flexible, and easy to read.
 
-For example, using the `CreatePerson` method:
+
+## Utilización de las propiedades de objeto como parámetros con nombre
+
+La utilización de objetos como parámetros permite manejar **parámetros con nombre**. Este estilo de programación es simple, flexible y fácil de leer.
+
+Por ejemplo, utilizando el método `CreatePerson`:
 
 ```4d
   //CreatePerson
@@ -396,7 +399,7 @@ For example, using the `CreatePerson` method:
  ALERT(String($person.Age))  
 ```
 
-In the `ChangeAge` method you can write:
+En el método `ChangeAge` puede escribir:
 
 ```4d
   //ChangeAge
@@ -406,12 +409,12 @@ In the `ChangeAge` method you can write:
  ALERT($para.Name+" is "+String($para.Age)+" years old.")
 ```
 
-This provides a powerful way to define [optional parameters](#optional-parameters) (see also below). To handle missing parameters, you can either:
-- check if all expected parameters are provided by comparing them to the `Null` value, or
-- preset parameter values, or
-- use them as empty values.
+Esto ofrece una poderosa manera de definir [parámetros opcionales](#optional-parameters) (ver también abajo). Para manejar los parámetros que faltan, puede:
+- verificar si se suministran todos los parámetros esperados comparándolos con el valor `Null`, o
+- predefinir los valores de los parámetros, o
+- utilizarlos como valores vacíos.
 
-In the `ChangeAge` method above, both Age and Name properties are mandatory and would produce errors if they were missing. To avoid this case, you can just write:
+En el método `ChangeAge` anterior, las propiedades Age y Name son obligatorias y producirían errores si faltaran. Para evitar este caso, puede escribir simplemente:
 
 ```4d
   //ChangeAge
@@ -420,9 +423,9 @@ In the `ChangeAge` method above, both Age and Name properties are mandatory and 
  $para.Age:=Num($para.Age)+10
  ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
 ```
-Then both parameters are optional; if they are not filled, the result will be " is 10 years old", but no error will be generated.
+Entonces ambos parámetros son opcionales; si no se llenan, el resultado será " is 10 years old", pero no se generará ningún error.
 
-Finally, with named parameters, maintaining or refactoring applications is very simple and safe. Imagine you later realize that adding 10 years is not always appropriate. You need another parameter to set how many years to add. You write:
+Por último, con los parámetros con nombre, el mantenimiento o la reproducción de las aplicaciones es muy sencillo y seguro. Imagine que más adelante se da cuenta de que añadir 10 años no siempre es apropiado. Necesita otro parámetro para definir cuántos años hay que añadir. Escriba:
 
 ```4d
 $person:=New object("Name";"Smith";"Age";40;"toAdd";10)
@@ -438,28 +441,28 @@ $para.Age:=Num($para.Age)+$para.toAdd
 ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
 ```
 
-The power here is that you will not need to change your existing code. It will always work as in the previous version, but if necessary, you can use another value than 10 years.
+El poder aquí es que no tendrá que cambiar su código existente. Siempre funcionará como en la versión anterior, pero si es necesario, puede utilizar otro valor que no sea 10 años.
 
-With named variables, any parameter can be optional. In the above example, all parameters are optional and anyone can be given, in any order.
+Con las variables con nombre, cualquier parámetro puede ser opcional. En el ejemplo anterior, todos los parámetros son opcionales y se puede dar cualquiera, en cualquier orden.
 
 
 
-## Optional parameters
+## Parámetros opcionales
 
-In the *4D Language Reference* manual, the { } characters (braces) indicate optional parameters. For example, `ALERT (message{; okButtonTitle})` means that the *okButtonTitle* parameter may be omitted when calling the command. You can call it in the following ways:
+En el manual *Lenguaje de 4D*, los caracteres { } (llaves) indican parámetros opcionales. Por ejemplo, `ALERT (message{; okButtonTitle})` significa que el parámetro *okButtonTitle* puede omitirse al llamar al comando. Se puede llamar de las siguientes maneras:
 
 ```4d
-ALERT("Are you sure?";"Yes I am") //2 parameters
-ALERT("Time is over") //1 parameter
+ALERT("Are you sure?";"Yes I am") //2 parámetros
+ALERT("Time is over") //1 parámetro
 ```
 
-4D project methods also accept such optional parameters, starting from the right. The issue with optional parameters is how to handle the case where some of them are missing in the called method - it should never produce an error. A good practice is to assign default values to unused parameters.
+Los métodos proyecto 4D también aceptan estos parámetros opcionales, empezando por la derecha. El problema con los parámetros opcionales es cómo manejar el caso en que algunos de ellos falten en el método llamado, nunca debería producir un error. Una buena práctica es asignar valores por defecto a los parámetros no utilizados.
 
-> When optional parameters are needed in your methods, you might also consider using [object properties as named parameters](#using-objects-properties-as-named-parameters) which provide a flexible way to handle variable numbers of parameters.
+> Cuando los parámetros opcionales son necesarios en sus métodos, también puede considerar el uso de [propiedades de objeto como parámetros con nombre](#using-objects-properties-as-named-parameters) que ofrecen una forma flexible de manejar un número variable de parámetros.
 
-Using the `Count parameters` command from within the called method, you can detect the actual number of parameters and perform different operations depending on what you have received.
+Utilizando el comando `Count parameters` desde dentro del método llamado, puede detectar el número real de parámetros y realizar diferentes operaciones dependiendo de lo que haya recibido.
 
-The following example displays a text message and can insert the text into a document on disk or in a 4D Write Pro area:
+El siguiente ejemplo muestra un mensaje de texto y puede insertar el texto en un documento en el disco o en un área de 4D Write Pro:
 
 ```4d
 // APPEND TEXT Project Method
@@ -477,71 +480,71 @@ The following example displays a text message and can insert the text into a doc
     End if
  End if
 ```
-After this project method has been added to your application, you can write:
+Después de añadir este método proyecto a su aplicación, puede escribir:
 
 ```4d  
-APPEND TEXT(vtSomeText) //Will only display the  message
-APPEND TEXT(vtSomeText;$path) //Displays text message and appends it to document at $path
-APPEND TEXT(vtSomeText;"";$wpArea) //Displays text message and writes it to $wpArea
+APPEND TEXT(vtSomeText) //Sólo mostrará el mensaje
+APPEND TEXT(vtSomeText;$path) //Muestra el mensaje y el anexo al documento en $path
+APPEND TEXT(vtSomeText;"";$wpArea) //Muestra el mensaje y lo escribe en $wpArea
 ```
 
 
 
 
-## Values or references
+## Valores o referencias
 
-When you pass a parameter, 4D always evaluates the parameter expression in the context of the calling method and sets the **resulting value** to the local variables in the class function or subroutine. The local variables/parameters are not the actual fields, variables, or expressions passed by the calling method; they only contain the values that have been passed. Since its scope is local, if the value of a parameter is modified in the class function/subroutine, it does not change the value in the calling method. For example:
+Cuando pasa un parámetro, 4D siempre evalúa la expresión del parámetro en el contexto del método que llama y define el **valor resultante** en las variables locales en la función de clase o la subrutina. Las variables/parámetros locales no son los campos, variables o expresiones reales pasados por el método que llama; sólo contienen los valores que se han pasado. Las variables/parámetros locales no son los campos, variables o expresiones reales pasados por el método que llama; sólo contienen los valores que se han pasado. Por ejemplo:
 
 ```4d
-    //Here is some code from the method MY_METHOD
+    //Esta es una parte del código del método MY_METHOD
 DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
 ALERT([People]Name)
 
-    //Here is the code of the method DO_SOMETHING
+    //Este es el código del método DO_SOMETHING
  $1:=Uppercase($1)
  ALERT($1)
 ```
 
-The alert box displayed by `DO_SOMETHING` will read "WILLIAMS" and the alert box displayed by `MY_METHOD` will read "williams". The method locally changed the value of the parameter $1, but this does not affect the value of the field `[People]Name` passed as parameter by the method `MY_METHOD`.
+La caja de alerta mostrada por `DO_SOMETHING` dirá "WILLIAMS" y la caja de alerta mostrada por `MY_METHOD` dirá "williams". El método cambió localmente el valor del parámetro $1, pero esto no afecta al valor del campo `[People]Name` pasado como parámetro por el método `MY_METHOD`.
 
-There are two ways to make the method `DO_SOMETHING` change the value of the field:
+Hay dos formas de hacer que el método `DO_SOMETHING` cambie el valor del campo:
 
-1. Rather than passing the field to the method, you pass a pointer to it, so you would write:
+1. En lugar de pasar el campo al método, se pasa un puntero al mismo, por lo que se escribiría:
 
 ```4d
-  //Here is some code from the method MY_METHOD
+  //Esta es una parte del código del método MY_METHOD
  DO_SOMETHING(->[People]Name) //Let's say [People]Name value is "williams"
  ALERT([People]Last Name)
 
-  //Here the code of the method DO_SOMETHING
+  //Este es el código del método DO_SOMETHING
  $1->:=Uppercase($1->)
  ALERT($1->)
 ```
 
-Here the parameter is not the field, but a pointer to it. Therefore, within the `DO SOMETHING` method, $1 is no longer the value of the field but a pointer to the field. The object **referenced** by $1 ($1-> in the code above) is the actual field. Consequently, changing the referenced object goes beyond the scope of the subroutine, and the actual field is affected. In this example, both alert boxes will read "WILLIAMS".
+Aquí el parámetro no es el campo, sino un puntero al mismo. Por lo tanto, dentro del método `DO SOMETHING`, $1 ya no es el valor del campo sino un puntero al campo. El objeto **referenciado** por $1 ($1-> en el código anterior) es el campo real. Por lo tanto, cambiar el objeto referenciado va más allá del alcance de la subrutina, y el campo real se ve afectado. En este ejemplo, las dos cajas de alerta dirán "WILLIAMS".
 
-2. Rather than having the method `DO_SOMETHING` "doing something," you can rewrite the method so it returns a value. Thus you would write:
+2. En lugar de que el método `DO_SOMETHING` "haga algo", puede reescribir el método para que devuelva un valor. Por lo tanto, escribiría:
 
 ```4d
-    //Here is some code from the method MY METHOD
+    //Esta es una parte del código del método MY_METHO
  [People]Name:=DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
  ALERT([People]Name)
 
-    //Here the code of the method DO SOMETHING
+    //Este es el código del método DO_SOMETHING
  $0:=Uppercase($1)
  ALERT($0)
 ```
 
-This second technique of returning a value by a subroutine is called “using a function.” This is described in the [Returning values](#returning-values) paragraph.
+Esta segunda técnica de retornar un valor por una subrutina se llama " utilizar una función" Se describe en el párrafo [Funciones](#functions). Se describe en el párrafo [Valores devueltos](#returning-values).
 
 
-### Particular cases: objects and collections
+### Casos particulares: objetos y colecciones
 
-You need to pay attention to the fact that Object and Collection data types can only be handled through a reference (i.e. an internal *pointer*).
+Debe prestar atención al hecho de que los tipos de datos Objeto y Colección sólo pueden manejarse a través de una referencia (es decir, un *puntero* interno).
 
-Consequently, when using such data types as parameters, `$1, $2...` do not contain *values* but *references*. Modifying the value of the `$1, $2...` parameters within the subroutine will be propagated wherever the source object or collection is used. This is the same principle as for [pointers](dt_pointer.md#pointers-as-parameters-to-methods), except that `$1, $2...` parameters do not need to be dereferenced in the subroutine.
+Por consiguiente, cuando se utilizan estos tipos de datos como parámetros, `$1, $2...` no contienen *valores* sino *referencias*. La modificación del valor de los parámetros `$1, $2...` dentro de la subrutina se propagará a cualquier lugar donde se utilice el objeto o colección fuente. Este es el mismo principio que para [los punteros](dt_pointer.md#pointers-as-parameters-to-methods), excepto que los parámetros `$1, $2...` no necesitan ser desreferenciados en la subrutina.
 
-For example, consider the `CreatePerson` method that creates an object and sends it as a parameter:
+Por ejemplo, considere el método `CreatePerson` que crea un objeto y lo envía como parámetro:
 
 ```4d
   //CreatePerson
@@ -551,7 +554,7 @@ For example, consider the `CreatePerson` method that creates an object and sends
  ALERT(String($person.Age))  
 ```
 
-The `ChangeAge` method adds 10 to the Age attribute of the received object
+El método `ChangeAge` añade 10 al atributo Age del objeto recibido
 
 ```4d
   //ChangeAge
@@ -560,8 +563,8 @@ The `ChangeAge` method adds 10 to the Age attribute of the received object
  ALERT(String($person.Age))
 ```
 
-When you execute the `CreatePerson` method, both alert boxes will read "50" since the same object reference is handled by both methods.
+Cuando se ejecuta el método `CreatePerson`, las dos cajas de alerta dirán "50" ya que la misma referencia de objeto es manejada por ambos métodos.
 
-**4D Server:** When parameters are passed between methods that are not executed on the same machine (using for example the "Execute on Server" option), references are not usable. In these cases, copies of object and collection parameters are sent instead of references.
+**4D Server:** cuando se pasan parámetros entre métodos que no se ejecutan en la misma máquina (utilizando por ejemplo la opción "Ejecutar en el servidor"), las referencias no son utilizables. En estos casos, se envían copias de los parámetros de objetos y colecciones en lugar de referencias.
 
 

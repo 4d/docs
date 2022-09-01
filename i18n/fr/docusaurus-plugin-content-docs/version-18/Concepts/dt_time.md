@@ -1,86 +1,85 @@
 ---
 id: time
-title: Time
+title: Heure
 ---
 
-- A Time field, variable or expression can be in the range of 00:00:00 to 596,000:00:00.
-- Times are in 24-hour format.
-- A time value can be treated as a number. The number returned from a time is the number of seconds since midnight (00:00:00) that time represents.
+- Les variables, champs ou expressions de type Heure peuvent être compris entre 00:00:00 et 596 000:00:00.
+- Les heures sont stockées dans un format de 24 heures.
+- Une valeur de type Heure peut être utilisée en tant que numérique. Le nombre correspondant est le nombre de secondes que cette valeur représente à partir de minuit (00:00:00).
 
-**Note:** In the 4D Language Reference manual, Time parameters in command descriptions are denoted as Time, except when marked otherwise.
+**Note :** Dans ce manuel de référence du langage 4D, les paramètres de type Heure dans les descriptions des commandes sont appelés Heure, sauf spécification explicite.
 
-## Time literals
+## Constantes littérales de type heure
 
-A time literal constant is enclosed by question marks (?...?).
+Une constante heure est incluse entre deux points d’interrogation (?...?).
 
-A time literal constant is ordered hour:minute:second, with a colon (:) setting off each part. Times are specified in 24-hour format.
+Avec une version française de 4D, une heure est structurée sous la forme heure:minute:seconde, deux points (:) séparant les valeurs. Les heures sont stockées dans un format de 24 heures.
 
-Here are some examples of time literals:
+Voici quelques exemples de constantes littérales de type heure :
 
 ```4d
-?00:00:00? ` midnight
-?09:30:00? ` 9:30 am
-?13:01:59? ` 1 pm, 1 minute, and 59 seconds
+?00:00:00? // minuit
+?09:30:00? // 9:30 du matin
+?13:01:59? // 13 heures, 1 minute et 59 secondes
 ```
 
-A null time is specified by ?00:00:00?
+Une heure nulle s’écrit ?00:00:00?
 
-**Tip:** The Method Editor includes a shortcut for entering a null time. To type a null time, enter the question mark (?) character and press Enter.
+**Astuce :** L'éditeur de méthodes dispose d'un raccourci pour saisir une heure nulle. Pour cela, tapez un point d'interrogation (?) et appuyez sur la touche Entrée.
 
-## Time operators
+## Opérateurs sur les heures
 
-| Operation                | Syntax         | Returns | Expression              | Value      |
-| ------------------------ | -------------- | ------- | ----------------------- | ---------- |
-| Addition                 | Time + Time    | Time    | ?02:03:04? + ?01:02:03? | ?03:05:07? |
-| Subtraction              | Time – Time    | Time    | ?02:03:04? – ?01:02:03? | ?01:01:01? |
-| Addition                 | Time + Number  | Number  | ?02:03:04? + 65         | 7449       |
-| Subtraction              | Time – Number  | Number  | ?02:03:04? – 65         | 7319       |
-| Multiplication           | Time * Number  | Number  | ?02:03:04? * 2          | 14768      |
-| Division                 | Time / Number  | Number  | ?02:03:04? / 2          | 3692       |
-| Longint division         | Time \ Number | Number  | ?02:03:04? \ 2         | 3692       |
-| Modulo                   | Time % Time    | Time    | ?20:10:00? % ?04:20:00? | ?02:50:00? |
-| Modulo                   | Time % Number  | Number  | ?02:03:04? % 2          | 0          |
-| Equality                 | Time = Time    | Boolean | ?01:02:03? = ?01:02:03? | True       |
-|                          |                |         | ?01:02:03? = ?01:02:04? | False      |
-| Inequality               | Time # Time    | Boolean | ?01:02:03? # ?01:02:04? | True       |
-|                          |                |         | ?01:02:03? # ?01:02:03? | False      |
-| Greater than             | Time > Time    | Boolean | ?01:02:04? > ?01:02:03? | True       |
-|                          |                |         | ?01:02:03? > ?01:02:03? | False      |
-| Less than                | Time < Time    | Boolean | ?01:02:03? < ?01:02:04? | True       |
-|                          |                |         | ?01:02:03? < ?01:02:03? | False      |
-| Greater than or equal to | Time >= Time   | Boolean | ?01:02:03? >=?01:02:03? | True       |
-|                          |                |         | ?01:02:03? >=?01:02:04? | False      |
-| Less than or equal to    | Time <= Time   | Boolean | ?01:02:03? <=?01:02:03? | True       |
-|                          |                |         | ?01:02:04? <=?01:02:03? | False      |
+| Opération           | Syntaxe         | Retourne | Expression              | Value      |
+| ------------------- | --------------- | -------- | ----------------------- | ---------- |
+| Addition            | Heure + Heure   | Heure    | ?02:03:04? + ?01:02:03? | ?03:05:07? |
+| Soustraction        | Heure – Heure   | Heure    | ?02:03:04? ?01:02:03?   | ?01:01:01? |
+| Addition            | Heure + Nombre  | Number   | ?02:03:04? ?01:02:03?   | 7449       |
+| Soustraction        | Heure – Nombre  | Number   | ?02:03:04? ?01:02:03?   | 7319       |
+| Multiplication      | Heure * Nombre  | Number   | ?02:03:04? ?01:02:03?   | 14768      |
+| Division            | Heure / Nombre  | Number   | ?02:03:04? ?02:03:04?   | 3692       |
+| Division entière    | Heure \ Nombre | Number   | ?02:03:04? ?01:02:03?   | 3692       |
+| Modulo              | Heure % Heure   | Heure    | ?20:10:00? % ?04:20:00? | ?02:50:00? |
+| Modulo              | Heure % Nombre  | Number   | ?02:03:04? ?02:03:04?   | 0          |
+| Egalité             | Heure = Heure   | Boolean  | ?01:02:03? >=?01:02:03? | Vrai       |
+|                     |                 |          | ?01:02:03? ?01:02:04?   | False      |
+| Inégalité           | Heure # Heure   | Boolean  | ?01:02:03? ?01:02:03?   | Vrai       |
+|                     |                 |          | ?01:02:03? ?01:02:03?   | False      |
+| Supérieur à         | Heure > Heure   | Boolean  | ?01:02:03? < ?01:02:04? | Vrai       |
+|                     |                 |          | ?01:02:03? < ?01:02:04? | False      |
+| Inférieur à         | Heure < Heure   | Boolean  | ?01:02:03? ?01:02:04?   | Vrai       |
+|                     |                 |          | ?01:02:03? ?01:02:03?   | False      |
+| Supérieur ou égal à | Heure >= Heure  | Boolean  | ?01:02:03? >=?01:02:03? | Vrai       |
+|                     |                 |          | ?01:02:03? >=?01:02:04? | False      |
+| Inférieur ou égal à | Heure <= Heure  | Boolean  | ?01:02:03? <=?01:02:03? | Vrai       |
+|                     |                 |          | ?01:02:03? <=?01:02:03? | False      |
 
-### Example 1
+### Exemple 1
 
-To obtain a time expression from an expression that combines a time expression with a number, use the commands `Time` and `Time string`.
+Vous pouvez combiner des expressions de type heure et de type numérique à l'aide des fonctions `Time` et `Time string`.
 
-You can combine expressions of the time and number types using the `Time` or `Current time` functions:
+Vous pouvez combiner des expressions Time et Number à l'aide des fonctions `Time` ou `Current time`:
 
 ```4d
-    //The following line assigns to $vlSeconds the number of seconds   
-    //that will be elapsed between midnight and one hour from now
-$vlSeconds:=Current time+3600
-    //The following line assigns to $vHSoon the time it will be in one hour
-$vhSoon:=Time(Current time+3600)
+    // La ligne suivante assigne à la variable $vlSecondes le nombre de secondes qui, dans une heure à partir de maintenant, se seront écoulées depuis minuit
+ $vlSeconds:=Current time+3600
+  // La ligne suivante assigne à la variable $vhBientôt l'heure qu'il sera dans une heure
+ $vhSoon:=Time(Current time+3600)
 ```
 
-The second line could be written in a simpler way:
+La seconde ligne peut également être écrite de la façon suivante :
 
 ```4d
-  // The following line assigns to $vHSoon the time it will be in one hour
+  // La ligne suivante assigne à la variable $vhBientôt l'heure qu'il sera dans une heure
  $vhSoon:=Current time+?01:00:00?
 ```
 
-### Example 2
+### Exemple 3
 
-The Modulo operator can be used, more specifically, to add times that take the 24-hour format into account:
+L'opérateur Modulo permet notamment d'ajouter des heures en tenant compte du format sur 24 heures d'une journée :
 
 ```4d
-$t1:=?23:00:00? // It is 23:00 p.m.
-  // We want to add 2 and a half hours
-$t2:=$t1 +?02:30:00? // With a simple addition, $t2 is ?25:30:00?
-$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 is ?01:30:00? and it is 1:30 a.m. the next morning
+$t1:=?23:00:00? // Il est 23 heures.
+  //On souhaite ajouter 2 heures 30
+ $t2:=$t1 +?02:30:00? // avec une addition simple, $t2 vaut ?25:30:00?
+$t2:=($t1 +?02:30:00?)%?24:00:00? // $t2 vaut ?01:30:00? et il est 1h 30 du matin le matin suivant le matin suivant le matin suivant le matin suivant le matin suivant
 ```

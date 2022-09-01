@@ -1,429 +1,430 @@
 ---
 id: formEditor
 slug: overview
-title: Form Editor
+title: フォームエディター
 ---
 
-4D provides a full-featured Form editor that allows you to modify your form until you achieve the effect that you want. With the Form editor, you can create and delete form objects, manipulate them directly, and set form and object properties.
+4D が提供するフォームエディターを使用して、必要とされる機能に達するまでフォームを完全にカスタマイズできます。 フォームエディターでは、オブジェクトの作成や削除、操作、フォームやオブジェクトのプロパティの設定がおこなえます。
 
-## Interface
+## インターフェース
 
-The Form editor interface displays each JSON form in its own window, which has both an object and tool bar. You can have several forms open at the same time.
+フォームエディターは各JSONフォームを個別のウィンドウに表示し、ウィンドウごとにオブジェクトバーとツールバーがあります。 複数のフォームを同時に開くことができます。
 
-### Display options
+### 表示オプション
 
-You can show or hide several interface elements on the current page of the form:
+フォームのカレントページの大部分のインタフェース要素は、表示したり非表示にしたりすることができます。
 
-- **Inherited Form**: Inherited form objects (if there is an [inherited form](forms.md#inherited-forms)).
-- **Page 0**: Objects from [page 0](forms.md#form-pages). This option allows you to distinguish between the objects on the form’s current page and those on page 0.
-- **Paper**: Borders of the printing page, which are shown as gray lines. This element can only be displayed by default in ["for printing" type](properties_FormProperties.md#form-type) forms.
-- **Rulers**: Rulers of the Form editor’s window.
-- **Markers**: Output control lines and associated markers that show the limits of the form’s different areas. This element can only be displayed by default in [list forms](properties_FormProperties.md#form-type).
-- **Marker Labels**: Marker labels, available only when the output control lines are displayed. This element can only be displayed by default in [list forms](properties_FormProperties.md#form-type).
-- **Limits**: Form’s limits. When this option is selected, the form is displayed in the Form editor as it appears in Application mode. This way you can adjust your form without having to switch to the Application mode in order to see the result.
-> The [**Size Based on**](properties_FormSize.md#size-based-on), [**Hor. margin**](properties_FormSize.md#hor-margin) and [**Vert. margin**](properties_FormSize.md#vert-margin) settings of the form properties affect the form’s limits. When using these settings, the limits are based on the objects in the form. When you modify the size of an object that is located next to the form’s border, it is modified to reflect that change.
+- **継承されたフォーム**: 継承されたフォームオブジェクト ([継承されたフォーム](forms.md#継承フォーム) が存在する場合)
+- **ページ0**: [ページ0](forms.md#フォームのページ) のオブジェクト。 このオプションで、フォームのカレントページのオブジェクトとページ0 のオブジェクトを区別することができます。
+- **用紙**: 印刷ページの用紙境界を示す灰色の線。 この要素は、[印刷用](properties_FormProperties.md#フォームタイプ) タイプのフォームでのみデフォルトで表示できます。
+- **ルーラー**: フォームエディターウィンドウのルーラー。
+- **マーカー**: フォームのエリアを識別する出力コントロールラインとマーカー。 この要素は、[リストフォーム](properties_FormProperties.md#フォームタイプ) タイプのフォームでのみデフォルトで表示できます。
+- **マーカーラベル**: マーカーラベル。 これは出力コントロールラインが表示されている場合のみ有効です。 この要素は、[リストフォーム](properties_FormProperties.md#フォームタイプ) タイプのフォームでのみデフォルトで表示できます。
+- **境界**: フォームの境界。 このオプションが選択されていると、アプリケーションモードで表示されるとおりに、フォームがフォームエディターに表示されます。 これによりアプリケーションモードに移動しなくてもフォームを調整しやすくなります。
 
-#### Default display
+> [**サイズを決めるもの**](properties_FormSize.md#サイズを決めるもの), [**水平マージン**](properties_FormSize.md#水平マージン) そして [**垂直マージン**](properties_FormSize.md#垂直マージン) フォームプロパティ設定はフォーム境界に影響します。 これらの設定を使用すると、フォーム上のオブジェクトに基づいて境界を設定できます。 フォームの境界を決定する位置にオブジェクトを配置したり、サイズを変更したりすると、境界も変更されます。
 
-When a form is opened in the editor, interface elements are displayed or hidden by default, depending on:
+#### デフォルト表示
 
-- the **New form default display** options set in the Preferences - unchecked options cannot be displayed by default.
-- the current [form type](properties_FormProperties.md#form-type):
-  - Markers and marker labels are always displayed by default on list forms
-  - Paper is displayed by default on "for printing" forms.
+エディターでフォームを開いたとき、インターフェース要素は、以下に応じてデフォルトで表示または非表示になります:
 
-#### Display/Hide elements
+- 環境設定で設定された **新フォームにデフォルトで表示** オプション - チェックされていないオプションはデフォルトでは表示されません。
+- カレントの [フォームタイプ](properties_FormProperties.md#フォームタイプ):
+  - リストフォームでは、マーカーとマーカーラベルはデフォルトで常に表示されます。
+  - 用紙は "印刷用" のフォームの場合、デフォルトで表示されます。
 
-You can display or hide elements at any moment in the Form editor’s current window by selecting **Display** from the **Form** menu or the Form editor's context menu:
+#### 要素の表示/非表示
+
+**フォーム** メニューまたはフォームエディターのコンテキストメニューから **表示** を選択すると、フォームエディターのカレントウィンドウ内でいつでも要素の表示/非表示を切り替えることができます。
 
 ![](../assets/en/FormEditor/showHideElements.png)
 
-### Rulers
+### ルーラー
 
-The rulers on the side and bottom help you position objects in the form. They can be [displayed or hidden](#display-options).
+右と下にあるルーラーが、オブジェクトの配置を手助けします。 これらは、[表示または非表示](#表示オプション) にすることができます。
 
-Select **Ruler definition...** from the **Form** menu to change measurement units so that the form displays inches, centimeters, or pixels.
+**フォーム** メニューの **ルーラー定義...** を選択すると、単位を変更して、インチ、センチ、ピクセルのいずれかで表示させることができます。
 
-### Toolbar
+### ツールバー
 
-The toolbar of the Form editor offers a set of tools to manipulate and modify the form. Each window has its own toolbar.
+フォームエディターのツールバーはフォームを操作・更新するための一連のツールを提供します。 ウィンドウごとに固有のツールバーを持ちます。
 
 ![](../assets/en/FormEditor/toolbar.png)
 
-The toolbar contains the following elements:
+ツールバーには以下の要素があります:
 
-| Icon                                             | Name                                                 | Description                                                                                                                                                                                                                                                                                                                  |
-| ------------------------------------------------ | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](../assets/en/FormEditor/execute.png)         | Execute the form                                     | Used to test the execution of the form. When you click on this button, 4D opens a new window and displays the form in its context (list of records for a list form and current record page for a detail form). The form is executed in the main process.                                                                     |
-| ![](../assets/en/FormEditor/selection.png)       | [Selection tool](#selecting-objects)                 | Allows selecting, moving and resizing form objects.<p>**Note**: When an object of the Text or Group Box type is selected, pressing the **Enter** key lets you switch to editing mode.</p>                                                                                                                                                                                                                                                 |
-| ![](../assets/en/FormEditor/zOrder.png)          | [Entry order](#data-entry-order)                     | Switches to “Entry order” mode, where it is possible to view and change the current entry order of the form. Note that shields allow viewing the current entry order, while still working in the form.                                                                                                                       |
-| ![](../assets/en/FormEditor/moving.png)          | [Moving](#moving-objects)                            | Switches to “Move” mode, where it is possible to reach any part of the form quickly by using drag and drop in the window. The cursor takes the shape of a hand. This navigation mode is particularly useful when zooming in the form.                                                                                        |
-| ![](../assets/en/FormEditor/zoom.png)            | [Zoom](#zoom)                                        | Allows modifying the form display percentage (100% by default). You can switch to “Zoom” mode by clicking on the magnifying glass or by clicking directly on the desired bar. This feature is detailed in previous section.                                                                                                  |
-| ![](../assets/en/FormEditor/alignment.png)       | [Alignment](#aligning-objects)                       | This button is linked to a menu that allows aligning objects in the form. It is enabled (or not) depending on the objects selected.<p>Available only with CSS Preview None</p>                                                                                                                                                                 |
-| ![](../assets/en/FormEditor/distribution.png)    | [Distribution](#distributing-objects)                | This button is linked to a menu that allows distributing objects in the form. It is enabled (or not) depending on the objects selected.<p>Available only with CSS Preview None</p>                                                                                                                                                             |
-| ![](../assets/en/FormEditor/level.png)           | [Level](#layering-objects)                           | This button is linked to a menu that allows changing the level of objects in the form. It is enabled (or not) depending on the objects selected.                                                                                                                                                                             |
-| ![](../assets/en/FormEditor/group.png)           | [Group/Ungroup](#grouping-objects)                   | This button is linked to a menu that allows grouping and ungrouping selections of objects in the form. It is enabled (or not) depending on the objects selected.                                                                                                                                                             |
-| ![](../assets/en/FormEditor/displyAndPage.png)   | [Display and page management](forms.html#form-pages) | This area allows passing from one form page to another and adding pages. To navigate among form pages, click the arrow buttons, or click the central area and choose the page to display from the menu that appears. If you click the right arrow button while the last form page is displayed, 4D allows you to add a page. |
-| ![](../assets/en/FormEditor/cssPreviewicon.png)  | [CSS Preview](#css-preview)                          | This button is used to select the CSS Mode to use.                                                                                                                                                                                                                                                                           |
-| ![](../assets/en/FormEditor/views.png)           | [Managing views](#views)                             | This button displays or hides the views palette. This function is detailed in Using object views .                                                                                                                                                                                                                           |
-| ![](../assets/en/FormEditor/shields2.png)        | [Displaying shields](#shields)                       | Each click on this button causes the successive display of each type of form shield. The button is also linked to a menu that allows directly selecting the type of shield to display.                                                                                                                                       |
-| ![](../assets/en/FormEditor/library.png)         | [Preconfigured object library](objectLibrary.html)   | This button displays the preconfigured object library that provides numerous objects with certain properties that have been predefined.                                                                                                                                                                                      |
-| ![](../assets/en/FormEditor/listBoxBuilder1.png) | [List Box Builder](#list-box-builder)                | This button creates new entity selection list boxes.                                                                                                                                                                                                                                                                         |
+| アイコン                                             | 名称                                    | 詳細                                                                                                                                                        |
+| ------------------------------------------------ | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ![](../assets/en/FormEditor/execute.png)         | フォーム実行                                | フォームの実行をテストするために使用します。 このボタンをクリックすると、4D は新しいウィンドウを開き、そのコンテキストでフォームを表示します (リストフォームの場合レコードリスト、詳細フォームの場合カレントレコード)。 フォームはメインプロセスで実行されます。                      |
+| ![](../assets/en/FormEditor/selection.png)       | [選択ツール](#selecting-objects)           | フォームオブジェクトの選択・移動・リサイズをおこないます。<p>**注**: テキストやグループボックスタイプのオブジェクトを選択すると、**Enter**キーを押すことで編集モードになります。</p>                                                                                                    |
+| ![](../assets/en/FormEditor/zOrder.png)          | [入力順](#data-entry-order)              | "入力順" モードに切り替わり、フォームの現在の入力順を表示・変更できます。 入力順は、バッジを使用して確認することもできます。                                                                                          |
+| ![](../assets/en/FormEditor/moving.png)          | [移動](#moving-objects)                 | "移動" モードに移行し、ウィンドウ中をドラッグ＆ドロップすることで素早くフォームの表示部分を移動することができます。 このモードでカーソルは手の形になります。 このモードは、フォームを拡大表示している時に特に便利です。                                            |
+| ![](../assets/en/FormEditor/zoom.png)            | [拡大](#zoom)                           | フォーム表示の拡大/縮小率を変更できます (デフォルトで100%)。 "拡大/縮小" モードにするには虫眼鏡をクリックするか、拡大/縮小率バーをクリックします。 この機能は前節で説明しています。                                                         |
+| ![](../assets/en/FormEditor/alignment.png)       | [整列](#aligning-objects)               | このボタンには、フォーム中でオブジェクトを均等に配置するためのメニューがリンクされています。 このボタンは選択されているオブジェクトに応じて有効/無効になります。<p>CSS プレビューが "なし" の場合にのみ利用可能です。</p>                                                |
+| ![](../assets/en/FormEditor/distribution.png)    | [均等配置](#distributing-objects)         | このボタンには、フォーム中でオブジェクトの並びを揃えるためのメニューがリンクされています。 このボタンは選択されているオブジェクトに応じて有効/無効になります。<p>CSS プレビューが "なし" の場合にのみ利用可能です。</p>                                                 |
+| ![](../assets/en/FormEditor/level.png)           | [レベル](#layering-objects)              | このボタンには、フォーム上のオブジェクトの階層を変更するためのメニューが関連付けられています。 このボタンは選択されているオブジェクトに応じて有効/無効になります。                                                                        |
+| ![](../assets/en/FormEditor/group.png)           | [グループ化/グループ解除](#grouping-objects)     | このボタンには、フォーム上の選択オブジェクトのグループ化やグループ解除をおこなうためのメニューが関連付けられています。 このボタンは選択されているオブジェクトに応じて有効/無効になります。                                                            |
+| ![](../assets/en/FormEditor/displyAndPage.png)   | [表示とページ管理](forms.html#form-pages)     | このエリアを使用して、フォームページ間の移動やページの追加ができます。 フォームページを移動するには矢印ボタンをクリックするか、または中央のエリアをクリックすると現われるメニューから表示したいページを選択します。 最終ページが表示されている状態で、右矢印ボタンをクリックすると、4D はページを追加します。 |
+| ![](../assets/en/FormEditor/cssPreviewicon.png)  | [CSSプレビュー](#css-preview)              | このボタンで、使用する CSSモードを選択します。                                                                                                                                 |
+| ![](../assets/en/FormEditor/views.png)           | [ビュー管理](#views)                       | このボタンは、ビューパレットの表示や非表示をおこないます。 この機能については "オブジェクトビューを使用する" で説明しています。                                                                                        |
+| ![](../assets/en/FormEditor/shields2.png)        | [バッジ表示](#shields)                     | このボタンをクリックするたびに、すべてのタイプのフォームバッジが順に表示されます。 また、このボタンには、表示するバッジタイプを直接選択できるメニューが関連付けられています。                                                                   |
+| ![](../assets/en/FormEditor/library.png)         | [定義済みオブジェクトライブラリ](objectLibrary.html) | このボタンは定義済みオブジェクトライブラリを表示します。 このライブラリは定義済みのプロパティを持つオブジェクトを多数提供します。                                                                                         |
+| ![](../assets/en/FormEditor/listBoxBuilder1.png) | [リストボックスビルダー](#list-box-builder)      | このボタンは、新しいエンティティセレクション型リストボックスを作成します。                                                                                                                     |
 
-### Object bar
+### オブジェクトバーを使用する
 
-The object bar contains all the active and inactive objects that can be used in 4D forms. Some objects are grouped together by themes. Each theme includes several alternatives that you can choose between. When the object bar has the focus, you can select the buttons using the keys of the keyboard. The following table describes the object groups available and their associated shortcut key.
+オブジェクトバーには、4Dフォーム上で使用できるアクティブオブジェクトや非アクティブオブジェクトがすべて含まれています。 一部のオブジェクトは、テーマ別にまとめられています。 各テーマでは、複数の項目のなかから選択することができます。 オブジェクトバーにフォーカスがある場合、キーボードのキーを使用してボタンを選択できます。 以下の表で利用可能なオブジェクトグループとショートカットを示します。
 
-| Button                                     | Group                                                                                                                                                                                                                                                     | Key |
-| ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:---:|
-| ![](../assets/en/FormEditor/text.png)      | [Text](FormObjects/text.md) / [Group Box](FormObjects/groupBox.md)                                                                                                                                                                                        |  T  |
-| ![](../assets/en/FormEditor/input.png)     | [Input](FormObjects/input_overview.md)                                                                                                                                                                                                                    |  F  |
-| ![](../assets/en/FormEditor/listbox.png)   | [Hierarchical List](FormObjects/list_overview.md) / [List Box](FormObjects/listbox_overview.md)                                                                                                                                                           |  L  |
-| ![](../assets/en/FormEditor/combo.png)     | [Combo Box](FormObjects/comboBox_overview.md) / [Drop-down List](FormObjects/dropdownList_Overview.md) / [Picture Pop-up Menu](FormObjects/picturePopupMenu_overview.md)                                                                                  |  P  |
-| ![](../assets/en/FormEditor/button.png)    | [Button](FormObjects/button_overview.md) / [Picture Button](FormObjects/pictureButton_overview.md) / [Button Grid](FormObjects/buttonGrid_overview.md)                                                                                                    |  B  |
-| ![](../assets/en/FormEditor/radio.png)     | [Radio Button](FormObjects/radio_overview.md)                                                                                                                                                                                                             |  R  |
-| ![](../assets/en/FormEditor/checkbox.png)  | [Check Box](FormObjects/checkbox_overview.md)                                                                                                                                                                                                             |  C  |
-| ![](../assets/en/FormEditor/indicator.png) | [Progress Indicator](FormObjects/progressIndicator.md) / [Ruler](FormObjects/ruler.md) / [Stepper](FormObjects/stepper.md) / [Spinner](FormObjects/spinner.md)                                                                                            |  I  |
-| ![](../assets/en/FormEditor/rectangle.png) | [Rectangle](FormObjects/shapes_overview.md#rectangle) / [Line](FormObjects/shapes_overview.md#line) / [Oval](FormObjects/shapes_overview.md#oval)                                                                                                         |  S  |
-| ![](../assets/en/FormEditor/splitter.png)  | [Splitter](FormObjects/splitters.md) / [Tab Control](FormObjects/tabControl.md)                                                                                                                                                                           |  D  |
-| ![](../assets/en/FormEditor/plugin.png)    | [Plug-in Area](FormObjects/pluginArea_overview.md) / [Subform](FormObjects/subform_overview.md) / [Web Area](FormObjects/webArea_overview.md) / [4D Write Pro](FormObjects/writeProArea_overview.md) / [4D View Pro](FormObjects/viewProArea_overview.md) |  X  |
+| ボタン                                        | グループ                                                                                                                                                                                                                                               | キー |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |:--:|
+| ![](../assets/en/FormEditor/text.png)      | [テキスト](FormObjects/text.md) / [グループボックス](FormObjects/groupBox.md)                                                                                                                                                                                  | T  |
+| ![](../assets/en/FormEditor/input.png)     | [入力](FormObjects/input_overview.md)                                                                                                                                                                                                                | F  |
+| ![](../assets/en/FormEditor/listbox.png)   | [階層リスト](FormObjects/list_overview.md) / [リストボックス](FormObjects/listbox_overview.md)                                                                                                                                                                 | L  |
+| ![](../assets/en/FormEditor/combo.png)     | [コンボボックス](FormObjects/comboBox_overview.md) / [ドロップダウンリスト](FormObjects/dropdownList_Overview.md) / [ピクチャーポップアップメニュー](FormObjects/picturePopupMenu_overview.md)                                                                                     | P  |
+| ![](../assets/en/FormEditor/button.png)    | [ボタン](FormObjects/button_overview.md) / [ピクチャーボタン](FormObjects/pictureButton_overview.md) / [ボタングリッド](FormObjects/buttonGrid_overview.md)                                                                                                          | B  |
+| ![](../assets/en/FormEditor/radio.png)     | [ラジオボタン](FormObjects/radio_overview.md)                                                                                                                                                                                                            | R  |
+| ![](../assets/en/FormEditor/checkbox.png)  | [チェックボックス](FormObjects/checkbox_overview.md)                                                                                                                                                                                                       | C  |
+| ![](../assets/en/FormEditor/indicator.png) | [進捗インジケーター](FormObjects/progressIndicator.md) / [ルーラー](FormObjects/ruler.md) / [ステッパー](FormObjects/stepper.md) / [スピナー](FormObjects/spinner.md)                                                                                                    | I  |
+| ![](../assets/en/FormEditor/rectangle.png) | [四角](FormObjects/shapesOverview.html#四角) / [線](FormObjects/shapesOverview.html#線) / [楕円](FormObjects/shapesOverview.html#楕円)                                                                                                                       | S  |
+| ![](../assets/en/FormEditor/splitter.png)  | [スプリッター](FormObjects/splitters.md) / [タブコントロール](FormObjects/tabControl.md)                                                                                                                                                                         | D  |
+| ![](../assets/en/FormEditor/plugin.png)    | [プラグインエリア](FormObjects/pluginArea_overview.md) / [サブフォーム](FormObjects/subform_overview.md) / [Webエリア](FormObjects/webArea_overview.md) / [4D Write Pro](FormObjects/writeProArea_overview.md) / [4D View Pro](FormObjects/viewProArea_overview.md) | X  |
 
-To draw an object type, select the corresponding button and then trace the object in the form. After creating an object, you can modify its type using the Property List. Hold down the **Shift** key as you draw to constrain the object to a regular shape. Lines are constrained to horizontal, 45°, or vertical, rectangles are constrained to squares, and ovals are constrained to circles.
+任意のオブジェクトタイプを描画するには、該当するボタンを選択してから、フォーム上でそのオブジェクトを描きます。 オブジェクトを作成した後でも、プロパティリストを用いてオブジェクトのタイプを変更することができます。 強制的にオブジェクトを規則正しい形で描画するには、**Shift**キーを押しながらオブジェクトを作成します。 この場合、線は水平方向、45度、または垂直方向に引かれます。また、四角は正方形に、楕円は正円に固定されます。
 
-The current variant of the theme is the object that will be inserted in the form. When you click the right side of a button, you access the variant menu:
+そのテーマで現在選択されているオブジェクトがフォームに挿入されます。 ボタンの右側をクリックすると、バリエーションメニューが表示されます:
 
 ![](../assets/en/FormEditor/objectBar.png)
 
-You can click twice on the button so that it remains selected even after you have traced an object in the form (continual selection). This function makes creating several successive objects of the same type easier. To cancel a continual selection, click on another object or tool.
+ボタンを 2回クリックすると、フォーム上にオブジェクトを描画した後も、そのボタンが選択されたままになります (連続選択)。 この機能により、同じタイプのオブジェクトを複数連続して作成しやすくなります。 連続選択を解除したい場合は、別のオブジェクトやツールをクリックします。
 
-### Property List
+### プロパティリスト
 
-Both forms and form objects have properties that control access to the form, the appearance of the form, and the behavior of the form when it is used. Form properties include, for example, the form’s name, its menu bar, and its size. Object Properties include, for example, an object’s name, its dimensions, its background color, and its font.
+フォームおよびフォームオブジェクトはプロパティを持ち、フォームへのアクセスやフォームの外観、およびフォーム使用時の動作が制御されます。 フォームプロパティには、たとえばフォーム名、メニューバー、フォームサイズなどがあります。 またオブジェクトプロパティには、たとえばオブジェクト名、オブジェクトサイズ、背景色、フォントなどがあります。
 
-You can display and modify form and object properties using the Property List. It displays either form or objects properties depending on what you select in the editor window.
+プロパティリストを使用して、フォームおよびオブジェクトプロパティを表示・変更できます。 エディター上でオブジェクト選択していればそのプロパティが、オブジェクトを選択していない場合はフォームのプロパティがプロパティリストに表示されます。
 
-To display/hide the Property List, choose **Property List** from the **Form** menu or from the context menu of the Form editor. You can also display it by double-clicking in an empty area of the form.
+プロパティリストを表示/非表示にするには、**フォーム** メニュー、またはフォームエディターのコンテキストメニューから **プロパティリスト** を選択します。 さらに、フォームの空のエリアをダブルクリックすることでも表示させることができます。
 
-#### Navigation shortcuts
+#### ナビゲーションショートカット
 
-You can navigate in the Property List using the following shortcuts:
+次のショートカットを使用し、プロパティリスト内を移動することができます:
 
-- **Arrow key**s ↑ ↓: Used to go from one cell to another.
-- **Arrow keys** ← →: Used to expand/collapse themes or enter edit mode.
-- **PgUp** and **PgDn**: Used to scroll the Property List contents.
-- **Home** and **End**: Used to scroll the Property List so that the first or last cell is displayed.
-- **Ctrl+click** (Windows) or **Command+click** (Mac OS) on an event: Used to select/deselect every event in the list, according to the initial state of the event on which you clicked.
-- **Ctrl+click** (Windows) or **Command+click** (Mac OS) on a theme label: Used to Collapse/Expand every theme in the list.
+- **矢印キー** ↑ ↓: あるセルから別のセルへ移動します。
+- **矢印キー** ← →: テーマを展開/縮小するか、入力モードに入ります。
+- **PgUp** と **PgDn**: プロパティリスト内をスクロールします。
+- **Home** と **End**: プロパティリストの最初または最後のセルを表示するようスクロールします。
+- イベント上で **Ctrl+クリック** (Windows) または **Command+クリック** (macOS) : クリックしたイベントの最初の状態に応じて、リストの各イベントを選択/選択解除します。
+- テーマレベル上で **Ctrl+クリック** (Windows) または **Command+クリック** (macOS) : リストのすべてのテーマを展開/縮小します。
 
-## Manipulating Form Objects
+## フォームオブジェクトの操作
 
-### Adding objects
+### オブジェクトの追加
 
-You can add objects to forms in several ways:
+フォームにオブジェクトを追加する方法は複数あります:
 
-- By drawing the object directly in the form after selecting its type in the object bar (see [Using the object bar](#using-the-object-bar))
-- By dragging and dropping the object from the object bar
-- By drag-and-drop or copy-paste operations on an object selected from the preconfigured [object library](objectLibrary.md),
-- By dragging and dropping an object from another form,
-- By dragging and dropping an object from the Explorer (fields) or from other editors in the Design environment (lists, pictures, etc.)
+- オブジェクトバーでオブジェクトタイプを選択し、フォームエディター上で直接それを描画する ([オブジェクトバーを使用する](#オブジェクトバーを使用する) 参照)。
+- オブジェクトバーからオブジェクトをドラッグ＆ドロップする。
+- 定義済み [オブジェクトライブラリ](objectLibrary.md) から選択したオブジェクトをドラッグ＆ドロップあるいはコピー/ペーストする。
+- 他のフォームからオブジェクトをドラッグ＆ドロップする。
+- エクスプローラー (フィールド) やデザインモードの他のエディター (リストやピクチャー等) からオブジェクトをドラッグ＆ドロップする。
 
-Once the object is placed in the form, you can modify its characteristics using the Form editor.
+オブジェクトをフォームに配置したら、フォームエディターを使用してそのオブジェクトのプロパティを編集できます。
 
-You can work with two types of objects in your forms:
+フォームでは 2つのタイプのオブジェクトを扱います:
 
-- **Static objects** (lines, frames, background pictures, etc.): These objects are generally used for setting the appearance of the form and its labels as well as for the graphic interface. They are available in the object bar of the Form editor. You can also set their graphic attributes (size, color, font, etc.) and their resizing properties using the Property List. Static objects do not have associated variables like active objects. However, you can insert dynamic objects into static objects.
+- **スタティックオブジェクト** (線、枠、背景ピクチャー等): これらは一般的に、フォームのアピアランスやラベル、グラフィックインターフェースを設定するために使用されます。 これらはフォームエディターのオブジェクトバーから利用できます。 プロパティリストを使用して、これらのグラフィック属性 (サイズ、カラー、フォント等) やリサイズオプションも指定できます。 アクティブオブジェクトと異なり、スタティックオブジェクトには変数や式が割り当てられません。 しかし、スタティックオブジェクトにダイナミックオブジェクトを挿入することは可能です。
 
-- **Active objects**: These objects perform tasks or functions in the interface and can take many forms: fields, buttons, scrollable lists, etc. Each active object is associated with either a field or a variable.
+- アクティブオブジェクト: この種のオブジェクトはインターフェース中でタスクや機能を実行します。 フィールド、ボタン、リストボックスなど様々な種類があります。 各アクティブオブジェクトにはフィールドまたは変数が割り当てられます。
 
-### Selecting objects
+### オブジェクトの選択
 
-Before you can perform any operation on an object (such as changing a line width or font), you need to select the object that you want to modify.
+オブジェクトの操作 (線幅やフォントの変更など) をおこなう前に、対象のオブジェクトを選択する必要があります。
 
-To select an object using the toolbar:
+ツールバーを使用してオブジェクトを選択するには:
 
-1. Click the Arrow tool  in the toolbar.<p>![](../assets/en/FormEditor/selection.png)</p>
+1. ツールバーの矢印ツールをクリックします。<p>![](../assets/en/FormEditor/selection.png)</p>
 
 <p>When you move the pointer into the form area, it becomes a standard arrow-shaped pointer</p>.
 
-2. Click the object you want to select. Resizing handles identify the selected object.<p>![](../assets/en/FormEditor/selectResize.png)</p>
+2. 選択したいオブジェクトをクリックします。 サイズ変更ハンドルが表示され、オブジェクトが選択されたことを表わします。<p>![](../assets/en/FormEditor/selectResize.png)</p>
 
-To select an object using the Property List:
+プロパティリストを使用してオブジェクトを選択するには:
 
-1. Choose the object’s name from the Object List drop-down list located at the top of the Property List. Using these two methods, you can select an object that is hidden by other objects or located outside the visible area of the current window. To deselect an object, click outside the object’s boundary or **Shift+click** the object.
-> It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
+1. プロパティリストの一番上にあるオブジェクトリストドロップダウンリストからオブジェクト名を選択します。 この方法では、他のオブジェクトの下に隠れているオブジェクトや、カレントウィンドウの表示領域外に置かれているオブジェクトを選択することができます。 オブジェクトの選択を解除するには、オブジェクト境界の外側をクリックするか、またはオブジェクト上で **Shift+クリック** します。 > "デザインモードを検索" の結果ウィンドウでオブジェクトをダブルクリックして選択することもできます。
+> > It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
 
-### Selecting multiple objects
+### 複数オブジェクトの選択
 
-You may want to perform the same operation on more than one form object — for example, to move the objects, align them, or change their appearance. 4D lets you select several objects at the same time. There are several ways to select multiple objects:
+複数のフォームオブジェクトに関して同じ操作を適用したい場合があります。 たとえば、オブジェクトの移動や整列、外観の変更をおこなう場合などです。 4D では一度に複数のオブジェクトを選択することができます。 複数のオブジェクトを選択する方法はいくつかあります:
 
-- Choose **Select All** from the Edit menu to select all the objects.
-- Right-click on the object and choose the **Select Similar Objects** command in the context menu.
-- Hold down the **Shift** key and click the objects you want to select.
-- Start at a location outside the group of objects you want to select and drag a marquee (sometimes called a selection rectangle) around the objects. When you release the mouse button, if any part of an object lies within or touches the boundaries of the selection rectangle, that object is selected.
-- Hold down the **Alt** key (Windows) or the **Option** key (macOS) and draw a marquee. Any object that is completely enclosed by the marquee is selected.
+- 編集メニュ－から **すべてを選択** を選択して、すべてのオブジェクトを選択する。
+- オブジェクト上で右クリックし、コンテキストメニューから **同じ種類のオブジェクトを選択** コマンドを選択する。
+- **Shift**キーを押しながら、選択したいオブジェクトをクリックする。
+- 選択したいオブジェクトグループの外側から各オブジェクトを囲むようにマーキー (選択矩形とも呼ばれます) を描画する。 マウスボタンを離すと、マーキー内及びマーキーに重なるオブジェクトが選択されます。
+- **Alt**キー (Windows) または、**Option**キー (macOS) を押しながら、マーキーを描画します。 マーキーに完全に囲まれたオブジェクトが選択されます。
 
-The figure below shows a marquee being drawn to select two objects:
+次の図はマーキーが描画され、2つのオブジェクトが選択されている様子を示しています:
 
 ![](../assets/en/FormEditor/selectMultiple.png)
 
-To deselect an object that is part of a set of selected objects, hold down the **Shift** key and click the object. The other objects remain selected. To deselect all the selected objects, click outside the boundaries of all the objects.
+一連の選択オブジェクトから任意のオブジェクトを除外するには、**Shift**キーを押しながらそのオブジェクトをクリックします。 この場合、他のオブジェクトは選択されたままになります。 選択されているオブジェクトをすべて選択解除するには、いずれのオブジェクトの境界にもかからない場所をクリックします。
 
-### Duplicating objects
+### オブジェクトの複製
 
-You can duplicate any object in the form, including active objects. Copies of active objects retain all the properties of the original, including name, type, standard action, display format, and object method.
+アクティブオブジェクトを含む任意のオブジェクトをフォーム上で複製できます。 アクティブオブジェクトのコピーはオブジェクト名を除き、変数名、型、標準アクション、表示フォーマット、オブジェクトメソッドなどすべてのプロパティが保持されます。
 
-You can duplicate an object directly using the Duplicate tool in the Tools palette or use the Duplicate Many dialog box to duplicate an object more than once. Also, using this dialog box, you can set the distance between two copies.
+ツールパレットの複製ツールを使用してオブジェクトを直接複製するか、"行列を指定して複製" ダイアログボックスでオブジェクトを複数一気に作成できます。 このダイアログでは、2つのコピー間の間隔も指定できます。
 
-To duplicate one or more objects:
+オブジェクトを複製するには:
 
-1. Select the object or objects that you want to duplicate.
-2. Choose **Duplicate** from the **Edit** menu. 4D creates a copy of each selected object and places the copy in front and slightly to the side of the original.
-3. Move the copy (or copies) to the desired location. If you choose the Duplicate menu item again, 4D creates another copy of each object and moves it the exact same distance and direction from the first copy. If you need to distribute copies of the object along a line, you should use the following procedure. Duplicate the original object, move the copy to another location in the form, and then duplicate the copy. The second copy is automatically placed in the same relation to the first copy as the first copy was in relation to the original object. Subsequent copies are also placed in the same relation to their originals. The figure below shows how this relative placement of copies works:
+1. 複製したいオブジェクトを選択します。
+2. **編集** メニューから **複製** を選択します。 4D は選択されたオブジェクトのコピーを作成し、オリジナルオブジェクトの基点から右下に配置します。複製されたコピーはオリジナルの前面におかれます。　
+3. コピーを適切な場所に配置します。 ここで複製メニュー項目を再び選択すると、4D はもう一つコピーを作成し、最初のコピーと元のオブジェクトの間との同じ距離同じ方向に配置します。 これを活かし、オブジェクトのコピーをあるライン上に配置する必要がある場合は、以下の手順でおこないます。 元のオブジェクトを複製し、そのコピーをフォーム内の別の場所に移動させてから、コピーを複製します。 1つ目のコピーと元のオブジェクトの位置関係を再現する形で、2つ目のコピーも 1つ目のコピーに対して、自動的に配置されます。 後続のコピーも、それぞれのコピー元オブジェクトと同じ位置関係に配置されます。 以下の図は、この相対的なコピーの配置が動作する様子を示しています:
 
 ![](../assets/en/FormEditor/duplicateObjects.png)
 
-#### Duplicate Many
+#### 行列を指定して複製
 
-The "Duplicate Many" dialog box appears when you select one or more object(s) and choose the **Duplicate Many...** command from the **Object** menu.
+"行列を指定して複製" ダイアログボックスは、**オブジェクト** メニューから **行列を指定して複製...** コマンドを選択すると表示されます。
 
 ![](../assets/en/FormEditor/duplcateMany.png)
 
-- In the upper area, enter the number of columns and lines (rows) of objects you want to get. For example, if you want three columns and two lines of objects, enter 3 in the Column(s) area and 2 in the Line(s) area. If you want three horizontal new copies of an object, enter 4 in the Column(s) area and leave the default value, 1, in the Line(s) area.
+- 上のエリアには、作成したいオブジェクトの列数と行数を入力します。 たとえば、3列 2行のオブジェクトを作成したい場合、列に 3 を、行に 2 を入力します。 横に 3つの新しいコピーを作成したい場合は、列欄に 4 を入力し、行はデフォルトの 1 のままにします。
 
-- For lines and columns, define the offset that you wish to leave between each copy. The value must be expressed in points. It will be applied to each copy, or copies, in relation to the original object.For example, if you want to leave a vertical offset of 20 points between each object and the height of the source object is 50 points, enter 70 in the column’s “Offset” area.
+- 列と行それぞれに、コピー間のオフセットを指定できます。 値はポイント単位で指定します。 It will be applied to each copy, or copies, in relation to the original object.For example, if you want to leave a vertical offset of 20 points between each object and the height of the source object is 50 points, enter 70 in the column’s “Offset” area.
 
-- If you wish to create a matrix of variables, select the **Number Variables** option and select the direction in which the variables are to be numbered, either by line(s) or by column(s). This option is active only when the selected object is a variable. For more information on this option, refer to **Duplicating on a matrix** in the *Design Reference*.
+- 格子状に変数を作成したい場合、**変数に番号設定** オプションを選択し、番号を振る方向を行または列から選択します。 選択したオブジェクトが変数の場合にのみ、このオプションは有効になります。 詳細は *デザインリファレンス* で [**グリッド上にオブジェクト作成**](https://doc.4d.com/4Dv19/4D/19/Duplicating-on-a-matrix.300-5416673.ja.html) を参照ください。
 
-### Moving objects
+### オブジェクトの移動
 
-You can move any graphic or active object in the form including fields and objects created with a template. When moving an object, you have the following options:
+テンプレートで作成されたフィールドやオブジェクトを含め、フォーム上のグラフィックやアクティブオブジェクトはすべて移動可能です。 オブジェクトを移動するには、次のような方法があります:
 
-- Move the object by dragging it,
-- Move the object one pixel at a time using the arrow keys,
-- Move the object by steps using the arrow keys (20-pixel steps by default),
+- オブジェクトをドラッグして移動する。
+- 矢印キーを使用して、オブジェクトを 1ピクセルずつ移動する。
+- Shiftキーと矢印キーを使用して、オブジェクトを 1ステップずつ移動する (デフォルトで 1ステップ=20ピクセル)。
 
-As you begin dragging the selected object, its handles disappear. 4D displays markers that show the location of the object’s boundaries in the rulers so that you can place the object exactly where you want it. Be careful not to drag a handle. Dragging a handle resizes the object. You can press the **Shift** key to carry out the move with a constraint.
+選択したオブジェクトのドラッグを開始すると、ハンドルが消えます。 4D はルーラーにオブジェクトの座標を示すマーカーを表示するので、適切な位置にオブジェクトを配置することができます。 このとき、ハンドルをドラッグしないようにしてください。 ハンドルをドラッグすると、オブジェクトのサイズが変更されます。 **Shift**キーを押しながらドラッグすると、制約付きの移動になります。
 
-When the [Magnetic Grid](#using-the-magnetic-grid) is on, objects are moved in stages indicating noticeable locations.
+[マグネティックグリッド](#マグネティックグリッドを使用する) が有効な場合、グリッドに吸着するようにオブジェクトが移動されます。
 
-To move an object one pixel at a time:
+オブジェクトを 1ピクセルずつ移動するには:
 
-- Select the object or objects and use the arrow keys on the keyboard to move the object. Each time you press an arrow key, the object moves one pixel in the direction of the arrow.
+- 移動したいオブジェクトを選択し、キーボード上の矢印キーを使用してオブジェクトを移動します。 矢印キーを押すたびに、矢印の方向へオブジェクトが 1ピクセルずつ移動します。
 
-To move an object by steps:
+オブジェクトを 1ステップずつ移動するには:
 
-- Select the object or objects you want to move  and hold down the **Shift** key and use the arrow keys to move the object by steps. By default, steps are 20 pixels at a time. You can change this value on the Forms Page of the Preferences.
+- 移動したいオブジェクトを選択し、**Shift**キーを押しながらキーボード上の矢印キーを使用して、オブジェクトを移動します。 デフォルトで 1ステップにつき 20ピクセル移動します。 このピクセル数は、環境設定のフォームページで変更できます。
 
-### Grouping objects
+### オブジェクトのグループ化
 
-4D lets you group objects so that you can select, move, and modify the group as a single object. Objects that are grouped retain their position in relation to each other. You would typically group a field and its label, an invisible button and its icon, and so forth.
+4D ではオブジェクトをグループ化して、そのグループを一つのオブジェクトとして選択・移動・変更することができます。 グループ化されたオブジェクト同士の相対位置は保持されます。 一般的には、フィールドとそのラベル、透明ボタンとそのアイコン等をグループ化するでしょう。
 
-When you resize a group, all the objects in the group are resized proportionally (except text areas, which are resized in steps according to their font sizes.
+グループの大きさを変更すると、そのグループ内の全オブジェクトのサイズが同じ比率で変更されます (テキストエリアは除きます。 テキストエリアのサイズは、そのフォントサイズに合わせて変更されます)。
 
-You can ungroup a group of objects to treat them as individual objects again.
+グループ化を解除すると、再び個々にオブジェクトを扱えるようになります。
 
-An active object that has been grouped must be ungrouped before you can access its properties or method. However, it is possible to select an object belonging to a group without degrouping the set: to do this, **Ctrl+click** (Windows) or **Command+click** (macOS) on the object (the group must be selected beforehand).
+グループ化されたアクティブオブジェクトのプロパティやメソッドにアクセスするには、グループ化を解除しなければなりません。 しかし、グループに属するオブジェクトを、グループ化を解除せずに選択することは可能です。 これには、オブジェクトを **Ctrl+クリック** (Windows) または **Command+クリック** (macOS) します (グループはあらかじめ選択されている必要があります)。
 
-Grouping only affects objects in the Form editor. When the form is executed, all grouped objects act as if they were ungrouped.
-> It is not possible to group objects belonging to different views and only those objects belonging to the current view can be grouped (see [Views](#views) ).
+グループ化はフォームエディター上でのみ意味を持ちます。 フォームの実行中は、グループ化されたすべてのオブジェクトが、グループ化されていないのと同じに動作します。
+> 手動でオブジェクトサイズを変更する場合も、このマグネティックグリッドの影響を受けます。
 
-To group objects:
+オブジェクトをグループ化するには:
 
-1. Select the objects that you want to group.
-2. Choose **Group** from the Object menu. OR Click the Group button  in the toolbar of the Form editor:<p>![](../assets/en/FormEditor/group.png)</p>
-4D marks the boundary of the newly grouped objects with handles. No handles mark the boundary of any of the individual objects within the group. Now, when you modify the grouped object, you change all the objects that make up the group.
+1. グループ化したいオブジェクトを選択します。
+2. オブジェクトメニューから **グループ化** を選択します。 OR Click the Group button  in the toolbar of the Form editor:<p>![](../assets/en/FormEditor/group.png)</p>
+4D は、新たにグループ化されたオブジェクトの境界をハンドルで表わします。 グループ内の各オブジェクトの境界にはハンドルが表示されません。 これ以降、グループ化されたオブジェクトを編集すると、グループを構成する全オブジェクトが変更されます。
 
-To ungroup an object:
+オブジェクトのグループ化を解除するには:
 
-1. Select the grouped object that you want to ungroup.
-2. Choose **Ungroup** from the **Object** menu.<p>OR</p><p>Click the **Ungroup** button (variant of the **Group** button) in the toolbar of the Form editor.</p><p>If **Ungroup** is dimmed, this means that the selected object is already separated into its simplest form.</p>4D marks the boundaries of the individual objects with handles.
+1. グループ化を解除したいグループオブジェクトを選択します。
+2. **オブジェクト** メニューから **グループ化解除** を選択します。<p>または</p><p>Click the **Ungroup** button (variant of the **Group** button) in the toolbar of the Form editor.</p><p>If **Ungroup** is dimmed, this means that the selected object is already separated into its simplest form.</p>4D は個々のオブジェクトの境界をハンドルで表わします。
 
-### Aligning objects
+### オブジェクトの整列
 
-You can align objects with each other or using an invisible grid on the form.
+フォーム上のオブジェクトを互いに整列させたり、または透明グリッドを用いて揃えることができます。
 
-- When you align one object to another, you can align it to the top, bottom, side, or horizontal or vertical center of the other object. You can directly align a selection of objects using the alignment tools or apply more advanced alignment settings using the Alignment Assistant. The latter option allows you, for example, to set the object that will be used as the position reference and to preview the alignment in the form before applying it.
-- When you use the invisible grid, each object can be aligned manually with others based on “noticeable” positions which are depicted with dotted lines that appear when the object being moved approaches other objects.
+- オブジェクト同士を整列させる場合、オブジェクトの上端、下端、側面で揃えたり、または別のオブジェクトの縦や横の中心線に沿って揃えることができます。 整列ツールを使用して選択オブジェクトを直接揃えたり、または整列アシスタントを用いてさらに詳細な整列を適用することも可能です。 整列アシスタントを使用した場合、たとえば、整列の基準となるオブジェクトを選択したり、整列を適用する前にフォーム上の整列状態をプレビューできるようになります。
+- その際、移動中のオブジェクトが別のオブジェクトに接近すると、"目に見える" 位置ガイドとして点線が表示され、これに基づいて各オブジェクトの整列を実行することができます。
 
-#### Using the instantaneous alignment tools
+#### 即時整列ツールを使用する
 
-The alignment tools in the toolbar and in the Align submenu of the Object menu allow you to quickly align selected objects.
+ツールバーの整列ツール、またはオブジェクトメニューの整列サブメニューを使用して、選択したオブジェクトを瞬時に揃えることができます。
 
 ![](../assets/en/FormEditor/alignmentMenu.png)
 
-When 4D aligns objects, it leaves one selected object in place and aligns the remaining objects to that one. This object is the “anchor.” It uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor. The figure below shows objects with no alignment, "aligned left", "aligned horizontally by centers", and "aligned right":
+4D がオブジェクトを揃える場合、選択オブジェクトのうち 1つを定位置に置いたまま、そのオブジェクトを基準に残りのオブジェクトを整列させます。 この基準オブジェクトが "アンカー" となります。 整列をおこなう方向で最も離れた位置にあるオブジェクトがアンカーとして使用され、他のオブジェクトはこのオブジェクトに合わせられます。 たとえば、一連のオブジェクトに対して右揃えを実行したい場合、一番右側に位置するオブジェクトがアンカーとして使用されます。 次の図は整列なし、左揃え、縦中央揃え、右揃えの状態を示しています:
 
 ![](../assets/en/FormEditor/alignmentTools.png)
 
-#### Using the alignment assistant
+#### 整列アシスタントを使用する
 
-The Alignment Assistant allows you to perform any type of alignment and/or distribution of objects.
+整列アシスタントを使用すると、オブジェクトに関するあらゆるタイプの整列や均等配置を実行することができます。
 
 ![](../assets/en/FormEditor/alignmentAssistant.png)
 
-To display this dialog box, select the objects you want to align then choose the **Alignment** command from the **Align** submenu in the **Object** menu or from the context menu of the editor.
+このダイアログボックスを表示するには、揃えたいオブジェクトを選択し、**オブジェクト** メニュー、またはエディターのコンテキストメニューの **整列** サブメニューから **整列...** コマンドを選択します。
 
-- In the “Left/Right Alignment” and/or “Top/Bottom Alignment” areas, click the icon that corresponds to the alignment you want to perform.<p>The example area displays the results of your selection.</p>
+- "左/右整列" や "上/下整列" エリアで、実行しようとする整列に対応する整列アイコンをクリックします。<p>見本エリアには、選択結果が表示されます。</p>
 
-- To perform an alignment that uses the standard anchor scheme, click **Preview** or **Apply**. In this case 4D uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor. OR:<p>To align objects to a specific object, select the **Align on** option and select the object to which you want the other objects to be aligned from the object list. In this case, the position of the reference object will not be altered.</p>
+- 標準のアンカー方式による整列を実行するには、**プレビュー** または **適用** をクリックします。 この場合、整列をおこなう方向で最も離れた位置にあるオブジェクトがアンカーとして使用され、他のオブジェクトはこのオブジェクトに合わせられます。 たとえば、一連のオブジェクトに対して右揃えを実行したい場合、一番右側に位置するオブジェクトがアンカーとして使用されます。 For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor.<p>To align objects to a specific object, select the **Align on** option and select the object to which you want the other objects to be aligned from the object list. この場合、基準オブジェクトの位置は変わりません。</p>
 
-You can preview the results of the alignment by clicking the **Preview** button. The objects are then aligned in the Form editor but since the dialog box does not go away, you can still cancel or apply the alignment.
-> This dialog box allows you to align and distribute objects in one operation. For more information on how to distribute objects, refer to [Distributing objects](#distributing-objects).
+**プレビュー** ボタンをクリックすると、整列の結果をプレビューすることができます。 するとフォームエディター上のオブジェクトは見かけ上整列しますが、ダイアログボックスが表示されたままなので、この整列のキャンセルや適用をおこなうことができます。
+> このダイアログボックスでは、整列と均等配置を合わせて実行することができます。 整列に関する詳細は [オブジェクトの整列](#オブジェクトの整列) を参照ください。
 
-#### Using the Magnetic Grid
+#### マグネティックグリッドを使用する
 
-The Form editor provides a virtual magnetic grid that can help you place and align objects in a form. Magnetic alignment of objects is based on their position in relation to each other. The magnetic grid can only be used when at least two objects are present in the form.
+フォームエディターには仮想的なマグネティックグリッド機能があります。 オブジェクトのマグネティック整列は、オブジェクト同士の相対位置に基づいておこなわれます。 マグネティックグリッドは、2つ以上のオブジェクトがフォーム上に存在する場合のみ使用可能です。
 
-This works as follows: When you move an object in the form, 4D indicates possible locations for this object based on noticeable alignments with other form objects. A noticeable alignment is established each time that:
+フォーム上のあるオブジェクトを移動する際、4D は他のフォームオブジェクトとの相対的な位置関係に基づき、このオブジェクトの位置候補を示します。 次のような場合に候補が示されます: 次のような場合に候補が示されます:
 
-- Horizontally, the edges or centers of two objects coincide,
-- Vertically, the edges of two objects coincide.
+- 水平方向に 2つのオブジェクトの端または中央が同じ位置になる場合。
+- 垂直方向に 2つのオブジェクトの端が同じ位置になる場合。
 
-When this happens, 4D places the object at the location and displays a red line indicating the noticeable alignment taken into account:
+この状況になると、4D はその位置にオブジェクトを配置し、そこが候補位置であることを示す赤いラインを表示します:
 
 ![](../assets/en/FormEditor/magneticGrid1.png)
 
-Concerning the distribution of objects, 4D proposes a distance based on interface standards. Like with magnetic alignment, red lines indicate the noticeable differences once they are reached.
+オブジェクトを均等配置する場合、4D はインターフェース標準に基づいてオブジェクト間の距離を提示します。 マグネティック整列と同様に、配置が決定した時点で、その間隔が赤いラインで表わされます。
 
 ![](../assets/en/FormEditor/magneticGrid2.png)
 
-This operation applies to all types of form objects. The Magnetic Grid can be enabled or disabled at any time using the **Magnetic Grid** command in the **Form** menu or in the editor context menu. It is also possible to set the activation of this feature by default on the **Preferences** > **Forms** page (**Activate auto alignment by default** option). You can manually activate or deactivate the magnetic grid when an object is selected by pressing the **Ctrl** (Windows) or **Control** (macOS) key .
-> The Magnetic Grid also influences the manual resizing of objects.
+この処理は、あらゆるタイプのフォームオブジェクトに対して適用されます。 **フォーム** メニューまたはエディターのコンテキストメニューの **マグネティックグリッド** コマンドを使用して、マグネティック機能をいつでも有効または無効に設定できます。 また、**環境設定** の **フォーム** ページにおいて、この機能をデフォルトで有効に設定しておくことも可能です (**デフォルトで自動揃えを有効にする** オプション)。 **Ctrl**キー (Windows) または **Control**キー (macOS) を押してオブジェクトを選択すると、手動でマグネティックグリッドが有効/無効に設定されます。
+> 複数のオブジェクトが重なっている場合、**Ctrl+Shift+クリック** / **Command+Shift+クリック** ショートカットを使用して、クリックするたびに下のレイヤーにあるオブジェクトを選択できます。
 
-### Distributing objects
+### オブジェクトの均等配置
 
-You can distribute objects so that they are set out with an equal amount of space between them. To do this, you can distribute objects using either the Distribute tools in the Tools palette or the Alignment Assistant. The latter allows you to align and distribute objects in one operation.
-> When the [Magnetic Grid](#using-the-magnetic-grid) is on, a visual guide is also provided for distribution when an object is moved manually.
+各オブジェクトが同じ間隔で配置されるように、オブジェクトを均等配置することができます。 これには、ツールパレットまたは整列アシスタントの均等配置ツールを用います。 整列アシスタントを使用すると、1回の操作でオブジェクトの整列や均等配置をおこなえます。
+> 入力順は、`FORM SET ENTRY ORDER` および `FORM GET ENTRY ORDER` コマンドを使用することでランタイムで変更することができます。
 
-To distribute objects with equal spacing:
+同じ間隔を空けてオブジェクトを配置するには:
 
-1. Select three or more objects and click the desired Distribute tool.
+1. 3つ以上のオブジェクトを選択し、希望する均等配置ツールをクリックします。
 
-2. In the toolbar, click on the distribution tool that corresponds to the distribution you want to apply.<p>![](../assets/en/FormEditor/distributionTool.png)</p> OR<p>Select a distribution menu command from the **Align** submenu in the **Object** menu or from the context menu of the editor.</p>4D distributes the objects accordingly. Objects are distributed using the distance to their centers and the largest distance between two consecutive objects is used as a reference.
+2. 適用したい均等配置に対応する整列ツールをツールバー上で選択します。<p>![](../assets/en/FormEditor/distributionTool.png)</p> または<p>Select a distribution menu command from the **Align** submenu in the **Object** menu or from the context menu of the editor.</p>4D は各オブジェクトを均等に配置します。 各オブジェクトの中心までの間隔、および隣接する 2つのオブジェクトの間隔のうち最も広い間隔が基準として用いられます。
 
-To distribute objects using the Align and Distribute dialog box:
+"整列と均等配置" ダイアログボックスを用いてオブジェクトを均等に配置するには:
 
-1. Select the objects you want to distribute.
+1. 均等配置したいオブジェクトを選択します。
 
-2. Choose the **Alignment** command from the **Align** submenu in the **Object** menu or from the context menu of the editor. The following dialog box appears:![](../assets/en/FormEditor/alignmentAssistant.png)
+2. **オブジェクト** メニュー、またはエディターのコンテキストメニューの **整列** サブメニューから **整列...** コマンドを選択します。 以下のダイアログボックスが表示されます:![](../assets/en/FormEditor/alignmentAssistant.png)
 
-3. In the Left/Right Alignment and/or Top/Bottom Alignment areas, click the standard distribution icon: ![](../assets/en/FormEditor/horizontalDistribution.png) <p>(Standard horizontal distribution icon)</p>The example area displays the results of your selection.
+3. "左/右整列" や "上/下整列" エリアで、標準の均等配置アイコンをクリックします: ![](../assets/en/FormEditor/horizontalDistribution.png) <p>(標準の横均等揃えアイコン)</p>見本エリアには、選択結果が表示されます。
 
-4. To perform a distribution that uses the standard scheme, click **Preview** or *Apply*.<p>In this case 4D will perform a standard distribution, so that the objects are set out with an equal amount of space between them.</p>OR:<p>To execute a specific distribution, select the **Distribute** option (for example if you want to distribute the objects based on the distance to their right side). This option acts like a switch. If the Distribute check box is selected, the icons located below it perform a different function:</p>
+4. 標準の均等配置を実行するには、**プレビュー** または *適用* をクリックします。<p>この場合、4D は標準の均等配置を実行し、オブジェクトは等間隔で配置されます。</p>For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor.<p>To execute a specific distribution, select the **Distribute** option (for example if you want to distribute the objects based on the distance to their right side). このオプションはスイッチのように機能します。 均等配置チェックボックスが選択されていると、このオプションの下にあるアイコンは異なる動作をおこないます:</p>
 
-- Horizontally, the icons correspond to the following distributions: evenly with respect to left sides, centers (hor.) and right sides of the selected objects.
-- Vertically, the icons correspond to the following distributions: evenly with respect to top edges, centers (vert.) and bottom edges of the selected objects.
+- 左/右整列の場合、各アイコンは次の均等配置に対応します: 選択オブジェクトの左辺、中央 (横)、右辺で均等に揃えます。
+- 上/下整列の場合、各アイコンは次の均等配置に対応します: 選択オブジェクトの上辺、中央 (縦)、下辺で均等に揃えます。
 
- You can preview the actual result of your settings by clicking on the **Preview** button: the operation is carried out in the Form editor but the dialog box stays in the foreground. You can then **Cancel** or **Apply** the modifications.
-> This dialog box lets you combine object alignment and distribution. For more information about alignment, refer to [Aligning objects](#aligning-objects).
+ **プレビュー** ボタンをクリックすると、この設定による結果をプレビューすることができます。 この表示はフォームエディター上で実行されますが、ダイアログボックスは前面に表示されたままです。 この後、変更の **キャンセル** または **適用** をおこなうことができます。
+> 整列アシスタントを使用すると、1回の操作でオブジェクトの整列や均等配置をおこなえます。 オブジェクトを均等配置する方法についての詳細は、[オブジェクトの均等配置](#オブジェクトの均等配置) を参照ください。
 
-### Layering objects
+### オブジェクトを重ねる
 
-You will sometimes have to rearrange objects that are obstructing your view of other objects in the form. For example, you may have a graphic that you want to appear behind the fields in a form. 4D provides four menu items, **Move to Back**, **Move to Front**, **Up One Level** and **Down One Level** that let you “layer” objects on the form. These layers also determine the default entry order (see Modifying data entry order). The figure below shows objects in front of and behind other objects:
+フォーム上で他のオブジェクトを隠しているオブジェクトの配置を調整する必要が生じることもあります。 たとえば、フォーム上のフィールドの背景にグラフィックを配置したい場合です。 4D には **前面へ**、**背面へ**、**一つ上のレベルへ**、**一つ下のレベルへ** という 4つのメニュー項目があり、これらのコマンドを使用してフォーム上のオブジェクトを "重ねる (レイヤー)" ことができます。 この重なりは、デフォルトの入力順も規定します (下の データの入力順 参照)。 次の図は、他のオブジェクトの前面/背面に置かれたオブジェクトを示しています:
 
 ![](../assets/en/FormEditor/layering.png)
 
-To move an object to another level, select it and choose:
+選択したオブジェクトのレベルを変更するには、以下のいずれかの作業をおこないます:
 
-- One of the **Move to Back**, **Move to Front**, **Up One Level** and **Down One Level** commands of the Object menu,
-- One of the commands in the **Level>** submenu in the context menu of the editor,
-- One of the commands associated with the level management button of the toolbar.
+- オブジェクトメニューから **前面へ**、**背面へ**、**レベルを上げる**、**レベルを下げる** のいずれかを選択します。
+- エディターのコンテキストメニューの **レベルに移動** サブメニュー内のコマンドのいずれかを選択します。
+- ツールバーのレベル管理ボタンに割り当てられたコマンドのいずれかを選択します。
 
 ![](../assets/en/FormEditor/level2.png)
-> When several objects are superimposed, the **Ctrl+Shift+click** / **Command+Shift+click** shortcut can be used to select each object successively by going down a layer with each click.
+> オブジェクトに対して大きすぎるフォントサイズがスタイルシートまたは JSON で定義されている場合、オブジェクトは自動的にフォントに合わせてレンダリングされますが、オブジェクトのサイズは変更されません。
 
-When ordering different levels, 4D always goes from the background to the foreground. As a result, the previous level moves the selection of objects one level towards the background. The next level moves the selection one level towards the foreground of the form.
+レベルの順序を考えるにあたって、4D は常に背面から全面へと進みます。 したがって、前・次で表現した場合、"前レベル" は 1つ背面のレベルのことになります。 "次レベルは" 1つ前面のレベルのことです。
 
-### Data entry order
+### データの入力順
 
-The data entry order is the order in which fields, subforms, and other active objects are selected as you hit the **Tab** or the **Carriage return** key in an input form. It is possible to move through the form in the opposite direction (reverse data entry order) by pressing the **Shift+Tab** or **Shift+Carriage** return keys.
+データ入力順とは、入力フォームで **Tab**キーや **改行**キーを押したときに、フィールドやサブフォーム、その他のアクティブオブジェクトが選択される順番のことです。 **Shift+Tab** や **Shift+改行**キーを押すことで、フォーム内を逆方向 (逆の入力順) に移動することもできます。
 
-> You can change the entry order at runtime using the `FORM SET ENTRY ORDER` and `FORM GET ENTRY ORDER` commands.
+> オブジェクトをコピーまたは複製すると、CSS参照 (あれば) と JSON値のみがコピーされます。
 
-Every object that supports the focusable property is included in the data entry order by default.
+フォーカス可プロパティをサポートするすべてのオブジェクトが、デフォルトでデータ入力順序に含まれます。
 
-Setting the entry order for a JSON form is done with the [`entryOrder`](properties_JSONref.md) property.
+JSONフォームの入力順序の設定は、[`entryOrder`](properties_JSONref.md) プロパティで行います。
 
-If you don’t specify a custom entry order, by default 4D uses the layering of the objects to determine the entry order in the direction “background towards foreground.” The standard entry order thus corresponds to the order in which the objects were created in the form.
+独自の入力順を指定しない場合、4D はオブジェクトの階層に従い、"背面から前面" へ向けてデフォルトの入力順を決定します。 したがって、標準の入力順はフォーム上でのオブジェクトの作成順になります。
 
-In some forms, a custom data entry order is needed. Below, for example, additional fields related to the address have been added after the creation of the form. The resulting standard entry order thus becomes illogical and forces the user to enter the information in an awkward manner:
+フォームでは度々、独自の入力順が必要になります。 たとえば、次の図ではフォームの作成後に、住所に関連するフィールドが追加されています。 この結果、標準の入力順が意味をなさなくなり、扱いづらい順番でデータを入力しなければなりません:
 
 ![](../assets/en/FormEditor/entryOrder1.png)
 
-In cases such as this, a custom data entry order allows you to enter the information in a more logical order:
+このようなケースでは、独自のデータ入力順を指定すると、より理にかなった順序でデータを入力できるようになります:
 
 ![](../assets/en/FormEditor/entryOrder2.png)
 
-#### Viewing and changing the data entry order
+#### データ入力順の表示と変更
 
-You can view the current entry order either using the “Entry order” shields, or by using the “Entry order” mode. However, you can only modify the entry order using the “Entry order” mode.
+"入力順" バッジまたは "入力順" モードを使用して、現在の入力順を表示することができます。 しかし、入力順を変更するには、"入力順" モードを使用しなければなりません。
 
-This paragraph describes viewing and modifying the entry order using the “Entry order” mode. For more information about viewing the entry order using shields, refer to [Using shields](#using-shields).
+この節では "入力順" モードを用いて、入力順の表示と変更をおこなう方法について説明します。 バッジを用いた入力順の表示についての詳細は、[バッジを使用する](#バッジを使用する) を参照ください。
 
-To view or change the entry order:
+入力順モードに切り替え、入力順を変更するには:
 
-1. Choose **Entry Order** from the **Form** menu or click on the Entry Order button in the toolbar of the window:<p>![](../assets/en/FormEditor/zOrder.png)</p>
+1. **フォーム** メニューから **入力順** を選択するか、ツールバーの入力順ボタンをクリックします:<p>![](../assets/en/FormEditor/zOrder.png)</p>
 
-    The pointer turns into an entry order pointer and 4D draws a line in the form showing the order in which it selects objects during data entry. Viewing and changing the data entry order are the only actions you can perform until you click any tool in the Tools palette.
+    ポインターが入力順ポインターに変わり、4D はフォーム上に線を引いて、データ入力時にオブジェクトが選択される順序を示します。 ツールパレット上の他のツールをクリックするまでは、入力順序の表示と変更操作しかおこなえません。
 
-2. To change the data entry order, position the pointer on an object in the form and, while holding down the mouse button, drag the pointer to the object you want next in the data entry order.<p>![](../assets/en/FormEditor/entryOrder3.png)</p>4D will adjust the entry order accordingly.
+2. データ入力順を変更するには、フォームオブジェクト上にポインターを置き、マウスボタンを押したまま、次の入力順に設定したいオブジェクトまでポインターをドラッグします。<p>![](../assets/en/FormEditor/entryOrder3.png)</p>これに応じて、4D はデータ入力順を調整します。
 
-3. Repeat step 2 as many times as necessary to set the data entry order you want.
+3. 入力順を設定したいだけ、ステップ2 を繰り返します。
 
-4. When you are satisfied with the data entry order, click any unselected tool in the toolbar or choose **Entry Order** from the **Form** menu. 4D returns to normal operation of the Form editor.
+4. 入力順の設定が終了したら、ツールバーの他のツールをクリックするか、**フォーム** メニューから **入力順** を選択します。 4Dは、フォームエディターの通常操作に戻ります。
 
-> Only the entry order of the current page of the form is displayed. If the form contains enterable objects on page 0 or coming from an inherited form, the default entry order is as follows: Objects from page 0 of the inherited form > Objects from page 1 of the inherited form > Objects from page 0 of the open form > Objects from the current page of the open form.
+> フォームのカレントページの入力順だけが表示されます。 フォームのページ0 や継承フォームに入力可オブジェクトが含まれている場合、デフォルトの入力順は次のようになります: 継承フォームのページ0 のオブジェクト→ 継承フォームのページ1 のオブジェクト→ 開かれているフォームのページ0 のオブジェクト→ 開かれているフォームのカレントページのオブジェクト。
 
-#### Using a data entry group
+#### データ入力グループを使用する
 
-While you are changing the data entry order, you can select a group of objects in a form so that the standard data entry order applies to the objects within the group. This allows you to easily set the data entry order on forms in which fields are separated into groups or columns.
+入力順序を変更する際に、フォーム上のオブジェクトグループを選択し、そのグループ内のオブジェクトに対して標準の入力順序を適用することも可能です。 これにより、フィールドがグループや列に分かれているフォーム上で、データ入力順序を簡単に設定することができます。
 
-To create a data entry group:
+データ入力グループを作成するには:
 
-1. Choose **Entry Order** from the *Form* menu or click the  button in the toolbar.
-2. Draw a marquee around the objects you want to group for data entry.
+1. **フォーム** メニューから *入力順* を選択するか、ツールバーの入力順ボタンをクリックします。
+2. データ入力用のグループに指定したいオブジェクトの周囲をマーキーで囲みます。
 
-When you release the mouse button, the objects enclosed or touched by the rectangle follow the standard data entry order. The data entry order for the remaining objects adjusts as necessary.
+マウスボタンを放すと、マーキーに囲まれているオブジェクトや、その矩形に接しているオブジェクトが標準入力順に設定されます。 それ以外のオブジェクトのデータ入力順は、必要に応じて調整されます。
 
-#### Excluding an object from the entry order
+#### フィールドを入力順から除外する
 
-By default, all objects that support the focusable property are included in the entry order. To exclude an object from the entry order:
+デフォルトでは、すべてのフォーカス可オブジェクトが入力順に組み込まれています。 任意のオブジェクトを入力順から除外するには:
 
-1. Select the Entry order mode, then
+1. 入力順モードに切り替えます。
 
-2. **shift-click** on the object
+2. オブジェクト上で **Shift+クリック** します。<br /> または
 
-3. **right-click** on the object and select **Remove from entry order** option from the context menu
+3. オブジェクト上で右クリックし、コンテキストメニューから **入力順から削除する** を選択します。
 
-## CSS Preview
+## CSSプレビュー
 
-The Form editor allows you to view your forms with or without applied CSS values.
+フォームエディターでは、CSSの値を適用した状態、または適用しない状態でフォームを表示することができます。
 
-When [style sheets](createStylesheet.md) have been defined, forms (including inherited forms and subforms) are opened in the CSS Preview mode for your operating system by default.
+[スタイルシート](createStylesheet.md) が定義されている場合、フォーム (継承フォームとサブフォームを含む) はデフォルトで、現在の OS の CSSプレビューモードで開かれます。
 
-### Selecting CSS Preview Mode
+### CSSプレビューモードの選択
 
-The Form editor toolbar provides a CSS button for viewing styled objects:
+フォームエディターのツールバーには、スタイル付きオブジェクトを表示するための CSSボタンがあります:
 
 ![](../assets/en/FormEditor/cssToolbar.png)
 
-Select one of the following preview modes from the menu:
+メニューから、以下のプレビューモードのいずれかを選択します:
 
-| Toolbar Icon                            | CSS Preview Mode | Description                                                                                                   |
-| --------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------- |
-| ![](../assets/en/FormEditor/cssNo.png)  | None             | No CSS values are applied in the form and no CSS values or icons displayed in the Property List.              |
-| ![](../assets/en/FormEditor/cssWin.png) | Windows          | CSS values for Windows platform are applied in the form. CSS values and icons displayed in the Property List. |
-| ![](../assets/en/FormEditor/cssMac.png) | macOS            | CSS values for macOS platform are applied in the form. CSS values and icons displayed in the Property List.   |
-> If a font size too large for an object is defined in a style sheet or JSON, the object will automatically be rendered to accommodate the font, however the size of the object will not be changed.
+| ツールバーアイコン                               | CSSプレビューモード | 詳細                                                               |
+| --------------------------------------- | ----------- | ---------------------------------------------------------------- |
+| ![](../assets/en/FormEditor/cssNo.png)  | なし          | CSS の値はフォームに適用されず、CSS の値やアイコンはプロパティリストに表示されません。                  |
+| ![](../assets/en/FormEditor/cssWin.png) | Windows     | Windowsプラットフォーム用の CSS値がフォームに適用されます。 プロパティリストに CSSの値とアイコンが表示されます。 |
+| ![](../assets/en/FormEditor/cssMac.png) | macOS       | macOSプラットフォーム用の CSS値がフォームに適用されます。 プロパティリストに CSSの値とアイコンが表示されます。   |
+> アプリケーション環境設定のフォームページで、デフォルトで表示するバッジを設定できます。
 
-The CSS preview mode reflects the priority order applied to style sheets vs JSON attributes as defined in the [JSON vs Style Sheet](stylesheets.html#json-vs-style-sheet) section.
+CSSプレビューモードは、[JSON vs スタイルシート](stylesheets.html#json-vs-スタイルシート) の項で定義した、スタイルシートと JSON属性に適用される優先順位を反映します。
 
-Once a CSS preview mode is selected, objects are automatically displayed with the styles defined in a style sheet (if any).
-> When copying or duplicating objects, only the CSS references (if any) and the JSON values are copied.
+CSSプレビューモードを選択すると、オブジェクトは自動的にスタイルシートで定義されたスタイル (あれば) で表示されます。
+> 選択したオブジェクトは異なるビューに属していることがあります。
 
-### CSS support in the Property List
+### プロパティリストの CSSサポート
 
-In CSS Preview mode, if the value of an attribute has been defined in a style sheet, the attribute's name will appear with a CSS icon displayed next to it in the Property List. For example, the attribute values defined in this style sheet:
+CSSプレビューモードでは、スタイルシートで属性値が定義されている場合、その属性名が表示され、その横に CSSアイコンが表示されます。 たとえば、このスタイルシートで定義されている属性値は:
 
 ```4d
 .myButton {
@@ -433,297 +434,297 @@ stroke: #800080;
 }
 ```
 
-are displayed with a CSS icon in the Property List:
+プロパティリストに CSSアイコンとともに表示されます:
 
 ![](../assets/en/FormEditor/cssPpropList.png)
 
-An attribute value defined in a style sheet can be overridden in the JSON form description (except if the CSS includes the `!important` declaration, see below). In this case, the Property List displays the JSON form value in **bold**. You can reset the value to its style sheet definition with the **Ctrl + click** (Windows) or **Command + click** (macOs) shortcuts.
-> If an attribute has been defined with the `!important` declaration for a group, an object within a group, or any object within a selection of multiple objects, that attribute value is locked and cannot be changed in the Property List.
+スタイルシートで定義された属性値は、JSONフォームの記述でオーバーライドすることができます (ただし、CSS に `!important` 宣言が含まれている場合は除きます。 後述参照)。 この場合、プロパティリストでは、JSONフォームの値が **太字** で表示されます。 **Ctrl+クリック** (Windows) または **Command+クリック** (macOs) のショートカットで、値をスタイルシートの定義に戻すことができます。
+> [カレントビュー](#ビューを使い始める前に) は太字で表示されます。
 
-#### Property List CSS Icons
+#### プロパティリスト CSSアイコン
 
-| Icon                                          | Description                                                                                                                                                        |
-| --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| ![](../assets/en/FormEditor/cssIcon.png)      | Indicates that an attribute value has been defined in a style sheet                                                                                                |
-| ![](../assets/en/FormEditor/cssImportant.png) | Indicates that an attribute value has been defined in a style sheet with the `!important` declaration                                                              |
-| ![](../assets/en/FormEditor/cssIconMixed.png) | Displayed when an attribute value defined in a style sheet for at least one item in a group or a selection of multiple objects is different from the other objects |
+| アイコン                                          | 詳細                                                                                   |
+| --------------------------------------------- | ------------------------------------------------------------------------------------ |
+| ![](../assets/en/FormEditor/cssIcon.png)      | 属性値がスタイルシートで定義されていることを示します                                                           |
+| ![](../assets/en/FormEditor/cssImportant.png) | 属性値がスタイルシートで `!important` 宣言とともに定義されていることを示します                                       |
+| ![](../assets/en/FormEditor/cssIconMixed.png) | グループまたは複数のオブジェクトの選択項目のうち、少なくとも 1つのオブジェクトについて、スタイルシートで定義された属性値が他のオブジェクトと異なる場合に表示されます。 |
 
-## List Box Builder
+## リストボックスビルダー
 
-You can create new entity selection list boxes quickly with the **List box builder**. The new list box can be used immediately or it can be edited via the Form Editor.
+**リストボックスビルダー** を使用して、エンティティセレクション型リストボックスを素早く作成することができます。 作成したリストボックスは、すぐに使用することも、フォームエディターで編集することもできます。
 
-The List box builder lets you create and fill entity selection list boxes in a few simple operations.
+リストボックスビルダーでは、いくつかの簡単な操作で、エンティティセレクション型リストボックスの作成と入力ができます。
 
-### Using the List Box Builder
+### リストボックスビルダーを使用する
 
-1. In the Form Editor toolbar, click on the List box builder icon:
+1. フォームエディターツールバーのリストボックスビルダーアイコンをクリックします:
 
  ![](../assets/en/FormEditor/listboxBuilderIcon.png)
 
- The List box builder is displayed:
+ リストボックスビルダーが表示されます:
 
  ![](../assets/en/FormEditor/listboxBuilder.png)
 
-2. Select a table from the **Table** dropdown list:
+2. **テーブル** ドロップダウンリストからテーブルを選択します:
 
  ![](../assets/en/FormEditor/listboxBuilderTable.png)
 
-3. Select the fields for the list box in the **Fields** area:
+3. **フィールド** エリアで、リストボックスに表示するフィールドを選択します:
 
  ![](../assets/en/FormEditor/listboxBuilderFields.png)
 
- By default, all fields are selected. You can select or deselect fields individually or use **Ctrl+click** (Windows) or **Cmd+click** (macOS) to select or deselect them all at once.
+ デフォルトでは、すべてのフィールドが選択されています。 フィールドは個別に選択/選択解除するか、**Ctrl+クリック** (Windows) または **Cmd+クリック** (macOS) で一括に選択/選択解除することができます。
 
- You can change the order of the fields by dragging them and dropping them.
+ また、フィールドをドラッグ＆ドロップすることで、フィールドの順番を変更することができます。
 
-4. The expression to fill the list box's rows from the entity selection is prefilled:
+4. リストボックスをエンティティセレクションと紐づけるための式があらかじめ入力されています:
 
  ![](../assets/en/FormEditor/listboxBuilderExpression.png)
 
- This expression can be changed if necessary.
+ この式は必要に応じて変更できます。
 
-5. Clicking on the **Copy** button will copy the expression for loading all records into memory:
+5. **コピー** ボタンをクリックすると、全レコードをメモリに読み込む式が初期化用にコピーされます。
 
  ![](../assets/en/FormEditor/listboxBuilderCode.png)
 
-6. Click the the **Build widget** button to create the list box.
+6. **ウィジェットをビルド** ボタンをクリックすると、リストボックスが作成されます。
 
  ![](../assets/en/FormEditor/listboxBuilderBuild.png)
 
-The final list box:
+結果のリストボックスです:
 
 ![](../assets/en/FormEditor/listboxBuilderListbox.png)
 
-## Shields
+## バッジ
 
-The 4D Form Editor uses shields to make viewing object properties easier. You can find them on the form toolbar:
+フォームエディターではバッジを使用してオブジェクトプロパティの表示を容易にできます。 バッジは、フォームのツールバーで選択します:
 
 ![](../assets/en/FormEditor/shields.png)
 
-This function works as follows: Each shield is associated with a property (for example, **Views**, which means the object “is in the current view”). When you activate a shield, 4D displays a small icon (shield) in the upper left of each object of the form where the property is applied.
+この機能は次のように動作します: 各バッジは特定のプロパティに対応しています (たとえば、**カレントビュー** は、当該オブジェクトがカレントビュー内にあることを示します)。 バッジを有効にすると、4D はバッジとして選択されたプロパティが割り当てられているフォームオブジェクトの左上に小さなアイコン (バッジ) を表示します。
 
 ![](../assets/en/FormEditor/shield.png)
 
-### Using shields
+### バッジを使用する
 
-To activate a shield, click the *Shield* icon from the toolbar until the desired shield is selected. You can also click on the right side of the button and select the type of shield to display directly in the associated menu:
+バッジを有効にするには、希望するバッジが選択されるまでツールバーの *バッジ* ボタンをクリックします。 また、ボタンの右側をクリックして表示されるメニューから、バッジの種類を直接選択することもできます。
 
-If you don't want to display shields, select **No Shields** in the selection menu.
-> You can set which shields to display by default on the Forms Page of the application Preferences.
+バッジを表示したくない場合は、**バッジなし** を選択します。
+> [カレントビュー](#ビューを使い始める前に) は非表示にできません。
 
-### Shield descriptions
+### 各バッジの説明
 
-Here is a description of each type of shield:
+各バッジの説明は以下の通りです:
 
-| Icon                                            | Name                            | Is displayed ...                                                                                                                     |
-| ----------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| ![](../assets/en/FormEditor/objectMethod.png)   | Object Method                   | For objects with an associated object method                                                                                         |
-| ![](../assets/en/FormEditor/standardAction.png) | Standard Action                 | For objects with an associated standard action                                                                                       |
-| ![](../assets/en/FormEditor/resizing.png)       | Resizing                        | For objects with at least one resizing property, indicates the combination of current properties                                     |
-| ![](../assets/en/FormEditor/entryOrder.png)     | Entry Order                     | For enterable objects, indicates the number of entry order                                                                           |
-| ![](../assets/en/FormEditor/viewNumber.png)     | Current View                    | For all objects in the current view                                                                                                  |
-| ![](../assets/en/FormEditor/cssShield.png)      | [Style Sheet](stylesheets.html) | For objects with one or more attribute values overridden by a style sheet.                                                           |
-| ![](../assets/en/FormEditor/filter.png)         | Filter                          | For enterable objects with an associated entry filter                                                                                |
-| ![](../assets/en/FormEditor/helpTip.png)        | Help Tip                        | For objects with an associated tip                                                                                                   |
-| ![](../assets/en/FormEditor/localized.png)      | Localized                       | For objects whose label comes from a reference (label beginning with “:”). The reference can be of the resource (STR#) or XLIFF type |
-| ![](../assets/en/FormEditor/noShields.png)      | No Shields                      | No shields appear                                                                                                                    |
+| アイコン                                            | 名称                          | 表示                                                             |
+| ----------------------------------------------- | --------------------------- | -------------------------------------------------------------- |
+| ![](../assets/en/FormEditor/objectMethod.png)   | オブジェクトメソッド                  | オブジェクトメソッドが割り当てられたオブジェクト                                       |
+| ![](../assets/en/FormEditor/standardAction.png) | 標準アクション                     | 標準アクションが割り当てられたオブジェクト                                          |
+| ![](../assets/en/FormEditor/resizing.png)       | リサイズ                        | リサイズプロパティが 1つ以上割り当てられたオブジェクトについて、カレントプロパティの組み合わせを表します          |
+| ![](../assets/en/FormEditor/entryOrder.png)     | 入力順                         | 入力可能なオブジェクトの入力順を表示します                                          |
+| ![](../assets/en/FormEditor/viewNumber.png)     | カレントビュー                     | カレントビュー内にあるオブジェクト                                              |
+| ![](../assets/en/FormEditor/cssShield.png)      | [スタイルシート](stylesheets.html) | 1つ以上の属性値がスタイルシートにより上書きされたオブジェクト                                |
+| ![](../assets/en/FormEditor/filter.png)         | フィルター                       | 入力フィルターが割り当てられた入力可オブジェクト                                       |
+| ![](../assets/en/FormEditor/helpTip.png)        | ヘルプTips                     | ヘルプTips が割り当てられたオブジェクト                                         |
+| ![](../assets/en/FormEditor/localized.png)      | ローカライズ済み                    | ラベルに参照が割り当てられたオブジェクト (“:”で始まるラベル)。 参照はリソース (STR#) または XLIFFタイプ |
+| ![](../assets/en/FormEditor/noShields.png)      | バッジなし                       | バッジは表示されません                                                    |
 
-## Views
+## オブジェクトビュー
 
-The 4D Form Editor enables you to build complex forms by distributing form objects among separate views that can then be hidden or shown as needed.
+フォームエディターでは、必要に応じて表示/非表示が可能な異なるビューにそれぞれオブジェクトを配置することで、複雑なフォーム作成が容易になります。
 
-For example, you can distribute objects according to type (fields, variables, static objects, etc.). Any type of form object, including subforms and plug-in areas, can be included in views.
+たとえば、タイプごと (フィールド、変数、スタティックオブジェクト等) にオブジェクトを異なるビューに分けることができます。 サブフォームやプラグインエリアを含むすべてのタイプのオブジェクトをビューに含めることができます。
 
-There is no limit on the number of views per form. You can create as many different views as you need. Additionally, each view can be displayed, hidden, and/or locked.
+フォームごとのビューの数に制限はありません。 必要なだけ、ビューを作成することができます。 それぞれのビューごとに、表示/非表示とロックが切り換えられます。
 
-View management is handled via the View palette.
+ビューの管理はビューパレットを使用しておこないます。
 
 ![](../assets/en/FormEditor/viewEditor.png)
 
-### Accessing the View palette
+### ビューパレットの表示
 
-There are three ways to access the View palette:
+ビューパレットを表示するには、次の 3つの方法があります:
 
-- **Toolbar**: Click on the Views icon in the Form Editor toolbar. (This icon appears gray when at least one object belongs to a view other than the default view.)
+- **ツールバー**: フォームエディターのツールバーにあるビューボタンをクリックする。 (1つ以上のオブジェクトがデフォルトビュー以外のビューに属している場合、このアイコンは塗り潰し表示されます)。
 
- |                    Default view only                    |                 With additional views                 |
- |:-------------------------------------------------------:|:-----------------------------------------------------:|
- | ![](../assets/en/FormEditor/icon.png "No views in use") | ![](../assets/en/FormEditor/icon2.png "Views in use") |
+ |                    デフォルトビューのみ                    |                     追加のビューあり                      |
+ |:------------------------------------------------:|:-------------------------------------------------:|
+ | ![](../assets/en/FormEditor/icon.png "ビューの使用なし") | ![](../assets/en/FormEditor/icon2.png "ビューの使用あり") |
 
-- **Context menu** (form or object): Right-click anywhere in the Form Editor or an object, and select **Current View**
+- **コンテキストメニュー** (フォームまたはオブジェクト): フォームエディターまたはオブジェクト上で右クリックし、**カレントビュー** を選択する。
 
  ![](../assets/en/FormEditor/contextMenu.png)
 
-The current view is indicated with a check mark (*e.g.*, "Work Address" in the image above)
+選択中のビューにはチェックマークが付いています (*例*: 上の画像では "Work Address" ビューが選択中です)
 
-- **Form menu**: Click on the **Form** menu and select **View List**
+- **フォームメニュー**: **フォーム** メニューから **ビューリスト** を選択する。
 
 ![](../assets/en/FormEditor/formMenu.png)
 
-### Before you begin
+### ビューを使い始める前に
 
-Here are a few important things to know before you start working with views:
+ビューを使用する前に知っておくべき重要なことをいくつか紹介します:
 
-- **Context of use**: Views are a purely graphic tool which can only be used in the Form Editor; you cannot access views programmatically or in the Application environment.
+- **利用のコンテキスト**: ビューは純粋に表示ツールであり、フォームエディター上のみ効果があります。 プログラムからビューにアクセスしたり、アプリケーションモードで使用したりすることはできません。
 
-- **Views and pages**: Objects of the same view can belong to different form pages; only objects of the current page (and of page 0 if it is visible) can be displayed, regardless of the view configuration.
+- 異なるビューに属するオブジェクトをグループ化することはできず、カレントビューに属するオブジェクトのみをグループ化することができます ([オブジェクトビュー](#オブジェクトビュー) 参照)。
 
-- **Views and levels**: Views are independent of object levels; there is no display hierarchy among different views.
+- **ビューとレベル**: ビューはオブジェクトレベルから独立しています。 異なるビューの間で表示上の階層はありません。
 
-- **Views and groups**: Only objects belonging to the current view can be grouped.
+- **ビューとグループ**: カレントビューに属するオブジェクト同士のみをグループ化できます。
 
-- **Current and Default** views: The Default view is the first view of a form and cannot be deleted; the Current view is the view that is being edited and the name is displayed in bold text.
+- **カレント/デフォルトビュー**: デフォルトビューはフォームの最初のビューで、削除することはできません。 カレントビューは編集中のビューで、名前が太字で表示されます。
 
-### Managing views
+### ビュー管理
 
-#### Creating views
+#### ビューの作成
 
-Any object created in a form is placed in the first view ("View 1") of the form. The first view is **always** the default view, indicated by (Default) after the name. The view's name can be changed (see [Renaming views](#renaming-views)), however it remains the default view.
+フォーム内で作成されたオブジェクトは、そのフォームの最初のビュー ("View 1") に配置されます。 最初のビューは **常に** デフォルトビューで、名前の後に (Default) と表示されます。 このビューの名前は変更することができますが ([ビューの名称変更](#ビューの名称変更) 参照)、デフォルトビューであることに変わりはありません。
 
 ![](../assets/en/FormEditor/createView.png)
 
-There are two ways to add additional views:
+ビューを追加するには 2つの方法があります。
 
-- Click on the **Add a new view** button at the bottom of the View palette:
+- ビューパレットの下部にある **新しいビューを追加** ボタンをクリックする。
 
 ![](../assets/en/FormEditor/addView.png)
 
-- Right-click on an existing view and select **Insert view**:
+- 既存のビューを右クリックして **ビューを追加** を選択する:
 
 ![](../assets/en/FormEditor/addView2.png)
 
-There is no limitation on the number of views.
+ビューの数に制限はありません。
 
-#### Renaming views
+#### ビューの名称変更
 
-By default views are named as "View" + the view number, however you can change these names to improve readability and better suit your needs.
+デフォルトでは、ビューの名前は "View" + ビュー番号となっていますが、可読性のためまたは必要性に応じて、これらの名前を変更することができます。
 
-To rename a view, you can use either:
+ビューを削除するには、以下のいずれかの方法があります:
 
-- Double-click directly on the view name (the selected view in this case). The name then becomes editable:
+- ビュー名を直接ダブルクリックする (ビューが選択されます)。 すると、名前が編集可能になります:
 
  ![](../assets/en/FormEditor/rename.png)
 
-- Right-click on the view name. The name then becomes editable:
+- ビューの名前を右クリックする。 すると、名前が編集可能になります:
 
  ![](../assets/en/FormEditor/rename2.png)
 
-#### Reordering views
+#### ビューの並べ替え
 
-You can change the display order of views by dragging/dropping them within the View palette.
+ビューパレット内のビューをドラッグ＆ドロップすることで、ビューの表示順を変更することができます。
 
-Note that the Default view does not change:
+ただし、デフォルトのビューは変更されません:
 
 ![](../assets/en/FormEditor/reorderView.png)
 
-#### Deleting views
+#### ビューの削除
 
-To rename a view, you can use either:
+ビューを削除するには、以下のいずれかの方法があります:
 
-- Click on the **Delete the selected view** button at the bottom of the View palette:
+- ビューパレットの下部にある **選択したビューを削除** ボタンをクリックする。
 
  ![](../assets/en/FormEditor/deleteView.png)
 
-- Right-click on the view name, and select **Delete View**:
+- 既存のビューを右クリックして **ビューを削除** を選択する:
 
  ![](../assets/en/FormEditor/deleteView2.png)
-> If a view is deleted, any objects in it are automatically moved to the Default view.
+> [カレントビュー](#ビューを使い始める前に) はロックできません。
 
-### Using views
+### ビューを使用する
 
-Once views are created, you can use the View palette to:
+ビューを作成したら、ビューパレットを使用して以下のことがおこなえます:
 
-- Add object to views,
-- Move objects from one view to another,
-- Select all objects of the same view in a single click,
-- Display or hide objects for each view,
-- Lock the objects of a view.
+- ビューにオブジェクトを追加する。
+- オブジェクトを他のビューに移動する。
+- 同じビュー内の全オブジェクトを 1クリックで選択する。
+- ビューごとに表示/非表示を切り替える。
+- ビューのオブジェクトをロックする。
 
-#### Adding objects to views
+#### ビューにオブジェクトを追加する
 
-An object can only belong to a single view.
+1つのオブジェクトは、1つのビューにのみ属することができます。
 
-To create an object in another view, simply select the view in the View palette (prior to creating the object) by clicking its name (an Edit icon is displayed for the [Current view](#before-you-begin) and the name appears in bold text):
+他のビューにオブジェクトを作成するには、ビューパレットで目的のビューをクリックし、あらかじめ選択しておきます ([カレントビュー](#ビューを使い始める前に) に編集アイコンが表示され、名前が太字で表示されます)。
 
 ![](../assets/en/FormEditor/addObject.png)
 
-#### Moving objects between views
+#### ビュー間のオブジェクト移動
 
-It's also possible to move one or more objects from one view to another. In the form, select the object(s) whose view you wish to change. The view list indicates, using a symbol, the view to which the selection belongs:
+1つ以上のオブジェクトを他のビューに移動することもできます。 これをおこなうには、ビューを変更したいオブジェクトをフォーム上で選択します。 それらのオブジェクトが属するビューが、ビューリスト上に記号で示されます:
 
 ![](../assets/en/FormEditor/symbol.png)
-> The selection can contain several objects belonging to different views.
+> 選択したオブジェクトは異なるビューに属していることがあります。
 
-Simply select the destination view, right-click, and select **Move to**:
+次に移動先のビューを選択し、右クリックして **移行先** を選択します。
 
 ![](../assets/en/FormEditor/moveObject.png)
 
-OR
+または
 
-Select the destination view of the selection and click **Move to** button at the bottom of the View palette:
+次に移動先のビューを選択し、ビューパレットの下部にある **選択された全てのオブジェクトをカレントのビューに移動** ボタンをクリックします。
 
 ![](../assets/en/FormEditor/moveObject3.png)
 
-The selection is then placed in the new view:
+選択されているオブジェクトは新しいビューに移動されます:
 
 ![](../assets/en/FormEditor/objNewView.png)
 
-You can also move an object to another view via the object's context menu. Right-click on the object, select **Move to view**, and select a view from the list of available views:
+また、オブジェクトのコンテキストメニューから、オブジェクトを別のビューに移動することもできます。 オブジェクトを右クリックして **ビューに移動** を選択し、利用可能なビューのリストから移動先を選択します。
 
 ![](../assets/en/FormEditor/moveObject2.png)
-> The [Current view](#before-you-begin) is shown in bold text.
+> [カレントビュー](#ビューを使い始める前に) は太字で表示されます。
 
-#### Select all objects of a view
+#### ビューの全オブジェクトを選択する
 
-You can select all objects belong to the same view in the current page of the form. This function is useful for applying global changes to a set of objects.
+フォームのカレントページ上で、同じビューに属するすべてのオブジェクトを選択できます。 一連のオブジェクトに同じ変更を適用する場合に、この機能は便利です。
 
-To do this, right-click on the view in which you wish to select all the objects, click on **Select All**:
+これをおこなうにはビュー上で右クリックし、**ビュー内の全オブジェクトを選択** をクリックします:
 
 ![](../assets/en/FormEditor/selectAll.png)
 
-You can also use the button at the bottom of the View palette:
+ビューパレットの下部にある **カレントビューの全てのオブジェクトを選択** ボタンを使用することもできます。
 
 ![](../assets/en/FormEditor/selectAll2.png)
 
-#### Show or hide objects of a view
+#### ビューのオブジェクトを表示/非表示にする
 
-You can show or hide objects belonging to a view at any time in the form's current page. This way you can focus on certain objects when editing the form, for example.
+フォームのカレントページ上で、ビューに属するオブジェクトの表示/非表示を切り替えることができます。 この方法で、フォームの特定オブジェクトに集中して操作することができます。
 
-By default, all views are shown, as indicated by the *Show/Hide* icon:
+デフォルトですべてのビューが表示されていて、ビューごとの *表示／非表示* アイコンで示されています:
 
 ![](../assets/en/FormEditor/showHide.png)
 
-To hide a view, click the *Show/Hide* icon. It is then dimmed and objects of the corresponding view are no longer shown in the form:
+ビューを隠すにはこのアイコンをクリックします。 アイコンがグレーになり、そのビューに属するオブジェクトが非表示となります:
 
 ![](../assets/en/FormEditor/hidden.png)
-> The [Current view](#before-you-begin) cannot be hidden.
+> [カレントビュー](#ビューを使い始める前に) は非表示にできません。
 
-To show a view that is hidden, simply select it or click on the *Show/Hide* icon for that view.
+非表示のビューを表示にするには、ビューを選択するか、*表示/非表示* アイコンをクリックします。
 
-#### Locking objects of a view
+#### ビューのオブジェクトをロックする
 
-You can lock the objects of a view. This prevents them from being selected, changed, or deleted from the form. Once locked, an object cannot be selected by a click, a rectangle, or the **Select Similar Objects** command of the context menu. This function is useful for preventing handling errors.
+ビューのオブジェクトをロックすることができます。 ロックされたオブジェクトは選択・変更・削除できなくなります。 また、クリックやマウスドラッグ、**同じ種類のオブジェクトを選択** コマンドで選択することもできません。 この機能は、操作ミスを防ぐのに役立ちます。
 
-By default, all views are unlocked, as indicated by the *Lock/Unlock* icon next to each view:
+デフォルトでは、すべてのビューがロックされていない状態です。 これは、ビューごとの *ロック* アイコンで示されています:
 
 ![](../assets/en/FormEditor/lockUnlock.png)
 
-To lock the objects of a view, click the *Lock/Unlock* icon. The padlock is shut, which means that the view is now locked:
+ビューをロックするにはこのアイコンをクリックします。 南京錠が閉まり、ビューがロックされます:
 
 ![](../assets/en/FormEditor/locked.png)
-> The [Current view](#before-you-begin) cannot be locked.
+> [カレントビュー](#ビューを使い始める前に) はロックできません。
 
-To unlock a view that is locked, simply select it or click on the *Lock/Unlock* icon for that view.
+ビューのロックを解除するには、ビューを選択するか、*ロック* アイコンをクリックします。
 
-## Zoom
+## 拡大
 
-You can zoom in the current form. Switch to “Zoom” mode by clicking on the magnifying glass icon or clicking directly on the desired percentage bar (50%, 100%, 200%, 400% and 800%):
+カレントフォームを拡大/縮小表示することができます。 これをおこなうにはツールバーの虫眼鏡をクリックするか、拡大率を直接クリックします。拡大/縮小率は 50%, 100%, 200%, 400% そして 800%です。
 
 ![](../assets/en/FormEditor/zoom.png)
 
-- When you click on the magnifying glass, the cursor changes into one. You can then click in the form to increase the display or hold down Shift and click to reduce the display percentage.
-- When you click on a percentage bar, the display is immediately modified.
+- 虫眼鏡ボタンをクリックすると、カーソルも虫眼鏡に変わります。 フォーム中をクリックすれば拡大表示され、Shiftキーを押しながらクリックすれば縮小表示されます。
+- 拡大率バーをクリックすると、即座に表示が変更されます。
 
-In Zoom mode, all Form editor functions remain available(*).
+拡大/縮小表示中もフォームエディターの機能は利用できます (*)。
 
-(*) For technical reasons, it is not possible to select list box elements (headers, columns, footers) when the Form editor is in Zoom mode.
+(*) 技術的な理由から、フォームエディターがズームモードの時にはリストボックスの要素 (ヘッダー、カラム、フッター) を選択することはできません。

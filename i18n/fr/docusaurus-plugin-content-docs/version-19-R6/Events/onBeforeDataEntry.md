@@ -1,20 +1,20 @@
 ---
 id: onBeforeDataEntry
-title: On Before Data Entry
+title: Sur avant saisie
 ---
 
-| Code | Can be called by                                                                                                  | Definition                                         |
-| ---- | ----------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| 41   | [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A list box cell is about to change to editing mode |
+| Code | Peut être appelé par                                                                                                  | Définition                                                           |
+| ---- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
+| 41   | [List Box](FormObjects/listbox_overview.md) - [Colonne de List Box](FormObjects/listbox_overview.md#list-box-columns) | Une cellule de list box est sur le point de passer en mode d'édition |
 
 
 ## Description
 
-This event is generated just before a cell in the list box is edited (before the entry cursor is displayed). This event allows the developer, for example, to display a different text depending on whether the user is in the display or edit mode.
+Cet événement est généré juste avant la modification d'une cellule de list box (avant l'affichage du curseur d'entrée). Cet événement permet par exemple au développeur d'afficher un texte différent selon le mode de l'utilisateur (mode affichage ou mode édition).
 
-When the cursor arrives in the cell, the `On Before Data Entry` event is generated in the list box or column method.
+Lorsque le curseur arrive dans la cellule, l'événement `On Before Data Entry` est généré dans la list box ou la méthode de la colonne.
 
-- If, in the context of this event, $0 is set to -1, the cell is considered as not enterable. If the event was generated after **Tab** or **Shift+Tab** was pressed, the focus goes to either the next cell or the previous one, respectively.
-- If $0 is not -1 (by default $0 is 0), the cell is enterable and switches to editing mode.
+- Si, dans le contexte de cet événement, $0 est défini sur -1, la cellule est considérée comme non saisissable. Si l'événement a été généré après avoir appuyé sur **Tab** ou **Maj+Tab**, le focus va respectivement à la cellule suivante ou à la précédente.
+- Si la valeur de $0 n'est pas -1 (par défaut $0 est 0), la cellule est saisissable et passe en mode d'édition.
 
-See also [Managing entry](FormObjects/listbox_overview.md#managing-entry) section.
+Voir également la section [Gestion des entrées](FormObjects/listbox_overview.md#managing-entry).

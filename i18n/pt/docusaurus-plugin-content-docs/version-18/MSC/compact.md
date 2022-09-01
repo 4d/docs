@@ -1,7 +1,7 @@
 ---
 id: compact
-title: Compact Page
-sidebar_label: Compact Page
+title: Página compactado
+sidebar_label: Página compactado
 ---
 
 You use this page to access the data file compacting functions.
@@ -10,10 +10,10 @@ You use this page to access the data file compacting functions.
 
 Compacting files meets two types of needs:
 
-- **Reducing size and optimization of files**: Files may contain unused spaces (“holes”). In fact, when you delete records, the space that they occupied previously in the file becomes empty. 4D reuses these empty spaces whenever possible, but since data size is variable, successive deletions or modifications will inevitably generate unusable space for the program. The same goes when a large quantity of data has just been deleted: the empty spaces remain unassigned in the file. The ratio between the size of the data file and the space actually used for the data is the occupation rate of the data. A rate that is too low can lead, in addition to a waste of space, to the deterioration of database performance. Compacting can be used to reorganize and optimize storage of the data in order to remove the “holes”. The “Information” area summarizes the data concerning the fragmentation of the file and suggests operations to be carried out. The [Data](information.md#data) tab on the “Information” page of the MSC indicates the fragmentation of the current data file.
+- **Redução do tamanho e otimização dos arquivos**: os arquivos podem conter espaços não utilizados ("ocos"). In fact, when you delete records, the space that they occupied previously in the file becomes empty. 4D reuses these empty spaces whenever possible, but since data size is variable, successive deletions or modifications will inevitably generate unusable space for the program. The same goes when a large quantity of data has just been deleted: the empty spaces remain unassigned in the file. The ratio between the size of the data file and the space actually used for the data is the occupation rate of the data. A rate that is too low can lead, in addition to a waste of space, to the deterioration of database performance. Compacting can be used to reorganize and optimize storage of the data in order to remove the “holes”. The “Information” area summarizes the data concerning the fragmentation of the file and suggests operations to be carried out. The [Data](information.md#data) tab on the “Information” page of the MSC indicates the fragmentation of the current data file.
 
 - **Complete updating of data** by applying the current formatting set in the structure file. This is useful when data from the same table were stored in different formats, for example after a change in the database structure.
-> Compacting is only available in maintenance mode. If you attempt to carry out this operation in standard mode, a warning dialog box will inform you that the database will be closed and restarted in maintenance mode. You can compact a data file that is not opened by the database (see [Compact records and indexes](#compact-records-and-indexes) below).
+> Compacting is only available in maintenance mode. Se tentar realizar essa operação em modo padrão, uma caixa de diálogo de aviso informará que o banco de dados será fechado e reiniciado em modo manutenção. Pode compactar um arquivo de dados que não esteja aberto pelo banco de dados (ver [Compactar os registros e os índices](#compact-records-and-indexes) abaixo).
 
 ## Standard compacting
 
@@ -24,21 +24,21 @@ To directly begin the compacting of the data file, click on the compacting butto
 
 This operation compacts the main file as well as any index files. 4D copies the original files and puts them in a folder named **Replaced Files (Compacting)**, which is created next to the original file. If you have carried out several compacting operations, a new folder is created each time. It will be named “Replaced Files (Compacting)_1”, “Replaced Files (Compacting)_2”, and so on. You can modify the folder where the original files are saved using the advanced mode.
 
-When the operation is completed, the compacted files automatically replace the original files. The database is immediately operational without any further manipulation.
+When the operation is completed, the compacted files automatically replace the original files. O banco de dados fica operacional imediatamente sem outras manipulações.
 > When the database is encrypted, compacting includes decryption and encryption steps and thus, requires the current data encryption key. If no valid data key has already been provided, a dialog box requesting the passphrase or the data key is displayed.
 
 **Warning:** Each compacting operation involves the duplication of the original file which increases the size of the application folder. It is important to take this into account (especially under macOS where 4D applications appear as packages) so that the size of the application does not increase excessively. Manually removing the copies of the original file inside the package can be useful in order to keep the package size down.
 
 ## Open log file
 
-After compacting is completed, 4D generates a log file in the Logs folder of the database. This file allows you to view all the operations carried out. It is created in XML format and named:  *DatabaseName**_Compact_Log_yyyy-mm-dd hh-mm-ss.xml*" where:
+Depois que a compactação termina, 4D gera um arquivo de histórico na pasta Logs do banco de dados. This file allows you to view all the operations carried out. É criada no formato XML e se chama  *DatabaseName**_Compact_Log_yyyy-mm-dd hh-mm-ss.xml*" onde:
 
-- *DatabaseName* is the name of the project file without any extension, for example "Invoices",
+- *NomBase* é o nome do arquivo de estrutura sem extensão, por exemplo "Faturas",
 - *yyyy-mm-dd hh-mm-ss* is the timestamp of the file, based upon the local system time when the maintenance operation was started, for example "2019-02-11 15-20-45".
 
 When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
 
-## Advanced mode
+## Modo avançado
 
 The Compact page contains an **Advanced>** button, which can be used to access an options page for compacting data file.
 
@@ -67,5 +67,5 @@ This option completely rebuilds the address table for the records during compact
 
 Note that this option substantially slows compacting and invalidates any sets saved using the `SAVE SET` command. Moreover, we strongly recommend deleting saved sets in this case because their use can lead to selections of incorrect data.
 > - Compacting takes records of tables that have been put into the Trash into account. If there are a large number of records in the Trash, this can be an additional factor that may slow down the operation.
-> - Using this option makes the address table, and thus the database, incompatible with the current journal file (if there is one). It will be saved automatically and a new journal file will have to be created the next time the database is launched.
+> - Using this option makes the address table, and thus the database, incompatible with the current journal file (if there is one). Será salvado automaticamente e um novo arquivo de histórico será criado na próxima vez que o banco for lançado.
 > - You can decide if the address table needs to be compacted by comparing the total number of records and the address table size in the [Information](information.md) page of the MSC.
