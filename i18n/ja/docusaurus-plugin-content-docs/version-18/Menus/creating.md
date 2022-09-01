@@ -1,102 +1,102 @@
 ---
 id: creating
-title: Creating menus and menu bars
+title: メニューとメニューバーの作成
 ---
 
-You can create menus and menu bars:
+メニューおよびメニューバーを作成するには次の 2つの方法があります:
 
-- using the Menus editor of the 4D Toolbox window. In this case, menus and menu bars are stored in the application's structure.
-- dynamically, using the language commands from the "Menus" theme. In this case, menus and menu bars are not stored, they only exist in memory.
+- 4Dツールボックスウィンドウのメニューエディターを使用する。 この場合、メニューとメニューバーはアプリケーションのストラクチャーに保存されます。
+- "メニュー" テーマのランゲージコマンドを使用して動的におこなう。 この場合、メニューとメニューバーは保存されず、メモリ内にのみ存在します。
 
-You can combine both features and use menus created in structure as templates to define menus in memory.
+両方の機能を組み合わせて、メモリ内のメニューを定義するのに、ストラクチャーに作成したメニューをテンプレートとして使うこともできます。
 
-## Default menu bar
+## デフォルトメニューバー
 
-A custom application must contain at least one menu bar with one menu. By default, when you create a new database, 4D automatically creates a default menu bar (Menu Bar #1) so that you can access the Application environment. The default menu bar includes standard menus and a command for returning to the Design mode.
+カスタムアプリケーションには、少なくとも 1つのメニューを持つ 1つのメニューバーが必要です。 新規データベースを作成すると、4D は自動でデフォルトメニューバー (メニューバー#1) を作成します。 このデフォルトメニューバーには、標準のメニューとデザインモードに入るためのコマンドが用意されています。
 
-This allows the user to access the Application environment as soon as the database is created. Menu Bar #1 is called automatically when the **Test Application** command is chosen in the **Run** menu.
+このメニューが用意されているため、ユーザーはデータベースを起動するとすぐにアプリケーションモードを使用できます。 **実行** メニューから **アプリケーションモード** コマンドを選択すると、自動でメニューバー#1 が呼び出されます。
 
-The default menu bar includes three menus:
+デフォルトメニューバーには 3つメニューがあります:
 
-- **File**: only includes the **Quit** command. The *Quit* standard action is associated with the command, which causes the application to quit.
-- **Edit**: standard and completely modifiable. Editing functions such as copy, paste, etc. are defined using standard actions.
-- **Mode**: contains, by default, the **Return to Design mode** command, which is used to exit the Application mode.
-> Menu items appear *in italics* because they consist of references and not hard-coded text. Refer to [Title property](properties.md#title).
+- **ファイル**: このメニューには **終了** コマンドだけが含まれています。 このコマンドには *quit* 標準アクションが割り当てられていて、選択されるとアプリケーションが終了します。
+- **編集**: 編集メニューは標準であり、内容の変更が可能です。 編集メニューのコマンド (コピーやペーストなど) は標準アクションで指定できます。
+- **モード**: モードメニューにはデフォルトで、アプリケーションモードを終了するための **デザインモードに戻る** コマンドが含まれます。
+> メニュータイトルはハードコードされたテキストではなく、xliff参照を使用しています。 この点については [タイトルプロパティ](properties.md#タイトル) を参照してください。
 
-You can modify this menu bar as desired or create additional ones.
+このメニューバーを必要に応じて変更したり、新しく追加したりできます。
 
-## Creating menus
+## メニューの作成
 
-### Using the Menu editor
+### メニューエディターを使用する
 
-1. Select the item you want to create and click the add ![](../assets/en/Menus/PlussNew.png) button below the menu bar area. OR Choose **Create a new menu bar** or **Create a new menu** from the context menu of the list or the options menu below the list. If you created a menu bar, a new bar appears in the list containing the default menus (File and Edit).
-2. (optional) Double-click on the name of the menu bar/menu to switch it to editing mode and enter a custom name. OR Enter the custom name in the "Title" area. Menu bar names must be unique. They may contain up to 31 characters. You can enter the name as "hard coded" or enter a reference (see [information about the Title property](properties.md#title)).
+1. 作成する対象 (メニューバーまたはメニュー) を選択し、エリアの下にある追加ボタン ![](../assets/en/Menus/PlussNew.png) をクリックします。 または<br /> リストのコンテキストメニューあるいはリストの下にあるオプションメニューから **新規メニューバー作成** または **新規メニュー作成** を選択します。 メニューバーを作成した場合は、新しいメニューバーがリスト中に追加され、デフォルトメニュー (ファイルと編集) があらかじめ添付されています。
+2. (任意) メニューバー/メニューの名前の上でダブルクリックすると、名前を編集できるモードになり、名前を変更することができます。 または <br /> ウィンドウ右の "タイトル" エリアに名前を入力します。 メニューバー名はユニークでなければなりません。 名前には 31文字までの文字列を指定できます。 メニューのタイトルには文字列リテラルのほかに、参照も使用できます ([タイトルプロパティ](properties.md#タイトル) の説明を参照ください)。
 
-### Using the 4D language
+### 4Dランゲージを使用する
 
-Use the `Create menu` command to create a new menu bar or menu reference (*MenuRef*) in memory.
+`Create menu` コマンドを使って、新規メニューバーまたはメニュー参照 (*MenuRef*) をメモリ上に作成します。
 
-When menus are handled by means of *MenuRef* references, there is no difference per se between a menu and a menu bar. In both cases, it consists of a list of items. Only their use differs. In the case of a menu bar, each item corresponds to a menu which is itself composed of items.
+メニューが *MenuRef* 参照を使用して処理される場合、メニューとメニューバーの間に違いはありません。 両方とも項目のリストから構成されます。 それらの利用方法のみが異なります。 メニューバーの各項目は、それ自身が 1つのメニューであり、項目から構成されています。
 
-`Create menu` can create empty menus (to fill using `APPEND MENU ITEM` or `INSERT MENU ITEM`) or by menus built upon menus designed in the Menu editor.
+`Create menu` で空のメニューを作成した場合には、`APPEND MENU ITEM` または `INSERT MENU ITEM` コマンドによって項目を追加していきます。また、同コマンドのソースメニューとして、メニューエディターで定義されたメニューを指定した場合には、そのコピーが新しいメニューとして作成されます。
 
-## Adding items
+## 項目の追加
 
-For each of the menus, you must add the commands that appear when the menu drops down. You can insert items that will be associated with methods or standard actions, or attach other menus (submenus).
+各メニューには、メニューがクリックされたときにドロップダウン表示されるメニュー項目を作成しなければなりません。 項目を追加してメソッドや標準アクションを割り当てたり、他のメニューをサブメニューとして添付したりできます。
 
-### Using the Menu editor
+### メニューエディターを使用する
 
-To add a menu item:
+メニュー項目を追加するには:
 
-1. In the list of source menus, select the menu to which you want to add a command. If the menu already has commands, they will be displayed in the central list. If you want to insert the new command, select the command that you want it to appear above. It is still be possible to reorder the menu subsequently using drag and drop.
-2. Choose **Add an item to menu “MenuName”** in the options menu of the editor or from the context menu (right click in the central list). OR Click on the add ![](../assets/en/Menus/PlussNew.png) button located below the central list. 4D adds a new item with the default name “Item X” where X is the number of items already created.
-3. Double-click on the name of the command in order to switch it to editing mode and enter a custom name. OR Enter the custom name in the "Title" area. It may contain up to 31 characters. You can enter the name as "hard coded" or enter a reference (see below).
+1. ソースメニューリスト中で、項目を追加するメニューを選択します。 メニューが既に項目を持っていれば、それが中央のリストに表示されます。 新しい項目を挿入するには、その上にくる項目を選択します。 ドラッグ＆ドロップ操作で、後から順番を変更することも可能です。
+2. メニューエディターのオプションメニュー、またはエディターのコンテキストメニュー (中央のリスト内で右クリック) から **メニューバー/メニュー "メニュー名" に項目を追加** を選択します。 または <br /> 中央のリストの下にある追加ボタン ![](../assets/en/Menus/PlussNew.png) をクリックします。 項目が追加され、デフォルト名 "項目 X" が割り当てられます (X は項目の番号)。
+3. 項目名の上でダブルクリックすると、名前を編集できるモードになり、名前を変更することができます。 または <br /> ウィンドウ右の "タイトル" エリアに名前を入力します。 名前には 31文字までの文字列を指定できます。 メニューのタイトルには文字列リテラルのほかに、参照も使用できます (後述参照)。
 
-### Using the 4D language
+### 4Dランゲージを使用する
 
-Use `INSERT MENU ITEM` or `APPEND MENU ITEM` to insert or to add menu items in existing menu references.
+既存のメニュー参照にメニュー項目を挿入するには `INSERT MENU ITEM` または `APPEND MENU ITEM` コマンドを使います。
 
-## Deleting menus and items
+## メニューや項目の削除
 
-### Using the Menu editor
+### メニューエディターを使用する
 
-You can delete a menu bar, a menu or a menu item in the Menu editor at any time. Note that each menu or menu bar has only one reference. When a menu is attached to different bars or different menus, any modification or deletion made to the menu is immediately carried out in all other occurrences of this menu. Deleting a menu will only delete a reference. When you delete the last reference of a menu, 4D displays an alert.
+メニューエディターを使って、メニューバー、メニュー、メニュー項目をいつでも削除できます。 各メニューやメニューバーは 1つの参照しか持たない点に留意してください。 あるメニューが、複数のメニューバーやメニューに添付されていた場合、そのメニューに対しておこわれた変更や削除はこのメニューのすべての他のオカレンスに対しても有効となります。 メニューを削除すると、参照だけが削除されます。 特定のメニューへの最後の参照を削除しようとすると、4Dはアラートを表示します。
 
-To delete a menu bar, menu or menu item:
+メニューバー、メニュー、メニューコマンドを削除するには:
 
-- Select the item to be deleted and click on the delete ![](../assets/en/Menus/MinussNew.png) button located beneath the list.
-- or, use the appropriate **Delete...**  command from the context menu or the options menu of the editor.
+- 削除する項目を選択し、リストの下にある削除ボタン ![](../assets/en/Menus/MinussNew.png) をクリックします。
+- コンテキストメニューまたはエディターのオプションメニューから **〜 を削除** コマンドを選択します。
 
-> It is not possible to delete Menu Bar #1.
+> メニューバー#1 を削除することはできません。
 
-### Using the 4D language
+### 4Dランゲージを使用する
 
-Use `DELETE MENU ITEM` to remove an item from a menu reference. Use `RELEASE MENU` to unload the menu reference from the memory.
+`DELETE MENU ITEM` コマンドを使ってメニュー参照から項目を削除します。 メニュー参照をメモリからアンロードするには `RELEASE MENU` コマンドを使います。
 
-## Attaching menus
+## メニューの添付
 
-Once you have created a menu, you can attach it to one or several other menus (sub-menu) or menu bar(s).
+メニューを作成したら、それをメニューバーや別のメニューに (サブメニューとして) 添付できます。
 
-Sub-menus can be used to group together functions organized according to subject within the same menu. Sub-menus and their items can have the same attributes as the menus themselves (actions, methods, shortcuts, icons, and so on). The items of the sub-menu keep their original characteristics and properties and the functioning of the sub-menu is identical to that of a standard menu.
+サブメニューは、テーマに基づき機能をグループ化する目的で使用されます。 サブメニューとその項目は、メニューと同じ属性 (アクション、メソッド、ショートカット、アイコン等) を持つことができます。 サブメニューの項目は元の特性やプロパティを保持し、サブメニューの動作は標準のメニューと同じです。
 
-You can create sub-menus of sub-menus to a virtually unlimited depth. Note, however, that for reasons concerning interface ergonomics, it is generally not recommended to go beyond two levels of sub-menus.
+サブメニューのサブメニューを作成することができ、階層化に制限はありません。 しかし、インターフェース標準に沿うには、2レベルを超えるサブメニューは推奨されません。
 
-At runtime, if an attached menu is modified by programming, every other instance of the menu will reflect these changes.
+ランタイムにおいてプログラミングによりメニューを変更した場合、そのメニューが添付されているすべてのインスタンスに変更が反映されます。
 
-### Using the Menu editor
+### メニューエディターを使用する
 
-A menu can be attached to a menu bar or to another menu.
+各メニューは、メニューバーあるいは別のメニューに添付できます。
 
-- To attach a menu to a menu bar: right-click on the menu bar and select **Attach a menu to the menu bar "bar name" >**, then choose the menu to be attached to the menu bar: ![](../assets/en/Menus/attach.png) You can also select a menu bar then click on the options button found below the list.
-- To attach a menu to another menu: select the menu in the left-hand area, then right-click on the menu item and select **Attach a sub-menu to the item "item name">**, then choose the menu you want to use as sub-menu:  
-  ![](../assets/en/Menus/attach2.png) You can also select a menu item then click on the options button found below the list. The menu being attached thus becomes a sub-menu. The title of the item is kept (the original sub-menu name is ignored), but this title can be modified.
+- メニューバーにメニューを添付するには: メニューバーを右クリックし、**メニューバー "メニューバー名" にメニューを添付 >** を選択、そしてサブメニューから添付するメニューを選択します: ![](../assets/en/Menus/attach.png) また、メニューバーを選択してから、リストの下にあるオプションメニューをクリックする方法もあります。
+- メニューに他のメニューを添付するには: 左のリスト中でメニューを選択し、次に中央リストのメニュー項目上で右クリックし、**項目 "項目名" にサブメニューを添付 >** を選択、そしてサブメニューとして使用するメニューを選択します:  
+  ![](../assets/en/Menus/attach2.png) また、メニュー項目を選択してから、リストの下にあるオプションメニューをクリックする方法もあります。 添付されたメニューはサブメニューとなります。 項目のタイトルは保持されますが (元のサブメニュー名は無視されます)、このタイトルを変更することができます。
 
-#### Detaching menus
+#### メニューの分離
 
-You can detach a menu from a menu bar or a sub-menu from a menu at any time. The detached menu is then no longer available in the menu bar or sub-menu as the case may be, but it is still present in the list of menus.
+メニューバーからメニューを、あるいはメニューからサブメニューを分離できます。 分離されたメニューは、メニューバーやメニューから利用できなくなります。しかしメニューリストには残されます。
 
-To detach a menu, right-click with the right button on the menu or sub-menu that you want to detach in the central list, then choose the **Detach the menu(...)** or **Detach the sub-menu(...)**
+メニューを分離するには、中央リスト内の分離したいメニュー上で右クリックし、**メニュー "メニュー名" をメニューバー "メニューバー名" から分離** または **項目 "項目名" のサブメニューを分離** を選択します。
 
-### Using the 4D language
+### 4Dランゲージを使用する
 
-Since there is no difference between menus and menu bars in the 4D language, attaching menus or sub-menus is done in the same manner: use the *subMenu* parameter of the `APPEND MENU ITEM` command to attach a menu to a menu bar or an menu.  
+4Dランゲージにおいてはメニューとメニューバーの違いはないため、メニューおよびサブメニューの添付は同じ手順でおこないます: `APPEND MENU ITEM` コマンドの *subMenu* パラメーターを指定して、メニューやメニューバーにメニューを添付します。  
