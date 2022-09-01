@@ -3,25 +3,25 @@ id: onScroll
 title: On Scroll
 ---
 
-| Code | Can be called by                                                                                                                                    | Definition                                                                                 |
-| ---- | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| 59   | [Input](FormObjects/input_overview.md) of the `picture` [Type](FormObjects/properties_Object.md#type) - [List Box](FormObjects/listbox_overview.md) | The user scrolls the contents of a picture object or list box using the mouse or keyboard. |
+| コード | 呼び出し元                                                                                                                               | 定義                                                  |
+| --- | ----------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
+| 59  | [ピクチャー型](FormObjects/properties_Object.md#式の型式タイプ)の[入力](FormObjects/input_overview.md) - [リストボックス](FormObjects/listbox_overview.md) | マウスやキーボードを使用して、ユーザーがピクチャーオブジェクトやリストボックスの内容をスクロールした。 |
 
 
-## Description
+## 詳細
 
-This event can be generated in the context of a picture input or a list box.
+このイベントは、ピクチャー入力またはリストボックスのコンテキストで生成されます。
 
-This event is triggered after any other user event related to the scrolling action ([On Clicked](onClicked.md), [On After Keystroke](onAfterKeystroke.md), etc.). The event is only generated in the object method (not in the form method).
+このイベントは、スクロールアクションに関連した他のすべてのユーザーイベント ([On Clicked](onClicked.md)、[On After Keystroke](onAfterKeystroke.md)、等) の後にトリガーされます。 このイベントは、オブジェクトメソッドの中でのみ生成されます (フォームメソッドでは生成されません)。
 
-The event is triggered when the scroll is the result of a user action: using the scroll bars and/or cursors, using the mouse wheel or [the keyboard](FormObjects/properties_Appearance.md#vertical-scroll-bar). It is not generated when the object is scrolled due to the execution of the `OBJECT SET SCROLL POSITION` command.
-
-
-### Picture input
-
-The event is generated as soon as a user scrolls a picture within the picture input (field or variable) that contains it. You can scroll the contents of a picture area when the size of the area is smaller than its contents and the [display format](FormObjects/properties_Display.md#picture-format) is "Truncated (non Centered)".
+このイベントは、ユーザーのアクションの結果としてスクロールが発生した場合にのみ生成されます: スクロールバー/カーソルの使用、マウスホイールまたは [キーボード](FormObjects/properties_Appearance.md#縦スクロールバー) の使用、等です。 `OBJECT SET SCROLL POSITION` コマンド使用の結果スクロールした場合には生成されません。
 
 
-### List box
+### ピクチャー入力
 
-The event is generated as soon as a user scrolls the rows or columns of the list box. 
+このイベントは、ユーザーがピクチャー入力 (フィールドや変数) 内のピクチャーをスクロールすると生成されます。 ピクチャーエリアのサイズがピクチャーよりも小さく、かつ表示テーマの [ピクチャーフォーマット](FormObjects/properties_Display.md#ピクチャーフォーマット) プロパティが "トランケート (中央合わせなし)" に設定されている場合のみスクロールが可能です。
+
+
+### リストボックス
+
+このイベントは、ユーザーがリストボックスの行や列をスクロールすると生成されます。 
