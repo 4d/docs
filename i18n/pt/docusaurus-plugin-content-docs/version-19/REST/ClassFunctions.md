@@ -15,7 +15,7 @@ with data in the body of the POST request: `["Aguada"]`
 In 4D language, this call is equivalent to, :
 
 ```4d
-$city:=ds.City.getCity("Aguada")
+$city:=ds. City.getCity("Aguada")
 ```
 
 > Only functions with the `exposed` keyword can be directly called from REST requests. See [Exposed vs non-exposed functions](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) section.
@@ -26,7 +26,7 @@ Functions must always be called using REST **POST** requests (a GET request will
 
 Functions are called on the corresponding object on the server datastore.
 
-| Class function                                                     | Syntax                                                                      |
+| Class function                                                     | Sintaxe                                                                     |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------- |
 | [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                     |
 | [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/DataClassClassFunction`                                  |
@@ -40,7 +40,7 @@ Functions are called on the corresponding object on the server datastore.
 
 > All 4D code called from REST requests **must be thread-safe** if the project runs in compiled mode, because the REST Server always uses preemptive processes in this case (the [*Use preemptive process* setting value](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server) is ignored by the REST Server).
 
-## Parameters
+## Parâmetros
 
 You can send parameters to functions defined in ORDA user classes. On the server side, they will be received in the class functions in regular $1, $2, etc. parameters.
 
@@ -67,11 +67,11 @@ Entities passed in parameters are referenced on the server through their key (*i
 
 > If the request sends modified attribute values for an existing entity on the server, the called ORDA data model function will be automatically executed on the server with modified values. This feature allows you, for example, to check the result of an operation on an entity, after applying all business rules, from the client application. You can then decide to save or not the entity on the server.
 
-| Properties               | Type                                 | Description                                                                |
+| Properties               | Tipo                                 | Descrção                                                                   |
 | ------------------------ | ------------------------------------ | -------------------------------------------------------------------------- |
-| Attributes of the entity | mixed                                | Optional - Values to modify                                                |
+| Attributes of the entity | misto                                | Optional - Values to modify                                                |
 | __DATACLASS              | String                               | Mandatory - Indicates the Dataclass of the entity                          |
-| __ENTITY                 | Boolean                              | Mandatory - True to indicate to the server that the parameter is an entity |
+| __ENTITY                 | Booleano                             | Mandatory - True to indicate to the server that the parameter is an entity |
 | __KEY                    | mixed (same type as the primary key) | Optional - Primary key of the entity                                       |
 
 - If __KEY is not provided, a new entity is created on the server with the given attributes.
@@ -91,11 +91,11 @@ The entity selection must have been defined beforehand using [$method=entityset]
 
 > If the request sends a modified entity selection to the server, the called ORDA data model function will be automatically executed on the server with the modified entity selection.
 
-| Properties               | Type    | Description                                                                          |
-| ------------------------ | ------- | ------------------------------------------------------------------------------------ |
-| Attributes of the entity | mixed   | Optional - Values to modify                                                          |
-| __DATASET                | String  | Mandatory - entitySetID (UUID) of the entity selection                               |
-| __ENTITIES               | Boolean | Mandatory - True to indicate to the server that the parameter is an entity selection |
+| Properties               | Tipo     | Descrção                                                                             |
+| ------------------------ | -------- | ------------------------------------------------------------------------------------ |
+| Attributes of the entity | misto    | Optional - Values to modify                                                          |
+| __DATASET                | String   | Mandatory - entitySetID (UUID) of the entity selection                               |
+| __ENTITIES               | Booleano | Mandatory - True to indicate to the server that the parameter is an entity selection |
 
 See example for [receiving an entity selection](#receiving-an-entity-selection-as-parameter).
 
@@ -110,9 +110,7 @@ This database is exposed as a remote datastore on localhost (port 8111):
 The US_Cities `DataStore` class provides an API:
 
 ```  
-// DataStore class
-
-Class extends DataStoreImplementation
+// DataStore class Class extends DataStoreImplementation
 
 exposed Function getName()
     $0:="US cities and zip codes manager" 
@@ -122,7 +120,7 @@ You can then run this request:
 
 **POST** `127.0.0.1:8111/rest/$catalog/getName`
 
-#### Result
+#### Resultados
 
 ```
 {
@@ -135,12 +133,10 @@ You can then run this request:
 The Dataclass class `City` provides an API that returns a city entity from a name passed in parameter:
 
 ```
-// City class
-
-Class extends DataClass
+// City class Class extends DataClass
 
 exposed Function getCity()
- var $0 : cs.CityEntity
+ var $0 : cs. CityEntity
  var $1,$nameParam : text
  $nameParam:=$1
  $0:=This.query("name = :1";$nameParam).first()
@@ -152,7 +148,7 @@ You can then run this request:
 
 Body of the request: ["Aguada"]
 
-#### Result
+#### Resultados
 
 The result is an entity:
 
@@ -185,9 +181,7 @@ The result is an entity:
 The Entity class `CityEntity` provides an API:
 
 ```
-// CityEntity class
-
-Class extends Entity
+// CityEntity class Class extends Entity
 
 exposed Function getPopulation()
     $0:=This.zips.sum("population")
@@ -197,7 +191,7 @@ You can then run this request:
 
 **POST** `127.0.0.1:8111/rest/City(2)/getPopulation`
 
-#### Result
+#### Resultados
 
 ```
 {
@@ -210,9 +204,7 @@ You can then run this request:
 The EntitySelection class `CitySelection` provides an API:
 
 ```
-// CitySelection class
-
-Class extends EntitySelection
+// CitySelection class Class extends EntitySelection
 
 exposed Function getPopulation()
     $0:=This.zips.sum("population")
@@ -222,7 +214,7 @@ You can then run this request:
 
 **POST** `127.0.0.1:8111/rest/City/getPopulation/?$filter="ID<3"`
 
-#### Result
+#### Resultados
 
 ```
 {
@@ -235,9 +227,7 @@ You can then run this request:
 The `StudentsSelection` class has a `getAgeAverage` function:
 
 ```  
-// StudentsSelection Class
-
-Class extends EntitySelection
+// StudentsSelection Class Class extends EntitySelection
 
 exposed Function getAgeAverage
  C_LONGINT($sum;$0)
@@ -254,7 +244,7 @@ Once you have created an entityset, you can run this request:
 
 **POST** `127.0.0.1:8044/rest/Students/getAgeAverage/$entityset/17E83633FFB54ECDBF947E5C620BB532`
 
-#### Result
+#### Resultados
 
 ```
 {
@@ -267,10 +257,7 @@ Once you have created an entityset, you can run this request:
 The `StudentsSelection` class has a `getLastSummary` function:
 
 ```  
-// StudentsSelection Class
-
-
-Class extends EntitySelection
+// StudentsSelection Class Class extends EntitySelection
 
 exposed Function getLastSummary
  C_TEXT($0)
@@ -284,7 +271,7 @@ You can then run this request:
 
 **POST** `127.0.0.1:8044/rest/Students/getLastSummary/$entityset/?$filter="lastname=b@"&$orderby="lastname"`
 
-#### Result
+#### Resultados
 
 ```
 {
@@ -297,9 +284,7 @@ You can then run this request:
 The Dataclass class `Students` has the function `pushData()` receiving an entity containing data from the client. The `checkData()` method runs some controls. If they are OK, the entity is saved and returned.
 
 ```
-// Students Class
-
-Class extends DataClass
+// Students Class Class extends DataClass
 
 exposed Function pushData
  var $1, $entity, $status, $0 : Object
@@ -336,7 +321,7 @@ Body of the request:
 
 Since no `__KEY` is given, a new Students entity is loaded on the server **with the attributes received from the client**. Because the `pushData()` function runs a `save()` action, the new entity is created.
 
-#### Result
+#### Resultados
 
 ```
 {
@@ -374,7 +359,7 @@ Body of the request:
 
 Since `__KEY` is given, the Students entity with primary key 55 is loaded **with the lastname value received from the client**. Because the function runs a `save()` action, the entity is updated.
 
-#### Result
+#### Resultados
 
 ```
 {
@@ -411,7 +396,7 @@ Body of the request:
 }]
 ```
 
-#### Result
+#### Resultados
 
 ```
 {
@@ -438,9 +423,7 @@ Body of the request:
 In this example, we associate an existing school to a Students entity. The `StudentsEntity` class has an API:
 
 ```
-// StudentsEntity class
-
-Class extends Entity
+// StudentsEntity class Class extends Entity
 
 exposed Function putToSchool()
  var $1, $school , $0, $status : Object
@@ -465,7 +448,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 }]
 ```
 
-#### Result
+#### Resultados
 
 ```
 {
@@ -480,9 +463,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 In the `Students` Dataclass class, the `setFinalExam()` function updates a received entity selection ($1). It actually updates the *finalExam* attribute with the received value ($2). It returns the primary keys of the updated entities.
 
 ```
-// Students class
-
-Class extends DataClass
+// Students class Class extends DataClass
 
 exposed Function setFinalExam()
 
@@ -531,7 +512,7 @@ Body of the request:
 
 ```
 
-#### Result
+#### Resultados
 
 The entities with primary keys 1 and 2 have been updated.
 
@@ -556,7 +537,7 @@ $remoteDS:=Open datastore(New object("hostname";"127.0.0.1:8044");"students")
 
 // $newStudent is a student entity to procees
 $newStudent:=...
-$students:=$remoteDS.Students.query("school.name = :1";"Math school")
+$students:=$remoteDS. Students.query("school.name = :1";"Math school")
 // We add an entity to the $students entity selection on the client
 $students.add($newStudent) 
 
