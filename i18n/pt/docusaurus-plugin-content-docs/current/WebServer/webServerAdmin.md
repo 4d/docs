@@ -91,7 +91,7 @@ Website administration URLS allow you to control the website published on your s
 
 The **/4DSTATS** URL returns several items of information in an HTML table (displayable in a browser):
 
-| Item                   | Description                                                  |
+| Elemento               | Descrção                                                     |
 | ---------------------- | ------------------------------------------------------------ |
 | Cache Current Size     | Current size of web server cache (in bytes)                  |
 | Cache Max Size         | Maximum size of cache (in bytes)                             |
@@ -106,7 +106,7 @@ This information can allow you to check the functioning of your server and event
 
 The */4DHTMLSTATS* URL returns, also as an HTML table, the same information as the */4DSTATS* URL. The difference is that the **Cached Objects** field only counts HTML pages (without counting picture files). Moreover, this URL returns the **Filtered Objects** field.
 
-| Item                   | Description                                                            |
+| Elemento               | Descrção                                                               |
 | ---------------------- | ---------------------------------------------------------------------- |
 | Cache Current Size     | Current size of web server cache (in bytes)                            |
 | Cache Max Size         | Maximum size of cache (in bytes)                                       |
@@ -124,7 +124,7 @@ The */4DCACHECLEAR* URL immediately clears the cache of the static pages and ima
 
 The */4DWEBTEST* URL is designed to check the web server status. When this URL is called, 4D returns a text file with the following HTTP fields filled:
 
-| HTTP Field | Description                          | Example                                                                                                                         |
+| HTTP Field | Descrção                             | Exemplo                                                                                                                         |
 | ---------- | ------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
 | Date       | current date at the RFC 822 format   | Mon, 7 Dec 2020 13:12:50 GMT                                                                                                    |
 | Server     | 4D/version number                    | 4D/18.5.0 (Build 18R5.257368)                                                                                                   |
@@ -145,18 +145,18 @@ Both log files are automatically created in the **Logs** folder of the applicati
 
 The [http debug file](webServerConfig.md#debug-log) can be enabled using the [`web server` object](webServerObject.md) or the `WEB SET OPTION` command.
 
-This log file records each HTTP request and each response in raw mode. Whole requests, including headers, are logged; optionally, body parts can be logged as well.
+Este arquivo registra cada petição HTTP e cada resposta em modo raw (não processado). Petições inteiras, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
 
-The following fields are logged for both Request and Response:
+Os campos abaixo são registrados tanto para Request quanto para Response:
 
-| Field name     | Description                                                   |
-| -------------- | ------------------------------------------------------------- |
-| SocketID       | ID of socket used for communication                           |
-| PeerIP         | IPv4 address of host (client)                                 |
-| PeerPort       | Port used by host (client)                                    |
-| TimeStamp      | Timestamp in milliseconds (since system startup)              |
-| ConnectionID   | Connection UUID (UUID of VTCPSocket used for communication)   |
-| SequenceNumber | Unique and sequential operation number in the logging session |
+| Campo nome     | Descrção                                                     |
+| -------------- | ------------------------------------------------------------ |
+| SocketID       | ID da socked usada para comunicação                          |
+| PeerIP         | Endereço IPv4 do host (cliente)                              |
+| PeerPort       | Porta usada por host (cliente)                               |
+| TimeStamp      | Timestamp em milisegundos (desde início sistema)             |
+| ConnectionID   | Connection UUID (UUID de VTCPSocket usada para comunicação)  |
+| SequenceNumber | Número de operação único e sequencial da sessão de histórico |
 
 
 ### logweb.txt
@@ -169,7 +169,7 @@ Each line of the file represents a request, such as: *host rfc931 user \[DD/MMM/
 
 DLF (Combined Log Format) format is similar to CLF (Common Log Format) format and uses exactly the same structure. It simply adds two additional HTTP fields at the end of each request: Referer and User-agent. Here is the description of CLF/DLF formats (not customizable):
 
-| Field name           | Description                                                                                                                                                         |
+| Campo nome           | Descrção                                                                                                                                                            |
 | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | host                 | IP address of the client (ex. 192.100.100.10)                                                                                                                       |
 | rfc931               | information not generated by 4D, it’s always - (a minus sign                                                                                                        |
@@ -189,12 +189,12 @@ The WLF (WebStar Log Format) was developed specifically for the 4D WebSTAR serve
 
 ##### Configuring the fields
 
-When you choose the ELF or WLF format, the “Web Log Token Selection” area displays the fields available for the chosen format. You will need to select each field to be included in the log. To do so, check the desired fields.
+When you choose the ELF or WLF format, the “Web Log Token Selection” area displays the fields available for the chosen format. You will need to select each field to be included in the log. To do so, check the desired fields. To do so, check the desired fields.
 > You cannot select the same field twice.
 
 The following table lists the fields available for each format (in alphabetical order) and describes its contents:
 
-| Field          | ELF | WLF | Value                                                                                                                       |
+| Campo          | ELF | WLF | Value                                                                                                                       |
 | -------------- | --- | --- | --------------------------------------------------------------------------------------------------------------------------- |
 | BYTES_RECEIVED |     | X   | Number of bytes received by the server                                                                                      |
 | BYTES_SENT     | X   | X   | Number of bytes sent by the server to the client                                                                            |
@@ -227,7 +227,7 @@ Since a *logweb.txt* file can become considerably large, it is possible to set u
 
 When the web log file backup is triggered, the log file is archived in a folder named "Logweb Archives," which is created at the same level as the *logweb.txt* file.
 
-The archived file is renamed based on the following example: “DYYYY_MM_DD_Thh_mm_ss.txt.” For instance, for a file archived on September 4, 2020 at 3:50 p.m. and 7 seconds: “D2020_09_04_T15_50_07.txt.”
+The archived file is renamed based on the following example: “DYYYY_MM_DD_Thh_mm_ss.txt.” For instance, for a file archived on September 4, 2020 at 3:50 p.m. and 7 seconds: and 7 seconds: “D2020_09_04_T15_50_07.txt.”
 
 #### Backup Parameters
 
@@ -235,17 +235,17 @@ The automatic backup parameters for the logweb.txt are set on the **Web/Log (bac
 
 ![](../assets/en/WebServer/backup.png)
 
-First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. You must then specify the precise moment of the backup if necessary.
+Configure the automatic backup parameters for the request log. First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. You must then specify the precise moment of the backup if necessary.
 
 *   **No Backup**: The scheduled backup function is deactivated.
 
-*   **Every X hour(s)**: This option is used to program backups on an hourly basis. You can enter a value between 1 and 24 .
+*   **Every X hour(s)**: This option is used to program backups on an hourly basis. Pode digitar um valor entre 1 e 24 .
     *   **starting at**: Used to set the time at which the first back up will begin.
 
 *   **Every X day(s) at X**: This option is used to program backups on a daily basis. Enter 1 if you want to perform a daily backup. When this option is checked, you must indicate the time when the backup must be started.
 
-*   **Every X week(s), day at X**: This option is used to program backups on a weekly basis. Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started. You can select several days of the week if desired. For example, you can use this option to set two weekly backups: one on Wednesdays and one on Fridays.
+*   **Every X week(s), day at X**: This option is used to program backups on a weekly basis. Digite 1 se quiser realizar o backup 1 vez por semana. Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started. You can select several days of the week if desired.
 
-*   **Every X month(s), Xth day at X**: This option is used to program backups on a monthly basis. Enter 1 if you want to perform a monthly backup. When this option is checked, you must indicate the day of the month and the time when the backup must be started.
+*   **Every X month(s), Xth day at X**: This option is used to program backups on a monthly basis. Digite 1 se quiser realizar uma cópia de segurança mensal. Enter 1 if you want to perform a monthly backup.
 
 *   **Every X MB**: This option is used to program backups based on the size of the current request log file. A backup is automatically triggered when the file reaches the set size. You can set a size limit of 1, 10, 100 or 1000 MB.
