@@ -4,110 +4,110 @@ title: Markers
 ---
 
 
-These properties let you specify the precise location of markers on the vertical ruler of a **table form**. Markers are mainly used in output forms. They control the information that is listed and set header, breaks, detail and footer areas of the form. Any object that placed in these areas is displayed or printed at the appropriate location.
+これらのプロパティを使用して、**テーブルフォーム** の縦ルーラー上でのマーカーの位置を精密に指定することができます。 マーカーは主に出力フォームで使用されます。 マーカーはリストされる情報を制御し、ヘッダーやブレーク、詳細、フッターを設定します。 各エリア内に配置されたオブジェクトは、対応する場所に表示や印刷されます。
 
-Whenever any form is used for output, either for screen display or printing, the output marker lines take effect and the areas display or print at designated locations. The markers also take effect when a form is used as the List form in a subform area. However, they have no effect when a form is used for input.
+フォームが出力フォームとして使用されるときは、画面用であれ印刷用であれ、マーカー設定が考慮されて各エリアが指定された場所に表示/印刷されます。 また、サブフォームエリア内のリストフォームとしてフォームが使用される場合も出力マーカーは有効です。 ただし、フォームが入力フォームとして使用される場合、マーカー設定は無視されます。
 
-Methods that are associated with objects in these areas are executed when the areas are printed or displayed as long as the appropriate events have been activated. For example, a object method placed in the Header area is executed when the `On Header` event takes place.
-
----
-
-## Form Break
-
-Form Break areas are displayed once at the end of the list of records and are printed once after the records have been printed in a report.
-
-The Break area is defined as the area between the Detail control line and the Break control line. There can be [several Break areas](#additional-areas) in your report.
-
-You can make Break areas smaller or larger. You can use a Break area to display information that is not part of the records (instructions, current date, current time, etc.), or to display a line or other graphic element that concludes the screen display. In a printed report, you can use a Break area for calculating and printing subtotals and other summary calculations.
-
-#### JSON Grammar
-
-| Name        | Data Type                         | Possible Values                                                                                     |
-| ----------- | --------------------------------- | --------------------------------------------------------------------------------------------------- |
-| markerBreak | integer &#x7c; integer collection | Break marker position or collection of break marker positions in pixels.<br/>Minimum value: 0 |
+これらのエリアに配置されたオブジェクトに割り当てられたメソッドは、適切なイベントが有効にされていれば、エリアが表示/印刷されるときに実行されます。 たとえば、ヘッダーエリアに配置されたオブジェクトのメソッドは `On Header` イベントで実行されます。
 
 ---
 
-## Form Detail
+## フォームブレーク
 
-The form Detail area is displayed on the screen and printed once for each record in a report. The Detail area is defined as the area between the Header control line and the Detail control line.
+フォームブレークエリアはレコードリストの下に一回だけ表示あるいは印刷されます。
 
-You can make the Detail area smaller or larger. Whatever you place in the Detail area is displayed or printed once for each record. Most often you place fields or variables in the Detail area so that the information in each record is displayed or printed, but you can place other elements in the Detail area as well.
+ブレークエリアは詳細マーカー (D) とブレークマーカー (B0) の間です。 レポートに [複数のブレークエリア](#追加マーカーの作成)を追加することもできます。
 
-#### JSON Grammar
+ブレークエリアの大きさは変更することができます。 レコードデータではない情報 (説明や日付、時刻など) のほか、線やその他のグラフィック要素を表示するためにブレークエリアを使用できます。 印刷レポートでは、小計などのサマリ計算をおこなって印刷するために使用できます。
 
-| Name       | Data Type | Possible Values                    |
-| ---------- | --------- | ---------------------------------- |
-| markerBody | integer   | Detail marker position. Minimum: 0 |
+#### JSON 文法
 
----
-
-## Form Footer
-
-The Form Footer area is displayed on screen under the list of records. It is always printed at the bottom of every page of a report. The Footer area is defined as the area between the Break control line and the Footer control line.
-
-You make the Footer area smaller or larger.
-
-You can use the Footer area to print graphics, page numbers, the current date, or any text you want at the bottom of each page of a report. For output forms designed for use on screen, the Footer area typically contains buttons that give the user options such as doing a search or sort, printing records, or putting away the current report. Active objects are accepted.
-
-#### JSON Grammar
-
-| Name         | Data Type | Possible Values |
-| ------------ | --------- | --------------- |
-| markerFooter | integer   | minimum: 0      |
+| 名称          | データタイプ                            | とりうる値                                                             |
+| ----------- | --------------------------------- | ----------------------------------------------------------------- |
+| markerBreak | integer &#x7c; integer collection | ブレークマーカーの位置 (ピクセル単位)、またはブレークマーカー位置のコレクションを指定します。<br/>最小値: 0 |
 
 ---
 
-## Form Header
+## フォーム詳細
 
-The form Header area is displayed at the top of each screen and is printed at the top of each page of a report. The Header area is defined as the area above the Header control line.
+フォーム詳細エリアは、レポート中のレコード毎に画面に表示されたり印刷されたりします。 詳細エリアはヘッダーマーカー (H) と詳細マーカー (D) の間です。
 
-You can make the Header area smaller or larger. You can use the Header area for column names, for instructions, additional information, or even a graphic such as a company logo or a decorative pattern.
+詳細エリアの大きさは変更することができます。 詳細エリアに配置したオブジェクトはレコード毎に表示または印刷されます。 主にフィールドや変数を配置して、各レコードの情報を表示/印刷しますが、他のオブジェクトを配置することもできます。
 
-You can also place and use active objects in the Header area of output forms displayed as subforms, in the records display window or using the `DISPLAY SELECTION` and `MODIFY SELECTION` commands. The following active objects can be inserted:
+#### JSON 文法
 
-- Buttons, picture buttons,
-- Combo boxes, drop-down lists,  picture pop-up menus,
-- hierarchical lists, list boxes
-- Radio buttons, check boxes, 3D check boxes,
-- Progress indicators, rulers, steppers, spinners.
+| 名称         | データタイプ | とりうる値             |
+| ---------- | ------ | ----------------- |
+| markerBody | 整数     | 詳細マーカーの位置。 最小値: 0 |
 
-Standard actions such as `Add Subrecord`, `Cancel` (lists displayed using `DISPLAY SELECTION` and `MODIFY SELECTION`) or `Automatic splitter` can be assigned to the inserted buttons. The following events apply to the active objects you insert in the Header area: `On Load`, `On Clicked`, `On Header`, `On Printing Footer`, `On Double Clicked`, `On Drop`, `On Drag Over`, `On Unload`. Keep in mind that the form method is called with the `On Header` event after calling the object methods of the area.
+---
 
-The form can contains [additional header areas](#additional-areas) to be associated with additional breaks. A level 1 Header is printed just before the records grouped by the first sorted field are printed.
+## フォームフッター
 
-#### JSON Grammar
+フォームフッターエリアは、画面ではレコードリストの下の表示されます。 印刷レポートの場合は、各ページの一番下に印刷されます。 フッターエリアはブレークマーカー (B0) とフッターマーカー (F) の間です。 フッターエリアの大きさは変更することができます。
 
-| Name         | Data Type                         | Possible Values                                                                                       |
-| ------------ | --------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| markerHeader | integer &#x7c; integer collection | Header marker position or collection of header marker positions in pixels.<br/>Minimum value: 0 |
+フッターエリアの大きさは変更することができます。
 
-## Additional areas
+フッターエリアを使用して画像、ページ番号、日付、また各ページの下部に配置したいテキストを何でも印刷できます。 通常、画面表示用の出力フォームでは、フッターエリアに検索や並べ替え、印刷などをおこなうためのボタンを配置します。 すべてのアクティブオブジェクトを配置できます。
 
-You can create additional Break areas and Header areas for a report. These additional areas allow you to print subtotals and other calculations in a report and to display other information effectively.
+#### JSON 文法
 
-Additional areas are defined when you use a collection of positions in the [Form Break](#form-break) and [Form Header](#form-header) properties.
+| 名称           | データタイプ | とりうる値  |
+| ------------ | ------ | ------ |
+| markerFooter | 整数     | 最小値: 0 |
 
-> In the 4D Form editor, you create additional control lines by holding down the **Alt** key while clicking the appropriate control marker.
+---
 
-A form always starts with a Header, Detail, Break level 0, and Footer areas.
+## フォームヘッダー
 
-Break at level 0 zero takes in all the records; it occurs after all the records are printed. Additional Break areas can be added, i.e. a Break level 1, Break level 2, etc.
+フォームヘッダーエリアは画面の一番上に表示され、また印刷時には各ページの一番上に印刷されます。 ヘッダーエリアはフォームの一番上からヘッダーマーカー (H) までの間です。
 
-A Break level 1 occurs after the records grouped by the first sorted field are printed.
+ヘッダーエリアの大きさは変更することができます。 ヘッダーエリアには列のタイトル、フォームの説明、その他の情報、会社ロゴなどの画像を配置します。
 
-| Label        | Description      | Prints after groups created by |
-| ------------ | ---------------- | ------------------------------ |
-| Form Break 1 | Break at level 1 | First sorted field             |
-| Form Break 2 | Break at level 2 | Second sorted field            |
-| Form Break 3 | Break at level 3 | Third sorted field             |
+サブフォームとして表示される出力フォーム、あるいは `DISPLAY SELECTION` や `MODIFY SELECTION` コマンドを使用して表示される出力フォームのヘッダーエリアにアクティブオブジェクトを配置して使用することもできます。 以下のようなアクティブオブジェクトを配置できます:
 
-Additional Header areas are associated with Breaks. A level 1 Header is printed just before the records grouped by the first sorted field are printed.
+- ボタン、ピクチャーボタン
+- コンボボックス、ドロップダウンリスト、ピクチャーポップアップメニュー
+- 階層リスト、リストボックス
+- ラジオボタン、チェックボックス、3Dチェックボックス
+- 進捗インジケーター、ルーラー、ステッパー、スピナー
 
-| Label         | Description       | Prints after groups created by |
-| ------------- | ----------------- | ------------------------------ |
-| Form Header 1 | Header at level 1 | First sorted field             |
-| Form Header 2 | Header at level 2 | Second sorted field            |
-| Form Header 3 | Header at level 3 | Third sorted field             |
+`addSubrecord` (サブレコード追加) や `cancel`、`automaticSplitter` (自動スプリッター) などの標準アクションをボタンに割り当てることができます。 ヘッダーエリアに配置したアクティブオブジェクトでは以下のイベントを使用できます: `On Load`, `On Clicked`, `On Header`, `On Printing Footer`, `On Double Clicked`, `On Drop`, `On Drag Over`, `On Unload`。 フォームメソッドが `On Header` イベントで呼び出されるのは、エリアのオブジェクトメソッドが呼び出された後になります。
 
-If you use the `Subtotal` function to initiate Break processing, you should create a Break area for every level of Break that will be generated by the sort order, minus one. If you do not need anything printed in one of the Break areas, you can reduce its size to nothing by placing its marker on top of another control line. If you have more sort levels than Break areas, the last Break area will be repeated during printing.
+フォームには、[追加のヘッダーエリア](#追加マーカーの作成) を作成し、追加ブレークと関連づけることができます。 レベル1ヘッダーは、最初のソートフィールドによりグループ化されたレコードが印刷される直前に印刷されます。
+
+#### JSON 文法
+
+| 名称           | データタイプ                            | とりうる値                                                              |
+| ------------ | --------------------------------- | ------------------------------------------------------------------ |
+| markerHeader | integer &#x7c; integer collection | ヘッダーマーカーの位置 (ピクセル単位)、またはヘッダーマーカー位置のコレクションを指定します。 <br/>最小値: 0 |
+
+## 追加マーカーの作成
+
+レポート用に追加のブレークエリアやヘッダーエリアを作成できます。 これらの追加されたエリアを使用して、小計などの計算結果をレポートに印刷したり、その他の情報を効果的に表示することができます。
+
+追加エリアは、[フォームブレーク](#フォームブレーク) と [フォームヘッダー](#フォームヘッダー) のプロパティにマーカー位置のコレクションを指定すると定義されます。
+
+> 4Dフォームエディターでは、**Alt**キーを押しながら適切なコントロールマーカーをクリックして、追加のコントロールラインを作成します。
+
+レベル1のブレークは一番目のソートフィールドでグループ化されたレコードが印刷された後に発生します。
+
+ブレークレベル0 は、レポート対象の全レコードが印刷された後に実行されます。 追加のブレークマーカーはそれぞれ "ブレークレベル1"、"ブレークレベル2" などと呼ばれます。
+
+レベル1のブレークは一番目のソートフィールドでグループ化されたレコードが印刷された後に発生します。
+
+| ラベル | 詳細       | Prints after groups created by |
+| --- | -------- | ------------------------------ |
+| B1  | ブレークレベル1 | 一番目のソートフィールド印刷後                |
+| B2  | ブレークレベル2 | 二番目のソートフィールド印刷後                |
+| B3  | ブレークレベル3 | 三番目のソートフィールド印刷後                |
+
+追加のヘッダーはブレークに関連付けられます。 レベル1ヘッダーは、最初のソートフィールドによりグループ化されたレコードが印刷される直前に印刷されます。
+
+| ラベル | 詳細       | Prints after groups created by |
+| --- | -------- | ------------------------------ |
+| H1  | ヘッダーレベル1 | 一番目のソートフィールド印刷後                |
+| H2  | ヘッダーレベル2 | 二番目のソートフィールド印刷後                |
+| H3  | ヘッダーレベル3 | 三番目のソートフィールド印刷後                |
+
+ブレーク処理を開始するために `Subtotal` コマンドを使用する場合、ソート順に従って作成されるすべてのブレークレベル数から 1 マイナスした数のブレークエリアを作成すべきです。 ブレークエリアに何も印刷する必要がない場合、マーカーを移動してその高さを 0 にします。 ブレークエリアの数よりも多いフィールド数でソートすると、印刷時に最後のブレークエリアが繰り返されます。
