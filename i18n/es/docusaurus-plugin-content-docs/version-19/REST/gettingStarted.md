@@ -1,24 +1,24 @@
 ---
 id: gettingStarted
-title: Getting Started
+title: Comencemos
 ---
 
-4D provides you with a powerful REST server, that allows direct access to data stored in your 4D applications.
+4D le ofrece un servidor REST poderoso, que permite el acceso directo a los datos almacenados en sus aplicaciones 4D.
 
-The REST server is included in 4D and 4D Server, it is automatically available in your 4D applications [once it is configured](configuration.md).
+El servidor REST está incluido en 4D y 4D Server, está automáticamente disponible en sus aplicaciones 4D [una vez configurado](configuration.md).
 
-This section is intended to help familiarize you with REST functionality by means of a simple example. We are going to:
+Esta sección pretende ayudar a familiarizarse con la funcionalidad de REST mediante un ejemplo sencillo. Vamos a:
 
-- create and configure a basic 4D application project
-- access data from the 4D project through REST using a standard browser.
+- crear y configurar un proyecto de aplicación 4D básico
+- acceder a los datos del proyecto 4D a través de REST utilizando un navegador estándar.
 
-To keep the example simple, we’re going to use 4D and a browser that are running on the same machine. Of course, you could also use a remote architecture.
+Para simplificar el ejemplo, vamos a utilizar 4D y un navegador que se ejecutan en la misma máquina. Por supuesto, también puede utilizar una arquitectura remota.
 
-## Creating and configuring the 4D project
+## Crear y configurar el proyecto 4D
 
-1. Launch your 4D or 4D Server application and create a new project. You can name it "Emp4D", for example.
+1. Lance su aplicación 4D o 4D Server y cree un nuevo proyecto. Puede llamarlo, por ejemplo, "Emp4D".
 
-2. In the Structure editor, create an [Employees] table and add the following fields to it:
+2. En el editor de estructura, cree una tabla [Employees] y añada los siguientes campos a la misma:
 
 - Lastname (Alpha)
 - Firstname (Alpha)
@@ -26,29 +26,29 @@ To keep the example simple, we’re going to use 4D and a browser that are runni
 
 ![](../assets/en/REST/getstarted1.png)
 
-> The "Expose a REST resource" option is checked by default for the table and every field; do not change this setting.
+> La opción "Exponer un recurso REST" está marcada por defecto para la tabla y cada campo; no cambie esta configuración.
 
-3. Create forms, then create a few employees:
+3. Cree los formularios y, a continuación, cree algunos empleados:
 
 ![](../assets/en/REST/getstarted2.png)
 
-4. Display the **Web/REST resource** page of the Settings dialog box and [check the Expose as REST server](configuration.md#starting-the-rest-server) option.
+4. Muestre la página **Recursos web/REST** de la caja de diálogo de las Propiedades y [marque la opción Exponer como servidor REST](configuration.md#starting-the-rest-server).
 
-5. In the **Run** menu, select **Start Web Server** (if necessary), then select **Test Web Server**.
+5. En el menú **Ejecutar**, seleccione **Iniciar el servidor Web** (si es necesario), luego seleccione **Probar el servidor Web**.
 
-4D displays the default home page of the 4D Web Server.
+4D muestra la página de inicio por defecto del servidor web de 4D.
 
-## Accessing 4D data through the browser
+## Acceso a los datos 4D con el navegador
 
-You can now read and edit data within 4D only through REST requests.
+Ahora puede leer y editar datos dentro de 4D sólo a través de peticiones REST.
 
-Any 4D REST URL request starts with `/rest`, to be inserted after the `address:port` area. For example, to see what's inside the 4D datastore, you can write:
+Toda petición de URL 4D REST comienza por `/rest`, que se debe insertar después del área `address:port`. Por ejemplo, para ver lo que hay dentro del almacén de datos de 4D, puede escribir:
 
 ```
 http://127.0.0.1/rest/$catalog
 ```
 
-The REST server replies:
+El servidor REST responde:
 
 ```
 {
@@ -63,19 +63,19 @@ The REST server replies:
 }
 ```
 
-It means that the datastore contains the Employees dataclass. You can see the dataclass attributes by typing:
+Esto significa que el almacén de datos contiene la clase de datos Employees. Puede ver los atributos de la clase de datos escribiendo:
 
 ```
 /rest/$catalog/Employees
 ```
 
-If you want to get all entities of the Employee dataclass, you write:
+Si desea obtener todas las entidades de la clase de datos Employee, escriba:
 
 ```
 /rest/Employees
 ```
 
-**Response:**
+**Respuesta:**
 
 ```
 {
@@ -116,13 +116,13 @@ If you want to get all entities of the Employee dataclass, you write:
 }
 ```
 
-You have many possibilities to filter data to receive. For example, to get only the "Lastname" attribute value from the 2nd entity, you can just write:
+Tiene muchas posibilidades para filtrar los datos a recibir. Por ejemplo, para obtener sólo el valor del atributo "Lastname" de la 2ª entidad, basta con escribir:
 
 ```
 /rest/Employees(2)/Lastname
 ```
 
-**Response:**
+**Respuesta:**
 
 ```
 {
@@ -134,4 +134,4 @@ You have many possibilities to filter data to receive. For example, to get only 
 }
 ```
 
-The 4D [REST API](REST_requests.md) provides various commands to interact with the 4D applications.  
+La [API REST](REST_requests.md) ofrece varios comandos para interactuar con las aplicaciones 4D.  
