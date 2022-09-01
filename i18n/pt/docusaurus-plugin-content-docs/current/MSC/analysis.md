@@ -1,7 +1,7 @@
 ---
 id: analysis
-title: Activity analysis Page
-sidebar_label: Activity analysis Page
+title: Página análise de atividades
+sidebar_label: Página análise de atividades
 ---
 
 The Activity analysis page allows viewing the contents of the current log file. This function is useful for parsing the use of an application or detecting the operation(s) that caused errors or malfunctions. In the case of an application in client-server mode, it allows verifying operations performed by each client machine.
