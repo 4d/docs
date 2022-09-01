@@ -14,7 +14,7 @@ title: On Window Opening Denied
 | v19 R5  | Triggered on drop |
 </details>
 
-## Description
+## Beschreibung
 
 This event is generated when the opening of a pop-up window is blocked by the Web area. 4D Web areas do not allow the opening of pop-up windows.
 
