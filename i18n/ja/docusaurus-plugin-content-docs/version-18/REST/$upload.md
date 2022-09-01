@@ -4,29 +4,29 @@ title: "$upload"
 ---
 
 
-Returns an ID of the file uploaded to the server
+サーバーにアップロードしたファイルの ID を返します
 
-## Description
-Post this request when you have a file that you want to upload to the Server. If you have an image, you pass `$rawPict=true`. For all other files, you pass `$binary=true`.
+## 詳細
+サーバーにアップロードしたいファイルがある場合にこのリクエストを POST します。 画像の場合には `$rawPict=true` を渡します。 その他のファイルの場合は `$binary=true` を渡します。
 
-You can modify the timeout, which by default is 120 seconds, by passing a value to the `$timeout parameter`.
+デフォルトのタイムアウトは 120秒ですが、`$timeout` パラメーターに任意の数値を渡してタイムアウトを変更できます。
 
-## Image upload example
-To upload an image, you must first select the file object on the client using the HTML 5 built-in API for using file from a web application. 4D uses the MIME type attribute of the file object so it can handle it appropriately.
+## 画像アップロードの例
+画像をアップロードする前に、Webアプリケーションからのファイルの使用のための HTML 5 ビルトイン API を使ってクライアント上で対象となるファイルオブジェクトを選択しておく必要があります。 ファイルを適切に扱うため、4D はファイルオブジェクトの MIMEタイプ属性を使います。
 
-Then, we upload the selected image to 4D Server:
+次に、4D Server に選択した画像をアップロードします:
 
  `POST  /rest/$upload?$rawPict=true`
 
-**Result**:
+**結果**:
 
 `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50" }`
 
- Afterwards, you use this ID to add it to an attribute using [`$method=update`]($method.md#methodupdate) to add the image to an entity:
+ この画像をエンティティに追加するには、返された ID を使い [`$method=update`]($method.md#methodupdate) で画像属性に保存します:
 
  `POST  /rest/Employee/?$method=update`
 
-**POST data**:
+**POST データ**:
 
 ````
 {
@@ -36,9 +36,9 @@ Then, we upload the selected image to 4D Server:
 }
 ````
 
-**Response**:
+**レスポンス**:
 
-The modified entity is returned:
+更新後のエンティティが返されます:
 
 ````
 {
