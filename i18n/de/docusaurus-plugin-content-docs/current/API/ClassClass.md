@@ -34,9 +34,9 @@ When a user class is [defined](Concepts/classes.md#class-definition) in the proj
 
 **.name** : Text<!-- END REF -->
 
-#### Description
+#### Beschreibung
 
-The `.name` property <!-- REF #ClassClass.name.Summary -->contains the name of the `4D.Class` object<!-- END REF -->. Class names are case sensitive.
+The `.name` property <!-- REF #ClassClass.name.Summary -->contains the name of the `4D.Class` object<!-- END REF -->. .
 
 This property is **read-only**.
 
@@ -60,16 +60,16 @@ This property is **read-only**.
 **.new**( *param* : any { *;...paramN* } ) : 4D.Class<!-- END REF -->
 
 <!-- REF #ClassClass.new().Params -->
-| Parameter | Type     |    | Description                                        |
+| Parameter | Typ      |    | Beschreibung                                       |
 | --------- | -------- |:--:| -------------------------------------------------- |
 | param     | any      | -> | Parameter(s) to pass to the constructor function   |
-| Result    | 4D.Class | <- | New object of the class|<!-- END REF -->
+| Ergebnis  | 4D.Class | <- | New object of the class|<!-- END REF -->
 
 
 |
 
 
-#### Description
+#### Beschreibung
 
 The `.new()` function <!-- REF #ClassClass.new().Summary -->creates and returns a `cs.className` object which is a new instance of the class on which it is called<!-- END REF -->. This function is automatically available on all classes from the [`cs` class store](Concepts/classes.md#cs).
 
@@ -77,9 +77,9 @@ You can pass one or more optional *param* parameters, which will be passed to th
 
 If `.new()` is called on a non-existing class, an error is returned.
 
-#### Examples
+#### Beispiele
 
-To create a new instance of the Person class:
+Eine neue Instanz der Klasse Person anlegen:
 
 ```4d
 var $person : cs.Person  
@@ -126,7 +126,7 @@ $person:=cs.Person.new("John";"Doe";40)
 
 **.superclass** : 4D.Class<!-- END REF -->
 
-#### Description
+#### Beschreibung
 
 The `.superclass` property <!-- REF #ClassClass.superclass.Summary -->returns the parent class of the class<!-- END REF -->. A superclass can be a `4D.Class` object, or a `cs.className` object. If the class does not have a parent class, the property returns **null**.
 
@@ -134,7 +134,7 @@ A superclass of a user class is declared in a class by using the [`Class extends
 
 This property is **read-only**.
 
-#### Examples
+#### Beispiele
 
 ```4d
 $sup:=4D.File.superclass //Document
