@@ -3,13 +3,13 @@ id: onColumnMoved
 title: On Column Moved
 ---
 
-| Code | Can be called by                                                                                                        | Definition                                               |
-| ---- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------- |
-| 32   | [List Box](../FormObjects/listbox_overview.md) - [List Box Column](../FormObjects/listbox_overview.md#list-box-columns) | A list box column is moved by the user via drag and drop |
+| コード | 呼び出し元                                                                                                   | 定義                             |
+| --- | ------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| 32  | [リストボックス](../FormObjects/listbox_overview.md) - [リストボックス列](../FormObjects/listbox_overview.md#リストボックス列) | リストボックスの列がユーザーのドラッグ＆ドロップで移動された |
 
 
-## Description
+## 詳細
 
-This event is generated when a column of the list box is moved by the user using drag and drop ([if allowed](../FormObjects/properties_ListBox.md#locked-columns-and-static-columns)). It is not generated if the column is dragged and then dropped in its initial location.
+このイベントは、ユーザーのドラッグ＆ドロップでリストボックスの列が移動されたときに生成されます ([許可されている場合](../FormObjects/propertiesListBox.html#スクロールしない列とドラッグしない列))。 ただし、元の場所にドロップされた場合には生成されません。
 
-The `LISTBOX MOVED COLUMN NUMBER` command returns the new position of the column. 
+`LISTBOX MOVED COLUMN NUMBER` コマンドは列の新しい位置を返します。 
