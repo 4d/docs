@@ -1,7 +1,7 @@
 ---
 id: webServer
 slug: overview
-title: Overview
+title: Visão Geral
 ---
 
 4D in local mode, 4D in remote mode and 4D Server include a web server engine (aka http server) that enables you to design and publish powerful web applications that can make the most of your 4D databases.
@@ -16,7 +16,7 @@ Monitoring the 4D web server is easy and can be done using the 4D Server adminis
 
 The 4D web server automatically creates a default root folder and a default home page for an instantaneous availability.
 
-## Security
+## Segurança
 
 Data security is present at every stage of the 4D web server implementations. Security levels are scalable and default settings usually select the most secure options. The 4D web server security is based upon the following elements:
 
@@ -32,7 +32,7 @@ Data security is present at every stage of the 4D web server implementations. Se
 * **Sandboxing** through the definition of a [HTML Root](webServerConfig.md#root-folder) folder by default,
 
 * **Control of server resource usage** (e.g. [maximum concurrent web processes](webServerConfig.html#maximum-concurrent-web-processes) option).
-> For a general overview of 4D's security features, see the [4D Security guide](https://blog.4d.com/4d-security-guide/).
+> Para uma visão geral das funções de segurança de 4D, consulte o [Guia de segurança de 4D](https://blog.4d.com/4d-security-guide/).
 
 ## User Sessions
 
