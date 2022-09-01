@@ -1,71 +1,71 @@
 ---
 id: debugging-remote
-title: Debugging from remote machines
+title: Depuración desde máquinas remotas
 ---
 
-## Overview
+## Generalidades
 
-When a 4D database is running on 4D Server in interpreted mode, you can debug the 4D code running on the server from a remote 4D client logged to the project. You just need to attach the debugger to a specific remote machine, and the code execution can be monitored in the debugger directly on the remote machine.
+Cuando una base de datos 4D se ejecuta en 4D Server en modo interpretado, puede depurar el código 4D que se ejecuta en el servidor desde un cliente 4D remoto conectado al proyecto. Sólo tiene que adjuntar el depurador a una máquina remota específica y la ejecución del código puede ser monitoreada en el depurador directamente en la máquina remota.
 
-On a remote machine, the [debugger window](debugger.md) displays a specific server icon and a blue background color to indicate that you are debugging server code:
+En una máquina remota, la [ventana de depuración](debugger.md) muestra un icono de servidor específico y un color de fondo azul para indicar que está depurando el código servidor:
 
 ![debugger-window-remote](../assets/en/Debugging/debuggerWindowRemote.png)
 
-This feature is particularly useful when 4D Server runs in headless mode (see [Command Line Interface](../Admin/cli.md)), or when access to the server machine is not easy.
+Esta funcionalidad es especialmente útil cuando 4D Server se ejecuta en modo sin interfaz (ver [Command Line Interface](../Admin/cli.md)), o cuando el acceso a la máquina del servidor no es fácil.
 
 
-## Attached debugger
+## Depuradores adjuntos
 
-Only one debugger can debug a 4D Server application at a given time. It is called the **attached debugger**. The attached debugger can be:
+Sólo un depurador puede depurar una aplicación 4D Server en un momento dado. Se llama el **depurador asociado**. El depurador asociado puede ser:
 
-* the local 4D Server debugger (default) - if the server is not running headless.
-* the debugger of a remote 4D client - if the remote session has access to Design mode.
+* el depurador local de 4D Server (por defecto) - si el servidor no está ejecutando sin interfaz.
+* el depurador de un cliente 4D remoto - si la sesión remota tiene acceso al modo Diseño.
 
-The attached debugger is called whenever a 4D Server encounters:
-* a break point
-* a `TRACE` command
-* a caught command
-* an error
+El depurador asociado es llamado cada vez que se encuentra un 4D Server:
+* un punto de ruptura
+* un comando `TRACE`
+* un comando de captura
+* un error
 
-Keep in mind that error messages are sent to the attached debugger machine. This means that in the case of a remote debugger, server error messages are displayed on the remote 4D client.
+Tenga en cuenta que los mensajes de error se envían a la máquina depuradora asociada. Esto significa que en el caso de un depurador remoto, los mensajes de error del servidor se muestran en el cliente 4D remoto.
 
-Note that:
-* The code executed in the `On Server Startup Database` Method cannot be debugged remotely. It can only be debugged on the server side
-* If no debugger is attached, the running code is not stopped by debugging commands
-
-
-## Attaching the debugger
-
-By default when you start an interpreted application:
-
-* if 4D Server is not running headless, the debugger is attached to the server,
-* if 4D Server is running headless, no debugger is attached.
-
-You can attach the debugger to any remote 4D client allowed to connect to the 4D Server application.
-
-> The remote 4D client's user session must have access to the Design environment of the database.
-
-To attach the debugger to a remote 4D client:
-
-1. In the 4D Server menu bar, select **Edit** > **Detach Debugger** so that the debugger becomes available to remote machines (this step is useless if the 4D Server is running headless).
-2. In a remote 4D client connected to the server, select **Run** > **Attach Remote Debugger**
-
-If the attachment is accepted (see [Rejected attachment requests](#rejected-attachment-requests)), the menu command becomes **Detach Remote Debugger**.
-
-The debugger is then attached to the remote 4D client:
-* until the end of the user session
-* until you select `Detach Remote Debugger`
-
-To attach the debugger back to the server:
-
-1. On the remote 4D client that has the debugger attached, select **Run** > **Detach Remote Debugger**.
-2. In the 4D Server menu bar, select **Edit** > **Attach debugger**.
-
-> When the debugger is attached to the server (default), all server processes are automatically executed in cooperative mode to enable debugging. This can have a significant impact on performance. When you don't need to debug on the server machine, it is recommended to detach the debugger and attach it to a remote machine if necessary.
+Note que:
+* El código ejecutado en el método `On Server Startup Database` no se puede depurar de forma remota. Sólo se puede depurar del lado del servidor
+* Si no hay un depurador asociado, el código en ejecución no se detiene con los comandos de depuración
 
 
+## Asociar al depurador
 
-## Attaching debugger at startup
+Por defecto, cuando se inicia una aplicación interpretada:
+
+* si 4D Server no se está ejecutando sin interfaz, el depurador está conectado al servidor,
+* si 4D Server se ejecuta sin interfaz, no se asocia ningún depurador.
+
+Puede asociar el depurador a cualquier cliente 4D remoto que pueda conectarse a la aplicación 4D Server.
+
+> La sesión usuario del cliente 4D remoto debe tener acceso al entorno de diseño de la base de datos.
+
+Para asociar el depurador a un cliente 4D remoto:
+
+1. En la barra de menús de 4D Server, seleccione **Editar** > **Separar depurador** para que el depurador esté disponible para las máquinas remotas (este paso es inútil si 4D Server está funcionando sin interfaz).
+2. En un cliente 4D remoto conectado al servidor, seleccione **Ejecutar** > **Adjuntar depurador remoto**
+
+Si se acepta el archivo adjunto (ver [Solicitudes de archivo adjunto rechazadas](#rejected-attachment-requests)), el comando de menú se convierte en **Desconectar depurador remoto**.
+
+El depurador se conecta entonces al cliente 4D remoto:
+* hasta el final de la sesión usuario
+* hasta que se seleccione `Detach Remote Debugger`
+
+Para volver a conectar el depurador al servidor:
+
+1. En el cliente 4D remoto que tiene el depurador conectado, seleccione **Ejecutar** > **Separar depurador remoto**.
+2. En la barra de menú de 4D Server, seleccione **Editar** > **Adjuntar depurador**.
+
+> When the debugger is attached to the server (default), all server processes are automatically executed in cooperative mode to enable debugging. Esto puede tener un impacto significativo en el rendimiento. When you don't need to debug on the server machine, it is recommended to detach the debugger and attach it to a remote machine if necessary.
+
+
+
+## Adjuntar el depurador al inicio
 
 4D allows you to automatically attach the debugger to a remote 4D client or the server at startup:
 
@@ -77,7 +77,7 @@ To attach the debugger back to the server:
 
 > This setting is applied per project and is stored locally in the [`.4DPreferences`](Project/architecture.md#userpreferencesusername) file.
 
-## Rejected attachment requests
+## Peticiones de adjuntos rechazadas
 
 While the debugger is already attached to a remote 4D client or to 4D Server, no other machine can attach the debugger.
 
@@ -87,7 +87,7 @@ If a machine tries to attach the debugger while it is already attached, the atta
 
 ![attach-debugger-dialog-2](../assets/en/Debugging/attach-debugger-dialog-2.png)
 
-Attaching the debugger in this case requires that:
+Adjuntar el depurador en este caso requiere que:
 
 * the attached debugger is detached from the server or from the remote 4D client using respectively the **Detach debugger** or **Detach remote debugger** menu command,
-* the attached remote 4D client session is closed.
+* se cierra la sesión del cliente 4D remoto adjunto.
