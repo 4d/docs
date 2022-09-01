@@ -1,36 +1,36 @@
 ---
 id: genInfo
-title: Getting Server Information
+title: サーバー情報の取得
 ---
 
-You can get several information from the REST server:
+RESTサーバーの次の情報を取得することができます:
 
-- the exposed datastores and their attributes
-- the REST server cache contents, including user sessions.
+- 公開されているデータクラスとデータクラス属性
+- RESTサーバーのキャッシュの中身 (ユーザーセッションを含む)
 
-## Catalog
+## カタログ
 
-Use the [`$catalog`]($catalog.md), [`$catalog/{dataClass}`]($catalog.md#catalogdataclass), or [`$catalog/$all`]($catalog.md#catalogall) parameters to get the list of [exposed dataclasses and their attributes](configuration.md#exposing-tables-and-fields).
+[公開されているデータクラスとデータクラス属性](configuration.md#テーブルやフィールドの公開) のリストを取得するには [`$catalog`]($catalog.md)、[`$catalog/{dataClass}`]($catalog.md#catalogdataclass)、または [`$catalog/$all`]($catalog.md#catalogall) パラメーターを使います。
 
-To get the collection of all exposed dataclasses along with their attributes:
+公開されている全データクラスとデータクラス属性のコレクションを取得するには:
 
 `GET /rest/$catalog/$all`
 
 
-## Cache info
+## キャッシュ情報
 
-Use the [`$info`]($info.md) parameter to get information about the entity selections currently stored in 4D Server's cache as well as running user sessions.
+4D Server のキャッシュに保存されているエンティティセレクション、および実行中のユーザーセッションの情報を取得するには [`$info`]($info.md) パラメーターを使います。
 
-## queryPath and queryPlan
+## queryPath と queryPlan
 
-Entity selections that are generated through queries can have the following two properties: `queryPlan` and `queryPath`. To calculate and return these properties, you just need to add [`$queryPlan`]($queryplan.md) and/or [`$queryPath`]($querypath.md) in the REST request.
+クエリによって生成されたエンティティセレクションは、`queryPlan` と `queryPath` という 2つのプロパティを持ちえます。 これらのプロパティを算出・取得するには、RESTリクエストに [`$queryPlan`]($queryplan.md) および [`$queryPath`]($querypath.md) を追加します。
 
-For example:
+例:
 
 `GET /rest/People/$filter="employer.name=acme AND lastName=Jones"&$queryplan=true&$querypath=true`
 
-These properties are objects that contain information about how the server performs composite queries internally through dataclasses and relations:
-- **queryPlan**: object containing the detailed description of the query just before it was executed (i.e., the planned query).
-- **queryPath**: object containing the detailed description of the query as it was actually performed.
+これらのプロパティは、データクラスやリレーションに対する複合クエリをサーバーが内部的にどのようにおこなっているかの情報を格納するオブジェクトです:
+- **queryPlan**: 実行前のクエリについての詳細な情報 (クエリプラン) を格納するオブジェクト。
+- **queryPath**: 実際に実行されたクエリ処理の詳細な情報 (クエリパス) を格納するオブジェクト。
 
-The information recorded includes the query type (indexed and sequential) and each necessary subquery along with conjunction operators. Query paths also contain the number of entities found and the time required to execute each search criterion. You may find it useful to analyze this information while developing your application. Generally, the description of the query plan and its path are identical but they can differ because 4D can implement dynamic optimizations when a query is executed in order to improve performance. For example, the 4D engine can dynamically convert an indexed query into a sequential one if it estimates that it is faster. This particular case can occur when the number of entities being searched for is low.
+情報には、クエリの種類 (インデックスあるいはシーケンシャル)、必要なサブクエリおよびその連結演算子が含まれます。 クエリパスには、見つかったエンティティの数と各検索条件を実行するににかかった時間も含まれます。 この情報は、アプリケーション開発中に解析することで有効に活用できます。 一般的には、クエリプランとクエリパスの詳細は同一になるはずですが、4D はパフォーマンスの向上のために、動的な最適化をクエリ実行時に実装することがあるからです。 たとえば、その方が早いと判断した場合には、4Dエンジンはインデックス付きクエリをシーケンシャルなものへと動的に変換することがあります。 これは検索されているエンティティの数が少ないときに起こりえます。
