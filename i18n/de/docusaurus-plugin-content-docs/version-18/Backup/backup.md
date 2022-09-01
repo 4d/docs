@@ -1,19 +1,19 @@
 ---
 id: backup
 slug: backup
-title: Backup
+title: Cópia de segurança
 ---
 
 
 ## Starting a backup
 
-A backup can be started in three ways:
+Uma cópia de segurança pode ser começada de três maneiras:
 
-- Manually, using the **Backup...** item of the 4D **File** menu or the **Backup** button of the [Maintenance and Security Center](MSC/backup.md).
+- Manualmente, usando o comando **Cópia de segurança...** do menu 4D **Arquivo** ou o botão **Backup** de [Centro de Manutenção e Segurança](MSC/backup.md).
 - Automatically, using the scheduler that can be set in the Database Settings,
-- Programmatically, using the `BACKUP` command.
+- Por programação, utilizando o comando `BACKUP`.
 
-> 4D Server: A backup can be started manually from a remote machine using a method that calls the `BACKUP` command. The command will be executed, in all cases, on the server.
+> 4D Server: é possível iniciar uma cópia de segurança manualmente desde uma máquina remota mediante um método que chama ao comando `BACKUP`. O comando será executado, em todos os casos, no servidor.
 
 ### Manual backup
 
