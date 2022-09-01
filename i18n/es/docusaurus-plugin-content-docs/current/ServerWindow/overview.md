@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Overview
+title: Generalidades
 ---
 
 When 4D Server is launched with interface under Windows or macOS, a graphical administration window is available, providing many analysis and control tools for the published 4D application. To display the 4D Server Administration window for the opened project, select the **Window > Administration** menu item, or press **Ctrl+U**.
