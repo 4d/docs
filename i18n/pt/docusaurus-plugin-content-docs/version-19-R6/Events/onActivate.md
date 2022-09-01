@@ -8,7 +8,7 @@ title: On Activate
 | 11   | Formulário       | The form's window becomes the frontmost window or the subform's container gets the focus |
 
 
-## Descrção
+## Descrição
 
 If the window of a form was sent to the background, this event is called when the window becomes the frontmost window.
 
