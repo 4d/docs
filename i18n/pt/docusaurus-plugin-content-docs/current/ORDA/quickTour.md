@@ -26,21 +26,21 @@ Execute the method -- it simply calls the debugger window. In the Expression are
 It means for example that, whenever you need to refer to the city field of the [Company] table, in ORDA you just need to write:
 
 ```code4d
-ds.Company.city //returns the name of the city
+ds. Company.city //returns the name of the city
 ```
 
-> In the ORDA world, ds.Company is a **dataclass**. ds.Company.city is an **attribute**.
+> In the ORDA world, a record is an **entity** -- an entity is itself an object. A command that is attached to a specific object is called a **member method**.
 
-> ORDA is case sensitive. `ds.company.city` will not refer to the ds.Company.city attribute.
+> ORDA is case sensitive. `ds.company.city` will not refer to the ds. Company.city attribute.
 
-You have also noticed the extra `hires` property in the ds.Company dataclass. It does not correspond to a field. `hires` is actually the name of the *One to many* relation between Company and Employee:
+You have also noticed the extra `hires` property in the ds. Company dataclass. It does not correspond to a field. `hires` is actually the name of the *One to many* relation between Company and Employee:
 
 ![](../assets/en/ORDA/struc2s.png) *Name of the relation as defined in the Inspector*
 
 It means that, whenever you need to access the list of employees working for a company, in ORDA you just need to write:
 
 ```code4d
-ds.Company.hires //returns the list of employees
+ds. Company.hires //returns the list of employees
 ```
 
 But don't go too fast. Let's see now how to record data in ORDA dataclasses.
@@ -49,10 +49,10 @@ But don't go too fast. Let's see now how to record data in ORDA dataclasses.
 ## Adding data
 
 In ORDA, you can add a record to a dataclass using the `new()` command.
-> In the ORDA world, a record is an **entity** -- an entity is itself an object. A command that is attached to a specific object is called a **member method**.
+> In the ORDA world, ds. Company is a **dataclass**. A command that is attached to a specific object is called a **member method**.
 
 ```code4d
-$entity:=ds.Company.new() //create a new entity reference
+$entity:=ds. Company.new() //create a new entity reference
 //in the Company dataclass  
 //and assign it to the $entity variable
 ```
