@@ -1,54 +1,54 @@
 ---
 id: gettingStarted
-title: Getting Started
+title: はじめに
 ---
 
-4D provides you with a powerful REST server, that allows direct access to data stored in your 4D applications.
+4D は、4Dアプリケーションに格納されているデータへのダイレクトアクセスを可能にする強力な RESTサーバーを提供しています。
 
-The REST server is included in 4D and 4D Server, it is automatically available in your 4D applications [once it is configured](configuration.md).
+RESTサーバーは 4D および 4D Server に含まれており、[設定完了後は](configuration.md) 4Dアプリケーションにて自動的に利用可能となります。
 
-This section is intended to help familiarize you with REST functionality by means of a simple example. We are going to:
+この章では、簡単な例題を使用して REST機能を紹介します。 これから、実際に次のことをしてみましょう:
 
-- create and configure a basic 4D application project
-- access data from the 4D project through REST using a standard browser.
+- 簡単な 4Dアプリケーションプロジェクトを作成し、設定します。
+- 標準のブラウザーを開き、REST を介して 4Dプロジェクトのデータにアクセスします。
 
-To keep the example simple, we’re going to use 4D and a browser that are running on the same machine. Of course, you could also use a remote architecture.
+例題が複雑にならないよう、ここでは 4D とブラウザーを同じマシン上で使用します。 もちろん、リモートアーキテクチャーを使うことも可能です。
 
-## Creating and configuring the 4D project
+## 4Dプロジェクトの作成と設定
 
-1. Launch your 4D or 4D Server application and create a new project. You can name it "Emp4D", for example.
+1. 4D または 4D Server アプリケーションを起動し、新規プロジェクトを作成します。 名前は仮に "Emp4D" とします。
 
-2. In the Structure editor, create an [Employees] table and add the following fields to it:
+2. ストラクチャーエディターを開き、[Employees] テーブルを作成して、次のフィールドを追加します:
 
-- Lastname (Alpha)
-- Firstname (Alpha)
-- Salary (Longint)
+- Lastname (文字列)
+- Firstname (文字列)
+- Salary (倍長整数)
 
 ![](../assets/en/REST/getstarted1.png)
 
-> The "Expose a REST resource" option is checked by default for the table and every field; do not change this setting.
+> テーブルおよび各フィールドの "RESTリソースとして公開" オプションはデフォルトで選択されています。これを変更しないでください。
 
-3. Create forms, then create a few employees:
+3. フォームを作成し、何名かの社員レコードを作成します:
 
 ![](../assets/en/REST/getstarted2.png)
 
-4. Display the **Web/REST resource** page of the Settings dialog box and [check the Expose as REST server](configuration.md#starting-the-rest-server) option.
+4. ストラクチャー設定の **Web＞RESTリソース** ページを開き、[RESTサーバーとして公開](configuration.md#restサーバーを開始する) オプションを選択します。
 
-5. In the **Run** menu, select **Start Web Server** (if necessary), then select **Test Web Server**.
+5. 上部の **実行** メニューから、必要に応じて **Webサーバー開始** を選択し、次に同メニューから **Webサーバーテスト** を選択します。
 
-4D displays the default home page of the 4D Web Server.
+規定のブラウザーが開かれ、4D Webサーバーのデフォルトホームページが表示されます。
 
-## Accessing 4D data through the browser
+## ブラウザーから 4D データにアクセスする
 
-You can now read and edit data within 4D only through REST requests.
+これで、RESTリクエストを使った 4D のデータの読み込み・編集が可能になりました。
 
-Any 4D REST URL request starts with `/rest`, to be inserted after the `address:port` area. For example, to see what's inside the 4D datastore, you can write:
+4D の REST URL リクエストは必ず、`address:port` エリアの後に入る `/rest` から始まります。 たとえば、4Dデータストアの内容を確認するには、次のように書けます:
 
 ```
 http://127.0.0.1/rest/$catalog
 ```
 
-The REST server replies:
+RESTサーバーの応答です:
 
 ```
 {
@@ -63,19 +63,19 @@ The REST server replies:
 }
 ```
 
-It means that the datastore contains the Employees dataclass. You can see the dataclass attributes by typing:
+これは、データストアに Employees データクラスが格納されていることを意味します。 データクラス属性を確認するには、次のように書きます:
 
 ```
 /rest/$catalog/Employees
 ```
 
-If you want to get all entities of the Employee dataclass, you write:
+また、Employees データクラスの全エンティティを取得するには:
 
 ```
 /rest/Employees
 ```
 
-**Response:**
+**レスポンス:**
 
 ```
 {
@@ -116,13 +116,13 @@ If you want to get all entities of the Employee dataclass, you write:
 }
 ```
 
-You have many possibilities to filter data to receive. For example, to get only the "Lastname" attribute value from the 2nd entity, you can just write:
+取得するデータを様々な条件でフィルターすることも可能です。 たとえば、2番目のエンティティの "Lastname" 属性値のみを取得するには、次のように書きます:
 
 ```
 /rest/Employees(2)/Lastname
 ```
 
-**Response:**
+**レスポンス:**
 
 ```
 {
@@ -134,4 +134,4 @@ You have many possibilities to filter data to receive. For example, to get only 
 }
 ```
 
-The 4D [REST API](REST_requests.md) provides various commands to interact with the 4D applications.  
+4D の [REST API](REST_requests.md) は、4Dアプリケーションを操作するためのコマンドを多数提供しています。  
