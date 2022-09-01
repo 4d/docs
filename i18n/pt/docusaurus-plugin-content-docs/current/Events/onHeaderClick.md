@@ -3,12 +3,12 @@ id: onHeaderClick
 title: On Header Click
 ---
 
-| Code | Can be called by                                                                                                                                                            | Definition                        |
+| Code | Can be called by                                                                                                                                                            | Definição                         |
 | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
 | 42   | [4D View Pro Area](FormObjects/viewProArea_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A click occurs in a column header |
 
 
-## Description
+## Descrção
 
 ### List Box
 
@@ -25,16 +25,16 @@ If the [Sortable](FormObjects/properties_Action.md#sortable) property is not sel
 
 This event is generated when the user clicks on a column or row header in a 4D View Pro document. In this context, the [event object](overview.md#event-object) returned by the `FORM Event` command contains:
 
-| Property    | Type    | Description                                                                                                                          |
-| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------ |
-| code        | longint | 42                                                                                                                                   |
-| description | text    | "On Header Click"                                                                                                                    |
-| objectName  | text    | 4D View Pro area name                                                                                                                |
-| sheetName   | text    | Name of the sheet of the event                                                                                                       |
-| range       | object  | Cell range                                                                                                                           |
-| sheetArea   | longint | The sheet location where the event took place:<br/><li>0: The crossing area between column number/letter headers (top left of the sheet)</li><li>1: The column headers (area indicating the column numbers/letters)</li><li>2: The row headers (area indicating the row numbers)</li> |
+| Propriedade | Tipo          | Descrção                                                                                                                             |
+| ----------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
+| code        | inteiro longo | 42                                                                                                                                   |
+| description | text          | "On Header Click"                                                                                                                    |
+| objectName  | text          | 4D View Pro area name                                                                                                                |
+| sheetName   | text          | Name of the sheet of the event                                                                                                       |
+| range       | object        | Cell range                                                                                                                           |
+| sheetArea   | inteiro longo | The sheet location where the event took place:<br/><li>0: The crossing area between column number/letter headers (top left of the sheet)</li><li>1: The column headers (area indicating the column numbers/letters)</li><li>2: The row headers (area indicating the row numbers)</li> |
 
-#### Example
+#### Exemplo
 
 ```4d
  If(FORM Event.code=On Header Click)
