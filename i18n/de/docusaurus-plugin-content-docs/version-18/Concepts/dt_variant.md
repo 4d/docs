@@ -3,27 +3,27 @@ id: variant
 title: Variant
 ---
 
-Variant is a variable type which allows encapsulating data of any valid regular type in a variable. Typically, this variable type can be used to write generic code returning or receiving values for which the type is not known. This is the case for example for code handling object attributes.
+Variant ist ein Variablentyp, um Daten von beliebigem regulären Typ in eine Variable zu setzen. Dieser Typ lässt sich z.B. zum Schreiben von generischem Code verwenden, der Werte von nicht bekanntem Typ zurückgibt oder empfängt. Das ist beispielsweise bei Code zum Verwalten von Objektattributen der Fall.
 
-A variant type variable can contain a value of the following data types:
+Eine Variable vom Typ Variant kann einen Wert in folgenden Datentypen enthalten:
 
 - BLOB
 - boolean
 - collection
 - date
-- longint
+- Lange Ganzzahl
 - object
 - picture
 - pointer
-- real
-- text
+- Zahl
+- Text
 - time
-- null
-- undefined
+- Null
+- Undefiniert
 
-> Arrays cannot be stored in variant variables.
+> Arrays lassen sich nicht in Variablen vom Typ Variant speichern.
 
-In both interpreted and in compiled modes, a same variant variable can be assigned contents of different types. Unlike regular variable types, the variant variable content type is different from the variant variable type itself. For example:
+Sowohl im interpretierten als auch im kompilierten Modus kann derselben Variablen vom Typ Variant Inhalt mit unterschiedlichen Typen zugewiesen werden. Im Gegensatz zu festen Variablentypen ist der Inhaltstyp von Variant unterschiedlich von der Variable selbst. Beispiel:
 
 ```4d
 C_VARIANT($variant)
@@ -37,7 +37,7 @@ $vtype:=Type($variant) // 12 (Is variant)
 $vtypeVal:=Value type($variant) // 1 (Is real)
 ```
 
-You can use variant variables wherever variables are expected, you only need to make sure than the variable content data type is of the expected type. When accessing variant variables, only their current value is taken into account. For example:
+Sie können Variablen vom Typ Variant immer verwenden, wo Variablen erwartet werden. Sie müssen nur sicherstellen, dass der Datentyp des Variableninhalts vom erwarteten Typ ist. Beim Zugriff auf Variablen vom Typ Variant wird nur ihr aktueller Wert berücksichtigt. Beispiel:
 
 ```4d
 C_VARIANT($v)
@@ -48,7 +48,7 @@ $t:=Type($v) // 12 (Is variant)
 $t2:=Type($v2) // 2 (Is text)
 ```
 
-Variant can be used to declare method parameters ($0, $1,...) that can be of various types. In this case, you can build your code by testing the parameter value type, for example:
+Mit Variant lassen sich Parameter in Methoden ($0, $1,...) deklarieren, die von unterschiedlichem Typ sein können. In diesem Fall können Sie Code schreiben, der den Typ des Parameterwertes testet, zum Beispiel:
 
 ```4d
 C_VARIANT($1)
@@ -58,6 +58,9 @@ Case of
 : (Value type($1)=Is text)
 ...
 End case
+: (Value type($1)=Is text)
+...
+End case
 ```
 
-> When variant variables are not necessary (i.e. when the data type is known), it is recommended to use regular typed variables. Regular typed variables provide better performance, make code more clear and are helpful for the compiler to prevent bugs related to passing unexpected data types.
+> Sind Variablen vom Typ Variant nicht erforderlich (z.B. wenn der Datentyp bekannt ist), empfehlen wir, Variablen mit festen Typen zu verwenden. Denn sie bieten bessere Performance, klareren Code und sind für den Compiler hilfreich, da sie Fehler durch Übergeben unerwarteter Datentypen vermeiden.
