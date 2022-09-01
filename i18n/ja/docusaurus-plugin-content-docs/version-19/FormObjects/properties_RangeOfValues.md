@@ -1,74 +1,74 @@
 ---
 id: propertiesRangeOfValues
-title: Range of Values
+title: 値の範囲
 ---
 
-## Default value
+## デフォルト値
 
-You can assign a default value to be entered in an input object. This property is useful for example when the input [data source](properties_Object.md#variable-or-expression) is a field: the default value is entered when a new record is first displayed. You can change the value unless the input area has been defined as [non-enterable](properties_Entry.md#enterable).
+入力オブジェクトにデフォルト値を割り当てることができます。 このプロパティは、入力オブジェクトに設定されている [変数あるいは式](properties_Object.md#変数あるいは式) がフィールドであるときに便利です。新規レコードが作成され、初めて表示されるときにデフォルト値が代入されます。 エリアが [入力不可](properties_Entry.md#入力可) に設定されていなければ、デフォルト値を書き換えることができます。
 
-The default value can only be used if the [data source type](properties_Object.md#expression-type) is:
+デフォルト値を指定できるのは、[式の型](properties_Object.md#式の型) が次のいずれかの場合です:
 
-- text/string
-- number/integer
+- テキスト/文字列
+- 数値/整数
 - date
 - time
 - boolean
 
-4D provides stamps for generating default values for the date, time, and sequence number. The date and time are taken from the system date and time. 4D automatically generates any sequence numbers needed. The table below shows the stamp to use to generate default values automatically:
+日付、時刻、シーケンス番号については、4D が提供する記号を使用することができます。 日付と時刻はシステムから取得されます。 シーケンス番号は 4D が自動で生成します。 自動で使用できるデフォルト値の記号は以下の通りです:
 
-| Stamp | Meaning         |
-| ----- | --------------- |
-| #D    | Current date    |
-| #H    | Current time    |
-| #N    | Sequence number |
+| 記号 | 意味      |
+| -- | ------- |
+| #D | 本日の日付   |
+| #H | 現在の時刻   |
+| #N | シーケンス番号 |
 
-You can use a sequence number to create a unique number for each record in the table for the current data file. A sequence number is a longint that is generated for each new record. The numbers start at one (1) and increase incrementally by one (1). A sequence number is never repeated even if the record it is assigned to is deleted from the table. Each table has its own internal counter of sequence numbers. For more information, refer to the [Autoincrement](https://doc.4d.com/4Dv17R6/4D/17-R6/Field-properties.300-4354738.en.html#976029) paragraph.
+カレントデータファイルの特定のテーブルにおいて、レコード毎のユニーク番号を生成するためにシーケンス番号を使用することができます。 シーケンス番号は倍長整数型で新規レコード毎に生成されます。 番号は 1 から始まり、1ずつ増加します。 シーケンス番号が割り当てられたレコードがテーブルから削除されても、その番号は再利用されません。 シーケンス番号は各テーブルが保有する内部カウンターが管理します。 詳細は [自動インクリメント](https://doc.4d.com/4Dv18/4D/18/Field-properties.300-4575567.ja.html#976029) の段落を参照してください。
 
-> Do not make confusion between this property and the "[default values](properties_DataSource.md#default-list-of-values)" property that allows to fill a list box column with static values.
+> このプロパティと、リストボックス列に固定値を表示させるための "[デフォルト値](properties_DataSource.md#デフォルト値)" を混同しないようにしてください。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name         | Data Type                           | Possible Values                            |
-| ------------ | ----------------------------------- | ------------------------------------------ |
-| defaultValue | string, number, date, time, boolean | Any value and/or a stamp: "#D", "#H", "#N" |
+| 名称           | データタイプ                              | とりうる値                          |
+| ------------ | ----------------------------------- | ------------------------------ |
+| defaultValue | string, number, date, time, boolean | 任意の値。次の記号を含む: "#D", "#H", "#N" |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[Input](input_overview.md)
-
----
-
-## Excluded List
-
-Allows setting a list whose values cannot be entered in the object. If an excluded value is entered, it is not accepted and an error message is displayed.
-> If a specified list is hierarchical, only the items of the first level are taken into account.
-
-#### JSON Grammar
-
-| Name         | Data Type | Possible Values                  |
-| ------------ | --------- | -------------------------------- |
-| excludedList | list      | A list of values to be excluded. |
-
-#### Objects Supported
-
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
+[入力](input_overview.md)
 
 ---
 
-## Required List
+## 除外リスト
 
-Restricts the valid entries to the items on the list. For example, you may want to use a required list for job titles so that valid entries are limited to titles that have been approved by management.
+除外リストを使用すると、当該リストの項目は入力できなくなります。 ユーザーがこのリストに含まれる値を入力したとき、その入力は自動的に却下され、エラーメッセージが表示されます。
+> 階層リストを指定した場合は、第一レベルの項目のみが考慮されます。
 
-Making a list required does not automatically display the list when the field is selected. If you want to display the required list, assign the same list to the [Choice List](properties_DataSource.md#choice-list) property. However, unlike the [Choice List](properties_DataSource.md#choice-list) property, when a required list is defined, keyboard entry is no longer possible, only the selection of a list value using the pop-up menu is allowed. If different lists are defined using the [Choice List](properties_DataSource.md#choice-list) and Required List properties, the Required List property has priority.
-> If a specified list is hierarchical, only the items of the first level are taken into account.
+#### JSON 文法
 
-#### JSON Grammar
+| 名称           | データタイプ | とりうる値     |
+| ------------ | ------ | --------- |
+| excludedList | list   | 除外する値のリスト |
 
-| Name         | Data Type | Possible Values             |
-| ------------ | --------- | --------------------------- |
-| requiredList | list      | A list of mandatory values. |
+#### 対象オブジェクト
 
-#### Objects Supported
+[コンボボックス](comboBox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [入力](input_overview.md)
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
+---
+
+## 指定リスト
+
+有効な入力値のリストを指定するために使用します。 たとえば、役職名のリストを指定リストとして設定できます。こうすると、事前に作成されたリスト中の役職名だけ有効な値となります。
+
+指定リストを指定しても、フィールドが選択されたときにリストは自動で表示されません。 指定リストを表示したい場合は、"データソース"テーマの [選択リスト](properties_DataSource.md#選択リスト) プロパティに同じリストを指定します。 ただし、[選択リスト](properties_DataSource.md#選択リスト) プロパティだけが指定されているときとは異なり、指定リストも設定されている場合にはキーボードによる入力はできません。ポップアップメニューでのリスト項目の選択だけが可能です。 [選択リスト](properties_DataSource.md#選択リスト) と指定リストにそれぞれ別のリストが指定されている場合、指定リストが優先されます。
+> 階層リストを指定した場合は、第一レベルの項目のみが考慮されます。
+
+#### JSON 文法
+
+| 名称           | データタイプ | とりうる値      |
+| ------------ | ------ | ---------- |
+| requiredList | list   | 有効な入力値のリスト |
+
+#### 対象オブジェクト
+
+[コンボボックス](comboBox_overview.md) - [リストボックス列](listbox_overview.md#リストボックス列) - [入力](input_overview.md)
