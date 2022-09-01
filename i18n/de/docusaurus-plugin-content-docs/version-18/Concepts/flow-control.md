@@ -1,16 +1,16 @@
 ---
 id: control-flow
-title: Control flow overview
+title: Ablaufsteuerung Überblick
 ---
 
-Regardless of the simplicity or complexity of a method, you will always use one or more of three types of programming structures. Programming structures control the flow of execution, whether and in what order statements are executed within a method. There are three types of structures:
+In Methoden, ganz gleich, ob sie einfach oder komplex sind, verwenden Sie immer eine oder mehrere der drei Typen von Programmierstrukturen. Diese Strukturen steuern den Ablauf, d. h. wie und in welcher Reihenfolge Anweisungen in einer Methode ausgeführt werden. Es gibt drei Strukturarten:
 
-- **Sequential**: a sequential structure is a simple, linear structure. A sequence is a series of statements that 4D executes one after the other, from first to last. A one-line routine, frequently used for object methods, is the simplest case of a sequential structure. For example: `[People]lastName:=Uppercase([People]lastName)`
-- **[Branching](Concepts/cf_branching.md)**: A branching structure allows methods to test a condition and take alternative paths, depending on the result. The condition is a Boolean expression, an expression that evaluates TRUE or FALSE. One branching structure is the `If...Else...End if` structure, which directs program flow along one of two paths. The other branching structure is the `Case of...Else...End case` structure, which directs program flow to one of many paths.
-- **[Looping](Concepts/cf_looping.md)**: When writing methods, it is very common to find that you need a sequence of statements to repeat a number of times. To deal with this need, the 4D language provides the following looping structures:
+- **Sequentiell**: Eine sequentielle Struktur ist eine einfache lineare Struktur. Eine Sequenz ist eine Reihe von Anweisungen, die 4D eine nach der anderen, von der ersten bis zur letzten ausführt. Ein typisches Beispiel ist die einzeilige Routine, die häufig für Objektmethoden verwendet wird. Zum Beispiel: `[People]lastName:=Uppercase([People]lastName)`
+- **[Abfragen](Concepts/cf_branching.md)**: Bei einer Abfrage können Methoden eine Bedingung testen und je nach Ergebnis unterschiedliche Wege wählen. Die Bedingung ist ein Boolean Ausdruck, der TRUE oder FALSE ermittelt. Eine Abfragestruktur ist `If...Else...End if`. Sie leitet den Programmfluss auf einen von zwei möglichen Wegen. Die andere Abfragestruktur ist `Case of...Else...End case`. Sie leitet den Programmfluss auf einen von vielen Wegen.
+- **[Schleifen](Concepts/cf_looping.md)**: Beim Schreiben von Methoden kommt es häufig vor, dass Sie eine Anweisung oder eine Folge von Anweisungen mehrmals wiederholen müssen. Dafür bietet die 4D Programmiersprache folgende Schleifenstrukturen:
   - `While...End while`
   - `Repeat...Until`
   - `For...End for`
-  - `For each...End for each`<br/> The loops are controlled in two ways: either they loop until a condition is met, or they loop a specified number of times. Each looping structure can be used in either way, but `While` loops and `Repeat` loops are more appropriate for repeating until a condition is met, and `For` loops are more appropriate for looping a specified number of times. `For each...End for each` allows mixing both ways and is designed to loop within objects and collections.
+  - `For each...End for each`<br/> The loops are controlled in two ways: either they loop until a condition is met, or they loop a specified number of times. Beide Möglichkeiten lassen sich für alle Arten von Schleifen verwenden. Jedoch eignen sich `While-` und `Repeat-`Schleifen besser für das Durchlaufen, bis eine Bedingung gefunden wird und `For-`Schleifen besser für den zahlenmäßig begrenzten Durchlauf. Mit `For each...End for each` können Sie beide Arten mischen und damit Objekte und Collections durchlaufen.
 
-**Note:** 4D allows you to embed programming structures up to a "depth" of 512 levels.
+**Hinweis:** 4D ermöglicht, Programmierstrukturen bis zu einer Tiefe von 512 Ebenen einzubinden.
