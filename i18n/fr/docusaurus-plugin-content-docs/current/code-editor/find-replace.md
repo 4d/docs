@@ -1,6 +1,6 @@
 ---
 id: find-replace
-title: Find and replace
+title: Chercher et remplacer
 ---
 
 The Code Editor has specific find and replace functions that apply to the current window.
@@ -13,20 +13,20 @@ The Find/Replace commands for methods, classes or functions are located in **Edi
 
 > The find commands located above the **Find** submenu are not specific to the Code Editor but may be used to search for a value among all the methods, classes or functions, using the **Find in design** feature in the toolbar or in the **Edit** menu.
 
-## Find
+## Chercher
 
 Selecting the **Find...** command displays the following dialog box:
 
 ![find-dialog](../assets/en/code-editor/find-dialog.png)
 
-The search defined in this dialog box will be performed in the method located in the foreground.
+La recherche définie dans cette boîte de dialogue sera effectuée dans la fenêtre de la méthode située au premier plan.
 
 - The **Find What:** area enables you to enter the string of characters to be searched for. This area is a combo box that stores the last 15 character strings that have been searched for or replaced during the session. If you highlight text before choosing the **Find...** command, it will appear in this area. You can then either use this text or replace it with another.
 - The **Whole Word** option is used to limit the search to exact occurrences of the word being searched for. When this option is checked, for instance, a search for "client" will not find either "clients" or "myclient." By default, this option is not checked; therefore, a search for "var" will find "Myvar," "variation," etc. Be careful, unlike the **Whole Object Name** option of the Find in Design dialog box, the **Whole Word** option does not take object names into account. For example, with this option, searching for the string "My" in a method will find the "My Variable" variable. This is not the case for an overall search using the **Whole Object Name** option, where the same result will not be found in the context of the above example since the whole object name (of the variable found previously) is "My Variable" and therefore does not correspond exactly to the string entered ("My").
 - The **Case Sensitive** option is used to take the case of characters as they were entered in the "Find What:" area into account. For instance, a search for "MyVar" will not find "myVar."
 - The **Previous/Next** radio buttons are used to set the direction of the search: towards the beginning or end of the current method, starting from the initial location of the cursor.
 
-When you click on **OK**, 4D begins searching from the current text insertion point and continues to the end of the method. The first item corresponding to the set criteria is thus selected in the Code Editor window. It is then possible to continue the search using the **Find Next** and **Find Previous** commands of the **Edit** menu.
+4D begins searching from the current text insertion point and continues to the end of the method. The first item corresponding to the set criteria is thus selected in the Code Editor window. It is then possible to continue the search using the **Find Next** and **Find Previous** commands of the **Edit** menu.
 
 ### Find Same
 
@@ -56,7 +56,7 @@ The **Replace** command displays the following dialog box:
 - The **Case Sensitive** option is used to find/replace only character strings having the same case as that of the entered string. For instance, a search for "MyVar" will not find "myVar."
 - As in the Find dialog box, the **Previous** and **Next** buttons are used to set the direction of the search: towards the beginning or end of the current method, starting from the initial location of the cursor.
 
-The **Replace** button is used to launch the search and replace the first occurrence found. 4D begins searching from the current text insertion point and continues to the end of the method. It is then possible to continue finding/replacing using the **Replace Next** and **Replace Previous** commands of the **Edit** menu.
+The **Replace** button is used to launch the search and replace the first occurrence found. 4D begins searching from the current text insertion point and continues to the end of the method. It is then possible to continue the search using the **Find Next** and **Find Previous** commands of the **Edit** menu.
 
 The **Everywhere** button is used to replace all the occurrences corresponding to the search criteria directly in the open method.
 
@@ -66,7 +66,7 @@ The **Goto Definition** command opens the definition of an element referenced in
 
 **Note:** This feature is also available through the keyboard shortcut **Ctrl+K** (Windows) or **Command+K** (macOS).
 
-The effect varies depending on the target element. For example:
+The effect varies depending on the target element.
 
 - Selecting a project method and choosing **Goto Definition...** displays the contents of the method in a new window of the Code Editor
 - Selecting a class name or class attribute and choosing **Goto Definition...** opens the class in the the Code Editor
@@ -77,7 +77,7 @@ The **Reveal in Explorer...** command opens an Explorer window with the target e
 
 ## Show documentation
 
-The **Show documentation...** command opens the documentation for the target element. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Show documentation...** or use the contextual menu. The effect varies depending on the target element. For example:
+The **Show documentation...** command opens the documentation for the target element. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Show documentation...** or use the contextual menu. The effect varies depending on the target element.
 
 - Selecting a project method or a user class and choosing **Show documentation...** selects the method in the Explorer and switches to the documentation tab
 - Selecting a 4D command or a 4D class name and choosing **Show documentation...** displays the online documentation
