@@ -1,6 +1,6 @@
 ---
 id: propertiesPicture
-title: Picture
+title: Imagem
 ---
 
 ## Pathname
@@ -15,9 +15,9 @@ The following locations can be used for static pictures:
 
 #### JSON Grammar
 
-|  Name   | Data Type | Possible Values                                                                               |
-|:-------:|:---------:| --------------------------------------------------------------------------------------------- |
-| picture |   text    | Relative or filesystem path in POSIX syntax, or "var:\<variableName\>" for picture variable |
+|  Nome   | Tipo de dados | Possible Values                                                                               |
+|:-------:|:-------------:| --------------------------------------------------------------------------------------------- |
+| picture |     text      | Relative or filesystem path in POSIX syntax, or "var:\<variableName\>" for picture variable |
 
 #### Objects Supported
 
@@ -25,7 +25,7 @@ The following locations can be used for static pictures:
 
 ---
 
-## Display
+## Visualização
 
 ### Scaled to fit
 
@@ -35,7 +35,7 @@ The **Scaled to fit** format causes 4D to resize the picture to fit the dimensio
 
 ![](../assets/en/FormObjects/property_pictureFormat_ScaledToFit.png)
 
-### Replicated
+### Replicado
 
 `JSON grammar: "tiled"`
 
@@ -58,9 +58,9 @@ The **Truncated (non-centered)** format causes 4D to place the upper-left corner
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                                          |
-| ------------- | --------- | -------------------------------------------------------- |
-| pictureFormat | string    | "scaled", "tiled", "truncatedCenter", "truncatedTopLeft" |
+| Nome          | Tipo de dados | Possible Values                                          |
+| ------------- | ------------- | -------------------------------------------------------- |
+| pictureFormat | string        | "scaled", "tiled", "truncatedCenter", "truncatedTopLeft" |
 
 #### Objects Supported
 
