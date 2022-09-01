@@ -4,62 +4,62 @@ title: Window Size
 ---
 
 
-## Fixed Height
+## Hauteur fixe
 
 
-If you select this option, the window height will be locked and it will not be possible for the user to resize it.
+Si vous cochez cette option, la hauteur de la fenêtre sera verrouillée et l'utilisateur ne pourra plus la redimensionner.
 
-If this option is not selected, the width of the form window can be modified. In this case, the [Minimum Height and Maximum Height](#maximum-height-minimum-height) properties can be used to determine the resizing limits.
+Si cette option n'est pas cochée, la largeur de la fenêtre du formulaire peut être modifiée. Dans ce cas, les propriétés [Hauteur mini et Hauteur maxi](#maximum-height-minimum-height) peuvent être utilisées pour déterminer les limites de redimensionnement.
 
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name          | Data Type | Possible Values     |
-| ------------- | --------- | ------------------- |
-| windowSizingY | string    | "fixed", "variable" |
+| Nom           | Type de données | Valeurs possibles   |
+| ------------- | --------------- | ------------------- |
+| windowSizingY | string          | "fixed", "variable" |
 
 
 ---
 
-## Fixed Width
+## Largeur fixe
 
 
-If you select this option, the window width will be locked and it will not be possible for the user to resize it.
+Si vous cochez cette option, la largeur de la fenêtre sera verrouillée et l'utilisateur ne pourra plus la redimensionner.
 
-If this option is not selected, the width of the form window can be modified. In this case, the [Minimum Width and Maximum Width](#maximum-width-minimum-width) properties can be used to determine the resizing limits.
+Si cette option n'est pas cochée, la largeur de la fenêtre du formulaire peut être modifiée. Dans ce cas, les propriétés [Largeur mini et Largeur maxi](#maximum-width-minimum-width) peuvent être utilisées pour déterminer les limites de redimensionnement.
 
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name          | Data Type | Possible Values     |
-| ------------- | --------- | ------------------- |
-| windowSizingX | string    | "fixed", "variable" |
+| Nom           | Type de données | Valeurs possibles   |
+| ------------- | --------------- | ------------------- |
+| windowSizingX | string          | "fixed", "variable" |
 
 ---
 
 
 
-## Maximum Height, Minimum Height
+## Hauteur maxi, Hauteur mini
 
-Maximum and minimum height (in pixels) of a resizeable form window if the [Fixed Height](#fixed-height) option is not set.
+Hauteur maximale et minimale (en pixels) d'une fenêtre de formulaire redimensionnable si l'option [Hauteur fixe](#fixed-height) n'est pas définie.
 
-##### JSON Grammar
+##### Grammaire JSON
 
-| Name            | Data Type | Possible Values |
-| --------------- | --------- | --------------- |
-| windowMinHeight | number    | integer value   |
-| windowMaxHeight | number    | integer value   |
-
-
-## Maximum Width, Minimum Width
-
-Maximum and minimum width (in pixels) of a resizeable form window if the [Fixed Width](#fixed-width) option is not set.
+| Nom             | Type de données | Valeurs possibles  |
+| --------------- | --------------- | ------------------ |
+| windowMinHeight | number          | valeur entier long |
+| windowMaxHeight | number          | valeur entier long |
 
 
-#### JSON Grammar
+## Largeur maxi, Largeur mini
 
-| Name           | Data Type | Possible Values |
-| -------------- | --------- | --------------- |
-| windowMinWidth | number    | integer value   |
-| windowMaxWidth | number    | integer value   |
+Largeur maximale et minimale (en pixels) d'une fenêtre de formulaire redimensionnable si l'option [Largeur fixe](#fixed-width) n'est pas définie.
+
+
+#### Grammaire JSON
+
+| Nom            | Type de données | Valeurs possibles  |
+| -------------- | --------------- | ------------------ |
+| windowMinWidth | number          | valeur entier long |
+| windowMaxWidth | number          | valeur entier long |
 
