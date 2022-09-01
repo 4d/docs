@@ -26,7 +26,7 @@ WASID4D=EA0400C4D58FF04F94C0A4XXXXXX3
 
 In the subsequent REST requests, make sure this cookie is included in the **"Cookie" request header** so that you will reuse the same session. Otherwise, a new session will be opened, and another license used.
 
-### Example
+### Beispiel
 
 The way to handle session cookies actually depends on your HTTP client. This example shows how to extract and resend the session cookie in the context of requests handled through the 4D `HTTP Request` command.
 
