@@ -1,6 +1,6 @@
 ---
 id: propertiesAction
-title: Action
+title: Aktion
 ---
 
 
@@ -12,7 +12,7 @@ Control whether and how the user can drag the object. By default, no drag operat
 
 Two drag modes are available:
 
-- **Custom**: In this mode, any drag operation performed on the object triggers the `On Begin Drag` form event in the context of the object. You then manage the drag action using a method. In custom mode, basically the whole drag-and-drop operation is handled by the programmer. This mode lets you implement any interface based upon drag-on-drop, including interfaces that do not necessarily transport data, but can perform any action like opening files or triggering a calculation. This mode is based upon a combination of specific properties, events, and commands from the `Pasteboard` theme.
+- **Custom**: In this mode, any drag operation performed on the object triggers the `On Begin Drag` form event in the context of the object. **Custom**: In this mode, any drag operation performed on the object triggers the `On Begin Drag` form event in the context of the object. You then manage the drag action using a method. This mode lets you implement any interface based upon drag-on-drop, including interfaces that do not necessarily transport data, but can perform any action like opening files or triggering a calculation. This mode is based upon a combination of specific properties, events, and commands from the `Pasteboard` theme.
 - **Automatic**: In this mode, 4D **copies** text or pictures directly from the form object. It can then be used in the same 4D area, between two 4D areas, or between 4D and another application. For example, automatic drag (and drop) lets you copy a value between two fields without using programming:  
   ![](../assets/en/FormObjects/property_automaticDragDrop.png)  
   ![](../assets/en/FormObjects/property_automaticDragDrop2.png) In this mode, the `On Begin Drag` form event is NOT generated. If you want to "force" the use of the custom drag while automatic drag is enabled, hold down the **Alt** (Windows) or **Option** (macOS) key during the action. This option is not available for pictures.
@@ -21,9 +21,9 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values                                              |
-| -------- | --------- | ------------------------------------------------------------ |
-| dragging | text      | "none" (default), "custom", "automatic" (excluding list box) |
+| Name     | Datentyp | Possible Values                                              |
+| -------- | -------- | ------------------------------------------------------------ |
+| dragging | Text     | "none" (default), "custom", "automatic" (excluding list box) |
 
 #### Objects Supported
 
@@ -41,16 +41,16 @@ Control whether and how the object can be the destination of a drag and drop ope
 
 Two drop modes are available:
 
-- **Custom**: In this mode, any drop operation performed on the object triggers the `On Drag Over` and `On Drop` form events in the context of the object. You then manage the drop action using a method. In custom mode, basically the whole drag-and-drop operation is handled by the programmer. This mode lets you implement any interface based upon drag-on-drop, including interfaces that do not necessarily transport data, but can perform any action like opening files or triggering a calculation. This mode is based upon a combination of specific properties, events, and commands from the `Pasteboard` theme.
+- **Custom**: In this mode, any drop operation performed on the object triggers the `On Drag Over` and `On Drop` form events in the context of the object. **Custom**: In this mode, any drop operation performed on the object triggers the `On Drag Over` and `On Drop` form events in the context of the object. You then manage the drag action using a method. This mode lets you implement any interface based upon drag-on-drop, including interfaces that do not necessarily transport data, but can perform any action like opening files or triggering a calculation. This mode is based upon a combination of specific properties, events, and commands from the `Pasteboard` theme.
 - **Automatic**: In this mode, 4D automatically manages — if possible — the insertion of dragged data of the text or picture type that is dropped onto the object (the data are pasted into the object). The `On Drag Over` and `On Drop` form events are NOT generated. On the other hand, the `On After Edit` (during the drop) and `On Data Change` (when the object loses the focus) events are generated.
 
 For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) in the *4D Language Reference* manual.
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values                                              |
-| -------- | --------- | ------------------------------------------------------------ |
-| dropping | text      | "none" (default), "custom", "automatic" (excluding list box) |
+| Name     | Datentyp | Possible Values                                              |
+| -------- | -------- | ------------------------------------------------------------ |
+| dropping | Text     | "none" (default), "custom", "automatic" (excluding list box) |
 
 #### Objects Supported
 
@@ -68,9 +68,9 @@ When this option is enabled, the object method is executed with the `On Data Cha
 
 #### JSON Grammar
 
-| Name                | Data Type | Possible Values |
-| ------------------- | --------- | --------------- |
-| continuousExecution | boolean   | true, false     |
+| Name                | Datentyp | Possible Values |
+| ------------------- | -------- | --------------- |
+| continuousExecution | boolean  | true, false     |
 
 #### Objects Supported
 
@@ -96,9 +96,9 @@ Several types of method references are supported:
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values                                                    |
-| ------ | --------- | ------------------------------------------------------------------ |
-| method | text      | Object method standard or custom file path, or project method name |
+| Name   | Datentyp | Possible Values                                                    |
+| ------ | -------- | ------------------------------------------------------------------ |
+| method | Text     | Object method standard or custom file path, or project method name |
 
 #### Objects Supported
 
@@ -114,9 +114,9 @@ Authorizes the movement of rows during execution. This option is selected by def
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values |
-| ----------- | --------- | --------------- |
-| movableRows | boolean   | true, false     |
+| Name        | Datentyp | Possible Values |
+| ----------- | -------- | --------------- |
+| movableRows | boolean  | true, false     |
 
 #### Objects Supported
 
@@ -130,9 +130,9 @@ Allows the selection of multiple records/options in a [hierarchical list](list_o
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values              |
-| ------------- | --------- | ---------------------------- |
-| selectionMode | text      | "multiple", "single", "none" |
+| Name          | Datentyp | Possible Values              |
+| ------------- | -------- | ---------------------------- |
+| selectionMode | Text     | "multiple", "single", "none" |
 
 #### Objects Supported
 
@@ -152,9 +152,9 @@ In other cases (list boxes based on named selections, columns associated with ex
 
 #### JSON Grammar
 
-| Name     | Data Type | Possible Values |
-| -------- | --------- | --------------- |
-| sortable | boolean   | true, false     |
+| Name     | Datentyp | Possible Values |
+| -------- | -------- | --------------- |
+| sortable | boolean  | true, false     |
 
 #### Objects Supported
 
@@ -172,9 +172,9 @@ You can also set this property using the `OBJECT SET ACTION` command.
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values                                                                                                  |
-| ------ | --------- | ---------------------------------------------------------------------------------------------------------------- |
-| action | string    | The name of a [valid standard action](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
+| Name   | Datentyp | Possible Values                                                                                                  |
+| ------ | -------- | ---------------------------------------------------------------------------------------------------------------- |
+| aktion | string   | The name of a [valid standard action](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
 
 #### Objects Supported
 
