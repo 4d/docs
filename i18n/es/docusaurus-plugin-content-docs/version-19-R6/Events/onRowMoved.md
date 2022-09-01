@@ -3,13 +3,13 @@ id: onRowMoved
 title: On Row Moved
 ---
 
-| Code | Can be called by                                                                                                                                     | Definition                                            |
-| ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| 34   | [List Box of the array type](FormObjects/listbox_overview.md#array-list-boxes) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | A list box row is moved by the user via drag and drop |
+| Code | Puede ser llamado por                                                                                                                                | Definición                                                                     |
+| ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| 34   | [List Box de tipo array](FormObjects/listbox_overview.md#array-list-boxes) - [Columna de List Box](FormObjects/listbox_overview.md#list-box-columns) | Una línea de list box es movida por el usuario por medio de arrastrar y soltar |
 
 
-## Description
+## Descripción
 
-This event is generated when a row of the list box ([array type only](FormObjects/listbox_overview.md#array-list-boxes)) is moved by the user using drag and drop ([if allowed](FormObjects/properties_Action.md#movable-rows). It is not generated if the row is dragged and then dropped in its initial location.
+Este evento se genera cuando una línea de list box ([sólo tipo array](FormObjects/listbox_overview.md#array-list-boxes)) es movida por el usuario mediante la función de arrastrar y soltar ([si se permite](FormObjects/properties_Action.md#movable-rows). No se genera si la línea se arrastra y luego se suelta en su ubicación inicial.
 
-The `LISTBOX MOVED ROW NUMBER` command returns the new position of the row. 
+El comando `LISTBOX MOVED ROW NUMBER` devuelve la nueva posición de la línea. 
