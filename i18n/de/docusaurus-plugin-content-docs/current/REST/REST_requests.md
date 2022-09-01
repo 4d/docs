@@ -15,7 +15,7 @@ The following structures are supported for REST requests:
 
 While all REST requests must contain the URI and Resource parameters, the Output (which filters the data returned) is optional.
 
-As with all URIs, the first parameter is delimited by a “?” and all subsequent parameters by a “&”. For example:
+As with all URIs, the first parameter is delimited by a “?” and all subsequent parameters by a “&”. Beispiel:
 
  `GET  /rest/Person/?$filter="lastName!=Jones"&$method=entityset&$timeout=600`
 > You can place all values in quotes in case of ambiguity. For example, in our above example, we could have put the value for the last name in single quotes: "lastName!='Jones'".
@@ -31,7 +31,7 @@ With each REST request, the server returns the status and a response (with or wi
 ### Request Status
 With each REST request, you get the status along with the response. Below are a few of the statuses that can arise:
 
-| Status                    | Description                                                                |
+| Status                    | Beschreibung                                                               |
 | ------------------------- | -------------------------------------------------------------------------- |
 | 0                         | Request not processed (server might not be started).                       |
 | 200 OK                    | Request processed without error.                                           |
