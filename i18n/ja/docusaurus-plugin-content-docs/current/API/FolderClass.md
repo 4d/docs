@@ -5,18 +5,18 @@ title: Folder
 
 
 
-`Folder` objects are created with the [`Folder`](#folder) command. They contain references to folders that may or may not actually exist on disk. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`folder.create( )`](#create-) function.
+`Folder` オブジェクトは [`Folder`](#folder) コマンドによって作成されます。 これらのオブジェクトには、(実在しているか否かに関わらず) フォルダーへの参照が格納されます。 たとえば、新規フォルダーを作成するために `Folder` コマンドを実行した場合、有効な `Folder` オブジェクトが作成されますが、[`folder.create()`](#create) 関数を呼び出すまで、ディスク上にはなにも保存されていません。
 
-### Example
+### 例題
 
-The following example creates a "JohnSmith" folder:
+"JohnSmith" フォルダーを作成します:
 
 ```code4d
 Form.curfolder:=Folder(fk database folder)
 Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 ```
 
-### Folder object
+### Folder オブジェクト
 
 |                                                                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -51,11 +51,11 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 ## Folder
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
 
 </details>
 
@@ -64,85 +64,85 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 **Folder** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
 
 <!-- REF FolderClass.Folder.Params -->
-| Parameter      | Type      |    | Description                                     |
-| -------------- | --------- |:--:| ----------------------------------------------- |
-| path           | Text      | -> | Folder path                                     |
-| folderConstant | Integer   | -> | 4D folder constant                              |
-| pathType       | Integer   | -> | `fk posix path` (default) or `fk platform path` |
-| *              |           | -> | * to return folder of host database             |
-| Result         | 4D.Folder | <- | New folder object|<!-- END REF -->
+| 引数             | タイプ       |    | 詳細                                             |
+| -------------- | --------- |:--:| ---------------------------------------------- |
+| path           | テキスト      | -> | フォルダーパス                                        |
+| folderConstant | 整数        | -> | 4Dフォルダー定数                                      |
+| pathType       | 整数        | -> | `fk posix path` (デフォルト) または `fk platform path` |
+| *              |           | -> | ホストデータベースのフォルダーを返すには * を渡します                   |
+| Result         | 4D.Folder | <- | 新規フォルダーオブジェクト|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
-The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. The command accepts two syntaxes:
+The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. このコマンドは 2種類のシンタックスを受け入れます。
 
 **Folder ( path { ; pathType } { ; \* } )**
 
-In the *path* parameter, pass a folder path string. You can use a custom string or a filesystem (e.g., "/DATA").
+*path* には、フォルダーパス文字列を渡します。 カスタムの文字列やファイルシステム (例: "/DATA") を渡すことができます。
 
-> Only absolute pathnames are supported with the `Folder` command.
+> `Folder` コマンドでは絶対パス名のみがサポートされます。
 
-By default, 4D expects a path expressed with the POSIX syntax. If you work with platform pathnames (Windows or macOS), you must declare it using the *pathType* parameter. The following constants are available:
+デフォルトで、4D は POSIXシンタックスで表現されたパスを期待します。 プラットフォームパス名 (Windows または macOS) を使用する場合、*pathType* 引数を使用してそのことを宣言する必要があります。 以下の定数を使用することができます:
 
-| Constant         | Value | Comment                                                                                 |
-| ---------------- | ----- | --------------------------------------------------------------------------------------- |
-| fk platform path | 1     | Path expressed with a platform-specific syntax (mandatory in case of platform pathname) |
-| fk posix path    | 0     | Path expressed with POSIX syntax (default)                                              |
+| 定数               | Value | 説明                                             |
+| ---------------- | ----- | ---------------------------------------------- |
+| fk platform path | 1     | プラットフォーム特有のシンタックスで表現されたパス (プラットフォームパス名の場合には必須) |
+| fk posix path    | 0     | POSIXシンタックスで表現されたパス (デフォルト)                    |
 
 **Folder ( folderConstant { ; \* } )**
 
-In the *folderConstant* parameter, pass a 4D built-in or system folder, using one of the following constants:
+*folderConstant* には、以下の定数のどれか一つを指定して 4Dビルトインの、またはシステムフォルダーを渡します:
 
-| Constant                   | Value | Comment                                                                                             |
-| -------------------------- | ----- | --------------------------------------------------------------------------------------------------- |
-| fk applications folder     | 116   |                                                                                                     |
-| fk data folder             | 9     | Associated filesystem: "/DATA"                                                                      |
-| fk database folder         | 4     | Associated filesystem: "/PACKAGE"                                                                   |
-| fk desktop folder          | 115   |                                                                                                     |
-| fk documents folder        | 117   | Document folder of the user                                                                         |
-| fk licenses folder         | 1     | Folder containing the machine's 4D license files                                                    |
-| fk logs folder             | 7     | Associated filesystem: "/LOGS"                                                                      |
-| fk mobileApps folder       | 10    |                                                                                                     |
-| fk remote database folder  | 3     | 4D database folder created on each 4D remote machine                                                |
-| fk resources folder        | 6     | Associated filesystem: "/RESOURCES"                                                                 |
-| fk system folder           | 100   |                                                                                                     |
-| fk user preferences folder | 0     | 4D folder that stores user preference files within the `\<userName>` directory.              |
-| fk web root folder         | 8     | Current Web root folder of the database: if within the package "/PACKAGE/path", otherwise full path |
+| 定数                         | Value | 説明                                                                                     |
+| -------------------------- | ----- | -------------------------------------------------------------------------------------- |
+| fk applications folder     | 116   |                                                                                        |
+| fk data folder             | 9     | 関連づけられたファイルシステム: "/DATA"                                                               |
+| fk database folder         | 4     | 関連づけられたファイルシステム: "/PACKAGE"                                                            |
+| fk desktop folder          | 115   |                                                                                        |
+| fk documents folder        | 117   | ユーザーのドキュメントフォルダー                                                                       |
+| fk licenses folder         | 1     | マシンの 4Dライセンスファイルを格納しているフォルダー                                                           |
+| fk logs folder             | 7     | 関連づけられたファイルシステム: "/LOGS"                                                               |
+| fk mobileApps folder       | 10    |                                                                                        |
+| fk remote database folder  | 3     | それぞれの 4Dリモートマシン上に作成された 4Dデータベースフォルダー                                                   |
+| fk resources folder        | 6     | 関連づけられたファイルシステム: "/RESOURCES"                                                          |
+| fk system folder           | 100   |                                                                                        |
+| fk user preferences folder | 0     | 4D folder that stores user preference files within the `\<userName>` directory. |
+| fk web root folder         | 8     | データベースのカレントの Webルートフォルダー: ただし "/PACKAGE/path" のパッケージ内にある場合。そうでない場合はフルパス。               |
 
 If the command is called from a component, pass the optional *parameter to get the path of the host database. Otherwise, if you omit the* parameter, a null object is always returned.
 
-> On Windows, in merged clients, the location of built-in folders is modified if the `ShareLocalResourcesOnWindowsClient` [BuildApp key](../Desktop/building.md#buildapp4dsettings) is used.
+> Windows の場合、統合されたクライアントでは、`ShareLocalResourcesOnWindowsClient` [BuildApp キー](../Desktop/building.md#buildapp4dsettings) を使用すると、ビルトインフォルダーの場所が変更されます。
 
 ## 4D.Folder.new()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R6  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v18 R6 | 追加 |
 </details>
 
 <!-- REF #4D.Folder.new().Syntax -->
 **4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br/>**4D.Folder.new** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
 
-#### Description
+#### 詳細
 
-The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. It is identical to the [`Folder`](#folder) command (shortcut).
+The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. この関数の機能は、[`Folder`](#folder) コマンドと同一です。
 
-> It is recommended to use the [`Folder`](#folder) shortcut command instead of `4D.Folder.new()`.
+> `4D.Folder.new()` よりも、短い [`Folder`](#folder) コマンドの使用が推奨されます。
 
 <!-- INCLUDE directory.copyTo().Desc -->
 
 <!-- REF folder.create().Desc -->
 ## .create()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
 </details>
 
 <!--REF #FolderClass.create().Syntax -->
@@ -150,35 +150,35 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 **.create()** : Boolean<!-- END REF -->
 
 <!--REF #FolderClass.create().Params -->
-| Parameter | Type    |    | Description                                                                             |
-| --------- | ------- | -- | --------------------------------------------------------------------------------------- |
-| Result    | Boolean | <- | True if the folder was created successfully, false otherwise|<!-- END REF -->
+| 引数     | タイプ |    | 詳細                                                                |
+| ------ | --- | -- | ----------------------------------------------------------------- |
+| Result | ブール | <- | フォルダーが正常に作成された場合には true、それ以外の場合は false|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
-The `.create()` function <!-- REF #FolderClass.create().Summary -->creates a folder on disk according to the properties of the `Folder` object<!-- END REF -->.
+The `.create()` function <!-- REF #FolderClass.create().Summary -->The `.create()` function<!-- END REF -->.
 
-If necessary, the function creates the folder hierachy as described in the [platformPath](#platformpath) or [path](#path) properties. If the folder already exists on disk, the function does nothing (no error is thrown) and returns false.
+必要であれば、 関数は [platformPath](#platformpath) あるいは [path](#path) プロパティの詳細に基づいてフォルダー階層を作成します。 フォルダーがディスク上にすでに存在する場合、関数は何もせず、false を返します (エラーは返されません)。
 
-**Returned value**
+**戻り値**
 
-* **True** if the folder is created successfully;
-* **False** if a folder with the same name already exists or if an error occured.
+* フォルダーが正常に作成された場合には **true**
+* すでに同じ名前のフォルダーが存在する、あるいはエラーが発生した場合には **false**
 
-#### Example 1
+#### 例題 1
 
-Create an empty folder in the database folder:
+データベースフォルダー内に空のフォルダーを作成します:
 
 ```4d
 var $created : Boolean
 $created:=Folder("/PACKAGE/SpecialPrefs").create()
 ```
 
-#### Example 2
+#### 例題 2
 
-Creation of the "/Archives2019/January/" folder in the database folder:
+データベースフォルダー内に "/Archives2019/January/" フォルダーを作成します:
 
 ```4d
 $newFolder:=Folder("/PACKAGE/Archives2019/January")
@@ -194,11 +194,11 @@ End if
 <!-- REF folder.createAlias().Desc -->
 ## .createAlias()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
 </details>
 
 <!--REF #FolderClass.createAlias().Syntax -->
@@ -206,37 +206,37 @@ End if
 **.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 <!--REF #FolderClass.createAlias().Params -->
-| Parameter         | Type      |    | Description                                            |
-| ----------------- | --------- | -- | ------------------------------------------------------ |
-| destinationFolder | 4D.Folder | -> | Destination folder for the alias or shortcut           |
-| aliasName         | Text      | -> | Name of the alias or shortcut                          |
-| aliasType         | Integer   | -> | Type of the alias link                                 |
-| Result            | 4D.File   | <- | Alias or shortcut reference|<!-- END REF -->
+| 引数                | タイプ       |    | 詳細                                                 |
+| ----------------- | --------- | -- | -------------------------------------------------- |
+| destinationFolder | 4D.Folder | -> | エイリアスまたはショートカットの作成先フォルダー                           |
+| aliasName         | テキスト      | -> | エイリアスまたはショートカットの名称                                 |
+| aliasType         | 整数        | -> | エイリアスリンクのタイプ                                       |
+| Result            | 4D.File   | <- | エイリアスまたはショートカットのフォルダー参照|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
 The `.createAlias()` function <!-- REF #FolderClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
-Pass the name of the alias or shortcut to create in the *aliasName* parameter.
+*aliasName* には、作成するエイリアスまたはショートカットの名前を渡します。
 
-By default on macOS, the function creates a standard alias. You can also create a symbolic link by using the *aliasType* parameter. The following constants are available:
+macOS 上では、この関数はデフォルトで標準エイリアスを作成します。 *aliasType* 引数を渡すことで、シンボリックリンクを作成することもできます。 以下の定数を使用することができます:
 
-| Constant           | Value | Comment                    |
-| ------------------ | ----- | -------------------------- |
-| `fk alias link`    | 0     | Alias link (default)       |
-| `fk symbolic link` | 1     | Symbolic link (macOS only) |
+| 定数                 | Value | 説明                  |
+| ------------------ | ----- | ------------------- |
+| `fk alias link`    | 0     | エイリアスリンク (デフォルト)    |
+| `fk symbolic link` | 1     | シンボリックリンク (macOSのみ) |
 
-On Windows, a shortcut (.lnk file) is always created (the *aliasType* parameter is ignored).
+Windows 上では、常にショートカット (.lnk ファイル) が作成されます (*aliasType* 引数は無視されます)。
 
-**Returned object**
+**返されるオブジェクト**
 
-A `4D.File` object with the `isAlias` property set to **true**.
+`isAlias` プロパティが **true** に設定された `4D.File` オブジェクトを返します。
 
-#### Example
+#### 例題
 
-You want to create an alias to an archive folder in your database folder:
+データベースフォルダー内のアーカイブフォルダーへのエイリアスを作成します:
 
 ```4d
 $myFolder:=Folder("C:\\Documents\\Archives\\2019\\January";fk platform path)
@@ -251,11 +251,11 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 <!-- REF folder.delete().Desc -->
 ## .delete()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
 </details>
 
 <!--REF #FolderClass.delete().Syntax -->
@@ -263,33 +263,33 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 **.delete**( { *option* : Integer } )<!-- END REF -->
 
 <!-- REF #FolderClass.delete().Params -->
-| Parameter | Type    |    | Description                                       |
-| --------- | ------- | -- | ------------------------------------------------- |
-| option    | Integer | -> | Folder deletion option|<!-- END REF -->
+| 引数     | タイプ |    | 詳細                                       |
+| ------ | --- | -- | ---------------------------------------- |
+| option | 整数  | -> | フォルダー削除のオプション|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
-The `.delete()` function <!-- REF #FolderClass.delete().Summary -->deletes the folder<!-- END REF -->.
+The `.delete()` function <!-- REF #FolderClass.delete().Summary -->The `.delete()` function<!-- END REF -->.
 
-By default, for security reasons, if you omit the option parameter, `.delete( )` only allows empty folders to be deleted. If you want the command to be able to delete folders that are not empty, you must use the option parameter with one of the following constants:
+セキュリティ上の理由から、option 引数を渡さなかった場合はデフォルトで、`.delete()` は空のフォルダーしか削除しません。 空でないフォルダーを削除するには、以下の定数のいずれか一つを option 引数として渡す必要があります:
 
-| Constant               | Value | Comment                                          |
-| ---------------------- | ----- | ------------------------------------------------ |
-| `Delete only if empty` | 0     | Deletes folder only when it is empty             |
-| `Delete with contents` | 1     | Deletes folder along with everything it contains |
+| 定数                     | Value | 説明                |
+| ---------------------- | ----- | ----------------- |
+| `Delete only if empty` | 0     | フォルダーが空の場合のみ削除します |
+| `Delete with contents` | 1     | フォルダーを中身ごと削除します   |
 
-When `Delete only if empty` is passed or if you omit the option parameter:
+`Delete only if empty` が渡された、または option 引数を渡さなかった場合:
 
-* The folder is only deleted if it is empty; otherwise, the command does nothing and an error -47 is generated.
-* If the folder does not exist, the error -120 is generated.
+* フォルダーが空の場合にしか削除されません。そうでない場合、コマンドは何もせず、エラー-47 が生成されます。
+* フォルダーが存在しない場合、エラー-120 が生成されます。
 
-When `Delete with contents` is passed:
+`Delete with contents` を渡した場合:
 
-* The folder, along with all of its contents, is deleted. **Warning**: Even when this folder and/or its contents are locked or set to read-only, if the current user has suitable access rights, the folder (and contents) is still deleted.
-* If this folder, or any of the files it contains, cannot be deleted, deletion is aborted as soon as the first inaccessible element is detected, and an error(*) is returned. In this case, the folder may be only partially deleted. When deletion is aborted, you can use the `GET LAST ERROR STACK` command to retrieve the name and path of the offending file.
-* If the folder does not exist, the command does nothing and no error is returned. (*) Windows: -54 (Attempt to open locked file for writing) macOS: -45 (The file is locked or the pathname is not correct)
+* フォルダーと、その中身がすべて削除されます。 **警告**: フォルダーまたはその中身がロックされている、あるいは読み取り専用に設定されていたとしても、カレントユーザーが適切なアクセス権を持っていた場合には、フォルダーはその中身ごと削除されます。
+* このフォルダー、またはその中のフォルダーのどいずれかが削除できなかった場合、削除できない要素が検知された時点で削除は中止され、エラー(*) が返されます。 このとき、フォルダーは途中までしか削除されていない可能性があります。 削除が中止された場合、`GET LAST ERROR STACK` コマンドを使用して原因となったファイルの名前とパスを取得することができます。
+* フォルダーが存在しない場合、コマンドは何もせず、エラーは返されません。 (*) Windows: -54 (Attempt to open locked file for writing) macOS: -45 (The file is locked or the pathname is not correct)
 
 <!-- END REF -->
 
@@ -326,11 +326,11 @@ When `Delete with contents` is passed:
 <!-- REF folder.moveTo().Desc -->
 ## .moveTo()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
 </details>
 
 <!--REF #FolderClass.moveTo().Syntax -->
@@ -338,29 +338,29 @@ When `Delete with contents` is passed:
 **.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
 
 <!--REF #FolderClass.moveTo().Params -->
-| Parameter         | Type      |    | Description                             |
-| ----------------- | --------- | -- | --------------------------------------- |
-| destinationFolder | 4D.Folder | -> | Destination folder                      |
-| newName           | Text      | -> | Full name for the moved folder          |
-| Result            | 4D.Folder | <- | Moved folder|<!-- END REF -->
+| 引数                | タイプ       |    | 詳細                                   |
+| ----------------- | --------- | -- | ------------------------------------ |
+| destinationFolder | 4D.Folder | -> | 宛先フォルダー                              |
+| newName           | テキスト      | -> | 移動先でのフォルダーの完全な名称                     |
+| Result            | 4D.Folder | <- | 移動したフォルダー|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
 The `.moveTo( )` function <!-- REF #FolderClass.moveTo().Summary -->moves or renames the `Folder` object (source folder) into the specified *destinationFolder*<!-- END REF -->.
 
-The *destinationFolder* must exist on disk, otherwise an error is generated.
+*destinationFolder* 引数が指定するフォルダーはディスク上に存在している必要があり、そうでない場合にはエラーが生成されます。
 
-By default, the folder retains its name when moved. If you want to rename the moved folder, pass the new full name in the *newName* parameter. The new name must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned.
+デフォルトで、移動したフォルダーは元の名前を維持します。 移動の際にフォルダー名を変更したい場合、新しい完全な名前を *newName* に渡します。 新しい名前は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。そうでない場合、エラーが返されます。
 
-**Returned object**
+**返されるオブジェクト**
 
-The moved `Folder` object.
+移動後の `Folder` オブジェクト。
 
-#### Example
+#### 例題
 
-You want to move and rename a folder:
+フォルダーを移動し、名称も変更します:
 
 ```4d
  var $tomove; $moved : Object
@@ -383,11 +383,11 @@ You want to move and rename a folder:
 <!-- REF folder.rename().Desc -->
 ## .rename()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
 </details>
 
 <!--REF #FolderClass.rename().Syntax -->
@@ -395,24 +395,24 @@ You want to move and rename a folder:
 **.rename**( *newName* : Text ) : 4D.Folder<!-- END REF -->
 
 <!--REF #FolderClass.rename().Params -->
-| Parameter | Type      |    | Description                               |
-| --------- | --------- | -- | ----------------------------------------- |
-| newName   | Text      | -> | New full name for the folder              |
-| Result    | 4D.Folder | <- | Renamed folder|<!-- END REF -->
+| 引数      | タイプ       |    | 詳細                                      |
+| ------- | --------- | -- | --------------------------------------- |
+| newName | テキスト      | -> | フォルダーの新しい完全な名称                          |
+| Result  | 4D.Folder | <- | 名称変更されたフォルダー|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
-The `.rename()` function <!-- REF #FolderClass.rename().Summary -->renames the folder with the name you passed in *newName* and returns the renamed `Folder` object<!-- END REF -->.
+The `.rename()` function <!-- REF #FolderClass.rename().Summary -->The `.rename()` function<!-- END REF -->.
 
-The *newName* parameter must comply with naming rules (e.g., it must not contain characters such as ":", "/", etc.), otherwise an error is returned. If a file with the same name already exists, an error is returned.
+*newName* 引数は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。そうでない場合、エラーが返されます。 同じ名前のファイルがすでに存在する場合には、エラーが返されます。
 
-**Returned object**
+**返されるオブジェクト**
 
-The renamed `Folder` object.
+名称変更された `Folder` オブジェクト。
 
-#### Example
+#### 例題
 
 ```4d
  var $toRename : 4D.Folder
