@@ -1,194 +1,194 @@
 ---
 id: methods
-title: Methods Page
+title: メソッドページ
 ---
 
-This page contains parameters defining the Code Editor interface and its default display as well as options concerning its operation. It is divided into two sections accessed using the Theme and Options tabs.
+このページでは、コードエディターのインターフェースやデフォルトの表示、および動作に関するオプションを設定します。 ページはテーマとオプションという 2つのタブに分けられています。
 
-## Themes
+## テーマ
 
-This page allows selecting, creating, or configuring Code Editor themes. A theme defines the font, font size, colors and styles of items displayed in the code editor.
+このページでは、コードエディターのテーマを選択・作成・設定することができます。 テーマは、コードエディターに表示される項目のフォント、フォントサイズ、カラー、スタイルを定義します。
 
 ![](../assets/en/Preferences/themes.png)
 
-### Theme list
+### テーマリスト
 
-In this list, you select the theme to apply to the code editor. All available themes are displayed, including custom themes (if any). 4D provides two themes by default:
+このリストでは、コードエディターに適用するテーマを選択します。 利用可能なテーマがすべて表示され、カスタムテーマがある場合はそれも表示されます。 4D はデフォルトで 2つのテーマを用意しています:
 
-*   **Default Light Theme**
-*   **Default Dark Theme**
+*   **デフォルトのLightテーマ**
+*   **デフォルトのDarkテーマ**
 
-> Default themes cannot be modified or deleted.
+> デフォルトのテーマは変更や削除ができません。
 
-A **myTheme** theme is automatically added if you already customized Code Editor styles in previous 4D releases.
+以前の 4Dリリースで、コードエディターのスタイルをカスタマイズしていた場合、**myTheme** テーマが自動的に追加されます。
 
-### Creating custom themes
+### カスタムテーマの作成
 
-You can create themes that you can fully customize. To create a theme, select an existing theme and click on the **+** at the bottom of the theme list. You can also add customized themes by copying theme files in the `4D Editor Themes` folder (see below).
+完全にカスタマイズ可能なテーマを作成することができます。 テーマを作成するには、既存のテーマを選択して、テーマリストの下部にある **+** をクリックします。 また、`4D Editor Themes` フォルダー内のテーマファイルをコピーして、カスタマイズしたテーマを追加することもできます (後述参照)。
 
-### Custom theme files
+### カスタムテーマファイル
 
-Each custom theme is stored in a single JSON file named *themeName.json* The JSON files for custom themes are stored in the `4D Editor Themes` folder located at the same level as the 4D [preferences file](overview.md#storage).
+カスタムテーマは、それぞれ別の *themeName.json* という JSONファイルに格納されます。 カスタムテーマの JSONファイルは、4D [preferences](overview.md#ストレージ) ファイルと同じ階層にある `4D Editor Themes` フォルダーに格納されます。
 
-If key values are not defined in a custom theme, they default to the values from the *Default Light Theme*. If a JSON theme file is invalid, the *Default Light Theme* is loaded and an error is generated.
+カスタムテーマでキー値が定義されていない場合は、*デフォルトのLightテーマ* の値がデフォルトとなります。 JSONテーマファイルが無効な場合、*デフォルトのLightテーマ* が読み込まれ、エラーが発生します。
 
-> When a theme file is modified by an external editor, 4D must be restarted to take the modification(s) into account.
+> 外部エディターでテーマファイルを変更した場合は、変更内容を反映させるために 4Dを再起動する必要があります。
 
-## Theme definition
+## テーマの定義
 
-Defining a theme means:
+テーマを定義するとは、以下のことを意味します:
 
-- setting a global font and font size for the whole code editor,
-- assigning specific styles and colors to each 4D language element (fields, tables, variables, parameters, SQL, etc.), SQL language element (keywords, functions, etc.), and color backgrounds.
+- コードエディター全体のグローバルフォントとフォントサイズを設定する。
+- 4D のランゲージ要素 (フィールド、テーブル、変数、引数、SQL など)、SQL のランゲージ要素 (キーワード、関数など)、そして背景色のそれぞれにスタイルと色を割り当てる。
 
-Combining different colors and styles is particularly useful for code maintenance purposes.
+異なる色やスタイルを組み合わせることは、コードのメンテナンス目的に特に便利です。
 
-### Font and Font size
+### フォントとフォントサイズ
 
-The **font** and **font size** menus allows you to select the font name and size used in the Code Editor entry area for all categories.
+**フォント** と **フォントサイズ** のメニューで、すべてのカテゴリーのコードエディターの入力エリアで使用するフォント名とサイズを選択できます。
 
-### 4D Language and SQL Language
+### 4D ランゲージと SQL ランゲージ
 
-You can set different font styles and colors (font color or background color) for each type of language element. You can select the element(s) to customize in the Category list.
+ランゲージ要素の種類ごとに、異なるフォントスタイルやカラー (フォントカラーや背景色) を設定できます。 カスタマイズする要素は、カテゴリーリストで選択できます。
 
 
-### Other Styles
+### その他のスタイル
 
-These options configure the various colors used in the Code Editor and debugger interfaces.
+これらのオプションは、コードエディターとデバッガーインターフェースで使用される様々なカラーを設定します。
 
 ![](../assets/en/Preferences/categories.png)
 
 
-|                                                   | Description                                                                                                                                                              |
-| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Background color**                              | Background color of Code Editor window.                                                                                                                                  |
-| **Border of the running line in the debugger**    | Color of the border surrounding the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options) page.          |
-| **Cursor line background color**                  | Background color of line containing the cursor.                                                                                                                          |
-| **Execution line background color**               | Background color of line being executed in the debugger.                                                                                                                 |
-| **Highlight of the found words**                  | Highlight color of words found in a search.                                                                                                                              |
-| **Highlight of the parentheses**                  | Highlight color of corresponding parentheses (used when pairs of parentheses are signaled by highlighting, see [Options](#options)).                                     |
-| **Highlight of the blocks**                       | Highlight color for selected logical blocks when the "Highlight logical blocks" option is enabled in the [Options](#options).                                            |
-| **Highlight of the same variable or field**       | Highlight color for other occurrences of the same variable or field text when one of the "Highlighting variables and text" option is enabled in the [Options](#options). |
-| **Highlight of the running line in the debugger** | Highlight color of the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options).                            |
-| **Selection back color**                          | Background color of selection.                                                                                                                                           |
-| **Suggested text**                                | Color of autocomplete text suggested by the Code Editor.                                                                                                                 |
+|                      | 詳細                                                                                 |
+| -------------------- | ---------------------------------------------------------------------------------- |
+| **背景色**              | コードエディターウィンドウの背景色。                                                                 |
+| **デバッガ内の実行行の境界線**    | [オプション](#オプション) ページで "実行行をハイライト" オプションが有効になっている場合、デバッガーで現在実行中の行を囲む境界線の色。           |
+| **カーソル行背景色**         | カーソルのある行の背景色。                                                                      |
+| **実行行背景色**           | デバッガーで実行中の行の背景色。                                                                   |
+| **検索で見つかった単語のハイライト** | 検索して見つかった単語のハイライト色。                                                                |
+| **カッコのハイライト**        | 対応するカッコのハイライト色 (カッコのペアがハイライト表示される時に使用されます。 [オプション](#オプション) 参照)。                    |
+| **ブロックのハイライト**       | [オプション](#オプション) で "論理ブロックを強調" オプションが有効化されていた場合の、選択された論理ブロックのハイライト色。                |
+| **同じ変数やフィールドのハイライト** | [オプション](#オプション) で "変数とフィールドを強調" オプションが有効になっている場合、同じ変数またはフィールドテキストの他の出現箇所のハイライトカラー。 |
+| **デバッガ内の実行行のハイライト**  | [オプション](#オプション) で "実行行をハイライト" が有効になっている場合、デバッガーで現在実行中の行のハイライトカラー。                  |
+| **選択範囲の背景色**         | 選択範囲の背景色。                                                                          |
+| **サジェストテキスト**        | コードエディターで表示されるオートコンプリートテキストの色。                                                     |
 
 
 
-## Options
+## オプション
 
 
-This page configures Code Editor display options.
+このページでは、コードエディターの表示オプションを設定します。
 
 ![](../assets/en/Preferences/options.png)
 
 
-### Options
+### オプション
 
 
 
-#### 4D Programming Language (Use regional system settings)
+#### 4Dプログラミングランゲージ (リージョンシステム設定を使う)
 
-Allows you to disable/enable the "international" code settings for the local 4D application.
-- **unchecked** (default): English-US settings and the English programming language are used in 4D methods.
-- **checked**: Regional settings are used in 4D methods.
+ローカル4Dアプリケーション用の "国際的な" コード設定を有効化/無効化することができます。
+- **チェック無し** (デフォルト): 4Dメソッドにおいて English-US設定と英語でのプログラミングランゲージが使用されます。
+- **チェック有り**: リージョン設定が使用されます。
 
-> If you modify this option, you need to restart the 4D application so that the change is taken into account.
+> このオプションを変更した場合、変更を反映するには 4Dアプリケーションを再起動する必要があります。
 
-#### Indentation
+#### インデント
 
-Changes the indentation value for the 4D code in the Code Editor. The width must be specified in points (10 by default).
+コードエディターで、4Dコードが使用するインデントの値を設定します。 値はポイントで設定します (デフォルトは 10)。
 
-4D code is automatically indented in order to reveal its structure:
+4D は構造を明確にするために自動でコードをインデントします:
 
 ![](../assets/en/Preferences/optionsIndent.png)
 
-Modifying this default value can be useful if your methods contain complex algorithms with many levels of embedding. Narrower indentation can be used in order to limit horizontal scrolling.
+アルゴリズムが複雑になり、階層レベル数が増えた場合に、この値を変更すると便利な場合があります。 具体的には、この値を減らすことで水平スクロールを減らすことができます。
 
-#### Show Line Numbers
+#### 行番号を表示
 
-Lets you display the line numbers by default in each window of the Code Editor. You can also show/hide line numbers for the current window directly from the Code Editor.
+コードエディターで、行番号をデフォルト表示するかどうかを設定します。 コードエディターにて、直接の行番号を表示/非表示設定することもできます。
 
-#### Show Lists
+#### リスト表示
 
-Lets you choose whether or not to show the lists of objects (Commands, Tables and fields, etc.) by default when the Code Editor window is opened. You can also show or hide each list directly from the Code Editor.
+コードエディターウィンドウを開いたときに、オブジェクト (コマンド、テーブル、フィールド等) のリストをデフォルトで表示するかどうかを設定します。 コードエディターで直接このリストを表示/非表示にすることもできます。
 
-#### Show clipboards
+#### クリップボード表示
 
-Lets you choose whether or not to show the multiple clipboards in the code editor.
+コードエディターに複数のクリップボードを表示するかどうかを選択できます。
 
 ![](../assets/en/Preferences/show-clipboards.png)
 
-The corresponding [clipboard shorcuts](https://doc.4d.com/4Dv19R3/4D/19-R3/Writing-a-method.300-5612559.en.html#3977166) are still active when these clipboards are hidden.
+これらのクリップボードが非表示の場合でも、対応する [クリップボードショーカット](https://doc.4d.com/4Dv19R3/4D/19-R3/Writing-a-method.300-5612559.ja.html#3977166) は有効です。
 
-#### Highlight the logical blocks
+#### 論理ブロックを強調
 
-When checked, the whole code belonging to a logical block (If/End if for example) is highlighted when the mouse is placed over the expanded node:
+チェックされている場合、展開されたノードの上にマウスを置いたときに論理ブロック(たとえば If/End if など) に含まれているコードがすべてハイライトされます:
 
 ![](../assets/en/Preferences/optionsLogicalBlocks.png)
 
-The highlight color can be set in the [Theme](#theme-definition) page.
+ハイライトカラーは [テーマ](#テーマの定義) ページにて設定が可能です。
 
-#### Always show block lines
+#### ブロック行を常に表示
 
-Allows to hide vertical block lines permanently. The block lines are designed to visually connect nodes. By default, they are always displayed (except when collapse/expand icons are hidden, see below).
+垂直のブロック線を常に非表示にできます。 ブロック線はノードを視覚的に繋ぐためのものです。 デフォルトでは、これらは常に表示されています (ただし展開/折りたたみアイコンが非表示の場合は除きます。 以下参照)。
 
 ![](../assets/en/Preferences/optionsBlockLines.png)
 
-#### Hide collapse/expand icons
+#### 折りたたみ/展開アイコンを隠す
 
-Allows you to hide all expand/collapse icons by default when displaying code. When the option is checked, node icons (as well as local block lines, see above), are displayed temporarily when the mouse is placed over a node:
+コードを表示する際に、展開/折りたたみアイコンをデフォルトで非表示にすることができます。 このオプションがチェックされているとき、ノードアイコン (とブロック線。 前述参照)は、マウスがノードの上に置かれた際にのみ一時的に表示されます:
 
 ![](../assets/en/Preferences/optionsHideIcons.png)
 
-#### Insert () and closing } ) ] "
+#### () と対応する閉じる } ) ] " を自動で挿入
 
-Enables automatic insertion of () and closing braces while typing code. This option controls two automatic features:
+コード入力中に () と、閉じるカッコを自動的に挿入するようにします。 このオプションでは 2つの自動機能を管理します:
 
-- **parentheses pair ()**: Added after a 4D command, keyword or project method inserted from a suggestion or completion list, if the inserted element requires one or more mandatory arguments. For example, if you type "C_OB" and press Tab, 4D writes "C_OBJECT()" and sets the insertion point inside the ().
+- **()カッコのペア**: 4Dコマンド、キーワード、プロジェクトメソッドが提案リストあるいは補完リストから挿入される時、その挿入要素が一つ以上の引数を必須としている場合に追加されます。 たとえば、"C_OB" と入力して Tabキーを押すと、4D は自動的に "C_OBJECT()" と表示し、カーソルを () の内部に設定します。
 
-- **closing }, ), ], or "**: Character added when you type respectively an opening {, (, ], or ". This feature allows inserting matching pairs of symbols at the insertion point or surrounding a selected text. For example, if you highlight a string and type a single ", the whole selected string will be enclosed in "":
+- **閉じる }, ), ], "**: {, (, [, あるいは " などの開くカッコを入力した時に、対応する閉じるカッコが追加されます。 この機能により、カーソル位置に、あるいは選択されたテキストを囲むように、対応するカッコ記号を挿入できるようになります。 たとえば、文字列をハイライトして単一の " を入力すると、選択された文字列全体が "" で囲まれます:
 
 ![](../assets/en/Preferences/optionsClosing.png)  
 ![](../assets/en/Preferences/optionsClosing2.png)
 
 #### Matching \[]\(){}
 
-Sets the graphic signaling of matching braces in the code. This signaling appears whenever a square bracket, parenthesis, or curly bracket is selected. The following options are available:
+コード中での対応する括弧を強調する方法を設定します。 この強調は、括弧 (大カッコ[]、中カッコ{}、小カッコ()) が選択されたときに表示されます。 次のオプションから選択することができます:
 
-- **None**: No signaling
-- **Rectangle** (default): Braces surrounded by a black line  
+- **なし**: 強調なし
+- **四角** (デフォルト): 括弧が黒い四角で囲まれます。  
   ![](../assets/en/Preferences/optionsRectangle.png)
-- **Background Color**: Braces highlighted (the color is set in the [Theme](#theme-definition) page).
-- **Bold**: Braces displayed in bold.
+- **背景色**: 括弧がハイライトされます (色は [テーマ](#テーマの定義) ページで設定します)。
+- **太字**: 括弧が太字で表示されます。
 
-#### Highlighted variables and fields
+#### 変数とフィールドを強調
 
-Allows to highlight all occurrences of the same variable or field in an open method window.
+開かれたメソッドウィンドウ内で、同じ変数やフィールド等のオカレンスをすべてハイライトします。
 
 ![](../assets/en/Preferences/optionsVariables.png)
 
-- **No**(default): No highlight
-- **On cursor**: All occurrences are highlighted when the text is clicked
-- **On selection**: All occurrences are highlighted when the text is selected
+- **しない**(デフォルト): ハイライトなし
+- **カーソル上のみ**: テキストがクリックされた際にのみハイライトされます。
+- **選択範囲上のみ**: テキストが選択された際にのみハイライトされます。
 
-The highlight color can be set in the [Theme](#theme-definition) page.
+ハイライトカラーは [テーマ](#テーマの定義) ページにて設定が可能です。
 
-#### Debug (Highlight the line running)
+#### デバッグ (実行行をハイライト)
 
-Highlights the line that is currenty running in the debugger in addition to the regular yellow arrow indicator.
+通常の黄色の矢印インジケーターに加え、デバッガーで実行中の行をハイライトするかどうかを設定します。
 
 ![](../assets/en/Preferences/optionsLine.png)
 
-If you deselect this option, only the yellow arrow is shown.
+このオプションの選択を解除すると、黄色の矢印のみが表示されます。
 
-### Suggestions
+### 提案
 
-This area lets you configure autocomplete mechanisms in the Code Editor to adapt it to your own work habits.
+このエリアでは、コードエディターの自動補完メカニズムを設定して、作業習慣に合わせることができます。
 
-|                                 | Description                                                                                                                                                                                                                                             |
-| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Automatic opening of window for | Triggers the automatic display of the suggestion window for:<ul><li>Constants</li><li>Variables (local and interprocess) and object attributes</li><li>Tables</li><li>Prototypes (*i.e.*, class functions)</li></ul><p>For example, when the "Variables (local or interprocess) and object attributes" option is checked, a list of suggestions appears when you type the $ character:</p><p>![](../assets/en/Preferences/suggestionsAutoOpen.png)</p> You can disable this functioning for certain elements of the language by deselecting their corresponding option. |
-| Validation of a suggestion for  | Sets the entry context that allows the Code Editor to validate automatically the current suggestion displayed in the autocomplete window.<ul><li>**Tab and delimiters**<br/>When this option is selected, you can validate the current selection with the Tab key or any delimiter that is relevant to the context. For example, if you enter "ALE" and then "(", 4D automatically writes "ALERT(" in the editor. Here is the list of delimiters that are taken into account:<br/> ( ; : = < [ {</li><li>**Tab only**<br/>When this option is selected, you can only use the Tab key to insert the current suggestion. This can be used more particularly to facilitate the entry of delimiter characters in element names, such as ${1}.**Note**: You can also double-click in the window or press the Carriage return key to validate a suggestion.</li></ul>                                                                                      |
+|             | 詳細                                                                                                                                              |
+| ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| ウィンドウを自動で開く | 次の要素に関する提案ウィンドウを自動で開くかを指定します:<ul><li>定数</li><li>変数(ローカルまたはインタープロセス)あるいはオブジェクト属性</li><li>テーブル</li><li>プロトタイプ (例: クラス関数)</li></ul><p>たとえば、"変数(ローカルまたはインタープロセス)あるいはオブジェクト属性" オプションがチェックされている場合、$ 文字を入力すると提案されるローカル変数のリストが表示されます:</p><p>![](../assets/en/Preferences/suggestionsAutoOpen.png)</p> 対応するオプションのチェックを外すことで、要素ごとにこの機能を無効にできます。 |
+| 提案の決定       | | | 提案の決定       | コードエディターで、自動補完ウィンドウに表示されたカレントの提案を受け入れるための、入力コンテキストを設定します。<ul><li>**タブと区切り文字**<br/>このオプションが選択されていると、タブキーまたは現在のコンテキストに関連する区切り文字で、現在選択されている提案を決定することができます。 たとえば "ALE" と入力して "(" を入力すると、4Dは自動で "ALERT(" とエディターに書き込みます。 区切り文字は以下の通りです:<br/> ( ; : = < [ {</li><li>**タブのみ**<br/>このオプションが選択されていると、現在の提案はタブキーを押したときにのみ受け入れられます。 This can be used more particularly to facilitate the entry of delimiter characters in element names, such as ${1}.**Note**: You can also double-click in the window or press the Carriage return key to validate a suggestion.</li></ul>                                            |
 	
 
