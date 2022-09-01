@@ -4,19 +4,19 @@ title: '$asArray'
 ---
 
 
-Returns the result of a query in an array (i.e. a collection) instead of a JSON object.
+Retourne le résultat d'une requête sous forme de tableau (c'est-à-dire une collection) au lieu d'un objet JSON.
 
 
 ## Description
 
-If you want to receive the response in an array, you just have to add `$asArray` to your REST request (*e.g.*, `$asArray=true`).
+Si vous souhaitez obtenir la réponse sous forme de tableau, il vous suffit d'ajouter `$asArray` à votre requête REST (*ex :*, `$asArray=true`).
 
-## Example
-Here is an example or how to receive the response in an array.
+## Exemple
+Voici un exemple pour obtenir une réponse sous forme de tableau.
 
  `GET  /rest/Company/?$filter="name begin a"&$top=3&$asArray=true`
 
-**Response**:
+**Réponse** :
 
 ````
 [
@@ -56,7 +56,7 @@ Here is an example or how to receive the response in an array.
 ]
 ````
 
-The same data in its default JSON format:
+Les mêmes données au format JSON par défaut :
 
 ````
 {
