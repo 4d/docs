@@ -69,7 +69,7 @@ Eles oferecem as propriedades abaixo e funções:
 
 <!-- REF #_command_.WEB Server.Params -->
 
-| Parameter  | Tipo          |    | Descrção                                                                           |
+| Parâmetros | Tipo          |    | Descrição                                                                          |
 | ---------- | ------------- | -- | ---------------------------------------------------------------------------------- |
 | option     | Integer       | -> | Servidor Web a ser obtido (padrão se omitido = `Banco de dados de servidores Web`) |
 | Resultados | 4D. WebServer | <- | Objeto Web Server                                                                  |
@@ -116,7 +116,7 @@ Do seu componente, você quer saber se o servidor Web do banco de dados host est
 
 <!-- REF #_command_.WEB Server list.Params -->
 
-| Parameter  | Tipo       |    | Descrção                                      |
+| Parâmetros | Tipo       |    | Descrição                                     |
 | ---------- | ---------- | -- | --------------------------------------------- |
 | Resultados | Collection | <- | Coleção de objetos do Servidor Web disponível |
 
@@ -682,7 +682,7 @@ The <!-- REF #WebServerClass.sessionCookiePath.Summary -->"path" field of the se
 
 The <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->"SameSite" session cookie value<!-- END REF -->. Possible values (using constants):
 
-| Constante           | Value    | Descrção                                                                                                                            |
+| Constante           | Value    | Descrição                                                                                                                           |
 | ------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | Web SameSite Strict | "Strict" | *Default value* - Cookies are only sent in a first-party context                                                                    |
 | Web SameSite Lax    | "Lax"    | Cookies are also sent on cross-site subrequests but only when a user is navigating to the origin site (i.e. when following a link). |
@@ -724,7 +724,7 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address va
 
 <!-- REF #WebServerClass.start().Params -->
 
-| Parameter  | Tipo   |    | Descrção                              |
+| Parâmetros | Tipo   |    | Descrição                             |
 | ---------- | ------ | -- | ------------------------------------- |
 | settings   | Objeto | -> | Web server settings to set at startup |
 | Resultados | Objeto | <- | Status of the web server startup      |
@@ -743,7 +743,7 @@ Customized session settings will be reset when the [`.stop()`](#stop) function i
 
 The function returns an object describing the Web server launch status. This object can contain the following properties:
 
-| Propriedade |                         | Tipo       | Descrção                                                             |
+| Propriedade |                         | Tipo       | Descrição                                                            |
 | ----------- | ----------------------- | ---------- | -------------------------------------------------------------------- |
 | success     |                         | Booleano   | True if the web server was correctly started, False otherwise        |
 | errors      |                         | Collection | 4D error stack (not returned if the web server started successfully) |
@@ -786,9 +786,9 @@ The function returns an object describing the Web server launch status. This obj
 
 <!-- REF #WebServerClass.stop().Params -->
 
-| Parameter | Tipo |  | Descrção                                                   |
-| --------- | ---- |  | ---------------------------------------------------------- |
-|           |      |  | Does not require any parameters|<!-- END REF -->
+| Parâmetros | Tipo |  | Descrição                                                  |
+| ---------- | ---- |  | ---------------------------------------------------------- |
+|            |      |  | Does not require any parameters|<!-- END REF -->
 
 |
 
