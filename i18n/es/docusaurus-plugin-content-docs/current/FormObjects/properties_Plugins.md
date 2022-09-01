@@ -3,18 +3,18 @@ id: propertiesPlugIns
 title: Plug-ins
 ---
 
-## Advanced Properties
+## Propiedades avanzadas
 
-If advanced options are provided by the author of the plug-in, an **Advanced Properties** button may be enabled in the Property list. In this case, you can click this button to set these options, usually through a custom dialog box.
+Si las opciones avanzadas son proporcionadas por el autor del plug-in, un botón **Propiedades avanzadas** puede ser activado en la lista de propiedades. En este caso, puede hacer clic en este botón para definir estas opciones, normalmente a través de una caja de diálogo personalizada.
 
-Because the Advanced properties feature is under the control of the author of the plug-in, information about these Advanced options is the responsibility of the distributor of the plug-in.
+Dado que la función de propiedades avanzadas está bajo el control del autor del plug-in, la información sobre estas opciones avanzadas es responsabilidad del distribuidor del plug-in.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name             | Data Type | Possible Values                                                                                                              |
-| ---------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| customProperties | text      | Plugin specific properties, passed to plugin as a JSON string if an object, or as a binary buffer if a base64 encoded string |
+| Nombre           | Tipos de datos | Valores posibles                                                                                                                                           |
+| ---------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| customProperties | text           | Propiedades específicas del plugin, pasadas al plugin como una cadena JSON si es un objeto, o como un buffer binario si es una cadena codificada en base64 |
 
-#### Objects Supported
+#### Objetos soportados
 
-[Plug-in Area](pluginArea_overview.md)
+[Área de plug-in](pluginArea_overview.md)
