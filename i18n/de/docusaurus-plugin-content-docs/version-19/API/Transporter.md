@@ -3,7 +3,7 @@ id: Transporter
 title: Transporter Class
 ---
 
-## Description
+## Beschreibung
 
 <!-- REF transporter.acceptUnsecureConnection.Desc -->
 ## .acceptUnsecureConnection
@@ -19,7 +19,7 @@ title: Transporter Class
 
 **.acceptUnsecureConnection** : Boolean<!-- END REF -->
 
-#### Description
+#### Beschreibung
 
 The `.acceptUnsecureConnection` property contains <!-- REF #transporter.acceptUnsecureConnection.Summary -->**True** if 4D is allowed to establish an unencrypted connection<!-- END REF --> when encrypted connection is not possible.
 
@@ -55,7 +55,7 @@ Available secured ports are:
 
 **.authenticationMode** : Text<!-- END REF -->
 
-#### Description
+#### Beschreibung
 
 The `.authenticationMode` property contains <!-- REF #transporter.authenticationMode.Summary -->the authentication mode used to open the session on the mail server<!-- END REF -->.
 
@@ -63,7 +63,7 @@ By default, the most secured mode supported by the server is used.
 
 Possible values are:
 
-| Value    | Constants                      | Comment                                |
+| Wert     | Konstanten                     | Kommentar                              |
 | -------- | ------------------------------ | -------------------------------------- |
 | CRAM-MD5 | `IMAP authentication CRAM MD5` | Authentication using CRAM-MD5 protocol |
 | LOGIN    | `IMAP authentication login`    | Authentication using LOGIN protocol    |
@@ -87,7 +87,7 @@ Possible values are:
 
 **.authenticationMode** : Text
 
-#### Description
+#### Beschreibung
 
 The `.authenticationMode` property contains the authentication mode used to open the session on the mail server.
 
@@ -95,7 +95,7 @@ By default, the most secured mode supported by the server is used.
 
 Possible values are:
 
-| Value    | Constants                      | Comment                                        |
+| Wert     | Konstanten                     | Kommentar                                      |
 | -------- | ------------------------------ | ---------------------------------------------- |
 | APOP     | `POP3 authentication APOP`     | Authentication using APOP protocol (POP3 only) |
 | CRAM-MD5 | `POP3 authentication CRAM-MD5` | Authentication using CRAM-MD5 protocol         |
@@ -120,7 +120,7 @@ Possible values are:
 
 **.authenticationMode** : Text
 
-#### Description
+#### Beschreibung
 
 The `.authenticationMode` property contains the authentication mode used to open the session on the mail server.
 
@@ -128,7 +128,7 @@ By default, the most secured mode supported by the server is used.
 
 Possible values are:
 
-| Value    | Constants                      | Comment                                |
+| Wert     | Konstanten                     | Kommentar                              |
 | -------- | ------------------------------ | -------------------------------------- |
 | CRAM-MD5 | `SMTP authentication CRAM MD5` | Authentication using CRAM-MD5 protocol |
 | LOGIN    | `SMTP authentication login`    | Authentication using LOGIN protocol    |
@@ -155,7 +155,7 @@ Possible values are:
 
 **.bodyCharset** : Text<!-- END REF -->
 
-#### Description
+#### Beschreibung
 
 The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -->  the charset and encoding used for the body part of the email<!-- END REF -->.
 
@@ -165,7 +165,7 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 
 **Possible values:**
 
-| Constant                 | Value                          | Comment                                                                                                       |
+| Constant                 | Wert                           | Kommentar                                                                                                     |
 | ------------------------ | ------------------------------ | ------------------------------------------------------------------------------------------------------------- |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li>*bodyCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul>                                                                                     |
 | mail mode ISO88591       | ISO-8859-1                     | <ul><li>*headerCharset*: ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>                                                                                     |
@@ -191,7 +191,7 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 
 **.connectionTimeOut** : Integer<!-- END REF -->
 
-#### Description
+#### Beschreibung
 
 The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeOut.Summary -->the maximum wait time (in seconds) allowed to establish a connection to the server<!-- END REF -->. By default, if the property has not been set in the server object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, or `IMAP New transporter`), the value is 30.
 
@@ -214,7 +214,7 @@ The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeO
 
 **.headerCharset** : Text<!-- END REF -->
 
-#### Description
+#### Beschreibung
 
 The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summary --> the charset and encoding used for the email header<!-- END REF -->. The header includes the following parts of the email:
 
@@ -224,7 +224,7 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 
 **Possible values:**
 
-| Constant                 | Value                          | Comment                                                                                                   |
+| Constant                 | Wert                           | Kommentar                                                                                                 |
 | ------------------------ | ------------------------------ | --------------------------------------------------------------------------------------------------------- |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & Quoted-printable if possible, otherwise UTF-8 & Quoted-printable</li><li>*bodyCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul>                                                                                 |
 | mail mode ISO88591       | ISO-8859-1                     | <ul><li>*headerCharset*: ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>                                                                                |
@@ -250,7 +250,7 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 
 **.host** : Text<!-- END REF -->
 
-#### Description
+#### Beschreibung
 
 The `.host` property contains <!-- REF #transporter.host.Summary -->the name or the IP address of the host server<!-- END REF -->. Used for mail transactions (SMTP, POP3, IMAP).
 
@@ -273,7 +273,7 @@ The `.host` property contains <!-- REF #transporter.host.Summary -->the name or 
 
 **.logFile** : Text<!-- END REF -->
 
-#### Description
+#### Beschreibung
 
 The `.logFile` property contains <!-- REF #transporter.logFile.Summary -->the path of the extended log file defined (if any) for the mail connection<!-- END REF -->. It can be relative (to the current Logs folder) or absolute.
 
@@ -302,7 +302,7 @@ Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), ext
 
 **.port** : Integer<!-- END REF -->
 
-#### Description
+#### Beschreibung
 
 The `.port` property contains <!-- REF #transporter.port.Summary --> the port number used for mail transactions<!-- END REF -->. By default, if the *port* property has not been set in the *server* object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), the port used is:
 
@@ -328,9 +328,9 @@ The `.port` property contains <!-- REF #transporter.port.Summary --> the port nu
 
 **.sendTimeOut** : Integer<!-- END REF -->
 
-#### Description
+#### Beschreibung
 
-The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary --> the maximum wait time (in seconds) of a call to `.send( )` before a timeout occurs<!-- END REF -->. By default, if the `.sendTimeOut` property has not been set in the `server` object, the value 100 is used.
+The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary --> the maximum wait time (in seconds) of a call to `.send( )` before a timeout occurs<!-- END REF -->. .
 
 <!-- END REF -->
 
@@ -351,7 +351,7 @@ The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary -
 
 **.user** : Text<!-- END REF -->
 
-#### Description
+#### Beschreibung
 
 The `.user` property contains <!-- REF #transporter.user.Summary --> the user name used for authentication on the mail server<!-- END REF -->.
 
@@ -375,13 +375,13 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 **.checkConnection()** : Object<!-- END REF -->
 
 <!-- REF #transporter.checkConnection().Params -->
-| Parameter | Type   |    | Description                                                            |
+| Parameter | Typ    |    | Beschreibung                                                           |
 | --------- | ------ |:--:| ---------------------------------------------------------------------- |
-| Result    | Object | <- | Status of the transporter object connection|<!-- END REF -->
+| Ergebnis  | Objekt | <- | Status of the transporter object connection|<!-- END REF -->
 
 |
 
-#### Description
+#### Beschreibung
 
 The `.checkConnection()` function <!-- REF #transporter.checkConnection().Summary --> checks the connection using information stored in the transporter object<!-- END REF -->, recreates the connection if necessary, and returns the status. This function allows you to verify that the values provided by the user are valid and consistent.
 
@@ -389,14 +389,14 @@ The `.checkConnection()` function <!-- REF #transporter.checkConnection().Summar
 
 The function sends a request to the mail server and returns an object describing the mail status. This object can contain the following properties:
 
-| Property   |                          | Type       | Description                                                                                                  |
+| Property   |                          | Typ        | Beschreibung                                                                                                 |
 | ---------- | ------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------ |
 | success    |                          | boolean    | True if the check is successful, False otherwise                                                             |
-| status     |                          | number     | (SMTP only) Status code returned by the mail server (0 in case of an issue unrelated to the mail processing) |
-| statusText |                          | text       | Status message returned by the mail server, or last error returned in the 4D error stack                     |
+| status     |                          | Zahl       | (SMTP only) Status code returned by the mail server (0 in case of an issue unrelated to the mail processing) |
+| statusText |                          | Text       | Status message returned by the mail server, or last error returned in the 4D error stack                     |
 | errors     |                          | collection | 4D error stack (not returned if a mail server response is received)                                          |
-|            | \[ ].errCode            | number     | 4D error code                                                                                                |
-|            | \[ ].message            | text       | Description of the 4D error                                                                                  |
-|            | \[ ].componentSignature | text       | Signature of the internal component which returned the error                                                 |
+|            | \[ ].errCode            | Zahl       | 4D error code                                                                                                |
+|            | \[ ].message            | Text       | Description of the 4D error                                                                                  |
+|            | \[ ].componentSignature | Text       | Signature of the internal component which returned the error                                                 |
 
 <!-- END REF -->
