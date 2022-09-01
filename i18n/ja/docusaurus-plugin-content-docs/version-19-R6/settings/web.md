@@ -1,304 +1,304 @@
 ---
 id: web
-title: Web page
+title: Web ページ
 ---
 
-Using the tabs on the **Web** page, you can configure various aspects of the integrated Web server of 4D (security, startup, connections, Web services, etc.). For more information about how the 4D Web server works, see [Web server](../WebServer/webServer.md). For more information about 4D Web services, refer to the [Publication and use of Web Services](https://doc.4d.com/4Dv19/4D/19/Publication-and-use-of-Web-Services.200-5416624.en.html) chapter.
+**Web** ページのタブを使用して、4D に統合された Webサーバーの様々な設定 (セキュリティ、開始オプション、接続、Webサービス等) にアクセスできます。 4D Webサーバーの動作に関する詳細は [Web サーバー](../WebServer/webServer.md) を参照ください。 また、Webサービスに関する詳細は [Web サービスの公開と使用](https://doc.4d.com/4Dv19/4D/19/Publication-and-use-of-Web-Services.200-5416624.ja.html) を参照ください。
 
-## Configuration
+## 設定
 
-### Publishing Information
+### 公開情報
 
-#### Launch Web Server at Startup
+#### 開始時にWebサーバーを起動
 
-Indicates whether the Web server will be launched on startup of the 4D application. This option is described in the [Web server administration](../WebServer/webServerAdmin.md#starting-the-4d-web-server) section.
+4Dアプリケーションの起動時に Webサーバーを開始するか指定します。 このオプションは [4D Webサーバーの開始](../WebServer/webServerAdmin.md#4d-web-サーバーの開始) で説明しています。
 
-#### Enable HTTP
+#### HTTPを有効化
 
-Indicates whether or not the Web server will accept non-secure connections. See [Enable HTTP](../WebServer/webServerConfig.md#enable-http).
+安全でない接続を Webサーバーが受け入れるかどうかを示します。 [HTTPを有効化](../WebServer/webServerConfig.md#httpを有効化) 参照。
 
 
-#### HTTP Port
+#### HTTP ポート
 
-Listening IP (TCP) port number for HTTP. See [HTTP Port](../WebServer/webServerConfig.md#http-port).
+HTTP接続を受け付ける IP (TCP) ポート番号。 [HTTP ポート](../WebServer/webServerConfig.md#http-ポート) 参照。
 
-#### IP Address
+#### IPアドレス
 
-IP address on which the 4D web server will receive HTTP requests (4D local and 4D Server). See [IP Address to listen](../WebServer/webServerConfig.md#ip-address-to-listen).
+4D Webサーバーが HTTPリクエストを受け付ける IPアドレスを指定できます (4Dローカルおよび 4D Server)。 [リクエストを受け付ける IPアドレス](../WebServer/webServerConfig.md#リクエストを受け付ける-ipアドレス) 参照
 
 
-#### Enable HTTPS
+#### HTTPSを有効にする
 
-Indicates whether or not the Web server will accept secure connections. See [Enable HTTPS](../WebServer/webServerConfig.md#enable-https).
+安全な接続を Webサーバーが受け入れるかどうかを示します。 [HTTPSを有効にする](../WebServer/webServerConfig.md#httpsを有効化にする) 参照。
 
 
-#### HTTPS Port
+#### HTTPS ポート
 
-Allows you to modify the TCP/IP port number used by the Web server for secured HTTP connections over TLS (HTTPS protocol). See [HTTPS Port](../WebServer/webServerConfig.md#https-port).
+TLS (HTTPSプロトコル) を使用したセキュアな HTTP接続に対して Webサーバーが使用する TCP/IPポート番号を指定できます。 [HTTPS ポート](../WebServer/webServerConfig.md#https-ポート) 参照
 
-#### Allow database access through 4DSYNC URLs
+#### "4DSYNC" URLを使用したデータベースアクセスを許可
 
-*Compatibility Note*: This option is [deprecated](../WebServer/webServerConfig.md#deprecated-settings). For database access through HTTP, it is now recommended to use ORDA remote datastore features and REST requests.
+*互換性に関する注記*: このオプションは [廃止予定](../WebServer/webServerConfig.md#廃止予定の設定) です。 今後、HTTP を介したデータベースアクセスには ORDA のリモートデータストア機能と RESTリクエストの使用が推奨されます。
 
 
-### Paths
+### パス
 
-#### Default HTML Root
+#### デフォルトHTMLルート
 
-Define the default location of the Web site files and to indicate the hierarchical level on the disk above which the files will not be accessible. See [Root Folder](../WebServer/webServerConfig.md#root-folder).
+Webサイトファイルのデフォルトの位置を指定し、それより上のファイルにはアクセス不能なディスク上の階層レベルを指定します。 [ルートフォルダー](../WebServer/webServerConfig.md#ルートフォルダー) 参照。
 
-#### Default Home Page
+#### デフォルトホームページ
 
-Designate a default home page for the Web server. See [Default Home page](../WebServer/webServerConfig.md#default-home-page).
+Webサーバー用のデフォルトホームページを指定します。 [デフォルトホームページ](../WebServer/webServerConfig.md#デフォルトホームページ) 参照。
 
 
 
 
-## Options (I)
+## オプション (I)
 
-### Cache
+### キャッシュ
 
 
-#### Use the 4D Web cache
+#### 4D Webキャッシュを使用する
 
-Enables the web page cache. See [Cache](../WebServer/webServerConfig.md#cache).
+Webページキャッシュを有効化します。 [キャッシュ](../WebServer/webServerConfig.md#キャッシュ) 参照。
 
-#### Pages Cache Size
+#### ページキャッシュサイズ
 
-Sets the cache size. See [Cache](../WebServer/webServerConfig.md#cache).
+キャッシュサイズを指定します。 [キャッシュ](../WebServer/webServerConfig.md#キャッシュ) 参照。
 
 
-#### Clear Cache
+#### キャッシュクリア
 
-At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache). To do so, you just have to click on the **Clear Cache** button. The cache is then immediately cleared.
+いつでもページやイメージをキャッシュからクリアできます (たとえば、スタティックページを更新し、キャッシュにそれをリロードさせたい場合)。 At any moment, you can clear the cache of the pages and images that it contains (if, for example, you have modified a static page and you want to reload it in the cache). キャッシュは即座にクリアされます。
 
-> You can also use the special URL [/4DCACHECLEAR](../WebServer/webServerAdmin.md#4dcacheclear).
+> 特殊なURL [/4DCACHECLEAR](../WebServer/webServerAdmin.md#4dcacheclear) を使用することもできます。
 
-### Web Process
+### Webプロセス
 
-This area allows you to configure how the web server will handle user sessions and their associated processes.
+このエリアでは、ユーザーセッションとそれに関連するプロセスを Webサーバーがどのように管理するかを設定します。
 
-> The **Legacy sessions** option is only available for compatibility in databases/projects created with 4D versions prior to 4D v18 R6.
+> **旧式セッション** オプションは、4D v18 R6 以前のバージョンで作成されたデータベース/プロジェクトにおいて互換性のためにのみ利用可能です。
 
-#### Scalable sessions (multi-process sessions)
+#### スケーラブルセッション (マルチプロセスセッション)
 
-When you select this option (recommended), a user session is managed through a **Session** object. See the [User sessions page](../WebServer/sessions.md#enabling-sessions).
+このオプションを選択すると (推奨)、ユーザーセッションは **Session** オブジェクトを介して管理されます。 [ユーザーセッション](../WebServer/sessions.md#セッションの有効化) のページを参照ください。
 
 
-#### No sessions
+#### セッションなし
 
-When this option is selected, the web server does not provide any specific support for [user sessions](../WebServer/sessions.md). Successive requests from web clients are always independent and no context is maintained on the server.
+このオプションが選択されている場合、Webサーバーは [ユーザーセッション](../WebServer/sessions.md) 専用のサポートを提供しません。 Webクライアントからの連続したリクエストはどれも常に独立しており、サーバー上でコンテキストは維持されません。
 
-In this mode, you can configure additional web server setttings:
+このモードでは、以下の追加の Web サーバー設定を設定することができます:
 
--   [Maximum Concurrent Web Processes](#maximum-concurrent-web-processes)
--   [Reuse Temporary Contexts (4D in remote mode)](#reuse-temporary-contexts)
--   [Use preemptive processes](#use-preemptive-web-processes)
+-   [最大同時Webプロセス](#maximum-concurrent-web-processes)
+-   [一時的なコンテキストを再利用する (リモートモード)](#reuse-temporary-contexts)
+-   [プリエンプティブプロセスを使用](#use-preemptive-web-processes)
 
-#### Legacy sessions (single process sessions)
+#### 旧式セッション (シングルプロセスセッション)
 
-*Compatibility Note:* This option is only available in databases/projects created with a 4D version prior to 4D v18 R6.
+*互換性に関する注記*: このオプションは 4D v18 R6 以前のバージョンで作成されたデータベース/プロジェクトでのみ利用可能です。
 
-This option enables the handling of legacy user sessions by the 4D HTTP server. This mechanism is described in the [Web Sessions Management (Legacy)](https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.en.html) section. See [Keep Session](../WebServer/webServerConfig.md#keep-session).
+このオプションは 4D HTTP サーバーの旧式ユーザーセッションの管理を有効化します。 この機構は [Webセッション管理(旧式)](https://doc.4d.com/4Dv19/4D/19/Web-Sessions-Management-Legacy.300-5391806.ja.html) にて詳細に説明されています。 [旧式セッション (自動セッション管理)](../WebServer/webServerConfig.md#旧式セッション-自動セッション管理) 参照。
 
-When selected, the [Reuse Temporary Contexts (4D in remote mode)](#reuse-temporary-contexts) option is automatically checked (and locked).
+このオプションが選択されていると、[一時的なコンテキストを再利用する (リモートモード)](#一時的なコンテキストを再利用する) オプションも自動で選択され、ロックされます。
 
-#### Maximum Concurrent Web Processes
+#### 最大同時Webプロセス
 
-Not available with [scalable sessions](../WebServer/sessions.md).
+[スケーラブルセッションモード](../WebServer/sessions.md) の場合には利用できません。
 
-Strictly high limit of concurrent web processes. See [Maximum Concurrent Web Processes](../WebServer/webServerConfig.md#maximum-concurrent-web-processes).
+Webプロセスの最大同時接続数の厳格な上限です。 [最大同時Webプロセス](../WebServer/webServerConfig.md#最大同時webプロセス) 参照。
 
 
-#### Reuse Temporary Contexts
+#### 一時的なコンテキストを再利用する
 
-Not available with [scalable sessions](../WebServer/sessions.md).
+[スケーラブルセッションモード](../WebServer/sessions.md) の場合には利用できません。
 
-Allows you to optimize the operation of the 4D Web server in remote mode. See [Reuse temporary contexts in remote mode)](../WebServer/webServerConfig.md#reuse-temporary-contexts-in-remote-mode).
+リモートモードで実行されている 4D Webサーバーの動作を最適化できます。 [一時的なコンテキストを再利用する (リモートモード)](../WebServer/webServerConfig.md#一時的なコンテキストを再利用する-リモートモード) 参照。
 
-#### Use preemptive processes
+#### プリエンプティブプロセスを使用
 
-Not available with [scalable sessions](../WebServer/sessions.md).
+[スケーラブルセッションモード](../WebServer/sessions.md) の場合には利用できません。
 
-Enables preemptive web processes in your compiled applications. When **Use preemptive processes** is selected, the eligibility of your web-related code (including 4D tags and web database methods) to the preemptive execution will be evaluated during the compilation. For more information, see [Using preemptive Web processes](../WebServer/preemptiveWeb.md).
+コンパイル済みアプリケーションにおいてプリエンプティブWebプロセスを有効化します。 **プリエンプティブプロセスを使用** が選択されているとき、Web関連のコード (4D グと Webデータベースメソッドを含む) は、コンパイル時にプリエンティブな実行が可能かどうかが評価されます。 詳細な情報については、[プリエンプティブWebプロセスの使用](../WebServer/preemptiveWeb.md) を参照ください。
 
-> This option does not apply to scalable sessions, REST processes (compiled mode), and web service processes (server or client).  See [Enabling the preemptive mode for the web server](../WebServer/preemptiveWeb.md#enabling-the-preemptive-mode-for-the-web-server).
+> このオプションは スケーラブルセッション、RESTプロセス (コンパイル済みモード)、および Webサービスプロセス (サーバーあるいはクライアント) には適用されません。  [Webサーバーにおいてプリエンプティブモードを有効化する](../WebServer/preemptiveWeb.md#webサーバーにおいてプリエンプティブモードを有効化する) 参照。
 
 
-#### Inactive Process Timeout
+#### 非動作プロセスのタイムアウト
 
-Not available with [scalable sessions](../WebServer/sessions.md).
+[スケーラブルセッションモード](../WebServer/sessions.md) の場合には利用できません。
 
-Allows you to set the maximum timeout before closing for inactive Web processes on the server. See [Inactive Process Timeout](../WebServer/webServerConfig.md#inactive-process-timeout).
+サーバー上で活動していない Webプロセスを閉じるための最大タイムアウト時間を設定できます。 [非アクティブセッションタイムアウト](../WebServer/webServerConfig.md#非アクティブセッションタイムアウト) 参照。
 
 
 
-### Web Passwords
+### Webパスワード
 
-Set the authentication system that you want to apply to your Web server. Three options are proposed:
+Webサーバーに対して適用する認証システムを設定します。 3つのオプションから選択できます:
 
 Custom (default) Passwords with BASIC protocol Passwords with DIGEST protocol
 
-Using **Custom** authentication is recommended. See [**Authentication**](../WebServer/authentication.md) chapter in the *Web Development* documentation.
+**カスタムの認証** を使用することが推奨されています。 *Web 開発* ドキュメンテーションの[**認証**](../WebServer/authentication.md) の章を参照ください。
 
 
-## Options (II)
+## オプション (II)
 
-### Text Conversion
+### テキスト変換
 
-#### Send Extended Characters Directly
+#### 拡張文字をそのまま送信
 
-See [Deprecated Settings](../WebServer/webServerConfig.md#deprecated-settings).
+[廃止予定の設定](../WebServer/webServerConfig.md#廃止予定の設定) 参照。
 
-#### Standard Set
+#### 文字コード
 
-Define the set of characters to be used by the 4D Web server. See [Character Set](../WebServer/webServerConfig.md#character-set).
+4D Webサーバーが使用する文字セットを定義します。 [文字コード](../WebServer/webServerConfig.md#文字コード) 参照。
 
-### Keep-Alive Connections
+### Keep-Alive接続を使用する
 
-See [Deprecated Settings](../WebServer/webServerConfig.md#keep-alive-connections).
+[廃止予定の設定](../WebServer/webServerConfig.md#keep-alive接続を使用する) 参照。
 
-### CORS Settings
+### CORS設定
 
-#### Enable CORS
+#### CORSを有効化
 
-Enables Cross-origin resource sharing (CORS) service. See [Enable CORS Service](../WebServer/webServerConfig.md#enable-cors-service).
+クロスオリジンリソースシェアリング (CORS) サービスを有効化します。 [CORSを有効化](../WebServer/webServerConfig.md#corsを有効化) 参照。
 
-#### Domain names/HTTP methods allowed
+#### ドメイン名/許可されたHTTPメソッド
 
-List of allowed hosts and methods for the CORS service. See [CORS Settings](../WebServer/webServerConfig.md#cors-settings).
-
-
-
-## Log (type)
+CORSサービスで許可されたホストとメソッドの一覧。 [CORS設定](../WebServer/webServerConfig.md#cors設定) 参照。
 
 
-### Log Format
 
-Starts or stops the recording of requests received by the 4D web server in the *logweb.txt* file and sets its format. See [Log Recording](../WebServer/webServerConfig.md#log-recording).
-
-> The activation and deactivation of the log file of requests can also be carried out by programming using the [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/en/page1210.html) command.
+## ログ (タイプ)
 
 
-The log format menu provides the following options:
+### ログフォーマット
 
--   **No Log File**: When this option is selected, 4D will not generate a log file of requests.
+4D Web サーバーが受け取るリクエストのログを開始/停止します。 ログは、*logweb.txt* ファイルに記録され、そのフォーマットを指定することができます。 [ログの記録](../WebServer/webServerConfig.md#ログの記録) 参照。
 
--   **CLF (Common Log Format)**: When this option is selected, the log of requests is generated in CLF format. With the CLF format, each line of the file represents a request, such as:\
+> リクエストのログファイルの有効/無効は [WEB SET OPTION](https://doc.4d.com/4dv19R/help/command/ja/page1210.html) コマンドを使用したプログラミングでも切り替えられます。
+
+
+ログフォーマットメニューでは、次のオプションを提供します。
+
+-   **ログファイルなし**: このオプションが選択されると、4D はリクエストのログファイルを作成しません。
+
+-   **CLF (Common Log Format)**: このオプションが選択されると、リクエストのログが CLFフォーマットで作成されます。 With the CLF format, each line of the file represents a request, such as:\
   host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length\
   Each field is separated by a space and each line ends by the CR/LF sequence (character 13, character 10).
 
-    -   host: IP address of the client (ex. 192.100.100.10)
-    -   rfc931: information not generated by 4D, it's always - (a minus sign)
-    -   user: user name as it is authenticated, or else it is - (a minus sign). If the user name contains spaces, they will be replaced by _ (an underscore).
-    -   DD: day, MMM: a 3-letter abbreviation for the month name (Jan, Feb,...), YYYY: year, HH: hour, MM: minutes, SS: seconds
+    -   host: クライアントの IPアドレス (例: 192.100.100.10)
+    -   rfc931: 4Dによって作成されない情報。 常に - (マイナス記号) です。
+    -   use: 認証されているユーザー名、あるいは、- (マイナス記号) 。 ユーザー名にスペースが含まれると、_ (下線) に置き換わります。
+    -   DD: 日、MMM: 月を表す3文字の略号 (Jan、Febなど)、YYYY: 年、HH: 時間、MM: 分、SS: 秒。
 
-> The date and time are local to the server.
+> 日付と時間はサーバーのローカルタイム。
 
--   request: request sent by the client (ex. GET /index.htm HTTP/1.0)
--   state: reply given by the server.
--   length: size of the data returned (except the HTTP header) or 0.
+-   request: クライアントによって送られたリクエスト (例: GET /index.htm HTTP/1.0)
+-   state: サーバーの返答。
+-   length: 返されたデータ (HTTPヘッダー以外) のサイズまたは 0。
 
-> **Note:** For performance reasons, the operations are saved in a memory buffer in packets of 1Kb before being written to disk. The operations are also written to disk if no request has been sent every 5 seconds. The possible values of state are as follows: 200: OK 204: No contents 302: Redirection 304: Not modified 400: Incorrect request 401: Authentication required 404: Not found 500: Internal error The CLF format cannot be customized.
+> **注:** パフォーマンス上の理由により、操作はメモリのバッファーに 1Kbのパケットで保存されてから、ディスクに書き込まれます。 5秒間リクエストが発生しなくても、操作はディスクに書き込まれます。 The possible values of state are as follows: 200: OK 204: No contents 302: Redirection 304: Not modified 400: Incorrect request 401: Authentication required 404: Not found 500: Internal error The CLF format cannot be customized.
 
--   **DLF (Combined Log Format)**: When this option is selected, the request log is generated in DLF format. DLF format is similar to CLF format and uses exactly the same structure. It simply adds two additional HTTP fields at the end of each request: Referer and User-agent.
+-   **DLF (Combined Log Format)**: このオプションが選択されると、リクエストログが DLFフォーマットで作成されます。 DLFフォーマットは CLFフォーマットと類似していて、まったく同じ構造を使用します。 さらに、各リクエストの最後に2つのHTTPフィールド、Referer と User-agent を追加します。
 
-    -   Referer: Contains the URL of the page pointing to the requested document.
-    -   User-agent: Contains the name and version of the browser or software of the client at the origin of the request.
+    -   Referer: リクエストされたドキュメントを指しているページの URL を含みます。
+    -   User-agent: リクエストのオリジンにおけるクライアントのブラウザーまたはソフトウェアの名前とバージョンを含みます。
 
-> The DLF format cannot be customized.
+> DLFフォーマットはカスタマイズされません。
 
--   **ELF (Extended Log Format)**: When this option is selected, the request log is generated in ELF format. The ELF format is very widespread in the world of HTTP browsers. It can be used to build sophisticated logs that meet specific needs. For this reason, the ELF format can be customized: it is possible to choose the fields to be recorded as well as their order of insertion into the file.
+-   **ELF (Extended Log Format)**: このオプションが選択されると、リクエストログが ELFフォーマットで作成されます。 ELFフォーマットは HTTPブラウザー界で広く普及しています。 そして、特別なニーズに応える洗練されたログを構築します。 この理由により、ELFフォーマットはカスタマイズされます。 記録するフィールドやそのフィールドをファイルへ挿入する順番を選択することが可能です。
 
--   **WLF (WebStar Log Format)**: When this option is selected, the request log is generated in WLF format. WLF format was developed specifically for the 4D WebSTAR server. It is similar to the ELF format, with only a few additional fields. Like the ELF format, it can be customized.
+-   **WLF (WebStar Log Format)**: このオプションが選択されると、リクエストログが WLFフォーマットで作成されます。 WLFフォーマットは 4D WebSTAR サーバー用として特別に開発されました。 いくつかの追加フィールドを持つ以外、EFLフォーマットと似ています。 EFLフォーマットと同様、 カスタマイズされます。
 
-**Configuring the fields** When you choose the ELF (Extended Log Format) or WLF (WebStar Log Format) format, the "Weg Log Token Selection" area displays the fields available for the chosen format. You will need to select each field to be included in the log. To do so, use the arrow buttons or simply drag and drop the desired fields into the "Selected Tokens" area.
+**Configuring the fields** When you choose the ELF (Extended Log Format) or WLF (WebStar Log Format) format, the "Weg Log Token Selection" area displays the fields available for the chosen format. ログに含む各フィールドを選択する必要があります。 You will need to select each field to be included in the log.
 
-**Note**: You cannot select the same field twice.
+**注**: 同じフィールドを 2度選択することはできません。
 
-The following table lists the fields available for each format (in alphabetical order) and describes its contents:
+各フォーマットで利用可能なフィールド (アルファベット順) とその内容を以下のテーブルに示します:
 
-| Field          | ELF | WLF | Value                                                                      |
-| -------------- | --- | --- | -------------------------------------------------------------------------- |
-| BYTES_RECEIVED |     | X   | Number of bytes received by the server                                     |
-| BYTES_SENT     | X   | X   | Number of bytes sent by the server to the client                           |
-| C_DNS          | X   | X   | IP address of the DNS (ELF: field identical to the C_IP field)             |
-| C_IP           | X   | X   | IP address of the client (for example 192.100.100.10)                      |
-| CONNECTION_ID  |     | X   | Connection ID number                                                       |
-| CS(COOKIE)     | X   | X   | Information about cookies contained in the HTTP request                    |
-| CS(HOST)       | X   | X   | Host field of the HTTP request                                             |
-| CS(REFERER)    | X   | X   | URL of the page pointing to the requested document                         |
-| CS(USER_AGENT) | X   | X   | Information about the software and operating system of the client          |
-| CS_SIP         | X   | X   | IP address of the server                                                   |
-| CS_URI         | X   | X   | URI on which the request is made                                           |
-| CS_URI_QUERY | X   | X   | Request query parameters                                                   |
-| CS_URI_STEM  | X   | X   | Part of request without query parameters                                   |
-| DATE           | X   | X   | DD: day, MMM: 3-letter abbreviation for month (Jan, Feb, etc.), YYYY: year |
-| METHOD         | X   | X   | HTTP method used for the request sent to the server                        |
-| PATH_ARGS      |     | X   | CGI parameters: string located after the "$" character                     |
-| STATUS         | X   | X   | Reply provided by the server                                               |
-| TIME           | X   | X   | HH: hour, MM: minutes, SS: seconds                                         |
-| TRANSFER_TIME  | X   | X   | Time requested by server to generate the reply                             |
-| USER           | X   | X   | User name if authenticated; otherwise - (minus sign).                      |
-|                |     |     | If the user name contains spaces, they are replaced by _ (underlines)      |
-| URL            |     | X   | URL requested by the client                                                |
+| フィールド          | ELF | WLF | Value                                     |
+| -------------- | --- | --- | ----------------------------------------- |
+| BYTES_RECEIVED |     | X   | サーバーが受け取ったバイト数                            |
+| BYTES_SENT     | X   | X   | サーバーがクライアントに送ったバイト数                       |
+| C_DNS          | X   | X   | DNSのIPアドレス (ELF: C_IP フィールドと同一のフィールド)     |
+| C_IP           | X   | X   | クライアントの IPアドレス (例: 192.100.100.10)        |
+| CONNECTION_ID  |     | X   | 接続ID番号                                    |
+| CS(COOKIE)     | X   | X   | HTTPリクエストに格納されている cookies に関する情報          |
+| CS(HOST)       | X   | X   | HTTPリクエストの Hostフィールド                      |
+| CS(REFERER)    | X   | X   | リクエストされたドキュメントを指すページの URL                 |
+| CS(USER_AGENT) | X   | X   | ソフトウェアとクライアントのオペレーティングシステムに関する情報          |
+| CS_SIP         | X   | X   | サーバーの IPアドレス                              |
+| CS_URI         | X   | X   | リクエストが作成された URI                           |
+| CS_URI_QUERY | X   | X   | リクエストのクエリ引数                               |
+| CS_URI_STEM  | X   | X   | クエリ引数のないリクエストのパート                         |
+| DATE           | X   | X   | DD: 日、MMM: 月を表す3文字の略号 (Jan、Febなど)、YYYY: 年 |
+| METHOD         | X   | X   | サーバーへ送られたリクエスト用の HTTPメソッド                 |
+| PATH_ARGS      |     | X   | CGI引数: "$" の後に続く文字列                       |
+| STATUS         | X   | X   | サーバーの返答                                   |
+| TIME           | X   | X   | HH: 時間、MM: 分、SS: 秒                        |
+| TRANSFER_TIME  | X   | X   | 返答を作成するためにサーバーが要求した時間                     |
+| USER           | X   | X   | 認証されているユーザー名、あるいは、- (マイナス記号) 。            |
+|                |     |     | ユーザー名にスペースが含まれると、_ (下線) に置き換わります。         |
+| URL            |     | X   | クライアントがリクエストした URL                        |
 
-> Dates and times are given in GMT.
+> 日付と時間は GMTで表されます。
 
-## Log (backup)
+## ログ (バックアップ)
 
-Configure the automatic backup parameters for the request log. First you must choose the frequency (days, weeks, etc.) or the file size limit criterion by clicking on the corresponding radio button. You must then specify the precise moment of the backup if necessary.
+リクエストログの自動バックアップ設定を指定します。 最初に、頻度 (日、週などの単位) またはファイルサイズの上限に対応するラジオボタンをクリックして選択します。 必要に応じて、バックアップする正確な時間を指定します。
 
--   **No Backup**: The scheduled backup function is deactivated.
--   **Every X hour(s)**: This option is used to program backups on an hourly basis. You can enter a value between 1 and 24 .
+-   **バックアップしない**: 周期的なバックアップ機能が無効になっています。
+-   **X 時間ごと**: 1時間単位でバックアップをプログラムする際、このオプションを使用します。 1 から 24 の値を入力します。
 
-    -   **starting at**: Used to set the time at which the first back up will begin.
--   **Every X day(s) at X**: This option is used to program backups on a daily basis. Enter 1 if you want to perform a daily backup. When this option is checked, you must indicate the time when the backup must be started.
--   **Every X week(s), day at X**: This option is used to program backups on a weekly basis. Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started. You can select several days of the week if desired. For example, you can use this option to set two weekly backups: one on Wednesdays and one on Fridays.
--   **Every X month(s), Xth day at X**: This option is used to program backups on a monthly basis. Enter 1 if you want to perform a monthly backup. When this option is checked, you must indicate the day of the month and the time when the backup must be started.
--   **Every X MB**: This option is used to program backups based on the size of the current request log file. A backup is automatically triggered when the file reaches the set size. You can set a size limit of 1, 10, 100 or 1000 MB.
+    -   **開始時刻**: 最初のバックアップ開始時間の設定に使用します。
+-   **X 日ごと**: 1日単位でバックアップをプログラムする際、このオプションを使用します。 バックアップを毎日実行するには、1を入力します。 このオプションをチェックすると、バックアップの開始時間を指定しなければなりません。
+-   **X 週ごと**: 1週間単位でバックアップをプログラムする際、このオプションを使用します。 たとえば、毎週バックアップをおこなうには 1 と設定します。 Enter 1 if you want to perform a weekly backup. When this option is checked, you must indicate the day(s) of the week and the time when each backup must be started. You can select several days of the week if desired.
+-   **X 月ごと**: 1ヶ月単位でバックアップをプログラムする際、このオプションを使用します。 たとえば、毎月バックアップをおこなうには 1 と設定します。 Enter 1 if you want to perform a monthly backup.
+-   **X MB** (サイズ指定): カレントのリクエストログのファイルサイズに基づいてバックアップをプログラムする際、このオプションを使用します。 ファイルが指定サイズに達すると、バックアップが自動的に起動します。 サイズ制限は 1、10、100 または 1000MB ごとに設定可能です。
 
-> In the case of scheduled backups, if the Web server was not launched when the backup was scheduled to occur, on the next startup 4D considers the backup as failed and applies the appropriate settings, set via the Database Settings.
+> スケジュールされたバックアップの場合で、バックアップが開始する予定となっているときに Webサーバーが起動していないと、次回の起動において 4D はバックアップが失敗したと見なし、データベース設定で示されている適切な設定を適用します。
 
-## Web Services
+## Webサービス
 
-You use the options on this tab to activate and configure Web services for the 4D project, both for their publishing (server side) and their subscription (client side).
+このページのオプションを使用して 4Dプロジェクトの Webサービスを有効にし、(サーバーおよびクライアントの) 設定をすることができます。
 
-For more information about the support of Web Services in 4D, refer to the [Publication and use of Web Services](https://doc.4d.com/What-s-new/4D-Design-Reference-19-R4/Publication-and-use-of-Web-Services.200-5736722.en.html) chapter.
+4Dにおける Webサービスサポートについては [Web サービスの公開と使用](https://doc.4d.com/What-s-new/4D-Design-Reference-19-R4/Publication-and-use-of-Web-Services.200-5736722.ja.html) を参照ください。
 
-### Server Side
+### サーバー側設定
 
-This area contains various options related to the use of 4D as a Web Services "server" i.e., publishing project methods in the form of Web Services.
+このエリアでは 4D を Webサービスサーバーとして使用する (つまり、Webサービスの形でプロジェクトメソッドを公開する) ための設定をおこないます。
 
--   **Allow Web Services Requests**: This option lets you initialize the publication of Web Services. If this option has not been checked, 4D refuses SOAP requests and does not generate a WSDL - even if methods have the *Published in WSDL* attribute. When this option is checked, 4D creates the WSDL file.
--   **Web Service Name**: This area lets you change the "generic name" of the Web Service. This name is used to differentiate the services both at the SOAP server level (when the server publishes several different Web Services), as well as in the Web Services directories. By default, 4D uses the name A_WebService.
--   **Web Services Namespace**: This area is used to change the namespace of the Web Services published by 4D. Each Web Service published on the Internet must be unique. The uniqueness of the names of Web Services is ensured by using XML namespaces. A namespace is an arbitrary character string used to identify a set of XML tags in a unique way. Typically, the namespace begins with the URL of the company (http://mycompany.com/mynamespace). In this case, it is not indispensable to have anything in particular at the URL indicated; what matters is that the character string used is unique. By default, 4D uses the following namespace: http://www.4d.com/namespace/default.
+-   **Webサービスリクエストを許可する**: このオプションを使用して Webサービスクライアントからのリクエストを受け付けるかどうかを設定します。 このオプションが選択されていない場合、4D は SOAPリクエストを拒否し、メソッドが*WSDLを公開* 属性を設定されていても WSDL を生成しません。 このオプションを選択すると、4D はメソッドプロパティに基づき WSDLファイルを生成します。
+-   **Webサービス名:** このエリアでは Webサービスの "包括的な名称" を変更できます。 この名前は、SOAPサーバーレベルでサービスを識別するために使用されます。 デフォルトで 4D は "A_WebService" を使用します。
+-   **Webサービス名前空間**: このエリアは 4D が公開する Webサービスの名前空間を設定するのに使用します。 インターネットに公開される各 Webサービスはユニークでなければなりません。 Webサービス名をユニークにするために XML名前空間が使用されます。 名前空間は任意の文字列で、XMLタグをユニークに識別するために使用されます。 典型的には、名前空間は会社の URL で始まります (http://mycompany.com/mynamespace)。 指定された文字列がユニークである限り、指定した URL に何か付け加える必要はありません。 デフォルトで 4D は以下の名前空間を使用します: http://www.4d.com/namespace/default。
 
-> In conformity with the XML standard for tag names, the character strings used must not contain spaces nor start with a number. Moreover, to avoid any risk of incompatibility, we recommend that you do not use any extended characters (such as accented characters).
+> タグ名に関する XML標準に準拠するために、使用する文字には空白が含まれていてはなりません。 また数字から始まっていてはなりません。 非互換性を避けるために、アクセント文字や日本語などの拡張文字は使用しないことを推奨します。
 
-### Client Side
+### クライアント側設定
 
-This area contains various options related to the use of 4D as a Web Services "client" i.e., subscribing to services published on the network.
+このエリアでは Webサービスクライアントとして 4D を使用する (つまり、ネットワーク上に公開されているサービスにサブスクライブする) ための設定をおこないます。
 
--   **Wizard Method Prefix**: This area lets you change the prefix that is added automatically by 4D to the name of proxy methods generated by the Web Services Wizard. Proxy project methods form a link between the 4D application and the Web Services server. By default, 4D uses the prefix "proxy_".
+-   **ウィザードメソッドプリフィクス**: このエリアでは、Webサービスウィザードを使用して 4D が自動生成するプロキシメソッドの接頭辞を設定します。 プロキシプロジェクトメソッドは 4Dアプリケーションと Webサービスサーバーとのリンクを形成します。 デフォルトで "proxy_" が使用されます。
 
 
-## Web Features
+## Web機能
 
-This page contains the options used to enable and control advanced Web features such as the REST server.
+このページには、RESTサーバーなどの高度な Web機能を有効化および制御するためのオプションが含まれています。
 
-### Publishing
+### 公開
 
-#### Expose as REST server
+#### RESTサーバーとして公開
 
-Starts and stops the REST Server. See [REST Server Configuration](../REST/configuration.md).
+RESTサーバーを開始/停止します。 [RESTサーバー設定](../REST/configuration.md) 参照。
 
-### Access
+### アクセス権
 
-This option specifies a group of 4D users that is authorized to establish the link to the 4D database using REST requests. See [Configuring REST access](../REST/configuration.md#configuring-rest-access).
+この設定は、RESTリクエストを使って 4Dデータベースへのリンクを設立することのできる 4Dユーザーのグループを指定します。 [アクセス権の設定](../REST/configuration.md#アクセス権の設定) 参照。
 
 ### Web Studio
 
-#### Enable access to the web studio
+#### Web Studio へのアクセスを有効化する
 
-Enables general access to the web studio. You still need to configure it at every project level.
+Web Studio へのアクセスを有効化します。 さらに、プロジェクトレベルごとの設定が必要です。
