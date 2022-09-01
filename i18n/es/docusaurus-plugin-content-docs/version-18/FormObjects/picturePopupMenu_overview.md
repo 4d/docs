@@ -1,28 +1,28 @@
 ---
 id: picturePopupMenuOverview
-title: Picture Pop-up Menu
+title: Menú pop-up imagen
 ---
 
-## Overview
+## Generalidades
 
-A picture pop-up menu is a pop-up menu that displays a two-dimensional array of pictures. A picture pop-up menu can be used instead of a [picture button](pictureButton_overview.md). The creation of the picture to use with a picture pop-up menu is similar to the creation of a picture for a picture button. The concept is the same as for [button grids](buttonGrid_overview.md), except that the graphic is used as a pop-up menu instead of a form object.
+Un menú emergente de imágenes que muestra un array de imágenes en dos dimensiones. Se puede utilizar un menú emergente de imágenes en lugar de un [botón imagen](pictureButton_overview.md). La creación de la imagen a utilizar con un menú emergente imagen es similar a la creación de una imagen para un botón imagen. El concepto es el mismo que el de la [rejillas de botones](buttonGrid_overview.md), salvo que la imagen se utiliza como un menú emergente en lugar de un objeto del formulario.
 
-## Using picture pop-up menus
+## Utilizar los menús emergentes de imágenes
 
-To create a picture pop-up menu, you need to [refer to a picture](properties_Picture.md#pathname). The following example allows you to select the interface language by selecting it from a picture pop-up menu. Each language is represented by the corresponding flag:
+Para crear un menú emergente de imágenes, debe [referirse a una imagen](properties_Picture.md#pathname). El siguiente ejemplo permite seleccionar el idioma de la interfaz seleccionandolo en un menú emergente de imágenes. Cada idioma está representado por la bandera correspondiente:
 
 ![](../assets/en/FormObjects/picturePopupMenu_example.png)
 
-### Programming
+### Programación
 
-You can manage picture pop-up menus using methods. As with [button grids](buttonGrid_overview.md), variables associated with picture pop-up menus are set to the value of the selected element in the picture pop-up menu. If no element is selected, the value is 0. Elements are numbered, row by row, from left to right starting with the top row.
+Puede gestionar los menús emergentes de imágenes utilizando métodos. Al igual que con las [rejillas de botones](buttonGrid_overview.md), las variables asociadas a los menús emergentes de imágenes se definen con el valor del elemento seleccionado en el menú emergente de imágenes. Si no se selecciona ningún elemento, el valor es 0. Los elementos están numerados, línea por línea, de izquierda a derecha, empezando por la línea superior.
 
-### Goto page
+### Ir a la página
 
-You can assign the `gotoPage` [standard action](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) to a picture pop-up menu. When that action is selected, 4D will automatically display the page of the form that corresponds to the position of the picture selected in the picture array. Elements are numbered from left to right and top to bottom, beginning with the top left corner.
+Puede asociar el `gotoPage` [acción estándar](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) a un objeto de tipo pop-up menu imagen. Cuando se selecciona esa acción, 4D mostrará automáticamente la página del formulario que corresponde a la posición de la imagen seleccionada en el array de imágenes. Los elementos se numeran de izquierda a derecha y de arriba a abajo, empezando por la esquina superior izquierda.
 
-For example, if the user selects the 3rd element, 4D will display the third page of the current form (if it exists). If you want to manage the effect of a click yourself, select `No action`.
+Por ejemplo, si el usuario selecciona el tercer elemento, 4D mostrará la página 3 del formulario actual (si existe). Si desea gestionar usted mismo el efecto de un clic, seleccione `Sin acción`.
 
-## Supported Properties
+## Propiedades soportadas
 
-[Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) -[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Columns](properties_Crop.md#columns) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Pathname](properties_Picture.md#pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Rows](properties_Crop.md#rows)- [Standard action](properties_Action.md#standard-action) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)  
+[Negrita](properties_Text.md#bold) - [Estilo del borde](properties_BackgroundAndBorder.md#border-line-style) - \[Inferior\](properties_CoordinatesAndSizing. md#bottom) - [Clase](properties_Object.md#css-class) - [Columnas](properties_Crop.md#columns) - [Altura](properties_CoordinatesAndSizing.md#height) - [Consejo de ayuda](properties_Help.md#help-tip) - \[Tamaño horizontal\](properties_ResizingOptions. md#horizontal-sizing) - [Izquierda](properties_CoordinatesAndSizing.md#left) - \[Nombre del objeto\](properties_Object. md#object-name) - [Ruta de acceso](properties_Picture.md#pathname) - [Derecha](properties_CoordinatesAndSizing.md#right) - [Filas](properties_Crop.md#rows) - \[Acción estándar\](properties_Action. md#standard-action) - [Superior](properties_CoordinatesAndSizing.md#top) - \[Tipo\](properties_Object. md#type) - [Variable o expresión](properties_Object.md#variable-or-expression) - \[Tamaño vertical\](properties_ResizingOptions. md#vertical-sizing) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width)  
