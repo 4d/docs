@@ -1,31 +1,31 @@
 ---
 id: propertiesPicture
-title: Picture
+title: Images
 ---
 
 
-## Pathname
+## Chemin d'accès
 
-Pathname of a static source picture for a [picture button](pictureButton_overview.md), [picture pop-up Menu](picturePopupMenu_overview.md), or [static picture](staticPicture.md). You must use the POSIX syntax.
+Chemin d'une image source statique pour un [bouton image](pictureButton_overview.md), [un menu pop-up ](picturePopupMenu_overview.md) ou une [image ou une image statique](staticPicture.md). Vous devez utiliser la syntaxe POSIX.
 
-Two main locations can be used for static picture path:
+Deux emplacements principaux peuvent être utilisés pour le chemin d'image statique :
 
-- in the **Resources** folder of the project database. Appropriate when you want to share static pictures between several forms in the database. In this case, the Pathname is "/RESOURCES/\<picture path\>".
-- in an image folder (e.g. named **Images**) within the form folder. Appropriate when the static pictures are used only in the form and/or you want to be able to move or duplicate the whole form within the project or different projects. In this case, the Pathname is "\<picture path\>" and is resolved from the root of the form folder.
+- dans le dossier **Resources** de la base projet. Convient lorsque vous souhaitez partager des images statiques entre plusieurs formulaires de la base de données. In this case, the Pathname is "/RESOURCES/\<picture path\>".
+- dans un dossier d'images (nommé **Images** par exemple) dans le dossier du formulaire. Convient lorsque les images statiques sont utilisées uniquement dans le formulaire et/ou lorsque vous souhaitez pouvoir déplacer ou dupliquer le formulaire entier dans un ou plusieurs projets. In this case, the Pathname is "\<picture path\>" and is resolved from the root of the form folder.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-|  Name   | Data Type | Possible Values                             |
-|:-------:|:---------:| ------------------------------------------- |
-| picture |   text    | Relative or filesystem path in POSIX syntax |
+|   Nom   | Type de données | Valeurs possibles                             |
+|:-------:|:---------------:| --------------------------------------------- |
+| picture |      text       | Chemin relatif ou filesystem en syntaxe POSIX |
 
-#### Objects Supported
+#### Objets pris en charge
 
-[Picture button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Static Picture](staticPicture.md)
+[Bouton image](pictureButton_overview.md) - [Pop-up Menu image](picturePopupMenu_overview.md) - [Image statique](staticPicture.md)
 
 ---
 
-## Display
+## Affichage
 
 ### Scaled to fit
 
@@ -45,23 +45,23 @@ When the area that contains a picture with the **Replicated** format is enlarged
 
 If the field is reduced to a size smaller than that of the original picture, the picture is truncated (non-centered).
 
-### Center / Truncated (non-centered)
+### Centre / Tronquée (non centrée)
 
-`JSON grammar: "truncatedCenter" / "truncatedTopLeft"`
+`Grammaire JSON : "truncatedCenter" / "truncatedTopLeft"`
 
-The **Center** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 4D crops equally from each edge and from the top and bottom.
+Le format **Centre** permet à 4D de centrer l'image dans la zone et de rogner toute partie qui ne rentre pas dans la zone. 4D crops equally from each edge and from the top and bottom.
 
 The **Truncated (non-centered)** format causes 4D to place the upper-left corner of the picture in the upper-left corner of the area and crop any portion that does not fit within the area. 4D crops from the right and bottom.
 > When the picture format is **Truncated (non-centered)**, it is possible to add scroll bars to the input area.
 
 ![](../assets/en/FormObjects/property_pictureFormat_Truncated.png)
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name          | Data Type | Possible Values                                          |
-| ------------- | --------- | -------------------------------------------------------- |
-| pictureFormat | string    | "scaled", "tiled", "truncatedCenter", "truncatedTopLeft" |
+| Nom           | Type de données | Valeurs possibles                                        |
+| ------------- | --------------- | -------------------------------------------------------- |
+| pictureFormat | string          | "scaled", "tiled", "truncatedCenter", "truncatedTopLeft" |
 
-#### Objects Supported
+#### Objets pris en charge
 
-[Static Picture](staticPicture.md)
+[Image statique](staticPicture.md)
