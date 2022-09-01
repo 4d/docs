@@ -1,55 +1,65 @@
 ---
 id: operators
-title: Operators
+title: Operadores
 ---
 
-An operator is a symbol or a group of symbols that you use to check, modify, or combine values. You are already familiar with many operators. For example, `1 + 2` uses the addition (or plus sign) operator to add two numbers together, and the result is 3. Comparison operators, like = or >, let you compare two or more values.
+Un operador es un símbolo o un grupo de símbolos que utiliza para verificar, modificar o combinar los valores. Usted ya conoce a la mayoría de los operadores. Por ejemplo, `1 + 2` utiliza el operador de adición (o signo más) para sumar dos números, y el resultado es 3. Los operadores de comparación, como = o >, le permiten comparar dos o más valores.
 
-The 4D language supports the operators you may already know from other languages like C or JavaScript. However, the assignment operator is `:=` to prevent it from being mistakenly used when the equal to operator (`=`) is intended. [Basic operators](#basic-operators) such as arithmetic operators (+, -, *, /, %...) and comparison operators (=, >, >=...) can be used with numbers, but also with boolean, text, date, time, pointer, or picture data types. Like JavaScript, the 4D language supports the concept of [truthy and falsy values](#truthy-and-falsy), which in use in [short-cicrcuit operators](#short-circuit-operators).
-
-
-## Terminology
-
-The 4D language supports **binary** and **ternary** operators:
-
-- binary operators operate on two targets (such as `2 + 3`) and appear in between their two targets.
-- ternary operators operate on three targets. Like C, 4D has only one ternary operator, the [ternary conditional operator](#ternary-operator) (`a ? b : c`).
-
-The values that operators affect are operands. In the expression `1 + 2`, the + symbol is a binary operator and its two operands are the values 1 and 2.
+El lenguaje 4D es compatible con los operadores que ya conoce de otros lenguajes como C o JavaScript. Sin embargo, el operador de asignación es `:=` para evitar que se utilice de forma errónea cuando el operador "igual a" (`=`) está planeado. [Los operadores básicos](#basic-operators) como los operadores aritméticos (+, -, *, /, %...) y los operadores de comparación (=, >, >=.) puede utilizarse con números, pero también con datos booleanos, textos, fecha, hora, puntero o imagen. Al igual que JavaScript, el lenguaje 4D soporta el concepto de valores [truthy y falsy](#truthy-and-falsy), que se utilizan en [los operadores de corto-cicrcuit](#short-circuit-operators).
 
 
+## Terminología
 
-## Assignment operator
+El lenguaje 4D soporta los operadores **binarios** y **ternarios**:
 
-The **assignment operator** (`a:=b`) initializes or updates the value of `a` with the value of `b`:
+- los operadores binarios operan en dos objetivos (como `2 + 3`) y aparecen entre sus dos objetivos.
+- los operadores ternarios operan en tres objetivos. Like C, 4D has only one ternary operator, the [ternary conditional operator](#ternary-operator) (`a ? b : c`).
+
+Los valores que los operadores afectan son los operandos. En la expresión `1 + 2`, el símbolo + es un operador binario y sus dos operandos son los valores 1 y 2.
+
+
+
+## Asignación
+
+El **operador de asignación** (`a:=b`) inicializa o actualiza el valor de `a` con el valor de `b`:
 
 ```4d
 $myNumber:=3 //assigns 3 to MyNumber variable  
+$myDate:=!2018/01/21! $myNumber:=3 //assigns 3 to MyNumber variable  
+$myDate:=!2018/01/21! //assigns a date literal
+$myLength:=Length("Acme") //assigns the result of the command (4) to $myLength
+$col:=New collection //$col is initialized with an empty collection $myNumber:=3 //assigns 3 to MyNumber variable  
+$myDate:=!2018/01/21! //assigns a date literal
+$myLength:=Length("Acme") //assigns the result of the command (4) to $myLength
+$col:=New collection //$col is initialized with an empty collection $myNumber:=3 //assigns 3 to MyNumber variable  
+$myDate:=!2018/01/21! //assigns a date literal
+$myLength:=Length("Acme") //assigns the result of the command (4) to $myLength
+$col:=New collection //$col is initialized with an empty collection $myNumber:=3 //assigns 3 to MyNumber variable  
 $myDate:=!2018/01/21! //assigns a date literal
 $myLength:=Length("Acme") //assigns the result of the command (4) to $myLength
 $col:=New collection //$col is initialized with an empty collection
 ```
 
-> Do NOT confuse the assignment operator `:=` with the equality comparison operator `=`. A different assignment operator (and not `=`) was deliberately chosen to avoid issues and confusion which often occur with == or === in other programming languages. Such errors are often difficult to recognize by the compiler and lead to time-consuming troubleshooting.
+> NO confunda el operador de asignación `:=` con el operador de comparación de igualdad `=`. Se ha elegido deliberadamente un operador de asignación diferente (y no `=`) para evitar los problemas y la confusión que suelen producirse con == o === en otros lenguajes de programación. Estos errores son a menudo difíciles de reconocer por el compilador y conducen a una solución de problemas que requiere mucho tiempo.
 
 
-## Basic operators
+## Operadores básicos
 
-Operator results depend on the **data types** they are applied to. 4D supports different operators on scalar data types. They are described with the data types, in the following sections:
+Los resultados del operador dependen de los **tipos de datos** a los que se aplican. 4D soporta diferentes operadores en tipos de datos escalares. Se describen con los tipos de datos, en las siguientes secciones:
 
-- [**Logical operators**](dt_boolean.md#logical-operators) (on **boolean** expressions)
-- [**Date operators**](dt_date.md#date-operators)
-- [**Time operators**](dt_time.md#time-operators)
-- [**Number operators**](dt_number.md#number-operators)
-- [**Bitwise operators**](dt_number.md#bitwise-operators) (on **long integer** expressions)
-- [**Picture operators**](dt_picture.md#picture-operators)
-- [**Pointer operators**](dt_pointer.md#pointer-operators)
-- [**String operators**](dt_string.md#string-operators)
+- [**Operadores lógicos**](dt_boolean.md#logical-operators) (en las expresiones **booleanas**)
+- [**Operadores de fechas**](dt_date.md#date-operators)
+- [**Operadores de horas**](dt_time.md#time-operators)
+- [**Operadores numéricos**](dt_number.md#number-operators)
+- [**Operadores binarios**](dt_number.md#bitwise-operators) (en las expresiones **de enteros largos**)
+- [**Operadores de imágenes**](dt_picture.md#picture-operators)
+- [**Operadores en punteros**](dt_pointer.md#pointer-operators)
+- [**Operadores de cadenas**](dt_string.md#string-operators)
 
 
-## Compound assignment operators
+## Operadores de asignación compuestos
 
-4D provides **compound assignment operators** that combine assignment with another operation. One example is the addition assignment operator (`+=`):
+4D ofrece **operadores de asignación compuestos** que combinan la asignación con otra operación. Un ejemplo es el operador de asignación adicional (`+=`):
 
 ```4d
 $a:=1 
@@ -57,39 +67,39 @@ $a+=2 // $a=3
 ```
 
 
-The following compound assignment operators are supported:
+Se admiten los siguientes operadores de asignación compuestos:
 
-| Operator       | Syntax             | Assigns | Example                                                             |
-| -------------- | ------------------ | ------- | ------------------------------------------------------------------- |
-| Addition       | Text += Text       | Text    | `$t+=" World"  //$t:=$t+" World"`                                   |
-|                | Number += Number   | Number  | `$n+=5 //$n:=$n+5`                                                  |
-|                | Date += Number     | Date    | `$d+=5 //$d:=$d+5`                                                  |
-|                | Time += Time       | Time    | `$t1+=$t2 //$t1:=$t1+$t2`                                           |
-|                | Time += Number     | Number  | `$t1+=5 //$t1:=$t1+5`                                               |
-|                | Picture += Picture | Picture | `$p1+=$p2 //$p1:=$p1+$p2 (add $p2 to the right of $p1)`             |
-|                | Picture += Number  | Picture | `$p1+=5 //$p1:=$p1+5 (move $p1 horizontally 5 pixels to the right)` |
-| Subtraction    | Number -= Number   | Number  | `$n-=5 //$n:=$n-5`                                                  |
-|                | Date -= Number     | Date    | `$d-=5 //$d:=$d-5`                                                  |
-|                | Time -= Time       | Time    | `$t1-=$t2 //$t1:=$t1-$t2`                                           |
-|                | Time -= Number     | Number  | `$t1-=5 //$t1:=$t1-5`                                               |
-|                | Picture -= Number  | Picture | `$p1-=5 //$p1:=$p1-5 (move $p1 horizontally 5 pixels to the left)`  |
-| Division       | Number /= Number   | Number  | `$n/=5 //$n:=$n/5`                                                  |
-|                | Time /= Time       | Time    | `$t1/=$t2 //$t1:=$t1/$t2`                                           |
-|                | Time /= Number     | Number  | `$t1/=5 //$t1:=$t1/5`                                               |
-|                | Picture /= Picture | Picture | `$p1/=$p2 //$p1:=$p1/$p2 (add $p2 to the bottom of $p1)`            |
-|                | Picture /= Number  | Picture | `$p1/=5 //$p1:=$p1/5 (move $p1 vertically 5 pixels)`                |
-| Multiplication | Text *= Number     | Text    | `$t*="abc"  //$t:=$t*"abc"`                                         |
-|                | Number *= Number   | Number  | `$n*=5 //$n:=$n*5`                                                  |
-|                | Time *= Time       | Time    | `$t1*=$t2 //$t1:=$t1*$t2`                                           |
-|                | Time *= Number     | Number  | `$t1*=5 //$t1:=$t1*5`                                               |
-|                | Picture *= Number  | Picture | `$p1*=5 //$p1:=$p1*5 (resize $p1 by 5)`                             |
+| Operador       | Sintaxis           | Asigna  | Ejemplo                                                                        |
+| -------------- | ------------------ | ------- | ------------------------------------------------------------------------------ |
+| Adición        | Text += Text       | Text    | `$t+=" World"  //$t:=$t+" World"`                                              |
+|                | Number += Number   | Number  | `$n+=5 //$n:=$n+5`                                                             |
+|                | Date += Number     | Fecha   | `$d+=5 //$d:=$d+5`                                                             |
+|                | Time += Time       | Hora    | `$t1+=$t2 //$t1:=$t1+$t2`                                                      |
+|                | Time += Number     | Number  | `$t1+=5 //$t1:=$t1+5`                                                          |
+|                | Picture += Picture | Picture | `$p1+=$p2 //$p1:=$p1+$p2 (add $p2 to the right of $p1)`                        |
+|                | Picture += Number  | Picture | `$p1+=5 //$p1:=$p1+5 (move $p1 horizontally 5 pixels to the right)`            |
+| Resta          | Number -= Number   | Number  | `$n-=5 //$n:=$n-5`                                                             |
+|                | Date -= Number     | Fecha   | `$d-=5 //$d:=$d-5`                                                             |
+|                | Time -= Time       | Hora    | `$t1-=$t2 //$t1:=$t1-$t2`                                                      |
+|                | Time -= Number     | Number  | `$t1-=5 //$t1:=$t1-5`                                                          |
+|                | Picture -= Number  | Picture | `$p1-=5 //$p1:=$p1-5 (mover horizontalemente $p1 de 5 píxeles a la izquierda)` |
+| División       | Number /= Number   | Number  | `$n/=5 //$n:=$n/5`                                                             |
+|                | Time /= Time       | Hora    | `$t1/=$t2 //$t1:=$t1/$t2`                                                      |
+|                | Time /= Number     | Number  | `$t1/=5 //$t1:=$t1/5`                                                          |
+|                | Picture /= Picture | Picture | `$p1/=$p2 //$p1:=$p1/$p2 (añadir $p2 debajo de $p1)`                           |
+|                | Picture /= Number  | Picture | `$p1/=5 //$p1:=$p1/5 (desplazar verticalmente $p1 de 5 píxeles)`               |
+| Multiplicación | Text *= Number     | Text    | `$t*="abc"  //$t:=$t*"abc"`                                                    |
+|                | Number *= Number   | Number  | `$n*=5 //$n:=$n*5`                                                             |
+|                | Time *= Time       | Hora    | `$t1*=$t2 //$t1:=$t1*$t2`                                                      |
+|                | Time *= Number     | Number  | `$t1*=5 //$t1:=$t1*5`                                                          |
+|                | Picture *= Number  | Picture | `$p1*=5 //$p1:=$p1*5 (redimensionar $p1 de 5)`                                 |
 
-These operators apply on any [assignable expressions](quick-tour.md#assignable-vs-non-assignable-expressions) (except pictures as object properties or collection elements).
+Estos operadores se aplican a todas las [expresiones asignables](quick-tour.md#assignable-vs-non-assignable-expressions) (excepto de las imágenes como propiedades de objeto o elementos de colección).
 
-The operation "source `operator` value" is not strictly equivalent to "source := source `operator` value" because the expression designating the source (variable, field, object property, collection element) is only evaluated once. For example, in such expression as `getPointer()->+=1` the `getPointer` method is called only once.
+La operación "source `operator` value" no es estrictamente equivalente a "source := source `operator` value" porque la expresión que designa la fuente (variable, campo, propiedad del objeto, elemento de colección) sólo se evalúa una vez. Por ejemplo, en una expresión tal como `getPointer()->+=1` el método `getPointer` es llamado sólo una vez.
 
-> [Character indexing in text](dt_string.md#character-reference-symbols) and [byte indexing in blob](dt_blob.md#accessing-a-scalar-blobs-bytes) do not support these operators.
-#### Examples
+> [La indexación de caracteres en el texto](dt_string.md#character-reference-symbols) y [la indexación de bytes en el blob](dt_blob.md#accessing-a-scalar-blobs-bytes) no soporta a estos operadores.
+#### Ejemplos
 
 ```4d
 // Addition
@@ -120,6 +130,26 @@ $x2*=5 // $x2=10
 
 $t2:="Hello" 
 $t2*=2 // $t2="HelloHello"
+$d+=10 //$d=!2000-11-20!
+
+// Resta
+$x1:=10
+$x1-=5 //$x1=5
+
+$d1:=!2000-11-10!
+$d1-=10 // $d1=!2000-10-31!
+
+// División
+$x3:=10
+$x3/=2 // $x3=5
+
+
+// Multiplicación
+$x2:=10
+$x2*=5 // $x2=10
+
+$t2:="Hello" 
+$t2*=2 // $t2="HelloHello"
 
 ```
 
@@ -134,22 +164,22 @@ The difference with the single [**&** and **|** boolean operators](dt_boolean.md
 
 ### Short-circuit AND operator (&&)
 
-The rule is as follows:
+La regla es la siguiente:
 
-Given `Expr1 && Expr2`:
+Dado `Expr1 && Expr2`:
 
 The short-circuit AND operator evaluates operands from left to right, returning immediately with the value of the first falsy operand it encounters; if all values are [truthy](#truthy-and-falsy), the value of the last operand is returned.
 
 The following table summarizes the different cases for the **&&** operator:
 
-| Expr1  | Expr2  | Value returned |
+| Expr1  | Expr2  | Valor devuelto |
 | ------ | ------ | -------------- |
 | truthy | truthy | Expr2          |
 | truthy | falsy  | Expr2          |
 | falsy  | truthy | Expr1          |
 | falsy  | falsy  | Expr1          |
 
-#### Example 1
+#### Ejemplo 1
 
 ```4d
 var $v : Variant
@@ -158,16 +188,17 @@ $v:= "Hello" && "World" //"World"
 $v:=False && 0 // False
 $v:=0 && False // False
 $v:=5 && !00-00-00! // 00/00/00
+$v := 5 && 10 && "hello" //"hello" // 00/00/00
 $v := 5 && 10 && "hello" //"hello"
 ```
 
-#### Example 2
+#### Ejemplo 2
 
 Say you have an online store, and some products have a tax rate applied, and others don't.
 
 To calculate the tax, you multiply the price by the tax rate, which may not have been specified.
 
-So you can write this:
+Así que puede escribir esto:
 
 ```4d
 var $tax : Variant
@@ -177,7 +208,7 @@ $tax:=$item.taxRate && ($item.price*$item.taxRate)
 
 `$tax` will be NULL if taxRate is NULL (or undefined), otherwise it will store the result of the calculation.
 
-#### Example 3
+#### Ejemplo 3
 
 Short-circuit operators are useful in tests such as:
 
@@ -191,9 +222,9 @@ If $myObject is Null, the second argument is not executed, thus no error is thro
 
 ### Short-circuit OR operator (||)
 
-The || operator returns the value of one of the specified operands. The expression is evaluated left to right and tested for possible "short-circuit" evaluation using the following rule:
+El operador || devuelve el valor de uno de los operandos especificados. The expression is evaluated left to right and tested for possible "short-circuit" evaluation using the following rule:
 
-Given `Expr1 || Expr2`:
+Dado `Expr1 || Expr2`:
 
 If Expr1 is [truthy](#truthy-and-falsy), Expr2 is not evaluated and the calculation returns Expr1.
 
@@ -201,16 +232,16 @@ If Expr1 is [falsy](#truthy-and-falsy), the calculation returns Expr2.
 
 The following table summarizes the different cases and the value returned for the **||** operator:
 
-| Expr1  | Expr2  | Value returned |
+| Expr1  | Expr2  | Valor devuelto |
 | ------ | ------ | -------------- |
 | truthy | truthy | Expr1          |
 | truthy | falsy  | Expr1          |
 | falsy  | truthy | Expr2          |
 | falsy  | falsy  | Expr2          |
 
-#### Example 1
+#### Ejemplo 1
 
-Say you have a table called Employee. Some employees have entered a phone number, and others haven't. This means that `$emp.phone` could be NULL, and you cannot assign NULL to a Text variable. But you can write the following:
+Supongamos que tiene una tabla llamada Employee. Some employees have entered a phone number, and others haven't. This means that `$emp.phone` could be NULL, and you cannot assign NULL to a Text variable. Pero puede escribir lo siguiente:
 
 ```4d
 var $phone : Text
@@ -220,7 +251,7 @@ $phone:=$emp.phone || "n/a"
 
 In which case `$phone` will store either a phone number or the "n/a" string.
 
-#### Example 2
+#### Ejemplo 2
 
 Given a table called Person with a *name* field, as well as a *maiden name* field for married women.
 
@@ -232,34 +263,34 @@ var $name: Text
 $name:=$person.maidenName || $person.name
 ```
 
-### Precedence
+### Prioridad
 
 The `&&` and `||` operators have the same precedence as the logical operators `&` and `|`, and are evaluated left to right.
 
 This means that `a || b && c` is evaluated as `(a || b) && c`.
 
 
-## Ternary operator
+## Operador ternario
 
 The ternary conditional operator allows you to write one-line conditional expressions. For example, it can replace a full sequence of [If…Else](./cf_branching.md#ifelseend-if) statements.
 
-It takes three operands in the following order:
+Se necesitan tres operandos en el siguiente orden:
 
-* a condition followed by a question mark (?)
+* una condición seguida de un signo de interrogación (?)
 * an expression to execute if the condition is [truthy](#truthy-and-falsy), followed by a colon (:)
 * an expression to execute if the condition is [falsy](#truthy-and-falsy)
 
-### Syntax
+### Sintaxis
 
-The syntax is as follows:
+La sintaxis es la siguiente:
 
-`condition ? exprIfTruthy : exprIfFalsy`
+`condition ? condition ? exprIfTruthy : exprIfFalsy condition ? exprIfTruthy : exprIfFalsy condition ? exprIfTruthy : exprIfFalsy`
 
 > Since the [token syntax](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html) uses colons, we recommend inserting a space after the colon `:` or enclosing tokens using parentheses to avoid any conflicts.
 
-### Examples
+### Ejemplos
 
-#### A simple example
+#### Un ejemplo sencillo
 
 ```4d
 var $age : Integer
@@ -268,10 +299,12 @@ var $beverage : Text
 $age:=26
 $beverage:=($age>=21) ? "Beer" : "Juice"
 
+ALERT($beverage) // "Beer" "Beer" : "Juice"
+
 ALERT($beverage) // "Beer"
 ```
 
-#### Handling data from a table
+#### Gestión de los datos de una tabla
 
 This example stores a person's full name in a variable, and handles the case when no first name or last name has been specified:
 
@@ -279,32 +312,32 @@ This example stores a person's full name in a variable, and handles the case whe
 var $fullname : Text
 
 // If one of the names is missing, store the one that exists, otherwise store an empty string
-$fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$person.lastname) : ($person.lastname || $person.firstname) || ""
+$fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$person.lastname) : ($person.lastname || $person.firstname) || "" ($person.firstname+" "+$person.lastname) : ($person.lastname || $person.firstname) || ""
 ```
 
-## Truthy and falsy
+## Truthy y falsy
 
-As well as a type, each value also has an inherent Boolean value, generally known as either **truthy** or **falsy**.
+Además de un tipo, cada valor también tiene un valor booleano inherente, conocido generalmente como **truthy** o **falsy<**.
 
 > **truthy** and **falsy** values are only evaluated by [short-circuit](#short-circuit-operators) and [ternary](#ternary-operator) operators.
 
-The following values are **falsy**:
+Los siguientes valores son **falsy**:
 
 * false
 * Null
-* undefined
+* indefinido
 * Null object
 * Null collection
 * Null pointer
 * Null picture
 * Null date !00-00-00!
-* "" - Empty strings
-* [] - Empty collections
-* {} - Empty objects
+* "" - Cadenas vacías
+* [] - Colecciones vacías
+* {} - Objetos vacios
 
 All other values are considered **truthy**, including:
 
-* 0 - numeric zero (Integer or otherwise)
+* 0 - cero numérico (Entero u otro)
 
 In 4D, **truthy** and **falsy** evaluation reflects the **usability** of a value, which means that a truthy value exists and can be processed by the code without generating errors or unexpected results. The rationale behind this is to provide a convenient way to handle *undefined* and *null* values in objects and collections, so that a reduced number of [If…Else](./cf_branching.md#ifelseend-if) statements are necessary to avoid runtime errors.
 
