@@ -3,12 +3,12 @@ id: onCloseDetail
 title: On Close Detail
 ---
 
-| Code | Can be called by                                   | Definition                                                     |
+| Code | Can be called by                                   | Definição                                                      |
 | ---- | -------------------------------------------------- | -------------------------------------------------------------- |
 | 26   | Form - [List Box](FormObjects/listbox_overview.md) | You left the detail form and are going back to the output form |
 
 
-## Description
+## Descrção
 
 The `On Close Detail` event can be used in the following contexts:
 
