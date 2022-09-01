@@ -3,38 +3,38 @@ id: onDisplayDetail
 title: On Display Detail
 ---
 
-| Code | Can be called by                                   | Definition                                                                                        |
-| ---- | -------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| 8    | Form - [List Box](FormObjects/listbox_overview.md) | A record is about to be displayed in a list form or a row is about to be displayed in a list box. |
+| コード | 呼び出し元                                             | 定義                                        |
+| --- | ------------------------------------------------- | ----------------------------------------- |
+| 8   | フォーム - [リストボックス](FormObjects/listbox_overview.md) | レコードがリストフォーム中に、あるいは行がリストボックス中に表示されようとしている |
 
 
-## Description
+## 詳細
 
-The `On Display Detail` event can be used in the following contexts:
+`On Display Detail` イベントは次のコンテキストで利用できます:
 
-### Output form
+### 出力フォーム
 
-A record is about to be displayed in a list form displayed via `DISPLAY SELECTION` and `MODIFY SELECTION`.
+`DISPLAY SELECTION` や `MODIFY SELECTION` によって、リストフォームでレコードを表示されようとしています。
 
-> This event cannot be selected for project forms, it is only available with **table forms**.
+> このイベントは、プロジェクトフォームでは選択できず、**テーブルフォーム** でのみ利用できます。
 
-In this context, the following sequence of calls to methods and form events is triggered:
+このコンテキストにおいて、メソッドやフォームイベントが呼び出される順序は以下のとおりです:
 
-- For each record:
-    - For each object in the detail area:
-        - Object method with `On Display Detail` event
-    - Form method with `On Display Detail` event
+- レコードごとに:
+    - 詳細エリアのオブジェクトごとに:
+        - オブジェクトメソッドの `On Display Detail` イベント
+    - フォームメソッドの `On Display Detail` イベント
 
-> The header area is handled using the [`On Header`](onHeader.md) event.
+> ヘッダーエリアは、[`On Header`](onHeader.md) イベントで処理されます。
 
-Calling a 4D command that displays a dialog box from the `On Display Detail` event is not allowed and will cause a syntax error to occur. More particularly, the commands concerned are: `ALERT`, `DIALOG`, `CONFIRM`, `Request`, `ADD RECORD`, `MODIFY RECORD`, `DISPLAY SELECTION`, and `MODIFY SELECTION`.
+`On Display Detail` イベントから、ダイアログボックスを表示する 4Dコマンドを呼び出すことはできません。 以下のコマンドが該当します: `ALERT`, `DIALOG`, `CONFIRM`, `Request`, `ADD RECORD`, `MODIFY RECORD`, `DISPLAY SELECTION`, `MODIFY SELECTION`。
 
 
-### Selection list box
+### セレクションリストボックス
 
-This event is generated when a row of a [**selection type**](FormObjects/listbox_overview.md#selection-list-boxes) list box is displayed.
+このイベントは、[**セレクション型**](FormObjects/listbox_overview.md#セレクションリストボックス) のリストボックスの行が表示されたときに発生します。
 
 
 ### Displayed line number
 
-The `Displayed line number` 4D command works with the `On Display Detail` form event. It returns the number of the row being processed while a list of records or list box rows is displayed on screen.
+`Displayed line number` 4Dコマンドは、`On Display Detail` フォームイベントと連動します。 このコマンドは、レコードのリストまたはリストボックスの行が画面に表示されるときに処理されている行の番号を返します。
