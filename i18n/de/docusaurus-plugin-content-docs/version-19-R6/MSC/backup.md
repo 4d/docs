@@ -1,19 +1,19 @@
 ---
 id: backup
-title: Backup Page
-sidebar_label: Backup Page
+title: Seite Backup
+sidebar_label: Seite Backup
 ---
 
-You can use the Backup page to view some backup parameters of the database and to launch a manual backup:
+Die Seite Backup des MSC zeigt die Backup-Einstellungen für die Datenbank. Hier können Sie auch ein manuelles Backup starten:
 
 ![](../assets/en/MSC/msc_Backup.png)
 
-This page consists of the following three areas:
+Diese Seite ist in drei Bereiche unterteilt:
 
-- **Backup File Destination**: displays information about the location of the application backup file. It also indicates the free/used space on the backup disk.
-- **Last Backup Information**: provides the date and time of the last backup (automatic or manual) carried out on the application.
-- **Contents of the backup file**: lists the files and folders included in the backup file.
+- **Backup Zielpfad**: Zeigt Informationen zum Speicherort der Backup-Datei der Anwendung an, sowie den freien bzw. verwendeten Platz auf der Backup-Festplatte.
+- **Letztes Backup**: Zeigt Datum und Uhrzeit des zuletzt für die Anwendung ausgeführten Backup (automatisch oder manuell).
+- **Inhalt der Backup-Datei**: Zeigt die in der Backup-Datei enthaltenen Dateien und Ordner an.
 
-The **Backup** button is used to launch a manual backup.
+Mit der Schaltfläche **Backup** starten Sie ein manuelles Backup.
 
-This page cannot be used to modify the backup parameters. To do this, you must click on the **Database properties...** button.
+Auf dieser Seite können Sie keine Backup-Parameter verändern. Dazu müssen Sie am unteren Rand auf die Schaltfläche **Datenbank-Eigenschaften** klicken.
