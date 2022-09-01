@@ -3,15 +3,15 @@ id: onCloseDetail
 title: On Close Detail
 ---
 
-| Code | Can be called by                                   | Definition                                                     |
-| ---- | -------------------------------------------------- | -------------------------------------------------------------- |
-| 26   | Form - [List Box](FormObjects/listbox_overview.md) | You left the detail form and are going back to the output form |
+| コード | 呼び出し元                                             | 定義                         |
+| --- | ------------------------------------------------- | -------------------------- |
+| 26  | フォーム - [リストボックス](FormObjects/listbox_overview.md) | 入力フォームから離れ、出力フォームに戻ろうとしている |
 
 
-## Description
+## 詳細
 
-The `On Close Detail` event can be used in the following contexts:
+`On Close Detail` イベントは次のコンテキストで利用できます:
 
-- **Output forms**: the detail form is closed and the user goes back to the list form. This event cannot be selected for project forms, it is only available with **table forms**.
-- List box of the [**selection type**](FormObjects/listbox_overview.md#selection-list-boxes): This event is generated when a record displayed in the [detail form](FormObjects/properties_ListBox.md#detail-form-name) associated with a selection type list box is about to be closed (regardless of whether or not the record was modified).
+- **出力フォーム**: このイベントは、詳細フォームが閉じられ、ユーザーがリストフォームに戻るときに生成されます。 このイベントは、プロジェクトフォームでは選択できず、**テーブルフォーム** でのみ利用できます。
+- [**セレクション型**](FormObjects/listbox_overview.md#セレクションリストボックス) のリストボックス: このイベントはセレクション型リストボックスに関連付けられた [詳細フォーム](FormObjects/properties_ListBox.md#詳細フォーム名) に表示されたレコードが閉じられるときに生成されます (レコードが変更されたかどうかは関係しません)。
 
