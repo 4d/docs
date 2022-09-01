@@ -1,6 +1,6 @@
 ---
 id: httpRequests
-title: Processing HTTP requests
+title: Traitement des requêtes HTTP
 ---
 
 The 4D web server provides several features to handle HTTP requests:
@@ -23,18 +23,18 @@ For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*"
 
 > The request should have previously been accepted by the [`On Web Authentication`](authentication.md#on-web-authentication) database method (if it exists) and the web server must be launched.
 
-### Syntax
+### Syntaxe
 
 **On Web Connection**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text )
 
-| Parameters | Type |    | Description                                  |
+| Paramètres | Type |    | Description                                  |
 | ---------- | ---- |:--:| -------------------------------------------- |
-| $1         | Text | <- | URL                                          |
+| $1         | Text | <- | Variable URL                                 |
 | $2         | Text | <- | HTTP headers + HTTP body (up to 32 kb limit) |
 | $3         | Text | <- | IP address of the web client (browser)       |
-| $4         | Text | <- | IP address of the server                     |
-| $5         | Text | <- | User name                                    |
-| $6         | Text | <- | Password                                     |
+| $4         | Text | <- | Adresse IP du serveur                        |
+| $5         | Text | <- | Nom d'utilisateur                            |
+| $6         | Text | <- | Mot de passe                                 |
 
 You must declare these parameters as shown below:
 
@@ -72,7 +72,7 @@ Let’s use an intranet connection as an example. Suppose that the IP address of
 | <http://123.4.567.89/Customers/Add>  | /Customers/Add           |
 | 123.4.567.89/Do_This/If_OK/Do_That | /Do_This/If_OK/Do_That |
 
-Note that you are free to use this parameter at your convenience. 4D simply ignores the value passed beyond the host part of the URL. For example, you can establish a convention where the value "*/Customers/Add*" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
+Note that you are free to use this parameter at your convenience. 4D simply ignores the value passed beyond the host part of the URL. For example, you can establish a convention where the value "*/Customers/Add*" means “go directly to add a new record in the `[Customers]` table.” By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. By supplying the web users with a list of possible values and/or default bookmarks, you can provide shortcuts to different parts of your application. This way, web users can quickly access resources of your website without going through the entire navigation path each time they make a new connection.
 
 ### $2 - Header and Body of the HTTP request
 
@@ -88,7 +88,7 @@ The $3 parameter receives the IP address of the browser’s machine. This inform
 
 ### $4 - Server IP address
 
-The $4 parameter receives the IP address requested by the 4D Web Server. 4D allows for multi-homing, which allows you to use machines with more than one IP address. For more information, please refer to the [Configuration page](webServerConfig.html#ip-address-to-listen).
+The $4 parameter receives the IP address requested by the 4D Web Server. 4D allows for multi-homing, which allows you to use machines with more than one IP address. Pour plus d'informations, veuillez consulter la [Page Configuration](webServerConfig.html#ip-address-to-listen).
 
 ### $5 and $6 - User Name and Password
 
@@ -99,7 +99,7 @@ The $5 and $6 parameters receive the user name and password entered by the user 
 
 ***/4DACTION/***MethodName***<br/> **/4DACTION/******MethodName/Param*
 
-| Parameters | Type |    | Description                                  |
+| Paramètres | Type |    | Description                                  |
 | ---------- | ---- |:--:| -------------------------------------------- |
 | MethodName | Text | -> | Name of the 4D project method to be executed |
 | Param      | Text | -> | Text parameter to pass to the project method |
@@ -121,7 +121,7 @@ The `MyMethod` project method should generally return a "reply" (sending of an H
 
 > A method called by `/4DACTION` must not call interface elements (`DIALOG`, `ALERT`, etc.).
 
-#### Example
+#### Exemple
 
 This example describes the association of the `/4DACTION` URL with an HTML picture object in order to dynamically display a picture in the page. You insert the following instructions in a static HTML page:
 
@@ -164,7 +164,7 @@ Example to define the action of a form:
 <FORM ACTION="/4DACTION/MethodName" METHOD=POST>
 ```
 
-#### Example
+#### Exemple
 
 In a Web application, we would like for the browsers to be able to search among the records by using a static HTML page. This page is called “search.htm”. The application contains other static pages that allow you to, for example, display the search result (“results.htm”). The POST type has been associated to the page, as well as the `/4DACTION/SEARCH` action.
 
@@ -240,6 +240,30 @@ if(formObj.vtUserName.value!=""){
 return true
 } else {
 alert("Enter your name, then try again.")
+return false
+}
+}
+//--></script>
+</head>
+<body>
+<form action="/4DACTION/WWW_STD_FORM_POST" method="post"
+ name="frmWelcome"
+ onsubmit="return GetBrowserInformation(frmWelcome)">
+  <h1>Welcome to Spiders United</h1>
+  <p><b>Please enter your name:</b>
+  <input name="vtUserName" value="" size="30" type="text"></p>
+  <p> 
+<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit"> 
+<input name="vsbRegister" value="Register" type="submit">
+<input name="vsbInformation" value="Information" type="submit"></p>
+<p> 
+<input name="vtNav_appName" value="" type="hidden"> 
+<input name="vtNav_appVersion" value="" type="hidden"> 
+<input name="vtNav_appCodeName" value="" type="hidden">
+<input name="vtNav_userAgent" value="" type="hidden"></p>
+</form>
+</body>
+</html>
 return false
 }
 }
