@@ -4,18 +4,18 @@ title: '$timeout'
 ---
 
 
-Defines the number of seconds to save an entity set in 4D Server's cache (*e.g.*, `$timeout=1800`)
+Define el número de segundos para guardar un conjunto de entidades en la caché de 4D Server (*por ejemplo*, `$timeout=1800`)
 
-## Description
+## Descripción
 
-To define a timeout for an entity set that you create using [`$method=entityset`]($method.md#methodentityset), pass the number of seconds to `$timeout`. For example, if you want to set the timeout to 20 minutes, pass 1200. By default, the timeout is two (2) hours.
+Para definir un tiempo de espera para un conjunto de entidades creado con [`$method=entityset`]($method.md#methodentityset), pase el número de segundos a `$timeout`. Por ejemplo, si quiere fijar el tiempo de espera en 20 minutos, pase 1200. Por defecto, el tiempo de espera es de dos (2) horas.
 
-Once the timeout has been defined, each time an entity set is called upon (by using `$method=entityset`), the timeout is recalculated based on the current time and the timeout.
+Una vez que se ha definido el tiempo de espera, cada vez que se llama a un conjunto de entidades (mediante el uso de `$method=entityset`), el tiempo de espera se recalcula basándose en la hora actual y el tiempo de espera.
 
-If an entity set is removed and then recreated using `$method=entityset` along with [`$savedfilter`]($savedfilter.md), the new default timeout is 10 minutes regardless of the timeout you defined when calling `$timeout`.
+Si se elimina un conjunto de entidades y se vuelve a crear con `$method=entityset` junto con [`$savedfilter`]($savedfilter.md), el nuevo tiempo de espera por defecto es de 10 minutos, independientemente del tiempo de espera que haya definido al llamar a `$timeout`.
 
-## Example
+## Ejemplo
 
-In our entity set that we're creating, we define the timeout to 20 minutes:
+En el conjunto de entidades que estamos creando, definimos el tiempo de espera a 20 minutos:
 
 `GET  /rest/Employee/?$filter="salary!=0"&$method=entityset&$timeout=1200`
