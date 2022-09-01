@@ -3,13 +3,13 @@ id: onTimer
 title: On Timer
 ---
 
-| Code | Can be called by | Definition                                                        |
-| ---- | ---------------- | ----------------------------------------------------------------- |
-| 27   | Form             | The number of ticks defined by the `SET TIMER` command has passed |
+| コード | 呼び出し元 | 定義                                    |
+| --- | ----- | ------------------------------------- |
+| 27  | フォーム  | `SET TIMER` コマンドで設定した時間 (ティック数) が経過した |
 
 
-## Description
+## 詳細
 
-This event is generated only if the form method contains a previous call to the `SET TIMER` command.
+このイベントは、事前に `SET TIMER` コマンドが使用された場合にのみ生成されます。
 
-When the `On Timer` form event property is selected, only the form method will receive the event, no object method will be called.
+`On Timer` フォームイベントプロパティが選択されていると、フォームメソッドのみがイベントを受け取ります。 オブジェクトメソッドは呼び出されません。
