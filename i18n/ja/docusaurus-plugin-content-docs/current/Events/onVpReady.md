@@ -3,15 +3,15 @@ id: onVpReady
 title: On VP Ready
 ---
 
-| Code | Can be called by                                        | Definition                                      |
-| ---- | ------------------------------------------------------- | ----------------------------------------------- |
-| 9    | [4D View Pro Area](FormObjects/viewProArea_overview.md) | The loading of the 4D View Pro area is complete |
+| コード | 呼び出し元                                                  | 定義                       |
+| --- | ------------------------------------------------------ | ------------------------ |
+| 9   | [4D View Pro エリア](FormObjects/viewProArea_overview.md) | 4D View Pro エリアのロードが完了した |
 
 
-## Description
+## 詳細
 
-This event is generated when the 4D View Pro area loading is complete.
+このイベントは、4D View Pro エリアのロードが終わった時に生成されます。
 
-You need to use this event to write initialization code for the area. Any 4D View Pro area initialization code, for loading or reading values from or in the area, must be located in the `On VP Ready` form event of the area. This form event is triggered once the area loading is complete. Testing this event makes you sure that the code will be executed in a valid context. An error is returned if a 4D View Pro command is called before the `On VP Ready` form event is generated.
+このイベントは、エリアの初期化コードを書く際に必要になります。 4D View Pro エリアを初期化するためのコード (値の読み込みなど) は当該エリアの `On VP Ready` フォームイベント内に書く必要があります。 このフォームイベントは、エリアの読み込みが完了したときに一回生成されます。 同イベントの利用によって、有効なコンテキスト内でコードが実行されることを確実にできます。 `On VP Ready` フォームイベントが生成される前に 4D View Pro コマンドを呼び出してしまうと、エラーが返されます。
 
-> 4D View Pro areas are loaded asynchronously in 4D forms. It means that the standard [On load](onLoad.md) form event cannot be used for 4D View Pro initialization code, since it could be executed before the loading of the area is complete. `On VP Ready` is always generated after [On load](onLoad.md).
+> 4D View Pro エリアは非同期的に 4Dフォーム上に読み込まれます。 したがって、標準の [On load](onLoad.md) フォームイベントは 4D View Pro エリアの読み込み完了を保証せず、4D View Pro の初期化コードに利用することはできません。 `On VP Ready` は常に [On load](onLoad.md) の後に生成されます。
