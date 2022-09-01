@@ -1,21 +1,21 @@
 ---
 id: inputOverview
-title: Input
+title: Zone de saisie
 ---
 
-## Overview
+## Vue d’ensemble
 
-Inputs allow you to add enterable or non-enterable expressions such as database [fields](Concepts/identifiers.md#fields) and [variables](Concepts/variables.md) to your forms. Inputs can handle character-based data (text, dates, numbers...) or pictures:
+Les zones de saisie vous permettent d'ajouter des expressions saisissables ou non saisissables telles que des [champs](Concepts/identifiers.md#fields) et des [variables](Concepts/variables.md) de base de données à vos formulaires. Les zone de saisie peuvent gérer des données basées sur des caractères (texte, dates, numériques, etc.) ou des images :
 
 ![](../assets/en/FormObjects/input.png)
 
-Inputs can contain [assignable or non-assignable expressions](Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).
+Les zones de saisie peuvent contenir [des expressions assignables ou non assignables](Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).
 
-In addition, inputs can be [enterable or non-enterable](properties_Entry.md#enterable). An enterable input accepts data. You can set data entry controls for the object. A non-enterable input can only display values but cannot be edited by the user.
+De plus, les zones de saisie peuvent être [saisissables ou non saisissables](properties_Entry.md#enterable). Une zone de saisie saisissable accepte des données. Vous pouvez définir des contrôles de saisie de données pour l'objet. Une zone de saisie non saisissable peut uniquement afficher des valeurs mais ne peut pas être modifiée par l'utilisateur.
 
-You can manage the data with object or form [methods](Concepts/methods.md).
+Vous pouvez gérer les données avec des [méthodes](Concepts/methods.md) objet ou formulaire.
 
-### JSON Example
+### Exemple JSON
 
 ```4d
  "myText": {
@@ -28,16 +28,16 @@ You can manage the data with object or form [methods](Concepts/methods.md).
   }
 ```
 
-## Supported Properties
+## Propriétés prises en charge
 
-[Alpha Format](properties_Display.md#alpha-format) - [Auto Spellcheck](properties_Entry.md#auto-spellcheck) - [Bold](properties_Text.md#bold) - [Boolean Format](properties_Display.md#boolean-format) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Context Menu](properties_Entry.md#context-menu) - [Date Format](properties_Display.md#date-format) - [Default value](properties_RangeOfValues.md#default-value) - [Draggable](properties_Action.md#draggable) - [Droppable](properties_Action.md#droppable) - [Enterable](properties_Entry.md#enterable) - [Entry Filter](properties_Entry.md#entry-filter) - [Excluded List](properties_RangeOfValues.md#excluded-list) - [Expression type](properties_Object.md#expression-type) - [Fill Color](properties_BackgroundAndBorder.md#fill-color) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Width](properties_BackgroundAndBorder.md#line-width) - [Multiline](properties_Entry.md#multiline) - [Multi-style](properties_Text.md#multi-style) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Orientation](properties_Text.md#orientation) - [Picture Format](properties_Display.md#picture-format) - [Placeholder](properties_Entry.md#placeholder) - [Print Frame](properties_Print.md#print-frame) - [Required List](properties_RangeOfValues.md#required-list) - [Right](properties_CoordinatesAndSizing.md#right) - [Save as](properties_DataSource.md#save-as) - [Selection always visible](properties_Entry.md#selection-always-visible) - [Store with default style tags](properties_Text.md#store-with-default-style-tags) - [Text when False/Text when True](properties_Display.md#text-when-false-text-when-true) - [Time Format](properties_Display.md#time-format) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
+[Format alpha ](properties_Display.md#alpha-format) - [Correction automatique](properties_Entry.md#auto-spellcheck) - [Gras](properties_Text.md#bold) - [Format booléen](properties_Display.md#boolean-format) - [Style de la bordure](properties_BackgroundAndBorder.md#border-line-style) - [Bas](properties_CoordinatesAndSizing.md#bottom) - [Enumération](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Menu contextuel](properties_Entry.md#context-menu) - [Format date](properties_Display.md#date-format) - [Valeur par défaut](properties_RangeOfValues.md#default-value) - [Glissable](properties_Action.md#draggable) - [Déposable](properties_Action.md#droppable) - [Saisissable](properties_Entry.md#enterable) - [Filtre de saisie](properties_Entry.md#entry-filter) - [Exclusion](properties_RangeOfValues.md#excluded-list) - [Type d'expression](properties_Object.md#expression-type) - [Couleur de remplissage](properties_BackgroundAndBorder.md#fill-color) - [Police](properties_Text.md#font) - [Couleur de police](properties_Text.md#font-color) - [Taille](properties_Text.md#font-size) - [Hauteur](properties_CoordinatesAndSizing.md#height) - [Cacher rectangle de focus](properties_Appearance.md#hide-focus-rectangle) - [Alignement horizontal](properties_Text.md#horizontal-alignment) - [Barre de défilement horizontal ](properties_Appearance.md#horizontal-scroll-bar) - [Dim. horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Italique](properties_Text.md#italic) - [Gauche](properties_CoordinatesAndSizing.md#left) - [Largeur du trait](properties_BackgroundAndBorder.md#line-width) - [Multilignes](properties_Entry.md#multiline) - [Multistyle](properties_Text.md#multi-style) - [Format numérique](properties_Display.md#number-format) - [Nom](properties_Object.md#object-name) - [Orientation](properties_Text.md#orientation) - [Format image](properties_Display.md#picture-format) - [Texte exemple](properties_Entry.md#placeholder) - [Impression taille variable](properties_Print.md#print-frame) - [Obligation](properties_RangeOfValues.md#required-list) - [Droite](properties_CoordinatesAndSizing.md#right) - [Enregistrer comme](properties_DataSource.md#save-as) - [Sélection toujours visible](properties_Entry.md#selection-always-visible) - [Stocker les balises par défaut](properties_Text.md#store-with-default-style-tags) - [Texte si Vrai/Texte si Faux](properties_Display.md#text-when-false-text-when-true) - [Format heure](properties_Display.md#time-format) - [Haut](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Souligné](properties_Text.md#underline) - [Variable ou expression](properties_Object.md#variable-or-expression) - [Barre de défilement vert.](properties_Appearance.md#vertical-scroll-bar) - [Dim. vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilité](properties_Display.md#visibility) - [Largeur](properties_CoordinatesAndSizing.md#width) - [Retour à la ligne](properties_Display.md#wordwrap)
 
 ---
 
-## Input alternatives
+## Alternatives
 
-You can also represent field and variable expressions in your forms using alternative objects, more particularly:
+Vous pouvez également représenter des expressions de champ et de variable dans vos formulaires à l'aide d'objets alternatifs, plus particulièrement :
 
-* You can display and enter data from database fields directly in columns of [selection type List boxes](listbox_overview.md).
-* You can represent a list field or variable directly in a form using [Pop-up Menus/Drop-down Lists](popupMenuDropdownList_overview) and [Combo Boxes](comboBox_overview.md) objects.
-* You can represent a boolean expression as a [check box](checkbox_overview.md) or as a [radio button](radio_overview.md) object.
+* Vous pouvez afficher et saisir des données à partir des champs de la base de données directement dans des colonnes [de type List box](listbox_overview.md).
+* Vous pouvez représenter un champ de liste ou une variable directement dans un formulaire à l'aide d'objets [Pop-up menus/Listes déroulantes](popupMenuDropdownList_overview) et [Combo box](comboBox_overview.md).
+* Vous pouvez représenter une expression booléenne sous forme de [case à cocher](checkbox_overview.md) ou de [bouton radio](radio_overview.md).
