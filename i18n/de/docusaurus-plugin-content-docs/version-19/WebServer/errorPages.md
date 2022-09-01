@@ -29,7 +29,7 @@ For example, when an HTTP response returns a status code 404:
 
 3. If not found, 4D Web Server then uses its default error page.
 
-## Example
+## Beispiel
 
 If you define the following custom pages in your web folder:
 
