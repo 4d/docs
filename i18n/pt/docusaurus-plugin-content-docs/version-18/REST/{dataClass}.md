@@ -9,7 +9,7 @@ Os nomes das classes de dados podem ser usadas diretamente nas petições REST p
 
 ## Sintaxe
 
-| Sintaxe                                                                    | Exemplo                     | Descrção                                                                                           |
+| Sintaxe                                                                    | Exemplo                     | Descrição                                                                                          |
 | -------------------------------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------- |
 | [**{dataClass}**](#dataClass)                                              | `/Employee`                 | Retorna todos os dados (como padrão as primeiras 100 entidades) para a dataclass                   |
 | [**{dataClass}({key})**](#dataclasskey)                                    | `/Employee(22)`             | Retorna os dados para a entidade especifica definida pela chave primária da classe de dados        |
@@ -21,13 +21,13 @@ Os nomes das classes de dados podem ser usadas diretamente nas petições REST p
 
 Retorna todos os dados (como padrão as primeiras 100 entidades) para uma classe de dados específica (*por exemplo *, `Company`)
 
-### Descrção
+### Descrição
 
 Quando chamar este parâmetro em sua petição REST, as primeiras 100 entidades são retornadas a menos que tenha especificado um valor usando [`$top/$limit`]($top_$limit.md).
 
 Aqui está uma descrição dos dados retornados:
 
-| Propriedade   | Tipo       | Descrção                                                                                                                                                                                               |
+| Propriedade   | Tipo       | Descrição                                                                                                                                                                                              |
 | ------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | __entityModel | String     | Nome da dataclass.                                                                                                                                                                                     |
 | __COUNT       | Número     | Número de entidades na classe de dados.                                                                                                                                                                |
@@ -37,7 +37,7 @@ Aqui está uma descrição dos dados retornados:
 
 Cada entidade contém as propriedades abaixo:
 
-| Propriedade | Tipo   | Descrção                                                                                                      |
+| Propriedade | Tipo   | Descrição                                                                                                     |
 | ----------- | ------ | ------------------------------------------------------------------------------------------------------------- |
 | __KEY       | String | Valor da chave primária definida para a classe de dados.                                                      |
 | __TIMESTAMP | Date   | Registro de hora da última modificação da entidade                                                            |
@@ -136,7 +136,7 @@ Retorna todas as datas para uma classe de dados específica.
 
 Retorna os dados para a entidade específica definida pela chave primária da classe de dados, *e.g.*, `Company(22) ou Company("IT0911AB2200")`
 
-### Descrção
+### Descrição
 
 Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Passando a classe de dados e uma chave, pode recuperar toda a informação pública para a entidade. Para saber mais sobre a definição de chave primária, veja a seção **Modifying the Primary Key** em **Data Model Editor**.
 
@@ -183,7 +183,7 @@ A petição abaixo retorna todos os dados públicos na dataclass Company cuja ch
 
 Retorna os dados para uma entidade na qual os valores de atributo são definidas
 
-### Descrção
+### Descrição
 
 Passando *dataClass* e um *atributo* junto com o valor, pode recuperar toda a informação pública para essa entidade. O valor é um valor único para o atributo, mas não é a chave primária.
 
@@ -207,7 +207,7 @@ A petição abaixo retorna todos os dados públicos do funcionário chamado "Jon
 
 Retorna um objeto ou uma coleção baseada em um método projeto.
 
-### Descrção
+### Descrição
 
 Os métodos projeto são chamados através de uma classe de dados (tabela) ou uma entidade (registro), e devem retornar ou um objeto ou uma coleção.
 
