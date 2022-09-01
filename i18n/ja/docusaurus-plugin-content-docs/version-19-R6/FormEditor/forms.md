@@ -1,25 +1,25 @@
 ---
 id: forms
-title: About 4D Forms
+title: 4D フォームについて
 ---
 
 
-Forms provide the interface through which information is entered, modified, and printed in a desktop application. Users interact with the data in a database using forms and print reports using forms. Forms can be used to create custom dialog boxes, palettes, or any featured custom window.
+フォームはデスクトップアプリケーションにおいて、データの入力・修正・印刷をおこなうためのインターフェースとなります。 フォームを使用することで、ユーザーはデータベースのデータをやり取りし、レポートを印刷します。 フォームを使用して、カスタムダイアログボックスやパレット、そのほかのカスタムウィンドウを作成します。
 
 ![](../assets/en/FormObjects/form1.png)
 
-Forms can also contain other forms through the following features:
+また、以下の機能により、フォームは他のフォームを含むことができます:
 
-- [subform objects](FormObjects/subform_overview.md)
-- [inherited forms](properties_FormProperties.md#inherited-forms)
+- [サブフォームオブジェクト](FormObjects/subform_overview.md)
+- [継承フォーム](properties_FormProperties.md#inherited-forms)
 
-## Creating forms
+## フォームを作成する
 
-You can add or modify 4D forms using the following elements:
+4Dフォームの追加や変更は、以下の要素を使っておこないます:
 
-- **4D Developer interface:** Create new forms from the **File** menu or the **Explorer** window.
-- **Form Editor**: Modify your forms using the **[Form Editor](FormEditor/formEditor.md)**.
-- **JSON code:** Create and design your forms using JSON and save the form files at the [appropriate location](Project/architecture.md#sources-folder). Example:
+- **4D Developer インターフェース:** **ファイル** メニューまたは **エクスプローラ** ウィンドウから新規フォームを作成できます。
+- **フォームエディター**: フォームの編集は **[フォームエディター](FormEditor/formEditor.md)** を使っておこないます。
+- **JSON コード:** JSON を使ってフォームを作成・設計し、フォーム ファイルを [適切な場所](Project/architecture.md#sources-フォルダー) に保存します。 例:
 
 ```
 {
@@ -67,64 +67,64 @@ You can add or modify 4D forms using the following elements:
 }
 ```
 
-## Project form and Table form
+## プロジェクトフォームとテーブルフォーム
 
-There are two categories of forms:
+2つのカテゴリーのフォームが存在します:
 
-- **Project forms** - Independent forms that are not attached to any table. They are intended more particularly for creating interface dialog boxes as well as components. Project forms can be used to create interfaces that easily comply with OS standards.
+- **プロジェクトフォーム** - テーブルに属さない独立したフォームです。 このタイプのフォームは、おもにインターフェースダイアログボックスやコンポーネントを作成するのに使用されます。 プロジェクトフォームを使用してより簡単に OS標準に準拠するインターフェースを作成できます。
 
-- **Table forms** - Attached to specific tables and thus benefit from automatic functions useful for developing applications based on databases. Typically, a table has separate input and output forms.
+- **テーブルフォーム** - 特定のテーブルに属していて、それによりデータベースに基づくアプリケーションの開発に便利な自動機能の恩恵を得ることができます。 通常、テーブルには入力フォームと出力フォームが別々に存在します。
 
-Typically, you select the form category when you create the form, but you can change it afterwards.
+フォームを作成する際にフォームカテゴリーを選択しますが、後から変更することも可能です。
 
-## Form pages
+## フォームのページ
 
-Each form has is made of at least two pages:
+各フォームは、少なくとも 2つのページで構成されています:
 
-- a page 1: a main page, displayed by default
-- a page 0: a background page, whose contents is displayed on every other page.
+- ページ1: デフォルトで表示されるメインページ
+- ページ0: 背景ページ。 このページ上に置かれたオブジェクトはすべてのページで表示されます
 
-You can create multiple pages for an input form. If you have more fields or variables than will fit on one screen, you may want to create additional pages to display them. Multiple pages allow you to do the following:
+1つの入力フォームに複数のページを作成することができます。 一画面に納まりきらない数のフィールドや変数がある場合は、これらを表示するためにページを追加することができます。 複数のページを作成すると、以下のようなことが可能になります:
 
-- Place the most important information on the first page and less important information on other pages.
-- Organize each topic on its own page.
-- Reduce or eliminate scrolling during data entry by setting the [entry order](../FormEditor/formEditor.html#data-entry-order).
-- Provide space around the form elements for an attractive screen design.
+- もっとも重要な情報を最初のページに配置し、他の情報を後ろのページに配置する。
+- トピックごとに、専用ページにまとめる。
+- [入力順](../FormEditor/formEditor.html#データの入力順)を設定して、データ入力中のスクロール動作を少なくしたり、または不要にする。
+- フォーム要素の周りの空間を広げ、洗練された画面をデザインする。
 
-Multiple pages are a convenience used for input forms only. They are not for printed output. When a multi-page form is printed, only the first page is printed.
+複数ページは入力フォームとして使用する場合にのみ役立ちます。 印刷出力には向きません。 マルチページフォームを印刷すると、最初のページしか印刷されません。
 
-There are no restrictions on the number of pages a form can have. The same field can appear any number of times in a form and on as many pages as you want. However, the more pages you have in a form, the longer it will take to display it.
+フォームのページ数には制限がありません。 フォーム内の複数ページ上に同じフィールドを何度でも表示することができます。 しかし、フォームのページ数が多くなるほど、フォームの表示に要する時間が長くなります。
 
-A multi-page form has both a background page and several display pages. Objects that are placed on the background page may be visible on all display pages, but can be selected and edited only on the background page. In multi-page forms, you should put your button palette on the background page. You also need to include one or more objects on the background page that provide page navigation tools for the user.
+マルチページフォームには、1つの背景ページと複数の表示ページが存在します。 背景ページ上に置かれたオブジェクトはすべての表示ページに現れますが、それらのオブジェクトの選択や編集は背景ページでのみ可能です。 複数ページフォームでは、ボタンパレットを背景ページに置くべきです。 また、ページ移動ツールオブジェクトを背景ページに配置し、ユーザーに提供する必要があります。
 
-## Inherited Forms
+## 継承フォーム
 
-4D forms can use and be used as "inherited forms," meaning that all of the objects from *Form A* can be used in *Form B*. In this case, *Form B* "inherits" the objects from *Form A*.
+4D では "継承フォーム" を使用することができます。 これはつまり、*フォームA* の全オブジェクトが *フォームB* で使用可能であるということです。 この場合、*フォームB* は *フォームA* からオブジェクトを "継承" します。
 
-References to an inherited form are always active: if an element of an inherited form is modified (button styles, for example), all forms using this element will automatically be modified.
+継承フォームへの参照は常にアクティブです。 そのため、継承フォームの要素が変更されると (たとえば、ボタンスタイル)、この要素を使用する全フォームが自動的に変更されます。
 
-All forms (table forms and project forms) can be designated as an inherited form. However, the elements they contain must be compatible with use in different database tables.
+テーブルフォームおよびプロジェクトフォームの両方を継承フォームとして使用できます。 ただし、継承フォームに含まれる要素は、異なるデータベーステーブルでの使用に対応していなければなりません。
 
-When a form is executed, the objects are loaded and combined in the following order:
+フォームが実行されると、オブジェクトがロードされ、次の順序で組み立てられます:
 
-1. Page zero of the inherited form
-2. Page 1 of the inherited form
-3. Page zero of the open form
-4. Current page of the open form.
+1. 継承フォームの 0ページ
+2. 継承フォームの 1ページ
+3. 開かれたフォームの 0ページ
+4. 開かれたフォームのカレントページ
 
-This order determines the default [entry order](../FormEditor/formEditor.html#data-entry-order) of objects in the form.
+この順序により、フォームにおけるオブジェクトの [入力順](../FormEditor/formEditor.html#データの入力順) が決まります。
 
-> Only pages 0 and 1 of an inherited form can appear in other forms.
+> 継承フォームの 0ページと 1ページだけが他のフォームに表示可能です。
 
-The properties and method of a form are not considered when that form is used as an inherited form. On the other hand, the methods of objects that it contains are called.
+継承フォームとして使用される場合、継承フォームのプロパティとフォームメソッドは使用されません。 他方、継承フォームに含まれるオブジェクトのメソッドは呼び出されます。
 
-To define an inherited form, the [Inherited Form Name](properties_FormProperties.md#inherited-form-name) and [Inherited Form Table](properties_FormProperties.md#inherited-form-table) (for table form) properties must be defined in the form that will inherit something from another form.
+継承フォームを設定するには、他のフォームを継承するフォームにおいて、[継承されたフォーム名](properties_FormProperties.md#継承されたフォーム名) および [継承されたフォームテーブル](properties_FormProperties.md#継承されたフォームテーブル) (テーブルフォームの場合) プロパティを設定しなければなりません。
 
 A form can inherit from a project form, by setting the [Inherited Form Table](properties_FormProperties.md#inherited-form-table) property to `\&#060;None&#062;` in the Property List (or " " in JSON).
 
 To stop inheriting a form, select `\&#060;None&#062;` in the Property List (or " " in JSON) for the [Inherited Form Name](properties_FormProperties.md#inherited-form-name) property.
-> It is possible to define an inherited form in a form that will eventually be used as an inherited form for a third form. The combining of objects takes place in a recursive manner. 4D detects recursive loops (for example, if form [table1]form1 is defined as the inherited form of [table1]form1, in other words, itself) and interrupts the form chain.
+> 任意のフォームで継承フォームを設定し、そのフォームを第3のフォームの継承フォームとして使用することができます。 再帰的な方法で各オブジェクトが連結されます。 4Dは、再帰的ループを見つけ出し (たとえば、[テーブル1]フォーム1 が [テーブル1]フォーム1 を継承フォームとして定義している、つまり自分自身を継承している場合)、フォームの連鎖を中断します。
 
-## Supported Properties
+## プロパティ一覧
 
-[Associated Menu Bar](properties_Menu.md#associated-menu-bar) - [Fixed Height](properties_WindowSize.md#fixed-height) - [Fixed Width](properties_WindowSize.md#fixed-width) - [Form Break](properties_Markers.md#form-break) - [Form Detail](properties_Markers.md#form-detail) - [Form Footer](properties_Markers.md#form-footer) - [Form Header](properties_Markers.md#form-header) - [Form Name](properties_FormProperties.md#form-name) - [Form Type](properties_FormProperties.md#form-type) - [Inherited Form Name](properties_FormProperties.md#inherited-form-name) - [Inherited Form Table](properties_FormProperties.md#inherited-form-table) - [Maximum Height](properties_WindowSize.md#maximum-height-minimum-height) - [Maximum Width](properties_WindowSize.md#maximum-width-minimum-width) - [Method](properties_Action.md#method) - [Minimum Height](properties_WindowSize.md#maximum-height-minimum-height) - [Minimum Width](properties_WindowSize.md#maximum-width-minimum-width) - [Pages](properties_FormProperties.md#pages) - [Print Settings](properties_Print.md#settings) - [Published as Subform](properties_FormProperties.md#published-as-subform) - [Save Geometry](properties_FormProperties.md#save-geometry) - [Window Title](properties_FormProperties.md#window-title)
+[フォームタイプ](properties_FormProperties.md#フォームタイプ) - [フォーム名](properties_FormProperties.md#フォーム名) - [継承されたフォームテーブル](properties_FormProperties.md#継承されたフォームテーブル) - [継承されたフォーム名](properties_FormProperties.md#継承されたフォーム名) - [ウィンドウタイトル](properties_FormProperties.md#ウィンドウタイトル) - [配置を記憶](properties_FormProperties.md#配置を記憶) - [サブフォームとして公開](properties_FormProperties.md#サブフォームとして公開) - [固定幅](properties_WindowSize.md#固定幅) - [最小幅](properties_WindowSize.md#最大幅-最小幅) - [最大幅](properties_WindowSize.md#最大幅-最小幅) - [固定高さ](properties_WindowSize.md#固定高さ) - [最小高さ](properties_WindowSize.md#最大高さ-最小高さ) - [最大高さ](properties_WindowSize.md#最大高さ-最小高さ) - [印刷設定](properties_Print.md#設定) - [連結メニューバー](properties_Menu.md#連結メニューバー) - [フォームヘッダー](properties_Markers.md#フォームヘッダー) - [フォーム詳細](properties_Markers.md#フォーム詳細) - [フォームブレーク](properties_Markers.md#フォームブレーク) - [フォームフッター](properties_Markers.md#フォームフッター) - [メソッド](properties_Action.md#メソッド) - [Pages](properties_FormProperties.md#pages)
