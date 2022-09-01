@@ -3,11 +3,11 @@ id: onPlugInArea
 title: On Plug in Area
 ---
 
-| Code | Can be called by                                                   | Definition                                                    |
-| ---- | ------------------------------------------------------------------ | ------------------------------------------------------------- |
-| 19   | Form - [Plug-in Area](FormObjects/pluginArea_overview.md#overview) | An external object requested its object method to be executed |
+| Code | Puede ser llamado por                                                       | Definición                                                  |
+| ---- | --------------------------------------------------------------------------- | ----------------------------------------------------------- |
+| 19   | Formulario - [Área de plug-in](FormObjects/pluginArea_overview.md#overview) | Un objeto externo solicitó la ejecución de su método objeto |
 
 
-## Description
+## Descripción
 
-The event is generated when a plug-in requested its form area to execute the associated object method. 
+El evento se genera cuando un plug-in solicita su área de formulario para ejecutar el método objeto asociado. 
