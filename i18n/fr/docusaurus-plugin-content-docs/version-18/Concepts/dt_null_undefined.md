@@ -1,25 +1,25 @@
 ---
 id: null-undefined
-title: Null and Undefined
+title: Null et Indefinie
 ---
 
 ## Null
 
-Null is a special data type with only one possible value: **null**. This value is returned by an expression that does not contain any value.
+Null est un type de données particulier avec une seule valeur possible : **null**. Cette valeur est retournée par une expression qui ne contient aucune valeur.
 
-In the 4D language and for object field attributes, null values are managed through the `Null` function. This function can be used with the following expressions for setting or comparing the null value:
+Dans le langage de 4D et pour les attributs des champs objets, les valeurs null sont gérées via la commande `Null`. Cette commande peut être utilisée avec les expressions suivantes pour fixer ou comparer la valeur null :
 
-- object attributes
-- collection elements
-- variables of the object, collection, pointer, picture, or variant type.
+- attributs d'objets
+- éléments de collections
+- variables de type objet, collection, pointeur, image ou variant.
 
-## Undefined
+## Indéfini
 
-Undefined is not actually a data type. It denotes a variable that has not yet been defined. A function (a project method that returns a result) can return an undefined value if, within the method, the function result ($0) is assigned an undefined expression (an expression calculated with at least one undefined variable). A field cannot be undefined (the `Undefined` command always returns False for a field). A variant variable has **undefined** as default value.
+Indéfinie n'est pas véritablement un type de données. Une variable dite "indéfinie" est une variable n'ayant pas encore été définie. Une fonction utilisateur (c'est-à-dire une méthode projet qui retourne une valeur) peut retourner une valeur indéfinie si, à l'intérieur de la méthode, le résultat de la fonction ($0) est assigné à une expression indéfinie (une expression issue d'un calcul effectué avec au moins une variable indéfinie). Un champ ne peut pas être indéfini (la commande `Indefinie` retourne toujours Faux pour un champ). Une variable variant porte la valeur par défaut **indéfini**.
 
-## Examples
+## Exemples
 
-Here are the different results of the `Undefined` command as well as the `Null` command with object properties, depending on the context:
+Cet exemple compare les différents résultats de la commande `Indefinie` et de la commande `Null` appliquées aux propriétés d'objets, en fonction du contexte :
 
 ```4d
 C_OBJECT($vEmp)
@@ -27,12 +27,12 @@ $vEmp:=New object
 $vEmp.name:="Smith"
 $vEmp.children:=Null
 
-$undefined:=Undefined($vEmp.name) // False
-$null:=($vEmp.name=Null) //False
+$undefined:=Undefined($vEmp.name) // Faux
+$null:=($vEmp.name=Null) //Faux
 
-$undefined:=Undefined($vEmp.children) // False
-$null:=($vEmp.children=Null) //True
+$undefined:=Undefined($vEmp.children) // Faux
+$null:=($vEmp.children=Null) //Vrai
 
-$undefined:=Undefined($vEmp.parent) // True
-$null:=($vEmp.parent=Null) //True
+$undefined:=Undefined($vEmp.parent) // Vrai
+$null:=($vEmp.parent=Null) //Vrai
 ```
