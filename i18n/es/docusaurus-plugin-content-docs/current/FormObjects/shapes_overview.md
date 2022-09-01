@@ -1,57 +1,57 @@
 ---
 id: shapesOverview
-title: Shapes
+title: Formas
 ---
 
-Shapes are [static objects](formObjects_overview.md#active-and-static-objects) that can be added to 4D forms.
+Las formas son [objetos estáticos](formObjects_overview.md#active-and-static-objects) que pueden añadirse a los formularios 4D.
 
-4D forms support the following basic shapes:
+Se ofrecen las siguientes formas básicas:
 
-- rectangles
-- lines
-- ovals
+- rectángulos
+- líneas
+- óvalos
 
 
-## Rectangle
+## Rectángulo
 
-A static rectangle is a decorative object for forms. Rectangles are constrained to squared shapes.
+Un rectángulo estático es un objeto decorativo para los formularios. Los rectángulos se limitan a formas cuadradas.
 
-The design of rectangles is controlled through many properties (color, line thickness, pattern, etc.). Specifically, the [roundness](properties_CoordinatesAndSizing.md#corner-radius) of its corners can be defined.
+El diseño de los rectángulos se controla a través de muchas propiedades (color, grosor de línea, patrón, etc.). En concreto, se puede definir la [redondez](properties_CoordinatesAndSizing.md#corner-radius) de sus esquinas.
 
 ![](../assets/en/FormObjects/shapes_rectangle2.png)
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```4d
     "myRectangle": {
-        "type": "rectangle",    //define the type of object
-        "left": 60,             //left position on the form  
-        "top": 160,             //top position on the form 
-        "width": 100,           //width of the object
-        "height": 20,           //height of the object
-        "borderRadius": 20      //define the roundness of the corners
+        "type": "rectangle",    //define el tipo de objeto
+        "left": 60,             //posición izquierda en el formulario  
+        "top": 160,             //posición superior en el formulario 
+        "width": 100,           //ancho del objeto
+        "height": 20,           //altura del objeto
+        "borderRadius": 20      //definir la redondez de las esquinas
                 }
 ```
 
 
-#### Supported Properties
-[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Corner radius](properties_CoordinatesAndSizing.md#corner-radius) - [Dotted Line Type](properties_BackgroundAndBorder.md#dotted-line-type) - [Fill Color](properties_BackgroundAndBorder.md#background-color-fill-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md#line-color) - [Line Width](properties_BackgroundAndBorder.md#line-width) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+#### Propiedades soportadas
+[Abajo](properties_CoordinatesAndSizing.md#bottom) - [Clase Css ](properties_Object.md#css-class) - [Radio de la esquina](properties_CoordinatesAndSizing.md#corner-radius) - [Tipo de línea punteada](properties_BackgroundAndBorder.md#dotted-line-type) - [Color de fondo](properties_BackgroundAndBorder.md#background-color-fill-color) - [Altura](properties_CoordinatesAndSizing.md#height) - [Dimensionamiento horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [Color de línea](properties_BackgroundAndBorder.md#line-color) - [Ancho de línea](properties_BackgroundAndBorder.md#line-width) - [Nombre del objeto](properties_Object.md#object-name) - [Derecha](properties_CoordinatesAndSizing.md#right) - [Arriba](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Dimensionamiento vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width)
 
-## Line
+## Línea
 
-A static line is a decorative object for forms, drawn between two plots. Lines can be horizontal, vertical, or of any angle shapes.
+Una línea estática es un objeto decorativo para los formularios, trazado entre dos tramas. Las líneas pueden ser horizontales, verticales o de cualquier forma de ángulo.
 
-The design of lines is controlled through many properties (color, line thickness, etc.).
-
-
-### startPoint property
-The `startPoint` JSON property defines from which coordinate to draw the line (see example).
-
-> the `startPoint` property is not exposed in the Property List, where the line drawing direction is visible.
+El diseño de las líneas se controla a través de muchas propiedades (color, grosor de línea, etc.).
 
 
+### propiedad startPoint
+La propiedad JSON `startPoint` define a partir de qué coordenada dibujar la línea (ver ejemplo).
 
-#### JSON Examples:
+> la propiedad `startPoint` no está expuesta en la lista de propiedades, donde la dirección de dibujo de la línea es visible.
+
+
+
+#### Ejemplos JSON:
 
 ```
     "myLine": {
@@ -60,8 +60,8 @@ The `startPoint` JSON property defines from which coordinate to draw the line (s
         "top": 40,
         "width": 100,
         "height": 80,
-        "startPoint": "topLeft", //first direction
-        "strokeDashArray": "6 2" //dashed
+        "startPoint": "topLeft", //primera orientación
+        "strokeDashArray": "6 2" //punteado
         }
 ```
 Result: ![](../assets/en/FormObjects/shape_line1.png)
@@ -74,7 +74,7 @@ Result: ![](../assets/en/FormObjects/shape_line1.png)
         "top": 40,
         "width": 100,
         "height": 80,
-        "startPoint": "bottomLeft", //2nd direction
+        "startPoint": "bottomLeft", //segunda orientación
         "strokeDashArray": "6 2" //dashed
         }
 ```
@@ -82,28 +82,28 @@ Result: ![](../assets/en/FormObjects/shape_line2.png)
 
 
 
-#### Supported Properties
-[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Dotted Line Type](properties_BackgroundAndBorder.md#dotted-line-type) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md#line-color) - [Line Width](properties_BackgroundAndBorder.md#line-width) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [startPoint](#startpoint-property) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+#### Propiedades soportadas
+[Abajo](properties_CoordinatesAndSizing.md#bottom) - [Clase Css ](properties_Object.md#css-class) - [Tipo de línea punteada](properties_BackgroundAndBorder.md#dotted-line-type) - [Altura](properties_CoordinatesAndSizing.md#height) - [Dimensionamiento horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [Color de línea](properties_BackgroundAndBorder.md#line-color) - [Ancho de línea](properties_BackgroundAndBorder.md#line-width) - [Nombre del objeto](properties_Object.md#object-name) - [Derecha](properties_CoordinatesAndSizing.md#right) - [startPoint](#startpoint-property) - [Arriba](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Dimensionamiento vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width)
 
-## Oval
+## Óvalo
 
-A static oval is a decorative object for forms. Oval objects can be used to draw circular shapes (when [width](properties_CoordinatesAndSizing.md#width) and [height](properties_CoordinatesAndSizing.md#height) properties are equal).
+Un óvalo estático es un objeto decorativo para los formularios. Los objetos ovalados pueden utilizarse para dibujar formas circulares (cuando las propiedades [ancho](properties_CoordinatesAndSizing.md#width) y [alto](properties_CoordinatesAndSizing.md#height) son iguales).
 
 ![](../assets/en/FormObjects/shape_oval.png)
 
-#### JSON Example:
+#### Ejemplo JSON:
 
 ```4d
     "myOval": {
-        "type": "oval",     //define the type of object
-        "left": 60,         //left position on the form  
-        "top": 160,         //top position on the form 
-        "width": 100,       //width of the object
-        "height": 20,       //height of the object
-        "fill": "blue"      //define the background color
+        "type": "oval",     //define el tipo de objeto
+        "left": 60,         //posición izquierda en el formulario
+        "top": 160,         //posición superior en el formulario 
+        "width": 100,       //ancho del objeto
+        "height": 20,       //altura del objeto
+        "fill": "blue"      //define el color de fondo
                 }
 ```
 
 
-#### Supported Properties
-[Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Dotted Line Type](properties_BackgroundAndBorder.md#dotted-line-type) - [Fill Color](properties_BackgroundAndBorder.md#background-color-fill-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Line Color](properties_BackgroundAndBorder.md#line-color) - [Line Width](properties_BackgroundAndBorder.md#line-width) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
+#### Propiedades soportadas
+[Abajo](properties_CoordinatesAndSizing.md#bottom) - [Clase](properties_Object.md#css-class) - [Tipo de línea punteada](properties_BackgroundAndBorder.md#dotted-line-type) - [Color de fondo](properties_BackgroundAndBorder.md#background-color-fill-color) - [Altura](properties_CoordinatesAndSizing.md#height) - [Dimensionamiento horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Izquierda](properties_CoordinatesAndSizing.md#left) - [Color de línea](properties_BackgroundAndBorder.md#line-color) - [Ancho de línea](properties_BackgroundAndBorder.md#line-width) - [Nombre del objeto](properties_Object.md#object-name) - [Derecha](properties_CoordinatesAndSizing.md#right) - [Arriba](properties_CoordinatesAndSizing.md#top) - [Tipo](properties_Object.md#type) - [Dimensionamiento vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilidad](properties_Display.md#visibility) - [Ancho](properties_CoordinatesAndSizing.md#width) 
