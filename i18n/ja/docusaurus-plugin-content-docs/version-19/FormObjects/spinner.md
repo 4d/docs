@@ -1,19 +1,19 @@
 ---
 id: spinner
-title: Spinner
+title: スピナー
 ---
 
-The spinner is a circular indicator that displays a continuous animation, like the [Barber shop](progressIndicator.md#barber-shop).
+スピナーは円形のインジケーターで、[バーバーショップ](progressIndicator.md#barber-shop) のように連続したアニメーションを表示します。
 
 ![](../assets/en/FormObjects/spinner.gif)
 
-You use this type of object to indicate that an operation such as establishing a network connection or a performing a calculation is underway. When this indicator is selected, [graphical Scale properties](properties_Scale.md) are not available.
+このタイプのオブジェクトは通常、ネットワークへの接続や、計算などの処理が実行中であることを表すために使用します。 このインジケーターが選択されるとプロパティリストの [スケール](properties_Scale.md) テーマは非表示になります。
 
-When the form is executed, the object is not animated. You manage the animation by passing a value to its [associated variable or expression](properties_Object.md#variable-or-expression):
+フォームが実行されたとき、オブジェクトのアニメーションは開始されません。 [割り当てられた変数](properties_Object.md#変数あるいは式) に値を代入してアニメーションを管理します:
 
-* 1 (or any value other than 0) = Start animation,
-* 0 = Stop animation
+* 非 0 値 = アニメーション開始
+* 0 = アニメーション停止
 
-### Supported Properties
+### プロパティ一覧
 
-[Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Expression Type](properties_Object.md#expression-type) - [Height](properties_CoordinatesAndSizing.md#height) -[Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)  
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型) - [CSSクラス](properties_Object.md#cssクラス) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [表示状態](properties_Display.md#表示状態) - [境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) - [ヘルプTips](properties_Help.md#ヘルプtips)  
