@@ -1,72 +1,72 @@
 ---
 id: sdi
-title: SDI mode on Windows
+title: Windows での SDIモード
 ---
 
 
-On Windows, 4D developers can configure their 4D merged applications to work as SDI (Single-Document Interface) applications. In SDI applications, each window is independant from others and can have its own menu bar. SDI applications are opposed to MDI (Multiple Documents Interface) applications, where all windows are contained in and depend on the main window.
+Windows において、組みこみ 4Dアプリケーションを SDI (シングルドキュメントインターフェース) アプリケーションとして設定することができます。 SDIアプリケーションでは、それぞれのウィンドウが互いに独立し、それぞれが独自のメニューバーを持つことができます。 SDIアプリケーションは MDI (マルチドキュメントインターフェース) に対する概念で、MDI ではすべてのウィンドウが一つのメインウィンドウの中に含まれ、それに依存した作りになっています。
 
-> The concept of SDI/MDI does not exist on macOS. This feature concerns Windows applications only and related options are ignored on macOS.
+> SDI/MDI という概念は macOS には存在しません。 この機能は Windows用アプリケーション専用のもので、関連オプションは macOS においてはすべて無視されます。
 
-## SDI mode availability
+## SDIモード利用条件
 
-The SDI mode is available in the following execution environment only:
+SDIモードは以下の実行環境に限り利用可能です:
 
 - Windows
-- Merged stand-alone or client 4D application
+- 組み込みスタンドアロン4Dアプリケーション、またはクライアント4Dアプリケーション
 
-## Enabling the SDI mode
+## SDIモードの有効化
 
-Enabling and using the SDI mode in your application require the following steps:
+アプリケーションにおいて SDIモードを有効化し使用する手順は次の通りです:
 
-1. Check the **Use SDI mode on Windows** option in the "Interface" page of the Settings dialog box.
-2. Build a merged application (standalone and/or client application).
+1. ストラクチャー設定ダイアログボックスの "インターフェース" ページ内にある **WindowsでSDIモードを使用する** オプションをチェックします。
+2. 組み込みアプリケーションをビルドします (スタンドアロンまたはクライアントアプリケーション)。
 
-Then, when executed it in a supported context (see above), the merged application will work automatically in SDI mode.
+その後、サポートされているコンテキスト (上記参照) において実行されると、組み込みアプリケーションは自動的に SDIモードで実行されます。
 
-## Managing applications in SDI mode
+## SDIモードでのアプリケーションの管理
 
-Executing a 4D application in SDI mode does not require any specific implementation: existing menu bars are automatically moved in SDI windows themselves. However, you need to pay attention to specific principles that are listed below.
+4Dアプリケーションを SDIモードで実行するために、特別な実装は必要ありません。既存のメニューバーは自動的に SDIウィンドウへと移されます。 しかしながら、以下に挙げられている特定の原則に注意する必要があります。
 
-### Menus in Windows
+### ウィンドウ内のメニュー
 
-In SDI mode, the process menu bar is automatically displayed in every document type window opened during the process life (this excludes, for example, floating palettes). When the process menu bar is not visible, menu item shortcuts remain active however.
+SDIモードでは、同プロセス中に開かれたすべてのドキュメントタイプウィンドウ (たとえばフローティングパレットはこれに含まれません) には自動的にプロセスメニューバーが表示されます。 ただし、プロセスメニューバーが非表示の状態でも、メニュー項目のショートカットは有効です。
 
-Menus are added above windows without modifiying their contents size:
+メニューは、コンテンツのサイズを変更することなくウィンドウの上部に追加されます:
 
 ![](../assets/en/Menus/sdi1.png)
 
-Windows can therefore be used in MDI or SDI modes without having to recalculate the position of objects.
+このため、ウィンドウは MDIモードあるいは SDIモードのどちらにおいてもオブジェクトの位置を再計算することなく使用することができます。
 
-#### About the splash screen
+#### スプラッシュスクリーンについての注意:
 
-- If the **Splash screen** interface option was selected in the Settings, the splash window will contain any menus that would have been displayed in the MDI window. Note also that closing the splash screen window will result in exiting the application, just like in MDI mode.
-- If the Splash screen option was not selected, menus will be displayed in opened windows only, depending on the programmer's choices.
+- ストラクチャー設定において **スプラッシュスクリーン** インターフェースオプションが選択されていた場合、スプラッシュウィンドウは、MDIウィンドウであれば表示されていたメニューをすべて格納します。 MDIモード同様、スプラッシュスクリーンを閉じるとアプリケーションを終了することになるという点に注意してください。
+- スプラッシュスクリーンオプションが選択されていなかった場合、メニューは開かれているウィンドウにおいて、プログラマーの選択に応じて表示されます。
 
-### Automatic quit
+### 自動終了
 
-When executed in MDI mode, a 4D application simply quits when the user closes the application window (MDI window). However, when executed in SDI mode, 4D applications do not have an application window and, on the other hand, closing the last opened window does not necessarily mean that the user wants the application to quit (faceless processes can be running, for example) -- although it could be what they want.
+MDIモードで実行時、ユーザーによってアプリケーションウィンドウ (MDIウィンドウ) が閉じられると、4Dアプリケーションが終了します。 しかしながら、SDIモードで実行時、4Dアプリケーションにはアプリケーションウィンドウがなく、また開いているウィンドウをすべて閉じたとしても、必ずしもユーザーがアプリケーションを終了したいと思っているとは限りません (たとえばフェイスレスプロセスが熟考中かもしれません) が、場合によっては終了したいという場合もあります。
 
-To handle this case, 4D applications executed in SDI mode include a mechanism to automatically quit (by calling the `QUIT 4D` command) when the following conditions are met:
+こういった場合を管理するため、SDIモードで実行されている 4Dアプリケーションには、以下の条件が満たされた場合に自動的に (`QUIT 4D` コマンドを呼び出して) 終了する機構が含まれています:
 
-- the user cannot interact anymore with the application
-- there are no live user processes
-- 4D processes or worker processes are waiting for an event
-- the Web server is not started.
+- ユーザーがこれ以上アプリケーションとやりとりすることができない
+- 生きているユーザープロセスがない
+- 4Dプロセスあるいはワーカープロセスはイベント待機中である
+- Webサーバーが開始されていない
 
-> When a menu with an associated *quit* standard action is called, the application quits and all windows are closed, wherever the menu was called from.
+> *quit* (終了) 標準アクションが割り当てられているメニューが呼び出された場合、そのメニューがどこから呼ばれたものであろうと、アプリケーションは終了し、すべてのウィンドウが閉じられます。
 
-## Language
+## ランゲージ
 
-Although it is transparently handled by 4D, the SDI mode introduces small variations in the application interface management. Specificities in the 4D language are listed below.
+4D によって透過的に管理されるとはいえ、SDIモードではアプリケーションインターフェースの管理に関してこれまでと若干の差異が存在します。 4Dランゲージにおける特異性は以下の表にある通りです。
 
-| Command/feature                   | Specificity in SDI mode on Windows                                                                                                                                                                                                                                                                              |
-| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `Open form window`                | Options to support floating windows in SDI (`Controller form window`) and to remove the menu bar (`Form has no menu bar`)                                                                                                                                                                                       |
-| `Menu bar height`                 | Returns the height in pixels of a single menu bar line even if the menu bar has been wrapped on two or more lines. Returns 0 when the command is called from a process without a form window                                                                                                                    |
-| `SHOW MENU BAR` / `HIDE MENU BAR` | Applied to the current form window only (from where the code is executed)                                                                                                                                                                                                                                       |
-| `MAXIMIZE WINDOW`                 | The window is maximized to the screen size                                                                                                                                                                                                                                                                      |
-| `CONVERT COORDINATES`             | `XY Screen` is the global coordinate system where the main screen is positioned at (0,0). Screens on its left side or on top of it can have negative coordinates and any screens on its right side or underneath it can have coordinates greater than the values returned by `Screen height` or `Screen width`. |
-| `GET MOUSE`                       | Global coordinates are relative to the screen                                                                                                                                                                                                                                                                   |
-| `GET WINDOW RECT`                 | When -1 is passed in window parameter, the command returns 0;0;0;0                                                                                                                                                                                                                                              |
-| `On Drop database method`         | Not supported                                                                                                                                                                                                                                                                                                   |
+| コマンド/機能                           | Windows での SDIモードの特徴                                                                                                                                                     |
+| --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `Open form window`                | SDIモードにおけるフローティングウィンドウのサポート (`Controller form window`) およびメニューバーの削除 (`Form has no menu bar`) のオプション                                                                      |
+| `Menu bar height`                 | メニューバーが 2行以上に折り返されている場合でも単一行のメニューバーのピクセル単位での高さを返します。 フォームウィンドウをともなわないプロセスからコマンドが呼ばれている場合には 0 を返します。                                                                      |
+| `SHOW MENU BAR` / `HIDE MENU BAR` | カレントの (コードが実行されている場所の) フォームウィンドウにのみ適用されます                                                                                                                                |
+| `MAXIMIZE WINDOW`                 | ウィンドウはスクリーンサイズいっぱいまで最大化されます                                                                                                                                              |
+| `CONVERT COORDINATES`             | `XY Screen` はメインスクリーンが (0,0) に位置するグローバルな座標系です。 座標系の左側、あるいは上側にあるスクリーンについては、負の値の座標を持つことができ、右側、あるいは下側にあるスクリーンについては `Screen height` や `Screen width` から返される値より大き値を持つことができます。 |
+| `GET MOUSE`                       | グローバル座標はスクリーンからの相対位置になります                                                                                                                                                |
+| `GET WINDOW RECT`                 | window パラメーターに -1 を渡した場合、コマンドは 0;0;0;0 を返します                                                                                                                             |
+| `On Drop database method`         | サポートされていません                                                                                                                                                              |
