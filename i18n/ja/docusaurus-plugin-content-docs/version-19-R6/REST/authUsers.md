@@ -1,27 +1,27 @@
 ---
 id: authUsers
-title: Users and sessions
+title: ユーザーとセッション
 ---
 
-REST requests can benefit from [web user sessions](WebServer/sessions.md), providing extra features such as multiple requests handling, data sharing between the web client processes, and user privileges.
+RESTリクエストは [Webユーザーセッション](WebServer/sessions.md) の恩恵を受けることができます。これにより、複数リクエストの処理や、Webクライアントプロセス間のデータ共有、ユーザー権限などの追加機能を利用することができます。
 
-As a first step to open a REST session on the 4D server, the user sending the request must be authenticated.
+4D Server上で RESTセッションを開くには、まずリクエストを送信するユーザーが認証されなければなりません。
 
-## Authenticating users
+## ユーザー認証
 
-You log in a user to your application by calling [`$directory/login`]($directory.md#directorylogin) in a POST request including the user's name and password in the header. This request calls the `On REST Authentication` database method (if it exists), where you can check the user's credentials (see example below).
+アプリケーションにユーザーをログインするには、ユーザー名とパスワードをヘッダーに含めた POSTリクエスト内で [`$directory/login`]($directory.md#directorylogin) を呼び出します。 このリクエストは `On REST Authentication` データベースメソッド (存在すれば) を呼び出します。このメソッド内でユーザーの認証をおこなうことができます (後述参照)。
 
-## Opening sessions
+## セッションの開始
 
-When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (recommended), if the `On REST Authentication` database method returns `true`, a user session is then automatically opened and you can handle it through the `Session` object and the [Session API](API/SessionClass.md). Subsequent REST requests will reuse the same session cookie.
+[スケーラブルセッションを有効化](WebServer/sessions.md#セッションの有効化) (推奨) している場合に、`On REST Authentication` データベースメソッドが `true` を返すと、ユーザーセッションは自動的に開かれ、`Session` オブジェクトおよび [Session API](API/SessionClass.md) を介して管理することができます。 後続の RESTリクエストは同じセッションcookie を使用します。
 
-If the `On REST Authentication` database method has not been defined, a `guest` session is opened.
+`On REST Authentication` データベースメソッドが定義されてない場合には、`guest` セッションが開かれます。
 
-## Example
+## 例題
 
-In this example, the user enters their email and password in an html page that requests [`$directory/login`]($directory.md#directorylogin) in a POST (it is recommended to use an HTTPS connection to send the html page). The `On REST Authentication` database method is called to validate the credentials and to set the session.
+この例では、ユーザーが htmlページにメールアドレスとパスワードを入力し、POST で [`$directory/login`]($directory.md#directorylogin) をリクエストします (htmlページの送信においては、HTTPS接続の使用が推奨されます)。 これによて呼び出された `On REST Authentication` データベースメソッドがユーザー認証をおこない、セッションを確立します。
 
-The HTML login page:
+htmlログインページ:
 
 ![alt-text](../assets/en/REST/login.png)
 
@@ -68,7 +68,7 @@ sendData({userId:document.forms['myForm'].elements['userId'].value , password:do
 
 ```
 
-When the login page is sent to the server, the `On REST Authentication` database method is called:
+サーバーにログイン情報が送信されると、`On REST Authentication` データベースメソッドが呼び出されます:
 
 ```4d
  //On REST Authentication
@@ -90,9 +90,9 @@ If ($userId#"")
 End if 
 ```
 
-> As soon as it has been called and returned `True`, the `On REST Authentication` database method is no longer called in the session.
+> 一旦呼び出されて `True` を返すと、同セッションにおいて `On REST Authentication` データベースメソッドはそれ以上呼び出されません。
 
-The `fillSession` project method initializes the user session, for example:
+`fillSession` プロジェクトメソッドは、たとえば次のようにユーザーセッションを初期化します:
 
 ```4d
 #DECLARE($sales : cs.SalesPersonsEntity)
