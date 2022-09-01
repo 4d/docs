@@ -1,6 +1,6 @@
 ---
 id: propertiesDisplay
-title: Display
+title: Affichage
 ---
 
 ---
@@ -37,13 +37,13 @@ and the user enters "proportion", the field displays:
 
 The field actually contains "proportion". 4D accepts and stores the entire entry no matter what the display format. No information is lost.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name       | Data Type | Possible Values                                                                      |
-| ---------- | --------- | ------------------------------------------------------------------------------------ |
-| textFormat | string    | "### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", custom formats |
+| Nom        | Type de données | Valeurs possibles                                                                    |
+| ---------- | --------------- | ------------------------------------------------------------------------------------ |
+| textFormat | string          | "### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", custom formats |
 
-#### Objects Supported
+#### Objets pris en charge
 
 [Drop-down List](dropdownList_Overview.md) - [Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
@@ -56,7 +56,7 @@ Date formats control the way dates appear when displayed or printed. For data en
 
 The table below shows choices available:
 
-| Format name                     | JSON String  | Example (US system)           |
+| Nom du format                   | Chaine JSON  | Exemple (système US)          |
 | ------------------------------- | ------------ | ----------------------------- |
 | System date short               | - (default)  | 03/25/20                      |
 | System date abbreviated *(1)*   | systemMedium | Wed, Mar 25, 2020             |
@@ -68,20 +68,20 @@ The table below shows choices available:
 | Internal date short             | short        | 03/25/2020                    |
 | ISO Date Time *(3)*             | iso8601      | 2020-03-25T00:00:00           |
 
-*(1)* To avoid ambiguity and in accordance with current practice, the abbreviated date formats display "jun" for June and "jul" for July. This particularity only applies to French versions of 4D.
+*(1)* Pour éviter toute ambiguïté et conformément à la pratique actuelle, les formats de date abrégés affichent "jun" pour juin et "jul" pour juillet. Cette particularité ne s'applique qu'aux versions françaises de 4D.
 
-*(2)* The year is displayed using two digits when it belongs to the interval (1930;2029) otherwise it will be displayed using four digits. This is by default but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html) command.
+*(2)* L'année est affichée avec deux chiffres lorsqu'elle appartient à l'intervalle (1930;2029), sinon elle est affichée avec quatre chiffres. Ce modèle est par défaut mais il peut être modifié à l'aide de la commande [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html).
 
-*(3)* The `ISO Date Time` format corresponds to the XML date and time representation standard (ISO8601). It is mainly intended to be used when importing/exporting data in XML format and in Web Services.
-> Regardless of the display format, if the year is entered with two digits then 4D assumes the century to be the 21st if the year belongs to the interval (00;29) and the 20th if it belongs to the interval (30;99). This is the default setting but it can be modified using the [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html) command.
+*(3)* Le format `ISO Date Time` correspond à la norme XML de représentation de la date et de l'heure (ISO8601). Il est principalement destiné à être utilisé lors de l'import/export de données au format XML et dans les services Web.
+> Quel que soit le format d'affichage, si l'année est saisie avec deux chiffres, 4D considère que le siècle est le 21ème si l'année appartient à l'intervalle (00;29) et le 20e si elle appartient à l'intervalle (30;99). Il s'agit du paramètre par défaut, mais il peut être modifié à l'aide de la commande [SET DEFAULT CENTURY](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-DEFAULT-CENTURY.301-4311596.en.html).
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name       | Data Type | Possible Values                                                                                                                                                                  |
-| ---------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dateFormat | string    | "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (can be combined with the other possible values) |
+| Nom        | Type de données | Valeurs possibles                                                                                                                                                                     |
+| ---------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| dateFormat | string          | "systemShort", "systemMedium", "systemLong", "iso8601", "rfc822", "short", "shortCentury", "abbreviated", "long", "blankIfNull" (peut être combiné avec les autres valeurs possibles) |
 
-#### Objects Supported
+#### Objets pris en charge
 
 [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
@@ -98,12 +98,12 @@ Number formats control the way numbers appear when displayed or printed. For dat
 
 In each of the number display formats, the number sign (#), zero (0), caret (^), and asterisk (*) are used as placeholders. You create your own number formats by using one placeholder for each digit you expect to display.
 
-| Placeholder | Effect for leading or trailing zero |
-| ----------- | ----------------------------------- |
-| #           | Displays nothing                    |
-| 0           | Displays 0                          |
-| ^           | Displays a space (1)                |
-| *           | Displays an asterisk                |
+| Le placeholder | Effect for leading or trailing zero |
+| -------------- | ----------------------------------- |
+| #              | Displays nothing                    |
+| 0              | Displays 0                          |
+| ^              | Displays a space (1)                |
+| *              | Displays an asterisk                |
 
 (1) The caret (^) generates a space character that occupies the same width as a digit in most fonts.
 
@@ -198,7 +198,7 @@ corresponds to the 5th time format in the pop-up menu, specifically the AM/PM ti
 
  6:56 AM
 
-### Examples
+### Exemples
 
 The following table shows how different formats affect the display of numbers. The three columns — Positive, Negative, and Zero — each show how 1,234.50, –1,234.50, and 0 would be displayed.
 
@@ -232,13 +232,13 @@ The following table shows how different formats affect the display of numbers. T
 | &5                                     | 1.23450e+3       | -1.23450e+3   | 0.00000                      |
 | &xml                                   | 1234.5           | -1234.5       | 0                            |
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name         | Data Type | Possible Values                                                |
-| ------------ | --------- | -------------------------------------------------------------- |
-| numberFormat | string    | Numbers (including a decimal point or minus sign if necessary) |
+| Nom          | Type de données | Valeurs possibles                                              |
+| ------------ | --------------- | -------------------------------------------------------------- |
+| numberFormat | string          | Numbers (including a decimal point or minus sign if necessary) |
 
-#### Objects Supported
+#### Objets pris en charge
 
 [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Progress Indicators](progressIndicator.md)
 
@@ -260,7 +260,7 @@ The **Scaled to fit** format causes 4D to resize the picture to fit the dimensio
 
 ### Truncated (centered and non-centered)
 
-`JSON grammar: "truncatedCenter" / "truncatedTopLeft"`
+`Grammaire JSON : "truncatedCenter" / "truncatedTopLeft"`
 
 The **Truncated (centered)** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 4D crops equally from each edge and from the top and bottom.
 
@@ -291,13 +291,13 @@ When the area that contains a picture with the **Replicated** format is enlarged
 
 If the field is reduced to a size smaller than that of the original picture, the picture is truncated (non-centered).
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name          | Data Type | Possible Values                                                                                       |
-| ------------- | --------- | ----------------------------------------------------------------------------------------------------- |
-| pictureFormat | string    | "truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft", "proportionalCenter" |
+| Nom           | Type de données | Valeurs possibles                                                                                     |
+| ------------- | --------------- | ----------------------------------------------------------------------------------------------------- |
+| pictureFormat | string          | "truncatedTopLeft", "scaled", "truncatedCenter", "tiled", "proportionalTopLeft", "proportionalCenter" |
 
-#### Objects Supported
+#### Objets pris en charge
 
 [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
@@ -310,27 +310,27 @@ Time formats control the way times appear when displayed or printed. For data en
 
 The table below shows the Time field display formats and gives examples:
 
-| Format name                  | JSON string  | Comments                                                                                                                                         | Example for 04:30:25          |
-| ---------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
-| HH:MM:SS                     | hh_mm_ss   |                                                                                                                                                  | 04:30:25                      |
-| HH:MM                        | hh_mm        |                                                                                                                                                  | 04:30                         |
-| Hour Min Sec                 | HH_MM_SS   |                                                                                                                                                  | 4 hours 30 minutes 25 seconds |
-| Hour Min                     | HH_MM        |                                                                                                                                                  | 4 hours 30 minutes            |
-| HH:MM AM/PM                  | hh_mm_am   |                                                                                                                                                  | 4:30 a.m.                     |
-| MM SS                        | mm_ss        | Time expressed as a duration from 00:00:00                                                                                                       | 270:25                        |
-| Min Sec                      | MM_SS        | Time expressed as a duration from 00:00:00                                                                                                       | 270 Minutes 25 Seconds        |
-| ISO Date Time                | iso8601      | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25           |
-| System time short            | - (default)  | Standard time format defined in the system                                                                                                       | 04:30:25                      |
-| System time long abbreviated | systemMedium | macOS only: Abbreviated time format defined in the system. <br/>Windows: this format is the same as the System time short format           | 4•30•25 AM                    |
-| System time long             | systemLong   | macOS only: Long time format defined in the system. <br/>Windows: this format is the same as the System time short format                  | 4:30:25 AM HNEC               |
+| Nom du format                | Chaine JSON  | Commentaires                                                                                                                                     | Exemple pour 04:30:25           |
+| ---------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------- |
+| HH:MM:SS                     | hh_mm_ss   |                                                                                                                                                  | 04:30:25                        |
+| HH:MM                        | hh_mm        |                                                                                                                                                  | 04:30                           |
+| Hour Min Sec                 | HH_MM_SS   |                                                                                                                                                  | 4 heures 30 minutes 25 secondes |
+| Hour Min                     | HH_MM        |                                                                                                                                                  | 4 heures 30 minutes             |
+| HH:MM AM/PM                  | hh_mm_am   |                                                                                                                                                  | 4:30 a.m.                       |
+| MM SS                        | mm_ss        | Heure exprimée sous forme de durée à partir de 00:00:00                                                                                          | 270:25                          |
+| Min Sec                      | MM_SS        | Heure exprimée sous forme de durée à partir de 00:00:00                                                                                          | 270 Minutes 25 Secondes         |
+| ISO Date Time                | iso8601      | Corresponds to the XML standard for representing time-related data. It is mainly intended to be used when importing/exporting data in XML format | 0000-00-00T04:30:25             |
+| System time short            | - (default)  | Standard time format defined in the system                                                                                                       | 04:30:25                        |
+| System time long abbreviated | systemMedium | macOS only: Abbreviated time format defined in the system. <br/>Windows: this format is the same as the System time short format           | 4•30•25 AM                      |
+| System time long             | systemLong   | macOS only: Long time format defined in the system. <br/>Windows: this format is the same as the System time short format                  | 4:30:25 AM HNEC                 |
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name       | Data Type | Possible Values                                                                                                                                                                                          |
-| ---------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| timeFormat | string    | "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (can be combined with the other possible values) |
+| Nom        | Type de données | Valeurs possibles                                                                                                                                                                                        |
+| ---------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| timeFormat | string          | "systemShort", "systemMedium", "systemLong", "iso8601", "hh_mm_ss", "hh_mm", "hh_mm_am", "mm_ss", "HH_MM_SS", "HH_MM", "MM_SS", "blankIfNull" (can be combined with the other possible values) |
 
-#### Objects Supported
+#### Objets pris en charge
 
 [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
 
@@ -348,19 +348,19 @@ When a [boolean expression](properties_Object.md#expression-type) is displayed a
 * **Text when True** - the text to be displayed when the value is "true"
 * **Text when False** - the text to be displayed when the value is "false"
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name          | Data Type | Possible Values                                                          |
-| ------------- | --------- | ------------------------------------------------------------------------ |
-| booleanFormat | string    | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned" |
+| Nom           | Type de données | Valeurs possibles                                                        |
+| ------------- | --------------- | ------------------------------------------------------------------------ |
+| booleanFormat | string          | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned" |
 
-#### Objects Supported
+#### Objets pris en charge
 
 [List Box Column](listbox_overview.md#list-box-columns) - [Input](input_overview.md)
 
 ---
 
-## Display Type
+## Type d'affichage
 
 Used to associate a display format with the column data. The formats provided depends on the variable type (array type list box) or the data/field type (selection and collection type list boxes).
 
@@ -368,15 +368,15 @@ Boolean and number (numeric or integer) columns can be displayed as check boxes.
 
 Boolean columns can also be displayed as pop-up menus. In this case, the [Text when False and Text when True](#text-when-false-text-when-true) properties must be defined.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name        | Data Type | Possible Values                                    |
-| ----------- | --------- | -------------------------------------------------- |
-| controlType | string    | <li>**number columns**: "automatic" (default) or "checkbox"</li><li>**boolean columns**: "checkbox" (default) or "popup"</li> |
+| Nom         | Type de données | Valeurs possibles                                  |
+| ----------- | --------------- | -------------------------------------------------- |
+| controlType | string          | <li>**number columns**: "automatic" (default) or "checkbox"</li><li>**boolean columns**: "checkbox" (default) or "popup"</li> |
 
-#### Objects Supported
+#### Objets pris en charge
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Colonne de list box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -386,13 +386,13 @@ When this property is enabled, the object is not drawn on the form, however it c
 
 In particular, this property allows implementing "invisible" buttons.  Non-rendered buttons can be placed on top of graphic objects. They remain invisible and do not highlight when clicked, however their action is triggered when they are clicked.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name    | Data Type | Possible Values |
-| ------- | --------- | --------------- |
-| display | boolean   | true, false     |
+| Nom       | Type de données | Valeurs possibles |
+| --------- | --------------- | ----------------- |
+| affichage | boolean         | true, false       |
 
-#### Objects Supported
+#### Objets pris en charge
 
 [Button](button_overview.md) - [Drop-down List](dropdownList_Overview.md)
 
@@ -400,7 +400,7 @@ In particular, this property allows implementing "invisible" buttons.  Non-rende
 
 ## Three-States
 
-Allows a check box object to accept a third state. The variable associated with the check box returns the value 2 when the check box is in the third state.
+Allows a check box object to accept a third state. La variable associée à la case à cocher retourne la valeur 2 lorsque celle-ci se trouve dans le troisième état.
 
 #### Three-states check boxes in list box columns
 
@@ -416,19 +416,19 @@ List box columns with a numeric [data type](properties_Object.md#expression-type
 
 In this case as well, the [Title](#title) property is also available so that the title of the check box can be entered.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name       | Data Type | Possible Values |
-| ---------- | --------- | --------------- |
-| threeState | boolean   | true, false     |
+| Nom        | Type de données | Valeurs possibles |
+| ---------- | --------------- | ----------------- |
+| threeState | boolean         | true, false       |
 
-#### Objects Supported
+#### Objets pris en charge
 
 [Check box](checkbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
 
 ---
 
-## Title
+## Titre de menu
 
 This property is available for a list box column if:
 
@@ -437,15 +437,15 @@ This property is available for a list box column if:
 
 In that cases, the title of the check box can be entered using this property.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name         | Data Type | Possible Values                    |
-| ------------ | --------- | ---------------------------------- |
-| controlTitle | string    | Any custom label for the check box |
+| Nom          | Type de données | Valeurs possibles                  |
+| ------------ | --------------- | ---------------------------------- |
+| controlTitle | string          | Any custom label for the check box |
 
-#### Objects Supported
+#### Objets pris en charge
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Colonne de list box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -473,23 +473,23 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 * For Pop-up type Boolean formats, labels are truncated with an ellipsis,
 * For Check box type Boolean formats, labels are always clipped.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name         | Data Type | Possible Values        |
-| ------------ | --------- | ---------------------- |
-| truncateMode | string    | "withEllipsis", "none" |
+| Nom          | Type de données | Valeurs possibles      |
+| ------------ | --------------- | ---------------------- |
+| truncateMode | string          | "withEllipsis", "none" |
 
-#### Objects Supported
+#### Objets pris en charge
 
 [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-footers)
 
 ---
 
-## Visibility
+## Visibilité
 
 This property allows hiding the object in the Application environment.
 
-You can handle the Visibility property for most form objects. This property is mainly used to simplify dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The Visibility property allows inverting this logic by making certain objects invisible by default. The developer can then program their display using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv19/help/command/en/page603.html) command when needed.
+You can handle the Visibility property for most form objects. This property is mainly used to simplify dynamic interface development. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The Visibility property allows inverting this logic by making certain objects invisible by default.
 
 #### Automatic visibility in list forms
 
@@ -504,13 +504,13 @@ This property is only used when drawing objects located in the body of a list fo
 
 4D does not take this property into account if the object was hidden using the [`OBJECT SET VISIBLE`](https://doc.4d.com/4dv19/help/command/en/page603.html) command; in this case, the object remains invisible regardless of whether or not the record is selected.
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name       | Data Type | Possible Values                                                                         |
-| ---------- | --------- | --------------------------------------------------------------------------------------- |
-| visibility | string    | "visible", "hidden", "selectedRows" (list form only), "unselectedRows" (list form only) |
+| Nom        | Type de données | Valeurs possibles                                                                       |
+| ---------- | --------------- | --------------------------------------------------------------------------------------- |
+| visibility | string          | "visible", "hidden", "selectedRows" (list form only), "unselectedRows" (list form only) |
 
-#### Objects Supported
+#### Objets pris en charge
 
 [4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
@@ -518,7 +518,7 @@ This property is only used when drawing objects located in the body of a list fo
 
 ## Wordwrap
 
-> For [input](input_overview.md) objects, available when the [Multiline](properties_Entry.md#multiline) property is set to "yes" .
+> Pour les [input](input_overview.md), disponibles lorsque la propriété [Multiligne](properties_Entry.md#multiline) est définie sur "oui".
 
 Manages the display of contents when it exceeds the width of the object.
 
@@ -559,12 +559,12 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 
 ![](../assets/en/FormObjects/wordwrap1.png)
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name     | Data Type | Possible Values                                    |
-| -------- | --------- | -------------------------------------------------- |
-| wordwrap | string    | "automatic" (excluding list box), "normal", "none" |
+| Nom      | Type de données | Valeurs possibles                                         |
+| -------- | --------------- | --------------------------------------------------------- |
+| wordwrap | string          | "automatic" (à l'exception de list box), "normal", "none" |
 
-#### Objects Supported
+#### Objets pris en charge
 
 [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers)
