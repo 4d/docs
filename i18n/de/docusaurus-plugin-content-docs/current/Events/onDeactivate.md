@@ -5,10 +5,10 @@ title: On Deactivate
 
 | Code | Can be called by | Definition                                          |
 | ---- | ---------------- | --------------------------------------------------- |
-| 12   | Form             | The form’s window ceases to be the frontmost window |
+| 12   | Formular         | The form’s window ceases to be the frontmost window |
 
 
-## Description
+## Beschreibung
 
 If the window of a form was the frontmost window, this event is called when the window is sent to the background.
 
