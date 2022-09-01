@@ -1,137 +1,137 @@
 ---
 id: webServerObject
-title: Web Server object
+title: Objeto servidor web
 ---
 
 
-A 4D project can start and monitor a web server for the main (host) application as well as each hosted component.
+Un proyecto 4D puede iniciar y monitorear un servidor web para la aplicación principal (host) así como para cada componente alojado.
 
-For example, if you installed two components in your main application, you can start and monitor up to three independant web servers from your application:
+Por ejemplo, si ha instalado dos componentes en su aplicación principal, puede iniciar y supervisar hasta tres servidores web independientes desde su aplicación:
 
-- one web server for the host application,
-- one web server for the component #1,
-- one web server for the component #2.
+- un servidor web para la aplicación local,
+- un servidor web para el componente #1,
+- un servidor web para el componente #2.
 
-Other than memory, there is no limit to the number of components and thus, of web servers, that can be attached to a single 4D application project.
+Aparte de la memoria, no hay límite en el número de componentes y por lo tanto, de servidores web, que se pueden adjuntar a un solo proyecto de aplicación 4D.
 
-Each 4D web server, including the main application's web server, is exposed as a specific **object** of the `4D.WebServer` class. Once instantiated, a web server object can be handled from the current application or from any component using a [large number of properties and functions](API/WebServerClass.md).
+Cada servidor web 4D, incluido el servidor web de la aplicación principal, se expone como un **objeto** de la clase `4D.WebServer`. Una vez instanciado, un objeto servidor web puede ser manejado desde la aplicación actual o desde cualquier componente utilizando un [gran número de propiedades y funciones](API/WebServerClass.md).
 
-> The legacy [WEB commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) of the 4D language are supported but cannot select the web server to which they apply (see below).
+> Los [comandos WEB](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) heredados del lenguaje 4D son soportados, pero no se puede seleccionar el servidor web al que se aplican (ver más abajo).
 
-Each web server (host application or component) can be used in its own separate context, including:
-- `On Web Authentication` and `On Web Connection` database method calls
-- 4D tags processing and method calls,
-- web sessions and TLS protocol management.
+Cada servidor web (aplicación local o componente) puede ser utilizado en su propio contexto independiente, incluyendo:
+- las llamadas a los métodos base `On Web Authentication` y `On Web Connection`
+- el procesamiento de las etiquetas 4D y las llamadas de métodos,
+- sesiones web y gestión del protocolo TLS.
 
-This allows you to develop independant components and features that come with their own web interfaces.
+Esto le permite desarrollar componentes independientes y funcionalidades que vienen con sus propias interfaces web.
 
 
-## Instantiating a web server object
+## Instanciar un objeto servidor web
 
-The web server object of the host application (default web server) is automatically loaded by 4D at startup. Thus, if you write in a newly created project:
+El objeto servidor web de la aplicación local (servidor web por defecto) es cargado automáticamente por 4D en al inicio. Por lo tanto, si escribe en un proyecto recién creado:
 
 ```4d
 $nbSrv:=WEB Server list.length   
-//$nbSrv value is 1
+//el valor de $nbSrv es 1
 ```
 
-To instantiate a web server object, call the [`WEB Server`](API/WebServerClass.md#web-server) command:
+Para instanciar un objeto servidor web, llame al comando [`WEB Server`](API/WebServerClass.md#web-server):
 
 ```4d
-    //create an object variable of the 4D.WebServer class
+    //crear una variable objeto de la clase 4D.WebServer
 var webServer : 4D.WebServer 
-    //call the web server from the current context
+    //llamar al servidor web desde el contexto actual
 webServer:=WEB Server  
 
-    //equivalent to
+    //equivalente a
 webServer:=WEB Server(Web server database)
 ```
 
-If the application uses components and you want to call:
-- the host application's web server from a component or
-- the server that received the request (whatever the server),
+Si la aplicación utiliza componentes y quiere llamar a:
+- el servidor web de la aplicación local a partir de un componente o
+- el servidor que ha recibido la solicitud (sin importar el servidor),
 
-you can also use:
+también se puede utilizar:
 
 ```4d
 var webServer : 4D.WebServer 
-    //call the host web server from a component  
+    //llamar al servidor web local desde un componente  
 webServer:=WEB Server(Web server host database)  
-    //call the target web server
+    //llamar al servidor web objetivo
 webServer:=WEB Server(Web server receiving request)  
 ```
 
 
-## Web server functions
+## Funciones del servidor web
 
-A [web server class object](API/WebServerClass.md#web-server-object) contains the following functions:
+Un [objeto de clase Web srver](API/WebServerClass.md#web-server-object) contiene las siguientes funciones:
 
-| Functions                                | Parameter         | Return value    | Description           |
-| ---------------------------------------- | ----------------- | --------------- | --------------------- |
-| [`start()`](API/WebServerClass.md#start) | settings (object) | status (object) | Starts the web server |
-| [`stop()`](API/WebServerClass.md#start)  | -                 | -               | Stops the web server  |
+| Funciones                                | Parámetros       | Valor devuelto  | Descripción             |
+| ---------------------------------------- | ---------------- | --------------- | ----------------------- |
+| [`start()`](API/WebServerClass.md#start) | settings (objet) | status (objeto) | Iniciar el servidor web |
+| [`stop()`](API/WebServerClass.md#start)  | -                | -               | Detener el servidor Web |
 
-To start and stop a web server, just call the [`start()`](API/WebServerClass.md#start) and [`stop()`](API/WebServerClass.md#stop) functions of the web server object:
+Para iniciar y detener un servidor web, basta con llamar a las funciones [`start()`](API/WebServerClass.md#start) y [`stop()`](API/WebServerClass.md#stop) del objeto servidor web:
 
 ```4d
 var $status : Object
-    //to start a web server with default settings
+    //para iniciar un servidor web con los parámetros por defecto
 $status:=webServer.start()
-    //to start the web server with custom settings  
+    //para iniciar el servidor web con los parámetros personalizados  
     //$settings object contains web server properties
 webServer.start($settings)
 
-    //to stop the web server
+    //para detener el servidor web
 $status:=webServer.stop()
 ```
 
 
-## Web server properties
+## Propiedades del servidor web
 
-A web server object contains [various properties](API/WebServerClass.md#web-server-object) which configure the web server.
+Un objeto servidor web contiene [varias propiedades](API/WebServerClass.md#web-server-object) que configuran el servidor web.
 
-These properties are defined:
+Estas propiedades son definidas:
 
-1. using the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function (except for read-only properties, see below),
-2. if not used, using the `WEB SET OPTION` command (host applications only),
-3. if not used, in the settings of the host application or the component.
+1. con la ayuda del parámetro `settings` de la función [`.start()`](API/WebServerClass.md#start) (excepto en el caso de las propiedades de sólo lectura, ver más adelante),
+2. si no se utiliza, utilizando el comando `WEB SET OPTION` (sólo aplicaciones locales),
+3. si no se utiliza, en los parámetros de la aplicación local o del componente.
 
-- If the web server is not started, the properties contain the values that will be used at the next web server startup.
-- If the web server is started, the properties contain the actual values used by the web server (default settings could have been overriden by the `settings` parameter of the [`.start()`](API/WebServerClass.md#start) function.
+- Si el servidor web no se inicia, las propiedades contienen los valores que se utilizarán en el próximo inicio del servidor web.
+- Si el servidor web se inicia, las propiedades contienen los valores reales utilizados por el servidor web (la configuración por defecto puede haber sido reemplazada por el parámetro `settings` de la función [`.start()`](API/WebServerClass.md#start).
 
-> *isRunning*, *name*, *openSSLVersion*, and *perfectForwardSecrecy* are read-only properties that cannot be predefined in the `settings` object parameter for the [`start()`](API/WebServerClass.md#start) function.
+> *isRunning*, *name*, *openSSLVersion* y *perfectForwardSecrecy* son propiedades de sólo lectura que no pueden predefinirse en el parámetro del objeto `settings` para la función [`start()`](API/WebServerClass.md#start).
 
 
-## Scope of the 4D Web commands
+## Alcance de los comandos 4D Web
 
-The 4D Language contains [several commands](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) that can be used to control the web server. However, these commands are designed to work with a single (default) web server. When using these commands in the context of web server objects, make sure their scope is appropriate.
+El lenguaje 4D contiene [varios comandos](https://doc.4d.com/4Dv18/4D/18/Web-Server.201-4504301.en.html) permitiendo controlar el servido Web. Sin embargo, estos comandos están diseñados para trabajar con un único servidor web (por defecto). Cuando utilice estos comandos en el contexto de los objetos servidor web, asegúrese de que su alcance es el adecuado.
 
-| Command                         | Scope                                |
-| ------------------------------- | ------------------------------------ |
-| `SET DATABASE PARAMETER`        | Host application web server          |
-| `WEB CLOSE SESSION`             | Web server that received the request |
-| `WEB GET BODY PART`             | Web server that received the request |
-| `WEB Get body part count`       | Web server that received the request |
-| `WEB Get Current Session ID`    | Web server that received the request |
-| `WEB GET HTTP BODY`             | Web server that received the request |
-| `WEB GET HTTP HEADER`           | Web server that received the request |
-| `WEB GET OPTION`                | Host application web server          |
-| `WEB Get server info`           | Host application web server          |
-| `WEB GET SESSION EXPIRATION`    | Web server that received the request |
-| `WEB Get session process count` | Web server that received the request |
-| `WEB GET STATISTICS`            | Host application web server          |
-| `WEB GET VARIABLES`             | Web server that received the request |
-| `WEB Is secured connection`     | Web server that received the request |
-| `WEB Is server running`         | Host application web server          |
-| `WEB SEND BLOB`                 | Web server that received the request |
-| `WEB SEND FILE`                 | Web server that received the request |
-| `WEB SEND HTTP REDIRECT`        | Web server that received the request |
-| `WEB SEND RAW DATA`             | Web server that received the request |
-| `WEB SEND TEXT`                 | Web server that received the request |
-| `WEB SET HOME PAGE`             | Host application web server          |
-| `WEB SET HTTP HEADER`           | Web server that received the request |
-| `WEB SET OPTION`                | Host application web server          |
-| `WEB SET ROOT FOLDER`           | Host application web server          |
-| `WEB START SERVER`              | Host application web server          |
-| `WEB STOP SERVER`               | Host application web server          |
-| `WEB Validate digest`           | Web server that received the request |
+| Comando                         | Alcance                                  |
+| ------------------------------- | ---------------------------------------- |
+| `SET DATABASE PARAMETER`        | Aplicación local del servidor web        |
+| `WEB CLOSE SESSION`             | Servidor web que ha recibido la petición |
+| `WEB GET BODY PART`             | Servidor web que ha recibido la petición |
+| `WEB Get body part count`       | Servidor web que ha recibido la petición |
+| `WEB Get Current Session ID`    | Servidor web que ha recibido la petición |
+| `WEB GET HTTP BODY`             | Servidor web que ha recibido la petición |
+| `WEB GET HTTP HEADER`           | Servidor web que ha recibido la petición |
+| `WEB GET OPTION`                | Aplicación local del servidor web        |
+| `WEB Get server info`           | Aplicación local del servidor web        |
+| `WEB GET SESSION EXPIRATION`    | Servidor web que ha recibido la petición |
+| `WEB Get session process count` | Servidor web que ha recibido la petición |
+| `WEB GET STATISTICS`            | Aplicación local del servidor web        |
+| `WEB GET VARIABLES`             | Servidor web que ha recibido la petición |
+| `WEB Is secured connection`     | Servidor web que ha recibido la petición |
+| `WEB Is server running`         | Aplicación local del servidor web        |
+| `WEB SEND BLOB`                 | Servidor web que ha recibido la petición |
+| `WEB SEND FILE`                 | Servidor web que ha recibido la petición |
+| `WEB SEND HTTP REDIRECT`        | Servidor web que ha recibido la petición |
+| `WEB SEND RAW DATA`             | Servidor web que ha recibido la petición |
+| `WEB SEND TEXT`                 | Servidor web que ha recibido la petición |
+| `WEB SET HOME PAGE`             | Aplicación local del servidor web        |
+| `WEB SET HTTP HEADER`           | Servidor web que ha recibido la petición |
+| `WEB SET OPTION`                | Aplicación local del servidor web        |
+| `WEB SET ROOT FOLDER`           | Aplicación local del servidor web        |
+| `WEB START SERVER`              | Aplicación local del servidor web        |
+| `WEB STOP SERVER`               | Aplicación local del servidor web        |
+| `WEB Validate digest`           | Servidor web que ha recibido la petición |
