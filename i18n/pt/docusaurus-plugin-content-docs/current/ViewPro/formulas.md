@@ -69,7 +69,7 @@ The following operators can be used with two operands of the same type:
 
 List of operators from most to least important:
 
-| Operator                                      | Descrção                   |
+| Operator                                      | Descrição                  |
 | --------------------------------------------- | -------------------------- |
 | ()                                            | Parenthesis (for grouping) |
 | -                                             | Negate                     |
@@ -112,7 +112,7 @@ A convenient, fast and accurate way to specify an absolute reference is to name 
 
 The following table shows the effect of the different notations:
 
-| Exemplo   | Type of reference | Descrção                                                                                                                                       |
+| Exemplo   | Type of reference | Descrição                                                                                                                                      |
 | --------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | C5        | Relativo          | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                   |
 | $C$5      | Absoluto          | Reference is absolute. Will always refer to cell C5 no matter where it is used.                                                                |
@@ -243,7 +243,7 @@ For more information on supported incoming parameter types, please refer to the 
 * [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg other types converted into png) creates a URI (data:image/png;base64,xxxx) and then used as the background in 4D View Pro in the cell where the formula is executed
 * [object](Concepts/dt_object.md) with the following two properties (allowing passing a date and time):
 
-    | Propriedade | Tipo | Descrção        |
+    | Propriedade | Tipo | Descrição       |
     | ----------- | ---- | --------------- |
     | value       | Date | Date value      |
     | time        | Real | Time in seconds |
