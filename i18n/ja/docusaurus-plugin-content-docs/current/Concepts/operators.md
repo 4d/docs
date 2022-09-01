@@ -1,55 +1,55 @@
 ---
 id: operators
-title: Operators
+title: 演算子
 ---
 
-An operator is a symbol or a group of symbols that you use to check, modify, or combine values. You are already familiar with many operators. For example, `1 + 2` uses the addition (or plus sign) operator to add two numbers together, and the result is 3. Comparison operators, like = or >, let you compare two or more values.
+演算子とは、値のチェック・変更・結合に使用する記号または記号のグループです。 日常的に使用されている演算子も多くあります。 例えば、`1 + 2` という式は加算演算子 (プラス記号) を使用し、2つの数値を足し合わせて、3という結果を返します。 = や > などの比較演算子は、2つ以上の値を比較するためのものです。
 
-The 4D language supports the operators you may already know from other languages like C or JavaScript. However, the assignment operator is `:=` to prevent it from being mistakenly used when the equal to operator (`=`) is intended. [Basic operators](#basic-operators) such as arithmetic operators (+, -, *, /, %...) and comparison operators (=, >, >=...) can be used with numbers, but also with boolean, text, date, time, pointer, or picture data types. Like JavaScript, the 4D language supports the concept of [truthy and falsy values](#truthy-and-falsy), which in use in [short-cicrcuit operators](#short-circuit-operators).
-
-
-## Terminology
-
-The 4D language supports **binary** and **ternary** operators:
-
-- binary operators operate on two targets (such as `2 + 3`) and appear in between their two targets.
-- ternary operators operate on three targets. Like C, 4D has only one ternary operator, the [ternary conditional operator](#ternary-operator) (`a ? b : c`).
-
-The values that operators affect are operands. In the expression `1 + 2`, the + symbol is a binary operator and its two operands are the values 1 and 2.
+4Dランゲージでサポートされている演算子は、C や JavaScript など他の言語でも使用されています。 ただし、等号比較演算子 (`=`) との誤用を防ぐため、代入演算子は `:=` となっています。 や、比較演算子 (=、>、>=...) などの [基本演算子](#基本演算子) は、数値のほか、ブール、テキスト、日付、時間、ポインター、ピクチャーのデータ型にも使用可能です。 JavaScript と同様に、4Dランゲージも [truthy (真的) と falsy (偽的)](#truthy-と-falsy) の概念をサポートしており、[短絡演算子](#短絡演算子) で使用されています。
 
 
+## 用語
 
-## Assignment operator
+4Dランゲージでは、**二項演算子** および **三項演算子** をサポートしています:
 
-The **assignment operator** (`a:=b`) initializes or updates the value of `a` with the value of `b`:
+- 二項演算子とは、2つの対象に対して演算をおこない、その 2つの対象の間に表示されます (例: `2＋3`)。
+- 三項演算子は 3つの対象に対して演算をおこないます。 C と同様、4D の三項演算子は 1つしかありません: 三項条件演算子 (a ? b : c) です。
+
+演算子が影響を与える対象はオペランド (被演算子) と呼ばれます。 `1 + 2` という式では、+ 記号は二項演算子であり、その 2つのオペランドは値 1 と 2 です。
+
+
+
+## 代入
+
+**代入演算子** (`a:=b`) は、`a` の値を `b` の値で初期化、または更新します。
 
 ```4d
-$myNumber:=3 //assigns 3 to MyNumber variable  
-$myDate:=!2018/01/21! //assigns a date literal
-$myLength:=Length("Acme") //assigns the result of the command (4) to $myLength
-$col:=New collection //$col is initialized with an empty collection
+$myNumber:=3 // MyNumber 変数に 3 を代入します
+$myDate:=!2018/01/21! // 日付リテラルを代入します
+$myLength:=Length("Acme") // コマンドの結果 (4) を $myLength に代入します
+$col:=New collection // $col を空のコレクションで初期化します
 ```
 
-> Do NOT confuse the assignment operator `:=` with the equality comparison operator `=`. A different assignment operator (and not `=`) was deliberately chosen to avoid issues and confusion which often occur with == or === in other programming languages. Such errors are often difficult to recognize by the compiler and lead to time-consuming troubleshooting.
+> 代入演算子 `:=` と等号比較演算子 `=` とを混同しないように注意してください。 `=` とは異なる代入演算子が採用されたのは意図的なことで、他のプログラミング言語で == や === の使用によって度々起こる間違いを避けるためです。 このような間違いはコンパイラーにとっても発見しにくく、時間を消耗するトラブルシューティングのもとです。
 
 
-## Basic operators
+## 基本演算子
 
-Operator results depend on the **data types** they are applied to. 4D supports different operators on scalar data types. They are described with the data types, in the following sections:
+演算の結果は、オペランドの **データ型** に依存します。 4D はスカラーデータ型に対して様々な演算子をサポートしています。 詳細は、各データ型の項にて説明されています:
 
-- [**Logical operators**](dt_boolean.md#logical-operators) (on **boolean** expressions)
-- [**Date operators**](dt_date.md#date-operators)
-- [**Time operators**](dt_time.md#time-operators)
-- [**Number operators**](dt_number.md#number-operators)
-- [**Bitwise operators**](dt_number.md#bitwise-operators) (on **long integer** expressions)
-- [**Picture operators**](dt_picture.md#picture-operators)
-- [**Pointer operators**](dt_pointer.md#pointer-operators)
-- [**String operators**](dt_string.md#string-operators)
+- [**論理演算子**](dt_boolean.md#論理演算子) (**ブール** 式に使用)
+- [**日付演算子**](dt_date.md#date-operators)
+- [**時間演算子**](dt_time.md#time-operators)
+- [**数値演算子**](dt_number.md#number-operators)
+- [**ビットワイズ演算子**](dt_number.md#ビットワイズ演算子) (**倍長整数** 式に使用)
+- [**ピクチャー演算子**](dt_picture.md#picture-operators)
+- [**ポインター演算子**](dt_pointer.md#pointer-operators)
+- [**文字列演算子**](dt_string.md#string-operators)
 
 
-## Compound assignment operators
+## 複合代入演算子
 
-4D provides **compound assignment operators** that combine assignment with another operation. One example is the addition assignment operator (`+=`):
+4Dでは、代入と演算を組み合わせた **複合代入演算子** をサポートしています。 その一例として、加算代入演算子 (`+=`) があります。
 
 ```4d
 $a:=1 
@@ -57,42 +57,42 @@ $a+=2 // $a=3
 ```
 
 
-The following compound assignment operators are supported:
+次の複合代入演算子がサポートされています:
 
-| Operator       | Syntax             | Assigns | Example                                                             |
-| -------------- | ------------------ | ------- | ------------------------------------------------------------------- |
-| Addition       | Text += Text       | Text    | `$t+=" World"  //$t:=$t+" World"`                                   |
-|                | Number += Number   | Number  | `$n+=5 //$n:=$n+5`                                                  |
-|                | Date += Number     | Date    | `$d+=5 //$d:=$d+5`                                                  |
-|                | Time += Time       | Time    | `$t1+=$t2 //$t1:=$t1+$t2`                                           |
-|                | Time += Number     | Number  | `$t1+=5 //$t1:=$t1+5`                                               |
-|                | Picture += Picture | Picture | `$p1+=$p2 //$p1:=$p1+$p2 (add $p2 to the right of $p1)`             |
-|                | Picture += Number  | Picture | `$p1+=5 //$p1:=$p1+5 (move $p1 horizontally 5 pixels to the right)` |
-| Subtraction    | Number -= Number   | Number  | `$n-=5 //$n:=$n-5`                                                  |
-|                | Date -= Number     | Date    | `$d-=5 //$d:=$d-5`                                                  |
-|                | Time -= Time       | Time    | `$t1-=$t2 //$t1:=$t1-$t2`                                           |
-|                | Time -= Number     | Number  | `$t1-=5 //$t1:=$t1-5`                                               |
-|                | Picture -= Number  | Picture | `$p1-=5 //$p1:=$p1-5 (move $p1 horizontally 5 pixels to the left)`  |
-| Division       | Number /= Number   | Number  | `$n/=5 //$n:=$n/5`                                                  |
-|                | Time /= Time       | Time    | `$t1/=$t2 //$t1:=$t1/$t2`                                           |
-|                | Time /= Number     | Number  | `$t1/=5 //$t1:=$t1/5`                                               |
-|                | Picture /= Picture | Picture | `$p1/=$p2 //$p1:=$p1/$p2 (add $p2 to the bottom of $p1)`            |
-|                | Picture /= Number  | Picture | `$p1/=5 //$p1:=$p1/5 (move $p1 vertically 5 pixels)`                |
-| Multiplication | Text *= Number     | Text    | `$t*="abc"  //$t:=$t*"abc"`                                         |
-|                | Number *= Number   | Number  | `$n*=5 //$n:=$n*5`                                                  |
-|                | Time *= Time       | Time    | `$t1*=$t2 //$t1:=$t1*$t2`                                           |
-|                | Time *= Number     | Number  | `$t1*=5 //$t1:=$t1*5`                                               |
-|                | Picture *= Number  | Picture | `$p1*=5 //$p1:=$p1*5 (resize $p1 by 5)`                             |
+| 演算子      | シンタックス             | 代入される型  | 例題                                             |
+| -------- | ------------------ | ------- | ---------------------------------------------- |
+| 加算 (足し算) | Text += Text       | テキスト    | `$t+=" World"  //$t:=$t+" World"`              |
+|          | Number += Number   | 数値      | `$n+=5 //$n:=$n+5`                             |
+|          | Date += Number     | 日付      | `$d+=5 //$d:=$d+5`                             |
+|          | Time += Time       | 時間      | `$t1+=$t2 //$t1:=$t1+$t2`                      |
+|          | Time += Number     | 数値      | `$t1+=5 //$t1:=$t1+5`                          |
+|          | Picture += Picture | Picture | `$p1+=$p2 //$p1:=$p1+$p2 ($p1 の右に $p2 を追加します)` |
+|          | Picture += Number  | Picture | `$p1+=5 //$p1:=$p1+5 ($p1 を 5ピクセル右に移動します)`     |
+| 減算 (引き算) | Number -= Number   | 数値      | `$n-=5 //$n:=$n-5`                             |
+|          | Date -= Number     | 日付      | `$d-=5 //$d:=$d-5`                             |
+|          | Time -= Time       | 時間      | `$t1-=$t2 //$t1:=$t1-$t2`                      |
+|          | Time -= Number     | 数値      | `$t1-=5 //$t1:=$t1-5`                          |
+|          | Picture -= Number  | Picture | `$p1-=5 //$p1:=$p1-5 ($p1 を 5ピクセル左に移動します)`     |
+| 除算 (割り算) | Number /= Number   | 数値      | `$n/=5 //$n:=$n/5`                             |
+|          | Time /= Time       | 時間      | `$t1/=$t2 //$t1:=$t1/$t2`                      |
+|          | Time /= Number     | 数値      | `$t1/=5 //$t1:=$t1/5`                          |
+|          | Picture /= Picture | Picture | `$p1/=$p2 //$p1:=$p1/$p2 ($p1 の下に $p2 を追加します)` |
+|          | Picture /= Number  | Picture | `$p1/=5 //$p1:=$p1/5 ($p1 を 5ピクセル垂直に移動します)`    |
+| 乗算 (かけ算) | Text *= Number     | テキスト    | `$t*="abc"  //$t:=$t*"abc"`                    |
+|          | Number *= Number   | 数値      | `$n*=5 //$n:=$n*5`                             |
+|          | Time *= Time       | 時間      | `$t1*=$t2 //$t1:=$t1*$t2`                      |
+|          | Time *= Number     | 数値      | `$t1*=5 //$t1:=$t1*5`                          |
+|          | Picture *= Number  | Picture | `$p1*=5 //$p1:=$p1*5 ($p1 を 5倍にリサイズします)`       |
 
-These operators apply on any [assignable expressions](quick-tour.md#assignable-vs-non-assignable-expressions) (except pictures as object properties or collection elements).
+これらの演算子は、あらゆる [代入可能な式](quick-tour.md#代入可-vs-代入不可の式) に適用できます (オブジェクトのプロパティやコレクション要素としてのピクチャーを除く)。
 
-The operation "source `operator` value" is not strictly equivalent to "source := source `operator` value" because the expression designating the source (variable, field, object property, collection element) is only evaluated once. For example, in such expression as `getPointer()->+=1` the `getPointer` method is called only once.
+"代入先 複合代入演算子 値" と "代入先 := 代入先 演算子 値" は、厳密には等価ではありません。なぜなら、前者の場合、代入先 (変数・フィールド・オブジェクトプロパティ・コレクション要素) は一度しか評価されないからです。 たとえば、`getPointer()->+=1` のような式では、`getPointer` メソッドは一度だけ呼び出されます。
 
-> [Character indexing in text](dt_string.md#character-reference-symbols) and [byte indexing in blob](dt_blob.md#accessing-a-scalar-blobs-bytes) do not support these operators.
-#### Examples
+> [テキストの文字インデックス](dt_string.md#文字参照記号) および [BLOB のバイトインデックス](dt_blob.md#スカラーBLOB-のバイトへのアクセス) では、これらの演算子はサポートされません。
+#### 例題
 
 ```4d
-// Addition
+// 加算
 $x:=2
 $x+=5 //$x=7
 
@@ -102,7 +102,7 @@ $t+=" World" //$t="Hello World"
 $d:=!2000-11-10!
 $d+=10 //$d=!2000-11-20!
 
-// Subtraction
+// 減算
 $x1:=10
 $x1-=5 //$x1=5
 
@@ -126,30 +126,30 @@ $t2*=2 // $t2="HelloHello"
 
 
 
-## Short-circuit operators
+## 短絡演算子
 
-The **&&** and **||** operators are **short circuit operators**. A short circuit operator is one that doesn't necessarily evaluate all of its operands.
+演算子 **&&** と **||** は、短絡演算子です。 短絡演算子とは、必ずしもすべてのオペランドを評価しない演算子のことです。
 
-The difference with the single [**&** and **|** boolean operators](dt_boolean.md#logical-operators) is that the short-circuit operators **&&** and **||** don't return a boolean value. They evaluate expressions as [truthy or falsy](#truthy-and-falsy), then return one of the expressions.
+[**&** や **|** 論理演算子](dt_boolean.md#論理演算子) と異なる点は、短絡演算子の **&&** と **||** はブール値を返さないことです。 これらは式を [truthy (真的) または falsy (偽的)](#truthy-と-falsy) で評価し、どちらかの式を返します。
 
-### Short-circuit AND operator (&&)
+### AND 短絡演算子 (&&)
 
-The rule is as follows:
+ルールは以下の通りです。
 
-Given `Expr1 && Expr2`:
+`Expr1 && Expr2` において:
 
-The short-circuit AND operator evaluates operands from left to right, returning immediately with the value of the first falsy operand it encounters; if all values are [truthy](#truthy-and-falsy), the value of the last operand is returned.
+AND短絡演算子はオペランドを左から右へ評価し、falsy と評価された最初のオペランドの値を直ちに返します。 すべての値が [truthy](#truthy-と-falsy) であれば、最後のオペランドの値が返されます。
 
-The following table summarizes the different cases for the **&&** operator:
+次の表は、**&&** 演算子の様々なケースをまとめたものです:
 
-| Expr1  | Expr2  | Value returned |
-| ------ | ------ | -------------- |
-| truthy | truthy | Expr2          |
-| truthy | falsy  | Expr2          |
-| falsy  | truthy | Expr1          |
-| falsy  | falsy  | Expr1          |
+| Expr1  | Expr2  | 返される値 |
+| ------ | ------ | ----- |
+| truthy | truthy | Expr2 |
+| truthy | falsy  | Expr2 |
+| falsy  | truthy | Expr1 |
+| falsy  | falsy  | Expr1 |
 
-#### Example 1
+#### 例題 1
 
 ```4d
 var $v : Variant
@@ -161,13 +161,13 @@ $v:=5 && !00-00-00! // 00/00/00
 $v := 5 && 10 && "hello" //"hello"
 ```
 
-#### Example 2
+#### 例題 2
 
-Say you have an online store, and some products have a tax rate applied, and others don't.
+オンラインストアで、税率が適用される商品とされない商品があるとします。
 
-To calculate the tax, you multiply the price by the tax rate, which may not have been specified.
+税金を計算するには、価格に税率をかけますが、税率は指定されていない場合があります。
 
-So you can write this:
+そこで、次のように書くことができます:
 
 ```4d
 var $tax : Variant
@@ -175,42 +175,42 @@ var $tax : Variant
 $tax:=$item.taxRate && ($item.price*$item.taxRate)
 ```
 
-`$tax` will be NULL if taxRate is NULL (or undefined), otherwise it will store the result of the calculation.
+taxRate が NULL (または未定義) の場合、`$tax` は NULL となり、それ以外の場合には計算結果が格納されます。
 
-#### Example 3
+#### 例題 3
 
-Short-circuit operators are useful in tests such as:
+短絡演算子は、次のようなテストに有効です:
 
 ```4d
 If(($myObject#Null) && ($myObject.value>10))
-    //code
+    // コード
 End if
 ```
 
-If $myObject is Null, the second argument is not executed, thus no error is thrown.
+もし $myObject が Null であれば、第2引数は実行されないため、エラーは発生しません。
 
-### Short-circuit OR operator (||)
+### OR 短絡演算子 (||)
 
-The || operator returns the value of one of the specified operands. The expression is evaluated left to right and tested for possible "short-circuit" evaluation using the following rule:
+|| 演算子は、指定されたオペランドのうち 1つの値を返します。 式は左から右に評価され、以下のルールに基づいて "短絡" 評価の可能性をテストされます。
 
-Given `Expr1 || Expr2`:
+`Expr1 || Expr2` において:
 
-If Expr1 is [truthy](#truthy-and-falsy), Expr2 is not evaluated and the calculation returns Expr1.
+Expr1 が [truthy](#truthy-と-falsy) であれば、Expr2 は評価されず、計算は Expr1 を返します。
 
-If Expr1 is [falsy](#truthy-and-falsy), the calculation returns Expr2.
+Expr1 が [falsy](#truthy-と-falsy) の場合、計算は Expr2 を返します。
 
-The following table summarizes the different cases and the value returned for the **||** operator:
+次の表は、**||** 演算子の様々なケースと返される値をまとめたものです:
 
-| Expr1  | Expr2  | Value returned |
-| ------ | ------ | -------------- |
-| truthy | truthy | Expr1          |
-| truthy | falsy  | Expr1          |
-| falsy  | truthy | Expr2          |
-| falsy  | falsy  | Expr2          |
+| Expr1  | Expr2  | 返される値 |
+| ------ | ------ | ----- |
+| truthy | truthy | Expr1 |
+| truthy | falsy  | Expr1 |
+| falsy  | truthy | Expr2 |
+| falsy  | falsy  | Expr2 |
 
-#### Example 1
+#### 例題 1
 
-Say you have a table called Employee. Some employees have entered a phone number, and others haven't. This means that `$emp.phone` could be NULL, and you cannot assign NULL to a Text variable. But you can write the following:
+Employee というテーブルがあるとします。 従業員には電話番号を入力している人と入力していない人がいます。 つまり、`$emp.phone` は NULL である可能性があり、テキスト変数に NULL を代入することはできません。 そこで、次のように書くことができます:
 
 ```4d
 var $phone : Text
@@ -218,13 +218,13 @@ var $phone : Text
 $phone:=$emp.phone || "n/a"
 ```
 
-In which case `$phone` will store either a phone number or the "n/a" string.
+この場合、`$phone` には電話番号か、"n/a" という文字列のどちらかが格納されます。
 
-#### Example 2
+#### 例題 2
 
-Given a table called Person with a *name* field, as well as a *maiden name* field for married women.
+*name* フィールドと、既婚女性のための *maiden name* (旧姓) フィールドを持つ Person テーブルがあるとします。
 
-The following example checks if there is a maiden name and stores it in a variable, otherwise it simply stores the person's name:
+次の例は、旧姓データがあれば変数に格納し、なければその人の名前を変数に格納します。
 
 ```4d
 var $name: Text
@@ -232,91 +232,91 @@ var $name: Text
 $name:=$person.maidenName || $person.name
 ```
 
-### Precedence
+### 優先順位
 
-The `&&` and `||` operators have the same precedence as the logical operators `&` and `|`, and are evaluated left to right.
+演算子 `&&` と `||` は、論理演算子 `&` および `|` と同じ優先順位を持ち、左から右へ評価されます。
 
-This means that `a || b && c` is evaluated as `(a || b) && c`.
+つまり、`a || b && c` は、`(a || b) && c` として評価されます。
 
 
-## Ternary operator
+## 三項演算子
 
-The ternary conditional operator allows you to write one-line conditional expressions. For example, it can replace a full sequence of [If…Else](./cf_branching.md#ifelseend-if) statements.
+三項演算子を使うと、条件式を 1行で書くことができます。 たとえば、[If...Else](./cf_branching.md#ifelseend-if) 文を完全に置き換えることができます。
 
-It takes three operands in the following order:
+三項演算子は 3つのオペランドを次の順序で受け取ります:
 
-* a condition followed by a question mark (?)
-* an expression to execute if the condition is [truthy](#truthy-and-falsy), followed by a colon (:)
-* an expression to execute if the condition is [falsy](#truthy-and-falsy)
+* 条件とクエスチョンマーク (?)
+* 条件が [truthy](#truthy-と-falsy) である場合に実行される式、その後にコロン (:)
+* 条件が [falsy](#truthy-と-falsy) の場合に実行される式
 
-### Syntax
+### シンタックス
 
-The syntax is as follows:
+シンタックスは次のとおりです:
 
-`condition ? exprIfTruthy : exprIfFalsy`
+`条件 ? truthy時の式 : falsy時の式`
 
-> Since the [token syntax](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html) uses colons, we recommend inserting a space after the colon `:` or enclosing tokens using parentheses to avoid any conflicts.
+> [トークンシンタックス](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.ja.html) にはコロンが使われているため、競合を避けるには、コロン `:` の後にスペースを入れる、または、トークンは括弧でくくることが推奨されます。
 
-### Examples
+### 例題
 
-#### A simple example
+#### 単純な例
 
 ```4d
 var $age : Integer
 var $beverage : Text
 
 $age:=26
-$beverage:=($age>=21) ? "Beer" : "Juice"
+$beverage:=($age>=20) ? "ビール" : "ジュース"
 
-ALERT($beverage) // "Beer"
+ALERT($beverage) // "ビール"
 ```
 
-#### Handling data from a table
+#### テーブルのデータを扱う例
 
-This example stores a person's full name in a variable, and handles the case when no first name or last name has been specified:
+この例では、人のフルネームを変数に格納し、ファーストネームやラストネームが指定されていないケースに対応します:
 
 ```4d
 var $fullname : Text
 
-// If one of the names is missing, store the one that exists, otherwise store an empty string
+// どちらか片方の情報が欠けている場合には存在する方を格納し、両方存在しない場合は空の文字列を格納します。
 $fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$person.lastname) : ($person.lastname || $person.firstname) || ""
 ```
 
-## Truthy and falsy
+## Truthy と Falsy
 
-As well as a type, each value also has an inherent Boolean value, generally known as either **truthy** or **falsy**.
+各値はデータ型のほかに、固有のブール値を持ちます。 このブール値は **truthy** (真的) または **falsy** (偽的) です。
 
-> **truthy** and **falsy** values are only evaluated by [short-circuit](#short-circuit-operators) and [ternary](#ternary-operator) operators.
+> **truthy** および **falsy** の値は[短絡演算子](#短絡演算子) および [三項演算子](#三項演算子) の場合にのみ評価されます。
 
-The following values are **falsy**:
+以下の値は **falsy** です:
 
 * false
 * Null
 * undefined
-* Null object
-* Null collection
-* Null pointer
-* Null picture
-* Null date !00-00-00!
-* "" - Empty strings
-* [] - Empty collections
-* {} - Empty objects
+* Null オブジェクト
+* Null コレクション
+* Null ポインター
+* Null ピクチャー
+* Null 日付 !00-00-00!
+* "" - 空の文字列
+* [] - 空のコレクション
+* {} - 空のオブジェクト
 
-All other values are considered **truthy**, including:
+上記以外の値はすべて **truthy** と評価されます。
 
-* 0 - numeric zero (Integer or otherwise)
+* 0 - 数値のゼロ (整数かどうかを問わず)
 
-In 4D, **truthy** and **falsy** evaluation reflects the **usability** of a value, which means that a truthy value exists and can be processed by the code without generating errors or unexpected results. The rationale behind this is to provide a convenient way to handle *undefined* and *null* values in objects and collections, so that a reduced number of [If…Else](./cf_branching.md#ifelseend-if) statements are necessary to avoid runtime errors.
+4Dでは、**truthy** と **falsy** の評価は値の **使用性** を反映します。 つまり、truthy な値は存在し、エラーや予期せぬ結果を発生させずにコードによって処理できることを意味します。 その目的は、オブジェクトやコレクションにおける *undefined* や *null* 値を扱うための便利な方法を提供し、実行時エラーを回避するのに必要な [If...Else](./cf_branching.md#ifelseend-if) 文の数を少なくすることにあります。
 
-For example, when you use a [short-circuit OR operator](#short-circuit-or-operator-):
+たとえば、[OR 短絡演算子](#or-短絡演算子-) を使用すると:
 
 ```4d
 $value:=$object.value || $defaultValue
 ```
 
-... you get the default value whenever *$object* does not contain the `value` property OR when it is *null*. So this operator checks the existence or usability of the value instead of a specific value. Note that because the numerical value 0 exists and is usable, it is not treated specially, thus it is **truthy**.
+*$object* が `value` プロパティを含まない場合、または同プロパティが *null* の場合に、デフォルト値が代入されます。 つまり、この演算子は特定の値ではなく、その値の存在や使用性をチェックするのです。 なお、数値の 0 は存在しており使用可能であるため、特別に扱われることはなく、**truthy** です。
 
-Regarding values representing collections, objects, or strings, "empty" values are considered **falsy**. It is handy when you want to assign a default value whenever an empty one is encountered.
+コレクション、オブジェクト、文字列を表す値については、"空" の値は**falsy** とみなされます。 これは、空の値に遭遇したときに、デフォルト値を割り当てたい場合に便利です。
 
 ```4d
 $phone:=$emp.phone || "n/a"
