@@ -8,7 +8,7 @@ title: '$filter'
 Allows to query the data in a dataclass or method *(e.g.*, `$filter="firstName!='' AND salary>30000"`)
 
 
-## Description
+## Beschreibung
 
 This parameter allows you to define the filter for your dataclass or method.
 
@@ -70,17 +70,17 @@ You can search in the object by writing the following:
 
 The comparator must be one of the following values:
 
-| Comparator | Description              |
-| ---------- | ------------------------ |
-| =          | equals to                |
-| !=         | not equal to             |
-| >          | greater than             |
-| >=         | greater than or equal to |
-| <          | less than                |
-| <=         | less than or equal to    |
-| begin      | begins with              |
+| Comparator | Beschreibung            |
+| ---------- | ----------------------- |
+| =          | equals to               |
+| !=         | not equal to            |
+| >          | größer als              |
+| >=         | größer als oder gleich  |
+| <          | kleiner als             |
+| <=         | kleiner als oder gleich |
+| begin      | begins with             |
 
-## Examples
+## Beispiele
 
 In the following example, we look for all employees whose last name begins with a "j":
 
