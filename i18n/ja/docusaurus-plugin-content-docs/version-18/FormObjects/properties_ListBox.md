@@ -1,186 +1,186 @@
 ---
 id: propertiesListBox
-title: List Box
+title: リストボックス
 ---
 
 ---
 
-## Columns
+## 列
 
-Collection of columns of the list box.
+リストボックス列のコレクション。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name    | Data Type                    | Possible Values                                  |
-| ------- | ---------------------------- | ------------------------------------------------ |
-| columns | collection of column objects | Contains the properties for the list box columns |
+| 名称      | データタイプ         | とりうる値                 |
+| ------- | -------------- | --------------------- |
+| columns | 列オブジェクトのコレクション | リストボックス列のプロパティを格納します。 |
 
-For a list of properties supported by column objects, please refer to the [Column Specific Properties](listbox_overview#column-specific-properties) section.
+列オブジェクトに関してサポートされているプロパティの一覧については [列特有のプロパティ](listbox_overview#列特有のプロパティ) の章を参照してください。
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[List Box](listbox_overview.md)
-
----
-
-## Detail Form Name
-
-`Selection type list box`
-
-Specifies the form to use for modifying or displaying individual records of the list box.
-
-The specified form is displayed:
-
-* when using `Add Subrecord` and `Edit Subrecord` standard actions applied to the list box (see [Using standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Using-standard-actions.300-4354811.en.html)),
-* when a row is double-clicked and the [Double-click on Row](#double-click-on-row) property is set to "Edit Record" or "Display Record".
-
-#### JSON Grammar
-
-| Name       | Data Type | Possible Values           |
-| ---------- | --------- | ------------------------- |
-| detailForm | string    | <ul><li>Name (string) of table or project form</li><li>POSIX path (string) to a .json file describing the form</li><li>Object describing the form</li></ul> |
-
-#### Objects Supported
-
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
 
 ---
 
-## Double-click on row
+## 詳細フォーム名
 
-`Selection type list box`
+`セレクション型リストボックス`
 
-Sets the action to be performed when a user double-clicks on a row in the list box. The available options are:
+リストボックスの個々のレコードを編集・表示する際に使用するフォームを指定します。
 
-* **Do nothing** (default): Double-clicking a row does not trigger any automatic action.
-* **Edit Record**: Double-clicking a row displays the corresponding record in the detail form defined [for the list box](#detail-form-name). The record is opened in read-write mode so it can be modified.
-* **Display Record**: Identical to the previous action, except that the record is opened in read-only mode so it cannot be modified.
-> Double-clicking an empty row is ignored in list boxes.
+指定されたフォームは以下のタイミングで表示されます:
 
-Regardless of the action selected/chosen, the `On Double clicked` form event is generated.
+* リストボックスに関連付けられている `addSubrecord` (サブレコード追加)、または `editSubrecord` (サブレコード編集) の標準アクションを使用したとき ([標準アクションの使用](https://doc.4d.com/4Dv18/4D/18/Using-standard-actions.300-4575640.ja.html) を参照してください)。
+* [行をダブルクリック](#行をダブルクリック) プロパティが「レコード編集」か「レコード表示」に設定されている場合に行をダブルクリックしたとき。
 
-For the last two actions, the On `Open Detail` form event is also generated. The `On Close Detail` is then generated when a record displayed in the detail form associated with the list box is about to be closed (regardless of whether or not the record was modified).
+#### JSON 文法
 
-#### JSON Grammar
+| 名称         | データタイプ | とりうる値                     |
+| ---------- | ------ | ------------------------- |
+| detailForm | string | <ul><li>テーブルまたはプロジェクトフォームの名前 (文字列)</li><li>フォームを定義する .json ファイルへの POSIX パス (文字列)</li><li>フォームを定義するオブジェクト</li></ul> |
 
-| Name                   | Data Type | Possible Values                     |
-| ---------------------- | --------- | ----------------------------------- |
-| doubleClickInRowAction | string    | "editSubrecord", "displaySubrecord" |
+#### 対象オブジェクト
 
-#### Objects Supported
-
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
 
 ---
 
-## Highlight Set
+## 行をダブルクリック
 
-`Selection type list box`
+`セレクション型リストボックス`
 
-This property is used to specify the set to be used to manage highlighted records in the list box (when the **Arrays** data source is selected, a Boolean array with the same name as the list box is used).
+ユーザーがリストボックスの行をダブルクリックした際に実行されるアクションを指定します。 選択可能なオプションは以下の通りです:
 
-4D creates a default set named *ListBoxSetN* where *N* starts at 0 and is incremented according to the number of list boxes in the form. If necessary, you can modify the default set. It can be a local, process or interprocess set (we recommend using a local set, for example *$LBSet*, in order to limit network traffic). It is then maintained automatically by 4D. If the user selects one or more rows in the list box, the set is updated immediately. If you want to select one or more rows by programming, you can apply the commands of the “Sets” theme to this set.
-> * The highlighted status of the list box rows and the highlighted status of the table records are completely independent.
-> * If the “Highlight Set” property does not contain a name, it will not be possible to make selections in the list box.
+* **何もしない** (デフォルト): 行をダブルクリックしても自動アクションは発動しません。
+* **レコード編集**: 行をダブルクリックすると、リストボックスに設定された [詳細フォーム](#詳細フォーム名) に当該レコードが表示されます レコードは読み書き可能モードで開かれるので、編集が可能です。
+* **レコード表示**: レコード編集と同様の挙動をしますが、レコードは読み取り専用モードで開かれるため、編集はできません。
+> 空の行へのダブルクリックは無視されます。
 
-#### JSON Grammar
+選択されているアクションに関わらず、`On Double Clicked` フォームイベントが生成されます。
 
-| Name         | Data Type | Possible Values |
-| ------------ | --------- | --------------- |
-| highlightSet | string    | Name of the set |
+「レコード編集」「レコード表示」のアクションに関しては `On Open Detail` フォームイベントも生成されます。 リストボックスに関連付けられた詳細フォームに表示されたレコードが閉じられる際には `On Close Detail` フォームイベントが生成されます (レコードが編集されたかどうかは問いません)。
 
-#### Objects Supported
+#### JSON 文法
 
-[List Box](listbox_overview.md)
+| 名称                     | データタイプ | とりうる値                               |
+| ---------------------- | ------ | ----------------------------------- |
+| doubleClickInRowAction | string | "editSubrecord", "displaySubrecord" |
+
+#### 対象オブジェクト
+
+[リストボックス](listbox_overview.md)
 
 ---
 
-## Locked columns and static columns
+## ハイライトセット
 
-Locked columns and static columns are two separate and independent functionalities in list boxes:
+`セレクション型リストボックス`
 
-* Locked columns always stay displayed to the left of the list box; they do not scroll horizontally.
-* Static columns cannot be moved by drag and drop within the list box.
-> You can set static and locked columns by programming, refer to [List Box](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box.201-4310263.en.html) in the [4D Language Reference](https://doc.4d.com/4Dv17R6/4D/17-R6/4D-Language-Reference.100-4310216.en.html) manual.
+このプロパティを使用して、リストボックス中でハイライトされたレコードを管理するために使用するセット名を指定します (**配列** データソースが指定されている場合には、リストボックスに割り当てた変数と同じ名前のブール配列をこの用途で使用します)。
 
-These properties interact as follows:
+4D は *ListBoxSetN* (*N* は 0 から始まり、フォーム上のリストボックスオブジェクトの数に従い増分されます) という名前のデフォルトセットを作成しますが、 必要に応じてこの名前を変更できます。 セットはローカル、プロセスおよびインタープロセスセットを使用できます (ネットワークトラフィックを制限するため、*$LBSet* のようなローカルセットの使用を推奨します)。 指定されたセットは 4D が自動で管理します。 ユーザーが 1つ以上の行を選択すると、セットは即座に更新されます。 プログラムを使用して行を選択したい場合、"セット" テーマのコマンドをこのセットに適用できます。
+> * リストボックス行のハイライトステータスとテーブルレコードのハイライトステータスは完全に独立しています。
+> * "ハイライトセット" プロパティに名前が指定されていない場合、リストボックス中で行を選択することはできません。
 
-* If you set columns that are only static, they cannot be moved.
+#### JSON 文法
 
-* If you set columns that are locked but not static, you can still change their position freely within the locked area. However, a locked column cannot be moved outside of this locked area.
+| 名称           | データタイプ | とりうる値  |
+| ------------ | ------ | ------ |
+| highlightSet | string | セットの名称 |
+
+#### 対象オブジェクト
+
+[リストボックス](listbox_overview.md)
+
+---
+
+## スクロールしない列とドラッグしない列
+
+リストボックスのスクロールしない列とドラッグしない列はそれぞれ独立して動作します:
+
+* スクロールしない列は常にリストボックスの左側に表示され、横スクロールされません。
+* ドラッグしない列は、リストボックス中でドラッグ＆ドロップによる列の移動ができません。
+> これらのプロパティはプログラミングによって設定することも可能です。詳細は [4Dランゲージリファレンス](https://doc.4d.com/4Dv18/4D/18/4D-Language-Reference.100-4504285.ja.html) マニュアルの [リストボックス](https://doc.4d.com/4Dv18/4D/18/List-Box.201-4504332.ja.html) を参照ください。
+
+これらのプロパティは以下のように相互作用します:
+
+* 列を "ドラッグしない" のみを設定した場合、その列は移動することができません。
+
+* 列を "スクロールしない" のみに設定した場合、横スクロールしないエリア内に限りドラッグで列を移動することができます。 しかし、そのスクロールしないエリアを越えて移動することはできません。
 
 ![](../assets/en/FormObjects/property_lockedStaticColumns1.png)
 
-* If you set all of the columns in the locked area as static, you cannot move these columns within the locked area.
+* "スクロールしない" 列と "ドラッグしない" 列を同じ数に設定した場合、スクロールしないエリア内ではドラッグで移動することもできません。
 
 ![](../assets/en/FormObjects/property_lockedStaticColumns2.png)
 
-* You can set a combination of locked and static columns according to your needs. For example, if you set three locked columns and one static column, the user can swap the two right-most columns within the locked area (since only the first column is static).
+* 必要に応じてスクロールしない列数とドラッグしない列数をそれぞれ設定できます。 たとえば、スクロールしない列を 3、ドラッグしない列を 1に設定した場合、ユーザーは横スクロールしないエリア内で右側 2つの列を入れ替えることができます。
 
-### Number of Locked Columns
+### スクロールしない列数
 
-Number of columns that must stay permanently displayed in the left part of the list box, even when the user scrolls through the columns horizontally.
+ユーザーが横スクロールしても、リストボックスの左側に常に表示される列の数を指定します。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name              | Data Type | Possible Values |
-| ----------------- | --------- | --------------- |
-| lockedColumnCount | integer   | minimum: 0      |
+| 名称                | データタイプ | とりうる値  |
+| ----------------- | ------ | ------ |
+| lockedColumnCount | 整数     | 最小値: 0 |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
 
-### Number of Static Columns
+### ドラッグしない列数
 
-Number of columns that cannot be moved during execution.
+実行時にドラッグで移動できない列の数を指定します。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name              | Data Type | Possible Values |
-| ----------------- | --------- | --------------- |
-| staticColumnCount | integer   | minimum: 0      |
+| 名称                | データタイプ | とりうる値  |
+| ----------------- | ------ | ------ |
+| staticColumnCount | 整数     | 最小値: 0 |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[List Box](listbox_overview.md)
-
----
-
-## Number of Columns
-
-Sets the number of columns of the list box.
-> You can add or remove columns dynamically by programming, using commands such as [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.en.html) or [LISTBOX DELETE COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.en.html).
-
-#### JSON Grammar
-
-| Name        | Data Type | Possible Values |
-| ----------- | --------- | --------------- |
-| columnCount | integer   | minimum: 1      |
-
-#### Objects Supported
-
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
 
 ---
 
-## Row Control Array
+## 列数
 
-`Array type list box`
+リストボックスに表示される列の数を指定します。
+> [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.ja.html) や [LISTBOX DELETE COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.ja.html) などのコマンドを使うことで、プログラミングによって列数を動的に変更 (列の追加・削除) することができます。
 
-A 4D array controlling the display of list box rows.
+#### JSON 文法
 
-You can set the "hidden", "disabled" and "selectable" interface properties for each row in an array-based list box using this array. It can also be designated using the `LISTBOX SET ARRAY` command.
+| 名称          | データタイプ | とりうる値  |
+| ----------- | ------ | ------ |
+| columnCount | 整数     | 最小値: 1 |
 
-The row control array must be of the Longint type and include the same number of rows as the list box. Each element of the *Row Control Array* defines the interface status of its corresponding row in the list box. Three interface properties are available using constants in the "List Box" constant theme:
+#### 対象オブジェクト
 
-| Constant                 | Value | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-| ------------------------ | ----- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| lk row is disabled       | 2     | The corresponding row is disabled. The text and controls such as check boxes are dimmed or grayed out. Enterable text input areas are no longer enterable. Default value: Enabled                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| lk row is hidden         | 1     | The corresponding row is hidden. Hiding rows only affects the display of the list box. The hidden rows are still present in the arrays and can be managed by programming. The language commands, more particularly `LISTBOX Get number of rows` or `LISTBOX GET CELL POSITION`, do not take the displayed/hidden status of rows into account. For example, in a list box with 10 rows where the first 9 rows are hidden, `LISTBOX Get number of rows` returns 10. From the user’s point of view, the presence of hidden rows in a list box is not visibly discernible. Only visible rows can be selected (for example using the Select All command). Default value: Visible |
-| lk row is not selectable | 4     | The corresponding row is not selectable (highlighting is not possible). Enterable text input areas are no longer enterable unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. Controls such as check boxes and lists are still functional however. This setting is ignored if the list box selection mode is "None". Default value: Selectable                                                                                                                                                                                                                                                                                        |
+[リストボックス](listbox_overview.md)
 
-To change the status for a row, you just need to set the appropriate constant(s) to the corresponding array element. For example, if you do not want row #10 to be selectable, you can write:
+---
+
+## 行コントロール配列
+
+`配列型リストボックス`
+
+リストボックス行の表示を管理するための 4D配列です。
+
+配列型リストボックスの任意行の "非表示"、"無効化"、"選択可能" プロパティを管理するために、この配列を使用します。 このプロパティは `LISTBOX SET ARRAY` コマンドを使用して設定することができます。
+
+行コントロール配列は、リストボックス内の要素数と同じ数を含んでいる倍長整数型の配列でなければなりません。 *行コントロール配列* の各要素は対応する行のインターフェースステータスを定義します。 "リストボックス" 定数テーマの定数を使って、3つのインターフェースプロパティが利用可能です:
+
+| 定数                       | Value | 説明                                                                                                                                                                                                                                                                                                                                                                   |
+| ------------------------ | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| lk row is disabled       | 2     | 対応する行は無効化されています。 テキストや、チェックボックスなどのコントロール類は暗くなっているかグレーアウトされています。 入力可能なテキスト入力エリアは入力可能ではありません。 デフォルト値: 有効化                                                                                                                                                                                                                                                              |
+| lk row is hidden         | 1     | 対応する行は非表示です。 行を非表示にすることは、リストボックスの見た目にのみ影響します。 非表示の行は配列内には存在し、プログラミングを通して管理可能です。 ランゲージコマンド (具体的には `LISTBOX Get number of rows` または `LISTBOX GET CELL POSITION`) は行の表示/非表示のステータスを考慮しません。 たとえば、10行あるリストボックスの、最初の 9行が非表示になっていた場合、`LISTBOX Get number of rows` は10を返します。 ユーザーの視点では、リストボックス内の非表示行の存在は視覚的には認識できません。 表示されいている行のみが (たとえば、"すべてを選択" コマンドなどで) 選択可能です。 デフォルト値: 表示 |
+| lk row is not selectable | 4     | 対応する行は選択可能になっていません (ハイライトできません)。 入力可能なテキスト入力エリアは [シングルクリック編集](properties_Entry.md#シングルクリック編集) オプションが有効になっていない限り入力可能ではありません。 しかしながら、チェックボックスなどのコントロールとリストは機能しています。 この設定はリストボックスの選択モードが "なし" の場合には無視されます。 デフォルト値: 選択可能                                                                                                                                                 |
+
+行のステータスを変えるためには、対応する配列の要素に適切な定数を設定するだけです。 たとえば、10行目を選択不可能に設定したい場合、以下のように書くことができます:
 
 ```4d
  aLControlArr{10}:=lk row is not selectable
@@ -188,7 +188,7 @@ To change the status for a row, you just need to set the appropriate constant(s)
 
 ![](../assets/en/FormObjects/listbox_styles5.png)
 
-You can define several interface properties at once:
+複数のインターフェースプロパティを同時に定義することもできます:
 
 ```4d
  aLControlArr{8}:=lk row is not selectable + lk row is disabled
@@ -196,42 +196,42 @@ You can define several interface properties at once:
 
 ![](../assets/en/FormObjects/listbox_styles6.png)
 
-Note that setting properties for an element overrides any other values for this element (if not reset). For example:
+要素に対してプロパティを設定すると、(再設定しない限り) 同要素の他の値を上書きするという点に注意してください。 例:
 
 ```4d
  aLControlArr{6}:=lk row is disabled + lk row is not selectable
- //sets row 6 as disabled AND not selectable
+ // 6行目を無効化し、かつ選択不可に設定します
  aLControlArr{6}:=lk row is disabled
- //sets row 6 as disabled but selectable again
+ // 6行目を無効化するが、選択不可を再設定していないので選択が可能となります
 ```
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name             | Data Type | Possible Values        |
-| ---------------- | --------- | ---------------------- |
-| rowControlSource | string    | Row control array name |
+| 名称               | データタイプ | とりうる値        |
+| ---------------- | ------ | ------------ |
+| rowControlSource | string | 行コントロール配列の名称 |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
 
 ---
 
-## Selection Mode
+## 選択モード
 
-Designates the option for allowing users to select rows:
+リストボックス行の選択モードを指定します:
 
-* **None**: Rows cannot be selected if this mode is chosen. Clicking on the list will have no effect unless the [Single-Click Edit](properties_Entry.md#single-click-edit) option is enabled. The navigation keys only cause the list to scroll; the `On Selection Change` form event is not generated.
-* **Single**: One row at a time can be selected in this mode. Clicking on a row will select it. A **Ctrl+click** (Windows) or **Command+click** (macOS) on a row toggles its state (between selected or not).  
-  The Up and Down arrow keys select the previous/next row in the list. The other navigation keys scroll the list. The `On Selection Change` form event is generated every time the current row is changed.
-* **Multiple**: Several rows can be selected simultaneously in this mode.
+* **なし**: 行を選択することはできません。 [シングルクリック編集](properties_Entry.md#シングルクリック編集) オプションがチェックされている場合を除き、リストボックスをクリックしても効果はありません。 ナビゲーションキーを使用しても、リストをスクロールするだけとなり、その際に `On Selection Change` フォームイベントは生成されません。
+* **単一**: 一度に一行のみ選択できます。 クリックすることで、行を選択できます。 **Ctrl+クリック** (Windows) や **Command+クリック** (macOS) を使うと、対象行の選択状態 (選択・非選択) が切り替わります。  
+  上下キーを使うとリストの前後の行が選択されます。 その他のナビゲーションキーはリストをスクロールします。 カレントの行が変更されるたびに、`On Selection Change` フォームイベントが生成されます。
+* **複数**: 標準のショートカットを使用して複数行を同時に選択できます。
 
-#### JSON Grammar
+#### JSON 文法
 
-| Name          | Data Type | Possible Values              |
-| ------------- | --------- | ---------------------------- |
-| selectionMode | string    | "multiple", "single", "none" |
+| 名称            | データタイプ | とりうる値                        |
+| ------------- | ------ | ---------------------------- |
+| selectionMode | string | "multiple", "single", "none" |
 
-#### Objects Supported
+#### 対象オブジェクト
 
-[List Box](listbox_overview.md)
+[リストボックス](listbox_overview.md)
