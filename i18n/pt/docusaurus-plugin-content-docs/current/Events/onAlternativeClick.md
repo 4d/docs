@@ -3,13 +3,13 @@ id: onAlternativeClick
 title: On Alternative Click
 ---
 
-| Code | Can be called by                                                                                                                                             | Definition                                         |
+| Code | Can be called by                                                                                                                                             | Definição                                          |
 | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------- |
 | 38   | [Button](FormObjects/button_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | <li>Buttons: The "arrow" area of a button is clicked</li><li>List boxes: In a column of an object array, an ellipsis button ("alternateButton" attribute) is clicked</li> |
 
-## Description
+## Descrção
 
-### Buttons
+### Botões
 
 Some button styles can be [linked to a pop-up menu](FormObjects/properties_TextAndPicture.md#with-pop-up-menu) and display an triangle. Clicking on this triangle causes a selection pop-up to appear that provides a set of alternative actions in relation to the primary button action.
 
