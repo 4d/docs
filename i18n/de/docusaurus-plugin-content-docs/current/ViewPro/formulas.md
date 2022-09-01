@@ -42,11 +42,11 @@ All formulas have operands and operators:
 
 4D View Pro supports five types of data. For each data type, specific literal values and operators are supported.
 
-| Data types                        | Values                                                | Operators                                                                                                                                                                                                                                              |
+| Data types                        | Values                                                | Operatoren                                                                                                                                                                                                                                             |
 | --------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Number](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (addition)<br/>- (subtraction)<br/>* (multiplication)<br/>/ (division)<br/>^ (exponent, the number of times to multiply a number by itself)<br/>% (percentage -- divide the number before the operator by one hundred) |
-| [Date](Concepts/dt_date.md)       | 10/24/2017                                            | + (date + number of days -> date)<br/>+ (date + time -> date + time of day)<br/>- (date - number of days -> date)<br/>- (date - date -> number of days between the two)                                                              |
-| [Time](Concepts/dt_time.md)       | 10:12:10                                              | Duration operators:<br/>+ (addition)<br/>- (subtraction)<br/>* (duration * number -> duration)<br/>/ (duration / number -> duration)                                                                                         |
+| [Zahl](Concepts/dt_number.md)     | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (addition)<br/>- (subtraction)<br/>* (multiplication)<br/>/ (division)<br/>^ (exponent, the number of times to multiply a number by itself)<br/>% (percentage -- divide the number before the operator by one hundred) |
+| [Datum](Concepts/dt_date.md)      | 10/24/2017                                            | + (date + number of days -> date)<br/>+ (date + time -> date + time of day)<br/>- (date - number of days -> date)<br/>- (date - date -> number of days between the two)                                                              |
+| [Zeit](Concepts/dt_time.md)       | 10:12:10                                              | Duration operators:<br/>+ (addition)<br/>- (subtraction)<br/>* (duration * number -> duration)<br/>/ (duration / number -> duration)                                                                                         |
 | [String](Concepts/dt_string.md)   | 'Sophie' or "Sophie"                                  | & (concatenation)                                                                                                                                                                                                                                      |
 | [Boolean](Concepts/dt_boolean.md) | TRUE or FALSE                                         | -                                                                                                                                                                                                                                                      |
 
@@ -55,21 +55,21 @@ All formulas have operands and operators:
 
 The following operators can be used with two operands of the same type:
 
-| Operator   | Comparison               |
-| ---------- | ------------------------ |
-| =          | equal to                 |
-| `<>` | different than           |
-| >          | greater than             |
-| <          | less than                |
-| >=         | greater than or equal to |
-| <=         | less than or equal to    |
+| Operator   | Comparison              |
+| ---------- | ----------------------- |
+| =          | equal to                |
+| `<>` | different than          |
+| >          | größer als              |
+| <          | kleiner als             |
+| >=         | größer als oder gleich  |
+| <=         | kleiner als oder gleich |
 
 
 ### Operator precedence
 
 List of operators from most to least important:
 
-| Operator                                      | Description                |
+| Operator                                      | Beschreibung               |
 | --------------------------------------------- | -------------------------- |
 | ()                                            | Parenthesis (for grouping) |
 | -                                             | Negate                     |
@@ -112,7 +112,7 @@ A convenient, fast and accurate way to specify an absolute reference is to name 
 
 The following table shows the effect of the different notations:
 
-| Example   | Type of reference | Description                                                                                                                                    |
+| Beispiel  | Type of reference | Beschreibung                                                                                                                                   |
 | --------- | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | C5        | Relative          | Reference is to the relative location of cell C5, depending on the location of the cell in which the reference is first used                   |
 | $C$5      | Absolute          | Reference is absolute. Will always refer to cell C5 no matter where it is used.                                                                |
@@ -138,14 +138,14 @@ See [**SpreadJS's extented list of functions**](https://www.grapecity.com/spread
 4D custom functions provide access, from within your 4D View Pro formulas, to:
 
 - 4D process variables,
-- fields,
-- project methods,
+- felder,
+- projektmethoden,
 - 4D language commands,
 - or any valid 4D expression.
 
 4D custom functions can receive [parameters](#parameters) from the 4D View Pro area, and return values.
 
-You declare all your functions using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method. Examples:
+You declare all your functions using the [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions) method. Beispiele:
 
 ```4d
 o:=New object
@@ -210,7 +210,7 @@ We want to print "Hello World" in a 4D View Pro area cell using a 4D project met
 
 
 
-### Parameters
+### Parameter
 
 Parameters can be passed to 4D functions that call project methods using the following syntax:
 
@@ -243,10 +243,10 @@ For more information on supported incoming parameter types, please refer to the 
 * [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg other types converted into png) creates a URI (data:image/png;base64,xxxx) and then used as the background in 4D View Pro in the cell where the formula is executed
 * [object](Concepts/dt_object.md) with the following two properties (allowing passing a date and time):
 
-    | Property | Type | Description     |
-    | -------- | ---- | --------------- |
-    | value    | Date | Date value      |
-    | time     | Real | Time in seconds |
+    | Property | Typ   | Beschreibung    |
+    | -------- | ----- | --------------- |
+    | wert     | Datum | Datumswert      |
+    | time     | Zahl  | Time in seconds |
 
 If the 4D method returns nothing, an empty string is automatically returned.
 
@@ -255,7 +255,7 @@ An error is returned in the 4D View Pro cell if:
 *   the 4D method returns another type other than those listed above,
 *   an error occurred during 4D method execution (when user clicks on "abort" button).
 
-#### Example
+#### Beispiel
 
 ```4d
 var $o : Object
@@ -310,7 +310,7 @@ For example, if you declared the "Name" field of the "People" table in the virtu
 
 > If a field has the same name as a [4D method], it takes priority over the method.
 
-#### Example
+#### Beispiel
 
 We want to print the name of a person in a 4D View Pro area cell using a 4D virtual field:
 
@@ -363,5 +363,5 @@ To be called in a 4D View Pro formula, a project method must be:
 *   **Allowed**: it was explicitly declared using the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method.
 *   **Runnable**: it belongs to the host project or a loaded component with the "Shared by components and host project" option enabled (see [Sharing of project methods](../Concepts/components.md#sharing-of-project-methods)).
 *   **Not in conflict** with an existing 4D View Pro spreadsheet function: if you call a project method with the same name as a 4D View Pro built-in function, the function is called.
-> If neither the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) nor the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. In this case, the project method names must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see *Data Access*) is ignored in all cases.
+> > If neither the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) nor the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. In this case, the project method names must comply with JavaScript Identifier Grammar (see [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6)). The global filtering option in the Settings dialog box (see *Data Access*) is ignored in all cases.
 
