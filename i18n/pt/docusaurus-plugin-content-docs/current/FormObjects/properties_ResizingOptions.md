@@ -3,7 +3,7 @@ id: propertiesResizingOptions
 title: Resizing Options
 ---
 
-## Column Auto-Resizing
+## Autodimensionamento coluna
 
 When this property is enabled (`rightToLeft` value in JSON), list box columns are automatically resized along with the list box, within the limits of the [minimum](properties_CoordinatesAndSizing.md#minimum-width) and [maximum](properties_CoordinatesAndSizing.md#maximum-width) widths defined.
 
@@ -31,9 +31,9 @@ If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https:/
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values         |
-| ------------ | --------- | ----------------------- |
-| resizingMode | string    | "rightToLeft", "legacy" |
+| Nome         | Tipo de dados | Possible Values         |
+| ------------ | ------------- | ----------------------- |
+| resizingMode | string        | "rightToLeft", "legacy" |
 
 #### Objects Supported
 
@@ -41,24 +41,24 @@ If a cell in the fake column is clicked, the [LISTBOX GET CELL POSITION](https:/
 
 ---
 
-## Horizontal Sizing
+## Dimensionamento horizontal
 
 This property specifies if the horizontal size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
 
 Three options are available:
 
-| Option | JSON value | Result                                                                                                                 |
-| ------ | ---------- | ---------------------------------------------------------------------------------------------------------------------- |
-| Grow   | "grow"     | The same percentage is applied to the object’s width when the user resizes the width of the window,                    |
-| Move   | "move"     | The object is moved the same amount left or right as the width increase when the user resizes the width of the window, |
-| None   | "fixed"    | The object remains stationary when the form is resized                                                                 |
+| Option   | Valor JSON | Resultados                                                                                                             |
+| -------- | ---------- | ---------------------------------------------------------------------------------------------------------------------- |
+| Agrandar | "grow"     | The same percentage is applied to the object’s width when the user resizes the width of the window,                    |
+| Mover    | "move"     | The object is moved the same amount left or right as the width increase when the user resizes the width of the window, |
+| Nenhum   | "fixed"    | The object remains stationary when the form is resized                                                                 |
 > This property works in conjunction with the [Vertical Sizing](#vertical-sizing) property.
 
 #### JSON Grammar
 
-| Name    | Data Type | Possible Values         |
-| ------- | --------- | ----------------------- |
-| sizingX | string    | "grow", "move", "fixed" |
+| Nome    | Tipo de dados | Possible Values         |
+| ------- | ------------- | ----------------------- |
+| sizingX | string        | "grow", "move", "fixed" |
 
 #### Objects Supported
 
@@ -66,24 +66,24 @@ Three options are available:
 
 ---
 
-## Vertical Sizing
+## Dimensionamento vertical
 
 This property specifies if the vertical size of an object should be moved or resized when a user resizes the form. It can also be set dynamically by the `OBJECT SET RESIZING OPTIONS` language command.
 
 Three options are available:
 
-| Option | JSON value | Result                                                                                                               |
-| ------ | ---------- | -------------------------------------------------------------------------------------------------------------------- |
-| Grow   | "grow"     | The same percentage is applied to the object's height when the user resizes the width of the window,                 |
-| Move   | "move"     | The object is moved the same amount up or down as the height increase when the user resizes the width of the window, |
-| None   | "fixed"    | The object remains stationary when the form is resized                                                               |
+| Option   | Valor JSON | Resultados                                                                                                           |
+| -------- | ---------- | -------------------------------------------------------------------------------------------------------------------- |
+| Agrandar | "grow"     | The same percentage is applied to the object's height when the user resizes the width of the window,                 |
+| Mover    | "move"     | The object is moved the same amount up or down as the height increase when the user resizes the width of the window, |
+| Nenhum   | "fixed"    | The object remains stationary when the form is resized                                                               |
 > This property works in conjunction with the [Horizontal Sizing](#horizontal-sizing) property.
 
 #### JSON Grammar
 
-| Name    | Data Type | Possible Values         |
-| ------- | --------- | ----------------------- |
-| sizingY | string    | "grow", "move", "fixed" |
+| Nome    | Tipo de dados | Possible Values         |
+| ------- | ------------- | ----------------------- |
+| sizingY | string        | "grow", "move", "fixed" |
 
 #### Objects Supported
 
@@ -105,13 +105,13 @@ When this property is not applied to the splitter, the result is as follows:
 
 #### JSON Grammar
 
-| Name         | Data Type |           Possible Values            |
-|:------------ |:---------:|:------------------------------------:|
-| splitterMode |  string   | "move" (pusher), "resize" (standard) |
+| Nome         | Tipo de dados |           Possible Values            |
+|:------------ |:-------------:|:------------------------------------:|
+| splitterMode |    string     | "move" (pusher), "resize" (standard) |
 
 #### Objects Supported
 
-[Splitter](splitters.md)
+[Separador](splitters.md)
 
 ---
 
@@ -121,9 +121,9 @@ Designates if the size of the column can be modified by the user.
 
 #### JSON Grammar
 
-| Name      | Data Type | Possible Values |
-|:--------- |:---------:|:---------------:|
-| resizable |  boolean  | "true", "false" |
+| Nome      | Tipo de dados | Possible Values |
+|:--------- |:-------------:|:---------------:|
+| resizable |    boolean    | "true", "false" |
 
 #### Objects Supported
 
