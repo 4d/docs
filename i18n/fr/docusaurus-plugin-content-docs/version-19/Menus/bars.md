@@ -1,39 +1,39 @@
 ---
 id: bars
-title: Menu bar features
+title: Barres de menus
 ---
 
-Menu bars provide the major interface for custom applications. For each custom application, you must create at least one menu bar with at least one menu. By default, Menu Bar #1 is the menu bar displayed in the Application environment. You can change which menu bar is displayed using the `SET MENU BAR` command.
+Les barres de menu fournissent la principale interface des applications personnalisées. Pour chaque application personnalisée, vous devez créer au moins une barre de menu avec au moins un menu. Par défaut, Menu Bar #1 est la barre de menu qui est affichée dans l'application. Vous pouvez modifier la barre de menu affichée à l'aide de la commande `SET MENU BAR`.
 
-4D lets you associate a custom splash screen picture with each menu bar and to preview this menu bar at any time.
+4D vous permet d’associer une image d’accueil personnalisée à chaque barre de menus et de prévisualiser une barre à tout moment.
 
-## Splash screen
+## Image d'accueil
 
-You can enhance the appearance of each menu bar by associating a custom splash screen with it. The window containing the splash screen is displayed below the menu bar when it appears. It can contain a logo or any type of picture. By default, 4D displays the 4D logo in the splash screen:
+Vous pouvez enrichir l’apparence de chaque barre de menus en lui associant une image d’accueil personnalisée. La fenêtre contenant l’image d’accueil est affichée en-dessous de la barre de menus lorsqu’elle apparaît. Elle peut contenir un logo ou tout type d’image. Par défaut, 4D affiche un logo comme image dans la fenêtre d’accueil :
 
 ![](../assets/en/Menus/splash1.png)
 
-A custom splash screen picture can come from any graphic application. 4D lets you paste a clipboard picture or use any picture present on your hard disk. Any standard picture format supported by 4D can be used.
+Une image d’accueil personnalisée peut provenir de toute application graphique. 4D vous permet de coller une image du presse-papiers, d’utiliser une image de la bibliothèque ou toute image présente sur votre disque dur. Tous les formats d’image standard pris en charge par 4D sont utilisables.
 
-The splash screen picture can be set only in the Menu editor: select the menu bar with which you want to associate the custom splash screen. Note the "Background Image" area in the right-hand part of the window. To open a picture stored on your disk directly, click on the **Open** button or click in the "Background Image" area. A pop-up menu appears:
+L'image d'accueil peut être uniquement paramétrée dans l'éditeur de menus : sélectionnez la barre de menus à laquelle vous souhaitez associer une image d’accueil personnalisée. Notez la zone "Image de fond" à droite de la fenêtre. Pour ouvrir directement une image stockée sur votre disque, cliquez sur le bouton **Ouvrir** ou cliquez dans la zone “Image de fond”. Un pop up menu apparaît :
 
-- To paste a picture from the clipboard, choose **Paste**.
-- To open a picture stored in a disk file, choose **Open**. If you choose Open, a standard Open file dialog box will appear so that you can select the picture file to be used. Once set, the picture is displayed in miniature in the area. It is then associated with the menu bar.
+- Pour coller une image se trouvant dans le Presse-papiers, choisissez la commande **Coller**.
+- Pour ouvrir une image stockée dans un fichier disque, choisissez la commande **Ouvrir**. Si vous avez choisi la commande Ouvrir, une boîte de dialogue standard d’ouverture de fichiers apparaît, vous permettant de sélectionner le fichier image à utiliser. Une fois définie, l’image s’affiche en taille réduite dans la zone. Elle est alors associée à la barre de menus.
 
 ![](../assets/en/Menus/splash2.png)
 
-You can view the final result by testing the menu bar (see the following section). In Application mode, the picture is displayed in the splash screen with the "Truncated (Centered)" type format.
+Vous pouvez visualiser le résultat final en testant la barre de menus (cf. paragraphe suivant). En mode Application, l’image est affichée dans la fenêtre d’accueil avec un format du type “tronqué centré”.
 
-> You can choose whether to display or hide this window using the **Display toolbar** option in the Settings.
+> Vous pouvez choisir d’afficher ou de masquer cette fenêtre en cochant l'option **Afficher la barre d'outils** dans les Propriétés.
 
-To remove the custom picture and display the default one instead, click on the **Clear** button or select **Clear** in the area pop-up menu.
+Pour supprimer l’image personnalisée et afficher l’image par défaut, cliquez sur le bouton **Effacer** ou cliquez dans la zone “Image de fond” et choisissez la commande **Effacer** dans le pop up menu.
 
-## Previewing menu bars
+## Prévisualiser la barre de menus
 
-The Menu Bar editor lets you view the custom menus and splash screen at any time, without closing the toolbox window.
+L’éditeur de menus vous permet de visualiser à tout moment les menus personnalisés et la fenêtre d’accueil sans quitter la fenêtre de la boîte à outils.
 
-To do so, simply select the menu bar and choose **Test the menu bar "Menu Bar #X"** in the context menu or the options menu of the editor.
+Pour cela, il vous suffit de sélectionner la barre de menus et de choisir la commande **Tester la barre de menus “Barre n°N”** dans le menu contextuel ou le menu d’options de l’éditeur.
 
 ![](../assets/en/Menus/splash3.png)
 
-4D displays a preview of the menu bar as well as the splash screen. You can scroll down the menus and sub-menus to preview their contents. However, these menus are not active. To test the functioning of menus and the toolbar, you must use the **Test Application** command from the **Run** menu.
+4D affiche un aperçu de la barre de menus ainsi que de l’écran d’accueil. Vous pouvez dérouler les menus et les sous-menus pour prévisualiser leur contenu. En revanche, les menus ne sont pas actifs. Pour pouvoir tester le fonctionnement des menus et la barre d’outils, vous devez utiliser la commande **Tester l’application** dans le menu **Exécution**.
