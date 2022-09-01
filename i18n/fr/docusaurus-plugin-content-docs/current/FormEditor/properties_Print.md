@@ -1,14 +1,14 @@
 ---
 id: print
-title: Print
+title: Imprimer
 ---
 
 
 ## Settings
 
-Allows defining specific print settings for the form. This feature is useful to view printing page limits in the form editor.
+Permet de définir des paramètres d'impression spécifiques pour le formulaire. Cette fonctionnalité est utile pour afficher les limites de pages d'impression dans l'éditeur de formulaire.
 
-> **Compatibility:** Even if these settings are taken into account when the form is printed in Application mode, it is discouraged to rely on this feature to store print settings for the form, due to limitations regarding the platform and driver dependency. It is highly recommended to use the 4D commands `Print settings to BLOB`/`BLOB to print settings` which are more powerful.
+> **Compatibilité** : Même si ces paramètres sont pris en compte lors de l'impression du formulaire en mode Application, il est déconseillé de s'appuyer sur cette fonctionnalité pour stocker les paramètres d'impression du formulaire, en raison des limitations liées à la plateforme et au pilote. It is highly recommended to use the 4D commands `Print settings to BLOB`/`BLOB to print settings` which are more powerful.
 
 You can modify the following print settings:
 
@@ -22,16 +22,16 @@ You can modify the following print settings:
 
 
 
-#### JSON Grammar
+#### Grammaire JSON
 
-| Name        | Data Type | Possible Values                                                                      |
-| ----------- | --------- | ------------------------------------------------------------------------------------ |
-| pageFormat  | object    | Available print properties: paperName, paperWidth, paperHeight, orientation, scale   |
-| paperName   | string    | "A4", "US Letter"...                                                                 |
-| paperWidth  | string    | Used if a paper named paperName was not found. Requires unit suffix: pt, in, mm, cm. |
-| paperHeight | string    | Used if a paper named paperName was not found. Requires unit suffix: pt, in, mm, cm. |
-| orientation | string    | "landscape" (default is "portrait")                                                  |
-| scale       | number    | minimum: 0                                                                           |
+| Nom         | Type de données | Valeurs possibles                                                                    |
+| ----------- | --------------- | ------------------------------------------------------------------------------------ |
+| pageFormat  | object          | Available print properties: paperName, paperWidth, paperHeight, orientation, scale   |
+| paperName   | string          | "A4", "US Letter"...                                                                 |
+| paperWidth  | string          | Used if a paper named paperName was not found. Requires unit suffix: pt, in, mm, cm. |
+| paperHeight | string          | Used if a paper named paperName was not found. Requires unit suffix: pt, in, mm, cm. |
+| orientation | string          | "landscape" (default is "portrait")                                                  |
+| scale       | number          | minimum : 0                                                                          |
 
 
 ---
