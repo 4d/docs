@@ -3,16 +3,16 @@ id: version
 title: '$version'
 ---
 
-Image version number
+Número de versión de la imagen
 
-## Description
+## Descripción
 
-`$version` is the image's version number returned by the server. The version number, which is sent by the server, works around the browser's cache so that you are sure to retrieve the correct image.
+`$version` es el número de versión de la imagen devuelto por el servidor. El número de versión, que es enviado por el servidor, funciona en torno a la memoria caché del navegador para que usted esté seguro de recuperar la imagen correcta.
 
-The value of the image's version parameter is modified by the server.
+El valor del parámetro de versión de la imagen es modificado por el servidor.
 
-## Example
+## Ejemplo
 
-The following example defines the image format to JPEG regardless of the actual type of the photo and passes the actual version number sent by the server:
+El siguiente ejemplo define el formato de la imagen a JPEG independientemente del tipo real de la foto y pasa el número de versión real enviado por el servidor:
 
  `GET  /rest/Employee(1)/photo?$imageformat=jpeg&$version=3&$expand=photo`
