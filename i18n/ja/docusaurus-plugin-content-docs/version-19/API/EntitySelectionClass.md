@@ -4,11 +4,11 @@ title: EntitySelection
 ---
 
 
-An entity selection is an object containing one or more reference(s) to [entities](ORDA/dsMapping.md#entity) belonging to the same [Dataclass](ORDA/dsMapping.md#dataclass). An entity selection can contain 0, 1 or X entities from the dataclass -- where X can represent the total number of entities contained in the dataclass.
+エンティティセレクションとは、同じ [データクラス](ORDA/dsMapping.md#データクラス) に所属する一つ以上の [エンティティ](ORDA/dsMapping.md#エンティティ) への参照を格納しているオブジェクトのことです。 エンティティセレクションは、データクラスから 0個、1個、あるいは X個のエンティティを格納することができます (X はデータクラスに格納されているエンティティの総数です)。
 
-Entity selections can be created from existing selections using various functions of the [`DataClass` class](DataClassClass.md) such as [`.all()`](DataClassClass.md#all) or [`.query()`](DataClassClass.md#query), or functions of the `EntityClass` class itself, such as [`.and()`](#and) or [`orderBy()`](#orderby). You can also create blank entity selections using the [`dataClass.newSelection()`](DataClassClass.md#newselection) function or the [`Create new selection`](#create-new-selection) command.
+[`.all()`](DataClassClass.md#all)、[`.query()`](DataClassClass.md#query) などの [`DataClass` クラス](DataClassClass.md) の関数や、[`.and()`](#and)、[`orderBy()`](#orderby) など `EntitySelectionClass` クラス自身の関数を用いて、既存のセレクションからエンティティセレクションを作成することができます 。 また、[`dataClass.newSelection()`](DataClassClass.md#newselection) 関数または [`Create entity selection`](#create-new-selection) コマンドを使用して、空のエンティティセレクションを作成することもできます。
 
-### Summary
+### 概要
 
 |                                                                                                                                                                                              |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -49,50 +49,50 @@ Entity selections can be created from existing selections using various function
 **Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #_command_.Create entity selection.Params -->
-| Parameter | Type               |    | Description                                                                                   |
-| --------- | ------------------ |:--:| --------------------------------------------------------------------------------------------- |
-| dsTable   | Table              | -> | Table in the 4D database whose current selection will be used to build the entity selection   |
-| settings  | Object             | -> | Build option: context                                                                         |
-| Result    | 4D.EntitySelection | <- | Entity selection matching the dataclass related to the given table|<!-- END REF -->
+| 引数       | タイプ                |    | 詳細                                                          |
+| -------- | ------------------ |:--:| ----------------------------------------------------------- |
+| dsTable  | Table              | -> | エンティティセレクションの元となるカレントセレクションが属する 4Dデータベースのテーブル               |
+| settings | Object             | -> | ビルドオプション: context                                           |
+| Result   | 4D.EntitySelection | <- | 指定したテーブルに対応するデータクラスのエンティティセレクション|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
-The `Create entity selection` command builds and returns a new, [alterable](ORDA/entities.md#shareable-or-alterable-entity-selections) entity selection related to the dataclass matching the given *dsTable*, according to the current selection of this table.
+`Create entity selection` コマンドは、*dsTable* で指定したテーブルに対応するデータクラスの [追加可能な](ORDA/entities.md#共有可能追加可能なエンティティセレクション) 新規エンティティセレクションを、同テーブルのカレントセレクションに基づいてビルドして返します。
 
-If the current selection is sorted, an [ordered](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) entity selection is created (the order of the current selection is kept). If the current selection is unsorted, an unordered entity selection is created.
+ソートされたカレントセレクションの場合、[順列のある](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) エンティティセレクションが作成されます (カレントセレクションの並び順が受け継がれます)。 カレントセレクションがソートされていない場合、順列のないエンティティセレクションが作成されます。
 
-If the *dsTable* is not exposed in [`ds`](API/DataStoreClass.md#ds), an error is returned. This command cannot be used with a Remote datastore.
+[`ds`](API/DataStoreClass.md#ds) において *dsTable* が公開されていない場合には、エラーが返されます。 リモートデータストアの場合は、このコマンドは使用できません。
 
-In the optional *settings* parameter, you can pass an object containing the following property:
+任意の *settings* には、以下のプロパティを持つオブジェクトを渡せます:
 
-| Property | Type | Description                                                                                                       |
-| -------- | ---- | ----------------------------------------------------------------------------------------------------------------- |
-| context  | Text | Label for the [optimization context](ORDA/entities.md#clientserver-optimization) applied to the entity selection. |
+| プロパティ   | タイプ  | 詳細                                                                      |
+| ------- | ---- | ----------------------------------------------------------------------- |
+| context | テキスト | エンティティセレクションに適用されている [最適化コンテキスト](ORDA/entities.md#クライアントサーバーの最適化) のラベル。 |
 
-#### Example
+#### 例題
 
 ```4d
 var $employees : cs.EmployeeSelection
 ALL RECORDS([Employee])
 $employees:=Create entity selection([Employee])
-// The $employees entity selection now contains a set of reference
-// on all entities related to the Employee dataclass
+// $employees エンティティセレクションには、
+// Employee データクラスの全エンティティへの参照が格納されています
 ```
 
-#### See also
+#### 参照
 
 [`dataClass.newSelection()`](DataClassClass.md#newselection)
 
 <!-- REF EntitySelectionClass.index.Desc -->
 ## &#91;*index*&#93;
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| バージョン | 内容 |
+| ----- | -- |
+| v17   | 追加 |
 
 </details>
 
@@ -100,37 +100,37 @@ $employees:=Create entity selection([Employee])
 
 ***&#91;index&#93;*** : 4D.Entity<!-- END REF -->
 
-#### Description
+#### 詳細
 
 The `EntitySelection[index]` notation <!-- REF EntitySelectionClass.index.Summary -->allows you to access entities within the entity selection using the standard collection syntax<!-- END REF -->: pass the position of the entity you want to get in the *index* parameter.
 
-Note that the corresponding entity is reloaded from the datastore.
+対応するエンティティはデータストアから再読み込みされる点に注意してください。
 
-*index* can be any number between 0 and `.length`-1.
+*index* には、0 と `.length`-1 の範囲内で数値を指定することができます。
 
-* If *index* is out of range, an error is returned.
-* If *index* corresponds to a dropped entity, a Null value is returned.
-> **Warning**: `EntitySelection[index]` is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like [`.lock()`](EntityClass.md#lock) or [`.save()`](EntityClass.md#save). To work with the corresponding entity, you need to assign the returned expression to an assignable expression, such as a variable. Examples:
+* *index* が範囲外だった場合、エラーが返されます。
+* If *attributeName* kind is `storage`: `.attributeName` returns a collection of values of the same type as *attributeName*.
+> > **Warning**: `EntitySelection[index]` is a non assignable expression, which means that it cannot be used as en editable entity reference with methods like [`.lock()`](EntityClass.md#lock) or [`.save()`](EntityClass.md#save). エンティティを操作するには、戻り値を変数などの代入可能な式に割り当てる必要があります。 例:
 
 ```4d
- $sel:=ds.Employee.all() //create the entity selection
-  //invalid statements:
- $result:=$sel[0].lock() //will NOT work
- $sel[0].lastName:="Smith" //will NOT work
- $result:=$sel[0].save() //will NOT work
-  //valid code:
+ $sel:=ds.Employee.all() // エンティティセレクションを作成
+  // 無効なコード: 
+$result:=$sel[0].lock() //動作しません
+ $sel[0].lastName:="Smith" //動作しません
+ $result:=$sel[0].save() //動作しません
+  // 有効なコード:
  $entity:=$sel[0]  //OK
  $entity.lastName:="Smith" //OK
  $entity.save() //OK
 ```
 
-#### Example
+#### 例題
 
 ```4d
  var $employees : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
  $employees:=ds.Employee.query("lastName = :1";"H@")
- $employee:=$employees[2]  // The 3rd entity of the $employees entity selection is reloaded from the database
+ $employee:=$employees[2]  // $employees エンティティセレクションの3番目のエンティティがデータベースからリロードされます。
 ```
 
 <!-- END REF -->
@@ -138,11 +138,11 @@ Note that the corresponding entity is reloaded from the datastore.
 <!-- REF EntitySelectionClass.attributeName.Desc -->
 ## .*attributeName*
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| バージョン | 内容 |
+| ----- | -- |
+| v17   | 追加 |
 
 </details>
 
@@ -150,29 +150,29 @@ Note that the corresponding entity is reloaded from the datastore.
 
 ***.attributeName*** : Collection<br/>***.attributeName*** : 4D.EntitySelection<!-- END REF -->
 
-#### Description
+#### 詳細
 
-Any dataclass attribute can be used as a property of an entity selection to return <!-- REF EntitySelectionClass.attributeName.Summary -->a "projection" of values for the attribute in the entity selection<!-- END REF -->. Projected values can be a collection or a new entity selection, depending on the [kind](DataClassAttributeClass.md#kind) (`storage` or `relation`) of the attribute.
+Any dataclass attribute can be used as a property of an entity selection to return <!-- REF EntitySelectionClass.attributeName.Summary -->a "projection" of values for the attribute in the entity selection<!-- END REF -->. 戻り値は、属性の種類 ([kind](DataClassAttributeClass.md#kind) が `storage` あるいは `relation`) によって、コレクションあるいは新しいエンティティセレクションのどちらかになります。
 
-* If *attributeName* kind is `storage`: `.attributeName` returns a collection of values of the same type as *attributeName*.
-* If *attributeName* kind is `relatedEntity`: `.attributeName` returns a new entity selection of related values of the same type as *attributeName*. Duplications are removed (an unordered entity selection is returned).
-* If *attributeName* kind is `relatedEntities`: `.attributeName` returns a new entity selection of related values of the same type as *attributeName*. Duplications are removed (an unordered entity selection is returned).
+* If *index* corresponds to a dropped entity, a Null value is returned.
+* If *attributeName* kind is `relatedEntity`: `.attributeName` returns a new entity selection of related values of the same type as *attributeName*. 重複しているエンティティは取り除かれます (返されるのは順列なしのエンティティセレクションです)。
+* If *attributeName* kind is `relatedEntities`: `.attributeName` returns a new entity selection of related values of the same type as *attributeName*. 重複しているエンティティは取り除かれます (返されるのは順列なしのエンティティセレクションです)。
 
-When a relation attribute is used as a property of an entity selection, the result is always another entity selection, even if only one entity is returned. In this case, if no entities are returned, the result is an empty entity selection.
+エンティティセレクションのプロパティとしてリレーション属性が使用されると、返される結果は、たとえ返されるエンティティが一つだけだとしても、常に新しいエンティティセレクションとなります。 エンティティが何も返ってこない場合には、返されるのは空のエンティティセレクションです。
 
-If the attribute does not exist in the entity selection, an error is returned.
+属性がエンティティセレクション内に存在しない場合、エラーが返されます。
 
-#### Example 1
+#### 例題 1
 
-Projection of storage values:
+ストレージ値の投影:
 
 ```4d
  var $firstNames : Collection
  $entitySelection:=ds.Employee.all()
- $firstNames:=$entitySelection.firstName // firstName type is string
+ $firstNames:=$entitySelection.firstName // firstName は文字列型です
 ```
 
-The resulting collection is a collection of strings, for example:
+返されるのは文字列のコレクションとなります。例:
 
 ```4d
 [
@@ -182,40 +182,40 @@ The resulting collection is a collection of strings, for example:
 ]
 ```
 
-#### Example 2
+#### 例題 2
 
-Projection of related entity:
+リレートエンティティの投影:
 
 ```4d
  var $es; $entitySelection : cs.EmployeeSelection
  $entitySelection:=ds.Employee.all()
- $es:=$entitySelection.employer // employer is related to a Company dataClass
+ $es:=$entitySelection.employer // employer は Companyデータクラスにリレートされています
 ```
 
-The resulting object is an entity selection of Company with duplications removed (if any).
+返されるオブジェクトは、重複してるもの (あれば) を取り除いた、Company のエンティティセレクションです。
 
-#### Example 3
+#### 例題 3
 
-Projection of related entities:
+リレートエンティティズの投影:
 
 ```4d
  var $es : cs.EmployeeSelection
- $es:=ds.Employee.all().directReports // directReports is related to Employee dataclass
+ $es:=ds.Employee.all().directReports // directReports は Employee データクラスにリレートされています
 ```
 
-The resulting object is an entity selection of Employee with duplications removed (if any).
+返されるオブジェクトは、重複してるもの (あれば) を取り除いた、Employee のエンティティセレクションです。
 
 <!-- END REF -->
 
 <!-- REF EntitySelectionClass.add().Desc -->
 ## .add()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes                                   |
-| ------- | ----------------------------------------- |
-| v18 R5  | Only supports alterable entity selections |
-| v17     | Added                                     |
+| バージョン  | 内容                       |
+| ------ | ------------------------ |
+| v18 R5 | 追加可能なエンティティセレクションのみをサポート |
+| v17    | 追加                       |
 
 </details>
 
@@ -224,43 +224,44 @@ The resulting object is an entity selection of Employee with duplications remove
 **.add**( *entity* : 4D.Entity ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.add().Params -->
-| Parameter | Type               |    | Description                                                              |
-| --------- | ------------------ |:--:| ------------------------------------------------------------------------ |
-| entity    | 4D.Entity          | -> | Entity to be added to the entity selection                               |
-| Result    | 4D.EntitySelection | -> | Entity selection including the added *entity*|<!-- END REF -->
+| 引数     | タイプ                |    | 詳細                                                 |
+| ------ | ------------------ |:--:| -------------------------------------------------- |
+| entity | 4D.Entity          | -> | エンティティセレクションに追加するエンティティ                            |
+| Result | 4D.EntitySelection | -> | 追加エンティティを含むエンティティセレクション|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
 The `.add()` function <!-- REF #EntitySelectionClass.add().Summary -->adds the specified *entity* to the entity selection and returns the modified entity selection<!-- END REF -->.
-> This function modifies the original entity selection.
+> このコマンドは、元のエンティティセレクションを変更します。
 
-**Warning:** The entity selection must be *alterable*, i.e. it has been created for example by [`.newSelection()`](DataClassClass.md#newselection) or `Create entity selection`, otherwise `.add()` will return an error. Shareable entity selections do not accept the addition of entities. For more information, please refer to the [Shareable or alterable entity selections](ORDA/entities.md#shareable-or-alterable-entity-selections) section.
+**警告:** エンティティセレクションは *追加可能* のものでなければなりません。つまり [`.newSelection()`](DataClassClass.md#newselection) あるいは `Create entity selection` などで作成されたものでなければならないということです。そうでない場合、`.add()` はエラーを返します。 共有可能なエンティティセレクションはエンティティの追加を受け付けないからです。 詳細については [共有可能/追加可能なエンティティセレクション](ORDA/entities.md#共有可能追加可能なエンティティセレクション) を参照ください。
 
-* If the entity selection is ordered, *entity* is added at the end of the selection. If a reference to the same entity already belongs to the entity selection, it is duplicated and a new reference is added.
-* If the entity selection is unordered, *entity* is added anywhere in the selection, with no specific order.
-> For more information, please refer to the [Ordered or unordered entity selection](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) section.
+* エンティティセレクションが順列ありの場合、*entity* 引数のエンティティはセレクションの最後に追加されます。 同じエンティティへの参照がそのエンティティセレクションにすでに所属していた場合、エンティティは重複することになり、同エンティティの新しい参照が追加されます。
+* エンティティセレクションが順列なしの場合、*entity* 引数のエンティティはセレクションの不特定の場所へ追加され、順番付けはされません。
+> 詳細については、[エンティティセレクションの順列あり/順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください。
 
-The modified entity selection is returned by the function, so that function calls can be chained.
+編集されたエンティティセレクションが関数から返されるため、関数の呼び出しをつなげることができます。
 
-An error occurs if *entity* and the entity selection are not related to the same Dataclass. If *entity* is Null, no error is raised.
+*entity* 引数のエンティティとエンティティセレクションが同じデータクラスに属していない場合、エラーが発生します。 追加するエンティティが Null であった場合には、エラーは発生しません。
 
-#### Example 1
+#### 例題 1
 
 ```4d
  var $employees : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"S@")
+ $employees:=ds.Employee.query("lastName = :1";"S@") // 共有可能なエンティティセレクションです
  $employee:=ds.Employee.new()
  $employee.lastName:="Smith"
  $employee.save()
- $employees.add($employee) //The $employee entity is added to the $employees entity selection
+ $employees:=$employees.copy() // 追加可能なエンティティセレクションを取得します
+ $employees.add($employee) // $employee エンティティが $employees エンティティセレクションへと追加されます
 ```
 
-#### Example 2
+#### 例題 2
 
-Calls to the function can be chained:
+関数の呼び出しをつないでいくことができます:
 
 ```4d
  var $sel : cs.ProductSelection
@@ -270,6 +271,7 @@ Calls to the function can be chained:
  $p2:=ds.Product.get(11)
  $p3:=ds.Product.get(12)
  $sel:=ds.Product.query("ID > 50")
+ $sel:=$sel.copy()
  $sel:=$sel.add($p1).add($p2).add($p3)
 ```
 
@@ -278,11 +280,11 @@ Calls to the function can be chained:
 <!-- REF EntitySelectionClass.and().Desc -->
 ## .and()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| バージョン | 内容 |
+| ----- | -- |
+| v17   | 追加 |
 
 </details>
 
@@ -291,44 +293,44 @@ Calls to the function can be chained:
 **.and**( *entity* : 4D.Entity ) : 4D.EntitySelection<br/>**.and**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.and().Params -->
-| Parameter       | Type               |    | Description                                                                                               |
-| --------------- | ------------------ |:--:| --------------------------------------------------------------------------------------------------------- |
-| entity          | 4D.Entity          | -> | Entity to intersect with                                                                                  |
-| entitySelection | 4D.EntitySelection | -> | Entity selection to intersect with                                                                        |
-| Result          | 4D.EntitySelection | <- | New entity selection with the result of intersection with logical AND operator|<!-- END REF -->
+| 引数              | タイプ                |    | 詳細                                                                |
+| --------------- | ------------------ |:--:| ----------------------------------------------------------------- |
+| entity          | 4D.Entity          | -> | 交差するエンティティ                                                        |
+| entitySelection | 4D.EntitySelection | -> | 交差するエンティティセレクション                                                  |
+| Result          | 4D.EntitySelection | <- | AND論理演算子による共通部分の結果を格納する新しいエンティティセレクション|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
 The `.and()` function <!-- REF #EntitySelectionClass.and().Summary -->combines the entity selection with an *entity* or *entitySelection* parameter using the logical AND operator<!-- END REF -->; it returns a new, unordered entity selection that contains only the entities that are referenced in both the entity selection and the parameter.
 
-* If you pass *entity* as parameter, you combine this entity with the entity selection. If the entity belongs to the entity selection, a new entity selection containing only the entity is returned. Otherwise, an empty entity selection is returned.
-* If you pass *entitySelection* as parameter, you combine both entity selections. A new entity selection that contains only the entities that are referenced in both selections is returned. If there is no intersecting entity, an empty entity selection is returned.
-> You can compare [ordered and/or unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). The resulting selection is always unordered.
+* *entity* 引数を渡した場合、引数のエンティティをエンティティセレクションと結合させることになります。 エンティティがエンティティセレクションに属している場合、そのエンティティのみを格納する新しいエンティティセレクションが返されます。 そうでない場合、空のエンティティセレクションが返されます。
+* If you pass *entity* as parameter, you compare this entity with the entity selection. If the entity belongs to the entity selection, a new reference to the entity selection is returned. Otherwise, a new entity selection containing the original entity selection and the entity is returned.
+> > You can compare [ordered and/or unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). 返されるセレクションは常に順列なしのものになります。
 
-If the original entity selection or the *entitySelection* parameter is empty, or if the *entity* is Null, an empty entity selection is returned.
+元のエンティティセレクションあるいは *entitySelection* 引数が空であった場合、あるいは*entity* 引数が Null であった場合、空のエンティティセレクションが返されます。
 
-If the original entity selection and the parameter are not related to the same dataclass, an error is raised.
+元のエンティティセレクションおよび引数が同じデータクラスのものでない場合、エラーが返されます。
 
-#### Example 1
+#### 例題 1
 
 ```4d
  var $employees; $result : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
  $employees:=ds.Employee.query("lastName = :1";"H@")   
-  //The $employees entity selection contains the entity
-  //with primary key 710 and other entities
-  //for ex. "Colin Hetrick" / "Grady Harness" / "Sherlock Holmes" (primary key 710)
- $employee:=ds.Employee.get(710) // Returns "Sherlock Holmes"
+  // $employees エンティティセレクションには、主キー710のエンティティと
+  // その他のエンティティが含まれます
+  // 例: "Colin Hetrick" / "Grady Harness" / "Sherlock Holmes" (主キー710)
+ $employee:=ds.Employee.get(710) // "Sherlock Holmes" を返します
 
- $result:=$employees.and($employee) //$result is an entity selection containing   
-  //only the entity with primary key 710 ("Sherlock Holmes")
+ $result:=$employees.and($employee) // $result は主キー710 ("Sherlock Holmes") の
+  // エンティティのみを格納するエンティティセレクション。
 ```
 
-#### Example 2
+#### 例題 2
 
-We want to have a selection of employees named "Jones" who live in New York:
+"Jones" という名前で、New York に住んでいる従業員のセレクションを取得します:
 
 ```4d
  var $sel1; $sel2; $sel3 : cs.EmployeeSelection
@@ -342,12 +344,12 @@ We want to have a selection of employees named "Jones" who live in New York:
 <!-- REF EntitySelectionClass.average().Desc -->
 ## .average()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes                                     |
-| ------- | ------------------------------------------- |
-| v18 R6  | Returns undefined if empty entity selection |
-| v17     | Added                                       |
+| バージョン  | 内容                                  |
+| ------ | ----------------------------------- |
+| v18 R6 | エンティティセレクションが空の場合には undefined を返します |
+| v17    | 追加                                  |
 
 </details>
 
@@ -356,32 +358,32 @@ We want to have a selection of employees named "Jones" who live in New York:
 **.average**( *attributePath* : Text ) : Real<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.average().Params -->
-| Parameter     | Type |    | Description                                                                                                           |
-| ------------- | ---- |:--:| --------------------------------------------------------------------------------------------------------------------- |
-| attributePath | Text | -> | Attribute path to be used for calculation                                                                             |
-| Result        | Real | <- | Arithmetic mean (average) of entity attribute values (Undefined if empty entity selection)|<!-- END REF -->
+| 引数            | タイプ  |    | 詳細                                                                                       |
+| ------------- | ---- |:--:| ---------------------------------------------------------------------------------------- |
+| attributePath | テキスト | -> | 計算に使用する属性パス                                                                              |
+| Result        | 実数   | <- | エンティティの属性値の算術平均 (相加平均) (エンティティセレクションがからの場合には undefined を返します)|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
-The `.average()` function <!-- REF #EntitySelectionClass.average().Summary -->returns the arithmetic mean (average) of all the non-null values of *attributePath* in the entity selection<!-- END REF -->.
+The `.average()` function <!-- REF #EntitySelectionClass.average().Summary -->The `.average()` function<!-- END REF -->.
 
-Pass in the *attributePath* parameter the attribute path to evaluate.
+*attributePath* 引数として、評価する属性パスを渡します。
 
-Only numerical values are taken into account for the calculation. Note however that, if the *attributePath* of the entity selection contains mixed value types, `.average()` takes all scalar elements into account to calculate the average value.
-> Date values are converted to numerical values (seconds) and used to calculate the average.
+計算の対象となるのは数値のみです。 ただし、エンティティセレクションの *attributePath* 引数で指定したパスに異なる型の値が混在している場合、`.average()` はすべてのスカラー要素を対象として平均値を算出します。
+> 日付値は数値 (秒数) に変換され、平均を計算するのに使用されます。
 
-`.average()` returns **undefined** if the entity selection is empty or *attributePath* does not contain numerical values.
+エンティティセレクションが空の場合、または *attributePath* 引数に数値型の値が含まれていない場合には、`.average()` は **undefined** を返します。
 
-An error is returned if:
+以下の場合には、エラーが返されます:
 
-* *attributePath* is a related attribute,
-* *attributePath* designates an attribute that does not exist in the entity selection dataclass.
+* *attributePath* はリレート属性である
+* *attributePath* がエンティティセレクションデータクラス内に存在しない属性を指定している場合。
 
-#### Example
+#### 例題
 
-We want to obtain a list of employees whose salary is higher than the average salary:
+給与が平均より高い従業員の一覧を取得します:
 
 ```4d
  var $averageSalary : Real
@@ -395,11 +397,11 @@ We want to obtain a list of employees whose salary is higher than the average sa
 <!-- REF EntitySelectionClass.contains().Desc -->
 ## .contains()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| バージョン | 内容 |
+| ----- | -- |
+| v17   | 追加 |
 
 </details>
 
@@ -408,22 +410,22 @@ We want to obtain a list of employees whose salary is higher than the average sa
 **.contains**( *entity* : 4D.Entity ) : Boolean<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.contains().Params -->
-| Parameter | Type      |    | Description                                                                               |
-| --------- | --------- |:--:| ----------------------------------------------------------------------------------------- |
-| entity    | 4D.Entity | -> | Entity to evaluate                                                                        |
-| Result    | Boolean   | <- | True if the entity belongs to the entity selection, else False|<!-- END REF -->
+| 引数     | タイプ       |    | 詳細                                                                           |
+| ------ | --------- |:--:| ---------------------------------------------------------------------------- |
+| entity | 4D.Entity | -> | 評価するエンティティ                                                                   |
+| Result | ブール       | <- | エンティティがエンティティセレクションに属している場合には true、そうでない場合は false|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
 The `.contains()` function <!-- REF #EntitySelectionClass.contains().Summary -->returns true if entity reference belongs to the entity selection<!-- END REF -->, and false otherwise.
 
-In *entity*, specify the entity to search for in the entity selection. If entity is Null, the function will return false.
+*entity* 引数として、エンティティセレクション内で検索するエンティティを渡します。 エンティティが Null の場合、関数は false を返します。
 
-If *entity* and the entity selection do not belong to the same dataclass, an error is raised.
+*entity* 引数とエンティティセレクションが同じデータクラスのものでない場合、エラーが生成されます。
 
-#### Example
+#### 例題
 
 ```4d
  var $employees : cs.EmployeeSelection
@@ -433,9 +435,9 @@ If *entity* and the entity selection do not belong to the same dataclass, an err
  $employee:=ds.Employee.get(610)
 
  If($employees.contains($employee))
-    ALERT("The entity with primary key 610 has a last name beginning with H")
+    ALERT("主キー610のエンティティのラストネームは H で始まります。")
  Else
-    ALERT("The entity with primary key 610 does not have a last name beginning with H")
+    ALERT("主キー610のエンティティのラストネームは H で始まりません。")
  End if
 ```
 
@@ -444,11 +446,11 @@ If *entity* and the entity selection do not belong to the same dataclass, an err
 <!-- REF EntitySelectionClass.count().Desc -->
 ## .count()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| バージョン | 内容 |
+| ----- | -- |
+| v17   | 追加 |
 
 </details>
 
@@ -457,26 +459,26 @@ If *entity* and the entity selection do not belong to the same dataclass, an err
 **.count**( *attributePath* : Text ) : Real<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.count().Params -->
-| Parameter     | Type |    | Description                                                                                  |
-| ------------- | ---- |:--:| -------------------------------------------------------------------------------------------- |
-| attributePath | Text | -> | Path of the attribute to be used for calculation                                             |
-| Result        | Real | <- | Number of non null *attributePath* values in the entity selection|<!-- END REF -->
+| 引数            | タイプ  |    | 詳細                                                                       |
+| ------------- | ---- |:--:| ------------------------------------------------------------------------ |
+| attributePath | テキスト | -> | 計算に使用する属性パス                                                              |
+| Result        | 実数   | <- | エンティティセレクション内の *attributePath* が null でない値の個数|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
-The `.count()` function <!-- REF #EntitySelectionClass.count().Summary -->returns the number of entities in the entity selection with a non-null value in *attributePath*<!-- END REF -->.
-> Only scalar values are taken into account. Object or collection type values are considered as null values.
+The `.count()` function <!-- REF #EntitySelectionClass.count().Summary -->The `.count()` function<!-- END REF -->.
+> 対象となるのはスカラー値のみです。 オブジェクトあるいはコレクション型の値は Null値とみなされます。
 
-An error is returned if:
+以下の場合には、エラーが返されます:
 
-* *attributePath* is a related attribute,
-* *attributePath* is not found in the entity selection dataclass.
+* *attributePath* はリレート属性である
+* *attributePath* がエンティティセレクションデータクラス内に存在しない場合。
 
-#### Example
+#### 例題
 
-We want to find out the total number of employees for a company without counting any whose job title has not been specified:
+ある会社の全従業員のうち、役職のない者を除いた人数を確認します:
 
 ```4d
  var $sel : cs.EmployeeSelection
@@ -491,11 +493,11 @@ We want to find out the total number of employees for a company without counting
 <!-- REF EntitySelectionClass.copy().Desc -->
 ## .copy()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R5  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v18 R5 | 追加 |
 
 </details>
 
@@ -504,26 +506,26 @@ We want to find out the total number of employees for a company without counting
 **.copy**( { *option* : Integer } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.copy().Params -->
-| Parameter | Type               |    | Description                                             |
-| --------- | ------------------ |:--:| ------------------------------------------------------- |
-| option    | Integer            | -> | `ck shared`: return a shareable entity selection        |
-| Result    | 4D.EntitySelection | <- | Copy of the entity selection|<!-- END REF -->
+| 引数     | タイプ                |    | 詳細                                          |
+| ------ | ------------------ |:--:| ------------------------------------------- |
+| option | 整数                 | -> | `ck shared`: 共有可能なエンティティセレクションを返します         |
+| Result | 4D.EntitySelection | <- | エンティティセレクションのコピー|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
-The `.copy()` function <!-- REF #EntitySelectionClass.copy().Summary -->returns a copy of the original entity selection<!-- END REF -->.
+The `.copy()` function <!-- REF #EntitySelectionClass.copy().Summary -->The `.copy()` function<!-- END REF -->.
 
-> This function does not modify the original entity selection.
+> この関数は、元のエンティティセレクションを変更しません。
 
-By default, if the *option* parameter is omitted, the function returns a new, alterable entity selection (even if the function is applied to a shareable entity selection). Pass the `ck shared` constant in the *option* parameter if you want to create a shareable entity selection.
+*option* パラメーターが省略された場合はデフォルトで、たとえコピー元が共有可能なエンティティセレクションであったとしても、関数はデフォルトで追加可能な (共有不可の) 新規エンティティセレクションを返します。 共有可能なエンティティセレクションを取得するには、*option* に `ck shared` 定数を渡します。
 
-> For information on the shareable property of entity selections, please refer to the [Shareable or alterable entity selections](ORDA/entities.md#shareable-or-alterable-entity-selections) section.
+> 詳細については [共有可能/追加可能なエンティティセレクション](ORDA/entities.md#共有可能追加可能なエンティティセレクション) を参照ください。
 
-#### Example
+#### 例題
 
-You create a new, empty entity selection of products when the form is loaded:
+フォームロード時に、商品データを格納するための新規の空エンティティセレクションを作成します:
 
 ```4d
  Case of
@@ -533,11 +535,11 @@ You create a new, empty entity selection of products when the form is loaded:
 
 ```
 
-Then this entity selection is updated with products and you want to share the products between several processes. You copy the Form.products entity selection as a shareable one:
+このエンティティセレクションに商品を登録したのちに、複数のプロセスでこの商品データを共有するには、 Form.products を共有可能なエンティティセレクションとしてコピーします:
 
 ```4d
  ...
-  // The Form.products entity selection is updated
+  // Form.products エンティティセレクションに商品データを登録します
  Form.products.add(Form.selectedProduct)
 
  Use(Storage)
@@ -556,11 +558,11 @@ Then this entity selection is updated with products and you want to share the pr
 <!-- REF EntitySelectionClass.distinct().Desc -->
 ## .distinct()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| バージョン | 内容 |
+| ----- | -- |
+| v17   | 追加 |
 
 </details>
 
@@ -569,46 +571,46 @@ Then this entity selection is updated with products and you want to share the pr
 **.distinct**( *attributePath* : Text { ; *option* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.distinct().Params -->
-| Parameter     | Type       |    | Description                                                      |
-| ------------- | ---------- |:--:| ---------------------------------------------------------------- |
-| attributePath | Text       | -> | Path of attribute whose distinct values you want to get          |
-| option        | Integer    | -> | `dk diacritical`: diacritical evaluation ("A" # "a" for example) |
-| Result        | Collection | <- | Collection with only distinct values|<!-- END REF -->
+| 引数            | タイプ    |    | 詳細                                                       |
+| ------------- | ------ |:--:| -------------------------------------------------------- |
+| attributePath | テキスト   | -> | 重複しない値を取得する属性のパス                                         |
+| option        | 整数     | -> | `dk diacritical`: アクセント等の発音区別符号を無視しない評価 (たとえば "A" # "a") |
+| Result        | コレクション | <- | 重複しない値のみを格納したコレクション|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
-The `.distinct()` function <!-- REF #EntitySelectionClass.distinct().Summary -->returns a collection containing only distinct (different) values from the *attributePath* in the entity selection<!-- END REF -->.
+The `.distinct()` function <!-- REF #EntitySelectionClass.distinct().Summary -->The `.distinct()` function<!-- END REF -->.
 
-The returned collection is automatically sorted. **Null** values are not returned.
+返されたコレクションは自動的に並べ替えられています。 **Null** 値は返されません。
 
-In the *attributePath* parameter, pass the entity attribute whose distinct values you want to get. Only scalar values (text, number, boolean, or date) can be handled. If the *attributePath* leads to an object property that contains values of different types, they are first grouped by type and sorted afterwards. Types are returned in the following order:
+*attributePath* 引数として、固有の値を取得したいエンティティ属性を渡します。 スカラー値 (テキスト、数値、ブール、あるいは日付) のみが可能です。 *attributePath* のパスが異なる型の値を格納しているオブジェクトプロパティであった場合、まず最初に型ごとにグループ分けされ、そのあとで並べ替えされます。 型は以下の順番で返されます:
 
-1. booleans
-2. strings
-3. numbers
-4. dates
+1. ブール
+2. 文字列
+3. 数値
+4. 日付
 
-You can use the `[]` notation to designate a collection when *attributePath* is a path within an object (see examples).
+*attributePath* がオブジェクト内のパスの場合、`[]` を使ってコレクションを指定できます (例題参照)。
 
-By default, a non-diacritical evaluation is performed. If you want the evaluation to be case sensitive or to differentiate accented characters, pass the `dk diacritical` constant in the *option* parameter.
+デフォルトでは、アクセント等の発音区別符号を無視した評価が実行されます。 評価の際に文字の大小を区別したり、アクセント記号を区別したい場合には、*option* に `dk diacritical` 定数を渡します。
 
-An error is returned if:
+以下の場合には、エラーが返されます:
 
-* *attributePath* is a related attribute,
-* *attributePath* is not found in the entity selection dataclass.
+* *attributePath* はリレート属性である
+* *attributePath* がエンティティセレクションデータクラス内に存在しない場合。
 
-#### Examples
+#### 例題
 
-You want to get a collection containing a single element per country name:
+国名ごとに重複しない要素を格納するコレクションを取得します:
 
 ```4d
  var $countries : Collection
  $countries:=ds.Employee.all().distinct("address.country")
 ```
 
-`nicknames` is a collection and `extra` is an object attribute:
+`extra` がオブジェクト属性で、`nicknames` がコレクションの場合:
 
 ```4d
 $values:=ds.Employee.all().distinct("extra.nicknames[].first")
@@ -619,11 +621,11 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 <!-- REF EntitySelectionClass.drop().Desc -->
 ## .drop()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| バージョン | 内容 |
+| ----- | -- |
+| v17   | 追加 |
 
 </details>
 
@@ -632,46 +634,46 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 **.drop**( { *mode* : Integer } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.drop().Params -->
-| Parameter                  | Type               |    | Description                                                                                      |
-| -------------------------- | ------------------ |:--:| ------------------------------------------------------------------------------------------------ |
-| mode                       | Integer            | -> | `dk stop dropping on first error`: stops method execution on first non-droppable entity          |
-| Result                     | 4D.EntitySelection | <- | Empty entity selection if successful, else entity selection containing non-droppable entity(ies) |
+| 引数                         | タイプ                |    | 詳細                                                            |
+| -------------------------- | ------------------ |:--:| ------------------------------------------------------------- |
+| mode                       | 整数                 | -> | `dk stop dropping on first error`: 最初のドロップ不可エンティティで実行を止めます    |
+| Result                     | 4D.EntitySelection | <- | 成功した場合には空のエンティティセレクション、そうでない場合にはドロップ不可エンティティを格納したエンティティセレクション |
 |<!-- END REF -->
 
-|                    |    |                                                                                                  |
+|                    |    |                                                               |
 
-#### Description
+#### 詳細
 
-The `.drop()` function <!-- REF #EntitySelectionClass.drop().Summary -->removes the entities belonging to the entity selection from the table related to its dataclass within the datastore<!-- END REF -->. The entity selection remains in memory.
-> Removing entities is permanent and cannot be undone. It is recommended to call this action in a transaction in order to have a rollback option.
+The `.drop()` function <!-- REF #EntitySelectionClass.drop().Summary -->removes the entities belonging to the entity selection from the table related to its dataclass within the datastore<!-- END REF -->. エンティティセレクションはメモリ内に残ります。
+> エンティティの削除は恒久的なものであり、取り消しはできません。 ロールバックで戻すことができるように、この関数はトランザクション内で呼び出すことが推奨されています。
 
-If a locked entity is encountered during the execution of `.drop()`, it is not removed. By default, the method processes all entities of the entity selection and returns non-droppable entities in the entity selection. If you want the method to stop execution at the first encountered non-droppable entity, pass the `dk stop dropping on first error` constant in the *mode* parameter.
+`.drop()` の実行中にロックされたエンティティに遭遇した場合、そのエンティティは削除されません。 デフォルトでは、メソッドはエンティティセレクション内のすべてのエンティティを処理し、ドロップ不可なエンティティはエンティティセレクション内に返します。 最初のドロップ不可なエンティティに遭遇した時点でメソッドの実行を止めたい場合は、*mode* パラメーターに `dk stop dropping on first error` 定数を渡します。
 
-#### Example
+#### 例題
 
-Example without the `dk stop dropping on first error` option:
+`dk stop dropping on first error` オプションを使用しない例:
 
 ```4d
  var $employees; $notDropped : cs.EmployeeSelection
  $employees:=ds.Employee.query("firstName=:1";"S@")
- $notDropped:=$employees.drop() // $notDropped is an entity selection containing all the not dropped entities
- If($notDropped.length=0) //The delete action is successful, all the entities have been deleted
-    ALERT("You have dropped "+String($employees.length)+" employees") //The dropped entity selection remains in memory
+ $notDropped:=$employees.drop() // $notDropped は削除されなかったエンティティをすべて格納したエンティティセレクションです
+ If($notDropped.length=0) // 削除アクションが成功し、すべてのエンティティが削除された場合
+    ALERT(String($employees.length)+" 件の社員データを削除しました。") // 削除されたエンティティはメモリの中には残っています
  Else
-    ALERT("Problem during drop, try later")
+    ALERT("削除中に問題が発生しました。時間をおいて再度お試しください。")
  End if
 ```
 
-Example with the `dk stop dropping on first error` option:
+`dk stop dropping on first error` オプションを使用する例:
 
 ```4d
  var $employees; $notDropped : cs.EmployeeSelection
  $employees:=ds.Employee.query("firstName=:1";"S@")
- $notDropped:=$employees.drop(dk stop dropping on first error) //$notDropped is an entity selection containing the first not dropped entity
- If($notDropped.length=0) //The delete action is successful, all the entities have been deleted
-    ALERT("You have dropped "+String($employees.length)+" employees") //The dropped entity selection remains in memory
+ $notDropped:=$employees.drop(dk stop dropping on first error) //$notDropped は削除できなかった最初のエンティティを格納したエンティティセレクションです
+ If($notDropped.length=0) // 削除アクションが成功し、すべてのエンティティが削除された場合
+    ALERT(String($employees.length)+" 件の社員データを削除しました。") // 削除されたエンティティはメモリの中には残っています
  Else
-    ALERT("Problem during drop, try later")
+    ALERT("削除中に問題が発生しました。時間をおいて再度お試しください。")
  End if
 ```
 
@@ -680,11 +682,11 @@ Example with the `dk stop dropping on first error` option:
 <!-- REF EntitySelectionClass.extract().Desc -->
 ## .extract()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R3  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v18 R3 | 追加 |
 
 </details>
 
@@ -692,52 +694,52 @@ Example with the `dk stop dropping on first error` option:
 **.extract**( *attributePath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *attributePath* { ; *targetPath* } { ; *...attributePathN* : Text ; *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.extract().Params -->
-| Parameter     | Type       |    | Description                                                                             |
-| ------------- | ---------- |:--:| --------------------------------------------------------------------------------------- |
-| attributePath | Text       | -> | Attribute path whose values must be extracted to the new collection                     |
-| targetPath    | Text       | -> | Target attribute path or attribute name                                                 |
-| option        | Integer    | -> | `ck keep null`: include null attributes in the returned collection (ignored by default) |
-| Result        | Collection | <- | Collection containing extracted values|<!-- END REF -->
+| 引数            | タイプ    |    | 詳細                                                                |
+| ------------- | ------ |:--:| ----------------------------------------------------------------- |
+| attributePath | テキスト   | -> | 新しいコレクションに抽出する値の属性パス                                              |
+| targetPath    | テキスト   | -> | 抽出先の属性パスあるいは属性名                                                   |
+| option        | 整数     | -> | `ck keep null`: 返されるコレクションに null 属性を含めます (デフォルトでは無視されます)。         |
+| Result        | コレクション | <- | Collection containing extracted values|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
-The `.extract()` function <!-- REF #EntitySelectionClass.extract().Summary -->returns a collection containing *attributePath* values extracted from the entity selection<!-- END REF -->.
+The `.extract()` function <!-- REF #EntitySelectionClass.extract().Summary -->The `.extract()` function<!-- END REF -->.
 
-*attributePath* can refer to:
+*attributePath* には、以下のものを指定することができます:
 
-* a scalar dataclass attribute,
-* related entity,
-* related entities.
+* スカラーデータクラス属性
+* リレートエンティティ (単数)
+* リレートエンティティズ (複数)
 
-If *attributePath* is invalid, an empty collection is returned.
+*attributePath* 引数が無効な場合、空のコレクションが返されます。
 
-This function accepts two syntaxes.
+このメソッドは 2種類のシンタックスを受け入れます。
 
 **.extract( attributePath : Text { ; option : Integer } ) : Collection**
 
-With this syntax, `.extract()` populates the returned collection with the *attributePath* values of the entity selection.
+このシンタックスを使用すると、`.extract()` はエンティティセレクションの中の、*attributePath* 引数で指定された値のコレクションを作成して返します。
 
-By default, entities for which *attributePath* is *null* or undefined are ignored in the resulting collection. You can pass the `ck keep null` constant in the *option* parameter to include these values as **null** elements in the returned collection.
+デフォルトで、*attributePath* で指定された値が *null* または未定義のエンティティは、返されるコレクション内では無視されます。 *option* パラメーターに `ck keep null` 定数を渡すと、これらの値は返されるコレクションに **null** 要素として格納されます。
 
-* Dataclass attributes with [.kind](DataClassAttributeClass.md#kind) = "relatedEntity" are extracted as a collection of entities (duplications are kept).
-* Dataclass attributes with [.kind](DataClassAttributeClass.md#kind) = "relatedEntities" are extracted as a collection of entity selections.
+* [.kind](DataClassAttributeClass.md#kind) = "relatedEntity" であるデータクラス属性は、エンティティのコレクションとして取得されます (重複したものも保持されます)。
+* [.kind](DataClassAttributeClass.md#kind) = "relatedEntities" であるデータクラス属性は、エンティティセレクションのコレクションとして取得されます。
 
 **.extract ( attributePath ; targetPath { ; ...attributePathN ; ... targetPathN}) : Collection**
 
-With this syntax, `.extract()` populates the returned collection with the *attributePath* properties. Each element of the returned collection is an object with *targetPath* properties filled with the corresponding *attributePath* properties. Null values are kept (*option* parameter is ignored with this syntax).
+このシンタックスを使用すると、`.extract()` は *attributePath* 引数で指定されたプロパティを持つコレクションを作成して返します。 このコレクションのそれぞれの要素は、*targetPath* 引数のプロパティと、対応する*attributePath* 引数のプロパティを格納したオブジェクトです。 Null値はそのまま保持されます (このシンタックスでは *option* に引数を渡しても無視されます)。
 
-If several *attributePath* are given, a *targetPath* must be given for each. Only valid pairs \[*attributePath*, *targetPath*] are extracted.
+複数の *attributePath* 引数が渡した場合、それぞれに対して *targetPath* 引数を渡す必要があります。 有効な \[*attributePath*, *targetPath*] のペアのみが取得されます。
 
-* Dataclass attributes with [.kind](DataClassAttributeClass.md#kind) = "relatedEntity" are extracted as an entity.
-* Dataclass attributes with [.kind](DataClassAttributeClass.md#kind) = "relatedEntities" are extracted as an entity selection.
+* [.kind](DataClassAttributeClass.md#kind) = "relatedEntity" であるデータクラス属性は、エンティティとして取得されます。
+* [.kind](DataClassAttributeClass.md#kind) = "relatedEntities" であるデータクラス属性は、エンティティセレクションとして取得されます。
 
-> Entities of a collection of entities accessed by \[ ] are not reloaded from the database.
+> エンティティのコレクションにおいて、\[ ] 記法を使用してアクセスしたエンティティは、データベースからは再読み込みされません。
 
-#### Example
+#### 例題
 
-Given the following table and relation:
+以下のテーブルとリレーションを前提とします:
 
 ![](../assets/en/API/entityselection.PNG)
 
@@ -745,33 +747,33 @@ Given the following table and relation:
  var $firstnames; $addresses; $mailing; $teachers : Collection
   //
   //
-  //$firstnames is a collection of Strings
+  // $firstnames は文字列のコレクション
 
 
  $firstnames:=ds.Teachers.all().extract("firstname")
   //
-  //$addresses is a collection of entities related to dataclass Address
-  //Null values for address are extracted
+  // $addresses は addressリレートエンティティのコレクション
+  // Null値も取得・保持されます
  $addresses:=ds.Teachers.all().extract("address";ck keep null)
   //
   //
-  //$mailing is a collection of objects with properties "who" and "to"
-  //"who" property content is String type
-  //"to" property content is entity type (Address dataclass)
+  // $mailing は "who" および "to" のプロパティを持つオブジェクトのコレクション
+  // "who" プロパティの中身は文字列型
+  // "to" プロパティの中身はエンティティ型 (Address データクラス)
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address";"to")
   //
   //
-  //$mailing is a collection of objects with properties "who" and "city"
-  //"who" property content is String type
-  //"city" property content is String type
+  // $mailing は "who" および "city" のプロパティを持つオブジェクトのコレクション
+  // "who" プロパティの中身は文字列型
+  // "city" プロパティの中身は文字列型
  $mailing:=ds.Teachers.all().extract("lastname";"who";"address.city";"city")
   //
-  //$teachers is a collection of objects with properties "where" and "who"
-  //"where" property content is String
-  //"who" property content is an entity selection (Teachers dataclass)
+  // $teachers は"where" および "who" のプロパティを持つオブジェクトのコレクション
+  // "where" プロパティの中身は文字列型
+  // "who" プロパティの中身はエンティティセレクション (Teachers データクラス)
  $teachers:=ds.Address.all().extract("city";"where";"teachers";"who")
   //
-  //$teachers is a collection of entity selections
+  //$teachers はエンティティセレクションのコレクション
  $teachers:=ds.Address.all().extract("teachers")
 ```
 
@@ -780,11 +782,11 @@ Given the following table and relation:
 <!-- REF EntitySelectionClass.first().Desc -->
 ## .first()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| バージョン | 内容 |
+| ----- | -- |
+| v17   | 追加 |
 
 </details>
 
@@ -793,34 +795,34 @@ Given the following table and relation:
 **.first()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.first().Params -->
-| Parameter | Type      |    | Description                                                                                                   |
-| --------- | --------- |:--:| ------------------------------------------------------------------------------------------------------------- |
-| Result    | 4D.Entity | <- | Reference to the first entity of the entity selection (Null if selection is empty)|<!-- END REF -->
+| 引数     | タイプ       |    | 詳細                                                                                                            |
+| ------ | --------- |:--:| ------------------------------------------------------------------------------------------------------------- |
+| Result | 4D.Entity | <- | Reference to the first entity of the entity selection (Null if selection is empty)|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
 The `.first()` function <!-- REF #EntitySelectionClass.first().Summary -->returns a reference to the entity in the first position of the entity selection<!-- END REF -->.
 
-The result of this function is similar to:
+この関数の結果は以下のコードに似ています:
 
 ```4d
  $entity:=$entitySel[0]
 ```
 
-There is, however, a difference between both statements when the selection is empty:
+ただし、この 2つの宣言には、セレクションが空であった場合に違いがあります:
 
 ```4d
  var $entitySel : cs.EmpSelection
  var $entity : cs.EmpEntity
- $entitySel:=ds.Emp.query("lastName = :1";"Nonexistentname") //no matching entity
-  //entity selection is then empty
- $entity:=$entitySel.first() //returns Null
- $entity:=$entitySel[0]  //generates an error
+ $entitySel:=ds.Emp.query("lastName = :1";"Nonexistentname") // 合致するエンティティはありません
+  // エンティティセレクションは空になります
+ $entity:=$entitySel.first() // Null を返します
+ $entity:=$entitySel[0]  // エラーを生成します
 ```
 
-#### Example
+#### 例題
 
 ```4d
  var $entitySelection : cs.EmpSelection
@@ -836,11 +838,11 @@ There is, however, a difference between both statements when the selection is em
 <!-- REF EntitySelectionClass.getDataClass().Desc -->
 ## .getDataClass()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17 R5  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R5 | 追加 |
 
 </details>
 
@@ -849,25 +851,25 @@ There is, however, a difference between both statements when the selection is em
 **.getDataClass()** : 4D.DataClass<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.getDataClass().Params -->
-| Parameter | Type         |    | Description                                                                       |
-| --------- | ------------ |:--:| --------------------------------------------------------------------------------- |
-| Result    | 4D.DataClass | <- | Dataclass object to which the entity selection belongs|<!-- END REF -->
+| 引数     | タイプ          |    | 詳細                                                                                |
+| ------ | ------------ |:--:| --------------------------------------------------------------------------------- |
+| Result | 4D.DataClass | <- | Dataclass object to which the entity selection belongs|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
-The `.getDataClass()` function <!-- REF #EntitySelectionClass.getDataClass().Summary -->returns the dataclass of the entity selection<!-- END REF -->.
+The `.getDataClass()` function <!-- REF #EntitySelectionClass.getDataClass().Summary -->The `.getDataClass()` function<!-- END REF -->.
 
-This function is mainly useful in the context of generic code.
+このメソッドはおもに汎用的なコードのコンテキストで有用です。
 
-#### Example
+#### 例題
 
-The following generic code duplicates all entities of the entity selection:
+以下の汎用的なコードは、エンティティセレクションの全エンティティを複製します:
 
 ```4d
-  //duplicate_entities method
-  //duplicate_entities($entity_selection)
+  // duplicate_entities メソッド
+  // duplicate_entities($entity_selection)
 
  #DECLARE ( $entitySelection : 4D.EntitySelection )  
  var $dataClass : 4D.DataClass
@@ -877,7 +879,7 @@ The following generic code duplicates all entities of the entity selection:
  For each($entity;$entitySelection)
     $duplicate:=$dataClass.new()
     $duplicate.fromObject($entity.toObject())
-    $duplicate[$dataClass.getInfo().primaryKey]:=Null //reset the primary key
+    $duplicate[$dataClass.getInfo().primaryKey]:=Null // プライマリーキーをリセットします
     $status:=$duplicate.save()
  End for each
 ```
@@ -887,11 +889,11 @@ The following generic code duplicates all entities of the entity selection:
 <!-- REF EntitySelectionClass.isAlterable().Desc -->
 ## .isAlterable()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R5  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v18 R5 | 追加 |
 
 </details>
 
@@ -900,21 +902,21 @@ The following generic code duplicates all entities of the entity selection:
 **.isAlterable()** : Boolean<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.isAlterable().Params -->
-| Parameter | Type    |    | Description                                                                           |
-| --------- | ------- |:--:| ------------------------------------------------------------------------------------- |
-| Result    | Boolean | <- | True if the entity selection is alterable, False otherwise|<!-- END REF -->
+| 引数     | タイプ |    | 詳細                                                                                    |
+| ------ | --- |:--:| ------------------------------------------------------------------------------------- |
+| Result | ブール | <- | True if the entity selection is alterable, False otherwise|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
 The `.isAlterable()` function <!-- REF #EntitySelectionClass.isAlterable().Summary -->returns True if the entity selection is alterable<!-- END REF -->, and False if the entity selection is not alterable.
 
-For more information, please refer to [Shareable or alterable entity selections](ORDA/entities.md#shareable-or-alterable-entity-selections).
+詳細については [共有可能/追加可能なエンティティセレクション](ORDA/entities.md#共有可能追加可能なエンティティセレクション) を参照ください。
 
-#### Example
+#### 例題
 
-You are about to display `Form.products` in a [list box](FormObjects/listbox_overview.md) to allow the user to add new products. You want to make sure it is alterable so that the user can add new products without error:
+`Form.products` をフォーム内の [リストボックス](FormObjects/listbox_overview.md) に表示し、ユーザーが新しい製品を追加できるようにします。 ユーザーが製品を追加したときにエラーが起きないよう、追加可能であることを確認します:
 
 ```4d
 If (Not(Form.products.isAlterable()))
@@ -929,11 +931,11 @@ Form.products.add(Form.product)
 <!-- REF EntitySelectionClass.isOrdered().Desc -->
 ## .isOrdered()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| バージョン | 内容 |
+| ----- | -- |
+| v17   | 追加 |
 
 </details>
 
@@ -942,36 +944,36 @@ Form.products.add(Form.product)
 **.isOrdered()** : Boolean<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.isOrdered().Params -->
-| Parameter | Type    |    | Description                                                                         |
-| --------- | ------- |:--:| ----------------------------------------------------------------------------------- |
-| Result    | Boolean | <- | True if the entity selection is ordered, False otherwise|<!-- END REF -->
+| 引数     | タイプ |    | 詳細                                                                                  |
+| ------ | --- |:--:| ----------------------------------------------------------------------------------- |
+| Result | ブール | <- | True if the entity selection is ordered, False otherwise|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
 The `.isOrdered()` function <!-- REF #EntitySelectionClass.isOrdered().Summary -->returns True if the entity selection is ordered<!-- END REF -->, and False if it is unordered.
-> This function always returns True when the entity selection comes from a remote datastore.
+> リモートデータストアに属しているエンティティセレクションの場合は常に true を返します。
 
-For more information, please refer to [Ordered or unordered entity selection](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
+詳細については、[エンティティセレクションの順列あり/順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください。
 
-#### Example
+#### 例題
 
 ```4d
  var $employees : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
  var $isOrdered : Boolean
  $employees:=ds.Employee.newSelection(dk keep ordered)
- $employee:=ds.Employee.get(714) // Gets the entity with primary key 714
+ $employee:=ds.Employee.get(714) // プライマリーキー 714 を持つエンティティを取得します
 
-  //In an ordered entity selection, we can add the same entity several times (duplications are kept)
+  // 順列ありのエンティティセレクションの場合、同じエンティティを複数回追加することができます(重複してるものは保持されます)
  $employees.add($employee)
  $employees.add($employee)
  $employees.add($employee)
 
  $isOrdered:=$employees.isOrdered()
  If($isOrdered)
-    ALERT("The entity selection is ordered and contains "+String($employees.length)+" employees")
+    ALERT("エンティティセレクションには順列があり、"+String($employees.length)+" 件の社員エンティティを含みます。")
  End if
 ```
 
@@ -980,11 +982,11 @@ For more information, please refer to [Ordered or unordered entity selection](OR
 <!-- REF EntitySelectionClass.last().Desc -->
 ## .last()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| バージョン | 内容 |
+| ----- | -- |
+| v17   | 追加 |
 
 </details>
 
@@ -993,25 +995,25 @@ For more information, please refer to [Ordered or unordered entity selection](OR
 **.last()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.last().Params -->
-| Parameter | Type      |    | Description                                                                                                      |
-| --------- | --------- |:--:| ---------------------------------------------------------------------------------------------------------------- |
-| Result    | 4D.Entity | <- | Reference to the last entity of the entity selection (Null if empty entity selection)|<!-- END REF -->
+| 引数     | タイプ       |    | 詳細                                                                                                               |
+| ------ | --------- |:--:| ---------------------------------------------------------------------------------------------------------------- |
+| Result | 4D.Entity | <- | Reference to the last entity of the entity selection (Null if empty entity selection)|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
 The `.last()` function <!-- REF #EntitySelectionClass.last().Summary -->returns a reference to the entity in last position of the entity selection<!-- END REF -->.
 
-The result of this function is similar to:
+この関数の結果は以下のコードに似ています:
 
 ```4d
  $entity:=$entitySel[length-1]
 ```
 
-If the entity selection is empty, the function returns Null.
+エンティティセレクションが空の場合、関数は null を返します。
 
-#### Example
+#### 例題
 
 ```4d
  var $entitySelection : cs.EmpSelection
@@ -1027,11 +1029,11 @@ If the entity selection is empty, the function returns Null.
 <!-- REF EntitySelectionClass.length.Desc -->
 ## .length
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| バージョン | 内容 |
+| ----- | -- |
+| v17   | 追加 |
 
 </details>
 
@@ -1039,18 +1041,18 @@ If the entity selection is empty, the function returns Null.
 
 **.length** : Integer<!-- END REF -->
 
-#### Description
+#### 詳細
 
-The `.length` property <!-- REF #EntitySelectionClass.length.Summary -->returns the number of entities in the entity selection<!-- END REF -->. If the entity selection is empty, it returns 0.
+The `.length` property <!-- REF #EntitySelectionClass.length.Summary -->returns the number of entities in the entity selection<!-- END REF -->. エンティティセレクションが空の場合、関数は 0 を返します。
 
-Entity selections always have a `.length` property.
+エンティティセレクションは、常に `.length` プロパティを持っています。
 
-#### Example
+#### 例題
 
 ```4d
  var $vSize : Integer
  $vSize:=ds.Employee.query("gender = :1";"male").length
- ALERT(String(vSize)+" male employees found.")
+ ALERT(String(vSize)+" 人の男性社員が見つかりました。")
 ```
 
 <!-- END REF -->
@@ -1058,12 +1060,12 @@ Entity selections always have a `.length` property.
 <!-- REF EntitySelectionClass.max().Desc -->
 ## .max()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes                                     |
-| ------- | ------------------------------------------- |
-| v17     | Added                                       |
-| v18 R6  | Returns undefined if empty entity selection |
+| バージョン  | 内容                                  |
+| ------ | ----------------------------------- |
+| v17    | 追加                                  |
+| v18 R6 | エンティティセレクションが空の場合には undefined を返します |
 
 </details>
 
@@ -1072,29 +1074,29 @@ Entity selections always have a `.length` property.
 **.max**( *attributePath* : Text ) : any<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.max().Params -->
-| Parameter     | Type |    | Description                                           |
+| 引数            | タイプ  |    | 詳細                                                    |
 | ------------- | ---- |:--:| ----------------------------------------------------- |
-| attributePath | Text | -> | Path of the attribute to be used for calculation      |
+| attributePath | テキスト | -> | 計算に使用する属性パス                                           |
 | Result        | any  | <- | Highest value of attribute|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
-The `.max()` function <!-- REF #EntitySelectionClass.max().Summary -->returns the highest (or maximum) value among all the values of *attributePath* in the entity selection<!-- END REF -->. It actually returns the value of the last entity of the entity selection as it would be sorted in ascending order using the [`.orderBy()`](#orderby) function.
+The `.max()` function <!-- REF #EntitySelectionClass.max().Summary -->returns the highest (or maximum) value among all the values of *attributePath* in the entity selection<!-- END REF -->. 実際には、[`.orderBy()`](#orderby) 関数を使用してエンティティセレクションを昇順に並べ替えたときの最後のエンティティを返します。
 
-If you pass in *attributePath* a path to an object property containing different types of values, the `.max()` function will return the maximum value within the first scalar type in the default 4D type list order (see [`.sort()`](CollectionClass.md#sort) description).
+*attributePath* に、異なる型の値を格納しているオブジェクトプロパティを渡した場合、`.max()` メソッドは型のリスト順の中で最初のスカラー型の値の中の最大値を返します ([`.sort()`](CollectionClass.md#sort) の詳細を参照してください)。
 
-`.max()` returns **undefined** if the entity selection is empty or *attributePath* is not found in the object attribute.
+エンティティセレクションが空の場合、または *attributePath* 引数がオブジェクト属性内に見つからない場合には、`.max()` は **undefined** を返します。
 
-An error is returned if:
+以下の場合には、エラーが返されます:
 
-* *attributePath* is a related attribute,
-* *attributePath* designates an attribute that does not exist in the entity selection dataclass.
+* *attributePath* はリレート属性である
+* *attributePath* がエンティティセレクションデータクラス内に存在しない属性を指定している場合。
 
-#### Example
+#### 例題
 
-We want to find the highest salary among all the female employees:
+女性従業員の中で最も高い給与額を探します:
 
 ```4d
  var $sel : cs.EmpSelection
@@ -1108,12 +1110,12 @@ We want to find the highest salary among all the female employees:
 <!-- REF EntitySelectionClass.min().Desc -->
 ## .min()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes                                     |
-| ------- | ------------------------------------------- |
-| v17     | Added                                       |
-| v18 R6  | Returns undefined if empty entity selection |
+| バージョン  | 内容                                  |
+| ------ | ----------------------------------- |
+| v17    | 追加                                  |
+| v18 R6 | エンティティセレクションが空の場合には undefined を返します |
 
 </details>
 
@@ -1122,29 +1124,29 @@ We want to find the highest salary among all the female employees:
 **.min**( *attributePath* : Text ) : any<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.min().Params -->
-| Parameter     | Type |    | Description                                          |
+| 引数            | タイプ  |    | 詳細                                                   |
 | ------------- | ---- |:--:| ---------------------------------------------------- |
-| attributePath | Text | -> | Path of the attribute to be used for calculation     |
+| attributePath | テキスト | -> | 計算に使用する属性パス                                          |
 | Result        | any  | <- | Lowest value of attribute|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
-The `.min()` function <!-- REF #EntitySelectionClass.min().Summary --> returns the lowest (or minimum) value among all the values of attributePath in the entity selection<!-- END REF -->.  It actually returns the first entity of the entity selection as it would be sorted in ascending order using the [`.orderBy()`](#orderby) function (excluding **null** values).
+The `.min()` function <!-- REF #EntitySelectionClass.min().Summary --> returns the lowest (or minimum) value among all the values of attributePath in the entity selection<!-- END REF -->.  実際には、[`.orderBy()`](#orderby) 関数を使用してエンティティセレクションを昇順に並べ替えたときの最初のエンティティを返します (**null**値は除く)。
 
-If you pass in *attributePath* a path to an object property containing different types of values, the `.min()` function will return the minimum value within the first scalar value type in the type list order (see [`.sort()`](CollectionClass.md#sort) description).
+*attributePath* に、異なる型の値を格納しているオブジェクトプロパティを渡した場合、`.min()` メソッドは型のリスト順の中で最初のスカラー型の値の中の最小値を返します([`.sort()`](CollectionClass.md#sort) の詳細を参照してください)。
 
-`.min()` returns **undefined** if the entity selection is empty or *attributePath* is not found in the object attribute.
+エンティティセレクションが空の場合、または *attributePath* 引数がオブジェクト属性内に見つからない場合には、`.min()` は **undefined** を返します。
 
-An error is returned if:
+以下の場合には、エラーが返されます:
 
-* *attributePath* is a related attribute,
-* *attributePath* designates an attribute that does not exist in the entity selection dataclass.
+* *attributePath* はリレート属性である
+* *attributePath* がエンティティセレクションデータクラス内に存在しない属性を指定している場合。
 
-#### Example
+#### 例題
 
-In this example, we want to find the lowest salary among all the female employees:
+女性従業員の中で最も低い給与額を探します:
 
 ```4d
  var $sel : cs.EmpSelection
@@ -1158,11 +1160,11 @@ In this example, we want to find the lowest salary among all the female employee
 <!-- REF EntitySelectionClass.minus().Desc -->
 ## .minus()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| バージョン | 内容 |
+| ----- | -- |
+| v17   | 追加 |
 
 </details>
 
@@ -1171,46 +1173,46 @@ In this example, we want to find the lowest salary among all the female employee
 **.minus**( *entity* : 4D.Entity ) : 4D.EntitySelection<br/>**.minus**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.minus().Params -->
-| Parameter       | Type               |    | Description                                                                                         |
+| 引数              | タイプ                |    | 詳細                                                                                                  |
 | --------------- | ------------------ |:--:| --------------------------------------------------------------------------------------------------- |
-| entity          | 4D.Entity          | -> | Entity to substract                                                                                 |
-| entitySelection | 4D.EntitySelection | -> | Entity selection to substract                                                                       |
+| entity          | 4D.Entity          | -> | 除外するエンティティ                                                                                          |
+| entitySelection | 4D.EntitySelection | -> | 除外するエンティティセレクション                                                                                    |
 | Result          | 4D.EntitySelection | <- | New entity selection or a new reference on the existing entity selection|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
 The `.minus()` function <!-- REF #EntitySelectionClass.minus().Summary -->excludes from the entity selection to which it is applied the *entity* or the entities of *entitySelection* and returns the resulting entity selection<!-- END REF -->.
 
-* If you pass *entity* as parameter, the function creates a new entity selection without *entity* (if *entity* belongs to the entity selection). If *entity* was not included in the original entity selection, a new reference to the entity selection is returned.
-* If you pass *entitySelection* as parameter, the function returns an entity selection containing the entities belonging to the original entity selection without the entities belonging to *entitySelection*.
-> You can compare [ordered and/or unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). The resulting selection is always unordered.
+* *entity* を引数として渡した場合、メソッドは (*entity* が元のエンティティセレクションに所属していた場合) *entity* を除外した新しいエンティティセレクションを作成します。 *entity* が元のエンティティセレクションに含まれていなかった場合には、同エンティティセレクションへの新しい参照が返されます。
+* *entitySelection* を引数として渡した場合、メソッドは *entitySelection* に所属しているエンティティを、元のエンティティセレクションから除外した新しいエンティティセレクションを返します。
+> > You can compare [ordered and/or unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). 返されるセレクションは常に順列なしのものになります。
 
-If the original entity selection or both the original entity selection and the *entitySelection* parameter are empty, an empty entity selection is returned.
+元のエンティティセレクションが空であった場合、空のエンティティセレクションが返されます。
 
-If *entitySelection* is empty or if *entity* is Null, a new reference to the original entity selection is returned.
+*entitySelection* が空、あるいは *entity* が Null であった場合、元のエンティティセレクションへの新しい参照が返されます。
 
-If the original entity selection and the parameter are not related to the same dataclass, an error is raised.
+元のエンティティセレクションおよび引数が同じデータクラスのものでない場合、エラーが返されます。
 
-#### Example 1
+#### 例題 1
 
 ```4d
  var $employees; $result : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
 
  $employees:=ds.Employee.query("lastName = :1";"H@")
-  // The $employees entity selection contains the entity with primary key 710 and other entities
-  // for ex. "Colin Hetrick", "Grady Harness", "Sherlock Holmes" (primary key 710)
+  // $employees エンティティセレクションは、主キー710 のエンティティと他のエンティティを格納しています
+  //  例: "Colin Hetrick", "Grady Harness", "Sherlock Holmes" (主キー710)
 
- $employee:=ds.Employee.get(710) // Returns "Sherlock Holmes"
+ $employee:=ds.Employee.get(710) // "Sherlock Holmes" を返します
 
- $result:=$employees.minus($employee) //$result contains "Colin Hetrick", "Grady Harness"
+ $result:=$employees.minus($employee) // $result には "Colin Hetrick", "Grady Harness" 格納されます
 ```
 
-#### Example 2
+#### 例題 2
 
-We want to have a selection of female employees named "Jones" who live in New York :
+"Jones" という名前で、New York に住んでいる女性従業員のセレクションを取得します:
 
 ```4d
  var $sel1; $sel2; $sel3 : cs.EmployeeSelection
@@ -1224,11 +1226,11 @@ We want to have a selection of female employees named "Jones" who live in New Yo
 <!-- REF EntitySelectionClass.or().Desc -->
 ## .or()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| バージョン | 内容 |
+| ----- | -- |
+| v17   | 追加 |
 
 </details>
 
@@ -1237,47 +1239,47 @@ We want to have a selection of female employees named "Jones" who live in New Yo
 **.or**( *entity* : 4D.Entity ) : 4D.EntitySelection<br/>**.or**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.or().Params -->
-| Parameter       | Type               |    | Description                                                                                       |
+| 引数              | タイプ                |    | 詳細                                                                                                |
 | --------------- | ------------------ |:--:| ------------------------------------------------------------------------------------------------- |
-| entity          | 4D.Entity          | -> | Entity to intersect with                                                                          |
-| entitySelection | 4D.EntitySelection | -> | Entity selection to intersect with                                                                |
+| entity          | 4D.Entity          | -> | 交差するエンティティ                                                                                        |
+| entitySelection | 4D.EntitySelection | -> | 交差するエンティティセレクション                                                                                  |
 | Result          | 4D.EntitySelection | <- | New entity selection or new reference to the original entity selection|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
 The `.or()` function <!-- REF #EntitySelectionClass.or().Summary -->combines the entity selection with the *entity* or *entitySelection* parameter using the logical (not exclusive) OR operator<!-- END REF -->; it returns a new, unordered entity selection that contains all the entities from the entity selection and the parameter.
 
-* If you pass *entity* as parameter, you compare this entity with the entity selection. If the entity belongs to the entity selection, a new reference to the entity selection is returned. Otherwise, a new entity selection containing the original entity selection and the entity is returned.
-* If you pass *entitySelection* as parameter, you compare entity selections. A new entity selection containing the entities belonging to the original entity selection or *entitySelection* is returned (or is not exclusive, entities referenced in both selections are not duplicated in the resulting selection).
-> You can compare [ordered and/or unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). The resulting selection is always unordered.
+* If you pass *entitySelection* as parameter, you compare entity selections. エンティティがエンティティセレクションに所属している場合、エンティティセレクションへの新しい参照が返されます。 A new entity selection that contains only the entities that are referenced in both selections is returned.
+* If the original entity selection and the *entitySelection* parameter are empty, an empty entity selection is returned. If the original entity selection is empty, a reference to *entitySelection* or an entity selection containing only *entity* is returned.
+> > You can compare [ordered and/or unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). 返されるセレクションは常に順列なしのものになります。
 
-If the original entity selection and the *entitySelection* parameter are empty, an empty entity selection is returned. If the original entity selection is empty, a reference to *entitySelection* or an entity selection containing only *entity* is returned.
+The returned entity selection contains the entities specified by *startFrom* and all subsequent entities up to, but not including, the entity specified by *end*. If only the *startFrom* parameter is specified, the returned entity selection contains all entities from *startFrom* to the last entity of the original entity selection.
 
-If *entitySelection* is empty or if *entity* is Null, a new reference to the original entity selection is returned.
+*entitySelection* が空、あるいは *entity* が Null であった場合、元のエンティティセレクションへの新しい参照が返されます。
 
-If the original entity selection and the parameter are not related to the same dataclass, an error is raised.
+元のエンティティセレクションおよび引数が同じデータクラスのものでない場合、エラーが返されます。
 
-#### Example 1
+#### 例題 1
 
 ```4d
  var $employees1; $employees2; $result : cs.EmployeeSelection
- $employees1:=ds.Employee.query("lastName = :1";"H@") //Returns "Colin Hetrick","Grady Harness"
- $employees2:=ds.Employee.query("firstName = :1";"C@") //Returns "Colin Hetrick", "Cath Kidston"
- $result:=$employees1.or($employees2) //$result contains "Colin Hetrick", "Grady Harness","Cath Kidston"
+ $employees1:=ds.Employee.query("lastName = :1";"H@") // "Colin Hetrick","Grady Harness" を返します
+ $employees2:=ds.Employee.query("firstName = :1";"C@") // "Colin Hetrick", "Cath Kidston" を返します
+ $result:=$employees1.or($employees2) // $result には "Colin Hetrick", "Grady Harness","Cath Kidston" が格納されます
 ```
 
-#### Example 2
+#### 例題 2
 
 ```4d
  var $employees; $result : cs.EmployeeSelection
  var $employee : cs.EmployeeEntity
- $employees:=ds.Employee.query("lastName = :1";"H@") // Returns "Colin Hetrick","Grady Harness", "Sherlock Holmes"
- $employee:=ds.Employee.get(686) //the entity with primary key 686 does not belong to the $employees entity selection
-  //It matches the employee "Mary Smith"
+ $employees:=ds.Employee.query("lastName = :1";"H@") // "Colin Hetrick","Grady Harness", "Sherlock Holmes" を返します
+ $employee:=ds.Employee.get(686) // 主キー686 のエンティティは $employees エンティティセレクションに属していません
+  // 主キー686 は "Mary Smith" という従業員に合致します
 
- $result:=$employees.or($employee) //$result contains "Colin Hetrick", "Grady Harness", "Sherlock Holmes", "Mary Smith"
+ $result:=$employees.or($employee) //$result には "Colin Hetrick", "Grady Harness", "Sherlock Holmes", "Mary Smith" が格納されます
 ```
 
 <!-- END REF -->
@@ -1285,11 +1287,11 @@ If the original entity selection and the parameter are not related to the same d
 <!-- REF EntitySelectionClass.orderBy().Desc -->
 ## .orderBy()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| バージョン | 内容 |
+| ----- | -- |
+| v17   | 追加 |
 
 </details>
 
@@ -1298,31 +1300,31 @@ If the original entity selection and the parameter are not related to the same d
 **.orderBy**( *pathString* : Text ) : 4D.EntitySelection<br/>**.orderBy**( *pathObjects* : Collection ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.orderBy().Params -->
-| Parameter   | Type               |    | Description                                                            |
+| 引数          | タイプ                |    | 詳細                                                                     |
 | ----------- | ------------------ |:--:| ---------------------------------------------------------------------- |
-| pathString  | Text               | -> | Attribute path(s) and sorting instruction(s) for the entity selection  |
-| pathObjects | Collection         | -> | Collection of criteria objects                                         |
+| pathString  | テキスト               | -> | エンティティセレクションの属性パスと並べ替えの指定                                              |
+| pathObjects | コレクション             | -> | 条件オブジェクトのコレクション                                                        |
 | Result      | 4D.EntitySelection | <- | New entity selection in the specified order|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
-The `.orderBy()` function <!-- REF #EntitySelectionClass.orderBy().Summary -->returns a new ordered entity selection containing all entities of the entity selection in the order specified by *pathString* or *pathObjects* criteria<!-- END REF -->.
-> * This method does not modify the original entity selection.
-* For more information, please refer to the [Ordered or unordered entity selection](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) section.
+The `.orderBy()` function <!-- REF #EntitySelectionClass.orderBy().Summary -->The `.orderBy()` function<!-- END REF -->.
+> * この関数は、エンティティセレクションを変更しません。
+* 詳細については、[エンティティセレクションの順列あり/順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください。
 
-You must use a criteria parameter to define how the entities must be sorted. Two different parameters are supported:
+引数を渡して、エンティティの並び替えを指定する必要があります。 並べ替えの指定方法は 2つあります:
 
-* *pathString* (Text) : This parameter contains a formula made of 1 to x attribute paths and (optionally) sort orders, separated by commas. The syntax is:
+* *pathString* (テキスト): この場合、カンマ区切りされた、1 〜 x 個の属性パスと並べ替え順 (任意) で構成されるフォーミュラを渡します。 シンタックスは以下の通りです:
 
 ```4d
 "attributePath1 {desc or asc}, attributePath2 {desc or asc},..."
 ```
 
-The order in which the attributes are passed determines the sorting priority of the entities. By default, attributes are sorted in ascending order. You can set the sort order of a property in the criteria string, separated from the property path by a single space: pass "asc" to sort in ascending order or "desc" in descending order.
+属性を渡す順番が、エンティティの並べ替えの優先順位を決定します。 デフォルトでは、属性は昇順に並べ替えられます。 並び順を設定するには、プロパティパスの後に半角スペースで区切ったあとに、昇順を指定するには "asc"、降順を指定するには "desc" を渡します。
 
-* *pathObjects* (collection): each element of the collection contains an object structured in the following way:
+* *pathObjects* (コレクション): コレクションの各要素は、以下の構造を持つオブジェクトを格納します:
 
 ```4d
 {
@@ -1331,19 +1333,19 @@ The order in which the attributes are passed determines the sorting priority of 
 }
 ```
 
-By default, attributes are sorted in ascending order ("descending" is false).
+デフォルトでは、属性は昇順に並べ替えられます ("descending" は false)。
 
-You can add as many objects in the criteria collection as necessary.
-> Null values are evaluated as less than other values.
+pathObjects コレクションには必要な数だけオブジェクトを追加することができます。
+> Null は他の値より小さいと評価されます。
 
-#### Example
+#### 例題
 
 ```4d
-// order by formula
+// フォーミュラでの並べ替え
  $sortedEntitySelection:=$entitySelection.orderBy("firstName asc, salary desc")
  $sortedEntitySelection:=$entitySelection.orderBy("firstName")
 
-  // order by collection with or without sort orders
+  // コレクションでの並べ替えと、昇順・降順の指定
  $orderColl:=New collection
  $orderColl.push(New object("propertyPath";"firstName";"descending";False))
  $orderColl.push(New object("propertyPath";"salary";"descending";True))
@@ -1360,11 +1362,11 @@ You can add as many objects in the criteria collection as necessary.
 <!-- REF EntitySelectionClass.orderByFormula().Desc -->
 ## .orderByFormula()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17 R6  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v17 R6 | 追加 |
 
 </details>
 
@@ -1373,67 +1375,67 @@ You can add as many objects in the criteria collection as necessary.
 **.orderByFormula**( *formulaString* : Text { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.EntitySelection<br/>**.orderByFormula**( *formulaObj* : Object { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.orderByFormula().Params -->
-| Parameter     | Type               |    | Description                                             |
+| 引数            | タイプ                |    | 詳細                                                      |
 | ------------- | ------------------ |:--:| ------------------------------------------------------- |
-| formulaString | Text               | -> | Formula string                                          |
-| formulaObj    | Object             | -> | Formula object                                          |
-| sortOrder     | Integer            | -> | `dk ascending` (default) or `dk descending`             |
-| settings      | Object             | -> | Parameter(s) for the formula                            |
+| formulaString | テキスト               | -> | フォーミュラ文字列                                               |
+| formulaObj    | Object             | -> | フォーミュラオブジェクト                                            |
+| sortOrder     | 整数                 | -> | `dk ascending` (デフォルト) または `dk descending`              |
+| settings      | Object             | -> | フォーミュラに渡す引数                                             |
 | Result        | 4D.EntitySelection | <- | New ordered entity selection|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
 The `.orderByFormula()` function <!-- REF #EntitySelectionClass.orderByFormula().Summary -->returns a new, ordered entity selection<!-- END REF --> containing all entities of the entity selection in the order defined through the *formulaString* or *formulaObj* and, optionally, *sortOrder* and *settings* parameters.
-> This function does not modify the original entity selection.
+> この関数は、元のエンティティセレクションを変更しません。
 
-You can use either a *formulaString* or a *formulaObj* parameter:
+*formulaString* または *formulaObj* 引数を渡すことができます:
 
-* *formulaString*: you pass a 4D expression such as "Year of(this.birthDate)".
-* *formulaObj*: pass a valid formula object created using the `Formula` or `Formula from string` command.
+* *formulaString*: "Year of(this.birthDate)" などの 4D式
+* *formulaObj*: `Formula` または `Formula from string` コマンドを使用して作成された、有効なフォーミュラオブジェクト
 
-The *formulaString* or *formulaObj* is executed for each entity of the entity selection and its result is used to define the position of the entity in the returned entity selection. The result must be of a sortable type (boolean, date, number, text, time, null).
-> A null result is always the smallest value.
+*formulaString* および *formulaObj* はエンティティセレクションの各エンティティに対して実行され、その結果は返されるエンティティセレクション内でのエンティティの位置を決定するのに使用されます。 結果は並べ替え可能な型 (ブール、日付、数値、テキスト、時間、Null) である必要があります。
+> Null値の結果は常に最小の値とみなされます。
 
-By default if you omit the *sortOrder* parameter, the resulting entity selection is sorted in ascending order. Optionnally, you can pass one of the following values in the *sortOrder* parameter:
+*sortOrder* 引数を省略した場合のデフォルトでは、返されるエンティティセレクションは昇順に並べられます。 オプションとして、*sortOrder* に以下の値のいずれか一つを渡すことができます:
 
-| Constant      | Value | Comment                        |
-| ------------- | ----- | ------------------------------ |
-| dk ascending  | 0     | Ascending sort order (default) |
-| dk descending | 1     | Descending sort order          |
+| 定数            | Value | 説明         |
+| ------------- | ----- | ---------- |
+| dk ascending  | 0     | 昇順 (デフォルト) |
+| dk descending | 1     | 降順         |
 
-Within the *formulaString* or *formulaObj*, the processed entity and thus its attributes are available through the `This` command (for example, `This.lastName`).
+*formulaString* および *formulaObj* 内では、処理されるエンティティとその属性は `This` コマンドを通して利用可能です (たとえば、`This.lastName` など)。
 
-You can pass parameter(s) to the formula using the `args` property (object) of the `settings` parameter: the formula receives the `settings.args` object in $1.
+`settings` 引数の `args` プロパティ (オブジェクト) を使用することで、フォーミュラに引数を渡すことが可能です。このときフォーミュラは、`settings.args` オブジェクトを $1 に受け取ります。
 
-#### Example 1
+#### 例題 1
 
-Sorting students using a formula provided as text:
+テキストとして渡されたフォーミュラを使用して学生を並べ替えます:
 
 ```4d
  var $es1; $es2 : cs.StudentsSelection
  $es1:=ds.Students.query("nationality=:1";"French")
- $es2:=$es1.orderByFormula("length(this.lastname)") //ascending by default
+ $es2:=$es1.orderByFormula("length(this.lastname)") // デフォルトで昇順
  $es2:=$es1.orderByFormula("length(this.lastname)";dk descending)
 ```
 
-Same sort order but using a formula object:
+同じ並び方を、フォーミュラオブジェクトを使用して指定します:
 
 ```4d
  var $es1; $es2 : cs.StudentsSelection
  var $formula : Object
  $es1:=ds.Students.query("nationality=:1";"French")
  $formula:=Formula(Length(This.lastname))
- $es2:=$es1.orderByFormula($formula) // ascending by default
+ $es2:=$es1.orderByFormula($formula) // デフォルトで昇順
  $es2:=$es1.orderByFormula($formula;dk descending)
 ```
 
-#### Example 2
+#### 例題 2
 
-A formula is given as a formula object with parameters; `settings.args` object is received as $1 in the ***computeAverage*** method.
+引数付きのフォーミュラオブジェクトを渡します。`settings.args` オブジェクトは、***computeAverage*** メソッド内で $1 が受け取ります。
 
-In this example, the "marks" object field in the **Students** dataClass contains students' grades for each subject. A single formula object is used to compute a student's average grade with different coefficients for schoolA and schoolB.
+この例題では、**Students** データクラス内の "marks" オブジェクトフィールドに科目ごとの生徒の成績が格納されています。 フォーミュラオブジェクトを使用し、schoolA と schoolB で異なる係数を用いて生徒の平均の成績を計算します。
 
 ```4d
  var $es1; $es2 : cs.StudentsSelection
@@ -1441,22 +1443,22 @@ In this example, the "marks" object field in the **Students** dataClass contains
  $es1:=ds.Students.query("nationality=:1";"French")
  $formula:=Formula(computeAverage($1))
 
- $schoolA:=New object() //settings object
- $schoolA.args:=New object("english";1;"math";1;"history";1) // Coefficients to compute an average
+ $schoolA:=New object() // settingsオブジェクト
+ $schoolA.args:=New object("english";1;"math";1;"history";1) // 平均を計算するための係数
 
-  //Order students according to school A criteria
+  // school A の条件に応じて学生を並べ替えます
  $es2:=$es1.entitySelection.orderByFormula($formula;$schoolA)
 
- $schoolB:=New object() //settings object
- $schoolB.args:=New object("english";1;"math";2;"history";3) // Coefficients to compute an average
+ $schoolB:=New object() // settingsオブジェクト
+ $schoolB.args:=New object("english";1;"math";2;"history";3) // 平均を計算するための係数
 
-  //Order students according to school B criteria
+  // school B の条件に応じて学生を並べ替えます
  $es2:=$es1.entitySelection.orderByFormula($formula;dk descending;$schoolB)
 ```
 
 ```4d
   //
-  // computeAverage method
+  // computeAverage メソッド
   // -----------------------------
  #DECLARE ($coefList : Object) -> $result : Integer
  var $subject : Text
@@ -1481,13 +1483,13 @@ In this example, the "marks" object field in the **Students** dataClass contains
 <!-- REF EntitySelectionClass.query().Desc -->
 ## .query()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes                            |
-| ------- | ---------------------------------- |
-| v17 R6  | Support of Formula parameters      |
-| v17 R5  | Support of placeholders for values |
-| v17     | Added                              |
+| バージョン  | 内容                  |
+| ------ | ------------------- |
+| v17 R6 | Formula パラメーターをサポート |
+| v17 R5 | 値のプレースホルダーをサポート     |
+| v17    | 追加                  |
 
 </details>
 
@@ -1496,27 +1498,27 @@ In this example, the "marks" object field in the **Students** dataClass contains
 **.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br/>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.query().Params -->
-| Parameter     | Type               |    | Description                                                                                                                                                   |
-| ------------- | ------------------ |:--:| ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| queryString   | Text               | -> | Search criteria as string                                                                                                                                     |
-| formula       | Object             | -> | Search criteria as formula object                                                                                                                             |
-| value         | any                | -> | Value(s) to use for indexed placeholder(s)                                                                                                                    |
-| querySettings | Object             | -> | Query options: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                     |
-| Result        | 4D.EntitySelection | <- | New entity selection made up of entities from entity selection meeting the search criteria specified in *queryString* or *formula*|<!-- END REF -->
+| 引数            | タイプ                |    | 詳細                                                                                                              |
+| ------------- | ------------------ |:--:| --------------------------------------------------------------------------------------------------------------- |
+| queryString   | テキスト               | -> | 検索条件 (文字列)                                                                                                      |
+| フォーミュラ        | Object             | -> | 検索条件 (フォーミュラオブジェクト)                                                                                             |
+| value         | any                | -> | プレースホルダー用の値                                                                                                     |
+| querySettings | Object             | -> | クエリオプション: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                            |
+| Result        | 4D.EntitySelection | <- | *queryString* または *formula* に渡した検索条件に合致する、エンティティセレクション内のエンティティから構成された新しいエンティティセレクション|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
-The `.query()` function <!-- REF #EntitySelectionClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection<!-- END REF -->, and returns a new object of type `EntitySelection` containing all the entities that are found. Lazy loading is applied.
-> This function does not modify the original entity selection.
+The `.query()` function <!-- REF #EntitySelectionClass.query().Summary -->The `.query()` function<!-- END REF -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection この関数には、レイジーローディングが適用されます。
+> この関数は、元のエンティティセレクションを変更しません。
 
-If no matching entities are found, an empty `EntitySelection` is returned.
+エンティティが見つからない場合、空のエンティティセレクションが返されます。
 
-For detailed information on how to build a query using *queryString*, *value*, and *querySettings* parameters, please refer to the DataClass [`.query()`](DataClassClass.md#query) function description.
-> By default if you omit the **order by** statement in the *queryString*, the returned entity selection is [not ordered](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). Note however that, in Client/Server mode, it behaves like an ordered entity selection (entities are added at the end of the selection).
+*queryString* および *value* や *querySettings* パラメーターを使ってクエリをビルドする方法の詳細については、DataClass[`.query()`](DataClassClass.md#query) 関数を参照ください。
+> *queryString* 内で **order by** ステートメントを省略した場合のデフォルトでは、返されるエンティティセレクションは、[順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし)のものになります。 しかしながら、クライアント/サーバーモードにおいては、順列ありのエンティティセレクションのように振る舞う (エンティティはセレクションの終わりに追加されていく) 点に注意してください。
 
-#### Example 1
+#### 例題 1
 
 ```4d
  var $entitySelectionTemp : cs.EmployeeSelection
@@ -1524,24 +1526,24 @@ For detailed information on how to build a query using *queryString*, *value*, a
  Form.emps:=$entitySelectionTemp.query("manager.lastName = :1";"S@")
 ```
 
-#### Example 2
+#### 例題 2
 
-More examples of queries can be found in the DataClass [`.query()`](DataClassClass.md#query) page.
+追加のクエリ例については、[`DataClass.query()`](DataClassClass.md#query) を参照してください。
 
-#### See also
+#### 参照
 
-[`.query()`](DataClassClass.md#query) for dataclass
+データクラスの [`.query()`](DataClassClass.md#query)
 
 <!-- END REF -->
 
 <!-- REF EntitySelectionClass.queryPath.Desc -->
 ## .queryPath
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| バージョン | 内容 |
+| ----- | -- |
+| v17   | 追加 |
 
 </details>
 
@@ -1549,22 +1551,22 @@ More examples of queries can be found in the DataClass [`.query()`](DataClassCla
 
 **.queryPath** : Text<!-- END REF -->
 
-#### Description
+#### 詳細
 
-The `.queryPath` property <!-- REF #EntitySelectionClass.queryPath.Summary -->contains a detailed description of the query as it was actually performed by 4D<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPath":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
+The `.queryPath` property <!-- REF #EntitySelectionClass.queryPath.Summary -->contains a detailed description of the query as it was actually performed by 4D<!-- END REF -->. このプロパティは、[`.query()`](#query) 関数の *querySettings* 引数に `"queryPath":true` プロパティが渡されていた場合に、クエリを通して生成された `EntitySelection` オブジェクトで利用可能です。
 
-For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page.
+詳細については、DataClass[`.query()`](DataClassClass.html#query) の **querySettings** の説明を参照ください。
 
 <!-- END REF -->
 
 <!-- REF EntitySelectionClass.queryPlan.Desc -->
 ## .queryPlan
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| バージョン | 内容 |
+| ----- | -- |
+| v17   | 追加 |
 
 </details>
 
@@ -1572,22 +1574,22 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 **.queryPlan** : Text<!-- END REF -->
 
-#### Description
+#### 詳細
 
-The `.queryPlan` property <!-- REF #EntitySelectionClass.queryPlan.Summary --> contains a detailed description of the query just before it is executed (i.e., the planned query)<!-- END REF -->. This property is available for `EntitySelection` objects generated through queries if the `"queryPlan":true` property was passed in the *querySettings* parameter of the [`.query()`](#query) function.
+The `.queryPlan` property <!-- REF #EntitySelectionClass.queryPlan.Summary --> contains a detailed description of the query just before it is executed (i.e., the planned query)<!-- END REF -->. このプロパティは、[`.query()`](#query) 関数の *querySettings* 引数に `"queryPlan":true` プロパティが渡されていた場合に、クエリを通して生成された `EntitySelection` オブジェクトで利用可能です。
 
-For more information, refer to the **querySettings parameter** paragraph in the Dataclass[`.query()`](DataClassClass.html#query) page.
+詳細については、DataClass[`.query()`](DataClassClass.html#query) の **querySettings** の説明を参照ください。
 
 <!-- END REF -->
 
 <!-- REF EntitySelectionClass.refresh().Desc -->
 ## .refresh()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v18 R3  | Added   |
+| バージョン  | 内容 |
+| ------ | -- |
+| v18 R3 | 追加 |
 
 </details>
 
@@ -1596,65 +1598,65 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 **.refresh()**<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.refresh().Params -->
-| Parameter | Type |  | Description                                                |
-| --------- | ---- |::| ---------------------------------------------------------- |
-|           |      |  | Does not require any parameters|<!-- END REF -->
+| 引数 | タイプ |  | 詳細                                                         |
+| -- | --- |::| ---------------------------------------------------------- |
+|    |     |  | Does not require any parameters|<!-- END REF -->
 
 |
 
-#### Description
-> This function only works with a remote datastore (client / server or `Open datastore` connection).
+#### 詳細
+> このメソッドはリモートデータストア (クライアント/サーバーモード、または`Open datastore` 接続) においてのみ動作します。
 
 The `.refresh()` function <!-- REF #EntitySelectionClass.refresh().Summary -->immediately "invalidates" the entity selection data in the local ORDA cache<!-- END REF --> so that the next time 4D requires the entity selection, it will be reloaded from the database.
 
-By default, the local ORDA cache is invalidated after 30 seconds. In the context of client / server applications using both ORDA and the classic language, this method allows you to make sure a remote application will always work with the latest data.
+デフォルトでは、ローカルの ORDA のキャッシュは 30秒後に無効化されます。 クライアント/サーバーアプリケーションのコンテキストにおいて ORDA とクラシック言語の両方を使用している場合、このメソッドを使用することでリモートアプリケーションが必ず最新のデータを使用するようにできます。
 
-#### Example 1
+#### 例題 1
 
-In this example, classic and ORDA code modify the same data simultaneously:
+クラシックと ORDA言語の両方が、同じデータを同時に編集する場合を考えます:
 
 ```4d
- //On a 4D remote
+ // 4Dリモート上で実行
 
  var $selection : cs.StudentsSelection
  var $student : cs.StudentsEntity
 
  $selection:=ds.Students.query("lastname=:1";"Collins")
-  //The first entity is loaded in the ORDA cache
+  // 先頭エンティティを ORDA のキャッシュに読み込みます
  $student:=$selection.first()
 
-  //Update with classic 4D, ORDA cache is not aware of if
+  // 4Dのクラシック言語でデータを更新します。ORDA キャッシュはこれを検知しません
  QUERY([Students];[Students]lastname="Collins")
  [Students]lastname:="Colin"
  SAVE RECORD([Students])
 
-  //to get the latest version, the ORDA cache must be invalidated
+  // 最新情報を取得するため、ORDAキャッシュを無効化する必要があります
  $selection.refresh()
-  // Even if cache is not expired, the first entity is reloaded from disk
+  // キャッシュが失効していなくても、先頭エンティティがディスクから再読み込みされます
  $student:=$selection.first()
 
   //$student.lastname contains "Colin"
 ```
 
-#### Example 2
+#### 例題 2
 
-A list box displays the Form.students entity selection and several clients work on it.
+リストボックスに Form.students エンティティセレクションを表示し、複数のクライアントがそれを操作する場合を考えます。
 
 ```4d
-// Form method:
+// フォームメソッド:
  Case of
     :(Form event code=On Load)
        Form.students:=ds.Students.all()
  End case
   //
   //
-  // On client #1, the user loads, updates, and saves the first entity
-  // On client #2, the user loads, updates, and saves the same entity
+  // クライアント#1で、ユーザーが先頭エンティティをロードし、更新して保存します
+  // クライアント#2でも、ユーザーが同じエンティティをロードし、更新して保存します
   //
   //
-  // On client #1:
- Form.students.refresh() // Invalidates the ORDA cache for the Form.students entity selection
-  // The list box content is refreshed from the database with update made by client #2
+  // クライアント#1において:
+ Form.students.refresh() // Form.students エンティティセレクションの ORDAキャッシュを無効化します
+  // リストボックスの中身はデータベースの内容で更新され、クライアント#2 がおこなった変更も反映します
 ```
 
 <!-- END REF -->
@@ -1662,11 +1664,11 @@ A list box displays the Form.students entity selection and several clients work 
 <!-- REF EntitySelectionClass.slice().Desc -->
 ## .slice()
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| バージョン | 内容 |
+| ----- | -- |
+| v17   | 追加 |
 
 </details>
 
@@ -1675,31 +1677,31 @@ A list box displays the Form.students entity selection and several clients work 
 **.slice**( *startFrom* : Integer { ; *end* : Integer } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.slice().Params -->
-| Parameter | Type               |    | Description                                                                               |
-| --------- | ------------------ |:--:| ----------------------------------------------------------------------------------------- |
-| startFrom | Integer            | -> | Index to start the operation at (included)                                                |
-| end       | Integer            | -> | End index (not included)                                                                  |
-| Result    | 4D.EntitySelection | <- | New entity selection containing sliced entities (shallow copy)|<!-- END REF -->
+| 引数        | タイプ                |    | 詳細                                                                 |
+| --------- | ------------------ |:--:| ------------------------------------------------------------------ |
+| startFrom | 整数                 | -> | 処理を開始するインデックス)                                                     |
+| end       | 整数                 | -> | 終了インデックス (含まれない)                                                   |
+| Result    | 4D.EntitySelection | <- | 抜粋エンティティを格納した新しいエンティティセレクション (シャロウ・コピー)|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
-The `.slice()` function <!-- REF #EntitySelectionClass.slice().Summary -->returns a portion of an entity selection into a new entity selection<!-- END REF -->, selected from the *startFrom* index to the *end* index (*end* is not included) or to the last entity of the entity selection. This method returns a shallow copy of the entity selection (it uses the same entity references).
-> This function does not modify the original entity selection.
+The `.slice()` function <!-- REF #EntitySelectionClass.slice().Summary -->returns a portion of an entity selection into a new entity selection<!-- END REF -->, selected from the *startFrom* index to the *end* index (*end* is not included) or to the last entity of the entity selection. この関数は、エンティティセレクションのシャロウ・コピーを返します (同じエンティティ参照を使用します)。
+> この関数は、元のエンティティセレクションを変更しません。
 
-The returned entity selection contains the entities specified by *startFrom* and all subsequent entities up to, but not including, the entity specified by *end*. If only the *startFrom* parameter is specified, the returned entity selection contains all entities from *startFrom* to the last entity of the original entity selection.
+If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the entity selection). If the calculated value < 0, *startFrom* is set to 0.
 
-* If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the entity selection). If the calculated value < 0, *startFrom* is set to 0.
-* If *startFrom >= length*, the function returns an empty entity selection.
-* If *end* < 0, it is recalculated as *end:=end+length*.
-* If *end < startFrom* (passed or calculated values), the method does nothing.
+* *startFrom* < 0 の場合、*startFrom:=startFrom+length* として再計算されます (エンティティセレクションの終端からのオフセットであるとみなされます)。 再計算された値も負の値だった場合、*startFrom* は 0 に設定されます。
+* *startFrom >= length* の場合、関数は空のエンティティセレクションを返します。
+* *end* < 0 の場合、それは *end:=end+length* として再計算されます。
+* 渡された値、あるいは再計算された値が *end* < *startFrom* の場合、関数はなにもしません。
 
-If the entity selection contains entities that were dropped in the meantime, they are also returned.
+エンティティセレクションにドロップされたエンティティが含まれる場合、それらも返されます。
 
-#### Example 1
+#### 例題 1
 
-You want to get a selection of the first 9 entities of the entity selection:
+エンティティセレクションの、最初の 9件のエンティティのセレクションを取得します:
 
 ```4d
 var $sel; $sliced : cs.EmployeeSelection
@@ -1707,13 +1709,13 @@ $sel:=ds.Employee.query("salary > :1";50000)
 $sliced:=$sel.slice(0;9) //
 ```
 
-#### Example 2
+#### 例題 2
 
-Assuming we have ds.Employee.all().length = 10
+ds.Employee.all().length = 10 である場合:
 
 ```4d
 var $slice : cs.EmployeeSelection
-$slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 to 8, but since 9 > 8, returns an empty entity selection
+$slice:=ds.Employee.all().slice(-1;-2) // インデックス 9 から 8番までを返そうとしますが、9 > 8 なので空のセレクションが返されます
 
 ```
 
@@ -1722,11 +1724,11 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 <!-- REF EntitySelectionClass.sum().Desc -->
 ## .sum( )
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| バージョン | 内容 |
+| ----- | -- |
+| v17   | 追加 |
 
 </details>
 
@@ -1735,28 +1737,28 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 **.sum**( *attributePath* : Text ) : Real<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.sum().Params -->
-| Parameter     | Type |    | Description                                               |
-| ------------- | ---- |:--:| --------------------------------------------------------- |
-| attributePath | Text | -> | Path of the attribute to be used for calculation          |
-| Result        | Real | <- | Sum of entity selection values|<!-- END REF -->
+| 引数            | タイプ  |    | 詳細                                           |
+| ------------- | ---- |:--:| -------------------------------------------- |
+| attributePath | テキスト | -> | 計算に使用する属性パス                                  |
+| Result        | 実数   | <- | エンティティセレクションの値の合計|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
-The `.sum()` function <!-- REF #EntitySelectionClass.sum().Summary -->returns the sum for all *attributePath* values in the entity selection<!-- END REF -->.
+The `.sum()` function <!-- REF #EntitySelectionClass.sum().Summary -->The `.sum()` function<!-- END REF -->.
 
-`.sum()` returns 0 if the entity selection is empty.
+エンティティセレクションが空の場合、`.sum()` は 0 を返します。
 
-The sum can only be done on values of number type. If the *attributePath* is an object property, only numerical values are taken into account for the calculation (other value types are ignored). In this case, if *attributePath* leads to a property that does not exist in the object or does not contain any numeric values, `.sum()` returns 0.
+総和は、数値型の値に対してのみ実行可能です。 *attributePath* がオブジェクトプロパティだった場合、計算の対象になるのは数値型の値のみです (他の値の型は無視されます)。 この場合で、*attributePath* がオブジェクト内に存在しないパス、あるいは数値を含んでいない属性へのパスであった場合には、`.sum()` は 0 を返します。
 
-An error is returned if:
+以下の場合には、エラーが返されます:
 
-* *attributePath* is not a numerical or an object attribute,
-* *attributePath* is a related attribute,
-* *attributePath* is not found in the entity selection dataclass.
+* *attributePath* が数値型あるいはオブジェクト型の属性ではない
+* *attributePath* はリレート属性である
+* *attributePath* がエンティティセレクションデータクラス内に存在しない場合。
 
-#### Example
+#### 例題
 
 ```4d
 var $sel : cs.EmployeeSelection
@@ -1771,11 +1773,11 @@ $sum:=$sel.sum("salary")
 <!-- REF EntitySelectionClass.toCollection().Desc -->
 ## .toCollection( )
 
-<details><summary>History</summary>
+<details><summary>履歴</summary>
 
-| Version | Changes |
-| ------- | ------- |
-| v17     | Added   |
+| バージョン | 内容 |
+| ----- | -- |
+| v17   | 追加 |
 
 </details>
 
@@ -1784,59 +1786,59 @@ $sum:=$sel.sum("salary")
 **.toCollection**( { *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer } } ) : *Collection*<br/>**.toCollection**( *filterString* : Text {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*<br/>**.toCollection**( *filterCol* : Collection {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.toCollection().Params -->
-| Parameter    | Type       |    | Description                                                                                           |
-| ------------ | ---------- |:--:| ----------------------------------------------------------------------------------------------------- |
-| filterString | Text       | -> | String with entity attribute path(s) to extract                                                       |
-| filterCol    | Collection | -> | Collection of entity attribute path(s) to extract                                                     |
-| options      | Integer    | -> | `dk with primary key`: adds the primary key<br/>`dk with stamp`: adds the stamp                 |
-| begin        | Integer    | -> | Designates the starting index                                                                         |
-| howMany      | Integer    | -> | Number of entities to extract                                                                         |
-| Result       | Collection | <- | Collection of objects containing attributes and values of entity selection|<!-- END REF -->
+| 引数           | タイプ    |    | 詳細                                                                                                    |
+| ------------ | ------ |:--:| ----------------------------------------------------------------------------------------------------- |
+| filterString | テキスト   | -> | 抽出するエンティティの属性パスの文字列                                                                                   |
+| filterCol    | コレクション | -> | 抽出するエンティティの属性パスのコレクション                                                                                |
+| options      | 整数     | -> | `dk with primary key`: adds the primary key<br/>`dk with stamp`: adds the stamp                 |
+| begin        | 整数     | -> | 開始インデックス                                                                                              |
+| howMany      | 整数     | -> | 抽出するエンティティ数                                                                                           |
+| Result       | コレクション | <- | Collection of objects containing attributes and values of entity selection|<!-- END REF -->
 
 |
 
-#### Description
+#### 詳細
 
 The `.toCollection()` function <!-- REF #EntitySelectionClass.toCollection().Summary -->creates and returns a collection where each element is an object containing a set of properties and values <!-- END REF -->corresponding to the attribute names and values for the entity selection.
 
-If no filter parameter is passed or the first parameter contains an empty string or "*", all the attributes are extracted. Attributes with [kind](DataClassAttributeClass.md#kind) property as "relatedEntity" are extracted with the simple form: an object with property \_\_KEY (primary key). Attributes with kind property as "relatedEntities" are not extracted.
+filterString および filterCol 引数が省略されるか、空の文字列が渡されるか、あるいは "*" が渡された場合、すべての属性が抽出されます。 "[kind](DataClassAttributeClass.md#kind)" プロパティが "relatedEntity" の属性は単純な形式で抽出されます: \_\_KEY プロパティ (プライマリーキー) を持ったオブジェクト。 "relatedEntities" 型の "kind" プロパティの属性は抽出されません。
 
-Or, you can designate the entity attributes to extract using a filter parameter. You can use one of these two filters:
+抽出するエンティティ属性を限定したい場合には、それを指定する引数を渡すことができます。 2つのシンタックスを使用できます:
 
-* *filterString* --a string with property paths separated with commas: "propertyPath1, propertyPath2, ...".
-* *filterCol* --a collection of strings containing property paths: \["propertyPath1","propertyPath2",...]
+* *filterString*: プロパティパスをカンマで区切った文字列: "propertyPath1, propertyPath2, ..."
+* *filterCol*: プロパティパスを含む文字列のコレクション: \["propertyPath1","propertyPath2",...]
 
-If a filter is specified for an attribute of the `relatedEntity` kind:
+引数が、`relatedEntity` (リレートエンティティ) 型の属性を指定していた場合:
 
-* propertyPath = "relatedEntity" -> it is extracted with simple form
-* propertyPath = "relatedEntity.*" -> all the properties are extracted
-* propertyPath = "relatedEntity.propertyName1, relatedEntity.propertyName2, ..." -> only those properties are extracted
+* propertyPath = "relatedEntity" -> 単純な形式で取得されます
+* propertyPath = "relatedEntity.*" -> 全プロパティが取得されます
+* propertyPath = "relatedEntity.propertyName1, relatedEntity.propertyName2, ..." -> 指定されたプロパティのみが取得されます
 
-If a filter is specified for an attribute of the `relatedEntities` kind:
+引数が、`relatedEntities` (リレートエンティティズ) 型の属性を指定していた場合:
 
-* propertyPath = "relatedEntities.*" -> all the properties are extracted
-* propertyPath = "relatedEntities.propertyName1, relatedEntities.propertyName2, ..." -> only those properties are extracted
+* propertyPath = "relatedEntities.*" -> 全プロパティが取得されます
+* propertyPath = "relatedEntities.propertyName1, relatedEntities.propertyName2, ..." -> 指定されたプロパティのみが取得されます
 
-In the *options* parameter, you can pass the `dk with primary key` and/or `dk with stamp` selector(s) to add the entity's primary keys and/or stamps in extracted objects.
+*options* に `dk with primary key` または `dk with stamp` セレクターを渡すことで、エンティティのプライマリーキー/スタンプを、取得するオブジェクトに追加するかどうかを指定できます。
 
-The *begin* parameter allows you to indicate the starting index of the entities to extract. You can pass any value between 0 and entity selection length-1.
+*begin* 引数を渡すことで、抽出するエンティティの開始インデックスを指定することができます。 0 からエンティティセレクションの長さ - 1 の範囲で値を渡すことができます。
 
-The *howMany* parameter lets you specify the number of entities to extract, starting with the one specified in *begin*. Dropped entities are not returned but are taken into account according to *howMany*. For example, if *howMany*= 3 and there is 1 dropped entity, only 2 entities are extracted.
+*howMany* 引数を渡すと、*begin* 引数で指定した位置から抽出するエンティティの件数を指定することができます。 ドロップされたエンティティは返されませんが、*howMany* 引数のカウントでは考慮されます。 たとえば、ドロップされたエンティティが1つある場合に *howMany*= 3 であれば、2件のエンティティが抽出されます。
 
-If *howMany* > length of the entity selection, the method returns (length - *begin*) objects.
+*howMany* 引数がエンティティセレクションの length を超える場合、メソッドは(length - *begin*) の数だけオブジェクトを返します。
 
-An empty collection is returned if:
+以下のいずれかの場合には空のコレクションが返されます:
 
-* the entity selection is empty, or
-* *begin* is greater than the length of the entity selection.
+* エンティティセレクションが空である
+* *begin* 引数がエンティティセレクションの length を超えている
 
-#### Example 1
+#### 例題 1
 
-The following structure will be used throughout all examples of this section:
+このセクションの例題では、以下のストラクチャーを使います:
 
 ![](../assets/en/API/dataclassAttribute4.png)
 
-Example without filter or options parameter:
+filterString や filterCol、および options 引数を渡さない例:
 
 ```4d
  var $employeesCollection : Collection
@@ -1847,7 +1849,7 @@ Example without filter or options parameter:
  $employeesCollection:=$employees.toCollection()
 ```
 
-Returns:
+戻り値:
 
 ```4d
 [
@@ -1890,9 +1892,9 @@ Returns:
 ]
 ```
 
-#### Example 2
+#### 例題 2
 
-Example with options:
+options を使用した例:
 
 ```4d
 var $employeesCollection : Collection
@@ -1903,7 +1905,7 @@ $employees:=ds.Employee.all()
 $employeesCollection:=$employees.toCollection("";dk with primary key+dk with stamp)
 ```
 
-Returns:
+戻り値:
 
 ```4d
 [
@@ -1949,9 +1951,9 @@ Returns:
     }]
 ```
 
-#### Example 3
+#### 例題 3
 
-Example with slicing and filtering on properties:
+抽出件数と、filterCol で抽出プロパティを指定した例:
 
 ```4d
 var $employeesCollection; $filter : Collection
@@ -1966,7 +1968,7 @@ $employees:=ds.Employee.all()
 $employeesCollection:=$employees.toCollection($filter;0;0;2)
 ```
 
-Returns:
+戻り値:
 
 ```4d
 [
@@ -1982,9 +1984,9 @@ Returns:
 
 ```
 
-#### Example 4
+#### 例題 4
 
-Example with `relatedEntity` type with simple form:
+`relatedEntity` (リレートエンティティ) 型の属性を単純な形式で抽出した例:
 
 ```4d
 var $employeesCollection : Collection
@@ -1992,7 +1994,7 @@ $employeesCollection:=New collection
 $employeesCollection:=$employees.toCollection("firstName,lastName,employer")
 ```
 
-returns:
+戻り値:
 
 ```4d
 [
@@ -2020,9 +2022,9 @@ returns:
    ]
 ```
 
-#### Example 5
+#### 例題 5
 
-Example with *filterCol* parameter:
+*filterCol* を使用した例:
 
 ```4d
 var $employeesCollection; $coll : Collection
@@ -2031,7 +2033,7 @@ $coll:=New collection("firstName";"lastName")
 $employeesCollection:=$employees.toCollection($coll)
 ```
 
-Returns:
+戻り値:
 
 ```4d
 [
@@ -2046,9 +2048,9 @@ Returns:
 ]
 ```
 
-#### Example 6
+#### 例題 6
 
-Example with extraction of all properties of a relatedEntity:
+リレートエンティティの全プロパティを抽出する例:
 
 ```4d
 var $employeesCollection; $coll : Collection
@@ -2060,7 +2062,7 @@ $coll.push("employer.*")
 $employeesCollection:=$employees.toCollection($coll)
 ```
 
-Returns:
+戻り値:
 
 ```4d
 [
@@ -2100,9 +2102,9 @@ Returns:
   ]
 ```
 
-#### Example 7
+#### 例題 7
 
-Example with extraction of some properties of a relatedEntity:
+リレートエンティティの一部のプロパティを抽出する例:
 
 ```4d
 var $employeesCollection : Collection
@@ -2136,9 +2138,9 @@ $employeesCollection:=$employees.toCollection("firstName, lastName, employer.nam
     }]
 ```
 
-#### Example 8
+#### 例題 8
 
-Example with extraction of some properties of `relatedEntities`:
+`relatedEntities` (リレートエンティティズ) の一部のプロパティを抽出する例:
 
 ```4d
  var $employeesCollection : Collection
@@ -2146,7 +2148,7 @@ Example with extraction of some properties of `relatedEntities`:
  $employeesCollection:=$employees.toCollection("firstName, lastName, directReports.firstName")
 ```
 
-Returns:
+戻り値:
 
 ```4d
 [
@@ -2188,9 +2190,9 @@ Returns:
     }]
 ```
 
-#### Example 9
+#### 例題 9
 
-Example with extraction of all properties of `relatedEntities`:
+`relatedEntities` (リレートエンティティズ) の全プロパティを抽出する例:
 
 ```4d
 var $employeesCollection : Collection
