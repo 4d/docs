@@ -3,16 +3,16 @@ id: version
 title: '$version'
 ---
 
-Image version number
+画像のバージョン番号
 
-## Description
+## 詳細
 
-`$version` is the image's version number returned by the server. The version number, which is sent by the server, works around the browser's cache so that you are sure to retrieve the correct image.
+`$version` はサーバーにより返される画像のバージョン番号です。 サーバーより受け取るバージョン番号は、ブラウザーのキャッシュを回避し、正しい画像を取得できるようにします。
 
-The value of the image's version parameter is modified by the server.
+画像の version パラメーターの値はサーバーによって変更されます。
 
-## Example
+## 例題
 
-The following example defines the image format to JPEG regardless of the actual type of the photo and passes the actual version number sent by the server:
+photo属性の実際の形式に関わらず、画像形式を JPEG に指定し、サーバーより受け取ったバージョン番号を受け渡している例です:
 
  `GET  /rest/Employee(1)/photo?$imageformat=jpeg&$version=3&$expand=photo`
