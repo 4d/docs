@@ -3,55 +3,55 @@ id: info
 title: '$info'
 ---
 
-Returns information about the entity sets currently stored in 4D Server's cache as well as user sessions
+4D Server のキャッシュに保存されているエンティティセットおよびユーザーセッションの情報を返します。
 
-## Description
-When you call this request for your project, you retrieve information in the following properties:
+## 詳細
+プロジェクトに対してこのリクエストを送信すると、次のプロパティに情報を取得します:
 
-| Property       | Type       | Description                                                                         |
-| -------------- | ---------- | ----------------------------------------------------------------------------------- |
-| cacheSize      | Number     | 4D Server's cache size.                                                             |
-| usedCache      | Number     | How much of 4D Server's cache has been used.                                        |
-| entitySetCount | Number     | Number of entity selections.                                                        |
-| entitySet      | Collection | A collection in which each object contains information about each entity selection. |
-| ProgressInfo   | Collection | A collection containing information about progress indicator information.           |
-| sessionInfo    | Collection | A collection in which each object contains information about each user session.     |
+| プロパティ          | タイプ    | 詳細                                 |
+| -------------- | ------ | ---------------------------------- |
+| cacheSize      | 数値     | 4D Server のキャッシュサイズ                |
+| usedCache      | 数値     | 4D Server のキャッシュ使用量                |
+| entitySetCount | 数値     | エンティティセットの数                        |
+| entitySet      | コレクション | 各エンティティセットの情報が格納されているオブジェクトのコレクション |
+| ProgressInfo   | コレクション | 進捗インジケーターの情報が格納されているコレクション         |
+| sessionInfo    | コレクション | 各ユーザーセッションの情報が格納されているオブジェクトのコレクション |
 
 ### entitySet
-For each entity selection currently stored in 4D Server's cache, the following information is returned:
+4D Server のキャッシュに保存されている各エンティティセットについて、次の情報が返されます:
 
 
-| Property      | Type    | Description                                                                                                                                                                                                                                                         |
-| ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| id            | String  | A UUID that references the entity set.                                                                                                                                                                                                                              |
-| dataClass     | String  | Name of the dataclass.                                                                                                                                                                                                                                              |
-| selectionSize | Number  | Number of entities in the entity selection.                                                                                                                                                                                                                         |
-| sorted        | Boolean | Returns true if the set was sorted (using `$orderby`) or false if it's not sorted.                                                                                                                                                                                  |
-| refreshed     | Date    | When the entity set was created or the last time it was used.                                                                                                                                                                                                       |
-| expires       | Date    | When the entity set will expire (this date/time changes each time when the entity set is refreshed). The difference between refreshed and expires is the timeout for an entity set. This value is either two hours by default or what you defined using `$timeout`. |
+| プロパティ         | タイプ    | 詳細                                                                                                                                             |
+| ------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| id            | String | エンティティセットを参照する UUID                                                                                                                            |
+| dataClass     | String | データクラスの名称。                                                                                                                                     |
+| selectionSize | 数値     | エンティティセットに含まれるエンティティの数                                                                                                                         |
+| sorted        | ブール    | エンティティセットが (`$orderby` の使用により) 順列ありの場合には true、順列なしの場合は false。                                                                                  |
+| refreshed     | 日付     | エンティティセットが最後に使用された日付または作成日。                                                                                                                    |
+| expires       | 日付     | エンティティセットの有効期限 (エンティティセットが更新されるたびに、この日付/時間は変更されます)。 expires と refreshed の差がエンティティセットのタイムアウトです。 デフォルトのタイムアウトは2時間ですが、`$timeout` を使って指定することもできます。 |
 
-For information about how to create an entity selection, refer to `$method=entityset`. If you want to remove the entity selection from 4D Server's cache, use `$method=release`.
-> 4D also creates its own entity selections for optimization purposes, so the ones you create with `$method=entityset` are not the only ones returned.
-> **IMPORTANT** If your project is in **Controlled Admin Access Mode**, you must first log into the project as a user in the Admin group.
+エンティティセットを作成する方法についての詳細は `$method=entityset` を参照ください。 4D Server のキャッシュからエンティティセットを削除したい場合には `$method=release` を使います。
+> 最適化のため、4D は独自のエンティティセットを生成します。つまり、`$method=entityset` で作成した以外のエンティティセットも返されます。
+> **重要** プロジェクトにおいて、4D の **パスワードアクセスシステム** を起動している場合には、Admin グループのユーザーとしてログインしている必要があります。
 
 ### sessionInfo
 
-For each user session, the following information is returned in the *sessionInfo* collection:
+各ユーザーセッションについては、次の情報が *sessionInfo* コレクションに返されます:
 
-| Property   | Type   | Description                                                  |
-| ---------- | ------ | ------------------------------------------------------------ |
-| sessionID  | String | A UUID that references the session.                          |
-| userName   | String | The name of the user who runs the session.                   |
-| lifeTime   | Number | The lifetime of a user session in seconds (3600 by default). |
-| expiration | Date   | The current expiration date and time of the user session.    |
+| プロパティ      | タイプ    | 詳細                             |
+| ---------- | ------ | ------------------------------ |
+| sessionID  | String | セッションを参照する UUID                |
+| userName   | String | セッションを実行中のユーザー名                |
+| lifeTime   | 数値     | ユーザーセッションのタイムアウト (デフォルトは 3600) |
+| expiration | 日付     | ユーザーセッションの有効期限                 |
 
-## Example
+## 例題
 
-Retrieve information about the entity sets currently stored in 4D Server's cache as well as user sessions:
+4D Server のキャッシュに保存されているエンティティセットおよびユーザーセッションの情報を取得します。
 
 `GET /rest/$info`
 
-**Result**:
+**結果**:
 
 ```
 {
@@ -114,4 +114,4 @@ sessionInfo: [
 ]
 }
 ```
-> The progress indicator information listed after the entity selections is used internally by 4D.
+> エンティティセットに続く進捗インジケーターの情報は、4Dによって内部的に使用されます。
