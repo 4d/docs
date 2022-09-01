@@ -1,6 +1,6 @@
 ---
 id: installation
-title: Installation
+title: Instalação
 ---
 
 Welcome to 4D! On this page, you will find all of the necessary information about installing and launching your 4D product.
@@ -19,7 +19,7 @@ Additional technical details are available on the 4D website's [Resources page](
 
 2. Click on the download link for your 4D product and follow the on-screen instructions.
 
-## Sign in
+## Iniciar sessão
 
 Once you have completed the installation, you can start 4D and sign in. To do so, double-click on the 4D product icon.
 
