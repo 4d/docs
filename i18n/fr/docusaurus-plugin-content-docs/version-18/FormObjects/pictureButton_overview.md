@@ -1,61 +1,61 @@
 ---
 id: pictureButtonOverview
-title: Picture Button
+title: Bouton image
 ---
 
-## Overview
+## Vue d’ensemble
 
-A picture button is similar to a [standard button](button_overview.md). However unlike a standard button (which accepts three states: enabled, disabled and clicked), a picture button has a different image to represent each state.
+Un bouton image est similaire à un [bouton standard](button_overview.md). Cependant, contrairement à un bouton standard (qui accepte trois états : activé, désactivé et cliqué), un bouton image contient une image différente pour représenter chaque état.
 
-Picture buttons can be used in two ways:
+Les boutons image peuvent être utilisés de deux manières :
 
-* As command buttons in a form. In this case, the picture button generally includes four different states: enabled, disabled, clicked and rolled over. For example, a table of thumbnails that has one row of four columns, each thumbnail corresponds to the Default, Clicked, Roll over, and Disabled states.
+* Comme boutons de commande dans un formulaire. Dans ce cas, le bouton image accepte généralement quatre états : actif, désactivé, enfoncé et survolé. Par exemple, un tableau de vignettes qui comporte une ligne de quatre colonnes, chaque vignette correspond aux états Par défaut, Cliqué, Survol et Désactivé.
 
-  | Property                   | JSON name              | Value |
+  | Propriété                  | Nom JSON               | Value |
   | -------------------------- | ---------------------- | ----- |
-  | Rows                       | rowCount               | 1     |
-  | Columns                    | columnCount            | 4     |
-  | Switch back when Released  | switchBackWhenReleased | true  |
-  | Switch when Roll Over      | switchWhenRollover     | true  |
-  | Use Last Frame as Disabled | useLastFrameAsDisabled | true  |
+  | Lignes                     | rowCount               | 1     |
+  | Colonnes                   | columnCount            | 4     |
+  | Switch back when Released  | switchBackWhenReleased | vrai  |
+  | Switch when Roll Over      | switchWhenRollover     | vrai  |
+  | Use Last Frame as Disabled | useLastFrameAsDisabled | vrai  |
 
-* As a picture button letting the user choose among several choices. In this case, a picture button can be used in place of a pop-up picture menu. With [Picture Pop-up Menus](picturePopupMenu_overview.md), all choices are displayed simultaneously (as the items in the pop-up menu), while the picture button displays the choices consecutively (as the user clicks the button). Here is an example of a picture button. Suppose you want to give the users of a custom application the opportunity to choose the interface language for the application. You implement the option as a picture button in a custom properties dialog box:
+* Comme bouton permettant à l’utilisateur de choisir entre plusieurs options. Dans ce cas, le bouton image peut être utilisé à la place d’un pop-up menu image. As a picture button letting the user choose among several choices. In this case, a picture button can be used in place of a pop-up picture menu. Vous souhaitez permettre aux utilisateurs de votre application de choisir la langue qui sera utilisée dans les menus, les boîtes de dialogue, etc. Vous pouvez implémenter cette option à l’aide d’un bouton image, placé dans une boîte de dialogue personnalisée de Propriétés :
 
 ![](../assets/en/FormObjects/button_pictureButton.png)
 
-Clicking the object changes the picture.
+Chaque clic modifie l'état du bouton.
 
-## Using picture buttons
+## Utiliser des boutons images
 
-You can implement a picture button in the following manner:
+Un bouton image est créé de la manière suivante :
 
-1. First, prepare a single graphic in which the series of images are arranged in a row, a column, or a row-by-column grid.
+1. Tout d’abord, vous préparez une image, dans laquelle la série d’images est organisée en colonnes, en lignes, ou les deux.
 
    ![](../assets/en/FormObjects/pictureButton_grid.png)
 
-You can organize pictures as columns, rows, or a row-by-column grid (as shown above). When organizing pictures as a grid, they  are numbered from left to right, row by row, beginning with 0. For example, the second picture of the second row of a grid that consists of two rows and three columns, is numbered 4 (The UK flag in the example above).
+Vous pouvez organiser les images sous la forme de colonnes, de lignes ou de tableaux. Dans ce dernier cas, les images sont alors numérotées de gauche à droite, ligne par ligne, en débutant par 0. Par exemple, la deuxième image de la deuxième ligne d’un tableau de 2 lignes et de 3 colonnes a pour numéro 4.
 
-2. Next, make sure the image is in your project's Resources and enter the path in the [Pathname](properties_TextAndPicture.md#picture-pathname) property.
+2. Puis, assurez-vous que l'image se trouve dans les ressources de votre projet et saisissez le chemin dans la propriété [Chemin d'accès image](properties_TextAndPicture.md#picture-pathname).
 
-3. Define the graphic's [Rows and Columns](properties_Crop.md) properties.
+3. Définissez les propriétés de [lignes et colonnes](properties_Crop.md) du graphique.
 
-4. Specify when the images change by selecting appropriate [animation](properties_Animation.md) properties.
+4. Spécifiez quand les images changent en sélectionnant les propriétés d'[animation](properties_Animation.md) appropriées.
 
 ## Animation
 
-In addition to the standard positioning and appearance settings, you can set some specific properties for picture buttons, especially concerning how and when the pictures are displayed. These property options can be combined to enhance your picture buttons.
+Outre les paramètres de positionnement et d'apparence standard, vous pouvez définir certaines propriétés spécifiques pour les boutons image, en particulier la manière et le moment où les images sont affichées. Ces options de propriétés peuvent être combinées pour améliorer vos boutons d'image.
 
-* By default (when no [animation option](properties_Animation.md) is selected), a picture button displays the next picture in the series when the user clicks; it displays the previous picture in the series when the user holds down the **Shift** key and clicks. When the user reaches the last picture in the series, the picture does not change when the user clicks again. In other words, it does not cycle back to the first picture in the series.
+* Par défaut ([aucune option cochée](properties_Animation.md)), affiche l’image suivante de la série lorsque l’utilisateur clique sur le bouton; affiche l’image précédente de la série lorsque l’utilisateur effectue **Majuscule**+clic sur le bouton. La séquence d’images s’arrête lorsqu’on atteint la dernière image de la série. En d’autres termes, le bouton ne retourne pas à la première image de la série.
 
-The following other modes are available:
-* [Loop back to first frame](properties_Animation.md#loopBackToFirstFrame)
+Les autres modes disponibles sont les suivants :
+* [Recommencer la séquence](properties_Animation.md#loopBackToFirstFrame)
 * [Switch back when Released](properties_Animation.md#switch-back-when-released)
 * [Switch when Roll Over](properties_Animation.md#switch-when-roll-over)
-* [Switch continuously on clicks](properties_Animation.md#switch-continuously-on-clicks)
+* [Défilement continu sur clic](properties_Animation.md#switch-continuously-on-clicks)
 * [Use Last Frame as Disabled](properties_Animation.md#use-last-frame-as-disabled)
-* [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled)
-> The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displayed. The numbering of pictures in the table begins with 0.
+* [Dernière imagette si désactivé](properties_Animation.md#use-last-frame-as-disabled)
+> [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled) > The [associated variable](properties_Object.md#variable-or-expression) of the picture button returns the index number, in the thumbnail table, of the current picture displayed. La numérotation des images dans le tableau débute à 0.
 
-## Supported Properties
+## Propriétés prises en charge
 
-[Bold](properties_Text.md#bold) - [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Columns](properties_Crop.md#columns) - [Droppable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Loop back to first frame](properties_Animation.md#loopBackToFirstFrame) - [Object Name](properties_Object.md#object-name) - [Pathname](properties_Picture.md#pathname) - [Right](properties_CoordinatesAndSizing.md#right) - [Rows](properties_Crop.md#rows) - [Shortcut](properties_Entry.md#shortcut) - [Standard action](properties_Action.md#standard-action) - [Switch back when released](properties_Animation.md#switchBackWhenReleased) - [Switch continuously on clicks](properties_Animation.md#switch-continuously-on-clicks) - [Switch every x ticks](properties_Animation.md#switch-every-x-ticks) - [Title](properties_Object.md#title) - [Switch when roll over](properties_Animation.md#switchWhenRollOver) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Use Last frame as disabled](properties_Animation.md#use-last-frame-as-disabled) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)
+[Bold](properties_Text.md#bold) - [ Style de la bordure](properties_BackgroundAndBorder.md#border-line-style) - [Bas](properties_CoordinatesAndSizing.md#bottom) - [Style de bouton](properties_TextAndPicture.md#button-style) - [Class](properties_Object.md#css-class) - [Colonnes](properties_Crop.md#columns) - [Déposable](properties_Action.md#droppable) - [Focusable](properties_Entry.md#focusable) - [Police](properties_Text.md#font) - [Couleur de la police](properties_Text.md#font-color) - [Hauteur](properties_CoordinatesAndSizing.md#height) - [Message d'aide](properties_Help.md#help-tip) - [Dim. horizontal](properties_ResizingOptions.md#horizontal-sizing) - [Italique](properties_Text.md#italic) - [Gauche](properties_CoordinatesAndSizing.md#left) - [Recommencer la séquence](properties_Animation.md#loopBackToFirstFrame) - [Nom](properties_Object.md#object-name) - [Chemin d'accès de l'image](properties_Picture.md#pathname) - [Droite](properties_CoordinatesAndSizing.md#right) - [Lignes](properties_Crop.md#rows) - [Raccouric](properties_Entry.md#shortcut) - [Action standard ](properties_Action.md#standard-action) - [Retour sur relâchement du clic](properties_Animation.md#switchBackWhenReleased) - [Défilement continu sur clic](properties_Animation.md#switch-continuously-on-clicks) - [Défilement tous les n ticks](properties_Animation.md#switch-every-x-ticks) - [Titre](properties_Object.md#title) - [Recommencer la séquence](properties_Animation.md#switchWhenRollOver) - [Haut](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Dernière imagette si désactivé](properties_Animation.md#use-last-frame-as-disabled) - [Variable ou expression](properties_Object.md#variable-or-expression) - [Dim. vertical](properties_ResizingOptions.md#vertical-sizing) - [Visibilité](properties_Display.md#visibility) - [Largeur](properties_CoordinatesAndSizing.md#width)
