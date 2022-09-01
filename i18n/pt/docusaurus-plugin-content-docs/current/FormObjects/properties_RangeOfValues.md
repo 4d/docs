@@ -3,7 +3,7 @@ id: propertiesRangeOfValues
 title: Range of Values
 ---
 
-## Default value
+## Valor padrão
 
 You can assign a default value to be entered in an input object. This property is useful for example when the input [data source](properties_Object.md#variable-or-expression) is a field: the default value is entered when a new record is first displayed. You can change the value unless the input area has been defined as [non-enterable](properties_Entry.md#enterable).
 
@@ -17,7 +17,7 @@ The default value can only be used if the [data source type](properties_Object.m
 
 4D provides stamps for generating default values for the date, time, and sequence number. The date and time are taken from the system date and time. 4D automatically generates any sequence numbers needed. The table below shows the stamp to use to generate default values automatically:
 
-| Stamp | Meaning         |
+| Stamp | Significado     |
 | ----- | --------------- |
 | #D    | Current date    |
 | #H    | Current time    |
@@ -29,26 +29,26 @@ You can use a sequence number to create a unique number for each record in the t
 
 #### JSON Grammar
 
-| Name         | Data Type                           | Possible Values                            |
+| Nome         | Tipo de dados                       | Possible Values                            |
 | ------------ | ----------------------------------- | ------------------------------------------ |
 | defaultValue | string, number, date, time, boolean | Any value and/or a stamp: "#D", "#H", "#N" |
 
 #### Objects Supported
 
-[Input](input_overview.md)
+[Entrada](input_overview.md)
 
 ---
 
 ## Excluded List
 
-Allows setting a list whose values cannot be entered in the object. If an excluded value is entered, it is not accepted and an error message is displayed.
+Allows setting a list whose values cannot be entered in the object. Se um valor excluído for digitado, não será aceito e uma mensagem de erro é exibido.
 > If a specified list is hierarchical, only the items of the first level are taken into account.
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values                  |
-| ------------ | --------- | -------------------------------- |
-| excludedList | list      | A list of values to be excluded. |
+| Nome         | Tipo de dados | Possible Values                  |
+| ------------ | ------------- | -------------------------------- |
+| excludedList | lista         | A list of values to be excluded. |
 
 #### Objects Supported
 
@@ -65,9 +65,9 @@ Making a list required does not automatically display the list when the field is
 
 #### JSON Grammar
 
-| Name         | Data Type | Possible Values             |
-| ------------ | --------- | --------------------------- |
-| requiredList | list      | A list of mandatory values. |
+| Nome         | Tipo de dados | Possible Values             |
+| ------------ | ------------- | --------------------------- |
+| requiredList | lista         | A list of mandatory values. |
 
 #### Objects Supported
 
