@@ -1,121 +1,121 @@
 ---
 id: propertiesScale
-title: Scale
+title: Escala
 ---
 
 ## Barber shop
 
-Enables the "barber shop" variant for the thermometer.
+Activa la variante "barber shop" para el termómetro.
 
-#### JSON Grammar
+#### Gramática JSON
 
-|      Name       | Data Type | Possible Values                                             |
-|:---------------:|:---------:| ----------------------------------------------------------- |
-| [max](#maximum) |  number   | NOT passed = enabled; passed = disabled (basic thermometer) |
+|     Nombre      | Tipos de datos | Valores posibles                                               |
+|:---------------:|:--------------:| -------------------------------------------------------------- |
+| [max](#maximum) |     number     | NO pasado = activado; pasado = desactivado (termómetro básico) |
 
-#### Objects Supported
+#### Objetos soportados
 
 [Barber shop](progressIndicator.md#barber-shop)
 
 ---
 
-## Display graduation
+## Mostrar graduación
 
-Displays/Hides the graduations next to the labels.
+Muestra/Oculta las graduaciones junto a las etiquetas.
 
-#### JSON Grammar
+#### Gramática JSON
 
-|      Name       | Data Type | Possible Values |
-|:---------------:|:---------:| --------------- |
-| showGraduations |  boolean  | "true", "false" |
+|     Nombre      | Tipos de datos | Valores posibles |
+|:---------------:|:--------------:| ---------------- |
+| showGraduations |    boolean     | "true", "false"  |
 
-#### Objects Supported
+#### Objetos soportados
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
-
----
-
-## Graduation step
-
-Scale display measurement.
-
-#### JSON Grammar
-
-|      Name      | Data Type | Possible Values |
-|:--------------:|:---------:| --------------- |
-| graduationStep |  integer  | minimum: 0      |
-
-#### Objects Supported
-
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
+[Termómetro](progressIndicator.md#thermometer) - [Regla](ruler.md#ruler)
 
 ---
 
-## Label Location
+## Paso en la graduación
 
-Specifies the location of an object's displayed text.
+Medición de la visualización de la escala.
 
-* None - no label is displayed
-* Top - Displays labels to the left of or above an indicator
-* Bottom - Displays labels to the right of or below an indicator
+#### Gramática JSON
 
-#### JSON Grammar
+|     Nombre     | Tipos de datos | Valores posibles |
+|:--------------:|:--------------:| ---------------- |
+| graduationStep |    integer     | mínimo: 0        |
 
-|      Name       | Data Type | Possible Values                          |
-|:---------------:|:---------:| ---------------------------------------- |
-| labelsPlacement |  string   | "none", "top", "bottom", "left", "right" |
+#### Objetos soportados
 
-#### Objects Supported
-
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
+[Termómetro](progressIndicator.md#thermometer) - [Regla](ruler.md#ruler)
 
 ---
 
-## Maximum
+## Posición de la etiqueta
 
-Maximum value of an indicator.
+Especifica la ubicación del texto mostrado de un objeto.
 
-* For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
-* To enable [Barber shop thermometers](progressIndicator.md#barber-shop), this property must be omitted.
+* Ninguno - no se muestra ninguna etiqueta
+* Arriba - Muestra las etiquetas a la izquierda o sobre el indicador
+* Abajo - Muestra las etiquetas a la derecha o debajo de un indicador
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name |    Data Type    | Possible Values                     |
-|:----:|:---------------:| ----------------------------------- |
-| max  | string / number | minimum: 0 (for numeric data types) |
+|     Nombre      | Tipos de datos | Valores posibles                         |
+|:---------------:|:--------------:| ---------------------------------------- |
+| labelsPlacement |     string     | "none", "top", "bottom", "left", "right" |
 
-#### Objects Supported
+#### Objetos soportados
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
+[Termómetro](progressIndicator.md#thermometer) - [Regla](ruler.md#ruler)
 
 ---
 
-## Minimum
+## Máximo
 
-Minimum value of an indicator. For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
+Valor máximo de un indicador.
 
-#### JSON Grammar
+* Para los steppers numéricos, esta propiedad representa los segundos cuando el objeto está asociado a un valor de tipo hora y se ignoran cuando están asociados a un valor de tipo fecha.
+* Para activar los [termómetros del Barber Shop](progressIndicator.md#barber-shop), esta propiedad debe omitirse.
 
-| Name |    Data Type    | Possible Values                     |
-|:----:|:---------------:| ----------------------------------- |
-| min  | string / number | minimum: 0 (for numeric data types) |
+#### Gramática JSON
 
-#### Objects Supported
+| Nombre | Tipos de datos  | Valores posibles                          |
+|:------:|:---------------:| ----------------------------------------- |
+|  max   | string / number | mínimo: 0 (para tipos de datos numéricos) |
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
+#### Objetos soportados
+
+[Termómetro](progressIndicator.md#thermometer) - [Regla](ruler.md#ruler) - [Stepper](stepper.md#stepper)
+
+---
+
+## Mínimo
+
+Valor mínimo de un indicador. Para los steppers numéricos, esta propiedad representa los segundos cuando el objeto está asociado a un valor de tipo hora y se ignoran cuando están asociados a un valor de tipo fecha.
+
+#### Gramática JSON
+
+| Nombre | Tipos de datos  | Valores posibles                          |
+|:------:|:---------------:| ----------------------------------------- |
+|  min   | string / number | mínimo: 0 (para tipos de datos numéricos) |
+
+#### Objetos soportados
+
+[Termómetro](progressIndicator.md#thermometer) - [Regla](ruler.md#ruler) - [Stepper](stepper.md#stepper)
 
 ---
 
 ## Step
 
-Minimum interval accepted between values during use. For numeric steppers, this property represents seconds when the object is associated with a time type value and days when it is associated with a date type value.
+Intervalo mínimo aceptado entre los valores durante el uso. Para los steppers numéricos, esta propiedad representa los segundos cuando el objeto está asociado a un valor de tipo hora y los días cuando está asociado a un valor de tipo fecha.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name | Data Type | Possible Values |
-|:----:|:---------:| --------------- |
-| step |  integer  | minimum: 1      |
+| Nombre | Tipos de datos | Valores posibles |
+|:------:|:--------------:| ---------------- |
+|  step  |    integer     | mínimo: 1        |
 
-#### Objects Supported
+#### Objetos soportados
 
-[Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
+[Termómetro](progressIndicator.md#thermometer) - [Regla](ruler.md#ruler) - [Stepper](stepper.md#stepper)
