@@ -4,15 +4,15 @@ title: Background and Border
 ---
 
 
-## Alternate Background Color
+## Cor de fundo alternado
 
 Allows setting a different background color for odd-numbered rows/columns in a list box. By default, *Automatic* is selected: the column uses the alternate background color set at the list box level.
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                           |
-| ------------- | --------- | ----------------------------------------- |
-| alternateFill | string    | any css value; "transparent"; "automatic" |
+| Nome          | Tipo de dados | Possible Values                           |
+| ------------- | ------------- | ----------------------------------------- |
+| alternateFill | string        | any css value; "transparent"; "automatic" |
 
 #### Objects Supported
 
@@ -28,21 +28,21 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values                           |
-| ---- | --------- | ----------------------------------------- |
-| fill | string    | any css value; "transparent"; "automatic" |
+| Nome | Tipo de dados | Possible Values                           |
+| ---- | ------------- | ----------------------------------------- |
+| fill | string        | any css value; "transparent"; "automatic" |
 
 #### Objects Supported
 
 [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Oval](shapes_overview.md#oval) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
 
-#### See also
+#### Veja também
 
-[Transparent](#transparent)
+[Transparente](#transparent)
 
 ---
 
-## Background Color Expression
+## Expressão cor de fundo
 
 `Selection and collection type list boxes`
 
@@ -53,9 +53,9 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values                           |
-| ------------- | --------- | ----------------------------------------- |
-| rowFillSource | string    | An expression returning a RGB color value |
+| Nome          | Tipo de dados | Possible Values                           |
+| ------------- | ------------- | ----------------------------------------- |
+| rowFillSource | string        | An expression returning a RGB color value |
 
 #### Objects Supported
 
@@ -63,15 +63,15 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 ---
 
-## Border Line Style
+## Estilo borda linha
 
 Allows setting a standard style for the object border.
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values                                                   |
-| ----------- | --------- | ----------------------------------------------------------------- |
-| borderStyle | text      | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
+| Nome        | Tipo de dados | Possible Values                                                   |
+| ----------- | ------------- | ----------------------------------------------------------------- |
+| borderStyle | text          | "system", "none", "solid", "dotted", "raised", "sunken", "double" |
 
 #### Objects Supported
 
@@ -85,9 +85,9 @@ Describes dotted line type as a sequence of black and white points.
 
 #### JSON Grammar
 
-| Name            | Data Type              | Possible Values                                                          |
-| --------------- | ---------------------- | ------------------------------------------------------------------------ |
-| strokeDashArray | number array or string | Ex. "6 1" or \[6,1\] for a sequence of 6 black point and 1 white point |
+| Nome            | Tipo de dados          | Possible Values                                                              |
+| --------------- | ---------------------- | ---------------------------------------------------------------------------- |
+| strokeDashArray | number array or string | Ex. Ex. "6 1" or \[6,1\] for a sequence of 6 black point and 1 white point |
 
 #### Objects Supported
 
@@ -95,7 +95,7 @@ Describes dotted line type as a sequence of black and white points.
 
 ---
 
-## Hide extra blank rows
+## Esconder linhas em branco extras
 
 Controls the display of extra blank rows added at the bottom of a list box object. By default, 4D adds such extra rows to fill the empty area:
 
@@ -107,9 +107,9 @@ You can remove these empty rows by selecting this option. The bottom of the list
 
 #### JSON Grammar
 
-| Name               | Data Type | Possible Values |
-| ------------------ | --------- | --------------- |
-| hideExtraBlankRows | boolean   | true, false     |
+| Nome               | Tipo de dados | Possible Values |
+| ------------------ | ------------- | --------------- |
+| hideExtraBlankRows | boolean       | true, false     |
 
 #### Objects Supported
 
@@ -117,7 +117,7 @@ You can remove these empty rows by selecting this option. The bottom of the list
 
 ---
 
-## Line Color
+## Cor da linha
 
 Designates the color of the object's lines. The color can be specified by:
 
@@ -129,9 +129,9 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 #### JSON Grammar
 
-| Name   | Data Type | Possible Values                           |
-| ------ | --------- | ----------------------------------------- |
-| stroke | string    | any css value, "transparent", "automatic" |
+| Nome   | Tipo de dados | Possible Values                           |
+| ------ | ------------- | ----------------------------------------- |
+| stroke | string        | any css value, "transparent", "automatic" |
 
 > This property is also available for text based objects, in which case it designates both the font color and the object's lines, see [Font color](properties_Text.md#font-color).
 
@@ -141,15 +141,15 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 ---
 
-## Line Width
+## Largura da linha
 
 Designates the thickness of a line.
 
 #### JSON Grammar
 
-| Name        | Data Type | Possible Values                                                   |
-| ----------- | --------- | ----------------------------------------------------------------- |
-| strokeWidth | number    | 0 for smallest width on a printed form, or any integer value < 20 |
+| Nome        | Tipo de dados | Possible Values                                                   |
+| ----------- | ------------- | ----------------------------------------------------------------- |
+| strokeWidth | number        | 0 for smallest width on a printed form, or any integer value < 20 |
 
 #### Objects Supported
 
@@ -157,7 +157,7 @@ Designates the thickness of a line.
 
 ---
 
-## Row Background Color Array
+## Array cores de fundo
 
 `Array type list boxes`
 
@@ -189,9 +189,9 @@ You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX 
 
 #### JSON Grammar
 
-| Name          | Data Type | Possible Values              |
-| ------------- | --------- | ---------------------------- |
-| rowFillSource | string    | The name of a longint array. |
+| Nome          | Tipo de dados | Possible Values              |
+| ------------- | ------------- | ---------------------------- |
+| rowFillSource | string        | The name of a longint array. |
 
 #### Objects Supported
 
@@ -199,20 +199,20 @@ You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX 
 
 ---
 
-## Transparent
+## Transparente
 
 Sets the list box background to "Transparent". When set, any [alternate background color](#alternate-background-color) or [background color](#background-color-fill-color) defined for the column is ignored.
 
 #### JSON Grammar
 
-| Name | Data Type | Possible Values |
-| ---- | --------- | --------------- |
-| fill | text      | "transparent"   |
+| Nome | Tipo de dados | Possible Values |
+| ---- | ------------- | --------------- |
+| fill | text          | "transparent"   |
 
 #### Objects Supported
 
 [List Box](listbox_overview.md#overview)
 
-#### See also
+#### Veja também
 
 [Background Color / Fill Color](#background-color-fill-color)
