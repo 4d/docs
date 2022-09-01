@@ -1,59 +1,59 @@
 ---
 id: dropdownListOverview
-title: Drop-down List
+title: ドロップダウンリスト
 ---
 
-## Overview
+## 概要
 
-Drop-down lists are objects that allow the user to select from a list. You manage the items displayed in the drop-down list using an array, a choice list, or a standard action.
+ドロップダウンリストは、ユーザーがリストから選択をおこなえるようにするためのオブジェクトです。 ドロップダウンリストに表示される項目は、配列、選択リスト、または標準アクションを用いて管理します。
 
-On macOS, drop-down lists are also sometimes called "pop-up menu". Both names refer to the same objects. As the following example shows, the appearance of these objects can differ slightly according to the platform:
+macOS においては、ドロップダウンリストは "ポップアップメニュー" とも呼ばれます。 どちらの名前も同じタイプのオブジェクトを指します。 次の例に示すように、ドロップダウンリストの外観はプラットフォームによって若干異なります:
 
 ![](../assets/en/FormObjects/popupDropdown_appearance.png)
 
-## Using an array
+## 配列の使用
 
-An [array](Concepts/arrays.md) is a list of values in memory that is referenced by the name of the array. A drop-down list displays an array as a list of values when you click on it.
+[配列](Concepts/arrays.md) とは、メモリー内の値のリストのことで、配列の名前によって参照されます。 ドロップダウンリストをクリックすると、その配列を値のリストとして表示します。
 
-Drop-down list objects are initialized by loading a list of values into an array. You can do this in several ways:
+値のリストを配列にロードすることで、ドロップダウンリストが初期化されます。 これは複数の方法でおこなうことができます:
 
-* Enter a list of default values in the object properties by selecting `"\&#060;Static List&#062;"` in the [Data Source](properties_DataSource.md) theme of the Property List. The default values are loaded into an array automatically. You can refer to the array using the name of the variable associated with the object.
+* プロパティリストの [データソース](properties_DataSource.md) テーマにおいて、選択リストの項目で `"<Static List>"` を選び、デフォルト値のリストを入力します。 これらのデフォルト値は、配列へと自動的にロードされます。 オブジェクトに関連付けた変数名を使用して、この配列を参照することができます。
 
-* Before the object is displayed, execute code that assigns values to the array elements. For example:
-
-```4d
-  ARRAY TEXT($aCities;6)
-  $aCities{1}:="Philadelphia"
-  $aCities{2}:="Pittsburg"
-  $aCities{3}:="Grand Blanc"
-  $aCities{4}:="Bad Axe"
-  $aCities{5}:="Frostbite Falls"
-  $aCities{6}:="Green Bay"
-```
-
-In this case, the name of the variable associated with the object in the form must be *$aCities*. This code could be placed in the form method and be executed when the `On Load` form event runs.
-
-* Before the object is displayed, load the values of a list into the array using the [LIST TO ARRAY](https://doc.4d.com/4Dv17R5/4D/17-R5/LIST-TO-ARRAY.301-4127385.en.html) command. For example:
+* オブジェクトが表示される前に、値を配列要素に代入するコードを実行します。 例:
 
 ```4d
-   LIST TO ARRAY("Cities";$aCities)
+  ARRAY TEXT(aCities;6)
+  aCities{1}:="Philadelphia"
+  aCities{2}:="Pittsburg"
+  aCities{3}:="Grand Blanc"
+  aCities{4}:="Bad Axe"
+  aCities{5}:="Frostbite Falls"
+  aCities{6}:="Green Bay"$aCities
 ```
 
- In this case also, the name of the variable associated with the object in the form must be *$aCities*. This code would be run in place of the assignment statements shown above.
+この場合、フォームのオブジェクトに関連付けた変数名は *aCities* でなければなりません。 このコードをフォームメソッド内に置き、`On Load` フォームイベント発生時に実行されるようにします。
 
-If you need to save the user’s choice into a field, you would use an assignment statement that runs after the record is accepted. The code might look like this:
+* オブジェクトが表示される前に、[LIST TO ARRAY](https://doc.4d.com/4Dv18/4D/18/LIST-TO-ARRAY.301-4504606.ja.html) コマンドを使ってリストの値を配列にロードします。 例:
+
+```4d
+   LIST TO ARRAY("Cities";aCities)
+```
+
+ この場合フォームのオブジェクトに関連付けた変数名は *aCities* でなければなりません。 このコードは、前述した代入命令文の代わりに実行できます。
+
+ユーザーがおこなった選択内容をフィールドに保存する必要があれば、レコードの登録後に代入命令を実行します。 たとえば、次のような Case文のコードを作成します:
 
 ```4d
   Case of
     :(Form event=On Load)
        LIST TO ARRAY("Cities";aCities)
-       If(Record number([People])<0) `new record
-          aCities:=3 `display a default value
-       Else `existing record, display stored value
+       If(Record number([People])<0) // 新規レコードの場合
+          aCities:=3 // デフォルトの値を表示します
+       Else // 既存レコードの場合には、保存された値を表示します
           aCities:=Find in array(aCities;City)
        End if
-    :(Form event=On Clicked) `user modified selection
-       City:=aCities{aCities} `field gets new value
+    :(Form event=On Clicked) // ユーザーが選択を変更した場合
+       City:=aCities{aCities} // フィールドに新しい値を代入
     :(Form event=On Validate)
        City:=aCities{aCities}
     :(Form event=On Unload)
@@ -61,32 +61,32 @@ If you need to save the user’s choice into a field, you would use an assignmen
  End case
 ```
 
-You must select each [event] that you test for in your Case statement. Arrays always contain a finite number of items. The list of items is dynamic and can be changed by a method. Items in an array can be modified, sorted, and added to.
+プロパティリストのイベントテーマにおいて、作成した Case 文の中で使用する各イベントを選択して有効化します。 配列には常に有限数の項目が納められます。 項目リストは動的であり、メソッドを用いて変更可能です。 配列の項目は変更・並び替え・追加することができます。
 
-## Using a choice list
+## 選択リストの使用
 
-If you want to use a drop-down list to manage the values of a listed field or variable, 4D lets you reference the field or variable directly as the object's data source. This makes it easier to manage listed fields/variables.
-> If you use a hierarchical list, only the first level is displayed and can be selected.
+列挙型のフィールドまたは変数の管理のためにドロップダウンリストを使用したい場合、フィールドまたは変数をオブジェクトのデータソースとして直接参照することができます。 これにより列挙型のフィールド/変数を容易に管理できるようになります。
+> 階層リストの場合、第一階層の値のみが表示・選択できます。
 
-For example, in the case of a "Color" field that can only contain the values "White", "Blue", "Green" or "Red", it is now possible to create a list containing these values and associate it with a pop-up menu object that references the 4D "Color" field. 4D then automatically takes care of managing the input and display of the current value in the form.
+たとえば、"White"、"Blue"、"Green"、"Red" という値のみを含む "Color" というフィールドがあった場合、これらの値を含むリストを作成し、それを "Color" フィールドを参照するポップアップメニューに関連付けることができます。 こうすることによって、あとは 4D が自動的にカレント値の入力や表示に関して管理してくれます。
 
-To associate a pop-up menu/drop-down list or a combo box with a field or variable, you can just enter the name of the field or variable directly in the [Variable or Expression](properties_Object.md#variable-or-expression) of the object in the Property List.
+ポップアップメニュー/ドロップダウンリストやコンボボックスをフィールドや変数と関連付けるには、オブジェクトの [変数あるいは式](properties_Object.md#変数あるいは式) 欄にフィールドまたは変数の名前を直接入力します。
 
-When the form is executed, 4D automatically manages the pop-up menu or combo box during input or display: when a user chooses a value, it is saved in the field; this field value is shown in the pop-up menu when the form is displayed:
+フォームを実行すると、4D が自動的に入力中または表示中のポップアップメニュー/コンボボックスの状態を管理します。ユーザーが値を選択すると、その値はフィールドに保存され、このフィールドの値はフォームが表示されたときにポップアップメニューに表示されます:
 
 ![](../assets/en/FormObjects/popupDropdown_choiceList.png)
-> It is not possible to combine this principle with using an array to initialize the object. If you enter a field name in the Variable Name area, then you must use a choice list.
+> この原理は、配列を用いてオブジェクトを初期化する方法と組み合わせることはできません。 変数あるいは式の欄にフィールド名を入力した場合は、必ず選択リストを使用します。
 
-### Save as
+### 関連付け
 
-When you have associated a pop-up menu/drop-down list with a choice list and with a field, you can use the [Save as Value/Reference property](properties_DataSource.md#save-as). This option lets you optimize the size of the data saved.
+ポップアップメニュー/ドロップダウンリストの式としてフィールドを、さらにデータソースに選択リストを設定した場合には、[関連付け](properties_DataSource.md#関連付け) プロパティが利用できます。"リスト項目の値" または "リスト項目の参照番号" を選択してデータの保存方式を指定することができます。 このオプションにより、保存するデータのサイズを最適化できるようになります。
 
-## Using a standard action
+## 標準アクションの使用
 
-You can assign a standard action to a pop-up menu/drop-down list ([Action](properties_Action.md#standard-action) theme of the Property List). Only actions that display a sublist of items (except the goto page action) are supported by this object. For example, if you select the `backgroundColor` standard action, at runtime the object will display an automatic list of background colors. You can can override this automatic list by assigning in addition a choice list in which each item has been assigned a custom standard action.
+ポップアップメニュー/ドロップダウンリストには、標準アクションを割り当てることができます (プロパティリストの "[アクション](properties_Action.md#標準アクション)" テーマ)。 このオブジェクトでは、項目のサブリストを表示するアクションのみがサポートされます (例外: goto page アクション)。 たとえば、`backgroundColor` 標準アクションを選択した場合、オブジェクトはランタイムにおいて背景色の自動リストを表示します。 この自動リストは、各項目が任意の標準アクションを割り当てられた選択リストを設定することで上書きすることもできます。
 
-For more information, please refer to the [Standard actions](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html) section.
+詳細な情報に関しては、[標準アクション](https://doc.4d.com/4Dv18/4D/18/Standard-actions.300-4575620.ja.html) の章を参照ください。
 
-## Supported Properties
+## プロパティ一覧
 
-[Alpha Format](properties_Display.md#alpha-format) - [Bold](properties_Text.md#bold) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Button Style](properties_TextAndPicture.md#button-style) - [Choice List](properties_DataSource.md#choice-list) - [Class](properties_Object.md#css-class) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Font Size](properties_Text.md#font-size) - [Height](properties_CoordinatesAndSizing.md#height) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Italic](properties_Text.md#italic) - [Left](properties_CoordinatesAndSizing.md#left) - [Not rendered](properties_Display.md#not-rendered) - [Object Name](properties_Object.md#object-name) - [Right](properties_CoordinatesAndSizing.md#right) - [Standard action](properties_Action.md#standard-action) - [Save as](properties_DataSource.md#save-as) - [Time Format](properties_Display.md#time-format) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Underline](properties_Text.md#underline) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width)  
+[タイプ](properties_Object.md#タイプ) - [オブジェクト名](properties_Object.md#オブジェクト名) - [変数あるいは式](properties_Object.md#変数あるいは式) - [式の型](properties_Object.md#式の型) - [CSSクラス](properties_Object.md#cssクラス) - [ボタンスタイル](properties_TextAndPicture.md#ボタンスタイル) - [選択リスト](properties_DataSource.md#選択リスト) - [関連付け](properties_DataSource.md#関連付け) - [左](properties_CoordinatesAndSizing.md#左) - [上](properties_CoordinatesAndSizing.md#上) - [右](properties_CoordinatesAndSizing.md#右) - [下](properties_CoordinatesAndSizing.md#下) - [幅](properties_CoordinatesAndSizing.md#幅) - [高さ](properties_CoordinatesAndSizing.md#高さ) - [横方向サイズ変更](properties_ResizingOptions.md#横方向サイズ変更) - [縦方向サイズ変更](properties_ResizingOptions.md#縦方向サイズ変更) - [フォーカス可](properties_Entry.md#フォーカス可) - [文字フォーマット](properties_Display.md#文字フォーマット) - [日付フォーマット](properties_Display.md#日付フォーマット) - [時間フォーマット](properties_Display.md#時間フォーマット) - [表示状態](properties_Display.md#表示状態) - [レンダリングしない](properties_Display.md#レンダリングしない) - [フォント](properties_Text.md#フォント) - [フォントサイズ](properties_Text.md#フォントサイズ) - [太字](properties_Text.md#太字) - [イタリック](properties_Text.md#イタリック) - [下線](properties_Text.md#下線) - [フォントカラー](properties_Text.md#フォントカラー) - [ヘルプTips](properties_Help.md#ヘルプtips) - [標準アクション](properties_Action.md#標準アクション)  
