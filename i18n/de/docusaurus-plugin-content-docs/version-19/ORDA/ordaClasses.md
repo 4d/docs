@@ -74,7 +74,7 @@ A 4D database exposes its own DataStore class in the `cs` class store.
 
 You can create functions in the DataStore class that will be available through the `ds` object.
 
-#### Example
+#### Beispiel
 
 ```4d  
 // cs.DataStore class
@@ -99,7 +99,7 @@ Each table exposed with ORDA offers a DataClass class in the `cs` class store.
 - **Class name**: cs.*DataClassName* (where *DataClassName* is the table name)
 - **Example name**: cs.Employee
 
-#### Example
+#### Beispiel
 
 ```4D
 // cs.Company class
@@ -170,7 +170,7 @@ Each table exposed with ORDA offers an EntitySelection class in the `cs` class s
 - **Class name**: *DataClassName*Selection (where *DataClassName* is the table name)
 - **Example name**: cs.EmployeeSelection
 
-#### Example
+#### Beispiel
 
 ```4d
 // cs.EmployeeSelection class
@@ -200,7 +200,7 @@ Each table exposed with ORDA offers an Entity class in the `cs` class store.
 - **Class name**: *DataClassName*Entity (where *DataClassName* is the table name)
 - **Example name**: cs.CityEntity
 
-#### Example
+#### Beispiel
 
 ```4d
 // cs.CityEntity class
@@ -234,7 +234,7 @@ End if
 
 When creating or editing data model classes, you must pay attention to the following rules:
 
-- Since they are used to define automatic DataClass class names in the **cs** [class store](Concepts/classes.md#class-stores), 4D tables must be named in order to avoid any conflict in the **cs** namespace. In particular:
+- Since they are used to define automatic DataClass class names in the **cs** [class store](Concepts/classes.md#class-stores), 4D tables must be named in order to avoid any conflict in the **cs** namespace. Das bedeutet im einzelnen:
   - Do not give the same name to a 4D table and to a [user class name](Concepts/classes.md#class-names). If such a case occurs, the constructor of the user class becomes unusable (a warning is returned by the compiler).
   - Do not use a reserved name for a 4D table (e.g., "DataClass").
 
@@ -266,7 +266,7 @@ exposed Function <functionName>
 
 > The `exposed` keyword can only be used with Data model class functions. If used with a [regular user class](Concepts/classes.md) function, it is ignored and an error is returned by the compiler.
 
-### Example
+### Beispiel
 
 You want an exposed function to use a private function in a dataclass class:
 
@@ -332,7 +332,7 @@ local Function getYoungest
 - **without** the `local` keyword, the result is given using a single request
 - **with** the `local` keyword, 4 requests are necessary: one to get the Schools entity students, one for the `query()`, one for the `orderBy()`, and one for the `slice()`. In this example, using the `local` keyword is inappropriate.
 
-### Examples
+### Beispiele
 
 #### Calculating age
 
@@ -346,6 +346,10 @@ Class extends Entity
 local Function age() -> $age: Variant
 
 If (This.birthDate#!00-00-00!)
+    $age:=Year of(Current date)-Year of(This.birthDate)
+Else 
+    $age:=Null
+End if
     $age:=Year of(Current date)-Year of(This.birthDate)
 Else 
     $age:=Null
@@ -389,7 +393,7 @@ End if
 
 ## Support in 4D projects
 
-### Class files
+### Datei Klasse
 
 An ORDA data model user class is defined by adding, at the [same location as regular class files](Concepts/classes.md#class-files) (*i.e.* in the `/Sources/Classes` folder of the project folder), a .4dm file with the name of the class. For example, an entity class for the `Utilities` dataclass will be defined through a `UtilitiesEntity.4dm` file.
 
