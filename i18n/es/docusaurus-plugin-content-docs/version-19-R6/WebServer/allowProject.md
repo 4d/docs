@@ -1,23 +1,23 @@
 ---
 id: allowProject
-title: Allowing project methods
+title: Permitir métodos proyecto
 ---
 
   
-The 4D tags such as `4DEVAL`, `4DTEXT`, `4DHTML`... as well as the [`/4DACTION URL`](httpRequests.md#/4daction) allow you to trigger the execution of any project method of a 4D project published on the Web. For example, the request *http://www.server.com/4DACTION/login* causes the execution of the ***login*** project method, if it exists.
+Las etiquetas 4D como `4DEVAL`, `4DTEXT`, `4DHTML`... así como la U[`URL /4DACTION`](httpRequests.md#/4daction) permiten desencadenar la ejecución de cualquier método de un proyecto 4D publicado en la web. Por ejemplo, la petición *http://www.server.com/4DACTION/login* provoca la ejecución del método proyecto ***login***, si existe.
 
-This mechanism therefore presents a security risk for the application, in particular if an Internet user intentionally (or unintentionally) triggers a method not intended for execution via the web. You can avoid this risk in the following ways:
+Por lo tanto, este mecanismo presenta un riesgo de seguridad para la aplicación, en particular si un usuario de Internet activa intencionalmente (o no) un método no previsto para su ejecución a través de la web. Puede evitar este riesgo de las siguientes maneras:
 
-*   Filter the methods called via the URLS using the [`On Web Authentication`](authentication.md#on-web-authentication) database method. Drawbacks: If the database includes a great number of methods, this system may be difficult to manage.
+*   Filtre los métodos llamados a través de las URLS utilizando el método base [`On Web Authentication`](authentication.md#on-web-authentication). Inconvenientes: si la base de datos incluye un gran número de métodos, este sistema puede ser difícil de gestionar.
 
-*   Use the **Available through 4D tags and URLs (4DACTION...)** option found in the Method properties dialog box:
+*   Utilice la opción **Disponible a través de etiquetas 4D y URLs (4DACTION...)** que se encuentra en la caja de diálogo de propiedades del método:
 
 ![](../assets/en/WebServer/methodProperties.png)
 
-This option is used to individually designate each project method that can be called using the `4DACTION` special URL, or the `4DTEXT`, `4DHTML`, `4DEVAL`, `4DSCRIPT`, `4DIF`, `4DELSEIF` or `4DLOOP` tags. When it is not checked, the project method concerned cannot be directly executed through an HTTP request. Conversely, it can be executed using other types of calls (formulas, other methods, etc.).
+Esta opción se utiliza para designar individualmente cada método del proyecto que puede ser llamado utilizando la URL especial `4DACTION`, o las etiquetas `4DTEXT`, `4DHTML`, `4DEVAL`, `4DSCRIPT`, `4DIF`, `4DELSEIF` o `4DLOOP`. Cuando no está marcada, el método proyecto en cuestión no puede ser ejecutado directamente a través de una petición HTTP. Por el contrario, puede ejecutarse mediante otro tipo de llamadas (fórmulas, otros métodos, etc.).
 
-This option is unchecked by default. Methods that can be executed through `4DACTION` or specific tags must be specifically indicated.
+Esta opción está deseleccionada por defecto. Los métodos que se pueden ejecutar a través de `4DACTION` o de etiquetas específicas deben indicarse específicamente.
 
-In the Explorer, Project methods with this property are given a specific icon:
+En el Explorador, los métodos proyecto con esta propiedad reciben un icono específico:
 
  ![](../assets/en/WebServer/methodIcon.png)
