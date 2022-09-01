@@ -3,17 +3,17 @@ id: onMouseUp
 title: On Mouse Up
 ---
 
-| Code | Can be called by                                                                                      | Definition                                                           |
-| ---- | ----------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| 2    | [Input](FormObjects/input_overview.md) of the `picture` [Type](FormObjects/properties_Object.md#type) | The user has just released the left mouse button in a Picture object |
+| コード | 呼び出し元                                                                                  | 定義                             |
+| --- | -------------------------------------------------------------------------------------- | ------------------------------ |
+| 2   | [ピクチャー型](FormObjects/properties_Object.md#式の型式タイプ)の[入力](FormObjects/input_overview.md) | ユーザーがピクチャーオブジェクト内にて左マウスボタンを離した |
 
 
-## Description
+## 詳細
 
-The `On Mouse Up` event is generated when the user has just released the left mouse button while dragging in a picture input. This event is useful, for example, when you want the user to be able to move, resize or draw objects in a SVG area.
+ピクチャー型の入力オブジェクト内で、ドラッグ中に左マウスボタンをリリースしたときに `On Mouse Up` イベントが生成されます。 このイベントはたとえば、SVGエリア内でユーザーがオブジェクトを移動、リサイズ、描画することを可能にしたい場合に有用です。
 
-When the `On Mouse Up` event is generated, you can get the local coordinates where the mouse button was released. These coordinates are returned in the `MouseX` and `MouseY` System variables. The coordinates are expressed in pixels with respect to the top left corner of the picture (0,0).
+`On Mouse Up` イベントが生成されると、マウスボタンがリリースされたローカルの座標を取得することができます。 座標は `MouseX` と `MouseY` システム変数 に返されます。 座標はピクセル単位で表現され、ピクチャーの左上隅が起点 (0,0) となります。
 
-When using this event, you must also use the `Is waiting mouse up` command to handle cases where the "state manager" of the form is desynchronized, i.e. when the `On Mouse Up` event is not received after a click. This is the case for example when an alert dialog box is displayed above the form while the mouse button has not been released. For more information and an example of use of the `On Mouse Up` event, please refer to the description of the `Is waiting mouse up` command.
+このイベントを使用する場合、フォームの "ステートマネージャー" が非同期の可能性がある場合 (つまり、クリック後に `On Mouse Up` イベントを受け取らなかった場合) を管理するために、`Is waiting mouse up` コマンドも使用する必要があります。 これはたとえば、マウスボタンがリリースされる前にフォーム上にアラートダイアログボックスが表示された場合などです。 `On Mouse Up` イベントのより詳細な情報と使用例については、`Is waiting mouse up` コマンドの詳細を参照ください。
 
-> If the [Draggable](FormObjects/properties_Action.md#draggable) option is enabled for the picture object, the `On Mouse Up` event is never generated. 
+> ピクチャーオブジェクトの [ドラッグ有効](FormObjects/properties_Action.md#ドラッグ有効)オプションがチェックされている場合、`On Mouse Up` イベントはいかなる場合も生成されません。 
