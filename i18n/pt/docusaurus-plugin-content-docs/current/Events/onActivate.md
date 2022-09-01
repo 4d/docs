@@ -3,12 +3,12 @@ id: onActivate
 title: On Activate
 ---
 
-| Code | Can be called by | Definition                                                                               |
+| Code | Can be called by | Definição                                                                                |
 | ---- | ---------------- | ---------------------------------------------------------------------------------------- |
-| 11   | Form             | The form's window becomes the frontmost window or the subform's container gets the focus |
+| 11   | Formulário       | The form's window becomes the frontmost window or the subform's container gets the focus |
 
 
-## Description
+## Descrção
 
 If the window of a form was sent to the background, this event is called when the window becomes the frontmost window.
 
