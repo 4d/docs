@@ -3,13 +3,13 @@ id: onDeleteAction
 title: On Delete Action
 ---
 
-| Code | Can be called by                                                                                | Definition                          |
-| ---- | ----------------------------------------------------------------------------------------------- | ----------------------------------- |
-| 58   | [Hierarchical List](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md) | The user attempts to delete an item |
+| コード | 呼び出し元                                                                              | 定義             |
+| --- | ---------------------------------------------------------------------------------- | -------------- |
+| 58  | [階層リスト](FormObjects/list_overview.md) - [リストボックス](FormObjects/listbox_overview.md) | ユーザーが項目の削除を試みた |
 
 
-## Description
+## 詳細
 
-This event is generated each time a user attempts to delete the selected item(s) by pressing a deletion key (**Delete** or **Backspace**) or selecting a menu item whose associated standard action is 'Clear' (such as the **Clear** command in the **Edit** menu).
+このイベントは、ユーザーが削除キー (**Delete** や **Backspace** キー) を押して、またはクリア標準アクションが割り当てられたメニュー項目 (**編集** メニューの **クリア** 等) を選択して、選択された項目の削除を指示したときに生成されます。
 
-Note that generating the event is the only action carried out by 4D: the program does not delete any items. It is up to the developer to handle the deletion and any prior warning messages that are displayed.
+4D はイベントの生成だけをおこなうことに留意してください。 4D は項目を消去しません。 実際の削除処理や事前警告の表示などは開発者の責任です。
