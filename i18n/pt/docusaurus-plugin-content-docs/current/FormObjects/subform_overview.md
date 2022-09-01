@@ -7,7 +7,7 @@ title: Subform
 A subform is a form included in another form.
 
 
-## Terminology
+## Terminologia
 
 In order to clearly define the concepts implemented with subforms, here are some definitions for certain terms used:
 
@@ -72,10 +72,8 @@ Case 1: The value of the parent form variable or expression is modified and this
 The following code is executed:
 
 ```4d  
-// Subform form method
-If (Form event code=On Bound Variable Change) //bound variable or expression was modified in the parent form
-    Form.clockValue:=OBJECT Get subform container value //synchonize the local value
-End if
+// Subform form method If (Form event code=On Bound Variable Change) //bound variable or expression was modified in the parent form
+    Form.clockValue:=OBJECT Get subform container value //synchonize the local value End if
 ```
 
 It updates the value of `Form.clockValue` in the subform:
@@ -105,10 +103,8 @@ Inside the subform, the button changes the value of the `Form.clockValue` expres
 The following code is executed:
 
 ```4d  
-// subform clock object method
-If (Form event code=On Data Change) //whatever the way the value is changed
-    OBJECT SET SUBFORM CONTAINER VALUE(Form.clockValue) //Push the value to the container
-End if
+// subform clock object method If (Form event code=On Data Change) //whatever the way the value is changed
+    OBJECT SET SUBFORM CONTAINER VALUE(Form.clockValue) //Push the value to the container End if
 ```
 
 ![](../assets/en/FormObjects/update-main-form.png)
@@ -136,8 +132,7 @@ In the parent form, you display the subfom twice. Each subform container is boun
 The button only creates `mother` and `father` properties in the parent's `Form` object:
 
 ```4d
-//Add values button object method
-Form.mother:=New object("lastname"; "Hotel"; "firstname"; "Anne")
+//Add values button object method Form.mother:=New object("lastname"; "Hotel"; "firstname"; "Anne")
 Form.father:=New object("lastname"; "Golf"; "firstname"; "Félix")
 ```
 
@@ -154,17 +149,15 @@ If you modify a value either in the parent form or in the subform, it is automat
 In versions prior to 4D v19 R5, synchronization between parent forms and subforms was handled through **pointers**. For example, to update a subform object, you could call the following code:
 
 ```4d  
-// Subform form method
-If (Form event code=On Bound Variable Change) 
+// Subform form method If (Form event code=On Bound Variable Change) 
     ptr:=OBJECT Get pointer(Object subform container) 
-    clockValue:=ptr-> 
-End if
+    clockValue:=ptr-> End if
 ```
 
 **This principle is still supported for compatibility but is now deprecated since it does not allow binding expressions to subforms.** It should no longer be used in your developments. In any cases, we recommend to use the [`Form` command](#synchronizing-parent-form-and-subform-multiple-values) or the [`OBJECT Get subform container value` and `OBJECT SET SUBFORM CONTAINER VALUE` commands](#synchronizing-parent-form-and-subform-single-value) to synchronize form and subform values.
 
 
-### Advanced inter-form programming
+### Programação entre formulários avançada
 
 Communication between the parent form and the instances of the subform may require going beyond the exchange of a values through the bound variable. In fact, you may want to update variables in subforms according to the actions carried out in the parent form and vice versa. If we use the previous example of the "dynamic clock" type subform, we may want to set one or more alarm times for each clock.
 
@@ -186,7 +179,7 @@ For more information, refer to the description of the `CALL SUBFORM CONTAINER` c
 
 #### EXECUTE METHOD IN SUBFORM command
 
-The `EXECUTE METHOD IN SUBFORM` command lets a form or one of its objects request the execution of a method in the context of the subform instance, which gives it access to the subform variables, objects, etc. This method can also receive parameters.
+The `EXECUTE METHOD IN SUBFORM` command lets a form or one of its objects request the execution of a method in the context of the subform instance, which gives it access to the subform variables, objects, etc. This method can also receive parameters. This method can also receive parameters.
 
 This mechanism is illustrated in the following diagram:
 
@@ -198,6 +191,6 @@ For more information, refer to the description of the `EXECUTE METHOD IN SUBFORM
 
 
 
-## Supported Properties
+## Propriedades compatíveis
 
 [Border Line Style](properties_BackgroundAndBorder.md#border-line-style) - [Bottom](properties_CoordinatesAndSizing.md#bottom) - [Class](properties_Object.md#css-class) - [Detail Form](properties_Subform.md#detail-form) - [Double click on empty row](properties_Subform.md#double-click-on-empty-row) - [Double click on row](properties_Subform.md#double-click-on-row) - [Enterable in list](properties_Subform.md#enterable-in-list) - [Expression Type](properties_Object.md#expression-type) - [Focusable](properties_Entry.md#focusable) - [Height](properties_CoordinatesAndSizing.md#height) - [Hide focus rectangle](properties_Appearance.md#hide-focus-rectangle) - [Horizontal Scroll Bar](properties_Appearance.md#horizontal-scroll-bar) - [Horizontal Sizing](properties_ResizingOptions.md#horizontal-sizing) - [Left](properties_CoordinatesAndSizing.md#left) - [List Form](properties_Subform.md#list-form) - [Method](properties_Action.md#method) - [Object Name](properties_Object.md#object-name) - [Print Frame](properties_Print.md#print-frame) - [Right](properties_CoordinatesAndSizing.md#right) - [Selection mode](properties_Subform.md#selection-mode) - [Source](properties_Subform.md#source) - [Top](properties_CoordinatesAndSizing.md#top) - [Type](properties_Object.md#type) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Scroll Bar](properties_Appearance.md#vertical-scroll-bar) - [Vertical Sizing](properties_ResizingOptions.md#vertical-sizing) - [Visibility](properties_Display.md#visibility) - [Width](properties_CoordinatesAndSizing.md#width) 
