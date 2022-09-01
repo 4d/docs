@@ -4,35 +4,35 @@ title: '$upload'
 ---
 
 
-Returns an ID of the file uploaded to the server
+サーバーにアップロードしたファイルの ID を返します
 
-## Description
+## 詳細
 
-Post this request when you have a file that you want to upload to the Server. If you have an image, you pass `$rawPict=true`. For all other files, you pass `$binary=true`.
+サーバーにアップロードしたいファイルがある場合にこのリクエストを POST します。 画像の場合には `$rawPict=true` を渡します。 その他のファイルの場合は `$binary=true` を渡します。
 
-You can modify the timeout, which by default is 120 seconds, by passing a value to the `$timeout` parameter.
+デフォルトのタイムアウトは 120秒ですが、`$timeout` パラメーターに任意の数値を渡してタイムアウトを変更できます。
 
-## Uploading scenario
+## アップロードシナリオ
 
-Imagine you want to upload an image to update the picture attribute of an entity.
+エンティティのピクチャー属性を更新するために、画像をアップロードしたい場合を考えます。
 
-To upload an image (or any binary file), you must first select the file from the client application. The file itlself must be passed in the **body** of the request.
+画像 (または任意のバイナリファイル) をアップロードするには、まずクライアントアプリケーションにてファイルを選択する必要があります。 ファイル自体はリクエストの **ボディ** に渡す必要があります。
 
-Then, you upload the selected image to 4D Server using a request such as:
+次に、下のようなリクエストを使用して、選択した画像を 4D Server にアップロードします:
 
  `POST  /rest/$upload?$rawPict=true`
 
-As a result, the server returns an ID that identifies the file:
+その結果、サーバーからはファイルを識別する ID が返されます。
 
-**Response**:
+**レスポンス**:
 
 `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50" }`
 
-Afterwards, you use this ID to add it to an attribute using [`$method=update`]($method.md#methodupdate) to add the image to an entity. The request looks like:
+この画像をエンティティに追加するには、返された ID を使い [`$method=update`]($method.md#methodupdate) で画像属性に保存します. リクエストは次のようになります:
 
  `POST  /rest/Employee/?$method=update`
 
-**POST data**:
+**POST データ**:
 
 ```
 {
@@ -42,9 +42,9 @@ Afterwards, you use this ID to add it to an attribute using [`$method=update`]($
 }
 ```
 
-**Response**:
+**レスポンス**:
 
-The modified entity is returned:
+更新後のエンティティが返されます:
 
 ```
 {
@@ -64,9 +64,9 @@ The modified entity is returned:
     },}
 ```
 
-## Example with a 4D HTTP client
+## 4D HTTPクライアントを使った例
 
-The following example shows how to upload a *.pdf* file to the server using the 4D HTTP client.
+次の例では、4D HTTPクライアントを使用して、*.pdf* ファイルをサーバーにアップロードする方法を示します。
 
 ```4d
 var $params : Text
@@ -78,14 +78,14 @@ var $blob : Blob
 ARRAY TEXT($headerNames; 1)
 ARRAY TEXT($headerValues; 1)
 
-$url:="localhost:80/rest/$upload?$binary=true" //prepare the REST request
+$url:="localhost:80/rest/$upload?$binary=true" // RESTリクエストの準備
 
 $headerNames{1}:="Content-Type"
 $headerValues{1}:="application/octet-stream"
 
-DOCUMENT TO BLOB("c:\\invoices\\inv003.pdf"; $blob) //Load the binary 
+DOCUMENT TO BLOB("c:\\invoices\\inv003.pdf"; $blob) // バイナリの読み込み
 
- //Execute the first POST request to upload the file
+ // ファイルをアップロードするための 1つ目の POSTリクエスト
 $result:=HTTP Request(HTTP POST method; $url; $blob; $response; $headerNames; $headerValues)
 
 If ($result=200) 
@@ -95,7 +95,7 @@ If ($result=200)
     $data.__STAMP:="3"
     $data.pdf:=New object("ID"; String($response.ID)) 
 
-    $url:="localhost:80/rest/Invoices?$method=update" //second request to update the entity
+    $url:="localhost:80/rest/Invoices?$method=update" // エンティティを更新するための 2つ目のリクエスト
 
     $headerNames{1}:="Content-Type"
     $headerValues{1}:="application/json"
