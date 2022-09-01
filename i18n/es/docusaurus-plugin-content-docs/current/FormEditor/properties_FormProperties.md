@@ -1,89 +1,89 @@
 ---
 id: propertiesForm
-title: Form Properties
+title: Propiedades de los formularios
 ---
 
 ---
 
-## Color Scheme
-> Color scheme property is only applied on macOS.
+## Esquema de colores
+> La propiedad de esquema de color sólo se aplica en macOS.
 
-This property defines the color scheme for the form. By default when the property is not set, the value for a color scheme is **inherited** (the form uses the scheme defined at the [application level](https://doc.4d.com/4dv19/help/command/en/page1762.html)). This can be changed for the form to one of the following two options:
+Esta propiedad define el esquema de colores para el formulario. This property defines the color scheme for the form. Esto se puede cambiar para el formulario a una de las dos opciones siguientes:
 
-*   dark - light text on a dark background
-*   light - dark text on a light background
-> A defined color scheme can not be overridden by a CSS.
+*   dark -- texto claro sobre fondo oscuro
+*   light - dark text on a light background > A defined color scheme can not be overridden by a CSS.
+> El número de caracteres para el título de una ventana está limitado a 31.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name        | Data Type | Possible Values |
-| ----------- | --------- | --------------- |
-| colorScheme | string    | "dark", "light" |
+| Nombre      | Tipos de datos | Valores posibles |
+| ----------- | -------------- | ---------------- |
+| colorScheme | string         | "dark", "light"  |
 
 ---
 
 ## Pages
 
-Each form has is made of at least two pages:
+Cada formulario consta de al menos dos páginas:
 
-- a page 0 (background page)
-- a page 1 (main page)
+- una página 0 (página de fondo)
+- una página 1 (página principal)
 
-For more information, please refer to [Form pages](forms.md#form-pages).
+Para más información, consulte [Páginas formulario](forms.md#form-pages).
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name  | Data Type  | Possible Values                                                          |
-| ----- | ---------- | ------------------------------------------------------------------------ |
-| pages | collection | Collection of pages (each page is an object, page 0 is the first element |
+| Nombre | Tipos de datos | Valores posibles                                                                  |
+| ------ | -------------- | --------------------------------------------------------------------------------- |
+| pages  | collection     | Colección de páginas (cada página es un objeto, la página 0 es el primer elemento |
 
 ---
 
 
-## Form Name
+## Nombre del formulario
 
 This property is the name of the form itself and is used to refer to the form by name using the 4D language. The form name must comply with the [rules specified for identifiers](Concepts/identifiers.md) in 4D.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
 The form name is defined by the name of the folder that contains the form.4Dform file. See [project architecture](Project/architecture.md#sources-folder) for more information.
 
 ---
 
-## Form Type
+## Tipo de formulario
 
 The form type, *i.e.* its destination, defines the features that will be available to the form. For example, [markers](properties_Markers.md) can only be set for list (output) table forms.
 
-Each table in a database generally has at least two table forms. One for listing records on-screen and the other for displaying one record at a time (used for data entry and modifications):
+Cada tabla de una base de datos suele tener al menos dos formas de tabla. One for listing records on-screen and the other for displaying one record at a time (used for data entry and modifications):
 
 - Output form - the *output form* or *list form* displays a list of records, with a single line per record. The results of queries are shown in an output form and users can double-click a line to display the input form for that record. ![](../assets/en/FormObjects/formOutput.png)
 
-- Input form - used for data entry. It displays a single record per screen and typically has buttons for saving and canceling modifications to the record and for navigating from record to record (*i.e.*, First Record, Last Record, Previous Record, Next Record). ![](../assets/en/FormObjects/formInput.png)
+- Formulario de entrada - utilizado para la entrada de datos. It displays a single record per screen and typically has buttons for saving and canceling modifications to the record and for navigating from record to record (*i.e.*, First Record, Last Record, Previous Record, Next Record). ![](../assets/en/FormObjects/formInput.png)
 
 
-Supported types depend on the form category:
+Los tipos soportados dependen de la categoría de formulario:
 
 
-| Form Type                | JSON grammar     | Description                                                   | Supported with              |
-| ------------------------ | ---------------- | ------------------------------------------------------------- | --------------------------- |
-| Detail Form              | detailScreen     | A display form for data entry and modification                | Project forms - Table forms |
-| Detail Form for Printing | detailPrinter    | A printed report with one page per record, such as an invoice | Project forms - Table forms |
-| List Form                | listScreen       | A form for listing records on the screen                      | Table forms                 |
-| List Form for Printing   | listPrinter      | A printed report that list records                            | Table forms                 |
-| None                     | *no destination* | A form with no specific feature                               | Project forms - Table forms |
+| Tipo de formulario              | Gramática JSON   | Descripción                                                      | Soportado con                            |
+| ------------------------------- | ---------------- | ---------------------------------------------------------------- | ---------------------------------------- |
+| Formulario detallado            | detailScreen     | Un formulario de visualización para introducir y modificar datos | Formularios proyecto - Formularios tabla |
+| Formulario detallado imprimible | detailPrinter    | Un informe impreso con una página por registro, como una factura | Formularios proyecto - Formularios tabla |
+| Formulario listado              | listScreen       | Un formulario para listar los registros en la pantalla           | Formularios tabla                        |
+| Formulario de lista imprimible  | listPrinter      | Un informe impreso que lista los registros                       | Formularios tabla                        |
+| Ninguno                         | *no destination* | A form with no specific feature                                  | Formularios proyecto - Formularios tabla |
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name        | Data Type | Possible Values                                              |
-| ----------- | --------- | ------------------------------------------------------------ |
-| destination | string    | "detailScreen", "listScreen", "detailPrinter", "listPrinter" |
+| Nombre      | Tipos de datos | Valores posibles                                             |
+| ----------- | -------------- | ------------------------------------------------------------ |
+| destination | string         | "detailScreen", "listScreen", "detailPrinter", "listPrinter" |
 
 ---
 
-## Inherited Form Name
+## Nombre del formulario heredado
 
 This property designates the [form to inherit](forms.md#inherited-forms) in the current form.
 
@@ -92,16 +92,16 @@ To inherit from a table form, set the table in the [Inherited Form Table](#inher
 To remove inheritance, select `\&#060;None&#062;` in the Property List (or " " in JSON).
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name          | Data Type | Possible Values                                                                                                    |
-| ------------- | --------- | ------------------------------------------------------------------------------------------------------------------ |
-| inheritedForm | string    | Name of table or project form OR a POSIX path to a .json file describing the form OR an object describing the form |
+| Nombre        | Tipos de datos | Valores posibles                                                                                                   |
+| ------------- | -------------- | ------------------------------------------------------------------------------------------------------------------ |
+| inheritedForm | string         | Name of table or project form OR a POSIX path to a .json file describing the form OR an object describing the form |
 
 ---
 
 
-## Inherited Form Table
+## Tablas de formulario heredadas
 
 This property specifies the database table from which to [inherit a form](forms.md#inherited-forms) in the current form.
 
@@ -109,70 +109,70 @@ Set to `\&#060;None&#062;` in the Property List (or " " in JSON) to inherited fr
 
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name               | Data Type        | Possible Values            |
-| ------------------ | ---------------- | -------------------------- |
-| inheritedFormTable | string or number | table name or table number |
-
-
----
-
-## Published as Subform
-
-For a component form to be selected as a [subform](FormObjects/subform_overview.md) in a host application, it must have been explicitly shared. When this property is selected, the form will be published in the host application.
-
-Only project forms can be specified as published subforms.
-
-
-
-#### JSON Grammar
-
-| Name   | Data Type | Possible Values |
-| ------ | --------- | --------------- |
-| shared | boolean   | true, false     |
+| Nombre             | Tipos de datos  | Valores posibles                  |
+| ------------------ | --------------- | --------------------------------- |
+| inheritedFormTable | string o number | nombre de tabla o número de tabla |
 
 
 ---
 
-## Save Geometry
+## Publicado como Subformulario
 
-When the option is used, if the window is opened using the `Open form window` command with the `*` parameter, several form parameters are automatically saved by 4D when the window is closed, regardless of how they were modified during the session:
+Para que un formulario componente sea seleccionado como [subformulario](FormObjects/subform_overview.md) en una aplicación anfitriona, debe haber sido compartido explícitamente. When this property is selected, the form will be published in the host application.
 
-*   the current page,
-*   the position, size and visibility of each form object (including the size and visibility of list box columns).
-> This option does not take into account objects generated using the `OBJECT DUPLICATE` command. In order for a user to recover their environment when using this command, the developer must repeat the sequence of creation, definition and positioning of the objects.
+Sólo los proyectos formulario se pueden especificar como subformularios publicados.
 
-When this option is selected, the [Save Value](FormObjects/properties_Object.md#save-value) option is available for certain objects.
 
-#### JSON Grammar
 
-| Name             | Data Type | Possible Values |
-| ---------------- | --------- | --------------- |
-| memorizeGeometry | boolean   | true, false     |
+#### Gramática JSON
 
-#### See also
-[**Save Value**](FormObjects/properties_Object.md#save-value)
+| Nombre | Tipos de datos | Valores posibles |
+| ------ | -------------- | ---------------- |
+| shared | boolean        | true, false      |
 
 
 ---
 
-## Window Title
+## Memorizar geometría
 
-The window title is used when the form is opened using the `Open form window` and `Open window` 4D commands in Application environment. The window title appears in the Title bar of the window.
+Cuando se utiliza esta opción, si la ventana se abre utilizando el comando `Open form window` con el parámetro `*`, varios parámetros del formulario son guardados automáticamente por 4D cuando se cierra la ventana, independientemente de cómo se hayan modificado durante la sesión:
 
-You can use dynamic references to set the window titles for forms, *i.e.*:
+*   la página actual,
+*   la posición, el tamaño y la visibilidad de cada objeto del formulario (incluyendo el tamaño y la visibilidad de las columnas de list box).
+> > This option does not take into account objects generated using the `OBJECT DUPLICATE` command. Para que un usuario pueda recuperar su entorno al utilizar este comando, el desarrollador debe repetir la secuencia de creación, definición y posicionamiento de los objetos.
 
-*   A standard XLIFF reference stored in the Resources folder.
+Cuando se selecciona esta opción, la opción [Guardar valor](FormObjects/properties_Object.md#save-value) está disponible para ciertos objetos.
+
+#### Gramática JSON
+
+| Nombre           | Tipos de datos | Valores posibles |
+| ---------------- | -------------- | ---------------- |
+| memorizeGeometry | boolean        | true, false      |
+
+#### Ver también
+[**Guardar valor**](FormObjects/properties_Object.md#save-value)
+
+
+---
+
+## Título de la ventana
+
+El título de la ventana se utiliza cuando se abre el formulario mediante los comandos `Open form window` y `Open window`4D en el entorno de la aplicación. El nombre de la ventana aparece en la barra de título de la ventana.
+
+Puede utilizar referencias dinámicas para definir los nombres de ventana de los formularios, *es decir*:
+
+*   Una referencia estándar XLIFF almacenada en la carpeta Resources.
 *   A table or field label: The syntax to apply is `<?[TableNum]FieldNum>` or `<?[TableName]FieldName>`.
-*   A variable or a field: The syntax to apply is `\&#060;VariableName&#062;` or `&#060;[TableName]FieldName&#062;`. The current value of the field or variable will be displayed in the window title.
+*   A variable or a field: The syntax to apply is `\&#060;VariableName&#062;` or `&#060;[TableName]FieldName&#062;`. El valor actual del campo o de la variable se mostrará en el título de la ventana.
 
-> The number of characters for a window title is limited to 31.
+> El número de caracteres para el título de una ventana está limitado a 31.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Name        | Data Type | Possible Values                                        |
-| ----------- | --------- | ------------------------------------------------------ |
-| windowTitle | string    | The name of the window as plain text or as a reference |
+| Nombre      | Tipos de datos | Valores posibles                                         |
+| ----------- | -------------- | -------------------------------------------------------- |
+| windowTitle | string         | El nombre de la ventana como texto plano o de referencia |
 
 
