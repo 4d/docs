@@ -3,34 +3,34 @@ id: querypath
 title: '$querypath'
 ---
    	
-Returns the query as it was executed by 4D Server (*e.g.*, `$querypath=true`)
+Devuelve la petición tal y como se ejecutó por 4D Server (*por ejemplo, *, `$querypath=true`)
 
-## Description
+## Descripción
 
-`$querypath` returns the query as it was executed by 4D Server. If, for example, a part of the query passed returns no entities, the rest of the query is not executed. The query requested is optimized as you can see in this `$querypath`.
+`$querypath` devuelve la petición tal y como fue ejecutada por 4D Server. Si, por ejemplo, una parte de la petición pasada no devuelve ninguna entidad, el resto de la petición no se ejecuta. La petición de consulta está optimizada como se puede ver en este `$querypath`.
 
-For more information about query paths, refer to [queryPlan and queryPath](genInfo.md#querypath-and-queryplan).
+Para más información sobre las rutas de petición, consulte [queryPlan y queryPath](genInfo.md#querypath-and-queryplan).
 
-In the steps collection, there is an object with the following properties defining the query executed:
+En la colección de pasos, hay un objeto con las siguientes propiedades que definen la petición ejecutada:
 
-| Property      | Type       | Description                                                                 |
-| ------------- | ---------- | --------------------------------------------------------------------------- |
-| description   | String     | Actual query executed or "AND" when there are multiple steps                |
-| time          | Number     | Number of milliseconds needed to execute the query                          |
-| recordsfounds | Number     | Number of records found                                                     |
-| steps         | Collection | An collection with an object defining the subsequent step of the query path |
+| Propiedad     | Type       | Descripción                                                                        |
+| ------------- | ---------- | ---------------------------------------------------------------------------------- |
+| description   | String     | Petición ejecutada o "AND" cuando hay varios pasos                                 |
+| time          | Number     | Número de milisegundos necesarios para ejecutar la petición                        |
+| recordsfounds | Number     | Número de registros encontrados                                                    |
+| steps         | Collection | Una colección con un objeto que define el siguiente paso de la ruta de la petición |
 
-## Example
+## Ejemplo
 
-If you passed the following query:
+Si pasó la siguiente petición:
 
  `GET  /rest/Employee/$filter="employer.name=acme AND lastName=Jones"&$querypath=true`
 
-And no entities were found, the following query path would be returned, if you write the following:
+Y no se encontraron entidades, se devolvería la siguiente ruta de petición, si escribe lo siguiente:
 
 `GET  /rest/$querypath`
 
-**Response**:
+**Respuesta**:
 
 ```
 __queryPath: {
@@ -42,7 +42,7 @@ __queryPath: {
             recordsfounds: 0,
             steps: [
                 {
-                    description: "Join on Table : Company : People.employer = Company.ID",
+                    description: "Join on Table : Company : People.employer = Company. ID",
                     time: 0,
                     recordsfounds: 0,
                     steps: [
@@ -64,15 +64,15 @@ __queryPath: {
 }
 ```
 
-If, on the other hand, the first query returns more than one entity, the second one will be executed. If we execute the following query:
+Si, por el contrario, la primera consulta devuelve más de una entidad, se ejecutará la segunda. Si ejecutamos la siguiente consulta:
 
  `GET  /rest/Employee/$filter="employer.name=a* AND lastName!=smith"&$querypath=true`
 
-If at least one entity was found, the following query path would be returned, if you write the following:
+Si se encuentra al menos una entidad, se devolverá la siguiente ruta de consulta, si se escribe lo siguiente:
 
  `GET  /rest/$querypath`
 
-**Respose**:
+**Respuesta**:
 
 ```
 "__queryPath": {
@@ -83,7 +83,7 @@ If at least one entity was found, the following query path would be returned, if
             "recordsfounds": 4,
             "steps": [
                 {
-                    "description": "Join on Table : Company : Employee.employer = Company.ID",
+                    "description": "Join on Table : Company : Employee.employer = Company. ID",
                     "time": 1,
                     "recordsfounds": 4,
                     "steps": [
