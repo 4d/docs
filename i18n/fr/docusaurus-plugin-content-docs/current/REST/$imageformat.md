@@ -3,27 +3,27 @@ id: imageformat
 title: '$imageformat'
 ---
 
-Defines which image format to use for retrieving images (*e.g.*, `$imageformat=png`)
+Définit le format d'image à utiliser pour récupérer des images (par exemple, `$imageformat=png`)
 
 ## Description
 
-Define which format to use to display images. By default, the best format for the image will be chosen. You can, however, select one of the following formats:
+Définissez le format à utiliser pour afficher les images. Par défaut, le meilleur format d'image sera choisi. Vous pouvez cependant sélectionner l'un des formats suivants :
 
-| Type | Description                    |
-| ---- | ------------------------------ |
-| GIF  | GIF format                     |
-| PNG  | PNG format                     |
-| JPEG | JPEG format                    |
-| TIFF | TIFF format                    |
-| best | Best format based on the image |
+| Type | Description                      |
+| ---- | -------------------------------- |
+| GIF  | Format GIF                       |
+| PNG  | Format PNG                       |
+| JPEG | Format JPEG                      |
+| TIFF | Format TIFF                      |
+| best | Meilleur format basé sur l'image |
 
-Once you have defined the format, you must pass the image attribute to [`$expand`]($expand.md) to load the photo completely.
+Une fois que vous avez défini le format, vous devez passer l'attribut de l'image à [`$expand`]($expand.md) pour charger complètement la photo.
 
-If there is no image to be loaded or the format doesn't allow the image to be loaded, the response will be empty.
+S'il n'y a pas d'image à charger ou si le format ne permet pas de charger l'image, la réponse sera vide.
 
-## Example
+## Exemple
 
-The following example defines the image format to JPEG regardless of the actual type of the photo and passes the actual version number sent by the server:
+L'exemple suivant définit le format d'image au format JPEG, quel que soit le véritable type de la photo et passe le véritable numéro de version envoyé par le serveur :
 
 `GET  /rest/Employee(1)/photo?$imageformat=jpeg&$version=3&$expand=photo`
 
