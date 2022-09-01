@@ -1,50 +1,50 @@
 ---
 id: REST_requests
-title: About REST Requests
+title: Acerca de las peticiones REST
 ---
 
 
-The following structures are supported for REST requests:
+Se soportan las siguientes estructuras para las peticiones REST:
 
-| URI                              | Resource (Input)                                                                                    | /? or &{filter} (Output)                                                                              |
+| URI                              | Resource (Input)                                                                                    | /? /? or &{filter} (Output)                                                                           |
 | -------------------------------- | --------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | http://{servername}:{port}/rest/ | [{dataClass}](%7BdataClass%7D.html)                                                                 | [$filter]($filter.md), [$attributes]($attributes.md), [$skip]($skip.md), [$method=...]($method.md)... |
 |                                  | [{dataClass}](%7BdataClass%7D.html)/[$entityset/{entitySetID}](entityset.html#entitysetentitysetid) | [$method=...]($method.md)                                                                             |
 |                                  | [{dataClass}({key})](%7BdataClass%7D.html#dataclasskey)                                             | [$attributes]($attributes.md)                                                                         |
 |                                  | [{dataClass}:{attribute}(value)](%7BdataClass%7D.html#dataclassattributevalue)                      |                                                                                                       |
 
-While all REST requests must contain the URI and Resource parameters, the Output (which filters the data returned) is optional.
+Mientras que todas las solicitudes REST deben contener los parámetros URI y Resource, los filtros de salida (que filtran los datos devueltos) son opcionales.
 
-As with all URIs, the first parameter is delimited by a “?” and all subsequent parameters by a “&”. For example:
+Como en todos los URI, el primer parámetro está delimitado por un "?" y todos los siguientes por un "&". Por ejemplo:
 
  `GET  /rest/Person/?$filter="lastName!=Jones"&$method=entityset&$timeout=600`
-> You can place all values in quotes in case of ambiguity. For example, in our above example, we could have put the value for the last name in single quotes: "lastName!='Jones'".
+> Puede colocar todos los valores entre comillas en caso de ambigüedad. Por ejemplo, en nuestro ejemplo anterior, podríamos haber puesto el valor del apellido entre comillas simples: "lastName!='Jones'".
 
-The parameters allow you to manipulate data in dataclasses in your 4D project. Besides retrieving data using `GET` HTTP methods, you can also add, update, and delete entities in a dataclass using `POST` HTTP methods.
+Los parámetros le permiten manipular los datos de las clases de datos en su proyecto 4D. Además de recuperar datos mediante los métodos HTTP `GET`, también se pueden añadir, actualizar y eliminar entidades de una clase de datos utilizando los métodos HTTP `POST`.
 
-If you want the data to be returned in an array instead of JSON, use the [`$asArray`]($asArray.md) parameter.
+Si desea que los datos se devuelvan en un array en lugar de en JSON, utilice el parámetro [`$asArray`]($asArray.md).
 
 
-## REST Status and Response
-With each REST request, the server returns the status and a response (with or without an error).
+## Estado y respuesta REST
+Con cada petición REST, el servidor devuelve el estado y una respuesta (con o sin error).
 
-### Request Status
-With each REST request, you get the status along with the response. Below are a few of the statuses that can arise:
+### Estado de la petición
+Con cada solicitud REST, se obtiene el estado junto con la respuesta. A continuación se presentan algunos de los estados que pueden surgir:
 
-| Status                    | Description                                                                |
-| ------------------------- | -------------------------------------------------------------------------- |
-| 0                         | Request not processed (server might not be started).                       |
-| 200 OK                    | Request processed without error.                                           |
-| 401 Unauthorized          | Permissions error (check user's permissions).                              |
-| 402 No session            | Maximum number of sessions has been reached.                               |
-| 404 Not Found             | The data class is not accessible via REST or the entity set doesn't exist. |
-| 500 Internal Server Error | Error processing the REST request.                                         |
+| Estado                    | Descripción                                                                      |
+| ------------------------- | -------------------------------------------------------------------------------- |
+| 0                         | Solicitud no procesada (el servidor podría no estar iniciado).                   |
+| 200 OK                    | Petición procesada sin error.                                                    |
+| 401 Unauthorized          | Error de permisos (compruebe los permisos del usuario).                          |
+| 402 No session            | Se ha alcanzado el número máximo de sesiones.                                    |
+| 404 Not Found             | La clase de datos no es accesible vía REST o el conjunto de entidades no existe. |
+| 500 Internal Server Error | Error al procesar la solicitud REST.                                             |
 
-### Response
+### Respuesta
 
-The response (in JSON format) varies depending on the request.
+La respuesta (en formato JSON) varía en función de la petición.
 
-If an error arises, it will be sent along with the response from the server or it will be the response from the server.
+Si se produce un error, se enviará junto con la respuesta del servidor o será la respuesta del servidor.
 
  
 
