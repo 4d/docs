@@ -21,7 +21,7 @@ You can show or hide several interface elements on the current page of the form:
 - **Markers**: Output control lines and associated markers that show the limits of the form’s different areas. This element can only be displayed by default in [list forms](properties_FormProperties.md#form-type).
 - **Marker Labels**: Marker labels, available only when the output control lines are displayed. This element can only be displayed by default in [list forms](properties_FormProperties.md#form-type).
 - **Limits**: Form’s limits. When this option is selected, the form is displayed in the Form editor as it appears in Application mode. This way you can adjust your form without having to switch to the Application mode in order to see the result.
-> The [**Size Based on**](properties_FormSize.md#size-based-on), [**Hor. margin**](properties_FormSize.md#hor-margin) and [**Vert. margin**](properties_FormSize.md#vert-margin) settings of the form properties affect the form’s limits. When using these settings, the limits are based on the objects in the form. When you modify the size of an object that is located next to the form’s border, it is modified to reflect that change.
+> The [**Size Based on**](properties_FormSize.md#size-based-on), [**Hor margin**](properties_FormSize.md#hor-margin) and [**Vert margin**](properties_FormSize.md#vert-margin) settings of the form properties affect the form’s limits. When using these settings, the limits are based on the objects in the form. When you modify the size of an object that is located next to the form’s border, it is modified to reflect that change.
 
 #### Default display
 
@@ -52,7 +52,7 @@ The toolbar of the Form editor offers a set of tools to manipulate and modify th
 
 The toolbar contains the following elements:
 
-| Icon                                             | Name                                                 | Description                                                                                                                                                                                                                                                                                                                  |
+| Icon                                             | Name                                                 | Beschreibung                                                                                                                                                                                                                                                                                                                 |
 | ------------------------------------------------ | ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![](../assets/en/FormEditor/execute.png)         | Execute the form                                     | Used to test the execution of the form. When you click on this button, 4D opens a new window and displays the form in its context (list of records for a list form and current record page for a detail form). The form is executed in the main process.                                                                     |
 | ![](../assets/en/FormEditor/selection.png)       | [Selection tool](#selecting-objects)                 | Allows selecting, moving and resizing form objects.**Note**: When an object of the Text or Group Box type is selected, pressing the **Enter** key lets you switch to editing mode.                                                                                                                                           |
@@ -125,6 +125,7 @@ You can add objects to forms in several ways:
 - By dragging and dropping the object from the object bar
 - By drag-and-drop or copy-paste operations on an object selected from the preconfigured [object library](objectLibrary.md),
 - By dragging and dropping an object from another form,
+
 - By dragging and dropping an object from the Explorer (fields) or from other editors in the Design environment (lists, pictures, etc.)
 
 Once the object is placed in the form, you can modify its characteristics using the Form editor.
@@ -133,7 +134,7 @@ You can work with two types of objects in your forms:
 
 - **Static objects** (lines, frames, background pictures, etc.): These objects are generally used for setting the appearance of the form and its labels as well as for the graphic interface. They are available in the object bar of the Form editor. You can also set their graphic attributes (size, color, font, etc.) and their resizing properties using the Property List. Static objects do not have associated variables like active objects. However, you can insert dynamic objects into static objects.
 
-- **Active objects**: These objects perform tasks or functions in the interface and can take many forms: fields, buttons, scrollable lists, etc. Each active object is associated with either a field or a variable.
+- **Active objects**: These objects perform tasks or functions in the interface and can take many forms: fields, buttons, scrollable lists, etc. Each active object is associated with either a field or a variable. Each active object is associated with either a field or a variable.
 
 ### Selecting objects
 
@@ -147,7 +148,7 @@ To select an object using the toolbar:
 To select an object using the Property List:
 
 1. Choose the object’s name from the Object List drop-down list located at the top of the Property List.Using these two methods, you can select an object that is hidden by other objects or located outside the visible area of the current window. To deselect an object, click outside the object’s boundary or **Shift+click** the object.
-> It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
+> > It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
 
 ### Selecting multiple objects
 
@@ -247,7 +248,7 @@ The alignment tools in the toolbar and in the Align submenu of the Object menu a
 
 ![](../assets/en/FormEditor/alignmentMenu.png)
 
-When 4D aligns objects, it leaves one selected object in place and aligns the remaining objects to that one. This object is the “anchor.” It uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor. The figure below shows objects with no alignment, "aligned left", "aligned horizontally by centers", and "aligned right":
+When 4D aligns objects, it leaves one selected object in place and aligns the remaining objects to that one. This object is the “anchor.” This object is the “anchor.” It uses the object that is the furthest in the alignment’s direction as the anchor and aligns the other objects to that object. For instance, if you want to perform a right alignment on a set of objects, the rightmost object will be used as the anchor. The figure below shows objects with no alignment, "aligned left", "aligned horizontally by centers", and "aligned right":
 
 ![](../assets/en/FormEditor/alignmentTools.png)
 
@@ -340,7 +341,7 @@ Every object that supports the focusable property is included in the data entry 
 
 Setting the entry order for a JSON form is done with the [`entryOrder`](properties_JSONref.md) property.
 
-If you don’t specify a custom entry order, by default 4D uses the layering of the objects to determine the entry order in the direction “background towards foreground.” The standard entry order thus corresponds to the order in which the objects were created in the form.
+If you don’t specify a custom entry order, by default 4D uses the layering of the objects to determine the entry order in the direction “background towards foreground.” The standard entry order thus corresponds to the order in which the objects were created in the form. The standard entry order thus corresponds to the order in which the objects were created in the form.
 
 In some forms, a custom data entry order is needed. Below, for example, additional fields related to the address have been added after the creation of the form. The resulting standard entry order thus becomes illogical and forces the user to enter the information in an awkward manner:
 
@@ -403,7 +404,7 @@ The Form editor toolbar provides a CSS button for viewing styled objects:
 
 Select one of the following preview modes from the menu:
 
-| Toolbar Icon                            | CSS Preview Mode | Description                                                                                                   |
+| Toolbar Icon                            | CSS Preview Mode | Beschreibung                                                                                                  |
 | --------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------------------- |
 | ![](../assets/en/FormEditor/cssNo.png)  | None             | No CSS values are applied in the form and no CSS values or icons displayed in the Property List.              |
 | ![](../assets/en/FormEditor/cssWin.png) | Windows          | CSS values for Windows platform are applied in the form. CSS values and icons displayed in the Property List. |
@@ -436,7 +437,7 @@ An attribute value defined in a style sheet can be overridden in the JSON form d
 
 #### Property List CSS Icons
 
-| Icon                                          | Description                                                                                                                                                        |
+| Icon                                          | Beschreibung                                                                                                                                                       |
 | --------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | ![](../assets/en/FormEditor/cssIcon.png)      | Indicates that an attribute value has been defined in a style sheet                                                                                                |
 | ![](../assets/en/FormEditor/cssImportant.png) | Indicates that an attribute value has been defined in a style sheet with the `!important` declaration                                                              |
@@ -513,7 +514,7 @@ Here is a description of each type of shield:
 | ----------------------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | ![](../assets/en/FormEditor/objectMethod.png)   | Object Method                   | For objects with an associated object method                                                                                         |
 | ![](../assets/en/FormEditor/standardAction.png) | Standard Action                 | For objects with an associated standard action                                                                                       |
-| ![](../assets/en/FormEditor/resizing.png)       | Resizing                        | For objects with at least one resizing property, indicates the combination of current properties                                     |
+| ![](../assets/en/FormEditor/resizing.png)       | Zoomen                          | For objects with at least one resizing property, indicates the combination of current properties                                     |
 | ![](../assets/en/FormEditor/entryOrder.png)     | Entry Order                     | For enterable objects, indicates the number of entry order                                                                           |
 | ![](../assets/en/FormEditor/viewNumber.png)     | Current View                    | For all objects in the current view                                                                                                  |
 | ![](../assets/en/FormEditor/cssShield.png)      | [Style Sheet](stylesheets.html) | For objects with one or more attribute values overridden by a style sheet.                                                           |
@@ -652,7 +653,7 @@ Simply select the destination view, right-click, and select **Move to**:
 
 ![](../assets/en/FormEditor/moveObject.png)
 
-OR
+ODER
 
 Select the destination view of the selection and click **Move to** button at the bottom of the View palette:
 
