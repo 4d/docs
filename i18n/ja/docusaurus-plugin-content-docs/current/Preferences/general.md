@@ -1,164 +1,164 @@
 ---
 id: general
-title: General Page
+title: 一般ページ
 ---
 
-This page contains various options to configure the general operation of your 4D application.
+このページには、4Dアプリケーションの一般的な動作を設定するためのオプションが含まれています。
 
-## Options
+## オプション
 
-### At startup
+### 開始時
 
-This option allows you to configure the default 4D display at startup, when the user launches only the application.
+このオプションは、ユーザーがアプリケーションのみを起動したとき、4D が起動時に提供するデフォルトの表示を設定することができます。
 
-*   **Do nothing**: Only the application window appears, empty.
-*   **Open Local Project dialog**: 4D displays a standard open document dialog box, allowing you to select a local project.
-*   **Open last used project**: 4D directly opens the last project used; no opening dialog box appears. >To force the display of the opening dialog box when this option is selected, hold down the **Alt** (Windows) or **Option** (macOS) key while launching the project.
-*   **Open Remote Project dialog**: 4D displays the standard 4D Server logon dialog, allowing you to select a project published on the network.
-*   **Open Welcome Wizard dialog** (factory setting): 4D displays the Welcome Wizard dialog box.
-> **4D Server**: The 4D Server application ignores this option. In this environment, the **Do nothing** mode is always used.
+*   **何もしない**: アプリケーションウィンドウのみが表示されます。
+*   **ローカルプロジェクトを開くダイアログ**: 4Dは標準のドキュメントを開くダイアログボックスを表示し、ローカルのプロジェクトを選択することができます。
+*   **最後に使用したプロジェクトを開く**: 4D は最後に使用されたプロジェクトスを直接開きます。 ドキュメントを開くダイアログボックスは表示されません。 ＞このオプションが選択されているときに、ドキュメントを開くダイアログボックスを強制的に表示させるには、プロジェクトを起動する際に、**Alt** (Windows) または **Option** (macOS) キーを押します。
+*   **リモートプロジェクトを開くダイアログ**: 4D は 4D Server にログオンする標準のダイアログボックスを表示し、ネットワークに公開されたプロジェクトを指定することができます。
+*   **Welcomeウィザードを開くダイアログ** (初期設定): 4D は Welcomeウィザードダイアログボックスを表示します。
+> > **4D Server**: The 4D Server application ignores this option. この環境においては、**何もしない** モードが常に選択されます。
 
-### Automatic form creation
+### 自動フォーム作成
 
-> This option is only used in binary databases; it is ignored in project architecture. See doc.4d.com.
+> このオプションは、バイナリデータベースでのみ使用され、プロジェクトアーキテクチャーでは無視されます。 doc.4d.com を参照ください。
 
-### Window tabbing (macOS only)
+### ウィンドウのタブ (macOSのみ)
 
-Starting with macOS Sierra, Mac applications can benefit from the Automatic Window Tabbing feature that helps organizing multiple windows: document windows are stacked into a single parent window and can be browsed through tabs. This feature is useful on small screens and/or when using a trackpad.
+macOS Sierra 以降、Mac のアプリケーションは、複数のウィンドウを整理しやすくする自動ウィンドウタブ機能を利用することができます。 単一の親ウィンドウ内でドキュメントウィンドウを積み重ね、タブを通してブラウズすることができます。 この機能は小さなスクリーンや、トラックパッドを使用している場合などに有用です。
 
-You can benefit from this feature in the following environments (with 4D 64-bit versions only):
+この機能は、以下の環境において利用することができます (4D 64-bit版のみ):
 
-*   Code Editor windows
-*   Form Editor windows
+*   コードエディターウィンドウ
+*   フォームエディターウィンドウ
 
-All windows from these editors can be put in tab form:
+これらのエディターのウィンドウはすべて、タブ形式にすることができます:
 
 ![](../assets/en/Preferences/general2.png)
 
-A set of commands in the **Window** menu allows managing the tabs:
+**ウィンドウ** メニューのコマンドによって、タブを管理することができます:
 
 ![](../assets/en/Preferences/general3.png)
 
-In the 4D's Preferences dialog box, the **Window tabbing** option allows you to control this feature:
+4D の環境設定ダイアログボックス内では、**ウィンドウタブ** オプションでこの機能を管理することができます:
 
 ![](../assets/en/Preferences/general4.png)
 
-Three options are available:
+次の値が提供されています:
 
-*   **According to System Preferences** (default): 4D windows will behave like defined in the macOS System Preferences (In full screen, Always, or Manually).
-*   **Never**: Opening a new document in 4D form editor or Code Editor will always result in creating a new window (tabs are never created).
-*   **Always**: Opening a new document in 4D form editor or method editors will always result in creating a new tab.
+*   **システム設定に従う** (デフォルト): 4D のウィンドウは、macOSシステム環境設定で定義されているように振る舞います (フルスクリーン時のみ、常に、あるいは手動)。
+*   **しない**: 4Dフォームエディターあるいはコードエディターで開かれた新しいドキュメントは常に新しいウィンドウを作成します (タブは作成されません)。
+*   **常にする**: 4Dフォームエディターあるいはコードエディターで開かれた新しいドキュメントは常に新しいタブを作成します。
 
-### Appearance (macOS only)
+### アピアランス (macOSのみ)
 
-This menu lets you select the color scheme to use for the **4D development** environment. The specified scheme will be applied to all editors and windows of the Design mode.
+このメニューで、**4D開発**環境で使用するカラースキームを選択します。 指定されたカラースキームは、デザインモードのすべてのエディターとウィンドウに適用されます。
 
-> You can also set the color scheme to use in your **desktop applications** in the "Interface" page of the Settings dialog box.
+> **デスクトップアプリケーション** で使用するカラースキームは、ストラクチャー設定ダイアログボックスの "インターフェース" ページで設定することができます。
 
-Three options are available:
+次の値が提供されています:
 
-*   **According to System Color Scheme Preferences** (default): Use the color scheme defined in the macOS System Preferences.
-*   **Light**: Use the Light Theme
-*   **Dark**: Use the Dark Theme
+*   **システムのカラースキーム設定に合わせる** (デフォルト): macOSシステム環境設定で定義されているカラースキームを使用します。
+*   **Light**: ライトテーマを使用します。
+*   **Dark**: ダークテーマを使用します。
 
-> This preference is only supported on macOS. On Windows, the "Light" scheme is always used.
-
-
-### Exit Design when going to Application Environment
-
-If this option is checked, when the user switches to the Application environment using the **Test Application** menu command, all the windows of the Design environment are closed. If this option is not checked (factory setting), the windows of the Design environment remain visible in the background of the Application environment.
+> この設定は macOS でのみサポートされています。 Windows上では、"Light" テーマが常に使用されます。
 
 
-### Enable binary database creation
+### アプリケーションモードに移動する時に、デザインモードを終了する
 
-If you check this option, two items are added in the **File > New** menu and the **New** toolbar button:
+このオプションが選択されていると、**アプリケーションモード** コマンドを使用してユーザーがアプリケーションモードに移動する際に、デザインモードのすべてのウィンドウが閉じられます。 このオプションがチェックされていないと (初期設定)、デザインモードのウィンドウはアプリケーションモードの後ろに表示されたままとなります。
 
-*   **Database...**
-*   **Database from Structure Definition...**
+
+### バイナリー形式のデータベース作成を有効化する
+
+このオプションをチェックすると、**ファイル ＞ 新規** メニューと、ツールバーの **新規** ボタンに、2つの項目が追加されます:
+
+*   **データベース...**
+*   **ストラクチャー定義を使用したデータベース...**
 
 ![](../assets/en/Preferences/general5.png)
 
-These items allow you to create binary databases (see [Creating a new database](https://doc.4d.com/4Dv18R6/4D/18-R6/Creating-a-new-database.300-5217610.en.html) section). They are no longer proposed by default because 4D recommends using project-based architecture for new developments.
+この項目を使用するとバイナリーデータベースを作成することができるようになります([新しいデータベースを作成する](https://doc.4d.com/4Dv19/4D/19/Creating-a-new-database.300-5416694.ja.html) の章を参照)。 今後 4D は、新規の開発にはプロジェクトベースのアーキテクチャーを使用することを推奨するからです。
 
-## When creating a new project
+## 新規プロジェクト作成時
 
-### Use Log File
+### ログファイルを使用
 
-When this option is checked, a log file is automatically started and used when a new database is created. For more information, please refer to [Log file (.journal)](Backup/log.md).
+このオプションをチェックすると、新規データベース作成時にログファイルが自動的に開始され、使用されます。 詳細な情報については [ログファイル (.journal)](Backup/log.md) を参照ください。
 
-### Create package
+### パッケージを作成する
 
-When this option is checked, 4D databases are automatically created in a folder suffixed .4dbase.
+このオプションがチェックされていると、4Dデータベースは自動で .4dbase 拡張子が付いたフォルダーに作成されます。
 
-Thanks to this principle, under macOS the database folders appear as packages having specific properties. Under Windows, this has no particular impact.
+この原則のため、macOS ではデータベースフォルダーが専用プロパティ付きのパッケージとして表示されます。 Windows では、これは普通のフォルダーと変わりありません。
 
-### Include tokens in project source files
+### Project ソースファイルにトークンを含める
 
-When this option is checked, saved [method source files](../Project/architecture.md#sources) in new 4D projects will contain **tokens** for classic language and database objects (constants, commands, tables and fields). Tokens are additional characters such as `:C10` or `:5` inserted in the source code files, that allow renaming tables and fields and identifying elements whatever the 4D version (see [Using tokens in formulas](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html)).
+このオプションを有効にすると、新規の 4Dプロジェクトで保存された [メソッドのソースファイル](../Project/architecture.md#sources) には、クラシックランゲージおよびデータベースオブジェクト (定数、コマンド、テーブル、フィールド) 用の **トークン** が含まれます。 トークンとは、ソースコードファイルに挿入される `:C10` や `:5` などの追加文字で、テーブルやフィールドの名前を変更したり、4Dバージョンに関係なく要素を識別したりすることを可能にします ([フォーミュラ内でのトークンの使用](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.ja.html) を参照ください）。
 
-If you intend to use VCS or external code editors with your new projects, you might want to uncheck this option for a better readability of the code with these tools.
+バージョン管理システムや外部のコードエディターを新規プロジェクトで使用したい場合、これらのツールでのコードの可読性のために、このオプションのチェックを外すことができます。
 
-> This option can only be applied to projects (binary databases always include tokens).
+> *option* パラメーターに 1 を指定して [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/ja/page1190.html) を呼び出すと、 トークンを含むコードをいつでも取得することができます。
 
-> You can always get the code with tokens by calling [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/en/page1190.html) with 1 in the *option* parameter.
+> *option* パラメーターに 1 を指定して [`METHOD GET CODE`](https://doc.4d.com/4dv19R/help/command/ja/page1190.html) を呼び出すと、 トークンを含むコードをいつでも取得することができます。
 
-#### Excluding tokens in existing projects
+#### 既存プロジェクトからトークンを除外する
 
-You can configure your existing projects to save code **without tokens** by inserting the following key in the [`<applicationName>.4DProject`](../Project/architecture.md#applicationname4dproject-file) file using a text editor:
+テキストエディターを使い、[`<applicationName>.4DProject`](../Project/architecture.md#applicationname4dproject-ファイル) ファイルに以下のキーを挿入することで、既存のプロジェクトでも **トークンなし** でコードを保存することができます:
 
 ```
 "tokenizedText": false
 ```
 
-> This setting is only taken into account when methods are saved. Existing methods in your projects are left untouched, unless you resave them.
+> この設定は、メソッドが保存されるときにのみ考慮されます。 つまり、再保存しない限り、プロジェクト内の既存メソッドはそのまま残されます。
 
 
-### Create `.gitignore` file
+### `.gitignore` ファイルを作成する
 
-You might need or want git to ignore some files in your new projects.
+新しいプロジェクトでは、いくつかのファイルを git に無視させたいことがあるかもしれません。
 
-You can set this preference by checking the **Create .gitignore file**  option.
+この設定をおこなうには、**.gitignore ファイルを作成する** オプションをチェックします。
 
-When a project is created in 4D and that box is checked, 4D creates a `.gitignore` file at the same level as the `Project` folder (see [Architecture of a Project](Project/architecture.md#gitignore-file-optional)).
+このボックスがチェックされている場合、4D でプロジェクトを作成すると、4D は `.gitignore` ファイルを `Project` フォルダーと同階層に作成します ([プロジェクトのアーキテクチャー](Project/architecture.md#.gitignore-ファイル-任意) 参照)。
 
-You can define the default contents of the `.gitignore` file by clicking the pencil icon. This will open the .gitignore configuration file in your text editor. The contents of this file will be used to generate the `.gitignore` files in your new projects.
+鉛筆アイコンをクリックすると、`.gitignore` ファイルのデフォルトの内容を定義することができます。 これにより、.gitignore 設定ファイルがテキストエディターで開かれます。 このファイルの内容は、新規プロジェクトで `.gitignore` ファイルを生成する際に使用されます。
 
-The [official git documentation](https://git-scm.com/docs/gitignore) is a great resource to understand how `.gitignore` files work.
+`.gitignore` ファイルの仕組みを理解するには、[git の公式ドキュメント](https://git-scm.com/docs/gitignore) が参考になります。
 
-### Language of text comparison
+### テキスト比較の言語
 
-This parameter configures the default language used for character string processing and comparison in new databases. The language choice has a direct influence on the sorting and searching of text, as well as the character case, but it has no effect on the translation of texts or on the date, time or currency formats, which remain in the system language. By default (factory setting), 4D uses the current user language set in the system.
+このパラメーターは新規データベースにおいて、文字列の処理と比較で使用されるデフォルトの言語を設定します。 言語の選択は、テキストの並べ替えや検索、文字の大小などの比較ルール等に直接影響を与えます。 ただし、テキストの翻訳や日付・時刻・通貨のフォーマットはシステムの言語設定が使用され、この設定には影響されません。 初期設定では、4D はシステムに設定されているカレントのユーザー言語を使用します。
 
-A 4D database can thus operate in a language different from that of the system. When a database is opened, the 4D engine detects the language used by the data file and provides it to the language (interpreter or compiled mode). Text comparisons, regardless of whether they are carried out by the database engine or the language, are done in the same language.
+つまり、4Dデータベースはシステム言語とは異なる言語で動作することができます。 データベースが開かれるとき、4Dエンジンはデータファイルに使用されている言語を検知し、(インタープリターやコンパイルモードの) ランゲージに提供します。 データベースエンジン、あるいはランゲージのいずれがテキスト比較をおこなうかに関わらず、同じ言語が使用されます。
 
-When creating a new data file, 4D uses the language previously set in this menu. When opening a data file that is not in the same language as the structure, the data file language is used and the language code is copied into the structure.
-> You can modify this parameter for the open database using the Database Settings (see [Text comparison](../settings/database.md#text-comparison)).
+新規にデータファイルを作成する際、4D はこのメニューで設定されている言語を使用します。 ストラクチャーの言語と異なる言語のデータファイルを開くと、データファイルの言語が使用され、ストラクチャーに言語コードがコピーされます。
+> このオプションは、コマンドドキュメントへのアクセスに関してのみ考慮されます (クラス関数を除く)。
 
-## Documentation Location
+## ドキュメントの場所
 
-This area configures access to the 4D HTML documentation displayed in your current browser:
+このエリアでは、カレントブラウザーに表示される 4D HTMLドキュメントへのアクセスを設定します:
 
-*   When you hit the **F1** key while the cursor is inserted in a 4D class function or command name in the Code Editor;
-*   When you double-click on a 4D command in the **Commands Page** of the Explorer.
+*   コードエディターで、4Dクラス関数またはコマンド名にカーソルがあるときに、**F1**キーを押したとき
+*   エクスプローラーの **コマンドページ** 上の 4Dコマンドをダブルクリックしたとき
 
 
-### Documentation language
+### ドキュメント言語
 
-Language of the HTML documentation to display. You can select a documentation in a different language from the application language.
+表示する HTMLドキュメントの言語。 アプリケーションの言語とは別のドキュメント言語を選択することができます。
 
-### Look in the local folder first
+### 最初にローカルフォルダーを見る
 
-> This option is only taken into account for command documentation access (excluding class functions).
+> このオプションは、コマンドドキュメントへのアクセスに関してのみ考慮されます (クラス関数を除く)。
 
-Sets where 4D will look for documentation pages.
+4Dがドキュメントのページを探す場所を設定します。
 
-*   When checked (default), 4D first looks for the page in the local folder (see below). If it is found, 4D displays the page in the current browser. If not, 4D automatically looks for it in the on-line documentation Web site. This makes it possible to access the documentation even when you are offline.
-*   When not checked, 4D looks for the desired page directly in the on-line documentation Web site and displays it in the current browser. If it is not found, 4D displays an error message in the browser.
+*   チェックされている場合 (デフォルト)、4D はまずローカルフォルダーでページを探します (後述参照)。 ページが見つかれば、4D はそのページをカレントブラウザーで表示します。 ページが見つかれば、4D はそのページをカレントブラウザーで表示します。 この場合インターネットに接続されていない環境でも、ローカルのドキュメントが参照できます。
+*   チェックされていない場合、4D はオンラインドキュメントの Webサイトに直接アクセスし、カレントブラウザーでページを表示します。 ページが見つからない場合、4D はブラウザーにエラーメッセージを表示します。
 
-### Local folder
+### ローカルフォルダー
 
-> This option is only taken into account for command documentation access (excluding class functions).
+> このオプションは、コマンドドキュメントへのアクセスに関してのみ考慮されます (クラス関数を除く)。
 
-Indicates the location of the static HTML documentation. By default, this is the \Help\Command\language subfolder. You can view the location by clicking on the menu associated with the area. If this subfolder is not present, the location is shown in red.
+スタティックな HTMLドキュメントの場所を指定します。 デフォルトでこれは \Help\Command\language サブフォルダーに設定されています。 このエリアに割り当てられているメニューをクリックすると、場所を見ることができます。 このサブフォルダーが存在しない場合、場所は赤で表示されます。
 
-You can modify this location as desired, for example if you want to display the documentation in a language different from that of the application. The static HTML documentation can be located on another volume, on a web server, etc. To designate a different location, click on the **[...]** button next to the entry area and choose a documentation root folder (folder corresponding to the language: `fr`, `en`, `es`, `de` or `ja`). 
+この場所は必要に応じて変更することができます。 たとえば、アプリケーションの言語とは異なる言語でドキュメントを表示したい場合などです。 HTMLドキュメントは、異なるボリュームや Webサーバー上などに置くことも可能です。 他の場所を指定するには、メニューの隣の **[...]** ボタンをクリックし、ドキュメントのルートフォルダー (`fr`, `en`, `es`, `de` または `ja` などの言語に対応するフォルダー) を選択します。 
