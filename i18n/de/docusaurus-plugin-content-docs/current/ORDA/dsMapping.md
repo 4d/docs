@@ -104,7 +104,7 @@ For example, consider the following table in the 4D structure:
 
 ![](../assets/en/ORDA/companyTable.png)
 
-The `Company` table is automatically available as a dataclass in the `ds` datastore. You can write:
+The `Company` table is automatically available as a dataclass in the `ds` datastore. Sie schreiben:
 
 ```4d 
 var $compClass : cs.Company //declares a $compClass object variable of the Company class
@@ -135,7 +135,7 @@ OB GET PROPERTY NAMES(ds.Employee;$prop)
 
 ### Attribute
 
-Dataclass properties are attribute objects describing the underlying fields or relations. For example:
+Dataclass properties are attribute objects describing the underlying fields or relations. Beispiel:
 
 ```4d 
  $nameAttribute:=ds.Company.name //reference to class attribute
@@ -167,7 +167,7 @@ In addition, the following relation attributes will also be automatically availa
 
 *   in the Project dataclass: **theClient** attribute, of the "relatedEntity" kind; there is at most one Company for each Project (the client)
 *   in the Company dataclass: **companyProjects** attribute, of the "relatedEntities" kind; for each Company there is any number of related Projects.
-> The Manual or Automatic property of a database relation has no effect in ORDA.
+> > The Manual or Automatic property of a database relation has no effect in ORDA.
 
 All dataclass attributes are exposed as properties of the dataclass:
 
@@ -201,11 +201,11 @@ The entity properties are however enumerable:
 ```
 
 
-### Entity selection
+### Entity-Selection
 
 An entity selection is an object containing one or more reference(s) to entities belonging to the same dataclass. It is usually created as a result of a query or returned from a relation attribute. An entity selection can contain 0, 1 or X entities from the dataclass -- where X can represent the total number of entities contained in the dataclass.
 
-Example:
+Beispiel:
 
 ```4d
 var $e : cs.EmployeeSelection //declares a $e object variable of the EmployeeSelection class type
@@ -246,9 +246,9 @@ Unordered entity selections are created in the following cases:
 *   result of a standard `query()` on a selection (of any type) or a `query()` on a dataclass,
 *   result of the `newSelection()` method without option,
 *   result of any of the comparison methods, whatever the input selection types: `or()`, `and()`, `minus()`.
-> The following entity selections are always **ordered**:
+> > The following entity selections are always **ordered**: > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
 > 
-> * entity selections returned by 4D Server to a remote client
+> * > > * > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
 > * entity selections built upon remote datastores.
 
 Note that when an ordered entity selection becomes an unordered entity selection, any repeated entity references are removed.
