@@ -52,6 +52,7 @@ ASSERT($status.success)
 <!-- REF #4D.CryptoKey.new().Syntax -->
 **4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
 
+
 <!-- REF #4D.CryptoKey.new().Params -->
 | Parameter | Typ          |    | Beschreibung                                                           |
 | --------- | ------------ | -- | ---------------------------------------------------------------------- |
@@ -103,6 +104,7 @@ Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised
 <!-- REF #CryptoKey.decrypt().Syntax -->
 **.decrypt**( *message* : Text ; *options* : Object ) : Object<!-- END REF -->
 
+
 <!-- REF #CryptoKey.decrypt().Params -->
 | Parameter | Typ    |    | Beschreibung                                                                  |
 | --------- | ------ | -- | ----------------------------------------------------------------------------- |
@@ -149,6 +151,7 @@ In case the *message* couldn't be decrypted because it was not encrypted with th
 <!-- REF #CryptoKey.encrypt().Syntax -->
 **.encrypt**( *message* : Text ; *options* : Object ) : Text<!-- END REF -->
 
+
 <!-- REF #CryptoKey.encrypt().Params -->
 | Parameter | Typ    |    | Beschreibung                                                                                   |
 | --------- | ------ | -- | ---------------------------------------------------------------------------------------------- |
@@ -188,6 +191,7 @@ The returned value is an encrypted message.
 <!-- REF #CryptoKey.getPrivateKey().Syntax -->
 **.getPrivateKey()** : Text<!-- END REF -->
 
+
 <!-- REF #CryptoKey.getPrivateKey().Params -->
 | Parameter | Typ  |    | Beschreibung                                         |
 | --------- | ---- | -- | ---------------------------------------------------- |
@@ -214,6 +218,7 @@ The returned value is the private key.
 
 <!-- REF #CryptoKey.getPublicKey().Syntax -->
 **.getPublicKey( )** : Text<!-- END REF -->
+
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
 | Parameter | Typ  |    | Beschreibung                                        |
@@ -258,6 +263,7 @@ PEM definition of an encryption key to load. If the key is a private key, the RS
 
 <!-- REF #CryptoKey.sign().Syntax -->
 .**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
+
 
 <!-- REF #CryptoKey.sign().Params -->
 | Parameter | Typ    |    | Beschreibung                                                                                               |
@@ -331,6 +337,7 @@ Name of the key type - "RSA", "ECDSA", "PEM" <!-- END REF -->.<li>"RSA": an RSA 
 
 <!-- REF #CryptoKey.verify().Syntax -->
 **.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
+
 
 <!-- REF #CryptoKey.verify().Params -->
 | Parameter | Typ    |    | Beschreibung                                                                                      |
