@@ -15,9 +15,7 @@ title: Directory クラス
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.creationDate.Syntax -->
-
-**.creationDate** : Date<!-- END REF -->
+<!-- REF #directory.creationDate.Syntax -->**.creationDate** : Date<!-- END REF -->
 
 #### 詳細
 
@@ -38,9 +36,7 @@ The `.creationDate` property returns <!-- REF #directory.creationDate.Summary --
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.creationTime.Syntax -->
-
-**.creationTime** : Time<!-- END REF -->
+<!-- REF #directory.creationTime.Syntax -->**.creationTime** : Time<!-- END REF -->
 
 #### 詳細
 
@@ -62,9 +58,7 @@ The `.creationTime` property returns <!-- REF #directory.creationTime.Summary --
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.exists.Syntax -->
-
-**.exists** : Boolean<!-- END REF -->
+<!-- REF #directory.exists.Syntax -->**.exists** : Boolean<!-- END REF -->
 
 #### 詳細
 
@@ -86,9 +80,7 @@ The `.exists` property returns <!-- REF #directory.exists.Summary -->true if the
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.extension.Syntax -->
-
-**.extension** : Text<!-- END REF -->
+<!-- REF #directory.extension.Syntax -->**.extension** : Text<!-- END REF -->
 
 #### 詳細
 
@@ -110,9 +102,7 @@ The `.extension` property <!-- REF #directory.extension.Summary -->returns the e
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.fullName.Syntax -->
-
-**.fullName** : Text<!-- END REF -->
+<!-- REF #directory.fullName.Syntax -->**.fullName** : Text<!-- END REF -->
 
 #### 詳細
 
@@ -134,9 +124,7 @@ The `.fullName` property <!-- REF #directory.fullName.Summary -->returns the ful
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.hidden.Syntax -->
-
-**.hidden** : Boolean<!-- END REF -->
+<!-- REF #directory.hidden.Syntax -->**.hidden** : Boolean<!-- END REF -->
 
 #### 詳細
 
@@ -158,9 +146,7 @@ The `.hidden` property returns <!-- REF #directory.hidden.Summary --> true if th
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.isAlias.Syntax -->
-
-**.isAlias** : Boolean<!-- END REF -->
+<!-- REF #directory.isAlias.Syntax -->**.isAlias** : Boolean<!-- END REF -->
 
 #### 詳細
 
@@ -182,9 +168,7 @@ The `.isAlias` property returns <!-- REF #directory.isAlias.Summary -->always **
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.isFile.Syntax -->
-
-**.isFile** : Boolean<!-- END REF -->
+<!-- REF #directory.isFile.Syntax -->**.isFile** : Boolean<!-- END REF -->
 
 #### 詳細
 
@@ -206,9 +190,7 @@ The `.isFile` property returns <!-- REF #directory.isFile.Summary -->always **fa
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.isFolder.Syntax -->
-
-**.isFolder** : Boolean<!-- END REF -->
+<!-- REF #directory.isFolder.Syntax -->**.isFolder** : Boolean<!-- END REF -->
 
 #### 詳細
 
@@ -230,9 +212,7 @@ The `.isFolder` property returns <!-- REF #directory.isFolder.Summary -->always 
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.isPackage.Syntax -->
-
-**.isPackage** : Boolean<!-- END REF -->
+<!-- REF #directory.isPackage.Syntax -->**.isPackage** : Boolean<!-- END REF -->
 
 #### 詳細
 
@@ -256,9 +236,7 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.modificationDate.Syntax -->
-
-**.modificationDate** : Date<!-- END REF -->
+<!-- REF #directory.modificationDate.Syntax -->**.modificationDate** : Date<!-- END REF -->
 
 #### 詳細
 
@@ -280,9 +258,7 @@ The `.modificationDate` property returns <!-- REF #directory.modificationDate.Su
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.modificationTime.Syntax -->
-
-**.modificationTime** : Time<!-- END REF -->
+<!-- REF #directory.modificationTime.Syntax -->**.modificationTime** : Time<!-- END REF -->
 
 #### 詳細
 
@@ -304,9 +280,7 @@ The `.modificationTime` property returns <!-- REF #directory.modificationTime.Su
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.name.Syntax -->
-
-**.name** : Text<!-- END REF -->
+<!-- REF #directory.name.Syntax -->**.name** : Text<!-- END REF -->
 
 #### 詳細
 
@@ -328,9 +302,7 @@ The `.name` property returns <!-- REF #directory.name.Summary --> the name of th
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.original.Syntax -->
-
-**.original** : 4D.Folder<!-- END REF -->
+<!-- REF #directory.original.Syntax -->**.original** : 4D.Folder<!-- END REF -->
 
 #### 詳細
 
@@ -353,9 +325,7 @@ The `.original` property returns <!-- REF #directory.original.Summary -->the sam
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.parent.Syntax -->
-
-**.parent** : 4D.Folder<!-- END REF -->
+<!-- REF #directory.parent.Syntax -->**.parent** : 4D.Folder<!-- END REF -->
 
 #### 詳細
 
@@ -379,9 +349,7 @@ The `.parent` property returns <!-- REF #directory.parent.Summary -->the parent 
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.path.Syntax -->
-
-**.path** : Text<!-- END REF -->
+<!-- REF #directory.path.Syntax -->**.path** : Text<!-- END REF -->
 
 #### 詳細
 
@@ -403,9 +371,7 @@ The `.path` property returns <!-- REF #directory.path.Summary -->the POSIX path 
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.platformPath.Syntax -->
-
-**.platformPath** : Text<!-- END REF -->
+<!-- REF #directory.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->
 
 #### 詳細
 
@@ -427,9 +393,8 @@ The `.platformPath` property returns <!-- REF #directory.platformPath.Summary --
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.copyTo().Syntax -->
+<!-- REF #directory.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D Folder<!-- END REF -->
 
-**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D Folder<!-- END REF -->
 
 <!-- REF #directory.copyTo().Params -->
 | 引数                | タイプ       |    | 詳細                                     |
@@ -483,9 +448,8 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.file().Syntax -->
+<!-- REF #directory.file().Syntax -->**.file**( *path* : Text ) : 4D.File<!-- END REF -->
 
-**.file**( *path* : Text ) : 4D.File<!-- END REF -->
 
 <!-- REF #directory.file().Params -->
 | 引数     | タイプ     |    | 詳細                                                         |
@@ -526,9 +490,8 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.files().Syntax -->
+<!-- REF #directory.files().Syntax -->**.files**( { *options* : Integer } ) : Collection<!-- END REF -->
 
-**.files**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.files().Params -->
 | 引数      | タイプ    |    | 詳細                                            |
@@ -590,9 +553,8 @@ The `.files()` function returns <!-- REF #directory.files().Summary -->a collect
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.folder().Syntax -->
+<!-- REF #directory.folder().Syntax -->**.folder**( *path* : Text ) : 4D.Folder<!-- END REF -->
 
-**.folder**( *path* : Text ) : 4D.Folder<!-- END REF -->
 
 <!-- REF #directory.folder().Params -->
 | 引数     | タイプ       |    | 詳細                                                                       |
@@ -633,9 +595,8 @@ The `.folder()` function <!-- REF #directory.folder().Summary -->creates a `Fold
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.folders().Syntax -->
+<!-- REF #directory.folders().Syntax -->**.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
-**.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.folders().Params -->
 | 引数      | タイプ    |    | 詳細                                             |
@@ -683,9 +644,8 @@ The `.folders()` function <!-- REF #directory.folders().Summary -->returns a col
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.getIcon().Syntax -->
+<!-- REF #directory.getIcon().Syntax -->**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
-**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #directory.getIcon().Params -->
 | 引数     | タイプ     |    | 詳細                              |
