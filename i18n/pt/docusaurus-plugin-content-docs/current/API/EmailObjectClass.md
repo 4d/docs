@@ -104,9 +104,7 @@ As propriedades [`textBody`](#textbody) e [`htmlBody`](#htmlbody) são usadas ap
 
 ## .attachments
 
-<!-- REF #EmailObjectClass.attachments.Syntax -->
-
-**.attachments** : Collection<!-- END REF -->
+<!-- REF #EmailObjectClass.attachments.Syntax -->**.attachments** : Collection<!-- END REF -->
 
 #### Descrição
 
@@ -116,9 +114,7 @@ Objetos de anexo são definidos através do comando [`MAIL New attachment`](Mail
 
 ## .bcc
 
-<!-- REF #EmailObjectClass.bcc.Syntax -->
-
-**.bcc** : Text<br/>**.bcc** : Object<br/>**.bcc** : Collection<!-- END REF -->
+<!-- REF #EmailObjectClass.bcc.Syntax -->**.bcc** : Text<br/>**.bcc** : Object<br/>**.bcc** : Collection<!-- END REF -->
 
 #### Descrição
 
@@ -126,9 +122,7 @@ The `.bcc` property contains the <!-- REF #EmailObjectClass.bcc.Summary -->Blind
 
 ## .bodyStructure
 
-<!-- REF #EmailObjectClass.bodyStructure.Syntax -->
-
-**.bodyStructure** : Object<!-- END REF -->
+<!-- REF #EmailObjectClass.bodyStructure.Syntax -->**.bodyStructure** : Object<!-- END REF -->
 
 #### Descrição
 
@@ -150,9 +144,7 @@ O objeto `.bodyStructure` contém as seguintes propriedades:
 
 ## .bodyValues
 
-<!-- REF #EmailObjectClass.bodyValues.Syntax -->
-
-**.bodyValues** : Object<!-- END REF -->
+<!-- REF #EmailObjectClass.bodyValues.Syntax -->**.bodyValues** : Object<!-- END REF -->
 
 #### Descrição
 
@@ -167,9 +159,7 @@ O objeto `.bodyValues` contém as seguintes propriedades:
 
 ## .cc
 
-<!-- REF #EmailObjectClass.cc.Syntax -->
-
-**.cc** : Text<br/>**.cc** : Object<br/>**.cc** : Collection<!-- END REF -->
+<!-- REF #EmailObjectClass.cc.Syntax -->**.cc** : Text<br/>**.cc** : Object<br/>**.cc** : Collection<!-- END REF -->
 
 #### Descrição
 
@@ -177,9 +167,7 @@ The `.cc` property contains the <!-- REF #EmailObjectClass.cc.Summary -->Carbon 
 
 ## .comments
 
-<!-- REF #EmailObjectClass.comments.Syntax -->
-
-**.comments** : Text<!-- END REF -->
+<!-- REF #EmailObjectClass.comments.Syntax -->**.comments** : Text<!-- END REF -->
 
 #### Descrição
 
@@ -191,9 +179,7 @@ Para requisitos de formatação específicos, consulte o [RFC#5322](https://tool
 
 ## .from
 
-<!-- REF #EmailObjectClass.from.Syntax -->
-
-**.from** : Text<br/>**.from** : Object<br/>**.from** : Collection<!-- END REF -->
+<!-- REF #EmailObjectClass.from.Syntax -->**.from** : Text<br/>**.from** : Object<br/>**.from** : Collection<!-- END REF -->
 
 #### Descrição
 
@@ -208,9 +194,7 @@ Para uma melhor capacidade de entrega, é recomendado usar o mesmo endereço de 
 
 ## .headers
 
-<!-- REF #EmailObjectClass.headers.Syntax -->
-
-**.headers** : Collection<!-- END REF -->
+<!-- REF #EmailObjectClass.headers.Syntax -->**.headers** : Collection<!-- END REF -->
 
 #### Descrição
 
@@ -227,9 +211,7 @@ Cada objeto da coleção de cabeçalhos pode conter as propriedades abaixo:
 
 ## .htmlBody
 
-<!-- REF #EmailObjectClass.htmlBody.Syntax -->
-
-**.htmlBody** : Text<!-- END REF -->
+<!-- REF #EmailObjectClass.htmlBody.Syntax -->**.htmlBody** : Text<!-- END REF -->
 
 #### Descrição
 
@@ -237,9 +219,7 @@ The `.htmlBody` property contains the <!-- REF #EmailObjectClass.htmlBody.Summar
 
 ## .id
 
-<!-- REF #EmailObjectClass.id.Syntax -->
-
-**.id** : Text<!-- END REF -->
+<!-- REF #EmailObjectClass.id.Syntax -->**.id** : Text<!-- END REF -->
 
 #### Descrição
 
@@ -249,9 +229,7 @@ The `.id` property contains the <!-- REF #EmailObjectClass.id.Summary -->unique 
 
 ## .inReplyTo
 
-<!-- REF #EmailObjectClass.inReplyTo.Syntax -->
-
-**.inReplyTo** : Text<!-- END REF -->
+<!-- REF #EmailObjectClass.inReplyTo.Syntax -->**.inReplyTo** : Text<!-- END REF -->
 
 #### Descrição
 
@@ -261,9 +239,7 @@ Para requisitos de formatação específicos, consulte o [RFC#5322](https://tool
 
 ## .keywords
 
-<!-- REF #EmailObjectClass.keywords.Syntax -->
-
-**.keywords** : Object<!-- END REF -->
+<!-- REF #EmailObjectClass.keywords.Syntax -->**.keywords** : Object<!-- END REF -->
 
 #### Descrição
 
@@ -291,9 +267,7 @@ Palavra-chave reservada.
 
 ## .messageId
 
-<!-- REF #EmailObjectClass.messageId.Syntax -->
-
-**.messageId** : Text<!-- END REF -->
+<!-- REF #EmailObjectClass.messageId.Syntax -->**.messageId** : Text<!-- END REF -->
 
 #### Descrição
 
@@ -303,9 +277,7 @@ Este cabeçalho geralmente é "lettersOrNumbers@domainname", por exemplo, "abcde
 
 ## .receivedAt
 
-<!-- REF #EmailObjectClass.receivedAt.Syntax -->
-
-**.receivedAt** : Texto<!-- END REF -->
+<!-- REF #EmailObjectClass.receivedAt.Syntax -->**.receivedAt** : Texto<!-- END REF -->
 
 #### Descrição
 
@@ -315,9 +287,7 @@ The `.receivedAt` property contains the <!-- REF #EmailObjectClass.receivedAt.Su
 
 ## .references
 
-<!-- REF #EmailObjectClass.references.Syntax -->
-
-**.references** : Collection<!-- END REF -->
+<!-- REF #EmailObjectClass.references.Syntax -->**.references** : Collection<!-- END REF -->
 
 #### Descrição
 
@@ -327,9 +297,7 @@ Para requisitos de formatação específicos, consulte o [RFC#5322](https://tool
 
 ## .replyTo
 
-<!-- REF #EmailObjectClass.replyTo.Syntax -->
-
-**.replyTo** : Text<br/>**.replyTo** : Object<br/>**.replyTo** : Collection<!-- END REF -->
+<!-- REF #EmailObjectClass.replyTo.Syntax -->**.replyTo** : Text<br/>**.replyTo** : Object<br/>**.replyTo** : Collection<!-- END REF -->
 
 #### Descrição
 
@@ -337,9 +305,7 @@ The `.replyTo` property contains the <!-- REF #EmailObjectClass.replyTo.Summary 
 
 ## .sendAt
 
-<!-- REF #EmailObjectClass.sendAt.Syntax -->
-
-**.sendAt** : Text<!-- END REF -->
+<!-- REF #EmailObjectClass.sendAt.Syntax -->**.sendAt** : Text<!-- END REF -->
 
 #### Descrição
 
@@ -347,9 +313,7 @@ The `.sendAt` property contains the <!-- REF #EmailObjectClass.sendAt.Summary --
 
 ## .sender
 
-<!-- REF #EmailObjectClass.sender.Syntax -->
-
-**.sender** : Text<br/>**.sender** : Object<br/>**.sender** : Collection<!-- END REF -->
+<!-- REF #EmailObjectClass.sender.Syntax -->**.sender** : Text<br/>**.sender** : Object<br/>**.sender** : Collection<!-- END REF -->
 
 #### Descrição
 
@@ -364,9 +328,7 @@ Para uma melhor capacidade de entrega, é recomendado usar o mesmo endereço de 
 
 ## .size
 
-<!-- REF #EmailObjectClass.size.Syntax -->
-
-**.size** : Integer<!-- END REF -->
+<!-- REF #EmailObjectClass.size.Syntax -->**.size** : Integer<!-- END REF -->
 
 #### Descrição
 
@@ -376,9 +338,7 @@ The `.size` property contains the <!-- REF #EmailObjectClass.size.Summary -->siz
 
 ## .subject
 
-<!-- REF #EmailObjectClass.subject.Syntax -->
-
-**.subject** : Text<!-- END REF -->
+<!-- REF #EmailObjectClass.subject.Syntax -->**.subject** : Text<!-- END REF -->
 
 #### Descrição
 
@@ -386,9 +346,7 @@ The `.subject` property contains the <!-- REF #EmailObjectClass.subject.Summary 
 
 ## .textBody
 
-<!-- REF #EmailObjectClass.textBody.Syntax -->
-
-**.textBody** : Text<!-- END REF -->
+<!-- REF #EmailObjectClass.textBody.Syntax -->**.textBody** : Text<!-- END REF -->
 
 #### Descrição
 
@@ -396,9 +354,7 @@ The `.textBody` property contains the <!-- REF #EmailObjectClass.textBody.Summar
 
 ## .to
 
-<!-- REF #EmailObjectClass.to.Syntax -->
-
-**.to** : Text<br/>**.to** : Object<br/>**.to** : Collection<!-- END REF -->
+<!-- REF #EmailObjectClass.to.Syntax -->**.to** : Text<br/>**.to** : Object<br/>**.to** : Collection<!-- END REF -->
 
 #### Descrição
 
@@ -414,9 +370,8 @@ The `MAIL Convert from MIME` command <!-- REF #EmailObjectClass.to.Summary -->co
 
 </details>
 
-<!-- REF #_command_.MAIL_Convert_from_MIME.Syntax -->
+<!-- REF #_command_.MAIL_Convert_from_MIME.Syntax -->**Converter MIME**( *mime* : Blob ) : Objeto<br/>**MAIL Converter de MIME**( *mime* : Texto : Object<!-- END REF -->
 
-**Converter MIME**( *mime* : Blob ) : Objeto<br/>**MAIL Converter de MIME**( *mime* : Texto : Object<!-- END REF -->
 
 <!-- REF #_command_.MAIL_Convert_from_MIME.Params -->
 | Parâmetros | Tipo       |    | Descrição                               |
@@ -500,9 +455,8 @@ $status:=$transporter.send($email)
 
 </details>
 
-<!-- REF #_command_.MAIL_Convert_to_MIME.Syntax -->
+<!-- REF #_command_.MAIL_Convert_to_MIME.Syntax -->**MAIL Convert to MIME**( *mail* : Object { ; *options* : Object } ) : Text<!-- END REF -->
 
-**MAIL Convert to MIME**( *mail* : Object { ; *options* : Object } ) : Text<!-- END REF -->
 
 <!-- REF #_command_.MAIL_Convert_to_MIME.Params -->
 | Parâmetros | Tipo   |    | Descrição                                                  |
