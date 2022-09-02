@@ -23,9 +23,8 @@ A classe Blob permite-lhe criar e manipular [objectos blob](../Concepts/dt_blob.
 
 </details>
 
-<!-- REF #4D.Blob.new().Syntax -->
+<!-- REF #4D.Blob.new().Syntax -->**4D.Blob.new()** : 4D.Blob<br/>**4D.Blob.new**( *blobScal* : Blob ) : 4D.Blob<br/>**4D.Blob.new**( *blobObj* : 4D.Blob ) : 4D.Blob<!-- END REF -->
 
-**4D.Blob.new()** : 4D.Blob<br/>**4D.Blob.new**( *blobScal* : Blob ) : 4D.Blob<br/>**4D.Blob.new**( *blobObj* : 4D.Blob ) : 4D.Blob<!-- END REF -->
 
 <!-- REF #4D.Blob.new().Params -->
 
@@ -44,9 +43,7 @@ Se o parâmetro `blob` for omitido, o método devolve um 4D.Blob vazio.
 
 ## .size
 
-<!-- REF #Blob.size.Syntax -->
-
-**.size** : Real<!-- END REF -->
+<!-- REF #Blob.size.Syntax -->**.size** : Real<!-- END REF -->
 
 #### Descrição
 A propriedade `.size` <!-- REF #Blob.size.Summary -->devolve o tamanho de um `4D.Blob`, expresso em bytes.<!-- END REF -->
@@ -61,9 +58,8 @@ A propriedade `.size` <!-- REF #Blob.size.Summary -->devolve o tamanho de um `4D
 
 </details>
 
-<!-- REF #Blob.slice().Syntax -->
+<!-- REF #Blob.slice().Syntax -->**.slice()** : 4D. Blob<br/>**.slice**( *start* : Real ) : 4D. Blob<br/>**.slice**( *start* : Real; *end* : Real ) : 4D. Blob<!-- END REF -->
 
-**.slice()** : 4D. Blob<br/>**.slice**( *start* : Real ) : 4D. Blob<br/>**.slice**( *start* : Real; *end* : Real ) : 4D. Blob<!-- END REF -->
 
 <!-- REF #Blob.slice().Params -->
 | Parâmetros | Tipo    |    | Descrição                                                       |
