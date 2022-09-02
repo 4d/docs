@@ -18,7 +18,7 @@
     "build_syntax_translated": {
         "path":"./i18n/%language%/docusaurus-plugin-content-docs/current/API/",
         "languages":["de", "es", "fr", "ja", "pt"],
-        "config":"../preprocessing.conf"
+        "config":"../../../../../docs/preprocessing.conf"
     },
     "build_syntax_viewPro": {
         "path":"./docs/ViewPro/",
