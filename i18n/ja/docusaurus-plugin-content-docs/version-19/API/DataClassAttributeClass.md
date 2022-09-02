@@ -44,9 +44,7 @@ title: DataClassAttribute
 
 </details>
 
-<!-- REF DataClassAttributeClass.autoFilled.Syntax -->
-
-**.autoFilled** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.autoFilled.Syntax -->**.autoFilled** : Boolean<!-- END REF -->
 
 #### 詳細
 
@@ -71,9 +69,7 @@ The `.autoFilled` property <!-- REF DataClassAttributeClass.autoFilled.Summary -
 
 </details>
 
-<!-- REF DataClassAttributeClass.fieldNumber.Syntax -->
-
-**.fieldNumber** : Integer<!-- END REF -->
+<!-- REF DataClassAttributeClass.fieldNumber.Syntax -->**.fieldNumber** : Integer<!-- END REF -->
 
 #### 詳細
 
@@ -95,9 +91,7 @@ The `.fieldNumber` property <!-- REF DataClassAttributeClass.fieldNumber.Summary
 
 </details>
 
-<!-- REF DataClassAttributeClass.fieldType.Syntax -->
-
-**.fieldType** : Integer<!-- END REF -->
+<!-- REF DataClassAttributeClass.fieldType.Syntax -->**.fieldType** : Integer<!-- END REF -->
 
 #### 詳細
 
@@ -124,9 +118,7 @@ The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->
 
 </details>
 
-<!-- REF DataClassAttributeClass.indexed.Syntax -->
-
-**.indexed** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.indexed.Syntax -->**.indexed** : Boolean<!-- END REF -->
 
 #### 詳細
 
@@ -148,9 +140,7 @@ The `.indexed` property <!-- REF DataClassAttributeClass.indexed.Summary -->cont
 
 </details>
 
-<!-- REF DataClassAttributeClass.inverseName.Syntax -->
-
-**.inverseName** : Text<!-- END REF -->
+<!-- REF DataClassAttributeClass.inverseName.Syntax -->**.inverseName** : Text<!-- END REF -->
 
 #### 詳細
 
@@ -172,9 +162,7 @@ The `.inverseName` property <!-- REF DataClassAttributeClass.inverseName.Summary
 
 </details>
 
-<!-- REF DataClassAttributeClass.keywordIndexed.Syntax -->
-
-**.keywordIndexed** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.keywordIndexed.Syntax -->**.keywordIndexed** : Boolean<!-- END REF -->
 
 #### 詳細
 
@@ -196,9 +184,7 @@ The `.keywordIndexed` property <!-- REF DataClassAttributeClass.keywordIndexed.S
 
 </details>
 
-<!-- REF DataClassAttributeClass.kind.Syntax -->
-
-**.kind** : Text<!-- END REF -->
+<!-- REF DataClassAttributeClass.kind.Syntax -->**.kind** : Text<!-- END REF -->
 
 #### 詳細
 
@@ -234,9 +220,7 @@ The `.kind` property <!-- REF DataClassAttributeClass.kind.Summary -->returns th
 
 </details>
 
-<!-- REF DataClassAttributeClass.mandatory.Syntax -->
-
-**.mandatory** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.mandatory.Syntax -->**.mandatory** : Boolean<!-- END REF -->
 
 #### 詳細
 
@@ -259,9 +243,7 @@ The `.mandatory` property <!-- REF DataClassAttributeClass.mandatory.Summary -->
 
 </details>
 
-<!-- REF DataClassAttributeClass.name.Syntax -->
-
-**.name** : Text<!-- END REF -->
+<!-- REF DataClassAttributeClass.name.Syntax -->**.name** : Text<!-- END REF -->
 
 #### 詳細
 
@@ -287,9 +269,7 @@ The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->The `.name
 
 </details>
 
-<!-- REF DataClassAttributeClass.relatedDataClass.Syntax -->
-
-**.relatedDataClass** : Text<!-- END REF -->
+<!-- REF DataClassAttributeClass.relatedDataClass.Syntax -->**.relatedDataClass** : Text<!-- END REF -->
 
 #### 詳細
 > このプロパティは、[`.kind`](#kind) プロパティ値が "relatedEntity" または "relatedEntities" である属性においてのみ利用可能です。
@@ -321,9 +301,7 @@ The `.relatedDataClass` property <!-- REF DataClassAttributeClass.relatedDataCla
 
 </details>
 
-<!-- REF DataClassAttributeClass.type.Syntax -->
-
-**.type** : Text<!-- END REF -->
+<!-- REF DataClassAttributeClass.type.Syntax -->**.type** : Text<!-- END REF -->
 
 #### 詳細
 
@@ -352,9 +330,7 @@ The `.type` property <!-- REF DataClassAttributeClass.type.Summary -->contains t
 
 </details>
 
-<!-- REF DataClassAttributeClass.unique.Syntax -->
-
-**.unique** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.unique.Syntax -->**.unique** : Boolean<!-- END REF -->
 
 #### 詳細
 
