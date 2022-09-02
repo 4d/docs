@@ -11,9 +11,8 @@ title: メソッド一覧
 
 ### VP ADD FORMULA NAME
 
-<!-- REF #_method_.VP ADD FORMULA NAME.Syntax -->
+<!-- REF #_method_.VP ADD FORMULA NAME.Syntax -->**VP ADD FORMULA NAME** ( *vpAreaName* : Text ; *vpFormula* : Text ; *name* : Text { ; *options* : Object } )<!-- END REF -->
 
-**VP ADD FORMULA NAME** ( *vpAreaName* : Text ; *vpFormula* : Text ; *name* : Text { ; *options* : Object } )<!-- END REF -->
 
 <!-- REF #_method_.VP ADD FORMULA NAME.Params -->
 
@@ -59,6 +58,7 @@ VP ADD FORMULA NAME("ViewProArea";"SUM($A$1:$A$10)";"Total2")
 <!-- REF #_method_.VP ADD RANGE NAME.Syntax -->
 **VP ADD RANGE NAME** ( *rangeObj* : Object ; *name* : Text { ; *options* : Object } )<!-- END REF -->
 
+
 <!-- REF #_method_.VP ADD RANGE NAME.Params -->
 
 | 引数       | タイプ    |    | 詳細                                        |
@@ -103,6 +103,7 @@ VP ADD RANGE NAME($range;"Total1")
 <!-- REF #_method_.VP ADD SELECTION.Syntax -->
 **VP ADD SELECTION** ( *rangeObj* : Object )<!-- END REF -->
 
+
 <!-- REF #_method_.VP ADD SELECTION.Params -->
 
 | 引数       | タイプ  |    | 詳細                                       |
@@ -143,6 +144,7 @@ VP ADD SELECTION($currentSelection)
 
 <!-- REF #_method_.VP ADD SHEET.Syntax -->
 **VP ADD SHEET** ( *vpAreaName* : Text )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *index* : Integer )<br/>**VP ADD SHEET** ( *vpAreaName* : Text ; *sheet* : Integer ; *name* : Text )<!-- END REF -->
+
 
 <!-- REF #_method_.VP ADD SHEET.Params -->
 
@@ -187,6 +189,7 @@ VP ADD SHEET("ViewProArea";2;"March")
 
 <!-- REF #_method_.VP ADD SPAN.Syntax -->
 **VP ADD SPAN** ( *rangeObj* : Object )<!-- END REF -->
+
 
 <!-- REF #_method_.VP ADD SPAN.Params -->
 
@@ -234,6 +237,7 @@ VP ADD SHEET("ViewProArea";2;"March")
 
 <!-- REF #_method_.VP ADD STYLESHEET.Syntax -->
 **VP ADD STYLESHEET** ( *vpAreaName* : Text ; *styleName* : Text ; *styleObj* : Object { ; *sheet* : Integer } )<!-- END REF -->
+
 
 <!-- REF #_method_.VP ADD STYLESHEET.Params -->
 
@@ -310,6 +314,7 @@ VP SET CELL STYLE(VP Cells("ViewProArea";1;1;2;2);New object("name";"GreenDashDo
 <!-- REF #_method_.VP ALL.Syntax -->
 **VP All** ( *vpAreaName* : Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
 
+
 <!-- REF #_method_.VP ALL.Params -->
 
 | 引数         | タイプ    |    | 詳細                                        |
@@ -346,6 +351,7 @@ $all:=VP All("ViewProArea") // カレントシートの全セル
 
 <!-- REF #_method_.VP CELL.Syntax -->
 **VP Cell** ( *vpAreaName* ; *column* : Integer ; *row* : Integer ; Text { ; *sheet* : Integer } )  : Object<!-- END REF -->
+
 
 <!-- REF #_method_.VP Cell.Params -->
 
@@ -454,6 +460,7 @@ $cells:=VP Cells("ViewProArea";2;4;2;3) // C5 から D7
 <!-- REF #_method_.VP Column.Syntax -->
 **VP Column** ( *vpAreaName* : Text ; *column*: Integer ; *columnCount* : Integer { ; *sheet* : Integer } ) : Object<!-- END REF -->
 
+
 <!-- REF #_method_.VP Column.Params -->
 
 | 引数          | タイプ    |    | 詳細                                        |
@@ -499,6 +506,7 @@ The `VP Column` command <!-- REF #_method_.VP Column.Summary -->returns a new ra
 <!-- REF #_method_.VP COLUMN AUTOFIT.Syntax -->
 **VP COLUMN AUTOFIT** ( *rangeObj* : Object )<!-- END REF -->
 
+
 <!-- REF #_method_.VP COLUMN AUTOFIT.Params -->
 
 | 引数       | タイプ    |    | 詳細                                   |
@@ -538,6 +546,7 @@ The `VP COLUMN AUTOFIT` command <!-- REF #_method_.VP COLUMN AUTOFIT.Summary -->
 
 <!-- REF #_method_.VP Combine Ranges.Syntax -->
 **VP Combine Ranges** ( *rangeObj* : Object ; *otherRangeObj* : Object {;...*otherRangeObjN* : Object }  ) : Object<!-- END REF -->
+
 
 <!-- REF #_method_.VP Combine Ranges.Params -->
 
@@ -579,6 +588,7 @@ The `VP Combine Ranges` command <!-- REF #_method_.VP Combine Ranges.Summary -->
 <!-- REF #_method_.VP Convert from 4D View.Syntax -->
 **VP Convert from 4D View** ( *4DViewDocument* : Blob ) : Object<!-- END REF -->
 
+
 <!-- REF #_method_.VP Convert from 4D View.Params -->
 
 | 引数             | タイプ    |    | 詳細                 |
@@ -607,6 +617,7 @@ $vpObj:=VP Convert from 4D View($pvblob)
 
 <!-- REF #_method_.VP Convert to picture.Syntax -->
 **VP Convert to picture** ( *vpObject* : Object {; *rangeObj* : Object} ) : Picture<!-- END REF -->
+
 
 <!-- REF #_method_.VP Convert to picture.Params -->
 
@@ -675,6 +686,7 @@ $vPict:=VP Convert to picture($vpAreaObj) // エリア全体を書き出しま�
 <!-- REF #_method_.VP Copy to object.Syntax -->
 **VP Copy to object** ( *rangeObj* : Object {; *options* : Object} ) : Object<!-- END REF -->
 
+
 <!-- REF #_method_.VP Copy to object.Params -->
 
 | 引数       | タイプ    |    | 詳細                                                              |
@@ -736,6 +748,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 <!-- REF #_method_.VP CREATE TABLE.Syntax -->
 **VP CREATE TABLE** ( *rangeObj* : Object ; *tableName* : Text {; *source* : Text} {; *options* : Object} )<!-- END REF -->
+
 
 <!-- REF #_method_.VP CREATE TABLE.Params -->
 
@@ -852,6 +865,7 @@ VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; $options.tableColumns.length; 1); 
 <!-- REF #_method_.VP DELETE COLUMNS.Syntax -->
 **VP DELETE COLUMNS** ( *rangeObj* : Object )<!-- END REF -->
 
+
 <!-- REF #_method_.VP DELETE COLUMNS.Params -->
 
 | 引数       | タイプ    |    | 詳細                                   |
@@ -890,6 +904,7 @@ VP DELETE COLUMNS(VP Get selection("ViewProArea"))
 
 <!-- REF #_method_.VP DELETE ROWS.Syntax -->
 **VP DELETE ROWS** ( *rangeObj* : Object )<!-- END REF -->
+
 
 <!-- REF #_method_.VP DELETE ROWS.Params -->
 
@@ -931,6 +946,7 @@ The `VP DELETE ROWS` command <!-- REF #_method_.VP DELETE ROWS.Summary -->remove
 
 <!-- REF #_method_.VP EXPORT DOCUMENT.Syntax -->
 **VP EXPORT DOCUMENT** ( *vpAreaName* : Text ; *filePath* : Text {; *paramObj* : Object} )<!-- END REF -->
+
 
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
 
@@ -1088,6 +1104,7 @@ VP EXPORT DOCUMENT("ViewProArea";"c:\\tmp\\data.txt";New object("format";vk csv 
 <!-- REF #_method_.VP Export to object.Syntax -->
 **VP Export to object** ( *vpAreaName* : Text {; *options* : Object} ) : Object<!-- END REF -->
 
+
 <!-- REF #_method_.VP Export to object.Params -->
 
 | 引数         | タイプ    |    | 詳細                                            |
@@ -1144,6 +1161,7 @@ $vpObj:=VP Export to object("vpArea";New object("includeFormatInfo";False))
 
 <!-- REF #_method_.VP Find.Syntax -->
 **VP Find** (  *rangeObj* : Object ; *searchValue* : Text ) : Object<br/>**VP Find** (  *rangeObj* : Object ; *searchValue* : Text ; *searchCondition* : Object } ) : Object<br/>**VP Find** (  *rangeObj* : Object ; *searchValue* : Text ; *searchCondition* : Object ; *replaceValue* : Text ) : Object<!-- END REF -->
+
 
 <!-- REF #_method_.VP Find.Params -->
 
@@ -1224,6 +1242,7 @@ End if
 <!-- REF #_method_.VP FLUSH COMMANDS.Syntax -->
 **VP FLUSH COMMANDS** (  *vpAreaName* : Text )<!-- END REF -->
 
+
 <!-- REF #_method_.VP FLUSH COMMANDS.Params -->
 
 | 引数         | タイプ  |    | 詳細                                                           |
@@ -1257,6 +1276,7 @@ The `VP FLUSH COMMANDS` command <!-- REF #_method_.VP FLUSH COMMANDS.Summary -->
 
 <!-- REF #_method_.VP Font to object.Syntax -->
 **VP Font to object** (  *font* : Text ) : Object<!-- END REF -->
+
 
 <!-- REF #_method_.VP Font to object.Params -->
 
@@ -1306,6 +1326,7 @@ size:16pt
 
 <!-- REF #_method_.VP Get active cell.Syntax -->
 **VP Get active cell** (  *vpAreaName* : Text { ; *sheet* : Integer } ) : Object<!-- END REF -->
+
 
 <!-- REF #_method_.VP Get active cell.Params -->
 
@@ -1357,6 +1378,7 @@ $activeCell:=VP Get active cell("myVPArea")
 <!-- REF #_method_.VP Get binding path.Syntax -->
 **VP Get binding path** ( *rangeObj* : Object ) : Text<!-- END REF -->
 
+
 <!-- REF #_method_.VP Get binding path.Params -->
 
 | 引数       | タイプ    |    | 詳細                                                                  |
@@ -1401,6 +1423,7 @@ $myAttribute:=VP Get binding path(VP Cell("ViewProArea"; 1; 0)) // "lastName"
 
 <!-- REF #_method_.VP Get cell style.Syntax -->
 **VP Get cell style** (  *rangeObj* : Object ) : Object<!-- END REF -->
+
 
 <!-- REF #_method_.VP Get cell style.Params -->
 
@@ -1460,6 +1483,7 @@ $cellStyle:=VP Get cell style(VP Get selection("myDoc"))
 <!-- REF #_method_.VP Get column attributes.Syntax -->
 **VP Get column attributes** (  *rangeObj* : Object ) : Collection<!-- END REF -->
 
+
 <!-- REF #_method_.VP Get column attributes.Params -->
 
 | 引数       | タイプ    |    | 詳細                                         |
@@ -1502,6 +1526,7 @@ $attr:=VP Get column attributes($range)
 <!-- REF #_method_.VP Get column count.Syntax -->
 **VP Get column count** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Integer<!-- END REF -->
 
+
 <!-- REF #_method_.VP Get column count.Params -->
 
 | 引数         | タイプ  |    | 詳細                                     |
@@ -1537,6 +1562,7 @@ $colCount:=VP Get column count("ViewProarea")
 
 <!-- REF #_method_.VP Get current sheet.Syntax -->
 **VP Get current sheet** ( *vpAreaName* : Text )<!-- END REF -->
+
 
 <!-- REF #_method_.VP Get current sheet.Params -->
 
@@ -1584,6 +1610,7 @@ $index:=VP Get current sheet("ViewProArea")
 <!-- REF #_method_.VP Get data context.Syntax -->
 **VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Object<br/>**VP Get data context** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Collection<!-- END REF -->
 
+
 <!-- REF #_method_.VP Get data context.Params -->
 
 | 引数         | タイプ                      |    | 詳細                                   |
@@ -1622,6 +1649,7 @@ $dataContext:=VP Get data context("ViewProArea") // {firstName:Freehafer,lastNam
 
 <!-- REF #_method_.VP Get default style.Syntax -->
 **VP Get default style** ( *vpAreaName* : Text { ; *sheet* :  Integer } ) : Integer<!-- END REF -->
+
 
 <!-- REF #_method_.VP Get default style.Params -->
 
@@ -1671,6 +1699,7 @@ $defaultStyle:=VP Get default style("myDoc")
 <!-- REF #_method_.VP Get formula.Syntax -->
 **VP Get formula** ( *rangeObj* : Object) : Text<!-- END REF -->
 
+
 <!-- REF #_method_.VP Get formula.Params -->
 
 | 引数       | タイプ    |    | 詳細                                |
@@ -1703,6 +1732,7 @@ $result:=VP Get formula(VP Cell("ViewProArea";5;2)) // $result="SUM($A$1:$C$10)"
 
 <!-- REF #_method_.VP Get formula by name.Syntax -->
 **VP Get formula by name** ( *vpAreaName* : Text ; *name* : Text { ; *scope* : Number } ) : Object<!-- END REF -->
+
 
 <!-- REF #_method_.VP Get formula by name.Params -->
 
@@ -1759,6 +1789,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total")
 <!-- REF #_method_.VP Get formulas.Syntax -->
 **VP Get formulas** ( *rangeObj* : Object ) : Collection<!-- END REF -->
 
+
 <!-- REF #_method_.VP Get formulas.Params -->
 
 | 引数       | タイプ    |    | 詳細                                        |
@@ -1802,6 +1833,7 @@ $formulas:=VP Get formulas(VP Cells("ViewProArea";5;1;2;3))
 
 <!-- REF #_method_.VP Get frozen panes.Syntax -->
 **VP Get frozen panes** ( vpAreaName : Text { ; sheet : Integer } ) : Object<!-- END REF -->
+
 
 <!-- REF #_method_.VP Get frozen panes.Params -->
 
@@ -1855,6 +1887,7 @@ $panesObj:=VP Get frozen panes("ViewProArea")
 <!-- REF #_method_.VP Get names.Syntax -->
 **VP Get names** ( vpAreaName : Text { ; scope : Number } ) : Collection<!-- END REF -->
 
+
 <!-- REF #_method_.VP Get names.Params -->
 
 | 引数         | タイプ    |    | 詳細                                           |
@@ -1903,6 +1936,7 @@ $list:=VP Get names("ViewProArea";2) // 3番目のシートにある名前
 
 <!-- REF #_method_.VP Get print info.Syntax -->
 **VP Get print info** ( vpAreaName : Text { ; sheet : Integer } ) : Object<!-- END REF -->
+
 
 <!-- REF #_method_.VP Get print info.Params -->
 
@@ -1986,6 +2020,7 @@ zoomFactor:1
 <!-- REF #_method_.VP Get row attributes.Syntax -->
 **VP Get row attributes** ( rangeObj : Object ) : Collection<!-- END REF -->
 
+
 <!-- REF #_method_.VP Get row attributes.Params -->
 
 | 引数       | タイプ    |    | 詳細                                                      |
@@ -2026,6 +2061,7 @@ $attr:=VP Get row attributes($range)
 <!-- REF #_method_.VP Get row count.Syntax -->
 **VP Get row count** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Integer<!-- END REF -->
 
+
 <!-- REF #_method_.VP Get row count.Params -->
 
 | 引数         | タイプ  |    | 詳細                                              |
@@ -2061,6 +2097,7 @@ $rowCount:=VP Get row count("ViewProarea")
 
 <!-- REF #_method_.VP Get selection.Syntax -->
 **VP Get selection** ( *vpAreaName* : Text {; *sheet* : Integer } ) ) : Object<!-- END REF -->
+
 
 <!-- REF #_method_.VP Get selection.Params -->
 
@@ -2105,6 +2142,7 @@ $currentSelection:=VP Get selection("myVPArea")
 <!-- REF #_method_.VP Get sheet count.Syntax -->
 **VP Get sheet count** ( *vpAreaName* : Text ) : Integer<!-- END REF -->
 
+
 <!-- REF #_method_.VP Get sheet count.Params -->
 
 | 引数          | タイプ  |    | 詳細                                          |
@@ -2144,6 +2182,7 @@ The `VP Get sheet count` command <!-- REF #_method_.VP Get sheet count.Summary -
 
 <!-- REF #_method_.VP Get sheet index.Syntax -->
 **VP Get sheet index** ( *vpAreaName* : Text ; *name* : Text ) : Integer<!-- END REF -->
+
 
 <!-- REF #_method_.VP Get sheet index.Params -->
 
@@ -2185,6 +2224,7 @@ $index:=VP Get sheet index("ViewProArea";"Total first quarter") // 2 を返し�
 <!-- REF #_method_.VP Get sheet name.Syntax -->
 **VP Get sheet name** ( *vpAreaName* : Text ; *sheet* : Integer ) : Text<!-- END REF -->
 
+
 <!-- REF #_method_.VP Get sheet name.Params -->
 
 | 引数          | タイプ  |    | 詳細                              |
@@ -2222,6 +2262,7 @@ $sheetName:=VP Get sheet name("ViewProArea";2)
 
 <!-- REF #_method_.VP Get sheet options.Syntax -->
 **VP Get sheet options** ( *vpAreaName* : Text {; *sheet* : Integer } ) ) : Object<!-- END REF -->
+
 
 <!-- REF #_method_.VP Get sheet options.Params -->
 
@@ -2265,6 +2306,7 @@ End if
 <!-- REF #_method_.VP Get show print lines.Syntax -->
 **VP Get show print lines** ( *vpAreaName* : Text {; *sheet* : Integer } ) : Boolean<!-- END REF -->
 
+
 <!-- REF #_method_.VP Get show print lines.Params -->
 
 | 引数          | タイプ  |    | 詳細                                                       |
@@ -2302,6 +2344,7 @@ The `VP Get show print lines` command <!-- REF #_method_.VP Get show print lines
 
 <!-- REF #_method_.VP Get spans.Syntax -->
 **VP Get spans** ( *rangeObj* : Object ) : Object<!-- END REF -->
+
 
 <!-- REF #_method_.VP Get spans.Params -->
 
@@ -2341,6 +2384,7 @@ VP SET CELL STYLE($range;$style)
 
 <!-- REF #_method_.VP Get stylesheet.Syntax -->
 **VP Get stylesheet** ( *vpAreaName* : Text ; *styleName* : Text { ; *sheet* : Integer } ) : Object<!-- END REF -->
+
 
 <!-- REF #_method_.VP Get stylesheet.Params -->
 
@@ -2394,6 +2438,7 @@ borderTop:{color:green,style:10}
 
 <!-- REF #_method_.VP Get stylesheets.Syntax -->
 **VP Get stylesheets** ( *vpAreaName* : Text { ; *sheet* : Integer } ) : Collection<!-- END REF -->
+
 
 <!-- REF #_method_.VP Get stylesheets.Params -->
 
@@ -2453,6 +2498,7 @@ $styles:=VP Get stylesheets("ViewProArea")
 <!-- REF #_method_.VP Get value.Syntax -->
 **VP Get value** ( *rangeObj* : Object ) : Object<!-- END REF -->
 
+
 <!-- REF #_method_.VP Get value.Params -->
 
 | 引数       | タイプ    |    | 詳細                                         |
@@ -2502,6 +2548,7 @@ End if
 
 <!-- REF #_method_.VP Get values.Syntax -->
 **VP Get values** ( *rangeObj* : Object ) : Collection<!-- END REF -->
+
 
 <!-- REF #_method_.VP Get values.Params -->
 
@@ -2555,6 +2602,7 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 <!-- REF #_method_.VP Get workbook options.Syntax -->
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
+
 <!-- REF #_method_.VP Get workbook options.Params -->
 | 引数         | タイプ    |    | 詳細                                                |
 | ---------- | ------ | -- | ------------------------------------------------- |
@@ -2592,6 +2640,7 @@ $workbookOptions:=VP Get workbook options("ViewProArea")
 
 <!-- REF #_method_.VP IMPORT DOCUMENT.Syntax -->
 **VP IMPORT DOCUMENT** ( *vpAreaName* : Text ; *filePath* : Text { ; *paramObj* : Object} ) <!-- END REF -->
+
 
 <!-- REF #_method_.VP IMPORT DOCUMENT.Params -->
 
@@ -2680,6 +2729,7 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOption
 <!-- REF #_method_.VP IMPORT FROM OBJECT.Syntax -->
 **VP IMPORT FROM OBJECT** ( *vpAreaName* : Text  { ; *viewPro* : Object} ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP IMPORT FROM OBJECT.Params -->
 
 | 引数         | タイプ    |    | 詳細                                            |
@@ -2717,6 +2767,7 @@ VP IMPORT FROM OBJECT("ViewProArea1";[VPWorkBooks]SPBook)
 <!-- REF #_method_.VP INSERT COLUMNS.Syntax -->
 **VP INSERT COLUMNS** ( *rangeObj* : Object ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP INSERT COLUMNS.Params -->
 
 | 引数       | タイプ    |    | 詳細                                   |
@@ -2753,6 +2804,7 @@ VP INSERT COLUMNS(VP Column("ViewProArea";1;3))
 
 <!-- REF #_method_.VP INSERT ROWS.Syntax -->
 **VP INSERT ROWS** ( *rangeObj* : Object ) <!-- END REF -->
+
 
 <!-- REF #_method_.VP INSERT ROWS.Params -->
 
@@ -2799,6 +2851,7 @@ VP INSERT ROWS(VP Row("ViewProArea";0;3))
 
 <!-- REF #_method_.VP MOVE CELLS.Syntax -->
 **VP MOVE CELLS** ( *originRange* : Object ; *targetRange* : Object ; *options* : Object )<!-- END REF -->
+
 
 <!-- REF #_method_.VP MOVE CELLS.Params -->
 
@@ -2858,6 +2911,7 @@ VP MOVE CELLS($originRange; $targetRange; $options)
 <!-- REF #_method_.VP Name.Syntax -->
 **VP Name** ( *vpAreaName* : Text ; *rangeName* : Text { ; *sheet* : Integer }  ) : Object <!-- END REF -->
 
+
 <!-- REF #_method_.VP Name.Params -->
 
 | 引数         | タイプ    |    | 詳細                                              |
@@ -2902,6 +2956,7 @@ VP SET NUM VALUE($name;285;"$#,###.00")
 <!-- REF #_method_.VP NEW DOCUMENT.Syntax -->
 **VP NEW DOCUMENT** ( *vpAreaName* : Text ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP NEW DOCUMENT.Params -->
 
 | 引数         | タイプ  |    | 詳細                                                           |
@@ -2936,6 +2991,7 @@ VP NEW DOCUMENT("myVPArea")
 
 <!-- REF #_method_.VP Object to font.Syntax -->
 **VP Object to font** ( *fontObj* : Object ) : Text <!-- END REF -->
+
 
 <!-- REF #_method_.VP Object to font.Params -->
 
@@ -2996,6 +3052,7 @@ $cellStyle.font:=VP Object to font($font)
 <!-- REF #_method_.PASTE FROM OBJECT.Syntax -->
 **VP PASTE FROM OBJECT** ( *rangeObj* : Object ; *dataObject* : Object {; *options* : Longint} )<!-- END REF -->
 
+
 <!-- REF #_method_.PASTE FROM OBJECT.Params -->
 
 | 引数         | タイプ     |    | 詳細                                        |
@@ -3041,6 +3098,7 @@ dataObject に存在しない要素を *options* で指定した場合 (例: フ
 
 <!-- REF #_method_.VP PRINT.Syntax -->
 **VP PRINT** ( *vpAreaName* : Text  { ; *sheet* : Integer } ) <!-- END REF -->
+
 
 <!-- REF #_method_.VP PRINT.Params -->
 
@@ -3090,6 +3148,7 @@ The `VP PRINT` command <!-- REF #_method_.VP PRINT.Summary -->opens a print dial
 <!-- REF #_method_.VP RECOMPUTE FORMULAS.Syntax -->
 **VP RECOMPUTE FORMULAS** ( *vpAreaName* : Text ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP RECOMPUTE FORMULAS.Params -->
 
 | 引数         | タイプ  |    | 詳細                                                           |
@@ -3121,6 +3180,7 @@ VP RECOMPUTE FORMULAS("ViewProArea")
 
 <!-- REF #_method_.VP REMOVE NAME.Syntax -->
 **VP REMOVE NAME** ( *vpAreaName* : Text  ; *name*  : Text { ; *sheet* : Integer } )<!-- END REF -->
+
 
 <!-- REF #_method_.VP REMOVE NAME.Params -->
 
@@ -3165,6 +3225,7 @@ $formula:=VP Get formula by name("ViewProArea";"Total1")
 <!-- REF #_method_.VP REMOVE SHEET.Syntax -->
 **VP REMOVE SHEET** ( *vpAreaName* : Text ; *index*: Integer ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP REMOVE SHEET.Params -->
 
 | 引数         | タイプ  |    | 詳細                                        |
@@ -3206,6 +3267,7 @@ VP REMOVE SHEET("ViewProArea";2)
 <!-- REF #_method_.VP REMOVE SPAN.Syntax -->
 **VP REMOVE SPAN** ( *rangeObj* : Object ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP REMOVE SPAN.Params -->
 
 | 引数       | タイプ    |    | 詳細                                   |
@@ -3245,6 +3307,7 @@ The `VP REMOVE SPAN` command <!-- REF #_method_.VP REMOVE SPAN.Summary -->remove
 
 <!-- REF #_method_.VP REMOVE STYLESHEET.Syntax -->
 **VP REMOVE STYLESHEET** ( *vpAreaName* : Text ; *styleName* : Text { ; *sheet* : Integer } ) <!-- END REF -->
+
 
 <!-- REF #_method_.VP REMOVE STYLESHEET.Params -->
 
@@ -3293,6 +3356,7 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 <!-- REF #_method_.VP REMOVE TABLE.Syntax -->
 **VP REMOVE TABLE** ( *areaName* : Object; *tableName* : Text {; *options* : Integer} {; *sheet* : Integer}} )<!-- END REF -->
 
+
 <!-- REF #_method_.VP REMOVE TABLE.Params -->
 
 | 引数         | タイプ  |    | 詳細                                                     |
@@ -3339,6 +3403,7 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 <!-- REF #_method_.VP RESET SELECTION.Syntax -->
 **VP RESET SELECTION** ( *vpAreaName* : Text { ; *sheet* : Integer } ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP RESET SELECTION.Params -->
 
 | 引数         | タイプ  |    | 詳細                                                     |
@@ -3377,6 +3442,7 @@ VP RESET SELECTION("myVPArea")
 <!-- REF #_method_.VP RESUME COMPUTING.Syntax -->
 **VP RESUME COMPUTING** ( *vpAreaName* : Text ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP RESUME COMPUTING.Params -->
 
 | 引数         | タイプ  |    | 詳細                                                           |
@@ -3407,6 +3473,7 @@ The `VP RESUME COMPUTING` command <!-- REF #_method_.VP RESUME COMPUTING.Summary
 
 <!-- REF #_method_.VP Row.Syntax -->
 **VP Row** ( *vpAreaName* : Text; *row* : Integer { ; *rowCount* : Integer { ; *sheet* : Integer } } ) : Object <!-- END REF -->
+
 
 <!-- REF #_method_.VP Row.Params -->
 
@@ -3455,6 +3522,7 @@ $row:=VP Row("ViewProArea";9) // 10行目
 <!-- REF #_method_.VP ROW AUTOFIT.Syntax -->
 **VP ROW AUTOFIT** ( *rangeObj* : Object) <!-- END REF -->
 
+
 <!-- REF #_method_.VP ROW AUTOFIT.Params -->
 
 | 引数       | タイプ    |    | 詳細                                   |
@@ -3491,6 +3559,7 @@ The `VP ROW AUTOFIT` command <!-- REF #_method_.VP ROW AUTOFIT.Summary -->automa
 
 <!-- REF #_method_.VP Run offscreen area.Syntax -->
 **VP Run offscreen area** ( *parameters* : Object) : Mixed<!-- END REF -->
+
 
 <!-- REF #_method_.VP Run offscreen area.Params -->
 
@@ -3622,6 +3691,7 @@ $result:=VP Run offscreen area($o)
 <!-- REF #_method_.VP SET ACTIVE CELL.Syntax -->
 **VP SET ACTIVE CELL** ( *rangeObj* : Object) <!-- END REF -->
 
+
 <!-- REF #_method_.VP SET ACTIVE CELL.Params -->
 
 | 引数       | タイプ    |    | 詳細                                   |
@@ -3655,6 +3725,7 @@ VP SET ACTIVE CELL($activeCell)
 
 <!-- REF #_method_.VP SET ALLOWED METHODS.Syntax -->
 **VP SET ALLOWED METHODS** ( *methodObj* : Object) <!-- END REF -->
+
 
 <!-- REF #_method_.VP SET ALLOWED METHODS.Params -->
 
@@ -3734,6 +3805,7 @@ VP SET ALLOWED METHODS($allowed)
 <!-- REF #_method_.VP SET BINDING PATH.Syntax -->
 **VP SET BINDING PATH** ( *rangeObj* : Object  ; *dataContextAttribute*  : Text) <!-- END REF -->
 
+
 <!-- REF #_method_.VP SET BINDING PATH.Params -->
 
 | 引数                   | タイプ    |    | 詳細                                                                      |
@@ -3784,6 +3856,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 <!-- REF #_method_.VP SET BOOLEAN VALUE.Syntax -->
 **VP SET BOOLEAN VALUE** ( *rangeObj* : Object  ; *boolValue* : Boolean) <!-- END REF -->
 
+
 <!-- REF #_method_.VP SET BOOLEAN VALUE.Params -->
 
 | 引数        | タイプ    |    | 詳細                                              |
@@ -3816,6 +3889,7 @@ VP SET BOOLEAN VALUE(VP Cell("ViewProArea";3;2);False)
 
 <!-- REF #_method_.VP SET BORDER.Syntax -->
 **VP SET BORDER** ( *rangeObj* : Object ; *borderStyleObj* : Object  ; *borderPosObj* : Object ) <!-- END REF -->
+
 
 <!-- REF #_method_.VP SET BORDER.Params -->
 
@@ -3894,6 +3968,7 @@ VP SET CELL STYLE(VP Cells("ViewProArea";4;4;3;3);$cellStyle)
 <!-- REF #_method_.VP SET CELL STYLE.Syntax -->
 **VP SET CELL STYLE** ( *rangeObj* : Object  ; *styleObj*  : Object) <!-- END REF -->
 
+
 <!-- REF #_method_.VP SET CELL STYLE.Params -->
 
 | 引数       | タイプ    |    | 詳細                                    |
@@ -3945,6 +4020,7 @@ VP SET CELL STYLE(VP Cell("ViewProArea";1;1);$style)
 <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Syntax -->
 **VP SET COLUMN ATTRIBUTES** ( *rangeObj* : Object  ; *propertyObj* : Object) <!-- END REF -->
 
+
 <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Params -->
 
 | 引数          | タイプ    |    | 詳細                                                             |
@@ -3994,6 +4070,7 @@ VP SET COLUMN ATTRIBUTES($column;$properties)
 <!-- REF #_method_.VP SET COLUMN COUNT.Syntax -->
 **VP SET COLUMN COUNT** ( *vpAreaName* : Text , *columnCount* : Integer { , *sheet* : Integer } ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP SET COLUMN COUNT.Params -->
 
 | 引数          | タイプ  |    | 詳細                                                     |
@@ -4034,6 +4111,7 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 <!-- REF #_method_.VP SET CURRENT SHEET.Syntax -->
 **VP SET CURRENT SHEET** ( *vpAreaName* : Text ; *sheet* : Integer)<!-- END REF -->
+
 
 <!-- REF #_method_.VP SET CURRENT SHEET.Params -->
 
@@ -4076,6 +4154,7 @@ VP SET CURRENT SHEET("ViewProArea";2)
 
 <!-- REF #_method_.VP SET CUSTOM FUNCTIONS.Syntax -->
 **VP SET CUSTOM FUNCTIONS** ( *vpAreaName* : Text ; *formulaObj* : Object  ) <!-- END REF -->
+
 
 <!-- REF #_method_.VP SET CUSTOM FUNCTIONS.Params -->
 
@@ -4167,6 +4246,7 @@ End case
 
 <!-- REF #_method_.VP SET DATA CONTEXT.Syntax -->
 **VP SET DATA CONTEXT** ( *vpAreaName* : Text ; *dataObj* : Object {; *options* : Object } {; *sheet* : Integer} )<br/>**VP SET DATA CONTEXT** ( *vpAreaName* : Text ; *dataColl* : Collection ; {*options* : Object } {; *sheet* : Integer} )<!-- END REF -->
+
 
 <!-- REF #_method_.VP SET DATA CONTEXT.Params -->
 
@@ -4301,6 +4381,7 @@ VP SET DATA CONTEXT("ViewProArea"; $data; $options)
 <!-- REF #_method_.VP SET DATE TIME VALUE.Syntax -->
 **VP SET DATE TIME VALUE** ( *rangeObj* : Object ; *dateValue* : Date ; *timeValue* : Time {; *formatPattern* : Text } ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP SET DATE TIME VALUE.Params -->
 
 | 引数            | タイプ    |    | 詳細                                  |
@@ -4342,6 +4423,7 @@ VP SET DATE TIME VALUE(VP Cell("ViewProArea";3;9);!2024-12-18!;?14:30:10?;vk pat
 
 <!-- REF #_method_.VP SET DATE VALUE.Syntax -->
 **VP SET DATE VALUE** ( *rangeObj* : Object ; *dateValue* : Date { ; *formatPattern* : Text } ) <!-- END REF -->
+
 
 <!-- REF #_method_.VP SET DATE VALUE.Params -->
 
@@ -4392,6 +4474,7 @@ VP SET DATE VALUE(VP Cell("ViewProArea";4;6);!2005-01-15!;vk pattern month day)
 <!-- REF #_method_.VP SET DEFAULT STYLE.Syntax -->
 **VP SET DEFAULT STYLE** ( *vpAreaName* : Text ; *styleObj* : Object { ; *sheet* : Integer } ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP SET DEFAULT STYLE.Params -->
 
 | 引数         | タイプ    |    | 詳細                                                   |
@@ -4436,6 +4519,7 @@ VP SET DEFAULT STYLE("myDoc";$style)
 <!-- REF #_method_.VP SET FIELD.Syntax -->
 **VP SET FIELD** ( *rangeObj* : Object ; *field* : Pointer { ; *formatPattern* : Text } ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP SET FIELD.Params -->
 
 | 引数            | タイプ     |    | 詳細                                      |
@@ -4470,6 +4554,7 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 <!-- REF #_method_.VP SET FORMULA.Syntax -->
 **VP SET FORMULA** ( *rangeObj* : Object ; *formula* : Text { ; *formatPattern* : Text } ) <!-- END REF -->
+
 
 <!-- REF #_method_.VP SET FORMULA.Params -->
 
@@ -4523,6 +4608,7 @@ VP SET FORMULA($range;"SUM(A1,B7,C11)") // 引数の区切り文字に ","
 
 <!-- REF #_method_.VP SET FORMULAS.Syntax -->
 **VP SET FORMULAS** ( *rangeObj* : Object ; *formulasCol* : Collection ) <!-- END REF -->
+
 
 <!-- REF #_method_.VP SET FORMULAS.Params -->
 
@@ -4587,6 +4673,7 @@ VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // セルに割り当て�
 <!-- REF #_method_.VP SET FROZEN PANES.Syntax -->
 **VP SET FROZEN PANES** ( *vpAreaName* : Text ; *paneObj* : Object { ; *sheet* : Integer } ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP SET FROZEN PANES.Params -->
 
 | 引数         | タイプ    |    | 詳細                                                     |
@@ -4645,6 +4732,7 @@ VP SET FROZEN PANES("ViewProArea";$panes)
 <!-- REF #_method_.VP SET NUM VALUE.Syntax -->
 **VP SET NUM VALUE** ( *rangeObj* : Object ; *numberValue* : Number { ; *formatPattern* : Text } ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP SET NUM VALUE.Params -->
 
 | 引数            | タイプ    |    | 詳細                                  |
@@ -4683,6 +4771,7 @@ VP SET NUM VALUE(VP Cell("ViewProArea";3;2);12.356;"_($* #,##0.00_)")
 
 <!-- REF #_method_.VP SET PRINT INFO.Syntax -->
 **VP SET PRINT INFO** ( *vpAreaName* : Text ; *printInfo* : Object { ; *sheet* : Integer }  ) <!-- END REF -->
+
 
 <!-- REF #_method_.VP SET PRINT INFO.Params -->
 
@@ -4758,6 +4847,7 @@ VP EXPORT DOCUMENT("ViewProArea";"Sales2018.pdf";New object("formula";Formula(AL
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Syntax -->
 **VP SET ROW ATTRIBUTES** ( *rangeObj* : Object ; *propertyObj* : Object  ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Params -->
 
 | 引数          | タイプ    |    | 詳細                                                          |
@@ -4807,6 +4897,7 @@ VP SET ROW ATTRIBUTES($row;$properties)
 <!-- REF #_method_.VP SET ROW COUNT.Syntax -->
 **VP SET ROW COUNT** ( *vpAreaName* : Text ; *rowCount* : Integer { ; *sheet* : Integer }  ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP SET ROW COUNT.Params -->
 
 | 引数         | タイプ  |    | 詳細                                                     |
@@ -4848,6 +4939,7 @@ VP SET ROW COUNT("ViewProArea";5)
 <!-- REF #_method_.VP SET SELECTION.Syntax -->
 **VP SET SELECTION** ( *rangeObj* : Object  ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP SET SELECTION.Params -->
 
 | 引数       | タイプ    |    | 詳細                                        |
@@ -4879,6 +4971,7 @@ VP SET SELECTION($currentSelection)
 
 <!-- REF #_method_.VP SET SHEET COUNT.Syntax -->
 **VP SET SHEET COUNT** ( *vpAreaName* : Text ; *number* : Integer  ) <!-- END REF -->
+
 
 <!-- REF #_method_.VP SET SHEET COUNT.Params -->
 
@@ -4918,6 +5011,7 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 <!-- REF #_method_.VP SET SHEET NAME.Syntax -->
 **VP SET SHEET NAME** ( *vpAreaName* : Text ; *name* : Text {; *sheet*: Integer} )<!-- END REF -->
+
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 
@@ -4966,6 +5060,7 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 
 <!-- REF #_method_.VP SET SHEET OPTIONS.Syntax -->
 **VP SET SHEET OPTIONS** ( *vpAreaName* : Text; *sheetOptions* : Object { ; *sheet* : Integer}  ) <!-- END REF -->
+
 
 <!-- REF #_method_.VP SET SHEET OPTIONS.Params -->
 
@@ -5087,6 +5182,7 @@ VP SET SHEET OPTIONS("ViewProArea";$options)
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Syntax -->
 **VP SET SHOW PRINT LINES** ( *vpAreaName* : Text {; visible : Boolean}{; *sheet* : Integer} )<!-- END REF -->
 
+
 <!-- REF #_method_.VP SET SHOW PRINT LINES.Params -->
 
 | 引数         | タイプ  |    | 詳細                                                     |
@@ -5135,6 +5231,7 @@ VP SET SHOW PRINT LINES("ViewProArea";True;1)
 <!-- REF #_method_.VP SET TEXT VALUE.Syntax -->
 **VP SET TEXT VALUE** ( *rangeObj* : Object ; *textValue* : Text { ; *formatPattern* : Text }  ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP SET TEXT VALUE.Params -->
 
 | 引数            | タイプ    |    | 詳細                                  |
@@ -5169,6 +5266,7 @@ VP SET TEXT VALUE(VP Cell("ViewProArea";3;2);"Test 4D View Pro")
 
 <!-- REF #_method_.VP SET TIME VALUE.Syntax -->
 **VP SET TIME VALUE** ( *rangeObj* : Object ; *timeValue* : Text { ; *formatPattern* : Text }  ) <!-- END REF -->
+
 
 <!-- REF #_method_.VP SET TIME VALUE.Params -->
 
@@ -5208,6 +5306,7 @@ VP SET TIME VALUE(VP Cell("ViewProArea";5;2);?12:15:06?;vk pattern long time)
 
 <!-- REF #_method_.VP SET VALUE.Syntax -->
 **VP SET VALUE** ( *rangeObj* : Object ; *valueObj* : Object ) <!-- END REF -->
+
 
 <!-- REF #_method_.VP SET VALUE.Params -->
 
@@ -5272,6 +5371,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";Null))
 <!-- REF #_method_.VP SET VALUES.Syntax -->
 **VP SET VALUES** ( *rangeObj* : Object ; *valuesCol* : Collection ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP SET VALUES.Params -->
 
 | 引数        | タイプ    |    | 詳細                                  |
@@ -5322,6 +5422,7 @@ VP SET VALUES(VP Cell("ViewProArea";2;1);$param)
 
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Syntax -->
 **VP SET WORKBOOK OPTIONS** ( *vpAreaName* : Text ; *optionObj* : Object)<!-- END REF -->
+
 
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Params -->
 | 引数         | タイプ    |    | 詳細                                                                          |
@@ -5429,6 +5530,7 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 <!-- REF #_method_.VP SHOW CELL.Syntax -->
 **VP SHOW CELL** ( *rangeObj* : Object { ; *vPos* : Integer; *hPos* : Integer } ) <!-- END REF -->
 
+
 <!-- REF #_method_.VP SHOW CELL.Params -->
 
 | 引数       | タイプ    |    | 詳細                                            |
@@ -5491,6 +5593,7 @@ VP SHOW CELL($displayCell;vk position top;vk position right)
 
 <!-- REF #_method_.VP SUSPEND COMPUTING.Syntax -->
 **VP SUSPEND COMPUTING** ( *vpAreaName* : Text ) <!-- END REF -->
+
 
 <!-- REF #_method_.VP SUSPEND COMPUTING.Params -->
 
