@@ -61,6 +61,7 @@ $myMacWorker:= 4D. SystemWorker.new("chmod +x /folder/myfile.sh")
 <!-- REF #4D.SystemWorker.new().Syntax --> **4D. SystemWorker.new** ( *commandLine* : Text { ; options : Object } ) : 4D. SystemWorker<!-- END REF -->
 
 
+
 <!-- REF #4D.SystemWorker.new().Params -->
 | Parâmetros  | Tipo             |    | Descrição                                                     |
 | ----------- | ---------------- |:--:| ------------------------------------------------------------- |
@@ -255,6 +256,7 @@ $systemworker:=4D. SystemWorker.new("/bin/ls -l /Users ";cs. Params.new())
 <!-- REF #SystemWorkerClass.closeInput().Syntax --> **.closeInput**()<!-- END REF -->
 
 
+
 <!-- REF #SystemWorkerClass.closeInput().Params -->
 | Parâmetros | Tipo |  | Descrição                                                  |
 | ---------- | ---- |::| ---------------------------------------------------------- |
@@ -417,6 +419,7 @@ Essa propriedade é**apenas leitura**.
 <!-- REF #SystemWorkerClass.postMessage().Syntax --> **.postMessage**( *message* : Text)<br/>**.postMessage**( *messageBLOB* : Blob)<!-- END REF -->
 
 
+
 <!-- REF #SystemWorkerClass.postMessage().Params -->
 | Parâmetros  | Tipo |    | Descrição                                                         |
 | ----------- | ---- |:--:| ----------------------------------------------------------------- |
@@ -466,6 +469,7 @@ The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary 
 
 
 <!-- REF #SystemWorkerClass.terminate().Syntax --> **.terminate**()<!-- END REF -->
+
 
 
 <!-- REF #SystemWorkerClass.terminate().Params -->
@@ -524,6 +528,7 @@ Essa propriedade é**apenas leitura**.
 
 
 <!-- REF #SystemWorkerClass.wait().Syntax --> **.wait**( {*timeout* : Real} ) : 4D. SystemWorker<!-- END REF -->
+
 
 
 <!-- REF #SystemWorkerClass.wait().Params -->
