@@ -40,9 +40,8 @@ A [Datastore](ORDA/dsMapping.md#datastore) is the interface object provided by O
 
 </details>
 
-<!-- REF #_command_.ds.Syntax -->
+<!-- REF #_command_.ds.Syntax -->**ds** { ( *localID* : Text ) } : cs.DataStore <!-- END REF -->
 
-**ds** { ( *localID* : Text ) } : cs.DataStore <!-- END REF -->
 
 <!-- REF #_command_.ds.Params -->
 |Parameter|Type||Description|
@@ -108,9 +107,8 @@ Using the main datastore on the 4D database:
 
 </details>
 
-<!-- REF #_command_.Open datastore.Syntax -->
+<!-- REF #_command_.Open datastore.Syntax -->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore <!-- END REF -->
 
-**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore <!-- END REF -->
 
 <!-- REF #_command_.Open datastore.Params -->
 |Parameter|Type||Description|
@@ -215,9 +213,7 @@ In case of error, the command returns **Null**. If the remote datastore cannot b
 
 </details>
 
-<!-- REF DataStoreClass.dataclassName.Syntax -->
-
-***.dataclassName*** : 4D.DataClass<!-- END REF -->
+<!-- REF DataStoreClass.dataclassName.Syntax -->***.dataclassName*** : 4D.DataClass<!-- END REF -->
 
 #### Description
 
@@ -249,9 +245,8 @@ Each dataclass in a datastore is available as a property of the [DataStore objec
 
 </details>
 
-<!-- REF #DataStoreClass.cancelTransaction().Syntax -->
+<!-- REF #DataStoreClass.cancelTransaction().Syntax -->**.cancelTransaction()**<!-- END REF -->
 
-**.cancelTransaction()**<!-- END REF -->
 
 <!-- REF #DataStoreClass.cancelTransaction().Params -->
 |Parameter|Type||Description|
@@ -283,9 +278,8 @@ See example for the [`.startTransaction()`](#starttransaction) function.
 
 </details>
 
-<!-- REF #DataStoreClass.clearAllRemoteContexts().Syntax -->
+<!-- REF #DataStoreClass.clearAllRemoteContexts().Syntax -->**.clearAllRemoteContexts()**<!-- END REF -->
 
-**.clearAllRemoteContexts()**<!-- END REF -->
 
 <!-- REF #DataStoreClass.clearAllRemoteContexts().Params -->
 |Parameter|Type||Description|
@@ -315,9 +309,8 @@ In such cases, you can use `.clearAllRemoteContexts()` to clear your contexts an
 
 </details>
 
-<!-- REF #DataStoreClass.encryptionStatus().Syntax -->
+<!-- REF #DataStoreClass.encryptionStatus().Syntax -->**.encryptionStatus()**: Object<!-- END REF -->
 
-**.encryptionStatus()**: Object<!-- END REF -->
 
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 |Parameter|Type||Description|
@@ -387,9 +380,8 @@ You want to know the number of encrypted tables in the current data file:
 
 </details>
 
-<!-- REF #DataStoreClass.getAllRemoteContexts().Syntax -->
+<!-- REF #DataStoreClass.getAllRemoteContexts().Syntax -->**.getAllRemoteContexts()** : Collection<!-- END REF -->
 
-**.getAllRemoteContexts()** : Collection<!-- END REF -->
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
 |Parameter|Type||Description|
@@ -462,9 +454,8 @@ $info:=$ds.getAllRemoteContexts()
 
 </details>
 
-<!-- REF #DataStoreClass.getInfo().Syntax -->
+<!-- REF #DataStoreClass.getInfo().Syntax -->**.getInfo()**: Object<!-- END REF -->
 
-**.getInfo()**: Object<!-- END REF -->
 
 <!-- REF #DataStoreClass.getInfo().Params -->
 |Parameter|Type||Description|
@@ -530,9 +521,8 @@ On a remote datastore:
 
 </details>
 
-<!-- REF #DataStoreClass.getRemoteContextInfo().Syntax -->
+<!-- REF #DataStoreClass.getRemoteContextInfo().Syntax -->**.getRemoteContextInfo**(*contextName* : Text) : Object <!-- END REF -->
 
-**.getRemoteContextInfo**(*contextName* : Text) : Object <!-- END REF -->
 
 <!-- REF #DataStoreClass.getRemoteContextInfo().Params -->
 |Parameter|Type||Description|
@@ -581,9 +571,8 @@ See the example from the [.setRemoteContextInfo()](#example-1-3) section.
 
 </details>
 
-<!-- REF #DataStoreClass.getRequestLog().Syntax -->
+<!-- REF #DataStoreClass.getRequestLog().Syntax -->**.getRequestLog()** : Collection<!-- END REF -->
 
-**.getRequestLog()** : Collection<!-- END REF -->
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
 |Parameter|Type||Description|
@@ -619,9 +608,8 @@ See Example 2 of [`.startRequestLog()`](#startrequestlog).
 
 </details>
 
-<!-- REF #DataStoreClass.isAdminProtected().Syntax -->
+<!-- REF #DataStoreClass.isAdminProtected().Syntax -->**.isAdminProtected()** : Boolean<!-- END REF -->
 
-**.isAdminProtected()** : Boolean<!-- END REF -->
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
 |Parameter|Type||Description|
@@ -651,9 +639,8 @@ By default, the Data Explorer access is granted for `webAdmin` sessions, but it 
 
 </details>
 
-<!-- REF #DataStoreClass.makeSelectionsAlterable().Syntax -->
+<!-- REF #DataStoreClass.makeSelectionsAlterable().Syntax -->**.makeSelectionsAlterable()**<!-- END REF -->
 
-**.makeSelectionsAlterable()**<!-- END REF -->
 
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Params -->
 |Parameter|Type||Description|
@@ -684,9 +671,8 @@ On the other hand, using this method in new projects created in 4D v18 R5 and hi
 
 </details>
 
-<!-- REF #DataStoreClass.provideDataKey().Syntax -->
+<!-- REF #DataStoreClass.provideDataKey().Syntax -->**.provideDataKey**( *curPassPhrase* : Text ) : Object <br/>**.provideDataKey**( *curDataKey* : Object ) : Object <!-- END REF -->
 
-**.provideDataKey**( *curPassPhrase* : Text ) : Object <br/>**.provideDataKey**( *curDataKey* : Object ) : Object <!-- END REF -->
 
 <!-- REF #DataStoreClass.provideDataKey().Params -->
 |Parameter|Type||Description|
@@ -761,6 +747,7 @@ If no *curPassphrase* or *curDataKey* is given, `.provideDataKey()` returns **nu
 <!-- REF #DataStoreClass.setAdminProtection().Syntax -->
 **.setAdminProtection**( *status* : Boolean )<!-- END REF -->
 
+
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 |Parameter|Type||Description|
 |---|---|---|---|
@@ -799,9 +786,8 @@ You create a *protectDataFile* project method to call before deployments for exa
 
 </details>
 
-<!-- REF #DataStoreClass.setRemoteContextInfo().Syntax -->
+<!-- REF #DataStoreClass.setRemoteContextInfo().Syntax -->**.setRemoteContextInfo**( *contextName* : Text ; *dataClassName* : Text ; *attributes* : Text {; *contextType* : Text { ; *pageLength* : Integer}})<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassName* : Text; *attributesColl* : Collection {; *contextType* : Text { ; *pageLength* : Integer }} )<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassObject* : 4D.DataClass ; *attributes* : Text {; *contextType* : Text { ; *pageLength* : Integer }})<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassObject* : 4D.DataClass ; *attributesColl* : Collection {; *contextType* : Text { ; *pageLength* : Integer }} )<!-- END REF -->
 
-**.setRemoteContextInfo**( *contextName* : Text ; *dataClassName* : Text ; *attributes* : Text {; *contextType* : Text { ; *pageLength* : Integer}})<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassName* : Text; *attributesColl* : Collection {; *contextType* : Text { ; *pageLength* : Integer }} )<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassObject* : 4D.DataClass ; *attributes* : Text {; *contextType* : Text { ; *pageLength* : Integer }})<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassObject* : 4D.DataClass ; *attributesColl* : Collection {; *contextType* : Text { ; *pageLength* : Integer }} )<!-- END REF -->
 
 <!-- REF #DataStoreClass.setRemoteContextInfo().Params -->
 |Parameter|Type||Description|
@@ -928,9 +914,8 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 </details>
 
-<!-- REF #DataStoreClass.startRequestLog().Syntax -->
+<!-- REF #DataStoreClass.startRequestLog().Syntax -->**.startRequestLog**()<br/>**.startRequestLog**( *file* : 4D.File )<br/>**.startRequestLog**( *reqNum* : Integer )<!-- END REF -->
 
-**.startRequestLog**()<br/>**.startRequestLog**( *file* : 4D.File )<br/>**.startRequestLog**( *reqNum* : Integer )<!-- END REF -->
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
 |Parameter|Type||Description|
@@ -1005,9 +990,8 @@ You want to log ORDA client requests in memory:
 
 </details>
 
-<!-- REF #DataStoreClass.startTransaction().Syntax -->
+<!-- REF #DataStoreClass.startTransaction().Syntax -->**.startTransaction()**<!-- END REF -->
 
-**.startTransaction()**<!-- END REF -->
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
 |Parameter|Type||Description|
@@ -1068,9 +1052,8 @@ You can nest several transactions (sub-transactions). Each transaction or sub-tr
 
 </details>
 
-<!-- REF #DataStoreClass.stopRequestLog().Syntax -->
+<!-- REF #DataStoreClass.stopRequestLog().Syntax -->**.stopRequestLog()**  <!-- END REF -->
 
-**.stopRequestLog()**  <!-- END REF -->
 
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
 |Parameter|Type||Description|
@@ -1100,9 +1083,8 @@ See examples for [`.startRequestLog()`](#startrequestlog).
 
 </details>
 
-<!-- REF #DataStoreClass.validateTransaction().Syntax -->
+<!-- REF #DataStoreClass.validateTransaction().Syntax -->**.validateTransaction()**  <!-- END REF -->
 
-**.validateTransaction()**  <!-- END REF -->
 
 <!-- REF #DataStoreClass.validateTransaction().Params -->
 |Parameter|Type||Description|

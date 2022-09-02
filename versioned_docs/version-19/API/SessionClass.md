@@ -30,9 +30,8 @@ For detailed information about the session implementation, please refer to the [
 
 </details>
 
-<!-- REF #_command_.Session.Syntax -->
+<!-- REF #_command_.Session.Syntax -->**Session** : 4D.Session<!-- END REF -->
 
-**Session** : 4D.Session<!-- END REF -->
 
 <!-- REF #_command_.Session.Params -->
 |Parameter|Type||Description|
@@ -85,9 +84,8 @@ IP:port/4DACTION/action_Session
 
 </details>
 
-<!-- REF #SessionClass.clearPrivileges().Syntax -->
+<!-- REF #SessionClass.clearPrivileges().Syntax -->**.clearPrivileges()**<!-- END REF -->
 
-**.clearPrivileges()**<!-- END REF -->
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
 |Parameter|Type||Description|
@@ -121,9 +119,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 </details>
 
-<!-- REF #SessionClass.expirationDate.Syntax -->
-
-**.expirationDate** : Text<!-- END REF -->
+<!-- REF #SessionClass.expirationDate.Syntax -->**.expirationDate** : Text<!-- END REF -->
 
 #### Description
 
@@ -151,9 +147,8 @@ $expiration:=Session.expirationDate //eg "2021-11-05T17:10:42Z"
 
 </details>
 
-<!-- REF #SessionClass.hasPrivilege().Syntax -->
+<!-- REF #SessionClass.hasPrivilege().Syntax -->**.hasPrivilege**( *privilege* : Text ) : Boolean<!-- END REF -->
 
-**.hasPrivilege**( *privilege* : Text ) : Boolean<!-- END REF -->
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
 |Parameter|Type||Description|
@@ -191,9 +186,7 @@ End if
 
 </details>
 
-<!-- REF #SessionClass.idleTimeout.Syntax -->
-
-**.idleTimeout** : Integer<!-- END REF -->
+<!-- REF #SessionClass.idleTimeout.Syntax -->**.idleTimeout** : Integer<!-- END REF -->
 
 #### Description
 
@@ -233,9 +226,8 @@ End if
 
 </details>
 
-<!-- REF #SessionClass.isGuest().Syntax -->
+<!-- REF #SessionClass.isGuest().Syntax -->**.isGuest()** : Boolean<!-- END REF -->
 
-**.isGuest()** : Boolean<!-- END REF -->
 
 <!-- REF #SessionClass.isGuest().Params -->
 |Parameter|Type||Description|
@@ -269,9 +261,8 @@ End if
 
 </details>
 
-<!-- REF #SessionClass.setPrivileges().Syntax -->
+<!-- REF #SessionClass.setPrivileges().Syntax -->**.setPrivileges**( *privilege* : Text )<br/>**.setPrivileges**( *privileges* : Collection )<br/>**.setPrivileges**( *settings* : Object )<!-- END REF -->
 
-**.setPrivileges**( *privilege* : Text )<br/>**.setPrivileges**( *privileges* : Collection )<br/>**.setPrivileges**( *settings* : Object )<!-- END REF -->
 
 <!-- REF #SessionClass.setPrivileges().Params -->
 |Parameter|Type||Description|
@@ -334,9 +325,7 @@ End if
 
 </details>
 
-<!-- REF #SessionClass.storage.Syntax -->
-
-**.storage** : Object<!-- END REF -->
+<!-- REF #SessionClass.storage.Syntax -->**.storage** : Object<!-- END REF -->
 
 #### Description
 
@@ -374,9 +363,7 @@ End if
 
 </details>
 
-<!-- REF #SessionClass.userName.Syntax -->
-
-**.userName** : Text<!-- END REF -->
+<!-- REF #SessionClass.userName.Syntax -->**.userName** : Text<!-- END REF -->
 
 #### Description
 

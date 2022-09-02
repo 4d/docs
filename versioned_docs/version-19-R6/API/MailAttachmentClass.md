@@ -28,9 +28,8 @@ Attachment objects provide the following read-only properties and functions:
 |v19 R2|Accepts 4D.File, 4D.ZipFile, 4D.Blob
 </details>
 
-<!-- REF #_command_.MAIL_New_attachment.Syntax -->
+<!-- REF #_command_.MAIL_New_attachment.Syntax -->**MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
-**MAIL New attachment**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**MAIL New attachment**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
 <!-- REF #_command_.MAIL_New_attachment.Params -->
 
@@ -172,9 +171,8 @@ $transporter.send($email)
 |v19 R2|Accepts 4D.File, 4D.ZipFile, 4D.Blob
 </details>
 
-<!-- REF #4D.MailAttachment.new().Syntax -->
+<!-- REF #4D.MailAttachment.new().Syntax -->**4D.MailAttachment.new**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
-**4D.MailAttachment.new**( *file* : 4D.File { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *zipFile* : 4D.ZipFile { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *blob* : 4D.Blob { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<br/>**4D.MailAttachment.new**( *path* : Text { ; *name* : Text {; *cid* : Text{ ; *type* : Text { ; *disposition* :Text } } } } ) : 4D.MailAttachment<!-- END REF -->
 
 <!-- REF #4D.MailAttachment.new().Params -->
 
@@ -196,9 +194,7 @@ The `4D.MailAttachment.new()` function <!-- REF #4D.MailAttachment.new().Summary
 
 ## .cid
 
-<!-- REF #MailAttachmentClass.cid.Syntax -->
-
-**.cid** : Text<!-- END REF -->
+<!-- REF #MailAttachmentClass.cid.Syntax -->**.cid** : Text<!-- END REF -->
 
 #### Description
 
@@ -206,9 +202,7 @@ The `.cid` property contains <!-- REF #MailAttachmentClass.cid.Summary --> the I
 
 ## .disposition
 
-<!-- REF #MailAttachmentClass.disposition.Syntax -->
-
-**.disposition** : Text<!-- END REF -->
+<!-- REF #MailAttachmentClass.disposition.Syntax -->**.disposition** : Text<!-- END REF -->
 
 #### Description
 
@@ -219,9 +213,8 @@ The `.disposition` property contains <!-- REF #MailAttachmentClass.disposition.S
 
 ## .getContent()
 
-<!-- REF #MailAttachmentClass.getContent().Syntax -->
+<!-- REF #MailAttachmentClass.getContent().Syntax -->**.getContent()** : 4D.Blob<!-- END REF -->
 
-**.getContent()** : 4D.Blob<!-- END REF -->
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
 |Parameter|Type||Description|
@@ -234,9 +227,7 @@ The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary 
 
 ## .name
 
-<!-- REF #MailAttachmentClass.name.Syntax -->
-
-**.name** : Text<!-- END REF -->
+<!-- REF #MailAttachmentClass.name.Syntax -->**.name** : Text<!-- END REF -->
 
 #### Description
 
@@ -244,9 +235,7 @@ The `.name` property contains <!-- REF #MailAttachmentClass.name.Summary -->the 
 
 ## .path
 
-<!-- REF #MailAttachmentClass.path.Syntax -->
-
-**.path** : Text<!-- END REF -->
+<!-- REF #MailAttachmentClass.path.Syntax -->**.path** : Text<!-- END REF -->
 
 #### Description
 
@@ -261,9 +250,7 @@ The `.path` property contains <!-- REF #MailAttachmentClass.path.Summary -->the 
 |v19|Added
 </details>
 
-<!-- REF #MailAttachmentClass.platformPath.Syntax -->
-
-**.platformPath** : Text<!-- END REF -->
+<!-- REF #MailAttachmentClass.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->
 
 #### Description
 
@@ -271,9 +258,7 @@ The `.platformPath` property returns <!-- REF #MailAttachmentClass.platformPath.
 
 ## .type
 
-<!-- REF #MailAttachmentClass.type.Syntax -->
-
-**.type** : Text<!-- END REF -->
+<!-- REF #MailAttachmentClass.type.Syntax -->**.type** : Text<!-- END REF -->
 
 #### Description
 

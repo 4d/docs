@@ -73,9 +73,8 @@ HTTPRequest objects provide the following properties and functions:
 <!-- REF #4D.HTTPRequest.new().Desc -->
 ## 4D.HTTPRequest.new()
 
-<!-- REF #4D.HTTPRequest.new().Syntax -->
+<!-- REF #4D.HTTPRequest.new().Syntax -->**4D.HTTPRequest.new**( *url* : Text { ; *options* : Object } ) : 4D.HTTPRequest<!-- END REF -->
 
-**4D.HTTPRequest.new**( *url* : Text { ; *options* : Object } ) : 4D.HTTPRequest<!-- END REF -->
 
 <!-- REF #4D.HTTPRequest.new().Params -->
 |Parameter|Type||Description|
@@ -177,9 +176,7 @@ An authentication object handles the `options.serverAuthentication` or `options.
 <!-- REF #HTTPRequestClass.dataType.Desc -->
 ## .dataType
 
-<!-- REF #HTTPRequestClass.dataType.Syntax -->
-
-**dataType** : Text<!-- END REF -->
+<!-- REF #HTTPRequestClass.dataType.Syntax -->**dataType** : Text<!-- END REF -->
 
 #### Description
 
@@ -190,9 +187,7 @@ The `.dataType` property contains <!-- REF #HTTPRequestClass.dataType.Summary --
 <!-- REF #HTTPRequestClass.encoding.Desc -->
 ## .encoding
 
-<!-- REF #HTTPRequestClass.encoding.Syntax -->
-
-**encoding** : Text<!-- END REF -->
+<!-- REF #HTTPRequestClass.encoding.Syntax -->**encoding** : Text<!-- END REF -->
 
 #### Description
 
@@ -203,9 +198,7 @@ The `.encoding` property contains <!-- REF #HTTPRequestClass.encoding.Summary --
 <!-- REF #HTTPRequestClass.errors.Desc -->
 ## .errors
 
-<!-- REF #HTTPRequestClass.errors.Syntax -->
-
-**errors** : Collection<!-- END REF -->
+<!-- REF #HTTPRequestClass.errors.Syntax -->**errors** : Collection<!-- END REF -->
 
 #### Description
 
@@ -225,9 +218,7 @@ Here is the contents of the `.errors` property:
 <!-- REF #HTTPRequestClass.headers.Desc -->
 ## .headers
 
-<!-- REF #HTTPRequestClass.headers.Syntax -->
-
-**headers** : Object<!-- END REF -->
+<!-- REF #HTTPRequestClass.headers.Syntax -->**headers** : Object<!-- END REF -->
 
 #### Description
 
@@ -238,9 +229,7 @@ The `.headers` property contains <!-- REF #HTTPRequestClass.headers.Summary -->t
 <!-- REF #HTTPRequestClass.method.Desc -->
 ## .method
 
-<!-- REF #HTTPRequestClass.method.Syntax -->
-
-**method** : Text<!-- END REF -->
+<!-- REF #HTTPRequestClass.method.Syntax -->**method** : Text<!-- END REF -->
 
 #### Description
 
@@ -251,9 +240,7 @@ The `.method` property contains <!-- REF #HTTPRequestClass.method.Summary -->the
 <!-- REF #HTTPRequestClass.protocol.Desc -->
 ## .protocol
 
-<!-- REF #HTTPRequestClass.protocol.Syntax -->
-
-**protocol** : Text<!-- END REF -->
+<!-- REF #HTTPRequestClass.protocol.Syntax -->**protocol** : Text<!-- END REF -->
 
 #### Description
 
@@ -264,9 +251,7 @@ The `.protocol` property contains <!-- REF #HTTPRequestClass.protocol.Summary --
 <!-- REF #HTTPRequestClass.response.Desc -->
 ## .response
 
-<!-- REF #HTTPRequestClass.response.Syntax -->
-
-**response** : Object<!-- END REF -->
+<!-- REF #HTTPRequestClass.response.Syntax -->**response** : Object<!-- END REF -->
 
 #### Description
 
@@ -286,9 +271,7 @@ A `response` object is a non-sharable object. It provides the following properti
 <!-- REF #HTTPRequestClass.returnResponseBody.Desc -->
 ## .returnResponseBody
 
-<!-- REF #HTTPRequestClass.returnResponseBody.Syntax -->
-
-**returnResponseBody** : Boolean<!-- END REF -->
+<!-- REF #HTTPRequestClass.returnResponseBody.Syntax -->**returnResponseBody** : Boolean<!-- END REF -->
 
 #### Description
 
@@ -299,9 +282,8 @@ The `.returnResponseBody` property contains <!-- REF #HTTPRequestClass.returnRes
 <!-- REF #HTTPRequestClass.terminate().Desc -->
 ## .terminate()
 
-<!-- REF #HTTPRequestClass.terminate().Syntax -->
+<!-- REF #HTTPRequestClass.terminate().Syntax -->**.terminate()**<!-- END REF -->
 
-**.terminate()**<!-- END REF -->
 
 <!-- REF #HTTPRequestClass.terminate().Params -->
 |Parameter|Type||Description|
@@ -319,9 +301,7 @@ The `.terminate()` function <!-- REF #HTTPRequestClass.terminate().Summary -->ab
 <!-- REF #HTTPRequestClass.terminated.Desc -->
 ## .terminated
 
-<!-- REF #HTTPRequestClass.terminated.Syntax -->
-
-**terminated** : Boolean<!-- END REF -->
+<!-- REF #HTTPRequestClass.terminated.Syntax -->**terminated** : Boolean<!-- END REF -->
 
 #### Description
 
@@ -332,9 +312,7 @@ The `.terminated` property contains <!-- REF #HTTPRequestClass.terminated.Summar
 <!-- REF #HTTPRequestClass.timeout.Desc -->
 ## .timeout
 
-<!-- REF #HTTPRequestClass.timeout.Syntax -->
-
-**timeout** : Real<!-- END REF -->
+<!-- REF #HTTPRequestClass.timeout.Syntax -->**timeout** : Real<!-- END REF -->
 
 #### Description
 
@@ -345,9 +323,7 @@ The `.timeout` property contains <!-- REF #HTTPRequestClass.timeout.Summary -->t
 <!-- REF #HTTPRequestClass.url.Desc -->
 ## .url
 
-<!-- REF #HTTPRequestClass.url.Syntax -->
-
-**url** : Text<!-- END REF -->
+<!-- REF #HTTPRequestClass.url.Syntax -->**url** : Text<!-- END REF -->
 
 #### Description
 
@@ -358,9 +334,8 @@ The `.url` property contains <!-- REF #HTTPRequestClass.url.Summary -->the URL o
 <!-- REF #HTTPRequestClass.wait().Desc -->
 ## .wait()
 
-<!-- REF #HTTPRequestClass.wait().Syntax -->
+<!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *time* : Real } ) : HTTPRequestClass<!-- END REF -->
 
-**.wait**( { *time* : Real } ) : HTTPRequestClass<!-- END REF -->
 
 <!-- REF #HTTPRequestClass.wait().Params -->
 |Parameter|Type||Description|

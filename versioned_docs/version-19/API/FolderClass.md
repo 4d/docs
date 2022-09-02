@@ -59,9 +59,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 </details>
 
-<!-- REF #_command_.Folder.Syntax -->
-
-**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
+<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
 
 <!-- REF FolderClass.Folder.Params -->
 |Parameter|Type||Description|
@@ -141,9 +139,7 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 |v17 R5|Added
 </details>
 
-<!--REF #FolderClass.create().Syntax -->
-
-**.create()** : Boolean<!-- END REF -->
+<!--REF #FolderClass.create().Syntax -->**.create()** : Boolean<!-- END REF -->
 
 <!--REF #FolderClass.create().Params -->
 |Parameter|Type||Description|
@@ -195,9 +191,7 @@ End if
 |v17 R5|Added
 </details>
 
-<!--REF #FolderClass.createAlias().Syntax -->
-
-**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
+<!--REF #FolderClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 <!--REF #FolderClass.createAlias().Params -->
 |Parameter|Type||Description|
@@ -250,9 +244,8 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 |v17 R5|Added
 </details>
 
-<!--REF #FolderClass.delete().Syntax -->
+<!--REF #FolderClass.delete().Syntax -->**.delete**( { *option* : Integer } )<!-- END REF -->
 
-**.delete**( { *option* : Integer } )<!-- END REF -->
 
 <!-- REF #FolderClass.delete().Params -->
 |Parameter|Type||Description|
@@ -326,9 +319,7 @@ macOS: -45 (The file is locked or the pathname is not correct)
 |v17 R5|Added
 </details>
 
-<!--REF #FolderClass.moveTo().Syntax -->
-
-**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
+<!--REF #FolderClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
 
 <!--REF #FolderClass.moveTo().Params -->
 |Parameter|Type||Description|
@@ -381,9 +372,7 @@ You want to move and rename a folder:
 |v17 R5|Added
 </details>
 
-<!--REF #FolderClass.rename().Syntax -->
-
-**.rename**( *newName* : Text ) : 4D.Folder<!-- END REF -->
+<!--REF #FolderClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.Folder<!-- END REF -->
 
 <!--REF #FolderClass.rename().Params -->
 |Parameter|Type||Description|

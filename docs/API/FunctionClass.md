@@ -118,9 +118,8 @@ A `4D.Function` object contains a piece of code that can be executed from an obj
 
 </details>
 
-<!-- REF #_command_.Formula.Syntax -->
+<!-- REF #_command_.Formula.Syntax -->**Formula** ( *formulaExp* : Expression ) : 4D.Function<!-- END REF -->
 
-**Formula** ( *formulaExp* : Expression ) : 4D.Function<!-- END REF -->
 
 <!-- REF #_command_.Formula.Params -->
 |Parameter|Type||Description|
@@ -255,9 +254,8 @@ Calling a formula using object notation:
 
 </details>
 
-<!-- REF #_command_.Formula from string.Syntax -->
+<!-- REF #_command_.Formula from string.Syntax -->**Formula from string**( *formulaString* : Text ) : 4D.Function<!-- END REF -->
 
-**Formula from string**( *formulaString* : Text ) : 4D.Function<!-- END REF -->
 
 <!-- REF #_command_.Formula from string.Params -->
 |Parameter|Type||Description|
@@ -313,9 +311,8 @@ The following code will create a dialog accepting a formula in text format:
 
 </details>
 
-<!-- REF #FunctionClass.apply().Syntax -->
+<!-- REF #FunctionClass.apply().Syntax -->**.apply**() : any<br/>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any<!-- END REF -->
 
-**.apply**() : any<br/>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.apply().Params -->
 |Parameter|Type||Description|
@@ -376,9 +373,8 @@ Note that `.apply()` is similar to [`.call()`](#call) except that parameters are
 
 </details>
 
-<!-- REF #FunctionClass.call().Syntax -->
+<!-- REF #FunctionClass.call().Syntax -->**.call**() : any<br/>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
 
-**.call**() : any<br/>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.call().Params -->
 |Parameter|Type||Description|
@@ -429,9 +425,7 @@ Note that `.call()` is similar to [`.apply()`](#apply) except that parameters ar
 
 </details>
 
-<!-- REF #FunctionClass.source.Syntax -->
-
-**.source** : Text <!-- END REF -->
+<!-- REF #FunctionClass.source.Syntax -->**.source** : Text <!-- END REF -->
 
 
 #### Description

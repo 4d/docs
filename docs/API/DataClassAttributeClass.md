@@ -47,9 +47,7 @@ This code assigns to *nameAttribute* and *revenuesAttribute* references to the n
 
 </details>
 
-<!-- REF DataClassAttributeClass.autoFilled.Syntax -->
-
-**.autoFilled** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.autoFilled.Syntax -->**.autoFilled** : Boolean<!-- END REF -->
 
 #### Description
 
@@ -75,9 +73,7 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 
 </details>
 
-<!-- REF DataClassAttributeClass.exposed.Syntax -->
-
-**.exposed** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.exposed.Syntax -->**.exposed** : Boolean<!-- END REF -->
 
 #### Description
 
@@ -100,9 +96,7 @@ The `.exposed` property is <!-- REF DataClassAttributeClass.exposed.Summary -->t
 
 </details>
 
-<!-- REF DataClassAttributeClass.fieldNumber.Syntax -->
-
-**.fieldNumber** : Integer<!-- END REF -->
+<!-- REF DataClassAttributeClass.fieldNumber.Syntax -->**.fieldNumber** : Integer<!-- END REF -->
 
 #### Description
 
@@ -126,9 +120,7 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 
 </details>
 
-<!-- REF DataClassAttributeClass.fieldType.Syntax -->
-
-**.fieldType** : Integer<!-- END REF -->
+<!-- REF DataClassAttributeClass.fieldType.Syntax -->**.fieldType** : Integer<!-- END REF -->
 
 #### Description
 
@@ -161,9 +153,7 @@ The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->
 
 </details>
 
-<!-- REF DataClassAttributeClass.indexed.Syntax -->
-
-**.indexed** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.indexed.Syntax -->**.indexed** : Boolean<!-- END REF -->
 
 #### Description
 
@@ -186,9 +176,7 @@ This property is not returned if `.kind` = "relatedEntity" or "relatedEntities".
 
 </details>
 
-<!-- REF DataClassAttributeClass.inverseName.Syntax -->
-
-**.inverseName** : Text<!-- END REF -->
+<!-- REF DataClassAttributeClass.inverseName.Syntax -->**.inverseName** : Text<!-- END REF -->
 
 #### Description
 
@@ -211,9 +199,7 @@ This property is not returned if `.kind` = "storage". It must be of the "related
 
 </details>
 
-<!-- REF DataClassAttributeClass.keywordIndexed.Syntax -->
-
-**.keywordIndexed** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.keywordIndexed.Syntax -->**.keywordIndexed** : Boolean<!-- END REF -->
 
 #### Description
 
@@ -237,9 +223,7 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 
 </details>
 
-<!-- REF DataClassAttributeClass.kind.Syntax -->
-
-**.kind** : Text<!-- END REF -->
+<!-- REF DataClassAttributeClass.kind.Syntax -->**.kind** : Text<!-- END REF -->
 
 #### Description
 
@@ -277,9 +261,7 @@ Given the following table and relation:
 
 </details>
 
-<!-- REF DataClassAttributeClass.mandatory.Syntax -->
-
-**.mandatory** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.mandatory.Syntax -->**.mandatory** : Boolean<!-- END REF -->
 
 #### Description
 
@@ -304,9 +286,7 @@ This property is not returned if [`.kind`](#kind) = "relatedEntity" or "relatedE
 
 </details>
 
-<!-- REF DataClassAttributeClass.name.Syntax -->
-
-**.name** : Text<!-- END REF -->
+<!-- REF DataClassAttributeClass.name.Syntax -->**.name** : Text<!-- END REF -->
 
 #### Description
 
@@ -332,9 +312,7 @@ The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->returns th
 
 </details>
 
-<!-- REF DataClassAttributeClass.path.Syntax -->
-
-**.path** : Text<!-- END REF -->
+<!-- REF DataClassAttributeClass.path.Syntax -->**.path** : Text<!-- END REF -->
 
 #### Description
 
@@ -360,9 +338,7 @@ The `.path` property <!-- REF DataClassAttributeClass.path.Summary -->returns th
 
 </details>
 
-<!-- REF DataClassAttributeClass.readOnly.Syntax -->
-
-**.readOnly** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.readOnly.Syntax -->**.readOnly** : Boolean<!-- END REF -->
 
 #### Description
 
@@ -383,9 +359,7 @@ For example, computed attributes without [`set` function](ORDA/ordaClasses.md#fu
 
 </details>
 
-<!-- REF DataClassAttributeClass.relatedDataClass.Syntax -->
-
-**.relatedDataClass** : Text<!-- END REF -->
+<!-- REF DataClassAttributeClass.relatedDataClass.Syntax -->**.relatedDataClass** : Text<!-- END REF -->
 
 #### Description
 
@@ -418,9 +392,7 @@ Given the following tables and relations:
 
 </details>
 
-<!-- REF DataClassAttributeClass.type.Syntax -->
-
-**.type** : Text<!-- END REF -->
+<!-- REF DataClassAttributeClass.type.Syntax -->**.type** : Text<!-- END REF -->
 
 #### Description
 
@@ -454,9 +426,7 @@ The conceptual value type depends on the attribute [`.kind`](#kind).
 
 </details>
 
-<!-- REF DataClassAttributeClass.unique.Syntax -->
-
-**.unique** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.unique.Syntax -->**.unique** : Boolean<!-- END REF -->
 
 #### Description
 
