@@ -38,9 +38,8 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 
 </details>
 
-<!-- REF #_command_.SMTP New transporter.Syntax -->
+<!-- REF #_command_.SMTP New transporter.Syntax -->**SMTP New transporter**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
-**SMTP New transporter**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
 <!-- REF #_command_.SMTP New transporter.Params -->
 | 引数     | タイプ                |    | 詳細                                                                             |
@@ -115,9 +114,8 @@ The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summ
 
 ## 4D.SMTPTransporter.new()
 
-<!-- REF #4D.SMTPTransporter.new().Syntax -->
+<!-- REF #4D.SMTPTransporter.new().Syntax -->**4D.SMTPTransporter.new**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
-**4D.SMTPTransporter.new**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
 <!-- REF #4D.SMTPTransporter.new().Params -->
 | 引数     | タイプ                |    | 詳細                                                                             |
@@ -181,9 +179,7 @@ SMTPステータスコードについての詳細は [こちらのページ](htt
 | v17 R4 | 追加 |
 </details>
 
-<!-- REF #SMTPTransporterClass.keepAlive.Syntax -->
-
-**.keepAlive** : Boolean<!-- END REF -->
+<!-- REF #SMTPTransporterClass.keepAlive.Syntax -->**.keepAlive** : Boolean<!-- END REF -->
 
 #### 詳細
 
@@ -209,9 +205,8 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 
 </details>
 
-<!-- REF #SMTPTransporterClass.send().Syntax -->
+<!-- REF #SMTPTransporterClass.send().Syntax -->**.send**( *mail* : Object ) : Object<!-- END REF -->
 
-**.send**( *mail* : Object ) : Object<!-- END REF -->
 
 <!-- REF #SMTPTransporterClass.send().Params -->
 | 引数     | タイプ    |    | 詳細                                           |
