@@ -55,6 +55,7 @@ ASSERT($status.success)
 <!-- REF #4D.CryptoKey.new().Syntax --> **4D.CryptoKey.new**( *settings* : Object ) : 4D.CryptoKey<!-- END REF -->
 
 
+
 <!-- REF #4D.CryptoKey.new().Params -->
 | Parámetros | Type         |    | Descripción                                                                    |
 | ---------- | ------------ | -- | ------------------------------------------------------------------------------ |
@@ -109,6 +110,7 @@ Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised
 <!-- REF #CryptoKey.decrypt().Syntax --> **.decrypt**( *message* : Text ; *options* : Object ) : Object<!-- END REF -->
 
 
+
 <!-- REF #CryptoKey.decrypt().Params -->
 | Parámetros | Type   |    | Descripción                                                                          |
 | ---------- | ------ | -- | ------------------------------------------------------------------------------------ |
@@ -156,6 +158,7 @@ En caso de que el *message* no haya podido ser descifrado por no haber sido encr
 <!-- REF #CryptoKey.encrypt().Syntax --> **.encrypt**( *message* : Text ; *options* : Object ) : Text<!-- END REF -->
 
 
+
 <!-- REF #CryptoKey.encrypt().Params -->
 | Parámetros | Type   |    | Descripción                                                                                                 |
 | ---------- | ------ | -- | ----------------------------------------------------------------------------------------------------------- |
@@ -196,6 +199,7 @@ El valor devuelto es un mensaje encriptado.
 <!-- REF #CryptoKey.getPrivateKey().Syntax --> **.getPrivateKey()** : Text<!-- END REF -->
 
 
+
 <!-- REF #CryptoKey.getPrivateKey().Params -->
 | Parámetros | Type |    | Descripción                                             |
 | ---------- | ---- | -- | ------------------------------------------------------- |
@@ -222,6 +226,7 @@ El valor devuelto es la llave privada.
 
 
 <!-- REF #CryptoKey.getPublicKey().Syntax --> **.getPublicKey( )** : Text<!-- END REF -->
+
 
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
@@ -266,6 +271,7 @@ El valor devuelto es la llave pública.
 
 
 <!-- REF #CryptoKey.sign().Syntax --> **.sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
+
 
 
 <!-- REF #CryptoKey.sign().Params -->
@@ -343,6 +349,7 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 
 
 <!-- REF #CryptoKey.verify().Syntax --> **.verify**( *message* : Text ; *signature* : Text ; *options* : Object) : object<!-- END REF -->
+
 
 
 <!-- REF #CryptoKey.verify().Params -->
