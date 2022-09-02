@@ -36,9 +36,9 @@ Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface subministra
 
 </details>
 
-<!-- REF #_command_.ds.Syntax -->
 
-**ds** { ( *localID* : Text ) } : cs. DataStore <!-- END REF -->
+<!-- REF #_command_.ds.Syntax -->**ds** { ( *localID* : Text ) } : cs. DataStore <!-- END REF -->
+
 
 
 <!-- REF #_command_.ds.Params -->
@@ -107,9 +107,9 @@ Usar a datastore principal do banco de dados 4D:
 
 </details>
 
-<!-- REF #_command_.Open datastore.Syntax -->
 
-**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs. DataStore <!-- END REF -->
+<!-- REF #_command_.Open datastore.Syntax -->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs. DataStore <!-- END REF -->
+
 
 
 <!-- REF #_command_.Open datastore.Params -->
@@ -213,9 +213,8 @@ Em caso de erro, o comando devolve **Null**. Se não for possível acessar o arm
 
 </details>
 
-<!-- REF DataStoreClass.dataclassName.Syntax -->
 
-***.dataclassName*** : 4D. DataClass<!-- END REF -->
+<!-- REF DataStoreClass.dataclassName.Syntax -->***.dataclassName*** : 4D. DataClass<!-- END REF -->
 
 #### Descrição
 
@@ -248,9 +247,9 @@ Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface subministra
 
 </details>
 
-<!-- REF #DataStoreClass.cancelTransaction().Syntax -->
 
-**.cancelTransaction()**<!-- END REF -->
+<!-- REF #DataStoreClass.cancelTransaction().Syntax -->**.cancelTransaction()**<!-- END REF -->
+
 
 
 <!-- REF #DataStoreClass.cancelTransaction().Params -->
@@ -283,9 +282,9 @@ Ver  exemplo da função [`.startTransaction()`](#starttransaction).
 
 </details>
 
-<!-- REF #DataStoreClass.encryptionStatus().Syntax -->
 
-**.encryptionStatus()**: Object<!-- END REF -->
+<!-- REF #DataStoreClass.encryptionStatus().Syntax -->**.encryptionStatus()**: Object<!-- END REF -->
+
 
 
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
@@ -359,9 +358,9 @@ Se quiser saber o número de tabelas criptografadas no arquivo de dados atual:
 
 </details>
 
-<!-- REF #DataStoreClass.getInfo().Syntax -->
 
-**.getInfo()**: Object<!-- END REF -->
+<!-- REF #DataStoreClass.getInfo().Syntax -->**.getInfo()**: Object<!-- END REF -->
+
 
 
 <!-- REF #DataStoreClass.getInfo().Params -->
@@ -429,9 +428,9 @@ Em um armazém de dados remoto:
 
 </details>
 
-<!-- REF #DataStoreClass.getRequestLog().Syntax -->
 
-**.getRequestLog()** : Collection<!-- END REF -->
+<!-- REF #DataStoreClass.getRequestLog().Syntax -->**.getRequestLog()** : Collection<!-- END REF -->
+
 
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
@@ -468,9 +467,9 @@ Ver o exemplo 2 de [`.startRequestLog()`](#startrequestlog).
 
 </details>
 
-<!-- REF #DataStoreClass.isAdminProtected().Syntax -->
 
-**.isAdminProtected()** : Boolean<!-- END REF -->
+<!-- REF #DataStoreClass.isAdminProtected().Syntax -->**.isAdminProtected()** : Boolean<!-- END REF -->
+
 
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
@@ -501,9 +500,9 @@ Como padrão, o acesso ao Explorador de Dados se concede para as sessões `webAd
 
 </details>
 
-<!-- REF #DataStoreClass.makeSelectionsAlterable().Syntax -->
 
-**.makeSelectionsAlterable()**<!-- END REF -->
+<!-- REF #DataStoreClass.makeSelectionsAlterable().Syntax -->**.makeSelectionsAlterable()**<!-- END REF -->
+
 
 
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Params -->
@@ -534,9 +533,9 @@ quando nesta função não for chamada, as novas seleções de entidades podem s
 
 </details>
 
-<!-- REF #DataStoreClass.provideDataKey().Syntax -->
 
-**.provideDataKey**( *curPassPhrase* : Text ) : Object <br/>**.provideDataKey**( *curDataKey* : Object ) : Object <!-- END REF -->
+<!-- REF #DataStoreClass.provideDataKey().Syntax -->**.provideDataKey**( *curPassPhrase* : Text ) : Object <br/>**.provideDataKey**( *curDataKey* : Object ) : Object <!-- END REF -->
+
 
 
 <!-- REF #DataStoreClass.provideDataKey().Params -->
@@ -613,6 +612,7 @@ Se não for dada uma *curPassphrase* ou *curDataKey*, `.provideDataKey()` devolv
 <!-- REF #DataStoreClass.setAdminProtection().Syntax --> **.setAdminProtection**( *status* : Boolean )<!-- END REF -->
 
 
+
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 | Parâmetros | Tipo     |    | Descrição                                                                                                                                      |
 | ---------- | -------- | -- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -651,9 +651,9 @@ Se criar um método projeto *protectDataFile* para chamar antes dos lançamentos
 
 </details>
 
-<!-- REF #DataStoreClass.startRequestLog().Syntax -->
 
-**.startRequestLog**()<br/>**.startRequestLog**( *file* : 4D. File )<br/>**.startRequestLog**( *reqNum* : Integer )<!-- END REF -->
+<!-- REF #DataStoreClass.startRequestLog().Syntax -->**.startRequestLog**()<br/>**.startRequestLog**( *file* : 4D. File )<br/>**.startRequestLog**( *reqNum* : Integer )<!-- END REF -->
+
 
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
@@ -728,9 +728,9 @@ Se quiser registrar as petições dos clientes ORDA na memória:
 
 </details>
 
-<!-- REF #DataStoreClass.startTransaction().Syntax -->
 
-**.startTransaction()**<!-- END REF -->
+<!-- REF #DataStoreClass.startTransaction().Syntax -->**.startTransaction()**<!-- END REF -->
+
 
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
@@ -792,9 +792,9 @@ Pode aninhar várias transações (subtransações). Cada transação ou subtran
 
 </details>
 
-<!-- REF #DataStoreClass.stopRequestLog().Syntax -->
 
-**.stopRequestLog()**  <!-- END REF -->
+<!-- REF #DataStoreClass.stopRequestLog().Syntax -->**.stopRequestLog()**  <!-- END REF -->
+
 
 
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
@@ -825,9 +825,9 @@ Ver exemplos [`.startRequestLog()`](#startrequestlog).
 
 </details>
 
-<!-- REF #DataStoreClass.validateTransaction().Syntax -->
 
-**.validateTransaction()**  <!-- END REF -->
+<!-- REF #DataStoreClass.validateTransaction().Syntax -->**.validateTransaction()**  <!-- END REF -->
+
 
 
 <!-- REF #DataStoreClass.validateTransaction().Params -->
