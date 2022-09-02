@@ -66,9 +66,8 @@ Una colección se inicializa con:
 
 ## `Nueva colección`
 
-<!-- REF #_command_.New collection.Syntax -->
+<!-- REF #_command_.New collection.Syntax -->**New collection** {( *...value* : any )} : Collection<!-- END REF -->
 
-**New collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF #_command_.New collection.Params -->
 | Parámetros | Type                                                                    |    | Descripción                                |
@@ -148,9 +147,8 @@ Se crea una nueva colección y se añade un nuevo elemento:
 
 </details>
 
-<!-- REF #_command_.New shared collection.Syntax -->
+<!-- REF #_command_.New shared collection.Syntax -->**New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
 
-**New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
 
 <!-- REF #_command_.New shared collection.Params -->
 | Parámetros | Type                                                                |    | Descripción                                      |
@@ -210,9 +208,8 @@ Puede pasar cualquier número de valores de los siguientes tipos soportados:
 
 </details>
 
-<!-- REF #collection.average().Syntax -->
+<!-- REF #collection.average().Syntax -->**.average**( {*propertyPath* : Text } ) : Real<!-- END REF -->
 
-**.average**( {*propertyPath* : Text } ) : Real<!-- END REF -->
 
 <!-- REF #collection.average().Params -->
 | Parámetros   | Type            |    | Descripción                                                                           |
@@ -268,9 +265,8 @@ Si la colección contiene objetos, pasa el parámetro *propertyPath* para indica
 
 </details>
 
-<!-- REF #collection.clear().Syntax -->
+<!-- REF #collection.clear().Syntax -->**.clear()** : Collection<!-- END REF -->
 
-**.clear()** : Collection<!-- END REF -->
 
 <!-- REF #collection.clear().Params -->
 | Parámetros | Type       |    | Descripción                                                                      |
@@ -306,9 +302,8 @@ $vSize:=$col.length //$vSize=0
 
 </details>
 
-<!-- REF #collection.combine().Syntax -->
+<!-- REF #collection.combine().Syntax -->**.combine**( *col2* : Collection {; *index* : Integer } ) : Collection<!-- END REF -->
 
-**.combine**( *col2* : Collection {; *index* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.combine().Params -->
 | Parámetros | Type       |    | Descripción                                                                                           |
@@ -353,9 +348,8 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 </details>
 
-<!-- REF #collection.concat().Syntax -->
+<!-- REF #collection.concat().Syntax -->**.concat**( *value* : any { *;...valueN* } ) : Collection<!-- END REF -->
 
-**.concat**( *value* : any { *;...valueN* } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.concat().Params -->
 | Parámetros | Type                                                           |    | Descripción                                                                                                              |
@@ -397,9 +391,8 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 </details>
 
-<!-- REF #collection.copy().Syntax -->
+<!-- REF #collection.copy().Syntax -->**.copy**() : Collection<br/>**.copy**( *option* : Integer ) : Collection<br/>**.copy**( *option* : Integer ; *groupWithCol* : Collection ) : Collection<br/>**.copy**( *option* : Integer ; *groupWithObj* : Object ) : Collection<!-- END REF -->
 
-**.copy**() : Collection<br/>**.copy**( *option* : Integer ) : Collection<br/>**.copy**( *option* : Integer ; *groupWithCol* : Collection ) : Collection<br/>**.copy**( *option* : Integer ; *groupWithObj* : Object ) : Collection<!-- END REF -->
 
 <!-- REF #collection.copy().Params -->
 | Parámetros   | Type       |    | Descripción                                                                                                        |
@@ -522,9 +515,8 @@ Este ejemplo ilustra el uso de la opción `ck resolve pointers`:
 
 </details>
 
-<!-- REF #collection.count().Syntax -->
+<!-- REF #collection.count().Syntax -->**.count**( { *propertyPath* : Text } ) : Real<!-- END REF -->
 
-**.count**( { *propertyPath* : Text } ) : Real<!-- END REF -->
 
 <!-- REF #collection.count().Params -->
 | Parámetros   | Type |    | Descripción                                                      |
@@ -568,9 +560,8 @@ Si la colección contiene objetos, se puede pasar el parámetro *propertyPath*. 
 
 </details>
 
-<!-- REF #collection.countValues().Syntax -->
+<!-- REF #collection.countValues().Syntax -->**.countValues**( *value* : any {; *propertyPath* : Text } ) : Real<!-- END REF -->
 
-**.countValues**( *value* : any {; *propertyPath* : Text } ) : Real<!-- END REF -->
 
 <!-- REF #collection.countValues().Params -->
 | Parámetros   | Type                                            |    | Descripción                                                      |
@@ -643,9 +634,8 @@ El parámetro opcional *propertyPath* permite contar valores dentro de una colec
 
 </details>
 
-<!-- REF #collection.distinct().Syntax -->
+<!-- REF #collection.distinct().Syntax -->**.distinct**( {*option* : Integer} ) : Collection<br/>**.distinct**( *propertyPath* : Text {; *option* : Integer } ) : Collection<!-- END REF -->
 
-**.distinct**( {*option* : Integer} ) : Collection<br/>**.distinct**( *propertyPath* : Text {; *option* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.distinct().Params -->
 | Parámetros   | Type       |    | Descripción                                                           |
@@ -694,9 +684,8 @@ Si la colección contiene objetos, puede pasar el parámetro *propertyPath* para
 
 </details>
 
-<!-- REF #collection.equal().Syntax -->
+<!-- REF #collection.equal().Syntax -->**.equal**( *collection2* : Collection {; *option* : Integer } ) : Boolean<!-- END REF -->
 
-**.equal**( *collection2* : Collection {; *option* : Integer } ) : Boolean<!-- END REF -->
 
 <!-- REF #collection.equal().Params -->
 | Parámetros  | Type       |    | Descripción                                                                               |
@@ -750,9 +739,8 @@ Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluaci
 
 </details>
 
-<!-- REF #collection.every().Syntax -->
+<!-- REF #collection.every().Syntax -->**.every**( *methodName* : Text { ;*...param* : any } ) : Boolean<br/>**.every**( *startFrom* : Integer ; *methodName* : Text { ;*...param* : any } ) : Boolean<!-- END REF -->
 
-**.every**( *methodName* : Text { ;*...param* : any } ) : Boolean<br/>**.every**( *startFrom* : Integer ; *methodName* : Text { ;*...param* : any } ) : Boolean<!-- END REF -->
 
 <!-- REF #collection.every().Params -->
 | Parámetros | Type    |    | Descripción                                                                  |
@@ -844,9 +832,8 @@ End if
 
 </details>
 
-<!-- REF #collection.extract().Syntax -->
+<!-- REF #collection.extract().Syntax -->**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathN* : Text ;... *targetPathN* : Text } ) : Collection<!-- END REF -->
 
-**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathN* : Text ;... *targetPathN* : Text } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.extract().Params -->
 | Parámetros   | Type       |    | Descripción                                                                                                                             |
@@ -913,9 +900,8 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 </details>
 
-<!-- REF #collection.fill().Syntax -->
+<!-- REF #collection.fill().Syntax -->**.fill**( *value* : any ) : Collection<br/>**.fill**( *value* : any ;  *startFrom*  : Integer { ; *end* : Integer } ) : Collection<!-- END REF -->
 
-**.fill**( *value* : any ) : Collection<br/>**.fill**( *value* : any ;  *startFrom*  : Integer { ; *end* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.fill().Params -->
 | Parámetros | Type                                            |    | Descripción                                                       |
@@ -966,9 +952,8 @@ En caso de incoherencia, se aplican las siguientes reglas:
 
 </details>
 
-<!-- REF #collection.filter().Syntax -->
+<!-- REF #collection.filter().Syntax -->**.filter**( *methodName* : Text { ; *...param* : any } ) : Collection<!-- END REF -->
 
-**.filter**( *methodName* : Text { ; *...param* : any } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.filter().Params -->
 | Parámetros | Type       |    | Descripción                                                                           |
@@ -1057,9 +1042,8 @@ El código de ***TypeLookUp*** es:
 
 </details>
 
-<!-- REF #collection.find().Syntax -->
+<!-- REF #collection.find().Syntax -->**.find**( *methodName* : Text { ; *...param* : any } ) : any<br/>**.find**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) : any<!-- END REF -->
 
-**.find**( *methodName* : Text { ; *...param* : any } ) : any<br/>**.find**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) : any<!-- END REF -->
 
 <!-- REF #collection.find().Params -->
 | Parámetros | Type    |    | Descripción                                                                        |
@@ -1152,9 +1136,8 @@ El código para ***FindCity*** es:
 
 </details>
 
-<!-- REF #collection.findIndex().Syntax -->
+<!-- REF #collection.findIndex().Syntax -->**.findIndex**( *methodName* : Text { ; *...param* : any } ) : Integer<br/>**.findIndex**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) : Integer<!-- END REF -->
 
-**.findIndex**( *methodName* : Text { ; *...param* : any } ) : Integer<br/>**.findIndex**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) : Integer<!-- END REF -->
 
 <!-- REF #collection.findIndex().Params -->
 | Parámetros | Type    |    | Descripción                                                               |
@@ -1228,9 +1211,8 @@ El código del método ***FindCity*** es:
 
 </details>
 
-<!-- REF #collection.indexOf().Syntax -->
+<!-- REF #collection.indexOf().Syntax -->**.indexOf**(  *toSearch* : expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
 
-**.indexOf**(  *toSearch* : expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
 
 <!-- REF #collection.indexOf().Params -->
 | Parámetros | Type      |    | Descripción                                                                                             |
@@ -1285,9 +1267,8 @@ Opcionalmente, puede pasar el índice de la colección desde el que iniciar la b
 
 </details>
 
-<!-- REF #collection.indices().Syntax -->
+<!-- REF #collection.indices().Syntax -->**.indices**(  *queryString* : Text { ; *...value* : any } ) : Collection <!-- END REF -->
 
-**.indices**(  *queryString* : Text { ; *...value* : any } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.indices().Params -->
 | Parámetros  | Type       |    | Descripción                                                                         |
@@ -1339,9 +1320,8 @@ Para una descripción detallada de los parámetros *queryString* y *value*, cons
 
 </details>
 
-<!-- REF #collection.insert().Syntax -->
+<!-- REF #collection.insert().Syntax -->**.insert**( *index* : Integer ; *element* : any ) : Collection <!-- END REF -->
 
-**.insert**( *index* : Integer ; *element* : any ) : Collection <!-- END REF -->
 
 <!-- REF #collection.insert().Params -->
 | Parámetros | Type       |    | Descripción                                                                |
@@ -1389,9 +1369,8 @@ Se puede insertar cualquier tipo de elemento aceptado por una colección, inclus
 
 </details>
 
-<!-- REF #collection.join().Syntax -->
+<!-- REF #collection.join().Syntax -->**.join**( *delimiter* : Text { ; *option* : Integer } ) : Text <!-- END REF -->
 
-**.join**( *delimiter* : Text { ; *option* : Integer } ) : Text <!-- END REF -->
 
 <!-- REF #collection.join().Params -->
 | Parámetros | Type    |    | Descripción                                                                                                      |
@@ -1432,9 +1411,8 @@ Por defecto, los elementos nulos o vacíos de la colección se devuelven en la c
 
 </details>
 
-<!-- REF #collection.lastIndexOf().Syntax -->
+<!-- REF #collection.lastIndexOf().Syntax -->**.lastIndexOf**( *toSearch* : expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
 
-**.lastIndexOf**( *toSearch* : expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
 
 <!-- REF #collection.lastIndexOf().Params -->
 | Parámetros | Type      |    | Descripción                                                                                                  |
@@ -1490,10 +1468,7 @@ Opcionalmente, puede pasar el índice de la colección desde el cual iniciar una
 
 </details>
 
-<!-- REF #collection.length.Syntax -->
-
-**.length**: Integer
-<!-- END REF -->
+<!-- REF #collection.length.Syntax -->**.length**: Integer<!-- END REF -->
 
 #### Descripción
 
@@ -1523,9 +1498,8 @@ La propiedad `.length` se inicializa cuando se crea la colección. Añadir o eli
 
 </details>
 
-<!-- REF #collection.map().Syntax -->
+<!-- REF #collection.map().Syntax -->**.map**( *methodName* : Text { ; *...param* : any } ) : Collection <!-- END REF -->
 
-**.map**( *methodName* : Text { ; *...param* : any } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.map().Params -->
 | Parámetros | Type       |    | Descripción                                                                |
@@ -1584,9 +1558,8 @@ Aqui está el método ***Percentage***:
 
 </details>
 
-<!-- REF #collection.max().Syntax -->
+<!-- REF #collection.max().Syntax -->**.max**( { *propertyPath* : Text } ) : any <!-- END REF -->
 
-**.max**( { *propertyPath* : Text } ) : any <!-- END REF -->
 
 <!-- REF #collection.max().Params -->
 | Parámetros   | Type                                            |    | Descripción                                                         |
@@ -1633,9 +1606,8 @@ Si la colección está vacía, `.max()` devuelve *Undefined*.
 
 </details>
 
-<!-- REF #collection.min().Syntax -->
+<!-- REF #collection.min().Syntax -->**.min**( { *propertyPath* : Text } ) : any <!-- END REF -->
 
-**.min**( { *propertyPath* : Text } ) : any <!-- END REF -->
 
 <!-- REF #collection.min().Params -->
 | Parámetros   | Type                                            |    | Descripción                                                         |
@@ -1682,9 +1654,8 @@ Si la colección está vacía, `.min()` devuelve *Undefined*.
 
 </details>
 
-<!-- REF #collection.orderBy().Syntax -->
+<!-- REF #collection.orderBy().Syntax -->**.orderBy**( ) : Collection<br/>**.orderBy**( *pathStrings* : Text ) : Collection<br/>**.orderBy**( *pathObjects* : Collection ) : Collection<br/>**.orderBy**( *ascOrDesc* : Integer ) : Collection <!-- END REF -->
 
-**.orderBy**( ) : Collection<br/>**.orderBy**( *pathStrings* : Text ) : Collection<br/>**.orderBy**( *pathObjects* : Collection ) : Collection<br/>**.orderBy**( *ascOrDesc* : Integer ) : Collection <!-- END REF -->
 
 <!-- REF #collection.orderBy().Params -->
 | Parámetros  | Type       |    | Descripción                                                                   |
@@ -1817,9 +1788,8 @@ Ordenar con una ruta de propiedad:
 
 </details>
 
-<!-- REF #collection.orderByMethod().Syntax -->
+<!-- REF #collection.orderByMethod().Syntax -->**.orderByMethod**( *methodName* : Text { ; ...*extraParam* : expression } ) : Collection <!-- END REF -->
 
-**.orderByMethod**( *methodName* : Text { ; ...*extraParam* : expression } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.orderByMethod().Params -->
 | Parámetros | Type       |    | Descripción                                                                   |
@@ -1921,9 +1891,8 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 </details>
 
-<!-- REF #collection.pop().Syntax -->
+<!-- REF #collection.pop().Syntax -->**.pop()** : any <!-- END REF -->
 
-**.pop()** : any <!-- END REF -->
 
 <!-- REF #collection.pop().Params -->
 | Parámetros | Type |    | Descripción                                                |
@@ -1966,9 +1935,8 @@ Cuando se aplica a una colección vacía, `.pop()` devuelve ***undefined***.
 
 </details>
 
-<!-- REF #collection.push().Syntax -->
+<!-- REF #collection.push().Syntax -->**.push**( *element* : any { ;...*elementN* } ) : Collection <!-- END REF -->
 
-**.push**( *element* : any { ;...*elementN* } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.push().Params -->
 | Parámetros | Type       |    | Descripción                                                                       |
@@ -2019,9 +1987,8 @@ Quiere ordenar la colección resultante:
 
 </details>
 
-<!-- REF #collection.query().Syntax -->
+<!-- REF #collection.query().Syntax -->**.query**( *queryString* : Text ; *...value* : any ) : Collection<br/>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection <!-- END REF -->
 
-**.query**( *queryString* : Text ; *...value* : any ) : Collection<br/>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection <!-- END REF -->
 
 <!-- REF #collection.query().Params -->
 | Parámetros    | Type       |    | Descripción                                                                            |
@@ -2125,9 +2092,8 @@ Se pueden encontrar más ejemplos de búsquedas en la página `dataClass.query()
 
 </details>
 
-<!-- REF #collection.reduce().Syntax -->
+<!-- REF #collection.reduce().Syntax -->**.reduce**( *methodName* : Text ) : any <br/>**.reduce**( *methodName* : Text ; *initValue* : any { ; *...param* : expression } ) : any <!-- END REF -->
 
-**.reduce**( *methodName* : Text ) : any <br/>**.reduce**( *methodName* : Text ; *initValue* : any { ; *...param* : expression } ) : any <!-- END REF -->
 
 <!-- REF #collection.reduce().Params -->
 | Parámetros | Type                                            |    | Descripción                                                                        |
@@ -2211,9 +2177,8 @@ Con el siguiente método ***Flatten***:
 
 </details>
 
-<!-- REF #collection.remove().Syntax -->
+<!-- REF #collection.remove().Syntax -->**.remove**( *index* : Integer { ; *howMany* : Integer } ) : Collection <!-- END REF -->
 
-**.remove**( *index* : Integer { ; *howMany* : Integer } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.remove().Params -->
 | Parámetros | Type       |    | Descripción                                                               |
@@ -2264,9 +2229,8 @@ Si se intenta eliminar un elemento de una colección vacía, el método no hace 
 
 </details>
 
-<!-- REF #collection.resize().Syntax -->
+<!-- REF #collection.resize().Syntax -->**.resize**( *size* : Integer { ; *defaultValue* : any } ) : Collection <!-- END REF -->
 
-**.resize**( *size* : Integer { ; *defaultValue* : any } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.resize().Params -->
 | Parámetros   | Type                                            |    | Descripción                                                  |
@@ -2318,9 +2282,8 @@ Por defecto, los nuevos elementos se llenan con valores **null**. Puede especifi
 
 </details>
 
-<!-- REF #collection.reverse().Syntax -->
+<!-- REF #collection.reverse().Syntax -->**.reverse( )** : Collection <!-- END REF -->
 
-**.reverse( )** : Collection <!-- END REF -->
 
 <!-- REF #collection.reverse().Params -->
 | Parámetros | Type       |    | Descripción                                                |
@@ -2355,9 +2318,8 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 
 </details>
 
-<!-- REF #collection.shift().Syntax -->
+<!-- REF #collection.shift().Syntax -->**.shift()** : any<!-- END REF -->
 
-**.shift()** : any<!-- END REF -->
 
 <!-- REF #collection.shift().Params -->
 | Parámetros | Type |    | Descripción                                                |
@@ -2397,9 +2359,8 @@ Si la colección está vacía, este método no hace nada.
 
 </details>
 
-<!-- REF #collection.slice().Syntax -->
+<!-- REF #collection.slice().Syntax -->**.slice**( *startFrom* : Integer { ; *end* : Integer } ) : Collection<!-- END REF -->
 
-**.slice**( *startFrom* : Integer { ; *end* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.slice().Params -->
 | Parámetros | Type       |    | Descripción                                                                                    |
@@ -2446,9 +2407,8 @@ La colección devuelta contiene el elemento especificado por *startFrom* y todos
 
 </details>
 
-<!-- REF #collection.some().Syntax -->
+<!-- REF #collection.some().Syntax -->**.some**( *methodName* : Text { ; *...param* : any } ) : Boolean<br/>**.some**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) : Boolean<!-- END REF -->
 
-**.some**( *methodName* : Text { ; *...param* : any } ) : Boolean<br/>**.some**( *startFrom* : Integer ; *methodName* : Text { ; *...param* : any } ) : Boolean<!-- END REF -->
 
 <!-- REF #collection.some().Params -->
 | Parámetros | Type    |    | Descripción                                                                             |
@@ -2521,9 +2481,8 @@ Con el siguiente método *NumberGreaterThan0*:
 
 </details>
 
-<!-- REF #collection.sort().Syntax -->
+<!-- REF #collection.sort().Syntax -->**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
 
-**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
 
 <!-- REF #collection.sort().Params -->
 | Parámetros | Type       |    | Descripción                                                            |
@@ -2608,9 +2567,8 @@ Si la colección contiene elementos de diferentes tipos, se agrupan primero por 
 
 </details>
 
-<!-- REF #collection.sum().Syntax -->
+<!-- REF #collection.sum().Syntax -->**.sum**( { *propertyPath* : Text } ) : Real<!-- END REF -->
 
-**.sum**( { *propertyPath* : Text } ) : Real<!-- END REF -->
 
 <!-- REF #collection.sum().Params -->
 | Parámetros   | Type |    | Descripción                                                      |
@@ -2668,9 +2626,8 @@ Si la colección contiene objetos, pasa el parámetro *propertyPath* para indica
 
 </details>
 
-<!-- REF #collection.unshift().Syntax -->
+<!-- REF #collection.unshift().Syntax -->**.unshift**( *value* : any { ;...*valueN* : any } ) : Collection<!-- END REF -->
 
-**.unshift**( *value* : any { ;...*valueN* : any } ) : Collection<!-- END REF -->
 
 <!-- REF #collection.unshift().Params -->
 | Parámetros                 | Type                                   |    | Descripción                                       |
