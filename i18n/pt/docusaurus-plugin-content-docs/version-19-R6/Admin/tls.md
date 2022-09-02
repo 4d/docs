@@ -21,7 +21,7 @@ Configuração de rede usando TSL:
 
 O protocolo TLS foi criado para autenticar o emissor e o recipiente e assim garantir a confidencialidade e integridade da troca de informações:
 
-- **Authenticação**: As identidades do emissor e do receptor são confirmadas.
+- **Autenticação**: As identidades do emissor e do receptor são confirmadas.
 - **Confidencialidade**: O dado enviado é criptografado para que um terceiro não possa entender a mensagem.
 - **Integridade**: Os dados recebidos não foram modificados, seja por acidente ou com má intenção.
 
@@ -65,30 +65,30 @@ O servidor 4D pode trabalhar em modo seguro. Um certificado é válido de 3 mese
 
 ## Instalação e ativação
 
-### Installing `key.pem` and `cert.pem` files
+### Instalação de arquivos `key.pem` e `cert.pem`
 
-To be able to use the TLS protocol with the server, you must install the **key.pem** (document containing the private encryption key) and **cert.pem** (document containing the certificate) at the appropriate location(s). Different locations are required depending on the server on which you want to use TLS.
+Para poder utilizar o protocolo TLS com o servidor, deve instalar o **key.pem** (documento contendo a chave privada de encriptação) e **cert.pem** (documento contendo o certificado) nos locais apropriados. São necessários diferentes locais, dependendo do servidor em que se pretende utilizar o TLS.
 > Arquivos padrão *key.pem* e *cert.pem* são oferecidos com 4D. Para um maior nível de segurança, recomendamos fortemente que esses arquivos sejam substituídos por seus próprios certificados.
 
-#### With the web server
+#### Com o servidor web
 
-To be used by the 4D web server, the **key.pem** and **cert.pem** files must be placed:
+Para serem utilizados pelo servidor web 4D, os arquivos **key.pem** e **cert.pem** devem ser colocados:
 
-- with 4D in local mode or 4D Server, next to the [project folder](Project/architecture.md#project-folder)
-- with 4D in remote mode, in the client database folder on the remote machine (for more information about the location of this folder, see the [`Get 4D folder`](https://doc.4d.com/4dv19/help/command/en/page485.html) command).
+- com 4D em modo local ou 4D Server, ao lado da pasta de projetos [](Project/architecture.md#project-folder)
+- com 4D em modo remoto, esses arquivos devem estar na pasta de banco de dados cliente na máquina remota (para saber mais sobre a localização dessa pasta, veja o comando  [`Get 4D folder`](https://doc.4d.com/4dv19/help/command/en/page485.html) ).
 
 Deve copiar esses arquivos manualmente na máquina remota.
 
-#### With the application server (client-server desktop applications)
+#### Com o servidor de aplicações (aplicações de desktop cliente-servidor)
 
-To be used by the 4D application server, the **key.pem** and **cert.pem** files must be placed:
+Para serem utilizados pelo servidor de aplicação 4D, os arquivos**key.pem** e **cert.pem** devem ser colocados:
 
-- in the [**Resources** folder](Project/architecture.md#resources) of the 4D Server application
-- and in the **Resources** folder on each remote 4D application (for more information about the location of this folder, see the [`Get 4D folder`](https://doc.4d.com/4dv19/help/command/en/page485.html) command).
+- na pasta [**Resources** pasta](Project/architecture.md#resources) da aplicação Servidor 4D
+- e na pasta **Resources** em cada aplicação 4D remota (para mais informações sobre a localização desta pasta, ver o comando [`Get 4D folder`](https://doc.4d.com/4dv19/help/command/en/page485.html)).
 
-#### With the SQL server
+#### Com o servidor SQL
 
-To be used by the 4D SQL server, the **key.pem** and **cert.pem** files must be placed next to the [project folder](Project/architecture.md#project-folder).
+Para serem utilizados pelo servidor SQL 4D, os ficheiros **key.pem** e **cert.pem** devem ser colocados ao lado da pasta do projecto [](Project/architecture.md#project-folder).
 
 ### Ativar TLS
 
@@ -98,7 +98,7 @@ A instalação de arquivos **key.pem** e **cert.pem** torna possível usar TLS c
 - Com o servidor de aplicação, deve selecionar a opção **Encrypt Client-Server Communications** na página "Client-server/Network options" do diálogo de configurações.
 - Com o servidor SQL deve selecionar a opção **Ativar TLS** na página "SQL" do diálogo configurações.
 
-> The 4D web server also supports [HSTS option](WebServer/webServerConfig.md#enable-hsts) to declare that browsers should only interact with it via secure HTTPS connections.
+> O servidor web 4D também suporta [HSTS opção](WebServer/webServerConfig.md#enable-hsts) para declarar que os navegadores só devem interagir com ele através de ligações HTTPS seguras.
 
 ## Perfect Forward Secrecy (PFS)
 
