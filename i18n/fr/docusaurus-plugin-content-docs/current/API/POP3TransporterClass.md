@@ -38,11 +38,9 @@ Les objets Transporter POP3 sont instanciés avec la commande [POP3 New transpor
 
 </details>
 
-<!-- REF #_command_.POP3 New transporter.Syntax -->
+<!-- REF #_command_.POP3 New transporter.Syntax -->**POP3 New transporter**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
-**POP3 New transporter**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
-
-<!-- REF POP3TransporterClass.POP3 New transporter.Params -->
+<!-- REF #_command_.POP3 New transporter.Params -->
 | Paramètres | Type               |    | Description                                                                    |
 | ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server     | object             | -> | Informations sur le serveur IMAP                                               |
@@ -97,9 +95,8 @@ La fonction retourne un [**objet POP3 transporter**](#pop3-transporter-object). 
 
 ## 4D.POP3Transporter.new()
 
-<!-- REF #4D.POP3Transporter.new().Syntax -->
+<!-- REF #4D.POP3Transporter.new().Syntax -->**4D.POP3Transporter.new**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
-**4D.POP3Transporter.new**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
 <!-- REF #4D.POP3Transporter.new().Params -->
 | Paramètres | Type               |    | Description                                                                    |
@@ -160,9 +157,8 @@ The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summa
 
 </details>
 
-<!-- REF #POP3TransporterClass.delete().Syntax -->
+<!-- REF #POP3TransporterClass.delete().Syntax -->**.delete**( *msgNumber* : Integer )<!-- END REF -->
 
-**.delete**( *msgNumber* : Integer )<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.delete().Params -->
 | Paramètres | Type    |    | Description                                              |
@@ -207,9 +203,8 @@ L'exécution de cette méthode ne supprime pas réellement l'email. L'email marq
 
 </details>
 
-<!-- REF #POP3TransporterClass.getBoxInfo().Syntax -->
+<!-- REF #POP3TransporterClass.getBoxInfo().Syntax -->**.getBoxInfo()** : Object<!-- END REF -->
 
-**.getBoxInfo()** : Object<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
 | Paramètres | Type   |    | Description                               |
@@ -257,9 +252,8 @@ L'objet `boxInfo` contient les propriété suivantes :
 
 </details>
 
-<!-- REF #POP3TransporterClass.getMail().Syntax -->
+<!-- REF #POP3TransporterClass.getMail().Syntax -->**.getMail**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
-**.getMail**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMail().Params -->
 | Paramètres | Type    |    | Description                                                                 |
@@ -315,9 +309,8 @@ Vous souhaitez connaitre l'expéditeur du premier mail de la boite de réception
 
 </details>
 
-<!-- REF #POP3TransporterClass.getMailInfo().Syntax -->
+<!-- REF #POP3TransporterClass.getMailInfo().Syntax -->**.getMailInfo**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
-**.getMailInfo**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMailInfo().Params -->
 | Paramètres | Type    |    | Description                               |
@@ -377,9 +370,8 @@ La fonction retourne **Null** si :
 
 </details>
 
-<!-- REF #POP3TransporterClass.getMailInfoList().Syntax -->
+<!-- REF #POP3TransporterClass.getMailInfoList().Syntax -->**.getMailInfoList()** : Collection<!-- END REF -->
 
-**.getMailInfoList()** : Collection<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
 | Paramètres | Type        |    | Description                                               |
@@ -443,9 +435,8 @@ Vous souhaitez connaitre le nombre total d'emails de la boîte de réception ain
 
 </details>
 
-<!-- REF #POP3TransporterClass.getMIMEAsBlob().Syntax -->
+<!-- REF #POP3TransporterClass.getMIMEAsBlob().Syntax -->**.getMIMEAsBlob**( *msgNumber* : Integer ) : Blob<!-- END REF -->
 
-**.getMIMEAsBlob**( *msgNumber* : Integer ) : Blob<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Params -->
 | Paramètres | Type    |    | Description                                                                      |
@@ -509,9 +500,8 @@ Vous souhaitez connaitre le nombre total d'emails de la boîte de réception ain
 
 </details>
 
-<!-- REF #POP3TransporterClass.undeleteAll().Syntax -->
+<!-- REF #POP3TransporterClass.undeleteAll().Syntax -->**.undeleteAll()**<!-- END REF -->
 
-**.undeleteAll()**<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.undeleteAll().Params -->
 | Paramètres | Type |  | Description                                            |
