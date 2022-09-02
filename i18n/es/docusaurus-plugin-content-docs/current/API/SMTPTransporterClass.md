@@ -38,9 +38,8 @@ Los objetos SMTP Transporter se instancian con el comando [SMTP New transporter]
 
 </details>
 
-<!-- REF #_command_.SMTP New transporter.Syntax -->
+<!-- REF #_command_.SMTP New transporter.Syntax -->**SMTP New transporter**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
-**SMTP New transporter**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
 <!-- REF #_command_.SMTP New transporter.Params -->
 | Parámetros | Type               |    | Descripción                                                                    |
@@ -115,9 +114,8 @@ La función devuelve un [**SMTP transporter**](#smtp-transporter-object). Todas 
 
 ## 4D.SMTPTransporter.new()
 
-<!-- REF #4D.SMTPTransporter.new().Syntax -->
+<!-- REF #4D.SMTPTransporter.new().Syntax -->**4D.SMTPTransporter.new**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
-**4D.SMTPTransporter.new**( *server* : Object ) : 4D.SMTPTransporter<!-- END REF -->
 
 <!-- REF #4D.SMTPTransporter.new().Params -->
 | Parámetros | Type               |    | Descripción                                                                    |
@@ -183,9 +181,7 @@ Para obtener información sobre los códigos de estado SMTP, consulte [esta pág
 | v17 R4  | Añadidos       |
 </details>
 
-<!-- REF #SMTPTransporterClass.keepAlive.Syntax -->
-
-**.keepAlive** : Boolean<!-- END REF -->
+<!-- REF #SMTPTransporterClass.keepAlive.Syntax -->**.keepAlive** : Boolean<!-- END REF -->
 
 #### Descripción
 
@@ -211,9 +207,8 @@ La conexión SMTP se cierra automáticamente:
 
 </details>
 
-<!-- REF #SMTPTransporterClass.send().Syntax -->
+<!-- REF #SMTPTransporterClass.send().Syntax -->**.send**( *mail* : Object ) : Object<!-- END REF -->
 
-**.send**( *mail* : Object ) : Object<!-- END REF -->
 
 <!-- REF #SMTPTransporterClass.send().Params -->
 | Parámetros | Type   |    | Descripción                                        |
