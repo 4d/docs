@@ -47,9 +47,7 @@ Los objetos `DataClassAttribute` tienen propiedades que puede leer para obtener 
 
 </details>
 
-<!-- REF DataClassAttributeClass.autoFilled.Syntax -->
-
-**.autoFilled** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.autoFilled.Syntax -->**.autoFilled** : Boolean<!-- END REF -->
 
 #### Descripción
 
@@ -74,9 +72,7 @@ Esta propiedad no se devuelve si `.kind` = "relatedEntity" o "relatedEntities".
 
 </details>
 
-<!-- REF DataClassAttributeClass.exposed.Syntax -->
-
-**.exposed** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.exposed.Syntax -->**.exposed** : Boolean<!-- END REF -->
 
 #### Descripción
 
@@ -99,9 +95,7 @@ The `.exposed` property is <!-- REF DataClassAttributeClass.exposed.Summary -->t
 
 </details>
 
-<!-- REF DataClassAttributeClass.fieldNumber.Syntax -->
-
-**.fieldNumber** : Integer<!-- END REF -->
+<!-- REF DataClassAttributeClass.fieldNumber.Syntax -->**.fieldNumber** : Integer<!-- END REF -->
 
 #### Descripción
 
@@ -124,9 +118,7 @@ Esta propiedad no se devuelve si `.kind` = "relatedEntity" o "relatedEntities".
 
 </details>
 
-<!-- REF DataClassAttributeClass.fieldType.Syntax -->
-
-**.fieldType** : Integer<!-- END REF -->
+<!-- REF DataClassAttributeClass.fieldType.Syntax -->**.fieldType** : Integer<!-- END REF -->
 
 #### Descripción
 
@@ -159,9 +151,7 @@ The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->
 
 </details>
 
-<!-- REF DataClassAttributeClass.indexed.Syntax -->
-
-**.indexed**: Booleano<!-- END REF -->
+<!-- REF DataClassAttributeClass.indexed.Syntax -->**.indexed**: Booleano<!-- END REF -->
 
 #### Descripción
 
@@ -183,9 +173,7 @@ Esta propiedad no se devuelve si `.kind` = "relatedEntity" o "relatedEntities".
 
 </details>
 
-<!-- REF DataClassAttributeClass.inverseName.Syntax -->
-
-**.inverseName**: Texto<!-- END REF -->
+<!-- REF DataClassAttributeClass.inverseName.Syntax -->**.inverseName**: Texto<!-- END REF -->
 
 #### Descripción
 
@@ -207,9 +195,7 @@ Esta propiedad no se devuelve si `.kind` = "storage". Debe ser del tipo "related
 
 </details>
 
-<!-- REF DataClassAttributeClass.keywordIndexed.Syntax -->
-
-**.keywordIndexed**: Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.keywordIndexed.Syntax -->**.keywordIndexed**: Boolean<!-- END REF -->
 
 #### Descripción
 
@@ -232,9 +218,7 @@ Esta propiedad no se devuelve si [`.kind`](#kind) = "relatedEntity" o "relatedEn
 
 </details>
 
-<!-- REF DataClassAttributeClass.kind.Syntax -->
-
-**.kind** : Text<!-- END REF -->
+<!-- REF DataClassAttributeClass.kind.Syntax -->**.kind** : Text<!-- END REF -->
 
 #### Descripción
 
@@ -272,9 +256,7 @@ Dada la siguiente tabla y relación:
 
 </details>
 
-<!-- REF DataClassAttributeClass.mandatory.Syntax -->
-
-**.mandatory**: Booleano<!-- END REF -->
+<!-- REF DataClassAttributeClass.mandatory.Syntax -->**.mandatory**: Booleano<!-- END REF -->
 
 #### Descripción
 
@@ -297,9 +279,7 @@ Esta propiedad no se devuelve si [`.kind`](#kind) = "relatedEntity" o "relatedEn
 
 </details>
 
-<!-- REF DataClassAttributeClass.name.Syntax -->
-
-**.name** : Text<!-- END REF -->
+<!-- REF DataClassAttributeClass.name.Syntax -->**.name** : Text<!-- END REF -->
 
 #### Descripción
 
@@ -325,9 +305,7 @@ La propiedad `.name` <!-- REF DataClassAttributeClass.name.Summary -->The `.name
 
 </details>
 
-<!-- REF DataClassAttributeClass.path.Syntax -->
-
-**.path** : Text<!-- END REF -->
+<!-- REF DataClassAttributeClass.path.Syntax -->**.path** : Text<!-- END REF -->
 
 #### Descripción
 
@@ -353,9 +331,7 @@ The `.path` property <!-- REF DataClassAttributeClass.path.Summary -->returns th
 
 </details>
 
-<!-- REF DataClassAttributeClass.readOnly.Syntax -->
-
-**.readOnly** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.readOnly.Syntax -->**.readOnly** : Boolean<!-- END REF -->
 
 #### Descripción
 
@@ -376,9 +352,7 @@ Por ejemplo, los atributos calculados sin función [`set`](ORDA/ordaClasses.md#f
 
 </details>
 
-<!-- REF DataClassAttributeClass.relatedDataClass.Syntax -->
-
-**.relatedDataClass**: Text<!-- END REF -->
+<!-- REF DataClassAttributeClass.relatedDataClass.Syntax -->**.relatedDataClass**: Text<!-- END REF -->
 
 #### Descripción
 > Para la programación genérica, se puede utilizar**Bool**(dataClassAttribute.unique) para obtener un valor válido (false) aunque no se devuelva `.unique`.
@@ -410,9 +384,7 @@ Dadas las siguientes tablas y relaciones:
 
 </details>
 
-<!-- REF DataClassAttributeClass.type.Syntax -->
-
-**.type** : Text<!-- END REF -->
+<!-- REF DataClassAttributeClass.type.Syntax -->**.type** : Text<!-- END REF -->
 
 #### Descripción
 
@@ -446,9 +418,7 @@ El tipo de valor conceptual depende del atributo [`.kind`](#kind).
 
 </details>
 
-<!-- REF DataClassAttributeClass.unique.Syntax -->
-
-**.unique** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.unique.Syntax -->**.unique** : Boolean<!-- END REF -->
 
 #### Descripción
 
