@@ -40,9 +40,8 @@ title: DataStore
 
 </details>
 
-<!-- REF #_command_.ds.Syntax -->
+<!-- REF #_command_.ds.Syntax -->**ds** { ( *localID* : Text ) } : cs.DataStore <!-- END REF -->
 
-**ds** { ( *localID* : Text ) } : cs.DataStore <!-- END REF -->
 
 <!-- REF #_command_.ds.Params -->
 | 引数      | タイプ          |    | 詳細                                  |
@@ -109,9 +108,8 @@ The `ds` command <!-- REF #_command_.ds.Summary -->returns a reference to the da
 
 </details>
 
-<!-- REF #_command_.Open datastore.Syntax -->
+<!-- REF #_command_.Open datastore.Syntax -->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore <!-- END REF -->
 
-**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore <!-- END REF -->
 
 <!-- REF #_command_.Open datastore.Params -->
 | 引数             | タイプ          |    | 詳細                                         |
@@ -218,9 +216,7 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 </details>
 
-<!-- REF DataStoreClass.dataclassName.Syntax -->
-
-***.dataclassName*** : 4D.DataClass<!-- END REF -->
+<!-- REF DataStoreClass.dataclassName.Syntax -->***.dataclassName*** : 4D.DataClass<!-- END REF -->
 
 #### 詳細
 
@@ -252,9 +248,8 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 </details>
 
-<!-- REF #DataStoreClass.cancelTransaction().Syntax -->
+<!-- REF #DataStoreClass.cancelTransaction().Syntax -->**.cancelTransaction()**<!-- END REF -->
 
-**.cancelTransaction()**<!-- END REF -->
 
 <!-- REF #DataStoreClass.cancelTransaction().Params -->
 | 引数 | タイプ |  | 詳細                                                         |
@@ -288,9 +283,8 @@ The `.cancelTransaction()` function <!-- REF #DataStoreClass.cancelTransaction()
 
 </details>
 
-<!-- REF #DataStoreClass.clearAllRemoteContexts().Syntax -->
+<!-- REF #DataStoreClass.clearAllRemoteContexts().Syntax -->**.clearAllRemoteContexts()**<!-- END REF -->
 
-**.clearAllRemoteContexts()**<!-- END REF -->
 
 <!-- REF #DataStoreClass.clearAllRemoteContexts().Params -->
 | 引数 | タイプ |  | 詳細                                                         |
@@ -322,9 +316,8 @@ The `.clearAllRemoteContexts()` function <!-- REF #DataStoreClass.clearAllRemote
 
 </details>
 
-<!-- REF #DataStoreClass.encryptionStatus().Syntax -->
+<!-- REF #DataStoreClass.encryptionStatus().Syntax -->**.encryptionStatus()**: Object<!-- END REF -->
 
-**.encryptionStatus()**: Object<!-- END REF -->
 
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 | 引数     | タイプ    |    | 詳細                                                      |
@@ -395,9 +388,8 @@ The `.encryptionStatus()` function <!-- REF #DataStoreClass.encryptionStatus().S
 
 </details>
 
-<!-- REF #DataStoreClass.getAllRemoteContexts().Syntax -->
+<!-- REF #DataStoreClass.getAllRemoteContexts().Syntax -->**.getAllRemoteContexts()** : Collection<!-- END REF -->
 
-**.getAllRemoteContexts()** : Collection<!-- END REF -->
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
 | 引数     | タイプ    |    | 詳細                                                |
@@ -472,9 +464,8 @@ $info:=$ds.getAllRemoteContexts()
 
 </details>
 
-<!-- REF #DataStoreClass.getInfo().Syntax -->
+<!-- REF #DataStoreClass.getInfo().Syntax -->**.getInfo()**: Object<!-- END REF -->
 
-**.getInfo()**: Object<!-- END REF -->
 
 <!-- REF #DataStoreClass.getInfo().Params -->
 | 引数     | タイプ    |    | 詳細                                              |
@@ -542,9 +533,8 @@ The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->The `.ge
 
 </details>
 
-<!-- REF #DataStoreClass.getRemoteContextInfo().Syntax -->
+<!-- REF #DataStoreClass.getRemoteContextInfo().Syntax -->**.getRemoteContextInfo**(*contextName* : Text) : Object <!-- END REF -->
 
-**.getRemoteContextInfo**(*contextName* : Text) : Object <!-- END REF -->
 
 <!-- REF #DataStoreClass.getRemoteContextInfo().Params -->
 | 引数          | タイプ    |    | 詳細                                                                 |
@@ -594,9 +584,8 @@ The `.getRemoteContextInfo()` function <!-- REF #DataStoreClass.getRemoteContext
 
 </details>
 
-<!-- REF #DataStoreClass.getRequestLog().Syntax -->
+<!-- REF #DataStoreClass.getRequestLog().Syntax -->**.getRequestLog()** : Collection<!-- END REF -->
 
-**.getRequestLog()** : Collection<!-- END REF -->
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
 | 引数     | タイプ    |    | 詳細                                                                                      |
@@ -634,9 +623,8 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 </details>
 
-<!-- REF #DataStoreClass.isAdminProtected().Syntax -->
+<!-- REF #DataStoreClass.isAdminProtected().Syntax -->**.isAdminProtected()** : Boolean<!-- END REF -->
 
-**.isAdminProtected()** : Boolean<!-- END REF -->
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
 | 引数     | タイプ |    | 詳細                                                                                    |
@@ -668,9 +656,8 @@ The `.isAdminProtected()` function <!-- REF #DataStoreClass.isAdminProtected().S
 
 </details>
 
-<!-- REF #DataStoreClass.makeSelectionsAlterable().Syntax -->
+<!-- REF #DataStoreClass.makeSelectionsAlterable().Syntax -->**.makeSelectionsAlterable()**<!-- END REF -->
 
-**.makeSelectionsAlterable()**<!-- END REF -->
 
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Params -->
 | 引数 | タイプ |  | 詳細                                                         |
@@ -702,9 +689,8 @@ The `.makeSelectionsAlterable()` function <!-- REF #DataStoreClass.makeSelection
 
 </details>
 
-<!-- REF #DataStoreClass.provideDataKey().Syntax -->
+<!-- REF #DataStoreClass.provideDataKey().Syntax -->**.provideDataKey**( *curPassPhrase* : Text ) : Object <br/>**.provideDataKey**( *curDataKey* : Object ) : Object <!-- END REF -->
 
-**.provideDataKey**( *curPassPhrase* : Text ) : Object <br/>**.provideDataKey**( *curDataKey* : Object ) : Object <!-- END REF -->
 
 <!-- REF #DataStoreClass.provideDataKey().Params -->
 | 引数            | タイプ    |    | 詳細                                       |
@@ -780,6 +766,7 @@ The `.provideDataKey()` function <!-- REF #DataStoreClass.provideDataKey().Summa
 <!-- REF #DataStoreClass.setAdminProtection().Syntax -->
 **.setAdminProtection**( *status* : Boolean )<!-- END REF -->
 
+
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 | 引数     | タイプ |    | 詳細                                                                                                                              |
 | ------ | --- | -- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -820,9 +807,8 @@ The `.setAdminProtection()` function <!-- REF #DataStoreClass.setAdminProtection
 
 </details>
 
-<!-- REF #DataStoreClass.setRemoteContextInfo().Syntax -->
+<!-- REF #DataStoreClass.setRemoteContextInfo().Syntax -->**.setRemoteContextInfo**( *contextName* : Text ; *dataClassName* : Text ; *attributes* : Text {; *contextType* : Text { ; *pageLength* : Integer}})<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassName* : Text; *attributesColl* : Collection {; *contextType* : Text { ; *pageLength* : Integer }} )<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassObject* : 4D.DataClass ; *attributes* : Text {; *contextType* : Text { ; *pageLength* : Integer }})<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassObject* : 4D.DataClass ; *attributesColl* : Collection {; *contextType* : Text { ; *pageLength* : Integer }} )<!-- END REF -->
 
-**.setRemoteContextInfo**( *contextName* : Text ; *dataClassName* : Text ; *attributes* : Text {; *contextType* : Text { ; *pageLength* : Integer}})<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassName* : Text; *attributesColl* : Collection {; *contextType* : Text { ; *pageLength* : Integer }} )<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassObject* : 4D.DataClass ; *attributes* : Text {; *contextType* : Text { ; *pageLength* : Integer }})<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassObject* : 4D.DataClass ; *attributesColl* : Collection {; *contextType* : Text { ; *pageLength* : Integer }} )<!-- END REF -->
 
 <!-- REF #DataStoreClass.setRemoteContextInfo().Params -->
 | 引数              | タイプ          |    | 詳細                                                                                                   |
@@ -951,9 +937,8 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 </details>
 
-<!-- REF #DataStoreClass.startRequestLog().Syntax -->
+<!-- REF #DataStoreClass.startRequestLog().Syntax -->**.startRequestLog**()<br/>**.startRequestLog**( *file* : 4D.File )<br/>**.startRequestLog**( *reqNum* : Integer )<!-- END REF -->
 
-**.startRequestLog**()<br/>**.startRequestLog**( *file* : 4D.File )<br/>**.startRequestLog**( *reqNum* : Integer )<!-- END REF -->
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
 | 引数     | タイプ     |    | 詳細                                                              |
@@ -1027,9 +1012,8 @@ ORDA クライアントリクエストをメモリに記録します:
 
 </details>
 
-<!-- REF #DataStoreClass.startTransaction().Syntax -->
+<!-- REF #DataStoreClass.startTransaction().Syntax -->**.startTransaction()**<!-- END REF -->
 
-**.startTransaction()**<!-- END REF -->
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
 | 引数 | タイプ |  | 詳細                                                         |
@@ -1091,9 +1075,8 @@ The `.startTransaction()` function <!-- REF #DataStoreClass.startTransaction().S
 
 </details>
 
-<!-- REF #DataStoreClass.stopRequestLog().Syntax -->
+<!-- REF #DataStoreClass.stopRequestLog().Syntax -->**.stopRequestLog()**  <!-- END REF -->
 
-**.stopRequestLog()**  <!-- END REF -->
 
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
 | 引数 | タイプ |  | 詳細                                                         |
@@ -1125,9 +1108,8 @@ The `.stopRequestLog()` function <!-- REF #DataStoreClass.stopRequestLog().Summa
 
 </details>
 
-<!-- REF #DataStoreClass.validateTransaction().Syntax -->
+<!-- REF #DataStoreClass.validateTransaction().Syntax -->**.validateTransaction()**  <!-- END REF -->
 
-**.validateTransaction()**  <!-- END REF -->
 
 <!-- REF #DataStoreClass.validateTransaction().Params -->
 | 引数 | タイプ |  | 詳細                                                         |
