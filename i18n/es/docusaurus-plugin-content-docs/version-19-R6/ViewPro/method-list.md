@@ -11,9 +11,8 @@ title: Lista de los métodos
 
 ### VP ADD FORMULA NAME
 
-<!-- REF #_method_.VP ADD FORMULA NAME.Syntax -->
 
-**VP ADD FORMULA NAME** ( *vpAreaName* : Text ; *vpFormula* : Text ; *name* : Text { ; *options* : Object } )<!-- END REF -->
+<!-- REF #_method_.VP ADD FORMULA NAME.Syntax -->**VP ADD FORMULA NAME** ( *vpAreaName* : Text ; *vpFormula* : Text ; *name* : Text { ; *options* : Object } )<!-- END REF -->
 
 <!-- REF #_method_.VP ADD FORMULA NAME.Params -->
 
@@ -2458,6 +2457,7 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 
 
 <!-- REF #_method_.VP Get workbook options.Syntax --> **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
+
 
 
 <!-- REF #_method_.VP Get workbook options.Params -->
@@ -5122,6 +5122,7 @@ VP SET VALUES(VP Cell("ViewProArea";2;1);$param)
 
 
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Syntax --> **VP SET WORKBOOK OPTIONS** ( *vpAreaName* : Text ; *optionObj* : Object)<!-- END REF -->
+
 
 
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Params -->
