@@ -105,11 +105,9 @@ Método ***OpenForm***:
 
 </details>
 
-<!-- REF #_command_.New signal.Syntax -->
+<!-- REF #_command_.New signal.Syntax -->**New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
 
-**New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
-
-<!-- REF SignalClass.New signal.Params -->
+<!-- REF #_command_.New signal.Params -->
 | Parámetros  | Type      |    | Descripción                                                     |
 | ----------- | --------- |:--:| --------------------------------------------------------------- |
 | description | Text      | -> | Descripción para la señal                                       |
@@ -182,9 +180,7 @@ El método ***doSomething*** puede ser:
 
 </details>
 
-<!-- REF #SignalClass.description.Syntax -->
-
-**.description** : Text<!-- END REF -->
+<!-- REF #SignalClass.description.Syntax -->**.description** : Text<!-- END REF -->
 
 #### Descripción
 
@@ -209,9 +205,7 @@ Esta propiedad es **lectura-escritura**.
 
 </details>
 
-<!-- REF #SignalClass.signaled.Syntax -->
-
-**.signaled**: Boolean<!-- END REF -->
+<!-- REF #SignalClass.signaled.Syntax -->**.signaled**: Boolean<!-- END REF -->
 
 #### Descripción
 
@@ -234,9 +228,8 @@ Esta propiedad es **de sólo lectura**.
 
 </details>
 
-<!-- REF #SignalClass.trigger().Syntax -->
+<!-- REF #SignalClass.trigger().Syntax -->**.trigger( )**<!-- END REF -->
 
-**.trigger( )**<!-- END REF -->
 
 <!-- REF #SignalClass.trigger().Params -->
 | Parámetros | Type |  | Descripción                                                |
@@ -268,9 +261,8 @@ Si la señal ya está en el estado de señalización (es decir, la propiedad `si
 
 </details>
 
-<!-- REF #SignalClass.wait().Syntax -->
+<!-- REF #SignalClass.wait().Syntax -->**.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
 
-**.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
 
 <!-- REF #SignalClass.wait().Params -->
 | Parámetros | Type    |    | Descripción                                                   |
