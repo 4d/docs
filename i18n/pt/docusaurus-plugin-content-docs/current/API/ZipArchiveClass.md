@@ -44,9 +44,9 @@ End if
 
 </details>
 
-<!-- REF #_command_.ZIP Create archive.Syntax -->
 
-**ZIP Create archive** ( *fileToZip* : 4D. File ; *destinationFile* : 4D. File ) : Object<br/>**ZIP Create archive** ( *folderToZip* : 4D. Folder ; *destinationFile* : 4D. File { ; *options* : Integer }) : Object<br/>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D. File ) : Object<!-- END REF -->
+<!-- REF #_command_.ZIP Create archive.Syntax -->**ZIP Create archive** ( *fileToZip* : 4D. File ; *destinationFile* : 4D. File ) : Object<br/>**ZIP Create archive** ( *folderToZip* : 4D. Folder ; *destinationFile* : 4D. File { ; *options* : Integer }) : Object<br/>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D. File ) : Object<!-- END REF -->
+
 
 
 <!-- REF #_command_.ZIP Create archive.Params -->
@@ -198,9 +198,9 @@ $err:=ZIP Create archive($zip; $destination)
 
 </details>
 
-<!-- REF #_command_.ZIP Read archive.Syntax -->
 
-**ZIP Read archive** ( *zipFile* : 4D. File { ; *password* : Text }) : 4D. ZipArchive<!-- END REF -->
+<!-- REF #_command_.ZIP Read archive.Syntax -->**ZIP Read archive** ( *zipFile* : 4D. File { ; *password* : Text }) : 4D. ZipArchive<!-- END REF -->
+
 
 
 <!-- REF #_command_.ZIP Read archive.Params -->
@@ -266,9 +266,8 @@ Para extrair da pasta root:
 
 ## .root
 
-<!-- REF #ZipArchiveClass.root.Syntax -->
 
-**.root** : 4D. ZipFolder<!-- END REF -->
+<!-- REF #ZipArchiveClass.root.Syntax -->**.root** : 4D. ZipFolder<!-- END REF -->
 
 #### Descrição
 
