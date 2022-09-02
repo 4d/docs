@@ -45,9 +45,8 @@ Uma entidade [](ORDA/dsMapping.md#entity) é uma instância de um [Dataclass](OR
 
 </details>
 
-<!-- REF EntityClass.attributeName.Syntax -->
 
-***.attributeName*** : DataClassAttribute<!-- END REF -->
+<!-- REF EntityClass.attributeName.Syntax -->***.attributeName*** : DataClassAttribute<!-- END REF -->
 
 #### Descrição
 
@@ -84,9 +83,9 @@ O tipo de valor do atributo depende do tipo do atributo [atributo](DataClassAttr
 
 </details>
 
-<!-- REF #EntityClass.clone().Syntax -->
 
-**.clone()** : 4D. Entity<!-- END REF -->
+<!-- REF #EntityClass.clone().Syntax -->**.clone()** : 4D. Entity<!-- END REF -->
+
 
 
 <!-- REF #EntityClass.clone().Params -->
@@ -126,9 +125,9 @@ Esta função só pode ser usada com entidades já salvas no banco de dados. Ele
 
 </details>
 
-<!-- REF #EntityClass.diff().Syntax -->
 
-**.diff**( *entityToCompare* : 4D. Entity { ; *attributesToCompare* : Collection } ) : Collection<!-- END REF -->
+<!-- REF #EntityClass.diff().Syntax -->**.diff**( *entityToCompare* : 4D. Entity { ; *attributesToCompare* : Collection } ) : Collection<!-- END REF -->
+
 
 
 <!-- REF #EntityClass.diff().Params -->
@@ -328,9 +327,9 @@ vCompareResult3 (apenas as diferenças em $e1 atributos tocados são retornadas)
 
 </details>
 
-<!-- REF #EntityClass.drop().Syntax -->
 
-**.drop**( {*mode* : Integer} ) : Object<!-- END REF -->
+<!-- REF #EntityClass.drop().Syntax -->**.drop**( {*mode* : Integer} ) : Object<!-- END REF -->
+
 
 
 <!-- REF #EntityClass.drop().Params -->
@@ -435,9 +434,9 @@ Exemplo com a opção`dk force drop if stamp changed`:
 
 </details>
 
-<!-- REF #EntityClass.first().Syntax -->
 
-**.first()**: 4D. Entity<!-- END REF -->
+<!-- REF #EntityClass.first().Syntax -->**.first()**: 4D. Entity<!-- END REF -->
+
 
 
 <!-- REF #EntityClass.first().Params -->
@@ -475,9 +474,9 @@ Se a entidade não pertence a nenhuma seleção de entidade existente (ex: [.get
 
 </details>
 
-<!-- REF #EntityClass.fromObject().Syntax -->
 
-**.fromObject**( *filler* : Object )<!-- END REF -->
+<!-- REF #EntityClass.fromObject().Syntax -->**.fromObject**( *filler* : Object )<!-- END REF -->
+
 
 
 <!-- REF #EntityClass.fromObject().Params -->
@@ -561,9 +560,9 @@ Você também poderia usar uma entidade relacionada dada como um objeto:
 
 </details>
 
-<!-- REF #EntityClass.getDataClass().Syntax -->
 
-**.getDataClass()** : 4D. DataClass<!-- END REF -->
+<!-- REF #EntityClass.getDataClass().Syntax -->**.getDataClass()** : 4D. DataClass<!-- END REF -->
+
 
 
 <!-- REF #EntityClass.getDataClass().Params -->
@@ -607,9 +606,9 @@ O seguinte código genérico duplica qualquer entidade:
 
 </details>
 
-<!-- REF #EntityClass.getKey().Syntax -->
 
-**.getKey**( { *mode* : Integer } ) : Text<br/>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
+<!-- REF #EntityClass.getKey().Syntax -->**.getKey**( { *mode* : Integer } ) : Text<br/>**.getKey**( { *mode* : Integer } ) : Integer<!-- END REF -->
+
 
 
 <!-- REF #EntityClass.getKey().Params -->
@@ -652,9 +651,9 @@ As chaves primárias podem ser números (Inteiro) ou strings. Você pode "força
 
 </details>
 
-<!-- REF #EntityClass.getRemoteContextAttributes().Syntax -->
 
-**.getRemoteContextAttributes()** : Text<!-- END REF -->
+<!-- REF #EntityClass.getRemoteContextAttributes().Syntax -->**.getRemoteContextAttributes()** : Text<!-- END REF -->
+
 
 
 <!-- REF #EntityClass.getRemoteContextAttributes().Params -->
@@ -708,9 +707,9 @@ $info:=$address.getRemoteContextAttributes()
 
 </details>
 
-<!-- REF #EntityClass.getSelection().Syntax -->
 
-**.getSelection()**: 4D. EntitySelection<!-- END REF -->
+<!-- REF #EntityClass.getSelection().Syntax -->**.getSelection()**: 4D. EntitySelection<!-- END REF -->
+
 
 
 <!-- REF #EntityClass.getSelection().Params -->
@@ -752,9 +751,9 @@ Se a entidade não pertence à seleção de uma entidade, a função retorna Nul
 
 </details>
 
-<!-- REF #EntityClass.getStamp().Syntax -->
 
-**.getStamp()** : Integer<!-- END REF -->
+<!-- REF #EntityClass.getStamp().Syntax -->**.getStamp()** : Integer<!-- END REF -->
+
 
 
 <!-- REF #EntityClass.getStamp().Params -->
@@ -799,9 +798,9 @@ O selo interno é automaticamente incrementado por 4D cada vez que a entidade é
 
 </details>
 
-<!-- REF #EntityClass.indexOf().Syntax -->
 
-**.indexOf**( { *entitySelection* : 4D. EntitySelection } ) : Integer<!-- END REF -->
+<!-- REF #EntityClass.indexOf().Syntax -->**.indexOf**( { *entitySelection* : 4D. EntitySelection } ) : Integer<!-- END REF -->
+
 
 
 <!-- REF #EntityClass.indexOf().Params -->
@@ -848,9 +847,9 @@ O valor resultante é incluído entre 0 e o comprimento da selecção da entidad
 
 </details>
 
-<!-- REF #EntityClass.isNew().Syntax -->
 
-**.isNew()** : Boolean<!-- END REF -->
+<!-- REF #EntityClass.isNew().Syntax -->**.isNew()** : Boolean<!-- END REF -->
+
 
 
 <!-- REF #EntityClass.isNew().Params -->
@@ -888,9 +887,9 @@ The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True i
 
 </details>
 
-<!-- REF #EntityClass.last().Syntax -->
 
-**.last()** : 4D. Entity<!-- END REF -->
+<!-- REF #EntityClass.last().Syntax -->**.last()** : 4D. Entity<!-- END REF -->
+
 
 
 <!-- REF #EntityClass.last().Params -->
@@ -928,9 +927,9 @@ Se a entidade não pertence a nenhuma seleção de entidade existente (ex: [.get
 
 </details>
 
-<!-- REF #EntityClass.lock().Syntax -->
 
-**.lock**( { *mode* : Integer } ) : Object<!-- END REF -->
+<!-- REF #EntityClass.lock().Syntax -->**.lock**( { *mode* : Integer } ) : Object<!-- END REF -->
+
 
 
 <!-- REF #EntityClass.lock().Params -->
@@ -1046,9 +1045,9 @@ Exemplo com `dk reload se o selo mudou a opção`:
 
 </details>
 
-<!-- REF #EntityClass.next().Syntax -->
 
-|<!-- END REF -->
+<!-- REF #EntityClass.next().Syntax -->|<!-- END REF -->
+
 
 
 <!-- REF #EntityClass.next().Params -->
@@ -1089,9 +1088,9 @@ Se não houver entidade seguinte válida na selecção da entidade (ou seja, se 
 
 </details>
 
-<!-- REF #EntityClass.previous().Syntax -->
 
-**.previous()**  : 4D. Entity<!-- END REF -->
+<!-- REF #EntityClass.previous().Syntax -->**.previous()**  : 4D. Entity<!-- END REF -->
+
 
 
 <!-- REF #EntityClass.previous().Params -->
@@ -1131,9 +1130,9 @@ Se não houver nenhuma entidade anterior válida na seleção da entidade (ou se
 
 </details>
 
-<!-- REF #EntityClass.reload().Syntax -->
 
-**.reload()** : Object<!-- END REF -->
+<!-- REF #EntityClass.reload().Syntax -->**.reload()** : Object<!-- END REF -->
+
 
 
 <!-- REF #EntityClass.reload().Params -->
@@ -1195,9 +1194,9 @@ O objeto retornado por `.reload( )` contém as seguintes propriedades:
 
 </details>
 
-<!-- REF #EntityClass.save().Syntax -->
 
-**.save**( { *mode* : Integer } ) : Object<!-- END REF -->
+<!-- REF #EntityClass.save().Syntax -->**.save**( { *mode* : Integer } ) : Object<!-- END REF -->
+
 
 
 <!-- REF #EntityClass.save().Params -->
@@ -1330,9 +1329,9 @@ Updating an entity with `dk auto merge` option:
 
 </details>
 
-<!-- REF #EntityClass.toObject().Syntax -->
 
-**.toObject**() : Object<br/>**.toObject**( *filterString* : Text { ; *options* : Integer}  ) : Object<br/>**.toObject**( *filterCol* : Collection { ; *options* : Integer } ) : Object<!-- END REF -->
+<!-- REF #EntityClass.toObject().Syntax -->**.toObject**() : Object<br/>**.toObject**( *filterString* : Text { ; *options* : Integer}  ) : Object<br/>**.toObject**( *filterCol* : Collection { ; *options* : Integer } ) : Object<!-- END REF -->
+
 
 
 <!-- REF #EntityClass.toObject().Params -->
@@ -1613,9 +1612,9 @@ Retorna:
 
 </details>
 
-<!-- REF #EntityClass.touched().Syntax -->
 
-**.touched()** : Boolean<!-- END REF -->
+<!-- REF #EntityClass.touched().Syntax -->**.touched()** : Boolean<!-- END REF -->
+
 
 
 <!-- REF #EntityClass.touched().Params -->
@@ -1659,9 +1658,9 @@ In this example, we check to see if it is necessary to save the entity:
 
 </details>
 
-<!-- REF #EntityClass.touchedAttributes().Syntax -->
 
-**.touchedAttributes()** : Collection<!-- END REF -->
+<!-- REF #EntityClass.touchedAttributes().Syntax -->**.touchedAttributes()** : Collection<!-- END REF -->
+
 
 
 <!-- REF #EntityClass.touchedAttributes().Params -->
@@ -1733,9 +1732,9 @@ Nesse modo:
 
 </details>
 
-<!-- REF #EntityClass.unlock().Syntax -->
 
-**.unlock()** : Object<!-- END REF -->
+<!-- REF #EntityClass.unlock().Syntax -->**.unlock()** : Object<!-- END REF -->
+
 
 
 <!-- REF #EntityClass.unlock().Params -->
