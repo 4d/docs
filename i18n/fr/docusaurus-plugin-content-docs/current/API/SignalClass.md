@@ -105,11 +105,9 @@ Méthode ***OpenForm*** :
 
 </details>
 
-<!-- REF #_command_.New signal.Syntax -->
+<!-- REF #_command_.New signal.Syntax -->**New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
 
-**New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
-
-<!-- REF SignalClass.New signal.Params -->
+<!-- REF #_command_.New signal.Params -->
 | Paramètres  | Type      |    | Description                                             |
 | ----------- | --------- |:--:| ------------------------------------------------------- |
 | Description | Text      | -> | Description du signal                                   |
@@ -181,9 +179,7 @@ La méthode ***doSomething*** est par exemple :
 
 </details>
 
-<!-- REF #SignalClass.description.Syntax -->
-
-**.description** : Text<!-- END REF -->
+<!-- REF #SignalClass.description.Syntax -->**.description** : Text<!-- END REF -->
 
 #### Description
 
@@ -208,9 +204,7 @@ Cette propriété est en **lecture-écriture**.
 
 </details>
 
-<!-- REF #SignalClass.signaled.Syntax -->
-
-**.signaled** : Boolean<!-- END REF -->
+<!-- REF #SignalClass.signaled.Syntax -->**.signaled** : Boolean<!-- END REF -->
 
 #### Description
 
@@ -233,9 +227,8 @@ Cette propriété est en **lecture seule**.
 
 </details>
 
-<!-- REF #SignalClass.trigger().Syntax -->
+<!-- REF #SignalClass.trigger().Syntax -->**.trigger( )**<!-- END REF -->
 
-**.trigger( )**<!-- END REF -->
 
 <!-- REF #SignalClass.trigger().Params -->
 | Paramètres | Type |  | Description                                            |
@@ -267,9 +260,8 @@ Si le signal est déjà dans l'état signaled (i.e., la propriété `signaled` e
 
 </details>
 
-<!-- REF #SignalClass.wait().Syntax -->
+<!-- REF #SignalClass.wait().Syntax -->**.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
 
-**.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
 
 <!-- REF #SignalClass.wait().Params -->
 | Paramètres | Type    |    | Description                                                 |
