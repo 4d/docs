@@ -39,12 +39,11 @@ Os objetos POP3 Transporter são instanciados com o comando [POP3 New transporte
 
 </details>
 
-<!-- REF #_command_.POP3 New transporter.Syntax -->
 
-**POP3 New transporter**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
+<!-- REF #_command_.POP3 New transporter.Syntax -->**POP3 New transporter**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
 
-<!-- REF POP3TransporterClass.POP3 New transporter.Params -->
+<!-- REF #_command_.POP3 New transporter.Params -->
 | Parâmetros | Tipo               |    | Descrição                                                                      |
 | ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server     | object             | -> | Informação de servidor de correio                                              |
@@ -98,9 +97,9 @@ A função retorna um objeto [**POP3 transporter**](#pop3-transporter-object). T
 
 ## 4D.POP3Transporter.new()
 
-<!-- REF #4D.POP3Transporter.new().Syntax -->
 
-**4D.POP3Transporter.new**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
+<!-- REF #4D.POP3Transporter.new().Syntax -->**4D.POP3Transporter.new**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
+
 
 
 <!-- REF #4D.POP3Transporter.new().Params -->
@@ -161,9 +160,9 @@ The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summa
 
 </details>
 
-<!-- REF #POP3TransporterClass.delete().Syntax -->
 
-**.delete**( *msgNumber* : Integer )<!-- END REF -->
+<!-- REF #POP3TransporterClass.delete().Syntax -->**.delete**( *msgNumber* : Integer )<!-- END REF -->
+
 
 
 <!-- REF #POP3TransporterClass.delete().Params -->
@@ -207,9 +206,9 @@ Executar esse método não remove de verdade qualquer email. O email marcado ser
 
 </details>
 
-<!-- REF #POP3TransporterClass.getBoxInfo().Syntax -->
 
-**.getBoxInfo()** : Object<!-- END REF -->
+<!-- REF #POP3TransporterClass.getBoxInfo().Syntax -->**.getBoxInfo()** : Object<!-- END REF -->
+
 
 
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
@@ -256,9 +255,9 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 </details>
 
-<!-- REF #POP3TransporterClass.getMail().Syntax -->
 
-**.getMail**( *msgNumber* : Integer ) : Object<!-- END REF -->
+<!-- REF #POP3TransporterClass.getMail().Syntax -->**.getMail**( *msgNumber* : Integer ) : Object<!-- END REF -->
+
 
 
 <!-- REF #POP3TransporterClass.getMail().Params -->
@@ -313,9 +312,9 @@ Se quiser saber o emissário do primeiro email da mailbox:
 
 </details>
 
-<!-- REF #POP3TransporterClass.getMailInfo().Syntax -->
 
-**.getMailInfo**( *msgNumber* : Integer ) : Object<!-- END REF -->
+<!-- REF #POP3TransporterClass.getMailInfo().Syntax -->**.getMailInfo**( *msgNumber* : Integer ) : Object<!-- END REF -->
+
 
 
 <!-- REF #POP3TransporterClass.getMailInfo().Params -->
@@ -374,9 +373,9 @@ O método retorna **Null** se:
 
 </details>
 
-<!-- REF #POP3TransporterClass.getMailInfoList().Syntax -->
 
-**.getMailInfoList()** : Collection<!-- END REF -->
+<!-- REF #POP3TransporterClass.getMailInfoList().Syntax -->**.getMailInfoList()** : Collection<!-- END REF -->
+
 
 
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
@@ -439,9 +438,9 @@ Se quiser saber o número total e tamanho dos emails nas mailbox:
 
 </details>
 
-<!-- REF #POP3TransporterClass.getMIMEAsBlob().Syntax -->
 
-**.getMIMEAsBlob**( *msgNumber* : Integer ) : Blob<!-- END REF -->
+<!-- REF #POP3TransporterClass.getMIMEAsBlob().Syntax -->**.getMIMEAsBlob**( *msgNumber* : Integer ) : Blob<!-- END REF -->
+
 
 
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Params -->
@@ -505,9 +504,9 @@ Se quiser saber o número total e tamanho dos emails nas mailbox:
 
 </details>
 
-<!-- REF #POP3TransporterClass.undeleteAll().Syntax -->
 
-**.undeleteAll()**<!-- END REF -->
+<!-- REF #POP3TransporterClass.undeleteAll().Syntax -->**.undeleteAll()**<!-- END REF -->
+
 
 
 <!-- REF #POP3TransporterClass.undeleteAll().Params -->
