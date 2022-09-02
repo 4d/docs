@@ -48,9 +48,8 @@ Entity selections can be created from existing selections using various function
 
 ## Create entity selection
 
-<!-- REF #_command_.Create entity selection.Syntax -->
+<!-- REF #_command_.Create entity selection.Syntax -->**Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
-**Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #_command_.Create entity selection.Params -->
 | Parameter | Typ                |    | Beschreibung                                                                                  |
@@ -95,9 +94,8 @@ $employees:=Create entity selection([Employee])
 
 ## USE ENTITY SELECTION
 
-<!-- REF #_command_.USE ENTITY SELECTION.Syntax -->
+<!-- REF #_command_.USE ENTITY SELECTION.Syntax -->**USE ENTITY SELECTION** (*entitySelection*)<!-- END REF -->
 
-**USE ENTITY SELECTION** (*entitySelection*)<!-- END REF -->
 
 <!-- REF #_command_.USE ENTITY SELECTION.Params -->
 | Parameter       | Typ             |    | Beschreibung                                   |
@@ -136,9 +134,7 @@ USE ENTITY SELECTION($entitySel) //The current selection of the Employee table i
 
 </details>
 
-<!-- REF EntitySelectionClass.index.Syntax -->
-
-***&#91;index&#93;*** : 4D.Entity<!-- END REF -->
+<!-- REF EntitySelectionClass.index.Syntax -->***&#91;index&#93;*** : 4D.Entity<!-- END REF -->
 
 
 #### Beschreibung
@@ -191,9 +187,7 @@ Note that the corresponding entity is reloaded from the datastore.
 
 </details>
 
-<!-- REF EntitySelectionClass.attributeName.Syntax -->
-
-***.attributeName*** : Collection<br/>***.attributeName*** : 4D.EntitySelection<!-- END REF -->
+<!-- REF EntitySelectionClass.attributeName.Syntax -->***.attributeName*** : Collection<br/>***.attributeName*** : 4D.EntitySelection<!-- END REF -->
 
 
 #### Beschreibung
@@ -276,9 +270,8 @@ The resulting object is an entity selection of Employee with duplications remove
 </details>
 
 
-<!-- REF #EntitySelectionClass.add().Syntax -->
+<!-- REF #EntitySelectionClass.add().Syntax -->**.add**( *entity* : 4D.Entity ) : 4D.EntitySelection<!-- END REF -->
 
-**.add**( *entity* : 4D.Entity ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.add().Params -->
 | Parameter | Typ                |    | Beschreibung                                                             |
@@ -347,9 +340,7 @@ Calls to the function can be chained:
 
 </details>
 
-<!-- REF #EntitySelectionClass.and().Syntax -->
-
-**.and**( *entity* : 4D.Entity ) : 4D.EntitySelection<br/>**.and**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
+<!-- REF #EntitySelectionClass.and().Syntax -->**.and**( *entity* : 4D.Entity ) : 4D.EntitySelection<br/>**.and**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.and().Params -->
@@ -419,9 +410,8 @@ We want to have a selection of employees named "Jones" who live in New York:
 
 </details>
 
-<!-- REF #EntitySelectionClass.average().Syntax -->
+<!-- REF #EntitySelectionClass.average().Syntax -->**.average**( *attributePath* : Text ) : Real<!-- END REF -->
 
-**.average**( *attributePath* : Text ) : Real<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.average().Params -->
 | Parameter     | Typ  |    | Beschreibung                                                                                                          |
@@ -474,9 +464,8 @@ We want to obtain a list of employees whose salary is higher than the average sa
 
 </details>
 
-<!-- REF #EntitySelectionClass.contains().Syntax -->
+<!-- REF #EntitySelectionClass.contains().Syntax -->**.contains**( *entity* : 4D.Entity ) : Boolean<!-- END REF -->
 
-**.contains**( *entity* : 4D.Entity ) : Boolean<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.contains().Params -->
 | Parameter | Typ       |    | Beschreibung                                                                              |
@@ -525,9 +514,8 @@ If *entity* and the entity selection do not belong to the same dataclass, an err
 
 </details>
 
-<!-- REF #EntitySelectionClass.count().Syntax -->
+<!-- REF #EntitySelectionClass.count().Syntax -->**.count**( *attributePath* : Text ) : Real<!-- END REF -->
 
-**.count**( *attributePath* : Text ) : Real<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.count().Params -->
 | Parameter     | Typ  |    | Beschreibung                                                                                 |
@@ -573,9 +561,8 @@ We want to find out the total number of employees for a company without counting
 
 </details>
 
-<!-- REF #EntitySelectionClass.copy().Syntax -->
+<!-- REF #EntitySelectionClass.copy().Syntax -->**.copy**( { *option* : Integer } ) : 4D.EntitySelection<!-- END REF -->
 
-**.copy**( { *option* : Integer } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.copy().Params -->
 | Parameter | Typ                |    | Beschreibung                                            |
@@ -639,9 +626,8 @@ Then this entity selection is updated with products and you want to share the pr
 
 </details>
 
-<!-- REF #EntitySelectionClass.distinct().Syntax -->
+<!-- REF #EntitySelectionClass.distinct().Syntax -->**.distinct**( *attributePath* : Text { ; *option* : Integer } ) : Collection<!-- END REF -->
 
-**.distinct**( *attributePath* : Text { ; *option* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.distinct().Params -->
 | Parameter     | Typ        |    | Beschreibung                                                     |
@@ -704,9 +690,8 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 
 </details>
 
-<!-- REF #EntitySelectionClass.drop().Syntax -->
+<!-- REF #EntitySelectionClass.drop().Syntax -->**.drop**( { *mode* : Integer } ) : 4D.EntitySelection<!-- END REF -->
 
-**.drop**( { *mode* : Integer } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.drop().Params -->
 | Parameter                  | Typ                |    | Beschreibung                                                                                     |
@@ -879,9 +864,8 @@ Given the following table and relation:
 
 </details>
 
-<!-- REF #EntitySelectionClass.first().Syntax -->
+<!-- REF #EntitySelectionClass.first().Syntax -->**.first()** : 4D.Entity<!-- END REF -->
 
-**.first()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.first().Params -->
 | Parameter | Typ       |    | Beschreibung                                                                                                  |
@@ -939,9 +923,7 @@ There is, however, a difference between both statements when the selection is em
 
 </details>
 
-<!-- REF #EntitySelectionClass.getDataClass().Syntax -->
-
-**.getDataClass()** : 4D.DataClass<!-- END REF -->
+<!-- REF #EntitySelectionClass.getDataClass().Syntax -->**.getDataClass()** : 4D.DataClass<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.getDataClass().Params -->
@@ -991,9 +973,8 @@ The following generic code duplicates all entities of the entity selection:
 
 </details>
 
-<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Syntax -->
+<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Syntax -->**.getRemoteContextAttributes()** : Text<!-- END REF -->
 
-**.getRemoteContextAttributes()** : Text<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Params -->
 | Parameter | Typ  |    | Beschreibung                                                                                       |
@@ -1048,9 +1029,8 @@ $info:=$persons.getRemoteContextAttributes()
 
 </details>
 
-<!-- REF #EntitySelectionClass.isAlterable().Syntax -->
+<!-- REF #EntitySelectionClass.isAlterable().Syntax -->**.isAlterable()** : Boolean<!-- END REF -->
 
-**.isAlterable()** : Boolean<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.isAlterable().Params -->
 | Parameter | Typ     |    | Beschreibung                                                                          |
@@ -1093,9 +1073,8 @@ Form.products.add(Form.product)
 
 </details>
 
-<!-- REF #EntitySelectionClass.isOrdered().Syntax -->
+<!-- REF #EntitySelectionClass.isOrdered().Syntax -->**.isOrdered()** : Boolean<!-- END REF -->
 
-**.isOrdered()** : Boolean<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.isOrdered().Params -->
 | Parameter | Typ     |    | Beschreibung                                                                        |
@@ -1149,9 +1128,8 @@ For more information, please refer to [Ordered or unordered entity selection](OR
 
 </details>
 
-<!-- REF #EntitySelectionClass.last().Syntax -->
+<!-- REF #EntitySelectionClass.last().Syntax -->**.last()** : 4D.Entity<!-- END REF -->
 
-**.last()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.last().Params -->
 | Parameter | Typ       |    | Beschreibung                                                                                                     |
@@ -1200,9 +1178,7 @@ If the entity selection is empty, the function returns Null.
 
 </details>
 
-<!-- REF #EntitySelectionClass.length.Syntax -->
-
-**.length** : Integer<!-- END REF -->
+<!-- REF #EntitySelectionClass.length.Syntax -->**.length** : Integer<!-- END REF -->
 
 
 #### Beschreibung
@@ -1237,9 +1213,7 @@ Entity selections always have a `.length` property.
 
 </details>
 
-<!-- REF #EntitySelectionClass.max().Syntax -->
-
-**.max**( *attributePath* : Text ) : any<!-- END REF -->
+<!-- REF #EntitySelectionClass.max().Syntax -->**.max**( *attributePath* : Text ) : any<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.max().Params -->
@@ -1293,9 +1267,8 @@ We want to find the highest salary among all the female employees:
 
 </details>
 
-<!-- REF #EntitySelectionClass.min().Syntax -->
+<!-- REF #EntitySelectionClass.min().Syntax -->**.min**( *attributePath* : Text ) : any<!-- END REF -->
 
-**.min**( *attributePath* : Text ) : any<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.min().Params -->
 | Parameter     | Typ  |    | Beschreibung                                         |
@@ -1344,9 +1317,8 @@ In this example, we want to find the lowest salary among all the female employee
 
 </details>
 
-<!-- REF #EntitySelectionClass.minus().Syntax -->
+<!-- REF #EntitySelectionClass.minus().Syntax -->**.minus**( *entity* : 4D.Entity ) : 4D.EntitySelection<br/>**.minus**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
 
-**.minus**( *entity* : 4D.Entity ) : 4D.EntitySelection<br/>**.minus**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.minus().Params -->
 | Parameter       | Typ                |    | Beschreibung                                                                                        |
@@ -1413,9 +1385,8 @@ We want to have a selection of female employees named "Jones" who live in New Yo
 
 </details>
 
-<!-- REF #EntitySelectionClass.or().Syntax -->
+<!-- REF #EntitySelectionClass.or().Syntax -->**.or**( *entity* : 4D.Entity ) : 4D.EntitySelection<br/>**.or**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
 
-**.or**( *entity* : 4D.Entity ) : 4D.EntitySelection<br/>**.or**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.or().Params -->
 | Parameter       | Typ                |    | Beschreibung                                                                                      |
@@ -1476,9 +1447,8 @@ If the original entity selection and the parameter are not related to the same d
 
 </details>
 
-<!-- REF #EntitySelectionClass.orderBy().Syntax -->
+<!-- REF #EntitySelectionClass.orderBy().Syntax -->**.orderBy**( *pathString* : Text ) : 4D.EntitySelection<br/>**.orderBy**( *pathObjects* : Collection ) : 4D.EntitySelection<!-- END REF -->
 
-**.orderBy**( *pathString* : Text ) : 4D.EntitySelection<br/>**.orderBy**( *pathObjects* : Collection ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.orderBy().Params -->
 | Parameter   | Typ                |    | Beschreibung                                                           |
@@ -1554,9 +1524,8 @@ You can add as many objects in the criteria collection as necessary.
 
 </details>
 
-<!-- REF #EntitySelectionClass.orderByFormula().Syntax -->
+<!-- REF #EntitySelectionClass.orderByFormula().Syntax -->**.orderByFormula**( *formulaString* : Text { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.EntitySelection<br/>**.orderByFormula**( *formulaObj* : Object { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.EntitySelection<!-- END REF -->
 
-**.orderByFormula**( *formulaString* : Text { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.EntitySelection<br/>**.orderByFormula**( *formulaObj* : Object { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.orderByFormula().Params -->
 | Parameter     | Typ                |    | Beschreibung                                            |
@@ -1680,9 +1649,8 @@ In this example, the "marks" object field in the **Students** dataClass contains
 
 </details>
 
-<!-- REF #EntitySelectionClass.query().Syntax -->
+<!-- REF #EntitySelectionClass.query().Syntax -->**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br/>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
-**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br/>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.query().Params -->
 | Parameter     | Typ                |    | Beschreibung                                                                                                                                                  |
@@ -1739,9 +1707,7 @@ More examples of queries can be found in the DataClass [`.query()`](DataClassCla
 
 </details>
 
-<!-- REF #EntitySelectionClass.queryPath.Syntax -->
-
-**.queryPath** : Text<!-- END REF -->
+<!-- REF #EntitySelectionClass.queryPath.Syntax -->**.queryPath** : Text<!-- END REF -->
 
 
 #### Beschreibung
@@ -1765,9 +1731,7 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 </details>
 
-<!-- REF #EntitySelectionClass.queryPlan.Syntax -->
-
-**.queryPlan** : Text<!-- END REF -->
+<!-- REF #EntitySelectionClass.queryPlan.Syntax -->**.queryPlan** : Text<!-- END REF -->
 
 
 
@@ -1791,9 +1755,8 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 </details>
 
-<!-- REF #EntitySelectionClass.refresh().Syntax -->
+<!-- REF #EntitySelectionClass.refresh().Syntax -->**.refresh()**<!-- END REF -->
 
-**.refresh()**<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.refresh().Params -->
 | Parameter | Typ |  | Beschreibung                                               |
@@ -1873,9 +1836,8 @@ A list box displays the Form.students entity selection and several clients work 
 
 </details>
 
-<!-- REF #EntitySelectionClass.selected().Syntax -->
+<!-- REF #EntitySelectionClass.selected().Syntax -->**.selected**( *selectedEntities* : 4D.EntitySelection ) : Object<!-- END REF -->
 
-**.selected**( *selectedEntities* : 4D.EntitySelection ) : Object<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.selected().Params -->
 | Parameter        | Typ                |    | Beschreibung                                                                      |
@@ -1948,9 +1910,8 @@ $result2:=$invoices.selected($creditSel)
 
 </details>
 
-<!-- REF #EntitySelectionClass.slice().Syntax -->
+<!-- REF #EntitySelectionClass.slice().Syntax -->**.slice**( *startFrom* : Integer { ; *end* : Integer } ) : 4D.EntitySelection<!-- END REF -->
 
-**.slice**( *startFrom* : Integer { ; *end* : Integer } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.slice().Params -->
 | Parameter | Typ                |    | Beschreibung                                                                              |
@@ -2011,9 +1972,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tries to return entities from index 9 t
 
 </details>
 
-<!-- REF #EntitySelectionClass.sum().Syntax -->
-
-**.sum**( *attributePath* : Text ) : Real<!-- END REF -->
+<!-- REF #EntitySelectionClass.sum().Syntax -->**.sum**( *attributePath* : Text ) : Real<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.sum().Params -->
@@ -2065,9 +2024,8 @@ $sum:=$sel.sum("salary")
 
 </details>
 
-<!-- REF #EntitySelectionClass.toCollection().Syntax -->
+<!-- REF #EntitySelectionClass.toCollection().Syntax -->**.toCollection**( { *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer } } ) : *Collection*<br/>**.toCollection**( *filterString* : Text {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*<br/>**.toCollection**( *filterCol* : Collection {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*<!-- END REF -->
 
-**.toCollection**( { *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer } } ) : *Collection*<br/>**.toCollection**( *filterString* : Text {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*<br/>**.toCollection**( *filterCol* : Collection {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.toCollection().Params -->
 | Parameter    | Typ        |    | Beschreibung                                                                                          |
