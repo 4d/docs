@@ -49,6 +49,13 @@ Operator results depend on the **data types** they are applied to. 4D supports d
 
 ## Compound assignment operators
 
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R4|Added
+</details>
+
 4D provides **compound assignment operators** that combine assignment with another operation. One example is the addition assignment operator (`+=`):
 
 ```4d
@@ -135,6 +142,13 @@ The difference with the single [**&** and **|** boolean operators](dt_boolean.md
 
 ### Short-circuit AND operator (&&)
 
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R4|Added
+</details>
+
 The rule is as follows: 
 
 Given `Expr1 && Expr2`:
@@ -192,6 +206,13 @@ If $myObject is Null, the second argument is not executed, thus no error is thro
 
 ### Short-circuit OR operator (||)
 
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R4|Added
+</details>
+
 The || operator returns the value of one of the specified operands. The expression is evaluated left to right and tested for possible "short-circuit" evaluation using the following rule:
 
 Given `Expr1 || Expr2`:
@@ -242,6 +263,13 @@ This means that `a || b && c` is evaluated as `(a || b) && c`.
 
 ## Ternary operator
 
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R4|Added
+</details>
+
 The ternary conditional operator allows you to write one-line conditional expressions. For example, it can replace a full sequence of [If…Else](./cf_branching.md#ifelseend-if) statements.
 
 It takes three operands in the following order: 
@@ -284,6 +312,13 @@ $fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$per
 ```
 
 ## Truthy and falsy
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R4|Added
+</details>
 
 As well as a type, each value also has an inherent Boolean value, generally known as either **truthy** or **falsy**. 
 
