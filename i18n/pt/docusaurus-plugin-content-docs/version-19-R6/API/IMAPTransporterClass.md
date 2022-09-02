@@ -52,11 +52,9 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 
 </details>
 
-<!-- REF #_command_.IMAP New transporter.Syntax -->
+<!-- REF #_command_.IMAP New transporter.Syntax -->**IMAP New transporter**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
 
-**IMAP New transporter**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
-
-<!-- REF IMAPTransporterClass.IMAP New transporter.Params -->
+<!-- REF #_command_.IMAP New transporter.Params -->
 | Parâmetros | Tipo               |    | Descrição                                                                      |
 | ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server     | Objeto             | -> | Informação de servidor de correio                                              |
@@ -110,9 +108,8 @@ End if
 
 ## 4D.IMAPTransporter.new()
 
-<!-- REF #4D.IMAPTransporter.new().Syntax -->
+<!-- REF #4D.IMAPTransporter.new().Syntax -->**4D.IMAPTransporter.new**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
 
-**4D.IMAPTransporter.new**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
 
 <!-- REF #4D.IMAPTransporter.new().Params -->
 | Parâmetros | Tipo               |    | Descrição                                                                      |
@@ -139,9 +136,8 @@ The `4D.IMAPTransporter.new()` function <!-- REF #4D.IMAPTransporter.new().Summa
 
 </details>
 
-<!-- REF #IMAPTransporterClass.addFlags().Syntax -->
+<!-- REF #IMAPTransporterClass.addFlags().Syntax -->**.addFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br/>**.addFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br/>**.addFlags**( *msgIDs* : Longint  ; *keywords* :  Object ) : Object<!-- END REF -->
 
-**.addFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br/>**.addFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br/>**.addFlags**( *msgIDs* : Longint  ; *keywords* :  Object ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.addFlags().Params -->
 | Parâmetros | Tipo       |    | Descrição                                                                                                                                                  |
@@ -227,9 +223,8 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 </details>
 
-<!-- REF #IMAPTransporterClass.append().Syntax -->
+<!-- REF #IMAPTransporterClass.append().Syntax -->**.append**( *mailObj* : Object ; *destinationBox* : Text ; *options* : Object ) : Object<!-- END REF -->
 
-**.append**( *mailObj* : Object ; *destinationBox* : Text ; *options* : Object ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.append().Params -->
 | Parâmetros     | Tipo   |    | Descrição                                                 |
@@ -318,9 +313,7 @@ $status:=$imap.append($msg; "Drafts")
 
 </details>
 
-<!-- REF #IMAPTransporterClass.checkConnectionDelay.Syntax -->
-
-**.checkConnectionDelay** : Integer<!-- END REF -->
+<!-- REF #IMAPTransporterClass.checkConnectionDelay.Syntax -->**.checkConnectionDelay** : Integer<!-- END REF -->
 
 #### Descrição
 
@@ -342,9 +335,8 @@ The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.che
 
 </details>
 
-<!-- REF #IMAPTransporterClass.copy().Syntax -->
+<!-- REF #IMAPTransporterClass.copy().Syntax -->**.copy**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br/>**.copy**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
 
-**.copy**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br/>**.copy**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.copy().Params -->
 | Parâmetros     | Tipo       |    | Descrição                                               |
@@ -444,9 +436,8 @@ To copy all messages in the current mailbox:
 
 </details>
 
-<!-- REF #IMAPTransporterClass.createBox().Syntax -->
+<!-- REF #IMAPTransporterClass.createBox().Syntax -->**.createBox**( *name* :  Text ) : Object<!-- END REF -->
 
-**.createBox**( *name* :  Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.createBox().Params -->
 | Parâmetros | Tipo   |    | Descrição                                                           |
@@ -524,9 +515,8 @@ End for each
 
 </details>
 
-<!-- REF #IMAPTransporterClass.delete().Syntax -->
+<!-- REF #IMAPTransporterClass.delete().Syntax -->**.delete**( *msgsIDs* : Collection ) : Object<br/>**.delete**( *allMsgs* : Integer ) : Object<!-- END REF -->
 
-**.delete**( *msgsIDs* : Collection ) : Object<br/>**.delete**( *allMsgs* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.delete().Params -->
 | Parâmetros | Tipo       |    | Descrição                                                 |
@@ -624,9 +614,8 @@ To delete all messages in the current mailbox:
 
 </details>
 
-<!-- REF #IMAPTransporterClass.deleteBox().Syntax -->
+<!-- REF #IMAPTransporterClass.deleteBox().Syntax -->**.deleteBox**( *name* : Text ) : Object<!-- END REF -->
 
-**.deleteBox**( *name* : Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.deleteBox().Params -->
 | Parâmetros | Tipo |    | Descrição                     |
@@ -700,9 +689,7 @@ End if
 
 </details>
 
-<!-- REF #IMAPTransporterClass.expunge().Syntax -->
-
-**.expunge()** : Object<!-- END REF -->
+<!-- REF #IMAPTransporterClass.expunge().Syntax -->**.expunge()** : Object<!-- END REF -->
 
 <!-- REF IMAPTransporterClass.expunge().Params -->
 | Parâmetros | Tipo   |    | Descrição                                                   |
@@ -770,9 +757,8 @@ $status:=$transporter.expunge()
 
 </details>
 
-<!-- REF #IMAPTransporterClass.getBoxInfo().Syntax -->
+<!-- REF #IMAPTransporterClass.getBoxInfo().Syntax -->**.getBoxInfo**( { *name* : Text }) : Object<!-- END REF -->
 
-**.getBoxInfo**( { *name* : Text }) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.getBoxInfo().Params -->
 | Parâmetros | Tipo   |    | Descrição                                 |
@@ -824,9 +810,8 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 </details>
 
-<!-- REF #IMAPTransporterClass.getBoxList().Syntax -->
+<!-- REF #IMAPTransporterClass.getBoxList().Syntax -->**.getBoxList**( { *parameters* : Object } ) : Collection<!-- END REF -->
 
-**.getBoxList**( { *parameters* : Object } ) : Collection<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.getBoxList().Params -->
 | Parâmetros | Tipo       |    | Descrição                                                |
@@ -890,9 +875,8 @@ If the account does not contain any mailboxes, an empty collection is returned.
 
 </details>
 
-<!-- REF #IMAPTransporterClass.getDelimiter().Syntax -->
+<!-- REF #IMAPTransporterClass.getDelimiter().Syntax -->**.getDelimiter()** : Text<!-- END REF -->
 
-**.getDelimiter()** : Text<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.getDelimiter().Params -->
 | Parâmetros | Tipo |    | Descrição                                                |
@@ -945,9 +929,8 @@ Mailbox name delimiter character.
 
 </details>
 
-<!-- REF #IMAPTransporterClass.getMail().Syntax -->
+<!-- REF #IMAPTransporterClass.getMail().Syntax -->**.getMail**( *msgNumber*: Integer { ; *options* : Object } ) : Object<br/>**.getMail**( *msgID*: Text { ; *options* : Object } ) : Object<!-- END REF -->
 
-**.getMail**( *msgNumber*: Integer { ; *options* : Object } ) : Object<br/>**.getMail**( *msgID*: Text { ; *options* : Object } ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.getMail().Params -->
 | Parâmetros | Tipo    |    | Descrição                                                                   |
@@ -1020,9 +1003,8 @@ You want to get the message with ID = 1:
 
 </details>
 
-<!-- REF #IMAPTransporterClass.getMails().Syntax -->
+<!-- REF #IMAPTransporterClass.getMails().Syntax -->**.getMails**( *ids* : Collection { ; *options* : Object } ) : Object<br/>**.getMails**( *startMsg* : Integer ; *endMsg* : Integer { ; *options* : Object } ) : Object<!-- END REF -->
 
-**.getMails**( *ids* : Collection { ; *options* : Object } ) : Object<br/>**.getMails**( *startMsg* : Integer ; *endMsg* : Integer { ; *options* : Object } ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.getMails().Params -->
 | Parâmetros | Tipo       |    | Descrição                                                                          |
@@ -1121,9 +1103,8 @@ You want to retrieve the 20 most recent emails without changing their "seen" sta
 
 </details>
 
-<!-- REF #IMAPTransporterClass.getMIMEAsBlob().Syntax -->
+<!-- REF #IMAPTransporterClass.getMIMEAsBlob().Syntax -->**.getMIMEAsBlob**( *msgNumber* : Integer { ; *updateSeen* : Boolean } ) : Blob<br/>**.getMIMEAsBlob**( *msgID* : Text { ; *updateSeen* : Boolean } ) : Blob<!-- END REF -->
 
-**.getMIMEAsBlob**( *msgNumber* : Integer { ; *updateSeen* : Boolean } ) : Blob<br/>**.getMIMEAsBlob**( *msgID* : Text { ; *updateSeen* : Boolean } ) : Blob<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Params -->
 | Parâmetros | Tipo     |    | Descrição                                                                                     |
@@ -1197,9 +1178,8 @@ The optional *updateSeen* parameter allows you to specify if the message is mark
 
 </details>
 
-<!-- REF #IMAPTransporterClass.move().Syntax -->
+<!-- REF #IMAPTransporterClass.move().Syntax -->**.move**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br/>**.move**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
 
-**.move**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br/>**.move**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.move().Params -->
 | Parâmetros     | Tipo       |    | Descrição                                               |
@@ -1300,9 +1280,8 @@ To move all messages in the current mailbox:
 
 </details>
 
-<!-- REF #IMAPTransporterClass.numToID().Syntax -->
+<!-- REF #IMAPTransporterClass.numToID().Syntax -->**.numToID**( *startMsg* : Integer ; *endMsg* : Integer ) : Collection<!-- END REF -->
 
-**.numToID**( *startMsg* : Integer ; *endMsg* : Integer ) : Collection<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.numToID().Params -->
 | Parâmetros | Tipo       |    | Descrição                                           |
@@ -1363,9 +1342,8 @@ The function returns a collection of strings (unique IDs).
 
 </details>
 
-<!-- REF #IMAPTransporterClass.removeFlags().Syntax -->
+<!-- REF #IMAPTransporterClass.removeFlags().Syntax -->**.removeFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br/>**.removeFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br/>**.removeFlags**( *msgIDs* : Longint ; *keywords* :  Object ) : Object<!-- END REF -->
 
-**.removeFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br/>**.removeFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br/>**.removeFlags**( *msgIDs* : Longint ; *keywords* :  Object ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.removeFlags().Params -->
 | Parâmetros | Tipo       |    | Descrição                                                                                                                                                  |
@@ -1451,9 +1429,8 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 </details>
 
-<!-- REF #IMAPTransporterClass.renameBox().Syntax -->
+<!-- REF #IMAPTransporterClass.renameBox().Syntax -->**.renameBox**( *currentName* : Text ; *newName* : Text ) : Object<!-- END REF -->
 
-**.renameBox**( *currentName* : Text ; *newName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.renameBox().Params -->
 | Parâmetros  | Tipo   |    | Descrição                                                   |
@@ -1530,9 +1507,8 @@ End if
 
 </details>
 
-<!-- REF #IMAPTransporterClass.searchMails().Syntax -->
+<!-- REF #IMAPTransporterClass.searchMails().Syntax -->**.searchMails**( *searchCriteria* : Text ) : Collection<!-- END REF -->
 
-**.searchMails**( *searchCriteria* : Text ) : Collection<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.searchMails().Params -->
 | Parâmetros     | Tipo       |    | Descrição                                                |
@@ -1666,9 +1642,8 @@ Search-keys may request the value to search for:
 
 </details>
 
-<!-- REF #IMAPTransporterClass.selectBox().Syntax -->
+<!-- REF #IMAPTransporterClass.selectBox().Syntax -->**.selectBox**( *name* : Text { ; *state* : Integer } ) : Object<!-- END REF -->
 
-**.selectBox**( *name* : Text { ; *state* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.selectBox().Params -->
 | Parâmetros | Tipo    |    | Descrição                                 |
@@ -1733,9 +1708,8 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 </details>
 
-<!-- REF #IMAPTransporterClass.subscribe().Syntax -->
+<!-- REF #IMAPTransporterClass.subscribe().Syntax -->**.subscribe**( *name* : Text ) : Object<!-- END REF -->
 
-**.subscribe**( *name* : Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.subscribe().Params -->
 | Parâmetros | Tipo   |    | Descrição                                                    |
@@ -1805,9 +1779,8 @@ End if
 
 </details>
 
-<!-- REF #IMAPTransporterClass.unsubscribe().Syntax -->
+<!-- REF #IMAPTransporterClass.unsubscribe().Syntax -->**.unsubscribe**( *name* : Text ) : Object<!-- END REF -->
 
-**.unsubscribe**( *name* : Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.unsubscribe().Params -->
 | Parâmetros | Tipo   |    | Descrição                                                      |
