@@ -44,9 +44,7 @@ Os objetos `DataClassAttribute` têm propriedades que pode ler para obter inform
 
 </details>
 
-<!-- REF DataClassAttributeClass.autoFilled.Syntax -->
-
-**.autoFilled** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.autoFilled.Syntax -->**.autoFilled** : Boolean<!-- END REF -->
 
 #### Descrição
 
@@ -71,9 +69,7 @@ Esta propriedade não é devolvida se `.kind` = "relatedEntity" ou "relatedEntit
 
 </details>
 
-<!-- REF DataClassAttributeClass.fieldNumber.Syntax -->
-
-**.size** : Integer<!-- END REF -->
+<!-- REF DataClassAttributeClass.fieldNumber.Syntax -->**.size** : Integer<!-- END REF -->
 
 #### Descrição
 
@@ -95,9 +91,7 @@ Esta propriedade não é devolvida se `.kind` = "relatedEntity" ou "relatedEntit
 
 </details>
 
-<!-- REF DataClassAttributeClass.fieldType.Syntax -->
-
-**.fieldType** : Integer<!-- END REF -->
+<!-- REF DataClassAttributeClass.fieldType.Syntax -->**.fieldType** : Integer<!-- END REF -->
 
 #### Descrição
 
@@ -124,9 +118,7 @@ The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->
 
 </details>
 
-<!-- REF DataClassAttributeClass.indexed.Syntax -->
-
-**.indexed** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.indexed.Syntax -->**.indexed** : Boolean<!-- END REF -->
 
 #### Descrição
 
@@ -148,9 +140,7 @@ Esta propriedade não é devolvida se `.kind` = "relatedEntity" ou "relatedEntit
 
 </details>
 
-<!-- REF DataClassAttributeClass.inverseName.Syntax -->
-
-**.inverseName** : Text<!-- END REF -->
+<!-- REF DataClassAttributeClass.inverseName.Syntax -->**.inverseName** : Text<!-- END REF -->
 
 #### Descrição
 
@@ -172,9 +162,7 @@ Esta propriedade não se devolve si `.kind` = "storage". Deve ser do tipo "relat
 
 </details>
 
-<!-- REF DataClassAttributeClass.keywordIndexed.Syntax -->
-
-**.keywordIndexed** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.keywordIndexed.Syntax -->**.keywordIndexed** : Boolean<!-- END REF -->
 
 #### Descrição
 
@@ -196,9 +184,7 @@ Esta propriedade não é retornada se [`.kind`](#kind) = "relatedEntity" ou "rel
 
 </details>
 
-<!-- REF DataClassAttributeClass.kind.Syntax -->
-
-**.kind** : Text<!-- END REF -->
+<!-- REF DataClassAttributeClass.kind.Syntax -->**.kind** : Text<!-- END REF -->
 
 #### Descrição
 
@@ -234,9 +220,7 @@ Dada a seguinte tabela e relação:
 
 </details>
 
-<!-- REF DataClassAttributeClass.mandatory.Syntax -->
-
-**.mandatory** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.mandatory.Syntax -->**.mandatory** : Boolean<!-- END REF -->
 
 #### Descrição
 
@@ -259,9 +243,7 @@ Esta propriedade não é retornada se [`.kind`](#kind) = "relatedEntity" ou "rel
 
 </details>
 
-<!-- REF DataClassAttributeClass.name.Syntax -->
-
-**.name** : Text<!-- END REF -->
+<!-- REF DataClassAttributeClass.name.Syntax -->**.name** : Text<!-- END REF -->
 
 #### Descrição
 
@@ -287,9 +269,7 @@ The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->The `.name
 
 </details>
 
-<!-- REF DataClassAttributeClass.relatedDataClass.Syntax -->
-
-**.relatedDataClass** : Text<!-- END REF -->
+<!-- REF DataClassAttributeClass.relatedDataClass.Syntax -->**.relatedDataClass** : Text<!-- END REF -->
 
 #### Descrição
 > Esta propriedade só está disponível com atributos da propriedade "relatedEntity" ou "relatedEntities" [`.kind`](#kind).
@@ -321,9 +301,7 @@ Dada a seguinte tabela e relação:
 
 </details>
 
-<!-- REF DataClassAttributeClass.type.Syntax -->
-
-**.type** : Text<!-- END REF -->
+<!-- REF DataClassAttributeClass.type.Syntax -->**.type** : Text<!-- END REF -->
 
 #### Descrição
 
@@ -352,9 +330,7 @@ O tipo de valor conceitual depende do atributo [`.kind`](#kind).
 
 </details>
 
-<!-- REF DataClassAttributeClass.unique.Syntax -->
-
-**.unique** : Boolean<!-- END REF -->
+<!-- REF DataClassAttributeClass.unique.Syntax -->**.unique** : Boolean<!-- END REF -->
 
 #### Descrição
 
