@@ -1855,6 +1855,7 @@ Available properties depend on the type of the named element (named cell, named 
 
 ```4d
 var $list : Collection
+
 $list:=VP Get names("ViewProArea";2) //names in 3rd sheet
 ```
 
@@ -2296,6 +2297,7 @@ VP SET CELL STYLE($range;$style)
 
 |styleName|Text|->|Name of style|
 |sheet|Integer|->|Sheet index (current sheet if omitted)|
+
 |Result|Object|<-|Style sheet object|<!-- END REF -->
 
 #### Description
@@ -2404,7 +2406,7 @@ In this case, the current sheet uses two style objects:
 <!-- REF #_method_.VP Get table range.Syntax -->
 **VP Get table range** ( *vpAreaName* : Text ; *tableName* : Text {; *onlyData* : Integer {; *sheet* : Integer }} ) : Object<!-- END REF -->
 
-<!-- REF #_method_.VP Get tables.Params -->
+<!-- REF #_method_.VP Get table range.Params -->
 
 |Parameter|Type| |Description|
 |---|---|---|---|
@@ -2705,6 +2707,7 @@ Here's the result:
 ![example-import-csv](../assets/en/ViewPro/vp-import-document-csv-result.png)
 
 #### See also
+
 
 [VP EXPORT DOCUMENT](#vp-export-document)<br/>[VP NEW DOCUMENT](#vp-new-document)
 
@@ -4873,6 +4876,7 @@ You can pass an object defining the columns and rows to freeze in the *paneObj* 
 
 |Property | Type|  Description|
 |---|---|---|
+
 |columnCount | Integer | The number of frozen columns on the left of the sheet|
 |trailingColumnCount |Integer | The number of frozen columns on the right of the sheet
 |rowCount | Integer |  The number of frozen rows on the top of the sheet |

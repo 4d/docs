@@ -332,6 +332,7 @@ The <!-- REF #WebServerClass.HTTPEnabled.Summary -->HTTP protocol state<!-- END 
 
 <!-- REF #WebServerClass.HTTPPort.Syntax -->**.HTTPPort** : Number<!-- END REF -->
 
+
 The <!-- REF #WebServerClass.HTTPPort.Summary -->listening IP port number for HTTP<!-- END REF -->.
 
 Default = 80
@@ -700,15 +701,6 @@ The function returns an object describing the Web server launch status. This obj
 <!-- REF WebServerClass.stop().Desc -->
 
 ## .stop()
-
-<details><summary>History</summary>
-
-|Version|Changes|
-|---|---|
-|v18 R3|Added
-</details>
-
-<!-- REF #WebServerClass.stop().Syntax -->## .stop()
 
 <details><summary>History</summary>
 
