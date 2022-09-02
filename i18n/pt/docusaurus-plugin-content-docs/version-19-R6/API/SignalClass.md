@@ -97,11 +97,9 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 
 </details>
 
-<!-- REF #_command_.New signal.Syntax -->
+<!-- REF #_command_.New signal.Syntax -->**New signal** { ( *description* : Text ) } : 4D. Signal<!-- END REF -->
 
-**New signal** { ( *description* : Text ) } : 4D. Signal<!-- END REF -->
-
-<!-- REF SignalClass.New signal.Params -->
+<!-- REF #_command_.New signal.Params -->
 | Parâmetros  | Tipo       |    | Descrição                                                     |
 | ----------- | ---------- |:--:| ------------------------------------------------------------- |
 | description | Text       | -> | Descrição para o sinal                                        |
@@ -169,9 +167,7 @@ O método ***doSomething*** poderia ser algo como:
 
 </details>
 
-<!-- REF #SignalClass.description.Syntax -->
-
-**.description** : Text<!-- END REF -->
+<!-- REF #SignalClass.description.Syntax -->**.description** : Text<!-- END REF -->
 
 #### Descrição
 
@@ -194,9 +190,7 @@ Essa propriedade é**apenas escrita**.
 
 </details>
 
-<!-- REF #SignalClass.signaled.Syntax -->
-
-**.signaled** : Boolean<!-- END REF -->
+<!-- REF #SignalClass.signaled.Syntax -->**.signaled** : Boolean<!-- END REF -->
 
 #### Descrição
 
@@ -217,9 +211,8 @@ Essa propriedade é**apenas leitura**.
 
 </details>
 
-<!-- REF #SignalClass.trigger().Syntax -->
+<!-- REF #SignalClass.trigger().Syntax -->**.trigger( )**<!-- END REF -->
 
-**.trigger( )**<!-- END REF -->
 
 <!-- REF #SignalClass.trigger().Params -->
 | Parâmetros | Tipo |  | Descrição                                                  |
@@ -247,9 +240,8 @@ Se o sinal já estiver no estado de sinalização (ou seja, a propriedade `signa
 
 </details>
 
-<!-- REF #SignalClass.wait().Syntax -->
+<!-- REF #SignalClass.wait().Syntax -->**.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
 
-**.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
 
 <!-- REF #SignalClass.wait().Params -->
 | Parâmetros | Tipo     |    | Descrição                                                    |
