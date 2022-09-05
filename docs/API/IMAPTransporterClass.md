@@ -60,6 +60,7 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 |server|Object|->|Mail server information|
 |Result|4D.IMAPTransporter|<-|[IMAP transporter object](#imap-transporter-object)|<!-- END REF -->
 
+
 #### Description
 
 The `IMAP New transporter` command <!-- REF #_command_.IMAP New transporter.Summary -->configures a new IMAP connection<!-- END REF --> according to the *server* parameter and returns a new *transporter* object. The returned transporter object will then usually be used to receive emails.
