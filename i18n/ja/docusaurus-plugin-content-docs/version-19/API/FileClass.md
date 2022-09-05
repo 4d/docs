@@ -32,8 +32,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | [<!-- INCLUDE #document.getIcon().Syntax -->](#geticon)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getIcon().Summary -->|
 | [<!-- INCLUDE #document.getText().Syntax -->](#gettext)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getText().Summary -->|
 | [<!-- INCLUDE #document.hidden.Syntax -->](#hidden)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.hidden.Summary -->|
-| [<!-- INCLUDE #document.isAlias.Syntax -->](#isalias)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isAlias.Summary -->
-|
+| [<!-- INCLUDE #document.isAlias.Syntax -->](#isalias)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isAlias.Summary -->|
 | [<!-- INCLUDE #document.isFile.Syntax -->](#isfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFile.Summary -->|
 | [<!-- INCLUDE #document.isFolder.Syntax -->](#isfolder)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFolder.Summary -->|
 | [<!-- INCLUDE #document.isWritable.Syntax -->](#iswritable)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isWritable.Summary -->|
@@ -61,9 +60,8 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 </details>
 
-<!-- REF #_command_.File.Syntax -->
+<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
 
-**File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
 
 <!-- REF #_command_.File.Params -->
 | 引数           | タイプ     |    | 詳細                                             |
@@ -159,9 +157,7 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 <!--REF file.create().Note -->
 **ZIPアーカイブには利用できません**<!-- END REF -->
 
-<!--REF #FileClass.create().Syntax -->
-
-**.create()** : Boolean <!-- END REF -->
+<!--REF #FileClass.create().Syntax -->**.create()** : Boolean <!-- END REF -->
 
 <!--REF #FileClass.create().Params -->
 | 引数     | タイプ |    | 詳細                                                              |
@@ -201,9 +197,7 @@ The `.create()` function <!-- REF #FileClass.create().Summary -->creates a file 
 | v17 R5 | 追加 |
 </details>
 
-<!--REF #FileClass.createAlias().Syntax -->
-
-**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
+<!--REF #FileClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.createAlias().Params -->
 | 引数                | タイプ       |    | 詳細                                                |
@@ -258,9 +252,8 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 | v17 R5 | 追加 |
 </details>
 
-<!--REF #FileClass.delete().Syntax -->
+<!--REF #FileClass.delete().Syntax -->**.delete( )**<!-- END REF -->
 
-**.delete( )**<!-- END REF -->
 
 <!-- REF #FileClass.delete().Params -->
 | 引数 | タイプ |  | 詳細                                                         |
@@ -307,9 +300,7 @@ The `.delete()` function <!-- REF #FileClass.delete().Summary -->deletes the fil
 | v19   | 追加 |
 </details>
 
-<!--REF #FileClass.getAppInfo().Syntax -->
-
-**.getAppInfo**() : Object<!-- END REF -->
+<!--REF #FileClass.getAppInfo().Syntax -->**.getAppInfo**() : Object<!-- END REF -->
 
 <!--REF #FileClass.getAppInfo().Params -->
 | 引数     | タイプ    |    | 詳細                                                                               |
@@ -401,9 +392,7 @@ ALERT($info.Copyright)
 | v17 R5 | 追加 |
 </details>
 
-<!--REF #FileClass.moveTo().Syntax -->
-
-**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
+<!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.moveTo().Params -->
 | 引数                | タイプ       |    | 詳細                                  |
@@ -455,9 +444,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 | v17 R5 | 追加 |
 </details>
 
-<!--REF #FileClass.rename().Syntax -->
-
-**.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
+<!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.rename().Params -->
 | 引数      | タイプ     |    | 詳細                                     |
@@ -499,9 +486,7 @@ The `.rename()` function <!-- REF #FileClass.rename().Summary -->renames the fil
 | v19   | 追加 |
 </details>
 
-<!--REF #FileClass.setAppInfo().Syntax -->
-
-**.setAppInfo**( *info* : Object )<!-- END REF -->
+<!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
 
 <!--REF #FileClass.setAppInfo().Params -->
 | 引数   | タイプ    |    | 詳細                                                                                          |
@@ -584,9 +569,7 @@ $infoPlistFile.setAppInfo($info)
 | v17 R5 | 追加 |
 </details>
 
-<!--REF #FileClass.setContent().Syntax -->
-
-**.setContent** ( *content* : Blob ) <!-- END REF -->
+<!--REF #FileClass.setContent().Syntax -->**.setContent** ( *content* : Blob ) <!-- END REF -->
 
 <!--REF #FileClass.setContent().Params -->
 | 引数      | タイプ  |    | 詳細                                       |
@@ -617,9 +600,7 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 | v17 R5 | 追加 |
 </details>
 
-<!--REF #FileClass.setText().Syntax -->
-
-**.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br/>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } ) <!-- END REF -->
+<!--REF #FileClass.setText().Syntax -->**.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br/>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } ) <!-- END REF -->
 
 <!--REF #FileClass.setText().Params -->
 | 引数          | タイプ  |    | 詳細                                 |

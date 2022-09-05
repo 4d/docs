@@ -30,7 +30,7 @@ You can create different types of drop-down lists with different features. To de
 
 An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a drop-down list. The object must contain the following properties:
 
-| Propriedade    | Tipo               | Descrção                                                                                                                                                                                                                                               |
+| Propriedade    | Tipo               | Descrição                                                                                                                                                                                                                                              |
 | -------------- | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `values`       | Collection         | Mandatory - Collection of scalar values. All values must be of the same type. Supported types:<li>strings</li><li>números</li><li>datas</li><li>horas</li>If empty or not defined, the drop-down list is empty |
 | `index`        | number             | Index of the currently selected item (value between 0 and `collection.length-1`). If you set -1, `currentValue` is displayed as a placeholder string                                                                                                   |

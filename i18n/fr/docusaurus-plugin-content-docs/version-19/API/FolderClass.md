@@ -59,9 +59,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 </details>
 
-<!-- REF #_command_.Folder.Syntax -->
-
-**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
+<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
 
 <!-- REF FolderClass.Folder.Params -->
 | Paramètres     | Type      |    | Description                                        |
@@ -143,9 +141,7 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 | v17 R5  | Ajoutées      |
 </details>
 
-<!--REF #FolderClass.create().Syntax -->
-
-**.create()** : Boolean<!-- END REF -->
+<!--REF #FolderClass.create().Syntax -->**.create()** : Boolean<!-- END REF -->
 
 <!--REF #FolderClass.create().Params -->
 | Paramètres | Type    |    | Description                                                                      |
@@ -202,9 +198,7 @@ End if
 | v17 R5  | Ajoutées      |
 </details>
 
-<!--REF #FolderClass.createAlias().Syntax -->
-
-**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
+<!--REF #FolderClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 <!--REF #FolderClass.createAlias().Params -->
 | Paramètres         | Type      |    | Description                                                                |
@@ -259,9 +253,8 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 | v17 R5  | Ajoutées      |
 </details>
 
-<!--REF #FolderClass.delete().Syntax -->
+<!--REF #FolderClass.delete().Syntax -->**.delete**( { *option* : Integer } )<!-- END REF -->
 
-**.delete**( { *option* : Integer } )<!-- END REF -->
 
 <!-- REF #FolderClass.delete().Params -->
 | Paramètres | Type    |    | Description                                                 |
@@ -334,9 +327,7 @@ Lorsque la constante `Delete with contents` est passée :
 | v17 R5  | Ajoutées      |
 </details>
 
-<!--REF #FolderClass.moveTo().Syntax -->
-
-**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
+<!--REF #FolderClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
 
 <!--REF #FolderClass.moveTo().Params -->
 | Paramètres         | Type      |    | Description                                |
@@ -391,9 +382,7 @@ Vous souhaitez déplacer et renommer un dossier :
 | v17 R5  | Ajoutées      |
 </details>
 
-<!--REF #FolderClass.rename().Syntax -->
-
-**.rename**( *newName* : Text ) : 4D.Folder<!-- END REF -->
+<!--REF #FolderClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.Folder<!-- END REF -->
 
 <!--REF #FolderClass.rename().Params -->
 | Paramètres | Type      |    | Description                                |

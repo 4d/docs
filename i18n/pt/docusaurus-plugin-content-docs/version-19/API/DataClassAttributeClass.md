@@ -44,11 +44,9 @@ Os objetos `DataClassAttribute` têm propriedades que pode ler para obter inform
 
 </details>
 
-<!-- REF DataClassAttributeClass.autoFilled.Syntax -->
+<!-- REF DataClassAttributeClass.autoFilled.Syntax -->**.autoFilled** : Boolean<!-- END REF -->
 
-**.autoFilled** : Boolean<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.autoFilled` property <!-- REF DataClassAttributeClass.autoFilled.Summary -->contains True if the attribute value is automatically filled by 4D<!-- END REF -->. Esta propriedade corresponde às seguintes propriedades de campo 4D:
 
@@ -71,11 +69,9 @@ Esta propriedade não é devolvida se `.kind` = "relatedEntity" ou "relatedEntit
 
 </details>
 
-<!-- REF DataClassAttributeClass.fieldNumber.Syntax -->
+<!-- REF DataClassAttributeClass.fieldNumber.Syntax -->**.size** : Integer<!-- END REF -->
 
-**.size** : Integer<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.fieldNumber` property <!-- REF DataClassAttributeClass.fieldNumber.Summary -->contains the internal 4D field number of the attribute<!-- END REF -->.
 
@@ -95,11 +91,9 @@ Esta propriedade não é devolvida se `.kind` = "relatedEntity" ou "relatedEntit
 
 </details>
 
-<!-- REF DataClassAttributeClass.fieldType.Syntax -->
+<!-- REF DataClassAttributeClass.fieldType.Syntax -->**.fieldType** : Integer<!-- END REF -->
 
-**.fieldType** : Integer<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->contains the 4D database type of the attribute<!-- END REF -->. .
 
@@ -124,11 +118,9 @@ The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->
 
 </details>
 
-<!-- REF DataClassAttributeClass.indexed.Syntax -->
+<!-- REF DataClassAttributeClass.indexed.Syntax -->**.indexed** : Boolean<!-- END REF -->
 
-**.indexed** : Boolean<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.indexed` property <!-- REF DataClassAttributeClass.indexed.Summary -->contains **True** if there is a B-tree or a Cluster B-tree index on the attribute<!-- END REF -->.
 
@@ -148,11 +140,9 @@ Esta propriedade não é devolvida se `.kind` = "relatedEntity" ou "relatedEntit
 
 </details>
 
-<!-- REF DataClassAttributeClass.inverseName.Syntax -->
+<!-- REF DataClassAttributeClass.inverseName.Syntax -->**.inverseName** : Text<!-- END REF -->
 
-**.inverseName** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.inverseName` property <!-- REF DataClassAttributeClass.inverseName.Summary -->returns the name of the attribute which is at the other side of the relation<!-- END REF -->.
 
@@ -172,11 +162,9 @@ Esta propriedade não se devolve si `.kind` = "storage". Deve ser do tipo "relat
 
 </details>
 
-<!-- REF DataClassAttributeClass.keywordIndexed.Syntax -->
+<!-- REF DataClassAttributeClass.keywordIndexed.Syntax -->**.keywordIndexed** : Boolean<!-- END REF -->
 
-**.keywordIndexed** : Boolean<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.keywordIndexed` property <!-- REF DataClassAttributeClass.keywordIndexed.Summary -->contains **True** if there is a keyword index on the attribute<!-- END REF -->.
 
@@ -196,11 +184,9 @@ Esta propriedade não é retornada se [`.kind`](#kind) = "relatedEntity" ou "rel
 
 </details>
 
-<!-- REF DataClassAttributeClass.kind.Syntax -->
+<!-- REF DataClassAttributeClass.kind.Syntax -->**.kind** : Text<!-- END REF -->
 
-**.kind** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.kind` property <!-- REF DataClassAttributeClass.kind.Summary -->returns the category of the attribute<!-- END REF -->. O valor retornado pode ser um dos abaixo:
 
@@ -234,11 +220,9 @@ Dada a seguinte tabela e relação:
 
 </details>
 
-<!-- REF DataClassAttributeClass.mandatory.Syntax -->
+<!-- REF DataClassAttributeClass.mandatory.Syntax -->**.mandatory** : Boolean<!-- END REF -->
 
-**.mandatory** : Boolean<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.mandatory` property <!-- REF DataClassAttributeClass.mandatory.Summary -->contains True if Null value input is rejected for the attribute<!-- END REF -->.
 
@@ -259,11 +243,9 @@ Esta propriedade não é retornada se [`.kind`](#kind) = "relatedEntity" ou "rel
 
 </details>
 
-<!-- REF DataClassAttributeClass.name.Syntax -->
+<!-- REF DataClassAttributeClass.name.Syntax -->**.name** : Text<!-- END REF -->
 
-**.name** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->The `.name` property<!-- END REF -->.
 
@@ -287,11 +269,9 @@ The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->The `.name
 
 </details>
 
-<!-- REF DataClassAttributeClass.relatedDataClass.Syntax -->
+<!-- REF DataClassAttributeClass.relatedDataClass.Syntax -->**.relatedDataClass** : Text<!-- END REF -->
 
-**.relatedDataClass** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 > Esta propriedade só está disponível com atributos da propriedade "relatedEntity" ou "relatedEntities" [`.kind`](#kind).
 
 The `.relatedDataClass` property <!-- REF DataClassAttributeClass.relatedDataClass.Summary -->returns the name of the dataclass related to the attribute<!-- END REF -->.
@@ -321,11 +301,9 @@ Dada a seguinte tabela e relação:
 
 </details>
 
-<!-- REF DataClassAttributeClass.type.Syntax -->
+<!-- REF DataClassAttributeClass.type.Syntax -->**.type** : Text<!-- END REF -->
 
-**.type** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.type` property <!-- REF DataClassAttributeClass.type.Summary -->contains the conceptual value type of the attribute<!-- END REF -->, useful for generic programming.
 
@@ -352,11 +330,9 @@ O tipo de valor conceitual depende do atributo [`.kind`](#kind).
 
 </details>
 
-<!-- REF DataClassAttributeClass.unique.Syntax -->
+<!-- REF DataClassAttributeClass.unique.Syntax -->**.unique** : Boolean<!-- END REF -->
 
-**.unique** : Boolean<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.unique` property <!-- REF DataClassAttributeClass.unique.Summary -->contains True if the attribute value must be unique<!-- END REF -->. Essa propriedade corresponde a propriedade de campo 4D "Unique".
 

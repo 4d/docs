@@ -30,9 +30,7 @@ title: Class
 
 </details>
 
-<!-- REF #ClassClass.name.Syntax -->
-
-**.name** : Text<!-- END REF -->
+<!-- REF #ClassClass.name.Syntax -->**.name** : Text<!-- END REF -->
 
 #### 詳細
 
@@ -55,9 +53,8 @@ The `.name` property <!-- REF #ClassClass.name.Summary -->contains the name of t
 
 </details>
 
-<!-- REF #ClassClass.new().Syntax -->
+<!-- REF #ClassClass.new().Syntax -->**.new**( *param* : any { *;...paramN* } ) : 4D.Class<!-- END REF -->
 
-**.new**( *param* : any { *;...paramN* } ) : 4D.Class<!-- END REF -->
 
 <!-- REF #ClassClass.new().Params -->
 | 引数     | タイプ      |    | 詳細                                      |
@@ -122,9 +119,7 @@ $person:=cs.Person.new("John";"Doe";40)
 
 </details>
 
-<!-- REF #ClassClass.superclass.Syntax -->
-
-**.superclass** : 4D.Class<!-- END REF -->
+<!-- REF #ClassClass.superclass.Syntax -->**.superclass** : 4D.Class<!-- END REF -->
 
 #### 詳細
 

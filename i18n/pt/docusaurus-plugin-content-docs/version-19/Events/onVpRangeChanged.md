@@ -7,13 +7,13 @@ title: On VP Range Changed
 | ---- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | 61   | [Área 4D View Pro](FormObjects/viewProArea_overview.md) | The 4D View Pro cell range has changed (e.g., a formula calculation, value removed from a cell, etc.) |
 
-## Descrção
+## Descrição
 
 This event is generated when a change occurs within a cell range in the 4D View Pro document.
 
 The object returned by the FORM Event command contains:
 
-| Propriedade  | Tipo          | Descrção                                                                                                                                                                                                                   |
+| Propriedade  | Tipo          | Descrição                                                                                                                                                                                                                  |
 | ------------ | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | objectName   | text          | 4D View Pro area name                                                                                                                                                                                                      |
 | code         | inteiro longo | On VP Range Changed                                                                                                                                                                                                        |

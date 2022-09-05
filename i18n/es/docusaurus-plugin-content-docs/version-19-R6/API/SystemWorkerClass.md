@@ -59,6 +59,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 <!-- REF #4D.SystemWorker.new().Syntax -->
 **4D.SystemWorker.new** ( *commandLine* : Text { ; options : Object } ) : 4D.SystemWorker<!-- END REF -->
 
+
 <!-- REF #4D.SystemWorker.new().Params -->
 | Parámetros  | Type            |    | Descripción                                                          |
 | ----------- | --------------- |:--:| -------------------------------------------------------------------- |
@@ -262,6 +263,7 @@ Function _createFile($title : Text; $textBody : Text)
 <!-- REF #SystemWorkerClass.closeInput().Syntax -->
 **.closeInput**()<!-- END REF -->
 
+
 <!-- REF #SystemWorkerClass.closeInput().Params -->
 | Parámetros | Type |  | Descripción                                                |
 | ---------- | ---- |::| ---------------------------------------------------------- |
@@ -425,6 +427,7 @@ Esta propiedad es **de sólo lectura**.
 <!-- REF #SystemWorkerClass.postMessage().Syntax -->
 **.postMessage**( *message* : Text)<br/>**.postMessage**( *messageBLOB* : Blob)<!-- END REF -->
 
+
 <!-- REF #SystemWorkerClass.postMessage().Params -->
 | Parámetros  | Type |    | Descripción                                                         |
 | ----------- | ---- |:--:| ------------------------------------------------------------------- |
@@ -476,6 +479,7 @@ The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary 
 
 <!-- REF #SystemWorkerClass.terminate().Syntax -->
 **.terminate**()<!-- END REF -->
+
 
 <!-- REF #SystemWorkerClass.terminate().Params -->
 | Parámetros | Type |  | Descripción                                                |
@@ -535,6 +539,7 @@ Esta propiedad es **de sólo lectura**.
 
 <!-- REF #SystemWorkerClass.wait().Syntax -->
 **.wait**( {*timeout* : Real} ) : 4D.SystemWorker<!-- END REF -->
+
 
 <!-- REF #SystemWorkerClass.wait().Params -->
 | Parámetros | Type            |    | Descripción                                    |

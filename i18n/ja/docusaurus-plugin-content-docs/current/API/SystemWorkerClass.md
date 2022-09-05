@@ -59,6 +59,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 <!-- REF #4D.SystemWorker.new().Syntax -->
 **4D.SystemWorker.new** ( *commandLine* : Text { ; options : Object } ) : 4D.SystemWorker<!-- END REF -->
 
+
 <!-- REF #4D.SystemWorker.new().Params -->
 | 引数          | タイプ             |    | 詳細                                     |
 | ----------- | --------------- |:--:| -------------------------------------- |
@@ -262,6 +263,7 @@ Function _createFile($title : Text; $textBody : Text)
 <!-- REF #SystemWorkerClass.closeInput().Syntax -->
 **.closeInput**()<!-- END REF -->
 
+
 <!-- REF #SystemWorkerClass.closeInput().Params -->
 | 引数 | タイプ |  | 詳細                                                         |
 | -- | --- |::| ---------------------------------------------------------- |
@@ -439,6 +441,7 @@ The `.pid` property <!-- REF #SystemWorkerClass.pid.Summary -->contains the proc
 <!-- REF #SystemWorkerClass.postMessage().Syntax -->
 **.postMessage**( *message* : Text)<br/>**.postMessage**( *messageBLOB* : Blob)<!-- END REF -->
 
+
 <!-- REF #SystemWorkerClass.postMessage().Params -->
 | 引数          | タイプ  |    | 詳細                                                         |
 | ----------- | ---- |:--:| ---------------------------------------------------------- |
@@ -490,6 +493,7 @@ The `.terminated` property <!-- REF #SystemWorkerClass.responseError.Summary -->
 
 <!-- REF #SystemWorkerClass.terminate().Syntax -->
 **.terminate**()<!-- END REF -->
+
 
 <!-- REF #SystemWorkerClass.terminate().Params -->
 | 引数 | タイプ |  | 詳細                                                         |
@@ -549,6 +553,7 @@ The `.wait()` function <!-- REF #SystemWorkerClass.timeout.Summary -->waits unti
 
 <!-- REF #SystemWorkerClass.wait().Syntax -->
 **.wait**( {*timeout* : Real} ) : 4D.SystemWorker<!-- END REF -->
+
 
 <!-- REF #SystemWorkerClass.wait().Params -->
 | 引数      | タイプ             |    | 詳細                                             |

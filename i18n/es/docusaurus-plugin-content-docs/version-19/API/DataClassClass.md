@@ -31,9 +31,7 @@ Una [DataClass](ORDA/dsMapping.md#dataclass) ofrece una interfaz de objeto a una
 
 </details>
 
-<!-- REF DataClassClass.attributeName.Syntax -->
-
-***.attributeName*** : DataClassAttribute<!-- END REF -->
+<!-- REF DataClassClass.attributeName.Syntax -->***.attributeName*** : DataClassAttribute<!-- END REF -->
 
 #### Descripción
 
@@ -100,9 +98,8 @@ Considerando las propiedades de tabla siguientes:
 
 </details>
 
-<!-- REF #DataClassClass.all().Syntax -->
+<!-- REF #DataClassClass.all().Syntax -->**.all** ( { *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
-**.all** ( { *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #DataClassClass.all().Params -->
 | Parámetros | Type               |    | Descripción                                                                    |
@@ -151,9 +148,8 @@ En el parámetro opcional *settings* se puede pasar un objeto que contenga opcio
 
 </details>
 
-<!-- REF #DataClassClass.fromCollection().Syntax -->
+<!-- REF #DataClassClass.fromCollection().Syntax -->**.fromCollection**( *objectCol* : Collection { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
-**.fromCollection**( *objectCol* : Collection { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #DataClassClass.fromCollection().Params -->
 | Parámetros | Type               |    | Descripción                                                            |
@@ -348,9 +344,8 @@ En este ejemplo, la primera entidad se creará y guardará pero la segunda falla
 
 </details>
 
-<!-- REF #DataClassClass.get().Syntax -->
+<!-- REF #DataClassClass.get().Syntax -->**.get**( *primaryKey* : Integer { ; *settings* : Object } ) : 4D.Entity<br/>**.get**( *primaryKey* : Text { ; *settings* : Object } ) : 4D.Entity<!-- END REF -->
 
-**.get**( *primaryKey* : Integer { ; *settings* : Object } ) : 4D.Entity<br/>**.get**( *primaryKey* : Text { ; *settings* : Object } ) : 4D.Entity<!-- END REF -->
 
 <!-- REF #DataClassClass.get().Params -->
 | Parámetros | Type            |    | Descripción                                                           |
@@ -425,9 +420,8 @@ Este ejemplo ilustra el uso de la propiedad *context*:
 
 </details>
 
-<!-- REF #DataClassClass.getDataStore().Syntax -->
+<!-- REF #DataClassClass.getDataStore().Syntax -->**.getDataStore()**: cs.DataStore<!-- END REF -->
 
-**.getDataStore()**: cs.DataStore<!-- END REF -->
 
 <!-- REF #DataClassClass.getDataStore().Params -->
 | Parámetros | Type         |    | Descripción                                           |
@@ -479,9 +473,8 @@ El método de proyecto ***SearchDuplicate*** busca valores duplicados en cualqui
 
 </details>
 
-<!-- REF #DataClassClass.getInfo().Syntax -->
+<!-- REF #DataClassClass.getInfo().Syntax -->**.getInfo()** : Object <!-- END REF -->
 
-**.getInfo()** : Object <!-- END REF -->
 
 <!-- REF #DataClassClass.getInfo().Params -->
 | Parámetros | Type   |    | Descripción                                             |
@@ -551,9 +544,8 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 
 </details>
 
-<!-- REF #DataClassClass.new().Syntax -->
+<!-- REF #DataClassClass.new().Syntax -->**.new()** : 4D.Entity <!-- END REF -->
 
-**.new()** : 4D.Entity <!-- END REF -->
 
 <!-- REF #DataClassClass.new().Params -->
 | Parámetros | Type      |    | Descripción                                                  |
@@ -594,9 +586,8 @@ Este ejemplo crea una nueva entidad en la clase de datos "Log" y registra la inf
 
 </details>
 
-<!-- REF #DataClassClass.newSelection().Syntax -->
+<!-- REF #DataClassClass.newSelection().Syntax -->**.newSelection**( { *keepOrder* : Integer } ) : 4D.EntitySelection <!-- END REF -->
 
-**.newSelection**( { *keepOrder* : Integer } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #DataClassClass.newSelection().Params -->
 | Parámetros | Type               |    | Descripción                                                                                                                                                    |
@@ -639,9 +630,8 @@ Cuando se crea, la selección de entidades no contiene ninguna entidad (`mySelec
 
 </details>
 
-<!-- REF #DataClassClass.query().Syntax -->
+<!-- REF #DataClassClass.query().Syntax -->**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br/>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
 
-**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br/>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #DataClassClass.query().Params -->
 | Parámetros    | Type               |    | Descripción                                                                                                                                                                             |

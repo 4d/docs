@@ -32,8 +32,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | [<!-- INCLUDE #document.getIcon().Syntax -->](#geticon)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getIcon().Summary -->|
 | [<!-- INCLUDE #document.getText().Syntax -->](#gettext)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getText().Summary -->|
 | [<!-- INCLUDE #document.hidden.Syntax -->](#hidden)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.hidden.Summary -->|
-| [<!-- INCLUDE #document.isAlias.Syntax -->](#isalias)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isAlias.Summary -->
-|
+| [<!-- INCLUDE #document.isAlias.Syntax -->](#isalias)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isAlias.Summary -->|
 | [<!-- INCLUDE #document.isFile.Syntax -->](#isfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFile.Summary -->|
 | [<!-- INCLUDE #document.isFolder.Syntax -->](#isfolder)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFolder.Summary -->|
 | [<!-- INCLUDE #document.isWritable.Syntax -->](#iswritable)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isWritable.Summary -->|
@@ -61,9 +60,8 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 </details>
 
-<!-- REF #_command_.File.Syntax -->
+<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
 
-**File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
 
 <!-- REF #_command_.File.Params -->
 | Paramètres   | Type    |    | Description                                        |
@@ -159,9 +157,7 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 <!--REF file.create().Note -->
 **Non disponible pour les archives ZIP**<!-- END REF -->
 
-<!--REF #FileClass.create().Syntax -->
-
-**.create()** : Boolean <!-- END REF -->
+<!--REF #FileClass.create().Syntax -->**.create()** : Boolean <!-- END REF -->
 
 <!--REF #FileClass.create().Params -->
 | Paramètres | Type    |    | Description                                                                      |
@@ -201,9 +197,7 @@ Création d'un fichier de préférences dans le dossier principal :
 | v17 R5  | Ajoutées      |
 </details>
 
-<!--REF #FileClass.createAlias().Syntax -->
-
-**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
+<!--REF #FileClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.createAlias().Params -->
 | Paramètres         | Type      |    | Description                                                                |
@@ -258,9 +252,8 @@ Vous souhaitez créer un alias pour un fichier contenu dans votre dossier princi
 | v17 R5  | Ajoutées      |
 </details>
 
-<!--REF #FileClass.delete().Syntax -->
+<!--REF #FileClass.delete().Syntax -->**.delete( )**<!-- END REF -->
 
-**.delete( )**<!-- END REF -->
 
 <!-- REF #FileClass.delete().Params -->
 | Paramètres | Type |  | Description                                            |
@@ -308,9 +301,7 @@ Vous souhaitez supprimer un fichier spécifique dans un sous-dossier :
 | v19     | Ajoutées      |
 </details>
 
-<!--REF #FileClass.getAppInfo().Syntax -->
-
-**.getAppInfo**() : Object<!-- END REF -->
+<!--REF #FileClass.getAppInfo().Syntax -->**.getAppInfo**() : Object<!-- END REF -->
 
 <!--REF #FileClass.getAppInfo().Params -->
 | Paramètres | Type   |    | Description                                                                            |
@@ -402,9 +393,7 @@ ALERT($info.Copyright)
 | v17 R5  | Ajoutées      |
 </details>
 
-<!--REF #FileClass.moveTo().Syntax -->
-
-**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
+<!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.moveTo().Params -->
 | Paramètres         | Type      |    | Description                                |
@@ -456,9 +445,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 | v17 R5  | Ajoutées      |
 </details>
 
-<!--REF #FileClass.rename().Syntax -->
-
-**.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
+<!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.rename().Params -->
 | Paramètres | Type    |    | Description                                |
@@ -500,9 +487,7 @@ Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
 | v19     | Ajoutées      |
 </details>
 
-<!--REF #FileClass.setAppInfo().Syntax -->
-
-**.setAppInfo**( *info* : Object )<!-- END REF -->
+<!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
 
 <!--REF #FileClass.setAppInfo().Params -->
 | Paramètres | Type   |    | Description                                                                                                        |
@@ -585,9 +570,7 @@ $infoPlistFile.setAppInfo($info)
 | v17 R5  | Ajoutées      |
 </details>
 
-<!--REF #FileClass.setContent().Syntax -->
-
-**.setContent** ( *content* : Blob ) <!-- END REF -->
+<!--REF #FileClass.setContent().Syntax -->**.setContent** ( *content* : Blob ) <!-- END REF -->
 
 <!--REF #FileClass.setContent().Params -->
 | Paramètres | Type |    | Description                                           |
@@ -620,9 +603,7 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 </details>
 
-<!--REF #FileClass.setText().Syntax -->
-
-**.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br/>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } ) <!-- END REF -->
+<!--REF #FileClass.setText().Syntax -->**.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br/>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } ) <!-- END REF -->
 
 <!--REF #FileClass.setText().Params -->
 | Paramètres  | Type    |    | Description                                                         |

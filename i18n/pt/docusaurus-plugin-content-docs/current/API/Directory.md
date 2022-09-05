@@ -3,7 +3,7 @@ id: Directory
 title: Directory Class
 ---
 
-## Descrção
+## Descrição
 
 <!-- REF directory.creationDate.Desc -->
 ## .creationDate
@@ -15,11 +15,9 @@ title: Directory Class
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.creationDate.Syntax -->
+<!-- REF #directory.creationDate.Syntax -->**.creationDate** : Date<!-- END REF -->
 
-**.creationDate** : Date<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.creationDate` property returns <!-- REF #directory.creationDate.Summary -->the creation date of the folder<!-- END REF -->.
 
@@ -38,11 +36,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.creationTime.Syntax -->
+<!-- REF #directory.creationTime.Syntax -->**.creationTime** : Time<!-- END REF -->
 
-**.creationTime** : Time<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.creationTime` property returns <!-- REF #directory.creationTime.Summary -->the creation time of the folder<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
@@ -62,11 +58,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.exists.Syntax -->
+<!-- REF #directory.exists.Syntax -->**.exists** : Boolean<!-- END REF -->
 
-**.exists** : Boolean<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.exists` property returns <!-- REF #directory.exists.Summary -->true if the folder exists on disk<!-- END REF -->, and false otherwise.
 
@@ -86,11 +80,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.extension.Syntax -->
+<!-- REF #directory.extension.Syntax -->**.extension** : Text<!-- END REF -->
 
-**.extension** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.extension` property <!-- REF #directory.extension.Summary -->returns the extension of the folder name (if any)<!-- END REF -->. Uma extensão sempre começa com "." A propriedade devolve uma string vazia se o nome da pasta não tiver extensão.
 
@@ -110,11 +102,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.fullName.Syntax -->
+<!-- REF #directory.fullName.Syntax -->**.fullName** : Text<!-- END REF -->
 
-**.fullName** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.fullName` property <!-- REF #directory.fullName.Summary -->returns the full name of the folder, including its extension (if any)<!-- END REF -->.
 
@@ -134,11 +124,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.hidden.Syntax -->
+<!-- REF #directory.hidden.Syntax -->**.hidden** : Boolean<!-- END REF -->
 
-**.hidden** : Boolean<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.hidden` property returns <!-- REF #directory.hidden.Summary --> true if the folder is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
 
@@ -158,11 +146,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.isAlias.Syntax -->
+<!-- REF #directory.isAlias.Syntax -->**.isAlias** : Boolean<!-- END REF -->
 
-**.isAlias** : Boolean<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.isAlias` property returns <!-- REF #directory.isAlias.Summary -->always **false** for a `Folder` object<!-- END REF -->.
 
@@ -182,11 +168,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.isFile.Syntax -->
+<!-- REF #directory.isFile.Syntax -->**.isFile** : Boolean<!-- END REF -->
 
-**.isFile** : Boolean<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.isFile` property returns <!-- REF #directory.isFile.Summary -->always **false** for a folder<!-- END REF -->.
 
@@ -206,11 +190,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.isFolder.Syntax -->
+<!-- REF #directory.isFolder.Syntax -->**.isFolder** : Boolean<!-- END REF -->
 
-**.isFolder** : Boolean<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.isFolder` property returns <!-- REF #directory.isFolder.Summary -->always **true** for a folder<!-- END REF -->.
 
@@ -230,11 +212,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.isPackage.Syntax -->
+<!-- REF #directory.isPackage.Syntax -->**.isPackage** : Boolean<!-- END REF -->
 
-**.isPackage** : Boolean<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.isPackage` property returns <!-- REF #directory.isPackage.Summary -->true if the folder is a package on macOS  (and exists on disk)<!-- END REF -->. .
 
@@ -256,11 +236,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.modificationDate.Syntax -->
+<!-- REF #directory.modificationDate.Syntax -->**.modificationDate** : Date<!-- END REF -->
 
-**.modificationDate** : Date<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.modificationDate` property returns <!-- REF #directory.modificationDate.Summary --> the date of the folder's last modification<!-- END REF -->.
 
@@ -280,11 +258,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.modificationTime.Syntax -->
+<!-- REF #directory.modificationTime.Syntax -->**.modificationTime** : Time<!-- END REF -->
 
-**.modificationTime** : Time<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.modificationTime` property returns <!-- REF #directory.modificationTime.Summary -->the time of the folder's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
@@ -304,11 +280,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.name.Syntax -->
+<!-- REF #directory.name.Syntax -->**.name** : Text<!-- END REF -->
 
-**.name** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.name` property returns <!-- REF #directory.name.Summary --> the name of the folder, without extension (if any)<!-- END REF -->.
 
@@ -328,11 +302,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.original.Syntax -->
+<!-- REF #directory.original.Syntax -->**.original** : 4D. Folder<!-- END REF -->
 
-**.original** : 4D. Folder<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.original` property returns <!-- REF #directory.original.Summary -->the same Folder object as the folder<!-- END REF -->.
 
@@ -353,11 +325,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.parent.Syntax -->
+<!-- REF #directory.parent.Syntax -->**.parent** : 4D. Folder<!-- END REF -->
 
-**.parent** : 4D. Folder<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.parent` property returns <!-- REF #directory.parent.Summary -->the parent folder object of the folder<!-- END REF -->. .
 
@@ -379,11 +349,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.path.Syntax -->
+<!-- REF #directory.path.Syntax -->**.path** : Text<!-- END REF -->
 
-**.path** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.path` property returns <!-- REF #directory.path.Summary -->the POSIX path of the folder<!-- END REF -->. .
 
@@ -403,11 +371,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.platformPath.Syntax -->
+<!-- REF #directory.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->
 
-**.platformPath** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.platformPath` property returns <!-- REF #directory.platformPath.Summary -->the path of the folder expressed with the current platform syntax<!-- END REF -->.
 
@@ -427,12 +393,11 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.copyTo().Syntax -->
+<!-- REF #directory.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D. Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D Folder<!-- END REF -->
 
-**.copyTo**( *destinationFolder* : 4D. Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D Folder<!-- END REF -->
 
 <!-- REF #directory.copyTo().Params -->
-| Parameter         | Tipo       |    | Descrção                                               |
+| Parâmetros        | Tipo       |    | Descrição                                              |
 | ----------------- | ---------- |:--:| ------------------------------------------------------ |
 | destinationFolder | 4D. Folder | -> | Pasta de destino                                       |
 | newName           | Text       | -> | Nome para a copia                                      |
@@ -441,7 +406,7 @@ Essa propriedade é**apenas leitura**.
 
 |
 
-#### Descrção
+#### Descrição
 
 The `.copyTo()` function <!-- REF #directory.copyTo().Summary -->copies the `Folder` object into the specified *destinationFolder*<!-- END REF -->.
 
@@ -483,19 +448,18 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.file().Syntax -->
+<!-- REF #directory.file().Syntax -->**.file**( *path* : Text ) : 4D. File<!-- END REF -->
 
-**.file**( *path* : Text ) : 4D. File<!-- END REF -->
 
 <!-- REF #directory.file().Params -->
-| Parameter  | Tipo     |    | Descrção                                                                 |
+| Parâmetros | Tipo     |    | Descrição                                                                |
 | ---------- | -------- | -- | ------------------------------------------------------------------------ |
 | path       | Text     | -> | Rota POSIX relativa                                                      |
 | Resultados | 4D. File | <- | Objeto `File` (null se a rota não for válida)|<!-- END REF -->
 
 |
 
-#### Descrção
+#### Descrição
 
 The `.file()` function creates <!-- REF #directory.file().Summary -->a `File` object inside the `Folder` object and returns its reference<!-- END REF -->.
 
@@ -526,19 +490,18 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.files().Syntax -->
+<!-- REF #directory.files().Syntax -->**.files**( { *options* : Integer } ) : Collection<!-- END REF -->
 
-**.files**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.files().Params -->
-| Parameter  | Tipo       |    | Descrção                                                       |
+| Parâmetros | Tipo       |    | Descrição                                                      |
 | ---------- | ---------- | -- | -------------------------------------------------------------- |
 | options    | Integer    | -> | Opções da lista de arquivos                                    |
 | Resultados | Collection | <- | Coleção de objetos de arquivo filho|<!-- END REF -->
 
 |
 
-#### Descrção
+#### Descrição
 
 The `.files()` function returns <!-- REF #directory.files().Summary -->a collection of `File` objects contained in the folder<!-- END REF -->.
 > Os apelidos ou links simbolicos não são resolvidos.
@@ -591,19 +554,18 @@ Se quiser obter todos os arquivos que não são invisíveis na pasta Documents:
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.folder().Syntax -->
+<!-- REF #directory.folder().Syntax -->**.folder**( *path* : Text ) : 4D. Folder<!-- END REF -->
 
-**.folder**( *path* : Text ) : 4D. Folder<!-- END REF -->
 
 <!-- REF #directory.folder().Params -->
-| Parameter  | Tipo       |    | Descrção                                                                      |
+| Parâmetros | Tipo       |    | Descrição                                                                     |
 | ---------- | ---------- | -- | ----------------------------------------------------------------------------- |
 | path       | Text       | -> | Rota POSIX relativa                                                           |
 | Resultados | 4D. Folder | <- | Objeto pasta criado (null se *path*não for válido)|<!-- END REF -->
 
 |
 
-#### Descrção
+#### Descrição
 
 The `.folder()` function <!-- REF #directory.folder().Summary -->creates a `Folder` object inside the parent `Folder` object and returns its reference<!-- END REF -->.
 
@@ -634,19 +596,18 @@ Um objeto `Folder` ou null se *path* não for válido.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.folders().Syntax -->
+<!-- REF #directory.folders().Syntax -->**.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
-**.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.folders().Params -->
-| Parameter  | Tipo       |    | Descrção                                                     |
+| Parâmetros | Tipo       |    | Descrição                                                    |
 | ---------- | ---------- | -- | ------------------------------------------------------------ |
 | options    | Integer    | -> | Opções da lista de pasta                                     |
 | Resultados | Collection | <- | Coleção de objetos de pasta filho|<!-- END REF -->
 
 |
 
-#### Descrção
+#### Descrição
 
 The `.folders()` function <!-- REF #directory.folders().Summary -->returns a collection of `Folder` objects contained in the parent folder<!-- END REF -->.
 
@@ -684,19 +645,18 @@ Se quiser a coleção de todas as pastas e subpastas da pasta database:
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.getIcon().Syntax -->
+<!-- REF #directory.getIcon().Syntax -->**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
-**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #directory.getIcon().Params -->
-| Parameter  | Tipo    |    | Descrção                                        |
+| Parâmetros | Tipo    |    | Descrição                                       |
 | ---------- | ------- | -- | ----------------------------------------------- |
 | size       | Integer | -> | Longitude de lado da imagem devolvida (píxeles) |
 | Resultados | Imagem  | <- | Ícone|<!-- END REF -->
 
 |
 
-#### Descrção
+#### Descrição
 
 The `.getIcon()` function <!-- REF #directory.getIcon().Summary -->returns the icon of the folder<!-- END REF -->.
 

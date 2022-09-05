@@ -48,9 +48,8 @@ title: EntitySelection
 
 ## Create entity selection
 
-<!-- REF #_command_.Create entity selection.Syntax -->
+<!-- REF #_command_.Create entity selection.Syntax -->**Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
-**Create entity selection** ( *dsTable* : Table { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #_command_.Create entity selection.Params -->
 | 引数       | タイプ                |    | 詳細                                                          |
@@ -95,9 +94,8 @@ $employees:=Create entity selection([Employee])
 
 ## USE ENTITY SELECTION
 
-<!-- REF #_command_.USE ENTITY SELECTION.Syntax -->
+<!-- REF #_command_.USE ENTITY SELECTION.Syntax -->**USE ENTITY SELECTION** (*entitySelection*)<!-- END REF -->
 
-**USE ENTITY SELECTION** (*entitySelection*)<!-- END REF -->
 
 <!-- REF #_command_.USE ENTITY SELECTION.Params -->
 | 引数              | タイプ             |    | 詳細                                      |
@@ -136,9 +134,7 @@ USE ENTITY SELECTION($entitySel) // Employee テーブルのカレントセレ�
 
 </details>
 
-<!-- REF EntitySelectionClass.index.Syntax -->
-
-***&#91;index&#93;*** : 4D.Entity<!-- END REF -->
+<!-- REF EntitySelectionClass.index.Syntax -->***&#91;index&#93;*** : 4D.Entity<!-- END REF -->
 
 
 #### 詳細
@@ -191,9 +187,7 @@ $result:=$sel[0].lock() //動作しません
 
 </details>
 
-<!-- REF EntitySelectionClass.attributeName.Syntax -->
-
-***.attributeName*** : Collection<br/>***.attributeName*** : 4D.EntitySelection<!-- END REF -->
+<!-- REF EntitySelectionClass.attributeName.Syntax -->***.attributeName*** : Collection<br/>***.attributeName*** : 4D.EntitySelection<!-- END REF -->
 
 
 #### 詳細
@@ -276,9 +270,8 @@ Any dataclass attribute can be used as a property of an entity selection to retu
 </details>
 
 
-<!-- REF #EntitySelectionClass.add().Syntax -->
+<!-- REF #EntitySelectionClass.add().Syntax -->**.add**( *entity* : 4D.Entity ) : 4D.EntitySelection<!-- END REF -->
 
-**.add**( *entity* : 4D.Entity ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.add().Params -->
 | 引数     | タイプ                |    | 詳細                                                 |
@@ -349,9 +342,7 @@ The `.add()` function <!-- REF #EntitySelectionClass.add().Summary -->adds the s
 
 </details>
 
-<!-- REF #EntitySelectionClass.and().Syntax -->
-
-**.and**( *entity* : 4D.Entity ) : 4D.EntitySelection<br/>**.and**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
+<!-- REF #EntitySelectionClass.and().Syntax -->**.and**( *entity* : 4D.Entity ) : 4D.EntitySelection<br/>**.and**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.and().Params -->
@@ -421,9 +412,8 @@ The `.and()` function <!-- REF #EntitySelectionClass.and().Summary -->combines t
 
 </details>
 
-<!-- REF #EntitySelectionClass.average().Syntax -->
+<!-- REF #EntitySelectionClass.average().Syntax -->**.average**( *attributePath* : Text ) : Real<!-- END REF -->
 
-**.average**( *attributePath* : Text ) : Real<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.average().Params -->
 | 引数            | タイプ  |    | 詳細                                                                                       |
@@ -476,9 +466,8 @@ The `.average()` function <!-- REF #EntitySelectionClass.average().Summary -->Th
 
 </details>
 
-<!-- REF #EntitySelectionClass.contains().Syntax -->
+<!-- REF #EntitySelectionClass.contains().Syntax -->**.contains**( *entity* : 4D.Entity ) : Boolean<!-- END REF -->
 
-**.contains**( *entity* : 4D.Entity ) : Boolean<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.contains().Params -->
 | 引数     | タイプ       |    | 詳細                                                                           |
@@ -527,9 +516,8 @@ The `.contains()` function <!-- REF #EntitySelectionClass.contains().Summary -->
 
 </details>
 
-<!-- REF #EntitySelectionClass.count().Syntax -->
+<!-- REF #EntitySelectionClass.count().Syntax -->**.count**( *attributePath* : Text ) : Real<!-- END REF -->
 
-**.count**( *attributePath* : Text ) : Real<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.count().Params -->
 | 引数            | タイプ  |    | 詳細                                                                       |
@@ -575,9 +563,8 @@ The `.count()` function <!-- REF #EntitySelectionClass.count().Summary -->The `.
 
 </details>
 
-<!-- REF #EntitySelectionClass.copy().Syntax -->
+<!-- REF #EntitySelectionClass.copy().Syntax -->**.copy**( { *option* : Integer } ) : 4D.EntitySelection<!-- END REF -->
 
-**.copy**( { *option* : Integer } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.copy().Params -->
 | 引数     | タイプ                |    | 詳細                                          |
@@ -641,9 +628,8 @@ The `.copy()` function <!-- REF #EntitySelectionClass.copy().Summary -->The `.co
 
 </details>
 
-<!-- REF #EntitySelectionClass.distinct().Syntax -->
+<!-- REF #EntitySelectionClass.distinct().Syntax -->**.distinct**( *attributePath* : Text { ; *option* : Integer } ) : Collection<!-- END REF -->
 
-**.distinct**( *attributePath* : Text { ; *option* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.distinct().Params -->
 | 引数            | タイプ    |    | 詳細                                                       |
@@ -706,9 +692,8 @@ $values:=ds.Employee.all().distinct("extra.nicknames[].first")
 
 </details>
 
-<!-- REF #EntitySelectionClass.drop().Syntax -->
+<!-- REF #EntitySelectionClass.drop().Syntax -->**.drop**( { *mode* : Integer } ) : 4D.EntitySelection<!-- END REF -->
 
-**.drop**( { *mode* : Integer } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.drop().Params -->
 | 引数                         | タイプ                |    | 詳細                                                            |
@@ -881,9 +866,8 @@ The `.extract()` function <!-- REF #EntitySelectionClass.extract().Summary -->Th
 
 </details>
 
-<!-- REF #EntitySelectionClass.first().Syntax -->
+<!-- REF #EntitySelectionClass.first().Syntax -->**.first()** : 4D.Entity<!-- END REF -->
 
-**.first()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.first().Params -->
 | 引数     | タイプ       |    | 詳細                                                                                                            |
@@ -941,9 +925,7 @@ The `.first()` function <!-- REF #EntitySelectionClass.first().Summary -->return
 
 </details>
 
-<!-- REF #EntitySelectionClass.getDataClass().Syntax -->
-
-**.getDataClass()** : 4D.DataClass<!-- END REF -->
+<!-- REF #EntitySelectionClass.getDataClass().Syntax -->**.getDataClass()** : 4D.DataClass<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.getDataClass().Params -->
@@ -993,9 +975,8 @@ The `.getDataClass()` function <!-- REF #EntitySelectionClass.getDataClass().Sum
 
 </details>
 
-<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Syntax -->
+<!-- REF #EntitySelectionClass.getRemoteContextAttributes().Syntax -->**.getRemoteContextAttributes()** : Text<!-- END REF -->
 
-**.getRemoteContextAttributes()** : Text<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.getRemoteContextAttributes().Params -->
 | 引数     | タイプ  |    | 詳細                                                                                                 |
@@ -1050,9 +1031,8 @@ $info:=$persons.getRemoteContextAttributes()
 
 </details>
 
-<!-- REF #EntitySelectionClass.isAlterable().Syntax -->
+<!-- REF #EntitySelectionClass.isAlterable().Syntax -->**.isAlterable()** : Boolean<!-- END REF -->
 
-**.isAlterable()** : Boolean<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.isAlterable().Params -->
 | 引数     | タイプ |    | 詳細                                                                                    |
@@ -1094,9 +1074,8 @@ Form.products.add(Form.product)
 
 </details>
 
-<!-- REF #EntitySelectionClass.isOrdered().Syntax -->
+<!-- REF #EntitySelectionClass.isOrdered().Syntax -->**.isOrdered()** : Boolean<!-- END REF -->
 
-**.isOrdered()** : Boolean<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.isOrdered().Params -->
 | 引数     | タイプ |    | 詳細                                                                                  |
@@ -1150,9 +1129,8 @@ The `.isOrdered()` function <!-- REF #EntitySelectionClass.isOrdered().Summary -
 
 </details>
 
-<!-- REF #EntitySelectionClass.last().Syntax -->
+<!-- REF #EntitySelectionClass.last().Syntax -->**.last()** : 4D.Entity<!-- END REF -->
 
-**.last()** : 4D.Entity<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.last().Params -->
 | 引数     | タイプ       |    | 詳細                                                                                                               |
@@ -1201,9 +1179,7 @@ The `.last()` function <!-- REF #EntitySelectionClass.last().Summary -->returns 
 
 </details>
 
-<!-- REF #EntitySelectionClass.length.Syntax -->
-
-**.length** : Integer<!-- END REF -->
+<!-- REF #EntitySelectionClass.length.Syntax -->**.length** : Integer<!-- END REF -->
 
 
 #### 詳細
@@ -1238,9 +1214,7 @@ The `.length` property <!-- REF #EntitySelectionClass.length.Summary -->returns 
 
 </details>
 
-<!-- REF #EntitySelectionClass.max().Syntax -->
-
-**.max**( *attributePath* : Text ) : any<!-- END REF -->
+<!-- REF #EntitySelectionClass.max().Syntax -->**.max**( *attributePath* : Text ) : any<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.max().Params -->
@@ -1294,9 +1268,8 @@ The `.max()` function <!-- REF #EntitySelectionClass.max().Summary -->returns th
 
 </details>
 
-<!-- REF #EntitySelectionClass.min().Syntax -->
+<!-- REF #EntitySelectionClass.min().Syntax -->**.min**( *attributePath* : Text ) : any<!-- END REF -->
 
-**.min**( *attributePath* : Text ) : any<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.min().Params -->
 | 引数            | タイプ  |    | 詳細                                                   |
@@ -1345,9 +1318,8 @@ The `.min()` function <!-- REF #EntitySelectionClass.min().Summary --> returns t
 
 </details>
 
-<!-- REF #EntitySelectionClass.minus().Syntax -->
+<!-- REF #EntitySelectionClass.minus().Syntax -->**.minus**( *entity* : 4D.Entity ) : 4D.EntitySelection<br/>**.minus**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
 
-**.minus**( *entity* : 4D.Entity ) : 4D.EntitySelection<br/>**.minus**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.minus().Params -->
 | 引数              | タイプ                |    | 詳細                                                                                                  |
@@ -1414,9 +1386,8 @@ The `.minus()` function <!-- REF #EntitySelectionClass.minus().Summary -->exclud
 
 </details>
 
-<!-- REF #EntitySelectionClass.or().Syntax -->
+<!-- REF #EntitySelectionClass.or().Syntax -->**.or**( *entity* : 4D.Entity ) : 4D.EntitySelection<br/>**.or**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
 
-**.or**( *entity* : 4D.Entity ) : 4D.EntitySelection<br/>**.or**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.or().Params -->
 | 引数              | タイプ                |    | 詳細                                                                                                |
@@ -1477,9 +1448,8 @@ The returned entity selection contains the entities specified by *startFrom* and
 
 </details>
 
-<!-- REF #EntitySelectionClass.orderBy().Syntax -->
+<!-- REF #EntitySelectionClass.orderBy().Syntax -->**.orderBy**( *pathString* : Text ) : 4D.EntitySelection<br/>**.orderBy**( *pathObjects* : Collection ) : 4D.EntitySelection<!-- END REF -->
 
-**.orderBy**( *pathString* : Text ) : 4D.EntitySelection<br/>**.orderBy**( *pathObjects* : Collection ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.orderBy().Params -->
 | 引数          | タイプ                |    | 詳細                                                                     |
@@ -1555,9 +1525,8 @@ pathObjects コレクションには必要な数だけオブジェクトを追�
 
 </details>
 
-<!-- REF #EntitySelectionClass.orderByFormula().Syntax -->
+<!-- REF #EntitySelectionClass.orderByFormula().Syntax -->**.orderByFormula**( *formulaString* : Text { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.EntitySelection<br/>**.orderByFormula**( *formulaObj* : Object { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.EntitySelection<!-- END REF -->
 
-**.orderByFormula**( *formulaString* : Text { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.EntitySelection<br/>**.orderByFormula**( *formulaObj* : Object { ; *sortOrder* : Integer } { ; *settings* : Object} ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.orderByFormula().Params -->
 | 引数            | タイプ                |    | 詳細                                                      |
@@ -1681,9 +1650,8 @@ The `.orderByFormula()` function <!-- REF #EntitySelectionClass.orderByFormula()
 
 </details>
 
-<!-- REF #EntitySelectionClass.query().Syntax -->
+<!-- REF #EntitySelectionClass.query().Syntax -->**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br/>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
-**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br/>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.query().Params -->
 | 引数            | タイプ                |    | 詳細                                                                                                              |
@@ -1740,9 +1708,7 @@ The `.query()` function <!-- REF #EntitySelectionClass.query().Summary -->The `.
 
 </details>
 
-<!-- REF #EntitySelectionClass.queryPath.Syntax -->
-
-**.queryPath** : Text<!-- END REF -->
+<!-- REF #EntitySelectionClass.queryPath.Syntax -->**.queryPath** : Text<!-- END REF -->
 
 
 #### 詳細
@@ -1766,9 +1732,7 @@ The `.queryPath` property <!-- REF #EntitySelectionClass.queryPath.Summary -->co
 
 </details>
 
-<!-- REF #EntitySelectionClass.queryPlan.Syntax -->
-
-**.queryPlan** : Text<!-- END REF -->
+<!-- REF #EntitySelectionClass.queryPlan.Syntax -->**.queryPlan** : Text<!-- END REF -->
 
 
 
@@ -1792,9 +1756,8 @@ The `.queryPlan` property <!-- REF #EntitySelectionClass.queryPlan.Summary --> c
 
 </details>
 
-<!-- REF #EntitySelectionClass.refresh().Syntax -->
+<!-- REF #EntitySelectionClass.refresh().Syntax -->**.refresh()**<!-- END REF -->
 
-**.refresh()**<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.refresh().Params -->
 | 引数 | タイプ |  | 詳細                                                         |
@@ -1874,9 +1837,8 @@ The `.refresh()` function <!-- REF #EntitySelectionClass.refresh().Summary -->im
 
 </details>
 
-<!-- REF #EntitySelectionClass.selected().Syntax -->
+<!-- REF #EntitySelectionClass.selected().Syntax -->**.selected**( *selectedEntities* : 4D.EntitySelection ) : Object<!-- END REF -->
 
-**.selected**( *selectedEntities* : 4D.EntitySelection ) : Object<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.selected().Params -->
 | 引数               | タイプ                |    | 詳細                                                                           |
@@ -1949,9 +1911,8 @@ $result2:=$invoices.selected($creditSel)
 
 </details>
 
-<!-- REF #EntitySelectionClass.slice().Syntax -->
+<!-- REF #EntitySelectionClass.slice().Syntax -->**.slice**( *startFrom* : Integer { ; *end* : Integer } ) : 4D.EntitySelection<!-- END REF -->
 
-**.slice**( *startFrom* : Integer { ; *end* : Integer } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.slice().Params -->
 | 引数        | タイプ                |    | 詳細                                                                 |
@@ -2012,9 +1973,7 @@ $slice:=ds.Employee.all().slice(-1;-2) // インデックス 9 から 8番まで
 
 </details>
 
-<!-- REF #EntitySelectionClass.sum().Syntax -->
-
-**.sum**( *attributePath* : Text ) : Real<!-- END REF -->
+<!-- REF #EntitySelectionClass.sum().Syntax -->**.sum**( *attributePath* : Text ) : Real<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.sum().Params -->
@@ -2066,9 +2025,8 @@ $sum:=$sel.sum("salary")
 
 </details>
 
-<!-- REF #EntitySelectionClass.toCollection().Syntax -->
+<!-- REF #EntitySelectionClass.toCollection().Syntax -->**.toCollection**( { *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer } } ) : *Collection*<br/>**.toCollection**( *filterString* : Text {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*<br/>**.toCollection**( *filterCol* : Collection {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*<!-- END REF -->
 
-**.toCollection**( { *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer } } ) : *Collection*<br/>**.toCollection**( *filterString* : Text {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*<br/>**.toCollection**( *filterCol* : Collection {; *options* : Integer { ; *begin* : Integer { ; *howMany* : Integer }}} ) : *Collection*<!-- END REF -->
 
 <!-- REF #EntitySelectionClass.toCollection().Params -->
 | 引数           | タイプ    |    | 詳細                                                                                                    |

@@ -57,7 +57,7 @@ Este arquivo começa com os cabeçalhos abaixo:
 
 Para cada petição, os campos abaixo estão logados:
 
-| Campo nome                                 | Descrção                                                                                                                                                                           |
+| Campo nome                                 | Descrição                                                                                                                                                                          |
 | ------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | sequence_number                            | Número de operação único e sequencial da sessão de histórico                                                                                                                       |
 | time                                       | Data e hora usando formato ISO 8601: 'YYYY-MM-DDTHH:MM:SS.mmm'                                                                                                                     |
@@ -107,7 +107,7 @@ Este arquivo começa com os cabeçalhos abaixo:
 
 Para cada processo, os campos abaixo são registrados:
 
-| Campo nome                        | Descrção                                                                |
+| Campo nome                        | Descrição                                                               |
 | --------------------------------- | ----------------------------------------------------------------------- |
 | sequence_number                   | Número de operação único e sequencial da sessão de histórico            |
 | time                              | Hora e data usando o formato ISO 8601 format: "YYYY-MM-DDTHH:MM:SS.mmm" |
@@ -138,7 +138,7 @@ WEB SET OPTION(Web debug log;wdl enable without body)
 
 Os campos abaixo são registrados tanto para Request quanto para Response:
 
-| Campo nome     | Descrção                                                     |
+| Campo nome     | Descrição                                                    |
 | -------------- | ------------------------------------------------------------ |
 | SocketID       | ID da socked usada para comunicação                          |
 | PeerIP         | Endereço IPv4 do host (cliente)                              |
@@ -161,7 +161,7 @@ SET DATABASE PARAMETER(Debug Log Recording;2)
 
 Os campos abaixo estão registrados para cada evento:
 
-| Coluna # | Descrção                                                                                                        |
+| Coluna # | Descrição                                                                                                       |
 | -------- | --------------------------------------------------------------------------------------------------------------- |
 | 1        | Número de operação único e sequencial da sessão de histórico                                                    |
 | 2        | Data e hora em formato ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)                                                       |
@@ -184,7 +184,7 @@ SET DATABASE PARAMETER(Debug Log Recording;2+4)
 
 Os campos abaixo estão registrados para cada evento:
 
-| Coluna # | Campo nome                      | Descrção                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| Coluna # | Campo nome                      | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 | -------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 1        | sequence_number                 | Número de operação único e sequencial da sessão de histórico                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | 2        | time                            | Data e hora em formato ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
@@ -210,7 +210,7 @@ Como iniciar esse log:
 
 Os campos abaixo estão registrados para cada evento:
 
-| Nome de campo      | Descrção                                                     |
+| Nome de campo      | Descrição                                                    |
 | ------------------ | ------------------------------------------------------------ |
 | sequenceNumber     | Número de operação único e sequencial da sessão de histórico |
 | timestamp          | Data e hora em formato ISO 8601 (YYYY-MM-DDThh:mm:ss.mmm)    |
@@ -276,7 +276,7 @@ Os arquivos de histórico podem ser produzidos em duas versões:
 
 Para cada petição, os campos abaixo estão logados:
 
-| Coluna # | Descrção                                                     |
+| Coluna # | Descrição                                                    |
 | -------- | ------------------------------------------------------------ |
 | 1        | Número de operação único e sequencial da sessão de histórico |
 | 2        | Data e hora em formato RFC3339 (yyyy-mm-ddThh:mm:ss.ms)      |
@@ -309,7 +309,7 @@ ds.startRequestLog(File("/PACKAGE/Logs/ordaLog.txt"))
 
 Os campos abaixo são registrados para cada petição:
 
-| Campo nome     | Descrção                                                     | Exemplo                                                 |
+| Campo nome     | Descrição                                                    | Exemplo                                                 |
 | -------------- | ------------------------------------------------------------ | ------------------------------------------------------- |
 | sequenceNumber | Número de operação único e sequencial da sessão de histórico | 104                                                     |
 | url            | URL de petição de cliente ORDA                               | "rest/Persons(30001)"                                   |

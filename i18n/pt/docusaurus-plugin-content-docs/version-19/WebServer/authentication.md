@@ -88,7 +88,7 @@ The `On Web Authentication` database method is NOT called:
 
 **On Web Authentication**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text ) -> $0 : Boolean
 
-| Parâmetros | Tipo     |    | Descrção                                          |
+| Parâmetros | Tipo     |    | Descrição                                         |
 | ---------- | -------- |:--:| ------------------------------------------------- |
 | $1         | Text     | <- | URL                                               |
 | $2         | Text     | <- | HTTP headers + HTTP body (up to 32 kb limit)      |

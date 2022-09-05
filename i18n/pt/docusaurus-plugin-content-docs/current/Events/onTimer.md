@@ -8,7 +8,7 @@ title: On Timer
 | 27   | Formulário       | The number of ticks defined by the `SET TIMER` command has passed |
 
 
-## Descrção
+## Descrição
 
 This event is generated only if the form method contains a previous call to the `SET TIMER` command.
 

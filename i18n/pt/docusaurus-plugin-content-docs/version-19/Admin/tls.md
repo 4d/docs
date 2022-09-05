@@ -21,7 +21,7 @@ Configuração de rede usando TSL:
 
 O protocolo TLS foi criado para autenticar o emissor e o recipiente e assim garantir a confidencialidade e integridade da troca de informações:
 
-- **Authenticação**: As identidades do emissor e do receptor são confirmadas.
+- **Autenticação**: As identidades do emissor e do receptor são confirmadas.
 - **Confidencialidade**: O dado enviado é criptografado para que um terceiro não possa entender a mensagem.
 - **Integridade**: Os dados recebidos não foram modificados, seja por acidente ou com má intenção.
 

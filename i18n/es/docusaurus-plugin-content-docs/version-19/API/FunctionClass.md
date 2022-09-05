@@ -119,9 +119,8 @@ Un objeto `4D.Function` contiene un trozo de código que puede ser ejecutado des
 
 </details>
 
-<!-- REF #_command_.Formula.Syntax -->
+<!-- REF #_command_.Formula.Syntax -->**Formula** ( *formulaExp* : Expression ) : 4D.Function<!-- END REF -->
 
-**Formula** ( *formulaExp* : Expression ) : 4D.Function<!-- END REF -->
 
 <!-- REF #_command_.Formula.Params -->
 | Parámetros | Type        |    | Descripción                                                        |
@@ -250,9 +249,8 @@ Llamar a una fórmula utilizando la notación de objetos:
 
 </details>
 
-<!-- REF #_command_.Formula from string.Syntax -->
+<!-- REF #_command_.Formula from string.Syntax -->**Formula from string**( *formulaString* : Text ) : 4D.Function<!-- END REF -->
 
-**Formula from string**( *formulaString* : Text ) : 4D.Function<!-- END REF -->
 
 <!-- REF #_command_.Formula from string.Params -->
 | Parámetros    | Type        |    | Descripción                                                        |
@@ -300,9 +298,8 @@ El siguiente código creará un diálogo que acepta una fórmula en formato text
 
 </details>
 
-<!-- REF #FunctionClass.apply().Syntax -->
+<!-- REF #FunctionClass.apply().Syntax -->**.apply**() : any<br/>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any<!-- END REF -->
 
-**.apply**() : any<br/>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.apply().Params -->
 | Parámetros    | Type       |    | Descripción                                                                   |
@@ -369,9 +366,8 @@ Tenga en cuenta que `.apply()` es similar a [`.call()`](#call) excepto que los p
 
 </details>
 
-<!-- REF #FunctionClass.call().Syntax -->
+<!-- REF #FunctionClass.call().Syntax -->**.call**() : any<br/>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
 
-**.call**() : any<br/>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.call().Params -->
 | Parámetros | Type   |    | Descripción                                                        |
@@ -421,9 +417,7 @@ Tenga en cuenta que `.call()` es similar a [`.apply()`](#apply) excepto que los 
 
 </details>
 
-<!-- REF #FunctionClass.source.Syntax -->
-
-**.source** : Text <!-- END REF -->
+<!-- REF #FunctionClass.source.Syntax -->**.source** : Text <!-- END REF -->
 
 #### Descripción
 

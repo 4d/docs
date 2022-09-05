@@ -119,7 +119,7 @@ Separar cada método com um ";" (por exemplo: "post;get"). If methods is empty, 
 
 Status of the HTTP request log file of the web server (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number). It is useful for debugging issues related to the Web server. It records each request and each response in raw mode. Petições inteiras, incluindo cabeçalhos, são registradas; opcionalmente, partes do corpo podem ser registradas também.
 
-| Value | Constante   | Descrção                       |
+| Value | Constante   | Descrição                      |
 | ----- | ----------- | ------------------------------ |
 | 0     | wdl disable | Web HTTP debug log is disabled |
 
@@ -355,7 +355,7 @@ Starts or stops the recording of requests received by the 4D web server in the *
 
 This setting allows you to select the format of this file. Available values are:
 
-| Value | Format name          | Descrção                                                                                                                                                                                                                 |
+| Value | Format name          | Descrição                                                                                                                                                                                                                |
 | ----- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 0     | No Log File          | Predefinição                                                                                                                                                                                                             |
 | 1     | Record in CLF format | Common Log Format - Each line of the file represents a request, such as: `host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length` - Each field is separated by a space and each line ends by the CR/LF sequence. |

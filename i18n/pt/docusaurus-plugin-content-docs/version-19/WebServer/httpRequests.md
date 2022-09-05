@@ -27,7 +27,7 @@ For example, the URL "*a/b/c*" will call the database method, but "*a/b/c.html*"
 
 **On Web Connection**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text )
 
-| Parâmetros | Tipo |    | Descrção                                     |
+| Parâmetros | Tipo |    | Descrição                                    |
 | ---------- | ---- |:--:| -------------------------------------------- |
 | $1         | Text | <- | URL                                          |
 | $2         | Text | <- | HTTP headers + HTTP body (up to 32 kb limit) |
@@ -99,7 +99,7 @@ The $5 and $6 parameters receive the user name and password entered by the user 
 
 ***/4DACTION/***MethodName***<br/> **/4DACTION/******MethodName/Param*
 
-| Parâmetros | Tipo |    | Descrção                                     |
+| Parâmetros | Tipo |    | Descrição                                    |
 | ---------- | ---- |:--:| -------------------------------------------- |
 | MethodName | Text | -> | Name of the 4D project method to be executed |
 | Param      | Text | -> | Text parameter to pass to the project method |

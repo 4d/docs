@@ -2934,14 +2934,35 @@ This command inserts some columns in the *tableName* table, NOT in the sheet. Th
 If *tableName* does not exist or if there is not enough space in the sheet, nothing happens.
 
 
-
 #### 例題
 
-To insert two columns in the "dataTable" table before the 3rd row:
+You create a table with a data context:
 
 ```4d
-VP INSERT TABLE COLUMNS("ViewProArea"; "dataTable"; 3;2)
+var $context : Object
+$context:=New object()
+
+$context.col:=New collection
+$context.col.push(New object("name"; "Smith"; "salary"; 10000))
+$context.col.push(New object("name"; "Wesson"; "salary"; 50000))
+$context.col.push(New object("name"; "Gross"; "salary"; 10500))
+
+VP SET DATA CONTEXT("ViewProArea"; $context)
+
+VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 3; 3); "PeopleTable"; "col")
 ```
+
+![](../assets/en/ViewPro/table-base.png)
+
+You want to insert two rows and two columns in the table, you can write:
+
+```4d
+VP INSERT TABLE ROWS("ViewProArea"; "PeopleTable"; 1; 2)
+VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
+```
+
+![](../assets/en/ViewPro/table-insert.png)
+
 
 #### 参照
 
@@ -2994,11 +3015,7 @@ If *tableName* does not exist or if there is not enough space in the sheet, noth
 
 #### 例題
 
-To insert one row in the "dataTable" table before the 2nd row:
-
-```4d
-VP INSERT TABLE ROWS("ViewProArea"; "dataTable"; 2)
-```
+See example for the [VP INSERT TABLE COLUMNS](#vp-insert-table-columns) command.
 
 #### 参照
 
@@ -3729,6 +3746,35 @@ The `VP RESIZE TABLE` command <!-- REF #_method_.VP RESIZE TABLE.Summary -->chan
 
 If *tableName* does not exist, nothing happens.
 
+
+#### 例題
+
+You create a table with a data context:
+
+```4d
+var $context : Object
+$context:=New object()
+
+$context.col:=New collection
+$context.col.push(New object("name"; "Smith"; "salary"; 10000))
+$context.col.push(New object("name"; "Wesson"; "salary"; 50000))
+$context.col.push(New object("name"; "Gross"; "salary"; 10500))
+
+VP SET DATA CONTEXT("ViewProArea"; $context)
+
+VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 3; 3); "PeopleTable"; "col")
+```
+
+![](../assets/en/ViewPro/table-base.png)
+
+
+You want to add one column before and after the table as well as two empty rows. 以下のように書くことができます:
+
+```4d
+VP RESIZE TABLE(VP Cells("ViewProArea"; 0; 1; 4; 6); "PeopleTable")
+```
+
+![](../assets/en/ViewPro/table-resize.png)
 
 
 #### 参照

@@ -5,10 +5,10 @@ title: "$info"
 
 Returns information about the entity sets currently stored in 4D Server's cache as well as user sessions
 
-## Descrção
+## Descrição
 When you call this request for your project, you retrieve information in the following properties:
 
-| Propriedade    | Tipo       | Descrção                                                                            |
+| Propriedade    | Tipo       | Descrição                                                                           |
 | -------------- | ---------- | ----------------------------------------------------------------------------------- |
 | cacheSize      | Número     | 4D Server's cache size.                                                             |
 | usedCache      | Número     | How much of 4D Server's cache has been used.                                        |
@@ -21,7 +21,7 @@ When you call this request for your project, you retrieve information in the fol
 For each entity selection currently stored in 4D Server's cache, the following information is returned:
 
 
-| Propriedade   | Tipo     | Descrção                                                                                                                                                                                                                                                            |
+| Propriedade   | Tipo     | Descrição                                                                                                                                                                                                                                                           |
 | ------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id            | String   | A UUID that references the entity set.                                                                                                                                                                                                                              |
 | dataClass     | String   | Nome da dataclass.                                                                                                                                                                                                                                                  |
@@ -38,7 +38,7 @@ For information about how to create an entity selection, refer to `$method=entit
 
 For each user session, the following information is returned in the *sessionInfo* collection:
 
-| Propriedade | Tipo   | Descrção                                                     |
+| Propriedade | Tipo   | Descrição                                                    |
 | ----------- | ------ | ------------------------------------------------------------ |
 | sessionID   | String | A UUID that references the session.                          |
 | userName    | String | The name of the user who runs the session.                   |

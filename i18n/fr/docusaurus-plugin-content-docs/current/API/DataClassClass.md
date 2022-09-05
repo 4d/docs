@@ -35,9 +35,7 @@ Une [dataclass](ORDA/dsMapping.md#dataclass) fournit une interface objet à une 
 
 </details>
 
-<!-- REF DataClassClass.attributeName.Syntax -->
-
-***.attributeName*** : DataClassAttribute<!-- END REF -->
+<!-- REF DataClassClass.attributeName.Syntax -->***.attributeName*** : DataClassAttribute<!-- END REF -->
 
 #### Description
 
@@ -104,9 +102,8 @@ Considérant les propriétés de table suivantes :
 
 </details>
 
-<!-- REF #DataClassClass.all().Syntax -->
+<!-- REF #DataClassClass.all().Syntax -->**.all** ( { *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
-**.all** ( { *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #DataClassClass.all().Params -->
 | Paramètres | Type               |    | Description                                                                    |
@@ -154,9 +151,8 @@ Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant d
 
 </details>
 
-<!-- REF #DataClassClass.clearRemoteCache().Syntax -->
+<!-- REF #DataClassClass.clearRemoteCache().Syntax -->**.clearRemoteCache()**<!-- END REF -->
 
-**.clearRemoteCache()**<!-- END REF -->
 
 <!-- REF #DataStoreClass.clearRemoteCache().Params -->
 | Paramètres | Type |  | Description                                            |
@@ -209,9 +205,8 @@ $ds.Persons.clearRemoteCache()
 
 </details>
 
-<!-- REF #DataClassClass.fromCollection().Syntax -->
+<!-- REF #DataClassClass.fromCollection().Syntax -->**.fromCollection**( *objectCol* : Collection { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
-**.fromCollection**( *objectCol* : Collection { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #DataClassClass.fromCollection().Params -->
 | Paramètres | Type               |    | Description                                                            |
@@ -408,9 +403,8 @@ Dans cet exemple, la première entité sera bien créée mais la seconde créati
 
 </details>
 
-<!-- REF #DataClassClass.get().Syntax -->
+<!-- REF #DataClassClass.get().Syntax -->**.get**( *primaryKey* : Integer { ; *settings* : Object } ) : 4D.Entity<br/>**.get**( *primaryKey* : Text { ; *settings* : Object } ) : 4D.Entity<!-- END REF -->
 
-**.get**( *primaryKey* : Integer { ; *settings* : Object } ) : 4D.Entity<br/>**.get**( *primaryKey* : Text { ; *settings* : Object } ) : 4D.Entity<!-- END REF -->
 
 <!-- REF #DataClassClass.get().Params -->
 | Paramètres | Type            |    | Description                                                           |
@@ -485,9 +479,8 @@ Cet exemple illustre l'utilisation de la propriété *context* :
 
 </details>
 
-<!-- REF #DataClassClass.getCount().Syntax -->
+<!-- REF #DataClassClass.getCount().Syntax -->**.getCount()** : Integer <!-- END REF -->
 
-**.getCount()** : Integer <!-- END REF -->
 
 <!-- REF #DataClassClass.getCount().Params -->
 | Paramètres | Type    |    | Description                                                    |
@@ -526,9 +519,8 @@ $number:=$ds.Persons.getCount()
 
 </details>
 
-<!-- REF #DataClassClass.getDataStore().Syntax -->
+<!-- REF #DataClassClass.getDataStore().Syntax -->**.getDataStore()** : cs.DataStore<!-- END REF -->
 
-**.getDataStore()** : cs.DataStore<!-- END REF -->
 
 <!-- REF #DataClassClass.getDataStore().Params -->
 | Paramètres | Type         |    | Description                                           |
@@ -581,9 +573,8 @@ La méthode projet ***SearchDuplicate*** recherche des valeurs dupliquées dans 
 
 </details>
 
-<!-- REF #DataClassClass.getInfo().Syntax -->
+<!-- REF #DataClassClass.getInfo().Syntax -->**.getInfo()** : Object <!-- END REF -->
 
-**.getInfo()** : Object <!-- END REF -->
 
 <!-- REF #DataClassClass.getInfo().Params -->
 | Paramètres | Type   |    | Description                                             |
@@ -658,9 +649,8 @@ The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns 
 
 </details>
 
-<!-- REF #DataClassClass.getRemoteCache().Syntax -->
+<!-- REF #DataClassClass.getRemoteCache().Syntax -->**.getRemoteCache**() : Object <!-- END REF -->
 
-**.getRemoteCache**() : Object <!-- END REF -->
 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
 | Paramètres | Type   |    | Description                                                                                    |
@@ -747,9 +737,8 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 </details>
 
-<!-- REF #DataClassClass.new().Syntax -->
+<!-- REF #DataClassClass.new().Syntax -->**.new()** : 4D.Entity <!-- END REF -->
 
-**.new()** : 4D.Entity <!-- END REF -->
 
 <!-- REF #DataClassClass.new().Params -->
 | Paramètres | Type      |    | Description                                                  |
@@ -794,9 +783,8 @@ Cet exemple crée une nouvelle entité dans la dataclass "Log" et enregistre les
 
 </details>
 
-<!-- REF #DataClassClass.newSelection().Syntax -->
+<!-- REF #DataClassClass.newSelection().Syntax -->**.newSelection**( { *keepOrder* : Integer } ) : 4D.EntitySelection <!-- END REF -->
 
-**.newSelection**( { *keepOrder* : Integer } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #DataClassClass.newSelection().Params -->
 | Paramètres | Type               |    | Description                                                                                                                            |
@@ -839,9 +827,8 @@ Une fois créée, l'entity selection ne contient aucune entité (`mySelection.le
 
 </details>
 
-<!-- REF #DataClassClass.query().Syntax -->
+<!-- REF #DataClassClass.query().Syntax -->**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br/>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
 
-**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br/>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #DataClassClass.query().Params -->
 | Paramètres    | Type               |    | Description                                                                                                                                                                     |
@@ -1446,9 +1433,8 @@ Nous voulons interdire les formules, par exemple lorsque les utilisateurs saisis
 
 </details>
 
-<!-- REF #DataClassClass.setRemoteCacheSettings().Syntax -->
+<!-- REF #DataClassClass.setRemoteCacheSettings().Syntax -->**.setRemoteCacheSettings**(*settings* : Object) <!-- END REF -->
 
-**.setRemoteCacheSettings**(*settings* : Object) <!-- END REF -->
 
 <!-- REF #DataClassClass.setRemoteCacheSettings().Params -->
 | Paramètres | Type   |    | Description                                                                                                   |

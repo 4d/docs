@@ -38,11 +38,9 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 
 </details>
 
-<!-- REF #_command_.POP3 New transporter.Syntax -->
+<!-- REF #_command_.POP3 New transporter.Syntax -->**POP3 New transporter**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
-**POP3 New transporter**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
-
-<!-- REF POP3TransporterClass.POP3 New transporter.Params -->
+<!-- REF #_command_.POP3 New transporter.Params -->
 | Parameter | Typ                |    | Beschreibung                                                                   |
 | --------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server    | object             | -> | Mail server information                                                        |
@@ -97,9 +95,8 @@ The function returns a [**POP3 transporter object**](#pop3-transporter-object). 
 
 ## 4D.POP3Transporter.new()
 
-<!-- REF #4D.POP3Transporter.new().Syntax -->
+<!-- REF #4D.POP3Transporter.new().Syntax -->**4D.POP3Transporter.new**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
-**4D.POP3Transporter.new**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
 <!-- REF #4D.POP3Transporter.new().Params -->
 | Parameter | Typ                |    | Beschreibung                                                                   |
@@ -160,9 +157,8 @@ The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summa
 
 </details>
 
-<!-- REF #POP3TransporterClass.delete().Syntax -->
+<!-- REF #POP3TransporterClass.delete().Syntax -->**.delete**( *msgNumber* : Integer )<!-- END REF -->
 
-**.delete**( *msgNumber* : Integer )<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.delete().Params -->
 | Parameter | Typ      |    | Beschreibung                                               |
@@ -207,9 +203,8 @@ Executing this method does not actually remove any email. The flagged email will
 
 </details>
 
-<!-- REF #POP3TransporterClass.getBoxInfo().Syntax -->
+<!-- REF #POP3TransporterClass.getBoxInfo().Syntax -->**.getBoxInfo()** : Object<!-- END REF -->
 
-**.getBoxInfo()** : Object<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
 | Parameter | Typ    |    | Beschreibung                              |
@@ -257,9 +252,8 @@ The `boxInfo` object returned contains the following properties:
 
 </details>
 
-<!-- REF #POP3TransporterClass.getMail().Syntax -->
+<!-- REF #POP3TransporterClass.getMail().Syntax -->**.getMail**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
-**.getMail**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMail().Params -->
 | Parameter | Typ      |    | Beschreibung                                                                |
@@ -315,9 +309,8 @@ You want to know the sender of the first mail of the mailbox:
 
 </details>
 
-<!-- REF #POP3TransporterClass.getMailInfo().Syntax -->
+<!-- REF #POP3TransporterClass.getMailInfo().Syntax -->**.getMailInfo**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
-**.getMailInfo**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMailInfo().Params -->
 | Parameter | Typ      |    | Beschreibung                               |
@@ -377,9 +370,8 @@ The method returns **Null** if:
 
 </details>
 
-<!-- REF #POP3TransporterClass.getMailInfoList().Syntax -->
+<!-- REF #POP3TransporterClass.getMailInfoList().Syntax -->**.getMailInfoList()** : Collection<!-- END REF -->
 
-**.getMailInfoList()** : Collection<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
 | Parameter | Typ        |    | Beschreibung                                                |
@@ -443,9 +435,8 @@ You want to know the total number and size of emails in the mailbox:
 
 </details>
 
-<!-- REF #POP3TransporterClass.getMIMEAsBlob().Syntax -->
+<!-- REF #POP3TransporterClass.getMIMEAsBlob().Syntax -->**.getMIMEAsBlob**( *msgNumber* : Integer ) : Blob<!-- END REF -->
 
-**.getMIMEAsBlob**( *msgNumber* : Integer ) : Blob<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Params -->
 | Parameter | Typ      |    | Beschreibung                                                                     |
@@ -509,9 +500,8 @@ You want to know the total number and size of emails in the mailbox:
 
 </details>
 
-<!-- REF #POP3TransporterClass.undeleteAll().Syntax -->
+<!-- REF #POP3TransporterClass.undeleteAll().Syntax -->**.undeleteAll()**<!-- END REF -->
 
-**.undeleteAll()**<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.undeleteAll().Params -->
 | Parameter | Typ |  | Beschreibung                                               |

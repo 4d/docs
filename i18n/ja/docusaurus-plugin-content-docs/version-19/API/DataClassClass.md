@@ -31,9 +31,7 @@ title: DataClass
 
 </details>
 
-<!-- REF DataClassClass.attributeName.Syntax -->
-
-***.attributeName*** : DataClassAttribute<!-- END REF -->
+<!-- REF DataClassClass.attributeName.Syntax -->***.attributeName*** : DataClassAttribute<!-- END REF -->
 
 #### 詳細
 
@@ -100,9 +98,8 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 </details>
 
-<!-- REF #DataClassClass.all().Syntax -->
+<!-- REF #DataClassClass.all().Syntax -->**.all** ( { *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
-**.all** ( { *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #DataClassClass.all().Params -->
 | 引数       | タイプ                |    | 詳細                                                                             |
@@ -151,9 +148,8 @@ The `.all( )` function <!-- REF #DataClassClass.all().Summary -->queries the dat
 
 </details>
 
-<!-- REF #DataClassClass.fromCollection().Syntax -->
+<!-- REF #DataClassClass.fromCollection().Syntax -->**.fromCollection**( *objectCol* : Collection { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
-**.fromCollection**( *objectCol* : Collection { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #DataClassClass.fromCollection().Params -->
 | 引数        | タイプ                |    | 詳細                                                                     |
@@ -348,9 +344,8 @@ The `.fromCollection()` function <!-- REF #DataClassClass.fromCollection().Summa
 
 </details>
 
-<!-- REF #DataClassClass.get().Syntax -->
+<!-- REF #DataClassClass.get().Syntax -->**.get**( *primaryKey* : Integer { ; *settings* : Object } ) : 4D.Entity<br/>**.get**( *primaryKey* : Text { ; *settings* : Object } ) : 4D.Entity<!-- END REF -->
 
-**.get**( *primaryKey* : Integer { ; *settings* : Object } ) : 4D.Entity<br/>**.get**( *primaryKey* : Text { ; *settings* : Object } ) : 4D.Entity<!-- END REF -->
 
 <!-- REF #DataClassClass.get().Params -->
 | 引数         | タイプ              |    | 詳細                                                                    |
@@ -425,9 +420,8 @@ The `.get()` function <!-- REF #DataClassClass.get().Summary -->queries the data
 
 </details>
 
-<!-- REF #DataClassClass.getDataStore().Syntax -->
+<!-- REF #DataClassClass.getDataStore().Syntax -->**.getDataStore()** : cs.DataStore<!-- END REF -->
 
-**.getDataStore()** : cs.DataStore<!-- END REF -->
 
 <!-- REF #DataClassClass.getDataStore().Params -->
 | 引数     | タイプ          |    | 詳細                                                    |
@@ -479,9 +473,8 @@ The `.getDataStore( )` function <!-- REF #DataClassClass.getDataStore().Summary 
 
 </details>
 
-<!-- REF #DataClassClass.getInfo().Syntax -->
+<!-- REF #DataClassClass.getInfo().Syntax -->**.getInfo()** : Object <!-- END REF -->
 
-**.getInfo()** : Object <!-- END REF -->
 
 <!-- REF #DataClassClass.getInfo().Params -->
 | 引数     | タイプ    |    | 詳細                                                      |
@@ -551,9 +544,8 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 
 </details>
 
-<!-- REF #DataClassClass.new().Syntax -->
+<!-- REF #DataClassClass.new().Syntax -->**.new()** : 4D.Entity <!-- END REF -->
 
-**.new()** : 4D.Entity <!-- END REF -->
 
 <!-- REF #DataClassClass.new().Params -->
 | 引数     | タイプ       |    | 詳細                                                           |
@@ -594,9 +586,8 @@ The `.new( )` function <!-- REF #DataClassClass.new().Summary -->creates in memo
 
 </details>
 
-<!-- REF #DataClassClass.newSelection().Syntax -->
+<!-- REF #DataClassClass.newSelection().Syntax -->**.newSelection**( { *keepOrder* : Integer } ) : 4D.EntitySelection <!-- END REF -->
 
-**.newSelection**( { *keepOrder* : Integer } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #DataClassClass.newSelection().Params -->
 | 引数        | タイプ                |    | 詳細                                                                                                       |
@@ -639,9 +630,8 @@ The `.newSelection( )` function <!-- REF #DataClassClass.newSelection().Summary 
 
 </details>
 
-<!-- REF #DataClassClass.query().Syntax -->
+<!-- REF #DataClassClass.query().Syntax -->**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br/>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
 
-**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br/>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #DataClassClass.query().Params -->
 | 引数            | タイプ                |    | 詳細                                                                                               |

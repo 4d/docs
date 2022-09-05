@@ -149,7 +149,7 @@ This property allows modifying the relative location of the button title in rela
 
 Here are the results using the various options for this property:
 
-| Option       | Descrção                                                                                                                                         | Exemplo                                                           |
+| Option       | Descrição                                                                                                                                        | Exemplo                                                           |
 | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------- |
 | **Esquerda** | The text is placed to the left of the icon. The contents of the button are aligned to the right.                                                 | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
 | **Topo**     | The text is placed above the icon. The contents of the button are centered.                                                                      | ![](../assets/en/FormObjects/property_titlePosition_top.png)      |

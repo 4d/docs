@@ -100,7 +100,7 @@ Available classes are accessible from their class stores. Two class stores are a
 
 #### cs -> classStore
 
-| Parameter  | Tipo   |    | Descrção                                      |
+| Parâmetros | Tipo   |    | Descrição                                     |
 | ---------- | ------ | -- | --------------------------------------------- |
 | classStore | object | <- | User class store for the project or component |
 
@@ -118,7 +118,7 @@ $instance:=cs.myClass.new()
 
 #### 4D -> classStore
 
-| Parameter  | Tipo   |    | Descrção       |
+| Parâmetros | Tipo   |    | Descrição      |
 | ---------- | ------ | -- | -------------- |
 | classStore | object | <- | 4D class store |
 
@@ -338,7 +338,7 @@ This example creates a class called `Square` from a class called `Polygon`.
 Super {( param{;...;paramN} )} {-> Object} 
 ```
 
-| Parameter  | Tipo   |    | Descrção                                       |
+| Parâmetros | Tipo   |    | Descrição                                      |
 | ---------- | ------ | -- | ---------------------------------------------- |
 | param      | misto  | -> | Parameter(s) to pass to the parent constructor |
 | Resultados | object | <- | Object's parent                                |
@@ -431,7 +431,7 @@ $message:=$square.description() //I have 4 sides which are all equal
 This -> Object
 ```
 
-| Parameter  | Tipo   |    | Descrção       |
+| Parâmetros | Tipo   |    | Descrição      |
 | ---------- | ------ | -- | -------------- |
 | Resultados | object | <- | Current object |
 

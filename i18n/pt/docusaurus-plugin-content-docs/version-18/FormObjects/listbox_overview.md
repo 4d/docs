@@ -772,7 +772,7 @@ The only mandatory attribute is "valueType" and its supported values are "text",
 
 |                       | valueType                               | text | real | integer | boolean | color | event |
 | --------------------- | --------------------------------------- | ---- | ---- | ------- | ------- | ----- | ----- |
-| *Attributes*          | *Descrção*                              |      |      |         |         |       |       |
+| *Attributes*          | *Descrição*                             |      |      |         |         |       |       |
 | value                 | cell value (input or output)            | x    | x    | x       |         |       |       |
 | min                   | minimum value                           |      | x    | x       |         |       |       |
 | max                   | maximum value                           |      | x    | x       |         |       |       |
@@ -826,7 +826,7 @@ These attributes can be used to control the range of input values. When a cell i
 
 The behavior attribute provides variations to the regular representation of values. In 4D v15, a single variation is proposed:
 
-| Atributo | Available value(s) | valueType(s) | Descrção                                                                                                                                                                                      |
+| Atributo | Available value(s) | valueType(s) | Descrição                                                                                                                                                                                     |
 | -------- | ------------------ | ------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | behavior | threeStates        | integer      | Represents a numeric value as a three-states check box.<br/> 2=semi-checked, 1=checked, 0=unchecked, -1=invisible, -2=unchecked disabled, -3=checked disabled, -4=semi-checked disabled |
 

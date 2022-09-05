@@ -105,11 +105,9 @@ Signal オブジェクトは [共有オブジェクト](Concepts/shared.md) で�
 
 </details>
 
-<!-- REF #_command_.New signal.Syntax -->
+<!-- REF #_command_.New signal.Syntax -->**New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
 
-**New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
-
-<!-- REF SignalClass.New signal.Params -->
+<!-- REF #_command_.New signal.Params -->
 | 引数          | タイプ       |    | 詳細                                              |
 | ----------- | --------- |:--:| ----------------------------------------------- |
 | description | テキスト      | -> | シグナルの詳細                                         |
@@ -177,9 +175,7 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
 
 </details>
 
-<!-- REF #SignalClass.description.Syntax -->
-
-**.description** : Text<!-- END REF -->
+<!-- REF #SignalClass.description.Syntax -->**.description** : Text<!-- END REF -->
 
 #### 詳細
 
@@ -204,9 +200,7 @@ The `.description` property <!-- REF #SignalClass.description.Summary -->contain
 
 </details>
 
-<!-- REF #SignalClass.signaled.Syntax -->
-
-**.signaled** : Boolean<!-- END REF -->
+<!-- REF #SignalClass.signaled.Syntax -->**.signaled** : Boolean<!-- END REF -->
 
 #### 詳細
 
@@ -229,9 +223,8 @@ The `.signaled` property <!-- REF #SignalClass.signaled.Summary -->contains the 
 
 </details>
 
-<!-- REF #SignalClass.trigger().Syntax -->
+<!-- REF #SignalClass.trigger().Syntax -->**.trigger( )**<!-- END REF -->
 
-**.trigger( )**<!-- END REF -->
 
 <!-- REF #SignalClass.trigger().Params -->
 | 引数 | タイプ |  | 詳細                                                         |
@@ -263,9 +256,8 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 
 </details>
 
-<!-- REF #SignalClass.wait().Syntax -->
+<!-- REF #SignalClass.wait().Syntax -->**.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
 
-**.wait**( { *timeout* : Real } ) : Boolean <!-- END REF -->
 
 <!-- REF #SignalClass.wait().Params -->
 | 引数      | タイプ |    | 詳細                                              |

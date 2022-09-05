@@ -25,9 +25,7 @@ When a user class is [defined](Concepts/classes.md#class-definition) in the proj
 
 </details>
 
-<!-- REF #ClassClass.name.Syntax -->
-
-**.name** : Text<!-- END REF -->
+<!-- REF #ClassClass.name.Syntax -->**.name** : Text<!-- END REF -->
 
 #### Beschreibung
 
@@ -48,9 +46,8 @@ This property is **read-only**.
 
 </details>
 
-<!-- REF #ClassClass.new().Syntax -->
+<!-- REF #ClassClass.new().Syntax -->**.new**( *param* : any { *;...paramN* } ) : 4D.Class<!-- END REF -->
 
-**.new**( *param* : any { *;...paramN* } ) : 4D.Class<!-- END REF -->
 
 <!-- REF #ClassClass.new().Params -->
 | Parameter | Typ      |    | Beschreibung                                       |
@@ -110,9 +107,7 @@ $person:=cs.Person.new("John";"Doe";40)
 
 </details>
 
-<!-- REF #ClassClass.superclass.Syntax -->
-
-**.superclass** : 4D.Class<!-- END REF -->
+<!-- REF #ClassClass.superclass.Syntax -->**.superclass** : 4D.Class<!-- END REF -->
 
 #### Beschreibung
 

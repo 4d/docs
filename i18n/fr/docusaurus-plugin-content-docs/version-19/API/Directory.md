@@ -15,9 +15,7 @@ title: Classe Directory
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF #directory.creationDate.Syntax -->
-
-**.creationDate** : Date<!-- END REF -->
+<!-- REF #directory.creationDate.Syntax -->**.creationDate** : Date<!-- END REF -->
 
 #### Description
 
@@ -34,9 +32,7 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF #directory.creationTime.Syntax -->
-
-**.creationTime** : Time<!-- END REF -->
+<!-- REF #directory.creationTime.Syntax -->**.creationTime** : Time<!-- END REF -->
 
 #### Description
 
@@ -56,9 +52,7 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF #directory.exists.Syntax -->
-
-**.exists** : Boolean<!-- END REF -->
+<!-- REF #directory.exists.Syntax -->**.exists** : Boolean<!-- END REF -->
 
 #### Description
 
@@ -80,9 +74,7 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF #directory.extension.Syntax -->
-
-**.extension** : Text<!-- END REF -->
+<!-- REF #directory.extension.Syntax -->**.extension** : Text<!-- END REF -->
 
 #### Description
 
@@ -104,9 +96,7 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF #directory.fullName.Syntax -->
-
-**.fullName** : Text<!-- END REF -->
+<!-- REF #directory.fullName.Syntax -->**.fullName** : Text<!-- END REF -->
 
 #### Description
 
@@ -128,9 +118,7 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF #directory.hidden.Syntax -->
-
-**.hidden** : Boolean<!-- END REF -->
+<!-- REF #directory.hidden.Syntax -->**.hidden** : Boolean<!-- END REF -->
 
 #### Description
 
@@ -152,9 +140,7 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF #directory.isAlias.Syntax -->
-
-**.isAlias** : Boolean<!-- END REF -->
+<!-- REF #directory.isAlias.Syntax -->**.isAlias** : Boolean<!-- END REF -->
 
 #### Description
 
@@ -176,9 +162,7 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF #directory.isFile.Syntax -->
-
-**.isFile** : Boolean<!-- END REF -->
+<!-- REF #directory.isFile.Syntax -->**.isFile** : Boolean<!-- END REF -->
 
 #### Description
 
@@ -200,9 +184,7 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF #directory.isFolder.Syntax -->
-
-**.isFolder** : Boolean<!-- END REF -->
+<!-- REF #directory.isFolder.Syntax -->**.isFolder** : Boolean<!-- END REF -->
 
 #### Description
 
@@ -224,9 +206,7 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF #directory.isPackage.Syntax -->
-
-**.isPackage** : Boolean<!-- END REF -->
+<!-- REF #directory.isPackage.Syntax -->**.isPackage** : Boolean<!-- END REF -->
 
 #### Description
 
@@ -250,9 +230,7 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF #directory.modificationDate.Syntax -->
-
-**.modificationDate** : Date<!-- END REF -->
+<!-- REF #directory.modificationDate.Syntax -->**.modificationDate** : Date<!-- END REF -->
 
 #### Description
 
@@ -274,9 +252,7 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF #directory.modificationTime.Syntax -->
-
-**.modificationTime** : Time<!-- END REF -->
+<!-- REF #directory.modificationTime.Syntax -->**.modificationTime** : Time<!-- END REF -->
 
 #### Description
 
@@ -298,9 +274,7 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF #directory.name.Syntax -->
-
-**.name** : Text<!-- END REF -->
+<!-- REF #directory.name.Syntax -->**.name** : Text<!-- END REF -->
 
 #### Description
 
@@ -322,9 +296,7 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF #directory.original.Syntax -->
-
-**.original** : 4D.Folder<!-- END REF -->
+<!-- REF #directory.original.Syntax -->**.original** : 4D.Folder<!-- END REF -->
 
 #### Description
 
@@ -347,9 +319,7 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF #directory.parent.Syntax -->
-
-**.parent** : 4D.Folder<!-- END REF -->
+<!-- REF #directory.parent.Syntax -->**.parent** : 4D.Folder<!-- END REF -->
 
 #### Description
 
@@ -373,9 +343,7 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF #directory.path.Syntax -->
-
-**.path** : Text<!-- END REF -->
+<!-- REF #directory.path.Syntax -->**.path** : Text<!-- END REF -->
 
 #### Description
 
@@ -397,9 +365,7 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF #directory.platformPath.Syntax -->
-
-**.platformPath** : Text<!-- END REF -->
+<!-- REF #directory.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->
 
 #### Description
 
@@ -421,9 +387,8 @@ Cette propriété est en **lecture seule**.
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF #directory.copyTo().Syntax -->
+<!-- REF #directory.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D Folder<!-- END REF -->
 
-**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D Folder<!-- END REF -->
 
 <!-- REF #directory.copyTo().Params -->
 | Paramètres         | Type      |    | Description                                        |
@@ -477,9 +442,8 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF #directory.file().Syntax -->
+<!-- REF #directory.file().Syntax -->**.file**( *path* : Text ) : 4D.File<!-- END REF -->
 
-**.file**( *path* : Text ) : 4D.File<!-- END REF -->
 
 <!-- REF #directory.file().Params -->
 | Paramètres | Type    |    | Description                                                       |
@@ -520,9 +484,8 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF #directory.files().Syntax -->
+<!-- REF #directory.files().Syntax -->**.files**( { *options* : Integer } ) : Collection<!-- END REF -->
 
-**.files**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.files().Params -->
 | Paramètres | Type        |    | Description                                                   |
@@ -585,9 +548,8 @@ Vous souhaitez lire tous les fichiers qui ne sont pas invisibles dans le dossier
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF #directory.folder().Syntax -->
+<!-- REF #directory.folder().Syntax -->**.folder**( *path* : Text ) : 4D.Folder<!-- END REF -->
 
-**.folder**( *path* : Text ) : 4D.Folder<!-- END REF -->
 
 <!-- REF #directory.folder().Params -->
 | Paramètres | Type      |    | Description                                                        |
@@ -628,9 +590,8 @@ Un objet `Folder` object ou null si *path* est invalide.
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF #directory.folders().Syntax -->
+<!-- REF #directory.folders().Syntax -->**.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
-**.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
 <!-- REF #directory.folders().Params -->
 | Paramètres | Type        |    | Description                                                   |
@@ -678,9 +639,8 @@ Vous souhaitez obtenir la collection de tous les dossiers et sous-dossiers du do
 | v17 R5  | Ajoutées      |
 </details>
 
-<!-- REF #directory.getIcon().Syntax -->
+<!-- REF #directory.getIcon().Syntax -->**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
-**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #directory.getIcon().Params -->
 | Paramètres | Type    |    | Description                                    |

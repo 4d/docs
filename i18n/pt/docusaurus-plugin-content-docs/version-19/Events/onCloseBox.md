@@ -8,7 +8,7 @@ title: On Close Box
 | 22   | Formulário       | The window’s close box has been clicked |
 
 
-## Descrção
+## Descrição
 
 The `On Close Box` event is generated when the user clicks on the clos box of the window.
 

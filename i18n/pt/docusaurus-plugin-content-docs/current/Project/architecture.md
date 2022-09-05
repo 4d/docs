@@ -53,7 +53,7 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 
 ### `Sources`
 
-| Conteúdos               | Descrção                                                                                                                                                                                                                                                                                                                                                                                    | Formato |
+| Conteúdos               | Descrição                                                                                                                                                                                                                                                                                                                                                                                   | Formato |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | catalog.4DCatalog       | Table and field definitions                                                                                                                                                                                                                                                                                                                                                                 | XML     |
 | folders.json            | Explorer folder definitions                                                                                                                                                                                                                                                                                                                                                                 | JSON    |
@@ -69,26 +69,26 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 
 #### `DatabaseMethods`
 
-| Conteúdos                | Descrção                                                              | Formato |
+| Conteúdos                | Descrição                                                             | Formato |
 | ------------------------ | --------------------------------------------------------------------- | ------- |
 | *databaseMethodName*.4dm | Database methods defined in the project. One file per database method | text    |
 
 #### `Métodos`
 
-| Conteúdos        | Descrção                                                    | Formato |
+| Conteúdos        | Descrição                                                   | Formato |
 | ---------------- | ----------------------------------------------------------- | ------- |
 | *methodName*.4dm | Project methods defined in the project. One file per method | text    |
 
 #### `Classes`
 
-| Conteúdos       | Descrção                                                                                                                           | Formato |
+| Conteúdos       | Descrição                                                                                                                          | Formato |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | *className*.4dm | User class definition method, allowing to instantiate specific objects. One file per class, the name of the file is the class name | text    |
 
 
 #### `Formulários`
 
-| Conteúdos                                 | Descrção                                   | Formato |
+| Conteúdos                                 | Descrição                                  | Formato |
 | ----------------------------------------- | ------------------------------------------ | ------- |
 | *formName*/form.4DForm                    | Project form description                   | json    |
 | *formName*/method.4dm                     | Project form method                        | text    |
@@ -97,7 +97,7 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 
 #### `TableForms`
 
-| Conteúdos                                            | Descrção                                               | Formato |
+| Conteúdos                                            | Descrição                                              | Formato |
 | ---------------------------------------------------- | ------------------------------------------------------ | ------- |
 | *n*/Input/*formName*/form.4DForm                     | Input table form description (n is the table number)   | json    |
 | *n*/Input/*formName*/Images/*pictureName*            | Input table form static pictures                       | picture |
@@ -110,7 +110,7 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 
 #### `Triggers`
 
-| Conteúdos     | Descrção                                                                                   | Formato |
+| Conteúdos     | Descrição                                                                                  | Formato |
 | ------------- | ------------------------------------------------------------------------------------------ | ------- |
 | table_*n*.4dm | Trigger methods defined in the project. One trigger file per table (n is the table number) | text    |
 
@@ -142,7 +142,7 @@ The Librairies folder contains the file resulting from a compilation with the [S
 
 The Resources folder contains any custom project resource files and folders. In this folder, you can place all the files needed for the translation or customization of the application interface (picture files, text files, XLIFF files, etc.). 4D uses automatic mechanisms to work with the contents of this folder, in particular for the handling of XLIFF files and static pictures. For using in remote mode, the Resources folder lets you share files between the server machine and all the client machines. See the *4D Server Reference Manual*.
 
-| Conteúdos             | Descrção                                                                                                                                              | Formato |
+| Conteúdos             | Descrição                                                                                                                                             | Formato |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | *item*                | Project resource files and folders                                                                                                                    | various |
 | Images/Library/*item* | Pictures from the Picture Library as separate files(*). Names of these items become file names. If a duplicate exists, a number is added to the name. | picture |
@@ -154,7 +154,7 @@ The Resources folder contains any custom project resource files and folders. In 
 
 The data folder contains the data file and all files and folders relating to the data.
 
-| Conteúdos    | Descrção                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Formato |
+| Conteúdos    | Descrição                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Formato |
 | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | data.4dd(*)  | Data file containing data entered in the records and all the data belonging to the records. When you open a 4D project, the application opens the current data file by default. If you change the name or location of this file, the *Open data file* dialog box will then appear so that you can select the data file to use or create a new one                                                                                                                                                                                                                                                                                                                                                                                                                                                           | binary  |
 | data.journal | Created only when the database uses a log file. The log file is used to ensure the security of the data between backups. All operations carried out on the data are recorded sequentially in this file. Therefore, each operation on the data causes two simultaneous actions: the first on the data (the statement is executed normally) and the second in the log file (a description of the operation is recorded). The log file is constructed independently, without disturbing or slowing down the user’s work. A database can only work with a single log file at a time. The log file records operations such as additions, modifications or deletions of records, transactions, etc. It is generated by default when a database is created. It is generated by default when a database is created. | binary  |
@@ -168,7 +168,7 @@ This folder contains **user settings files for data** used for application admin
 
 > These settings take priority over **[user settings files](#settings-1)** and **[structure settings](#sources)** files.
 
-| Conteúdos           | Descrção                                                                                                                                                                                                            | Formato |
+| Conteúdos           | Descrição                                                                                                                                                                                                           | Formato |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | directory.json      | Description of 4D groups, users, and their access rights when the application is run with this data file.                                                                                                           | JSON    |
 | Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md) when the database is run with this data file. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML     |
@@ -193,7 +193,7 @@ This folder contains **user settings files** used for application administration
 
 > These settings take priority over **[structure settings](#sources)** files. However, if a **[user settings file for data](#settings)** exists, it takes priority over user settings file.
 
-| Conteúdos           | Descrção                                                                                                                                                                                                                                                                                                                             | Formato |
+| Conteúdos           | Descrição                                                                                                                                                                                                                                                                                                                            | Formato |
 | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
 | directory.json      | Description of 4D groups and users for the application, as well as their access rights                                                                                                                                                                                                                                               | JSON    |
 | Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md)) when each backup is launched. This file can also be used to read or set additional options, such as the amount of information stored in the *backup journal*. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML     |
@@ -205,7 +205,7 @@ This folder contains **user settings files** used for application administration
 
 Esta pasta contém arquivos que memorizam as configurações do usuário, por exemplo, o ponto de ruptura ou as posições das janelas. You can just ignore this folder. It contains for example:
 
-| Conteúdos                  | Descrção                                                    | Formato |
+| Conteúdos                  | Descrição                                                   | Formato |
 | -------------------------- | ----------------------------------------------------------- | ------- |
 | methodPreferences.json     | Current user Code Editor preferences                        | JSON    |
 | methodWindowPositions.json | Current user window positions for methods                   | JSON    |

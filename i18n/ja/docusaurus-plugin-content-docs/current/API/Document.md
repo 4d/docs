@@ -15,9 +15,7 @@ title: Document クラス
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #document.creationDate.Syntax -->
-
-**.creationDate** : Date<!-- END REF -->
+<!-- REF #document.creationDate.Syntax -->**.creationDate** : Date<!-- END REF -->
 
 #### 詳細
 
@@ -37,9 +35,7 @@ The `.creationDate` property returns <!-- REF #document.creationDate.Summary -->
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #document.creationTime.Syntax -->
-
-**.creationTime** : Time<!-- END REF -->
+<!-- REF #document.creationTime.Syntax -->**.creationTime** : Time<!-- END REF -->
 
 #### 詳細
 
@@ -59,9 +55,7 @@ The `.creationTime` property  returns <!-- REF #document.creationTime.Summary --
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #document.exists.Syntax -->
-
-**.exists** : Boolean<!-- END REF -->
+<!-- REF #document.exists.Syntax -->**.exists** : Boolean<!-- END REF -->
 
 #### 詳細
 
@@ -82,9 +76,7 @@ The `.exists` property returns <!-- REF #document.exists.Summary -->true if the 
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #document.extension.Syntax -->
-
-**.extension** : Text<!-- END REF -->
+<!-- REF #document.extension.Syntax -->**.extension** : Text<!-- END REF -->
 
 #### 詳細
 
@@ -104,9 +96,7 @@ The `.extension` property returns <!-- REF #document.extension.Summary -->the ex
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #document.fullName.Syntax -->
-
-**.fullName** : Text<!-- END REF -->
+<!-- REF #document.fullName.Syntax -->**.fullName** : Text<!-- END REF -->
 
 #### 詳細
 
@@ -126,9 +116,7 @@ The `.fullName` property returns <!-- REF #document.fullName.Summary -->the full
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #document.hidden.Syntax -->
-
-**.hidden** : Boolean<!-- END REF -->
+<!-- REF #document.hidden.Syntax -->**.hidden** : Boolean<!-- END REF -->
 
 #### 詳細
 
@@ -148,9 +136,7 @@ The `.hidden` property returns <!-- REF #document.hidden.Summary -->true if the 
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #document.isAlias.Syntax -->
-
-**.isAlias** : Boolean<!-- END REF -->
+<!-- REF #document.isAlias.Syntax -->**.isAlias** : Boolean<!-- END REF -->
 
 #### 詳細
 
@@ -170,9 +156,7 @@ The `.isAlias` property returns <!-- REF #document.isAlias.Summary -->true if th
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #document.isFile.Syntax -->
-
-**.isFile** : Boolean<!-- END REF -->
+<!-- REF #document.isFile.Syntax -->**.isFile** : Boolean<!-- END REF -->
 
 #### 詳細
 
@@ -192,9 +176,7 @@ The `.isFile` property returns <!-- REF #document.isFile.Summary -->The `.copyTo
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #document.isFolder.Syntax -->
-
-**.isFolder** : Boolean<!-- END REF -->
+<!-- REF #document.isFolder.Syntax -->**.isFolder** : Boolean<!-- END REF -->
 
 #### 詳細
 
@@ -214,9 +196,7 @@ The `.isFolder` property returns <!-- REF #document.isFolder.Summary -->always t
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #document.isWritable.Syntax -->
-
-**.isWritable** : Boolean<!-- END REF -->
+<!-- REF #document.isWritable.Syntax -->**.isWritable** : Boolean<!-- END REF -->
 
 #### 詳細
 
@@ -246,9 +226,7 @@ The `.isWritable` property returns <!-- REF #document.isWritable.Summary -->true
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #document.modificationDate.Syntax -->
-
-**.modificationDate** : Date<!-- END REF -->
+<!-- REF #document.modificationDate.Syntax -->**.modificationDate** : Date<!-- END REF -->
 
 #### 詳細
 
@@ -268,9 +246,7 @@ The `.modificationDate` property returns <!-- REF #document.modificationDate.Sum
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #document.modificationTime.Syntax -->
-
-**.modificationTime** : Time<!-- END REF -->
+<!-- REF #document.modificationTime.Syntax -->**.modificationTime** : Time<!-- END REF -->
 
 ##### 詳細
 
@@ -290,9 +266,7 @@ The `.modificationTime` property returns <!-- REF #document.modificationTime.Sum
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #document.name.Syntax -->
-
-**.name** : Text<!-- END REF -->
+<!-- REF #document.name.Syntax -->**.name** : Text<!-- END REF -->
 
 #### 詳細
 
@@ -312,9 +286,7 @@ The `.name` property returns <!-- REF #document.name.Summary -->the name of the 
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #document.original.Syntax -->
-
-**.original** : 4D.File<br/>**.original** : 4D.Folder<!-- END REF -->
+<!-- REF #document.original.Syntax -->**.original** : 4D.File<br/>**.original** : 4D.Folder<!-- END REF -->
 
 #### 詳細
 
@@ -339,9 +311,7 @@ The `.original` property returns <!-- REF #document.original.Summary -->the targ
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #document.parent.Syntax -->
-
-**.parent** : 4D.Folder<!-- END REF -->
+<!-- REF #document.parent.Syntax -->**.parent** : 4D.Folder<!-- END REF -->
 
 #### 詳細
 
@@ -361,9 +331,7 @@ The `.parent` property returns <!-- REF #document.parent.Summary -->The `.parent
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #document.path.Syntax -->
-
-**.path** : Text<!-- END REF -->
+<!-- REF #document.path.Syntax -->**.path** : Text<!-- END REF -->
 
 #### 詳細
 
@@ -383,9 +351,7 @@ The `.path` property returns <!-- REF #document.path.Summary -->The `.path` prop
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #document.platformPath.Syntax -->
-
-**.platformPath** : Text<!-- END REF -->
+<!-- REF #document.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->
 
 #### 詳細
 
@@ -405,9 +371,7 @@ The `.platformPath` property returns <!-- REF #document.platformPath.Summary -->
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #document.size.Syntax -->
-
-**.size** : Real<!-- END REF -->
+<!-- REF #document.size.Syntax -->**.size** : Real<!-- END REF -->
 
 #### 詳細
 
@@ -427,9 +391,8 @@ The `.size` property returns <!-- REF #document.size.Summary -->the size of the 
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #document.copyTo().Syntax -->
+<!-- REF #document.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File<!-- END REF -->
 
-**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File<!-- END REF -->
 
 <!-- REF #document.copyTo().Params -->
 | 引数                | タイプ       |    | 詳細                                    |
@@ -482,9 +445,8 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 | v17 R5 | 追加            |
 </details>
 
-<!-- REF #document.getContent().Syntax -->
+<!-- REF #document.getContent().Syntax -->**.getContent( )** : 4D.Blob<!-- END REF -->
 
-**.getContent( )** : 4D.Blob<!-- END REF -->
 
 <!-- REF #document.getContent().Params -->
 | 引数     | タイプ     |    | 詳細                                    |
@@ -525,9 +487,8 @@ The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #document.getIcon().Syntax -->
+<!-- REF #document.getIcon().Syntax -->**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
-**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #document.getIcon().Params -->
 | 引数     | タイプ     |    | 詳細                              |
@@ -561,9 +522,8 @@ The `.getIcon()` function returns <!-- REF #document.getIcon().Summary -->the ic
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #document.getText().Syntax -->
+<!-- REF #document.getText().Syntax -->**.getText**( { *charSetName* : Text { ; *breakMode* : Integer } } ) : Text<br/>**.getText**( { *charSetNum* : Integer { ; *breakMode* : Integer } } ) : Text<!-- END REF -->
 
-**.getText**( { *charSetName* : Text { ; *breakMode* : Integer } } ) : Text<br/>**.getText**( { *charSetNum* : Integer { ; *breakMode* : Integer } } ) : Text<!-- END REF -->
 
 <!-- REF #document.getText().Params -->
 | 引数          | タイプ  |    | 詳細                                          |

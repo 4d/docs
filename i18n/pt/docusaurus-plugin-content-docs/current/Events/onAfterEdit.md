@@ -7,7 +7,7 @@ title: On After Edit
 | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | 45   | [4D View Pro area](../FormObjects/viewProArea_overview.md) - [4D Write Pro area](../FormObjects/writeProArea_overview.md) - [Combo Box](FormObjects/comboBox_overview.md) - Form - [Input](FormObjects/input_overview.md) - [Hierarchical List](FormObjects/list_overview.md) - [List Box](FormObjects/listbox_overview.md) - [List Box Column](FormObjects/listbox_overview.md#list-box-columns) | The contents of the enterable object that has the focus has just been modified |
 
-## Descrção
+## Descrição
 
 ### General case
 
@@ -26,7 +26,7 @@ Within the `On After Edit` event, text data being entered is returned by the [`G
 
 The object returned by the `FORM Event` command contains:
 
-| Propriedade | Tipo          | Descrção                                                                                            |
+| Propriedade | Tipo          | Descrição                                                                                           |
 | ----------- | ------------- | --------------------------------------------------------------------------------------------------- |
 | code        | inteiro longo | On After Edit                                                                                       |
 | description | text          | "On After Edit"                                                                                     |
@@ -38,14 +38,14 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### action = editChange
 
-| Propriedade | Tipo    | Descrção                          |
+| Propriedade | Tipo    | Descrição                         |
 | ----------- | ------- | --------------------------------- |
 | range       | object  | Cell range                        |
 | editingText | variant | The value from the current editor |
 
 #### action = valueChanged
 
-| Propriedade | Tipo    | Descrção                    |
+| Propriedade | Tipo    | Descrição                   |
 | ----------- | ------- | --------------------------- |
 | range       | object  | Cell range                  |
 | oldValue    | variant | Value of cell before change |
@@ -53,7 +53,7 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### action = DragDropBlock
 
-| Propriedade | Tipo    | Descrção                                            |
+| Propriedade | Tipo    | Descrição                                           |
 | ----------- | ------- | --------------------------------------------------- |
 | fromRange   | object  | Range of source cell range (being dragged)          |
 | toRange     | object  | Range of the destination cell range (drop location) |
@@ -62,21 +62,21 @@ Depending on the `action` property value, the [event object](overview.md#event-o
 
 #### action = DragFillBlock
 
-| Propriedade | Tipo   | Descrção            |
+| Propriedade | Tipo   | Descrição           |
 | ----------- | ------ | ------------------- |
 | fillRange   | object | Range used for fill |
  autoFillType|longint|Value used for the fill.<li>0: Cells are filled with all data (values, formatting, and formulas)</li><li>1: Cells are filled with automatically sequential data</li><li>2: Cells are filled with formatting only</li><li>3: Cells are filled with values but not formatting</li><li>4: Values are removed from the cells</li><li>5: Cells are filled automatically</li>| |fillDirection|longint|Direction of the fill.<li>0: The cells to the left are filled</li><li>1: The cells to the right are filled</li><li>2: The cells above are filled</li><li>3: The cells below are filled</li>|
 
 #### action = formulaChanged
 
-| Propriedade | Tipo   | Descrção            |
+| Propriedade | Tipo   | Descrição           |
 | ----------- | ------ | ------------------- |
 | range       | object | Cell range          |
 | formula     | text   | The formula entered |
 
 #### action = clipboardPasted
 
-| Propriedade | Tipo          | Descrção                                                                                                                                                                                                 |
+| Propriedade | Tipo          | Descrição                                                                                                                                                                                                |
 | ----------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | range       | object        | Cell range                                                                                                                                                                                               |
 | pasteOption | inteiro longo | Specifies what is pasted from the clipboard:<li>0: Everything is pasted (values, formatting, and formulas)</li><li>1: Only values are pasted</li><li>2: Only the formatting is pasted</li><li>3: Only formulas are pasted</li><li>4: Values and formatting are pasted (not formulas)</li><li>5: Formulas and formatting are pasted (not values)</li> |
