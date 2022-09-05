@@ -3,7 +3,7 @@ id: Document
 title: Document Class
 ---
 
-## Descrção
+## Descrição
 
 <!-- REF document.creationDate.Desc -->
 ## .creationDate
@@ -15,11 +15,9 @@ title: Document Class
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #document.creationDate.Syntax -->
+<!-- REF #document.creationDate.Syntax -->**.creationDate** : Date<!-- END REF -->
 
-**.creationDate** : Date<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.creationDate` property returns <!-- REF #document.creationDate.Summary -->The `.creationDate` property returns<!-- END REF -->.
 
@@ -36,11 +34,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #document.creationTime.Syntax -->
+<!-- REF #document.creationTime.Syntax -->**.creationTime** : Time<!-- END REF -->
 
-**.creationTime** : Time<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.creationTime` property  returns <!-- REF #document.creationTime.Summary -->the creation  time of the file<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
@@ -58,11 +54,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #document.exists.Syntax -->
+<!-- REF #document.exists.Syntax -->**.exists** : Boolean<!-- END REF -->
 
-**.exists** : Boolean<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.exists` property returns <!-- REF #document.exists.Summary -->true if the file exists on disk<!-- END REF -->, and false otherwise.
 
@@ -81,11 +75,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #document.extension.Syntax -->
+<!-- REF #document.extension.Syntax -->**.extension** : Text<!-- END REF -->
 
-**.extension** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.extension` property returns <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->. Uma extensão sempre começa com "." A propriedade devolve uma string vazia se o nome do arquivo não tiver extensão.
 
@@ -103,11 +95,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #document.fullName.Syntax -->
+<!-- REF #document.fullName.Syntax -->**.fullName** : Text<!-- END REF -->
 
-**.fullName** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.fullName` property returns <!-- REF #document.fullName.Summary -->the full name of the file, including its extension (if any)<!-- END REF -->.
 
@@ -125,11 +115,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #document.hidden.Syntax -->
+<!-- REF #document.hidden.Syntax -->**.hidden** : Boolean<!-- END REF -->
 
-**.hidden** : Boolean<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.hidden` property returns <!-- REF #document.hidden.Summary -->true if the file is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
 
@@ -147,11 +135,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #document.isAlias.Syntax -->
+<!-- REF #document.isAlias.Syntax -->**.isAlias** : Boolean<!-- END REF -->
 
-**.isAlias** : Boolean<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.isAlias` property returns <!-- REF #document.isAlias.Summary -->true if the file is an alias, a shortcut, or a symbolic link<!-- END REF -->, and false otherwise.
 
@@ -169,11 +155,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #document.isFile.Syntax -->
+<!-- REF #document.isFile.Syntax -->**.isFile** : Boolean<!-- END REF -->
 
-**.isFile** : Boolean<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.isFile` property returns <!-- REF #document.isFile.Summary -->The `.copyTo()` function<!-- END REF -->.
 
@@ -191,11 +175,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #document.isFolder.Syntax -->
+<!-- REF #document.isFolder.Syntax -->**.isFolder** : Boolean<!-- END REF -->
 
-**.isFolder** : Boolean<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.isFolder` property returns <!-- REF #document.isFolder.Summary -->always true for a file<!-- END REF -->.
 
@@ -213,11 +195,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #document.isWritable.Syntax -->
+<!-- REF #document.isWritable.Syntax -->**.isWritable** : Boolean<!-- END REF -->
 
-**.isWritable** : Boolean<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.isWritable` property returns <!-- REF #document.isWritable.Summary -->true if the file exists on disk and is writable<!-- END REF -->.
 > A propriedade verifica a habilidade da aplicação 4D de escrever no disco (direitos de acesso), não depende apenas do atributo *writable* do arquivo.
@@ -245,11 +225,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #document.modificationDate.Syntax -->
+<!-- REF #document.modificationDate.Syntax -->**.modificationDate** : Date<!-- END REF -->
 
-**.modificationDate** : Date<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.modificationDate` property returns <!-- REF #document.modificationDate.Summary -->The `.modificationDate` property returns<!-- END REF -->.
 
@@ -267,11 +245,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #document.modificationTime.Syntax -->
+<!-- REF #document.modificationTime.Syntax -->**.modificationTime** : Time<!-- END REF -->
 
-**.modificationTime** : Time<!-- END REF -->
-
-##### Descrção
+##### Descrição
 
 The `.modificationTime` property returns <!-- REF #document.modificationTime.Summary -->The `.modificationTime` property returns<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
@@ -289,11 +265,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #document.name.Syntax -->
+<!-- REF #document.name.Syntax -->**.name** : Text<!-- END REF -->
 
-**.name** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.name` property returns <!-- REF #document.name.Summary -->the name of the file without extension (if any)<!-- END REF -->.
 
@@ -311,11 +285,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #document.original.Syntax -->
+<!-- REF #document.original.Syntax -->**.original** : 4D. File<br/>**.original** : 4D. Folder<!-- END REF -->
 
-**.original** : 4D. File<br/>**.original** : 4D. Folder<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.original` property returns <!-- REF #document.original.Summary -->the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->. O elemento alvo pode ser:
 
@@ -338,11 +310,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #document.parent.Syntax -->
+<!-- REF #document.parent.Syntax -->**.parent** : 4D. Folder<!-- END REF -->
 
-**.parent** : 4D. Folder<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.parent` property returns <!-- REF #document.parent.Summary -->The `.parent` property returns<!-- END REF -->. .
 
@@ -360,11 +330,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #document.path.Syntax -->
+<!-- REF #document.path.Syntax -->**.path** : Text<!-- END REF -->
 
-**.path** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.path` property returns <!-- REF #document.path.Summary -->The `.path` property returns<!-- END REF -->. .
 
@@ -382,11 +350,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #document.platformPath.Syntax -->
+<!-- REF #document.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->
 
-**.platformPath** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.platformPath` property returns <!-- REF #document.platformPath.Summary -->The `.platformPath` property returns<!-- END REF -->.
 
@@ -404,11 +370,9 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #document.size.Syntax -->
+<!-- REF #document.size.Syntax -->**.size** : Real<!-- END REF -->
 
-**.size** : Real<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.size` property returns <!-- REF #document.size.Summary -->the size of the file expressed in bytes<!-- END REF -->. Se o arquivo não existir em disco, o tamanho é 0.
 
@@ -426,12 +390,11 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #document.copyTo().Syntax -->
+<!-- REF #document.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D. Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D. File<!-- END REF -->
 
-**.copyTo**( *destinationFolder* : 4D. Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D. File<!-- END REF -->
 
 <!-- REF #document.copyTo().Params -->
-| Parameter         | Tipo       |    | Descrção                                               |
+| Parâmetros        | Tipo       |    | Descrição                                              |
 | ----------------- | ---------- |:--:| ------------------------------------------------------ |
 | destinationFolder | 4D. Folder | -> | Pasta de destino                                       |
 | newName           | Text       | -> | Nome para a copia                                      |
@@ -440,7 +403,7 @@ Essa propriedade é**apenas leitura**.
 
 |
 
-#### Descrção
+#### Descrição
 
 The `.copyTo()` function <!-- REF #document.copyTo().Summary -->The `.isFolder` property returns <!-- END REF -->.
 
@@ -481,18 +444,17 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 | v17 R5 | Adicionado       |
 </details>
 
-<!-- REF #document.getContent().Syntax -->
+<!-- REF #document.getContent().Syntax -->**.getContent( )** : 4D. Blob<!-- END REF -->
 
-**.getContent( )** : 4D. Blob<!-- END REF -->
 
 <!-- REF #document.getContent().Params -->
-| Parameter  | Tipo    |    | Descrção                                       |
+| Parâmetros | Tipo    |    | Descrição                                      |
 | ---------- | ------- | -- | ---------------------------------------------- |
 | Resultados | 4D.Blob | <- | Conteúdo do arquivo|<!-- END REF -->
 
 |
 
-#### Descrção
+#### Descrição
 
 The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `4D. Blob` object containing the entire content of a file<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
 
@@ -524,19 +486,18 @@ Para salvar o conteúdo de um documento em um campo `BLOB`:
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #document.getIcon().Syntax -->
+<!-- REF #document.getIcon().Syntax -->**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
-**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
 
 <!-- REF #document.getIcon().Params -->
-| Parameter  | Tipo    |    | Descrção                                        |
+| Parâmetros | Tipo    |    | Descrição                                       |
 | ---------- | ------- | -- | ----------------------------------------------- |
 | size       | Integer | -> | Longitude de lado da imagem devolvida (píxeles) |
 | Resultados | Imagem  | <- | Ícone|<!-- END REF -->
 
 |
 
-#### Descrção
+#### Descrição
 
 The `.getIcon()` function returns <!-- REF #document.getIcon().Summary -->the icon of the file<!-- END REF -->.
 
@@ -560,12 +521,11 @@ Se o arquivo não existir no disco, um ícone em branco padrão será retornado.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #document.getText().Syntax -->
+<!-- REF #document.getText().Syntax -->**.getText**( { *charSetName* : Text { ; *breakMode* : Integer } } ) : Text<br/>**.getText**( { *charSetNum* : Integer { ; *breakMode* : Integer } } ) : Text<!-- END REF -->
 
-**.getText**( { *charSetName* : Text { ; *breakMode* : Integer } } ) : Text<br/>**.getText**( { *charSetNum* : Integer { ; *breakMode* : Integer } } ) : Text<!-- END REF -->
 
 <!-- REF #document.getText().Params -->
-| Parameter   | Tipo    |    | Descrção                                      |
+| Parâmetros  | Tipo    |    | Descrição                                     |
 | ----------- | ------- | -- | --------------------------------------------- |
 | charSetName | Text    | -> | Nome do conjunto de caracteres                |
 | charSetNum  | Integer | -> | Número de conjuntos de caracteres             |
@@ -574,7 +534,7 @@ Se o arquivo não existir no disco, um ícone em branco padrão será retornado.
 
 |
 
-#### Descrção
+#### Descrição
 
 The `.getText()` function <!-- REF #document.getText().Summary -->returns the contents of the file as text <!-- END REF -->.
 

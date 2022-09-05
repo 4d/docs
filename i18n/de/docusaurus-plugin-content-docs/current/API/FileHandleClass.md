@@ -84,9 +84,7 @@ File handle objects cannot be shared.
 | v19 R7  | Added   |
 </details>
 
-<!-- REF #FileHandleClass.breakModeRead.Syntax -->
-
-**.breakModeRead** : Text<!-- END REF -->
+<!-- REF #FileHandleClass.breakModeRead.Syntax -->**.breakModeRead** : Text<!-- END REF -->
 
 
 #### Beschreibung
@@ -114,9 +112,7 @@ This property is **read-only**.
 | v19 R7  | Added   |
 </details>
 
-<!-- REF #FileHandleClass.breakModeWrite.Syntax -->
-
-**.breakModeWrite** : Text<!-- END REF -->
+<!-- REF #FileHandleClass.breakModeWrite.Syntax -->**.breakModeWrite** : Text<!-- END REF -->
 
 
 #### Beschreibung
@@ -144,9 +140,7 @@ This property is **read-only**.
 | v19 R7  | Added   |
 </details>
 
-<!-- REF #FileHandleClass.charset.Syntax -->
-
-**.charset** : Text<!-- END REF -->
+<!-- REF #FileHandleClass.charset.Syntax -->**.charset** : Text<!-- END REF -->
 
 
 #### Beschreibung
@@ -170,9 +164,7 @@ This property is **read-only**.
 | v19 R7  | Added   |
 </details>
 
-<!-- REF #FileHandleClass.eof.Syntax -->
-
-**.eof** : Boolean<!-- END REF -->
+<!-- REF #FileHandleClass.eof.Syntax -->**.eof** : Boolean<!-- END REF -->
 
 
 #### Beschreibung
@@ -195,9 +187,7 @@ This property is **read-only**.
 | v19 R7  | Added   |
 </details>
 
-<!--REF #FileHandleClass.getSize().Syntax -->
-
-**.getSize()** : Real <!-- END REF -->
+<!--REF #FileHandleClass.getSize().Syntax -->**.getSize()** : Real <!-- END REF -->
 
 
 <!--REF #FileHandleClass.getSize().Params -->
@@ -230,9 +220,7 @@ The `.getSize()` function <!-- REF #FileHandleClass.getSize().Summary -->returns
 | v19 R7  | Added   |
 </details>
 
-<!-- REF #FileHandleClass.mode.Syntax -->
-
-**.mode** : Text<!-- END REF -->
+<!-- REF #FileHandleClass.mode.Syntax -->**.mode** : Text<!-- END REF -->
 
 
 #### Beschreibung
@@ -257,9 +245,7 @@ This property is **read-only**.
 | v19 R7  | Added   |
 </details>
 
-<!-- REF #FileHandleClass.offset.Syntax -->
-
-**.offset** : Real<!-- END REF -->
+<!-- REF #FileHandleClass.offset.Syntax -->**.offset** : Real<!-- END REF -->
 
 
 #### Beschreibung
@@ -288,9 +274,7 @@ This property is **read/write**.
 | v19 R7  | Added   |
 </details>
 
-<!--REF #FileHandleClass.readBlob().Syntax -->
-
-**.readBlob**( *bytes* : Real ) : [4D.Blob](BlobClass) <!-- END REF -->
+<!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : [4D.Blob](BlobClass) <!-- END REF -->
 
 <!--REF #FileHandleClass.readBlob().Params -->
 | Parameter | Typ                  |    | Beschreibung                                        |
@@ -325,9 +309,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 | v19 R7  | Added   |
 </details>
 
-<!--REF #FileHandleClass.readLine().Syntax -->
-
-**.readLine()** : Text <!-- END REF -->
+<!--REF #FileHandleClass.readLine().Syntax -->**.readLine()** : Text <!-- END REF -->
 
 <!--REF #FileHandleClass.readLine().Params -->
 | Parameter | Typ  |    | Beschreibung                            |
@@ -362,9 +344,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 | v19 R7  | Added   |
 </details>
 
-<!--REF #FileHandleClass.readText().Syntax -->
-
-**.readText**( { *stopChar* : Text } ) : Text <!-- END REF -->
+<!--REF #FileHandleClass.readText().Syntax -->**.readText**( { *stopChar* : Text } ) : Text <!-- END REF -->
 
 <!--REF #FileHandleClass.readText().Params -->
 | Parameter  | Typ  |    | Beschreibung                                  |
@@ -405,9 +385,7 @@ If the *stopChar* parameter is passed and not found, `.readText()` returns an em
 | v19 R7  | Added   |
 </details>
 
-<!--REF #FileHandleClass.setSize().Syntax -->
-
-**.setSize**( *size* : Real )<!-- END REF -->
+<!--REF #FileHandleClass.setSize().Syntax -->**.setSize**( *size* : Real )<!-- END REF -->
 
 <!--REF #FileHandleClass.setSize().Params -->
 | Parameter | Typ  |    | Beschreibung                                                 |
@@ -439,9 +417,7 @@ If the *size* value is less than the current document size, the document content
 | v19 R7  | Added   |
 </details>
 
-<!--REF #FileHandleClass.writeBlob().Syntax -->
-
-**.writeBlob**( *blob* : 4D.Blob ) <!-- END REF -->
+<!--REF #FileHandleClass.writeBlob().Syntax -->**.writeBlob**( *blob* : 4D.Blob ) <!-- END REF -->
 
 <!--REF #FileHandleClass.writeBlob().Params -->
 | Parameter | Typ                  |    | Beschreibung                                         |
@@ -474,9 +450,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 | v19 R7  | Added   |
 </details>
 
-<!--REF #FileHandleClass.writeLine().Syntax -->
-
-**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
+<!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
 
 <!--REF #FileHandleClass.writeLine().Params -->
 | Parameter    | Typ  |    | Beschreibung                             |
@@ -508,9 +482,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 | v19 R7  | Added   |
 </details>
 
-<!--REF #FileHandleClass.writeText().Syntax -->
-
-**.writeText**( *textToWrite* : Text )<!-- END REF -->
+<!--REF #FileHandleClass.writeText().Syntax -->**.writeText**( *textToWrite* : Text )<!-- END REF -->
 
 <!--REF #FileHandleClass.writeText().Params -->
 | Parameter     | Typ  |    | Beschreibung                             |

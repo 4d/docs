@@ -9,7 +9,7 @@ The catalog describes all the dataclasses and attributes available in the datast
 
 ## Sintaxe
 
-| Sintaxe                                       | Exemplo              | Descrção                                                                         |
+| Sintaxe                                       | Exemplo              | Descrição                                                                        |
 | --------------------------------------------- | -------------------- | -------------------------------------------------------------------------------- |
 | [**$catalog**](#catalog)                      | `/$catalog`          | Returns a list of the dataclasses in your project along with two URIs            |
 | [**$catalog/$all**](#catalogall)              | `/$catalog/$all`     | Returns information about all of your project's dataclasses and their attributes |
@@ -20,7 +20,7 @@ The catalog describes all the dataclasses and attributes available in the datast
 Returns a list of the dataclasses in your project along with two URIs: one to access the information about its structure and one to retrieve the data in the dataclass
 
 
-### Descrção
+### Descrição
 
 When you call `$catalog`, a list of the dataclasses is returned along with two URIs for each dataclass in your project's datastore.
 
@@ -29,7 +29,7 @@ Only the exposed dataclasses are shown in this list for your project's datastore
 Here is a description of the properties returned for each dataclass in your project's datastore:
 
 
-| Propriedade | Tipo   | Descrção                                                                          |
+| Propriedade | Tipo   | Descrição                                                                         |
 | ----------- | ------ | --------------------------------------------------------------------------------- |
 | name        | String | Nome da dataclass.                                                                |
 | uri         | String | A URI allowing you to obtain information about the |dataclass and its attributes. |
@@ -64,7 +64,7 @@ Here is a description of the properties returned for each dataclass in your proj
 
 Returns information about all of your project's dataclasses and their attributes
 
-### Descrção
+### Descrição
 
 Chamando `$catalog/$all` pode reciber informação detalhada sobre os atributos de cada uma das classes de dados do modelo ativo de projeto.
 
@@ -185,7 +185,7 @@ Para saber mais sobre o que se devolve para cada classe de dados e seus atributo
 
 Returns information about a dataclass and its attributes
 
-### Descrção
+### Descrição
 
 Calling `$catalog/{dataClass}` for a specific dataclass will return the following information about the dataclass and the attributes it contains. Se quiser recuperar essa informação para todas as classes de dados do armazém de dados de seu projeto, use [`$catalog/$all`](#catalogall).
 
@@ -201,7 +201,7 @@ The information you retrieve concerns the following:
 The following properties are returned for an exposed dataclass:
 
 
-| Propriedade    | Tipo   | Descrção                                                                                                  |
+| Propriedade    | Tipo   | Descrição                                                                                                 |
 | -------------- | ------ | --------------------------------------------------------------------------------------------------------- |
 | name           | String | Nome da dataclass                                                                                         |
 | collectionName | String | Name of an entity selection on the dataclass                                                              |
@@ -214,7 +214,7 @@ The following properties are returned for an exposed dataclass:
 
 Here are the properties for each exposed attribute that are returned:
 
-| Propriedade | Tipo     | Descrção                                                                                                                                                             |
+| Propriedade | Tipo     | Descrição                                                                                                                                                            |
 | ----------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name        | String   | Attribute name.                                                                                                                                                      |
 | kind        | String   | Attribute type (storage or relatedEntity).                                                                                                                           |

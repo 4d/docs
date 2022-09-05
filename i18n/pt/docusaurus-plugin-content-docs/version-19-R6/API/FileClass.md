@@ -32,8 +32,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | [<!-- INCLUDE #document.getIcon().Syntax -->](#geticon)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getIcon().Summary -->|
 | [<!-- INCLUDE #document.getText().Syntax -->](#gettext)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.getText().Summary -->|
 | [<!-- INCLUDE #document.hidden.Syntax -->](#hidden)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.hidden.Summary -->|
-| [<!-- INCLUDE #document.isAlias.Syntax -->](#isalias)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isAlias.Summary -->
-|
+| [<!-- INCLUDE #document.isAlias.Syntax -->](#isalias)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isAlias.Summary -->|
 | [<!-- INCLUDE #document.isFile.Syntax -->](#isfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFile.Summary -->|
 | [<!-- INCLUDE #document.isFolder.Syntax -->](#isfolder)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isFolder.Summary -->|
 | [<!-- INCLUDE #document.isWritable.Syntax -->](#iswritable)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.isWritable.Summary -->|
@@ -61,12 +60,11 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 </details>
 
-<!-- REF #_command_.File.Syntax -->
+<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D. File<br/>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D. File<!-- END REF -->
 
-**File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D. File<br/>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D. File<!-- END REF -->
 
 <!-- REF #_command_.File.Params -->
-| Parameter    | Tipo     |    | Descrção                                        |
+| Parâmetros   | Tipo     |    | Descrição                                       |
 | ------------ | -------- |:--:| ----------------------------------------------- |
 | path         | Text     | -> | Rota do arquivo                                 |
 | fileConstant | Integer  | -> | 4D file constant                                |
@@ -76,7 +74,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 |
 
-#### Descrção
+#### Descrição
 
 The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. The command accepts two syntaxes:
 
@@ -138,7 +136,7 @@ If the command is called from a component, pass the optional *parameter to get t
 <!-- REF #4D.File.new().Syntax -->
 **4D. File.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D. File<br/>**4D. File.new** ( *fileConstant* : Integer { ; *\** } ) : 4D. File<!-- END REF -->
 
-#### Descrção
+#### Descrição
 
 The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. It is identical to the [`File`](#file) command (shortcut).
 
@@ -159,18 +157,16 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 <!--REF file.create().Note -->
 **Not available for ZIP archives**<!-- END REF -->
 
-<!--REF #FileClass.create().Syntax -->
-
-**.create()** : Boolean <!-- END REF -->
+<!--REF #FileClass.create().Syntax -->**.create()** : Boolean <!-- END REF -->
 
 <!--REF #FileClass.create().Params -->
-| Parameter  | Tipo     |    | Descrção                                                                              |
+| Parâmetros | Tipo     |    | Descrição                                                                             |
 | ---------- | -------- | -- | ------------------------------------------------------------------------------------- |
 | Resultados | Booleano | <- | True if the file was created successfully, false otherwise|<!-- END REF -->
 
 |
 
-#### Descrção
+#### Descrição
 
 The `.create()` function <!-- REF #FileClass.create().Summary -->creates a file on disk according to the properties of the `File` object<!-- END REF -->.
 
@@ -201,12 +197,10 @@ Creation of a preferences file in the database folder:
 | v17 R5 | Adicionado |
 </details>
 
-<!--REF #FileClass.createAlias().Syntax -->
-
-**.createAlias**( *destinationFolder* : 4D. Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D. File<!-- END REF -->
+<!--REF #FileClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D. Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D. File<!-- END REF -->
 
 <!--REF #FileClass.createAlias().Params -->
-| Parameter         | Tipo       |    | Descrção                                                    |
+| Parâmetros        | Tipo       |    | Descrição                                                   |
 | ----------------- | ---------- | -- | ----------------------------------------------------------- |
 | destinationFolder | 4D. Folder | -> | Destination folder for the alias or shortcut                |
 | aliasName         | Text       | -> | Name of the alias or shortcut                               |
@@ -215,7 +209,7 @@ Creation of a preferences file in the database folder:
 
 |
 
-#### Descrção
+#### Descrição
 
 The `.createAlias()` function <!-- REF #FileClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
@@ -258,18 +252,17 @@ You want to create an alias to a file in your database folder:
 | v17 R5 | Adicionado |
 </details>
 
-<!--REF #FileClass.delete().Syntax -->
+<!--REF #FileClass.delete().Syntax -->**.delete( )**<!-- END REF -->
 
-**.delete( )**<!-- END REF -->
 
 <!-- REF #FileClass.delete().Params -->
-| Parameter | Tipo |  | Descrção                                                   |
-| --------- | ---- |  | ---------------------------------------------------------- |
-|           |      |  | Does not require any parameters|<!-- END REF -->
+| Parâmetros | Tipo |  | Descrição                                                  |
+| ---------- | ---- |  | ---------------------------------------------------------- |
+|            |      |  | Does not require any parameters|<!-- END REF -->
 
 |
 
-#### Descrção
+#### Descrição
 
 The `.delete()` function <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->.
 
@@ -308,18 +301,16 @@ You want to delete a specific file in the database folder:
 | v19    | Adicionado |
 </details>
 
-<!--REF #FileClass.getAppInfo().Syntax -->
-
-**.getAppInfo**() : Object<!-- END REF -->
+<!--REF #FileClass.getAppInfo().Syntax -->**.getAppInfo**() : Object<!-- END REF -->
 
 <!--REF #FileClass.getAppInfo().Params -->
-| Parameter  | Tipo   |    | Descrção                                                                         |
+| Parâmetros | Tipo   |    | Descrição                                                                        |
 | ---------- | ------ | -- | -------------------------------------------------------------------------------- |
 | Resultados | Objeto | <- | Contents of .exe/.dll version resource or .plist file|<!-- END REF -->
 
 |
 
-#### Descrção
+#### Descrição
 
 The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe**, **.dll** or **.plist** file information as an object<!-- END REF -->.
 
@@ -402,12 +393,10 @@ ALERT($info.
 | v17 R5 | Adicionado |
 </details>
 
-<!--REF #FileClass.moveTo().Syntax -->
-
-**.moveTo**( *destinationFolder* : 4D. Folder { ; *newName* : Text } ) : 4D. File<!-- END REF -->
+<!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D. Folder { ; *newName* : Text } ) : 4D. File<!-- END REF -->
 
 <!--REF #FileClass.moveTo().Params -->
-| Parameter         | Tipo       |    | Descrção                              |
+| Parâmetros        | Tipo       |    | Descrição                             |
 | ----------------- | ---------- | -- | ------------------------------------- |
 | destinationFolder | 4D. Folder | -> | Pasta de destino                      |
 | newName           | Text       | -> | Full name for the moved file          |
@@ -415,7 +404,7 @@ ALERT($info.
 
 |
 
-#### Descrção
+#### Descrição
 
 The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
 
@@ -456,19 +445,17 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 | v17 R5 | Adicionado |
 </details>
 
-<!--REF #FileClass.rename().Syntax -->
-
-**.rename**( *newName* : Text ) : 4D. File<!-- END REF -->
+<!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D. File<!-- END REF -->
 
 <!--REF #FileClass.rename().Params -->
-| Parameter  | Tipo     |    | Descrção                                |
+| Parâmetros | Tipo     |    | Descrição                               |
 | ---------- | -------- | -- | --------------------------------------- |
 | newName    | Text     | -> | New full name for the file              |
 | Resultados | 4D. File | <- | Renamed file|<!-- END REF -->
 
 |
 
-#### Descrção
+#### Descrição
 
 The `.rename()` function <!-- REF #FileClass.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
 
@@ -500,18 +487,16 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 | v19    | Adicionado |
 </details>
 
-<!--REF #FileClass.setAppInfo().Syntax -->
-
-**.setAppInfo**( *info* : Object )<!-- END REF -->
+<!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
 
 <!--REF #FileClass.setAppInfo().Params -->
-| Parameter | Tipo   |    | Descrção                                                                                    |
-| --------- | ------ | -- | ------------------------------------------------------------------------------------------- |
-| info      | Objeto | -> | Properties to write in .exe/.dll version resource or .plist file|<!-- END REF -->
+| Parâmetros | Tipo   |    | Descrição                                                                                   |
+| ---------- | ------ | -- | ------------------------------------------------------------------------------------------- |
+| info       | Objeto | -> | Properties to write in .exe/.dll version resource or .plist file|<!-- END REF -->
 
 |
 
-#### Descrção
+#### Descrição
 
 The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
 
@@ -585,18 +570,16 @@ $infoPlistFile.setAppInfo($info)
 | v17 R5 | Adicionado |
 </details>
 
-<!--REF #FileClass.setContent().Syntax -->
-
-**.setContent** ( *content* : Blob ) <!-- END REF -->
+<!--REF #FileClass.setContent().Syntax -->**.setContent** ( *content* : Blob ) <!-- END REF -->
 
 <!--REF #FileClass.setContent().Params -->
-| Parameter | Tipo |    | Descrção                                             |
-| --------- | ---- | -- | ---------------------------------------------------- |
-| content   | BLOB | -> | New contents for the file|<!-- END REF -->
+| Parâmetros | Tipo |    | Descrição                                            |
+| ---------- | ---- | -- | ---------------------------------------------------- |
+| content    | BLOB | -> | New contents for the file|<!-- END REF -->
 
 |
 
-#### Descrção
+#### Descrição
 
 The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
 
@@ -620,12 +603,10 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 </details>
 
-<!--REF #FileClass.setText().Syntax -->
-
-**.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br/>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } ) <!-- END REF -->
+<!--REF #FileClass.setText().Syntax -->**.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br/>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } ) <!-- END REF -->
 
 <!--REF #FileClass.setText().Params -->
-| Parameter   | Tipo    |    | Descrção                                                               |
+| Parâmetros  | Tipo    |    | Descrição                                                              |
 | ----------- | ------- | -- | ---------------------------------------------------------------------- |
 | text        | Text    | -> | Text to store in the file                                              |
 | charSetName | Text    | -> | Nome do conjunto de caracteres                                         |
@@ -634,7 +615,7 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 |
 
-#### Descrção
+#### Descrição
 
 The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
 

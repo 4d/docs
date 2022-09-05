@@ -237,7 +237,7 @@ Some typical uses of recursion in 4D are:
 
 Além dos **métodos projeto**, 4D oferece vários tipos de métodos específicos, que são chamados automaticamente em função dos eventos:
 
-| Tipo                             | Calling context                                                                          | Accepts parameters | Descrção                                                                                                                                                             |
+| Tipo                             | Calling context                                                                          | Accepts parameters | Descrição                                                                                                                                                            |
 | -------------------------------- | ---------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Object (widget) method**       | Automatic, when an event involves the object to which the method is attached             | No                 | Property of a form object (also called widget)                                                                                                                       |
 | **Form method**                  | Automatic, when an event involves the form to which the method is attached               | No                 | Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. |

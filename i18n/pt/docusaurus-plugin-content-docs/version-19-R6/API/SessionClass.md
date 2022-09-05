@@ -30,17 +30,17 @@ Para obter informação detalhada sobre a implementação da sessão, consulte [
 
 </details>
 
-<!-- REF #_command_.Session.Syntax -->
 
-**Session** : 4D. Session<!-- END REF -->
+<!-- REF #_command_.Session.Syntax -->**Session** : 4D. Session<!-- END REF -->
+
 
 
 <!-- REF #_command_.Session.Params -->
-| Parameter  | Tipo        |    | Descrção                                  |
+| Parâmetros | Tipo        |    | Descrição                                 |
 | ---------- | ----------- |:--:| ----------------------------------------- |
 | Resultados | 4D. Session | <- | Session object|<!-- END REF --> |
 
-#### Descrção
+#### Descrição
 
 The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current scalable user web session<!-- END REF -->.
 
@@ -87,17 +87,17 @@ IP:port/4DACTION/action_Session
 
 </details>
 
-<!-- REF #SessionClass.clearPrivileges().Syntax -->
 
-**.clearPrivileges()**<!-- END REF -->
+<!-- REF #SessionClass.clearPrivileges().Syntax -->**.clearPrivileges()**<!-- END REF -->
+
 
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
-| Parameter | Tipo |  | Descrção                                                   |
-| --------- | ---- |::| ---------------------------------------------------------- |
-|           |      |  | Does not require any parameters|<!-- END REF --> |
+| Parâmetros | Tipo |  | Descrição                                                  |
+| ---------- | ---- |::| ---------------------------------------------------------- |
+|            |      |  | Does not require any parameters|<!-- END REF --> |
 
-#### Descrção
+#### Descrição
 
 The `.clearPrivileges()` function <!-- REF #SessionClass.clearPrivileges().Summary -->removes all the privileges associated to the session<!-- END REF -->. Summary -->devolve True se o privilegio estiver associado à sessão, ou então False em caso contrário<!-- END REF -->.
 
@@ -123,11 +123,10 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 </details>
 
-<!-- REF #SessionClass.expirationDate.Syntax -->
 
-**.expirationDate** : Text<!-- END REF -->
+<!-- REF #SessionClass.expirationDate.Syntax -->**.expirationDate** : Text<!-- END REF -->
 
-#### Descrção
+#### Descrição
 
 The `.expirationDate` property contains <!-- REF #SessionClass.expirationDate.Summary -->the expiration date and time of the session cookie<!-- END REF -->. O valor se expressa como texto no formato ISO 8601: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
 
@@ -154,18 +153,18 @@ $expiration:=Session.expirationDate //por exemplo "2021-11-05T17:10:42Z"
 
 </details>
 
-<!-- REF #SessionClass.hasPrivilege().Syntax -->
 
-**.hasPrivilege**( *privilege* : Text ) : Boolean<!-- END REF -->
+<!-- REF #SessionClass.hasPrivilege().Syntax -->**.hasPrivilege**( *privilege* : Text ) : Boolean<!-- END REF -->
+
 
 
 <!-- REF #SessionClass.hasPrivilege().Params -->
-| Parameter  | Tipo     |    | Descrção                                                                            |
+| Parâmetros | Tipo     |    | Descrição                                                                           |
 | ---------- | -------- |:--:| ----------------------------------------------------------------------------------- |
 | privilege  | Text     | <- | Nome do privilegio a verificar                                                      |
 | Resultados | Booleano | <- | True se a sessão tiver *privilege*, False caso contrário|<!-- END REF --> |
 
-#### Descrção
+#### Descrição
 
 The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the privilege is associated to the session, and False otherwise<!-- END REF -->.
 
@@ -193,11 +192,10 @@ If (Session.hasPrivilege("WebAdmin"))
 
 </details>
 
-<!-- REF #SessionClass.idleTimeout.Syntax -->
 
-**.idleTimeout** : Integer<!-- END REF -->
+<!-- REF #SessionClass.idleTimeout.Syntax -->**.idleTimeout** : Integer<!-- END REF -->
 
-#### Descrção
+#### Descrição
 
 The `.idleTimeout` property contains <!-- REF #SessionClass.idleTimeout.Summary -->the inactivity session timeout (in minutes), after which the session is automatically closed by 4D<!-- END REF -->.
 
@@ -234,17 +232,17 @@ If (Session.isGuest())
 
 </details>
 
-<!-- REF #SessionClass.isGuest().Syntax -->
 
-**.isGuest()** : Boolean<!-- END REF -->
+<!-- REF #SessionClass.isGuest().Syntax -->**.isGuest()** : Boolean<!-- END REF -->
+
 
 
 <!-- REF #SessionClass.isGuest().Params -->
-| Parameter  | Tipo     |    | Descrção                                                                               |
+| Parâmetros | Tipo     |    | Descrição                                                                              |
 | ---------- | -------- |:--:| -------------------------------------------------------------------------------------- |
 | Resultados | Booleano | <- | True se a sessão for uma sessão Guest, False caso contrário|<!-- END REF --> |
 
-#### Descrção
+#### Descrição
 
 The `.isGuest()` function <!-- REF #SessionClass.isGuest().Summary -->returns True if the session is a Guest session (i.e. it has no privileges)<!-- END REF -->.
 
@@ -271,19 +269,19 @@ If (Session.isGuest())
 
 </details>
 
-<!-- REF #SessionClass.setPrivileges().Syntax -->
 
-**.setPrivileges**( *privilege* : Text )<br/>**.setPrivileges**( *privileges* : Collection )<br/>**.setPrivileges**( *settings* : Object )<!-- END REF -->
+<!-- REF #SessionClass.setPrivileges().Syntax -->**.setPrivileges**( *privilege* : Text )<br/>**.setPrivileges**( *privileges* : Collection )<br/>**.setPrivileges**( *settings* : Object )<!-- END REF -->
+
 
 
 <!-- REF #SessionClass.setPrivileges().Params -->
-| Parameter  | Tipo       |    | Descrção                                                                                    |
+| Parâmetros | Tipo       |    | Descrição                                                                                   |
 | ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------- |
 | privilege  | Text       | -> | Nome do privilégio                                                                          |
 | privileges | Collection | -> | Collection de nomes de privilégios                                                          |
 | settings   | Objeto     | -> | Objetos com as propriedades "privilégios" (string ou collection)|<!-- END REF --> |
 
-#### Descrção
+#### Descrição
 
 The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) defined in the parameter to the session<!-- END REF -->.
 
@@ -293,7 +291,7 @@ The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -
 
 - No parâmetro *settings*, passe um objeto contendo as propriedades abaixo:
 
-| Propriedade | Tipo               | Descrção                                           |
+| Propriedade | Tipo               | Descrição                                          |
 | ----------- | ------------------ | -------------------------------------------------- |
 | privileges  | Text ou Collection | <li>Strings contendo um nome de privilégio ou</li><li>Collection de strings contendo nomes de privilégios</li> |
 | userName    | Text               | Nome de usuário associado à sessão (opcional)      |
@@ -336,11 +334,10 @@ End if
 
 </details>
 
-<!-- REF #SessionClass.storage.Syntax -->
 
-**.storage** : Object<!-- END REF -->
+<!-- REF #SessionClass.storage.Syntax -->**.storage** : Object<!-- END REF -->
 
-#### Descrção
+#### Descrição
 
 The `.storage` property contains <!-- REF #SessionClass.storage.Summary -->a shared object that can be used to store information available to all requests of the web client<!-- END REF -->.
 
@@ -377,11 +374,10 @@ End if
 
 </details>
 
-<!-- REF #SessionClass.userName.Syntax -->
 
-**.userName** : Text<!-- END REF -->
+<!-- REF #SessionClass.userName.Syntax -->**.userName** : Text<!-- END REF -->
 
-#### Descrção
+#### Descrição
 
 The `.userName` property contains <!-- REF #SessionClass.userName.Summary -->the user name associated to the session<!-- END REF -->. Pode usá-la para identificar o usuário dentro de seu código.
 

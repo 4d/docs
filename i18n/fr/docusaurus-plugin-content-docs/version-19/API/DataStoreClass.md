@@ -36,9 +36,8 @@ Un [Datastore](ORDA/dsMapping.md#datastore) correspond à l'objet d'interface fo
 
 </details>
 
-<!-- REF #_command_.ds.Syntax -->
+<!-- REF #_command_.ds.Syntax -->**ds** { ( *localID* : Text ) } : cs.DataStore <!-- END REF -->
 
-**ds** { ( *localID* : Text ) } : cs.DataStore <!-- END REF -->
 
 <!-- REF #_command_.ds.Params -->
 | Paramètres | Type         |    | Description                                                |
@@ -108,9 +107,8 @@ Utilisation du datastore principal de la base 4D :
 
 </details>
 
-<!-- REF #_command_.Open datastore.Syntax -->
+<!-- REF #_command_.Open datastore.Syntax -->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore <!-- END REF -->
 
-**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore <!-- END REF -->
 
 <!-- REF #_command_.Open datastore.Params -->
 | Paramètres     | Type         |    | Description                                                                       |
@@ -215,9 +213,7 @@ En cas d'erreur, la commande retourne **Null**. Si le datastore distant ne peut 
 
 </details>
 
-<!-- REF DataStoreClass.dataclassName.Syntax -->
-
-***.dataclassName*** : 4D.DataClass<!-- END REF -->
+<!-- REF DataStoreClass.dataclassName.Syntax -->***.dataclassName*** : 4D.DataClass<!-- END REF -->
 
 #### Description
 
@@ -249,9 +245,8 @@ Chaque dataclass d'un datastore est disponible en tant que propriété de l'obje
 
 </details>
 
-<!-- REF #DataStoreClass.cancelTransaction().Syntax -->
+<!-- REF #DataStoreClass.cancelTransaction().Syntax -->**.cancelTransaction()**<!-- END REF -->
 
-**.cancelTransaction()**<!-- END REF -->
 
 <!-- REF #DataStoreClass.cancelTransaction().Params -->
 | Paramètres | Type |  | Description                                            |
@@ -285,9 +280,8 @@ Voir l'exemple de la fonction [`.startTransaction()`](#starttransaction).
 
 </details>
 
-<!-- REF #DataStoreClass.encryptionStatus().Syntax -->
+<!-- REF #DataStoreClass.encryptionStatus().Syntax -->**.encryptionStatus()**: Object<!-- END REF -->
 
-**.encryptionStatus()**: Object<!-- END REF -->
 
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 | Paramètres | Type   |    | Description                                                                                        |
@@ -361,9 +355,8 @@ Vous souhaitez connaitre le nombre de tables chiffrées dans le fichier de donn�
 
 </details>
 
-<!-- REF #DataStoreClass.getInfo().Syntax -->
+<!-- REF #DataStoreClass.getInfo().Syntax -->**.getInfo()**: Object<!-- END REF -->
 
-**.getInfo()**: Object<!-- END REF -->
 
 <!-- REF #DataStoreClass.getInfo().Params -->
 | Paramètres | Type   |    | Description                                     |
@@ -431,9 +424,8 @@ Sur un datastore distant :
 
 </details>
 
-<!-- REF #DataStoreClass.getRequestLog().Syntax -->
+<!-- REF #DataStoreClass.getRequestLog().Syntax -->**.getRequestLog()** : Collection<!-- END REF -->
 
-**.getRequestLog()** : Collection<!-- END REF -->
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
 | Paramètres | Type        |    | Description                                                                             |
@@ -471,9 +463,8 @@ Voir l'exemple 2 de [`.startRequestLog()`](#startrequestlog).
 
 </details>
 
-<!-- REF #DataStoreClass.isAdminProtected().Syntax -->
+<!-- REF #DataStoreClass.isAdminProtected().Syntax -->**.isAdminProtected()** : Boolean<!-- END REF -->
 
-**.isAdminProtected()** : Boolean<!-- END REF -->
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
 | Paramètres | Type    |    | Description                                                                                              |
@@ -505,9 +496,8 @@ Par défaut, l'accès au Data Explorer est autorisé pour les sessions `webAdmin
 
 </details>
 
-<!-- REF #DataStoreClass.makeSelectionsAlterable().Syntax -->
+<!-- REF #DataStoreClass.makeSelectionsAlterable().Syntax -->**.makeSelectionsAlterable()**<!-- END REF -->
 
-**.makeSelectionsAlterable()**<!-- END REF -->
 
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Params -->
 | Paramètres | Type |  | Description                                            |
@@ -539,9 +529,8 @@ Lorsque cette méthode n'est pas appelée, les nouvelles sélections d'entités 
 
 </details>
 
-<!-- REF #DataStoreClass.provideDataKey().Syntax -->
+<!-- REF #DataStoreClass.provideDataKey().Syntax -->**.provideDataKey**( *curPassPhrase* : Text ) : Object <br/>**.provideDataKey**( *curDataKey* : Object ) : Object <!-- END REF -->
 
-**.provideDataKey**( *curPassPhrase* : Text ) : Object <br/>**.provideDataKey**( *curDataKey* : Object ) : Object <!-- END REF -->
 
 <!-- REF #DataStoreClass.provideDataKey().Params -->
 | Paramètres    | Type   |    | Description                                                                               |
@@ -617,6 +606,7 @@ Si aucun paramètre *curPassphrase* ou *curDataKey* n'est fourni, `.provideDataK
 <!-- REF #DataStoreClass.setAdminProtection().Syntax -->
 **.setAdminProtection**( *status* : Boolean )<!-- END REF -->
 
+
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 | Paramètres | Type    |    | Description                                                                                                                           |
 | ---------- | ------- | -- | ------------------------------------------------------------------------------------------------------------------------------------- |
@@ -657,9 +647,8 @@ Vous créez une méthode projet *protectDataFile* à appeler par exemple avant l
 
 </details>
 
-<!-- REF #DataStoreClass.startRequestLog().Syntax -->
+<!-- REF #DataStoreClass.startRequestLog().Syntax -->**.startRequestLog**()<br/>**.startRequestLog**( *file* : 4D.File )<br/>**.startRequestLog**( *reqNum* : Integer )<!-- END REF -->
 
-**.startRequestLog**()<br/>**.startRequestLog**( *file* : 4D.File )<br/>**.startRequestLog**( *reqNum* : Integer )<!-- END REF -->
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
 | Paramètres | Type    |    | Description                                                     |
@@ -734,9 +723,8 @@ Vous souhaitez enregistrer des requêtes ORDA clientes dans la mémoire :
 
 </details>
 
-<!-- REF #DataStoreClass.startTransaction().Syntax -->
+<!-- REF #DataStoreClass.startTransaction().Syntax -->**.startTransaction()**<!-- END REF -->
 
-**.startTransaction()**<!-- END REF -->
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
 | Paramètres | Type |  | Description                                            |
@@ -798,9 +786,8 @@ Vous pouvez imbriquer plusieurs transactions (sous-transactions). Chaque transac
 
 </details>
 
-<!-- REF #DataStoreClass.stopRequestLog().Syntax -->
+<!-- REF #DataStoreClass.stopRequestLog().Syntax -->**.stopRequestLog()**  <!-- END REF -->
 
-**.stopRequestLog()**  <!-- END REF -->
 
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
 | Paramètres | Type |  | Description                                            |
@@ -832,9 +819,8 @@ Voir les exemples de [`.startRequestLog()`](#startrequestlog).
 
 </details>
 
-<!-- REF #DataStoreClass.validateTransaction().Syntax -->
+<!-- REF #DataStoreClass.validateTransaction().Syntax -->**.validateTransaction()**  <!-- END REF -->
 
-**.validateTransaction()**  <!-- END REF -->
 
 <!-- REF #DataStoreClass.validateTransaction().Params -->
 | Paramètres | Type |  | Description                                            |

@@ -66,9 +66,9 @@ Collectionクラスは [コレクション](Concepts/dt_collection.md) 型の変
 
 ## `新しいコレクション`
 
-<!-- REF #_command_.New collection.Syntax -->
 
-**New collection** {( *...value* : any )} : Collection<!-- END REF -->
+<!-- REF #_command_.New collection.Syntax -->**New collection** {( *...value* : any )} : Collection<!-- END REF -->
+
 
 
 <!-- REF #_command_.New collection.Params -->
@@ -147,9 +147,9 @@ The `New collection` command <!-- REF #_command_.New collection.Summary --> crea
 
 </details>
 
-<!-- REF #_command_.New shared collection.Syntax -->
 
-**New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
+<!-- REF #_command_.New shared collection.Syntax -->**New shared collection** {( *...value* : any )} : Collection<!-- END REF -->
+
 
 
 <!-- REF #_command_.New shared collection.Params -->
@@ -209,9 +209,9 @@ The `New shared collection` command <!-- REF #_command_.New shared collection.Su
 
 </details>
 
-<!-- REF #collection.average().Syntax -->
 
-**.average**( {*propertyPath* : Text } ) : Real<!-- END REF -->
+<!-- REF #collection.average().Syntax -->**.average**( {*propertyPath* : Text } ) : Real<!-- END REF -->
+
 
 
 <!-- REF #collection.average().Params -->
@@ -267,9 +267,9 @@ The `.average()` function <!-- REF #collection.average().Summary -->returns the 
 
 </details>
 
-<!-- REF #collection.clear().Syntax -->
 
-**.clear()** : Collection<!-- END REF -->
+<!-- REF #collection.clear().Syntax -->**.clear()** : Collection<!-- END REF -->
+
 
 
 <!-- REF #collection.clear().Params -->
@@ -305,9 +305,9 @@ $vSize:=$col.length //$vSize=0
 
 </details>
 
-<!-- REF #collection.combine().Syntax -->
 
-**.combine**( *col2* : Collection {; *index* : Integer } ) : Collection<!-- END REF -->
+<!-- REF #collection.combine().Syntax -->**.combine**( *col2* : Collection {; *index* : Integer } ) : Collection<!-- END REF -->
+
 
 
 <!-- REF #collection.combine().Params -->
@@ -352,9 +352,9 @@ $c.combine($fruits;3) //[1,2,3,"Orange","Banana","Apple","Grape",4,5,6]
 
 </details>
 
-<!-- REF #collection.concat().Syntax -->
 
-**.concat**( *value* : any { *;...valueN* } ) : Collection<!-- END REF -->
+<!-- REF #collection.concat().Syntax -->**.concat**( *value* : any { *;...valueN* } ) : Collection<!-- END REF -->
+
 
 
 <!-- REF #collection.concat().Params -->
@@ -396,9 +396,9 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 </details>
 
-<!-- REF #collection.copy().Syntax -->
 
-**.copy**() : Collection<br/>**.copy**( *option* : Integer ) : Collection<br/>**.copy**( *option* : Integer ; *groupWithCol* : Collection ) : Collection<br/>**.copy**( *option* : Integer ; *groupWithObj* : Object ) : Collection<!-- END REF -->
+<!-- REF #collection.copy().Syntax -->**.copy**() : Collection<br/>**.copy**( *option* : Integer ) : Collection<br/>**.copy**( *option* : Integer ; *groupWithCol* : Collection ) : Collection<br/>**.copy**( *option* : Integer ; *groupWithObj* : Object ) : Collection<!-- END REF -->
+
 
 
 <!-- REF #collection.copy().Params -->
@@ -516,9 +516,9 @@ End use
 
 </details>
 
-<!-- REF #collection.count().Syntax -->
 
-**.count**( { *propertyPath* : Text } ) : Real<!-- END REF -->
+<!-- REF #collection.count().Syntax -->**.count**( { *propertyPath* : Text } ) : Real<!-- END REF -->
+
 
 
 <!-- REF #collection.count().Params -->
@@ -562,9 +562,9 @@ The `.count()` function <!-- REF #collection.count().Summary -->returns the numb
 
 </details>
 
-<!-- REF #collection.countValues().Syntax -->
 
-**.countValues**( *value* : any {; *propertyPath* : Text } ) : Real<!-- END REF -->
+<!-- REF #collection.countValues().Syntax -->**.countValues**( *value* : any {; *propertyPath* : Text } ) : Real<!-- END REF -->
+
 
 
 <!-- REF #collection.countValues().Params -->
@@ -637,9 +637,9 @@ The `.countValues()` function <!-- REF #collection.countValues().Summary -->retu
 
 </details>
 
-<!-- REF #collection.distinct().Syntax -->
 
-**.distinct**( {*option* : Integer} ) : Collection<br/>**.distinct**( *propertyPath* : Text {; *option* : Integer } ) : Collection<!-- END REF -->
+<!-- REF #collection.distinct().Syntax -->**.distinct**( {*option* : Integer} ) : Collection<br/>**.distinct**( *propertyPath* : Text {; *option* : Integer } ) : Collection<!-- END REF -->
+
 
 
 <!-- REF #collection.distinct().Params -->
@@ -688,9 +688,9 @@ The `.distinct()` function <!-- REF #collection.distinct().Summary -->returns a 
 
 </details>
 
-<!-- REF #collection.equal().Syntax -->
 
-**.equal**( *collection2* : Collection {; *option* : Integer } ) : Boolean<!-- END REF -->
+<!-- REF #collection.equal().Syntax -->**.equal**( *collection2* : Collection {; *option* : Integer } ) : Boolean<!-- END REF -->
+
 
 
 <!-- REF #collection.equal().Params -->
@@ -745,9 +745,9 @@ The `.equal()` function <!-- REF #collection.equal().Summary -->compares the col
 
 </details>
 
-<!-- REF #collection.every().Syntax -->
 
-**.every**( { *startFrom* : Integer ; } *formula* : 4D.Function { ;*...param* : any } ) : Boolean<br/>**.every**( { *startFrom* : Integer ; } *methodName* : Text { ;*...param* : any } ) : Boolean<!-- END REF -->
+<!-- REF #collection.every().Syntax -->**.every**( { *startFrom* : Integer ; } *formula* : 4D.Function { ;*...param* : any } ) : Boolean<br/>**.every**( { *startFrom* : Integer ; } *methodName* : Text { ;*...param* : any } ) : Boolean<!-- END REF -->
+
 
 
 <!-- REF #collection.every().Params -->
@@ -836,9 +836,9 @@ $b:=$c.every($f;Is real) //$b=false
 
 </details>
 
-<!-- REF #collection.extract().Syntax -->
 
-**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathN* : Text ;... *targetPathN* : Text } ) : Collection<!-- END REF -->
+<!-- REF #collection.extract().Syntax -->**.extract**( *propertyPath* : Text { ; *option* : Integer } ) : Collection<br/>**.extract**( *propertyPath* : Text ;  *targetPath* : Text  { ;...*propertyPathN* : Text ;... *targetPathN* : Text } ) : Collection<!-- END REF -->
+
 
 
 <!-- REF #collection.extract().Params -->
@@ -905,9 +905,9 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 </details>
 
-<!-- REF #collection.fill().Syntax -->
 
-**.fill**( *value* : any ) : Collection<br/>**.fill**( *value* : any ;  *startFrom*  : Integer { ; *end* : Integer } ) : Collection<!-- END REF -->
+<!-- REF #collection.fill().Syntax -->**.fill**( *value* : any ) : Collection<br/>**.fill**( *value* : any ;  *startFrom*  : Integer { ; *end* : Integer } ) : Collection<!-- END REF -->
+
 
 
 <!-- REF #collection.fill().Params -->
@@ -959,9 +959,9 @@ The `.fill()` function <!-- REF #collection.fill().Summary -->fills the collecti
 
 </details>
 
-<!-- REF #collection.filter().Syntax -->
 
-**.filter**( *formula* : 4D.Function { ; *...param* : any } ) : Collection<br/>**.filter**( *methodName* : Text { ; *...param* : any } ) : Collection<!-- END REF -->
+<!-- REF #collection.filter().Syntax -->**.filter**( *formula* : 4D.Function { ; *...param* : any } ) : Collection<br/>**.filter**( *methodName* : Text { ; *...param* : any } ) : Collection<!-- END REF -->
+
 
 
 <!-- REF #collection.filter().Params -->
@@ -1038,9 +1038,9 @@ $colNew:=$col.filter(Formula((Value type($1.value)=Is text) && (Length($1.value)
 
 </details>
 
-<!-- REF #collection.find().Syntax -->
 
-**.find**( { *startFrom* : Integer ; }  *formula* : 4D.Function { ; *...param* : any } ) : any<br/>**.find**( { *startFrom* : Integer ; }  *methodName* : Text { ; *...param* : any } ) : any<!-- END REF -->
+<!-- REF #collection.find().Syntax -->**.find**( { *startFrom* : Integer ; }  *formula* : 4D.Function { ; *...param* : any } ) : any<br/>**.find**( { *startFrom* : Integer ; }  *methodName* : Text { ; *...param* : any } ) : any<!-- END REF -->
+
 
 
 <!-- REF #collection.find().Params -->
@@ -1124,9 +1124,9 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 
 </details>
 
-<!-- REF #collection.findIndex().Syntax -->
 
-**.findIndex**( { *startFrom* : Integer ; }  *formula* : 4D.Function { ; *...param* : any } ) : Integer<br/>**.findIndex**( { *startFrom* : Integer ; }  *methodName* : Text { ; *...param* : any } ) : Integer<!-- END REF -->
+<!-- REF #collection.findIndex().Syntax -->**.findIndex**( { *startFrom* : Integer ; }  *formula* : 4D.Function { ; *...param* : any } ) : Integer<br/>**.findIndex**( { *startFrom* : Integer ; }  *methodName* : Text { ; *...param* : any } ) : Integer<!-- END REF -->
+
 
 
 <!-- REF #collection.findIndex().Params -->
@@ -1198,9 +1198,9 @@ $val3:=$c.findIndex($val2+1;Formula($1.value.name=$2);"Clanton") //$val3=4
 
 </details>
 
-<!-- REF #collection.indexOf().Syntax -->
 
-**.indexOf**(  *toSearch* : expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
+<!-- REF #collection.indexOf().Syntax -->**.indexOf**(  *toSearch* : expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
+
 
 
 <!-- REF #collection.indexOf().Params -->
@@ -1255,9 +1255,9 @@ The `.indexOf()` function <!-- REF #collection.indexOf().Summary -->searches the
 
 </details>
 
-<!-- REF #collection.indices().Syntax -->
 
-**.indices**(  *queryString* : Text { ; *...value* : any } ) : Collection <!-- END REF -->
+<!-- REF #collection.indices().Syntax -->**.indices**(  *queryString* : Text { ; *...value* : any } ) : Collection <!-- END REF -->
+
 
 
 <!-- REF #collection.indices().Params -->
@@ -1309,9 +1309,9 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 </details>
 
-<!-- REF #collection.insert().Syntax -->
 
-**.insert**( *index* : Integer ; *element* : any ) : Collection <!-- END REF -->
+<!-- REF #collection.insert().Syntax -->**.insert**( *index* : Integer ; *element* : any ) : Collection <!-- END REF -->
+
 
 
 <!-- REF #collection.insert().Params -->
@@ -1359,9 +1359,9 @@ The `.insert()` function <!-- REF #collection.insert().Summary --> inserts *elem
 
 </details>
 
-<!-- REF #collection.join().Syntax -->
 
-**.join**( *delimiter* : Text { ; *option* : Integer } ) : Text <!-- END REF -->
+<!-- REF #collection.join().Syntax -->**.join**( *delimiter* : Text { ; *option* : Integer } ) : Text <!-- END REF -->
+
 
 
 <!-- REF #collection.join().Params -->
@@ -1402,9 +1402,9 @@ The `.join()` function <!-- REF #collection.join().Summary -->converts all eleme
 
 </details>
 
-<!-- REF #collection.lastIndexOf().Syntax -->
 
-**.lastIndexOf**( *toSearch* : expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
+<!-- REF #collection.lastIndexOf().Syntax -->**.lastIndexOf**( *toSearch* : expression { ; *startFrom* : Integer } ) : Integer <!-- END REF -->
+
 
 
 <!-- REF #collection.lastIndexOf().Params -->
@@ -1460,10 +1460,8 @@ The `.lastIndexOf()` function <!-- REF #collection.lastIndexOf().Summary -->sear
 
 </details>
 
-<!-- REF #collection.length.Syntax -->
 
-**.length** : Integer
-<!-- END REF -->
+<!-- REF #collection.length.Syntax -->**.length** : Integer<!-- END REF -->
 
 #### 詳細
 
@@ -1495,9 +1493,9 @@ The `.length` property <!-- REF #collection.length.Summary -->returns the number
 
 </details>
 
-<!-- REF #collection.map().Syntax -->
 
-**.map**( *formula* : 4D.Function { ; *...param* : any } ) : Collection<br/>**.map**( *methodName* : Text { ; *...param* : any } ) : Collection <!-- END REF -->
+<!-- REF #collection.map().Syntax -->**.map**( *formula* : 4D.Function { ; *...param* : any } ) : Collection<br/>**.map**( *methodName* : Text { ; *...param* : any } ) : Collection <!-- END REF -->
+
 
 
 <!-- REF #collection.map().Params -->
@@ -1554,9 +1552,9 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 </details>
 
-<!-- REF #collection.max().Syntax -->
 
-**.max**( { *propertyPath* : Text } ) : any <!-- END REF -->
+<!-- REF #collection.max().Syntax -->**.max**( { *propertyPath* : Text } ) : any <!-- END REF -->
+
 
 
 <!-- REF #collection.max().Params -->
@@ -1603,9 +1601,9 @@ The `.max()` function <!-- REF #collection.max().Summary -->returns the element 
 
 </details>
 
-<!-- REF #collection.min().Syntax -->
 
-**.min**( { *propertyPath* : Text } ) : any <!-- END REF -->
+<!-- REF #collection.min().Syntax -->**.min**( { *propertyPath* : Text } ) : any <!-- END REF -->
+
 
 
 <!-- REF #collection.min().Params -->
@@ -1652,9 +1650,9 @@ The `.min()` function <!-- REF #collection.min().Summary -->returns the element 
 
 </details>
 
-<!-- REF #collection.orderBy().Syntax -->
 
-**.orderBy**( ) : Collection<br/>**.orderBy**( *pathStrings* : Text ) : Collection<br/>**.orderBy**( *pathObjects* : Collection ) : Collection<br/>**.orderBy**( *ascOrDesc* : Integer ) : Collection <!-- END REF -->
+<!-- REF #collection.orderBy().Syntax -->**.orderBy**( ) : Collection<br/>**.orderBy**( *pathStrings* : Text ) : Collection<br/>**.orderBy**( *pathObjects* : Collection ) : Collection<br/>**.orderBy**( *ascOrDesc* : Integer ) : Collection <!-- END REF -->
+
 
 
 <!-- REF #collection.orderBy().Params -->
@@ -1788,9 +1786,9 @@ The `.orderBy()` function <!-- REF #collection.orderBy().Summary -->returns a ne
 
 </details>
 
-<!-- REF #collection.orderByMethod().Syntax -->
 
-**.orderByMethod**( *formula* : 4D.Function { ; ...*extraParam* : expression } ) : Collection<br/>**.orderByMethod**( *methodName* : Text { ; ...*extraParam* : expression } ) : Collection<!-- END REF -->
+<!-- REF #collection.orderByMethod().Syntax -->**.orderByMethod**( *formula* : 4D.Function { ; ...*extraParam* : expression } ) : Collection<br/>**.orderByMethod**( *methodName* : Text { ; ...*extraParam* : expression } ) : Collection<!-- END REF -->
+
 
 
 <!-- REF #collection.orderByMethod().Params -->
@@ -1888,9 +1886,9 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 </details>
 
-<!-- REF #collection.pop().Syntax -->
 
-**.pop()** : any <!-- END REF -->
+<!-- REF #collection.pop().Syntax -->**.pop()** : any <!-- END REF -->
+
 
 
 <!-- REF #collection.pop().Params -->
@@ -1933,9 +1931,9 @@ The `.pop()` function <!-- REF #collection.pop().Summary -->removes the last ele
 
 </details>
 
-<!-- REF #collection.push().Syntax -->
 
-**.push**( *element* : any { ;...*elementN* } ) : Collection <!-- END REF -->
+<!-- REF #collection.push().Syntax -->**.push**( *element* : any { ;...*elementN* } ) : Collection <!-- END REF -->
+
 
 
 <!-- REF #collection.push().Params -->
@@ -1986,9 +1984,9 @@ The `.push()` function <!-- REF #collection.push().Summary -->appends one or mor
 
 </details>
 
-<!-- REF #collection.query().Syntax -->
 
-**.query**( *queryString* : Text ; *...value* : any ) : Collection<br/>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection <!-- END REF -->
+<!-- REF #collection.query().Syntax -->**.query**( *queryString* : Text ; *...value* : any ) : Collection<br/>**.query**( *queryString* : Text ; *querySettings* : Object ) : Collection <!-- END REF -->
+
 
 
 <!-- REF #collection.query().Params -->
@@ -2088,9 +2086,9 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 </details>
 
-<!-- REF #collection.reduce().Syntax -->
 
-**.reduce**( *formula* : 4D.Function { ; *initValue* : any { ; *...param* : expression }} ) : any<br/>**.reduce**( *methodName* : Text { ; *initValue* : any { ; *...param* : expression }} ) : any <!-- END REF -->
+<!-- REF #collection.reduce().Syntax -->**.reduce**( *formula* : 4D.Function { ; *initValue* : any { ; *...param* : expression }} ) : any<br/>**.reduce**( *methodName* : Text { ; *initValue* : any { ; *...param* : expression }} ) : any <!-- END REF -->
+
 
 
 <!-- REF #collection.reduce().Params -->
@@ -2172,9 +2170,9 @@ $r:=$c.reduce(Formula($1.accumulator:=$1.accumulator*$1.value); 1)  // 戻り値
 
 </details>
 
-<!-- REF #collection.remove().Syntax -->
 
-**.remove**( *index* : Integer { ; *howMany* : Integer } ) : Collection <!-- END REF -->
+<!-- REF #collection.remove().Syntax -->**.remove**( *index* : Integer { ; *howMany* : Integer } ) : Collection <!-- END REF -->
+
 
 
 <!-- REF #collection.remove().Params -->
@@ -2225,9 +2223,9 @@ The `.remove()` function <!-- REF #collection.remove().Summary -->removes one or
 
 </details>
 
-<!-- REF #collection.resize().Syntax -->
 
-**.resize**( *size* : Integer { ; *defaultValue* : any } ) : Collection <!-- END REF -->
+<!-- REF #collection.resize().Syntax -->**.resize**( *size* : Integer { ; *defaultValue* : any } ) : Collection <!-- END REF -->
+
 
 
 <!-- REF #collection.resize().Params -->
@@ -2279,9 +2277,9 @@ The `.resize()` function <!-- REF #collection.resize().Summary -->sets the colle
 
 </details>
 
-<!-- REF #collection.reverse().Syntax -->
 
-**.reverse( )** : Collection <!-- END REF -->
+<!-- REF #collection.reverse().Syntax -->**.reverse( )** : Collection <!-- END REF -->
+
 
 
 <!-- REF #collection.reverse().Params -->
@@ -2316,9 +2314,9 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 
 </details>
 
-<!-- REF #collection.shift().Syntax -->
 
-**.shift()** : any<!-- END REF -->
+<!-- REF #collection.shift().Syntax -->**.shift()** : any<!-- END REF -->
+
 
 
 <!-- REF #collection.shift().Params -->
@@ -2358,9 +2356,9 @@ The `.shift()` function <!-- REF #collection.shift().Summary -->removes the firs
 
 </details>
 
-<!-- REF #collection.slice().Syntax -->
 
-**.slice**( *startFrom* : Integer { ; *end* : Integer } ) : Collection<!-- END REF -->
+<!-- REF #collection.slice().Syntax -->**.slice**( *startFrom* : Integer { ; *end* : Integer } ) : Collection<!-- END REF -->
+
 
 
 <!-- REF #collection.slice().Params -->
@@ -2408,9 +2406,9 @@ The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portio
 
 </details>
 
-<!-- REF #collection.some().Syntax -->
 
-**.some**( { *startFrom* : Integer ; } *formula* : 4D.Function { ; *...param* : any } ) : Boolean<br/>**.some**( { *startFrom* : Integer ; } *methodName* : Text { ; *...param* : any } ) : Boolean<!-- END REF -->
+<!-- REF #collection.some().Syntax -->**.some**( { *startFrom* : Integer ; } *formula* : 4D.Function { ; *...param* : any } ) : Boolean<br/>**.some**( { *startFrom* : Integer ; } *methodName* : Text { ; *...param* : any } ) : Boolean<!-- END REF -->
+
 
 
 <!-- REF #collection.some().Params -->
@@ -2486,9 +2484,9 @@ The `.some()` function <!-- REF #collection.some().Summary -->returns true if at
 
 </details>
 
-<!-- REF #collection.sort().Syntax -->
 
-**.sort**( *formula* : 4D.Function { ; *...extraParam* : any } ) : Collection<br/>**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
+<!-- REF #collection.sort().Syntax -->**.sort**( *formula* : 4D.Function { ; *...extraParam* : any } ) : Collection<br/>**.sort**( *methodName* : Text { ; *...extraParam* : any } ) : Collection <!-- END REF -->
+
 
 
 <!-- REF #collection.sort().Params -->
@@ -2569,9 +2567,9 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) // アルファベ
 
 </details>
 
-<!-- REF #collection.sum().Syntax -->
 
-**.sum**( { *propertyPath* : Text } ) : Real<!-- END REF -->
+<!-- REF #collection.sum().Syntax -->**.sum**( { *propertyPath* : Text } ) : Real<!-- END REF -->
+
 
 
 <!-- REF #collection.sum().Params -->
@@ -2629,9 +2627,9 @@ The `.sum()` function <!-- REF #collection.sum().Summary -->returns the sum for 
 
 </details>
 
-<!-- REF #collection.unshift().Syntax -->
 
-**.unshift**( *value* : any { ;...*valueN* : any } ) : Collection<!-- END REF -->
+<!-- REF #collection.unshift().Syntax -->**.unshift**( *value* : any { ;...*valueN* : any } ) : Collection<!-- END REF -->
+
 
 
 <!-- REF #collection.unshift().Params -->

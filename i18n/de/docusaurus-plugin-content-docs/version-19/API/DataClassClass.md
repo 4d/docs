@@ -31,9 +31,7 @@ A [DataClass](ORDA/dsMapping.md#dataclass) provides an object interface to a dat
 
 </details>
 
-<!-- REF DataClassClass.attributeName.Syntax -->
-
-***.attributeName*** : DataClassAttribute<!-- END REF -->
+<!-- REF DataClassClass.attributeName.Syntax -->***.attributeName*** : DataClassAttribute<!-- END REF -->
 
 #### Beschreibung
 
@@ -100,9 +98,8 @@ Considering the following table properties:
 
 </details>
 
-<!-- REF #DataClassClass.all().Syntax -->
+<!-- REF #DataClassClass.all().Syntax -->**.all** ( { *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
-**.all** ( { *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #DataClassClass.all().Params -->
 | Parameter | Typ                |    | Beschreibung                                                                   |
@@ -151,9 +148,8 @@ In the optional *settings* parameter, you can pass an object containing addition
 
 </details>
 
-<!-- REF #DataClassClass.fromCollection().Syntax -->
+<!-- REF #DataClassClass.fromCollection().Syntax -->**.fromCollection**( *objectCol* : Collection { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
-**.fromCollection**( *objectCol* : Collection { ; *settings* : Object } ) : 4D.EntitySelection<!-- END REF -->
 
 <!-- REF #DataClassClass.fromCollection().Params -->
 | Parameter | Typ                |    | Beschreibung                                                           |
@@ -348,9 +344,8 @@ In this example, the first entity will be created and saved but the second will 
 
 </details>
 
-<!-- REF #DataClassClass.get().Syntax -->
+<!-- REF #DataClassClass.get().Syntax -->**.get**( *primaryKey* : Integer { ; *settings* : Object } ) : 4D.Entity<br/>**.get**( *primaryKey* : Text { ; *settings* : Object } ) : 4D.Entity<!-- END REF -->
 
-**.get**( *primaryKey* : Integer { ; *settings* : Object } ) : 4D.Entity<br/>**.get**( *primaryKey* : Text { ; *settings* : Object } ) : 4D.Entity<!-- END REF -->
 
 <!-- REF #DataClassClass.get().Params -->
 | Parameter  | Typ             |    | Beschreibung                                                          |
@@ -425,9 +420,8 @@ This example illustrates the use of the *context* property:
 
 </details>
 
-<!-- REF #DataClassClass.getDataStore().Syntax -->
+<!-- REF #DataClassClass.getDataStore().Syntax -->**.getDataStore()** : cs.DataStore<!-- END REF -->
 
-**.getDataStore()** : cs.DataStore<!-- END REF -->
 
 <!-- REF #DataClassClass.getDataStore().Params -->
 | Parameter | Typ          |    | Beschreibung                                          |
@@ -479,9 +473,8 @@ The ***SearchDuplicate*** project method searches for duplicated values in any d
 
 </details>
 
-<!-- REF #DataClassClass.getInfo().Syntax -->
+<!-- REF #DataClassClass.getInfo().Syntax -->**.getInfo()** : Object <!-- END REF -->
 
-**.getInfo()** : Object <!-- END REF -->
 
 <!-- REF #DataClassClass.getInfo().Params -->
 | Parameter | Typ    |    | Beschreibung                                            |
@@ -551,9 +544,8 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 
 </details>
 
-<!-- REF #DataClassClass.new().Syntax -->
+<!-- REF #DataClassClass.new().Syntax -->**.new()** : 4D.Entity <!-- END REF -->
 
-**.new()** : 4D.Entity <!-- END REF -->
 
 <!-- REF #DataClassClass.new().Params -->
 | Parameter | Typ       |    | Beschreibung                                                 |
@@ -594,9 +586,8 @@ This example creates a new entity in the "Log" Dataclass and records information
 
 </details>
 
-<!-- REF #DataClassClass.newSelection().Syntax -->
+<!-- REF #DataClassClass.newSelection().Syntax -->**.newSelection**( { *keepOrder* : Integer } ) : 4D.EntitySelection <!-- END REF -->
 
-**.newSelection**( { *keepOrder* : Integer } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #DataClassClass.newSelection().Params -->
 | Parameter | Typ                |    | Beschreibung                                                                                                                                   |
@@ -639,9 +630,8 @@ When created, the entity selection does not contain any entities (`mySelection.l
 
 </details>
 
-<!-- REF #DataClassClass.query().Syntax -->
+<!-- REF #DataClassClass.query().Syntax -->**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br/>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
 
-**.query**( *queryString* : Text { ; *...value* : any } { ; *querySettings* : Object } ) : 4D.EntitySelection <br/>**.query**( *formula* : Object { ; *querySettings* : Object } ) : 4D.EntitySelection <!-- END REF -->
 
 <!-- REF #DataClassClass.query().Params -->
 | Parameter     | Typ                |    | Beschreibung                                                                                                                                           |

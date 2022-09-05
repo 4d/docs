@@ -8,7 +8,7 @@ title: On URL Loading Error
 | 50   | [Área Web](FormObjects/webArea_overview.md) | An error occurred when the URL was loading |
 
 
-## Descrção
+## Descrição
 
 This event is generated when an error is detected during the loading of a URL.
 

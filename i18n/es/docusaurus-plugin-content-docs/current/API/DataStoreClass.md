@@ -40,9 +40,8 @@ Un [Datastore](ORDA/dsMapping.md#datastore) es el objeto de interfaz suministrad
 
 </details>
 
-<!-- REF #_command_.ds.Syntax -->
+<!-- REF #_command_.ds.Syntax -->**ds** { ( *localID* : Text ) } : cs.DataStore <!-- END REF -->
 
-**ds** { ( *localID* : Text ) } : cs.DataStore <!-- END REF -->
 
 <!-- REF #_command_.ds.Params -->
 | Parámetros | Type         |    | Descripción                                               |
@@ -109,9 +108,8 @@ Utilizando el almacén de datos principal de la base 4D:
 
 </details>
 
-<!-- REF #_command_.Open datastore.Syntax -->
+<!-- REF #_command_.Open datastore.Syntax -->**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore <!-- END REF -->
 
-**Open datastore**( *connectionInfo* : Object ; *localID* : Text ) : cs.DataStore <!-- END REF -->
 
 <!-- REF #_command_.Open datastore.Params -->
 | Parámetros     | Type         |    | Descripción                                                                      |
@@ -218,9 +216,7 @@ En caso de error, el comando devuelve **Null**. Si no se puede acceder al almac�
 
 </details>
 
-<!-- REF DataStoreClass.dataclassName.Syntax -->
-
-***.dataclassName*** : 4D.DataClass<!-- END REF -->
+<!-- REF DataStoreClass.dataclassName.Syntax -->***.dataclassName*** : 4D.DataClass<!-- END REF -->
 
 #### Descripción
 
@@ -252,9 +248,8 @@ Cada clase de datos de un almacén de datos está disponible como una propiedad 
 
 </details>
 
-<!-- REF #DataStoreClass.cancelTransaction().Syntax -->
+<!-- REF #DataStoreClass.cancelTransaction().Syntax -->**.cancelTransaction()**<!-- END REF -->
 
-**.cancelTransaction()**<!-- END REF -->
 
 <!-- REF #DataStoreClass.cancelTransaction().Params -->
 | Parámetros | Type |  | Descripción                                                |
@@ -288,9 +283,8 @@ Ver el ejemplo de la función [`.startTransaction()`](#starttransaction).
 
 </details>
 
-<!-- REF #DataStoreClass.clearAllRemoteContexts().Syntax -->
+<!-- REF #DataStoreClass.clearAllRemoteContexts().Syntax -->**.clearAllRemoteContexts()**<!-- END REF -->
 
-**.clearAllRemoteContexts()**<!-- END REF -->
 
 <!-- REF #DataStoreClass.clearAllRemoteContexts().Params -->
 | Parámetros | Type |  | Descripción                                                |
@@ -322,9 +316,8 @@ In such cases, you can use `.clearAllRemoteContexts()` to clear your contexts an
 
 </details>
 
-<!-- REF #DataStoreClass.encryptionStatus().Syntax -->
+<!-- REF #DataStoreClass.encryptionStatus().Syntax -->**.encryptionStatus()**: Object<!-- END REF -->
 
-**.encryptionStatus()**: Object<!-- END REF -->
 
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 | Parámetros | Type   |    | Descripción                                                                                         |
@@ -398,9 +391,8 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 
 </details>
 
-<!-- REF #DataStoreClass.getAllRemoteContexts().Syntax -->
+<!-- REF #DataStoreClass.getAllRemoteContexts().Syntax -->**.getAllRemoteContexts()** : Collection<!-- END REF -->
 
-**.getAllRemoteContexts()** : Collection<!-- END REF -->
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
 | Parámetros | Type   |    | Descripción                                                               |
@@ -475,9 +467,8 @@ $info:=$ds.getAllRemoteContexts()
 
 </details>
 
-<!-- REF #DataStoreClass.getInfo().Syntax -->
+<!-- REF #DataStoreClass.getInfo().Syntax -->**.getInfo()**: Object<!-- END REF -->
 
-**.getInfo()**: Object<!-- END REF -->
 
 <!-- REF #DataStoreClass.getInfo().Params -->
 | Parámetros | Type   |    | Descripción                                     |
@@ -545,9 +536,8 @@ En un almacén de datos remoto:
 
 </details>
 
-<!-- REF #DataStoreClass.getRemoteContextInfo().Syntax -->
+<!-- REF #DataStoreClass.getRemoteContextInfo().Syntax -->**.getRemoteContextInfo**(*contextName* : Text): Object <!-- END REF -->
 
-**.getRemoteContextInfo**(*contextName* : Text): Object <!-- END REF -->
 
 <!-- REF #DataStoreClass.getRemoteContextInfo().Params -->
 | Parámetros  | Type   |    | Descripción                                                        |
@@ -597,9 +587,8 @@ Ver el ejemplo de la sección [.setRemoteContextInfo()](#example-1-3).
 
 </details>
 
-<!-- REF #DataStoreClass.getRequestLog().Syntax -->
+<!-- REF #DataStoreClass.getRequestLog().Syntax -->**.getRequestLog()** : Collection<!-- END REF -->
 
-**.getRequestLog()** : Collection<!-- END REF -->
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
 | Parámetros | Type       |    | Descripción                                                                             |
@@ -637,9 +626,8 @@ Ver el ejemplo 2 de [`.startRequestLog()`](#startrequestlog).
 
 </details>
 
-<!-- REF #DataStoreClass.isAdminProtected().Syntax -->
+<!-- REF #DataStoreClass.isAdminProtected().Syntax -->**.isAdminProtected()** : Boolean<!-- END REF -->
 
-**.isAdminProtected()** : Boolean<!-- END REF -->
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
 | Parámetros | Type    |    | Descripción                                                                                                                |
@@ -671,9 +659,8 @@ Por defecto, el acceso al Explorador de Datos se concede para las sesiones `webA
 
 </details>
 
-<!-- REF #DataStoreClass.makeSelectionsAlterable().Syntax -->
+<!-- REF #DataStoreClass.makeSelectionsAlterable().Syntax -->**.makeSelectionsAlterable()**<!-- END REF -->
 
-**.makeSelectionsAlterable()**<!-- END REF -->
 
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Params -->
 | Parámetros | Type |  | Descripción                                                |
@@ -705,9 +692,8 @@ Cuando no se llama a esta función, las nuevas selecciones de entidades pueden s
 
 </details>
 
-<!-- REF #DataStoreClass.provideDataKey().Syntax -->
+<!-- REF #DataStoreClass.provideDataKey().Syntax -->**.provideDataKey**( *curPassPhrase* : Text ) : Object <br/>**.provideDataKey**( *curDataKey* : Object ) : Object <!-- END REF -->
 
-**.provideDataKey**( *curPassPhrase* : Text ) : Object <br/>**.provideDataKey**( *curDataKey* : Object ) : Object <!-- END REF -->
 
 <!-- REF #DataStoreClass.provideDataKey().Params -->
 | Parámetros    | Type   |    | Descripción                                                                         |
@@ -783,6 +769,7 @@ Si no se da *curPassphrase* o *curDataKey*, `.provideDataKey()` devuelve **null*
 <!-- REF #DataStoreClass.setAdminProtection().Syntax -->
 **.setAdminProtection**( *status* : Boolean )<!-- END REF -->
 
+
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
 | Parámetros | Type    |    | Descripción                                                                                                                                           |
 | ---------- | ------- | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -823,9 +810,8 @@ Se crea un método proyecto *protectDataFile* para llamar antes de los despliegu
 
 </details>
 
-<!-- REF #DataStoreClass.setRemoteContextInfo().Syntax -->
+<!-- REF #DataStoreClass.setRemoteContextInfo().Syntax -->**.setRemoteContextInfo**( *contextName* : Text ; *dataClassName* : Text ; *attributes* : Text {; *contextType* : Text { ; *pageLength* : Integer}})<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassName* : Text; *attributesColl* : Collection {; *contextType* : Text { ; *pageLength* : Integer }} )<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassObject* : 4D.DataClass ; *attributes* : Text {; *contextType* : Text { ; *pageLength* : Integer }})<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassObject* : 4D.DataClass ; *attributesColl* : Collection {; *contextType* : Text { ; *pageLength* : Integer }} )<!-- END REF -->
 
-**.setRemoteContextInfo**( *contextName* : Text ; *dataClassName* : Text ; *attributes* : Text {; *contextType* : Text { ; *pageLength* : Integer}})<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassName* : Text; *attributesColl* : Collection {; *contextType* : Text { ; *pageLength* : Integer }} )<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassObject* : 4D.DataClass ; *attributes* : Text {; *contextType* : Text { ; *pageLength* : Integer }})<br/>**.setRemoteContextInfo**( *contextName* : Text ; *dataClassObject* : 4D.DataClass ; *attributesColl* : Collection {; *contextType* : Text { ; *pageLength* : Integer }} )<!-- END REF -->
 
 <!-- REF #DataStoreClass.setRemoteContextInfo().Params -->
 | Parámetros      | Type         |    | Descripción                                                                                          |
@@ -953,9 +939,8 @@ End case
 
 </details>
 
-<!-- REF #DataStoreClass.startRequestLog().Syntax -->
+<!-- REF #DataStoreClass.startRequestLog().Syntax -->**.startRequestLog**()<br/>**.startRequestLog**( *file* : 4D.File )<br/>**.startRequestLog**( *reqNum* : Integer )<!-- END REF -->
 
-**.startRequestLog**()<br/>**.startRequestLog**( *file* : 4D.File )<br/>**.startRequestLog**( *reqNum* : Integer )<!-- END REF -->
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
 | Parámetros | Type    |    | Descripción                                                     |
@@ -1030,9 +1015,8 @@ Quiere registrar las peticiones de los clientes ORDA en la memoria:
 
 </details>
 
-<!-- REF #DataStoreClass.startTransaction().Syntax -->
+<!-- REF #DataStoreClass.startTransaction().Syntax -->**.startTransaction()**<!-- END REF -->
 
-**.startTransaction()**<!-- END REF -->
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
 | Parámetros | Type |  | Descripción                                                |
@@ -1094,9 +1078,8 @@ Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-tr
 
 </details>
 
-<!-- REF #DataStoreClass.stopRequestLog().Syntax -->
+<!-- REF #DataStoreClass.stopRequestLog().Syntax -->**.stopRequestLog()**  <!-- END REF -->
 
-**.stopRequestLog()**  <!-- END REF -->
 
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
 | Parámetros | Type |  | Descripción                                                |
@@ -1128,9 +1111,8 @@ Ver ejemplos de [`.startRequestLog()`](#startrequestlog).
 
 </details>
 
-<!-- REF #DataStoreClass.validateTransaction().Syntax -->
+<!-- REF #DataStoreClass.validateTransaction().Syntax -->**.validateTransaction()**  <!-- END REF -->
 
-**.validateTransaction()**  <!-- END REF -->
 
 <!-- REF #DataStoreClass.validateTransaction().Params -->
 | Parámetros | Type |  | Descripción                                                |

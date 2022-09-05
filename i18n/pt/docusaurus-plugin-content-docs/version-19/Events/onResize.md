@@ -8,7 +8,7 @@ title: On Resize
 | 29   | Formulário       | The form's window is resized or the subform object is resized (in this case the event is generated in the form method of the subform) |
 
 
-## Descrção
+## Descrição
 
 This event is called:
 

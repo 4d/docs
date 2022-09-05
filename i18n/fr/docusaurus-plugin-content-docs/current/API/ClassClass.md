@@ -30,9 +30,7 @@ Lorsqu'une classe utilisateur est [définie](Concepts/classes.md#class-definitio
 
 </details>
 
-<!-- REF #ClassClass.name.Syntax -->
-
-**.name** : Text<!-- END REF -->
+<!-- REF #ClassClass.name.Syntax -->**.name** : Text<!-- END REF -->
 
 #### Description
 
@@ -55,9 +53,8 @@ Cette propriété est en **lecture seule**.
 
 </details>
 
-<!-- REF #ClassClass.new().Syntax -->
+<!-- REF #ClassClass.new().Syntax -->**.new**( *param* : any { *;...paramN* } ) : 4D.Class<!-- END REF -->
 
-**.new**( *param* : any { *;...paramN* } ) : 4D.Class<!-- END REF -->
 
 <!-- REF #ClassClass.new().Params -->
 | Paramètres | Type     |    | Description                                          |
@@ -122,9 +119,7 @@ $person:=cs.Person.new("John";"Doe";40)
 
 </details>
 
-<!-- REF #ClassClass.superclass.Syntax -->
-
-**.superclass** : 4D.Class<!-- END REF -->
+<!-- REF #ClassClass.superclass.Syntax -->**.superclass** : 4D.Class<!-- END REF -->
 
 #### Description
 

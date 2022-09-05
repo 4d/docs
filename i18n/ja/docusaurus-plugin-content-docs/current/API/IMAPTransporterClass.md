@@ -52,11 +52,9 @@ IMAP Transporter オブジェクトは [IMP New transporter](#imap-new-transport
 
 </details>
 
-<!-- REF #_command_.IMAP New transporter.Syntax -->
+<!-- REF #_command_.IMAP New transporter.Syntax -->**IMAP New transporter**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
 
-**IMAP New transporter**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
-
-<!-- REF IMAPTransporterClass.IMAP New transporter.Params -->
+<!-- REF #_command_.IMAP New transporter.Params -->
 | 引数     | タイプ                |    | 詳細                                                                             |
 | ------ | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server | Object             | -> | メールサーバー情報                                                                      |
@@ -110,9 +108,8 @@ End if
 
 ## 4D.IMAPTransporter.new()
 
-<!-- REF #4D.IMAPTransporter.new().Syntax -->
+<!-- REF #4D.IMAPTransporter.new().Syntax -->**4D.IMAPTransporter.new**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
 
-**4D.IMAPTransporter.new**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
 
 <!-- REF #4D.IMAPTransporter.new().Params -->
 | 引数     | タイプ                |    | 詳細                                                                             |
@@ -139,9 +136,8 @@ The `4D.IMAPTransporter.new()` function <!-- REF #4D.IMAPTransporter.new().Summa
 
 </details>
 
-<!-- REF #IMAPTransporterClass.addFlags().Syntax -->
+<!-- REF #IMAPTransporterClass.addFlags().Syntax -->**.addFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br/>**.addFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br/>**.addFlags**( *msgIDs* : Longint  ; *keywords* :  Object ) : Object<!-- END REF -->
 
-**.addFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br/>**.addFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br/>**.addFlags**( *msgIDs* : Longint  ; *keywords* :  Object ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.addFlags().Params -->
 | 引数       | タイプ    |    | 詳細                                                                                                          |
@@ -227,9 +223,8 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 </details>
 
-<!-- REF #IMAPTransporterClass.append().Syntax -->
+<!-- REF #IMAPTransporterClass.append().Syntax -->**.append**( *mailObj* : Object ; *destinationBox* : Text ; *options* : Object ) : Object<!-- END REF -->
 
-**.append**( *mailObj* : Object ; *destinationBox* : Text ; *options* : Object ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.append().Params -->
 | 引数             | タイプ    |    | 詳細                                        |
@@ -318,9 +313,7 @@ $status:=$imap.append($msg; "Drafts")
 
 </details>
 
-<!-- REF #IMAPTransporterClass.checkConnectionDelay.Syntax -->
-
-**.checkConnectionDelay** : Integer<!-- END REF -->
+<!-- REF #IMAPTransporterClass.checkConnectionDelay.Syntax -->**.checkConnectionDelay** : Integer<!-- END REF -->
 
 #### 詳細
 
@@ -342,9 +335,8 @@ The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.che
 
 </details>
 
-<!-- REF #IMAPTransporterClass.copy().Syntax -->
+<!-- REF #IMAPTransporterClass.copy().Syntax -->**.copy**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br/>**.copy**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
 
-**.copy**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br/>**.copy**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.copy().Params -->
 | 引数             | タイプ    |    | 詳細                                      |
@@ -443,9 +435,8 @@ The `.copy()` function <!-- REF #IMAPTransporterClass.copy().Summary -->The `.ge
 
 </details>
 
-<!-- REF #IMAPTransporterClass.createBox().Syntax -->
+<!-- REF #IMAPTransporterClass.createBox().Syntax -->**.createBox**( *name* :  Text ) : Object<!-- END REF -->
 
-**.createBox**( *name* :  Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.createBox().Params -->
 | 引数     | タイプ    |    | 詳細                                                                  |
@@ -521,9 +512,8 @@ End if
 
 </details>
 
-<!-- REF #IMAPTransporterClass.delete().Syntax -->
+<!-- REF #IMAPTransporterClass.delete().Syntax -->**.delete**( *msgsIDs* : Collection ) : Object<br/>**.delete**( *allMsgs* : Integer ) : Object<!-- END REF -->
 
-**.delete**( *msgsIDs* : Collection ) : Object<br/>**.delete**( *allMsgs* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.delete().Params -->
 | 引数      | タイプ    |    | 詳細                                                        |
@@ -621,9 +611,8 @@ The `.delete()` function <!-- REF #IMAPTransporterClass.delete().Summary -->The 
 
 </details>
 
-<!-- REF #IMAPTransporterClass.deleteBox().Syntax -->
+<!-- REF #IMAPTransporterClass.deleteBox().Syntax -->**.deleteBox**( *name* : Text ) : Object<!-- END REF -->
 
-**.deleteBox**( *name* : Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.deleteBox().Params -->
 | 引数   | タイプ  |    | 詳細             |
@@ -697,9 +686,7 @@ End if
 
 </details>
 
-<!-- REF #IMAPTransporterClass.expunge().Syntax -->
-
-**.expunge()** : Object<!-- END REF -->
+<!-- REF #IMAPTransporterClass.expunge().Syntax -->**.expunge()** : Object<!-- END REF -->
 
 <!-- REF IMAPTransporterClass.expunge().Params -->
 | 引数     | タイプ    |    | 詳細                                                          |
@@ -767,9 +754,8 @@ $status:=$transporter.expunge()
 
 </details>
 
-<!-- REF #IMAPTransporterClass.getBoxInfo().Syntax -->
+<!-- REF #IMAPTransporterClass.getBoxInfo().Syntax -->**.getBoxInfo**( { *name* : Text }) : Object<!-- END REF -->
 
-**.getBoxInfo**( { *name* : Text }) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.getBoxInfo().Params -->
 | 引数     | タイプ    |    | 詳細                                        |
@@ -821,9 +807,8 @@ The `.getBoxInfo()` function <!-- REF #IMAPTransporterClass.getBoxInfo().Summary
 
 </details>
 
-<!-- REF #IMAPTransporterClass.getBoxList().Syntax -->
+<!-- REF #IMAPTransporterClass.getBoxList().Syntax -->**.getBoxList**( { *parameters* : Object } ) : Collection<!-- END REF -->
 
-**.getBoxList**( { *parameters* : Object } ) : Collection<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.getBoxList().Params -->
 | 引数         | タイプ    |    | 詳細                                                       |
@@ -887,9 +872,8 @@ The `.getBoxList()` function <!-- REF #IMAPTransporterClass.getBoxList().Summary
 
 </details>
 
-<!-- REF #IMAPTransporterClass.getDelimiter().Syntax -->
+<!-- REF #IMAPTransporterClass.getDelimiter().Syntax -->**.getDelimiter()** : Text<!-- END REF -->
 
-**.getDelimiter()** : Text<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.getDelimiter().Params -->
 | 引数     | タイプ  |    | 詳細                                 |
@@ -942,9 +926,8 @@ The `.getDelimiter()` function <!-- REF #IMAPTransporterClass.getDelimiter().Sum
 
 </details>
 
-<!-- REF #IMAPTransporterClass.getMail().Syntax -->
+<!-- REF #IMAPTransporterClass.getMail().Syntax -->**.getMail**( *msgNumber*: Integer { ; *options* : Object } ) : Object<br/>**.getMail**( *msgID*: Text { ; *options* : Object } ) : Object<!-- END REF -->
 
-**.getMail**( *msgNumber*: Integer { ; *options* : Object } ) : Object<br/>**.getMail**( *msgID*: Text { ; *options* : Object } ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.getMail().Params -->
 | 引数        | タイプ    |    | 詳細                                                                          |
@@ -1017,9 +1000,8 @@ ID = 1のメッセージを取得します:
 
 </details>
 
-<!-- REF #IMAPTransporterClass.getMails().Syntax -->
+<!-- REF #IMAPTransporterClass.getMails().Syntax -->**.getMails**( *ids* : Collection { ; *options* : Object } ) : Object<br/>**.getMails**( *startMsg* : Integer ; *endMsg* : Integer { ; *options* : Object } ) : Object<!-- END REF -->
 
-**.getMails**( *ids* : Collection { ; *options* : Object } ) : Object<br/>**.getMails**( *startMsg* : Integer ; *endMsg* : Integer { ; *options* : Object } ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.getMails().Params -->
 | 引数       | タイプ    |    | 詳細                                                                                   |
@@ -1119,9 +1101,8 @@ The `.getMIMEAsBlob()` function <!-- REF #IMAPTransporterClass.getMails().Summar
 
 </details>
 
-<!-- REF #IMAPTransporterClass.getMIMEAsBlob().Syntax -->
+<!-- REF #IMAPTransporterClass.getMIMEAsBlob().Syntax -->**.getMIMEAsBlob**( *msgNumber* : Integer { ; *updateSeen* : Boolean } ) : Blob<br/>**.getMIMEAsBlob**( *msgID* : Text { ; *updateSeen* : Boolean } ) : Blob<!-- END REF -->
 
-**.getMIMEAsBlob**( *msgNumber* : Integer { ; *updateSeen* : Boolean } ) : Blob<br/>**.getMIMEAsBlob**( *msgID* : Text { ; *updateSeen* : Boolean } ) : Blob<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Params -->
 | 引数         | タイプ  |    | 詳細                                                                               |
@@ -1195,9 +1176,8 @@ The `.copy()` function <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Summary --
 
 </details>
 
-<!-- REF #IMAPTransporterClass.move().Syntax -->
+<!-- REF #IMAPTransporterClass.move().Syntax -->**.move**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br/>**.move**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
 
-**.move**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br/>**.move**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.move().Params -->
 | 引数             | タイプ    |    | 詳細                                                      |
@@ -1298,9 +1278,8 @@ The `.move()` function <!-- REF #IMAPTransporterClass.move().Summary -->moves th
 
 </details>
 
-<!-- REF #IMAPTransporterClass.numToID().Syntax -->
+<!-- REF #IMAPTransporterClass.numToID().Syntax -->**.numToID**( *startMsg* : Integer ; *endMsg* : Integer ) : Collection<!-- END REF -->
 
-**.numToID**( *startMsg* : Integer ; *endMsg* : Integer ) : Collection<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.numToID().Params -->
 | 引数       | タイプ    |    | 詳細                                                  |
@@ -1361,9 +1340,8 @@ The `.numToID()` function <!-- REF #IMAPTransporterClass.numToID().Summary -->co
 
 </details>
 
-<!-- REF #IMAPTransporterClass.removeFlags().Syntax -->
+<!-- REF #IMAPTransporterClass.removeFlags().Syntax -->**.removeFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br/>**.removeFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br/>**.removeFlags**( *msgIDs* : Longint ; *keywords* :  Object ) : Object<!-- END REF -->
 
-**.removeFlags**( *msgIDs* : Collection ; *keywords* :  Object ) : Object<br/>**.removeFlags**( *msgIDs* : Text ; *keywords* :  Object ) : Object<br/>**.removeFlags**( *msgIDs* : Longint ; *keywords* :  Object ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.removeFlags().Params -->
 | 引数       | タイプ    |    | 詳細                                                                                                          |
@@ -1449,9 +1427,8 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 </details>
 
-<!-- REF #IMAPTransporterClass.renameBox().Syntax -->
+<!-- REF #IMAPTransporterClass.renameBox().Syntax -->**.renameBox**( *currentName* : Text ; *newName* : Text ) : Object<!-- END REF -->
 
-**.renameBox**( *currentName* : Text ; *newName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.renameBox().Params -->
 | 引数          | タイプ    |    | 詳細                                                          |
@@ -1528,9 +1505,8 @@ End if
 
 </details>
 
-<!-- REF #IMAPTransporterClass.searchMails().Syntax -->
+<!-- REF #IMAPTransporterClass.searchMails().Syntax -->**.searchMails**( *searchCriteria* : Text ) : Collection<!-- END REF -->
 
-**.searchMails**( *searchCriteria* : Text ) : Collection<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.searchMails().Params -->
 | 引数             | タイプ    |    | 詳細                                                       |
@@ -1666,9 +1642,8 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 </details>
 
-<!-- REF #IMAPTransporterClass.selectBox().Syntax -->
+<!-- REF #IMAPTransporterClass.selectBox().Syntax -->**.selectBox**( *name* : Text { ; *state* : Integer } ) : Object<!-- END REF -->
 
-**.selectBox**( *name* : Text { ; *state* : Integer } ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.selectBox().Params -->
 | 引数     | タイプ    |    | 詳細                                        |
@@ -1733,9 +1708,8 @@ The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -
 
 </details>
 
-<!-- REF #IMAPTransporterClass.subscribe().Syntax -->
+<!-- REF #IMAPTransporterClass.subscribe().Syntax -->**.subscribe**( *name* : Text ) : Object<!-- END REF -->
 
-**.subscribe**( *name* : Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.subscribe().Params -->
 | 引数     | タイプ    |    | 詳細                                                           |
@@ -1806,9 +1780,8 @@ End if
 
 </details>
 
-<!-- REF #IMAPTransporterClass.unsubscribe().Syntax -->
+<!-- REF #IMAPTransporterClass.unsubscribe().Syntax -->**.unsubscribe**( *name* : Text ) : Object<!-- END REF -->
 
-**.unsubscribe**( *name* : Text ) : Object<!-- END REF -->
 
 <!-- REF #IMAPTransporterClass.unsubscribe().Params -->
 | 引数     | タイプ    |    | 詳細                                                             |

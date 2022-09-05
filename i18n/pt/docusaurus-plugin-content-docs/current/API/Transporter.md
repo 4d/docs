@@ -3,7 +3,7 @@ id: Transporter
 title: Classe Transporter
 ---
 
-## Descrção
+## Descrição
 
 <!-- REF transporter.acceptUnsecureConnection.Desc -->
 ## .acceptUnsecureConnection
@@ -15,11 +15,9 @@ title: Classe Transporter
 | v17 R4 | Adicionado |
 </details>
 
-<!-- REF #transporter.acceptUnsecureConnection.Syntax -->
+<!-- REF #transporter.acceptUnsecureConnection.Syntax -->**.acceptUnsecureConnection** : Boolean<!-- END REF -->
 
-**.acceptUnsecureConnection** : Boolean<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.acceptUnsecureConnection` property contains <!-- REF #transporter.acceptUnsecureConnection.Summary -->**True** if 4D is allowed to establish an unencrypted connection<!-- END REF --> when encrypted connection is not possible.
 
@@ -53,11 +51,9 @@ Estão disponíveis portos seguros:
 
 </details>
 
-<!-- REF #transporter.authenticationMode.Syntax -->
+<!-- REF #transporter.authenticationMode.Syntax -->**.authenticationMode** : Text<!-- END REF -->
 
-**.authenticationMode** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.authenticationMode` property contains <!-- REF #transporter.authenticationMode.Summary -->the authentication mode used to open the session on the mail server<!-- END REF -->.
 
@@ -89,7 +85,7 @@ Valores possíveis:
 
 **.authenticationMode** : Text
 
-#### Descrção
+#### Descrição
 
 A propriedade `.authenticationMode` contém o modo de autenticação utilizado para abrir a sessão no servidor de correio.
 
@@ -122,7 +118,7 @@ Valores possíveis:
 
 **.authenticationMode** : Text
 
-#### Descrção
+#### Descrição
 
 A propriedade `.authenticationMode` contém o modo de autenticação utilizado para abrir a sessão no servidor de correio.
 
@@ -153,11 +149,9 @@ Valores possíveis:
 
 </details>
 
-<!-- REF #transporter.bodyCharset.Syntax -->
+<!-- REF #transporter.bodyCharset.Syntax -->**.bodyCharset** : Text<!-- END REF -->
 
-**.bodyCharset** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -->  the charset and encoding used for the body part of the email<!-- END REF -->.
 
@@ -189,11 +183,9 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 
 </details>
 
-<!-- REF #transporter.connectionTimeOut.Syntax -->
+<!-- REF #transporter.connectionTimeOut.Syntax -->**.connectionTimeOut** : Integer<!-- END REF -->
 
-**.connectionTimeOut** : Integer<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeOut.Summary -->the maximum wait time (in seconds) allowed to establish a connection to the server<!-- END REF -->. By default, if the property has not been set in the server object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, or `IMAP New transporter`), the value is 30.
 
@@ -212,11 +204,9 @@ The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeO
 
 </details>
 
-<!-- REF #transporter.headerCharset.Syntax -->
+<!-- REF #transporter.headerCharset.Syntax -->**.headerCharset** : Text<!-- END REF -->
 
-**.headerCharset** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summary --> the charset and encoding used for the email header<!-- END REF -->. The header includes the following parts of the email:
 
@@ -248,11 +238,9 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 
 </details>
 
-<!-- REF #transporter.host.Syntax -->
+<!-- REF #transporter.host.Syntax -->**.host** : Text<!-- END REF -->
 
-**.host** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.host` property contains <!-- REF #transporter.host.Summary -->the name or the IP address of the host server<!-- END REF -->. Used for mail transactions (SMTP, POP3, IMAP).
 
@@ -271,11 +259,9 @@ The `.host` property contains <!-- REF #transporter.host.Summary -->the name or 
 
 </details>
 
-<!-- REF #transporter.logFile.Syntax -->
+<!-- REF #transporter.logFile.Syntax -->**.logFile** : Text<!-- END REF -->
 
-**.logFile** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.logFile` property contains <!-- REF #transporter.logFile.Summary -->the path of the extended log file defined (if any) for the mail connection<!-- END REF -->. It can be relative (to the current Logs folder) or absolute.
 
@@ -300,11 +286,9 @@ Unlike regular log files (enabled via the `SET DATABASE PARAMETER` command), ext
 
 </details>
 
-<!-- REF #transporter.port.Syntax -->
+<!-- REF #transporter.port.Syntax -->**.port** : Integer<!-- END REF -->
 
-**.port** : Integer<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.port` property contains <!-- REF #transporter.port.Summary --> the port number used for mail transactions<!-- END REF -->. By default, if the *port* property has not been set in the *server* object (used to create the transporter object with `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), the port used is:
 
@@ -326,11 +310,9 @@ The `.port` property contains <!-- REF #transporter.port.Summary --> the port nu
 | v17 R4 | Adicionado |
 </details>
 
-<!-- REF #transporter.sendTimeOut.Syntax -->
+<!-- REF #transporter.sendTimeOut.Syntax -->**.sendTimeOut** : Integer<!-- END REF -->
 
-**.sendTimeOut** : Integer<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary --> the maximum wait time (in seconds) of a call to `.send( )` before a timeout occurs<!-- END REF -->. .
 
@@ -349,11 +331,9 @@ The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary -
 
 </details>
 
-<!-- REF #transporter.user.Syntax -->
+<!-- REF #transporter.user.Syntax -->**.user** : Text<!-- END REF -->
 
-**.user** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.user` property contains <!-- REF #transporter.user.Summary --> the user name used for authentication on the mail server<!-- END REF -->.
 
@@ -372,18 +352,17 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 
 </details>
 
-<!-- REF #transporter.checkConnection().Syntax -->
+<!-- REF #transporter.checkConnection().Syntax -->**.checkConnection()** : Object<!-- END REF -->
 
-**.checkConnection()** : Object<!-- END REF -->
 
 <!-- REF #transporter.checkConnection().Params -->
-| Parameter  | Tipo   |    | Descrção                                                               |
+| Parâmetros | Tipo   |    | Descrição                                                              |
 | ---------- | ------ |:--:| ---------------------------------------------------------------------- |
 | Resultados | Objeto | <- | Status of the transporter object connection|<!-- END REF -->
 
 |
 
-#### Descrção
+#### Descrição
 
 The `.checkConnection()` function <!-- REF #transporter.checkConnection().Summary --> checks the connection using information stored in the transporter object<!-- END REF -->, recreates the connection if necessary, and returns the status. This function allows you to verify that the values provided by the user are valid and consistent.
 
@@ -391,7 +370,7 @@ The `.checkConnection()` function <!-- REF #transporter.checkConnection().Summar
 
 The function sends a request to the mail server and returns an object describing the mail status. This object can contain the following properties:
 
-| Propriedade |                          | Tipo       | Descrção                                                                                                     |
+| Propriedade |                          | Tipo       | Descrição                                                                                                    |
 | ----------- | ------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------ |
 | success     |                          | boolean    | True if the check is successful, False otherwise                                                             |
 | status      |                          | number     | (SMTP only) Status code returned by the mail server (0 in case of an issue unrelated to the mail processing) |

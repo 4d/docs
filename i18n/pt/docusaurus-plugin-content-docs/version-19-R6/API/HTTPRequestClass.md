@@ -73,12 +73,11 @@ HTTPRequest objects provide the following properties and functions:
 <!-- REF #4D.HTTPRequest.new().Desc -->
 ## 4D.HTTPRequest.new()
 
-<!-- REF #4D.HTTPRequest.new().Syntax -->
+<!-- REF #4D.HTTPRequest.new().Syntax -->**4D.HTTPRequest.new**( *url* : Text { ; *options* : Object } ) : 4D.HTTPRequest<!-- END REF -->
 
-**4D.HTTPRequest.new**( *url* : Text { ; *options* : Object } ) : 4D.HTTPRequest<!-- END REF -->
 
 <!-- REF #4D.HTTPRequest.new().Params -->
-| Parameter  | Tipo           |    | Descrção                                          |
+| Parâmetros | Tipo           |    | Descrição                                         |
 | ---------- | -------------- |:--:| ------------------------------------------------- |
 | url        | Text           | -> | URL to which to send the request                  |
 | options    | Objeto         | -> | Request configuration properties                  |
@@ -86,7 +85,7 @@ HTTPRequest objects provide the following properties and functions:
 
 |
 
-#### Descrção
+#### Descrição
 
 The `4D.HTTPRequest.new()` function <!-- REF #4D.HTTPRequest.new().Summary -->creates and sends a HTTP request to the HTTP server defined in *url* with the defined *options*, and returns a `4D.HTTPRequest` object<!-- END REF -->.
 
@@ -118,7 +117,7 @@ For example, you can pass the following strings:
 
 In the *options* parameter, pass an object that can contain the following properties:
 
-| Propriedade          | Tipo                                            | Descrção                                                                                                                                                                                                                                                          | Predefinição |
+| Propriedade          | Tipo                                            | Descrição                                                                                                                                                                                                                                                         | Predefinição |
 | -------------------- | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
 | body                 | Variant                                         | Body of the request (required in case of `post` or `put` requests). Can be a text, a blob, or an object. The content-type is determined from the type of this property unless it is set inside the headers                                                        | indefinido   |
 | certificatesFolder   | [Folder](FolderClass.md)                        | Sets the active client certificates folder                                                                                                                                                                                                                        | indefinido   |
@@ -142,10 +141,10 @@ In the *options* parameter, pass an object that can contain the following proper
 
 All callback functions receive two object parameters:
 
-| Parameter | Tipo                                        |
-| --------- | ------------------------------------------- |
-| $param1   | [`HTTPRequest` object](#httprequest-object) |
-| $param2   | [`Event` object](#event-object)             |
+| Parâmetros | Tipo                                        |
+| ---------- | ------------------------------------------- |
+| $param1    | [`HTTPRequest` object](#httprequest-object) |
+| $param2    | [`Event` object](#event-object)             |
 
 Here is the sequence of callback calls:
 
@@ -159,7 +158,7 @@ Here is the sequence of callback calls:
 
 An `event` object is returned when a [callback function](#callback-functions) is called. It contains the following properties:
 
-| Propriedade | Tipo | Descrção                                                                              |
+| Propriedade | Tipo | Descrição                                                                             |
 | ----------- | ---- | ------------------------------------------------------------------------------------- |
 | .dados      | blob | Received data. It is always *undefined* except in the `onData` callback               |
 | .type       | text | Type of event. Possible values: "response", "error", "headers", "data", or "terminate |
@@ -168,7 +167,7 @@ An `event` object is returned when a [callback function](#callback-functions) is
 
 An authentication object handles the `options.serverAuthentication` or `options.proxyAuthentication` property. It can contain the following properties:
 
-| Propriedade | Tipo | Descrção                                                 | Predefinição |
+| Propriedade | Tipo | Descrição                                                | Predefinição |
 | ----------- | ---- | -------------------------------------------------------- | ------------ |
 | name        | Text | Name used for authentication                             | indefinido   |
 | senha       | Text | Password used for authentication                         | indefinido   |
@@ -179,11 +178,9 @@ An authentication object handles the `options.serverAuthentication` or `options.
 <!-- REF #HTTPRequestClass.dataType.Desc -->
 ## .dataType
 
-<!-- REF #HTTPRequestClass.dataType.Syntax -->
+<!-- REF #HTTPRequestClass.dataType.Syntax -->**dataType** : Text<!-- END REF -->
 
-**dataType** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.dataType` property contains <!-- REF #HTTPRequestClass.dataType.Summary -->the `dataType` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew), "auto" if it was omitted<!-- END REF -->.
 
@@ -192,11 +189,9 @@ The `.dataType` property contains <!-- REF #HTTPRequestClass.dataType.Summary --
 <!-- REF #HTTPRequestClass.encoding.Desc -->
 ## .encoding
 
-<!-- REF #HTTPRequestClass.encoding.Syntax -->
+<!-- REF #HTTPRequestClass.encoding.Syntax -->**encoding** : Text<!-- END REF -->
 
-**encoding** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.encoding` property contains <!-- REF #HTTPRequestClass.encoding.Summary -->the `encoding` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew), "UTF-8" if it was omitted<!-- END REF -->.
 
@@ -205,17 +200,15 @@ The `.encoding` property contains <!-- REF #HTTPRequestClass.encoding.Summary --
 <!-- REF #HTTPRequestClass.errors.Desc -->
 ## .errors
 
-<!-- REF #HTTPRequestClass.errors.Syntax -->
+<!-- REF #HTTPRequestClass.errors.Syntax -->**errors** : Collection<!-- END REF -->
 
-**errors** : Collection<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.errors` property contains <!-- REF #HTTPRequestClass.errors.Summary -->the collection of all the errors if at least one error has been triggered<!-- END REF -->.
 
 Here is the contents of the `.errors` property:
 
-| Propriedade |                       | Tipo       | Descrção                                                     |
+| Propriedade |                       | Tipo       | Descrição                                                    |
 | ----------- | --------------------- | ---------- | ------------------------------------------------------------ |
 | errors      |                       | Collection | 4D error stack in case of error                              |
 |             | [].errCode            | Número     | 4D error code                                                |
@@ -227,11 +220,9 @@ Here is the contents of the `.errors` property:
 <!-- REF #HTTPRequestClass.headers.Desc -->
 ## .headers
 
-<!-- REF #HTTPRequestClass.headers.Syntax -->
+<!-- REF #HTTPRequestClass.headers.Syntax -->**headers** : Object<!-- END REF -->
 
-**headers** : Object<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.headers` property contains <!-- REF #HTTPRequestClass.headers.Summary -->the `headers` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. If it was omitted, contains an empty object.
 
@@ -240,11 +231,9 @@ The `.headers` property contains <!-- REF #HTTPRequestClass.headers.Summary -->t
 <!-- REF #HTTPRequestClass.method.Desc -->
 ## .method
 
-<!-- REF #HTTPRequestClass.method.Syntax -->
+<!-- REF #HTTPRequestClass.method.Syntax -->**method** : Text<!-- END REF -->
 
-**method** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.method` property contains <!-- REF #HTTPRequestClass.method.Summary -->the `method` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. If it was omitted, contains "GET".
 
@@ -253,11 +242,9 @@ The `.method` property contains <!-- REF #HTTPRequestClass.method.Summary -->the
 <!-- REF #HTTPRequestClass.protocol.Desc -->
 ## .protocol
 
-<!-- REF #HTTPRequestClass.protocol.Syntax -->
+<!-- REF #HTTPRequestClass.protocol.Syntax -->**protocol** : Text<!-- END REF -->
 
-**protocol** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.protocol` property contains <!-- REF #HTTPRequestClass.protocol.Summary -->the `protocol` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. If it was omitted or if "auto" was used, contains the version of the protocol used.
 
@@ -266,17 +253,15 @@ The `.protocol` property contains <!-- REF #HTTPRequestClass.protocol.Summary --
 <!-- REF #HTTPRequestClass.response.Desc -->
 ## .response
 
-<!-- REF #HTTPRequestClass.response.Syntax -->
+<!-- REF #HTTPRequestClass.response.Syntax -->**response** : Object<!-- END REF -->
 
-**response** : Object<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.response` property contains <!-- REF #HTTPRequestClass.response.Summary -->the response to the request if it has received at least the status code, undefined otherwise<!-- END REF -->.
 
 A `response` object is a non-sharable object. It provides the following properties:
 
-| Propriedade | Tipo    | Descrção                                                                                                                                                                |
+| Propriedade | Tipo    | Descrição                                                                                                                                                               |
 | ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | .body       | Variant | Body of the response. The type of the message is defined according to the [`dataType`](#datatype) property. Undefined if the body has not been received yet             |
 | .headers    | Objeto  | Headers of the response. `headers.key` = value (value can be a collection if the same key appears multiple times). Undefined if the headers have not been received yet. |
@@ -288,11 +273,9 @@ A `response` object is a non-sharable object. It provides the following properti
 <!-- REF #HTTPRequestClass.returnResponseBody.Desc -->
 ## .returnResponseBody
 
-<!-- REF #HTTPRequestClass.returnResponseBody.Syntax -->
+<!-- REF #HTTPRequestClass.returnResponseBody.Syntax -->**returnResponseBody** : Boolean<!-- END REF -->
 
-**returnResponseBody** : Boolean<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.returnResponseBody` property contains <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->the `returnResponseBody` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. If it was omitted, contains True.
 
@@ -301,18 +284,17 @@ The `.returnResponseBody` property contains <!-- REF #HTTPRequestClass.returnRes
 <!-- REF #HTTPRequestClass.terminate().Desc -->
 ## .terminate()
 
-<!-- REF #HTTPRequestClass.terminate().Syntax -->
+<!-- REF #HTTPRequestClass.terminate().Syntax -->**.terminate()**<!-- END REF -->
 
-**.terminate()**<!-- END REF -->
 
 <!-- REF #HTTPRequestClass.terminate().Params -->
-| Parameter | Tipo |  | Descrção                                                   |
-| --------- | ---- |::| ---------------------------------------------------------- |
-|           |      |  | Does not require any parameters|<!-- END REF -->
+| Parâmetros | Tipo |  | Descrição                                                  |
+| ---------- | ---- |::| ---------------------------------------------------------- |
+|            |      |  | Does not require any parameters|<!-- END REF -->
 
 |
 
-#### Descrção
+#### Descrição
 
 > This function is thread-safe.
 
@@ -323,11 +305,9 @@ The `.terminate()` function <!-- REF #HTTPRequestClass.terminate().Summary -->ab
 <!-- REF #HTTPRequestClass.terminated.Desc -->
 ## .terminated
 
-<!-- REF #HTTPRequestClass.terminated.Syntax -->
+<!-- REF #HTTPRequestClass.terminated.Syntax -->**terminated** : Boolean<!-- END REF -->
 
-**terminated** : Boolean<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.terminated` property contains <!-- REF #HTTPRequestClass.terminated.Summary -->True if the request is terminated (after the call to `onTerminate`), false otherwise<!-- END REF -->.
 
@@ -336,11 +316,9 @@ The `.terminated` property contains <!-- REF #HTTPRequestClass.terminated.Summar
 <!-- REF #HTTPRequestClass.timeout.Desc -->
 ## .timeout
 
-<!-- REF #HTTPRequestClass.timeout.Syntax -->
+<!-- REF #HTTPRequestClass.timeout.Syntax -->**timeout** : Real<!-- END REF -->
 
-**timeout** : Real<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.timeout` property contains <!-- REF #HTTPRequestClass.timeout.Summary -->the `timeout` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. If it was omitted, contains Undefined.
 
@@ -349,11 +327,9 @@ The `.timeout` property contains <!-- REF #HTTPRequestClass.timeout.Summary -->t
 <!-- REF #HTTPRequestClass.url.Desc -->
 ## .url
 
-<!-- REF #HTTPRequestClass.url.Syntax -->
+<!-- REF #HTTPRequestClass.url.Syntax -->**url** : Text<!-- END REF -->
 
-**url** : Text<!-- END REF -->
-
-#### Descrção
+#### Descrição
 
 The `.url` property contains <!-- REF #HTTPRequestClass.url.Summary -->the URL of the HTTP request<!-- END REF -->.
 
@@ -362,19 +338,18 @@ The `.url` property contains <!-- REF #HTTPRequestClass.url.Summary -->the URL o
 <!-- REF #HTTPRequestClass.wait().Desc -->
 ## .wait()
 
-<!-- REF #HTTPRequestClass.wait().Syntax -->
+<!-- REF #HTTPRequestClass.wait().Syntax -->**.wait**( { *time* : Real } ) : HTTPRequestClass<!-- END REF -->
 
-**.wait**( { *time* : Real } ) : HTTPRequestClass<!-- END REF -->
 
 <!-- REF #HTTPRequestClass.wait().Params -->
-| Parameter  | Tipo           |    | Descrção                                         |
+| Parâmetros | Tipo           |    | Descrição                                        |
 | ---------- | -------------- |:--:| ------------------------------------------------ |
 | time       | Real           | -> | Maximum time in seconds to wait for the response |
 | Resultados | 4D.HTTPRequest | <- | HTTPRequest object|<!-- END REF -->
 
 |
 
-#### Descrção
+#### Descrição
 
 > This function is thread-safe.
 

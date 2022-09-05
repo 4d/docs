@@ -23,9 +23,8 @@ La classe Blob vous permet de créer et de manipuler des [objets blob](../Concep
 
 </details>
 
-<!-- REF #4D.Blob.new().Syntax -->
+<!-- REF #4D.Blob.new().Syntax -->**4D.Blob.new()** : 4D.Blob<br/>**4D.Blob.new**( *blobScal* : Blob ) : 4D.Blob<br/>**4D.Blob.new**( *blobObj* : 4D.Blob ) : 4D.Blob<!-- END REF -->
 
-**4D.Blob.new()** : 4D.Blob<br/>**4D.Blob.new**( *blobScal* : Blob ) : 4D.Blob<br/>**4D.Blob.new**( *blobObj* : 4D.Blob ) : 4D.Blob<!-- END REF -->
 
 <!-- REF #4D.Blob.new().Params -->
 
@@ -44,9 +43,7 @@ Si le paramètre `blob` est omis, la méthode retourne un 4D.Blob vide.
 
 ## .size
 
-<!-- REF #Blob.size.Syntax -->
-
-**.size** : Real<!-- END REF -->
+<!-- REF #Blob.size.Syntax -->**.size** : Real<!-- END REF -->
 
 #### Description
 
@@ -62,9 +59,8 @@ The `.size` property <!-- REF #Blob.size.Summary -->returns the size of a `4D.Bl
 
 </details>
 
-<!-- REF #Blob.slice().Syntax -->
+<!-- REF #Blob.slice().Syntax -->**.slice()** : 4D.Blob<br/>**.slice**( *start* : Real ) : 4D.Blob<br/>**.slice**( *start* : Real; *end* : Real ) : 4D.Blob<!-- END REF -->
 
-**.slice()** : 4D.Blob<br/>**.slice**( *start* : Real ) : 4D.Blob<br/>**.slice**( *start* : Real; *end* : Real ) : 4D.Blob<!-- END REF -->
 
 <!-- REF #Blob.slice().Params -->
 | Paramètres | Type    |    | Description                                                              |

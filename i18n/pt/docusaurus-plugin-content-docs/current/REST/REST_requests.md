@@ -31,7 +31,7 @@ Com cada petição REST, o servidor retorna o estado e uma resposta (com ou sem 
 ### Estado da petição
 Com cada petição REST, se obtém o estado junto com a resposta. Abaixo estão alguns estados que podem surgir:
 
-| Estado                    | Descrção                                                                          |
+| Estado                    | Descrição                                                                         |
 | ------------------------- | --------------------------------------------------------------------------------- |
 | 0                         | Petição não processada (servidor pode não ter iniciado).                          |
 | 200 OK                    | Petição processada sem erro.                                                      |

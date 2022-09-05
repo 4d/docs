@@ -45,9 +45,8 @@ End if
 
 </details>
 
-<!-- REF #_command_.ZIP Create archive.Syntax -->
+<!-- REF #_command_.ZIP Create archive.Syntax -->**ZIP Create archive** ( *fileToZip* : 4D.File ; *destinationFile* : 4D.File ) : Object<br/>**ZIP Create archive** ( *folderToZip* : 4D.Folder ; *destinationFile* : 4D.File { ; *options* : Integer }) : Object<br/>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D.File ) : Object<!-- END REF -->
 
-**ZIP Create archive** ( *fileToZip* : 4D.File ; *destinationFile* : 4D.File ) : Object<br/>**ZIP Create archive** ( *folderToZip* : 4D.Folder ; *destinationFile* : 4D.File { ; *options* : Integer }) : Object<br/>**ZIP Create archive** ( *zipStructure* : Object ; *destinationFile* : 4D.File ) : Object<!-- END REF -->
 
 <!-- REF #_command_.ZIP Create archive.Params -->
 | Parameter       | Typ       |    | Beschreibung                                         |
@@ -183,9 +182,8 @@ You want to pass a collection of folders and files to compress to the *zipStruct
 
 </details>
 
-<!-- REF #_command_.ZIP Read archive.Syntax -->
+<!-- REF #_command_.ZIP Read archive.Syntax -->**ZIP Read archive** ( *zipFile* : 4D.File { ; *password* : Text }) : 4D.ZipArchive<!-- END REF -->
 
-**ZIP Read archive** ( *zipFile* : 4D.File { ; *password* : Text }) : 4D.ZipArchive<!-- END REF -->
 
 <!-- REF #_command_.ZIP Read archive.Params -->
 | Parameter | Typ           |    | Beschreibung                              |
@@ -252,9 +250,7 @@ To extract from the root folder:
 
 ## .root
 
-<!-- REF #ZipArchiveClass.root.Syntax -->
-
-**.root** : 4D.ZipFolder<!-- END REF -->
+<!-- REF #ZipArchiveClass.root.Syntax -->**.root** : 4D.ZipFolder<!-- END REF -->
 
 #### Beschreibung
 

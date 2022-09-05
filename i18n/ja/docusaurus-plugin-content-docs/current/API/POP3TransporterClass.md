@@ -38,11 +38,9 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 </details>
 
-<!-- REF #_command_.POP3 New transporter.Syntax -->
+<!-- REF #_command_.POP3 New transporter.Syntax -->**POP3 New transporter**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
-**POP3 New transporter**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
-
-<!-- REF POP3TransporterClass.POP3 New transporter.Params -->
+<!-- REF #_command_.POP3 New transporter.Params -->
 | 引数     | タイプ                |    | 詳細                                                                             |
 | ------ | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server | object             | -> | メールサーバー情報                                                                      |
@@ -97,9 +95,8 @@ The `POP3 New transporter` command <!-- REF #_command_.POP3 New transporter.Summ
 
 ## 4D.POP3Transporter.new()
 
-<!-- REF #4D.POP3Transporter.new().Syntax -->
+<!-- REF #4D.POP3Transporter.new().Syntax -->**4D.POP3Transporter.new**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
-**4D.POP3Transporter.new**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
 <!-- REF #4D.POP3Transporter.new().Params -->
 | 引数     | タイプ                |    | 詳細                                                                             |
@@ -157,9 +154,8 @@ The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summa
 
 </details>
 
-<!-- REF #POP3TransporterClass.delete().Syntax -->
+<!-- REF #POP3TransporterClass.delete().Syntax -->**.delete**( *msgNumber* : Integer )<!-- END REF -->
 
-**.delete**( *msgNumber* : Integer )<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.delete().Params -->
 | 引数        | タイプ |    | 詳細                                      |
@@ -204,9 +200,8 @@ The `.delete( )` function <!-- REF #POP3TransporterClass.delete().Summary -->fla
 
 </details>
 
-<!-- REF #POP3TransporterClass.getBoxInfo().Syntax -->
+<!-- REF #POP3TransporterClass.getBoxInfo().Syntax -->**.getBoxInfo()** : Object<!-- END REF -->
 
-**.getBoxInfo()** : Object<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
 | 引数     | タイプ    |    | 詳細                                        |
@@ -254,9 +249,8 @@ The `.getBoxInfo()` function <!-- REF #POP3TransporterClass.getBoxInfo().Summary
 
 </details>
 
-<!-- REF #POP3TransporterClass.getMail().Syntax -->
+<!-- REF #POP3TransporterClass.getMail().Syntax -->**.getMail**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
-**.getMail**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMail().Params -->
 | 引数        | タイプ    |    | 詳細                                                                          |
@@ -312,9 +306,8 @@ The `.getMail()` function <!-- REF #POP3TransporterClass.getMail().Summary -->Th
 
 </details>
 
-<!-- REF #POP3TransporterClass.getMailInfo().Syntax -->
+<!-- REF #POP3TransporterClass.getMailInfo().Syntax -->**.getMailInfo**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
-**.getMailInfo**( *msgNumber* : Integer ) : Object<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMailInfo().Params -->
 | 引数        | タイプ    |    | 詳細                                         |
@@ -373,9 +366,8 @@ The `.getMailInfo()` function <!-- REF #POP3TransporterClass.getMailInfo().Summa
 
 </details>
 
-<!-- REF #POP3TransporterClass.getMailInfoList().Syntax -->
+<!-- REF #POP3TransporterClass.getMailInfoList().Syntax -->**.getMailInfoList()** : Collection<!-- END REF -->
 
-**.getMailInfoList()** : Collection<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
 | 引数     | タイプ    |    | 詳細                                                  |
@@ -439,9 +431,8 @@ The `.getMailInfoList()` function <!-- REF #POP3TransporterClass.getMailInfoList
 
 </details>
 
-<!-- REF #POP3TransporterClass.getMIMEAsBlob().Syntax -->
+<!-- REF #POP3TransporterClass.getMIMEAsBlob().Syntax -->**.getMIMEAsBlob**( *msgNumber* : Integer ) : Blob<!-- END REF -->
 
-**.getMIMEAsBlob**( *msgNumber* : Integer ) : Blob<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Params -->
 | 引数        | タイプ  |    | 詳細                                                                               |
@@ -505,9 +496,8 @@ The `.copy()` function <!-- REF #POP3TransporterClass.getMIMEAsBlob().Summary --
 
 </details>
 
-<!-- REF #POP3TransporterClass.undeleteAll().Syntax -->
+<!-- REF #POP3TransporterClass.undeleteAll().Syntax -->**.undeleteAll()**<!-- END REF -->
 
-**.undeleteAll()**<!-- END REF -->
 
 <!-- REF #POP3TransporterClass.undeleteAll().Params -->
 | 引数 | タイプ |  | 詳細                                                         |

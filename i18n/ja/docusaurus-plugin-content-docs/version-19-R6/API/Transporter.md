@@ -15,9 +15,7 @@ title: Transporter クラス
 | v17 R4 | 追加 |
 </details>
 
-<!-- REF #transporter.acceptUnsecureConnection.Syntax -->
-
-**.acceptUnsecureConnection** : Boolean<!-- END REF -->
+<!-- REF #transporter.acceptUnsecureConnection.Syntax -->**.acceptUnsecureConnection** : Boolean<!-- END REF -->
 
 #### 詳細
 
@@ -53,9 +51,7 @@ The `.acceptUnsecureConnection` property contains <!-- REF #transporter.acceptUn
 
 </details>
 
-<!-- REF #transporter.authenticationMode.Syntax -->
-
-**.authenticationMode** : Text<!-- END REF -->
+<!-- REF #transporter.authenticationMode.Syntax -->**.authenticationMode** : Text<!-- END REF -->
 
 #### 詳細
 
@@ -153,9 +149,7 @@ The `.authenticationMode` property contains <!-- REF #transporter.authentication
 
 </details>
 
-<!-- REF #transporter.bodyCharset.Syntax -->
-
-**.bodyCharset** : Text<!-- END REF -->
+<!-- REF #transporter.bodyCharset.Syntax -->**.bodyCharset** : Text<!-- END REF -->
 
 #### 詳細
 
@@ -189,9 +183,7 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 
 </details>
 
-<!-- REF #transporter.connectionTimeOut.Syntax -->
-
-**.connectionTimeOut** : Integer<!-- END REF -->
+<!-- REF #transporter.connectionTimeOut.Syntax -->**.connectionTimeOut** : Integer<!-- END REF -->
 
 #### 詳細
 
@@ -212,9 +204,7 @@ The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeO
 
 </details>
 
-<!-- REF #transporter.headerCharset.Syntax -->
-
-**.headerCharset** : Text<!-- END REF -->
+<!-- REF #transporter.headerCharset.Syntax -->**.headerCharset** : Text<!-- END REF -->
 
 #### 詳細
 
@@ -248,9 +238,7 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 
 </details>
 
-<!-- REF #transporter.host.Syntax -->
-
-**.host** : Text<!-- END REF -->
+<!-- REF #transporter.host.Syntax -->**.host** : Text<!-- END REF -->
 
 #### 詳細
 
@@ -271,9 +259,7 @@ The `.host` property contains <!-- REF #transporter.host.Summary -->the name or 
 
 </details>
 
-<!-- REF #transporter.logFile.Syntax -->
-
-**.logFile** : Text<!-- END REF -->
+<!-- REF #transporter.logFile.Syntax -->**.logFile** : Text<!-- END REF -->
 
 #### 詳細
 
@@ -300,9 +286,7 @@ The `.logFile` property contains <!-- REF #transporter.logFile.Summary -->the pa
 
 </details>
 
-<!-- REF #transporter.port.Syntax -->
-
-**.port** : Integer<!-- END REF -->
+<!-- REF #transporter.port.Syntax -->**.port** : Integer<!-- END REF -->
 
 #### 詳細
 
@@ -326,9 +310,7 @@ The `.port` property contains <!-- REF #transporter.port.Summary --> the port nu
 | v17 R4 | 追加 |
 </details>
 
-<!-- REF #transporter.sendTimeOut.Syntax -->
-
-**.sendTimeOut** : Integer<!-- END REF -->
+<!-- REF #transporter.sendTimeOut.Syntax -->**.sendTimeOut** : Integer<!-- END REF -->
 
 #### 詳細
 
@@ -350,9 +332,7 @@ The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary -
 </details>
 
 
-<!-- REF #transporter.user.Syntax -->
-
-**.user** : Text<!-- END REF -->
+<!-- REF #transporter.user.Syntax -->**.user** : Text<!-- END REF -->
 
 #### 詳細
 
@@ -373,9 +353,8 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 
 </details>
 
-<!-- REF #transporter.checkConnection().Syntax -->
+<!-- REF #transporter.checkConnection().Syntax -->**.checkConnection()** : Object<!-- END REF -->
 
-**.checkConnection()** : Object<!-- END REF -->
 
 <!-- REF #transporter.checkConnection().Params -->
 | 引数     | タイプ    |    | 詳細                                                    |

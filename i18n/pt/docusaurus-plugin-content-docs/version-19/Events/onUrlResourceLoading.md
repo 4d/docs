@@ -8,7 +8,7 @@ title: On URL Resource Loading
 | 48   | [Área Web](FormObjects/webArea_overview.md) | A new resource is loaded in the Web area |
 
 
-## Descrção
+## Descrição
 
 This event is generated each time a new resource (picture, frame, etc.) is loaded on the current Web page.
 

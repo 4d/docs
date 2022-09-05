@@ -15,9 +15,8 @@ title: Document Class
 | v17 R5  | Añadidos       |
 </details>
 
-<!-- REF #document.creationDate.Syntax -->
 
-**.creationDate** : Date<!-- END REF -->
+<!-- REF #document.creationDate.Syntax -->**.creationDate** : Date<!-- END REF -->
 
 #### Descripción
 
@@ -36,9 +35,8 @@ Esta propiedad es **de sólo lectura**.
 | v17 R5  | Añadidos       |
 </details>
 
-<!-- REF #document.creationTime.Syntax -->
 
-**.creationTime** : Time<!-- END REF -->
+<!-- REF #document.creationTime.Syntax -->**.creationTime** : Time<!-- END REF -->
 
 #### Descripción
 
@@ -58,9 +56,8 @@ Esta propiedad es **de sólo lectura**.
 | v17 R5  | Añadidos       |
 </details>
 
-<!-- REF #document.exists.Syntax -->
 
-**.exists** : Boolean<!-- END REF -->
+<!-- REF #document.exists.Syntax -->**.exists** : Boolean<!-- END REF -->
 
 #### Descripción
 
@@ -81,9 +78,8 @@ Esta propiedad es **de sólo lectura**.
 | v17 R5  | Añadidos       |
 </details>
 
-<!-- REF #document.extension.Syntax -->
 
-**.extension** : Text<!-- END REF -->
+<!-- REF #document.extension.Syntax -->**.extension** : Text<!-- END REF -->
 
 #### Descripción
 
@@ -103,9 +99,8 @@ Esta propiedad es **de sólo lectura**.
 | v17 R5  | Añadidos       |
 </details>
 
-<!-- REF #document.fullName.Syntax -->
 
-**.fullName** : Text<!-- END REF -->
+<!-- REF #document.fullName.Syntax -->**.fullName** : Text<!-- END REF -->
 
 #### Descripción
 
@@ -125,9 +120,8 @@ Esta propiedad es **de sólo lectura**.
 | v17 R5  | Añadidos       |
 </details>
 
-<!-- REF #document.hidden.Syntax -->
 
-**.hidden** : Boolean<!-- END REF -->
+<!-- REF #document.hidden.Syntax -->**.hidden** : Boolean<!-- END REF -->
 
 #### Descripción
 
@@ -147,9 +141,8 @@ Esta propiedad es **de sólo lectura**.
 | v17 R5  | Añadidos       |
 </details>
 
-<!-- REF #document.isAlias.Syntax -->
 
-**.isAlias** : Boolean<!-- END REF -->
+<!-- REF #document.isAlias.Syntax -->**.isAlias** : Boolean<!-- END REF -->
 
 #### Descripción
 
@@ -169,9 +162,8 @@ Esta propiedad es **de sólo lectura**.
 | v17 R5  | Añadidos       |
 </details>
 
-<!-- REF #document.isFile.Syntax -->
 
-**.isFile** : Boolean<!-- END REF -->
+<!-- REF #document.isFile.Syntax -->**.isFile** : Boolean<!-- END REF -->
 
 #### Descripción
 
@@ -191,9 +183,8 @@ Esta propiedad es **de sólo lectura**.
 | v17 R5  | Añadidos       |
 </details>
 
-<!-- REF #document.isFolder.Syntax -->
 
-**.isFolder** : Boolean<!-- END REF -->
+<!-- REF #document.isFolder.Syntax -->**.isFolder** : Boolean<!-- END REF -->
 
 #### Descripción
 
@@ -213,9 +204,8 @@ Esta propiedad es **de sólo lectura**.
 | v17 R5  | Añadidos       |
 </details>
 
-<!-- REF #document.isWritable.Syntax -->
 
-**.isWritable** : Boolean<!-- END REF -->
+<!-- REF #document.isWritable.Syntax -->**.isWritable** : Boolean<!-- END REF -->
 
 #### Descripción
 
@@ -246,9 +236,8 @@ Esta propiedad es **de sólo lectura**.
 | v17 R5  | Añadidos       |
 </details>
 
-<!-- REF #document.modificationDate.Syntax -->
 
-**.modificationDate** : Date<!-- END REF -->
+<!-- REF #document.modificationDate.Syntax -->**.modificationDate** : Date<!-- END REF -->
 
 #### Descripción
 
@@ -268,9 +257,8 @@ Esta propiedad es **de sólo lectura**.
 | v17 R5  | Añadidos       |
 </details>
 
-<!-- REF #document.modificationTime.Syntax -->
 
-**.modificationTime** : Time<!-- END REF -->
+<!-- REF #document.modificationTime.Syntax -->**.modificationTime** : Time<!-- END REF -->
 
 ##### Descripción
 
@@ -290,9 +278,8 @@ Esta propiedad es **de sólo lectura**.
 | v17 R5  | Añadidos       |
 </details>
 
-<!-- REF #document.name.Syntax -->
 
-**.name** : Text<!-- END REF -->
+<!-- REF #document.name.Syntax -->**.name** : Text<!-- END REF -->
 
 #### Descripción
 
@@ -312,9 +299,8 @@ Esta propiedad es **de sólo lectura**.
 | v17 R5  | Añadidos       |
 </details>
 
-<!-- REF #document.original.Syntax -->
 
-**.original** : 4D.File<br/>**.original** : 4D.Folder<!-- END REF -->
+<!-- REF #document.original.Syntax -->**.original** : 4D.File<br/>**.original** : 4D.Folder<!-- END REF -->
 
 #### Descripción
 
@@ -339,9 +325,8 @@ Esta propiedad es **de sólo lectura**.
 | v17 R5  | Añadidos       |
 </details>
 
-<!-- REF #document.parent.Syntax -->
 
-**.parent** : 4D.Folder<!-- END REF -->
+<!-- REF #document.parent.Syntax -->**.parent** : 4D.Folder<!-- END REF -->
 
 #### Descripción
 
@@ -361,9 +346,8 @@ Esta propiedad es **de sólo lectura**.
 | v17 R5  | Añadidos       |
 </details>
 
-<!-- REF #document.path.Syntax -->
 
-**.path** : Text<!-- END REF -->
+<!-- REF #document.path.Syntax -->**.path** : Text<!-- END REF -->
 
 #### Descripción
 
@@ -383,9 +367,8 @@ Esta propiedad es **de sólo lectura**.
 | v17 R5  | Añadidos       |
 </details>
 
-<!-- REF #document.platformPath.Syntax -->
 
-**.platformPath** : Text<!-- END REF -->
+<!-- REF #document.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->
 
 #### Descripción
 
@@ -405,9 +388,8 @@ Esta propiedad es **de sólo lectura**.
 | v17 R5  | Añadidos       |
 </details>
 
-<!-- REF #document.size.Syntax -->
 
-**.size** : Real<!-- END REF -->
+<!-- REF #document.size.Syntax -->**.size** : Real<!-- END REF -->
 
 #### Descripción
 
@@ -427,9 +409,9 @@ Esta propiedad es **de sólo lectura**.
 | v17 R5  | Añadidos       |
 </details>
 
-<!-- REF #document.copyTo().Syntax -->
 
-**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File<!-- END REF -->
+<!-- REF #document.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.File<!-- END REF -->
+
 
 
 <!-- REF #document.copyTo().Params -->
@@ -482,9 +464,9 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 | v17 R5  | Añadidos         |
 </details>
 
-<!-- REF #document.getContent().Syntax -->
 
-**.getContent( )** : 4D.Blob<!-- END REF -->
+<!-- REF #document.getContent().Syntax -->**.getContent( )** : 4D.Blob<!-- END REF -->
+
 
 
 <!-- REF #document.getContent().Params -->
@@ -525,9 +507,9 @@ Para guardar el contenido de un documento en un campo `BLOB`:
 | v17 R5  | Añadidos       |
 </details>
 
-<!-- REF #document.getIcon().Syntax -->
 
-**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
+<!-- REF #document.getIcon().Syntax -->**.getIcon**( { *size* : Integer } ) : Picture<!-- END REF -->
+
 
 
 <!-- REF #document.getIcon().Params -->
@@ -560,9 +542,9 @@ Icono de archivo [picture](../Concepts/picture.html).
 | v17 R5  | Añadidos       |
 </details>
 
-<!-- REF #document.getText().Syntax -->
 
-**.getText**( { *charSetName* : Text { ; *breakMode* : Integer } } ) : Text<br/>**.getText**( { *charSetNum* : Integer { ; *breakMode* : Integer } } ) : Text<!-- END REF -->
+<!-- REF #document.getText().Syntax -->**.getText**( { *charSetName* : Text { ; *breakMode* : Integer } } ) : Text<br/>**.getText**( { *charSetNum* : Integer { ; *breakMode* : Integer } } ) : Text<!-- END REF -->
+
 
 
 <!-- REF #document.getText().Params -->

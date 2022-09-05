@@ -59,9 +59,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 </details>
 
-<!-- REF #_command_.Folder.Syntax -->
-
-**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
+<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
 
 <!-- REF FolderClass.Folder.Params -->
 | 引数             | タイプ       |    | 詳細                                             |
@@ -145,9 +143,7 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 | v17 R5 | 追加 |
 </details>
 
-<!--REF #FolderClass.create().Syntax -->
-
-**.create()** : Boolean<!-- END REF -->
+<!--REF #FolderClass.create().Syntax -->**.create()** : Boolean<!-- END REF -->
 
 <!--REF #FolderClass.create().Params -->
 | 引数     | タイプ |    | 詳細                                                                |
@@ -201,9 +197,7 @@ End if
 | v17 R5 | 追加 |
 </details>
 
-<!--REF #FolderClass.createAlias().Syntax -->
-
-**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
+<!--REF #FolderClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
 
 <!--REF #FolderClass.createAlias().Params -->
 | 引数                | タイプ       |    | 詳細                                                 |
@@ -258,9 +252,8 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 | v17 R5 | 追加 |
 </details>
 
-<!--REF #FolderClass.delete().Syntax -->
+<!--REF #FolderClass.delete().Syntax -->**.delete**( { *option* : Integer } )<!-- END REF -->
 
-**.delete**( { *option* : Integer } )<!-- END REF -->
 
 <!-- REF #FolderClass.delete().Params -->
 | 引数     | タイプ |    | 詳細                                       |
@@ -333,9 +326,7 @@ The `.delete()` function <!-- REF #FolderClass.delete().Summary -->The `.delete(
 | v17 R5 | 追加 |
 </details>
 
-<!--REF #FolderClass.moveTo().Syntax -->
-
-**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
+<!--REF #FolderClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
 
 <!--REF #FolderClass.moveTo().Params -->
 | 引数                | タイプ       |    | 詳細                                   |
@@ -390,9 +381,7 @@ The `.moveTo( )` function <!-- REF #FolderClass.moveTo().Summary -->moves or ren
 | v17 R5 | 追加 |
 </details>
 
-<!--REF #FolderClass.rename().Syntax -->
-
-**.rename**( *newName* : Text ) : 4D.Folder<!-- END REF -->
+<!--REF #FolderClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.Folder<!-- END REF -->
 
 <!--REF #FolderClass.rename().Params -->
 | 引数      | タイプ       |    | 詳細                                      |

@@ -118,9 +118,8 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 </details>
 
-<!-- REF #_command_.Formula.Syntax -->
+<!-- REF #_command_.Formula.Syntax -->**Formula** ( *formulaExp* : Expression ) : 4D.Function<!-- END REF -->
 
-**Formula** ( *formulaExp* : Expression ) : 4D.Function<!-- END REF -->
 
 <!-- REF #_command_.Formula.Params -->
 | 引数         | タイプ         |    | 詳細                                                             |
@@ -258,9 +257,8 @@ The `Formula` command <!-- REF #_command_.Formula.Summary -->creates a `4D Funct
 
 </details>
 
-<!-- REF #_command_.Formula from string.Syntax -->
+<!-- REF #_command_.Formula from string.Syntax -->**Formula from string**( *formulaString* : Text ) : 4D.Function<!-- END REF -->
 
-**Formula from string**( *formulaString* : Text ) : 4D.Function<!-- END REF -->
 
 <!-- REF #_command_.Formula from string.Params -->
 | 引数            | タイプ         |    | 詳細                                                                 |
@@ -318,9 +316,8 @@ The `Formula from string` command <!-- REF #_command_.Formula from string.Summar
 
 </details>
 
-<!-- REF #FunctionClass.apply().Syntax -->
+<!-- REF #FunctionClass.apply().Syntax -->**.apply**() : any<br/>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any<!-- END REF -->
 
-**.apply**() : any<br/>**.apply**( *thisObj* : Object { ; *formulaParams* : Collection } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.apply().Params -->
 | 引数            | タイプ    |    | 詳細                                                      |
@@ -384,9 +381,8 @@ The `.apply()` function <!-- REF #FunctionClass.apply().Summary -->executes the 
 
 </details>
 
-<!-- REF #FunctionClass.call().Syntax -->
+<!-- REF #FunctionClass.call().Syntax -->**.call**() : any<br/>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
 
-**.call**() : any<br/>**.call**( *thisObj* : Object { ; ...*params* : any } ) : any<!-- END REF -->
 
 <!-- REF #FunctionClass.call().Params -->
 | 引数      | タイプ    |    | 詳細                                                      |
@@ -440,9 +436,7 @@ The `.call()` function <!-- REF #FunctionClass.call().Summary -->executes the `f
 
 </details>
 
-<!-- REF #FunctionClass.source.Syntax -->
-
-**.source** : Text <!-- END REF -->
+<!-- REF #FunctionClass.source.Syntax -->**.source** : Text <!-- END REF -->
 
 
 #### 詳細
