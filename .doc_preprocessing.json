@@ -13,21 +13,33 @@
     },
     "build_syntax": {
         "path":"./docs/API/",
-        "config":"../preprocessing.conf"
+        "syntax_output":"./syntax/syntaxEN.json",
+        "config":"../preprocessing.conf",
+        "syntax_only":true,
+        "syntax_pretty":false
     },
     "build_syntax_translated": {
         "path":"./i18n/%language%/docusaurus-plugin-content-docs/current/API/",
         "languages":["de", "es", "fr", "ja", "pt"],
-        "config":"../../../../../docs/preprocessing.conf"
+        "syntax_output":"./syntax/%language%.lproj/syntax%LANGUAGE%.json",
+        "config":"../../../../../docs/preprocessing.conf",
+        "syntax_only":true,
+        "syntax_pretty":false
     },
     "build_syntax_viewPro": {
         "path":"./docs/ViewPro/",
-        "config":"../preprocessing.conf"
+        "syntax_output":"./syntax_viewPro/",
+        "config":"../preprocessing.conf",
+        "syntax_only":true,
+        "syntax_pretty":true
     },
     "build_syntax_viewPro_translated": {
         "path":"./i18n/%language%/docusaurus-plugin-content-docs/current/ViewPro/",
         "languages":["de", "es", "fr", "ja", "pt"],
-        "config":"../preprocessing.conf"
+        "syntax_output":"./syntax_viewPro/%language%.lproj/syntax%LANGUAGE%.json",
+        "config":"../preprocessing.conf",
+        "syntax_only":true,
+        "syntax_pretty":true
     }
 
 }
