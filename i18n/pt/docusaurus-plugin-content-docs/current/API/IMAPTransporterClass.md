@@ -60,7 +60,9 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 | server     | Objeto             | -> | Informação de servidor de correio                                              |
 | Resultados | 4D.IMAPTransporter | <- | [IMAP transporter object](#imap-transporter-object)|<!-- END REF -->
 
+
 |
+
 
 #### Descrição
 
