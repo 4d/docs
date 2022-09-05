@@ -49,6 +49,7 @@ Os objetos POP3 Transporter são instanciados com o comando [POP3 New transporte
 | server     | object             | -> | Informação de servidor de correio                                              |
 | Resultados | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object)|<!-- END REF --> |
 
+
 #### Descrição
 
 The `POP3 New transporter` command <!-- REF #_command_.POP3 New transporter.Summary -->configures a new POP3 connection<!-- END REF -->according to the *server* parameter and returns a new *[POP3 transporter](#pop3-transporter-object)* object. O objeto transporter retornado vai geralmente ser usado para receber emails.
