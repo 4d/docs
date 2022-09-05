@@ -657,9 +657,12 @@ The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns 
 | ------ | ------ | -- | ---------------------------------------------------------------------------------------------- |
 | result | Object | <- | Object describing the contents of the ORDA cache for the dataclass.|<!-- END REF -->
 
+
 |
 
+
 > **上級者向け:** この機能は、特定の構成のため、ORDAのデフォルト機能をカスタマイズする必要がある開発者向けです。 ほとんどの場合、使用する必要はないでしょう。
+
 
 #### 詳細
 
@@ -685,6 +688,7 @@ The `.getRemoteCache()` function <!-- REF #DataClassClass.getRemoteCache().Summa
 | キー      | テキスト   | エンティティのプライマリーキー。     |
 
 各エントリーの `data` オブジェクトは、以下のプロパティを持ちます:
+
 | プロパティ                  | タイプ     | 詳細                                                       |
 | ---------------------- | ------- | -------------------------------------------------------- |
 | __KEY                  | String  | エンティティのプライマリーキー                                          |
