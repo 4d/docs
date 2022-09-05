@@ -20,7 +20,7 @@ A host project running in interpreted mode can use either interpreted or compile
 
 Exposed component code (methods and functions) as well as forms can be used as standard elements in your 4D development. 
 
-When an installed component contains methods, classes and functions, they appear in the **Component Methods** theme of the Explorer's Methods page:
+When an installed component contains methods, classes, and functions, they appear in the **Component Methods** theme of the Explorer's Methods page:
 
 ![alt-text](../assets/en/Concepts/components-explorer.png)
 
