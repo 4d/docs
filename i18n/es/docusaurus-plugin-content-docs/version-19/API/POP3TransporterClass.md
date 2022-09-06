@@ -27,6 +27,7 @@ Los objetos POP3 Transporter se instancian con el comando [POP3 New transporter]
 | [<!-- INCLUDE #POP3TransporterClass.undeleteAll().Syntax -->](#undeleteall)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #POP3TransporterClass.undeleteAll().Summary -->|
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|
 
+
 <!-- REF POP3TransporterClass.POP3 New transporter.Desc -->
 ## POP3 New transporter
 
@@ -46,7 +47,9 @@ Los objetos POP3 Transporter se instancian con el comando [POP3 New transporter]
 | server     | object             | -> | Información del servidor de correo                                             |
 | Result     | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object)|<!-- END REF -->
 
+
 |
+
 
 #### Descripción
 
