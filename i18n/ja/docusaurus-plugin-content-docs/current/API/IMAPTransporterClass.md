@@ -60,7 +60,9 @@ IMAP Transporter オブジェクトは [IMP New transporter](#imap-new-transport
 | server | Object             | -> | メールサーバー情報                                                                      |
 | Result | 4D.IMAPTransporter | <- | [IMAP transporter object](#imap-transporter-object)|<!-- END REF -->
 
+
 |
+
 
 #### 詳細
 

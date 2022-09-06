@@ -184,9 +184,10 @@ You can pass any number of values of the following supported types:
 * Null
 * shared object(*)
 * shared collection(*) > Unlike standard (not shared) collections, shared collections do not support pictures, pointers, and objects or collections that are not shared.
+
 > Unlike standard (not shared) collections, shared collections do not support pictures, pointers, and objects or collections that are not shared.
 
-(*)When a shared object or collection is added to a shared collection, they share the same*locking identifier*. For more information on this point, refer to the **4D Developer**'s guide.
+(\*)When a shared object or collection is added to a shared collection, they share the same *locking identifier*. For more information on this point, refer to [4D Doc Center](https://doc.4d.com).
 
 #### Beispiel
 
@@ -315,6 +316,7 @@ $vSize:=$col.length //$vSize=0
 |
 
 #### Beschreibung
+
 
 The `.combine()` function <!-- REF #collection.combine().Summary -->inserts *col2* elements at the end or at the specified *index* position in the collection instance and returns the edited collection<!-- END REF -->. .
 > This function modifies the original collection.

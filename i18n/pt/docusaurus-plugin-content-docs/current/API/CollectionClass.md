@@ -197,9 +197,14 @@ Pode passar qualquer número de valores dos tipos compatíveis abaixo:
 *   null
 *   objeto compartido(*)
 *   shared collection(*) > Unlike standard (not shared) collections, shared collections do not support pictures, pointers, and objects or collections that are not shared.
-> Diferente de coleções padrão (não partilhadas), coleções partilhadas não são compatíveis com imagens, ponteiros e objetos ou coleção que não forem partilhadas.
 
-(*)Quando um objeto partilhado ou coleção forem adicionadas a uma coleção partilhada, partilham o mesmo *locking identifier*. Para saber mais sobre esse ponto, veja o guia **4D Developer**'.
+:::note
+
+Diferente de coleções padrão (não partilhadas), coleções partilhadas não são compatíveis com imagens, ponteiros e objetos ou coleção que não forem partilhadas.
+
+:::
+
+(\*)When a shared object or collection is added to a shared collection, they share the same *locking identifier*. For more information on this point, refer to [4D Doc Center](https://doc.4d.com).
 
 #### Exemplo
 

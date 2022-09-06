@@ -36,40 +36,40 @@ Para se conectar à página web do Data Explorer:
 
 ![alt-text](../assets/en/Admin/accessKeyEnter.png)
 
-> [HTTPPort](webAdmin.md#http-port) and [HTTPSPort](webAdmin.md#https-port) values are configured in the `WebAdmin` settings.
+> [Os valores HTTPPort](webAdmin.md#http-port) e [HTTPSPort](webAdmin.md#https-port) são configurados nas definições `WebAdmin` .
 
-## Using the Data Explorer
+## Utilização do Data Explorer
 
-In addition to a comprehensive and customizable view of your data, the Data Explorer allows you to query and order your data.
+Para além de uma visão abrangente e personalizável dos seus dados, o Explorador de Dados permite-lhe consultar e ordenar os seus dados.
 
 ### Requisitos
 
-The Data Explorer supports the following web browsers:
+O Data Explorer suporta os seguintes navegadores web:
 
 - Chrome
 - Safari
 - Edge
 - FireFox
 
-The minimum resolution to use the Data Explorer is 1280x720. Recommended resolution is 1920x1080.
+A resolução mínima para utilizar o Data Explorer é de 1280x720. A resolução recomendada é 1920x1080.
 
 ### Básicos
 
-The Data Explorer provides an overall access to the ORDA data model with respect to the [ORDA mapping rules](ORDA/dsMapping.md#general-rules).
+O Data Explorer proporciona um acesso global ao modelo de dados ORDA em relação às regras de mapeamento ORDA [](ORDA/dsMapping.md#general-rules).
 
-You can switch to the **dark mode** display theme using the selector at the bottom of the page:
+Pode mudar para o modo escuro **** mostrar o tema usando o selector no fundo da página:
 
 ![alt-text](../assets/en/Admin/dark.png)
 
 ![alt-text](../assets/en/Admin/dataExplorer2.png)
 
-The page contains several areas:
+A página contém várias áreas:
 
-- On the left side are the **Dataclasses area** and **Attributes area**, allowing you can select the dataclasses and attributes to display. Attributes are ordered according to the underlying structure creation order. Primary key and indexed attributes have a specific icon. You can filter the list of proposed dataclass names and attribute names using the respective search areas. ![alt-text](../assets/en/Admin/dataExplorer3.png)
+- Do lado esquerdo encontra-se a área **Dataclasses** e **Attributes area**, permitindo-lhe seleccionar os dataclasses e atributos a exibir. Os atributos são ordenados de acordo com a ordem de criação da estrutura subjacente. A chave primária e os atributos indexados têm um ícone específico. É possível filtrar a lista de nomes de dataclass propostos e nomes de atributos utilizando as respectivas áreas de pesquisa. ![alt-text](../assets/en/Admin/dataExplorer3.png)
 
-- The central part contains the **Search area** and the **Data grid** (list of entities of the selected dataclass). Each column of the grid represents a datastore attribute.
-  - By default, all entities are displayed. You can filter the displayed entities using the search area. Two query modes are available: [Query on attributes](#query-on-attributes) (selected by default), and the [Advanced query with expression](#advanced-query-with-expression). You select the query mode by clicking on the corresponding button (the **X** button allows you to reset the query area and thus stop filtering): ![alt-text](../assets/en/Admin/dataExplorer4b.png)
-  - The name of the selected dataclass is added as a tab above the data grid. Using these tabs, you can switch between dataclasses that have been already selected. You can remove a referenced dataclass by clicking the "remove" icon at the right of the dataclass name.
+- A parte central contém a área de pesquisa **** e a grade de dados **** (lista de entidades da classe de dados seleccionada). Cada coluna da grade representa um atributo de datastore.
+  - Como padrão, todas as entidades são exibidas. É possível filtrar as entidades apresentadas utilizando a área de pesquisa. Estão disponíveis dois modos de consulta: [Consulta sobre atributos](#query-on-attributes) (seleccionado por defeito), e a consulta avançada [com expressão](#advanced-query-with-expression). Selecciona o modo de consulta clicando no botão correspondente (o botão **X** permite reiniciar a área de consulta e assim parar a filtragem): ![alt-text](../assets/en/Admin/dataExplorer4b.png)
+  - O nome da classe de dados seleccionada é adicionado como um separador por cima da grelha de dados. Using these tabs, you can switch between dataclasses that have been already selected. You can remove a referenced dataclass by clicking the "remove" icon at the right of the dataclass name.
   - You can reduce the number of columns by unchecking attributes in the left side. You can also switch the columns in the data grid using drag and drop. You can click on a column header to [sort entities](#ordering-entities) according to its values (when possible).
   - If an operation requires a long time, a progress bar is displayed. You can stop the running operation at any moment by clicking on the red button:<br/> ![alt-text](../assets/en/Admin/dataExplorer5.png)
 

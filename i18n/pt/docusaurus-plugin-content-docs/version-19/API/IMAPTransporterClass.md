@@ -60,7 +60,9 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 | server     | Objeto             | -> | Informação de servidor de correio                                              |
 | Resultados | 4D.IMAPTransporter | <- | [IMAP transporter object](#imap-transporter-object)|<!-- END REF -->
 
+
 |
+
 
 #### Descrição
 
@@ -94,6 +96,7 @@ $server:=New object
 $server.host:="imap.gmail.com" //Mandatory
 $server.port:=993
 $server.user:="4d@gmail.com"
+
 $server.password:="XXXXXXXX"
 $server.logFile:="LogTest.txt" //log to save in the Logs folder
 

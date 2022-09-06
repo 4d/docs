@@ -42,13 +42,11 @@ ASSERT($status.success)
 
 ## 4D.CryptoKey.new()
 
-<details>
-<summary>Historique</summary>
+<details><summary>Historique</summary>
 
 | Version | Modifications |
 | ------- | ------------- |
 | v18 R4  | Ajoutées      |
-
 </details>
 
 
@@ -80,30 +78,28 @@ L'objet `CryptoKey` retourné encapsule une paire de clés de chiffrement. C'est
 <!-- REF CryptoKey.curve -->
 ## .curve
 
-<details>
-<summary>Historique</summary>
+<details><summary>Historique</summary>
 
 | Version | Modifications |
 | ------- | ------------- |
 | v18 R4  | Ajoutées      |
-
 </details>
 
 
-<!-- REF #CryptoKey.curve.Syntax --> **.curve** : Texte<!-- END REF -->
+<!-- REF #CryptoKey.curve.Syntax -->**.curve** : Texte<!-- END REF -->
+
 
 Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised curve name of the key<!-- END REF -->. Généralement "prime256v1" pour ES256 (défaut), "secp384r1" pour ES384, "secp521r1" pour ES512.
 <!-- END REF -->
 
+<!-- REF CryptoKey.decrypt().Desc -->
 ## .decrypt()
 
-<details>
-<summary>Historique</summary>
+<details><summary>Historique</summary>
 
 | Version | Modifications |
 | ------- | ------------- |
 | v18 R4  | Ajoutées      |
-
 </details>
 
 
@@ -141,17 +137,16 @@ La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](http
 | errors    | collection | Si `success` est mis sur `false`, il peut contenir une collection d'erreurs |
 
 La fonction renvoie un objet "status" avec la propriété `success` définie sur `true` si le *message* a pu être déchiffré avec succès.
+<!-- END REF -->
 
 <!-- REF CryptoKey.encrypt().Desc -->
 ## .encrypt()
 
-<details>
-<summary>Historique</summary>
+<details><summary>Historique</summary>
 
 | Version | Modifications |
 | ------- | ------------- |
 | v18 R4  | Ajoutées      |
-
 </details>
 
 
@@ -186,13 +181,11 @@ La valeur retournée est un message chiffré.
 <!-- REF CryptoKey.getPrivateKey().Desc -->
 ## .getPrivateKey()
 
-<details>
-<summary>Historique</summary>
+<details><summary>Historique</summary>
 
 | Version | Modifications |
 | ------- | ------------- |
 | v18 R4  | Ajoutées      |
-
 </details>
 
 
@@ -215,13 +208,11 @@ La valeur retournée est la clé privée.
 <!-- REF CryptoKey.getPublicKey().Desc -->
 ## .getPublicKey()
 
-<details>
-<summary>Historique</summary>
+<details><summary>Historique</summary>
 
 | Version | Modifications |
 | ------- | ------------- |
 | v18 R4  | Ajoutées      |
-
 </details>
 
 
@@ -255,22 +246,21 @@ La valeur retournée est la clé publique.
 <!-- REF #CryptoKey.pem.Syntax --> **.pem** : Text<!-- END REF -->
 
 
+
 <!-- REF #CryptoKey.pem.Summary --> Définition PEM d'une clé de chiffrement à charger. Si la clé est une clé privée, la clé publique RSA ou ECDSA en sera déduite. <!-- END REF -->
 
 <!-- REF CryptoKey.sign().Desc -->
 ## .sign()
 
-<details>
-<summary>Historique</summary>
+<details><summary>Historique</summary>
 
 | Version | Modifications |
 | ------- | ------------- |
 | v18 R4  | Ajoutées      |
-
 </details>
 
 
-<!-- REF #CryptoKey.sign().Syntax --> **.sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
+<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
 
 
 
@@ -304,17 +294,16 @@ The `.sign()` function <!-- REF #CryptoKey.sign().Summary -->signs the utf8 repr
 
 <!-- END REF -->
 
-<details>
-<summary>Historique</summary>
+<details><summary>Historique</summary>
 
 | Version | Modifications |
 | ------- | ------------- |
 | v18 R4  | Ajoutées      |
-
 </details>
 
 
-<!-- REF #CryptoKey.size.Syntax --> **.size** : Integer<!-- END REF -->
+<!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
+
 
 Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the key in bits<!-- END REF -->. .
 
@@ -331,10 +320,14 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 </details>
 
 
-<!-- REF #CryptoKey.type.Syntax --> **.type** : Texte<!-- END REF -->
+<!-- REF #CryptoKey.type.Syntax -->**.type** : Texte<!-- END REF -->
 
 
-<!-- REF #CryptoKey.type.Summary --> Type de clé : "RSA", "ECDSA" ou "PEM" <!-- END REF -->.<li>"RSA" : paire de clés RSA, utilise `settings.size` pour la taille [.size](#size).</li><li>"ECDSA" : paire de clés Elliptic Curve Digital Signature Algorithm, utilise `settings.curve` pour la propriété curve [.curve](#curve). A noter que les clés ECDSA ne peuvent pas être utilisées pour le chiffrement, mais uniquement pour la signature.</li><li>"PEM": a key pair definition in PEM format, using `settings.pem` as [.pem](#pem).</li><!-- END REF -->
+The <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "ECDSA", "PEM" <!-- END REF -->.
+
+- "RSA": an RSA key pair, using `settings.size` as [.size](#size).
+- "ECDSA": an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as [.curve](#curve). A noter que les clés ECDSA ne peuvent pas être utilisées pour le chiffrement, mais uniquement pour la signature.
+- "PEM": a key pair definition in PEM format, using `settings.pem` as [.pem](#pem).
 
 <!-- REF CryptoKey.verify().Desc -->
 ## .verify()
@@ -344,7 +337,6 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 | Version | Modifications |
 | ------- | ------------- |
 | v18 R4  | Ajoutées      |
-
 </details>
 
 
@@ -359,6 +351,7 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 | signature  | Text   | -> | Signature à vérifier, en représentation Base64 ou Base64URL, selon la valeur `options.encoding` |
 | options    | Object | -> | Options de signature                                                                            |
 | Result     | Object | <- | Statut de la vérification|<!-- END REF -->                                            |
+
 
 The `.verify()` function <!-- REF #CryptoKey.verify().Summary -->verifies the base64 signature against the utf8 representation of *message*<!-- END REF --> using the `CryptoKey` object keys and provided *options*.
 

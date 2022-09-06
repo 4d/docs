@@ -60,7 +60,9 @@ Los objetos IMAP Transporter se instancian con el comando [IMAP New transporter]
 | server     | Object             | -> | Información del servidor de correo                                             |
 | Result     | 4D.IMAPTransporter | <- | [IMAP transporter object](#imap-transporter-object)|<!-- END REF -->
 
+
 |
+
 
 #### Descripción
 
@@ -91,11 +93,12 @@ La función devuelve un [**IMAP transporter**](#imap-transporter-object). Todas 
 
 ```4d
 $server:=New object
-$server.host:="imap.gmail.com" //Obligatorio
+$server.host:="imap.gmail.com" //Mandatory
 $server.port:=993
 $server.user:="4d@gmail.com"
+
 $server.password:="XXXXXXXX"
-$server.logFile:="LogTest.txt" //log a guardar en la carpeta Logs
+$server.logFile:="LogTest.txt" //log to save in the Logs folder
 
 var $transporter : 4D.IMAPTransporter
  $transporter:=IMAP New transporter($server)

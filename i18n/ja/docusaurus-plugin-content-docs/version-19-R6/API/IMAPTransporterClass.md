@@ -42,6 +42,7 @@ IMAP Transporter オブジェクトは [IMP New transporter](#imap-new-transport
 | [<!-- INCLUDE #IMAPTransporterClass.unsubscribe().Syntax -->](#unsubscribe)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.unsubscribe().Summary -->|
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|
 
+
 ## IMAP New transporter
 
 <details><summary>履歴</summary>
@@ -60,7 +61,9 @@ IMAP Transporter オブジェクトは [IMP New transporter](#imap-new-transport
 | server | Object             | -> | メールサーバー情報                                                                      |
 | Result | 4D.IMAPTransporter | <- | [IMAP transporter object](#imap-transporter-object)|<!-- END REF -->
 
+
 |
+
 
 #### 詳細
 

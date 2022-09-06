@@ -86,8 +86,8 @@ The returned `CryptoKey` object encapsulates an encryption key pair. It is a sha
 | v18 R4  | Added   |
 </details>
 
-<!-- REF #CryptoKey.curve.Syntax -->
-**.curve** : Text<!-- END REF -->
+<!-- REF #CryptoKey.curve.Syntax -->**.curve** : Text<!-- END REF -->
+
 
 Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised curve name of the key<!-- END REF -->. Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512.
 <!-- END REF -->
@@ -250,6 +250,7 @@ The returned value is the public key.
 <!-- REF #CryptoKey.pem.Syntax -->
 **.pem** : Text<!-- END REF -->
 
+
 <!-- REF #CryptoKey.pem.Summary -->
 PEM definition of an encryption key to load. If the key is a private key, the RSA or ECDSA public key will be deduced from it. <!-- END REF -->
 
@@ -263,8 +264,7 @@ PEM definition of an encryption key to load. If the key is a private key, the RS
 | v18 R4  | Added   |
 </details>
 
-<!-- REF #CryptoKey.sign().Syntax -->
-.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
+<!-- REF #CryptoKey.sign().Syntax -->.**sign** (*message* : Text ; *options* : Text) : Text<!-- END REF -->
 
 
 <!-- REF #CryptoKey.sign().Params -->
@@ -305,8 +305,8 @@ The utf8 representation of the *message* string.
 | v18 R4  | Added   |
 </details>
 
-<!-- REF #CryptoKey.size.Syntax -->
-**.size** : Integer<!-- END REF -->
+<!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
+
 
 Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the key in bits<!-- END REF -->. .
 
@@ -321,11 +321,16 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 | v18 R4  | Added   |
 </details>
 
-<!-- REF #CryptoKey.type.Syntax -->
-**.type** : Text<!-- END REF -->
+<!-- REF #CryptoKey.type.Syntax -->**.type** : Text<!-- END REF -->
 
-<!-- REF #CryptoKey.type.Summary -->
-Name of the key type - "RSA", "ECDSA", "PEM" <!-- END REF -->.<li>"RSA": an RSA key pair, using `settings.size` as [.size](#size).</li><li>"ECDSA": an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as [.curve](#curve). Note that ECDSA keys cannot be used for encryption but only for signature.</li><li>"PEM": a key pair definition in PEM format, using `settings.pem` as [.pem](#pem).</li><!-- END REF -->
+
+The <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "ECDSA", "PEM" <!-- END REF -->.
+
+- "RSA": an RSA key pair, using `settings.size` as [.size](#size).
+- "ECDSA": an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as [.curve](#curve). Note that ECDSA keys cannot be used for encryption but only for signature.
+- "PEM": a key pair definition in PEM format, using `settings.pem` as [.pem](#pem).
+
+
 
 <!-- REF CryptoKey.verify().Desc -->
 ## .verify()
@@ -349,7 +354,9 @@ Name of the key type - "RSA", "ECDSA", "PEM" <!-- END REF -->.<li>"RSA": an RSA 
 | options   | Objekt | -> | Signing options                                                                                   |
 | Ergebnis  | Objekt | <- | Status of the verification|<!-- END REF -->
 
+
 |
+
 
 The `.verify()` function <!-- REF #CryptoKey.verify().Summary -->verifies the base64 signature against the utf8 representation of *message*<!-- END REF --> using the `CryptoKey` object keys and provided *options*.
 

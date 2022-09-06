@@ -199,9 +199,14 @@ You can pass any number of values of the following supported types:
 *   Null
 *   shared object(*)
 *   shared collection(*) > Unlike standard (not shared) collections, shared collections do not support pictures, pointers, and objects or collections that are not shared.
-> Unlike standard (not shared) collections, shared collections do not support pictures, pointers, and objects or collections that are not shared.
 
-(*)When a shared object or collection is added to a shared collection, they share the same *locking identifier*. For more information on this point, refer to the **4D Developer**'s guide.
+:::note
+
+Unlike standard (not shared) collections, shared collections do not support pictures, pointers, and objects or collections that are not shared.
+
+:::
+
+(\*)When a shared object or collection is added to a shared collection, they share the same *locking identifier*. For more information on this point, refer to [4D Doc Center](https://doc.4d.com).
 
 #### Beispiel
 
