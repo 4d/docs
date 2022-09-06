@@ -92,6 +92,7 @@ Since a signal object is a [shared object](Concepts/shared.md), you can use it t
 
 <!-- REF #_command_.New signal.Syntax -->**New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
 
+
 <!-- REF #_command_.New signal.Params -->
 | Parameter    | Typ       |    | Beschreibung                                                      |
 | ------------ | --------- |:--:| ----------------------------------------------------------------- |
