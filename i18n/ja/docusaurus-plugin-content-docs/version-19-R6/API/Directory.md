@@ -3,7 +3,6 @@ id: Directory
 title: Directory クラス
 ---
 
-## 詳細
 
 <!-- REF directory.creationDate.Desc -->
 ## .creationDate
@@ -25,6 +24,8 @@ The `.creationDate` property returns <!-- REF #directory.creationDate.Summary --
 
 <!-- END REF -->
 
+<!-- REF directory.creationTime.Desc -->
+
 ## .creationTime
 
 <details><summary>履歴</summary>
@@ -41,6 +42,8 @@ The `.creationDate` property returns <!-- REF #directory.creationDate.Summary --
 The `.creationTime` property returns <!-- REF #directory.creationTime.Summary -->the creation time of the folder<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
 このプロパティは **読み取り専用** です。
+
+<!-- END REF -->
 
 <!-- REF directory.exists.Desc -->
 ## .exists
@@ -368,6 +371,7 @@ The `.path` property returns <!-- REF #directory.path.Summary -->the POSIX path 
 <!-- REF #directory.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->
 
 #### 詳細
+
 
 The `.platformPath` property returns <!-- REF #directory.platformPath.Summary -->the path of the folder expressed with the current platform syntax<!-- END REF -->.
 
