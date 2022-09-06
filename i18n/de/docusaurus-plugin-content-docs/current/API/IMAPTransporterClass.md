@@ -54,6 +54,7 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 
 <!-- REF #_command_.IMAP New transporter.Syntax -->**IMAP New transporter**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
 
+
 <!-- REF #_command_.IMAP New transporter.Params -->
 | Parameter | Typ                |    | Beschreibung                                                                   |
 | --------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
@@ -698,6 +699,7 @@ End if
 </details>
 
 <!-- REF #IMAPTransporterClass.expunge().Syntax -->**.expunge()** : Object<!-- END REF -->
+
 
 <!-- REF IMAPTransporterClass.expunge().Params -->
 | Parameter | Typ    |    | Beschreibung                                                |
