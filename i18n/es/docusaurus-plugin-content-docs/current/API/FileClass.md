@@ -61,7 +61,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 </details>
 
-<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
+<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
 
 
 <!-- REF #_command_.File.Params -->
@@ -135,7 +135,7 @@ If the command is called from a component, pass the optional *parameter to get t
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
-**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br/>**4D.File.new** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
+**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**4D.File.new** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
 
 #### Descripción
 
@@ -158,7 +158,9 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 <!--REF file.create().Note -->
 **No disponible para archivos ZIP**<!-- END REF -->
 
+
 <!--REF #FileClass.create().Syntax -->**.create()** : Boolean <!-- END REF -->
+
 
 <!--REF #FileClass.create().Params -->
 | Parámetros | Type    |    | Descripción                                                                                   |
@@ -199,6 +201,7 @@ Creación de un archivo de preferencias en la carpeta principal:
 </details>
 
 <!--REF #FileClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
+
 
 <!--REF #FileClass.createAlias().Params -->
 | Parámetros        | Type      |    | Descripción                                                            |
@@ -304,12 +307,15 @@ Desea eliminar un archivo específico en la carpeta de la base de datos:
 
 <!--REF #FileClass.getAppInfo().Syntax -->**.getAppInfo**() : Object<!-- END REF -->
 
+
 <!--REF #FileClass.getAppInfo().Params -->
 | Parámetros | Type   |    | Descripción                                                                            |
 | ---------- | ------ | -- | -------------------------------------------------------------------------------------- |
 | Result     | Object | <- | Contenido del archivo de recurso versión .exe/.dll o .plist|<!-- END REF -->
 
+
 |
+
 
 #### Descripción
 
@@ -396,6 +402,7 @@ ALERT($info.Copyright)
 
 <!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
 
+
 <!--REF #FileClass.moveTo().Params -->
 | Parámetros        | Type      |    | Descripción                               |
 | ----------------- | --------- | -- | ----------------------------------------- |
@@ -439,6 +446,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 </details>
 
 <!--REF #FileClass.open().Syntax -->**.open**( { *mode* : Text } ) : 4D.FileHandle<br/>**.open**( { *options* : Object } ) : 4D.FileHandle<!-- END REF -->
+
 
 <!--REF #FileClass.open().Params -->
 | Parámetros | Type                             |    | Descripción                                       |
@@ -517,6 +525,7 @@ $fhandle:=$f.open("read")
 
 <!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
 
+
 <!--REF #FileClass.rename().Params -->
 | Parámetros | Type    |    | Descripción                                   |
 | ---------- | ------- | -- | --------------------------------------------- |
@@ -558,6 +567,7 @@ Quieresrenombrar "ReadMe.txt" como "ReadMe_new.txt":
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
+
 
 <!--REF #FileClass.setAppInfo().Params -->
 | Parámetros | Type   |    | Descripción                                                                                                       |
@@ -642,6 +652,7 @@ $infoPlistFile.setAppInfo($info)
 
 <!--REF #FileClass.setContent().Syntax -->**.setContent** ( *content* : Blob ) <!-- END REF -->
 
+
 <!--REF #FileClass.setContent().Params -->
 | Parámetros | Type |    | Descripción                                                  |
 | ---------- | ---- | -- | ------------------------------------------------------------ |
@@ -673,7 +684,9 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 </details>
 
-<!--REF #FileClass.setText().Syntax -->**.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br/>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } ) <!-- END REF -->
+<!--REF #FileClass.setText().Syntax -->**.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br/>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } )<!-- END REF -->
+
+
 
 <!--REF #FileClass.setText().Params -->
 | Parámetros  | Type    |    | Descripción                                                           |
@@ -683,7 +696,9 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 | charSetNum  | Integer | -> | Número del conjunto de caracteres                                     |
 | breakMode   | Integer | -> | Modo de tratamiento de los saltos de línea|<!-- END REF -->
 
+
 |
+
 
 #### Descripción
 
