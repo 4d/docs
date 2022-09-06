@@ -3,7 +3,6 @@ id: Directory
 title: Clase Directory
 ---
 
-## Descripción
 
 <!-- REF directory.creationDate.Desc -->
 ## .creationDate
@@ -27,6 +26,7 @@ Esta propiedad es **de sólo lectura**.
 
 ---
 
+<!-- REF directory.creationTime.Desc -->
 ## .creationTime
 
 <details><summary>Histórico</summary>
