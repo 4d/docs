@@ -40,6 +40,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | [<!-- INCLUDE #document.modificationTime.Syntax -->](#modificationtime)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.modificationTime.Summary -->|
 | [<!-- INCLUDE #FileClass.moveTo().Syntax -->](#moveto)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.moveTo().Summary -->|
 | [<!-- INCLUDE #document.name.Syntax -->](#name)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.name.Summary -->|
+| [<!-- INCLUDE #FileClass.open().Syntax -->](#open)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.open().Summary -->|
 | [<!-- INCLUDE #document.original.Syntax -->](#original)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.original.Summary -->|
 | [<!-- INCLUDE #document.parent.Syntax -->](#parent)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.parent.Summary -->|
 | [<!-- INCLUDE #document.path.Syntax -->](#path)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.path.Summary -->|
@@ -60,7 +61,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 </details>
 
-<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
+<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
 
 
 <!-- REF #_command_.File.Params -->
@@ -134,7 +135,7 @@ If the command is called from a component, pass the optional *parameter to get t
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
-**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.File<br/>**4D.File.new** ( *fileConstant* : Integer { ; *\** } ) : 4D.File<!-- END REF -->
+**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**4D.File.new** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
 
 #### 詳細
 
@@ -157,7 +158,9 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 <!--REF file.create().Note -->
 **ZIPアーカイブには利用できません**<!-- END REF -->
 
+
 <!--REF #FileClass.create().Syntax -->**.create()** : Boolean <!-- END REF -->
+
 
 <!--REF #FileClass.create().Params -->
 | 引数     | タイプ |    | 詳細                                                              |
@@ -198,6 +201,7 @@ The `.create()` function <!-- REF #FileClass.create().Summary -->creates a file 
 </details>
 
 <!--REF #FileClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
+
 
 <!--REF #FileClass.createAlias().Params -->
 | 引数                | タイプ       |    | 詳細                                                |
@@ -302,12 +306,15 @@ The `.delete()` function <!-- REF #FileClass.delete().Summary -->deletes the fil
 
 <!--REF #FileClass.getAppInfo().Syntax -->**.getAppInfo**() : Object<!-- END REF -->
 
+
 <!--REF #FileClass.getAppInfo().Params -->
 | 引数     | タイプ    |    | 詳細                                                                               |
 | ------ | ------ | -- | -------------------------------------------------------------------------------- |
 | Result | Object | <- | Contents of .exe/.dll version resource or .plist file|<!-- END REF -->
 
+
 |
+
 
 #### 詳細
 
@@ -394,6 +401,7 @@ ALERT($info.Copyright)
 
 <!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
 
+
 <!--REF #FileClass.moveTo().Params -->
 | 引数                | タイプ       |    | 詳細                                  |
 | ----------------- | --------- | -- | ----------------------------------- |
@@ -426,6 +434,76 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <!-- INCLUDE document.name.Desc -->
 
+<!-- REF file.open().Desc -->
+## .open()
+
+<details><summary>履歴</summary>
+
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R7 | 追加 |
+</details>
+
+<!--REF #FileClass.open().Syntax -->**.open**( { *mode* : Text } ) : 4D.FileHandle<br/>**.open**( { *options* : Object } ) : 4D.FileHandle<!-- END REF -->
+
+
+<!--REF #FileClass.open().Params -->
+| 引数      | タイプ                              |    | 詳細                                               |
+| ------- | -------------------------------- | -- | ------------------------------------------------ |
+| mode    | テキスト                             | -> | 開くモード: "read", "write", "append"                 |
+| options | Object                           | -> | 開くオプション                                          |
+| Result  | [4D.FileHandle](FileHandleClass) | <- | 新規の FileHandle オブジェクト|<!-- END REF -->
+
+|
+
+#### 詳細
+
+The `.open()` function <!-- REF #FileClass.open().Summary -->creates and returns a new [4D.FileHandle](FileHandleClass) object on the file, in the specified *mode* or with the specified *options*<!-- END REF -->. [4D.FileHandle](FileHandleClass) クラスの関数とプロパティを使用して、ファイルにコンテンツを書き込んだり読み取ったり、追加したりすることができます。
+
+*mode* (text) 引数として、どのモードで FileHandle を開くかを指定します。
+
+| *mode*   | 詳細                                                                                                                                          |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| "read"   | (デフォルト) ファイルから値を読み取るための FileHandle を作成します。 ディスク上にファイルが存在しない場合は、エラーが返されます。 "read" モードの FileHandle は、同じ File オブジェクトに対していくつでも開くことができます。        |
+| "write"  | ファイルに値を書き込むための FileHandle を作成します (書き込みはファイルの先頭から)。 ディスク上にファイルが存在しない場合は、作成されます。 "write" モードの FileHandle は、同じ File オブジェクトに対して 1つのみ開くことができます。  |
+| "append" | ファイルに値を書き込むための FileHandle を作成します (書き込みはファイルの最後から)。 ディスク上にファイルが存在しない場合は、作成されます。 "append" モードの FileHandle は、同じ File オブジェクトに対して 1つのみ開くことができます。 |
+
+> *mode* の値は、文字の大小を区別します。
+
+*option* (object) 引数を使って、以下のプロパティを通じて FileHandle にさらなるオプションを渡すことができます (これらのプロパティはその後、開かれた [FileHandle オブジェクト](FileHandleClass) から取得できます)。
+
+| *options*         | タイプ             | 詳細                                                                     | デフォルト          |
+| ----------------- | --------------- | ---------------------------------------------------------------------- | -------------- |
+| `.mode`           | テキスト            | 開くモード (上記の *mode* 参照)                                                  | "read"         |
+| `.charset`        | テキスト            | ファイルの読み取りや書き込みに使用される文字セット。 セットの標準名を使用します (たとえば、"ISO-8859-1" や "UTF-8") | "UTF-8"        |
+| `.breakModeRead`  | Text または Number | ファイルの読み取り時に使用される改行の処理モード (下記参照)                                        | "native" または 1 |
+| `.breakModeWrite` | Text または Number | ファイルの書き込み時に使用される改行の処理モード (下記参照)                                        | "native" または 1 |
+
+`.breakModeRead` と `.breakModeWrite` は、改行文字に適用する処理を指定します。 以下のいずれかの値を使用できます (テキストまたは数値):
+
+| 改行モードの値 (テキスト) | 改行モードの値 (数値/定数)                   | 詳細                                                                                                       |
+| -------------- | --------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| "native"       | 1 (`Document with native format`) | (デフォルト) 改行は OS のネイティブフォーマットに変換されます。 macOS では LF (ラインフィード) に、Windows では CRLF (キャリッジリターン＋ラインフィード) に変換されます。 |
+| "crlf"         | 2 (`Document with CRLF`)          | 改行は Windows のデフォルトフォーマットである CRLF (キャリッジリターン＋ラインフィード) へと変換されます。                                           |
+| "cr"           | 3 (`Document with CR`)            | 改行はクラシック Mac OS のデフォルトフォーマットである CR (キャリッジリターン) へと変換されます。                                                 |
+| "lf"           | 4 (`Document with LF`)            | 改行は Unix および macOS のデフォルトフォーマットである LF (ラインフィード) へと変換されます。                                                |
+
+> *break mode as text* の値は、文字の大小を区別します。
+
+#### 例題
+
+"ReadMe.txt" ファイルを読み取るための FileHandle を作成します:
+
+```4d
+var $f : 4D.File
+var $fhandle : 4D.FileHandle
+
+$f:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)
+$fhandle:=$f.open("read")
+
+```
+<!-- END REF -->
+
 <!-- INCLUDE document.original.Desc -->
 
 <!-- INCLUDE document.parent.Desc -->
@@ -445,6 +523,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 </details>
 
 <!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.File<!-- END REF -->
+
 
 <!--REF #FileClass.rename().Params -->
 | 引数      | タイプ     |    | 詳細                                     |
@@ -487,6 +566,7 @@ The `.rename()` function <!-- REF #FileClass.rename().Summary -->renames the fil
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
+
 
 <!--REF #FileClass.setAppInfo().Params -->
 | 引数   | タイプ    |    | 詳細                                                                                          |
@@ -571,6 +651,7 @@ $infoPlistFile.setAppInfo($info)
 
 <!--REF #FileClass.setContent().Syntax -->**.setContent** ( *content* : Blob ) <!-- END REF -->
 
+
 <!--REF #FileClass.setContent().Params -->
 | 引数      | タイプ  |    | 詳細                                       |
 | ------- | ---- | -- | ---------------------------------------- |
@@ -602,7 +683,9 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 </details>
 
-<!--REF #FileClass.setText().Syntax -->**.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br/>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } ) <!-- END REF -->
+<!--REF #FileClass.setText().Syntax -->**.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br/>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } )<!-- END REF -->
+
+
 
 <!--REF #FileClass.setText().Params -->
 | 引数          | タイプ  |    | 詳細                                 |
@@ -612,7 +695,9 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 | charSetNum  | 整数   | -> | 文字セットの番号                           |
 | breakMode   | 整数   | -> | 改行の処理モード<!-- END REF -->
 
+
 |
+
 
 #### 詳細
 
