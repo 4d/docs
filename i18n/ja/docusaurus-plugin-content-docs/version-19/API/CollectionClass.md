@@ -184,9 +184,11 @@ The `New shared collection` command <!-- REF #_command_.New shared collection.Su
 * null
 * 共有オブジェクト(*)
 * shared collection(*) > Unlike standard (not shared) collections, shared collections do not support pictures, pointers, and objects or collections that are not shared.
+
 > 標準のコレクション (非共有コレクション) とは異なり、共有コレクションはピクチャーやポインター、共有でないオブジェクトおよびコレクションはサポートしていません。
 
-(*)When a shared object or collection is added to a shared collection, they share the same*locking identifier*. この点についてのより詳細は、**4Dランゲージリファレンス** の [ロック識別子](https://doc.4d.com/4Dv18/4D/18.4/Shared-objects-and-shared-collections.300-5233766.ja.html#3648963) の章を参照してください。
+(\*)When a shared object or collection is added to a shared collection, they share the same *locking identifier*. For more information on this point, refer to [4D Doc Center](https://doc.4d.com).
+
 
 #### 例題
 
@@ -315,6 +317,7 @@ $vSize:=$col.length //$vSize=0
 |
 
 #### 詳細
+
 
 The `.combine()` function <!-- REF #collection.combine().Summary -->inserts *col2* elements at the end or at the specified *index* position in the collection instance and returns the edited collection<!-- END REF -->. `.insert()` 関数とは異なり、`.combine()` は *col2* の各要素を元のコレクション追加します (*col2* 自体が単一のコレクション要素としては挿入されるわけではありません)。
 > このコマンドは、元のコレクションを変更します。
