@@ -557,8 +557,7 @@ See the example from the [.setRemoteContextInfo()](#example-1-3) section.
 
 #### See also
 
-[.setRemoteContextInfo()](#setremotecontextinfo)<br/>[.getAllRemoteContexts()](#getallremotecontexts)
-<br/>[.clearAllRemoteContexts()](#clearallremotecontexts)
+[.setRemoteContextInfo()](#setremotecontextinfo)<br/>[.getAllRemoteContexts()](#getallremotecontexts)<br/>[.clearAllRemoteContexts()](#clearallremotecontexts)
 
 <!-- REF DataStoreClass.getRequestLog().Desc -->
 ## .getRequestLog()
