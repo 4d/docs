@@ -42,6 +42,7 @@ Les objets Transporter POP3 sont instanciés avec la commande [POP3 New transpor
 
 <!-- REF #_command_.POP3 New transporter.Syntax -->**POP3 New transporter**( *server* : Object ) : 4D.POP3Transporter<!-- END REF -->
 
+
 <!-- REF #_command_.POP3 New transporter.Params -->
 | Paramètres | Type               |    | Description                                                                    |
 | ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
