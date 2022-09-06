@@ -59,9 +59,10 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 </details>
 
-<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
+<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; * } ) : 4D.Folder<!-- END REF -->
 
-<!-- REF FolderClass.Folder.Params -->
+
+<!-- REF #_command_.Folder.Params -->
 | Paramètres     | Type      |    | Description                                        |
 | -------------- | --------- |:--:| -------------------------------------------------- |
 | path           | Text      | -> | Chemin du dossier                                  |
@@ -111,6 +112,8 @@ Dans le paramètre *folderConstant*, passez un dossier 4D interne ou un dossier 
 
 If the command is called from a component, pass the optional *parameter to get the path of the host database. Otherwise, if you omit the* parameter, a null object is always returned.
 
+> On Windows, in merged clients, the location of built-in folders is modified if the `ShareLocalResourcesOnWindowsClient` [BuildApp key](../Desktop/building.md#buildapp4dsettings) is used.
+
 ## 4D.Folder.new()
 
 <details><summary>Historique</summary>
@@ -121,7 +124,8 @@ If the command is called from a component, pass the optional *parameter to get t
 </details>
 
 <!-- REF #4D.Folder.new().Syntax -->
-**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br/>**4D.Folder.new** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
+**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.Folder<br/>**4D.Folder.new** ( *folderConstant* : Integer { ; * } ) : 4D.Folder<!-- END REF -->
+
 
 #### Description
 
@@ -148,7 +152,9 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 | ---------- | ------- | -- | -------------------------------------------------------------------------------- |
 | Result     | Boolean | <- | Vrai si le dossier a été créé avec succès, sinon Faux|<!-- END REF -->
 
+
 |
+
 
 #### Description
 
@@ -199,6 +205,7 @@ End if
 </details>
 
 <!--REF #FolderClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
+
 
 <!--REF #FolderClass.createAlias().Params -->
 | Paramètres         | Type      |    | Description                                                                |
@@ -329,6 +336,7 @@ Lorsque la constante `Delete with contents` est passée :
 
 <!--REF #FolderClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
 
+
 <!--REF #FolderClass.moveTo().Params -->
 | Paramètres         | Type      |    | Description                                |
 | ------------------ | --------- | -- | ------------------------------------------ |
@@ -383,6 +391,7 @@ Vous souhaitez déplacer et renommer un dossier :
 </details>
 
 <!--REF #FolderClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.Folder<!-- END REF -->
+
 
 <!--REF #FolderClass.rename().Params -->
 | Paramètres | Type      |    | Description                                |
