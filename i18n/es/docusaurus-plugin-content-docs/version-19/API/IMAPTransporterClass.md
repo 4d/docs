@@ -54,6 +54,7 @@ Los objetos IMAP Transporter se instancian con el comando [IMAP New transporter]
 
 <!-- REF #_command_.IMAP New transporter.Syntax -->**IMAP New transporter**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
 
+
 <!-- REF #_command_.IMAP New transporter.Params -->
 | Parámetros | Type               |    | Descripción                                                                    |
 | ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
@@ -70,16 +71,16 @@ The `IMAP New transporter` command <!-- REF #_command_.IMAP New transporter.Summ
 
 En el parámetro *server*, pase un objeto que contenga las siguientes propiedades:
 
-| *server*                                                                                                                                                                                                                                                                                                                                                | Valor por defecto (si se omite)                                          |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| *server*                                                                                                                                                                                                                                                                                                                                                                                                                   | Valor por defecto (si se omite)                                          |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                                    |
-| .**accessTokenOAuth2**: TextText string representing OAuth 2 authorization credentials. Sólo se utiliza con OAUTH2 `authenticationMode`. Si se utiliza `accessTokenOAuth2` pero se omite `authenticationMode`, se utiliza el protocolo OAuth 2 (si el servidor lo permite). No se devuelve en el objeto *[IMAP transporter](#imap-transporter-object)*. | ninguno                                                                  |
+| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>Text string or token object representing OAuth2 authorization credentials. Sólo se utiliza con OAUTH2 `authenticationMode`. Si se utiliza `accessTokenOAuth2` pero se omite `authenticationMode`, se utiliza el protocolo OAuth 2 (si el servidor lo permite). No se devuelve en el objeto *[IMAP transporter](#imap-transporter-object)*. | ninguno                                                                  |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| se utiliza el modo de autenticación más seguro soportado por el servidor |
 | [<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Summary -->| 300                                                                      |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                       |
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *mandatory*                                                              |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| ninguno                                                                  |
-| .**password** : TextUser password for authentication on the server. No se devuelve en el objeto *[IMAP transporter](#imap-transporter-object)*.                                                                                                                                                                                                         | ninguno                                                                  |
+| .**password** : Text<br/>User password for authentication on the server. No se devuelve en el objeto *[IMAP transporter](#imap-transporter-object)*.                                                                                                                                                                                                                                                                 | ninguno                                                                  |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 993                                                                      |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| ninguno                                                                  |
 > **Atención**: asegúrese de que el tiempo de espera definido sea menor que el tiempo de espera del servidor, de lo contrario el tiempo de espera del cliente será inútil.
@@ -93,12 +94,11 @@ La función devuelve un [**IMAP transporter**](#imap-transporter-object). Todas 
 
 ```4d
 $server:=New object
-$server.host:="imap.gmail.com" //Mandatory
+$server.host:="imap.gmail.com" //Obligatorio
 $server.port:=993
 $server.user:="4d@gmail.com"
-
 $server.password:="XXXXXXXX"
-$server.logFile:="LogTest.txt" //log to save in the Logs folder
+$server.logFile:="LogTest.txt" //log a guardar en la carpeta Logs
 
 var $transporter : 4D.IMAPTransporter
  $transporter:=IMAP New transporter($server)
@@ -304,6 +304,8 @@ $status:=$imap.append($msg; "Drafts")
 
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
+<!-- REF #IMAPTransporterClass.checkConnectionDelay.Desc -->
+
 ## .checkConnectionDelay
 
 <details><summary>Histórico</summary>
@@ -320,6 +322,8 @@ $status:=$imap.append($msg; "Drafts")
 
 The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.checkConnectionDelay.Summary -->the maximum time (in seconds) allowed prior to checking the connection to the server<!-- END REF -->.  Si se supera este tiempo entre dos llamadas al método, se comprobará la conexión con el servidor. Por defecto, si la propiedad no se ha definido en el objeto *server<*, el valor es de 300.
 > **Atención**: asegúrese de que el tiempo de espera definido sea menor que el tiempo de espera del servidor, de lo contrario el tiempo de espera del cliente será inútil.
+
+<!-- END REF -->
 
 <!-- INCLUDE transporter.connectionTimeOut.Desc -->
 
@@ -694,6 +698,7 @@ End if
 
 <!-- REF #IMAPTransporterClass.expunge().Syntax -->**.expunge()** : Object<!-- END REF -->
 
+
 <!-- REF IMAPTransporterClass.expunge().Params -->
 | Parámetros | Type   |    | Descripción                                                 |
 | ---------- | ------ |:--:| ----------------------------------------------------------- |
@@ -747,6 +752,7 @@ $status:=$transporter.expunge()
 <!-- END REF -->
 
 <!-- REF IMAPTransporterClass.getBoxInfo().Desc -->
+
 ## .getBoxInfo()
 
 <details><summary>Histórico</summary>
@@ -1061,8 +1067,7 @@ El parámetro opcional *options* permite definir las partes de los mensajes a de
 | Propiedad | Type       | Descripción                                                                                                                           |
 | --------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | lista     | Collection | Colección de objetos [`Email`](EmailObjectClass.md#email-object). Si no se encuentran objetos Email, se devuelve una colección vacía. |
-
-|notFound |Collection| Colección de:<br/><ul><li>primera sintaxis - IDs de mensajes pasados previamente que no existen</li><li>segunda sintaxis - números de secuencia de los mensajes entre startMsg y endMsg que no existen</li></ul>Se devuelve una colección vacía si se encuentran todos los mensajes.|
+| notFound  | Collection | Colección de:<br/><ul><li>primera sintaxis - IDs de mensajes pasados previamente que no existen</li><li>segunda sintaxis - números de secuencia de los mensajes entre startMsg y endMsg que no existen</li></ul>Se devuelve una colección vacía si se encuentran todos los mensajes.                |
 
 #### Ejemplo
 
@@ -1182,8 +1187,7 @@ El parámetro opcional *updateSeen* permite indicar si el mensaje está marcado 
 
 </details>
 
-<!-- REF #IMAPTransporterClass.move().Syntax -->
-**.move**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br/>**.move**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
+<!-- REF #IMAPTransporterClass.move().Syntax -->**.move**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br/>**.move**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
 
 
 <!-- REF #IMAPTransporterClass.move().Params -->
@@ -1480,12 +1484,13 @@ $options:=New object
 $pw:=Request("Please enter your password:")
 
 If(OK=1) $options.host:="imap.gmail.com"
+
 $options.user:="test@gmail.com"
 $options.password:=$pw
 
 $transporter:=IMAP New transporter($options)
 
-// renombrar buzón
+// rename mailbox
 $status:=$transporter.renameBox("Invoices"; "Bills")
 
 If ($status.success)
@@ -1616,7 +1621,7 @@ Las claves de búsqueda pueden solicitar el valor a buscar:
 **OLD**: mensajes que no tienen el marcador \Recent.  
 **SEEN**: mensajes que tienen el marcador \Seen.  
 **UNSEEN**: Mensajes que no tienen el marcador \Seen.  
-**NEW**: mensajes que tienen el marcador \Recent pero no el marcador \Seen. This is functionally equivalent to "(RECENT UNSEEN)".  
+**NEW**: mensajes que tienen el marcador \Recent pero no el marcador \Seen. This is functionally equivalent to “(RECENT UNSEEN)”.  
 ***KEYWORD ***flag******: Messages with the specified keyword set.  
 ***UNKEYWORD ***flag******: Messages that do not have the specified keyword set.  
 ***BEFORE ***date******: Messages whose internal date is earlier than the specified date.  
