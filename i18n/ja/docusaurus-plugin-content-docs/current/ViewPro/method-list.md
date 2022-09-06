@@ -1902,7 +1902,8 @@ The `VP Get names` command <!-- REF #_method_.VP Get names.Summary -->returns a 
 
 ```4d
 var $list : Collection
-$list:=VP Get names("ViewProArea";2) // 3番目のシートにある名前
+
+$list:=VP Get names("ViewProArea";2) //names in 3rd sheet
 ```
 
 #### 参照
@@ -2359,7 +2360,9 @@ VP SET CELL STYLE($range;$style)
 | ---------- | ---- | -- | ----------------------- |
 | vpAreaName | テキスト | -> | 4D View Pro フォームオブジェクト名 |
 
-|styleName|Text|->|Name of style| |sheet|Integer|->|Sheet index (current sheet if omitted)| |Result|Object|<-|Style sheet object|<!-- END REF -->
+|styleName|Text|->|Name of style| |sheet|Integer|->|Sheet index (current sheet if omitted)|
+
+|Result|Object|<-|Style sheet object|<!-- END REF -->
 
 #### 詳細
 
@@ -2469,7 +2472,7 @@ $styles:=VP Get stylesheets("ViewProArea")
 <!-- REF #_method_.VP Get table range.Syntax -->
 **VP Get table range** ( *vpAreaName* : Text ; *tableName* : Text {; *onlyData* : Integer {; *sheet* : Integer }} ) : Object<!-- END REF -->
 
-<!-- REF #_method_.VP Get tables.Params -->
+<!-- REF #_method_.VP Get table range.Params -->
 
 | 引数         | タイプ    |    | 詳細                                                       |
 | ---------- | ------ | -- | -------------------------------------------------------- |
@@ -2779,6 +2782,7 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOption
 |![example-import-csv](../assets/en/ViewPro/vp-import-document-csv-result.png)
 
 #### 参照
+
 
 [VP EXPORT DOCUMENT](#vp-export-document)<br/>[VP NEW DOCUMENT](#vp-new-document)
 
@@ -5020,12 +5024,11 @@ The `VP SET FROZEN PANES` command <!-- REF #_method_.VP SET FROZEN PANES.Summary
 
 *paneObj* には、固定化するカラムと行を定義するオブジェクトを渡します。 以下のカラムまたは行のプロパティの値にゼロを設定すると、そのプロパティをリセット (固定解除) します。 プロパティが 0以下の値に設定された場合、コマンドは何もしません。 以下のものを渡すことができます:
 
-| プロパティ               | タイプ | 詳細                 |
-| ------------------- | --- | ------------------ |
-| columnCount         | 整数  | シートの左側にある固定化されたカラム |
-| trailingColumnCount | 整数  | シートの右側にある固定化されたカラム |
-| rowCount            | 整数  | シートの上側にある固定化された行   |
-| trailingRowCount    | 整数  | シートの下側にある固定化された行   |
+| プロパティ | タイプ | 詳細 |
+| ----- | --- | -- |
+|       |     |    |
+
+|columnCount | Integer | The number of frozen columns on the left of the sheet| |trailingColumnCount |Integer | The number of frozen columns on the right of the sheet |rowCount | Integer |  The number of frozen rows on the top of the sheet | |trailingRowCount | Integer |  The number of frozen rows on the bottom of the sheet|
 
 任意の *sheet* 引数として、シートのインデックス (0 起点) を渡すことで、定義されるレンジが属するスプレッドシートを指定することができます。 省略された場合はデフォルトでカレントスプレッドシートが使用されます。 以下の定数を使用することでカレントのスプレッドシートを明示的に選択することができます:
 
