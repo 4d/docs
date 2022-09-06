@@ -42,6 +42,7 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 | [<!-- INCLUDE #IMAPTransporterClass.unsubscribe().Syntax -->](#unsubscribe)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.unsubscribe().Summary -->|
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|
 
+
 ## IMAP New transporter
 
 <details><summary>Histórico</summary>
@@ -60,7 +61,9 @@ IMAP Transporter objects are instantiated with the [IMAP New transporter](#imap-
 | server     | Objeto             | -> | Informação de servidor de correio                                              |
 | Resultados | 4D.IMAPTransporter | <- | [IMAP transporter object](#imap-transporter-object)|<!-- END REF -->
 
+
 |
+
 
 #### Descrição
 

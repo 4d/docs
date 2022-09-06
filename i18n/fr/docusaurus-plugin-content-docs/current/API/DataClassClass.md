@@ -657,9 +657,12 @@ The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns 
 | ---------- | ------ | -- | ---------------------------------------------------------------------------------------------- |
 | result     | Object | <- | Object describing the contents of the ORDA cache for the dataclass.|<!-- END REF -->
 
+
 |
 
+
 > **Mode avancé :** Cette fonction est destinée aux développeurs qui souhaitent personnaliser les fonctionnalités par défaut de ORDA dans le cadre de configurations spécifiques. Dans la plupart des cas, vous n'aurez pas besoin de l'utiliser.
+
 
 #### Description
 
@@ -685,6 +688,7 @@ Chaque objet "entrée" de la collection `entries` contient les propriétés suiv
 | key       | Text    | Clé primaire de l'entité.                |
 
 L'objet `data` de chaque entrée contient les propriétés suivantes :
+
 | Propriété              | Type    | Description                                                                                                                                    |
 | ---------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
 | __KEY                  | String  | Clé primaire de l'entité                                                                                                                       |

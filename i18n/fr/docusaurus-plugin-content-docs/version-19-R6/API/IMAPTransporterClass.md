@@ -42,6 +42,7 @@ Les objets IMAP Transporter sont instanciés avec la commande [IMAP New transpor
 | [<!-- INCLUDE #IMAPTransporterClass.unsubscribe().Syntax -->](#unsubscribe)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.unsubscribe().Summary -->|
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|
 
+
 ## IMAP New transporter
 
 <details><summary>Historique</summary>
@@ -60,7 +61,9 @@ Les objets IMAP Transporter sont instanciés avec la commande [IMAP New transpor
 | server     | Object             | -> | Informations sur le serveur IMAP                                               |
 | Result     | 4D.IMAPTransporter | <- | [IMAP transporter object](#imap-transporter-object)|<!-- END REF -->
 
+
 |
+
 
 #### Description
 

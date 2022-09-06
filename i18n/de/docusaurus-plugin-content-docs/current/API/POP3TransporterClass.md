@@ -27,6 +27,8 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 | [<!-- INCLUDE #POP3TransporterClass.undeleteAll().Syntax -->](#undeleteall)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #POP3TransporterClass.undeleteAll().Summary -->|
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->|
 
+
+
 <!-- REF POP3TransporterClass.POP3 New transporter.Desc -->
 ## POP3 New transporter
 
@@ -46,7 +48,9 @@ POP3 Transporter objects are instantiated with the [POP3 New transporter](#pop3-
 | server    | object             | -> | Mail server information                                                        |
 | Ergebnis  | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object)|<!-- END REF -->
 
+
 |
+
 
 #### Beschreibung
 

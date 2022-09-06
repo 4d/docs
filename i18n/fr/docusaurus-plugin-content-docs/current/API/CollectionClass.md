@@ -197,9 +197,14 @@ Vous pouvez passer tout nombre de valeurs de n'importe quel type pris en charge 
 *   Null
 *   shared object(*)
 *   shared collection(*) > Unlike standard (not shared) collections, shared collections do not support pictures, pointers, and objects or collections that are not shared.
-> Cette fonction modifie la collection d'origine.
 
-(\*)Lorsqu'un objet partagé ou une collection partagée est ajouté(e) comme élément à une collection partagée, il/elle hérite de son (*)locking identifier*. Pour plus d'informations sur ce point, reportez-vous au manuel **Concepts du langage 4D**.
+:::note
+
+Cette fonction modifie la collection d'origine.
+
+:::
+
+(\*)When a shared object or collection is added to a shared collection, they share the same *locking identifier*. For more information on this point, refer to [4D Doc Center](https://doc.4d.com).
 
 #### Exemple
 

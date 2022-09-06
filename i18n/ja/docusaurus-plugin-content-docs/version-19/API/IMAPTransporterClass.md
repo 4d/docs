@@ -60,7 +60,9 @@ IMAP Transporter オブジェクトは [IMP New transporter](#imap-new-transport
 | server | Object             | -> | メールサーバー情報                                                                      |
 | Result | 4D.IMAPTransporter | <- | [IMAP transporter object](#imap-transporter-object)|<!-- END REF -->
 
+
 |
+
 
 #### 詳細
 
@@ -91,18 +93,19 @@ The `IMAP New transporter` command <!-- REF #_command_.IMAP New transporter.Summ
 
 ```4d
 $server:=New object
-$server.host:="imap.gmail.com" // 必須
+$server.host:="imap.gmail.com" //Mandatory
 $server.port:=993
 $server.user:="4d@gmail.com"
+
 $server.password:="XXXXXXXX"
-$server.logFile:="LogTest.txt" // Logsフォルダーに保存するログファイル
+$server.logFile:="LogTest.txt" //log to save in the Logs folder
 
 var $transporter : 4D.IMAPTransporter
-$transporter:=IMAP New transporter($server)
+ $transporter:=IMAP New transporter($server)
 
 $status:=$transporter.checkConnection()
 If(Not($status.success))
-   ALERT("エラーが発生しました: "+$status.statusText)
+   ALERT("An error occurred: "+$status.statusText)
 End if
 ```
 

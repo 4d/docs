@@ -60,7 +60,9 @@ Les objets IMAP Transporter sont instanciés avec la commande [IMAP New transpor
 | server     | Object             | -> | Informations sur le serveur IMAP                                               |
 | Result     | 4D.IMAPTransporter | <- | [IMAP transporter object](#imap-transporter-object)|<!-- END REF -->
 
+
 |
+
 
 #### Description
 
