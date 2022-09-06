@@ -49,6 +49,13 @@ $col:=New collection // $col を空のコレクションで初期化します
 
 ## 複合代入演算子
 
+<details><summary>履歴</summary>
+
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R4 | 追加 |
+</details>
+
 4Dでは、代入と演算を組み合わせた **複合代入演算子** をサポートしています。 その一例として、加算代入演算子 (`+=`) があります。
 
 ```4d
@@ -134,6 +141,13 @@ $t2*=2 // $t2="HelloHello"
 
 ### AND 短絡演算子 (&&)
 
+<details><summary>履歴</summary>
+
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R4 | 追加 |
+</details>
+
 ルールは以下の通りです。
 
 `Expr1 && Expr2` において:
@@ -191,6 +205,13 @@ End if
 
 ### OR 短絡演算子 (||)
 
+<details><summary>履歴</summary>
+
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R4 | 追加 |
+</details>
+
 || 演算子は、指定されたオペランドのうち 1つの値を返します。 式は左から右に評価され、以下のルールに基づいて "短絡" 評価の可能性をテストされます。
 
 `Expr1 || Expr2` において:
@@ -241,6 +262,13 @@ $name:=$person.maidenName || $person.name
 
 ## 三項演算子
 
+<details><summary>履歴</summary>
+
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R4 | 追加 |
+</details>
+
 三項演算子を使うと、条件式を 1行で書くことができます。 たとえば、[If...Else](./cf_branching.md#ifelseend-if) 文を完全に置き換えることができます。
 
 三項演算子は 3つのオペランドを次の順序で受け取ります:
@@ -283,6 +311,13 @@ $fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$per
 ```
 
 ## Truthy と Falsy
+
+<details><summary>履歴</summary>
+
+| バージョン  | 内容 |
+| ------ | -- |
+| v19 R4 | 追加 |
+</details>
 
 各値はデータ型のほかに、固有のブール値を持ちます。 このブール値は **truthy** (真的) または **falsy** (偽的) です。
 
