@@ -1902,7 +1902,8 @@ Les propriétés disponibles dépendent du type d'élément nommé (cellule nomm
 
 ```4d
 var $list : Collection
-$list:=VP Get names("ViewProArea";2) //noms de la 3e feuille
+
+$list:=VP Get names("ViewProArea";2) //names in 3rd sheet
 ```
 
 #### Voir également
@@ -2358,7 +2359,9 @@ Pour centrer le texte des cellules fusionnées dans ce document :
 | ---------- | ---- | -- | --------------------------------------- |
 | vpAreaName | Text | -> | Nom d'objet formulaire zone 4D View Pro |
 
-|styleName|Text|->|Name of style| |sheet|Integer|->|Sheet index (current sheet if omitted)| |Result|Object|<-|Style sheet object|<!-- END REF -->
+|styleName|Text|->|Name of style| |sheet|Integer|->|Sheet index (current sheet if omitted)|
+
+|Result|Object|<-|Style sheet object|<!-- END REF -->
 
 #### Description
 
@@ -2468,7 +2471,7 @@ Dans ce cas, la feuille courante utilise deux objets style :
 <!-- REF #_method_.VP Get table range.Syntax -->
 **VP Get table range** ( *vpAreaName* : Text ; *tableName* : Text {; *onlyData* : Integer {; *sheet* : Integer }} ) : Object<!-- END REF -->
 
-<!-- REF #_method_.VP Get tables.Params -->
+<!-- REF #_method_.VP Get table range.Params -->
 
 | Paramètres | Type    |    | Description                                              |
 | ---------- | ------- | -- | -------------------------------------------------------- |
@@ -2778,6 +2781,7 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOption
 |![example-import-csv](../assets/en/ViewPro/vp-import-document-csv-result.png)
 
 #### Voir également
+
 
 [VP EXPORT DOCUMENT](#vp-export-document)<br/>[VP NEW DOCUMENT](#vp-new-document)
 
@@ -5018,12 +5022,11 @@ Pass the the name of the 4D View Pro area in *vpAreaName*. Si vous passez un nom
 
 Vous pouvez passer un objet définissant les lignes et colonnes à figer dans le paramètre *paneObj*. Si vous fixez la valeur d'une propriété de colonne ou de ligne à zéro, cela réinitialise (ne fige plus) la propriété. Si une propriété est définie sur une valeur inférieure à zéro, la commande ne fait rien. Vous pouvez passer :
 
-| Propriété           | Type    | Description                                              |
-| ------------------- | ------- | -------------------------------------------------------- |
-| columnCount         | Integer | Le nombre de colonnes figées sur la gauche de la feuille |
-| trailingColumnCount | Integer | Le nombre de colonnes figées sur la droite de la feuille |
-| rowCount            | Integer | Le nombre de lignes figées en haut de la feuille         |
-| trailingRowCount    | Integer | Le nombre de lignes figées en bas de la feuille          |
+| Propriété | Type | Description |
+| --------- | ---- | ----------- |
+|           |      |             |
+
+|columnCount | Integer | The number of frozen columns on the left of the sheet| |trailingColumnCount |Integer | The number of frozen columns on the right of the sheet |rowCount | Integer |  The number of frozen rows on the top of the sheet | |trailingRowCount | Integer |  The number of frozen rows on the bottom of the sheet|
 
 Dans le paramètre optionnel *sheet*, vous pouvez désigner une feuille spécifique dans laquelle sera définie la plage (la numérotation commence à zéro). Si le paramètre est omis, la feuille courante est utilisée par défaut. Vous pouvez sélectionner explicitement la feuille courante à l'aide de la constante suivante :
 
