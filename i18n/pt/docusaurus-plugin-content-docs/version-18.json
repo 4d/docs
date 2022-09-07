@@ -1,0 +1,70 @@
+{
+  "version.label": {
+    "message": "v18",
+    "description": "The label for version 18"
+  },
+  "sidebar.docs.category.Getting Started": {
+    "message": "Começando",
+    "description": "The label for category Getting Started in sidebar docs"
+  },
+  "sidebar.docs.category.4D Language Concepts": {
+    "message": "4D Language Concepts",
+    "description": "The label for category 4D Language Concepts in sidebar docs"
+  },
+  "sidebar.docs.category.Data Types": {
+    "message": "Tipos de dados",
+    "description": "The label for category Data Types in sidebar docs"
+  },
+  "sidebar.docs.category.Control Flow": {
+    "message": "Control Flow",
+    "description": "The label for category Control Flow in sidebar docs"
+  },
+  "sidebar.docs.category.Project Databases": {
+    "message": "Project Databases",
+    "description": "The label for category Project Databases in sidebar docs"
+  },
+  "sidebar.docs.category.Form Editor": {
+    "message": "Form Editor",
+    "description": "The label for category Form Editor in sidebar docs"
+  },
+  "sidebar.docs.category.Form Objects": {
+    "message": "Form Objects",
+    "description": "The label for category Form Objects in sidebar docs"
+  },
+  "sidebar.docs.category.Form Object Properties": {
+    "message": "Form Object Properties",
+    "description": "The label for category Form Object Properties in sidebar docs"
+  },
+  "sidebar.docs.category.Menus": {
+    "message": "Menus",
+    "description": "The label for category Menus in sidebar docs"
+  },
+  "sidebar.docs.category.MSC": {
+    "message": "MSC",
+    "description": "The label for category MSC in sidebar docs"
+  },
+  "sidebar.docs.category.Backup and Restore": {
+    "message": "Backup and Restore",
+    "description": "The label for category Backup and Restore in sidebar docs"
+  },
+  "sidebar.docs.category.Users and Groups": {
+    "message": "Users and Groups",
+    "description": "The label for category Users and Groups in sidebar docs"
+  },
+  "sidebar.docs.category.REST Server": {
+    "message": "REST Server",
+    "description": "The label for category REST Server in sidebar docs"
+  },
+  "sidebar.docs.category.Guides": {
+    "message": "Guides",
+    "description": "The label for category Guides in sidebar docs"
+  },
+  "sidebar.docs.category.API (general)": {
+    "message": "API (general)",
+    "description": "The label for category API (general) in sidebar docs"
+  },
+  "sidebar.docs.category.API (dataClass)": {
+    "message": "API (dataClass)",
+    "description": "The label for category API (dataClass) in sidebar docs"
+  }
+}
