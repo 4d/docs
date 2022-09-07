@@ -49,6 +49,13 @@ Les résultats des opérateurs dépendent des **types de données** auxquels ils
 
 ## Opérateurs d'affectation composés
 
+<details><summary>Historique</summary>
+
+| Version | Modifications |
+| ------- | ------------- |
+| v19 R4  | Ajoutées      |
+</details>
+
 4D fournit des **opérateurs d'affectation composés** qui combinent l'affectation avec une autre opération. L'opérateur d'affectation d'addition (`+=`) en est un exemple :
 
 ```4d
@@ -134,6 +141,13 @@ La différence avec les opérateurs booléens simples [**&** et **||**](dt_boole
 
 ### Opérateur en court-circuit AND (&&)
 
+<details><summary>Historique</summary>
+
+| Version | Modifications |
+| ------- | ------------- |
+| v19 R4  | Ajoutées      |
+</details>
+
 La règle est la suivante :
 
 Soit `Expr1 && Expr2` :
@@ -191,6 +205,13 @@ Si $myObject est Null, le second argument n'est pas exécuté, donc aucune erreu
 
 ### Opérateur en court-circuit OR (||)
 
+<details><summary>Historique</summary>
+
+| Version | Modifications |
+| ------- | ------------- |
+| v19 R4  | Ajoutées      |
+</details>
+
 L'opérateur || retourne la valeur d'une des opérandes spécifiées. L'expression est évaluée de gauche à droite et testée pour une éventuelle évaluation en "court-circuit" en utilisant la règle suivante :
 
 Soit `Expr1 || Expr2` :
@@ -241,6 +262,13 @@ Cela signifie que `a || b && c` est évalué comme `(a || b) && c`.
 
 ## Opérateur ternaire
 
+<details><summary>Historique</summary>
+
+| Version | Modifications |
+| ------- | ------------- |
+| v19 R4  | Ajoutées      |
+</details>
+
 L'opérateur conditionnel ternaire vous permet d'écrire des expressions conditionnelles sur une seule ligne. Par exemple, il peut remplacer une séquence complète d'instructions [If...Else](./cf_branching.md#ifelseend-if).
 
 Il prend trois opérandes dans l'ordre suivant :
@@ -283,6 +311,13 @@ $fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$per
 ```
 
 ## Truthy et falsy
+
+<details><summary>Historique</summary>
+
+| Version | Modifications |
+| ------- | ------------- |
+| v19 R4  | Ajoutées      |
+</details>
 
 En plus d'un type, chaque valeur possède également une valeur booléenne inhérente, généralement connue sous le nom de **truthy** ou **falsy**.
 

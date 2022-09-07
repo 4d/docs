@@ -3,7 +3,6 @@ id: Directory
 title: Directory Class
 ---
 
-## Descrição
 
 <!-- REF directory.creationDate.Desc -->
 ## .creationDate
@@ -25,6 +24,8 @@ Essa propriedade é**apenas leitura**.
 
 <!-- END REF -->
 
+<!-- REF directory.creationTime.Desc -->
+
 ## .creationTime
 
 <details><summary>Histórico</summary>
@@ -41,6 +42,8 @@ Essa propriedade é**apenas leitura**.
 The `.creationTime` property returns <!-- REF #directory.creationTime.Summary -->the creation time of the folder<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
 Essa propriedade é**apenas leitura**.
+
+<!-- END REF -->
 
 <!-- REF directory.exists.Desc -->
 ## .exists
@@ -368,6 +371,7 @@ Essa propriedade é**apenas leitura**.
 <!-- REF #directory.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->
 
 #### Descrição
+
 
 The `.platformPath` property returns <!-- REF #directory.platformPath.Summary -->the path of the folder expressed with the current platform syntax<!-- END REF -->.
 

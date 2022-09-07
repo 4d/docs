@@ -1800,6 +1800,7 @@ Available properties depend on the type of the named element (named cell, named 
 
 ```4d
 var $list : Collection
+
 $list:=VP Get names("ViewProArea";2) //names in 3rd sheet
 ```
 
@@ -2236,7 +2237,9 @@ VP SET CELL STYLE($range;$style)
 | ---------- | ---- | -- | --------------------------------- |
 | vpAreaName | Text | -> | 4D View Pro area form object name |
 
-|styleName|Text|->|Name of style| |sheet|Integer|->|Sheet index (current sheet if omitted)| |Result|Object|<-|Style sheet object|<!-- END REF -->
+|styleName|Text|->|Name of style| |sheet|Integer|->|Sheet index (current sheet if omitted)|
+
+|Result|Object|<-|Style sheet object|<!-- END REF -->
 
 #### Descrição
 
@@ -2344,7 +2347,7 @@ In this case, the current sheet uses two style objects:
 
 <!-- REF #_method_.VP Get table range.Syntax --> **VP Get table range** ( *vpAreaName* : Text ; *tableName* : Text {; *onlyData* : Integer {; *sheet* : Integer }} ) : Object<!-- END REF -->
 
-<!-- REF #_method_.VP Get tables.Params -->
+<!-- REF #_method_.VP Get table range.Params -->
 
 | Parâmetros | Tipo    |    | Descrição                                                |
 | ---------- | ------- | -- | -------------------------------------------------------- |
@@ -2640,6 +2643,7 @@ VP IMPORT DOCUMENT("ViewProArea";"c:\\import\\my-file.txt";New object("csvOption
 |![example-import-csv](../assets/en/ViewPro/vp-import-document-csv-result.png)
 
 #### Veja também
+
 
 [VP EXPORT DOCUMENT](#vp-export-document)<br/>[VP NEW DOCUMENT](#vp-new-document)
 
@@ -4757,12 +4761,11 @@ In *vpAreaName*, pass the name of the 4D View Pro area. If you pass a name that 
 
 You can pass an object defining the columns and rows to freeze in the *paneObj* parameter. Setting the value of any of the column or row properties equal to zero resets (unfreezes) the property. If a property is set to less than zero, the command does nothing. Pode passar:
 
-| Propriedade         | Tipo    | Descrição                                              |
-| ------------------- | ------- | ------------------------------------------------------ |
-| columnCount         | Integer | The number of frozen columns on the left of the sheet  |
-| trailingColumnCount | Integer | The number of frozen columns on the right of the sheet |
-| rowCount            | Integer | The number of frozen rows on the top of the sheet      |
-| trailingRowCount    | Integer | The number of frozen rows on the bottom of the sheet   |
+| Propriedade | Tipo | Descrição |
+| ----------- | ---- | --------- |
+|             |      |           |
+
+|columnCount | Integer | The number of frozen columns on the left of the sheet| |trailingColumnCount |Integer | The number of frozen columns on the right of the sheet |rowCount | Integer |  The number of frozen rows on the top of the sheet | |trailingRowCount | Integer |  The number of frozen rows on the bottom of the sheet|
 
 In the optional *sheet* parameter, you can designate a specific spreadsheet where the range will be defined (counting begins at 0). If omitted, the current spreadsheet is used by default. You can explicitly select the current spreadsheet with the following constant:
 

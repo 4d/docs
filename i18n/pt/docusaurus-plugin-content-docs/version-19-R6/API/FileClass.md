@@ -40,6 +40,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | [<!-- INCLUDE #document.modificationTime.Syntax -->](#modificationtime)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.modificationTime.Summary -->|
 | [<!-- INCLUDE #FileClass.moveTo().Syntax -->](#moveto)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.moveTo().Summary -->|
 | [<!-- INCLUDE #document.name.Syntax -->](#name)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.name.Summary -->|
+| [<!-- INCLUDE #FileClass.open().Syntax -->](#open)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #FileClass.open().Summary -->|
 | [<!-- INCLUDE #document.original.Syntax -->](#original)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.original.Summary -->|
 | [<!-- INCLUDE #document.parent.Syntax -->](#parent)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.parent.Summary -->|
 | [<!-- INCLUDE #document.path.Syntax -->](#path)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #document.path.Summary -->|
@@ -60,7 +61,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 </details>
 
-<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D. File<br/>**File** ( *fileConstant* : Integer { ; *\** } ) : 4D. File<!-- END REF -->
+<!-- REF #_command_.File.Syntax -->**File** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**File** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
 
 
 <!-- REF #_command_.File.Params -->
@@ -134,7 +135,7 @@ If the command is called from a component, pass the optional *parameter to get t
 </details>
 
 <!-- REF #4D.File.new().Syntax -->
-**4D. File.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D. File<br/>**4D. File.new** ( *fileConstant* : Integer { ; *\** } ) : 4D. File<!-- END REF -->
+**4D.File.new** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.File<br/>**4D.File.new** ( *fileConstant* : Integer { ; * } ) : 4D.File<!-- END REF -->
 
 #### Descrição
 
@@ -157,7 +158,9 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 <!--REF file.create().Note -->
 **Not available for ZIP archives**<!-- END REF -->
 
+
 <!--REF #FileClass.create().Syntax -->**.create()** : Boolean <!-- END REF -->
+
 
 <!--REF #FileClass.create().Params -->
 | Parâmetros | Tipo     |    | Descrição                                                                             |
@@ -198,6 +201,7 @@ Creation of a preferences file in the database folder:
 </details>
 
 <!--REF #FileClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D. Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D. File<!-- END REF -->
+
 
 <!--REF #FileClass.createAlias().Params -->
 | Parâmetros        | Tipo       |    | Descrição                                                   |
@@ -303,12 +307,15 @@ You want to delete a specific file in the database folder:
 
 <!--REF #FileClass.getAppInfo().Syntax -->**.getAppInfo**() : Object<!-- END REF -->
 
+
 <!--REF #FileClass.getAppInfo().Params -->
 | Parâmetros | Tipo   |    | Descrição                                                                        |
 | ---------- | ------ | -- | -------------------------------------------------------------------------------- |
 | Resultados | Objeto | <- | Contents of .exe/.dll version resource or .plist file|<!-- END REF -->
 
+
 |
+
 
 #### Descrição
 
@@ -395,6 +402,7 @@ ALERT($info.
 
 <!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D. Folder { ; *newName* : Text } ) : 4D. File<!-- END REF -->
 
+
 <!--REF #FileClass.moveTo().Params -->
 | Parâmetros        | Tipo       |    | Descrição                             |
 | ----------------- | ---------- | -- | ------------------------------------- |
@@ -427,6 +435,76 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 <!-- INCLUDE document.name.Desc -->
 
+<!-- REF file.open().Desc -->
+## .open()
+
+<details><summary>Histórico</summary>
+
+| Versão | Mudanças   |
+| ------ | ---------- |
+| v19 R7 | Adicionado |
+</details>
+
+<!--REF #FileClass.open().Syntax -->**.open**( { *mode* : Text } ) : 4D.FileHandle<br/>**.open**( { *options* : Object } ) : 4D.FileHandle<!-- END REF -->
+
+
+<!--REF #FileClass.open().Params -->
+| Parâmetros | Tipo                             |    | Descrição                                         |
+| ---------- | -------------------------------- | -- | ------------------------------------------------- |
+| mode       | Text                             | -> | Opening mode: "read", "write", "append"           |
+| options    | Objeto                           | -> | Opening options                                   |
+| Resultados | [4D.FileHandle](FileHandleClass) | <- | New File handle object|<!-- END REF -->
+
+|
+
+#### Descrição
+
+The `.open()` function <!-- REF #FileClass.open().Summary -->creates and returns a new [4D.FileHandle](FileHandleClass) object on the file, in the specified *mode* or with the specified *options*<!-- END REF -->. You can use functions and properties of the [4D.FileHandle](FileHandleClass) class to write, read, or append contents to the file.
+
+If you use the *mode* (text) parameter, pass the opening mode for the file handle:
+
+| *mode*   | Descrição                                                                                                                                                                                                                        |
+| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "read"   | (Default) Creates a file handle to read values from the file. If the file does not exist on disk, an error is returned. You can open as many file handles as you want in "read" mode on the same File object.                    |
+| "write"  | Creates a file handle to write values to the file (starting at the beginning of the file content). If the file does not exist on disk, it is created. You can open only one file handle in "write" mode on the same File object. |
+| "append" | Creates a file handle to write values to the file (starting at the end of the file content). If the file does not exist on disk, it is created. You can open only one file handle in "append" mode on the same File object.      |
+
+> The *mode* value is case sensitive.
+
+If you use the *options* (object) parameter, you can pass more options for the file handle through the following properties (these properties can be read afterwards from the opened [file handle object](FileHandleClass)):
+
+| *options*         | Tipo           | Descrição                                                                                                                     | Predefinição  |
+| ----------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `.mode`           | Text           | Opening mode (see *mode* above)                                                                                               | "read"        |
+| `.charset`        | Text           | Charset used when reading from or writing to the file. Use the standard name of the set (for example "ISO-8859-1" or "UTF-8") | "UTF-8"       |
+| `.breakModeRead`  | Text or Number | Processing mode for line breaks used when reading in the file (see below)                                                     | "native" or 1 |
+| `.breakModeWrite` | Text or Number | Processing mode for line breaks used when writing to the file (see below)                                                     | "native" or 1 |
+
+The `.breakModeRead` and `.breakModeWrite` indicate the processing to apply to end-of-line characters in the document. You can use one of the following values (text or number):
+
+| Break mode as text | Break mode as number (constant)   | Descrição                                                                                                                                                      |
+| ------------------ | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "native"           | 1 (`Document with native format`) | (Default) Line breaks are converted to the native format of the operating system: LF (line feed) under macOS, CRLF (carriage return + line feed) under Windows |
+| "crlf"             | 2 (`Document with CRLF`)          | Line breaks are converted to CRLF (carriage return + line feed), the default Windows format                                                                    |
+| "cr"               | 3 (`Document with CR`)            | Line breaks are converted to CR (carriage return), the default Classic Mac OS format                                                                           |
+| "lf"               | 4 (`Document with LF`)            | Line breaks are converted to LF (line feed), the default Unix and macOS format                                                                                 |
+
+> The *break mode as text* value is case sensitive.
+
+#### Exemplo
+
+You want to create a file handle for reading the "ReadMe.txt" file:
+
+```4d
+var $f : 4D.File
+var $fhandle : 4D.FileHandle
+
+$f:=File("C:\\Documents\\Archives\\ReadMe.txt";fk platform path)
+$fhandle:=$f.open("read")
+
+```
+<!-- END REF -->
+
 <!-- INCLUDE document.original.Desc -->
 
 <!-- INCLUDE document.parent.Desc -->
@@ -446,6 +524,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 </details>
 
 <!--REF #FileClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D. File<!-- END REF -->
+
 
 <!--REF #FileClass.rename().Params -->
 | Parâmetros | Tipo     |    | Descrição                               |
@@ -488,6 +567,7 @@ You want to rename "ReadMe.txt" in "ReadMe_new.txt":
 </details>
 
 <!--REF #FileClass.setAppInfo().Syntax -->**.setAppInfo**( *info* : Object )<!-- END REF -->
+
 
 <!--REF #FileClass.setAppInfo().Params -->
 | Parâmetros | Tipo   |    | Descrição                                                                                   |
@@ -572,6 +652,7 @@ $infoPlistFile.setAppInfo($info)
 
 <!--REF #FileClass.setContent().Syntax -->**.setContent** ( *content* : Blob ) <!-- END REF -->
 
+
 <!--REF #FileClass.setContent().Params -->
 | Parâmetros | Tipo |    | Descrição                                            |
 | ---------- | ---- | -- | ---------------------------------------------------- |
@@ -603,7 +684,9 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 </details>
 
-<!--REF #FileClass.setText().Syntax -->**.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br/>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } ) <!-- END REF -->
+<!--REF #FileClass.setText().Syntax -->**.setText** ( *text* : Text {; *charSetName* : Text { ; *breakMode* : Integer } } )<br/>**.setText** ( *text* : Text {; *charSetNum* : Integer { ; *breakMode* : Integer } } )<!-- END REF -->
+
+
 
 <!--REF #FileClass.setText().Params -->
 | Parâmetros  | Tipo    |    | Descrição                                                              |
@@ -613,7 +696,9 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 | charSetNum  | Integer | -> | Número de conjuntos de caracteres                                      |
 | breakMode   | Integer | -> | Modo de processamento para quebras de linha|<!-- END REF -->
 
+
 |
+
 
 #### Descrição
 

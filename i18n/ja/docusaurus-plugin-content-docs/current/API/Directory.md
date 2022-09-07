@@ -3,7 +3,6 @@ id: Directory
 title: Directory クラス
 ---
 
-## 詳細
 
 <!-- REF directory.creationDate.Desc -->
 ## .creationDate
@@ -27,6 +26,7 @@ The `.creationDate` property returns <!-- REF #directory.creationDate.Summary --
 
 ---
 
+<!-- REF directory.creationTime.Desc -->
 ## .creationTime
 
 <details><summary>履歴</summary>

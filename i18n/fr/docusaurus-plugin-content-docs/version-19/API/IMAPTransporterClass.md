@@ -54,6 +54,7 @@ Les objets IMAP Transporter sont instanciés avec la commande [IMAP New transpor
 
 <!-- REF #_command_.IMAP New transporter.Syntax -->**IMAP New transporter**( *server* : Object ) : 4D.IMAPTransporter<!-- END REF -->
 
+
 <!-- REF #_command_.IMAP New transporter.Params -->
 | Paramètres | Type               |    | Description                                                                    |
 | ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
@@ -70,16 +71,16 @@ The `IMAP New transporter` command <!-- REF #_command_.IMAP New transporter.Summ
 
 Dans le paramètre *server*, passez un objet contenant les propriétés suivantes :
 
-| *server*                                                                                                                                                                                                                                                                                                                                                          | Valeur par défaut (si omise)                                                     |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| *server*                                                                                                                                                                                                                                                                                                                                                                                                                             | Valeur par défaut (si omise)                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                                            |
-| .**accessTokenOAuth2**: TextText string representing OAuth 2 authorization credentials. Il est utilisé uniquement avec OAUTH2 `authenticationMode`. Si `accessTokenOAuth2` est utilisé mais que `authenticationMode` est omis, le protocole OAuth 2 est utilisé (si le serveur l'autorise). Non retourné en objet *[IMAP transporter](#imap-transporter-object)*. | aucun                                                                            |
+| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>Text string or token object representing OAuth2 authorization credentials. Il est utilisé uniquement avec OAUTH2 `authenticationMode`. Si `accessTokenOAuth2` est utilisé mais que `authenticationMode` est omis, le protocole OAuth 2 est utilisé (si le serveur l'autorise). Non retourné en objet *[IMAP transporter](#imap-transporter-object)*. | aucun                                                                            |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| le mode d'authentification le plus sûr pris en charge par le serveur est utilisé |
 | [<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Summary -->| 300                                                                              |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                               |
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *obligatoire*                                                                    |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| aucun                                                                            |
-| .**password** : TextUser password for authentication on the server. Non retourné en objet *[IMAP transporter](#imap-transporter-object)*.                                                                                                                                                                                                                         | aucun                                                                            |
+| .**password** : Text<br/>User password for authentication on the server. Non retourné en objet *[IMAP transporter](#imap-transporter-object)*.                                                                                                                                                                                                                                                                                 | aucun                                                                            |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 993                                                                              |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| aucun                                                                            |
 > **Attention** : Assurez-vous que le timeout défini est inférieur au timeout du serveur, sinon le timeout du client sera inutile.
@@ -93,12 +94,11 @@ La fonction retourne un [**objet IMAP transporter**](#imap-transporter-object). 
 
 ```4d
 $server:=New object
-$server.host:="imap.gmail.com" //Mandatory
+$server.host:="imap.gmail.com" //Obligatoire
 $server.port:=993
 $server.user:="4d@gmail.com"
-
 $server.password:="XXXXXXXX"
-$server.logFile:="LogTest.txt" //log to save in the Logs folder
+$server.logFile:="LogTest.txt" //log à sauvegarder dans le dossier Logs
 
 var $transporter : 4D.IMAPTransporter
  $transporter:=IMAP New transporter($server)
@@ -304,6 +304,8 @@ $status:=$imap.append($msg; "Drafts")
 
 <!-- INCLUDE transporter.checkConnection().Desc -->
 
+<!-- REF #IMAPTransporterClass.checkConnectionDelay.Desc -->
+
 ## .checkConnectionDelay
 
 <details><summary>Historique</summary>
@@ -320,6 +322,8 @@ $status:=$imap.append($msg; "Drafts")
 
 The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.checkConnectionDelay.Summary -->the maximum time (in seconds) allowed prior to checking the connection to the server<!-- END REF -->.  Si cette durée est dépassée entre deux appels de méthodes, la connexion au serveur sera vérifiée. Par défaut, si la propriété n'a pas été définie dans l'objet *server*, la valeur est de 300.
 > **Attention** : Assurez-vous que le timeout défini est inférieur au timeout du serveur, sinon le timeout du client sera inutile.
+
+<!-- END REF -->
 
 <!-- INCLUDE transporter.connectionTimeOut.Desc -->
 
@@ -694,6 +698,7 @@ End if
 
 <!-- REF #IMAPTransporterClass.expunge().Syntax -->**.expunge()** : Object<!-- END REF -->
 
+
 <!-- REF IMAPTransporterClass.expunge().Params -->
 | Paramètres | Type   |    | Description                                                 |
 | ---------- | ------ |:--:| ----------------------------------------------------------- |
@@ -747,6 +752,7 @@ $status:=$transporter.expunge()
 <!-- END REF -->
 
 <!-- REF IMAPTransporterClass.getBoxInfo().Desc -->
+
 ## .getBoxInfo()
 
 <details><summary>Historique</summary>
@@ -1061,8 +1067,7 @@ Le paramètre optionnel *options* vous permet de définir les parties de message
 | Propriété | Type        | Description                                                                                                                            |
 | --------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | liste     | Collections | Collection d'objets [`Email`](EmailObjectClass.md#email-object). Si aucun objet Email n'est trouvé, une collection vide est retournée. |
-
-|notFound |Collection| Collection de :<br/><ul><li>première syntaxe - IDs de messages passés antérieurement qui n'existent pas</li><li>deuxième syntaxe - numéros de séquence des messages entre startMsg et endMsg qui n'existent pas</li></ul>Une collection vide est retournée si tous les messages sont trouvés.|
+| notFound  | Collections | Collection de :<br/><ul><li>première syntaxe - IDs de messages passés antérieurement qui n'existent pas</li><li>deuxième syntaxe - numéros de séquence des messages entre startMsg et endMsg qui n'existent pas</li></ul>Une collection vide est retournée si tous les messages sont trouvés.               |
 
 #### Exemple
 
@@ -1183,8 +1188,7 @@ Le paramètre optionnel *updateSeen* vous permet d'indiquer si le message est ma
 
 </details>
 
-<!-- REF #IMAPTransporterClass.move().Syntax -->
-**.move**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br/>**.move**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
+<!-- REF #IMAPTransporterClass.move().Syntax -->**.move**( *msgsIDs* : Collection ; *destinationBox* : Text ) : Object<br/>**.move**( *allMsgs* : Integer ; *destinationBox* : Text ) : Object<!-- END REF -->
 
 
 <!-- REF #IMAPTransporterClass.move().Params -->
@@ -1475,27 +1479,29 @@ La fonction retourne un objet décrivant le statut IMAP :
 Pour renommer la mailbox “Invoices” en “Bills”:
 
 ```4d
-var $server,$boxInfo,$result : Object
- var $transporter : 4D.IMAPTransporter
+var $pw : text
+var $options; $transporter; $status : object
 
- $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
- $server.port:=993
- $server.user:="4d@gmail.com"
- $server.password:="XXXXXXXX"
+$options:=New object
 
-  //create transporter
- $transporter:=IMAP New transporter($server)
+$pw:=Request("Please enter your password:")
 
-  //select mailbox
- $boxInfo:=$transporter.selectBox("INBOX")
+If(OK=1) $options.host:="imap.gmail.com"
 
-  If($boxInfo.mailCount>0)
-  // retrieve the headers of the last 20 messages without marking them as read
-    $result:=$transporter.getMails($boxInfo.mailCount-20;$boxInfo.mailCount;\
-     New object("withBody";False;"updateSeen";False))
-    For each($mail;$result.list)
-    // ...
+$options.user:="test@gmail.com"
+$options.password:=$pw
+
+$transporter:=IMAP New transporter($options)
+
+// rename mailbox
+$status:=$transporter.renameBox("Invoices"; "Bills")
+
+If ($status.success)
+   ALERT("Mailbox renaming successful!")
+   Else
+   ALERT("Error: "+$status.statusText)
+ End if
+End if
    Else
    ALERT("Error: "+$status.statusText)
  End if
@@ -1618,20 +1624,28 @@ Les mots-clés de recherche peuvent traiter des valeurs des types suivants :
 **OLD**: Messages ne comportant pas le marqueur \Recent.  
 **SEEN**: Messages comportant le marqueur \Seen.  
 **UNSEEN**: Messages ne comportant pas le marqueur \Seen.  
-**NEW**: Messages comportant le marqueur \Recent et pas le marqueur \Seen. **ALL**: All messages in the mailbox.  
-**ANSWERED**: Messages with the \Answered flag set.  
-**UNANSWERED**: Messages that do not have the \Answered flag set.  
-**DELETED**: Messages with the \Deleted flag set.  
-**UNDELETED**: Messages that do not have the \Deleted flag set.  
-**DRAFT**: Messages with the \Draft flag set.  
-**UNDRAFT**: Messages that do not have the \Draft flag set.  
-**FLAGGED**: Messages with the \Flagged flag set.  
-**UNFLAGGED**: Messages that do not have the \Flagged flag set.  
-**RECENT**: Messages that have the \Recent flag set.  
-**OLD**: Messages that do not have the \Recent flag set.  
-**SEEN**: Messages that have the \Seen flag set.  
-**UNSEEN**: Messages that do not have the \Seen flag set.  
-**NEW**: Messages that have the \Recent flag set but not the \Seen flag.  
+**NEW**: Messages comportant le marqueur \Recent et pas le marqueur \Seen. This is functionally equivalent to “(RECENT UNSEEN)”.  
+***KEYWORD ***flag******: Messages with the specified keyword set.  
+***UNKEYWORD ***flag******: Messages that do not have the specified keyword set.  
+***BEFORE ***date******: Messages whose internal date is earlier than the specified date.  
+***ON ***date******: Messages whose internal date is within the specified date.  
+***SINCE ***date******: Messages whose internal date is within or later than the specified date.  
+***SENTBEFORE ***date******: Messages whose Date header is earlier than the specified date.  
+***SENTON ***date******: Messages whose Date header is within the specified date.  
+***SENTSINCE ***date******: Messages whose Date header is within or later than the specified date.  
+***TO ***string******: Messages that contain the specified string in the TO header.  
+***FROM ***string******: Messages that contain the specified string in the FROM header.  
+***CC ***string******: Messages that contain the specified string in the CC header.  
+***BCC ***string******: Messages that contain the specified string in the BCC header.  
+***SUBJECT ***string******: Messages that contain the specified string in the Subject header.  
+***BODY ***string******: Messages that contain the specified string in the message body.  
+***TEXT ***string******: Messages that contain the specified string in the header or in the message body.  
+***HEADER *field-name* ***string******: Messages that have a header with the specified field-name and that contain the specified string in the field-body.  
+***UID ***message-UID******: Messages with unique identifiers corresponding to the specified unique identifier set.  
+***LARGER ***n******: Messages with a size larger than the specified number of bytes.  
+***SMALLER ***n******: Messages with a size smaller than the specified number of bytes.  
+***NOT ***search-key******: Messages that do not match the specified search key.  
+***OR *search-key1* ***search-key2******: Messages that match either search key.  
 
 <!-- END REF -->
 

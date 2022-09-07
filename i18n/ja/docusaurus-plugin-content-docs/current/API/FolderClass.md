@@ -59,9 +59,10 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 </details>
 
-<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
+<!-- REF #_command_.Folder.Syntax -->**Folder** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.Folder<br/>**Folder** ( *folderConstant* : Integer { ; * } ) : 4D.Folder<!-- END REF -->
 
-<!-- REF FolderClass.Folder.Params -->
+
+<!-- REF #_command_.Folder.Params -->
 | 引数             | タイプ       |    | 詳細                                             |
 | -------------- | --------- |:--:| ---------------------------------------------- |
 | path           | テキスト      | -> | フォルダーパス                                        |
@@ -123,7 +124,8 @@ If the command is called from a component, pass the optional *parameter to get t
 </details>
 
 <!-- REF #4D.Folder.new().Syntax -->
-**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; *\** } ) : 4D.Folder<br/>**4D.Folder.new** ( *folderConstant* : Integer { ; *\** } ) : 4D.Folder<!-- END REF -->
+**4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.Folder<br/>**4D.Folder.new** ( *folderConstant* : Integer { ; * } ) : 4D.Folder<!-- END REF -->
+
 
 #### 詳細
 
@@ -150,7 +152,9 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 | ------ | --- | -- | ----------------------------------------------------------------- |
 | Result | ブール | <- | フォルダーが正常に作成された場合には true、それ以外の場合は false|<!-- END REF -->
 
+
 |
+
 
 #### 詳細
 
@@ -198,6 +202,7 @@ End if
 </details>
 
 <!--REF #FolderClass.createAlias().Syntax -->**.createAlias**( *destinationFolder* : 4D.Folder ; *aliasName* : Text { ; *aliasType* : Integer } ) : 4D.File<!-- END REF -->
+
 
 <!--REF #FolderClass.createAlias().Params -->
 | 引数                | タイプ       |    | 詳細                                                 |
@@ -328,6 +333,7 @@ The `.delete()` function <!-- REF #FolderClass.delete().Summary -->The `.delete(
 
 <!--REF #FolderClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.Folder<!-- END REF -->
 
+
 <!--REF #FolderClass.moveTo().Params -->
 | 引数                | タイプ       |    | 詳細                                   |
 | ----------------- | --------- | -- | ------------------------------------ |
@@ -382,6 +388,7 @@ The `.moveTo( )` function <!-- REF #FolderClass.moveTo().Summary -->moves or ren
 </details>
 
 <!--REF #FolderClass.rename().Syntax -->**.rename**( *newName* : Text ) : 4D.Folder<!-- END REF -->
+
 
 <!--REF #FolderClass.rename().Params -->
 | 引数      | タイプ       |    | 詳細                                      |

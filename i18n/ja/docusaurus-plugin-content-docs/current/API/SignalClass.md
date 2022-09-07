@@ -107,6 +107,7 @@ Signal オブジェクトは [共有オブジェクト](Concepts/shared.md) で�
 
 <!-- REF #_command_.New signal.Syntax -->**New signal** { ( *description* : Text ) } : 4D.Signal<!-- END REF -->
 
+
 <!-- REF #_command_.New signal.Params -->
 | 引数          | タイプ       |    | 詳細                                              |
 | ----------- | --------- |:--:| ----------------------------------------------- |

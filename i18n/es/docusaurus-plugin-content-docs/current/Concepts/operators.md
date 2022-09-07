@@ -59,6 +59,13 @@ Los resultados del operador dependen de los **tipos de datos** a los que se apli
 
 ## Operadores de asignación compuestos
 
+<details><summary>Histórico</summary>
+
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v19 R4  | Añadidos       |
+</details>
+
 4D ofrece **operadores de asignación compuestos** que combinan la asignación con otra operación. Un ejemplo es el operador de asignación adicional (`+=`):
 
 ```4d
@@ -164,6 +171,13 @@ The difference with the single [**&** and **|** boolean operators](dt_boolean.md
 
 ### Short-circuit AND operator (&&)
 
+<details><summary>Histórico</summary>
+
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v19 R4  | Añadidos       |
+</details>
+
 La regla es la siguiente:
 
 Dado `Expr1 && Expr2`:
@@ -222,6 +236,13 @@ If $myObject is Null, the second argument is not executed, thus no error is thro
 
 ### Short-circuit OR operator (||)
 
+<details><summary>Histórico</summary>
+
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v19 R4  | Añadidos       |
+</details>
+
 El operador || devuelve el valor de uno de los operandos especificados. The expression is evaluated left to right and tested for possible "short-circuit" evaluation using the following rule:
 
 Dado `Expr1 || Expr2`:
@@ -272,6 +293,13 @@ This means that `a || b && c` is evaluated as `(a || b) && c`.
 
 ## Operador ternario
 
+<details><summary>Histórico</summary>
+
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v19 R4  | Añadidos       |
+</details>
+
 The ternary conditional operator allows you to write one-line conditional expressions. For example, it can replace a full sequence of [If…Else](./cf_branching.md#ifelseend-if) statements.
 
 Se necesitan tres operandos en el siguiente orden:
@@ -316,6 +344,13 @@ $fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$per
 ```
 
 ## Truthy y falsy
+
+<details><summary>Histórico</summary>
+
+| Versión | Modificaciones |
+| ------- | -------------- |
+| v19 R4  | Añadidos       |
+</details>
 
 Además de un tipo, cada valor también tiene un valor booleano inherente, conocido generalmente como **truthy** o **falsy<**.
 

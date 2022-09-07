@@ -3,7 +3,6 @@ id: Directory
 title: Clase Directory
 ---
 
-## Descripción
 
 <!-- REF directory.creationDate.Desc -->
 ## .creationDate
@@ -22,6 +21,9 @@ title: Clase Directory
 The `.creationDate` property returns <!-- REF #directory.creationDate.Summary -->the creation date of the folder<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
+<!-- END REF -->
+
+<!-- REF directory.creationTime.Desc -->
 
 ## .creationTime
 
@@ -39,6 +41,8 @@ Esta propiedad es **de sólo lectura**.
 The `.creationTime` property returns <!-- REF #directory.creationTime.Summary -->the creation time of the folder<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
 Esta propiedad es **de sólo lectura**.
+
+<!-- END REF -->
 
 ---
 

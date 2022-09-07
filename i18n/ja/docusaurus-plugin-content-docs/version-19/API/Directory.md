@@ -3,7 +3,6 @@ id: Directory
 title: Directory クラス
 ---
 
-## 詳細
 
 <!-- REF directory.creationDate.Desc -->
 ## .creationDate
@@ -22,6 +21,9 @@ title: Directory クラス
 The `.creationDate` property returns <!-- REF #directory.creationDate.Summary -->the creation date of the folder<!-- END REF -->.
 
 このプロパティは **読み取り専用** です。
+<!-- END REF -->
+
+<!-- REF directory.creationTime.Desc -->
 
 ## .creationTime
 
@@ -39,6 +41,8 @@ The `.creationDate` property returns <!-- REF #directory.creationDate.Summary --
 The `.creationTime` property returns <!-- REF #directory.creationTime.Summary -->the creation time of the folder<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
 このプロパティは **読み取り専用** です。
+
+<!-- END REF -->
 
 ---
 
