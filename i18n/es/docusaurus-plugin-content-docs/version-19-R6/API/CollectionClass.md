@@ -187,7 +187,7 @@ Puede pasar cualquier número de valores de los siguientes tipos soportados:
 
 > Esta función modifica la colección original.
 
-(\*)When a shared object or collection is added to a shared collection, they share the same *locking identifier*. For more information on this point, refer to [4D Doc Center](https://doc.4d.com).
+(\*)Cuando un objeto o colección compartido se añade a una colección compartida, comparten el mismo *identificador de bloqueo*. For more information on this point, refer to [4D Doc Center](https://doc.4d.com).
 
 #### Ejemplo
 
