@@ -187,7 +187,7 @@ Puede pasar cualquier número de valores de los siguientes tipos soportados:
 
 > Esta función modifica la colección original.
 
-(\*)When a shared object or collection is added to a shared collection, they share the same *locking identifier*. For more information on this point, refer to [4D Doc Center](https://doc.4d.com).
+(\*)Cuando un objeto o colección compartido se añade a una colección compartida, comparten el mismo *identificador de bloqueo*. Para más información sobre este punto, consulte [4D Doc Center](https://doc.4d.com).
 
 
 #### Ejemplo
@@ -701,7 +701,7 @@ Si la colección contiene objetos, puede pasar el parámetro *propertyPath* para
 
 #### Descripción
 
-The `.equal()` function <!-- REF #collection.equal().Summary -->compares the collection with collection2 <!-- END REF -->and returns **true** if they are identical (deep comparison).
+La función `.equal()` <!-- REF #collection.equal().Summary -->compares the collection with collection2 <!-- END REF -->and returns **true** if they are identical (deep comparison).
 
 Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluación diferencie entre mayúsculas y minúsculas o que diferencie los caracteres acentuados, pase la constante `ck diacritical` en el parámetro option.
 > Esta función no modifica la colección original.
@@ -757,7 +757,7 @@ Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluaci
 
 #### Descripción
 
-The `.every()` function <!-- REF #collection.every().Summary -->The `.every()` function<!-- END REF -->.
+La función `.every()` <!-- REF #collection.every().Summary -->The `.every()` function<!-- END REF -->.
 
 En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional). *methodName* puede realizar cualquier prueba, con o sin los parámetros. Este método recibe un `Object`en el primer parámetro ($1) y debe definir *$1.result* como true para cada elemento que cumpla la prueba.
 
