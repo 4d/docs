@@ -9,6 +9,10 @@
 
   --ifm-link-color: #1e90ff;
   --ifm-color-info-contrast-background: white;
+  --ifm-navbar-link-color: white;
+  --svg-background-color: #ffffff8b;
+  --ifm-color-emphasis-200: var(--svg-background-color);
+  --ifm-navbar-link-hover-color:#1e90ff;
 }
 
 .menu__link{
@@ -21,6 +25,7 @@
 [data-theme='dark'] {
   --ifm-color-primary: #1e90ff;
   --ifm-color-info-contrast-background: #1B1B1D !important;
+  --ifm-navbar-link-hover-color:#1e90ff;
 }
 
 details {
@@ -72,21 +77,12 @@ details {
   color: white;
 }
 
-.navbar a:hover {
-  color: white;
-}
 
 .navbar .dsla-search-field svg {
   color: #807ea3;
 }
 
-.navbar__title {
-  color: white;
-}
 
-.navbar__link {
-  color: white;
-}
 
 .doc-updates {
   padding: 50px 20px;
