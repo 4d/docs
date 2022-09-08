@@ -70,13 +70,13 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | fileConstant | 整数      | -> | 4Dファイル定数                                       |
 | pathType     | 整数      | -> | `fk posix path` (デフォルト) または `fk platform path` |
 | *            |         | -> | ホストデータベースのファイルを返すには * を渡します                    |
-| Result       | 4D.File | <- | 新規ファイルオブジェクト|<!-- END REF -->
+| 戻り値          | 4D.File | <- | 新規ファイルオブジェクト|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. このコマンドは 2種類のシンタックスを受け入れます。
+The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->。 このコマンドは 2種類のシンタックスを受け入れます。
 
 **File ( path { ; pathType } { ; \* })**
 
@@ -138,7 +138,7 @@ If the command is called from a component, pass the optional *parameter to get t
 
 #### 詳細
 
-The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. この関数の機能は、[`File`](#file) コマンドと同一です。
+The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->。 この関数の機能は、[`File`](#file) コマンドと同一です。
 
 > `4D.File.new()` よりも、短い [`File`](#file) コマンドの使用が推奨されます。
 
@@ -161,15 +161,15 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 
 
 <!--REF #FileClass.create().Params -->
-| 引数     | タイプ |    | 詳細                                                              |
-| ------ | --- | -- | --------------------------------------------------------------- |
-| Result | ブール | <- | ファイルが正常に作成された場合に true、それ以外の場合は false|<!-- END REF -->
+| 引数  | タイプ |    | 詳細                                                              |
+| --- | --- | -- | --------------------------------------------------------------- |
+| 戻り値 | ブール | <- | ファイルが正常に作成された場合に true、それ以外の場合は false|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.create()` function <!-- REF #FileClass.create().Summary -->creates a file on disk according to the properties of the `File` object<!-- END REF -->.
+The `.create()` function <!-- REF #FileClass.create().Summary -->creates a file on disk according to the properties of the `File` object<!-- END REF -->。
 
 必要であれば、 関数は [platformPath](#platformpath) あるいは [path](#path) プロパティの詳細に基づいてフォルダー階層を作成します。 ファイルがディスク上にすでに存在する場合、関数は何もせず、false を返します (エラーは返されません)。
 
@@ -207,7 +207,7 @@ The `.create()` function <!-- REF #FileClass.create().Summary -->creates a file 
 | destinationFolder | 4D.Folder | -> | エイリアスまたはショートカットの作成先フォルダー                          |
 | aliasName         | テキスト      | -> | エイリアスまたはショートカットの名称                                |
 | aliasType         | 整数        | -> | エイリアスリンクのタイプ                                      |
-| Result            | 4D.File   | <- | エイリアスまたはショートカットのファイル参照|<!-- END REF -->
+| 戻り値               | 4D.File   | <- | エイリアスまたはショートカットのファイル参照|<!-- END REF -->
 
 |
 
@@ -266,7 +266,7 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 #### 詳細
 
-The `.delete()` function <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->.
+The `.delete()` function <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->。
 
 ファイルが現在開いている場合、エラーが生成されます。
 
@@ -306,15 +306,15 @@ The `.delete()` function <!-- REF #FileClass.delete().Summary -->deletes the fil
 
 
 <!--REF #FileClass.getAppInfo().Params -->
-| 引数     | タイプ    |    | 詳細                                                                               |
-| ------ | ------ | -- | -------------------------------------------------------------------------------- |
-| Result | Object | <- | Contents of .exe/.dll version resource or .plist file|<!-- END REF -->
+| 引数  | タイプ    |    | 詳細                                                                               |
+| --- | ------ | -- | -------------------------------------------------------------------------------- |
+| 戻り値 | Object | <- | Contents of .exe/.dll version resource or .plist file|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe**, **.dll** or **.plist** file information as an object<!-- END REF -->.
+The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe**, **.dll** or **.plist** file information as an object<!-- END REF -->。
 
 この関数は、既存の .exe、.dll、あるいは .plist ファイルと使う必要があります。 ファイルがディスク上に存在しない、または、有効な .exe や .dll、.plist ファイルでない場合、この関数は空のオブジェクトを返します (エラーは生成されません)。
 
@@ -402,7 +402,7 @@ ALERT($info.Copyright)
 | ----------------- | --------- | -- | ----------------------------------- |
 | destinationFolder | 4D.Folder | -> | 宛先フォルダー                             |
 | newName           | テキスト      | -> | 移動先でのファイルの完全な名称                     |
-| Result            | 4D.File   | <- | 移動したファイル|<!-- END REF -->
+| 戻り値               | 4D.File   | <- | 移動したファイル|<!-- END REF -->
 
 
 |
@@ -410,7 +410,7 @@ ALERT($info.Copyright)
 
 #### 詳細
 
-The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
+The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->。
 
 *destinationFolder* 引数が指定するフォルダーはディスク上に存在している必要があり、そうでない場合にはエラーが生成されます。
 
@@ -456,13 +456,13 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 | 引数      | タイプ     |    | 詳細                                     |
 | ------- | ------- | -- | -------------------------------------- |
 | newName | テキスト    | -> | ファイルの新しい完全な名称                          |
-| Result  | 4D.File | <- | 名称変更されたファイル|<!-- END REF -->
+| 戻り値     | 4D.File | <- | 名称変更されたファイル|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.rename()` function <!-- REF #FileClass.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
+The `.rename()` function <!-- REF #FileClass.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->。
 
 *newName* 引数は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。そうでない場合、エラーが返されます。 同じ名前のファイルがすでに存在する場合には、エラーが返されます。
 
@@ -504,7 +504,7 @@ The `.rename()` function <!-- REF #FileClass.rename().Summary -->renames the fil
 
 #### 詳細
 
-The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
+The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->。
 
 この関数は、既存の .exe、.dll、あるいは .plist ファイルと使う必要があります。 The function must be used with an existing .exe, .dll or .plist file.
 
@@ -590,7 +590,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### 詳細
 
-The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. .
+The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->。 .
 
 #### 例題
 
@@ -627,7 +627,7 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 #### 詳細
 
-The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
+The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->。
 
 `File` オブジェクトで参照されているファイルがディスク上に存在しない場合、このメソッドがそのファイルを作成します。 ディスク上にファイルが存在する場合、ファイルが開かれている場合を除き、以前のコンテンツは消去されます。ファイルが開かれている場合はコンテンツはロックされ、エラーが生成されます。
 
