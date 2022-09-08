@@ -5,15 +5,15 @@
         "config":"preprocessing.conf"
     },
     "build_versioned_docs": {
-        "path":"./versioned_docs/*"
+        "path":"./versioned_docs/*/"
     },
     "build_translate": {
-        "path":"./i18n/%language%/docusaurus-plugin-content-docs/*",
+        "path":"./i18n/%language%/docusaurus-plugin-content-docs/*/",
         "languages":["de", "es", "fr", "ja", "pt"]
     },
     "build_syntax": {
         "path":"./docs/API/",
-        "syntax_output":"./syntax/syntaxEN.json",
+        "syntax_output":"../../4eDimension/main/4D/Resources/en.lproj/syntaxEN.json",
         "config":"../preprocessing.conf",
         "syntax_only":true,
         "syntax_pretty":false
@@ -21,7 +21,7 @@
     "build_syntax_translated": {
         "path":"./i18n/%language%/docusaurus-plugin-content-docs/current/API/",
         "languages":["de", "es", "fr", "ja", "pt"],
-        "syntax_output":"./syntax/%language%.lproj/syntax%LANGUAGE%.json",
+        "syntax_output":"../../4eDimension/main/4D/Resources/%language%.lproj/syntax%LANGUAGE%.json",
         "config":"../../../../../docs/preprocessing.conf",
         "syntax_only":true,
         "syntax_pretty":false
