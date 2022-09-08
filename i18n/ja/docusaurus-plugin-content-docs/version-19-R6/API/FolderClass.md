@@ -69,13 +69,13 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 | folderConstant | 整数        | -> | 4Dフォルダー定数                                      |
 | pathType       | 整数        | -> | `fk posix path` (デフォルト) または `fk platform path` |
 | *              |           | -> | ホストデータベースのフォルダーを返すには * を渡します                   |
-| Result         | 4D.Folder | <- | 新規フォルダーオブジェクト|<!-- END REF -->
+| 戻り値            | 4D.Folder | <- | 新規フォルダーオブジェクト|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. このコマンドは 2種類のシンタックスを受け入れます。
+The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->。 このコマンドは 2種類のシンタックスを受け入れます。
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -129,7 +129,7 @@ If the command is called from a component, pass the optional *parameter to get t
 
 #### 詳細
 
-The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. この関数の機能は、[`Folder`](#folder) コマンドと同一です。
+The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->。 この関数の機能は、[`Folder`](#folder) コマンドと同一です。
 
 > `4D.Folder.new()` よりも、短い [`Folder`](#folder) コマンドの使用が推奨されます。
 
@@ -148,9 +148,9 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 <!--REF #FolderClass.create().Syntax -->**.create()** : Boolean<!-- END REF -->
 
 <!--REF #FolderClass.create().Params -->
-| 引数     | タイプ |    | 詳細                                                                |
-| ------ | --- | -- | ----------------------------------------------------------------- |
-| Result | ブール | <- | フォルダーが正常に作成された場合には true、それ以外の場合は false|<!-- END REF -->
+| 引数  | タイプ |    | 詳細                                                                |
+| --- | --- | -- | ----------------------------------------------------------------- |
+| 戻り値 | ブール | <- | フォルダーが正常に作成された場合には true、それ以外の場合は false|<!-- END REF -->
 
 
 |
@@ -158,7 +158,7 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 
 #### 詳細
 
-The `.create()` function <!-- REF #FolderClass.create().Summary -->The `.create()` function<!-- END REF -->.
+The `.create()` function <!-- REF #FolderClass.create().Summary -->The `.create()` function<!-- END REF -->。
 
 必要であれば、 関数は [platformPath](#platformpath) あるいは [path](#path) プロパティの詳細に基づいてフォルダー階層を作成します。 フォルダーがディスク上にすでに存在する場合、関数は何もせず、false を返します (エラーは返されません)。
 
@@ -210,7 +210,7 @@ End if
 | destinationFolder | 4D.Folder | -> | エイリアスまたはショートカットの作成先フォルダー                           |
 | aliasName         | テキスト      | -> | エイリアスまたはショートカットの名称                                 |
 | aliasType         | 整数        | -> | エイリアスリンクのタイプ                                       |
-| Result            | 4D.File   | <- | エイリアスまたはショートカットのフォルダー参照|<!-- END REF -->
+| 戻り値               | 4D.File   | <- | エイリアスまたはショートカットのフォルダー参照|<!-- END REF -->
 
 |
 
@@ -269,7 +269,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 #### 詳細
 
-The `.delete()` function <!-- REF #FolderClass.delete().Summary -->The `.delete()` function<!-- END REF -->.
+The `.delete()` function <!-- REF #FolderClass.delete().Summary -->The `.delete()` function<!-- END REF -->。
 
 セキュリティ上の理由から、option 引数を渡さなかった場合はデフォルトで、`.delete()` は空のフォルダーしか削除しません。 空でないフォルダーを削除するには、以下の定数のいずれか一つを option 引数として渡す必要があります:
 
@@ -339,13 +339,13 @@ The `.delete()` function <!-- REF #FolderClass.delete().Summary -->The `.delete(
 | ----------------- | --------- | -- | ------------------------------------ |
 | destinationFolder | 4D.Folder | -> | 宛先フォルダー                              |
 | newName           | テキスト      | -> | 移動先でのフォルダーの完全な名称                     |
-| Result            | 4D.Folder | <- | 移動したフォルダー|<!-- END REF -->
+| 戻り値               | 4D.Folder | <- | 移動したフォルダー|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.moveTo( )` function <!-- REF #FolderClass.moveTo().Summary -->moves or renames the `Folder` object (source folder) into the specified *destinationFolder*<!-- END REF -->.
+The `.moveTo( )` function <!-- REF #FolderClass.moveTo().Summary -->moves or renames the `Folder` object (source folder) into the specified *destinationFolder*<!-- END REF -->。
 
 *destinationFolder* 引数が指定するフォルダーはディスク上に存在している必要があり、そうでない場合にはエラーが生成されます。
 
@@ -394,13 +394,13 @@ The `.moveTo( )` function <!-- REF #FolderClass.moveTo().Summary -->moves or ren
 | 引数      | タイプ       |    | 詳細                                      |
 | ------- | --------- | -- | --------------------------------------- |
 | newName | テキスト      | -> | フォルダーの新しい完全な名称                          |
-| Result  | 4D.Folder | <- | 名称変更されたフォルダー|<!-- END REF -->
+| 戻り値     | 4D.Folder | <- | 名称変更されたフォルダー|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.rename()` function <!-- REF #FolderClass.rename().Summary -->The `.rename()` function<!-- END REF -->.
+The `.rename()` function <!-- REF #FolderClass.rename().Summary -->The `.rename()` function<!-- END REF -->。
 
 *newName* 引数は命名規則に則っている必要があります (例: ":", "/", 等の文字を含んでいない、など)。そうでない場合、エラーが返されます。 同じ名前のファイルがすでに存在する場合には、エラーが返されます。
 

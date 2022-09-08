@@ -57,13 +57,13 @@ End if
 | zipStructure    | Object    | -> | 圧縮する File または Folder オブジェクト                                                    |
 | destinationFile | 4D.File   | -> | アーカイブの保存先ファイル                                                                  |
 | options         | 整数        | -> | *folderToZip* オプション: `ZIP Without enclosing folder` (外側のフォルダーを除外して ZIP圧縮をおこなう) |
-| Result          | Object    | <- | ステータスオブジェクト|<!-- END REF -->
+| 戻り値             | Object    | <- | ステータスオブジェクト|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `ZIP Create archive` command <!-- REF #_command_.ZIP Create archive.Summary -->creates a compressed ZIP archive object and returns the status of the operation<!-- END REF -->.
+The `ZIP Create archive` command <!-- REF #_command_.ZIP Create archive.Summary -->creates a compressed ZIP archive object and returns the status of the operation<!-- END REF -->。
 
 第1引数として、4D.File、4D.Folder、あるいは zipStructure オブジェクトを渡すことができます。
 
@@ -79,7 +79,7 @@ The `ZIP Create archive` command <!-- REF #_command_.ZIP Create archive.Summary 
 | level       | 整数          | 圧縮レベル。 とりうる値: 1 - 10。 低い値ではファイルが大きくなり、高い値ではファイルが小さくなります。 ただし、圧縮レベルはパフォーマンスに影響します。 デフォルト値 (省略時): <li>`ZIP Compression standard`: 6</li><li>`ZIP Compression LZMA`: 4</li><li>`ZIP Compression XZ`: 4</li> |
 | encryption  | 整数          | パスワードが設定されていた場合に使用する暗号化方法:<li>`ZIP Encryption AES128`: 128-bit キーを使った AES による暗号化</li><li>`ZIP Encryption AES192`: 192-bit キーを使った AES による暗号化</li><li>`ZIP Encryption AES256`: 256-bit キーを使った AES による暗号化 (パスワードが設定されている場合のデフォルト)</li><li>`ZIP Encryption none`: 暗号化なし (パスワードが設定されてない場合のデフォルト)</li>                                           |
 | password    | テキスト        | 暗号化が必要な場合に使用するパスワード                                                                                                                                                        |
-| files       | コレクション      | <li>`4D.File` または `4D.Folder` オブジェクトのコレクション</li><li>以下のプロパティを持ったオブジェクトのコレクション:</li><table><tr><td>プロパティ</td><td>タイプ</td><td>詳細</td></tr><tr><td>source</td><td>4D.File または 4D.Folder</td><td>File または Folder</td></tr><tr><td>destination</td><td>テキスト</td><td>(任意) - アーカイブのコンテンツ構成を変更するための相対ファイルパス</td></tr><tr><td>option</td><td>number</td><td>(任意) - `ZIP Ignore invisible files` で非表示ファイルを無視、0 を渡すと全ファイルを圧縮</td></tr></table>                                                                                             |
+| files       | Collection  | <li>`4D.File` または `4D.Folder` オブジェクトのコレクション</li><li>以下のプロパティを持ったオブジェクトのコレクション:</li><table><tr><td>プロパティ</td><td>タイプ</td><td>詳細</td></tr><tr><td>source</td><td>4D.File または 4D.Folder</td><td>File または Folder</td></tr><tr><td>destination</td><td>テキスト</td><td>(任意) - アーカイブのコンテンツ構成を変更するための相対ファイルパス</td></tr><tr><td>option</td><td>number</td><td>(任意) - `ZIP Ignore invisible files` で非表示ファイルを無視、0 を渡すと全ファイルを圧縮</td></tr></table>                                                                                             |
 | callback    | 4D.Function | $1 に圧縮の進捗 (0 - 100) を受け取るコールバックフォーミュラ                                                                                                                                      |
 
 *destinationFile* には、作成する ZIPアーカイブ (名前や位置など) を記述する `4D.File` オブジェクトを渡します。 作成した ZIPアーカイブがあらゆるソフトウェアで自動的に処理されるようにするため、".zip" 拡張子の使用が推奨されます。
@@ -208,13 +208,13 @@ $err:=ZIP Create archive($zip; $destination)
 | -------- | ------------- |:--:| -------------------------------------- |
 | zipFile  | 4D.File       | -> | ZIPアーカイブファイル                           |
 | password | テキスト          | -> | ZIPアーカイブのパスワード (必要であれば)                |
-| Result   | 4D.ZipArchive | <- | アーカイブオブジェクト|<!-- END REF -->
+| 戻り値      | 4D.ZipArchive | <- | アーカイブオブジェクト|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `ZIP Read archive` command <!-- REF #_command_.ZIP Read archive.Summary -->retrieves the contents of *zipFile* and returns it as a `4D.ZipArchive` object<!-- END REF -->.
+The `ZIP Read archive` command <!-- REF #_command_.ZIP Read archive.Summary -->retrieves the contents of *zipFile* and returns it as a `4D.ZipArchive` object<!-- END REF -->。
 
 > このコマンドは ZIPアーカイブを展開することはしません。 その中身に関する情報を提供するのみです。 アーカイブのコンテンツを取り出すには、[file.copyTo()](Document.md#copyto) あるいは [folder.copyTo()](Directory.md#copyto) などの関数を使用します。
 
@@ -272,7 +272,7 @@ root フォルダーから取り出します:
 
 #### 詳細
 
-The `.root` property contains <!-- REF #ZipArchiveClass.root.Summary -->a virtual folder providing access to the contents of the ZIP archive<!-- END REF -->.
+The `.root` property contains <!-- REF #ZipArchiveClass.root.Summary -->a virtual folder providing access to the contents of the ZIP archive<!-- END REF -->。
 
 `root` フォルダーとそのコンテンツは、[ZipFile](ZipFileClass.md) および [ZipFolder](ZipFolderClass.md) の関数とプロパティを使用することで操作可能です。
 

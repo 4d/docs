@@ -306,7 +306,7 @@ This.name:="Square"
 | ->[People]Name              | Pointer     | この式は [People]Name フィールドへのポインターを返します。                                           |
 | Table (1)                   | Pointer     | このコマンドは一番目に定義されたテーブルへのポインターを返します。                                              |
 | JSON Parse (MyString)       | Object      | このコマンドは MyString が適切なフォーマットであれば、オブジェクトとして返します。                                 |
-| JSON Parse (MyJSONArray)    | コレクション      | このコマンドは MyJSONArray が適切なフォーマットであれば、コレクションとして返します。                              |
+| JSON Parse (MyJSONArray)    | Collection  | このコマンドは MyJSONArray が適切なフォーマットであれば、コレクションとして返します。                              |
 | Form.pageNumber             | オブジェクトプロパティ | オブジェクトプロパティは式として、サポートされているいずれのタイプでもありえます。                                      |
 | Col[5]                      | コレクション要素    | コレクション要素は式として、サポートされているいずれのタイプでもありえます。                                         |
 | $entitySel[0]               | Entity      | ORDA のエンティティセレクションの要素である、エンティティを返します。 これは **代入不可の式** です。                       |

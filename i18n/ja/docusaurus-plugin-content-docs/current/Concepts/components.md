@@ -3,7 +3,7 @@ id: components
 title: コンポーネント
 ---
 
-4D のコンポーネントとは、プロジェクトにインストール可能な、1つ以上の機能を持つ 4Dメソッドやフォームの一式です。 たとえば、[4D SVGコンポーネント](https://doc.4d.com/4Dv19R3/4D/19-R3/4D-SVG-Component.100-5681501.ja.html) は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。
+A 4D component is a set of 4D code and forms representing one or more functionalities that you can install and use in your projects. たとえば、[4D SVGコンポーネント](https://doc.4d.com/4Dv19R3/4D/19-R3/4D-SVG-Component.100-5681501.ja.html) は、SVGファイルの表示するための高度なコマンドと統合されたレンダリングエンジンを追加します。
 
 ## コンポーネントの見つけ方
 
@@ -18,10 +18,18 @@ title: コンポーネント
 
 ## コンポーネントの使い方
 
-コンポーネントメソッドやフォームは、4D開発において標準の要素として使用できます。
+Exposed component code (methods and functions) as well as forms can be used as standard elements in your 4D development.
 
-インストールされたコンポーネントにメソッドが含まれている場合、それらはエクスプローラーのメソッドページの **コンポーネントメソッド** テーマに表示されます。
+When an installed component contains methods, classes, and functions, they appear in the **Component Methods** theme of the Explorer's Methods page:
 
-コンポーネントメソッドを選択し、エクスプローラーの**ドキュメント** ボタンをクリックすると、そのメソッドに関する情報が得られます ([あれば](Project/documentation.md))。
+![alt-text](../assets/en/Concepts/components-explorer.png)
+
+:::note
+
+If the component is compiled, its [namespace](../Extensions/develop-components.md#declaring-the-component-namespace) is written between parentheses after its name. Use this namespace to access the component's functions.
+
+:::
+
+You can select a component [project method](methods.md) or [class](classes.md) and click on the **Documentation** button of the Explorer to get information about it, [if any](Project/documentation.md).
 
 ![alt-text](../assets/en/Project/compDoc.png)

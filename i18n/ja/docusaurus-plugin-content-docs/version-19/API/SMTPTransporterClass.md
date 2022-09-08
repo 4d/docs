@@ -45,7 +45,7 @@ SMTP Transporter オブジェクトは [SMTP New transporter](#smtp-new-transpor
 | 引数     | タイプ                |    | 詳細                                                                             |
 | ------ | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server | Object             | -> | メールサーバー情報                                                                      |
-| Result | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object)|<!-- END REF -->
+| 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object)|<!-- END REF -->
 
 |
 
@@ -78,7 +78,7 @@ The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summ
 | [<!-- INCLUDE #transporter.sendTimeOut.Syntax -->](#sendtimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.sendTimeOut.Summary -->| 100                                   |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| なし                                    |
 
-#### Result
+#### 戻り値
 
 この関数は、[**SMTP transporter オブジェクト**](#smtp-transporter-オブジェクト) を返します。 返されるプロパティはすべて **読み取り専用** です。
 
@@ -121,13 +121,13 @@ The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summ
 | 引数     | タイプ                |    | 詳細                                                                             |
 | ------ | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server | Object             | -> | メールサーバー情報                                                                      |
-| Result | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object)|<!-- END REF -->
+| 戻り値    | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object)|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `4D.SMTPTransporter.new()` function <!-- REF #4D.SMTPTransporter.new().Summary -->creates and returns a new object of the `4D.SMTPTransporter` type<!-- END REF -->. この関数の機能は、[`SMTP New transporter`](#smtp-new-transporter) コマンドと同一です。
+The `4D.SMTPTransporter.new()` function <!-- REF #4D.SMTPTransporter.new().Summary -->creates and returns a new object of the `4D.SMTPTransporter` type<!-- END REF -->。 この関数の機能は、[`SMTP New transporter`](#smtp-new-transporter) コマンドと同一です。
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -209,16 +209,16 @@ SMTP接続は、以下の場合に自動的に閉じられます:
 
 
 <!-- REF #SMTPTransporterClass.send().Params -->
-| 引数     | タイプ    |    | 詳細                                           |
-| ------ | ------ |:--:| -------------------------------------------- |
-| mail   | Object | -> | 送信する [メール](EmailObjectClass.md#email-オブジェクト) |
-| Result | Object | <- | SMTP status|<!-- END REF -->
+| 引数   | タイプ    |    | 詳細                                           |
+| ---- | ------ |:--:| -------------------------------------------- |
+| mail | Object | -> | 送信する [メール](EmailObjectClass.md#email-オブジェクト) |
+| 戻り値  | Object | <- | SMTP status|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.send()` function <!-- REF #SMTPTransporterClass.send().Summary -->sends the [*mail* object](EmailObjectClass.md#email-object) to the SMTP server defined in the `transporter` object and returns a status object<!-- END REF -->.
+The `.send()` function <!-- REF #SMTPTransporterClass.send().Summary -->sends the [*mail* object](EmailObjectClass.md#email-object) to the SMTP server defined in the `transporter` object and returns a status object<!-- END REF -->。
 > `transporter` オブジェクトは、事前に `SMTP New transporter` コマンドによって作成されている必要があります。
 
 この関数は、SMTP接続が事前に開かれていなかった場合には、それを作成します。 `transporter` オブジェクトの `.keepAlive` プロパティが false であった場合、SMTP接続は `.send()` 実行後に自動的に閉じられます。 詳細については、[`SMTP New transporter`](#smtp-new-transporter) コマンドの説明を参照してください。

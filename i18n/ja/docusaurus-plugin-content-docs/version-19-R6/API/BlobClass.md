@@ -28,16 +28,16 @@ Blobクラスを使って、[BLOB オブジェクト](../Concepts/dt_blob.md#BLO
 
 <!-- REF #4D.Blob.new().Params -->
 
-| 引数     | タイプ              |    | 詳細                                       |
-| ------ | ---------------- |:--:| ---------------------------------------- |
-| blob   | Blob または 4D.Blob | -> | コピーする BLOB                               |
-| Result | 4D.Blob          | <- | New 4D.Blob  |<!-- END REF -->
+| 引数   | タイプ              |    | 詳細                                       |
+| ---- | ---------------- |:--:| ---------------------------------------- |
+| blob | Blob または 4D.Blob | -> | コピーする BLOB                               |
+| 戻り値  | 4D.Blob          | <- | New 4D.Blob  |<!-- END REF -->
 
 |
 
 #### 詳細
 
-`4D.Blob.new` <!-- REF #4D.Blob.new().Summary -->creates a new `4D.Blob` object optionally encapsulating a copy of the data from another blob (scalar blob or `4D.Blob`)<!-- END REF -->.
+`4D.Blob.new` <!-- REF #4D.Blob.new().Summary -->creates a new `4D.Blob` object optionally encapsulating a copy of the data from another blob (scalar blob or `4D.Blob`)<!-- END REF -->。
 
 `blob` 引数が渡されなかった場合、関数は空の 4D.Blob を返します。
 
@@ -63,11 +63,11 @@ The `.size` property <!-- REF #Blob.size.Summary -->returns the size of a `4D.Bl
 
 
 <!-- REF #Blob.slice().Params -->
-| 引数     | タイプ     |    | 詳細                                      |
-| ------ | ------- |:--:| --------------------------------------- |
-| start  | 実数      | -> | 新しい `4D.Blob` に含める最初のバイトのインデックス         |
-| end    | 実数      | -> | 新しい `4D.Blob` に含めない最初のバイトのインデックス        |
-| Result | 4D.Blob | <- | 新規 `4D.Blob`|<!-- END REF -->
+| 引数    | タイプ     |    | 詳細                                      |
+| ----- | ------- |:--:| --------------------------------------- |
+| start | 実数      | -> | 新しい `4D.Blob` に含める最初のバイトのインデックス         |
+| end   | 実数      | -> | 新しい `4D.Blob` に含めない最初のバイトのインデックス        |
+| 戻り値   | 4D.Blob | <- | 新規 `4D.Blob`|<!-- END REF -->
 
 |
 

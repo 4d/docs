@@ -88,8 +88,8 @@ title: 分岐構造
     :(Boolean_Expression)
        statement(s)
        .
-       .
-       .
+       。
+       。
 
     :(Boolean_Expression)
        statement(s)
@@ -106,8 +106,8 @@ title: 分岐構造
     :(Boolean_Expression)
        statement(s)
        .
-       .
-       .
+       。
+       。
 
     :(Boolean_Expression)
        statement(s)

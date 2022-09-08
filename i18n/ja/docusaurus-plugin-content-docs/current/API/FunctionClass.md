@@ -125,7 +125,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 | 引数         | タイプ         |    | 詳細                                                             |
 | ---------- | ----------- |:--:| -------------------------------------------------------------- |
 | formulaExp | 式           | -> | オブジェクトとして返されるフォーミュラ                                            |
-| Result     | 4D.Function | <- | フォーミュラを格納しているネイティブな Function オブジェクト|<!-- END REF -->
+| 戻り値        | 4D.Function | <- | フォーミュラを格納しているネイティブな Function オブジェクト|<!-- END REF -->
 
 
 |
@@ -133,7 +133,7 @@ Formulaオブジェクトは、オブジェクトプロパティに格納する�
 
 #### 詳細
 
-The `Formula` command <!-- REF #_command_.Formula.Summary -->creates a `4D Function` object based upon the *formulaExp* expression<!-- END REF -->. .
+The `Formula` command <!-- REF #_command_.Formula.Summary -->creates a `4D Function` object based upon the *formulaExp* expression<!-- END REF -->。 .
 
 フォーミュラがオブジェクトとして存在することで、コマンドやメソッドに対して引数 (計算された属性) として渡したり、"コンポーネントとホストデータベース間で共有" として宣言せずとも様々なコンポーネントから実行したりできるようになります。 呼び出されたフォーミュラオブジェクトは、それを作成したデータベースあるいはコンポーネントのコンテキストにおいて評価されます。
 
@@ -264,7 +264,7 @@ The `Formula` command <!-- REF #_command_.Formula.Summary -->creates a `4D Funct
 | 引数            | タイプ         |    | 詳細                                                                 |
 | ------------- | ----------- |:--:| ------------------------------------------------------------------ |
 | formulaString | テキスト        | -> | オブジェクトとして返されるフォーミュラ文字列                                             |
-| Result        | 4D.Function | <- | Native object encapsulating the formula|<!-- END REF -->
+| 戻り値           | 4D.Function | <- | Native object encapsulating the formula|<!-- END REF -->
 
 
 |
@@ -272,7 +272,7 @@ The `Formula` command <!-- REF #_command_.Formula.Summary -->creates a `4D Funct
 
 #### 詳細
 
-The `Formula from string` command <!-- REF #_command_.Formula from string.Summary -->creates a 4D.Function object based upon the *formulaString*<!-- END REF -->.  .
+The `Formula from string` command <!-- REF #_command_.Formula from string.Summary -->creates a 4D.Function object based upon the *formulaString*<!-- END REF -->。  .
 
 このコマンドは [`Formula`](#formula) に似ていますが、テキストに基づいたフォーミュラを扱う点が異なります。 多くの場合において、`Formula` コマンドの使用が推奨されます。 `Formula from string` コマンドは、元となるフォーミュラがテキストとして表現されている場合 (例: 外部の JSON ファイルに保存されていた場合など) にのみ使用されるべきです。 このコンテキストにおいては、トークンシンタックスの使用が強く推奨されます。
 > ローカル変数の中身はコンパイル済みモードでは名前によるアクセスが不可能なため、*formulaString* 引数内で使用することはできません。 `Formula from string` コマンドを使用してローカル変数にアクセスを試みた場合、エラー(-10737) が生成されます。
@@ -320,11 +320,11 @@ The `Formula from string` command <!-- REF #_command_.Formula from string.Summar
 
 
 <!-- REF #FunctionClass.apply().Params -->
-| 引数            | タイプ    |    | 詳細                                                      |
-| ------------- | ------ |:--:| ------------------------------------------------------- |
-| thisObj       | Object | -> | フォーミュラ内で This コマンドによって返されるオブジェクト                        |
-| formulaParams | コレクション | -> | フォーミュラが実行される際に $1...$n として渡される値のコレクション                  |
-| Result        | any    | <- | Value from formula execution|<!-- END REF -->
+| 引数            | タイプ        |    | 詳細                                                      |
+| ------------- | ---------- |:--:| ------------------------------------------------------- |
+| thisObj       | Object     | -> | フォーミュラ内で This コマンドによって返されるオブジェクト                        |
+| formulaParams | Collection | -> | フォーミュラが実行される際に $1...$n として渡される値のコレクション                  |
+| 戻り値           | any        | <- | Value from formula execution|<!-- END REF -->
 
 
 |
@@ -332,7 +332,7 @@ The `Formula from string` command <!-- REF #_command_.Formula from string.Summar
 
 #### 詳細
 
-The `.apply()` function <!-- REF #FunctionClass.apply().Summary -->executes the `formula` object to which it is applied and returns the resulting value<!-- END REF -->. .
+The `.apply()` function <!-- REF #FunctionClass.apply().Summary -->executes the `formula` object to which it is applied and returns the resulting value<!-- END REF -->。 .
 
 
 *thisObj* には、フォーミュラ内で `This` として使用されるオブジェクトへの参照を渡すことができます。
@@ -389,7 +389,7 @@ The `.apply()` function <!-- REF #FunctionClass.apply().Summary -->executes the 
 | ------- | ------ | -- | ------------------------------------------------------- |
 | thisObj | Object | -> | フォーミュラ内で This コマンドによって返されるオブジェクト                        |
 | params  | any    | -> | フォーミュラが実行される際に $1...$n として渡される値                         |
-| Result  | any    | <- | Value from formula execution|<!-- END REF -->
+| 戻り値     | any    | <- | Value from formula execution|<!-- END REF -->
 
 
 |
@@ -397,7 +397,7 @@ The `.apply()` function <!-- REF #FunctionClass.apply().Summary -->executes the 
 
 #### 詳細
 
-The `.call()` function <!-- REF #FunctionClass.call().Summary -->executes the `formula` object to which it is applied and returns the resulting value<!-- END REF -->. .
+The `.call()` function <!-- REF #FunctionClass.call().Summary -->executes the `formula` object to which it is applied and returns the resulting value<!-- END REF -->。 .
 
 *thisObj* には、フォーミュラ内で `This` として使用されるオブジェクトへの参照を渡すことができます。
 
@@ -441,7 +441,7 @@ The `.call()` function <!-- REF #FunctionClass.call().Summary -->executes the `f
 
 #### 詳細
 
-The `.source` property <!-- REF #FunctionClass.source.Summary -->contains the source expression of the `formula` as text<!-- END REF -->.
+The `.source` property <!-- REF #FunctionClass.source.Summary -->contains the source expression of the `formula` as text<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 

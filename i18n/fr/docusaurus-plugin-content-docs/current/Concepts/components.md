@@ -3,7 +3,7 @@ id: components
 title: Composants
 ---
 
-Un composant 4D est un ensemble de méthodes et de formulaires 4D représentant une ou plusieurs fonctionnalité(s), qu’il est possible d’installer et d'utiliser dans différents projets. Par exemple, le [composant 4D SVG](https://doc.4d.com/4Dv19R3/4D/19-R3/4D-SVG-Component.100-5681501.en.html) ajoute des commandes avancées et un moteur de rendu intégré qui peut être utilisé pour afficher des fichiers SVG.
+A 4D component is a set of 4D code and forms representing one or more functionalities that you can install and use in your projects. Par exemple, le [composant 4D SVG](https://doc.4d.com/4Dv19R3/4D/19-R3/4D-SVG-Component.100-5681501.en.html) ajoute des commandes avancées et un moteur de rendu intégré qui peut être utilisé pour afficher des fichiers SVG.
 
 ## Où se trouvent les composants ?
 
@@ -18,10 +18,18 @@ Un projet hôte fonctionnant en mode interprété peut utiliser des composants i
 
 ## Utilisation des composants
 
-Les formulaires et méthodes composant peuvent être utilisés comme éléments standard de votre développement 4D.
+Exposed component code (methods and functions) as well as forms can be used as standard elements in your 4D development.
 
-Lorsqu'un composant installé contient des méthodes, celles-ci apparaissent dans le thème **Méthodes composant** de la page Méthodes de l'Explorateur.
+When an installed component contains methods, classes, and functions, they appear in the **Component Methods** theme of the Explorer's Methods page:
 
-Vous pouvez sélectionner une méthode composant et cliquer sur le bouton **Documentation** de l'Explorateur pour obtenir des informations à son sujet, [le cas échéant](Project/documentation.md).
+![alt-text](../assets/en/Concepts/components-explorer.png)
+
+:::note
+
+If the component is compiled, its [namespace](../Extensions/develop-components.md#declaring-the-component-namespace) is written between parentheses after its name. Use this namespace to access the component's functions.
+
+:::
+
+You can select a component [project method](methods.md) or [class](classes.md) and click on the **Documentation** button of the Explorer to get information about it, [if any](Project/documentation.md).
 
 ![alt-text](../assets/en/Project/compDoc.png)

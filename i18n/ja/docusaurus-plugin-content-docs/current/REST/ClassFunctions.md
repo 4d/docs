@@ -135,7 +135,7 @@ exposed Function getName()
 
 **POST** `127.0.0.1:8111/rest/$catalog/getName`
 
-#### Result
+#### 戻り値
 
 ```
 {
@@ -165,7 +165,7 @@ exposed Function getCity()
 
 リクエストのボディ: ["Aguada"]
 
-#### Result
+#### 戻り値
 
 結果は、次のエンティティです:
 ```
@@ -209,7 +209,7 @@ exposed Function getPopulation()
 
 **POST** `127.0.0.1:8111/rest/City(2)/getPopulation`
 
-#### Result
+#### 戻り値
 
 ```
 {
@@ -235,7 +235,7 @@ exposed Function getPopulation()
 
 **POST** `127.0.0.1:8111/rest/City/getPopulation/?$filter="ID<3"`
 
-#### Result
+#### 戻り値
 
 ```
 {
@@ -267,7 +267,7 @@ exposed Function getAgeAverage
 
 **POST** `127.0.0.1:8044/rest/Students/getAgeAverage/$entityset/17E83633FFB54ECDBF947E5C620BB532`
 
-#### Result
+#### 戻り値
 
 ```
 {
@@ -298,7 +298,7 @@ exposed Function getLastSummary
 **POST** `127.0.0.1:8044/rest/Students/getLastSummary/$entityset/?$filter="lastname=b@"&$orderby="lastname"`
 
 
-#### Result
+#### 戻り値
 
 ```
 {
@@ -353,7 +353,7 @@ exposed Function pushData
 `__KEY` が提供されていないため、サーバー上では **クライアントから受け取った属性を持つ** 新規の Studentsエンティティが読み込まれます。 `pushData()` 関数が `save()` を実行するため、この新規エンティティは保存されます。
 
 
-#### Result
+#### 戻り値
 
 ```
 {
@@ -390,7 +390,7 @@ __KEY 属性を使って、上の例題と同じことをおこなうと、エ�
 
 `__KEY` が提供されているため、**クライアントから受け取った lastname属性値を持つ** プライマリーキーが 55 の Studentsエンティティが読み込まれます。 pushData() 関数が `save()` を実行するため、このエンティティは更新されます。
 
-#### Result
+#### 戻り値
 
 ``` 
 {
@@ -426,7 +426,7 @@ __KEY 属性を使って、上の例題と同じことをおこなうと、エ�
 }]
 ```
 
-#### Result
+#### 戻り値
 
 ```
 {
@@ -480,7 +480,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 }]
 ```
 
-#### Result
+#### 戻り値
 
 ```
 {
@@ -547,7 +547,7 @@ exposed Function setFinalExam()
 
 ```
 
-#### Result
+#### 戻り値
 
 プライマリーキー 1と2 のエンティティが更新されました:
 

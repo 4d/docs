@@ -331,7 +331,7 @@ The value of the 4D variable `vtSiteName` will be inserted in the HTML page when
 
 たとえば、4Dタグを使用して 4Dのテキスト変数 myvar を処理した結果は以下の様になります:
 
-| myvar の値             | タグ                           | Result              |
+| myvar の値             | タグ                           | 戻り値                 |
 | -------------------- | ---------------------------- | ------------------- |
 | `myvar:="<B>"` | `<!--#4DTEXT myvar-->` | `&lt;B&gt;` |
 | `myvar:="<B>"` | `<!--#4DHTML myvar-->` | `<B>`         |
@@ -352,7 +352,7 @@ In case of an interpretation error, the text "`<!--#4DIF expression-->`: A Boole
 
 解釈エラーの場合、`<!--#4DIF -->` と `<!--#4DENDIF-->` の間のコンテンツの代わりに、"`<!--#4DIF expression-->`: ブール式が必要です" というテキストが挿入されます。 The `<!--#4DIF expression-->` ... `<!--#4DENDIF-->` blocks can be nested in several levels. Like in 4D, each `<!--#4DIF expression-->` must match a `<!--#4DENDIF-->`.
 
-`<!--#4DELSEIF-->` タグを使用すると、数に制限なく条件をテストできます。 最初に `true` と判定されたブロック内にあるコードだけが実行されます。 `true` ブロックがなく、`<!--#4DELSE-->` もない場合には、なにも実行されません。 You can use a <!--#4DELSE--> tag after the last <!--#4DELSEIF-->. . <!--#4DELSE--> If all the conditions are false, the statements following the
+`<!--#4DELSEIF-->` タグを使用すると、数に制限なく条件をテストできます。 最初に `true` と判定されたブロック内にあるコードだけが実行されます。 `true` ブロックがなく、`<!--#4DELSE-->` もない場合には、なにも実行されません。 You can use a <!--#4DELSE--> tag after the last <!--#4DELSEIF-->。 . <!--#4DELSE--> If all the conditions are false, the statements following the
 
 以下の2つのコードは同等です。
 

@@ -89,7 +89,7 @@ The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->create
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Text<!-- END REF -->
 
 
-Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised curve name of the key<!-- END REF -->. 通常、ES256 (デフォルト) の場合は "prime256v1", ES384 の場合は "secp384r1", ES512 の場合は "secp521r1"。
+Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised curve name of the key<!-- END REF -->。 通常、ES256 (デフォルト) の場合は "prime256v1", ES384 の場合は "secp384r1", ES512 の場合は "secp521r1"。
 <!-- END REF -->
 
 <!-- REF CryptoKey.decrypt().Desc -->
@@ -111,11 +111,11 @@ Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised
 | ------- | ------ | -- | ------------------------------------------------- |
 | message | テキスト   | -> | `options.encodingEncrypted` を使ってデコードし復号するメッセージ文字列 |
 | options | Object | -> | デコーディングオプション                                      |
-| Result  | Object | <- | Status|<!-- END REF -->
+| 戻り値     | Object | <- | Status|<!-- END REF -->
 
 |
 
-The `.decrypt()` function <!-- REF #CryptoKey.decrypt().Summary -->decrypts the *message* parameter using the **private** key<!-- END REF -->. 使用されるアルゴリズムはキーの種類に依存します。
+The `.decrypt()` function <!-- REF #CryptoKey.decrypt().Summary -->decrypts the *message* parameter using the **private** key<!-- END REF -->。 使用されるアルゴリズムはキーの種類に依存します。
 
 キーは RSA キーでなければならず、アルゴリズムは RSA-OAEP です ([RFC 3447](https://tools.ietf.org/html/rfc3447) 参照)。
 
@@ -127,7 +127,7 @@ The `.decrypt()` function <!-- REF #CryptoKey.decrypt().Summary -->decrypts the 
 | encodingEncrypted | text | 復号するバイナリ形式に `message` を変換するためのエンコーディング。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"   |
 | encodingDecrypted | text | バイナリの復号メッセージを文字列に変換するためのエンコーディング。 可能な値: "UTF-8", "Base64" または "Base64URL"。 デフォルト値: "UTF-8" |
 
-#### *Result*
+#### *戻り値*
 
 `message` の復号に成功した場合には、success プロパティが `true` に設定された *status* オブジェクトを返します。
 
@@ -159,11 +159,11 @@ The `.decrypt()` function <!-- REF #CryptoKey.decrypt().Summary -->decrypts the 
 | ------- | ------ | -- | ---------------------------------------------------------------------------- |
 | message | テキスト   | -> | `options.encodingDecrypted` を使ってエンコードし暗号化するメッセージ文字列                          |
 | options | Object | -> | エンコーディングオプション                                                                |
-| Result  | テキスト   | <- | options.encodingEncrypted を使って暗号化およびエンコードされたメッセージ|<!-- END REF -->
+| 戻り値     | テキスト   | <- | options.encodingEncrypted を使って暗号化およびエンコードされたメッセージ|<!-- END REF -->
 
 |
 
-The `.encrypt()` function <!-- REF #CryptoKey.encrypt().Summary -->encrypts the *message* parameter using the **public** key<!-- END REF -->. 使用されるアルゴリズムはキーの種類に依存します。
+The `.encrypt()` function <!-- REF #CryptoKey.encrypt().Summary -->encrypts the *message* parameter using the **public** key<!-- END REF -->。 使用されるアルゴリズムはキーの種類に依存します。
 
 キーは RSA キーでなければならず、アルゴリズムは RSA-OAEP です ([RFC 3447](https://tools.ietf.org/html/rfc3447) 参照)。
 
@@ -175,7 +175,7 @@ The `.encrypt()` function <!-- REF #CryptoKey.encrypt().Summary -->encrypts the 
 | encodingEncrypted | text | バイナリの暗号化メッセージを文字列に変換するためのエンコーディング。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"               |
 | encodingDecrypted | text | 暗号化するバイナリ形式に `message` を変換するためのエンコーディング。 可能な値: "UTF-8", "Base64" または "Base64URL"。 デフォルト値: "UTF-8" |
 
-#### *Result*
+#### *戻り値*
 
 戻り値は暗号化されたメッセージです。
 <!-- END REF -->
@@ -195,15 +195,15 @@ The `.encrypt()` function <!-- REF #CryptoKey.encrypt().Summary -->encrypts the 
 
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
-| 引数     | タイプ  |    | 詳細                                    |
-| ------ | ---- | -- | ------------------------------------- |
-| Result | テキスト | <- | PEM 形式の秘密鍵|<!-- END REF -->
+| 引数  | タイプ  |    | 詳細                                    |
+| --- | ---- | -- | ------------------------------------- |
+| 戻り値 | テキスト | <- | PEM 形式の秘密鍵|<!-- END REF -->
 
 |
 
 The `.getPrivateKey()` function  <!-- REF #CryptoKey.getPrivateKey().Summary -->returns the private key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
 
-#### *Result*
+#### *戻り値*
 
 戻り値は秘密鍵です。
 <!-- END REF -->
@@ -223,15 +223,15 @@ The `.getPrivateKey()` function  <!-- REF #CryptoKey.getPrivateKey().Summary -->
 
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
-| 引数     | タイプ  |    | 詳細                                    |
-| ------ | ---- | -- | ------------------------------------- |
-| Result | テキスト | <- | PEM 形式の公開鍵|<!-- END REF -->
+| 引数  | タイプ  |    | 詳細                                    |
+| --- | ---- | -- | ------------------------------------- |
+| 戻り値 | テキスト | <- | PEM 形式の公開鍵|<!-- END REF -->
 
 |
 
 The `.getPublicKey()` function <!-- REF #CryptoKey.getPublicKey().Summary -->returns the public key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
 
-#### *Result*
+#### *戻り値*
 
 戻り値は公開鍵です。
 <!-- END REF -->
@@ -272,7 +272,7 @@ The `.getPublicKey()` function <!-- REF #CryptoKey.getPublicKey().Summary -->ret
 | ------- | ------ | -- | ---------------------------------------------------------------------------------------------------------- |
 | message | テキスト   | -> | 署名をするメッセージ                                                                                                 |
 | options | Object | -> | 署名オプション                                                                                                    |
-| Result  | テキスト   | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option|<!-- END REF -->
+| 戻り値     | テキスト   | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option|<!-- END REF -->
 
 |
 
@@ -289,7 +289,7 @@ The `.sign()` function <!-- REF #CryptoKey.sign().Summary -->signs the utf8 repr
 | pss               | boolean | 確率的署名スキーム (PSS) を使用する。 RSA キーでない場合は無視されます。 PS＠ アルゴリズム用の JWT を生成する場合は `true` を渡します。                                           |
 | encoding          | text    | 戻り値の署名のエンコード方式。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"                                                             |
 
-#### *Result*
+#### *戻り値*
 
 utf8 形式の *message* 文字列。
 <!-- END REF -->
@@ -308,7 +308,7 @@ utf8 形式の *message* 文字列。
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
 
 
-Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the key in bits<!-- END REF -->. .
+Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the key in bits<!-- END REF -->。 .
 
 <!-- REF CryptoKey.type -->
 ## .type
@@ -324,7 +324,7 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 <!-- REF #CryptoKey.type.Syntax -->**.type** : Text<!-- END REF -->
 
 
-The <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "ECDSA", "PEM" <!-- END REF -->.
+The <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "ECDSA", "PEM" <!-- END REF -->。
 
 - "RSA": an RSA key pair, using `settings.size` as [.size](#size).
 - "ECDSA": an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as [.curve](#curve). ECDSA キーは署名だけに使用されるもので、暗号化には使用できないことに留意してください。
@@ -352,7 +352,7 @@ The <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "ECDSA", "
 | message   | テキスト   | -> | 署名生成時に使われたメッセージ文字列                                          |
 | signature | テキスト   | -> | 検証の対象である、`options.encoding` に応じて Base64 または Base64URL 形式の署名 |
 | options   | Object | -> | 署名オプション                                                     |
-| Result    | Object | <- | 検証ステータス|<!-- END REF -->
+| 戻り値       | Object | <- | 検証ステータス|<!-- END REF -->
 
 
 |
@@ -370,7 +370,7 @@ The `.verify()` function <!-- REF #CryptoKey.verify().Summary -->verifies the ba
 | pss      | boolean | 確率的署名スキーム (PSS) を使用する。 RSA キーでない場合は無視されます。 PS＠ アルゴリズム用の JWT を生成する場合は `true` を渡します。                                           |
 | encoding | text    | 署名のエンコード方式。 可能な値: "Base64" または "Base64URL"。 デフォルト値: "Base64"                                                                 |
 
-#### *Result*
+#### *戻り値*
 
 検証で署名が合致した場合には、`success` プロパティが `true` に設定された `status` オブジェクトを返します。
 

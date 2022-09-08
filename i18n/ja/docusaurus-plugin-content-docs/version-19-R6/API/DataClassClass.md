@@ -109,13 +109,13 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 | 引数       | タイプ                |    | 詳細                                                                             |
 | -------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | settings | Object             | -> | ビルドオプション: context                                                              |
-| Result   | 4D.EntitySelection | <- | References on all entities related to the Dataclass|<!-- END REF -->
+| 戻り値      | 4D.EntitySelection | <- | References on all entities related to the Dataclass|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.all()` function <!-- REF #DataClassClass.all().Summary -->queries the datastore to find all the entities related to the dataclass and returns them as an entity selection<!-- END REF -->.
+The `.all()` function <!-- REF #DataClassClass.all().Summary -->queries the datastore to find all the entities related to the dataclass and returns them as an entity selection<!-- END REF -->。
 
 エンティティはデフォルトの順番で返され、通常は作成順になっています。 ただし、エンティティ削除後に新規追加した場合には、デフォルトの順番は作成順を反映しない点に留意が必要です。
 
@@ -163,7 +163,7 @@ The `.all()` function <!-- REF #DataClassClass.all().Summary -->queries the data
 
 #### 詳細
 
-The `.clearRemoteCache()` function <!-- REF #DataClassClass.clearRemoteCache().Summary -->empties the ORDA cache of a dataclass<!-- END REF -->.
+The `.clearRemoteCache()` function <!-- REF #DataClassClass.clearRemoteCache().Summary -->empties the ORDA cache of a dataclass<!-- END REF -->。
 
 > この関数は `timeout` および `maxEntries` の値をリセットしません。
 
@@ -211,15 +211,15 @@ $ds.Persons.clearRemoteCache()
 <!-- REF #DataClassClass.fromCollection().Params -->
 | 引数        | タイプ                |    | 詳細                                                                     |
 | --------- | ------------------ |:--:| ---------------------------------------------------------------------- |
-| objectCol | コレクション             | -> | エンティティにマップするオブジェクトのコレクション                                              |
+| objectCol | Collection         | -> | エンティティにマップするオブジェクトのコレクション                                              |
 | settings  | Object             | -> | ビルドオプション: context                                                      |
-| Result    | 4D.EntitySelection | <- | Entity selection filled from the collection|<!-- END REF -->
+| 戻り値       | 4D.EntitySelection | <- | Entity selection filled from the collection|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.fromCollection()` function <!-- REF #DataClassClass.fromCollection().Summary -->updates or creates entities in the dataclass according to the *objectCol* collection of objects, and returns the corresponding entity selection<!-- END REF -->.
+The `.fromCollection()` function <!-- REF #DataClassClass.fromCollection().Summary -->updates or creates entities in the dataclass according to the *objectCol* collection of objects, and returns the corresponding entity selection<!-- END REF -->。
 
 *objectCol* パラメーターには、データクラスの既存エンティティを更新、または新規エンティティを作成するためのオブジェクトのコレクションを渡します。 プロパティ名は、データクラスの属性名と同一である必要があります。 プロパティ名がデータクラスに存在しない場合、それは無視されます。 コレクション内で属性値が定義されていない場合、その値は null になります。
 
@@ -411,13 +411,13 @@ The `.fromCollection()` function <!-- REF #DataClassClass.fromCollection().Summa
 | ---------- | ---------------- |:--:| --------------------------------------------------------------------- |
 | primaryKey | Integer または Text | -> | 取得するエンティティのプライマリーキー値                                                  |
 | settings   | Object           | -> | ビルドオプション: context                                                     |
-| Result     | 4D.Entity        | <- | Entity matching the designated primary key|<!-- END REF -->
+| 戻り値        | 4D.Entity        | <- | Entity matching the designated primary key|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.get()` function <!-- REF #DataClassClass.get().Summary -->queries the dataclass to retrieve the entity matching the *primaryKey* parameter<!-- END REF -->.
+The `.get()` function <!-- REF #DataClassClass.get().Summary -->queries the dataclass to retrieve the entity matching the *primaryKey* parameter<!-- END REF -->。
 
 *primaryKey* には、取得したいエンティティのプライマリーキーの値を渡します。 値の型は、データストアで設定されたプライマリーキーの型 (倍長整数あるいはテキスト) と合致している必要があります。 [`.getKey()`](EntityClass.md#getkey) 関数に `dk key as string` 引数を渡すと、プライマリーキーの値が常にテキスト型で返されるように指定することができます。
 
@@ -491,7 +491,7 @@ The `.get()` function <!-- REF #DataClassClass.get().Summary -->queries the data
 
 #### 詳細
 
-The `.getCount()` function <!-- REF #DataClassClass.getCount().Summary --> returns the number of entities in a dataclass<!-- END REF -->.
+The `.getCount()` function <!-- REF #DataClassClass.getCount().Summary --> returns the number of entities in a dataclass<!-- END REF -->。
 
 トランザクション内でこの関数を使用した場合、トランザクション中に作成されたエンティティは考慮されます。
 
@@ -523,15 +523,15 @@ $number:=$ds.Persons.getCount()
 
 
 <!-- REF #DataClassClass.getDataStore().Params -->
-| 引数     | タイプ          |    | 詳細                                                    |
-| ------ | ------------ |:--:| ----------------------------------------------------- |
-| Result | cs.DataStore | <- | Datastore of the dataclass|<!-- END REF -->
+| 引数  | タイプ          |    | 詳細                                                    |
+| --- | ------------ |:--:| ----------------------------------------------------- |
+| 戻り値 | cs.DataStore | <- | Datastore of the dataclass|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.getDataStore()` function <!-- REF #DataClassClass.getDataStore().Summary -->returns the datastore for the specified dataclass<!-- END REF -->.
+The `.getDataStore()` function <!-- REF #DataClassClass.getDataStore().Summary -->returns the datastore for the specified dataclass<!-- END REF -->。
 
 返されるデータストアは次のいずれかです:
 
@@ -577,15 +577,15 @@ The `.getDataStore()` function <!-- REF #DataClassClass.getDataStore().Summary -
 
 
 <!-- REF #DataClassClass.getInfo().Params -->
-| 引数     | タイプ    |    | 詳細                                                      |
-| ------ | ------ | -- | ------------------------------------------------------- |
-| Result | Object | <- | Information on the dataclass|<!-- END REF -->
+| 引数  | タイプ    |    | 詳細                                                      |
+| --- | ------ | -- | ------------------------------------------------------- |
+| 戻り値 | Object | <- | Information on the dataclass|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns an object providing information about the dataclass<!-- END REF -->. このメソッドは汎用的なコードを書くのに有用です。
+The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns an object providing information about the dataclass<!-- END REF -->。 このメソッドは汎用的なコードを書くのに有用です。
 
 **返されるオブジェクト**
 
@@ -663,18 +663,18 @@ The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns 
 
 #### 詳細
 
-The `.getRemoteCache()` function <!-- REF #DataClassClass.getRemoteCache().Summary -->returns an object that holds the contents of the ORDA cache for a dataclass.<!-- END REF -->.
+The `.getRemoteCache()` function <!-- REF #DataClassClass.getRemoteCache().Summary -->returns an object that holds the contents of the ORDA cache for a dataclass.<!-- END REF -->。
 
 4D のシングルユーザーアプリケーションからこの関数を呼び出した場合、`Null` が返されます。
 
 戻り値のオブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ      | タイプ    | 詳細                                      |
-| ---------- | ------ | --------------------------------------- |
-| maxEntries | 整数     | エントリーコレクションの最大数                         |
-| stamp      | 整数     | キャッシュのスタンプ                              |
-| timeout    | 整数     | キャッシュの新しいエントリーが期限切れとなるまでの残り時間。          |
-| entries    | コレクション | キャッシュ内の各エンティティにつき、1つのエントリーオブジェクトを格納します。 |
+| プロパティ      | タイプ        | 詳細                                      |
+| ---------- | ---------- | --------------------------------------- |
+| maxEntries | 整数         | エントリーコレクションの最大数                         |
+| stamp      | 整数         | キャッシュのスタンプ                              |
+| timeout    | 整数         | キャッシュの新しいエントリーが期限切れとなるまでの残り時間。          |
+| entries    | Collection | キャッシュ内の各エンティティにつき、1つのエントリーオブジェクトを格納します。 |
 
 エントリーコレクション内の各エントリーオブジェクトは、以下のプロパティを持ちます:
 
@@ -741,15 +741,15 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 
 <!-- REF #DataClassClass.new().Params -->
-| 引数     | タイプ       |    | 詳細                                                           |
-| ------ | --------- | -- | ------------------------------------------------------------ |
-| Result | 4D.Entity | <- | New entity matching the Dataclass|<!-- END REF -->
+| 引数  | タイプ       |    | 詳細                                                           |
+| --- | --------- | -- | ------------------------------------------------------------ |
+| 戻り値 | 4D.Entity | <- | New entity matching the Dataclass|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.new()` function <!-- REF #DataClassClass.new().Summary -->creates in memory and returns a new blank entity related to the Dataclass<!-- END REF -->.
+`.new()` 関数は、 <!-- REF #DataClassClass.new().Summary -->creates in memory and returns a new blank entity related to the Dataclass<!-- END REF -->。
 
 エンティティオブジェクトはメモリ内に作成されますが、[`.save( )`](EntityClass.md#save) 関数が呼び出されるまでデータベースには保存されません。 エンティティを保存する前に削除した場合、復元することはできません。
 
@@ -790,13 +790,13 @@ The `.new()` function <!-- REF #DataClassClass.new().Summary -->creates in memor
 | 引数        | タイプ                |    | 詳細                                                                                                       |
 | --------- | ------------------ | -- | -------------------------------------------------------------------------------------------------------- |
 | keepOrder | 整数                 | -> | `dk keep ordered`: 順列ありのエンティティセレクションを作成します<br/>`dk non ordered` (あるいは省略時): 順列なしのエンティティセレクションを作成します |
-| Result    | 4D.EntitySelection | <- | データクラスの空の新規エンティティセレクション|<!-- END REF -->
+| 戻り値       | 4D.EntitySelection | <- | データクラスの空の新規エンティティセレクション|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.newSelection()` function <!-- REF #DataClassClass.newSelection().Summary -->creates a new, blank, non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->.
+The `.newSelection()` function <!-- REF #DataClassClass.newSelection().Summary -->creates a new, blank, non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->。
 
 > 追加可能なエンティティセレクションについての詳細は [共有可能/追加可能なエンティティセレクション](ORDA/entities.md#共有可能追加可能なエンティティセレクション) を参照ください。
 
@@ -837,7 +837,7 @@ The `.newSelection()` function <!-- REF #DataClassClass.newSelection().Summary -
 | フォーミュラ        | Object             | -> | 検索条件 (フォーミュラオブジェクト)                                                                              |
 | value         | any                | -> | プレースホルダー用の値                                                                                      |
 | querySettings | Object             | -> | クエリオプション: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan             |
-| Result        | 4D.EntitySelection | <- | *queryString* または *formula* に渡した検索条件に合致するエンティティから構成された新しいエンティティセレクション|<!-- END REF -->
+| 戻り値           | 4D.EntitySelection | <- | *queryString* または *formula* に渡した検索条件に合致するエンティティから構成された新しいエンティティセレクション|<!-- END REF -->
 
 |
 
@@ -1446,7 +1446,7 @@ softwares:{
 
 #### 詳細
 
-The `.setRemoteCacheSettings()` function <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->sets the timeout and maximum size of the ORDA cache for a dataclass.<!-- END REF -->.
+The `.setRemoteCacheSettings()` function <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->sets the timeout and maximum size of the ORDA cache for a dataclass.<!-- END REF -->。
 
 *settings* には、以下のプロパティを持つオブジェクトを渡します:
 

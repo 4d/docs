@@ -47,13 +47,13 @@ title: DataStore
 | 引数      | タイプ          |    | 詳細                                  |
 | ------- | ------------ | -- | ----------------------------------- |
 | localID | テキスト         | -> | 参照を取得したいリモートデータストアのローカルID           |
-| Result  | cs.DataStore | <- | データストア参照|<!-- END REF -->
+| 戻り値     | cs.DataStore | <- | データストア参照|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `ds` command <!-- REF #_command_.ds.Summary -->returns a reference to the datastore matching the current 4D database or the database designated by *localID*<!-- END REF -->.
+The `ds` command <!-- REF #_command_.ds.Summary -->returns a reference to the datastore matching the current 4D database or the database designated by *localID*<!-- END REF -->。
 
 *localID* を省略した (または空の文字列 "" を渡した) 場合には、ローカル4Dデータベース (4D Server でリモートデータベースを開いている場合にはそのデータベース) に合致するデータストアの参照を返します。 データストアは自動的に開かれ、`ds` を介して直接利用することができます。
 
@@ -116,7 +116,7 @@ The `ds` command <!-- REF #_command_.ds.Summary -->returns a reference to the da
 | -------------- | ------------ | -- | ------------------------------------------ |
 | connectionInfo | Object       | -> | リモートデータストアへの接続に使用する接続プロパティ                 |
 | localID        | テキスト         | -> | ローカルアプリケーション内で、開かれたデータストアに対して割り当てる ID (必須) |
-| Result         | cs.DataStore | <- | データストアオブジェクト|<!-- END REF -->
+| 戻り値            | cs.DataStore | <- | データストアオブジェクト|<!-- END REF -->
 
 |
 
@@ -220,7 +220,7 @@ user / password / timeout / tls を指定してリモートデータストアに
 
 #### 詳細
 
-データストアの各データクラスは [DataStore オブジェクト](ORDA/dsMapping.md#データストア) のプロパティとして利用可能です。 The returned object <!-- REF DataStoreClass.dataclassName.Summary -->contains a description of the dataclass<!-- END REF -->.
+データストアの各データクラスは [DataStore オブジェクト](ORDA/dsMapping.md#データストア) のプロパティとして利用可能です。 The returned object <!-- REF DataStoreClass.dataclassName.Summary -->contains a description of the dataclass<!-- END REF -->。
 
 #### 例題
 
@@ -295,7 +295,7 @@ The `.cancelTransaction()` function <!-- REF #DataStoreClass.cancelTransaction()
 
 #### 詳細
 
-The `.clearAllRemoteContexts()` function <!-- REF #DataStoreClass.clearAllRemoteContexts().Summary -->clears all the attributes for all the active contexts in the datastore<!-- END REF -->.
+The `.clearAllRemoteContexts()` function <!-- REF #DataStoreClass.clearAllRemoteContexts().Summary -->clears all the attributes for all the active contexts in the datastore<!-- END REF -->。
 
 この機能は主にデバッグで使用されます。 注意しなければならないのは、デバッガーを開くと、デバッガーはサーバーにリクエストを送り、データクラス属性をすべてクエリして表示することです。 このため、不要なデータでコンテキストが過負荷になることがあります。
 
@@ -320,9 +320,9 @@ The `.clearAllRemoteContexts()` function <!-- REF #DataStoreClass.clearAllRemote
 
 
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
-| 引数     | タイプ    |    | 詳細                                                      |
-| ------ | ------ |:--:| ------------------------------------------------------- |
-| Result | Object | <- | カレントデータストアと、各テーブルの暗号化についての情報|<!-- END REF -->
+| 引数  | タイプ    |    | 詳細                                                      |
+| --- | ------ |:--:| ------------------------------------------------------- |
+| 戻り値 | Object | <- | カレントデータストアと、各テーブルの暗号化についての情報|<!-- END REF -->
 
 |
 
@@ -392,9 +392,9 @@ The `.encryptionStatus()` function <!-- REF #DataStoreClass.encryptionStatus().S
 
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
-| 引数     | タイプ    |    | 詳細                                                |
-| ------ | ------ | -- | ------------------------------------------------- |
-| Result | Object | <- | 最適化コンテキストオブジェクトのコレクション|<!-- END REF -->
+| 引数  | タイプ    |    | 詳細                                                |
+| --- | ------ | -- | ------------------------------------------------- |
+| 戻り値 | Object | <- | 最適化コンテキストオブジェクトのコレクション|<!-- END REF -->
 
 |
 
@@ -402,7 +402,7 @@ The `.encryptionStatus()` function <!-- REF #DataStoreClass.encryptionStatus().S
 
 #### 詳細
 
-The `.getAllRemoteContexts()` function <!-- REF #DataStoreClass.getAllRemoteContexts().Summary -->returns a collection of objects containing information on all the active optimization contexts in the datastore<!-- END REF -->.
+The `.getAllRemoteContexts()` function <!-- REF #DataStoreClass.getAllRemoteContexts().Summary -->returns a collection of objects containing information on all the active optimization contexts in the datastore<!-- END REF -->。
 
 > コンテキストの作成に関する詳細については、[クライアント/サーバーの最適化](../ORDA/remoteDatastores.md#クライアントサーバーの最適化) を参照ください。
 
@@ -468,15 +468,15 @@ $info:=$ds.getAllRemoteContexts()
 
 
 <!-- REF #DataStoreClass.getInfo().Params -->
-| 引数     | タイプ    |    | 詳細                                              |
-| ------ | ------ |:--:| ----------------------------------------------- |
-| Result | Object | <- | Datastore properties|<!-- END REF -->
+| 引数  | タイプ    |    | 詳細                                              |
+| --- | ------ |:--:| ----------------------------------------------- |
+| 戻り値 | Object | <- | Datastore properties|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->The `.getInfo()` function<!-- END REF -->. このメソッドは汎用的なコードを書くのに有用です。
+The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->The `.getInfo()` function<!-- END REF -->。 このメソッドは汎用的なコードを書くのに有用です。
 
 **返されるオブジェクト**
 
@@ -540,7 +540,7 @@ The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->The `.ge
 | 引数          | タイプ    |    | 詳細                                                                 |
 | ----------- | ------ | -- | ------------------------------------------------------------------ |
 | contextName | テキスト   | -> | コンテキストの名称                                                          |
-| Result      | Object | <- | Description of the optimization context|<!-- END REF -->
+| 戻り値         | Object | <- | Description of the optimization context|<!-- END REF -->
 
 |
 
@@ -548,7 +548,7 @@ The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->The `.ge
 
 #### 詳細
 
-The `.getRemoteContextInfo()` function <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> returns an object that holds information on the *contextName* optimization context in the datastore.<!-- END REF -->.
+The `.getRemoteContextInfo()` function <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> returns an object that holds information on the *contextName* optimization context in the datastore.<!-- END REF -->。
 
 最適化コンテキストの作成に関する詳細については、[クライアント/サーバーの最適化](../ORDA/remoteDatastores.md#クライアントサーバーの最適化) を参照ください。
 
@@ -588,15 +588,15 @@ The `.getRemoteContextInfo()` function <!-- REF #DataStoreClass.getRemoteContext
 
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
-| 引数     | タイプ    |    | 詳細                                                                                      |
-| ------ | ------ |:--:| --------------------------------------------------------------------------------------- |
-| Result | コレクション | <- | Collection of objects, where each object describes a request|<!-- END REF -->
+| 引数  | タイプ        |    | 詳細                                                                                      |
+| --- | ---------- |:--:| --------------------------------------------------------------------------------------- |
+| 戻り値 | Collection | <- | Collection of objects, where each object describes a request|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.getRequestLog()` function <!-- REF #DataStoreClass.getRequestLog().Summary -->returns the ORDA requests logged in memory on the client side<!-- END REF -->. .
+The `.getRequestLog()` function <!-- REF #DataStoreClass.getRequestLog().Summary -->returns the ORDA requests logged in memory on the client side<!-- END REF -->。 .
 
 このメソッドはリモートの 4D で呼び出す必要があり、そうでない場合には空のコレクションを返します。 これはクライアント/サーバー環境でのデバッグを想定して設計されています。
 
@@ -627,15 +627,15 @@ ORDAリクエストログのフォーマットの詳細は、[**ORDAクライア
 
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
-| 引数     | タイプ |    | 詳細                                                                                    |
-| ------ | --- |:--:| ------------------------------------------------------------------------------------- |
-| Result | ブール | <- | データエクスプローラーへのアクセスが無効に設定されているの場合は true、有効の場合は false (デフォルト)|<!-- END REF -->
+| 引数  | タイプ |    | 詳細                                                                                    |
+| --- | --- |:--:| ------------------------------------------------------------------------------------- |
+| 戻り値 | ブール | <- | データエクスプローラーへのアクセスが無効に設定されているの場合は true、有効の場合は false (デフォルト)|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.isAdminProtected()` function <!-- REF #DataStoreClass.isAdminProtected().Summary -->returns `True` if [Data Explorer](Admin/dataExplorer.md) access has been disabled for the working session<!-- END REF -->.
+The `.isAdminProtected()` function <!-- REF #DataStoreClass.isAdminProtected().Summary -->returns `True` if [Data Explorer](Admin/dataExplorer.md) access has been disabled for the working session<!-- END REF -->。
 
 `webAdmin`セッションにおいて、データエクスプローラーへのアクセスはデフォルトで有効となっていますが、管理者によるデータアクセスを禁止するため無効にすることもできます ([`.setAdminProtection()`](#setadminprotection) 関数参照)。
 
@@ -697,13 +697,13 @@ The `.makeSelectionsAlterable()` function <!-- REF #DataStoreClass.makeSelection
 | ------------- | ------ | -- | ---------------------------------------- |
 | curPassPhrase | テキスト   | -> | カレントのパスフレーズ                              |
 | curDataKey    | Object | -> | カレントのデータ暗号化キー                            |
-| Result        | Object | <- | 暗号化キーのチェックの結果|<!-- END REF -->
+| 戻り値           | Object | <- | 暗号化キーのチェックの結果|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.provideDataKey()` function <!-- REF #DataStoreClass.provideDataKey().Summary -->allows providing a data encryption key for the current data file of the datastore and detects if the key matches the encrypted data<!-- END REF -->. この関数は、暗号化されたデータベースを開くときや、データファイルの再暗号化など暗号化キーが必要となる暗号化オペレーションを実行する際に使用します。
+The `.provideDataKey()` function <!-- REF #DataStoreClass.provideDataKey().Summary -->allows providing a data encryption key for the current data file of the datastore and detects if the key matches the encrypted data<!-- END REF -->。 この関数は、暗号化されたデータベースを開くときや、データファイルの再暗号化など暗号化キーが必要となる暗号化オペレーションを実行する際に使用します。
 > * `.provideDataKey()` 関数は暗号化されたデータベース内で呼び出される必要があります。 暗号化されていないデータベース内で呼び出した場合、エラー2003 (暗号化キーはデータと合致しません) が返されます。 データベースが暗号化されているかどうかを調べるには `Data file encryption status` コマンドを使用します。
 > * リモートの 4D または暗号化されたリモートデータストアから、`.provideDataKey()` 関数を呼び出すことはできません。
 
@@ -716,20 +716,20 @@ The `.provideDataKey()` function <!-- REF #DataStoreClass.provideDataKey().Summa
 * 暗号化可能テーブルに対するデータ編集はすべて、ディスク上 (.4DD、.journal、 .4Dindx ファイル) で暗号化されます。
 * 暗号化可能テーブルから読み出したすべてのデータは、メモリ内で復号化されます。
 
-**Result**
+**戻り値**
 
 コマンドの実行結果は、戻り値のオブジェクトに格納されます:
 
-| プロパティ      |                          | タイプ    | 詳細                                          |
-| ---------- | ------------------------ | ------ | ------------------------------------------- |
-| success    |                          | ブール    | 提供された暗号化キーが暗号化データと合致すれば true、それ以外は false    |
-|            |                          |        | 以下のプロパティは、success が *FALSE* であった場合にのみ返されます。 |
-| status     |                          | 数値     | エラーコード (提供された暗号化キーが間違っていた場合には 4)            |
-| statusText |                          | テキスト   | エラーメッセージ                                    |
-| errors     |                          | コレクション | エラーのスタック。 最初のエラーに最も高いインデックスが割り当てられます。       |
-|            | \[ ].componentSignature | テキスト   | 内部コンポーネント名                                  |
-|            | \[ ].errCode            | 数値     | エラー番号                                       |
-|            | \[ ].message            | テキスト   | エラーメッセージ                                    |
+| プロパティ      |                          | タイプ        | 詳細                                          |
+| ---------- | ------------------------ | ---------- | ------------------------------------------- |
+| success    |                          | ブール        | 提供された暗号化キーが暗号化データと合致すれば true、それ以外は false    |
+|            |                          |            | 以下のプロパティは、success が *FALSE* であった場合にのみ返されます。 |
+| status     |                          | 数値         | エラーコード (提供された暗号化キーが間違っていた場合には 4)            |
+| statusText |                          | テキスト       | エラーメッセージ                                    |
+| errors     |                          | Collection | エラーのスタック。 最初のエラーに最も高いインデックスが割り当てられます。       |
+|            | \[ ].componentSignature | テキスト       | 内部コンポーネント名                                  |
+|            | \[ ].errCode            | 数値         | エラー番号                                       |
+|            | \[ ].message            | テキスト       | エラーメッセージ                                    |
 
 *curPassphrase* および *curDataKey* のどちらの引数も渡されなかった場合、`.provideDataKey()` は **null** を返します (この場合エラーは生成されません)。
 
@@ -776,7 +776,7 @@ The `.provideDataKey()` function <!-- REF #DataStoreClass.provideDataKey().Summa
 
 #### 詳細
 
-The `.setAdminProtection()` function <!-- REF #DataStoreClass.setAdminProtection().Summary -->allows disabling any data access on the [web admin port](Admin/webAdmin.md#http-port), including for the [Data Explorer](Admin/dataExplorer.md) in `WebAdmin` sessions<!-- END REF -->.
+The `.setAdminProtection()` function <!-- REF #DataStoreClass.setAdminProtection().Summary -->allows disabling any data access on the [web admin port](Admin/webAdmin.md#http-port), including for the [Data Explorer](Admin/dataExplorer.md) in `WebAdmin` sessions<!-- END REF -->。
 
 この関数が呼び出されなかった場合のデフォルトでは、データエクスプローラーを使用した `WebAdmin` 権限を持つセッションについて、Web管理ポート上のデータアクセスは常に許可されます。 環境によっては (たとえば、アプリケーションサーバーが第三者のマシン上でホストされている場合)、 管理者に対して [access key](Admin/webAdmin.md#access-key) 設定を含むサーバー設定の編集は許可しても、データ閲覧はできないようにしたいかもしれません。
 
@@ -817,7 +817,7 @@ The `.setAdminProtection()` function <!-- REF #DataStoreClass.setAdminProtection
 | dataClassName   | テキスト         | -> | データクラスの名称                                                                                            |
 | dataClassObject | 4D.DataClass | -> | DataClass オブジェクト (例: datastore.Employee)                                                             |
 | attributes      | テキスト         | -> | カンマ区切りの属性リスト                                                                                         |
-| attributesColl  | コレクション       | -> | 属性名 (テキスト) のコレクション                                                                                   |
+| attributesColl  | Collection   | -> | 属性名 (テキスト) のコレクション                                                                                   |
 | contextType     | テキスト         | -> | 渡す場合、値は "main" または "currentItem" のいずれか                                                               |
 | pageLength      | 整数           | -> | Page length of the entity selection linked to the context (default is 80)|<!-- END REF -->
 
@@ -827,7 +827,7 @@ The `.setAdminProtection()` function <!-- REF #DataStoreClass.setAdminProtection
 
 #### 詳細
 
-The `.setRemoteContextInfo()` function <!-- REF #DataStoreClass.setRemoteContextInfo().Summary -->links the specified dataclass attributes to the *contextName* optimization context<!-- END REF -->. 指定した属性に対して最適化コンテキストが既に存在する場合、このコマンドはそれを置き換えます。
+The `.setRemoteContextInfo()` function <!-- REF #DataStoreClass.setRemoteContextInfo().Summary -->links the specified dataclass attributes to the *contextName* optimization context<!-- END REF -->。 指定した属性に対して最適化コンテキストが既に存在する場合、このコマンドはそれを置き換えます。
 
 ORDAクラスの関数にコンテキストを渡すと、RESTリクエストの最適化が即座に発動します:
 
@@ -950,7 +950,7 @@ Form.currentItemLearntAttributes:=Form.selectedPerson.getRemoteContextAttributes
 
 #### 詳細
 
-The `.startRequestLog()` function <!-- REF #DataStoreClass.startRequestLog().Summary -->starts the logging of ORDA requests on the client side<!-- END REF -->.
+The `.startRequestLog()` function <!-- REF #DataStoreClass.startRequestLog().Summary -->starts the logging of ORDA requests on the client side<!-- END REF -->。
 
 このメソッドはリモート側の 4D で呼び出す必要があり、それ以外の場合には何もしません。 これはクライアント/サーバー環境でのデバッグを想定して設計されています。
 
@@ -1024,7 +1024,7 @@ ORDA クライアントリクエストをメモリに記録します:
 
 #### 詳細
 
-The `.startTransaction()` function <!-- REF #DataStoreClass.startTransaction().Summary -->starts a transaction in the current process on the database matching the datastore to which it applies<!-- END REF -->. トランザクションプロセス中にデータストアのエンティティに加えられた変更は、トランザクションが確定されるかキャンセルされるまで一時的に保管されたままになります。
+The `.startTransaction()` function <!-- REF #DataStoreClass.startTransaction().Summary -->starts a transaction in the current process on the database matching the datastore to which it applies<!-- END REF -->。 トランザクションプロセス中にデータストアのエンティティに加えられた変更は、トランザクションが確定されるかキャンセルされるまで一時的に保管されたままになります。
 > このメソッドがメインのデータストア (`ds` コマンドで返されるデータストア) で呼ばれた場合、トランザクションはメインのデータストアとそのデータベースで実行されるすべてのオペレーションに適用されます。これには、そこで実行される ORDA とクラシック言語も含まれます。
 
 複数のトランザクションをネストすること (サブトランザクション) が可能です。 個々のトランザクションまたはサブトランザクションは、それぞれキャンセルするか確定される必要があります。 メイントランザクションがキャンセルされると、サブトランザクションも (たとえ個々に`.validateTransaction()` 関数で承認されていても) すべてキャンセルされます。

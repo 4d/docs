@@ -3,7 +3,7 @@ id: components
 title: Komponenten
 ---
 
-A 4D component is a set of 4D methods and forms representing one or more functionalities that you can install and use in your projects. For example, the [4D SVG component](https://doc.4d.com/4Dv19R3/4D/19-R3/4D-SVG-Component.100-5681501.en.html) adds advanced commands and an integrated rendering engine that can be used to display SVG files.
+A 4D component is a set of 4D code and forms representing one or more functionalities that you can install and use in your projects. For example, the [4D SVG component](https://doc.4d.com/4Dv19R3/4D/19-R3/4D-SVG-Component.100-5681501.en.html) adds advanced commands and an integrated rendering engine that can be used to display SVG files.
 
 ## Where to find components?
 
@@ -18,10 +18,18 @@ A host project running in interpreted mode can use either interpreted or compile
 
 ## Using components
 
-Component methods and forms can be used as standard elements in your 4D development.
+Exposed component code (methods and functions) as well as forms can be used as standard elements in your 4D development.
 
-When an installed component contains methods, they appear in the **Component Methods** theme of the Explorer's Methods page.
+When an installed component contains methods, classes, and functions, they appear in the **Component Methods** theme of the Explorer's Methods page:
 
-You can select a component method and click on the **Documentation** button of the Explorer to get information about it, [if any](Project/documentation.md).
+![alt-text](../assets/en/Concepts/components-explorer.png)
+
+:::note
+
+If the component is compiled, its [namespace](../Extensions/develop-components.md#declaring-the-component-namespace) is written between parentheses after its name. Use this namespace to access the component's functions.
+
+:::
+
+You can select a component [project method](methods.md) or [class](classes.md) and click on the **Documentation** button of the Explorer to get information about it, [if any](Project/documentation.md).
 
 ![alt-text](../assets/en/Project/compDoc.png)
