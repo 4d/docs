@@ -249,9 +249,9 @@ Cada clase de datos de un almacén de datos está disponible como una propiedad 
 
 
 <!-- REF #DataStoreClass.cancelTransaction().Params -->
-| Parámetros | Type |  | Descripción                                                |
-| ---------- | ---- |::| ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF -->
+| Parámetros | Type |  | Descripción                                             |
+| ---------- | ---- |::| ------------------------------------------------------- |
+|            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
 |
 
@@ -367,7 +367,7 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 
 #### Descripción
 
-The `.getInfo()` function <!-- REF #DataStoreClass.getInfo().Summary -->The `.getInfo()` function<!-- END REF -->. Esta función es útil para configurar el código genérico.
+La función `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->The `.getInfo()` function<!-- END REF -->. Esta función es útil para configurar el código genérico.
 
 **Objeto devuelto**
 
@@ -500,9 +500,9 @@ Por defecto, el acceso al Explorador de Datos se concede para las sesiones `webA
 
 
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Params -->
-| Parámetros | Type |  | Descripción                                                |
-| ---------- | ---- |::| ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF -->
+| Parámetros | Type |  | Descripción                                             |
+| ---------- | ---- |::| ------------------------------------------------------- |
+|            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
 |
 
@@ -727,9 +727,9 @@ Quiere registrar las peticiones de los clientes ORDA en la memoria:
 
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
-| Parámetros | Type |  | Descripción                                                |
-| ---------- | ---- |  | ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF -->
+| Parámetros | Type |  | Descripción                                             |
+| ---------- | ---- |  | ------------------------------------------------------- |
+|            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
 |
 
@@ -790,9 +790,9 @@ Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-tr
 
 
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
-| Parámetros | Type |  | Descripción                                                |
-| ---------- | ---- |  | ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF -->
+| Parámetros | Type |  | Descripción                                             |
+| ---------- | ---- |  | ------------------------------------------------------- |
+|            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
 |
 
@@ -823,9 +823,9 @@ Ver ejemplos de [`.startRequestLog()`](#startrequestlog).
 
 
 <!-- REF #DataStoreClass.validateTransaction().Params -->
-| Parámetros | Type |  | Descripción                                                |
-| ---------- | ---- |  | ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF -->
+| Parámetros | Type |  | Descripción                                             |
+| ---------- | ---- |  | ------------------------------------------------------- |
+|            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
 |
 
