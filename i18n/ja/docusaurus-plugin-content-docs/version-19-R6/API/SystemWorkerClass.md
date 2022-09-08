@@ -70,7 +70,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 #### 詳細
 
-The `4D.SystemWorker.new()` function <!-- REF #4D.SystemWorker.new().Summary -->creates and returns a `4D.SystemWorker` object that will execute the *commandLine* you passed as parameter to launch an external process<!-- END REF -->.
+The `4D.SystemWorker.new()` function <!-- REF #4D.SystemWorker.new().Summary -->creates and returns a `4D.SystemWorker` object that will execute the *commandLine* you passed as parameter to launch an external process<!-- END REF -->。
 
 返されたシステムワーカーオブジェクトは、ワーカーにメッセージを送信したり、ワーカーの結果を取得するために使用できます。
 
@@ -273,7 +273,7 @@ Function _createFile($title : Text; $textBody : Text)
 
 #### 詳細
 
-The `.closeInput()` function <!-- REF #SystemWorkerClass.closeInput().Summary -->closes the input stream (*stdin*) of the external process<!-- END REF -->.
+The `.closeInput()` function <!-- REF #SystemWorkerClass.closeInput().Summary -->closes the input stream (*stdin*) of the external process<!-- END REF -->。
 
 `.closeInput()` は、`postMessage()` を介した全データの受信を待機している実行ファイルに、データ送信が終了したことを知らせるのに便利です。
 
@@ -325,7 +325,7 @@ $output:=$worker.response
 
 #### 詳細
 
-The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->contains the command line passed as parameter to the [`new()`](#4d-systemworker-new) function<!-- END REF -->.
+The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->contains the command line passed as parameter to the [`new()`](#4d-systemworker-new) function<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -339,7 +339,7 @@ The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->c
 
 #### 詳細
 
-The `.currentDirectory` property <!-- REF #SystemWorkerClass.currentDirectory.Summary -->contains the working directory in which the external process is executed<!-- END REF -->.
+The `.currentDirectory` property <!-- REF #SystemWorkerClass.currentDirectory.Summary -->contains the working directory in which the external process is executed<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -351,7 +351,7 @@ The `.currentDirectory` property <!-- REF #SystemWorkerClass.currentDirectory.Su
 
 #### 詳細
 
-The `.dataType` property <!-- REF #SystemWorkerClass.dataType.Summary -->contains the type of the response body content<!-- END REF -->. .
+The `.dataType` property <!-- REF #SystemWorkerClass.dataType.Summary -->contains the type of the response body content<!-- END REF -->。 .
 
 このプロパティは **読み取り専用** です。
 
@@ -365,7 +365,7 @@ The `.dataType` property <!-- REF #SystemWorkerClass.dataType.Summary -->contain
 
 #### 詳細
 
-The `.encoding` property <!-- REF #SystemWorkerClass.encoding.Summary -->contains the encoding of the response body content<!-- END REF -->. .
+The `.encoding` property <!-- REF #SystemWorkerClass.encoding.Summary -->contains the encoding of the response body content<!-- END REF -->。 .
 
 このプロパティは **読み取り専用** です。
 
@@ -379,7 +379,7 @@ The `.encoding` property <!-- REF #SystemWorkerClass.encoding.Summary -->contain
 
 #### 詳細
 
-The `.errors` property <!-- REF #SystemWorkerClass.errors.Summary -->contains a collection of 4D errors in case of execution error(s)<!-- END REF -->.
+The `.errors` property <!-- REF #SystemWorkerClass.errors.Summary -->contains a collection of 4D errors in case of execution error(s)<!-- END REF -->。
 
 コレクションの各要素は、以下のプロパティを持つオブジェクトです:
 
@@ -401,7 +401,7 @@ The `.errors` property <!-- REF #SystemWorkerClass.errors.Summary -->contains a 
 
 #### 詳細
 
-The `.exitCode` property <!-- REF #SystemWorkerClass.exitCode.Summary -->contains the exit code returned by the external process<!-- END REF -->. プロセスが正常に終了しなかった場合、`exitCode` は *undefined* です。
+The `.exitCode` property <!-- REF #SystemWorkerClass.exitCode.Summary -->contains the exit code returned by the external process<!-- END REF -->。 プロセスが正常に終了しなかった場合、`exitCode` は *undefined* です。
 
 このプロパティは **読み取り専用** です。
 
@@ -415,7 +415,7 @@ The `.exitCode` property <!-- REF #SystemWorkerClass.exitCode.Summary -->contain
 
 #### 詳細
 
-The `.hideWindow` property <!-- REF #SystemWorkerClass.hideWindow.Summary -->can be used to hide the window of the DOS console or the window of the launched executable (**Windows only**)<!-- END REF -->.
+The `.hideWindow` property <!-- REF #SystemWorkerClass.hideWindow.Summary -->can be used to hide the window of the DOS console or the window of the launched executable (**Windows only**)<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -429,7 +429,7 @@ The `.hideWindow` property <!-- REF #SystemWorkerClass.hideWindow.Summary -->can
 
 #### 詳細
 
-The `.pid` property <!-- REF #SystemWorkerClass.pid.Summary -->contains the process unique identifier of the external process at the system level<!-- END REF -->.
+The `.pid` property <!-- REF #SystemWorkerClass.pid.Summary -->contains the process unique identifier of the external process at the system level<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -452,7 +452,7 @@ The `.pid` property <!-- REF #SystemWorkerClass.pid.Summary -->contains the proc
 
 #### 詳細
 
-The `.postMessage()` function <!-- REF #SystemWorkerClass.postMessage().Summary -->allows you to write on the input stream (stdin) of the external process<!-- END REF -->. *message* には *stdin* に書き込むテキストを渡します。
+The `.postMessage()` function <!-- REF #SystemWorkerClass.postMessage().Summary -->allows you to write on the input stream (stdin) of the external process<!-- END REF -->。 *message* には *stdin* に書き込むテキストを渡します。
 
 `.postMessage()` 関数は、*stdin* に渡す BLOB型の *messageBLOB* 引数も受け取るため、バイナリデータを送信することもできます。
 
@@ -484,7 +484,7 @@ The `.responseError` property <!-- REF #SystemWorkerClass.response.Summary -->co
 
 #### 詳細
 
-The `.terminated` property <!-- REF #SystemWorkerClass.responseError.Summary -->contains **true** if the external process is terminated<!-- END REF -->.
+The `.terminated` property <!-- REF #SystemWorkerClass.responseError.Summary -->contains **true** if the external process is terminated<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -504,7 +504,7 @@ The `.terminated` property <!-- REF #SystemWorkerClass.responseError.Summary -->
 
 #### 詳細
 
-`.terminate()` 関数は、 <!-- REF #SystemWorkerClass.terminate().Summary -->The `.terminate()` function<!-- END REF -->.
+`.terminate()` 関数は、 <!-- REF #SystemWorkerClass.terminate().Summary -->The `.terminate()` function<!-- END REF -->。
 
 この関数は、システムワーカーを終了して実行中のスクリプトに制御を戻す命令を送ります。
 
@@ -518,7 +518,7 @@ The `.terminated` property <!-- REF #SystemWorkerClass.responseError.Summary -->
 
 #### 詳細
 
-The `.timeout` property <!-- REF #SystemWorkerClass.terminated.Summary -->contains the duration in seconds before the external process will be killed if it is still alive<!-- END REF -->.
+The `.timeout` property <!-- REF #SystemWorkerClass.terminated.Summary -->contains the duration in seconds before the external process will be killed if it is still alive<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -532,7 +532,7 @@ The `.timeout` property <!-- REF #SystemWorkerClass.terminated.Summary -->contai
 
 #### 詳細
 
-The `.wait()` function <!-- REF #SystemWorkerClass.timeout.Summary -->waits until the end of the `SystemWorker` execution or the specified *timeout*<!-- END REF -->.
+The `.wait()` function <!-- REF #SystemWorkerClass.timeout.Summary -->waits until the end of the `SystemWorker` execution or the specified *timeout*<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -559,13 +559,13 @@ The `.wait()` function <!-- REF #SystemWorkerClass.timeout.Summary -->waits unti
 | 引数      | タイプ             |    | 詳細                                             |
 | ------- | --------------- |:--:| ---------------------------------------------- |
 | timeout | 実数              | -> | 待機時間 (秒単位)                                     |
-| Result  | 4D.SystemWorker | <- | SystemWorker object|<!-- END REF -->
+| 戻り値     | 4D.SystemWorker | <- | SystemWorker object|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.wait()` function <!-- REF #SystemWorkerClass.wait().Summary -->waits until the end of the `SystemWorker` execution or the specified *timeout*<!-- END REF -->.
+The `.wait()` function <!-- REF #SystemWorkerClass.wait().Summary -->waits until the end of the `SystemWorker` execution or the specified *timeout*<!-- END REF -->。
 
 *timeout* には、秒単位の値を渡します。 `SystemWorker` スクリプトは、*timeout* に指定された時間だけ、外部プロセスを待ちます。 *timeout* を省略した場合、スクリプトの実行は無期限に待機します。
 
