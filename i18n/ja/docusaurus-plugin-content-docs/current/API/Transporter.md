@@ -55,7 +55,7 @@ The `.acceptUnsecureConnection` property contains <!-- REF #transporter.acceptUn
 
 #### 詳細
 
-The `.authenticationMode` property contains <!-- REF #transporter.authenticationMode.Summary -->the authentication mode used to open the session on the mail server<!-- END REF -->.
+The `.authenticationMode` property contains <!-- REF #transporter.authenticationMode.Summary -->the authentication mode used to open the session on the mail server<!-- END REF -->。
 
 デフォルトでは、サーバーによってサポートされている最も安全なモードが使用されます。
 
@@ -153,7 +153,7 @@ The `.authenticationMode` property contains <!-- REF #transporter.authentication
 
 #### 詳細
 
-The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -->  the charset and encoding used for the body part of the email<!-- END REF -->.
+The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -->  the charset and encoding used for the body part of the email<!-- END REF -->。
 
 - 件名
 - 添付ファイル名
@@ -187,7 +187,7 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 
 #### 詳細
 
-The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeOut.Summary -->the maximum wait time (in seconds) allowed to establish a connection to the server<!-- END REF -->. `SMTP New transporter` や `POP3 New transporter`、 `IMAP New transporter` のコマンドで `transporter` オブジェクトを作成する際に使用される `server` オブジェクトにおいて、 このプロパティが指定されなかった場合のデフォルトは 30 です。
+The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeOut.Summary -->the maximum wait time (in seconds) allowed to establish a connection to the server<!-- END REF -->。 `SMTP New transporter` や `POP3 New transporter`、 `IMAP New transporter` のコマンドで `transporter` オブジェクトを作成する際に使用される `server` オブジェクトにおいて、 このプロパティが指定されなかった場合のデフォルトは 30 です。
 
 <!-- END REF -->
 
@@ -208,7 +208,7 @@ The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeO
 
 #### 詳細
 
-The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summary --> the charset and encoding used for the email header<!-- END REF -->. ヘッダーにはメールの次の要素を含みます:
+The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summary --> the charset and encoding used for the email header<!-- END REF -->。 ヘッダーにはメールの次の要素を含みます:
 
 - 件名
 - 添付ファイル名
@@ -242,7 +242,7 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 
 #### 詳細
 
-The `.host` property contains <!-- REF #transporter.host.Summary -->the name or the IP address of the host server<!-- END REF -->. この情報はメール通信 (SMTP、POP3、IMAP) に使用されます。
+The `.host` property contains <!-- REF #transporter.host.Summary -->the name or the IP address of the host server<!-- END REF -->。 この情報はメール通信 (SMTP、POP3、IMAP) に使用されます。
 
 <!-- END REF -->
 
@@ -263,7 +263,7 @@ The `.host` property contains <!-- REF #transporter.host.Summary -->the name or 
 
 #### 詳細
 
-The `.logFile` property contains <!-- REF #transporter.logFile.Summary -->the path of the extended log file defined (if any) for the mail connection<!-- END REF -->. パスは、カレント Logs フォルダーを基準とした相対パス、あるいは絶対パスを指定できます。
+The `.logFile` property contains <!-- REF #transporter.logFile.Summary -->the path of the extended log file defined (if any) for the mail connection<!-- END REF -->。 パスは、カレント Logs フォルダーを基準とした相対パス、あるいは絶対パスを指定できます。
 
 `SET DATABASE PARAMETER` コマンドで有効化される通常のログファイルとは異なり、拡張ログファイルはすべての送信されたメールの MIMEコンテンツを保存し、サイズ制限がありません。 拡張ログファイルの詳細については、以下の章をそれぞれ参照ください:
 
@@ -290,7 +290,7 @@ The `.logFile` property contains <!-- REF #transporter.logFile.Summary -->the pa
 
 #### 詳細
 
-The `.port` property contains <!-- REF #transporter.port.Summary --> the port number used for mail transactions<!-- END REF -->. `SMTP New transporter` や `POP3 New transporter`、 `IMAP New transporter` のコマンドで `transporter` オブジェクトを作成する際に使用される *server* オブジェクトにおいて、 このプロパティが指定されなかった場合に使用されるポートは次のとおりです:
+The `.port` property contains <!-- REF #transporter.port.Summary --> the port number used for mail transactions<!-- END REF -->。 `SMTP New transporter` や `POP3 New transporter`、 `IMAP New transporter` のコマンドで `transporter` オブジェクトを作成する際に使用される *server* オブジェクトにおいて、 このプロパティが指定されなかった場合に使用されるポートは次のとおりです:
 
 - **SMTP** - 587
 - **POP3** - 995
@@ -314,7 +314,7 @@ The `.port` property contains <!-- REF #transporter.port.Summary --> the port nu
 
 #### 詳細
 
-The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary --> the maximum wait time (in seconds) of a call to `.send( )` before a timeout occurs<!-- END REF -->. .
+The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary --> the maximum wait time (in seconds) of a call to `.send( )` before a timeout occurs<!-- END REF -->。 .
 
 <!-- END REF -->
 
@@ -335,7 +335,7 @@ The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary -
 
 #### 詳細
 
-The `.user` property contains <!-- REF #transporter.user.Summary --> the user name used for authentication on the mail server<!-- END REF -->.
+The `.user` property contains <!-- REF #transporter.user.Summary --> the user name used for authentication on the mail server<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -356,9 +356,9 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 
 
 <!-- REF #transporter.checkConnection().Params -->
-| 引数     | タイプ    |    | 詳細                                                    |
-| ------ | ------ |:--:| ----------------------------------------------------- |
-| Result | Object | <- | transporter オブジェクト接続のステータス|<!-- END REF -->
+| 引数  | タイプ    |    | 詳細                                                    |
+| --- | ------ |:--:| ----------------------------------------------------- |
+| 戻り値 | Object | <- | transporter オブジェクト接続のステータス|<!-- END REF -->
 
 |
 
