@@ -19,7 +19,7 @@ title: Document クラス
 
 #### 詳細
 
-The `.creationDate` property returns <!-- REF #document.creationDate.Summary -->The `.creationDate` property returns<!-- END REF -->.
+The `.creationDate` property returns <!-- REF #document.creationDate.Summary -->The `.creationDate` property returns<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -80,7 +80,7 @@ The `.exists` property returns <!-- REF #document.exists.Summary -->true if the 
 
 #### 詳細
 
-The `.extension` property returns <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->. 拡張子は必ず"." で始まります。 ファイル名が拡張子を持たない場合には、このプロパティは空の文字列を返します。
+The `.extension` property returns <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->。 拡張子は必ず"." で始まります。 ファイル名が拡張子を持たない場合には、このプロパティは空の文字列を返します。
 
 このプロパティは **読み取り専用** です。
 
@@ -100,7 +100,7 @@ The `.extension` property returns <!-- REF #document.extension.Summary -->the ex
 
 #### 詳細
 
-The `.fullName` property returns <!-- REF #document.fullName.Summary -->the full name of the file, including its extension (if any)<!-- END REF -->.
+The `.fullName` property returns <!-- REF #document.fullName.Summary -->the full name of the file, including its extension (if any)<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -160,7 +160,7 @@ The `.isAlias` property returns <!-- REF #document.isAlias.Summary -->true if th
 
 #### 詳細
 
-The `.isFile` property returns <!-- REF #document.isFile.Summary -->The `.copyTo()` function<!-- END REF -->.
+The `.isFile` property returns <!-- REF #document.isFile.Summary -->The `.copyTo()` function<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -180,7 +180,7 @@ The `.isFile` property returns <!-- REF #document.isFile.Summary -->The `.copyTo
 
 #### 詳細
 
-The `.isFolder` property returns <!-- REF #document.isFolder.Summary -->always true for a file<!-- END REF -->.
+The `.isFolder` property returns <!-- REF #document.isFolder.Summary -->always true for a file<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -200,7 +200,7 @@ The `.isFolder` property returns <!-- REF #document.isFolder.Summary -->always t
 
 #### 詳細
 
-The `.isWritable` property returns <!-- REF #document.isWritable.Summary -->true if the file exists on disk and is writable<!-- END REF -->.
+The `.isWritable` property returns <!-- REF #document.isWritable.Summary -->true if the file exists on disk and is writable<!-- END REF -->。
 > このプロパティは 4Dアプリケーションがディスクに書き込めるかどうか (アクセス権限) をチェックし、ファイルの *writable* (書き込み可能) 属性のみ依存するわけではありません。
 
 このプロパティは **読み取り専用** です。
@@ -230,7 +230,7 @@ The `.isWritable` property returns <!-- REF #document.isWritable.Summary -->true
 
 #### 詳細
 
-The `.modificationDate` property returns <!-- REF #document.modificationDate.Summary -->The `.modificationDate` property returns<!-- END REF -->.
+The `.modificationDate` property returns <!-- REF #document.modificationDate.Summary -->The `.modificationDate` property returns<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -270,7 +270,7 @@ The `.modificationTime` property returns <!-- REF #document.modificationTime.Sum
 
 #### 詳細
 
-The `.name` property returns <!-- REF #document.name.Summary -->the name of the file without extension (if any)<!-- END REF -->.
+The `.name` property returns <!-- REF #document.name.Summary -->the name of the file without extension (if any)<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -290,7 +290,7 @@ The `.name` property returns <!-- REF #document.name.Summary -->the name of the 
 
 #### 詳細
 
-The `.original` property returns <!-- REF #document.original.Summary -->the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->. ターゲット要素は以下のいずれかです:
+The `.original` property returns <!-- REF #document.original.Summary -->the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->。 ターゲット要素は以下のいずれかです:
 
 * File オブジェクト
 * Folder オブジェクト
@@ -315,7 +315,7 @@ The `.original` property returns <!-- REF #document.original.Summary -->the targ
 
 #### 詳細
 
-The `.parent` property returns <!-- REF #document.parent.Summary -->The `.parent` property returns<!-- END REF -->. .
+The `.parent` property returns <!-- REF #document.parent.Summary -->The `.parent` property returns<!-- END REF -->。 .
 
 このプロパティは **読み取り専用** です。
 
@@ -335,7 +335,7 @@ The `.parent` property returns <!-- REF #document.parent.Summary -->The `.parent
 
 #### 詳細
 
-The `.path` property returns <!-- REF #document.path.Summary -->The `.path` property returns<!-- END REF -->. .
+The `.path` property returns <!-- REF #document.path.Summary -->The `.path` property returns<!-- END REF -->。 .
 
 このプロパティは **読み取り専用** です。
 
@@ -355,7 +355,7 @@ The `.path` property returns <!-- REF #document.path.Summary -->The `.path` prop
 
 #### 詳細
 
-The `.platformPath` property returns <!-- REF #document.platformPath.Summary -->The `.platformPath` property returns<!-- END REF -->.
+The `.platformPath` property returns <!-- REF #document.platformPath.Summary -->The `.platformPath` property returns<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -375,7 +375,7 @@ The `.platformPath` property returns <!-- REF #document.platformPath.Summary -->
 
 #### 詳細
 
-The `.size` property returns <!-- REF #document.size.Summary -->the size of the file expressed in bytes<!-- END REF -->. ファイルがディスク上に存在しない場合、サイズは 0 になります。
+The `.size` property returns <!-- REF #document.size.Summary -->the size of the file expressed in bytes<!-- END REF -->。 ファイルがディスク上に存在しない場合、サイズは 0 になります。
 
 このプロパティは **読み取り専用** です。
 
@@ -400,13 +400,13 @@ The `.size` property returns <!-- REF #document.size.Summary -->the size of the 
 | destinationFolder | 4D.Folder | -> | 宛先フォルダー                               |
 | newName           | テキスト      | -> | コピー先フォルダーの名前                          |
 | overwrite         | 整数        | -> | 既存要素を上書きするには `fk overwrite` を渡します     |
-| Result            | 4D.File   | <- | コピーされたファイル|<!-- END REF -->
+| 戻り値               | 4D.File   | <- | コピーされたファイル|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.copyTo()` function <!-- REF #document.copyTo().Summary -->The `.isFolder` property returns <!-- END REF -->.
+The `.copyTo()` function <!-- REF #document.copyTo().Summary -->The `.isFolder` property returns <!-- END REF -->。
 
 *destinationFolder* 引数が指定するフォルダーはディスク上に存在している必要があり、そうでない場合にはエラーが生成されます。
 
@@ -449,15 +449,15 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 
 <!-- REF #document.getContent().Params -->
-| 引数     | タイプ     |    | 詳細                                    |
-| ------ | ------- | -- | ------------------------------------- |
-| Result | 4D.Blob | <- | ファイルのコンテンツ|<!-- END REF -->
+| 引数  | タイプ     |    | 詳細                                    |
+| --- | ------- | -- | ------------------------------------- |
+| 戻り値 | 4D.Blob | <- | ファイルのコンテンツ|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `4D.Blob` object containing the entire content of a file<!-- END REF -->. .
+The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `4D.Blob` object containing the entire content of a file<!-- END REF -->。 .
 
 **戻り値**
 
@@ -491,16 +491,16 @@ The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns
 
 
 <!-- REF #document.getIcon().Params -->
-| 引数     | タイプ     |    | 詳細                              |
-| ------ | ------- | -- | ------------------------------- |
-| size   | 整数      | -> | 取得するピクチャーの一辺の長さ (ピクセル単位)        |
-| Result | Picture | <- | アイコン|<!-- END REF -->
+| 引数   | タイプ     |    | 詳細                              |
+| ---- | ------- | -- | ------------------------------- |
+| size | 整数      | -> | 取得するピクチャーの一辺の長さ (ピクセル単位)        |
+| 戻り値  | Picture | <- | アイコン|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.getIcon()` function returns <!-- REF #document.getIcon().Summary -->the icon of the file<!-- END REF -->.
+The `.getIcon()` function returns <!-- REF #document.getIcon().Summary -->the icon of the file<!-- END REF -->。
 
 任意の *size* 引数を渡すと、返されるアイコンのサイズをピクセル単位で指定することができます。 この値は、実際にはアイコンを格納している正方形の一辺の長さを表しています。 アイコンは通常、32x32ピクセル ("大きいアイコン") または 16x16ピクセル ("小さいアイコン") で定義されています。 この引数に 0 を渡すか省略した場合、"大きいアイコン" が返されます。
 
@@ -531,13 +531,13 @@ The `.getIcon()` function returns <!-- REF #document.getIcon().Summary -->the ic
 | charSetName | テキスト | -> | 文字セットの名前                                    |
 | charSetNum  | 整数   | -> | 文字セットの番号                                    |
 | breakMode   | 整数   | -> | 改行の処理モード                                    |
-| Result      | テキスト | <- | ドキュメントから取得したテキスト|<!-- END REF -->
+| 戻り値         | テキスト | <- | ドキュメントから取得したテキスト|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.getText()` function <!-- REF #document.getText().Summary -->returns the contents of the file as text <!-- END REF -->.
+The `.getText()` function <!-- REF #document.getText().Summary -->returns the contents of the file as text <!-- END REF -->。
 
 任意で、コンテンツの読み取りに使用する文字セットを渡します。 これには、次の二つの方法があります:
 
