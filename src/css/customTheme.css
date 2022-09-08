@@ -82,7 +82,11 @@ details {
   color: #807ea3;
 }
 
-
+.preview {
+ background-color:rgb(180, 217, 251);
+ padding: 10px 0;
+ color: #000;
+}
 
 .doc-updates {
   padding: 50px 20px;
