@@ -265,9 +265,9 @@ Function _createFile($title : Text; $textBody : Text)
 
 
 <!-- REF #SystemWorkerClass.closeInput().Params -->
-| Parámetros | Type |  | Descripción                                                |
-| ---------- | ---- |::| ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF -->
+| Parámetros | Type |  | Descripción                                             |
+| ---------- | ---- |::| ------------------------------------------------------- |
+|            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
 |
 
@@ -482,9 +482,9 @@ The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary 
 
 
 <!-- REF #SystemWorkerClass.terminate().Params -->
-| Parámetros | Type |  | Descripción                                                |
-| ---------- | ---- |::| ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF -->
+| Parámetros | Type |  | Descripción                                             |
+| ---------- | ---- |::| ------------------------------------------------------- |
+|            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
 |
 
