@@ -116,22 +116,22 @@ Launch application with a .4DLink file:
 
 
 ```bash
-open ~/Desktop/4D.app MyDatabase.4DLink
+open ~/Desktop/4D.app ~/Desktop/MyDatabase.4DLink
 ```
 
 ```bash
-open "~/Desktop/4D Server.app" MyDatabase.4DLink
+open "~/Desktop/4D Server.app" ~/Desktop/MyDatabase.4DLink
 ```
 
 *   Windows:
 
 
 ```bash
-%HOMEPATH%\Desktop\4D.exe MyDatabase.4DLink
+%HOMEPATH%\Desktop\4D.exe %HOMEPATH%\MyDatabase.4DLink
 ```
 
 ```bash
-%HOMEPATH%\Desktop\4D Server.exe" MyDatabase.4DLink
+%HOMEPATH%\Desktop\4D Server.exe" %HOMEPATH%\MyDatabase.4DLink
 ```
 
 Launch application in compiled mode and create a data file if not available:
