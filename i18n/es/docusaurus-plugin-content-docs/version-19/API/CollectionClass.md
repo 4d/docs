@@ -409,7 +409,7 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 #### Descripción
 
-La función `.copy()` <!-- REF #collection.copy().Summary --> returns a deep copy of the collection instance<!-- END REF -->.***Deep copy*** means that objects or collections within the original collection are duplicated and do not share any reference with the returned collection.
+La función `.copy()` <!-- REF #collection.copy().Summary --> devuelve una copia profunda de la instancia de la colección<!-- END REF -->.***Deep copy*** significa que los objetos o colecciones dentro de la colección original se duplican y no comparten ninguna referencia con la colección devuelta.
 > Esta función no modifica la colección original.
 
 Si se pasa, el parámetro *opción* puede contener una de las siguientes constantes (o ambas):
@@ -531,7 +531,7 @@ Este ejemplo ilustra el uso de la opción `ck resolve pointers`:
 
 #### Descripción
 
-La función `.push()` <!-- REF #collection.count().Summary -->returns the number of non-null elements in the collection<!-- END REF -->.
+La función `.push()` <!-- REF #collection.count().Summary -->devuelve el número de elementos no nulos de la colección<!-- END REF -->.
 
 Si la colección contiene objetos, se puede pasar el parámetro *propertyPath*. En este caso, sólo se tienen en cuenta los elementos que contienen la *propertyPath*.
 
@@ -651,7 +651,7 @@ El parámetro opcional *propertyPath* permite contar valores dentro de una colec
 
 #### Descripción
 
-The `.distinct()` function <!-- REF #collection.distinct().Summary -->returns a collection containing only distinct (different) values from the original collection<!-- END REF -->.
+La función `.distinct()` <!-- REF #collection.distinct().Summary -->devuelve una colección que sólo contiene valores distintos (diferentes) de la colección original<!-- END REF -->.
 > Esta función no modifica la colección original.
 
 La colección devuelta se clasifica automáticamente. Los valores **Null** no se devuelven.
@@ -701,7 +701,7 @@ Si la colección contiene objetos, puede pasar el parámetro *propertyPath* para
 
 #### Descripción
 
-La función `.equal()` <!-- REF #collection.equal().Summary -->compares the collection with collection2 <!-- END REF -->and returns **true** if they are identical (deep comparison).
+La función `.equal()` <!-- REF #collection.equal().Summary -->compara collection con collection2 <!-- END REF -->and returns **true** if they are identical (deep comparison).
 
 Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluación diferencie entre mayúsculas y minúsculas o que diferencie los caracteres acentuados, pase la constante `ck diacritical` en el parámetro option.
 > Esta función no modifica la colección original.
@@ -746,12 +746,12 @@ Por defecto, se realiza una evaluación no diacrítica. Si desea que la evaluaci
 
 
 <!-- REF #collection.every().Params -->
-| Parámetros | Type    |    | Descripción                                                                  |
-| ---------- | ------- |:--:| ---------------------------------------------------------------------------- |
-| startFrom  | Integer | -> | Índice para iniciar la prueba en                                             |
-| methodName | Text    | -> | Nombre del método a llamar para la prueba                                    |
-| param      | Mixed   | -> | Parámetro(s) a pasar a methodName                                            |
-| Result     | Boolean | <- | True if all elements successfully passed the test|<!-- END REF -->
+| Parámetros | Type    |    | Descripción                                                                           |
+| ---------- | ------- |:--:| ------------------------------------------------------------------------------------- |
+| startFrom  | Integer | -> | Índice para iniciar la prueba en                                                      |
+| methodName | Text    | -> | Nombre del método a llamar para la prueba                                             |
+| param      | Mixed   | -> | Parámetro(s) a pasar a methodName                                                     |
+| Result     | Boolean | <- | True si todos los elementos han pasado la prueba con éxito|<!-- END REF -->
 
 |
 
@@ -844,13 +844,13 @@ End if
 | propertyPath | Text       | -> | Ruta de la propiedad del objeto cuyos valores deben ser extraídos a la nueva colección                                                  |
 | targetpath   | Text       | -> | Ruta de la propiedad de destino o nombre de la propiedad                                                                                |
 | option       | Integer    | -> | `ck keep null`: incluye la propiedad null en la colección devuelta (se ignora por defecto). Parámetro ignorado si se pasa *targetPath*. |
-| Result       | Collection | <- | New collection containing extracted values|<!-- END REF -->
+| Result       | Collection | <- | Nueva colección que contiene los valores extraídos|<!-- END REF -->
 
 |
 
 #### Descripción
 
-La función `.reduce()` <!-- REF #collection.extract().Summary -->creates and returns a new collection containing *propertyPath* values extracted from the original collection of objects<!-- END REF -->.
+La función `.reduce()` <!-- REF #collection.extract().Summary -->crea y devuelve una nueva colección que contiene los valores*propertyPath* extraídos de la colección original de objetos<!-- END REF -->.
 > Esta función no modifica la colección original.
 
 El contenido de la colección devuelta depende del parámetro *targetPath*:
@@ -907,18 +907,18 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 
 <!-- REF #collection.fill().Params -->
-| Parámetros | Type                                            |    | Descripción                                                       |
-| ---------- | ----------------------------------------------- |:--:| ----------------------------------------------------------------- |
-| value      | number, Text, Collection, Object, Date, Boolean | -> | Valor a asignar                                                   |
-| startFrom  | Integer                                         | -> | Índice de inicio (incluido)                                       |
-| end        | Integer                                         | -> | Índice final (no incluido)                                        |
-| Result     | collection                                      | <- | Original collection with filled values|<!-- END REF -->
+| Parámetros | Type                                            |    | Descripción                                                              |
+| ---------- | ----------------------------------------------- |:--:| ------------------------------------------------------------------------ |
+| value      | number, Text, Collection, Object, Date, Boolean | -> | Valor a asignar                                                          |
+| startFrom  | Integer                                         | -> | Índice de inicio (incluido)                                              |
+| end        | Integer                                         | -> | Índice final (no incluido)                                               |
+| Result     | collection                                      | <- | Colección original con los valores rellenados|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.fill()` function <!-- REF #collection.fill().Summary -->fills the collection with the specified *value*, optionally from *startFrom* index to *end* index, and returns the resulting collection<!-- END REF -->.
+La función `.fill()` <!-- REF #collection.fill().Summary -->llena la colección con el *valor* especificado, opcionalmente desde el índice *startFrom* hasta el índice *end*, y devuelve la colección resultante<!-- END REF -->.
 > Esta función modifica la colección original.
 
 * Si se omite el parámetro *startFrom*, *value* se define en todos los elementos de la colección (*startFrom*=0).
@@ -959,11 +959,11 @@ En caso de incoherencia, se aplican las siguientes reglas:
 
 
 <!-- REF #collection.filter().Params -->
-| Parámetros | Type       |    | Descripción                                                                           |
-| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------- |
-| methodName | Text       | -> | Nombre de la función a la que se llama para filtrar la colección                      |
-| param      | Mixed      | -> | Parámetro(s) a pasar a *methodName*                                                   |
-| Result     | Collection | <- | New collection containing filtered elements (shallow copy)|<!-- END REF -->
+| Parámetros | Type       |    | Descripción                                                                                         |
+| ---------- | ---------- |:--:| --------------------------------------------------------------------------------------------------- |
+| methodName | Text       | -> | Nombre de la función a la que se llama para filtrar la colección                                    |
+| param      | Mixed      | -> | Parámetro(s) a pasar a *methodName*                                                                 |
+| Result     | Collection | <- | Nueva colección que contiene los elementos filtrados (copia superficial)|<!-- END REF -->
 
 |
 
@@ -1143,18 +1143,18 @@ El código para ***FindCity*** es:
 
 
 <!-- REF #collection.findIndex().Params -->
-| Parámetros | Type    |    | Descripción                                                               |
-| ---------- | ------- |:--:| ------------------------------------------------------------------------- |
-| startFrom  | Integer | -> | Índice para iniciar la búsqueda en                                        |
-| methodName | Text    | -> | Nombre de la función a la que se llama para la búsqueda                   |
-| param      | any     | -> | Parámetro(s) a pasar a *methodName*                                       |
-| Result     | Integer | <- | Index of first value found, or -1 if not found|<!-- END REF -->
+| Parámetros | Type    |    | Descripción                                                                            |
+| ---------- | ------- |:--:| -------------------------------------------------------------------------------------- |
+| startFrom  | Integer | -> | Índice para iniciar la búsqueda en                                                     |
+| methodName | Text    | -> | Nombre de la función a la que se llama para la búsqueda                                |
+| param      | any     | -> | Parámetro(s) a pasar a *methodName*                                                    |
+| Result     | Integer | <- | Índice del primer valor encontrado, o -1 si no se encuentra|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.findIndex()` function <!-- REF #collection.findIndex().Summary -->The `.findIndex()` function<!-- END REF -->.
+La función `.findIndex()` <!-- REF #collection.findIndex().Summary -->The `.findIndex()` function<!-- END REF -->.
 > Esta función no modifica la colección original.
 
 En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en *param* (opcional). In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional). *methodName* can perform any test, with or without the parameter(s).
@@ -1218,17 +1218,17 @@ El código del método ***FindCity*** es:
 
 
 <!-- REF #collection.indexOf().Params -->
-| Parámetros | Type      |    | Descripción                                                                                             |
-| ---------- | --------- |:--:| ------------------------------------------------------------------------------------------------------- |
-| toSearch   | expresión | -> | Expresión a buscar en la colección                                                                      |
-| startFrom  | Integer   | -> | Índice para iniciar la búsqueda en                                                                      |
-| Result     | Integer   | <- | Index of the first occurrence of toSearch in the collection, -1 if not found|<!-- END REF -->
+| Parámetros | Type      |    | Descripción                                                                                                   |
+| ---------- | --------- |:--:| ------------------------------------------------------------------------------------------------------------- |
+| toSearch   | expresión | -> | Expresión a buscar en la colección                                                                            |
+| startFrom  | Integer   | -> | Índice para iniciar la búsqueda en                                                                            |
+| Result     | Integer   | <- | Índice de la primera ocurrencia de toSearch en la colección, -1 si no se encuentra|<!-- END REF -->
 
 |
 
 #### Descripción
 
-La función `.extract()` <!-- REF #collection.indexOf().Summary -->searches the *toSearch* expression among collection elements and returns the index of the first found occurrence, or -1 if it was not found<!-- END REF -->.
+La función `.extract()` <!-- REF #collection.indexOf().Summary -->busca la expresión *toSearch* entre los elementos de la colección y devuelve el índice de la primera ocurrencia encontrada, o -1 si no se encontró<!-- END REF -->.
 > Esta función no modifica la colección original.
 
 En *toSearch*, pase la expresión a encontrar en la colección. Puede pasar:
@@ -1274,17 +1274,17 @@ Opcionalmente, puede pasar el índice de la colección desde el que iniciar la b
 
 
 <!-- REF #collection.indices().Params -->
-| Parámetros  | Type       |    | Descripción                                                                         |
-| ----------- | ---------- |:--:| ----------------------------------------------------------------------------------- |
-| queryString | Text       | -> | Criterio de búsqueda                                                                |
-| value       | any        | -> | Valor(es) a comparar cuando se utiliza(n) marcador(es) de posición                  |
-| Result      | Collection | <- | Element index(es) matching queryString in the collection|<!-- END REF -->
+| Parámetros  | Type       |    | Descripción                                                                                     |
+| ----------- | ---------- |:--:| ----------------------------------------------------------------------------------------------- |
+| queryString | Text       | -> | Criterio de búsqueda                                                                            |
+| value       | any        | -> | Valor(es) a comparar cuando se utiliza(n) marcador(es) de posición                              |
+| Result      | Collection | <- | Índice(s) de elementos que coinciden con queryString en la colección|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.indices()` function works exactly the same as the [`.query()`](#query) function but <!-- REF #collection.indices().Summary -->returns indexes, in the original collection, of object collection elements that match the *queryString* search conditions<!-- END REF -->, and not elements themselves. Los índices se devuelven en orden ascendente.
+La función `.indices()` funciona exactamente igual que la función [`.query()`](#query) pero <!-- REF #collection.indices().Summary -->devuelve los índices, en la colección original, de los elementos de la colección de objetos que coinciden con las condiciones de búsqueda de *queryString*<!-- END REF -->, and not elements themselves. Los índices se devuelven en orden ascendente.
 > Esta función no modifica la colección original.
 
 El parámetro *queryString* utiliza la siguiente sintaxis:
@@ -1327,17 +1327,17 @@ Para una descripción detallada de los parámetros *queryString* y *value*, cons
 
 
 <!-- REF #collection.insert().Params -->
-| Parámetros | Type       |    | Descripción                                                                |
-| ---------- | ---------- |:--:| -------------------------------------------------------------------------- |
-| index      | Integer    | -> | Dónde insertar el elemento                                                 |
-| element    | any        | -> | Elemento a insertar en la colección                                        |
-| Result     | Collection | <- | Original collection containing inserted element|<!-- END REF -->
+| Parámetros | Type       |    | Descripción                                                                         |
+| ---------- | ---------- |:--:| ----------------------------------------------------------------------------------- |
+| index      | Integer    | -> | Dónde insertar el elemento                                                          |
+| element    | any        | -> | Elemento a insertar en la colección                                                 |
+| Result     | Collection | <- | Colección original que contiene los elementos insertados|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.insert()` function <!-- REF #collection.insert().Summary --> inserts *element* at the specified *index* position in the collection instance and returns the edited collection<!-- END REF -->.
+La función `.insert()` <!-- REF #collection.insert().Summary --> inserta *element* en la posición *índice* especificada en la instancia de la colección y devuelve la colección editada<!-- END REF -->.
 > Esta función modifica la colección original.
 
 En *index*, pase la posición donde quiere que se inserte el elemento en la colección.
@@ -1475,7 +1475,7 @@ Opcionalmente, puede pasar el índice de la colección desde el cual iniciar una
 
 #### Descripción
 
-The `.length` property <!-- REF #collection.length.Summary -->returns the number of elements in the collection<!-- END REF -->.
+La propiedad `.length` <!-- REF #collection.length.Summary -->devuelve el número de elementos de la colección<!-- END REF -->.
 
 La propiedad `.length` se inicializa cuando se crea la colección. Añadir o eliminar elementos actualiza la longitud, si es necesario. Esta propiedad es **sólo lectura** (no se puede utilizar para definir el tamaño de la colección).
 
@@ -1574,7 +1574,7 @@ Aqui está el método ***Percentage***:
 
 #### Descripción
 
-The `.max()` function <!-- REF #collection.max().Summary -->returns the element with the highest value in the collection<!-- END REF --> (the last element of the collection as it would be sorted in ascending order using the [`.sort()`](#sort) function).
+La función `.max()` <!-- REF #collection.max().Summary -->devuelve el elemento con el valor más alto de la colección<!-- END REF --> (el último elemento de la colección tal y como se ordenaría de forma ascendente mediante la función [`.sort()`](#sort)).
 > Esta función no modifica la colección original.
 
 Si la colección contiene diferentes tipos de valores, la función `.max()` devolverá el valor máximo dentro del último tipo de elemento en el orden de la lista de tipos (ver la descripción de [`.sort()`](#sort)).
@@ -1622,7 +1622,7 @@ Si la colección está vacía, `.max()` devuelve *Undefined*.
 
 #### Descripción
 
-La función `.min()` <!-- REF #collection.min().Summary -->returns the element with the smallest value in the collection<!-- END REF --> (the first element of the collection as it would be sorted in ascending order using the [`.sort()`](#sort) function).
+La función `.min()` <!-- REF #collection.min().Summary -->devuelve el elemento con el menor valor de la colección<!-- END REF --> (el primer elemento de la colección tal y como se ordenaría de forma ascendente mediante la función [`.sort()`](#sort)).
 > Esta función no modifica la colección original.
 
 Si la colección contiene diferentes tipos de valores, la función `.min()` devolverá el valor mínimo dentro del primer tipo de elemento en el orden de la lista de tipos (ver la descripción de [`.sort()`](#sort)).
@@ -1672,7 +1672,7 @@ Si la colección está vacía, `.min()` devuelve *Undefined*.
 
 #### Descripción
 
-La función `.fill()` <!-- REF #collection.orderBy().Summary -->returns a new collection containing all elements of the collection in the specified order<!-- END REF -->.
+La función `.fill()` <!-- REF #collection.orderBy().Summary -->devuelve una nueva colección que contiene todos los elementos de la colección en el orden especificado<!-- END REF -->.
 
 Esta función devuelve una *copia superficial*, lo que significa que los objetos o colecciones de ambas colecciones comparten la misma referencia. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 > Esta función no modifica la colección original.
@@ -1906,7 +1906,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 #### Descripción
 
-The `.pop()` function <!-- REF #collection.pop().Summary -->removes the last element from the collection and returns it as the function result<!-- END REF -->.
+La función `.pop()` <!-- REF #collection.pop().Summary -->elimina el último elemento de la colección y lo devuelve como resultado de la función<!-- END REF -->.
 > Esta función modifica la colección original.
 
 Cuando se aplica a una colección vacía, `.pop()` devuelve ***undefined***.
@@ -1951,7 +1951,7 @@ Cuando se aplica a una colección vacía, `.pop()` devuelve ***undefined***.
 
 #### Descripción
 
-The `.push()` function <!-- REF #collection.push().Summary -->appends one or more *element*(s) to the end of the collection instance and returns the edited collection<!-- END REF -->.
+La función `.push()` <!-- REF #collection.push().Summary -->añade uno o más *elemento*(s) al final de la instancia de la colección y devuelve la colección editada<!-- END REF -->.
 > Esta función modifica la colección original.
 
 #### Ejemplo 1
@@ -2110,7 +2110,7 @@ Se pueden encontrar más ejemplos de búsquedas en la página `dataClass.query()
 
 #### Descripción
 
-The `.reduce()` function <!-- REF #collection.reduce().Summary -->The `.reduce()` function<!-- END REF -->.
+La función `.reduce()` <!-- REF #collection.reduce().Summary -->The `.reduce()` function<!-- END REF -->.
 > Esta función no modifica la colección original.
 
 En *methodName*, pase el nombre del método a utilizar para evaluar los elementos de la colección, junto con su(s) parámetro(s) en param (opcional). *methodName* toma cada elemento de la colección y realiza todas las operaciones deseadas para acumular el resultado en *$1.accumulator*, que se devuelve en *$1.value*.
@@ -2184,11 +2184,11 @@ Con el siguiente método ***Flatten***:
 
 
 <!-- REF #collection.remove().Params -->
-| Parámetros | Type       |    | Descripción                                                               |
-| ---------- | ---------- |:--:| ------------------------------------------------------------------------- |
-| index      | Integer    | -> | Elemento en el que se inicia la eliminación                               |
-| howMany    | Integer    | -> | Número de elementos a eliminar, o 1 elemento si se omite                  |
-| Result     | Collection | <- | Original collection without removed element(s)|<!-- END REF -->
+| Parámetros | Type       |    | Descripción                                                            |
+| ---------- | ---------- |:--:| ---------------------------------------------------------------------- |
+| index      | Integer    | -> | Elemento en el que se inicia la eliminación                            |
+| howMany    | Integer    | -> | Número de elementos a eliminar, o 1 elemento si se omite               |
+| Result     | Collection | <- | Colección original sin elementos eliminados|<!-- END REF -->
 
 |
 
@@ -2246,7 +2246,7 @@ Si se intenta eliminar un elemento de una colección vacía, el método no hace 
 
 #### Descripción
 
-The `.resize()` function <!-- REF #collection.resize().Summary -->sets the collection length to the specified new size and returns the resized collection<!-- END REF -->.
+La función `.resize()` <!-- REF #collection.resize().Summary -->define la longitud de la colección al nuevo tamaño especificado y devuelve la colección redimensionada<!-- END REF -->.
 > Esta función modifica la colección original.
 
 * Si *size* < la longitud de la colección, los elementos que exceden se eliminan de la colección.
@@ -2297,7 +2297,7 @@ Por defecto, los nuevos elementos se llenan con valores **null**. Puede especifi
 
 #### Descripción
 
-The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a deep copy of the collection with all its elements in reverse order<!-- END REF -->. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
+La función `.reverse()` <!-- REF #collection.reverse().Summary -->devuelve una copia profunda de la colección con todos sus elementos en orden inverso<!-- END REF -->. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 > Esta función no modifica la colección original.
 
 #### Ejemplo
@@ -2333,7 +2333,7 @@ The `.reverse()` function <!-- REF #collection.reverse().Summary -->returns a de
 
 #### Descripción
 
-The `.shift()` function <!-- REF #collection.shift().Summary -->removes the first element of the collection and returns it as the function result<!-- END REF -->.
+La función `.shift()` <!-- REF #collection.shift().Summary -->elimina el primer elemento de la colección y lo devuelve como resultado de la función<!-- END REF -->.
 > Esta función modifica la colección original.
 
 Si la colección está vacía, este método no hace nada.
@@ -2376,7 +2376,7 @@ Si la colección está vacía, este método no hace nada.
 
 #### Descripción
 
-The `.slice()` function <!-- REF #collection.slice().Summary -->returns a portion of a collection into a new collection<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). Esta función devuelve una *copia superficial* de la colección. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
+La función `.slice()` <!-- REF #collection.slice().Summary -->devuelve una parte de una colección en una nueva colección<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). Esta función devuelve una *copia superficial* de la colección. Si la colección original es una colección compartida, la colección devuelta es también una colección compartida.
 > Esta función no modifica la colección original.
 
 La colección devuelta contiene el elemento especificado por *startFrom* y todos los elementos subsiguientes hasta, pero sin incluir, el elemento especificado por *end*. Si sólo se especifica el parámetro *startFrom*, la colección devuelta contiene todos los elementos desde *startFrom* hasta el último elemento de la colección original.
@@ -2583,7 +2583,7 @@ Si la colección contiene elementos de diferentes tipos, se agrupan primero por 
 
 #### Descripción
 
-La función `.orderByMethod()` <!-- REF #collection.sum().Summary -->returns the sum for all values in the collection instance<!-- END REF -->.
+La función `.orderByMethod()` <!-- REF #collection.sum().Summary -->devuelve la suma de todos los valores de la instancia de la colección<!-- END REF -->.
 
 Para el cálculo sólo se tienen en cuenta los elementos numéricos (se ignoran otros tipos de elementos).
 
@@ -2643,7 +2643,7 @@ Si la colección contiene objetos, pasa el parámetro *propertyPath* para indica
 
 #### Descripción
 
-The `.unshift()` function <!-- REF #collection.unshift().Summary -->inserts the given *value*(s) at the beginning of the collection <!-- END REF -->and returns the modified collection.
+La función `.unshift()` <!-- REF #collection.unshift().Summary -->inserta el *valor* dado al principio de la colección <!-- END REF -->y devuelve la colección modificada.
 > Esta función modifica la colección original.
 
 Si se pasan varios valores, se insertan todos a la vez, lo que significa que aparecen en la colección resultante en el mismo orden que en la lista de argumentos.
