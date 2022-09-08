@@ -60,7 +60,7 @@ ASSERT($status.success)
 | settings   | Object       | -> | Parámetros para generar o cargar un par de llaves                              |
 | result     | 4D.CryptoKey | <- | Objeto que contiene un par de llaves de encriptación<!-- END REF --> |
 
-The `4D.CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new `4D.CryptoKey` object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. Permite generar una nueva llave RSA o ECDSA, o cargar un par de llaves existente desde una definición PEM.
+La función `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crea un nuevo objeto `4D.CryptoKey` que encapsula un par de llaves de cifrado<!-- END REF -->, basado en el parámetro objeto *settings*. Permite generar una nueva llave RSA o ECDSA, o cargar un par de llaves existente desde una definición PEM.
 
 #### *settings*
 
@@ -89,7 +89,7 @@ El objeto `CryptoKey` devuelto encapsula un par de llaves de cifrado. Es un obje
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Text<!-- END REF -->
 
 
-Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised curve name of the key<!-- END REF -->. Generalmente "prime256v1" para ES256 (por defecto), "secp384r1" para ES384, "secp521r1" para ES512.
+Definido sólo para llaves ECDSA: el <!-- REF #CryptoKey.curve.Summary -->nombre de la curva normalizada de la llave<!-- END REF -->. Generalmente "prime256v1" para ES256 (por defecto), "secp384r1" para ES384, "secp521r1" para ES512.
 <!-- END REF -->
 
 <!-- REF CryptoKey.decrypt().Desc -->
@@ -114,7 +114,7 @@ Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised
 | options    | Object | -> | Opciones de decodificación                                                           |
 | Result     | Object | <- | Status|<!-- END REF -->                                                    |
 
-The `.decrypt()` function <!-- REF #CryptoKey.decrypt().Summary -->decrypts the *message* parameter using the **private** key<!-- END REF -->. El algoritmo utilizado depende del tipo de la llave.
+La función `.decrypt()` <!-- REF #CryptoKey.decrypt().Summary -->descifra el parámetro *mensaje* utilizando la llave **privada**<!-- END REF -->. El algoritmo utilizado depende del tipo de la llave.
 
 La llave debe ser una llave RSA, el algoritmo es RSA-OAEP (ver [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
@@ -161,7 +161,7 @@ En caso de que el *message* no haya podido ser descifrado por no haber sido encr
 | options    | Object | -> | Opciones de codificación                                                                                    |
 | Result     | Text   | <- | Mensaje encriptado y codificado utilizando la opción `options.encodingEncrypted`|<!-- END REF --> |
 
-The `.encrypt()` function <!-- REF #CryptoKey.encrypt().Summary -->encrypts the *message* parameter using the **public** key<!-- END REF -->. El algoritmo utilizado depende del tipo de la llave.
+La función `.encrypt()` <!-- REF #CryptoKey.encrypt().Summary -->encripta el parámetro *mensaje* utilizando la llave **pública**<!-- END REF -->. El algoritmo utilizado depende del tipo de la llave.
 
 La llave debe ser una llave RSA, el algoritmo es RSA-OAEP (ver [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
@@ -198,7 +198,7 @@ El valor devuelto es un mensaje encriptado.
 | ---------- | ---- | -- | ------------------------------------------------------- |
 | Result     | Text | <- | Llave privada en formato PEM|<!-- END REF --> |
 
-The `.getPrivateKey()` function  <!-- REF #CryptoKey.getPrivateKey().Summary -->returns the private key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
+La función `.getPrivateKey()`  <!-- REF #CryptoKey.getPrivateKey().Summary -->devuelve la llave privada del objeto `CryptoKey`<!-- END REF --> en formato PEM, o una cadena vacía si no hay ninguna disponible.
 
 #### *Result*
 
@@ -225,7 +225,7 @@ El valor devuelto es la llave privada.
 | ---------- | ---- | -- | ------------------------------------------------------- |
 | Result     | Text | <- | Llave pública en formato PEM|<!-- END REF --> |
 
-The `.getPublicKey()` function <!-- REF #CryptoKey.getPublicKey().Summary -->returns the public key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
+La función `.getPublicKey()` <!-- REF #CryptoKey.getPublicKey().Summary -->devuelve la llave pública del objeto `CryptoKey`<!-- END REF --> en formato PEM, o una cadena vacía si no hay ninguna disponible.
 
 #### *Result*
 
@@ -271,7 +271,7 @@ El valor devuelto es la llave pública.
 | options    | Object | -> | Opciones de firma                                                                                |
 | Result     | Text   | <- | Firma en representación Base64 o Base64URL, según la opción "encoding|<!-- END REF --> |
 
-The `.sign()` function <!-- REF #CryptoKey.sign().Summary -->signs the utf8 representation of a *message* string<!-- END REF --> using the `CryptoKey` object keys and provided *options*. Devuelve su firma en formato base64 o base64URL, dependiendo del valor del atributo `options.encoding` que haya pasado.
+La función `.sign()` <!-- REF #CryptoKey.sign().Summary -->firma la representación utf8 de una cadena *mensaje*<!-- END REF --> utilizando las llaves del objeto `CryptoKey` y las *opciones* suministradas. Devuelve su firma en formato base64 o base64URL, dependiendo del valor del atributo `options.encoding` que haya pasado.
 
 `CryptoKey` debe contener una llave válida **privada**.
 
@@ -305,7 +305,7 @@ The `.sign()` function <!-- REF #CryptoKey.sign().Summary -->signs the utf8 repr
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
 
 
-Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the key in bits<!-- END REF -->. .
+Definido sólo para llaves RSA: <!-- REF #CryptoKey.size.Summary -->el tamaño de la llave en bits<!-- END REF -->. .
 
 <!-- REF CryptoKey.type -->
 ## .type
@@ -323,11 +323,11 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 <!-- REF #CryptoKey.type.Syntax -->**.type** : Text<!-- END REF -->
 
 
-The <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "ECDSA", "PEM" <!-- END REF -->.
+El <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA", "ECDSA", "PEM" <!-- END REF -->.
 
-- "RSA": an RSA key pair, using `settings.size` as [.size](#size).
-- "ECDSA": an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as [.curve](#curve). Tenga en cuenta que las llaves ECDSA no pueden utilizarse para el cifrado, sino sólo para la firma.
-- "PEM": a key pair definition in PEM format, using `settings.pem` as [.pem](#pem).
+- "RSA": un par de llaves RSA, utilizando l`settings.size` como [.size](#size).
+- "ECDSA": un par de llaves del Algoritmo Elliptic Curve Digital Signature Algorithm, utilizando `settings.curve` como [.curve](#curve). Tenga en cuenta que las llaves ECDSA no pueden utilizarse para el cifrado, sino sólo para la firma.
+- "PEM": una definición de par de llaves en formato PEM, utilizando `settings.pem` como [.pem](#pem).
 
 <!-- REF CryptoKey.verify().Desc -->
 ## .verify()
@@ -353,7 +353,7 @@ The <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "ECDSA", "
 | Result     | Object | <- | Estado de la verificación|<!-- END REF -->                                                 |
 
 
-The `.verify()` function <!-- REF #CryptoKey.verify().Summary -->verifies the base64 signature against the utf8 representation of *message*<!-- END REF --> using the `CryptoKey` object keys and provided *options*.
+La función `.verify()` <!-- REF #CryptoKey.verify().Summary -->verifica la firma base64 contra la representación utf8 del *mensaje*<!-- END REF --> utilizando las llaves del objeto `CryptoKey` y las *opciones* suministradas.
 
 La función `.verify()` <!-- REF #CryptoKey.verify().Summary -->verifica la firma base64 contra la representación utf8 del *message*<!-- END REF --> utilizando las llaves del objeto `CryptoKey` y las *options* proporcionadas.
 
