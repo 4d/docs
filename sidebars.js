@@ -68,7 +68,8 @@ module.exports =
 						"Concepts/interpreted-compiled",
 						"Concepts/components",
 						"Concepts/plug-ins",
-						"Concepts/identifiers"
+						"Concepts/identifiers",
+						"Concepts/paths"
 					],
 				},
 				{
