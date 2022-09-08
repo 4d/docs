@@ -5,11 +5,12 @@ title: Documenter un projet
 
 
 
-In application projects, you can document your methods as well as your forms, tables, or fields. Creating documentation is particularly appropriate for projects being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the application.
+In application projects, you can document your methods as well as your classes, forms, tables, or fields. Creating documentation is particularly appropriate for projects being developed by multiple programmers and is generally good programming practice. Documentation can contain a description of an element as well as any information necessary to understand how the element functions in the application.
 
 Les éléments de projet suivants acceptent la documentation :
 
-- Méthodes (méthodes base, méthodes composant, méthodes projet, méthodes formulaire, méthodes 4D Mobile, triggers et classes)
+- Methods (database methods, component methods, project methods, form methods, 4D Mobile methods, and triggers)
+- Classes
 - Formulaires
 - Tables et champs
 

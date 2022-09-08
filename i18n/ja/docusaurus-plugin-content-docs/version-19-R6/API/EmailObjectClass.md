@@ -66,7 +66,7 @@ Email オブジェクトは次のプロパティを提供します:
 | name  | テキスト | 表示名 (null も可能) |
 | email | テキスト | メールアドレス        |
 
-#### コレクション
+#### Collection
 
 アドレスオブジェクトのコレクション
 
@@ -108,7 +108,7 @@ Email オブジェクトは次のプロパティを提供します:
 
 #### 詳細
 
-The `.attachments` property contains a <!-- REF #EmailObjectClass.attachments.Summary -->collection of `4D.MailAttachment` object(s)<!-- END REF -->.
+The `.attachments` property contains a <!-- REF #EmailObjectClass.attachments.Summary -->collection of `4D.MailAttachment` object(s)<!-- END REF -->。
 
 MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass.md#mail-new-attachment) コマンドによって定義されます。 MailAttachment オブジェクトは特有の [プロパティや関数](MailAttachmentClass.md) を持ちます。
 
@@ -118,7 +118,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 詳細
 
-The `.bcc` property contains the <!-- REF #EmailObjectClass.bcc.Summary -->Blind Carbon Copy (BCC) hidden email recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
+The `.bcc` property contains the <!-- REF #EmailObjectClass.bcc.Summary -->Blind Carbon Copy (BCC) hidden email recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->。
 
 ## .bodyStructure
 
@@ -126,7 +126,7 @@ The `.bcc` property contains the <!-- REF #EmailObjectClass.bcc.Summary -->Blind
 
 #### 詳細
 
-The `.bodyStructure` property contains the <!-- REF #EmailObjectClass.bodyStructure.Summary -->*EmailBodyPart* object, i.e. the full MIME structure of the message body (optional)<!-- END REF -->. [メール本文の扱い](#メール本文の扱い) を参照ください。
+The `.bodyStructure` property contains the <!-- REF #EmailObjectClass.bodyStructure.Summary -->*EmailBodyPart* object, i.e. the full MIME structure of the message body (optional)<!-- END REF -->。 [メール本文の扱い](#メール本文の扱い) を参照ください。
 
 `.bodyStructure` オブジェクトには、次のプロパティが格納されています:
 
@@ -148,7 +148,7 @@ The `.bodyStructure` property contains the <!-- REF #EmailObjectClass.bodyStruct
 
 #### 詳細
 
-The `.bodyValues` property contains the <!-- REF #EmailObjectClass.bodyValues.Summary -->*EmailBodyValue* object, containing an object for each \<partID\> of `bodyStructure` (optional)<!-- END REF -->. [メール本文の扱い](#メール本文の扱い) を参照ください。
+The `.bodyValues` property contains the <!-- REF #EmailObjectClass.bodyValues.Summary -->*EmailBodyValue* object, containing an object for each \<partID\> of `bodyStructure` (optional)<!-- END REF -->。 [メール本文の扱い](#メール本文の扱い) を参照ください。
 
 `.bodyValues` オブジェクトには、次のプロパティが格納されています:
 
@@ -163,7 +163,7 @@ The `.bodyValues` property contains the <!-- REF #EmailObjectClass.bodyValues.Su
 
 #### 詳細
 
-The `.cc` property contains the <!-- REF #EmailObjectClass.cc.Summary -->Carbon Copy (CC) additional email recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
+The `.cc` property contains the <!-- REF #EmailObjectClass.cc.Summary -->Carbon Copy (CC) additional email recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->。
 
 ## .comments
 
@@ -171,7 +171,7 @@ The `.cc` property contains the <!-- REF #EmailObjectClass.cc.Summary -->Carbon 
 
 #### 詳細
 
-The `.comments` property contains an <!-- REF #EmailObjectClass.comments.Summary -->additional comments header<!-- END REF -->.
+The `.comments` property contains an <!-- REF #EmailObjectClass.comments.Summary -->additional comments header<!-- END REF -->。
 
 コメントはメッセージのヘッダーセクション内にのみ表示されます (つまり本文部分には触れないということです)。
 
@@ -183,7 +183,7 @@ The `.comments` property contains an <!-- REF #EmailObjectClass.comments.Summary
 
 #### 詳細
 
-The `.from` property contains the <!-- REF #EmailObjectClass.from.Summary -->Originating [address(es)](#email-addresses) of the email<!-- END REF -->.
+The `.from` property contains the <!-- REF #EmailObjectClass.from.Summary -->Originating [address(es)](#email-addresses) of the email<!-- END REF -->。
 
 送信されるメールには、それぞれ [sender](#sender) および **from** アドレスの両方がついています:
 
@@ -198,7 +198,7 @@ The `.from` property contains the <!-- REF #EmailObjectClass.from.Summary -->Ori
 
 #### 詳細
 
-The `.headers` property contains a <!-- REF #EmailObjectClass.headers.Summary -->collection of `EmailHeader` objects, in the order they appear in the message<!-- END REF -->. これによってユーザーは拡張された (登録された) ヘッダーや、ユーザー定義された (登録されていない、"X" で始まる) ヘッダーを追加することができます。
+The `.headers` property contains a <!-- REF #EmailObjectClass.headers.Summary -->collection of `EmailHeader` objects, in the order they appear in the message<!-- END REF -->。 これによってユーザーは拡張された (登録された) ヘッダーや、ユーザー定義された (登録されていない、"X" で始まる) ヘッダーを追加することができます。
 
 > メールレベルですでにプロパティとして設定されている "from" または "cc" などのヘッダーを `EmailHeader` オブジェクトプロパティが定義している場合、`EmailHeader` プロパティは無視されます。
 
@@ -215,7 +215,7 @@ The `.headers` property contains a <!-- REF #EmailObjectClass.headers.Summary --
 
 #### 詳細
 
-The `.htmlBody` property contains the <!-- REF #EmailObjectClass.htmlBody.Summary -->HTML representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. [メール本文の扱い](#メール本文の扱い) を参照ください。
+The `.htmlBody` property contains the <!-- REF #EmailObjectClass.htmlBody.Summary -->HTML representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->。 [メール本文の扱い](#メール本文の扱い) を参照ください。
 
 ## .id
 
@@ -225,7 +225,7 @@ The `.htmlBody` property contains the <!-- REF #EmailObjectClass.htmlBody.Summar
 
 [IMAP transporter](IMAPTransporterClass.md) のみ。
 
-The `.id` property contains the <!-- REF #EmailObjectClass.id.Summary -->unique ID from the IMAP server<!-- END REF -->.
+The `.id` property contains the <!-- REF #EmailObjectClass.id.Summary -->unique ID from the IMAP server<!-- END REF -->。
 
 ## .inReplyTo
 
@@ -233,7 +233,7 @@ The `.id` property contains the <!-- REF #EmailObjectClass.id.Summary -->unique 
 
 #### 詳細
 
-The `.inReplyTo` property contains the <!-- REF #EmailObjectClass.inReplyTo.Summary -->message identifier(s) of the original message(s) to which the current message is a reply<!-- END REF -->.
+The `.inReplyTo` property contains the <!-- REF #EmailObjectClass.inReplyTo.Summary -->message identifier(s) of the original message(s) to which the current message is a reply<!-- END REF -->。
 
 特定のフォーマット条件についての詳細は、[RFC#5322](https://tools.ietf.org/html/rfc5322) を参照ください。
 
@@ -243,7 +243,7 @@ The `.inReplyTo` property contains the <!-- REF #EmailObjectClass.inReplyTo.Summ
 
 #### 詳細
 
-The `.keywords` property contains a <!-- REF #EmailObjectClass.keywords.Summary -->set of keywords as an object, where each property name is a keyword and each value is true<!-- END REF -->.
+The `.keywords` property contains a <!-- REF #EmailObjectClass.keywords.Summary -->set of keywords as an object, where each property name is a keyword and each value is true<!-- END REF -->。
 
 このプロパティは "keywords" ヘッダーです ([RFC#4021](https://tools.ietf.org/html/rfc4021) 参照)。
 
@@ -272,7 +272,7 @@ The `.keywords` property contains a <!-- REF #EmailObjectClass.keywords.Summary 
 
 #### 詳細
 
-The `.messageId` property contains a <!-- REF #EmailObjectClass.messageId.Summary -->message identifier header ("message-id")<!-- END REF -->.
+The `.messageId` property contains a <!-- REF #EmailObjectClass.messageId.Summary -->message identifier header ("message-id")<!-- END REF -->。
 
 通常は、"lettersOrNumbers@domainname" の形式、たとえば "abcdef.123456@4d.com" などです。 この固有ID は特にフォーラムや公開メーリングリストで使用されています。 一般的に、メールサーバーは送信するメッセージにこのヘッダーを自動的に追加します。
 
@@ -284,7 +284,7 @@ The `.messageId` property contains a <!-- REF #EmailObjectClass.messageId.Summar
 
 [IMAP transporter](IMAPTransporterClass.md) のみ。
 
-The `.receivedAt` property contains the <!-- REF #EmailObjectClass.receivedAt.Summary -->timestamp of the email's arrival on the IMAP server in ISO 8601 UTC format (ex: 2020-09-13T16:11:53Z)<!-- END REF -->.
+The `.receivedAt` property contains the <!-- REF #EmailObjectClass.receivedAt.Summary -->timestamp of the email's arrival on the IMAP server in ISO 8601 UTC format (ex: 2020-09-13T16:11:53Z)<!-- END REF -->。
 
 ## .references
 
@@ -292,7 +292,7 @@ The `.receivedAt` property contains the <!-- REF #EmailObjectClass.receivedAt.Su
 
 #### 詳細
 
-The `.references` property contains the <!-- REF #EmailObjectClass.references.Summary -->Collection of all message-ids of messages in the preceding reply chain<!-- END REF -->.
+The `.references` property contains the <!-- REF #EmailObjectClass.references.Summary -->Collection of all message-ids of messages in the preceding reply chain<!-- END REF -->。
 
 特定のフォーマット条件についての詳細は、[RFC#5322](https://tools.ietf.org/html/rfc5322) を参照ください。
 
@@ -302,7 +302,7 @@ The `.references` property contains the <!-- REF #EmailObjectClass.references.Su
 
 #### 詳細
 
-The `.replyTo` property contains the <!-- REF #EmailObjectClass.replyTo.Summary -->[addresse(s)](#email-addresses) for responses<!-- END REF -->.
+The `.replyTo` property contains the <!-- REF #EmailObjectClass.replyTo.Summary -->[addresse(s)](#email-addresses) for responses<!-- END REF -->。
 
 ## .sendAt
 
@@ -310,7 +310,7 @@ The `.replyTo` property contains the <!-- REF #EmailObjectClass.replyTo.Summary 
 
 #### 詳細
 
-The `.sendAt` property contains the <!-- REF #EmailObjectClass.sendAt.Summary -->Email timestamp in ISO 8601 UTC format<!-- END REF -->.
+The `.sendAt` property contains the <!-- REF #EmailObjectClass.sendAt.Summary -->Email timestamp in ISO 8601 UTC format<!-- END REF -->。
 
 ## .sender
 
@@ -318,7 +318,7 @@ The `.sendAt` property contains the <!-- REF #EmailObjectClass.sendAt.Summary --
 
 #### 詳細
 
-The `.sender` property contains the <!-- REF #EmailObjectClass.sender.Summary -->email source [addresse(s)](#email-addresses) of the email<!-- END REF -->.
+The `.sender` property contains the <!-- REF #EmailObjectClass.sender.Summary -->email source [addresse(s)](#email-addresses) of the email<!-- END REF -->。
 
 送信されるメールには、それぞれ **sender** および **[from](#from)** アドレスの両方がついています:
 
@@ -335,7 +335,7 @@ The `.sender` property contains the <!-- REF #EmailObjectClass.sender.Summary --
 
 [IMAP transporter](IMAPTransporterClass.md) のみ。
 
-The `.size` property contains the <!-- REF #EmailObjectClass.size.Summary -->size (expressed in bytes) of the Email object returned by the IMAP server<!-- END REF -->.
+The `.size` property contains the <!-- REF #EmailObjectClass.size.Summary -->size (expressed in bytes) of the Email object returned by the IMAP server<!-- END REF -->。
 
 ## .subject
 
@@ -343,7 +343,7 @@ The `.size` property contains the <!-- REF #EmailObjectClass.size.Summary -->siz
 
 #### 詳細
 
-The `.subject` property contains the <!-- REF #EmailObjectClass.subject.Summary -->description of topic<!-- END REF -->.
+The `.subject` property contains the <!-- REF #EmailObjectClass.subject.Summary -->description of topic<!-- END REF -->。
 
 ## .textBody
 
@@ -351,7 +351,7 @@ The `.subject` property contains the <!-- REF #EmailObjectClass.subject.Summary 
 
 #### 詳細
 
-The `.textBody` property contains the <!-- REF #EmailObjectClass.textBody.Summary -->Plain text representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. [メール本文の扱い](#メール本文の扱い) を参照ください。
+The `.textBody` property contains the <!-- REF #EmailObjectClass.textBody.Summary -->Plain text representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->。 [メール本文の扱い](#メール本文の扱い) を参照ください。
 
 ## .to
 
@@ -359,7 +359,7 @@ The `.textBody` property contains the <!-- REF #EmailObjectClass.textBody.Summar
 
 #### 詳細
 
-The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
+The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->。
 
 ## MAIL Convert from MIME
 
@@ -375,16 +375,16 @@ The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary
 
 
 <!-- REF #_command_.MAIL_Convert_from_MIME.Params -->
-| 引数     | タイプ        |    | 詳細                                      |
-| ------ | ---------- |:--:| --------------------------------------- |
-| mime   | Blob, Text | -> | MIME形式のメール                              |
-| Result | Object     | <- | Email オブジェクト|<!-- END REF -->
+| 引数   | タイプ        |    | 詳細                                      |
+| ---- | ---------- |:--:| --------------------------------------- |
+| mime | Blob, Text | -> | MIME形式のメール                              |
+| 戻り値  | Object     | <- | Email オブジェクト|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `MAIL Convert from MIME` command <!-- REF #_command_.MAIL_Convert_from_MIME.Summary -->converts a MIME document into a valid email object<!-- END REF -->.
+The `MAIL Convert from MIME` command <!-- REF #_command_.MAIL_Convert_from_MIME.Summary -->converts a MIME document into a valid email object<!-- END REF -->。
 > 戻り値の Email オブジェクトのフォーマットは [JMAP specification](https://jmap.io/spec-mail.html) に準拠します。
 
 *mime* には、変換する有効な MIME ドキュメントを渡します。 これはどのメールサーバーまたはアプリケーションから提供されたものでも可能です。 *mime* 引数として、BLOB またはテキストを渡すことができます。 MIME がファイルから渡された場合、文字セットと改行コード変換に関する問題を避けるため、BLOB型の引数を使用することが推奨されます。
@@ -465,13 +465,13 @@ $status:=$transporter.send($email)
 | ------- | ------ |:--:| -------------------------------------------------- |
 | mail    | Object | -> | Email オブジェクト                                       |
 | options | Object | -> | 文字セットとエンコーディングのメールオプション                            |
-| Result  | テキスト   | <- | MIME に変換された Emailオブジェクト|<!-- END REF -->
+| 戻り値     | テキスト   | <- | MIME に変換された Emailオブジェクト|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `MAIL Convert to MIME` command <!-- REF #_command_.MAIL_Convert_to_MIME.Summary -->converts an email object into MIME text<!-- END REF -->. このコマンドは、Email オブジェクトを送信する前に整形する目的で[SMTP_transporter.send()](SMTPTransporterClass.md#send) コマンドによって内部的に呼び出されます。 また、オブジェクトの MIME フォーマットを解析するためにも使用されます。
+The `MAIL Convert to MIME` command <!-- REF #_command_.MAIL_Convert_to_MIME.Summary -->converts an email object into MIME text<!-- END REF -->。 このコマンドは、Email オブジェクトを送信する前に整形する目的で[SMTP_transporter.send()](SMTPTransporterClass.md#send) コマンドによって内部的に呼び出されます。 また、オブジェクトの MIME フォーマットを解析するためにも使用されます。
 
 *mail* には、変換するメールのコンテンツとストラクチャーの詳細を渡します。 この情報には、メールアドレス (送信者と受信者)、メッセージそのもの、メッセージの表示タイプなどが含まれます。
 > Email オブジェクトのフォーマットは [JMAP specification](https://jmap.io/spec-mail.html) に準拠します。

@@ -38,9 +38,9 @@ title: Session
 
 
 <!-- REF #_command_.Session.Params -->
-| 引数     | タイプ        |    | 詳細                                        |
-| ------ | ---------- |:--:| ----------------------------------------- |
-| Result | 4D.Session | <- | Session オブジェクト|<!-- END REF -->
+| 引数  | タイプ        |    | 詳細                                        |
+| --- | ---------- |:--:| ----------------------------------------- |
+| 戻り値 | 4D.Session | <- | Session オブジェクト|<!-- END REF -->
 
 
 |
@@ -48,7 +48,7 @@ title: Session
 
 #### 詳細
 
-The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current scalable user web session<!-- END REF -->.
+The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current scalable user web session<!-- END REF -->。
 
 [スケーラブルセッションが有効化されている](WebServer/sessions.md#セッションの有効化) 場合にのみ、このコマンドは機能します。 セッションが無効な場合や、旧式セッションが使用されている場合には、*Null* を返します。
 
@@ -110,7 +110,7 @@ IP:port/4DACTION/action_Session
 
 #### 詳細
 
-The `.clearPrivileges()` function <!-- REF #SessionClass.clearPrivileges().Summary -->removes all the privileges associated to the session<!-- END REF -->. 結果的に、当該セッションは自動的にゲストセッションになります。
+The `.clearPrivileges()` function <!-- REF #SessionClass.clearPrivileges().Summary -->removes all the privileges associated to the session<!-- END REF -->。 結果的に、当該セッションは自動的にゲストセッションになります。
 
 
 #### 例題
@@ -142,7 +142,7 @@ $isGuest:=Session.isGuest() //$isGuest は true
 
 #### 詳細
 
-The `.expirationDate` property contains <!-- REF #SessionClass.expirationDate.Summary -->the expiration date and time of the session cookie<!-- END REF -->. .
+The `.expirationDate` property contains <!-- REF #SessionClass.expirationDate.Summary -->the expiration date and time of the session cookie<!-- END REF -->。 .
 
 このプロパティは **読み取り専用** です。 [`.idleTimeout`](#idletimeout) プロパティ値が変更された場合、有効期限は自動的に再計算されます。
 
@@ -176,7 +176,7 @@ $expiration:=Session.expirationDate // 例: "2021-11-05T17:10:42Z"
 | 引数        | タイプ  |    | 詳細                                                                           |
 | --------- | ---- |:--:| ---------------------------------------------------------------------------- |
 | privilege | テキスト | <- | 確認するアクセス権の名称                                                                 |
-| Result    | ブール  | <- | セッションが *privilege* のアクセス権を持っていれば true、それ以外は false|<!-- END REF -->
+| 戻り値       | ブール  | <- | セッションが *privilege* のアクセス権を持っていれば true、それ以外は false|<!-- END REF -->
 
 
 |
@@ -184,7 +184,7 @@ $expiration:=Session.expirationDate // 例: "2021-11-05T17:10:42Z"
 
 #### 詳細
 
-The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the privilege is associated to the session, and False otherwise<!-- END REF -->.
+The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the privilege is associated to the session, and False otherwise<!-- END REF -->。
 
 
 #### 例題
@@ -217,7 +217,7 @@ End if
 
 #### 詳細
 
-The `.idleTimeout` property contains <!-- REF #SessionClass.idleTimeout.Summary -->the inactivity session timeout (in minutes), after which the session is automatically closed by 4D<!-- END REF -->.
+The `.idleTimeout` property contains <!-- REF #SessionClass.idleTimeout.Summary -->the inactivity session timeout (in minutes), after which the session is automatically closed by 4D<!-- END REF -->。
 
 プロパティ未設定時のデフォルト値は 60 (1時間) です。
 
@@ -259,15 +259,15 @@ End if
 
 
 <!-- REF #SessionClass.isGuest().Params -->
-| 引数     | タイプ |    | 詳細                                                       |
-| ------ | --- |:--:| -------------------------------------------------------- |
-| Result | ブール | <- | ゲストセッションの場合は true、それ以外は false|<!-- END REF -->
+| 引数  | タイプ |    | 詳細                                                       |
+| --- | --- |:--:| -------------------------------------------------------- |
+| 戻り値 | ブール | <- | ゲストセッションの場合は true、それ以外は false|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.setPrivileges()` function <!-- REF #SessionClass.isGuest().Summary -->associates the privilege(s) defined in the parameter to the session<!-- END REF -->.
+The `.setPrivileges()` function <!-- REF #SessionClass.isGuest().Summary -->associates the privilege(s) defined in the parameter to the session<!-- END REF -->。
 
 
 #### 例題
@@ -299,17 +299,17 @@ End if
 
 
 <!-- REF #SessionClass.setPrivileges().Params -->
-| 引数         | タイプ    |    | 詳細                                                                                    |
-| ---------- | ------ |:--:| ------------------------------------------------------------------------------------- |
-| privilege  | テキスト   | -> | アクセス権の名称                                                                              |
-| privileges | コレクション | -> | アクセス権の名称のコレクション                                                                       |
-| settings   | Object | -> | Object with a "privileges" property (string or collection)|<!-- END REF -->
+| 引数         | タイプ        |    | 詳細                                                                                    |
+| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------- |
+| privilege  | テキスト       | -> | アクセス権の名称                                                                              |
+| privileges | Collection | -> | アクセス権の名称のコレクション                                                                       |
+| settings   | Object     | -> | Object with a "privileges" property (string or collection)|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.storage` property contains <!-- REF #SessionClass.setPrivileges().Summary -->a shared object that can be used to store information available to all requests of the web client<!-- END REF -->.
+The `.storage` property contains <!-- REF #SessionClass.setPrivileges().Summary -->a shared object that can be used to store information available to all requests of the web client<!-- END REF -->。
 
 - *privilege* には、アクセス権の名称を文字列として渡します (複数の場合はカンマ区切り)。
 
@@ -366,7 +366,7 @@ End if
 
 #### 詳細
 
-The `.storage` property contains <!-- REF #SessionClass.storage.Summary -->a shared object that can be used to store information available to all requests of the web client<!-- END REF -->.
+The `.storage` property contains <!-- REF #SessionClass.storage.Summary -->a shared object that can be used to store information available to all requests of the web client<!-- END REF -->。
 
 `Session` オブジェクトの作成時には、`.storage` プロパティは空です。 共有オブジェクトのため、このプロパティはサーバー上の `Storage` オブジェクトにおいて利用可能です。
 
@@ -408,7 +408,7 @@ End if
 
 #### 詳細
 
-The `.userName` property contains <!-- REF #SessionClass.userName.Summary -->the user name associated to the session<!-- END REF -->. このプロパティは、コード内でユーザーを確認するのに使用できます。
+The `.userName` property contains <!-- REF #SessionClass.userName.Summary -->the user name associated to the session<!-- END REF -->。 このプロパティは、コード内でユーザーを確認するのに使用できます。
 
 このプロパティはデフォルトでは空の文字列です。 これは、[`setPrivileges()`](#setprivileges) 関数の `privileges` プロパティを使って設定することができます。
 

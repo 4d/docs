@@ -51,7 +51,7 @@ title: DataClassAttribute
 
 #### 詳細
 
-The `.autoFilled` property <!-- REF DataClassAttributeClass.autoFilled.Summary -->contains True if the attribute value is automatically filled by 4D<!-- END REF -->. このプロパティは以下の 4Dフィールドプロパティに対応しています:
+The `.autoFilled` property <!-- REF DataClassAttributeClass.autoFilled.Summary -->contains True if the attribute value is automatically filled by 4D<!-- END REF -->。 このプロパティは以下の 4Dフィールドプロパティに対応しています:
 
 * 数値型フィールドの "自動インクリメント"
 * UUID (文字型)フィールドの "自動UUID"
@@ -76,7 +76,7 @@ The `.autoFilled` property <!-- REF DataClassAttributeClass.autoFilled.Summary -
 
 #### 詳細
 
-The `.exposed` property is <!-- REF DataClassAttributeClass.exposed.Summary -->true if the attribute is exposed in REST<!-- END REF -->.
+The `.exposed` property is <!-- REF DataClassAttributeClass.exposed.Summary -->true if the attribute is exposed in REST<!-- END REF -->。
 
 #### 参照
 
@@ -99,7 +99,7 @@ The `.exposed` property is <!-- REF DataClassAttributeClass.exposed.Summary -->t
 
 #### 詳細
 
-The `.fieldNumber` property <!-- REF DataClassAttributeClass.fieldNumber.Summary -->contains the internal 4D field number of the attribute<!-- END REF -->.
+The `.fieldNumber` property <!-- REF DataClassAttributeClass.fieldNumber.Summary -->contains the internal 4D field number of the attribute<!-- END REF -->。
 
 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。
 > 汎用的なプログラミングのために、`.fieldNumber` が返されない場合でも **Num** (dataClassAttribute.fieldNumber) と書くことで、有効な値 (0) を受け取ることができます。
@@ -122,7 +122,7 @@ The `.fieldNumber` property <!-- REF DataClassAttributeClass.fieldNumber.Summary
 
 #### 詳細
 
-The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->contains the 4D database type of the attribute<!-- END REF -->. .
+The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->contains the 4D database type of the attribute<!-- END REF -->。 .
 
 **とりうる値:**
 
@@ -155,7 +155,7 @@ The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->
 
 #### 詳細
 
-The `.indexed` property <!-- REF DataClassAttributeClass.indexed.Summary -->contains **True** if there is a B-tree or a Cluster B-tree index on the attribute<!-- END REF -->.
+The `.indexed` property <!-- REF DataClassAttributeClass.indexed.Summary -->contains **True** if there is a B-tree or a Cluster B-tree index on the attribute<!-- END REF -->。
 
 `.kind` が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。
 > 汎用的なプログラミングのために、`.indexed` が返されない場合でも **Bool** (dataClassAttribute.indexed) と書くことで、有効な値 (false) を受け取ることができます。
@@ -177,7 +177,7 @@ The `.indexed` property <!-- REF DataClassAttributeClass.indexed.Summary -->cont
 
 #### 詳細
 
-The `.inverseName` property <!-- REF DataClassAttributeClass.inverseName.Summary -->returns the name of the attribute which is at the other side of the relation<!-- END REF -->.
+The `.inverseName` property <!-- REF DataClassAttributeClass.inverseName.Summary -->returns the name of the attribute which is at the other side of the relation<!-- END REF -->。
 
 `.kind` が "storage" の場合には、このプロパティは返されません。 .kind は "relatedEntity" または "relatedEntities" でなくてはなりません。
 > 汎用的なプログラミングのために、`.inverseName` が返されない場合でも **String** (dataClassAttribute.inverseName) と書くことで、有効な値 ("") を受け取ることができます。  
@@ -199,7 +199,7 @@ The `.inverseName` property <!-- REF DataClassAttributeClass.inverseName.Summary
 
 #### 詳細
 
-The `.keywordIndexed` property <!-- REF DataClassAttributeClass.keywordIndexed.Summary -->contains **True** if there is a keyword index on the attribute<!-- END REF -->.
+The `.keywordIndexed` property <!-- REF DataClassAttributeClass.keywordIndexed.Summary -->contains **True** if there is a keyword index on the attribute<!-- END REF -->。
 
 [`.kind`](#kind) が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。
 > 汎用的なプログラミングのために、`.keywordIndexed` が返されない場合でも **Bool** (dataClassAttribute.keywordIndexed) と書くことで、有効な値 (false) を受け取ることができます。
@@ -222,7 +222,7 @@ The `.keywordIndexed` property <!-- REF DataClassAttributeClass.keywordIndexed.S
 
 #### 詳細
 
-The `.kind` property <!-- REF DataClassAttributeClass.kind.Summary -->returns the category of the attribute<!-- END REF -->. 以下のいずれかの値が返されます:
+The `.kind` property <!-- REF DataClassAttributeClass.kind.Summary -->returns the category of the attribute<!-- END REF -->。 以下のいずれかの値が返されます:
 
 * "storage": ストレージ (あるいはスカラー) 属性。つまり、属性は値を保存しており、他の属性への参照ではありません。
 * "calculated": 計算属性。 [`get` 関数](ORDA/ordaClasses.md#function-get-attributename) によって定義されます。
@@ -260,7 +260,7 @@ The `.kind` property <!-- REF DataClassAttributeClass.kind.Summary -->returns th
 
 #### 詳細
 
-The `.mandatory` property <!-- REF DataClassAttributeClass.mandatory.Summary -->contains True if Null value input is rejected for the attribute<!-- END REF -->.
+The `.mandatory` property <!-- REF DataClassAttributeClass.mandatory.Summary -->contains True if Null value input is rejected for the attribute<!-- END REF -->。
 
 [`.kind`](#kind) が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。
 > 汎用的なプログラミングのために、`.mandatory` が返されない場合でも **Bool** (dataClassAttribute.mandatory) と書くことで、有効な値 (false) を受け取ることができます。
@@ -283,7 +283,7 @@ The `.mandatory` property <!-- REF DataClassAttributeClass.mandatory.Summary -->
 
 #### 詳細
 
-The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->The `.name` property<!-- END REF -->.
+`.name` プロパティは、 <!-- REF DataClassAttributeClass.name.Summary -->The `.name` property<!-- END REF -->。
 
 #### 例題
 
@@ -309,7 +309,7 @@ The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->The `.name
 
 #### 詳細
 
-The `.path` property <!-- REF DataClassAttributeClass.path.Summary -->returns the path of an alias attribute based upon a relation<!-- END REF -->.
+The `.path` property <!-- REF DataClassAttributeClass.path.Summary -->returns the path of an alias attribute based upon a relation<!-- END REF -->。
 
 #### 例題
 
@@ -335,7 +335,7 @@ The `.path` property <!-- REF DataClassAttributeClass.path.Summary -->returns th
 
 #### 詳細
 
-The `.readOnly` property is <!-- REF DataClassAttributeClass.readOnly.Summary -->true if the attribute is read-only<!-- END REF -->.
+The `.readOnly` property is <!-- REF DataClassAttributeClass.readOnly.Summary -->true if the attribute is read-only<!-- END REF -->。
 
 たとえば、[`set` 関数](ORDA/ordaClasses.md#function-set-attributename) を持たない計算属性は読み取り専用です。
 
@@ -357,7 +357,7 @@ The `.readOnly` property is <!-- REF DataClassAttributeClass.readOnly.Summary --
 #### 詳細
 > このプロパティは、[`.kind`](#kind) プロパティ値が "relatedEntity" または "relatedEntities" である属性においてのみ利用可能です。
 
-The `.relatedDataClass` property <!-- REF DataClassAttributeClass.relatedDataClass.Summary -->returns the name of the dataclass related to the attribute<!-- END REF -->.
+The `.relatedDataClass` property <!-- REF DataClassAttributeClass.relatedDataClass.Summary -->returns the name of the dataclass related to the attribute<!-- END REF -->。
 
 #### 例題
 
@@ -422,7 +422,7 @@ The `.type` property <!-- REF DataClassAttributeClass.type.Summary -->contains t
 
 #### 詳細
 
-The `.unique` property <!-- REF DataClassAttributeClass.unique.Summary -->contains True if the attribute value must be unique<!-- END REF -->. このプロパティは、4Dフィールドプロパティの "重複不可" に対応しています.
+The `.unique` property <!-- REF DataClassAttributeClass.unique.Summary -->contains True if the attribute value must be unique<!-- END REF -->。 このプロパティは、4Dフィールドプロパティの "重複不可" に対応しています.
 
 [`.kind`](#kind) が "relatedEntity" または "relatedEntities" の場合には、このプロパティは返されません。
 > 汎用的なプログラミングのために、`.unique` が返されない場合でも **Bool** (dataClassAttribute.unique) と書くことで、有効な値 (false) を受け取ることができます。

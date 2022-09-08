@@ -122,6 +122,14 @@ $rect:=cs.eGeometry.Rectangle.new(10;20)
 $area:=$rect.getArea()
 ```
 
+:::info
+
+The namespace of a [compiled](#protection-of-components-compilation) component will be added between parentheses after the component name in the [Component Methods page](../Concepts/components.md#using-components) of the host projects:
+
+![](../assets/en/settings/namesapece-explorer.png)
+
+:::
+
 競合を避けるためには、優れた識別名の使用が推奨されます。 もし、コンポーネントと同じ名前のユーザークラスがすでにプロジェクトに存在していた場合、そのユーザークラスが考慮され、コンポーネントクラスは無視されます。
 
 コンポーネントの ORDAクラスは、ホストプロジェクトでは使用できません。 たとえば、コンポーネントに Employees というデータクラスがある場合、ホストプロジェクトで "cs.Mycomponent.Employee" クラスを使用することはできません。
@@ -143,7 +151,7 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 
 開発者に向けてコンポーネントを使いやすくするため、マトリクスプロジェクトの設定で、 [一般ページの **コンパイル時にコード補完用のシンタックスファイルを生成する** オプション](../settings/general.md#component-namespace-in-the-class-store) をチェックすることができます。
 
-すると、コンパイル時にシンタックスファイル (JSON形式) が自動生成され、そこにコンポーネントのクラス、関数、および [公開メソッド](#プロジェクトメソッドの共有) のシンタックスを格納し、コンポーネントプロジェクトの \Resources\ja.lproj フォルダーに配置されます。 4D は、このシンタックスファイルをもとに、コード補完や関数シンタックスなどのコードエディター用のヘルプを生成します。
+A syntax file (JSON format) is then automatically created during the compilation phase, filled with the syntax of your component's classes, functions, and [exposed methods](#sharing-of-project-methods), and placed in the `\Resources\en.lproj` folder of the component project. 4D は、このシンタックスファイルをもとに、コード補完や関数シンタックスなどのコードエディター用のヘルプを生成します。
 
 ![](../assets/en/settings/syntax-code-completion-2.png) ![](../assets/en/settings/syntax-code-completion-1.png)
 
@@ -362,7 +370,7 @@ SAVE RECORD($tablepointer->)
 
 コンポーネントのコードを効果的に保護するには、マトリクスプロジェクトを [コンパイルしビルドして](Desktop/building.md#コンポーネントをビルド)、.4dz ファイルとして提供します。 コンパイルされたマトリクスプロジェクトがコンポーネントとしてインストールされると:
 
-- 共有のプロジェクトメソッド、クラス、および関数は、ホストプロジェクトのメソッドから呼び出し可能です。 共有のプロジェクトメソッドは、エクスプローラーのメソッドページにも表示されます。 しかし、その内容はプレビューエリアにもデバッガーにも表示されません。
+- The shared project methods, classes and functions can be called in the methods of the host project and are also visible on the Methods Page of the Explorer. しかし、その内容はプレビューエリアにもデバッガーにも表示されません。
 - マトリクスプロジェクトの他のプロジェクトメソッドは一切表示されません。
 
 

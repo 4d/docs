@@ -122,6 +122,14 @@ $rect:=cs.eGeometry.Rectangle.new(10;20)
 $area:=$rect.getArea()
 ```
 
+|
+
+The namespace of a [compiled](#protection-of-components-compilation) component will be added between parentheses after the component name in the [Component Methods page](../Concepts/components.md#using-components) of the host projects:
+
+![](../assets/en/settings/namesapece-explorer.png)
+
+:::
+
 Por supuesto, se recomienda utilizar un nombre distintivo para evitar cualquier conflicto. Si en el proyecto ya existe una clase usuario con el mismo nombre que un componente, se tiene en cuenta la clase usuario y se ignoran las clases del componente.
 
 Las clases ORDA de un componente no están disponibles en el proyecto local. Por ejemplo, si hay una dataclass llamada Employees en su componente, no podrá utilizar una clase "cs.Mycomponent.Employee" en el proyecto local.
@@ -143,7 +151,7 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 
 Para facilitar el uso de su componente a los desarrolladores, puede marcar la opción [**Generate syntax file for code completion when compiled** en la página General](../settings/general.md#component-namespace-in-the-class-store) de las Propiedades del proyecto utilizadao como matriz.
 
-Un archivo de sintaxis (formato JSON) se crea automáticamente durante la fase de compilación, llena con la sintaxis de las clases, funciones y [métodos exposed](#sharing-of-project-methods) de su componente y colocados en la carpeta \Resources\en.lproj del proyecto del componente. 4D utiliza el contenido de ese archivo de sintaxis para generar ayuda contextual en el editor de código, como la finalización del código y la sintaxis de las funciones:
+A syntax file (JSON format) is then automatically created during the compilation phase, filled with the syntax of your component's classes, functions, and [exposed methods](#sharing-of-project-methods), and placed in the `\Resources\en.lproj` folder of the component project. 4D utiliza el contenido de ese archivo de sintaxis para generar ayuda contextual en el editor de código, como la finalización del código y la sintaxis de las funciones:
 
 ![](../assets/en/settings/syntax-code-completion-2.png) ![](../assets/en/settings/syntax-code-completion-1.png)
 
@@ -361,7 +369,7 @@ Por defecto, todo el código de un proyecto matriz instalado como componente es 
 
 Para proteger eficazmente el código de un componente, basta con [compilar y generar](Desktop/building.md#build-component) el proyecto utilizado como matriz y proporcionarlo en forma de archivo .4dz. Cuando se instala un proyecto matricial compilado como un componente:
 
-- Los métodos, clases y funciones del proyecto compartido pueden ser llamados en los métodos del proyecto local. Los métodos de proyecto compartidos también son visibles en la página de Métodos del explorador. Sin embargo, su contenido no aparecerá en el área de vista previa ni en el depurador.
+- The shared project methods, classes and functions can be called in the methods of the host project and are also visible on the Methods Page of the Explorer. Sin embargo, su contenido no aparecerá en el área de vista previa ni en el depurador.
 - Los otros métodos proyecto del proyecto matriz nunca aparecerán.
 
 

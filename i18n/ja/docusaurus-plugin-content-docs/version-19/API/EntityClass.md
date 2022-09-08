@@ -47,7 +47,7 @@ title: Entity
 
 #### 詳細
 
-Any dataclass attribute is available as a property of an entity, which <!-- REF EntityClass.attributeName.Summary -->stores the attribute value for the entity<!-- END REF -->.
+Any dataclass attribute is available as a property of an entity, which <!-- REF EntityClass.attributeName.Summary -->stores the attribute value for the entity<!-- END REF -->。
 > データクラス属性は \[ ] を使用したシンタックスを使用することでもアクセス可能です。
 
 この属性値タイプは属性の種類 ([](DataClassAttributeClass.md#kind).kind; リレーションまたはストレージ) によります。
@@ -85,14 +85,14 @@ Any dataclass attribute is available as a property of an entity, which <!-- REF 
 <!-- REF #EntityClass.clone().Params -->
 | 引数                         | タイプ       |    | 詳細                  |
 | -------------------------- | --------- |:--:| ------------------- |
-| Result                     | 4D.Entity | <- | 同レコードを参照する新しいエンティティ |
+| 戻り値                        | 4D.Entity | <- | 同レコードを参照する新しいエンティティ |
 |<!-- END REF -->
 
 |           |    |                     |
 
 #### 詳細
 
-The `.clone()` function <!-- REF #EntityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->. このメソッドを使用するとエンティティを個別に更新することができます。
+The `.clone()` function <!-- REF #EntityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->。 このメソッドを使用するとエンティティを個別に更新することができます。
 > エンティティに対して何らかの変更をおこなった場合、それらは [`.save( )`](#save) 関数が実行されたときのみ、参照先のレコードに保存されるという点に注意してください。
 
 この関数は、すでにデータベースに保存されているエンティティに対してのみ使用可能です。 新規に作成されたエンティティ([`.isNew()`](#isnew) が **true** を返すもの) に対して呼び出すことはできません。
@@ -125,17 +125,17 @@ The `.clone()` function <!-- REF #EntityClass.clone().Summary -->creates in memo
 
 
 <!-- REF #EntityClass.diff().Params -->
-| 引数                  | タイプ       |    | 詳細                                    |
-| ------------------- | --------- |:--:| ------------------------------------- |
-| entityToCompare     | 4D.Entity | -> | 対象エンティティと比較するエンティティ                   |
-| attributesToCompare | コレクション    | -> | 比較する属性の名称                             |
-| Result              | コレクション    | <- | エンティティ間の差異|<!-- END REF -->
+| 引数                  | タイプ        |    | 詳細                                    |
+| ------------------- | ---------- |:--:| ------------------------------------- |
+| entityToCompare     | 4D.Entity  | -> | 対象エンティティと比較するエンティティ                   |
+| attributesToCompare | Collection | -> | 比較する属性の名称                             |
+| 戻り値                 | Collection | <- | エンティティ間の差異|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.diff()` function <!-- REF #EntityClass.diff().Summary -->compares the contents of two entities and returns their differences<!-- END REF -->.
+The `.diff()` function <!-- REF #EntityClass.diff().Summary -->compares the contents of two entities and returns their differences<!-- END REF -->。
 
 *entityToCompare* には、オリジナルのエンティティと比較をするエンティティを渡します。
 
@@ -326,10 +326,10 @@ vCompareResult3 ($e1 において更新された (touch された) 属性のみ�
 
 
 <!-- REF #EntityClass.drop().Params -->
-| 引数     | タイプ    |    | 詳細                                                           |
-| ------ | ------ |:--:| ------------------------------------------------------------ |
-| mode   | 整数     | -> | `dk force drop if stamp changed`: スタンプが変更されていた場合でも強制的にドロップする |
-| Result | Object | <- | Result of drop operation|<!-- END REF -->
+| 引数   | タイプ    |    | 詳細                                                           |
+| ---- | ------ |:--:| ------------------------------------------------------------ |
+| mode | 整数     | -> | `dk force drop if stamp changed`: スタンプが変更されていた場合でも強制的にドロップする |
+| 戻り値  | Object | <- | Result of drop operation|<!-- END REF -->
 
 |
 
@@ -343,7 +343,7 @@ The `.drop()` function <!-- REF #EntityClass.drop().Summary -->deletes the data 
 
 *mode* に `dk force drop if stamp changed` オプションを渡すと、スタンプが変更されていてもエンティティはドロップされます (プライマリーキーは変わらない場合)。
 
-**Result**
+**戻り値**
 
 `.drop( )` によって返されるオブジェクトには以下のプロパティが格納されます:
 
@@ -432,15 +432,15 @@ The `.drop()` function <!-- REF #EntityClass.drop().Summary -->deletes the data 
 
 
 <!-- REF #EntityClass.first().Params -->
-| 引数     | タイプ       |    | 詳細                                                                                              |
-| ------ | --------- |:--:| ----------------------------------------------------------------------------------------------- |
-| Result | 4D.Entity | <- | Reference to first entity of an entity selection (Null if not found)|<!-- END REF -->
+| 引数  | タイプ       |    | 詳細                                                                                              |
+| --- | --------- |:--:| ----------------------------------------------------------------------------------------------- |
+| 戻り値 | 4D.Entity | <- | Reference to first entity of an entity selection (Null if not found)|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.first()` function <!-- REF #EntityClass.first().Summary -->returns a reference to the entity in first position of the entity selection which the entity belongs to<!-- END REF -->.
+The `.first()` function <!-- REF #EntityClass.first().Summary -->returns a reference to the entity in first position of the entity selection which the entity belongs to<!-- END REF -->。
 
 対象エンティティが所属する既存エンティティセレクションが存在しない場合 (つまり [entity.getSelection( )](#getselection) が Null を返す場合)、関数は Null値を返します。
 
@@ -479,7 +479,7 @@ The `.first()` function <!-- REF #EntityClass.first().Summary -->returns a refer
 
 #### 詳細
 
-The `.fromObject()` function <!-- REF #EntityClass.fromObject().Summary -->fills an entity with the *filler* content<!-- END REF -->.
+The `.fromObject()` function <!-- REF #EntityClass.fromObject().Summary -->fills an entity with the *filler* content<!-- END REF -->。
 > このコマンドは、元のエンティティを変更します。
 
 オブジェクトとエンティティ間のマッピングは属性名でおこなわれます:
@@ -556,15 +556,15 @@ The `.fromObject()` function <!-- REF #EntityClass.fromObject().Summary -->fills
 
 
 <!-- REF #EntityClass.getDataClass().Params -->
-| 引数     | タイプ          |    | 詳細                                                                      |
-| ------ | ------------ |:--:| ----------------------------------------------------------------------- |
-| Result | 4D.DataClass | <- | DataClass object to which the entity belongs|<!-- END REF -->
+| 引数  | タイプ          |    | 詳細                                                                      |
+| --- | ------------ |:--:| ----------------------------------------------------------------------- |
+| 戻り値 | 4D.DataClass | <- | DataClass object to which the entity belongs|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.getDataClass()` function <!-- REF #EntityClass.getDataClass().Summary -->returns the dataclass of the entity<!-- END REF -->. この関数は汎用的なコードを書くのに有用です。
+The `.getDataClass()` function <!-- REF #EntityClass.getDataClass().Summary -->returns the dataclass of the entity<!-- END REF -->。 この関数は汎用的なコードを書くのに有用です。
 
 #### 例題
 
@@ -601,17 +601,17 @@ The `.getDataClass()` function <!-- REF #EntityClass.getDataClass().Summary -->r
 
 
 <!-- REF #EntityClass.getKey().Params -->
-| 引数     | タイプ  |    | 詳細                                                       |
-| ------ | ---- |:--:| -------------------------------------------------------- |
-| mode   | 整数   | -> | `dk key as string`: プライマリーキーの型にかかわらず、プライマリーキーを文字列として返します |
-| Result | テキスト | <- | エンティティのテキスト型プライマリーキーの値                                   |
-| Result | 整数   | <- | エンティティの数値型プライマリーキーの値                                     |
+| 引数   | タイプ  |    | 詳細                                                       |
+| ---- | ---- |:--:| -------------------------------------------------------- |
+| mode | 整数   | -> | `dk key as string`: プライマリーキーの型にかかわらず、プライマリーキーを文字列として返します |
+| 戻り値  | テキスト | <- | エンティティのテキスト型プライマリーキーの値                                   |
+| 戻り値  | 整数   | <- | エンティティの数値型プライマリーキーの値                                     |
 
 <!-- END REF -->
 
 #### 詳細
 
-The `.getKey()` function <!-- REF #EntityClass.getKey().Summary -->returns the primary key value of the entity<!-- END REF -->.
+The `.getKey()` function <!-- REF #EntityClass.getKey().Summary -->returns the primary key value of the entity<!-- END REF -->。
 
 プライマリーキーは数値 (倍長整数) あるいは文字列です。 *mode* 引数として `dk key as string` オプションを渡すことで、実際のプライマリーキーの型に関係なく、返されるプライマリーキー値の型を文字列に "強制" することができます。
 
@@ -642,15 +642,15 @@ The `.getKey()` function <!-- REF #EntityClass.getKey().Summary -->returns the p
 
 
 <!-- REF #EntityClass.getSelection().Params -->
-| 引数     | タイプ                |    | 詳細                                                                                          |
-| ------ | ------------------ |:--:| ------------------------------------------------------------------------------------------- |
-| Result | 4D.EntitySelection | <- | Entity selection to which the entity belongs (Null if not found)|<!-- END REF -->
+| 引数  | タイプ                |    | 詳細                                                                                          |
+| --- | ------------------ |:--:| ------------------------------------------------------------------------------------------- |
+| 戻り値 | 4D.EntitySelection | <- | Entity selection to which the entity belongs (Null if not found)|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.getSelection()` function <!-- REF #EntityClass.getSelection().Summary -->returns the entity selection which the entity belongs to<!-- END REF -->.
+The `.getSelection()` function <!-- REF #EntityClass.getSelection().Summary -->returns the entity selection which the entity belongs to<!-- END REF -->。
 
 対象エンティティがエンティティセレクションに所属していない場合、関数は Null値を返します。
 
@@ -685,15 +685,15 @@ The `.getSelection()` function <!-- REF #EntityClass.getSelection().Summary -->r
 
 
 <!-- REF #EntityClass.getStamp().Params -->
-| 引数     | タイプ |    | 詳細                                                                                 |
-| ------ | --- |:--:| ---------------------------------------------------------------------------------- |
-| Result | 整数  | <- | Stamp of the entity (0 if entity has just been created)|<!-- END REF -->
+| 引数  | タイプ |    | 詳細                                                                                 |
+| --- | --- |:--:| ---------------------------------------------------------------------------------- |
+| 戻り値 | 整数  | <- | Stamp of the entity (0 if entity has just been created)|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.getStamp()` function <!-- REF #EntityClass.getStamp().Summary --> returns the current value of the stamp of the entity<!-- END REF -->.
+The `.getStamp()` function <!-- REF #EntityClass.getStamp().Summary --> returns the current value of the stamp of the entity<!-- END REF -->。
 
 内部スタンプは、エンティティが保存されるたびに 4D によって自動的にインクリメントされます。 これは同じエンティティに対する複数のユーザーの同時アクセス・編集を管理します。この機構の詳細については、[**エンティティロッキング**](ORDA/entities.md#エンティティロッキング) を参照ください。
 > (一度も保存されていない) 新規エンティティに対しては、このメソッドは 0 を返します。 しかしながら、エンティティがまだ作成されたばかりかどうかを調べるには、[isNew()](#isnew) の使用が推奨されます。
@@ -734,13 +734,13 @@ The `.getStamp()` function <!-- REF #EntityClass.getStamp().Summary --> returns 
 | 引数              | タイプ                |    | 詳細                                                  |
 | --------------- | ------------------ |:--:| --------------------------------------------------- |
 | entitySelection | 4D.EntitySelection | -> | エンティティの位置を取得する対象のエンティティセレクション                       |
-| Result          | 整数                 | <- | エンティティセレクション内でのエンティティの位置|<!-- END REF -->
+| 戻り値             | 整数                 | <- | エンティティセレクション内でのエンティティの位置|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.indexOf()` function <!-- REF #EntityClass.indexOf().Summary -->returns the position of the entity in an entity selection<!-- END REF -->.
+The `.indexOf()` function <!-- REF #EntityClass.indexOf().Summary -->returns the position of the entity in an entity selection<!-- END REF -->。
 
 *entitySelection* 引数が渡されなかった場合はデフォルトで、所属エンティティセレクション内でのエンティティの位置が返されます。 *entitySelection* 引数を渡した場合は、指定されたエンティティセレクション内でのエンティティの位置を返します。
 
@@ -779,15 +779,15 @@ The `.indexOf()` function <!-- REF #EntityClass.indexOf().Summary -->returns the
 
 
 <!-- REF #EntityClass.isNew().Params -->
-| 引数     | タイプ |    | 詳細                                                                         |
-| ------ | --- |:--:| -------------------------------------------------------------------------- |
-| Result | ブール | <- | エンティティが作成されたばかりで未保存の場合は true。 Otherwise, False.|<!-- END REF -->
+| 引数  | タイプ |    | 詳細                                                                         |
+| --- | --- |:--:| -------------------------------------------------------------------------- |
+| 戻り値 | ブール | <- | エンティティが作成されたばかりで未保存の場合は true。 Otherwise, False.|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True if the entity to which it is applied has just been created and has not yet been saved in the datastore<!-- END REF -->. .
+The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True if the entity to which it is applied has just been created and has not yet been saved in the datastore<!-- END REF -->。 .
 
 #### 例題
 
@@ -818,15 +818,15 @@ The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True i
 
 
 <!-- REF #EntityClass.last().Params -->
-| 引数     | タイプ       |    | 詳細                                                                   |
-| ------ | --------- |:--:| -------------------------------------------------------------------- |
-| Result | 4D.Entity | <- | エンティティセレクションの最終エンティティへの参照 (見つからなければ null)|<!-- END REF -->
+| 引数  | タイプ       |    | 詳細                                                                   |
+| --- | --------- |:--:| -------------------------------------------------------------------- |
+| 戻り値 | 4D.Entity | <- | エンティティセレクションの最終エンティティへの参照 (見つからなければ null)|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.last()` function <!-- REF #EntityClass.last().Summary -->returns a reference to the entity in last position of the entity selection which the entity belongs to<!-- END REF -->.
+The `.last()` function <!-- REF #EntityClass.last().Summary -->returns a reference to the entity in last position of the entity selection which the entity belongs to<!-- END REF -->。
 
 対象エンティティが所属する既存エンティティセレクションが存在しない場合 (つまり [entity.getSelection( )](#getselection) が Null を返す場合)、関数は Null値を返します。
 
@@ -857,16 +857,16 @@ The `.last()` function <!-- REF #EntityClass.last().Summary -->returns a referen
 
 
 <!-- REF #EntityClass.lock().Params -->
-| 引数     | タイプ    |    | 詳細                                                       |
-| ------ | ------ |:--:| -------------------------------------------------------- |
-| mode   | 整数     | -> | `dk reload if stamp changed`: スタンプが変更されてる場合はロック前にリロードします |
-| Result | Object | <- | ロックの結果|<!-- END REF -->
+| 引数   | タイプ    |    | 詳細                                                       |
+| ---- | ------ |:--:| -------------------------------------------------------- |
+| mode | 整数     | -> | `dk reload if stamp changed`: スタンプが変更されてる場合はロック前にリロードします |
+| 戻り値  | Object | <- | ロックの結果|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.lock()` function <!-- REF #EntityClass.lock().Summary -->puts a pessimistic lock on the record referenced by the entity<!-- END REF -->. [ロック](ORDA/entities.md#エンティティロッキング)はレコードと、カレントプロセス内の当該エンティティの参照すべてに対してかけられます。
+The `.lock()` function <!-- REF #EntityClass.lock().Summary -->puts a pessimistic lock on the record referenced by the entity<!-- END REF -->。 [ロック](ORDA/entities.md#エンティティロッキング)はレコードと、カレントプロセス内の当該エンティティの参照すべてに対してかけられます。
 
 他のプロセスからはこのレコードがロックされて見えます (この関数を使って同エンティティをロックしようとした場合、`result.success` プロパティには false が返されます)。 ロックをおこなったセッション内で実行される関数のみが、当該エンティティの属性を編集・保存できます。 他のセッションは同エンティティを読み取り専用にロードできますが、値の入力・保存はできません。
 
@@ -879,7 +879,7 @@ The `.lock()` function <!-- REF #EntityClass.lock().Summary -->puts a pessimisti
 
 *mode* に `dk reload if stamp changed` オプションを渡すと、スタンプが変更されていてもエラーは返されず、エンティティは再読み込みされます (エンティティが引き続き存在し、プライマリーキーも変わらない場合)。
 
-**Result**
+**戻り値**
 
 `.lock( )` によって返されるオブジェクトには以下のプロパティが格納されます:
 
@@ -967,15 +967,15 @@ The `.lock()` function <!-- REF #EntityClass.lock().Summary -->puts a pessimisti
 
 
 <!-- REF #EntityClass.next().Params -->
-| 引数     | タイプ       |    | 詳細                                                                    |
-| ------ | --------- |:--:| --------------------------------------------------------------------- |
-| Result | 4D.Entity | <- | エンティティセレクション内の次のエンティティへの参照 (見つからなければ null)|<!-- END REF -->
+| 引数  | タイプ       |    | 詳細                                                                    |
+| --- | --------- |:--:| --------------------------------------------------------------------- |
+| 戻り値 | 4D.Entity | <- | エンティティセレクション内の次のエンティティへの参照 (見つからなければ null)|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.next()` function <!-- REF #EntityClass.next().Summary -->returns a reference to the next entity in the entity selection which the entity belongs to<!-- END REF -->.
+The `.next()` function <!-- REF #EntityClass.next().Summary -->returns a reference to the next entity in the entity selection which the entity belongs to<!-- END REF -->。
 
 対象エンティティが所属する既存エンティティセレクションが存在しない場合 (つまり [entity.getSelection()](#getselection) が Null を返す場合)、関数は Null値を返します。
 
@@ -1009,15 +1009,15 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 
 <!-- REF #EntityClass.previous().Params -->
-| 引数     | タイプ       |    | 詳細                                                                    |
-| ------ | --------- |:--:| --------------------------------------------------------------------- |
-| Result | 4D.Entity | <- | エンティティセレクション内の前のエンティティへの参照 (見つからなければ null)|<!-- END REF -->
+| 引数  | タイプ       |    | 詳細                                                                    |
+| --- | --------- |:--:| --------------------------------------------------------------------- |
+| 戻り値 | 4D.Entity | <- | エンティティセレクション内の前のエンティティへの参照 (見つからなければ null)|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.previous()` function <!-- REF #EntityClass.previous().Summary --> returns a reference to the previous entity in the entity selection which the entity belongs to<!-- END REF -->.
+The `.previous()` function <!-- REF #EntityClass.previous().Summary --> returns a reference to the previous entity in the entity selection which the entity belongs to<!-- END REF -->。
 
 対象エンティティが所属する既存エンティティセレクションが存在しない場合 (つまり [entity.getSelection()](#getselection) が Null を返す場合)、関数は Null値を返します。
 
@@ -1050,9 +1050,9 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 
 <!-- REF #EntityClass.reload().Params -->
-| 引数     | タイプ    |    | 詳細                                     |
-| ------ | ------ |:--:| -------------------------------------- |
-| Result | Object | <- | ステータスオブジェクト|<!-- END REF -->
+| 引数  | タイプ    |    | 詳細                                     |
+| --- | ------ |:--:| -------------------------------------- |
+| 戻り値 | Object | <- | ステータスオブジェクト|<!-- END REF -->
 
 |
 
@@ -1060,7 +1060,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 The `.reload()` function <!-- REF #EntityClass.reload().Summary -->reloads the content of the entity in memory<!-- END REF -->, according to information stored in the table related to the dataclass in the datastore. エンティティが同じプライマリーキーで存在している場合にのみリロードは実行されます。
 
-**Result**
+**戻り値**
 
 `.reload( )` によって返されるオブジェクトには以下のプロパティが格納されます:
 
@@ -1113,10 +1113,10 @@ The `.reload()` function <!-- REF #EntityClass.reload().Summary -->reloads the c
 
 
 <!-- REF #EntityClass.save().Params -->
-| 引数     | タイプ    |    | 詳細                               |
-| ------ | ------ |:--:| -------------------------------- |
-| mode   | 整数     | -> | `dk auto merge`: 自動マージモードを有効化します |
-| Result | Object | <- | 保存の結果|<!-- END REF -->
+| 引数   | タイプ    |    | 詳細                               |
+| ---- | ------ |:--:| -------------------------------- |
+| mode | 整数     | -> | `dk auto merge`: 自動マージモードを有効化します |
+| 戻り値  | Object | <- | 保存の結果|<!-- END REF -->
 
 |
 
@@ -1133,7 +1133,7 @@ The `.save()` function <!-- REF #EntityClass.save().Summary -->saves the changes
 *mode* に `dk auto merge` オプションを渡すと自動マージモードが有効化され、別のプロセス/ユーザーが同エンティティに対して同時に変更をおこなっていても、異なる属性に対する変更であればエラーは生成されません。 エンティティに保存されるデータは、別々の変更処理の組み合わせ ("マージ (併合)") になります (同じ属性に対して変更がおこなわれた場合には、自動マージモードであっても保存は失敗し、エラーが返されます)。
 > ピクチャー・オブジェクト・テキスト型属性で、データを外部保存にしている場合には、自動マージモードは利用できません。 これらの属性に同時の変更があった場合には `dk status stamp has changed` エラーになります。
 
-**Result**
+**戻り値**
 
 `.save()` によって返されるオブジェクトには以下のプロパティが格納されます:
 
@@ -1247,18 +1247,18 @@ The `.save()` function <!-- REF #EntityClass.save().Summary -->saves the changes
 
 
 <!-- REF #EntityClass.toObject().Params -->
-| 引数           | タイプ    |    | 詳細                                                                                             |
-| ------------ | ------ |:--:| ---------------------------------------------------------------------------------------------- |
-| filterString | テキスト   | -> | 取得する属性 (カンマ区切り)                                                                                |
-| filterCol    | コレクション | -> | 取得する属性のコレクション                                                                                  |
-| options      | 整数     | -> | `dk with primary key`: \_\_KEY プロパティを追加;<br/>`dk with stamp`: \_\_STAMP プロパティを追加 |
-| Result       | Object | <- | エンティティを元にビルドされたオブジェクト|<!-- END REF -->
+| 引数           | タイプ        |    | 詳細                                                                                             |
+| ------------ | ---------- |:--:| ---------------------------------------------------------------------------------------------- |
+| filterString | テキスト       | -> | 取得する属性 (カンマ区切り)                                                                                |
+| filterCol    | Collection | -> | 取得する属性のコレクション                                                                                  |
+| options      | 整数         | -> | `dk with primary key`: \_\_KEY プロパティを追加;<br/>`dk with stamp`: \_\_STAMP プロパティを追加 |
+| 戻り値          | Object     | <- | エンティティを元にビルドされたオブジェクト|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.toObject()` function <!-- REF #EntityClass.toObject().Summary -->returns an object which has been built from the entity<!-- END REF -->. オブジェクト内部のプロパティ名はエンティティの属性名と合致します。
+The `.toObject()` function <!-- REF #EntityClass.toObject().Summary -->returns an object which has been built from the entity<!-- END REF -->。 オブジェクト内部のプロパティ名はエンティティの属性名と合致します。
 
 *filterString* 引数が空の文字列、あるいは "*" の場合、以下のいずれかが返されます:
 
@@ -1529,15 +1529,15 @@ employeeObject:=employeeSelected.toObject("directReports.*")
 
 
 <!-- REF #EntityClass.touched().Params -->
-| 引数     | タイプ |    | 詳細                                                                              |
-| ------ | --- |:--:| ------------------------------------------------------------------------------- |
-| Result | ブール | <- | 少なくとも一つのエンティティ属性が編集されていて未保存の場合に true、それ以外の場合には false|<!-- END REF -->
+| 引数  | タイプ |    | 詳細                                                                              |
+| --- | --- |:--:| ------------------------------------------------------------------------------- |
+| 戻り値 | ブール | <- | 少なくとも一つのエンティティ属性が編集されていて未保存の場合に true、それ以外の場合には false|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.touched()` function <!-- REF #EntityClass.touched().Summary -->tests whether or not an entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->.
+The `.touched()` function <!-- REF #EntityClass.touched().Summary -->tests whether or not an entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->。
 
 属性が更新あるいは計算されていた場合、関数は true を返し、それ以外は false を返します。 この関数を使用することで、エンティティを保存する必要があるかどうかを確認することができます。
 
@@ -1574,15 +1574,15 @@ The `.touched()` function <!-- REF #EntityClass.touched().Summary -->tests wheth
 
 
 <!-- REF #EntityClass.touchedAttributes().Params -->
-| 引数     | タイプ    |    | 詳細                                                 |
-| ------ | ------ |:--:| -------------------------------------------------- |
-| Result | コレクション | <- | 変更された属性の名前、あるいは空のコレクション|<!-- END REF -->
+| 引数  | タイプ        |    | 詳細                                                 |
+| --- | ---------- |:--:| -------------------------------------------------- |
+| 戻り値 | Collection | <- | 変更された属性の名前、あるいは空のコレクション|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.touchedAttributes()` function <!-- REF #EntityClass.touchedAttributes().Summary -->returns the names of the attributes that have been modified since the entity was loaded into memory<!-- END REF -->.
+The `.touchedAttributes()` function <!-- REF #EntityClass.touchedAttributes().Summary -->returns the names of the attributes that have been modified since the entity was loaded into memory<!-- END REF -->。
 
 この関数は、種類 ([kind](DataClassAttributeClass.md#kind)) が `storage` あるいは `relatedEntity` である属性に適用されます。
 
@@ -1648,9 +1648,9 @@ The `.touchedAttributes()` function <!-- REF #EntityClass.touchedAttributes().Su
 
 
 <!-- REF #EntityClass.unlock().Params -->
-| 引数     | タイプ    |    | 詳細                                     |
-| ------ | ------ |:--:| -------------------------------------- |
-| Result | Object | <- | ステータスオブジェクト|<!-- END REF -->
+| 引数  | タイプ    |    | 詳細                                     |
+| --- | ------ |:--:| -------------------------------------- |
+| 戻り値 | Object | <- | ステータスオブジェクト|<!-- END REF -->
 
 |
 
@@ -1671,7 +1671,7 @@ The `.unlock()` function <!-- REF #EntityClass.unlock().Summary -->removes the p
  $res:=$e1.unlock() //$res.success=true
 ```
 
-**Result**
+**戻り値**
 
 `.unlock()` によって返されるオブジェクトには以下のプロパティが格納されます:
 

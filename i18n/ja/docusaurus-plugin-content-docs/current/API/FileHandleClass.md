@@ -88,7 +88,7 @@ File handle objects cannot be shared.
 
 #### 詳細
 
-The `.breakModeRead` property returns <!-- REF #FileHandleClass.breakModeRead.Summary -->the processing mode for line breaks used when reading the file<!-- END REF -->.
+The `.breakModeRead` property returns <!-- REF #FileHandleClass.breakModeRead.Summary -->the processing mode for line breaks used when reading the file<!-- END REF -->。
 
 
 The `.breakModeRead` property can be defined at the handle creation with the [`file.open()`](FileClass.md#open) function (see [the `.open()` function](FileClass.md#open) for more information). Default is "native".
@@ -116,7 +116,7 @@ The `.breakModeRead` property can be defined at the handle creation with the [`f
 
 #### 詳細
 
-The `.breakModeWrite` property returns <!-- REF #FileHandleClass.breakModeWrite.Summary -->the processing mode for line breaks used when writing to the file<!-- END REF -->.
+The `.breakModeWrite` property returns <!-- REF #FileHandleClass.breakModeWrite.Summary -->the processing mode for line breaks used when writing to the file<!-- END REF -->。
 
 The `.breakModeWrite` property can be defined at the handle creation with the [`file.open()`](FileClass.md#open) function (see [the `.open()` function](FileClass.md#open) for more information). Default is "native".
 
@@ -144,7 +144,7 @@ The `.breakModeWrite` property can be defined at the handle creation with the [`
 
 #### 詳細
 
-The `.charset` property returns <!-- REF #FileHandleClass.charset.Summary -->the charset used when reading from or writing to the file<!-- END REF -->.
+The `.charset` property returns <!-- REF #FileHandleClass.charset.Summary -->the charset used when reading from or writing to the file<!-- END REF -->。
 
 The charset can be defined at the handle creation with the [`file.open()`](FileClass#open) function. デフォルト値: "UTF-8"
 
@@ -168,7 +168,7 @@ The charset can be defined at the handle creation with the [`file.open()`](FileC
 
 #### 詳細
 
-The `.eof` property returns <!-- REF #FileHandleClass.eof.Summary -->True is the `offset` has reached the end of the file, and False otherwise<!-- END REF -->.
+The `.eof` property returns <!-- REF #FileHandleClass.eof.Summary -->True is the `offset` has reached the end of the file, and False otherwise<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -190,15 +190,15 @@ The `.eof` property returns <!-- REF #FileHandleClass.eof.Summary -->True is the
 
 
 <!--REF #FileHandleClass.getSize().Params -->
-| 引数     | タイプ |    | 詳細                                                       |
-| ------ | --- | -- | -------------------------------------------------------- |
-| Result | 実数  | <- | Size of the document in bytes|<!-- END REF -->
+| 引数  | タイプ |    | 詳細                                                       |
+| --- | --- | -- | -------------------------------------------------------- |
+| 戻り値 | 実数  | <- | Size of the document in bytes|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.getSize()` function <!-- REF #FileHandleClass.getSize().Summary -->returns the current size of the document, expressed in bytes<!-- END REF -->.
+The `.getSize()` function <!-- REF #FileHandleClass.getSize().Summary -->returns the current size of the document, expressed in bytes<!-- END REF -->。
 
 > This function returns the same value as the ([.size](FileClass#size)) property of the `File` class.
 
@@ -224,7 +224,7 @@ The `.getSize()` function <!-- REF #FileHandleClass.getSize().Summary -->returns
 
 #### 詳細
 
-The `.mode` property returns <!-- REF #FileHandleClass.mode.Summary -->the mode in which the file handle was created: "read", "write", or "append"<!-- END REF -->.
+The `.mode` property returns <!-- REF #FileHandleClass.mode.Summary -->the mode in which the file handle was created: "read", "write", or "append"<!-- END REF -->。
 
 The mode can be defined at the handle creation with the [`file.open()`](FileClass#open) function. Default is "read".
 
@@ -249,7 +249,7 @@ The mode can be defined at the handle creation with the [`file.open()`](FileClas
 
 #### 詳細
 
-The `.offset` property returns <!-- REF #FileHandleClass.offset.Summary -->the current offset of the data stream (position inside the document)<!-- END REF -->. The offset value is automatically updated after read and write operations.
+The `.offset` property returns <!-- REF #FileHandleClass.offset.Summary -->the current offset of the data stream (position inside the document)<!-- END REF -->。 The offset value is automatically updated after read and write operations.
 
 Setting the `.offset` will change its current value.
 
@@ -279,13 +279,13 @@ This property is **read/write**.
 | 引数      | タイプ                  |    | 詳細                                                  |
 | ------- | -------------------- | -- | --------------------------------------------------- |
 | *bytes* | 実数                   | -> | Number of bytes to be read                          |
-| Result  | [4D.Blob](BlobClass) | <- | Bytes read from the file|<!-- END REF -->
+| 戻り値     | [4D.Blob](BlobClass) | <- | Bytes read from the file|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.readBlob()` function <!-- REF #FileHandleClass.readBlob().Summary -->returns a blob a *bytes* size from the file, starting from the current position <!-- END REF -->.
+The `.readBlob()` function <!-- REF #FileHandleClass.readBlob().Summary -->returns a blob a *bytes* size from the file, starting from the current position <!-- END REF -->。
 
 When this function is executed, the current position ([.offset](#offset)) is updated after the last byte read.
 
@@ -311,15 +311,15 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 <!--REF #FileHandleClass.readLine().Syntax -->**.readLine()** : Text <!-- END REF -->
 
 <!--REF #FileHandleClass.readLine().Params -->
-| 引数     | タイプ  |    | 詳細                                      |
-| ------ | ---- | -- | --------------------------------------- |
-| Result | テキスト | <- | Line of text|<!-- END REF -->
+| 引数  | タイプ  |    | 詳細                                      |
+| --- | ---- | -- | --------------------------------------- |
+| 戻り値 | テキスト | <- | Line of text|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.readLine()` function <!-- REF #FileHandleClass.readLine().Summary -->returns a line of text from the current position until an end-of-line delimiter is encountered or the end of the document is reached<!-- END REF -->.
+The `.readLine()` function <!-- REF #FileHandleClass.readLine().Summary -->returns a line of text from the current position until an end-of-line delimiter is encountered or the end of the document is reached<!-- END REF -->。
 
 When this function is executed, the current position ([.offset](#offset)) is updated.
 
@@ -349,13 +349,13 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 | 引数         | タイプ  |    | 詳細                                            |
 | ---------- | ---- | -- | --------------------------------------------- |
 | *stopChar* | テキスト | -> | Character(s) at which to stop reading         |
-| Result     | テキスト | <- | Text from the file|<!-- END REF -->
+| 戻り値        | テキスト | <- | Text from the file|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.readText()` function <!-- REF #FileHandleClass.readText().Summary -->returns text from the file, starting from the current position until the first *stopChar* string is encountered (if passed) or the end of file is reached<!-- END REF -->.
+The `.readText()` function <!-- REF #FileHandleClass.readText().Summary -->returns text from the file, starting from the current position until the first *stopChar* string is encountered (if passed) or the end of file is reached<!-- END REF -->。
 
 This function replaces all original end-of-line delimiters. By default, the native delimiter is used, but you can define another delimiter when [opening the file handle](FileClass.md#open) by setting the [`.breakModeRead`](#breakmoderead) property.
 
@@ -395,7 +395,7 @@ If the *stopChar* parameter is passed and not found, `.readText()` returns an em
 
 #### 詳細
 
-The `.setSize()` function <!-- REF #FileHandleClass.setSize().Summary -->sets a new *size* in bytes for the document<!-- END REF -->.
+The `.setSize()` function <!-- REF #FileHandleClass.setSize().Summary -->sets a new *size* in bytes for the document<!-- END REF -->。
 
 If the *size* value is less than the current document size, the document content is truncated from the beginning to get the new *size* .
 
@@ -427,7 +427,7 @@ If the *size* value is less than the current document size, the document content
 
 #### 詳細
 
-The `.writeBlob()` function <!-- REF #FileHandleClass.writeBlob().Summary -->writes *blob* into the file, starting from the current position <!-- END REF -->.
+The `.writeBlob()` function <!-- REF #FileHandleClass.writeBlob().Summary -->writes *blob* into the file, starting from the current position <!-- END REF -->。
 
 When this function is executed, the current position ([.offset](#offset)) is updated after the last byte written.
 

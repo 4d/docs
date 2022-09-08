@@ -143,7 +143,7 @@ title: フォームエディター
 
 1. ツールバーの矢印ツールをクリックします。<p>![](../assets/en/FormEditor/selection.png)</p>
 
-<p>When you move the pointer into the form area, it becomes a standard arrow-shaped pointer</p>.
+<p>When you move the pointer into the form area, it becomes a standard arrow-shaped pointer</p>。
 2. 選択したいオブジェクトをクリックします。 サイズ変更ハンドルが表示され、オブジェクトが選択されたことを表わします。<p>![](../assets/en/FormEditor/selectResize.png)</p>
 
 プロパティリストを使用してオブジェクトを選択するには:

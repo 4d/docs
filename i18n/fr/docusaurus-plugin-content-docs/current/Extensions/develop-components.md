@@ -122,6 +122,14 @@ $rect:=cs.eGeometry.Rectangle.new(10;20)
 $area:=$rect.getArea()
 ```
 
+|
+
+The namespace of a [compiled](#protection-of-components-compilation) component will be added between parentheses after the component name in the [Component Methods page](../Concepts/components.md#using-components) of the host projects:
+
+![](../assets/en/settings/namesapece-explorer.png)
+
+:::
+
 Bien entendu, il est recommandé d'utiliser un nom distinctif pour éviter tout conflit. Si une classe utilisateur portant le même nom qu'un composant existe déjà dans le projet, la classe utilisateur est prise en compte et les classes du composant sont ignorées.
 
 Les classes ORDA d'un composant ne sont pas disponibles dans le projet hôte. Par exemple, s'il existe une dataclass nommée Employees dans votre composant, vous ne pourrez pas utiliser une classe "cs.Mycomponent.Employee" dans le projet hôte.
@@ -143,7 +151,7 @@ $rect:=cs.eGeometry._Rectangle.new(10;20)
 
 Pour faciliter l'utilisation de votre composant par les développeurs, vous pouvez cocher l'option [**Generate syntax file for code completion when compiled** dans la page Général](../settings/general.md#component-namespace-in-the-class-store) des Proriétés du projet utilisé comme matrice.
 
-Un fichier de syntaxe (format JSON) est alors automatiquement créé lors de la phase de compilation, complété par la syntaxe des classes, fonctions et [méthodes 'exposed'](#sharing-of-project-methods) de votre composant, et placé dans le dossier \Resources\en.lproj du projet du composant. 4D utilise le contenu de ce fichier syntaxique pour générer une aide contextuelle dans l'éditeur de code, telle que la complétion de code et la syntaxe des fonctions :
+A syntax file (JSON format) is then automatically created during the compilation phase, filled with the syntax of your component's classes, functions, and [exposed methods](#sharing-of-project-methods), and placed in the `\Resources\en.lproj` folder of the component project. 4D utilise le contenu de ce fichier syntaxique pour générer une aide contextuelle dans l'éditeur de code, telle que la complétion de code et la syntaxe des fonctions :
 
 ![](../assets/en/settings/syntax-code-completion-2.png) ![](../assets/en/settings/syntax-code-completion-1.png)
 
@@ -362,7 +370,7 @@ Par défaut, tout le code d’un projet utilisé comme matrice installé comme c
 
 Pour assurer la protection du code d'un composant, [compilez et générerez](Desktop/building.md#build-component) simplement le projet utilisé comme matrice et fournissez-le sous forme de fichier .4dz. Lorsqu’un projet compilé utilisé comme matrice est installé comme composant :
 
-- Les méthodes, classes et fonctions du projet partagé peuvent être appelées dans les méthodes du projet hôte. Les méthodes du projet partagé sont également visibles sur la page Méthodes de l'Explorateur. En revanche, leur contenu n’apparaît pas dans la zone de prévisualisation ni dans le débogueur.
+- The shared project methods, classes and functions can be called in the methods of the host project and are also visible on the Methods Page of the Explorer. En revanche, leur contenu n’apparaît pas dans la zone de prévisualisation ni dans le débogueur.
 - Les autres méthodes projet du projet utilisé comme matrice n’apparaissent jamais.
 
 
