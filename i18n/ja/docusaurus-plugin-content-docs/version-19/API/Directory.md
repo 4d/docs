@@ -18,7 +18,7 @@ title: Directory クラス
 
 #### 詳細
 
-The `.creationDate` property returns <!-- REF #directory.creationDate.Summary -->the creation date of the folder<!-- END REF -->.
+The `.creationDate` property returns <!-- REF #directory.creationDate.Summary -->the creation date of the folder<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 <!-- END REF -->
@@ -82,7 +82,7 @@ The `.exists` property returns <!-- REF #directory.exists.Summary -->true if the
 
 #### 詳細
 
-The `.extension` property <!-- REF #directory.extension.Summary -->returns the extension of the folder name (if any)<!-- END REF -->. 拡張子は必ず"." で始まります。 フォルダー名が拡張子を持たない場合には、このプロパティは空の文字列を返します。
+The `.extension` property <!-- REF #directory.extension.Summary -->returns the extension of the folder name (if any)<!-- END REF -->。 拡張子は必ず"." で始まります。 フォルダー名が拡張子を持たない場合には、このプロパティは空の文字列を返します。
 
 このプロパティは **読み取り専用** です。
 
@@ -104,7 +104,7 @@ The `.extension` property <!-- REF #directory.extension.Summary -->returns the e
 
 #### 詳細
 
-The `.fullName` property <!-- REF #directory.fullName.Summary -->returns the full name of the folder, including its extension (if any)<!-- END REF -->.
+The `.fullName` property <!-- REF #directory.fullName.Summary -->returns the full name of the folder, including its extension (if any)<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -148,7 +148,7 @@ The `.hidden` property returns <!-- REF #directory.hidden.Summary --> true if th
 
 #### 詳細
 
-The `.isAlias` property returns <!-- REF #directory.isAlias.Summary -->always **false** for a `Folder` object<!-- END REF -->.
+The `.isAlias` property returns <!-- REF #directory.isAlias.Summary -->always **false** for a `Folder` object<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -170,7 +170,7 @@ The `.isAlias` property returns <!-- REF #directory.isAlias.Summary -->always **
 
 #### 詳細
 
-The `.isFile` property returns <!-- REF #directory.isFile.Summary -->always **false** for a folder<!-- END REF -->.
+The `.isFile` property returns <!-- REF #directory.isFile.Summary -->always **false** for a folder<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -192,7 +192,7 @@ The `.isFile` property returns <!-- REF #directory.isFile.Summary -->always **fa
 
 #### 詳細
 
-The `.isFolder` property returns <!-- REF #directory.isFolder.Summary -->always **true** for a folder<!-- END REF -->.
+The `.isFolder` property returns <!-- REF #directory.isFolder.Summary -->always **true** for a folder<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -214,7 +214,7 @@ The `.isFolder` property returns <!-- REF #directory.isFolder.Summary -->always 
 
 #### 詳細
 
-The `.isPackage` property returns <!-- REF #directory.isPackage.Summary -->true if the folder is a package on macOS  (and exists on disk)<!-- END REF -->. .
+The `.isPackage` property returns <!-- REF #directory.isPackage.Summary -->true if the folder is a package on macOS  (and exists on disk)<!-- END REF -->。 .
 
 Windows 上においては、`.isPackage` は常に **false** を返します。
 
@@ -238,7 +238,7 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 
 #### 詳細
 
-The `.modificationDate` property returns <!-- REF #directory.modificationDate.Summary --> the date of the folder's last modification<!-- END REF -->.
+The `.modificationDate` property returns <!-- REF #directory.modificationDate.Summary --> the date of the folder's last modification<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -282,7 +282,7 @@ The `.modificationTime` property returns <!-- REF #directory.modificationTime.Su
 
 #### 詳細
 
-The `.name` property returns <!-- REF #directory.name.Summary --> the name of the folder, without extension (if any)<!-- END REF -->.
+The `.name` property returns <!-- REF #directory.name.Summary --> the name of the folder, without extension (if any)<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -304,7 +304,7 @@ The `.name` property returns <!-- REF #directory.name.Summary --> the name of th
 
 #### 詳細
 
-The `.original` property returns <!-- REF #directory.original.Summary -->the same Folder object as the folder<!-- END REF -->.
+The `.original` property returns <!-- REF #directory.original.Summary -->the same Folder object as the folder<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 > このプロパティは、フォルダーやファイルを処理する汎用的なコードを書くために使用できます。
@@ -327,7 +327,7 @@ The `.original` property returns <!-- REF #directory.original.Summary -->the sam
 
 #### 詳細
 
-The `.parent` property returns <!-- REF #directory.parent.Summary -->the parent folder object of the folder<!-- END REF -->. .
+The `.parent` property returns <!-- REF #directory.parent.Summary -->the parent folder object of the folder<!-- END REF -->。 .
 
 親フォルダーが存在しない場合 (root) は、このプロパティは null値を返します。
 
@@ -351,7 +351,7 @@ The `.parent` property returns <!-- REF #directory.parent.Summary -->the parent 
 
 #### 詳細
 
-The `.path` property returns <!-- REF #directory.path.Summary -->the POSIX path of the folder<!-- END REF -->. .
+The `.path` property returns <!-- REF #directory.path.Summary -->the POSIX path of the folder<!-- END REF -->。 .
 
 このプロパティは **読み取り専用** です。
 
@@ -373,7 +373,7 @@ The `.path` property returns <!-- REF #directory.path.Summary -->the POSIX path 
 
 #### 詳細
 
-The `.platformPath` property returns <!-- REF #directory.platformPath.Summary -->the path of the folder expressed with the current platform syntax<!-- END REF -->.
+The `.platformPath` property returns <!-- REF #directory.platformPath.Summary -->the path of the folder expressed with the current platform syntax<!-- END REF -->。
 
 このプロパティは **読み取り専用** です。
 
@@ -400,13 +400,13 @@ The `.platformPath` property returns <!-- REF #directory.platformPath.Summary --
 | destinationFolder | 4D.Folder | -> | 宛先フォルダー                                |
 | newName           | テキスト      | -> | コピー先フォルダーの名前                           |
 | overwrite         | 整数        | -> | 既存要素を上書きするには `fk overwrite` を渡します      |
-| Result            | 4D.Folder | <- | コピーされたフォルダー|<!-- END REF -->
+| 戻り値               | 4D.Folder | <- | コピーされたフォルダー|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.copyTo()` function <!-- REF #directory.copyTo().Summary -->copies the `Folder` object into the specified *destinationFolder*<!-- END REF -->.
+The `.copyTo()` function <!-- REF #directory.copyTo().Summary -->copies the `Folder` object into the specified *destinationFolder*<!-- END REF -->。
 
 *destinationFolder* 引数が指定するフォルダーはディスク上に存在している必要があり、そうでない場合にはエラーが生成されます。
 
@@ -450,16 +450,16 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 
 <!-- REF #directory.file().Params -->
-| 引数     | タイプ     |    | 詳細                                                         |
-| ------ | ------- | -- | ---------------------------------------------------------- |
-| path   | テキスト    | -> | ファイルのPOSIX相対パス名                                            |
-| Result | 4D.File | <- | `File` オブジェクト (無効なパスの場合には null)|<!-- END REF -->
+| 引数   | タイプ     |    | 詳細                                                         |
+| ---- | ------- | -- | ---------------------------------------------------------- |
+| path | テキスト    | -> | ファイルのPOSIX相対パス名                                            |
+| 戻り値  | 4D.File | <- | `File` オブジェクト (無効なパスの場合には null)|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.file()` function creates <!-- REF #directory.file().Summary -->a `File` object inside the `Folder` object and returns its reference<!-- END REF -->.
+The `.file()` function creates <!-- REF #directory.file().Summary -->a `File` object inside the `Folder` object and returns its reference<!-- END REF -->。
 
 *path* には、返すべきファイルの相対的パスを POSIX 形式で渡します。 このパスは、親フォルダーを起点として評価されます。
 
@@ -492,16 +492,16 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 
 <!-- REF #directory.files().Params -->
-| 引数      | タイプ    |    | 詳細                                            |
-| ------- | ------ | -- | --------------------------------------------- |
-| options | 整数     | -> | ファイルリストのオプション                                 |
-| Result  | コレクション | <- | 子ファイルオブジェクトのコレクション|<!-- END REF -->
+| 引数      | タイプ        |    | 詳細                                            |
+| ------- | ---------- | -- | --------------------------------------------- |
+| options | 整数         | -> | ファイルリストのオプション                                 |
+| 戻り値     | Collection | <- | 子ファイルオブジェクトのコレクション|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.files()` function returns <!-- REF #directory.files().Summary -->a collection of `File` objects contained in the folder<!-- END REF -->.
+The `.files()` function returns <!-- REF #directory.files().Summary -->a collection of `File` objects contained in the folder<!-- END REF -->。
 > エイリアスまたはシンボリックリンクは解決されません。
 
 *options*引数を渡さなかった場合はデフォルトで、フォルダーの第一階層にあるファイルのみがコレクションに返されます。これには非表示のファイルや、フォルダーも含まれます。 *options* 引数に以下の定数を一つ以上渡すことで、このふるまいを変更することができます:
@@ -555,16 +555,16 @@ The `.files()` function returns <!-- REF #directory.files().Summary -->a collect
 
 
 <!-- REF #directory.folder().Params -->
-| 引数     | タイプ       |    | 詳細                                                                       |
-| ------ | --------- | -- | ------------------------------------------------------------------------ |
-| path   | テキスト      | -> | ファイルのPOSIX相対パス名                                                          |
-| Result | 4D.Folder | <- | 作成された `Folder` オブジェクト (無効な *path* の場合には null)|<!-- END REF -->
+| 引数   | タイプ       |    | 詳細                                                                       |
+| ---- | --------- | -- | ------------------------------------------------------------------------ |
+| path | テキスト      | -> | ファイルのPOSIX相対パス名                                                          |
+| 戻り値  | 4D.Folder | <- | 作成された `Folder` オブジェクト (無効な *path* の場合には null)|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.folder()` function <!-- REF #directory.folder().Summary -->creates a `Folder` object inside the parent `Folder` object and returns its reference<!-- END REF -->.
+The `.folder()` function <!-- REF #directory.folder().Summary -->creates a `Folder` object inside the parent `Folder` object and returns its reference<!-- END REF -->。
 
 *path* には、返すべきフォルダーの相対的パスを POSIX 形式で渡します。 このパスは、親フォルダーを起点として評価されます。
 
@@ -597,16 +597,16 @@ The `.folder()` function <!-- REF #directory.folder().Summary -->creates a `Fold
 
 
 <!-- REF #directory.folders().Params -->
-| 引数      | タイプ    |    | 詳細                                             |
-| ------- | ------ | -- | ---------------------------------------------- |
-| options | 整数     | -> | フォルダーリストのオプション                                 |
-| Result  | コレクション | <- | 子フォルダーオブジェクトのコレクション|<!-- END REF -->
+| 引数      | タイプ        |    | 詳細                                             |
+| ------- | ---------- | -- | ---------------------------------------------- |
+| options | 整数         | -> | フォルダーリストのオプション                                 |
+| 戻り値     | Collection | <- | 子フォルダーオブジェクトのコレクション|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.folders()` function <!-- REF #directory.folders().Summary -->returns a collection of `Folder` objects contained in the parent folder<!-- END REF -->.
+The `.folders()` function <!-- REF #directory.folders().Summary -->returns a collection of `Folder` objects contained in the parent folder<!-- END REF -->。
 
 *options*引数を渡さなかった場合はデフォルトで、フォルダーの第一階層にあるフォルダーのみがコレクションに返されます。 *options* 引数に以下の定数を一つ以上渡すことで、このふるまいを変更することができます:
 
@@ -646,16 +646,16 @@ The `.folders()` function <!-- REF #directory.folders().Summary -->returns a col
 
 
 <!-- REF #directory.getIcon().Params -->
-| 引数     | タイプ     |    | 詳細                              |
-| ------ | ------- | -- | ------------------------------- |
-| size   | 整数      | -> | 取得するピクチャーの一辺の長さ (ピクセル単位)        |
-| Result | Picture | <- | アイコン|<!-- END REF -->
+| 引数   | タイプ     |    | 詳細                              |
+| ---- | ------- | -- | ------------------------------- |
+| size | 整数      | -> | 取得するピクチャーの一辺の長さ (ピクセル単位)        |
+| 戻り値  | Picture | <- | アイコン|<!-- END REF -->
 
 |
 
 #### 詳細
 
-The `.getIcon()` function <!-- REF #directory.getIcon().Summary -->returns the icon of the folder<!-- END REF -->.
+The `.getIcon()` function <!-- REF #directory.getIcon().Summary -->returns the icon of the folder<!-- END REF -->。
 
 任意の *size* 引数を渡すと、返されるアイコンのサイズをピクセル単位で指定することができます。 この値は、実際にはアイコンを格納している正方形の一辺の長さを表しています。 アイコンは通常、32x32ピクセル ("大きいアイコン") または 16x16ピクセル ("小さいアイコン") で定義されています。 この引数に 0 を渡すか省略した場合、"大きいアイコン" が返されます。
 
