@@ -1,0 +1,70 @@
+{
+  "version.label": {
+    "message": "v18",
+    "description": "The label for version 18"
+  },
+  "sidebar.docs.category.Getting Started": {
+    "message": "はじめに",
+    "description": "The label for category Getting Started in sidebar docs"
+  },
+  "sidebar.docs.category.4D Language Concepts": {
+    "message": "ランゲージのコンセプト",
+    "description": "The label for category 4D Language Concepts in sidebar docs"
+  },
+  "sidebar.docs.category.Data Types": {
+    "message": "データタイプ",
+    "description": "The label for category Data Types in sidebar docs"
+  },
+  "sidebar.docs.category.Control Flow": {
+    "message": "制御フロー",
+    "description": "The label for category Control Flow in sidebar docs"
+  },
+  "sidebar.docs.category.Project Databases": {
+    "message": "プロジェクトデータベース",
+    "description": "The label for category Project Databases in sidebar docs"
+  },
+  "sidebar.docs.category.Form Editor": {
+    "message": "フォームエディター",
+    "description": "The label for category Form Editor in sidebar docs"
+  },
+  "sidebar.docs.category.Form Objects": {
+    "message": "フォームオブジェクト",
+    "description": "The label for category Form Objects in sidebar docs"
+  },
+  "sidebar.docs.category.Form Object Properties": {
+    "message": "フォームオブジェクトプロパティ",
+    "description": "The label for category Form Object Properties in sidebar docs"
+  },
+  "sidebar.docs.category.Menus": {
+    "message": "メニュー",
+    "description": "The label for category Menus in sidebar docs"
+  },
+  "sidebar.docs.category.MSC": {
+    "message": "メンテナンス＆セキュリティセンター",
+    "description": "The label for category MSC in sidebar docs"
+  },
+  "sidebar.docs.category.Backup and Restore": {
+    "message": "バックアップと復元",
+    "description": "The label for category Backup and Restore in sidebar docs"
+  },
+  "sidebar.docs.category.Users and Groups": {
+    "message": "ユーザー＆グループ",
+    "description": "The label for category Users and Groups in sidebar docs"
+  },
+  "sidebar.docs.category.REST Server": {
+    "message": "REST サーバー",
+    "description": "The label for category REST Server in sidebar docs"
+  },
+  "sidebar.docs.category.Guides": {
+    "message": "ガイド",
+    "description": "The label for category Guides in sidebar docs"
+  },
+  "sidebar.docs.category.API (general)": {
+    "message": "API (一般)",
+    "description": "The label for category API (general) in sidebar docs"
+  },
+  "sidebar.docs.category.API (dataClass)": {
+    "message": "API (dataClass)",
+    "description": "The label for category API (dataClass) in sidebar docs"
+  }
+}

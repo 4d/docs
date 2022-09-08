@@ -39,7 +39,7 @@ Una [DataClass](ORDA/dsMapping.md#dataclass) ofrece una interfaz de objeto a una
 
 #### Descripción
 
-The attributes of dataclasses are <!-- REF DataClassClass.attributeName.Summary -->objects that are available directly as properties<!-- END REF --> of these classes.
+Los atributos de las clases de datos son <!-- REF DataClassClass.attributeName.Summary -->objetos que están disponibles directamente como propiedades<!-- END REF --> de estas clases.
 
 Los objetos devueltos son del tipo class [`DataClassAttribute`](DataClassAttributeClass.md). Estos objetos tienen propiedades que puede leer para obtener información sobre los atributos de su clase de datos.
 > Los objetos del atributo Dataclass pueden ser modificados, pero la estructura subyacente de la base de datos no será alterada.
@@ -106,16 +106,16 @@ Considerando las propiedades de tabla siguientes:
 
 
 <!-- REF #DataClassClass.all().Params -->
-| Parámetros | Type               |    | Descripción                                                                    |
-| ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
-| settings   | Object             | -> | Opciones de construcción: context                                              |
-| Result     | 4D.EntitySelection | <- | References on all entities related to the Dataclass|<!-- END REF -->
+| Parámetros | Type               |    | Descripción                                                                                         |
+| ---------- | ------------------ |:--:| --------------------------------------------------------------------------------------------------- |
+| settings   | Object             | -> | Opciones de construcción: context                                                                   |
+| Result     | 4D.EntitySelection | <- | Referencias sobre todas las entidades relacionadas con la clase de datos|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.all()` function <!-- REF #DataClassClass.all().Summary -->queries the datastore to find all the entities related to the dataclass and returns them as an entity selection<!-- END REF -->.
+La función `.all()` <!-- REF #DataClassClass.all().Summary -->consulta el almacén de datos para encontrar todas las entidades relacionadas con la clase de datos y las devuelve como una selección de entidades<!-- END REF -->.
 
 Las entidades se devuelven en el orden por defecto, que es inicialmente el orden en que fueron creadas. Tenga en cuenta, sin embargo, que si se han eliminado entidades y se han añadido otras nuevas, el orden por defecto ya no refleja el orden de creación.
 
@@ -155,15 +155,15 @@ En el parámetro opcional *settings* se puede pasar un objeto que contenga opcio
 
 
 <!-- REF #DataStoreClass.clearRemoteCache().Params -->
-| Parámetros | Type |  | Descripción                                                |
-| ---------- | ---- |::| ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF -->
+| Parámetros | Type |  | Descripción                                             |
+| ---------- | ---- |::| ------------------------------------------------------- |
+|            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.clearRemoteCache()` function <!-- REF #DataClassClass.clearRemoteCache().Summary -->empties the ORDA cache of a dataclass<!-- END REF -->.
+La función `.clearRemoteCache()` <!-- REF #DataClassClass.clearRemoteCache().Summary -->vacía la caché ORDA de una clase de datos<!-- END REF -->.
 
 > Esta función no restablece los valores de `timeout` y `maxEntries`.
 
@@ -209,17 +209,17 @@ $ds.Persons.clearRemoteCache()
 
 
 <!-- REF #DataClassClass.fromCollection().Params -->
-| Parámetros | Type               |    | Descripción                                                            |
-| ---------- | ------------------ |:--:| ---------------------------------------------------------------------- |
-| objectCol  | Collection         | -> | Colección de objetos a mapear con entidades                            |
-| settings   | Object             | -> | Opciones de construcción: context                                      |
-| Result     | 4D.EntitySelection | <- | Entity selection filled from the collection|<!-- END REF -->
+| Parámetros | Type               |    | Descripción                                                                   |
+| ---------- | ------------------ |:--:| ----------------------------------------------------------------------------- |
+| objectCol  | Collection         | -> | Colección de objetos a mapear con entidades                                   |
+| settings   | Object             | -> | Opciones de construcción: context                                             |
+| Result     | 4D.EntitySelection | <- | Selección de entidades llenadas desde la colección|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.fromCollection()` function <!-- REF #DataClassClass.fromCollection().Summary -->updates or creates entities in the dataclass according to the *objectCol* collection of objects, and returns the corresponding entity selection<!-- END REF -->.
+La función `.fromCollection()` <!-- REF #DataClassClass.fromCollection().Summary -->actualiza o crea entidades en la clase de datos según la colección de objetos *objectCol* y devuelve la selección de entidades correspondiente<!-- END REF -->.
 
 En el parámetro *objectCol*, pasa una colección de objetos para crear nuevas entidades o actualizar las existentes de la clase de datos. Los nombres de las propiedades deben ser los mismos que los de los atributos de la clase de datos. Si un nombre de propiedad no existe en la clase de datos, se ignora. Si un valor de atributo no está definido en la colección, su valor es null.
 
@@ -407,17 +407,17 @@ En este ejemplo, la primera entidad se creará y guardará pero la segunda falla
 
 
 <!-- REF #DataClassClass.get().Params -->
-| Parámetros | Type            |    | Descripción                                                           |
-| ---------- | --------------- |:--:| --------------------------------------------------------------------- |
-| primaryKey | Integer OR Text | -> | Valor de la llave primaria de la entidad a recuperar                  |
-| settings   | Object          | -> | Opciones de construcción: context                                     |
-| Result     | 4D.Entity       | <- | Entity matching the designated primary key|<!-- END REF -->
+| Parámetros | Type            |    | Descripción                                                                     |
+| ---------- | --------------- |:--:| ------------------------------------------------------------------------------- |
+| primaryKey | Integer OR Text | -> | Valor de la llave primaria de la entidad a recuperar                            |
+| settings   | Object          | -> | Opciones de construcción: context                                               |
+| Result     | 4D.Entity       | <- | Entidad que coincide con la llave primaria designada|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.get()` function <!-- REF #DataClassClass.get().Summary -->queries the dataclass to retrieve the entity matching the *primaryKey* parameter<!-- END REF -->.
+La función `.get()` <!-- REF #DataClassClass.get().Summary -->consulta la clase de datos a recuperar la entidad que coincide con el parámetro *primaryKey*<!-- END REF -->.
 
 En *primaryKey*, pase el valor de la llave primaria de la entidad a recuperar. El tipo de valor debe coincidir con el tipo de la llave primaria definida en el almacén de datos (Entero o Texto). También puede asegurarse de que el valor de la llave primaria se devuelva siempre como Texto utilizando la función [`.getKey()`](EntityClass.md#getkey) con el parámetro `dk key as string`.
 
@@ -485,13 +485,13 @@ Este ejemplo ilustra el uso de la propiedad *context*:
 <!-- REF #DataClassClass.getCount().Params -->
 | Parámetros | Type    |    | Descripción                                                    |
 | ---------- | ------- | -- | -------------------------------------------------------------- |
-| result     | Integer | <- | Number of entities in the dataclass|<!-- END REF -->
+| result     | Integer | <- | Número de entidades en la dataclass|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.getCount()` function <!-- REF #DataClassClass.getCount().Summary --> returns the number of entities in a dataclass<!-- END REF -->.
+La función `.getCount()` <!-- REF #DataClassClass.getCount().Summary --> devuelve el número de entidades de una clase de datos<!-- END REF -->.
 
 Si se utiliza esta función dentro de una transacción, se tendrán en cuenta las entidades creadas durante la misma.
 
@@ -523,15 +523,15 @@ $number:=$ds.Persons.getCount()
 
 
 <!-- REF #DataClassClass.getDataStore().Params -->
-| Parámetros | Type         |    | Descripción                                           |
-| ---------- | ------------ |:--:| ----------------------------------------------------- |
-| Result     | cs.DataStore | <- | Datastore of the dataclass|<!-- END REF -->
+| Parámetros | Type         |    | Descripción                                          |
+| ---------- | ------------ |:--:| ---------------------------------------------------- |
+| Result     | cs.DataStore | <- | Datastore de la dataclass|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.getDataStore()` function <!-- REF #DataClassClass.getDataStore().Summary -->returns the datastore for the specified dataclass<!-- END REF -->.
+La función `.getDataStore()` <!-- REF #DataClassClass.getDataStore().Summary -->devuelve el almacén de datos para la clase de datos especificada<!-- END REF -->.
 
 El almacén de datos puede ser:
 
@@ -577,15 +577,15 @@ El método de proyecto ***SearchDuplicate*** busca valores duplicados en cualqui
 
 
 <!-- REF #DataClassClass.getInfo().Params -->
-| Parámetros | Type   |    | Descripción                                             |
-| ---------- | ------ | -- | ------------------------------------------------------- |
-| Result     | Object | <- | Information on the dataclass|<!-- END REF -->
+| Parámetros | Type   |    | Descripción                                                    |
+| ---------- | ------ | -- | -------------------------------------------------------------- |
+| Result     | Object | <- | Información sobre la clase de datos|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns an object providing information about the dataclass<!-- END REF -->. Esta función es útil para configurar el código genérico.
+La función `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->devuelve un objeto que ofrece información sobre la clase de datos<!-- END REF -->. Esta función es útil para configurar el código genérico.
 
 **Objeto devuelto**
 
@@ -653,9 +653,9 @@ The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns 
 
 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
-| Parámetros | Type   |    | Descripción                                                                                    |
-| ---------- | ------ | -- | ---------------------------------------------------------------------------------------------- |
-| result     | Object | <- | Object describing the contents of the ORDA cache for the dataclass.|<!-- END REF -->
+| Parámetros | Type   |    | Descripción                                                                                          |
+| ---------- | ------ | -- | ---------------------------------------------------------------------------------------------------- |
+| result     | Object | <- | Objeto que describe el contenido de la caché ORDA para la clase de datos.|<!-- END REF -->
 
 
 |
@@ -666,7 +666,7 @@ The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns 
 
 #### Descripción
 
-The `.getRemoteCache()` function <!-- REF #DataClassClass.getRemoteCache().Summary -->returns an object that holds the contents of the ORDA cache for a dataclass.<!-- END REF -->.
+La función `.getRemoteCache()` <!-- REF #DataClassClass.getRemoteCache().Summary -->devuelve un objeto que contiene el contenido de la caché ORDA para una clase de datos.<!-- END REF -->.
 
 Llamar a esta función desde una aplicación monopuesto de 4D devuelve `Null`.
 
@@ -679,7 +679,7 @@ El objeto devuelto tiene las siguientes propiedades:
 | timeout    | Integer    | Tiempo restante antes de que las nuevas entradas de la caché se marquen como vencidas. |
 | entries    | Collection | Contiene un objeto de entrada para cada entidad en la caché.                           |
 
-Each entry object in the `entries` collection has the following properties:
+Cada objeto entrada de la colección `entries<` contiene las siguientes propiedades:
 
 | Propiedad | Type    | Descripción                                  |
 | --------- | ------- | -------------------------------------------- |
@@ -689,22 +689,22 @@ Each entry object in the `entries` collection has the following properties:
 
 El objeto `data` de cada entrada contiene las siguientes propiedades:
 
-| Propiedad              | Type    | Descripción                                                                                                                  |
-| ---------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| __KEY                  | String  | Llave primaria de la entidad                                                                                                 |
-| __STAMP                | Longint | Timestamp de la entidad en la base de datos                                                                                  |
-| __TIMESTAMP            | String  | Stamp of the entity in the database (format is YYYY-MM-DDTHH:MM:SS:ms:Z)                                                     |
-| dataClassAttributeName | Variant | If there is data in the cache for a dataclass attribute, it is returned in a property with the same type as in the database. |
+| Propiedad              | Type    | Descripción                                                                                                                      |
+| ---------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| __KEY                  | String  | Llave primaria de la entidad                                                                                                     |
+| __STAMP                | Longint | Stamp de la entidad en la base de datos                                                                                          |
+| __TIMESTAMP            | String  | Timestamp de la entidad en la base de datos (el formato es YYYY-MM-DDTHH:MM:SS:ms:Z)                                             |
+| dataClassAttributeName | Variant | Si hay datos en la caché para un atributo de dataclass, se devuelven en una propiedad con el mismo tipo que en la base de datos. |
 
 Los datos relativos a las entidades relacionadas se almacenan en la caché del objeto de datos.
 
 #### Ejemplo
 
-In the following example, `$ds.Persons.all()` loads the first entity with all its attributes. Then, the request optimization is triggered, so only `firstname` and `address.city` are loaded.
+En el siguiente ejemplo, `$ds.Persons.all()` carga la primera entidad con todos sus atributos. A continuación, se activa la optimización de la petición, de modo que sólo se cargan `firstname` and `address.city`.
 
-Note that `address.city` is loaded in the cache of the `Persons` dataclass.
+Tenga en cuenta que `address.city` se carga en la caché de la dataclass `Persons`.
 
-Only the first entity of the `Address` dataclass is stored in the cache. Se carga durante la primera iteración del bucle.
+Sólo la primera entidad de la dataclass `Address` se almacena en la caché. Se carga durante la primera iteración del bucle.
 
 ```4d
 var $ds : 4D.DataStoreImplementation
@@ -745,15 +745,15 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 
 <!-- REF #DataClassClass.new().Params -->
-| Parámetros | Type      |    | Descripción                                                  |
-| ---------- | --------- | -- | ------------------------------------------------------------ |
-| Result     | 4D.Entity | <- | New entity matching the Dataclass|<!-- END REF -->
+| Parámetros | Type      |    | Descripción                                                                 |
+| ---------- | --------- | -- | --------------------------------------------------------------------------- |
+| Result     | 4D.Entity | <- | Nueva entidad que coincide con la clase de datos|<!-- END REF -->
 
 |
 
 #### Descripción
 
-La función `.new()` <!-- REF #DataClassClass.new().Summary -->creates in memory and returns a new blank entity related to the Dataclass<!-- END REF -->.
+La función `.new()` <!-- REF #DataClassClass.new().Summary -->crea en memoria y devuelve una nueva entidad en blanco relacionada con la Dataclass<!-- END REF -->.
 
 El objeto entidad se crea en memoria y no se guarda en la base de datos hasta que se llama a la función [`.save( )`](EntityClass.md#save). Si la entidad se borra antes de ser guardada, no se puede recuperar.
 
@@ -800,7 +800,7 @@ Este ejemplo crea una nueva entidad en la clase de datos "Log" y registra la inf
 
 #### Descripción
 
-The `.newSelection()` function <!-- REF #DataClassClass.newSelection().Summary -->creates a new, blank, non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->.
+La función `.newSelection()` <!-- REF #DataClassClass.newSelection().Summary -->crea una nueva selección de entidades en blanco, no compartible, relacionada con la clase de datos, en la memoria<!-- END REF -->.
 
 > Para más información sobre las selecciones de entidades no compartibles, consulte [esta sección](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
@@ -947,8 +947,8 @@ El uso de marcadores de posición en las búsquedas **se recomienda** por las si
 1. Evita la inserción de código malicioso: si utiliza directamente variables completadas por el usuario dentro de la cadena de búsqueda, un usuario podría modificar las condiciones de búsqueda introduciendo argumentos de búsqueda adicionales. Por ejemplo, imagine una cadena de búsqueda como:
 
  ```4d
-  $vquery:="status = 'public' & name = "+myname //user enters their name
-  $result:=$col.query($vquery)
+  $vquery:="status = 'public' & name = "+myname //el usuario introduce su nombre
+       $result:=$col.query($vquery)
  ```
 
  Esta búsqueda parece segura ya que se filtran los datos no públicos. Sin embargo, si el usuario introduce en el área *myname* algo como *"smith OR status='private'*, la cadena de búsqueda se modificaría en la etapa de la interpretación y podría devolver datos privados.

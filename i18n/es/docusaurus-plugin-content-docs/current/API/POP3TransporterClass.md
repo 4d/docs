@@ -509,9 +509,9 @@ Quiere saber el número total y el tamaño de los correos electrónicos en el bu
 
 
 <!-- REF #POP3TransporterClass.undeleteAll().Params -->
-| Parámetros | Type |  | Descripción                                                |
-| ---------- | ---- |::| ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF -->
+| Parámetros | Type |  | Descripción                                             |
+| ---------- | ---- |::| ------------------------------------------------------- |
+|            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
 |
 
