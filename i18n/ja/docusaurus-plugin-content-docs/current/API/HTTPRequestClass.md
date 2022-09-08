@@ -81,13 +81,13 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 | ------- | -------------- |:--:| ------------------------------------------------ |
 | url     | テキスト           | -> | リクエストの送信先URL                                     |
 | options | Object         | -> | リクエスト設定プロパティ                                     |
-| Result  | 4D.HTTPRequest | <- | 新規 HTTPRequest オブジェクト|<!-- END REF -->
+| 戻り値     | 4D.HTTPRequest | <- | 新規 HTTPRequest オブジェクト|<!-- END REF -->
 
 |
 
 #### 詳細
 
-`4D.HTTPRequest.new()` 関数は、 <!-- REF #4D.HTTPRequest.new().Summary -->*options* 引数で指定した設定に基づいて HTTPリクエストを作成し、*url* 引数で定義される HTTPサーバーに送信して、`4D.HTTPRequest` オブジェクトを返します<!-- END REF -->.
+`4D.HTTPRequest.new()` 関数は、 <!-- REF #4D.HTTPRequest.new().Summary -->*options* 引数で指定した設定に基づいて HTTPリクエストを作成し、*url* 引数で定義される HTTPサーバーに送信して、`4D.HTTPRequest` オブジェクトを返します<!-- END REF -->。
 
 返される `HTTPRequest` オブジェクトは、HTTPサーバーのレスポンスの処理と、メソッドを呼び出すのに使用されます。
 
@@ -182,7 +182,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 詳細
 
-`.dataType` プロパティは、 <!-- REF #HTTPRequestClass.dataType.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `dataType` を格納します (省略時は "auto")。<!-- END REF -->.
+`.dataType` プロパティは、 <!-- REF #HTTPRequestClass.dataType.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `dataType` を格納します (省略時は "auto")。<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -193,7 +193,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 詳細
 
-`.encoding` プロパティは、 <!-- REF #HTTPRequestClass.encoding.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `encoding` を格納します (省略時は "UTF-8")。<!-- END REF -->.
+`.encoding` プロパティは、 <!-- REF #HTTPRequestClass.encoding.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `encoding` を格納します (省略時は "UTF-8")。<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -204,16 +204,16 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 詳細
 
-`.errors` プロパティは、 <!-- REF #HTTPRequestClass.errors.Summary -->少なくとも 1つのエラーが発生した場合、全エラーのコレクションを格納します<!-- END REF -->.
+`.errors` プロパティは、 <!-- REF #HTTPRequestClass.errors.Summary -->少なくとも 1つのエラーが発生した場合、全エラーのコレクションを格納します<!-- END REF -->。
 
 `.errors` プロパティの内容は次の通りです:
 
-| プロパティ  |                       | タイプ    | 詳細                  |
-| ------ | --------------------- | ------ | ------------------- |
-| errors |                       | コレクション | エラー発生時の 4Dエラースタック   |
-|        | [].errCode            | 数値     | 4Dエラーコード            |
-|        | [].message            | テキスト   | 4Dエラーの詳細            |
-|        | [].componentSignature | テキスト   | エラーを返した内部コンポーネントの署名 |
+| プロパティ  |                       | タイプ        | 詳細                  |
+| ------ | --------------------- | ---------- | ------------------- |
+| errors |                       | Collection | エラー発生時の 4Dエラースタック   |
+|        | [].errCode            | 数値         | 4Dエラーコード            |
+|        | [].message            | テキスト       | 4Dエラーの詳細            |
+|        | [].componentSignature | テキスト       | エラーを返した内部コンポーネントの署名 |
 
 <!-- END REF -->
 
@@ -224,7 +224,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 詳細
 
-`.headers` プロパティは、 <!-- REF #HTTPRequestClass.headers.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `headers` を格納します。<!-- END REF -->. (省略された場合は空のオブジェクト)
+`.headers` プロパティは、 <!-- REF #HTTPRequestClass.headers.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `headers` を格納します。<!-- END REF -->。 (省略された場合は空のオブジェクト)
 
 <!-- END REF -->
 
@@ -235,7 +235,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 詳細
 
-`.method` プロパティは、 <!-- REF #HTTPRequestClass.method.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `method` を格納します。<!-- END REF -->. .
+`.method` プロパティは、 <!-- REF #HTTPRequestClass.method.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `method` を格納します。<!-- END REF -->。 .
 
 <!-- END REF -->
 
@@ -246,7 +246,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 詳細
 
-`.protocol` プロパティは、 <!-- REF #HTTPRequestClass.protocol.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `protocol` を格納します。<!-- END REF -->. (省略時、または "auto" の場合は、使用されたプロトコルのバージョン)
+`.protocol` プロパティは、 <!-- REF #HTTPRequestClass.protocol.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `protocol` を格納します。<!-- END REF -->。 (省略時、または "auto" の場合は、使用されたプロトコルのバージョン)
 
 <!-- END REF -->
 
@@ -257,7 +257,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 詳細
 
-`.response` プロパティは、 <!-- REF #HTTPRequestClass.response.Summary -->少なくともステータスコードを受け取った場合には、リクエストへのレスポンスを格納します (それ以外の場合は未定義)。<!-- END REF -->.
+`.response` プロパティは、 <!-- REF #HTTPRequestClass.response.Summary -->少なくともステータスコードを受け取った場合には、リクエストへのレスポンスを格納します (それ以外の場合は未定義)。<!-- END REF -->。
 
 `response` オブジェクトは共有できないオブジェクトです。 このオブジェクトは次のプロパティを提供します:
 
@@ -277,7 +277,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 詳細
 
-`.returnResponseBody` プロパティは、 <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `returnResponseBody` を格納します<!-- END REF -->. .
+`.returnResponseBody` プロパティは、 <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `returnResponseBody` を格納します<!-- END REF -->。 .
 
 <!-- END REF -->
 
@@ -298,7 +298,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 > この関数はスレッドセーフです。
 
-`.terminate()` 関数は、 <!-- REF #HTTPRequestClass.terminate().Summary -->HTTPリクエストを中止します。<!-- END REF -->. .
+`.terminate()` 関数は、 <!-- REF #HTTPRequestClass.terminate().Summary -->HTTPリクエストを中止します。<!-- END REF -->。 .
 
 <!-- END REF -->
 
@@ -309,7 +309,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 詳細
 
-`.terminated` プロパティは、 <!-- REF #HTTPRequestClass.terminated.Summary -->リクエストが終了された場合 (`onTerminate` への呼び出し後) は true を格納します (それ以外は false)。<!-- END REF -->.
+`.terminated` プロパティは、 <!-- REF #HTTPRequestClass.terminated.Summary -->リクエストが終了された場合 (`onTerminate` への呼び出し後) は true を格納します (それ以外は false)。<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -320,7 +320,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 詳細
 
-`.timeout` プロパティは、 <!-- REF #HTTPRequestClass.timeout.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `timeout` を格納します<!-- END REF -->. .
+`.timeout` プロパティは、 <!-- REF #HTTPRequestClass.timeout.Summary -->[new()](#4dhttprequestnew) を呼び出す際に [`options`](#options-引数) オブジェクトに渡された `timeout` を格納します<!-- END REF -->。 .
 
 <!-- END REF -->
 
@@ -331,7 +331,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 #### 詳細
 
-`.url` プロパティは、 <!-- REF #HTTPRequestClass.url.Summary -->HTTPリクエストの URL を格納します。<!-- END REF -->.
+`.url` プロパティは、 <!-- REF #HTTPRequestClass.url.Summary -->HTTPリクエストの URL を格納します。<!-- END REF -->。
 
 <!-- END REF -->
 
@@ -342,10 +342,10 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 
 <!-- REF #HTTPRequestClass.wait().Params -->
-| 引数     | タイプ            |    | 詳細                                            |
-| ------ | -------------- |:--:| --------------------------------------------- |
-| time   | 実数             | -> | レスポンスを待機する最長時間 (秒)                            |
-| Result | 4D.HTTPRequest | <- | HTTPRequest オブジェクト|<!-- END REF -->
+| 引数   | タイプ            |    | 詳細                                            |
+| ---- | -------------- |:--:| --------------------------------------------- |
+| time | 実数             | -> | レスポンスを待機する最長時間 (秒)                            |
+| 戻り値  | 4D.HTTPRequest | <- | HTTPRequest オブジェクト|<!-- END REF -->
 
 |
 
@@ -353,7 +353,7 @@ authentication オブジェクトは `options.serverAuthentication` または `o
 
 > この関数はスレッドセーフです。
 
-`4D.HTTPRequest.wait()` 関数は、 <!-- REF #HTTPRequestClass.wait().Summary -->サーバーのレスポンスを待ちます。<!-- END REF -->.
+`4D.HTTPRequest.wait()` 関数は、 <!-- REF #HTTPRequestClass.wait().Summary -->サーバーのレスポンスを待ちます。<!-- END REF -->。
 
 *time* 引数が渡されると、関数は最長で、定義された秒数だけ待機します。
 
