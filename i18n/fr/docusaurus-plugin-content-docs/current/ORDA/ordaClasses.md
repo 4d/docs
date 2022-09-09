@@ -449,10 +449,10 @@ Cette fonction prend en charge trois syntaxes :
     - Si *$result* est Text, il doit s'agir d'une chaîne de requête valide
     - Si *$result* est Object, il doit contenir deux propriétés :
 
-    | Propriété          | Type        | Description                                               |
-    | ------------------ | ----------- | --------------------------------------------------------- |
-    | $result.query      | Text        | Chaîne de requête valide avec placeholders (:1, :2, etc.) |
-    | $result.parameters | Collections | valeurs pour placeholders                                 |
+    | Propriété          | Type       | Description                                               |
+    | ------------------ | ---------- | --------------------------------------------------------- |
+    | $result.query      | Text       | Chaîne de requête valide avec placeholders (:1, :2, etc.) |
+    | $result.parameters | Collection | valeurs pour placeholders                                 |
 
 La fonction `query` s'exécute à chaque fois qu'une requête utilisant le champ calculé est lancée. Il est utile de personnaliser et d'optimiser les requêtes en s'appuyant sur les attributs indexés. Lorsque la fonction `query` n'est pas implémentée pour un champ calculé, la recherche est toujours séquentielle (basée sur l'évaluation de toutes les valeurs à l'aide de la fonction `get <AttributeName>`).
 
