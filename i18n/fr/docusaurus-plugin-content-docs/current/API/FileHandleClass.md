@@ -192,7 +192,7 @@ Cette propriété est en **lecture seule**.
 <!--REF #FileHandleClass.getSize().Params -->
 | Paramètres | Type |    | Description                                              |
 | ---------- | ---- | -- | -------------------------------------------------------- |
-| Result     | Real | <- | Size of the document in bytes|<!-- END REF -->
+| Résultat   | Real | <- | Size of the document in bytes|<!-- END REF -->
 
 |
 
@@ -279,7 +279,7 @@ This property is **read/write**.
 | Paramètres | Type                 |    | Description                                         |
 | ---------- | -------------------- | -- | --------------------------------------------------- |
 | *bytes*    | Real                 | -> | Number of bytes to be read                          |
-| Result     | [4D.Blob](BlobClass) | <- | Bytes read from the file|<!-- END REF -->
+| Résultat   | [4D.Blob](BlobClass) | <- | Bytes read from the file|<!-- END REF -->
 
 |
 
@@ -313,7 +313,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 <!--REF #FileHandleClass.readLine().Params -->
 | Paramètres | Type |    | Description                             |
 | ---------- | ---- | -- | --------------------------------------- |
-| Result     | Text | <- | Line of text|<!-- END REF -->
+| Résultat   | Text | <- | Line of text|<!-- END REF -->
 
 |
 
@@ -349,7 +349,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 | Paramètres | Type |    | Description                                   |
 | ---------- | ---- | -- | --------------------------------------------- |
 | *stopChar* | Text | -> | Character(s) at which to stop reading         |
-| Result     | Text | <- | Text from the file|<!-- END REF -->
+| Résultat   | Text | <- | Text from the file|<!-- END REF -->
 
 |
 
