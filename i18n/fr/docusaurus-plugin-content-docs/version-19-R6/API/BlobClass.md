@@ -28,16 +28,16 @@ La classe Blob vous permet de créer et de manipuler des [objets blob](../Concep
 
 <!-- REF #4D.Blob.new().Params -->
 
-| Paramètres | Type            |    | Description                              |
-| ---------- | --------------- |:--:| ---------------------------------------- |
-| blob       | Blob ou 4D.Blob | -> | Blob pour copie                          |
-| Result     | 4D.Blob         | <- | New 4D.Blob  |<!-- END REF -->
+| Paramètres | Type            |    | Description                                  |
+| ---------- | --------------- |:--:| -------------------------------------------- |
+| blob       | Blob ou 4D.Blob | -> | Blob pour copie                              |
+| Résultat   | 4D.Blob         | <- | Nouveau 4D.Blob  |<!-- END REF -->
 
 |
 
 #### Description
 
-`4D.Blob.new` <!-- REF #4D.Blob.new().Summary -->creates a new `4D.Blob` object optionally encapsulating a copy of the data from another blob (scalar blob or `4D.Blob`)<!-- END REF -->.
+`4D.Blob.new` <!-- REF #4D.Blob.new().Summary -->crée un nouvel objet `4D.Blob` encapsulant optionnellement une copie des données d'un autre blob (blob scalaire ou `4D.Blob`)<!-- END REF -->.
 
 Si le paramètre `blob` est omis, la méthode retourne un 4D.Blob vide.
 
@@ -47,7 +47,7 @@ Si le paramètre `blob` est omis, la méthode retourne un 4D.Blob vide.
 
 #### Description
 
-The `.size` property <!-- REF #Blob.size.Summary -->returns the size of a `4D.Blob`, expressed in bytes.<!-- END REF -->
+La propriété `.size` <!-- REF #Blob.size.Summary -->retourne la taille d'un `4D.Blob`, exprimée en octets.<!-- END REF -->
 
 ## .slice()
 
@@ -67,13 +67,13 @@ The `.size` property <!-- REF #Blob.size.Summary -->returns the size of a `4D.Bl
 | ---------- | ------- |:--:| ------------------------------------------------------------------------ |
 | start      | Real    | -> | indice du premier octet à inclure dans le nouveau `4D.Blob`.             |
 | end        | Real    | -> | indice du premier octet qui ne sera pas inclus dans le nouveau `4D.Blob` |
-| Result     | 4D.Blob | <- | Nouveau `4D.Blob`|<!-- END REF -->
+| Résultat   | 4D.Blob | <- | Nouveau `4D.Blob`|<!-- END REF -->
 
 |
 
 #### Description
 
-`.slice()` <!-- REF #Blob.slice().Summary --> creates and returns a `4D.Blob` that references data from a subset of the blob on which it's called. Le blob d'origine n'est pas modifié.<!-- END REF -->
+`.slice()` <!-- REF #Blob.slice().Summary --> crée et retourne un `4D.Blob` qui référence les données d'un sous-ensemble du blob sur lequel il est appelé. Le blob d'origine n'est pas modifié.<!-- END REF -->
 
 Le paramètre `start` est un indice dans le blob, indiquant le premier octet à inclure dans le nouveau `4D.Blob`. Si vous indiquez une valeur négative, 4D la traite comme un décalage de la fin du blob vers le début. Par exemple, -10 correspondrait à l'avant-dernier octet du blob. La valeur par défaut est 0. Si vous indiquez une valeur pour start supérieure à la taille du blob source, la taille du `4D.Blob` retourné est 0, et il ne contient aucune donnée.
 
