@@ -46,7 +46,7 @@ title: DataClassAttribute
 
 <!-- REF DataClassAttributeClass.autoFilled.Syntax -->**.autoFilled** : Boolean<!-- END REF -->
 
-#### 詳細
+#### 説明
 
 The `.autoFilled` property <!-- REF DataClassAttributeClass.autoFilled.Summary -->contains True if the attribute value is automatically filled by 4D<!-- END REF -->。 このプロパティは以下の 4Dフィールドプロパティに対応しています:
 
@@ -71,7 +71,7 @@ The `.autoFilled` property <!-- REF DataClassAttributeClass.autoFilled.Summary -
 
 <!-- REF DataClassAttributeClass.fieldNumber.Syntax -->**.fieldNumber** : Integer<!-- END REF -->
 
-#### 詳細
+#### 説明
 
 The `.fieldNumber` property <!-- REF DataClassAttributeClass.fieldNumber.Summary -->contains the internal 4D field number of the attribute<!-- END REF -->。
 
@@ -93,7 +93,7 @@ The `.fieldNumber` property <!-- REF DataClassAttributeClass.fieldNumber.Summary
 
 <!-- REF DataClassAttributeClass.fieldType.Syntax -->**.fieldType** : Integer<!-- END REF -->
 
-#### 詳細
+#### 説明
 
 The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->contains the 4D database type of the attribute<!-- END REF -->。 .
 
@@ -120,7 +120,7 @@ The `.fieldType` property <!-- REF DataClassAttributeClass.fieldType.Summary -->
 
 <!-- REF DataClassAttributeClass.indexed.Syntax -->**.indexed** : Boolean<!-- END REF -->
 
-#### 詳細
+#### 説明
 
 The `.indexed` property <!-- REF DataClassAttributeClass.indexed.Summary -->contains **True** if there is a B-tree or a Cluster B-tree index on the attribute<!-- END REF -->。
 
@@ -142,7 +142,7 @@ The `.indexed` property <!-- REF DataClassAttributeClass.indexed.Summary -->cont
 
 <!-- REF DataClassAttributeClass.inverseName.Syntax -->**.inverseName** : Text<!-- END REF -->
 
-#### 詳細
+#### 説明
 
 The `.inverseName` property <!-- REF DataClassAttributeClass.inverseName.Summary -->returns the name of the attribute which is at the other side of the relation<!-- END REF -->。
 
@@ -164,7 +164,7 @@ The `.inverseName` property <!-- REF DataClassAttributeClass.inverseName.Summary
 
 <!-- REF DataClassAttributeClass.keywordIndexed.Syntax -->**.keywordIndexed** : Boolean<!-- END REF -->
 
-#### 詳細
+#### 説明
 
 The `.keywordIndexed` property <!-- REF DataClassAttributeClass.keywordIndexed.Summary -->contains **True** if there is a keyword index on the attribute<!-- END REF -->。
 
@@ -186,7 +186,7 @@ The `.keywordIndexed` property <!-- REF DataClassAttributeClass.keywordIndexed.S
 
 <!-- REF DataClassAttributeClass.kind.Syntax -->**.kind** : Text<!-- END REF -->
 
-#### 詳細
+#### 説明
 
 The `.kind` property <!-- REF DataClassAttributeClass.kind.Summary -->returns the category of the attribute<!-- END REF -->。 以下のいずれかの値が返されます:
 
@@ -222,7 +222,7 @@ The `.kind` property <!-- REF DataClassAttributeClass.kind.Summary -->returns th
 
 <!-- REF DataClassAttributeClass.mandatory.Syntax -->**.mandatory** : Boolean<!-- END REF -->
 
-#### 詳細
+#### 説明
 
 The `.mandatory` property <!-- REF DataClassAttributeClass.mandatory.Summary -->contains True if Null value input is rejected for the attribute<!-- END REF -->。
 
@@ -245,7 +245,7 @@ The `.mandatory` property <!-- REF DataClassAttributeClass.mandatory.Summary -->
 
 <!-- REF DataClassAttributeClass.name.Syntax -->**.name** : Text<!-- END REF -->
 
-#### 詳細
+#### 説明
 
 `.name` プロパティは、 <!-- REF DataClassAttributeClass.name.Summary -->The `.name` property<!-- END REF -->。
 
@@ -271,7 +271,7 @@ The `.mandatory` property <!-- REF DataClassAttributeClass.mandatory.Summary -->
 
 <!-- REF DataClassAttributeClass.relatedDataClass.Syntax -->**.relatedDataClass** : Text<!-- END REF -->
 
-#### 詳細
+#### 説明
 > このプロパティは、[`.kind`](#kind) プロパティ値が "relatedEntity" または "relatedEntities" である属性においてのみ利用可能です。
 
 The `.relatedDataClass` property <!-- REF DataClassAttributeClass.relatedDataClass.Summary -->returns the name of the dataclass related to the attribute<!-- END REF -->。
@@ -303,7 +303,7 @@ The `.relatedDataClass` property <!-- REF DataClassAttributeClass.relatedDataCla
 
 <!-- REF DataClassAttributeClass.type.Syntax -->**.type** : Text<!-- END REF -->
 
-#### 詳細
+#### 説明
 
 The `.type` property <!-- REF DataClassAttributeClass.type.Summary -->contains the conceptual value type of the attribute<!-- END REF -->, useful for generic programming.
 
@@ -332,7 +332,7 @@ The `.type` property <!-- REF DataClassAttributeClass.type.Summary -->contains t
 
 <!-- REF DataClassAttributeClass.unique.Syntax -->**.unique** : Boolean<!-- END REF -->
 
-#### 詳細
+#### 説明
 
 The `.unique` property <!-- REF DataClassAttributeClass.unique.Summary -->contains True if the attribute value must be unique<!-- END REF -->。 このプロパティは、4Dフィールドプロパティの "重複不可" に対応しています.
 
