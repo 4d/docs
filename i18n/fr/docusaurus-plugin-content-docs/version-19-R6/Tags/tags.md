@@ -331,7 +331,7 @@ The value of the 4D variable `vtSiteName` will be inserted in the HTML page when
 
 For example, here are the processing results of the 4D text variable myvar with the available tags:
 
-| myvar Value          | Tags                         | Result              |
+| myvar Value          | Tags                         | Résultat            |
 | -------------------- | ---------------------------- | ------------------- |
 | `myvar:="<B>"` | `<!--#4DTEXT myvar-->` | `&lt;B&gt;` |
 | `myvar:="<B>"` | `<!--#4DHTML myvar-->` | `<B>`         |
