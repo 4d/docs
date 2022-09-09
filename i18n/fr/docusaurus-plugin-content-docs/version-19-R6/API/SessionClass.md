@@ -36,7 +36,7 @@ Pour des informations détaillées sur l'implémentation de la session, veuillez
 <!-- REF #_command_.Session.Params -->
 | Paramètres | Type       |    | Description                              |
 | ---------- | ---------- |:--:| ---------------------------------------- |
-| Result     | 4D.Session | <- | Objet session|<!-- END REF -->
+| Résultat   | 4D.Session | <- | Objet session|<!-- END REF -->
 
 |
 
@@ -158,7 +158,7 @@ $expiration:=Session.expirationDate //ex : "2021-11-05T17:10:42Z"
 | Paramètres | Type    |    | Description                                                                      |
 | ---------- | ------- |:--:| -------------------------------------------------------------------------------- |
 | privilege  | Text    | <- | Nom du privilège à vérifier                                                      |
-| Result     | Boolean | <- | Vrai si la session dispose du *privilege*, sinon Faux|<!-- END REF -->
+| Résultat   | Boolean | <- | Vrai si la session dispose du *privilege*, sinon Faux|<!-- END REF -->
 
 |
 
@@ -238,7 +238,7 @@ End if
 <!-- REF #SessionClass.isGuest().Params -->
 | Paramètres | Type    |    | Description                                                                 |
 | ---------- | ------- |:--:| --------------------------------------------------------------------------- |
-| Result     | Boolean | <- | Vrai s'il s'agit d'une session Guest, sinon Faux|<!-- END REF -->
+| Résultat   | Boolean | <- | Vrai s'il s'agit d'une session Guest, sinon Faux|<!-- END REF -->
 
 |
 
@@ -273,11 +273,11 @@ End if
 
 
 <!-- REF #SessionClass.setPrivileges().Params -->
-| Paramètres | Type        |    | Description                                                                                 |
-| ---------- | ----------- |:--:| ------------------------------------------------------------------------------------------- |
-| privilege  | Text        | -> | Nom de privilège                                                                            |
-| privileges | Collections | -> | Collection de noms de privilèges                                                            |
-| settings   | Object      | -> | Objet contenant une propriété "privileges" (texte ou collection)|<!-- END REF -->
+| Paramètres | Type       |    | Description                                                                                 |
+| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------------- |
+| privilege  | Text       | -> | Nom de privilège                                                                            |
+| privileges | Collection | -> | Collection de noms de privilèges                                                            |
+| settings   | Object     | -> | Objet contenant une propriété "privileges" (texte ou collection)|<!-- END REF -->
 
 |
 
