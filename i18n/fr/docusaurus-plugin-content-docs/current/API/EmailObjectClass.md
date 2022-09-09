@@ -66,7 +66,7 @@ Un objet avec deux propriétés :
 | nom       | Text | Nom à afficher (peut être null) |
 | email     | Text | Adresse email                   |
 
-#### Collections
+#### Collection
 
 Une collection d'objets adresse.
 
@@ -377,7 +377,7 @@ The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary
 | Paramètres | Type       |    | Description                            |
 | ---------- | ---------- |:--:| -------------------------------------- |
 | mime       | Blob, Text | -> | Email en MIME                          |
-| Result     | Object     | <- | Objet email|<!-- END REF -->
+| Résultat   | Object     | <- | Objet email|<!-- END REF -->
 
 |
 
@@ -464,7 +464,7 @@ $status:=$transporter.send($email)
 | ---------- | ------ |:--:| ------------------------------------------------------- |
 | mail       | Object | -> | Objet email                                             |
 | options    | Object | -> | Options d'encodage et de charset du mail                |
-| Result     | Text   | <- | Objet email converti en MIME|<!-- END REF -->
+| Résultat   | Text   | <- | Objet email converti en MIME|<!-- END REF -->
 
 |
 
