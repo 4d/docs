@@ -364,7 +364,7 @@ Par défaut, cette option n'est pas activée.
 
 Modifie l'orientation (rotation) d'une zone de texte. Les zones de texte peuvent être pivotées par incréments de 90°. Chaque valeur d'orientation est appliquée tout en conservant le même point de départ inférieur gauche pour l'objet :
 
-| Valeur d'orientation | Result                                         |
+| Valeur d'orientation | Résultat                                       |
 | -------------------- | ---------------------------------------------- |
 | 0 (par défaut)       | ![](../assets/en/FormObjects/orientation1.png) |
 | 90                   | ![](../assets/en/FormObjects/orientation2.png) |
