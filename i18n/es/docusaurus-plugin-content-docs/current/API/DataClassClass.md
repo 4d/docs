@@ -847,7 +847,7 @@ Cuando se crea, la selección de entidades no contiene ninguna entidad (`mySelec
 
 #### Descripción
 
-La función `.query()` <!-- REF #DataClassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carga diferida.
+La función `.query()` <!-- REF #DataClassClass.query().Summary -->busca entidades que cumplan los criterios de búsqueda especificados en *queryString* o *formula* y (opcionalmente) *valor*<!-- END REF -->para todas las entidades de la clase de datos, y devuelve un nuevo objeto de tipo `EntitySelection` que contiene todas las entidades encontradas. Se aplica carga diferida.
 
 Si no se encuentran entidades coincidentes, se devuelve una `EntitySelection` vacía.
 
@@ -907,7 +907,7 @@ donde:
  | AND        | &, &&, and              |
  | O          | &#124;,&#124;&#124;, or |
 
-* **order by attributePath**: puede incluir una declaración order by *attributePath* en la búsqueda para que los datos resultantes se ordenen de acuerdo con esa declaración. Puede utilizar varias instrucciones de ordenación, separadas por comas (por ejemplo, ordenación por *attributePath1* desc, *attributePath2* asc). Por defecto, el orden es ascendente. Pase 'desc' para definir un orden descendente y 'asc' para definir un orden ascendente. >If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
+* **order by attributePath**: puede incluir una declaración order by *attributePath* en la búsqueda para que los datos resultantes se ordenen de acuerdo con esa declaración. Puede utilizar varias instrucciones de ordenación, separadas por comas (por ejemplo, ordenación por *attributePath1* desc, *attributePath2* asc). Por defecto, el orden es ascendente. Pase 'desc' para definir un orden descendente y 'asc' para definir un orden ascendente. >Si utiliza esta instrucción, la selección de entidades devuelta es ordenada (para más información, consulte [>Selecciones de entidades ordenadas y no ordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
 
 **Utilizar comillas**
 
@@ -988,7 +988,7 @@ No obtendrá el resultado esperado porque el valor null será evaluado por 4D co
 
 |
 
-This feature is only available in queries on dataclasses and [entity selections](EntitySelectionClass.md#query). It cannot be used in queries on [collections](CollectionClass.md#query).
+Esta funcionalidad sólo está disponible en las búsquedas en clases de datos y en las [selecciones de entidades](EntitySelectionClass.md#query). No se puede utilizar en las búsquedas en [colecciones](CollectionClass.md#query).
 
 :::
 
@@ -1055,13 +1055,13 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor.lastName = :2";"H
 
 Básicamente, el problema está relacionado con la lógica interna de la búsqueda: no se puede buscar un atributo cuyo valor sea tanto "A" como "B".
 
-To make it possible to perform such queries, ORDA allows a special syntax: you just need to add a *class index* between **{}** in all additional relation attributes used in the string:
+Para poder realizar este tipo de búsqueda, ORDA permite una sintaxis especial: basta con añadir un *class index* entre **{}** en todos los atributos relacionales adicionales utilizados en la cadena:
 
 ```4d
 "relationAttribute.attribute = :1 AND relationAttribute{x}.attribute = :2 [AND relationAttribute{y}.attribute...]"
 ```
 
-**{x}** tells ORDA to create another reference for the relation attribute. A continuación, realizará todas las operaciones de mapa de bits internas necesarias. Note that **x** can be any number **except 0**: {1}, or {2}, or {1540}... ORDA only needs a unique reference in the query for each class index.
+**{x}** indica a ORDA que cree otra referencia para el atributo relacional. A continuación, realizará todas las operaciones de mapa de bits internas necesarias. Tenga en cuenta que **x** puede ser todo número **excepto 0**: {1}, o {2}, o {1540}... ORDA sólo necesita una referencia única en la búsqueda para cada class index.
 
 En nuestro ejemplo, sería:
 
@@ -1441,9 +1441,9 @@ Queremos desautorizar las fórmulas, por ejemplo, cuando el usuario introduce su
 
 
 <!-- REF #DataClassClass.setRemoteCacheSettings().Params -->
-| Parámetros | Type   |    | Descripción                                                                                                   |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------------------- |
-| settings   | Object | -> | Object that sets the timeout and maximum size of the ORDA cache for the dataclass.|<!-- END REF -->
+| Parámetros | Type   |    | Descripción                                                                                                             |
+| ---------- | ------ | -- | ----------------------------------------------------------------------------------------------------------------------- |
+| settings   | Object | -> | Objeto que define el tiempo de espera y el tamaño máximo de la caché ORDA para el dataclass.|<!-- END REF -->
 
 |
 
@@ -1451,30 +1451,30 @@ Queremos desautorizar las fórmulas, por ejemplo, cuando el usuario introduce su
 
 #### Descripción
 
-The `.setRemoteCacheSettings()` function <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->sets the timeout and maximum size of the ORDA cache for a dataclass.<!-- END REF -->.
+La función `.setRemoteCacheSettings()` <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->define el tiempo de espera y el tamaño máximo de la caché ORDA para una clase de datos.<!-- END REF -->.
 
-In the *settings* parameter, pass an object with the following properties:
+En el parámetro *settings*, pase un objeto con las siguientes propiedades:
 
 | Propiedad  | Type    | Descripción                   |
 | ---------- | ------- | ----------------------------- |
 | timeout    | Integer | Tiempo de espera en segundos. |
 | maxEntries | Integer | Número máximo de entidades.   |
 
-`timeout` sets the timeout of the ORDA cache for the dataclass (default is 30 seconds). Once the timeout has passed, the entities of the dataclass in the cache are considered as expired. Esto significa que:
+`timeout` define el tiempo de espera de la caché ORDA para la dataclass (por defecto es 30 segundos). Una vez transcurrido el tiempo de espera, las entidades de la dataclass en la caché son consideradas como vencidas. Esto significa que:
 
 * los datos siguen estando ahí
 * la próxima vez que se necesiten los datos, se le pedirán al servidor
-* 4D automatically removes expired data when the maximum number of entities is reached
+* 4D elimina automáticamente los datos caducados cuando se alcanza el número máximo de entidades
 
-Setting a `timeout` property sets a new timeout for the entities already present in the cache. It is useful when working with data that does not change very frequently, and thus when new requests to the server are not necessary.
+Definir la propiedad `timeout` define un nuevo timeout para las entidades ya presentes en la caché. Es útil cuando se trabaja con los datos que no cambian con mucha frecuencia y, por tanto, cuando no son necesarias nuevas peticiones al servidor.
 
-`maxEntries` sets the max number of entities in the ORDA cache. Por defecto es 30 000.
+`maxEntries` define el número máximo de entidades en la caché ORDA. Por defecto es 30 000.
 
-The minimum number of entries is 300, so the value of `maxEntries` must be equal to or higher than 300. Otherwise it is ignored and the maximum number of entries is set to 300.
+El número de entradas mínimo es 300, por lo que el valor de `maxEntries` debe ser igual o superior a 300. En caso contrario, se ignora y el número máximo de entradas se fija en 300.
 
-If no valid properties are passed as `timeout` and `maxEntries`, the cache remains unchanged, with its default or previously set values.
+Si no se pasan propiedades válidas como `timeout` y `maxEntries`, la caché permanece sin cambios, con sus valores por defecto o previamente definidos.
 
-When an entity is saved, it is updated in the cache and expires once the timeout is reached.
+Cuando se guarda una entidad, se actualiza en la caché y vence una vez alcanzado el timeout.
 
 #### Ejemplo
 
