@@ -43,7 +43,7 @@ Un [Datastore](ORDA/dsMapping.md#datastore) correspond à l'objet d'interface fo
 | Paramètres | Type         |    | Description                                                |
 | ---------- | ------------ | -- | ---------------------------------------------------------- |
 | localID    | Text         | -> | Identifiant local du datastore distant                     |
-| Result     | cs.DataStore | <- | Nouvelle référence de datastore|<!-- END REF -->
+| Résultat   | cs.DataStore | <- | Nouvelle référence de datastore|<!-- END REF -->
 
 |
 
@@ -115,7 +115,7 @@ Utilisation du datastore principal de la base 4D :
 | -------------- | ------------ | -- | --------------------------------------------------------------------------------- |
 | connectionInfo | Object       | -> | Propriétés de connexion utilisées pour joindre le datastore distant               |
 | localID        | Text         | -> | Identifiant à affecter au datastore ouvert sur l'application locale (obligatoire) |
-| Result         | cs.DataStore | <- | Objet datastore|<!-- END REF -->
+| Résultat       | cs.DataStore | <- | Objet datastore|<!-- END REF -->
 
 |
 
@@ -286,7 +286,7 @@ Voir l'exemple de la fonction [`.startTransaction()`](#starttransaction).
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
 | Paramètres | Type   |    | Description                                                                                        |
 | ---------- | ------ |:--:| -------------------------------------------------------------------------------------------------- |
-| Result     | Object | <- | Informations sur le chiffrement du datastore courant et de chaque table|<!-- END REF -->
+| Résultat   | Object | <- | Informations sur le chiffrement du datastore courant et de chaque table|<!-- END REF -->
 
 |
 
@@ -361,7 +361,7 @@ Vous souhaitez connaitre le nombre de tables chiffrées dans le fichier de donn�
 <!-- REF #DataStoreClass.getInfo().Params -->
 | Paramètres | Type   |    | Description                                     |
 | ---------- | ------ |:--:| ----------------------------------------------- |
-| Result     | Object | <- | Datastore properties|<!-- END REF -->
+| Résultat   | Object | <- | Datastore properties|<!-- END REF -->
 
 |
 
@@ -428,9 +428,9 @@ Sur un datastore distant :
 
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
-| Paramètres | Type        |    | Description                                                                             |
-| ---------- | ----------- |:--:| --------------------------------------------------------------------------------------- |
-| Result     | Collections | <- | Collection of objects, where each object describes a request|<!-- END REF -->
+| Paramètres | Type       |    | Description                                                                             |
+| ---------- | ---------- |:--:| --------------------------------------------------------------------------------------- |
+| Résultat   | Collection | <- | Collection of objects, where each object describes a request|<!-- END REF -->
 
 |
 
@@ -469,7 +469,7 @@ Voir l'exemple 2 de [`.startRequestLog()`](#startrequestlog).
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
 | Paramètres | Type    |    | Description                                                                                              |
 | ---------- | ------- |:--:| -------------------------------------------------------------------------------------------------------- |
-| Result     | Boolean | <- | Vrai si l'accès au Data Explorer est désactivé, Faux s'il est activé (défaut)|<!-- END REF -->
+| Résultat   | Boolean | <- | Vrai si l'accès au Data Explorer est désactivé, Faux s'il est activé (défaut)|<!-- END REF -->
 
 |
 
@@ -537,7 +537,7 @@ Lorsque cette méthode n'est pas appelée, les nouvelles sélections d'entités 
 | ------------- | ------ | -- | ----------------------------------------------------------------------------------------- |
 | curPassPhrase | Text   | -> | Phrase secrète courante                                                                   |
 | curDataKey    | Object | -> | Clé de chiffrement des données courante                                                   |
-| Result        | Object | <- | Résultat de la mise en correspondance de la clé de chiffrement|<!-- END REF -->
+| Résultat      | Object | <- | Résultat de la mise en correspondance de la clé de chiffrement|<!-- END REF -->
 
 |
 
@@ -556,20 +556,20 @@ Si une clé de chiffrement des données valide est fournie, elle est ajoutée à
 * toutes les modifications de données apportées dans les tables chiffrables sont chiffrées sur le disque (fichiers .4DD, .journal,  . 4Dindx).
 * toutes les données chargées à partir de tables chiffrables sont déchiffrées dans la mémoire
 
-**Result**
+**Résultat**
 
 Le résultat de la commande est décrit dans l'objet retourné :
 
-| Propriété  |                          | Type        | Description                                                                        |
-| ---------- | ------------------------ | ----------- | ---------------------------------------------------------------------------------- |
-| success    |                          | Boolean     | Vrai si la clé de chiffrement fournie correspond aux données chiffrées, sinon Faux |
-|            |                          |             | Les propriétés ci-dessous sont retournées uniquement si success est à *Faux*       |
-| status     |                          | Number      | Code d'erreur (4 si la clé de chiffrement fournie est erronée)                     |
-| statusText |                          | Text        | Message d'erreur                                                                   |
-| errors     |                          | Collections | Pile d'erreurs. La première erreur possède l'indice le plus élevé.                 |
-|            | \[ ].componentSignature | Text        | Nom du composant interne                                                           |
-|            | \[ ].errCode            | Number      | Numéro de l'erreur                                                                 |
-|            | \[ ].message            | Text        | Message d'erreur                                                                   |
+| Propriété  |                          | Type       | Description                                                                        |
+| ---------- | ------------------------ | ---------- | ---------------------------------------------------------------------------------- |
+| success    |                          | Boolean    | Vrai si la clé de chiffrement fournie correspond aux données chiffrées, sinon Faux |
+|            |                          |            | Les propriétés ci-dessous sont retournées uniquement si success est à *Faux*       |
+| status     |                          | Number     | Code d'erreur (4 si la clé de chiffrement fournie est erronée)                     |
+| statusText |                          | Text       | Message d'erreur                                                                   |
+| errors     |                          | Collection | Pile d'erreurs. La première erreur possède l'indice le plus élevé.                 |
+|            | \[ ].componentSignature | Text       | Nom du composant interne                                                           |
+|            | \[ ].errCode            | Number     | Numéro de l'erreur                                                                 |
+|            | \[ ].message            | Text       | Message d'erreur                                                                   |
 
 Si aucun paramètre *curPassphrase* ou *curDataKey* n'est fourni, `.provideDataKey()` retourne **null** (aucune erreur n'est générée).
 
