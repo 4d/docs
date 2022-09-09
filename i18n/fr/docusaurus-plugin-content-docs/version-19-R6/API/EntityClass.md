@@ -86,7 +86,7 @@ $myEntity.save() //sauvegarder l'entity
 <!-- REF #EntityClass.clone().Params -->
 | Paramètres | Type      |    | Description                                                             |
 | ---------- | --------- |:--:| ----------------------------------------------------------------------- |
-| Result     | 4D.Entity | <- | Nouvelle entité référençant l'enregistrement|<!-- END REF -->
+| Résultat   | 4D.Entity | <- | Nouvelle entité référençant l'enregistrement|<!-- END REF -->
 
 |
 
@@ -125,11 +125,11 @@ Cette fonction ne peut être utilisée qu'avec des entités déjà enregistrées
 
 
 <!-- REF #EntityClass.diff().Params -->
-| Paramètres          | Type        |    | Description                                              |
-| ------------------- | ----------- |:--:| -------------------------------------------------------- |
-| entityToCompare     | 4D.Entity   | -> | Entité à comparer à l'entité d'origine                   |
-| attributesToCompare | Collections | -> | Noms des attributs à comparer                            |
-| Result              | Collections | <- | Différences entre les entités|<!-- END REF -->
+| Paramètres          | Type       |    | Description                                              |
+| ------------------- | ---------- |:--:| -------------------------------------------------------- |
+| entityToCompare     | 4D.Entity  | -> | Entité à comparer à l'entité d'origine                   |
+| attributesToCompare | Collection | -> | Noms des attributs à comparer                            |
+| Résultat            | Collection | <- | Différences entre les entités|<!-- END REF -->
 
 |
 
@@ -329,7 +329,7 @@ vCompareResult3 (seules les différences sur les attributs touchés de $e1 sont 
 | Paramètres | Type    |    | Description                                                                                  |
 | ---------- | ------- |:--:| -------------------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk force drop if stamp changed` : Force la suppression même si le marqueur interne a changé |
-| Result     | Object  | <- | Result of drop operation|<!-- END REF -->
+| Résultat   | Object  | <- | Result of drop operation|<!-- END REF -->
 
 |
 
@@ -343,7 +343,7 @@ Dans une application multiprocess ou multi-utilisateurs, la fonction `.drop()` e
 
 Sinon, vous pouvez passer l'option `dk force drop if stamp changed` dans le paramètre *mode* : dans ce cas, l'entité est supprimée même si la valeur du marqueur interne est différente (si la clé primaire est identique).
 
-**Result**
+**Résultat**
 
 L'objet retourné par `.drop( )` contient les propriétés suivantes :
 
@@ -434,7 +434,7 @@ Même exemple avec l'option `dk force drop if stamp changed` :
 <!-- REF #EntityClass.first().Params -->
 | Paramètres | Type      |    | Description                                                                                     |
 | ---------- | --------- |:--:| ----------------------------------------------------------------------------------------------- |
-| Result     | 4D.Entity | <- | Reference to first entity of an entity selection (Null if not found)|<!-- END REF -->
+| Résultat   | 4D.Entity | <- | Reference to first entity of an entity selection (Null if not found)|<!-- END REF -->
 
 |
 
@@ -558,7 +558,7 @@ Vous pouvez également utiliser une entité relative fournie sous forme d'objet 
 <!-- REF #EntityClass.getDataClass().Params -->
 | Paramètres | Type         |    | Description                                                             |
 | ---------- | ------------ |:--:| ----------------------------------------------------------------------- |
-| Result     | 4D.DataClass | <- | DataClass object to which the entity belongs|<!-- END REF -->
+| Résultat   | 4D.DataClass | <- | DataClass object to which the entity belongs|<!-- END REF -->
 
 |
 
@@ -604,8 +604,8 @@ Le code générique suivant duplique toute entité :
 | Paramètres | Type    |    | Description                                                                              |
 | ---------- | ------- |:--:| ---------------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk key as string`: retourner la clé primaire en texte, quel que soit son type d'origine |
-| Result     | Text    | <- | Valeur de la clé primaire texte de l'entité                                              |
-| Result     | Integer | <- | Valeur de la clé primaire numérique de l'entité                                          |
+| Résultat   | Text    | <- | Valeur de la clé primaire texte de l'entité                                              |
+| Résultat   | Integer | <- | Valeur de la clé primaire numérique de l'entité                                          |
 
 <!-- END REF -->
 
@@ -702,7 +702,7 @@ $info:=$address.getRemoteContextAttributes()
 <!-- REF #EntityClass.getSelection().Params -->
 | Paramètres | Type               |    | Description                                                                                 |
 | ---------- | ------------------ |:--:| ------------------------------------------------------------------------------------------- |
-| Result     | 4D.EntitySelection | <- | Entity selection to which the entity belongs (Null if not found)|<!-- END REF -->
+| Résultat   | 4D.EntitySelection | <- | Entity selection to which the entity belongs (Null if not found)|<!-- END REF -->
 
 |
 
@@ -745,7 +745,7 @@ Si l'entité n'appartient pas à une entity selection, la fonction renvoie Null.
 <!-- REF #EntityClass.getStamp().Params -->
 | Paramètres | Type    |    | Description                                                                        |
 | ---------- | ------- |:--:| ---------------------------------------------------------------------------------- |
-| Result     | Integer | <- | Stamp of the entity (0 if entity has just been created)|<!-- END REF -->
+| Résultat   | Integer | <- | Stamp of the entity (0 if entity has just been created)|<!-- END REF -->
 
 |
 
@@ -792,13 +792,13 @@ Le stamp (marqueur interne) d'une entité est automatiquement incrémenté par 4
 | Paramètres      | Type               |    | Description                                                             |
 | --------------- | ------------------ |:--:| ----------------------------------------------------------------------- |
 | entitySelection | 4D.EntitySelection | -> | Entity selection dans laquelle obtenir la position de l'entité          |
-| Result          | Integer            | <- | Position de l'entité dans l'entity selection|<!-- END REF -->
+| Résultat        | Integer            | <- | Position de l'entité dans l'entity selection|<!-- END REF -->
 
 |
 
 #### Description
 
-The `.indexOf()` function <!-- REF #EntityClass.indexOf().Summary -->returns the position of the entity in an entity selection<!-- END REF -->.
+La fonction `.indexOf()` <!-- REF #EntityClass.indexOf().Summary -->returns the position of the entity in an entity selection<!-- END REF -->.
 
 Par défaut, si le paramètre *entitySelection* est omis, la fonction retourne la position de l'entité dans sa propre entity selection (si elle existe). Sinon, elle renvoie la position de l'entité dans l'*entitySelection* spécifiée.
 
@@ -839,7 +839,7 @@ La valeur résultante est comprise entre 0 et la longueur de l'entity selection 
 <!-- REF #EntityClass.isNew().Params -->
 | Paramètres | Type    |    | Description                                                                                                          |
 | ---------- | ------- |:--:| -------------------------------------------------------------------------------------------------------------------- |
-| Result     | Boolean | <- | Vrai si l'entité vient juste d'être créée et n'a pas encore été enregistrée. Sinon, Faux.|<!-- END REF -->
+| Résultat   | Boolean | <- | Vrai si l'entité vient juste d'être créée et n'a pas encore été enregistrée. Sinon, Faux.|<!-- END REF -->
 
 |
 
@@ -878,7 +878,7 @@ The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True i
 <!-- REF #EntityClass.last().Params -->
 | Paramètres | Type      |    | Description                                                                                           |
 | ---------- | --------- |:--:| ----------------------------------------------------------------------------------------------------- |
-| Result     | 4D.Entity | <- | Référence à la dernière entité de l'entity selection (Null si non trouvée)|<!-- END REF -->
+| Résultat   | 4D.Entity | <- | Référence à la dernière entité de l'entity selection (Null si non trouvée)|<!-- END REF -->
 
 |
 
@@ -917,7 +917,7 @@ Si l'entité n'appartient à aucune entity selection (i.e. [.getSelection( )](#g
 | Paramètres | Type    |    | Description                                                                                   |
 | ---------- | ------- |:--:| --------------------------------------------------------------------------------------------- |
 | mode       | Integer | -> | `dk reload if stamp changed` : Recharger avant de verrouiller si le marqueur interne a changé |
-| Result     | Object  | <- | Résultat de l'opération lock|<!-- END REF -->
+| Résultat   | Object  | <- | Résultat de l'opération lock|<!-- END REF -->
 
 |
 
@@ -938,7 +938,7 @@ Un enregistrement verrouillé peut être déverrouillé :
 
 Sinon, vous pouvez passer l'option `dk reload if stamp changed` dans le paramètre *mode* : dans ce cas, aucune erreur n'est générée et l'entité est simplement rechargée si le stamp a changé (si l'entité existe toujours et si la clé primaire est toujours la même).
 
-**Result**
+**Résultat**
 
 L'objet retourné par `.lock( )` contient les propriétés suivantes :
 
@@ -1033,7 +1033,7 @@ Exemple avec option `dk reload if stamp changed` :
 <!-- REF #EntityClass.next().Params -->
 | Paramètres | Type      |    | Description                                                                                            |
 | ---------- | --------- |:--:| ------------------------------------------------------------------------------------------------------ |
-| Result     | 4D.Entity | <- | Référence à l'entité suivante dans l'entity selection (Null si non trouvée)|<!-- END REF -->
+| Résultat   | 4D.Entity | <- | Référence à l'entité suivante dans l'entity selection (Null si non trouvée)|<!-- END REF -->
 
 |
 
@@ -1075,7 +1075,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 <!-- REF #EntityClass.previous().Params -->
 | Paramètres | Type      |    | Description                                                                                              |
 | ---------- | --------- |:--:| -------------------------------------------------------------------------------------------------------- |
-| Result     | 4D.Entity | <- | Référence à l'entité précédente dans l'entity selection (Null si non trouvée)|<!-- END REF -->
+| Résultat   | 4D.Entity | <- | Référence à l'entité précédente dans l'entity selection (Null si non trouvée)|<!-- END REF -->
 
 |
 
@@ -1116,7 +1116,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 <!-- REF #EntityClass.reload().Params -->
 | Paramètres | Type   |    | Description                             |
 | ---------- | ------ |:--:| --------------------------------------- |
-| Result     | Object | <- | Objet statut|<!-- END REF -->
+| Résultat   | Object | <- | Objet statut|<!-- END REF -->
 
 |
 
@@ -1124,7 +1124,7 @@ If the entity does not belong to any existing entity selection (i.e. [.getSelect
 
 The `.reload()` function <!-- REF #EntityClass.reload().Summary -->reloads the content of the entity in memory<!-- END REF -->, according to information stored in the table related to the dataclass in the datastore. Le rechargement est effectué uniquement si l'entité existe toujours avec la même clé primaire.
 
-**Result**
+**Résultat**
 
 L'objet retourné par `.reload( )` contient les propriétés suivantes :
 
@@ -1180,7 +1180,7 @@ L'objet retourné par `.reload( )` contient les propriétés suivantes :
 | Paramètres | Type    |    | Description                                          |
 | ---------- | ------- |:--:| ---------------------------------------------------- |
 | mode       | Integer | -> | `dk auto merge` : Active le mode "automatic merge"   |
-| Result     | Object  | <- | Résultat de la sauvegarde|<!-- END REF -->
+| Résultat   | Object  | <- | Résultat de la sauvegarde|<!-- END REF -->
 
 |
 
@@ -1197,7 +1197,7 @@ Par défaut, si le paramètre *mode* est omis, la fonction retournera systémati
 Sinon, vous pouvez passer l'option `dk auto merge` dans le paramètre *mode* afin d'activer le mode "automatic merge". Dans ce mode, une modification simultanée effectuée par un autre process/utilisateur sur la même entité mais sur un attribut différent ne génère pas d'erreur. Les données effectivement stockées dans l'enregistrement résultent alors de la combinaison (le "merge") des modifications non-concurrentes (si des modifications ont été effectuées sur le même attribut, la sauvegarde échoue et une erreur est retournée, même en mode "automatic merge").
 > Le mode de fusion automatique n'est pas disponible pour les attributs de type Image, Objet et Texte lorsqu'ils sont stockés en dehors de l'enregistrement. Des modifications simultanées de ces attributs entraîneront une erreur "`dk status stamp has changed`".
 
-**Result**
+**Résultat**
 
 L'objet retourné par `.save()` contient les propriétés suivantes :
 
@@ -1311,12 +1311,12 @@ Mise à jour d'une entité avec option `dk auto merge` :
 
 
 <!-- REF #EntityClass.toObject().Params -->
-| Paramètres   | Type        |    | Description                                                                                                       |
-| ------------ | ----------- |:--:| ----------------------------------------------------------------------------------------------------------------- |
-| filterString | Text        | -> | Attribut(s) à extraire (chaînes séparées par des virgules)                                                        |
-| filterCol    | Collections | -> | Collection d'attribut(s) à extraire                                                                               |
-| options      | Integer     | -> | `dk with primary key` : ajouter la propriété \_KEY ;<br/>`dk with stamp` : ajouter la propriété \_STAMP |
-| Result       | Object      | <- | Objet généré à partir de l'entité|<!-- END REF -->
+| Paramètres   | Type       |    | Description                                                                                                       |
+| ------------ | ---------- |:--:| ----------------------------------------------------------------------------------------------------------------- |
+| filterString | Text       | -> | Attribut(s) à extraire (chaînes séparées par des virgules)                                                        |
+| filterCol    | Collection | -> | Collection d'attribut(s) à extraire                                                                               |
+| options      | Integer    | -> | `dk with primary key` : ajouter la propriété \_KEY ;<br/>`dk with stamp` : ajouter la propriété \_STAMP |
+| Résultat     | Object     | <- | Objet généré à partir de l'entité|<!-- END REF -->
 
 |
 
@@ -1595,7 +1595,7 @@ Retourne :
 <!-- REF #EntityClass.touched().Params -->
 | Paramètres | Type    |    | Description                                                                                                            |
 | ---------- | ------- |:--:| ---------------------------------------------------------------------------------------------------------------------- |
-| Result     | Boolean | <- | Vrai si au moins un attribut de l'entité a été modifié et non encore sauvegardé, sinon Faux|<!-- END REF -->
+| Résultat   | Boolean | <- | Vrai si au moins un attribut de l'entité a été modifié et non encore sauvegardé, sinon Faux|<!-- END REF -->
 
 |
 
@@ -1638,9 +1638,9 @@ Cet exemple vérifie s'il est nécessaire de sauvegarder l'entité :
 
 
 <!-- REF #EntityClass.touchedAttributes().Params -->
-| Paramètres | Type        |    | Description                                                              |
-| ---------- | ----------- |:--:| ------------------------------------------------------------------------ |
-| Result     | Collections | <- | Noms des attributs touchés ou collection vide|<!-- END REF -->
+| Paramètres | Type       |    | Description                                                              |
+| ---------- | ---------- |:--:| ------------------------------------------------------------------------ |
+| Résultat   | Collection | <- | Noms des attributs touchés ou collection vide|<!-- END REF -->
 
 |
 
@@ -1714,7 +1714,7 @@ Dans ce cas :
 <!-- REF #EntityClass.unlock().Params -->
 | Paramètres | Type   |    | Description                             |
 | ---------- | ------ |:--:| --------------------------------------- |
-| Result     | Object | <- | Objet statut|<!-- END REF -->
+| Résultat   | Object | <- | Objet statut|<!-- END REF -->
 
 |
 
@@ -1735,7 +1735,7 @@ Un enregistrement est automatiquement déverrouillé lorsqu'il n'est plus réfé
  $res:=$e1.unlock() //$res.success=true
 ```
 
-**Result**
+**Résultat**
 
 L'objet retourné par `.unlock()` contient la propriété suivante :
 
