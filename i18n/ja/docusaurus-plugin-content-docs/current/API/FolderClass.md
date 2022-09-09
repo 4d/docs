@@ -63,17 +63,17 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 <!-- REF #_command_.Folder.Params -->
-| 引数             | タイプ       |    | 詳細                                             |
+| 引数             | タイプ       |    | 説明                                             |
 | -------------- | --------- |:--:| ---------------------------------------------- |
-| path           | テキスト      | -> | フォルダーパス                                        |
-| folderConstant | 整数        | -> | 4Dフォルダー定数                                      |
-| pathType       | 整数        | -> | `fk posix path` (デフォルト) または `fk platform path` |
+| path           | Text      | -> | フォルダーパス                                        |
+| folderConstant | Integer   | -> | 4Dフォルダー定数                                      |
+| pathType       | Integer   | -> | `fk posix path` (デフォルト) または `fk platform path` |
 | *              |           | -> | ホストデータベースのフォルダーを返すには * を渡します                   |
 | 戻り値            | 4D.Folder | <- | 新規フォルダーオブジェクト|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->。 このコマンドは 2種類のシンタックスを受け入れます。
 
@@ -85,30 +85,30 @@ The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a
 
 デフォルトで、4D は POSIXシンタックスで表現されたパスを期待します。 プラットフォームパス名 (Windows または macOS) を使用する場合、*pathType* 引数を使用してそのことを宣言する必要があります。 以下の定数を使用することができます:
 
-| 定数               | Value | 説明                                             |
-| ---------------- | ----- | ---------------------------------------------- |
-| fk platform path | 1     | プラットフォーム特有のシンタックスで表現されたパス (プラットフォームパス名の場合には必須) |
-| fk posix path    | 0     | POSIXシンタックスで表現されたパス (デフォルト)                    |
+| 定数               | 値 | 説明                                             |
+| ---------------- | - | ---------------------------------------------- |
+| fk platform path | 1 | プラットフォーム特有のシンタックスで表現されたパス (プラットフォームパス名の場合には必須) |
+| fk posix path    | 0 | POSIXシンタックスで表現されたパス (デフォルト)                    |
 
 **Folder ( folderConstant { ; \* } )**
 
 *folderConstant* には、以下の定数のどれか一つを指定して 4Dビルトインの、またはシステムフォルダーを渡します:
 
-| 定数                         | Value | 説明                                                                                     |
-| -------------------------- | ----- | -------------------------------------------------------------------------------------- |
-| fk applications folder     | 116   |                                                                                        |
-| fk data folder             | 9     | 関連づけられたファイルシステム: "/DATA"                                                               |
-| fk database folder         | 4     | 関連づけられたファイルシステム: "/PACKAGE"                                                            |
-| fk desktop folder          | 115   |                                                                                        |
-| fk documents folder        | 117   | ユーザーのドキュメントフォルダー                                                                       |
-| fk licenses folder         | 1     | マシンの 4Dライセンスファイルを格納しているフォルダー                                                           |
-| fk logs folder             | 7     | 関連づけられたファイルシステム: "/LOGS"                                                               |
-| fk mobileApps folder       | 10    |                                                                                        |
-| fk remote database folder  | 3     | それぞれの 4Dリモートマシン上に作成された 4Dデータベースフォルダー                                                   |
-| fk resources folder        | 6     | 関連づけられたファイルシステム: "/RESOURCES"                                                          |
-| fk system folder           | 100   |                                                                                        |
-| fk user preferences folder | 0     | 4D folder that stores user preference files within the `\<userName>` directory. |
-| fk web root folder         | 8     | データベースのカレントの Webルートフォルダー: ただし "/PACKAGE/path" のパッケージ内にある場合。そうでない場合はフルパス。               |
+| 定数                         | 値   | 説明                                                                                     |
+| -------------------------- | --- | -------------------------------------------------------------------------------------- |
+| fk applications folder     | 116 |                                                                                        |
+| fk data folder             | 9   | 関連づけられたファイルシステム: "/DATA"                                                               |
+| fk database folder         | 4   | 関連づけられたファイルシステム: "/PACKAGE"                                                            |
+| fk desktop folder          | 115 |                                                                                        |
+| fk documents folder        | 117 | ユーザーのドキュメントフォルダー                                                                       |
+| fk licenses folder         | 1   | マシンの 4Dライセンスファイルを格納しているフォルダー                                                           |
+| fk logs folder             | 7   | 関連づけられたファイルシステム: "/LOGS"                                                               |
+| fk mobileApps folder       | 10  |                                                                                        |
+| fk remote database folder  | 3   | それぞれの 4Dリモートマシン上に作成された 4Dデータベースフォルダー                                                   |
+| fk resources folder        | 6   | 関連づけられたファイルシステム: "/RESOURCES"                                                          |
+| fk system folder           | 100 |                                                                                        |
+| fk user preferences folder | 0   | 4D folder that stores user preference files within the `\<userName>` directory. |
+| fk web root folder         | 8   | データベースのカレントの Webルートフォルダー: ただし "/PACKAGE/path" のパッケージ内にある場合。そうでない場合はフルパス。               |
 
 If the command is called from a component, pass the optional *parameter to get the path of the host database. Otherwise, if you omit the* parameter, a null object is always returned.
 
@@ -127,7 +127,7 @@ If the command is called from a component, pass the optional *parameter to get t
 **4D.Folder.new** ( *path* : Text { ; *pathType* : Integer }{ ; * } ) : 4D.Folder<br/>**4D.Folder.new** ( *folderConstant* : Integer { ; * } ) : 4D.Folder<!-- END REF -->
 
 
-#### 詳細
+#### 説明
 
 The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->。 この関数の機能は、[`Folder`](#folder) コマンドと同一です。
 
@@ -148,15 +148,15 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 <!--REF #FolderClass.create().Syntax -->**.create()** : Boolean<!-- END REF -->
 
 <!--REF #FolderClass.create().Params -->
-| 引数  | タイプ |    | 詳細                                                                |
-| --- | --- | -- | ----------------------------------------------------------------- |
-| 戻り値 | ブール | <- | フォルダーが正常に作成された場合には true、それ以外の場合は false|<!-- END REF -->
+| 引数  | タイプ     |    | 説明                                                                |
+| --- | ------- | -- | ----------------------------------------------------------------- |
+| 戻り値 | Boolean | <- | フォルダーが正常に作成された場合には true、それ以外の場合は false|<!-- END REF -->
 
 
 |
 
 
-#### 詳細
+#### 説明
 
 The `.create()` function <!-- REF #FolderClass.create().Summary -->The `.create()` function<!-- END REF -->。
 
@@ -205,16 +205,16 @@ End if
 
 
 <!--REF #FolderClass.createAlias().Params -->
-| 引数                | タイプ       |    | 詳細                                                 |
+| 引数                | タイプ       |    | 説明                                                 |
 | ----------------- | --------- | -- | -------------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | エイリアスまたはショートカットの作成先フォルダー                           |
-| aliasName         | テキスト      | -> | エイリアスまたはショートカットの名称                                 |
-| aliasType         | 整数        | -> | エイリアスリンクのタイプ                                       |
+| aliasName         | Text      | -> | エイリアスまたはショートカットの名称                                 |
+| aliasType         | Integer   | -> | エイリアスリンクのタイプ                                       |
 | 戻り値               | 4D.File   | <- | エイリアスまたはショートカットのフォルダー参照|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.createAlias()` function <!-- REF #FolderClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
 
@@ -222,10 +222,10 @@ The `.createAlias()` function <!-- REF #FolderClass.createAlias().Summary -->cre
 
 macOS 上では、この関数はデフォルトで標準エイリアスを作成します。 *aliasType* 引数を渡すことで、シンボリックリンクを作成することもできます。 以下の定数を使用することができます:
 
-| 定数                 | Value | 説明                  |
-| ------------------ | ----- | ------------------- |
-| `fk alias link`    | 0     | エイリアスリンク (デフォルト)    |
-| `fk symbolic link` | 1     | シンボリックリンク (macOSのみ) |
+| 定数                 | 値 | 説明                  |
+| ------------------ | - | ------------------- |
+| `fk alias link`    | 0 | エイリアスリンク (デフォルト)    |
+| `fk symbolic link` | 1 | シンボリックリンク (macOSのみ) |
 
 Windows 上では、常にショートカット (.lnk ファイル) が作成されます (*aliasType* 引数は無視されます)。
 
@@ -261,22 +261,22 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 
 <!-- REF #FolderClass.delete().Params -->
-| 引数     | タイプ |    | 詳細                                       |
-| ------ | --- | -- | ---------------------------------------- |
-| option | 整数  | -> | フォルダー削除のオプション|<!-- END REF -->
+| 引数     | タイプ     |    | 説明                                       |
+| ------ | ------- | -- | ---------------------------------------- |
+| option | Integer | -> | フォルダー削除のオプション|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.delete()` function <!-- REF #FolderClass.delete().Summary -->The `.delete()` function<!-- END REF -->。
 
 セキュリティ上の理由から、option 引数を渡さなかった場合はデフォルトで、`.delete()` は空のフォルダーしか削除しません。 空でないフォルダーを削除するには、以下の定数のいずれか一つを option 引数として渡す必要があります:
 
-| 定数                     | Value | 説明                |
-| ---------------------- | ----- | ----------------- |
-| `Delete only if empty` | 0     | フォルダーが空の場合のみ削除します |
-| `Delete with contents` | 1     | フォルダーを中身ごと削除します   |
+| 定数                     | 値 | 説明                |
+| ---------------------- | - | ----------------- |
+| `Delete only if empty` | 0 | フォルダーが空の場合のみ削除します |
+| `Delete with contents` | 1 | フォルダーを中身ごと削除します   |
 
 `Delete only if empty` が渡された、または option 引数を渡さなかった場合:
 
@@ -335,15 +335,15 @@ The `.delete()` function <!-- REF #FolderClass.delete().Summary -->The `.delete(
 
 
 <!--REF #FolderClass.moveTo().Params -->
-| 引数                | タイプ       |    | 詳細                                   |
+| 引数                | タイプ       |    | 説明                                   |
 | ----------------- | --------- | -- | ------------------------------------ |
 | destinationFolder | 4D.Folder | -> | 宛先フォルダー                              |
-| newName           | テキスト      | -> | 移動先でのフォルダーの完全な名称                     |
+| newName           | Text      | -> | 移動先でのフォルダーの完全な名称                     |
 | 戻り値               | 4D.Folder | <- | 移動したフォルダー|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.moveTo( )` function <!-- REF #FolderClass.moveTo().Summary -->moves or renames the `Folder` object (source folder) into the specified *destinationFolder*<!-- END REF -->。
 
@@ -391,14 +391,14 @@ The `.moveTo( )` function <!-- REF #FolderClass.moveTo().Summary -->moves or ren
 
 
 <!--REF #FolderClass.rename().Params -->
-| 引数      | タイプ       |    | 詳細                                      |
+| 引数      | タイプ       |    | 説明                                      |
 | ------- | --------- | -- | --------------------------------------- |
-| newName | テキスト      | -> | フォルダーの新しい完全な名称                          |
+| newName | Text      | -> | フォルダーの新しい完全な名称                          |
 | 戻り値     | 4D.Folder | <- | 名称変更されたフォルダー|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.rename()` function <!-- REF #FolderClass.rename().Summary -->The `.rename()` function<!-- END REF -->。
 
