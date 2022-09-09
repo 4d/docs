@@ -72,7 +72,7 @@ var $myVar // バリアント型変数
 | `Pointer`              | ポインター値                         |
 | `Picture`              | ピクチャー値                         |
 | `Blob`                 | BLOB値                          |
-| `コレクション`               | コレクション値                        |
+| `Collection`           | コレクション値                        |
 | `Variant`              | バリアント値                         |
 | `Object`               | デフォルトクラス (`4D.Object`) のオブジェクト |
 | `4D.<className>` | 4Dクラス名のオブジェクト                  |

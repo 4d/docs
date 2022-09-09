@@ -53,7 +53,7 @@ macOS のターミナルまたは Windows のコンソールを使用して、�
 
 > ユーザーのカレントフォルダーは、macOS では "~" コマンドを、Windows では "%HOMEPATH%" コマンドを使用することで取得することができます。
 
-以下の例題では、4Dアプリケーションがデスクトップに保存されており、開こうとしているデータベースが "Documents" フォルダーにあるものとします。
+アプリケーションを起動:
 
 *   macOS:
 
@@ -118,22 +118,22 @@ open ~/Desktop/4D.app --args --project ~/Documents/myProj/Project/myProj.4DProje
 
 
 ```bash
-open ~/Desktop/4D.app MyDatabase.4DLink
+open ~/Desktop/4D.app ~/Desktop/MyDatabase.4DLink
 ```
 
 ```bash
-open "~/Desktop/4D Server.app" MyDatabase.4DLink
+open "~/Desktop/4D Server.app" ~/Desktop/MyDatabase.4DLink
 ```
 
 *   Windows:
 
 
 ```bash
-%HOMEPATH%\Desktop\4D.exe MyDatabase.4DLink
+%HOMEPATH%\Desktop\4D.exe %HOMEPATH%\Desktop\MyDatabase.4DLink
 ```
 
 ```bash
-%HOMEPATH%\Desktop\4D Server.exe" MyDatabase.4DLink
+%HOMEPATH%\Desktop\4D Server.exe" %HOMEPATH%\Desktop\MyDatabase.4DLink
 ```
 
 アプリケーションをコンパイルモードで起動し、データファイルが利用できない場合には作成する:

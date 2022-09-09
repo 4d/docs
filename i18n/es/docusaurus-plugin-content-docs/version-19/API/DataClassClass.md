@@ -646,7 +646,7 @@ Cuando se crea, la selección de entidades no contiene ninguna entidad (`mySelec
 
 #### Descripción
 
-The `.query( )` function <!-- REF #DataClassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carga diferida.
+The `.query( )` function <!-- REF #DataClassClass.query().Summary -->busca entidades que cumplan los criterios de búsqueda especificados en *queryString* o *formula* y (opcionalmente) *valor*<!-- END REF -->para todas las entidades de la clase de datos, y devuelve un nuevo objeto de tipo `EntitySelection` que contiene todas las entidades encontradas. Se aplica carga diferida.
 
 Si no se encuentran entidades coincidentes, se devuelve una `EntitySelection` vacía.
 
@@ -787,7 +787,7 @@ No obtendrá el resultado esperado porque el valor null será evaluado por 4D co
 
 |
 
-This feature is only available in queries on dataclasses and [entity selections](EntitySelectionClass.md#query). It cannot be used in queries on [collections](CollectionClass.md#query).
+Esta funcionalidad sólo está disponible en las búsquedas en clases de datos y en las [selecciones de entidades](EntitySelectionClass.md#query). No se puede utilizar en las búsquedas en [colecciones](CollectionClass.md#query).
 
 :::
 

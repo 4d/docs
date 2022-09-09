@@ -37,7 +37,7 @@ macOS のターミナルまたは Windows のコンソールを使用して、�
 | `--opening-mode`                                                                                                                                                                       | interpreted &#124; compiled                      | データベースをインタープリタモードまたはコンパイルモードで開くように指示します。 指定のモードが利用できない場合でも、エラーは発生しません。                                                                                                                                                                                                                                                                                                                                                                                                                     |
 | `--create-data`                                                                                                                                                                        |                                                  | 有効なデータファイルが見つからない場合、新しいデータファイルを自動的に作成します。 ダイアログボックスは表示されません。 "-data" 引数で渡されたファイルがあれば、4D はそれを使用します (同じ名前のファイルが既に存在する場合にはエラーが生成されます)。                                                                                                                                                                                                                                                                                                                                                        |
 | `--user-param`                                                                                                                                                                         | カスタムのユーザー文字列                                     | Get database parameter コマンドを通して 4Dアプリケーションで利用可能な任意の文字列 (ただし文字列は予約文字である "-" から始まってはいけません)。                                                                                                                                                                                                                                                                                                                                                                                                  |
-| `--headless`                                                                                                                                                                           |                                                  | 4D、4D Server、または組み込みアプリケーションをインターフェースなし (ヘッドレスモード) で起動します。 このモードでは:<li> デザインモードは使えません。 データベースはアプリケーションモードで起動します。</li><li> ツールバー、メニューバー、MDI ウィンドウやスプラッシュスクリーンは表示されません。</li><li>Dock またはタスクバーにはアイコンは表示されません。</li><li>開かれたデータベースは、"最近使用したデータベース" メニューに登録されません。</li><li>4D診断ファイルの記録が自動的に開始されます ([SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page642.html)、値79 参照)</li><li>ダイアログボックスへのコールはすべてインターセプトされ、自動的にレスポンスが返されます (例: [ALERT](https://doc.4d.com/4dv19/help/command/ja/page41.html) コマンドの場合は OK、エラーダイアログの場合は Abort など)。 インターセプトされたコマンド (*) は、診断ファイルに記録されます。</li><br/>保守上の理由から、[LOG EVENT](https://doc.4d.com/4dv19/help/command/ja/page667.html) コマンドを使用して任意のテキストを標準の出力ストリームに送ることができます。 ヘッドレスモードの 4Dアプリケーションは、[QUIT 4D](https://doc.4d.com/4dv19/help/command/ja/page291.html) を呼び出すか OSタスクマネージャーを使用することでしか終了できない点に注意が必要です。 |
+| `--headless`                                                                                                                                                                           |                                                  | 4D、4D Server、または組み込みアプリケーションをインターフェースなし (ヘッドレスモード) で起動します。 このモードでは:<li> デザインモードは使えません。データベースはアプリケーションモードで起動します。</li><li> ツールバー、メニューバー、MDI ウィンドウやスプラッシュスクリーンは表示されません。</li><li>Dock またはタスクバーにはアイコンは表示されません。</li><li>開かれたデータベースは、"最近使用したデータベース" メニューに登録されません。</li><li>4D診断ファイルの記録が自動的に開始されます ([SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page642.html)、値79 参照)</li><li>ダイアログボックスへのコールはすべてインターセプトされ、自動的にレスポンスが返されます (例: [ALERT](https://doc.4d.com/4dv19/help/command/ja/page41.html) コマンドの場合は OK、エラーダイアログの場合は Abort など)。 インターセプトされたコマンド (*) は、診断ファイルに記録されます。</li><br/>保守上の理由から、[LOG EVENT](https://doc.4d.com/4dv19/help/command/ja/page667.html) コマンドを使用して任意のテキストを標準の出力ストリームに送ることができます。 ヘッドレスモードの 4Dアプリケーションは、[QUIT 4D](https://doc.4d.com/4dv19/help/command/ja/page291.html) を呼び出すか OSタスクマネージャーを使用することでしか終了できない点に注意が必要です。 |
 | `--dataless`                                                                                                                                                                           |                                                  | 4D、4D Server、または組み込みアプリケーションをデータレスモードで起動します。 データレスモードは、4D がデータを必要としないタスク (プロジェクトのコンパイルなど) を実行する場合に便利です。 このモードでは: <li>コマンドラインや `.4DLink` ファイルで指定されていても、また `CREATE DATA FILE` や `OPEN DATA FILE` コマンドを使用していても、データを含むファイルは開かれません。</li><li>データを操作するコマンドはエラーを生成します。 たとえば、`CREATE RECORD` は "このコマンドの対象となるテーブルがありません" というエラーを生成します。</li><br/>**注記**:<li>コマンドラインで引数が渡された場合、アプリケーションを終了しない限り、4D で開かれているすべてのデータベースにデータレスモードが適用されます。</li><li>`.4DLink` ファイルを使って引数が渡された場合には、データレスモードは `.4DLink` ファイルで指定されたデータベースにのみ適用されます。 `.4DLink` ファイルの詳細については、[プロジェクトを開く (その他の方法)](../Project/creating.md#プロジェクトを開く-その他の方法) を参照ください。</li>                                                                                                                                                                                                                                                     |
 | `--webadmin-settings-file`                                                                                                                                                             | ファイルパス                                           | [WebAdmin Webサーバー](webAdmin.md) 用のカスタム WebAdmin `.4DSettings` ファイルのパス                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | `--webadmin-access-key`                                                                                                                                                                | String                                           | [WebAdmin Webサーバー](webAdmin.md) 用のアクセスキー                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -53,7 +53,7 @@ macOS のターミナルまたは Windows のコンソールを使用して、�
 
 > ユーザーのカレントフォルダーは、macOS では "~" コマンドを、Windows では "%HOMEPATH%" コマンドを使用することで取得することができます。
 
-以下の例題では、4Dアプリケーションがデスクトップに保存されており、開こうとしているデータベースが "Documents" フォルダーにあるものとします。
+アプリケーションを起動:
 
 *   macOS:
 
@@ -69,13 +69,13 @@ open ~/Desktop/4D.app
 %HOMEPATH%\Desktop\4D\4D.exe
 ```
 
-アプリケーションを起動:
+macOS上でパッケージファイルを指定してアプリケーションを起動:
 
 ```bash
 yarn open ~/Desktop/4D.app --args ~/Documents/myDB.4dbase
 ```
 
-macOS上でパッケージファイルを指定してアプリケーションを起動:
+プロジェクトファイルを指定してアプリケーションを起動:
 
 *   macOS:
 
@@ -94,7 +94,7 @@ yarn open ~/Desktop/4D.app --args ~/Documents/myProj/Project/myProj.4DProject
 
 
 
-プロジェクトファイルを指定してアプリケーションを起動:
+プロジェクトファイルとデータファイルを指定してアプリケーションを起動:
 
 *   macOS:
 
@@ -112,31 +112,31 @@ open ~/Desktop/4D.app --args --project ~/Documents/myProj/Project/myProj.4DProje
 %HOMEPATH%\Desktop\4D\4D.exe /project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject /data %HOMEPATH%\Documents\data\myData.4DD
 ```
 
-プロジェクトファイルとデータファイルを指定してアプリケーションを起動:
+.4DLink ファイルを指定してアプリケーションを起動:
 
 *   macOS:
 
 
 ```bash
-open ~/Desktop/4D.app MyDatabase.4DLink
+open ~/Desktop/4D.app ~/Desktop/MyDatabase.4DLink
 ```
 
 ```bash
-open "~/Desktop/4D Server.app" MyDatabase.4DLink
+open "~/Desktop/4D Server.app" ~/Desktop/MyDatabase.4DLink
 ```
 
 *   Windows:
 
 
 ```bash
-%HOMEPATH%\Desktop\4D.exe MyDatabase.4DLink
+%HOMEPATH%\Desktop\4D.exe %HOMEPATH%\Desktop\MyDatabase.4DLink
 ```
 
 ```bash
-%HOMEPATH%\Desktop\4D Server.exe" MyDatabase.4DLink
+%HOMEPATH%\Desktop\4D Server.exe" %HOMEPATH%\Desktop\MyDatabase.4DLink
 ```
 
-.4DLink ファイルを指定してアプリケーションを起動:
+アプリケーションをコンパイルモードで起動し、データファイルが利用できない場合には作成する:
 
 *   macOS:
 
@@ -152,7 +152,7 @@ open ~/Desktop/4D.app ~/Documents/myBase.4dbase --args --opening-mode compiled -
 %HOMEPATH%\Desktop\4D\4D.exe %HOMEPATH%\Documents\myBase.4dbase\myDB.4db --opening-mode compiled --create-data true
 ```
 
-アプリケーションをコンパイルモードで起動し、データファイルが利用できない場合には作成する:
+プロジェクトファイルとデータファイルを指定してアプリケーションを起動し、ユーザー引数として文字列を渡す:
 
 *   macOS:
 
@@ -168,7 +168,7 @@ open ~/Desktop/4D.app --args --project ~/Documents/myProj/Project/myProj.4DProje
 %HOMEPATH%\Desktop\4D\4D.exe --project %HOMEPATH%\Documents\myProj\Project\myProj.4DProject --data %HOMEPATH%\Documents\data\myData.4DD --user-param "Hello world"
 ```
 
-プロジェクトファイルとデータファイルを指定してアプリケーションを起動し、ユーザー引数として文字列を渡す:
+インターフェースなしのアプリケーションを起動する (ヘッドレスモード):
 
 *   macOS:
 
