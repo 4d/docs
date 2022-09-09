@@ -400,7 +400,7 @@ Cette propriété est en **lecture seule**.
 | dossierDestination | 4D.Folder | -> | Dossier de destination                             |
 | nouveauNom         | Text      | -> | Nom de la copie                                    |
 | overwrite          | Integer   | -> | `fk overwrite` pour écraser les éléments existants |
-| Result             | 4D.Folder | <- | Dossier copié|<!-- END REF -->
+| Résultat           | 4D.Folder | <- | Dossier copié|<!-- END REF -->
 
 |
 
@@ -453,7 +453,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 | Paramètres | Type    |    | Description                                                       |
 | ---------- | ------- | -- | ----------------------------------------------------------------- |
 | path       | Text    | -> | Chemin POSIX relatif                                              |
-| Result     | 4D.File | <- | Objet `File` (null si chemin invalide)|<!-- END REF -->
+| Résultat   | 4D.File | <- | Objet `File` (null si chemin invalide)|<!-- END REF -->
 
 |
 
@@ -492,10 +492,10 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 
 <!-- REF #directory.files().Params -->
-| Paramètres | Type        |    | Description                                                   |
-| ---------- | ----------- | -- | ------------------------------------------------------------- |
-| options    | Integer     | -> | Options de liste de fichiers                                  |
-| Result     | Collections | <- | Collection d'objets dossier enfant|<!-- END REF -->
+| Paramètres | Type       |    | Description                                                   |
+| ---------- | ---------- | -- | ------------------------------------------------------------- |
+| options    | Integer    | -> | Options de liste de fichiers                                  |
+| Résultat   | Collection | <- | Collection d'objets dossier enfant|<!-- END REF -->
 
 |
 
@@ -559,7 +559,7 @@ Vous souhaitez lire tous les fichiers qui ne sont pas invisibles dans le dossier
 | Paramètres | Type      |    | Description                                                        |
 | ---------- | --------- | -- | ------------------------------------------------------------------ |
 | path       | Text      | -> | Chemin POSIX relatif                                               |
-| Result     | 4D.Folder | <- | Objet dossier (null si *path* invalide)|<!-- END REF -->
+| Résultat   | 4D.Folder | <- | Objet dossier (null si *path* invalide)|<!-- END REF -->
 
 |
 
@@ -598,10 +598,10 @@ Un objet `Folder` object ou null si *path* est invalide.
 
 
 <!-- REF #directory.folders().Params -->
-| Paramètres | Type        |    | Description                                                   |
-| ---------- | ----------- | -- | ------------------------------------------------------------- |
-| options    | Integer     | -> | Options de liste des dossiers                                 |
-| Result     | Collections | <- | Collection d'objets dossier enfant|<!-- END REF -->
+| Paramètres | Type       |    | Description                                                   |
+| ---------- | ---------- | -- | ------------------------------------------------------------- |
+| options    | Integer    | -> | Options de liste des dossiers                                 |
+| Résultat   | Collection | <- | Collection d'objets dossier enfant|<!-- END REF -->
 
 |
 
@@ -650,7 +650,7 @@ Vous souhaitez obtenir la collection de tous les dossiers et sous-dossiers du do
 | Paramètres | Type    |    | Description                                    |
 | ---------- | ------- | -- | ---------------------------------------------- |
 | size       | Integer | -> | Longueur du côté de l'image retournée (pixels) |
-| Result     | Images  | <- | Icône|<!-- END REF -->
+| Résultat   | Images  | <- | Icône|<!-- END REF -->
 
 |
 
