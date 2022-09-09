@@ -112,7 +112,7 @@ Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised
 | ---------- | ------ | -- | --------------------------------------------------------------------------------- |
 | message    | Text   | -> | Chaine message à déchiffrer à l'aide de `options.encodingEncrypted` et decrypted. |
 | options    | Object | -> | Options de décodage                                                               |
-| Result     | Object | <- | Statut|<!-- END REF -->                                                 |
+| Résultat   | Object | <- | Statut|<!-- END REF -->                                                 |
 
 The `.decrypt()` function <!-- REF #CryptoKey.decrypt().Summary -->decrypts the *message* parameter using the **private** key<!-- END REF -->. L'algorithme utilisé dépend du type de clé.
 
@@ -126,7 +126,7 @@ La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](http
 | encodingEncrypted | text | Chiffrement utilisé pour convertir le paramètre `message` en représentation binaire à déchiffrer. Peut être "Base64" ou "Base64URL". La valeur par défaut est "Base64". |
 | encodingDecrypted | text | Encodage utilisé pour convertir le message binaire déchiffré en chaîne de résultat. Peut être "UTF-8", "Base64" ou "Base64URL". La valeur par défaut est "UTF-8".       |
 
-#### *Result*
+#### *Résultat*
 
 La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](https://tools.ietf.org/html/rfc3447)).
 
@@ -159,7 +159,7 @@ La fonction renvoie un objet "status" avec la propriété `success` définie sur
 | ---------- | ------ | -- | -------------------------------------------------------------------------------------------- |
 | message    | Text   | -> | Chaine message à chiffrer à l'aide de `options.encodingDecrypted` et encrypted.              |
 | options    | Object | -> | Options de chiffrement                                                                       |
-| Result     | Text   | <- | Message chiffré et encodé à l'aide de `options.encodingEncrypted`|<!-- END REF --> |
+| Résultat   | Text   | <- | Message chiffré et encodé à l'aide de `options.encodingEncrypted`|<!-- END REF --> |
 
 The `.encrypt()` function <!-- REF #CryptoKey.encrypt().Summary -->encrypts the *message* parameter using the **public** key<!-- END REF -->. L'algorithme utilisé dépend du type de clé.
 
@@ -173,7 +173,7 @@ La clé doit être une clé RSA, l'algorithme est RSA-OAEP (voir [RFC 3447](http
 | encodingEncrypted | text | Chiffrement utilisé pour convertir le message chiffré binaire en chaîne de résultat. Peut être "Base64" ou "Base64URL". La valeur par défaut est "Base64".                    |
 | encodingDecrypted | text | Chiffrement utilisé pour convertir le paramètre `message` en représentation binaire à chiffrer. Peut être "UTF-8", "Base64" ou "Base64URL". La valeur par défaut est "UTF-8". |
 
-#### *Result*
+#### *Résultat*
 
 La valeur retournée est un message chiffré.
 <!-- END REF -->
@@ -196,11 +196,11 @@ La valeur retournée est un message chiffré.
 <!-- REF #CryptoKey.getPrivateKey().Params -->
 | Paramètres | Type |    | Description                                           |
 | ---------- | ---- | -- | ----------------------------------------------------- |
-| Result     | Text | <- | Clé primaire au format PEM|<!-- END REF --> |
+| Résultat   | Text | <- | Clé primaire au format PEM|<!-- END REF --> |
 
 The `.getPrivateKey()` function  <!-- REF #CryptoKey.getPrivateKey().Summary -->returns the private key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
 
-#### *Result*
+#### *Résultat*
 
 La valeur retournée est la clé privée.
 <!-- END REF -->
@@ -223,11 +223,11 @@ La valeur retournée est la clé privée.
 <!-- REF #CryptoKey.getPublicKey().Params -->
 | Paramètres | Type |    | Description                                           |
 | ---------- | ---- | -- | ----------------------------------------------------- |
-| Result     | Text | <- | Clé publique au format PEM|<!-- END REF --> |
+| Résultat   | Text | <- | Clé publique au format PEM|<!-- END REF --> |
 
 The `.getPublicKey()` function <!-- REF #CryptoKey.getPublicKey().Summary -->returns the public key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
 
-#### *Result*
+#### *Résultat*
 
 La valeur retournée est la clé publique.
 <!-- END REF -->
@@ -269,7 +269,7 @@ La valeur retournée est la clé publique.
 | ---------- | ------ | -- | ---------------------------------------------------------------------------------------------------------- |
 | message    | Text   | -> | Chaîne message à signer                                                                                    |
 | options    | Object | -> | Options de signature                                                                                       |
-| Result     | Text   | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option|<!-- END REF --> |
+| Résultat   | Text   | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option|<!-- END REF --> |
 
 The `.sign()` function <!-- REF #CryptoKey.sign().Summary -->signs the utf8 representation of a *message* string<!-- END REF --> using the `CryptoKey` object keys and provided *options*. Elle retourne sa signature au format base64 ou base64URL, selon la valeur de l'attribut `options.encoding` que vous avez passé.
 
@@ -284,7 +284,7 @@ The `.sign()` function <!-- REF #CryptoKey.sign().Summary -->signs the utf8 repr
 | pss               | boolean | Utilise le Probabilistic Signature Scheme (PSS). Ignoré si la clé n'est pas une clé RSA. Passez `true` lors de la production d'un JWT pour l'algorithme PS@                                                            |
 | encoding          | text    | Représentation à utiliser pour la signature. Valeurs possibles : "Base64" ou "Base64URL". La valeur par défaut est "Base64".                                                                                           |
 
-#### *Result*
+#### *Résultat*
 
 `CryptoKey` doit contenir une clé **privée** valide.
 <!-- END REF -->
@@ -350,7 +350,7 @@ The <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "ECDSA", "
 | message    | Text   | -> | Chaîne message utilisée pour générer la signature                                               |
 | signature  | Text   | -> | Signature à vérifier, en représentation Base64 ou Base64URL, selon la valeur `options.encoding` |
 | options    | Object | -> | Options de signature                                                                            |
-| Result     | Object | <- | Statut de la vérification|<!-- END REF -->                                            |
+| Résultat   | Object | <- | Statut de la vérification|<!-- END REF -->                                            |
 
 
 The `.verify()` function <!-- REF #CryptoKey.verify().Summary -->verifies the base64 signature against the utf8 representation of *message*<!-- END REF --> using the `CryptoKey` object keys and provided *options*.
@@ -365,7 +365,7 @@ La fonction `.verify()` <!-- REF #CryptoKey.verify().Summary -->vérifie la sign
 | pss       | boolean | Utilise le Probabilistic Signature Scheme (PSS). Ignoré si la clé n'est pas une clé RSA. Passez `true` lors de la vérification d'un JWT pour l'algorithme PS@                                                          |
 | encoding  | text    | Représentation de la signature fournie. Valeurs possibles : "Base64" ou "Base64URL". La valeur par défaut est "Base64".                                                                                                |
 
-#### *Result*
+#### *Résultat*
 
 `CryptoKey` doit contenir une clé **publique** valide.
 
