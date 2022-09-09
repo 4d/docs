@@ -24,7 +24,7 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 | [Images](Concepts/dt_picture.md)             | Oui                           | Oui                           | `C_PICTURE`, `ARRAY PICTURE` |
 | [BLOB](Concepts/dt_blob.md)                  | Oui                           | Oui                           | `C_BLOB`, `ARRAY BLOB`       |
 | [Object](Concepts/dt_object.md)              | Oui                           | Oui                           | `C_OBJECT`, `ARRAY OBJECT`   |
-| [Collections](Concepts/dt_collection.md)     | -                             | Oui                           | `C_COLLECTION`               |
+| [Collection](Concepts/dt_collection.md)      | -                             | Oui                           | `C_COLLECTION`               |
 | [Variant](Concepts/dt_variant.md)(2)         | -                             | Oui                           | `C_VARIANT`                  |
 
 (1) A noter que ORDA gère les champs de la base via des objets (entités). Par conséquent, seuls les types de données disponibles pour ces objets sont pris en charge. Pour plus d'informations, veuillez vous reporter à la description du type [Objet](Concepts/dt_object.md).
@@ -47,20 +47,20 @@ La valeur par défaut dépend du type et de la catégorie de la variable, du con
 
 Le tableau suivant illustre ces valeurs par défaut :
 
-| Type        | Interprocess/Process (interprété/compilé), Local (interprété/compilé "à zéro") | Local compilé "aberrant" | Local compilé "non"         |
-| ----------- | ------------------------------------------------------------------------------ | ------------------------ | --------------------------- |
-| Booléen     | False                                                                          | Vrai                     | True (varie)                |
-| Date        | 00-00-00                                                                       | 00-00-00                 | 00-00-00                    |
-| Longint     | 0                                                                              | 1919382119               | 909540880 (varie)           |
-| Heure       | 00:00:00                                                                       | 533161:41:59             | 249345:34:24 (varie)        |
-| Images      | picture size=0                                                                 | picture size=0           | picture size=0              |
-| Real        | 0                                                                              | 1.250753659382e+243      | 1.972748538022e-217 (varie) |
-| Pointeurs   | Nil=true                                                                       | Nil=true                 | Nil=true                    |
-| Text        | ""                                                                             | ""                       | ""                          |
-| Blob        | Blob size=0                                                                    | Blob size=0              | Blob size=0                 |
-| Object      | Null                                                                           | Null                     | Null                        |
-| Collections | Null                                                                           | Null                     | Null                        |
-| Variant     | undefined                                                                      | undefined                | undefined                   |
+| Type       | Interprocess/Process (interprété/compilé), Local (interprété/compilé "à zéro") | Local compilé "aberrant" | Local compilé "non"         |
+| ---------- | ------------------------------------------------------------------------------ | ------------------------ | --------------------------- |
+| Booléen    | False                                                                          | Vrai                     | True (varie)                |
+| Date       | 00-00-00                                                                       | 00-00-00                 | 00-00-00                    |
+| Longint    | 0                                                                              | 1919382119               | 909540880 (varie)           |
+| Heure      | 00:00:00                                                                       | 533161:41:59             | 249345:34:24 (varie)        |
+| Images     | picture size=0                                                                 | picture size=0           | picture size=0              |
+| Real       | 0                                                                              | 1.250753659382e+243      | 1.972748538022e-217 (varie) |
+| Pointeurs  | Nil=true                                                                       | Nil=true                 | Nil=true                    |
+| Text       | ""                                                                             | ""                       | ""                          |
+| Blob       | Blob size=0                                                                    | Blob size=0              | Blob size=0                 |
+| Object     | Null                                                                           | Null                     | Null                        |
+| Collection | Null                                                                           | Null                     | Null                        |
+| Variant    | undefined                                                                      | undefined                | undefined                   |
 
 
 ## Convertir les types de données
