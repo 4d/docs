@@ -420,7 +420,7 @@ Cette propriété est en **lecture seule**.
 | dossierDestination | 4D.Folder | -> | Dossier de destination                             |
 | nouveauNom         | Text      | -> | Nom de la copie                                    |
 | overwrite          | Integer   | -> | `fk overwrite` pour écraser les éléments existants |
-| Result             | 4D.File   | <- | Fichier copié|<!-- END REF -->           |
+| Résultat           | 4D.File   | <- | Fichier copié|<!-- END REF -->           |
 
 #### Description
 
@@ -472,7 +472,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 <!-- REF #document.getContent().Params -->
 | Paramètres | Type    |    | Description                                   |
 | ---------- | ------- | -- | --------------------------------------------- |
-| Result     | 4D.Blob | <- | Contenu du fichier|<!-- END REF --> |
+| Résultat   | 4D.Blob | <- | Contenu du fichier|<!-- END REF --> |
 
 #### Description
 
@@ -516,7 +516,7 @@ Pour sauvegarder le contenu d'un document dans un champ `BLOB` :
 | Paramètres | Type    |    | Description                                    |
 | ---------- | ------- | -- | ---------------------------------------------- |
 | size       | Integer | -> | Longueur du côté de l'image retournée (pixels) |
-| Result     | Images  | <- | Icône|<!-- END REF -->               |
+| Résultat   | Images  | <- | Icône|<!-- END REF -->               |
 
 #### Description
 
@@ -553,7 +553,7 @@ Si le fichier n'existe pas sur disque, une icône par défaut vide est retourné
 | charSetName | Text    | -> | Nom du jeu de caractères                     |
 | charSetNum  | Integer | -> | Numéro du jeu de caractères                  |
 | breakMode   | Integer | -> | Mode de traitement des retours à la ligne    |
-| Result      | Text    | <- | Texte du document|<!-- END REF --> |
+| Résultat    | Text    | <- | Texte du document|<!-- END REF --> |
 
 #### Description
 
