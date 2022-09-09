@@ -71,7 +71,7 @@ Leurs propriétés et fonctions sont les suivantes :
 | Paramètres | Type         |    | Description                                                       |
 | ---------- | ------------ | -- | ----------------------------------------------------------------- |
 | option     | Integer      | -> | Serveur Web à référencer (défaut si omis = `Web server database`) |
-| Result     | 4D.WebServer | <- | Objet Serveur Web                                                 |
+| Résultat   | 4D.WebServer | <- | Objet Serveur Web                                                 |
 
 
 <!-- END REF -->
@@ -115,9 +115,9 @@ L'objet Web server retourné contient les valeurs courantes des propriétés du 
 
 <!-- REF #_command_.WEB Server list.Params -->
 
-| Paramètres | Type        |    | Description                                  |
-| ---------- | ----------- | -- | -------------------------------------------- |
-| Result     | Collections | <- | Collection des objets Web server disponibles |
+| Paramètres | Type       |    | Description                                  |
+| ---------- | ---------- | -- | -------------------------------------------- |
+| Résultat   | Collection | <- | Collection des objets Web server disponibles |
 
 
 <!-- END REF -->
@@ -722,7 +722,7 @@ The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->Validation d'
 | Paramètres | Type   |    | Description                            |
 | ---------- | ------ | -- | -------------------------------------- |
 | settings   | Object | -> | Paramètres du serveur web au démarrage |
-| Result     | Object | <- | État du démarrage du serveur web       |
+| Résultat   | Object | <- | État du démarrage du serveur web       |
 
 
 <!-- END REF -->
@@ -739,13 +739,13 @@ Pour arrêter le serveur Web de la base :
 
 La fonction retourne un objet décrivant le statut démarré du serveur Web. Cet objet peut avoir les propriétés suivantes :
 
-| Propriété |                         | Type        | Description                                                               |
-| --------- | ----------------------- | ----------- | ------------------------------------------------------------------------- |
-| success   |                         | Boolean     | Vrai si le serveur web a été correctement démarré, sinon Faux             |
-| errors    |                         | Collections | Pile d'erreurs 4D (non retournée si le serveur web a démarré avec succès) |
-|           | \[].errCode            | Number      | Code d'erreur 4D                                                          |
-|           | \[].message            | Text        | Description de l'erreur 4D                                                |
-|           | \[].componentSignature | Text        | Signature du composant interne qui a retourné l'erreur                    |
+| Propriété |                         | Type       | Description                                                               |
+| --------- | ----------------------- | ---------- | ------------------------------------------------------------------------- |
+| success   |                         | Boolean    | Vrai si le serveur web a été correctement démarré, sinon Faux             |
+| errors    |                         | Collection | Pile d'erreurs 4D (non retournée si le serveur web a démarré avec succès) |
+|           | \[].errCode            | Number     | Code d'erreur 4D                                                          |
+|           | \[].message            | Text       | Description de l'erreur 4D                                                |
+|           | \[].componentSignature | Text       | Signature du composant interne qui a retourné l'erreur                    |
 > Si le serveur Web a déjà été lancé, une erreur est générée.
 
 #### Exemple
