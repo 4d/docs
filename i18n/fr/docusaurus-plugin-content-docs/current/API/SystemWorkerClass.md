@@ -545,7 +545,7 @@ Cette propriété est en **lecture seule**.
 | Paramètres | Type            |    | Description                                    |
 | ---------- | --------------- |:--:| ---------------------------------------------- |
 | timeout    | Real            | -> | Temps d'attente (en secondes)                  |
-| Result     | 4D.SystemWorker | <- | SystemWorker object|<!-- END REF -->
+| Résultat   | 4D.SystemWorker | <- | SystemWorker object|<!-- END REF -->
 
 |
 
