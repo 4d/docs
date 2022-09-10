@@ -53,7 +53,7 @@ Un [Datastore](ORDA/dsMapping.md#datastore) es el objeto de interfaz suministrad
 
 #### Descripción
 
-The `ds` command <!-- REF #_command_.ds.Summary -->returns a reference to the datastore matching the current 4D database or the database designated by *localID*<!-- END REF -->.
+El comando `ds` <!-- REF #_command_.ds.Summary -->devuelve una referencia al almacén de datos que coincide con la base de datos 4D actual o con la base de datos designada por *localID*<!-- END REF -->.
 
 Si se omite el parámetro *localID* (o se pasa una cadena vacía ""), el comando devuelve una referencia al almacén de datos que coincide con la base de datos local de 4D (o la base de datos de 4D Server en caso de abrir una base de datos remota en 4D Server). El almacén de datos se abre automáticamente y está disponible directamente a través de `ds`.
 
@@ -122,7 +122,7 @@ Utilizando el almacén de datos principal de la base 4D:
 
 #### Descripción
 
-The `Open datastore` command <!-- REF #_command_.Open datastore.Summary -->connects the application to the 4D database identified by the *connectionInfo* parameter<!-- END REF --> and returns a matching `cs.DataStore` object associated with the *localID* local alias.
+El comando `Open datastore` <!-- REF #_command_.Open datastore.Summary -->conecta la aplicación a la base de datos 4D identificada por el parámetro *connectionInfo*<!-- END REF --> y devuelve un objeto `cs.DataStore` coincidente asociado al alias local *localID*.
 
 La base de datos *connectionInfo* 4D debe estar disponible como almacén de datos remoto, es decir:
 
@@ -220,7 +220,7 @@ En caso de error, el comando devuelve **Null**. Si no se puede acceder al almac�
 
 #### Descripción
 
-Cada clase de datos de un almacén de datos está disponible como una propiedad del objeto [DataStore](ORDA/dsMapping.md#datastore)data. The returned object <!-- REF DataStoreClass.dataclassName.Summary -->contains a description of the dataclass<!-- END REF -->.
+Cada clase de datos de un almacén de datos está disponible como una propiedad del objeto [DataStore](ORDA/dsMapping.md#datastore)data. El objeto devuelto <!-- REF DataStoreClass.dataclassName.Summary -->contiene una descripción de la dataclass<!-- END REF -->.
 
 #### Ejemplo
 
@@ -260,7 +260,7 @@ Cada clase de datos de un almacén de datos está disponible como una propiedad 
 
 #### Descripción
 
-The `.cancelTransaction()` function <!-- REF #DataStoreClass.cancelTransaction().Summary -->cancels the transaction<!-- END REF --> opened by the [`.startTransaction()`](#starttransaction) function at the corresponding level in the current process for the specified datastore.
+La función `.cancelTransaction()` <!-- REF #DataStoreClass.cancelTransaction().Summary -->cancela la transacción<!-- END REF --> abierto por la función [`.startTransaction()`](#starttransaction) en el nivel correspondiente del proceso actual para el almacén de datos especificado.
 
 La función `.cancelTransaction()` cancela cualquier cambio realizado en los datos durante la transacción.
 
@@ -295,11 +295,11 @@ Ver el ejemplo de la función [`.startTransaction()`](#starttransaction).
 
 #### Descripción
 
-The `.clearAllRemoteContexts()` function <!-- REF #DataStoreClass.clearAllRemoteContexts().Summary -->clears all the attributes for all the active contexts in the datastore<!-- END REF -->.
+La función `.clearAllRemoteContexts()` <!-- REF #DataStoreClass.clearAllRemoteContexts().Summary -->borra todos los atributos de todos los contextos activos en el almacén de datos<!-- END REF -->.
 
-Esta función se utiliza principalmente en el contexto de la depuración. One thing to keep in mind is that when you open the debugger, it sends requests to the server and queries all the dataclass attributes to display them. Esto puede sobrecargar sus contextos con datos innecesarios.
+Esta función se utiliza principalmente en el contexto de la depuración. Una cosa a tener en cuenta es que cuando se abre el depurador, éste envía peticiones al servidor y consulta todos los atributos de la clase de datos para mostrarlos. Esto puede sobrecargar sus contextos con datos innecesarios.
 
-In such cases, you can use `.clearAllRemoteContexts()` to clear your contexts and keep them clean.
+En estos casos, puede utilizar `.clearAllRemoteContexts()` para reinicializar sus contextos.
 
 #### Ver también
 
@@ -328,7 +328,7 @@ In such cases, you can use `.clearAllRemoteContexts()` to clear your contexts an
 
 #### Descripción
 
-The `.encryptionStatus()` function <!-- REF #DataStoreClass.encryptionStatus().Summary -->returns an object providing the encryption status for the current data file<!-- END REF --> (i.e., the data file of the `ds` datastore). También se proporciona el estado de cada tabla.
+La función `.encryptionStatus()` <!-- REF #DataStoreClass.encryptionStatus().Summary -->devuelve un objeto que indica el estado de encriptación del archivo de datos actual<!-- END REF --> (es decir, el archivo de datos del almacén de datos `ds`). También se proporciona el estado de cada tabla.
 > Utilice el comando `Data file encryption status` para determinar el estado de encriptación de cualquier otro archivo de datos.
 
 **Valor devuelto**
@@ -405,15 +405,15 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 
 #### Descripción
 
-The `.getAllRemoteContexts()` function <!-- REF #DataStoreClass.getAllRemoteContexts().Summary -->returns a collection of objects containing information on all the active optimization contexts in the datastore<!-- END REF -->.
+La función `.getAllRemoteContexts()` <!-- REF #DataStoreClass.getAllRemoteContexts().Summary -->devuelve una colección de objetos que contienen información sobre todos los contextos de optimización de activos en el almacén de datos<!-- END REF -->.
 
-> For more information on how contexts can be created, see [client/server optimization](../ORDA/remoteDatastores.md#clientserver-optimization).
+> Para más información sobre cómo se pueden crear contextos, ver [client/server optimization](../ORDA/remoteDatastores.md#clientserver-optimization).
 
-Each object in the returned collection has the properties listed in the [`.getRemoteContextInfo()`](#properties-of-the-returned-object) section.
+Cada objeto de la colección devuelta contiene las propiedades listadas en la sección.[`.getRemoteContextInfo()`](#properties-of-the-returned-object).
 
 #### Ejemplo
 
-The following code sets up two contexts and retrieves them using `.getAllRemoteContexts()`:
+El siguiente código define dos contextos y los recupera utilizando `.getAllRemoteContexts()`:
 
 ```4d
 var $ds : 4D.DataStoreImplementation
@@ -471,9 +471,9 @@ $info:=$ds.getAllRemoteContexts()
 
 
 <!-- REF #DataStoreClass.getInfo().Params -->
-| Parámetros | Type   |    | Descripción                                     |
-| ---------- | ------ |:--:| ----------------------------------------------- |
-| Result     | Object | <- | Datastore properties|<!-- END REF -->
+| Parámetros | Type   |    | Descripción                                                 |
+| ---------- | ------ |:--:| ----------------------------------------------------------- |
+| Result     | Object | <- | Propiedades del almacén de datos|<!-- END REF -->
 
 |
 
@@ -540,10 +540,10 @@ En un almacén de datos remoto:
 
 
 <!-- REF #DataStoreClass.getRemoteContextInfo().Params -->
-| Parámetros  | Type   |    | Descripción                                                        |
-| ----------- | ------ | -- | ------------------------------------------------------------------ |
-| contextName | Text   | -> | Nombre del contexto                                                |
-| Result      | Object | <- | Description of the optimization context|<!-- END REF -->
+| Parámetros  | Type   |    | Descripción                                                         |
+| ----------- | ------ | -- | ------------------------------------------------------------------- |
+| contextName | Text   | -> | Nombre del contexto                                                 |
+| Result      | Object | <- | Descripción del contexto de optimización|<!-- END REF -->
 
 |
 
@@ -551,22 +551,22 @@ En un almacén de datos remoto:
 
 #### Descripción
 
-The `.getRemoteContextInfo()` function <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> returns an object that holds information on the *contextName* optimization context in the datastore.<!-- END REF -->.
+La función `.getRemoteContextInfo()` <!-- REF #DataStoreClass.getRemoteContextInfo().Summary --> devuelve un objeto que contiene información sobre el contexto de optimización *contextName* en el datastore.<!-- END REF -->.
 
-For more information on how optimization contexts can be created, see [client/server optimization](../ORDA/remoteDatastores.md#clientserver-optimization).
+Para más información sobre cómo se pueden crear contextos de optimización, ver [Optimización cliente/servidor](../ORDA/remoteDatastores.md#clientserver-optimization).
 
 #### Objeto devuelto
 
 El objeto devuelto tiene las siguientes propiedades:
 
-| Propiedad              | Type | Descripción                                                                                                                                                                                                                                                                   |
-| ---------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name                   | Text | Nombre del contexto                                                                                                                                                                                                                                                           |
-| main                   | Text | Attribute(s) associated to the context (attribute names are separated by a comma)                                                                                                                                                                                             |
-| dataclass              | Text | Nombre de la clase de datos                                                                                                                                                                                                                                                   |
-| currentItem (opcional) | Text | The attributes of the [page mode](../ORDA/remoteDatastores.md#entity-selection-based-list-box) if the context is linked to a list box. Returned as `Null` or empty text element if the context name is not used for a list box, or if there is no context for the currentItem |
+| Propiedad              | Type | Descripción                                                                                                                                                                                                                                                                                                      |
+| ---------------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| name                   | Text | Nombre del contexto                                                                                                                                                                                                                                                                                              |
+| main                   | Text | Atributo(s) asociado(s) al contexto (los nombres de atributos están separados por comas)                                                                                                                                                                                                                         |
+| dataclass              | Text | Nombre de la clase de datos                                                                                                                                                                                                                                                                                      |
+| currentItem (opcional) | Text | Los atributos del [modo página](../ORDA/remoteDatastores.md#entity-selection-based-list-box) si el contexto está vinculado a un list box. Se devuelve como `Null` o elemento de texto vacío si el nombre del contexto no se utiliza para un list box, o si no hay contexto para el elemento actual (currentItem) |
 
-Since contexts behave as filters for attributes, if *main* is returned empty, it means that no filter is applied, and that the server returns all the dataclass attributes.
+Como los contextos se comportan como filtros de atributos, si *main* se devuelve vacío, significa que no se aplica ningún filtro, y que el servidor devuelve todos los atributos de la dataclass.
 
 #### Ejemplo
 
@@ -591,15 +591,15 @@ Ver el ejemplo de la sección [.setRemoteContextInfo()](#example-1-3).
 
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
-| Parámetros | Type       |    | Descripción                                                                             |
-| ---------- | ---------- |:--:| --------------------------------------------------------------------------------------- |
-| Result     | Collection | <- | Collection of objects, where each object describes a request|<!-- END REF -->
+| Parámetros | Type       |    | Descripción                                                                              |
+| ---------- | ---------- |:--:| ---------------------------------------------------------------------------------------- |
+| Result     | Collection | <- | Colección de objetos, donde cada objeto describe una petición|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.getRequestLog()` function <!-- REF #DataStoreClass.getRequestLog().Summary -->returns the ORDA requests logged in memory on the client side<!-- END REF -->. .
+La función `.getRequestLog()` <!-- REF #DataStoreClass.getRequestLog().Summary -->devuelve las peticiones ORDA registradas en memoria del lado del cliente<!-- END REF -->. .
 
 Esta función debe ser llamada en un 4D remoto, de lo contrario devuelve una colección vacía. Está diseñado para fines de depuración en configuraciones cliente/servidor.
 
@@ -638,7 +638,7 @@ Ver el ejemplo 2 de [`.startRequestLog()`](#startrequestlog).
 
 #### Descripción
 
-The `.isAdminProtected()` function <!-- REF #DataStoreClass.isAdminProtected().Summary -->returns `True` if [Data Explorer](Admin/dataExplorer.md) access has been disabled for the working session<!-- END REF -->.
+La función `.isAdminProtected()` <!-- REF #DataStoreClass.isAdminProtected().Summary -->devuelve `True` si el acceso al [Explorador de Datos](Admin/dataExplorer.md) se ha deshabilitado para la sesión de trabajo<!-- END REF -->.
 
 Por defecto, el acceso al Explorador de Datos se concede para las sesiones `webAdmin`, pero se puede desactivar para evitar cualquier acceso a los datos por parte de los administradores (ver la función [`.setAdminProtection()`](#setadminprotection)).
 
@@ -671,7 +671,7 @@ Por defecto, el acceso al Explorador de Datos se concede para las sesiones `webA
 
 #### Descripción
 
-The `.makeSelectionsAlterable()` function <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->sets all entity selections as alterable by default in the current application datastores<!-- END REF --> (including [remote datastores](ORDA/remoteDatastores.md)). Está pensado para ser utilizado una vez, por ejemplo en el método base `On Startup`.
+La función `.makeSelectionsAlterable()` <!-- REF #DataStoreClass.makeSelectionsAlterable().Summary -->define todas las selecciones de entidades como alterables por defecto en los almacenes de datos de la aplicación actual<!-- END REF --> (incluyendo [datastores remotas](ORDA/remoteDatastores.md)). Está pensado para ser utilizado una vez, por ejemplo en el método base `On Startup`.
 
 Cuando no se llama a esta función, las nuevas selecciones de entidades pueden ser compartibles, dependiendo de la naturaleza de su "padre", o de [cómo se crean](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
