@@ -228,7 +228,7 @@ Le résultat est une collection de chaînes, par exemple :
 ]
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Projection d'entité liée :
 
@@ -306,7 +306,7 @@ Une erreur est générée si *entity* et l'entity selection ne sont pas liées �
  $employees.add($employee) //L'entité $employee est ajoutée à l'entity selection $employees
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Les appels vers la fonction peuvent être chaînés :
 
@@ -378,7 +378,7 @@ Si l'entity selection initiale et le paramètre ne sont pas liés à la même da
 ```
 
 
-#### Exemple 3
+#### Exemple 2
 
 Nous voulons obtenir une sélection d'employés nommés "Jones" qui vivent à New York :
 
@@ -1166,7 +1166,7 @@ Si l'entity selection est vide, la fonction renvoie Null.
 
 #### Description
 
-The `.length` property <!-- REF #EntitySelectionClass.length.Summary -->returns the number of entities in the entity selection<!-- END REF -->. Si l'entity selection est vide, elle contient 0.
+La propriété `.length` <!-- REF #EntitySelectionClass.length.Summary -->returns the number of entities in the entity selection<!-- END REF -->. Si l'entity selection est vide, elle contient 0.
 
 Les entity selections ont toujours une propriété `.length`.
 
@@ -1208,7 +1208,7 @@ Les entity selections ont toujours une propriété `.length`.
 
 #### Description
 
-The `.max()` function <!-- REF #EntitySelectionClass.max().Summary -->returns the highest (or maximum) value among all the values of *attributePath* in the entity selection<!-- END REF -->. Autrement dit, elle retourne la valeur de la dernière entité de la sélection si elle était triée par ordre croissant avec la fonction [`.orderBy()`](#orderby).
+La fonction `.max()` <!-- REF #EntitySelectionClass.max().Summary -->returns the highest (or maximum) value among all the values of *attributePath* in the entity selection<!-- END REF -->. Autrement dit, elle retourne la valeur de la dernière entité de la sélection si elle était triée par ordre croissant avec la fonction [`.orderBy()`](#orderby).
 
 Si vous passez dans *attributePath* le chemin d'un attribut objet contenant des valeurs de différents types, la fonction `.max()` retournera la valeur maximale du premier type de valeur scalaire dans l'ordre par défaut de la liste des types 4D (voir [`.sort()`](CollectionClass.md#sort)).
 
@@ -1262,7 +1262,7 @@ Nous souhaitons connaître le salaire le plus élevé parmi les employées :
 
 #### Description
 
-The `.min()` function <!-- REF #EntitySelectionClass.min().Summary --> returns the lowest (or minimum) value among all the values of attributePath in the entity selection<!-- END REF -->.  Autrement dit, elle retourne la valeur de la première entité de la sélection si elle était triée par ordre croissant avec la fonction [`.orderBy()`](#orderby) (hors valeurs **Null**).
+La fonction `min()` <!-- REF #EntitySelectionClass.min().Summary --> returns the lowest (or minimum) value among all the values of attributePath in the entity selection<!-- END REF -->.  Autrement dit, elle retourne la valeur de la première entité de la sélection si elle était triée par ordre croissant avec la fonction [`.orderBy()`](#orderby) (hors valeurs **Null**).
 
 Si vous passez dans *attributePath* le chemin d'un attribut objet contenant des valeurs de différents types, la fonction `.min()` retournera la valeur minimale du premier type de valeur scalaire dans l'ordre par défaut de la liste des types 4D (voir [`.sort()`](CollectionClass.md#sort)).
 
@@ -1342,7 +1342,7 @@ Si l'entity selection initiale et le paramètre ne sont pas liés à la même da
 ```
 
 
-#### Exemple 3
+#### Exemple 2
 
 Vous voulez avoir une sélection d'employées nommées "Jones" qui vivent à New York :
 
@@ -1403,7 +1403,7 @@ Si l'entity selection initiale et le paramètre ne sont pas liés à la même da
  $result:=$employees1.or($employees2) //$result contient "Colin Hetrick", "Grady Harness","Cath Kidston"
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 ```4d
  var $employees; $result : cs.EmployeeSelection
@@ -1443,7 +1443,7 @@ Si l'entity selection initiale et le paramètre ne sont pas liés à la même da
 
 #### Description
 
-The `.orderBy()` function <!-- REF #EntitySelectionClass.orderBy().Summary -->The `.orderBy()` function<!-- END REF -->.
+La fonction `.orderBy()` <!-- REF #EntitySelectionClass.orderBy().Summary -->The `.orderBy()` function<!-- END REF -->.
 > * Cette fonction ne modifie pas l'entity selection d'origine.
 *   Pour plus d'informations, reportez-vous au paragraphe [Entity selections triées ou non triées](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 
@@ -1566,7 +1566,7 @@ Pour effectuer le même tri dans le même ordre, mais à l'aide d'un objet formu
 ```
 
 
-#### Exemple 3
+#### Exemple 2
 
 Une formule est donnée sous forme d'objet formule avec des paramètres; l'objet `settings.args` est reçu dans $1 dans la méthode ***computeAverage***.
 
@@ -1645,7 +1645,7 @@ Dans cet exemple, le champ objet "marks" de la dataclass **Students** contient l
 
 #### Description
 
-The `.query()` function <!-- REF #EntitySelectionClass.query().Summary -->The `.query()` function<!-- END REF -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection Le mode lazy loading est appliqué.
+La fonction `.query()` <!-- REF #EntitySelectionClass.query().Summary -->The `.query()` function<!-- END REF -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s) among all the entities in the entity selection Le mode lazy loading est appliqué.
 > Les entités d'une collection d'entités auxquelles on accède via [ ] ne sont pas rechargées depuis la base de données.
 
 Si aucune entité correspondante n'est trouvée, une `EntitySelection` vide est retournée.
@@ -1664,7 +1664,7 @@ Si aucune entité correspondante n'est trouvée, une `EntitySelection` vide est 
 ```
 
 
-#### Exemple 3
+#### Exemple 2
 
 Pour plus d'informations sur la génération d'une requête à l'aide des paramètres *queryString*, *value*, et *querySettings*, reportez-vous à la description de la fonction de dataclass [`.query()`](DataClassClass.md#query).
 
@@ -1777,7 +1777,7 @@ Dans cet exemple, les langages classiques et ORDA modifient simultanément les m
 ```
 
 
-#### Exemple 3
+#### Exemple 2
 
 Dans cet exemple, les langages classiques et ORDA modifient simultanément les mêmes données :
 
@@ -1893,7 +1893,7 @@ $result2:=$invoices.selected($creditSel)
 
 #### Description
 
-The `.slice()` function <!-- REF #EntitySelectionClass.slice().Summary -->returns a portion of an entity selection into a new entity selection<!-- END REF -->, selected from the *startFrom* index to the *end* index (*end* is not included) or to the last entity of the entity selection. Cette fonction effectue une shallow copy (copie superficielle) de l'entity selection (les mêmes références d'entités sont utilisées).
+La fonction `slice()` <!-- REF #EntitySelectionClass.slice().Summary -->returns a portion of an entity selection into a new entity selection<!-- END REF -->, selected from the *startFrom* index to the *end* index (*end* is not included) or to the last entity of the entity selection. Cette fonction effectue une shallow copy (copie superficielle) de l'entity selection (les mêmes références d'entités sont utilisées).
 > Les entités d'une collection d'entités auxquelles on accède via [ ] ne sont pas rechargées depuis la base de données.
 
 If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the entity selection). If the calculated value < 0, *startFrom* is set to 0.
@@ -1916,7 +1916,7 @@ $sliced:=$sel.slice(0;9)
 ```
 
 
-#### Exemple 3
+#### Exemple 2
 
 Vous souhaitez obtenir une sous-sélection des 9 premières entités de l'entity selection :
 
@@ -1955,7 +1955,7 @@ $slice:=ds.Employee.all().slice(-1;-2) //tente de retourner les entités de posi
 #### Description
 
 
-The `.sum()` function <!-- REF #EntitySelectionClass.sum().Summary -->The `.sum()` function<!-- END REF -->.
+La fonction `.sum()` <!-- REF #EntitySelectionClass.sum().Summary -->The `.sum()` function<!-- END REF -->.
 
 La fonction `.sum()` <!-- REF #EntitySelectionClass.sum().Summary -->retourne la somme de toutes les valeurs d'*attributePath* dans l'entity selection<!-- END REF -->.
 
@@ -2110,7 +2110,7 @@ Retourne :
 ]
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Retourne :
 
