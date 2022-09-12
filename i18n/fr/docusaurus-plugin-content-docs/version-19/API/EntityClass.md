@@ -205,7 +205,7 @@ $diff2:
 ]
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 ```4d
  var vCompareResult1; vCompareResult2; vCompareResult3; $attributesToInspect : Collection
@@ -396,7 +396,7 @@ Exemple sans option `dk force drop if stamp changed` :
  End case
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Même exemple avec l'option `dk force drop if stamp changed` :
 
@@ -932,7 +932,7 @@ Exemple avec erreur :
  End case
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Exemple avec option `dk reload if stamp changed` :
 
@@ -1187,7 +1187,7 @@ Création d'une entité :
  End if
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Mise à jour d'une entité sans option `dk auto merge` :
 
@@ -1318,7 +1318,7 @@ Retourne :
 }
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Extraction de la clé primaire et du stamp :
 
@@ -1603,7 +1603,7 @@ Si aucun attribut de l'entité n'a été touché, la fonction retourne une colle
   //$touchedAttributes: ["firstName","lastName"]
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 ```4d
  var $touchedAttributes : Collection
@@ -1660,7 +1660,7 @@ The `.unlock()` function <!-- REF #EntityClass.unlock().Summary -->removes the p
 > Pour plus d'informations, veuillez consulter la section [Verrouillage d'une entité](ORDA/entities.md#verrouillage-d-une-entite).
 
 Un enregistrement est automatiquement déverrouillé lorsqu'il n'est plus référencé par aucune entité dans le process qui l'a verrouillé (par exemple : si le verrou est posé sur uniquement sur une référence locale d'une entité, l'entité et donc l'enregistrement sont déverrouillés lorsque le process se termine).
-> Lorsqu'un enregistrement est verrouillé, il doit être déverrouillé depuis le process qui l'a verrouillé et via la référence d'entité sur laquelle le verrou a été posé.
+> Lorsqu'un enregistrement est verrouillé, il doit être déverrouillé depuis le process qui l'a verrouillé et via la référence d'entité sur laquelle le verrou a été posé. Par exemple :
 
 ```4d
  $e1:=ds.Emp.all()[0]
