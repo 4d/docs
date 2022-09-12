@@ -176,7 +176,7 @@ var $created : Boolean
 $created:=Folder("/PACKAGE/SpecialPrefs").create()
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Création d'un dossier "/Archives2019/January/" dans le dossier principal :
 
