@@ -417,7 +417,7 @@ $transporter:=SMTP New transporter($server)
 $status:=$transporter.send($mail)
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Dans cet exemple, vous envoyez directement un document 4D Write Pro contenant des images :
 
