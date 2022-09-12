@@ -402,7 +402,7 @@ Pour copier une sélection de messages :
  $status:=$transporter.copy($mailIds;"documents")
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Pour copier tous les messages de la boîte de réception courante :
 
@@ -581,7 +581,7 @@ Pour supprimer une sélection de messages :
  $status:=$transporter.delete($mailIds)
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Pour supprimer tous les messages de la boîte de réception courante :
 
@@ -1250,7 +1250,7 @@ Pour déplacer une sélection de messages :
  $status:=$transporter.move(IMAP all;"documents")
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Pour déplacer tous les messages de la boîte de réception courante :
 
@@ -1540,7 +1540,7 @@ End if
 
 The `.searchMails()` function <!-- REF #IMAPTransporterClass.searchMails().Summary -->searches for messages that match the given *searchCriteria* in the current mailbox<!-- END REF -->. .
 
-*searchCriteria* est un paramètre texte listant un ou plusieurs critères de recherche (voir [Mots-clés de recherche autorisés](#mots-cles-de-recherche-autorises) ci-dessous) associés ou non à des valeurs à rechercher. Un critère de recherche peut être composé d'un ou plusieurs éléments.
+*searchCriteria* est un paramètre texte listant un ou plusieurs critères de recherche (voir [Mots-clés de recherche autorisés](#mots-cles-de-recherche-autorises) ci-dessous) associés ou non à des valeurs à rechercher. Un critère de recherche peut être composé d'un ou plusieurs éléments. Par exemple :
 
 ```
 SearchKey1 = FLAGGED
