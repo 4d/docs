@@ -122,7 +122,7 @@ Vous pouvez lancer cette requête :
 
 **POST** `127.0.0.1:8111/rest/$catalog/getName`
 
-#### Result
+#### Résultat
 
 ```
 {
@@ -152,7 +152,7 @@ Vous pouvez lancer cette requête :
 
 Requête : ["Paris"]
 
-#### Result
+#### Résultat
 
 Le résultat est une entité :
 
@@ -197,7 +197,7 @@ Vous pouvez lancer cette requête :
 
 **POST** `127.0.0.1:8111/rest/City(2)/getPopulation`
 
-#### Result
+#### Résultat
 
 ```
 {
@@ -222,7 +222,7 @@ Vous pouvez lancer cette requête :
 
 **POST** `127.0.0.1:8111/rest/City/getPopulation/?$filter="ID<3"`
 
-#### Result
+#### Résultat
 
 ```
 {
@@ -254,7 +254,7 @@ Une fois que vous avez créé un ensemble d'entité, vous pouvez lancer cette re
 
 **POST** `127.0.0.1:8044/rest/Students/getAgeAverage/$entityset/17E83633FFB54ECDBF947E5C620BB532`
 
-#### Result
+#### Résultat
 
 ```
 {
@@ -284,7 +284,7 @@ Vous pouvez lancer cette requête :
 
 **POST** `127.0.0.1:8044/rest/Students/getLastSummary/$entityset/?$filter="lastname=b@"&$orderby="lastname"`
 
-#### Result
+#### Résultat
 
 ```
 {
@@ -336,7 +336,7 @@ Corps de la requête :
 
 Si aucune `__KEY` n'est donnée, une nouvelle entité Students est chargée sur le serveur **avec les attributs du client**. Parce que la fonction `pushData()` exécute une action `save()`, la nouvelle entité est créée.
 
-#### Result
+#### Résultat
 
 ```
 {
@@ -374,7 +374,7 @@ Corps de la requête :
 
 Si aucune `__KEY` n'est donnée, l'entité Students est chargée avec la clé primaire 55 **avec la valeur lastname reçue par le client**. Parce que la fonction exécute une action `save()`, la nouvelle entité est mise à jour.
 
-#### Result
+#### Résultat
 
 ```
 {
@@ -411,7 +411,7 @@ Corps de la requête :
 }]
 ```
 
-#### Result
+#### Résultat
 
 ```
 {
@@ -465,7 +465,7 @@ You run this request, called on a Students entity : **POST** `http://127.0.0.1:8
 }]
 ```
 
-#### Result
+#### Résultat
 
 ```
 {
@@ -531,7 +531,7 @@ Corps de la requête :
 
 ```
 
-#### Result
+#### Résultat
 
 Les entités ayant les clés primaires sont 1 et 2 ont été mises à jour.
 

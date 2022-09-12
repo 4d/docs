@@ -24,7 +24,7 @@ Bien qu'ils soient généralement équivalents, certains types de données de la
 | [Images](Concepts/dt_picture.md)             | Oui                           | Oui                           | `Images`                                                | `C_PICTURE`, `ARRAY PICTURE`                                     |
 | [BLOB](Concepts/dt_blob.md)                  | Oui                           | Oui                           | `Blob`, `4D.Blob`                                       | `C_BLOB`, `ARRAY BLOB`                                           |
 | [Object](Concepts/dt_object.md)              | Oui                           | Oui                           | `Object`                                                | `C_OBJECT`, `ARRAY OBJECT`                                       |
-| [Collections](Concepts/dt_collection.md)     | -                             | Oui                           | `Collections`                                           | `C_COLLECTION`                                                   |
+| [Collection](Concepts/dt_collection.md)      | -                             | Oui                           | `Collection`                                            | `C_COLLECTION`                                                   |
 | [Variant](Concepts/dt_variant.md)(2)         | -                             | Oui                           | `Variant`                                               | `C_VARIANT`                                                      |
 
 (1) A noter que ORDA gère les champs de la base via des objets (entités). Par conséquent, seuls les types de données disponibles pour ces objets sont pris en charge. Pour plus d'informations, veuillez vous reporter à la description du type [Objet](Concepts/dt_object.md).
@@ -37,20 +37,20 @@ Au moment de leur typage via une directive de compilation, les variables reçoiv
 
 La valeur par défaut dépend du type de variable :
 
-| Type        | La valeur par défaut |
-| ----------- | -------------------- |
-| Booléen     | False                |
-| Date        | 00-00-00             |
-| Longint     | 0                    |
-| Heure       | 00:00:00             |
-| Images      | picture size=0       |
-| Real        | 0                    |
-| Pointeurs   | Nil=true             |
-| Text        | ""                   |
-| Blob        | Blob size=0          |
-| Object      | Null                 |
-| Collections | Null                 |
-| Variant     | undefined            |
+| Type       | La valeur par défaut |
+| ---------- | -------------------- |
+| Booléen    | False                |
+| Date       | 00-00-00             |
+| Longint    | 0                    |
+| Heure      | 00:00:00             |
+| Images     | picture size=0       |
+| Real       | 0                    |
+| Pointeurs  | Nil=true             |
+| Text       | ""                   |
+| Blob       | Blob size=0          |
+| Object     | Null                 |
+| Collection | Null                 |
+| Variant    | undefined            |
 
 
 ## Convertir les types de données

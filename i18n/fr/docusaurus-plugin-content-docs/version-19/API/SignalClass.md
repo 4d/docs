@@ -104,7 +104,7 @@ Méthode ***OpenForm*** :
 | Paramètres  | Type      |    | Description                                             |
 | ----------- | --------- |:--:| ------------------------------------------------------- |
 | Description | Text      | -> | Description du signal                                   |
-| Result      | 4D.Signal | <- | Object encapsulant le signal|<!-- END REF -->
+| Résultat    | 4D.Signal | <- | Object encapsulant le signal|<!-- END REF -->
 
 |
 
@@ -247,7 +247,7 @@ Si le signal est déjà dans l'état signaled (i.e., la propriété `signaled` e
 | Paramètres | Type    |    | Description                                                 |
 | ---------- | ------- | -- | ----------------------------------------------------------- |
 | timeout    | Real    | -> | Délai d'attente maximum du signal en secondes               |
-| Result     | Boolean | <- | Etat de la propriété `.signaled`|<!-- END REF -->
+| Résultat   | Boolean | <- | Etat de la propriété `.signaled`|<!-- END REF -->
 
 |
 

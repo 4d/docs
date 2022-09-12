@@ -23,7 +23,7 @@ An [object](Concepts/dt_object.md) encapsulating a [collection](../Concepts/dt_c
 
 | Propriété      | Type                   | Description                                                                                                                                                                                                                                             |
 | -------------- | ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `values`       | Collections            | Obligatoire - Collection de valeurs scalaires. All values must be of the same type. Supported types:<li>chaînes</li><li>nombres</li><li>dates</li><li>times</li>If empty or not defined, the combo box is empty |
+| `values`       | Collection             | Obligatoire - Collection de valeurs scalaires. All values must be of the same type. Supported types:<li>chaînes</li><li>nombres</li><li>dates</li><li>times</li>If empty or not defined, the combo box is empty |
 | `currentValue` | identique à Collection | Text entered by the user                                                                                                                                                                                                                                |
 
 If the object contains other properties, they are ignored.

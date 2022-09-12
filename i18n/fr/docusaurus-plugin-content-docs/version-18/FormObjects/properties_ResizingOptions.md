@@ -48,7 +48,7 @@ Cette propriété indique si la taille horizontale d'un objet doit être déplac
 
 Trois options sont disponibles :
 
-| Option      | Valeur JSON | Result                                                                                                                                                |
+| Option      | Valeur JSON | Résultat                                                                                                                                              |
 | ----------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Agrandir    | "grow"      | Le même pourcentage est appliqué à la largeur de l'objet lorsque l'utilisateur redimensionne la largeur de la fenêtre,                                |
 | Déplacement | "move"      | L'objet est déplacé vers la gauche ou vers la droite selon l'augmentation de la largeur lorsque l'utilisateur redimensionne la largeur de la fenêtre, |
@@ -73,7 +73,7 @@ Cette propriété indique si la taille verticale d'un objet doit être déplacé
 
 Trois options sont disponibles :
 
-| Option      | Valeur JSON | Result                                                                                                                                           |
+| Option      | Valeur JSON | Résultat                                                                                                                                         |
 | ----------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Agrandir    | "grow"      | Le même pourcentage est appliqué à la hauteur de l'objet lorsque l'utilisateur redimensionne la largeur de la fenêtre,                           |
 | Déplacement | "move"      | L'objet est déplacé vers le haut ou vers le bas selon l'augmentation de la hauteur lorsque l'utilisateur redimensionne la largeur de la fenêtre, |

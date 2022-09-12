@@ -56,7 +56,7 @@ IMAP Transporter オブジェクトは [IMP New transporter](#imap-new-transport
 
 
 <!-- REF #_command_.IMAP New transporter.Params -->
-| 引数     | タイプ                |    | 詳細                                                                             |
+| 引数     | タイプ                |    | 説明                                                                             |
 | ------ | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server | Object             | -> | メールサーバー情報                                                                      |
 | 戻り値    | 4D.IMAPTransporter | <- | [IMAP transporter object](#imap-transporter-object)|<!-- END REF -->
@@ -65,7 +65,7 @@ IMAP Transporter オブジェクトは [IMP New transporter](#imap-new-transport
 |
 
 
-#### 詳細
+#### 説明
 
 The `IMAP New transporter` command <!-- REF #_command_.IMAP New transporter.Summary -->configures a new IMAP connection<!-- END REF --> according to the *server* parameter and returns a new *transporter* object. 返された transporter オブジェクトは、通常メールの受信に使用されます。
 
@@ -115,14 +115,14 @@ End if
 
 
 <!-- REF #4D.IMAPTransporter.new().Params -->
-| 引数     | タイプ                |    | 詳細                                                                             |
+| 引数     | タイプ                |    | 説明                                                                             |
 | ------ | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server | Object             | -> | メールサーバー情報                                                                      |
 | 戻り値    | 4D.IMAPTransporter | <- | [IMAP transporter object](#imap-transporter-object)|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `4D.IMAPTransporter.new()` function <!-- REF #4D.IMAPTransporter.new().Summary -->creates and returns a new object of the `4D.IMAPTransporter` type<!-- END REF -->。 .
 
@@ -143,7 +143,7 @@ The `4D.IMAPTransporter.new()` function <!-- REF #4D.IMAPTransporter.new().Summa
 
 
 <!-- REF #IMAPTransporterClass.addFlags().Params -->
-| 引数       | タイプ        |    | 詳細                                                                                                          |
+| 引数       | タイプ        |    | 説明                                                                                                          |
 | -------- | ---------- |:--:| ----------------------------------------------------------------------------------------------------------- |
 | msgIDs   | Collection | -> | 文字列のコレクション: メッセージの固有ID (テキスト型)<br/> テキスト: メッセージの固有ID<br/> 倍長整数 (IMAP all): 選択されたメールボックス内の全メッセージ |
 | keywords | Object     | -> | 追加するキーワードフラグ                                                                                                |
@@ -151,7 +151,7 @@ The `4D.IMAPTransporter.new()` function <!-- REF #4D.IMAPTransporter.new().Summa
 
 |
 
-#### 詳細
+#### 説明
 
 The `.addFlags()` function <!-- REF #IMAPTransporterClass.addFlags().Summary -->adds flags to the `msgIDs` for the specified `keywords`<!-- END REF -->。
 
@@ -161,19 +161,19 @@ The `.addFlags()` function <!-- REF #IMAPTransporterClass.addFlags().Summary -->
 * 単一のメッセージの固有ID (*テキスト*)
 * 以下の定数 (*longint*) を使用することで、選択されているメールボックスの全メッセージを指定することができます:
 
- | 定数       | Value | 説明                        |
- | -------- | ----- | ------------------------- |
- | IMAP all | 1     | 選択されたメールボックスの全メッセージを選択します |
+ | 定数       | 値 | 説明                        |
+ | -------- | - | ------------------------- |
+ | IMAP all | 1 | 選択されたメールボックスの全メッセージを選択します |
 
 `keywords` には、`msgIDs` 引数で指定したメッセージに対して追加するフラグのキーワード値を格納したオブジェクトを渡します。 次のキーワードを渡すことができます:
 
-| 引数        | タイプ | 詳細                                            |
-| --------- | --- | --------------------------------------------- |
-| $draft    | ブール | メッセージに "draft" フラグを追加するには true                |
-| $seen     | ブール | メッセージに "seen" フラグを追加するには true                 |
-| $flagged  | ブール | True to add the "flagged" flag to the message |
-| $answered | ブール | メッセージに "answered" フラグを追加するには true             |
-| $deleted  | ブール | メッセージに "deleted" フラグを追加するには true              |
+| 引数        | タイプ     | 説明                                            |
+| --------- | ------- | --------------------------------------------- |
+| $draft    | Boolean | メッセージに "draft" フラグを追加するには true                |
+| $seen     | Boolean | メッセージに "seen" フラグを追加するには true                 |
+| $flagged  | Boolean | True to add the "flagged" flag to the message |
+| $answered | Boolean | メッセージに "answered" フラグを追加するには true             |
+| $deleted  | Boolean | メッセージに "deleted" フラグを追加するには true              |
 > * false値は無視されます。
 > * キーワードフラグの解釈は、メールクライアントごとに異なる可能性があります。
 
@@ -181,14 +181,14 @@ The `.addFlags()` function <!-- REF #IMAPTransporterClass.addFlags().Summary -->
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 詳細                                                 |
+| プロパティ      |                         | タイプ        | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
-| success    |                         | ブール        | 処理が正常に終わった場合には true、それ以外は false                    |
-| statusText |                         | テキスト       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
+| success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
+| statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
 | errors     |                         | Collection | 4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)          |
 |            | \[].errcode            | 数値         | 4Dエラーコード                                           |
-|            | \[].message            | テキスト       | 4Dエラーの詳細                                           |
-|            | \[].componentSignature | テキスト       | エラーを返した内部コンポーネントの署名                                |
+|            | \[].message            | Text       | 4Dエラーの詳細                                           |
+|            | \[].componentSignature | Text       | エラーを返した内部コンポーネントの署名                                |
 
 #### 例題
 
@@ -230,16 +230,16 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 
 <!-- REF #IMAPTransporterClass.append().Params -->
-| 引数             | タイプ    |    | 詳細                                        |
+| 引数             | タイプ    |    | 説明                                        |
 | -------------- | ------ |:--:| ----------------------------------------- |
 | mailObj        | Object | -> | Email オブジェクト                              |
-| destinationBox | テキスト   | -> | Emailオブジェクトを受信するメールボックス                   |
+| destinationBox | Text   | -> | Emailオブジェクトを受信するメールボックス                   |
 | options        | Object | -> | 文字セット情報を格納したオブジェクト                        |
 | 戻り値            | Object | <- | append処理のステータス|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.append()` function <!-- REF #IMAPTransporterClass.append().Summary -->appends a `mailObj` to the `destinationBox`<!-- END REF -->。
 
@@ -249,14 +249,14 @@ The `.append()` function <!-- REF #IMAPTransporterClass.append().Summary -->appe
 
 任意の `options` には、メールの特定部分の文字セットやエンコーディングを定義するオブジェクトを渡すことができます。 次のプロパティを含みます:
 
-| プロパティ         | タイプ  | 詳細                                                                                |
+| プロパティ         | タイプ  | 説明                                                                                |
 | ------------- | ---- | --------------------------------------------------------------------------------- |
-| headerCharset | テキスト | メールの以下の部分で使用される文字セットとエンコーディング: 件名、添付ファイル名、メール名の属性。 取り得る値: 以下の可能な文字セットテーブルを参照ください。 |
-| bodyCharset   | テキスト | メールの HTML およびテキスト本文コンテンツで使用される文字セットとエンコーディング。 取り得る値: 以下の可能な文字セットテーブルを参照ください。      |
+| headerCharset | Text | メールの以下の部分で使用される文字セットとエンコーディング: 件名、添付ファイル名、メール名の属性。 取り得る値: 以下の可能な文字セットテーブルを参照ください。 |
+| bodyCharset   | Text | メールの HTML およびテキスト本文コンテンツで使用される文字セットとエンコーディング。 取り得る値: 以下の可能な文字セットテーブルを参照ください。      |
 
 使用可能な文字セット:
 
-| 定数                       | Value                          | 説明                                                                                       |
+| 定数                       | 値                              | 説明                                                                                       |
 | ------------------------ | ------------------------------ | ---------------------------------------------------------------------------------------- |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>headerCharset: 可能なら US-ASCII 、次に可能なら Japanese (ISO-2022-JP) &amp; Quoted-printable 、それも不可なら UTF-8 &amp; Quoted-printable</li><li>bodyCharset: 可能なら US-ASCII、次に可能なら Japanese (ISO-2022-JP) &amp; 7-bit、それも不可なら UTF-8 &amp; Quoted-printable</li></ul>                                                                |
 | mail mode ISO88591       | ISO-8859-1                     | <ul><li>headerCharset: ISO-8859-1 &amp; Quoted-printable</li><li>bodyCharset: ISO-8859-1 &amp; 8-bit</li></ul>                                                                |
@@ -267,14 +267,14 @@ The `.append()` function <!-- REF #IMAPTransporterClass.append().Summary -->appe
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 詳細                                                 |
+| プロパティ      |                         | タイプ        | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
-| success    |                         | ブール        | 処理が正常に終わった場合には true、それ以外は false                    |
-| statusText |                         | テキスト       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
+| success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
+| statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
 | errors     |                         | Collection | 4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)          |
 |            | \[].errcode            | 数値         | 4Dエラーコード                                           |
-|            | \[].message            | テキスト       | 4Dエラーの詳細                                           |
-|            | \[].componentSignature | テキスト       | エラーを返した内部コンポーネントの署名                                |
+|            | \[].message            | Text       | 4Dエラーの詳細                                           |
+|            | \[].componentSignature | Text       | エラーを返した内部コンポーネントの署名                                |
 
 #### 例題
 
@@ -318,7 +318,7 @@ $status:=$imap.append($msg; "Drafts")
 
 <!-- REF #IMAPTransporterClass.checkConnectionDelay.Syntax -->**.checkConnectionDelay** : Integer<!-- END REF -->
 
-#### 詳細
+#### 説明
 
 The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.checkConnectionDelay.Summary -->the maximum time (in seconds) allowed prior to checking the connection to the server<!-- END REF -->。  関数呼び出しの間隔がこの時間を超過する場合、サーバー接続が確認されます。 プロパティが *server* オブジェクトによって設定されていない場合は、デフォルトで 300 という値が使用されます。
 > **警告**: 定義されたタイムアウトが、サーバータイムアウトより短いようにしてください。そうでない場合、クライアントタイムアウトは無意味になります。
@@ -342,18 +342,18 @@ The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.che
 
 
 <!-- REF #IMAPTransporterClass.copy().Params -->
-| 引数             | タイプ        |    | 詳細                                      |
+| 引数             | タイプ        |    | 説明                                      |
 | -------------- | ---------- |:--:| --------------------------------------- |
 | msgsIDs        | Collection | -> | メッセージの固有ID のコレクション (テキスト)               |
-| allMsgs        | 整数         | -> | `IMAP all`: 選択されたメールボックスの全メッセージ         |
-| destinationBox | テキスト       | -> | メッセージのコピー先のメールボックス                      |
+| allMsgs        | Integer    | -> | `IMAP all`: 選択されたメールボックスの全メッセージ         |
+| destinationBox | Text       | -> | メッセージのコピー先のメールボックス                      |
 | 戻り値            | Object     | <- | copy処理のステータス|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
-The `.copy()` function <!-- REF #IMAPTransporterClass.copy().Summary -->The `.getMails()` function<!-- END REF -->。
+`.copy()` 関数は、 <!-- REF #IMAPTransporterClass.copy().Summary -->The `.getMails()` function<!-- END REF -->。
 
 以下のものを渡すことができます:
 
@@ -366,14 +366,14 @@ The `.copy()` function <!-- REF #IMAPTransporterClass.copy().Summary -->The `.ge
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 詳細                                                 |
+| プロパティ      |                         | タイプ        | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
-| success    |                         | ブール        | 処理が正常に終わった場合には true、それ以外は false                    |
-| statusText |                         | テキスト       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
+| success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
+| statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
 | errors     |                         | Collection | 4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)          |
 |            | \[].errcode            | 数値         | 4Dエラーコード                                           |
-|            | \[].message            | テキスト       | 4Dエラーの詳細                                           |
-|            | \[].componentSignature | テキスト       | エラーを返した内部コンポーネントの署名                                |
+|            | \[].message            | Text       | 4Dエラーの詳細                                           |
+|            | \[].componentSignature | Text       | エラーを返した内部コンポーネントの署名                                |
 
 #### 例題 1
 
@@ -442,14 +442,14 @@ The `.copy()` function <!-- REF #IMAPTransporterClass.copy().Summary -->The `.ge
 
 
 <!-- REF #IMAPTransporterClass.createBox().Params -->
-| 引数   | タイプ    |    | 詳細                                                                  |
+| 引数   | タイプ    |    | 説明                                                                  |
 | ---- | ------ |:--:| ------------------------------------------------------------------- |
-| name | テキスト   | -> | 新規メールボックスの名称                                                        |
+| name | Text   | -> | 新規メールボックスの名称                                                        |
 | 戻り値  | Object | <- | Status of the mailbox creation operation|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.createBox()` function <!-- REF #IMAPTransporterClass.createBox().Summary -->creates a mailbox with the given `name`<!-- END REF -->。 IMAPサーバーの階層区切り文字がメールボックス名内に含まれる場合、IMAPサーバーは指定のメールボックスを作成するのに必要な親階層を作成します。
 
@@ -465,14 +465,14 @@ The `.createBox()` function <!-- REF #IMAPTransporterClass.createBox().Summary -
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 詳細                                                 |
+| プロパティ      |                         | タイプ        | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
-| success    |                         | ブール        | 処理が正常に終わった場合には true、それ以外は false                    |
-| statusText |                         | テキスト       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
+| success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
+| statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
 | errors     |                         | Collection | 4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)          |
 |            | \[].errcode            | 数値         | 4Dエラーコード                                           |
-|            | \[].message            | テキスト       | 4Dエラーの詳細                                           |
-|            | \[].componentSignature | テキスト       | エラーを返した内部コンポーネントの署名                                |
+|            | \[].message            | Text       | 4Dエラーの詳細                                           |
+|            | \[].componentSignature | Text       | エラーを返した内部コンポーネントの署名                                |
 
 #### 例題
 
@@ -519,15 +519,15 @@ End if
 
 
 <!-- REF #IMAPTransporterClass.delete().Params -->
-| 引数      | タイプ        |    | 詳細                                                        |
+| 引数      | タイプ        |    | 説明                                                        |
 | ------- | ---------- |:--:| --------------------------------------------------------- |
 | msgsIDs | Collection | -> | メッセージの固有ID のコレクション (テキスト)                                 |
-| allMsgs | 整数         | -> | `IMAP all`: 選択されたメールボックスの全メッセージ                           |
+| allMsgs | Integer    | -> | `IMAP all`: 選択されたメールボックスの全メッセージ                           |
 | 戻り値     | Object     | <- | Status of the delete operation|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.delete()` function <!-- REF #IMAPTransporterClass.delete().Summary -->The `.removeFlags()` function<!-- END REF -->。
 
@@ -542,14 +542,14 @@ The `.delete()` function <!-- REF #IMAPTransporterClass.delete().Summary -->The 
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 詳細                                                 |
+| プロパティ      |                         | タイプ        | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
-| success    |                         | ブール        | 処理が正常に終わった場合には true、それ以外は false                    |
-| statusText |                         | テキスト       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
+| success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
+| statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
 | errors     |                         | Collection | 4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)          |
 |            | \[].errcode            | 数値         | 4Dエラーコード                                           |
-|            | \[].message            | テキスト       | 4Dエラーの詳細                                           |
-|            | \[].componentSignature | テキスト       | エラーを返した内部コンポーネントの署名                                |
+|            | \[].message            | Text       | 4Dエラーの詳細                                           |
+|            | \[].componentSignature | Text       | エラーを返した内部コンポーネントの署名                                |
 
 #### 例題 1
 
@@ -618,13 +618,13 @@ The `.delete()` function <!-- REF #IMAPTransporterClass.delete().Summary -->The 
 
 
 <!-- REF #IMAPTransporterClass.deleteBox().Params -->
-| 引数   | タイプ  |    | 詳細             |
+| 引数   | タイプ  |    | 説明             |
 | ---- | ---- |:--:| -------------- |
-| name | テキスト | -> | 削除するメールボックスの名称 |
+| name | Text | -> | 削除するメールボックスの名称 |
 
 |Result|Object|<-|Status of the mailbox deletion operation|<!-- END REF -->
 
-#### 詳細
+#### 説明
 
 The `.deleteBox()` function <!-- REF #IMAPTransporterClass.deleteBox().Summary -->permanently removes the mailbox with the given `name` from the IMAP server<!-- END REF -->。 存在しないメールボックス、または INBOX を削除しようとして場合には、エラーが生成されます。
 
@@ -637,14 +637,14 @@ The `.deleteBox()` function <!-- REF #IMAPTransporterClass.deleteBox().Summary -
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 詳細                                                 |
+| プロパティ      |                         | タイプ        | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
-| success    |                         | ブール        | 処理が正常に終わった場合には true、それ以外は false                    |
-| statusText |                         | テキスト       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
+| success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
+| statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
 | errors     |                         | Collection | 4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)          |
 |            | \[].errcode            | 数値         | 4Dエラーコード                                           |
-|            | \[].message            | テキスト       | 4Dエラーの詳細                                           |
-|            | \[].componentSignature | テキスト       | エラーを返した内部コンポーネントの署名                                |
+|            | \[].message            | Text       | 4Dエラーの詳細                                           |
+|            | \[].componentSignature | Text       | エラーを返した内部コンポーネントの署名                                |
 
 #### 例題
 
@@ -693,13 +693,13 @@ End if
 
 
 <!-- REF IMAPTransporterClass.expunge().Params -->
-| 引数  | タイプ    |    | 詳細                                                          |
+| 引数  | タイプ    |    | 説明                                                          |
 | --- | ------ |:--:| ----------------------------------------------------------- |
 | 戻り値 | Object | <- | Status of the expunge operation |<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.expunge()` function <!-- REF #IMAPTransporterClass.expunge().Summary -->removes all messages with the "deleted" flag from the IMAP mail server.<!-- END REF --> The "deleted" flag can be set with the [`.delete()`](#delete) or [`.addFlags()`](#addflags) methods.
 
@@ -707,14 +707,14 @@ The `.expunge()` function <!-- REF #IMAPTransporterClass.expunge().Summary -->re
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 詳細                                                 |
+| プロパティ      |                         | タイプ        | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
-| success    |                         | ブール        | 処理が正常に終わった場合には true、それ以外は false                    |
-| statusText |                         | テキスト       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
+| success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
+| statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
 | errors     |                         | Collection | 4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)          |
 |            | \[].errcode            | 数値         | 4Dエラーコード                                           |
-|            | \[].message            | テキスト       | 4Dエラーの詳細                                           |
-|            | \[].componentSignature | テキスト       | エラーを返した内部コンポーネントの署名                                |
+|            | \[].message            | Text       | 4Dエラーの詳細                                           |
+|            | \[].componentSignature | Text       | エラーを返した内部コンポーネントの署名                                |
 
 #### 例題
 
@@ -762,14 +762,14 @@ $status:=$transporter.expunge()
 
 
 <!-- REF #IMAPTransporterClass.getBoxInfo().Params -->
-| 引数   | タイプ    |    | 詳細                                        |
+| 引数   | タイプ    |    | 説明                                        |
 | ---- | ------ |:--:| ----------------------------------------- |
-| name | テキスト   | -> | メールボックスの名称                                |
+| name | Text   | -> | メールボックスの名称                                |
 | 戻り値  | Object | <- | boxInfo object|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.getBoxInfo()` function <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->returns a `boxInfo` object corresponding to the current maibox, or the mailbox *name*<!-- END REF -->。 この関数は、[`.selectBox()`](#selectbox) と同じ情報を返しますが、カレントメールボックスは変えません。
 
@@ -781,9 +781,9 @@ The `.getBoxInfo()` function <!-- REF #IMAPTransporterClass.getBoxInfo().Summary
 
 返される `boxInfo` オブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ      | タイプ    | 詳細                                         |
+| プロパティ      | タイプ    | 説明                                         |
 | ---------- | ------ | ------------------------------------------ |
-| name       | text   | メールボックスの名称                                 |
+| name       | テキスト   | メールボックスの名称                                 |
 | mailCount  | number | メールボックス内のメッセージの数                           |
 | mailRecent | number | (新しいメッセージであることを表す) "recent" フラグがついたメッセージの数 |
 
@@ -815,33 +815,33 @@ The `.getBoxInfo()` function <!-- REF #IMAPTransporterClass.getBoxInfo().Summary
 
 
 <!-- REF #IMAPTransporterClass.getBoxList().Params -->
-| 引数         | タイプ        |    | 詳細                                                       |
+| 引数         | タイプ        |    | 説明                                                       |
 | ---------- | ---------- |:--:| -------------------------------------------------------- |
 | parameters | Object     | -> | 引数のオブジェクト                                                |
 | 戻り値        | Collection | <- | Collection of mailbox objects|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.getBoxList()` function <!-- REF #IMAPTransporterClass.getBoxList().Summary -->returns a collection of mailboxes describing all of the available mailboxes<!-- END REF -->。 この関数を使用すると、IMAPメールサーバー上にあるメッセージの一覧をローカルで管理することができるようになります。
 
 任意の `parameters` パラメーターには、返されるメールボックスをフィルターするための値を格納したオブジェクトを渡すことができます。 以下のものを渡すことができます:
 
-| プロパティ        | タイプ | 詳細                                                   |
-| ------------ | --- | ---------------------------------------------------- |
-| isSubscribed | ブール | <li>**True**: 購読しているメールボックスのみを返します。</li><li> **False**: すべての利用可能なメールボックスを返します</li> |
+| プロパティ        | タイプ     | 説明                                                   |
+| ------------ | ------- | ---------------------------------------------------- |
+| isSubscribed | Boolean | <li>**True**: 購読しているメールボックスのみを返します。</li><li> **False**: すべての利用可能なメールボックスを返します</li> |
 
 #### 戻り値
 
 返されるコレクションの各オブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ            | タイプ     | 詳細                                                                          |
-| ---------------- | ------- | --------------------------------------------------------------------------- |
-| \[].name        | text    | メールボックスの名称                                                                  |
-| \[].selectable  | boolean | アクセス権でメールボックスを選択できるかどうかを表します: <ul><li>true - メールボックスは選択可能</li><li>false - メールボックスは選択不可能</li></ul>                     |
-| \[].inferior    | boolean | アクセス権でメールボックス内に下の階層レベルを作成できるかどうかを表します: <ul><li>true - 下の階層レベルは作成可能</li><li>false - 下の階層レベルは作成不可能</li></ul>            |
-| \[].interesting | boolean | サーバーがメールボックスに “interesting” のマーク付けをしているかどうかを表します: <ul><li>true - メールボックスはサーバーから "interesting" のマーク付けをされています。 たとえば、メールボックスには新着メッセージが入っている場合が考えられます。</li><li>false - メールボックスはサーバーから "interesting" のマーク付けをされていません。</li></ul> |
+| プロパティ            | タイプ  | 説明                                                                          |
+| ---------------- | ---- | --------------------------------------------------------------------------- |
+| \[].name        | テキスト | メールボックスの名称                                                                  |
+| \[].selectable  | ブール  | アクセス権でメールボックスを選択できるかどうかを表します: <ul><li>true - メールボックスは選択可能</li><li>false - メールボックスは選択不可能</li></ul>                     |
+| \[].inferior    | ブール  | アクセス権でメールボックス内に下の階層レベルを作成できるかどうかを表します: <ul><li>true - 下の階層レベルは作成可能</li><li>false - 下の階層レベルは作成不可能</li></ul>            |
+| \[].interesting | ブール  | サーバーがメールボックスに “interesting” のマーク付けをしているかどうかを表します: <ul><li>true - メールボックスはサーバーから "interesting" のマーク付けをされています。 たとえば、メールボックスには新着メッセージが入っている場合が考えられます。</li><li>false - メールボックスはサーバーから "interesting" のマーク付けをされていません。</li></ul> |
 
 アカウントにメールボックスが一つもない場合、空のコレクションが返されます。
 > * 開いている接続がない場合、`.getBoxList()` は接続を開きます。
@@ -880,13 +880,13 @@ The `.getBoxList()` function <!-- REF #IMAPTransporterClass.getBoxList().Summary
 
 
 <!-- REF #IMAPTransporterClass.getDelimiter().Params -->
-| 引数  | タイプ  |    | 詳細                                 |
+| 引数  | タイプ  |    | 説明                                 |
 | --- | ---- |:--:| ---------------------------------- |
-| 戻り値 | テキスト | <- | 階層区切り文字|<!-- END REF -->
+| 戻り値 | Text | <- | 階層区切り文字|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.getDelimiter()` function <!-- REF #IMAPTransporterClass.getDelimiter().Summary -->returns the character used to delimit levels of hierarchy in the mailbox name<!-- END REF -->。
 
@@ -934,16 +934,16 @@ The `.getDelimiter()` function <!-- REF #IMAPTransporterClass.getDelimiter().Sum
 
 
 <!-- REF #IMAPTransporterClass.getMail().Params -->
-| 引数        | タイプ    |    | 詳細                                                                          |
-| --------- | ------ |:--:| --------------------------------------------------------------------------- |
-| msgNumber | 整数     | -> | メッセージのシーケンス番号                                                               |
-| msgID     | テキスト   | -> | メッセージの固有ID                                                                  |
-| options   | Object | -> | メッセージ管理オプション                                                                |
-| 戻り値       | Object | <- | [Email object](EmailObjectClass.md#email-object)|<!-- END REF -->
+| 引数        | タイプ     |    | 説明                                                                          |
+| --------- | ------- |:--:| --------------------------------------------------------------------------- |
+| msgNumber | Integer | -> | メッセージのシーケンス番号                                                               |
+| msgID     | Text    | -> | メッセージの固有ID                                                                  |
+| options   | Object  | -> | メッセージ管理オプション                                                                |
+| 戻り値       | Object  | <- | [Email object](EmailObjectClass.md#email-object)|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.getMail()` function <!-- REF #IMAPTransporterClass.getMail().Summary -->returns the `Email` object corresponding to the *msgNumber* or *msgID* in the mailbox designated by the `IMAP_transporter`<!-- END REF -->。 この関すを使用すると、メールのコンテンツをローカルで管理できるようになります。
 
@@ -954,10 +954,10 @@ The `.getMail()` function <!-- REF #IMAPTransporterClass.getMail().Summary -->re
 
 任意の *options* 引数として、メッセージの扱い方を定義する追加のオブジェクトを渡すことができます。 次のプロパティを利用することができます:
 
-| プロパティ      | タイプ     | 詳細                                                                         |
-| ---------- | ------- | -------------------------------------------------------------------------- |
-| updateSeen | boolean | true 時には、メールボックス内でメッセージを "既読" にします。 false 時にはメッセージの状態は変化しません。 デフォルト値: true |
-| withBody   | boolean | true を渡すとメッセージ本文を返します。 false 時には、メッセージヘッダーのみが返されます。 デフォルト値: true           |
+| プロパティ      | タイプ | 説明                                                                         |
+| ---------- | --- | -------------------------------------------------------------------------- |
+| updateSeen | ブール | true 時には、メールボックス内でメッセージを "既読" にします。 false 時にはメッセージの状態は変化しません。 デフォルト値: true |
+| withBody   | ブール | true を渡すとメッセージ本文を返します。 false 時には、メッセージヘッダーのみが返されます。 デフォルト値: true           |
 > * *msgID* 引数が存在しないメッセージを指定した場合、関数はエラーを生成し **Null** を返します。
 > * [`.selectBox()`](#selectbox) によって選択されたメールボックスがない場合、エラーが生成されます。
 > * 開いている接続がない場合、`.getMail()` は [`.selectBox()`](#selectbox) で最後に指定されたメールボックスへの接続を開きます。
@@ -1008,17 +1008,17 @@ ID = 1のメッセージを取得します:
 
 
 <!-- REF #IMAPTransporterClass.getMails().Params -->
-| 引数       | タイプ        |    | 詳細                                                                                   |
+| 引数       | タイプ        |    | 説明                                                                                   |
 | -------- | ---------- |:--:| ------------------------------------------------------------------------------------ |
 | ids      | Collection | -> | メッセージID のコレクション                                                                      |
-| startMsg | 整数         | -> | 先頭メッセージのシーケンス番号                                                                      |
-| endMsg   | 整数         | -> | 最後のメッセージのシーケンス番号                                                                     |
+| startMsg | Integer    | -> | 先頭メッセージのシーケンス番号                                                                      |
+| endMsg   | Integer    | -> | 最後のメッセージのシーケンス番号                                                                     |
 | options  | Object     | -> | メッセージ管理オプション                                                                         |
 | 戻り値      | Object     | <- | 次のコレクションを格納したオブジェクト:<br/><ul><li>[Email オブジェクト](EmailObjectClass.md#email-オブジェクト) のコレクション</li><li>見つからなかったメッセージの ID または番号のコレクション</li></ul>|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.getMIMEAsBlob()` function <!-- REF #IMAPTransporterClass.getMails().Summary -->returns a BLOB containing the MIME contents for the message corresponding to the *msgNumber* or *msgID* in the mailbox designated by the `IMAP_transporter`<!-- END REF -->。
 
@@ -1046,10 +1046,10 @@ The `.getMIMEAsBlob()` function <!-- REF #IMAPTransporterClass.getMails().Summar
 
 **オプション**
 
-| プロパティ      | タイプ | 詳細                                                                     |
-| ---------- | --- | ---------------------------------------------------------------------- |
-| updateSeen | ブール | true 時には、指定されたメッセージを "既読" にします。 false 時にはメッセージの状態は変化しません。 デフォルト値: true |
-| withBody   | ブール | true を渡すと指定されたメッセージの本文を返します。 false 時には、メッセージヘッダーのみが返されます。 デフォルト値: true |
+| プロパティ      | タイプ     | 説明                                                                     |
+| ---------- | ------- | ---------------------------------------------------------------------- |
+| updateSeen | Boolean | true 時には、指定されたメッセージを "既読" にします。 false 時にはメッセージの状態は変化しません。 デフォルト値: true |
+| withBody   | Boolean | true を渡すと指定されたメッセージの本文を返します。 false 時には、メッセージヘッダーのみが返されます。 デフォルト値: true |
 > * [`.selectBox()`](#selectbox) によって選択されたメールボックスがない場合、エラーが生成されます。
 > * 開いている接続がない場合、`.getMails()` は [`.selectBox()`](#selectbox) で最後に指定されたメールボックスへの接続を開きます。
 
@@ -1057,7 +1057,7 @@ The `.getMIMEAsBlob()` function <!-- REF #IMAPTransporterClass.getMails().Summar
 
 `.getMails()` は、以下のコレクションを格納したオブジェクトを返します。
 
-| プロパティ    | タイプ        | 詳細                                                                                                  |
+| プロパティ    | タイプ        | 説明                                                                                                  |
 | -------- | ---------- | --------------------------------------------------------------------------------------------------- |
 | list     | Collection | [`Email`](EmailObjectClass.md#email-オブジェクト) オブジェクトのコレクション。 Email オブジェクトが見つからない場合、空のコレクションが返されます。    |
 | notFound | Collection | 使用したシンタックスによって返されるものが異なります:<br/><ul><li>第一シンタックス - 指定した ID のうち、存在しなかったメッセージの ID</li><li>第二シンタックス - startMsg と endMsg の間の番号のうち、存在しなかったメッセージの番号</li></ul>すべてのメッセージが見つかった場合には、空のコレクションが返されます。 |
@@ -1109,16 +1109,16 @@ The `.getMIMEAsBlob()` function <!-- REF #IMAPTransporterClass.getMails().Summar
 
 
 <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Params -->
-| 引数         | タイプ  |    | 詳細                                                                               |
-| ---------- | ---- |:--:| -------------------------------------------------------------------------------- |
-| msgNumber  | 整数   | -> | メッセージのシーケンス番号                                                                    |
-| msgID      | テキスト | -> | メッセージの固有ID                                                                       |
-| updateSeen | ブール  | -> | true 時には、メールボックス内でメッセージを "既読" にします。 false 時にはメッセージの状態は変化しません。                    |
-| 戻り値        | BLOB | <- | Blob of the MIME string returned from the mail server|<!-- END REF -->
+| 引数         | タイプ     |    | 説明                                                                               |
+| ---------- | ------- |:--:| -------------------------------------------------------------------------------- |
+| msgNumber  | Integer | -> | メッセージのシーケンス番号                                                                    |
+| msgID      | Text    | -> | メッセージの固有ID                                                                       |
+| updateSeen | Boolean | -> | true 時には、メールボックス内でメッセージを "既読" にします。 false 時にはメッセージの状態は変化しません。                    |
+| 戻り値        | BLOB    | <- | Blob of the MIME string returned from the mail server|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.copy()` function <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Summary -->copies the messages defined by *msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->。
 
@@ -1184,16 +1184,16 @@ The `.copy()` function <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Summary --
 
 
 <!-- REF #IMAPTransporterClass.move().Params -->
-| 引数             | タイプ        |    | 詳細                                                      |
+| 引数             | タイプ        |    | 説明                                                      |
 | -------------- | ---------- |:--:| ------------------------------------------------------- |
 | msgsIDs        | Collection | -> | メッセージの固有ID のコレクション (テキスト)                               |
-| allMsgs        | 整数         | -> | `IMAP all`: 選択されたメールボックスの全メッセージ                         |
-| destinationBox | テキスト       | -> | メッセージの移動先のメールボックス                                       |
+| allMsgs        | Integer    | -> | `IMAP all`: 選択されたメールボックスの全メッセージ                         |
+| destinationBox | Text       | -> | メッセージの移動先のメールボックス                                       |
 | 戻り値            | Object     | <- | Status of the move operation|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.move()` function <!-- REF #IMAPTransporterClass.move().Summary -->moves the messages defined by *msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->。
 
@@ -1210,14 +1210,14 @@ The `.move()` function <!-- REF #IMAPTransporterClass.move().Summary -->moves th
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 詳細                                                 |
+| プロパティ      |                         | タイプ        | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
-| success    |                         | ブール        | 処理が正常に終わった場合には true、それ以外は false                    |
-| statusText |                         | テキスト       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
+| success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
+| statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
 | errors     |                         | Collection | 4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)          |
 |            | \[].errcode            | 数値         | 4Dエラーコード                                           |
-|            | \[].message            | テキスト       | 4Dエラーの詳細                                           |
-|            | \[].componentSignature | テキスト       | エラーを返した内部コンポーネントの署名                                |
+|            | \[].message            | Text       | 4Dエラーの詳細                                           |
+|            | \[].componentSignature | Text       | エラーを返した内部コンポーネントの署名                                |
 
 #### 例題 1
 
@@ -1286,15 +1286,15 @@ The `.move()` function <!-- REF #IMAPTransporterClass.move().Summary -->moves th
 
 
 <!-- REF #IMAPTransporterClass.numToID().Params -->
-| 引数       | タイプ        |    | 詳細                                                  |
+| 引数       | タイプ        |    | 説明                                                  |
 | -------- | ---------- |:--:| --------------------------------------------------- |
-| startMsg | 整数         | -> | 先頭メッセージのシーケンス番号                                     |
-| endMsg   | 整数         | -> | 最後のメッセージのシーケンス番号                                    |
+| startMsg | Integer    | -> | 先頭メッセージのシーケンス番号                                     |
+| endMsg   | Integer    | -> | 最後のメッセージのシーケンス番号                                    |
 | 戻り値      | Collection | <- | Collection of unique IDs|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.numToID()` function <!-- REF #IMAPTransporterClass.numToID().Summary -->converts the sequence numbers to IMAP unique IDs for the messages in the sequential range designated by *startMsg* and *endMsg*<!-- END REF --> in the currently selected mailbox.
 
@@ -1348,7 +1348,7 @@ The `.numToID()` function <!-- REF #IMAPTransporterClass.numToID().Summary -->co
 
 
 <!-- REF #IMAPTransporterClass.removeFlags().Params -->
-| 引数       | タイプ        |    | 詳細                                                                                                          |
+| 引数       | タイプ        |    | 説明                                                                                                          |
 | -------- | ---------- |:--:| ----------------------------------------------------------------------------------------------------------- |
 | msgIDs   | Collection | -> | 文字列のコレクション: メッセージの固有ID (テキスト型)<br/> テキスト: メッセージの固有ID<br/> 倍長整数 (IMAP all): 選択されたメールボックス内の全メッセージ |
 | keywords | Object     | -> | 削除するキーワードフラグ                                                                                                |
@@ -1356,7 +1356,7 @@ The `.numToID()` function <!-- REF #IMAPTransporterClass.numToID().Summary -->co
 
 |
 
-#### 詳細
+#### 説明
 
 The `.delete()` function <!-- REF #IMAPTransporterClass.removeFlags().Summary -->sets the "deleted" flag for the messages defined in `msgsIDs` or `allMsgs`<!-- END REF -->。
 
@@ -1366,19 +1366,19 @@ The `.delete()` function <!-- REF #IMAPTransporterClass.removeFlags().Summary --
 * 単一のメッセージの固有ID (*テキスト*)
 * 以下の定数 (*longint*) を使用することで、選択されているメールボックスの全メッセージを指定することができます:
 
- | 定数       | Value | 説明                        |
- | -------- | ----- | ------------------------- |
- | IMAP all | 1     | 選択されたメールボックスの全メッセージを選択します |
+ | 定数       | 値 | 説明                        |
+ | -------- | - | ------------------------- |
+ | IMAP all | 1 | 選択されたメールボックスの全メッセージを選択します |
 
 `keywords` には、`msgIDs` 引数で指定したメッセージから削除するフラグのキーワード値を格納したオブジェクトを渡します。 次のキーワードを渡すことができます:
 
-| 引数        | タイプ | 詳細                                |
-| --------- | --- | --------------------------------- |
-| $draft    | ブール | メッセージの "draft" フラグを削除するには true    |
-| $seen     | ブール | メッセージの "seen" フラグを削除するには true     |
-| $flagged  | ブール | メッセージの "flagged" フラグを削除するには true  |
-| $answered | ブール | メッセージの "answered" フラグを削除するには true |
-| $deleted  | ブール | メッセージの "deleted" フラグを削除するには true  |
+| 引数        | タイプ     | 説明                                |
+| --------- | ------- | --------------------------------- |
+| $draft    | Boolean | メッセージの "draft" フラグを削除するには true    |
+| $seen     | Boolean | メッセージの "seen" フラグを削除するには true     |
+| $flagged  | Boolean | メッセージの "flagged" フラグを削除するには true  |
+| $answered | Boolean | メッセージの "answered" フラグを削除するには true |
+| $deleted  | Boolean | メッセージの "deleted" フラグを削除するには true  |
 
 false値は無視されます。
 
@@ -1386,14 +1386,14 @@ false値は無視されます。
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 詳細                                                 |
+| プロパティ      |                         | タイプ        | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
-| success    |                         | ブール        | 処理が正常に終わった場合には true、それ以外は false                    |
-| statusText |                         | テキスト       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
+| success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
+| statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
 | errors     |                         | Collection | 4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)          |
 |            | \[].errcode            | 数値         | 4Dエラーコード                                           |
-|            | \[].message            | テキスト       | 4Dエラーの詳細                                           |
-|            | \[].componentSignature | テキスト       | エラーを返した内部コンポーネントの署名                                |
+|            | \[].message            | Text       | 4Dエラーの詳細                                           |
+|            | \[].componentSignature | Text       | エラーを返した内部コンポーネントの署名                                |
 
 #### 例題
 
@@ -1435,15 +1435,15 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 
 <!-- REF #IMAPTransporterClass.renameBox().Params -->
-| 引数          | タイプ    |    | 詳細                                                          |
+| 引数          | タイプ    |    | 説明                                                          |
 | ----------- | ------ |:--:| ----------------------------------------------------------- |
-| currentName | テキスト   | -> | カレントメールボックスの名称                                              |
-| newName     | テキスト   | -> | 新しいメールボックス名                                                 |
+| currentName | Text   | -> | カレントメールボックスの名称                                              |
+| newName     | Text   | -> | 新しいメールボックス名                                                 |
 | 戻り値         | Object | <- | Status of the renaming operation|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.renameBox()` function <!-- REF #IMAPTransporterClass.renameBox().Summary -->changes the name of a mailbox on the IMAP server<!-- END REF -->。 存在しないメールボックスの名称を変更しようとしたり、すでに使われているメールボックス名に変更しようとしたりすると、エラーが生成されます。
 
@@ -1455,14 +1455,14 @@ The `.renameBox()` function <!-- REF #IMAPTransporterClass.renameBox().Summary -
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 詳細                                                 |
+| プロパティ      |                         | タイプ        | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
-| success    |                         | ブール        | 処理が正常に終わった場合には true、それ以外は false                    |
-| statusText |                         | テキスト       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
+| success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
+| statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
 | errors     |                         | Collection | 4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)          |
 |            | \[].errcode            | 数値         | 4Dエラーコード                                           |
-|            | \[].message            | テキスト       | 4Dエラーの詳細                                           |
-|            | \[].componentSignature | テキスト       | エラーを返した内部コンポーネントの署名                                |
+|            | \[].message            | Text       | 4Dエラーの詳細                                           |
+|            | \[].componentSignature | Text       | エラーを返した内部コンポーネントの署名                                |
 
 #### 例題
 
@@ -1513,14 +1513,14 @@ End if
 
 
 <!-- REF #IMAPTransporterClass.searchMails().Params -->
-| 引数             | タイプ        |    | 詳細                                                       |
+| 引数             | タイプ        |    | 説明                                                       |
 | -------------- | ---------- |:--:| -------------------------------------------------------- |
-| searchCriteria | テキスト       | -> | 検索条件                                                     |
+| searchCriteria | Text       | -> | 検索条件                                                     |
 | 戻り値            | Collection | <- | Collection of message numbers|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 > この関数は、[IMAP プロトコル](https://en.wikipedia.org/wiki/Internet_Message_Access_Protocol) の仕様に基づいています。
 
@@ -1650,15 +1650,15 @@ searchCriteria = CHARSET "ISO-8859" BODY "Help"
 
 
 <!-- REF #IMAPTransporterClass.selectBox().Params -->
-| 引数    | タイプ    |    | 詳細                                        |
-| ----- | ------ |:--:| ----------------------------------------- |
-| name  | テキスト   | -> | メールボックスの名称                                |
-| state | 整数     | -> | メールボックスのアクセス状態                            |
-| 戻り値   | Object | <- | boxInfo object|<!-- END REF -->
+| 引数    | タイプ     |    | 説明                                        |
+| ----- | ------- |:--:| ----------------------------------------- |
+| name  | Text    | -> | メールボックスの名称                                |
+| state | Integer | -> | メールボックスのアクセス状態                            |
+| 戻り値   | Object  | <- | boxInfo object|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -->selects the *name* mailbox as the current mailbox<!-- END REF -->。 この関数を使用するとメールボックスに関する情報を取得することができます。
 > カレントメールボックスを変更せずに、メールボックスから情報を取得するには、[`.getBoxInfo()`](#getboxinfo) を使用します。
@@ -1667,10 +1667,10 @@ The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -
 
 任意の *state* 引数を渡すと、メールボックスへのアクセスタイプを定義できます。 取りうる値は以下の通りです:
 
-| 定数                    | Value | 説明                                                                         |
-| --------------------- | ----- | -------------------------------------------------------------------------- |
-| IMAP read only state  | 1     | 選択されたメールボックスは読み取り専用権限でアクセスされます。 新しいメッセージを表す "新着" フラグはそのまま変化しません。           |
-| IMAP read write state | 0     | 選択されたメールボックスは読み書き可能権限でアクセスされます。 メッセージは "既読" と判断され、"新着" フラグは失われます。 (デフォルト値) |
+| 定数                    | 値 | 説明                                                                         |
+| --------------------- | - | -------------------------------------------------------------------------- |
+| IMAP read only state  | 1 | 選択されたメールボックスは読み取り専用権限でアクセスされます。 新しいメッセージを表す "新着" フラグはそのまま変化しません。           |
+| IMAP read write state | 0 | 選択されたメールボックスは読み書き可能権限でアクセスされます。 メッセージは "既読" と判断され、"新着" フラグは失われます。 (デフォルト値) |
 > * *name* 引数が存在しないメールボックスを指定した場合、関数はエラーを生成し **Null** を返します。
 > * 開いている接続がない場合、`.selectBox()` は接続を開きます。
 > * 接続が指定された時間 (`IMAP New transporter` 参照) 以上に使用されなかった場合には、[`.checkConnection()`](#checkconnection) 関数が自動的に呼び出されます。
@@ -1679,9 +1679,9 @@ The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -
 
 返される `boxInfo` オブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ      | タイプ    | 詳細                      |
+| プロパティ      | タイプ    | 説明                      |
 | ---------- | ------ | ----------------------- |
-| name       | テキスト   | メールボックスの名称              |
+| name       | Text   | メールボックスの名称              |
 | mailCount  | number | メールボックス内のメッセージの数        |
 | mailRecent | number | "recent" フラグがついたメッセージの数 |
 
@@ -1716,14 +1716,14 @@ The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -
 
 
 <!-- REF #IMAPTransporterClass.subscribe().Params -->
-| 引数   | タイプ    |    | 詳細                                                           |
+| 引数   | タイプ    |    | 説明                                                           |
 | ---- | ------ |:--:| ------------------------------------------------------------ |
-| name | テキスト   | -> | メールボックスの名称                                                   |
+| name | Text   | -> | メールボックスの名称                                                   |
 | 戻り値  | Object | <- | Status of the subscribe operation|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.subscribe()` function <!-- REF #IMAPTransporterClass.subscribe().Summary -->allows adding or removing of the specified mailbox to/from the IMAP server’s set of “subscribed” mailboxes<!-- END REF -->。 .
 
@@ -1733,14 +1733,14 @@ The `.subscribe()` function <!-- REF #IMAPTransporterClass.subscribe().Summary -
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 詳細                                                 |
+| プロパティ      |                         | タイプ        | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
-| success    |                         | ブール        | 処理が正常に終わった場合には true、それ以外は false                    |
-| statusText |                         | テキスト       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
+| success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
+| statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
 | errors     |                         | Collection | 4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)          |
 |            | \[].errcode            | 数値         | 4Dエラーコード                                           |
-|            | \[].message            | テキスト       | 4Dエラーの詳細                                           |
-|            | \[].componentSignature | テキスト       | エラーを返した内部コンポーネントの署名                                |
+|            | \[].message            | Text       | 4Dエラーの詳細                                           |
+|            | \[].componentSignature | Text       | エラーを返した内部コンポーネントの署名                                |
 
 #### 例題
 
@@ -1788,14 +1788,14 @@ End if
 
 
 <!-- REF #IMAPTransporterClass.unsubscribe().Params -->
-| 引数   | タイプ    |    | 詳細                                                             |
+| 引数   | タイプ    |    | 説明                                                             |
 | ---- | ------ |:--:| -------------------------------------------------------------- |
-| name | テキスト   | -> | メールボックスの名称                                                     |
+| name | Text   | -> | メールボックスの名称                                                     |
 | 戻り値  | Object | <- | Status of the unsubscribe operation|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.unsubscribe()` function <!-- REF #IMAPTransporterClass.unsubscribe().Summary -->removes a mailbox from a set of subscribed mailboxes<!-- END REF -->。 これにより、確認するメールボックスの数を減らせます。
 
@@ -1805,14 +1805,14 @@ The `.unsubscribe()` function <!-- REF #IMAPTransporterClass.unsubscribe().Summa
 
 この関数は、IMAP ステータスを表すオブジェクトを返します:
 
-| プロパティ      |                         | タイプ        | 詳細                                                 |
+| プロパティ      |                         | タイプ        | 説明                                                 |
 | ---------- | ----------------------- | ---------- | -------------------------------------------------- |
-| success    |                         | ブール        | 処理が正常に終わった場合には true、それ以外は false                    |
-| statusText |                         | テキスト       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
+| success    |                         | Boolean    | 処理が正常に終わった場合には true、それ以外は false                    |
+| statusText |                         | Text       | IMAPサーバーから返されたステータスメッセージ、または 4Dエラースタック内に返された最後のエラー |
 | errors     |                         | Collection | 4Dエラースタック (IMAPサーバーレスポンスが受信できた場合には返されません)          |
 |            | \[].errcode            | 数値         | 4Dエラーコード                                           |
-|            | \[].message            | テキスト       | 4Dエラーの詳細                                           |
-|            | \[].componentSignature | テキスト       | エラーを返した内部コンポーネントの署名                                |
+|            | \[].message            | Text       | 4Dエラーの詳細                                           |
+|            | \[].componentSignature | Text       | エラーを返した内部コンポーネントの署名                                |
 
 #### 例題
 

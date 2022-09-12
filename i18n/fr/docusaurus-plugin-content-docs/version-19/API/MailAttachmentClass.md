@@ -34,7 +34,7 @@ Les objets Attachment fournissent les propriétés et fonctions suivantes en lec
 | cid         | Text              | -> | ID de la pièce jointe (messages HTML uniquement) ou " " si aucun cid n'est requis  |
 | type        | Text              | -> | Valeur de l'en-tête content-type                                                   |
 | disposition | Text              | -> | Valeur de l'en-tête content-disposition : "inline" ou "attachment"                 |
-| Result      | 4D.MailAttachment | <- | Attachment object|<!-- END REF -->                                       |
+| Résultat    | 4D.MailAttachment | <- | Attachment object|<!-- END REF -->                                       |
 
 #### Description
 
@@ -167,7 +167,7 @@ $transporter.send($email)
 | cid         | Text              | -> | ID de la pièce jointe (messages HTML uniquement) ou " " si aucun cid n'est requis  |
 | type        | Text              | -> | Valeur de l'en-tête content-type                                                   |
 | disposition | Text              | -> | Valeur de l'en-tête content-disposition : "inline" ou "attachment"                 |
-| Result      | 4D.MailAttachment | <- | Attachment object|<!-- END REF -->                                       |
+| Résultat    | 4D.MailAttachment | <- | Attachment object|<!-- END REF -->                                       |
 
 #### Description
 
@@ -204,7 +204,7 @@ The `.disposition` property contains <!-- REF #MailAttachmentClass.disposition.S
 <!-- REF #MailAttachmentClass.getContent().Params -->
 | Paramètres | Type |    | Description                                          |
 | ---------- | ---- |:--:| ---------------------------------------------------- |
-| Result     | Blob | <- | Content of the attachment|<!-- END REF --> |
+| Résultat   | Blob | <- | Content of the attachment|<!-- END REF --> |
 
 #### Description
 

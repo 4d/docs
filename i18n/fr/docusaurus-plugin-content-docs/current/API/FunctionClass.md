@@ -125,7 +125,7 @@ Un objet `4D.Function` contient un morceau de code qui peut être exécuté à p
 | Paramètres | Type        |    | Description                                                       |
 | ---------- | ----------- |:--:| ----------------------------------------------------------------- |
 | formulaExp | Expression  | -> | Formule à retourner comme objet                                   |
-| Result     | 4D.Function | <- | Fonction native encapsulant la formule|<!-- END REF -->
+| Résultat   | 4D.Function | <- | Fonction native encapsulant la formule|<!-- END REF -->
 
 
 |
@@ -264,7 +264,7 @@ Appeler une formule à l'aide de la notation objet :
 | Paramètres    | Type        |    | Description                                                        |
 | ------------- | ----------- |:--:| ------------------------------------------------------------------ |
 | formulaString | Text        | -> | Formule texte à retourner comme objet                              |
-| Result        | 4D.Function | <- | Native object encapsulating the formula|<!-- END REF -->
+| Résultat      | 4D.Function | <- | Native object encapsulating the formula|<!-- END REF -->
 
 
 |
@@ -320,11 +320,11 @@ Le code suivant permettra de créer un dialogue acceptant une formule dans un fo
 
 
 <!-- REF #FunctionClass.apply().Params -->
-| Paramètres    | Type        |    | Description                                                                       |
-| ------------- | ----------- |:--:| --------------------------------------------------------------------------------- |
-| thisObj       | Object      | -> | Objet à retourner par la commande This dans la formule                            |
-| formulaParams | Collections | -> | Collection des valeurs à passer en tant que $1...$n lorsque `formula` est exécuté |
-| Result        | any         | <- | Value from formula execution|<!-- END REF -->
+| Paramètres    | Type       |    | Description                                                                       |
+| ------------- | ---------- |:--:| --------------------------------------------------------------------------------- |
+| thisObj       | Object     | -> | Objet à retourner par la commande This dans la formule                            |
+| formulaParams | Collection | -> | Collection des valeurs à passer en tant que $1...$n lorsque `formula` est exécuté |
+| Résultat      | any        | <- | Value from formula execution|<!-- END REF -->
 
 
 |
@@ -389,7 +389,7 @@ A noter que `.apply()` est similaire à [`.call()`](#call), néanmoins les param
 | ---------- | ------ | -- | ------------------------------------------------------------------ |
 | thisObj    | Object | -> | Objet à retourner par la commande This dans la formule             |
 | params     | any    | -> | Valeur(s) à passer en tant que $1...$n lorsque formula est exécuté |
-| Result     | any    | <- | Value from formula execution|<!-- END REF -->
+| Résultat   | any    | <- | Value from formula execution|<!-- END REF -->
 
 
 |

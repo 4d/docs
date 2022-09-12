@@ -43,7 +43,7 @@ Une classe utilisateur dans 4D est définie par un fichier de méthode spécifiq
 Lorsque vous nommez des classes, gardez à l'esprit les règles suivantes :
 
 - Un [nom de classe](identifiers.md#classes) doit être conforme aux [règles de nommage des propriétés](identifiers.md#object-properties).
-- .
+- Les noms de classe sont sensibles à la casse.
 - Il n'est pas recommandé de donner le même nom à une classe et à une table de base de données, afin d'éviter tout conflit.
 
 Par exemple, si vous souhaitez définir une classe nommée "Polygon", vous devez créer le fichier suivant :
@@ -355,7 +355,7 @@ Super {( param{;...;paramN} )} {-> Object}
 | Paramètres | Type   |    | Description                                                |
 | ---------- | ------ | -- | ---------------------------------------------------------- |
 | param      | mixte  | -> | Paramètre(s) à passer au constructeur de la classe parente |
-| Result     | object | <- | Parent de l'objet                                          |
+| Résultat   | object | <- | Parent de l'objet                                          |
 
 Le mot-clé `Super` permet d'appeler la `superclass`, i.e.
 
@@ -470,7 +470,7 @@ This -> Object
 
 | Paramètres | Type   |    | Description   |
 | ---------- | ------ | -- | ------------- |
-| Result     | object | <- | Objet courant |
+| Résultat   | object | <- | Objet courant |
 
 Le mot-clé `This` retourne une référence vers l'objet en cours de traitement. Dans 4D, il peut être utilisé dans [différents contextes](https://doc.4d.com/4Dv18/4D/18/This.301-4504875.en.html).
 

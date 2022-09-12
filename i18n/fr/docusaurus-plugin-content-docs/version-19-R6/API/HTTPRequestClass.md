@@ -81,7 +81,7 @@ HTTPRequest objects provide the following properties and functions:
 | ---------- | -------------- |:--:| ------------------------------------------------- |
 | url        | Text           | -> | URL to which to send the request                  |
 | options    | Object         | -> | Request configuration properties                  |
-| Result     | 4D.HTTPRequest | <- | New HTTPRequest object|<!-- END REF -->
+| Résultat   | 4D.HTTPRequest | <- | New HTTPRequest object|<!-- END REF -->
 
 |
 
@@ -208,12 +208,12 @@ The `.errors` property contains <!-- REF #HTTPRequestClass.errors.Summary -->the
 
 Here is the contents of the `.errors` property:
 
-| Propriété |                       | Type        | Description                                            |
-| --------- | --------------------- | ----------- | ------------------------------------------------------ |
-| errors    |                       | Collections | 4D error stack in case of error                        |
-|           | [].errCode            | Number      | Code d'erreur 4D                                       |
-|           | [].message            | Text        | Description de l'erreur 4D                             |
-|           | [].componentSignature | Text        | Signature du composant interne qui a retourné l'erreur |
+| Propriété |                       | Type       | Description                                            |
+| --------- | --------------------- | ---------- | ------------------------------------------------------ |
+| errors    |                       | Collection | 4D error stack in case of error                        |
+|           | [].errCode            | Number     | Code d'erreur 4D                                       |
+|           | [].message            | Text       | Description de l'erreur 4D                             |
+|           | [].componentSignature | Text       | Signature du composant interne qui a retourné l'erreur |
 
 <!-- END REF -->
 
@@ -345,7 +345,7 @@ The `.url` property contains <!-- REF #HTTPRequestClass.url.Summary -->the URL o
 | Paramètres | Type           |    | Description                                      |
 | ---------- | -------------- |:--:| ------------------------------------------------ |
 | time       | Real           | -> | Maximum time in seconds to wait for the response |
-| Result     | 4D.HTTPRequest | <- | HTTPRequest object|<!-- END REF -->
+| Résultat   | 4D.HTTPRequest | <- | HTTPRequest object|<!-- END REF -->
 
 |
 

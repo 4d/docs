@@ -56,7 +56,7 @@ End if
 | zipStructure    | Object    | -> | Objet fichier ou dossier à compresser                     |
 | destinationFile | 4D.File   | -> | Fichier de destination de l'archive                       |
 | options         | Integer   | -> | Si *folderToZip* utilisé : `ZIP Without enclosing folder` |
-| Result          | Object    | <- | Objet statut|<!-- END REF -->
+| Résultat        | Object    | <- | Objet statut|<!-- END REF -->
 
 |
 
@@ -78,7 +78,7 @@ Vous pouvez passer un objet 4D.File, 4D.Folder, ou une structure Zip en tant que
 | level       | Integer     | Niveau de compression. Valeurs possibles : 1 à 10. Une valeur plus faible produira un fichier plus volumineux, tandis qu'une valeur plus élevée produira un fichier plus petit. Le niveau de compression a toutefois un impact sur les performances. Valeur par défaut (si omis) : <li>`ZIP Compression standard`: 6</li><li>`ZIP Compression LZMA`: 4</li><li>`ZIP Compression XZ`: 4</li> |
 | encryption  | Integer     | Le chiffrement à utiliser si un mot de passe est défini :<li>`ZIP Encryption AES128`: chiffrement AES à l'aide d'une clé 128 octets.</li><li>`ZIP Encryption AES192`: chiffrement AES à l'aide d'une clé 192 octets.</li><li>`ZIP Encryption AES256`: chiffrement AES à l'aide d'une clé 256 octets (par défaut si un mot de passe est défini).</li><li>`ZIP Encryption none`: les données ne sont pas chiffrées (par défaut si aucun mot de passe n'est défini)</li>                                                                                                                                                                                               |
 | password    | Text        | Un mot de passe à définir si le chiffrement est requis.                                                                                                                                                                                                                                                                                                       |
-| Historique  | Collections | <li>une collection d'objets `4D.File` ou `4D.Folder` ou</li><li>une collection d'objets dont les propriétés sont les suivantes :</li><table><tr><td>Propriété</td><td>Type</td><td>Description</td></tr><tr><td>source</td><td>4D.File ou 4D.Folder</td><td>File ou Folder</td></tr><tr><td>destination</td><td>Text</td><td>(facultatif) - Indiquer un chemin de fichier relatif pour modifier l'organisation du contenu de l'archive</td></tr><tr><td>option</td><td>number</td><td>(facultatif) - `ZIP Ignore invisible files` ou 0 pour compresser tout le fichier</td></tr></table>                                                                                                                                                                                                                                                                                |
+| Historique  | Collection  | <li>une collection d'objets `4D.File` ou `4D.Folder` ou</li><li>une collection d'objets dont les propriétés sont les suivantes :</li><table><tr><td>Propriété</td><td>Type</td><td>Description</td></tr><tr><td>source</td><td>4D.File ou 4D.Folder</td><td>File ou Folder</td></tr><tr><td>destination</td><td>Text</td><td>(facultatif) - Indiquer un chemin de fichier relatif pour modifier l'organisation du contenu de l'archive</td></tr><tr><td>option</td><td>number</td><td>(facultatif) - `ZIP Ignore invisible files` ou 0 pour compresser tout le fichier</td></tr></table>                                                                                                                                                                                                                                                                                |
 | callback    | 4D.Function | Une formule de rétro-appel qui recevra la progression de la compression (0 à 100) dans $1.                                                                                                                                                                                                                                                                    |
 
 Dans le paramètre *destinationFile*, passez un objet `4D.File` décrivant l'archive ZIP à créer (nom, emplacement, etc.). Il est conseillé d'utiliser l'extension ".zip" si vous souhaitez que l'archive ZIP soit traitée automatiquement par un logiciel.
@@ -190,7 +190,7 @@ Vous souhaitez passer une collection de dossiers et de fichiers à compresser à
 | ---------- | ------------- |:--:| --------------------------------------------- |
 | zipFile    | 4D.File       | -> | Fichier archive ZIP                           |
 | password   | Text          | -> | Mot de passe de l'archive ZIP, le cas échéant |
-| Result     | 4D.ZipArchive | <- | Objet archive|<!-- END REF -->
+| Résultat   | 4D.ZipArchive | <- | Objet archive|<!-- END REF -->
 
 |
 

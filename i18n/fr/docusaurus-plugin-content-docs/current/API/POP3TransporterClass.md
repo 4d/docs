@@ -47,7 +47,7 @@ Les objets Transporter POP3 sont instanciés avec la commande [POP3 New transpor
 | Paramètres | Type               |    | Description                                                                    |
 | ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server     | object             | -> | Informations sur le serveur IMAP                                               |
-| Result     | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object)|<!-- END REF -->
+| Résultat   | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object)|<!-- END REF -->
 
 
 |
@@ -71,7 +71,7 @@ Dans le paramètre *server*, passez un objet contenant les propriétés suivante
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 995                                                                              |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| aucun                                                                            |
 
-#### Result
+#### Résultat
 
 La fonction retourne un [**objet POP3 transporter**](#pop3-transporter-object). Toutes les propriétés retournées sont en **lecture seule**.
 > La connexion POP3 est automatiquement fermée lorsque l'objet transporteur est détruit.
@@ -107,7 +107,7 @@ La fonction retourne un [**objet POP3 transporter**](#pop3-transporter-object). 
 | Paramètres | Type               |    | Description                                                                    |
 | ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server     | Object             | -> | Informations sur le serveur IMAP                                               |
-| Result     | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object)|<!-- END REF -->
+| Résultat   | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object)|<!-- END REF -->
 
 |
 
@@ -214,7 +214,7 @@ L'exécution de cette méthode ne supprime pas réellement l'email. L'email marq
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
 | Paramètres | Type   |    | Description                               |
 | ---------- | ------ |:--:| ----------------------------------------- |
-| Result     | Object | <- | boxInfo object|<!-- END REF -->
+| Résultat   | Object | <- | boxInfo object|<!-- END REF -->
 
 |
 
@@ -264,7 +264,7 @@ L'objet `boxInfo` contient les propriété suivantes :
 | Paramètres | Type    |    | Description                                                                 |
 | ---------- | ------- |:--:| --------------------------------------------------------------------------- |
 | msgNumber  | Integer | -> | Numéro du message dans la liste                                             |
-| Result     | Object  | <- | [Email object](EmailObjectClass.md#email-object)|<!-- END REF -->
+| Résultat   | Object  | <- | [Email object](EmailObjectClass.md#email-object)|<!-- END REF -->
 
 |
 
@@ -321,7 +321,7 @@ Vous souhaitez connaitre l'expéditeur du premier mail de la boite de réception
 | Paramètres | Type    |    | Description                               |
 | ---------- | ------- |:--:| ----------------------------------------- |
 | msgNumber  | Integer | -> | Numéro du message dans la liste           |
-| Result     | Object  | <- | Objet MailInfo|<!-- END REF -->
+| Résultat   | Object  | <- | Objet MailInfo|<!-- END REF -->
 
 |
 
@@ -379,9 +379,9 @@ La fonction retourne **Null** si :
 
 
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
-| Paramètres | Type        |    | Description                                               |
-| ---------- | ----------- |:--:| --------------------------------------------------------- |
-| Result     | Collections | <- | Collection d'objets `mailInfo`|<!-- END REF -->
+| Paramètres | Type       |    | Description                                               |
+| ---------- | ---------- |:--:| --------------------------------------------------------- |
+| Résultat   | Collection | <- | Collection d'objets `mailInfo`|<!-- END REF -->
 
 |
 
@@ -447,7 +447,7 @@ Vous souhaitez connaitre le nombre total d'emails de la boîte de réception ain
 | Paramètres | Type    |    | Description                                                                      |
 | ---------- | ------- |:--:| -------------------------------------------------------------------------------- |
 | msgNumber  | Integer | -> | Numéro du message dans la liste                                                  |
-| Result     | Blob    | <- | Blob of the MIME string returned from the mail server|<!-- END REF -->
+| Résultat   | Blob    | <- | Blob of the MIME string returned from the mail server|<!-- END REF -->
 
 |
 

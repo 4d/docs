@@ -71,7 +71,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 | fileConstant | Integer | -> | Constante de fichier 4D                            |
 | pathType     | Integer | -> | `fk posix path` (par défaut) ou `fk platform path` |
 | *            |         | -> | * pour retourner le fichier de la base hôte        |
-| Result       | 4D.File | <- | Nouvel objet fichier|<!-- END REF -->
+| Résultat     | 4D.File | <- | Nouvel objet fichier|<!-- END REF -->
 
 |
 
@@ -165,7 +165,7 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 <!--REF #FileClass.create().Params -->
 | Paramètres | Type    |    | Description                                                                      |
 | ---------- | ------- | -- | -------------------------------------------------------------------------------- |
-| Result     | Boolean | <- | Vrai si le fichier a été créé avec succès, sinon Faux|<!-- END REF -->
+| Résultat   | Boolean | <- | Vrai si le fichier a été créé avec succès, sinon Faux|<!-- END REF -->
 
 |
 
@@ -209,7 +209,7 @@ Création d'un fichier de préférences dans le dossier principal :
 | dossierDestination | 4D.Folder | -> | Dossier de destination pour l'alias ou le raccourci                        |
 | aliasName          | Text      | -> | Nom de l'alias ou du raccourci                                             |
 | aliasType          | Integer   | -> | Type de lien de l'alias                                                    |
-| Result             | 4D.File   | <- | Référence du fichier de l'alias ou du raccourci|<!-- END REF -->
+| Résultat           | 4D.File   | <- | Référence du fichier de l'alias ou du raccourci|<!-- END REF -->
 
 |
 
@@ -311,7 +311,7 @@ Vous souhaitez supprimer un fichier spécifique dans un sous-dossier :
 <!--REF #FileClass.getAppInfo().Params -->
 | Paramètres | Type   |    | Description                                                                            |
 | ---------- | ------ | -- | -------------------------------------------------------------------------------------- |
-| Result     | Object | <- | Contenu du fichier de ressource version .exe/.dll ou .plist|<!-- END REF -->
+| Résultat   | Object | <- | Contenu du fichier de ressource version .exe/.dll ou .plist|<!-- END REF -->
 
 
 |
@@ -408,7 +408,7 @@ ALERT($info.Copyright)
 | ------------------ | --------- | -- | ------------------------------------------ |
 | dossierDestination | 4D.Folder | -> | Dossier de destination                     |
 | nouveauNom         | Text      | -> | Nom complet du fichier déplacé             |
-| Result             | 4D.File   | <- | Fichier déplacé|<!-- END REF -->
+| Résultat           | 4D.File   | <- | Fichier déplacé|<!-- END REF -->
 
 |
 
@@ -453,7 +453,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 | ---------- | -------------------------------- | -- | ------------------------------------------------- |
 | mode       | Text                             | -> | Opening mode: "read", "write", "append"           |
 | options    | Object                           | -> | Opening options                                   |
-| Result     | [4D.FileHandle](FileHandleClass) | <- | New File handle object|<!-- END REF -->
+| Résultat   | [4D.FileHandle](FileHandleClass) | <- | New File handle object|<!-- END REF -->
 
 |
 
@@ -530,7 +530,7 @@ $fhandle:=$f.open("read")
 | Paramètres | Type    |    | Description                                |
 | ---------- | ------- | -- | ------------------------------------------ |
 | nouveauNom | Text    | -> | Nouveau nom complet du fichier             |
-| Result     | 4D.File | <- | Fichier renommé|<!-- END REF -->
+| Résultat   | 4D.File | <- | Fichier renommé|<!-- END REF -->
 
 |
 

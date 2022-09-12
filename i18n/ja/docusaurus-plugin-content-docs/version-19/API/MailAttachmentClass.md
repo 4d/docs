@@ -26,17 +26,17 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 
 <!-- REF #_command_.MAIL_New_attachment.Params -->
 
-| 引数          | タイプ               |    | 詳細                                                     |
+| 引数          | タイプ               |    | 説明                                                     |
 | ----------- | ----------------- |:--:| ------------------------------------------------------ |
-| path        | テキスト              | -> | 添付ファイルのパス                                              |
+| path        | Text              | -> | 添付ファイルのパス                                              |
 | blob        | Blob              | -> | 添付を格納した BLOB                                           |
-| name        | テキスト              | -> | メールクライアントが添付を指定するのに使用する名前 + 拡張子                        |
-| cid         | テキスト              | -> | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列)       |
-| type        | テキスト              | -> | content-type ヘッダーの値                                    |
-| disposition | テキスト              | -> | content-disposition ヘッダーの値: "inline" あるいは "attachment" |
+| name        | Text              | -> | メールクライアントが添付を指定するのに使用する名前 + 拡張子                        |
+| cid         | Text              | -> | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列)       |
+| type        | Text              | -> | content-type ヘッダーの値                                    |
+| disposition | Text              | -> | content-disposition ヘッダーの値: "inline" あるいは "attachment" |
 | 戻り値         | 4D.MailAttachment | <- | Attachment object|<!-- END REF -->           |
 
-#### 詳細
+#### 説明
 
 The `MAIL New attachment` command <!-- REF #_command_.MAIL_New_attachment.Summary -->allows you to create an attachment object that you can add to an [Email object](EmailObjectClass.md#email-object)<!-- END REF -->。
 
@@ -78,7 +78,7 @@ The `MAIL New attachment` command <!-- REF #_command_.MAIL_New_attachment.Summar
 
 任意の *disposition* 引数を渡して、添付ファイルの `content-disposition` ヘッダーを指定できます。 "Mail" 定数テーマ内の、以下の定数のいずれか 1つを渡すことができます:
 
-| 定数                          | Value        | 説明                                                                                          |
+| 定数                          | 値            | 説明                                                                                          |
 | --------------------------- | ------------ | ------------------------------------------------------------------------------------------- |
 | mail disposition attachment | "attachment" | Content-disposition ヘッダーの値を "attachment" に設定します。 これは添付ファイルはメッセージ内でリンクとして提供される必要があることを意味します。 |
 | mail disposition inline     | "inline"     | "inline": 添付ファイルはメッセージコンテンツ内に、"cid"の場所にレンダリングされます。 レンダリングの結果はメールクライアントによって異なります。            |
@@ -160,17 +160,17 @@ $transporter.send($email)
 
 <!-- REF #4D.MailAttachment.new().Params -->
 
-| 引数          | タイプ               |    | 詳細                                                     |
+| 引数          | タイプ               |    | 説明                                                     |
 | ----------- | ----------------- |:--:| ------------------------------------------------------ |
-| path        | テキスト              | -> | 添付ファイルのパス                                              |
+| path        | Text              | -> | 添付ファイルのパス                                              |
 | blob        | Blob              | -> | 添付を格納した BLOB                                           |
-| name        | テキスト              | -> | メールクライアントが添付を指定するのに使用する名前 + 拡張子                        |
-| cid         | テキスト              | -> | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列)       |
-| type        | テキスト              | -> | content-type ヘッダーの値                                    |
-| disposition | テキスト              | -> | content-disposition ヘッダーの値: "inline" あるいは "attachment" |
+| name        | Text              | -> | メールクライアントが添付を指定するのに使用する名前 + 拡張子                        |
+| cid         | Text              | -> | 添付の ID (HTMLメッセージのみ)、あるいは cid が不要な場合は "" (空の文字列)       |
+| type        | Text              | -> | content-type ヘッダーの値                                    |
+| disposition | Text              | -> | content-disposition ヘッダーの値: "inline" あるいは "attachment" |
 | 戻り値         | 4D.MailAttachment | <- | Attachment object|<!-- END REF -->           |
 
-#### 詳細
+#### 説明
 
 The `4D.MailAttachment.new()` function <!-- REF #4D.MailAttachment.new().Summary -->creates and returns a new object of the `4D.MailAttachment` type<!-- END REF -->。 `4D.MailAttachment.new()` 関数は、 <!-- REF #4D.MailAttachment.new().Summary -->`4D.MailAttachment` 型の新規オブジェクト作成して返します<!-- END REF -->。
 
@@ -179,7 +179,7 @@ The `4D.MailAttachment.new()` function <!-- REF #4D.MailAttachment.new().Summary
 
 <!-- REF #MailAttachmentClass.cid.Syntax -->**.cid** : Text<!-- END REF -->
 
-#### 詳細
+#### 説明
 
 The `.cid` property contains <!-- REF #MailAttachmentClass.cid.Summary --> the ID of the attachment<!-- END REF -->。 このプロパティは HTMLメッセージでのみ使用されます。 このプロパティがない場合、ファイルは単なる添付 (リンク) として管理されます。
 
@@ -188,7 +188,7 @@ The `.cid` property contains <!-- REF #MailAttachmentClass.cid.Summary --> the I
 
 <!-- REF #MailAttachmentClass.disposition.Syntax -->**.disposition** : Text<!-- END REF -->
 
-#### 詳細
+#### 説明
 
 The `.disposition` property contains <!-- REF #MailAttachmentClass.disposition.Summary -->the value of the `Content-Disposition` header<!-- END REF -->。 .
 
@@ -203,11 +203,11 @@ The `.disposition` property contains <!-- REF #MailAttachmentClass.disposition.S
 
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
-| 引数  | タイプ  |    | 詳細                                                   |
+| 引数  | タイプ  |    | 説明                                                   |
 | --- | ---- |:--:| ---------------------------------------------------- |
 | 戻り値 | Blob | <- | Content of the attachment|<!-- END REF --> |
 
-#### 詳細
+#### 説明
 
 The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary -->The `.getContent()` function<!-- END REF -->。 [`MAIL Convert from MIME`](#mail-convert-from-mime) コマンドによって取得した添付オブジェクトに対して、この関数を使用することができます。
 
@@ -216,7 +216,7 @@ The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary 
 
 <!-- REF #MailAttachmentClass.name.Syntax -->**.name** : Text<!-- END REF -->
 
-#### 詳細
+#### 説明
 
 The `.name` property contains <!-- REF #MailAttachmentClass.name.Summary -->the name and extension of the attachment<!-- END REF -->。  [`MAIL New attachment`](#mail-new-attachment) コマンドで別の名称を指定しなかった場合のデフォルトは、ファイルの名称です。
 
@@ -225,7 +225,7 @@ The `.name` property contains <!-- REF #MailAttachmentClass.name.Summary -->the 
 
 <!-- REF #MailAttachmentClass.path.Syntax -->**.path** : Text<!-- END REF -->
 
-#### 詳細
+#### 説明
 
 The `.path` property contains <!-- REF #MailAttachmentClass.path.Summary -->the POSIX path of the attachment file, if it exists<!-- END REF -->。
 
@@ -241,7 +241,7 @@ The `.path` property contains <!-- REF #MailAttachmentClass.path.Summary -->the 
 
 <!-- REF #MailAttachmentClass.platformPath.Syntax -->**.platformPath** : Text<!-- END REF -->
 
-#### 詳細
+#### 説明
 
 The `.platformPath` property returns <!-- REF #MailAttachmentClass.platformPath.Summary -->The `.platformPath` property returns<!-- END REF -->。
 
@@ -250,6 +250,6 @@ The `.platformPath` property returns <!-- REF #MailAttachmentClass.platformPath.
 
 <!-- REF #MailAttachmentClass.type.Syntax -->**.type** : Text<!-- END REF -->
 
-#### 詳細
+#### 説明
 
 The `.type` property contains <!-- REF #MailAttachmentClass.type.Summary -->the `content-type` of the attachment file<!-- END REF -->。 [`MAIL New attachment`](#mail-new-attachment) コマンドにて、このタイプが明示的に渡されていない場合、`content-type` はファイルの拡張子に基づきます。

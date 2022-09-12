@@ -8,14 +8,14 @@ Renvoie des informations sur les ensembles d'entités stockés couramment dans l
 ## Description
 En appelant cette requête pour votre projet, vous récupérez des informations dans les propriétés suivantes :
 
-| Propriété      | Type        | Description                                                                                         |
-| -------------- | ----------- | --------------------------------------------------------------------------------------------------- |
-| cacheSize      | Number      | Taille du cache du serveur 4D.                                                                      |
-| usedCache      | Number      | La quantité de cache du serveur 4D utilisée.                                                        |
-| entitySetCount | Number      | Nombre de sélections d'entités.                                                                     |
-| entitySet      | Collections | Une collection dans laquelle chaque objet contient des informations sur chaque sélection d'entités. |
-| ProgressInfo   | Collections | Une collection contenant des informations sur les indicateurs de progression.                       |
-| sessionInfo    | Collections | Une collection dans laquelle chaque objet contient des informations sur chaque session utilisateur. |
+| Propriété      | Type       | Description                                                                                         |
+| -------------- | ---------- | --------------------------------------------------------------------------------------------------- |
+| cacheSize      | Number     | Taille du cache du serveur 4D.                                                                      |
+| usedCache      | Number     | La quantité de cache du serveur 4D utilisée.                                                        |
+| entitySetCount | Number     | Nombre de sélections d'entités.                                                                     |
+| entitySet      | Collection | Une collection dans laquelle chaque objet contient des informations sur chaque sélection d'entités. |
+| ProgressInfo   | Collection | Une collection contenant des informations sur les indicateurs de progression.                       |
+| sessionInfo    | Collection | Une collection dans laquelle chaque objet contient des informations sur chaque session utilisateur. |
 
 ### entitySet
 Pour chaque sélection d'entités stocké dans le cache de 4D Server, les informations retournées sont les suivantes :

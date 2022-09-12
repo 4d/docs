@@ -33,7 +33,7 @@ title: DataClass
 
 <!-- REF DataClassClass.attributeName.Syntax -->***.attributeName*** : DataClassAttribute<!-- END REF -->
 
-#### 詳細
+#### 説明
 
 The attributes of dataclasses are <!-- REF DataClassClass.attributeName.Summary -->objects that are available directly as properties<!-- END REF --> of these classes.
 
@@ -102,14 +102,14 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 
 <!-- REF #DataClassClass.all().Params -->
-| 引数       | タイプ                |    | 詳細                                                                             |
+| 引数       | タイプ                |    | 説明                                                                             |
 | -------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | settings | Object             | -> | ビルドオプション: context                                                              |
 | 戻り値      | 4D.EntitySelection | <- | References on all entities related to the Dataclass|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.all( )` function <!-- REF #DataClassClass.all().Summary -->queries the datastore to find all the entities related to the dataclass and returns them as an entity selection<!-- END REF -->。
 
@@ -123,9 +123,9 @@ The `.all( )` function <!-- REF #DataClassClass.all().Summary -->queries the dat
 
 任意の *settings* パラメーターには、追加オプションを格納したオブジェクトを渡すことができます。 以下のプロパティがサポートされています:
 
-| プロパティ   | タイプ  | 詳細                                                                                                                                                           |
+| プロパティ   | タイプ  | 説明                                                                                                                                                           |
 | ------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| context | テキスト | エンティティセレクションに適用されている最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能は [ORDA のクライアント/サーバー処理](ORDA/entities.md#クライアント/サーバーの最適化)を想定して設計されています。 |
+| context | Text | エンティティセレクションに適用されている最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能は [ORDA のクライアント/サーバー処理](ORDA/entities.md#クライアント/サーバーの最適化)を想定して設計されています。 |
 
 #### 例題
 
@@ -152,7 +152,7 @@ The `.all( )` function <!-- REF #DataClassClass.all().Summary -->queries the dat
 
 
 <!-- REF #DataClassClass.fromCollection().Params -->
-| 引数        | タイプ                |    | 詳細                                                                     |
+| 引数        | タイプ                |    | 説明                                                                     |
 | --------- | ------------------ |:--:| ---------------------------------------------------------------------- |
 | objectCol | Collection         | -> | エンティティにマップするオブジェクトのコレクション                                              |
 | settings  | Object             | -> | ビルドオプション: context                                                      |
@@ -160,7 +160,7 @@ The `.all( )` function <!-- REF #DataClassClass.all().Summary -->queries the dat
 
 |
 
-#### 詳細
+#### 説明
 
 The `.fromCollection()` function <!-- REF #DataClassClass.fromCollection().Summary -->updates or creates entities in the dataclass according to the *objectCol* collection of objects, and returns the corresponding entity selection<!-- END REF -->。
 
@@ -197,9 +197,9 @@ The `.fromCollection()` function <!-- REF #DataClassClass.fromCollection().Summa
 
 任意の *settings* パラメーターには、追加オプションを格納したオブジェクトを渡すことができます。 以下のプロパティがサポートされています:
 
-| プロパティ   | タイプ  | 詳細                                                                                                                                                           |
+| プロパティ   | タイプ  | 説明                                                                                                                                                           |
 | ------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| context | テキスト | エンティティセレクションに適用されている最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能は [ORDA のクライアント/サーバー処理](ORDA/entities.md#クライアント/サーバーの最適化)を想定して設計されています。 |
+| context | Text | エンティティセレクションに適用されている最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能は [ORDA のクライアント/サーバー処理](ORDA/entities.md#クライアント/サーバーの最適化)を想定して設計されています。 |
 
 #### 例題 1
 
@@ -348,7 +348,7 @@ The `.fromCollection()` function <!-- REF #DataClassClass.fromCollection().Summa
 
 
 <!-- REF #DataClassClass.get().Params -->
-| 引数         | タイプ              |    | 詳細                                                                    |
+| 引数         | タイプ              |    | 説明                                                                    |
 | ---------- | ---------------- |:--:| --------------------------------------------------------------------- |
 | primaryKey | Integer または Text | -> | 取得するエンティティのプライマリーキー値                                                  |
 | settings   | Object           | -> | ビルドオプション: context                                                     |
@@ -356,7 +356,7 @@ The `.fromCollection()` function <!-- REF #DataClassClass.fromCollection().Summa
 
 |
 
-#### 詳細
+#### 説明
 
 The `.get()` function <!-- REF #DataClassClass.get().Summary -->queries the dataclass to retrieve the entity matching the *primaryKey* parameter<!-- END REF -->。
 
@@ -370,9 +370,9 @@ The `.get()` function <!-- REF #DataClassClass.get().Summary -->queries the data
 
 任意の *settings* パラメーターには、追加オプションを格納したオブジェクトを渡すことができます。 以下のプロパティがサポートされています:
 
-| プロパティ   | タイプ  | 詳細                                                                                                                                                        |
+| プロパティ   | タイプ  | 説明                                                                                                                                                        |
 | ------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| context | テキスト | エンティティに適用されている自動の最適化コンテキストのラベル。 エンティティを読み込む以降のコードは、このコンテキストを使うことで最適化の恩恵を受けます。 この機能は [ORDA のクライアント/サーバー処理](ORDA/entities.md#クライアント/サーバーの最適化)を想定して設計されています。 |
+| context | Text | エンティティに適用されている自動の最適化コンテキストのラベル。 エンティティを読み込む以降のコードは、このコンテキストを使うことで最適化の恩恵を受けます。 この機能は [ORDA のクライアント/サーバー処理](ORDA/entities.md#クライアント/サーバーの最適化)を想定して設計されています。 |
 
 #### 例題 1
 
@@ -424,13 +424,13 @@ The `.get()` function <!-- REF #DataClassClass.get().Summary -->queries the data
 
 
 <!-- REF #DataClassClass.getDataStore().Params -->
-| 引数  | タイプ          |    | 詳細                                                    |
+| 引数  | タイプ          |    | 説明                                                    |
 | --- | ------------ |:--:| ----------------------------------------------------- |
 | 戻り値 | cs.DataStore | <- | Datastore of the dataclass|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.getDataStore( )` function <!-- REF #DataClassClass.getDataStore().Summary -->returns the datastore for the specified dataclass<!-- END REF -->。
 
@@ -477,23 +477,23 @@ The `.getDataStore( )` function <!-- REF #DataClassClass.getDataStore().Summary 
 
 
 <!-- REF #DataClassClass.getInfo().Params -->
-| 引数  | タイプ    |    | 詳細                                                      |
+| 引数  | タイプ    |    | 説明                                                      |
 | --- | ------ | -- | ------------------------------------------------------- |
 | 戻り値 | Object | <- | Information on the dataclass|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns an object providing information about the dataclass<!-- END REF -->。 このメソッドは汎用的なコードを書くのに有用です。
 
 **返されるオブジェクト**
 
-| プロパティ       | タイプ  | 詳細                   |
-| ----------- | ---- | -------------------- |
-| name        | テキスト | データクラスの名称            |
-| primaryKey  | テキスト | データクラスのプライマリーキー属性の名称 |
-| tableNumber | 整数   | 内部的な 4Dテーブル番号        |
+| プロパティ       | タイプ     | 説明                   |
+| ----------- | ------- | -------------------- |
+| name        | Text    | データクラスの名称            |
+| primaryKey  | Text    | データクラスのプライマリーキー属性の名称 |
+| tableNumber | Integer | 内部的な 4Dテーブル番号        |
 
 #### 例題 1
 
@@ -548,13 +548,13 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 
 
 <!-- REF #DataClassClass.new().Params -->
-| 引数  | タイプ       |    | 詳細                                                           |
+| 引数  | タイプ       |    | 説明                                                           |
 | --- | --------- | -- | ------------------------------------------------------------ |
 | 戻り値 | 4D.Entity | <- | New entity matching the Dataclass|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.new( )` function <!-- REF #DataClassClass.new().Summary -->creates in memory and returns a new blank entity related to the Dataclass<!-- END REF -->。
 
@@ -590,14 +590,14 @@ The `.new( )` function <!-- REF #DataClassClass.new().Summary -->creates in memo
 
 
 <!-- REF #DataClassClass.newSelection().Params -->
-| 引数        | タイプ                |    | 詳細                                                                                                       |
+| 引数        | タイプ                |    | 説明                                                                                                       |
 | --------- | ------------------ | -- | -------------------------------------------------------------------------------------------------------- |
-| keepOrder | 整数                 | -> | `dk keep ordered`: 順列ありのエンティティセレクションを作成します<br/>`dk non ordered` (あるいは省略時): 順列なしのエンティティセレクションを作成します |
+| keepOrder | Integer            | -> | `dk keep ordered`: 順列ありのエンティティセレクションを作成します<br/>`dk non ordered` (あるいは省略時): 順列なしのエンティティセレクションを作成します |
 | 戻り値       | 4D.EntitySelection | <- | データクラスの空の新規エンティティセレクション|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.newSelection( )` function <!-- REF #DataClassClass.newSelection().Summary -->creates a new, blank, non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->。
 
@@ -634,17 +634,17 @@ The `.newSelection( )` function <!-- REF #DataClassClass.newSelection().Summary 
 
 
 <!-- REF #DataClassClass.query().Params -->
-| 引数            | タイプ                |    | 詳細                                                                                               |
+| 引数            | タイプ                |    | 説明                                                                                               |
 | ------------- | ------------------ | -- | ------------------------------------------------------------------------------------------------ |
-| queryString   | テキスト               | -> | 検索条件 (文字列)                                                                                       |
-| フォーミュラ        | Object             | -> | 検索条件 (フォーミュラオブジェクト)                                                                              |
+| queryString   | Text               | -> | 検索条件 (文字列)                                                                                       |
+| formula       | Object             | -> | 検索条件 (フォーミュラオブジェクト)                                                                              |
 | value         | any                | -> | プレースホルダー用の値                                                                                      |
 | querySettings | Object             | -> | クエリオプション: parameters, attributes, args, allowFormulas, context, queryPath, queryPlan             |
 | 戻り値           | 4D.EntitySelection | <- | *queryString* または *formula* に渡した検索条件に合致するエンティティから構成された新しいエンティティセレクション|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.query( )` function <!-- REF #DataClassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. この関数には、レイジーローディングが適用されます。
 
@@ -870,15 +870,15 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 
 *querySettings* 引数は、追加のオプションを格納したオブジェクトです。 以下のオブジェクトプロパティがサポートされています:
 
-| プロパティ         | タイプ    | 詳細                                                                                                                                                                                                                                                                                                                                                                           |
-| ------------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| parameters    | Object | *queryString* または *formula* に **値の命名プレースホルダー** を使用した場合に渡すオブジェクト。 値は、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に値の代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、実際に比較される値です。 インデックスプレースホルダー (value引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。                                                                                                                  |
-| attributes    | Object | *queryString* または *formula* に **属性パスの命名プレースホルダー** を使用した場合に渡すオブジェクト。 属性パスは、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に属性パスの代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、属性パスを表す文字列または文字列のコレクションです。 値には、データクラスのスカラー属性・リレート属性・オブジェクトフィールド内のプロパティへの属性パスを指定することができます。<table><tr><th>タイプ</th><th>詳細</th></tr><tr><td>String</td><td>ドット記法を使用して表現された attributePath (例: "name" または "user.address.zipCode")</td></tr><tr><td>String の Collection</td><td>コレクションの各要素が attributePath の階層を表します (例: ["name"] または ["user","address","zipCode"])。 コレクションを使用することで、ドット記法に準じていない名前の属性に対してもクエリすることができます (例: \["4Dv17.1","en/fr"])。</td></tr></table>インデックスプレースホルダー (*value* 引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。 |
-| args          | Object | フォーミュラに渡す引数。 **args** オブジェクトは、フォーミュラ内の $1 が受け取るので、その値は *$1.property* という形で利用可能です (例題3 参照)。                                                                                                                                                                                                                                                                                   |
-| allowFormulas | ブール    | クエリ内でフォーミュラの呼び出しを許可するには true (デフォルト)。 フォーミュラ実行を禁止するには false を渡します。 false に設定されているときに、フォーミュラが `query()` に渡された場合、エラーが発生します (1278 - フォーミュラはこのメンバーメソッドでは許可されていません)。                                                                                                                                                                                                              |
-| context       | テキスト   | エンティティセレクションに適用されている自動の最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能はクライアント/サーバー処理を想定して設計されています。詳細な情報については、[**クライアント/サーバーの最適化**](entities.md#クライアントサーバーの最適化) の章を参照ください。                                                                                                                                                                                  |
-| queryPlan     | ブール    | 戻り値のエンティティコレクションに、実行する直前のクエリの詳細 (クエリプラン) を含めるかどうかを指定します。 返されるプロパティは、クエリプラン あるいはサブクエリ (複合クエリの場合) を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 このオプションは通常 queryPath と組み合わせて使用されます。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query( )` および `dataClass.query( )` 関数においてのみサポートされます。                                                                                  |
-| queryPath     | ブール    | 戻り値のエンティティコレクションに、実際に実行されたクエリの詳細を含めるかどうかを指定します。 返されたプロパティは、クエリで実際に使用されたパス (通常は queryPlan と同一ですが、エンジンがクエリを最適化した場合には異なる場合があります)、処理時間と検出レコード数を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query( )` および `dataClass.query( )` 関数においてのみサポートされます。                                                                            |
+| プロパティ         | タイプ     | 説明                                                                                                                                                                                                                                                                                                                                                                           |
+| ------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| parameters    | Object  | *queryString* または *formula* に **値の命名プレースホルダー** を使用した場合に渡すオブジェクト。 値は、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に値の代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、実際に比較される値です。 インデックスプレースホルダー (value引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。                                                                                                                  |
+| attributes    | Object  | *queryString* または *formula* に **属性パスの命名プレースホルダー** を使用した場合に渡すオブジェクト。 属性パスは、プロパティ/値のペアで表現されます。プロパティは、*queryString* または *formula* に属性パスの代わりに挿入されたプレースホルダー名 (":placeholder"など) で、値は、属性パスを表す文字列または文字列のコレクションです。 値には、データクラスのスカラー属性・リレート属性・オブジェクトフィールド内のプロパティへの属性パスを指定することができます。<table><tr><th>タイプ</th><th>説明</th></tr><tr><td>String</td><td>ドット記法を使用して表現された attributePath (例: "name" または "user.address.zipCode")</td></tr><tr><td>String の Collection</td><td>コレクションの各要素が attributePath の階層を表します (例: ["name"] または ["user","address","zipCode"])。 コレクションを使用することで、ドット記法に準じていない名前の属性に対してもクエリすることができます (例: \["4Dv17.1","en/fr"])。</td></tr></table>インデックスプレースホルダー (*value* 引数として値を直接渡す方法) と命名プレースホルダーは、同じクエリ内で同時に使用することができます。 |
+| args          | Object  | フォーミュラに渡す引数。 **args** オブジェクトは、フォーミュラ内の $1 が受け取るので、その値は *$1.property* という形で利用可能です (例題3 参照)。                                                                                                                                                                                                                                                                                   |
+| allowFormulas | Boolean | クエリ内でフォーミュラの呼び出しを許可するには true (デフォルト)。 フォーミュラ実行を禁止するには false を渡します。 false に設定されているときに、フォーミュラが `query()` に渡された場合、エラーが発生します (1278 - フォーミュラはこのメンバーメソッドでは許可されていません)。                                                                                                                                                                                                              |
+| context       | Text    | エンティティセレクションに適用されている自動の最適化コンテキストのラベル。 エンティティセレクションを扱うコードはこのコンテキストを使うことで最適化の恩恵を受けます。 この機能はクライアント/サーバー処理を想定して設計されています。詳細な情報については、[**クライアント/サーバーの最適化**](entities.md#クライアントサーバーの最適化) の章を参照ください。                                                                                                                                                                                  |
+| queryPlan     | Boolean | 戻り値のエンティティコレクションに、実行する直前のクエリの詳細 (クエリプラン) を含めるかどうかを指定します。 返されるプロパティは、クエリプラン あるいはサブクエリ (複合クエリの場合) を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 このオプションは通常 queryPath と組み合わせて使用されます。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query( )` および `dataClass.query( )` 関数においてのみサポートされます。                                                                                  |
+| queryPath     | Boolean | 戻り値のエンティティコレクションに、実際に実行されたクエリの詳細を含めるかどうかを指定します。 返されたプロパティは、クエリで実際に使用されたパス (通常は queryPlan と同一ですが、エンジンがクエリを最適化した場合には異なる場合があります)、処理時間と検出レコード数を格納したオブジェクトです。 このオプションはアプリケーションの開発フェーズにおいて有用です。 省略時のデフォルト: false。 **注:** このプロパティは `entitySelection.query( )` および `dataClass.query( )` 関数においてのみサポートされます。                                                                            |
 
 **queryPlan と queryPath について**
 

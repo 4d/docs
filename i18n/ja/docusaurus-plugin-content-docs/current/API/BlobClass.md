@@ -28,16 +28,16 @@ Blobクラスを使って、[BLOB オブジェクト](../Concepts/dt_blob.md#BLO
 
 <!-- REF #4D.Blob.new().Params -->
 
-| 引数   | タイプ              |    | 詳細                                       |
-| ---- | ---------------- |:--:| ---------------------------------------- |
-| blob | Blob または 4D.Blob | -> | コピーする BLOB                               |
-| 戻り値  | 4D.Blob          | <- | New 4D.Blob  |<!-- END REF -->
+| 引数   | タイプ              |    | 説明                                      |
+| ---- | ---------------- |:--:| --------------------------------------- |
+| blob | BLOB または 4D.Blob | -> | コピーする BLOB                              |
+| 戻り値  | 4D.Blob          | <- | 新規 4D.Blob  |<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
-`4D.Blob.new` <!-- REF #4D.Blob.new().Summary -->creates a new `4D.Blob` object optionally encapsulating a copy of the data from another blob (scalar blob or `4D.Blob`)<!-- END REF -->。
+`4D.Blob.new` は、 <!-- REF #4D.Blob.new().Summary -->新規の `4D.Blob` オブジェクトを作成し、(任意で) 別の BLOBデータ (スカラーBLOB または `4D.Blob`) のコピーを格納します<!-- END REF -->。
 
 `blob` 引数が渡されなかった場合、関数は空の 4D.Blob を返します。
 
@@ -45,8 +45,8 @@ Blobクラスを使って、[BLOB オブジェクト](../Concepts/dt_blob.md#BLO
 
 <!-- REF #Blob.size.Syntax -->**.size** : Real<!-- END REF -->
 
-#### 詳細
-The `.size` property <!-- REF #Blob.size.Summary -->returns the size of a `4D.Blob`, expressed in bytes.<!-- END REF -->
+#### 説明
+`.size` プロパティは、 <!-- REF #Blob.size.Summary -->`4D.Blob` のサイズを返します (バイト単位)。<!-- END REF -->
 
 ## .slice()
 
@@ -62,17 +62,17 @@ The `.size` property <!-- REF #Blob.size.Summary -->returns the size of a `4D.Bl
 
 
 <!-- REF #Blob.slice().Params -->
-| 引数    | タイプ     |    | 詳細                                      |
+| 引数    | タイプ     |    | 説明                                      |
 | ----- | ------- |:--:| --------------------------------------- |
-| start | 実数      | -> | 新しい `4D.Blob` に含める最初のバイトのインデックス         |
-| end   | 実数      | -> | 新しい `4D.Blob` に含めない最初のバイトのインデックス        |
+| start | Real    | -> | 新しい `4D.Blob` に含める最初のバイトのインデックス         |
+| end   | Real    | -> | 新しい `4D.Blob` に含めない最初のバイトのインデックス        |
 | 戻り値   | 4D.Blob | <- | 新規 `4D.Blob`|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
-`.slice()` <!-- REF #Blob.slice().Summary --> creates and returns a `4D.Blob` that references data from a subset of the blob on which it's called. 元の BLOB は変更されません。<!-- END REF -->
+`.slice()` 関数は、 <!-- REF #Blob.slice().Summary --> 呼び出し対象である BLOB のデータの一部を参照する新規の `4D.Blob` を作成して返します。 元の BLOB は変更されません。<!-- END REF -->
 
 `start` 引数は、新しい `4D.Blob` に含める最初のバイトを示す BLOB のインデックスです。 負の値を指定した場合、4D は BLOB の末尾から先頭に向かってオフセットしたものとして扱います。 たとえば、-10 は BLOB の最後から 10番目のバイトを表します。 デフォルト値は 0 です。 start にソースBLOB のサイズより大きな値を指定すると、返される `4D.Blob` のサイズは 0 になり、データは含まれません。
 

@@ -13,12 +13,12 @@ Pour plus d'informations sur les chemins de requête, reportez-vous à [queryPla
 
 Dans la collection d'étapes, il existe un objet avec les propriétés suivantes qui définissent la requête exécutée :
 
-| Propriété     | Type        | Description                                                                       |
-| ------------- | ----------- | --------------------------------------------------------------------------------- |
-| Description   | String      | Requête exécutée ou "AND" lorsqu'il existe plusieurs étapes                       |
-| time          | Number      | Nombre de millisecondes nécessaires pour exécuter la requête                      |
-| recordsfounds | Number      | Nombre d'enregistrements trouvés                                                  |
-| steps         | Collections | Une collection avec un objet définissant l'étape suivante du chemin de la requête |
+| Propriété     | Type       | Description                                                                       |
+| ------------- | ---------- | --------------------------------------------------------------------------------- |
+| Description   | String     | Requête exécutée ou "AND" lorsqu'il existe plusieurs étapes                       |
+| time          | Number     | Nombre de millisecondes nécessaires pour exécuter la requête                      |
+| recordsfounds | Number     | Nombre d'enregistrements trouvés                                                  |
+| steps         | Collection | Une collection avec un objet définissant l'étape suivante du chemin de la requête |
 
 ## Exemple
 

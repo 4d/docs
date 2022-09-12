@@ -69,7 +69,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 | folderConstant | Integer   | -> | Constante de dossier 4D                            |
 | pathType       | Integer   | -> | `fk posix path` (par défaut) ou `fk platform path` |
 | *              |           | -> | * pour retourner le dossier de la base hôte        |
-| Result         | 4D.Folder | <- | Nouvel objet dossier|<!-- END REF -->
+| Résultat       | 4D.Folder | <- | Nouvel objet dossier|<!-- END REF -->
 
 |
 
@@ -150,7 +150,7 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 <!--REF #FolderClass.create().Params -->
 | Paramètres | Type    |    | Description                                                                      |
 | ---------- | ------- | -- | -------------------------------------------------------------------------------- |
-| Result     | Boolean | <- | Vrai si le dossier a été créé avec succès, sinon Faux|<!-- END REF -->
+| Résultat   | Boolean | <- | Vrai si le dossier a été créé avec succès, sinon Faux|<!-- END REF -->
 
 
 |
@@ -213,7 +213,7 @@ End if
 | dossierDestination | 4D.Folder | -> | Dossier de destination pour l'alias ou le raccourci                        |
 | aliasName          | Text      | -> | Nom de l'alias ou du raccourci                                             |
 | aliasType          | Integer   | -> | Type de lien de l'alias                                                    |
-| Result             | 4D.File   | <- | Référence de l'alias ou du raccourci du dossier|<!-- END REF -->
+| Résultat           | 4D.File   | <- | Référence de l'alias ou du raccourci du dossier|<!-- END REF -->
 
 |
 
@@ -342,7 +342,7 @@ Lorsque la constante `Delete with contents` est passée :
 | ------------------ | --------- | -- | ------------------------------------------ |
 | dossierDestination | 4D.Folder | -> | Dossier de destination                     |
 | nouveauNom         | Text      | -> | Nom complet du dossier déplacé             |
-| Result             | 4D.Folder | <- | Dossier déplacé|<!-- END REF -->
+| Résultat           | 4D.Folder | <- | Dossier déplacé|<!-- END REF -->
 
 |
 
@@ -397,7 +397,7 @@ Vous souhaitez déplacer et renommer un dossier :
 | Paramètres | Type      |    | Description                                |
 | ---------- | --------- | -- | ------------------------------------------ |
 | nouveauNom | Text      | -> | Nouveau nom complet du dossier             |
-| Result     | 4D.Folder | <- | Dossier renommé|<!-- END REF -->
+| Résultat   | 4D.Folder | <- | Dossier renommé|<!-- END REF -->
 
 |
 

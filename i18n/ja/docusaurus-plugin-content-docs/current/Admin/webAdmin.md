@@ -46,7 +46,7 @@ open ~/Desktop/4D.app --webadmin-auto-start true
 
 ![alt-text](../assets/en/Admin/waMenu2.png)
 
-サーバーが開始されていると、メニュー項目は **Webサーバー停止** になります。 `WebAdmin` Webサーバーを停止するには、これを選択します。
+サーバーが開始されていると、メニュー項目は **Webサーバー停止** になります。`WebAdmin` Webサーバーを停止するには、これを選択します。
 
 
 

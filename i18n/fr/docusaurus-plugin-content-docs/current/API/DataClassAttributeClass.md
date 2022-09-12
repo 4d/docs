@@ -283,7 +283,7 @@ Cette propriété n'est pas retournée si [`.kind`](#kind) = "relatedEntity" ou 
 
 #### Description
 
-The `.name` property <!-- REF DataClassAttributeClass.name.Summary -->The `.name` property<!-- END REF -->.
+La propriété `.name` <!-- REF DataClassAttributeClass.name.Summary -->The `.name` property<!-- END REF -->.
 
 #### Exemple
 

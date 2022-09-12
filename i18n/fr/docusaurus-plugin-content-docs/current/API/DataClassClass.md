@@ -109,7 +109,7 @@ Considérant les propriétés de table suivantes :
 | Paramètres | Type               |    | Description                                                                    |
 | ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | settings   | Object             | -> | Option de création : contexte                                                  |
-| Result     | 4D.EntitySelection | <- | References on all entities related to the Dataclass|<!-- END REF -->
+| Résultat   | 4D.EntitySelection | <- | References on all entities related to the Dataclass|<!-- END REF -->
 
 |
 
@@ -211,9 +211,9 @@ $ds.Persons.clearRemoteCache()
 <!-- REF #DataClassClass.fromCollection().Params -->
 | Paramètres | Type               |    | Description                                                            |
 | ---------- | ------------------ |:--:| ---------------------------------------------------------------------- |
-| objectCol  | Collections        | -> | Collection d'objets à faire correspondre à des entités                 |
+| objectCol  | Collection         | -> | Collection d'objets à faire correspondre à des entités                 |
 | settings   | Object             | -> | Option de création : contexte                                          |
-| Result     | 4D.EntitySelection | <- | Entity selection filled from the collection|<!-- END REF -->
+| Résultat   | 4D.EntitySelection | <- | Entity selection filled from the collection|<!-- END REF -->
 
 |
 
@@ -411,7 +411,7 @@ Dans cet exemple, la première entité sera bien créée mais la seconde créati
 | ---------- | --------------- |:--:| --------------------------------------------------------------------- |
 | primaryKey | Integer OR Text | -> | Valeur de la clé primaire de l'entité à récupérer                     |
 | settings   | Object          | -> | Option de création : contexte                                         |
-| Result     | 4D.Entity       | <- | Entity matching the designated primary key|<!-- END REF -->
+| Résultat   | 4D.Entity       | <- | Entity matching the designated primary key|<!-- END REF -->
 
 |
 
@@ -525,7 +525,7 @@ $number:=$ds.Persons.getCount()
 <!-- REF #DataClassClass.getDataStore().Params -->
 | Paramètres | Type         |    | Description                                           |
 | ---------- | ------------ |:--:| ----------------------------------------------------- |
-| Result     | cs.DataStore | <- | Datastore of the dataclass|<!-- END REF -->
+| Résultat   | cs.DataStore | <- | Datastore of the dataclass|<!-- END REF -->
 
 |
 
@@ -579,7 +579,7 @@ La méthode projet ***SearchDuplicate*** recherche des valeurs dupliquées dans 
 <!-- REF #DataClassClass.getInfo().Params -->
 | Paramètres | Type   |    | Description                                             |
 | ---------- | ------ | -- | ------------------------------------------------------- |
-| Result     | Object | <- | Information on the dataclass|<!-- END REF -->
+| Résultat   | Object | <- | Information on the dataclass|<!-- END REF -->
 
 |
 
@@ -672,12 +672,12 @@ Si elle est appelée depuis une application 4D monoposte, la fonction retourne `
 
 L'objet retourné contient les propriétés suivantes :
 
-| Propriété  | Type        | Description                                                                   |
-| ---------- | ----------- | ----------------------------------------------------------------------------- |
-| maxEntries | Integer     | Nombre maximum de collections "entries".                                      |
-| stamp      | Integer     | Marqueur du cache.                                                            |
-| timeout    | Integer     | Durée avant qu'une nouvelle entrée dans le cache soit indiquée comme expirée. |
-| entries    | Collections | Contient un objet pour chaque entité dans le cache.                           |
+| Propriété  | Type       | Description                                                                   |
+| ---------- | ---------- | ----------------------------------------------------------------------------- |
+| maxEntries | Integer    | Nombre maximum de collections "entries".                                      |
+| stamp      | Integer    | Marqueur du cache.                                                            |
+| timeout    | Integer    | Durée avant qu'une nouvelle entrée dans le cache soit indiquée comme expirée. |
+| entries    | Collection | Contient un objet pour chaque entité dans le cache.                           |
 
 Chaque objet "entrée" de la collection `entries` contient les propriétés suivantes :
 
@@ -747,13 +747,13 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 <!-- REF #DataClassClass.new().Params -->
 | Paramètres | Type      |    | Description                                                  |
 | ---------- | --------- | -- | ------------------------------------------------------------ |
-| Result     | 4D.Entity | <- | New entity matching the Dataclass|<!-- END REF -->
+| Résultat   | 4D.Entity | <- | New entity matching the Dataclass|<!-- END REF -->
 
 |
 
 #### Description
 
-The `.new()` function <!-- REF #DataClassClass.new().Summary -->creates in memory and returns a new blank entity related to the Dataclass<!-- END REF -->.
+La fonction `.new()` <!-- REF #DataClassClass.new().Summary -->creates in memory and returns a new blank entity related to the Dataclass<!-- END REF -->.
 
 L'objet entité est créé en mémoire et n'est pas sauvegardé dans la base de données tant que la fonction [`.save( )`](EntityClass.md#save) n'est pas appelée. Si l'entité est supprimée avant d'être sauvegardée, elle ne peut pas être récupérée.
 
@@ -794,7 +794,7 @@ Cet exemple crée une nouvelle entité dans la dataclass "Log" et enregistre les
 | Paramètres | Type               |    | Description                                                                                                                            |
 | ---------- | ------------------ | -- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | keepOrder  | Integer            | -> | `dk keep ordered` : crée une entity selection triée,<br/>`dk non ordered` : crée une entity selection non triée (défaut si omis) |
-| Result     | 4D.EntitySelection | <- | Nouvelle entity selection vide liée à la dataclass|<!-- END REF -->
+| Résultat   | 4D.EntitySelection | <- | Nouvelle entity selection vide liée à la dataclass|<!-- END REF -->
 
 |
 
@@ -841,7 +841,7 @@ Une fois créée, l'entity selection ne contient aucune entité (`mySelection.le
 | formula       | Object             | -> | Critères de recherche en objet formule                                                                                                                                          |
 | value         | any                | -> | Valeur(s) à utiliser comme placeholder(s)                                                                                                                                       |
 | querySettings | Object             | -> | Options de recherche : parameters, attributes, args, allowFormulas, context, queryPath, queryPlan                                                                               |
-| Result        | 4D.EntitySelection | <- | Nouvelle entity selection constituée des entités de la dataclass correspondant au(x) critère(s) de recherche fournis dans *queryString* ou *formula*|<!-- END REF -->
+| Résultat      | 4D.EntitySelection | <- | Nouvelle entity selection constituée des entités de la dataclass correspondant au(x) critère(s) de recherche fournis dans *queryString* ou *formula*|<!-- END REF -->
 
 |
 

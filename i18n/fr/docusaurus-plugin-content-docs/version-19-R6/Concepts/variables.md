@@ -67,7 +67,7 @@ Le tableau suivant répertorie toutes les valeurs `varType` prises en charge :
 | `Pointeurs`            | Valeur pointeur                          |
 | `Images`               | Valeur image                             |
 | `Blob`                 | Valeur Blob évolutive                    |
-| `Collections`          | Valeur collection                        |
+| `Collection`           | Valeur collection                        |
 | `Variant`              | Valeur variant                           |
 | `Object`               | Objet avec classe par défaut (4D.object) |
 | `4D.<className>` | Objet du nom de la classe 4D             |

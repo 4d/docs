@@ -32,13 +32,13 @@ Lorsque vous appelez ce paramètre dans votre requête REST, les 100 premières 
 
 Voici une description des données retournées :
 
-| Propriété     | Type        | Description                                                                                                                                                                                                             |
-| ------------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| __entityModel | String      | Nom de la dataclass.                                                                                                                                                                                                    |
-| __COUNT       | Number      | Nombre d'entités dans la dataclass.                                                                                                                                                                                     |
-| __SENT        | Number      | Nombre d'entités envoyées par la requête REST. Ce nombre peut être le nombre total d'entités s'il est inférieur à la valeur définie par `$top/$limit`.                                                                  |
-| __FIRST       | Number      | Numéro d'entité à partir duquel la sélection commence. Soit 0 par défaut soit la valeur définie par `$skip`.                                                                                                            |
-| __ENTITIES    | Collections | Cette collection d'objets contient un objet pour chaque entité avec tous ses attributs. Tous les attributs relationnels sont renvoyés en tant qu'objets avec un URI pour obtenir des informations concernant le parent. |
+| Propriété     | Type       | Description                                                                                                                                                                                                             |
+| ------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| __entityModel | String     | Nom de la dataclass.                                                                                                                                                                                                    |
+| __COUNT       | Number     | Nombre d'entités dans la dataclass.                                                                                                                                                                                     |
+| __SENT        | Number     | Nombre d'entités envoyées par la requête REST. Ce nombre peut être le nombre total d'entités s'il est inférieur à la valeur définie par `$top/$limit`.                                                                  |
+| __FIRST       | Number     | Numéro d'entité à partir duquel la sélection commence. Soit 0 par défaut soit la valeur définie par `$skip`.                                                                                                            |
+| __ENTITIES    | Collection | Cette collection d'objets contient un objet pour chaque entité avec tous ses attributs. Tous les attributs relationnels sont renvoyés en tant qu'objets avec un URI pour obtenir des informations concernant le parent. |
 
 Chaque entité contient les propriétés suivantes :
 

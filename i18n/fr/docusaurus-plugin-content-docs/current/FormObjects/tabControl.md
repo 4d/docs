@@ -53,11 +53,11 @@ Pour fournir les étiquettes d'un onglet, vous pouvez utiliser :
 
 Vous pouvez affecter un [objet](Concepts/dt_object.md) encapsulant une [collection](../Concepts/dt_collection.md) comme [source de données](properties_Object.md#variable-or-expression) de l'onglet. Cet objet doit avoir les propriétés suivantes :
 
-| Propriété      | Type        | Description                                                                                                                                                          |
-| -------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `values`       | Collections | Obligatoire - Collection de valeurs scalaires. Seules les valeurs de type chaîne sont prises en charge. Si elle est invalide, vide ou non définie, l'onglet est vide |
-| `index`        | number      | Indice de la page de l'onglet en cours (valeur comprise entre 0 et `collection.length-1`)                                                                            |
-| `currentValue` | Text        | Valeur courante sélectionnée                                                                                                                                         |
+| Propriété      | Type       | Description                                                                                                                                                          |
+| -------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `values`       | Collection | Obligatoire - Collection de valeurs scalaires. Seules les valeurs de type chaîne sont prises en charge. Si elle est invalide, vide ou non définie, l'onglet est vide |
+| `index`        | number     | Indice de la page de l'onglet en cours (valeur comprise entre 0 et `collection.length-1`)                                                                            |
+| `currentValue` | Text       | Valeur courante sélectionnée                                                                                                                                         |
 
 Le code d'initialisation doit être exécuté avant que le formulaire ne soit présenté à l'utilisateur.
 
