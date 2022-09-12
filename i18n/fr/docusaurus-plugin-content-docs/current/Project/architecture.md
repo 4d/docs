@@ -1,14 +1,14 @@
 ---
 id: architecture
-title: Architecture of a project
+title: Architecture d'un projet
 ---
 
-Un projet 4D est constitué de plusieurs fichiers et dossiers, stockés dans un seul dossier parent de l'application (dossier package).
+Un projet 4D est constitué de plusieurs fichiers et dossiers, stockés dans un seul dossier parent de l'application (dossier package). Par exemple :
 
 - MonProjet
     - `Composants`
-    - `Données`
-        - `Fichiers d'historique`
+    - `Data`
+        - `Logs`
         - `Settings`
     - `Documentation`
     - `Plugins`
@@ -33,7 +33,7 @@ La hiérarchie du dossier Project se présente généralement comme suit :
     + `Classes`
     + `DatabaseMethods`
     + `Methods`
-    + `Formulaires`
+    + `Forms`
     + `TableForms`
     + `Triggers`
 - `DerivedData`
@@ -45,7 +45,7 @@ La hiérarchie du dossier Project se présente généralement comme suit :
 Le fichier de développement de projet, utilisé pour désigner et lancer le projet. Ce fichier peut être ouvert par :
 
 - 4D
-- 4D Server (read-only, see [Opening a remote project](Desktop/clientServer.md#opening-a-remote-project))
+- 4D Server (lecture seule, voir [Ouvrir un projet distant](Desktop/clientServer.md#opening-a-remote-project))
 
 > Dans les projets 4D, le développement est réalisé avec 4D et le développement multi-utilisateurs est géré par des outils de contrôle de version. 4D Server peut ouvrir des fichiers .4DProject à des fins de test.
 
@@ -86,7 +86,7 @@ Ce fichier texte peut également contenir des clés de configuration, notamment 
 | *className*.4dm | Méthode de définition de classe utilisateur, permettant d'instancier des objets spécifiques. Un fichier par classe, le nom du fichier est le nom de la classe | text      |
 
 
-#### `Formulaires`
+#### `Forms`
 
 | Contenu                                   | Description                                  | Le format |
 | ----------------------------------------- | -------------------------------------------- | --------- |
@@ -122,7 +122,7 @@ Ce fichier texte peut également contenir des clés de configuration, notamment 
 Le dossier Trash contient des méthodes et des formulaires qui ont été supprimés du projet (le cas échéant). Il peut contenir les dossiers suivants :
 
 - `Methods`
-- `Formulaires`
+- `Forms`
 - `TableForms`
 
 Dans ces dossiers, les noms des éléments supprimés sont entre parenthèses, par exemple. "(myMethod).4dm". L'organisation des dossiers est identique à celle du dossier [Sources](#sources).
@@ -150,7 +150,7 @@ Le dossier Resources contient tous les fichiers et dossiers de ressources person
 (*) uniquement si le projet a été exporté depuis une base binaire .4db.
 
 
-## `Données`
+## `Data`
 
 Le dossier Data contient le fichier de données ainsi que tous les fichiers et dossiers relatifs aux données.
 
@@ -175,7 +175,7 @@ Ce dossier contient des **fichiers de propriétés utilisateur des données** ut
 | settings.4DSettings | Propriétés de la base personnalisées pour ce fichier de données.                                                                                                                                                                                                                               | XML       |
 
 
-### `Fichiers d'historique`
+### `Logs`
 
 Le dossier Logs contient tous les fichiers journaux utilisés par le projet. Les fichiers journaux comprennent notamment :
 
