@@ -20,7 +20,7 @@ title: Document Class
 
 #### Descripción
 
-The `.creationDate` property returns <!-- REF #document.creationDate.Summary -->The `.creationDate` property returns<!-- END REF -->.
+La propiedad `.creationDate` devuelve <!-- REF #document.creationDate.Summary -->The `.creationDate` property returns<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 <!-- END REF -->
@@ -40,7 +40,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.creationTime` property  returns <!-- REF #document.creationTime.Summary -->the creation  time of the file<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+The `.creationTime` property  returns <!-- REF #document.creationTime.Summary -->the creation  time of the file<!-- END REF --> (expresado como un número de segundos que comienza en 00:00).
 
 Esta propiedad es **de sólo lectura**.
 
@@ -61,7 +61,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.exists` property returns <!-- REF #document.exists.Summary -->true if the file exists on disk<!-- END REF -->, and false otherwise.
+La propiedad `.exists` devuelve <!-- REF #document.exists.Summary -->true if the file exists on disk<!-- END REF -->, y false en caso contrario.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -125,7 +125,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.hidden` property returns <!-- REF #document.hidden.Summary -->true if the file is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
+La propiedad `.hidden` devuelve <!-- REF #document.hidden.Summary -->true if the file is set as "hidden" at the system level<!-- END REF -->, y false en caso contrario.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -146,7 +146,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.isAlias` property returns <!-- REF #document.isAlias.Summary -->true if the file is an alias, a shortcut, or a symbolic link<!-- END REF -->, and false otherwise.
+La propiedad `.isAlias` devuelve <!-- REF #document.isAlias.Summary -->true if the file is an alias, a shortcut, or a symbolic link<!-- END REF -->, y false en caso contrario.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -167,7 +167,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.isFile` property returns <!-- REF #document.isFile.Summary -->The `.copyTo()` function<!-- END REF -->.
+La propiedad `.isFile` devuelve <!-- REF #document.isFile.Summary -->The `.copyTo()` function<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -188,7 +188,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.isFolder` property returns <!-- REF #document.isFolder.Summary -->always true for a file<!-- END REF -->.
+La propiedad `.isFolder` devuelve <!-- REF #document.isFolder.Summary -->always true for a file<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -241,7 +241,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.modificationDate` property returns <!-- REF #document.modificationDate.Summary -->The `.modificationDate` property returns<!-- END REF -->.
+La propiedad `.modificationDate` devuelve <!-- REF #document.modificationDate.Summary -->The `.modificationDate` property returns<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -262,7 +262,7 @@ Esta propiedad es **de sólo lectura**.
 
 ##### Descripción
 
-The `.modificationTime` property returns <!-- REF #document.modificationTime.Summary -->The `.modificationTime` property returns<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+La propiedad `.modificationTime` devuelve <!-- REF #document.modificationTime.Summary -->The `.modificationTime` property returns<!-- END REF --> (expresado como un número de segundos que comienza en 00:00).
 
 Esta propiedad es **de sólo lectura**.
 
@@ -283,7 +283,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.name` property returns <!-- REF #document.name.Summary -->the name of the file without extension (if any)<!-- END REF -->.
+La propiedad `.name` devuelve <!-- REF #document.name.Summary -->the name of the file without extension (if any)<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -304,7 +304,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.original` property returns <!-- REF #document.original.Summary -->the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->. El elemento objetivo puede ser:
+La propiedad `.original` devuelve <!-- REF #document.original.Summary -->the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->. El elemento objetivo puede ser:
 
 * un objeto File
 * un objeto de la carpeta
@@ -330,7 +330,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.parent` property returns <!-- REF #document.parent.Summary -->The `.parent` property returns<!-- END REF -->. .
+La propiedad `.parent` devuelve <!-- REF #document.parent.Summary -->The `.parent` property returns<!-- END REF -->. Si la ruta representa una ruta del sitema (por ejemplo, "/DATA/"), se devuelve la ruta del sistema.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -351,7 +351,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.path` property returns <!-- REF #document.path.Summary -->The `.path` property returns<!-- END REF -->. .
+La propiedad `.path` devuelve <!-- REF #document.path.Summary -->The `.path` property returns<!-- END REF -->. Si la ruta representa un filesystem (por ejemplo, "/DATA/"), se devuelve el filesystem.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -372,7 +372,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.platformPath` property returns <!-- REF #document.platformPath.Summary -->The `.platformPath` property returns<!-- END REF -->.
+La propiedad `.platformPath` devuelve <!-- REF #document.platformPath.Summary -->The `.platformPath` property returns<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
