@@ -176,13 +176,13 @@ Dans le fichier de définition de classe, les déclarations de fonction utilisen
 
 > **Astuce :** Si vous préfixez le nom d'une fonction par un trait de soulignement ("_"), elle ne sera pas proposée par les fonctionnalités d'auto-complétion dans l'éditeur de code 4D. Par exemple, si vous déclarez `Function _myPrivateFunction` dans `MyClass`, elle ne sera pas proposée dans l'éditeur de code lorsque vous tapez `"cs.MyClass. "`.
 
-Immédiatement après le nom de la fonction, les [paramètres](#parameters) de la fonction peuvent être déclarés avec un nom et un type de données affectés, y compris le paramètre de retour (facultatif).
+Immédiatement après le nom de la fonction, les [paramètres](#parameters) de la fonction peuvent être déclarés avec un nom et un type de données affectés, y compris le paramètre de retour (facultatif). Par exemple :
 
 ```4d
 Function computeArea($width : Integer; $height : Integer)->$area : Integer
 ```
 
-Dans une fonction de classe, la commande `This` est utilisée comme instance d'objet.
+Dans une fonction de classe, la commande `This` est utilisée comme instance d'objet. Par exemple :
 
 ```4d  
 Function setFullname($firstname : Text; $lastname : Text)
@@ -216,20 +216,20 @@ Function add($x; $y : Variant; $z : Integer; $xy : Object)
 ```
 > Si le type n'est pas fourni, le paramètre sera défini comme `Variant`.
 
-Vous déclarez le paramètre de retour d'une fonction (optionnel) en ajoutant une flèche (`->`) et la définition du paramètre de retour après la liste des paramètres d'entrée.
+Vous déclarez le paramètre de retour d'une fonction (optionnel) en ajoutant une flèche (`->`) et la définition du paramètre de retour après la liste des paramètres d'entrée. Par exemple :
 
 ```4d
 Function add($x : Variant; $y : Integer)->$result : Integer
 ```
 
-Vous pouvez également déclarer le paramètre de retour en ajoutant uniquement `: type`, auquel cas il sera automatiquement disponible via $0.
+Vous pouvez également déclarer le paramètre de retour en ajoutant uniquement `: type`, auquel cas il sera automatiquement disponible via $0. Par exemple :
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
  $0:=$x+$y
 ```
 
-La [syntaxe 4D classique](parameters.md#sequential-parameters) pour les paramètres de méthodes peut être utilisée pour déclarer les paramètres des fonctions de classes. Les deux syntaxes peuvent être mélangées.
+La [syntaxe 4D classique](parameters.md#sequential-parameters) pour les paramètres de méthodes peut être utilisée pour déclarer les paramètres des fonctions de classes. Les deux syntaxes peuvent être mélangées. Par exemple :
 
 ```4d
 Function add($x : Integer)
@@ -427,7 +427,7 @@ Function getArea()
  $0:=This.height*This.width
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Cet exemple illustre l'utilisation de `Super` dans une fonction de classe. Vous avez créé la classe `Rectangle` contenant une fonction :
 
@@ -476,7 +476,7 @@ Le mot-clé `This` retourne une référence vers l'objet en cours de traitement.
 
 Dans la plupart des cas, la valeur de `This` est déterminée par la manière dont une fonction est appelée. Il ne peut pas être défini par affectation lors de l'exécution, et il peut être différent à chaque fois que la fonction est appelée.
 
-Lorsqu'une formule est appelée en tant que méthode membre d'un objet, son `This` désigne l'objet sur lequel la méthode est appelée.
+Lorsqu'une formule est appelée en tant que méthode membre d'un objet, son `This` désigne l'objet sur lequel la méthode est appelée. Par exemple :
 
 ```4d
 $o:=New object("prop";42;"f";Formula(This.prop))
