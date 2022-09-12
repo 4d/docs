@@ -366,6 +366,8 @@ Par défaut, la ligne du compteur de programme (également appelée ligne d'exé
 
 Cela indique seulement au débogueur de poursuivre le traçage ou l'exécution à partir d'un point différent. Il n'exécute pas les lignes et n'annule pas leur exécution. Tous les paramètres, champs, variables, etc. courants ne sont pas affectés.
 
+Par exemple :
+
 ```4d
   // ...
  If(This condition)
