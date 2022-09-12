@@ -23,7 +23,7 @@ Les données sont collectées lors des événements suivants :
 
 ### Collecté au démarrage de 4D Server
 
-| Données       | Exemple                                                                                              | Notes                                                      |
+| Data          | Exemple                                                                                              | Notes                                                      |
 | ------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- |
 | CPU           | Intel(R) Core(TM) i7-2600 CPU @ 3.40GH 3.39GHz                                                       | Nom, type et vitesse du processeur                         |
 | numberOfCores | 4                                                                                                    | Nombre total de cœurs                                      |
@@ -37,7 +37,7 @@ Les données sont collectées lors des événements suivants :
 
 ### Collecté par base de données à l'ouverture
 
-| Données                 | Exemple                                                 | Notes                                                                                                             |
+| Data                    | Exemple                                                 | Notes                                                                                                             |
 | ----------------------- | ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
 | id                      | chaîne hachée                                           | Identifiant unique associé à la base de données (*Hachage par roulement polynomial du nom de la base de données*) |
 | dataFileSize            | 419430400                                               | Taille du fichier de données en octets                                                                            |
@@ -53,14 +53,14 @@ Les données sont collectées lors des événements suivants :
 
 ### Collecté par base de données à la fermeture
 
-| Données | Exemple | Notes                                                                         |
-| ------- | ------- | ----------------------------------------------------------------------------- |
-| uptime  | 123456  | Temps écoulé (en secondes) depuis l'ouverture de la base de données 4D locale |
+| Data   | Exemple | Notes                                                                         |
+| ------ | ------- | ----------------------------------------------------------------------------- |
+| uptime | 123456  | Temps écoulé (en secondes) depuis l'ouverture de la base de données 4D locale |
 
 
 ### Collecté par base de données au démarrage du serveur web
 
-| Données   | Exemple          | Notes         |
+| Data      | Exemple          | Notes         |
 | --------- | ---------------- | ------------- |
 | webServer | {"started":true} | Toujours true |
 
