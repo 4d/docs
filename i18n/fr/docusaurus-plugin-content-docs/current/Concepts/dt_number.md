@@ -27,7 +27,7 @@ Une constante littérale numérique s’écrit comme un nombre réel. Voici quel
 
 > Le séparateur décimal est par défaut le point (.), quelle que soit la langue du système. Si vous avez coché l'option "Utiliser langage français et paramètres régionaux système" dans la Page Méthodes des Préférences, vous devez utiliser le séparateur défini dans votre système.
 
-Les nombres négatifs s’écrivent précédés du signe moins (-).
+Les nombres négatifs s’écrivent précédés du signe moins (-). Par exemple :
 
 ```4d
 -27
@@ -72,7 +72,7 @@ L'opérateur modulo % divise le premier nombre par le second et retourne le rest
 
 ### Priorité
 
-L'ordre dans lequel une expression est évaluée s'appelle la priorité. 4D applique strictement une règle de priorité de gauche à droite. L'ordre algébrique n'est pas appliqué.
+L'ordre dans lequel une expression est évaluée s'appelle la priorité. 4D applique strictement une règle de priorité de gauche à droite. L'ordre algébrique n'est pas appliqué. Par exemple :
 
 ```4d
  3+4*5
@@ -80,7 +80,7 @@ L'ordre dans lequel une expression est évaluée s'appelle la priorité. 4D appl
 
 retourne 35 car l'expression est évaluée comme 3 + 4, qui donne 7, multiplié par 5, ce qui donne 35.
 
-Les parenthèses doivent être utilisées pour forcer l'ordre de calcul en fonction de vos besoins.
+Les parenthèses doivent être utilisées pour forcer l'ordre de calcul en fonction de vos besoins. Par exemple :
 
 ```4d
  3+(4*5)
