@@ -424,6 +424,8 @@ Vous pouvez définir des bornes pour l'itération à l'aide des paramètres opti
 - Dans le paramètre *fin*, vous pouvez passer la position de l'élément de *Expression* auquel stopper l'itération (*fin* est exclus).
 
 Si *fin* est omis ou si *fin* est plus grand que le nombre d'éléments de *Expression*, les éléments sont itérés depuis *début* jusqu'au dernier inclus. Si les paramètres *début* et *fin* sont des valeurs positives, ils représentent des positions d'éléments dans *Expression*. Si *begin* est une valeur négative, elle est recalculée comme `begin:=begin+Taille expression` (elle est considérée comme un décalage à partir de la fin de *Expression*). Si la valeur calculée est négative, *begin* prend la valeur 0. **Note :** Même si début est une valeur négative, l'itération est toujours effectuée dans le même ordre. Si *fin* est une valeur négative, elle est recalculée comme `fin:=fin+Taille expression`
+
+Par exemple :
 - une collection contient 10 éléments (numérotés de 0 à 9)
 - début=-4 > début=-4+10=6 > l'itération démarre au 6e élément (numéro 5)
 - fin=-2 > fin=-2+10=8 > l'itération stoppe avant le 8e élément (numéro 7), i.e.
