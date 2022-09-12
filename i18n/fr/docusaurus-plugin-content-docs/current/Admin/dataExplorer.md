@@ -135,7 +135,7 @@ Les filtres texte ne sont pas diacritiques (a = A).
 
 Le filtre est du type "commence par". Par exemple, si vous saisissez "Jim", vous obtiendrez les valeurs "Jim" et "Jimmy".
 
-Vous pouvez également utiliser le caractère générique (@) pour remplacer un ou plusieurs caractères de départ.
+Vous pouvez également utiliser le caractère générique (@) pour remplacer un ou plusieurs caractères de départ. Par exemple :
 
 | Un filtre avec | Résultats                                                 |
 | -------------- | --------------------------------------------------------- |
