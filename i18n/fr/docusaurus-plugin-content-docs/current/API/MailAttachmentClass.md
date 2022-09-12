@@ -140,7 +140,7 @@ $transporter.send($email) //envoyer e-mail
 End if
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Vous voulez envoyer un e-mail avec une zone 4D Write Pro en pièce jointe :
 
