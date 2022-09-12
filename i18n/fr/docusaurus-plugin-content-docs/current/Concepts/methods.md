@@ -87,7 +87,7 @@ Vous pouvez encapsuler vos méthodes projets dans les objets **formule** et les 
 
 Les commandes `Formula` ou `Formula from string` vous permettent de créer des objets formule natifs que vous pouvez encapsuler dans des propriétés d'objets. Vous pouvez ainsi implémenter des méthodes d'objets personnalisées.
 
-Pour exécuter une méthode stockée dans une propriété d'objet, utilisez l'opérateur **( )** après le nom de la propriété.
+Pour exécuter une méthode stockée dans une propriété d'objet, utilisez l'opérateur **( )** après le nom de la propriété. Par exemple :
 
 ```4d
 //myAlert
@@ -126,7 +126,7 @@ $result:=$o.full_name("John";"Smith")
 // équivalent à $result:=fullName("param1";"param2")
 ```
 
-Lorsqu'elles sont associées à la fonction `This`, ces méthodes objets vous permettent d'écrire du code générique très puissant.
+Lorsqu'elles sont associées à la fonction `This`, ces méthodes objets vous permettent d'écrire du code générique très puissant. Par exemple :
 
 ```4d
 //méthode fullName2 
@@ -212,7 +212,7 @@ By default, the **locally** option is selected. With the 4D single-user versio
 
 ## Méthode projet récursives
 
-Des méthodes projet peuvent s'appeler les unes les autres.
+Des méthodes projet peuvent s'appeler les unes les autres. Par exemple :
 
 - Une méthode A peut appeler une méthode B, qui appelle A, donc A appelle B de nouveau, etc.
 - Une méthode peut s'appeler elle-même.
