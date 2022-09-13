@@ -35,7 +35,7 @@ Une [dataclass](ORDA/dsMapping.md#dataclass) fournit une interface objet à une 
 
 #### Description
 
-The attributes of dataclasses are <!-- REF DataClassClass.attributeName.Summary -->objects that are available directly as properties<!-- END REF --> of these classes.
+Les attributs des dataclasses sont des <!-- REF DataClassClass.attributeName.Summary -->objets disponibles directement en tant que propriétés<!-- END REF --> de ces classes.
 
 Les objets renvoyés sont du type [`DataClassAttribute`](DataClassAttributeClass.md). Ces objets ont des propriétés que vous pouvez utiliser et lire pour obtenir des informations sur vos attributs de dataclass.
 > Les objets de l'attribut Dataclass peuvent être modifiés, mais la structure sous-jacente de la base de données ne sera pas altérée.
@@ -47,7 +47,7 @@ $salary:=ds.Employee.salary //retourne l'attribut salary dans la dataclass Emplo
 $compCity:=ds.Company["city"] //retourne l'attribut city dans la dataclass Company
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Considérant la structure suivante d'une base :
 
@@ -102,16 +102,16 @@ Considérant les propriétés de table suivantes :
 
 
 <!-- REF #DataClassClass.all().Params -->
-| Paramètres | Type               |    | Description                                                                    |
-| ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
-| settings   | Object             | -> | Option de création : contexte                                                  |
-| Résultat   | 4D.EntitySelection | <- | References on all entities related to the Dataclass|<!-- END REF -->
+| Paramètres | Type               |    | Description                                                                  |
+| ---------- | ------------------ |:--:| ---------------------------------------------------------------------------- |
+| settings   | Object             | -> | Option de création : contexte                                                |
+| Résultat   | 4D.EntitySelection | <- | Références vers toutes les entités de la dataclass<!-- END REF -->
 
 |
 
 #### Description
 
-The `.all( )` function <!-- REF #DataClassClass.all().Summary -->queries the datastore to find all the entities related to the dataclass and returns them as an entity selection<!-- END REF -->.
+The `.all( )` function <!-- REF #DataClassClass.all().Summary -->interroge le datastore pour trouver toutes les entités de la dataclass et les renvoie en tant qu'entity selection<!-- END REF -->.
 
 Les entités sont renvoyées dans l'ordre par défaut, qui est initialement l'ordre dans lequel elles ont été créées. Notez cependant que, si des entités ont été supprimées et que de nouvelles entités ont été ajoutées, l'ordre par défaut ne reflète plus l'ordre de création.
 
@@ -152,17 +152,17 @@ Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant d
 
 
 <!-- REF #DataClassClass.fromCollection().Params -->
-| Paramètres | Type               |    | Description                                                            |
-| ---------- | ------------------ |:--:| ---------------------------------------------------------------------- |
-| objectCol  | Collection         | -> | Collection d'objets à faire correspondre à des entités                 |
-| settings   | Object             | -> | Option de création : contexte                                          |
-| Résultat   | 4D.EntitySelection | <- | Entity selection filled from the collection|<!-- END REF -->
+| Paramètres | Type               |    | Description                                                        |
+| ---------- | ------------------ |:--:| ------------------------------------------------------------------ |
+| objectCol  | Collection         | -> | Collection d'objets à faire correspondre à des entités             |
+| settings   | Object             | -> | Option de création : contexte                                      |
+| Résultat   | 4D.EntitySelection | <- | Entity selection issue de la collection|<!-- END REF -->
 
 |
 
 #### Description
 
-The `.fromCollection()` function <!-- REF #DataClassClass.fromCollection().Summary -->updates or creates entities in the dataclass according to the *objectCol* collection of objects, and returns the corresponding entity selection<!-- END REF -->.
+La fonction `.fromCollection()` <!-- REF #DataClassClass.fromCollection().Summary -->modifie ou crée des entités dans la dataclass en utilisant la collection d'objets *objectCol* et retourne l'entity selection correspondante<!-- END REF -->.
 
 Dans le paramètre *objectCol* passez une collection d'objets destinée à créer ou à modifier des entités de la dataclass. Les noms des propriétés doivent correspondre à ceux des attributs de la dataclass. Si un nom de propriété n'existe pas dans la dataclass, il est ignoré. Si une valeur d'attribut n'est pas définie dans la collection pour une entité créée, l'attribut prend la valeur Null.
 
@@ -221,7 +221,7 @@ Nous souhaitons modifier une entité existante. La propriété \_\_NEW n'est pas
  $employees:=ds.Employee.fromCollection($empsCollection)
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Nous souhaitons modifier une entité existante. La propriété \_\_NEW n'est pas fournie, la clé primaire de l'employé est avec l'attribut \_\_KEY et existe :
 
@@ -348,17 +348,17 @@ Dans cet exemple, la première entité sera bien créée mais la seconde créati
 
 
 <!-- REF #DataClassClass.get().Params -->
-| Paramètres | Type            |    | Description                                                           |
-| ---------- | --------------- |:--:| --------------------------------------------------------------------- |
-| primaryKey | Integer OR Text | -> | Valeur de la clé primaire de l'entité à récupérer                     |
-| settings   | Object          | -> | Option de création : contexte                                         |
-| Résultat   | 4D.Entity       | <- | Entity matching the designated primary key|<!-- END REF -->
+| Paramètres | Type            |    | Description                                                                |
+| ---------- | --------------- |:--:| -------------------------------------------------------------------------- |
+| primaryKey | Integer OR Text | -> | Valeur de la clé primaire de l'entité à récupérer                          |
+| settings   | Object          | -> | Option de création : contexte                                              |
+| Résultat   | 4D.Entity       | <- | Entité correspondant à la clé primaire indiquée|<!-- END REF -->
 
 |
 
 #### Description
 
-The `.get()` function <!-- REF #DataClassClass.get().Summary -->queries the dataclass to retrieve the entity matching the *primaryKey* parameter<!-- END REF -->.
+La fonction `.get()` <!-- REF #DataClassClass.get().Summary -->interroge la dataclass pour récupérer l'entité correspondant au paramètre *primaryKey*<!-- END REF -->.
 
 Dans *primaryKey*, passez la valeur de clé primaire de l'entité à récupérer. Le type de valeur doit correspondre au type de clé primaire définie dans le datastore (entier long ou texte). Vous pouvez également vous assurer que la valeur de la clé primaire est toujours renvoyée en tant que texte en utilisant la fonction [`.getKey()`](EntityClass.md#getkey) avec le paramètre `dk key as string`.
 
@@ -383,7 +383,7 @@ Dans le paramètre optionnel *settings*, vous pouvez passer un objet contenant d
  $entity2:=ds.Invoice.get("DGGX20030") // retourne l'entité dont la valeur de clé primaire est "DGGX20030"
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Cet exemple illustre l'utilisation de la propriété *context* :
 
@@ -424,15 +424,15 @@ Cet exemple illustre l'utilisation de la propriété *context* :
 
 
 <!-- REF #DataClassClass.getDataStore().Params -->
-| Paramètres | Type         |    | Description                                           |
-| ---------- | ------------ |:--:| ----------------------------------------------------- |
-| Résultat   | cs.DataStore | <- | Datastore of the dataclass|<!-- END REF -->
+| Paramètres | Type         |    | Description                                         |
+| ---------- | ------------ |:--:| --------------------------------------------------- |
+| Résultat   | cs.DataStore | <- | Datastore de la dataclass<!-- END REF -->
 
 |
 
 #### Description
 
-The `.getDataStore( )` function <!-- REF #DataClassClass.getDataStore().Summary -->returns the datastore for the specified dataclass<!-- END REF -->.
+The `.getDataStore( )` function <!-- REF #DataClassClass.getDataStore().Summary -->retourne le datastore de la dataclass<!-- END REF -->.
 
 Le datastore peut être :
 
@@ -477,15 +477,15 @@ La méthode projet ***SearchDuplicate*** recherche des valeurs dupliquées dans 
 
 
 <!-- REF #DataClassClass.getInfo().Params -->
-| Paramètres | Type   |    | Description                                             |
-| ---------- | ------ | -- | ------------------------------------------------------- |
-| Résultat   | Object | <- | Information on the dataclass|<!-- END REF -->
+| Paramètres | Type   |    | Description                                              |
+| ---------- | ------ | -- | -------------------------------------------------------- |
+| Résultat   | Object | <- | Informations sur la dataclass|<!-- END REF -->
 
 |
 
 #### Description
 
-The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns an object providing information about the dataclass<!-- END REF -->. Cette fonction est utile pour l'écriture de code générique.
+The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->retourne un objet qui fournit des informations sur la dataclass<!-- END REF -->. Cette fonction est utile pour l'écriture de code générique.
 
 **Objet retourné**
 
@@ -509,7 +509,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
  End if
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 ```4d
  var $settings : Object
@@ -548,15 +548,15 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns
 
 
 <!-- REF #DataClassClass.new().Params -->
-| Paramètres | Type      |    | Description                                                  |
-| ---------- | --------- | -- | ------------------------------------------------------------ |
-| Résultat   | 4D.Entity | <- | New entity matching the Dataclass|<!-- END REF -->
+| Paramètres | Type      |    | Description                                                            |
+| ---------- | --------- | -- | ---------------------------------------------------------------------- |
+| Résultat   | 4D.Entity | <- | Nouvelle entité correspondant à la dataclass<!-- END REF -->
 
 |
 
 #### Description
 
-The `.new( )` function <!-- REF #DataClassClass.new().Summary -->creates in memory and returns a new blank entity related to the Dataclass<!-- END REF -->.
+The `.new( )` function <!-- REF #DataClassClass.new().Summary -->crée en mémoire et renvoie une nouvelle entité vide pour la dataclass<!-- END REF -->.
 
 L'objet entité est créé en mémoire et n'est pas sauvegardé dans la base de données tant que la fonction [`.save( )`](EntityClass.md#save) n'est pas appelée. Si l'entité est supprimée avant d'être sauvegardée, elle ne peut pas être récupérée.
 
@@ -599,7 +599,7 @@ Cet exemple crée une nouvelle entité dans la dataclass "Log" et enregistre les
 
 #### Description
 
-The `.newSelection( )` function <!-- REF #DataClassClass.newSelection().Summary -->creates a new, blank, non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->.
+The `.newSelection( )` function <!-- REF #DataClassClass.newSelection().Summary -->crée en mémoire une entity selection vide, non partageable, liée à la dataclass<!-- END REF -->.
 
 > Pour plus d'informations sur les sélections d'entités non partageables, veuillez vous reporter à [cette section](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
@@ -646,7 +646,7 @@ Une fois créée, l'entity selection ne contient aucune entité (`mySelection.le
 
 #### Description
 
-The `.query( )` function <!-- REF #DataClassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. Le mode lazy loading est appliqué.
+The `.query( )` function <!-- REF #DataClassClass.query().Summary -->recherche les entités répondant aux critères de recherche spécifiés dans *queryString* ou *formula* et (optionnellement) dans *value*(s)<!-- END REF -->, pour toutes les entités de la dataclass, et retourne un nouvel objet de type `EntitySelection` contenant toutes les entités trouvées. Le mode lazy loading est appliqué.
 
 Si aucune entité correspondante n'est trouvée, une `EntitySelection` vide est retournée.
 
@@ -710,7 +710,7 @@ où :
 
 **Utilisation des guillemets**
 
-Lorsque vous utilisez des guillemets dans les recherches, vous devez utiliser des apostrophes ' ' à l'intérieur des requêtes et des guillemets " " pour encadrer la recherche complète, sinon une erreur est générée.
+Lorsque vous utilisez des guillemets dans les recherches, vous devez utiliser des apostrophes ' ' à l'intérieur des requêtes et des guillemets " " pour encadrer la recherche complète, sinon une erreur est générée. Par exemple :
 
 ```4d
 "employee.name = 'smith' AND employee.firstname = 'john'"
@@ -746,7 +746,7 @@ Vous pouvez combiner tous les types d'arguments dans *queryString*. in *queryStr
 1. Cela empêche l'injection de code malveillant : si vous utilisez dans la chaîne de recherche des variables dont le contenu provient directement de la saisie de l'utilisateur, celui-ci pourrait modifier les conditions de recherche en saisissant des arguments de recherche supplémentaires. Par exemple, imaginez une chaîne de recherche du type :
 
  ```4d
-  $vquery:="status = 'public' & name = "+myname //user enters their name
+  $vquery:="status = 'public' & name = "+myname //l'utilisateur saisit son nom
   $result:=$col.query($vquery)
  ```
 
@@ -783,15 +783,15 @@ Vous n'obtiendrez pas le résultat souhaité car la valeur null sera évaluée p
  $vSingles:=ds.Person.query("spouse = null") //syntaxe valide
 ```
 
-**Relier arguments de recherche et attributs de collection**
+**Relier les arguments de recherche aux collections dans les attributs**
 
-|
+:::info
 
-This feature is only available in queries on dataclasses and [entity selections](EntitySelectionClass.md#query). It cannot be used in queries on [collections](CollectionClass.md#query).
+Cette fonctionnalité est disponible uniquement pour les recherches dans les dataclasses et les [entity selections](EntitySelectionClass.md#query). Elle ne peut pas être utilisée pour les recherches dans les [collections](CollectionClass.md#query).
 
 :::
 
-To do this, you need to link query arguments to collection elements, so that only single elements containing linked arguments are found. When searching in collections within object attributes using multiple query arguments joined by the AND operator, you may want to make sure that only entities containing elements that match all arguments are returned, and not entities where arguments can be found in different elements.
+Lorsque vous effectuez des recherches parmi des attributs objets de dataclass contenant des collections à l'aide de plusieurs arguments de requête reliés par l'opérateur AND, vous souhaiterez éventuellement vous assurer que seules les entités contenant des éléments correspondant à tous les arguments soient retournées, et non les entités où des arguments peuvent être trouvés dans différents éléments. Pour ce faire, vous devez relier les arguments de requête aux éléments de collection, de sorte que seuls les éléments uniques contenant des arguments reliés soient retournés.
 
 Par exemple, avec les deux entités suivantes :
 
@@ -1047,7 +1047,7 @@ $es:=ds.Clients.query(":1 = 1234 and :2 = :3";"salesperson.userId";"name";"Smith
   //salesperson est une entité reliée
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Cette section illustre les recherches avec des placeholders nommés pour les attributs.
 

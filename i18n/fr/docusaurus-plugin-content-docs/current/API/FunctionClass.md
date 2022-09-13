@@ -64,7 +64,7 @@ Ou en utilisant la fonction [.call()](#call) :
 
 #### Paramètres d'une seule méthode
 
-Pour plus de commodité, lorsque la formule est constituée d'une seule méthode projet, les paramètres peuvent être omis dans l'initialisation de l'objet formule. Ils peuvent simplement être passés lorsque la formule est appelée.
+Pour plus de commodité, lorsque la formule est constituée d'une seule méthode projet, les paramètres peuvent être omis dans l'initialisation de l'objet formule. Ils peuvent simplement être passés lorsque la formule est appelée. Par exemple :
 
 ```4d
  var $f : 4D.Function
@@ -176,7 +176,7 @@ Une formule simple :
  $result:=$o.f() // retourne 3
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Une formule utilisant des variables locales :
 
@@ -353,7 +353,7 @@ A noter que `.apply()` est similaire à [`.call()`](#call), néanmoins les param
 ```
 
 
-#### Exemple 3
+#### Exemple 2
 
 ```4d
  var $calc : 4D.Function
@@ -413,7 +413,7 @@ A noter que `.call()` est similaire à [`.apply()`](#apply), néanmoins les para
  $result:=$f.call(Null;"hello") // retourne "HELLO"
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 ```4d
  $o:=New object("value";50)

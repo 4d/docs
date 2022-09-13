@@ -111,7 +111,7 @@ L'URL */4DWEBTEST* permet de vérifier l'état du serveur web. Lorsque cette URL
 | Server     | 4D/numéro de version                   | 4D/18.5.0 (Build 18R5.257368)                                                                                                   |
 | User-Agent | nom et version @ adresse IP du client  | Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36 @ 127.0.0.1 |
 
-## Fichiers d'historique
+## Logs
 
 4D vous permet de générer deux historiques de requêtes Web :
 

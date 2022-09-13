@@ -109,16 +109,16 @@ Signal オブジェクトは [共有オブジェクト](Concepts/shared.md) で�
 
 
 <!-- REF #_command_.New signal.Params -->
-| 引数          | タイプ       |    | 詳細                                              |
+| 引数          | タイプ       |    | 説明                                              |
 | ----------- | --------- |:--:| ----------------------------------------------- |
-| description | テキスト      | -> | シグナルの詳細                                         |
+| description | Text      | -> | シグナルの詳細                                         |
 | 戻り値         | 4D.Signal | <- | シグナルを格納するネイティブオブジェクト|<!-- END REF -->
 
 
 |
 
 
-#### 詳細
+#### 説明
 
 The `New signal` command <!-- REF #_command_.New signal.Summary -->creates a `4D.Signal` object<!-- END REF -->。
 
@@ -178,7 +178,7 @@ Signal オブジェクトは共有オブジェクトのため、`Use...End use` 
 
 <!-- REF #SignalClass.description.Syntax -->**.description** : Text<!-- END REF -->
 
-#### 詳細
+#### 説明
 
 The `.description` property <!-- REF #SignalClass.description.Summary -->contains a custom description for the `Signal` object.<!-- END REF -->。
 
@@ -203,7 +203,7 @@ The `.description` property <!-- REF #SignalClass.description.Summary -->contain
 
 <!-- REF #SignalClass.signaled.Syntax -->**.signaled** : Boolean<!-- END REF -->
 
-#### 詳細
+#### 説明
 
 The `.signaled` property <!-- REF #SignalClass.signaled.Summary -->contains the current state of the `Signal` object<!-- END REF -->。 . When the signal is created, `.signaled` is **False**.
 
@@ -228,15 +228,15 @@ The `.signaled` property <!-- REF #SignalClass.signaled.Summary -->contains the 
 
 
 <!-- REF #SignalClass.trigger().Params -->
-| 引数 | タイプ |  | 詳細                                                         |
-| -- | --- |::| ---------------------------------------------------------- |
-|    |     |  | Does not require any parameters|<!-- END REF -->
+| 引数 | タイプ |  | 説明                                           |
+| -- | --- |::| -------------------------------------------- |
+|    |     |  | このコマンドは引数を必要としません|<!-- END REF -->
 
 
 |
 
 
-#### 詳細
+#### 説明
 
 The `.trigger( )` function <!-- REF #SignalClass.trigger().Summary -->sets the `signaled` property of the signal object to **true**<!-- END REF --> and awakens all workers or processes waiting for this signal.
 
@@ -261,16 +261,16 @@ Signal がすでにシグナルされている (つまり `signaled` プロパ�
 
 
 <!-- REF #SignalClass.wait().Params -->
-| 引数      | タイプ |    | 詳細                                              |
-| ------- | --- | -- | ----------------------------------------------- |
-| timeout | 実数  | -> | シグナルの最大待機時間 (秒単位)                               |
-| 戻り値     | ブール | <- | `.signaled` プロパティの状態|<!-- END REF -->
+| 引数      | タイプ     |    | 説明                                              |
+| ------- | ------- | -- | ----------------------------------------------- |
+| timeout | Real    | -> | シグナルの最大待機時間 (秒単位)                               |
+| 戻り値     | Boolean | <- | `.signaled` プロパティの状態|<!-- END REF -->
 
 
 |
 
 
-#### 詳細
+#### 説明
 
 The `.wait( )` function <!-- REF #SignalClass.wait().Summary -->makes the current process wait until the `.signaled` property of the signal object to become **true** or the optional *timeout* to expire<!-- END REF -->。
 

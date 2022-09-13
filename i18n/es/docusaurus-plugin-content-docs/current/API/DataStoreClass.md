@@ -706,7 +706,7 @@ Cuando no se llama a esta función, las nuevas selecciones de entidades pueden s
 
 #### Descripción
 
-The `.provideDataKey()` function <!-- REF #DataStoreClass.provideDataKey().Summary -->allows providing a data encryption key for the current data file of the datastore and detects if the key matches the encrypted data<!-- END REF -->. Esta función se puede utilizar al abrir una base encriptada, o al ejecutar cualquier operación de encriptación que requiera la llave de encriptación, como por ejemplo volver a encriptar el archivo de datos.
+La función `.provideDataKey()` <!-- REF #DataStoreClass.provideDataKey().Summary -->permite proveer una llave de encriptación de datos para el archivo de datos actual del datastore y detecta si la llave coincide con los datos encriptados<!-- END REF -->. Esta función se puede utilizar al abrir una base encriptada, o al ejecutar cualquier operación de encriptación que requiera la llave de encriptación, como por ejemplo volver a encriptar el archivo de datos.
 > * La función `.provideDataKey()` debe ser llamada en una base de datos encriptada. Si se llama en una base no cifrada, se devuelve el error 2003 (la llave de cifrado no coincide con los datos.). Utilice el comando `Estado de cifrado del archivo de datos` para determinar si la base de datos está cifrada.
 > * La función `.provideDataKey()` no puede ser llamada desde un 4D remoto o un datastore remoto encriptado.
 
@@ -779,7 +779,7 @@ Si no se da *curPassphrase* o *curDataKey*, `.provideDataKey()` devuelve **null*
 
 #### Descripción
 
-The `.setAdminProtection()` function <!-- REF #DataStoreClass.setAdminProtection().Summary -->allows disabling any data access on the [web admin port](Admin/webAdmin.md#http-port), including for the [Data Explorer](Admin/dataExplorer.md) in `WebAdmin` sessions<!-- END REF -->.
+La función `.setAdminProtection()` <!-- REF #DataStoreClass.setAdminProtection().Summary -->permite desactivar todo acceso a los datos en el [puerto de administración web](Admin/webAdmin.md#http-port), incluso para el [Explorador de datos](Admin/dataExplorer.md) en las sesiones `WebAdmin`<!-- END REF -->.
 
 Por defecto, cuando no se llama a la función, el acceso a los datos se concede siempre en el puerto de administración web para una sesión con privilegio `WebAdmin` utilizando el Explorador de Datos. En algunas configuraciones, por ejemplo, cuando el servidor de aplicaciones está alojado en una máquina de terceros, es posible que no desee que el administrador pueda ver sus datos, aunque puede editar la configuración del servidor, incluyendo la configuración de la [access key](Admin/webAdmin.md#access-key).
 
@@ -814,15 +814,15 @@ Se crea un método proyecto *protectDataFile* para llamar antes de los despliegu
 
 
 <!-- REF #DataStoreClass.setRemoteContextInfo().Params -->
-| Parámetros      | Type         |    | Descripción                                                                                          |
-| --------------- | ------------ | -- | ---------------------------------------------------------------------------------------------------- |
-| contextName     | Text         | -> | Nombre del contexto                                                                                  |
-| dataClassName   | Text         | -> | Nombre de la dataclass                                                                               |
-| dataClassObject | 4D.DataClass | -> | dataclass object (e.g datastore. Employee)                                                           |
-| attributes      | Text         | -> | Lista de atributos separados por comas                                                               |
-| attributesColl  | Collection   | -> | Colección de nombres de atributos (text)                                                             |
-| contextType     | Text         | -> | Si se suministra, el valor debe ser "main" o "currentItem"                                           |
-| pageLength      | Integer      | -> | Page length of the entity selection linked to the context (default is 80)|<!-- END REF -->
+| Parámetros      | Type         |    | Descripción                                                                                                            |
+| --------------- | ------------ | -- | ---------------------------------------------------------------------------------------------------------------------- |
+| contextName     | Text         | -> | Nombre del contexto                                                                                                    |
+| dataClassName   | Text         | -> | Nombre de la dataclass                                                                                                 |
+| dataClassObject | 4D.DataClass | -> | dataclass object (e.g datastore. Employee)                                                                             |
+| attributes      | Text         | -> | Lista de atributos separados por comas                                                                                 |
+| attributesColl  | Collection   | -> | Colección de nombres de atributos (text)                                                                               |
+| contextType     | Text         | -> | Si se suministra, el valor debe ser "main" o "currentItem"                                                             |
+| pageLength      | Integer      | -> | Longitud de la página de la selección de entidades asociada al contexto (por defecto es 80)|<!-- END REF -->
 
 |
 
@@ -830,7 +830,7 @@ Se crea un método proyecto *protectDataFile* para llamar antes de los despliegu
 
 #### Descripción
 
-The `.setRemoteContextInfo()` function <!-- REF #DataStoreClass.setRemoteContextInfo().Summary -->links the specified dataclass attributes to the *contextName* optimization context<!-- END REF -->. If an optimization context already exists for the specified attributes, this command replaces it.
+La función `.setRemoteContextInfo()` <!-- REF #DataStoreClass.setRemoteContextInfo().Summary -->links the specified dataclass attributes to the *contextName* optimization context<!-- END REF -->. If an optimization context already exists for the specified attributes, this command replaces it.
 
 When you pass a context to the ORDA class functions, the REST request optimization is triggered immediately:
 
@@ -943,25 +943,25 @@ End case
 
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
-| Parámetros | Type    |    | Descripción                                                     |
-| ---------- | ------- | -- | --------------------------------------------------------------- |
-| file       | 4D.File | -> | Objeto File                                                     |
-| reqNum     | Integer | -> | Number of requests to keep in memory|<!-- END REF -->
+| Parámetros | Type    |    | Descripción                                                           |
+| ---------- | ------- | -- | --------------------------------------------------------------------- |
+| file       | 4D.File | -> | Objeto File                                                           |
+| reqNum     | Integer | -> | Número de peticiones a mantener en memoria|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.startRequestLog()` function <!-- REF #DataStoreClass.startRequestLog().Summary -->starts the logging of ORDA requests on the client side<!-- END REF -->.
+La función `.startRequestLog()` <!-- REF #DataStoreClass.startRequestLog().Summary -->inicia el registro de peticiones ORDA del lado del cliente<!-- END REF -->.
 
 Esta función debe ser llamada en un 4D remoto, de lo contrario no hace nada. Está diseñado para fines de depuración en configuraciones cliente/servidor.
 
 El registro de peticiones ORDA puede ser enviado a un archivo o a la memoria, dependiendo del tipo de parámetro:
 
-* Si se pasa un objeto *file* creado con el comando `File`, los datos de registro se escriben en este archivo como una colección de objetos (formato JSON). Each object represents a request.<br/>If the file does not already exist, it is created. En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él. Si se llama a `.startRequestLog( )` con un archivo mientras se inició previamente un registro en memoria, el registro en memoria se detiene y se vacía.
+* Si se pasa un objeto *file* creado con el comando `File`, los datos de registro se escriben en este archivo como una colección de objetos (formato JSON). Cada objeto representa una petición.<br/>Si el archivo no existe ya, se crea. En caso contrario, si el archivo ya existe, los nuevos datos de registro se añaden a él. Si se llama a `.startRequestLog( )` con un archivo mientras se inició previamente un registro en memoria, el registro en memoria se detiene y se vacía.
 > Debe añadirse manualmente un carácter \N al final del archivo para realizar una validación JSON
 
-* Si se pasa un entero *reqNum*, se vacía el registro en memoria (si lo hay) y se inicializa un nuevo registro. It will keep *reqNum* requests in memory until the number is reached, in which case the oldest entries are emptied (FIFO stack).<br/>If `.startRequestLog()` is called with a *reqNum* while a logging was previously started in a file, the file logging is stopped.
+* Si se pasa un entero *reqNum*, se vacía el registro en memoria (si lo hay) y se inicializa un nuevo registro. Mantendrá *reqNum* peticiones en memoria hasta que se alcance el número, en cuyo caso se vacían las entradas más antiguas (pila FIFO).<br/>Si se llama a `.startRequestLog()` con un *reqNum* mientras se ha iniciado previamente un registro en un archivo, se detiene el registro del archivo.
 
 * Si no ha pasado ningún parámetro, el registro se inicia en la memoria. Si se llamó previamente a `.startRequestLog()` con un *reqNum* (antes de un `.stopRequestLog()`), los datos del registro se apilan en memoria hasta la próxima vez que se vacíe el registro o se llame a `.stopRequestLog()`.
 
@@ -1027,7 +1027,7 @@ Quiere registrar las peticiones de los clientes ORDA en la memoria:
 
 #### Descripción
 
-The `.startTransaction()` function <!-- REF #DataStoreClass.startTransaction().Summary -->starts a transaction in the current process on the database matching the datastore to which it applies<!-- END REF -->. Todos los cambios realizados en las entidades del almacén de datos en el proceso de la transacción se almacenan temporalmente hasta que la transacción se valida o se cancela.
+La función `.startTransaction()` <!-- REF #DataStoreClass.startTransaction().Summary -->inicia una transacción en el proceso actual en la base de datos que coincide con el almacén de datos al que se aplica<!-- END REF -->. Todos los cambios realizados en las entidades del almacén de datos en el proceso de la transacción se almacenan temporalmente hasta que la transacción se valida o se cancela.
 > Si se llama a este método en el almacén de datos principal (es decir, el almacén de datos devuelto por el comando `ds`), la transacción se aplica a todas las operaciones realizadas en el almacén de datos principal y en la base de datos subyacente, incluyendo por tanto ORDA y los lenguajes clásicos.
 
 Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-transacción debe ser eventualmente cancelada o validada. Note que si se cancela la transacción principal, también se cancelan todas sus subtransacciones, aunque se hayan validado individualmente mediante la función `.validateTransaction()`.
@@ -1090,7 +1090,7 @@ Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-tr
 
 #### Descripción
 
-The `.stopRequestLog()` function <!-- REF #DataStoreClass.stopRequestLog().Summary -->stops any logging of ORDA requests on the client side<!-- END REF --> (in file or in memory). Es particularmente útil cuando se registra un archivo, ya que realmente cierra el documento abierto en el disco.
+La función `.stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->detine el registro de peticiones ORDA del lado del cliente<!-- END REF --> (en archivo o en memoria). Es particularmente útil cuando se registra un archivo, ya que realmente cierra el documento abierto en el disco.
 
 Esta función debe ser llamada en un 4D remoto, de lo contrario no hace nada. Está diseñado para fines de depuración en configuraciones cliente/servidor.
 
@@ -1123,7 +1123,7 @@ Ver ejemplos de [`.startRequestLog()`](#startrequestlog).
 
 #### Descripción
 
-The `.validateTransaction()` function <!-- REF #DataStoreClass.validateTransaction().Summary -->accepts the transaction <!-- END REF -->that was started with [`.startTransaction()`](#starttransaction) at the corresponding level on the specified datastore.
+La función `.validateTransaction()` <!-- REF #DataStoreClass.validateTransaction().Summary -->acepta la transacción <!-- END REF -->que se inició con [`.startTransaction()`](#starttransaction) en el nivel correspondiente en el almacén de datos especificado.
 
 La función guarda los cambios en los datos del almacén de datos que se produjeron durante la transacción.
 

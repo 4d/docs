@@ -37,7 +37,7 @@ La page liste toutes les tables de la base (y compris les tables invisibles) ain
 
 
 
-## Données
+## Data
 
 La page **Données** fournit des informations sur l'espace de stockage libre et occupé dans les fichiers de données et la structure de la base.
 > Cette page n'est pas accessible en mode maintenance

@@ -19,7 +19,7 @@ Les objets pop-up/listes déroulantes peuvent être initialisés par le chargeme
 
 * Enter a list of default values in the object properties by selecting `"\&#060;Static List&#062;"` in the [Data Source](properties_DataSource.md) theme of the Property List. Les valeurs par défaut sont automatiquement chargées dans un tableau. Vous pouvez faire référence à ce tableau par l’intermédiaire du nom de la variable associée à l’objet.
 
-* Avant que l’objet ne soit affiché, exécutez une méthode qui affecte des valeurs au tableau.
+* Avant que l’objet ne soit affiché, exécutez une méthode qui affecte des valeurs au tableau. Par exemple :
 
 ```4d
   ARRAY TEXT($aCities;6)
@@ -33,7 +33,7 @@ Les objets pop-up/listes déroulantes peuvent être initialisés par le chargeme
 
 Dans ce cas, le nom de la variable associée à l’objet dans le formulaire doit être *tVilles*. Ce code peut être placé dans la méthode formulaire et être exécuté lorsque l’événement formulaire `Sur chargement` se produit.
 
-* Avant que l’objet ne soit affiché, chargez les valeurs d’une énumération dans le tableau à l’aide de la commande [LIST TO ARRAY](https://doc.4d.com/4Dv17R5/4D/17-R5/LIST-TO-ARRAY.301-4127385.en.html).
+* Avant que l’objet ne soit affiché, chargez les valeurs d’une énumération dans le tableau à l’aide de la commande [LIST TO ARRAY](https://doc.4d.com/4Dv17R5/4D/17-R5/LIST-TO-ARRAY.301-4127385.en.html). Par exemple :
 
 ```4d
    LIST TO ARRAY("Cities";$aCities)

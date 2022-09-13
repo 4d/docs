@@ -11,7 +11,7 @@ Les éléments de projet suivants acceptent la documentation :
 
 - Methods (database methods, component methods, project methods, form methods, 4D Mobile methods, and triggers)
 - Classes
-- Formulaires
+- Forms
 - Tables et champs
 
 Vos fichiers de documentation sont écrits dans la syntaxe Markdown (fichiers .md) à l'aide de n'importe quel éditeur prenant en charge le Markdown. Ils sont stockés en tant que fichiers indépendants dans votre dossier Project.
@@ -44,7 +44,7 @@ L'architecture du dossier `Documentation` est la suivante :
     + `DatabaseMethods`
         * onStartup.md
         * ...
-    + `Formulaires`
+    + `Forms`
         * loginDial.md
         * ...
     + `Methods`

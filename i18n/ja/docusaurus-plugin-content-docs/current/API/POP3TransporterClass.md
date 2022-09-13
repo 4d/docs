@@ -44,7 +44,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 
 <!-- REF #_command_.POP3 New transporter.Params -->
-| 引数     | タイプ                |    | 詳細                                                                             |
+| 引数     | タイプ                |    | 説明                                                                             |
 | ------ | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server | object             | -> | メールサーバー情報                                                                      |
 | 戻り値    | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object)|<!-- END REF -->
@@ -53,7 +53,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 |
 
 
-#### 詳細
+#### 説明
 
 The `POP3 New transporter` command <!-- REF #_command_.POP3 New transporter.Summary -->configures a new POP3 connection<!-- END REF -->according to the *server* parameter and returns a new *[POP3 transporter](#pop3-transporter-object)* object. 返された transporter オブジェクトは、通常メールの受信に使用されます。
 
@@ -104,14 +104,14 @@ The `POP3 New transporter` command <!-- REF #_command_.POP3 New transporter.Summ
 
 
 <!-- REF #4D.POP3Transporter.new().Params -->
-| 引数     | タイプ                |    | 詳細                                                                             |
+| 引数     | タイプ                |    | 説明                                                                             |
 | ------ | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server | Object             | -> | メールサーバー情報                                                                      |
 | 戻り値    | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object)|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summary -->creates and returns a new object of the `4D.POP3Transporter` type<!-- END REF -->。 .
 
@@ -163,13 +163,13 @@ The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summa
 
 
 <!-- REF #POP3TransporterClass.delete().Params -->
-| 引数        | タイプ |    | 詳細                                      |
-| --------- | --- |:--:| --------------------------------------- |
-| msgNumber | 整数  | -> | 削除するメッセージの番号|<!-- END REF -->
+| 引数        | タイプ     |    | 説明                                      |
+| --------- | ------- |:--:| --------------------------------------- |
+| msgNumber | Integer | -> | 削除するメッセージの番号|<!-- END REF -->
 
 |
 
-##### 詳細
+##### 説明
 
 The `.delete( )` function <!-- REF #POP3TransporterClass.delete().Summary -->flags the *msgNumber* email for deletion from the POP3 server<!-- END REF -->。
 
@@ -209,22 +209,22 @@ The `.delete( )` function <!-- REF #POP3TransporterClass.delete().Summary -->fla
 
 
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
-| 引数  | タイプ    |    | 詳細                                        |
+| 引数  | タイプ    |    | 説明                                        |
 | --- | ------ |:--:| ----------------------------------------- |
 | 戻り値 | Object | <- | boxInfo object|<!-- END REF -->
 
 |
 
-##### 詳細
+##### 説明
 
 The `.getBoxInfo()` function <!-- REF #POP3TransporterClass.getBoxInfo().Summary -->The `.getBoxInfo()` function<!-- END REF -->。 この関数を使用するとメールボックスに関する情報を取得することができます。
 
 返される `boxInfo` オブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ     | タイプ | 詳細                |
-| --------- | --- | ----------------- |
-| mailCount | 数値  | メールボックス内のメッセージの数  |
-| size      | 数値  | メッセージのサイズ (バイト単位) |
+| プロパティ     | タイプ    | 説明                |
+| --------- | ------ | ----------------- |
+| mailCount | Number | メールボックス内のメッセージの数  |
+| size      | Number | メッセージのサイズ (バイト単位) |
 
 ##### 例題
 
@@ -258,14 +258,14 @@ The `.getBoxInfo()` function <!-- REF #POP3TransporterClass.getBoxInfo().Summary
 
 
 <!-- REF #POP3TransporterClass.getMail().Params -->
-| 引数        | タイプ    |    | 詳細                                                                          |
-| --------- | ------ |:--:| --------------------------------------------------------------------------- |
-| msgNumber | 整数     | -> | リスト中のメッセージの番号                                                               |
-| 戻り値       | Object | <- | [Email object](EmailObjectClass.md#email-object)|<!-- END REF -->
+| 引数        | タイプ     |    | 説明                                                                          |
+| --------- | ------- |:--:| --------------------------------------------------------------------------- |
+| msgNumber | Integer | -> | リスト中のメッセージの番号                                                               |
+| 戻り値       | Object  | <- | [Email object](EmailObjectClass.md#email-object)|<!-- END REF -->
 
 |
 
-##### 詳細
+##### 説明
 
 The `.getMail()` function <!-- REF #POP3TransporterClass.getMail().Summary -->The `.getMail()` function<!-- END REF -->。 この関すを使用すると、メールのコンテンツをローカルで管理できるようになります。
 
@@ -315,14 +315,14 @@ The `.getMail()` function <!-- REF #POP3TransporterClass.getMail().Summary -->Th
 
 
 <!-- REF #POP3TransporterClass.getMailInfo().Params -->
-| 引数        | タイプ    |    | 詳細                                         |
-| --------- | ------ |:--:| ------------------------------------------ |
-| msgNumber | 整数     | -> | リスト中のメッセージの番号                              |
-| 戻り値       | Object | <- | MailInfo オブジェクト|<!-- END REF -->
+| 引数        | タイプ     |    | 説明                                         |
+| --------- | ------- |:--:| ------------------------------------------ |
+| msgNumber | Integer | -> | リスト中のメッセージの番号                              |
+| 戻り値       | Object  | <- | MailInfo オブジェクト|<!-- END REF -->
 
 |
 
-##### 詳細
+##### 説明
 
 The `.getMailInfo()` function <!-- REF #POP3TransporterClass.getMailInfo().Summary -->returns a `mailInfo` object corresponding  corresponding to the *msgNumber* in the mailbox designated by the [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->。 この関数を使用すると、POP3メールサーバー上にあるメッセージの一覧をローカルで管理することができるようになります。
 
@@ -330,10 +330,10 @@ The `.getMailInfo()` function <!-- REF #POP3TransporterClass.getMailInfo().Summa
 
 返される `mailInfo` オブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ | タイプ  | 詳細                |
-| ----- | ---- | ----------------- |
-| size  | 数値   | メッセージのサイズ (バイト単位) |
-| id    | テキスト | メッセージの固有ID        |
+| プロパティ | タイプ    | 説明                |
+| ----- | ------ | ----------------- |
+| size  | Number | メッセージのサイズ (バイト単位) |
+| id    | Text   | メッセージの固有ID        |
 
 この関数は、以下の場合には **Null** を返します:
 
@@ -375,23 +375,23 @@ The `.getMailInfo()` function <!-- REF #POP3TransporterClass.getMailInfo().Summa
 
 
 <!-- REF #POP3TransporterClass.getMailInfoList().Params -->
-| 引数  | タイプ        |    | 詳細                                                  |
+| 引数  | タイプ        |    | 説明                                                  |
 | --- | ---------- |:--:| --------------------------------------------------- |
 | 戻り値 | Collection | <- | `mailInfo` オブジェクトのコレクション|<!-- END REF -->
 
 |
 
-##### 詳細
+##### 説明
 
 The `.getMailInfoList()` function <!-- REF #POP3TransporterClass.getMailInfoList().Summary -->returns a collection of `mailInfo` objects describing all messages in the mailbox designated by the [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->。 この関数を使用すると、POP3メールサーバー上にあるメッセージの一覧をローカルで管理することができるようになります。
 
 返されるコレクションの各 `mailInfo` オブジェクトには、以下のプロパティが格納されています:
 
-| プロパティ        | タイプ  | 詳細                                  |
-| ------------ | ---- | ----------------------------------- |
-| \[ ].size   | 数値   | メッセージのサイズ (バイト単位)                   |
-| \[ ].number | 数値   | メッセージの番号                            |
-| \[ ].id     | テキスト | メッセージの固有ID (メッセージをローカルに保存する場合に有用です) |
+| プロパティ        | タイプ    | 説明                                  |
+| ------------ | ------ | ----------------------------------- |
+| \[ ].size   | Number | メッセージのサイズ (バイト単位)                   |
+| \[ ].number | Number | メッセージの番号                            |
+| \[ ].id     | Text   | メッセージの固有ID (メッセージをローカルに保存する場合に有用です) |
 
 メールボックスにメッセージが一通もない場合、空のコレクションが返されます。
 
@@ -440,14 +440,14 @@ The `.getMailInfoList()` function <!-- REF #POP3TransporterClass.getMailInfoList
 
 
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Params -->
-| 引数        | タイプ  |    | 詳細                                                                               |
-| --------- | ---- |:--:| -------------------------------------------------------------------------------- |
-| msgNumber | 整数   | -> | リスト中のメッセージの番号                                                                    |
-| 戻り値       | Blob | <- | Blob of the MIME string returned from the mail server|<!-- END REF -->
+| 引数        | タイプ     |    | 説明                                                                               |
+| --------- | ------- |:--:| -------------------------------------------------------------------------------- |
+| msgNumber | Integer | -> | リスト中のメッセージの番号                                                                    |
+| 戻り値       | Blob    | <- | Blob of the MIME string returned from the mail server|<!-- END REF -->
 
 |
 
-##### 詳細
+##### 説明
 
 The `.copy()` function <!-- REF #POP3TransporterClass.getMIMEAsBlob().Summary -->The `.getMIMEAsBlob()` function<!-- END REF -->。
 
@@ -505,13 +505,13 @@ The `.copy()` function <!-- REF #POP3TransporterClass.getMIMEAsBlob().Summary --
 
 
 <!-- REF #POP3TransporterClass.undeleteAll().Params -->
-| 引数 | タイプ |  | 詳細                                                         |
-| -- | --- |::| ---------------------------------------------------------- |
-|    |     |  | Does not require any parameters|<!-- END REF -->
+| 引数 | タイプ |  | 説明                                           |
+| -- | --- |::| -------------------------------------------- |
+|    |     |  | このコマンドは引数を必要としません|<!-- END REF -->
 
 |
 
-##### 詳細
+##### 説明
 
 The `.undeleteAll()` function <!-- REF #POP3TransporterClass.undeleteAll().Summary -->removes all delete flags set on the emails in the [`POP3_transporter`](#pop3-transporter-object)<!-- END REF -->。
 

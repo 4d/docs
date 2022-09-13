@@ -442,7 +442,7 @@ The `.and()` function <!-- REF #EntitySelectionClass.and().Summary -->combines t
 
 #### 説明
 
-The `.contains()` function <!-- REF #EntitySelectionClass.contains().Summary -->returns true if entity reference belongs to the entity selection<!-- END REF -->, and false otherwise.
+The `.contains()` function <!-- REF #EntitySelectionClass.contains().Summary -->returns true if entity reference belongs to the entity selection<!-- END REF -->(それ以外の場合は false)。
 
 *entity* 引数として、エンティティセレクション内で検索するエンティティを渡します。 エンティティが Null の場合、関数は false を返します。
 
@@ -1656,9 +1656,9 @@ The `.queryPlan` property <!-- REF #EntitySelectionClass.queryPlan.Summary --> c
 
 
 <!-- REF #EntitySelectionClass.refresh().Params -->
-| 引数 | タイプ |  | 説明                                                         |
-| -- | --- |::| ---------------------------------------------------------- |
-|    |     |  | Does not require any parameters|<!-- END REF -->
+| 引数 | タイプ |  | 説明                                           |
+| -- | --- |::| -------------------------------------------- |
+|    |     |  | このコマンドは引数を必要としません|<!-- END REF -->
 
 |
 

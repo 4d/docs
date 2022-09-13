@@ -48,13 +48,13 @@ title: Entity
 
 #### 説明
 
-Any dataclass attribute is available as a property of an entity, which <!-- REF EntityClass.attributeName.Summary -->stores the attribute value for the entity<!-- END REF -->。
+データクラス属性はすべてがエンティティのプロパティとして利用可能です。各エンティティのプロパティは、当該 <!-- REF EntityClass.attributeName.Summary -->エンティティの属性値を格納します<!-- END REF -->。
 > データクラス属性は \[ ] を使用したシンタックスを使用することでもアクセス可能です。
 
 この属性値タイプは属性の種類 ([](DataClassAttributeClass.md#kind).kind; リレーションまたはストレージ) によります。
 
-* If *attributeName* kind is **storage**: `.attributeName` returns a value of the same type as *attributeName*.
-* If *attributeName* kind is **relatedEntity**: `.attributeName` returns the related entity. リレートエンティティの値は、ドット記法でプロパティを繋げることでアクセス可能です。例: "myEntity.employer.employees[0].lastname"
+* *attributeName* で指定した属性がストレージ型の場合: `.attributeName` は *attributeName* と同じ型の値を返します。
+* *attributeName* で指定した属性がリレートエンティティ型の場合: `.attributeName` はリレートエンティティを返します。 リレートエンティティの値は、ドット記法でプロパティを繋げることでアクセス可能です。例: "myEntity.employer.employees[0].lastname"
 * If *attributeName* kind is **relatedEntities**: `.attributeName` returns a new entity selection of related entities. 重複しているエンティティは取り除かれます (返されるのは順列なしのエンティティセレクションです)。
 
 #### 例題

@@ -43,7 +43,7 @@ Les interfaces de Ruban et de Barre d'outils regroupent les fonctionnalités qui
 | Accueil   | Apparence du texte                  |        X        |            X             |
 | Insérer   | Ajouter des éléments                |        X        |            X             |
 | Formules  | Calculs de formules et bibliothèque |        X        |            X             |
-| Données   | Gestion des données                 |        X        |            X             |
+| Data      | Gestion des données                 |        X        |            X             |
 | Affichage | Présentation visuelle               |        X        |            X             |
 | Settings  | Présentation de la feuille          |        X        |                          |
 

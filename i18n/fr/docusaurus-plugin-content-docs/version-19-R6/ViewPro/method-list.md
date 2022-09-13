@@ -805,7 +805,7 @@ The length of the *tableColumns* collection must be equal to the range column co
 
 If you pass a *source* but no *tableColumn* option, the command generates columns automatically. In this case, *rangeObj* must be a cell range. Otherwise, the first cell of the range is used. When generating columns automatically, the following rules apply:
 
-* If the data passed to the command is a collection of objects, the property names are used as column titles.
+* If the data passed to the command is a collection of objects, the property names are used as column titles. Par exemple :
 
 ```4d
 ([{ LastName: \"Freehafer\", FirstName: \"Nancy\"},{ LastName: \"John\", FirstName: \"Doe\"})
@@ -1033,7 +1033,7 @@ VP EXPORT DOCUMENT("VPArea";$docPath)
 //MyExport.4VP est sauvegardé sur votre disque
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Vous souhaitez exporter la feuille courante au format PDF :
 
@@ -1142,7 +1142,7 @@ $vpAreaObj:=VP Export to object("vpArea")
 $vpVersion:=$vpAreaObj.version
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Vous souhaitez exporter la zone, en excluant les informations de formatage :
 
@@ -1212,7 +1212,7 @@ $range:=VP All("ViewProArea")
 $result:=VP Find($range;"Total")
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Pour trouver "Total" et le remplacer par "Grand Total" :
 
@@ -1312,7 +1312,7 @@ size:16pt
 }
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Voir l'exemple de [`VP Object to font`](#vp-object-to-font).
 
@@ -2694,7 +2694,7 @@ If(Form event code=On VP Ready) //La zone 4D View Pro est chargée et prête
 End if
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Vous souhaitez importer un document Microsoft Excel protégé par un mot de passe dans 4D View Pro :
 
@@ -3626,7 +3626,7 @@ $o:=cs.OffscreenArea.new()
 $result:=VP Run offscreen area($o)
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Vous souhaitez charger un grand document hors écran, attendre que tous les calculs soient terminés et l'exporter au format PDF :
 
@@ -3938,7 +3938,7 @@ VP SET BORDER(VP Cells("ViewProArea";1;1;3;3);$border;$option)
 
 ![](../assets/en/ViewPro/cmd_vpSETBORDER1.PNG)
 
-#### Exemple 3
+#### Exemple 2
 
 Ce code illustre, en termes de définition des bordures, la différence entre la commande `VP SET BORDER` et la commande [`VP SET CELL STYLE`](#vp-set-cell-style) :
 
@@ -4304,7 +4304,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 
 ![](../assets/en/ViewPro/vp-set-data-context-bind.png)
 
-#### Exemple 3
+#### Exemple 2
 
 Pass a collection of objects and generate columns automatically:
 
@@ -4584,7 +4584,7 @@ Vous pouvez supprimer la formule de *rangeObj* en la remplaçant par une chaîne
 VP SET FORMULA(VP Cell("ViewProArea";5;2);"SUM($A$1:$C$10)")
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Pour supprimer la formule :
 
@@ -4650,7 +4650,7 @@ $0:=$1*3.33
 
 ![](../assets/en/ViewPro/cmd_vpSetFormulas.PNG)
 
-#### Exemple 3
+#### Exemple 2
 
 Pour supprimer des formules :
 
@@ -5098,7 +5098,7 @@ VP SET SHEET OPTIONS("ViewProArea";$options)
 VP SET CELL STYLE(VP Cells("ViewProArea";2;4;2;6);New object("locked";False))
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Vous souhaitez protéger votre document pendant que vos utilisateurs redimensionnent les lignes et colonnes :
 

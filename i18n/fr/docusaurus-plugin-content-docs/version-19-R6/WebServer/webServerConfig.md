@@ -473,6 +473,8 @@ Pour ce faire, placez le fichier ROBOTS.TXT à la racine du serveur. Ce fichier 
    Disallow: <URL> or <beginning of the URL>
 ```
 
+Par exemple :
+
 ```4d
    User-Agent: *
    Disallow: /4D

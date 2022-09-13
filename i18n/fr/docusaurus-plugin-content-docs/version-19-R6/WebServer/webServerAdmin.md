@@ -132,7 +132,7 @@ L'URL */4DWEBTEST* permet de vérifier l'état du serveur web. Lorsque cette URL
 
 
 
-## Fichiers d'historique
+## Logs
 
 4D vous permet de générer deux historiques de requêtes Web :
 

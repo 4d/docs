@@ -3,12 +3,12 @@ id: architecture
 title: Architecture d'un projet 4D
 ---
 
-Un projet 4D est constitué de plusieurs fichiers et dossiers, stockés dans un seul dossier parent de la base (dossier package).
+Un projet 4D est constitué de plusieurs fichiers et dossiers, stockés dans un seul dossier parent de la base (dossier package). Par exemple :
 
 - MonProjet
   - Composants
-  - Données
-    - Fichiers d'historique
+  - Data
+    - Logs
     - Settings
   - Documentation
   - Plugins
@@ -32,7 +32,7 @@ La hiérarchie du dossier Project se présente généralement comme suit :
   - Classes
   - DatabaseMethods
   - Methods
-  - Formulaires
+  - Forms
   - TableForms
   - Triggers
 - DerivedData
@@ -115,7 +115,7 @@ Le fichier de développement de projet, utilisé pour désigner et lancer le pro
 Le dossier Trash contient des méthodes et des formulaires qui ont été supprimés du projet (le cas échéant). Il peut contenir les dossiers suivants :
 
 - Methods
-- Formulaires
+- Forms
 - TableForms
 
 Dans ces dossiers, les noms des éléments supprimés sont entre parenthèses, par exemple. "(myMethod).4dm". L'organisation des dossiers est identique à celle du dossier [Sources](#sources).
