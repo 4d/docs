@@ -161,7 +161,7 @@ $v:=5 && !00-00-00! // 00/00/00
 $v := 5 && 10 && "hello" //"hello"
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Supposons que vous ayez une boutique en ligne et que certains produits soient soumis à une taxe, alors que d'autres ne le sont pas.
 
@@ -220,7 +220,7 @@ $phone:=$emp.phone || "n/a"
 
 Dans ce cas, `$phone` stockera soit un numéro de téléphone, soit la chaîne "n/a".
 
-#### Exemple 3
+#### Exemple 2
 
 On dispose d'une table appelée Person avec un champ *name* , ainsi qu'un champ *maiden name* pour les femmes mariées.
 

@@ -39,7 +39,7 @@ title: DataClass
 
 #### 説明
 
-The attributes of dataclasses are <!-- REF DataClassClass.attributeName.Summary -->objects that are available directly as properties<!-- END REF --> of these classes.
+データクラスの属性は、 <!-- REF DataClassClass.attributeName.Summary -->データクラスのプロパティとして直接利用可能なオブジェクトです<!-- END REF --> 。
 
 戻り値は [`DataClassAttribute`](DataClassAttributeClass.md) クラスのオブジェクトです。 これらのオブジェクトが持つプロパティを読み取ることによって、データクラス属性に関する情報が取得できます。
 > データクラス属性オブジェクトを編集することは可能ですが、元となるデータベースストラクチャーは変更されません。
@@ -106,16 +106,16 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 
 <!-- REF #DataClassClass.all().Params -->
-| 引数       | タイプ                |    | 説明                                                                             |
-| -------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
-| settings | Object             | -> | ビルドオプション: context                                                              |
-| 戻り値      | 4D.EntitySelection | <- | References on all entities related to the Dataclass|<!-- END REF -->
+| 引数       | タイプ                |    | 説明                                           |
+| -------- | ------------------ |:--:| -------------------------------------------- |
+| settings | Object             | -> | ビルドオプション: context                            |
+| 戻り値      | 4D.EntitySelection | <- | データクラスの全エンティティの参照|<!-- END REF -->
 
 |
 
 #### 説明
 
-The `.all()` function <!-- REF #DataClassClass.all().Summary -->queries the datastore to find all the entities related to the dataclass and returns them as an entity selection<!-- END REF -->。
+`.all()` 関数は <!-- REF #DataClassClass.all().Summary -->データストアをクエリして、データクラスの全エンティティをエンティティセレクションとして返します<!-- END REF -->。
 
 エンティティはデフォルトの順番で返され、通常は作成順になっています。 ただし、エンティティ削除後に新規追加した場合には、デフォルトの順番は作成順を反映しない点に留意が必要です。
 
@@ -155,15 +155,15 @@ The `.all()` function <!-- REF #DataClassClass.all().Summary -->queries the data
 
 
 <!-- REF #DataStoreClass.clearRemoteCache().Params -->
-| 引数 | タイプ |  | 説明                                                         |
-| -- | --- |::| ---------------------------------------------------------- |
-|    |     |  | Does not require any parameters|<!-- END REF -->
+| 引数 | タイプ |  | 説明                                           |
+| -- | --- |::| -------------------------------------------- |
+|    |     |  | このコマンドは引数を必要としません|<!-- END REF -->
 
 |
 
 #### 説明
 
-The `.clearRemoteCache()` function <!-- REF #DataClassClass.clearRemoteCache().Summary -->empties the ORDA cache of a dataclass<!-- END REF -->。
+`.clearRemoteCache()` 関数は、 <!-- REF #DataClassClass.clearRemoteCache().Summary -->データクラスの ORDAキャッシュを空にします<!-- END REF -->。
 
 > この関数は `timeout` および `maxEntries` の値をリセットしません。
 
@@ -209,17 +209,17 @@ $ds.Persons.clearRemoteCache()
 
 
 <!-- REF #DataClassClass.fromCollection().Params -->
-| 引数        | タイプ                |    | 説明                                                                     |
-| --------- | ------------------ |:--:| ---------------------------------------------------------------------- |
-| objectCol | Collection         | -> | エンティティにマップするオブジェクトのコレクション                                              |
-| settings  | Object             | -> | ビルドオプション: context                                                      |
-| 戻り値       | 4D.EntitySelection | <- | Entity selection filled from the collection|<!-- END REF -->
+| 引数        | タイプ                |    | 説明                                                  |
+| --------- | ------------------ |:--:| --------------------------------------------------- |
+| objectCol | Collection         | -> | エンティティにマップするオブジェクトのコレクション                           |
+| settings  | Object             | -> | ビルドオプション: context                                   |
+| 戻り値       | 4D.EntitySelection | <- | コレクションから作成したエンティティセレクション|<!-- END REF -->
 
 |
 
 #### 説明
 
-The `.fromCollection()` function <!-- REF #DataClassClass.fromCollection().Summary -->updates or creates entities in the dataclass according to the *objectCol* collection of objects, and returns the corresponding entity selection<!-- END REF -->。
+`.fromCollection()` 関数は、 <!-- REF #DataClassClass.fromCollection().Summary -->*objectCol* 引数のオブジェクトのコレクションに基づいてデータクラスのエンティティを更新あるいは作成し、対応するエンティティセレクションを返します<!-- END REF -->。
 
 *objectCol* パラメーターには、データクラスの既存エンティティを更新、または新規エンティティを作成するためのオブジェクトのコレクションを渡します。 プロパティ名は、データクラスの属性名と同一である必要があります。 プロパティ名がデータクラスに存在しない場合、それは無視されます。 コレクション内で属性値が定義されていない場合、その値は null になります。
 
@@ -237,7 +237,7 @@ The `.fromCollection()` function <!-- REF #DataClassClass.fromCollection().Summa
   * そのまま指定したプライマリーキーが実在する場合、エラーが返されます。
   * そのまま指定したプライマリーキーが実在しない場合、エンティティは作成されます。
   * プライマリーキーを指定していない場合、エンティティは作成され、標準のデータベースのルールに基づいてプライマリーキー値が割り当てられます。
-> The nested objects featuring related entities must contain a "\_\_KEY" property (filled with the primary key value of the related entity) or the primary key attribute of the related entity itself. The use of a \_\_KEY property allows independence from the primary key attribute name.
+> 値を持つ "\_\_KEY" プロパティは、"\_\_NEW" プロパティが **false** に設定 (あるいは省略) されていて、かつ対応するエンティティが存在する場合のみ、考慮されます。 それ以外の場合には、"\_\_KEY" プロパティ値は無視されるため、プライマリーキーの値はそのまま渡さなければなりません。
 
 **リレートエンティティ**
 
@@ -407,17 +407,17 @@ The `.fromCollection()` function <!-- REF #DataClassClass.fromCollection().Summa
 
 
 <!-- REF #DataClassClass.get().Params -->
-| 引数         | タイプ              |    | 説明                                                                    |
-| ---------- | ---------------- |:--:| --------------------------------------------------------------------- |
-| primaryKey | Integer または Text | -> | 取得するエンティティのプライマリーキー値                                                  |
-| settings   | Object           | -> | ビルドオプション: context                                                     |
-| 戻り値        | 4D.Entity        | <- | Entity matching the designated primary key|<!-- END REF -->
+| 引数         | タイプ              |    | 説明                                                 |
+| ---------- | ---------------- |:--:| -------------------------------------------------- |
+| primaryKey | Integer または Text | -> | 取得するエンティティのプライマリーキー値                               |
+| settings   | Object           | -> | ビルドオプション: context                                  |
+| 戻り値        | 4D.Entity        | <- | 指定したプライマリーキーに合致するエンティティ|<!-- END REF -->
 
 |
 
 #### 説明
 
-The `.get()` function <!-- REF #DataClassClass.get().Summary -->queries the dataclass to retrieve the entity matching the *primaryKey* parameter<!-- END REF -->。
+`.get()` 関数は <!-- REF #DataClassClass.get().Summary -->データクラスをクエリして、*primaryKey* に渡したプライマリーキーに合致するエンティティを返します<!-- END REF -->。
 
 *primaryKey* には、取得したいエンティティのプライマリーキーの値を渡します。 値の型は、データストアで設定されたプライマリーキーの型 (倍長整数あるいはテキスト) と合致している必要があります。 [`.getKey()`](EntityClass.md#getkey) 関数に `dk key as string` 引数を渡すと、プライマリーキーの値が常にテキスト型で返されるように指定することができます。
 
@@ -483,15 +483,15 @@ The `.get()` function <!-- REF #DataClassClass.get().Summary -->queries the data
 
 
 <!-- REF #DataClassClass.getCount().Params -->
-| 引数     | タイプ     |    | 説明                                                             |
-| ------ | ------- | -- | -------------------------------------------------------------- |
-| result | Integer | <- | Number of entities in the dataclass|<!-- END REF -->
+| 引数     | タイプ     |    | 説明                                             |
+| ------ | ------- | -- | ---------------------------------------------- |
+| result | Integer | <- | データクラスに含まれる全エンティティ数|<!-- END REF -->
 
 |
 
 #### 説明
 
-The `.getCount()` function <!-- REF #DataClassClass.getCount().Summary --> returns the number of entities in a dataclass<!-- END REF -->。
+`.getCount()` 関数は、 <!-- REF #DataClassClass.getCount().Summary --> データクラスに含まれる総エンティティ数を返します<!-- END REF -->。
 
 トランザクション内でこの関数を使用した場合、トランザクション中に作成されたエンティティは考慮されます。
 
@@ -523,15 +523,15 @@ $number:=$ds.Persons.getCount()
 
 
 <!-- REF #DataClassClass.getDataStore().Params -->
-| 引数  | タイプ          |    | 説明                                                    |
-| --- | ------------ |:--:| ----------------------------------------------------- |
-| 戻り値 | cs.DataStore | <- | Datastore of the dataclass|<!-- END REF -->
+| 引数  | タイプ          |    | 説明                                            |
+| --- | ------------ |:--:| --------------------------------------------- |
+| 戻り値 | cs.DataStore | <- | データクラスが属しているデータストア|<!-- END REF -->
 
 |
 
 #### 説明
 
-The `.getDataStore()` function <!-- REF #DataClassClass.getDataStore().Summary -->returns the datastore for the specified dataclass<!-- END REF -->。
+`.getDataStore()` 関数は、 <!-- REF #DataClassClass.getDataStore().Summary -->指定したデータクラスが属しているデータストアを返します<!-- END REF -->。
 
 返されるデータストアは次のいずれかです:
 
@@ -577,15 +577,15 @@ The `.getDataStore()` function <!-- REF #DataClassClass.getDataStore().Summary -
 
 
 <!-- REF #DataClassClass.getInfo().Params -->
-| 引数  | タイプ    |    | 説明                                                      |
-| --- | ------ | -- | ------------------------------------------------------- |
-| 戻り値 | Object | <- | Information on the dataclass|<!-- END REF -->
+| 引数  | タイプ    |    | 説明                                   |
+| --- | ------ | -- | ------------------------------------ |
+| 戻り値 | Object | <- | データクラスの情報|<!-- END REF -->
 
 |
 
 #### 説明
 
-The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns an object providing information about the dataclass<!-- END REF -->。 このメソッドは汎用的なコードを書くのに有用です。
+`.getInfo()` 関数は、 <!-- REF #DataClassClass.getInfo().Summary -->データクラスの情報を提供するオブジェクトを返します<!-- END REF -->。 このメソッドは汎用的なコードを書くのに有用です。
 
 **返されるオブジェクト**
 
@@ -653,9 +653,9 @@ The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns 
 
 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
-| 引数     | タイプ    |    | 説明                                                                                             |
-| ------ | ------ | -- | ---------------------------------------------------------------------------------------------- |
-| result | Object | <- | Object describing the contents of the ORDA cache for the dataclass.|<!-- END REF -->
+| 引数     | タイプ    |    | 説明                                                          |
+| ------ | ------ | -- | ----------------------------------------------------------- |
+| result | Object | <- | データクラスの ORDAキャッシュの内容を記述したオブジェクト。|<!-- END REF -->
 
 
 |
@@ -666,7 +666,7 @@ The `.getInfo()` function <!-- REF #DataClassClass.getInfo().Summary -->returns 
 
 #### 説明
 
-The `.getRemoteCache()` function <!-- REF #DataClassClass.getRemoteCache().Summary -->returns an object that holds the contents of the ORDA cache for a dataclass.<!-- END REF -->。
+`.getRemoteCache()` 関数は、 <!-- REF #DataClassClass.getRemoteCache().Summary -->データクラスの ORDAキャッシュの内容を記述したオブジェクトを返します<!-- END REF -->。
 
 4D のシングルユーザーアプリケーションからこの関数を呼び出した場合、`Null` が返されます。
 
@@ -685,7 +685,7 @@ The `.getRemoteCache()` function <!-- REF #DataClassClass.getRemoteCache().Summa
 | ------- | ------- | -------------------- |
 | data    | Object  | エントリーのデータを格納するオブジェクト |
 | expired | Boolean | エントリーが期限切れの場合に true  |
-| キー      | Text    | エンティティのプライマリーキー。     |
+| key     | Text    | エンティティのプライマリーキー。     |
 
 各エントリーの `data` オブジェクトは、以下のプロパティを持ちます:
 
@@ -745,15 +745,15 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 
 <!-- REF #DataClassClass.new().Params -->
-| 引数  | タイプ       |    | 説明                                                           |
-| --- | --------- | -- | ------------------------------------------------------------ |
-| 戻り値 | 4D.Entity | <- | New entity matching the Dataclass|<!-- END REF -->
+| 引数  | タイプ       |    | 説明                                         |
+| --- | --------- | -- | ------------------------------------------ |
+| 戻り値 | 4D.Entity | <- | データクラスの新規エンティティ|<!-- END REF -->
 
 |
 
 #### 説明
 
-`.new()` 関数は、 <!-- REF #DataClassClass.new().Summary -->creates in memory and returns a new blank entity related to the Dataclass<!-- END REF -->。
+`.new()` 関数は、 <!-- REF #DataClassClass.new().Summary -->メモリ内にデータクラスに空のエンティティを新規作成しそれを返します<!-- END REF -->。
 
 エンティティオブジェクトはメモリ内に作成されますが、[`.save( )`](EntityClass.md#save) 関数が呼び出されるまでデータベースには保存されません。 エンティティを保存する前に削除した場合、復元することはできません。
 
@@ -800,7 +800,7 @@ $cacheAddress:=$ds.Adress.getRemoteCache()
 
 #### 説明
 
-The `.newSelection()` function <!-- REF #DataClassClass.newSelection().Summary -->creates a new, blank, non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->。
+`.newSelection()` 関数は、 <!-- REF #DataClassClass.newSelection().Summary -->データクラスに紐づいた 追加可能な、空の新規エンティティセレクションをメモリ内に作成します<!-- END REF -->。
 
 > 追加可能なエンティティセレクションについての詳細は [共有可能/追加可能なエンティティセレクション](ORDA/entities.md#共有可能追加可能なエンティティセレクション) を参照ください。
 
@@ -847,7 +847,7 @@ The `.newSelection()` function <!-- REF #DataClassClass.newSelection().Summary -
 
 #### 説明
 
-`.query()` 関数は、 <!-- REF #DataClassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. この関数には、レイジーローディングが適用されます。
+`.query()` 関数は、 <!-- REF #DataClassClass.query().Summary -->データクラスの全エンティティから、*queryString* または *formula* と任意の *value* 引数で指定した検索条件に合致するエンティティを検索します<!-- END REF -->。 戻り値は、見つかったエンティティをすべて格納する `EntitySelection` 型の新しいオブジェクトです。 この関数には、レイジーローディングが適用されます。
 
 エンティティが見つからない場合、空のエンティティセレクションが返されます。
 
@@ -856,8 +856,8 @@ The `.newSelection()` function <!-- REF #DataClassClass.newSelection().Summary -
 *queryString* 引数には、以下のシンタックスを使用します:
 
 ```4d
-attributePath|formula comparator value   
- {logicalOperator attributePath|formula comparator value}   
+attributePath|formula 比較演算子 値   
+ {論理演算子 attributePath|formula 比較演算子 値}   
  {order by attributePath {desc | asc}}
 ```
 
@@ -870,7 +870,7 @@ attributePath|formula comparator value
 
   * **テキスト**: フォーミュラ文字列の前に `eval( )` ステートメントが必要です。これにより、クエリが式を正しく解釈します。 例: *"eval(length(This.lastname) >=30)"*
   * **オブジェクト**: [フォーミュラオブジェクト](FunctionClass.md) は **プレースホルダー** (後述参照) を使って受け渡します。 このフォーミュラは、[`Formula`](FunctionClass.md#formula) または [`Formula from string`](FunctionClass.md#formula-from-string) コマンドによって作成されたものでなくてはなりません。
-> * > * Keep in mind that 4D formulas only support `&` and `|` symbols as logical operators.
+> * 4Dフォーミュラは、`&` および `|` 記号のみを論理演算子としてサポートすることに留意が必要です。
 > * フォーミュラ以外にも検索条件がある場合、クエリエンジンの最適化によってほかの検索条件 (たとえばインデックス属性) の処理が優先される場合があり、その場合はエンティティのサブセットのみがフォーミュラの評価対象となります。
 
  クエリに使用するフォーミュラは $1 に引数を受け取ることができます。 詳細については後述の **フォーミュラ引数** を参照ください。
@@ -905,9 +905,9 @@ attributePath|formula comparator value
  | 結合  | 記号                      |
  | --- | ----------------------- |
  | AND | &, &&, and              |
- | または | &#124;,&#124;&#124;, or |
+ | OR  | &#124;,&#124;&#124;, or |
 
-* **order by attributePath**: クエリに "order by attributePath" ステートメントを追加することで、結果をソートすることができます。 カンマで区切ることで、複数の order by ステートメントを使用することもできます (例: order by *attributePath1* desc, *attributePath2* asc)。 デフォルトの並び順は昇順です。 並び順を指定するには、降順の場合は 'desc'、昇順の場合は 'asc' を追加します。 >If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
+* **order by attributePath**: クエリに "order by attributePath" ステートメントを追加することで、結果をソートすることができます。 カンマで区切ることで、複数の order by ステートメントを使用することもできます (例: order by *attributePath1* desc, *attributePath2* asc)。 デフォルトの並び順は昇順です。 並び順を指定するには、降順の場合は 'desc'、昇順の場合は 'asc' を追加します。 >このステートメントを使用した場合、順序ありエンティティセレクションが返されます (詳細については [エンティティセレクションの順列あり/順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください)。
 
 **引用符を使用する**
 
@@ -932,12 +932,12 @@ attributePath|formula comparator value
 
 プレースホルダーには二つの種類があります。**インデックスプレースホルダー** および **命名プレースホルダー** です:
 
-|    | インデックスプレースホルダー                                                                                                                       | 命名プレースホルダー                                                                                                                                       |
-| -- | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| 定義 | You can mix all argument kinds in *queryString*. A *queryString* can contain, for *attributePath*, *formula* and *value* parameters: | `:paramName` (例: myparam など) という形でパラメーターが挿入され、その値は *querySettings* 引数の attributes または parameters オブジェクトで提供されます。                                  |
-| 例題 | `$r:=class.query(":1=:2";"city";"Chicago")`                                                                                          | `$o.attributes:=New object("att";"city")`<br/> `$o.parameters:=New object("name";"Chicago")`<br/> `$r:=class.query(":att=:name";$o)` |
+|    | インデックスプレースホルダー                                                                                                                | 命名プレースホルダー                                                                                                                                       |
+| -- | ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 定義 | *queryString* に `:paramIndex` (例 :1, :2...) という形式でパラメーターが挿入され、それに対応する値は後に続く *value* 引数が提供します。 最大で 128個の *value* 引数を渡すことができます。 | `:paramName` (例: myparam など) という形でパラメーターが挿入され、その値は *querySettings* 引数の attributes または parameters オブジェクトで提供されます。                                  |
+| 例題 | `$r:=class.query(":1=:2";"city";"Chicago")`                                                                                   | `$o.attributes:=New object("att";"city")`<br/> `$o.parameters:=New object("name";"Chicago")`<br/> `$r:=class.query(":att=:name";$o)` |
 
-*queryString* には、すべての種類の引数を混ぜて渡すことができます。 in *queryString* and their corresponding values are provided by the sequence of *value* parameter(s). You can use up to 128 *value* parameters
+*queryString* には、すべての種類の引数を混ぜて渡すことができます。 *queryString* 引数は、*attributePath* と *formula* と *値* に以下のものを含めることができます:
 
 * 定数値 (プレースホルダーを使用しない)
 * インデックスプレースホルダーや命名プレースホルダー
@@ -947,7 +947,7 @@ attributePath|formula comparator value
 1. 悪意あるコードの挿入を防ぎます: ユーザーによって値が代入された変数をクエリ文字列として直接使用した場合、余計なクエリ引数を入力することでユーザーがクエリ条件を変更する可能性があります。 たとえば、以下のようなクエリ文字列を考えます:
 
  ```4d
-  $vquery:="status = 'public' & name = "+myname //user enters their name
+  $vquery:="status = 'public' & name = "+myname // ユーザーが自分の名前を入力します
   $result:=$col.query($vquery)
  ```
 
@@ -988,11 +988,11 @@ $vSingles:=ds.Person.query("spouse = :1";Null) // 機能しません
 
 :::info
 
-This feature is only available in queries on dataclasses and [entity selections](EntitySelectionClass.md#query). It cannot be used in queries on [collections](CollectionClass.md#query).
+この機能は、データクラスおよび [エンティティセレクション](EntitySelectionClass.md#query) をクエリする場合にのみ利用可能です。 [コレクション](CollectionClass.md#query) をクエリする場合には利用できません。
 
 :::
 
-When searching within dataclass object attributes containing collections using multiple query arguments joined by the AND operator, you may want to make sure that only entities containing elements that match all arguments are returned, and not entities where arguments can be found in different elements. これを避けるには、すべての条件に合致するコレクション要素のみが検出されるよう、クエリ条件をコレクション要素にリンクする必要があります。
+エンティティのオブジェクト型属性が、プロパティを複数持つオブジェクト要素からなりたっているコレクションを値として持つ場合に、当該コレクションに特定要素が存在するかを条件に親オブジェクトを検出したいケースを考えます。AND 演算子で結合された複数のクエリ条件を使用して検索するだけでは、異なるコレクション要素がそれぞれ検索条件に合致するプロパティ値を持つ場合にも当該親オブジェクトが検出されてしまいます。 これを避けるには、すべての条件に合致するコレクション要素のみが検出されるよう、クエリ条件をコレクション要素にリンクする必要があります。
 
 たとえば、以下のような 2件のエンティティがあるとき:
 
@@ -1441,9 +1441,9 @@ softwares:{
 
 
 <!-- REF #DataClassClass.setRemoteCacheSettings().Params -->
-| 引数       | タイプ    |    | 説明                                                                                                            |
-| -------- | ------ | -- | ------------------------------------------------------------------------------------------------------------- |
-| settings | Object | -> | Object that sets the timeout and maximum size of the ORDA cache for the dataclass.|<!-- END REF -->
+| 引数       | タイプ    |    | 説明                                                                       |
+| -------- | ------ | -- | ------------------------------------------------------------------------ |
+| settings | Object | -> | データクラスの ORDAキャッシュについて、タイムアウトと最大サイズを指定するオブジェクト|<!-- END REF -->
 
 |
 
@@ -1451,7 +1451,7 @@ softwares:{
 
 #### 説明
 
-The `.setRemoteCacheSettings()` function <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->sets the timeout and maximum size of the ORDA cache for a dataclass.<!-- END REF -->。
+`.setRemoteCacheSettings()` 関数は、 <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->データクラスの ORDAキャッシュについて、タイムアウトと最大サイズを指定します<!-- END REF -->。
 
 *settings* には、以下のプロパティを持つオブジェクトを渡します:
 

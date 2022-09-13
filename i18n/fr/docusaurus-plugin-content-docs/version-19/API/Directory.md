@@ -529,7 +529,7 @@ Vous souhaitez savoir s'il y a des fichiers invisibles dans le dossier de la bas
  End if
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Vous souhaitez lire tous les fichiers qui ne sont pas invisibles dans le dossier Documents :
 

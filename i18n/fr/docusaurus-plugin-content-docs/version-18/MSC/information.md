@@ -35,7 +35,7 @@ La page liste toutes les tables de la base (y compris les tables invisibles) ain
 - **Chiffrée** : Si cet attribut est coché, les enregistrements de la table sont chiffrés dans le fichier de données. **Encrypted**: If checked, the records of the table are encrypted in the data file.
 - **Taille table adresses** : Taille de la table d'adresses pour chaque table. La table d'adresses est une table interne qui stocke un élément par enregistrement créé dans la table. Elle établit le lien entre les enregistrements et leur adresse physique. Pour des raisons de performance, elle n'est pas redimensionnée lorsque des enregistrements sont supprimés. Sa taille peut donc être différente du nombre d'enregistrements actuel de la table. À noter que si cette différence est significative, il peut être intéressant de compacter les données avec l'option "Compacter la table d'adresses" afin d'optimiser la taille de la table d'adresses (voir [Page Compactage](compact.md)). ***Note :** Des différences entre la taille de la table d'adresses et le nombre d'enregistrements peuvent également résulter d'un incident durant l'écriture du cache sur le disque. *
 
-## Données
+## Data
 
 La page **Données** fournit des informations sur l'espace de stockage libre et occupé dans les fichiers de données et la structure de la base.
 > Cette page n'est pas accessible en mode maintenance

@@ -118,7 +118,7 @@ $okFile:=File("/DATA/Prefs/tempo.txt").create() //file created in the data folde
 
 ### `.file()` and `.folder()` folder methods
 
-Functions of folder objects such as [`folder.file()`](../API/FolderClass.md#file) and [`folder.folder()`](../API/FolderClass.md#folder-1) expect relative POSIX pathnames.
+Functions of folder objects such as [`folder.file()`](../API/FolderClass.md#file) and [`folder.folder()`](../API/FolderClass.md#folder-1) expect relative POSIX pathnames. Par exemple :
 
 ```4d
   //to reference a "Picture" folder within the user documents folder

@@ -96,7 +96,7 @@ $4d.today(function(dollarZero)
 </html>
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 La méthode projet 4D `calcSum` reçoit des paramètres (`$1...$n`) et retourne leur somme dans `$0` :
 

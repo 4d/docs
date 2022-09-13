@@ -66,7 +66,7 @@ The **Goto Definition** command opens the definition of an element referenced in
 
 **Note:** This feature is also available through the keyboard shortcut **Ctrl+K** (Windows) or **Command+K** (macOS).
 
-The effect varies depending on the target element.
+The effect varies depending on the target element. Par exemple :
 
 - Selecting a project method and choosing **Goto Definition...** displays the contents of the method in a new window of the Code Editor
 - Selecting a class name or class attribute and choosing **Goto Definition...** opens the class in the the Code Editor
@@ -77,7 +77,7 @@ The **Reveal in Explorer...** command opens an Explorer window with the target e
 
 ## Show documentation
 
-The **Show documentation...** command opens the documentation for the target element. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Show documentation...** or use the contextual menu. The effect varies depending on the target element.
+The **Show documentation...** command opens the documentation for the target element. To do this, place the cursor inside the element's name or select it, then choose **Method** > **Show documentation...** or use the contextual menu. The effect varies depending on the target element. Par exemple :
 
 - Selecting a project method or a user class and choosing **Show documentation...** selects the method in the Explorer and switches to the documentation tab
 - Selecting a 4D command or a 4D class name and choosing **Show documentation...** displays the online documentation

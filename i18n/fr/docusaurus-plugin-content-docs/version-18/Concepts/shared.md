@@ -122,7 +122,7 @@ Dans la méthode "HowMany", l'inventaire est effectué et l'objet partagé $inve
 End use
 ```
 
-## Exemple 3
+## Exemple 2
 
 Les exemples suivants illustrent les règles spécifiques à observer lorsque vous utilisez des groupes partagés :
 

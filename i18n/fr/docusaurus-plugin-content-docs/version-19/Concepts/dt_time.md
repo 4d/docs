@@ -75,7 +75,7 @@ La seconde ligne peut également être écrite de la façon suivante :
  $vhSoon:=Current time+?01:00:00?
 ```
 
-### Exemple 3
+### Exemple 2
 
 L'opérateur Modulo permet notamment d'ajouter des heures en tenant compte du format sur 24 heures d'une journée :
 

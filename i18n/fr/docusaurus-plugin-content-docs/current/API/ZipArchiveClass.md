@@ -110,7 +110,7 @@ Pour compresser un `4D.File` :
  $status:=ZIP Create archive($file;$destination)
 ```
 
-#### Exemple 3
+#### Exemple 2
 
 Pour compresser un `4D.Folder` sans le dossier lui-même :
 

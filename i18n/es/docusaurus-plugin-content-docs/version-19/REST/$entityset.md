@@ -83,7 +83,7 @@ Si queremos saber si los dos conjuntos de entidades se cruzan, podemos escribir 
 
  `GET  /rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7?$logicOperator=intersect&$otherCollection=C05A0D887C664D4DA1B38366DD21629B`
 
-Si hay una intersección, esta consulta devuelve true. .
+Si hay una intersección, esta consulta devuelve true. En caso contrario, devuelve false.
 
 En el siguiente ejemplo creamos un nuevo conjunto de entidades que combina todas las entidades de ambos conjuntos de entidades:
 

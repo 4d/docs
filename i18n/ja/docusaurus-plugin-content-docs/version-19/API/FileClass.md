@@ -258,9 +258,9 @@ Windows 上では、常にショートカット (.lnk ファイル) が作成さ
 
 
 <!-- REF #FileClass.delete().Params -->
-| 引数 | タイプ |  | 説明                                                         |
-| -- | --- |  | ---------------------------------------------------------- |
-|    |     |  | Does not require any parameters|<!-- END REF -->
+| 引数 | タイプ |  | 説明                                           |
+| -- | --- |  | -------------------------------------------- |
+|    |     |  | このコマンドは引数を必要としません|<!-- END REF -->
 
 |
 
@@ -590,7 +590,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### 説明
 
-The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->。 .
+The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->。 BLOB についての詳細は、[BLOB](Concepts/dt_blob.md) の章を参照してください。
 
 #### 例題
 

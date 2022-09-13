@@ -743,7 +743,7 @@ The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the w
 | ------- | ----------------------- | ---------- | ------------------------------------- |
 | success |                         | Boolean    | Webサーバーが正常に開始された場合には true、それ以外は false |
 | errors  |                         | Collection | エラースタック (Webサーバーが正常に開始された場合には返されません)  |
-|         | \[].errCode            | 数値         | 4Dエラーコード                              |
+|         | \[].errCode            | Number     | 4Dエラーコード                              |
 |         | \[].message            | Text       | 4Dエラーの詳細                              |
 |         | \[].componentSignature | Text       | エラーを返した内部コンポーネントの署名                   |
 > Webサーバーが既に起動していた場合、エラーが返されます。
@@ -782,9 +782,9 @@ The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the w
 
 <!-- REF #WebServerClass.stop().Params -->
 
-| 引数 | タイプ |  | 説明                                                         |
-| -- | --- |  | ---------------------------------------------------------- |
-|    |     |  | Does not require any parameters|<!-- END REF --> |
+| 引数 | タイプ |  | 説明                                           |
+| -- | --- |  | -------------------------------------------- |
+|    |     |  | このコマンドは引数を必要としません|<!-- END REF --> |
 
 The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->。
 
