@@ -1434,7 +1434,7 @@ If the original entity selection and the parameter are not related to the same d
 The `.orderBy()` function <!-- REF #EntitySelectionClass.orderBy().Summary -->returns a new ordered entity selection containing all entities of the entity selection in the order specified by *pathString* or *pathObjects* criteria<!-- END REF -->.
 
 >*	This method does not modify the original entity selection.
-*	For more information, please refer to the [Ordered or unordered entity selection](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) section.
+>*	For more information on ordered entity selections, please refer to the [Ordered or unordered entity selection](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) section.
 
 You must use a criteria parameter to define how the entities must be sorted. Two different parameters are supported:
 
