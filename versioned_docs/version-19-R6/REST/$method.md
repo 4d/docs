@@ -30,7 +30,8 @@ With `$method=delete`, you can delete an entity or an entire entity collection. 
 
 You can also delete the entities in an entity set, by calling [`$entityset/{entitySetID}`]($entityset.md#entitysetentitysetid).
 
-## Example  
+### Example
+ 
 You can then write the following REST request to delete the entity whose key is 22:
 
  `POST  /rest/Employee(22)/?$method=delete`
@@ -45,7 +46,7 @@ You can also delete an entity set using $entityset/{entitySetID}:
 
 Response:
 
-```
+```json
 {
     "ok": true
 }
@@ -79,8 +80,9 @@ You can also save the filter and order by, by passing true to `$savedfilter` and
 
 After you create an entity set, the first element, `__ENTITYSET`, is added to the object returned and indicates the URI to use to access the entity set:
 
-`__ENTITYSET: "http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7"`
-
+```json
+__ENTITYSET: "http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7"`
+```
 
 
 
@@ -102,7 +104,7 @@ Release an existing entity set:
 
 If the request was successful, the following response is returned:
 
-```
+```json
 {
     "ok": true
 }
@@ -111,7 +113,7 @@ If the entity set wasn't found, an error is returned:
 {
     "__ERROR": [
         {
-             "message": "Error code: 1802\nEntitySet  \"4C51204DD8184B65AC7D79F09A077F24\" cannot be found\ncomponent:  'dbmg'\ntask 22, name: 'HTTP connection handler'\n",
+            "message": "Error code: 1802\nEntitySet  \"4C51204DD8184B65AC7D79F09A077F24\" cannot be found\ncomponent:  'dbmg'\ntask 22, name: 'HTTP connection handler'\n",
             "componentSignature": "dbmg",
             "errCode": 1802
         }
@@ -141,7 +143,7 @@ If you want to retrieve only the related entities for a specific entity, you can
 
 #### Response:
 
-```
+```json
 {
  
     "__ENTITYSET": "/rest/Employee/$entityset/FF625844008E430B9862E5FD41C741AB",
@@ -199,15 +201,16 @@ To update an entity, you must pass the `__KEY` and `__STAMP` parameters in the o
 
 Triggers are executed immediately when saving the entity to the server. The response contains all the data as it exists on the server.
 
-You can also put these requests to create or update entities in a transaction by calling `$atomic/$atonce`. If any errors occur during data validation, none of the entities are saved. You can also use $method=validate to validate the entities before creating or updating them.
+You can also put these requests to create or update entities in a transaction by calling `$atomic/$atOnce`. If any errors occur during data validation, none of the entities are saved. You can also use `$method=validate` to validate the entities before creating or updating them.
 
 If a problem arises while adding or modifying an entity, an error will be returned to you with that information.
 
->Notes for specific attribute types:
->
->	*	**Dates** must be expressed in JS format: YYYY-MM-DDTHH:MM:SSZ (e.g., "2010-10-05T23:00:00Z"). If you have selected the Date only property for your Date attribute, the time zone and time (hour, minutes, and seconds) will be removed. In this case, you can also send the date in the format that it is returned to you dd!mm!yyyy (e.g., 05!10!2013).
->	*	**Booleans** are either true or false.
->	*	Uploaded files using `$upload` can be applied to an attribute of type Image or BLOB by passing the object returned in the following format { "ID": "D507BC03E613487E9B4C2F6A0512FE50"}
+:::note
+*	**Dates** must be expressed in JS format: YYYY-MM-DDTHH:MM:SSZ (e.g., "2010-10-05T23:00:00Z"). If you have selected the Date only property for your Date attribute, the time zone and time (hour, minutes, and seconds) will be removed. In this case, you can also send the date in the format that it is returned to you dd!mm!yyyy (e.g., 05!10!2013).
+*	**Booleans** are either true or false.
+*	Uploaded files using `$upload` can be applied to an attribute of type Image or BLOB by passing the object returned in the following format `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50"}`
+:::
+
 
 ### Example  
 
@@ -217,7 +220,7 @@ To update a specific entity, you use the following URL:
 
 **POST data:**
 
-```
+```json
 {
     __KEY: "340",
     __STAMP: 2,
@@ -234,7 +237,7 @@ If you want to create an entity, you can POST the attributes using this URL:
 
 **POST data:**
 
-```
+```json
 { 
     firstName: "John",
     lastName: "Smith"
@@ -247,7 +250,7 @@ You can also create and update multiple entities at the same time using the same
 
 **POST data:**
 
-```
+```json
 [{ 
     "__KEY": "309",
     "__STAMP": 5,
@@ -264,7 +267,7 @@ You can also create and update multiple entities at the same time using the same
 
 When you add or modify an entity, it is returned to you with the attributes that were modified. For example, if you create the new employee above, the following will be returned:
 
-```
+```json
 {
     "__KEY": "622", 
     "__STAMP": 1, 
@@ -278,7 +281,7 @@ When you add or modify an entity, it is returned to you with the attributes that
 
 If, for example, the stamp is not correct, the following error is returned:
 
-```
+```json
 {
     "__STATUS": {
         "status": 2,
