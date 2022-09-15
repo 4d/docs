@@ -611,8 +611,8 @@ To delete all messages in the current mailbox:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |name|Text|->|Name of the mailbox to delete|
-
 |Result|Object|<-|Status of the mailbox deletion operation|<!-- END REF -->
+
 
 #### Description
 
@@ -1000,7 +1000,9 @@ You want to get the message with ID = 1:
 |options|Object|->|Message handling instructions|
 |Result|Object|<-|Object containing:<br/><ul><li>a collection of [Email objects](EmailObjectClass.md#email-object) and</li><li>a collection of IDs or numbers for missing messages, if any</li></ul>|<!-- END REF -->
 
+
 #### Description
+
 
 The `.getMails()` function <!-- REF #IMAPTransporterClass.getMails().Summary -->returns an object containing a collection of `Email` objects<!-- END REF -->.
 
@@ -1400,6 +1402,7 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 ## .renameBox()
 
 <details><summary>History</summary>
+
 
 |Version|Changes|
 |---|---|

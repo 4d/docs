@@ -611,8 +611,8 @@ To delete all messages in the current mailbox:
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |name|Text|->|Name of the mailbox to delete|
-
 |Result|Object|<-|Status of the mailbox deletion operation|<!-- END REF -->
+
 
 #### Description
 
@@ -1400,6 +1400,7 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 ## .renameBox()
 
 <details><summary>History</summary>
+
 
 |Version|Changes|
 |---|---|
