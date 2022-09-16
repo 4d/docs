@@ -312,7 +312,7 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 <!-- REF #CryptoKey.type.Syntax -->**.type** : Text<!-- END REF -->
 
 
-The <!-- REF #CryptoKey.type.Summary -->name of the key type - "RSA", "ECDSA", "PEM" <!-- END REF -->. 
+<!-- REF #CryptoKey.type.Summary -->Name of the key type - "RSA", "ECDSA", "PEM" <!-- END REF -->. 
 
 - "RSA": an RSA key pair, using `settings.size` as [.size](#size).
 - "ECDSA": an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as [.curve](#curve). Note that ECDSA keys cannot be used for encryption but only for signature.
