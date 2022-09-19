@@ -8,7 +8,7 @@ title: On Window Opening Denied
 | 53  | [Webエリア](FormObjects/webArea_overview.md) | ポップアップウィンドウがブロックされた |
 
 
-## 詳細
+## 説明
 
 このイベントは、Webエリアによりポップアップウィンドウがブロックされると生成されます。 4D Webエリアはポップアップウィンドウを許可しません。
 
