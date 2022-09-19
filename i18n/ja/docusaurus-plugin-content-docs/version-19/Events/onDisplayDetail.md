@@ -8,7 +8,7 @@ title: On Display Detail
 | 8   | フォーム - [リストボックス](FormObjects/listbox_overview.md) | レコードがリストフォーム中に、あるいは行がリストボックス中に表示されようとしている |
 
 
-## 詳細
+## 説明
 
 `On Display Detail` イベントは次のコンテキストで利用できます:
 
