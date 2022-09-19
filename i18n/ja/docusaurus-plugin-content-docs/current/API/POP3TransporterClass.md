@@ -47,7 +47,7 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 | 引数     | タイプ                |    | 説明                                                                             |
 | ------ | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server | object             | -> | メールサーバー情報                                                                      |
-| 戻り値    | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object)|<!-- END REF -->
+| 戻り値    | 4D.POP3Transporter | <- | [POP3 transporter オブジェクト](#pop3-transporter-オブジェクト)|<!-- END REF -->
 
 
 |
@@ -55,19 +55,19 @@ POP3 Transporter オブジェクトは [POP3 New transporter](#pop3-new-transpor
 
 #### 説明
 
-The `POP3 New transporter` command <!-- REF #_command_.POP3 New transporter.Summary -->configures a new POP3 connection<!-- END REF -->according to the *server* parameter and returns a new *[POP3 transporter](#pop3-transporter-object)* object. 返された transporter オブジェクトは、通常メールの受信に使用されます。
+`POP3 New transporter` コマンドは、 <!-- REF #_command_.POP3 New transporter.Summary -->新規の POP3接続を設定します<!-- END REF -->。この POP3接続は、*server* 引数の指定に応じてを設定され、コマンドの戻り値は新しい *[POP3 transporter](#pop3-transporter-オブジェクト)* オブジェクトです。 返される transporter オブジェクトは通常、メールの受信に使用されます。
 
 *server* 引数として、以下のプロパティを持つオブジェクトを渡します:
 
-| *server*                                                                                                                                                                                                                                                                                                                                        | デフォルト値 (省略時)                     |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| *server*                                                                                                                                                                                                                                                                                                                            | デフォルト値 (省略時)                     |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                            |
-| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>Text string or token object representing OAuth2 authorization credentials. `authenticationMode` が OAUTH2 の場合のみ使用されます。 `accessTokenOAuth2` が使用されているが `authenticationMode` が省略されていた場合、OAuth2 プロトコルが使用されます (サーバーで許可されていれば)。 OAuth2 認証の資格情報を表すテキスト文字列またはトークンオブジェクト。 | なし                               |
+| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>OAuth2 認証の資格情報を表すテキスト文字列またはトークンオブジェクト。 `authenticationMode` が OAUTH2 の場合のみ使用されます。 `accessTokenOAuth2` が使用されているが `authenticationMode` が省略されていた場合、OAuth2 プロトコルが使用されます (サーバーで許可されていれば)。 *[POP3 transporter](#pop3-transporter-オブジェクト)* オブジェクトには返されません。 | なし                               |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| サーバーがサポートするもっともセキュアな認証モードが使用されます |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                               |
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *必須*                             |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| なし                               |
-| **.password** : Text<br/>User password for authentication on the server. OAuth2 認証の資格情報を表すテキスト文字列またはトークンオブジェクト。                                                                                                                                                                                                                           | なし                               |
+| **.password** : Text<br/>サーバーとの認証のためのユーザーパスワード。 *[POP3 transporter](#pop3-transporter-オブジェクト)* オブジェクトには返されません。                                                                                                                                                                                                                | なし                               |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 995                              |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| なし                               |
 
@@ -107,13 +107,13 @@ The `POP3 New transporter` command <!-- REF #_command_.POP3 New transporter.Summ
 | 引数     | タイプ                |    | 説明                                                                             |
 | ------ | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server | Object             | -> | メールサーバー情報                                                                      |
-| 戻り値    | 4D.POP3Transporter | <- | [POP3 transporter object](#pop3-transporter-object)|<!-- END REF -->
+| 戻り値    | 4D.POP3Transporter | <- | [POP3 transporter オブジェクト](#pop3-transporter-オブジェクト)|<!-- END REF -->
 
 |
 
 #### 説明
 
-The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summary -->creates and returns a new object of the `4D.POP3Transporter` type<!-- END REF -->。 .
+`4D.POP3Transporter.new()` 関数は、 <!-- REF #4D.POP3Transporter.new().Summary -->`4D.POP3Transporter` 型の新しいオブジェクトを作成して返します<!-- END REF -->。 この関数の機能は、[`POP3 New transporter`](#pop3-new-transporter) コマンドと同一です。
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -171,7 +171,7 @@ The `4D.POP3Transporter.new()` function <!-- REF #4D.POP3Transporter.new().Summa
 
 ##### 説明
 
-The `.delete( )` function <!-- REF #POP3TransporterClass.delete().Summary -->flags the *msgNumber* email for deletion from the POP3 server<!-- END REF -->。
+`.delete()` 関数は、 <!-- REF #POP3TransporterClass.delete().Summary -->*msgNumber* で指定したメールメッセージに対して、POP3サーバーから削除するためのフラグを立てます<!-- END REF -->。
 
 *msgNumber* には、削除するメールの番号を渡します。 この番号は、[`.getMailInfoList()`](#getmailinfolist) 関数によって number プロパティに返されます。
 
@@ -187,7 +187,7 @@ The `.delete( )` function <!-- REF #POP3TransporterClass.delete().Summary -->fla
     $POP3_transporter.delete($mailInfo.number)
  End for each
   // セッションを強制的に終了し、削除フラグを立てたメールを削除します
- CONFIRM("選択されているメッセージは削除されます。 ";"削除する";"元に戻す")
+ CONFIRM("選択されているメッセージは削除されます。";"削除する";"元に戻す")
  If(OK=1) // 削除を選んだ場合
     $POP3_transporter:=Null
  Else
@@ -211,13 +211,13 @@ The `.delete( )` function <!-- REF #POP3TransporterClass.delete().Summary -->fla
 <!-- REF #POP3TransporterClass.getBoxInfo().Params -->
 | 引数  | タイプ    |    | 説明                                        |
 | --- | ------ |:--:| ----------------------------------------- |
-| 戻り値 | Object | <- | boxInfo object|<!-- END REF -->
+| 戻り値 | Object | <- | boxInfo オブジェクト|<!-- END REF -->
 
 |
 
 ##### 説明
 
-The `.getBoxInfo()` function <!-- REF #POP3TransporterClass.getBoxInfo().Summary -->The `.getBoxInfo()` function<!-- END REF -->。 この関数を使用するとメールボックスに関する情報を取得することができます。
+`.getBoxInfo()` 関数は、 <!-- REF #POP3TransporterClass.getBoxInfo().Summary -->対象の [`POP3 transporter`](#pop3-transporter-オブジェクト) が指定するメールボックスに対応する `boxInfo` オブジェクトを返します<!-- END REF -->。 この関数を使用するとメールボックスに関する情報を取得することができます。
 
 返される `boxInfo` オブジェクトには、以下のプロパティが格納されています:
 
@@ -241,7 +241,7 @@ The `.getBoxInfo()` function <!-- REF #POP3TransporterClass.getBoxInfo().Summary
 
   // メールボックス情報
  $boxInfo:=$transporter.getBoxInfo()
- ALERT("メールボックスには "+String($boxInfo.mailCount)+" 件のメッセージがあります。
+ ALERT("メールボックスには "+String($boxInfo.mailCount)+" 件のメッセージがあります。")
 ```
 
 ## .getMail()
@@ -261,13 +261,13 @@ The `.getBoxInfo()` function <!-- REF #POP3TransporterClass.getBoxInfo().Summary
 | 引数        | タイプ     |    | 説明                                                                          |
 | --------- | ------- |:--:| --------------------------------------------------------------------------- |
 | msgNumber | Integer | -> | リスト中のメッセージの番号                                                               |
-| 戻り値       | Object  | <- | [Email object](EmailObjectClass.md#email-object)|<!-- END REF -->
+| 戻り値       | Object  | <- | [Email オブジェクト](EmailObjectClass.md#email-object)|<!-- END REF -->
 
 |
 
 ##### 説明
 
-The `.getMail()` function <!-- REF #POP3TransporterClass.getMail().Summary -->The `.getMail()` function<!-- END REF -->。 この関すを使用すると、メールのコンテンツをローカルで管理できるようになります。
+`.getMail()` 関数は、 <!-- REF #POP3TransporterClass.getMail().Summary -->[`POP3 transporter`](#pop3-transporter-オブジェクト) が指定するメールボックス内の、*msgNumber* に対応するメールを `Email` オブジェクトとして返します<!-- END REF -->。 この関すを使用すると、メールのコンテンツをローカルで管理できるようになります。
 
 *msgNumber* には、取得するメッセージの番号を渡します。 この番号は、[`.getMailInfoList()`](#getmailinfolist) 関数によって number プロパティに返されます。
 
@@ -324,7 +324,7 @@ The `.getMail()` function <!-- REF #POP3TransporterClass.getMail().Summary -->Th
 
 ##### 説明
 
-The `.getMailInfo()` function <!-- REF #POP3TransporterClass.getMailInfo().Summary -->returns a `mailInfo` object corresponding  corresponding to the *msgNumber* in the mailbox designated by the [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->。 この関数を使用すると、POP3メールサーバー上にあるメッセージの一覧をローカルで管理することができるようになります。
+`.getMailInfo()` 関数は、 <!-- REF #POP3TransporterClass.getMailInfo().Summary -->[`POP3 transporter`](#pop3-transporter-オブジェクト) が指定するメールボックス内の、*msgNumber* に対応するメールの `mailInfo` オブジェクトを返します<!-- END REF -->。 この関数を使用するとメールに関する情報を取得することができます。
 
 *msgNumber* には、取得するメッセージの番号を渡します。 この番号は、[`.getMailInfoList()`](#getmailinfolist) 関数によって number プロパティに返されます。
 
@@ -357,7 +357,7 @@ The `.getMailInfo()` function <!-- REF #POP3TransporterClass.getMailInfo().Summa
   // メッセージ情報
  $mailInfo:=$transporter.getMailInfo(1) // 先頭メールを取得します
  If($mailInfo #Null)
-    ALERT("最初のメールのサイズは "+String($mailInfo.size)+" バイトです。
+    ALERT("最初のメールのサイズは "+String($mailInfo.size)+" バイトです。")
  End if
 ```
 
@@ -383,7 +383,7 @@ The `.getMailInfo()` function <!-- REF #POP3TransporterClass.getMailInfo().Summa
 
 ##### 説明
 
-The `.getMailInfoList()` function <!-- REF #POP3TransporterClass.getMailInfoList().Summary -->returns a collection of `mailInfo` objects describing all messages in the mailbox designated by the [`POP3 transporter`](#pop3-transporter-object)<!-- END REF -->。 この関数を使用すると、POP3メールサーバー上にあるメッセージの一覧をローカルで管理することができるようになります。
+`.getMailInfoList()` 関数は、 <!-- REF #POP3TransporterClass.getMailInfoList().Summary -->[`POP3 transporter`](#pop3-transporter-オブジェクト) が指定するメールボックス内の全メッセージについて記述した `mailInfo` オブジェクトのコレクションを返します<!-- END REF -->。 この関数を使用すると、POP3メールサーバー上にあるメッセージの一覧をローカルで管理することができるようになります。
 
 返されるコレクションの各 `mailInfo` オブジェクトには、以下のプロパティが格納されています:
 
@@ -423,7 +423,7 @@ The `.getMailInfoList()` function <!-- REF #POP3TransporterClass.getMailInfoList
  $vNum:=$mailInfo.length
  $vSize:=$mailInfo.sum("size")
 
- ALERT("メールボックスには "+String($vNum)+" 件のメッセージがあります。 合計サイズは "+String($vSize)+" バイトです。
+ ALERT("メールボックスには "+String($vNum)+" 件のメッセージがあります。合計サイズは "+String($vSize)+" バイトです。")
 ```
 
 ## .getMIMEAsBlob()
@@ -440,16 +440,16 @@ The `.getMailInfoList()` function <!-- REF #POP3TransporterClass.getMailInfoList
 
 
 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Params -->
-| 引数        | タイプ     |    | 説明                                                                               |
-| --------- | ------- |:--:| -------------------------------------------------------------------------------- |
-| msgNumber | Integer | -> | リスト中のメッセージの番号                                                                    |
-| 戻り値       | Blob    | <- | Blob of the MIME string returned from the mail server|<!-- END REF -->
+| 引数        | タイプ     |    | 説明                                                     |
+| --------- | ------- |:--:| ------------------------------------------------------ |
+| msgNumber | Integer | -> | リスト中のメッセージの番号                                          |
+| 戻り値       | Blob    | <- | メールサーバーから返された MIME文字列の BLOB|<!-- END REF -->
 
 |
 
 ##### 説明
 
-The `.copy()` function <!-- REF #POP3TransporterClass.getMIMEAsBlob().Summary -->The `.getMIMEAsBlob()` function<!-- END REF -->。
+`.getMIMEAsBlob()` 関数は、 <!-- REF #POP3TransporterClass.getMIMEAsBlob().Summary -->[`POP3_transporter`](#pop3-transporter-オブジェクト) が指定するメールボックス内の、*msgNumber* に対応するメッセージの MIMEコンテンツを格納した BLOB を返します<!-- END REF -->。
 
 *msgNumber* には、取得するメッセージの番号を渡します。 この番号は、[`.getMailInfoList()`](#getmailinfolist) 関数によって number プロパティに返されます。
 
@@ -513,7 +513,7 @@ The `.copy()` function <!-- REF #POP3TransporterClass.getMIMEAsBlob().Summary --
 
 ##### 説明
 
-The `.undeleteAll()` function <!-- REF #POP3TransporterClass.undeleteAll().Summary -->removes all delete flags set on the emails in the [`POP3_transporter`](#pop3-transporter-object)<!-- END REF -->。
+`.undeleteAll()` 関数は、 <!-- REF #POP3TransporterClass.undeleteAll().Summary -->[`POP3_transporter`](#pop3-transporter-オブジェクト) 内のメールに設定された削除フラグをすべて除去します<!-- END REF -->。
 
 <!-- END REF -->
 
