@@ -14,7 +14,7 @@ title: On After Keystroke
 | v18 R5 | - Support in non-enterable list boxes- The event is now triggered after IME validation |
 </details>
 
-## 詳細
+## 説明
 
 > `On After Keystroke` イベントは、一般的に [`On After Edit`](onAfterEdit.md) イベントで置き換えることができます (後述参照)。
 
