@@ -86,7 +86,7 @@ File handle objects cannot be shared.
 <!-- REF #FileHandleClass.breakModeRead.Syntax -->**.breakModeRead** : Text<!-- END REF -->
 
 
-#### 詳細
+#### 説明
 
 The `.breakModeRead` property returns <!-- REF #FileHandleClass.breakModeRead.Summary -->the processing mode for line breaks used when reading the file<!-- END REF -->。
 
@@ -114,7 +114,7 @@ The `.breakModeRead` property can be defined at the handle creation with the [`f
 <!-- REF #FileHandleClass.breakModeWrite.Syntax -->**.breakModeWrite** : Text<!-- END REF -->
 
 
-#### 詳細
+#### 説明
 
 The `.breakModeWrite` property returns <!-- REF #FileHandleClass.breakModeWrite.Summary -->the processing mode for line breaks used when writing to the file<!-- END REF -->。
 
@@ -142,7 +142,7 @@ The `.breakModeWrite` property can be defined at the handle creation with the [`
 <!-- REF #FileHandleClass.charset.Syntax -->**.charset** : Text<!-- END REF -->
 
 
-#### 詳細
+#### 説明
 
 The `.charset` property returns <!-- REF #FileHandleClass.charset.Summary -->the charset used when reading from or writing to the file<!-- END REF -->。
 
@@ -166,7 +166,7 @@ The charset can be defined at the handle creation with the [`file.open()`](FileC
 <!-- REF #FileHandleClass.eof.Syntax -->**.eof** : Boolean<!-- END REF -->
 
 
-#### 詳細
+#### 説明
 
 The `.eof` property returns <!-- REF #FileHandleClass.eof.Summary -->True is the `offset` has reached the end of the file, and False otherwise<!-- END REF -->。
 
@@ -190,13 +190,13 @@ The `.eof` property returns <!-- REF #FileHandleClass.eof.Summary -->True is the
 
 
 <!--REF #FileHandleClass.getSize().Params -->
-| 引数  | タイプ |    | 詳細                                                       |
-| --- | --- | -- | -------------------------------------------------------- |
-| 戻り値 | 実数  | <- | Size of the document in bytes|<!-- END REF -->
+| 引数  | タイプ  |    | 説明                                                       |
+| --- | ---- | -- | -------------------------------------------------------- |
+| 戻り値 | Real | <- | Size of the document in bytes|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.getSize()` function <!-- REF #FileHandleClass.getSize().Summary -->returns the current size of the document, expressed in bytes<!-- END REF -->。
 
@@ -222,7 +222,7 @@ The `.getSize()` function <!-- REF #FileHandleClass.getSize().Summary -->returns
 <!-- REF #FileHandleClass.mode.Syntax -->**.mode** : Text<!-- END REF -->
 
 
-#### 詳細
+#### 説明
 
 The `.mode` property returns <!-- REF #FileHandleClass.mode.Summary -->the mode in which the file handle was created: "read", "write", or "append"<!-- END REF -->。
 
@@ -247,7 +247,7 @@ The mode can be defined at the handle creation with the [`file.open()`](FileClas
 <!-- REF #FileHandleClass.offset.Syntax -->**.offset** : Real<!-- END REF -->
 
 
-#### 詳細
+#### 説明
 
 The `.offset` property returns <!-- REF #FileHandleClass.offset.Summary -->the current offset of the data stream (position inside the document)<!-- END REF -->。 The offset value is automatically updated after read and write operations.
 
@@ -276,14 +276,14 @@ This property is **read/write**.
 <!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : [4D.Blob](BlobClass) <!-- END REF -->
 
 <!--REF #FileHandleClass.readBlob().Params -->
-| 引数      | タイプ                  |    | 詳細                                                  |
+| 引数      | タイプ                  |    | 説明                                                  |
 | ------- | -------------------- | -- | --------------------------------------------------- |
-| *bytes* | 実数                   | -> | Number of bytes to be read                          |
+| *bytes* | Real                 | -> | Number of bytes to be read                          |
 | 戻り値     | [4D.Blob](BlobClass) | <- | Bytes read from the file|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.readBlob()` function <!-- REF #FileHandleClass.readBlob().Summary -->returns a blob a *bytes* size from the file, starting from the current position <!-- END REF -->。
 
@@ -311,13 +311,13 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 <!--REF #FileHandleClass.readLine().Syntax -->**.readLine()** : Text <!-- END REF -->
 
 <!--REF #FileHandleClass.readLine().Params -->
-| 引数  | タイプ  |    | 詳細                                      |
+| 引数  | タイプ  |    | 説明                                      |
 | --- | ---- | -- | --------------------------------------- |
-| 戻り値 | テキスト | <- | Line of text|<!-- END REF -->
+| 戻り値 | Text | <- | Line of text|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.readLine()` function <!-- REF #FileHandleClass.readLine().Summary -->returns a line of text from the current position until an end-of-line delimiter is encountered or the end of the document is reached<!-- END REF -->。
 
@@ -346,14 +346,14 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 <!--REF #FileHandleClass.readText().Syntax -->**.readText**( { *stopChar* : Text } ) : Text <!-- END REF -->
 
 <!--REF #FileHandleClass.readText().Params -->
-| 引数         | タイプ  |    | 詳細                                            |
+| 引数         | タイプ  |    | 説明                                            |
 | ---------- | ---- | -- | --------------------------------------------- |
-| *stopChar* | テキスト | -> | Character(s) at which to stop reading         |
-| 戻り値        | テキスト | <- | Text from the file|<!-- END REF -->
+| *stopChar* | Text | -> | Character(s) at which to stop reading         |
+| 戻り値        | Text | <- | Text from the file|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.readText()` function <!-- REF #FileHandleClass.readText().Summary -->returns text from the file, starting from the current position until the first *stopChar* string is encountered (if passed) or the end of file is reached<!-- END REF -->。
 
@@ -387,13 +387,13 @@ If the *stopChar* parameter is passed and not found, `.readText()` returns an em
 <!--REF #FileHandleClass.setSize().Syntax -->**.setSize**( *size* : Real )<!-- END REF -->
 
 <!--REF #FileHandleClass.setSize().Params -->
-| 引数   | タイプ |    | 詳細                                                           |
-| ---- | --- | -- | ------------------------------------------------------------ |
-| size | 実数  | -> | New size of the document in bytes|<!-- END REF -->
+| 引数   | タイプ  |    | 説明                                                           |
+| ---- | ---- | -- | ------------------------------------------------------------ |
+| size | Real | -> | New size of the document in bytes|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.setSize()` function <!-- REF #FileHandleClass.setSize().Summary -->sets a new *size* in bytes for the document<!-- END REF -->。
 
@@ -419,13 +419,13 @@ If the *size* value is less than the current document size, the document content
 <!--REF #FileHandleClass.writeBlob().Syntax -->**.writeBlob**( *blob* : 4D.Blob ) <!-- END REF -->
 
 <!--REF #FileHandleClass.writeBlob().Params -->
-| 引数     | タイプ                  |    | 詳細                                                   |
+| 引数     | タイプ                  |    | 説明                                                   |
 | ------ | -------------------- | -- | ---------------------------------------------------- |
 | *blob* | [4D.Blob](BlobClass) | -> | Blob to write in the file|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.writeBlob()` function <!-- REF #FileHandleClass.writeBlob().Summary -->writes *blob* into the file, starting from the current position <!-- END REF -->。
 
@@ -452,13 +452,13 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
 
 <!--REF #FileHandleClass.writeLine().Params -->
-| 引数           | タイプ  |    | 詳細                                       |
+| 引数           | タイプ  |    | 説明                                       |
 | ------------ | ---- | -- | ---------------------------------------- |
-| *lineOfText* | テキスト | -> | Text to write|<!-- END REF -->
+| *lineOfText* | Text | -> | Text to write|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.writeLine()` function <!-- REF #FileHandleClass.writeLine().Summary -->writes *lineOfText* content at the current position and inserts an end-of-line delimiter<!-- END REF --> (unlike the [.writeText()](#writetext) function). By default, a native end-of-line delimiter is used, but you can define another delimiter when [opening the file handle](FileClass.md#open) by setting the [`.breakModeWrite`](#breakmodewrite) property.
 
@@ -484,13 +484,13 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 <!--REF #FileHandleClass.writeText().Syntax -->**.writeText**( *textToWrite* : Text )<!-- END REF -->
 
 <!--REF #FileHandleClass.writeText().Params -->
-| 引数            | タイプ  |    | 詳細                                       |
+| 引数            | タイプ  |    | 説明                                       |
 | ------------- | ---- | -- | ---------------------------------------- |
-| *textToWrite* | テキスト | -> | Text to write|<!-- END REF -->
+| *textToWrite* | Text | -> | Text to write|<!-- END REF -->
 
 |
 
-#### 詳細
+#### 説明
 
 The `.writeText()` function <!-- REF #FileHandleClass.writeText().Summary -->writes *textToWrite* content at the current position and does not insert a final end-of-line delimiter<!-- END REF --> (unlike the [.writeLine()](#writeline) function). This function replaces all original end-of-line delimiters. This function replaces all original end-of-line delimiters.
 
