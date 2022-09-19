@@ -64,7 +64,7 @@ Dans les méthodes et fonctions de classe qui sont appelées, les valeurs des pa
 - Pour les fonctions de classe, les paramètres sont déclarés via le mot clé `Function`.
 - Pour les méthodes (méthodes projet, méthodes objet, méthodes base et triggers), les paramètres sont déclarés à l'aide du mot clé `#DECLARE` saisi au début du code de la méthode.
 
-Exemple :
+Exemples :
 
 ```4d
 Function getArea($width : Integer; $height : Integer) -> $area : Integer
