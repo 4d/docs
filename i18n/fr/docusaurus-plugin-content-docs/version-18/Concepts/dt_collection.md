@@ -13,7 +13,7 @@ Pour des informations complémentaires sur les collections 4D, passez le numéro
 collectionRef[expression]
 ```
 
-Vous pouvez passer toute expression 4D valide qui retourne un nombre entier positif dans expression. Exemple :
+Vous pouvez passer toute expression 4D valide qui retourne un nombre entier positif dans expression. Exemples :
 
 ```4d
  myCollection[5]  //accès au 6e élément de la collection
