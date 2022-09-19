@@ -26,7 +26,7 @@ En el evento `On After Edit`, los datos de texto introducidos son devueltos por 
 
 El objeto devuelto por el comando `FORM Event` contiene:
 
-| Propiedad   | Type         | Descripción                                                                                         |
+| Propiedad   | Tipo         | Descripción                                                                                         |
 | ----------- | ------------ | --------------------------------------------------------------------------------------------------- |
 | code        | entero largo | On After Edit                                                                                       |
 | description | text         | "On After Edit"                                                                                     |
@@ -38,14 +38,14 @@ En función del valor de la propiedad `action`, el [objeto evento](overview.md#e
 
 #### action = editChange
 
-| Propiedad   | Type    | Descripción                            |
+| Propiedad   | Tipo    | Descripción                            |
 | ----------- | ------- | -------------------------------------- |
 | range       | object  | Rango de celdas                        |
 | editingText | variant | El valor proveniente del editor actual |
 
 #### action = valueChanged
 
-| Propiedad | Type    | Descripción                                |
+| Propiedad | Tipo    | Descripción                                |
 | --------- | ------- | ------------------------------------------ |
 | range     | object  | Rango de celdas                            |
 | oldValue  | variant | Valor de la celda antes de la modificación |
@@ -53,7 +53,7 @@ En función del valor de la propiedad `action`, el [objeto evento](overview.md#e
 
 #### action = DragDropBlock
 
-| Propiedad | Type    | Descripción                                        |
+| Propiedad | Tipo    | Descripción                                        |
 | --------- | ------- | -------------------------------------------------- |
 | fromRange | object  | Rango de celdas fuente (que se arrastra)           |
 | toRange   | object  | Rango de la celda de destino (ubicación de soltar) |
@@ -62,21 +62,21 @@ En función del valor de la propiedad `action`, el [objeto evento](overview.md#e
 
 #### action = DragFillBlock
 
-| Propiedad | Type   | Descripción                    |
+| Propiedad | Tipo   | Descripción                    |
 | --------- | ------ | ------------------------------ |
 | fillRange | object | Gama utilizada para el relleno |
  autoFillType|longint|Valor utilizado para el relleno.<li>0: las celdas se llenan con todos los datos (valores, formato y fórmulas)</li><li>1: las celdas se llenan con datos automáticamente secuenciales</li><li>2: Las celdas se llenan sólo con el formato</li><li>3: Las celdas se llenan de valores pero sin formato</li><li>4: Se eliminan los valores de las celdas</li><li>5: Las celdas se llenan automáticamente</li>| |fillDirection|longint|Direction of the fill.<li>0: Se llenan las celdas de la izquierda</li><li>1: Se llenan las celdas a la derecha</li><li>2: Las celdas de arriba se llenan</li><li>3: Las celdas de abajo se llenan</li>|
 
 #### action = formulaChanged
 
-| Propiedad | Type   | Descripción            |
+| Propiedad | Tipo   | Descripción            |
 | --------- | ------ | ---------------------- |
 | range     | object | Rango de celdas        |
 | formula   | text   | La fórmula introducida |
 
 #### action = clipboardPasted
 
-| Propiedad   | Type         | Descripción                                                                                                                                                                                              |
+| Propiedad   | Tipo         | Descripción                                                                                                                                                                                              |
 | ----------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | range       | object       | Rango de celdas                                                                                                                                                                                          |
 | pasteOption | entero largo | Indica lo que se pega desde el portapapeles:<li>0: se pega todo (valores, formato y fórmulas)</li><li>1: solo se pegan los valores</li><li>2: sólo se pega el formato</li><li>3: solo se pegan las fórmulas</li><li>4: los valores y el formato se pegan (no las fórmulas)</li><li>5: las fórmulas y el formato se pegan (no los valores)</li> |
