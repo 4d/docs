@@ -28,7 +28,7 @@ Por ejemplo, la URL "*a/b/c*" llamará al método base, pero "*a/b/c.html*" no l
 
 **On Web Connection**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text )
 
-| Parámetros | Type |    | Descripción                                               |
+| Parámetros | Tipo |    | Descripción                                               |
 | ---------- | ---- |:--:| --------------------------------------------------------- |
 | $1         | Text | <- | URL                                                       |
 | $2         | Text | <- | Encabezados HTTP + cuerpo HTTP (hasta un límite de 32 kb) |
@@ -108,7 +108,7 @@ Los parámetros $5 y $6 reciben el nombre de usuario y la contraseña introducid
 
 ***/4DACTION/***MethodName***<br/> **/4DACTION/******MethodName/Param*
 
-| Parámetros | Type |    | Descripción                                 |
+| Parámetros | Tipo |    | Descripción                                 |
 | ---------- | ---- |:--:| ------------------------------------------- |
 | MethodName | Text | -> | Nombre del método de proyecto 4D a ejecutar |
 | Param      | Text | -> | Parámetro texto a pasar al método proyecto  |
