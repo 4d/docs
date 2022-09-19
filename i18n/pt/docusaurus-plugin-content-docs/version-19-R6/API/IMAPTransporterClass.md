@@ -621,11 +621,14 @@ To delete all messages in the current mailbox:
 
 
 <!-- REF #IMAPTransporterClass.deleteBox().Params -->
-| Parâmetros | Tipo |    | Descrição                     |
-| ---------- | ---- |:--:| ----------------------------- |
-| name       | Text | -> | Name of the mailbox to delete |
+| Parâmetros | Tipo   |    | Descrição                                                           |
+| ---------- | ------ |:--:| ------------------------------------------------------------------- |
+| name       | Text   | -> | Name of the mailbox to delete                                       |
+| Resultados | Objeto | <- | Status of the mailbox deletion operation|<!-- END REF -->
 
-|Result|Object|<-|Status of the mailbox deletion operation|<!-- END REF -->
+
+|
+
 
 #### Descrição
 
