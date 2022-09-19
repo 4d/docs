@@ -349,7 +349,7 @@ The *getter* function defines the data type of the computed attribute thanks to 
 
 El parámetro *$event* contiene las siguientes propiedades:
 
-| Propiedad     | Type    | Descripción                                                                               |
+| Propiedad     | Tipo    | Descripción                                                                               |
 | ------------- | ------- | ----------------------------------------------------------------------------------------- |
 | attributeName | Text    | Nombre de atributo calculado                                                              |
 | dataClassName | Text    | Nombre de la clase de datos                                                               |
@@ -411,7 +411,7 @@ The *$value* parameter receives the value assigned to the attribute.
 
 El parámetro *$event* contiene las siguientes propiedades:
 
-| Propiedad     | Type    | Descripción                              |
+| Propiedad     | Tipo    | Descripción                              |
 | ------------- | ------- | ---------------------------------------- |
 | attributeName | Text    | Nombre de atributo calculado             |
 | dataClassName | Text    | Nombre de la clase de datos              |
@@ -448,7 +448,7 @@ Esta función soporta tres sintaxis:
     - If *$result* is a Text, it must be a valid query string
     - If *$result* is an Object, it must contain two properties:
 
-    | Propiedad          | Type       | Descripción                                         |
+    | Propiedad          | Tipo       | Descripción                                         |
     | ------------------ | ---------- | --------------------------------------------------- |
     | $result.query      | Text       | Valid query string with placeholders (:1, :2, etc.) |
     | $result.parameters | Collection | valors para marcadores                              |
@@ -459,7 +459,7 @@ The `query` function executes whenever a query using the computed attribute is l
 
 El parámetro *$event* contiene las siguientes propiedades:
 
-| Propiedad     | Type    | Descripción                                                                                                                                                                                                                                                                                                                                                       |
+| Propiedad     | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                                                       |
 | ------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | attributeName | Text    | Nombre de atributo calculado                                                                                                                                                                                                                                                                                                                                      |
 | dataClassName | Text    | Nombre de la clase de datos                                                                                                                                                                                                                                                                                                                                       |
@@ -565,7 +565,7 @@ The `orderBy` function executes whenever the computed attribute needs to be orde
 
 El parámetro *$event* contiene las siguientes propiedades:
 
-| Propiedad     | Type    | Descripción                                                                                              |
+| Propiedad     | Tipo    | Descripción                                                                                              |
 | ------------- | ------- | -------------------------------------------------------------------------------------------------------- |
 | attributeName | Text    | Nombre de atributo calculado                                                                             |
 | dataClassName | Text    | Nombre de la clase de datos                                                                              |
