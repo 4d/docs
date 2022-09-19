@@ -224,7 +224,7 @@ Para más información sobre el modo de vinculación de datos, consulte la secci
 
 ### Construir la aplicación cliente
 
-Checking this option generates the client part of your application during the building phase.
+Marque esta opción para generar la parte cliente de su aplicación durante la fase de construcción.
 
 #### 4D Volume Desktop
 
@@ -232,7 +232,7 @@ You must designate the location on your disk of the 4D Volume Desktop applicatio
 
 > El número de versión de 4D Volume Desktop debe coincidir con el número de versión de 4D Developer Edition. Por ejemplo, si utiliza 4D Developer v18, debe seleccionar un 4D Volume Desktop v18.
 
-If you want the client application to connect to the server using a specific address (other than the server name published on the sub-network), you must use the `IPAddress` XML key in the buildapp.4DSettings file. If you want the client application to connect to the server using a specific address (other than the server name published on the sub-network), you must use the `IPAddress` XML key in the buildapp.4DSettings file. También puede implementar mecanismos específicos en caso de fallo de la conexión. También puede implementar mecanismos específicos en caso de fallo de la conexión.
+Si desea que la aplicación cliente se conecte al servidor utilizando una dirección específica (distinta del nombre del servidor publicado en la subred), debe utilizar la llave XML `IPAddress` en el archivo buildapp.4DSettings. If you want the client application to connect to the server using a specific address (other than the server name published on the sub-network), you must use the `IPAddress` XML key in the buildapp.4DSettings file. También puede implementar mecanismos específicos en caso de fallo de la conexión. También puede implementar mecanismos específicos en caso de fallo de la conexión.
 
 #### Copy of client applications in the server application
 
@@ -247,9 +247,9 @@ The options of this area to set up the mechanism for updating the client parts o
 
 #### Visualización de la notificación de actualización
 
-The client application update notification is carried out automatically following the server application update.
+La notificación de actualización de la aplicación cliente se realiza automáticamente tras la actualización de la aplicación servidor.
 
-It works as follows: when a new version of the client/server application is built using the application builder, the new client portion is copied as a compressed file in the **Upgrade4DClient** subfolder of the **ApplicationName** Server folder (in macOS, these folders are included in the server package). If you have followed the process for generating a cross-platform client application, a .*4darchive* update file is available for each platform:
+Funciona de la siguiente manera: cuando se genera una nueva versión de la aplicación cliente/servidor utilizando el generador de aplicaciones, la nueva parte cliente se copia como un archivo comprimido en la subcarpeta **Upgrade4DClient** de la carpeta **NomApplication** Server (en macOS, estas carpetas se incluyen en el paquete servidor). If you have followed the process for generating a cross-platform client application, a .*4darchive* update file is available for each platform:
 
 To trigger client application update notifications, simply replace the old version of the server application with the new one and then execute it. El resto del proceso es automático.
 
