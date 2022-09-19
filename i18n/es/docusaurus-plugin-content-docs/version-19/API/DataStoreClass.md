@@ -40,7 +40,7 @@ Un [Datastore](ORDA/dsMapping.md#datastore) es el objeto de interfaz suministrad
 
 
 <!-- REF #_command_.ds.Params -->
-| Parámetros | Type         |    | Descripción                                               |
+| Parámetros | Tipo         |    | Descripción                                               |
 | ---------- | ------------ | -- | --------------------------------------------------------- |
 | localID    | Text         | -> | ID local del almacén de datos remoto a devolver           |
 | Result     | cs.DataStore | <- | Referencia al almacén de datos|<!-- END REF -->
@@ -111,7 +111,7 @@ Utilizando el almacén de datos principal de la base 4D:
 
 
 <!-- REF #_command_.Open datastore.Params -->
-| Parámetros     | Type         |    | Descripción                                                                      |
+| Parámetros     | Tipo         |    | Descripción                                                                      |
 | -------------- | ------------ | -- | -------------------------------------------------------------------------------- |
 | connectionInfo | Object       | -> | Propiedades de conexión utilizadas para alcanzar el almacén de datos remoto      |
 | localID        | Text         | -> | Id para asignar al almacén de datos abierto en la aplicación local (obligatorio) |
@@ -143,7 +143,7 @@ Una vez abierta la sesión, las siguientes sentencias son equivalentes y devuelv
 
 Pase en *connectionInfo* un objeto que describa el almacén de datos remoto al que desea conectarse. Puede contener las siguientes propiedades (todas las propiedades son opcionales excepto *hostname*):
 
-| Propiedad   | Type    | Descripción                                                                                                                                                                                                                                                                                                                      |
+| Propiedad   | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                      |
 | ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hostname    | Text    | Nombre o dirección IP de la base de datos remota + ":" + número de puerto (el número de puerto es obligatorio)                                                                                                                                                                                                                   |
 | user        | Text    | Nombre de usuario                                                                                                                                                                                                                                                                                                                |
@@ -249,7 +249,7 @@ Cada clase de datos de un almacén de datos está disponible como una propiedad 
 
 
 <!-- REF #DataStoreClass.cancelTransaction().Params -->
-| Parámetros | Type |  | Descripción                                             |
+| Parámetros | Tipo |  | Descripción                                             |
 | ---------- | ---- |::| ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
@@ -284,7 +284,7 @@ Ver el ejemplo de la función [`.startTransaction()`](#starttransaction).
 
 
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
-| Parámetros | Type   |    | Descripción                                                                                         |
+| Parámetros | Tipo   |    | Descripción                                                                                         |
 | ---------- | ------ |:--:| --------------------------------------------------------------------------------------------------- |
 | Result     | Object | <- | Información sobre el cifrado del almacén de datos actual y de cada tabla|<!-- END REF -->
 
@@ -299,7 +299,7 @@ La función `.encryptionStatus()` <!-- REF #DataStoreClass.encryptionStatus().Su
 
 El objeto devuelto contiene las siguientes propiedades:
 
-| Propiedad   |             |               | Type    | Descripción                                                                                          |
+| Propiedad   |             |               | Tipo    | Descripción                                                                                          |
 | ----------- | ----------- | ------------- | ------- | ---------------------------------------------------------------------------------------------------- |
 | isEncrypted |             |               | Boolean | True si el archivo de datos está encriptado                                                          |
 | keyProvided |             |               | Boolean | True si se proporciona la llave de encriptación que coincide con el archivo de datos encriptados(*). |
@@ -359,7 +359,7 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 
 
 <!-- REF #DataStoreClass.getInfo().Params -->
-| Parámetros | Type   |    | Descripción                                                 |
+| Parámetros | Tipo   |    | Descripción                                                 |
 | ---------- | ------ |:--:| ----------------------------------------------------------- |
 | Result     | Object | <- | Propiedades del almacén de datos|<!-- END REF -->
 
@@ -371,12 +371,12 @@ La función `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->The `.get
 
 **Objeto devuelto**
 
-| Propiedad  | Type    | Descripción                                                                                                                                                         |
+| Propiedad  | Tipo    | Descripción                                                                                                                                                         |
 | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | type       | string  | <li>"4D": almacén de datos principal, disponible a través de ds </li><li>"4D Server": almacén de datos remoto, abierto con Open datastore</li>                                                                                                                  |
 | networked  | boolean | <li>True: el almacén de datos se alcanza a través de una conexión de red.</li><li>False: no se llega al almacén de datos a través de una conexión de red (base de datos local)</li>                                                                                                                  |
 | localID    | text    | ID del almacén de datos en la máquina. Corresponde a la cadena localId dada con el comando `Open datastore`. Cadena vacía ("") para el almacén de datos principal.  |
-| connection | object  | Objeto que describe la conexión del almacén de datos remoto (no se devuelve para el almacén de datos principal). Propiedades disponibles:<table><tr><th>Propiedad</th><th>Type</th><th>Descripción</th></tr><tr><td>hostname</td><td>text</td><td>Dirección IP o nombre del datastore remoto + ":" + número de puerto</td></tr><tr><td>tls</td><td>boolean</td><td>True si se utiliza una conexión segura con el almacén de datos remoto</td></tr><tr><td>idleTimeout</td><td>number</td><td>Tiempo de inactividad de la sesión (en minutos)</td></tr><tr><td>user</td><td>text</td><td>Usuario autentificado en el almacén de datos remoto</td></tr></table> |
+| connection | object  | Objeto que describe la conexión del almacén de datos remoto (no se devuelve para el almacén de datos principal). Propiedades disponibles:<table><tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr><tr><td>hostname</td><td>text</td><td>Dirección IP o nombre del datastore remoto + ":" + número de puerto</td></tr><tr><td>tls</td><td>boolean</td><td>True si se utiliza una conexión segura con el almacén de datos remoto</td></tr><tr><td>idleTimeout</td><td>number</td><td>Tiempo de inactividad de la sesión (en minutos)</td></tr><tr><td>user</td><td>text</td><td>Usuario autentificado en el almacén de datos remoto</td></tr></table> |
 
 * Si la función `.getInfo()` se ejecuta en un 4D Server o 4D monopuesto, `networked` es False.
 * Si la función `.getInfo()` se ejecuta en un 4D remoto, `networked` es True
@@ -428,7 +428,7 @@ En un almacén de datos remoto:
 
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
-| Parámetros | Type       |    | Descripción                                                                              |
+| Parámetros | Tipo       |    | Descripción                                                                              |
 | ---------- | ---------- |:--:| ---------------------------------------------------------------------------------------- |
 | Result     | Collection | <- | Colección de objetos, donde cada objeto describe una petición|<!-- END REF -->
 
@@ -467,7 +467,7 @@ Ver el ejemplo 2 de [`.startRequestLog()`](#startrequestlog).
 
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
-| Parámetros | Type    |    | Descripción                                                                                                                |
+| Parámetros | Tipo    |    | Descripción                                                                                                                |
 | ---------- | ------- |:--:| -------------------------------------------------------------------------------------------------------------------------- |
 | Result     | Boolean | <- | True si el acceso al Explorador de Datos está desactivado, False si está activado (por defecto)|<!-- END REF -->
 
@@ -500,7 +500,7 @@ Por defecto, el acceso al Explorador de Datos se concede para las sesiones `webA
 
 
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Params -->
-| Parámetros | Type |  | Descripción                                             |
+| Parámetros | Tipo |  | Descripción                                             |
 | ---------- | ---- |::| ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
@@ -533,7 +533,7 @@ Cuando no se llama a esta función, las nuevas selecciones de entidades pueden s
 
 
 <!-- REF #DataStoreClass.provideDataKey().Params -->
-| Parámetros    | Type   |    | Descripción                                                                         |
+| Parámetros    | Tipo   |    | Descripción                                                                         |
 | ------------- | ------ | -- | ----------------------------------------------------------------------------------- |
 | curPassPhrase | Text   | -> | Frase de cifrado actual                                                             |
 | curDataKey    | Object | -> | Llave de encriptación de datos actual                                               |
@@ -560,7 +560,7 @@ Si se aporta una llave de cifrado de datos válida, se añade a la *keyChain* de
 
 El resultado de la orden se describe en el objeto devuelto:
 
-| Propiedad  |                          | Type       | Descripción                                                                                                |
+| Propiedad  |                          | Tipo       | Descripción                                                                                                |
 | ---------- | ------------------------ | ---------- | ---------------------------------------------------------------------------------------------------------- |
 | success    |                          | Boolean    | True si la llave de encriptación proporcionada coincide con los datos encriptados, False en caso contrario |
 |            |                          |            | Las siguientes propiedades se devuelven sólo si success es *FALSE*                                         |
@@ -608,7 +608,7 @@ Si no se da *curPassphrase* o *curDataKey*, `.provideDataKey()` devuelve **null*
 
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
-| Parámetros | Type    |    | Descripción                                                                                                                                           |
+| Parámetros | Tipo    |    | Descripción                                                                                                                                           |
 | ---------- | ------- | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | status     | Boolean | -> | True para desactivar el acceso Data Explorer a los datos del puerto `webAdmin`, False (por defecto) para otorgar el acceso|<!-- END REF -->
 
@@ -651,7 +651,7 @@ Se crea un método proyecto *protectDataFile* para llamar antes de los despliegu
 
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
-| Parámetros | Type    |    | Descripción                                                           |
+| Parámetros | Tipo    |    | Descripción                                                           |
 | ---------- | ------- | -- | --------------------------------------------------------------------- |
 | file       | 4D.File | -> | Objeto File                                                           |
 | reqNum     | Integer | -> | Número de peticiones a mantener en memoria|<!-- END REF -->
@@ -727,7 +727,7 @@ Quiere registrar las peticiones de los clientes ORDA en la memoria:
 
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
-| Parámetros | Type |  | Descripción                                             |
+| Parámetros | Tipo |  | Descripción                                             |
 | ---------- | ---- |  | ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
@@ -790,7 +790,7 @@ Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-tr
 
 
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
-| Parámetros | Type |  | Descripción                                             |
+| Parámetros | Tipo |  | Descripción                                             |
 | ---------- | ---- |  | ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
@@ -823,7 +823,7 @@ Ver ejemplos de [`.startRequestLog()`](#startrequestlog).
 
 
 <!-- REF #DataStoreClass.validateTransaction().Params -->
-| Parámetros | Type |  | Descripción                                             |
+| Parámetros | Tipo |  | Descripción                                             |
 | ---------- | ---- |  | ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
