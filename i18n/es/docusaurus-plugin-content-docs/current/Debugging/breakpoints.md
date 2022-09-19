@@ -6,40 +6,40 @@ title: Puntos de ruptura y captura de comandos
 ## Generalidades
 
 
-Los puntos de interrupción y los comandos de captura son técnicas de depuración muy eficaces. Both have the same effect: they pause the code execution (and display the debugger window if not already displayed) at a desired step.
+Los puntos de interrupción y los comandos de captura son técnicas de depuración muy eficaces. Ambas tienen el mismo efecto: detienen la ejecución del código (y muestran la ventana del depurador si no está ya visible) en una etapa deseada.
 
-You set breakpoints on any line of code where you want the execution to be paused. Puede asociar una condición al punto de ruptura.
+Se definenen los puntos de interrupción en cualquier línea de código en la que se desee detener la ejecución. Puede asociar una condición al punto de ruptura.
 
-Catching a command enables you to start tracing the execution of any process as soon as a command is called by that process.
+Los puntos de interrupción de comandos le permiten comenzar a rastrear la ejecución de un proceso tan pronto como un comando es llamado por ese proceso.
 
 
 
 ## Breakpoints
 
 
-To create a break point, click in the left margin of the Source Code pane in the debugger or in the Code Editor.
+Para crear un punto de interrupción, haga clic en el margen izquierdo de la ventana de evaluación del código fuente en el depurador o en el editor de código.
 
-In the following example, a break point (the red bullet) has been set, in the debugger, on the line `If ($in.dataClass#Null)`:
+En el siguiente ejemplo, se ha definido un punto de ruptura (la viñeta roja), en el depurador, en la línea `If ($in.dataClass#Null)`:
 
 ![punto de ruptura](../assets/en/Debugging/break.png)
 
-In the above example, clicking the [**No Trace**](./debugger.md/#no-trace) button resumes normal execution up to the line marked with the break point. That line is not executed itself — you are taken back to trace mode. Setting a break point beyond the program counter and clicking the **No Trace** button allows you to skip portions of the method being traced.
+En el ejemplo anterior, al hacer clic en el botón [**No Trace**](./debugger.md/#no-trace) se reanuda la ejecución normal hasta la línea marcada con el punto de interrupción. Esa línea no se ejecuta por sí misma, sino que se vuelve al modo de rastreo. Definir un punto de interrupción más allá del contador del programa y hacer clic en el botón **No Trace** le permite saltar las partes del método que se está rastreando.
 
 Para eliminar un punto de ruptura, haga clic en la viñeta correspondiente.
 
 
 ### Propiedades de los puntos de interrupción
 
-You can edit the behavior of a breakpoint using the Breakpoint Properties window:
+Puede modificar el comportamiento de un punto de interrupción utilizando la ventana Propiedades de puntos de interrupción:
 
 ![breakpoint-properties](../assets/en/Debugging/breakpoint-properties.png)
 
-This window is available from the Code Editor or the [Source Code Pane](debugger.md#source-code-pane). Puede:
+Esta ventana está disponible en el Editor de Código o en la [ventana de código fuente](debugger.md#source-code-pane). Puede:
 
-- right-click a line and select **Edit Breakpoint** in the contextual menu, or
-- `Alt+click` (Windows) or `Option+click` (macOS) in the left margin.
+- haga clic derecho en una línea y seleccione **Modificar el punto de interrupción** en el menú contextual, o
+- `Alt+clic` (Windows) o `Opción+clic` (macOS) en el margen izquierdo.
 
-If a break point already exists, the window is displayed for that break point. Otherwise, a break point is created and the window is displayed for the newly created break point.
+Si ya existe un punto de interrupción, la ventana se muestra para ese punto de interrupción. Otherwise, a break point is created and the window is displayed for the newly created break point.
 
 A continuación se describen las propiedades:
 
