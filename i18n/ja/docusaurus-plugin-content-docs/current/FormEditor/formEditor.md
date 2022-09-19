@@ -53,7 +53,7 @@ title: フォームエディター
 
 ツールバーには以下の要素があります:
 
-| アイコン                                             | 名称                                    | 詳細                                                                                                                                                        |
+| アイコン                                             | 名称                                    | 説明                                                                                                                                                        |
 | ------------------------------------------------ | ------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![](../assets/en/FormEditor/execute.png)         | フォーム実行                                | フォームの実行をテストするために使用します。 このボタンをクリックすると、4D は新しいウィンドウを開き、そのコンテキストでフォームを表示します (リストフォームの場合レコードリスト、詳細フォームの場合カレントレコード)。 フォームはメインプロセスで実行されます。                      |
 | ![](../assets/en/FormEditor/selection.png)       | [選択ツール](#selecting-objects)           | フォームオブジェクトの選択・移動・リサイズをおこないます。<p>**注**: テキストやグループボックスタイプのオブジェクトを選択すると、**Enter**キーを押すことで編集モードになります。</p>                                                                                                    |
@@ -237,7 +237,7 @@ title: フォームエディター
 オブジェクトのグループ化を解除するには:
 
 1. グループ化を解除したいグループオブジェクトを選択します。
-2. **オブジェクト** メニューから **グループ化解除** を選択します。<p>または</p><p>Click the **Ungroup** button (variant of the **Group** button) in the toolbar of the Form editor.</p><p>If **Ungroup** is dimmed, this means that the selected object is already separated into its simplest form.</p>4D は個々のオブジェクトの境界をハンドルで表わします。
+2. **オブジェクト** メニューから **グループ化解除** を選択します。<p>OR</p><p>Click the **Ungroup** button (variant of the **Group** button) in the toolbar of the Form editor.</p><p>If **Ungroup** is dimmed, this means that the selected object is already separated into its simplest form.</p>4D は個々のオブジェクトの境界をハンドルで表わします。
 
 ### オブジェクトの整列
 
@@ -300,7 +300,7 @@ title: フォームエディター
 
 1. 3つ以上のオブジェクトを選択し、希望する均等配置ツールをクリックします。
 
-2. 適用したい均等配置に対応する整列ツールをツールバー上で選択します。<p>![](../assets/en/FormEditor/distributionTool.png)</p> または<p>Select a distribution menu command from the **Align** submenu in the **Object** menu or from the context menu of the editor.</p>4D は各オブジェクトを均等に配置します。 各オブジェクトの中心までの間隔、および隣接する 2つのオブジェクトの間隔のうち最も広い間隔が基準として用いられます。
+2. 適用したい均等配置に対応する整列ツールをツールバー上で選択します。<p>![](../assets/en/FormEditor/distributionTool.png)</p> OR<p>Select a distribution menu command from the **Align** submenu in the **Object** menu or from the context menu of the editor.</p>4D は各オブジェクトを均等に配置します。 各オブジェクトの中心までの間隔、および隣接する 2つのオブジェクトの間隔のうち最も広い間隔が基準として用いられます。
 
 "整列と均等配置" ダイアログボックスを用いてオブジェクトを均等に配置するには:
 
@@ -410,7 +410,7 @@ JSONフォームの入力順序の設定は、[`entryOrder`](properties_JSONref.
 
 メニューから、以下のプレビューモードのいずれかを選択します:
 
-| ツールバーアイコン                               | CSSプレビューモード | 詳細                                                               |
+| ツールバーアイコン                               | CSSプレビューモード | 説明                                                               |
 | --------------------------------------- | ----------- | ---------------------------------------------------------------- |
 | ![](../assets/en/FormEditor/cssNo.png)  | なし          | CSS の値はフォームに適用されず、CSS の値やアイコンはプロパティリストに表示されません。                  |
 | ![](../assets/en/FormEditor/cssWin.png) | Windows     | Windowsプラットフォーム用の CSS値がフォームに適用されます。 プロパティリストに CSSの値とアイコンが表示されます。 |
@@ -443,7 +443,7 @@ stroke: #800080;
 
 #### プロパティリスト CSSアイコン
 
-| アイコン                                          | 詳細                                                                                   |
+| アイコン                                          | 説明                                                                                   |
 | --------------------------------------------- | ------------------------------------------------------------------------------------ |
 | ![](../assets/en/FormEditor/cssIcon.png)      | 属性値がスタイルシートで定義されていることを示します                                                           |
 | ![](../assets/en/FormEditor/cssImportant.png) | 属性値がスタイルシートで `!important` 宣言とともに定義されていることを示します                                       |
@@ -659,7 +659,7 @@ stroke: #800080;
 
 ![](../assets/en/FormEditor/moveObject.png)
 
-または
+OR
 
 次に移動先のビューを選択し、ビューパレットの下部にある **選択された全てのオブジェクトをカレントのビューに移動** ボタンをクリックします。
 
