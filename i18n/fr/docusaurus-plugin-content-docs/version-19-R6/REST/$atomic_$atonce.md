@@ -1,6 +1,6 @@
 ---
 id: atomic_$atonce
-title: '$atomic/$atonce'
+title: '$atomic/$atOnce'
 ---
 
 
@@ -8,17 +8,19 @@ Autorise les actions d'une requête REST à faire partie d'une transaction. Si a
 
 
 ## Description
-Lorsque plusieurs actions sont réunies, vous pouvez utiliser `$atomic/$atonce` pour vous assurer qu'aucune action ne se réalise si l'une d'elle échoue. Vous pouvez utiliser `$atomic` ou `$atonce`.
+
+When you have multiple actions together, you can use `$atomic/$atOnce` to make sure that none of the actions are completed if one of them fails. You can use either `$atomic` or `$atOnce`.
 
 
 ## Exemple
+
 Nous appelons la requête REST suivante dans une transaction.
 
  `POST  /rest/Employee?$method=update&$atomic=true`
 
 **Données POST** :
 
-````
+```json
 [
 {
     "__KEY": "200",
@@ -29,11 +31,11 @@ Nous appelons la requête REST suivante dans une transaction.
     "firstname": "Harry"
 }
 ]
-````
+```
 
 Nous obtenons l'erreur suivante dans la deuxième entité ; la première entité n'est donc pas sauvegardée :
 
-````
+```json
 {
     "__STATUS": {
         "success": true
@@ -63,5 +65,5 @@ Nous obtenons l'erreur suivante dans la deuxième entité ; la première entité
         }
     ]
 }
-````
+```
 > Même si le salaire de la première entité porte la valeur 45000, cette valeur n'a pas été sauvegardée sur le serveur et le timestamp (__STAMP)* n'a pas été modifié. Si nous rechargeons l'entité, la valeur précédente s'affichera.
