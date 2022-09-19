@@ -40,7 +40,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.creationTime` property  returns <!-- REF #document.creationTime.Summary -->the creation  time of the file<!-- END REF --> (expresado como un número de segundos que comienza en 00:00).
+La propiedad `.creationTime` devuelve <!-- REF #document.creationTime.Summary -->la hora de creación del archivo<!-- END REF --> (expresado como un número de segundos que comienza en 00:00).
 
 Esta propiedad es **de sólo lectura**.
 
@@ -61,7 +61,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.exists` devuelve <!-- REF #document.exists.Summary -->true if the file exists on disk<!-- END REF -->, y false en caso contrario.
+La propiedad `.exists` devuelve <!-- REF #document.exists.Summary -->true si el archivo existe en el disco<!-- END REF -->, y false en caso contrario.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -83,7 +83,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.extension` property returns <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->. Una extensión siempre comienza por ".". La propiedad `.extension` devuelve <!-- REF #document.extension.Summary -->la extensión del nombre del archivo (si lo hay)<!-- END REF -->.
+La propiedad `.extension` devuelve <!-- REF #document.extension.Summary -->la extensión del nombre del archivo (si la hay)<!-- END REF -->. Una extensión siempre comienza por ".". La propiedad `.extension` devuelve <!-- REF #document.extension.Summary -->la extensión del nombre del archivo (si lo hay)<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -104,7 +104,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.fullName` property returns <!-- REF #document.fullName.Summary -->the full name of the file, including its extension (if any)<!-- END REF -->.
+La propiedad `.fullName` devuelve <!-- REF #document.fullName.Summary -->el nombre completo del archivo, incluida su extensión (si la hay)<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -125,7 +125,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.hidden` devuelve <!-- REF #document.hidden.Summary -->true if the file is set as "hidden" at the system level<!-- END REF -->, y false en caso contrario.
+La propiedad `.hidden` devuelve <!-- REF #document.hidden.Summary -->true si el archivo está definido como "oculto" a nivel del sistema<!-- END REF -->, y false en caso contrario.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -146,7 +146,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.isAlias` devuelve <!-- REF #document.isAlias.Summary -->true if the file is an alias, a shortcut, or a symbolic link<!-- END REF -->, y false en caso contrario.
+La propiedad `.isAlias` devuelve <!-- REF #document.isAlias.Summary -->true si el archivo es un alias, un acceso directo o un enlace simbólico<!-- END REF -->, y false en caso contrario.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -209,7 +209,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.isWritable` property returns <!-- REF #document.isWritable.Summary -->true if the file exists on disk and is writable<!-- END REF -->.
+La propiedad `.isWritable` devuelve <!-- REF #document.isWritable.Summary -->true si el archivo existe en el disco y es escribible<!-- END REF -->.
 > La propiedad verifica la capacidad de la aplicación 4D a escribir en el disco (derechos de acceso), no se basa únicamente en el atributo *writable* del archivo.
 
 Esta propiedad es **de sólo lectura**.
@@ -283,7 +283,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.name` devuelve <!-- REF #document.name.Summary -->the name of the file without extension (if any)<!-- END REF -->.
+La propiedad `.name` devuelve <!-- REF #document.name.Summary -->el nombre del archivo sin extensión (si lo hay)<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -304,7 +304,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.original` devuelve <!-- REF #document.original.Summary -->the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->. El elemento objetivo puede ser:
+La propiedad `.original` devuelve <!-- REF #document.original.Summary -->el elemento destino para un alias, un acceso directo o un archivo de enlace simbólico<!-- END REF -->. El elemento objetivo puede ser:
 
 * un objeto File
 * un objeto de la carpeta
@@ -393,7 +393,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.size` property returns <!-- REF #document.size.Summary -->the size of the file expressed in bytes<!-- END REF -->. Si el archivo no existe en el disco, el tamaño es 0.
+La propiedad `.size` devuelve <!-- REF #document.size.Summary -->el tamaño del archivo expresado en bytes<!-- END REF -->. Si el archivo no existe en el disco, el tamaño es 0.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -415,7 +415,7 @@ Esta propiedad es **de sólo lectura**.
 
 
 <!-- REF #document.copyTo().Params -->
-| Parámetros        | Type      |    | Descripción                                            |
+| Parámetros        | Tipo      |    | Descripción                                            |
 | ----------------- | --------- |:--:| ------------------------------------------------------ |
 | destinationFolder | 4D.Folder | -> | Carpeta de destino                                     |
 | newName           | Text      | -> | Nombre para la copia                                   |
@@ -424,7 +424,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.copyTo()` function <!-- REF #document.copyTo().Summary -->The `.isFolder` property returns <!-- END REF -->.
+La función `.copyTo()` <!-- REF #document.copyTo().Summary -->The `.isFolder` property returns <!-- END REF -->.
 
 La *destinationFolder* debe existir en el disco, de lo contrario se genera un error.
 
@@ -470,13 +470,13 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 
 <!-- REF #document.getContent().Params -->
-| Parámetros | Type    |    | Descripción                                      |
+| Parámetros | Tipo    |    | Descripción                                      |
 | ---------- | ------- | -- | ------------------------------------------------ |
 | Result     | 4D.Blob | <- | Contenido del archivo|<!-- END REF --> |
 
 #### Descripción
 
-The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `4D.Blob` object containing the entire content of a file<!-- END REF -->. .
+La función `.getContent()`  <!-- REF #document.getContent().Summary -->devuelve un objeto `4D.Blob` que contiene todo el contenido de un archivo<!-- END REF -->. .
 
 **Valor devuelto**
 
@@ -513,14 +513,14 @@ Para guardar el contenido de un documento en un campo `BLOB`:
 
 
 <!-- REF #document.getIcon().Params -->
-| Parámetros | Type    |    | Descripción                                       |
+| Parámetros | Tipo    |    | Descripción                                       |
 | ---------- | ------- | -- | ------------------------------------------------- |
 | size       | Integer | -> | Longitud del lado de la imagen devuelta (píxeles) |
 | Result     | Picture | <- | Icono|<!-- END REF -->                  |
 
 #### Descripción
 
-The `.getIcon()` function returns <!-- REF #document.getIcon().Summary -->the icon of the file<!-- END REF -->.
+La función `.getIcon()` devuelve <!-- REF #document.getIcon().Summary -->el icono del archivo<!-- END REF -->.
 
 El parámetro opcional *size* especifica las dimensiones en píxeles del icono devuelto. Este valor representa en realidad la longitud del lado del cuadrado que contiene el icono. Los iconos suelen definirse en 32x32 píxeles ("iconos grandes") o 16x16 píxeles ("iconos pequeños"). Si pasa 0 u omite este parámetro, se devuelve la versión "icono grande".
 
@@ -548,7 +548,7 @@ Icono de archivo [picture](../Concepts/picture.html).
 
 
 <!-- REF #document.getText().Params -->
-| Parámetros  | Type    |    | Descripción                                    |
+| Parámetros  | Tipo    |    | Descripción                                    |
 | ----------- | ------- | -- | ---------------------------------------------- |
 | charSetName | Text    | -> | Nombre del juego de caracteres                 |
 | charSetNum  | Integer | -> | Número del conjunto de caracteres              |
@@ -557,7 +557,7 @@ Icono de archivo [picture](../Concepts/picture.html).
 
 #### Descripción
 
-The `.getText()` function <!-- REF #document.getText().Summary -->returns the contents of the file as text <!-- END REF -->.
+La función `.getText()` <!-- REF #document.getText().Summary -->devuelve el contenido del archivo como texto <!-- END REF -->.
 
 Opcionalmente, puede designar el conjunto de caracteres que se utilizará para leer el contenido. Puede pasar:
 
