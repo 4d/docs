@@ -288,7 +288,7 @@ Las expresiones son rara vez "autónomas." Hay varios lugares en 4D donde una ex
 
 Se hace referencia a una expresión por el tipo de datos que devuelve. Hay varios tipos de expresiones. En la siguiente tabla se dan ejemplos de cada tipo de expresión.
 
-| Expression                                                                                          | Type                   | Descripción                                                                                                                                                          |
+| Expression                                                                                          | Tipo                   | Descripción                                                                                                                                                          |
 | --------------------------------------------------------------------------------------------------- | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | “Hello”                                                                                             | String                 | La palabra Hola es una constante cadena, indicada por las comillas dobles.                                                                                           |
 | “Hello ” + “there”                                                                                  | String                 | Dos cadenas, "Hola" y "a todos", se suman (concatenan) con el operador de concatenación de cadenas (+). Se devuelve la cadena "Hola".                                |
