@@ -13,7 +13,7 @@ Para más información sobre las rutas de petición, consulte [queryPlan y query
 
 En la colección de pasos, hay un objeto con las siguientes propiedades que definen la petición ejecutada:
 
-| Propiedad     | Type       | Descripción                                                                        |
+| Propiedad     | Tipo       | Descripción                                                                        |
 | ------------- | ---------- | ---------------------------------------------------------------------------------- |
 | description   | String     | Petición ejecutada o "AND" cuando hay varios pasos                                 |
 | time          | Number     | Número de milisegundos necesarios para ejecutar la petición                        |
