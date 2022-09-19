@@ -20,7 +20,7 @@ Si se seleccionan ambos eventos para un objeto, se generará el evento `On Click
 
 Este evento se genera cuando el usuario hace doble clic en cualquier parte en un documento 4D View Pro. En este contexto, el [objeto evento](overview.md#event-object) devuelto por el comando `FORM Event` contiene:
 
-| Propiedad   | Type         | Descripción                  |
+| Propiedad   | Tipo         | Descripción                  |
 | ----------- | ------------ | ---------------------------- |
 | code        | entero largo | 13                           |
 | description | text         | "On Double Clicked"          |
