@@ -5,7 +5,7 @@ title: '$binary'
 
 ドキュメントを BLOB として保存するには "true" を渡します (`$expand={blobAttributeName}` も渡す必要があります)
 
-## 詳細
+## 説明
 
 `$binary` を使うと、ドキュメントを BLOB として保存できます。  [`$expand`]($expand.md) コマンドとの組み合わせで使う必要があります。
 
