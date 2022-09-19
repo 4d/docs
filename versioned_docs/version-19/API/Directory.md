@@ -90,6 +90,7 @@ This property is **read-only**.
 
 ---
 
+
 <!-- REF directory.fullName.Desc -->
 ## .fullName
 
@@ -189,6 +190,7 @@ This property is **read-only**.
 </details>
 
 <!-- REF #directory.isFolder.Syntax -->**.isFolder** : Boolean<!-- END REF -->
+
 
 #### Description
 
@@ -392,7 +394,7 @@ This property is **read-only**.
 |v17 R5|Added
 </details>
 
-<!-- REF #directory.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D Folder<!-- END REF -->
+<!-- REF #directory.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.Folder<!-- END REF -->
 
 
 <!-- REF #directory.copyTo().Params -->
@@ -586,6 +588,7 @@ A `Folder` object or null if *path* is invalid.
 |---|---|
 |v17 R5|Added
 </details>
+
 
 <!-- REF #directory.folders().Syntax -->**.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
