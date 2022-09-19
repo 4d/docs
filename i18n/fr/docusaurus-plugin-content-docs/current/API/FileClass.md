@@ -77,7 +77,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 #### Description
 
-The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. La commande accepte deux syntaxes :
+La commande `File` <!-- REF #_command_.File.Summary -->crée et renvoie un nouvel objet du type `4D.File`<!-- END REF -->. La commande accepte deux syntaxes :
 
 **File ( path { ; pathType } { ; \* })**
 
@@ -104,7 +104,7 @@ Dans le paramètre *fileConstant*, passez un fichier 4D interne ou un fichier sy
 | Backup settings file for data     | 17    | fichier backup.4DSettings du fichier de données (format xml), stocké dans le dossier Settings du dossier data                                                                                                                                                                                                                                                                                                                                                                   |
 | Build application log file        | 14    | Fichier d'historique courant au format xml du générateur d'application. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                                                            |
 | Build application settings file   | 20    | Fichier de configuration par défaut du générateur d'application ("buildApp.4DSettings"). Stocké dans le dossier Settings du projet.                                                                                                                                                                                                                                                                                                                                             |
-| Compacting log file               | 6     | Fichier d'historique du compactage le plus récent de la base, effectué avec la commande Compacter fichier donnees ou le Centre de sécurité et de maintenance (CSM). Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                |
+| Compacting log file               | 6     | Fichier d'historique du compactage le plus récent de la base, effectué avec la commande Compact data file ou le Centre de sécurité et de maintenance (CSM). Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                        |
 | Current backup settings file      | 18    | fichier backup.4DSettings utilisé actuellement par l'application. Il peut s'agir du fichier backup.4DSettings par défaut ou d'un fichier de settings de backup utilisateur défini pour le fichier de données                                                                                                                                                                                                                                                                    |
 | Debug log file                    | 12    | Fichier d'enregistrement des événements pour le débogage créé par la commande `SET DATABASE PARAMETER(Debug log recording)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                       |
 | Diagnostic log file               | 11    | Fichier de diagnostic de 4D, créé par la commande `SET DATABASE PARAMETER(Diagnostic log recording)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                              |
@@ -112,7 +112,7 @@ Dans le paramètre *fileConstant*, passez un fichier 4D interne ou un fichier sy
 | HTTP debug log file               | 9     | Fichier d'enregistrement des requêtes Web créé par la commande `WEB SET OPTION(Web log recording)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                                |
 | HTTP log file                     | 8     | Fichier de débogage des requêtes HTTP, créé par la commande `WEB SET OPTION(Web debug log)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                                       |
 | IMAP Log file                     | 23    | Fichier d'historique créé par la commande `SET DATABASE PARAMETER(IMAP Log)`. Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                                                      |
-| Last backup file                  | 2     | Last backup file, named `\<applicationName>[bkpNum].4BK`, stored at a custom location.                                                                                                                                                                                                                                                                                                                                                                                   |
+| Last backup file                  | 2     | Dernier fichier de sauvegarde généré, nommé `\<applicationName>[bkpNum].4BK`, stocké à un emplacement personnalisé.                                                                                                                                                                                                                                                                                                                                                      |
 | Last journal integration log file | 22    | Chemin complet du dernier fichier journal d'intégration de l'historique (stocké dans le dossier Logs de l'application restaurée), le cas échéant. Ce fichier est créé en mode auto-repair, dès qu'une intégration de fichier d'historique a lieu                                                                                                                                                                                                                                |
 | Repair log file                   | 7     | Fichier d'historique des réparations effectuées sur la base par le Centre de sécurité et de maintenance (CSM). Stocké dans le dossier Logs.                                                                                                                                                                                                                                                                                                                                     |
 | Request log file                  | 10    | Fichier des requêtes client/server standard (hors requêtes Web), créé par `SET DATABASE PARAMETER(4D Server log recording)` ou `SET DATABASE PARAMETER(Client log recording)`. Si la commande est appelée sur le serveur, le chemin du fichier des requêtes du serveur est retourné (stocké dans le dossier Logs du serveur). Si la commande est appelée sur un client, le chemin du fichier des requêtes du client est retourné (stocké dans le dossier Logs local du client). |
@@ -123,7 +123,7 @@ Dans le paramètre *fileConstant*, passez un fichier 4D interne ou un fichier sy
 
 Si le fichier *fileConstant* cible n'existe pas, un objet null est retourné. Aucune erreur n'est générée.
 
-If the command is called from a component, pass the optional *parameter to get the path of the host database. Otherwise, if you omit the* parameter, a null object is always returned.
+Si la commande est appelée à partir d'un composant, passez le paramètre optionnel `*` pour lire le chemin de la base hôte. Sinon, si vous omettez le paramètre `*`, un objet null est systématiquement retourné.
 
 ## 4D.File.new()
 
@@ -139,7 +139,7 @@ If the command is called from a component, pass the optional *parameter to get t
 
 #### Description
 
-The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. Elle est identique à la commande [`File`](#file) (raccourci).
+La fonction `4D.File.new()` <!-- REF #4D.File.new().Summary -->crée et renvoie un nouvel objet du type `4D.File`<!-- END REF -->. Elle est identique à la commande [`File`](#file) (raccourci).
 
 > Il est recommandé d'utiliser la commande raccourci [`File`](#file) au lieu de `4D.File.new()`.
 
@@ -171,7 +171,7 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 
 #### Description
 
-The `.create()` function <!-- REF #FileClass.create().Summary -->creates a file on disk according to the properties of the `File` object<!-- END REF -->.
+La fonction `.create()` <!-- REF #FileClass.create().Summary -->crée un fichier sur le disque selon les propriétés de l'objet `File`<!-- END REF -->.
 
 Le cas échéant, la fonction crée la hiérarchie du dossier en se basant sur la description des propriétés [platformPath](#platformpath) ou [path](#path). Si le fichier existe déjà sur disque, la fonction ne fait rien (aucune erreur n'est générée) et retourne faux.
 
@@ -215,7 +215,7 @@ Création d'un fichier de préférences dans le dossier principal :
 
 #### Description
 
-The `.createAlias()` function <!-- REF #FileClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
+La fonction `.createAlias()` <!-- REF #FileClass.createAlias().Summary -->crée un alias (macOS) ou un raccourci (Windows)<!-- END REF --> nommé *aliasName* pour le fichier dans le dossier désigné par l'objet *destinationFolder *.
 
 Passez le nom de l'alias ou du raccourci à créer dans le paramètre *aliasName*.
 
@@ -268,7 +268,7 @@ Vous souhaitez créer un alias pour un fichier contenu dans votre dossier princi
 
 #### Description
 
-The `.delete()` function <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->.
+La fonction `delete()` <!-- REF #FileClass.delete().Summary -->supprime le fichier<!-- END REF -->.
 
 Si le fichier est ouvert, une erreur est générée.
 
@@ -319,7 +319,7 @@ Vous souhaitez supprimer un fichier spécifique dans un sous-dossier :
 
 #### Description
 
-The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe**, **.dll** or **.plist** file information as an object<!-- END REF -->.
+La fonction `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->retourne le contenu d'un fichier d'information **.exe**, **.dll** ou **.plist** sous forme d'objet<!-- END REF -->.
 
 Cette fonction doit être utilisée avec un fichier .exe, .dll ou .plist existant. Si le fichier n'existe pas sur disque ou n'est pas un fichier .exe, .dll ou .plist valide, la fonction retourne un objet vide (aucune erreur n'est générée).
 
@@ -414,7 +414,7 @@ ALERT($info.Copyright)
 
 #### Description
 
-The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
+La fonction `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->déplace ou renomme l'objet `File` dans le *destinationFolder* spécifié<!-- END REF -->.
 
 Le *destinationFolder* doit exister sur disque, sinon une erreur est générée.
 
@@ -449,51 +449,51 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 
 <!--REF #FileClass.open().Params -->
-| Paramètres | Type                             |    | Description                                       |
-| ---------- | -------------------------------- | -- | ------------------------------------------------- |
-| mode       | Text                             | -> | Opening mode: "read", "write", "append"           |
-| options    | Object                           | -> | Opening options                                   |
-| Résultat   | [4D.FileHandle](FileHandleClass) | <- | New File handle object|<!-- END REF -->
+| Paramètres | Type                             |    | Description                                         |
+| ---------- | -------------------------------- | -- | --------------------------------------------------- |
+| mode       | Text                             | -> | Mode d'ouverture :"read", "write", "append"         |
+| options    | Object                           | -> | Options d'ouverture                                 |
+| Résultat   | [4D.FileHandle](FileHandleClass) | <- | Nouvel objet File handle|<!-- END REF -->
 
 |
 
 #### Description
 
-The `.open()` function <!-- REF #FileClass.open().Summary -->creates and returns a new [4D.FileHandle](FileHandleClass) object on the file, in the specified *mode* or with the specified *options*<!-- END REF -->. You can use functions and properties of the [4D.FileHandle](FileHandleClass) class to write, read, or append contents to the file.
+La fonction `.open()` <!-- REF #FileClass.open().Summary -->crée et renvoie un nouvel objet [4D.FileHandle](FileHandleClass) sur le fichier, dans le *mode * ou avec les *options* spécifié(es)<!-- END REF -->. Vous pouvez utiliser les fonctions et les propriétés de la classe [4D.FileHandle](FileHandleClass) pour écrire, lire ou ajouter le contenu du fichier.
 
-If you use the *mode* (text) parameter, pass the opening mode for the file handle:
+Si vous utilisez le paramètre *mode* (texte), passez le mode d'ouverture pour le file handle :
 
-| *mode*   | Description                                                                                                                                                                                                                      |
-| -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| "read"   | (Default) Creates a file handle to read values from the file. If the file does not exist on disk, an error is returned. You can open as many file handles as you want in "read" mode on the same File object.                    |
-| "write"  | Creates a file handle to write values to the file (starting at the beginning of the file content). If the file does not exist on disk, it is created. You can open only one file handle in "write" mode on the same File object. |
-| "append" | Creates a file handle to write values to the file (starting at the end of the file content). If the file does not exist on disk, it is created. You can open only one file handle in "append" mode on the same File object.      |
+| *mode*   | Description                                                                                                                                                                                                                                                 |
+| -------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "read"   | (Par défaut) Crée un file handle pour lire les valeurs dans le fichier. Si le fichier n'existe pas sur disque, une erreur est renvoyée. Vous pouvez ouvrir autant de file handles que vous voulez en mode "read" sur le même objet File.                    |
+| "write"  | Crée un file handle pour écrire des valeurs dans le fichier (en commençant par le début du contenu du fichier). Si le fichier n'existe pas sur le disque, il est créé. Vous ne pouvez ouvrir qu'un seul file handle en mode "write" sur le même objet File. |
+| "append" | Crée un file handle pour écrire des valeurs dans le fichier (en commençant par la fin du fichier). Si le fichier n'existe pas sur le disque, il est créé. Vous ne pouvez ouvrir qu'un seul file handle en mode "append" sur le même objet File.             |
 
-> The *mode* value is case sensitive.
+> La valeur du paramètre *mode* est sensible à la casse.
 
-If you use the *options* (object) parameter, you can pass more options for the file handle through the following properties (these properties can be read afterwards from the opened [file handle object](FileHandleClass)):
+Si vous utilisez le paramètre *options* (objet), vous pouvez passer d'autres options pour le file handle par le biais des propriétés suivantes (ces propriétés peuvent être lues ultérieurement à partir de l'[objet file handle](FileHandleClass) ouvert) :
 
-| *options*         | Type           | Description                                                                                                                   | Par défaut    |
-| ----------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------- |
-| `.mode`           | Text           | Opening mode (see *mode* above)                                                                                               | "read"        |
-| `.charset`        | Text           | Charset used when reading from or writing to the file. Use the standard name of the set (for example "ISO-8859-1" or "UTF-8") | "UTF-8"       |
-| `.breakModeRead`  | Text or Number | Processing mode for line breaks used when reading in the file (see below)                                                     | "native" or 1 |
-| `.breakModeWrite` | Text or Number | Processing mode for line breaks used when writing to the file (see below)                                                     | "native" or 1 |
+| *options*         | Type           | Description                                                                                                                                          | Par défaut    |
+| ----------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------- |
+| `.mode`           | Text           | Mode d'ouverture (voir *mode* ci-dessus)                                                                                                             | "read"        |
+| `.charset`        | Text           | Jeu de caractères utilisé lors de la lecture ou de l'écriture dans le fichier. Utilisez le nom standard du jeu (par exemple "ISO-8859-1" ou "UTF-8") | "UTF-8"       |
+| `.breakModeRead`  | Text ou number | Mode de traitement des sauts de ligne utilisés lors de la lecture du fichier (voir ci-dessous)                                                       | "native" ou 1 |
+| `.breakModeWrite` | Text ou number | Mode de traitement des sauts de ligne utilisés lors de l'écriture dans le fichier (voir ci-dessous)                                                  | "native" ou 1 |
 
-The `.breakModeRead` and `.breakModeWrite` indicate the processing to apply to end-of-line characters in the document. You can use one of the following values (text or number):
+Les propriétés `.breakModeRead` et `.breakModeWrite` indiquent le traitement à appliquer aux caractères de fin de ligne dans le document. Vous pouvez utiliser l'une des valeurs suivantes (texte ou numérique) :
 
-| Break mode as text | Break mode as number (constant)   | Description                                                                                                                                                    |
-| ------------------ | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| "native"           | 1 (`Document with native format`) | (Default) Line breaks are converted to the native format of the operating system: LF (line feed) under macOS, CRLF (carriage return + line feed) under Windows |
-| "crlf"             | 2 (`Document with CRLF`)          | Les fins de ligne sont converties en CRLF (retour chariot + saut de ligne), le format par défaut de Windows                                                    |
-| "cr"               | 3 (`Document with CR`)            | Les fins de ligne sont converties en CR (retour chariot), le format MacOS classique par défaut                                                                 |
-| "lf"               | 4 (`Document with LF`)            | Les fins de ligne sont converties en LF (line feed), le format Unix et macOS par défaut                                                                        |
+| Break mode en texte | Break mode en numérique (constante) | Description                                                                                                                                                          |
+| ------------------- | ----------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "native"            | 1 (`Document with native format`)   | (Défaut) Les fins de ligne sont convertis au format natif de la plate-forme d’exécution : LF (line feed) sous macOS, CRLF (carriage return + line feed) sous Windows |
+| "crlf"              | 2 (`Document with CRLF`)            | Les fins de ligne sont converties en CRLF (retour chariot + saut de ligne), le format par défaut de Windows                                                          |
+| "cr"                | 3 (`Document with CR`)              | Les fins de ligne sont converties en CR (retour chariot), le format MacOS classique par défaut                                                                       |
+| "lf"                | 4 (`Document with LF`)              | Les fins de ligne sont converties en LF (line feed), le format Unix et macOS par défaut                                                                              |
 
-> The *break mode as text* value is case sensitive.
+> La valeur du paramètre *break mode en texte* est sensible à la casse.
 
 #### Exemple
 
-You want to create a file handle for reading the "ReadMe.txt" file:
+Vous voulez créer un file handle pour lire le fichier "ReadMe.txt" :
 
 ```4d
 var $f : 4D.File
@@ -536,7 +536,7 @@ $fhandle:=$f.open("read")
 
 #### Description
 
-The `.rename()` function <!-- REF #FileClass.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
+La fonction `.rename()` <!-- REF #FileClass.rename().Summary -->renomme le fichier avec le nom que vous avez passé dans *newName* et renvoie l'objet `File` renommé<!-- END REF -->.
 
 Le paramètre *newName* doit être conforme aux règles de nommage (ex : il ne doit pas contenir des caractères tels que ":", "/", etc.), sinon une erreur est retournée. S'il existe déjà un fichier portant le même nom, une erreur est retournée.
 
@@ -578,9 +578,9 @@ Vous souhaitez que "ReadMe.txt" soit renommé "ReadMe_new.txt" :
 
 #### Description
 
-The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
+La fonction `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->écrit les propriétés de *info* comme contenu d'information d'un fichier **.exe**, **.dll** ou **.plist**<!-- END REF -->.
 
-Cette fonction doit être utilisée avec un fichier .exe, .dll ou .plist existant. The function must be used with an existing .exe, .dll or .plist file.
+Cette fonction doit être utilisée avec un fichier .exe, .dll ou .plist existant. Si le fichier n'existe pas sur le disque ou n'est pas un fichier .exe, .dll ou .plist valide, la fonction ne fait rien (aucune erreur n'est générée).
 
 > Cette fonction ne prend en charge que les fichiers .plist au format xml (texte). Une erreur est retournée si elle est utilisée avec un fichier .plist au format binaire.
 
@@ -656,13 +656,13 @@ $infoPlistFile.setAppInfo($info)
 <!--REF #FileClass.setContent().Params -->
 | Paramètres | Type |    | Description                                           |
 | ---------- | ---- | -- | ----------------------------------------------------- |
-| contenu    | BLOB | -> | Nouveau contenu du fichier|<!-- END REF -->
+| content    | BLOB | -> | Nouveau contenu du fichier|<!-- END REF -->
 
 |
 
 #### Description
 
-The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. .
+La fonction `.setContent()` <!-- REF #FileClass.setContent().Summary -->réécrit le contenu intégral du fichier à l'aide des données stockées dans le BLOB *content*<!-- END REF -->. Pour plus d'informations sur les BLOBs, veuillez vous reporter à la section [BLOB](Concepts/dt_blob.md).
 
 #### Exemple
 
@@ -702,7 +702,7 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 #### Description
 
-The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
+La fonction `.setText()` <!-- REF #FileClass.setText().Summary -->écrit *text* comme nouveau contenu du fichier<!-- END REF -->.
 
 Si le fichier référencé dans l'objet `File` n'existe pas sur disque, il est créé par la fonction. Lorsque le fichier existe déjà sur disque, son contenu antérieur est supprimé, sauf s'il est déjà ouvert, auquel cas son contenu est verrouillé et une erreur est générée.
 
