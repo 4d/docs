@@ -130,7 +130,7 @@ Los objetos rango 4D View Pro se componen de varias propiedades:
 * area - El nombre del área 4D View Pro
 * rangos - Una colección de objeto(s) rango. Available properties within each range object depend on the range object type. For example, a column range object will only include the *.column* and *.sheet* properties.
 
-| Propiedad |                   | Type       | Descripción                                                                         | Disponible para                                                |
+| Propiedad |                   | Tipo       | Descripción                                                                         | Disponible para                                                |
 | --------- | ----------------- | ---------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------- |
 | area      |                   | text       | Nombre de objeto formulario área 4D View Pro                                        | siempre disponible                                             |
 | ranges    |                   | collection | Colección de rangos                                                                 | siempre disponible                                             |
