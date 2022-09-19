@@ -59,11 +59,11 @@ XML仕様に準拠し、いくつかのタグは属性を含むことがあり�
 - 開始および終了タグのペア: `<tag attribute="value"> </tag>`
 - 置換されるタグ: `<tag attribute="value"/>`
 
-If the element accepts several attributes, you can group them in the same line of command, separated by a space: `\&#060;tag attribute1="value" attribute2="value" attribute3="value"... &#062;`
+要素に複数の属性を指定できる場合、スペースで区切って記述します: `\&#060;tag attribute1="value" attribute2="value" attribute3="value"... &#062;`
 
 利用可能なタグのリストと利用モードは以下の通りです:
 
-| **要素タグ**                         | **詳細**                                                                                                                                                                                                                                                           |
+| **要素タグ**                         | **説明**                                                                                                                                                                                                                                                           |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `<macros> </macros>` | マクロファイルの開始と終了 (必須)。                                                                                                                                                                                                                                              |
 | `<macro> </macro>`   | マクロとその属性の定義の開始と終了。                                                                                                                                                                                                                                               |
@@ -156,7 +156,7 @@ If the element accepts several attributes, you can group them in the same line o
 
 選択されたテキストは [GET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page997.html) と [SET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page998.html) コマンドを使用して管理することが推奨されます。 これらのコマンドを使用すると、ホストプロジェクトとコンポーネント間でテキストを相互に交換することができ、マクロの管理専用のコンポーネントを作成することができます。 マクロでこのモードを有効にするには、macro 要素内で version 属性に値 2 を指定しなければなりません。 この場合、4D は旧式の _textSel, _textReplace 等の定義済み変数を管理しなくなり、[GET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page997.html) と [SET MACRO PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page998.html) が利用可能になります。 属性は以下のように定義します:
 
-`<macro name="MyMacro" version="2">`<br/> `--- Text of the macro ---`<br/> `</macro>`
+`<macro name="MyMacro" version="2">`<br/> `--- マクロテキスト ---`<br/> `</macro>`
 
 この属性を指定しない場合、以前のモードが保持されます。
 
@@ -165,5 +165,5 @@ If the element accepts several attributes, you can group them in the same line o
 マクロファイルは XML標準に準拠しなければならず、厳密なシンタックスルールが適用されます。 以前のバージョンで作成されたマクロコードの場合、これにより非互換が発生することがあり、また XMLファイルの読み込みが妨げられる可能性があります。 異常な動作が起こるのは以下のケースです:
 
 - 以前のバージョンの 4Dでは `<macro>` 要素内で "// my comment" 形式のコメントが許可されていました。これは XMLのシンタックスに適合していません。 このような行は標準の `"<!-- my comment -->"` 形式に書きなおさなければなりません。
-- インタープロセス変数名を表す `<>` 記号はエンコードされなければなりません。 For example, the `<>params` variable must be written `&lt;>params`.
+- インタープロセス変数名を表す `<>` 記号はエンコードされなければなりません。 たとえば、`<>params` 変数は `&<>params`と書かなければなりません。
 - 以前のバージョンの 4D ではルート要素である `<macros>` を省略できました。 現在このタグは必須です。このタグがない場合、ファイルをロードできません。
