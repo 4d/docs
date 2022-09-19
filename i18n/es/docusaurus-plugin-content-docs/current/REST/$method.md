@@ -30,7 +30,8 @@ Con `$method=delete`, puede eliminar una entidad o una colección de entidades e
 
 También puede eliminar las entidades de un conjunto de entidades, llamando a [`$entityset/{entitySetID}`]($entityset.md#entitysetentitysetid).
 
-## Ejemplo
+### Ejemplo
+
 A continuación, puede escribir la siguiente petición REST para eliminar la entidad cuya llave es 22:
 
  `POST  /rest/Employee(22)/?$method=delete`
@@ -45,7 +46,7 @@ También puede eliminar un conjunto de entidades utilizando $entityset/{entitySe
 
 Respuesta:
 
-```
+```json
 {
     "ok": true
 }
@@ -78,8 +79,9 @@ También puede guardar el filtro y ordenar por, pasando true a `$savedfilter` y 
 
 Después de crear un conjunto de entidades, el primer elemento, `__ENTITYSET`, se añade al objeto devuelto e indica la URI a utilizar para acceder al conjunto de entidades:
 
-`__ENTITYSET: "http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7"`
-
+```json
+__ENTITYSET: "http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7"`
+```
 
 
 
@@ -101,16 +103,16 @@ Muestra un conjunto de entidades existente:
 
 Si la petición fue exitosa, se devuelve la siguiente respuesta:
 
-```
+```json
 {
     "ok": true
 }
-Si no se encuentra el conjunto de entidades, se devuelve un error:
+If the entity set wasn't found, an error is returned:
 
 {
     "__ERROR": [
         {
-             "message": "Error code: 1802\nEntitySet  \"4C51204DD8184B65AC7D79F09A077F24\" cannot be found\ncomponent:  'dbmg'\ntask 22, name: 'HTTP connection handler'\n",
+            "message": "Error code: 1802\nEntitySet  \"4C51204DD8184B65AC7D79F09A077F24\" cannot be found\ncomponent:  'dbmg'\ntask 22, name: 'HTTP connection handler'\n",
             "componentSignature": "dbmg",
             "errCode": 1802
         }
@@ -140,7 +142,7 @@ Si quiere recuperar sólo las entidades relacionadas para una entidad específic
 
 #### Respuesta:
 
-```
+```json
 {
 
     "__ENTITYSET": "/rest/Employee/$entityset/FF625844008E430B9862E5FD41C741AB",
@@ -198,14 +200,15 @@ Para actualizar una entidad, debes pasar los parámetros `__KEY` y `__STAMP` en 
 
 Los triggers se ejecutan inmediatamente al guardar la entidad en el servidor. La respuesta contiene todos los datos tal y como existen en el servidor.
 
-También puede poner estas solicitudes para crear o actualizar entidades en una transacción llamando a `$atomic/$atonce`. Si se produce algún error durante la validación de los datos, no se guarda ninguna de las entidades. También puede utilizar $method=validate para validar las entidades antes de crearlas o actualizarlas.
+You can also put these requests to create or update entities in a transaction by calling `$atomic/$atOnce`. Si se produce algún error durante la validación de los datos, no se guarda ninguna de las entidades. You can also use `$method=validate` to validate the entities before creating or updating them.
 
 Si surge un problema al añadir o modificar una entidad, se le devolverá un error con esa información.
-> Notas para tipos de atributos específicos:
-> 
-> * **Las fechas** deben expresarse en formato JS: YYYY-MM-DDTHH:MM:SSZ (por ejemplo, "2010-10-05T23:00:00Z"). Si ha seleccionado la propiedad Fecha únicamente para su atributo Fecha, se eliminará la zona horaria y la hora (hora, minutos y segundos). En este caso, también puede enviar la fecha en el formato que se le devuelve dd!mm!aaaa (por ejemplo, 05!10!2013).
-> * **Booleanos** son true o false.
-> * Los archivos subidos mediante `$upload` pueden aplicarse a un atributo de tipo Imagen o BLOB pasando el objeto devuelto en el siguiente formato {"ID": "D507BC03E613487E9B4C2F6A0512FE50"}
+
+:::nota
+*   **Las fechas** deben expresarse en formato JS: YYYY-MM-DDTHH:MM:SSZ (por ejemplo, "2010-10-05T23:00:00Z"). Si ha seleccionado la propiedad Fecha únicamente para su atributo Fecha, se eliminará la zona horaria y la hora (hora, minutos y segundos). En este caso, también puede enviar la fecha en el formato que se le devuelve dd!mm!aaaa (por ejemplo, 05!10!2013).
+*   **Booleanos** son true o false.
+*   Uploaded files using `$upload` can be applied to an attribute of type Image or BLOB by passing the object returned in the following format `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50"}` :::
+
 
 ### Ejemplo
 
@@ -215,7 +218,7 @@ Para actualizar una entidad específica, se utiliza la siguiente URL:
 
 **Datos POST:**
 
-```
+```json
 {
     __KEY: "340",
     __STAMP: 2,
@@ -232,7 +235,7 @@ Si quiere crear una entidad, puede enviar, vía POST los atributos utilizando es
 
 **Datos POST:**
 
-```
+```json
 { 
     firstName: "John",
     lastName: "Smith"
@@ -245,7 +248,7 @@ También puede crear y actualizar múltiples entidades al mismo tiempo utilizand
 
 **Datos POST:**
 
-```
+```json
 [{ 
     "__KEY": "309",
     "__STAMP": 5,
@@ -262,7 +265,7 @@ También puede crear y actualizar múltiples entidades al mismo tiempo utilizand
 
 Cuando añade o modifica una entidad, se devuelve con los atributos modificados. Por ejemplo, si se crea el nuevo empleado anterior, se devolverá lo siguiente:
 
-```
+```json
 {
     "__KEY": "622", 
     "__STAMP": 1, 
@@ -276,7 +279,7 @@ Cuando añade o modifica una entidad, se devuelve con los atributos modificados.
 
 Si, por ejemplo, el sello no es correcto, se devuelve el siguiente error:
 
-```
+```json
 {
     "__STATUS": {
         "status": 2,
