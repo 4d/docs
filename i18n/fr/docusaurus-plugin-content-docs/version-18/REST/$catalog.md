@@ -31,7 +31,7 @@ Voici une description des propriétés retournées pour chaque dataclass dans le
 
 | Propriété | Type   | Description                                                                          |
 | --------- | ------ | ------------------------------------------------------------------------------------ |
-| nom       | String | Nom de la dataclass.                                                                 |
+| name      | String | Nom de la dataclass.                                                                 |
 | uri       | String | Un URI vous permettant d'obtenir des informations sur la dataclass et ses attributs. |
 | dataURI   | String | URI vous permettant d'afficher les données dans la dataclass.                        |
 
@@ -203,7 +203,7 @@ Les propriétés suivantes sont retournées pour une dataclass exposée :
 
 | Propriété      | Type   | Description                                                                                                         |
 | -------------- | ------ | ------------------------------------------------------------------------------------------------------------------- |
-| nom            | String | Nom de la dataclass                                                                                                 |
+| name           | String | Nom de la dataclass                                                                                                 |
 | collectionName | String | Nom d'une entity selection dans la dataclass                                                                        |
 | tableNumber    | Number | Numéro de la table dans la base 4D                                                                                  |
 | scope          | String | Étendue de la dataclass (à noter que seules les dataclasses dont **l'étendue** (scope) est publique sont affichées) |
@@ -216,7 +216,7 @@ Voici les propriétés de chaque attribut exposé qui sont retournées :
 
 | Propriété   | Type    | Description                                                                                                                                                             |
 | ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| nom         | String  | Le nom de l’attribut.                                                                                                                                                   |
+| name        | String  | Le nom de l’attribut.                                                                                                                                                   |
 | kind        | String  | Type d'attribut (stockage ou relatedEntity).                                                                                                                            |
 | fieldPos    | Number  | Position du champ dans la table de la base.                                                                                                                             |
 | scope       | String  | Portée de l'attribut (seuls les attributs dont la portée est publique apparaîtront).                                                                                    |
