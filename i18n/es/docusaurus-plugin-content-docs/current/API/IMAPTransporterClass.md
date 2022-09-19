@@ -56,7 +56,7 @@ Los objetos IMAP Transporter se instancian con el comando [IMAP New transporter]
 
 
 <!-- REF #_command_.IMAP New transporter.Params -->
-| Parámetros | Type               |    | Descripción                                                                    |
+| Parámetros | Tipo               |    | Descripción                                                                    |
 | ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server     | Object             | -> | Información del servidor de correo                                             |
 | Result     | 4D.IMAPTransporter | <- | [IMAP transporter object](#imap-transporter-object)|<!-- END REF -->
@@ -67,25 +67,25 @@ Los objetos IMAP Transporter se instancian con el comando [IMAP New transporter]
 
 #### Descripción
 
-The `IMAP New transporter` command <!-- REF #_command_.IMAP New transporter.Summary -->configures a new IMAP connection<!-- END REF --> according to the *server* parameter and returns a new *transporter* object. El objeto transportador devuelto se utilizará normalmente para recibir correos electrónicos.
+El comando `IMAP New transporter` <!-- REF #_command_.IMAP New transporter.Summary -->configura una nueva conexión IMAP<!-- END REF --> según el parámetro *server* y devuelve un nuevo objeto *transporter*. El objeto transportador devuelto se utilizará normalmente para recibir correos electrónicos.
 
 En el parámetro *server*, pase un objeto que contenga las siguientes propiedades:
 
-| *server*                                                                                                                                                                                                                                                                                                                                                                                                                   | Valor por defecto (si se omite)                                          |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| *server*                                                                                                                                                                                                                                                                                                                                                                                                                               | Valor por defecto (si se omite)                                          |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------ |
 | [<!-- INCLUDE #transporter.acceptUnsecureConnection.Syntax -->](#acceptunsecureconnection)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.acceptUnsecureConnection.Summary -->| False                                                                    |
-| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>Text string or token object representing OAuth2 authorization credentials. Sólo se utiliza con OAUTH2 `authenticationMode`. Si se utiliza `accessTokenOAuth2` pero se omite `authenticationMode`, se utiliza el protocolo OAuth 2 (si el servidor lo permite). No se devuelve en el objeto *[IMAP transporter](#imap-transporter-object)*. | ninguno                                                                  |
+| .**accessTokenOAuth2**: Text<br/>.**accessTokenOAuth2**: Object<br/>Cadena de texto u objeto token que representa las credenciales de autorización OAuth2. Sólo se utiliza con OAUTH2 `authenticationMode`. Si se utiliza `accessTokenOAuth2` pero se omite `authenticationMode`, se utiliza el protocolo OAuth 2 (si el servidor lo permite). No se devuelve en el objeto *[IMAP transporter](#imap-transporter-object)*. | ninguno                                                                  |
 | [<!-- INCLUDE #transporter.authenticationMode.Syntax -->](#authenticationmode)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.authenticationMode.Summary -->| se utiliza el modo de autenticación más seguro soportado por el servidor |
 | [<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Syntax -->](#checkconnectiondelay)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #IMAPTransporterClass.checkConnectionDelay.Summary -->| 300                                                                      |
 | [<!-- INCLUDE #transporter.connectionTimeOut.Syntax -->](#connectiontimeout)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.connectionTimeOut.Summary -->| 30                                                                       |
 | [<!-- INCLUDE #transporter.host.Syntax -->](#host)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.host.Summary -->| *mandatory*                                                              |
 | [<!-- INCLUDE #transporter.logFile.Syntax -->](#logfile)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.logFile.Summary -->| ninguno                                                                  |
-| .**password** : Text<br/>User password for authentication on the server. No se devuelve en el objeto *[IMAP transporter](#imap-transporter-object)*.                                                                                                                                                                                                                                                                 | ninguno                                                                  |
+| .**password**: Text<br/>Contraseña de usuario para la autenticación en el servidor. No se devuelve en el objeto *[IMAP transporter](#imap-transporter-object)*.                                                                                                                                                                                                                                                                  | ninguno                                                                  |
 | [<!-- INCLUDE #transporter.port.Syntax -->](#port)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.port.Summary -->| 993                                                                      |
 | [<!-- INCLUDE #transporter.user.Syntax -->](#user)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #transporter.user.Summary -->| ninguno                                                                  |
 > **Atención**: asegúrese de que el tiempo de espera definido sea menor que el tiempo de espera del servidor, de lo contrario el tiempo de espera del cliente será inútil.
 
-#### Result
+#### Resultado
 
 La función devuelve un [**IMAP transporter**](#imap-transporter-object). Todas las propiedades devueltas son **de sólo lectura**.
 > La conexión IMAP se cierra automáticamente cuando se destruye el objeto transportador.
@@ -115,7 +115,7 @@ End if
 
 
 <!-- REF #4D.IMAPTransporter.new().Params -->
-| Parámetros | Type               |    | Descripción                                                                    |
+| Parámetros | Tipo               |    | Descripción                                                                    |
 | ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server     | Object             | -> | Información del servidor de correo                                             |
 | Result     | 4D.IMAPTransporter | <- | [IMAP transporter object](#imap-transporter-object)|<!-- END REF -->
@@ -124,7 +124,7 @@ End if
 
 #### Descripción
 
-The `4D.IMAPTransporter.new()` function <!-- REF #4D.IMAPTransporter.new().Summary -->creates and returns a new object of the `4D.IMAPTransporter` type<!-- END REF -->. .
+La función `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summary -->crea y devuelve un nuevo objeto del tipo `4D.IMAPTransporter`<!-- END REF -->. .
 
 <!-- INCLUDE transporter.acceptUnsecureConnection.Desc -->
 
@@ -143,7 +143,7 @@ The `4D.IMAPTransporter.new()` function <!-- REF #4D.IMAPTransporter.new().Summa
 
 
 <!-- REF #IMAPTransporterClass.addFlags().Params -->
-| Parámetros | Type       |    | Descripción                                                                                                                                                                      |
+| Parámetros | Tipo       |    | Descripción                                                                                                                                                                      |
 | ---------- | ---------- |:--:| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | msgIDs     | Collection | -> | Colección de cadenas: identificadores únicos de mensajes (texto)<br/>Texto: ID único de un mensaje<br/>Longint (IMAP all): todos los mensajes del buzón seleccionado |
 | keywords   | Object     | -> | Banderas de palabras claves a añadir                                                                                                                                             |
@@ -153,7 +153,7 @@ The `4D.IMAPTransporter.new()` function <!-- REF #4D.IMAPTransporter.new().Summa
 
 #### Descripción
 
-The `.addFlags()` function <!-- REF #IMAPTransporterClass.addFlags().Summary -->adds flags to the `msgIDs` for the specified `keywords`<!-- END REF -->.
+La función `.addFlags()` <!-- REF #IMAPTransporterClass.addFlags().Summary -->añade banderas a los `msgIDs` para las `palabras claves` especificadas<!-- END REF -->.
 
 En el parámetro `msgIDs`, puede pasar:
 
@@ -161,13 +161,13 @@ En el parámetro `msgIDs`, puede pasar:
 * el ID único (*texte*) de un solo mensaje o
 * la siguiente constante (*longint*) para todos los mensajes del buzón seleccionado:
 
- | Constante | Value | Comentario                                            |
+ | Constante | Valor | Comentario                                            |
  | --------- | ----- | ----------------------------------------------------- |
  | IMAP all  | 1     | Seleccionar todos los mensajes del buzón seleccionado |
 
 El parámetro `keywords` le permite pasar un objeto con valores de palabras clave para las banderas específicas que se añadirán a `msgIDs`. Puede pasar cualquiera de las siguientes palabras claves:
 
-| Parámetros | Type    | Descripción                                        |
+| Parámetros | Tipo    | Descripción                                        |
 | ---------- | ------- | -------------------------------------------------- |
 | $draft     | Boolean | True para añadir el marcador "draft" al mensaje    |
 | $seen      | Boolean | True para añadir el marcador "seen" al mensaje     |
@@ -181,14 +181,14 @@ El parámetro `keywords` le permite pasar un objeto con valores de palabras clav
 
 La función devuelve un objeto que describe el estado IMAP:
 
-| Propiedad  |                         | Type       | Descripción                                                                              |
-| ---------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------- |
-| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                |
-| statusText |                         | Text       | Status message returned by the IMAP server, or last error returned in the 4D error stack |
-| errors     |                         | Collection | 4D error stack (not returned if a IMAP server response is received)                      |
-|            | \[].errcode            | Number     | 4D error code                                                                            |
-|            | \[].message            | Text       | Descripción del error 4D                                                                 |
-|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                    |
+| Propiedad  |                         | Tipo       | Descripción                                                                                       |
+| ---------- | ----------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
+| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
+| statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
+| errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
+|            | \[].message            | Text       | Descripción del error 4D                                                                          |
+|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
 #### Ejemplo
 
@@ -230,7 +230,7 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 
 <!-- REF #IMAPTransporterClass.append().Params -->
-| Parámetros     | Type   |    | Descripción                                       |
+| Parámetros     | Tipo   |    | Descripción                                       |
 | -------------- | ------ |:--:| ------------------------------------------------- |
 | mailObj        | Object | -> | Objeto Email                                      |
 | destinationBox | Text   | -> | Buzón para recibir el objeto Email                |
@@ -241,7 +241,7 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 #### Descripción
 
-The `.append()` function <!-- REF #IMAPTransporterClass.append().Summary -->appends a `mailObj` to the `destinationBox`<!-- END REF -->.
+La función `.append()` <!-- REF #IMAPTransporterClass.append().Summary -->añade un `mailObj` al `destinationBox`<!-- END REF -->.
 
 En el parámetro `mailObj`, pase un objeto Email. En el parámetro `mailObj`, pase un objeto Email. La función `.append()` soporta los marcadores de palabras clave en el atributo `keywords` de los objetos email.
 
@@ -249,14 +249,14 @@ El parámetro opcional `destinationBox` permite pasar el nombre del buzón donde
 
 En el parámetro opcional `options`, puede pasar un objeto para definir el charset y la codificación para partes específicas del correo electrónico. Propiedades disponibles:
 
-| Propiedad     | Type | Descripción                                                                                                                                                                                                                                   |
+| Propiedad     | Tipo | Descripción                                                                                                                                                                                                                                   |
 | ------------- | ---- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | headerCharset | Text | Charset y codificación utilizados para las siguientes partes del correo electrónico: asunto, nombres de archivos adjuntos y atributo(s) del nombre del correo electrónico. Valores posibles: ver la tabla de charsets posibles a continuación |
 | bodyCharset   | Text | Charset y codificación utilizados para el contenido html y el texto del cuerpo del correo electrónico. Valores posibles: ver la tabla de charsets posibles a continuación                                                                     |
 
 Charsets posibles:
 
-| Constante                | Value                          | Comentario                                                                                                            |
+| Constante                | Valor                          | Comentario                                                                                                            |
 | ------------------------ | ------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>headerCharset: US-ASCII si es posible, japonés (ISO-2022-JP) & Quoted-printable si es posible, de lo contrario UTF-8 & Quoted-printable</li><li>bodyCharset: US-ASCII si es posible, japonés (ISO-2022-JP) y 7 bits si es posible, de lo contrario UTF-8 & Quoted-printable</li></ul>                                                                                             |
 | mail mode ISO88591       | ISO-8859-1                     | <ul><li>headerCharset: ISO-8859-1 & Quoted-printable</li><li>bodyCharset: ISO-8859-1 & 8-bit</li></ul>                                                                                             |
@@ -267,14 +267,14 @@ Charsets posibles:
 
 La función devuelve un objeto que describe el estado IMAP:
 
-| Propiedad  |                         | Type       | Descripción                                                                              |
-| ---------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------- |
-| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                |
-| statusText |                         | Text       | Status message returned by the IMAP server, or last error returned in the 4D error stack |
-| errors     |                         | Collection | 4D error stack (not returned if a IMAP server response is received)                      |
-|            | \[].errcode            | Number     | 4D error code                                                                            |
-|            | \[].message            | Text       | Descripción del error 4D                                                                 |
-|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                    |
+| Propiedad  |                         | Tipo       | Descripción                                                                                       |
+| ---------- | ----------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
+| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
+| statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
+| errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
+|            | \[].message            | Text       | Descripción del error 4D                                                                          |
+|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
 #### Ejemplo
 
@@ -320,7 +320,7 @@ $status:=$imap.append($msg; "Drafts")
 
 #### Descripción
 
-The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.checkConnectionDelay.Summary -->the maximum time (in seconds) allowed prior to checking the connection to the server<!-- END REF -->.  Si se supera este tiempo entre dos llamadas al método, se comprobará la conexión con el servidor. Por defecto, si la propiedad no se ha definido en el objeto *server<*, el valor es de 300.
+La propiedad `.checkConnectionDelay` contiene <!-- REF #IMAPTransporterClass.checkConnectionDelay.Summary -->el tiempo máximo (en segundos) permitido antes de comprobar la conexión con el servidor<!-- END REF -->.  Si se supera este tiempo entre dos llamadas al método, se comprobará la conexión con el servidor. Por defecto, si la propiedad no se ha definido en el objeto *server<*, el valor es de 300.
 > **Atención**: asegúrese de que el tiempo de espera definido sea menor que el tiempo de espera del servidor, de lo contrario el tiempo de espera del cliente será inútil.
 
 <!-- END REF -->
@@ -342,7 +342,7 @@ The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.che
 
 
 <!-- REF #IMAPTransporterClass.copy().Params -->
-| Parámetros     | Type       |    | Descripción                                                |
+| Parámetros     | Tipo       |    | Descripción                                                |
 | -------------- | ---------- |:--:| ---------------------------------------------------------- |
 | msgsIDs        | Collection | -> | Colección de identificadores únicos de mensajes (cadenas)  |
 | allMsgs        | Integer    | -> | `IMAP all`: todos los mensajes del buzón seleccionado      |
@@ -353,7 +353,7 @@ The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.che
 
 #### Descripción
 
-La función `.copy()` <!-- REF #IMAPTransporterClass.copy().Summary -->The `.getMails()` function<!-- END REF -->.
+La función `.copy()` <!-- REF #IMAPTransporterClass.copy().Summary -->copia los mensajes definidos por *msgsIDs* o *allMsgs* al destino *destinationBox* en el servidor IMAP<!-- END REF -->.
 
 Puede pasar:
 
@@ -366,14 +366,14 @@ El parámetro *destinationBox* permite pasar un valor texto con el nombre del bu
 
 La función devuelve un objeto que describe el estado IMAP:
 
-| Propiedad  |                         | Type       | Descripción                                                                              |
-| ---------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------- |
-| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                |
-| statusText |                         | Text       | Status message returned by the IMAP server, or last error returned in the 4D error stack |
-| errors     |                         | Collection | 4D error stack (not returned if a IMAP server response is received)                      |
-|            | \[].errcode            | Number     | 4D error code                                                                            |
-|            | \[].message            | Text       | Descripción del error 4D                                                                 |
-|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                    |
+| Propiedad  |                         | Tipo       | Descripción                                                                                       |
+| ---------- | ----------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
+| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
+| statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
+| errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
+|            | \[].message            | Text       | Descripción del error 4D                                                                          |
+|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
 #### Ejemplo 1
 
@@ -443,16 +443,16 @@ Para copiar todos los mensajes del buzón actual:
 
 
 <!-- REF #IMAPTransporterClass.createBox().Params -->
-| Parámetros | Type   |    | Descripción                                                         |
-| ---------- | ------ |:--:| ------------------------------------------------------------------- |
-| name       | Text   | -> | Nombre del nuevo buzón                                              |
-| Result     | Object | <- | Status of the mailbox creation operation|<!-- END REF -->
+| Parámetros | Tipo   |    | Descripción                                                             |
+| ---------- | ------ |:--:| ----------------------------------------------------------------------- |
+| name       | Text   | -> | Nombre del nuevo buzón                                                  |
+| Result     | Object | <- | Estado de la operación de creación del buzón|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.createBox()` function <!-- REF #IMAPTransporterClass.createBox().Summary -->creates a mailbox with the given `name`<!-- END REF -->. Si el carácter separador de jerarquía del servidor IMAP aparece en otra parte del nombre del buzón, el servidor IMAP creará todos los nombre padre necesarios para crear el buzón dado.
+La función `.createBox()` <!-- REF #IMAPTransporterClass.createBox().Summary -->crea un buzón con el `name` dado<!-- END REF -->. Si el caracter separador de jerarquía del servidor IMAP aparece en otra parte del nombre del buzón, el servidor IMAP creará todos los nombre padre necesarios para crear el buzón dado.
 
 En otras palabras, un intento de crear "Projects/IMAP/Doc" en un servidor en el que "/" es el carácter separador de jerarquía creará:
 
@@ -466,14 +466,14 @@ En el parámetro `name`, pasa el nombre del nuevo buzón.
 
 La función devuelve un objeto que describe el estado IMAP:
 
-| Propiedad  |                         | Type       | Descripción                                                                              |
-| ---------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------- |
-| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                |
-| statusText |                         | Text       | Status message returned by the IMAP server, or last error returned in the 4D error stack |
-| errors     |                         | Collection | 4D error stack (not returned if a IMAP server response is received)                      |
-|            | \[].errcode            | Number     | 4D error code                                                                            |
-|            | \[].message            | Text       | Descripción del error 4D                                                                 |
-|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                    |
+| Propiedad  |                         | Tipo       | Descripción                                                                                       |
+| ---------- | ----------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
+| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
+| statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
+| errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
+|            | \[].message            | Text       | Descripción del error 4D                                                                          |
+|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
 #### Ejemplo
 
@@ -522,17 +522,17 @@ End for each
 
 
 <!-- REF #IMAPTransporterClass.delete().Params -->
-| Parámetros | Type       |    | Descripción                                               |
-| ---------- | ---------- |:--:| --------------------------------------------------------- |
-| msgsIDs    | Collection | -> | Colección de identificadores únicos de mensajes (cadenas) |
-| allMsgs    | Integer    | -> | `IMAP all`: todos los mensajes del buzón seleccionado     |
-| Result     | Object     | <- | Status of the delete operation|<!-- END REF -->
+| Parámetros | Tipo       |    | Descripción                                                      |
+| ---------- | ---------- |:--:| ---------------------------------------------------------------- |
+| msgsIDs    | Collection | -> | Colección de identificadores únicos de mensajes (cadenas)        |
+| allMsgs    | Integer    | -> | `IMAP all`: todos los mensajes del buzón seleccionado            |
+| Result     | Object     | <- | Estado de la operación de eliminación|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.delete()` function <!-- REF #IMAPTransporterClass.delete().Summary -->The `.removeFlags()` function<!-- END REF -->.
+La función `.delete()` <!-- REF #IMAPTransporterClass.delete().Summary -->define la bandera "eliminado" para los mensajes definidos en `msgsIDs` o `allMsgs`<!-- END REF -->.
 
 Puede pasar:
 
@@ -545,14 +545,14 @@ La ejecución de esta función no elimina realmente los mensajes. Los mensajes c
 
 La función devuelve un objeto que describe el estado IMAP:
 
-| Propiedad  |                         | Type       | Descripción                                                                              |
-| ---------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------- |
-| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                |
-| statusText |                         | Text       | Status message returned by the IMAP server, or last error returned in the 4D error stack |
-| errors     |                         | Collection | 4D error stack (not returned if a IMAP server response is received)                      |
-|            | \[].errcode            | Number     | 4D error code                                                                            |
-|            | \[].message            | Text       | Descripción del error 4D                                                                 |
-|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                    |
+| Propiedad  |                         | Tipo       | Descripción                                                                                       |
+| ---------- | ----------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
+| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
+| statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
+| errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
+|            | \[].message            | Text       | Descripción del error 4D                                                                          |
+|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
 #### Ejemplo 1
 
@@ -621,15 +621,18 @@ Para eliminar todos los mensajes del buzón actual:
 
 
 <!-- REF #IMAPTransporterClass.deleteBox().Params -->
-| Parámetros | Type |    | Descripción                 |
-| ---------- | ---- |:--:| --------------------------- |
-| name       | Text | -> | Nombre del buzón a eliminar |
+| Parámetros | Tipo   |    | Descripción                                                         |
+| ---------- | ------ |:--:| ------------------------------------------------------------------- |
+| name       | Text   | -> | Nombre del buzón a eliminar                                         |
+| Result     | Object | <- | Status of the mailbox deletion operation|<!-- END REF -->
 
-|Result|Object|<-|Status of the mailbox deletion operation|<!-- END REF -->
+
+|
+
 
 #### Descripción
 
-The `.deleteBox()` function <!-- REF #IMAPTransporterClass.deleteBox().Summary -->permanently removes the mailbox with the given `name` from the IMAP server<!-- END REF -->. Intentar eliminar un INBOX o un buzón que no existe generará un error.
+La función `.deleteBox()` <!-- REF #IMAPTransporterClass.deleteBox().Summary -->elimina permanentemente el buzón con el `name` dado del servidor IMAP<!-- END REF -->. Intentar eliminar un INBOX o un buzón que no existe generará un error.
 
 En el parámetro `name`, pase el nombre del buzón a eliminar.
 > * La función no puede eliminar un buzón que tiene buzones hijos si el buzón padre tiene el atributo "\Noselect".
@@ -640,14 +643,14 @@ En el parámetro `name`, pase el nombre del buzón a eliminar.
 
 La función devuelve un objeto que describe el estado IMAP:
 
-| Propiedad  |                         | Type       | Descripción                                                                              |
-| ---------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------- |
-| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                |
-| statusText |                         | Text       | Status message returned by the IMAP server, or last error returned in the 4D error stack |
-| errors     |                         | Collection | 4D error stack (not returned if a IMAP server response is received)                      |
-|            | \[].errcode            | Number     | 4D error code                                                                            |
-|            | \[].message            | Text       | Descripción del error 4D                                                                 |
-|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                    |
+| Propiedad  |                         | Tipo       | Descripción                                                                                       |
+| ---------- | ----------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
+| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
+| statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
+| errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
+|            | \[].message            | Text       | Descripción del error 4D                                                                          |
+|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
 #### Ejemplo
 
@@ -700,28 +703,28 @@ End if
 
 
 <!-- REF IMAPTransporterClass.expunge().Params -->
-| Parámetros | Type   |    | Descripción                                                 |
-| ---------- | ------ |:--:| ----------------------------------------------------------- |
-| Result     | Object | <- | Status of the expunge operation |<!-- END REF -->
+| Parámetros | Tipo   |    | Descripción                                                |
+| ---------- | ------ |:--:| ---------------------------------------------------------- |
+| Result     | Object | <- | Estado de la operación expunge |<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.expunge()` function <!-- REF #IMAPTransporterClass.expunge().Summary -->removes all messages with the "deleted" flag from the IMAP mail server.<!-- END REF --> The "deleted" flag can be set with the [`.delete()`](#delete) or [`.addFlags()`](#addflags) methods.
+La función `.expunge()` <!-- REF #IMAPTransporterClass.expunge().Summary -->elimina todos los mensajes con la bandera "deleted" del servidor de correo IMAP.<!-- END REF --> La bandera "deleted" se puede establecer con los métodos [`.delete()`](#delete) o [`.addFlags()`](#addflags).
 
 **Objeto devuelto**
 
 La función devuelve un objeto que describe el estado IMAP:
 
-| Propiedad  |                         | Type       | Descripción                                                                              |
-| ---------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------- |
-| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                |
-| statusText |                         | Text       | Status message returned by the IMAP server, or last error returned in the 4D error stack |
-| errors     |                         | Collection | 4D error stack (not returned if a IMAP server response is received)                      |
-|            | \[].errcode            | Number     | 4D error code                                                                            |
-|            | \[].message            | Text       | Descripción del error 4D                                                                 |
-|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                    |
+| Propiedad  |                         | Tipo       | Descripción                                                                                       |
+| ---------- | ----------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
+| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
+| statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
+| errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
+|            | \[].message            | Text       | Descripción del error 4D                                                                          |
+|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
 #### Ejemplo
 
@@ -769,16 +772,16 @@ $status:=$transporter.expunge()
 
 
 <!-- REF #IMAPTransporterClass.getBoxInfo().Params -->
-| Parámetros | Type   |    | Descripción                               |
+| Parámetros | Tipo   |    | Descripción                               |
 | ---------- | ------ |:--:| ----------------------------------------- |
 | name       | Text   | -> | Nombre del buzón                          |
-| Result     | Object | <- | boxInfo object|<!-- END REF -->
+| Result     | Object | <- | objeto boxInfo|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.getBoxInfo()` function <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->returns a `boxInfo` object corresponding to the current maibox, or the mailbox *name*<!-- END REF -->. Esta función devuelve la misma información que [`.selectBox()`](#selectbox) sin cambiar el buzón actual.
+La función `.getBoxInfo()` <!-- REF #IMAPTransporterClass.getBoxInfo().Summary -->devuelve un objeto `boxInfo` correspondiente al maibox actual, o el *name* del buzón<!-- END REF -->. Esta función devuelve la misma información que [`.selectBox()`](#selectbox) sin cambiar el buzón actual.
 
 En el parámetro opcional *name*, pase el nombre del buzón a acceder. El nombre representa una jerarquía inequívoca de izquierda a derecha, con niveles separados por un carácter delimitador específico. El delimitador se puede recuperar con la función [`.getDelimiter()`](#getdelimiter).
 
@@ -788,7 +791,7 @@ Si el buzón *name* no es seleccionable o no existe, la función genera un error
 
 El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 
-| Propiedad  | Type   | Descripción                                                                    |
+| Propiedad  | Tipo   | Descripción                                                                    |
 | ---------- | ------ | ------------------------------------------------------------------------------ |
 | name       | text   | Nombre del buzón                                                               |
 | mailCount  | number | Número de mensajes en el buzón                                                 |
@@ -822,20 +825,20 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 
 
 <!-- REF #IMAPTransporterClass.getBoxList().Params -->
-| Parámetros | Type       |    | Descripción                                              |
-| ---------- | ---------- |:--:| -------------------------------------------------------- |
-| parameters | Object     | -> | Objeto de parámetro                                      |
-| Result     | Collection | <- | Collection of mailbox objects|<!-- END REF -->
+| Parámetros | Tipo       |    | Descripción                                             |
+| ---------- | ---------- |:--:| ------------------------------------------------------- |
+| parameters | Object     | -> | Objeto de parámetro                                     |
+| Result     | Collection | <- | Colección de objetos mailbox|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.getBoxList()` function <!-- REF #IMAPTransporterClass.getBoxList().Summary -->returns a collection of mailboxes describing all of the available mailboxes<!-- END REF -->. Esta función permite gestionar localmente la lista de mensajes localizados en el servidor de correo IMAP.
+La función `.getBoxList()` <!-- REF #IMAPTransporterClass.getBoxList().Summary -->devuelve una colección de buzones que describe todos los buzones disponibles<!-- END REF -->. Esta función permite gestionar localmente la lista de mensajes localizados en el servidor de correo IMAP.
 
 En el parámetro opcional `parameters`, pase un objeto que contenga valores para filtrar los buzones devueltos. Puede pasar:
 
-| Propiedad    | Type    | Descripción                                          |
+| Propiedad    | Tipo    | Descripción                                          |
 | ------------ | ------- | ---------------------------------------------------- |
 | isSubscribed | Boolean | <li>**True** para devolver sólo los buzones suscritos</li><li> **False** para devolver todos los buzones disponibles</li> |
 
@@ -843,7 +846,7 @@ En el parámetro opcional `parameters`, pase un objeto que contenga valores para
 
 Cada objeto de la colección devuelta contiene las siguientes propiedades:
 
-| Propiedad        | Type    | Descripción                                                                                                        |
+| Propiedad        | Tipo    | Descripción                                                                                                        |
 | ---------------- | ------- | ------------------------------------------------------------------------------------------------------------------ |
 | \[].name        | text    | Nombre del buzón                                                                                                   |
 | \[].selectable  | boolean | Indica si los derechos de acceso permiten o no seleccionar el buzón: <ul><li>true - el buzón puede ser seleccionado</li><li>false - el buzón no puede ser seleccionado</li></ul>                     |
@@ -887,7 +890,7 @@ Si la cuenta no contiene buzones, se devuelve una colección vacía.
 
 
 <!-- REF #IMAPTransporterClass.getDelimiter().Params -->
-| Parámetros | Type |    | Descripción                                                  |
+| Parámetros | Tipo |    | Descripción                                                  |
 | ---------- | ---- |:--:| ------------------------------------------------------------ |
 | Result     | Text | <- | Caracter delimitador de jerarquía|<!-- END REF -->
 
@@ -895,7 +898,7 @@ Si la cuenta no contiene buzones, se devuelve una colección vacía.
 
 #### Descripción
 
-The `.getDelimiter()` function <!-- REF #IMAPTransporterClass.getDelimiter().Summary -->returns the character used to delimit levels of hierarchy in the mailbox name<!-- END REF -->.
+La función `.getDelimiter()` <!-- REF #IMAPTransporterClass.getDelimiter().Summary -->devuelve el caracter utilizado para delimitar los niveles de jerarquía en el nombre del buzón<!-- END REF -->.
 
 El delimitador es un carácter que puede utilizarse para:
 
@@ -941,18 +944,18 @@ Caracter delimitador del nombre del buzón.
 
 
 <!-- REF #IMAPTransporterClass.getMail().Params -->
-| Parámetros | Type    |    | Descripción                                                                 |
+| Parámetros | Tipo    |    | Descripción                                                                 |
 | ---------- | ------- |:--:| --------------------------------------------------------------------------- |
 | msgNumber  | Integer | -> | Número de secuencia del mensaje                                             |
 | msgID      | Text    | -> | ID único del mensaje                                                        |
 | options    | Object  | -> | Instrucciones sobre la gestión de mensajes                                  |
-| Result     | Object  | <- | [Email object](EmailObjectClass.md#email-object)|<!-- END REF -->
+| Result     | Object  | <- | [Objeto Email](EmailObjectClass.md#email-object)|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.getMail()` function <!-- REF #IMAPTransporterClass.getMail().Summary -->returns the `Email` object corresponding to the *msgNumber* or *msgID* in the mailbox designated by the `IMAP_transporter`<!-- END REF -->. Esta función permite recuperar la información sobre el email.
+La función `.getMail()` <!-- REF #IMAPTransporterClass.getMail().Summary -->devuelve el objeto `Email` correspondiente al *msgNumber* o *msgID* en el buzón designado por el `IMAP_transporter`<!-- END REF -->. Esta función permite recuperar la información sobre el email.
 
 En el primer parámetro, puede pasar:
 
@@ -961,7 +964,7 @@ En el primer parámetro, puede pasar:
 
 El parámetro opcional *options* permite pasar un objeto que define las instrucciones adicionales para la gestión del mensaje. Las siguientes propiedades están disponibles:
 
-| Propiedad  | Type    | Descripción                                                                                                                      |
+| Propiedad  | Tipo    | Descripción                                                                                                                      |
 | ---------- | ------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | updateSeen | boolean | Si True, el mensaje se marca como "visto" en el buzón. Si es False, el mensaje no se marca como "visto". Valor por defecto: True |
 | withBody   | boolean | Pase True para devolver el cuerpo del mensaje. Si es False, sólo se devuelve el encabezado del mensaje. Valor por defecto: True  |
@@ -1015,7 +1018,7 @@ Quiere obtener el mensaje con ID = 1:
 
 
 <!-- REF #IMAPTransporterClass.getMails().Params -->
-| Parámetros | Type       |    | Descripción                                                                          |
+| Parámetros | Tipo       |    | Descripción                                                                          |
 | ---------- | ---------- |:--:| ------------------------------------------------------------------------------------ |
 | ids        | Collection | -> | Colección de identificadores de mensajes                                             |
 | startMsg   | Integer    | -> | Número de secuencia del primer mensaje                                               |
@@ -1053,18 +1056,18 @@ El parámetro opcional *options* permite definir las partes de los mensajes a de
 
 **Opciones**
 
-| Propiedad  | Type    | Descripción                                                                                                                                                                   |
-| ---------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| updateSeen | Boolean | The selected mailbox is accessed with read and write privileges. Messages are considered "seen" and lose the "recent" flag (indicating new messages). Valor por defecto: True |
-| withBody   | Boolean | Pase True para devolver el cuerpo de los mensajes específicos. Si False, sólo se devuelve los encabezados de los mensajes. Valor por defecto: True                            |
+| Propiedad  | Tipo    | Descripción                                                                                                                                         |
+| ---------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
+| updateSeen | Boolean | Si True, los mensajes especificados se marcan como "vistos" en el buzón. Si False, los mensajes no se marcan como "vistos". Valor por defecto: True |
+| withBody   | Boolean | Pase True para devolver el cuerpo de los mensajes específicos. Si False, sólo se devuelve los encabezados de los mensajes. Valor por defecto: True  |
 > * Si no se selecciona ningún buzón con el comando [`.selectBox()`](#selectbox), se genera un error.
 > * Si no hay ninguna conexión abierta, `.getMails()` abrirá una conexión con el último buzón especificado por [`.selectBox()`](#selectbox).
 
-#### Result
+#### Resultado
 
 `.getMails()` devuelve un objeto que contiene las siguientes colecciones:
 
-| Propiedad | Type       | Descripción                                                                                                                           |
+| Propiedad | Tipo       | Descripción                                                                                                                           |
 | --------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------- |
 | lista     | Collection | Colección de objetos [`Email`](EmailObjectClass.md#email-object). Si no se encuentran objetos Email, se devuelve una colección vacía. |
 | notFound  | Collection | Colección de:<br/><ul><li>primera sintaxis - IDs de mensajes pasados previamente que no existen</li><li>segunda sintaxis - números de secuencia de los mensajes entre startMsg y endMsg que no existen</li></ul>Se devuelve una colección vacía si se encuentran todos los mensajes.                |
@@ -1078,21 +1081,21 @@ Quiere recuperar los 20 correos electrónicos más recientes sin cambiar el esta
  var $transporter : 4D.IMAPTransporter
 
  $server:=New object
- $server.host:="imap.gmail.com" //Mandatory
+ $server.host:="imap.gmail.com" //Obligatorio
  $server.port:=993
  $server.user:="4d@gmail.com"
  $server.password:="XXXXXXXX"
 
-  //create transporter
+  //crear transportador
  $transporter:=IMAP New transporter($server)
 
-  //select mailbox
+  //seleccionar buzón
  $boxInfo:=$transporter.selectBox("INBOX")
 
   If($boxInfo.mailCount>0)
-  // retrieve the headers of the last 20 messages without marking them as read
+  // recuperar los encabezados de los últimos 20 mensajes sin marcarlos como leídos
     $result:=$transporter.getMails($boxInfo.mailCount-20;$boxInfo.mailCount;\
-     New object("withBody";False;"updateSeen";False))
+        New object("withBody";False;"updateSeen";False))
     For each($mail;$result.list)
     // ...
     End for each
@@ -1116,18 +1119,18 @@ Quiere recuperar los 20 correos electrónicos más recientes sin cambiar el esta
 
 
 <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Params -->
-| Parámetros | Type    |    | Descripción                                                                                |
+| Parámetros | Tipo    |    | Descripción                                                                                |
 | ---------- | ------- |:--:| ------------------------------------------------------------------------------------------ |
 | msgNumber  | Integer | -> | Número de secuencia del mensaje                                                            |
 | msgID      | Text    | -> | ID único del mensaje                                                                       |
 | updateSeen | Boolean | -> | Si True, el mensaje se marca como "visto" en el buzón. Si False, el mensaje se deja igual. |
-| Result     | BLOB    | <- | Blob of the MIME string returned from the mail server|<!-- END REF -->
+| Result     | BLOB    | <- | Blob de la cadena MIME devuelta por el servidor de correo|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.copy()` function <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Summary -->copies the messages defined by *msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->.
+La función `.getMIMEAsBlob()` <!-- REF #IMAPTransporterClass.getMIMEAsBlob().Summary -->devuelve un BLOB con el contenido MIME del mensaje correspondiente a *msgNumber* o *msgID* en el buzón designado por el `IMAP_transporter`<!-- END REF -->.
 
 En el primer parámetro, puede pasar:
 
@@ -1191,18 +1194,18 @@ El parámetro opcional *updateSeen* permite indicar si el mensaje está marcado 
 
 
 <!-- REF #IMAPTransporterClass.move().Params -->
-| Parámetros     | Type       |    | Descripción                                               |
-| -------------- | ---------- |:--:| --------------------------------------------------------- |
-| msgsIDs        | Collection | -> | Colección de identificadores únicos de mensajes (cadenas) |
-| allMsgs        | Integer    | -> | `IMAP all`: todos los mensajes del buzón seleccionado     |
-| destinationBox | Text       | -> | Buzón para recibir los mensajes desplazados               |
-| Result         | Object     | <- | Status of the move operation|<!-- END REF -->
+| Parámetros     | Tipo       |    | Descripción                                                         |
+| -------------- | ---------- |:--:| ------------------------------------------------------------------- |
+| msgsIDs        | Collection | -> | Colección de identificadores únicos de mensajes (cadenas)           |
+| allMsgs        | Integer    | -> | `IMAP all`: todos los mensajes del buzón seleccionado               |
+| destinationBox | Text       | -> | Buzón para recibir los mensajes desplazados                         |
+| Result         | Object     | <- | Estado de la operación de desplazamiento|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.move()` function <!-- REF #IMAPTransporterClass.move().Summary -->moves the messages defined by *msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->.
+La función `.move()` <!-- REF #IMAPTransporterClass.move().Summary -->mueve los mensajes definidos por *msgsIDs* o *allMsgs* al destino *destinationBox* en el servidor IMAP<!-- END REF -->.
 
 Puede pasar:
 
@@ -1217,14 +1220,14 @@ El parámetro *destinationBox* permite pasar un valor texto con el nombre del bu
 
 La función devuelve un objeto que describe el estado IMAP:
 
-| Propiedad  |                         | Type       | Descripción                                                                              |
-| ---------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------- |
-| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                |
-| statusText |                         | Text       | Status message returned by the IMAP server, or last error returned in the 4D error stack |
-| errors     |                         | Collection | 4D error stack (not returned if a IMAP server response is received)                      |
-|            | \[].errcode            | Number     | 4D error code                                                                            |
-|            | \[].message            | Text       | Descripción del error 4D                                                                 |
-|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                    |
+| Propiedad  |                         | Tipo       | Descripción                                                                                       |
+| ---------- | ----------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
+| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
+| statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
+| errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
+|            | \[].message            | Text       | Descripción del error 4D                                                                          |
+|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
 #### Ejemplo 1
 
@@ -1293,17 +1296,17 @@ Para mover todos los mensajes del buzón actual:
 
 
 <!-- REF #IMAPTransporterClass.numToID().Params -->
-| Parámetros | Type       |    | Descripción                                         |
-| ---------- | ---------- |:--:| --------------------------------------------------- |
-| startMsg   | Integer    | -> | Número de secuencia del primer mensaje              |
-| endMsg     | Integer    | -> | Número de secuencia del último mensaje              |
-| Result     | Collection | <- | Collection of unique IDs|<!-- END REF -->
+| Parámetros | Tipo       |    | Descripción                                                                |
+| ---------- | ---------- |:--:| -------------------------------------------------------------------------- |
+| startMsg   | Integer    | -> | Número de secuencia del primer mensaje                                     |
+| endMsg     | Integer    | -> | Número de secuencia del último mensaje                                     |
+| Result     | Collection | <- | Colección de identificadores de mensajes únicos|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.numToID()` function <!-- REF #IMAPTransporterClass.numToID().Summary -->converts the sequence numbers to IMAP unique IDs for the messages in the sequential range designated by *startMsg* and *endMsg*<!-- END REF --> in the currently selected mailbox.
+La función `.numToID()` <!-- REF #IMAPTransporterClass.numToID().Summary -->convierte los números de secuencia en identificadores únicos IMAP para los mensajes en el rango secuencial designado por *startMsg* y *endMsg*<!-- END REF --> en el buzón actualmente seleccionado.
 
 En el parámetro *startMsg*, pase un valor *entero* correspondiente al número del primer mensaje en un rango secuencial. Si se pasa un número negativo (*startMsg* <= 0), se utilizará el primer mensaje del buzón como inicio de la secuencia.
 
@@ -1355,11 +1358,11 @@ La función devuelve una colección de cadenas (IDs únicos).
 
 
 <!-- REF #IMAPTransporterClass.removeFlags().Params -->
-| Parámetros | Type       |    | Descripción                                                                                                                                                                      |
+| Parámetros | Tipo       |    | Descripción                                                                                                                                                                      |
 | ---------- | ---------- |:--:| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | msgIDs     | Collection | -> | Colección de cadenas: identificadores únicos de mensajes (texto)<br/>Texto: ID único de un mensaje<br/>Longint (IMAP all): todos los mensajes del buzón seleccionado |
 | keywords   | Object     | -> | Banderas de palabras claves a eliminar                                                                                                                                           |
-| Result     | Object     | <- | Status of the removeFlags operation|<!-- END REF -->
+| Result     | Object     | <- | Estado de la operación removeFlags|<!-- END REF -->
 
 |
 
@@ -1379,7 +1382,7 @@ En el parámetro `msgIDs`, puede pasar:
 
 El parámetro `keywords` le permite pasar un objeto con valores de palabras clave para las banderas específicas a eliminar de los `msgIDs`. Puede pasar cualquiera de las siguientes palabras claves:
 
-| Parámetros | Type    | Descripción                                           |
+| Parámetros | Tipo    | Descripción                                           |
 | ---------- | ------- | ----------------------------------------------------- |
 | $draft     | Boolean | True para eliminar el marcador "draft" del mensaje    |
 | $seen      | Boolean | True para eliminar el marcador "seen" del mensaje     |
@@ -1393,14 +1396,14 @@ Note que los valores falsos se ignoran.
 
 La función devuelve un objeto que describe el estado IMAP:
 
-| Propiedad  |                         | Type       | Descripción                                                                              |
-| ---------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------- |
-| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                |
-| statusText |                         | Text       | Status message returned by the IMAP server, or last error returned in the 4D error stack |
-| errors     |                         | Collection | 4D error stack (not returned if a IMAP server response is received)                      |
-|            | \[].errcode            | Number     | 4D error code                                                                            |
-|            | \[].message            | Text       | Descripción del error 4D                                                                 |
-|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                    |
+| Propiedad  |                         | Tipo       | Descripción                                                                                       |
+| ---------- | ----------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
+| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
+| statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
+| errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
+|            | \[].message            | Text       | Descripción del error 4D                                                                          |
+|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
 #### Ejemplo
 
@@ -1442,17 +1445,17 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 
 <!-- REF #IMAPTransporterClass.renameBox().Params -->
-| Parámetros  | Type   |    | Descripción                                                 |
+| Parámetros  | Tipo   |    | Descripción                                                 |
 | ----------- | ------ |:--:| ----------------------------------------------------------- |
 | currentName | Text   | -> | Nombre del nuevo actual                                     |
 | newName     | Text   | -> | Nuevo nombre del buzón                                      |
-| Result      | Object | <- | Status of the renaming operation|<!-- END REF -->
+| Result      | Object | <- | Estado de la operación renombrar|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.renameBox()` function <!-- REF #IMAPTransporterClass.renameBox().Summary -->changes the name of a mailbox on the IMAP server<!-- END REF -->. Si se intenta renombrar un buzón desde un nombre de buzón que no existe o a un nombre de buzón que ya existe, se generará un error.
+La función `.renameBox()` <!-- REF #IMAPTransporterClass.renameBox().Summary -->cambia el nombre de un buzón en el servidor IMAP<!-- END REF -->. Si se intenta renombrar un buzón desde un nombre de buzón que no existe o a un nombre de buzón que ya existe, se generará un error.
 
 En el parámetro `currentName`, pase el nombre del buzón a renombrar.
 
@@ -1462,14 +1465,14 @@ Pase el nuevo nombre del buzón en el parámetro `newName`.
 
 La función devuelve un objeto que describe el estado IMAP:
 
-| Propiedad  |                         | Type       | Descripción                                                                              |
-| ---------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------- |
-| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                |
-| statusText |                         | Text       | Status message returned by the IMAP server, or last error returned in the 4D error stack |
-| errors     |                         | Collection | 4D error stack (not returned if a IMAP server response is received)                      |
-|            | \[].errcode            | Number     | 4D error code                                                                            |
-|            | \[].message            | Text       | Descripción del error 4D                                                                 |
-|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                    |
+| Propiedad  |                         | Tipo       | Descripción                                                                                       |
+| ---------- | ----------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
+| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
+| statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
+| errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
+|            | \[].message            | Text       | Descripción del error 4D                                                                          |
+|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
 #### Ejemplo
 
@@ -1524,10 +1527,10 @@ End if
 
 
 <!-- REF #IMAPTransporterClass.searchMails().Params -->
-| Parámetros     | Type       |    | Descripción                                              |
-| -------------- | ---------- |:--:| -------------------------------------------------------- |
-| searchCriteria | Text       | -> | Criterio de búsqueda                                     |
-| Result         | Collection | <- | Collection of message numbers|<!-- END REF -->
+| Parámetros     | Tipo       |    | Descripción                                                 |
+| -------------- | ---------- |:--:| ----------------------------------------------------------- |
+| searchCriteria | Text       | -> | Criterio de búsqueda                                        |
+| Result         | Collection | <- | Colección de números de mensajes|<!-- END REF -->
 
 |
 
@@ -1535,7 +1538,7 @@ End if
 
 > Las coincidencias no suelen diferenciar entre mayúsculas y minúsculas
 
-The `.searchMails()` function <!-- REF #IMAPTransporterClass.searchMails().Summary -->searches for messages that match the given *searchCriteria* in the current mailbox<!-- END REF -->. .
+La función `.searchMails()` <!-- REF #IMAPTransporterClass.searchMails().Summary -->busca los mensajes que coinciden con los *searchCriteria* dados en el buzón actual<!-- END REF -->. .
 
 *searchCriteria* es un parámetro texto que enumera una o varias llaves de búsqueda (ver [llaves-de-búsqueda-autorizadas](#authorized-search-keys) más abajo) asociadas o no a valores a buscar. Una llave de búsqueda puede ser uno o varios elementos. Por ejemplo:
 
@@ -1661,24 +1664,24 @@ Las claves de búsqueda pueden solicitar el valor a buscar:
 
 
 <!-- REF #IMAPTransporterClass.selectBox().Params -->
-| Parámetros | Type    |    | Descripción                               |
+| Parámetros | Tipo    |    | Descripción                               |
 | ---------- | ------- |:--:| ----------------------------------------- |
 | name       | Text    | -> | Nombre del buzón                          |
 | state      | Integer | -> | Estado de acceso al buzón                 |
-| Result     | Object  | <- | boxInfo object|<!-- END REF -->
+| Result     | Object  | <- | objeto boxInfo|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.selectBox()` function <!-- REF #IMAPTransporterClass.selectBox().Summary -->selects the *name* mailbox as the current mailbox<!-- END REF -->. Esta función permite recuperar la información sobre el buzón.
+La función `.selectBox()` <!-- REF #IMAPTransporterClass.selectBox().Summary -->selecciona el buzón *name* como el buzón actual<!-- END REF -->. Esta función permite recuperar la información sobre el buzón.
 > Para obtener la información de un buzón sin cambiar el buzón actual, utilice [`.getBoxInfo()`](#getboxinfo).
 
 En el parámetro *name*, pase el nombre del buzón a acceder. El nombre representa una jerarquía inequívoca de izquierda a derecha, con niveles separados por un carácter delimitador específico. El delimitador se puede recuperar con la función [`.getDelimiter()`](#getdelimiter).
 
 El parámetro opcional *state* define el tipo de acceso al buzón. Los valores posibles son:
 
-| Constante             | Value | Comentario                                                                                                                                                                                       |
+| Constante             | Valor | Comentario                                                                                                                                                                                       |
 | --------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | IMAP read only state  | 1     | Se accede al buzón seleccionado con privilegios de sólo lectura. Los mensajes con la bandera "reciente" (que indica que son nuevos) no se modifican.                                             |
 | IMAP read write state | 0     | Se accede al buzón seleccionado con privilegios de lectura y escritura. Los mensajes se consideran "vistos" y pierden la bandera "reciente" (que indica que son mensajes nuevos). Default value: |
@@ -1690,7 +1693,7 @@ El parámetro opcional *state* define el tipo de acceso al buzón. Los valores p
 
 El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 
-| Propiedad  | Type   | Descripción                                |
+| Propiedad  | Tipo   | Descripción                                |
 | ---------- | ------ | ------------------------------------------ |
 | name       | Text   | Nombre del buzón                           |
 | mailCount  | number | Número de mensajes en el buzón             |
@@ -1727,16 +1730,16 @@ El objeto `boxInfo` devuelto contiene las siguientes propiedades:
 
 
 <!-- REF #IMAPTransporterClass.subscribe().Params -->
-| Parámetros | Type   |    | Descripción                                                  |
-| ---------- | ------ |:--:| ------------------------------------------------------------ |
-| name       | Text   | -> | Nombre del buzón                                             |
-| Result     | Object | <- | Status of the subscribe operation|<!-- END REF -->
+| Parámetros | Tipo   |    | Descripción                                                 |
+| ---------- | ------ |:--:| ----------------------------------------------------------- |
+| name       | Text   | -> | Nombre del buzón                                            |
+| Result     | Object | <- | Estado de la operación subscribe|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.subscribe()` function <!-- REF #IMAPTransporterClass.subscribe().Summary -->allows adding or removing of the specified mailbox to/from the IMAP server’s set of “subscribed” mailboxes<!-- END REF -->. .
+La función `.subscribe()` <!-- REF #IMAPTransporterClass.subscribe().Summary -->permite añadir o eliminar el buzón especificado al conjunto de buzones "suscritos" del servidor IMAP<!-- END REF -->. De este modo, puede optar por acotar una gran lista de buzones disponibles suscribiéndose a los que habitualmente consulta.
 
 En el parámetro `name`, pase el nombre del buzón a añadir (suscribir) a sus buzones "suscritos".
 
@@ -1744,14 +1747,14 @@ En el parámetro `name`, pase el nombre del buzón a añadir (suscribir) a sus b
 
 La función devuelve un objeto que describe el estado IMAP:
 
-| Propiedad  |                         | Type       | Descripción                                                                              |
-| ---------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------- |
-| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                |
-| statusText |                         | Text       | Status message returned by the IMAP server, or last error returned in the 4D error stack |
-| errors     |                         | Collection | 4D error stack (not returned if a IMAP server response is received)                      |
-|            | \[].errcode            | Number     | 4D error code                                                                            |
-|            | \[].message            | Text       | Descripción del error 4D                                                                 |
-|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                    |
+| Propiedad  |                         | Tipo       | Descripción                                                                                       |
+| ---------- | ----------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
+| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
+| statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
+| errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
+|            | \[].message            | Text       | Descripción del error 4D                                                                          |
+|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
 #### Ejemplo
 
@@ -1803,16 +1806,16 @@ End if
 
 
 <!-- REF #IMAPTransporterClass.unsubscribe().Params -->
-| Parámetros | Type   |    | Descripción                                                    |
-| ---------- | ------ |:--:| -------------------------------------------------------------- |
-| name       | Text   | -> | Nombre del buzón                                               |
-| Result     | Object | <- | Status of the unsubscribe operation|<!-- END REF -->
+| Parámetros | Tipo   |    | Descripción                                                   |
+| ---------- | ------ |:--:| ------------------------------------------------------------- |
+| name       | Text   | -> | Nombre del buzón                                              |
+| Result     | Object | <- | Estado de la operación unsubscribe|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.unsubscribe()` function <!-- REF #IMAPTransporterClass.unsubscribe().Summary -->removes a mailbox from a set of subscribed mailboxes<!-- END REF -->. Esto le permite reducir el número de buzones que suele ver.
+La función `.unsubscribe()` <!-- REF #IMAPTransporterClass.unsubscribe().Summary -->elimina un buzón de un conjunto de buzones suscritos<!-- END REF -->. Esto le permite reducir el número de buzones que suele ver.
 
 En el parámetro `name`, pase el nombre del buzón a eliminar (darse de baja) de sus buzones activos.
 
@@ -1820,14 +1823,14 @@ En el parámetro `name`, pase el nombre del buzón a eliminar (darse de baja) de
 
 La función devuelve un objeto que describe el estado IMAP:
 
-| Propiedad  |                         | Type       | Descripción                                                                              |
-| ---------- | ----------------------- | ---------- | ---------------------------------------------------------------------------------------- |
-| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                |
-| statusText |                         | Text       | Status message returned by the IMAP server, or last error returned in the 4D error stack |
-| errors     |                         | Collection | 4D error stack (not returned if a IMAP server response is received)                      |
-|            | \[].errcode            | Number     | 4D error code                                                                            |
-|            | \[].message            | Text       | Descripción del error 4D                                                                 |
-|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                    |
+| Propiedad  |                         | Tipo       | Descripción                                                                                       |
+| ---------- | ----------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
+| success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
+| statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
+| errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
+|            | \[].message            | Text       | Descripción del error 4D                                                                          |
+|            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
 #### Ejemplo
 
