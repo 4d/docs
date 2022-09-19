@@ -64,7 +64,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 
 <!-- REF #_command_.File.Params -->
-| Parámetros   | Type    |    | Descripción                                        |
+| Parámetros   | Tipo    |    | Descripción                                        |
 | ------------ | ------- |:--:| -------------------------------------------------- |
 | path         | Text    | -> | Ruta del archivo                                   |
 | fileConstant | Integer | -> | Constante del archivo 4D                           |
@@ -76,7 +76,7 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 #### Descripción
 
-The `File` command <!-- REF #_command_.File.Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. El comando acepta dos sintaxis:
+El comando `File` <!-- REF #_command_.File.Summary -->crea y devuelve un nuevo objeto del tipo `4D.File`<!-- END REF -->. El comando acepta dos sintaxis:
 
 **File ( path { ; pathType } { ; \* })**
 
@@ -111,7 +111,7 @@ En el parámetro *fileConstant*, pase un archivo 4D interno o sistema, utilizand
 | HTTP debug log file               | 9     | Archivo de registro creado por el comando `WEB SET OPTION(Web debug log)`. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                                          |
 | HTTP log file                     | 8     | Archivo de registro creado por el comando `WEB SET OPTION(Web log recording)`. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                                      |
 | IMAP Log file                     | 23    | Archivo de registro creado por el comando `SET DATABASE PARAMETER(IMAP Log)`. Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                                                       |
-| Last backup file                  | 2     | Last backup file, named `\<applicationName>[bkpNum].4BK`, stored at a custom location.                                                                                                                                                                                                                                                                                                                                                                                      |
+| Last backup file                  | 2     | El último archivo de copia de seguridad, llamado `\<applicationName>[bkpNum].4BK`, se almacena en una ubicación personalizada.                                                                                                                                                                                                                                                                                                                                              |
 | Last journal integration log file | 22    | Nombre completo del último archivo de registro de integración del historial (almacenado en la carpeta Logs de la aplicación restaurada), si la hay. Este archivo se crea, en modo de reparación automática, tan pronto como se produce una integración de archivos de historial                                                                                                                                                                                                    |
 | Repair log file                   | 7     | Archivo de historial de las reparaciones realizadas en la base por el Centro de seguridad y mantenimiento (CSM). Almacenado en la carpeta Logs.                                                                                                                                                                                                                                                                                                                                    |
 | Request log file                  | 10    | Archivo de registro de peticiones cliente/servidor estándar (excluyendo las peticiones web) creado por los comandos `SET DATABASE PARAMETER(4D Server log recording)` o `SET DATABASE PARAMETER(Client log recording)`. Si se ejecuta en el servidor, se devuelve el archivo de registro del servidor (almacenado en la carpeta Logs del servidor). Si se ejecuta en el cliente, se devuelve el archivo de registro del cliente (almacenado en la carpeta Logs local del cliente). |
@@ -122,7 +122,7 @@ En el parámetro *fileConstant*, pase un archivo 4D interno o sistema, utilizand
 
 Si el objetivo *fileConstant* no existe, se devuelve un objeto null. No se produce ningún error.
 
-If the command is called from a component, pass the optional *parameter to get the path of the host database. Otherwise, if you omit the* parameter, a null object is always returned.
+If the command is called from a component, pass the optional `*` parameter to get the path of the host database. Otherwise, if you omit the `*` parameter, a null object is always returned.
 
 ## 4D.File.new()
 
@@ -138,7 +138,7 @@ If the command is called from a component, pass the optional *parameter to get t
 
 #### Descripción
 
-The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and returns a new object of the `4D.File` type<!-- END REF -->. Es idéntico al comando [`File`](#file) (acceso directo).
+La función `4D.File.new()` <!-- REF #4D.File.new().Summary -->crea y devuelve un nuevo objeto del tipo `4D.File`<!-- END REF -->. Es idéntico al comando [`File`](#file) (acceso directo).
 
 > Se recomienda utilizar el comando de acceso directo[`File<`](#file) en lugar de `4D.File.new()`.
 
@@ -161,7 +161,7 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 
 
 <!--REF #FileClass.create().Params -->
-| Parámetros | Type    |    | Descripción                                                                                   |
+| Parámetros | Tipo    |    | Descripción                                                                                   |
 | ---------- | ------- | -- | --------------------------------------------------------------------------------------------- |
 | Result     | Boolean | <- | True si el archivo se ha creado con éxito, false en caso contrario|<!-- END REF -->
 
@@ -169,7 +169,7 @@ The `4D.File.new()` function <!-- REF #4D.File.new().Summary -->creates and retu
 
 #### Descripción
 
-The `.create()` function <!-- REF #FileClass.create().Summary -->creates a file on disk according to the properties of the `File` object<!-- END REF -->.
+La función `.create()` <!-- REF #FileClass.create().Summary -->crea un archivo en el disco según las propiedades del objeto `File`<!-- END REF -->.
 
 Si es necesario, la función crea la jerarquía de carpetas como se describe en las propiedades [platformPath](#platformpath) o [path](#path). Si el archivo ya existe en el disco, la función no hace nada (no se lanza ningún error) y devuelve false.
 
@@ -202,7 +202,7 @@ Creación de un archivo de preferencias en la carpeta principal:
 
 
 <!--REF #FileClass.createAlias().Params -->
-| Parámetros        | Type      |    | Descripción                                                            |
+| Parámetros        | Tipo      |    | Descripción                                                            |
 | ----------------- | --------- | -- | ---------------------------------------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Carpeta de destino para el alias o el acceso directo                   |
 | aliasName         | Text      | -> | Nombre del alias o del atajo                                           |
@@ -213,7 +213,7 @@ Creación de un archivo de preferencias en la carpeta principal:
 
 #### Descripción
 
-The `.createAlias()` function <!-- REF #FileClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the file with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
+La función `.createAlias()` <!-- REF #FileClass.createAlias().Summary -->crea un alias (macOS) o un acceso directo (Windows)<!-- END REF --> al archivo con el nombre *aliasName* especificado en la carpeta designada por el objeto *destinationFolder*.
 
 Pase el nombre del alias o del acceso directo a crear en el parámetro *aliasName*.
 
@@ -258,7 +258,7 @@ Quiere crear un alias para un archivo en su carpeta principal:
 
 
 <!-- REF #FileClass.delete().Params -->
-| Parámetros | Type |  | Descripción                                             |
+| Parámetros | Tipo |  | Descripción                                             |
 | ---------- | ---- |  | ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
@@ -266,7 +266,7 @@ Quiere crear un alias para un archivo en su carpeta principal:
 
 #### Descripción
 
-The `.delete()` function <!-- REF #FileClass.delete().Summary -->deletes the file<!-- END REF -->.
+La función `.delete()` <!-- REF #FileClass.delete().Summary -->elimina el archivo<!-- END REF -->.
 
 Si el archivo está abierto, se genera un error.
 
@@ -307,7 +307,7 @@ Desea eliminar un archivo específico en la carpeta de la base de datos:
 
 
 <!--REF #FileClass.getAppInfo().Params -->
-| Parámetros | Type   |    | Descripción                                                                            |
+| Parámetros | Tipo   |    | Descripción                                                                            |
 | ---------- | ------ | -- | -------------------------------------------------------------------------------------- |
 | Result     | Object | <- | Contenido del archivo de recurso versión .exe/.dll o .plist|<!-- END REF -->
 
@@ -315,7 +315,7 @@ Desea eliminar un archivo específico en la carpeta de la base de datos:
 
 #### Descripción
 
-The `.getAppInfo()` function <!-- REF #FileClass.getAppInfo().Summary -->returns the contents of a **.exe**, **.dll** or **.plist** file information as an object<!-- END REF -->.
+La función `.getAppInfo()` <!-- REF #FileClass.getAppInfo().Summary -->devuelve el contenido de un archivo **.exe**, **.dll** o **.plist** como un objeto<!-- END REF -->.
 
 La función debe utilizarse con un archivo .exe, .dll o .plist existente. Si el archivo no existe en el disco o no es un archivo .exe, .dll o .plist válido, la función devuelve un objeto vacío (no se genera ningún error).
 
@@ -327,16 +327,12 @@ La función debe utilizarse con un archivo .exe, .dll o .plist existente. Si el 
 
 Todos los valores de propiedades son de tipo Texto.
 
-| Propiedad        | Type |
-| ---------------- | ---- |
-| InternalName     | Text |
-| ProductName      | Text |
-| CompanyName      | Text |
-| LegalCopyright   | Text |
-| ProductVersion   | Text |
-| FileDescription  | Text |
-| FileVersion      | Text |
-| OriginalFilename | Text |
+| Propiedad    | Tipo |
+| ------------ | ---- |
+| InternalName | Text |
+| ProductName  | Text |
+
+|CompanyName|Text| |LegalCopyright|Text| |ProductVersion|Text| |FileDescription|Text| |FileVersion|Text| |OriginalFilename|Text|
 
 **Objeto devuelto con un archivo .plist**
 
@@ -399,7 +395,7 @@ ALERT($info.Copyright)
 <!--REF #FileClass.moveTo().Syntax -->**.moveTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } ) : 4D.File<!-- END REF -->
 
 <!--REF #FileClass.moveTo().Params -->
-| Parámetros        | Type      |    | Descripción                               |
+| Parámetros        | Tipo      |    | Descripción                               |
 | ----------------- | --------- | -- | ----------------------------------------- |
 | destinationFolder | 4D.Folder | -> | Carpeta de destino                        |
 | newName           | Text      | -> | Nombre completo del archivo trasladado    |
@@ -411,7 +407,7 @@ ALERT($info.Copyright)
 
 #### Descripción
 
-The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
+La función `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->mueve o renombra el objeto `File` en el *destinationFolder* especificado<!-- END REF -->.
 
 La *destinationFolder* debe existir en el disco, de lo contrario se genera un error.
 
@@ -454,7 +450,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 
 <!--REF #FileClass.rename().Params -->
-| Parámetros | Type    |    | Descripción                                   |
+| Parámetros | Tipo    |    | Descripción                                   |
 | ---------- | ------- | -- | --------------------------------------------- |
 | newName    | Text    | -> | Nuevo nombre completo para el archivo         |
 | Result     | 4D.File | <- | Archivo renombrado|<!-- END REF -->
@@ -463,7 +459,7 @@ $myFile.moveTo($DocFolder.folder("Archives");"Infos_old.txt")
 
 #### Descripción
 
-The `.rename()` function <!-- REF #FileClass.rename().Summary -->renames the file with the name you passed in *newName* and returns the renamed `File` object<!-- END REF -->.
+La función `.rename()` <!-- REF #FileClass.rename().Summary -->renombra el archivo con el nombre que se le ha pasado en *newName* y devuelve el objeto `File` renombrado<!-- END REF -->.
 
 El parámetro *newName* debe cumplir con las reglas de nomenclatura (por ejemplo, no debe contener caracteres como ":", "/", etc.), de lo contrario se devuelve un error. Si ya existe un archivo con el mismo nombre, se devuelve un error.
 
@@ -497,7 +493,7 @@ Quieresrenombrar "ReadMe.txt" como "ReadMe_new.txt":
 
 
 <!--REF #FileClass.setAppInfo().Params -->
-| Parámetros | Type   |    | Descripción                                                                                                       |
+| Parámetros | Tipo   |    | Descripción                                                                                                       |
 | ---------- | ------ | -- | ----------------------------------------------------------------------------------------------------------------- |
 | info       | Object | -> | Propiedades a escribir en el archivo .plist o el recurso versión del archivo .exe/.dll|<!-- END REF -->
 
@@ -505,9 +501,9 @@ Quieresrenombrar "ReadMe.txt" como "ReadMe_new.txt":
 
 #### Descripción
 
-The `.setAppInfo()` function <!-- REF #FileClass.setAppInfo().Summary -->writes the *info* properties as information contents of a **.exe**, **.dll** or **.plist** file<!-- END REF -->.
+La función `.setAppInfo()` <!-- REF #FileClass.setAppInfo().Summary -->escribe las propiedades de *info* como contenido informativo de un archivo **.exe**, **.dll** o **.plist**<!-- END REF -->.
 
-La función debe utilizarse con un archivo .exe, .dll o .plist existente. The function must be used with an existing .exe, .dll or .plist file.
+La función debe utilizarse con un archivo .exe, .dll o .plist existente. Si el archivo no existe en el disco o no es un archivo .exe, .dll o .plist válido, la función no hace nada (no se genera ningún error).
 
 > La función sólo admite archivos .plist en formato xml (basados en texto). Se devuelve un error si se utiliza con un archivo .plist en formato binario.
 
@@ -517,7 +513,7 @@ La función debe utilizarse con un archivo .exe, .dll o .plist existente. The fu
 
 Cada propiedad válida definida en el parámetro objeto *info* se escribe en el recurso de versión del archivo .exe o .dll. Las propiedades disponibles son (toda otra propiedad será ignorada):
 
-| Propiedad        | Type |
+| Propiedad        | Tipo |
 | ---------------- | ---- |
 | InternalName     | Text |
 | ProductName      | Text |
@@ -581,7 +577,7 @@ $infoPlistFile.setAppInfo($info)
 
 
 <!--REF #FileClass.setContent().Params -->
-| Parámetros | Type |    | Descripción                                                  |
+| Parámetros | Tipo |    | Descripción                                                  |
 | ---------- | ---- | -- | ------------------------------------------------------------ |
 | content    | BLOB | -> | Nuevos contenidos para el archivo|<!-- END REF -->
 
@@ -591,7 +587,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### Descripción
 
-The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrites the entire content of the file using the data stored in the *content* BLOB<!-- END REF -->. .
+La función `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescribe todo el contenido del archivo utilizando los datos almacenados en el BLOB *content*<!-- END REF -->. .
 
 #### Ejemplo
 
@@ -615,7 +611,7 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 
 <!--REF #FileClass.setText().Params -->
-| Parámetros  | Type    |    | Descripción                                                           |
+| Parámetros  | Tipo    |    | Descripción                                                           |
 | ----------- | ------- | -- | --------------------------------------------------------------------- |
 | text        | Text    | -> | Texto a almacenar en el archivo                                       |
 | charSetName | Text    | -> | Nombre del juego de caracteres                                        |
@@ -628,7 +624,7 @@ The `.setContent( )` function <!-- REF #FileClass.setContent().Summary -->rewrit
 
 #### Descripción
 
-The `.setText()` function <!-- REF #FileClass.setText().Summary -->writes *text* as the new contents of the file<!-- END REF -->.
+La función `.setText()` <!-- REF #FileClass.setText().Summary -->escribe *text* como el nuevo contenido del archivo<!-- END REF -->.
 
 Si el archivo al que se hace referencia en el objeto `File` no existe en el disco, la función lo crea. Cuando el archivo ya existe en el disco, se borra su contenido anterior, excepto si ya está abierto, en cuyo caso se bloquea su contenido y se genera un error.
 
