@@ -1053,9 +1053,9 @@ $es:=ds.Movie.query("roles.actor.lastName = :1 AND roles.actor.lastName = :2";"H
 // $es is empty
 ```
 
-基本的に、この問題はクエリの内部ロジックに関連しています。 値が "A" と "B" の両方である属性を検索することはできません。
+基本的に、この問題はクエリの内部ロジックに関連しています。値が "A" と "B" の両方である属性を検索することはできません。
 
-**比較演算子**: *attributePath* 引数と *value* 引数の比較に使用する記号 以下の記号がサポートされます:
+このようなクエリを実行するために、ORDA では特別な構文を用意しています。具体的には、文字列内で使用される追加のリレート属性ずべてにおいて、**{}** の間に *クラスインデックス* を追加します。
 
 ```4d
 "relationAttribute.attribute = :1 AND relationAttribute{x}.attribute = :2 [AND relationAttribute{y}.attribute...]"
