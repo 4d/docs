@@ -8,7 +8,7 @@ title: Classes
 
 Le langage 4D prend en charge le concept de **classes**. Dans un langage de programmation, l'utilisation d'une classe vous permet de définir le comportement d'un objet avec des propriétés et des fonctions associées.
 
-Chaque objet est une instance de sa classe. Une fois qu'une classe utilisateur (user class) est définie, vous pouvez **instancier** des objets de cette classe n'importe où dans votre code. Une classe peut s'étendre à une autre classe avec le mot-clé [`extend`](#class-extends-classname), puis hériter de ses [fonctions](#function) et de ses propriétés ([statiques](#class-constructor) and [calculés](#function-get-and-function-set)).
+Chaque objet est une instance de sa classe. Une fois qu'une classe utilisateur (user class) est définie, vous pouvez **instancier** des objets de cette classe n'importe où dans votre code. Une classe peut [`étendre`](#class-extends-classname) une autre classe, et hérite alors de ses [fonctions](#function) et de ses propriétés ([statiques](#class-constructor) et [calculées](#function-get-and-function-set)).
 
 > Les modèles de classe 4D et de classe JavaScript sont similaires, et sont basés sur une chaîne de prototypes.
 
@@ -60,7 +60,7 @@ Pour supprimer une classe existante, vous pouvez :
 - sur votre disque, supprimer le fichier de classe .4dm du dossier "Classes",
 - dans l'Explorateur 4D, sélectionner la classe et cliquer sur ![](../assets/en/Users/MinussNew.png) ou choisir **Déplacer vers la corbeille** dans le menu contextuel.
 
-### Using the 4D interface
+### Utilisation de l'interface 4D
 
 Les fichiers de classe sont automatiquement stockés à l'emplacement approprié lorsqu'ils sont créés via l'interface de 4D, soit via le menu **Fichier**, soit via l'Explorateur.
 
@@ -89,7 +89,7 @@ Dans les différentes fenêtres 4D (éditeur de code, compilateur, débogueur, e
   - une fonction de classe est un bloc de code
   - **Aller à définition...** sur un objet membre permet de rechercher des déclarations de fonction de classe; par exemple, "$o.f()" donnera comme résultat de recherche "Function f".
   - **Chercher les références...** sur la déclaration de fonction de classe recherche la fonction utilisée comme membre d'objet; par exemple, "Function f" donnera comme résultat "$o.f()".
-- In the Runtime explorer and Debugger, class functions are displayed with the `\&#060;ClassName&#062;` constructor or `\&#060;ClassName&#062;.\&#060;FunctionName&#062;` format.
+- Dans l'explorateur d'exécution et le débogueur, les fonctions de classe sont affichées au format `\&#060;ClassName&#062 ;` constructor ou `\&#060;ClassName&#062 ;.\&#060;FunctionName&#062;`.
 
 ## Class stores
 
@@ -170,7 +170,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
-Les fonctions de classe sont des propriétés spécifiques de la classe. Les fonctions de classe sont des propriétés spécifiques de la classe.
+Les fonctions de classe sont des propriétés spécifiques de la classe. Ce sont des objets de la classe [4D.Function](API/FunctionClass.md#about-4dfunction-objects).
 
 Dans le fichier de définition de classe, les déclarations de fonction utilisent le mot-clé `Function`, et le nom de la fonction. Le nom de la fonction doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties).
 
@@ -202,10 +202,10 @@ Dans le code de l'application, les fonctions de classes sont appelées comme des
   - [`apply()`](API/FunctionClass.md#apply)
   - [`call()`](API/FunctionClass.md#call)
 
-> **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute:
+> **Attention thread-safe :** Si une fonction de classe n'est pas thread-safe et est appelée par une méthode ayant l'attribut "Can be run in preemptive process" :
 > 
-> - the compiler does not generate any error (which is different compared to regular methods),
-> - an error is thrown by 4D only at runtime.
+> - le compilateur ne génère pas d'erreur (ce qui est différent par rapport aux méthodes standard),
+> - une erreur est déclenchée par 4D uniquement au moment de l'exécution.
 
 #### Paramètres
 
@@ -252,7 +252,7 @@ Class constructor($width : Integer; $height : Integer)
  This.height:=$height
  This.width:=$width
 
-// Function definition
+// Définition de fonction
 Function getArea()->$result : Integer
  $result:=(This.height)*(This.width)
 ```
@@ -269,7 +269,7 @@ $area:=$rect.getArea() //5000
 
 #### Exemple 2
 
-Dans cet exemple, nous utilisons [`l'expression return`](parameters.md#return-expression):
+Dans cet exemple, nous utilisons l'[`expression return`](parameters.md#return-expression):
 
 ```4d
 Function getRectArea($width : Integer; $height : Integer) : Integer
@@ -302,10 +302,6 @@ Function set <name>($parameterName : type)
 Si la propriété n'est pas accédée, le code n'est jamais exécuté.
 
 Les propriétés calculées sont conçues pour gérer les données qui n'ont pas besoin d'être conservées en mémoire. Elles sont généralement basées sur des propriétés persistantes. Par exemple, si un objet de classe contient comme propriété persistante le *prix brut* et le *taux de TVA*, le *prix net* pourrait être traité par une propriété calculée.
-
-Dans le fichier de définition de la classe, les déclarations de propriétés calculées utilisent les mots-clés `Function get` (le *getter*) et `Function set` (le *setter*), suivis du nom de la propriété.
-
-Dans le fichier de définition de la classe, les déclarations de propriétés calculées utilisent les mots-clés `Function get` (le *getter*) et `Function set` (le *setter*), suivis du nom de la propriété.
 
 Dans le fichier de définition de la classe, les déclarations de propriétés calculées utilisent les mots-clés `Function get` (le *getter*) et `Function set` (le *setter*), suivis du nom de la propriété. Le nom doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties).
 
@@ -371,7 +367,7 @@ Une fonction class constructor, qui accepte des [paramètres](#parameters), peut
 
 Dans ce cas, lorsque vous appelez la fonction [`new()`](API/ClassClass.md#new), le class constructor est appelé avec les paramètres optionnellement passés à la fonction `new()`.
 
-Une fonction class constructor, qui accepte des [paramètres](#parameters), peut être utilisée pour définir une classe utilisateur.
+Pour une fonction class constructor, la commande `Current method name` retourne : `<ClassName>:constructor`, par exemple "MyClass.constructor".
 
 #### Exemple
 
@@ -425,11 +421,11 @@ Class extends Polygon
 
 Class constructor ($side : Integer)
 
- // It calls the parent class's constructor with lengths
- // provided for the Polygon's width and height
+ // Appelle le constructeur de la classe parente avec les côtés
+ // fournies pour la largeur et la hauteur du Polygone
  Super($side;$side)
- // In derived classes, Super must be called before you
- // can use 'This'
+ // Dans les classes dérivées, Super doit être appelé
+ // avant que vous puissiez utiliser 'This'
  This.name:="Square"
 
 
@@ -511,11 +507,11 @@ Class extends Rectangle
 
 Class constructor ($side : Integer)
 
- // It calls the parent class's constructor with lengths
- // provided for the Rectangle's width and height
+ // Appelle le constructeur de la classe parente avec les côtés
+ // fournies pour la largeur et la hauteur du Rectangle
  Super($side;$side)
- // In derived classes, Super must be called before you
- // can use 'This'
+ // Dans les classes dérivées, Super doit être appelé
+ // avant que vous puissiez utiliser 'This'
  This.name:="Square"
 
 Function getArea()
@@ -535,7 +531,7 @@ Function nbSides()
  $0:="I have 4 sides"
 ```
 
-Vous avez également créé la classe `Square` contenant une fonction qui appelle la fonction superclasse :
+Vous avez également créé la classe `Square` contenant une fonction qui appelle la fonction superclass :
 
 ```4d
 //Class: Square
@@ -586,8 +582,8 @@ Lorsqu'une fonction [class constructor](#class-constructor) est utilisée (avec 
 
 Class Constructor  
 
- // Create properties on This as
- // desired by assigning to them
+ // Créer des propriétés en
+ // les assignant au This
  This.a:=42 
 ```
 
