@@ -455,9 +455,9 @@ En cas de modification, le serveur doit être redémarré pour utiliser la nouve
 
 ## Nom
 
-| Peut être configuré via | Nom                                 | Commentaires |
-| ----------------------- | ----------------------------------- | ------------ |
-| objet webServer         | [`nom`](API/WebServerClass.md#name) |              |
+| Peut être configuré via | Nom                                  | Commentaires |
+| ----------------------- | ------------------------------------ | ------------ |
+| objet webServer         | [`name`](API/WebServerClass.md#name) |              |
 
 
 Nom de l'application de serveur Web. Pratique lors du démarrage des serveurs Web.
@@ -579,7 +579,7 @@ Scalable session management enabling status for the 4D web server. Web server se
 | objet webServer         | [`sessionCookieDomain`](API/WebServerClass.md#sessioncookiedomain) |              |
 | `WEB SET OPTION`        | `Web session cookie domain`                                        |              |
 
-Champ "path" du cookie de session. Utilisé pour contrôler la portée des cookies de session. Par exemple, si vous définissez la valeur "/4DACTION" pour ce sélecteur, le client enverra un cookie uniquement pour les requêtes dynamiques commençant par 4DACTION, et non pour les images, les pages statiques, etc.
+Champ "path" du cookie de session. Utilisé pour contrôler la portée des cookies de session. Si vous définissez, par exemple, la valeur "/*.4d.fr" pour ce sélecteur, le client n'enverra un cookie que lorsque la demande est adressée au domaine ".4d.fr", ce qui exclut les serveurs hébergeant des données statiques externes.
 
 
 ## Nom du cookie de session

@@ -56,7 +56,7 @@ A l’inverse, si seul le fichier de données est sauvegardé, l’accès à la 
 - Avec 4D version monoposte, la base est verrouillée en lecture et en écriture, tous les process sont gelés. Toute action est alors impossible.
 - Avec 4D Server, la base est verrouillée uniquement en écriture, les postes clients peuvent consulter les données. Si un poste client envoie une requête d’ajout, de suppression ou de modification au serveur, il obtient une fenêtre l’invitant à attendre la fin de la sauvegarde. Une fois la base sauvegardée, la fenêtre disparaît d’elle-même et l’action est effectuée. Pour annuler la requête en cours et ne pas avoir à attendre la fin de la sauvegarde, il suffit de cliquer sur le bouton **Annuler l’opération**. Cependant, si l’action en attente provient d’une méthode lancée avant la sauvegarde, il est déconseillé de l’annuler car seules les opérations restant à effectuer seront annulées. Or, une méthode “à moitié” exécutée peut conduire à des incohérences logiques dans la base.
 
-> When the action waiting to be executed comes from a method and the user clicks the **Cancel operation** button, 4D Server returns error -9976 (This command cannot be executed because the database backup is in progress).
+> Lorsque l’action en attente provient d’une méthode et que l’utilisateur clique sur le bouton **Annuler l’opération**, 4D Server renvoie l’erreur -9976 (Cette commande ne peut être exécutée car la base est en cours de sauvegarde).
 
 ### En cas de problème au cours de la sauvegarde
 

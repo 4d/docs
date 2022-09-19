@@ -102,7 +102,7 @@ Project folder Project Sources Classes Polygon.4dm
 
 #### cs -> classStore
 
-| 引数         | タイプ    |    | 詳細                          |
+| 引数         | タイプ    |    | 説明                          |
 | ---------- | ------ | -- | --------------------------- |
 | classStore | object | <- | プロジェクトまたはコンポーネントのユーザークラスストア |
 
@@ -120,7 +120,7 @@ $instance:=cs.myClass.new()
 
 #### 4D -> classStore
 
-| 引数         | タイプ    |    | 詳細       |
+| 引数         | タイプ    |    | 説明       |
 | ---------- | ------ | -- | -------- |
 | classStore | object | <- | 4Dクラスストア |
 
@@ -161,7 +161,7 @@ Class オブジェクトは [共有オブジェクト](shared.md) です。し�
 - `Class Constructor`: オブジェクトのスタティックプロパティを定義します。
 - `Class extends <ClassName>`: 継承を定義します。
 
-### `関数`
+### `Function`
 
 #### シンタックス
 
@@ -442,7 +442,7 @@ Class constructor ($side : Integer)
 Super {( param{;...;paramN} )} {-> Object}
 ```
 
-| 引数    | タイプ    |    | 詳細               |
+| 引数    | タイプ    |    | 説明               |
 | ----- | ------ | -- | ---------------- |
 | param | 混合     | -> | 親コンストラクターに受け渡す引数 |
 | 戻り値   | object | <- | 親オブジェクト          |
@@ -553,7 +553,7 @@ $message:=$square.description() // I have 4 sides which are all equal
 This -> Object
 ```
 
-| 引数  | タイプ    |    | 詳細         |
+| 引数  | タイプ    |    | 説明         |
 | --- | ------ | -- | ---------- |
 | 戻り値 | object | <- | カレントオブジェクト |
 

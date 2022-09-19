@@ -7,7 +7,7 @@ title: Liste des méthodes
 
 [A](#a) - [C](#c) - [D](#d) - [E](#e) - [F](#f) - [G](#g) - [I](#i) - [M](#m) - [N](#n) - [O](#o) - [P](#p) - [R](#r) - [S](#s)
 
-## A
+## Une
 
 ### VP ADD FORMULA NAME
 
@@ -20,7 +20,7 @@ title: Liste des méthodes
 | ---------- | ------ | -- | ------------------------------------------------------- |
 | vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro                 |
 | vpFormula  | Text   | -> | Formule 4D View Pro                                     |
-| nom        | Text   | -> | Nom de la formule                                       |
+| name       | Text   | -> | Nom de la formule                                       |
 | options    | Object | -> | Options de la formule nommée|<!-- END REF -->
 
 |
@@ -64,7 +64,7 @@ VP ADD FORMULA NAME("ViewProArea";"SUM($A$1:$A$10)";"Total2")
 | Paramètres | Type   |    | Description                                             |
 | ---------- | ------ | -- | ------------------------------------------------------- |
 | rangeObj   | Text   | -> | Objet plage                                             |
-| nom        | Text   | -> | Nom de la formule                                       |
+| name       | Text   | -> | Nom de la formule                                       |
 | options    | Object | -> | Options de la formule nommée|<!-- END REF -->
 
 |
@@ -152,7 +152,7 @@ Result:
 | ---------- | ------- | -- | -------------------------------------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro      |
 | sheet      | Integer | -> | Indice de la nouvelle feuille                |
-| nom        | Text    | -> | Nom de la feuille|<!-- END REF -->
+| name       | Text    | -> | Nom de la feuille|<!-- END REF -->
 
 |
 
@@ -796,7 +796,7 @@ The *tableColumns* collection determines the structure of the table's columns. E
   | --------- | ---- | ------------------------------------------------ | ----------- |
   | dataField | Text | table column's property name in the data context | Non         |
   | formatter | Text | table column's formatter                         | Non         |
-  | nom       | Text | table column's name                              | Oui         |
+  | name      | Text | table column's name                              | Oui         |
 
 The length of the *tableColumns* collection must be equal to the range column count:
 
@@ -1739,7 +1739,7 @@ Dans *rangeObj*, passez la plage dont vous souhaitez récupérer la formule. Si 
 | Paramètres | Type   |    | Description                                                                      |
 | ---------- | ------ | -- | -------------------------------------------------------------------------------- |
 | vpAreaName | Text   | -> | Nom d'objet formulaire zone 4D View Pro                                          |
-| nom        | Text   | -> | Nom de la plage nommée                                                           |
+| name       | Text   | -> | Nom de la plage nommée                                                           |
 | scope      | Number | -> | "Scope" cible (par défaut=feuille courante)                                      |
 | Résultat   | Text   | <- | Définition de la formule nommée ou de la plage nommée|<!-- END REF -->
 
@@ -2188,7 +2188,7 @@ Pour obtenir le nombre de feuilles et définir la feuille courante comme étant 
 | Paramètres | Type    |    | Description                             |
 | ---------- | ------- | -- | --------------------------------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro |
-| nom        | Text    | -> | Nom de la feuille                       |
+| name       | Text    | -> | Nom de la feuille                       |
 | Résultat   | Integer | <- | Sheet index|<!-- END REF -->
 
 |
@@ -3186,7 +3186,7 @@ VP RECOMPUTE FORMULAS("ViewProArea")
 | Paramètres | Type    |    | Description                                                     |
 | ---------- | ------- | -- | --------------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                         |
-| nom        | Text    | -> | Nom de la plage nommée ou de la formule nommée à supprimer      |
+| name       | Text    | -> | Nom de la plage nommée ou de la formule nommée à supprimer      |
 | scope      | Integer | -> | Target scope (default=current sheet)|<!-- END REF -->
 
 |
@@ -5016,7 +5016,7 @@ VP SET SHEET COUNT("ViewProArea";3)
 | Paramètres | Type    |    | Description                                                 |
 | ---------- | ------- | -- | ----------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                     |
-| nom        | Text    | -> | New name for the sheet                                      |
+| name       | Text    | -> | New name for the sheet                                      |
 | sheet      | Integer | -> | Index of the sheet to be renamed|<!-- END REF -->
 
 |

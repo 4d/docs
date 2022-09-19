@@ -63,7 +63,7 @@ Un objet avec deux propriétés :
 
 | Propriété | Type | Description                     |
 | --------- | ---- | ------------------------------- |
-| nom       | Text | Nom à afficher (peut être null) |
+| name      | Text | Nom à afficher (peut être null) |
 | email     | Text | Adresse email                   |
 
 #### Collection
@@ -72,7 +72,7 @@ Une collection d'objets adresse.
 
 ### Traitement du body
 
-Les propriétés [`textBody`](#textbody) et [`htmlBody`](#htmlbody) sont utilisées uniquement par la fonction [SMTP.send()](SMTPTransporterClass.md#send) pour permettre d'envoyer des emails simples. Lorsque les deux propriété sont remplies, le type MIME content-type multipart/alternative est utilisé. Le client email doit alors reconnaître la partie multipart/alternative et afficher la partie texte ou html nécessaire.
+Les propriétés [`textBody`](#textbody) et [`htmlBody`](#htmlbody) sont utilisées uniquement par la fonction [SMTP.send()](SMTPTransporterClass.md#send) pour permettre d'envoyer des emails simples. Lorsque les deux propriétés sont remplies, le type MIME content-type multipart/alternative est utilisé. Le client email doit alors reconnaître la partie multipart/alternative et afficher la partie texte ou html nécessaire.
 
 [`bodyStructure`](#bodystructure) et [`bodyValues`](#bodyvalues) sont utilisés par le [SMTP](SMTPTransporterClass.md) lorsque l'[objet Email](email-object) est construit depuis un document MIME, e.g. généré par la commande `MAIL Convert from MIME`. Dans ce cas, les deux propriétés `bodyStructure` et `bodyValues` doivent être passées ensemble, et il est déconseillé d'utiliser `textBody` et `htmlBody`.
 
@@ -108,7 +108,7 @@ Les propriétés [`textBody`](#textbody) et [`htmlBody`](#htmlbody) sont utilis�
 
 #### Description
 
-The `.attachments` property contains a <!-- REF #EmailObjectClass.attachments.Summary -->collection of `4D.MailAttachment` object(s)<!-- END REF -->.
+La propriété `.attachments` contient une <!-- REF #EmailObjectClass.attachments.Summary -->collection d'objets `4D.MailAttachment`<!-- END REF -->.
 
 Les objets Attachment (pièce jointe) sont créés à l'aide de la commande [`MAIL New attachment`](MailAttachmentClass.md#mail-new-attachment). Les objets Attachment ont des [propriétés et fonctions](MailAttachmentClass.md) spécifiques.
 
@@ -118,7 +118,7 @@ Les objets Attachment (pièce jointe) sont créés à l'aide de la commande [`MA
 
 #### Description
 
-The `.bcc` property contains the <!-- REF #EmailObjectClass.bcc.Summary -->Blind Carbon Copy (BCC) hidden email recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
+La propriété `.bcc` contient les <!-- REF #EmailObjectClass.bcc.Summary -->[adresse(s)](#email-addresses) des destinataires cachés en copie carbone invisible (cci) de l'email<!-- END REF -->.
 
 ## .bodyStructure
 
@@ -126,7 +126,7 @@ The `.bcc` property contains the <!-- REF #EmailObjectClass.bcc.Summary -->Blind
 
 #### Description
 
-The `.bodyStructure` property contains the <!-- REF #EmailObjectClass.bodyStructure.Summary -->*EmailBodyPart* object, i.e. the full MIME structure of the message body (optional)<!-- END REF -->. Voir section [Traitement du body](#traitement-du-body).
+La propriété `.bodyStructure` contient l' <!-- REF #EmailObjectClass.bodyStructure.Summary -->objet *EmailBodyPart*, c'est-à-dire la structure MIME complète du corps du message (optionnel)<!-- END REF -->. Voir section [Traitement du body](#traitement-du-body).
 
 L'objet `.bodyStructure` contient les propriété suivantes :
 
@@ -148,7 +148,7 @@ L'objet `.bodyStructure` contient les propriété suivantes :
 
 #### Description
 
-The `.bodyValues` property contains the <!-- REF #EmailObjectClass.bodyValues.Summary -->*EmailBodyValue* object, containing an object for each \<partID\> of `bodyStructure` (optional)<!-- END REF -->. Voir section [Traitement du body](#traitement-du-body).
+La propriété `.bodyValues` contient l' <!-- REF #EmailObjectClass.bodyValues.Summary -->objet *EmailBodyValue*, contenant lui-même un objet pour chaque \<partID\> de `bodyStructure` (optionnel)<!-- END REF -->. Voir section [Traitement du body](#traitement-du-body).
 
 L'objet `.bodyValues` contient les propriété suivantes :
 
@@ -163,7 +163,7 @@ L'objet `.bodyValues` contient les propriété suivantes :
 
 #### Description
 
-The `.cc` property contains the <!-- REF #EmailObjectClass.cc.Summary -->Carbon Copy (CC) additional email recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
+La propriété `.cc` contient la ou les <!-- REF #EmailObjectClass.cc.Summary -->[adresse(s) supplémentaire(s)](#email-addresses) des destinataires en Copie Carbone (CC) de l'email<!-- END REF -->.
 
 ## .comments
 
@@ -171,7 +171,7 @@ The `.cc` property contains the <!-- REF #EmailObjectClass.cc.Summary -->Carbon 
 
 #### Description
 
-The `.comments` property contains an <!-- REF #EmailObjectClass.comments.Summary -->additional comments header<!-- END REF -->.
+La propriété `.comments` contient un <!-- REF #EmailObjectClass.comments.Summary -->en-tête de commentaires supplémentaire<!-- END REF -->.
 
 Les commentaires n'apparaissent que dans la zone d'en-tête du message (le body du message reste inchangé).
 
@@ -183,7 +183,7 @@ Pour les exigences propres au formatage, veuillez consulter la [RFC#5322](https:
 
 #### Description
 
-The `.from` property contains the <!-- REF #EmailObjectClass.from.Summary -->Originating [address(es)](#email-addresses) of the email<!-- END REF -->.
+La propriété `.from` contient la ou les <!-- REF #EmailObjectClass.from.Summary -->[adresse(s)](#email-addresses) d'origine de l'e-mail<!-- END REF -->.
 
 Chaque email envoyé comporte à la fois les adresses du [sender](#sender) et du **from** :
 
@@ -198,7 +198,7 @@ Pour mieux livrer l'email, il est recommandé d'utiliser les mêmes adresses pou
 
 #### Description
 
-The `.headers` property contains a <!-- REF #EmailObjectClass.headers.Summary -->collection of `EmailHeader` objects, in the order they appear in the message<!-- END REF -->. Cette propriété permet aux utilisateurs d'ajouter des en-têtes extended (enregistrés) ou des en-têtes user-defined (non enregistrés, commençant par "X").
+La propriété `.headers` contient une <!-- REF #EmailObjectClass.headers.Summary -->collection d'objets `EmailHeader`, dans l'ordre où ils apparaissent dans le message<!-- END REF -->. Cette propriété permet aux utilisateurs d'ajouter des en-têtes extended (enregistrés) ou des en-têtes user-defined (non enregistrés, commençant par "X").
 
 > Si une propriété d'objet `EmailHeader` définit un en-tête tel que "from" ou "cc" qui est déjà défini comme propriété au niveau du mail, la propriété `EmailHeader` est ignorée.
 
@@ -215,7 +215,7 @@ Chaque objet de la collection de headers peut contenir les propriétés suivante
 
 #### Description
 
-The `.htmlBody` property contains the <!-- REF #EmailObjectClass.htmlBody.Summary -->HTML representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. Voir section [Traitement du body](#traitement-du-body).
+La propriété `.htmlBody` contient la <!-- REF #EmailObjectClass.htmlBody.Summary -->représentation HTML de l'email (le jeu de caractères par défaut est UTF-8) (facultatif, SMTP uniquement)<!-- END REF -->. Voir section [Traitement du body](#traitement-du-body).
 
 ## .id
 
@@ -225,7 +225,7 @@ The `.htmlBody` property contains the <!-- REF #EmailObjectClass.htmlBody.Summar
 
 [IMAP transporter](IMAPTransporterClass.md) uniquement.
 
-The `.id` property contains the <!-- REF #EmailObjectClass.id.Summary -->unique ID from the IMAP server<!-- END REF -->.
+La propriété `.id` contient l' <!-- REF #EmailObjectClass.id.Summary -->ID unique du serveur IMAP<!-- END REF -->.
 
 ## .inReplyTo
 
@@ -233,7 +233,7 @@ The `.id` property contains the <!-- REF #EmailObjectClass.id.Summary -->unique 
 
 #### Description
 
-The `.inReplyTo` property contains the <!-- REF #EmailObjectClass.inReplyTo.Summary -->message identifier(s) of the original message(s) to which the current message is a reply<!-- END REF -->.
+La propriété `.inReplyTo` contient le ou les <!-- REF #EmailObjectClass.inReplyTo.Summary -->identifiant(s) du ou des message(s) d'origine auquel/auxquels le message courant est une réponse<!-- END REF -->.
 
 Pour les exigences propres au formatage, veuillez consulter la [RFC#5322](https://tools.ietf.org/html/rfc5322).
 
@@ -243,7 +243,7 @@ Pour les exigences propres au formatage, veuillez consulter la [RFC#5322](https:
 
 #### Description
 
-The `.keywords` property contains a <!-- REF #EmailObjectClass.keywords.Summary -->set of keywords as an object, where each property name is a keyword and each value is true<!-- END REF -->.
+La propriété `.keywords` contient un <!-- REF #EmailObjectClass.keywords.Summary -->ensemble de mots-clés sous forme d'objet, où chaque nom de propriété est un mot-clé et chaque valeur est mise à Vrai<!-- END REF -->.
 
 Cette propriété est l'en-tête "keywords" (voir la [RFC#4021](https://tools.ietf.org/html/rfc4021)).
 
@@ -268,11 +268,11 @@ Mots-clés réservés :
 
 ## .messageId
 
-<!-- REF #EmailObjectClass.messageId.Syntax -->**.messageId** : Texte<!-- END REF -->
+<!-- REF #EmailObjectClass.messageId.Syntax -->**.messageId** : Text<!-- END REF -->
 
 #### Description
 
-The `.messageId` property contains a <!-- REF #EmailObjectClass.messageId.Summary -->message identifier header ("message-id")<!-- END REF -->.
+La propriété `.messageId` contient un <!-- REF #EmailObjectClass.messageId.Summary -->en-tête d'identification du message ("message-id")<!-- END REF -->.
 
 Cet en-tête est généralement "desChiffresOuDesLettres@nomdededomaine", par exemple "abcdef.123456@4d.com". Cet identifiant unique est notamment utilisé sur les forums ou les listes de diffusion publiques. En général, les serveurs de messagerie ajoutent automatiquement cet en-tête aux messages qu'ils envoient.
 
@@ -284,7 +284,7 @@ Cet en-tête est généralement "desChiffresOuDesLettres@nomdededomaine", par ex
 
 [IMAP transporter](IMAPTransporterClass.md) uniquement.
 
-The `.receivedAt` property contains the <!-- REF #EmailObjectClass.receivedAt.Summary -->timestamp of the email's arrival on the IMAP server in ISO 8601 UTC format (ex: 2020-09-13T16:11:53Z)<!-- END REF -->.
+La propriété `.receivedAt` contient l' <!-- REF #EmailObjectClass.receivedAt.Summary -->horodatage de l'arrivée de l'email sur le serveur IMAP au format ISO 8601 UTC (ex : 2020-09-13T16:11:53Z)<!-- END REF -->.
 
 ## .references
 
@@ -292,7 +292,7 @@ The `.receivedAt` property contains the <!-- REF #EmailObjectClass.receivedAt.Su
 
 #### Description
 
-The `.references` property contains the <!-- REF #EmailObjectClass.references.Summary -->Collection of all message-ids of messages in the preceding reply chain<!-- END REF -->.
+La propriété `.references` contient la <!-- REF #EmailObjectClass.references.Summary -->collection de tous les identifiants de messages de la chaîne de réponses précédente<!-- END REF -->.
 
 Pour les exigences propres au formatage, veuillez consulter la [RFC#5322](https://tools.ietf.org/html/rfc5322).
 
@@ -302,7 +302,7 @@ Pour les exigences propres au formatage, veuillez consulter la [RFC#5322](https:
 
 #### Description
 
-The `.replyTo` property contains the <!-- REF #EmailObjectClass.replyTo.Summary -->[addresse(s)](#email-addresses) for responses<!-- END REF -->.
+La propriété `.replyTo` contient les <!-- REF #EmailObjectClass.replyTo.Summary -->[adresse(s)](#email-addresses) des destinataires de réponse à l'email<!-- END REF -->.
 
 ## .sendAt
 
@@ -310,7 +310,7 @@ The `.replyTo` property contains the <!-- REF #EmailObjectClass.replyTo.Summary 
 
 #### Description
 
-The `.sendAt` property contains the <!-- REF #EmailObjectClass.sendAt.Summary -->Email timestamp in ISO 8601 UTC format<!-- END REF -->.
+La propriété `.sendAt` contient l' <!-- REF #EmailObjectClass.sendAt.Summary -->horodatage de l'email au format ISO 8601 UTC<!-- END REF -->.
 
 ## .sender
 
@@ -318,7 +318,7 @@ The `.sendAt` property contains the <!-- REF #EmailObjectClass.sendAt.Summary --
 
 #### Description
 
-The `.sender` property contains the <!-- REF #EmailObjectClass.sender.Summary -->email source [addresse(s)](#email-addresses) of the email<!-- END REF -->.
+La propriété `.sender` contient la ou les <!-- REF #EmailObjectClass.sender.Summary -->[adresse(s)](#email-addresses) source(s) de l'email<!-- END REF -->.
 
 Chaque email envoyé comporte à la fois les adresses du **sender** et du **[from](#from)** :
 
@@ -335,7 +335,7 @@ Pour mieux livrer l'email, il est recommandé d'utiliser les mêmes adresses pou
 
 [IMAP transporter](IMAPTransporterClass.md) uniquement.
 
-The `.size` property contains the <!-- REF #EmailObjectClass.size.Summary -->size (expressed in bytes) of the Email object returned by the IMAP server<!-- END REF -->.
+La propriété `.size` contient la <!-- REF #EmailObjectClass.size.Summary -->taille (exprimée en octets) de l'objet Email retourné par le serveur IMAP<!-- END REF -->.
 
 ## .subject
 
@@ -343,7 +343,7 @@ The `.size` property contains the <!-- REF #EmailObjectClass.size.Summary -->siz
 
 #### Description
 
-The `.subject` property contains the <!-- REF #EmailObjectClass.subject.Summary -->description of topic<!-- END REF -->.
+La propriété `.subject` contient la <!-- REF #EmailObjectClass.subject.Summary -->description du sujet<!-- END REF -->.
 
 ## .textBody
 
@@ -351,7 +351,7 @@ The `.subject` property contains the <!-- REF #EmailObjectClass.subject.Summary 
 
 #### Description
 
-The `.textBody` property contains the <!-- REF #EmailObjectClass.textBody.Summary -->Plain text representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. Voir section [Traitement du body](#traitement-du-body).
+La propriété `.textBody` contient la <!-- REF #EmailObjectClass.textBody.Summary -->représentation en texte brut de l'email (le jeu de caractères par défaut est UTF-8) (optionnel, SMTP uniquement)<!-- END REF -->. Voir section [Traitement du body](#traitement-du-body).
 
 ## .to
 
@@ -359,7 +359,7 @@ The `.textBody` property contains the <!-- REF #EmailObjectClass.textBody.Summar
 
 #### Description
 
-The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
+La propriété `.to` contient la ou les <!-- REF #EmailObjectClass.to.Summary -->[adresse(s)](#email-addresses) des destinataires principaux de l'email<!-- END REF -->.
 
 ## MAIL Convert from MIME
 
@@ -384,7 +384,7 @@ The `.to` property contains the <!-- REF #EmailObjectClass.to.Summary -->primary
 
 #### Description
 
-The `MAIL Convert from MIME` command <!-- REF #_command_.MAIL_Convert_from_MIME.Summary -->converts a MIME document into a valid email object<!-- END REF -->.
+La commande `MAIL Convert from MIME` <!-- REF #_command_.MAIL_Convert_from_MIME.Summary -->convertit un document MIME en un objet email valide<!-- END REF -->.
 > Le format des objets Email de 4D suit la [spécification JMAP](https://jmap.io/spec-mail.html).
 
 Passez dans *mime* un document MIME valide à convertir. Il peut être fourni par tout type de serveur ou d'application de messagerie. Vous pouvez passer un BLOB ou un texte dans le paramètre *mime*. Si le MIME provient d'un fichier, il est recommandé d'utiliser un paramètre BLOB pour éviter les problèmes liés aux conversions de charset et de retours à la ligne.
@@ -471,7 +471,7 @@ $status:=$transporter.send($email)
 
 #### Description
 
-The `MAIL Convert to MIME` command <!-- REF #_command_.MAIL_Convert_to_MIME.Summary -->converts an email object into MIME text<!-- END REF -->. Cette commande est appelée en interne par [SMTP_transporter.send( )](API/SMTPTransporterClass.md#send) pour formater l'objet email avant de l'envoyer. Elle peut être utilisée pour analyser le format MIME de l'objet.
+La commande `MAIL Convert to MIME` <!-- REF #_command_.MAIL_Convert_to_MIME.Summary -->convertit un objet email en texte MIME<!-- END REF -->. Cette commande est appelée en interne par [SMTP_transporter.send( )](API/SMTPTransporterClass.md#send) pour formater l'objet email avant de l'envoyer. Elle peut être utilisée pour analyser le format MIME de l'objet.
 
 Dans *mail*, passez les éléments du contenu et de la structure de l'email à convertir. Cela inclut des informations telles que les adresses e-mail (expéditeur et destinataire(s)), le contenu de l'e-mail lui-même et son type d'affichage.
 > Le format des objets Email de 4D suit la [spécification JMAP](https://jmap.io/spec-mail.html).

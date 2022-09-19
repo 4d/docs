@@ -623,11 +623,14 @@ To delete all messages in the current mailbox:
 
 
 <!-- REF #IMAPTransporterClass.deleteBox().Params -->
-| Parameter | Typ  |    | Beschreibung                  |
-| --------- | ---- |:--:| ----------------------------- |
-| name      | Text | -> | Name of the mailbox to delete |
+| Parameter | Typ    |    | Beschreibung                                                        |
+| --------- | ------ |:--:| ------------------------------------------------------------------- |
+| name      | Text   | -> | Name of the mailbox to delete                                       |
+| Ergebnis  | Objekt | <- | Status of the mailbox deletion operation|<!-- END REF -->
 
-|Result|Object|<-|Status of the mailbox deletion operation|<!-- END REF -->
+
+|
+
 
 #### Beschreibung
 
@@ -1025,9 +1028,12 @@ You want to get the message with ID = 1:
 | options   | Objekt     | -> | Message handling instructions                                                      |
 | Ergebnis  | Objekt     | <- | Object containing:<br/><ul><li>a collection of [Email objects](EmailObjectClass.md#email-object) and</li><li>a collection of IDs or numbers for missing messages, if any</li></ul>|<!-- END REF -->
 
+
 |
 
+
 #### Beschreibung
+
 
 The `.getMIMEAsBlob()` function <!-- REF #IMAPTransporterClass.getMails().Summary -->returns a BLOB containing the MIME contents for the message corresponding to the *msgNumber* or *msgID* in the mailbox designated by the `IMAP_transporter`<!-- END REF -->.
 

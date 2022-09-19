@@ -1,24 +1,26 @@
 ---
 id: atomic_$atonce
-title: "$atomic/$atonce"
+title: '$atomic/$atOnce'
 ---
 
 
 RESTリクエストに含まれる操作をトランザクション内で処理します。 エラーがなかった場合、トランザクションは受け入れられます。 それ以外の場合、トランザクションはキャンセルされます。
 
 
-## 詳細
-複数の操作を一回のリクエストで処理する際には `$atomic/$atonce` を使うことで、１つでも操作に問題があった場合にすべての操作をキャンセルすることができます。 `$atomic` および `$atonce` のどちらでも利用できます。
+## 説明
+
+When you have multiple actions together, you can use `$atomic/$atOnce` to make sure that none of the actions are completed if one of them fails. You can use either `$atomic` or `$atOnce`.
 
 
 ## 例題
+
 次の RESTリクエストをトランザクション内で呼び出します。
 
  `POST  /rest/Employee?$method=update&$atomic=true`
 
 **POST データ**:
 
-````
+```json
 [
 {
     "__KEY": "200",
@@ -29,11 +31,11 @@ RESTリクエストに含まれる操作をトランザクション内で処理�
     "firstname": "Harry"
 }
 ]
-````
+```
 
 2つ目のエンティティの操作中に次のエラーが発生します。そのため、1つ目のエンティティも保存されません:
 
-````
+```json
 {
     "__STATUS": {
         "success": true
@@ -63,5 +65,5 @@ RESTリクエストに含まれる操作をトランザクション内で処理�
         }
     ]
 }
-````
+```
 > 1つ目のエンティティの名前は "John" ですが、この値はサーバー上に保存されず、タイムスタンプも変更されません。 したがって、エンティティをリロードすると、もとの値に戻ります。

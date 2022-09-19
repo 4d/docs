@@ -15,7 +15,7 @@ title: On After Keystroke
 
 </details>
 
-## 詳細
+## 説明
 
 > `On After Keystroke` イベントは、一般的に [`On After Edit`](onAfterEdit.md) イベントで置き換えることができます (後述参照)。
 

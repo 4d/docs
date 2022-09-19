@@ -20,7 +20,7 @@ Este evento se genera cuando el ancho de una columna en el list box es modificad
 
 Este evento se genera cuando el ancho de una columna es modificado por un usuario. En este contexto, el [objeto evento](overview.md#event-object) devuelto por el comando `FORM Event` contiene:
 
-| Propiedad   | Type         | Descripción                                                                               |
+| Propiedad   | Tipo         | Descripción                                                                               |
 | ----------- | ------------ | ----------------------------------------------------------------------------------------- |
 | code        | entero largo | On Column Resize                                                                          |
 | description | text         | "On Column Resize"                                                                        |

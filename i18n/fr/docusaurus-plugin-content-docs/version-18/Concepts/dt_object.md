@@ -64,7 +64,7 @@ Voici un exemple :
 
 - using a string within square brackets: > object["propertyName"]
 
-Exemple :
+Exemples :
 ```4d
      $vName:=employee["name"]
      //ou :
@@ -79,7 +79,7 @@ Comme la valeur d'une propriété d'objet peut elle-même être un objet ou une 
 ```
 La notation objet est utilisable avec tout élément de langage qui contient ou retourne un objet, c'est-à-dire :
 
-- avec les **objets** eux-mêmes (stockés dans des variables, champs, propriétés d'objets, tableaux d'objets ou éléments de collections). Exemple :
+- avec les **objets** eux-mêmes (stockés dans des variables, champs, propriétés d'objets, tableaux d'objets ou éléments de collections). Exemples :
 
 ```4d
      $age:=$myObjVar.employee.age //variable

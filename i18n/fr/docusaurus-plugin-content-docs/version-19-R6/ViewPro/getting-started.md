@@ -134,7 +134,7 @@ Les objets plage 4D View Pro sont composés de plusieurs propriétés :
 | --------- | ----------------- | ---------- | ------------------------------------------------------------------------------------------ | -------------------------------------------------------------- |
 | area      |                   | text       | Nom d'objet formulaire zone 4D View Pro                                                    | toujours disponible                                            |
 | ranges    |                   | collection | Collection de plage(s)                                                                     | toujours disponible                                            |
-|           | \[ ].name        | text       | Nom de plage                                                                               | nom                                                            |
+|           | \[ ].name        | text       | Nom de plage                                                                               | name                                                           |
 |           | \[ ].sheet       | number     | Indice de la feuille (par défaut, indice de la feuille courante) (le comptage démarre à 0) | cellule, cellules, ligne, lignes, colonne, colonnes, tout, nom |
 |           | \[ ].row         | number     | Indice de la ligne (le comptage démarre à 0)                                               | cellule, cellules, ligne, lignes                               |
 |           | \[ ].rowCount    | number     | Row count                                                                                  | cellule, lignes                                                |

@@ -8,7 +8,7 @@ title: On URL Filtering
 | 51  | [Webエリア](FormObjects/webArea_overview.md) | Webエリアが URL をブロックした |
 
 
-## 詳細
+## 説明
 
 このイベントは、`WA SET URL FILTERS` コマンドで設定されたフィルターにより、Webエリアによって URL のロードがブロックされると生成されます。
 

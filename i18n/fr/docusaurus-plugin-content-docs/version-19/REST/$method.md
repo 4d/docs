@@ -30,7 +30,8 @@ Avec `$method=delete`, vous pouvez supprimer une entité ou une collection d'ent
 
 Vous pouvez également supprimer les entités d'un ensemble d'entités en appelant [`$entityset/{entitySetID}`]($entityset.md#entitysetentitysetid).
 
-## Exemple
+### Exemple
+
 Vous pouvez ensuite saisir la requête REST suivante pour supprimer l'entité dont la clé porte le numéro 22 :
 
  `POST  /rest/Employee(22)/?$method=delete`
@@ -45,7 +46,7 @@ Vous pouvez également supprimer un ensemble d'entités utilisant $entityset/{en
 
 Réponse :
 
-```
+```json
 {
     "ok": true
 }
@@ -78,8 +79,9 @@ Vous pouvez également enregistrer le filtre et trier, en passant true à `$save
 
 Après avoir créé un ensemble d'entités, le premier élément, `__ENTITYSET` est ajouté à l'objet retourné et indique l'URI à utiliser pour accéder à l'ensemble d'entités :
 
-`__ENTITYSET: "http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7"`
-
+```json
+__ENTITYSET: "http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7"`
+```
 
 
 
@@ -101,16 +103,16 @@ Affiche un ensemble d'entités existant :
 
 Si la requête a abouti, la réponse suivante est retournée :
 
-```
+```json
 {
     "ok": true
 }
-Si l'entite n'as pas été trouvée, une erreur est retournée :
+If the entity set wasn't found, an error is returned:
 
 {
     "__ERROR": [
         {
-             "message": "Error code: 1802\nEntitySet  \"4C51204DD8184B65AC7D79F09A077F24\" cannot be found\ncomponent:  'dbmg'\ntask 22, name: 'HTTP connection handler'\n",
+            "message": "Error code: 1802\nEntitySet  \"4C51204DD8184B65AC7D79F09A077F24\" cannot be found\ncomponent:  'dbmg'\ntask 22, name: 'HTTP connection handler'\n",
             "componentSignature": "dbmg",
             "errCode": 1802
         }
@@ -140,7 +142,7 @@ Si vous souhaitez récupérer uniquement les entités relatives pour une entité
 
 #### Réponse :
 
-```
+```json
 {
 
     "__ENTITYSET": "/rest/Employee/$entityset/FF625844008E430B9862E5FD41C741AB",
@@ -198,14 +200,15 @@ Pour mettre à jour une entité, vous devez passer les paramètres `__KEY` et `_
 
 Triggers are executed immediately when saving the entity to the server. La réponse contient toutes les données telles qu'elles existent sur le serveur.
 
-Vous pouvez également placer ces requêtes pour créer ou mettre à jour des entités dans une transaction en appelant `$atomic/$atonce`. Si des erreurs se produisent lors de la validation des données, aucune des entités n'est sauvegardée. Vous pouvez également utiliser $method=validate pour valider les entités avant de les créer ou de les mettre à jour.
+You can also put these requests to create or update entities in a transaction by calling `$atomic/$atOnce`. Si des erreurs se produisent lors de la validation des données, aucune des entités n'est sauvegardée. You can also use `$method=validate` to validate the entities before creating or updating them.
 
 Si un problème survient lors de l'ajout ou de la modification d'une entité, une erreur vous sera retournée avec ces informations.
-> A noter pour les types d'attributs spécifiques :
-> 
-> * **Les dates** doivent être exprimées au format JS : YYYY-MM-DDTHH:MM:SSZ (par exemple, "2010-10-05T23:00:00Z"). Si vous avez sélectionné la propriété Date uniquement pour votre attribut Date, le fuseau horaire et l'heure (heure, minutes et secondes) seront supprimés. Dans ce cas, vous pouvez également envoyer la date au format qui vous est retourné dd!mm!yyyy (par exemple, 05!10!2013).
-> * Les valeurs des **booléens** sont vrai ou faux.
-> * Les fichiers téléchargés à l'aide de `$upload` peuvent s'appliquer à un attribut de type Image ou BLOB en passant l'objet retourné au format suivant {"ID": "D507BC03E613487E9B4C2F6A0512FE50"}
+
+:::note
+*   **Les dates** doivent être exprimées au format JS : YYYY-MM-DDTHH:MM:SSZ (par exemple, "2010-10-05T23:00:00Z"). Si vous avez sélectionné la propriété Date uniquement pour votre attribut Date, le fuseau horaire et l'heure (heure, minutes et secondes) seront supprimés. Dans ce cas, vous pouvez également envoyer la date au format qui vous est retourné dd!mm!yyyy (par exemple, 05!10!2013).
+*   Les valeurs des **booléens** sont vrai ou faux.
+*   Uploaded files using `$upload` can be applied to an attribute of type Image or BLOB by passing the object returned in the following format `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50"}` :::
+
 
 ### Exemple
 
@@ -215,7 +218,7 @@ Pour mettre à jour une entité spécifique, utilisez l'URL suivante :
 
 **Données POST :**
 
-```
+```json
 {
     __KEY: "340",
     __STAMP: 2,
@@ -232,7 +235,7 @@ Si vous souhaitez créer une entité, vous pouvez envoyer, via POST, les attribu
 
 **Données POST :**
 
-```
+```json
 { 
     firstName: "John",
     lastName: "Smith"
@@ -245,7 +248,7 @@ Vous pouvez également créer et mettre à jour plusieurs entités en même temp
 
 **Données POST :**
 
-```
+```json
 [{ 
     "__KEY": "309",
     "__STAMP": 5,
@@ -262,7 +265,7 @@ Vous pouvez également créer et mettre à jour plusieurs entités en même temp
 
 Lorsque vous ajoutez ou modifiez une entité, elle vous est retournée avec les attributs qui ont été modifiés. Par exemple, si vous créez le nouvel employé ci-dessus, les informations suivantes seront renvoyées :
 
-```
+```json
 {
     "__KEY": "622", 
     "__STAMP": 1, 
@@ -276,7 +279,7 @@ Lorsque vous ajoutez ou modifiez une entité, elle vous est retournée avec les 
 
 Si, par exemple, le tampon n'est pas correct, l'erreur suivante est retournée :
 
-```
+```json
 {
     "__STATUS": {
         "status": 2,

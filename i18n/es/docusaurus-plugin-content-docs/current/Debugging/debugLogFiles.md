@@ -342,22 +342,22 @@ Los siguientes campos se registran para cada petición:
 
 ## Utilización de un archivo de configuración de log
 
-You can use a **log configuration file** to easily manage log recording in a production environment. Este archivo está preconfigurado por el desarrollador. Typically, it can be sent to customers so that they just need to select it or copy it in a local folder. Once enabled, the log configuration file triggers the recording of specific logs.
+You can use a **log configuration file** to easily manage log recording in a production environment. Este archivo está preconfigurado por el desarrollador. Typically, it can be sent to customers so that they just need to select it or copy it in a local folder. Una vez activado, el archivo de configuración de log desencadena el registro de registros específicos.
 
 ### Cómo activar el archivo
 
 Hay varias maneras de activar el archivo de configuración de los logs:
 
-* On 4D Server with interface, you can open the Maintenance page and click on the [Load logs configuration file](ServerWindow/maintenance.md#load-logs-configuration-file) button, then select the file. In this case, you can use any name for the configuration file. Se activa inmediatamente en el servidor.
-* You can copy the log configuration file in the [Settings folder](Project/architecture.md#settings-1) of the project. En este caso, el archivo debe llamarse `logConfig.json`. It is enabled at project startup (only on the server in client/server).
-* With a built application, you can copy the `logConfig.json` file in the following folder:
+* En 4D Server con interfaz, puede abrir la página de mantenimiento y hacer clic en el botón [Cargar el archivo de configuración de logs](ServerWindow/maintenance.md#load-logs-configuration-file), y luego seleccionar el archivo. En este caso, puede utilizar cualquier nombre para el archivo de configuración. Se activa inmediatamente en el servidor.
+* Puede copiar el archivo de configuración del historial en la [carpeta Settings](Project/architecture.md#settings-1) del proyecto. En este caso, el archivo debe llamarse `logConfig.json`. Se activa al iniciar el proyecto (sólo en el servidor en cliente/servidor).
+* Con una aplicación generada, puede copiar el archivo `logConfig.json` en la siguiente carpeta:
   * Windows: `Users\[userName]\AppData\Roaming\[application]`
   * macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
 
 > If you want to enable the log configuration file for all projects in stand-alone, server and remote 4D applications, you can copy the `logConfig.json` file in the following folder:
 > 
-> * Windows: `Users\[userName]\AppData\Roaming\4D or \4D Server`
-> * macOS: `/Users/[userName]/Library/ApplicationSupport/4D or /4D Server`
+> * Windows: `Users\[userName]\AppData\Roaming\4D o \4D Server`
+> * macOS: `/Users/[userName]/Library/ApplicationSupport/4D o /4D Server`
 
 ### Descripción del archivo JSON
 

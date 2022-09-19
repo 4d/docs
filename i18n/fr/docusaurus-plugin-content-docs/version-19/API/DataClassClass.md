@@ -491,7 +491,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->retourn
 
 | Propriété   | Type    | Description                            |
 | ----------- | ------- | -------------------------------------- |
-| nom         | Text    | Nom de la dataclass                    |
+| name        | Text    | Nom de la dataclass                    |
 | primaryKey  | Text    | Nom de la clé primaire de la dataclass |
 | tableNumber | Integer | Numéro interne de la table 4D          |
 
@@ -762,7 +762,7 @@ Vous pouvez combiner tous les types d'arguments dans *queryString*. in *queryStr
 
 2. Cela résout les questions liées au formatage des valeurs ou des caractères, notamment lorsque vous gérez des paramètres *attributePath* et *value* qui peuvent contenir des caractères non-alphanumériques tels que ".", "["...
 
-3. Cela permet l'utilisation de variables ou d'expressions dans les arguments de recherche. Exemple :
+3. Cela permet l'utilisation de variables ou d'expressions dans les arguments de recherche. Exemples :
 
  ```4d
   $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")

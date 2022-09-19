@@ -66,7 +66,7 @@ webServer:=WEB Server(Web server receiving request)
 
 [Webサーバークラスのオブジェクト](API/webServerClass.md#webサーバーオブジェクト) には、以下の機能があります。
 
-| 関数                                       | 引数                | 戻り値             | 詳細            |
+| 関数                                       | 引数                | 戻り値             | 説明            |
 | ---------------------------------------- | ----------------- | --------------- | ------------- |
 | [`start()`](API/WebServerClass.md#start) | settings (オブジェクト) | status (オブジェクト) | Webサーバーを開始します |
 | [`stop()`](API/WebServerClass.md#start)  | -                 | -               | Webサーバーを停止します |

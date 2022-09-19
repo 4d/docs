@@ -36,25 +36,25 @@ title: String
 
 ## 文字列演算子
 
-| 処理       | シンタックス           | 戻り値    | 式                       | Value    |
-| -------- | ---------------- | ------ | ----------------------- | -------- |
-| 連結 (結合)  | String + String  | String | "abc" + "def"           | "abcdef" |
-| 繰り返し     | String * Number  | String | "ab" * 3                | "ababab" |
-| 等しい      | String = String  | ブール    | "abc" = "abc"           | true     |
-|          |                  |        | "abc" = "abd"           | False    |
-| 異なる      | String # String  | ブール    | "abc" # "abd"           | true     |
-|          |                  |        | "abc" # "abc"           | False    |
-| 大きい      | String > String  | ブール    | "abd" > "abc"           | true     |
-|          |                  |        | "abc" > "abc"           | False    |
-| 小さい      | String < String  | ブール    | "abc" < "abd"           | true     |
-|          |                  |        | "abc" < "abc"           | False    |
-| 以上       | String >= String | ブール    | "abd" >= "abc"          | true     |
-|          |                  |        | "abc" >= "abd"          | False    |
-| 以下       | String <= String | ブール    | "abc" <= "abd"          | true     |
-|          |                  |        | "abd" <= "abc"          | False    |
-| キーワードを含む | String % String  | ブール    | "Alpha Bravo" % "Bravo" | true     |
-|          |                  |        | "Alpha Bravo" % "ravo"  | False    |
-|          | Picture % String | ブール    | Picture_expr % "Mer"    | true (*) |
+| 処理       | シンタックス           | 戻り値     | 式                       | 値        |
+| -------- | ---------------- | ------- | ----------------------- | -------- |
+| 連結 (結合)  | String + String  | String  | "abc" + "def"           | "abcdef" |
+| 繰り返し     | String * Number  | String  | "ab" * 3                | "ababab" |
+| 等しい      | String = String  | Boolean | "abc" = "abc"           | true     |
+|          |                  |         | "abc" = "abd"           | False    |
+| 異なる      | String # String  | Boolean | "abc" # "abd"           | true     |
+|          |                  |         | "abc" # "abc"           | False    |
+| 大きい      | String > String  | Boolean | "abd" > "abc"           | true     |
+|          |                  |         | "abc" > "abc"           | False    |
+| 小さい      | String < String  | Boolean | "abc" < "abd"           | true     |
+|          |                  |         | "abc" < "abc"           | False    |
+| 以上       | String >= String | Boolean | "abd" >= "abc"          | true     |
+|          |                  |         | "abc" >= "abd"          | False    |
+| 以下       | String <= String | Boolean | "abc" <= "abd"          | true     |
+|          |                  |         | "abd" <= "abc"          | False    |
+| キーワードを含む | String % String  | Boolean | "Alpha Bravo" % "Bravo" | true     |
+|          |                  |         | "Alpha Bravo" % "ravo"  | False    |
+|          | Picture % String | Boolean | Picture_expr % "Mer"    | true (*) |
 
 (*) キーワード "Mer" がピクチャー式 (フィールドまたは変数) に格納されたピクチャーの IPTC/Keywords メタデータに含まれている場合。
 

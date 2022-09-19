@@ -173,7 +173,7 @@ Las propiedades soportadas dependen del tipo de list box.
 | [Expresión estilo](properties_Text.md#style-expression)                                   |                | X                  | X                                     |
 | [Arriba](properties_CoordinatesAndSizing.md#top)                                          | X              | X                  | X                                     |
 | [Transparente](properties_BackgroundAndBorder.md#transparent)                             | X              | X                  | X                                     |
-| [Type](properties_Object.md#type)                                                         | X              | X                  | X                                     |
+| [Tipo](properties_Object.md#type)                                                         | X              | X                  | X                                     |
 | [Subrayado](properties_Text.md#underline)                                                 | X              | X                  | X                                     |
 | [Variable o expresión](properties_Object.md#variable-or-expression)                       | X              | X                  |                                       |
 | [Alineamiento vertical](properties_Text.md#vertical-alignment)                            | X              | X                  | X                                     |
@@ -227,7 +227,7 @@ Las propiedades soportadas dependen del tipo de list box.
 
 Los eventos formulario de los objetos list box o columnas de list box pueden devolver las siguientes propiedades adicionales:
 
-| Propiedad        | Type         | Descripción                                                                          |
+| Propiedad        | Tipo         | Descripción                                                                          |
 | ---------------- | ------------ | ------------------------------------------------------------------------------------ |
 | area             | text         | Área de objeto list box ("header", "footer", "cell")                                 |
 | areaName         | text         | Nombre del área                                                                      |

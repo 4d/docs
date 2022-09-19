@@ -13,7 +13,7 @@ Poder referirse a algo sin conocer su identidad exacta es muy útil. De hecho, s
 
 Puede utilizar punteros para referenciar tablas, campos, variables, arrays, elementos de arrays y objetos. La siguiente tabla ofrece un ejemplo de cada tipo de datos:
 
-| Type     | Referenciación          | Uso                      | Asignación               |
+| Tipo     | Referenciación          | Uso                      | Asignación               |
 | -------- | ----------------------- | ------------------------ | ------------------------ |
 | Tabla    | vpTable:=->[Table]      | DEFAULT TABLE(vpTable->) | n/a                      |
 | Campo    | vpField:=->[Table]Field | ALERT(vpField->)         | vpField->:="John"        |

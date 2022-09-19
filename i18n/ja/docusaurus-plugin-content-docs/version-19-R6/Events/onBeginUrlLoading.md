@@ -8,7 +8,7 @@ title: On Begin URL Loading
 | 47  | [Webエリア](FormObjects/webArea_overview.md) | 新しい URL が Web エリアにロードされた |
 
 
-## 詳細
+## 説明
 
 このイベントは、Webエリアに新しい URL のロードを開始した時に生成されます。 Webエリアに関連付けられた `URL` 変数を使用してロード中の URL を知ることができます。
 

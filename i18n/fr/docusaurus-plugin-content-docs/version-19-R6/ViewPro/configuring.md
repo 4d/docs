@@ -299,7 +299,7 @@ The following special characters allow the automatic addition or formatting of i
 | "         | Font prefix                      | printInfo.headerLeft:="&\"Lucida Console\"&14This is text."          | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG) |
 | K         | Text Color prefix                | printInfo.headerLeft:="&KFF0000This is text."                          | This is text (in red).                               |
 | F         | Workbook name                    | printInfo.headerLeft:="&F"                                             | 2019 Monthly Revenue Forecasts                       |
-| A         | Spreadsheet name                 | printInfo.headerLeft:="&A"                                             | June 2019 revenue forecast                           |
+| Une       | Spreadsheet name                 | printInfo.headerLeft:="&A"                                             | June 2019 revenue forecast                           |
 
 ### Margins
 
@@ -474,7 +474,7 @@ Voici un exemple :
 
 | Propriété  | Type | Description                                                                                                                                                                                                                                                                      |
 | ---------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| nom        | text | Defines the name of the style                                                                                                                                                                                                                                                    |
+| name       | text | Defines the name of the style                                                                                                                                                                                                                                                    |
 | parentName | text | Specifies the style that the current style is based on. Values from the parent style will be applied, then any values from the current style are applied. Changes made in the current style will not be refelected in the parent style. Only available when using a style sheet. |
 
 ## Objet 4D View Pro

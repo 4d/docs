@@ -37,7 +37,7 @@ Cuando las variables se introducen mediante una directiva del compilador, recibe
 
 El valor por defecto depende del tipo de variable:
 
-| Type       | Valor por defecto |
+| Tipo       | Valor por defecto |
 | ---------- | ----------------- |
 | Booleano   | False             |
 | Fecha      | 00-00-00          |

@@ -8,7 +8,7 @@ title: On Column Moved
 | 32  | [リストボックス](FormObjects/listbox_overview.md) - [リストボックス列](FormObjects/listbox_overview.md#リストボックス列) | リストボックスの列がユーザーのドラッグ＆ドロップで移動された |
 
 
-## 詳細
+## 説明
 
 このイベントは、ユーザーのドラッグ＆ドロップでリストボックスの列が移動されたときに生成されます ([許可されている場合](FormObjects/propertiesListBox.html#スクロールしない列とドラッグしない列))。 ただし、元の場所にドロップされた場合には生成されません。
 

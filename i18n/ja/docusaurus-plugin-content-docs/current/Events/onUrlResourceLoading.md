@@ -8,7 +8,7 @@ title: On URL Resource Loading
 | 48  | [Webエリア](FormObjects/webArea_overview.md) | 新しいリソースが Webエリアにロードされた |
 
 
-## 詳細
+## 説明
 
 このイベントは、現在の Webページに (ピクチャやフレームなどの) 新しいリソースをロードするたびに生成されます。
 

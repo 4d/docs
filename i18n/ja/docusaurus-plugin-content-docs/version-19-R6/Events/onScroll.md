@@ -8,7 +8,7 @@ title: On Scroll
 | 59  | [ピクチャー型](FormObjects/properties_Object.md#式の型式タイプ)の[入力](FormObjects/input_overview.md) - [リストボックス](FormObjects/listbox_overview.md) | マウスやキーボードを使用して、ユーザーがピクチャーオブジェクトやリストボックスの内容をスクロールした。 |
 
 
-## 詳細
+## 説明
 
 このイベントは、ピクチャー入力またはリストボックスのコンテキストで生成されます。
 

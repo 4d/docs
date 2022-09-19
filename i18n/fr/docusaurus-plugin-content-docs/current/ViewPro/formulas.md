@@ -145,7 +145,7 @@ Les fonctions personnalisées 4D permettent d'accéder, à partir de vos formule
 
 Les fonctions personnalisées 4D peuvent recevoir des [paramètres](#parameters) de la zone 4D View Pro, et retourner des valeurs.
 
-Déclarez toutes vos fonctions à l'aide de la méthode [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions). Exemple :
+Déclarez toutes vos fonctions à l'aide de la méthode [`VP SET CUSTOM FUNCTIONS`](method-list.md#vp-set-custom-functions). Exemples :
 
 ```4d
 o:=New object

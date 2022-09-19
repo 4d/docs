@@ -35,7 +35,7 @@ Les propriétés d'objets peuvent référencer des valeurs scalaires, des élém
 - Ensuite, le nom peut inclure des lettres, des chiffres, des traits de soulignement ("_") ou des dollars ("$").
 - Les noms de propriétés sont sensibles à la casse.
 
-Exemple :
+Exemples :
 
 ```4d
 monObjet.monAttribut:="10"
@@ -50,7 +50,7 @@ Voir également le [standard ECMA Script](https://www.ecma-international.org/ecm
 
 Les noms de paramètres doivent commencer par un caractère `$` et suivent les mêmes règles que les [noms de variables](#variables).
 
-Exemple :
+Exemples :
 
 ```4d
 Function getArea($width : Integer; $height : Integer)-> $area : Integer
@@ -67,7 +67,7 @@ Le nom d’une méthode projet peut contenir jusqu’à 31 caractères.
 - N'utilisez pas de noms réservés, i.e. des noms de commandes 4D (`Date`, `Time`, etc), des mots-clés (`If`, `For`, etc.), des noms de constantes (`Euro`, `Black`, `Friday`), etc.
 - Les noms des méthodes projets ne sont PAS sensibles à la casse.
 
-Exemple :
+Exemples :
 
 ```4d
 If(New client)
@@ -79,7 +79,7 @@ APPLY TO SELECTION([Employees];INCREASE SALARIES)
 
  > Lorsque vous appelez une méthode, vous saisissez simplement son nom. Toutefois, certaines commandes 4D intégrées telles que `ON EVENT CALL`, ainsi que les commandes des plug-ins, nécessitent que vous passiez le nom d'une méthode en tant que chaîne lorsqu'un paramètre de type méthode est attendu.
 
-Exemple :
+Exemples :
 
 ```4d
  //This command expects a method (function) or formula
@@ -101,7 +101,7 @@ Un nom de table ou de champ peut contenir jusqu’à 31 caractères.
 - N'utilisez pas de noms réservés, i.e. des noms de commandes 4D (`Date`, `Time`, etc), des mots-clés (`If`, `For`, etc.), des noms de constantes (`Euro`, `Black`, `Friday`), etc.
 - Des règles supplémentaires sont à respecter lorsque la base doit être manipulée via le SQL : seuls les caractères _0123456789abcdefghijklmnopqrstuvwxyz sont acceptés, et le nom ne doit pas comporter de mot-clé SQL (commande, attribut, etc.).
 
-Exemple :
+Exemples :
 
 ```4d
 FORM SET INPUT([Clients];"Entry")
@@ -125,7 +125,7 @@ The name of a variable can be up to 31 characters, not including the scope symbo
 - N'utilisez pas de noms réservés, i.e. des noms de commandes 4D (`Date`, `Time`, etc), des mots-clés (`If`, `For`, etc.), des noms de constantes (`Euro`, `Black`, `Friday`), etc.
 - Les noms de variables ne sont PAS sensibles à la casse.
 
-Exemple :
+Exemples :
 
 ```4d
 For($vlRecord;1;100) //variable locale
@@ -144,7 +144,7 @@ Such string names can contain up to 255 characters, not including the `$` or `<>
 - Les noms sous forme de chaînes peuvent contenir n'importe quel caractère.
 - Les noms sous forme de chaînes ne sont pas sensibles à la casse.
 
-Exemple :
+Exemples :
 
 ```4d
 DIALOG([Storage];"Note box"+String($vlStage))

@@ -90,7 +90,7 @@ Dans les différentes fenêtres 4D (éditeur de code, compilateur, débogueur, e
   - une fonction de classe est un bloc de code
   - **Aller à définition...** sur un objet membre permet de rechercher des déclarations de fonction de classe; par exemple, "$o.f()" donnera comme résultat de recherche "Function f".
   - **Chercher les références...** sur la déclaration de fonction de classe recherche la fonction utilisée comme membre d'objet; par exemple, "Function f" donnera comme résultat "$o.f()".
-- In the Runtime explorer and Debugger, class functions are displayed with the `\&#060;ClassName&#062;` constructor or `\&#060;ClassName&#062;.\&#060;FunctionName&#062;` format.
+- Dans l'explorateur d'exécution et le débogueur, les fonctions de classe sont affichées au format `\&#060;ClassName&#062 ;` constructor ou `\&#060;ClassName&#062 ;.\&#060;FunctionName&#062;`.
 
 ## Class stores
 
@@ -170,7 +170,7 @@ Function <name>({$parameterName : type; ...}){->$parameterName : type}
 // code
 ```
 
-Les fonctions de classe sont des propriétés spécifiques de la classe. Les fonctions de classe sont des propriétés spécifiques de la classe.
+Les fonctions de classe sont des propriétés spécifiques de la classe. Ce sont des objets de la classe [4D.Function](API/FunctionClass.md#about-4dfunction-objects).
 
 Dans le fichier de définition de classe, les déclarations de fonction utilisent le mot-clé `Function`, et le nom de la fonction. Le nom de la fonction doit être conforme aux [règles de nommage des propriétés](Concepts/identifiers.md#object-properties).
 
@@ -202,10 +202,10 @@ Dans le code de l'application, les fonctions de classes sont appelées comme des
   - [`apply()`](API/FunctionClass.md#apply)
   - [`call()`](API/FunctionClass.md#call)
 
-> **Thread-safety warning:** If a class function is not thread-safe and called by a method with the "Can be run in preemptive process" attribute:
+> **Attention thread-safe :** Si une fonction de classe n'est pas thread-safe et est appelée par une méthode ayant l'attribut "Can be run in preemptive process" :
 > 
-> - the compiler does not generate any error (which is different compared to regular methods),
-> - an error is thrown by 4D only at runtime.
+> - le compilateur ne génère pas d'erreur (ce qui est différent par rapport aux méthodes standard),
+> - une erreur est déclenchée par 4D uniquement au moment de l'exécution.
 
 #### Paramètres
 
@@ -248,7 +248,7 @@ Class constructor($width : Integer; $height : Integer)
  This.height:=$height
  This.width:=$width
 
-// Function definition
+// Définition de fonction
 Function getArea()->$result : Integer
  $result:=(This.height)*(This.width)
 ```
@@ -415,11 +415,11 @@ Class extends Rectangle
 
 Class constructor ($side : Integer)
 
- // It calls the parent class's constructor with lengths
- // provided for the Rectangle's width and height
+ // Appelle le constructeur de la classe parente avec les côtés
+ // fournies pour la largeur et la hauteur du Rectangle
  Super($side;$side)
- // In derived classes, Super must be called before you
- // can use 'This'
+ // Dans les classes dérivées, Super doit être appelé
+ // avant que vous puissiez utiliser 'This'
  This.name:="Square"
 
 Function getArea()
@@ -439,7 +439,7 @@ Function nbSides()
  $0:="I have 4 sides"
 ```
 
-Vous avez également créé la classe `Square` contenant une fonction qui appelle la fonction superclasse :
+Vous avez également créé la classe `Square` contenant une fonction qui appelle la fonction superclass :
 
 ```4d
 //Class: Square
@@ -490,8 +490,8 @@ Lorsqu'une fonction [class constructor](#class-constructor) est utilisée (avec 
 
 Class Constructor  
 
- // Create properties on This as
- // desired by assigning to them
+ // Créer des propriétés en
+ // les assignant au This
  This.a:=42 
 ```
 

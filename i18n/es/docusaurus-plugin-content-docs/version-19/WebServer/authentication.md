@@ -88,7 +88,7 @@ Por tanto, NO se llama al método base `On Web Authentication`:
 
 **On Web Authentication**( *$1* : Text ; *$2* : Text ; *$3* : Text ; *$4* : Text ; *$5* : Text ; *$6* : Text ) -> $0 : Boolean
 
-| Parámetros | Type    |    | Descripción                                               |
+| Parámetros | Tipo    |    | Descripción                                               |
 | ---------- | ------- |:--:| --------------------------------------------------------- |
 | $1         | Text    | <- | URL                                                       |
 | $2         | Text    | <- | Encabezados HTTP + cuerpo HTTP (hasta un límite de 32 kb) |

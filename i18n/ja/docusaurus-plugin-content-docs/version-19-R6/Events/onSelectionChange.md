@@ -8,7 +8,7 @@ title: On Selection Change
 | 31  | [4D View Pro エリア](FormObjects/viewProArea_overview.md) - [4D Write Pro エリア](FormObjects/writeProArea_overview) - フォーム - [階層リスト](FormObjects/list_overview.md) - [入力](FormObjects/input_overview.md) - [リストボックス](FormObjects/listbox_overview.md) | オブジェクト内で選択が変更された |
 
 
-## 詳細
+## 説明
 
 このイベントは様々なコンテキストで発生します。
 
@@ -16,7 +16,7 @@ title: On Selection Change
 ### 4D View Pro
 現在の行や列の選択が変更された。 このコンテキストにおいて、`FORM Event` コマンドによって返される [イベントオブジェクト](overview.md#イベントオブジェクト) には以下のプロパティが含まれています:
 
-| プロパティ         | タイプ     | 詳細                    |
+| プロパティ         | タイプ     | 説明                    |
 | ------------- | ------- | --------------------- |
 | code          | longint | 31                    |
 | description   | text    | "On Selection Change" |

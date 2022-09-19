@@ -8,7 +8,7 @@ title: On Collapse
 | 44  | [階層リスト](FormObjects/list_overview.md#overview) - [リストボックス](FormObjects/listbox_overview.md) | クリックやキーストロークで階層リストまたは階層リストボックスの要素が折りたたまれた |
 
 
-## 詳細
+## 説明
 
 - [階層リスト](FormObjects/list_overview.md): このイベントは、マウスクリックやキーストロークで階層リストの要素が折りたたまれるたびに呼び出されます。
 - [階層リストボックス](FormObjects/listbox_overview.md#階層リストボックス): このイベントは、階層リストボックスの行が折りたたまれたときに生成されます。

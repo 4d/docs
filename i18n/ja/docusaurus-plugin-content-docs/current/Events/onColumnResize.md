@@ -8,7 +8,7 @@ title: On Column Resize
 | 33  | [4D View Pro エリア](../FormObjects/viewProArea_overview.md) - [リストボックス](../FormObjects/listbox_overview.md) - [リストボックス列](../FormObjects/listbox_overview.md#リストボックス列) | ユーザーのマウス操作によって、またはフォームウィンドウのリサイズによって、カラムの幅が変更された |
 
 
-## 詳細
+## 説明
 
 ### リストボックス
 
@@ -20,7 +20,7 @@ title: On Column Resize
 
 このイベントはカラムの幅がユーザーによって変更されたときに生成されます。 このコンテキストにおいて、`FORM Event` コマンドによって返される [イベントオブジェクト](overview.md#イベントオブジェクト) には以下のプロパティが含まれています:
 
-| プロパティ       | タイプ     | 詳細                                                  |
+| プロパティ       | タイプ     | 説明                                                  |
 | ----------- | ------- | --------------------------------------------------- |
 | code        | longint | On Column Resize                                    |
 | description | text    | "On Column Resize"                                  |

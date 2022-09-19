@@ -225,7 +225,7 @@ title: DataClassAttribute
 `.kind` プロパティは、 <!-- REF DataClassAttributeClass.kind.Summary -->属性の種類を格納します<!-- END REF -->。 以下のいずれかの値が返されます:
 
 * "storage": ストレージ (あるいはスカラー) 属性。つまり、属性は値を保存しており、他の属性への参照ではありません。
-* "calculated": 計算属性。 [`get` 関数](ORDA/ordaClasses.md#function-get-attributename) によって定義されます。
+* "calculated": 計算属性。[`get` 関数](ORDA/ordaClasses.md#function-get-attributename) によって定義されます。
 * "alias": [他の属性](ORDA/ordaClasses.md#エイリアス属性-1) を指し示す属性。
 * "relatedEntity": N対1 リレーション属性 (エンティティへの参照)
 * "relatedEntities": 1対N リレーション属性 (エンティティセレクションへの参照)

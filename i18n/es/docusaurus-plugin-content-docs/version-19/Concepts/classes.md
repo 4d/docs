@@ -103,7 +103,7 @@ Las clases disponibles son accesibles desde sus class stores. Hay dos class stor
 
 #### cs -> classStore
 
-| Parámetros | Type   |    | Descripción                                       |
+| Parámetros | Tipo   |    | Descripción                                       |
 | ---------- | ------ | -- | ------------------------------------------------- |
 | classStore | object | <- | Class store usuario para el proyecto o componente |
 
@@ -121,7 +121,7 @@ $instance:=cs.myClass.new()
 
 #### 4D -> classStore
 
-| Parámetros | Type   |    | Descripción    |
+| Parámetros | Tipo   |    | Descripción    |
 | ---------- | ------ | -- | -------------- |
 | classStore | object | <- | Class store 4D |
 
@@ -352,7 +352,7 @@ Class constructor ($side : Integer)
 Super {( param{;...;paramN} )} {-> Object} 
 ```
 
-| Parámetros | Type   |    | Descripción                                           |
+| Parámetros | Tipo   |    | Descripción                                           |
 | ---------- | ------ | -- | ----------------------------------------------------- |
 | param      | mixto  | -> | Parámetro(s) a pasar al constructor de la clase padre |
 | Result     | object | <- | Padre del objeto                                      |
@@ -465,7 +465,7 @@ $message:=$square.description() //tengo 4 lados iguales
 This -> Object
 ```
 
-| Parámetros | Type   |    | Descripción   |
+| Parámetros | Tipo   |    | Descripción   |
 | ---------- | ------ | -- | ------------- |
 | Result     | object | <- | Objeto actual |
 

@@ -37,27 +37,27 @@ title: 数値 (実数、倍長整数、整数)
 
 ## 数値演算子
 
-| 処理        | シンタックス   | 戻り値 | 式        | Value |
-| --------- | -------- | --- | -------- | ----- |
-| 加算 (足し算)  | 数値 + 数値  | 数値  | 2 + 3    | 5     |
-| 減算 (引き算)  | 数値 - 数値  | 数値  | 3 – 2    | 1     |
-| 乗算 (かけ算)  | 数値 * 数値  | 数値  | 5 * 2    | 10    |
-| 除算 (割り算)  | 数値 / 数値  | 数値  | 5 / 2    | 2.5   |
-| 倍長整数を返す除算 | 数値 \ 数値 | 数値  | 5 \ 2   | 2     |
-| モジューロ     | 数値 % 数値  | 数値  | 5 % 2    | 1     |
-| 指数        | 数値 ^ 数値  | 数値  | 2 ^ 3    | 8     |
-| 等しい       | 数値 = 数値  | ブール | 10 = 10  | true  |
-|           |          |     | 10 = 11  | False |
-| 異なる       | 数値 # 数値  | ブール | 10 # 11  | true  |
-|           |          |     | 10 # 10  | False |
-| 大きい       | 数値 > 数値  | ブール | 11 > 10  | true  |
-|           |          |     | 10 > 11  | False |
-| 小さい       | 数値 < 数値  | ブール | 10 < 11  | true  |
-|           |          |     | 11 < 10  | False |
-| 以上        | 数値 >= 数値 | ブール | 11 >= 10 | true  |
-|           |          |     | 10 >= 11 | False |
-| 以下        | 数値 <= 数値 | ブール | 10 <= 11 | true  |
-|           |          |     | 11 <= 10 | False |
+| 処理        | シンタックス   | 戻り値     | 式        | 値     |
+| --------- | -------- | ------- | -------- | ----- |
+| 加算 (足し算)  | 数値 + 数値  | Number  | 2 + 3    | 5     |
+| 減算 (引き算)  | 数値 - 数値  | Number  | 3 – 2    | 1     |
+| 乗算 (かけ算)  | 数値 * 数値  | Number  | 5 * 2    | 10    |
+| 除算 (割り算)  | 数値 / 数値  | Number  | 5 / 2    | 2.5   |
+| 倍長整数を返す除算 | 数値 \ 数値 | Number  | 5 \ 2   | 2     |
+| モジューロ     | 数値 % 数値  | Number  | 5 % 2    | 1     |
+| 指数        | 数値 ^ 数値  | Number  | 2 ^ 3    | 8     |
+| 等しい       | 数値 = 数値  | Boolean | 10 = 10  | true  |
+|           |          |         | 10 = 11  | False |
+| 異なる       | 数値 # 数値  | Boolean | 10 # 11  | true  |
+|           |          |         | 10 # 10  | False |
+| 大きい       | 数値 > 数値  | Boolean | 11 > 10  | true  |
+|           |          |         | 10 > 11  | False |
+| 小さい       | 数値 < 数値  | Boolean | 10 < 11  | true  |
+|           |          |         | 11 < 10  | False |
+| 以上        | 数値 >= 数値 | Boolean | 11 >= 10 | true  |
+|           |          |         | 10 >= 11 | False |
+| 以下        | 数値 <= 数値 | Boolean | 10 <= 11 | true  |
+|           |          |         | 11 <= 10 | False |
 
 モジューロ演算子 % は最初の数値を 2番目の数値で除算し、その余りの整数を返します。 次に例を示します:
 
@@ -120,7 +120,7 @@ title: 数値 (実数、倍長整数、整数)
 
 次の表は、ビットワイズ演算子とその効果を示します:
 
-| 処理          | 詳細                                                                         |
+| 処理          | 説明                                                                         |
 | ----------- | -------------------------------------------------------------------------- |
 | Bitwise AND | それぞれの結果ビットは2つのオペランドのビットの論理ANDです。 下記は、論理ANDの真偽表です:<li>1 & 1 --> 1</li> |
 <li>0 & 1 --> 0</li><li>1 & 0 --> 0</li><li>0 & 0 --> 0</li>In other words, the resulting bit is 1 if the two operand bits are 1; otherwise the resulting bit is 0.| |Bitwise OR (inclusive)|Each resulting bit is the logical OR of the bits in the two operands.Here is the logical OR table:<li>1 &#124; 1 --> 1</li><li>0 &#124; 1 --> 1</li><li>1 &#124; 0 --> 1</li><li>0 &#124; 0 --> 0</li>In other words, the resulting bit is 1 if at least one of the two operand bits is 1; otherwise the resulting bit is 0.| |Bitwise OR (exclusive)|Each resulting bit is the logical XOR of the bits in the two operands.Here is the logical XOR table:<li>1 \^&#124; 1 --> 0</li><li>0 \^&#124; 1 --> 1</li><li>1 \^&#124; 0 --> 1</li><li>0 \^&#124; 0 --> 0</li>In other words, the resulting bit is 1 if only one of the two operand bits is 1; otherwise the resulting bit is 0.| |Left Bit Shift|The resulting value is set to the first operand value, then the resulting bits are shifted to the left by the number of positions indicated by the second operand. 左側のビットがなくなり、右側の新しいビットは0に設定されます。 

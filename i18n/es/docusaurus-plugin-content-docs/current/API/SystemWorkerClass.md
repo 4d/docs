@@ -61,7 +61,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 
 <!-- REF #4D.SystemWorker.new().Params -->
-| Parámetros  | Type            |    | Descripción                                                          |
+| Parámetros  | Tipo            |    | Descripción                                                          |
 | ----------- | --------------- |:--:| -------------------------------------------------------------------- |
 | commandLine | Text            | -> | Línea de comando a ejecutar                                          |
 | options     | Object          | -> | Parámetros worker                                                    |
@@ -70,7 +70,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod +x /folder/myfile.sh")
 
 #### Descripción
 
-The `4D.SystemWorker.new()` function <!-- REF #4D.SystemWorker.new().Summary -->creates and returns a `4D.SystemWorker` object that will execute the *commandLine* you passed as parameter to launch an external process<!-- END REF -->.
+La función `4D.SystemWorker.new()` <!-- REF #4D.SystemWorker.new().Summary -->crea y devuelve un objeto `4D.SystemWorker` que ejecutará la *commandLine* que se ha pasado como parámetro para lanzar un proceso externo<!-- END REF -->.
 
 El objeto system worker devuelto puede utilizarse para enviar mensajes al worker y obtener los resultados del worker.
 
@@ -84,7 +84,7 @@ En el parámetro *commandLine*, pase la ruta completa del archivo de la aplicaci
 
 En el parámetro *options*, pase un objeto que pueda contener las siguientes propiedades:
 
-| Propiedad        | Type    | Por defecto | Descripción                                                                                                                                                                                                                                                                                                                         |
+| Propiedad        | Tipo    | Por defecto | Descripción                                                                                                                                                                                                                                                                                                                         |
 | ---------------- | ------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | onResponse       | Formula | indefinido  | Retrollamada para los mensajes del system worker. Esta retrollamada se llama una vez que se recibe la respuesta completa. Recibe dos objetos como parámetros (ver más abajo)                                                                                                                                                        |
 | onData           | Formula | indefinido  | Retrollamada para los datos del system worker. Esta retrollamada se llama cada vez que el system worker recibe los datos. Recibe dos objetos como parámetros (ver más abajo)                                                                                                                                                        |
@@ -100,7 +100,7 @@ En el parámetro *options*, pase un objeto que pueda contener las siguientes pro
 
 Todas las funciones de retrollamada reciben dos parámetros objeto. Su contenido depende de la retrollamada:
 
-| Parámetros   | Type        | *onResponse* | *onData*        | *onDataError*  | *onError*    | *onTerminate* |
+| Parámetros   | Tipo        | *onResponse* | *onData*        | *onDataError*  | *onError*    | *onTerminate* |
 | ------------ | ----------- | ------------ | --------------- | -------------- | ------------ | ------------- |
 | $param1      | Object      | SystemWorker | SystemWorker    | SystemWorker   | SystemWorker | SystemWorker  |
 | $param2.type | Text        | "response"   | "data"          | "error"        | "error"      | "termination" |
@@ -265,7 +265,7 @@ Function _createFile($title : Text; $textBody : Text)
 
 
 <!-- REF #SystemWorkerClass.closeInput().Params -->
-| Parámetros | Type |  | Descripción                                             |
+| Parámetros | Tipo |  | Descripción                                             |
 | ---------- | ---- |::| ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
@@ -273,7 +273,7 @@ Function _createFile($title : Text; $textBody : Text)
 
 #### Descripción
 
-The `.closeInput()` function <!-- REF #SystemWorkerClass.closeInput().Summary -->closes the input stream (*stdin*) of the external process<!-- END REF -->.
+La función `.closeInput()` <!-- REF #SystemWorkerClass.closeInput().Summary -->cierra el flujo de entrada (*stdin*) del proceso externo<!-- END REF -->.
 
 Cuando el ejecutable espera a que se reciban todos los datos a través de `postMessage()`, `.closeInput()` es útil para indicar al ejecutable que el envío de datos ha terminado y que puede continuar.
 
@@ -369,7 +369,7 @@ The `.errors` property <!-- REF #SystemWorkerClass.errors.Summary -->contains a 
 
 Cada elemento de la colección es un objeto con las siguientes propiedades:
 
-| Propiedad              | Type   | Descripción                                           |
+| Propiedad              | Tipo   | Descripción                                           |
 | ---------------------- | ------ | ----------------------------------------------------- |
 | [].errorCode           | number | 4D error code                                         |
 | [].message             | text   | Descripción del error 4D                              |
@@ -429,7 +429,7 @@ Esta propiedad es **de sólo lectura**.
 
 
 <!-- REF #SystemWorkerClass.postMessage().Params -->
-| Parámetros  | Type |    | Descripción                                                         |
+| Parámetros  | Tipo |    | Descripción                                                         |
 | ----------- | ---- |:--:| ------------------------------------------------------------------- |
 | message     | Text | -> | Texto a escribir en el flujo de entrada (stdin) del proceso externo |
 | messageBLOB | Blob | -> | Bytes write on the input stream|<!-- END REF -->
@@ -482,7 +482,7 @@ The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary 
 
 
 <!-- REF #SystemWorkerClass.terminate().Params -->
-| Parámetros | Type |  | Descripción                                             |
+| Parámetros | Tipo |  | Descripción                                             |
 | ---------- | ---- |::| ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
@@ -542,7 +542,7 @@ Esta propiedad es **de sólo lectura**.
 
 
 <!-- REF #SystemWorkerClass.wait().Params -->
-| Parámetros | Type            |    | Descripción                                    |
+| Parámetros | Tipo            |    | Descripción                                    |
 | ---------- | --------------- |:--:| ---------------------------------------------- |
 | timeout    | Real            | -> | Tiempo de espera (en segundos)                 |
 | Result     | 4D.SystemWorker | <- | SystemWorker object|<!-- END REF -->

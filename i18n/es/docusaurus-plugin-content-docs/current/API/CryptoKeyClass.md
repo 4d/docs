@@ -55,7 +55,7 @@ ASSERT($status.success)
 
 
 <!-- REF #4D.CryptoKey.new().Params -->
-| Parámetros | Type         |    | Descripción                                                                    |
+| Parámetros | Tipo         |    | Descripción                                                                    |
 | ---------- | ------------ | -- | ------------------------------------------------------------------------------ |
 | settings   | Object       | -> | Parámetros para generar o cargar un par de llaves                              |
 | result     | 4D.CryptoKey | <- | Objeto que contiene un par de llaves de encriptación<!-- END REF --> |
@@ -64,7 +64,7 @@ La función `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->crea un
 
 #### *settings*
 
-| Propiedad       | Type    | Descripción                                      |
+| Propiedad       | Tipo    | Descripción                                      |
 | --------------- | ------- | ------------------------------------------------ |
 | [curve](#curve) | text    | Nombre de la curva ECDSA                         |
 | [pem](#pem)     | text    | Definición PEM de una llave de cifrado a cargar  |
@@ -108,7 +108,7 @@ Definido sólo para llaves ECDSA: el <!-- REF #CryptoKey.curve.Summary -->nombre
 
 
 <!-- REF #CryptoKey.decrypt().Params -->
-| Parámetros | Type   |    | Descripción                                                                          |
+| Parámetros | Tipo   |    | Descripción                                                                          |
 | ---------- | ------ | -- | ------------------------------------------------------------------------------------ |
 | message    | Text   | -> | Cadena de mensajes a decodificar utilizando `options.encodingEncrypted` y descifrar. |
 | options    | Object | -> | Opciones de decodificación                                                           |
@@ -120,7 +120,7 @@ La llave debe ser una llave RSA, el algoritmo es RSA-OAEP (ver [RFC 3447](https:
 
 #### *options*
 
-| Propiedad         | Type | Descripción                                                                                                                                                         |
+| Propiedad         | Tipo | Descripción                                                                                                                                                         |
 | ----------------- | ---- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash              | text | Algoritmo Digest a utilizar. Por ejemplo: "SHA256", "SHA384" o "SHA512".                                                                                            |
 | encodingEncrypted | text | Codificación utilizada para convertir el parámetro `mensaje` en la representación binaria a descifrar. Puede ser "Base64", o "Base64URL". Por defecto es "Base64".  |
@@ -130,7 +130,7 @@ La llave debe ser una llave RSA, el algoritmo es RSA-OAEP (ver [RFC 3447](https:
 
 La función devuelve un objeto "status" con la propiedad `success` definida como `true` si el *message* pudo ser descifrado con éxito.
 
-| Propiedad | Type       | Descripción                                                              |
+| Propiedad | Tipo       | Descripción                                                              |
 | --------- | ---------- | ------------------------------------------------------------------------ |
 | success   | boolean    | True si el mensaje ha sido descifrado con éxito                          |
 | result    | text       | Mensaje descifrado y decodificado utilizando `options.encodingDecrypted` |
@@ -155,7 +155,7 @@ En caso de que el *message* no haya podido ser descifrado por no haber sido encr
 
 
 <!-- REF #CryptoKey.encrypt().Params -->
-| Parámetros | Type   |    | Descripción                                                                                                 |
+| Parámetros | Tipo   |    | Descripción                                                                                                 |
 | ---------- | ------ | -- | ----------------------------------------------------------------------------------------------------------- |
 | message    | Text   | -> | Cadena de mensajes a codificar utilizando `options.encodingDecrypted` y encriptado.                         |
 | options    | Object | -> | Opciones de codificación                                                                                    |
@@ -167,7 +167,7 @@ La llave debe ser una llave RSA, el algoritmo es RSA-OAEP (ver [RFC 3447](https:
 
 ##### *options*
 
-| Propiedad         | Type | Descripción                                                                                                                                                             |
+| Propiedad         | Tipo | Descripción                                                                                                                                                             |
 | ----------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash              | text | Algoritmo Digest a utilizar. Por ejemplo: "SHA256", "SHA384" o "SHA512".                                                                                                |
 | encodingEncrypted | text | Codificación utilizada para convertir el mensaje binario encriptado en la cadena de resultados. Puede ser "Base64", o "Base64URL". Por defecto es "Base64".             |
@@ -194,7 +194,7 @@ El valor devuelto es un mensaje encriptado.
 
 
 <!-- REF #CryptoKey.getPrivateKey().Params -->
-| Parámetros | Type |    | Descripción                                             |
+| Parámetros | Tipo |    | Descripción                                             |
 | ---------- | ---- | -- | ------------------------------------------------------- |
 | Result     | Text | <- | Llave privada en formato PEM|<!-- END REF --> |
 
@@ -221,7 +221,7 @@ El valor devuelto es la llave privada.
 
 
 <!-- REF #CryptoKey.getPublicKey().Params -->
-| Parámetros | Type |    | Descripción                                             |
+| Parámetros | Tipo |    | Descripción                                             |
 | ---------- | ---- | -- | ------------------------------------------------------- |
 | Result     | Text | <- | Llave pública en formato PEM|<!-- END REF --> |
 
@@ -265,7 +265,7 @@ El valor devuelto es la llave pública.
 
 
 <!-- REF #CryptoKey.sign().Params -->
-| Parámetros | Type   |    | Descripción                                                                                      |
+| Parámetros | Tipo   |    | Descripción                                                                                      |
 | ---------- | ------ | -- | ------------------------------------------------------------------------------------------------ |
 | message    | Text   | -> | Cadena mensaje a firmar                                                                          |
 | options    | Object | -> | Opciones de firma                                                                                |
@@ -277,7 +277,7 @@ La función `.sign()` <!-- REF #CryptoKey.sign().Summary -->firma la representac
 
 #### *options*
 
-| Propiedad         | Type    | Descripción                                                                                                                                                                                        |
+| Propiedad         | Tipo    | Descripción                                                                                                                                                                                        |
 | ----------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash              | text    | Algoritmo Digest a utilizar. Por ejemplo: "SHA256", "SHA384" o "SHA512". Cuando se utiliza para producir un JWT, el tamaño del hash debe coincidir con el tamaño del algoritmo PS@, ES@, RS@ o PS@ |
 | encodingEncrypted | text    | Codificación utilizada para convertir el mensaje binario encriptado en la cadena de resultados. Puede ser "Base64", o "Base64URL". Por defecto es "Base64".                                        |
@@ -345,7 +345,7 @@ El <!-- REF #CryptoKey.type.Summary -->nombre del tipo de llave - "RSA", "ECDSA"
 
 
 <!-- REF #CryptoKey.verify().Params -->
-| Parámetros | Type   |    | Descripción                                                                                          |
+| Parámetros | Tipo   |    | Descripción                                                                                          |
 | ---------- | ------ | -- | ---------------------------------------------------------------------------------------------------- |
 | message    | Text   | -> | Cadena mensaje utilizada para generar la firma                                                       |
 | signature  | Text   | -> | Firma a verificar, en representación Base64 o Base64URL, dependiendo del valor de `options.encoding` |
@@ -359,7 +359,7 @@ La función `.verify()` <!-- REF #CryptoKey.verify().Summary -->verifica la firm
 
 #### *options*
 
-| Propiedad | Type    | Descripción                                                                                                                                                                                        |
+| Propiedad | Tipo    | Descripción                                                                                                                                                                                        |
 | --------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hash      | text    | Algoritmo Digest a utilizar. Por ejemplo: "SHA256", "SHA384" o "SHA512". Cuando se utiliza para producir un JWT, el tamaño del hash debe coincidir con el tamaño del algoritmo PS@, ES@, RS@ o PS@ |
 | pss       | boolean | Utilice el Probabilistic Signature Scheme (PSS). Se ignora si la llave no es una llave RSA. Pase `true` al verificar un JWT para el algoritmo PS@                                                  |
@@ -371,7 +371,7 @@ La `CryptoKey` debe contener una llave **pública** válida.
 
 La función devuelve un objeto de estado con la propiedad `success` definida como `true` si el `message` pudo ser verificado con éxito (es decir, la firma coincide).
 
-| Propiedad | Type       | Descripción                                                                                 |
+| Propiedad | Tipo       | Descripción                                                                                 |
 | --------- | ---------- | ------------------------------------------------------------------------------------------- |
 | success   | boolean    | True si la firma coincide con el mensaje                                                    |
 | errors    | collection | Si `success` es `false`, puede contener una colección de errores|<!-- END REF --> |

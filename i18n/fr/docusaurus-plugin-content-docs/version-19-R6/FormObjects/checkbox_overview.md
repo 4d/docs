@@ -251,15 +251,15 @@ Le style Gradient OS X a un arrière-plan gris clair et un titre et s'affiche so
 
 ### OS X Texture
 
-The OS X Textured button style is similar to the [Bevel](#bevel) button style but with a smaller size (maximum size is the size of a standard macOS system button). As with the Bevel button style, the OS X Textured button style combines the appearance of the [Regular](#regular) button style with the [Toolbar Button](#toolbar-button) button style's behavior.
+Le style de bouton OS X Textured est presque identique au style [Bevel](#bevel) mais avec une taille plus petite (la taille maximale est celle d'un bouton système standard de macOS). Comme pour le style Bevel, le style OS X Textured combine l'apparence du style [Classique](#regular) et du style [Barre outils](#toolbar-button).
 
-By default, the OS X Textured button style appears as:
+Par défaut, le style OS X Textured apparaît comme :
 
- - *Sous Windows* - un bouton système standard avec un fond bleu clair et un libellé au centre.
+ - *Windows* - un bouton système standard avec un fond bleu clair et un libellé au centre.
 
   ![](../assets/en/FormObjects/checkbox_osxtextured.png)
 
- - *macOS* - a standard system button. Sa hauteur est prédéfinie : il n'est pas possible de l'agrandir ou de la réduire.
+ - *macOS* - un bouton système standard. Sa hauteur est prédéfinie : il n'est pas possible de l'agrandir ou de la réduire.
 
   ![](../assets/en/FormObjects/checkbox_osxtextured_mac.png)
 
@@ -282,9 +282,9 @@ By default, the OS X Textured button style appears as:
 
 ### Office XP
 
-The Office XP button style combines the appearance of the [Regular](#regular) button style with the [Toolbar Button](#toolbar-button) button style's behavior.
+Le style de bouton Office XP combine l'apparence du style [Classique](#regular) et du comportement du style [Barre outils](#toolbar-button).
 
-The colors (highlight and background) of a check box with the Office XP button style are based on the system colors. The appearance of the check box can be different when the cursor hovers over it, depending on the OS:
+Les couleurs (surbrillance et arrière-plan) d'une case à cocher avec le style de bouton Office XP sont basées sur les couleurs du système. L'apparence de la case à cocher peut être différente lorsque le curseur la survole, selon le système d'exploitation :
 
  - *Sous Windows* - son arrière-plan n'apparaît que lorsque la souris le survole. Exemples avec les états coché / non coché / surligné :
 
@@ -315,9 +315,9 @@ The colors (highlight and background) of a check box with the Office XP button s
 
 ### Contracter/Déployer
 
-This check box button style can be used to add a standard collapse/expand icon. These icons are used natively in hierarchical lists.
+Ce style de case à cocher peut être utilisé pour ajouter une icône standard contracter/déployer. Ces icônes sont utilisées nativement dans les listes hiérarchiques.
 
- - *Windows* - the icon looks like a [+] or a [-]
+ - *Sous Windows* - le bouton est semblable à [+] ou à [-]
 
   ![](../assets/en/FormObjects/checkbox_collapse.png)
 

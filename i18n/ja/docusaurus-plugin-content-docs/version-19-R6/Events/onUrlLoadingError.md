@@ -8,7 +8,7 @@ title: On URL Loading Error
 | 50  | [Webエリア](FormObjects/webArea_overview.md) | URL をロード中にエラーが発生した |
 
 
-## 詳細
+## 説明
 
 このイベントは、URL のロード中にエラーを検出すると生成されます。
 

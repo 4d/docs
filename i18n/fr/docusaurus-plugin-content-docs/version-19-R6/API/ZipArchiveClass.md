@@ -63,7 +63,7 @@ End if
 
 #### Description
 
-The `ZIP Create archive` command <!-- REF #_command_.ZIP Create archive.Summary -->creates a compressed ZIP archive object and returns the status of the operation<!-- END REF -->.
+La commande `ZIP Create archive` <!-- REF #_command_.ZIP Create archive.Summary -->crée un objet d'archive ZIP compressé et renvoie le statut de l'opération.<!-- END REF -->.
 
 Vous pouvez passer un objet 4D.File, 4D.Folder, ou une structure Zip en tant que premier paramètre :
 
@@ -214,7 +214,7 @@ $err:=ZIP Create archive($zip; $destination)
 
 #### Description
 
-The `ZIP Read archive` command <!-- REF #_command_.ZIP Read archive.Summary -->retrieves the contents of *zipFile* and returns it as a `4D.ZipArchive` object<!-- END REF -->.
+La commande `ZIP Read archive` <!-- REF #_command_.ZIP Read archive.Summary -->récupère le contenu de *zipFile* et le renvoie sous la forme d'un objet `4D.ZipArchive`<!-- END REF -->.
 
 > Cette commande ne décompresse pas l'archive ZIP, elle fournit seulement un aperçu de son contenu. Pour extraire le contenu d'une archive, vous devez utiliser des méthodes telles que [file.copyTo()](Document.md#copyto) ou [folder.copyTo()](Directory.md#copyto).
 
@@ -272,7 +272,7 @@ Pour extraire à partir du dossier root :
 
 #### Description
 
-The `.root` property contains <!-- REF #ZipArchiveClass.root.Summary -->a virtual folder providing access to the contents of the ZIP archive<!-- END REF -->.
+La propriété `.root` contient <!-- REF #ZipArchiveClass.root.Summary -->un dossier virtuel permettant d'accéder au contenu de l'archive ZIP<!-- END REF -->.
 
 Le dossier `root` et son contenu sont manipulés à l'aide des fonctions et propriétés des classes [ZipFile](ZipFileClass.md) et [ZipFolder](ZipFolderClass.md).
 

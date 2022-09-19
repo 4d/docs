@@ -242,7 +242,7 @@ A new entity selection **inherits** from the original entity selection nature in
     - [entitySelection.*attributeName*](API/EntitySelectionClass.md#attributename) (e.g. "employees.employer") lorsque *attributeName* est un attribut lié (de même nature que celle de la "entity selection"),
     - [.extract()](API/EntitySelectionClass.md#extract), lorsque la collection résultante contient des sélections d'entités (de même nature que l'entity selection'").
 
-Exemple :
+Exemples :
 
 ```4d
 $highSal:=ds.Employee.query("salary >= :1"; 1000000)   
@@ -327,7 +327,7 @@ Outre la variété de méthodes de recherche, vous pouvez également utiliser de
   //All invoices with at least one line item related to a part in $myParts
 ```
 
-La dernière ligne renverra, dans $myInvoices, une sélection d'entité de toutes les factures qui ont au moins un poste de facture lié à une partie de la sélection d'entités myParts. Lorsqu'un attribut de relation est utilisé comme propriété d'une entity selection, le résultat est toujours une autre entity selection, même si une seule entité est retournée. When a relation attribute is used as a property of an entity selection, the result is always another entity selection, even if only one entity is returned.
+La dernière ligne renverra, dans $myInvoices, une sélection d'entité de toutes les factures qui ont au moins un poste de facture lié à une partie de la sélection d'entités myParts. Lorsqu'un attribut relationnel est utilisé comme propriété d'une entity selection, le résultat est toujours une autre entity selection, même si une seule entité est retournée. When a relation attribute is used as a property of an entity selection, the result is always another entity selection, even if only one entity is returned.
 
 
 ## Verrouillage d'une entité

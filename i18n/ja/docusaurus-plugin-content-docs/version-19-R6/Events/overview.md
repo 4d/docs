@@ -21,7 +21,7 @@ End if
 
 各イベントは、`FORM Event` コマンドによってオブジェクトとして返されます。 デフォルトで、以下のプロパティが含まれています:
 
-| プロパティ | タイプ | 詳細 |
+| プロパティ | タイプ | 説明 |
 | ----- | --- | -- |
 |       |     |    |
  objectName|text|Name of the object triggering the event - Not included if the event is triggered by the form| |code|longint|Numeric value of the form event. Also returned by the

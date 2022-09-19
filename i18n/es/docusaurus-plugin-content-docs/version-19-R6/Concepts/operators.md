@@ -228,9 +228,9 @@ Dado `Expr1 || Expr2`:
 
 If Expr1 is [truthy](#truthy-and-falsy), Expr2 is not evaluated and the calculation returns Expr1.
 
-If Expr1 is [falsy](#truthy-and-falsy), the calculation returns Expr2.
+Si Expr1 es [falsy](#truthy-and-falsy), el cálculo devuelve Expr2.
 
-The following table summarizes the different cases and the value returned for the **||** operator:
+La siguiente tabla resume los diferentes casos y el valor devuelto por el operador **||**:
 
 | Expr1  | Expr2  | Valor devuelto |
 | ------ | ------ | -------------- |
@@ -241,7 +241,7 @@ The following table summarizes the different cases and the value returned for th
 
 #### Ejemplo 1
 
-Supongamos que tiene una tabla llamada Employee. Some employees have entered a phone number, and others haven't. This means that `$emp.phone` could be NULL, and you cannot assign NULL to a Text variable. Pero puede escribir lo siguiente:
+Supongamos que tiene una tabla llamada Employee. Algunos empleados han introducido un número de teléfono y otros no. Esto significa que `$emp.phone` podría ser NULL, y no se puede asignar NULL a una variable texto. Pero puede escribir lo siguiente:
 
 ```4d
 var $phone : Text
@@ -249,13 +249,13 @@ var $phone : Text
 $phone:=$emp.phone || "n/a"
 ```
 
-In which case `$phone` will store either a phone number or the "n/a" string.
+En este caso, `$phone` almacenará un número de teléfono o la cadena "n/a".
 
 #### Ejemplo 2
 
-Given a table called Person with a *name* field, as well as a *maiden name* field for married women.
+Dada una tabla llamada Person con un campo *name*, así como un campo *maiden name* para las mujeres casadas.
 
-The following example checks if there is a maiden name and stores it in a variable, otherwise it simply stores the person's name:
+El siguiente ejemplo comprueba si hay un apellido de soltera y lo almacena en una variable, de lo contrario simplemente almacena el nombre de la persona:
 
 ```4d
 var $name: Text
@@ -265,20 +265,20 @@ $name:=$person.maidenName || $person.name
 
 ### Prioridad
 
-The `&&` and `||` operators have the same precedence as the logical operators `&` and `|`, and are evaluated left to right.
+Los operadores `&&` y `||` tienen la misma prioridad que los operadores lógicos `&` y `|`, y se evalúan de izquierda a derecha.
 
-This means that `a || b && c` is evaluated as `(a || b) && c`.
+Esto significa que `a || b && c` se evalúa como `(a || b) && c`.
 
 
 ## Operador ternario
 
-The ternary conditional operator allows you to write one-line conditional expressions. For example, it can replace a full sequence of [If…Else](./cf_branching.md#ifelseend-if) statements.
+El operador condicional ternario permite escribir expresiones condicionales de una línea. Por ejemplo, puede reemplazar una secuencia completa de instrucciones [If…Else](./cf_branching.md#ifelseend-if).
 
 Se necesitan tres operandos en el siguiente orden:
 
 * una condición seguida de un signo de interrogación (?)
-* an expression to execute if the condition is [truthy](#truthy-and-falsy), followed by a colon (:)
-* an expression to execute if the condition is [falsy](#truthy-and-falsy)
+* una expresión a ejecutar si la condición es [truthy](#truthy-and-falsy), seguida de dos puntos (:)
+* una expresión a ejecutar si la condición es [falsy](#truthy-and-falsy)
 
 ### Sintaxis
 
@@ -286,7 +286,7 @@ La sintaxis es la siguiente:
 
 `condition ? condition ? exprIfTruthy : exprIfFalsy condition ? exprIfTruthy : exprIfFalsy condition ? exprIfTruthy : exprIfFalsy`
 
-> Since the [token syntax](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html) uses colons, we recommend inserting a space after the colon `:` or enclosing tokens using parentheses to avoid any conflicts.
+> Dado que la [sintaxis con tokens](https://doc.4d.com/4Dv19R3/4D/19-R3/Using-tokens-in-formulas.300-5583062.en.html) utiliza dos puntos, se recomienda insertar un espacio después de los dos puntos `:` o encerrar los tokens utilizando paréntesis para evitar cualquier conflicto.
 
 ### Ejemplos
 
@@ -306,7 +306,7 @@ ALERT($beverage) // "Beer"
 
 #### Gestión de los datos de una tabla
 
-This example stores a person's full name in a variable, and handles the case when no first name or last name has been specified:
+Este ejemplo almacena el nombre completo de una persona en una variable, y maneja el caso cuando no se ha especificado el nombre o el apellido:
 
 ```4d
 var $fullname : Text
@@ -319,7 +319,7 @@ $fullname:=($person.firstname && $person.lastname) ? ($person.firstname+" "+$per
 
 Además de un tipo, cada valor también tiene un valor booleano inherente, conocido generalmente como **truthy** o **falsy<**.
 
-> **truthy** and **falsy** values are only evaluated by [short-circuit](#short-circuit-operators) and [ternary](#ternary-operator) operators.
+> Los valores **truthy** y **falsy** sólo son evaluados por los operadores [en cortocircuito](#short-circuit-operators) y [ternarios](#ternary-operator).
 
 Los siguientes valores son **falsy**:
 
@@ -335,21 +335,21 @@ Los siguientes valores son **falsy**:
 * [] - Colecciones vacías
 * {} - Objetos vacios
 
-All other values are considered **truthy**, including:
+Todos los demás valores se consideran **truthy**, incluyendo:
 
 * 0 - cero numérico (Entero u otro)
 
-In 4D, **truthy** and **falsy** evaluation reflects the **usability** of a value, which means that a truthy value exists and can be processed by the code without generating errors or unexpected results. The rationale behind this is to provide a convenient way to handle *undefined* and *null* values in objects and collections, so that a reduced number of [If…Else](./cf_branching.md#ifelseend-if) statements are necessary to avoid runtime errors.
+En 4D, la evaluación **truthy** y **falsy** refleja la **usabilidad** de un valor, lo que significa que un valor truthy existe y puede ser procesado por el código sin generar errores o resultados inesperados. La razón de ser de esto es proporcionar una forma conveniente de manejar *valores no definidos* y *valores nulos* en objetos y colecciones, de modo que un número reducido de instrucciones [If…Else](./cf_branching.md#ifelseend-if) sean necesarias para evitar errores de ejecución.
 
-For example, when you use a [short-circuit OR operator](#short-circuit-or-operator-):
+Por ejemplo, cuando se utiliza un operador en [cortocircuito OR](#short-circuit-or-operator-):
 
 ```4d
 $value:=$object.value || $defaultValue
 ```
 
-... you get the default value whenever *$object* does not contain the `value` property OR when it is *null*. So this operator checks the existence or usability of the value instead of a specific value. Note that because the numerical value 0 exists and is usable, it is not treated specially, thus it is **truthy**.
+... se obtiene el valor por defecto cada vez que *$object* no contenga la propieda `valor ` O cuando sea *null*. Por lo tanto, este operador comprueba la existencia o utilidad del valor en lugar de un valor específico. Obsérvese que como el valor numérico 0 existe y es utilizable, no se le da un tratamiento especial, por lo que es **truthy**.
 
-Regarding values representing collections, objects, or strings, "empty" values are considered **falsy**. It is handy when you want to assign a default value whenever an empty one is encountered.
+En cuanto a los valores que representan las colecciones, los objetos o las cadenas, los valores "vacíos" se consideran como **falsy**. Es útil cuando se quiere asignar un valor por defecto cuando se encuentra un valor vacío.
 
 ```4d
 $phone:=$emp.phone || "n/a"

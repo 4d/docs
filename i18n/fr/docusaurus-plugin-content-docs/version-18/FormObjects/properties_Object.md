@@ -34,9 +34,9 @@ For more information about naming rules for form objects, refer to [Identifiers]
 
 #### Grammaire JSON
 
-| Nom | Type de données | Valeurs possibles                                                    |
-| --- | --------------- | -------------------------------------------------------------------- |
-| nom | string          | Any allowed name which does not belong to an already existing object |
+| Nom  | Type de données | Valeurs possibles                                                    |
+| ---- | --------------- | -------------------------------------------------------------------- |
+| name | string          | Any allowed name which does not belong to an already existing object |
 
 #### Objets pris en charge
 

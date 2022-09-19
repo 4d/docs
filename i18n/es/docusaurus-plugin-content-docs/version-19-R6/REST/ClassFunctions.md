@@ -67,7 +67,7 @@ Las entidades pasadas en los parámetros son referenciadas en el servidor a trav
 
 > Si la petición envía los valores de atributo modificados para una entidad existente en el servidor, la función de modelo de datos ORDA llamada se ejecutará automáticamente en el servidor con los valores modificados. Esta funcionalidad le permite, por ejemplo, verificar el resultado de una operación en una entidad, tras aplicar todas las reglas de negocio, desde la aplicación cliente. A continuación, puede decidir guardar o no la entidad en el servidor.
 
-| Propiedades             | Type                                     | Descripción                                                                 |
+| Propiedades             | Tipo                                     | Descripción                                                                 |
 | ----------------------- | ---------------------------------------- | --------------------------------------------------------------------------- |
 | Atributos de la entidad | mixto                                    | Opcional - Valores a modificar                                              |
 | __DATACLASS             | String                                   | Obligatorio - Indica la Dataclass de la entidad                             |
@@ -91,7 +91,7 @@ La selección de entidades debe haber sido definida previamente utilizando [$met
 
 > Si la petición envía una selección de entidades modificada al servidor, la función del modelo de datos ORDA llamada se ejecutará automáticamente en el servidor con la selección de entidades modificada.
 
-| Propiedades             | Type    | Descripción                                                                                |
+| Propiedades             | Tipo    | Descripción                                                                                |
 | ----------------------- | ------- | ------------------------------------------------------------------------------------------ |
 | Atributos de la entidad | mixto   | Opcional - Valores a modificar                                                             |
 | __DATASET               | String  | Obligatorio - entitySetID (UUID) de la selección de entidades                              |

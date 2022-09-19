@@ -5,7 +5,7 @@ title: Folder
 
 
 
-Les objets `Folder` sont créés avec la commande [`Folder`](#folder). Ils contiennent des références à des dossiers qui peuvent exister réellement ou non sur le disque. For example, when you execute the `Folder` command to create a new folder, a valid `Folder` object is created but nothing is actually stored on disk until you call the [`folder.create()`](#create) function.
+Les objets `Folder` sont créés avec la commande [`Folder`](#folder). Ils contiennent des références à des dossiers qui peuvent exister réellement ou non sur le disque. Par exemple, lorsque vous exécutez la commande `Folder` pour créer un nouveau dossier, un objet `Folder` valide est créé mais rien n'est réellement stocké sur le disque jusqu'à ce que vous appeliez la fonction [`folder.create()`](#create).
 
 ### Exemple
 
@@ -75,7 +75,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 #### Description
 
-The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. La commande accepte deux syntaxes :
+La commande `Folder` <!-- REF #_command_.Folder.Summary -->crée et renvoie un nouvel objet du type `4D.Folder`<!-- END REF -->. La commande accepte deux syntaxes :
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -107,12 +107,12 @@ Dans le paramètre *folderConstant*, passez un dossier 4D interne ou un dossier 
 | fk remote database folder  | 3     | Dossier de la base de données 4D créé sur chaque machine 4D distante                                                        |
 | fk resources folder        | 6     | Filesystem associé : "/RESOURCES"                                                                                           |
 | fk system folder           | 100   |                                                                                                                             |
-| fk user preferences folder | 0     | 4D folder that stores user preference files within the `\<userName>` directory.                                      |
+| fk user preferences folder | 0     | Dossier 4D qui stocke les fichiers de préférence des utilisateurs dans le répertoire `\<userName>`.                  |
 | fk web root folder         | 8     | Dossier racine web courant du projet : "/PACKAGE/chemin" si son emplacement se trouve dans le package, sinon chemin complet |
 
-If the command is called from a component, pass the optional *parameter to get the path of the host database. Otherwise, if you omit the* parameter, a null object is always returned.
+Si la commande est appelée à partir d'un composant, passez le paramètre optionnel * pour lire le chemin de la base hôte. Sinon, si vous omettez le paramètre *, un objet null est systématiquement retourné.
 
-> On Windows, in merged clients, the location of built-in folders is modified if the `ShareLocalResourcesOnWindowsClient` [BuildApp key](../Desktop/building.md#buildapp4dsettings) is used.
+> Sous Windows, dans les clients fusionnés, l'emplacement des dossiers intégrés est modifié si la [clé BuildApp](../Desktop/building.md#buildapp4dsettings) `ShareLocalResourcesOnWindowsClient` est utilisée.
 
 ## 4D.Folder.new()
 
@@ -129,7 +129,7 @@ If the command is called from a component, pass the optional *parameter to get t
 
 #### Description
 
-The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. Elle est identique à la commande [`Folder`](#folder) (raccourci).
+La fonction `.4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->crée et renvoie un nouvel objet du type `4D.Folder`<!-- END REF -->. Elle est identique à la commande [`Folder`](#folder) (raccourci).
 
 > Il est recommandé d'utiliser la commande raccourci [`Folder`](#folder) au lieu de `4D.Folder.new()`.
 
@@ -158,7 +158,7 @@ The `4D.Folder.new()` function <!-- REF #4D.Folder.new().Summary -->creates and 
 
 #### Description
 
-The `.create()` function <!-- REF #FolderClass.create().Summary -->The `.create()` function<!-- END REF -->.
+La fonction `.create()` <!-- REF #FolderClass.create().Summary -->crée un dossier sur le disque selon les propriétés de l'objet `Folder`<!-- END REF -->.
 
 Le cas échéant, la fonction crée la hiérarchie du dossier en se basant sur la description des propriétés [platformPath](#platformpath) ou [path](#path). Si le dossier existe déjà sur disque, la fonction ne fait rien (aucune erreur n'est générée) et retourne faux.
 
@@ -184,9 +184,6 @@ Création d'un dossier "/Archives2019/January/" dans le dossier principal :
 $newFolder:=Folder("/PACKAGE/Archives2019/January")
 If($newFolder.create())
  ALERT("The "+$newFolder.name+" folder was created.")
-Else
- ALERT("Impossible to create a "+$newFolder.name+" folder.")
-End if
 Else
  ALERT("Impossible to create a "+$newFolder.name+" folder.")
 End if
@@ -219,7 +216,7 @@ End if
 
 #### Description
 
-The `.createAlias()` function <!-- REF #FolderClass.createAlias().Summary -->creates an alias (macOS) or a shortcut (Windows)<!-- END REF --> to the folder with the specified *aliasName* name in the folder designated by the *destinationFolder* object.
+La fonction `.createAlias()` <!-- REF #FolderClass.createAlias().Summary -->crée un alias (macOS) ou un raccourci (Windows)<!-- END REF --> nommé *aliasName* pour le dossier, dans le dossier désigné par l'objet *destinationFolder *.
 
 Passez le nom de l'alias ou du raccourci à créer dans le paramètre *aliasName*.
 
@@ -272,7 +269,7 @@ $aliasFile:=$myFolder.createAlias(Folder("/PACKAGE");"Jan2019")
 
 #### Description
 
-The `.delete()` function <!-- REF #FolderClass.delete().Summary -->The `.delete()` function<!-- END REF -->.
+La fonction `delete()` <!-- REF #FolderClass.delete().Summary -->supprime le dossier<!-- END REF -->.
 
 Par défaut, pour des raisons de sécurité, si vous omettez le paramètre option, `.delete()` permet uniquement de supprimer les dossiers vides. Si vous souhaitez que la commande supprime des dossiers qui ne sont pas vides, vous devez utiliser le paramètre option avec l'une des constantes suivantes :
 
@@ -348,7 +345,7 @@ Lorsque la constante `Delete with contents` est passée :
 
 #### Description
 
-The `.moveTo( )` function <!-- REF #FolderClass.moveTo().Summary -->moves or renames the `Folder` object (source folder) into the specified *destinationFolder*<!-- END REF -->.
+La fonction `.moveTo()` <!-- REF #FolderClass.moveTo().Summary -->déplace ou renomme l'objet `Folder` (dossier source) dans l'objet *destinationFolder*spécifié<!-- END REF -->.
 
 Le *destinationFolder* doit exister sur disque, sinon une erreur est générée.
 
@@ -403,7 +400,7 @@ Vous souhaitez déplacer et renommer un dossier :
 
 #### Description
 
-The `.rename()` function <!-- REF #FolderClass.rename().Summary -->The `.rename()` function<!-- END REF -->.
+La fonction `.rename()` <!-- REF #FolderClass.rename().Summary -->renomme le dossier avec le nom que vous avez passé dans *newName* et renvoie l'objet `Folder` renommé<!-- END REF -->.
 
 Le paramètre *newName* doit être conforme aux règles de nommage (ex : il ne doit pas contenir des caractères tels que ":", "/", etc.), sinon une erreur est retournée. S'il existe déjà un fichier portant le même nom, une erreur est retournée.
 

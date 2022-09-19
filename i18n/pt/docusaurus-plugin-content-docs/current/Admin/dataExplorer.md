@@ -76,103 +76,103 @@ A página contém várias áreas:
 - No lado direito de **Details area**: exibe os valores de atributo da entidade atual de seleção assim como **related data**, se houver. Pode navegar entre as entidades da dataclass cliando nos links **First** / **Previous** / **Next** / **Last** na parte inferior da área.
   - Todos os tipos de atributo são exibidos, incluindo imagens, objetos (expressos como json) assim como atributos[computed](../ORDA/ordaClasses.md#computed-attributes-1) e [alias](../ORDA/ordaClasses.md#alias-attributes-1).
   - Os dados relacionados (relações um a um e um a muitos) podem ser mostradas através de áreas expandíveis/colapsáveis:<br/> ![alt-text](../assets/en/Admin/dataExplorerRelated.png)
-  - **Ctrl+Click** (Windows) or **Command+Click** (macOS) on a related attribute name in the right side area displays the values of the attribute in an independant, floating area:<br/> ![alt-text](../assets/en/Admin/dataExplorerFloat.png)
+  - **Ctrl+Click** (Windows) ou **Command+Click** (macOS) em um nome de atributo relacionado na área do lado direito mostra os valores do atributo numa área independente e flutuante:<br/> ![alt-text](../assets/en/Admin/dataExplorerFloat.png)
 
-### Updating contents
+### Atualização de conteúdos
 
-When the ORDA model or data is modified on the database side (table added, record edited or deleted, etc.), you just need to refresh the Data Explorer page in the browser (using the F5 key, for example).
+Quando o modelo ou dados ORDA é modificado no lado da base de dados (tabela adicionada, registo editado ou apagado, etc.), basta atualizar a página do Data Explorer no browser (usando a tecla F5, por exemplo).
 
-### Ordering entities
+### Ordenar entidades
 
-You can reorder the displayed entity list according to attribute values. All types of attributes can be used for a sort, except picture and object.
+É possível reordenar a lista de entidades apresentada de acordo com os valores dos atributos. Todos os tipos de atributos podem ser utilizados para uma espécie, exceto imagem e objeto.
 
-- Click on a column header to order entities according to the corresponding attribute values. By default, the sort is ascending. Click twice for a descending sort. A column used to sort entities is displayed with a small icon and its name is in *italics*.
+- Clique no cabeçalho de uma coluna para encomendar entidades de acordo com os valores dos atributos correspondentes. Como padrão, a ordem é ascendente. Clicar duas vezes para uma ordem decrescente. Uma coluna utilizada para classificar entidades é exibida com um pequeno ícone e o seu nome está em *itálico*.
 
 ![alt-text](../assets/en/Admin/dataExplorer7.png)
 
-- You can sort attributes on several levels. For example, you can sort employees by city and then by salary. To do that, hold down the **Shift** key and click sequentially on each column header to include in the sort order.
+- É possível ordenar atributos em vários níveis. Por exemplo, é possível classificar os empregados por cidade e depois por salário. Para fazer isso, mantenha apertada a tecla **Shift** e clique sequencialmente no cabeçalho de cada coluna para incluir na ordem.
 
-### Query on attributes
+### Consulta sobre atributos
 
-In this mode, you can filter entities by entering values to find (or to exclude) in the areas above the attribute list. You can filter on one or several attributes. The entity list is automatically updated when you type in.
+Neste modo, é possível filtrar entidades introduzindo valores a encontrar (ou a excluir) nas áreas acima da lista de atributos. Pode filtrar um ou vários atributos. A lista de entidades é automaticamente atualizada quando se digita.
 
 ![alt-text](../assets/en/Admin/dataExplorer6.png)
 
-If you enter several attributes, a AND is automatically applied. For example, the following filter displays entities with *firstname* attribute starting with "flo" AND *salary* attribute value > 50000:
+Se introduzir vários atributos, é automaticamente aplicado um AND. Por exemplo, o filtro a seguir exibe entidades com *primeiro nome* atributo começando com "flo" e *salário* valor do atributo > 50000:
 
 ![alt-text](../assets/en/Admin/dataExplorer9.png)
 
-The **X** button allows you to remove entered attributes and thus stop filtering.
+O botão **X** permite remover os atributos introduzidos e assim parar a filtragem.
 
-Different operators and query options are available, depending on the data type of the attribute.
+Estão disponíveis diferentes operadores e opções de consulta, dependendo do tipo de dados do atributo.
 
-> You cannot filter on picture or object attributes.
+> Não é possível filtrar em imagens ou atributos de objectos.
 
-#### Numeric operators
+#### Operadores de números
 
-With numeric, date, and time attributes, the "=" operator is selected by default. However, you can select another operator from the operator list (click on the "=" icon to display the list):
+Com atributos numéricos, de data e hora, o operador "=" é seleccionado por defeito. Contudo, pode selecionar outro operador da lista de operadores (clicar no ícone "=" para exibir a lista):
 
 ![alt-text](../assets/en/Admin/DEFilter1.png)
 
 #### Datas
 
-With date attributes, you can enter the date to use through a datepicker widget (click on the date area to display the calendar):
+Com atributos de data, pode introduzir a data a utilizar através de um widget de escolha de data (clique na área de data para exibir o calendário):
 
 ![alt-text](../assets/en/Admin/DEFilter2.png)
 
 #### Booleans
 
-When you click on a boolean attribute area, you can filter on **true**/**false** values but also on **null**/**not null** values:
+Ao clicar numa área de atributos booleanos, pode filtrar em **valores verdadeiros**/**valores falsos** ou também em **null**/**e não null**:
 
 ![alt-text](../assets/en/Admin/DEFilter3.png)
 
-- **null** indicates that the attribute value was not defined
-- **not null** indicates that the attribute value is defined (thus true or false).
+- **nulo** indica que o valor do atributo não foi definido
+- **não nulo** indica que o valor do atributo está definido (portanto verdadeiro ou falso).
 
 #### Text
 
-Text filters are not diacritic (a = A).
+Os filtros de texto não são diacríticos (a = A).
 
-The filter is of the "starts with" type. For example, entering "Jim" will show "Jim" and "Jimmy" values.
+O filtro é do tipo "começa com". Por exemplo, a entrada "Jim" mostrará os valores "Jim" e "Jimmy".
 
-You can also use the wildcard character (@) to replace one or more starting characters. Por exemplo:
+Também pode usar o caractere coringa (@) para substituir um ou mais caracteres iniciais. Por exemplo:
 
-| A filter with | Resultados                                         |
-| ------------- | -------------------------------------------------- |
-| Bel           | All values beginning with “Bel”                    |
-| @do           | All values containing “do”                         |
-| Bel@do        | All values starting with “Bel” and containing “do” |
+| Um filtro com | Resultados                                                |
+| ------------- | --------------------------------------------------------- |
+| Bel           | Todos os valores que começam com "Bel                     |
+| @do           | Todos os valores contendo "do"                            |
+| Bel@do        | Todos os valores que começam com "Bel" e que contêm "do". |
 
-If you want to create more specific queries, such as "is exactly", you may need to use the advanced queries feature.
+Se quiser criar consultas mais específicas, tais como "é exatamente", poderá ter de utilizar a funcionalidade de consultas avançadas.
 
-### Advanced queries with expression
+### Consultas avançadas com expressão
 
-When you select this option, a query area is displayed above the entity list, allowing you to enter any expression to use to filter the contents:
+Ao seleccionar esta opção, é exibida uma área de consulta acima da lista de entidades, permitindo-lhe introduzir qualquer expressão a utilizar para filtrar o conteúdo:
 
 ![alt-text](../assets/en/Admin/dataExplorer8.png)
 
-You can enter advanced queries that are not available as attribute queries. For example, if you want to find entities with *firstname* attribute containing "Jim" but not "Jimmy", you can write:
+Pode introduzir consultas avançadas que não estão disponíveis como consultas de atributos. Por exemplo, se quiser encontrar entidades com *primeiro nome* atributo contendo "Jim" mas não "Jimmy", pode escrever:
 
 ```
 firstname=="Jim"
 ```
 
-You can use any ORDA query expression as [documented with the `query()` function](API/DataClassClass.md#query), with the following limitations or differences:
+Pode utilizar qualquer expressão de consulta ORDA como [documentada com a consulta `()` função](API/DataClassClass.md#query), com as seguintes limitações ou diferenças:
 
-- For security, you cannot execute formulas using `eval()`.
-- Placeholders cannot be used; you have to write a *queryString* with values.
-- String values containing space characters must be embedded in double quotes ("").
+- Para segurança, não é possível executar fórmulas usando `eval()`.
+- Os marcadores de lugar não podem ser utilizados; é necessário escrever uma consulta *queryString* com valores.
+- Os valores das strings contendo caracteres espaciais devem ser incorporados entre aspas duplas ("").
 
-For example, with the Employee dataclass, you can write:
+Por exemplo, com o Dataclass Employee, pode escrever:
 
 ```
-firstname = "Marie Sophie" AND manager.lastname = "@th"
+firstname = "Marie Sophie" E manager.lastname = "@th"
 ```
 
-You can click on the `v` icon to display both [`queryPlan`](API/DataClassClass.md#queryplan) and [`queryPath`](API/DataClassClass.md#querypath). In the area, you can hover over the subquery blocks to have detailed information per subquery:
+Pode clicar no ícone `v` para visualizar tanto [`queryPlan`](API/DataClassClass.md#queryplan) como [`queryPath`](API/DataClassClass.md#querypath). Na área, pode pairar sobre os blocos de subconsulta para ter informações detalhadas por subconsulta:
 
 ![alt-text](../assets/en/Admin/dataExplorer12.png)
 
-Right-click in the query area to display the previous valid queries:
+Clique com o botão direito do mouse na área de consulta para exibir as consultas válidas anteriores:
 
 ![alt-text](../assets/en/Admin/dataExplorer11.png)

@@ -5,7 +5,7 @@ title: Objetos
 
 ---
 
-## Type
+## Tipo
 
  `PARÁMETRO OBLIGATORIO`
 

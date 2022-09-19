@@ -34,7 +34,7 @@ Les règles suivantes s'appliquent à toutes les structures de 4D.
 
 Vous désignez une table en plaçant son nom entre crochets : [...]. Un nom de table peut contenir jusqu’à 31 caractères.
 
-Exemple :
+Exemples :
 
 ```4d
 DEFAULT TABLE([Commandes])
@@ -46,7 +46,7 @@ ADD RECORD([Lettres])
 
 Vous désignez un champ en spécifiant d’abord la table à laquelle il appartient. Le nom du champ se place immédiatement derrière celui de la table. Un nom de champ peut contenir jusqu’à 31 caractères.
 
-Exemple :
+Exemples :
 
 ```4d
 [Commandes]Total:=Sum([Ligne]Montant)
@@ -60,7 +60,7 @@ You designate an interprocess variable by preceding the name of the variable wit
 
 The name of an interprocess variable can be up to 31 characters, not including the `<>` symbols.
 
-Exemple :
+Exemples :
 
 ```4d
 <>vlProcessID:=Current process
@@ -72,7 +72,7 @@ If(<>vtNom#"")
 
 You designate a process variable by using its name (which cannot start with the `<>` symbols nor the dollar sign $). Ce nom peut contenir jusqu’à 31 caractères.
 
-Exemple :
+Exemples :
 
 ```4d
 vrGrandTotal:=Sum([Comptes]Montant)
@@ -84,7 +84,7 @@ vrGrandTotal:=Sum([Comptes]Montant)
 
 Vous désignez une variable locale en faisant précéder son nom du symbole dollar ($). Le nom d’une variable locale peut contenir jusqu’à 31 caractères, signe dollar non compris.
 
-Exemple :
+Exemples :
 
 ```4d
 For($vlRecord;1;100)
@@ -106,7 +106,7 @@ The name of an interprocess array is preceded by the symbols (`<>`) — a “les
 
 An interprocess array name can contain up to 31 characters, not including the `<>` symbols.
 
-Exemple :
+Exemples :
 
 ```4d
 ARRAY TEXT(<>atSujets;Records in table([Topics]))
@@ -118,7 +118,7 @@ ARRAY INTEGER(<>aiGrosTableau;10000)
 
 You designate a process array by using its name (which cannot start with the `<>` symbols nor the dollar sign $). Ce nom peut contenir jusqu’à 31 caractères.
 
-Exemple :
+Exemples :
 
 ```4d
 ARRAY TEXT(atSujets;Records in table([Topics]))
@@ -130,7 +130,7 @@ ARRAY TEXT(atSujets;Records in table([Topics]))
 
 Un tableau est déclaré local lorsque son nom est précédé du signe dollar ($). Le nom d’un tableau local peut contenir jusqu’à 31 caractères, signe dollar non compris.
 
-Exemple :
+Exemples :
 
 ```4d
 ARRAY TEXT($atSujets;Records in table([Topics]))
@@ -142,7 +142,7 @@ ARRAY INTEGER($aiGrosTableau;10000)
 
 Vous désignez un élément d’un tableau local, process ou interprocess à l’aide d’accolades ({…}). L’élément référencé (l’indice) est indiqué par une expression numérique.
 
-Exemple :
+Exemples :
 
 ```4d  
  //Addressing an element of an interprocess array
@@ -165,7 +165,7 @@ $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 
 You reference an element of a two-dimensional array by using the curly braces ({…}) twice.   Vous désignez un élément d’un tableau à deux dimensions à l’aide d'une double paire d’accolades ({…})   L’élément référencé (l’indice) est indiqué par deux expressions numériques dans deux paires d’accolades.
 
-Exemple :
+Exemples :
 
 ```4d
  //Addressing an element of a two-dimensional interprocess array
@@ -188,7 +188,7 @@ $viNextValue:=$aiBigArray{$vlSet}{Size of array($aiBigArray{$vlSet})}
 
 When object notation is enabled, you designate an object attribute (also called object property) by placing a point (".") between the name of the object (or attribute) and the name of the attribute. entre le nom de l'objet (ou de l'attribut) et le nom de l'attribut. Un nom d'attribut peut contenir jusqu'à 255 caractères et est sensible à la casse.
 
-Exemple :
+Exemples :
 
 ```4d
 monObjet.monAttribut:="10"
@@ -201,7 +201,7 @@ monObjet.monAttribut:="10"
 
 Vous désignez un formulaire en utilisant une expression de type chaîne alphanumérique qui représente son nom. Le nom d’un formulaire peut contenir jusqu’à 31 caractères.
 
-Exemple :
+Exemples :
 
 ```4d
 FORM SET INPUT([Personnes];"Entrée")
@@ -227,7 +227,7 @@ Vous désignez une méthode (procédure ou fonction utilisateur) en saisissant s
 
 **Note :** Une méthode qui ne retourne pas de résultat est appelée une procédure. Une méthode qui retourne un résultat est appelée une fonction utilisateur.
 
-Exemple :
+Exemples :
 
 ```4d
 If(New client)
@@ -239,7 +239,7 @@ APPLY TO SELECTION([Employees];INCREASE SALARIES)
 
 **Note :** Lorsque vous souhaitez appeler une méthode, vous saisissez simplement son nom. Toutefois, certaines commandes intégrées telles que `APPELER SUR EVENEMENT`, ainsi que les commandes des plug-ins, nécessitent que vous passiez le nom d'une méthode en tant que chaîne lorsqu'un paramètre de type méthode est requis. Voici un exemple :
 
-Exemple :
+Exemples :
 
 ```4d
  //This command expects a method (function) or formula
@@ -254,7 +254,7 @@ Les méthodes peuvent accepter des paramètres (ou arguments). Les paramètres s
 
 A l’intérieur d'une fonction, la variable locale $0 contient la valeur à retourner.
 
-Exemple :
+Exemples :
 
 ```4d
  //Within DROP SPACES $1 is a pointer to the field [People]Name
@@ -279,7 +279,7 @@ vtClone:=Dump("is";"the";"it")
 
 Vous désignez une commande de plug-in en écrivant son nom tel qu'il est défini dans le plug-in. Le nom d'une commande de plug-in peut contenir jusqu'à 31 caractères.
 
-Exemple :
+Exemples :
 
 ```4d
 $erreur:=SMTP_From($smtp_id;"henry@gmail.com")
@@ -312,7 +312,7 @@ Le nom d'un ensemble client doit être précédé du symbole dollar ($). Ce nom 
 
 **Note :** Les ensembles sont gérés par le serveur. Dans certains cas, pour des raisons particulières ou d'optimisation, vous pourrez avoir besoin d'utiliser des ensembles localement, sur les postes clients. Pour cela, il vous suffit de créer des ensembles clients.
 
-Exemple :
+Exemples :
 
 ```4d
  //Interprocess sets
@@ -346,7 +346,7 @@ An interprocess named selection name can contain up to 255 characters, not inclu
 
 You denote a process named selection by using a string expression that represents its name (which cannot start with the `<>` symbols nor the dollar sign $). Le nom d’une sélection temporaire process peut comporter jusqu’à 255 caractères.
 
-Exemple :
+Exemples :
 
 ```4d
  //Interprocess Named Selection
@@ -370,7 +370,7 @@ Vous déclarez un process global en passant une expression de type chaîne de ca
 
 Vous déclarez un process local lorsque son nom est précédé du symbole dollar ($). Le nom d’un process peut comporter jusqu’à 255 caractères, symbole dollar non compris.
 
-Exemple :
+Exemples :
 
 ```4d
  //Starting the global process "Add Customers"

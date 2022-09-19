@@ -46,7 +46,7 @@ La liste des principales mises à jour de cette documentation. Pour des informat
 - Prise en charge des instructions [break et continue](Concepts/cf_looping.md#break-and-continue) dans les boucles.
 - Prise en charge de l'instruction [return](Concepts/flow-control.md#return-expression) et de [l'expression return](Concepts/parameters.md#return-expression) pour retourner des valeurs.
 - Prise en charge des [opérateurs d'assignation composés](Concepts/operators.md#compound-assignment-operators), des [opérateurs de court-circuit](Concepts/operators.md#short-circuit-operators) et de [l'opérateur ternaire](Concepts/operators.md#ternary-operator)
-- The [Code Editor](../code-editor/navigation.md) now includes an dropdown tool and supports markers for better code navigation.
+- The [Code Editor](../code-editor/write-class-method.md#navigation-dropdown) now includes an dropdown tool and supports markers for better code navigation.
 - Nouvelles préférences : [**Inclure les tokens dans les fichiers source du projet**](Preferences/general.md#include-tokens-in-project-source-files) et l'option [**Afficher les presse-papiers**](Preferences/methods.md#show-clipboards) sur la page Méthodes.
 - Nouvelle requête REST pour [verrouiller/déverrouiller](REST/$lock.md) les entités.
 - [4D View Pro](ViewPro/getting-started.md) chapter added with new commands: [VP Copy to object](ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](ViewPro/method-list.md#vp-paste-from-object).

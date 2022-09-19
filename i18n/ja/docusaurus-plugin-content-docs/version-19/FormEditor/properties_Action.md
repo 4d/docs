@@ -18,9 +18,9 @@ title: 動作
 
 - a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for form operations.
 
-- a custom method file path including the .4dm extension, e.g.:  
-  `MyMethods/myFormMethod.4dm` You can also use a filesystem:  
-  `/RESOURCES/Forms/FormMethod.4dm` In this case, 4D does not provide automatic support for object operations.
+- .4dm 拡張子を含むカスタムのメソッドファイルパス:   
+  `MyMethods/myFormMethod.4dm`。 ファイルシステムも使用できます:  
+  `/RESOURCES/Forms/FormMethod.4dm`。
 
 
 #### JSON 文法

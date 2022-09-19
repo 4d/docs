@@ -592,7 +592,7 @@ La fonction `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->retourne 
 | Propriété   | Type    | Description                              |
 | ----------- | ------- | ---------------------------------------- |
 | exposed     | Boolean | Vrai si la dataclass est exposée en REST |
-| nom         | Text    | Nom de la dataclass                      |
+| name        | Text    | Nom de la dataclass                      |
 | primaryKey  | Text    | Nom de la clé primaire de la dataclass   |
 | tableNumber | Integer | Numéro interne de la table 4D            |
 
@@ -963,7 +963,7 @@ L'utilisation de placeholders dans les recherches **est recommandée** pour les 
 
 2. Cela résout les questions liées au formatage des valeurs ou des caractères, notamment lorsque vous gérez des paramètres *attributePath* et *value* qui peuvent contenir des caractères non-alphanumériques tels que ".", "["...
 
-3. Cela permet l'utilisation de variables ou d'expressions dans les arguments de recherche. Exemple :
+3. Cela permet l'utilisation de variables ou d'expressions dans les arguments de recherche. Exemples :
 
  ```4d
   $result:=$col.query("address.city = :1 & name =:2";$city;$myVar+"@")

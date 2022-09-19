@@ -44,7 +44,7 @@ Un [Datastore](ORDA/dsMapping.md#datastore) es el objeto de interfaz suministrad
 
 
 <!-- REF #_command_.ds.Params -->
-| Parámetros | Type         |    | Descripción                                               |
+| Parámetros | Tipo         |    | Descripción                                               |
 | ---------- | ------------ | -- | --------------------------------------------------------- |
 | localID    | Text         | -> | ID local del almacén de datos remoto a devolver           |
 | Result     | cs.DataStore | <- | Referencia al almacén de datos|<!-- END REF -->
@@ -112,7 +112,7 @@ Utilizando el almacén de datos principal de la base 4D:
 
 
 <!-- REF #_command_.Open datastore.Params -->
-| Parámetros     | Type         |    | Descripción                                                                      |
+| Parámetros     | Tipo         |    | Descripción                                                                      |
 | -------------- | ------------ | -- | -------------------------------------------------------------------------------- |
 | connectionInfo | Object       | -> | Propiedades de conexión utilizadas para alcanzar el almacén de datos remoto      |
 | localID        | Text         | -> | Id para asignar al almacén de datos abierto en la aplicación local (obligatorio) |
@@ -146,7 +146,7 @@ Una vez abierta la sesión, las siguientes sentencias son equivalentes y devuelv
 
 Pase en *connectionInfo* un objeto que describa el almacén de datos remoto al que desea conectarse. Puede contener las siguientes propiedades (todas las propiedades son opcionales excepto *hostname*):
 
-| Propiedad   | Type    | Descripción                                                                                                                                                                                                                                                                                                                      |
+| Propiedad   | Tipo    | Descripción                                                                                                                                                                                                                                                                                                                      |
 | ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | hostname    | Text    | Nombre o dirección IP de la base de datos remota + ":" + número de puerto (el número de puerto es obligatorio)                                                                                                                                                                                                                   |
 | user        | Text    | Nombre de usuario                                                                                                                                                                                                                                                                                                                |
@@ -252,7 +252,7 @@ Cada clase de datos de un almacén de datos está disponible como una propiedad 
 
 
 <!-- REF #DataStoreClass.cancelTransaction().Params -->
-| Parámetros | Type |  | Descripción                                             |
+| Parámetros | Tipo |  | Descripción                                             |
 | ---------- | ---- |::| ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
@@ -287,7 +287,7 @@ Ver el ejemplo de la función [`.startTransaction()`](#starttransaction).
 
 
 <!-- REF #DataStoreClass.clearAllRemoteContexts().Params -->
-| Parámetros | Type |  | Descripción                                             |
+| Parámetros | Tipo |  | Descripción                                             |
 | ---------- | ---- |::| ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
@@ -320,7 +320,7 @@ En estos casos, puede utilizar `.clearAllRemoteContexts()` para reinicializar su
 
 
 <!-- REF #DataStoreClass.encryptionStatus().Params -->
-| Parámetros | Type   |    | Descripción                                                                                         |
+| Parámetros | Tipo   |    | Descripción                                                                                         |
 | ---------- | ------ |:--:| --------------------------------------------------------------------------------------------------- |
 | Result     | Object | <- | Información sobre el cifrado del almacén de datos actual y de cada tabla|<!-- END REF -->
 
@@ -335,7 +335,7 @@ La función `.encryptionStatus()` <!-- REF #DataStoreClass.encryptionStatus().Su
 
 El objeto devuelto contiene las siguientes propiedades:
 
-| Propiedad   |             |               | Type    | Descripción                                                                                          |
+| Propiedad   |             |               | Tipo    | Descripción                                                                                          |
 | ----------- | ----------- | ------------- | ------- | ---------------------------------------------------------------------------------------------------- |
 | isEncrypted |             |               | Boolean | True si el archivo de datos está encriptado                                                          |
 | keyProvided |             |               | Boolean | True si se proporciona la llave de encriptación que coincide con el archivo de datos encriptados(*). |
@@ -395,7 +395,7 @@ Quiere saber el número de tablas encriptadas en el archivo de datos actual:
 
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
-| Parámetros | Type   |    | Descripción                                                               |
+| Parámetros | Tipo   |    | Descripción                                                               |
 | ---------- | ------ | -- | ------------------------------------------------------------------------- |
 | Result     | Object | <- | Colección de objetos contextos de optimización|<!-- END REF -->
 
@@ -471,7 +471,7 @@ $info:=$ds.getAllRemoteContexts()
 
 
 <!-- REF #DataStoreClass.getInfo().Params -->
-| Parámetros | Type   |    | Descripción                                                 |
+| Parámetros | Tipo   |    | Descripción                                                 |
 | ---------- | ------ |:--:| ----------------------------------------------------------- |
 | Result     | Object | <- | Propiedades del almacén de datos|<!-- END REF -->
 
@@ -483,12 +483,12 @@ La función `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->The `.get
 
 **Objeto devuelto**
 
-| Propiedad  | Type    | Descripción                                                                                                                                                         |
+| Propiedad  | Tipo    | Descripción                                                                                                                                                         |
 | ---------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | type       | string  | <li>"4D": almacén de datos principal, disponible a través de ds </li><li>"4D Server": almacén de datos remoto, abierto con Open datastore</li>                                                                                                                  |
 | networked  | boolean | <li>True: el almacén de datos se alcanza a través de una conexión de red.</li><li>False: no se llega al almacén de datos a través de una conexión de red (base de datos local)</li>                                                                                                                |
 | localID    | text    | ID del almacén de datos en la máquina. Corresponde a la cadena localId dada con el comando `Open datastore`. Cadena vacía ("") para el almacén de datos principal.  |
-| connection | object  | Objeto que describe la conexión del almacén de datos remoto (no se devuelve para el almacén de datos principal). Propiedades disponibles:<table><tr><th>Propiedad</th><th>Type</th><th>Descripción</th></tr><tr><td>hostname</td><td>text</td><td>Dirección IP o nombre del datastore remoto + ":" + número de puerto</td></tr><tr><td>tls</td><td>boolean</td><td>True si se utiliza una conexión segura con el almacén de datos remoto</td></tr><tr><td>idleTimeout</td><td>number</td><td>Tiempo de inactividad de la sesión (en minutos)</td></tr><tr><td>user</td><td>text</td><td>Usuario autentificado en el almacén de datos remoto</td></tr></table> |
+| connection | object  | Objeto que describe la conexión del almacén de datos remoto (no se devuelve para el almacén de datos principal). Propiedades disponibles:<table><tr><th>Propiedad</th><th>Tipo</th><th>Descripción</th></tr><tr><td>hostname</td><td>text</td><td>Dirección IP o nombre del datastore remoto + ":" + número de puerto</td></tr><tr><td>tls</td><td>boolean</td><td>True si se utiliza una conexión segura con el almacén de datos remoto</td></tr><tr><td>idleTimeout</td><td>number</td><td>Tiempo de inactividad de la sesión (en minutos)</td></tr><tr><td>user</td><td>text</td><td>Usuario autentificado en el almacén de datos remoto</td></tr></table> |
 
 * Si la función `.getInfo()` se ejecuta en un 4D Server o 4D monopuesto, `networked` es False.
 * Si la función `.getInfo()` se ejecuta en un 4D remoto, `networked` es True
@@ -540,7 +540,7 @@ En un almacén de datos remoto:
 
 
 <!-- REF #DataStoreClass.getRemoteContextInfo().Params -->
-| Parámetros  | Type   |    | Descripción                                                         |
+| Parámetros  | Tipo   |    | Descripción                                                         |
 | ----------- | ------ | -- | ------------------------------------------------------------------- |
 | contextName | Text   | -> | Nombre del contexto                                                 |
 | Result      | Object | <- | Descripción del contexto de optimización|<!-- END REF -->
@@ -559,7 +559,7 @@ Para más información sobre cómo se pueden crear contextos de optimización, v
 
 El objeto devuelto tiene las siguientes propiedades:
 
-| Propiedad              | Type | Descripción                                                                                                                                                                                                                                                                                                      |
+| Propiedad              | Tipo | Descripción                                                                                                                                                                                                                                                                                                      |
 | ---------------------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name                   | Text | Nombre del contexto                                                                                                                                                                                                                                                                                              |
 | main                   | Text | Atributo(s) asociado(s) al contexto (los nombres de atributos están separados por comas)                                                                                                                                                                                                                         |
@@ -591,7 +591,7 @@ Ver el ejemplo de la sección [.setRemoteContextInfo()](#example-1-3).
 
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
-| Parámetros | Type       |    | Descripción                                                                              |
+| Parámetros | Tipo       |    | Descripción                                                                              |
 | ---------- | ---------- |:--:| ---------------------------------------------------------------------------------------- |
 | Result     | Collection | <- | Colección de objetos, donde cada objeto describe una petición|<!-- END REF -->
 
@@ -630,7 +630,7 @@ Ver el ejemplo 2 de [`.startRequestLog()`](#startrequestlog).
 
 
 <!-- REF #DataStoreClass.isAdminProtected().Params -->
-| Parámetros | Type    |    | Descripción                                                                                                                |
+| Parámetros | Tipo    |    | Descripción                                                                                                                |
 | ---------- | ------- |:--:| -------------------------------------------------------------------------------------------------------------------------- |
 | Result     | Boolean | <- | True si el acceso al Explorador de Datos está desactivado, False si está activado (por defecto)|<!-- END REF -->
 
@@ -663,7 +663,7 @@ Por defecto, el acceso al Explorador de Datos se concede para las sesiones `webA
 
 
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Params -->
-| Parámetros | Type |  | Descripción                                             |
+| Parámetros | Tipo |  | Descripción                                             |
 | ---------- | ---- |::| ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
@@ -696,7 +696,7 @@ Cuando no se llama a esta función, las nuevas selecciones de entidades pueden s
 
 
 <!-- REF #DataStoreClass.provideDataKey().Params -->
-| Parámetros    | Type   |    | Descripción                                                                         |
+| Parámetros    | Tipo   |    | Descripción                                                                         |
 | ------------- | ------ | -- | ----------------------------------------------------------------------------------- |
 | curPassPhrase | Text   | -> | Frase de cifrado actual                                                             |
 | curDataKey    | Object | -> | Llave de encriptación de datos actual                                               |
@@ -723,7 +723,7 @@ Si se aporta una llave de cifrado de datos válida, se añade a la *keyChain* de
 
 El resultado de la orden se describe en el objeto devuelto:
 
-| Propiedad  |                          | Type       | Descripción                                                                                                |
+| Propiedad  |                          | Tipo       | Descripción                                                                                                |
 | ---------- | ------------------------ | ---------- | ---------------------------------------------------------------------------------------------------------- |
 | success    |                          | Boolean    | True si la llave de encriptación proporcionada coincide con los datos encriptados, False en caso contrario |
 |            |                          |            | Las siguientes propiedades se devuelven sólo si success es *FALSE*                                         |
@@ -771,7 +771,7 @@ Si no se da *curPassphrase* o *curDataKey*, `.provideDataKey()` devuelve **null*
 
 
 <!-- REF #DataStoreClass.setAdminProtection().Params -->
-| Parámetros | Type    |    | Descripción                                                                                                                                           |
+| Parámetros | Tipo    |    | Descripción                                                                                                                                           |
 | ---------- | ------- | -- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
 | status     | Boolean | -> | True para desactivar el acceso Data Explorer a los datos del puerto `webAdmin`, False (por defecto) para otorgar el acceso|<!-- END REF -->
 
@@ -814,7 +814,7 @@ Se crea un método proyecto *protectDataFile* para llamar antes de los despliegu
 
 
 <!-- REF #DataStoreClass.setRemoteContextInfo().Params -->
-| Parámetros      | Type         |    | Descripción                                                                                                            |
+| Parámetros      | Tipo         |    | Descripción                                                                                                            |
 | --------------- | ------------ | -- | ---------------------------------------------------------------------------------------------------------------------- |
 | contextName     | Text         | -> | Nombre del contexto                                                                                                    |
 | dataClassName   | Text         | -> | Nombre de la dataclass                                                                                                 |
@@ -830,31 +830,31 @@ Se crea un método proyecto *protectDataFile* para llamar antes de los despliegu
 
 #### Descripción
 
-La función `.setRemoteContextInfo()` <!-- REF #DataStoreClass.setRemoteContextInfo().Summary -->links the specified dataclass attributes to the *contextName* optimization context<!-- END REF -->. If an optimization context already exists for the specified attributes, this command replaces it.
+La función `.setRemoteContextInfo()` <!-- REF #DataStoreClass.setRemoteContextInfo().Summary -->vincula los atributos de dataclass especificados con el contexto de optimización *contextName*<!-- END REF -->. Si ya existe un contexto de optimización para los atributos especificados, este comando lo reemplaza.
 
-When you pass a context to the ORDA class functions, the REST request optimization is triggered immediately:
+Cuando se pasa un contexto a las funciones de clase ORDA, la optimización de las peticiones REST se activa inmediatamente:
 
-* the first entity is not fully loaded as done in automatic mode
-* pages of 80 entities (or `pageLength` entities) are immediately asked to the server with only the attributes in the context
+* la primera entidad no está totalmente cargada como se hace en el modo automático
+* las páginas de 80 entidades (o de `pageLength` entidades) se piden inmediatamente al servidor con sólo los atributos del contexto
 
-> For more information on how optimization contexts are built, refer to the [client/server optimization paragraph](../ORDA/remoteDatastores.md#clientserver-optimization)
+> Para más información sobre la creación de los contextos de optimización, consulte el [párrafo de optimización cliente/servidor](../ORDA/remoteDatastores.md#clientserver-optimization)
 
-In *contextName*, pass the name of the optimization context to link to the dataclass attributes.
+En *contextName*, pase el nombre del contexto de optimización para vincularlo a los atributos de la dataclass.
 
-To designate the dataclass that will receive the context, you can pass a *dataClassName* or a *dataClassObject*.
+Para designar la dataclass que recibirá el contexto, puede pasar un *dataClassName* o un *dataClassObject*.
 
-To designate the attributes to link to the context, pass either a list of attributes separated by a comma in *attributes* (Text), or a collection of attribute names in *attributesColl* (collection of text).
+Para designar los atributos a vincular al contexto, pase una lista de atributos separados por una coma en *attributes* (Text), o una colección de nombres de atributos en *attributesColl* (colección de textos).
 
-If *attributes* is an empty Text, or *attributesColl* is an empty collection, all the scalar attributes of the dataclass are put in the optimization context. If you pass an attribute that does not exist in the dataclass, the function ignores it and an error is thrown.
+Si *attributes* es un texto vacío, o si *attributesColl* es una colección vacía, todos los atributos escalares de la dataclass se integran al contexto de optimización. Si se pasa un atributo que no existe en la dataclass, la función lo ignora y se genera un error.
 
-You can pass a *contextType* to  specify if the context is a standard context or the context of the current entity selection item displayed in a list box:
+Puede pasar un *contextType* para especificar si el contexto es un contexto estándar o el contexto del elemento actual de la selección de entidades mostrada en un list box:
 
-* If set to "main" (default), the *contextName* designates a standard context.
-* If set to "currentItem", the attributes passed are put in the context of the current item.  See  [Entity selection-based list box](../ORDA/remoteDatastores.md#entity-selection-based-list-box).
+* Si el valor es "main" (por defecto), *contextName* designa un contexto estándar.
+* Si su valor es "currentItem", los atributos pasados se ponen en el contexto del elemento actual.  Ver [List box basado en una selección de entidades](../ORDA/remoteDatastores.md#entity-selection-based-list-box).
 
-In *pageLength*, specify the number of dataclass entities to request from the server.
+En *pageLength*, especifique el número de entidades de dataclass a solicitar al servidor.
 
-You can pass a *pageLength* for a relation attribute which is an entity selection (one to many). The syntax is `relationAttributeName:pageLength` (e.g employees:20).
+Puede pasar un *pageLength* para un atributo relacional que es una selección de entidades (de una a muchas). La sintaxis es `relationAttributeName:pageLength` (por ejemplo, employees:20).
 
 #### Ejemplo 1
 
@@ -866,21 +866,21 @@ var $contextA : Object
 var $info : Object
 var $text : Text
 
-// Open remote datastore
+// Abrir datastore remoto 
 $ds:=Open datastore(New object("hostname"; "www.myserver.com"); "myDS")
 
-// Set context info
+// Definir el contexto
 $contextA:=New object("context"; "contextA")
 $ds.setRemoteContextInfo("contextA"; $ds.Persons; "firstname, lastname")
 
-// Send requests to the server using a loop
+// Envía las peticiones al servidor utilizando un bucle
 $persons:=$ds.Persons.all($contextA)
 $text:=""
 For each ($p; $persons)
     $text:=$p.firstname + " " + $p.lastname
 End for each
 
-// Check contents of the context
+// Verificar el contenido del contexto
 $info:=$ds.getRemoteContextInfo("contextA")
 // $info = {name:"contextA";dataclass:"Persons";main:"firstname, lastname"}
 ```
@@ -889,9 +889,9 @@ $info:=$ds.getRemoteContextInfo("contextA")
 
 #### Ejemplo 2
 
-The following piece of code requests pages of 30 entities of the `Address` dataclass from the server. Las entidades devueltas sólo contienen el atributo `zipCode`.
+El siguiente fragmento de código solicita al servidor páginas de 30 entidades de la dataclass `Address`. Las entidades devueltas sólo contienen el atributo `zipCode`.
 
-For each `Address` entity, 20 Persons entities are returned, and they only contain the `lastname` and `firstname` attributes:
+Para cada entidad `Address`, se devuelven 20 entidades Persons, que sólo contienen los atributos `lastname` y `firstname`:
 
 ```4d
 var $ds : 4D.DataStoreImplementation
@@ -943,7 +943,7 @@ End case
 
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
-| Parámetros | Type    |    | Descripción                                                           |
+| Parámetros | Tipo    |    | Descripción                                                           |
 | ---------- | ------- | -- | --------------------------------------------------------------------- |
 | file       | 4D.File | -> | Objeto File                                                           |
 | reqNum     | Integer | -> | Número de peticiones a mantener en memoria|<!-- END REF -->
@@ -1019,7 +1019,7 @@ Quiere registrar las peticiones de los clientes ORDA en la memoria:
 
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
-| Parámetros | Type |  | Descripción                                             |
+| Parámetros | Tipo |  | Descripción                                             |
 | ---------- | ---- |  | ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
@@ -1082,7 +1082,7 @@ Puede anidar varias transacciones (subtransacciones). Cada transacción o sub-tr
 
 
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
-| Parámetros | Type |  | Descripción                                             |
+| Parámetros | Tipo |  | Descripción                                             |
 | ---------- | ---- |  | ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF -->
 
@@ -1115,7 +1115,7 @@ Ver ejemplos de [`.startRequestLog()`](#startrequestlog).
 
 
 <!-- REF #DataStoreClass.validateTransaction().Params -->
-| Parámetros | Type |  | Descripción                                             |
+| Parámetros | Tipo |  | Descripción                                             |
 | ---------- | ---- |  | ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF -->
 

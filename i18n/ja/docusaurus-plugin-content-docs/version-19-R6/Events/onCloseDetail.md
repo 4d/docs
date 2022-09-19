@@ -8,7 +8,7 @@ title: On Close Detail
 | 26  | フォーム - [リストボックス](FormObjects/listbox_overview.md) | 入力フォームから離れ、出力フォームに戻ろうとしている |
 
 
-## 詳細
+## 説明
 
 `On Close Detail` イベントは次のコンテキストで利用できます:
 

@@ -237,7 +237,7 @@ Le style de case à cocher OS X Textured est presque identique au style [Bevel](
 
 Par défaut, le style OS X Textured apparaît comme :
 
-- *Sous Windows* - un bouton système standard avec un fond bleu clair et un libellé au centre.
+- *Windows* - un bouton système standard avec un fond bleu clair et un libellé au centre.
 
   ![](../assets/en/FormObjects/checkbox_osxtextured.png)
 

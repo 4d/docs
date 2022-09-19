@@ -149,13 +149,10 @@ Possible values are:
 
 <!-- REF #transporter.bodyCharset.Syntax -->**.bodyCharset** : Text<!-- END REF -->
 
+
 #### Beschreibung
 
 The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -->  the charset and encoding used for the body part of the email<!-- END REF -->.
-
-- subject,
-- attachment filename(s),
-- email name.
 
 **Possible values:**
 

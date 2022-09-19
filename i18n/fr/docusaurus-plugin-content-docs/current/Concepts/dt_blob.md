@@ -81,7 +81,7 @@ Lorsque vous travaillez avec des méthodes, l'utilisation d'objets blob (`4D.Blo
 
 Pour passer un blob scalaire à vos propres méthodes sans le dupliquer en mémoire, définissez un pointeur vers la variable qui le stocke et passez le pointeur comme paramètre.
 
-**Exemple :**
+**Exemples :**
 
 ```4d
 // Déclarer une variable de type Blob

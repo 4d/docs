@@ -229,7 +229,7 @@ For more information on supported incoming parameter types, please refer to the 
 - [picture](Concepts/dt_picture.md) (jpg,png,gif,bmp,svg other types converted into png) creates a URI (data:image/png;base64,xxxx) and then used as the background in 4D View Pro in the cell where the formula is executed
 - [object](Concepts/dt_object.md) with the following two properties (allowing passing a date and time):
 
- | Propiedad | Type  | Descripción      |
+ | Propiedad | Tipo  | Descripción      |
  | --------- | ----- | ---------------- |
  | value     | Fecha | Valor fecha      |
  | time      | Real  | Hora en segundos |

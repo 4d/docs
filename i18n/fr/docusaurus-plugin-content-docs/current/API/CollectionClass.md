@@ -1867,7 +1867,7 @@ Vous pouvez également passer des critères afin de configurer le tri des élém
 
     Cette syntaxe trie uniquement les valeurs scalaires de la collection (les autres types d'éléments comme les objets ou les collections sont retournés non triés).
 
-Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Si *attributePath* est un attribut d'objet qui contient des valeurs de types différents, elles sont groupées par type et triées ensuite.
+Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Les types sont renvoyés dans l'ordre suivant :
 
 1.  Null
 2.  booléens
@@ -2792,7 +2792,7 @@ Si vous avez utilisé une méthode, elle doit définir le paramètre suivant :
 
 - *$1.result* (booléen) : **true** si *$1.value < $1.value2*, **false** sinon.
 
-Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Si *attributePath* est un attribut d'objet qui contient des valeurs de types différents, elles sont groupées par type et triées ensuite.
+Si la collection contient des éléments de différents types, ils sont d'abord groupés par type et triés par la suite. Les types sont renvoyés dans l'ordre suivant :
 
 1.  Null
 2.  booléens

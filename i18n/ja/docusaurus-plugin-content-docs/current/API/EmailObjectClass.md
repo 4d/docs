@@ -126,7 +126,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.bodyStructure` プロパティは、 <!-- REF #EmailObjectClass.bodyStructure.Summary -->メッセージ本文の完全なMIME ストラクチャーである *EmailBodyPart* オブジェクトを格納します (任意)<!-- END REF -->。 [メール本文の扱い](#メール本文の扱い) を参照ください。
+`.bodyStructure` プロパティは、 <!-- REF #EmailObjectClass.bodyStructure.Summary -->メッセージ本文の完全な MIME ストラクチャーである *EmailBodyPart* オブジェクトを格納します (任意)<!-- END REF -->。 [メール本文の扱い](#メール本文の扱い) を参照ください。
 
 `.bodyStructure` オブジェクトには、次のプロパティが格納されています:
 

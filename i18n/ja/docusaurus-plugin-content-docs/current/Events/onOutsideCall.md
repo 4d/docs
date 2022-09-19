@@ -8,7 +8,7 @@ title: On Outside Call
 | 10  | フォーム  | フォームが `POST OUTSIDE CALL` による呼び出しを受けた |
 
 
-## 詳細
+## 説明
 
 このイベントは、`POST OUTSIDE CALL` コマンドによって他のプロセスからフォームが呼び出されたときに生成されます。
 
