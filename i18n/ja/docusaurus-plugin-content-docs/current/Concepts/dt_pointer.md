@@ -77,12 +77,12 @@ $MyVar:="Goodbye"
  vPtrC:=->anotherObject
 ```
 
-| 処理  | シンタックス        | 戻り値 | 式             | Value |
-| --- | ------------- | --- | ------------- | ----- |
-| 等しい | ポインター = ポインター | ブール | vPtrA = vPtrB | true  |
-|     |               |     | vPtrA = vPtrC | False |
-| 異なる | ポインター # ポインター | ブール | vPtrA # vPtrC | true  |
-|     |               |     | vPtrA # vPtrB | False |
+| 処理  | シンタックス        | 戻り値     | 式             | 値     |
+| --- | ------------- | ------- | ------------- | ----- |
+| 等しい | ポインター = ポインター | Boolean | vPtrA = vPtrB | true  |
+|     |               |         | vPtrA = vPtrC | False |
+| 異なる | ポインター # ポインター | Boolean | vPtrA # vPtrC | true  |
+|     |               |         | vPtrA # vPtrB | False |
 
 ## ポインターの使用例
 ### テーブルへのポインター
