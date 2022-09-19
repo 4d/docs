@@ -34,7 +34,7 @@ Después de crear un conjunto de entidades, el ID del conjunto de entidades se d
 
 Cree otro conjunto de entidades basado en conjuntos de entidades creados anteriormente
 
-| Parámetros       | Type   | Descripción                                                                 |
+| Parámetros       | Tipo   | Descripción                                                                 |
 | ---------------- | ------ | --------------------------------------------------------------------------- |
 | $operator        | String | Uno de los operadores lógicos para probar con el otro conjunto de entidades |
 | $otherCollection | String | ID del conjunto de entidades                                                |
