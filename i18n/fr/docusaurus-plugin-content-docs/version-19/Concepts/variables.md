@@ -23,7 +23,7 @@ Vous créez des variables en les déclarant. Le langage 4D propose deux manière
 - à l'aide du mot-clé `var` (recommandé particulièrement si votre code utilise des objets et des classes),
 - à l'aide de l'une des commandes du langage 4D du thème "Compilateur" ou "Tableaux" (langage classique uniquement).
 
-**Note :**Bien que cela ne soit généralement pas recommandé, vous pouvez créer des variables basiques simplement en les utilisant; il n’est pas obligatoire de les déclarer formellement. Par exemple, si vous souhaitez déclarer une variable qui contient la date du jour plus 30 jours, il vous suffit d’écrire ce qui suit :
+**Note :** Bien que cela ne soit généralement pas recommandé, vous pouvez créer des variables basiques simplement en les utilisant ; il n’est pas obligatoire de les déclarer formellement. Par exemple, si vous souhaitez déclarer une variable qui contient la date du jour plus 30 jours, il vous suffit d’écrire ce qui suit :
 
 ```4d
  MyDate:=Current date+30 //MyDate est créé 
@@ -92,14 +92,14 @@ var $o : 4D.Object
 //également équivalent à C_OBJECT($o)
 ```
 
-- Pour déclarer les variables objet de la classe 4D :
+- Pour déclarer les variables objet de classe 4D :
 
 ```4d
 var $myFolder : 4D.Folder
 var $myFile : 4D.File
 ```
 
-- Pour déclarer les variables objet de la classe utilisateur :
+- Pour déclarer les variables objet de classe utilisateur :
 
 ```4d
 var $myClass : cs.MyClass
@@ -108,7 +108,7 @@ var $entity : cs.EmployeeEntity
 ```
 
 
-### Utilisatation de la directive C_
+### Utilisation d'une directive C_
 
 > **Note de compatibilité :** cette fonctionnalité n'est pas recommandée pour déclarer des variables dans des méthodes. Il est recommandé d'utiliser le mot-clé [var](#using-the-var-keyword).
 
@@ -166,7 +166,9 @@ Vous pouvez créer trois types de variables : des variables **locales**, des var
 
 ### Variables locales
 
-Une variable locale, comme son nom l’indique, est locale à une méthode — c’est-à-dire accessible uniquement à l’intérieur de la méthode dans laquelle elle a été créée et inaccessible à l’extérieur de cette méthode. Le fait d'être local à une méthode est formellement qualifié de «portée locale». Being local to a method is formally referred to as being “local in scope.” Local variables are used to restrict a variable so that it works only within the method.
+Une variable locale, comme son nom l’indique, est locale à une méthode — c’est-à-dire accessible uniquement à l’intérieur de la méthode dans laquelle elle a été créée et inaccessible à l’extérieur de cette méthode. Le fait d'être local à une méthode est formellement qualifié de «portée locale». Les variables locales sont utilisées pour restreindre une variable afin qu'elle ne fonctionne que dans la méthode.
+
+Vous pouvez choisir d'utiliser une variable locale pour :
 
 - Eviter des conflits de noms avec les autres variables
 - Utiliser temporairement des valeurs,
@@ -187,7 +189,7 @@ If(OK=1)
 
 Cette méthode demande simplement à l’utilisateur de saisir un numéro d’identification. La réponse est placée dans une variable locale, $vsID, puis la méthode la recherche parmi les champs [Personnes]ID. Une fois la méthode terminée, la variable locale $vsID est effacée de la mémoire. Ce fonctionnement est bien adapté puisque la variable n’est utile qu’une seule fois et dans cette méthode uniquement.
 
-**Note :** les paramètres $1, $2 etc. passés aux méthodes sont des variables locales. Pour plus d'informations, veuillez consulter le thème [Paramètres](Concepts/parameters.md).
+**Note :** Les paramètres $1, $2 etc. passés aux méthodes sont des variables locales. Pour plus d'informations, veuillez consulter la section [Paramètres](Concepts/parameters.md).
 
 ### Variables process
 
@@ -195,7 +197,7 @@ Une variable process est “visible” uniquement dans le process où elle a ét
 
 Le nom d’une variable process ne comporte aucun préfixe. Ce nom peut contenir jusqu’à 31 caractères.
 
-En mode interprété, les variables sont gérées dynamiquement; elles sont créées et effacées de la mémoire «à la volée». In interpreted mode, variables are maintained dynamically; they are created and erased from memory “on the fly.” In compiled mode, all processes you create (user processes) share the same definition of process variables, but each process has a different instance for each variable. Par exemple, la variable maVar est une certaine variable dans le process P_1 et une autre variable dans le process P_2.
+En mode interprété, les variables sont gérées dynamiquement; elles sont créées et effacées de la mémoire «à la volée». En mode compilé, tous les process que vous créez (process utilisateur) partagent la même définition de variables process, mais chaque process a une instance différente pour chaque variable. Par exemple, la variable maVar est une certaine variable dans le process P_1 et une autre variable dans le process P_2.
 
 Un process peut lire et écrire des variables process dans un autre process à l'aide des commandes `LIRE VARIABLE PROCESS` et `ECRIRE VARIABLE PROCESS`. Nous vous recommandons de n'utiliser ces commandes que dans le cadre des besoins décrits ci-dessous (qui sont les raisons pour lesquelles ces commandes ont été créées dans 4D) :
 
@@ -211,8 +213,8 @@ Les variables interprocess sont visibles dans tout le projet et sont disponibles
 
 > L'utilisation de variables interprocess n'est pas recommandée car elles ne sont pas disponibles depuis le process préemptif et peuvent rendre le code moins maintenable.
 
-The name of an interprocess variable always begins with the symbols `<>` — a “less than” sign followed by a “greater than” sign— followed by 31 characters.
+Le nom d'une variable interprocess commence toujours par les symboles `<>` - un signe "inférieur à" suivi d'un signe "supérieur à" - suivis de 31 caractères.
 
-En mode client/serveur, chaque poste (client et serveur) partage la même définition des variables interprocess, mais chacun utilise une instance différente d'une variable.
+En mode client/serveur, chaque poste (client et serveur) partage la même définition des variables interprocess, mais chacun utilise une instance différente de chaque variable.
 
 
