@@ -30,7 +30,7 @@ Cuando se llama a este parámetro en la petición REST, se devuelven las 100 pri
 
 A continuación se describen los datos devueltos:
 
-| Propiedad     | Type       | Descripción                                                                                                                                                                                             |
+| Propiedad     | Tipo       | Descripción                                                                                                                                                                                             |
 | ------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | __entityModel | String     | Nombre de la dataclass.                                                                                                                                                                                 |
 | __COUNT       | Number     | Número de entidades en la clase de datos.                                                                                                                                                               |
@@ -40,7 +40,7 @@ A continuación se describen los datos devueltos:
 
 Cada entidad contiene las siguientes propiedades:
 
-| Propiedad   | Type   | Descripción                                                                                                        |
+| Propiedad   | Tipo   | Descripción                                                                                                        |
 | ----------- | ------ | ------------------------------------------------------------------------------------------------------------------ |
 | __KEY       | String | Valor de la llave primaria definida para la clase de datos.                                                        |
 | __TIMESTAMP | Fecha  | Marca de tiempo de la última modificación de la entidad                                                            |
