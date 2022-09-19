@@ -169,7 +169,7 @@ An authentication object handles the `options.serverAuthentication` or `options.
 
 | Propriété | Type | Description                                              | Par défaut |
 | --------- | ---- | -------------------------------------------------------- | ---------- |
-| nom       | Text | Name used for authentication                             | undefined  |
+| name      | Text | Name used for authentication                             | undefined  |
 | password  | Text | Password used for authentication                         | undefined  |
 | method    | Text | Method used for authentication:"basic", "digest", "auto" | "auto"     |
 
@@ -298,7 +298,7 @@ The `.returnResponseBody` property contains <!-- REF #HTTPRequestClass.returnRes
 
 > This function is thread-safe.
 
-The `.terminate()` function <!-- REF #HTTPRequestClass.terminate().Summary -->aborts the HTTP request<!-- END REF -->. .
+La fonction `.terminate()` <!-- REF #HTTPRequestClass.terminate().Summary -->aborts the HTTP request<!-- END REF -->. .
 
 <!-- END REF -->
 
