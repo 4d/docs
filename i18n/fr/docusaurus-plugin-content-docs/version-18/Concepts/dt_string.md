@@ -143,9 +143,9 @@ A la différence des autres comparaisons de chaîne, les recherches par mots-cl�
 
 **Notes :**
 
-- 4D uses the ICU library for comparing strings (using `<>=#` operators) and detecting keywords. For more information about the rules implemented, refer to the following address: <http://www.unicode.org/reports/tr29/#Word_Boundaries>.
+- 4D utilise la bibliothèque ICU pour comparer des chaînes de caractères (en utilisant les opérateurs `<>=#`) et détecter des mots-clés. For more information about the rules implemented, refer to the following address: <http://www.unicode.org/reports/tr29/#Word_Boundaries>.
 
-- In the Japanese version, instead of ICU, 4D uses Mecab by default for detecting keywords.
+- Dans la version japonaise, au lieu de ICU, 4D utilise Mecab par défaut pour la détection des mots-clés.
 
 ## Symboles d'indice de chaîne
 
