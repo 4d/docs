@@ -47,7 +47,7 @@ El valor por defecto depende del tipo y la categoría de la variable, su context
 
 La siguiente tabla ilustra estos valores por defecto:
 
-| Type       | Interproceso/Proceso (interpretado/compilado), Local (interpretado/compilado "en cero") | Local compilado "aleatorio" | Local compilado "no"        |
+| Tipo       | Interproceso/Proceso (interpretado/compilado), Local (interpretado/compilado "en cero") | Local compilado "aleatorio" | Local compilado "no"        |
 | ---------- | --------------------------------------------------------------------------------------- | --------------------------- | --------------------------- |
 | Booleano   | False                                                                                   | True                        | True (varía)                |
 | Fecha      | 00-00-00                                                                                | 00-00-00                    | 00-00-00                    |
