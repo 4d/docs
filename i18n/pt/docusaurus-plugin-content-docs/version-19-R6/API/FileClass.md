@@ -123,7 +123,7 @@ In the *fileConstant* parameter, pass a 4D built-in or system file, using one of
 
 If the target *fileConstant* does not exist, a null object is returned. No errors are raised.
 
-If the command is called from a component, pass the optional *parameter to get the path of the host database. Otherwise, if you omit the* parameter, a null object is always returned.
+If the command is called from a component, pass the optional `*` parameter to get the path of the host database. Otherwise, if you omit the `*` parameter, a null object is always returned.
 
 ## 4D. File.new()
 
