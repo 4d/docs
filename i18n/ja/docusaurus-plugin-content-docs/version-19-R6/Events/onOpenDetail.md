@@ -8,7 +8,7 @@ title: On Open Detail
 | 25  | フォーム - [リストボックス](FormObjects/listbox_overview.md) | 出力フォームまたはリストボックスに関連付けられた詳細フォームが開かれようとしている |
 
 
-## 詳細
+## 説明
 
 `On Open Detail` イベントは次のコンテキストで利用できます:
 
