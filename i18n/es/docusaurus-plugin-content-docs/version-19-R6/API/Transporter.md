@@ -155,10 +155,6 @@ Los valores posibles son:
 
 The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -->  the charset and encoding used for the body part of the email<!-- END REF -->.
 
-- asunto,
-- attachment filename(s),
-- email name.
-
 **Valores posibles:**
 
 | Constante                | Value                          | Comentario                                                                                                                |
@@ -263,7 +259,7 @@ The `.host` property contains <!-- REF #transporter.host.Summary -->the name or 
 
 #### Descripción
 
-The `.logFile` property contains <!-- REF #transporter.logFile.Summary -->the path of the extended log file defined (if any) for the mail connection<!-- END REF -->. Puede ser relativo (a la carpeta actual Logs) o absoluto.
+The `.logFile` property contains <!-- REF #transporter.logFile.Summary -->la ruta del archivo de historial extendido definido (si lo hay) para la conexión de correo<!-- END REF -->. Puede ser relativo (a la carpeta actual Logs) o absoluto.
 
 A diferencia de los archivos de registro clásicos (habilitados mediante el comando `SET DATABASE PARAMETER`), los archivos de registro extendidos almacenan el contenido MIME de todos los correos enviados y no tienen ningún límite de tamaño. Para más información sobre los archivos de registro extendidos, consulte:
 
@@ -290,7 +286,7 @@ A diferencia de los archivos de registro clásicos (habilitados mediante el coma
 
 #### Descripción
 
-The `.port` property contains <!-- REF #transporter.port.Summary --> the port number used for mail transactions<!-- END REF -->. Por defecto, si la propiedad *port* no se ha definido en el objeto *server* (utilizado para crear el objeto transportador con `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), el puerto utilizado es:
+La propiedad `.port` contiene <!-- REF #transporter.port.Summary --> el número de puerto utilizado para las transacciones de correo<!-- END REF -->. Por defecto, si la propiedad *port* no se ha definido en el objeto *server* (utilizado para crear el objeto transportador con `SMTP New transporter`, `POP3 New transporter`, `IMAP New transporter`), el puerto utilizado es:
 
 - **SMTP** - 587
 - **POP3** - 995
@@ -314,7 +310,7 @@ The `.port` property contains <!-- REF #transporter.port.Summary --> the port nu
 
 #### Descripción
 
-The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary --> the maximum wait time (in seconds) of a call to `.send( )` before a timeout occurs<!-- END REF -->. .
+La propiedad `.sendTimeOut` contiene <!-- REF #transporter.sendTimeOut.Summary --> el tiempo de espera máximo (en segundos) de una llamada a `.send( )` antes de que se produzca un timeout<!-- END REF -->. .
 
 <!-- END REF -->
 
@@ -336,7 +332,7 @@ The `.sendTimeOut` property contains <!-- REF #transporter.sendTimeOut.Summary -
 
 #### Descripción
 
-The `.user` property contains <!-- REF #transporter.user.Summary --> the user name used for authentication on the mail server<!-- END REF -->.
+La propiedad `.user` contiene <!-- REF #transporter.user.Summary --> el nombre del usuario utilizado para la autenticación en el servidor de correo<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -357,7 +353,7 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 
 
 <!-- REF #transporter.checkConnection().Params -->
-| Parámetros | Type   |    | Descripción                                                               |
+| Parámetros | Tipo   |    | Descripción                                                               |
 | ---------- | ------ |:--:| ------------------------------------------------------------------------- |
 | Result     | Object | <- | Estado de la conexión del objeto transportador|<!-- END REF -->
 
@@ -365,13 +361,13 @@ The `.user` property contains <!-- REF #transporter.user.Summary --> the user na
 
 #### Descripción
 
-The `.checkConnection()` function <!-- REF #transporter.checkConnection().Summary --> checks the connection using information stored in the transporter object<!-- END REF -->, recreates the connection if necessary, and returns the status. Esta función permite verificar que los valores proporcionados por el usuario son válidos y coherentes.
+La función `.checkConnection()` <!-- REF #transporter.checkConnection().Summary --> verifica la conexión utilizando la información almacenada en el objeto transportador<!-- END REF -->, recrea la conexión si es necesario, y devuelve el estado. Esta función permite verificar que los valores proporcionados por el usuario son válidos y coherentes.
 
 #### Objeto devuelto
 
 La función envía una solicitud al servidor de correo y devuelve un objeto que describe el estado del correo. Este objeto puede contener las siguientes propiedades:
 
-| Propiedad  |                          | Type       | Descripción                                                                                                                               |
+| Propiedad  |                          | Tipo       | Descripción                                                                                                                               |
 | ---------- | ------------------------ | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | success    |                          | boolean    | True si la verificación es exitosa, False en caso contrario                                                                               |
 | status     |                          | number     | (sólo SMTP) Código de estado devuelto por el servidor de correo (0 en caso de un problema no relacionado con el procesamiento del correo) |
