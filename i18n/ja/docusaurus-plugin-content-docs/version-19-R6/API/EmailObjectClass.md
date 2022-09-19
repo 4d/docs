@@ -126,7 +126,7 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 #### 説明
 
-`.bodyStructure` プロパティは、 <!-- REF #EmailObjectClass.bodyStructure.Summary -->メッセージ本文の完全なMIME ストラクチャーである *EmailBodyPart* オブジェクトを格納します (任意)<!-- END REF -->。 [メール本文の扱い](#メール本文の扱い) を参照ください。
+`.bodyStructure` プロパティは、 <!-- REF #EmailObjectClass.bodyStructure.Summary -->メッセージ本文の完全な MIME ストラクチャーである *EmailBodyPart* オブジェクトを格納します (任意)<!-- END REF -->。 [メール本文の扱い](#メール本文の扱い) を参照ください。
 
 `.bodyStructure` オブジェクトには、次のプロパティが格納されています:
 
@@ -152,10 +152,10 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 `.bodyValues` オブジェクトには、次のプロパティが格納されています:
 
-| プロパティ                      | タイプ  | 値                                                                                                         |
-| -------------------------- | ---- | --------------------------------------------------------------------------------------------------------- |
-| *partID*.value             | テキスト | 本文パートの値                                                                                                   |
-| *partID*.isEncodingProblem | ブール  | 文字セットをデコーディング中に、不正なフォーマットのセクション、未知の文字セット、あるいは未知の content-transfer-encoding が見つかった場合には true。 デフォルトは false。 |
+| プロパティ                      | タイプ     | 値                                                                                                         |
+| -------------------------- | ------- | --------------------------------------------------------------------------------------------------------- |
+| *partID*.value             | text    | 本文パートの値                                                                                                   |
+| *partID*.isEncodingProblem | boolean | 文字セットをデコーディング中に、不正なフォーマットのセクション、未知の文字セット、あるいは未知の content-transfer-encoding が見つかった場合には true。 デフォルトは false。 |
 
 ## .cc
 
@@ -206,8 +206,8 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 | プロパティ    | タイプ  | 値                                                                                                                       |
 | -------- | ---- | ----------------------------------------------------------------------------------------------------------------------- |
-| [].name  | テキスト | (必須) [RFC#5322](https://tools.ietf.org/html/rfc5322) で定義されているヘッダーフィールド名。 null または未定義の場合には、ヘッダーフィールドは MIME ヘッダーに追加されません。 |
-| [].value | テキスト | [RFC#5322](https://tools.ietf.org/html/rfc5322) で定義されているヘッダーフィールド値。                                                     |
+| [].name  | text | (必須) [RFC#5322](https://tools.ietf.org/html/rfc5322) で定義されているヘッダーフィールド名。 null または未定義の場合には、ヘッダーフィールドは MIME ヘッダーに追加されません。 |
+| [].value | text | [RFC#5322](https://tools.ietf.org/html/rfc5322) で定義されているヘッダーフィールド値。                                                     |
 
 ## .htmlBody
 
@@ -247,9 +247,9 @@ MailAttachment オブジェクトは [`MAIL New attachment`](MailAttachmentClass
 
 このプロパティは "keywords" ヘッダーです ([RFC#4021](https://tools.ietf.org/html/rfc4021) 参照)。
 
-| プロパティ          | タイプ | 値                               |
-| -------------- | --- | ------------------------------- |
-| .\<keyword\> | ブール | 設定するキーワード (値は true でなければなりません)。 |
+| プロパティ          | タイプ     | 値                               |
+| -------------- | ------- | ------------------------------- |
+| .\<keyword\> | boolean | 設定するキーワード (値は true でなければなりません)。 |
 
 予約されたキーワード:
 
