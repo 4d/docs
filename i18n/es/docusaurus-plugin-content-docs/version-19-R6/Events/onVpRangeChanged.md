@@ -13,7 +13,7 @@ Este evento se genera cuando se produce un cambio dentro de un rango de celdas e
 
 El objeto devuelto por el comando FORM Event contiene:
 
-| Propiedad    | Type         | Descripción                                                                                                                                                                                                               |
+| Propiedad    | Tipo         | Descripción                                                                                                                                                                                                               |
 | ------------ | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | objectName   | text         | Nombre del área 4D View Pro                                                                                                                                                                                               |
 | code         | entero largo | On VP Range Changed                                                                                                                                                                                                       |
