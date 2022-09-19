@@ -29,7 +29,7 @@ En esta lista sólo se muestran las clases de datos expuestas para el almacén d
 A continuación se describen las propiedades devueltas para cada clase de datos en el almacén de datos de su proyecto:
 
 
-| Propiedad | Type   | Descripción                                                                      |
+| Propiedad | Tipo   | Descripción                                                                      |
 | --------- | ------ | -------------------------------------------------------------------------------- |
 | name      | String | Nombre de la dataclass.                                                          |
 | uri       | String | Un URI que permite obtener información sobre la |clase de datos y sus atributos. |
@@ -201,7 +201,7 @@ La información que recupera se refiere a lo siguiente:
 Las siguientes propiedades se devuelven para una clase de datos expuesta:
 
 
-| Propiedad      | Type   | Descripción                                                                                                         |
+| Propiedad      | Tipo   | Descripción                                                                                                         |
 | -------------- | ------ | ------------------------------------------------------------------------------------------------------------------- |
 | name           | String | Nombre de la dataclass                                                                                              |
 | collectionName | String | Nombre de una selección de entidades en la clase de datos                                                           |
@@ -214,7 +214,7 @@ Las siguientes propiedades se devuelven para una clase de datos expuesta:
 
 Aquí están las propiedades de cada atributo expuesto que se devuelven:
 
-| Propiedad   | Type    | Descripción                                                                                                                                                           |
+| Propiedad   | Tipo    | Descripción                                                                                                                                                           |
 | ----------- | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name        | String  | El nombre del atributo.                                                                                                                                               |
 | kind        | String  | Tipo de atributo (almacenamiento o entidad relacionada).                                                                                                              |
