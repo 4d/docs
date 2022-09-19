@@ -28,7 +28,7 @@ Vous gérez les variables, les champs ou les expressions de type Objet à l'aide
 
 Chaque valeur de propriété accessible par la notation objet est considérée comme une expression. Vous pouvez utiliser ces valeurs partout où des expressions 4D sont attendues :
 
-- in 4D code, either written in the methods (Code Editor) or externalized (formulas, 4D tags files processed by `PROCESS 4D TAGS` or the Web Server, export files, 4D Write Pro documents...),
+- Dans le code 4D, soit écrites dans les méthodes (éditeur de code) soit externalisées (formules, fichiers balisés traités par la commande `PROCESS 4D TAGS` ou le serveur Web, fichiers d'export, documents 4D Write Pro, etc.),
 - Dans les zones d'expressions du débogueur et l'explorateur d'exécution,
 - Dans la liste de propriétés de l'éditeur de formulaires pour les objets formulaires : champ Variable ou Expression et plusieurs expressions de list box et colonnes (source de données, couleur de fond, style ou couleur de police).
 
@@ -38,14 +38,15 @@ Les objets doivent être initialisés à l'aide, par exemple, de la commande `Ne
 
 Voici un exemple :
 ```4d
- C_OBJET($obVar) //création d'une variable 4D de type objet. $obVar:=Creer objet//initialisation de l'objet et assignation à la variable 4D
+ C_OBJECT($obVar) ////création d'une variable 4D de type objet
+ $obVar:=New object //initialisation de l'objet et assignation à la variable 4D
 ```
 
 ### Objet standard ou partagé
 
 Vous pouvez créer deux types d'objets :
 
-- standard (non partagés), à l'aide de la commande `Creer objet`. Ces objets peuvent être modifiés sans contrôle d'accès spécifique mais ne peuvent pas être partagés entre les process.
+- standard (non partagés), à l'aide de la commande `New object`. Ces objets peuvent être modifiés sans contrôle d'accès spécifique mais ne peuvent pas être partagés entre les process.
 - partagés, à l'aide de la commande `New shared object`. Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces objets doit être contrôlé via des structures `Use...End use`. Pour plus d'informations, veuillez vous reporter à la page [Objets partagés et collections partagées](Concepts/shared.md).
 
 
@@ -108,7 +109,7 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
      $result:=MyMethod1.a //10
 ```
 
-- **Collections** Example:
+- avec les **collections**. Exemple:
 
 ```4d
      myColl.length //taille de la collection
@@ -124,7 +125,7 @@ La notation objet pour les pointeurs est semblable à la notation objet standard
 > pointeurObjet->nomPropriété
 
 - Accès par le nom :
-> pointeurObjet-> nomPropriété"]
+> pointeurObjet->[nomPropriété"]
 
 Voici un exemple :
 
