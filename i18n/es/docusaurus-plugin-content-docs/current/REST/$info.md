@@ -8,7 +8,7 @@ Devuelve información sobre los conjuntos de entidades almacenados actualmente e
 ## Descripción
 Cuando llama a esta petición para su proyecto, se recupera la información en las propiedades siguientes:
 
-| Propiedad      | Type       | Descripción                                                                                 |
+| Propiedad      | Tipo       | Descripción                                                                                 |
 | -------------- | ---------- | ------------------------------------------------------------------------------------------- |
 | cacheSize      | Number     | Tamaño de la caché del servidor 4D.                                                         |
 | usedCache      | Number     | Cuánto se ha utilizado de la caché de 4D Server.                                            |
@@ -21,7 +21,7 @@ Cuando llama a esta petición para su proyecto, se recupera la información en l
 Para cada selección de entidad almacenada actualmente en la caché de 4D Server, se devuelve la siguiente información:
 
 
-| Propiedad     | Type    | Descripción                                                                                                                                                                                                                                                                                              |
+| Propiedad     | Tipo    | Descripción                                                                                                                                                                                                                                                                                              |
 | ------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | id            | String  | Un UUID que hace referencia al conjunto de entidades.                                                                                                                                                                                                                                                    |
 | dataClass     | String  | Nombre de la dataclass.                                                                                                                                                                                                                                                                                  |
@@ -38,7 +38,7 @@ Para obtener información sobre cómo crear una selección de entidades, consult
 
 Para cada sesión de usuario, se devuelve la siguiente información en la colección *sessionInfo*:
 
-| Propiedad  | Type   | Descripción                                                       |
+| Propiedad  | Tipo   | Descripción                                                       |
 | ---------- | ------ | ----------------------------------------------------------------- |
 | sessionID  | String | Un UUID que referencia la sesión.                                 |
 | userName   | String | El nombre del usuario que ejecuta la sesión.                      |
