@@ -8,7 +8,7 @@ title: On Data Change
 | 20  | [4D Write Pro エリア](FormObjects/writeProArea_overview) - [ドロップダウンリスト](FormObjects/dropdownList_Overview.md) - フォーム - [階層リスト](FormObjects/list_overview.md) - [入力](FormObjects/input_overview.md) - [リストボックス](FormObjects/listbox_overview.md) - [リストボックス列](FormObjects/listbox_overview.md#リストボックス列) - [プラグインエリア](FormObjects/pluginArea_overview.md) - [進捗インジケーター](FormObjects/progressIndicator.md) - [ルーラー](FormObjects/ruler.md) - [スピナー](FormObjects/spinner.md) - [ステッパー](FormObjects/stepper.md) - [サブフォーム](FormObjects/subform_overview.md) | オブジェクトのデータが変更された |
 
 
-## 詳細
+## 説明
 
 `On Data Change` イベントプロパティがオブジェクトで選択されている場合、`FORM Event` コマンドを使って、データソースの値の変化を検出し、処理することができます。
 
