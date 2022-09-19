@@ -25,7 +25,7 @@ Si la propiedad [Sortable](FormObjects/properties_Action.md#sortable) no está s
 
 Este evento se genera cuando el usuario hace clic en el encabezado de una columna o línea en un documento 4D View Pro. En este contexto, el [objeto evento](overview.md#event-object) devuelto por el comando `FORM Event` contiene:
 
-| Propiedad   | Type         | Descripción                                                                                                                               |
+| Propiedad   | Tipo         | Descripción                                                                                                                               |
 | ----------- | ------------ | ----------------------------------------------------------------------------------------------------------------------------------------- |
 | code        | entero largo | 42                                                                                                                                        |
 | description | text         | "On Header Click"                                                                                                                         |
