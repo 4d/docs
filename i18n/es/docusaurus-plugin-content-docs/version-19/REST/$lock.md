@@ -46,7 +46,7 @@ A `?$lock` request returns a JSON object with `"result"=true` if the lock operat
 
 El objeto "__STATUS" devuelto tiene las siguientes propiedades:
 
-| Propiedad    |  | Type    | Descripción                                                                                                                                     |
+| Propiedad    |  | Tipo    | Descripción                                                                                                                                     |
 | ------------ |  | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 |              |  |         | ***Disponible sólo en caso de éxito:***                                                                                                         |
 | success      |  | boolean | true if the lock action is successful (or if the entity is already locked in the current session), false otherwise (not returned in this case). |
