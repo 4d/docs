@@ -251,27 +251,27 @@ Cada elemento del nivel principal es el nombre de un método o función clase. E
 En la imagen de arriba:
 
 * `thirdMethod` no ha recibido ningún parámetro
-* `$0` is currently undefined, as the method did not assign any value to `$0` (because it has not executed this assignment yet or because the method is a subroutine and not a function)
-* `secondMethod` has received three parameters from `firstMethod`:
+* `$0` actualmente está indefinido, ya que el método no ha asignado ningún valor a `$0` (porque aún no ha ejecutado esta asignación o porque el método es una subrutina y no una función)
+* `secondMethod` ha recibido tres parámetros de `firstMethod`:
   * $1 es un puntero a la tabla `[Employee]`
-  * $2 is a pointer to the `ID` field in the  `[Employee]` table
+  * $2 es un puntero al campo `ID` en la tabla  `[Employee]`
   * $3 es un parámetro alfanumérico cuyo valor es "Z"
 
-You can double-click the name of any method to display its contents in the [Source Code Pane](#source-code-pane).
+Puede hacer doble clic en el nombre de cualquier método para mostrar su contenido en la [Ventana de código fuente](#source-code-pane).
 
-Clicking the icon next to a method or function name expands or collapses the parameters and the result (if any). Los valores aparecen en el lado derecho del panel. Clicking on any value on the right side allows you to change the value of any parameter or function result.
+Al hacer clic en el icono que aparece junto al nombre de un método o función, se amplían o reducen los parámetros y el resultado (si lo hay). Los valores aparecen en el lado derecho del panel. Al hacer clic en cualquier valor del lado derecho, se puede cambiar el valor de cualquier parámetro o resultado de la función.
 
-To display the parameter type, check the **Show types** option in the contextual menu:
+Para mostrar el tipo de parámetro, marque la opción **Mostrar tipos** en el menú contextual:
 
 ![call-chain-show-types](../assets/en/Debugging/callChainShowTypes.png)
 
 After you deploy the list of parameters, you can drag and drop parameters and function results to the [Custom Watch Pane](#custom-watch-pane).
 
-You can also use the [Get call chain](https://doc.4d.com/4dv19/help/command/en/page1662.html) command to retrieve the call chain programmatically.
+También puede utilizar el comando [Get call chain](https://doc.4d.com/4dv19/help/command/en/page1662.html) para recuperar la cadena de llamadas por programación.
 
 ## Panel de vigilancia personalizado
 
-El panel de control personalizado es útil para evaluar expresiones. It is similar to the [Watch Pane](#watch-pane), except here you decide which expressions are displayed. Todo tipo de expresión puede ser evaluada:
+El panel de control personalizado es útil para evaluar expresiones. Es similar al [panel de control](#watch-pane), excepto que aquí usted decide qué expresiones se muestran. Todo tipo de expresión puede ser evaluada:
 
 * campo
 * variable
@@ -283,53 +283,53 @@ El panel de control personalizado es útil para evaluar expresiones. It is simil
 
 ![custom-Watch-pane](../assets/en/Debugging/custom-watch-pane.png)
 
-Puede evaluar toda expresión que pueda mostrarse en forma de texto. Esto no cubre los campos o variables Imagen y BLOB. To display BLOB contents, you can use BLOB commands, such as [BLOB to text](https://doc.4d.com/4dv19/help/command/en/page555.html).
+Puede evaluar toda expresión que pueda mostrarse en forma de texto. Esto no cubre los campos o variables Imagen y BLOB. Para mostrar el contenido de los BLOB, puede utilizar comandos BLOB, como [BLOB to text](https://doc.4d.com/4dv19/help/command/en/page555.html).
 
 ### Gestión de expresiones
 
 Hay varias formas de añadir expresiones a la lista:
 
-* Drag and drop an object or expression from the Watch Pane or the Call Chain Pane
-* Select an expression in the [Source Code pane](#source-code-pane) and press **ctrl+D**  (Windows) or **cmd+D** (macOS)
-* Double-click somewhere in the empty space of the Custom Watch Pane (adds an expression with a placeholder name that you can edit)
+* Arrastrar y soltar un objeto o expresión desde el Panel de Vigilancia o el Panel de Cadena de Llamadas
+* Seleccione una expresión en el [panel código fuente](#source-code-pane) y presione **ctrl+D**  (Windows) o **cmd+D** (macOS)
+* Haga doble clic en algún lugar del espacio vacío del panel de control personalizado (añade una expresión con un nombre de marcador de posición que puede editar)
 
 Puede introducir cualquier fórmula que devuelva un resultado.
 
-To edit an expression, click on it to select it, then click again or press **Enter** on your keyboard.
+Para editar una expresión, haga clic en ella para seleccionarla y, a continuación, vuelva a hacer clic o presione **Intro** en su teclado.
 
-To delete an expression, click on it to select it, then press **Backspace** or **Delete** on your keyboard.
-> **Warning:** Be careful when you evaluate a 4D expression modifying the value of one of the System Variables (for instance, the OK variable) because the execution of the rest of the method may be altered.
+Para eliminar una expresión, haga clic en ella para seleccionarla y, a continuación, presione **Retroceso** o **Borrar** en su teclado.
+> **Atención:** tenga cuidado cuando evalúe una expresión 4D que modifique el valor de una de las Variables del Sistema (por ejemplo, la variable OK) porque la ejecución del resto del método puede verse alterada.
 
 ### Menú contextual de la ventana de expresión
 
-The Custom Watch Pane’s context menu gives you access the 4D formula editor and other options:
+El menú contextual del panel de control personalizado permite acceder al editor de fórmulas de 4D y a otras opciones:
 
 ![custom-watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-context-menu.png)
 
-**New Expression**: This inserts a new expression and displays the 4D Formula Editor.
+**Nueva expresión**: inserta una nueva expresión y muestra el editor de fórmulas de 4D.
 
 ![custom-Watch-pane-context-menu](../assets/en/Debugging/custom-watch-pane-formula-editor.png)
 
-For more information on the Formula Editor, see the <a href="https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html" target="_blank">4D Design Reference manual.</a>
+Para más información sobre el editor de fórmulas, consulte el <a href="https://doc.4d.com/4Dv19/4D/19/4D-Design-Reference.100-5416591.en.html" target="_blank">manual de Diseño de 4D.</a>
 
-* **Insert Command**: Shortcut for inserting a 4D command as a new expression.
-* **Delete All**: Removes all expressions from the Custom Watch Pane.
-* **Standard Expressions**: Copies the Watch Pane's list of expressions.
+* **Insertar comando**: acceso directo para insertar un comando 4D como una nueva expresión.
+* **Borrar todo**: elimina todas las expresiones del panel de control personalizado.
+* **Expresiones estándar**: copia la lista de expresiones del panel de control.
 
-> This option is not available in remote debugging mode (see [Debugging from Remote Machines](https://doc.4d.com/4Dv19/4D/19/Debugging-from-Remote-Machines.300-5422483.en.html)).
+> Esta opción no está disponible en el modo de depuración remota (ver [Depuración desde máquinas remotas](https://doc.4d.com/4Dv19/4D/19/Debugging-from-Remote-Machines.300-5422483.en.html)).
 
-* **Collapse All/Expand All**: Collapses or Expands all the hierarchical lists.
-* **Show Types**: Displays the type of each item in the list (when appropriate).
-* **Show Field and Table Numbers**: Displays the number of each table or field of the **Fields**. Useful if you work with tables, field numbers or pointers using the commands such as `Table` or `Field`.
-* **Show Icons**: Displays an icon denoting the type of each item.
-* **Sorted Tables and Fields**: Displays the table and fields in alphabetical order.
-* **Show Integers in Hexadecimal**: Displays numbers using hexadecimal notation. To enter a numeric value in hexadecimal, type 0x (zero + "x"), followed by the hexadecimal digits.
+* **Contraer todo/Expandir todo**: contrae o expande todas las listas jerárquicas.
+* **Mostrar tipos**: muestra el tipo de cada elemento de la lista (cuando es apropiado).
+* **Mostrar números de campos y tablas**: muestra el número de las tabla o de los **campos**. Es útil si trabaja con números de tablas o de campos, o con punteros utilizando los comandos `Table` o `Field`.
+* **Mostrar iconos**: muestra un icono que denota el tipo de cada elemento.
+* **Tablas y campos ordenados**: muestra la tabla y los campos en orden alfabético.
+* **Mostrar números enteros en hexadecimal**: muestra los números en notación hexadecimal. Para introducir un valor numérico en hexadecimal, escriba 0x (cero + "x"), seguido de los dígitos hexadecimales.
 
 ## Panel de código fuente
 
-The Source Code Pane shows the source code of the method or function currently being traced.
+El panel de código fuente muestra el código fuente del método o de la función que se está rastreando actualmente.
 
-This area also allows you to add or remove [**break points**](breakpoints.md).
+Esta área también le permite añadir o eliminar lod [** puntos de ruptura**](breakpoints.md).
 
 ### Tips
 
@@ -434,6 +434,6 @@ Esta sección lista todos los atajos disponibles en la ventana del depurador.
 
 * **Ctrl** + **+/-** (Windows) or **Command** + **+/-** (macOS) increases or decreases the font size for a better readability. The modified font size is also applied to the Code Editor and is stored in the Preferences.
 * **Ctrl + \*** (Windows) or **Command + \*** (macOS) forces the updating of the Watch Pane.
-* When no item is selected in any pane, press **Enter** to step over.
-* When an item value is selected, use the arrows keys to navigate through the list.
-* Al editar un elemento, utilice las teclas de flecha para mover el cursor. Use Ctrl-A/X/C/V (Windows) or Command-A/X/C/V (macOS) as shortcuts to the Select All/Cut/Copy/Paste menu commands of the Edit menu.
+* Si no hay ningún elemento seleccionado en las ventanas, presione **Intro** para avanzar.
+* Cuando se selecciona el valor de un elemento, utilice las teclas de flecha para navegar por la lista.
+* Al editar un elemento, utilice las teclas de flecha para mover el cursor. Utilice Ctrl-A/X/C/V (Windows) o Comando-A/X/C/V (macOS) como accesos directos a los comandos del menú Seleccionar todo/Cortar/Copiar/Pegar del menú Edición.
