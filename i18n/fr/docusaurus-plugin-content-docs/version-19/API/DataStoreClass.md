@@ -305,7 +305,7 @@ L'objet retourné contient les propriétés suivantes :
 | keyProvided |             |               | Boolean | Vrai si la clé de chiffrement correspondant au fichier de données chiffré est fournie(*). |
 | tables      |             |               | Object  | Objet contenant autant de propriétés que de tables chiffrables ou chiffrées.              |
 |             | *tableName* |               | Object  | Table chiffrable ou chiffrée                                                              |
-|             |             | nom           | Text    | Nom de la table                                                                           |
+|             |             | name          | Text    | Nom de la table                                                                           |
 |             |             | num           | Number  | Numéro de la table                                                                        |
 |             |             | isEncryptable | Boolean | Vrai si la table est déclarée chiffrable dans le fichier de structure                     |
 |             |             | isEncrypted   | Boolean | Vrai si les enregistrements de la table sont chiffrés dans le fichier de données          |
