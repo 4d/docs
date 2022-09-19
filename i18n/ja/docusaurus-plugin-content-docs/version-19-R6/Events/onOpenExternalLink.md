@@ -8,7 +8,7 @@ title: On Open External Link
 | 52  | [Webエリア](FormObjects/webArea_overview.md) | 外部URL がブラウザーで開かれた |
 
 
-## 詳細
+## 説明
 
 このイベントは、`WA SET EXTERNAL LINKS FILTERS` コマンドで設定されたフィルターにより、URL のロードが Webエリアによってブロックされ、URL がカレントのシステムブラウザーで開かれると生成されます。
 
