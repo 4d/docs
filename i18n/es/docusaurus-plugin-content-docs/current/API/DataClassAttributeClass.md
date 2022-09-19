@@ -131,7 +131,7 @@ La propiedad `.fieldType` <!-- REF DataClassAttributeClass.fieldType.Summary -->
 | storage                 | Tipo de campo 4D correspondiente, ver [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html) |
 | relatedEntity           | 38 (`Is object`)                                                                                             |
 | relatedEntities         | 42 (`Is collection`)                                                                                         |
-| calculated              | <li>escalar: tipo de campo 4D correspondiente, ver [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>entity: 38 (`Is object`)</li><li>entity selection: 42 (`Is collection)`</li>                                  |
+| calculated              | <li>escalar: tipo de campo 4D correspondiente, ver [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>entity: 38 (`Is object`)</li><li>entity selection: 42 (`Is collection`)</li>                                  |
 | alias                   | <li>escalar: tipo de campo 4D correspondiente, ver [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>entity: 38 (`Is object`)</li><li>entity selection: 42 (`Is collection)`</li>                                  |
 
 <!-- END REF -->
