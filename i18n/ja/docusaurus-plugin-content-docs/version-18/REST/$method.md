@@ -1,13 +1,13 @@
 ---
 id: method
-title: "$method"
+title: '$method'
 ---
 
 このパラメーターは、返されたエンティティまたはエンティティセレクションに対して実行する処理を指定するのに使います。
 
 ## 使用可能なシンタックス
 
-| シンタックス                                          | 例題                                                                                              | 詳細                                                                 |
+| シンタックス                                          | 例題                                                                                              | 説明                                                                 |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
 | [**$method=delete**](#methoddelete)             | `POST /Employee?$filter="ID=11"& $method=delete`                                            | エンティティまたはエンティティセレクションを削除します                                        |
 | [**$method=entityset**](#methodentityset)       | `GET /People/?$filter="ID>320"& $method=entityset& $timeout=600`                     | RESTリクエストで定義されたエンティティのコレクションに基づいて、4D Server のキャッシュにエンティティセットを作成します |
@@ -24,13 +24,14 @@ title: "$method"
 エンティティまたは (RESTで作成された) エンティティセレクションを削除します
 
 
-### 詳細
+### 説明
 
 `$method=delete` を使ってエンティティ、またはエンティティセレクションを削除します。 たとえば、[`$filter`]($filter.md) を使って定義したエンティティセレクションや、[`{dataClass}({key})`](%7BdataClass%7D.html#dataclasskey) *(例*: /Employee(22)) のように直接特定したエンティティが対象です。
 
 [`$entityset/{entitySetID}`]($entityset.md#entitysetentitysetid) のようにエンティティセットを呼び出して、そこに含まれるエンティティを削除することもできます。
 
-## 例題
+### 例題
+
 キーが 22であるエンティティを削除するには、次の RESTリクエストが書けます:
 
  `POST  /rest/Employee(22)/?$method=delete`
@@ -45,7 +46,7 @@ title: "$method"
 
 レスポンス:
 
-```
+```json
 {
     "ok": true
 }
@@ -57,7 +58,7 @@ title: "$method"
 
 RESTリクエストで定義されたエンティティのコレクションに基づいて、4D Server のキャッシュにエンティティセットを作成します
 
-### 詳細
+### 説明
 
 RESTでエンティティのコレクションを作成した場合、これをエンティティセットとして 4D Server のキャッシュに保存することができます。 エンティティセットには参照番号が付与されます。これを `$entityset/{entitySetID}` に渡すと、当該エンティティセットにアクセスできます。 デフォルトで、エンティティセットは 2時間有効です。$timeout に値 (秒単位) を渡すことで、有効時間を変更できます。
 
@@ -78,8 +79,9 @@ RESTでエンティティのコレクションを作成した場合、これを�
 
 エンティティセットを作成すると、返されるオブジェクトの先頭に `__ENTITYSET` という要素が追加され、エンティティセットにアクセスするための URI を提供します:
 
-`__ENTITYSET: "http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7"`
-
+```json
+__ENTITYSET: "http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7"`
+```
 
 
 
@@ -87,7 +89,7 @@ RESTでエンティティのコレクションを作成した場合、これを�
 
 4D Server のキャッシュからエンティティセットを削除します。
 
-### 詳細
+### 説明
 
 [`$method=entityset`](#methodentityset) によって作成したエンティティセットを、4D Server のキャッシュから削除することができます。
 
@@ -101,16 +103,16 @@ RESTでエンティティのコレクションを作成した場合、これを�
 
 リクエストが成功した場合のレスポンス:
 
-```
+```json
 {
     "ok": true
 }
-エンティティセットが見つからなかった場合には、エラーが返されます
+If the entity set wasn't found, an error is returned:
 
 {
     "__ERROR": [
         {
-             "message": "Error code: 1802\nEntitySet  \"4C51204DD8184B65AC7D79F09A077F24\" cannot be found\ncomponent:  'dbmg'\ntask 22, name: 'HTTP connection handler'\n",
+            "message": "Error code: 1802\nEntitySet  \"4C51204DD8184B65AC7D79F09A077F24\" cannot be found\ncomponent:  'dbmg'\ntask 22, name: 'HTTP connection handler'\n",
             "componentSignature": "dbmg",
             "errCode": 1802
         }
@@ -124,7 +126,7 @@ RESTでエンティティのコレクションを作成した場合、これを�
 RESTリクエストで定義されたリレートエンティティのコレクションに基づいて、4D Server のキャッシュにエンティティセットを作成します
 
 
-### 詳細
+### 説明
 
 `$method=subentityset` を使うことで、RESTリクエストが定義されたリレーション属性によって返されるデータを並べ替えることができます。
 
@@ -140,7 +142,7 @@ RESTリクエストで定義されたリレートエンティティのコレク�
 
 #### レスポンス:
 
-```
+```json
 {
 
     "__ENTITYSET": "/rest/Employee/$entityset/FF625844008E430B9862E5FD41C741AB",
@@ -188,7 +190,7 @@ RESTリクエストで定義されたリレートエンティティのコレク�
 
 一つ以上のエンティティを更新または作成します
 
-### 詳細
+### 説明
 
 `$method=update` を使うと、一つの **POST** で一つ以上のエンティティを更新または作成することができます。 エンティティの更新・作成をおこなうには、オブジェクトのプロパティ/値としてエンティティの属性/値を指定します (*例*: `{ lastName: "Smith" }`)。 複数のエンティティを更新・作成するには、各エンティティに対応するオブジェクトをコレクションにまとめます。
 
@@ -198,14 +200,15 @@ RESTリクエストで定義されたリレートエンティティのコレク�
 
 エンティティをサーバーに保存すると同時にトリガーが実行されます。 レスポンスにはすべてのデータが、サーバー上に存在するとおりに格納されます。
 
-`$atomic/$atonce` を使うと、エンティティを作成・更新するリクエストをトランザクション内で実行できます。 データの検証でエラーが発生した場合に、一部のエンティティだけが処理されてしまうのを防げます。 また、`$method=validate` を使うと、作成・更新の前にエンティティを検証することができます。
+You can also put these requests to create or update entities in a transaction by calling `$atomic/$atOnce`. データの検証でエラーが発生した場合に、一部のエンティティだけが処理されてしまうのを防げます。 You can also use `$method=validate` to validate the entities before creating or updating them.
 
 エンティティを追加または更新する際に問題が発生すると、その情報を格納したエラーが返されます。
-> 属性の型に関する注記:
-> 
-> * **日付** は JavaScript 形式で表す必要があります: YYYY-MM-DDTHH:MM:SSZ (例: "2010-10-05T23:00:00Z")。 日付属性のためだけに日付プロパティを指定した場合、タイムゾーンおよび時刻 (時間・分・秒) の情報は削除されます。 この場合、レスポンスの形式 dd!mm!yyyy (例: 05!10!2013) を使って日付を送信することも可能です。
-> * **ブール** は true または false です。
-> * `$upload` を使ってアップロードしたファイルは、{ "ID": "D507BC03E613487E9B4C2F6A0512FE50"} のような形式で返されるオブジェクトを渡すことで、ピクチャー型やBLOB型の属性に適用できます。
+
+:::note
+*   **日付** は JavaScript 形式で表す必要があります: YYYY-MM-DDTHH:MM:SSZ (例: "2010-10-05T23:00:00Z")。 日付属性のためだけに日付プロパティを指定した場合、タイムゾーンおよび時刻 (時間・分・秒) の情報は削除されます。 この場合、レスポンスの形式 dd!mm!yyyy (例: 05!10!2013) を使って日付を送信することも可能です。
+*   **ブール** は true または false です。
+*   Uploaded files using `$upload` can be applied to an attribute of type Image or BLOB by passing the object returned in the following format `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50"}` :::
+
 
 ### 例題
 
@@ -215,7 +218,7 @@ RESTリクエストで定義されたリレートエンティティのコレク�
 
 **POST データ:**
 
-```
+```json
 {
     __KEY: "340",
     __STAMP: 2,
@@ -232,7 +235,7 @@ RESTリクエストで定義されたリレートエンティティのコレク�
 
 **POST データ:**
 
-```
+```json
 { 
     firstName: "John",
     lastName: "Smith"
@@ -245,7 +248,7 @@ RESTリクエストで定義されたリレートエンティティのコレク�
 
 **POST データ:**
 
-```
+```json
 [{ 
     "__KEY": "309",
     "__STAMP": 5,
@@ -262,7 +265,7 @@ RESTリクエストで定義されたリレートエンティティのコレク�
 
 エンティティを追加・更新した場合、そのエンティティは変更後の内容で返されます。 たとえば、新規の Employee エンティティを作成した場合、次のようなレスポンスが返されます:
 
-```
+```json
 {
     "__KEY": "622", 
     "__STAMP": 1, 
@@ -276,7 +279,7 @@ RESTリクエストで定義されたリレートエンティティのコレク�
 
 スタンプが正しくない場合には、次のようなエラーが返されます:
 
-```
+```json
 {
     "__STATUS": {
         "status": 2,
