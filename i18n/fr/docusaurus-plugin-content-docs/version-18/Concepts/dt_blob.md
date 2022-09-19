@@ -16,7 +16,7 @@ Les BLOBs dans 4D peuvent être passés comme paramètres aux commandes 4D ou au
 
 Pour passer un BLOB à une de vos méthodes, vous pouvez aussi définir un pointeur vers le BLOB et passer le pointeur comme paramètre.
 
-**Exemple :**
+**Exemples :**
 ```4d
   // Déclarer une variable de type BLOB
  C_BLOB(touteVarBLOB)
