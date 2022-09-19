@@ -20,7 +20,7 @@ Avec l'API REST, vous pouvez effectuer toutes les manipulations de données souh
 
 Pour ajouter et modifier des entités, vous pouvez appeler [`$method=update`]($method.md#methodupdate). Si vous souhaitez supprimer une ou plusieurs entités, vous pouvez utiliser [`$method=delete`]($method.md#methoddelete).
 
-Besides retrieving a single entity in a dataclass using [{dataClass}({key})]({dataClass}.md#key.md), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
+Besides retrieving a single entity in a dataclass using [{dataClass}({key})](dataClass.md#dataclasskey), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
 
 Avant de retourner la sélection, vous pouvez également la trier en utilisant [`$orderby`]($orderby.md) un ou plusieurs attributs (même les attributs de relation).
 
