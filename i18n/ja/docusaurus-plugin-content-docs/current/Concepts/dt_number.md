@@ -37,27 +37,27 @@ title: 数値 (実数、倍長整数、整数)
 
 ## 数値演算子
 
-| 処理        | シンタックス   | 戻り値     | 式        | 値     |
-| --------- | -------- | ------- | -------- | ----- |
-| 加算 (足し算)  | 数値 + 数値  | Number  | 2 + 3    | 5     |
-| 減算 (引き算)  | 数値 - 数値  | Number  | 3 – 2    | 1     |
-| 乗算 (かけ算)  | 数値 * 数値  | Number  | 5 * 2    | 10    |
-| 除算 (割り算)  | 数値 / 数値  | Number  | 5 / 2    | 2.5   |
-| 倍長整数を返す除算 | 数値 \ 数値 | Number  | 5 \ 2   | 2     |
-| モジューロ     | 数値 % 数値  | Number  | 5 % 2    | 1     |
-| 指数        | 数値 ^ 数値  | Number  | 2 ^ 3    | 8     |
-| 等しい       | 数値 = 数値  | Boolean | 10 = 10  | true  |
-|           |          |         | 10 = 11  | False |
-| 異なる       | 数値 # 数値  | Boolean | 10 # 11  | true  |
-|           |          |         | 10 # 10  | False |
-| 大きい       | 数値 > 数値  | Boolean | 11 > 10  | true  |
-|           |          |         | 10 > 11  | False |
-| 小さい       | 数値 < 数値  | Boolean | 10 < 11  | true  |
-|           |          |         | 11 < 10  | False |
-| 以上        | 数値 >= 数値 | Boolean | 11 >= 10 | true  |
-|           |          |         | 10 >= 11 | False |
-| 以下        | 数値 <= 数値 | Boolean | 10 <= 11 | true  |
-|           |          |         | 11 <= 10 | False |
+| 演算        | シンタックス           | 戻り値     | 式        | 値     |
+| --------- | ---------------- | ------- | -------- | ----- |
+| 加算 (足し算)  | Number + Number  | Number  | 2 + 3    | 5     |
+| 減算 (引き算)  | Number - Number  | Number  | 3 – 2    | 1     |
+| 乗算 (かけ算)  | Number * Number  | Number  | 5 * 2    | 10    |
+| 除算 (割り算)  | Number / Number  | Number  | 5 / 2    | 2.5   |
+| 倍長整数を返す除算 | Number \ Number | Number  | 5 \ 2   | 2     |
+| モジューロ     | Number % Number  | Number  | 5 % 2    | 1     |
+| 指数        | Number ^ Number  | Number  | 2 ^ 3    | 8     |
+| 等しい       | Number = Number  | Boolean | 10 = 10  | true  |
+|           |                  |         | 10 = 11  | false |
+| 異なる       | Number # Number  | Boolean | 10 # 11  | true  |
+|           |                  |         | 10 # 10  | false |
+| 大きい       | Number > Number  | Boolean | 11 > 10  | true  |
+|           |                  |         | 10 > 11  | false |
+| 小さい       | Number < Number  | Boolean | 10 < 11  | true  |
+|           |                  |         | 11 < 10  | false |
+| 以上        | Number >= Number | Boolean | 11 >= 10 | true  |
+|           |                  |         | 10 >= 11 | false |
+| 以下        | Number <= Number | Boolean | 10 <= 11 | true  |
+|           |                  |         | 11 <= 10 | false |
 
 モジューロ演算子 % は最初の数値を 2番目の数値で除算し、その余りの整数を返します。 次に例を示します:
 
@@ -102,7 +102,7 @@ title: 数値 (実数、倍長整数、整数)
 
 ビットワイズ演算子を使用する式は倍長整数値を返します。Bit Test 演算子の場合、式は例外的にブール値を返します。 次の表にビットワイズ演算子とそのシンタックスを示します:
 
-| 処理                     | 演算子       | シンタックス              | 戻り値              |
+| 演算                     | 演算子       | シンタックス              | 戻り値              |
 | ---------------------- | --------- | ------------------- | ---------------- |
 | Bitwise AND            | &         | Long & Long         | Long             |
 | Bitwise OR (inclusive) | &#124;    | Long &#124; Long    | Long             |
@@ -120,16 +120,16 @@ title: 数値 (実数、倍長整数、整数)
 
 次の表は、ビットワイズ演算子とその効果を示します:
 
-| 処理          | 説明                                                                         |
+| 演算          | 説明                                                                         |
 | ----------- | -------------------------------------------------------------------------- |
 | Bitwise AND | それぞれの結果ビットは2つのオペランドのビットの論理ANDです。 下記は、論理ANDの真偽表です:<li>1 & 1 --> 1</li> |
-<li>0 & 1 --> 0</li><li>1 & 0 --> 0</li><li>0 & 0 --> 0</li>In other words, the resulting bit is 1 if the two operand bits are 1; otherwise the resulting bit is 0.| |Bitwise OR (inclusive)|Each resulting bit is the logical OR of the bits in the two operands.Here is the logical OR table:<li>1 &#124; 1 --> 1</li><li>0 &#124; 1 --> 1</li><li>1 &#124; 0 --> 1</li><li>0 &#124; 0 --> 0</li>In other words, the resulting bit is 1 if at least one of the two operand bits is 1; otherwise the resulting bit is 0.| |Bitwise OR (exclusive)|Each resulting bit is the logical XOR of the bits in the two operands.Here is the logical XOR table:<li>1 \^&#124; 1 --> 0</li><li>0 \^&#124; 1 --> 1</li><li>1 \^&#124; 0 --> 1</li><li>0 \^&#124; 0 --> 0</li>In other words, the resulting bit is 1 if only one of the two operand bits is 1; otherwise the resulting bit is 0.| |Left Bit Shift|The resulting value is set to the first operand value, then the resulting bits are shifted to the left by the number of positions indicated by the second operand. 左側のビットがなくなり、右側の新しいビットは0に設定されます。 
+<li>0 & 1 --> 0</li><li>1 & 0 --> 0</li><li>0 & 0 --> 0</li>すなわち、両オペランドのビットが 1 の場合、結果ビットが 1 になり、その他の場合は結果ビットが 0 になります。| |Bitwise OR (inclusive)|それぞれの結果ビットは 2つのオペランドのビットの論理OR です。下記は、論理OR の真偽表です:<li>1 &#124; 1 --> 1</li><li>0 &#124; 1 --> 1</li><li>1 &#124; 0 --> 1</li><li>0 &#124; 0 --> 0</li>すなわち、いずれかのオペランドのビットが１の場合、結果ビットが 1 になり、その他の場合は結果ビットが 0 になります。| |Bitwise OR (exclusive)|それぞれの結果ビットは 2つのオペランドのビットの排他的論理OR です。下記は、排他的論理OR の審議表です:<li>1 \^&#124; 1 --> 0</li><li>0 \^&#124; 1 --> 1</li><li>1 \^&#124; 0 --> 1</li><li>0 \^&#124; 0 --> 0</li>すなわち、オペランドのビットのいずれか一方だけが１の場合、結果ビットが１になり、その他の場合は結果ビットが 0 になります。| |Left Bit Shift|最初のオペランド値が結果値に設定され、次に結果ビットが 2番目のオペランドで示されたビット数だけ左にシフトします。 左側のビットがなくなり、右側の新しいビットは0に設定されます。 
 
-**Note:** Taking into account only positive values, shifting to the left by N bits is the same as multiplying by 2^N.| |Right Bit Shift|The resulting value is set to the first operand value, then the resulting bits are shifted to the right by the number of position indicated by the second operand. The bits on the right are lost and the new bits on the left are set to 0.**Note:** Taking into account only positive values, shifting to the right by N bits is the same as dividing by 2^N.| |Bit Set|The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 1. The other bits are left unchanged.| |Bit Clear|The resulting value is set to the first operand value, then the resulting bit, whose number is indicated by the second operand, is set to 0. The other bits are left unchanged.| |Bit Test|Returns True if, in the first operand, the bit whose number is indicated by the second operand is equal to 1. 最初のオペランドのうち、2番目のビットで示されたビットが0の場合、Falseが返されます。|
+**注記:** 正の数だけを考えると、Nビット左にシフトすることは、2^Nを掛けることと同じです。| |Right Bit Shift|最初のオペランド値が結果値に設定され、次に結果ビットが 2番目のオペランドで示されたビット数だけ右にシフトします。 右側のビットがなくなり、左側の新しいビットは 0 に設定されます。__注記:__ 正の数だけを考えると、Nビット右にシフトすることは、2^Nで割ることと同じです。| |Bit Set|最初のオペランド値が結果値に設定され、次に結果ビットのうち2番目のオペランドで示されたビットが1に設定されます。 他のビットはそのままです。| |Bit Clear|最初のオペランド値が結果値に設定され、次に結果ビットのうち 2番目のオペランドで示されたビットが 0 に設定されます。 他のビットはそのままです。| |Bit Test|最初のオペランドのうち、2番目のビットで示されたビットが 1 の場合、trueが返されます。 最初のオペランドのうち、2番目のビットで示されたビットが0の場合、falseが返されます。|
 
 ### 例題
 
-| 処理                     | 例題                              | 戻り値        |
+| 演算                     | 例題                              | 戻り値        |
 | ---------------------- | ------------------------------- | ---------- |
 | Bitwise AND            | 0x0000FFFF & 0xFF00FF00         | 0x0000FF00 |
 | Bitwise OR (inclusive) | 0x0000FFFF &#124; 0xFF00FF00    | 0xFF00FFFF |
