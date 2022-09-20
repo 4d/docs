@@ -56,9 +56,9 @@ QUERY([Clients];[Clients]Name="Smith")
 
 ## Variáveis interprocesso
 
-You designate an interprocess variable by preceding the name of the variable with the symbols (`<>`) — a “less than” sign followed by a “greater than” sign.
+Designa-se uma variável interprocessada precedendo o nome da variável com os símbolos (`<>`) - um sinal "menos do que" seguido de um sinal "maior do que".
 
-The name of an interprocess variable can be up to 31 characters, not including the `<>` symbols.
+O nome de uma variável interprocessada pode ter até 31 caracteres, não incluindo os símbolos `<>` .
 
 Exemplos:
 
@@ -70,7 +70,7 @@ If(<>vtName#"")
 
 ## Variáveis processo
 
-You designate a process variable by using its name (which cannot start with the `<>` symbols nor the dollar sign $). A process variable name can contain up to 31 characters.
+Designa-se uma variável de processo utilizando o seu nome (que não pode começar com os símbolos `<>` nem com o símbolo do dólar $). Um nome de processo pode conter até 31 caracteres.
 
 Exemplos:
 
@@ -102,9 +102,9 @@ Um array se designa escrevendo seu nome, que é o nome que se passa a um comando
 
 ### Arrays interprocesso
 
-The name of an interprocess array is preceded by the symbols (`<>`) — a “less than” sign followed by a “greater than” sign.
+Designa-se uma variável interprocessada precedendo o nome da variável com os símbolos (`<>`) - um sinal "menos do que" seguido de um sinal "maior do que".
 
-An interprocess array name can contain up to 31 characters, not including the `<>` symbols.
+O nome de uma variável interprocessada pode ter até 31 caracteres, não incluindo os símbolos `<>` .
 
 Exemplos:
 
@@ -116,7 +116,7 @@ ARRAY INTEGER(<>aiBigArray;10000)
 
 ### Arrays proceso
 
-You designate a process array by using its name (which cannot start with the `<>` symbols nor the dollar sign $). Um nome de array processo pode conter até 31 caracteres.
+Designa-se uma variável de processo utilizando o seu nome (que não pode começar com os símbolos `<>` nem com o símbolo do dólar $). Um nome de array processo pode conter até 31 caracteres.
 
 Exemplos:
 
@@ -145,42 +145,42 @@ A referência a um elemento de um array local, processo ou interprocesso se real
 Exemplos:
 
 ```4d  
- //Addressing an element of an interprocess array If(<>asKeywords{1}="Stop")
+ If(<>asKeywords{1}="Stop")
 <>atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=<>aiBigArray{Size of array(<>aiBigArray)}
 
- //Addressing an element of a process array If(asKeywords{1}="Stop")
+    //Direcionar um elemento de um array processo If(asKeywords{1}="Stop")
 atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{Size of array(aiBigArray)}
 
- //Addressing an element of a local array If($asKeywords{1}="Stop")
+    //Direcionar um elemento de um array local If($asKeywords{1}="Stop")
 $atSubjects{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{Size of array($aiBigArray)}
 ```
 
 ### Elementos de arrays de duas dimensões
 
-You reference an element of a two-dimensional array by using the curly braces ({…}) twice. duas vezes. O elemento ao que se faz referência se denota através de duas expressões numéricas em dois conjuntos de pares de chaves
+A referência a um elemento de um array local, processo ou interprocesso se realiza mediante chaves ("{ }}) duas vezes. O elemento ao que se faz referência se denota através de duas expressões numéricas em dois conjuntos de pares de chaves
 
 Exemplos:
 
 ```4d
- //Addressing an element of a two-dimensional interprocess array If(<>asKeywords{$vlNextRow}{1}="Stop")
+ //Direcionamento de um elemento de um array interprocesso de duas dimensões If(<>asKeywords{$vlNextRow}{1}="Stop")
 <>atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=<>aiBigArray{$vlSet}{Size of array(<>aiBigArray{$vlSet})}
 
- //Addressing an element of a two-dimensional process array If(asKeywords{$vlNextRow}{1}="Stop")
+    //Direcionar um elemento de uma array processo de duas dimensões If(asKeywords{$vlNextRow}{1}="Stop")
 atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=aiBigArray{$vlSet}{Size of array(aiBigArray{$vlSet})}
 
- //Addressing an element of a two-dimensional local array If($asKeywords{$vlNextRow}{1}="Stop")
+    //Direcionar um elemento de um array local de duas dimensões If($asKeywords{$vlNextRow}{1}="Stop")
 $atSubjects{10}{$vlElem}:=[Topics]Subject
 $viNextValue:=$aiBigArray{$vlSet}{Size of array($aiBigArray{$vlSet})}
 ```
 
 ## Atributos de objetos
 
-When object notation is enabled, you designate an object attribute (also called object property) by placing a point (".") between the name of the object (or attribute) and the name of the attribute. entre o nome do objeto (ou do atributo) e o nome do atributo. Um nome de atributo pode conter até 255 caracteres e diferencia entre  maiúsculas e minúsculas.
+Quando a notação objeto estiver ativada, é designado um atributo de objeto (também chamado propriedade de objeto) colocando um ponto (".")  entre o nome do objeto (ou do atributo) e o nome do atributo. Um nome de atributo pode conter até 255 caracteres e diferencia entre  maiúsculas e minúsculas.
 
 Exemplos:
 
@@ -235,32 +235,35 @@ DELETE DUPLICATED VALUES APPLY TO SELECTION([Employees];INCREASE SALARIES)
 Exemplos:
 
 ```4d
- //This command expects a method (function) or formula QUERY BY FORMULA([aTable];Special query)
- //This command expects a method (procedure) or statement APPLY TO SELECTION([Employees];INCREASE SALARIES)
- //But this command expects a method name ON EVENT CALL("HANDLE EVENTS")
+ // Este comando espera um método (função) ou fórmula
+QUERY BY FORMULA([aTable];Special query)
+ // Este comando espera um método (procedimento) ou declaração
+APPLY TO SELECTION([Employees];INCREASE SALARIES)
+ //Mas este comando espera um nome de método
+ON EVENT CALL("HANDLE EVENTS")
 ```
 
-Os métodos projeto podem aceitar parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. A method can return a single value in the $0 parameter. The parameters are available within the called method as consecutively numbered local variables: $1, $2,…, $n. In addition, multiple consecutive (and last) parameters can be addressed with the syntax ${n}where n, numeric expression, is the number of the parameter.
+Os métodos projeto podem aceitar parâmetros (argumentos). Os parâmetros se passam ao método entre parêntesis, depois do nome do método. Cada parâmetro está separado do próximo por um ponto e vírgula (;). Os parâmetros estão disponíveis dentro do método chamado como variáveis locais numeradas sequencialmente: $1, $2,..., $n. Os parametros estão disponíveis dentro do método chamado como variáveis locais numeradas consecutivamente: $1, $2,…, $n. Além disso, pode direcionar múltiplos parâmetros consecutivos com a sintaxe ${n} onde n, expressão numérica, é o número do parâmetro.
 
 Dentro de uma função, a variável local $0 contém o valor a devolver.
 
 Exemplos:
 
 ```4d
- //Within DROP SPACES $1 is a pointer to the field [People]Name DROP SPACES(->[People]Name)
+ //Dentro de DROP SPACES $1 é um ponteiro ao campo [People]Name DROP SPACES(->[People]Name)
 
- //Within Calc creator:
- //- $1 is numeric and equal to 1
- //- $2 is numeric and equal to 5
- //- $3 is text or string and equal to "Nice"
- //- The result value is assigned to $0
-$vsResult:=Calc creator(1;5;"Nice")
+    //Dentro de Calc creator:
+    //- $1 é numérico e igual a 1
+    //- $2 é numérico e igual a 5
+    //- $3 é texto ou string e igual a "Nice"
+    //- O valor do resultado se atribui a $0
+$vsResult:=Calc creator(1;5; "Nice")
 
- //Within Dump:
- //- The three parameters are text or string
- //- They can be addressed as $1, $2 or $3
- //- They can also be addressed as, for instance, ${$vlParam} where $vlParam is 1, 2 or 3
- //- The result value is assigned to $0
+    //Dentro de Dump:
+    //- os tres parâmetros são texto ou string
+    //- Se pode direcionar como $1, $2 ou $3
+    //- Também  podem ser direcionados como, por exemplo, ${$vlParam} onde $vlParam é 1, 2 ou 3
+    //- O valor resultante se atribui a $0
 vtClone:=Dump("is";"the";"it")
 ```
 
@@ -291,9 +294,9 @@ A set is an interprocess set if the name of the set is preceded by the symbols (
 
 An interprocess set name can contain up to 255 characters, not including the `<>` symbols.
 
-### Conjuntos proceso
+### Conjuntos processo
 
-You denote a process set by using a string expression that represents its name (which cannot start with the `<>` symbols or the dollar sign $). O nome de um conjunto processo pode conter até 255 caracteres.
+Para designar um conjunto processo se utilizar uma expressão de tipo string que represente seu nome (que não pode começar com os símbolos `<>`  ou o sinal de dólar $). O nome de um conjunto processo pode conter até 255 caracteres.
 
 ### Conjuntos clientes
 
@@ -304,13 +307,13 @@ O nome de um conjunto cliente deve ser precedido do sinal de dólar ($). Um nome
 Exemplos:
 
 ```4d
- //Interprocess sets USE SET("<>Deleted Records")
+ //Conjuntos interprocesso USE SET("<>Deleted Records")
 CREATE SET([Customers];"<>Customer Orders")
 If(Records in set("<>Selection"+String($i))>0)
- //Process sets USE SET("Deleted Records")
+ //Conjuntos processo USE SET("Deleted Records")
 CREATE SET([Customers];"Customer Orders")
 If(Records in set("<>Selection"+String($i))>0)
- //Client sets USE SET("$Deleted Records")
+ //conjuntos clientes USE SET("$Deleted Records")
 CREATE SET([Customers];"$Customer Orders")
 If(Records in set("$Selection"+String($i))>0)
 ```
@@ -324,19 +327,21 @@ Relativo ao escopo, há dois tipos de seleções temporárias/named:
 
 ### Seleções interprocesso temporárias
 
-A named selection is an interprocess named selection if its name is preceded by the symbols (`<>`) — a “less than” sign followed by a “greater than” sign.
+Uma seleção temporária é uma seleção interprocesso temporária se seu nome for precedido dos símbolos (`<>`) - um sinal "menor que" seguido de um sinal "maior que".
 
-An interprocess named selection name can contain up to 255 characters, not including the `<>` symbols.
+O nome de uma variável interprocessada pode ter até 255 caracteres, não incluindo os símbolos `<>` .
 
 ### Seleções processo temporárias
 
-You denote a process named selection by using a string expression that represents its name (which cannot start with the `<>` symbols nor the dollar sign $). O nome de uma seleção temporária pode conter até 255 caracteres.
+Para designar uma seleção nomeada se utiliza uma expressão de tipo string que represente seu nome (que não pode começar com os símbolos `<>`  ou o sinal de dólar $). O nome de uma seleção temporária pode conter até 255 caracteres.
 
 Exemplos:
 
 ```4d
- //Interprocess Named Selection USE NAMED SELECTION([Customers];"<>ByZipcode")
- //Process Named Selection USE NAMED SELECTION([Customers];"<>ByZipcode")
+ //Seleção nomeada interprocesso
+USE NAMED SELECTION([Customers];"<>ByZipcode")
+ //Seleção nomeada processo
+USE NAMED SELECTION([Customers];"<>ByZipcode")
 ```
 
 ## Processos
@@ -357,9 +362,9 @@ Pode determinar um processo local se o nome do processo for precedido pelo sinal
 Exemplos:
 
 ```4d
- //Starting the global process "Add Customers"
+ //Iniciar processo global "Add Customers"
 $vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
- //Starting the local process "$Follow Mouse Moves"
+ //Iniciar processo local "$Follow Mouse Moves"
 $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
 ```
 
