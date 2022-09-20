@@ -124,7 +124,7 @@ $area:=$rect.getArea()
 
 :::info
 
-The namespace of a [compiled](#protection-of-components-compilation) component will be added between parentheses after the component name in the [Component Methods page](../Concepts/components.md#using-components) of the host projects:
+[コンパイルされた](#コンポーネントの保護-コンパイル) コンポーネントの名前空間は、ホストプロジェクトの [コンポーネントメソッドページ](../Concepts/components.md#コンポーネントの使い方) にて、コンポーネント名の後に括弧で表示されます。
 
 ![](../assets/en/settings/namesapece-explorer.png)
 
