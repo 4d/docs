@@ -47,6 +47,7 @@ $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
 
+
 ## Platform-specific syntax
 
 Platform-specific syntax depends on the operating system on which the command is executed. Note that when creating a file or folder object with this syntax, you must declare it using the `fk platform path` constant as parameter.
@@ -56,7 +57,7 @@ Platform-specific syntax depends on the operating system on which the command is
 The following patterns are supported:
 
 - folder separators are "\"
-- the text contains ':' and '\' as the second and third character,
+- the text contains ":" and "\" as the second and third character,
 - the text starts with "\\".
 
 Examples with [`Folder`](../API/FolderClass.md#folder):
@@ -116,7 +117,7 @@ $okFolder:=Folder("/PACKAGE/myFolder").create() //folder created at the structur
 $okFile:=File("/DATA/Prefs/tempo.txt").create() //file created in the data folder
 ```
 
-### `.file()` and `.folder()` folder methods
+### `.file()` and `.folder()` folder functions
 
 Functions of folder objects such as [`folder.file()`](../API/FolderClass.md#file) and [`folder.folder()`](../API/FolderClass.md#folder-1) expect relative POSIX pathnames. Por exemplo:
 

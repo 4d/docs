@@ -46,7 +46,7 @@ $value:=$clientObj.data.address.city
 
 詳細は [ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) を参照ください。
 
-## パラメーター
+## 引数
 
 引数名は必ず `$` 文字で始まります。また、[変数名](#variables) と同じルールが適用されます。
 
@@ -114,11 +114,11 @@ QUERY([Clients];[Clients]Name="Smith")
 
 > 競合防止のため、[クラス](#クラス) と同じ名前のテーブルを作成するのは推奨されません。
 
-## Variables
+## 変数
 
-The name of a variable can be up to 31 characters, not including the scope symbols (`$` or `<>`).
+変数名は、スコープ記号 (`$` および `<>`) を除いて最大31文字以内で指定することができます。
 
-- A variable name must begin with a letter, an underscore, or a dollar ("$") for [parameters](parameters.md) and [local variables](variables.md#local-variables), or `<>` for [interprocess variables](variables.md#interprocess-variables).
+- 変数名の 1文字目は、文字あるいはアンダースコア(_) でなければなりません。また、[引数](parameters.md) や [ローカル変数](variables.md#ローカル変数) の場合はドル記号 ($) 、[インタープロセス変数](variables.md#インタープロセス変数) の場合はインタープロセス記号 (`<>`) を 1文字目に使用します。
 - 変数の1文字目に数字を使うことは許可されていますが、推奨されません。また、[`var` 宣言のシンタックス](variables.md#var-キーワードによる宣言) ではサポートされていません。
 - その後の文字には、文字・数字・アンダースコア(_) が使用できます。
 - 変数名にスペースを使うことは許可されていますが、推奨されません。また、[`var` 宣言のシンタックス](variables.md#var-キーワードによる宣言) ではサポートされていません。
@@ -139,7 +139,7 @@ If(bValidate=1) // プロセス変数
 
 4Dランゲージにおいては、識別子が文字列として扱われる要素も多数存在します: **フォーム**, **フォームオブジェクト**, **命名セレクション**, **プロセス**, **セット**, **メニューバー**, 等。
 
-Such string names can contain up to 255 characters, not including the `$` or `<>` characters (if any).
+このような文字列名は、(該当する場合はスコープ記号を除いて) 255文字以内で指定します。
 
 - 文字列名にはあらゆる文字を使用できます。
 - 文字列名においては、大文字・小文字は区別されません。
@@ -149,14 +149,14 @@ Such string names can contain up to 255 characters, not including the `$` or `<>
 ```4d
 DIALOG([Storage];"Note box"+String($vlStage))
 OBJECT SET FONT(*;"Binfo";"Times")
-USE NAMED SELECTION([Customers];"Closed")//Process Named Selection
-USE NAMED SELECTION([Customers];"<>ByZipcode") //Interprocess Named Selection
- //Starting the global process "Add Customers"
+USE NAMED SELECTION([Customers];"Closed")// プロセス命名セレクション
+USE NAMED SELECTION([Customers];"<>ByZipcode") // インタープロセス命名セレクション
+ // グローバルプロセス "Add Customers" の開始:
 $vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
- //Starting the local process "$Follow Mouse Moves"
+ // ローカルプロセス "$Follow Mouse Moves" の開始:
 $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
-CREATE SET([Customers];"Customer Orders")//Process set
-USE SET("<>Deleted Records") //Interprocess set
-If(Records in set("$Selection"+String($i))>0) //Client set
+CREATE SET([Customers];"Customer Orders")// プロセスセット
+USE SET("<>Deleted Records") // インタープロセスセット
+If(Records in set("$Selection"+String($i))>0) // クライアントセット
 
 ```
