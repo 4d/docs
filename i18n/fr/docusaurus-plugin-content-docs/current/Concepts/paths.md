@@ -47,6 +47,7 @@ $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
 
+
 ## Syntaxe spécifique à la plate-forme
 
 La syntaxe spécifique à la plate-forme dépend du système d'exploitation sur lequel la commande est exécutée. Notez que lorsque vous créez un objet fichier ou dossier avec cette syntaxe, vous devez le déclarer en utilisant la constante `fk platform path` comme paramètre.
@@ -56,7 +57,7 @@ La syntaxe spécifique à la plate-forme dépend du système d'exploitation sur 
 Les modèles suivants sont pris en charge :
 
 - les séparateurs de dossiers sont "\"
-- le texte contient ':' et '\' comme deuxième et troisième caractère,
+- the text contains ":" and "\" as the second and third character,
 - le texte commence par "\".
 
 Exemples avec [`Folder`](../API/FolderClass.md#folder) :
@@ -116,7 +117,7 @@ $okFolder:=Folder("/PACKAGE/myFolder").create() //dossier créé au niveau de la
 $okFile:=File("/DATA/Prefs/tempo.txt").create() //fichier créé dans le dossier data
 ```
 
-### `.file()` et `.folder()`
+### `.file()` and `.folder()` folder functions
 
 Les fonctions des objets dossier telles que [`folder.file()`](../API/FolderClass.md#file) et [`folder.folder()`](../API/FolderClass.md#folder-1) attendent des noms de chemin POSIX relatifs. Par exemple :
 
