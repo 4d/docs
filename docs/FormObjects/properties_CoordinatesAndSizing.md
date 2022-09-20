@@ -107,25 +107,27 @@ Top coordinate of the object in the form.
 
 |Version|Changes|
 |---|---|
-|v19 R7|Supported by inputs and text areas|
+|v19 R7|Support for inputs and text areas|
 
 </details>
 
-Defines the corner roundness (in pixels) of the object. By default, the radius value is 0 pixels. You can change this property to draw rounded rectangles with custom shapes:
+Defines the corner roundness (in pixels) of the object. By default, the radius value is 0 pixels. You can change this property to draw rounded objects with custom shapes:
 
 ![](../assets/en/FormObjects/shape_rectangle.png)
-![](../assets/en/FormObjects/radius-text.png)
 
+![](../assets/en/FormObjects/radius-text.png)
 
 Minimum value is 0, in this case a standard non-rounded object rectangle is drawn.
 Maximum value depends on the rectangle size (it cannot exceed half the size of the shortest rectangle side) and is calculated dynamically.
 
-The support of the property depends on the object on which it is applied:
+:::note
 
-- With [rectangles](shapes_overview.md#rectangle): the corner roundness is drawn inside the object shape.
-- With [text areas](text.md) and [inputs](input_overview.md):
-	- the corner roundness is drawn outside the area of the object (it is added to the initial area shape). 
-	- the corner roundness property is only available with "none", "solid", or "dotted" [border line styles](properties_BackgroundAndBorder.md#border-line-style).
+With [text areas](text.md) and [inputs](input_overview.md):
+
+- the corner roundness property is only available with "none", "solid", or "dotted" [border line styles](properties_BackgroundAndBorder.md#border-line-style). 
+- the corner roundness is drawn outside the area of the object (it extends the object size). 
+
+:::
 
 You can also set this property using the [OBJECT Get corner radius](https://doc.4d.com/4dv19/help/command/en/page1323.html) and [OBJECT SET CORNER RADIUS](https://doc.4d.com/4dv19/help/command/en/page1324.html) commands.
 
@@ -279,7 +281,6 @@ Sets a horizontal padding for the cells. The value is set in pixels (default = 0
 
 |Name|Data Type|Possible Values|
 |---|---|---|
-
 |horizontalPadding|number |Number of pixels (must be >=0)|
 
 #### Objects Supported
