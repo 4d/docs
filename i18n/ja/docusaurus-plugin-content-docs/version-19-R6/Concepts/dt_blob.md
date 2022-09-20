@@ -20,13 +20,13 @@ BLOB は全体がメモリにロードされます。 BLOB変数はメモリ内�
 
 |                     | Blob | 4D.Blob |
 | ------------------- |:----:|:-------:|
-| 変更可能                |  ◯   |   いいえ   |
-| オブジェクトやコレクション内で共有可能 | いいえ  |    ◯    |
-| 参照渡し\*            | いいえ  |    ◯    |
+| 変更可能                |  ◯   |    ×    |
+| オブジェクトやコレクション内で共有可能 |  ×   |    ◯    |
+| 参照渡し\*            |  ×   |    ◯    |
 | バイトにアクセスする際のパフォーマンス |  +   |    -    |
 | 最大サイズ               | 2GB  |   メモリ   |
 
-参照で渡される BLOBオブジェクトとは異なり、スカラーBLOB はメソッドに渡されるとメモリ内で複製されることに注意してください。 BLOB や BLOBオブジェクト (`4D.Blob`) は、メソッドに渡すことができます。
+参照で渡される BLOBオブジェクトとは異なり、スカラーBLOB はメソッドに渡されるとメモリ内で複製されることに注意してください。 メソッドを使用する場合は、参照によって渡される BLOBオブジェクト (`4D.Blob`) を使用する方が効率的です。
 
 > デフォルトで、4D はスカラーBLOB の最大サイズを 2GB に設定していますが、OSや空き容量によっては、この制限サイズが小さくなる場合があります。
 
@@ -34,7 +34,7 @@ BLOB に演算子を適用することはできません。
 
 ## 変数がスカラーBLOB と `4D.Blob` のどちらを格納しているかの確認
 
-値が BLOB型またはオブジェクト型であるかどうかを確認するには、[Value type](https://doc.4d.com/4Dv19/4D/19/Value-type.301-5392983.ja.html) コマンドを使用します。 特定のオブジェクトが BLOBオブジェクト (`4D.Blob`) であることを確認するには、[OB instance of](https://doc.4d.com/4Dv19/4D/19/OB-Instance-of.301-5392294.ja.html) を使用します。
+値が BLOB型またはオブジェクト型であるかどうかを確認するには、[Value type](https://doc.4d.com/4Dv19/4D/19/Value-type.301-5392983.ja.html) コマンドを使用します。 特定のオブジェクトが BLOBオブジェクト (`4D.Blob`) であることを確認するには、[OB instance of](https://doc.4d.com/4dv19R/help/command/ja/page1731.html) を使用します。
 
 ```4d
 var $myBlob: Blob
@@ -61,21 +61,21 @@ $myText:= BLOB to text( $myBlob ; UTF8 text without length )
 
 4Dコマンドの中には、元の BLOB を変更するものがあり、これらは `4D.Blob` タイプをサポートしていません:
 
-- [DELETE FROM BLOB](https://doc.4d.com/4dv19/help/command/en/page560.html)
-- [INSERT IN BLOB](https://doc.4d.com/4dv19/help/command/en/page559.html)
-- [INTEGER TO BLOB](https://doc.4d.com/4dv19/help/command/en/page548.html)
-- [LONGINT TO BLOB](https://doc.4d.com/4dv19/help/command/en/page550.html)
-- [REAL TO BLOB](https://doc.4d.com/4dv19/help/command/en/page552.html)
-- [SET BLOB SIZE](https://doc.4d.com/4dv19/help/command/en/page606.html)
-- [TEXT TO BLOB](https://doc.4d.com/4dv19/help/command/en/page554.html)
-- [VARIABLE TO BLOB](https://doc.4d.com/4dv19/help/command/en/page532.html)
-- [LIST TO BLOB](https://doc.4d.com/4dv19/help/command/en/page556.html)
-- [SOAP DECLARATION](https://doc.4d.com/4dv19/help/command/en/page782.html)
-- [WEB SERVICE SET PARAMETER](https://doc.4d.com/4dv19/help/command/en/page777.html)
+- [DELETE FROM BLOB](https://doc.4d.com/4dv19/help/command/ja/page560.html)
+- [INSERT IN BLOB](https://doc.4d.com/4dv19/help/command/ja/page559.html)
+- [INTEGER TO BLOB](https://doc.4d.com/4dv19/help/command/ja/page548.html)
+- [LONGINT TO BLOB](https://doc.4d.com/4dv19/help/command/ja/page550.html)
+- [REAL TO BLOB](https://doc.4d.com/4dv19/help/command/ja/page552.html)
+- [SET BLOB SIZE](https://doc.4d.com/4dv19/help/command/ja/page606.html)
+- [TEXT TO BLOB](https://doc.4d.com/4dv19/help/command/ja/page554.html)
+- [VARIABLE TO BLOB](https://doc.4d.com/4dv19/help/command/ja/page532.html)
+- [LIST TO BLOB](https://doc.4d.com/4dv19/help/command/ja/page556.html)
+- [SOAP DECLARATION](https://doc.4d.com/4dv19/help/command/ja/page782.html)
+- [WEB SERVICE SET PARAMETER](https://doc.4d.com/4dv19/help/command/ja/page777.html)
 
 ### BLOB および BLOBオブジェクトのメソッドへの受け渡し
 
-メソッドを使用する場合は、参照によって渡される BLOBオブジェクト (`4D.Blob`) を使用する方が効率的です。 参照で渡される BLOBオブジェクトとは異なり、スカラーBLOB はメソッドに渡されるとメモリ内で複製されることに注意してください。
+BLOB や BLOBオブジェクト (`4D.Blob`) は、メソッドに渡すことができます。 参照で渡される BLOBオブジェクトとは異なり、スカラーBLOB はメソッドに渡されるとメモリ内で複製されることに注意してください。
 
 ### ポインターを使ったスカラーBLOB の参照渡し
 
@@ -158,7 +158,7 @@ SET BLOB SIZE ($myBlob ; 16*1024)
 
 #### スカラーBLOB のバイトへのアクセス
 
-中カッコ `{...}` を使用し、BLOB の各バイトを個別にアクセスすることができます。 BLOB 内では、各バイトに 0 から N-1 の番号が割り当てられています。 N は BLOB のサイズです:
+中カッコ `{}` を使用し、BLOB の各バイトを個別にアクセスすることができます。 BLOB 内では、各バイトに 0 から N-1 の番号が割り当てられています。 N は BLOB のサイズです:
 
 ```4d
   // BLOB型変数を定義します
@@ -175,7 +175,7 @@ BLOB の各バイトはすべて個別にアドレス指定できるため、BLO
 
 #### `4D.Blob` のバイトへのアクセス
 
-大カッコ `[...]` を使用し、`4D.Blob` の各バイトを個別にアクセスすることができます。
+大カッコ `[]` を使用し、`4D.Blob` の各バイトを個別にアクセスすることができます。
 
 ```4d
 var $myBlob: 4D.Blob
