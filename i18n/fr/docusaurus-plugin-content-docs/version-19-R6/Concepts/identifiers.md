@@ -82,11 +82,11 @@ APPLY TO SELECTION([Employees];INCREASE SALARIES)
 Exemples :
 
 ```4d
- //This command expects a method (function) or formula
-QUERY BY FORMULA([aTable];Special query)
- //This command expects a method (procedure) or statement
-APPLY TO SELECTION([Employees];INCREASE SALARIES)
- //But this command expects a method name
+ // Cette commande attend une méthode (fonction) ou une formule
+ QUERY BY FORMULA([aTable];Special query)
+  // Cette commande attend une méthode (procédure) ou une formule
+ APPLY TO SELECTION([Employees];INCREASE SALARIES)
+  // Mais cette commande attend un nom de méthode
 ON EVENT CALL("HANDLE EVENTS")
 ```
 
@@ -116,9 +116,9 @@ QUERY([Clients];[Clients]Name="Smith")
 
 ## Variables
 
-The name of a variable can be up to 31 characters, not including the scope symbols (`$` or `<>`).
+Le nom d'une variable peut comporter jusqu'à 31 caractères, sans compter les symboles de portée (`$` ou `<>`).
 
-- A variable name must begin with a letter, an underscore, or a dollar ("$") for [parameters](parameters.md) and [local variables](variables.md#local-variables), or `<>` for [interprocess variables](variables.md#interprocess-variables).
+- Le nom d'une variable doit commencer par une lettre, un trait de soulignement ou un dollar ("$") pour les [paramètres](parameters.md) et [les variables locales](variables.md#local-variables), ou `<>` pour les [variables interprocess](variables.md#interprocess-variables).
 - Un chiffre en premier caractère est autorisé mais non recommandé, et n'est pas pris en charge par la [déclaration de syntaxe `var`](variables.md#utilisation-du-mot-clé-var).
 - Ensuite, le nom peut inclure des lettres, chiffres, et traits de soulignement ("_").
 - Un espace en premier caractère est autorisé mais non recommandé, et n'est pas pris en charge par la [déclaration de syntaxe `var`](variables.md#utilisation-du-mot-clé-var).
@@ -139,7 +139,7 @@ If(bValidate=1) //variable process
 
 Dans le langage de 4D, plusieurs éléments ont des noms manipulés sous forme de chaînes : **formulaires**, **objets de formulaires**, **sélections temporaires**, **process**, **ensembles**, **barres de menus**, etc.
 
-Such string names can contain up to 255 characters, not including the `$` or `<>` characters (if any).
+Ces noms peuvent contenir jusqu'à 255 caractères, sans compter les éventuels caractères `$` ou `<>`.
 
 - Les noms sous forme de chaînes peuvent contenir n'importe quel caractère.
 - Les noms sous forme de chaînes ne sont pas sensibles à la casse.
@@ -149,14 +149,14 @@ Exemples :
 ```4d
 DIALOG([Storage];"Note box"+String($vlStage))
 OBJECT SET FONT(*;"Binfo";"Times")
-USE NAMED SELECTION([Customers];"Closed")//Process Named Selection
-USE NAMED SELECTION([Customers];"<>ByZipcode") //Interprocess Named Selection
- //Starting the global process "Add Customers"
+USE NAMED SELECTION([Customers];"Closed")//Sélection temporaire process
+USE NAMED SELECTION([Customers];"<>ByZipcode") //Sélection temporaire interprocess
+    //Démarrage du process global "Add Customers"
 $vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
- //Starting the local process "$Follow Mouse Moves"
+    //Démarrage du process local "$Follow Mouse Moves"
 $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
-CREATE SET([Customers];"Customer Orders")//Process set
-USE SET("<>Deleted Records") //Interprocess set
-If(Records in set("$Selection"+String($i))>0) //Client set
+CREATE SET([Customers];"Customer Orders")//Ensemble process
+USE SET("<>Deleted Records") //Ensemble interprocess
+If(Records in set("$Selection"+String($i))>0) //Ensemble client
 
 ```

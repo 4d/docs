@@ -7,7 +7,7 @@ Les variables, champs ou expressions de type Date peuvent être compris entre 1/
 
 Bien que le mode de représentation des dates puisse fonctionner avec des dates jusqu'à l'année 32 767, certaines opérations passant par le système imposent une limite inférieure.
 
-**Note :** Dans ce manuel de référence du langage 4D, les paramètres de type Date dans les descriptions des commandes sont appelés Date, sauf spécification explicite.
+**Note :** Dans le manuel de référence du langage 4D, les paramètres de type Date dans les descriptions des commandes sont appelés Date, sauf spécification explicite.
 
 ## Constantes littérales de type date
 
@@ -21,7 +21,7 @@ Une constante littérale de type date est comprise entre deux points d'exclamati
 
 Une date nulle s’écrit _!00-00-00!_.
 
-**Tip:** The Code Editor includes a shortcut for entering a null date. Pour cela, tapez un point d’exclamation (!) et appuyez sur la touche Entrée.
+**Astuce :** L'éditeur de code comprend un raccourci pour saisir une date nulle. Pour cela, tapez un point d’exclamation (!) et appuyez sur la touche Entrée.
 
 **Notes :**
 

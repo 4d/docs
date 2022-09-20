@@ -38,7 +38,7 @@ Une méthode projet peut tenir les rôles suivants, en fonction de la manière d
 
 Une sous-routine est une méthode projet qui peut être considérée comme une méthode asservie. D’autres méthodes lui demandent d’effectuer des tâches. Une sous-routine qui retourne une valeur est appelée une fonction.
 
-Lorsque vous créez une méthode projet, elle devient partie intégrante du langage du prjoet dans lequel elle a été créée. Vous pouvez alors l'appeler à partir d'autres méthodes (méthode projet, méthode objet, etc.) de la même manière que vous appelez les commandes intégrées de 4D. Une méthode projet utilisée de cette manière est appelée une sous-routine.
+Lorsque vous créez une méthode projet, elle devient partie intégrante du langage du projet dans lequel elle a été créée. Vous pouvez alors l'appeler à partir d'autres méthodes (méthode projet, méthode objet, etc.) de la même manière que vous appelez les commandes intégrées de 4D. Une méthode projet utilisée de cette manière est appelée une sous-routine.
 
 L'utilisation de sous-routines procure les avantages suivants :
 
@@ -58,7 +58,7 @@ Imaginons par exemple que vous travaillez sur un projet de clients. A mesure que
  MODIFY RECORD([Clients])
 ```
 
-Si vous n’utilisez pas de sous-routines, vous devrez écrire ce code à chaque fois que vous voudrez modifier l’enregistrement d’un client. Si vous n’utilisez pas de sous-routines, vous devrez écrire ce code à chaque fois que vous voudrez modifier l’enregistrement d’un client. Grâce aux sous-routines, vous ne l’écrirez qu’une seule fois en tout. C’est le premier avantage des sous-routines : réduire la quantité de code à écrire.
+Si vous n’utilisez pas de sous-routines, vous devrez écrire ce code à chaque fois que vous voudrez modifier l’enregistrement d’un client. Si cette opération est réalisée dans dix endroits différents de votre projet, vous devrez la réécrire dix fois. Grâce aux sous-routines, vous ne l’écrirez qu’une seule fois en tout. C’est le premier avantage des sous-routines : réduire la quantité de code à écrire.
 
 Si le code ci-dessus était une méthode projet appelée `MODIFY_CUSTOMER`, vous l’exécuteriez simplement en inscrivant son nom dans une autre méthode. Par exemple, pour modifier l’enregistrement d’un client puis l’imprimer, vous n’auriez qu’à écrire :
 
@@ -148,7 +148,7 @@ $result:=$o.fullName()
 
 
 
-A note que même si elle n'a pas de paramètres, une méthode objet devant être exécutée doit être appelée avec des parenthèses ( ). En appelant uniquement une seule propriété, une nouvelle référence à la formule sera retournée (et ne sera pas exécutée) :
+A note que même si elle n'a pas de paramètres, une méthode objet devant être exécutée doit être appelée avec des parenthèses ( ). Appeler uniquement la propriété retournera une nouvelle référence à la formule (elle ne sera pas exécutée) :
 
 ```4d
 $o:=$f.message //retourne l'objet formule en $o
