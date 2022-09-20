@@ -1209,6 +1209,41 @@ Else
 End if
 ```
 
+
+### VP Find table
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R7|Added
+</details>
+
+<!-- REF #_method_.VP Find table.Syntax -->
+**VP Find table** ( *rangeObj* : Object ) : Text<!-- END REF -->
+
+<!-- REF #_method_.VP Find table.Params -->
+
+|Parameter|Type| |Description|
+|---|---|---|---|
+|rangeObj |Object|->|Cell range|
+|Result  |Text|<-|Table name|<!-- END REF -->
+
+#### Description
+
+The `VP Find table` command <!-- REF #_method_.VP Find table.Summary -->returns the name of the table to which to the *rangeObj* cell belongs<!-- END REF -->.
+
+In *rangeObj*, pass a cell range object. If the designated cells do not belong to a table, the command returns an empty string.
+
+If *rangeObj* is not a cell range or contains multiple ranges, the first cell of the first range is used.
+
+#### See also
+
+[VP Get table range](#vp-get-table-range)
+
+
+
+
 ### VP FLUSH COMMANDS
 
 <!-- REF #_method_.VP FLUSH COMMANDS.Syntax -->
@@ -1856,6 +1891,7 @@ Available properties depend on the type of the named element (named cell, named 
 ```4d
 var $list : Collection
 
+
 $list:=VP Get names("ViewProArea";2) //names in 3rd sheet
 ```
 
@@ -2437,7 +2473,8 @@ If *tableName* is not found, the command returns **null**.
 
 #### See also
 
-[VP RESIZE TABLE](#vp-resize-table)
+[VP RESIZE TABLE](#vp-resize-table)<br/>
+[VP Find table](#vp-find-table)
 
 
 
@@ -3959,6 +3996,7 @@ VP SET ACTIVE CELL($activeCell)
 >
 >For greater flexiblity, it is recommended to use the [`VP SET CUSTOM FUNCTIONS`](#vp-set-custom-functions) command which allows you to designate 4D formulas that can be called from 4D View Pro areas. As soon as `VP SET CUSTOM FUNCTIONS` is called, `VP SET ALLOWED METHODS` calls are ignored. 4D View Pro also supports 4D's generic `SET ALLOWED METHODS` command if neither `VP SET CUSTOM FUNCTIONS` nor `VP SET ALLOWED METHODS` are called, however using the generic command is not recommended.
 
+
 #### Description
 
 The `VP SET ALLOWED METHODS` command <!-- REF #_method_.VP SET ALLOWED METHODS.Summary -->designates the project methods that can be called in 4D View Pro formulas<!-- END REF -->. This command applies to all 4D View Pro areas initialized after its call during the session. It can be called multiple times in the same session to initialize different configurations.
@@ -4042,7 +4080,7 @@ In *rangeObj*, pass an object that is either a cell range or a combined range of
 * If *rangeObj* is a range with several cells, the command binds the attribute to the first cell of the range.
 * If *rangeObj* contains several ranges of cells, the command binds the attribute to the first cell of each range.
 
-In *dataContextAttribute*, pass the name of the attribute to bind to *cellRange*. If *dataContextAttribute* is an empty string, the function removes the current binding.
+In *dataContextAttribute*, pass the name of the attribute to bind to *rangeObj*. If *dataContextAttribute* is an empty string, the function removes the current binding.
 
 > Attributes of type collection are not supported. When you pass the name of a collection attribute, the command does nothing.
 
@@ -4389,6 +4427,7 @@ In the *formulaObj* parameter, pass an object containing the 4D formulas that ca
 
 >**WARNING**
 >
+
 >* As soon as `VP SET CUSTOM FUNCTIONS` is called, the methods allowed by the [VP SET ALLOWED METHODS](#vp-set-allowed-methods) command (if any) are ignored in the 4D View Pro area.
 >* As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
 
@@ -5380,6 +5419,57 @@ With a page break:
 #### See also
 
 [4D Get show print lines](#vp-get-show-print-lines)
+
+
+### VP SET TABLE COLUMN ATTRIBUTES
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R7|Added
+</details>
+
+<!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Syntax -->
+**VP SET TABLE COLUMN ATTRIBUTES** ( *vpAreaName* : Text ; *tableName* : Text ; *index* : Integer ; *attributes* : Object {; *sheet* : Integer } )<!-- END REF -->
+
+<!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Params -->
+
+|Parameter|Type| |Description|
+|---|---|---|---|
+|vpAreaName |Text|->|4D View Pro area form object name|
+|tableName|Text|->|Table name|
+|index|Integer|->|Index of the starting column, based on table column index|
+|attributes |Object|->|Attribute(s) to apply to the *index* column|
+|sheet   |Integer|->|Sheet index (current sheet if omitted)|
+
+#### Description
+
+The `VP SET TABLE COLUMN ATTRIBUTES` command <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Summary -->applies the defined *attributes* to the *tableName* starting at the *index* column<!-- END REF -->.
+
+In *vpAreaName*, pass the name of the 4D View Pro area.
+
+In the *onlyData* parameter, you can pass one of the following constants to indicate if you want to get the data only:
+
+|Constant|Value|Description|
+|---|---|---|
+|`vk table full range`|0|Get the cell range for the table area with footer and header (default if omitted)|
+|`vk table data range`|1|Get the cell range for the table data area only|
+
+In *sheet*, pass the index of the target sheet. If no index is specified, the command applies to the current sheet.
+
+>Indexing starts at 0.
+
+If *tableName* is not found, the command returns **null**. 
+
+#### See also
+
+[VP RESIZE TABLE](#vp-resize-table)<br/>
+[VP Find table](#vp-find-table)
+
+
+
+
 
 ### VP SET TEXT VALUE
 
