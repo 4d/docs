@@ -63,12 +63,11 @@ SET DATABASE PARAMETER(Client Log Recording;1)
 | time                                       | 'YYYY-MM-DDTHH:MM:SS.mmm' の ISO 8601フォーマットを使用した日付と時間                                                                                 |
 | systemid                                   | システムID                                                                                                                               |
 | component                                  | コンポーネント署名 (例: '4SQLS' または 'dbmg')                                                                                                    |
-| process\_info\_index                   | 4DRequestsLog_ProcessInfo.txt ログの "index"フ ィールドに対応し、リクエストとプロセスのリンクを可能にします。                                                           |
+| process\_info\_index                   | Corresponds to the "index" field in 4DRequestsLog_ProcessInfo.txt log, and permits linking a request to a process.                   |
 | request                                    | C/SでのリクエストID、あるいは SQLリクエストまたは `LOG EVENT` メッセージ用のメッセージ文字列                                                                            |
 | bytes_in                                   | 受信したバイト数                                                                                                                             |
 | bytes_out                                  | 送信したバイト数                                                                                                                             |
-| server\_duration &#124; exec\_duration | ログが生成された場所によって変わります:<li>*server\_duration* (クライアント上で生成された場合) -- サーバーがリクエストを処理し、レスポンスを返すまでにかかった時間 (マイクロ秒単位)。 以下の画像の Bから Fまでに相当します。
-あるいは</li><li>*exec\_duration* (サーバー上で生成された場合) -- サーバーがリクエストを処理するまでにかかった時間 (マイクロ秒単位)。 以下の画像の B から E までに相当します。</li>                                                               |
+| server\_duration &#124; exec\_duration | ログが生成された場所によって変わります:<li>*server\_duration* (クライアント上で生成された場合) -- サーバーがリクエストを処理し、レスポンスを返すまでにかかった時間 (マイクロ秒単位)。 以下の画像の Bから Fまでに相当します。あるいは</li><li>*exec\_duration* (サーバー上で生成された場合) -- サーバーがリクエストを処理するまでにかかった時間 (マイクロ秒単位)。 以下の画像の B から E までに相当します。</li>                                                               |
 | write\_duration                          | 次のものを送信するのにかかった時間 (μs):<li>リクエスト (クライアント上で実行された場合)。 以下の画像の Aから Bまでに相当します。</li><li>レスポンス (サーバー上で実行された場合)。 以下の画像の Eから Fまでに相当します。</li>                                                            |
 | task_kind                                  | プリエンプティブかコオペラティブか (それぞれ 'p' と 'c' で表される)                                                                                             |
 | rtt                                        | クライアントがリクエストを送信してサーバーがそれを受け取るまでにかかる時間の概算 (マイクロ秒単位)。 以下の画像の Aから Dまでと Eから Hまでに相当します。<li>ServerNet ネットワークレイヤーを使用している場合にのみ計測されます。旧式ネットワークレイヤを使用していた場合には 0 が返されます。</li><li>Windows 10、あるいは Windows Server 2016 以前のバージョンの Windows においては、これを呼び出すと 0 が返されます。</li> |
@@ -133,6 +132,7 @@ SET DATABASE PARAMETER(Client Log Recording;1) // リモートサイド
 このログの開始方法:
 
 ```4d
+
 WEB SET OPTION(Web debug log;wdl enable without body) // 他の値も使用可能
 ```
 
