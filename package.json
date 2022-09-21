@@ -5,6 +5,7 @@
     "crowdin-download": "crowdin --config ../crowdin.yaml download -b master",
     "examples": "docusaurus-examples",
     "start": "docusaurus start",
+    "start_watch": "doc_preprocess --settings_type='start_watch'",
     "syntaxViewPro": "doc_preprocess --settings_type='build_syntax_viewPro' && doc_preprocess --settings_type='build_syntax_viewPro_translated'",
     "syntax": "doc_preprocess --settings_type='build_syntax' && doc_preprocess --settings_type='build_syntax_translated'",
     "build": "doc_preprocess && doc_preprocess --settings_type='build_versioned_docs' && doc_preprocess --settings_type='build_translate' && docusaurus build",
