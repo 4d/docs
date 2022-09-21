@@ -63,7 +63,7 @@ Para cada petição, os campos abaixo estão logados:
 | time                                       | Data e hora usando formato ISO 8601: 'YYYY-MM-DDTHH:MM:SS.mmm'                                                                                                                     |
 | systemid                                   | ID de sistema                                                                                                                                                                      |
 | componente                                 | Assinatura de componente (por exemplo '4SQLS' ou 'dbmg')                                                                                                                           |
-| process\_info_                           | index Corresponds to the "index" field in 4DRequestsLog_ProcessInfo.txt log, and permits linking a request to a process.                                                           |
+| process\_info\_index                   | Corresponds to the "index" field in 4DRequestsLog_ProcessInfo.txt log, and permits linking a request to a process.                                                                 |
 | request                                    | ID de petição em C/S ou string de mensagem para petições SQL ou mensagens `LOG EVENT`                                                                                              |
 | bytes_in                                   | Número de bytes recebidos                                                                                                                                                          |
 | bytes_out                                  | Número de bytes enviados                                                                                                                                                           |
@@ -132,6 +132,7 @@ Este arquivo registra cada petição HTTP e cada resposta em modo raw (não proc
 Como iniciar esse log:
 
 ```4d
+
 WEB SET OPTION(Web debug log;wdl enable without body)  
 //outros valores estão disponíveis
 ```
