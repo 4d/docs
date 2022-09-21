@@ -90,6 +90,7 @@ Essa propriedade é**apenas leitura**.
 
 <!-- END REF -->
 
+
 ---
 
 <!-- REF directory.fullName.Desc -->
@@ -393,7 +394,7 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D. Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D Folder<!-- END REF -->
+<!-- REF #directory.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.Folder<!-- END REF -->
 
 
 <!-- REF #directory.copyTo().Params -->
