@@ -36,14 +36,15 @@ Les objets doivent être initialisés à l'aide, par exemple, de la commande `Ne
 
 Voici un exemple :
 ```4d
- C_OBJET($obVar) //création d'une variable 4D de type objet. $obVar:=Creer objet//initialisation de l'objet et assignation à la variable 4D
+ C_OBJECT($obVar) ////création d'une variable 4D de type objet
+ $obVar:=New object //initialisation de l'objet et assignation à la variable 4D
 ```
 
 ### Objet standard ou partagé
 
 Vous pouvez créer deux types d'objets :
 
-- standard (non partagés), à l'aide de la commande `Creer objet`. Ces objets peuvent être modifiés sans contrôle d'accès spécifique mais ne peuvent pas être partagés entre les process.
+- standard (non partagés), à l'aide de la commande `New object`. Ces objets peuvent être modifiés sans contrôle d'accès spécifique mais ne peuvent pas être partagés entre les process.
 - partagés, à l'aide de la commande `New shared object`. Le contenu de ces objets peut être partagé entre les process, y compris des process (thread) préemptifs. L'accès à ces objets doit être contrôlé via des structures `Use...End use`. Pour plus d'informations, veuillez vous reporter à la page [Objets partagés et collections partagées](Concepts/shared.md).
 
 
@@ -105,7 +106,7 @@ La notation objet est utilisable avec tout élément de langage qui contient ou 
      $result:=MyMethod1.a //10
 ```
 
-- **Collections** Example:
+- avec les **collections**. Exemple:
 
 ```4d
      myColl.length //taille de la collection
@@ -120,7 +121,7 @@ La notation objet pour les pointeurs est semblable à la notation objet standard
 > pointeurObjet->nomPropriété
 
 - Accès par le nom :
-> pointeurObjet-> nomPropriété"]
+> pointeurObjet->[nomPropriété"]
 
 Voici un exemple :
 
