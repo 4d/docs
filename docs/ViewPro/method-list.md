@@ -915,6 +915,7 @@ To delete rows selected by the user (in the image below rows 1, 2, and 3):
 use the following code:
 
 ```4d
+
  VP DELETE ROWS(VP Get selection("ViewProArea"))
 ```
 
@@ -2454,31 +2455,30 @@ In this case, the current sheet uses two style objects:
 |tableName|Text|->|Table name|
 |column|Integer|->|Index of the column in the table|
 |sheet   |Integer|->|Sheet index (current sheet if omitted)|
-|Result |Object|<-|Attribute(s) of the *column*|
+|Result |Object|<-|Attributes of the *column*|<!-- END REF -->
 
 
 #### Description
 
-The `VP Get table column attributes` command <!-- REF #_method_.VP Get table column attributes.Summary -->returns the current attributes of the *column* in the *tableName*<!-- END REF -->.
+The `VP Get table column attributes` command <!-- REF #_method_.VP Get table column attributes.Summary -->returns the current attributes of the specified *column* in the *tableName*<!-- END REF -->.
 
 In *vpAreaName*, pass the name of the 4D View Pro area.
-
-In the *attributes* parameter, pass an object that contains the properties to set:
-
-|Property|Type|Description|
-|---|---|---|
-|dataField|text|Table column's property name in the data context.|
-|name|text|Table column's name. Must be unique in the table. If this name already used by another column, it is not applied and a default name is automaticaly used.|
-|formula|text|Sets the formula for each column cell. See [Structured Reference Formulas in the SpreadJS documentation](https://www.grapecity.com/spreadjs/docs/features/tablegen/structref)|
-|footerText|text|Column footer value.|
-|footerFormula|text|Column footer formula.|
-|filterButtonVisible|boolean|Sets whether the table column's filter button is displayed (default is `True` when the table is created). |
 
 In *sheet*, pass the index of the target sheet. If no index is specified or if you pass -1, the command applies to the current sheet.
 
 >Indexing starts at 0.
 
-If *tableName* is not found or if *column* is higher than the number of columns, the command returns **null**. 
+The command returns an object describing the current attributes of the *column*:
+
+|Property|Type|Description|
+|---|---|---|
+|dataField|text|Table column's property name in the data context. Not returned if the table is displayed automatically |
+|name|text|Table column's name.|
+|footerText|text|Column footer value.|
+|footerFormula|text|Column footer formula.|
+|filterButtonVisible|boolean|True if the table column's filter button is displayed, False otherwise. |
+
+If *tableName* is not found or if *column* index is higher than the number of columns, the command returns **null**. 
 
 #### Example
 
@@ -2489,6 +2489,47 @@ See example for the [VP CREATE TABLE](#vp-create-table) command.
 [VP CREATE TABLE](#vp-create-table)<br/>[VP Find table](#vp-find-table)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)<br/>[VP RESIZE TABLE](#vp-resize-table)
 
 
+### VP Get table column index
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R7|Added
+</details>
+
+<!-- REF #_method_.VP Get table column index.Syntax -->
+**VP Get table column index** ( *vpAreaName* : Text ; *tableName* : Text ; *columnName* : Text {; *sheet* : Integer } ) : Integer<!-- END REF -->
+
+<!-- REF #_method_.VP Get table column index.Params -->
+
+|Parameter|Type| |Description|
+|---|---|---|---|
+|vpAreaName |Text|->|4D View Pro area form object name|
+|tableName|Text|->|Table name|
+|columnName|Text|->|Name of the table column|
+|sheet   |Integer|->|Sheet index (current sheet if omitted)|
+|Result |Integer|<-|Index of *columnName*|<!-- END REF -->
+
+
+#### Description
+
+The `VP Get table column index` command <!-- REF #_method_.VP Get table column index.Summary -->returns the index of the *columnName* in the *tableName*<!-- END REF -->.
+
+In *vpAreaName*, pass the name of the 4D View Pro area.
+
+In *columnName*, pass the name of the table column for which you want to get the index. 
+
+In *sheet*, pass the index of the target sheet. If no index is specified or if you pass -1, the command applies to the current sheet.
+
+>Indexing starts at 0.
+
+If *tableName* or *columnName* is not found, the command returns -1. 
+
+
+#### See also
+
+[VP CREATE TABLE](#vp-create-table)<br/>[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)
 
 
 ### VP Get table range
@@ -4277,6 +4318,7 @@ VP SET CELL STYLE(VP Cells("ViewProArea";4;4;3;3);$cellStyle)
 ### VP SET CELL STYLE
 
 <!-- REF #_method_.VP SET CELL STYLE.Syntax -->
+
 **VP SET CELL STYLE** ( *rangeObj* : Object  ; *styleObj*  : Object) <!-- END REF -->
 
 <!-- REF #_method_.VP SET CELL STYLE.Params -->
@@ -5502,7 +5544,7 @@ With a page break:
 |tableName|Text|->|Table name|
 |column|Integer|->|Index of the column in the table|
 |attributes |Object|->|Attribute(s) to apply to the *column*|
-|sheet   |Integer|->|Sheet index (current sheet if omitted)|
+|sheet   |Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
 
 #### Description
 
