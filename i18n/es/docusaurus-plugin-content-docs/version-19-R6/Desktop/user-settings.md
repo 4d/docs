@@ -77,49 +77,49 @@ When you edit settings in this dialog box, they are automatically stored in the 
 
 ## `SET PARAMETER DE LA BASE DE DATOS` y propiedades usuario
 
-Some of the user settings are also available through the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html) command. User settings are parameters with the **Kept between two sessions** property set to **Yes**.
+Some of the user settings are also available through the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html) command. Las propiedades usuario son parámetros con la propiedad **Conservado entre dos sesiones** establecida en **Sí**.
 
-When the **User Settings** feature is enabled, user settings edited by the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html) command are automatically saved in the user settings for the data file.
+Cuando la funcionalidad **Propiedades usuario** está activada, las propiedades usuario editadas por el comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html) se guardan automáticamente en las Propiedades usuario para el archivo de datos.
 
-> `Table sequence number` is an exception; this setting value is always saved in the data file itself.
+> `Table sequence number` es una excepción; este valor de ajuste siempre se guarda en el propio archivo de datos.
 
 ## Archivos settings.4DSettings
 
-When you [check the **Enable User Settings** option](#enabling-user-settings), user settings files are automatically created. Su ubicación depende del tipo de propiedad usuario definida.
+Cuando [marca la opción **Autorizar las propiedades usuario**](#enabling-user-settings), los archivos de propiedades usuario se crean automáticamente. Su ubicación depende del tipo de propiedad usuario definida.
 
 ### Parámetros usuario (estándar)
 
-The standard user settings file is automatically created and placed in a settings folder at the following location:
+El archivo de propiedad usuario estándar se crea automáticamente y se coloca en una carpeta de propiedades en la siguiente ubicación:
 
 [`ProjectFolder/Settings/settings.4DSettings`](../Project/architecture.md#settings-1)
 
-... where *ProjectFolder* is the name of the folder containing the project structure file.
+... donde *ProjectFolder* es el nombre de la carpeta que contiene el archivo de estructura del proyecto.
 
-In merged applications, the user settings file is placed at the following location:
+En las aplicaciones fusionadas, el archivo de propiedades usuario se coloca en la siguiente ubicación:
 
-* In single-user versions: ProjectFolder/Database/Settings/settings.4DSettings
-* In client/server versions: ProjectFolder/Server Database/Settings/settings.4DSettings
+* En las versiones mono-usuario: ProjectFolder/Database/Settings/settings.4DSettings
+* En las versiones cliente/servidor: ProjectFolder/Server Database/Settings/settings.4DSettings
 
 ### Propiedades usuario para archivo de datos
 
-The user settings file linked to the data file is automatically created and placed in a settings folder at the following location:
+El archivo de propiedades usuario vinculado al archivo de datos automáticamente se crea y se coloca en una carpeta de propiedades en la siguiente ubicación:
 
 [`Data/Settings/settings.4DSettings`](../Project/architecture.md#settings)
 
-... where *Data* is the name of the folder containing the current data file of the application.
+... donde *Data* es el nombre de la carpeta que contiene el archivo de datos actual de la aplicación.
 
-> When the data file is located at the same level as the project structure file, structure-based and data-based user settings files share the same location and file. The **User Settings for Data File...** menu command is not proposed.
+> Cuando el archivo de datos se encuentra en el mismo nivel que el archivo de estructura del proyecto, los archivos de propiedades usuario basados en la estructura y en los datos comparten la misma ubicación y el mismo archivo. El comando de menú **Propiedades usuario para el archivo de datos...** no se propone.
 
-Settings files are XML files; they can be read and modified using integrated 4D XML commands or using an XML editor. This means that you can manage settings by programming, particularly in the context of applications compiled and merged with 4D Volume Desktop. When you modify this file by programming, the changes are only taken into account the next time the database is opened.
+Los archivos de propiedades son archivos XML; pueden ser leídos y modificados utilizando los comandos XML integrados de 4D o un editor XML. Esto significa que puede gestionar los parámetros por programación, especialmente en el contexto de las aplicaciones compiladas y fusionadas con 4D Volume Desktop. Cuando se modifica este archivo por programación, los cambios sólo se tienen en cuenta la siguiente vez que se abre la base de datos.
 
 ## Prioridad de los parámetros
 
-Las propiedades pueden almacenarse en tres niveles. Each setting defined at one level overrides the same setting defined at a previous level, if any:
+Las propiedades pueden almacenarse en tres niveles. Cada parámetro definido en un nivel anula el mismo ajuste definido en un nivel anterior, si lo hay:
 
-| **Nivel de prioridad** | **Nombre**                                                                                        | **Ubicación**                                                                                                                                                 | **Comentarios**                                                                                                                                           |
-| ---------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 3 (el más bajo)        | Parámetros de estructura (o Parámetros cuando la función "Parámetros usuario" no está habilitada) | ***settings.4DSettings*** file in the Sources folder (project databases) or in the Settings folder as the same level as the structure file (binary databases) | Ubicación única cuando los parámetros usuario no están activos. Se aplica a todas las copias de la aplicación.                                            |
-| 2                      | Propiedades usuario (todos los archivos de datos)                                                 | ***settings.4DSettings*** file in the Settings folder at the same level as the Project folder                                                                 | Reemplaza las propiedades de estructura. Se almacena en el paquete de la aplicación.                                                                      |
-| 1 (el mayor)           | Propiedades usuario (archivo de datos actual)                                                     | ***settings.4DSettings*** file in the Settings folder at the same level as the data file                                                                      | Reemplaza las propiedades de estructura y las propiedades usuario. Se aplica únicamente cuando el archivo de datos asociado se utiliza con la aplicación. |
+| **Nivel de prioridad** | **Nombre**                                                                                        | **Ubicación**                                                                                                                                          | **Comentarios**                                                                                                                                           |
+| ---------------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 3 (el más bajo)        | Parámetros de estructura (o Parámetros cuando la función "Parámetros usuario" no está habilitada) | ***settings.4DSettings*** en la carpeta Sources (bases proyecto) o en la carpeta Settings al mismo nivel que el archivo de estructura (bases binarias) | Ubicación única cuando los parámetros usuario no están activos. Se aplica a todas las copias de la aplicación.                                            |
+| 2                      | Propiedades usuario (todos los archivos de datos)                                                 | Archivo ***settings.4DSettings*** en la carpeta Settings en el mismo nivel que la carpeta Project                                                      | Reemplaza las propiedades de estructura. Se almacena en el paquete de la aplicación.                                                                      |
+| 1 (el mayor)           | Propiedades usuario (archivo de datos actual)                                                     | Archivo ***settings.4DSettings*** en la carpeta Settings al mismo nivel que el archivo de datos                                                        | Reemplaza las propiedades de estructura y las propiedades usuario. Se aplica únicamente cuando el archivo de datos asociado se utiliza con la aplicación. |
 
-Keep in mind that user settings files only contain a subset of relevant settings, while the structure file contains all custom settings, including core settings.
+Tenga en cuenta que los archivos de propiedades usuario sólo contienen un subconjunto de parámetros relevantes, mientras que el archivo de estructura contiene todos los parámetros personalizados, incluidos los parámetros de bajo nivel.
