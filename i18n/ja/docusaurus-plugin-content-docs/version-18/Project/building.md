@@ -163,7 +163,7 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 * 特定の言語バージョンに対応する 4D Volume Desktop をインストールする
 * カスタムプラグインを *Plugins* フォルダーに置く
 * *Resources* フォルダーの内容をカスタマイズする
-> macOSでは、4D Volume Desktop はソフトウェアパッケージ形式で提供されています。 内容を変更するにはパッケージを開きます (アイコンを **Control+クリック**)。
+> macOS では、4D Volume Desktop はソフトウェアパッケージ形式で提供されています。 内容を変更するにはパッケージを開きます (アイコンを **Control+クリック**)。
 
 #### Webファイルの場所
 
@@ -287,7 +287,7 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 * *Windows* - 各フォルダーに`\<ApplicationName>Client.exe` (クライアント用) あるいは `\<ApplicationName>Server.exe` (サーバー用) という名前の実行ファイル、およびそれぞれに対応する.rsrファイルが作成されます。 これらのフォルダーには、アプリケーション実行のために必要な様々なファイルやフォルダー、および元の 4D Server や 4D Volume Desktop に追加されたカスタマイズ項目も格納されます。
 * *macOS* - 各フォルダーは `\<ApplicationName>Client.app` (クライアント用) と `\<ApplicationName>Server.app` (サーバー用) という名前のアプリケーションパッケージになっています。 各パッケージには動作に必要なすべてのファイルが含まれます。 macOS では、アプリケーションを実行するためにパッケージをダブルクリックします。
 
- > ビルドされた macOSパッケージには、Windows版のサブフォルダーと同じものが格納されています。 In order to modify it, you must first display its contents (**Control+click** on the icon).
+ > ビルドされた macOSパッケージには、Windows版のサブフォルダーと同じものが格納されています。 ビルドされた macOS パッケージの内容を表示するにはアイコンを **Control+クリック** して、"パッケージの内容を表示" を選択します。
 
 "クライアントの自動更新を有効にする" オプションを選択している場合、`\<ApplicationName>Server` フォルダー/パッケージには追加で *Upgrade4DClient* サブフォルダーが作成されます。 このサブフォルダーには macOS/Windows 版のクライアントアプリケーションが圧縮されて格納されます。 クライアントアプリケーションを自動更新するときに、このファイルは使用されます。
 
