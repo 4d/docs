@@ -2994,7 +2994,7 @@ If *tableName* does not exist or if there is not enough space in the sheet, noth
 
 #### Example
 
-See example for [VP INSERT TABLE ROWS](#vp-insert-table-rows).
+See examples for [VP INSERT TABLE ROWS](#vp-insert-table-rows) and [VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes).
 
 
 #### See also
