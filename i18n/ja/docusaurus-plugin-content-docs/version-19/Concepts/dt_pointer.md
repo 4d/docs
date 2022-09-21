@@ -1,6 +1,6 @@
 ---
 id: pointer
-title: Pointer
+title: ポインター
 ---
 
 ポインターの変数や式は、別の変数 (配列、配列要素を含む) 、テーブル、またはフィールドへの参照です。 ポインタータイプのフィールドは、存在しません。
@@ -77,12 +77,12 @@ $MyVar:="Goodbye"
  vPtrC:=->anotherObject
 ```
 
-| 処理  | シンタックス        | 戻り値     | 式             | 値     |
-| --- | ------------- | ------- | ------------- | ----- |
-| 等しい | ポインター = ポインター | Boolean | vPtrA = vPtrB | true  |
-|     |               |         | vPtrA = vPtrC | False |
-| 異なる | ポインター # ポインター | Boolean | vPtrA # vPtrC | true  |
-|     |               |         | vPtrA # vPtrB | False |
+| 演算  | シンタックス            | 戻り値     | 式             | 値     |
+| --- | ----------------- | ------- | ------------- | ----- |
+| 等しい | Pointer = Pointer | Boolean | vPtrA = vPtrB | true  |
+|     |                   |         | vPtrA = vPtrC | false |
+| 異なる | Pointer # Pointer | Boolean | vPtrA # vPtrC | true  |
+|     |                   |         | vPtrA # vPtrB | false |
 
 ## ポインターの使用例
 ### テーブルへのポインター
