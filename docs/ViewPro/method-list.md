@@ -750,8 +750,6 @@ The `VP CREATE TABLE` command <!-- REF #_method_.VP CREATE TABLE.Summary -->crea
 
 ![](../assets/en/ViewPro/vp-create-table.png)
 
-When a table has been created with this command, you typically modify its contents using the [VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes) command. 
-
 In *rangeObj*, pass the cell range where the table will be created.
 
 In *tableName*, pass a name for the table. The name must:  
@@ -842,7 +840,9 @@ Here's the result:
 
 #### See also
 
-[VP REMOVE TABLE](#vp-remove-table)<br/>[VP SET DATA CONTEXT](#vp-set-data-context)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)
+[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP Get table column index](#vp-get-table-column-index)<br/>[VP Find table](#vp-find-table)<br/>[VP REMOVE TABLE](#vp-remove-table)<br/>[VP RESIZE TABLE](#vp-resize-table)
+<br/>[VP SET DATA CONTEXT](#vp-set-data-context)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)
+
 
 ## D
 
@@ -2480,9 +2480,6 @@ The command returns an object describing the current attributes of the *column*:
 
 If *tableName* is not found or if *column* index is higher than the number of columns, the command returns **null**. 
 
-#### Example
-
-See example for the [VP CREATE TABLE](#vp-create-table) command.
 
 #### See also
 
@@ -2529,7 +2526,7 @@ If *tableName* or *columnName* is not found, the command returns -1.
 
 #### See also
 
-[VP CREATE TABLE](#vp-create-table)<br/>[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)
+[VP CREATE TABLE](#vp-create-table)<br/>[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)
 
 
 ### VP Get table range
@@ -2982,6 +2979,8 @@ The results is:
 
 The `VP INSERT TABLE COLUMNS` command <!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->inserts one or *count* empty column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->. 
 
+When a column has been inserted with this command, you typically modify its contents using the [VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes) command. 
+
 In the *insertAfter* parameter, you can pass one of the following constants to indicate if the column(s) must be inserted before or after the *column* index:
 
 |Constant|Value|Description|
@@ -2996,37 +2995,12 @@ If *tableName* does not exist or if there is not enough space in the sheet, noth
 
 #### Example
 
-You create a table with a data context: 
-
-```4d
-var $context : Object
-$context:=New object()
-
-$context.col:=New collection
-$context.col.push(New object("name"; "Smith"; "salary"; 10000))
-$context.col.push(New object("name"; "Wesson"; "salary"; 50000))
-$context.col.push(New object("name"; "Gross"; "salary"; 10500))
-
-VP SET DATA CONTEXT("ViewProArea"; $context)
-
-VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 3; 3); "PeopleTable"; "col")
-```
-
-![](../assets/en/ViewPro/table-base.png)
-
-You want to insert two rows and two columns in the table, you can write:
-
-```4d
-VP INSERT TABLE ROWS("ViewProArea"; "PeopleTable"; 1; 2)
-VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
-```
-
-![](../assets/en/ViewPro/table-insert.png)
+See example for [VP INSERT TABLE ROWS](#vp-insert-table-rows).
 
 
 #### See also
 
-[VP INSERT TABLE ROWS](#vp-insert-table-rows)<br/>[VP REMOVE TABLE COLUMNS](#vp-remove-table-columns)
+[VP INSERT TABLE ROWS](#vp-insert-table-rows)<br/>[VP REMOVE TABLE COLUMNS](#vp-remove-table-columns)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)
 
 
 
@@ -3073,7 +3047,33 @@ If *tableName* does not exist or if there is not enough space in the sheet, noth
 
 #### Example
 
-See example for the [VP INSERT TABLE COLUMNS](#vp-insert-table-columns) command.
+You create a table with a data context: 
+
+```4d
+var $context : Object
+$context:=New object()
+
+$context.col:=New collection
+$context.col.push(New object("name"; "Smith"; "salary"; 10000))
+$context.col.push(New object("name"; "Wesson"; "salary"; 50000))
+$context.col.push(New object("name"; "Gross"; "salary"; 10500))
+
+VP SET DATA CONTEXT("ViewProArea"; $context)
+
+VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 3; 3); "PeopleTable"; "col")
+```
+
+![](../assets/en/ViewPro/table-base.png)
+
+You want to insert two rows and two columns in the table, you can write:
+
+```4d
+VP INSERT TABLE ROWS("ViewProArea"; "PeopleTable"; 1; 2)
+VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
+```
+
+![](../assets/en/ViewPro/table-insert.png)
+
 
 #### See also
 
@@ -5571,7 +5571,55 @@ If *tableName* is not found or if *column* is higher than the number of columns,
 
 #### Example
 
-See example for the [VP CREATE TABLE](#vp-create-table) command.
+#### Example
+
+You create a table with a data context: 
+
+```4d
+var $context;$parameter : Object
+$context:=New object()
+$context.col:=New collection()
+$context.col.push(New object("name"; "Smith"; "firstname"; "John"; "salary"; 10000))
+$context.col.push(New object("name"; "Wesson"; "firstname"; "Jim"; "salary"; 50000))
+$context.col.push(New object("name"; "Gross"; "firstname"; "Maria"; "salary"; 10500))
+VP SET DATA CONTEXT("ViewProArea"; $context)
+
+	//you configure the table
+$parameter:=New object()
+$parameter.tableColumns:=New collection()
+$parameter.tableColumns.push(New object("name"; "Last Name"; "dataField"; "name"))
+$parameter.tableColumns.push(New object("name"; "Salary"; "dataField"; "salary"))
+
+VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 2; 3); "PeopleTable"; "col"; $parameter)
+```
+
+![](../assets/en/ViewPro/table-insert1.png)
+
+Then you want to insert a column with data from the data context and hide some filter buttons:
+
+```4d
+	//insert a column
+VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 1)
+
+var $param : Object
+$param:=New object()
+	// Bind the column to the firstname field from the datacontext
+$param.dataField:="firstname"
+	// Change the default name of the column to "First name"
+	// and hide the filter button
+$param.name:="First name"
+$param.filterButtonVisible:=False
+
+VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 1; $param)
+
+	// Hide the filter button of the first column
+VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
+	New object("filterButtonVisible"; False))
+
+```
+
+![](../assets/en/ViewPro/table-insert2.png)
+
 
 #### See also
 
