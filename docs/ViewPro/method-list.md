@@ -840,8 +840,7 @@ Here's the result:
 
 #### See also
 
-[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP Get table column index](#vp-get-table-column-index)<br/>[VP Find table](#vp-find-table)<br/>[VP REMOVE TABLE](#vp-remove-table)<br/>[VP RESIZE TABLE](#vp-resize-table)
-<br/>[VP SET DATA CONTEXT](#vp-set-data-context)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)
+[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP Get table column index](#vp-get-table-column-index)<br/>[VP INSERT TABLE COLUMNS](#vp-insert-table-columns)<br/>[VP INSERT TABLE ROWS](#vp-insert-table-rows)<br/>[VP REMOVE TABLE](#vp-remove-table)<br/>[VP RESIZE TABLE](#vp-resize-table)<br/>[VP SET DATA CONTEXT](#vp-set-data-context)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)
 
 
 ## D
@@ -5569,14 +5568,14 @@ In *sheet*, pass the index of the target sheet. If no index is specified or if y
 
 If *tableName* is not found or if *column* is higher than the number of columns, the command does nothing. 
 
-#### Example
 
 #### Example
 
 You create a table with a data context: 
 
 ```4d
-var $context;$parameter : Object
+var $context;$options : Object
+
 $context:=New object()
 $context.col:=New collection()
 $context.col.push(New object("name"; "Smith"; "firstname"; "John"; "salary"; 10000))
@@ -5584,13 +5583,13 @@ $context.col.push(New object("name"; "Wesson"; "firstname"; "Jim"; "salary"; 500
 $context.col.push(New object("name"; "Gross"; "firstname"; "Maria"; "salary"; 10500))
 VP SET DATA CONTEXT("ViewProArea"; $context)
 
-	//you configure the table
-$parameter:=New object()
-$parameter.tableColumns:=New collection()
-$parameter.tableColumns.push(New object("name"; "Last Name"; "dataField"; "name"))
-$parameter.tableColumns.push(New object("name"; "Salary"; "dataField"; "salary"))
+	//Define the columns for the table
+$options:=New object()
+$options.tableColumns:=New collection()
+$options.tableColumns.push(New object("name"; "Last Name"; "dataField"; "name"))
+$options.tableColumns.push(New object("name"; "Salary"; "dataField"; "salary"))
 
-VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 2; 3); "PeopleTable"; "col"; $parameter)
+VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 2; 3); "PeopleTable"; "col"; $options)
 ```
 
 ![](../assets/en/ViewPro/table-insert1.png)
@@ -5607,7 +5606,7 @@ $param:=New object()
 $param.dataField:="firstname"
 	// Change the default name of the column to "First name"
 	// and hide the filter button
-$param.name:="First name"
+$param.name:="First Name"
 $param.filterButtonVisible:=False
 
 VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 1; $param)
