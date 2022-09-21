@@ -14,15 +14,15 @@ title: On Long Click
 
 このイベントは、次のボタンスタイルで生成することができます:
 
-- [ツールバー](FormObjects/button_overview.md#toolbar)
-- [ベベル](FormObjects/button_overview.md#bevel)
-- [角の丸いベベル](FormObjects/button_overview.md#rounded-bevel)
-- [OS Xグラデーション](FormObjects/button_overview.md#os-x-gradient)
-- [OS Xテクスチャー](FormObjects/button_overview.md#os-x-textured)
+- [ツールバー](FormObjects/button_overview.md#ツールバー)
+- [ベベル](FormObjects/button_overview.md#ベベル)
+- [角の丸いベベル](FormObjects/button_overview.md#角の丸いベベル)
+- [OS Xグラデーション](FormObjects/button_overview.md#os-xグラデーション)
+- [OS Xテクスチャー](FormObjects/button_overview.md#os-xテクスチャー)
 - [Office XP](FormObjects/button_overview.md#office-xp)
-- [ヘルプ](FormObjects/button_overview.md#help)
-- [サークル](FormObjects/button_overview.md#circle)
-- [カスタム](FormObjects/button_overview.md#custom)
+- [ヘルプ](FormObjects/button_overview.md#ヘルプ)
+- [サークル](FormObjects/button_overview.md#サークル)
+- [カスタム](FormObjects/button_overview.md#カスタム)
 
 このイベントは一般的に、ロングクリック時にポップアップメニューを表示するために使用します。 ユーザーがロングクリックが有効になる時間前にマウスボタンを離すと、[`On Clicked`](onClicked.md) イベントが (有効であれば) 生成されます。
 
