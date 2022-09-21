@@ -90,6 +90,7 @@ Essa propriedade é**apenas leitura**.
 
 ---
 
+
 <!-- REF directory.fullName.Desc -->
 ## .fullName
 
@@ -189,6 +190,7 @@ Essa propriedade é**apenas leitura**.
 </details>
 
 <!-- REF #directory.isFolder.Syntax -->**.isFolder** : Boolean<!-- END REF -->
+
 
 #### Descrição
 
@@ -391,7 +393,7 @@ Essa propriedade é**apenas leitura**.
 | v17 R5 | Adicionado |
 </details>
 
-<!-- REF #directory.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D. Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D Folder<!-- END REF -->
+<!-- REF #directory.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.Folder<!-- END REF -->
 
 
 <!-- REF #directory.copyTo().Params -->
@@ -593,6 +595,7 @@ Um objeto `Folder` ou null se *path* não for válido.
 | ------ | ---------- |
 | v17 R5 | Adicionado |
 </details>
+
 
 <!-- REF #directory.folders().Syntax -->**.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 
