@@ -750,6 +750,8 @@ The `VP CREATE TABLE` command <!-- REF #_method_.VP CREATE TABLE.Summary -->crea
 
 ![](../assets/en/ViewPro/vp-create-table.png)
 
+When a table has been created with this command, you typically modify its contents using the [VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes) command. 
+
 In *rangeObj*, pass the cell range where the table will be created.
 
 In *tableName*, pass a name for the table. The name must:  
@@ -840,7 +842,7 @@ Here's the result:
 
 #### See also
 
-[VP REMOVE TABLE](#vp-remove-table)<br/>[VP SET DATA CONTEXT](#vp-set-data-context)
+[VP REMOVE TABLE](#vp-remove-table)<br/>[VP SET DATA CONTEXT](#vp-set-data-context)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)
 
 ## D
 
@@ -1281,6 +1283,7 @@ You want to trace the execution of the commands and empty the command buffer:
 <!-- REF #_method_.VP Font to object.Syntax -->
 **VP Font to object** (  *font* : Text ) : Object<!-- END REF -->
 
+
 <!-- REF #_method_.VP Font to object.Params -->
 
 |Parameter|Type| |Description|
@@ -1393,6 +1396,7 @@ In *rangeObj*, pass an object that is either a cell range or a combined range of
 * If *rangeObj* contains several ranges of cells, the command returns the attribute name linked to the first cell of the first range.
 
 #### Example
+
 
 ```4d
 var $p; $options : Object
@@ -2428,6 +2432,63 @@ In this case, the current sheet uses two style objects:
 #### See also
 
 [VP ADD STYLESHEET](#vp-add-stylesheet)<br/>[VP Get stylesheet](#vp-get-stylesheet)<br/>[VP REMOVE STYLESHEET](#vp-remove-stylesheet)
+
+
+### VP Get table column attributes
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R7|Added
+</details>
+
+<!-- REF #_method_.VP Get table column attributes.Syntax -->
+**VP Get table column attributes** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer {; *sheet* : Integer } ) : Object<!-- END REF -->
+
+<!-- REF #_method_.VP Get table column attributes.Params -->
+
+|Parameter|Type| |Description|
+|---|---|---|---|
+|vpAreaName |Text|->|4D View Pro area form object name|
+|tableName|Text|->|Table name|
+|column|Integer|->|Index of the column in the table|
+|sheet   |Integer|->|Sheet index (current sheet if omitted)|
+|Result |Object|<-|Attribute(s) of the *column*|
+
+
+#### Description
+
+The `VP Get table column attributes` command <!-- REF #_method_.VP Get table column attributes.Summary -->returns the current attributes of the *column* in the *tableName*<!-- END REF -->.
+
+In *vpAreaName*, pass the name of the 4D View Pro area.
+
+In the *attributes* parameter, pass an object that contains the properties to set:
+
+|Property|Type|Description|
+|---|---|---|
+|dataField|text|Table column's property name in the data context.|
+|name|text|Table column's name. Must be unique in the table. If this name already used by another column, it is not applied and a default name is automaticaly used.|
+|formula|text|Sets the formula for each column cell. See [Structured Reference Formulas in the SpreadJS documentation](https://www.grapecity.com/spreadjs/docs/features/tablegen/structref)|
+|footerText|text|Column footer value.|
+|footerFormula|text|Column footer formula.|
+|filterButtonVisible|boolean|Sets whether the table column's filter button is displayed (default is `True` when the table is created). |
+
+In *sheet*, pass the index of the target sheet. If no index is specified or if you pass -1, the command applies to the current sheet.
+
+>Indexing starts at 0.
+
+If *tableName* is not found or if *column* is higher than the number of columns, the command returns **null**. 
+
+#### Example
+
+See example for the [VP CREATE TABLE](#vp-create-table) command.
+
+#### See also
+
+[VP CREATE TABLE](#vp-create-table)<br/>[VP Find table](#vp-find-table)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)<br/>[VP RESIZE TABLE](#vp-resize-table)
+
+
 
 
 ### VP Get table range
@@ -5431,7 +5492,7 @@ With a page break:
 </details>
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Syntax -->
-**VP SET TABLE COLUMN ATTRIBUTES** ( *vpAreaName* : Text ; *tableName* : Text ; *index* : Integer ; *attributes* : Object {; *sheet* : Integer } )<!-- END REF -->
+**VP SET TABLE COLUMN ATTRIBUTES** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer ; *attributes* : Object {; *sheet* : Integer } )<!-- END REF -->
 
 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Params -->
 
@@ -5439,33 +5500,40 @@ With a page break:
 |---|---|---|---|
 |vpAreaName |Text|->|4D View Pro area form object name|
 |tableName|Text|->|Table name|
-|index|Integer|->|Index of the starting column, based on table column index|
-|attributes |Object|->|Attribute(s) to apply to the *index* column|
+|column|Integer|->|Index of the column in the table|
+|attributes |Object|->|Attribute(s) to apply to the *column*|
 |sheet   |Integer|->|Sheet index (current sheet if omitted)|
 
 #### Description
 
-The `VP SET TABLE COLUMN ATTRIBUTES` command <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Summary -->applies the defined *attributes* to the *tableName* starting at the *index* column<!-- END REF -->.
+The `VP SET TABLE COLUMN ATTRIBUTES` command <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Summary -->applies the defined *attributes* to the *column* in the *tableName*<!-- END REF -->.
 
 In *vpAreaName*, pass the name of the 4D View Pro area.
 
-In the *onlyData* parameter, you can pass one of the following constants to indicate if you want to get the data only:
+In the *attributes* parameter, pass an object that contains the properties to set:
 
-|Constant|Value|Description|
+|Property|Type|Description|
 |---|---|---|
-|`vk table full range`|0|Get the cell range for the table area with footer and header (default if omitted)|
-|`vk table data range`|1|Get the cell range for the table data area only|
+|dataField|text|Table column's property name in the data context.|
+|name|text|Table column's name. Must be unique in the table. If this name already used by another column, it is not applied and a default name is automaticaly used.|
+|formula|text|Sets the formula for each column cell. See [Structured Reference Formulas in the SpreadJS documentation](https://www.grapecity.com/spreadjs/docs/features/tablegen/structref)|
+|footerText|text|Column footer value.|
+|footerFormula|text|Column footer formula.|
+|filterButtonVisible|boolean|Sets whether the table column's filter button is displayed (default is `True` when the table is created). |
 
-In *sheet*, pass the index of the target sheet. If no index is specified, the command applies to the current sheet.
+In *sheet*, pass the index of the target sheet. If no index is specified or if you pass -1, the command applies to the current sheet.
 
 >Indexing starts at 0.
 
-If *tableName* is not found, the command returns **null**. 
+If *tableName* is not found or if *column* is higher than the number of columns, the command does nothing. 
+
+#### Example
+
+See example for the [VP CREATE TABLE](#vp-create-table) command.
 
 #### See also
 
-[VP RESIZE TABLE](#vp-resize-table)<br/>
-[VP Find table](#vp-find-table)
+[VP CREATE TABLE](#vp-create-table)<br/>[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP RESIZE TABLE](#vp-resize-table)
 
 
 
