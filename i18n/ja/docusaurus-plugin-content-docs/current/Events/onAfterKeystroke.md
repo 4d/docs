@@ -9,9 +9,9 @@ title: On After Keystroke
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                                                                      |
-| ------ | --------------------------------------------------------------------------------------- |
-| v18 R5 | - Support in non-enterable list boxes - The event is now triggered after IME validation |
+| バージョン  | 内容                                         |
+| ------ | ------------------------------------------ |
+| v18 R5 | - 入力不可リストボックスのサポート - イベントは IME確定後にトリガーされます |
 </details>
 
 ## 説明
