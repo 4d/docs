@@ -63,7 +63,7 @@ For each request, the following fields are logged:
 | time                                       | Date and time using ISO 8601 format: 'YYYY-MM-DDTHH:MM:SS.mmm'                                                                                                                         |
 | systemid                                   | System ID                                                                                                                                                                              |
 | component                                  | Component signature (e.g., '4SQLS' or 'dbmg')                                                                                                                                          |
-| process\_info_                           | index Corresponds to the "index" field in 4DRequestsLog_ProcessInfo.txt log, and permits linking a request to a process.                                                               |
+| process\_info\_index                   | Corresponds to the "index" field in 4DRequestsLog_ProcessInfo.txt log, and permits linking a request to a process.                                                                     |
 | request                                    | Request ID in C/S or message string for SQL requests or `LOG EVENT` messages                                                                                                           |
 | bytes_in                                   | Number of bytes received                                                                                                                                                               |
 | bytes_out                                  | Number of bytes sent                                                                                                                                                                   |
@@ -132,6 +132,7 @@ This log file records each HTTP request and each response in raw mode. Whole req
 How to start this log:
 
 ```4d
+
 WEB SET OPTION(Web debug log;wdl enable without body)  
 //other values are available
 ```
