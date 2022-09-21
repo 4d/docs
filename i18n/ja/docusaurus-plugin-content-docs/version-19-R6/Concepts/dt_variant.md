@@ -11,11 +11,11 @@ title: Variant
 - boolean
 - collection
 - date
-- longint
+- 倍長整数
 - object
 - picture
 - pointer
-- real
+- 実数
 - text
 - time
 - null
