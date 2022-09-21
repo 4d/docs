@@ -3,7 +3,7 @@ id: control-flow
 title: Condições e loops
 ---
 
-Regardless of the simplicity or complexity of a method, you will always use one or more of three types of programming structures. Programming structures control the flow of execution, whether and in what order statements are executed within a method. There are three types of structures:
+Independentemente da simplicidade ou da complexidade de um método, sempre utilizará um ou vários dos três tipos de estruturas de programação. Programming structures control the flow of execution, whether and in what order statements are executed within a method. There are three types of structures:
 
 - **Sequential**: a sequential structure is a simple, linear structure. A sequence is a series of statements that 4D executes one after the other, from first to last. A one-line routine, frequently used for object methods, is the simplest case of a sequential structure. For example: `[People]lastName:=Uppercase([People]lastName)`
 - **[Branching](Concepts/cf_branching.md)**: A branching structure allows methods to test a condition and take alternative paths, depending on the result. The condition is a Boolean expression, an expression that evaluates TRUE or FALSE. One branching structure is the `If... End if` structure, which directs program flow along one of two paths. The other branching structure is the `Case of... End case` structure, which directs program flow to one of many paths.

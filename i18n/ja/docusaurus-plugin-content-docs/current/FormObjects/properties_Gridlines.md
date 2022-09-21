@@ -11,7 +11,7 @@ title: グリッド線
 
 | 名称                   | データタイプ | とりうる値                                |
 | -------------------- | ------ | ------------------------------------ |
-| horizontalLineStroke | カラー    | 任意の css値; "transparent"; "automatic" |
+| horizontalLineStroke | color  | 任意の css値; "transparent"; "automatic" |
 
 #### 対象オブジェクト
 
@@ -27,7 +27,7 @@ title: グリッド線
 
 | 名称                 | データタイプ | とりうる値                                |
 | ------------------ | ------ | ------------------------------------ |
-| verticalLineStroke | カラー    | 任意の css値; "transparent"; "automatic" |
+| verticalLineStroke | color  | 任意の css値; "transparent"; "automatic" |
 
 #### 対象オブジェクト
 

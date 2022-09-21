@@ -448,9 +448,9 @@ Windows では、日本語や中国語を入力するために IME (Input Method
 
 ループや条件文の中にあるコードを折りたたんだり展開したりして、メソッドの可読性を高めることができます:
 
-- Expanded code: ![](../assets/en/code-editor/expanded-code.png)
+- 展開されたコード:  ![](../assets/en/code-editor/expanded-code.png)
 
-- Collapsed code: ![](../assets/en/code-editor/collapsed-code.png)
+- 折りたたまれたコード: ![](../assets/en/code-editor/collapsed-code.png)
 
 展開ボタン [...] の上にマウスを重ねるとヘルプTip が表示され、非表示になっているコードの先頭部分を見ることができます。
 

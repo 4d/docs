@@ -1,6 +1,6 @@
 ---
 id: variables
-title: Variables
+title: 変数
 ---
 
 4D のデータは、根本的に異なっている 2つの方法で保持されます。 **フィールド** はディスクに永続的にデータを保存するのに対し、**変数** はメモリ上に一時的にデータを格納します。
@@ -47,7 +47,7 @@ var $myFile : 4D.File  // File クラスオブジェクト変数
 var $myVar // バリアント型変数
 ```
 
-`varName` is the variable name, it must comply with the [4D rules](Concepts/identifiers.md) about identifiers. This syntax only supports [local and process variables](#local-process-and-interprocess-variables) declarations, thus excluding [interprocess variables](#interprocess-variables) and [arrays](Concepts/arrays.md).
+`varName` に指定する変数名は 4Dの [識別子の命名規則](Concepts/identifiers.md) に従う必要があります。 このシンタックスは [ローカル変数とプロセス変数](#ローカル変数とプロセス変数) の宣言のみサポートしています。[インタープロセス変数](#インタープロセス変数) および [配列](Concepts/arrays.md) には使用できません。
 
 `varType` には次が指定できます:
 
@@ -61,8 +61,8 @@ var $myVar // バリアント型変数
 | varType                | 内容                           |
 | ---------------------- | ---------------------------- |
 | `Text`                 | テキスト値                        |
-| `日付`                   | 日付値                          |
-| `時間`                   | 時間値                          |
+| `Date`                 | 日付値                          |
+| `Time`                 | 時間値                          |
 | `Boolean`              | ブール値                         |
 | `Integer`              | 倍長整数値                        |
 | `Real`                 | 実数値                          |
@@ -208,6 +208,6 @@ atNames{1}:="Richard"
 
 > プリエンプティブプロセスにおいては使用できないことと、コードの保守管理を煩雑にすることから、インタープロセス変数の使用は推奨されません。
 
-The name of an interprocess variable always begins with the symbols `<>` — a “less than” sign followed by a “greater than” sign— followed by 31 characters.
+インタープロセス変数の名前は、必ずインタープロセス記号 (`<>`) で始めます。記号の後に31バイトまでの名前を指定できます。
 
 クライアント/サーバーでは、各マシン (クライアントマシンとサーバーマシン) で同じインタープロセス変数定義を共有しますが、マシンごとに各変数のインスタンスが存在します。

@@ -198,7 +198,7 @@ text[text|=Hello]
 
 メディアクエリは、アプリケーションにカラースキームを適用するのに利用します。
 
-A media query is composed of a media feature and a value (e.g., `\&#060;media feature&#062;:\&#060;value&#062;` ).
+メディアクエリは、メディア特性と値によって構成されます (例: `\&#060;media feature&#062;:\&#060;value&#062;`)。
 
 使用可能なメディア特性:
 
@@ -237,7 +237,7 @@ A media query is composed of a media feature and a value (e.g., `\&#060;media fe
 
 * `method`
 * `type`
-* `クラスの新規オブジェクト`
+* `class`
 * `event`
 * `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (リストタイプ)
 
@@ -255,11 +255,11 @@ A media query is composed of a media feature and a value (e.g., `\&#060;media fe
 | `fontSize`       | `font-size`        |
 | `fontStyle`      | `font-style`       |
 | `fontWeight`     | `font-weight`      |
-| `stroke`         | `カラー`              |
+| `stroke`         | `color`            |
 | `textAlign`      | `text-align`       |
 | `textDecoration` | `text-decoration`  |
 | `verticalAlign`  | `vertical-align`   |
-> CSS の属性名を使用する場合、4D に特有の値 (*例* `sunken` (くぼみ)) はサポートされません。
+> CSS の属性名を使用する場合、4D に特有の値 (*例:* `sunken` (くぼみ)) はサポートされません。
 
 #### 特殊な属性値
 

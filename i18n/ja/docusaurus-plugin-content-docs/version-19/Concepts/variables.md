@@ -1,6 +1,6 @@
 ---
 id: variables
-title: Variables
+title: 変数
 ---
 
 4D のデータは、根本的に異なっている 2つの方法で保持されます。 **フィールド** はディスクに永続的にデータを保存するのに対し、**変数** はメモリ上に一時的にデータを格納します。
@@ -69,7 +69,7 @@ var $myVar // バリアント型変数
 | `Boolean`              | ブール値                           |
 | `Integer`              | 倍長整数値                          |
 | `Real`                 | 実数値                            |
-| `Pointer`              | ポインター値                         |
+| `ポインター`                | ポインター値                         |
 | `Picture`              | ピクチャー値                         |
 | `Blob`                 | BLOB値                          |
 | `Collection`           | コレクション値                        |
@@ -213,7 +213,7 @@ atNames{1}:="Richard"
 
 > プリエンプティブプロセスにおいては使用できないことと、コードの保守管理を煩雑にすることから、インタープロセス変数の使用は推奨されません。
 
-The name of an interprocess variable always begins with the symbols `<>` — a “less than” sign followed by a “greater than” sign— followed by 31 characters.
+インタープロセス変数の名前は、必ずインタープロセス記号 (`<>`) で始めます。記号の後に31バイトまでの名前を指定できます。
 
 クライアント/サーバーでは、各マシン (クライアントマシンとサーバーマシン) で同じインタープロセス変数定義を共有しますが、マシンごとに各変数のインスタンスが存在します。
 

@@ -26,7 +26,7 @@ title: On Clicked
 
 ### On Clicked と On Double Clicked
 
-`On Clicked` や [`On Double Clicked`](onDoubleClicked.md) オブジェクトイベントプロパティを選択したのち、`FORM Event` コマンドを使用してオブジェクト上でのクリックを検知し処理することができます。 `FORM Event` コマンドはユーザーアクションに応じ、`On Clicked` または [`On Double Clicked`](onDoubleClicked.md)を返します。
+`On Clicked` や [`On Double Clicked`](onDoubleClicked.md) オブジェクトイベントプロパティを選択したのち、`FORM Event` コマンドを使用してオブジェクト上でのクリックを検知し処理することができます。`FORM Event` コマンドはユーザーアクションに応じ、`On Clicked` または [`On Double Clicked`](onDoubleClicked.md)を返します。
 
 両イベントがオブジェクトに対し選択されている場合、ダブルクリックがおこなわれるとまず `On Clicked` が、そして `On Double Clicked` イベントが生成されます。
 
@@ -34,13 +34,13 @@ title: On Clicked
 
 このイベントは、4D View Pro ドキュメント上でクリックが発生したときに生成されます。 このコンテキストにおいて、`FORM Event` コマンドによって返される [イベントオブジェクト](overview.md#イベントオブジェクト) には以下のプロパティが含まれています:
 
-| プロパティ       | タイプ     | 説明               |
-| ----------- | ------- | ---------------- |
-| code        | longint | On Clicked       |
-| description | text    | "On Clicked"     |
-| objectName  | text    | 4D View Pro エリア名 |
-| sheetName   | text    | イベントが発生したシート名    |
-| range       | object  | セルのレンジ           |
+| プロパティ       | タイプ    | 説明               |
+| ----------- | ------ | ---------------- |
+| code        | 倍長整数   | On Clicked       |
+| description | text   | "On Clicked"     |
+| objectName  | text   | 4D View Pro エリア名 |
+| sheetName   | text   | イベントが発生したシート名    |
+| range       | object | セルのレンジ           |
 
 #### 例題
 

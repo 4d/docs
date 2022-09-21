@@ -63,7 +63,7 @@ Para cada petición, se registran los siguientes campos:
 | time                                       | Fecha y hora utilizando el formato ISO 8601: 'YYYY-MM-DDTHH:MM:SS.mmm'                                                                                                                                             |
 | systemid                                   | ID del sistema                                                                                                                                                                                                     |
 | component                                  | Firma del componente (por ejemplo, "4SQLS" o "dbmg")                                                                                                                                                               |
-| process\_info_                           | index Corresponds to the "index" field in 4DRequestsLog_ProcessInfo.txt log, and permits linking a request to a process.                                                                                           |
+| process\_info\_index                   | Corresponds to the "index" field in 4DRequestsLog_ProcessInfo.txt log, and permits linking a request to a process.                                                                                                 |
 | request                                    | ID de petición en modo remoto cadena de mensajes para las peticiones SQL o mensajes `LOG EVENT`                                                                                                                    |
 | bytes_in                                   | Número de bytes recibidos                                                                                                                                                                                          |
 | bytes_out                                  | Número de bytes enviados                                                                                                                                                                                           |
@@ -132,6 +132,7 @@ Este archivo de historial registra cada petición HTTP y cada respuesta en modo 
 Como iniciar este historial:
 
 ```4d
+
 WEB SET OPTION(Web debug log;wdl enable without body)  
 //otros valores están disponibles
 ```

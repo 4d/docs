@@ -780,19 +780,19 @@ The `VP CREATE TABLE` command <!-- REF #_method_.VP CREATE TABLE.Summary -->crea
 | プロパティ                 | タイプ        | 説明                                                                                         | デフォルト値 |
 | --------------------- | ---------- | ------------------------------------------------------------------------------------------ | ------ |
 | allowAutoExpand       | Boolean    | True to expand columns or rows of the table when values are added in empty adjacent cells. | true   |
-| showFooter            | Boolean    | フッターを表示                                                                                    | False  |
+| showFooter            | Boolean    | フッターを表示                                                                                    | false  |
 | showHeader            | Boolean    | ヘッダーを表示                                                                                    | true   |
-| showResizeHandle      | Boolean    | *source* を持たない表の場合。 リサイズハンドルを表示                                                            | False  |
+| showResizeHandle      | Boolean    | *source* を持たない表の場合。 リサイズハンドルを表示                                                            | false  |
 | tableColumns          | Collection | 表の列を作成するために使用されるオブジェクトのコレクション (下記参照)                                                       | 未定義    |
-| useFooterDropDownList | Boolean    | 列の合計値を計算するフッターセルでドロップダウンリストを使用                                                             | False  |
+| useFooterDropDownList | Boolean    | 列の合計値を計算するフッターセルでドロップダウンリストを使用                                                             | false  |
 
 *tableColumns* コレクションは、表の列の構造を決定します。 コレクション内の各オブジェクトは以下の値を持ちます:
 
-  | プロパティ     | タイプ  | 説明                       | 必須  |
-  | --------- | ---- | ------------------------ | --- |
-  | dataField | Text | データコンテキストにおける、表の列のプロパティ名 | いいえ |
-  | formatter | Text | 表の列のフォーマッター              | いいえ |
-  | name      | Text | 表の列の名前                   | ◯   |
+  | プロパティ     | タイプ  | 説明                       | 必須 |
+  | --------- | ---- | ------------------------ | -- |
+  | dataField | Text | データコンテキストにおける、表の列のプロパティ名 | ×  |
+  | formatter | Text | 表の列のフォーマッター              | ×  |
+  | name      | Text | 表の列の名前                   | ◯  |
 
 *tableColumns* コレクションの長さは、レンジの列数と等しくなければなりません:
 
@@ -3194,13 +3194,13 @@ The `VP Object to font` command <!-- REF #_method_.VP Object to font.Summary -->
 
 *fontObj* には、フォントプロパティを格納するオブジェクトを渡します。 以下のオブジェクトプロパティがサポートされています:
 
-| プロパティ   | タイプ  | 説明                                                                                                                 | とりうる値                                                                                                                                                                                                                                                                                                                    | 必須  |
-| ------- | ---- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --- |
-| family  | text | フォントを指定します。                                                                                                        | 標準の、あるいは一般的なフォントファミリー。 例:  "Arial", "Helvetica", "serif", "arial,sans-serif"                                                                                                                                                                                                                                             | ◯   |
-| size    | text | Defines the size of the font.The line-height can be added to the font-size: font-size/line-height: Ex: "15pt/20pt" | 以下のいずれかの単位を伴う数値: <li>"em", "ex", "%", "px", "cm", "mm", "in", "pt", "pc", "ch", "rem", "vh", "vw", "vmin", "vmax"</li>あるいは、以下の定数のいずれか 1つ:<li>`vk font size large`</li><li>`vk font size larger`</li><li>`vk font size x large`</li><li>`vk font size xx large`</li><li>`vk font size small`</li><li>`vk font size smaller`</li><li>`vk font size x small`</li><li>`vk font size xx small`</li>                                            | ◯   |
-| style   | text | フォントのスタイル。                                                                                                         | <li>`vk font style italic`</li><li>`vk font style oblique`</li>                                                                                                                                                                                                                                                                     | いいえ |
-| variant | text | スモールキャピタルのフォントを定義します。                                                                                              | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                               | いいえ |
-| weight  | text | フォントの太さを定義します。                                                                                                     | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li> | いいえ |
+| プロパティ   | タイプ  | 説明                                                                                                                 | とりうる値                                                                                                                                                                                                                                                                                                                    | 必須 |
+| ------- | ---- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -- |
+| family  | text | フォントを指定します。                                                                                                        | 標準の、あるいは一般的なフォントファミリー。 例:  "Arial", "Helvetica", "serif", "arial,sans-serif"                                                                                                                                                                                                                                             | ◯  |
+| size    | text | Defines the size of the font.The line-height can be added to the font-size: font-size/line-height: Ex: "15pt/20pt" | 以下のいずれかの単位を伴う数値: <li>"em", "ex", "%", "px", "cm", "mm", "in", "pt", "pc", "ch", "rem", "vh", "vw", "vmin", "vmax"</li>あるいは、以下の定数のいずれか 1つ:<li>`vk font size large`</li><li>`vk font size larger`</li><li>`vk font size x large`</li><li>`vk font size xx large`</li><li>`vk font size small`</li><li>`vk font size smaller`</li><li>`vk font size x small`</li><li>`vk font size xx small`</li>                                            | ◯  |
+| style   | text | フォントのスタイル。                                                                                                         | <li>`vk font style italic`</li><li>`vk font style oblique`</li>                                                                                                                                                                                                                                                                     | ×  |
+| variant | text | スモールキャピタルのフォントを定義します。                                                                                              | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                               | ×  |
+| weight  | text | フォントの太さを定義します。                                                                                                     | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li> | ×  |
 
 このオブジェクトは [VP Font to object](#vp-font-to-object) コマンドで作成することができます。
 
@@ -3928,8 +3928,8 @@ The `VP Run offscreen area` command <!-- REF #_method_.VP Run offscreen area.Sum
 | onEvent                    | object (フォーミュラ) | オフスクリーンエリアの準備ができたときに実行されるコールバックメソッド。 以下のいずれかを渡すことができます:<li>クラスの `onEvent` 関数</li><li>`Formula` オブジェクト</li>デフォルトでは、コールバックメソッドは、[`On VP Ready`](Events/onVpReady.md), [`On Load`](Events/onLoad.md), [`On Unload`](Events/onUnload.md), [`On End URL Loading`](Events/onEndUrlLoading.md), [`On URL Loading Error`](Events/onUrlLoadingError.md), [`On VP Range Changed`](Events/onVpRangeChanged.md), または [`On Timer`](Events/onTimer.md) イベントで呼び出されます。 コールバックメソッドを使用して [4D View Pro フォームオブジェクト変数](configuring.md#4d-view-pro-フォームオブジェクト変数) にアクセスすることができます。 |
 | autoQuit                   | boolean         | True (default value) if the command must stop the formula execution when the [`On End URL Loading`](Events/onEndUrlLoading.md) or [`On URL Loading Error`](Events/onUrlLoadingError.md) events occur.If false, you must use the `CANCEL` or `ACCEPT` commands in the *onEvent* callback method.                                                                                                                                                                                                                                                             |
 | timeout                    | number          | イベントが何も生成されない場合にエリアが自動的に閉まるまでの最大時間 (秒単位)。 0 に設定した場合、エリアは自動的には閉まりません。 デフォルト値: 60                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
-| result                     | 混合              | 処理の結果 (あれば)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
-| `\<customProperty>` | 混合              | *onEvent* コールバックメソッドで利用可能なカスタムの属性。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| result                     | mixed           | 処理の結果 (あれば)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| `\<customProperty>` | mixed           | *onEvent* コールバックメソッドで利用可能なカスタムの属性。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
 以下のプロパティは、必要に応じてコマンドによって自動的に追加されます:
 
@@ -4253,7 +4253,7 @@ The `VP SET BORDER` command <!-- REF #_method_.VP SET BORDER.Summary -->applies 
 
 | プロパティ | タイプ     | 説明                             | とりうる値                                                                                                                                                                                                                                                                                                                                                                        |
 | ----- | ------- | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| カラー   | text    | 境界線のカラーを定義します。 デフォルト = black   | CSSカラー "#rrggbb" シンタックス (推奨シンタックス)、CSSカラー "rgb(r,g,b)" シンタックス (代替シンタックス)、CSSカラーネーム (代替シンタックス)                                                                                                                                                                                                                                                                                |
+| color | text    | 境界線のカラーを定義します。 デフォルト = black   | CSSカラー "#rrggbb" シンタックス (推奨シンタックス)、CSSカラー "rgb(r,g,b)" シンタックス (代替シンタックス)、CSSカラーネーム (代替シンタックス)                                                                                                                                                                                                                                                                                |
 | style | Integer | 境界線のスタイルを定義します。 デフォルト = empty。 | <li>`vk line style dash dot`</li><li>`vk line style dash dot dot`</li><li>`vk line style dashed`</li> <li>`vk line style dotted`</li><li>`vk line style double`</li><li>`vk line style empty`</li><li>`vk line style hair`</li> <li>`vk line style medium`</li><li>`vk line style medium dash dot`</li><li>`vk line style medium dash dot dot`</li><li>`vk line style medium dashed`</li><li>`vk line style slanted dash dot`</li><li>`vk line style thick`</li><li>`vk line style thin`</li> |
 
 *borderStyleObj* の境界線スタイルの位置 (どこに境界線を引くか) は *borderPosObj* 引数で定義します:
@@ -4855,11 +4855,11 @@ VP SET DEFAULT STYLE("myDoc";$style)
 
 <!-- REF #_method_.VP SET FIELD.Params -->
 
-| 引数            | タイプ     |    | 説明                                      |
-| ------------- | ------- | -- | --------------------------------------- |
-| rangeObj      | Object  | -> | レンジオブジェクト                               |
-| field         | Pointer | -> | 仮想ストラクチャーのフィールドへの参照                     |
-| formatPattern | Text    | -> | フィールドのフォーマット|<!-- END REF -->
+| 引数            | タイプ    |    | 説明                                      |
+| ------------- | ------ | -- | --------------------------------------- |
+| rangeObj      | Object | -> | レンジオブジェクト                               |
+| フィールド         | ポインター  | -> | 仮想ストラクチャーのフィールドへの参照                     |
+| formatPattern | Text   | -> | フィールドのフォーマット|<!-- END REF -->
 
 |
 

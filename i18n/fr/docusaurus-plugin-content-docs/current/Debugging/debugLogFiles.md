@@ -63,7 +63,7 @@ Pour chaque requête, les champs suivants sont enregistrés :
 | time                                       | Date et heure au format ISO 8601 : 'YYYY-MM-DDTHH:MM:SS.mmm'                                                                                                                                                                                       |
 | systemid                                   | ID système                                                                                                                                                                                                                                         |
 | component                                  | Signature du composant (par exemple '4SQLS' ou 'dbmg')                                                                                                                                                                                             |
-| process\_info_                           | index Corresponds to the "index" field in 4DRequestsLog_ProcessInfo.txt log, and permits linking a request to a process.                                                                                                                           |
+| process\_info\_index                   | Corresponds to the "index" field in 4DRequestsLog_ProcessInfo.txt log, and permits linking a request to a process.                                                                                                                                 |
 | request                                    | ID de requête en mode distant chaîne de message pour les requêtes SQL ou messages `LOG EVENT`                                                                                                                                                      |
 | bytes_in                                   | Nombre d'octets reçus                                                                                                                                                                                                                              |
 | bytes_out                                  | Nombre d'octets envoyés                                                                                                                                                                                                                            |
@@ -132,6 +132,7 @@ Ce fichier d'historique enregistre chaque requête HTTP et chaque réponse en mo
 Pour lancer cet historique :
 
 ```4d
+
 WEB SET OPTION(Web debug log;wdl enable without body)  
 //d'autres valeurs sont disponibles
 ```

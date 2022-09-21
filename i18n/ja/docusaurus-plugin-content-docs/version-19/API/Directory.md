@@ -90,6 +90,7 @@ title: Directory クラス
 
 ---
 
+
 <!-- REF directory.fullName.Desc -->
 ## .fullName
 
@@ -189,6 +190,7 @@ title: Directory クラス
 </details>
 
 <!-- REF #directory.isFolder.Syntax -->**.isFolder** : Boolean<!-- END REF -->
+
 
 #### 説明
 
@@ -391,7 +393,7 @@ Windows 上においては、`.isPackage` は常に **false** を返します。
 | v17 R5 | 追加 |
 </details>
 
-<!-- REF #directory.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D Folder<!-- END REF -->
+<!-- REF #directory.copyTo().Syntax -->**.copyTo**( *destinationFolder* : 4D.Folder { ; *newName* : Text } { ; *overwrite* : Integer } ) : 4D.Folder<!-- END REF -->
 
 
 <!-- REF #directory.copyTo().Params -->
@@ -592,6 +594,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 | ------ | -- |
 | v17 R5 | 追加 |
 </details>
+
 
 <!-- REF #directory.folders().Syntax -->**.folders**( { *options* : Integer } ) : Collection<!-- END REF -->
 

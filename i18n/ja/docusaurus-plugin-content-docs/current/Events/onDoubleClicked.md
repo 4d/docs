@@ -12,7 +12,7 @@ title: On Double Clicked
 
 `On Double Clicked` イベントは、ユーザーがオブジェクトをダブルクリックしたときに発生します。 ダブルクリック間隔の最大時間は、システム環境設定で定義されています。
 
-[`On Clicked`](onClicked.md) や `On Double Clicked` オブジェクトイベントプロパティを選択したのち、`FORM Event` コマンドを使用してオブジェクト上でのクリックを検知し処理することができます。 `FORM Event` コマンドはユーザーアクションに応じ、[`On Clicked`](onClicked.md) または `On Double Clicked` を返します。
+[`On Clicked`](onClicked.md) や `On Double Clicked` オブジェクトイベントプロパティを選択したのち、`FORM Event` コマンドを使用してオブジェクト上でのクリックを検知し処理することができます。`FORM Event` コマンドはユーザーアクションに応じ、[`On Clicked`](onClicked.md) または `On Double Clicked` を返します。
 
 両イベントがオブジェクトに対し選択されている場合、ダブルクリックがおこなわれるとまず `On Clicked` が、そして `On Double Clicked` イベントが生成されます。
 
@@ -20,13 +20,13 @@ title: On Double Clicked
 
 このイベントは、4D View Pro ドキュメント上でダブルクリックが発生したときに生成されます。 このコンテキストにおいて、`FORM Event` コマンドによって返される [イベントオブジェクト](overview.md#イベントオブジェクト) には以下のプロパティが含まれています:
 
-| プロパティ       | タイプ     | 説明                  |
-| ----------- | ------- | ------------------- |
-| code        | longint | 13                  |
-| description | text    | "On Double Clicked" |
-| objectName  | text    | 4D View Pro エリア名    |
-| sheetName   | text    | イベントが発生したシート名       |
-| range       | object  | セルのレンジ              |
+| プロパティ       | タイプ    | 説明                  |
+| ----------- | ------ | ------------------- |
+| code        | 倍長整数   | 13                  |
+| description | text   | "On Double Clicked" |
+| objectName  | text   | 4D View Pro エリア名    |
+| sheetName   | text   | イベントが発生したシート名       |
+| range       | object | セルのレンジ              |
 
 #### 例題
 
