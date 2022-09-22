@@ -163,7 +163,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;2);New object("value";125571.35;"format";"_
 
 4D View Pro provides the following constants for ISO 8601 date and time patterns:
 
-| Constante                                 | Value                                | Comentario                                                                                                                                                             |
+| Constante                                 | Valor                                | Comentario                                                                                                                                                             |
 | ----------------------------------------- | ------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `vk pattern full date time`               | "*fullDateTimePattern*"              | ISO 8601 format for the full date and time in current localization. USA default pattern: "dddd, dd MMMM yyyy HH:mm:ss"                                                 |
 | `vk pattern long date`                    | "*longDatePattern*"                  | ISO 8601 format for the full date in current localization. USA default pattern: "dddd, dd MMMM yyyy"                                                                   |
