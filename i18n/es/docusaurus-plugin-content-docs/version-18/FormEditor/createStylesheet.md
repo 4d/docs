@@ -281,7 +281,7 @@ Durante la ejecución, 4D prioriza automáticamente las hojas de estilo en el si
 
 > Las rutas de los archivos pueden ser relativas o absolutas.
 > 
-> * Relative paths are resolved relative to the JSON form description file.
+> * Las rutas relativas se resuelven en relación con el archivo de descripción del formulario JSON.
 > * For security reasons, only filesystem paths are accepted for absolute paths. (*e.g.*, "/RESOURCES", "/DATA")
 
 ## Creación o modificación de hojas de estilo
