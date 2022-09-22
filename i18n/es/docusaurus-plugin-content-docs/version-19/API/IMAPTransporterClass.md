@@ -161,7 +161,7 @@ En el parámetro `msgIDs`, puede pasar:
 * el ID único (*texte*) de un solo mensaje o
 * la siguiente constante (*longint*) para todos los mensajes del buzón seleccionado:
 
- | Constante | Value | Comentario                                            |
+ | Constante | Valor | Comentario                                            |
  | --------- | ----- | ----------------------------------------------------- |
  | IMAP all  | 1     | Seleccionar todos los mensajes del buzón seleccionado |
 
@@ -186,7 +186,7 @@ La función devuelve un objeto que describe el estado IMAP:
 | success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
 | statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
 | errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
-|            | \[].errcode            | Number     | 4D error code                                                                                     |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
 |            | \[].message            | Text       | Descripción del error 4D                                                                          |
 |            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
@@ -256,7 +256,7 @@ En el parámetro opcional `options`, puede pasar un objeto para definir el chars
 
 Charsets posibles:
 
-| Constante                | Value                          | Comentario                                                                                                            |
+| Constante                | Valor                          | Comentario                                                                                                            |
 | ------------------------ | ------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>headerCharset: US-ASCII si es posible, japonés (ISO-2022-JP) & Quoted-printable si es posible, de lo contrario UTF-8 & Quoted-printable</li><li>bodyCharset: US-ASCII si es posible, japonés (ISO-2022-JP) y 7 bits si es posible, de lo contrario UTF-8 & Quoted-printable</li></ul>                                                                                             |
 | mail mode ISO88591       | ISO-8859-1                     | <ul><li>headerCharset: ISO-8859-1 & Quoted-printable</li><li>bodyCharset: ISO-8859-1 & 8-bit</li></ul>                                                                                             |
@@ -272,7 +272,7 @@ La función devuelve un objeto que describe el estado IMAP:
 | success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
 | statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
 | errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
-|            | \[].errcode            | Number     | 4D error code                                                                                     |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
 |            | \[].message            | Text       | Descripción del error 4D                                                                          |
 |            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
@@ -371,7 +371,7 @@ La función devuelve un objeto que describe el estado IMAP:
 | success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
 | statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
 | errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
-|            | \[].errcode            | Number     | 4D error code                                                                                     |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
 |            | \[].message            | Text       | Descripción del error 4D                                                                          |
 |            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
@@ -471,7 +471,7 @@ La función devuelve un objeto que describe el estado IMAP:
 | success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
 | statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
 | errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
-|            | \[].errcode            | Number     | 4D error code                                                                                     |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
 |            | \[].message            | Text       | Descripción del error 4D                                                                          |
 |            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
@@ -550,7 +550,7 @@ La función devuelve un objeto que describe el estado IMAP:
 | success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
 | statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
 | errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
-|            | \[].errcode            | Number     | 4D error code                                                                                     |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
 |            | \[].message            | Text       | Descripción del error 4D                                                                          |
 |            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
@@ -621,10 +621,10 @@ Para eliminar todos los mensajes del buzón actual:
 
 
 <!-- REF #IMAPTransporterClass.deleteBox().Params -->
-| Parámetros | Tipo   |    | Descripción                                                         |
-| ---------- | ------ |:--:| ------------------------------------------------------------------- |
-| name       | Text   | -> | Nombre del buzón a eliminar                                         |
-| Result     | Object | <- | Status of the mailbox deletion operation|<!-- END REF -->
+| Parámetros | Tipo   |    | Descripción                                                                |
+| ---------- | ------ |:--:| -------------------------------------------------------------------------- |
+| name       | Text   | -> | Nombre del buzón a eliminar                                                |
+| Result     | Object | <- | Estado de la operación de eliminación del buzón|<!-- END REF -->
 
 
 |
@@ -648,7 +648,7 @@ La función devuelve un objeto que describe el estado IMAP:
 | success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
 | statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
 | errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
-|            | \[].errcode            | Number     | 4D error code                                                                                     |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
 |            | \[].message            | Text       | Descripción del error 4D                                                                          |
 |            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
@@ -722,7 +722,7 @@ La función devuelve un objeto que describe el estado IMAP:
 | success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
 | statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
 | errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
-|            | \[].errcode            | Number     | 4D error code                                                                                     |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
 |            | \[].message            | Text       | Descripción del error 4D                                                                          |
 |            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
@@ -1228,7 +1228,7 @@ La función devuelve un objeto que describe el estado IMAP:
 | success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
 | statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
 | errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
-|            | \[].errcode            | Number     | 4D error code                                                                                     |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
 |            | \[].message            | Text       | Descripción del error 4D                                                                          |
 |            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
@@ -1379,7 +1379,7 @@ En el parámetro `msgIDs`, puede pasar:
 * el ID único (*texte*) de un solo mensaje o
 * la siguiente constante (*longint*) para todos los mensajes del buzón seleccionado:
 
- | Constante | Value | Comentario                                            |
+ | Constante | Valor | Comentario                                            |
  | --------- | ----- | ----------------------------------------------------- |
  | IMAP all  | 1     | Seleccionar todos los mensajes del buzón seleccionado |
 
@@ -1404,7 +1404,7 @@ La función devuelve un objeto que describe el estado IMAP:
 | success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
 | statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
 | errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
-|            | \[].errcode            | Number     | 4D error code                                                                                     |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
 |            | \[].message            | Text       | Descripción del error 4D                                                                          |
 |            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
@@ -1473,7 +1473,7 @@ La función devuelve un objeto que describe el estado IMAP:
 | success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
 | statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
 | errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
-|            | \[].errcode            | Number     | 4D error code                                                                                     |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
 |            | \[].message            | Text       | Descripción del error 4D                                                                          |
 |            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
@@ -1684,7 +1684,7 @@ En el parámetro *name*, pase el nombre del buzón a acceder. El nombre represen
 
 El parámetro opcional *state* define el tipo de acceso al buzón. Los valores posibles son:
 
-| Constante             | Value | Comentario                                                                                                                                                                                       |
+| Constante             | Valor | Comentario                                                                                                                                                                                       |
 | --------------------- | ----- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | IMAP read only state  | 1     | Se accede al buzón seleccionado con privilegios de sólo lectura. Los mensajes con la bandera "reciente" (que indica que son nuevos) no se modifican.                                             |
 | IMAP read write state | 0     | Se accede al buzón seleccionado con privilegios de lectura y escritura. Los mensajes se consideran "vistos" y pierden la bandera "reciente" (que indica que son mensajes nuevos). Default value: |
@@ -1755,7 +1755,7 @@ La función devuelve un objeto que describe el estado IMAP:
 | success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
 | statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
 | errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
-|            | \[].errcode            | Number     | 4D error code                                                                                     |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
 |            | \[].message            | Text       | Descripción del error 4D                                                                          |
 |            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
@@ -1831,7 +1831,7 @@ La función devuelve un objeto que describe el estado IMAP:
 | success    |                         | Boolean    | True si la operación tiene éxito, False en caso contrario                                         |
 | statusText |                         | Text       | Mensaje de estado devuelto por el servidor IMAP, o último error devuelto en la pila de errores 4D |
 | errors     |                         | Collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor IMAP)                  |
-|            | \[].errcode            | Number     | 4D error code                                                                                     |
+|            | \[].errcode            | Number     | Código de error 4D                                                                                |
 |            | \[].message            | Text       | Descripción del error 4D                                                                          |
 |            | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                                             |
 
