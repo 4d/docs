@@ -19,7 +19,7 @@ title: Clase Transporter
 
 #### Descripción
 
-The `.acceptUnsecureConnection` property contains <!-- REF #transporter.acceptUnsecureConnection.Summary -->**True** if 4D is allowed to establish an unencrypted connection<!-- END REF --> when encrypted connection is not possible.
+La propiedad `.acceptUnsecureConnection` contiene <!-- REF #transporter.acceptUnsecureConnection.Summary -->**True** si 4D está autorizado a establecer una conexión no cifrada<!-- END REF --> cuando la conexión encriptada no es posible.
 
 Contiene **False** si no se permiten las conexiones no cifradas, en cuyo caso se devuelve un error cuando no es posible la conexión cifrada.
 
@@ -55,13 +55,13 @@ Los puertos seguros disponibles son:
 
 #### Descripción
 
-The `.authenticationMode` property contains <!-- REF #transporter.authenticationMode.Summary -->the authentication mode used to open the session on the mail server<!-- END REF -->.
+La propiedad `.authenticationMode` contiene <!-- REF #transporter.authenticationMode.Summary -->el modo de autenticación utilizado para abrir la sesión en el servidor de correo<!-- END REF -->.
 
 Por defecto, se utiliza el modo más seguro soportado por el servidor.
 
 Los valores posibles son:
 
-| Value    | Constantes                     | Comentario                                     |
+| Valor    | Constantes                     | Comentario                                     |
 | -------- | ------------------------------ | ---------------------------------------------- |
 | CRAM-MD5 | `IMAP authentication CRAM MD5` | Autenticación utilizando el protocolo CRAM-MD5 |
 | LOGIN    | `IMAP authentication login`    | Autenticación utilizando el protocolo LOGIN    |
@@ -93,7 +93,7 @@ Por defecto, se utiliza el modo más seguro soportado por el servidor.
 
 Los valores posibles son:
 
-| Value    | Constantes                     | Comentario                                     |
+| Valor    | Constantes                     | Comentario                                     |
 | -------- | ------------------------------ | ---------------------------------------------- |
 | APOP     | `POP3 authentication APOP`     | Authentication using APOP protocol (POP3 only) |
 | CRAM-MD5 | `POP3 authentication CRAM-MD5` | Autenticación utilizando el protocolo CRAM-MD5 |
@@ -126,7 +126,7 @@ Por defecto, se utiliza el modo más seguro soportado por el servidor.
 
 Los valores posibles son:
 
-| Value    | Constantes                     | Comentario                                     |
+| Valor    | Constantes                     | Comentario                                     |
 | -------- | ------------------------------ | ---------------------------------------------- |
 | CRAM-MD5 | `SMTP authentication CRAM MD5` | Autenticación utilizando el protocolo CRAM-MD5 |
 | LOGIN    | `SMTP authentication login`    | Autenticación utilizando el protocolo LOGIN    |
@@ -153,11 +153,11 @@ Los valores posibles son:
 
 #### Descripción
 
-The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -->  the charset and encoding used for the body part of the email<!-- END REF -->.
+La propiedad `.bodyCharset` contiene <!-- REF #transporter.bodyCharset.Summary -->  el conjunto de caracteres y la codificación utilizados para la parte del cuerpo del correo electrónico<!-- END REF -->.
 
 **Valores posibles:**
 
-| Constante                | Value                          | Comentario                                                                                                                |
+| Constante                | Valor                          | Comentario                                                                                                                |
 | ------------------------ | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------- |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: US-ASCII si es posible, japonés (ISO-2022-JP) & Quoted-printable si es posible, de lo contrario UTF-8 & Quoted-printable</li><li>*bodyCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul>                                                                                                 |
 | mail mode ISO88591       | ISO-8859-1                     | <ul><li>*headerCharset*: ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>                                                                                                 |
@@ -183,7 +183,7 @@ The `.bodyCharset` property contains <!-- REF #transporter.bodyCharset.Summary -
 
 #### Descripción
 
-The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeOut.Summary -->the maximum wait time (in seconds) allowed to establish a connection to the server<!-- END REF -->. Por defecto, si la propiedad no se ha definido en el objeto servidor (utilizado para crear el objeto transportador con `SMTP New transporter`, `POP3 New transporter`, o `IMAP New transporter`), el valor es 30.
+La propiedad `.connectionTimeOut` contiene <!-- REF #transporter.connectionTimeOut.Summary -->el tiempo de espera máximo (en segundos) autorizado para establecer una conexión con el servidor<!-- END REF -->. Por defecto, si la propiedad no se ha definido en el objeto servidor (utilizado para crear el objeto transportador con `SMTP New transporter`, `POP3 New transporter`, o `IMAP New transporter`), el valor es 30.
 
 <!-- END REF -->
 
@@ -204,7 +204,7 @@ The `.connectionTimeOut` property contains <!-- REF #transporter.connectionTimeO
 
 #### Descripción
 
-The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summary --> the charset and encoding used for the email header<!-- END REF -->. El encabezado incluye las siguientes partes del correo electrónico:
+La propriété `.headerCharset` contient <!-- REF #transporter.headerCharset.Summary --> el conjunto de caracteres y la codificación utilizados para el encabezado del correo electrónico<!-- END REF -->. El encabezado incluye las siguientes partes del correo electrónico:
 
 - asunto,
 - attachment filename(s),
@@ -212,7 +212,7 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 
 **Valores posibles:**
 
-| Constante                | Value                          | Comentario                                                                                                            |
+| Constante                | Valor                          | Comentario                                                                                                            |
 | ------------------------ | ------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
 | mail mode ISO2022JP      | US-ASCII_ISO-2022-JP_UTF8_QP | <ul><li>*headerCharset*: US-ASCII si es posible, japonés (ISO-2022-JP) & Quoted-printable si es posible, de lo contrario UTF-8 & Quoted-printable</li><li>*bodyCharset*: US-ASCII if possible, Japanese (ISO-2022-JP) & 7-bit if possible, otherwise UTF-8 & Quoted-printable</li></ul>                                                                                             |
 | mail mode ISO88591       | ISO-8859-1                     | <ul><li>*headerCharset*: ISO-8859-1 & Quoted-printable</li><li>*bodyCharset*: ISO-8859-1 & 8-bit</li></ul>                                                                                            |
@@ -238,7 +238,7 @@ The `.headerCharset` property contains <!-- REF #transporter.headerCharset.Summa
 
 #### Descripción
 
-The `.host` property contains <!-- REF #transporter.host.Summary -->the name or the IP address of the host server<!-- END REF -->. Se utiliza para las transacciones de correo (SMTP, POP3, IMAP).
+La propiedad `.host` contiene <!-- REF #transporter.host.Summary -->el nombre o la dirección IP del servidor local<!-- END REF -->. Se utiliza para las transacciones de correo (SMTP, POP3, IMAP).
 
 <!-- END REF -->
 
@@ -259,7 +259,7 @@ The `.host` property contains <!-- REF #transporter.host.Summary -->the name or 
 
 #### Descripción
 
-The `.logFile` property contains <!-- REF #transporter.logFile.Summary -->la ruta del archivo de historial extendido definido (si lo hay) para la conexión de correo<!-- END REF -->. Puede ser relativo (a la carpeta actual Logs) o absoluto.
+La propiedad `.logFile` contiene <!-- REF #transporter.logFile.Summary -->la ruta del archivo de historial extendido definido (si lo hay) para la conexión de correo<!-- END REF -->. Puede ser relativo (a la carpeta actual Logs) o absoluto.
 
 A diferencia de los archivos de registro clásicos (habilitados mediante el comando `SET DATABASE PARAMETER`), los archivos de registro extendidos almacenan el contenido MIME de todos los correos enviados y no tienen ningún límite de tamaño. Para más información sobre los archivos de registro extendidos, consulte:
 
@@ -372,7 +372,7 @@ La función envía una solicitud al servidor de correo y devuelve un objeto que 
 | status     |                          | number     | (sólo SMTP) Código de estado devuelto por el servidor de correo (0 en caso de un problema no relacionado con el procesamiento del correo) |
 | statusText |                          | text       | Mensaje de estado devuelto por el servidor de correo, o último error devuelto en la pila de errores de 4D                                 |
 | errors     |                          | collection | Pila de errores 4D (no se devuelve si se recibe una respuesta del servidor de correo)                                                     |
-|            | \[ ].errCode            | number     | 4D error code                                                                                                                             |
+|            | \[ ].errCode            | number     | Código de error 4D                                                                                                                        |
 |            | \[ ].message            | text       | Descripción del error 4D                                                                                                                  |
 |            | \[ ].componentSignature | text       | Firma del componente interno que ha devuelto el error                                                                                     |
 
