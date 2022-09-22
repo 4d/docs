@@ -1,6 +1,6 @@
 ---
 id: onDisplayDetail
-title: Sur affichage corps
+title: On Display Detail
 ---
 
 | Code | Peut être appelé par                                     | Définition                                                                                                                                       |
