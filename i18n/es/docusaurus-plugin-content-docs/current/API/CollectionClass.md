@@ -1865,7 +1865,7 @@ También puede pasar un parámetro de criterios para definir cómo deben ordenar
 
 *   *ascOrDesc*: Integer. Se pasa una de las siguientes constantes del tema **Objects and collections**:
 
-    | Constante     | Tipo    | Value | Comentario                                                 |
+    | Constante     | Tipo    | Valor | Comentario                                                 |
     | ------------- | ------- | ----- | ---------------------------------------------------------- |
     | ck ascending  | Longint | 0     | Los elementos se ordenan de forma ascendente (por defecto) |
     | ck descending | Longint | 1     | Los elementos se ordenan de forma descendente              |
