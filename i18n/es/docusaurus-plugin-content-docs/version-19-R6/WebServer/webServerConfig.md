@@ -119,7 +119,7 @@ Separe cada método con un ";" (por ejemplo: "post;get"). Si methods está vací
 
 Estado del archivo de registro de peticiones HTTP del servidor web ([*HTTPDebugLog_nn.txt*](../Debugging/debugLogFiles.md#httpdebuglogtxt), almacenado en la carpeta "Logs" de la aplicación -- nn es el número de archivo). Es útil para depurar problemas relacionados con el servidor web. Registra cada solicitud y cada respuesta en modo bruto. Se registran las solicitudes completas, incluidos los encabezados; opcionalmente, también se pueden registrar las partes del cuerpo.
 
-| Value | Constante                      | Descripción                                                                                                   |
+| Valor | Constante                      | Descripción                                                                                                   |
 | ----- | ------------------------------ | ------------------------------------------------------------------------------------------------------------- |
 | 0     | wdl disable                    | Los debug logs Web HTTP son desactivados                                                                      |
 | 1     | wdl enable without body        | Los debug logs Web HTTP son activados sin partes del cuerpo (en este caso se suministra el tamaño del cuerpo) |
@@ -357,7 +357,7 @@ Inicia o detiene el registro de las peticiones recibidas por el servidor web 4D 
 
 Este parámetro permite seleccionar el formato de este archivo. Valores disponibles:
 
-| Value | Nombre del formato          | Descripción                                                                                                                                                                                                                               |
+| Valor | Nombre del formato          | Descripción                                                                                                                                                                                                                               |
 | ----- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 0     | No hay archivo de historial | Por defecto                                                                                                                                                                                                                               |
 | 1     | Registro en formato CLF     | Formato de historial común - Cada línea del archivo representa una petición, como:`host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length` - Cada campo está separado por un espacio y cada línea termina con la secuencia CR/LF. |
