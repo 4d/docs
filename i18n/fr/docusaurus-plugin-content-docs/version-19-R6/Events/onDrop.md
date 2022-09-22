@@ -1,6 +1,6 @@
 ---
 id: onDrop
-title: Sur déposer
+title: On Drop
 ---
 
 | Code | Peut être appelé par                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Définition                                |
@@ -17,4 +17,4 @@ Cet événement n'est pas envoyé à l'objet si le glissement n'a pas été acce
 
 
 #### Voir également
-[`Sur début survol`](onBeginDragOver.md)
+[`On Begin Drag Over`](onBeginDragOver.md)
