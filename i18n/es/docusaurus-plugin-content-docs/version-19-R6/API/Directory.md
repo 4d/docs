@@ -414,7 +414,7 @@ Por defecto, la carpeta se copia con el nombre de la carpeta original. Si desea 
 
 Si ya existe una carpeta con el mismo nombre en la *destinationFolder*, por defecto 4D genera un error. Puede pasar la constante `fk overwrite` en el parámetro *overwrite* para ignorar y sobrescribir el archivo existente
 
-| Constante      | Value | Comentario                                        |
+| Constante      | Valor | Comentario                                        |
 | -------------- | ----- | ------------------------------------------------- |
 | `fk overwrite` | 4     | Sobrescribir los elementos existentes, si los hay |
 
@@ -506,7 +506,7 @@ La función `.files()` devuelve <!-- REF #directory.files().Summary -->una colec
 
 Por defecto, si se omite el parámetro *options*, sólo se devuelven en la colección los archivos del primer nivel de la carpeta, así como los archivos o carpetas invisibles. Puede modificar esto pasando, en el parámetro *options*, una o varias de las siguientes constantes:
 
-| Constante             | Value | Comentario                                                                      |
+| Constante             | Valor | Comentario                                                                      |
 | --------------------- | ----- | ------------------------------------------------------------------------------- |
 | `fk recursive`        | 1     | La colección contiene los archivos de la carpeta especificada y sus subcarpetas |
 | `fk ignore invisible` | 8     | Los archivos invisibles no aparecen en la lista                                 |
@@ -611,7 +611,7 @@ La función `.folders()` <!-- REF #directory.folders().Summary -->devuelve una c
 
 Por defecto, si se omite el parámetro *options*, sólo se devuelven en la colección las carpetas del primer nivel de la carpeta. Puede modificar esto pasando, en el parámetro *options*, una o varias de las siguientes constantes:
 
-| Constante             | Value | Comentario                                                                      |
+| Constante             | Valor | Comentario                                                                      |
 | --------------------- | ----- | ------------------------------------------------------------------------------- |
 | `fk recursive`        | 1     | La colección contiene las carpetas de la carpeta especificada y sus subcarpetas |
 | `fk ignore invisible` | 8     | Los archivos invisibles no aparecen en la lista                                 |
