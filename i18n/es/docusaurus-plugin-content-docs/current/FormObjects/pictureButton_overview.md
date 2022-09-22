@@ -10,7 +10,7 @@ Los botones imagen pueden utilizarse de dos maneras:
 * Como botones de comando en un formulario. En este caso, el botón imagen generalmente incluye cuatro estados diferentes: activado, desactivado, presionado y pasado por encima.      
   Por ejemplo, una tabla de miniaturas que tiene una línea de cuatro columnas, cada una de las miniaturas corresponde a los estados Por defecto, Presionado, Pasado por encima y Desactivado.
 
-  | Propiedad                  | Nombre JSON            | Value |
+  | Propiedad                  | Nombre JSON            | Valor |
   | -------------------------- | ---------------------- | ----- |
   | Rows                       | rowCount               | 1     |
   | Columnas                   | columnCount            | 4     |
