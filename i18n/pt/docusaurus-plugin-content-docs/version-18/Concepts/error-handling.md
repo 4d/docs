@@ -9,7 +9,7 @@ Manejo de erros responde à duas necessidades principais:
 
 - descobrir e consertar erros potenciais e bugs no código durante a fase de desenvolvimento,
 - detectar e recuperar de erros inesperados nas aplicações implementadas; em particular pode substituir diálogos de erros de sistemas (disco cheio, arquivo faltando, etc) com sua própria interface.
-> > It is highly recommended to install an error-handling method on 4D Server, for all code running on the server. Esse método evitaria a aparição de caixas de diálogo inesperadas no servidor e poderia registrar os erros em um arquivo especifico para sua análise posterior.
+> > É recomendado instalar um método de gerenciamento de erros em 4D Server, para todos os códigos rodando no servidor. Esse método evitaria a aparição de caixas de diálogo inesperadas no servidor e poderia registrar os erros em um arquivo especifico para sua análise posterior.
 
 ## Instalação de um método de gestão de erros
 
@@ -48,7 +48,7 @@ O comando `Method called on error` permite conhecer o nome do método instalado 
 
 Dentro do método de erro personalizado, tem acesso a várias informações que lhe ajudará a identificar o erro:
 
-- 4D automatically maintains a number of variables called **system variables**, meeting different needs (see the *4D Language Reference manual*):
+- 4D mantém automaticamente um certo número de variáveis denominadas **variáveis sistema**, que respondem a diferentes necessidades (ver  *manual de referência da Linguagem 4D*):
 
   - `Error` (inteiro longo): código de erro
   - `Error method`(texto): nome do método que provocou o erro
