@@ -621,10 +621,10 @@ Para eliminar todos los mensajes del buzón actual:
 
 
 <!-- REF #IMAPTransporterClass.deleteBox().Params -->
-| Parámetros | Tipo   |    | Descripción                                                         |
-| ---------- | ------ |:--:| ------------------------------------------------------------------- |
-| name       | Text   | -> | Nombre del buzón a eliminar                                         |
-| Result     | Object | <- | Status of the mailbox deletion operation|<!-- END REF -->
+| Parámetros | Tipo   |    | Descripción                                                                |
+| ---------- | ------ |:--:| -------------------------------------------------------------------------- |
+| name       | Text   | -> | Nombre del buzón a eliminar                                                |
+| Result     | Object | <- | Estado de la operación de eliminación del buzón|<!-- END REF -->
 
 
 |
@@ -1376,7 +1376,7 @@ En el parámetro `msgIDs`, puede pasar:
 * el ID único (*texte*) de un solo mensaje o
 * la siguiente constante (*longint*) para todos los mensajes del buzón seleccionado:
 
- | Constante | Value | Comentario                                            |
+ | Constante | Valor | Comentario                                            |
  | --------- | ----- | ----------------------------------------------------- |
  | IMAP all  | 1     | Seleccionar todos los mensajes del buzón seleccionado |
 
