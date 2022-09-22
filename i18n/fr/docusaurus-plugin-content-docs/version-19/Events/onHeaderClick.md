@@ -1,6 +1,6 @@
 ---
 id: onHeaderClick
-title: Sur clic entête
+title: On Header Click
 ---
 
 | Code | Peut être appelé par                                                                                                                                                            | Définition                                    |
