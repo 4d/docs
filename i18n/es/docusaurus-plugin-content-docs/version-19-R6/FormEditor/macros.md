@@ -238,7 +238,7 @@ Here are the properties that you can pass in the `$result` object if you want th
 | editor.activeView | String     | Nombres de vistas activos                                               |
 
 
-For example, if objects of the current page and groups have been modified, you can write:
+Por ejemplo, si los objetos de la página actual y de los grupos han sido modificados, puede escribir:
 
 ```4d
     $result:=New object("currentPage"; $editor.editor.currentPage ; \ 
@@ -249,7 +249,7 @@ For example, if objects of the current page and groups have been modified, you c
 
 #### atributo `method`
 
-When handling the `method` attribute of form objects, you can define the attribute value in two ways in macros:
+Cuando se maneja el atributo `method` de los objetos de formulario, se puede definir el valor del atributo de dos maneras en las macros:
 
 - Using a [string containing the method file name/path](FormObjects/properties_Action.md#method).
 
