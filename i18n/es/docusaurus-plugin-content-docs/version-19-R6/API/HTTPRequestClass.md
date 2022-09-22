@@ -117,25 +117,25 @@ Por ejemplo, puede pasar las siguientes cadenas:
 
 En el parámetro *options*, pase un objeto que pueda contener las siguientes propiedades:
 
-| Propiedad            | Tipo                                            | Descripción                                                                                                                                                                                                                                                               | Por defecto  |
-| -------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
-| body                 | Variant                                         | Cuerpo de la petición (necesario en el caso de las peticiones `post` o `put`). Puede ser un texto, un blob, o un objeto. The content-type is determined from the type of this property unless it is set inside the headers                                                | indefinido   |
-| certificatesFolder   | [Folder](FolderClass.md)                        | Define la carpeta de certificados de cliente activa                                                                                                                                                                                                                       | indefinido   |
-| dataType             | Text                                            | Tipo de atributo del cuerpo de la respuesta. Valores: "text", "blob", "object", o "auto". If "auto", the type of the body content will be deduced from its MIME type (object for JSON, text for text, javascript, xml, http message and url encoded form, blob otherwise) | "auto"       |
-| encoding             | Text                                            | Used only in case of requests with a `body` (`post` or `put` methods). Encoding of the request body content if it's a text, ignored if content-type is set inside the headers                                                                                             | "UTF-8"      |
-| headers              | Object                                          | Encabezados de la petición. Syntax: `headers.key=value` (*value* can be a Collection if the same key must appear multiple times)                                                                                                                                          | Objeto vacío |
-| method               | Text                                            | "POST", "GET" u otro método                                                                                                                                                                                                                                               | "GET"        |
-| minTLSVersion        | Text                                            | Sets the minimum version of TLS: "`TLSv1_0`", "`TLSv1_1`", "`TLSv1_2`", "`TLSv1_3`"                                                                                                                                                                                       | "`TLSv1_2`"  |
-| onData               | [Function](FunctionClass.md)                    | Retrollamada cuando se reciben los datos del cuerpo. Recibe dos objetos como parámetros (ver más abajo)                                                                                                                                                                   | indefinido   |
-| onError              | [Function](FunctionClass.md)                    | Retrollamada cuando ocurre un error. Recibe dos objetos como parámetros (ver más abajo)                                                                                                                                                                                   | indefinido   |
-| onHeaders            | [Function](FunctionClass.md)                    | Retrollamada cuando se reciben los encabezados. Recibe dos objetos como parámetros (ver más abajo)                                                                                                                                                                        | indefinido   |
-| onResponse           | [Function](FunctionClass.md)                    | Retrollamada cuando se recibe una respuesta. Recibe dos objetos como parámetros (ver más abajo)                                                                                                                                                                           | indefinido   |
-| onTerminate          | [Function](FunctionClass.md)                    | Retrollamada cuando la petición haya terminado. Recibe dos objetos como parámetros (ver más abajo)                                                                                                                                                                        | indefinido   |
-| protocol             | Text                                            | "auto" o "HTTP1". "auto" significa HTTP1 en la implementación actual                                                                                                                                                                                                      | "auto"       |
-| proxyAuthentication  | [authentication object](#authentication-object) | Autenticación del proxy de gestión de objetos                                                                                                                                                                                                                             | indefinido   |
-| serverAuthentication | [authentication object](#authentication-object) | Autenticación del servidor de gestión de objetos                                                                                                                                                                                                                          | indefinido   |
-| returnResponseBody   | Boolean                                         | If false, the response body is not returned in the [`response` object](#response). Devuelve un error si es false y `onData` es indefinido                                                                                                                                 | True         |
-| timeout              | Real                                            | Tiempo de espera en segundos. Indefinido = sin tiempo de espera                                                                                                                                                                                                           | Indefinido   |
+| Propiedad            | Tipo                                            | Descripción                                                                                                                                                                                                                                                                                 | Por defecto  |
+| -------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ |
+| body                 | Variant                                         | Cuerpo de la petición (necesario en el caso de las peticiones `post` o `put`). Puede ser un texto, un blob, o un objeto. El content-type se determina a partir del tipo de esta propiedad a menos que se defina dentro de los encabezados                                                   | indefinido   |
+| certificatesFolder   | [Folder](FolderClass.md)                        | Define la carpeta de certificados de cliente activa                                                                                                                                                                                                                                         | indefinido   |
+| dataType             | Text                                            | Tipo de atributo del cuerpo de la respuesta. Valores: "text", "blob", "object", o "auto". Si "auto", el tipo de contenido del cuerpo se deducirá de su tipo MIME (object para JSON, texto para texto, javascript, xml, mensaje http y formulario codificado en url, blob en caso contrario) | "auto"       |
+| encoding             | Text                                            | Se utiliza sólo en caso de peticiones con un `body` (métodos `post` o `put`). Codificación del contenido del cuerpo de la petición si es un texto, se ignora si se define content-type dentro de los encabezados                                                                            | "UTF-8"      |
+| headers              | Object                                          | Encabezados de la petición. Sintaxis: `headers.key=value` (*valor* puede ser una Colección si la misma llave debe aparecer varias veces)                                                                                                                                                    | Objeto vacío |
+| method               | Text                                            | "POST", "GET" u otro método                                                                                                                                                                                                                                                                 | "GET"        |
+| minTLSVersion        | Text                                            | Define la versión mínima de TLS: "`TLSv1_0`", "`TLSv1_1`", "`TLSv1_2`", "`TLSv1_3`"                                                                                                                                                                                                         | "`TLSv1_2`"  |
+| onData               | [Function](FunctionClass.md)                    | Retrollamada cuando se reciben los datos del cuerpo. Recibe dos objetos como parámetros (ver más abajo)                                                                                                                                                                                     | indefinido   |
+| onError              | [Function](FunctionClass.md)                    | Retrollamada cuando ocurre un error. Recibe dos objetos como parámetros (ver más abajo)                                                                                                                                                                                                     | indefinido   |
+| onHeaders            | [Function](FunctionClass.md)                    | Retrollamada cuando se reciben los encabezados. Recibe dos objetos como parámetros (ver más abajo)                                                                                                                                                                                          | indefinido   |
+| onResponse           | [Function](FunctionClass.md)                    | Retrollamada cuando se recibe una respuesta. Recibe dos objetos como parámetros (ver más abajo)                                                                                                                                                                                             | indefinido   |
+| onTerminate          | [Function](FunctionClass.md)                    | Retrollamada cuando la petición haya terminado. Recibe dos objetos como parámetros (ver más abajo)                                                                                                                                                                                          | indefinido   |
+| protocol             | Text                                            | "auto" o "HTTP1". "auto" significa HTTP1 en la implementación actual                                                                                                                                                                                                                        | "auto"       |
+| proxyAuthentication  | [authentication object](#authentication-object) | Autenticación del proxy de gestión de objetos                                                                                                                                                                                                                                               | indefinido   |
+| serverAuthentication | [authentication object](#authentication-object) | Autenticación del servidor de gestión de objetos                                                                                                                                                                                                                                            | indefinido   |
+| returnResponseBody   | Boolean                                         | Si false, el cuerpo de la respuesta no se devuelve en el objeto [`response`](#response). Devuelve un error si es false y `onData` es indefinido                                                                                                                                             | True         |
+| timeout              | Real                                            | Tiempo de espera en segundos. Indefinido = sin tiempo de espera                                                                                                                                                                                                                             | Indefinido   |
 
 #### Función callback (retrollamada)
 
@@ -149,29 +149,29 @@ Todas las funciones de retrollamada reciben dos parámetros objeto:
 Esta es la secuencia de llamadas de retorno:
 
 1. `onHeaders` se llama siempre una vez
-2. `onData` is called zero or several times (not called if the request does not have a body)
+2. `onData` se llama cero o varias veces (no se llama si la petición no tiene cuerpo)
 3. Si no se produce ningún error, `onResponse` se llama siempre una vez
-4. If an error occurs, `onError` is executed once (and terminates the request)
+4. Si se produce un error, `onError` se ejecuta una vez (y termina la petición)
 5. `onTerminate` se ejecuta siempre una vez
 
 #### objeto evento
 
-An `event` object is returned when a [callback function](#callback-functions) is called. Contiene las siguientes propiedades:
+Un objeto `event` se devuelve cuando se llama una [funcipon de retrollamada](#callback-functions). Contiene las siguientes propiedades:
 
 | Propiedad | Tipo | Descripción                                                                            |
 | --------- | ---- | -------------------------------------------------------------------------------------- |
-| .data     | blob | Datos recibidos. It is always *undefined* except in the `onData` callback              |
-| .type     | text | Tipo de evento. Possible values: "response", "error", "headers", "data", or "terminate |
+| .data     | blob | Datos recibidos. Siempre es *undefined* excepto en la retrollamada `onData`            |
+| .type     | text | Tipo de evento. Valores posibles: "response", "error", "headers", "data", o "terminate |
 
 #### authentication object
 
-An authentication object handles the `options.serverAuthentication` or `options.proxyAuthentication` property. Puede contener las siguientes propiedades:
+Un objeto authentication maneja la propiedad `options.serverAuthentication` o `options.proxyAuthentication`. Puede contener las siguientes propiedades:
 
-| Propiedad  | Tipo | Descripción                                              | Por defecto |
-| ---------- | ---- | -------------------------------------------------------- | ----------- |
-| name       | Text | Nombre usado para la autenticación                       | indefinido  |
-| contraseña | Text | Contraseña utilizada para la autenticación               | indefinido  |
-| method     | Text | Method used for authentication:"basic", "digest", "auto" | "auto"      |
+| Propiedad  | Tipo | Descripción                                                       | Por defecto |
+| ---------- | ---- | ----------------------------------------------------------------- | ----------- |
+| name       | Text | Nombre usado para la autenticación                                | indefinido  |
+| contraseña | Text | Contraseña utilizada para la autenticación                        | indefinido  |
+| method     | Text | Método utilizado para la autenticación: "basic", "digest", "auto" | "auto"      |
 
 <!-- END REF -->
 
@@ -182,7 +182,7 @@ An authentication object handles the `options.serverAuthentication` or `options.
 
 #### Descripción
 
-La propiedad `.dataType` contiene <!-- REF #HTTPRequestClass.dataType.Summary -->the `dataType` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew), "auto" if it was omitted<!-- END REF -->.
+La propiedad `.dataType` contiene <!-- REF #HTTPRequestClass.dataType.Summary -->el `dataType` pasado en el objeto [`options`](#options-parameter) al llamar [new()](#4dhttprequestnew), "auto" si se omite<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -193,7 +193,7 @@ La propiedad `.dataType` contiene <!-- REF #HTTPRequestClass.dataType.Summary --
 
 #### Descripción
 
-La propiedad `.encoding` contiene <!-- REF #HTTPRequestClass.encoding.Summary -->the `encoding` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew), "UTF-8" if it was omitted<!-- END REF -->.
+La propiedad `.encoding` contiene <!-- REF #HTTPRequestClass.encoding.Summary -->el `encoding` pasado en el objeto [`options`](#options-parameter) al llamar [new()](#4dhttprequestnew), "UTF-8" si se omite<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -211,7 +211,7 @@ Este es el contenido de la propiedad `.errors`:
 | Propiedad |                       | Tipo       | Descripción                                           |
 | --------- | --------------------- | ---------- | ----------------------------------------------------- |
 | errors    |                       | Collection | Pila de error 4D en caso de error                     |
-|           | [].errCode            | Number     | 4D error code                                         |
+|           | [].errCode            | Number     | Código de error 4D                                    |
 |           | [].message            | Text       | Descripción del error 4D                              |
 |           | [].componentSignature | Text       | Firma del componente interno que ha devuelto el error |
 
@@ -224,7 +224,7 @@ Este es el contenido de la propiedad `.errors`:
 
 #### Descripción
 
-La propiedad `.headers` contiene <!-- REF #HTTPRequestClass.headers.Summary -->the `headers` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. Si se omite, contiene un objeto vacío.
+La propiedad `.headers` contiene <!-- REF #HTTPRequestClass.headers.Summary -->los `headers` pasados en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. Si se omite, contiene un objeto vacío.
 
 <!-- END REF -->
 
@@ -235,7 +235,7 @@ La propiedad `.headers` contiene <!-- REF #HTTPRequestClass.headers.Summary -->t
 
 #### Descripción
 
-La propiedad `.errors` contiene <!-- REF #HTTPRequestClass.method.Summary -->the `method` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. .
+La propiedad `.errors` contiene <!-- REF #HTTPRequestClass.method.Summary -->el `method` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. .
 
 <!-- END REF -->
 
@@ -246,7 +246,7 @@ La propiedad `.errors` contiene <!-- REF #HTTPRequestClass.method.Summary -->the
 
 #### Descripción
 
-La propiedad `.protocol` contiene <!-- REF #HTTPRequestClass.protocol.Summary -->the `protocol` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. If it was omitted or if "auto" was used, contains the version of the protocol used.
+La propiedad `.protocol` contiene <!-- REF #HTTPRequestClass.protocol.Summary -->el `protocol` pasado en el objeto [`options`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. Si se ha omitido o si se ha utilizado "auto", contiene la versión del protocolo utilizada.
 
 <!-- END REF -->
 
@@ -257,16 +257,16 @@ La propiedad `.protocol` contiene <!-- REF #HTTPRequestClass.protocol.Summary --
 
 #### Descripción
 
-La propiedad `.response` contiene <!-- REF #HTTPRequestClass.response.Summary -->the response to the request if it has received at least the status code, undefined otherwise<!-- END REF -->.
+La propiedad `.response` contiene <!-- REF #HTTPRequestClass.response.Summary -->la respuesta a la petición si ha recibido al menos el código de estado, indefinido en caso contrario<!-- END REF -->.
 
 Un objeto `response` es un objeto no compartible. Ofrece las siguientes propiedades:
 
-| Propiedad   | Tipo    | Descripción                                                                                                                                                                |
-| ----------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| .body       | Variant | Cuerpo de la respuesta. El tipo del mensaje se define según la propiedad [`dataType`](#datatype). Indefinido si el cuerpo no se ha recibido todavía                        |
-| .headers    | Object  | Headers of the response. `headers.key` = value (value can be a collection if the same key appears multiple times). Indefinido si el los encabezados no se ha recibido aún. |
-| .status     | Number  | Código de estado de la respuesta                                                                                                                                           |
-| .statusText | Text    | Mensaje explicando el código de estado                                                                                                                                     |
+| Propiedad   | Tipo    | Descripción                                                                                                                                                                           |
+| ----------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| .body       | Variant | Cuerpo de la respuesta. El tipo del mensaje se define según la propiedad [`dataType`](#datatype). Indefinido si el cuerpo no se ha recibido todavía                                   |
+| .headers    | Object  | Encabezados de la respuesta. `headers.key` = value (el valor puede ser una colección si la misma llave aparece varias veces). Indefinido si el los encabezados no se ha recibido aún. |
+| .status     | Number  | Código de estado de la respuesta                                                                                                                                                      |
+| .statusText | Text    | Mensaje explicando el código de estado                                                                                                                                                |
 
 <!-- END REF -->
 
@@ -320,7 +320,7 @@ La propiedad `.terminated` contiene <!-- REF #HTTPRequestClass.terminated.Summar
 
 #### Descripción
 
-La propiedad `.timeout` contiene <!-- REF #HTTPRequestClass.timeout.Summary -->the `timeout` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. .
+La propiedad `.timeout` contiene <!-- REF #HTTPRequestClass.timeout.Summary -->el `timeout` pasado en el objeto [`options<`](#options-parameter) al llamar a [new()](#4dhttprequestnew)<!-- END REF -->. .
 
 <!-- END REF -->
 
@@ -355,7 +355,7 @@ La propiedad `.url` contiene <!-- REF #HTTPRequestClass.url.Summary -->la URL de
 
 The `4D.HTTPRequest.wait()` function <!-- REF #HTTPRequestClass.wait().Summary -->espera la respuesta del servidor<!-- END REF -->.
 
-If a *time* parameter is passed, the function will wait at most the defined number of seconds.
+Si se pasa un parámetro *time*, la función esperará como máximo el número de segundos definido.
 
-If the response from the server has already arrived, the function returns immediately.
+Si la respuesta del servidor ya ha llegado, la función regresa inmediatamente.
 <!-- END REF -->
