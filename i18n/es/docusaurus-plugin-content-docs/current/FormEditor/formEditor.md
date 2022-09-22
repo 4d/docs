@@ -400,11 +400,11 @@ Por defecto, todos los objetos que soportan la propiedad enfocable se incluyen e
 
 The Form editor allows you to view your forms with or without applied CSS values.
 
-When [style sheets](createStylesheet.md) have been defined, forms (including inherited forms and subforms) are opened in the CSS Preview mode for your operating system by default.
+Cuando se han definido [hojas de estilo](createStylesheet.md), los formularios (incluidos los formularios y subformularios heredados) se abren por defecto en el modo de vista previa CSS para su sistema operativo.
 
 ### Seleccionando el modo de vista previa CSS
 
-The Form editor toolbar provides a CSS button for viewing styled objects:
+La barra de herramientas del editor de formularios ofrece un botón CSS para ver los objetos con estilo:
 
 ![](../assets/en/FormEditor/cssToolbar.png)
 
@@ -412,19 +412,19 @@ Seleccione uno de los siguientes modos de vista previa en el menú:
 
 | Icono barra de herramientas             | Modo de vista previa CSS | Descripción                                                                                                                                  |
 | --------------------------------------- | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| ![](../assets/en/FormEditor/cssNo.png)  | Ninguno                  | No CSS values are applied in the form and no CSS values or icons displayed in the Property List.                                             |
+| ![](../assets/en/FormEditor/cssNo.png)  | Ninguno                  | No se aplican valores CSS en el formulario y no se muestran valores o iconos CSS en la lista de propiedades.                                 |
 | ![](../assets/en/FormEditor/cssWin.png) | Windows                  | Los valores CSS para la plataforma Windows se aplican en el formulario. Los valores e iconos CSS que se muestran en la lista de propiedades. |
 | ![](../assets/en/FormEditor/cssMac.png) | macOS                    | Los valores CSS para la plataforma macOS se aplican en el formulario. Los valores e iconos CSS que se muestran en la lista de propiedades.   |
-> If a font size too large for an object is defined in a style sheet or JSON, the object will automatically be rendered to accommodate the font, however the size of the object will not be changed.
+> Si se define un tamaño de fuente demasiado grande para un objeto en una hoja de estilo o JSON, el objeto se renderizará automáticamente para acomodar la fuente, sin embargo el tamaño del objeto no se modificará.
 
-The CSS preview mode reflects the priority order applied to style sheets vs JSON attributes as defined in the [JSON vs Style Sheet](stylesheets.html#json-vs-style-sheet) section.
+El modo de vista previa CSS refleja el orden de prioridad aplicado a las hojas de estilo frente a los atributos JSON, tal y como se define en la sección [JSON vs Hoja de estilo](stylesheets.html#json-vs-style-sheet).
 
-Once a CSS preview mode is selected, objects are automatically displayed with the styles defined in a style sheet (if any).
-> When copying or duplicating objects, only the CSS references (if any) and the JSON values are copied.
+Una vez seleccionado el modo de vista previa CSS, los objetos se muestran automáticamente con los estilos definidos en una hoja de estilo (si la hay).
+> Al copiar o duplicar objetos, sólo se copian las referencias CSS (si las hay) y los valores JSON.
 
 ### Soporte CSS en la Lista de Propiedades
 
-In CSS Preview mode, if the value of an attribute has been defined in a style sheet, the attribute's name will appear with a CSS icon displayed next to it in the Property List. Por ejemplo, los valores de los atributos definidos en esta hoja de estilo:
+En el modo Vista Previa CSS, si el valor de un atributo ha sido definido en una hoja de estilo, el nombre del atributo aparecerá con un icono CSS junto a él en la Lista de Propiedades. Por ejemplo, los valores de los atributos definidos en esta hoja de estilo:
 
 ```4d
 .myButton {
