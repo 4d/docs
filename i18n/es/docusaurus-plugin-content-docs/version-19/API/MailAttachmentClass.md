@@ -78,7 +78,7 @@ Por defecto, si el parámetro *type* se omite o contiene una cadena vacía, el `
 
 El parámetro opcional *disposition* permite pasar el encabezado `content-disposition` del adjunto. Puede pasar una de las siguientes constantes del tema constante "Mail":
 
-| Constante                   | Value        | Comentario                                                                                                                                                                                                                       |
+| Constante                   | Valor        | Comentario                                                                                                                                                                                                                       |
 | --------------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | mail disposition attachment | "attachment" | Define el valor del encabezado Content-disposition como "attachment", lo que significa que el archivo adjunto debe proporcionarse como un enlace en el mensaje.                                                                  |
 | mail disposition inline     | "inline"     | Define el valor del encabezado Content-disposition como "inline", lo que significa que el archivo adjunto debe aparecer dentro del contenido del mensaje, en la ubicación "cid". La renderización depende del cliente de correo. |
