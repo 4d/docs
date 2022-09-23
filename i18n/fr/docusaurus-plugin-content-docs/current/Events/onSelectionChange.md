@@ -1,6 +1,6 @@
 ---
 id: onSelectionChange
-title: Sur nouvelle sélection
+title: On Selection Change
 ---
 
 | Code | Peut être appelé par                                                                                                                                                                                                                                                                  | Définition                                   |
