@@ -1,6 +1,6 @@
 ---
 id: onDeleteAction
-title: Sur action suppression
+title: On Delete Action
 ---
 
 | Code | Peut être appelé par                                                                             | Définition                                  |
