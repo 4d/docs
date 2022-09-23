@@ -1,6 +1,6 @@
 ---
 id: onCloseDetail
-title: Sur fermeture corps
+title: On Close Detail
 ---
 
 | Code | Peut être appelé par                                     | Définition                                                                        |
