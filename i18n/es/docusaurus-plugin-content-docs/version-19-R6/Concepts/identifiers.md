@@ -116,9 +116,9 @@ QUERY([Clients];[Clients]Name="Smith")
 
 ## Variables
 
-The name of a variable can be up to 31 characters, not including the scope symbols (`$` or `<>`).
+El nombre de una variable puede tener hasta 31 caracteres, sin incluir los símbolos de alcance (`$` or `<>`).
 
-- A variable name must begin with a letter, an underscore, or a dollar ("$") for [parameters](parameters.md) and [local variables](variables.md#local-variables), or `<>` for [interprocess variables](variables.md#interprocess-variables).
+- Un nombre de variable debe comenzar con una letra, un guión bajo o un dólar ("$") para [parámetros](parameters.md) y [variables locales](variables.md#local-variables), o `<>` para [variables de interproceso](variables.md#interprocess-variables).
 - Un dígito como primer carácter está permitido pero no se recomienda, y no es soportado por la [ sintaxis de declaración `var` ](variables.md#using-the-var-keyword).
 - A partir de ahí, el nombre puede incluir cualquier letra o dígito, y el caracter de subrayado ("_").
 - Un caracter de espacio está permitido pero no se recomienda, y no es soportado por la [ sintaxis de declaración `var` ](variables.md#using-the-var-keyword).
@@ -139,7 +139,7 @@ If(bValidate=1) //variable proceso
 
 En el lenguaje 4D, varios elementos tienen sus nombres manejados como cadenas: **formularios**, **objetos de formulario**, **selecciones temporales**, **procesos**, **conjuntos**, **barras de menú**, etc.
 
-Such string names can contain up to 255 characters, not including the `$` or `<>` characters (if any).
+Estos nombres de cadena pueden contener hasta 255 caracteres, sin incluir los caracteres `$` or `<>` (si los hay).
 
 - Los nombres de las cadenas pueden contener cualquier carácter.
 - Los nombres de las cadenas son sensibles a las mayúsculas y minúsculas.
@@ -149,14 +149,14 @@ Ejemplos:
 ```4d
 DIALOG([Storage];"Note box"+String($vlStage))
 OBJECT SET FONT(*;"Binfo";"Times")
-USE NAMED SELECTION([Customers];"Closed")//Process Named Selection
-USE NAMED SELECTION([Customers];"<>ByZipcode") //Interprocess Named Selection
- //Starting the global process "Add Customers"
+USE NAMED SELECTION([Customers];"Closed")//Selección temporal process
+USE NAMED SELECTION([Customers];"<>ByZipcode") //Selección temporal interproceso
+ //Iniciar el proceso global "Add Customers"
 $vlProcessID:=New process("P_ADD_CUSTOMERS";48*1024;"Add Customers")
- //Starting the local process "$Follow Mouse Moves"
+ //Iniciar el proceso local "$Follow Mouse Moves"
 $vlProcessID:=New process("P_MOUSE_SNIFFER";16*1024;"$Follow Mouse Moves")
-CREATE SET([Customers];"Customer Orders")//Process set
-USE SET("<>Deleted Records") //Interprocess set
-If(Records in set("$Selection"+String($i))>0) //Client set
+CREATE SET([Customers];"Customer Orders")//Conjunto process
+USE SET("<>Deleted Records") //Conjunto interprocess
+If(Records in set("$Selection"+String($i))>0) //Conjunto client
 
 ```
