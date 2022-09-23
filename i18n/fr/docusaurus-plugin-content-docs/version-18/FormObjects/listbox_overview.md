@@ -96,12 +96,12 @@ Dans ce type de list box, chaque colonne doit être associée à une expression.
 
 Each element of the collection or each entity is available as an object that can be accessed through the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command. A column expression can be a project method, a variable, or any formula, accessing each entity or collection element object through `This`, for example `This.<propertyPath>` (or `This.value` in case of a collection of scalar values). Vous pouvez utiliser les commandes `LISTBOX SET COLUMN FORMULA` et `LISTBOX INSERT COLUMN FORMULA` pour modifier les colonnes par programmation.
 
-When the data source is an entity selection, any modifications made on the list box side are automatically saved in the database. On the other hand, modifications made on the database side are visible in the list box after touched entities have been reloaded.
+Lorsque la source de données est une entity selection, les modifications apportées du côté de la list box sont automatiquement enregistrées dans la base de données. En revanche, les modifications apportées du côté de la base de données sont visibles dans la list box après le rechargement des entités modifiées.
 
-When the data source is a collection, any modifications made in the list box values are reflected in the collection. When the data source is a collection, any modifications made in the list box values are reflected in the collection. Par exemple :
+Lorsque la source de données est une collection, toute modification apportée aux valeurs de la list box se reflète dans la collection. When the data source is a collection, any modifications made in the list box values are reflected in the collection. Par exemple :
 
 ```4d
-myCol:=myCol.push("new value") //display new value in list box
+myCol:=myCol.push("new value") //afficher new value dans la list box
 ```
 
 ### Propriétés prises en charge
@@ -185,12 +185,12 @@ Les propriétés prises en charge dépendent du type de list box.
 
 ## Colonnes de list box
 
-A list box is made of one or more column object(s) which have specific properties. You can select a list box column in the Form editor by clicking on it when the list box object is selected:
+Une list box est composée d'un ou plusieurs objets colonnes qui ont des propriétés spécifiques. Vous pouvez sélectionner une colonne de list box dans l’éditeur de formulaires en cliquant dessus lorsque l’objet List box est sélectionné :
 
 ![](../assets/en/FormObjects/listbox_column.png)
 
-You can set standard properties (text, background color, etc.) for each column of the list box; these properties take priority over those of the list box object properties.
-> You can define the [Expression type](properties_Object.md#expression-type) for array list box columns (String, Text, Number, Date, Time, Picture, Boolean, or Object). L'utilisation de tableaux d'objets nécessite une licence 4D View Pro (voir [Utilisation de tableaux d'objets en colonnes (4D View Pro)](#using-object-arrays-in-columns-4d-view-pro)).
+Vous pouvez définir pour chaque colonne de List box des propriétés standard (texte, couleur de fond...) : dans ce cas, ces propriétés sont prioritaires par rapport aux propriétés de l'objet List box.
+> Vous pouvez définir le [Type d'expression](properties_Object.md#expression-type) pour les colonnes de list box de type tableau (Alpha, Texte, Numérique, Date, Heure, Image, Booléen ou Objet). L'utilisation de tableaux d'objets nécessite une licence 4D View Pro (voir [Utilisation de tableaux d'objets en colonnes (4D View Pro)](#using-object-arrays-in-columns-4d-view-pro)).
 
 ### Propriétés spécifiques des list box
 
@@ -275,9 +275,9 @@ The typical sequence of events generated during data entry or modification is as
 
 | Action                                                                          | Type(s) de Listbox          | Séquence d'événements                                                                                                                                                                                          |
 | ------------------------------------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| A cell switches to edit mode (user action or a call to the `EDIT ITEM` command) | Tous                        | Sur avant saisie                                                                                                                                                                                               |
+| A cell switches to edit mode (user action or a call to the `EDIT ITEM` command) | Tous                        | On Before Data Entry                                                                                                                                                                                           |
 |                                                                                 | Tous                        | On Getting Focus                                                                                                                                                                                               |
-| Its value is modified                                                           | Tous                        | Sur avant frappe clavier                                                                                                                                                                                       |
+| Its value is modified                                                           | Tous                        | On Before Keystroke                                                                                                                                                                                            |
 |                                                                                 | Tous                        | On After Keystroke                                                                                                                                                                                             |
 |                                                                                 | Tous                        | On After Edit                                                                                                                                                                                                  |
 | A user validates and leaves the cell                                            | List box de type sélection  | Save                                                                                                                                                                                                           |
