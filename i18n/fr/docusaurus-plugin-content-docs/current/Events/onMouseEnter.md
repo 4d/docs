@@ -1,6 +1,6 @@
 ---
 id: onMouseEnter
-title: Sur début survol
+title: On Mouse Enter
 ---
 
 | Code | Peut être appelé par                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Définition                                                      |
@@ -23,5 +23,5 @@ Si l'événement `On Mouse Enter` a été coché pour le formulaire, il est gén
 
 ### Voir également
 
-- [`Sur survol`](onMouseMove.md)
-- [`Sur fin survol`](onMouseLeave.md)
+- [`On Mouse Move`](onMouseMove.md)
+- [`On Mouse Leave`](onMouseLeave.md)
