@@ -163,9 +163,9 @@ $t2*=2 // $t2="HelloHello"
 
 
 
-## Short-circuit operators
+## Operadores en cortocircuito
 
-The **&&** and **||** operators are **short circuit operators**. A short circuit operator is one that doesn't necessarily evaluate all of its operands.
+Los operadores **&&** y **||** son los **operadores en cortocircuito**. Un operador en cortocircuito es aquel que no necesariamente evalúa todos sus operandos.
 
 The difference with the single [**&** and **|** boolean operators](dt_boolean.md#logical-operators) is that the short-circuit operators **&&** and **||** don't return a boolean value. They evaluate expressions as [truthy or falsy](#truthy-and-falsy), then return one of the expressions.
 
