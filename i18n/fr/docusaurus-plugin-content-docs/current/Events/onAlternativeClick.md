@@ -1,6 +1,6 @@
 ---
 id: onAlternativeClick
-title: Sur clic alternatif
+title: On Alternative Click
 ---
 
 | Code | Peut être appelé par                                                                                                                                             | Définition                                         |
