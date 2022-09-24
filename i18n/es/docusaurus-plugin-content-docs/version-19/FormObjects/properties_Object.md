@@ -73,7 +73,7 @@ Esta es la lista de objetos cuyo valor se puede guardar:
 
 ## Variable o expresión
 
-> See also **[Expression](properties_DataSource.md#expression)** for Selection and collection type list box columns.
+> Ver también **[Expression](properties_DataSource.md#expression)** para las columnas de list box de tipo selección y colección.
 
 Esta propiedad especifica la fuente de los datos. Each active form object is associated with an object name and a variable name. El nombre de la variable puede ser diferente del nombre del objeto. In the same form, you can use the same variable several times while each [object name](#object-name) must be unique.
 > El tamaño del nombre de la variable está limitado a 31 bytes. See [Identifiers](Concepts/identifiers.md) section for more information about naming rules.
