@@ -160,17 +160,17 @@ $t2*=2 // $t2="HelloHello"
 
 Los operadores **&&** y **||** son los **operadores en cortocircuito**. Un operador en cortocircuito es aquel que no necesariamente evalúa todos sus operandos.
 
-The difference with the single [**&** and **|** boolean operators](dt_boolean.md#logical-operators) is that the short-circuit operators **&&** and **||** don't return a boolean value. They evaluate expressions as [truthy or falsy](#truthy-and-falsy), then return one of the expressions.
+La diferencia con los operadores booleanos simples [**&** y **||**](dt_boolean.md#logical-operators) es que los operadores en cortocircuito **&&** y **||** no devuelven un valor booleano. Evalúan las expresiones como [truthy o falsy](#truthy-and-falsy), y luego devuelven una de las expresiones.
 
-### Short-circuit AND operator (&&)
+### Operador en corto-circuito AND (&&)
 
 La regla es la siguiente:
 
 Dado `Expr1 && Expr2`:
 
-The short-circuit AND operator evaluates operands from left to right, returning immediately with the value of the first falsy operand it encounters; if all values are [truthy](#truthy-and-falsy), the value of the last operand is returned.
+El operador en cortocircuito AND evalúa los operandos de izquierda a derecha, devolviendo inmediatamente el valor del primer operando falso que encuentra; si todos los valores son [truthy](#truthy-and-falsy), se devuelve el valor del último operando.
 
-The following table summarizes the different cases for the **&&** operator:
+La siguiente tabla resume los diferentes casos para el operador **&&**:
 
 | Expr1  | Expr2  | Valor devuelto |
 | ------ | ------ | -------------- |
@@ -194,9 +194,9 @@ $v := 5 && 10 && "hello" //"hello"
 
 #### Ejemplo 2
 
-Say you have an online store, and some products have a tax rate applied, and others don't.
+Digamos que tiene una tienda en línea, y algunos productos tienen un tipo de impuesto aplicado, y otros no.
 
-To calculate the tax, you multiply the price by the tax rate, which may not have been specified.
+Para calcular el impuesto, se multiplica el precio por el tipo impositivo, que puede no haberse especificado.
 
 Así que puede escribir esto:
 
@@ -206,11 +206,11 @@ var $tax : Variant
 $tax:=$item.taxRate && ($item.price*$item.taxRate)
 ```
 
-`$tax` will be NULL if taxRate is NULL (or undefined), otherwise it will store the result of the calculation.
+`$tax` sera NULL si taxRate es NULL (o indefinido), de lo contrario almacenará el resultado del cálculo.
 
 #### Ejemplo 3
 
-Short-circuit operators are useful in tests such as:
+Los operadores de cortocircuito son útiles en pruebas como:
 
 ```4d
 If(($myObject#Null) && ($myObject.value>10))
@@ -218,15 +218,15 @@ If(($myObject#Null) && ($myObject.value>10))
 End if
 ```
 
-If $myObject is Null, the second argument is not executed, thus no error is thrown.
+Si $myObject es Null, el segundo argumento no se ejecuta, por lo que no se lanza ningún error.
 
-### Short-circuit OR operator (||)
+### Operador en corto-circuito OR (||)
 
-El operador || devuelve el valor de uno de los operandos especificados. The expression is evaluated left to right and tested for possible "short-circuit" evaluation using the following rule:
+El operador || devuelve el valor de uno de los operandos especificados. La expresión se evalúa de izquierda a derecha y se comprueba la posible evaluación en "cortocircuito" utilizando la siguiente regla:
 
 Dado `Expr1 || Expr2`:
 
-If Expr1 is [truthy](#truthy-and-falsy), Expr2 is not evaluated and the calculation returns Expr1.
+Si Expr1 es [truthy](#truthy-and-falsy), Expr2 no se evalúa y el cálculo devuelve Expr1.
 
 Si Expr1 es [falsy](#truthy-and-falsy), el cálculo devuelve Expr2.
 
