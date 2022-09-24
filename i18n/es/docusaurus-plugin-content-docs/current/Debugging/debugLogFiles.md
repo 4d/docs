@@ -259,9 +259,9 @@ Los archivos de historial pueden producirse en dos versiones:
  Para iniciar este historial:
 
  ```4d
- SET DATABASE PARAMETER(SMTP Log;1) //start SMTP log
- SET DATABASE PARAMETER(POP3 Log;1) //start POP3 log
- SET DATABASE PARAMETER(IMAP Log;1) //start IMAP log
+ SET DATABASE PARAMETER(SMTP Log;1) //iniciar log SMTP 
+ SET DATABASE PARAMETER(POP3 Log;1) //iniciar log POP3 
+ SET DATABASE PARAMETER(IMAP Log;1) //iniciar log IMAP
  ```
 
 > 4D Server: clic en el botón **Iniciar los historiales de peticiones y de depuración** en la página [Mantenimiento](ServerWindow/maintenance.md) ode la ventana de administración de 4D Server.
@@ -343,7 +343,7 @@ Los siguientes campos se registran para cada petición:
 
 ## Utilización de un archivo de configuración de log
 
-You can use a **log configuration file** to easily manage log recording in a production environment. Este archivo está preconfigurado por el desarrollador. Typically, it can be sent to customers so that they just need to select it or copy it in a local folder. Una vez activado, el archivo de configuración de log desencadena el registro de registros específicos.
+Puede utilizar un **archivo de configuración de log** para gestionar fácilmente el registro de los historiales en un entorno de producción. Este archivo está preconfigurado por el desarrollador. Normalmente, se puede enviar a los clientes para que sólo tengan que seleccionarlo o copiarlo en una carpeta local. Una vez activado, el archivo de configuración de log desencadena el registro de registros específicos.
 
 ### Cómo activar el archivo
 
@@ -355,7 +355,7 @@ Hay varias maneras de activar el archivo de configuración de los logs:
   * Windows: `Users\[userName]\AppData\Roaming\[application]`
   * macOS: `/Users/[userName]/Library/ApplicationSupport/[application]`
 
-> If you want to enable the log configuration file for all projects in stand-alone, server and remote 4D applications, you can copy the `logConfig.json` file in the following folder:
+> Si desea habilitar el archivo de configuración de registro para todos los proyectos de las aplicaciones autónomas, de servidor y remotas de 4D, puede copiar el archivo `logConfig.json` en la siguiente carpeta:
 > 
 > * Windows: `Users\[userName]\AppData\Roaming\4D o \4D Server`
 > * macOS: `/Users/[userName]/Library/ApplicationSupport/4D o /4D Server`
