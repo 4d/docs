@@ -34,28 +34,28 @@ Esta ventana está disponible en el Editor de Código o en la [ventana de códig
 - haga clic derecho en una línea y seleccione **Modificar el punto de interrupción** en el menú contextual, o
 - `Alt+clic` (Windows) o `Opción+clic` (macOS) en el margen izquierdo.
 
-Si ya existe un punto de interrupción, la ventana se muestra para ese punto de interrupción. Otherwise, a break point is created and the window is displayed for the newly created break point.
+Si ya existe un punto de interrupción, la ventana se muestra para ese punto de interrupción. En caso contrario, se crea un punto de ruptura y se muestra la ventana para el punto de ruptura recién creado.
 
 A continuación se describen las propiedades:
 
-- **Location**: indicates the name of the method and the line number attached to the breakpoint.
-- **Break when following expression is true**: You can create **conditional breakpoints** by entering a 4D formula that returns `True` or `False`. For example, insert `Records in selection(\[aTable])=0` to make sure the break occurs only if there no record selected for the table \[aTable]. Breakpoint conditions are available in the **Condition** column of the [Break list](#break-list).
-- **Number of times to skip before breaking**: You can attach a breakpoint to a line located in a loop structure (While, Repeat, or For) or located in subroutine or function called from within a loop.
-- **Breakpoint is disabled**: If you currently do not need a break point, but might need it later, you can temporarily disable it. A disabled break point appears as a dash (-) instead of a bullet (•)|
+- **Ubicación**: indica el nombre del método y el número de línea que se adjunta al punto de interrupción.
+- **Interrumpir cuando la siguiente expresión es true**: puede crear los **puntos de interrupción condicionales** introduciendo una fórmula 4D que devuelva `True` o `False`. Por ejemplo, inserte `Records in selection(\[aTable])=0` para asegurarse de que la ruptura se produce sólo si no hay ningún registro seleccionado para la tabla \[aTable]. Las condiciones de los puntos de interrupción están disponibles en la columna **Condición** de la [lista de interrupciones](#break-list).
+- **Número de veces que hay que saltar antes de romper**: puede asociar un punto de ruptura a una línea situada en una estructura de bucle (While, Repeat o For) o situada en una subrutina o función llamada desde dentro de un bucle.
+- **Punto de ruptura desactivado**: si actualmente no necesita un punto de ruptura, pero podría necesitarlo más adelante, puede desactivarlo temporalmente. Un punto de interrupción desactivado aparece como un guión (-) en lugar de una viñeta (-)|
 
 ### Puntos de interrupción en la depuración remota
 
-La lista de puntos de interrupción se almacena localmente. In remote debugging mode, if the attached debugger is a remote 4D, the remote break point list replaces temporarily the server break point list during the debugging session.
+La lista de puntos de interrupción se almacena localmente. En el modo de depuración remota, si el depurador conectado es un 4D remoto, la lista de puntos de interrupción remota sustituye temporalmente a la lista de puntos de interrupción del servidor durante la sesión de depuración.
 
-The server break point list is automatically restored if it becomes again the attached debugger.
+La lista de puntos de interrupción del servidor se restablece automáticamente si vuelve a ser el depurador asociado.
 
 ### Lista de rupturas
 
-The Break list is a page of the Runtime Explorer that lets you manage the breakpoints created in the Debugger Window or in the Code Editor. For more information on the Runtime Explorer, see its dedicated page in [the Design reference manual](https://doc.4d.com/4Dv19/4D/19/Runtime-Explorer.200-5416614.en.html).
+La lista de puntos de ruptura es una página del Explorador de ejecución que le permite gestionar los puntos de ruptura creados en la ventana del depurador o en el editor de código. Para más información sobre el Explorador de ejecución, consulte su página dedicada en [el manual de Diseño](https://doc.4d.com/4Dv19/4D/19/Runtime-Explorer.200-5416614.en.html).
 
 Para abrir la página de la lista de puntos de ruptura:
 
-1. From the **Run menu**, click **Runtime Explorer...**
+1. En el **menú Ejecutar**, haga clic en el **Explorador de ejecución...**
 
 2. Haga clic en la pestaña **Break** para mostrar la lista de pausas:
 
@@ -63,7 +63,7 @@ Para abrir la página de la lista de puntos de ruptura:
 
 Utilizando esta ventana, puede:
 
-- Set conditions for breakpoints in the **Conditions** column
+- Definir las condiciones para los puntos de interrupción en la columna **Condiciones**
 - Enable or disable breakpoints by clicking the bullets in the margin. Los puntos de interrupción desactivados muestran balas transparentes
 - Delete breakpoints by pressing the `Delete` or `Backspace` key, or click on the **Delete** button below the list.
 - Open the methods where the breakpoint are located by double-clicking any line in the list
@@ -80,7 +80,7 @@ Los puntos de interrupción y los comandos de captura se pueden utilizar combina
 
 To open the Caught Commands page:
 
-1. Choose **Run** > **Runtime explorer...** to open the Runtime Explorer.
+1. Elija **Ejecutar** > **Explorador de ejecución...** para abrir el Explorador de ejecución.
 
 2. Click **Catch** to display the Caught Commands List:
 
