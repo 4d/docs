@@ -38,7 +38,7 @@ title: 背景色と境界線
 
 #### 参照
 
-[透過](#transparent)
+[透過](#透過)
 
 ---
 
@@ -174,7 +174,7 @@ title: 背景色と境界線
 
 ![](../assets/en/FormObjects/listbox_styles1.png)
 
-次に、負の値を持つセルの色を濃いオレンジで示したい場合、 To do this, you set a background color array for each column, for example `<>_BgndColor_1`, `<>_BgndColor_2` and `<>_BgndColor_3`. これらの配列の値は、リストボックスプロパティに設定されているものや、全体用の行背景色配列よりも優先されます。
+次に、負の値を持つセルの色を濃いオレンジで示したい場合、 各列にも行背景色配列を設定します (例: `<>_BgndColor_1`, `<>_BgndColor_2` と `<>_BgndColor_3`)。 これらの配列の値は、リストボックスプロパティに設定されているものや、全体用の行背景色配列よりも優先されます。
 
 ```4d
  <>_BgndColorsCol_3{2}:=0x00FF8000 // 濃いオレンジ
@@ -215,4 +215,4 @@ title: 背景色と境界線
 
 #### 参照
 
-[背景色/塗りカラー](#background-color-fill-color)
+[背景色/塗りカラー](#背景色-塗りカラー)
