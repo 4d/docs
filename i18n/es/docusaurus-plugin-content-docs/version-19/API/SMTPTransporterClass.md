@@ -45,13 +45,13 @@ Los objetos SMTP Transporter se instancian con el comando [SMTP New transporter]
 | Parámetros | Tipo               |    | Descripción                                                                    |
 | ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server     | Object             | -> | Información del servidor de correo                                             |
-| Result     | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object)|<!-- END REF -->
+| Result     | 4D.SMTPTransporter | <- | [objeto SMTP transporter](#smtp-transporter-object)|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `SMTP New transporter` command <!-- REF #_command_.SMTP New transporter.Summary -->configures a new SMTP connection<!-- END REF --> según el parámetro *server* y devuelve un nuevo objeto *[SMTP transporter](#smtp-transporter-object)*. El objeto transportador devuelto se utilizará normalmente para el envío de correos electrónicos.
+El comando `SMTP New transporter` <!-- REF #_command_.SMTP New transporter.Summary -->configura una nueva conexión SMTP<!-- END REF --> según el parámetro *server* y devuelve un nuevo objeto *[SMTP transporter](#smtp-transporter-object)*. El objeto transportador devuelto se utilizará normalmente para el envío de correos electrónicos.
 
 > Este comando no abre ninguna conexión con el servidor SMTP. La conexión SMTP se abre realmente cuando la función [`.send()`](#send) se ejecuta.  
 > 
@@ -121,7 +121,7 @@ La función devuelve un [**SMTP transporter**](#smtp-transporter-object). Todas 
 | Parámetros | Tipo               |    | Descripción                                                                    |
 | ---------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
 | server     | Object             | -> | Información del servidor de correo                                             |
-| Result     | 4D.SMTPTransporter | <- | [SMTP transporter object](#smtp-transporter-object)|<!-- END REF -->
+| Result     | 4D.SMTPTransporter | <- | [objeto SMTP transporter](#smtp-transporter-object)|<!-- END REF -->
 
 |
 
@@ -241,7 +241,7 @@ En caso de un problema no relacionado con el procesamiento SMTP (por ejemplo, si
 
 En este caso, el objeto estado resultante contiene los siguientes valores:
 
-| Propiedad  | Value                  |
+| Propiedad  | Valor                  |
 | ---------- | ---------------------- |
 | success    | False                  |
 | status     | 0                      |

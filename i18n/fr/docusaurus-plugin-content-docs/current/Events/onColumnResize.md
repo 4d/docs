@@ -1,6 +1,6 @@
 ---
 id: onColumnResize
-title: Sur redimensionnement colonne
+title: On Column Resize
 ---
 
 | Code | Peut être appelé par                                                                                                                                                                     | Définition                                                                                                                           |
@@ -22,7 +22,7 @@ Cet événement est généré lorsque la largeur d'une colonne est modifiée par
 
 | Propriété   | Type        | Description                                                                                |
 | ----------- | ----------- | ------------------------------------------------------------------------------------------ |
-| code        | entier long | Sur redimensionnement colonne                                                              |
+| code        | entier long | On Column Resize                                                                           |
 | Description | text        | "On Column Resize"                                                                         |
 | objectName  | text        | Nom de la zone 4D View Pro                                                                 |
 | sheetName   | text        | Nom de la feuille de l'événement                                                           |

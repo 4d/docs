@@ -177,13 +177,13 @@ title: 入力
 - 複数行の入力オブジェクトの場合、4D は自動で改行します:  
   ![](../assets/en/FormObjects/multilineAuto.png)
 
-#### ×
+#### なし
 
 - 一行の入力オブジェクトでは、行の最後にある単語はエリアからはみ出し、改行はおこなわれません。
 - 改行はおこなわれません。テキストは常に一行で表示されます。 文字やテキストのフィールドまたは変数が改行文字を含んでいる場合、エリアが更新されるとすぐに最初のキャリッジリターンより後のテキストが取り除かれます:  
   ![](../assets/en/FormObjects/multilineNo.png)
 
-#### ◯
+#### あり
 
 この値を選択すると、追加の [ワードラップ](properties_Display.md#ワードラップ) オプションが表示されます。
 
@@ -278,7 +278,7 @@ xliff 参照を ":xliff:resname" の形でプレースホルダーとして使�
 
 #### 対象オブジェクト
 
-[Button](button_overview.md) - [Check Box](checkbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Radio Button](radio_overview.md)
+[ボタン](button_overview.md) - [チェックボックス](checkbox_overview.md) - [ピクチャーボタン](pictureButton_overview.md) - [ラジオボタン](radio_overview.md)
 
 ---
 

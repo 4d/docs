@@ -1,6 +1,6 @@
 ---
 id: onDragOver
-title: Sur glisser
+title: On Drag Over
 ---
 
 | Code | Peut être appelé par                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Définition                                     |
@@ -27,4 +27,4 @@ Le code gérant un événement `On Drag Over` doit être court et s'exécuter ra
 
 
 #### Voir également
-[`Sur début survol`](onBeginDragOver.md)
+[`On Begin Drag Over`](onBeginDragOver.md)

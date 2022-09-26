@@ -55,7 +55,7 @@ Ejecuta la línea de método actual, indicada por el contador del programa (la f
 
 El botón Ejecutar no entra en las subrutinas y las funciones, sino que se queda al nivel del método que está rastreando en ese momento. Si desea también rastrear las llamadas a las subrutinas y a las funciones, utilice el botón **Paso a paso detallado**.
 
-En la depuración remota, si el método se ejecuta en el servidor, se llama al método padre después de que se ejecute la última línea del método hijo. If the parent method is executed on the remote side, the **Step Over** button has the same effect as the **No Trace** button.
+En la depuración remota, si el método se ejecuta en el servidor, se llama al método padre después de que se ejecute la última línea del método hijo. Si el método padre se ejecuta en el lado remoto, el botón **Step Over** tiene el mismo efecto que el botón **No Trace**.
 
 #### Paso a paso detallado
 
@@ -90,11 +90,11 @@ Si utiliza este botón para modificar un método, las modificaciones sólo será
 Guarda la configuración actual de la ventana del depurador y la convierte en la configuración por defecto. Esto incluye:
 
 * el tamaño y la posición de la ventana
-* the position of the division lines and the contents of the area that evaluates the expressions
+* la posición de las líneas de división y el contenido del área que evalúa las expresiones
 
 Estos parámetros se almacenan en el proyecto.
 
-This action is not available in remote debugging mode (see [Debugging from Remote Machines](./debugging-remote)).
+Esta acción no está disponible en el modo de depuración remota (ver [Depuración desde máquinas remotas](./debugging-remote)).
 
 ## Ventana de expresión
 
@@ -106,7 +106,7 @@ The **Watch pane** is displayed in the top left corner of the Debugger window, b
 
 The **Watch Pane** displays useful general information about the system, the 4D environment, and the execution environment.
 
-The **Expression** column displays the names of the objects and expressions. The **Value** column displays their current corresponding values. Clicking on any value on the right side of the pane allows you to modify the value of the object, if this is permitted for that object.
+The **Expression** column displays the names of the objects and expressions. The **Value** column displays their current corresponding values. Al hacer clic en cualquier valor de la parte derecha del panel, se puede modificar el valor del objeto, si está permitido para ese objeto.
 
 At any point, you can drag and drop themes, theme sublists (if any), and theme items to the [Custom Watch Pane](#custom-watch-pane).
 
@@ -185,7 +185,7 @@ Some objects, such as list box arrays, can be presented as two distinct objects,
 
 #### Constantes
 
-Like the Constants page of the Explorer window, this theme displays predefined constants provided by 4D. Las expresiones de este tema no pueden ser modificadas.
+Al igual que la página de Constantes de la ventana del Explorador, este tema muestra las constantes predefinidas ofrecidas por 4D. Las expresiones de este tema no pueden ser modificadas.
 
 #### Semáforos
 
@@ -265,7 +265,7 @@ Para mostrar el tipo de parámetro, marque la opción **Mostrar tipos** en el me
 
 ![call-chain-show-types](../assets/en/Debugging/callChainShowTypes.png)
 
-After you deploy the list of parameters, you can drag and drop parameters and function results to the [Custom Watch Pane](#custom-watch-pane).
+Después de desplegar la lista de parámetros, puede arrastrar y soltar los parámetros y los resultados de las funciones en el [Custom Watch Pane](#custom-watch-pane).
 
 También puede utilizar el comando [Get call chain](https://doc.4d.com/4dv19/help/command/en/page1662.html) para recuperar la cadena de llamadas por programación.
 
@@ -346,7 +346,7 @@ Esto también funciona con las selecciones:
 
 ### Añadir expresiones al panel de control personalizado
 
-You can copy any selected expression from the Source Code Pane to the [Custom Watch Pane](#custom-watch-pane).
+Puede copiar toda expresión seleccionada del panel de código fuente en el [Custom Watch Pane](#custom-watch-pane).
 
 1. En el panel de código fuente, seleccione la expresión a evaluar
 2. Haga una de las siguientes cosas:

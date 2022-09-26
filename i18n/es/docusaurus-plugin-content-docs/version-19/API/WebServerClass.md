@@ -80,7 +80,7 @@ El comando `WEB Server` <!-- REF #_command_.WEB Server.Summary -->devuelve el ob
 
 Por defecto, si se omite el parámetro *option*, el comando devuelve una referencia al servidor web de la base de datos, es decir, al servidor web por defecto. Para designar el servidor web a devolver, puede pasar una de las siguientes constantes en el parámetro *option*:
 
-| Constante                      | Value | Comentario                                                        |
+| Constante                      | Valor | Comentario                                                        |
 | ------------------------------ | ----- | ----------------------------------------------------------------- |
 | `Web server database`          | 1     | Servidor web de la base actual (por defecto si se omite)          |
 | `Web server host database`     | 2     | Servidor web de la base local de un componente                    |
@@ -232,7 +232,7 @@ Para más información sobre CORS, consulte la página [Cross-origin resource sh
 
 
 
-<!-- REF #WebServerClass.CORSSettings.Summary -->List of allowed hosts and methods for the CORS service<!-- END REF --> (ver [`propiedad CORSEnabled`](#corsenabled)). Cada objeto debe contener una propiedad **host** y, opcionalmente, una propiedad **methods**:
+<!-- REF #WebServerClass.CORSSettings.Summary -->Lista de hosts y métodos permitidos para el servicio CORS<!-- END REF --> (ver [`propiedad CORSEnabled`](#corsenabled)). Cada objeto debe contener una propiedad **host** y, opcionalmente, una propiedad **methods**:
 
 - **host** (texto, obligatorio): nombre de dominio o dirección IP desde donde las páginas externas pueden enviar solicitudes de datos al Servidor a través de CORS. Se pueden añadir múltiples atributos de dominio para crear una lista blanca. Si *host* no está presente o está vacío, el objeto se ignora. Se soportan varias sintaxis:
   - 192.168.5.17:8081
@@ -518,7 +518,7 @@ Valores posibles: 500000 - 2147483648
 
 
 
-<!-- REF #WebServerClass.maxRequestSize.Summary -->Maximum size (in bytes) of incoming HTTP requests (POST) that the web server is allowed to process<!-- END REF -->. Pasar el valor máximo (2147483647) significa que, en la práctica, no se define ningún límite. Este límite se utiliza para evitar la saturación del servidor web debido a peticiones entrantes demasiado grandes. Si una petición alcanza este límite, el servidor web la rechaza.
+<!-- REF #WebServerClass.maxRequestSize.Summary -->Tamaño máximo (en bytes) de las peticiones HTTP entrantes (POST) que el servidor web puede procesar<!-- END REF -->. Pasar el valor máximo (2147483647) significa que, en la práctica, no se define ningún límite. Este límite se utiliza para evitar la saturación del servidor web debido a peticiones entrantes demasiado grandes. Si una petición alcanza este límite, el servidor web la rechaza.
 
 Valores posibles: 500000 - 2147483647
 
@@ -534,7 +534,7 @@ Valores posibles: 500000 - 2147483647
 > Esta propiedad no se devuelve en [modo sesiones escalables](#scalablesession).
 
 
-<!-- REF #WebServerClass.maxSessions.Summary -->Maximum number of simultaneous legacy sessions<!-- END REF -->. Cuando se alcanza el límite, se cierra la sesión heredada más antigua (y se llama al método base `On Web Legacy Close Session`) si el servidor web necesita crear una nueva. El número de sesiones heredadas simultáneas no puede superar el número total de procesos web (propiedad `maxConcurrentProcesses`, 100 por defecto)
+<!-- REF #WebServerClass.maxSessions.Summary -->Número máximo de sesiones legacy simultáneas<!-- END REF -->. Cuando se alcanza el límite, se cierra la sesión heredada más antigua (y se llama al método base `On Web Legacy Close Session`) si el servidor web necesita crear una nueva. El número de sesiones heredadas simultáneas no puede superar el número total de procesos web (propiedad `maxConcurrentProcesses`, 100 por defecto)
 
 <!-- END REF -->
 
@@ -634,7 +634,7 @@ Contiene <!-- REF #WebServerClass.scalableSession.Summary -->`True` si las sesio
 <!-- REF #WebServerClass.sessionCookieDomain.Syntax -->**.sessionCookieDomain** : Text<!-- END REF -->
 
 
-El <!-- REF #WebServerClass.sessionCookieDomain.Summary -->"domain" field of the session cookie<!-- END REF -->. Se utiliza para controlar el alcance de las cookies de sesión. Si define, por ejemplo, el valor "/*.4d.fr" para este selector, el cliente sólo enviará una cookie cuando la solicitud se dirija al dominio ".4d.fr", lo que excluye a los servidores que alojan datos estáticos externos.
+El <!-- REF #WebServerClass.sessionCookieDomain.Summary -->campo "domain" de la cookie de sesión<!-- END REF -->. Se utiliza para controlar el alcance de las cookies de sesión. Si define, por ejemplo, el valor "/*.4d.fr" para este selector, el cliente sólo enviará una cookie cuando la solicitud se dirija al dominio ".4d.fr", lo que excluye a los servidores que alojan datos estáticos externos.
 
 <!-- END REF -->
 
@@ -646,7 +646,7 @@ El <!-- REF #WebServerClass.sessionCookieDomain.Summary -->"domain" field of the
 <!-- REF #WebServerClass.sessionCookieName.Syntax -->**.sessionCookieName** : Text<!-- END REF -->
 
 
-El <!-- REF #WebServerClass.sessionCookieName.Summary -->name of the cookie used for storing the session ID<!-- END REF -->.
+El <!-- REF #WebServerClass.sessionCookieName.Summary -->nombre de la cookie utilizada para almacenar el ID de sesión<!-- END REF -->.
 
 *Propiedad de sólo lectura*
 
@@ -660,7 +660,7 @@ El <!-- REF #WebServerClass.sessionCookieName.Summary -->name of the cookie used
 <!-- REF #WebServerClass.sessionCookiePath.Syntax -->**.sessionCookiePath** : Text<!-- END REF -->
 
 
-El <!-- REF #WebServerClass.sessionCookiePath.Summary -->"path" field of the session cookie<!-- END REF -->. Se utiliza para controlar el alcance de las cookies de sesión. Si define, por ejemplo, el valor "/4DACTION" para este selector, el cliente sólo enviará una cookie para las peticiones dinámicas que empiecen por 4DACTION, y no para las imágenes, páginas estáticas, etc.
+El <!-- REF #WebServerClass.sessionCookiePath.Summary -->campo "path" de la cookie de sesión<!-- END REF -->. Se utiliza para controlar el alcance de las cookies de sesión. Si define, por ejemplo, el valor "/4DACTION" para este selector, el cliente sólo enviará una cookie para las peticiones dinámicas que empiecen por 4DACTION, y no para las imágenes, páginas estáticas, etc.
 
 <!-- END REF -->
 
@@ -680,9 +680,9 @@ El <!-- REF #WebServerClass.sessionCookiePath.Summary -->"path" field of the ses
 <!-- REF #WebServerClass.sessionCookieSameSite.Syntax -->**.sessionCookieSameSite** : Text<!-- END REF -->
 
 
-El <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->"SameSite" session cookie value<!-- END REF -->. Valores posibles (utilizando constantes):
+El <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->valor de la cookie de session "SameSite"<!-- END REF -->. Valores posibles (utilizando constantes):
 
-| Constante           | Value    | Descripción                                                                                                                                                                |
+| Constante           | Valor    | Descripción                                                                                                                                                                |
 | ------------------- | -------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Web SameSite Strict | "Strict" | *Valor por defecto* - Las cookies sólo se envían en un contexto de primera parte                                                                                           |
 | Web SameSite Lax    | "Lax"    | Las cookies también se envían en las sub-solicitudes entre sitios, pero sólo cuando un usuario está navegando hacia el sitio de origen (es decir, cuando sigue un enlace). |
@@ -702,7 +702,7 @@ Ver la descripción de [Session Cookie SameSite](WebServer/webServerConfig.md#se
 > Esta propiedad no se utiliza en el modo [sesiones escalables](#scalablesession) (no hay validación de la dirección IP).
 
 
-El <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address validation for session cookies<!-- END REF -->. Por razones de seguridad, por defecto el servidor web comprueba la dirección IP de cada solicitud que contiene una cookie de sesión y la rechaza si esta dirección no coincide con la dirección IP utilizada para crear la cookie. En algunas aplicaciones específicas, es posible que desee desactivar esta validación y aceptar las cookies de sesión, incluso cuando sus direcciones IP no coinciden. Por ejemplo, cuando los dispositivos móviles cambian entre las redes WiFi y 3G/4G, su dirección IP cambiará. En este caso, puede permitir que los clientes puedan seguir utilizando sus sesiones web incluso cuando las direcciones IP cambien (esta configuración reduce el nivel de seguridad de su aplicación).
+El <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->validación de la dirección IP para las cookies de sesión<!-- END REF -->. Por razones de seguridad, por defecto el servidor web comprueba la dirección IP de cada solicitud que contiene una cookie de sesión y la rechaza si esta dirección no coincide con la dirección IP utilizada para crear la cookie. En algunas aplicaciones específicas, es posible que desee desactivar esta validación y aceptar las cookies de sesión, incluso cuando sus direcciones IP no coinciden. Por ejemplo, cuando los dispositivos móviles cambian entre las redes WiFi y 3G/4G, su dirección IP cambiará. En este caso, puede permitir que los clientes puedan seguir utilizando sus sesiones web incluso cuando las direcciones IP cambien (esta configuración reduce el nivel de seguridad de su aplicación).
 
 <!-- END REF -->
 
@@ -730,7 +730,7 @@ El <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address val
 
 <!-- END REF -->
 
-The `.start()` function <!-- REF #WebServerClass.start().Summary -->starts the web server on which it is applied<!-- END REF -->, using properties set in the optional *settings* object parameter.
+La función `.start()` <!-- REF #WebServerClass.start().Summary -->inicia el servidor web en el que se aplica<!-- END REF -->, utilizando las propiedades definidas en el parámetro objeto opcional *settings*.
 
 El servidor web se inicia con la configuración por defecto definida en el archivo de configuración del proyecto o (sólo en la base host) utilizando el comando `WEB SET OPTION`. Sin embargo, utilizando el parámetro *settings*, se pueden definir propiedades personalizadas para la sesión del servidor web.
 
@@ -746,7 +746,7 @@ La función devuelve un objeto que describe el estado de lanzamiento del servido
 | --------- | ----------------------- | ---------- | ----------------------------------------------------------------------------- |
 | success   |                         | Boolean    | True si el servidor web se ha iniciado correctamente, False en caso contrario |
 | errors    |                         | Collection | Pila de errores 4D (no se devuelve si el servidor web se inició con éxito)    |
-|           | \[].errCode            | Number     | 4D error code                                                                 |
+|           | \[].errCode            | Number     | Código de error 4D                                                            |
 |           | \[].message            | Text       | Descripción del error 4D                                                      |
 |           | \[].componentSignature | Text       | Firma del componente interno que ha devuelto el error                         |
 > Si el servidor web ya fue lanzado, se devuelve un error.
@@ -789,7 +789,7 @@ La función devuelve un objeto que describe el estado de lanzamiento del servido
 | ---------- | ---- |  | ------------------------------------------------------- |
 |            |      |  | No requiere ningún parámetro|<!-- END REF --> |
 
-The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
+La función `.stop()` <!-- REF #WebServerClass.stop().Summary -->detiene el servidor web en el que se aplica<!-- END REF -->.
 
 Si el servidor web se ha iniciado, todas las conexiones y procesos web se cierran, una vez que las peticiones actualmente gestionadas han finalizado. Si el servidor web no se ha iniciado, el método no hace nada.
 > Esta función reinicia los parámetros web personalizados definidos para la sesión mediante el parámetro *settings* de la función [`.start()`](#start), si la hubiera.

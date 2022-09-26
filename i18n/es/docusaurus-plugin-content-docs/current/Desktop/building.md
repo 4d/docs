@@ -337,7 +337,7 @@ In some cases, you may want to prevent client applications from being able to ca
 
 To force the update, simply exclude the current version number of client applications (X-1 and earlier) in the version number range compatible with the server application. En este caso, el mecanismo de actualización no permitirá que las aplicaciones cliente no actualizadas se conecten. En este caso, el mecanismo de actualización no permitirá que las aplicaciones cliente no actualizadas se conecten.
 
-The [current version number](#current_version) is set on the Client/Server page of the Build Application dialog box. The intervals of authorized numbers are set in the application project using specific [XML keys](#buildapp4dsettings).
+El [número de versión actual](#current_version) se define en la página Cliente/Servidor del generador de la aplicación. Los intervalos de los números autorizados se definen en el proyecto de la aplicación vía las [llaves XML](#buildapp4dsettings) específicas.
 
 #### En caso de error
 
@@ -350,15 +350,15 @@ Hay muchas causas posibles para este error. When you get this message, it is adv
 
 ### Archivos generados
 
-Once a client/server application is built, you will find a new folder in the destination folder named **Client Server executable**. This folder contains two subfolders, `\&#060;ApplicationName&#062;Client` and `\&#060;ApplicationName&#062;Server`.
-> Estas carpetas no se generan si ocurre un error. In this case, open the [log file](#log-file) in order to find out the cause of the error.
+Once a client/server application is built, you will find a new folder in the destination folder named **Client Server executable**. Esta carpeta contiene dos subcarpetas, `\&#060;ApplicationName&#062;Client` y `\&#060;ApplicationName&#062;Server`.
+> Estas carpetas no se generan si ocurre un error. En este caso, abra el [archivo de historial](#archivo-registro) para conocer la causa del error.
 
-The `\&#060;ApplicationName&#062;Client` folder contains the client portion of the application corresponding to the execution platform of the application builder. Esta carpeta debe instalarse en cada máquina cliente. The `\&#060;ApplicationName&#062;Server` folder contains the server portion of the application.
+La carpeta `&#060;ApplicationName&#062;Client` contiene la parte cliente de la aplicación correspondiente a la plataforma de ejecución del generador de aplicaciones. Esta carpeta debe instalarse en cada máquina cliente. La carpeta `\&#060;ApplicationName&#062;Server` contiene la parte del servidor de la aplicación.
 
 The contents of these folders vary depending on the current platform:
 
-* *Windows* - Each folder contains the application executable file, named `\&#060;ApplicationName&#062;Client.exe` for the client part and `\&#060;ApplicationName&#062;Server.exe` for the server part as well as the corresponding .rsr files. The folders also contain various files and folders necessary for the applications to work and customized items that may be in the original 4D Volume Desktop and 4D Server folders.
-* *macOS* - Each folder contains only the application package, named `\&#060;ApplicationName&#062; Client` for the client part and `\&#060;ApplicationName&#062; Server` for the server part. Cada paquete contiene todos los elementos necesarios para que la aplicación funcione. En macOS, un paquete se lanza haciendo doble clic en él.
+* *Windows* - Cada carpeta contiene el archivo ejecutable de la aplicación, denominado`\&#060;ApplicationName&#062;Client.exe` para la parte cliente y `\&#060;ApplicationName&#062;Server.exe` para la parte del servidor, así como los archivos .rsr correspondientes. The folders also contain various files and folders necessary for the applications to work and customized items that may be in the original 4D Volume Desktop and 4D Server folders.
+* *macOS* - Cada carpeta contiene únicamente el paquete de la aplicación, denominado `\&#060;ApplicationName&#062; Client` para la parte cliente y `\&#060;ApplicationName&#062; Server` para la parte servidor. Cada paquete contiene todos los elementos necesarios para que la aplicación funcione. En macOS, un paquete se lanza haciendo doble clic en él.
 
  > The macOS packages built contain the same items as the Windows subfolders. In order to modify it, you must first display its contents (**Control+click** on the icon).
 

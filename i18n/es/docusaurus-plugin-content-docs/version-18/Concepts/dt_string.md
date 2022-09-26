@@ -36,7 +36,7 @@ Las siguientes secuencias de escape pueden utilizarse dentro de las cadenas:
 
 ## Operadores de cadenas
 
-| Operación              | Sintaxis         | Devuelve | Expression              | Value    |
+| Operación              | Sintaxis         | Devuelve | Expression              | Valor    |
 | ---------------------- | ---------------- | -------- | ----------------------- | -------- |
 | Concatenación          | Cadena + Cadena  | String   | "abc" + "def"           | "abcdef" |
 | Repetición             | Cadena * Número  | String   | "ab" * 3                | "ababab" |

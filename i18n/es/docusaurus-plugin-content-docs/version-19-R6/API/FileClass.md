@@ -87,7 +87,7 @@ En el parámetro *path*, pase una ruta de archivo. Puede utilizar una cadena per
 
 Por defecto, 4D espera una ruta expresada con la sintaxis POSIX. Si trabaja con los nombres de ruta de plataforma (Windows o macOS), debe declararlo utilizando el parámetro *pathType*. Las siguientes constantes están disponibles:
 
-| Constante        | Value | Comentario                                                                                                        |
+| Constante        | Valor | Comentario                                                                                                        |
 | ---------------- | ----- | ----------------------------------------------------------------------------------------------------------------- |
 | fk platform path | 1     | Ruta expresada con una sintaxis específica de la plataforma (obligatoria en caso de nombre de ruta de plataforma) |
 | fk posix path    | 0     | Ruta expresada con sintaxis POSIX (por defecto)                                                                   |
@@ -96,7 +96,7 @@ Por defecto, 4D espera una ruta expresada con la sintaxis POSIX. Si trabaja con 
 
 En el parámetro *fileConstant*, pase un archivo 4D interno o sistema, utilizando una de las siguientes constantes:
 
-| Constante                         | Value | Comentario                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| Constante                         | Valor | Comentario                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | --------------------------------- | ----- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Backup history file               | 19    | Archivo de historial de copias de seguridad (ver Archivos de configuración y rastreo). Se almacena en la carpeta de destino de la copia de seguridad.                                                                                                                                                                                                                                                                                                                              |
 | Backup log file                   | 13    | Archivo historial de copias de seguridad actual. Almacenado en la carpeta Logs de la aplicación.                                                                                                                                                                                                                                                                                                                                                                                   |
@@ -123,7 +123,7 @@ En el parámetro *fileConstant*, pase un archivo 4D interno o sistema, utilizand
 
 Si el objetivo *fileConstant* no existe, se devuelve un objeto null. No se produce ningún error.
 
-If the command is called from a component, pass the optional `*` parameter to get the path of the host database. Otherwise, if you omit the `*` parameter, a null object is always returned.
+Si el comando se llama desde un componente, pase el parámetro opcional `*` para obtener la ruta de la base local. En caso contrario, si se omite el parámetro `*`, siempre se devuelve un objeto null.
 
 ## 4D.File.new()
 
@@ -221,7 +221,7 @@ Pase el nombre del alias o del acceso directo a crear en el parámetro *aliasNam
 
 Por defecto en macOS, la función crea un alias estándar. También puede crear un enlace simbólico utilizando el parámetro *aliasType*. Las siguientes constantes están disponibles:
 
-| Constante          | Value | Comentario                         |
+| Constante          | Valor | Comentario                         |
 | ------------------ | ----- | ---------------------------------- |
 | `fk alias link`    | 0     | Enlace de alias (por defecto)      |
 | `fk symbolic link` | 1     | Enlace simbólico (sólo para macOS) |
@@ -719,7 +719,7 @@ Si existe una marca de orden de bytes (BOM) para el conjunto de caracteres, 4D l
 
 En *breakMode*, se puede pasar un número que indica el procesamiento a aplicar a los caracteres de fin de línea antes de guardarlos en el archivo. Las siguientes constantes, que se encuentran en el tema **Documentos sistema**, están disponibles:
 
-| Constante                     | Value | Comentario                                                                                                                                                                 |
+| Constante                     | Valor | Comentario                                                                                                                                                                 |
 | ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Document unchanged`          | 0     | Sin procesar                                                                                                                                                               |
 | `Document with native format` | 1     | (Por defecto) Los saltos de línea se convierten al formato nativo del sistema operativo: LF (salto de línea) en macOS, CRLF (salto de línea + retorno de carro) en Windows |

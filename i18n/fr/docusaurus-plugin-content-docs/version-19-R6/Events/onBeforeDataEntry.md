@@ -1,6 +1,6 @@
 ---
 id: onBeforeDataEntry
-title: Sur avant saisie
+title: On Before Data Entry
 ---
 
 | Code | Peut être appelé par                                                                                                  | Définition                                                           |

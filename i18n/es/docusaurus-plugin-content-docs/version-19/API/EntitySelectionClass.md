@@ -1396,7 +1396,7 @@ La fórmula de *formulaString* o *formulaObj* se ejecuta para cada entidad de la
 
 Por defecto, si se omite el parámetro *sortOrder*, la selección de entidades resultante se clasifica en orden ascendente. Opcionalmente, puede pasar uno de los siguientes valores en el parámetro *sortOrder*:
 
-| Constante     | Value | Comentario                     |
+| Constante     | Valor | Comentario                     |
 | ------------- | ----- | ------------------------------ |
 | dk ascending  | 0     | Orden ascendente (por defecto) |
 | dk descending | 1     | Orden descendente              |

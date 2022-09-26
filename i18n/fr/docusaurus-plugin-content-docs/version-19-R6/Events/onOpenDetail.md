@@ -1,6 +1,6 @@
 ---
 id: onOpenDetail
-title: Sur ouverture corps
+title: On Open Detail
 ---
 
 | Code | Peut être appelé par                                     | Définition                                                                                              |

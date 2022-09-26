@@ -67,7 +67,7 @@ Function onInvoke($editor : Object)->$result : Object
         "currentPage"; $editor.editor.currentPage)
 ```
 
-You can then call the macro: ![](../assets/en/FormEditor/macroex1.png) ![](../assets/en/FormEditor/macroex2.png)
+マクロを呼び出します: ![](../assets/en/FormEditor/macroex1.png) ![](../assets/en/FormEditor/macroex2.png)
 
 
 ## フォームエディターでマクロを呼び出す

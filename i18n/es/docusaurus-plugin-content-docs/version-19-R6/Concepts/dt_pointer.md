@@ -77,7 +77,7 @@ Con:
  vPtrC:=->anotherObject
 ```
 
-| Operación   | Sintaxis          | Devuelve | Expression    | Value |
+| Operación   | Sintaxis          | Devuelve | Expression    | Valor |
 | ----------- | ----------------- | -------- | ------------- | ----- |
 | Igual       | Puntero = Puntero | Boolean  | vPtrA = vPtrB | True  |
 |             |                   |          | vPtrA = vPtrC | False |

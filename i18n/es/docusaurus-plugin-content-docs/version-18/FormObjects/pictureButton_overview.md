@@ -11,7 +11,7 @@ Los botones imagen pueden utilizarse de dos maneras:
 
 * Como botones de comando en un formulario. In this case, the picture button generally includes four different states: enabled, disabled, clicked and rolled over. For example, a table of thumbnails that has one row of four columns, each thumbnail corresponds to the Default, Clicked, Roll over, and Disabled states.
 
-  | Propiedad                  | Nombre JSON            | Value |
+  | Propiedad                  | Nombre JSON            | Valor |
   | -------------------------- | ---------------------- | ----- |
   | Rows                       | rowCount               | 1     |
   | Columnas                   | columnCount            | 4     |

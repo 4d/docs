@@ -1,6 +1,6 @@
 ---
 id: onColumnMoved
-title: Sur déplacement colonne
+title: On Column Moved
 ---
 
 | Code | Peut être appelé par                                                                                                  | Définition                                                                 |

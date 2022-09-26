@@ -46,8 +46,8 @@ title: ピクチャー
 * [ボタン](FormObjects/button_overview.md)/[ラジオボタン](FormObjects/radio_overview.md)/[チェックボックス](FormObjects/checkbox_overview.md)
 * [ピクチャーボタン](FormObjects/pictureButton_overview.md)/[ピクチャーポップアップメニュー](FormObjects/picturePopupMenu_overview.md)
 * [タブコントロール](FormObjects/tabControl.md)
-* [リストボックスヘッダー](FormObjects/listbox_overview.md#list-box-headers)
-* [メニューアイコン](Menus/properties.md#item-icon)
+* [リストボックスヘッダー](FormObjects/listbox_overview.md#リストボックスヘッダー)
+* [メニューアイコン](Menus/properties.md#項目アイコン)
 
 4D は自動的に最高解像度のピクチャーを優先します。 4D automatically prioritizes pictures with the highest resolution. コマンドまたはプロパティが *circle.png* を指定していたとしても、*circle@3x.png* があれば、それを使用します。
 > 解像度の優先順位付けはスクリーン上のピクチャー表示にのみ適用され、印刷に関しては自動適用されないことに留意が必要です。

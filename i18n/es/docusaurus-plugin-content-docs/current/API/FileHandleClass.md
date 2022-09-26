@@ -111,7 +111,7 @@ Los objetos manejadores de archivos no pueden ser compartidos.
 La propiedad `.breakModeRead` devuelve <!-- REF #FileHandleClass.breakModeRead.Summary -->el modo de procesamiento de los saltos de línea utilizados al leer el archivo<!-- END REF -->.
 
 
-The `.breakModeRead` property can be defined at the handle creation with the [`file.open()`](FileClass.md#open) function (see [the `.open()` function](FileClass.md#open) for more information). Default is "native".
+La propiedad `.breakModeRead` puede ser definida en la creación del handle con la función [`file.open()`](FileClass.md#open) (ver [la función `.open()`](FileClass.md#open) para más información). Por defecto es "native".
 
 > La propiedad `.breakModeRead` siempre contiene un valor de texto, incluso si la opción `.open()` fue definida utilizando un número (constante).
 
@@ -138,7 +138,7 @@ Esta propiedad es **de sólo lectura**.
 
 La propiedad `.breakModeWrite` devuelve <!-- REF #FileHandleClass.breakModeWrite.Summary -->el modo de procesamiento de los saltos de línea utilizados al escribir en el archivo<!-- END REF -->.
 
-The `.breakModeWrite` property can be defined at the handle creation with the [`file.open()`](FileClass.md#open) function (see [the `.open()` function](FileClass.md#open) for more information). Default is "native".
+La propiedad `.breakModeWrite` puede ser definida en la creación del handle con la función [`file.open()`](FileClass.md#open) (ver [la función `.open()`](FileClass.md#open) para más información). Por defecto es "native".
 
 > La propiedad `.breakModeWrite` siempre contiene un valor texto, incluso si la opción `.open()` fue definida utilizando un número (constante).
 
@@ -188,7 +188,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.eof` devuelve <!-- REF #FileHandleClass.eof.Summary -->True is the `offset` has reached the end of the file, and False otherwise<!-- END REF -->.
+La propiedad `.eof` devuelve <!-- REF #FileHandleClass.eof.Summary -->True es el `offset<` que ha llegado al final del archivo, y False en caso contrario<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -269,12 +269,12 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-La propiedad `.offset` devuelve <!-- REF #FileHandleClass.offset.Summary -->the current offset of the data stream (position inside the document)<!-- END REF -->. El valor del desplazamiento se actualiza automáticamente después de las operaciones de lectura y escritura.
+La propiedad `.offset` devuelve <!-- REF #FileHandleClass.offset.Summary -->el desplazamiento actual del flujo de datos (posición dentro del documento)<!-- END REF -->. El valor del desplazamiento se actualiza automáticamente después de las operaciones de lectura y escritura.
 
 Definir el `.offset` cambiará su valor actual.
 
-- If the passed value is negative, the `.offset` is set to the start of the file (zero).
-- If the passed value is higher than the size of the file,  the `.offset` is set to the end of the file (size of file).
+- Si el valor pasado es negativo, el `.offset` se define al inicio del archivo (cero).
+- Si el valor pasado es mayor que el tamaño del archivo, el `.offset` se define al final del archivo (tamaño del archivo).
 
 Esta propiedad es **lectura/escritura**.
 
@@ -375,15 +375,15 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 #### Descripción
 
-La función `.readText()` <!-- REF #FileHandleClass.readText().Summary -->returns text from the file, starting from the current position until the first *stopChar* string is encountered (if passed) or the end of file is reached<!-- END REF -->.
+La función `.readText()` <!-- REF #FileHandleClass.readText().Summary -->devuelve el texto del archivo, empezando por la posición actual hasta que se encuentre la primera cadena *stopChar* (si se ha pasado) o se llegue al final del archivo<!-- END REF -->.
 
-Esta función reemplaza todos los delimitadores originales de final de línea. By default, the native delimiter is used, but you can define another delimiter when [opening the file handle](FileClass.md#open) by setting the [`.breakModeRead`](#breakmoderead) property.
+Esta función reemplaza todos los delimitadores originales de final de línea. Por defecto, se utiliza el delimitador nativo, pero se puede definir otro delimitador al [abrir el manejador del archivo](FileClass.md#open) definiendo la propiedad [`.breakModeRead`](#breakmoderead).
 
-The *stopChar* character string is not included in the returned text. If you omit the *stopChar* parameter, the whole document text is returned.
+La cadena de caracteres *stopChar* no se incluye en el texto devuelto. Si se omite el parámetro *stopChar*, se devuelve todo el texto del documento.
 
-When this function is executed, the ([.offset](#offset)) is placed just after the *stopChar* string.
+Cuando se ejecuta esta función, el ([.offset](#offset)) se coloca justo después de la cadena *stopChar*.
 
-If the *stopChar* parameter is passed and not found, `.readText()` returns an empty string and the [.offset](#offset) is left untouched.
+Si el parámetro *stopChar* se pasa y no se encuentra, `.readText()` devuelve una cadena vacía y el [.offset](#offset) se deja intacto.
 
 > Cuando esta función se ejecuta por primera vez en un manejador de archivo, todo el contenido del documento se carga en un buffer.
 
@@ -417,7 +417,7 @@ If the *stopChar* parameter is passed and not found, `.readText()` returns an em
 
 La función `.setSize()` <!-- REF #FileHandleClass.setSize().Summary -->define un nuevo *size* en bytes para el documento<!-- END REF -->.
 
-If the *size* value is less than the current document size, the document content is truncated from the beginning to get the new *size* .
+Si el valor del *size* es menor que el tamaño actual del documento, el contenido del documento se trunca desde el principio para obtener el nuevo *size*.
 
 #### Ver también
 
@@ -480,9 +480,9 @@ Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se act
 
 #### Descripción
 
-La función `.writeLine()` <!-- REF #FileHandleClass.writeLine().Summary -->writes *lineOfText* content at the current position and inserts an end-of-line delimiter<!-- END REF --> (a diferencia de la función [.writeText()](#writetext)). By default, a native end-of-line delimiter is used, but you can define another delimiter when [opening the file handle](FileClass.md#open) by setting the [`.breakModeWrite`](#breakmodewrite) property.
+La función `.writeLine()` <!-- REF #FileHandleClass.writeLine().Summary -->escribe *lineOfText* contenido en la posición actual e inserta un delimitador de fin de línea<!-- END REF --> (a diferencia de la función [.writeText()](#writetext)). Por defecto, se utiliza el delimitador de fin de línea, pero se puede definir otro delimitador al [abrir el manejador del archivo](FileClass.md#open) definiendo la propiedad [`.breakModeRead`](#breakmodewrite).
 
-When this function is executed, the current position ([.offset](#offset)) is updated after the end-of-line delimiter.
+Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se actualiza después del último delimitador de fin de línea.
 
 #### Ver también
 
@@ -512,9 +512,9 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 #### Descripción
 
-La función `.writeText()` <!-- REF #FileHandleClass.writeText().Summary -->writes *textToWrite* content at the current position and does not insert a final end-of-line delimiter<!-- END REF --> (a diferencia de la función [.writeLine()](#writeline)). Esta función reemplaza todos los delimitadores originales de final de línea. This function replaces all original end-of-line delimiters.
+La función `.writeText()` <!-- REF #FileHandleClass.writeText().Summary -->escribe *textToWrite* contenido en la posición actual y no inserta un delimitador de fin de línea<!-- END REF --> (a diferencia de la función [.writeLine()](#writeline)). Esta función reemplaza todos los delimitadores originales de final de línea. This function replaces all original end-of-line delimiters.
 
-When this function is executed, the current position ([.offset](#offset)) is updated after the next end-of-line delimiter.
+Cuando se ejecuta esta función, la posición actual ([.offset](#offset)) se actualiza después del siguiente delimitador de fin de línea.
 
 #### Ver también
 

@@ -56,20 +56,20 @@ Il existe différents types de list box avec leurs propres comportements et prop
 
 ### Gestion des list box
 
-You can completely configure a list box object through its properties, and you can also manage it dynamically through programming.
+Vous pouvez configurer complètement un objet de type list box via ses propriétés, et vous pouvez également le gérer dynamiquement par programmation.
 
-The 4D Language includes a dedicated "List Box" theme for list box commands, but commands from various other themes, such as "Object properties" commands or `EDIT ITEM`, `Displayed line number` commands can also be used. Refer to the [List Box Commands Summary](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box-Commands-Summary.300-4311159.en.html) page of the *4D Language reference* for more information.
+Le langage 4D comprend un thème "List Box" dédié aux commandes de list box mais les commandes de divers autres thèmes comme "Propriétés des objets" ou les commandes `EDIT ITEM` et `Displayed line number` peuvent également être utilisées. Pour plus d'informations, consultez la page [List Box Commands Summary](https://doc.4d.com/4Dv19R6/4D/19-R6/List-Box-Commands-Summary.300-5911039.en.html) du manuel *4D Language*.
 
-## Objets de type List box
+## Objets List box
 
 ### List box de type tableau
 
-Dans une list box de type tableau, chaque colonne est associée à un tableau 4D à une dimension ; tous les types de tableaux peuvent être utilisés, à l’exception des tableaux de pointeurs. The number of rows is based on the number of array elements.
+Dans une list box de type tableau, chaque colonne est associée à un tableau 4D à une dimension ; tous les types de tableaux peuvent être utilisés, à l’exception des tableaux de pointeurs. Le nombre de lignes est basé sur le nombre d’éléments du tableau.
 
-By default, 4D assigns the name "ColumnX" to each column. You can change it, as well as other column properties, in the [column properties](listbox_overview.md#column-specific-properties). The display format for each column can also be defined using the `OBJECT SET FORMAT` command.
-> Array type list boxes can be displayed in [hierarchical mode](listbox_overview.md#hierarchical-list-boxes), with specific mechanisms.
+Par défaut, 4D affecte le nom “ColonneN” à chaque variable de colonne. Vous pouvez le modifier, ainsi que les autres [propriétés des colonnes](listbox_overview.md#proprietes-specifiques-des-colonnes). Le format d'affichage de chaque colonne peut également être défini à l'aide de la commande `OBJECT SET FORMAT`.
+> Les list box basées sur des tableaux peuvent être affichées sous forme de [list box hiérarchiques](listbox_overview.md#list-box-hierarchiques), disposant de mécanismes spécifiques.
 
-Avec les list box de type tableau, les valeurs des colonnes (saisie et affichage) sont gérées à l’aide des commandes du langage 4D. You can also associate a [choice list](properties_DataSource.md#choice-list) with a column in order to control data entry. Les valeurs des colonnes sont gérées à l’aide des commandes de haut niveau du thème List box (telles que `LISTBOX INSERT ROWS` ou `LISTBOX INSERT COLUMN`) ainsi que des commandes de manipulation des tableaux. Par exemple, pour initialiser le contenu d’une colonne, vous pouvez utiliser l’instruction suivante :
+Avec les list box de type tableau, les valeurs des colonnes (saisie et affichage) sont gérées à l’aide des commandes du langage 4D. Vous pouvez également associer une [énumération](properties_DataSource.md#énumération) à une colonne afin de contrôler la saisie. Les valeurs des colonnes sont gérées à l’aide des commandes de haut niveau du thème List box (telles que `LISTBOX INSERT ROWS` ou `LISTBOX INSERT COLUMN`) ainsi que des commandes de manipulation des tableaux. Par exemple, pour initialiser le contenu d’une colonne, vous pouvez utiliser l’instruction suivante :
 
 ```4d
 ARRAY TEXT(varCol;size)
@@ -84,24 +84,24 @@ LIST TO ARRAY("ListName";varCol)
 
 ### List box de type sélection
 
-Dans ce type de list box, chaque colonne peut être associée à un champ (par exemple `[Employees]LastName)` ou à une expression. The expression can be based on one or more fields (for example, `[Employees]FirstName+" "[Employees]LastName`) or it may simply be a formula (for example `String(Milliseconds)`). The expression can also be a project method, a variable or an array item. You can use the `LISTBOX SET COLUMN FORMULA` and `LISTBOX INSERT COLUMN FORMULA` commands to modify columns programmatically.
+Dans ce type de list box, chaque colonne peut être associée à un champ (par exemple `[Employees]LastName)` ou à une expression. L’expression peut être basée sur un ou plusieurs champs (par exemple `[Employés]Nom+“ ”+[Employés]Prénom`) ou être simplement une formule (par exemple`String(Milliseconds)`). L’expression peut également être une méthode projet, une variable ou un élément de tableau. Vous pouvez utiliser les commandes `LISTBOX SET COLUMN FORMULA` et `LISTBOX INSERT COLUMN FORMULA` pour modifier les colonnes par programmation.
 
-The contents of each row is then evaluated according to a selection of records: the **current selection** of a table or a **named selection**.
+Le contenu de chaque ligne est ensuite évalué en fonction d'une sélection d'enregistrements : la **sélection courante** d'une table ou une **sélection temporaire**.
 
-In the case of a list box based on the current selection of a table, any modification done from the database side is automatically reflected in the list box, and vice versa. The current selection is therefore always the same in both places.
+Dans le cas d’une list box basée sur la sélection courante, toute modification effectuée côté base de données est automatiquement reportée dans la list box et inversement. La sélection courante est donc toujours identique aux deux emplacements.
 
 ### List box collection ou entity selection
 
-In this type of list box, each column must be associated to an expression. The contents of each row is then evaluated per collection element or per entity of the entity selection.
+Dans ce type de list box, chaque colonne doit être associée à une expression. Le contenu de chaque ligne est ensuite évalué par élément de la collection ou par entité de l'entity selection.
 
-Each element of the collection or each entity is available as an object that can be accessed through the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command. A column expression can be a project method, a variable, or any formula, accessing each entity or collection element object through `This`, for example `This.<propertyPath>` (or `This.value` in case of a collection of scalar values). You can use the `LISTBOX SET COLUMN FORMULA` and `LISTBOX INSERT COLUMN FORMULA` commands to modify columns programmatically.
+Each element of the collection or each entity is available as an object that can be accessed through the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command. A column expression can be a project method, a variable, or any formula, accessing each entity or collection element object through `This`, for example `This.<propertyPath>` (or `This.value` in case of a collection of scalar values). Vous pouvez utiliser les commandes `LISTBOX SET COLUMN FORMULA` et `LISTBOX INSERT COLUMN FORMULA` pour modifier les colonnes par programmation.
 
-When the data source is an entity selection, any modifications made on the list box side are automatically saved in the database. On the other hand, modifications made on the database side are visible in the list box after touched entities have been reloaded.
+Lorsque la source de données est une entity selection, les modifications apportées du côté de la list box sont automatiquement enregistrées dans la base de données. En revanche, les modifications apportées du côté de la base de données sont visibles dans la list box après le rechargement des entités modifiées.
 
-When the data source is a collection, any modifications made in the list box values are reflected in the collection. When the data source is a collection, any modifications made in the list box values are reflected in the collection. Par exemple :
+Lorsque la source de données est une collection, toute modification apportée aux valeurs de la list box se reflète dans la collection. When the data source is a collection, any modifications made in the list box values are reflected in the collection. Par exemple :
 
 ```4d
-myCol:=myCol.push("new value") //display new value in list box
+myCol:=myCol.push("new value") //afficher new value dans la list box
 ```
 
 ### Propriétés prises en charge
@@ -185,12 +185,12 @@ Les propriétés prises en charge dépendent du type de list box.
 
 ## Colonnes de list box
 
-A list box is made of one or more column object(s) which have specific properties. You can select a list box column in the Form editor by clicking on it when the list box object is selected:
+Une list box est composée d'un ou plusieurs objets colonnes qui ont des propriétés spécifiques. Vous pouvez sélectionner une colonne de list box dans l’éditeur de formulaires en cliquant dessus lorsque l’objet List box est sélectionné :
 
 ![](../assets/en/FormObjects/listbox_column.png)
 
-You can set standard properties (text, background color, etc.) for each column of the list box; these properties take priority over those of the list box object properties.
-> You can define the [Expression type](properties_Object.md#expression-type) for array list box columns (String, Text, Number, Date, Time, Picture, Boolean, or Object). L'utilisation de tableaux d'objets nécessite une licence 4D View Pro (voir [Utilisation de tableaux d'objets en colonnes (4D View Pro)](#using-object-arrays-in-columns-4d-view-pro)).
+Vous pouvez définir pour chaque colonne de List box des propriétés standard (texte, couleur de fond...) : dans ce cas, ces propriétés sont prioritaires par rapport aux propriétés de l'objet List box.
+> Vous pouvez définir le [Type d'expression](properties_Object.md#expression-type) pour les colonnes de list box de type tableau (Alpha, Texte, Numérique, Date, Heure, Image, Booléen ou Objet). L'utilisation de tableaux d'objets nécessite une licence 4D View Pro (voir [Utilisation de tableaux d'objets en colonnes (4D View Pro)](#using-object-arrays-in-columns-4d-view-pro)).
 
 ### Propriétés spécifiques des list box
 
@@ -275,9 +275,9 @@ The typical sequence of events generated during data entry or modification is as
 
 | Action                                                                          | Type(s) de Listbox          | Séquence d'événements                                                                                                                                                                                          |
 | ------------------------------------------------------------------------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| A cell switches to edit mode (user action or a call to the `EDIT ITEM` command) | Tous                        | Sur avant saisie                                                                                                                                                                                               |
+| A cell switches to edit mode (user action or a call to the `EDIT ITEM` command) | Tous                        | On Before Data Entry                                                                                                                                                                                           |
 |                                                                                 | Tous                        | On Getting Focus                                                                                                                                                                                               |
-| Its value is modified                                                           | Tous                        | Sur avant frappe clavier                                                                                                                                                                                       |
+| Its value is modified                                                           | Tous                        | On Before Keystroke                                                                                                                                                                                            |
 |                                                                                 | Tous                        | On After Keystroke                                                                                                                                                                                             |
 |                                                                                 | Tous                        | On After Edit                                                                                                                                                                                                  |
 | A user validates and leaves the cell                                            | List box de type sélection  | Save                                                                                                                                                                                                           |

@@ -21,7 +21,7 @@ title: フォームエディター
 - **マーカー**: フォームのエリアを識別する出力コントロールラインとマーカー。 この要素は、[リストフォーム](properties_FormProperties.md#フォームタイプ) タイプのフォームでのみデフォルトで表示できます。
 - **マーカーラベル**: マーカーラベル。 これは出力コントロールラインが表示されている場合のみ有効です。 この要素は、[リストフォーム](properties_FormProperties.md#フォームタイプ) タイプのフォームでのみデフォルトで表示できます。
 - **境界**: フォームの境界。 このオプションが選択されていると、アプリケーションモードで表示されるとおりに、フォームがフォームエディターに表示されます。 これによりアプリケーションモードに移動しなくてもフォームを調整しやすくなります。
-> [**サイズを決めるもの**](properties_FormSize.md#サイズを決めるもの), [**水平マージン**](properties_FormSize.md#水平マージン) そして [**垂直マージン**](properties_FormSize.md#垂直マージン) フォームプロパティ設定はフォーム境界に影響します。 これらの設定を使用すると、フォーム上のオブジェクトに基づいて境界を設定できます。 フォームの境界を決定する位置にオブジェクトを配置したり、サイズを変更したりすると、境界も変更されます。
+> [**サイズを決めるもの**](properties_FormSize.md#サイズを決めるもの)、[**水平マージン**](properties_FormSize.md#水平マージン) そして [**垂直マージン**](properties_FormSize.md#垂直マージン) フォームプロパティ設定はフォーム境界に影響します。 これらの設定を使用すると、フォーム上のオブジェクトに基づいて境界を設定できます。 フォームの境界を決定する位置にオブジェクトを配置したり、サイズを変更したりすると、境界も変更されます。
 
 #### デフォルト表示
 
@@ -148,7 +148,7 @@ title: フォームエディター
 プロパティリストを使用してオブジェクトを選択するには:
 
 1. Choose the object’s name from the Object List drop-down list located at the top of the Property List.Using these two methods, you can select an object that is hidden by other objects or located outside the visible area of the current window. オブジェクトの選択を解除するには、オブジェクト境界の外側をクリックするか、またはオブジェクト上で **Shift+クリック** します。 > "デザインモードを検索" の結果ウィンドウでオブジェクトをダブルクリックして選択することもできます。
-> > It is also possible to select objects by double-clicking them in the result window of ""Find in design" operation.
+> "デザインモードを検索" の結果ウィンドウでオブジェクトをダブルクリックして選択することもできます。
 
 ### 複数オブジェクトの選択
 
@@ -188,7 +188,7 @@ title: フォームエディター
 
 - In the upper area, enter the number of columns and lines (rows) of objects you want to get.For example, if you want three columns and two lines of objects, enter 3 in the Column(s) area and 2 in the Line(s) area. 横に 3つの新しいコピーを作成したい場合は、列欄に 4 を入力し、行はデフォルトの 1 のままにします。
 
-- For lines and columns, define the offset that you wish to leave between each copy.The value must be expressed in points. It will be applied to each copy, or copies, in relation to the original object.For example, if you want to leave a vertical offset of 20 points between each object and the height of the source object is 50 points, enter 70 in the column’s “Offset” area.
+- For lines and columns, define the offset that you wish to leave between each copy.The value must be expressed in points. オフセットは、元のオブジェクトに対して相対的に、コピー毎に適用されます。たとえば、元のオブジェクトの高さが 50ポイントである場合、オブジェクトごとに 20ポイント縦オフセットするには、列の "オフセット" エリアに 70 を入力します。
 
 - 格子状に変数を作成したい場合、**変数に番号設定** オプションを選択し、番号を振る方向を行または列から選択します。 選択したオブジェクトが変数の場合にのみ、このオプションは有効になります。 詳細は *デザインリファレンス* で [**グリッド上にオブジェクト作成**](https://doc.4d.com/4Dv19/4D/19/Duplicating-on-a-matrix.300-5416673.ja.html) を参照ください。
 

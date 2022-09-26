@@ -1,6 +1,6 @@
 ---
 id: onFooterClick
-title: Sur clic pied
+title: On Footer Click
 ---
 
 | Code | Peut être appelé par                                                                                                  | Définition                                                        |

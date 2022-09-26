@@ -311,7 +311,7 @@ $output:=$worker.response
 
 #### Descripción
 
-The `.commandLine` property <!-- REF #SystemWorkerClass.commandLine.Summary -->contains the command line passed as parameter to the [`new()`](#4d-systemworker-new) function<!-- END REF -->.
+La propiedad `.commandLine` <!-- REF #SystemWorkerClass.commandLine.Summary -->contiene la línea de comandos pasada como parámetro a la función [`new()`](#4d-systemworker-new)<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -325,7 +325,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.currentDirectory` property <!-- REF #SystemWorkerClass.currentDirectory.Summary -->contains the working directory in which the external process is executed<!-- END REF -->.
+La propiedad `.currentDirectory` <!-- REF #SystemWorkerClass.currentDirectory.Summary -->contiene el directorio de trabajo en el que se ejecuta el proceso externo<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -337,7 +337,7 @@ The `.currentDirectory` property <!-- REF #SystemWorkerClass.currentDirectory.Su
 
 #### Descripción
 
-The `.dataType` property <!-- REF #SystemWorkerClass.dataType.Summary -->contains the type of the response body content<!-- END REF -->. .
+La propiedad `.dataType` <!-- REF #SystemWorkerClass.dataType.Summary -->contiene el tipo de contenido del cuerpo de la respuesta<!-- END REF -->. Valores posibles: "text" o "blob".
 
 Esta propiedad es **de sólo lectura**.
 
@@ -351,7 +351,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.encoding` property <!-- REF #SystemWorkerClass.encoding.Summary -->contains the encoding of the response body content<!-- END REF -->. .
+La propiedad `.encoding` <!-- REF #SystemWorkerClass.encoding.Summary -->contiene la codificación del contenido del cuerpo de la respuesta<!-- END REF -->. Esta propiedad sólo está disponible si el [`dataType`](#datatype) es "text".
 
 Esta propiedad es **de sólo lectura**.
 
@@ -365,13 +365,13 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.errors` property <!-- REF #SystemWorkerClass.errors.Summary -->contains a collection of 4D errors in case of execution error(s)<!-- END REF -->.
+La propiedad `.errors` <!-- REF #SystemWorkerClass.errors.Summary -->contiene una colección de errores 4D en caso de error(es) de ejecución<!-- END REF -->.
 
 Cada elemento de la colección es un objeto con las siguientes propiedades:
 
 | Propiedad              | Tipo   | Descripción                                           |
 | ---------------------- | ------ | ----------------------------------------------------- |
-| [].errorCode           | number | 4D error code                                         |
+| [].errorCode           | number | Código de error 4D                                    |
 | [].message             | text   | Descripción del error 4D                              |
 | [ ].componentSignature | text   | Firma del componente interno que ha devuelto el error |
 
@@ -387,7 +387,7 @@ Si no se ha producido ningún error, `.errors` contiene una colección vacía.
 
 #### Descripción
 
-The `.exitCode` property <!-- REF #SystemWorkerClass.exitCode.Summary -->contains the exit code returned by the external process<!-- END REF -->. Si el proceso no terminó normalmente, `exitCode` es *undefined*.
+La propiedad `.exitCode` <!-- REF #SystemWorkerClass.exitCode.Summary -->contiene el código de salida devuelto por el proceso externo<!-- END REF -->. Si el proceso no terminó normalmente, `exitCode` es *undefined*.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -401,7 +401,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.hideWindow` property <!-- REF #SystemWorkerClass.hideWindow.Summary -->can be used to hide the window of the DOS console or the window of the launched executable (**Windows only**)<!-- END REF -->.
+La propiedad `.hideWindow` <!-- REF #SystemWorkerClass.hideWindow.Summary -->puede utilizarse para ocultar la ventana de la consola DOS o la ventana del ejecutable lanzado (**Sólo para Windows**)<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -415,7 +415,7 @@ Esta propiedad es **lectura-escritura**.
 
 #### Descripción
 
-The `.pid` property <!-- REF #SystemWorkerClass.pid.Summary -->contains the process unique identifier of the external process at the system level<!-- END REF -->.
+La propiedad `.pid` <!-- REF #SystemWorkerClass.pid.Summary -->contiene el identificador único del proceso externo a nivel del sistema<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -432,13 +432,13 @@ Esta propiedad es **de sólo lectura**.
 | Parámetros  | Tipo |    | Descripción                                                         |
 | ----------- | ---- |:--:| ------------------------------------------------------------------- |
 | message     | Text | -> | Texto a escribir en el flujo de entrada (stdin) del proceso externo |
-| messageBLOB | Blob | -> | Bytes write on the input stream|<!-- END REF -->
+| messageBLOB | Blob | -> | Bytes escritos en el flujo de entrada|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.postMessage()` function <!-- REF #SystemWorkerClass.postMessage().Summary -->allows you to write on the input stream (stdin) of the external process<!-- END REF -->. En el parámetro *message*, pase el texto a escribir en *stdin*.
+La función `.postMessage()` <!-- REF #SystemWorkerClass.postMessage().Summary -->permite escribir en el flujo de entrada (stdin) del proceso externo<!-- END REF -->. En el parámetro *message*, pase el texto a escribir en *stdin*.
 
 La función `.postMessage()` también acepta un valor de tipo Blob en *messageBLOB* para pasar en *stdin*, de modo que se pueden publicar datos binarios.
 
@@ -454,7 +454,7 @@ Puede utilizar la propiedad `.dataType` del objeto [options](#options-object) pa
 
 #### Descripción
 
-The `.response` property <!-- REF #SystemWorkerClass.response.Summary -->contains the concatenation of all data returned once the request is terminated<!-- END REF -->, i.e. the full message received from the process output.
+La propiedad `.response` <!-- REF #SystemWorkerClass.response.Summary -->contiene la concatenación de todos los datos devueltos una vez finalizada la solicitud<!-- END REF -->es decir, el mensaje completo recibido de la salida del proceso.
 
 El tipo del mensaje se define según el atributo [`dataType`](#datatype).
 
@@ -470,7 +470,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary -->contains the concatenation of all the errors returned, once the request is terminated<!-- END REF -->.
+La propiedad `.responseError` <!-- REF #SystemWorkerClass.responseError.Summary -->contiene la concatenación de todos los errores devueltos, una vez finalizada la petición<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -504,7 +504,7 @@ Esta función envía la instrucción de terminar y devolver el control al script
 
 #### Descripción
 
-The `.terminated` property <!-- REF #SystemWorkerClass.terminated.Summary -->contains **true** if the external process is terminated<!-- END REF -->.
+La propiedad `.terminated` <!-- REF #SystemWorkerClass.terminated.Summary -->contiene **true** si el proceso externo ha terminado<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -518,7 +518,7 @@ Esta propiedad es **de sólo lectura**.
 
 #### Descripción
 
-The `.timeout` property <!-- REF #SystemWorkerClass.timeout.Summary -->contains the duration in seconds before the external process will be killed if it is still alive<!-- END REF -->.
+La propiedad `.timeout` <!-- REF #SystemWorkerClass.timeout.Summary -->contiene la duración en segundos antes de que el proceso externo sea eliminado si aún está vivo<!-- END REF -->.
 
 Esta propiedad es **de sólo lectura**.
 
@@ -545,13 +545,13 @@ Esta propiedad es **de sólo lectura**.
 | Parámetros | Tipo            |    | Descripción                                    |
 | ---------- | --------------- |:--:| ---------------------------------------------- |
 | timeout    | Real            | -> | Tiempo de espera (en segundos)                 |
-| Result     | 4D.SystemWorker | <- | SystemWorker object|<!-- END REF -->
+| Result     | 4D.SystemWorker | <- | Objeto SystemWorker|<!-- END REF -->
 
 |
 
 #### Descripción
 
-The `.wait()` function <!-- REF #SystemWorkerClass.wait().Summary -->waits until the end of the `SystemWorker` execution or the specified *timeout*<!-- END REF -->.
+La función `.wait()` <!-- REF #SystemWorkerClass.wait().Summary -->espera hasta el final de la ejecución del `SystemWorker` o del *timeout* especificado<!-- END REF -->.
 
 En *timeout*, pase un valor en segundos. El script `SystemWorker` esperará al proceso externo durante el tiempo definido en el parámetro *timeout*. Si omite el parámetro *timeout*, la ejecución del script esperará indefinidamente.
 

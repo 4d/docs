@@ -85,7 +85,7 @@ En el parámetro *path*, pase una ruta de carpeta. Puede utilizar una cadena per
 
 Por defecto, 4D espera una ruta expresada con la sintaxis POSIX. Si trabaja con los nombres de ruta de plataforma (Windows o macOS), debe declararlo utilizando el parámetro *pathType*. Las siguientes constantes están disponibles:
 
-| Constante        | Value | Comentario                                                                                                        |
+| Constante        | Valor | Comentario                                                                                                        |
 | ---------------- | ----- | ----------------------------------------------------------------------------------------------------------------- |
 | fk platform path | 1     | Ruta expresada con una sintaxis específica de la plataforma (obligatoria en caso de nombre de ruta de plataforma) |
 | fk posix path    | 0     | Ruta expresada con sintaxis POSIX (por defecto)                                                                   |
@@ -94,7 +94,7 @@ Por defecto, 4D espera una ruta expresada con la sintaxis POSIX. Si trabaja con 
 
 En el parámetro *folderConstant*, pase una carpeta 4D interna o sistema, utilizando una de las siguientes constantes:
 
-| Constante                  | Value | Comentario                                                                                                   |
+| Constante                  | Valor | Comentario                                                                                                   |
 | -------------------------- | ----- | ------------------------------------------------------------------------------------------------------------ |
 | fk applications folder     | 116   |                                                                                                              |
 | fk data folder             | 9     | Filesystem asociado: "/DATA"                                                                                 |
@@ -225,7 +225,7 @@ Pase el nombre del alias o del acceso directo a crear en el parámetro *aliasNam
 
 Por defecto en macOS, la función crea un alias estándar. También puede crear un enlace simbólico utilizando el parámetro *aliasType*. Las siguientes constantes están disponibles:
 
-| Constante          | Value | Comentario                         |
+| Constante          | Valor | Comentario                         |
 | ------------------ | ----- | ---------------------------------- |
 | `fk alias link`    | 0     | Enlace de alias (por defecto)      |
 | `fk symbolic link` | 1     | Enlace simbólico (sólo para macOS) |
@@ -276,7 +276,7 @@ La función `.delete()` <!-- REF #FolderClass.delete().Summary -->The `.delete()
 
 Por defecto, por razones de seguridad, si se omite el parámetro option, `.delete( )` sólo permite borrar las carpetas vacías. Si desea que el comando pueda eliminar carpetas que no están vacías, debe utilizar el parámetro option con una de las siguientes constantes:
 
-| Constante              | Value | Comentario                                        |
+| Constante              | Valor | Comentario                                        |
 | ---------------------- | ----- | ------------------------------------------------- |
 | `Delete only if empty` | 0     | Elimina la carpeta sólo cuando está vacía         |
 | `Delete with contents` | 1     | Elimina la carpeta junto con todo lo que contiene |

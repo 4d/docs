@@ -53,17 +53,17 @@ Les événements formulaire suivants sont disponibles dans la Liste de propriét
 
 Certains de ces événements sont des événements formulaire standard (disponibles pour tous les objets actifs) et d'autres sont des événements formulaire spécifiques à 4D View Pro. Certains événements formulaire standard fournissent des informations étendues dans l'objet retourné par la commande [`FORM Event`](https://doc.4d.com/4dv19/help/command/en/page1606.html) lorsqu'ils sont générés pour les zones 4D View Pro. Le tableau suivant indique les événements standard et les événements spécifiques ou ceux qui fournissent des informations supplémentaires aux zones 4D View Pro :
 
-| Événements 4D standard                          | Événements 4D View Pro spécifiques et étendus                |
-| ----------------------------------------------- | ------------------------------------------------------------ |
-| [Sur chargement](../Events/onLoad.md)           | [On VP Ready](../Events/onVpReady.md)                        |
-| [On Getting Focus](../Events/onGettingFocus.md) | [On Clicked](../Events/onClicked.md)                         |
-| [On Losing Focus](../Events/onLosingFocus.md)   | [On Double Clicked](../Events/onDoubleClicked.md)            |
-| [On Unload](../Events/onUnload.md)              | [Sur clic entête](../Events/onHeaderClick.md)                |
-|                                                 | [On After Edit](../Events/onAfterEdit.md)                    |
-|                                                 | [Sur nouvelle sélection](../Events/onSelectionChange.md)     |
-|                                                 | [Sur redimensionnement colonne](../Events/onColumnResize.md) |
-|                                                 | [On Row Resize](../Events/onRowResize.md)                    |
-|                                                 | [On VP Range Changed](../Events/onVpRangeChanged.md)         |
+| Événements 4D standard                          | Événements 4D View Pro spécifiques et étendus         |
+| ----------------------------------------------- | ----------------------------------------------------- |
+| [On Load](../Events/onLoad.md)                  | [On VP Ready](../Events/onVpReady.md)                 |
+| [On Getting Focus](../Events/onGettingFocus.md) | [On Clicked](../Events/onClicked.md)                  |
+| [On Losing Focus](../Events/onLosingFocus.md)   | [On Double Clicked](../Events/onDoubleClicked.md)     |
+| [On Unload](../Events/onUnload.md)              | [On Header Click](../Events/onHeaderClick.md)         |
+|                                                 | [On After Edit](../Events/onAfterEdit.md)             |
+|                                                 | [On Selection Change](../Events/onSelectionChange.md) |
+|                                                 | [On Column Resize](../Events/onColumnResize.md)       |
+|                                                 | [On Row Resize](../Events/onRowResize.md)             |
+|                                                 | [On VP Range Changed](../Events/onVpRangeChanged.md)  |
 
 ## Options feuille
 

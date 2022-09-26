@@ -123,7 +123,7 @@ En el parámetro *fileConstant*, pase un archivo 4D interno o sistema, utilizand
 
 Si el objetivo *fileConstant* no existe, se devuelve un objeto null. No se produce ningún error.
 
-If the command is called from a component, pass the optional `*` parameter to get the path of the host database. Otherwise, if you omit the `*` parameter, a null object is always returned.
+Si el comando se llama desde un componente, pase el parámetro opcional `*` para obtener la ruta de la base local. En caso contrario, si se omite el parámetro `*`, siempre se devuelve un objeto null.
 
 ## 4D.File.new()
 
@@ -719,7 +719,7 @@ Si existe una marca de orden de bytes (BOM) para el conjunto de caracteres, 4D l
 
 En *breakMode*, se puede pasar un número que indica el procesamiento a aplicar a los caracteres de fin de línea antes de guardarlos en el archivo. Las siguientes constantes, que se encuentran en el tema **Documentos sistema**, están disponibles:
 
-| Constante                     | Value | Comentario                                                                                                                                                                 |
+| Constante                     | Valor | Comentario                                                                                                                                                                 |
 | ----------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `Document unchanged`          | 0     | Sin procesar                                                                                                                                                               |
 | `Document with native format` | 1     | (Por defecto) Los saltos de línea se convierten al formato nativo del sistema operativo: LF (salto de línea) en macOS, CRLF (salto de línea + retorno de carro) en Windows |

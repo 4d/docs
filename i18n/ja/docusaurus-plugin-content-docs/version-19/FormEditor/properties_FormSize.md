@@ -12,7 +12,7 @@ title: フォームサイズ
 
 ## サイズを決めるもの
 
-* **Automatic Size**: The size of the form will be that necessary to display all the objects, to which will be added the margin values (in pixels) entered in the [**Hor Margin**](#hor-margin) and [**Vert Margin**](#vert-margin) fields. 自動サイズのウィンドウを用いて、オフスクリーンエリア (ウィンドウの矩形境界線の外側のエリア) に配置したアクティブオブジェクトを使用したい場合にこのオプションを選択することができます。 このオプションを選択すると、これらのオブジェクトによりウィンドウサイズが変更されなくなります。
+* **自動サイズ**: フォームサイズは、すべてのオブジェクトを表示するために必要なサイズと、[**水平マージン**](#水平-マージン) および [**垂直マージン**](#垂直-マージン) フィールドへ入力されたマージン値 (ピクセル単位) を合計したものになります。 自動サイズのウィンドウを用いて、オフスクリーンエリア (ウィンドウの矩形境界線の外側のエリア) に配置したアクティブオブジェクトを使用したい場合にこのオプションを選択することができます。 このオプションを選択すると、これらのオブジェクトによりウィンドウサイズが変更されなくなります。
 
 * **サイズを設定**: フォームサイズは [**幅**](#幅) および [**高さ**](#高さ) フィールドに入力された値 (ピクセル単位) により決まります 。
 
@@ -42,7 +42,7 @@ title: フォームサイズ
 
 ## 水平 マージン
 
-Value to add (in pixels) to the right margin of the form when the [form size](#size-based-on) is **Automatic size** or `\&#060;object name&#062;`
+[フォームサイズ](#サイズを決めるもの)が **自動サイズ** または `<オブジェクト名>` の場合に、フォームの右マージンに追加する値 (ピクセル単位) です。
 
 この値は、ラベルエディターで使用されるフォームの右マージンも決定します。
 
@@ -56,7 +56,7 @@ Value to add (in pixels) to the right margin of the form when the [form size](#s
 
 ## 垂直 マージン
 
-Value to add (in pixels) to the bottom margin of the form when the [form size](#size-based-on) is **Automatic size** or `\&#060;object name&#062;`.
+[フォームサイズ](#サイズを決めるもの)が **自動サイズ** または `<オブジェクト名>` の場合に、フォームの下マージンに追加する値 (ピクセル単位) です。
 
 この値は、ラベルエディターで使用されるフォームの上マージンも決定します。
 

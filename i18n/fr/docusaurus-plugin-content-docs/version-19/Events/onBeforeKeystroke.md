@@ -1,6 +1,6 @@
 ---
 id: onBeforeKeystroke
-title: Sur avant frappe clavier
+title: On Before Keystroke
 ---
 
 | Code | Peut être appelé par                                                                                                                                                                                                                                                       | Définition                                                                                                                                     |

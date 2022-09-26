@@ -35,7 +35,7 @@ Una fecha nula es especificada por _!00-00-00!_.
 
 ## Operadores de fechas
 
-| Operación         | Sintaxis         | Devuelve | Expression                                 | Value        |
+| Operación         | Sintaxis         | Devuelve | Expression                                 | Valor        |
 | ----------------- | ---------------- | -------- | ------------------------------------------ | ------------ |
 | Diferencia        | Fecha – Fecha    | Number   | !2017-01-20! - !2017-01-01!                | 19           |
 | Adición           | Fecha + Número   | Fecha    | !2017-01-20! + 9                           | !2017-01-29! |

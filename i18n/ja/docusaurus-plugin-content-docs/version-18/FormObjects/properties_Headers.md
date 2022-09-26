@@ -35,7 +35,7 @@ title: ヘッダー
 
 単位の変更を繰り返すと、4D が自動で計算を行うため、最初の値とは結果が異なってしまうこともあります。 たとえば以下のようになります:
 
-*(font Arial 18)*: 52 pixels -> 2 lines -> 40 pixels *(font Arial 12)*: 3 pixels -> 0.4 line rounded up to 1 line -> 19 pixels
+*(Arial 18)*: 52 ピクセル -> 2 行 -> 40 ピクセル *(Arial 12)*: 3 ピクセル -> 0.4 行が 1 行に切り上げられる -> 19 ピクセル
 
 #### JSON 例
 

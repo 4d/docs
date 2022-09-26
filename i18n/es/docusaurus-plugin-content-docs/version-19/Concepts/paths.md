@@ -1,65 +1,65 @@
 ---
 id: paths
-title: Pathnames
+title: Rutas de acceso
 ---
 
-File and Folder functions, properties, and commands allow you to handle files and folders as objects. This makes file and folder management powerful and flexible. For example, to create a new file in the current user's Documents folder, you can write:
+Las funciones, propiedades y comandos de las clases File y Folder le permiten manejar los archivos y las carpetas como objetos. Esto hace que la gestión de archivos y carpetas sea poderosa y flexible. Por ejemplo, para crear un nuevo archivo en la carpeta Documentos del usuario actual, puede escribir:
 
 ```4d
 $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 ```
 
-In addition, file and folder objects support `fileSystems`, which provide contextual path to main application folders.
+Además, los objetos archivo y carpeta soportan los `fileSystems`, que ofrecen una ruta contextual a las carpetas principales de la aplicación.
 
 
-## Filesystem pathnames
+## Rutas de los filesystem
 
-4D accepts several `filesystem` pathnames that designate specific 4D folders with variable location on macOS and Windows. Filesystem pathnames are useful for two main reasons:
+4D acepta varios `filesystem` que designan las carpetas 4D específicas con una ubicación variable en macOS y Windows. Las rutas de los filesystem son útiles por dos razones principales:
 
-- Independence: You can move your solution from one place to another regardless of the OS, without having to worry about paths,
-- Security: No code can access elements located above the file system root on the disk (sandboxing).
+- Independencia: puede trasladar su solución de un lugar a otro independientemente del sistema operativo, sin tener que preocuparse por las rutas,
+- Seguridad: ningún código puede acceder a los elementos situados por encima de la raíz del sistema de los file system en el disco (sandboxing).
 
-The following filesystem pathnames are supported:
+Se soportan los siguientes nombres de rutas de filesystem:
 
-| filesystem   | Designates                                         |
-| ------------ | -------------------------------------------------- |
-| "/DATA"      | Current data folder                                |
-| "/LOGS"      | Carpeta Logs                                       |
-| "/PACKAGE"   | Database folder (with or without 4dbase extension) |
-| "/PROJECT"   | Carpeta Project                                    |
-| "/RESOURCES" | Current database resources folder                  |
-| "/SOURCES"   | Current project resources folder                   |
+| filesystem   | Designa                                                  |
+| ------------ | -------------------------------------------------------- |
+| "/DATA"      | Carpeta de datos actual                                  |
+| "/LOGS"      | Carpeta Logs                                             |
+| "/PACKAGE"   | Carpeta de la base de datos (con o sin extensión 4dbase) |
+| "/PROJECT"   | Carpeta Project                                          |
+| "/RESOURCES" | Carpeta de recursos de la base actual                    |
+| "/SOURCES"   | Carpeta de recursos del proyecto                         |
 
-## POSIX syntax
+## Sintaxis POSIX
 
-The POSIX syntax is supported on all platforms. **POSIX syntax is recommended** since it is the most flexible. It is used by default (returned by [file.path](../API/FileClass.md#path) and [folder.path](../API/FolderClass.md#path) properties).
+La sintaxis POSIX es compatible con todas las plataformas. **Se recomienda la sintaxis POSIX** ya que es la más flexible. Se utiliza por defecto (devuelto por las propiedades [file.path](../API/FileClass.md#path) y [folder.path](../API/FolderClass.md#path)).
 
-With this syntax:
+Con esta sintaxis:
 
-- folders are separated by "/"
-- absolute pathnames start with a "/"
-- to move up one folder in a relative path, use "../" in front of the pathname (for security, you cannot move up the filesystem).
+- las carpetas están separadas por "/"
+- los nombres de ruta absolutos empiezan por "/"
+- para subir una carpeta en una ruta relativa, utilice "../" delante del nombre de la ruta (por seguridad, no puede subir en el sistema de archivos).
 
-In POSIX syntax, you will generally use `filesystem` pathnames with [`File`](../API/FileClass.md#file) and [`Folder`](../API/FolderClass.md#folder) commands, for example:
+En la sintaxis POSIX, generalmente se utilizará los nombres de rutas `filesystem` con los comandos [`File`](../API/FileClass.md#file) y [`Folder`](../API/FolderClass.md#folder), por ejemplo:
 
 ```4d
 $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
 
-## Platform-specific syntax
+## Sintaxis específica de la plataforma
 
-Platform-specific syntax depends on the operating system on which the command is executed. Note that when creating a file or folder object with this syntax, you must declare it using the `fk platform path` constant as parameter.
+La sintaxis específica de la plataforma depende del sistema operativo en el que se ejecute el comando. Tenga en cuenta que al crear un objeto archivo o carpeta con esta sintaxis, debe declararlo utilizando la constante `fk platform path` como parámetro.
 
 ### Windows
 
-The following patterns are supported:
+Se soportan los siguientes modelos:
 
 - folder separators are "\"
 - the text contains ':' and '\' as the second and third character,
 - the text starts with "\\".
 
-Examples with [`Folder`](../API/FolderClass.md#folder):
+Ejemplos con [`Folder`](../API/FolderClass.md#folder):
 
 ```4d
 $ok:=Folder("C:\\Monday";fk platform path).create()
@@ -76,13 +76,13 @@ However, if you write `C:\MyDocuments\New`, 4D will display `C:\\MyDocuments\New
 
 The following escape sequences are recognized by 4D:
 
-| Secuencias de escape         | Carácter reemplazado |
-| ---------------------------- | -------------------- |
-| `\n`                        | LF (New line)        |
-| `\t`                        | HT (Horizontal tab)  |
-| `\r`                        | CR (Retorno carro)   |
-| ``\\`|``&#96; (Backslash) |                      |
-| `\"`                        | `"` (Quotes)         |
+| Secuencias de escape         | Carácter reemplazado       |
+| ---------------------------- | -------------------------- |
+| `\n`                        | LF (Nueva línea)           |
+| `\t`                        | HT (Tabulación horizontal) |
+| `\r`                        | CR (Retorno carro)         |
+| ``\\`|``&#96; (Backslash) |                            |
+| `\"`                        | `"` (Comillas)             |
 
 ### macOS
 
@@ -91,7 +91,7 @@ The following patterns are supported (HFS+ syntax):
 - folder separators are ":"
 - the path must not start with a ":"
 
-Examples with [`Folder`](../API/FolderClass.md#folder):
+Ejemplos con [`Folder`](../API/FolderClass.md#folder):
 
 ```4d
 $ok:=Folder("macintosh hd:";fk platform path).create()
@@ -100,7 +100,7 @@ $ok:=Folder("Monday:Tuesday";fk platform path).create() //a volume must be calle
 
 ## Absolute and relative pathnames
 
-### `File` and `Folder` constructors
+### Constructores `File` y `Folder`
 
 [`File`](../API/FileClass.md#file) and [`Folder`](../API/FolderClass.md#folder) commands only accept **absolute pathnames**. Relative pathnames are not supported and will return errors. For example, the following code is not allowed:
 

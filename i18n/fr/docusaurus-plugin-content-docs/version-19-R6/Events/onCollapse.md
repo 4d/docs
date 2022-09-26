@@ -1,6 +1,6 @@
 ---
 id: onCollapse
-title: Sur contracter
+title: On Collapse
 ---
 
 | Code | Peut être appelé par                                                                                      | Définition                                                                                                                    |
@@ -15,4 +15,4 @@ title: Sur contracter
 
 
 ### Voir également
-[Sur déployer](onExpand.md)
+[On Expand](onExpand.md)

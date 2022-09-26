@@ -244,7 +244,7 @@ En supposant que l'unité des lignes soit «lignes», alors la cinquième ligne 
 
 ---
 
-## Horizontal Padding
+## Marge horizontale
 
 Sets a horizontal padding for the cells. The value is set in pixels (default = 0).
 
@@ -262,11 +262,11 @@ Sets a horizontal padding for the cells. The value is set in pixels (default = 0
 
 #### Voir également
 
-[Vertical Padding](#vertical-padding)
+[Marge verticale](#vertical-padding)
 
 ---
 
-## Vertical Padding
+## Marge verticale
 
 Sets a vertical padding for the cells. The value is set in pixels (default = 0).
 
@@ -282,4 +282,4 @@ Sets a vertical padding for the cells. The value is set in pixels (default = 0).
 
 #### Voir également
 
-[Horizontal Padding](#horizontal-padding)
+[Marge horizontale](#horizontal-padding)
