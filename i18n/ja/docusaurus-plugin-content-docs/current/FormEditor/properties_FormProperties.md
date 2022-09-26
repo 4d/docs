@@ -8,11 +8,11 @@ title: フォームプロパティ
 ## カラースキーム
 > 配色プロパティは、macOS でのみ適用されます。
 
-このプロパティは、フォームのカラースキームを定義します。 このプロパティは、フォームのカラースキームを定義します。 これは、フォームに対して以下の 2つのオプションのいずれかに変更することができます:
+このプロパティは、フォームのカラースキームを定義します。 このプロパティが設定されていない場合のデフォルトでは、カラースキームの値は **継承済み** です (フォームは [アプリケーションレベル](https://doc.4d.com/4dv19/help/command/ja/page1762.html) で定義されたカラースキームを使用します)。 これは、フォームに対して以下の 2つのオプションのいずれかに変更することができます:
 
 *   dark - 暗い背景に明るいテキスト
-*   light - dark text on a light background > A defined color scheme can not be overridden by a CSS.
-> ウィンドウタイトルの最大文字数は 31 です。
+*   light - 明るい背景に暗いテキスト
+> 定義されたカラースキームを CSS で上書きすることはできません。
 
 #### JSON 文法
 
@@ -89,7 +89,7 @@ title: フォームプロパティ
 
 テーブルフォームを継承する場合は、[継承されたフォームテーブル](#継承されたフォームテーブル) プロパティにテーブルを設定します。
 
-To remove inheritance, select `\&#060;None&#062;` in the Property List (or " " in JSON).
+継承を解除するには、プロパティリストで `\<なし>` を選択します (JSON では " ")。
 
 
 #### JSON 文法
@@ -105,7 +105,7 @@ To remove inheritance, select `\&#060;None&#062;` in the Property List (or " " i
 
 このプロパティは、現在のフォームに [継承するテーブルフォーム](forms.md#継承フォーム) が属するデータベーステーブルを指定します。
 
-Set to `\&#060;None&#062;` in the Property List (or " " in JSON) to inherited from a project form.
+プロジェクトフォームを継承する場合は、プロパティリストで `\<なし>` を選択します (JSON では " ")。
 
 
 
@@ -141,7 +141,7 @@ Set to `\&#060;None&#062;` in the Property List (or " " in JSON) to inherited fr
 
 *   カレントページ
 *   それぞれのフォームオブジェクトの配置・大きさ・表示状態 (リストボックス列のサイズと表示状態も含む)。
-> それぞれのフォームオブジェクトの配置・大きさ・表示状態 (リストボックス列のサイズと表示状態も含む)。 > このオプションは、 `OBJECT DUPLICATE` コマンドを使用して作成されたオブジェクトに対しては無効です。 このコマンドを使用したときに使用環境を復元させるには、デベロッパーがオブジェクトの作成・定義・配置の手順を再現しなければなりません。
+> このオプションは、`OBJECT DUPLICATE` コマンドを使用して作成されたオブジェクトに対しては無効です。 このコマンドを使用したときに使用環境を復元させるには、デベロッパーがオブジェクトの作成・定義・配置の手順を再現しなければなりません。
 
 このオプションが選択されているとき、一部のオブジェクトに置いては [値を記憶](FormObjects/properties_Object.md#値を記憶) のオプションが選択可能になります。
 
@@ -152,7 +152,7 @@ Set to `\&#060;None&#062;` in the Property List (or " " in JSON) to inherited fr
 | memorizeGeometry | boolean | true, false |
 
 #### 参照
-[**値を記憶**](FormObjects/properties_Object.md#save-value)
+[**値を記憶**](FormObjects/properties_Object.md#値を記憶)
 
 
 ---
@@ -164,8 +164,8 @@ Set to `\&#060;None&#062;` in the Property List (or " " in JSON) to inherited fr
 動的参照を使用して、フォームのウィンドウタイトルを定義することもできます:
 
 *   Resourcesフォルダーに保存された、標準の XLIFF参照
-*   A table or field label: The syntax to apply is `<?[TableNum]FieldNum>` or `<?[TableName]FieldName>`.
-*   A variable or a field: The syntax to apply is `\&#060;VariableName&#062;` or `&#060;[TableName]FieldName&#062;`. フィールドや変数の現在の値がウィンドウタイトルとして表示されます。
+*   テーブル/フィールドラベル: 適用できるシンタックスは `<?[TableNum]FieldNum>` または `<?[TableName]FieldName>` です。
+*   変数またはフィールド: 適用できるシンタックスは `\<VariableName>` または `<[TableName]FieldName>`。 フィールドや変数の現在の値がウィンドウタイトルとして表示されます。
 
 > ウィンドウタイトルの最大文字数は 31 です。
 
