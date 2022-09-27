@@ -5,13 +5,13 @@ title: ドキュメンテーション
 
 
 
-In application projects, you can document your methods as well as your classes, forms, tables, or fields. 複数のプログラマーによってプロジェクトを開発している場合などに、ドキュメンテーションの作成はとくに適しています。また、一般的に良いプログラミングの作法としても推奨されます。 ドキュメンテーションには、要素の説明だけでなく、アプリケーションにおけるその要素の機能を理解するために必要なあらゆる情報を含めることができます。
+アプリケーションプロジェクトにおいては、メソッドやクラス、フォーム、テーブル、フィールドに関するドキュメンテーションを作成することができます。 複数のプログラマーによってプロジェクトを開発している場合などに、ドキュメンテーションの作成はとくに適しています。また、一般的に良いプログラミングの作法としても推奨されます。 ドキュメンテーションには、要素の説明だけでなく、アプリケーションにおけるその要素の機能を理解するために必要なあらゆる情報を含めることができます。
 
 ドキュメントすることができるプロジェクト要素は次のとおりです:
 
-- Methods (database methods, component methods, project methods, form methods, 4D Mobile methods, and triggers)
+- メソッド (データベースメソッド、コンポーネントメソッド、プロジェクトメソッド、フォームメソッド、4D Mobile メソッド、トリガー)
 - クラス
-- Forms
+- フォーム
 - テーブルとフィールド
 
 ドキュメンテーションファイルは Markdown記法 (.md ファイル) で記述します。これには、Markdown をサポートしている任意のエディターを使うことができます。 これらはそれぞれ独立したファイルとしてプロジェクトフォルダー内に格納されます。
@@ -39,7 +39,7 @@ In application projects, you can document your methods as well as your classes, 
 `Documentation` フォルダーのアーキテクチャーは次のとおりです:
 
 - `Documentation`
-    + `クラス`
+    + `Classes`
         * myClass.md
     + `DatabaseMethods`
         * onStartup.md
@@ -47,7 +47,7 @@ In application projects, you can document your methods as well as your classes, 
     + `Forms`
         * loginDial.md
         * ...
-    + `メソッド`
+    + `Methods`
         * myMethod.md
         * ...
     + `TableForms`
@@ -104,9 +104,9 @@ In application projects, you can document your methods as well as your classes, 
 
 ![](../assets/en/Project/codeEditor_Comments.png)
 
-If a file named `\&#060;MethodName&#062;.md` exists in the `\&#060;package&#062;/documentation` folder, the code editor displays (by priority):
+`\<MethodName>.md` ファイルが `\<package>/documentation` フォルダーに存在する場合、コードエディターは次の優先順位でヘルプTips を表示します:
 
-- Any text entered in an HTML `comment` tag (*\<!-- command documentation -->*) at the top of the markdown file.
+- Markdown ファイルの先頭に設置した、HTML のコメントタグで囲まれたテキスト (*\<!-- command documentation -->*。
 
 - HTML のコメントタグが使用されていなければ、Markdown ファイルの `# Description` タグ後の最初の文章  
   この場合、最初の文章には 4D コードパーサーによって自動生成されたメソッドの **プロトタイプ** が入ります。
@@ -125,7 +125,7 @@ If a file named `\&#060;MethodName&#062;.md` exists in the `\&#060;package&#062;
 
 ![](../assets/en/Project/comments-explo4.png)
 
-| 線                                                   | 説明                                                                                      |
+| 行                                                   | 説明                                                                                      |
 | --------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | "\<!-- Type your summary here -->"       | HTML コメントタグ。 メソッドの説明として優先的に [コードエディターTip](#コードエディターでドキュメンテーションを表示する) に表示されます。           |
 | ## Description                                     | Markdown のレベル2 見出しタグ。 HTML コメントタグが使用されていない場合、このタグ後の最初の文章がメソッドの説明としてコードエディターTip に表示されます。 |
@@ -228,6 +228,6 @@ C_LONGINT($size)
 $logo:=GetLogo(5)
 ```
 
-- Explorer view: ![](../assets/en/Project/explorer_Doc.png)
+- エクスプローラーの表示: ![](../assets/en/Project/explorer_Doc.png)
 
-- Code editor view: ![](../assets/en/Project/comments-explo5.png)
+- コードエディターの表示: ![](../assets/en/Project/comments-explo5.png)
