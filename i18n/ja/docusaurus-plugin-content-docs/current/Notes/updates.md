@@ -46,7 +46,7 @@ title: ドキュメンテーション更新情報
 - ループにおける [break と continue](Concepts/cf_looping.md#break-と-continue) 文のサポート。
 - [return](Concepts/flow-control.md#return-expression) 文と、値を返すための [return {expression}](Concepts/parameters.md#return-expression) 文のサポート。
 - [複合代入演算子](Concepts/operators.md#複合代入演算子)、[短絡演算子](Concepts/operators.md#短絡演算子)、および [三項演算子](Concepts/operators.md#三項演算子) のサポート。
-- The [Code Editor](../code-editor/write-class-method.md#navigation-dropdown) now includes an dropdown tool and supports markers for better code navigation.
+- コードナビゲーションを改善するため、[コードエディター](../code-editor/write-class-method.md#navigation-dropdown) にドロップダウンツールが追加され、コードにマーカーを追加できるようになりました。
 - 新しい環境設定: 一般ページの [**Project ソースファイルにトークンを含める**](Preferences/general.md#project-ソースファイルにトークンを含める) および、メソッドページの [**クリップボードを表示**](Preferences/methods.md#クリップボードを表示)。
 - エンティティを [lock/unlock](REST/$lock.md) するための新しい REST リクエスト。
 - [4D View Pro](ViewPro/getting-started.md) の章が次の新コマンドとともに追加されました: [VP Copy to object](ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](ViewPro/method-list.md#vp-paste-from-object).
