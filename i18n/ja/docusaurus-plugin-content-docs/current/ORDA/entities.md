@@ -97,7 +97,7 @@ $myEntity.save() // エンティティを保存します
 
 ```4d
  $entity:=ds.Employee.get(1) // ID1 の社員エンティティを取得します
- $name:=$entity.lastname // 社員のラストネームを取得します。 例: "Smith"
+ $name:=$entity.lastname // 社員のラストネームを取得します。例: "Smith"
  $entity.lastname:="Jones" // 社員のラストネームを変更します
  $entity.save() // 変更を保存します
 ```
@@ -292,14 +292,14 @@ CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
   // エンティティセレクションをループします
  For each($invoice;$paid)
     $email.to:=$invoice.customer.address // 顧客のメールアドレス
-    $email.subject:="請求書 # "+String($invoice.number) + "のお支払いを確認いたしました。 "
+    $email.subject:="請求書 # "+String($invoice.number) + "のお支払いを確認いたしました。"
 
     $status:=$transporter.send($email)
  End for each
 
  For each($invoice;$unpaid)
     $email.to:=$invoice.customer.address // 顧客のメールアドレス
-    $email.subject:="請求書 # "+String($invoice.number) + "のお支払いが確認できていません。 "
+    $email.subject:="請求書 # "+String($invoice.number) + "のお支払いが確認できていません。"
     $status:=$transporter.send($email)
  End for each
 ```
@@ -328,7 +328,7 @@ CALL WORKER("mailing"; "sendMails"; $paid; $unpaid)
   // $myParts 内のパーツにリレートされている請求項目を1行以上含んでいるすべての請求書
 ```
 
-最後の行は、$myParts エンティティセレクション内のパーツにリレートされている請求項目が少なくとも1行含まれているすべての請求書のエンティティセレクションを、$myInvoices 内に返します。 エンティティセレクションのプロパティとしてリレーション属性が使用されると、返される結果は、たとえ返されるエンティティが一つだけだとしても、常に新しいエンティティセレクションとなります。 When a relation attribute is used as a property of an entity selection, the result is always another entity selection, even if only one entity is returned.
+最後の行は、$myParts エンティティセレクション内のパーツにリレートされている請求項目が少なくとも1行含まれているすべての請求書のエンティティセレクションを、$myInvoices 内に返します。 エンティティセレクションのプロパティとしてリレーション属性が使用されると、返される結果は、たとえ返されるエンティティが一つだけだとしても、常に新しいエンティティセレクションとなります。 エンティティセレクションのプロパティとしてリレーション属性が使用された結果、エンティティが何も返ってこない場合には、返されるのは空のエンティティセレクションであり、null ではありません。
 
 
 ## エンティティロッキング
