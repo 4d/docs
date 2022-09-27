@@ -227,17 +227,17 @@ Dependiendo del evento, se pueden incluir otros campos en el registro, como la t
 
 ### Cómo activar el archivo
 
-The *4DDiagnosticLog.txt* file can log different levels of messages, from `ERROR` (most important) to `TRACE` (less important). By default, the `INFO` level is set, which means that the file will log only important events, including errors and unexpected results (see below).
+El archivo *4DDiagnosticLog.txt* puede registrar diferentes niveles de mensajes, desde `ERROR` (más importante) a `TRACE` (menos importante). Por defecto, se define el nivel `INFO`, lo que significa que el archivo registrará sólo los eventos importantes, incluidos los errores y los resultados inesperados (ver más adelante).
 
-You can select the level of messages using the `Diagnostic log level` selector of the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html) command, depending on your needs. When you select a level, levels above (which are more important) are implicitely selected also. Los siguientes niveles están disponibles:
+Puede seleccionar el nivel de los mensajes utilizando el selector de `nivel de registro de diagnóstico` del comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv19/help/command/en/page642.html), en función de sus necesidades. Cuando se selecciona un nivel, los niveles superiores (que son más importantes) también se seleccionan implícitamente. Los siguientes niveles están disponibles:
 
-| Columna # | Descripción                                                                                   | Cuando se selecciona, incluye   |
-| --------- | --------------------------------------------------------------------------------------------- | ------------------------------- |
-| ERROR     | Una parte de la aplicación no funciona                                                        | ERROR                           |
-| WARN      | Potential error, use of a deprecated function, poor uses, undesirable or unexpected situation | ERROR, WARN                     |
-| INFO      | ID Proceso 4D                                                                                 | ERROR, WARN, INFO               |
-| DEBUG     | Detalle del flujo de aplicación (para los servicios técnicos 4D)                              | ERROR, WARN, INFO, DEBUG        |
-| TRACE     | Otra información interna (para los servicios técnicos de 4D)                                  | ERROR, WARN, INFO, DEBUG, TRACE |
+| Columna # | Descripción                                                                                     | Cuando se selecciona, incluye   |
+| --------- | ----------------------------------------------------------------------------------------------- | ------------------------------- |
+| ERROR     | Una parte de la aplicación no funciona                                                          | ERROR                           |
+| WARN      | Posible error, uso de una función obsoleta, usos deficientes, situación indeseable o inesperada | ERROR, WARN                     |
+| INFO      | ID Proceso 4D                                                                                   | ERROR, WARN, INFO               |
+| DEBUG     | Detalle del flujo de aplicación (para los servicios técnicos 4D)                                | ERROR, WARN, INFO, DEBUG        |
+| TRACE     | Otra información interna (para los servicios técnicos de 4D)                                    | ERROR, WARN, INFO, DEBUG, TRACE |
 
 ## 4DSMTPLog.txt, 4DPOP3Log.txt y 4DIMAPLog.txt
 
