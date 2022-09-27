@@ -100,7 +100,7 @@ title: ドキュメンテーション
 
 If a file named `\&#060;MethodName&#062;.md` exists in `\&#060;package&#062;/documentation` folder, the code editor displays (by priority):
 
-- Any text entered in an HTML `comment` tag (*\<!-- command documentation -->*) at the top of the markdown file.
+- Markdown ファイルの先頭に設置した、HTML のコメントタグで囲まれたテキスト (*\<!-- command documentation -->*。
 
 - HTML のコメントタグが使用されていなければ、Markdown ファイルの `# Description` タグ後の最初の文章  
   この場合、最初の文章には 4D コードパーサーによって自動生成されたメソッドの **プロトタイプ** が入ります。
@@ -216,6 +216,6 @@ C_LONGINT($size)
 $logo:=GetLogo(5)
 ```
 
-- Explorer view: ![](../assets/en/Project/explorer_Doc.png)
+- エクスプローラーの表示: ![](../assets/en/Project/explorer_Doc.png)
 
-- Code editor view: ![](../assets/en/Project/comments-explo5.png)
+- コードエディターの表示: ![](../assets/en/Project/comments-explo5.png)
