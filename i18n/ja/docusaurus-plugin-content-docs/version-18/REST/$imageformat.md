@@ -7,19 +7,19 @@ title: '$imageformat'
 
 ## 説明
 
-画像の表示に使う形式を指定します。 You can use one of the following formats (extensions, mime types and OsType Mac are supported):
+画像の表示に使う形式を指定します。 次の形式が指定できます (拡張子、MIMEタイプ、OSType Mac がサポートされています):
 
-| タイプ                     | 説明       |
-| ----------------------- | -------- |
-| "best"                  | 画像に最適な形式 |
-| ".gif" or "image/gif"   | GIF 形式   |
-| ".png" or "image/png"   | PNG 形式   |
-| ".jpeg" or "image/jpeg" | JPEG 形式  |
-| ".tiff" or "image/tiff" | TIFF 形式  |
+| タイプ                      | 説明       |
+| ------------------------ | -------- |
+| "best"                   | 画像に最適な形式 |
+| ".gif" または "image/gif"   | GIF 形式   |
+| ".png" または "image/png"   | PNG 形式   |
+| ".jpeg" または "image/jpeg" | JPEG 形式  |
+| ".tiff" または "image/tiff" | TIFF 形式  |
 
 画像を完全に読み込むには、形式を指定するだけでなく、画像属性を [`$expand`]($expand.md) に渡す必要があります。
 
-If there is no image to be loaded or the format doesn't allow the image to be loaded, the response will be an empty object `{}`.
+読み込むべき画像がない場合、または指定した形式では画像が読み込めない場合、レスポンスは空のオブジェクト `{}` になります。
 
 ## 例題
 
