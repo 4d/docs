@@ -124,7 +124,7 @@ $area:=$rect.getArea()
 
 |
 
-The namespace of a [compiled](#protection-of-components-compilation) component will be added between parentheses after the component name in the [Component Methods page](../Concepts/components.md#using-components) of the host projects:
+El namespace de un componente [compilado](#protection-of-components-compilation) se añadirá entre paréntesis después del nombre del componente en la [página Métodos Componente](../Concepts/components.md#using-components) de los proyectos locales:
 
 ![](../assets/en/settings/namesapece-explorer.png)
 
@@ -369,7 +369,7 @@ Por defecto, todo el código de un proyecto matriz instalado como componente es 
 
 Para proteger eficazmente el código de un componente, basta con [compilar y generar](Desktop/building.md#build-component) el proyecto utilizado como matriz y proporcionarlo en forma de archivo .4dz. Cuando se instala un proyecto matricial compilado como un componente:
 
-- The shared project methods, classes and functions can be called in the methods of the host project and are also visible on the Methods Page of the Explorer. Sin embargo, su contenido no aparecerá en el área de vista previa ni en el depurador.
+- Los métodos, clases y funciones del proyecto compartido pueden ser llamados desde los métodos proyecto locales y también se muestran en la página de métodos del Explorador. Sin embargo, su contenido no aparecerá en el área de vista previa ni en el depurador.
 - Los otros métodos proyecto del proyecto matriz nunca aparecerán.
 
 
