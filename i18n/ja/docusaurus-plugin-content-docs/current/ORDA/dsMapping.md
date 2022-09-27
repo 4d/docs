@@ -27,8 +27,8 @@ ORDA は、下地であるデータベースストラクチャーへの自動マ
     *   複合プライマリーキーを持つテーブル
 *   BLOBフィールドは、[BLOB オブジェクト](Concepts/dt_blob.md#blob-の種類) 型の属性として利用可能です。
 
-> ORDA mapping does not take into account:  
-> - the "Invisible" option for tables or fields, - the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`, - the "Manual" or "Automatic" property of relations.
+> ORDA のデータストアマッピングでは、次のものは考慮されません:  
+> - テーブルあるいはフィールドの"非表示"オプション<br/> - `SET TABLE TITLES` あるいは `SET FIELD TITLES` を通して定義されたバーチャルストラクチャー<br/> - リレーションの"手動"あるいは"自動"プロパティ
 
 
 ### リモートデータストアの利用
@@ -94,7 +94,7 @@ $mydatastore:=OB Copy(ds) // null を返します
 
 メイン (デフォルト) のデータストアは `ds` コマンドを通して常に利用可能です。`Open datastore` コマンドを使えば、あらゆるリモートデータストアを参照することができます。
 
-### DataClass
+### データクラス
 
 データクラスとは、テーブルに相当するものです。 オブジェクトモデルとして使用され、リレーショナル属性 (データクラス間のリレーションに基づいてビルドされた属性) を含めてすべてのフィールドを属性として参照します。 リレーショナル属性はクエリにおいて通常の属性のように使用することができます。
 
@@ -113,7 +113,7 @@ $compClass:=ds.Company // Company データクラスへの参照を $compClass �
 
 データクラスオブジェクトは以下のものを格納することができます:
 
-*   attributes
+*   属性
 *   リレーション属性
 
 データクラスは実際のデータベースの概略を提供し、概念的なデータモデルの管理を可能にします。 データクラスはデータストアをクエリする唯一の方法です。 クエリは単一のデータクラスを通して実行されます。 クエリはデータクラスの属性およびリレーション属性名に基づいてビルドされます。 リレーション属性は、一つのクエリ内で複数のリンクされたテーブルを用いる手段です。
@@ -167,7 +167,7 @@ OB GET PROPERTY NAMES(ds.Employee;$prop)
 
 *   Project データクラス内: "リレートエンティティ" 型の **theClient** 属性。各 Project (クライアント) に対して最大 1つの Companyが あります。
 *   Company データクラス内: "リレートエンティティズ" 型の**companyProjects** 属性。各 Company に対して不定数の Project があります。
-> > The Manual or Automatic property of a database relation has no effect in ORDA.
+> データベースリレーションの手動あるいは自動プロパティは、ORDA においては何の効力も持ちません。
 
 すべてのデータクラス属性はデータクラスのプロパティとして公開されています:
 
@@ -180,7 +180,7 @@ OB GET PROPERTY NAMES(ds.Employee;$prop)
 [計算属性](ordaClasses.md#計算属性) は、[Entity クラスの定義](ordaClasses.md#entity-クラス) で `get <attributeName>` 関数を使用して宣言されます。 この属性値はアクセスされるたびに評価され、保存されません。 計算属性は、基礎となるデータベースストラクチャーには属しませんが、その上に構築され、データモデルの属性と同様に使用することができます。
 
 
-### Entity
+### エンティティ
 
 エンティティとは、レコードに相当するものです。 実際にはデータベース内のレコードを参照するオブジェクトです。 エンティティは、[データクラス](#データクラス) のインスタンスとも解釈可能なオブジェクトです。 同時にエンティティは、データストアがもとにしているデータベースに相関するデータも格納しています。
 
@@ -246,7 +246,7 @@ $e:=ds.Employee.all() // 結果のエンティティセレクションへの参�
 *   セレクション (タイプを問わず) に対して、あるいはデータクラスに対して標準の `query( )` を使った場合の戻り値
 *   オプションなしで `newSelection( )` メソッドを使用した場合の戻り値
 *   任意の演算メソッド (or( ), and( ), minus( ) ) を使った場合の戻り値 (入力セレクションタイプは問いません)。
-> > The following entity selections are always **ordered**: > > * entity selections returned by 4D Server to a remote client > * entity selections built upon remote datastores.
+> 次のエンティティセレクションは常に **順列あり** となります:
 > 
 > * 4D Server からリモートクライアントに返されるエンティティセレクション
 > * リモートデータストアにおいて作成されるエンティティセレクション
