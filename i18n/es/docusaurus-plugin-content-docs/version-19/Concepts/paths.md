@@ -55,9 +55,9 @@ La sintaxis específica de la plataforma depende del sistema operativo en el que
 
 Se soportan los siguientes modelos:
 
-- folder separators are "\"
+- los separadores de carpetas son "\"
 - the text contains ':' and '\' as the second and third character,
-- the text starts with "\\".
+- el texto comienza con "\\".
 
 Ejemplos con [`Folder`](../API/FolderClass.md#folder):
 
@@ -66,15 +66,15 @@ $ok:=Folder("C:\\Monday";fk platform path).create()
 $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 ```
 
-#### Entering Windows pathnames and escape sequences
+#### Entrada de rutas Windows y secuencias de escape
 
-The 4D [code editor](../code-editor/write-class-method.md) allows the use of escape sequences. An escape sequence is a set of characters that are used to replace a "special" character. The sequence begins with a backslash `\`, followed by a character. For example, `\t` is the escape sequence for the `Tab` character.
+El [editor de código e 4D](../code-editor/write-class-method.md) permite el uso de secuencias de escape. Una secuencia de escape es un conjunto de caracteres que se utilizan para sustituir un caracter "especial". La secuencia comienza con una barra diagonal inversa `\`, seguida de un caracter. Por ejemplo, `\t` es la secuencia de escape para el caracter `Tab`.
 
-The `\` character is also used as the separator in pathnames in Windows. In general, 4D will correctly interpret Windows pathnames that are entered in the code editor by replacing single backslashes `\` with double backslashes ``\\`. For example,``C:\Folder`will become`C:\\Folder`.
+El caracter `\` también se utiliza como separador en los nombres de ruta Windows. En general, 4D interpretará correctamente los nombres de ruta Windows que se introduzcan en el editor de código sustituyendo las barras invertidas simples `\` por barras invertidas dobles ``\\`. Por ejemplo,``C:\Folder`se convertirá en `C:\\Folder`.
 
-However, if you write `C:\MyDocuments\New`, 4D will display `C:\\MyDocuments\New`. In this case, the second `\` is incorrectly interpreted as `\N` (an existing escape sequence). You must therefore enter a double `\\` when you want to insert a backslash before a character that is used in one of the escape sequences recognized by 4D.
+Sin embargo, si escribe `C:\MyDocuments\New`, 4D mostrará `C:\\MyDocuments\New`. En este caso, la segunda `\` se interpreta incorrectamente como `\N` (una secuencia de escape existente). Por lo tanto, debe introducir un doble "-" cuando quiera insertar una barra invertida antes de un caracter que se utiliza en una de las secuencias de escape reconocidas por 4D.
 
-The following escape sequences are recognized by 4D:
+Las siguientes secuencias de escape son reconocidas por 4D:
 
 | Secuencias de escape         | Carácter reemplazado       |
 | ---------------------------- | -------------------------- |
@@ -86,53 +86,53 @@ The following escape sequences are recognized by 4D:
 
 ### macOS
 
-The following patterns are supported (HFS+ syntax):
+Se soportan los siguientes modelos (sintaxis HFS+):
 
-- folder separators are ":"
-- the path must not start with a ":"
+- los separadores de carpetas son ":"
+- la ruta no debe comenzar con un ":"
 
 Ejemplos con [`Folder`](../API/FolderClass.md#folder):
 
 ```4d
 $ok:=Folder("macintosh hd:";fk platform path).create()
-$ok:=Folder("Monday:Tuesday";fk platform path).create() //a volume must be called Monday
+$ok:=Folder("Monday:Tuesday";fk platform path).create() //un volume debe llamarse Monday
 ```
 
-## Absolute and relative pathnames
+## Rutas absolutas y relativas
 
 ### Constructores `File` y `Folder`
 
-[`File`](../API/FileClass.md#file) and [`Folder`](../API/FolderClass.md#folder) commands only accept **absolute pathnames**. Relative pathnames are not supported and will return errors. For example, the following code is not allowed:
+Los comandos [`File`](../API/FileClass.md#file) y [`Folder`](../API/FolderClass.md#folder) solo aceptan **rutas absolutas**. Las rutas relativas no están soportadas y devolverán errores. Por ejemplo, el siguiente código no es permitido:
 
 ```4d
     //ERROR
-$ko:=Folder("myFolder").create() //relative pathname with constructor
+$ko:=Folder("myFolder").create() //nombre de ruta relativo con constructor
 ```
 
-If you want to handle files or folders in various locations (project folder, system folders, etc.), you can use `filesystems` (see above). Por ejemplo, puede escribir:
+Si quiere manejar los archivos o las carpetas en varias ubicaciones (carpeta de proyecto, carpetas sistema, etc.), puede utilizar `filesystems` (ver arriba). Por ejemplo, puede escribir:
 
 ```4d
-$okFolder:=Folder("/PACKAGE/myFolder").create() //folder created at the structure level
-$okFile:=File("/DATA/Prefs/tempo.txt").create() //file created in the data folder
+$okFolder:=Folder("/PACKAGE/myFolder").create() //carpeta creada a nivel de la estructura
+$okFile:=File("/DATA/Prefs/tempo.txt").create() //archivo creado en la carpeta de datos
 ```
 
 ### `.file()` and `.folder()` folder methods
 
-Functions of folder objects such as [`folder.file()`](../API/FolderClass.md#file) and [`folder.folder()`](../API/FolderClass.md#folder-1) expect relative POSIX pathnames. Por ejemplo:
+Las funciones de los objetos carpeta, tales como [`folder.file()`](../API/FolderClass.md#file) y [`folder.folder()`](../API/FolderClass.md#folder-1) esperan nombres de ruta POSIX relativos. Por ejemplo:
 
 ```4d
-  //to reference a "Picture" folder within the user documents folder
+  //para referenciar una carpeta "Picture" dentro de la carpeta de documentos del usuario
 $userImages:=Folder(fk documents folder).folder("Pictures")
-  //to create a folder on the desktop
+  //para crear una carpeta en el escritorio
 $ok:=Folder(fk desktop folder).folder("myFolder").create()
 ```
 
-Absolute pathnames are not supported and will return errors.
+Las rutas absolutas no están soportadas y devolverán errores.
 
 
 ## Ejemplos
 
-The flexibility of file and folder functions offers you various possibilities for handling files and folders, like in the following examples:
+La flexibilidad de las funciones de archivos y de carpetas le ofrecen varias posibilidades para manipular los archivos y las carpetas, como en los siguientes ejemplos:
 
 ```4d
 $f:=Folder(fk desktop folder).folder("archive/jan2019")
