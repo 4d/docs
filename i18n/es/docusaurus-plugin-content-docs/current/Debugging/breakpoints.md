@@ -70,56 +70,56 @@ Para abrir la página de la lista de puntos de ruptura:
 Utilizando esta ventana, puede:
 
 * Definir las condiciones para los puntos de interrupción en la columna **Condiciones**
-* Enable or disable breakpoints by clicking the bullets in the margin. Los puntos de interrupción desactivados muestran balas transparentes
-* Delete breakpoints by pressing the `Delete` or `Backspace` key, or click on the **Delete** button below the list.
-* Open the methods where the breakpoint are located by double-clicking any line in the list
+* Activar o desactivar los puntos de interrupción haciendo clic en las viñetas del margen. Los puntos de interrupción desactivados muestran balas transparentes
+* Elimine los puntos de interrupción presionando la tecla `Delete` o `Backspace`, o haciendo clic en el botón **Delete** bajo la lista.
+* Abra los métodos donde se encuentran los puntos de interrupción haciendo doble clic en cualquier línea de la lista
 
-No puede añadir nuevos puntos de interrupción desde esta ventana. Breakpoints can only be created from within the Debugger window or the Code Editor.
+No puede añadir nuevos puntos de interrupción desde esta ventana. Los puntos de interrupción sólo pueden crearse desde la ventana del depurador o del editor de código.
 
 
 ## Comandos de captura
 
-The **Catch** tab of the Runtime Explorer lets you add additional breaks to your code by catching calls to 4D commands. Unlike a break point, which is located in a particular project method (and therefore triggers a trace exception only when it is reached), the scope of catching a command includes all the processes that execute 4D code and call that command.
+La pestaña **Catch** del Explorador de ejecución le permite añadir pausas adicionales a su código mediante la captura de llamadas a comandos 4D. A diferencia de un punto de interrupción, que se encuentra en un método particular del proyecto (y por lo tanto desencadena una excepción de rastreo sólo cuando se alcanza), el alcance de la captura de un comando incluye todos los procesos que ejecutan código 4D y llaman a ese comando.
 
-Catching a command is a convenient way to trace large portions of code without setting break points at arbitrary locations. For example, if a record that should not be deleted is deleted after you've executed one or several processes, you can try to reduce the field of your investigation by catching commands such as `DELETE RECORD` and `DELETE SELECTION`. Each time these commands are called, you can check if the record in question has been deleted, and thus isolate the faulty part of the code.
+Los puntos de interrupción en un comando son una forma conveniente de rastrear grandes porciones de código sin tener que definir puntos de interrupción en lugares arbitrarios. Por ejemplo, si un registro que no debería ser eliminado se borra después de haber ejecutado uno o varios procesos, puede intentar reducir el campo de su investigación vía puntos de interrupción en los comandos como `DELETE RECORD` and `DELETE SELECTION`. Cada vez que se llama a estos comandos, se puede verificar si el registro en cuestión ha sido eliminado, y así aislar la parte defectuosa del código.
 
 Los puntos de interrupción y los comandos de captura se pueden utilizar combinados.
 
-To open the Caught Commands page:
+Para abrir la página de los puntos de interrupción en comandos:
 
 1. Elija **Ejecutar** > **Explorador de ejecución...** para abrir el Explorador de ejecución.
 
-2. Click **Catch** to display the Caught Commands List:
+2. Haga clic en **Catch** para mostrar la lista de comandos capturados:
 
 ![runtime-explorer-window](../assets/en/Debugging/catch-command.png)
 
 Esta página lista los puntos de interrupción en el comando durante la ejecución. Se compone de dos columnas:
 
-* The left column displays the Enable/Disable status of the caught command, followed by the name of the command
-* The right column displays the condition associated with the caught command, if any
+* La columna de la izquierda muestra el estado de activación/desactivación del punto de interrupción en el comando, seguido del nombre del comando
+* La columna de la derecha muestra la condición asociada a punto de interrupción en el comando, si lo hay
 
 Para añadir un punto de interrupción en el comando:
 
-1. Click on the **Add New Catch** button (in the shape of a +) located below the list. A new entry is added to the list with the `ALERT` command as default
-2. Click the **ALERT** label, type the name of the command you want to catch, then press **Enter**.
+1. Haga clic en el botón **Add New Catch** (en forma de +) situado debajo de la lista. Se añade una nueva entrada a la lista con el comando `ALERT` por defecto
+2. Haga clic en la etiqueta **ALERT**, escriba el nombre del comando que desea atrapar y pulse **Intro**.
 
-To enable or disable a caught command, click on the bullet (•) in front of the command label. La bala es transparente cuando el comando está desactivado.
+Para activar o desactivar un punto de interrupción en un comando, haga clic en la viñeta (-) delante de la etiqueta del comando. La bala es transparente cuando el comando está desactivado.
 
-> Disabling a caught command has almost the same effect as deleting it. Durante la ejecución, el depurador no pasa casi nada de tiempo en la entrada. The advantage of disabling an entry is that you do not have to recreate it when you need it again.
+> La desactivación de un punto de interrupción de un comando tiene casi el mismo efecto que suprimirlo. Durante la ejecución, el depurador no pasa casi nada de tiempo en la entrada. La ventaja de desactivar una entrada es que no tiene que volver a crearla cuando la necesite de nuevo.
 
 Para eliminar un punto de interrupción en el comando:
 
 1. Seleccione un comando en la lista.
-2. Press **Backspace** or **Delete** on your keyboard or click on the **Delete** button beneath the list (**Delete All** removes all commands in the list).
+2. Presione la tecla **Backspace** o **Delete** en su teclado o haga clic en el botón **Delete** bajo la lista (**Delete All** elimina todos los comandos en la lista).
 
 ### Definir una condición para un punto de interrupción en un comando
 
 1. Haga clic en la entrada en la columna derecha
-2. Enter a 4D formula (expression, command call or project method) that returns a Boolean value.
+2. Introduzca una fórmula 4D (expresión, llamada de comando o método de proyecto) que devuelva un valor booleano.
 
 > Para eliminar una condición, borre su fórmula.
 
-Adding conditions allows you to stop execution when the command is invoked only if the condition is met. For example, if you associate the condition `Records in selection(\[Emp]>10)` with the break point on the `DELETE SELECTION` command, the code will not be stopped during execution of the `DELETE SELECTION` command if the current selection of the \[Emp] table only contains 9 records (or less).
+La adición de condiciones le permite detener la ejecución cuando el comando es invocado sólo si la condición se cumple. Por ejemplo, si asocia la condición `Records in selection(\[Emp]>10)` con el punto de interrupción en el comando `DELETE SELECTION`, el código no se detendrá durante la ejecución del comando `DELETE SELECTION` si la selección actual de la tabla \[Emp] sólo contiene 9 registros (o menos).
 
-Adding conditions to caught commands slows the execution, because the condition has to be evaluated each time an exception is met. On the other hand, adding conditions accelerates the debugging process, because 4D automatically skips occurrences that do not match the conditions.
+La adición de condiciones a los puntos de interrupción de los comandos ralentiza la ejecución, porque la condición tiene que ser evaluada cada vez que se produce una excepción. Por otra parte, añadir condiciones acelera el proceso de depuración, ya que 4D omite automáticamente las ocurrencias que no coinciden con las condiciones.
 

@@ -135,7 +135,7 @@ title: テキスト、ピクチャー
 
 | 名称   | データタイプ  | とりうる値                           |
 | ---- | ------- | ------------------------------- |
-| アイコン | picture | POSIX シンタックスの相対パス、またはファイルシステムパス |
+| icon | picture | POSIX シンタックスの相対パス、またはファイルシステムパス |
 
 #### 対象オブジェクト
 
@@ -149,13 +149,13 @@ title: テキスト、ピクチャー
 
 このプロパティの各種オプションの結果を次に示します:
 
-| オプション     | 説明                                                        | 例題                                                                |
-| --------- | --------------------------------------------------------- | ----------------------------------------------------------------- |
-| **左**     | テキストはアイコンの左に置かれます。 ボタンの内容は右揃えされます。                        | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
-| **上**     | テキストはアイコンの上に置かれます。 ボタンの内容は中央揃えされます。                       | ![](../assets/en/FormObjects/property_titlePosition_top.png)      |
-| **右**     | テキストはアイコンの右に置かれます。 ボタンの内容は左揃えされます。                        | ![](../assets/en/FormObjects/property_titlePosition_right.png)    |
-| **下**     | テキストはアイコンの下に置かれます。 ボタンの内容は中央揃えされます。                       | ![](../assets/en/FormObjects/property_titlePosition_bottom.png)   |
-| **中央合わせ** | アイコンのテキストはボタン内で縦と横に中央揃えされます。 テキストをアイコンの中に組み込むような場合に利用します。 | ![](../assets/en/FormObjects/property_titlePosition_centered.png) |
+| オプション  | 説明                                                        | 例題                                                                |
+| ------ | --------------------------------------------------------- | ----------------------------------------------------------------- |
+| **左**  | テキストはアイコンの左に置かれます。 ボタンの内容は右揃えされます。                        | ![](../assets/en/FormObjects/property_titlePosition_left.en.png)  |
+| **上**  | テキストはアイコンの上に置かれます。 ボタンの内容は中央揃えされます。                       | ![](../assets/en/FormObjects/property_titlePosition_top.png)      |
+| **右**  | テキストはアイコンの右に置かれます。 ボタンの内容は左揃えされます。                        | ![](../assets/en/FormObjects/property_titlePosition_right.png)    |
+| **下**  | テキストはアイコンの下に置かれます。 ボタンの内容は中央揃えされます。                       | ![](../assets/en/FormObjects/property_titlePosition_bottom.png)   |
+| **中央** | アイコンのテキストはボタン内で縦と横に中央揃えされます。 テキストをアイコンの中に組み込むような場合に利用します。 | ![](../assets/en/FormObjects/property_titlePosition_centered.png) |
 
 #### JSON 文法
 
@@ -208,8 +208,8 @@ title: テキスト、ピクチャー
 
 それぞれのオプションにより、ボタンとポップアップメニューとの関係が指定されます:
 
-<li>When the pop-up menu is **separated**, clicking on the left part of the button directly executes the current action of the button; this action can be modified using the pop-up menu accessible in the right part of the button.</li>
-<li>When the pop-up menu is **linked**, a simple click on the button only displays the pop-up menu. このポップアップメニュー上のアクションを選択しないと、実行はおこなわれません。</li>
+<li>ポップアップメニューが **分離** している場合、ボタンの左部分をクリックするとボタンのカレントアクションが直接実行されます。このアクションは、ボタンの右側からアクセスできるポップアップメニューを使用して変更することができます。</li>
+<li>ポップアップメニューが **リンク** している場合、ボタンをクリックしてもポップアップメニューが表示されるだけです。 このポップアップメニュー上のアクションを選択しないと、実行はおこなわれません。</li>
 
 ### ポップアップメニューの管理
 

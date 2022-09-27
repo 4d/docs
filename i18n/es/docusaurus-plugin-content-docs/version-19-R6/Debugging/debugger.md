@@ -378,36 +378,36 @@ Por ejemplo:
   // ...
 ```
 
-Say the program counter is set to the line `If (This condition)`. When you click the **Step over** button, the program counter moves directly to the `DO_SOMETHING_ELSE` line. To examine the results of the `DO_SOMETHING` line, you can move the program counter to that line and execute it.
+Say the program counter is set to the line `If (This condition)`. Al hacer clic en el botón **Step over**, el contador del programa se mueve directamente a la línea `DO_SOMETHING_ELSE`. Para examinar los resultados de la línea `DO_SOMETHING`, puede mover el contador del programa a esa línea y ejecutarla.
 
 ### Menú contextual
 
-The contextual menu of the Source Code Pane provides access to several functions that are useful when executing methods in Trace mode:
+El menú contextual de la Ventana de evaluación de los métodos da acceso a varias funciones útiles cuando se ejecutan métodos en el modo Rastreo:
 
 ![source-code-pane-context-window](../assets/en/Debugging/sourceCodePaneContext.png)
 
-* **Goto Definition**: Goes to where the selected object is defined. Este comando está disponible para:
-  * *Project methods:* displays method contents in a new window of the Code Editor
-  * *Fields:* Displays field properties in the inspector of the Structure window
-  * *Tables:* Displays table properties in the inspector of the Structure window
+* **Ir a definición**: va al lugar donde se define el objeto seleccionado. Este comando está disponible para:
+  * *Métodos proyecto:* muestra el contenido de los métodos en una nueva ventana del Editor de Código
+  * *Campos*: muestra las propiedades de los campos en el inspector de la ventana de estructura
+  * *Tablas:* muestra las propiedades de la tabla en el inspector de la ventana de estructura
   * *Formularios:* muestra el formulario en el editor de formularios
-  * *Variables* (local, process, interprocess or $n parameter): displays the line in the current method or among the compiler methods where the variable is declared
-* **Search References** (also available in Code Editor): Searches all project objects (methods and forms) in which the current element of the method is referenced. The current element is the one selected or the one where the cursor is located. Este puede ser el nombre de un campo, variable, comando, cadena, etc. Los resultados de la búsqueda se muestran en una nueva ventana de resultados estándar.
-* **Copy**: Standard copy of the selected expression to the pasteboard.
-* **Copy to Expression Pane**: Copy the selected expression to the Custom Watch Pane.
-* **Run to Cursor**:Executes statements found between the program counter and the selected line of the method (where the cursor is found).
-* **Set Next Statement**:Moves program counter to the selected line without executing this line or any intermediate ones. The designated line is only run if the user clicks on one of the execution buttons.
-* **Toggle Breakpoint** (also available in Code Editor): Alternately inserts or removes the breakpoint corresponding to the selected line. This modifies the breakpoint permanently: for instance, if you remove a breakpoint in the debugger, it no longer appears in the original method.
+  * *Variables* (locales, proceso, interproceso o parámetro $n): muestra la línea en el método actual o entre los métodos del compilador donde se declara la variable
+* **Buscar Referencias** (también disponible en el Editor de Código): busca todos los objetos del proyecto (métodos y formularios) en los que se hace referencia al elemento actual del método. El elemento actual es el seleccionado o aquel en el que se encuentra el cursor. Este puede ser el nombre de un campo, variable, comando, cadena, etc. Los resultados de la búsqueda se muestran en una nueva ventana de resultados estándar.
+* **Copiar**: copia estándar de la expresión seleccionada al portapapeles.
+* **Copiar en la ventana de expresión**: copiar la expresión seleccionada en la Ventana de evaluación.
+* **Ejecutar hasta el cursor**: ejecuta las instrucciones encontradas entre el contador del programa y la línea seleccionada del método (donde se encuentra el cursor).
+* **Fijar siguiente instrucción**: mueve el contador del programa a la línea seleccionada sin ejecutar esta línea ni las intermedias. La línea designada sólo se ejecuta si el usuario hace clic en uno de los botones de ejecución.
+* **Toggle Breakpoint** (also available in Code Editor): Alternately inserts or removes the breakpoint corresponding to the selected line. Esta función modifica el punto de interrupción de forma permanente: por ejemplo, si elimina un punto de interrupción en el depurador, ya no aparece en el método original.
 * **Edit Breakpoint** (also available in Code Editor): Displays the Breakpoint Properties dialog box. Cualquier cambio realizado modifica el punto de interrupción de forma permanente.
 
 ### Buscar siguiente/anterior
 
 Los atajos específicos permiten encontrar cadenas idénticas a la seleccionada:
 
-* To search for the next identical strings, press **Ctrl+E** (Windows) or **Cmd+E** (macOS)
-* To search for the previous identical strings, press **Ctrl+Shift+E** (Windows) or **Cmd+Shift+E** (macOS)
+* Para buscar las siguientes cadenas idénticas, presione **Ctrl+E** (Windows) o **Cmd+E** (macOS)
+* Para buscar las cadenas idénticas anteriores, presione **Ctrl+Shift+E** (Windows) o **Cmd+E** (macOS)
 
-The search is carried out only if you select at least one character in the Source code pane.
+La búsqueda se lleva a cabo sólo si se selecciona al menos un caracter en el panel de código fuente.
 
 ## Atajos
 
@@ -417,23 +417,23 @@ Esta sección lista todos los atajos disponibles en la ventana del depurador.
 
 #### Ventana de evaluación & Subventana de evaluación personalizada
 
-* **Double-click** an item in the Watch Pane to copy it to the Custom Watch Pane
-* **Double-Click** in the Custom Watch Pane to create a new expression
+* Un **doble clic** en un elemento de la ventana de expresión para copiarlo en la ventana de evaluación
+* Un **doble clic** en la ventana de evaluación crea una nueva expresión
 
 #### Panel de código fuente
 
 * Haga clic en el margen izquierdo para definiir o eliminar puntos de ruptura.
-* **Alt+Shift+Click** (Windows) or **Option+Shift+Click** (macOS) sets a temporary break point.
-* **Alt-Click** (Windows) or **Option-Click** displays the Edit Break window for a new or existing break point.
-* A selected expression or object can be copied to the Custom Watch Pane by simple drag and drop.
-* **Ctrl+D** (Windows) or **Cmd+D** (macOS) key combinations copy the selected text to the Custom Watch Pane.
-* **Ctrl+E** (Windows) or **Cmd+E** (macOS) key combinations find the next strings identical to the one selected.
-* **Ctrl+Shift+E** (Windows) or **Cmd+Shift+E** (macOS) key combinations find the previous strings identical to the one selected.
+* **Alt+Mayús+clic** (Windows) o **Option+Mayús+clic** (macOS) define un punto de interrupción temporal.
+* **Alt-Clic** (Windows) u **Opción-Clic** muestra la ventana de las propiedades del punto de interrupción para un punto de ruptura nuevo o existente.
+* Una expresión u objeto seleccionado puede copiarse en la ventana de evaluación con sólo arrastrar y soltar.
+* **Ctrl+D** (Windows) o **Comando+D** (macOS) en un texto seleccionado lo copia en la ventana de evaluación.
+* **Ctrl+E** (Windows) o **Comando+E** (macOS) identifica los canales posteriores que son idénticos al canal seleccionado.
+* **Ctrl+Mayús+E** (Windows) o **Comando+Mayús+E** (macOS) identifica los canales posteriores que son idénticos al canal seleccionado.
 
 #### Todas las ventanas
 
-* **Ctrl** + **+/-** (Windows) or **Command** + **+/-** (macOS) increases or decreases the font size for a better readability. The modified font size is also applied to the Code Editor and is stored in the Preferences.
-* **Ctrl + \*** (Windows) or **Command + \*** (macOS) forces the updating of the Watch Pane.
+* **Ctrl** + **+/-** (Windows) o **Comando** + **+/-** (macOS) aumenta o disminuye el tamaño de la fuente para una mejor legibilidad. The modified font size is also applied to the Code Editor and is stored in the Preferences.
+* **Ctrl + \*** (Windows) o **Comando + \*** (macOS) fuerza la actualización del Panel de Control.
 * Si no hay ningún elemento seleccionado en las ventanas, presione **Intro** para avanzar.
 * Cuando se selecciona el valor de un elemento, utilice las teclas de flecha para navegar por la lista.
 * Al editar un elemento, utilice las teclas de flecha para mover el cursor. Utilice Ctrl-A/X/C/V (Windows) o Comando-A/X/C/V (macOS) como accesos directos a los comandos del menú Seleccionar todo/Cortar/Copiar/Pegar del menú Edición.

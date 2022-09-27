@@ -26,7 +26,7 @@ You can create different types of drop-down lists with different features. To de
 
 ### Utilisation d'un objet
 
-> This feature is only available in 4D projects.
+> Cette fonctionnalité n'est disponible que dans les projets 4D.
 
 An [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) can be used as the data source of a drop-down list. Cet objet doit avoir les propriétés suivantes :
 

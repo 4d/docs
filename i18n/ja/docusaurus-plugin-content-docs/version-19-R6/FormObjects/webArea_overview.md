@@ -36,7 +36,7 @@ Webエリアでは、[2つの描画エンジン](properties_WebArea.md#埋め込
 ### $4dオブジェクトの使用
 
 
-[4Dの埋め込みWebレンダリングエンジン](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) は、$4d という JavaScriptオブジェクトをエリアに提供します。 $4dオブジェクトと "." (ドット) オブジェクト記法を使用することによって、任意の 4Dプロジェクトメソッドを呼び出すことができます。
+[4Dの埋め込みWebレンダリングエンジン](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) は、$4d という JavaScriptオブジェクトをエリアに提供します。$4dオブジェクトと "." (ドット) オブジェクト記法を使用することによって、任意の 4Dプロジェクトメソッドを呼び出すことができます。
 
 たとえば、`HelloWorld` という 4Dメソッドを呼び出す場合には、以下の宣言を実行します:
 
@@ -185,9 +185,9 @@ macOS 上の Webエリアで、プログラムにより処理される URL は�
 
 Webインスペクターを表示させるには、`WA OPEN WEB INSPECTOR` コマンドを実行するか、 Webエリアのコンテキストメニューを使用します。
 
-- **Execute the `WA OPEN WEB INSPECTOR` command**<br/> This command can be used directly with onscreen (form object) and offscreen web areas.
+- **`WA OPEN WEB INSPECTOR` コマンドの実行**<br/> このコマンドはスクリーン上 (フォームオブジェクト) の、またはオフスクリーンの Webエリアに対して直接使用することができます。
 
-- **Use the web area context menu**<br/> This feature can only be used with onscreen web areas and requires that the following conditions are met:
+- **Webエリアコンテキストメニューの使用**<br/> この機能はオンスクリーンの Webエリアでのみ使用することができ、以下の条件を満たしている必要があります:
     - エリアに対して [コンテキストメニュー](properties_Entry.md#コンテキストメニュー) が有効化されている。
     - インスペクターの使用が、以下の宣言を用いて明示的に有効化されている:
     ```4d

@@ -9,15 +9,15 @@ Une combo box est semblable à une [liste déroulante](dropdownList_Overview.md#
 
 Fondamentalement, vous devez considérer l’objet combo box comme une zone saisissable qui utilise un tableau ou une liste de choix en tant que liste de valeurs par défaut.
 
-## Handling combo boxes
+## Gestion des combo boxes
 
-Use the [`On Data Change`](Events/onDataChange.md) event to manage entries into the enterable area, as you would for any input form object.
+Utilisez l’événement formulaire [`On Data Change`](Events/onDataChange.md) pour gérer les valeurs saisies, comme pour toute zone de saisie.
 
 You initialize a combo box in exactly the same way as a [drop-down list](dropdownList_Overview.md#overview): using an object, an array, or a choice list.
 
 ### Utilisation d'un objet
 
-> This feature is only available in 4D projects.
+> Cette fonctionnalité n'est disponible que dans les projets 4D.
 
 An [object](Concepts/dt_object.md) encapsulating a [collection](../Concepts/dt_collection.md) can be used as the data source of a combo box. Cet objet doit avoir les propriétés suivantes :
 
