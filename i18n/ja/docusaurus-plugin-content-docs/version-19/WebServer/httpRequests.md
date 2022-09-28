@@ -84,7 +84,7 @@ title: HTTPリクエストの処理
 ### $3 - Webクライアントの IPアドレス
 
 $3 引数はブラウザーマシンの IPアドレスを受け取ります。 この情報を使用して、イントラネットアクセスとインターネットアクセスを区別できます。
-> 4D は IPv4 アドレスを、96-bit の接頭辞付きのハイブリッド型 IPv6/IPv4 フォーマットで返します。 たとえば、::ffff:192.168.2.34 は、192.168.2.34 という IPv4 アドレスを意味します。 詳細については、[IPv6 のサポートについて](webServerConfig.md#IPv6-のサポートについて) の章を参照ください。
+> 4D は IPv4 アドレスを、96-bit の接頭辞付きのハイブリッド型 IPv6/IPv4 フォーマットで返します。たとえば、::ffff:192.168.2.34 は、192.168.2.34 という IPv4 アドレスを意味します。 詳細については、[IPv6 のサポートについて](webServerConfig.md#IPv6-のサポートについて) の章を参照ください。
 
 ### $4 - サーバー IPアドレス
 
@@ -108,7 +108,7 @@ $4 引数は 4D Webサーバーによってリクエストされた IPアドレ�
 
 この URL を使用して、任意の *Param* テキスト引数とともに *MethodName* に指定した 4Dプロジェクトメソッドを呼び出すことができます。 このメソッドは引数を *$1* に受け取ります。
 
-- 4Dプロジェクトメソッドは、[Webリクエスト用に許可](allowProject.md)されていなければなりません。 メソッドのロパティで "公開オプション: 4DタグとURL(4DACTION...)" 属性がチェックされている必要があります。 属性がチェックされていない場合、Webリクエストは拒否されます。
+- 4Dプロジェクトメソッドは、[Webリクエスト用に許可](allowProject.md)されていなければなりません。メソッドのプロパティで "公開オプション: 4DタグとURL(4DACTION...)" 属性がチェックされている必要があります。 属性がチェックされていない場合、Webリクエストは拒否されます。
 - `/4DACTION/MyMethod/Param` リクエストを受け取ると、4D は `On Web Authentication` データベースメソッド (あれば) を呼び出します。
 
 `4DACTION/` は、スタティックな Webページの URL に割り当てることもできます:
@@ -147,7 +147,7 @@ WEB SEND BLOB($BLOB;"image/png")
 
 ### 4DACTION を使用してフォームをポスト
 
-4D Webサーバーでは、ポストされたフォームを使用することもできます。 これはスタティックなページから Webサーバーにデータを送信し、すべての値を簡単に取得するというものです。 POSTタイプを使用し、フォームのアクションは /4DACTION/MethodName で始まっていなければなりません。
+4D Webサーバーでは、ポストされたフォームを使用することもできます。これはスタティックなページから Webサーバーにデータを送信し、すべての値を簡単に取得するというものです。 POSTタイプを使用し、フォームのアクションは /4DACTION/MethodName で始まっていなければなりません。
 
 フォームは 2つのメソッドを使用してサブミットできます (4D では両方のタイプを使用できます):
 
@@ -189,15 +189,15 @@ OK="Search"
 4D は `On Web Authentication` データベースメソッドを (あれば) 呼び出し、そして以下の`processForm` プロジェクトメソッドを呼び出します:
 
 ```4d
- C_TEXT($1) //mandatory for compiled mode
+ C_TEXT($1) // コンパイルモードの場合必須
  C_LONGINT($vName)
  C_TEXT(vName;vLIST)
  ARRAY TEXT($arrNames;0)
  ARRAY TEXT($arrVals;0)
- WEB GET VARIABLES($arrNames;$arrVals) //we retrieve all the variables of the form
+ WEB GET VARIABLES($arrNames;$arrVals) // フォーム上の変数をすべて取得します
  $vName:=Find in array($arrNames;"vName")
  vName:=$arrVals{$vName}
- If(Find in array($arrNames;"vExact")=-1) //If the option has not been checked
+ If(Find in array($arrNames;"vExact")=-1) // オプションがチェックされていない場合
     vName:=vName+"@"
  End if
  QUERY([Jockeys];[Jockeys]Name=vName)
@@ -206,9 +206,9 @@ OK="Search"
     vLIST:=vLIST+[Jockeys]Name+" "+[Jockeys]Tel+"<br/>"
     NEXT RECORD([Jockeys])
  End while
- WEB SEND FILE("results.htm") //Send the list to the results.htm form
-  //which contains a reference to the variable vLIST,
-  //for example <!--4DHTML vLIST-->
+ WEB SEND FILE("results.htm") // 検索結果が挿入される results.htm を送信します
+  // このページには変数 vLIST の参照が含まれています
+  // たとえば <!--4DHTML vLIST--> など
   //...
 End if
 ```
@@ -314,7 +314,7 @@ HTMLではすべてのオブジェクトがテキストオブジェクトであ�
 
 4D Webサーバーには、リクエストの処理をカスタマイズするための、低レベル Webコマンドがいくつか用意されています。
 
-- `WEB GET HTTP BODY` コマンドは、ボディをそのままの状態でテキストとして返します。
+- `WEB GET HTTP BODY` コマンドは、ボディをそのままの状態でテキストとして返します。これを必要に応じて解析することができます。
 - `WEB GET HTTP HEADER` コマンドは、リクエストのヘッダーを返します。 カスタムcookie などを処理するのに便利です (`WEB SET HTTP HEADER` コマンドも使用できます)。
 - `WEB GET BODY PART` と `WEB Get body part count` コマンドは、マルチパートリクエストのボディパートを解析して、テキスト値を取得するだけでなく、ポストされたファイルもBLOBに取得します。
 
@@ -326,6 +326,6 @@ HTMLではすべてのオブジェクトがテキストオブジェクトであ�
 
 ## COMPILER_WEB プロジェクトメソッド
 
-COMPILER_WEB メソッドが存在する場合、それは HTTPサーバーが動的なリクエストを受け取り、4Dエンジンを呼び出した場合に、システムを通して呼び出されます。 これはたとえば 4D Webサーバーが、ポストされたフォーム、または処理すべき URL を [`<On Web Connection`](#on-web-connection) に受け取る場合が該当します。 このメソッドは Web通信時に使用される型指定または変数初期化指示子を含めることを目的としています。 これはデータベースのコンパイル時にコンパイラーによって使用されます。 COMPILER_WEB メソッドはすべての Webフォームで共通です。 デフォルトでは、COMPILER_WEB メソッドは存在しません。 明示的に作成する必要があります。
+COMPILER_WEB メソッドが存在する場合、それは HTTPサーバーが動的なリクエストを受け取り、4Dエンジンを呼び出した場合に、システムを通して呼び出されます。 これはたとえば 4D Webサーバーが、ポストされたフォーム、または処理すべき URL を [`On Web Connection`](#on-web-connection) に受け取る場合が該当します。 このメソッドは Web通信時に使用される型指定または変数初期化指示子を含めることを目的としています。 これはデータベースのコンパイル時にコンパイラーによって使用されます。 COMPILER_WEB メソッドはすべての Webフォームで共通です。 デフォルトでは、COMPILER_WEB メソッドは存在しません。 明示的に作成する必要があります。
 
 > COMPILER_WEB プロジェクトメソッドは (存在すれば)、SOAPリクエストが受け入れられるごとに実行されます。
