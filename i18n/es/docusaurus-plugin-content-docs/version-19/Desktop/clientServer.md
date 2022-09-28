@@ -72,12 +72,12 @@ When 4D connects to a 4D Server on the same machine, the application behaves as 
 
 Each time 4D performs a **Save all** action from the design environment (explicitly from **File** menu or implicitly by switching to application mode for example), 4D Server synchronously reloads project files. 4D waits for 4D Server to finish reloading the project files before it continues.
 
-However, you need to pay attention to the following behavior differences compared to [standard project architecture](Project/architecture.md):
+Sin embargo, debe prestar atención a las siguientes diferencias de comportamiento en comparación con [la arquitectura proyecto estándar](Project/architecture.md):
 
-- the userPreferences.{username} folder used by 4D is not the same folder used by 4D Server in the project folder. Instead, it is a dedicated folder, named "userPreferences", stored in the project system folder (i.e., the same location as when opening a .4dz project).
-- the folder used by 4D for derived data is not the folder named "DerivedData" in the project folder. Instead it is a dedicated folder named "DerivedDataRemote" located in the project system folder.
+- la carpeta userPreferences.{username} utilizada por 4D no es la misma carpeta utilizada por 4D Server en la carpeta proyecto. En su lugar, es una carpeta dedicada, llamada "userPreferences", almacenada en la carpeta sistema del proyecto (es decir, la misma ubicación que al abrir un proyecto .4dz).
+- la carpeta utilizada por 4D para los datos derivados no es la carpeta llamada "DerivedData" en la carpeta proyecto. En su lugar, se trata de una carpeta dedicada llamada "DerivedDataRemote" situada en la carpeta del sistema del proyecto.
 - el archivo catalog.4DCatalog no es editado por 4D sino por 4D Server. La información del catálogo se sincroniza mediante peticiones cliente/servidor
-- el archivo directory.json no es editado por 4D sino por 4D Server. Directory information is synchronised using client/server requests
-- 4D uses its own internal components and plug-ins instead of those in 4D Server.
+- el archivo directory.json no es editado por 4D sino por 4D Server. La información del directorio se sincroniza mediante peticiones cliente/servidor
+- 4D utiliza sus propios componentes internos y plug-ins en lugar de los de 4D Server.
 
-> It is not recommended to install plug-ins or components at the 4D or 4D Server application level.
+> No se recomienda instalar plug-ins o componentes a nivel de la aplicación 4D o 4D Server.
