@@ -590,14 +590,14 @@ For each attribute (style, color and background color), an **inheritance** is im
 * para los atributos líneas: valores de atributos de columnas
 * para los atributos de la columna: valores de los atributos del list box
 
-This way, if you want an object to inherit the attribute value from a higher level, you can use pass the `lk inherited` constant (default value) to the definition command or directly in the element of the corresponding style/color array. For example, given an array list box containing a standard font style with alternating colors: ![](../assets/en/FormObjects/listbox_styles3.png)
+This way, if you want an object to inherit the attribute value from a higher level, you can use pass the `lk inherited` constant (default value) to the definition command or directly in the element of the corresponding style/color array. Por ejemplo, dado un list box array que contiene un estilo de letra estándar con colores alternos: ![](../assets/en/FormObjects/listbox_styles3.png)
 
 Realiza las siguientes modificaciones:
 
-* change the background of row 2 to red using the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) property of the list box object,
-* change the style of row 4 to italics using the [Row Style Array](properties_Text.md#row-style-array) property of the list box object,
-* two elements in column 5 are changed to bold using the [Row Style Array](properties_Text.md#row-style-array) property of the column 5 object,
-* the 2 elements for column 1 and 2 are changed to dark blue using the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) property for the column 1 and 2 objects:
+* cambiar el fondo de la línea 2 a rojo utilizando la propiedad [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) del objeto list box,
+* cambia el estilo de la línea 4 a cursiva utilizando la propiedad [Row Style Array](properties_Text.md#row-style-array) del objeto list box,
+* dos elementos de la columna 5 se cambian a negrita utilizando la propiedad [Row Style Array](properties_Text.md#row-style-array) del objeto columna 5,
+* los 2 elementos de la columna 1 y 2 se cambian a azul oscuro utilizando la propiedad [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) para los objetos de la columna 1 y 2:
 
 ![](../assets/en/FormObjects/listbox_styles3.png)
 
@@ -630,12 +630,12 @@ Printing a list box in preview mode consists of directly printing the list box a
 
 ### Modo avanzado
 
-In this mode, the printing of list boxes is carried out by programming, via the `Print object` command (project forms and table forms are supported). The `LISTBOX GET PRINT INFORMATION` command is used to control the printing of the object.
+In this mode, the printing of list boxes is carried out by programming, via the `Print object` command (project forms and table forms are supported). El comando `LISTBOX GET PRINT INFORMATION` se utiliza para controlar la impresión del objeto.
 
 En este modo:
 
 * The height of the list box object is automatically reduced when the number of rows to be printed is less than the original height of the object (there are no "blank" rows printed). On the other hand, the height does not automatically increase according to the contents of the object. The size of the object actually printed can be obtained via the `LISTBOX GET PRINT INFORMATION` command.
-* The list box object is printed "as is", in other words, taking its current display parameters into account: visibility of headers and gridlines, hidden and displayed rows, etc. These parameters also include the first row to be printed: if you call the `OBJECT SET SCROLL POSITION` command before launching the printing, the first row printed in the list box will be the one designated by the command.
+* El objeto list box se imprime "tal cual", es decir, teniendo en cuenta sus parámetros de visualización actuales: visibilidad de los encabezados y de las rejillas, líneas ocultas y mostradas, etc. These parameters also include the first row to be printed: if you call the `OBJECT SET SCROLL POSITION` command before launching the printing, the first row printed in the list box will be the one designated by the command.
 * An automatic mechanism facilitates the printing of list boxes that contain more rows than it is possible to display: successive calls to `Print object` can be used to print a new set of rows each time. The `LISTBOX GET PRINT INFORMATION` command can be used to check the status of the printing while it is underway.
 
 ## List box jerárquicos
@@ -876,16 +876,16 @@ You set the cell display and options using specific attributes in each object (s
 
 You cannot set display formats or entry filters for columns of object-type list boxes. Se definen automáticamente en función del tipo de valor. Estos están listados en la siguiente tabla:
 
-| Tipo de valor | Formato por defecto                                                               | Control de entrada    |
-| ------------- | --------------------------------------------------------------------------------- | --------------------- |
-| text          | lo mismo que se define en el objeto                                               | any (no control)      |
-| real          | lo mismo que se define en el objeto (utilizando el separador decimal del sistema) | "0-9" y "." y "-"     |
-|               |                                                                                   | "0-9" y "." si min>=0 |
-| integer       | lo mismo que se define en el objeto                                               | "0-9" y "-"           |
-|               |                                                                                   | "0-9" if min>=0       |
-| Boolean       | casilla de selección                                                              | N/A                   |
-| color         | N/A                                                                               | N/A                   |
-| evento        | N/A                                                                               | N/A                   |
+| Tipo de valor | Formato por defecto                                                               | Control de entrada       |
+| ------------- | --------------------------------------------------------------------------------- | ------------------------ |
+| text          | lo mismo que se define en el objeto                                               | cualquiera (sin control) |
+| real          | lo mismo que se define en el objeto (utilizando el separador decimal del sistema) | "0-9" y "." y "-"        |
+|               |                                                                                   | "0-9" y "." si min>=0    |
+| integer       | lo mismo que se define en el objeto                                               | "0-9" y "-"              |
+|               |                                                                                   | "0-9" if min>=0          |
+| Boolean       | casilla de selección                                                              | N/A                      |
+| color         | N/A                                                                               | N/A                      |
+| evento        | N/A                                                                               | N/A                      |
 
 ### Atributos
 
