@@ -76,7 +76,7 @@ Un filtro de entrada sólo funciona durante la entrada de datos. No tiene efecto
 
 Durante la entrada de datos, un filtro de entrada evalúa cada caracter a medida que se escribe. If the user attempts to type an invalid character (a number instead of a letter, for example), 4D simply does not accept it. The null character remains unchanged until the user types a valid character.
 
-Entry filters can also be used to display required formatting characters so that the user need not enter them. For example, an American telephone number consists of a three-digit area code, followed by a seven-digit number that is broken up into two groups of three and four digits, respectively. A display format can be used to enclose the area code in parentheses and display a dash after the third digit of the telephone number. When such a format is used, the user does not need to enter the parentheses or the dashes.
+Entry filters can also be used to display required formatting characters so that the user need not enter them. For example, an American telephone number consists of a three-digit area code, followed by a seven-digit number that is broken up into two groups of three and four digits, respectively. A display format can be used to enclose the area code in parentheses and display a dash after the third digit of the telephone number. Cuando se utiliza este formato, el usuario no necesita introducir los paréntesis ni los guiones.
 
 ### Definir un filtro de entrada
 
