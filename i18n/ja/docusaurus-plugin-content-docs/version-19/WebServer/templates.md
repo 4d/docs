@@ -3,7 +3,7 @@ id: templates
 title: テンプレートページ
 ---
 
-4D の Webサーバーでは、タグを含む HTMLテンプレートページを使用することができます。 つまり、静的な HTMLコードと、4DTEXT、4DIF、4DINCLUDEなどの [変換タグ](Tags/tags.md) によって追加された 4D参照の組み合わせです。 これらのタグは通常、HTMLタイプのコメント (`<!--#4DTagName TagValue-->`) として、HTMLソースコードに挿入されます。
+4D の Webサーバーでは、タグを含む HTMLテンプレートページを使用することができます。つまり、静的な HTMLコードと、4DTEXT、4DIF、4DINCLUDEなどの [変換タグ](Tags/tags.md) によって追加された 4D参照の組み合わせです。 これらのタグは通常、HTMLタイプのコメント (`<!--#4DTagName TagValue-->`) として、HTMLソースコードに挿入されます。
 
 これらのページが HTTPサーバーから送信される際、ページは解析され、含まれているタグが実行され、結果のデータに置き換えられます。 このように、ブラウザーが受け取るページは、静的な要素と 4D の処理による値が組み合わさったものです。
 
@@ -38,21 +38,19 @@ Welcome to <!--#4DTEXT vtSiteName-->!</P>
 <HTML>
 ...
 <BODY>
-<!--#4DSCRIPT/PRE_PROCESS-->   (Method call)
-<!--#4DIF (myvar=1)-->   (If condition)
-   <!--#4DINCLUDE banner1.html-->   (Subpage insertion)
+<!--#4DSCRIPT/PRE_PROCESS-->   (メソッド呼び出し)
+<!--#4DIF (myvar=1)-->   (If 条件)
+   <!--#4DINCLUDE banner1.html-->   (サブページ挿入)
 <!--#4DENDIF-->   (End if)
 <!--#4DIF (myvar=2)-->
-
    <!--#4DINCLUDE banner2.html-->
 <!--#4DENDIF-->
 
-<!--#4DLOOP [TABLE]-->   (loop on the current selection)
+<!--#4DLOOP [TABLE]-->   (カレントセレクションでのループ)
 <!--#4DIF ([TABLE]ValNum>10)-->   (If [TABLE]ValNum>10)
-   <!--#4DINCLUDE subpage.html-->   (subpage insertion)
+   <!--#4DINCLUDE subpage.html-->   (サブページの挿入)
 <!--#4DELSE-->   (Else)
-   <B>Value: <!--#4DTEXT [TABLE]ValNum--></B><br/>
-      (Field display)
+   <B>Value: <!--#4DTEXT [TABLE]ValNum--></B><br/>   (フィールド表示)
 <!--#4DENDIF-->
 <!--#4DENDLOOP-->   (End for)
 </BODY>
@@ -82,12 +80,12 @@ Welcome to <!--#4DTEXT vtSiteName-->!</P>
 
 ## Webから 4Dメソッドへのアクセス
 
-`4DEACH`、`4DELSEIF`、`4DEVAL`、`4DHTML`、`4DIF`、`4DLOOP`、`4DSCRIPT`、または `4DTEXT` で Webリクエストから 4Dメソッドを実行できるか否かは、メソッドプロパティの "公開オプション: 4D タグと URL(4DACTION...)" この属性がチェックされていないメソッドは、Webリクエストから呼び出すことができません。
+`4DEACH`、`4DELSEIF`、`4DEVAL`、`4DHTML`、`4DIF`、`4DLOOP`、`4DSCRIPT`、または `4DTEXT` で Webリクエストから 4Dメソッドを実行できるか否かは、メソッドプロパティの [公開オプション: 4D タグと URL(4DACTION...)](allowProject.md) 属性の設定に依存します。 この属性がチェックされていないメソッドは、Webリクエストから呼び出すことができません。
 
 ## 悪意あるコードの侵入を防止
 
 4D変換タグは様々なタイプのデータを引数として受け入れます: テキスト、変数、メソッド、コマンド名、…。 これらのデータが自分で書いたコードから提供される場合、その受け渡しを自分でコントロールできるので、悪意あるコードの侵入のリスクは無いと言っていいでしょう。 しかしながら、 データベースのコード扱うデータは多くの場合、外部ソース (ユーザー入力、読み込み、等) から導入されたものです。
 
-この場合、`4DEVAL` や `4DSCRIPT` などの変換タグは **使用しない** のが賢明です。
+この場合、`4DEVAL` や `4DSCRIPT` などの変換タグは **使用しない** のが賢明です。なぜならこれらのタグはこういったデータが格納された変数を直接評価するからです。
 
-これに加え、[繰り返しの原則](Tags/tags.md#再起的処理) に従い、悪意あるコード自身が変換タグを含んでいる可能性もあります。 この場合、`4DTEXT` タグを使用しなくてはなりません。 例として、"Name" という名前の Webフォームフィールドがあり、ユーザーがそこに名前を入力する場合を考えます。 この名前は `<!--#4DHTML vName-->` タグを使用してページ内に表示されます。 If text of the "\<!--#4DEVAL QUIT 4D-->" type is inserted instead of the name, interpreting this tag will cause the application to be exited. このリスクを避けるには、`4DTEXT` タグを使用することで対応できます。 このタグは特殊 HTML文字をエスケープするため、挿入された悪意ある再起的コードが解釈されることはありません。 前の例でいうと、"Name" フィールドには "`<!--#4DEVAL QUIT 4D-->`" が含まれることになり、これは変換されません。
+これに加え、[繰り返しの原則](Tags/tags.md#再起的処理) に従い、悪意あるコード自身が変換タグを含んでいる可能性もあります。 この場合、`4DTEXT` タグを使用しなくてはなりません。 例として、"Name" という名前の Webフォームフィールドがあり、ユーザーがそこに名前を入力する場合を考えます。 この名前は `<!--#4DHTML vName-->` タグを使用してページ内に表示されます。 もし "\<!--#4DEVAL QUIT 4D-->" というテキストが名前の代わりに入力されたとしたら、このタグを解釈するとアプリケーションは終了してしまいます。 このリスクを避けるには、`4DTEXT` タグを使用することで対応できます。 このタグは特殊 HTML文字をエスケープするため、挿入された悪意ある再起的コードが解釈されることはありません。 前の例でいうと、"Name" フィールドには "`<!--#4DEVAL QUIT 4D-->`" が含まれることになり、これは変換されません。
