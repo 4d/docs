@@ -1239,6 +1239,18 @@ In *rangeObj*, pass a cell range object. If the designated cells do not belong t
 
 If *rangeObj* is not a cell range or contains multiple ranges, the first cell of the first range is used.
 
+#### Example
+
+```4d
+If (FORM Event.code=On After Edit && FORM Event.action="valueChanged")
+     $tableName:=VP Find table(FORM Event.range)
+     If ($tableName#"")
+         ALERT("The "+$tableName+" table has been modified.")
+     End if 
+End if
+```
+
+
 #### See also
 
 [VP Get table range](#vp-get-table-range)
@@ -1270,6 +1282,7 @@ In order to increase performance and reduce the number of requests sent, the 4D 
 You want to trace the execution of the commands and empty the command buffer:
 
 ```4d
+
  VP SET TEXT VALUE(VP Cell("ViewProArea1";10;1);"INVOICE")
  VP SET TEXT VALUE(VP Cell("ViewProArea1";10;2);"Invoice date: ")
  VP SET TEXT VALUE(VP Cell("ViewProArea1";10;3);"Due date: ")
@@ -2479,6 +2492,15 @@ The command returns an object describing the current attributes of the *column*:
 
 If *tableName* is not found or if *column* index is higher than the number of columns, the command returns **null**. 
 
+#### Example
+
+```4d
+var $attributes : Object
+$attributes:=VP Get table column attributes("ViewProArea"; $tableName; 1)
+If ($attributes.dataField#"")
+     ...
+End if
+```
 
 #### See also
 
@@ -2521,6 +2543,17 @@ In *sheet*, pass the index of the target sheet. If no index is specified or if y
 >Indexing starts at 0.
 
 If *tableName* or *columnName* is not found, the command returns -1. 
+
+#### Example
+
+```4d
+	// Search the column id according the column name
+var $id : Integer
+$id:=VP Get table column index($area; $tableName; "Weight price")
+	// Remove the column by id
+VP REMOVE TABLE COLUMNS($area; $tableName; $id)
+```
+
 
 
 #### See also
@@ -2726,6 +2759,7 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 ### VP Get workbook options
 
 <!-- REF #_method_.VP Get workbook options.Syntax -->
+
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
@@ -2782,6 +2816,7 @@ In *filePath*, pass the path and name of the document to be imported. The follow
 
 * 4D View Pro documents (extension ".4vp")
 * Microsoft Excel (extension ".xlsx")
+
 * text documents (extension ".txt", ".csv", the document must be in utf-8)
 
 If the document extension is not a recognized extension, such as `.4vp` or `.xlsx`, the document is considered a text document. You must pass a full path, unless the document is located at the same level as the Project folder, in which case you can just pass its name.
@@ -4632,6 +4667,7 @@ Pass an object and bind the context data to cells in the first row:
 var $data : Object
 
 $data:=New object
+
 $data.firstName:="Freehafer"
 $data.lastName:="Nancy"
 
@@ -5922,6 +5958,7 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
+
 |vPos  |Integer|->|Vertical view position of cell or row|
 |hPos  |Integer|->|Horizontal view position of cell or row|<!-- END REF -->
 
