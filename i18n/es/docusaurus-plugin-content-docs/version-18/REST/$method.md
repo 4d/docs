@@ -107,12 +107,12 @@ Si la petición fue exitosa, se devuelve la siguiente respuesta:
 {
     "ok": true
 }
-If the entity set wasn't found, an error is returned:
+Si no se encuentra el conjunto de entidades, se devuelve un error:
 
 {
     "__ERROR": [
         {
-            "message": "Error code: 1802\nEntitySet  \"4C51204DD8184B65AC7D79F09A077F24\" cannot be found\ncomponent:  'dbmg'\ntask 22, name: 'HTTP connection handler'\n",
+             "message": "Error code: 1802\nEntitySet  \"4C51204DD8184B65AC7D79F09A077F24\" cannot be found\ncomponent:  'dbmg'\ntask 22, name: 'HTTP connection handler'\n",
             "componentSignature": "dbmg",
             "errCode": 1802
         }
@@ -200,14 +200,14 @@ Para actualizar una entidad, debes pasar los parámetros `__KEY` y `__STAMP` en 
 
 Los triggers se ejecutan inmediatamente al guardar la entidad en el servidor. La respuesta contiene todos los datos tal y como existen en el servidor.
 
-You can also put these requests to create or update entities in a transaction by calling `$atomic/$atOnce`. Si se produce algún error durante la validación de los datos, no se guarda ninguna de las entidades. You can also use `$method=validate` to validate the entities before creating or updating them.
+También puede poner estas solicitudes para crear o actualizar entidades en una transacción llamando a `$atomic/$atOnce`. Si se produce algún error durante la validación de los datos, no se guarda ninguna de las entidades. También puede utilizar `$method=validate` para validar las entidades antes de crearlas o actualizarlas.
 
 Si surge un problema al añadir o modificar una entidad, se le devolverá un error con esa información.
 
 :::nota
 *   **Las fechas** deben expresarse en formato JS: YYYY-MM-DDTHH:MM:SSZ (por ejemplo, "2010-10-05T23:00:00Z"). Si ha seleccionado la propiedad Fecha únicamente para su atributo Fecha, se eliminará la zona horaria y la hora (hora, minutos y segundos). En este caso, también puede enviar la fecha en el formato que se le devuelve dd!mm!aaaa (por ejemplo, 05!10!2013).
 *   **Booleanos** son true o false.
-*   Uploaded files using `$upload` can be applied to an attribute of type Image or BLOB by passing the object returned in the following format `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50"}` :::
+*   Los archivos subidos mediante `$upload` pueden aplicarse a un atributo de tipo Imagen o BLOB pasando el objeto devuelto en el siguiente formato `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50"}`:::
 
 
 ### Ejemplo
