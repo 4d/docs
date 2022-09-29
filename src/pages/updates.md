@@ -10,7 +10,7 @@ The list of main updates in this documentation. For general information about ne
 
 - Related data and computed/alias attributes can be displayed in the [Data Explorer](Admin/dataExplorer#basics).
 - New [FileHandle](API/FileHandleClass) class and new [`.open()`](API/FileClass#open) function in the `File` class. 
-- 4D View Pro: new table commands [VP Get tables](ViewPro/method-list#vp-get-tables), [VP INSERT TABLE COLUMNS](ViewPro/method-list#vp-insert-table-columns), [VP INSERT TABLE ROWS](ViewPro/method-list#vp-insert-table-rows), [VP REMOVE TABLE COLUMNS](ViewPro/method-list#vp-remove-table-columns), [VP REMOVE TABLE ROWS](ViewPro/method-list#vp-remove-table-rows), [VP RESIZE TABLE](ViewPro/method-list#vp-resize-table).
+- 4D View Pro: new table commands [VP Find table](ViewPro/method-list#vp-find-table), [VP Get table column attributes](ViewPro/method-list#vp-get-table-column-attributes), [VP Get table column index](ViewPro/method-list#vp-get-table-column-index), [VP Get tables](ViewPro/method-list#vp-get-tables), [VP INSERT TABLE COLUMNS](ViewPro/method-list#vp-insert-table-columns), [VP INSERT TABLE ROWS](ViewPro/method-list#vp-insert-table-rows), [VP REMOVE TABLE COLUMNS](ViewPro/method-list#vp-remove-table-columns), [VP REMOVE TABLE ROWS](ViewPro/method-list#vp-remove-table-rows), [VP RESIZE TABLE](ViewPro/method-list#vp-resize-table), [VP SET TABLE COLUMN ATTRIBUTES](ViewPro/method-list#vp-set-table-column-attributes).
 - Component namespaces are now [displayed in the Explorer](Extensions/develop-components.md#declaring-the-component-namespace).
 - Text area and Input form objects now support the [corner radius property](FormObjects/properties_CoordinatesAndSizing.md#corner-radius).
 

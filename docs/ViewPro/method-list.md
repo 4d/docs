@@ -840,7 +840,8 @@ Here's the result:
 
 #### See also
 
-[VP REMOVE TABLE](#vp-remove-table)<br/>[VP SET DATA CONTEXT](#vp-set-data-context)
+[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP Get table column index](#vp-get-table-column-index)<br/>[VP INSERT TABLE COLUMNS](#vp-insert-table-columns)<br/>[VP INSERT TABLE ROWS](#vp-insert-table-rows)<br/>[VP REMOVE TABLE](#vp-remove-table)<br/>[VP RESIZE TABLE](#vp-resize-table)<br/>[VP SET DATA CONTEXT](#vp-set-data-context)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)
+
 
 ## D
 
@@ -913,6 +914,7 @@ To delete rows selected by the user (in the image below rows 1, 2, and 3):
 use the following code:
 
 ```4d
+
  VP DELETE ROWS(VP Get selection("ViewProArea"))
 ```
 
@@ -1209,6 +1211,53 @@ Else
 End if
 ```
 
+
+### VP Find table
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R7|Added
+</details>
+
+<!-- REF #_method_.VP Find table.Syntax -->
+**VP Find table** ( *rangeObj* : Object ) : Text<!-- END REF -->
+
+<!-- REF #_method_.VP Find table.Params -->
+
+|Parameter|Type| |Description|
+|---|---|---|---|
+|rangeObj |Object|->|Cell range|
+|Result  |Text|<-|Table name|<!-- END REF -->
+
+#### Description
+
+The `VP Find table` command <!-- REF #_method_.VP Find table.Summary -->returns the name of the table to which to the *rangeObj* cell belongs<!-- END REF -->.
+
+In *rangeObj*, pass a cell range object. If the designated cells do not belong to a table, the command returns an empty string.
+
+If *rangeObj* is not a cell range or contains multiple ranges, the first cell of the first range is used.
+
+#### Example
+
+```4d
+If (FORM Event.code=On After Edit && FORM Event.action="valueChanged")
+     $tableName:=VP Find table(FORM Event.range)
+     If ($tableName#"")
+         ALERT("The "+$tableName+" table has been modified.")
+     End if 
+End if
+```
+
+
+#### See also
+
+[VP Get table range](#vp-get-table-range)
+
+
+
+
 ### VP FLUSH COMMANDS
 
 <!-- REF #_method_.VP FLUSH COMMANDS.Syntax -->
@@ -1233,6 +1282,7 @@ In order to increase performance and reduce the number of requests sent, the 4D 
 You want to trace the execution of the commands and empty the command buffer:
 
 ```4d
+
  VP SET TEXT VALUE(VP Cell("ViewProArea1";10;1);"INVOICE")
  VP SET TEXT VALUE(VP Cell("ViewProArea1";10;2);"Invoice date: ")
  VP SET TEXT VALUE(VP Cell("ViewProArea1";10;3);"Due date: ")
@@ -1245,6 +1295,7 @@ You want to trace the execution of the commands and empty the command buffer:
 
 <!-- REF #_method_.VP Font to object.Syntax -->
 **VP Font to object** (  *font* : Text ) : Object<!-- END REF -->
+
 
 <!-- REF #_method_.VP Font to object.Params -->
 
@@ -1358,6 +1409,7 @@ In *rangeObj*, pass an object that is either a cell range or a combined range of
 * If *rangeObj* contains several ranges of cells, the command returns the attribute name linked to the first cell of the first range.
 
 #### Example
+
 
 ```4d
 var $p; $options : Object
@@ -1855,6 +1907,7 @@ Available properties depend on the type of the named element (named cell, named 
 
 ```4d
 var $list : Collection
+
 
 $list:=VP Get names("ViewProArea";2) //names in 3rd sheet
 ```
@@ -2394,6 +2447,120 @@ In this case, the current sheet uses two style objects:
 [VP ADD STYLESHEET](#vp-add-stylesheet)<br/>[VP Get stylesheet](#vp-get-stylesheet)<br/>[VP REMOVE STYLESHEET](#vp-remove-stylesheet)
 
 
+### VP Get table column attributes
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R7|Added
+</details>
+
+<!-- REF #_method_.VP Get table column attributes.Syntax -->
+**VP Get table column attributes** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer {; *sheet* : Integer } ) : Object<!-- END REF -->
+
+<!-- REF #_method_.VP Get table column attributes.Params -->
+
+|Parameter|Type| |Description|
+|---|---|---|---|
+|vpAreaName |Text|->|4D View Pro area form object name|
+|tableName|Text|->|Table name|
+|column|Integer|->|Index of the column in the table|
+|sheet   |Integer|->|Sheet index (current sheet if omitted)|
+|Result |Object|<-|Attributes of the *column*|<!-- END REF -->
+
+
+#### Description
+
+The `VP Get table column attributes` command <!-- REF #_method_.VP Get table column attributes.Summary -->returns the current attributes of the specified *column* in the *tableName*<!-- END REF -->.
+
+In *vpAreaName*, pass the name of the 4D View Pro area.
+
+In *sheet*, pass the index of the target sheet. If no index is specified or if you pass -1, the command applies to the current sheet.
+
+>Indexing starts at 0.
+
+The command returns an object describing the current attributes of the *column*:
+
+|Property|Type|Description|
+|---|---|---|
+|dataField|text|Table column's property name in the data context. Not returned if the table is displayed automatically |
+|name|text|Table column's name.|
+|footerText|text|Column footer value.|
+|footerFormula|text|Column footer formula.|
+|filterButtonVisible|boolean|True if the table column's filter button is displayed, False otherwise. |
+
+If *tableName* is not found or if *column* index is higher than the number of columns, the command returns **null**. 
+
+#### Example
+
+```4d
+var $attributes : Object
+$attributes:=VP Get table column attributes("ViewProArea"; $tableName; 1)
+If ($attributes.dataField#"")
+     ...
+End if
+```
+
+#### See also
+
+[VP CREATE TABLE](#vp-create-table)<br/>[VP Find table](#vp-find-table)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)<br/>[VP RESIZE TABLE](#vp-resize-table)
+
+
+### VP Get table column index
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R7|Added
+</details>
+
+<!-- REF #_method_.VP Get table column index.Syntax -->
+**VP Get table column index** ( *vpAreaName* : Text ; *tableName* : Text ; *columnName* : Text {; *sheet* : Integer } ) : Integer<!-- END REF -->
+
+<!-- REF #_method_.VP Get table column index.Params -->
+
+|Parameter|Type| |Description|
+|---|---|---|---|
+|vpAreaName |Text|->|4D View Pro area form object name|
+|tableName|Text|->|Table name|
+|columnName|Text|->|Name of the table column|
+|sheet   |Integer|->|Sheet index (current sheet if omitted)|
+|Result |Integer|<-|Index of *columnName*|<!-- END REF -->
+
+
+#### Description
+
+The `VP Get table column index` command <!-- REF #_method_.VP Get table column index.Summary -->returns the index of the *columnName* in the *tableName*<!-- END REF -->.
+
+In *vpAreaName*, pass the name of the 4D View Pro area.
+
+In *columnName*, pass the name of the table column for which you want to get the index. 
+
+In *sheet*, pass the index of the target sheet. If no index is specified or if you pass -1, the command applies to the current sheet.
+
+>Indexing starts at 0.
+
+If *tableName* or *columnName* is not found, the command returns -1. 
+
+#### Example
+
+```4d
+	// Search the column id according the column name
+var $id : Integer
+$id:=VP Get table column index($area; $tableName; "Weight price")
+	// Remove the column by id
+VP REMOVE TABLE COLUMNS($area; $tableName; $id)
+```
+
+
+
+#### See also
+
+[VP CREATE TABLE](#vp-create-table)<br/>[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)
+
+
 ### VP Get table range
 
 <details><summary>History</summary>
@@ -2437,7 +2604,8 @@ If *tableName* is not found, the command returns **null**.
 
 #### See also
 
-[VP RESIZE TABLE](#vp-resize-table)
+[VP RESIZE TABLE](#vp-resize-table)<br/>
+[VP Find table](#vp-find-table)
 
 
 
@@ -2591,6 +2759,7 @@ $result:=VP Get values(VP Cells("ViewProArea";2;3;5;3))
 ### VP Get workbook options
 
 <!-- REF #_method_.VP Get workbook options.Syntax -->
+
 **VP Get workbook options** ( *vpAreaName* : Text ) : Object<!-- END REF -->
 
 <!-- REF #_method_.VP Get workbook options.Params -->
@@ -2647,6 +2816,7 @@ In *filePath*, pass the path and name of the document to be imported. The follow
 
 * 4D View Pro documents (extension ".4vp")
 * Microsoft Excel (extension ".xlsx")
+
 * text documents (extension ".txt", ".csv", the document must be in utf-8)
 
 If the document extension is not a recognized extension, such as `.4vp` or `.xlsx`, the document is considered a text document. You must pass a full path, unless the document is located at the same level as the Project folder, in which case you can just pass its name.
@@ -2843,6 +3013,8 @@ The results is:
 
 The `VP INSERT TABLE COLUMNS` command <!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->inserts one or *count* empty column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->. 
 
+When a column has been inserted with this command, you typically modify its contents using the [VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes) command. 
+
 In the *insertAfter* parameter, you can pass one of the following constants to indicate if the column(s) must be inserted before or after the *column* index:
 
 |Constant|Value|Description|
@@ -2857,37 +3029,12 @@ If *tableName* does not exist or if there is not enough space in the sheet, noth
 
 #### Example
 
-You create a table with a data context: 
-
-```4d
-var $context : Object
-$context:=New object()
-
-$context.col:=New collection
-$context.col.push(New object("name"; "Smith"; "salary"; 10000))
-$context.col.push(New object("name"; "Wesson"; "salary"; 50000))
-$context.col.push(New object("name"; "Gross"; "salary"; 10500))
-
-VP SET DATA CONTEXT("ViewProArea"; $context)
-
-VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 3; 3); "PeopleTable"; "col")
-```
-
-![](../assets/en/ViewPro/table-base.png)
-
-You want to insert two rows and two columns in the table, you can write:
-
-```4d
-VP INSERT TABLE ROWS("ViewProArea"; "PeopleTable"; 1; 2)
-VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
-```
-
-![](../assets/en/ViewPro/table-insert.png)
+See examples for [VP INSERT TABLE ROWS](#vp-insert-table-rows) and [VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes).
 
 
 #### See also
 
-[VP INSERT TABLE ROWS](#vp-insert-table-rows)<br/>[VP REMOVE TABLE COLUMNS](#vp-remove-table-columns)
+[VP INSERT TABLE ROWS](#vp-insert-table-rows)<br/>[VP REMOVE TABLE COLUMNS](#vp-remove-table-columns)<br/>[VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes)
 
 
 
@@ -2934,7 +3081,33 @@ If *tableName* does not exist or if there is not enough space in the sheet, noth
 
 #### Example
 
-See example for the [VP INSERT TABLE COLUMNS](#vp-insert-table-columns) command.
+You create a table with a data context: 
+
+```4d
+var $context : Object
+$context:=New object()
+
+$context.col:=New collection
+$context.col.push(New object("name"; "Smith"; "salary"; 10000))
+$context.col.push(New object("name"; "Wesson"; "salary"; 50000))
+$context.col.push(New object("name"; "Gross"; "salary"; 10500))
+
+VP SET DATA CONTEXT("ViewProArea"; $context)
+
+VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 3; 3); "PeopleTable"; "col")
+```
+
+![](../assets/en/ViewPro/table-base.png)
+
+You want to insert two rows and two columns in the table, you can write:
+
+```4d
+VP INSERT TABLE ROWS("ViewProArea"; "PeopleTable"; 1; 2)
+VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 2)
+```
+
+![](../assets/en/ViewPro/table-insert.png)
+
 
 #### See also
 
@@ -3959,6 +4132,7 @@ VP SET ACTIVE CELL($activeCell)
 >
 >For greater flexiblity, it is recommended to use the [`VP SET CUSTOM FUNCTIONS`](#vp-set-custom-functions) command which allows you to designate 4D formulas that can be called from 4D View Pro areas. As soon as `VP SET CUSTOM FUNCTIONS` is called, `VP SET ALLOWED METHODS` calls are ignored. 4D View Pro also supports 4D's generic `SET ALLOWED METHODS` command if neither `VP SET CUSTOM FUNCTIONS` nor `VP SET ALLOWED METHODS` are called, however using the generic command is not recommended.
 
+
 #### Description
 
 The `VP SET ALLOWED METHODS` command <!-- REF #_method_.VP SET ALLOWED METHODS.Summary -->designates the project methods that can be called in 4D View Pro formulas<!-- END REF -->. This command applies to all 4D View Pro areas initialized after its call during the session. It can be called multiple times in the same session to initialize different configurations.
@@ -4042,7 +4216,7 @@ In *rangeObj*, pass an object that is either a cell range or a combined range of
 * If *rangeObj* is a range with several cells, the command binds the attribute to the first cell of the range.
 * If *rangeObj* contains several ranges of cells, the command binds the attribute to the first cell of each range.
 
-In *dataContextAttribute*, pass the name of the attribute to bind to *cellRange*. If *dataContextAttribute* is an empty string, the function removes the current binding.
+In *dataContextAttribute*, pass the name of the attribute to bind to *rangeObj*. If *dataContextAttribute* is an empty string, the function removes the current binding.
 
 > Attributes of type collection are not supported. When you pass the name of a collection attribute, the command does nothing.
 
@@ -4178,6 +4352,7 @@ VP SET CELL STYLE(VP Cells("ViewProArea";4;4;3;3);$cellStyle)
 ### VP SET CELL STYLE
 
 <!-- REF #_method_.VP SET CELL STYLE.Syntax -->
+
 **VP SET CELL STYLE** ( *rangeObj* : Object  ; *styleObj*  : Object) <!-- END REF -->
 
 <!-- REF #_method_.VP SET CELL STYLE.Params -->
@@ -4389,6 +4564,7 @@ In the *formulaObj* parameter, pass an object containing the 4D formulas that ca
 
 >**WARNING**
 >
+
 >* As soon as `VP SET CUSTOM FUNCTIONS` is called, the methods allowed by the [VP SET ALLOWED METHODS](#vp-set-allowed-methods) command (if any) are ignored in the 4D View Pro area.
 >* As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
 
@@ -4491,6 +4667,7 @@ Pass an object and bind the context data to cells in the first row:
 var $data : Object
 
 $data:=New object
+
 $data.firstName:="Freehafer"
 $data.lastName:="Nancy"
 
@@ -5381,6 +5558,112 @@ With a page break:
 
 [4D Get show print lines](#vp-get-show-print-lines)
 
+
+### VP SET TABLE COLUMN ATTRIBUTES
+
+<details><summary>History</summary>
+
+|Version|Changes|
+|---|---|
+|v19 R7|Added
+</details>
+
+<!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Syntax -->
+**VP SET TABLE COLUMN ATTRIBUTES** ( *vpAreaName* : Text ; *tableName* : Text ; *column* : Integer ; *attributes* : Object {; *sheet* : Integer } )<!-- END REF -->
+
+<!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Params -->
+
+|Parameter|Type| |Description|
+|---|---|---|---|
+|vpAreaName |Text|->|4D View Pro area form object name|
+|tableName|Text|->|Table name|
+|column|Integer|->|Index of the column in the table|
+|attributes |Object|->|Attribute(s) to apply to the *column*|
+|sheet   |Integer|->|Sheet index (current sheet if omitted)|<!-- END REF -->
+
+#### Description
+
+The `VP SET TABLE COLUMN ATTRIBUTES` command <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Summary -->applies the defined *attributes* to the *column* in the *tableName*<!-- END REF -->.
+
+In *vpAreaName*, pass the name of the 4D View Pro area.
+
+In the *attributes* parameter, pass an object that contains the properties to set:
+
+|Property|Type|Description|
+|---|---|---|
+|dataField|text|Table column's property name in the data context.|
+|name|text|Table column's name. Must be unique in the table. If this name already used by another column, it is not applied and a default name is automaticaly used.|
+|formula|text|Sets the formula for each column cell. See [Structured Reference Formulas in the SpreadJS documentation](https://www.grapecity.com/spreadjs/docs/features/tablegen/structref)|
+|footerText|text|Column footer value.|
+|footerFormula|text|Column footer formula.|
+|filterButtonVisible|boolean|Sets whether the table column's filter button is displayed (default is `True` when the table is created). |
+
+In *sheet*, pass the index of the target sheet. If no index is specified or if you pass -1, the command applies to the current sheet.
+
+>Indexing starts at 0.
+
+If *tableName* is not found or if *column* is higher than the number of columns, the command does nothing. 
+
+
+#### Example
+
+You create a table with a data context: 
+
+```4d
+var $context;$options : Object
+
+$context:=New object()
+$context.col:=New collection()
+$context.col.push(New object("name"; "Smith"; "firstname"; "John"; "salary"; 10000))
+$context.col.push(New object("name"; "Wesson"; "firstname"; "Jim"; "salary"; 50000))
+$context.col.push(New object("name"; "Gross"; "firstname"; "Maria"; "salary"; 10500))
+VP SET DATA CONTEXT("ViewProArea"; $context)
+
+	//Define the columns for the table
+$options:=New object()
+$options.tableColumns:=New collection()
+$options.tableColumns.push(New object("name"; "Last Name"; "dataField"; "name"))
+$options.tableColumns.push(New object("name"; "Salary"; "dataField"; "salary"))
+
+VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 2; 3); "PeopleTable"; "col"; $options)
+```
+
+![](../assets/en/ViewPro/table-insert1.png)
+
+Then you want to insert a column with data from the data context and hide some filter buttons:
+
+```4d
+	//insert a column
+VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 1)
+
+var $param : Object
+$param:=New object()
+	// Bind the column to the firstname field from the datacontext
+$param.dataField:="firstname"
+	// Change the default name of the column to "First name"
+	// and hide the filter button
+$param.name:="First Name"
+$param.filterButtonVisible:=False
+
+VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 1; $param)
+
+	// Hide the filter button of the first column
+VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
+	New object("filterButtonVisible"; False))
+
+```
+
+![](../assets/en/ViewPro/table-insert2.png)
+
+
+#### See also
+
+[VP CREATE TABLE](#vp-create-table)<br/>[VP Find table](#vp-find-table)<br/>[VP Get table column attributes](#vp-get-table-column-attributes)<br/>[VP RESIZE TABLE](#vp-resize-table)
+
+
+
+
+
 ### VP SET TEXT VALUE
 
 <!-- REF #_method_.VP SET TEXT VALUE.Syntax -->
@@ -5675,6 +5958,7 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 |Parameter|Type||Description|
 |---|---|---|---|
 |rangeObj |Object|->|Range object|
+
 |vPos  |Integer|->|Vertical view position of cell or row|
 |hPos  |Integer|->|Horizontal view position of cell or row|<!-- END REF -->
 
