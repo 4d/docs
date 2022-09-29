@@ -4,7 +4,7 @@ title: '$lock'
 ---
 
 
-Locks and unlocks an entity using the [pessimistic mechanism](../ORDA/entities.md#pessimistic-lock).
+Bloquea y desbloquea una entidad utilizando el [mecanismo pesimista](../ORDA/entities.md#pessimistic-lock).
 
 
 ## Sintaxis
@@ -23,38 +23,38 @@ Para desbloquear la entidad para las otras sesiones y procesos 4D:
 ```
 
 
-The [`lockKindText` property](../API/EntityClass.html#lock) is "Locked by session".
+La propiedad [`lockKindText`](../API/EntityClass.html#lock) es "Locked by session".
 
 
 ### Descripción
 
-The locks triggered by the REST API are put at the [session](authUsers.md#opening-sessions) level.
+Los bloqueos activados por la API REST se colocan al nivel de la [sesión](authUsers.md#opening-sessions).
 
-A locked entity is seen as *locked* (i.e. lock / unlock / update / delete actions are not possible) by:
+Una entidad bloqueada se ve como *bloqueada* (es decir, las acciones de bloqueo / desbloqueo / actualización / eliminación no son posibles) por:
 
 - otras sesiones REST
-- 4D processes (client/server, remote datastore, standalone) running on the REST server.
+- los procesos 4D (cliente/servidor, almacén de datos remoto, monopuesto) ejecutadas en el servidor REST.
 
 Una entidad bloqueada por la API REST sólo puede ser desbloqueada:
 
-- by its locker, i.e. a `/?$lock=false` in the REST session that sets `/?$lock=true`
-- or if the session's [inactivity timeout]($directory.md) is reached (the session is closed).
+- por su bloqueador, es decir un `/?$lock=false` en la sesión REST que define `/?$lock=true`
+- o si el [timeout de inactividad]($directory.md) de la sesión se alcanza (la sesión se cierra).
 
 ### Respuesta
 
-A `?$lock` request returns a JSON object with `"result"=true` if the lock operation was successful and `"result"=false` if it failed.
+Una petición `?$lock` devuelve un objeto JSON con `"result"=true` si la operación de bloqueo se reutiliza y `"result"=false` si falla.
 
 El objeto "__STATUS" devuelto tiene las siguientes propiedades:
 
 | Propiedad    |                | Tipo    | Descripción                                                                                                                                                          |
 | ------------ | -------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 |              |                |         | ***Disponible sólo en caso de éxito:***                                                                                                                              |
-| success      |                | boolean | true if the lock action is successful (or if the entity is already locked in the current session), false otherwise (not returned in this case).                      |
+| success      |                | boolean | true si la acción de bloqueo tiene éxito (o si la entidad ya está bloqueada en la sesión actual), false en caso contrario (no devuelto en este caso).                |
 |              |                |         | ***Disponible sólo en caso de error:***                                                                                                                              |
 | status       |                | number  | Código de error, ver abajo                                                                                                                                           |
 | statusText   |                | text    | Descripción del error, ver abajo                                                                                                                                     |
 | lockKind     |                | number  | Código de bloqueo                                                                                                                                                    |
-| lockKindText |                | text    | "Locked by session" if locked by a REST session, "Locked by record" if locked by a 4D process                                                                        |
+| lockKindText |                | text    | "Locked by session" si está bloqueado por una sesión REST, "Locked by record" si está bloqueado por un proceso 4D                                                    |
 | lockInfo     |                | object  | Información sobre el origen del bloqueo. Las propiedades devueltas dependen del origen del bloqueo (proceso 4D o sesión REST).                                       |
 |              |                |         | ***Disponible sólo para un bloqueo por proceso 4D:***                                                                                                                |
 |              | task_id        | number  | ID del Proceso                                                                                                                                                       |
@@ -71,7 +71,7 @@ El objeto "__STATUS" devuelto tiene las siguientes propiedades:
 |              | userAgent      | text    | userAgent del origin del bloqueo (ej: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36") |
 
 
-The following values can be returned in the *status* and *statusText* properties of the *__STATUS* object in case of error:
+Los siguientes valores pueden ser devueltos en las propiedade *status* y *statusText* del objeto *__STATUS* en caso de error:
 
 | status | statusText                      | Comentario                                                                                                               |
 | ------ | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
