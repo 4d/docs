@@ -3,25 +3,26 @@ id: architecture
 title: Architecture of a project
 ---
 
-A 4D project is made of several folders and files, stored within a single parent application folder (package folder). For example:
+A 4D project is made of several folders and files, stored within a project root folder (package folder). For example:
 
-- MyProject
-  - `Components`
-  - `Data`
-    - `Logs`
-    - `Settings`
-  - `Documentation`
-  - `Plugins`
-  - `Project`
-    - `DerivedData`
-    - `Sources`
-    - `Trash`
-  - `Resources`
-  - `Settings`
-  - `userPreferences.jSmith`
-  - `WebFolder`
+- MyProject (*project root folder*)
+	- `Components`
+	- `Data` 
+		- `Logs`
+		- `Settings`
+	- `Documentation`
+	- `Plugins`
+	- `Project`
+		- `DerivedData`
+		- `Sources`
+		- `Trash`
+	- `Resources`
+	- `Settings`
+	- `userPreferences.jSmith`
+	- `WebFolder`
 
 > If your project has been converted from a binary database, additional folders may be present. See "Converting databases to projects" on [doc.4d.com](https://doc.4d.com).
+
 
 ## Project folder
 
@@ -29,14 +30,15 @@ The Project folder typically contains the following hierarchy:
 
 - `<applicationName>.4DProject` file
 - `Sources`
-  - `Classes`
-  - `DatabaseMethods`
-  - `Methods`
-  - `Forms`
-  - `TableForms`
-  - `Triggers`
+	+ `Classes`
+	+ `DatabaseMethods`
+	+ `Methods`
+	+ `Forms`
+	+ `TableForms`
+	+ `Triggers`
 - `DerivedData`
 - `Trash` (if any)
+
 
 ### `<applicationName>.4DProject` file
 
@@ -56,13 +58,14 @@ Contents|Description|Format
 catalog.4DCatalog|Table and field definitions|XML
 folders.json|Explorer folder definitions|JSON
 menus.json|Menu definitions|JSON
-settings.4DSettings|*Structure* database settings. They are not taken into account if *[user settings](#settings-folder-1)* or *[user settings for data](#settings-folder)* are defined.<p>**Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to use *user settings* or *user settings for data* to define custom settings.</p>|XML
+settings.4DSettings|*Structure* database settings. They are not taken into account if *[user settings](#settings-folder-1)* or *[user settings for data](#settings-folder)* are defined. **Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to use *user settings* or *user settings for data* to define custom settings.|XML
 tips.json|Defined tips|JSON
 lists.json|Defined lists|JSON
 filters.json|Defined filters|JSON
 styleSheets.css|CSS style sheets|CSS
-styleSheets_mac.css|Mac css style sheets (from converted binary database)|CSS
-styleSheets_windows.css|Windows css style sheets (from converted binary database)|CSS
+styleSheets_mac.css|Mac css style sheets (from converted binary database)|CSS    
+styleSheets_windows.css|Windows css style sheets (from converted binary database)|CSS    
+
 
 #### `DatabaseMethods`
 
@@ -81,6 +84,7 @@ Contents|Description|Format
 Contents|Description|Format
 --------|-------|----
 *className*.4dm|User class definition method, allowing to instantiate specific objects. One file per class, the name of the file is the class name|text
+
 
 #### `Forms`
 
@@ -111,7 +115,8 @@ Contents|Description|Format
 table_*n*.4dm|Trigger methods defined in the project. One trigger file per table (n is the table number)|text
 
 **Note:**
-The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools.
+The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools. 
+
 
 ### `Trash`
 
@@ -121,11 +126,12 @@ The Trash folder contains methods and forms that were deleted from the project (
 - `Forms`
 - `TableForms`
 
-Within these folders, deleted element names are in parentheses, e.g. "(myMethod).4dm". The folder organization is identical to the [Sources](#sources) folder.
+Within these folders, deleted element names are in parentheses, e.g. "(myMethod).4dm". The folder organization is identical to the [Sources](#sources) folder. 
+
 
 ### `DerivedData`
 
-The DerivedData folder contains cached data used internally by 4D to optimize processing. It is automatically created or recreated when necessary. You can ignore this folder.
+The DerivedData folder contains cached data used internally by 4D to optimize processing. It is automatically created or recreated when necessary. You can ignore this folder. 
 
 ## `Libraries`
 
@@ -144,6 +150,7 @@ Images/Library/*item*|Pictures from the Picture Library as separate files(*). Na
 
 (*) only if the project was exported from a .4db binary database.
 
+
 ## `Data`
 
 The data folder contains the data file and all files and folders relating to the data.
@@ -158,15 +165,16 @@ data.match|(internal) UUID matching table number|XML
 
 ### `Settings`
 
-This folder contains **user settings files for data** used for application administration.
+This folder contains **user settings files for data** used for application administration. 
 
-> These settings take priority over **[user settings files](#settings-1)** and **[structure settings](#sources)** files.
+> These settings take priority over **[user settings files](#settings-1)** and **[structure settings](#sources)** files. 
 
 Contents|Description|Format|
 ----|----|---|
 directory.json|Description of 4D groups, users, and their access rights when the application is run with this data file.|JSON|
 Backup.4DSettings|Database backup settings, used to set the [backup options](Backup/settings.md) when the database is run with this data file. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual.|XML|
 settings.4DSettings|Custom database settings for this data file.|XML|
+
 
 ### `Logs`
 
@@ -182,9 +190,9 @@ The Logs folder contains all log files used by the project. Log files include, i
 
 ## `Settings`
 
-This folder contains **user settings files** used for application administration.
+This folder contains **user settings files** used for application administration. 
 
-> These settings take priority over **[structure settings](#sources)** files. However, if a **[user settings file for data](#settings)** exists, it takes priority over user settings file.
+> These settings take priority over **[structure settings](#sources)** files. However, if a **[user settings file for data](#settings)** exists, it takes priority over user settings file. 
 
 Contents|Description|Format|
 ----|----|---|
@@ -192,6 +200,7 @@ directory.json|Description of 4D groups and users for the application, as well a
 Backup.4DSettings|Database backup settings, used to set the [backup options](Backup/settings.md)) when each backup is launched. This file can also be used to read or set additional options, such as the amount of information stored in the *backup journal*. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual.|XML|
 BuildApp.4DSettings|Build settings file, created automatically when using the application builder dialog box or the `BUILD APPLICATION` command|XML|
 settings.4DSettings|Custom settings for this project (all data files)|XML|
+
 
 ## `userPreferences.<userName>`
 
@@ -208,28 +217,30 @@ recentTables.json|Ordered list of tables|JSON|
 preferences.4DPreferences|Current data path and main window positions|XML|
 CompilerIntermediateFiles|Intermediate files resulting from Apple Silicon compilation|Folder|
 
+
 ## `Components`
 
 This folder contains the components to be available in the application project. It must be stored at the same level as the Project folder.
 
 > An application project can be used itself as a component:
->
 > - for development: put an alias of the .4dproject file in the Components folder of the host project.
-> - for deployment: [build the component](Desktop/building.md#build-component) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application.
+> - for deployment: [build the component](Desktop/building.md#build-component) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application. 
+
 
 ## `Plugins`
 
 This folder contains the plug-ins to be available in the application project. It must be stored at the same level as the Project folder.
 
+
 ## `Documentation`
 
-This folder contains all documentation files (.md) created for the project elements such as classes, methods, or forms. Documentation files are managed and displayed in the 4D Explorer.
+This folder contains all documentation files (.md) created for the project elements such as classes, methods, or forms. Documentation files are managed and displayed in the 4D Explorer. 
 
-For more information, refer to [Documenting a project](Project/documentation.md).
+For more information, refer to [Documenting a project](Project/documentation.md). 
 
 ## `WebFolder`
 
-Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time.
+Defaut root folder of the 4D Web server for pages, pictures, etc. It is automatically created when the Web server is launched for the first time. 
 
 ## `.gitignore` file (optional)
 
