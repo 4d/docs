@@ -160,13 +160,13 @@ Using the **Selected item reference** option requires compliance with the follow
 
 #### Objetos soportados
 
-[Drop-down Lists](dropdownList_Overview.md) associated to lists
+[Listas desplegables](dropdownList_Overview.md) asociadas a listas
 
 ---
 
 ## Valores por defecto (lista de)
 
-List of values that will be used as default values for the list box column (array type only). These values are automatically available in the [array variable](properties_Object.md#variable-or-expression) associated with this column when the form is executed. Using the language, you can manage the object by referring to this array.
+Lista de valores que se utilizarán como valores por defecto para la columna del list box (sólo de tipo array). Estos valores están disponibles automáticamente en la [variable array](properties_Object.md#variable-or-expression) asociada a esta columna cuando se ejecuta el formulario. Using the language, you can manage the object by referring to this array.
 
 > Do not make confusion between this property and the "[default value](properties_RangeOfValues.md#default-list-of-values)" property that allows to define a field value in new records.
 

@@ -80,7 +80,7 @@ RESTでエンティティのコレクションを作成した場合、これを�
 エンティティセットを作成すると、返されるオブジェクトの先頭に `__ENTITYSET` という要素が追加され、エンティティセットにアクセスするための URI を提供します:
 
 ```json
-__ENTITYSET: "http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7"`
+__ENTITYSET: "http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C796345F3BE5B01CE7"
 ```
 
 
@@ -107,7 +107,7 @@ __ENTITYSET: "http://127.0.0.1:8081/rest/Employee/$entityset/9718A30BF61343C7963
 {
     "ok": true
 }
-If the entity set wasn't found, an error is returned:
+エンティティセットが見つからなかった場合には、エラーが返されます
 
 {
     "__ERROR": [
@@ -194,20 +194,20 @@ RESTリクエストで定義されたリレートエンティティのコレク�
 
 `$method=update` を使うと、一つの **POST** で一つ以上のエンティティを更新または作成することができます。 エンティティの更新・作成をおこなうには、オブジェクトのプロパティ/値としてエンティティの属性/値を指定します (*例*: `{ lastName: "Smith" }`)。 複数のエンティティを更新・作成するには、各エンティティに対応するオブジェクトをコレクションにまとめます。
 
-いずれの場合も、リクエストのボディ (**body**) に **POST** データ **body** を格納します。
+いずれの場合も、リクエストのボディ (**body**) に **POST** データを格納します。
 
 エンティティを更新するには、更新する属性だけでなく、`__KEY` および `__STAMP` パラメーターをオブジェクト内に指定しなくてはなりません。 これらのパラメーターがない場合、**POST** のボディに格納したオブジェクトの値をもとに新規エンティティが追加されます。
 
 エンティティをサーバーに保存すると同時にトリガーが実行されます。 レスポンスにはすべてのデータが、サーバー上に存在するとおりに格納されます。
 
-You can also put these requests to create or update entities in a transaction by calling `$atomic/$atOnce`. データの検証でエラーが発生した場合に、一部のエンティティだけが処理されてしまうのを防げます。 You can also use `$method=validate` to validate the entities before creating or updating them.
+`$atomic/$atOnce` を使うと、エンティティを作成・更新するリクエストをトランザクション内で実行できます。 データの検証でエラーが発生した場合に、一部のエンティティだけが処理されてしまうのを防げます。 また、`$method=validate` を使うと、作成・更新の前にエンティティを検証することができます。
 
 エンティティを追加または更新する際に問題が発生すると、その情報を格納したエラーが返されます。
 
 :::note
 *   **日付** は JavaScript 形式で表す必要があります: YYYY-MM-DDTHH:MM:SSZ (例: "2010-10-05T23:00:00Z")。 日付属性のためだけに日付プロパティを指定した場合、タイムゾーンおよび時刻 (時間・分・秒) の情報は削除されます。 この場合、レスポンスの形式 dd!mm!yyyy (例: 05!10!2013) を使って日付を送信することも可能です。
 *   **ブール** は true または false です。
-*   Uploaded files using `$upload` can be applied to an attribute of type Image or BLOB by passing the object returned in the following format `{ "ID": "D507BC03E613487E9B4C2F6A0512FE50"}` :::
+*   `$upload` を使ってアップロードしたファイルは、`{ "ID": "D507BC03E613487E9B4C2F6A0512FE50"}` のような形式で返されるオブジェクトを渡すことで、ピクチャー型やBLOB型の属性に適用できます。
 
 
 ### 例題

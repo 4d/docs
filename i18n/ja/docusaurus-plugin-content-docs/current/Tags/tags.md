@@ -8,28 +8,28 @@ title: 変換タグ
 
 4D Webサーバーにおいて [Web テンプレートページ](WebServer/templates.md) をビルドするにあたって、この原理が使用されます。
 
-これらのタグは原則として HTMLコメント (`<--#Tag Contents-->`) として挿入します。 しかしながら、 [xml に準じた代替シンタックス](#4dtext-4dhtml-4deval-の代替シンタックス) も一部利用可能です。
+これらのタグは原則として HTMLコメント (`<--#Tag Contents-->`) として挿入します。しかしながら、 [xml に準じた代替シンタックス](#4dtext-4dhtml-4deval-の代替シンタックス) も一部利用可能です。
 
 複数タイプのタグを混用することも可能です。 たとえば、以下の HTML構造は、問題なく実行可能です:
 
 ```html
 <HTML>
 <BODY>
-<!--#4DSCRIPT/PRE_PROCESS-->   (Method call)
-<!--#4DIF (myvar=1)-->   (If condition)
-   <!--#4DINCLUDE banner1.html-->   (Subpage insertion)
+<!--#4DSCRIPT/PRE_PROCESS-->   (メソッド呼び出し)
+<!--#4DIF (myvar=1)-->   (If 条件)
+   <!--#4DINCLUDE banner1.html-->   (サブページ挿入)
 <!--#4DENDIF-->   (End if)
 <!--#4DIF (mtvar=2)-->
    <!--#4DINCLUDE banner2.html-->
 <!--#4DENDIF-->
 
-<!--#4DLOOP [TABLE]-->   (Loop on the current selection)
+<!--#4DLOOP [TABLE]-->   (カレントセレクションでのループ)
 <!--#4DIF ([TABLE]ValNum>10)-->   (If [TABLE]ValNum>10)
-   <!--#4DINCLUDE subpage.html-->   (Subpage insertion)
+   <!--#4DINCLUDE subpage.html-->   (サブページの挿入)
 <!--#4DELSE-->   (Else)
-   <B>Value: <!--#4DTEXT [TABLE]ValNum--></B><br/>   (Field display)
+   <B>Value: <!--#4DTEXT [TABLE]ValNum--></B><br/>   (フィールド表示)
 <!--#4DENDIF-->
-<!--#4DENDLOOP-->   ](End for)
+<!--#4DENDLOOP-->   (End for)
 </BODY>
 </HTML>
 ```
@@ -42,11 +42,11 @@ title: 変換タグ
 
 - `PROCESS 4D TAGS` コマンド使用時: このコマンドは *テンプレート* に加えて任意の引数を受け入れ、処理の結果であるテキストを返します。
 
-- 4D の統合された HTTPサーバー使用時: `WEB SEND FILE` (.htm, .html, .shtm, .shtml)、`WEB SEND BLOB` (text/html型 BLOB)、および `WEB SEND TEXT` コマンドによって [テンプレートページ](WebServer/templates.md) を送信、あるいは URL で呼び出します。 URL で呼び出す場合、".htm" と ".html" で終わるページは最適化のため解析されません。 In order to parse HTML pages in this case, you must add the suffix “.shtm” or “.shtml” (for example, <http://www.server.com/dir/page.shtm>).
+- 4D の統合された HTTPサーバー使用時: `WEB SEND FILE` (.htm, .html, .shtm, .shtml)、`WEB SEND BLOB` (text/html型 BLOB)、および `WEB SEND TEXT` コマンドによって [テンプレートページ](WebServer/templates.md) を送信、あるいは URL で呼び出します。 URL で呼び出す場合、".htm" と ".html" で終わるページは最適化のため解析されません。 この場合に HTMLページの解析するには、末尾を ".shtm" または ".shtml" とする必要があります (例: `http://www.server.com/dir/page.shtm`)。
 
 ### 再起的処理
 
-4Dタグは繰り返し解釈されます。 4D は常に変換の結果を解釈しようとし、新しい変換が起きた際にはそれに伴う新しい解釈が実行され、取得結果の変換が必要がなくなるまで繰り返されます。 たとえば、以下のようなステートメントがあった場合:
+4Dタグは繰り返し解釈されます。4D は常に変換の結果を解釈しようとし、新しい変換が起きた際にはそれに伴う新しい解釈が実行され、取得結果の変換が必要がなくなるまで繰り返されます。 たとえば、以下のようなステートメントがあった場合:
 
 ```html
 <!--#4DHTML [Mail]Letter_type-->
@@ -54,7 +54,7 @@ title: 変換タグ
 
 もし `[Mail]Letter_type` テキストフィールド自体にもタグ (たとえば`<!--#4DSCRIPT/m_Gender-->`) が含まれていた場合、このタグは 4DHTMLタグの解釈の後に、それに伴って評価されます。
 
-この強力な原則は、テキスト変換に関連するほとんどの需要を満たすことができます。 しかしながら、Webコンテキストにおいて、これは場合によって悪意のあるコードの侵入を許す可能性があるという点に注意が必要です。 これを防ぐ方法については [悪意あるコードの侵入を防止](WebServer/templates.md#悪意あるコードの侵入を防止) を参照ください。
+この強力な原則は、テキスト変換に関連するほとんどの需要を満たすことができます。 しかしながら、Webコンテキストにおいて、これは場合によって悪意のあるコードの侵入を許す可能性があるという点に注意が必要です。これを防ぐ方法については [悪意あるコードの侵入を防止](WebServer/templates.md#悪意あるコードの侵入を防止) を参照ください。
 
 ### トークンを使用した識別子
 
@@ -70,9 +70,9 @@ title: 変換タグ
 
 `<!--#4DBASE -->` タグは `<!--#4DINCLUDE-->` タグで使用されるワーキングディレクトリを指定します。
 
-When it is called in a Web page, the `<!--#4DBASE -->` tag modifies all subsequent `<!--#4DINCLUDE-->` calls on this page, until the next `<!--........-->`, if any. If the`<!--#4DBASE -->` folder is modified from within an included file, it retrieves its original value from the parent file.
+Webページ内で呼び出されると、`<!--#4DBASE -->` タグは同ページ内であとに続くすべての `<!--#4DINCLUDE-->` 呼び出しのディレクトリを変更します (次の `<!--#4DBASE -->` があるまで)。 組み込まれたファイル内で `<!--#4DBASE -->`フォルダーが変更されると、親のファイルから元となる値を取得します。
 
-The *folderPath* parameter must contain a pathname relative to the current page and it must end with a slash (`/`). また、指定フォルダーは Webフォルダー内になければなりません。
+*folderPath* 引数には現在のページに対する相対パスを指定し、パスは "`/`" で終わっていなければなりません。 また、指定フォルダーは Webフォルダー内になければなりません。
 
 "WEBFOLDER" キーワードを渡すと、(そのページに対して相対の) デフォルトパスに戻されます。
 
@@ -158,8 +158,8 @@ End if
 
 4DCODE タグの機能は以下の通りです:
 
-- `TRACE` コマンドがサポートされています。 これは 4Dデバッガーを起動するので、テンプレートコードをデバッグすることができます。
-- エラーは標準のエラーダイアログを表示します。 これを使って、ユーザーはコードの実行を中止したりデバッグモードに入ったりすることができます。
+- `TRACE` コマンドがサポートされています。これは 4Dデバッガーを起動するので、テンプレートコードをデバッグすることができます。
+- エラーは標準のエラーダイアログを表示します。これを使って、ユーザーはコードの実行を中止したりデバッグモードに入ったりすることができます。
 - `<!--#4DCODE` と `-->` の間のテキストは改行され、どのような改行コードでも受け取ります (cr、lf、または crlf)。
 - テキストは `PROCESS 4D TAGS` を呼び出したデータベースのコンテキストにてトークナイズされます。 これは、たとえばプロジェクトメソッドの認識等において重要です。 [公開オプション: 4DタグとURL(4DACTION...)](WebServer/allowProject.md) メソッドプロパティは考慮されません。
 - テキストが常に English-US設定であったとしても、4Dのバージョン間においてコマンドや定数名が改名されることによる問題を避けるため、コマンド名や定数名はトークンシンタックスを使用することが推奨されいます。
@@ -186,12 +186,12 @@ End if
 
 *item* はコレクション要素と同じ型の変数です。
 
-コレクションの **要素はすべて同じ型** でなくてはなりません。 そうでない場合には、*item* 変数に別の型の値が代入されたときにエラーが生成されます。
+コレクションの **要素はすべて同じ型** でなくてはなりません。そうでない場合には、*item* 変数に別の型の値が代入されたときにエラーが生成されます。
 
 ループの回数はコレクションの要素数に基づいています。 各繰り返しにおいて、*item* 変数には、コレクションの合致する要素が自動的に代入されます。 このとき、以下の点に注意する必要があります:
 
-- The *item* variable gets the same type as the first collection element. 変数がスカラー型である場合には、変数のみが変更されます。
-- If the *item* variable is of the object type or collection type (i.e. コレクション要素のどれか一つでも、変数と異なる型のものがあった場合、エラーが生成され、ループは停止します。
+- *item* 変数がオブジェクト型あるいはコレクション型であった場合 (つまり *expression* がオブジェクトのコレクション、あるいはコレクションのコレクションであった場合)、この変数を変更すると自動的にコレクションの対応する要素も変更されます (オブジェクトとコレクションは同じ参照を共有しているからです)。 変数がスカラー型である場合には、変数のみが変更されます。
+- *item* 変数には、コレクションの先頭要素の型が設定されます。 コレクション要素のどれか一つでも、変数と異なる型のものがあった場合、エラーが生成され、ループは停止します。
 - コレクションが Null値の要素を格納していたとき、*item* 変数の型が Null値をサポートしない型 (倍長整数変数など) であった場合にはエラーが生成されます。
 
 #### 例題: スカラー値のコレクション
@@ -327,7 +327,7 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 
 #### 代替シンタックス: `$4DHTML(expression)`
 
-The value of the 4D variable `vtSiteName` will be inserted in the HTML page when it is sent. This value is inserted as simple text, special HTML characters such as ">" are automatically escaped.
+`4DTEXT` タグ同様、このタグを使用すると、4Dの変数や値を返す式を HTML式として挿入できます。 一方 `4DTEXT` タグとは異なり、このタグはHTML特殊文字 (例: ">") をエスケープしません。
 
 たとえば、4Dタグを使用して 4Dのテキスト変数 myvar を処理した結果は以下の様になります:
 
@@ -348,11 +348,11 @@ The value of the 4D variable `vtSiteName` will be inserted in the HTML page when
 
 *expression* はブール値を返す有効な 4D式です。 式は括弧の中に記述され、4Dのシンタックスルールに準拠していなければなりません。
 
-In case of an interpretation error, the text "`<!--#4DIF expression-->`: A Boolean expression was expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`. Likewise, if there are not as many `<!--#4DENDIF-->` as `<!--#4DIF -->`, the text "`<!--#4DIF expression-->`: 4DENDIF expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`.
+`<!--#4DIF expression-->` ... `<!--#4DENDIF-->` は複数レベルでネストできます。 4Dと同じく、それぞれの `<!--#4DIF expression-->` には対応する `<!--#4DENDIF-->` がなければなりません。
 
-解釈エラーの場合、`<!--#4DIF -->` と `<!--#4DENDIF-->` の間のコンテンツの代わりに、"`<!--#4DIF expression-->`: ブール式が必要です" というテキストが挿入されます。 The `<!--#4DIF expression-->` ... `<!--#4DENDIF-->` blocks can be nested in several levels. Like in 4D, each `<!--#4DIF expression-->` must match a `<!--#4DENDIF-->`.
+解釈エラーの場合、`<!--#4DIF -->` と `<!--#4DENDIF-->` の間のコンテンツの代わりに、"`<!--#4DIF expression-->`: ブール式が必要です" というテキストが挿入されます。 同様に、`<!--#4DIF -->` が同じ数の `<!--#4DENDIF-->` で閉じられていない場合、`<!--#4DIF -->` と `<!--#4DENDIF-->` の間のコンテンツの代わりに "`<!--#4DIF expression-->`: 4DENDIFが必要です" というテキストが挿入されます。
 
-`<!--#4DELSEIF-->` タグを使用すると、数に制限なく条件をテストできます。 最初に `true` と判定されたブロック内にあるコードだけが実行されます。 `true` ブロックがなく、`<!--#4DELSE-->` もない場合には、なにも実行されません。 You can use a <!--#4DELSE--> tag after the last <!--#4DELSEIF-->。 If all the conditions are false, the statements following the <!--#4DELSE--> If all the conditions are false, the statements following the
+`<!--#4DELSEIF-->` タグを使用すると、数に制限なく条件をテストできます。 最初に `true` と判定されたブロック内にあるコードだけが実行されます。 `true` ブロックがなく、`<!--#4DELSE-->` もない場合には、なにも実行されません。<!--#4DELSE-->タグは、最後の<!--#4DELSEIF-->の後に記述できます。 それまでの条件がすべて `false` の場合、<!--#4DELSE-->ブロックの文が実行されます。
 
 以下の2つのコードは同等です。
 
@@ -503,7 +503,7 @@ No name has been found.
 
 ### `<!--#4DLOOP method-->`
 
-このシンタックスでは、メソッドが `true` を返す間ループがおこなわれます。 メソッドは、倍長整数タイプの引数を受け取ります。 これは (必要に応じて) 初期化ステージとして使用できます。 その後、`true` が返されるまで 1, 2, 3 と渡される引数値がインクリメントされます。
+このシンタックスでは、メソッドが `true` を返す間ループがおこなわれます。 メソッドは、倍長整数タイプの引数を受け取ります。 まずメソッドは引数 0 を渡されます。これは (必要に応じて) 初期化ステージとして使用できます。その後、`true` が返されるまで 1, 2, 3 と渡される引数値がインクリメントされます。
 
 セキュリティのため、Webプロセス内では、`On Web Authentication` データベースメソッドが初期化ステージ (引数に0が渡されて実行される) の前に一度呼び出されます。 認証に成功すると、初期化に進みます。
 
@@ -615,7 +615,7 @@ No name has been found.
 
 メソッドは `$0` にテキストを返す必要があります。 文字列が文字コード 1 (つまり、`Char(1)` のこと) から始まっていると、それは HTMLソースとして扱われます (`4DHTML` と同じ原則)。
 
-たとえば、次のコメントをテンプレートWebページに挿入したとしましょう: `"今日の日付は<!--#4DSCRIPT/MYMETH/MYPARAM-->"` 。 ページをロードする際、4Dは `On Web Authentication` データベースメソッドを (存在すれば) 呼び出し、そして `MYMETH` メソッドの `$1` に文字列 “/MYPARAM” を引数として渡して呼び出します。 The method returns text in $0 (for example "12/31/21"); the expression "`Today is<!--#4DSCRIPT/MYMETH/MYPARAM––>`" therefore becomes "Today is 12/31/21".
+たとえば、次のコメントをテンプレートWebページに挿入したとしましょう: `"今日の日付は<!--#4DSCRIPT/MYMETH/MYPARAM-->"` 。 ページをロードする際、4Dは `On Web Authentication` データベースメソッドを (存在すれば) 呼び出し、そして `MYMETH` メソッドの `$1` に文字列 “/MYPARAM” を引数として渡して呼び出します。 メソッドは `$0` にテキストを返します (たとえば “21/12/31”)。`"今日の日付は <!--#4DSCRIPT/MYMETH/MYPARAM-->"` というコメントの結果は "今日の日付は 21/12/31" となります。
 
 `MYMETH` メソッドは以下のとおりです:
 
@@ -627,7 +627,7 @@ No name has been found.
 
 > `4DSCRIPT` から呼び出されるメソッドは、インタフェース要素 (`DIALOG`, `ALERT` など) を呼び出してはいけません。
 
-4Dはメソッドを見つけた順に実行するため、ドキュメントの後の方で参照される変数の値を設定するメソッドを呼び出すことも可能です。 テンプレートには必要なだけ`<!--#4DSCRIPT...-->` コメントを記述できます。
+4Dはメソッドを見つけた順に実行するため、ドキュメントの後の方で参照される変数の値を設定するメソッドを呼び出すことも可能です。モードは関係ありません。 テンプレートには必要なだけ `<!--#4DSCRIPT...-->` コメントを記述できます。
 
 ## 4DTEXT
 
@@ -638,10 +638,10 @@ No name has been found.
 タグ `<!--#4DTEXT VarName-->` を使用して 4D変数や値を返す式への参照を挿入できます。 たとえば、(HTMLページ内にて) 以下のように記述すると:
 
 ```html
-<P><!--#4DTEXT vtSiteName--> へようこそ！ </P>
+<P><!--#4DTEXT vtSiteName--> へようこそ！</P>
 ```
 
-Just like the `4DTEXT` tag, this tag lets you assess a 4D variable or expression that returns a value, and insert it as an HTML expression. 値はテキストとして挿入されます。 ">"のようなHTMLの特殊文字は、自動的にエスケープされます。
+4D変数 `vtSiteName` の値が HTMLページに送信時に挿入されます。 値はテキストとして挿入されます。">"のようなHTMLの特殊文字は、自動的にエスケープされます。
 
 4DTEXT タグを使用して、4D式も挿入できます。 たとえば、フィールドの値を直接挿入できるほか (`<!--#4DTEXT [tableName]fieldName-->`) 、配列要素の値も挿入できますし (`<!--#4DTEXT tabarr{1}-->`) 、値を返すメソッドも使用できます (`<!--#4DTEXT mymethod-->`)。 式の変換には、変数の場合と同じルールが適用されます。 さらに、式は 4Dのシンタックスルールに適合していなければなりません。
 
@@ -698,18 +698,18 @@ $シンタックスを使用すると、パーサーによって以下のコー�
 <line x1="$4DEVAL($x)" y1="$4DEVAL($graphY1)"/>
 ```
 
-`<--#4dtag-->` とは異なり、`$4dtag` は 4Dタグを [繰り返し解釈](#再起的処理) することはありません。 `$` タグは常に一度だけ解釈され、その結果は標準テキストとして読まれます。
+ここで、`$4dtag` と `<--#4dtag-->` は厳密には同じではないという点に注意が必要です。`<--#4dtag-->` とは異なり、`$4dtag` は 4Dタグを [繰り返し解釈](#再起的処理) することはありません。 `$` タグは常に一度だけ解釈され、その結果は標準テキストとして読まれます。
 
-この違いの理由は、悪意あるコードの侵入を防ぐためにあります。 [悪意あるコードの侵入を防止](WebServer/templates.md#悪意あるコードの侵入を防止) の章で説明されているように、ユーザーテキストを使用する場合に不要なタグの再解釈を避けるには、`4DHTML` タグではなく `4DTEXT` タグの使用が強く推奨されます。 しかしながら、`4DTEXT` は `$` 記号をエスケープしないため、悪意あるコードの侵入を防ぐために `$4dtag (expression)` シンタックスにおける再帰的処理はサポートしないことになりました。
+この違いの理由は、悪意あるコードの侵入を防ぐためにあります。 [悪意あるコードの侵入を防止](WebServer/templates.md#悪意あるコードの侵入を防止) の章で説明されているように、ユーザーテキストを使用する場合に不要なタグの再解釈を避けるには、`4DHTML` タグではなく `4DTEXT` タグの使用が強く推奨されます。4DTEXT を使用した場合、"<" などの特殊記号はエスケープされるため、`<!--#4dtag expression-->` シンタックスを使用している 4Dタグはすべて元の意味を失います。 しかしながら、`4DTEXT` は `$` 記号をエスケープしないため、悪意あるコードの侵入を防ぐために `$4dtag (expression)` シンタックスにおける再帰的処理はサポートしないことになりました。
 
 以下の例では、使用されるシンタックスとタグによる処理の結果の違いを表しています:
 
 ```4d
-  // example 1
- myName:="<!--#4DHTML QUIT 4D-->" //malicious injection
+  // 例 1
+ myName:="<!--#4DHTML QUIT 4D-->" // 悪意あるコードの侵入
  input:="My name is: <!--#4DHTML myName-->"
  PROCESS 4D TAGS(input;output)
-  //4D will quit!
+ // 4D は終了していまいます
 ```
 
 ```4d

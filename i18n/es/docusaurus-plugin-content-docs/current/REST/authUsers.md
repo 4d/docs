@@ -55,7 +55,7 @@ function sendData(data) {
       }
   };
 
-  XHR.open('POST', 'http://127.0.0.1:8044/rest/$directory/login'); //rest server address
+  XHR.open('POST', 'http://127.0.0.1:8044/rest/$directory/login'); //dirección del servidor rest
 
   XHR.setRequestHeader('username-4D', data.userId);
   XHR.setRequestHeader('password-4D', data.password);
@@ -81,7 +81,7 @@ var $sales : cs.SalesPersonsEntity
 
 $Accepted:=False
 
-    //A '/rest' URL has been called with headers username-4D and password-4D
+    //Una URL '/rest' ha sido llamada con los encabezados username-4D y password-4D
 If ($userId#"")
     $sales:=ds.SalesPersons.query("email = :1"; $userId).first()
     If ($sales#Null)

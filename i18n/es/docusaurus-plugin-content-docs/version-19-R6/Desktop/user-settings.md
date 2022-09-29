@@ -5,50 +5,50 @@ title: Propiedades usuario
 
 4D ofrece dos modos de funcionamiento para las Propiedades de los proyectos:
 
-*   **Standard** mode: all [settings](../settings/overview.md) are stored in the [*settings.4DSettings* file at the project level](../Project/architecture.md#sources) and are applied in all cases. This is the default mode, suitable for development phase (all applications).
+*   Modo **estándar**: todos los [parámetros](../settings/overview.md) se almacenan en el archivo [*settings.4DSettings* al nivel del proyecto](../Project/architecture.md#sources) y se aplican en todos los casos. Este es el modo por defecto, adecuado para la fase de desarrollo (todas las aplicaciones).
 
-*  **User settings** mode: part of the custom settings are stored in a *settings.4DSettings* file [in the Settings folder](../Project/architecture.md#settings-1) (for all data files) or [in the Data folder](../Project/architecture.md#settings) (for this data file) and are used instead of the structure settings. Este modo es adecuado para la fase de despliegue de las aplicaciones de escritorio. You enable this mode using an option located on the [Security page](../settings/security.md) of the Settings.
+*  Modo **propiedades usuario**: algunos de los parámetros personalizados se almacenan en un archivo *settings.4DSettings* [en la carpeta Settings](../Project/architecture.md#settings-1) (para todos los archivos de datos) o [en la carpeta Data](../Project/architecture.md#settings) (para este archivo de datos) y se utilizan en lugar de los parámetros de estructura. Este modo es adecuado para la fase de despliegue de las aplicaciones de escritorio. Este modo se activa mediante una opción situada en la [página Seguridad](../settings/security.md) de las Propiedades.
 
-By defining user settings, you can keep custom settings between updates of your 4D applications, or manage different settings for the same 4D application deployed on several different sites. It also makes it possible to use programming to manage setting files using XML.
+Al definir las propiedades usuario, puede conservar los parámetros personalizados entre las actualizaciones de sus aplicaciones 4D, o gestionar parámetros diferentes para una misma aplicación 4D desplegada en varios sitios diferentes. También permite utilizar la programación para gestionar los archivos de configuración utilizando XML.
 
 4D puede generar y utilizar dos tipos de propiedades usuario:
 
--   **User Settings (standard)**: They are used instead of structure settings for any data file opened with the application.
--   **User Settings for Data file**: They can be defined specifically for each data file used with your application, configuring for example the port ID or the server cache.
+-   **Las propiedades usuario (estándar)**: se utilizan en lugar de las propiedades de estructura para todo archivo de datos abierto con la aplicación.
+-   **Propiedades usuario para el archivo de datos**: se pueden definir específicamente para cada archivo de datos utilizado con su aplicación, configurando por ejemplo el ID del puerto o la caché del servidor.
 
-With this option, you can easily deploy and update several copies of the same desktop application with several data files, each containing different settings.
+Con esta opción, puede desplegar y actualizar fácilmente varias copias de la misma aplicación de escritorio con varios archivos de datos, cada uno de los cuales contiene propiedades diferentes.
 
-Consider for example the following configuration, where an application is duplicated and each copy uses a different Port ID setting. If this user setting is linked to the data file, you will be able to update the application without having to manually change the Port ID:
+Considere, por ejemplo, la siguiente configuración, en la que se duplica una aplicación y cada copia utiliza un parámetro de ID de puerto diferente. Si este parámetro usuario está vinculado al archivo de datos, podrá actualizar la aplicación sin tener que cambiar manualmente el ID del puerto:
 
 ![](../assets/en/settings/user-settings-config.png)
 
 ## Activar las propiedades usuario
 
-To enable user settings, you need to check the **Settings** > **Security** > **Enable User Settings** option:
+Para activar los parámetros usuario, debe seleccionar la opción **Settings** > **Seguridad** > **Autorizar las propiedades usuario**:
 
 ![](../assets/en/settings/user-settings-enable.png)
 
-When you check this option, the settings are separated into three dialog boxes:
+Cuando se marca esta opción, los parámetros se separan en tres cajas de diálogo:
 
 * **Propiedades estructura**
 * **Propiedades usuario**
 * **Propiedades usuario para el archivo de datos**
 
-You can access these dialog boxes using the **Design > Settings...** menu or the **Settings** button in the toolbar:
+Puede acceder a estas cajas de diálogo utilizando el menú **Diseño > Propiedades...** o el botón **Propiedades** de la barra de herramientas:
 
 ![](../assets/en/settings/user-settings-dialog.png)
 
-You can also access these dialog boxes using the [OPEN SETTINGS WINDOW](https://doc.4d.com/4dv19R/help/command/en/page903.html) command with the appropriate *settingsType* selector.
+También puede acceder a estas cajas de diálogo utilizando el comando [OPEN SETTINGS WINDOW](https://doc.4d.com/4dv19R/help/command/en/page903.html) con el selector *settingsType* apropiado.
 
-The Structure Settings dialog box is identical to the standard Settings, and provides access to all its properties (which can be overriden by user settings).
+La caja de diálogo Propiedades de estructura es idéntica a la caja de diálogo Propiedades estándar, y permite acceder a todas sus propiedades (que pueden ser anuladas por las propiedades usuario).
 
 ## Propiedades usuario y propiedades de usuario para el archivo de datos
 
-The **User Settings** and **User Settings for Data File** dialog boxes contain a selection of relevant properties that can be defined for all data files or a single data file:
+Las cajas de diálogo **Propiedades usuario** y **Propiedades usuario para el archivo de datos**contienen una selección de propiedades relevantes que pueden definirse para todos los archivos de datos o para un solo archivo de datos:
 
 ![](../assets/en/settings/user-settings-2.png)
 
-The following table lists the pages of settings found in the **User Settings** and **User Settings for Data File** dialog boxes and describes their main differences with respect to standard settings:
+La siguiente tabla lista las páginas de parámetros que se encuentran en las cajas de diálogo **Parámetros usuario** y **Parámetros usuario para el archivo de datos** y describe sus principales diferencias con respecto a los parámetros estándar:
 
 | **Página de Propiedades estructura**                                                       | **Página de las Propiedades usuario**              | **Página de Propiedades usuario para archivo de datos** |
 | ------------------------------------------------------------------------------------------ | -------------------------------------------------- | ------------------------------------------------------- |
@@ -73,11 +73,11 @@ The following table lists the pages of settings found in the **User Settings** a
 | [Página seguridad](../settings/security.md)                                                | N/a                                                | N/a                                                     |
 | [Página de compatibilidad](../settings/compatibility.md)                                   | N/a                                                | N/a                                                     |
 
-When you edit settings in this dialog box, they are automatically stored in the corresponding *settings.4DSettings* file (see below).
+Cuando se editan los parámetros en esta caja de diálogo, se almacenan automáticamente en el archivo *settings.4DSettings* correspondiente (ver más adelante).
 
 ## `SET PARAMETER DE LA BASE DE DATOS` y propiedades usuario
 
-Some of the user settings are also available through the [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html) command. Las propiedades usuario son parámetros con la propiedad **Conservado entre dos sesiones** establecida en **Sí**.
+Algunas propiedades de los usuarios también están disponibles a través del comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html). Las propiedades usuario son parámetros con la propiedad **Conservado entre dos sesiones** establecida en **Sí**.
 
 Cuando la funcionalidad **Propiedades usuario** está activada, las propiedades usuario editadas por el comando [SET DATABASE PARAMETER](https://doc.4d.com/4dv19R/help/command/en/page642.html) se guardan automáticamente en las Propiedades usuario para el archivo de datos.
 

@@ -108,7 +108,7 @@ XX はアプリケーションのバージョン番号を意味します。 た�
 
 4D のフレームワークには同時アクセスを制御するためのファイルアクセスマネージャーが含まれています:
 
-* if an open file is read-only at the OS level, a locked icon is displayed in the editor: ![](../assets/en/Project/lockicon.png)
+* 開かれているファイルが OS レベルで読み取り専用の場合、エディターには鍵アイコンが表示されます: ![](../assets/en/Project/lockicon.png)
 * 開かれているファイルが複数のアクセスによって同時編集を受けている場合、4D は保存時に警告ダイアログを表示します:
 
 ![](../assets/en/Project/projectReload.png)

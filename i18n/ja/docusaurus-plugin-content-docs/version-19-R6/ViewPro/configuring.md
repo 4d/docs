@@ -291,7 +291,7 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";!2024-12-18!);"time";
 | N  | ページ数                       | printInfo.headerLeft:="&N ページあります"                                     | 10 ページあります                                           |
 | D  | カレント日付 (yyyy/mm/dd フォーマット) | printInfo.headerLeft:="日付は &D です"                                      | 日付は 2015/6/19 です                                     |
 | T  | 現在の時刻                      | printInfo.headerLeft:="時刻は &T です"                                      | 時刻は 16:30:36 です                                      |
-| G  | 画像                         | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
+| G  | ピクチャー                      | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
 | S  | 打ち消し線                      | printInfo.headerLeft:="&Sこれはテキストです"                                    | ~~これはテキストです~~                                        |
 | U  | 下線                         | printInfo.headerLeft:="&Uこれはテキストです"                                    | これはテキストです (underlined)                               |
 | B  | 太字                         | printInfo.headerLeft:="&Bこれはテキストです"                                    | **これはテキストです**                                        |

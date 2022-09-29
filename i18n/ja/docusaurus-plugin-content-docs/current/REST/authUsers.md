@@ -33,12 +33,12 @@ htmlログインページ:
 
 <div id="demo">
     <FORM name="myForm">
-Email: <INPUT TYPE=TEXT NAME=userId VALUE=""><br/>
-Password: <INPUT TYPE=TEXT NAME=password VALUE=""><br/>
+メールアドレス: <INPUT TYPE=TEXT NAME=userId VALUE=""><br/>
+パスワード: <INPUT TYPE=TEXT NAME=password VALUE=""><br/>
 <button type="button" onclick="onClick()">
-Login
+ログイン
 </button>
-<div id="authenticationFailed" style="visibility:hidden;">Authentication failed</div>
+<div id="authenticationFailed" style="visibility:hidden;">ログインに失敗しました</div>
 </FORM>
 </div>
 
@@ -55,7 +55,7 @@ function sendData(data) {
       }
   };
 
-  XHR.open('POST', 'http://127.0.0.1:8044/rest/$directory/login'); //rest server address
+  XHR.open('POST', 'http://127.0.0.1:8044/rest/$directory/login'); // RESTサーバーアドレス
 
   XHR.setRequestHeader('username-4D', data.userId);
   XHR.setRequestHeader('password-4D', data.password);

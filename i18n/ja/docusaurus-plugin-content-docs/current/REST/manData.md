@@ -20,7 +20,7 @@ REST API を使って、4D内と同等のデータ操作をおこなうことが
 
 エンティティを追加・編集するには [`$method=update`]($method.md#methodupdate) を呼び出します。 1つ以上のエンティティを削除するには [`$method=delete`]($method.md#methoddelete) を使用します。
 
-Besides retrieving a single entity in a dataclass using [{dataClass}({key})](dataClass.md#dataclasskey), you can also write a [class function](ClassFunctions.md#function-calls) that returns an entity selection (or a collection).
+[{dataClass}({key})](dataClass.md#dataclasskey) でデータクラスのいちエンティティを取得する以外にも、エンティティセレクションやコレクションを返す [クラス関数](ClassFunctions.md#関数の呼び出し) を用意することもできます。
 
 戻り値としてセレクションを返す前に、[`$orderby`]($orderby.md) を使って一つ以上の属性 (リレーション属性も可) を基準に並べ替えることもできます。
 
@@ -89,7 +89,7 @@ RESTレスポンスにどの属性を含めて返してもらうかを指定す�
 
 | Object        | シンタックス                                              | 例題                                                            |
 | ------------- | --------------------------------------------------- | ------------------------------------------------------------- |
-| DataClass     | {dataClass}/{att1,att2...}                          | /People/firstName,lastName                                    |
+| データクラス        | {dataClass}/{att1,att2...}                          | /People/firstName,lastName                                    |
 | エンティティのコレクション | {dataClass}/{att1,att2...}/?$filter="{filter}"      | /People/firstName,lastName/?$filter="lastName='a@'"           |
 | 特定のエンティティ     | {dataClass}({ID})/{att1,att2...}                    | /People(1)/firstName,lastName                                 |
 |               | {dataClass}:{attribute}(value)/{att1,att2...}/      | /People:firstName(Larry)/firstName,lastName/                  |
