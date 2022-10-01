@@ -55,7 +55,7 @@ ORDAユーザークラスに定義された関数には、引数を渡すこと�
 
 ### スカラー値の引数
 
-引数は、ボディに定義されたコレクションに格納します。 For example, with a  dataclass function `getCities()` receiving text parameters: `/rest/City/getCities`
+引数は、ボディに定義されたコレクションに格納します。 たとえば、DataClass クラス関数 `getCities()` がテキスト引数を受け取る場合: `/rest/City/getCities`
 
 **ボディの引数:** ["Aguada","Paris"]
 
