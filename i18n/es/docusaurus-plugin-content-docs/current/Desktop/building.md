@@ -75,9 +75,9 @@ Esta pestaña le permite generar un archivo de estructura compilado estándar y/
 
 Genera una aplicación que sólo contiene código compilado.
 
-Esta funcionalidad crea un archivo *.4dz* dentro de una carpeta `Compiled Database/&#060;project name&#062;`. Por ejemplo, si ha llamado a su aplicación "MyProject", 4D creará:
+This feature creates a *.4dz* file within a `Compiled Database/<project name>` folder. Por ejemplo, si ha llamado a su aplicación "MyProject", 4D creará:
 
-`\&#060;destination\&#062;/Compiled Database/MyProject/MyProject.4dz`
+`<destination>/Compiled Database/MyProject/MyProject.4dz`
 
 Un archivo .4dz es esencialmente una versión comprimida (empaquetada) de la carpeta del proyecto. Un archivo .4dz es esencialmente una versión comprimida (empaquetada) de la carpeta del proyecto. El tamaño compacto y optimizado de los archivos .4dz hace que los paquetes de proyectos sean fáciles de desplegar.
 
@@ -95,11 +95,12 @@ Un componente es un proyecto estándar 4D en el que se han desarrollado funciona
 
 Si ha llamado a su aplicación, *MiComponente*, 4D creará una carpeta *Components* que contiene la carpeta *MiComponente.4dbase*:
 
-`\&#060;destination&#062;/Components/MyComponent.4dbase/MyComponent.4DZ`.
+`<destination>/Components/MyComponent.4dbase/MyComponent.4DZ`.
 
 La carpeta *MyComponent.4dbase* contiene:
 
 * archivo *MyComponent.4DZ*
+
 * Una carpeta *Resources*: todos los resources asociados se copian automáticamente en esta carpeta. Los otros componentes y/o carpetas de plugins no se copian (un componente no puede utilizar plugins u otros componentes).
 
 ## Página Application
@@ -350,19 +351,19 @@ Hay muchas causas posibles para este error. Cuando reciba este mensaje, es acons
 
 ### Archivos generados
 
-Una vez creada la aplicación cliente/servidor, encontrará una nueva carpeta en la carpeta de destino llamada **Client Server executable**. Esta carpeta contiene dos subcarpetas, `\&#060;ApplicationName&#062;Client` y `\&#060;ApplicationName&#062;Server`.
+Una vez creada la aplicación cliente/servidor, encontrará una nueva carpeta en la carpeta de destino llamada **Client Server executable**. This folder contains two subfolders, `<ApplicationName>Client` and `<ApplicationName>Server`.
 > Estas carpetas no se generan si ocurre un error. En este caso, abra el [archivo de historial](#archivo-registro) para conocer la causa del error.
 
-La carpeta `&#060;ApplicationName&#062;Client` contiene la parte cliente de la aplicación correspondiente a la plataforma de ejecución del generador de aplicaciones. Esta carpeta debe instalarse en cada máquina cliente. La carpeta `\&#060;ApplicationName&#062;Server` contiene la parte del servidor de la aplicación.
+The `<ApplicationName>Client` folder contains the client portion of the application corresponding to the execution platform of the application builder. Esta carpeta debe instalarse en cada máquina cliente. The `<ApplicationName>Server` folder contains the server portion of the application.
 
 El contenido de estas carpetas varía en función de la plataforma actual:
 
-* *Windows* - Cada carpeta contiene el archivo ejecutable de la aplicación, denominado`\&#060;ApplicationName&#062;Client.exe` para la parte cliente y `\&#060;ApplicationName&#062;Server.exe` para la parte del servidor, así como los archivos .rsr correspondientes. Las carpetas también contienen varios archivos y carpetas necesarios para que las aplicaciones funcionen y elementos personalizados que pueden estar en las carpetas originales de 4D Volume Desktop y 4D Server.
-* *macOS* - Cada carpeta contiene únicamente el paquete de la aplicación, denominado `\&#060;ApplicationName&#062; Client` para la parte cliente y `\&#060;ApplicationName&#062; Server` para la parte servidor. Cada paquete contiene todos los elementos necesarios para que la aplicación funcione. En macOS, un paquete se lanza haciendo doble clic en él.
+* *Windows* - Each folder contains the application executable file, named `<ApplicationName>Client.exe` for the client part and `<ApplicationName>Server.exe` for the server part as well as the corresponding .rsr files. Las carpetas también contienen varios archivos y carpetas necesarios para que las aplicaciones funcionen y elementos personalizados que pueden estar en las carpetas originales de 4D Volume Desktop y 4D Server.
+* *macOS* - Each folder contains only the application package, named `<ApplicationName> Client` for the client part and `<ApplicationName> Server` for the server part. Cada paquete contiene todos los elementos necesarios para que la aplicación funcione. En macOS, un paquete se lanza haciendo doble clic en él.
 
  > Los paquetes macOS generados contienen los mismos elementos que las subcarpetas Windows. In order to modify it, you must first display its contents (**Control+click** on the icon).
 
-If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the `\&#060;ApplicationName&#062;Server` folder/package. Esta subcarpeta contiene la aplicación cliente en formato macOS y/o Windows como archivo comprimido. Esta subcarpeta contiene la aplicación cliente en formato macOS y/o Windows como archivo comprimido.
+If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the `<ApplicationName>Server` folder/package. Esta subcarpeta contiene la aplicación cliente en formato macOS y/o Windows como archivo comprimido. Esta subcarpeta contiene la aplicación cliente en formato macOS y/o Windows como archivo comprimido.
 
 #### Ubicación de los archivos web
 
@@ -374,12 +375,12 @@ If the server and/or client part of your double-clickable application is used as
 Los elementos deben ser instalados:
 
 * **en Windows**
-  * **Server application** - in the `Client Server executable\/\&#060;ApplicationName&#062;Server/Server Database` subfolder.
-  * **Client application** - in the `Client Server executable\/\&#060;ApplicationName&#062;Client` subfolder.
+  * **Server application** - in the `Client Server executable/<ApplicationName>Server/Server Database` subfolder.
+  * **Client application** - in the `Client Server executable/<ApplicationName>Client` subfolder.
 
 * **en macOS**
-  * **Server application** - next to the `\&#060;ApplicationName&#062;Server` software package.
-  * **Client application** - next to the `\&#060;ApplicationName&#062;Client` software package.
+  * **Server application** - next to the `<ApplicationName>Server` software package.
+  * **Client application** - next to the `<ApplicationName>Client` software package.
 
 ### Integrar una aplicación cliente monopuesto
 
