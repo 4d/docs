@@ -119,7 +119,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.hidden` property returns <!-- REF #document.hidden.Summary -->true if the file is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
+A propriedade `.size` devolve <!-- REF #document.hidden.Summary -->true if the file is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
 
 Essa propriedade é**apenas leitura**.
 
@@ -139,7 +139,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.isAlias` property returns <!-- REF #document.isAlias.Summary -->true if the file is an alias, a shortcut, or a symbolic link<!-- END REF -->, and false otherwise.
+A propriedade `.isAlias` devolve <!-- REF #document.isAlias.Summary -->true if the file is an alias, a shortcut, or a symbolic link<!-- END REF -->, and false otherwise.
 
 Essa propriedade é**apenas leitura**.
 
@@ -159,7 +159,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.isFile` property returns <!-- REF #document.isFile.Summary -->The `.copyTo()` function<!-- END REF -->.
+A propriedade `.isFile` devolve <!-- REF #document.isFile.Summary -->The `.copyTo()` function<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 
@@ -179,7 +179,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.isFolder` property returns <!-- REF #document.isFolder.Summary -->always true for a file<!-- END REF -->.
+A propriedade `.isFolder` devolve <!-- REF #document.isFolder.Summary -->always true for a file<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 
@@ -229,7 +229,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.modificationDate` property returns <!-- REF #document.modificationDate.Summary -->The `.modificationDate` property returns<!-- END REF -->.
+A propriedade `.modificationDate` devolve <!-- REF #document.modificationDate.Summary -->The `.modificationDate` property returns<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 
@@ -249,7 +249,7 @@ Essa propriedade é**apenas leitura**.
 
 ##### Descrição
 
-The `.modificationTime` property returns <!-- REF #document.modificationTime.Summary -->The `.modificationTime` property returns<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+A propriedade `.modificationTime` devolve <!-- REF #document.modificationTime.Summary -->The `.modificationTime` property returns<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
 Essa propriedade é**apenas leitura**.
 
@@ -269,7 +269,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.name` property returns <!-- REF #document.name.Summary -->the name of the file without extension (if any)<!-- END REF -->.
+A propriedade `.name` devolve <!-- REF #document.name.Summary -->the name of the file without extension (if any)<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 
@@ -289,7 +289,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.original` property returns <!-- REF #document.original.Summary -->the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->. O elemento alvo pode ser:
+A propriedade `.original` devolve <!-- REF #document.original.Summary -->the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->. O elemento alvo pode ser:
 
 * um objeto File
 * um objeto folder
@@ -314,7 +314,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.parent` property returns <!-- REF #document.parent.Summary -->The `.parent` property returns<!-- END REF -->. .
+A propriedade `.parent` devolve <!-- REF #document.parent.Summary -->The `.parent` property returns<!-- END REF -->. .
 
 Essa propriedade é**apenas leitura**.
 
@@ -334,7 +334,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.path` property returns <!-- REF #document.path.Summary -->The `.path` property returns<!-- END REF -->. .
+A propriedade `.path` devolve <!-- REF #document.path.Summary -->The `.path` property returns<!-- END REF -->. .
 
 Essa propriedade é**apenas leitura**.
 
@@ -354,7 +354,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.platformPath` property returns <!-- REF #document.platformPath.Summary -->The `.platformPath` property returns<!-- END REF -->.
+A propriedade `.platformPath` devolve <!-- REF #document.platformPath.Summary -->The `.platformPath` property returns<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 
@@ -405,7 +405,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.copyTo()` function <!-- REF #document.copyTo().Summary -->The `.isFolder` property returns <!-- END REF -->.
+A função `.copyTo()` <!-- REF #document.copyTo().Summary -->The `.isFolder` property returns <!-- END REF -->.
 
 A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
