@@ -4,13 +4,13 @@ title: Página Restauración
 sidebar_label: Página Restauración
 ---
 
-You can manually restore an archive of the current application using the **Restore** page. This page provides several options that can be used to control the restoration:
+Puede restaurar manualmente un archivo de la aplicación actual utilizando la página **Restaurar**. Esta página ofrece varias opciones que pueden utilizarse para controlar la restauración:
 
 ![](../assets/en/MSC/MSC_restore.png)
 
-> 4D automatic recovery systems restore applications and include data log file when necessary.
+> Los sistemas de recuperación automática de 4D restauran las aplicaciones e incluyen el archivo de historial de datos cuando es necesario.
 
-The list found in the left part of the window displays any existing backups of the application. You can also click on the **Browse...** button found just under the area in order to open any other archive file from a different location. A continuación, se añade a la lista de archivos.
+La lista que se encuentra en la parte izquierda de la ventana muestra las copias de seguridad existentes de la aplicación. También puede hacer clic en el botón **Navegar...** que se encuentra justo debajo del área para abrir cualquier otro archivo de una ubicación diferente. A continuación, se añade a la lista de archivos.
 
 Cuando se selecciona una copia de seguridad en esta lista, la parte derecha de la ventana muestra la información relativa a esta copia de seguridad en particular:
 
@@ -23,13 +23,13 @@ El botón **Restaurar** lanza la restauración manual del elemento o elementos s
 
 ## Integración sucesiva de varios archivos de historial de datos
 
-The **Integrate one or more log file(s) after restore** option allows you to integrate several data log files successively into an application. If, for example, you have 4 journal file archives (.4BL) corresponding to 4 backups, you can restore the first backup then integrate the journal (data log) archives one by one. Esto significa que puede, por ejemplo, recuperar un archivo de datos incluso cuando faltan los últimos archivos de copia de seguridad.
+La opción **Integrar uno o varios archivos de historial tras la restauración** permite integrar sucesivamente varios archivos de registro de datos en una aplicación. Si, por ejemplo, dispone de 4 archivos historial (.4BL) correspondientes a 4 copias de seguridad, puede restaurar la primera copia de seguridad y luego integrar los archivos historial (data log) uno por uno. Esto significa que puede, por ejemplo, recuperar un archivo de datos incluso cuando faltan los últimos archivos de copia de seguridad.
 
 Cuando esta opción está marcada, 4D muestra la caja de diálogo estándar Abrir archivo después de la restauración, que puede utilizarse para seleccionar el archivo del diario que se va a integrar. La caja de diálogo Abrir archivo se muestra de nuevo después de cada integración hasta que se cancela.
 
 ## Restauración de una base encriptada
 
-Keep in mind that the data encryption key (passphrase) may have been changed through several versions of backup files (.4BK), .journal files (.4BL) and the current application. Siempre deben proporcionarse claves de encriptación coincidentes.
+Tenga en cuenta que la llave de cifrado de los datos (frase secreta) puede haber cambiado a través de varias versiones de los archivos de copia de seguridad (.4BK), de los archivos .journal (.4BL) y de la aplicación actual. Siempre deben proporcionarse claves de encriptación coincidentes.
 
 Al restaurar una copia de seguridad e integrar el archivo de historial actual en una base encriptada:
 
