@@ -3,25 +3,26 @@ id: architecture
 title: Architecture of a project
 ---
 
-A 4D project is made of several folders and files, stored within a single parent application folder (package folder). Por exemplo:
+A 4D project is made of several folders and files, stored within a project root folder (package folder). Por exemplo:
 
-- MyProject
-  - `Componentes`
-  - `Dados`
-    - `Logs`
+- MyProject (*project root folder*)
+    - `Componentes`
+    - `Dados`
+        - `Logs`
+        - `Settings`
+    - `Documentation`
+    - `Plugins`
+    - `Project`
+        - `DerivedData`
+        - `Sources`
+        - `Trash`
+    - `Resources`
     - `Settings`
-  - `Documentation`
-  - `Plugins`
-  - `Project`
-    - `DerivedData`
-    - `Sources`
-    - `Trash`
-  - `Resources`
-  - `Settings`
-  - `userPreferences.jSmith`
-  - `WebFolder`
+    - `userPreferences.jSmith`
+    - `WebFolder`
 
 > If your project has been converted from a binary database, additional folders may be present. See "Converting databases to projects" on [doc.4d.com](https://doc.4d.com).
+
 
 ## Project folder
 
@@ -29,14 +30,15 @@ The Project folder typically contains the following hierarchy:
 
 - `<applicationName>.4DProject` file
 - `Sources`
-  - `Classes`
-  - `DatabaseMethods`
-  - `Métodos`
-  - `Formulários`
-  - `TableForms`
-  - `Triggers`
+    + `Classes`
+    + `DatabaseMethods`
+    + `Métodos`
+    + `Formulários`
+    + `TableForms`
+    + `Triggers`
 - `DerivedData`
 - `Trash` (if any)
+
 
 ### `<applicationName>.4DProject` file
 
@@ -51,18 +53,19 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 
 ### `Sources`
 
-| Conteúdos               | Descrição                                                                                                                                                                                     | Formato |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| catalog.4DCatalog       | Table and field definitions                                                                                                                                                                   | XML     |
-| folders.json            | Explorer folder definitions                                                                                                                                                                   | JSON    |
-| menus.json              | Menu definitions                                                                                                                                                                              | JSON    |
-| settings.4DSettings     | *Structure* database settings. They are not taken into account if *[user settings](#settings-folder-1)* or *[user settings for data](#settings-folder)* are defined.<p>**Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to use *user settings* or *user settings for data* to define custom settings.</p> | XML     |
-| tips.json               | Defined tips                                                                                                                                                                                  | JSON    |
-| lists.json              | Defined lists                                                                                                                                                                                 | JSON    |
-| filters.json            | Defined filters                                                                                                                                                                               | JSON    |
-| styleSheets.css         | CSS style sheets                                                                                                                                                                              | CSS     |
-| styleSheets_mac.css     | Mac css style sheets (from converted binary database)                                                                                                                                         | CSS     |
-| styleSheets_windows.css | Windows css style sheets (from converted binary database)                                                                                                                                     | CSS     |
+| Conteúdos               | Descrição                                                                                                                                                                                                                                                                                                                                                                                   | Formato |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| catalog.4DCatalog       | Table and field definitions                                                                                                                                                                                                                                                                                                                                                                 | XML     |
+| folders.json            | Explorer folder definitions                                                                                                                                                                                                                                                                                                                                                                 | JSON    |
+| menus.json              | Menu definitions                                                                                                                                                                                                                                                                                                                                                                            | JSON    |
+| settings.4DSettings     | *Structure* database settings. They are not taken into account if *[user settings](#settings-folder-1)* or *[user settings for data](#settings-folder)* are defined. **Warning**: In compiled applications, structure settings are stored in the .4dz file (read-only). For deployment needs, it is necessary to use *user settings* or *user settings for data* to define custom settings. | XML     |
+| tips.json               | Defined tips                                                                                                                                                                                                                                                                                                                                                                                | JSON    |
+| lists.json              | Defined lists                                                                                                                                                                                                                                                                                                                                                                               | JSON    |
+| filters.json            | Defined filters                                                                                                                                                                                                                                                                                                                                                                             | JSON    |
+| styleSheets.css         | CSS style sheets                                                                                                                                                                                                                                                                                                                                                                            | CSS     |
+| styleSheets_mac.css     | Mac css style sheets (from converted binary database)                                                                                                                                                                                                                                                                                                                                       | CSS     |
+| styleSheets_windows.css | Windows css style sheets (from converted binary database)                                                                                                                                                                                                                                                                                                                                   | CSS     |
+
 
 #### `DatabaseMethods`
 
@@ -81,6 +84,7 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 | Conteúdos       | Descrição                                                                                                                          | Formato |
 | --------------- | ---------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | *className*.4dm | User class definition method, allowing to instantiate specific objects. One file per class, the name of the file is the class name | text    |
+
 
 #### `Formulários`
 
@@ -112,6 +116,7 @@ This text file can also contain configuration keys, in particular [`"tokenizedTe
 
 **Note:** The .4dm file extension is a text-based file format, containing the code of a 4D method. It is compliant with source control tools.
 
+
 ### `Trash`
 
 The Trash folder contains methods and forms that were deleted from the project (if any). It can contain the following folders:
@@ -121,6 +126,7 @@ The Trash folder contains methods and forms that were deleted from the project (
 - `TableForms`
 
 Within these folders, deleted element names are in parentheses, e.g. "(myMethod).4dm". The folder organization is identical to the [Sources](#sources) folder.
+
 
 ### `DerivedData`
 
@@ -142,6 +148,7 @@ The Resources folder contains any custom project resource files and folders. In 
 | Images/Library/*item* | Pictures from the Picture Library as separate files(*). Names of these items become file names. If a duplicate exists, a number is added to the name. | picture |
 
 (*) only if the project was exported from a .4db binary database.
+
 
 ## `Dados`
 
@@ -166,6 +173,7 @@ This folder contains **user settings files for data** used for application admin
 | directory.json      | Description of 4D groups, users, and their access rights when the application is run with this data file.                                                                                                           | JSON    |
 | Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md) when the database is run with this data file. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML     |
 | settings.4DSettings | Propriedades personalizadas de o banco de dados para este arquivo de dados.                                                                                                                                         | XML     |
+
 
 ### `Logs`
 
@@ -192,6 +200,7 @@ This folder contains **user settings files** used for application administration
 | BuildApp.4DSettings | Build settings file, created automatically when using the application builder dialog box or the `BUILD APPLICATION` command                                                                                                                                                                                                          | XML     |
 | settings.4DSettings | Custom settings for this project (all data files)                                                                                                                                                                                                                                                                                    | XML     |
 
+
 ## `userPreferences.<userName>`
 
 Esta pasta contém arquivos que memorizam as configurações do usuário, por exemplo, o ponto de ruptura ou as posições das janelas. You can just ignore this folder. It contains for example:
@@ -207,18 +216,18 @@ Esta pasta contém arquivos que memorizam as configurações do usuário, por ex
 | preferences.4DPreferences  | Rota de dados atual e posições da janela principal          | XML     |
 | CompilerIntermediateFiles  | Intermediate files resulting from Apple Silicon compilation | Folder  |
 
+
 ## `Componentes`
 
 This folder contains the components to be available in the application project. It must be stored at the same level as the Project folder.
 
-> An application project can be used itself as a component:
-> 
-> - for development: put an alias of the .4dproject file in the Components folder of the host project.
-> - for deployment: [build the component](Desktop/building.md#build-component) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application.
+> An application project can be used itself as a component: - for development: put an alias of the .4dproject file in the Components folder of the host project. - for deployment: [build the component](Desktop/building.md#build-component) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application. - for deployment: [build the component](Desktop/building.md#build-component) and put the resulting .4dz file in a .4dbase folder in the Components folder of the host application.
+
 
 ## `Plugins`
 
 This folder contains the plug-ins to be available in the application project. It must be stored at the same level as the Project folder.
+
 
 ## `Documentation`
 
