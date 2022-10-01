@@ -202,19 +202,19 @@ Una vez completadas las operaciones, si la macro resulta en la modificación, ad
 
 Estas son las propiedades devueltas en el parámetro *$editor*:
 
-| Propiedad                        | Tipo       | Descripción                                                                       |
-| -------------------------------- | ---------- | --------------------------------------------------------------------------------- |
-| $editor.editor.form              | Object     | Formulario completo                                                               |
-| $editor.editor.file              | File       | File object of the form file                                                      |
-| $editor.editor.name              | String     | Nombre del formulario                                                             |
-| $editor.editor.table             | number     | Número de tabla del formulario, 0 para el formulario proyecto                     |
-| $editor.editor.currentPageNumber | number     | El número de la página actual                                                     |
-| $editor.editor.currentPage       | Object     | The current page, containing all the form objects and the entry order of the page |
-| $editor.editor.currentSelection  | Collection | Colección de nombres de objetos seleccionados                                     |
-| $editor.editor.formProperties    | Object     | Propiedades del formulario actual                                                 |
-| $editor.editor.target            | string     | Nombre del objeto bajo el ratón cuando se hace clic en una macro                  |
+| Propiedad                        | Tipo       | Descripción                                                                                       |
+| -------------------------------- | ---------- | ------------------------------------------------------------------------------------------------- |
+| $editor.editor.form              | Object     | Formulario completo                                                                               |
+| $editor.editor.file              | File       | Objeto File del archivo de formularios                                                            |
+| $editor.editor.name              | String     | Nombre del formulario                                                                             |
+| $editor.editor.table             | number     | Número de tabla del formulario, 0 para el formulario proyecto                                     |
+| $editor.editor.currentPageNumber | number     | El número de la página actual                                                                     |
+| $editor.editor.currentPage       | Object     | La página actual, que contiene todos los objetos de formulario y el orden de entrada de la página |
+| $editor.editor.currentSelection  | Collection | Colección de nombres de objetos seleccionados                                                     |
+| $editor.editor.formProperties    | Object     | Propiedades del formulario actual                                                                 |
+| $editor.editor.target            | string     | Nombre del objeto bajo el ratón cuando se hace clic en una macro                                  |
 
-Here are the properties that you can pass in the `$result` object if you want the macro processor to execute a modification. Todas las propiedades son opcionales:
+Estas son las propiedades que puede pasar en el objeto `$result` si quiere que el macro procesador ejecute una modificación. Todas las propiedades son opcionales:
 
 | Propiedad         | Tipo       | Descripción                                                             |
 | ----------------- | ---------- | ----------------------------------------------------------------------- |
@@ -237,7 +237,7 @@ Por ejemplo, si los objetos de la página actual y de los grupos han sido modifi
 
 Cuando se maneja el atributo `method` de los objetos de formulario, se puede definir el valor del atributo de dos maneras en las macros:
 
-* Using a [string containing the method file name/path](FormObjects/properties_Action.md#method).
+* Utilizando una [cadena que contiene el nombre/ruta del archivo del método](FormObjects/properties_Action.md#method).
 
 * Utilizando un objeto con la siguiente estructura:
 
@@ -246,7 +246,7 @@ Cuando se maneja el atributo `method` de los objetos de formulario, se puede def
 |           |      |             |
  source|Cadena|Código del método|
 
-4D will create a file using the object name in the "objectMethods" folder with the content of `source` attribute. Esta función solo está disponible para el código macro.
+4D creará un archivo con el nombre del objeto en la carpeta "objectMethods" con el contenido del atributo `source`. Esta función solo está disponible para el código macro.
 
 #### Propiedad `$4dId` en `currentPage.objects`
 
