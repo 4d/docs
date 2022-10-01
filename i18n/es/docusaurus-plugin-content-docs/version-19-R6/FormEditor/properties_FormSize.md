@@ -12,7 +12,7 @@ Las opciones de tamaño dependen del valor de la opción **Tamaño basado en**.
 
 ## Tamaño basado en
 
-* **Automatic Size**: The size of the form will be that necessary to display all the objects, to which will be added the margin values (in pixels) entered in the [**Hor Margin**](#hor-margin) and [**Vert Margin**](#vert-margin) fields. Puede elegir esta opción cuando desee utilizar objetos activos situados en un área fuera de la pantalla (*es decir*, fuera del rectángulo delimitador de la ventana) con una ventana de tamaño automático. Gracias a esta opción, la presencia de estos objetos no modificará el tamaño de la ventana.
+* **Tamaño automático**: el tamaño del formulario será el necesario para mostrar todos los objetos, al que se añadirán los valores de margen (en píxeles) introducidos en los campos [**Hor Margin**](#hor-margin) y [**Vert Margin**](#vert-margin). Puede elegir esta opción cuando desee utilizar objetos activos situados en un área fuera de la pantalla (*es decir*, fuera del rectángulo delimitador de la ventana) con una ventana de tamaño automático. Gracias a esta opción, la presencia de estos objetos no modificará el tamaño de la ventana.
 
 * **Definir tamaño**: el tamaño del formulario se basará en lo que introduzca (en píxeles) en los campos [**Ancho**](#width) y [**Alto**](#height).
 
@@ -30,7 +30,7 @@ Las opciones de tamaño dependen del valor de la opción **Tamaño basado en**.
 
 ## Altura
 
-Height of the form (in pixels) when the [form size](#size-based-on) is **Set size**.
+Altura del formulario (en píxeles) cuando el [tamaño del formulario](#size-based-on) es definido en **Definir tamaño**.
 
 #### Gramática JSON
 
@@ -42,9 +42,9 @@ Height of the form (in pixels) when the [form size](#size-based-on) is **Set siz
 
 ## Margen hor.
 
-Value to add (in pixels) to the right margin of the form when the [form size](#size-based-on) is **Automatic size** or `\&#060;object name&#062;`
+Valor a añadir (en píxeles) al margen inferior del formulario cuando el [tamaño del formulario](#size-based-on) está definido en **Tamaño automático** o `\&#060;object name&#062;`
 
-This value also determines the right-hand margins of forms used in the Label editor.
+Este valor también determina los márgenes derechos de los formularios utilizados en el editor de etiquetas.
 
 #### Gramática JSON
 
@@ -56,9 +56,9 @@ This value also determines the right-hand margins of forms used in the Label edi
 
 ## Margen hor.
 
-Value to add (in pixels) to the bottom margin of the form when the [form size](#size-based-on) is **Automatic size** or `\&#060;object name&#062;`.
+Valor a añadir (en píxeles) al margen inferior del formulario cuando el [tamaño del formulario](#size-based-on) está definido en **Tamaño automático** o `\&#060;object name&#062;`.
 
-This value also determines the top margins of forms used in the Label editor.
+Este valor también determina los márgenes superiores de los formularios utilizados en el editor de etiquetas.
 
 #### Gramática JSON
 
@@ -70,7 +70,7 @@ This value also determines the top margins of forms used in the Label editor.
 
 ## Ancho
 
-Width of the form (in pixels) when the [form size](#size-based-on) is **Set size**.
+Ancho del formulario (en píxeles) cuando el [tamaño del formulario](#size-based-on) está definido en **Definir tamaño**.
 
 #### Gramática JSON
 
