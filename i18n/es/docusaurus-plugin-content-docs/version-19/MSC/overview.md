@@ -8,11 +8,11 @@ La ventana del Centro de Mantenimiento y Seguridad (CSM) contiene todas las herr
 
 **Nota:** la ventana del CSM no está disponible desde una conexión remota 4D.
 
-Hay varias formas de abrir la ventana del CSM. The way it is accessed also determines the way the application project is opened: in “maintenance” mode or “standard” mode. In maintenance mode, the project is not opened by 4D, only its reference is provided to the MSC. En modo estándar, el proyecto es abierto por 4D.
+Hay varias formas de abrir la ventana del CSM. El modo de acceso también determina el modo de apertura de la aplicación proyecto: en modo "mantenimiento" o en modo "estándar". En modo mantenimiento, el proyecto no es abierto por 4D, sólo se provee su referencia al CSM. En modo estándar, el proyecto es abierto por 4D.
 
 ## Acceso en modo de mantenimiento
 
-In maintenance mode, only the MSC window is displayed (the project is not opened by the 4D application). This means that projects that are too damaged to be opened in standard mode by 4D can nevertheless be accessed. Moreover, certain operations (compacting, repair, and so on) require the project to be opened in maintenance mode (see [Feature availability](#feature-availability)).
+En modo mantenimiento, sólo se muestra la ventana del CSM (el proyecto no es abierto por la aplicación 4D). Esto significa que los proyectos que están demasiado dañados para ser abiertas en modo estándar por 4D pueden, sin embargo, ser accedidos. Además, algunas operaciones (compactación, reparación, etc.) requieren que el proyecto se abra en modo mantenimiento (ver [Disponibilidad de las funcionalidades](#feature-availability)).
 
 Puede abrir el CSM en modo mantenimiento desde dos lugares:
 
@@ -26,13 +26,13 @@ En modo estándar, un proyecto se abre. En este modo, algunas funciones de mante
 
 - Utilice el menú **Centro de seguridad y mantenimiento** o el botón **CSM** de la barra de herramientas de 4D:  
   ![](../assets/en/MSC/mscicon.png)
-- Use the “msc” standard action that it is possible to associate with a menu command or a form object.
+- Utilizar la acción estándar "Csm" que es posible asociar a un comando de menú o a un objeto de formulario.
 - Utilice el comando `OPEN SECURITY CENTER`.
 
 ## Disponibilidad de las funcionalidades
 
 Algunas funciones del CSM no están disponibles dependiendo del modo de apertura del CSM:
 
-- Backup function is only available when the project is open (the MSC must have been opened in standard mode).
-- Las funciones de compactación, reversión, restauración, reparación y cifrado de datos sólo pueden utilizarse con archivos de datos que no estén abiertos (el CSM debe haberse abierto en modo de mantenimiento). If these functions are tried while the project is open in standard mode, a dialog warns you that it implies that the application be closed and restarted in maintenance mode.
+- La función de copia de seguridad sólo está disponible cuando el proyecto está abierto (el CSM debe haber sido abierto en modo estándar).
+- Las funciones de compactación, reversión, restauración, reparación y cifrado de datos sólo pueden utilizarse con archivos de datos que no estén abiertos (el CSM debe haberse abierto en modo de mantenimiento). Si se intentan estas funciones mientras el proyecto está abierto en modo estándar, una caja de diálogo le advierte que implica que la aplicación se cierre y se reinicie en modo mantenimiento.
 - En las bases encriptadas, el acceso a los datos encriptados o al archivo .journal requiere que se proporcione una clave de datos de encriptación válida (ver [Página cifrado](encrypt.md)). De lo contrario, los datos encriptados no son visibles.
