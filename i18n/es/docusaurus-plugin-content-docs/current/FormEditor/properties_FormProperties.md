@@ -43,24 +43,24 @@ Para más información, consulte [Páginas formulario](forms.md#form-pages).
 
 ## Nombre del formulario
 
-This property is the name of the form itself and is used to refer to the form by name using the 4D language. The form name must comply with the [rules specified for identifiers](Concepts/identifiers.md) in 4D.
+Esta propiedad es el nombre del propio formulario y se utiliza para referirse al formulario por su nombre utilizando el lenguaje 4D. El nombre del formulario debe cumplir con las [reglas especificadas para los identificadores](Concepts/identifiers.md) en 4D.
 
 
 #### Gramática JSON
 
-The form name is defined by the name of the folder that contains the form.4Dform file. See [project architecture](Project/architecture.md#sources-folder) for more information.
+El nombre del formulario está definido por el nombre de la carpeta que contiene el archivo form.4Dform. Ver [arquitectura del proyecto](Project/architecture.md#sources-folder) para más información.
 
 ---
 
 ## Tipo de formulario
 
-The form type, *i.e.* its destination, defines the features that will be available to the form. For example, [markers](properties_Markers.md) can only be set for list (output) table forms.
+El tipo de formulario, *es decir,* su destino, define las características que tendrá el formulario. Por ejemplo, [marcadores](properties_Markers.md) sólo puede definirse para formularios tabla listados (de salida).
 
-Cada tabla de una base de datos suele tener al menos dos formas de tabla. One for listing records on-screen and the other for displaying one record at a time (used for data entry and modifications):
+Cada tabla de una base de datos suele tener al menos dos formas de tabla. Uno para listar los registros en pantalla y el otro para mostrar un registro a la vez (utilizado para la entrada de datos y las modificaciones):
 
-- Output form - the *output form* or *list form* displays a list of records, with a single line per record. The results of queries are shown in an output form and users can double-click a line to display the input form for that record. ![](../assets/en/FormObjects/formOutput.png)
+- Formulario de salida: el *formulario de salida* o *formulario lista* muestra una lista de registros, con una sola línea por registro. Los resultados de las consultas se muestran en un formulario de salida y los usuarios pueden hacer doble clic en una línea para mostrar el formulario de entrada de ese registro. ![](../assets/en/FormObjects/formOutput.png)
 
-- Formulario de entrada - utilizado para la entrada de datos. It displays a single record per screen and typically has buttons for saving and canceling modifications to the record and for navigating from record to record (*i.e.*, First Record, Last Record, Previous Record, Next Record). ![](../assets/en/FormObjects/formInput.png)
+- Formulario de entrada - utilizado para la entrada de datos. Muestra un único registro por pantalla y suele tener botones para guardar y cancelar las modificaciones del registro y para navegar de registro en registro (*es decir, *, Primer registro, Último registro, Registro anterior, Registro siguiente). ![](../assets/en/FormObjects/formInput.png)
 
 
 Los tipos soportados dependen de la categoría de formulario:
@@ -72,7 +72,7 @@ Los tipos soportados dependen de la categoría de formulario:
 | Formulario detallado imprimible | detailPrinter    | Un informe impreso con una página por registro, como una factura | Formularios proyecto - Formularios tabla |
 | Formulario listado              | listScreen       | Un formulario para listar los registros en la pantalla           | Formularios tabla                        |
 | Formulario de lista imprimible  | listPrinter      | Un informe impreso que lista los registros                       | Formularios tabla                        |
-| Ninguno                         | *no destination* | A form with no specific feature                                  | Formularios proyecto - Formularios tabla |
+| Ninguno                         | *no destination* | Un formulario sin característica específica                      | Formularios proyecto - Formularios tabla |
 
 
 #### Gramática JSON
@@ -85,27 +85,27 @@ Los tipos soportados dependen de la categoría de formulario:
 
 ## Nombre del formulario heredado
 
-This property designates the [form to inherit](forms.md#inherited-forms) in the current form.
+Esta propiedad designa el [formulario a heredar](forms.md#inherited-forms) en el formulario actual.
 
-To inherit from a table form, set the table in the [Inherited Form Table](#inherited-form-table) property.
+Para heredar de un formulario tabla, defina la tabla en la propiedad [Tabla de formulario heredada](#inherited-form-table).
 
-To remove inheritance, select `\&#060;None&#062;` in the Property List (or " " in JSON).
+Para eliminar la herencia, seleccione `\&#060;None&#062;` en la lista de propiedades (o " " en JSON).
 
 
 #### Gramática JSON
 
-| Nombre        | Tipos de datos | Valores posibles                                                                                                   |
-| ------------- | -------------- | ------------------------------------------------------------------------------------------------------------------ |
-| inheritedForm | string         | Name of table or project form OR a POSIX path to a .json file describing the form OR an object describing the form |
+| Nombre        | Tipos de datos | Valores posibles                                                                                                                               |
+| ------------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| inheritedForm | string         | Nombre de la tabla o formulario proyecto O una ruta POSIX a un archivo .json que describa el formulario O un objeto que describa el formulario |
 
 ---
 
 
 ## Tablas de formulario heredadas
 
-This property specifies the database table from which to [inherit a form](forms.md#inherited-forms) in the current form.
+Esta propiedad especifica la tabla de la base de datos de la que [hereda un formulario](forms.md#inherited-forms) en el formulario actual.
 
-Set to `\&#060;None&#062;` in the Property List (or " " in JSON) to inherited from a project form.
+Define `\&#060;None&#062;` en la lista de propiedades (o " " en JSON) para heredar un formulario proyecto.
 
 
 
@@ -120,7 +120,7 @@ Set to `\&#060;None&#062;` in the Property List (or " " in JSON) to inherited fr
 
 ## Publicado como Subformulario
 
-Para que un formulario componente sea seleccionado como [subformulario](FormObjects/subform_overview.md) en una aplicación anfitriona, debe haber sido compartido explícitamente. When this property is selected, the form will be published in the host application.
+Para que un formulario componente sea seleccionado como [subformulario](FormObjects/subform_overview.md) en una aplicación anfitriona, debe haber sido compartido explícitamente. Cuando se selecciona esta propiedad, el formulario se publicará en la aplicación local.
 
 Sólo los proyectos formulario se pueden especificar como subformularios publicados.
 
@@ -164,8 +164,8 @@ El título de la ventana se utiliza cuando se abre el formulario mediante los co
 Puede utilizar referencias dinámicas para definir los nombres de ventana de los formularios, *es decir*:
 
 *   Una referencia estándar XLIFF almacenada en la carpeta Resources.
-*   A table or field label: The syntax to apply is `<?[TableNum]FieldNum>` or `<?[TableName]FieldName>`.
-*   A variable or a field: The syntax to apply is `\&#060;VariableName&#062;` or `&#060;[TableName]FieldName&#062;`. El valor actual del campo o de la variable se mostrará en el título de la ventana.
+*   Una etiqueta de tabla o de campo: la sintaxis a aplicar es `<?[TableNum]FieldNum>` o `<?[TableName]FieldName>`.
+*   Una variable o un campo: la sintaxis a aplicar es `\&#060;VariableName&#062;` o `&#060;[TableName]FieldName&#062;`. El valor actual del campo o de la variable se mostrará en el título de la ventana.
 
 > El número de caracteres para el título de una ventana está limitado a 31.
 
