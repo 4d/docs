@@ -101,13 +101,32 @@ title: 座標とサイズ
 
 ## 角の半径
 
-[四角](shapes_overview.md#四角) 型の図形について、角の丸みをピクセル単位で指定します。 デフォルトでは、四角の角の半径は 0ピクセルとなっています。 このプロパティを変更することによって独自の形の角の丸い四角を描画することができます:
+<details><summary>履歴</summary>
+
+| バージョン  | 内容                 |
+| ------ | ------------------ |
+| v19 R7 | テキストと入力オブジェクトをサポート |
+
+</details>
+
+フォームオブジェクトの角の丸みをピクセル単位で指定します。 デフォルトでは、角の半径は 0ピクセルとなっています。 このプロパティを変更することによって独自の形の角の丸いフォームオブジェクトを描画することができます:
 
 ![](../assets/en/FormObjects/shape_rectangle.png)
 
-最小値は 0 で、この場合には標準の (角の丸くない) 四角が描画されます。 最大値は四角のサイズに応じて変化し、動的に計算されます (ただし四角の短辺の半分を超えることはできません)。
+最小値は 0 で、この場合には標準の (角の丸くない) フォームオブジェクトが描画されます。 最大値は四角のサイズに応じて変化し、動的に計算されます (ただし四角の短辺の半分を超えることはできません)。
 
-このプロパティは、[OBJECT Get corner radius](https://doc.4d.com/4Dv18/4D/18/OBJECT-Get-corner-radius.301-4505428.ja.html) と [OBJECT SET CORNER RADIUS](https://doc.4d.com/4Dv18/4D/18/OBJECT-SET-CORNER-RADIUS.301-4505427.ja.html) コマンドを使用して設定することもできます。
+:::note
+
+[テキスト](text.md) および [入力](input_overview.md) フォームオブジェクトについて:
+
+- 角の半径プロパティは、[境界線スタイル](properties_BackgroundAndBorder.md#境界線スタイル) "なし"、"標準"、"ドット" の場合にのみ利用可能です。
+- 角の丸みはフォームオブジェクトの外側に絵描画されます (つまり、オブジェクトはより大きく表示されますが、[幅](properties_CoordinatesAndSizing.md#幅) と [高さ](properties_CoordinatesAndSizing.md#高さ) プロパティは変更されません)。
+
+![](../assets/en/FormObjects/radius-text3.png)
+
+:::
+
+このプロパティは、[OBJECT Get corner radius](https://doc.4d.com/4dv19/help/command/ja/page1323.html) と [OBJECT SET CORNER RADIUS](https://doc.4d.com/4dv19/help/command/ja/page1324.html) コマンドを使用して設定することもできます。
 
 #### JSON 文法
 
@@ -117,7 +136,7 @@ title: 座標とサイズ
 
 #### 対象オブジェクト
 
-[四角](shapes_overview.md#四角)
+[入力](input_overview.md) - [四角](shapes_overview.md#四角) - [テキストエリア](text.md)
 
 ---
 
