@@ -16,7 +16,7 @@ MSCウィンドウを開く方法は幾つかあります。 アクセスの方�
 
 次の 2つの場所から、MSC をメインテナンスモードで開くことができます:
 
-- **From the standard project opening dialog box** The standard Open dialog includes the **Maintenance Security Center** option from the menu associated with the **Open** button: ![](../assets/en/MSC/MSC_standardOpen.png)
+- **標準の開くダイアログボックス**<br/> 標準のプロジェクトを開くダイアログボックスには **開く** ボタンに関連付けられているメニューに **Maintenance & Security Center** オプションが含まれます: ![](../assets/en/MSC/MSC_standardOpen.png)
 - **Help/Maintenance Security Center** menu or **MSC** button in the tool bar (project not open)  
   ![](../assets/en/MSC/mscicon.png) When you call this function, a standard Open file dialog appears so that you can select the *.4DProject* or *.4dz* file of the to be examined. プロジェクトは開かれません。
 
@@ -34,5 +34,5 @@ MSCウィンドウを開く方法は幾つかあります。 アクセスの方�
 特定の MSC機能は、MSC が開かれたモードによっては利用できません:
 
 - バックアップ機能は、プロジェクトが開かれている状態でしか利用できません (MSC は標準モードで開かれている必要があります)。
-- データの圧縮、ロールバック、復元、修復、および暗号化の機能は、開いていないデータファイルでのみ使用できます (MSC はメインテナンスモードで開かれていなければなりません) 。 プロジェクトが標準モードで開かれている時にこれらの機能を試みた場合は、メインテナンスモードでアプリケーション再起動を促すダイアログボックスが表示されます。
+- データの圧縮、ロールバック、復元、修復、および暗号化の機能は、開いていないデータファイルでのみ使用できます (MSC はメンテナンスモードで開かれていなければなりません) 。 プロジェクトが標準モードで開かれている時にこれらの機能を試みた場合は、メンテナンスモードでアプリケーション再起動を促すダイアログボックスが表示されます。
 - 暗号化されたデータベースにおいては、暗号化されたデータまたは .journal ファイルへのアクセスには有効なデータキーが提供されている必要があります ([暗号化ページ](encrypt.md) 参照)。 提供されていない場合、暗号化されたデータは見ることができません。
