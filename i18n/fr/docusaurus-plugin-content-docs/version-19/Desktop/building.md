@@ -77,9 +77,9 @@ Cet onglet vous permet de générer un fichier de structure compilé standard et
 
 Génère une application contenant uniquement du code compilé.
 
-This feature creates a `.4dz`file within a `Compiled Database/\&#060;project name&#062;` folder. Par exemple, si vous avez nommé votre application «MyProject», 4D créera :
+This feature creates a `.4dz`file within a `Compiled Database/<project name>` folder. Par exemple, si vous avez nommé votre application «MyProject», 4D créera :
 
-*\<destination\>/Compiled Database/MyProject/MyProject.4dz*
+*<destination\>/Compiled Database/MyProject/MyProject.4dz*
 
 > Un fichier .4dz est essentiellement une version compressée du dossier du projet. Les fichiers .4dz peuvent être utilisés par 4D Server, 4D Volume Desktop (applications fusionnées) et 4D. La taille compacte et optimisée des fichiers .4dz facilite le déploiement des packages de projet.
 
@@ -95,7 +95,7 @@ Un composant est un fichier de structure 4D standard dans lequel des fonctionnal
 
 Si vous avez nommé votre application *Moncomposant*, 4D créera un dossier *Component* contenant le dossier *MyComponent.4dbase* :
 
-`\&#060;destination&#062;/Components/MyComponent.4dbase/MyComponent.4DZ`.
+`<destination>/Components/MyComponent.4dbase/MyComponent.4DZ`.
 
 Le dossier *MyComponent.4dbase* contient :
 
@@ -319,19 +319,19 @@ Les causes possibles de cette erreur sont multiples. Lorsque vous rencontrez ce 
 
 ### Fichiers générés
 
-A l’issue du processus de génération d’une application client-serveur, vous devez trouver dans le dossier de destination un nouveau dossier nommé **Client Server executable**. This folder contains two subfolders, `\&#060;ApplicationName&#062;Client` and `\&#060;ApplicationName&#062;Server`.
+A l’issue du processus de génération d’une application client-serveur, vous devez trouver dans le dossier de destination un nouveau dossier nommé **Client Server executable**. This folder contains two subfolders, `<ApplicationName>Client` and `<ApplicationName>Server`.
 > Ces dossiers ne sont pas générés si une erreur est survenue. Dans ce cas, ouvrez le [fichier d’historique](#log-file) pour connaître la cause de l’erreur.
 
-The `\&#060;ApplicationName&#062;Client` folder contains the client portion of the application corresponding to the execution platform of the application builder. Ce dossier doit être installé sur chaque poste client. The `\&#060;ApplicationName&#062;Server` folder contains the server portion of the application.
+The `<ApplicationName>Client` folder contains the client portion of the application corresponding to the execution platform of the application builder. Ce dossier doit être installé sur chaque poste client. The `<ApplicationName>Server` folder contains the server portion of the application.
 
 Le contenu de ces dossiers diffère en fonction de la plate-forme courante :
 
-* *Windows* - Each folder contains the application executable file, named `\&#060;ApplicationName&#062;Client.exe` for the client part and `\&#060;ApplicationName&#062;Server.exe` for the server part as well as the corresponding .rsr files. Les dossiers contiennent également divers fichiers et dossiers nécessaires au fonctionnement des applications et les éléments personnalisés éventuellement placés dans les dossiers 4D Volume Desktop et 4D Server d’origine.
-* *macOS* - Each folder contains only the application package, named `\&#060;ApplicationName&#062; Client` for the client part and `\&#060;ApplicationName&#062; Server` for the server part. Chaque progiciel contient tous les éléments nécessaires à son fonctionnement. Sous macOS, un progiciel est lancé via un double-clic.
+* *Windows* - Each folder contains the application executable file, named `<ApplicationName>Client.exe` for the client part and `<ApplicationName>Server.exe` for the server part as well as the corresponding .rsr files. Les dossiers contiennent également divers fichiers et dossiers nécessaires au fonctionnement des applications et les éléments personnalisés éventuellement placés dans les dossiers 4D Volume Desktop et 4D Server d’origine.
+* *macOS* - Each folder contains only the application package, named `<ApplicationName> Client` for the client part and `<ApplicationName> Server` for the server part. Chaque progiciel contient tous les éléments nécessaires à son fonctionnement. Sous macOS, un progiciel est lancé via un double-clic.
 
  > Les progiciels macOS générés contiennent les mêmes éléments que les sous-dossiers Windows. In order to modify it, you must first display its contents (**Control+click** on the icon).
 
-If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the `\&#060;ApplicationName&#062;Server` folder/package. Ce sous-dossier contient l’application cliente au format macOS et/ou Windows sous forme de fichier compressé. Ce fichier est utilisé lors de la mise à jour automatique des applications clientes.
+If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the `<ApplicationName>Server` folder/package. Ce sous-dossier contient l’application cliente au format macOS et/ou Windows sous forme de fichier compressé. Ce fichier est utilisé lors de la mise à jour automatique des applications clientes.
 
 #### Emplacements des fichiers Web
 
@@ -343,12 +343,12 @@ Si la partie serveur et/ou la partie cliente de votre application exécutable es
 Des éléments doivent être installés :
 
 * **Sous Windows**
-  * **Server application** - in the `Client Server executable\ \&#060;ApplicationName&#062;Server\Server Database` subfolder.
-  * **Client application** - in the `Client Server executable\ \&#060;ApplicationName&#062;Client` subfolder.
+  * **Server application** - in the `Client Server executable\&#060;ApplicationName&#062;Server\Server Database` subfolder.
+  * **Client application** - in the `Client Server executable\&#060;ApplicationName&#062;Client` subfolder.
 
 * **sous macOS**
-  * **Server application** - next to the `\&#060;ApplicationName&#062;Server`software package.
-  * **Client application** - next to the `\&#060;ApplicationName&#062;Client`software package.
+  * **Server application** - next to the `<ApplicationName>Server`software package.
+  * **Client application** - next to the `<ApplicationName>Client`software package.
 
 ### Intégrer une structure compilée dans la partie cliente
 
