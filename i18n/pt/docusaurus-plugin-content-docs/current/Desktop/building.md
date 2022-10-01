@@ -75,9 +75,9 @@ This tab allows you to build a standard compiled structure file and/or a compile
 
 Builds an application containing only compiled code.
 
-This feature creates a *.4dz* file within a `Compiled Database/\&#060;project name&#062;` folder. For example, if you have named your application "MyProject", 4D will create:
+This feature creates a *.4dz* file within a `Compiled Database/<project name>` folder. For example, if you have named your application "MyProject", 4D will create:
 
-`\&#060;destination\&#062;/Compiled Database/MyProject/MyProject.4dz`
+`<destination>/Compiled Database/MyProject/MyProject.4dz`
 
 A .4dz file is essentially a zipped (packed) version of the project folder. A .4dz file is essentially a zipped (packed) version of the project folder. The compact and optimized size of .4dz files makes project packages easy to deploy.
 
@@ -95,11 +95,12 @@ A component is a standard 4D project in which specific functionalities have been
 
 If you have named your application, *MyComponent*, 4D will create a *Components* folder containing *MyComponent.4dbase* folder:
 
-`\&#060;destination&#062;/Components/MyComponent.4dbase/MyComponent.4DZ`.
+`<destination>/Components/MyComponent.4dbase/MyComponent.4DZ`.
 
 The *MyComponent.4dbase* folder contains:
 
 * *MyComponent.4DZ* file
+
 * A *Resources* folder - any associated Resources are automatically copied into this folder. Any other components and/or plugins folders are not copied (a component cannot use plug-ins or other components).
 
 ## Application page
@@ -350,19 +351,19 @@ There are many possible causes for this error. When you get this message, it is 
 
 ### Generated files
 
-Once a client/server application is built, you will find a new folder in the destination folder named **Client Server executable**. This folder contains two subfolders, `\&#060;ApplicationName&#062;Client` and `\&#060;ApplicationName&#062;Server`.
+Once a client/server application is built, you will find a new folder in the destination folder named **Client Server executable**. This folder contains two subfolders, `<ApplicationName>Client` and `<ApplicationName>Server`.
 > These folders are not generated if an error occurs. In this case, open the [log file](#log-file) in order to find out the cause of the error.
 
-The `\&#060;ApplicationName&#062;Client` folder contains the client portion of the application corresponding to the execution platform of the application builder. This folder must be installed on each client machine. The `\&#060;ApplicationName&#062;Server` folder contains the server portion of the application.
+The `<ApplicationName>Client` folder contains the client portion of the application corresponding to the execution platform of the application builder. This folder must be installed on each client machine. The `<ApplicationName>Server` folder contains the server portion of the application.
 
 The contents of these folders vary depending on the current platform:
 
-* *Windows* - Each folder contains the application executable file, named `\&#060;ApplicationName&#062;Client.exe` for the client part and `\&#060;ApplicationName&#062;Server.exe` for the server part as well as the corresponding .rsr files. The folders also contain various files and folders necessary for the applications to work and customized items that may be in the original 4D Volume Desktop and 4D Server folders.
-* *macOS* - Each folder contains only the application package, named `\&#060;ApplicationName&#062; Client` for the client part and `\&#060;ApplicationName&#062; Server` for the server part. Each package contains all the necessary items for the application to work. Each package contains all the necessary items for the application to work. Under macOS, launch a package by double-clicking it.
+* *Windows* - Each folder contains the application executable file, named `<ApplicationName>Client.exe` for the client part and `<ApplicationName>Server.exe` for the server part as well as the corresponding .rsr files. The folders also contain various files and folders necessary for the applications to work and customized items that may be in the original 4D Volume Desktop and 4D Server folders.
+* *macOS* - Each folder contains only the application package, named `<ApplicationName> Client` for the client part and `<ApplicationName> Server` for the server part. Each package contains all the necessary items for the application to work. Under macOS, launch a package by double-clicking it.
 
  > The macOS packages built contain the same items as the Windows subfolders. In order to modify it, you must first display its contents (**Control+click** on the icon).
 
-If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the `\&#060;ApplicationName&#062;Server` folder/package. This subfolder contains the client application in macOS and/or Windows format as a compressed file. This subfolder contains the client application in macOS and/or Windows format as a compressed file.
+If you checked the “Allow automatic update of client application” option, an additional subfolder called *Upgrade4DClient* is added in the `<ApplicationName>Server` folder/package. This subfolder contains the client application in macOS and/or Windows format as a compressed file. This subfolder contains the client application in macOS and/or Windows format as a compressed file.
 
 #### Location of Web files
 
@@ -374,12 +375,12 @@ If the server and/or client part of your double-clickable application is used as
 Items must be installed:
 
 * **on Windows**
-  * **Server application** - in the `Client Server executable\/\&#060;ApplicationName&#062;Server/Server Database` subfolder.
-  * **Client application** - in the `Client Server executable\/\&#060;ApplicationName&#062;Client` subfolder.
+  * **Server application** - in the `Client Server executable/<ApplicationName>Server/Server Database` subfolder.
+  * **Client application** - in the `Client Server executable/<ApplicationName>Client` subfolder.
 
 * **no macOS**
-  * **Server application** - next to the `\&#060;ApplicationName&#062;Server` software package.
-  * **Client application** - next to the `\&#060;ApplicationName&#062;Client` software package.
+  * **Server application** - next to the `<ApplicationName>Server` software package.
+  * **Client application** - next to the `<ApplicationName>Client` software package.
 
 ### Embedding a single-user client application
 
