@@ -1,6 +1,6 @@
 ---
 id: onMouseLeave
-title: Sur fin survol
+title: On Mouse Leave
 ---
 
 | Code | Peut être appelé par                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Définition                                                  |
@@ -23,5 +23,5 @@ Si l'événement `On Mouse Leave` a été coché pour le formulaire, il est gén
 
 ### Voir également
 
-- [`Sur survol`](onMouseMove.md)
-- [`Sur fin survol`](onMouseLeave.md)
+- [`On Mouse Move`](onMouseMove.md)
+- [`On Mouse Leave`](onMouseLeave.md)
