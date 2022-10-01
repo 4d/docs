@@ -139,7 +139,7 @@ Des événements formulaire spécifiques sont destinés à la gestion programmé
 
 En outre, les zones Web prennent en charge les événements formulaire génériques suivants :
 
-- `Sur chargement`
+- `On Load`
 - `On Unload`
 - `On Getting Focus`
 - `On Losing Focus`
