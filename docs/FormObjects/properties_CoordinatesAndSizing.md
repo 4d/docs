@@ -125,7 +125,7 @@ With [text areas](text.md) and [inputs](input_overview.md):
 - the corner radius property is only available with "none", "solid", or "dotted" [border line styles](properties_BackgroundAndBorder.md#border-line-style),
 - the corner roundness is drawn outside the area of the object (the object appears larger in the form but its [width](properties_CoordinatesAndSizing.md#width) and [height](properties_CoordinatesAndSizing.md#height) are not extended).
 
-![](../assets/en/FormObjects/radius-text3.png)
+![](../assets/en/FormObjects/radius-text.png)
 
 :::
 
