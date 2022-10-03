@@ -122,7 +122,7 @@ Con [áreas de texto](text.md) y [entradas](input_overview.md):
 - la propiedad de radio de la esquina sólo está disponible con los [estilos de línea de borde](properties_BackgroundAndBorder.md#border-line-style) "ninguno", "sólido" o "punteado",
 - la redondez de la esquina se dibuja fuera del área del objeto (el objeto aparece más grande en el formulario pero su [ancho](properties_CoordinatesAndSizing.md#width) y [alto](properties_CoordinatesAndSizing.md#height) no se amplían).
 
-![](../assets/en/FormObjects/radius-text3.png)
+![](../assets/en/FormObjects/radius-text.png)
 
 :::
 
