@@ -2491,6 +2491,7 @@ $styles:=VP Get stylesheets("ViewProArea")
 
 Dans ce cas, la feuille courante utilise deux objets style :
 
+
 ```4d
 [
    {
@@ -4392,6 +4393,7 @@ The `VP SET BOOLEAN VALUE` command <!-- REF #_method_.VP SET BOOLEAN VALUE.Summa
 
 Dans *rangeObj*, passez la plage de cellule(s) (créée par exemple avec [`VP Cell`](#vp-cell) ou [`VP Column`](#vp-column)) dont vous souhaitez indiquer la valeur. Si *rangeObj* comprend plusieurs cellules, la valeur indiquée sera répétée dans chaque cellule.
 
+
 Le paramètre *boolValue* vous permet de passer la valeur booléenne (**True** ou **False**) qui sera assignée à *rangeObj*.
 
 #### Exemple
@@ -4632,12 +4634,9 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 <!-- REF #_method_.VP SET CURRENT SHEET.Params -->
 
-| Paramètres | Type    |    | Description                                               |
-| ---------- | ------- | -- | --------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nom d'objet formulaire zone 4D View Pro                   |
-| sheet      | Integer | <- | Index of the new current sheet|<!-- END REF -->
+|Parameter|Type| |Description|
 
-|
+|---|---|---|---| |vpAreaName| Text|->|4D View Pro area form object name| |sheet|Integer|<-|Index of the new current sheet|<!-- END REF -->
 
 #### Description
 
@@ -5795,7 +5794,7 @@ $options.tableColumns.push(New object("name"; "Salary"; "dataField"; "salary"))
 VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 2; 3); "PeopleTable"; "col"; $options)
 ```
 
-![](../assets/en/ViewPro/table-insert1.png)
+![](../assets/en/ViewPro/table-inserta.png)
 
 Then you want to insert a column with data from the data context and hide some filter buttons:
 
@@ -5820,7 +5819,7 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 
 ```
 
-![](../assets/en/ViewPro/table-insert2.png)
+![](../assets/en/ViewPro/table-insertb.png)
 
 
 #### Voir également
