@@ -2492,6 +2492,7 @@ $styles:=VP Get stylesheets("ViewProArea")
 
 カレントシートが 2つのスタイルオブジェクトを使用していた場合:
 
+
 ```4d
 [
    {
@@ -4394,6 +4395,7 @@ VP SET BINDING PATH(VP Cell("ViewProArea"; 1; 0); "lastName")
 
 *rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](#vp-cell) あるいは [`VP Column`](#vp-column) で作成されたレンジ) を渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
 
+
 *boolValue* 引数には、*rangeObj* のセルレンジに割り当てるブール値 (**true** あるいは **false**) を渡します。
 
 #### 例題
@@ -4634,12 +4636,9 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 <!-- REF #_method_.VP SET CURRENT SHEET.Params -->
 
-| 引数         | タイプ     |    | 説明                                           |
-| ---------- | ------- | -- | -------------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                      |
-| sheet      | Integer | <- | 新しいカレントシートのインデックス|<!-- END REF -->
+|Parameter|Type| |Description|
 
-|
+|---|---|---|---| |vpAreaName| Text|->|4D View Pro area form object name| |sheet|Integer|<-|Index of the new current sheet|<!-- END REF -->
 
 #### 説明
 
@@ -5797,7 +5796,7 @@ $options.tableColumns.push(New object("name"; "Salary"; "dataField"; "salary"))
 VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 2; 3); "PeopleTable"; "col"; $options)
 ```
 
-![](../assets/en/ViewPro/table-insert1.png)
+![](../assets/en/ViewPro/table-inserta.png)
 
 Then you want to insert a column with data from the data context and hide some filter buttons:
 
@@ -5822,7 +5821,7 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 
 ```
 
-![](../assets/en/ViewPro/table-insert2.png)
+![](../assets/en/ViewPro/table-insertb.png)
 
 
 #### 参照
