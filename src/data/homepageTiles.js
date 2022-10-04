@@ -122,23 +122,26 @@ const Sections = [
         <Link to="ViewPro/getting-started">
           <Translate>4D View Pro</Translate>
         </Link>
-        <Link to="https://github.com/4d/4D-Mobile-App-Server">
+         <Link to="https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Write-Pro-Reference.100-5903884.en.html">
+          <Translate>4D Write Pro</Translate>
+        </Link>
+        <Link to="https://github.com/4d/4D-WritePro-Interface">
+          <Translate>4D Write Pro Interface</Translate>
+        </Link>
+       <Link to="https://github.com/4d/4D-Mobile-App-Server">
           <Translate>4D Mobile App Server</Translate>
         </Link>
         <Link to="https://github.com/4d/4D-NetKit">
           <Translate>4D NetKit</Translate>
         </Link>
-        <Link to="https://doc.4d.com/4Dv19/4D/19/4D-Progress.100-5461799.en.html">
+        <Link to="https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Progress.100-5966593.en.html">
           <Translate>4D Progress</Translate>
         </Link>
-        <Link to="https://doc.4d.com/4Dv19/4D/19/4D-SVG-Component.300-5462064.en.html">
+        <Link to="https://doc.4d.com/4Dv19R6/4D/19-R6/4D-SVG-Component.100-5967468.en.html">
           <Translate>4D SVG</Translate>
         </Link>
-        <Link to="https://doc.4d.com/4Dv19/4D/19/4D-Widgets.100-5462909.en.html">
+        <Link to="https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Widgets.100-5968122.en.html">
           <Translate>4D Widgets</Translate>
-        </Link>
-        <Link to="https://github.com/4d/4D-WritePro-Interface">
-          <Translate>4D Write Pro Interface</Translate>
         </Link>
         <Link to="Extensions/develop-components">
           <Translate>Developing Components</Translate>

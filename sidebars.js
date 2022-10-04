@@ -278,6 +278,16 @@ module.exports =
 							},
 						{
 						  type: 'link',
+						  label: '4D Write Pro', // The link label
+						  href: 'https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Write-Pro-Reference.100-5903884.en.html', 
+						},					
+						{
+						  type: 'link',
+						  label: '4D Write Pro Interface', // The link label
+						  href: 'https://github.com/4d/4D-WritePro-Interface', 
+						},					
+						{
+						  type: 'link',
 						  label: '4D Mobile App Server', // The link label
 						  href: 'https://github.com/4d-go-mobile/4D-Mobile-App-Server', 
 						},
@@ -289,23 +299,18 @@ module.exports =
 						{
 						  type: 'link',
 						  label: '4D Progress', // The link label
-						  href: 'https://doc.4d.com/4Dv19/4D/19/4D-Progress.100-5461799.en.html', 
+						  href: 'https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Progress.100-5966593.en.html', 
 						},
 						{
 						  type: 'link',
 						  label: '4D SVG', // The link label
-						  href: 'https://doc.4d.com/4Dv19/4D/19/4D-SVG-Component.300-5462064.en.html', 
+						  href: 'https://doc.4d.com/4Dv19R6/4D/19-R6/4D-SVG-Component.100-5967468.en.html', 
 						},
 						{
 						  type: 'link',
 						  label: '4D Widgets', // The link label
-						  href: 'https://doc.4d.com/4Dv19/4D/19/4D-Widgets.100-5462909.en.html', 
+						  href: 'https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Widgets.100-5968122.en.html', 
 						},
-						{
-						  type: 'link',
-						  label: '4D Write Pro Interface', // The link label
-						  href: 'https://github.com/4d/4D-WritePro-Interface', 
-						},					
 						"Extensions/develop-components",
 						"Extensions/develop-plug-ins",
 
