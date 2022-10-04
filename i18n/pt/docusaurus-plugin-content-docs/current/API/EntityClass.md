@@ -859,7 +859,7 @@ O valor resultante é incluído entre 0 e o comprimento da selecção da entidad
 
 #### Descrição
 
-The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True if the entity to which it is applied has just been created and has not yet been saved in the datastore<!-- END REF -->. .
+A função `.isNew()` <!-- REF #EntityClass.isNew().Summary --> returns True if the entity to which it is applied has just been created and has not yet been saved in the datastore<!-- END REF -->. .
 
 #### Exemplo
 
@@ -899,7 +899,7 @@ The `.isNew()` function <!-- REF #EntityClass.isNew().Summary --> returns True i
 
 #### Descrição
 
-The `.last()` function <!-- REF #EntityClass.last().Summary -->returns a reference to the entity in last position of the entity selection which the entity belongs to<!-- END REF -->.
+A função `.last()` <!-- REF #EntityClass.last().Summary -->returns a reference to the entity in last position of the entity selection which the entity belongs to<!-- END REF -->.
 
 Se a entidade não pertence a nenhuma seleção de entidade existente (ex: [.getSelection( )](#getselection) retorna Null), a função retorna um valor nulo.
 
@@ -940,7 +940,7 @@ Se a entidade não pertence a nenhuma seleção de entidade existente (ex: [.get
 
 #### Descrição
 
-The `.lock()` function <!-- REF #EntityClass.lock().Summary -->puts a pessimistic lock on the record referenced by the entity<!-- END REF -->. O bloqueio de [é definido](ORDA/entities.md#entity-locking) para um registro e todas as referências da entidade no processo atual.
+A função `.lock()` <!-- REF #EntityClass.lock().Summary -->puts a pessimistic lock on the record referenced by the entity<!-- END REF -->. O bloqueio de [é definido](ORDA/entities.md#entity-locking) para um registro e todas as referências da entidade no processo atual.
 
 Outros processos verão este registro como bloqueado (o resultado. `a propriedade` uccess conterá Falso se eles tentarem bloquear a mesma entidade usando esta função). Só as funções executadas na sessão de "bloqueio" são permitidas para editar e guardar os atributos da entidade. A entidade pode ser carregada como apenas leitura por outras sessões, mas não serão capazes de introduzir e guardar valores.
 
@@ -1057,7 +1057,7 @@ Exemplo com `dk reload se o selo mudou a opção`:
 
 #### Descrição
 
-The `.next()` function <!-- REF #EntityClass.next().Summary -->returns a reference to the next entity in the entity selection which the entity belongs to<!-- END REF -->.
+A função `.next()` <!-- REF #EntityClass.next().Summary -->returns a reference to the next entity in the entity selection which the entity belongs to<!-- END REF -->.
 
 Se a entidade não pertencer a nenhuma seleção de entidade existente (ex: [.getSelection()](#getselection) retorna Null), a função retorna um valor nulo.
 
@@ -1100,7 +1100,7 @@ Se não houver entidade seguinte válida na selecção da entidade (ou seja, se 
 
 #### Descrição
 
-The `.previous()` function <!-- REF #EntityClass.previous().Summary --> returns a reference to the previous entity in the entity selection which the entity belongs to<!-- END REF -->.
+A função `.previous()` <!-- REF #EntityClass.previous().Summary --> returns a reference to the previous entity in the entity selection which the entity belongs to<!-- END REF -->.
 
 Se a entidade não pertencer a nenhuma seleção de entidade existente (ex: [.getSelection()](#getselection) retorna Null), a função retorna um valor nulo.
 
@@ -1142,7 +1142,7 @@ Se não houver nenhuma entidade anterior válida na seleção da entidade (ou se
 
 #### Descrição
 
-The `.reload()` function <!-- REF #EntityClass.reload().Summary -->reloads the content of the entity in memory<!-- END REF -->, according to information stored in the table related to the dataclass in the datastore. A recarga só é feita se a entidade ainda existir com a mesma chave primária.
+A função `.reload()` <!-- REF #EntityClass.reload().Summary -->reloads the content of the entity in memory<!-- END REF -->, according to information stored in the table related to the dataclass in the datastore. A recarga só é feita se a entidade ainda existir com a mesma chave primária.
 
 **Resultados**
 
@@ -1207,7 +1207,7 @@ O objeto retornado por `.reload( )` contém as seguintes propriedades:
 
 #### Descrição
 
-The `.save()` function <!-- REF #EntityClass.save().Summary -->saves the changes made to the entity<!-- END REF --> in the table related to its dataClass. You must call this method after creating or modifying an entity if you want to save the changes made to it.
+A função `.save()` <!-- REF #EntityClass.save().Summary -->saves the changes made to the entity<!-- END REF --> in the table related to its dataClass. You must call this method after creating or modifying an entity if you want to save the changes made to it.
 
 The save operation is executed only if at least one entity attribute has been "touched" (see the [`.touched()`](#touched) and [`.touchedAttributes()`](#touchedattributes) functions). Otherwise, the function does nothing (the trigger is not called).
 
@@ -1344,7 +1344,7 @@ Updating an entity with `dk auto merge` option:
 
 #### Descrição
 
-The `.toObject()` function <!-- REF #EntityClass.toObject().Summary -->returns an object which has been built from the entity<!-- END REF -->. Summary -->returns the names of the attributes that have been modified since the entity was loaded into memory<!-- END REF -->.
+A função `.toObject()` <!-- REF #EntityClass.toObject().Summary -->returns an object which has been built from the entity<!-- END REF -->. Summary -->returns the names of the attributes that have been modified since the entity was loaded into memory<!-- END REF -->.
 
 If no filter is specified, or if the *filterString* parameter contains an empty string or "*", the returned object will contain:
 
@@ -1396,7 +1396,7 @@ Retorna:
     "employerID": 20,
     "photo": "[object Picture]",
     "extra": null,
-    "employer": { // relatedEntity extracted with simple form
+    "employer": { // relatedEntity extraída com forma simples
         "__KEY": 20
     },
     "manager": {
@@ -1670,7 +1670,7 @@ In this example, we check to see if it is necessary to save the entity:
 
 #### Descrição
 
-The `.touchedAttributes()` function <!-- REF #EntityClass.touchedAttributes().Summary -->returns the names of the attributes that have been modified since the entity was loaded into memory<!-- END REF -->.
+A função `.touchedAttributes()` <!-- REF #EntityClass.touchedAttributes().Summary -->returns the names of the attributes that have been modified since the entity was loaded into memory<!-- END REF -->.
 
 This applies for attributes of the [kind](DataClassAttributeClass.md#kind) `storage` or `relatedEntity`.
 
@@ -1744,7 +1744,7 @@ Nesse modo:
 
 #### Descrição
 
-The `.unlock()` function <!-- REF #EntityClass.unlock().Summary -->removes the pessimistic lock on the record matching the entity<!-- END REF --> in the datastore and table related to its dataclass.
+A função `.unlock()` <!-- REF #EntityClass.unlock().Summary -->removes the pessimistic lock on the record matching the entity<!-- END REF --> in the datastore and table related to its dataclass.
 
 > For more information, please refer to [Entity locking](ORDA/entities.md#entity-locking) section.
 
