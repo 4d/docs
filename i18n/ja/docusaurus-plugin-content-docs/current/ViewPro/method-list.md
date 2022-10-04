@@ -5044,9 +5044,9 @@ VP SET DEFAULT STYLE("myDoc";$style)
 
 #### 説明
 
-The `VP SET FIELD` command <!-- REF #_method_.VP SET FIELD.Summary -->assigns a 4D database virtual field to a designated cell range<!-- END REF -->。
+`VP SET FIELD` コマンドは、 <!-- REF #_method_.VP SET FIELD.Summary -->指定されたセルレンジに、4Dデータベースの仮想フィールドを割り当てます<!-- END REF -->。
 
-*rangeObj* には、値を割り当てたいセルのレンジを渡します。 In *rangeObj*, pass a range of the cell(s) whose value you want to specify.
+*rangeObj* には、値を割り当てたいセルのレンジを渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定されたフィールドはそれぞれのセルに対して繰り返し割り当てられます。
 
 *field* 引数は、*rangeObj* のレンジに対して割り当てられる 4Dデータベースの [仮想フィールド](formulas.md#仮想ストラクチャーを使ったフィールド参照) を指定します。 フォーミュラバーには、*field* の仮想ストラクチャー名が表示されます。 *rangeObj* に含まれるセルに既存のコンテンツがあった場合、そのコンテンツは *field* で上書きされます。
 
@@ -5079,9 +5079,9 @@ VP SET FIELD(VP Cell("ViewProArea";5;2);->[TableName]Field)
 
 #### 説明
 
-The `VP SET FORMULA` command <!-- REF #_method_.VP SET FORMULA.Summary -->assigns a specified formula or 4D method to a designated cell range<!-- END REF -->。
+`VP SET FORMULA` コマンドは、 <!-- REF #_method_.VP SET FORMULA.Summary -->指定されたセルレンジにフォーミュラまたは 4Dメソッドを割り当てます<!-- END REF -->。
 
-*rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](#vp-cell) あるいは [`VP Column`](#vp-column) で作成されたレンジ) を渡します。 In *rangeObj*, pass a range of the cell(s) (created for example with [`VP Cell`](#vp-cell) or [`VP Column`](#vp-column)) whose value you want to specify.
+*rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](#vp-cell) あるいは [`VP Column`](#vp-column) で作成されたレンジ) を渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定されたフォーミュラはそれぞれのセルに対して繰り返し割り当てられます。
 
 *formula* 引数に、*rangeObj* 引数のレンジに割り当てたいフォーミュラまたは 4Dメソッド名を指定します。
 
@@ -5131,7 +5131,7 @@ VP SET FORMULA($range;"SUM(A1,B7,C11)") // 引数の区切り文字に ","
 
 #### 説明
 
-The `VP SET FORMULAS` command <!-- REF #_method_.VP SET FORMULAS.Summary -->assigns a collection of formulas starting at the specified cell range<!-- END REF -->。
+`VP SET FORMULAS` コマンドは、 <!-- REF #_method_.VP SET FORMULAS.Summary -->指定のセルレンジから開始してフォーミュラのコレクションを割り当てていきます<!-- END REF -->。
 
 *rangeObj* には、フォーミュラを割り当てたいセルのレンジ ([VP Cell](#vp-cell) で作成されたレンジ) を渡します。 *rangeObj* のレンジが複数レンジを指定している場合、最初のレンジのみが使用されます。
 
@@ -5194,7 +5194,7 @@ VP SET FORMULAS(VP Cell("ViewProArea";0;0);$formulas) // セルに割り当て�
 
 #### 説明
 
-The `VP SET FROZEN PANES` command <!-- REF #_method_.VP SET FROZEN PANES.Summary -->sets the frozen status of the columns and rows in the *paneObj* so they are always displayed in the *vpAreaName*<!-- END REF -->。 固定化されたカラムと行は固定された位置に表示され続け、ドキュメントの他の部分がスクロールされても移動しません。 Frozen columns and rows are fixed in place and do not move when the rest of the document is scrolled. A solid line is displayed to indicate that columns and rows are frozen.
+`VP SET FROZEN PANES` コマンドは、 <!-- REF #_method_.VP SET FROZEN PANES.Summary -->*vpAreaName* 引数で指定した View Pro エリア内の、*paneObj* 引数のカラムと行の固定化ステータスを設定します<!-- END REF -->。 固定化されたカラムと行は固定された位置に表示され続け、ドキュメントの他の部分がスクロールされても移動しません。 そのカラムと行が固定化されていることを示すために、太い実線が表示されます。 実線の位置は、固定化されたカラムまたは行がシートのどこにあるかによって変わります:
 
 * **左または右にあるカラム**: シートの左側にあるカラムについては、実線は最後に固定化されたカラム (最も右のカラム) の右側に表示されます。 シートの右側に表示されているカラムについては、実線は最初に固定化されたカラム (最も左のカラム) の左側に表示されます。
 * **上または下にある行**: シートの上部にある行については、実線は最後に固定化された行 (最も下の行) の下側に表示されます。 シートの下部に表示されている行については、実線は最初に固定化された行 (最も上の行) の上側に表示されます。
@@ -5207,7 +5207,7 @@ The `VP SET FROZEN PANES` command <!-- REF #_method_.VP SET FROZEN PANES.Summary
 | ----- | --- | -- |
 |       |     |    |
 
-|columnCount | Integer | The number of frozen columns on the left of the sheet| |trailingColumnCount |Integer | The number of frozen columns on the right of the sheet |rowCount | Integer |  The number of frozen rows on the top of the sheet | |trailingRowCount | Integer |  The number of frozen rows on the bottom of the sheet|
+|columnCount | Integer | シートの左側にある固定化されたカラム| |trailingColumnCount |Integer | シートの右側にある固定化されたカラム| |rowCount | Integer |  シートの上側にある固定化された行 | |trailingRowCount | Integer |  シートの下側にある固定化された行|
 
 任意の *sheet* 引数として、シートのインデックス (0 起点) を渡すことで、定義されるレンジが属するスプレッドシートを指定することができます。 省略された場合はデフォルトでカレントスプレッドシートが使用されます。 以下の定数を使用することでカレントのスプレッドシートを明示的に選択することができます:
 
@@ -5251,7 +5251,7 @@ VP SET FROZEN PANES("ViewProArea";$panes)
 
 #### 説明
 
-The `VP SET NUM VALUE` command <!-- REF #_method_.VP SET NUM VALUE.Summary -->assigns a specified numeric value to a designated cell range<!-- END REF -->。
+`VP SET NUM VALUE` コマンドは、 <!-- REF #_method_.VP SET NUM VALUE.Summary -->指定のセルレンジに数値を割り当てます<!-- END REF -->。
 
 *rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](#vp-cell) あるいは [`VP Column`](#vp-column) で作成されたレンジ) を渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
 
@@ -5290,7 +5290,7 @@ VP SET NUM VALUE(VP Cell("ViewProArea";3;2);12.356;"_($* #,##0.00_)")
 
 #### 説明
 
-The `VP SET PRINT INFO` command <!-- REF #_method_.VP SET PRINT INFO.Summary -->defines the attributes to use when printing the *vpAreaName*<!-- END REF -->。
+`VP SET PRINT INFO` コマンドは、 <!-- REF #_method_.VP SET PRINT INFO.Summary -->*vpAreaName* 引数で指定したエリアを印刷する際に使用する属性を定義します<!-- END REF -->。
 
 *vpAreaName* には、印刷する 4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
@@ -5355,18 +5355,18 @@ VP EXPORT DOCUMENT("ViewProArea";"Sales2018.pdf";New object("formula";Formula(AL
 
 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Params -->
 
-| 引数          | タイプ    |    | 説明                                                          |
-| ----------- | ------ | -- | ----------------------------------------------------------- |
-| rangeObj    | Object | -> | 行レンジ                                                        |
-| propertyObj | Object | -> | Object containing row properties|<!-- END REF -->
+| 引数          | タイプ    |    | 説明                                            |
+| ----------- | ------ | -- | --------------------------------------------- |
+| rangeObj    | Object | -> | 行レンジ                                          |
+| propertyObj | Object | -> | 行のプロパティを格納したオブジェクト|<!-- END REF -->
 
 |
 
 #### 説明
 
-The `VP SET ROW ATTRIBUTES` command <!-- REF #_method_.VP SET ROW ATTRIBUTES.Summary -->applies the attributes defined in the *propertyObj* to the rows in the *rangeObj*<!-- END REF -->。
+`VP SET ROW ATTRIBUTES` コマンドは、 <!-- REF #_method_.VP SET ROW ATTRIBUTES.Summary -->*rangeObj* 引数で指定した行に対して *propertyObj* 引数で定義されている属性を適用します<!-- END REF -->。
 
-*rangeObj* 引数には、レンジオブジェクトを渡します。 レンジにカラムと行の両方が格納されている場合、属性はカラムに対してのみ適用されます。
+*rangeObj* 引数には、レンジオブジェクトを渡します。 レンジにカラムと行の両方が格納されている場合、属性は行に対してのみ適用されます。
 
 *propertyObj* 引数は、*rangeObj* 引数のレンジ内の行に対して適用する属性を指定します。 指定できる属性は以下の通りです:
 
@@ -5414,7 +5414,7 @@ VP SET ROW ATTRIBUTES($row;$properties)
 
 #### 説明
 
-The `VP SET ROW COUNT` command <!-- REF #_method_.VP SET ROW COUNT.Summary -->defines the total number of rows in *vpAreaName*<!-- END REF -->。
+`VP SET ROW COUNT` コマンドは、 <!-- REF #_method_.VP SET ROW COUNT.Summary -->*vpAreaName* 引数内にある行の総数を定義します<!-- END REF -->。
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
@@ -5453,7 +5453,7 @@ VP SET ROW COUNT("ViewProArea";5)
 
 #### 説明
 
-The `VP SET SELECTION` command <!-- REF #_method_.VP SET SELECTION.Summary -->defines the specified cells as the selection and the first cell as the active cell<!-- END REF -->。
+`VP SET SELECTION` コマンドは、 <!-- REF #_method_.VP SET SELECTION.Summary -->指定のセルレンジを選択し、その先頭セルをアクティブセルに設定します<!-- END REF -->。
 
 *rangeObj* には、カレントセレクションとして定義するセルのレンジオブジェクトを渡します。
 
@@ -5486,7 +5486,7 @@ VP SET SELECTION($currentSelection)
 
 #### 説明
 
-The `VP SET SHEET COUNT` command <!-- REF #_method_.VP SET SHEET COUNT.Summary -->sets the number of sheets in *vpAreaName*<!-- END REF -->。
+`VP SET SHEET COUNT` コマンドは、 <!-- REF #_method_.VP SET SHEET COUNT.Summary -->*vpAreaName* 引数で指定した View Pro エリア内のシートの数を設定します<!-- END REF -->。
 
 `number` 引数には、コマンド実行後にドキュメントが格納するシート数を指定する数値を渡します。
 > **警告**: このコマンドは、現在のシート数より少ない数字を渡した場合にはシートを削除します。 たとえば、ドキュメント内にシートが 5つあり、このコマンドでシートを 3つに設定した場合には、シート4 と 5 は削除されます。
@@ -5516,17 +5516,17 @@ VP SET SHEET COUNT("ViewProArea";3)
 
 <!-- REF #_method_.VP SET SHEET NAME.Params -->
 
-| 引数         | タイプ     |    | 説明                                                          |
-| ---------- | ------- | -- | ----------------------------------------------------------- |
-| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                                     |
-| name       | Text    | -> | シートの新しい名称                                                   |
-| sheet      | Integer | -> | Index of the sheet to be renamed|<!-- END REF -->
+| 引数         | タイプ     |    | 説明                                          |
+| ---------- | ------- | -- | ------------------------------------------- |
+| vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                     |
+| name       | Text    | -> | シートの新しい名称                                   |
+| sheet      | Integer | -> | 名称変更するシートのインデックス|<!-- END REF -->
 
 |
 
 #### 説明
 
-The `VP SET SHEET NAME` command <!-- REF #_method_.VP SET SHEET NAME.Summary -->renames a sheet in the document loaded in *vpAreaName*<!-- END REF -->。
+`VP SET SHEET NAME` コマンドは、 <!-- REF #_method_.VP SET SHEET NAME.Summary -->*vpAreaName* 引数で指定した View Pro エリア内にロードされているドキュメント内のシート名を変更します<!-- END REF -->。
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 
@@ -5574,7 +5574,7 @@ VP SET SHEET NAME("ViewProArea";"Total first quarter";2)
 
 #### 説明
 
-The `VP SET SHEET OPTIONS` command <!-- REF #_method_.VP SET SHEET OPTIONS.Summary -->allows defining various sheet options of the *vpAreaName* area<!-- END REF -->。
+`VP SET SHEET OPTIONS` コマンドは、 <!-- REF #_method_.VP SET SHEET OPTIONS.Summary -->*vpAreaName* 引数で名前を指定した View Pro エリアの様々なシートオプションを設定します<!-- END REF -->。
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。 存在しない名前を渡した場合、エラーが返されます。
 
@@ -5694,7 +5694,7 @@ VP SET SHEET OPTIONS("ViewProArea";$options)
 
 #### 説明
 
-The `VP SET SHOW PRINT LINES` command <!-- REF #_method_.VP SET SHOW PRINT LINES.Summary --> sets whether to display print preview lines in a spreadsheet.<!-- END REF -->。
+`VP SET SHOW PRINT LINES` コマンドは、 <!-- REF #_method_.VP SET SHOW PRINT LINES.Summary --> スプレッドシート内で印刷プレビュー線を表示するかどうかを設定します<!-- END REF -->。
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 
@@ -5849,7 +5849,7 @@ VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
 
 #### 説明
 
-The `VP SET TEXT VALUE` command <!-- REF #_method_.VP SET TEXT VALUE.Summary -->assigns a specified text value to a designated cell range<!-- END REF -->。
+`VP SET TEXT VALUE` コマンドは、 <!-- REF #_method_.VP SET TEXT VALUE.Summary -->指定されたセルレンジにテキスト値を割り当てます<!-- END REF -->。
 
 *rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](#vp-cell) あるいは [`VP Column`](#vp-column) で作成されたレンジ) を渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
 
@@ -5884,7 +5884,7 @@ VP SET TEXT VALUE(VP Cell("ViewProArea";3;2);"Test 4D View Pro")
 
 #### 説明
 
-The `VP SET TIME VALUE` command <!-- REF #_method_.VP SET TIME VALUE.Summary -->assigns a specified time value to a designated cell range<!-- END REF -->。
+`VP SET TIME VALUE` コマンドは、 <!-- REF #_method_.VP SET TIME VALUE.Summary -->指定されたセルレンジに時間値を割り当てます<!-- END REF -->。
 
 *rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](#vp-cell) あるいは [`VP Column`](#vp-column) で作成されたレンジ) を渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
 
@@ -5913,28 +5913,28 @@ VP SET TIME VALUE(VP Cell("ViewProArea";5;2);?12:15:06?;vk pattern long time)
 
 <!-- REF #_method_.VP SET VALUE.Params -->
 
-| 引数       | タイプ    |    | 説明                                                        |
-| -------- | ------ | -- | --------------------------------------------------------- |
-| rangeObj | Object | -> | レンジオブジェクト                                                 |
-| valueObj | Object | -> | Cell values and format options|<!-- END REF -->
+| 引数       | タイプ    |    | 説明                                          |
+| -------- | ------ | -- | ------------------------------------------- |
+| rangeObj | Object | -> | レンジオブジェクト                                   |
+| valueObj | Object | -> | セルの値とフォーマットオプション|<!-- END REF -->
 
 |
 
 #### 説明
 
-The `VP SET VALUE` command <!-- REF #_method_.VP SET VALUE.Summary -->assigns a specified value to a designated cell range<!-- END REF -->。
+`VP SET VALUE` コマンドは、 <!-- REF #_method_.VP SET VALUE.Summary -->指定されたセルレンジに値を割り当てます<!-- END REF -->。
 
-このコマンドを使用すると、汎用的なコードで *rangeObj* のレンジに様々な型の値とそのフォーマットを設定できます。 それに対して [`VP SET TEXT VALUE`](#vp-set-text-value) や [`VP SET NUM VALUE`](#vp-set-num-value) などの他のコマンドは、設定する値の型が限定されています。
+このコマンドを使用すると、汎用的なコードで *rangeObj* のレンジに様々な型の値とそのフォーマットを設定できます。それに対して [`VP SET TEXT VALUE`](#vp-set-text-value) や [`VP SET NUM VALUE`](#vp-set-num-value) などの他のコマンドは、設定する値の型が限定されています。
 
 *rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](#vp-cell) あるいは [`VP Column`](#vp-column) で作成されたレンジ) を渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
 
 *valueObj* 引数は、*rangeObj* のレンジに対して割り当てたい値と[フォーマット](configuring.md#セルフォーマット) のプロパティを格納しているオブジェクトです。 このオブジェクトには以下のプロパティを含めることができます:
 
-| プロパティ  | タイプ                                      | 説明                                                                                                     |
-| ------ | ---------------------------------------- | ------------------------------------------------------------------------------------------------------ |
-| value  | Integer, Real, Boolean, Text, Date, Null | *rangeObj* のレンジに対して割り当てる値 (時間型を除く)。 セルの中身を消去するためには Null を渡します。                                         |
-| time   | Real                                     | *rangeObj* のレンジに対して割り当てる時間 (秒単位)                                                                       |
-| format | Text                                     | 値や日時に対するパターン 値や日時に対するパターン パターンおよびフォーマット文字に関しての情報については、[セルフォーマット](configuring.md#セルフォーマット) の章を参照してください。 |
+| プロパティ  | タイプ                                      | 説明                                                                                        |
+| ------ | ---------------------------------------- | ----------------------------------------------------------------------------------------- |
+| value  | Integer, Real, Boolean, Text, Date, Null | *rangeObj* のレンジに対して割り当てる値 (時間型を除く)。 セルの中身を消去するためには Null を渡します。                            |
+| time   | Real                                     | *rangeObj* のレンジに対して割り当てる時間 (秒単位)                                                          |
+| format | Text                                     | 値や日時に対するパターン パターンおよびフォーマット文字に関しての情報については、[セルフォーマット](configuring.md#セルフォーマット) の章を参照してください。 |
 
 #### 例題
 
@@ -5985,10 +5985,10 @@ VP SET VALUE(VP Cell("ViewProArea";3;9);New object("value";Null))
 
 #### 説明
 
-The `VP SET VALUES` command <!-- REF #_method_.VP SET VALUES.Summary -->assigns a collection of values starting at the specified cell range<!-- END REF -->。
+`VP SET VALUES` コマンドは、 <!-- REF #_method_.VP SET VALUES.Summary -->指定のセルレンジから開始して値のコレクションを割り当てていきます<!-- END REF -->。
 
-*rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](#vp-cell) あるいは [`VP Column`](#vp-column) で作成されたレンジ) を渡します。 *rangeObj* 引数に複数のセルが含まれる場合、指定された値はそれぞれのセルに対して繰り返し割り当てられます。
-> * *rangeObj* のレンジが複数レンジを指定している場合、最初のレンジの先頭セルのみが使用されます。
+*rangeObj* には、値を割り当てたいセルのレンジ (たとえば [`VP Cell`](#vp-cell) あるいは [`VP Column`](#vp-column) で作成されたレンジ) を渡します。 *rangeObj* 引数で定義されたセルは、開始ポイントを決定します。
+> * *rangeObj* がセルレンジではない場合、レンジの最初のセルが使用されます。
 > * *rangeObj* のレンジが複数レンジを指定している場合、最初のレンジの先頭セルのみが使用されます。
 
 *valuesCol* 引数は 2次元構造のコレクションです:
@@ -6026,10 +6026,10 @@ VP SET VALUES(VP Cell("ViewProArea";2;1);$param)
 **VP SET WORKBOOK OPTIONS** ( *vpAreaName* : Text ; *optionObj* : Object)<!-- END REF -->
 
 <!-- REF #_method_.VP SET WORKBOOK OPTIONS.Params -->
-| 引数         | タイプ    |    | 説明                                                                          |
-| ---------- | ------ | -- | --------------------------------------------------------------------------- |
-| vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名                                                     |
-| optionObj  | Object | -> | Object containing the workbook options to be set|<!-- END REF -->
+| 引数         | タイプ    |    | 説明                                                    |
+| ---------- | ------ | -- | ----------------------------------------------------- |
+| vpAreaName | Text   | -> | 4D View Pro フォームオブジェクト名                               |
+| optionObj  | Object | -> | 設定するワークブックオプションを格納したオブジェクト|<!-- END REF -->
 
 |
 
