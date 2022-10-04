@@ -568,7 +568,7 @@ Se quiser obter todos os arquivos que não são invisíveis na pasta Documents:
 
 #### Descrição
 
-The `.folder()` function <!-- REF #directory.folder().Summary -->creates a `Folder` object inside the parent `Folder` object and returns its reference<!-- END REF -->.
+A função `.folder()` <!-- REF #directory.folder().Summary -->creates a `Folder` object inside the parent `Folder` object and returns its reference<!-- END REF -->.
 
 Em *path*, passe uma rota relativa POSIX para designar a pasta a devolver. A rota se avaliará a partir da pasta pai como raíz.
 
@@ -610,7 +610,7 @@ Um objeto `Folder` ou null se *path* não for válido.
 
 #### Descrição
 
-The `.folders()` function <!-- REF #directory.folders().Summary -->returns a collection of `Folder` objects contained in the parent folder<!-- END REF -->.
+A função `.folders()` <!-- REF #directory.folders().Summary -->returns a collection of `Folder` objects contained in the parent folder<!-- END REF -->.
 
 Como padrão, se omitir o parâmetro *options*, só se devolvem as pastas no primeiro nível da pasta. Pode modificar isso passando, no parâmetro *options*, uma ou várias das constantes abaixo:
 
@@ -659,7 +659,7 @@ Se quiser a coleção de todas as pastas e subpastas da pasta database:
 
 #### Descrição
 
-The `.getIcon()` function <!-- REF #directory.getIcon().Summary -->returns the icon of the folder<!-- END REF -->.
+A função `.getIcon()` <!-- REF #directory.getIcon().Summary -->returns the icon of the folder<!-- END REF -->.
 
 O parâmetro opcional *size* especifica as dimensões em píxels do icone devolvido. Este valor representa em realidade a longitude do lado do quadrado que contém o icone. Icones são geralmente definidos como 32x32 píxels ('icones grandes') ou 16x16 ('icones pequenos'). Se passar 0 ou omitir este parâmetro, se devolve a versão 'icone grande'
 
