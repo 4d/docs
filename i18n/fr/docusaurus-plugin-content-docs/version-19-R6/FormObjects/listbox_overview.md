@@ -299,9 +299,9 @@ Vous pouvez également accéder à des propriétés spécifiques aux en-têtes. 
 
 ![](../assets/en/FormObjects/lbHeaderIcon.png)
 
-At runtime, events that occur in a header are generated in the [list box column object method](#object-methods).
+Au moment de l'exécution, les événements qui se produisent dans un en-tête sont générés dans la [méthode objet de la colonne de list box](#object-methods).
 
-When the `OBJECT SET VISIBLE` command is used with a header, it is applied to all headers, regardless of the individual element set by the command. For example, `OBJECT SET VISIBLE(*;"header3";False)` will hide all headers in the list box object to which *header3* belongs and not simply this header.
+Lorsque la commande `OBJECT SET VISIBLE` est utilisée avec un en-tête, elle est appliquée à tous les en-têtes, quel que soit l'élément individuel défini par la commande. Par exemple, `OBJECT SET VISIBLE(* ; "header3";False)` masquera tous les en-têtes de l'objet list box auquel *header3* appartient et pas simplement cet en-tête.
 
 ### Propriétés spécifiques des en-têtes
 
