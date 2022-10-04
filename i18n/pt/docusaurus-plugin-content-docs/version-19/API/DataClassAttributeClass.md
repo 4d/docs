@@ -188,7 +188,7 @@ Esta propriedade não é retornada se [`.kind`](#kind) = "relatedEntity" ou "rel
 
 #### Descrição
 
-The `.kind` property <!-- REF DataClassAttributeClass.kind.Summary -->returns the category of the attribute<!-- END REF -->. O valor retornado pode ser um dos abaixo:
+A propriedade `.kind` <!-- REF DataClassAttributeClass.kind.Summary -->returns the category of the attribute<!-- END REF -->. O valor retornado pode ser um dos abaixo:
 
 * Atributo "storage": storage (ou escalar) ou seja, atributo que armazena um valor, não uma referência a outro atributo
 * "relatedEntity": N -> 1 atributo de relação (referência a uma entidade)
