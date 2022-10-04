@@ -118,7 +118,7 @@ Objetos de anexo são definidos através do comando [`MAIL New attachment`](Mail
 
 #### Descrição
 
-The `.bcc` property contains the <!-- REF #EmailObjectClass.bcc.Summary -->Blind Carbon Copy (BCC) hidden email recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
+A propriedade `.bcc` contém a <!-- REF #EmailObjectClass.bcc.Summary -->Blind Carbon Copy (BCC) hidden email recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
 
 ## .bodyStructure
 
@@ -126,7 +126,7 @@ The `.bcc` property contains the <!-- REF #EmailObjectClass.bcc.Summary -->Blind
 
 #### Descrição
 
-The `.bodyStructure` property contains the <!-- REF #EmailObjectClass.bodyStructure.Summary -->*EmailBodyPart* object, i.e. the full MIME structure of the message body (optional)<!-- END REF -->. Veja [Gestão do corpo](#handling-body-part).
+A propriedade `.bodyStructure` contém a <!-- REF #EmailObjectClass.bodyStructure.Summary -->*EmailBodyPart* object, i.e. the full MIME structure of the message body (optional)<!-- END REF -->. Veja [Gestão do corpo](#handling-body-part).
 
 O objeto `.bodyStructure` contém as seguintes propriedades:
 
@@ -148,7 +148,7 @@ O objeto `.bodyStructure` contém as seguintes propriedades:
 
 #### Descrição
 
-The `.bodyValues` property contains the <!-- REF #EmailObjectClass.bodyValues.Summary -->*EmailBodyValue* object, containing an object for each \<partID\> of `bodyStructure` (optional)<!-- END REF -->. Veja [Gestão do corpo](#handling-body-part).
+A propriedade `.bodyValues` contém a <!-- REF #EmailObjectClass.bodyValues.Summary -->*EmailBodyValue* object, containing an object for each \<partID\> of `bodyStructure` (optional)<!-- END REF -->. Veja [Gestão do corpo](#handling-body-part).
 
 O objeto `.bodyValues` contém as seguintes propriedades:
 
@@ -163,7 +163,7 @@ O objeto `.bodyValues` contém as seguintes propriedades:
 
 #### Descrição
 
-The `.cc` property contains the <!-- REF #EmailObjectClass.cc.Summary -->Carbon Copy (CC) additional email recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
+A propriedade `.cc` contém a <!-- REF #EmailObjectClass.cc.Summary -->Carbon Copy (CC) additional email recipient [addresse(s)](#email-addresses) of the email<!-- END REF -->.
 
 ## .comments
 
@@ -171,7 +171,7 @@ The `.cc` property contains the <!-- REF #EmailObjectClass.cc.Summary -->Carbon 
 
 #### Descrição
 
-The `.comments` property contains an <!-- REF #EmailObjectClass.comments.Summary -->additional comments header<!-- END REF -->.
+A propriedade `.comments` contém a <!-- REF #EmailObjectClass.comments.Summary -->additional comments header<!-- END REF -->.
 
 Os comentários só aparecem na seção de cabeçalho da mensagem (mantendo o corpo da mensagem intocado).
 
@@ -183,7 +183,7 @@ Para requisitos de formatação específicos, consulte o [RFC#5322](https://tool
 
 #### Descrição
 
-The `.from` property contains the <!-- REF #EmailObjectClass.from.Summary -->Originating [address(es)](#email-addresses) of the email<!-- END REF -->.
+A propriedade `.from` contém a <!-- REF #EmailObjectClass.from.Summary -->Originating [address(es)](#email-addresses) of the email<!-- END REF -->.
 
 Cada e-mail que você envia possui tanto o [remetente](#sender) quanto **de** endereços:
 
@@ -198,7 +198,7 @@ Para uma melhor capacidade de entrega, é recomendado usar o mesmo endereço de 
 
 #### Descrição
 
-The `.headers` property contains a <!-- REF #EmailObjectClass.headers.Summary -->collection of `EmailHeader` objects, in the order they appear in the message<!-- END REF -->. Esta propriedade permite que usuários adicionem cabeçalhos estendidos (registrados) ou definidos pelo usuário (não registrados, começando com cabeçalhos "X").
+A propriedade `.headers` contém a <!-- REF #EmailObjectClass.headers.Summary -->collection of `EmailHeader` objects, in the order they appear in the message<!-- END REF -->. Esta propriedade permite que usuários adicionem cabeçalhos estendidos (registrados) ou definidos pelo usuário (não registrados, começando com cabeçalhos "X").
 
 > Se uma propriedade de objeto `EmailHeader` define um cabeçalho como "from" ou "cc" que já está definida como uma propriedade no nível de correio, a propriedade `EmailHeader` é ignorada.
 
@@ -215,7 +215,7 @@ Cada objeto da coleção de cabeçalhos pode conter as propriedades abaixo:
 
 #### Descrição
 
-The `.htmlBody` property contains the <!-- REF #EmailObjectClass.htmlBody.Summary -->HTML representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. Veja [Gestão do corpo](#handling-body-part).
+A propriedade `.htmlBody` contém a <!-- REF #EmailObjectClass.htmlBody.Summary -->HTML representation of the email message (default charset is UTF-8) (optional, SMTP only)<!-- END REF -->. Veja [Gestão do corpo](#handling-body-part).
 
 ## .id
 
@@ -225,7 +225,7 @@ The `.htmlBody` property contains the <!-- REF #EmailObjectClass.htmlBody.Summar
 
 [Medidor IMAP](IMAPTransporterClass.md) apenas.
 
-The `.id` property contains the <!-- REF #EmailObjectClass.id.Summary -->unique ID from the IMAP server<!-- END REF -->.
+A propriedade `.id` contém a <!-- REF #EmailObjectClass.id.Summary -->unique ID from the IMAP server<!-- END REF -->.
 
 ## .inReplyTo
 
@@ -233,7 +233,7 @@ The `.id` property contains the <!-- REF #EmailObjectClass.id.Summary -->unique 
 
 #### Descrição
 
-The `.inReplyTo` property contains the <!-- REF #EmailObjectClass.inReplyTo.Summary -->message identifier(s) of the original message(s) to which the current message is a reply<!-- END REF -->.
+A propriedade `.inReplyTo` contém a <!-- REF #EmailObjectClass.inReplyTo.Summary -->message identifier(s) of the original message(s) to which the current message is a reply<!-- END REF -->.
 
 Para requisitos de formatação específicos, consulte o [RFC#5322](https://tools.ietf.org/html/rfc5322).
 
@@ -243,7 +243,7 @@ Para requisitos de formatação específicos, consulte o [RFC#5322](https://tool
 
 #### Descrição
 
-The `.keywords` property contains a <!-- REF #EmailObjectClass.keywords.Summary -->set of keywords as an object, where each property name is a keyword and each value is true<!-- END REF -->.
+A propriedade `.keywords` contém a <!-- REF #EmailObjectClass.keywords.Summary -->set of keywords as an object, where each property name is a keyword and each value is true<!-- END REF -->.
 
 Esta propriedade é o cabeçalho das "palavras-chave" (veja [RFC#4021](https://tools.ietf.org/html/rfc4021)).
 
@@ -271,7 +271,7 @@ Palavra-chave reservada.
 
 #### Descrição
 
-The `.messageId` property contains a <!-- REF #EmailObjectClass.messageId.Summary -->message identifier header ("message-id")<!-- END REF -->.
+A propriedade `.messageId` contém a <!-- REF #EmailObjectClass.messageId.Summary -->message identifier header ("message-id")<!-- END REF -->.
 
 Este cabeçalho geralmente é "lettersOrNumbers@domainname", por exemplo, "abcdef.123456@4d.com". Este ID exclusivo é usado em particular em fóruns ou listas públicas de e-mail. Em geral, os servidores de email adicionam automaticamente este cabeçalho às mensagens que enviam.
 
