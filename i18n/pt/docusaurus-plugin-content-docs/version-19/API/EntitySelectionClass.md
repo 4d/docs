@@ -996,7 +996,7 @@ Para mais informação, consulte [Entity selection ordenadas ou desordenadas](OR
 
 #### Descrição
 
-The `.last()` function <!-- REF #EntitySelectionClass.last().Summary -->returns a reference to the entity in last position of the entity selection<!-- END REF -->.
+A função `.last()` <!-- REF #EntitySelectionClass.last().Summary -->returns a reference to the entity in last position of the entity selection<!-- END REF -->.
 
 O resultado desta função é similar a:
 
