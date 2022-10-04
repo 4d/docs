@@ -169,7 +169,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.eof` property returns <!-- REF #FileHandleClass.eof.Summary -->True is the `offset` has reached the end of the file, and False otherwise<!-- END REF -->.
+A propriedade `.eof` devolve <!-- REF #FileHandleClass.eof.Summary -->True is the `offset` has reached the end of the file, and False otherwise<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 
@@ -199,7 +199,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.getSize()` function <!-- REF #FileHandleClass.getSize().Summary -->returns the current size of the document, expressed in bytes<!-- END REF -->.
+A função `.getSize()` <!-- REF #FileHandleClass.getSize().Summary -->returns the current size of the document, expressed in bytes<!-- END REF -->.
 
 > This function returns the same value as the ([.size](FileClass#size)) property of the `File` class.
 
@@ -225,7 +225,7 @@ The `.getSize()` function <!-- REF #FileHandleClass.getSize().Summary -->returns
 
 #### Descrição
 
-The `.mode` property returns <!-- REF #FileHandleClass.mode.Summary -->the mode in which the file handle was created: "read", "write", or "append"<!-- END REF -->.
+A propriedade `.mode` devolve <!-- REF #FileHandleClass.mode.Summary -->the mode in which the file handle was created: "read", "write", or "append"<!-- END REF -->.
 
 The mode can be defined at the handle creation with the [`file.open()`](FileClass#open) function. Default is "read".
 
@@ -250,7 +250,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.offset` property returns <!-- REF #FileHandleClass.offset.Summary -->the current offset of the data stream (position inside the document)<!-- END REF -->. The offset value is automatically updated after read and write operations.
+A propriedade `.offset` devolve <!-- REF #FileHandleClass.offset.Summary -->the current offset of the data stream (position inside the document)<!-- END REF -->. The offset value is automatically updated after read and write operations.
 
 Setting the `.offset` will change its current value.
 
@@ -286,7 +286,7 @@ This property is **read/write**.
 
 #### Descrição
 
-The `.readBlob()` function <!-- REF #FileHandleClass.readBlob().Summary -->returns a blob a *bytes* size from the file, starting from the current position <!-- END REF -->.
+A função `.readBlob()` <!-- REF #FileHandleClass.readBlob().Summary -->returns a blob a *bytes* size from the file, starting from the current position <!-- END REF -->.
 
 When this function is executed, the current position ([.offset](#offset)) is updated after the last byte read.
 
@@ -320,7 +320,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 #### Descrição
 
-The `.readLine()` function <!-- REF #FileHandleClass.readLine().Summary -->returns a line of text from the current position until an end-of-line delimiter is encountered or the end of the document is reached<!-- END REF -->.
+A função `.readLine()` <!-- REF #FileHandleClass.readLine().Summary -->returns a line of text from the current position until an end-of-line delimiter is encountered or the end of the document is reached<!-- END REF -->.
 
 When this function is executed, the current position ([.offset](#offset)) is updated.
 
@@ -356,7 +356,7 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 #### Descrição
 
-The `.readText()` function <!-- REF #FileHandleClass.readText().Summary -->returns text from the file, starting from the current position until the first *stopChar* string is encountered (if passed) or the end of file is reached<!-- END REF -->.
+A função `.readText()` <!-- REF #FileHandleClass.readText().Summary -->returns text from the file, starting from the current position until the first *stopChar* string is encountered (if passed) or the end of file is reached<!-- END REF -->.
 
 This function replaces all original end-of-line delimiters. By default, the native delimiter is used, but you can define another delimiter when [opening the file handle](FileClass.md#open) by setting the [`.breakModeRead`](#breakmoderead) property.
 
@@ -396,7 +396,7 @@ If the *stopChar* parameter is passed and not found, `.readText()` returns an em
 
 #### Descrição
 
-The `.setSize()` function <!-- REF #FileHandleClass.setSize().Summary -->sets a new *size* in bytes for the document<!-- END REF -->.
+A função `.setSize()` <!-- REF #FileHandleClass.setSize().Summary -->sets a new *size* in bytes for the document<!-- END REF -->.
 
 If the *size* value is less than the current document size, the document content is truncated from the beginning to get the new *size* .
 
