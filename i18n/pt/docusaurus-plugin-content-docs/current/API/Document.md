@@ -39,7 +39,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.creationTime` property  returns <!-- REF #document.creationTime.Summary -->the creation  time of the file<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+A propriedade `.creationTime` devolve <!-- REF #document.creationTime.Summary -->the creation  time of the file<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
 Essa propriedade é**apenas leitura**.
 
@@ -80,7 +80,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.extension` property returns <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->. Uma extensão sempre começa com "." A propriedade devolve uma string vazia se o nome do arquivo não tiver extensão.
+A propriedade `.extension` devolve <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->. Uma extensão sempre começa com "." A propriedade devolve uma string vazia se o nome do arquivo não tiver extensão.
 
 Essa propriedade é**apenas leitura**.
 
@@ -100,7 +100,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.fullName` property returns <!-- REF #document.fullName.Summary -->the full name of the file, including its extension (if any)<!-- END REF -->.
+A propriedade `.fullName` devolve <!-- REF #document.fullName.Summary -->the full name of the file, including its extension (if any)<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 
@@ -200,7 +200,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.isWritable` property returns <!-- REF #document.isWritable.Summary -->true if the file exists on disk and is writable<!-- END REF -->.
+A propriedade `.isWritable` devolve <!-- REF #document.isWritable.Summary -->true if the file exists on disk and is writable<!-- END REF -->.
 > A propriedade verifica a habilidade da aplicação 4D de escrever no disco (direitos de acesso), não depende apenas do atributo *writable* do arquivo.
 
 Essa propriedade é**apenas leitura**.
@@ -375,7 +375,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.size` property returns <!-- REF #document.size.Summary -->the size of the file expressed in bytes<!-- END REF -->. Se o arquivo não existir em disco, o tamanho é 0.
+A propriedade `.size` devolve <!-- REF #document.size.Summary -->the size of the file expressed in bytes<!-- END REF -->. Se o arquivo não existir em disco, o tamanho é 0.
 
 Essa propriedade é**apenas leitura**.
 
@@ -457,7 +457,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 #### Descrição
 
-The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `4D. Blob` object containing the entire content of a file<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
+A função `.getContent()`  <!-- REF #document.getContent().Summary -->returns a `4D. Blob` object containing the entire content of a file<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
 
 **Valor retornado**
 
@@ -500,7 +500,7 @@ Para salvar o conteúdo de um documento em um campo `BLOB`:
 
 #### Descrição
 
-The `.getIcon()` function returns <!-- REF #document.getIcon().Summary -->the icon of the file<!-- END REF -->.
+A função `.getIcon()` devolve <!-- REF #document.getIcon().Summary -->the icon of the file<!-- END REF -->.
 
 O parâmetro opcional *size* especifica as dimensões em píxels do icone devolvido. Este valor representa em realidade a longitude do lado do quadrado que contém o icone. Icones são geralmente definidos como 32x32 píxels ('icones grandes') ou 16x16 ('icones pequenos'). Se passar 0 ou omitir este parâmetro, se devolve a versão 'icone grande'
 
@@ -537,7 +537,7 @@ Se o arquivo não existir no disco, um ícone em branco padrão será retornado.
 
 #### Descrição
 
-The `.getText()` function <!-- REF #document.getText().Summary -->returns the contents of the file as text <!-- END REF -->.
+A função `.getText()` <!-- REF #document.getText().Summary -->returns the contents of the file as text <!-- END REF -->.
 
 Opcionalmente, você pode designar o conjunto de caracteres a ser usado na leitura do conteúdo. Você pode passar também:
 
