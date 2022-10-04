@@ -268,33 +268,45 @@ The resulting object is an entity selection of Employee with duplications remove
 
 |Version|Changes|
 |---|---|
+|v19 R7|Support of *entitySelection* parameter|
 |v18 R5|Only supports alterable entity selections|
 |v17|Added|
 
 </details>
 
 
-<!-- REF #EntitySelectionClass.add().Syntax -->**.add**( *entity* : 4D.Entity ) : 4D.EntitySelection<!-- END REF -->
+<!-- REF #EntitySelectionClass.add().Syntax -->**.add**( *entity* : 4D.Entity ) : 4D.EntitySelection<br/>**.add**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.add().Params -->
 |Parameter|Type||Description|
 |---------|--- |:---:|------|
 |entity|4D.Entity|->|Entity to be added to the entity selection|
-|Result|4D.EntitySelection|->|Entity selection including the added *entity*|<!-- END REF -->
+|entitySelection|4D.EntitySelection|->|Entity selection to be added to the original entity selection|
+|Result|4D.EntitySelection|->|Entity selection including the added *entity* or *entitySelection*|<!-- END REF -->
 
 
 #### Description
 
-The `.add()` function <!-- REF #EntitySelectionClass.add().Summary -->adds the specified *entity* to the entity selection and returns the modified entity selection<!-- END REF -->.
+The `.add()` function <!-- REF #EntitySelectionClass.add().Summary -->adds the specified *entity* or *entitySelection* to the original entity selection and returns the modified entity selection<!-- END REF -->.
 
 >This function modifies the original entity selection.
 
-**Warning:** The entity selection must be *alterable*, i.e. it has been created for example by [`.newSelection()`](DataClassClass.md#newselection) or `Create entity selection`, otherwise `.add()` will return an error. Shareable entity selections do not accept the addition of entities. For more information, please refer to the [Shareable or alterable entity selections](ORDA/entities.md#shareable-or-alterable-entity-selections) section.
+:::info warning
 
+The entity selection must be *alterable*, i.e. it has been created for example by [`.newSelection()`](DataClassClass.md#newselection) or `Create entity selection`, otherwise `.add()` will return an error. Shareable entity selections do not accept the addition of entities. For more information, please refer to the [Shareable or alterable entity selections](ORDA/entities.md#shareable-or-alterable-entity-selections) section. 
+
+:::
+
+**Adding an entity**
 
 *	If the entity selection is ordered, *entity* is added at the end of the selection. If a reference to the same entity already belongs to the entity selection, it is duplicated and a new reference is added.
 *	If the entity selection is unordered, *entity* is added anywhere in the selection, with no specific order.
+
+**Adding an entity selection**
+
+*	If the entity selection is ordered, its order is kept and *entitySelection* is added at the end of the selection. If references to the same entities of *entitySelection* already belong to the entity selection, they are duplicated and new references are added.
+*	If the entity selection is unordered, it becomes ordered.
 
 >For more information, please refer to the [Ordered or unordered entity selection](ORDA/dsMapping.md#ordered-or-unordered-entity-selection) section.
 
@@ -327,6 +339,28 @@ Calls to the function can be chained:
  $p3:=ds.Product.get(12)
  $sel:=ds.Product.query("ID > 50")
  $sel:=$sel.add($p1).add($p2).add($p3)
+```
+
+#### Example 3
+
+In a user interface, we have two list boxes. The "Gamers" list box displays available gamers (no defined team). The [Selected items](../FormObjects/properties_DataSource.md#selected-items) property is `Form.selected`. The user selects gamers to add them to the "Team 1" list box.
+
+![](assets/en/API/keep-order-add.png)
+
+Form method:
+
+```4d
+Case of 
+	: (Form event code=On Load)
+		Form.gamers:=ds.Gamers.query("team = Null")
+		Form.team1:=ds.Gamers.newSelection()
+End case
+```
+
+Code of the **Add** button:
+
+```4d
+Form.team1:=Form.team1.add(Form.selected)
 ```
 
 <!-- END REF -->
@@ -1287,11 +1321,12 @@ In this example, we want to find the lowest salary among all the female employee
 
 |Version|Changes|
 |---|---|
+|v19 R7|Support of *keepOrder* parameter|
 |v17|Added|
 
 </details>
 
-<!-- REF #EntitySelectionClass.minus().Syntax -->**.minus**( *entity* : 4D.Entity ) : 4D.EntitySelection<br/>**.minus**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
+<!-- REF #EntitySelectionClass.minus().Syntax -->**.minus**( *entity* : 4D.Entity { ; *keepOrder* : Integer | Boolean } ) : 4D.EntitySelection<br/>**.minus**( *entitySelection* : 4D.EntitySelection { ; *keepOrder* : Integer | Boolean } ) : 4D.EntitySelection<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.minus().Params -->
@@ -1299,6 +1334,7 @@ In this example, we want to find the lowest salary among all the female employee
 |---------|--- |:---:|------|
 |entity |4D.Entity|->|Entity to substract|
 |entitySelection|4D.EntitySelection|->|Entity selection to substract|
+|keepOrder|Integer `|` Boolean|->|`dk keep ordered` (integer) or `True` (boolean) to keep the initial order in the resulting entity selection|
 |Result|4D.EntitySelection|<-|New entity selection or a new reference on the existing entity selection|<!-- END REF -->
 
 #### Description
@@ -1306,9 +1342,15 @@ In this example, we want to find the lowest salary among all the female employee
 The `.minus()` function <!-- REF #EntitySelectionClass.minus().Summary -->excludes from the entity selection to which it is applied the *entity* or the entities of *entitySelection* and returns the resulting entity selection<!-- END REF -->.
 
 *	If you pass *entity* as parameter, the function creates a new entity selection without *entity* (if *entity* belongs to the entity selection). If *entity* was not included in the original entity selection, a new reference to the entity selection is returned.
-*	If you pass *entitySelection* as parameter, the function returns an entity selection containing the entities belonging to the original entity selection without the entities belonging to *entitySelection*.
+*	If you pass *entitySelection* as parameter, the function returns an entity selection containing the entities belonging to the original entity selection without the entities belonging to *entitySelection*. You can compare [ordered and/or unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). 
 
->You can compare [ordered and/or unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). The resulting selection is always unordered.
+By default, if you omit the *keepOrder* parameter or pass `False`, the resulting entity selection is unordered. If you want to keep the order of the original entity selection (for example if you want to reuse the entity selection in a user interface), pass `True` or the `dk keep ordered` constant in *keepOrder*. In this case, the result is an ordered entity selection and the order of the initial entity selection is kept.
+
+:::note
+
+If you pass `True` or `dk keep ordered` in *keepOrder* and the removed *entitySelection* contains entities duplicated in the original entity selection, all occurences of the duplicates are removed.
+
+:::
 
 If the original entity selection or both the original entity selection and the *entitySelection* parameter are empty, an empty entity selection is returned.
 
@@ -1343,6 +1385,27 @@ We want to have a selection of female employees named "Jones" who live in New Yo
  $sel2:=ds.Employee.query("city=:1";"New York")
  $sel3:=$sel1.and($sel2).minus(ds.Employee.query("gender='male'"))
 ```
+
+#### Example 3
+
+In a user interface, we have a list box to display gamers ordered by rank. The [Selected items](../FormObjects/properties_DataSource.md#selected-items) property is `Form.selected`. If the user selects gamers in the list box to remove them, the order must be kept when refreshing the list box:
+
+![](assets/en/API/keep-order.png)
+
+```4d
+Case of 
+	: (Form event code=On Load)		
+		Form.gamers:=ds.Gamers.all().orderBy("rank asc")		
+End case
+```
+
+Code of the **Remove** button:
+
+```4d
+Form.gamers:=Form.gamers.minus(Form.selected; dk keep ordered)
+```
+
+![](assets/en/API/keep-order-after.png)
 
 <!-- END REF -->
 
