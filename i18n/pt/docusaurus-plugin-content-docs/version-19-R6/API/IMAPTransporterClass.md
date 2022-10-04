@@ -353,7 +353,7 @@ The `.checkConnectionDelay` property contains <!-- REF #IMAPTransporterClass.che
 
 #### Descrição
 
-The `.copy()` function <!-- REF #IMAPTransporterClass.copy().Summary -->copies the messages defined by *msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->.
+A função `.copy()` <!-- REF #IMAPTransporterClass.copy().Summary -->copies the messages defined by *msgsIDs* or *allMsgs* to the *destinationBox* on the IMAP server<!-- END REF -->.
 
 Pode passar:
 
@@ -532,7 +532,7 @@ End for each
 
 #### Descrição
 
-The `.delete()` function <!-- REF #IMAPTransporterClass.delete().Summary -->sets the "deleted" flag for the messages defined in `msgsIDs` or `allMsgs`<!-- END REF -->.
+A função `.delete()` <!-- REF #IMAPTransporterClass.delete().Summary -->sets the "deleted" flag for the messages defined in `msgsIDs` or `allMsgs`<!-- END REF -->.
 
 Pode passar:
 

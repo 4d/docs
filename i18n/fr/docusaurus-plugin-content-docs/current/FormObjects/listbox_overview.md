@@ -320,7 +320,7 @@ Lorsque les en-têtes sont affichés, vous pouvez sélectionner un en-tête dans
 Vous pouvez définir, pour chaque en-tête de colonne de List box, des propriétés standard de texte : dans ce cas, ces propriétés sont prioritaires par rapport à celles de la colonne ou de la list box.
 
 
-Vous pouvez également accéder à des propriétés spécifiques aux en-têtes. Specifically, an icon can be displayed in the header next to or in place of the column title, for example when performing [customized sorts](#managing-sorts).
+Vous pouvez également accéder à des propriétés spécifiques aux en-têtes. En particulier, une icône peut être affichée dans l’en-tête à côté ou à la place du libellé de la colonne, notamment dans le cadre des [tris personnalisés](#gestion-des-tris).
 
 ![](../assets/en/FormObjects/lbHeaderIcon.png)
 

@@ -16,7 +16,7 @@ title: 動作
   `method.4dm`  
   このタイプの参照は、当該メソッドファイルがデフォルトの場所 ("sources/{TableForms/*numTable*} | {Forms}/*formName*/") にあることを示します。 この場合、エディター上でフォームメソッドに対して操作 (名称変更、複製、コピー/ペーストなど) がおこなわれると、4D はこれらの変更を自動的にフォームメソッドに反映させます。
 
-- a project method name: name of an existing project method without file extension, i.e.: `myMethod` In this case, 4D does not provide automatic support for form operations.
+- 拡張子を省いた既存のプロジェクトメソッド名: `myMethod`。 この場合、フォームエディターで操作がおこなわれても、4D はそれらの変更を自動反映しません。
 
 - .4dm 拡張子を含むカスタムのメソッドファイルパス:   
   `MyMethods/myFormMethod.4dm`。 ファイルシステムも使用できます:  

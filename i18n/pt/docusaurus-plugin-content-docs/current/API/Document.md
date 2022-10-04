@@ -39,7 +39,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.creationTime` property  returns <!-- REF #document.creationTime.Summary -->the creation  time of the file<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+A propriedade `.creationTime` devolve <!-- REF #document.creationTime.Summary -->the creation  time of the file<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
 Essa propriedade é**apenas leitura**.
 
@@ -80,7 +80,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.extension` property returns <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->. Uma extensão sempre começa com "." A propriedade devolve uma string vazia se o nome do arquivo não tiver extensão.
+A propriedade `.extension` devolve <!-- REF #document.extension.Summary -->the extension of the file name (if any)<!-- END REF -->. Uma extensão sempre começa com "." A propriedade devolve uma string vazia se o nome do arquivo não tiver extensão.
 
 Essa propriedade é**apenas leitura**.
 
@@ -100,7 +100,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.fullName` property returns <!-- REF #document.fullName.Summary -->the full name of the file, including its extension (if any)<!-- END REF -->.
+A propriedade `.fullName` devolve <!-- REF #document.fullName.Summary -->the full name of the file, including its extension (if any)<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 
@@ -120,7 +120,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.hidden` property returns <!-- REF #document.hidden.Summary -->true if the file is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
+A propriedade `.size` devolve <!-- REF #document.hidden.Summary -->true if the file is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
 
 Essa propriedade é**apenas leitura**.
 
@@ -140,7 +140,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.isAlias` property returns <!-- REF #document.isAlias.Summary -->true if the file is an alias, a shortcut, or a symbolic link<!-- END REF -->, and false otherwise.
+A propriedade `.isAlias` devolve <!-- REF #document.isAlias.Summary -->true if the file is an alias, a shortcut, or a symbolic link<!-- END REF -->, and false otherwise.
 
 Essa propriedade é**apenas leitura**.
 
@@ -160,7 +160,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.isFile` property returns <!-- REF #document.isFile.Summary -->The `.copyTo()` function<!-- END REF -->.
+A propriedade `.isFile` devolve <!-- REF #document.isFile.Summary -->The `.copyTo()` function<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 
@@ -180,7 +180,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.isFolder` property returns <!-- REF #document.isFolder.Summary -->always true for a file<!-- END REF -->.
+A propriedade `.isFolder` devolve <!-- REF #document.isFolder.Summary -->always true for a file<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 
@@ -200,7 +200,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.isWritable` property returns <!-- REF #document.isWritable.Summary -->true if the file exists on disk and is writable<!-- END REF -->.
+A propriedade `.isWritable` devolve <!-- REF #document.isWritable.Summary -->true if the file exists on disk and is writable<!-- END REF -->.
 > A propriedade verifica a habilidade da aplicação 4D de escrever no disco (direitos de acesso), não depende apenas do atributo *writable* do arquivo.
 
 Essa propriedade é**apenas leitura**.
@@ -230,7 +230,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.modificationDate` property returns <!-- REF #document.modificationDate.Summary -->The `.modificationDate` property returns<!-- END REF -->.
+A propriedade `.modificationDate` devolve <!-- REF #document.modificationDate.Summary -->The `.modificationDate` property returns<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 
@@ -250,7 +250,7 @@ Essa propriedade é**apenas leitura**.
 
 ##### Descrição
 
-The `.modificationTime` property returns <!-- REF #document.modificationTime.Summary -->The `.modificationTime` property returns<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+A propriedade `.modificationTime` devolve <!-- REF #document.modificationTime.Summary -->The `.modificationTime` property returns<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
 Essa propriedade é**apenas leitura**.
 
@@ -270,7 +270,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.name` property returns <!-- REF #document.name.Summary -->the name of the file without extension (if any)<!-- END REF -->.
+A propriedade `.name` devolve <!-- REF #document.name.Summary -->the name of the file without extension (if any)<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 
@@ -290,7 +290,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.original` property returns <!-- REF #document.original.Summary -->the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->. O elemento alvo pode ser:
+A propriedade `.original` devolve <!-- REF #document.original.Summary -->the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->. O elemento alvo pode ser:
 
 * um objeto File
 * um objeto folder
@@ -315,7 +315,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.parent` property returns <!-- REF #document.parent.Summary -->The `.parent` property returns<!-- END REF -->. .
+A propriedade `.parent` devolve <!-- REF #document.parent.Summary -->The `.parent` property returns<!-- END REF -->. .
 
 Essa propriedade é**apenas leitura**.
 
@@ -335,7 +335,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.path` property returns <!-- REF #document.path.Summary -->The `.path` property returns<!-- END REF -->. .
+A propriedade `.path` devolve <!-- REF #document.path.Summary -->The `.path` property returns<!-- END REF -->. .
 
 Essa propriedade é**apenas leitura**.
 
@@ -355,7 +355,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.platformPath` property returns <!-- REF #document.platformPath.Summary -->The `.platformPath` property returns<!-- END REF -->.
+A propriedade `.platformPath` devolve <!-- REF #document.platformPath.Summary -->The `.platformPath` property returns<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 
@@ -375,7 +375,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.size` property returns <!-- REF #document.size.Summary -->the size of the file expressed in bytes<!-- END REF -->. Se o arquivo não existir em disco, o tamanho é 0.
+A propriedade `.size` devolve <!-- REF #document.size.Summary -->the size of the file expressed in bytes<!-- END REF -->. Se o arquivo não existir em disco, o tamanho é 0.
 
 Essa propriedade é**apenas leitura**.
 
@@ -406,7 +406,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.copyTo()` function <!-- REF #document.copyTo().Summary -->The `.isFolder` property returns <!-- END REF -->.
+A função `.copyTo()` <!-- REF #document.copyTo().Summary -->The `.isFolder` property returns <!-- END REF -->.
 
 A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
@@ -457,7 +457,7 @@ $copy:=$source.copyTo(Folder("/PACKAGE");fk overwrite)
 
 #### Descrição
 
-The `.getContent()` function  <!-- REF #document.getContent().Summary -->returns a `4D. Blob` object containing the entire content of a file<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
+A função `.getContent()`  <!-- REF #document.getContent().Summary -->returns a `4D. Blob` object containing the entire content of a file<!-- END REF -->. Para informações sobre BLOBs, consultar a secção [BLOB](Concepts/dt_blob.md) .
 
 **Valor retornado**
 
@@ -500,7 +500,7 @@ Para salvar o conteúdo de um documento em um campo `BLOB`:
 
 #### Descrição
 
-The `.getIcon()` function returns <!-- REF #document.getIcon().Summary -->the icon of the file<!-- END REF -->.
+A função `.getIcon()` devolve <!-- REF #document.getIcon().Summary -->the icon of the file<!-- END REF -->.
 
 O parâmetro opcional *size* especifica as dimensões em píxels do icone devolvido. Este valor representa em realidade a longitude do lado do quadrado que contém o icone. Icones são geralmente definidos como 32x32 píxels ('icones grandes') ou 16x16 ('icones pequenos'). Se passar 0 ou omitir este parâmetro, se devolve a versão 'icone grande'
 
@@ -537,7 +537,7 @@ Se o arquivo não existir no disco, um ícone em branco padrão será retornado.
 
 #### Descrição
 
-The `.getText()` function <!-- REF #document.getText().Summary -->returns the contents of the file as text <!-- END REF -->.
+A função `.getText()` <!-- REF #document.getText().Summary -->returns the contents of the file as text <!-- END REF -->.
 
 Opcionalmente, você pode designar o conjunto de caracteres a ser usado na leitura do conteúdo. Você pode passar também:
 

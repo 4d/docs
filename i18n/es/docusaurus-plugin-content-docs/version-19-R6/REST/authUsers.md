@@ -3,23 +3,23 @@ id: authUsers
 title: Usuarios y sesiones
 ---
 
-REST requests can benefit from [web user sessions](WebServer/sessions.md), providing extra features such as multiple requests handling, data sharing between the web client processes, and user privileges.
+Las peticiones REST pueden beneficiarse de [sesiones de usuario web](WebServer/sessions.md), ofreciendo funcionalidades extra como la gestión de múltiples peticiones, la posibilidad de compartir datos entre los procesos del cliente web y los privilegios del usuario.
 
 Como primer paso para abrir una sesión REST en el servidor 4D, el usuario que envía la solicitud debe estar autenticado.
 
 ## Autenticación de los usuarios
 
-You log in a user to your application by calling [`$directory/login`]($directory.md#directorylogin) in a POST request including the user's name and password in the header. This request calls the `On REST Authentication` database method (if it exists), where you can check the user's credentials (see example below).
+Usted inicia la sesión de un usuario en su aplicación llamando a [`$directory/login`]($directory.md#directorylogin) en una petición POST incluyendo el nombre y la contraseña del usuario en el encabezado. Esta petición llama al método base `On REST Authentication` (si existe), donde se pueden comprobar las credenciales del usuario (ver ejemplo abajo).
 
 ## Apertura de las sesiones
 
-When [scalable sessions are enabled](WebServer/sessions.md#enabling-sessions) (recommended), if the `On REST Authentication` database method returns `true`, a user session is then automatically opened and you can handle it through the `Session` object and the [Session API](API/SessionClass.md). Las siguientes peticiones REST reutilizarán la misma cookie de sesión.
+Cuando las [sesiones escalables se activan](WebServer/sessions.md#enabling-sessions) (recomendado), si el método base `On REST Authentication` devuelve `true`, se abre automáticamente una sesión de usuario y se puede manejar a través del objeto `Session` y la [API Session](API/SessionClass.md). Las siguientes peticiones REST reutilizarán la misma cookie de sesión.
 
-If the `On REST Authentication` database method has not been defined, a `guest` session is opened.
+Si no se ha definido el método base `On REST Authentication`, se abre una sesión `guest`.
 
 ## Ejemplo
 
-In this example, the user enters their email and password in an html page that requests [`$directory/login`]($directory.md#directorylogin) in a POST (it is recommended to use an HTTPS connection to send the html page). The `On REST Authentication` database method is called to validate the credentials and to set the session.
+En este ejemplo, el usuario introduce su correo electrónico y contraseña en una página html que solicita [`$directory/login`]($directory.md#directorylogin) en un POST (se recomienda utilizar una conexión HTTPS para enviar la página html). Se llama al método base `On REST Authentication` para validar las credenciales y establecer la sesión.
 
 Página de inicio de sesión HTML:
 
@@ -68,7 +68,7 @@ sendData({userId:document.forms['myForm'].elements['userId'].value , password:do
 
 ```
 
-When the login page is sent to the server, the `On REST Authentication` database method is called:
+Cuando la página de inicio de sesión se envía al servidor, se llama al método base `On REST Authentication`:
 
 ```4d
  //On REST Authentication
@@ -90,9 +90,9 @@ If ($userId#"")
 End if 
 ```
 
-> As soon as it has been called and returned `True`, the `On REST Authentication` database method is no longer called in the session.
+> Tan pronto como se ha llamado y devuelto `True`, el método base `On REST Authentication` deja de llamarse en la sesión.
 
-The `fillSession` project method initializes the user session, for example:
+El método proyecto `fillSession` inicializa la sesión usuario, por ejemplo:
 
 ```4d
 #DECLARE($sales : cs.SalesPersonsEntity)

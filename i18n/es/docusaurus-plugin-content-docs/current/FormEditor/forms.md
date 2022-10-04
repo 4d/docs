@@ -120,9 +120,9 @@ Las propiedades y el método de un formulario no se tienen en cuenta cuando ese 
 
 Para definir un formulario heredado, las propiedades [Inherited Form Name](properties_FormProperties.md#inherited-form-name) and [Inherited Form Table](properties_FormProperties.md#inherited-form-table) (para el formulario tabla) deben definirse en el formulario que heredará algo de otro formulario.
 
-A form can inherit from a project form, by setting the [Inherited Form Table](properties_FormProperties.md#inherited-form-table) property to `\&#060;None&#062;` in the Property List (or " " in JSON).
+Un formulario puede heredar de un formulario proyecto, definiendo la propiedad [Inherited Form Table](properties_FormProperties.md#inherited-form-table) en `\&#060;None&#062;` en la Lista de propiedades (o " " en JSON).
 
-To stop inheriting a form, select `\&#060;None&#062;` in the Property List (or " " in JSON) for the [Inherited Form Name](properties_FormProperties.md#inherited-form-name) property.
+Para dejar de heredar un formulario, seleccione `\&#060;None&#062;` en la lista de propiedades (o " " en JSON) para la propiedad [Inherited Form Name](properties_FormProperties.md#inherited-form-name).
 > Es posible definir un formulario heredado en un formulario que eventualmente se utilizará como formulario heredado para un tercer formulario. La combinación de objetos se realiza de forma recursiva. 4D detecta los bucles recursivos (por ejemplo, si el formulario [table1]form1 se define como el formulario heredado de [table1]form1, es decir, él mismo) e interrumpe la cadena de formularios.
 
 ## Propiedades soportadas

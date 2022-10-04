@@ -81,7 +81,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.extension` property <!-- REF #directory.extension.Summary -->returns the extension of the folder name (if any)<!-- END REF -->. Uma extensão sempre começa com "." A propriedade devolve uma string vazia se o nome da pasta não tiver extensão.
+A propriedade `.extension` <!-- REF #directory.extension.Summary -->returns the extension of the folder name (if any)<!-- END REF -->. Uma extensão sempre começa com "." A propriedade devolve uma string vazia se o nome da pasta não tiver extensão.
 
 Essa propriedade é**apenas leitura**.
 
@@ -103,7 +103,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.fullName` property <!-- REF #directory.fullName.Summary -->returns the full name of the folder, including its extension (if any)<!-- END REF -->.
+A propriedade `.fullName` <!-- REF #directory.fullName.Summary -->returns the full name of the folder, including its extension (if any)<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 
@@ -125,7 +125,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.hidden` property returns <!-- REF #directory.hidden.Summary --> true if the folder is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
+A propriedade `.size` devolve <!-- REF #directory.hidden.Summary --> true if the folder is set as "hidden" at the system level<!-- END REF -->, and false otherwise.
 
 Essa propriedade é**apenas leitura**.
 
@@ -147,7 +147,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.isAlias` property returns <!-- REF #directory.isAlias.Summary -->always **false** for a `Folder` object<!-- END REF -->.
+A propriedade `.isAlias` devolve <!-- REF #directory.isAlias.Summary -->always **false** for a `Folder` object<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 
@@ -169,7 +169,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.isFile` property returns <!-- REF #directory.isFile.Summary -->always **false** for a folder<!-- END REF -->.
+A propriedade `.isFile` devolve <!-- REF #directory.isFile.Summary -->always **false** for a folder<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 
@@ -191,7 +191,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.isFolder` property returns <!-- REF #directory.isFolder.Summary -->always **true** for a folder<!-- END REF -->.
+A propriedade `.isFolder` devolve <!-- REF #directory.isFolder.Summary -->always **true** for a folder<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 
@@ -213,7 +213,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.isPackage` property returns <!-- REF #directory.isPackage.Summary -->true if the folder is a package on macOS  (and exists on disk)<!-- END REF -->. .
+A propriedade `.isPackage` devolve <!-- REF #directory.isPackage.Summary -->true if the folder is a package on macOS  (and exists on disk)<!-- END REF -->. .
 
 Em Windows, `.isPackage` sempre devolve **false**.
 
@@ -237,7 +237,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.modificationDate` property returns <!-- REF #directory.modificationDate.Summary --> the date of the folder's last modification<!-- END REF -->.
+A propriedade `.modificationDate` devolve <!-- REF #directory.modificationDate.Summary --> the date of the folder's last modification<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 
@@ -259,7 +259,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.modificationTime` property returns <!-- REF #directory.modificationTime.Summary -->the time of the folder's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+A propriedade `.modificationTime` devolve <!-- REF #directory.modificationTime.Summary -->the time of the folder's last modification<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
 Essa propriedade é**apenas leitura**.
 
@@ -281,7 +281,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.name` property returns <!-- REF #directory.name.Summary --> the name of the folder, without extension (if any)<!-- END REF -->.
+A propriedade `.name` devolve <!-- REF #directory.name.Summary --> the name of the folder, without extension (if any)<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 
@@ -303,7 +303,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.original` property returns <!-- REF #directory.original.Summary -->the same Folder object as the folder<!-- END REF -->.
+A propriedade `.original` devolve <!-- REF #directory.original.Summary -->the same Folder object as the folder<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 > Esta propriedade está disponible nas pastas para permitir que o código genérico processe pastas ou arquivos.
@@ -326,7 +326,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.parent` property returns <!-- REF #directory.parent.Summary -->the parent folder object of the folder<!-- END REF -->. .
+A propriedade `.parent` devolve <!-- REF #directory.parent.Summary -->the parent folder object of the folder<!-- END REF -->. .
 
 Se a pasta não existir no disco, se devolve um icone vazio como padrão.
 
@@ -350,7 +350,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.path` property returns <!-- REF #directory.path.Summary -->the POSIX path of the folder<!-- END REF -->. .
+A propriedade `.path` devolve <!-- REF #directory.path.Summary -->the POSIX path of the folder<!-- END REF -->. .
 
 Essa propriedade é**apenas leitura**.
 
@@ -373,7 +373,7 @@ Essa propriedade é**apenas leitura**.
 #### Descrição
 
 
-The `.platformPath` property returns <!-- REF #directory.platformPath.Summary -->the path of the folder expressed with the current platform syntax<!-- END REF -->.
+A propriedade `.platformPath` devolve <!-- REF #directory.platformPath.Summary -->the path of the folder expressed with the current platform syntax<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 
@@ -406,7 +406,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.copyTo()` function <!-- REF #directory.copyTo().Summary -->copies the `Folder` object into the specified *destinationFolder*<!-- END REF -->.
+A função `.copyTo()` <!-- REF #directory.copyTo().Summary -->copies the `Folder` object into the specified *destinationFolder*<!-- END REF -->.
 
 A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
@@ -565,7 +565,7 @@ Se quiser obter todos os arquivos que não são invisíveis na pasta Documents:
 
 #### Descrição
 
-The `.folder()` function <!-- REF #directory.folder().Summary -->creates a `Folder` object inside the parent `Folder` object and returns its reference<!-- END REF -->.
+A função `.folder()` <!-- REF #directory.folder().Summary -->creates a `Folder` object inside the parent `Folder` object and returns its reference<!-- END REF -->.
 
 Em *path*, passe uma rota relativa POSIX para designar a pasta a devolver. A rota se avaliará a partir da pasta pai como raíz.
 
@@ -607,7 +607,7 @@ Um objeto `Folder` ou null se *path* não for válido.
 
 #### Descrição
 
-The `.folders()` function <!-- REF #directory.folders().Summary -->returns a collection of `Folder` objects contained in the parent folder<!-- END REF -->.
+A função `.folders()` <!-- REF #directory.folders().Summary -->returns a collection of `Folder` objects contained in the parent folder<!-- END REF -->.
 
 Como padrão, se omitir o parâmetro *options*, só se devolvem as pastas no primeiro nível da pasta. Pode modificar isso passando, no parâmetro *options*, uma ou várias das constantes abaixo:
 
@@ -656,7 +656,7 @@ Se quiser a coleção de todas as pastas e subpastas da pasta database:
 
 #### Descrição
 
-The `.getIcon()` function <!-- REF #directory.getIcon().Summary -->returns the icon of the folder<!-- END REF -->.
+A função `.getIcon()` <!-- REF #directory.getIcon().Summary -->returns the icon of the folder<!-- END REF -->.
 
 O parâmetro opcional *size* especifica as dimensões em píxels do icone devolvido. Este valor representa em realidade a longitude do lado do quadrado que contém o icone. Icones são geralmente definidos como 32x32 píxels ('icones grandes') ou 16x16 ('icones pequenos'). Se passar 0 ou omitir este parâmetro, se devolve a versão 'icone grande'
 

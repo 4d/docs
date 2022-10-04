@@ -166,42 +166,42 @@ Utilice este área para definir el tipo por defecto para los objetos de base de 
 
 Esta área le permite renombrar los métodos del compilador que son generados automáticamente por el compilador cuando hace clic en [Declarar tipos](#generate-typing).
 
-Up to 5 compiler methods may be generated; a compiler method is only generated if the project contains the following items:
+Se pueden generar hasta 5 métodos de compilación; un método de compilación sólo se genera si el proyecto contiene los siguientes elementos:
 
-- **Variables**: Groups together process variable declarations;
-- **Interprocess Variables**: Groups together interprocess variable declarations;
-- **Arrays**: Groups together process array declarations;
-- **Interprocess Arrays**: Groups together interprocess array declarations;
-- **Methods**: Groups together method parameter declarations (for instance, `C_LONGINT(mymethod;$1;$2)`).
+- **Variables**: agrupa las declaraciones de variables proceso;
+- **Variables interproceso**: agrupa las declaraciones de variables interproceso;
+- **Arrays**: agrupa las declaraciones de arrays de proceso;
+- **Arrays interproceso**: agrupa las declaraciones de arrays interproceso;
+- **Métodos**: agrupa las declaraciones de parámetros de métodos (por ejemplo, `C_LONGINT(mymethod;$1;$2)`).
 
-You can rename each of these methods in the corresponding areas, but they will always be preceded by the label `Compiler_` (non-modifiable). The name of each method (prefix included) must be no longer than 31 characters. It must also be unique and comply with [4D rules for naming methods](Concepts/identifiers.md#project-methods).
+Puede renombrar cada uno de estos métodos en las áreas correspondientes, pero siempre irán precedidos de la etiqueta `Compilador_` (no modificable). El nombre de cada método (prefijo incluido) no debe tener más de 31 caracteres. También debe ser único y cumplir con [las reglas de 4D para nombrar métodos](Concepts/identifiers.md#project-methods).
 
 ## Herramientas de compilación
 
 ### Archivo Symbol
 
-If you check the [**Generate the symbol file**](#generate-the-symbol-file) option in the compiler settings, a symbol file called `ProjectName_symbols.txt` is created in the [Logs folder](Project/architecture.md#logs) of the project during compilation. Está dividido en varias partes:
+Si selecciona la opción [**Generar el archivo de simbolos**](#generate-the-symbol-file) en las propiedades del compilador, un archivo de símbolos llamado `ProjectName_symbols.txt` se crea en la [carpeta Logs](Project/architecture.md#logs) del proyecto durante la compilación. Está dividido en varias partes:
 
 #### Lista de las variables proceso e interproceso
 
 Estas dos listas contienen cuatro columnas:
 
-- Names of process and interprocess variables and arrays used in your project. Estas variables están listadas en orden alfabético.
-- Tipo de la variable. Types are set by compiler directive commands or are determined by the compiler based on the use of the variable. If the type of a variable cannot be determined, the column is empty.
+- Nombres de las variables y arrays proceso e interproceso utilizados en su proyecto. Estas variables están listadas en orden alfabético.
+- Tipo de la variable. Los tipos se definen por medio de comandos de directivas de compilación o son determinados por el compilador en función del uso de la variable. Si no se puede determinar el tipo de una variable, la columna está vacía.
 - Número de dimensiones si la variable es un array.
-- Reference to the context in which the compiler established the type of the variable. If the variable is used in several contexts, the context mentioned is the one used by the compiler to determine its type.
-  - If the variable was found in a database method, the database method name is given, preceded by (M)*.
-  - If the variable was found in a project method, the method is identified as it has been defined in 4D, preceded by (M).
-  - If the variable was found in a trigger, the table name is given, preceded by (TM).
-  - If the variable was found in a form method, the form name is given, preceded by the table name and (FM).
-  - If the variable was found in an object method, the object method’s name is given, preceded by the form name, table name, and by (OM).
-  - If the variable is an object in a form and does not appear in any project, form, object method, or trigger, the name of the form in which it appears is given, preceded by (F). At the end of each list, you can find the sizes of the process and interprocess variables in bytes.
+- Referencia al contexto en el que el compilador estableció el tipo de la variable. Si la variable se utiliza en varios contextos, el contexto mencionado es el que utiliza el compilador para determinar su tipo.
+  - Si la variable se encuentra en un método base, se indica el nombre del método base, precedido por (M)*.
+  - Si la variable se encuentra en un método proyecto, el método se identifica como se ha definido en 4D, precedido de (M).
+  - Si la variable se encuentra en un trigger, se indica el nombre de la tabla, precedido por (TM).
+  - Si la variable se encontró en un método formulario, se da el nombre del formulario, precedido por el nombre de la tabla y (FM).
+  - Si la variable se encontró en un método objeto, se da el nombre del método objeto, precedido por el nombre del formulario, el nombre de la tabla y por (OM).
+  - Si la variable es un objeto de un formulario y no aparece en ningún método proyecto, formulario, objeto o trigger, se indica el nombre del formulario en el que aparece, precedido de (F). Al final de cada lista, puede encontrar los tamaños de las variables proceso e interproceso en bytes.
 
-> When compiling, the compiler cannot determine in which process a given process variable is used. Una variable proceso puede tener un valor diferente en cada proceso. Consequently, all process variables are systematically duplicated as each new process is launched: it is thus advisable to watch out for the amount of memory that they will take up. Also, keep in mind that the space for process variables is not related to the stack size for the process.
+> Al compilar, el compilador no puede determinar en qué proceso se utiliza una determinada variable proceso. Una variable proceso puede tener un valor diferente en cada proceso. En consecuencia, todas las variables proceso se duplican sistemáticamente cuando se lanza cada nuevo proceso: por lo tanto, es aconsejable vigilar la cantidad de memoria que ocuparán. También hay que tener en cuenta que el espacio para las variables proceso no está relacionado con el tamaño de la pila del proceso.
 
 #### Lista de las variables locales
 
-The list of local variables is sorted by database method, project method, trigger, form method, and object method, in the same order as in 4D.
+La lista de variables locales está ordenada por método base, método proyecto, trigger, método formulario y método objeto, en el mismo orden que en 4D.
 
 Esta lista está dividida en tres columnas:
 
@@ -211,7 +211,7 @@ Esta lista está dividida en tres columnas:
 
 #### Lista completa de los métodos
 
-A complete list of your database and project methods is given at the end of the file with:
+Al final del archivo se ofrece una lista completa de sus métodos base y proyecto con:
 
 - su tipo (procedimiento o función que devuelve un valor)
 - los tipos de datos de sus parámetros y del resultado devuelto
@@ -221,54 +221,54 @@ A complete list of your database and project methods is given at the end of the 
 Esta información aparece así:
 
 ```
-Procedure or Function <Method name>(parameter data types):
-result data type, number of calls, Thread Safe or Thread Unsafe
+Procedimiento o función <Method name>(tipos de datos de los parámetros):
+tipo resultado, número de llamadas, Thread Safe o Thread Unsafe
 ```
 
 ### Archivo de errores
 
-You can choose whether or not to generate an error file during compilation using the [**Generate error file**](#generate-error-file) option in the compiler settings. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](Project/architecture.md#logs) of the project.
+Puede elegir si generar o no un archivo de errores durante la compilación utilizando la opción [**Generar archivo de errores**](#generate-error-file) en las propiedades del compilador. El archivo de errores se llama automáticamente `projectName_errors.xml` y se coloca en la carpeta [Logs](Project/architecture.md#logs) del proyecto.
 
-Although the errors can be accessed directly via the [compiler window](#compile), it can be useful to have an error file that can be transmitted from one machine to another. The error file is generated in XML format in order to facilitate automatic parsing of its contents. También permite la creación de interfaces personalizadas de visualización de errores.
+Aunque se puede acceder a los errores directamente a través de la [ventana de compilación](#compile), puede ser útil disponer de un archivo de errores que se pueda transmitir de una máquina a otra. El archivo de errores se genera en formato XML para facilitar el análisis automático de su contenido. También permite la creación de interfaces personalizadas de visualización de errores.
 
-The length of the error file depends on the number of errors and warnings issued by the compiler.
+La longitud del archivo de errores depende del número de errores y advertencias emitidos por el compilador.
 
 La estructura del archivo de errores es la siguiente:
 
-- At the top of the file is the list of errors and warnings, sorted by method and in their order of creation in 4D.
-- In the ***General errors*** section, all the typing impossibilities and identity ambiguities are grouped together. Estos errores y advertencias se listan utilizando el siguiente formato:
+- En la parte superior del archivo se encuentra la lista de errores y advertencias, ordenados por método y en su orden de creación en 4D.
+- En la sección ***Errores generales*** se agrupan todas las imposibilidades de digitación y las ambigüedades de identidad. Estos errores y advertencias se listan utilizando el siguiente formato:
   - el número de línea en el método (0 indica errores generales)
-  - warning attribute indicating whether the detected anomaly is a warning (warning="true") or an error (warning="false")
+  - el atributo warning indica si la anomalía detectada es una advertencia (warning="true") o un error (warning="false")
   - diagnóstico que describe el error
 
-If your project does not have any general errors, the file will not have a *General errors* section.
+Si su proyecto no tiene errores generales, el archivo no tendrá una sección *Errores generales*.
 
 Un archivo de error puede contener tres tipos de mensajes:
 
-- **Errors linked to a specific line**: these errors are displayed in context — the line in which they were found — with an explanation. The compiler reports this type of error when it encounters an expression in which it sees an inconsistency related to data type or syntax. In the compiler window, double–click on each error detected in order to open the method concerned directly in the 4D Code Editor, with the line containing the error highlighted.
+- **Errores asociados a una línea específica**: estos errores se muestran en contexto -la línea en la que se encontraron y con una explicación. El compilador informa de este tipo de error cuando encuentra una expresión en la que ve una incoherencia relacionada con el tipo de datos o la sintaxis. En la ventana del compilador, haga doble clic en cada error detectado para abrir el método en cuestión directamente en el editor de código 4D, con la línea que contiene el error resaltada.
 
-- **General errors**: These are errors that make it impossible to compile the project. Hay dos casos en los que el compilador informa de un error general:
+- **Errores generales**: son errores que imposibilitan la compilación del proyecto. Hay dos casos en los que el compilador informa de un error general:
   - No se ha podido determinar el tipo de datos de una variable proceso.
   - Dos tipos diferentes de objetos tienen el mismo nombre.
 
-General errors are so named because they cannot be linked to any specific method. In the first case, the compiler could not perform a specified typing anywhere in the project. In the second, it was unable to decide whether to associate a given name with one object rather than with another.
+Los errores generales se denominan así porque no pueden vincularse a ningún método específico. En el primer caso, el compilador no pudo realizar una tipificación específica en ninguna parte del proyecto. En el segundo, no pudo decidir si asociar un nombre determinado con un objeto y no con otro.
 
-- **Avisos**: los avisos no son errores. They do not prevent the project from being compiled, but simply point out potential code errors. En la ventana del compilador, las advertencias aparecen en itálica. Double-click on each warning to open the method concerned directly in the 4D Code Editor, with the line containing the warning highlighted.
+- **Avisos**: los avisos no son errores. No impiden la compilación del proyecto, sino que simplemente señalan posibles errores de código. En la ventana del compilador, las advertencias aparecen en itálica. Haga doble clic en cada advertencia para abrir el método en cuestión directamente en el editor de código 4D, con la línea que contiene la advertencia resaltada.
 
 ### Control de ejecución
 
-The code generated by the 4D compiler automatically checks that every access to an array element or a character reference is done within the actual range of array elements or string characters. Los accesos fuera de rango provocarán errores durante la ejecución.
+El código generado por el compilador de 4D comprueba automáticamente que cada acceso a un elemento del array o a una referencia de caracter se efectúe dentro del rango real de los elementos del array o de los caracteres de la cadena. Los accesos fuera de rango provocarán errores durante la ejecución.
 
-In some cases, you might prefer range checking not to apply to certain parts of the code that are considered to be reliable. More particularly, in the case of loops that are repeated a great number of times, and when running the compiled database on older machines, range checking can significantly slow down processing. If you are absolutely certain that the code concerned is reliable and cannot cause system errors, you can disable range checking locally.
+En algunos casos, puede preferir que el control de rangos no se aplique a ciertas partes del código que se consideran fiables. En particular, en el caso de los bucles que se repiten un gran número de veces, y cuando se ejecuta la base compilada en máquinas antiguas, el control de rangos puede ralentizar considerablemente el procesamiento. Si está absolutamente seguro de que el código en cuestión es fiable y no puede causar errores en el sistema, puede desactivar la comprobación del rango localmente.
 
-To do this, you must surround the code to be excluded from range checking with the special comments `//%R-` and `//%R+`. The `//%R-` comment disables range checking and `//%R+` enables it again:
+Para ello, debe rodear el código a excluir del control de rangos con los comentarios especiales `//%R-` y `//%R+`. El comentario `//%R-` desactiva el control de rangos y `//%R+` lo reactiva:
 
 ```4d
-  // %R-   to disable range checking
+  // %R- para desactivar el control de rangos
 
- ... //Place the code to be excluded from range checking here
+ ... //Coloque aquí el código a excluir del control de rangos
 
-  // %R+   to enable range checking again for the rest
+// %R+ para volver a reactivar el control de rangos para el resto
 ```
 
 ## Acerca de los compiladores
@@ -276,9 +276,9 @@ To do this, you must surround the code to be excluded from range checking with t
 4D incluye dos compiladores:
 
 - un compilador "clásico", utilizado para compilar código nativo para los procesadores Intel/AMD;
-- a Silicon compiler, used to compile native code for Apple Silicon processors.
+- un compilador Silicon, utilizado para compilar código nativo para los procesadores Apple Silicon.
 
-The classic compiler can be used on any platform, while the Silicon compiler can only be used on a Mac machine:
+El compilador clásico puede utilizarse en cualquier plataforma, mientras que el compilador Silicon sólo puede utilizarse en una máquina Mac:
 
 |             | Compilar para Windows | Compilación para Intel Mac | Compilación para Mac Silicon |
 | ----------- |:---------------------:|:--------------------------:|:----------------------------:|
@@ -286,35 +286,35 @@ The classic compiler can be used on any platform, while the Silicon compiler can
 | Intel Mac   |       &#10003;        |          &#10003;          |           &#10003;           |
 | Silicon Mac |       &#10003;        |          &#10003;          |           &#10003;           |
 
-Ambos compiladores están integrados en 4D. The appropriate compiler is automatically selected depending on the [compilation target](#compilation-target) option.
+Ambos compiladores están integrados en 4D. El compilador adecuado se selecciona automáticamente en función de la opción [objetivo de compilación](#compilation-target).
 
 ### Compilador clásico
 
-The classic compiler generates native compiled code for Intel/AMD processors on any machines. No requiere ninguna configuración específica.
+El compilador clásico genera código compilado nativo para procesadores Intel/AMD en cualquier máquina. No requiere ninguna configuración específica.
 
-Resulting compiled code is stored in the [DerivedData](architecture.md#deriveddata) folder of the project.
+El código compilado resultante se almacena en la carpeta [DerivedData](architecture.md#deriveddata) del proyecto.
 
 ### Compilador Silicon
 
-The Silicon compiler generates native compiled code for Apple Silicon processors, such as *Apple M1*.
+El compilador Silicon genera código compilado nativo para los procesadores Apple Silicon, como *Apple M1*.
 
-Resulting compiled code is stored in the [Libraries](architecture.md#libraries) folder of the project.
+El código compilado resultante se almacena en la carpeta [Libraries](architecture.md#libraries) del proyecto.
 
 #### Requisitos
 
-- **Apple machine**: The Silicon compiler can only be run from an Apple machine.
-- **4D Project architecture**: The Silicon compiler is only available for 4D developments using [project architecture](architecture.md).
-- **Xcode or Developer Tools**: The Silicon compiler calls the **Clang** open-source macOS compiler to compile the project from C++ code at the [second step](#incremental-compiler) of compilation. **Xcode or Developer Tools**: The Silicon compiler calls the **Clang** open-source macOS compiler to compile the project from C++ code at the [second step](#incremental-compiler) of compilation.
-  - **If you already have** Xcode or Developer Tools installed on your computer, you only need to make sure that its version is compliant with 4D requirements.
-  - **If you do not have** any of these tools installed on your computer, you will need to download one of them from the Apple Developer web site.
+- **Ordenador Apple**: el compilador Silicon sólo puede ejecutarse desde una máquina Apple.
+- **Arquitectura proyecto de 4D**: el compilador Silicon sólo está disponible para los desarrollos 4D que utilizan la [arquitectura proyecto](architecture.md).
+- **Herramientas Xcode o Developer**: el compilador Silicon llama al compilador de código abierto de macOS **Clang** para compilar el proyecto a partir de código C++ en el [segundo paso](#compilador-incremental) de la compilación. *clang* requiere librerías Apple nativas, que son proporcionadas por el paquete **Xcode** o **Developer Tools**.
+  - **Si ya tiene** Xcode o Developer Tools instalados en su ordenador, sólo tiene que asegurarse de que su versión cumple con los requisitos de 4D.
+  - **Si no tiene** ninguna de estas herramientas instaladas en su ordenador, tendrá que descargar una de ellas desde el sitio web Apple Developer.
 
-> We recommend to install **Xcode**, which is quite simple to install. You can decide to install **Developer Tools** which is more compact, however its installation is a little more complex.
+> Recomendamos instalar **Xcode**, que es bastante sencillo de instalar. Puede decidir instalar **Developer Tools** que es más compacto, sin embargo su instalación es un poco más compleja.
 
-In any cases, the 4D Silicon compiler will warn you if your configuration does not comply with its requirements.
+En todos los casos, el compilador Silicon de 4D le advertirá si su configuración no cumple con sus requisitos.
 
-#### Compilador incremental
+#### Compilación incremental
 
 El compilador Silicon es incremental, lo que significa que:
 
-- During the very first compilation, **all 4D methods** are compiled. Este paso podría tomar un cierto tiempo. Sin embargo, sólo ocurre una vez.
-- During all subsequent compilations, only **new or modified methods** are processed, thus reducing drastically the compilation time.
+- Durante la primera compilación, se compilan **todos los métodos 4D**. Este paso podría tomar un cierto tiempo. Sin embargo, sólo ocurre una vez.
+- Durante todas las compilaciones posteriores, sólo se procesan los métodos **nuevos o modificados**, lo que reduce drásticamente el tiempo de compilación.

@@ -7,12 +7,12 @@ title: PHP ページ
 
 ## インタープリター
 
--   **IP Address** and Port number By default, 4D provides a PHP interpreter, compiled in FastCGI. 内部的なアーキテクチャーに関連する理由により、実行リクエストは特定の HTTPアドレスの PHPインタープリターに送信されます。 4D はデフォルトでアドレス 127.0.0.1 そしてポート 8002 を使用します。 このアドレスやポートが他のサービスですでに使用されている場合、あるいは同じマシン上で複数のインタープリターが動作する場合、設定を変更する必要があります。 To do this, you modify the **IP Address** and **Port number** parameters.\
-  Note that the HTTP address must be on the same machine as 4D.
+-   **IPアドレス** とポート番号<br/> 4D はデフォルトで使用される FastCGI PHPインタープリターを提供しています。 内部的なアーキテクチャーに関連する理由により、実行リクエストは特定の HTTPアドレスの PHPインタープリターに送信されます。 4D はデフォルトでアドレス 127.0.0.1 そしてポート 8002 を使用します。 このアドレスやポートが他のサービスですでに使用されている場合、あるいは同じマシン上で複数のインタープリターが動作する場合、設定を変更する必要があります。 これをおこなうには **IPアドレス** と **ポート番号** パラメーターを変更します。\
+  HTTPアドレスは 4D と同じマシンでなければならない点に注意してください。
 
--   **External interpreter** If you use an external PHP interpreter, it must be compiled in FastCGI and be on the same machine as 4D (see "Using another PHP interpreter or another php.ini file" in [Executing PHP scripts in 4D](https://doc.4d.com/4Dv19/4D/19.1/Executing-PHP-scripts-in-4D.300-5654093.en.html)). このオプションを選択すると 4D は内部の PHPインタープリターに接続しなくなります。 この設定では、外部インタープリターの制御を開発者がおこなわなくてはならない点に留意してください。
+-   **外部インタープリター**<br/> 外部の PHPインタープリターを使用する場合、それは FastCGI でコンパイルされ、4D と同じマシン上になければなりません ([4DでPHPスクリプトを実行する](https://doc.4d.com/4Dv19/4D/19.1/Executing-PHP-scripts-in-4D.300-5654093.ja.html) の "異なるPHPインタープリターとphp.iniを使用する" 参照)。 このオプションを選択すると 4D は内部の PHPインタープリターに接続しなくなります。 この設定では、外部インタープリターの制御を開発者がおこなわなくてはならない点に留意してください。
 
-**4D Server:** この設定は、4D Server と 4Dリモートマシン間で共有されます。 つまり、サーバーマシンで外部インタープリターを利用する時は、クライアントマシンで内部インタープリターを利用することはできません。 もしサーバーがポート 9002 で外部インタープリターを利用する場合には、クライアントマシンでも同じポート番号でインタープリターを利用しなければなりません。
+**4D Server:** この設定は、4D Server と 4Dリモートマシン間で共有されます。つまり、サーバーマシンで外部インタープリターを利用する時は、クライアントマシンで内部インタープリターを利用することはできません。 もしサーバーがポート 9002 で外部インタープリターを利用する場合には、クライアントマシンでも同じポート番号でインタープリターを利用しなければなりません。
 
 ## オプション
 

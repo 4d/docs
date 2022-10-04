@@ -202,7 +202,7 @@ The `.disposition` property contains <!-- REF #MailAttachmentClass.disposition.S
 
 #### Descrição
 
-The `.getContent()` function <!-- REF #MailAttachmentClass.getContent().Summary -->The `.getContent()` function<!-- END REF -->. Summary -->permite que crie um objeto anexo que pode adicionar a um [objeto Email ](EmailObjectClass.md#email-object)<!-- END REF -->.
+A função `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary -->The `.getContent()` function<!-- END REF -->. Summary -->permite que crie um objeto anexo que pode adicionar a um [objeto Email ](EmailObjectClass.md#email-object)<!-- END REF -->.
 
 ## .name
 
@@ -236,7 +236,7 @@ The `.path` property contains <!-- REF #MailAttachmentClass.path.Summary -->the 
 
 #### Descrição
 
-The `.platformPath` property returns <!-- REF #MailAttachmentClass.platformPath.Summary -->the path of the attachment file expressed with the current platform syntax<!-- END REF -->.
+A propriedade `.platformPath` devolve <!-- REF #MailAttachmentClass.platformPath.Summary -->the path of the attachment file expressed with the current platform syntax<!-- END REF -->.
 
 ## .type
 

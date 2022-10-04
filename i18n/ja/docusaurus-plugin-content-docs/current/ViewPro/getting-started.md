@@ -46,7 +46,7 @@ title: はじめに
 
 *   複数の連続したセルを選択するには、マウスをセレクションの端から端へとドラッグします。 また、Shiftキーを押しながらセレクションの二つの端をクリックすることでも選択可能です。
 
-*   To select all cells in the spreadsheet, click on the cell at the top left of the area: ![](../assets/en/ViewPro/vpSelectAll.PNG)
+*   スプレッドシート内のセルをすべて選択するには、エリアの左上端にあるセルをクリックします: ![](../assets/en/ViewPro/vpSelectAll.PNG)
 
 *   列を選択するには、対応する文字 (アルファベット) をクリックします。
 
@@ -62,7 +62,7 @@ title: はじめに
 
 ![](../assets/en/ViewPro/vpInput.PNG)
 
-セルが選択されていれば、たとえ挿入カーソルが非表示であってもデータを直接入力することができます。 The input then replaces the content of the cell.
+セルが選択されていれば、たとえ挿入カーソルが非表示であってもデータを直接入力することができます。 その場合、入力した内容はセルのコンテンツを上書きします。
 
 **Tab**キーはセルの内容を確定し、一つ右のセルを選択します。 **Shift + Tab**キーの組み合わせでは、セル入力を確定したあと、一つ左のセルを選択します。
 

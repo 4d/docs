@@ -31,7 +31,7 @@ title: 印刷
 | paperWidth  | string | paperName という名前の用紙が見つからなかった場合に使用されます。 単位の明記が必要です: pt, in, mm, cm。  |
 | paperHeight | string | paperName という名前の用紙が見つからなかった場合に使用されます。 単位の明記が必要です: pt, in, mm, cm。  |
 | orientation | string | "landscape" (デフォルトは "portrait")                                    |
-| スケール        | number | 最小値: 0                                                             |
+| scale       | number | 最小値: 0                                                             |
 
 
 ---

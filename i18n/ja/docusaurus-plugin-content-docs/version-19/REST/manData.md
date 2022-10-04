@@ -89,7 +89,7 @@ RESTレスポンスにどの属性を含めて返してもらうかを指定す�
 
 | Object        | シンタックス                                              | 例題                                                            |
 | ------------- | --------------------------------------------------- | ------------------------------------------------------------- |
-| DataClass     | {dataClass}/{att1,att2...}                          | /People/firstName,lastName                                    |
+| データクラス        | {dataClass}/{att1,att2...}                          | /People/firstName,lastName                                    |
 | エンティティのコレクション | {dataClass}/{att1,att2...}/?$filter="{filter}"      | /People/firstName,lastName/?$filter="lastName='a@'"           |
 | 特定のエンティティ     | {dataClass}({ID})/{att1,att2...}                    | /People(1)/firstName,lastName                                 |
 |               | {dataClass}:{attribute}(value)/{att1,att2...}/      | /People:firstName(Larry)/firstName,lastName/                  |

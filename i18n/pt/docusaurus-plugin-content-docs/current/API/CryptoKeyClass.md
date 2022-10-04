@@ -114,7 +114,7 @@ Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised
 | options    | Objeto | -> | Opções de codificação                                                                 |
 | Resultados | Objeto | <- | Estado|<!-- END REF -->                                                     |
 
-The `.decrypt()` function <!-- REF #CryptoKey.decrypt().Summary -->decrypts the *message* parameter using the **private** key<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
+A função `.decrypt()` <!-- REF #CryptoKey.decrypt().Summary -->decrypts the *message* parameter using the **private** key<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
 
 "RSA": um par de chaves RSA, utilizando `settings.size` como \[.size\](#size).
 
@@ -161,7 +161,7 @@ A função devolve um objeto "status" com a propriedade `success` definida como 
 | options    | Objeto | -> | Opções de decodificação                                                                               |
 | Resultados | Text   | <- | Mensagem criptografada e codificada utilizando `options.encodingEncrypted`|<!-- END REF --> |
 
-The `.encrypt()` function <!-- REF #CryptoKey.encrypt().Summary -->encrypts the *message* parameter using the **public** key<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
+A função `.encrypt()` <!-- REF #CryptoKey.encrypt().Summary -->encrypts the *message* parameter using the **public** key<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
 
 "RSA": um par de chaves RSA, utilizando `settings.size` como \[.size\](#size).
 
@@ -198,7 +198,7 @@ The returned value is an encrypted message.
 | ---------- | ---- | -- | ------------------------------------------------------- |
 | Resultados | Text | <- | Chave privada em formato PEM|<!-- END REF --> |
 
-The `.getPrivateKey()` function  <!-- REF #CryptoKey.getPrivateKey().Summary -->returns the private key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
+A função `.getPrivateKey()`  <!-- REF #CryptoKey.getPrivateKey().Summary -->returns the private key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
 
 #### *Resultados*
 
@@ -225,7 +225,7 @@ O valor devolvido é a chave privada.
 | ---------- | ---- | -- | ------------------------------------------------------- |
 | Resultados | Text | <- | Chave pública em formato PEM|<!-- END REF --> |
 
-The `.getPublicKey()` function <!-- REF #CryptoKey.getPublicKey().Summary -->returns the public key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
+A função `.getPublicKey()` <!-- REF #CryptoKey.getPublicKey().Summary -->returns the public key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
 
 #### *Resultados*
 
@@ -271,7 +271,7 @@ O valor devolvido é a chave pública.
 | options    | Objeto | -> | Opções de assinatura                                                                                       |
 | Resultados | Text   | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option|<!-- END REF --> |
 
-The `.sign()` function <!-- REF #CryptoKey.sign().Summary -->signs the utf8 representation of a *message* string<!-- END REF --> using the `CryptoKey` object keys and provided *options*. Summary -->verifica a assinatura base64 contra a representação utf8 de *message*<!-- END REF --> utilizando as chaves do objeto `CryptoKey` e as *options* proporcionadas.
+A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->signs the utf8 representation of a *message* string<!-- END REF --> using the `CryptoKey` object keys and provided *options*. Summary -->verifica a assinatura base64 contra a representação utf8 de *message*<!-- END REF --> utilizando as chaves do objeto `CryptoKey` e as *options* proporcionadas.
 
 `CryptoKey` deve conter uma chave válida **privada**.
 
@@ -354,7 +354,7 @@ Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the k
 | Resultados | Objeto | <- | Estado da verificação|<!-- END REF -->                                                                   |
 
 
-The `.verify()` function <!-- REF #CryptoKey.verify().Summary -->verifies the base64 signature against the utf8 representation of *message*<!-- END REF --> using the `CryptoKey` object keys and provided *options*.
+A função `.verify()` <!-- REF #CryptoKey.verify().Summary -->verifies the base64 signature against the utf8 representation of *message*<!-- END REF --> using the `CryptoKey` object keys and provided *options*.
 
 `CryptoKey` deve conter uma chave válida **publica**.
 

@@ -75,9 +75,9 @@ title: アプリケーションビルド
 
 インタープリターコードを含まないアプリケーションをビルドします。
 
-これにより、`Compiled Database/\<project name>` フォルダーの中に *.4dz* ファイルが作成されます。 たとえば、アプリケーション名を "MyProject" にした場合、4D は次のものを作成します:
+これにより、*Compiled Database/&lt;project name&gt;* フォルダーの中に `.4dz` ファイルが作成されます。 たとえば、アプリケーション名を "MyProject" にした場合、4D は次のものを作成します:
 
-`\<destination\>/Compiled Database/MyProject/MyProject.4dz`
+`<destination>/Compiled Database/MyProject/MyProject.4dz`
 
 .4dz ファイルは ZIP 圧縮されたプロジェクトフォルダーです (**注:** バイナリデータベースの場合に生成される .4DC ファイルと同義ではないことに注意が必要です)。 .4dz ファイルを開けるのは 4D Server、4D Volume ライセンス (組み込みアプリケーション)、および 4D です。 圧縮・最適化された .4dz ファイルによってプロジェクトパッケージの展開が容易になります。
 
@@ -95,11 +95,12 @@ title: アプリケーションビルド
 
 アプリケーション名を *MyComponent* に指定した場合、4D は *Components* フォルダーを作成し、その中に *MyComponent.4dbase* フォルダーを生成します:
 
-`\<destination>/Components/MyComponent.4dbase/MyComponent.4DZ`.
+`<destination>/Components/MyComponent.4dbase/MyComponent.4DZ`.
 
 *MyComponent.4dbase* フォルダーには次のファイルが含まれます:
 
 * *MyComponent.4DZ* ファイル
+
 * *Resources* フォルダー: 関連リソースは自動的にこのフォルダーにコピーされます。 コンポーネントは、他のコンポーネントやプラグインを使用できないため、その他の "Components" や "Plugins" フォルダーはコピーされません。
 
 ## アプリケーションページ
@@ -350,19 +351,19 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 ### 生成されるファイル
 
-クライアント/サーバーアプリケーションをビルドすると、保存先フォルダー内に **Client Server executable** という名前の新しいフォルダーが作成されます。 このフォルダーにはさらに2つのサブフォルダー、 *\&lt;ApplicationName&gt;Client* と *\&lt;ApplicationName&gt;Server* があります。
+クライアント/サーバーアプリケーションをビルドすると、保存先フォルダー内に **Client Server executable** という名前の新しいフォルダーが作成されます。 このフォルダーにはさらに2つのサブフォルダー、 `<ApplicationName>Client` と `<ApplicationName>Server` があります。
 > エラーが発生した場合これらのフォルダーは作成されません。 そのような場合には、エラーの原因を特定するために [ログファイル](#ログファイル) の内容を確認してください。
 
-*\&lt;ApplicationName&gt;Client* フォルダーは、アプリケーションビルダーを実行したプラットフォームに対応するクライアントアプリケーションを格納します。 このフォルダーを各クライアントにインストールします。 *\&lt;ApplicationName&gt;Server* フォルダーはサーバーアプリケーションを格納します。
+`<ApplicationName>Client` フォルダーは、アプリケーションビルダーを実行したプラットフォームに対応するクライアントアプリケーションを格納します。 このフォルダーを各クライアントにインストールします。 `<ApplicationName>Server` フォルダーはサーバーアプリケーションを格納します。
 
 これらのフォルダーの内容はカレントのプラットフォームにより異なります:
 
-* *Windows* - 各フォルダーに`\<ApplicationName>Client.exe` (クライアント用) あるいは `\<ApplicationName>Server.exe` (サーバー用) という名前の実行ファイル、およびそれぞれに対応する.rsrファイルが作成されます。 これらのフォルダーには、アプリケーション実行のために必要な様々なファイルやフォルダー、および元の 4D Server や 4D Volume Desktop に追加されたカスタマイズ項目も格納されます。
-* *macOS* - 各フォルダーは `\<ApplicationName>Client.app` (クライアント用) と `\<ApplicationName>Server.app` (サーバー用) という名前のアプリケーションパッケージになっています。 各パッケージには動作に必要なすべてのファイルが含まれます。 macOS では、アプリケーションを実行するためにパッケージをダブルクリックします。
+* *Windows* - 各フォルダーに`<ApplicationName>Client.exe` (クライアント用) あるいは `<ApplicationName>Server.exe` (サーバー用) という名前の実行ファイル、およびそれぞれに対応する.rsrファイルが作成されます。 これらのフォルダーには、アプリケーション実行のために必要な様々なファイルやフォルダー、および元の 4D Server や 4D Volume Desktop に追加されたカスタマイズ項目も格納されます。
+* *macOS* - 各フォルダーは `<ApplicationName>Client.app` (クライアント用) と `<ApplicationName>Server.app` (サーバー用) という名前のアプリケーションパッケージになっています。 各パッケージには動作に必要なすべてのファイルが含まれます。 macOS では、アプリケーションを実行するためにパッケージをダブルクリックします。
 
  > ビルドされた macOSパッケージには、Windows版のサブフォルダーと同じものが格納されています。 ビルドされた macOS パッケージの内容を表示するにはアイコンを **Control+クリック** して、"パッケージの内容を表示" を選択します。
 
-"クライアントの自動更新を有効にする" オプションを選択している場合、`\<ApplicationName>Server` フォルダー/パッケージには追加で *Upgrade4DClient* サブフォルダーが作成されます。 このサブフォルダーには macOS/Windows 版のクライアントアプリケーションが圧縮されて格納されます。 クライアントアプリケーションを自動更新するときに、このファイルは使用されます。
+"クライアントの自動更新を有効にする" オプションを選択している場合、*&lt;ApplicationName&gt;Server* フォルダー/パッケージには追加で `Upgrade4DClient` サブフォルダーが作成されます。 このサブフォルダーには macOS/Windows 版のクライアントアプリケーションが圧縮されて格納されます。 クライアントアプリケーションを自動更新するときに、このファイルは使用されます。
 
 #### Webファイルの場所
 
@@ -374,12 +375,12 @@ Windows用サーバーアプリケーションのビルドに使用される App
 インストール場所:
 
 * **Windows**
-  * **サーバーアプリケーション** - `Client Server executable\/ \<ApplicationName>Server/Server Database` サブフォルダー内にこれらの項目を配置します。
-  * **クライアントアプリケーション** - *Client Server executable\/ \&lt;ApplicationName&gt;Client* サブフォルダー内にこれらの項目を配置します。
+  * **Server application** - in the `Client Server executable\&#060;ApplicationName&#062;Server/Server Database` subfolder.
+  * **Client application** - in the `Client Server executable\&#060;ApplicationName&#062;Client` subfolder.
 
 * **macOS**
-  * **サーバーアプリケーション** - `\<ApplicationName>Server` ソフトウェアパッケージと同階層にこれらの項目を配置します。
-  * **クライアントアプリケーション** - `\<ApplicationName>Client` ソフトウェアパッケージと同階層にこれらの項目を配置します。
+  * **サーバーアプリケーション** - `<ApplicationName>Server` ソフトウェアパッケージと同階層にこれらの項目を配置します。
+  * **クライアントアプリケーション** - `<ApplicationName>Client` ソフトウェアパッケージと同階層にこれらの項目を配置します。
 
 ### シングルユーザークライアントアプリケーションの埋め込み
 

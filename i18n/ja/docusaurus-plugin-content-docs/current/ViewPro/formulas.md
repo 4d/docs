@@ -35,20 +35,20 @@ title: 式と関数
 *   **オペランド** は、いくつかのカテゴリーに分けられます:
     *   [値](#値と演算子) (5つのデータ型がサポートされています)
     *   [他のセルへの参照](#セル参照) (相対参照、絶対参照、ミックス参照、あるいは名前での参照)
-    *   [標準のスプレッドシートファンクション (関数)](#using-functions)
+    *   [標準のスプレッドシートファンクション (関数)](#ビルトインファンクション)
     *   4Dフォーミュラに基づく [4Dファンクション](#4dファンクション) (4D変数、フィールド、メソッド、コマンド、式が利用可能です)
 
 ## 値と演算子
 
 4D View Pro は 5つのデータ型をサポートします。 それぞれのデータ型について、特定の定数と演算子がサポートされています。
 
-| データ型                              | 値                                                     | 演算子                                                                                                                                                            |
-| --------------------------------- | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Number](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (加法)<br/>- (減法)<br/>* (乗法)<br/>/ (除法)<br/>^ (べき乗、数値を自身に対してかける回数)<br/>% (パーセント -- 演算子の前の数値を100で割る)                              |
-| [日付](Concepts/dt_date.md)         | 10/24/2017                                            | + (日付 + 日数 -> 日付)<br/>+ (日付 + 時間 -> 日付 + その日の時間)<br/>- (日付 - 日数 -> 日付)<br/>- (日付 - 日付 -> 2つの日付間の日数)                                          |
-| [時間](Concepts/dt_time.md)         | 10:12:10                                              | Duration operators:<br/>+ (addition)<br/>- (subtraction)<br/>* (duration * number -> duration)<br/>/ (duration / number -> duration) |
-| [String](Concepts/dt_string.md)   | 'Sophie' または "Sophie"                                 | & (連結)                                                                                                                                                         |
-| [Boolean](Concepts/dt_boolean.md) | TRUE または FALSE                                        | -                                                                                                                                                              |
+| データ型                          | 値                                                     | 演算子                                                                                                                               |
+| ----------------------------- | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| [数値](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (加法)<br/>- (減法)<br/>* (乗法)<br/>/ (除法)<br/>^ (べき乗、数値を自身に対してかける回数)<br/>% (パーセント -- 演算子の前の数値を100で割る) |
+| [日付](Concepts/dt_date.md)     | 10/24/2017                                            | + (日付 + 日数 -> 日付)<br/>+ (日付 + 時間 -> 日付 + その日の時間)<br/>- (日付 - 日数 -> 日付)<br/>- (日付 - 日付 -> 2つの日付間の日数)             |
+| [時間](Concepts/dt_time.md)     | 10:12:10                                              | 経過時間演算子:<br/>+ (加法)<br/>- (減法)<br/>* (経過時間 * 数値 -> 経過時間)<br/>/ (経過時間 / 数値 -> 経過時間)                      |
+| [文字列](Concepts/dt_string.md)  | 'Sophie' または "Sophie"                                 | & (連結)                                                                                                                            |
+| [ブール](Concepts/dt_boolean.md) | TRUE または FALSE                                        | -                                                                                                                                 |
 
 
 ### 比較演算子
@@ -116,8 +116,8 @@ title: 式と関数
 | ---- | ----- | --------------------------------------------------------------------------------------- |
 | C5   | 相対    | 参照は相対的にセル C5 を指しており、参照が最初に使用されたセルが位置の基準となります。                                           |
 | $C$5 | 絶対    | 参照は絶対参照です。 どこで使用されるかにかかわらず、常にセル C5 を参照します。                                              |
-| $C5  | Mixed | 常にカラム C を参照しますが、行の参照は相対的で、参照が最初に使用されたセルを基準に決まります。                                       |
-| C$5  | Mixed | 常に 5行目を参照しますが、カラムの参照は相対的で、参照が最初に使用されたセルを基準に決まります。                                       |
+| $C5  | 複合    | 常にカラム C を参照しますが、行の参照は相対的で、参照が最初に使用されたセルを基準に決まります。                                       |
+| C$5  | 複合    | 常に 5行目を参照しますが、カラムの参照は相対的で、参照が最初に使用されたセルを基準に決まります。                                       |
 | セル名  | 絶対    | 参照は絶対参照です。 どこで使用されるかにかかわらず、常に [命名されたセルまたはレンジ](method-list.md#vp-add-range-name) を参照します。 |
 
 
@@ -230,8 +230,8 @@ $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 
 サポートされている引数の型の詳細については、[VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) メソッドの説明を参照ください。
 
-> 引数を宣言していない場合には、メソッドに値を順番に渡すことができ ($1、$2... に受け取られます)、それらの型は自動的に変換されます。 Dates in *jstype* will be passed as [object](Concepts/dt_object.md) in 4D code with two properties:   
-> |Property|    Type|   Description| |---|---|---| |value|   Date|   Date value| |time |Real|  Time in seconds|
+> 引数を宣言していない場合には、メソッドに値を順番に渡すことができ ($1、$2... に受け取られます)、それらの型は自動的に変換されます。 *jstype* の日付は、4Dコードでは 2つのプロパティを持つ [オブジェクト](Concepts/dt_object.md) として渡されます:   
+> |プロパティ|    型|   説明| |---|---|---| |value|   Date|   日付| |time |Real|  時間 (秒単位)|
 
 4Dプロジェクトメソッドは、$0 を介して 4D View Pro のセルフォーミュラに値を返すこともできます。 以下のデータ型の戻り値がサポートされています:
 
@@ -245,7 +245,7 @@ $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 
     | プロパティ | タイプ  | 説明       |
     | ----- | ---- | -------- |
-    | value | 日付   | 日付値      |
+    | value | Date | 日付値      |
     | time  | Real | 数値 (秒単位) |
 
 4Dメソッドが何も返さない場合は、自動的に空の文字列が返されます。
@@ -281,13 +281,13 @@ VP SET CUSTOM FUNCTIONS("ViewProArea"; $o)
 ### 仮想ストラクチャーを使ったフィールド参照
 
 
-4D View Pro では、データベースの仮想ストラクチャーを使用して 4Dフィールドを参照することができます。 つまり、\*引数とともに [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/ja/page601.html) や [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/ja/page602.html) コマンドで宣言されている場合です。 この代替方法は、アプリケーションがすでに仮想ストラクチャーに依存している場合に便利です (そうでない場合は、[`VP SET CUSTOM FUNCTIONS` の使用](#4dファンクション) が推奨されます)。
+4D View Pro では、データベースの仮想ストラクチャーを使用して 4Dフィールドを参照することができます。つまり、\*引数とともに [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/ja/page601.html) や [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/ja/page602.html) コマンドで宣言されている場合です。 この代替方法は、アプリケーションがすでに仮想ストラクチャーに依存している場合に便利です (そうでない場合は、[`VP SET CUSTOM FUNCTIONS` の使用](#4dファンクション) が推奨されます)。
 
 > **警告**: 仮想ストラクチャーと `VP SET CUSTOM FUNCTIONS` を同時に使用することはできません。 `VP SET CUSTOM FUNCTIONS` が呼び出されると、4D View Pro エリアは `SET TABLE TITLES` や `SET FIELD TITLES` コマンドに基づく機能を無視します。
 
 #### 要件
 
-*   フィールドは、データベースの仮想ストラクチャーに属していること。 つまり、\*引数とともに [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/ja/page601.html) や [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/ja/page602.html) コマンドで宣言されていなくてはなりません。
+*   フィールドは、データベースの仮想ストラクチャーに属していること。つまり、\*引数とともに [`SET TABLE TITLES`](https://doc.4d.com/4dv19/help/command/ja/page601.html) や [`SET FIELD TITLES`](https://doc.4d.com/4dv19/help/command/ja/page602.html) コマンドで宣言されていなくてはなりません。
 *   テーブルとフィールド名は ECMA 準拠であること ([ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) 参照)。
 *   フィールドの型が 4D View Pro でサポートされていること (前述参照)。
 
@@ -363,5 +363,5 @@ TABLENAME_FIELDNAME()
 *   **許可されている**: [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) によって明示的に宣言されていること。
 *   **実行可能**: メソッドがホストデータベースに属している、あるいはロードされたコンポーネントに属しており当該メソッドの "コンポーネントとホストデータベース間で共有" オプションが有効化されていること ([プロジェクトメソッドの共有](../Concepts/components.md#プロジェクトメソッドの共有) 参照)。
 *   既存の 4D View Pro ファンクションと **競合していない**: 4D View Pro ビルトインファンクションと同じ名前のプロジェクトメソッドを呼び出した場合、ファンクションの方が呼び出されます。
-> > If neither the [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) nor the [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) method has been executed during the session, 4D View Pro custom functions rely on allowed methods defined by 4D's generic `SET ALLOWED METHODS` command. この場合、プロジェクトメソッド名は JavaScript の字句文法に則ってなければなりません ([ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) 参照)。 ストラクチャー設定のグローバルなフィルタリングオプション (セキュリティページ ＞ データアクセス権) はいずれの場合でも無視されます。
+> [VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) および [VP SET ALLOWED METHODS](method-list.md#vp-set-allowed-methods) コマンドのいずれもがセッション中に実行されていない場合、4D View Pro カスタムファンクションには 4D の汎用的な `SET ALLOWED METHODS` コマンドで許可されたメソッドが使用できます。 この場合、プロジェクトメソッド名は JavaScript の字句文法に則ってなければなりません ([ECMA Script standard](https://www.ecma-international.org/ecma-262/5.1/#sec-7.6) 参照)。 ストラクチャー設定のグローバルなフィルタリングオプション (セキュリティページ ＞ データアクセス権) はいずれの場合でも無視されます。
 
