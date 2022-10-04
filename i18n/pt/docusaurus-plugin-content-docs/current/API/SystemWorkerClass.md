@@ -479,7 +479,7 @@ The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary 
 
 #### Descrição
 
-The `.terminate()` function <!-- REF #SystemWorkerClass.terminate().Summary -->The `.terminate()` function<!-- END REF -->.
+A função `.terminate()` <!-- REF #SystemWorkerClass.terminate().Summary -->The `.terminate()` function<!-- END REF -->.
 
 This function sends the instruction to terminate and give control back to the executing script.
 
