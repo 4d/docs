@@ -328,7 +328,7 @@ The `.pid` property <!-- REF #SystemWorkerClass.currentDirectory.Summary -->cont
 
 #### Descrição
 
-The `.dataType` property <!-- REF #SystemWorkerClass.dataType.Summary -->contains the type of the response body content<!-- END REF -->. .
+A propriedade `.dataType` <!-- REF #SystemWorkerClass.dataType.Summary -->contains the type of the response body content<!-- END REF -->. .
 
 Essa propriedade é**apenas leitura**.
 
@@ -479,7 +479,7 @@ The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary 
 
 #### Descrição
 
-The `.terminate()` function <!-- REF #SystemWorkerClass.terminate().Summary -->The `.terminate()` function<!-- END REF -->.
+A função `.terminate()` <!-- REF #SystemWorkerClass.terminate().Summary -->The `.terminate()` function<!-- END REF -->.
 
 This function sends the instruction to terminate and give control back to the executing script.
 

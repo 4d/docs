@@ -3,9 +3,9 @@ id: architecture
 title: Arquitectura de un proyecto
 ---
 
-A 4D project is made of several folders and files, stored within a project root folder (package folder). Por ejemplo:
+Un proyecto 4D se compone de varias carpetas y archivos, almacenados dentro de una carpeta raíz del proyecto (carpeta paquete). Por ejemplo:
 
-- MyProject (*project root folder*)
+- MyProject (*carpeta raíz del proyecto*)
     - `Componentes`
     - `Datos`
         - `Logs`
