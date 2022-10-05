@@ -305,7 +305,7 @@ Lorsque la commande `OBJECT SET VISIBLE` est utilisée avec un en-tête, elle es
 
 [Gras](properties_Text.md#bold) - [Css Class](properties_Object.md#css-class) - [Police](properties_Text.md#font) - [Couleur de fond](properties_Text.md#font-color) - [Message d'aide](properties_Help.md#help-tip) - [Alignement horizontal ](properties_Text.md#horizontal-alignment) - [Emplacement de l'icône](properties_TextAndPicture.md#icon-location) - [Italique](properties_Text.md#italic) - [Nom](properties_Object.md#object-name) - [Chemin d'accès](properties_TextAndPicture.md#picture-pathname) - [Titre](properties_Object.md#title) - [Souligné](properties_Text.md#underline) - [Variable ou expression](properties_Object.md#variable-or-expression) - [Alignement vertical](properties_Text.md#vertical-alignment) - [Largeur](properties_CoordinatesAndSizing.md#width)
 
-## Pieds de List box
+## Pieds de list box
 > Pour pouvoir accéder aux propriétés des pieds d'une List box, vous devez avoir coché l'option [Afficher pieds](properties_Footers.md#display-footers) dans la Liste des propriétés de la List box.
 
 Les List box peuvent contenir des zones de "pied de page" non saisissables, affichant des informations supplémentaires. Dans les données présentées sous forme de tableaux, les pieds sont généralement utilisés pour afficher des calculs, tels que des sommes ou des moyennes.
