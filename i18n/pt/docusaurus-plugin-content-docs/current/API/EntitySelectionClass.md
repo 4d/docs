@@ -262,6 +262,7 @@ O objeto resultante é uma seleção de entidade da dataclasse Funcionario sem d
 
 | Versão | Mudanças                                              |
 | ------ | ----------------------------------------------------- |
+| v19 R7 | Support of *entitySelection* parameter                |
 | v18 R5 | Compatível apenas com seleções de entidade alteráveis |
 | v17    | Adicionado                                            |
 
@@ -269,27 +270,38 @@ O objeto resultante é uma seleção de entidade da dataclasse Funcionario sem d
 
 
 
-<!-- REF #EntitySelectionClass.add().Syntax -->*attributePath* não se encontra na classe de dados da entity selection.<!-- END REF -->
+<!-- REF #EntitySelectionClass.add().Syntax -->**.add**( *entity* : 4D.Entity ) : 4D.EntitySelection<br/>**.add**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
 
 
 
 <!-- REF #EntitySelectionClass.add().Params -->
-| Parâmetros | Tipo                |    | Descrição                                                                       |
-| ---------- | ------------------- |:--:| ------------------------------------------------------------------------------- |
-| entity     | 4D. Entity          | -> | Entidade que deve ser adicinonada à entity selection                            |
-| Resultados | 4D. EntitySelection | -> | Seleção de entidades incluindo a *entity* adicionada|<!-- END REF --> |
+| Parâmetros      | Tipo                |    | Descrição                                                                                     |
+| --------------- | ------------------- |:--:| --------------------------------------------------------------------------------------------- |
+| entity          | 4D. Entity          | -> | Entidade que deve ser adicinonada à entity selection                                          |
+| entitySelection | 4D. EntitySelection | -> | Entity selection to be added to the original entity selection                                 |
+| Resultados      | 4D. EntitySelection | -> | Entity selection including the added *entity* or *entitySelection*|<!-- END REF --> |
 
 
 #### Descrição
 
-The `.add()` function <!-- REF #EntitySelectionClass.add().Summary -->adds the specified *entity* to the entity selection and returns the modified entity selection<!-- END REF -->.
+The `.add()` function <!-- REF #EntitySelectionClass.add().Summary -->adds the specified *entity* or *entitySelection* to the original entity selection and returns the modified entity selection<!-- END REF -->.
 > Os valores de tipo Date são convertidos em valores numéricos (segundos) e são usados para calcular a média.
 
-**Atenção:** a entity selection deve ser *alteravel*, ou seja, foi criado por ejemplo, por [`.newSelection()`](DataClassClass.md#newselection) ou `Create entity selection`, do contrário `.add()` devolverá um erro. As entity selections partilháveis não aceitam a adição de entidades. Para saber mais, consulte [Entity selections compartilháveis ou modificáveis ](ORDA/entities.md#shareable-or-alterable-entity-selections).
+:::info warning
 
+The entity selection must be *alterable*, i.e. it has been created for example by [`.newSelection()`](DataClassClass.md#newselection) or `Create entity selection`, otherwise `.add()` will return an error. As entity selections partilháveis não aceitam a adição de entidades. Para saber mais, consulte [Entity selections compartilháveis ou modificáveis ](ORDA/entities.md#shareable-or-alterable-entity-selections).
+
+:::
+
+**Adding an entity**
 
 *   Se a entity selection estiver ordenada, *entity* se adiciona ao final da seleção. Se uma referência a mesma entidade já pertencer a seleção de entidades, se duplica e se adiciona uma nova referência.
 *   Se a entity selection não estiver ordenada, *entity* se adiciona em qualquer lugar da seleção, sem uma ordem específica.
+
+**Adding an entity selection**
+
+*   If the entity selection is ordered, its order is kept and *entitySelection* is added at the end of the selection. If references to the same entities of *entitySelection* already belong to the entity selection, they are duplicated and new references are added.
+*   If the entity selection is unordered, it becomes ordered.
 > Para saber mais veja [Entity selections ordenada ou não ordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 
 A entity selection modificada é devolvida pela função, de modo que as chamadas à função podem ser encadeados.
@@ -321,6 +333,14 @@ As chamadas à função podem ser encadeadas:
  $p3:=ds. Product.get(12)
  $sel:=ds. Product.query("ID > 50")
  $sel:=$sel.add($p1).add($p2).add($p3)
+```
+
+#### Exemplo 3
+
+In a user interface, we have two lists. The user selects items from the list1 to add them to the list2.
+
+```4d
+$sellist2:=$sellist2.add($sellist1)
 ```
 
 
@@ -1293,14 +1313,15 @@ In this example, we want to find the lowest salary among all the female employee
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças   |
-| ------ | ---------- |
-| v17    | Adicionado |
+| Versão | Mudanças                         |
+| ------ | -------------------------------- |
+| v19 R7 | Support of *keepOrder* parameter |
+| v17    | Adicionado                       |
 
 </details>
 
 
-<!-- REF #EntitySelectionClass.minus().Syntax -->**.minus**( *entity* : 4D.Entity ) : 4D.EntitySelection<br/>**.minus**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
+<!-- REF #EntitySelectionClass.minus().Syntax -->**.minus**( *entity* : 4D.Entity { ; *keepOrder* : Integer } ) : 4D.EntitySelection<br/>**.minus**( *entitySelection* : 4D.EntitySelection { ; *keepOrder* : Integer } ) : 4D.EntitySelection<!-- END REF -->
 
 
 
@@ -1309,6 +1330,7 @@ In this example, we want to find the lowest salary among all the female employee
 | --------------- | ------------------- |:--:| --------------------------------------------------------------------------------------------------- |
 | entity          | 4D. Entity          | -> | Entity to substract                                                                                 |
 | entitySelection | 4D. EntitySelection | -> | Entity selection to substract                                                                       |
+| keepOrder       | Integer             | -> | `dk keep ordered` (integer) to keep the initial order in the resulting entity selection             |
 | Resultados      | 4D. EntitySelection | <- | New entity selection or a new reference on the existing entity selection|<!-- END REF --> |
 
 #### Descrição
@@ -1316,8 +1338,15 @@ In this example, we want to find the lowest salary among all the female employee
 The `.minus()` function <!-- REF #EntitySelectionClass.minus().Summary -->excludes from the entity selection to which it is applied the *entity* or the entities of *entitySelection* and returns the resulting entity selection<!-- END REF -->.
 
 *   If you pass *entity* as parameter, the function creates a new entity selection without *entity* (if *entity* belongs to the entity selection). If *entity* was not included in the original entity selection, a new reference to the entity selection is returned.
-*   If you pass *entitySelection* as parameter, the function returns an entity selection containing the entities belonging to the original entity selection without the entities belonging to *entitySelection*.
-> > Pode comparar [entity selections ordenadas ou desordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). A seleção resultante é sempre desordenada.
+*   If you pass *entitySelection* as parameter, the function returns an entity selection containing the entities belonging to the original entity selection without the entities belonging to *entitySelection*. > Pode comparar [entity selections ordenadas ou desordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
+
+By default, if you omit the *keepOrder* parameter, the resulting entity selection is unordered. If you want to keep the order of the original entity selection (for example if you want to reuse the entity selection in a user interface), pass the `dk keep ordered` constant in *keepOrder*. In this case, the result is an ordered entity selection and the order of the initial entity selection is kept.
+
+:::nota
+
+If you pass `dk keep ordered` in *keepOrder* and the removed *entitySelection* contains entities duplicated in the original entity selection, all occurences of the duplicates are removed.
+
+:::
 
 If the original entity selection or both the original entity selection and the *entitySelection* parameter are empty, an empty entity selection is returned.
 
@@ -1349,6 +1378,14 @@ We want to have a selection of female employees named "Jones" who live in New Yo
  $sel1:=ds. Employee.query("name =:1";"Jones")
  $sel2:=ds. Employee.query("city=:1";"New York")
  $sel3:=$sel1.and($sel2).minus(ds. Employee.query("gender='male'"))
+```
+
+#### Exemplo 3
+
+In a user interface, we have a list that displays items in a specific order. If the user selects items in the list to remove them, the order must be kept when refreshing the list:
+
+```4d
+$listsel:=$listsel.minus($selectedItems; dk keep ordered)
 ```
 
 
