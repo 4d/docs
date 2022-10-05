@@ -343,24 +343,10 @@ Calls to the function can be chained:
 
 #### Example 3
 
-In a user interface, we have two list boxes. The "Gamers" list box displays available gamers (no defined team). The [Selected items](../FormObjects/properties_DataSource.md#selected-items) property is `Form.selected`. The user selects gamers to add them to the "Team 1" list box.
-
-![](assets/en/API/keep-order-add.png)
-
-Form method:
+In a user interface, we have two lists. The user selects items from the list1 to add them to the list2.
 
 ```4d
-Case of 
-	: (Form event code=On Load)
-		Form.gamers:=ds.Gamers.query("team = Null")
-		Form.team1:=ds.Gamers.newSelection()
-End case
-```
-
-Code of the **Add** button:
-
-```4d
-Form.team1:=Form.team1.add(Form.selected)
+$sellist2:=$sellist2.add($sellist1)
 ```
 
 <!-- END REF -->
@@ -1326,7 +1312,7 @@ In this example, we want to find the lowest salary among all the female employee
 
 </details>
 
-<!-- REF #EntitySelectionClass.minus().Syntax -->**.minus**( *entity* : 4D.Entity { ; *keepOrder* : Integer | Boolean } ) : 4D.EntitySelection<br/>**.minus**( *entitySelection* : 4D.EntitySelection { ; *keepOrder* : Integer | Boolean } ) : 4D.EntitySelection<!-- END REF -->
+<!-- REF #EntitySelectionClass.minus().Syntax -->**.minus**( *entity* : 4D.Entity { ; *keepOrder* : Integer } ) : 4D.EntitySelection<br/>**.minus**( *entitySelection* : 4D.EntitySelection { ; *keepOrder* : Integer } ) : 4D.EntitySelection<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.minus().Params -->
@@ -1334,7 +1320,7 @@ In this example, we want to find the lowest salary among all the female employee
 |---------|--- |:---:|------|
 |entity |4D.Entity|->|Entity to substract|
 |entitySelection|4D.EntitySelection|->|Entity selection to substract|
-|keepOrder|Integer `|` Boolean|->|`dk keep ordered` (integer) or `True` (boolean) to keep the initial order in the resulting entity selection|
+|keepOrder|Integer|->|`dk keep ordered` (integer) to keep the initial order in the resulting entity selection|
 |Result|4D.EntitySelection|<-|New entity selection or a new reference on the existing entity selection|<!-- END REF -->
 
 #### Description
@@ -1344,11 +1330,11 @@ The `.minus()` function <!-- REF #EntitySelectionClass.minus().Summary -->exclud
 *	If you pass *entity* as parameter, the function creates a new entity selection without *entity* (if *entity* belongs to the entity selection). If *entity* was not included in the original entity selection, a new reference to the entity selection is returned.
 *	If you pass *entitySelection* as parameter, the function returns an entity selection containing the entities belonging to the original entity selection without the entities belonging to *entitySelection*. You can compare [ordered and/or unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection). 
 
-By default, if you omit the *keepOrder* parameter or pass `False`, the resulting entity selection is unordered. If you want to keep the order of the original entity selection (for example if you want to reuse the entity selection in a user interface), pass `True` or the `dk keep ordered` constant in *keepOrder*. In this case, the result is an ordered entity selection and the order of the initial entity selection is kept.
+By default, if you omit the *keepOrder* parameter, the resulting entity selection is unordered. If you want to keep the order of the original entity selection (for example if you want to reuse the entity selection in a user interface), pass the `dk keep ordered` constant in *keepOrder*. In this case, the result is an ordered entity selection and the order of the initial entity selection is kept.
 
 :::note
 
-If you pass `True` or `dk keep ordered` in *keepOrder* and the removed *entitySelection* contains entities duplicated in the original entity selection, all occurences of the duplicates are removed.
+If you pass `dk keep ordered` in *keepOrder* and the removed *entitySelection* contains entities duplicated in the original entity selection, all occurences of the duplicates are removed.
 
 :::
 
@@ -1388,24 +1374,11 @@ We want to have a selection of female employees named "Jones" who live in New Yo
 
 #### Example 3
 
-In a user interface, we have a list box to display gamers ordered by rank. The [Selected items](../FormObjects/properties_DataSource.md#selected-items) property is `Form.selected`. If the user selects gamers in the list box to remove them, the order must be kept when refreshing the list box:
-
-![](assets/en/API/keep-order.png)
+In a user interface, we have a list that displays items in a specific order. If the user selects items in the list to remove them, the order must be kept when refreshing the list:
 
 ```4d
-Case of 
-	: (Form event code=On Load)		
-		Form.gamers:=ds.Gamers.all().orderBy("rank asc")		
-End case
+$listsel:=$listsel.minus($selectedItems; dk keep ordered)
 ```
-
-Code of the **Remove** button:
-
-```4d
-Form.gamers:=Form.gamers.minus(Form.selected; dk keep ordered)
-```
-
-![](assets/en/API/keep-order-after.png)
 
 <!-- END REF -->
 
