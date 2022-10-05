@@ -28,7 +28,7 @@ macOS においては、ドロップダウンリストは "ポップアップメ
   aCities{3}:="Grand Blanc"
   aCities{4}:="Bad Axe"
   aCities{5}:="Frostbite Falls"
-  aCities{6}:="Green Bay"$aCities
+  aCities{6}:="Green Bay"
 ```
 
 この場合、フォームのオブジェクトに関連付けた変数名は *aCities* でなければなりません。 このコードをフォームメソッド内に置き、`On Load` フォームイベント発生時に実行されるようにします。
