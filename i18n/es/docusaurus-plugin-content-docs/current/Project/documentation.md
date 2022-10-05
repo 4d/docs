@@ -5,11 +5,11 @@ title: Documentar un proyecto
 
 
 
-In application projects, you can document your methods as well as your classes, forms, tables, or fields. La creación de documentación es especialmente apropiada para proyectos desarrollados por varios programadores y, en general, es una buena práctica de programación. La documentación puede contener una descripción de un elemento, así como cualquier información necesaria para entender cómo funciona el elemento en la aplicación.
+En los proyectos aplicación, puede documentar sus métodos así como sus clases, formularios, tablas o campos. La creación de documentación es especialmente apropiada para proyectos desarrollados por varios programadores y, en general, es una buena práctica de programación. La documentación puede contener una descripción de un elemento, así como cualquier información necesaria para entender cómo funciona el elemento en la aplicación.
 
 Los siguientes elementos del proyecto aceptan la documentación:
 
-- Methods (database methods, component methods, project methods, form methods, 4D Mobile methods, and triggers)
+- Métodos (métodos base, métodos componente, métodos proyecto, métodos formulario, métodos 4D Mobile y triggers)
 - Clases
 - Formularios
 - Tablas y campos
@@ -104,9 +104,9 @@ El editor de código 4D muestra una parte de la documentación de un método en 
 
 ![](../assets/en/Project/codeEditor_Comments.png)
 
-If a file named `\&#060;MethodName&#062;.md` exists in the `\&#060;package&#062;/documentation` folder, the code editor displays (by priority):
+Si existe un archivo llamado `\&#060;MethodName&#062;.md` en la carpeta `\&#060;package&#062;/documentation`, el editor de código muestra (por prioridad):
 
-- Any text entered in an HTML `comment` tag (*\<!-- command documentation -->*) at the top of the markdown file.
+- Todo texto introducido en una etiqueta HTML `comment` (*\<!-- command documentation -->*) en la parte superior del archivo markdown.
 
 - O, si no se utiliza la etiqueta de `comentario` html, la primera frase después de una etiqueta `# Description` del archivo markdown.  
   En este caso, la primera línea contiene el **prototipo** del método, generado automáticamente por el analizador de código de 4D.
