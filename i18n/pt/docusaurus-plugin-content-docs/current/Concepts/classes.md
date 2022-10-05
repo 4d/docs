@@ -277,7 +277,7 @@ Function getRectArea($width : Integer; $height : Integer) : Integer
 
 ```4d
 Function get <name>()->$result : type
-// code
+// código
 ```
 
 ```4d
