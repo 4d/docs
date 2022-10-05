@@ -134,6 +134,8 @@ In the *options* parameter, pass an object that can contain the following proper
 |serverAuthentication|[authentication object](#authentication-object)|Object handling server authentication|undefined|
 |returnResponseBody|Boolean|If false, the response body is not returned in the [`response` object](#response). Returns an error if false and `onData` is undefined|True|
 |timeout|Real|Timeout in seconds. Undefined = no timeout|Undefined|
+|uncompressDataOnCallback|Boolean|If true, the data received in the `onData` callback is uncompressed|False|
+
 
 #### Callback functions
 
@@ -148,6 +150,7 @@ Here is the sequence of callback calls:
 
 1. `onHeaders` is always called once
 2. `onData` is called zero or several times (not called if the request does not have a body)
+
 3. If no error occured, `onResponse` is always called once
 4. If an error occurs, `onError` is executed once (and terminates the request)
 5. `onTerminate` is always executed once
