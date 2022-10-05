@@ -328,7 +328,7 @@ The `.pid` property <!-- REF #SystemWorkerClass.currentDirectory.Summary -->cont
 
 #### Descrição
 
-The `.dataType` property <!-- REF #SystemWorkerClass.dataType.Summary -->contains the type of the response body content<!-- END REF -->. .
+A propriedade `.dataType` <!-- REF #SystemWorkerClass.dataType.Summary -->contains the type of the response body content<!-- END REF -->. .
 
 Essa propriedade é**apenas leitura**.
 
