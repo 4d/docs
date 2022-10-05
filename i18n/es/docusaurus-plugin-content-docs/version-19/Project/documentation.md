@@ -100,7 +100,7 @@ El editor de código 4D muestra una parte de la documentación de un método en 
 
 If a file named `\&#060;MethodName&#062;.md` exists in `\&#060;package&#062;/documentation` folder, the code editor displays (by priority):
 
-- Any text entered in an HTML `comment` tag (*\<!-- command documentation -->*) at the top of the markdown file.
+- Todo texto introducido en una etiqueta HTML `comment` (*\<!-- command documentation -->*) en la parte superior del archivo markdown.
 
 - O, si no se utiliza la etiqueta de `comentario` html, la primera frase después de una etiqueta `# Description` del archivo markdown.  
   En este caso, la primera línea contiene el **prototipo** del método, generado automáticamente por el analizador de código de 4D.
