@@ -346,7 +346,7 @@ $result:=$sel[0].lock() //動作しません
 
 #### 例題 3
 
-ユーザーインターフェースにおいて、2つのリストがあるとします。 The user selects items from the list1 to add them to the list2.
+ユーザーインターフェースにおいて、2つのリストがあるとします。 ユーザーは 1つ目のリストのアイテムを複数選択し、それらを 2つ目のリストに追加します。
 
 ```4d
 $sellist2:=$sellist2.add($sellist1)
@@ -1336,10 +1336,10 @@ Form.products.add(Form.product)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                               |
-| ------ | -------------------------------- |
-| v19 R7 | Support of *keepOrder* parameter |
-| v17    | 追加                               |
+| バージョン  | 内容                      |
+| ------ | ----------------------- |
+| v19 R7 | *keepOrder* パラメーターをサポート |
+| v17    | 追加                      |
 
 </details>
 
@@ -1347,11 +1347,11 @@ Form.products.add(Form.product)
 
 
 <!-- REF #EntitySelectionClass.minus().Params -->
-| 引数              | タイプ                |    | 説明                                                                                      |
-| --------------- | ------------------ |:--:| --------------------------------------------------------------------------------------- |
-| entity          | 4D.Entity          | -> | 除外するエンティティ                                                                              |
-| entitySelection | 4D.EntitySelection | -> | 除外するエンティティセレクション                                                                        |
-| keepOrder       | Integer            | -> | `dk keep ordered` (integer) to keep the initial order in the resulting entity selection |
+| 引数              | タイプ                |    | 説明                                                                    |
+| --------------- | ------------------ |:--:| --------------------------------------------------------------------- |
+| entity          | 4D.Entity          | -> | 除外するエンティティ                                                            |
+| entitySelection | 4D.EntitySelection | -> | 除外するエンティティセレクション                                                      |
+| keepOrder       | Integer            | -> | 結果のエンティティセレクションにおいて元の順列を維持するには `dk keep ordered` (整数) を渡します           |
 | 戻り値             | 4D.EntitySelection | <- | 新しいエンティティセレクション、あるいは既存のエンティティセレクションへの新しい参照|<!-- END REF -->
 
 |
@@ -1363,11 +1363,11 @@ Form.products.add(Form.product)
 *   *entity* を引数として渡した場合、メソッドは (*entity* が元のエンティティセレクションに所属していた場合) *entity* を除外した新しいエンティティセレクションを作成します。 *entity* が元のエンティティセレクションに含まれていなかった場合には、同エンティティセレクションへの新しい参照が返されます。
 *   *entitySelection* を引数として渡した場合、メソッドは *entitySelection* に所属しているエンティティを、元のエンティティセレクションから除外した新しいエンティティセレクションを返します。 [順列ありと順列なしのエンティティセレクション](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を比較することができます。
 
-By default, if you omit the *keepOrder* parameter, the resulting entity selection is unordered. If you want to keep the order of the original entity selection (for example if you want to reuse the entity selection in a user interface), pass the `dk keep ordered` constant in *keepOrder*. In this case, the result is an ordered entity selection and the order of the initial entity selection is kept.
+*keepOrder* 引数を省略した場合のデフォルトでは、結果のエンティティセレクションは順列なしになります。 元のエンティティセレクションの順列を維持したい場合 (たとえば、ユーザーインタフェースでエンティティセレクションを再利用したい場合) には、*keepOrder* に `dk keep ordered` 定数を渡します。 この場合、結果のエンティティセレクションは順列ありとなり、元のエンティティセレクションの順列が維持されます。
 
 :::note
 
-If you pass `dk keep ordered` in *keepOrder* and the removed *entitySelection* contains entities duplicated in the original entity selection, all occurences of the duplicates are removed.
+*keepOrder* に `dk keep ordered` を渡した場合、元のエンティティセレクションにおいて重複しているエンティティが除外される *entitySelection* に含まれる場合、その重複エンティティはすべて除外されます。
 
 :::
 
@@ -1407,7 +1407,7 @@ If you pass `dk keep ordered` in *keepOrder* and the removed *entitySelection* c
 
 #### 例題 3
 
-In a user interface, we have a list that displays items in a specific order. If the user selects items in the list to remove them, the order must be kept when refreshing the list:
+あるユーザーインターフェースにおいて、特定の順番で項目を表示するリストがあります。 ユーザーがリストの項目を選択して削除した場合、更新後のリストにおいても順番を維持する必要があります:
 
 ```4d
 $listsel:=$listsel.minus($selectedItems; dk keep ordered)
