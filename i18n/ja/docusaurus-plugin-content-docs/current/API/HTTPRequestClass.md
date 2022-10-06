@@ -136,7 +136,7 @@ HTTPRequest オブジェクトは次のプロパティや関数を提供しま�
 | serverAuthentication     | [authentication オブジェクト](#authentication-object) | サーバー認証のためのオブジェクト                                                                                                                                                         | undefined   |
 | returnResponseBody       | Boolean                                         | false の場合、レスポンス本文は [`response` オブジェクト](#response) に返されません。 false かつ `onData` が未定義の場合にエラーを返します。                                                                           | true        |
 | timeout                  | Real                                            | タイムアウト (秒単位) 未定義 = タイムアウトなし                                                                                                                                              | 未定義         |
-| uncompressDataOnCallback | Boolean                                         | If true, the data received in the `onData` callback is uncompressed                                                                                                      | false       |
+| uncompressDataOnCallback | Boolean                                         | true の場合、`onData` コールバックが受け取るデータは非圧縮です                                                                                                                                   | false       |
 
 
 #### コールバック関数
