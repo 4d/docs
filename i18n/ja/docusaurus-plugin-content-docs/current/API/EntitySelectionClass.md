@@ -266,11 +266,11 @@ $result:=$sel[0].lock() //動作しません
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                     |
-| ------ | -------------------------------------- |
-| v19 R7 | Support of *entitySelection* parameter |
-| v18 R5 | 追加可能なエンティティセレクションのみをサポート               |
-| v17    | 追加                                     |
+| バージョン  | 内容                            |
+| ------ | ----------------------------- |
+| v19 R7 | *entitySelection* パラメーターをサポート |
+| v18 R5 | 追加可能なエンティティセレクションのみをサポート      |
+| v17    | 追加                            |
 
 </details>
 
@@ -279,11 +279,11 @@ $result:=$sel[0].lock() //動作しません
 
 
 <!-- REF #EntitySelectionClass.add().Params -->
-| 引数              | タイプ                |    | 説明                                                                                            |
-| --------------- | ------------------ |:--:| --------------------------------------------------------------------------------------------- |
-| entity          | 4D.Entity          | -> | エンティティセレクションに追加するエンティティ                                                                       |
-| entitySelection | 4D.EntitySelection | -> | Entity selection to be added to the original entity selection                                 |
-| 戻り値             | 4D.EntitySelection | -> | Entity selection including the added *entity* or *entitySelection*|<!-- END REF -->
+| 引数              | タイプ                |    | 説明                                                                             |
+| --------------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
+| entity          | 4D.Entity          | -> | エンティティセレクションに追加するエンティティ                                                        |
+| entitySelection | 4D.EntitySelection | -> | エンティティセレクションに追加するエンティティセレクション                                                  |
+| 戻り値             | 4D.EntitySelection | -> | 追加した *entity* または *entitySelection* を含むエンティティセレクション|<!-- END REF -->
 
 
 |
@@ -291,24 +291,24 @@ $result:=$sel[0].lock() //動作しません
 
 #### 説明
 
-`.add()` 関数は、 <!-- REF #EntitySelectionClass.add().Summary -->adds the specified *entity* or *entitySelection* to the original entity selection and returns the modified entity selection<!-- END REF -->。
+`.add()` 関数は、 <!-- REF #EntitySelectionClass.add().Summary -->*entity* に渡したエンティティまたは *entitySelection* に渡したエンティティセレクションを元のエンティティセレクションに追加し、編集されたエンティティセレクションを返します<!-- END REF -->。
 > このコマンドは、元のエンティティセレクションを変更します。
 
 :::info warning
 
-The entity selection must be *alterable*, i.e. it has been created for example by [`.newSelection()`](DataClassClass.md#newselection) or `Create entity selection`, otherwise `.add()` will return an error. 共有可能なエンティティセレクションはエンティティの追加を受け付けないからです。 詳細については [共有可能/追加可能なエンティティセレクション](ORDA/entities.md#共有可能追加可能なエンティティセレクション) を参照ください。
+エンティティセレクションは *追加可能* のものでなければなりません。つまり [`.newSelection()`](DataClassClass.md#newselection) あるいは `Create entity selection` などで作成されたものでなければならないということです。そうでない場合、`.add()` はエラーを返します。 共有可能なエンティティセレクションはエンティティの追加を受け付けないからです。 詳細については [共有可能/追加可能なエンティティセレクション](ORDA/entities.md#共有可能追加可能なエンティティセレクション) を参照ください。
 
 :::
 
-**Adding an entity**
+**エンティティの追加**
 
 *   エンティティセレクションが順列ありの場合、*entity* 引数のエンティティはセレクションの最後に追加されます。 同じエンティティへの参照がそのエンティティセレクションにすでに所属していた場合、エンティティは重複することになり、同エンティティの新しい参照が追加されます。
 *   エンティティセレクションが順列なしの場合、*entity* 引数のエンティティはセレクションの不特定の場所へ追加され、順番付けはされません。
 
-**Adding an entity selection**
+**エンティティセレクションの追加**
 
-*   If the entity selection is ordered, its order is kept and *entitySelection* is added at the end of the selection. If references to the same entities of *entitySelection* already belong to the entity selection, they are duplicated and new references are added.
-*   If the entity selection is unordered, it becomes ordered.
+*   元のエンティティセレクションが順列ありの場合、*entitySelection* 引数のエンティティセレクションはセレクションの最後に追加されます。 *entitySelection* 内の同じエンティティへの参照が元のエンティティセレクションにすでに所属していた場合、エンティティは重複することになり、同エンティティの新しい参照が追加されます。
+*   エンティティセレクションが順列なしの場合、順列ありに変更されます。
 > 詳細については、[エンティティセレクションの順列あり/順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください。
 
 編集されたエンティティセレクションが関数から返されるため、関数の呼び出しをつなげることができます。
@@ -346,7 +346,7 @@ The entity selection must be *alterable*, i.e. it has been created for example b
 
 #### 例題 3
 
-In a user interface, we have two lists. The user selects items from the list1 to add them to the list2.
+ユーザーインターフェースにおいて、2つのリストがあるとします。 The user selects items from the list1 to add them to the list2.
 
 ```4d
 $sellist2:=$sellist2.add($sellist1)
