@@ -5,7 +5,7 @@
 
 ### Start
 
-Two process should run at the same time:
+Two processes should run at the same time:
 
 * The preprocess
 * The docusaurus start
