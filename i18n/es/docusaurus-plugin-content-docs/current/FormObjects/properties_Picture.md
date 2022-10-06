@@ -9,9 +9,9 @@ Ruta de una imagen source estática para un [botón imagen](pictureButton_overvi
 
 Las siguientes ubicaciones pueden utilizarse para las imágenes estáticas:
 
-- en la carpeta **Resources** del proyecto. Apropiado cuando se desea compartir imágenes estáticas entre varios formularios en el proyecto. In this case, the Pathname is "/RESOURCES/\<picture path\>".
-- en una carpeta de imágenes (por ejemplo, llamada **Images**) dentro de la carpeta del formulario. Apropiado cuando las imágenes estáticas se utilizan sólo en el formulario y/o se quiere poder mover o duplicar todo el formulario dentro del proyecto o de diferentes proyectos. In this case, the Pathname is "\<picture path\>" and is resolved from the root of the form folder.
-- en una variable imagen 4D. La imagen debe cargarse en la memoria cuando se ejecuta el formulario. In this case, the Pathname is "var:\<variableName\>".
+- en la carpeta **Resources** del proyecto. Apropiado cuando se desea compartir imágenes estáticas entre varios formularios en el proyecto. En este caso, el nombre de la ruta es "/RESOURCES/\<picture path\>".
+- en una carpeta de imágenes (por ejemplo, llamada **Images**) dentro de la carpeta del formulario. Apropiado cuando las imágenes estáticas se utilizan sólo en el formulario y/o se quiere poder mover o duplicar todo el formulario dentro del proyecto o de diferentes proyectos. En este caso, el nombre de la ruta es "\<picture path\>" y se resuelve desde la raíz de la carpeta del formulario.
+- en una variable imagen 4D. La imagen debe cargarse en la memoria cuando se ejecuta el formulario. En este caso, el nombre de la ruta es "var:\<variableName\>".
 
 #### Gramática JSON
 
@@ -31,7 +31,7 @@ Las siguientes ubicaciones pueden utilizarse para las imágenes estáticas:
 
 `Gramática JSON: "scaled"`
 
-The **Scaled to fit** format causes 4D to resize the picture to fit the dimensions of the area.
+El formato **A escala para ajustarse** hace que 4D redimensione la imagen para ajustarla a las dimensiones del área.
 
 ![](../assets/en/FormObjects/property_pictureFormat_ScaledToFit.png)
 
@@ -39,11 +39,11 @@ The **Scaled to fit** format causes 4D to resize the picture to fit the dimensio
 
 `Gramática JSON: "tiled"`
 
-When the area that contains a picture with the **Replicated** format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.
+Cuando se amplía el área que contiene una imagen con el formato **Replicada**, la imagen no se deforma sino que se replica tantas veces como sea necesario para llenar el área por completo.
 
 ![](../assets/en/FormObjects/property_pictureFormat_Replicated.png)
 
-If the field is reduced to a size smaller than that of the original picture, the picture is truncated (non-centered).
+Si el campo se reduce a un tamaño menor que el de la imagen original, la imagen queda truncada (no centrada).
 
 ### Centrado / Truncado (no centrado)
 
@@ -51,8 +51,8 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 El formato **Centro** hace que 4D centre la imagen en el área y recorte cualquier parte que no quepa dentro del área. 4D recorta por igual desde cada borde y desde la parte superior e inferior.
 
-The **Truncated (non-centered)** format causes 4D to place the upper-left corner of the picture in the upper-left corner of the area and crop any portion that does not fit within the area. 4D crops from the right and bottom.
-> When the picture format is **Truncated (non-centered)**, it is possible to add scroll bars to the input area.
+El formato **Truncado (no centrado)** hace que 4D coloque la esquina superior izquierda de la imagen en la esquina superior izquierda del área y recorte cualquier parte que no quepa dentro del área. 4D recorta desde la derecha y desde abajo.
+> Cuando el formato de la imagen es **Truncado (no centrado)**, es posible añadir barras de desplazamiento al área de entrada.
 
 ![](../assets/en/FormObjects/property_pictureFormat_Truncated.png)
 

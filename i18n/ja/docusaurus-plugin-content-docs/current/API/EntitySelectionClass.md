@@ -266,22 +266,24 @@ $result:=$sel[0].lock() //動作しません
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                       |
-| ------ | ------------------------ |
-| v18 R5 | 追加可能なエンティティセレクションのみをサポート |
-| v17    | 追加                       |
+| バージョン  | 内容                            |
+| ------ | ----------------------------- |
+| v19 R7 | *entitySelection* パラメーターをサポート |
+| v18 R5 | 追加可能なエンティティセレクションのみをサポート      |
+| v17    | 追加                            |
 
 </details>
 
 
-<!-- REF #EntitySelectionClass.add().Syntax -->**.add**( *entity* : 4D.Entity ) : 4D.EntitySelection<!-- END REF -->
+<!-- REF #EntitySelectionClass.add().Syntax -->**.add**( *entity* : 4D.Entity ) : 4D.EntitySelection<br/>**.add**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.add().Params -->
-| 引数     | タイプ                |    | 説明                                                 |
-| ------ | ------------------ |:--:| -------------------------------------------------- |
-| entity | 4D.Entity          | -> | エンティティセレクションに追加するエンティティ                            |
-| 戻り値    | 4D.EntitySelection | -> | 追加エンティティを含むエンティティセレクション|<!-- END REF -->
+| 引数              | タイプ                |    | 説明                                                                             |
+| --------------- | ------------------ |:--:| ------------------------------------------------------------------------------ |
+| entity          | 4D.Entity          | -> | エンティティセレクションに追加するエンティティ                                                        |
+| entitySelection | 4D.EntitySelection | -> | エンティティセレクションに追加するエンティティセレクション                                                  |
+| 戻り値             | 4D.EntitySelection | -> | 追加した *entity* または *entitySelection* を含むエンティティセレクション|<!-- END REF -->
 
 
 |
@@ -289,14 +291,24 @@ $result:=$sel[0].lock() //動作しません
 
 #### 説明
 
-`.add()` 関数は、 <!-- REF #EntitySelectionClass.add().Summary -->*entity* に渡したエンティティをエンティティセレクションに追加し、編集されたエンティティセレクションを返します<!-- END REF -->。
+`.add()` 関数は、 <!-- REF #EntitySelectionClass.add().Summary -->*entity* に渡したエンティティまたは *entitySelection* に渡したエンティティセレクションを元のエンティティセレクションに追加し、編集されたエンティティセレクションを返します<!-- END REF -->。
 > このコマンドは、元のエンティティセレクションを変更します。
 
-**警告:** エンティティセレクションは *追加可能* のものでなければなりません。つまり [`.newSelection()`](DataClassClass.md#newselection) あるいは `Create entity selection` などで作成されたものでなければならないということです。そうでない場合、`.add()` はエラーを返します。 共有可能なエンティティセレクションはエンティティの追加を受け付けないからです。 詳細については [共有可能/追加可能なエンティティセレクション](ORDA/entities.md#共有可能追加可能なエンティティセレクション) を参照ください。
+:::info warning
 
+エンティティセレクションは *追加可能* のものでなければなりません。つまり [`.newSelection()`](DataClassClass.md#newselection) あるいは `Create entity selection` などで作成されたものでなければならないということです。そうでない場合、`.add()` はエラーを返します。 共有可能なエンティティセレクションはエンティティの追加を受け付けないからです。 詳細については [共有可能/追加可能なエンティティセレクション](ORDA/entities.md#共有可能追加可能なエンティティセレクション) を参照ください。
+
+:::
+
+**エンティティの追加**
 
 *   エンティティセレクションが順列ありの場合、*entity* 引数のエンティティはセレクションの最後に追加されます。 同じエンティティへの参照がそのエンティティセレクションにすでに所属していた場合、エンティティは重複することになり、同エンティティの新しい参照が追加されます。
 *   エンティティセレクションが順列なしの場合、*entity* 引数のエンティティはセレクションの不特定の場所へ追加され、順番付けはされません。
+
+**エンティティセレクションの追加**
+
+*   元のエンティティセレクションが順列ありの場合、*entitySelection* 引数のエンティティセレクションはセレクションの最後に追加されます。 *entitySelection* 内の同じエンティティへの参照が元のエンティティセレクションにすでに所属していた場合、エンティティは重複することになり、同エンティティの新しい参照が追加されます。
+*   エンティティセレクションが順列なしの場合、順列ありに変更されます。
 > 詳細については、[エンティティセレクションの順列あり/順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください。
 
 編集されたエンティティセレクションが関数から返されるため、関数の呼び出しをつなげることができます。
@@ -330,6 +342,14 @@ $result:=$sel[0].lock() //動作しません
  $sel:=ds.Product.query("ID > 50")
  $sel:=$sel.copy()
  $sel:=$sel.add($p1).add($p2).add($p3)
+```
+
+#### 例題 3
+
+ユーザーインターフェースにおいて、2つのリストがあるとします。 ユーザーは 1つ目のリストのアイテムを複数選択し、それらを 2つ目のリストに追加します。
+
+```4d
+$sellist2:=$sellist2.add($sellist1)
 ```
 
 <!-- END REF -->
@@ -1316,13 +1336,14 @@ Form.products.add(Form.product)
 
 <details><summary>履歴</summary>
 
-| バージョン | 内容 |
-| ----- | -- |
-| v17   | 追加 |
+| バージョン  | 内容                      |
+| ------ | ----------------------- |
+| v19 R7 | *keepOrder* パラメーターをサポート |
+| v17    | 追加                      |
 
 </details>
 
-<!-- REF #EntitySelectionClass.minus().Syntax -->**.minus**( *entity* : 4D.Entity ) : 4D.EntitySelection<br/>**.minus**( *entitySelection* : 4D.EntitySelection ) : 4D.EntitySelection<!-- END REF -->
+<!-- REF #EntitySelectionClass.minus().Syntax -->**.minus**( *entity* : 4D.Entity { ; *keepOrder* : Integer } ) : 4D.EntitySelection<br/>**.minus**( *entitySelection* : 4D.EntitySelection { ; *keepOrder* : Integer } ) : 4D.EntitySelection<!-- END REF -->
 
 
 <!-- REF #EntitySelectionClass.minus().Params -->
@@ -1330,6 +1351,7 @@ Form.products.add(Form.product)
 | --------------- | ------------------ |:--:| --------------------------------------------------------------------- |
 | entity          | 4D.Entity          | -> | 除外するエンティティ                                                            |
 | entitySelection | 4D.EntitySelection | -> | 除外するエンティティセレクション                                                      |
+| keepOrder       | Integer            | -> | 結果のエンティティセレクションにおいて元の順列を維持するには `dk keep ordered` (整数) を渡します           |
 | 戻り値             | 4D.EntitySelection | <- | 新しいエンティティセレクション、あるいは既存のエンティティセレクションへの新しい参照|<!-- END REF -->
 
 |
@@ -1339,8 +1361,15 @@ Form.products.add(Form.product)
 `.minus()` 関数は、 <!-- REF #EntitySelectionClass.minus().Summary -->元のエンティティセレクションから、*entity* 引数のエンティティ、あるいは *entitySelection* 引数のエンティティセレクションに含まれるエンティティを除外し、結果のエンティティセレクションを返します<!-- END REF -->。
 
 *   *entity* を引数として渡した場合、メソッドは (*entity* が元のエンティティセレクションに所属していた場合) *entity* を除外した新しいエンティティセレクションを作成します。 *entity* が元のエンティティセレクションに含まれていなかった場合には、同エンティティセレクションへの新しい参照が返されます。
-*   *entitySelection* を引数として渡した場合、メソッドは *entitySelection* に所属しているエンティティを、元のエンティティセレクションから除外した新しいエンティティセレクションを返します。
-> [順列ありと順列なしのエンティティセレクション](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を比較することができます。 返されるセレクションは常に順列なしのものになります。
+*   *entitySelection* を引数として渡した場合、メソッドは *entitySelection* に所属しているエンティティを、元のエンティティセレクションから除外した新しいエンティティセレクションを返します。 [順列ありと順列なしのエンティティセレクション](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を比較することができます。
+
+*keepOrder* 引数を省略した場合のデフォルトでは、結果のエンティティセレクションは順列なしになります。 元のエンティティセレクションの順列を維持したい場合 (たとえば、ユーザーインタフェースでエンティティセレクションを再利用したい場合) には、*keepOrder* に `dk keep ordered` 定数を渡します。 この場合、結果のエンティティセレクションは順列ありとなり、元のエンティティセレクションの順列が維持されます。
+
+:::note
+
+*keepOrder* に `dk keep ordered` を渡した場合、元のエンティティセレクションにおいて重複しているエンティティが除外される *entitySelection* に含まれる場合、その重複エンティティはすべて除外されます。
+
+:::
 
 元のエンティティセレクションが空であった場合、空のエンティティセレクションが返されます。
 
@@ -1374,6 +1403,14 @@ Form.products.add(Form.product)
  $sel1:=ds.Employee.query("name =:1";"Jones")
  $sel2:=ds.Employee.query("city=:1";"New York")
  $sel3:=$sel1.and($sel2).minus(ds.Employee.query("gender='male'"))
+```
+
+#### 例題 3
+
+あるユーザーインターフェースにおいて、特定の順番で項目を表示するリストがあります。 ユーザーがリストの項目を選択して削除した場合、更新後のリストにおいても順番を維持する必要があります:
+
+```4d
+$listsel:=$listsel.minus($selectedItems; dk keep ordered)
 ```
 
 <!-- END REF -->

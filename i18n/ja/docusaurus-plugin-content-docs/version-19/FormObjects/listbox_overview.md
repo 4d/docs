@@ -1011,7 +1011,7 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
  APPEND TO ARRAY($ChoiceList;100)
  C_OBJECT($ob)
  OB SET($ob;"valueType";"integer")
- OB SET($ob;"value";10) //10 as default value
+ OB SET($ob;"value";10) // 10 をデフォルト値として使用
  OB SET ARRAY($ob;"choiceList";$ChoiceList)
 ```
 
@@ -1052,7 +1052,7 @@ behavior 属性は、値の通常の表示とは異なる表示方法を提供�
  C_OBJECT($ob)
  OB SET($ob;"valueType";"integer")
  OB SET($ob;"saveAs";"reference")
- OB SET($ob;"value";2) //displays London by default
+ OB SET($ob;"value";2) // デフォルトでLondonを表示
  OB SET($ob;"requiredListReference";<>List)
 ```
 
