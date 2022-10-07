@@ -227,28 +227,28 @@ Lorsque les pieds sont affichés, vous pouvez sélectionner un pied de list box 
 
 ![](../assets/en/FormObjects/listbox_footers.png)
 
-Vous pouvez définir, pour chaque pied de colonne de List box, des propriétés standard de texte : dans ce cas, ces propriétés sont prioritaires par rapport à celles de la colonne ou de la list box. You can also access specific properties for footers. In particular, you can insert a [custom or automatic calculation](properties_Object.md#variable-calculation).
+Vous pouvez définir, pour chaque pied de colonne de List box, des propriétés standard de texte : dans ce cas, ces propriétés sont prioritaires par rapport à celles de la colonne ou de la list box. Vous pouvez également accéder à des propriétés spécifiques pour les pieds de page. En particulier, vous pouvez insérer un [calcul personnalisé ou automatique](properties_Object.md#variable-calculation).
 
-At runtime, events that occur in a footer are generated in the [list box column object method](#object-methods).
+Au moment de l'exécution, les événements qui se produisent dans un pied de page sont générés dans la [méthode objet de la colonne de list box](#object-methods).
 
-When the `OBJECT SET VISIBLE` command is used with a footer, it is applied to all footers, regardless of the individual element set by the command. For example, `OBJECT SET VISIBLE(*;"footer3";False)` will hide all footers in the list box object to which *footer3* belongs and not simply this footer.
+Lorsque la commande `OBJECT SET VISIBLE` est utilisée avec un pied de page, elle est appliquée à tous les pieds de page, quel que soit l'élément individuel défini par la commande. Par exemple, `OBJECT SET VISIBLE(* ; "footer3";False)` masquera tous les pieds de page de l'objet list box auquel *footer3* appartient et pas simplement ce pied de page.
 
-### Footer Specific Properties
+### Propriétés spécifiques des pieds de page
 
 [Alpha Format](properties_Display.md#alpha-format) - [Background Color](properties_BackgroundAndBorder.md#background-color-fill-color) - [Bold](properties_Text.md#bold) - [Class](properties_Object.md#css-class) - [Date Format](properties_Display.md#date-format) - [Expression Type](properties_Object.md#expression-type) - [Font](properties_Text.md#font) - [Font Color](properties_Text.md#font-color) - [Help Tip](properties_Help.md#help-tip) - [Horizontal Alignment](properties_Text.md#horizontal-alignment) - [Italic](properties_Text.md#italic) - [Number Format](properties_Display.md#number-format) - [Object Name](properties_Object.md#object-name) - [Picture Format](properties_Display.md#picture-format) - [Time Format](properties_Display.md#time-format) - [Truncate with ellipsis](properties_Display.md#truncate-with-ellipsis) - [Underline](properties_Text.md#underline) - [Variable Calculation](properties_Object.md#variable-calculation) - [Variable or Expression](properties_Object.md#variable-or-expression) - [Vertical Alignment](properties_Text.md#vertical-alignment) - [Width](properties_CoordinatesAndSizing.md#width) - [Wordwrap](properties_Display.md#wordwrap)
 
-## Managing entry
+## Gestion de la saisie
 
-For a list box cell to be enterable, both of the following conditions must be met:
+Pour qu’une cellule de list box soit saisissable, il est nécessaire que les conditions suivantes soient réunies :
 
-* The cell’s column must have been set as [Enterable](properties_Entry.md#enterable) (otherwise, the cells of the column can never be enterable).
-* In the `On Before Data Entry` event, $0 does not return -1. When the cursor arrives in the cell, the `On Before Data Entry` event is generated in the column method. Si, dans le contexte de cet événement, $0 est défini sur -1, la cellule est considérée comme non saisissable. Si l'événement a été généré après avoir appuyé sur **Tab** ou **Maj+Tab**, le focus va respectivement à la cellule suivante ou à la précédente. Si la valeur de $0 n'est pas -1 (par défaut $0 est 0), la cellule est saisissable et passe en mode d'édition.
+* La colonne de la cellule a été définie comme [Saisissable](properties_Entry.md#enterable)(dans le cas contraire, les cellules de la colonne ne seront jamais saisissables).
+* Dans l’événement formulaire `On Before Data Entry`, $0 ne retourne pas -1. Lorsque le curseur arrive dans la cellule, l'événement `On Before Data Entry` est généré dans la méthode de la colonne. Si, dans le contexte de cet événement, $0 est défini sur -1, la cellule est considérée comme non saisissable. Si l'événement a été généré après avoir appuyé sur **Tab** ou **Maj+Tab**, le focus va respectivement à la cellule suivante ou à la précédente. Si la valeur de $0 n'est pas -1 (par défaut $0 est 0), la cellule est saisissable et passe en mode d'édition.
 
-Let’s consider the example of a list box containing two arrays, one date and one text. The date array is not enterable but the text array is enterable if the date has not already past.
+Imaginons par exemple une list box contenant deux tableaux, de type date et texte. Le tableau date n’est pas saisissable mais le tableau texte est saisissable si la date n’est pas déjà passée.
 
 ![](../assets/en/FormObjects/listbox_entry.png)
 
-Here is the method of the *arrText* column:
+Voici la méthode de la colonne *tText * :
 
 ```4d
  Case of
