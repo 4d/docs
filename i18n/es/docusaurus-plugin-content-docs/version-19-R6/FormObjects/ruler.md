@@ -4,11 +4,11 @@ title: Regla
 ---
 
 
-The ruler is a standard interface object used to set or get values using a cursor moved along its graduations.
+La regla es un objeto de interfaz estándar que se utiliza para definir u obtener valores mediante un cursor que se mueve a lo largo de sus graduaciones.
 
 ![](../assets/en/FormObjects/indicator_ruler.png)
 
-You can assign its [associated variable or expression](properties_Object.md#expression-type) to an enterable area (field or variable) to store or modify the current value of the object.
+Puede asignar su [variable o expresión asociada](properties_Object.md#expression-type) a un área editable (campo o variable) para almacenar o modificar el valor actual del objeto.
 
 Para más información, consulte [Uso de indicadores](progressIndicator.md#using-indicatire) en la página "Indicadores de progreso".
 
