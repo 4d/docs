@@ -823,75 +823,66 @@ La list box suivante a été définie à l'aide d'un tableau d'objets :
 
 ### Configurer une colonne tableau d'objets
 
-To assign an object array to a list box column, you just need to set the object array name in either the Property list ("Variable Name" field), or using the [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-INSERT-COLUMN.301-4311153.en.html) command, like with any array-based column. In the Property list, you can now select Object as a "Expression Type" for the column:
+Pour affecter un tableau d'objets à une colonne de list box (list box de type tableau uniquement), il vous suffit de fournir le nom du tableau d'objets soit dans la Liste des propriétés (champ "Nom de variable"), soit à la commande [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv17R6/4D/17-R6/LISTBOX-INSERT-COLUMN.301-4311153.en.html), comme pour toute colonne associée à un tableau. Dans la Liste des propriétés, vous pouvez sélectionner Objet comme "Type de variable" pour la colonne :
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_config.png)
 
-Standard properties related to coordinates, size, and style are available for object columns. You can define them using the Property list, or by programming the style, font color, background color and visibility for each row of an object-type list box column. These types of columns can also be hidden.
+Les propriétés standard liées aux coordonnées, taille et style sont disponibles pour les colonnes de type objet. Elles peuvent être gérées à l'aide de la Liste des propriétés, ou en programmant les attributs de style, visibilité, couleur de police et de fond de chaque ligne de colonne objet de la list box. Ce type de colonne peut également être masqué.
 
-However, the Data Source theme is not available for object-type list box columns. In fact, the contents of each column cell are based on attributes found in the corresponding element of the object array. Each array element can define:
+Toutefois, le thème Source de données n'est pas disponible pour les colonnes objet des list box. En fait, le contenu de chaque cellule de la colonne est basé sur les attributs présents dans l'élément correspondant du tableau d'objets. Chaque élément du tableau peut définir :
 
-the value type (mandatory): text, color, event, etc. the value itself (optional): used for input/output. the cell content display (optional): button, list, etc. additional settings (optional): depend on the value type To define these properties, you need to set the appropriate attributes in the object (available attributes are listed below). For example, you can write "Hello World!" in an object column using this simple code:
+le type de valeur (obligatoire) : texte, couleur, événement, etc. la valeur elle-même (optionnel) : utilisé aussi bien pour la saisie que pour l'affichage. le mode d'affichage du contenu de la cellule (optionnel) : bouton, liste, etc. des paramètres supplémentaires (optionnel) : dépend du type de valeur Pour définir ces propriétés, vous devez placer les attributs adéquats dans l'objet (la liste des attributs disponibles est fournie ci-dessous). Par exemple, vous pouvez écrire "Hello World!" dans une colonne objet à l'aide de ce simple code :
 
 ```4d  
-ARRAY OBJECT(obColumn;0) //column array
- C_OBJECT($ob1)
- $entry:="Hello world!" OB SET($ob1;"valueType";"text")
- OB SET($ob1;"value";$entry) // if the user enters a new value, $entry will contain the edited value
- C_OBJECT($ob2)
- OB SET($ob2;"valueType";"real")
- OB SET($ob2;"value";2/3)
- C_OBJECT($ob3)
- OB SET($ob3;"valueType";"boolean")
- OB SET($ob3;"value";True)
-
- APPEND TO ARRAY(obColumn;$ob1)
- APPEND TO ARRAY(obColumn;$ob2)
- APPEND TO ARRAY(obColumn;$ob3)  
+ARRAY OBJECT(obColumn;0) //tableau de la colonne
+ C_OBJECT($ob) //premier élément
+ OB SET($ob;"valueType";"text") //définit le type de valeur (obligatoire)
+ OB SET($ob;"value";"Hello World!") //définit la valeur
+ APPEND TO ARRAY(obColumn;$ob)  
 ```
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld.png)
-> Display format and entry filters cannot be set for an object column. They automatically depend on the value type.
+> Il n'est pas possible de choisir un format d'affichage et/ou un filtre de saisie pour les colonnes objet. Ces paramètres sont automatiquement définis en fonction du type de valeur.
 
 #### valueType et affichage des données
 
-When a list box column is associated with an object array, the way a cell is displayed, entered, or edited, is based on the valueType attribute of the array element. Supported valueType values are:
+Lorsqu'une colonne de list box est associée à un tableau d'objets, l'affichage, la saisie et l'édition des cellules sont basées sur l'attribut valueType présent dans chaque élément du tableau. Les valeurs valueType prises en charge sont les suivantes :
 
-* "text": for a text value
-* "real": for a numeric value that can include separators like a `\&#060;space&#062;`, `&#060;.&#062;`, or `&#060;,&#062;`
-* "integer": for an integer value
-* "boolean": for a True/False value
-* "color": to define a background color
-* "event": to display a button with a label.
+* "text" : pour une valeur texte
+* "real" : pour une valeur numérique incluant des séparateurs tels que `\&#060;espace&#062;`, `&#060;.&#062;`, ou `&#060;,&#062;`
+* "integer" : pour une valeur entière
+* "boolean" : pour une valeur True/False
+* "color" : pour définir une couleur de fond
+* "event" : pour afficher un bouton avec un libellé.
 
-4D uses default widgets with regards to the "valueType" value (i.e., a "text" is displayed as a text input widget, a "boolean" as a check box), but alternate displays are also available through options (*e.g.*, a real can also be represented as a drop-down menu). The following table shows the default display as well as alternatives for each type of value:
+4D utilise des widgets par défaut en fonction de la valeur de "valueType" (par exemple, un "text" est affiché sous forme de zone de saisie de texte, un "boolean" est affiché sous forme de case à cocher, etc.), mais des représentations alternatives sont également disponibles via des options (par exemple, un "real" peut être affiché sous forme de menu déroulant). Le tableau suivant indique l'affichage par défaut ainsi que les variations possibles pour chaque type de valeur :
 
-| valueType | Default widget                                 | Alternative widget(s)                                                                          |
-| --------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| text      | text input                                     | drop-down menu (required list) or combo box (choice list)                                      |
-| réel      | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
-| entier    | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
-| boolean   | check box                                      | drop-down menu (required list)                                                                 |
-| color     | couleur de fond                                | text                                                                                           |
-| evénement | button with label                              |                                                                                                |
-|           |                                                | All widgets can have an additional unit toggle button or ellipsis button attached to the cell. |
+| valueType | Format défaut                                             | Widget(s) alternatif(s)                                                                          |
+| --------- | --------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| text      | zone de saisie de texte                                   | menu déroulant (enumération obligatoire) ou combo box (enumération)                              |
+| réel      | zone de saisie de texte contrôlée (nombre et séparateurs) | menu déroulant (enumération obligatoire) ou combo box (enumération)                              |
+| entier    | zone de saisie de texte contrôlée (nombre)                | menu déroulant (enumération obligatoire) ou combo box (enumération) ou case à cocher trois états |
+| boolean   | case à cocher                                             | menu déroulant (enumération obligatoire)                                                         |
+| color     | couleur de fond                                           | text                                                                                             |
+| evénement | bouton avec libellé                                       |                                                                                                  |
+|           |                                                           | Tous les widgets peuvent associer un unit toggle button ou ellipsis button à la cellule.         |
 
-You set the cell display and options using specific attributes in each object (see below).
+Vous définissez l'affichage de la cellule et les variations à l'aide d'attributs spécifiques dans chaque objet (voir ci-dessous).
 
 #### Formats d'affichage et filtres de saisie
 
-You cannot set display formats or entry filters for columns of object-type list boxes. They are automatically defined according to the value type. These are listed in the following table:
+Il n'est pas possible de choisir un format d'affichage et/ou un filtre de saisie pour les colonnes objet des list box. Ils sont automatiquement définis en fonction du type de valeur. Ils sont listés dans le tableau suivant :
 
-| Value type | Default format                                             | Entry control           |
-| ---------- | ---------------------------------------------------------- | ----------------------- |
-| text       | same as defined in object                                  | any (no control)        |
-| réel       | same as defined in object (using system decimal separator) | "0-9" and "." and "-"   |
-|            |                                                            | "0-9" and "." if min>=0 |
-| entier     | same as defined in object                                  | "0-9" and "-"           |
-|            |                                                            | "0-9" if min>=0         |
-| Boolean    | check box                                                  | N/A                     |
-| color      | N/A                                                        | N/A                     |
-| evénement  | N/A                                                        | N/A                     |
+| Value type | Format défaut                                                            | Contrôle de saisie                       |
+| ---------- | ------------------------------------------------------------------------ | ---------------------------------------- |
+| text       | le même que celui de l'objet                                             | pas de contrôle (tout caractère accepté) |
+| réel       | le même que celui de l'objet (utilisation du séparateur décimal système) | "0-9" et "." et "-"                      |
+|            |                                                                          | "0-9" et "." si min>=0                   |
+| entier     | le même que celui de l'objet                                             | "0-9" et "-"                             |
+|            |                                                                          | "0-9" si min>=0                          |
+| Boolean    | case à cocher                                                            | N/A                                      |
+| color      | N/A                                                                      | N/A                                      |
+| evénement  | N/A                                                                      | N/A                                      |
 
 ### Attributs
 
