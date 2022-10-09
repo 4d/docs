@@ -3,77 +3,77 @@ id: licenses
 title: Gestão de Licenças 4D
 ---
 
-Once installed on your disk, you must activate your 4D products in order to be able to use them. Usually, the activation is automatic if you [sign in using your 4D account](GettingStarted/Installation.md) in the Welcome Wizard.
+Uma vez instalados no seu disco, deve activar os seus produtos 4D para poder utilizá-los. Normalmente, a activação é automática se [entrar usando a sua conta 4D](GettingStarted/Installation.md) no Welcome Wizard.
 
-However, in specific cases you could need to activate your licenses manually, for example if:
+Contudo, em casos específicos, poderá ter de activar as suas licenças manualmente, por exemplo, se:
 
-- your configuration does not allow the automatic activation,
-- you have purchased additional licenses.
+- sua configuração não permitir a ativação automática
+- tiver comprado licenças adicionais
 
-No activation is required for the following uses:
+Não precisa ativar nada para os usos abaixo:
 
-- 4D used in remote mode (connection to a 4D Server)
-- 4D used in local mode with an interpreted application project with no access to the Design environment.
+- 4D usado em modo remoto (conexão ao servidor 4D)
+- 4D usado em modo local com um projeto aplicação interpretado sem acesso ao ambiente Design.
 
 
-## First activation
+## Primeira ativação
 
-With 4D, select the **License Manager...** command from the **Help** menu of the application. With 4D Server, just launch the 4D Server application. The dialog box for choosing the [activation mode](#activation-mode) appears.
+Com 4D, selecione o comando **Gestião de licenças...** do menu **Ajuda**. Com 4D Server basta lançar a aplicação 4D Server. Aparece a caixa de diálogo para escolher o [modo de ativação](#activation-mode).
 
 ![](../assets/en/getStart/server1.png)
 
-4D offers three activation modes. We recommend **Instant Activation**.
+4D oferece três modos de ativação. Recomendamos **Instant Activation**.
 
-### Instant Activation
+### Ativação instantânea
 
-Enter your user ID (email or 4D account) as well as your password. If you do not have an existing user account, you will need to create it at the following address:
+Digite seu ID (email ou conta 4D) e sua senha. Se ainda não tiver uma conta de usuário, vai ter que criá-la no endereço a seguir:
 
 [https://account.4d.com/us/login.shtml](https://account.4d.com/us/login.shtml)
 
 ![](../assets/en/getStart/activ1.png)
 
-Then enter the license number of the product you want to activate. This number is provided by email or by mail after a product is purchased.
+Depois entre o número de licença do produto que quiser ativar. Esse número é fornecido por email depois da compra do produto.
 
 ![](../assets/en/getStart/activ2.png)
 
 
-### Deferred Activation
+### Ativação postergada
 
-If you are unable to use [instant activation](#instant-activation) because your computer does not have internet access, please proceed to deferred activation using the following steps.
+Se não puder usar [instant activation](#instant-activation) porque seu computador não tem acesso à internet, veja a ativação postergada usando os passos abaixo.
 
-1. In the License Manager window, select the **Deferred Activation** tab.
-2. Enter the License Number and your e-mail address, then click **Generate file** to create the ID file (*reg.txt*).
+1. Na janela de License Manager, selecione a aba **Deferred Activation**.
+2. Digite o número de licença e seu email e clique  **Generate file** para criar o arquivo ID  (*reg.txt*).
 
 ![](../assets/en/getStart/activ3.png)
 
-3. Save the *reg.txt* file to a USB drive and take it to a computer that has internet access.
-4. On the machine with internet access, login to [https://activation.4d.com](https://activation.4d.com).
-5. On the Web page, click on the **Choose File...** button and select the *reg.txt* file from steps 3 and 4; then click on the **Activate** button.
-6. Download the serial file(s).
+3. Salve o arquivo *reg.txt* para um drive USB e leve ao computador que tenha acesso à internet.
+4. No aparelho com acesso à internet, faça login a  [https://activation.4d.com](https://activation.4d.com).
+5. Na página web, clique no botão **Choose File...** e selecione o arquivo *reg.txt* dos passos 3 e 4; depois clique no botão **Ativar**.
+6. Baixe os arquivos seriais.
 
 ![](../assets/en/getStart/activ4.png)
 
-7. Save the *license4d* file(s) on a shared media and transfer them back to the 4D machine from step 1.
-8. Now back on the machine with 4D, still on the **Deferred Activation** page, click **Next**; then click the **Load...** button and select a *license4d* file from the shared media from step 7.
+7. Salve os arquivos *license4d* em uma mídia partilhda e os transfira para a máquina 4D do passo 1.
+8. Agora de volta para a máquina com 4D, ainda na página **Deferred Activation**, clique **Next**; e depois clique no botão **Load...** e selecione o arquivo *license4d* da mídia social do passo 7.
 
 ![](../assets/en/getStart/activ5.png)
 
-With the license file loaded, click on **Next**.
+Com o arquivo licença carregado, clique em **Next**.
 
 ![](../assets/en/getStart/activ6.png)
 
-9. Click on the **Add N°** button to add another license. Repeat these steps until all licenses from step 6 have been integrated.
+9. Clique no botão **Add N°** e adicione outra licença. Repita esses passos até que todas as licenças do passo 6 tenham sido integradas.
 
-Your 4D application is now activated.
+Sua aplicação 4D agora está ativada.
 
-### Emergency Activation
+### Ativação emergencial
 
-This mode can be used for a special temporary activation of 4D (5 days maximum) without connecting to the 4D Web site. This activation can only be used one time.
+Esse modo pode ser usado para ativação temporária especial de 4D (por no máximo 5 dias) sem conexão a um site 4D Web. Essa ativação só pode ser usada uma vez.
 
 
-## Adding licenses
+## Adicionar licenças
 
-You can add new licenses, for example to extend the capacities of your application, at any time.
+Pode adicionar novas licenças, por exemplo par aumentar as capacidades de sua aplicação, a qualquer momento.
 
 Choose the **License Manager...** command from the **Help** menu of the 4D or 4D Server application, then click on the **Refresh** button:
 

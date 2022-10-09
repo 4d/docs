@@ -80,10 +80,10 @@ Attachment オブジェクトは、次の読み取り専用プロパティや、
 
 任意の *disposition* 引数を渡して、添付ファイルの `content-disposition` ヘッダーを指定できます。 "Mail" 定数テーマ内の、以下の定数のいずれか 1つを渡すことができます:
 
-| 定数                          | 値            | 説明                                                                                                                               |
-| --------------------------- | ------------ | -------------------------------------------------------------------------------------------------------------------------------- |
-| mail disposition attachment | "attachment" | Content-disposition ヘッダーの値を "attachment" に設定します。 これは添付ファイルはメッセージ内でリンクとして提供される必要があることを意味します。                                      |
-| mail disposition inline     | "inline"     | Content-disposition ヘッダーの値を "inline" に設定します。 これは添付ファイルはメッセージ本文内の、"cid" の位置にレンダリングされる必要があることを意味します。 レンダリングの結果はメールクライアントによって異なります。 |
+| 定数                          | 値            | 説明                                                                                                                              |
+| --------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------- |
+| mail disposition attachment | "attachment" | Content-disposition ヘッダーの値を "attachment" に設定します。これは添付ファイルはメッセージ内でリンクとして提供される必要があることを意味します。                                      |
+| mail disposition inline     | "inline"     | Content-disposition ヘッダーの値を "inline" に設定します。これは添付ファイルはメッセージ本文内の、"cid" の位置にレンダリングされる必要があることを意味します。 レンダリングの結果はメールクライアントによって異なります。 |
 
 *disposition* 引数が省略された場合はデフォルトで:
 
@@ -211,7 +211,7 @@ $transporter.send($email)
 
 #### 説明
 
-`.getContent()` 関数は、 <!-- REF #MailAttachmentClass.getContent().Summary -->The `.getContent()` function<!-- END REF -->。 [`MAIL Convert from MIME`](#mail-convert-from-mime) コマンドによって取得した添付オブジェクトに対して、この関数を使用することができます。
+`.getContent()` 関数は、 <!-- REF #MailAttachmentClass.getContent().Summary -->添付オブジェクトの中身を BLOB として返します<!-- END REF -->。 [`MAIL Convert from MIME`](#mail-convert-from-mime) コマンドによって取得した添付オブジェクトに対して、この関数を使用することができます。
 
 ## .name
 

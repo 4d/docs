@@ -123,12 +123,12 @@ title: バックアップ設定
 
 ユーザーにダイアログボックスが提示されることはありません。 処理は完全に自動です。 処理はバックアップジャーナルに記録されます。
 
-> In the case of an automatic restore, only the following elements are restored:
+> 自動復元の場合、復元されるのは次の要素に限られます:
 > 
-> - .4DD file
-> - .4DIndx file
-> - .4DSyncData file
-> - .4DSyncHeader file
-> - External Data folder
+> - .4DD ファイル
+> - .4DIndx ファイル
+> - .4DSyncData ファイル
+> - .4DSyncHeader ファイル
+> - External Data フォルダー
 > 
 > 添付ファイルやプロジェクトファイルを取得したい場合、[手動の復元](restore.md#手動でバックアップから復元する-標準ダイアログ) をおこなう必要があります。

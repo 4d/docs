@@ -2101,7 +2101,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 #### 説明
 
-`.reduce()` 関数は、 <!-- REF #collection.reduce().Summary -->The `.reduce()` function<!-- END REF -->。
+`.reduce()` 関数は、 <!-- REF #collection.reduce().Summary -->*methodName* コールバックをアキュムレーターおよびコレクションの各要素に (左から右へ) 適用して、単一の値にまとめます<!-- END REF -->。
 > このコマンドは、元のコレクションを変更しません。
 
 *methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* はコレクションの各要素を受け取り、任意の処理を実行して、結果を *$1.accumulator* に蓄積します。この値は最終的に *$1.value* に返されます。
@@ -2416,9 +2416,9 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 #### 説明
 
-`.some()` 関数は、 <!-- REF #collection.some().Summary -->returns true if at least one element in the collection successfully passed a test<!-- END REF --> implemented in the provided *methodName* method.
+`.some()` 関数は、 <!-- REF #collection.some().Summary -->少なくとも一つのコレクション要素が、テストにパスした場合に true を返します<!-- END REF --> 。このテストは、*methodName* に指定したメソッドで実装します。
 
-*methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* で指定したメソッドはどんなテストでも実行でき、引数はあってもなくても構いません。 In *methodName*, pass the name of the method to use to evaluate collection elements, along with its parameter(s) in *param* (optional).
+*methodName* には、コレクション要素の評価に使用するメソッド名を渡します。*param* には、必要に応じて引数を渡します (任意)。 *methodName* で指定したメソッドはどんなテストでも実行でき、引数はあってもなくても構いません。 このメソッドは $1 にオブジェクトを受け取り、テストをパスした最初の要素の *$1.result* を **true** に設定しなければなりません。
 
 *methodName* で指定したメソッドは以下の引数を受け取ります:
 
@@ -2489,7 +2489,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 #### 説明
 
-`.sort()` 関数は、 <!-- REF #collection.sort().Summary -->sorts the elements of the original collection<!-- END REF --> and also returns the sorted collection.
+`.sort()` 関数は、 <!-- REF #collection.sort().Summary -->コレクションの要素を並べ替えます<!-- END REF --> 。戻り値は並べ替えられた元のコレクションです。
 > このコマンドは、元のコレクションを変更します。
 
 引数もなしに呼び出された場合、`.sort()` はスカラー値 (数値、テキスト、日付、ブール) のみを並べ替えます。 デフォルトでは、要素はそれぞれの型に応じて昇順で並べ替えられます。
@@ -2504,7 +2504,7 @@ propertyPath 比較演算子 値 {logicalOperator propertyPath 比較演算子 �
 
 *methodName* で指定したメソッドでは、以下の引数を設定します:
 
-* *$1.result*(boolean): **true** if*$1.value < $1.value2*, **false** otherwise
+* *$1.result* (ブール): *$1.value < $1.value2* の場合は **true**、それ以外は **false**
 
 コレクションが異なる型の要素を格納している場合、それらはまず型ごとにグループ分けされ、そのあとで並べ替えられます。 型は以下の順番で返されます:
 
