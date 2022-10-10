@@ -1735,7 +1735,7 @@ Se a coleção estiver vazia, `.min()` devolve *Undefined*.
 | ----------- | ---------- |:--:| ------------------------------------------------------------------------ |
 | pathStrings | Text       | -> | Property path(s) on which to order the collection                        |
 | pathObjects | Collection | -> | Coleção de objetos criterio                                              |
-| ascOrDesc   | Integer    | -> | `ck ascending` or `ck descending` (scalar values)                        |
+| ascOrDesc   | Integer    | -> | `ck ascending` ou `ck descending` (valores escalares)                    |
 | Resultados  | Collection | <- | Ordered copy of the collection (shallow copy)|<!-- END REF --> |
 
 
