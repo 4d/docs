@@ -18,7 +18,7 @@ title: Directory Class
 
 #### Descrição
 
-The `.creationDate` property returns <!-- REF #directory.creationDate.Summary -->the creation date of the folder<!-- END REF -->.
+A propriedade `.aceita a transação` devolve <!-- REF #directory.creationDate.Summary -->the creation date of the folder<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 <!-- END REF -->
@@ -38,7 +38,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.creationTime` property returns <!-- REF #directory.creationTime.Summary -->the creation time of the folder<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+A propriedade `.creationTime` devolve <!-- REF #directory.creationTime.Summary -->the creation time of the folder<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
 Essa propriedade é**apenas leitura**.
 
@@ -60,7 +60,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.exists` property returns <!-- REF #directory.exists.Summary -->true if the folder exists on disk<!-- END REF -->, and false otherwise.
+A propriedade `.exists` devolve <!-- REF #directory.exists.Summary -->true if the folder exists on disk<!-- END REF -->, and false otherwise.
 
 Essa propriedade é**apenas leitura**.
 
@@ -461,7 +461,7 @@ $copiedImages:=$userImages.copyTo(Folder(fk database folder);fk overwrite)
 
 #### Descrição
 
-The `.file()` function creates <!-- REF #directory.file().Summary -->a `File` object inside the `Folder` object and returns its reference<!-- END REF -->.
+A função `.file()` cria <!-- REF #directory.file().Summary -->a `File` object inside the `Folder` object and returns its reference<!-- END REF -->.
 
 Em *path*, passe uma rota relativa POSIX para designar o arquivo a devolver. A rota se avaliará a partir da pasta pai como raíz.
 
@@ -503,7 +503,7 @@ $myPDF:=Folder(fk documents folder).file("Pictures/info.pdf")
 
 #### Descrição
 
-The `.files()` function returns <!-- REF #directory.files().Summary -->a collection of `File` objects contained in the folder<!-- END REF -->.
+A função `.files()` devolve <!-- REF #directory.files().Summary -->a collection of `File` objects contained in the folder<!-- END REF -->.
 > Os apelidos ou links simbolicos não são resolvidos.
 
 Como padrão, se omitir o parâmetro *options*, só se devolvem na coleção os arquivos de primeiro nivel da pasta, assim como os arquivos ou pastas invisíveis. Pode modificar isso passando, no parâmetro *options*, uma ou várias das constantes abaixo:
