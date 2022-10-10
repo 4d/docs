@@ -792,7 +792,7 @@ Este exemplo cria uma nova entidade na classe de dados "Log" e registra a inform
 
 #### Descrição
 
-The `.newSelection()` function <!-- REF #DataClassClass.newSelection().Summary -->creates a new, blank, non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->.
+A função `.newSelection()` <!-- REF #DataClassClass.newSelection().Summary -->creates a new, blank, non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->.
 
 > Para mais informação sobre as seleçõees de entidades não compartilháveis, consulte [esta seção](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
@@ -1444,12 +1444,12 @@ A função `.setRemoteCacheSettings()` <!-- REF #DataClassClass.setRemoteCacheSe
 
 In the *settings* parameter, pass an object with the following properties:
 
-| Propriedade | Tipo    | Descrição                   |
-| ----------- | ------- | --------------------------- |
-| timeout     | Integer | Timeout in seconds.         |
-| maxEntries  | Integer | Maximum number of entities. |
+| Propriedade | Tipo    | Descrição                    |
+| ----------- | ------- | ---------------------------- |
+| timeout     | Integer | Tempo de espera em segundos. |
+| maxEntries  | Integer | Maximum number of entities.  |
 
-`timeout` sets the timeout of the ORDA cache for the dataclass (default is 30 seconds). Once the timeout has passed, the entities of the dataclass in the cache are considered as expired. This means that:
+`timeout` sets the timeout of the ORDA cache for the dataclass (default is 30 seconds). Once the timeout has passed, the entities of the dataclass in the cache are considered as expired. Isto significa que:
 
 * the data is still there
 * the next time the data is needed, it will be asked to the server
@@ -1457,7 +1457,7 @@ In the *settings* parameter, pass an object with the following properties:
 
 Setting a `timeout` property sets a new timeout for the entities already present in the cache. It is useful when working with data that does not change very frequently, and thus when new requests to the server are not necessary.
 
-`maxEntries` sets the max number of entities in the ORDA cache. Default is 30 000.
+`maxEntries` sets the max number of entities in the ORDA cache. O padrão é de 30 000.
 
 The minimum number of entries is 300, so the value of `maxEntries` must be equal to or higher than 300. Otherwise it is ignored and the maximum number of entries is set to 300.
 
