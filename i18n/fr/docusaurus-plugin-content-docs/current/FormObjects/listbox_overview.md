@@ -703,9 +703,9 @@ Pour définir une list box hiérarchique, vous disposez de trois possibilités :
 
 #### Propriété List box hiérarchique
 
-Cette propriété permet de définir que la list box doit être affichée sous forme hiérarchique. In the JSON form, this feature is triggered [when the column *dataSource* property value is an array](properties_Object.md#array-list-box), i.e. a collection.
+Cette propriété permet de définir que la list box doit être affichée sous forme hiérarchique. Dans le formulaire JSON, cette fonctionnalité est déclenchée [lorsque la valeur de la propriété *dataSource* de la colonne est un tableau](properties_Object.md#array-list-box), c'est-à-dire une collection.
 
-Additional options (**Variable 1...10**) are available when the *Hierarchical List Box* option is selected, corresponding to each element of the *dataSource* array to use as break column. A chaque saisie d’une valeur dans un champ, une nouvelle ligne est ajoutée. Jusqu’à 10 variables peuvent être définies. Ces variables définissent les niveaux hiérarchiques à afficher dans la première colonne.
+Des options supplémentaires (**Variable 1...10**) sont disponibles lorsqu'une *List box hiérarchique* est définie, correspondant à chaque élément du tableau *dataSource* à utiliser comme colonne de rupture. A chaque saisie d’une valeur dans un champ, une nouvelle ligne est ajoutée. Jusqu’à 10 variables peuvent être définies. Ces variables définissent les niveaux hiérarchiques à afficher dans la première colonne.
 
 La première variable correspond toujours au nom de variable de la première colonne de la list box (les deux valeurs sont automatiquement liées). Cette première variable est toujours visible et saisissable. Par exemple : pays. La seconde variable est également toujours visible et saisissable, elle définit le deuxième niveau hiérarchique. Par exemple : régions. A partir du troisième champ, chaque variable dépend de celle qui la précède. Par exemple : départements, villes, etc. Un maximum de dix niveaux hiérarchiques peut être défini. Si vous effacez une valeur, l’ensemble de la liste hiérarchique définie remonte d’un niveau.
 
@@ -845,7 +845,7 @@ En mode hiérarchique, les niveaux de rupture ne sont pas pris en compte par les
 ```
 > Dans ce contexte, seule la syntaxe utilisant la variable tableau peut fonctionner avec les commandes de propriété d’objet car les tableaux n’ont alors pas d’objet associé.
 
-Result:
+Résultat:
 
 ![](../assets/en/FormObjects/hierarch14.png)
 
@@ -944,31 +944,31 @@ Il n'est pas possible de choisir un format d'affichage et/ou un filtre de saisie
 
 Chaque élément du tableau d'objets est un objet qui peut contenir un ou plusieurs attributs qui définiront le contenu de la cellule et l'affichage des données (voir exemple ci-dessus).
 
-The only mandatory attribute is "valueType" and its supported values are "text", "real", "integer", "boolean", "color", and "event". The following table lists all the attributes supported in list box object arrays, depending on the "valueType" value (any other attributes are ignored). Display formats are detailed and examples are provided below.
+L'unique attribut obligatoire est "valueType" et ses valeurs acceptées sont "text", "real", "integer", "boolean", "color" et "event". Le tableau suivant liste tous les attributs acceptés dans les tableaux d'objets des list box, suivant la valeur de "valueType" (tout autre attribut est ignoré). Les formats d'affichage et des exemples sont fournis ci-dessous.
 
-|                       | valueType                               | text | réel | entier | boolean | color | evénement |
-| --------------------- | --------------------------------------- | ---- | ---- | ------ | ------- | ----- | --------- |
-| *Attributs*           | *Description*                           |      |      |        |         |       |           |
-| value                 | cell value (input or output)            | x    | x    | x      |         |       |           |
-| min                   | minimum value                           |      | x    | x      |         |       |           |
-| max                   | maximum value                           |      | x    | x      |         |       |           |
-| behavior              | "threeStates" value                     |      |      | x      |         |       |           |
-| requiredList          | drop-down list defined in object        | x    | x    | x      |         |       |           |
-| choiceList            | combo box defined in object             | x    | x    | x      |         |       |           |
-| requiredListReference | 4D list ref, depends on "saveAs" value  | x    | x    | x      |         |       |           |
-| requiredListName      | 4D list name, depends on "saveAs" value | x    | x    | x      |         |       |           |
-| saveAs                | "reference" or "value"                  | x    | x    | x      |         |       |           |
-| choiceListReference   | 4D list ref, display combo box          | x    | x    | x      |         |       |           |
-| choiceListName        | 4D list name, display combo box         | x    | x    | x      |         |       |           |
-| unitList              | array of X elements                     | x    | x    | x      |         |       |           |
-| unitReference         | index of selected element               | x    | x    | x      |         |       |           |
-| unitsListReference    | 4D list ref for units                   | x    | x    | x      |         |       |           |
-| unitsListName         | 4D list name for units                  | x    | x    | x      |         |       |           |
-| alternateButton       | add an alternate button                 | x    | x    | x      | x       | x     |           |
+|                       | valueType                                             | text | réel | entier | boolean | color | evénement |
+| --------------------- | ----------------------------------------------------- | ---- | ---- | ------ | ------- | ----- | --------- |
+| *Attributs*           | *Description*                                         |      |      |        |         |       |           |
+| value                 | valeur de la cellule (saisie ou affichage)            | x    | x    | x      |         |       |           |
+| min                   | valeur minimum                                        |      | x    | x      |         |       |           |
+| max                   | valeur maximum                                        |      | x    | x      |         |       |           |
+| behavior              | valeur "threeStates"                                  |      |      | x      |         |       |           |
+| requiredList          | menu déroulant défini dans l'objet                    | x    | x    | x      |         |       |           |
+| choiceList            | combo box défini dans l'objet                         | x    | x    | x      |         |       |           |
+| requiredListReference | RefList 4D, dépend de la valeur de "saveAs"           | x    | x    | x      |         |       |           |
+| requiredListName      | nom d'énumération 4D, dépend de la valeur de "saveAs" | x    | x    | x      |         |       |           |
+| saveAs                | "reference" ou "value"                                | x    | x    | x      |         |       |           |
+| choiceListReference   | RefList 4D, affiche une combo box                     | x    | x    | x      |         |       |           |
+| choiceListName        | nom d'énumération 4D, affiche une combo box           | x    | x    | x      |         |       |           |
+| unitList              | tableau de X éléments                                 | x    | x    | x      |         |       |           |
+| unitReference         | indice de l'élément sélectionné                       | x    | x    | x      |         |       |           |
+| unitsListReference    | RefList 4D pour les unités                            | x    | x    | x      |         |       |           |
+| unitsListName         | nom d'énumération 4D pour les unités                  | x    | x    | x      |         |       |           |
+| alternateButton       | ajouter un bouton alternatif                          | x    | x    | x      | x       | x     |           |
 
 #### value
 
-Cell values are stored in the "value" attribute. This attribute is used for input as well as output. It can also be used to define default values when using lists (see below).
+La valeur des cellules est stockée dans l'attribut "value". Cet attribut est utilisé pour la saisie (entrée) et pour l'affichage (sortie). Il peut également être utilisé pour définir des valeurs par défaut lors de l'utilisation des listes (voir ci-dessous).
 
 ````4d
  C_OBJECT($ob1)
@@ -979,7 +979,7 @@ OB SET($ob;"value";$entry)
 ````
 
 ![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld_value.png)
-> Null values are supported and result in an empty cell.
+> La valeur Null est acceptée, elle définit une cellule vide.
 
 #### min et max
 
