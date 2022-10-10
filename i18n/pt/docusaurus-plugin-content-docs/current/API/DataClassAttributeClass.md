@@ -76,7 +76,7 @@ Esta propriedade não é devolvida se `.kind` = "relatedEntity" ou "relatedEntit
 
 #### Descrição
 
-The `.exposed` property is <!-- REF DataClassAttributeClass.exposed.Summary -->true if the attribute is exposed in REST<!-- END REF -->.
+O `.exposed` propriedade é <!-- REF DataClassAttributeClass.exposed.Summary -->true if the attribute is exposed in REST<!-- END REF -->.
 
 #### Veja também
 
@@ -396,7 +396,7 @@ O tipo de valor conceitual depende do atributo [`.kind`](#kind).
 
 | dataClassAttribute.kind | type                                                                           | Comentário                                                                                                                                                                                                                                                       |
 | ----------------------- | ------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| storage                 | "blob", "bool", "date", "image", "number", "object", or "string"               | "number" se devolve para qualquer tipo numérico, incluindo a duração. "string" se devolve para os tipos de campo uuid, alfa e texto. "blob" attributes are [blob objects](Concepts/dt_blob.md#blob-type), they are handled using the [Blob class](BlobClass.md). |
+| storage                 | "blob", "bool", "date", "image", "number", "object", ou "string"               | "number" se devolve para qualquer tipo numérico, incluindo a duração. "string" se devolve para os tipos de campo uuid, alfa e texto. "blob" attributes are [blob objects](Concepts/dt_blob.md#blob-type), they are handled using the [Blob class](BlobClass.md). |
 | relatedEntity           | related dataClass name                                                         | Ex: "Companies"                                                                                                                                                                                                                                                  |
 | relatedEntities         | related dataClass name + "Selection" suffix                                    | Ex: "EmployeeSelection"                                                                                                                                                                                                                                          |
 | calculated              | <li>storage: type ("blob", "number", etc.)</li><li>entity: dataClass name</li><li>entity selection: dataClass name + "Selection"</li> |                                                                                                                                                                                                                                                                  |
@@ -422,7 +422,7 @@ O tipo de valor conceitual depende do atributo [`.kind`](#kind).
 
 #### Descrição
 
-The `.unique` property <!-- REF DataClassAttributeClass.unique.Summary -->contains True if the attribute value must be unique<!-- END REF -->. Essa propriedade corresponde a propriedade de campo 4D "Unique".
+A propriedade `.unique` <!-- REF DataClassAttributeClass.unique.Summary -->contains True if the attribute value must be unique<!-- END REF -->. Essa propriedade corresponde a propriedade de campo 4D "Unique".
 
 Esta propriedade não é retornada se [`.kind`](#kind) = "relatedEntity" ou "relatedEntities".
 > Para programação genérica pode usar **Bool**(dataClassAttribute.unique) pra obter um valor válido (false) mesmo se `.unique` não for retornado.
