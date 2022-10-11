@@ -144,7 +144,7 @@ $c:=a+b
 
     El valor de la variable `$a` es ahora 1. La variable `$b` aún no está inicializada, pero se muestra porque se utiliza en la línea que se va a ejecutar.
 
-3. You click the **Step Over** button again. El contador del programa ahora está en la línea con c:=a+b. At this point the Line Objects theme displays:
+3. Haga clic en el botón **Step Over** nuevamente. El contador del programa ahora está en la línea con c:=a+b. At this point the Line Objects theme displays:
 
     | $c | Indefinido |
     | -- | ---------- |
@@ -351,7 +351,7 @@ Puede copiar toda expresión seleccionada del panel de código fuente en el [Cus
 1. En el panel de código fuente, seleccione la expresión a evaluar
 2. Haga una de las siguientes cosas:
     * Drag and drop the selected text to the Expression area of the Custom Watch Pane
-    * Press **Ctrl+D** (Windows) or **Cmd+D** (macOS)
+    * Presione **Ctrl+D** (Windows) o **Cmd+D** (macOS)
     * Right-click the selected text **>** **Copy to Expression Pane**
 
 ### Program Counter
