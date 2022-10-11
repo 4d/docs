@@ -221,7 +221,7 @@ Displays/hides the horizontal ruler when the document view is in [Page mode](#vi
 
 ---
 
-## Show HTML WYSYWIG
+## Mostrar HTML WYSYWIG
 
 Enables/disables the HTML WYSIWYG view, in which any 4D Write Pro advanced attributes which are not compliant with all browsers are removed.
 
