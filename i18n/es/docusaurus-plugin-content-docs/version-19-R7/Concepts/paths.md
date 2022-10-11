@@ -77,7 +77,7 @@ Sin embargo, si escribe `C:\MyDocuments\New`, 4D mostrará `C:\\MyDocuments\New`
 
 Las siguientes secuencias de escape son reconocidas por 4D:
 
-| Secuencias de escape         | Caracter reemplazado       |
+| Secuencias de escape         | Carácter reemplazado       |
 | ---------------------------- | -------------------------- |
 | `\n`                        | LF (Nueva línea)           |
 | `\t`                        | HT (Tabulación horizontal) |
