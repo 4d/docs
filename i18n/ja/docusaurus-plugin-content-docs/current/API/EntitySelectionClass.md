@@ -2083,7 +2083,7 @@ $sum:=$sel.sum("salary")
 
 #### 説明
 
-`.toCollection()` 関数は、 <!-- REF #EntitySelectionClass.toCollection().Summary -->プロパティと値のセットを持つオブジェクト要素を格納するコレクションを作成し、返します <!-- END REF -->。各オブジェクト要素のプロパティと値は、エンティティセレクションの各エンティティの属性名と値に対応します。
+`.toCollection()` 関数は、 <!-- REF #EntitySelectionClass.toCollection().Summary -->プロパティと値のセットを持つオブジェクト要素を格納するコレクションを作成して返します <!-- END REF -->。各オブジェクト要素のプロパティと値は、エンティティセレクションの各エンティティの属性名と値に対応します。
 
 filterString および filterCol 引数が省略されるか、空の文字列が渡されるか、あるいは "*" が渡された場合、すべての属性が抽出されます。 "[kind](DataClassAttributeClass.md#kind)" プロパティが "relatedEntity" の属性は単純な形式で抽出されます: \_\_KEY プロパティ (プライマリーキー) を持ったオブジェクト。 "relatedEntities" 型の "kind" プロパティの属性は抽出されません。
 
