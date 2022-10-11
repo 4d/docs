@@ -1,7 +1,7 @@
 {
   "version.label": {
-    "message": "Next",
-    "description": "The label for version current"
+    "message": "v19 R7 BETA",
+    "description": "The label for version 19-R7"
   },
   "sidebar.docs.category.Getting Started": {
     "message": "Getting Started",
@@ -175,6 +175,14 @@
     "message": "4D Language Reference",
     "description": "The label for link 4D Language Reference in sidebar docs, linking to https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Language-Reference.100-5910320.en.html"
   },
+  "sidebar.docs.link.4D Write Pro": {
+    "message": "4D Write Pro",
+    "description": "The label for link 4D Write Pro in sidebar docs, linking to https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Write-Pro-Reference.100-5903884.en.html"
+  },
+  "sidebar.docs.link.4D Write Pro Interface": {
+    "message": "4D Write Pro Interface",
+    "description": "The label for link 4D Write Pro Interface in sidebar docs, linking to https://github.com/4d/4D-WritePro-Interface"
+  },
   "sidebar.docs.link.4D Mobile App Server": {
     "message": "4D Mobile App Server",
     "description": "The label for link 4D Mobile App Server in sidebar docs, linking to https://github.com/4d-go-mobile/4D-Mobile-App-Server"
@@ -195,10 +203,6 @@
     "message": "4D Widgets",
     "description": "The label for link 4D Widgets in sidebar docs, linking to https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Widgets.100-5968122.en.html"
   },
-  "sidebar.docs.link.4D Write Pro Interface": {
-    "message": "4D Write Pro Interface",
-    "description": "The label for link 4D Write Pro Interface in sidebar docs, linking to https://github.com/4d/4D-WritePro-Interface"
-  },
   "sidebar.docs.link.Go Mobile": {
     "message": "Go Mobile",
     "description": "The label for link Go Mobile in sidebar docs, linking to https://developer.4d.com/go-mobile/"
@@ -206,9 +210,5 @@
   "sidebar.docs.link.4D for iOS (archive)": {
     "message": "4D for iOS (archive)",
     "description": "The label for link 4D for iOS (archive) in sidebar docs, linking to https://developer.4d.com/4d-for-ios"
-  },
-  "sidebar.docs.link.4D Write Pro": {
-    "message": "4D Write Pro",
-    "description": "The label for link 4D Write Pro in sidebar docs, linking to https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Write-Pro-Reference.100-5903884.en.html"
   }
 }
