@@ -95,7 +95,7 @@ O tipo de valor do atributo depende do tipo do atributo [atributo](DataClassAttr
 
 #### Descrição
 
-The `.clone()` function <!-- REF #EntityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->. Esta função permite que você atualize as entidades separadamente.
+A função `.clone()` <!-- REF #EntityClass.clone().Summary -->creates in memory a new entity referencing the same record as the original entity<!-- END REF -->. Esta função permite que você atualize as entidades separadamente.
 > Tenha em mente que quaisquer modificações feitas a entidades serão salvas no registro referenciado somente quando o [`. ave( )`](#save) função for executada.
 
 Esta função só pode ser usada com entidades já salvas no banco de dados. Ele não pode ser chamado em uma entidade recém-criada (para a qual [`.isNew()`](#isnew) retorna **Verdadeiro**).
@@ -139,7 +139,7 @@ Esta função só pode ser usada com entidades já salvas no banco de dados. Ele
 
 #### Descrição
 
-The `.diff()` function <!-- REF #EntityClass.diff().Summary -->compares the contents of two entities and returns their differences<!-- END REF -->.
+A função `.diff()` <!-- REF #EntityClass.diff().Summary -->compares the contents of two entities and returns their differences<!-- END REF -->.
 
 No *entityToCompare*, passe a entidade a ser comparada à entidade original.
 
@@ -340,7 +340,7 @@ vCompareResult3 (apenas as diferenças em $e1 atributos tocados são retornadas)
 
 #### Descrição
 
-The `.drop()` function <!-- REF #EntityClass.drop().Summary -->deletes the data contained in the entity from the datastore<!-- END REF -->, from the table related to its Dataclass. Note-se que a entidade permanece na memória.
+A função `.drop()` <!-- REF #EntityClass.drop().Summary -->deletes the data contained in the entity from the datastore<!-- END REF -->, from the table related to its Dataclass. Note-se que a entidade permanece na memória.
 
 Numa aplicação multiusuário ou multiprocesso, a função `.drop()` é executada sob um mecanismo ["optimistic lock"](ORDA/entities.md#entity-locking) , no qual um selo de bloqueio interno é automaticamente incrementado cada vez que o registo for guardado.
 
@@ -446,7 +446,7 @@ Exemplo com a opção`dk force drop if stamp changed`:
 
 #### Descrição
 
-The `.first()` function <!-- REF #EntityClass.first().Summary -->returns a reference to the entity in first position of the entity selection which the entity belongs to<!-- END REF -->.
+A função `.first()` <!-- REF #EntityClass.first().Summary -->returns a reference to the entity in first position of the entity selection which the entity belongs to<!-- END REF -->.
 
 Se a entidade não pertence a nenhuma seleção de entidade existente (ex: [.getSelection( )](#getselection) retorna Null), a função retorna um valor nulo.
 
@@ -486,7 +486,7 @@ Se a entidade não pertence a nenhuma seleção de entidade existente (ex: [.get
 
 #### Descrição
 
-The `.fromObject()` function <!-- REF #EntityClass.fromObject().Summary -->fills an entity with the *filler* content<!-- END REF -->.
+A função `.fromObject()` <!-- REF #EntityClass.fromObject().Summary -->fills an entity with the *filler* content<!-- END REF -->.
 > Essa função modifica a entidade original.
 
 O mapeamento entre o objecto e a entidade é feito sobre os nomes dos atributos:
@@ -572,7 +572,7 @@ Você também poderia usar uma entidade relacionada dada como um objeto:
 
 #### Descrição
 
-The `.getDataClass()` function <!-- REF #EntityClass.getDataClass().Summary -->returns the dataclass of the entity<!-- END REF -->. Esta função é útil para configurar o código genérico.
+A função `.getDataClass()` <!-- REF #EntityClass.getDataClass().Summary -->returns the dataclass of the entity<!-- END REF -->. Esta função é útil para configurar o código genérico.
 
 #### Exemplo
 
@@ -623,7 +623,7 @@ O seguinte código genérico duplica qualquer entidade:
 
 #### Descrição
 
-The `.getKey()` function <!-- REF #EntityClass.getKey().Summary -->returns the primary key value of the entity<!-- END REF -->.
+A função `.getKey()` <!-- REF #EntityClass.getKey().Summary -->returns the primary key value of the entity<!-- END REF -->.
 
 As chaves primárias podem ser números (Inteiro) ou strings. Você pode "forçar" o valor da chave primária retornado para ser uma string, independentemente do tipo de chave primária real, passando a `dk key como string` opção no parâmetro *modo*.
 
@@ -665,7 +665,7 @@ As chaves primárias podem ser números (Inteiro) ou strings. Você pode "força
 
 #### Descrição
 
-The `.getRemoteContextAttributes()` function <!-- REF #EntityClass.getRemoteContextAttributes().Summary -->returns information about the optimization context used by the entity <!-- END REF -->.
+A função `.getRemoteContextAttributes()` <!-- REF #EntityClass.getRemoteContextAttributes().Summary -->returns information about the optimization context used by the entity <!-- END REF -->.
 
 If there is no [optimization context](../ORDA/remoteDatastores.md#clientserver-optimization) for the entity, the function returns an empty Text.
 
@@ -719,7 +719,7 @@ $info:=$address.getRemoteContextAttributes()
 
 #### Descrição
 
-The `.getSelection()` function <!-- REF #EntityClass.getSelection().Summary -->returns the entity selection which the entity belongs to<!-- END REF -->.
+A função `.getSelection()` <!-- REF #EntityClass.getSelection().Summary -->returns the entity selection which the entity belongs to<!-- END REF -->.
 
 Se a entidade não pertence à seleção de uma entidade, a função retorna Null.
 
@@ -763,7 +763,7 @@ Se a entidade não pertence à seleção de uma entidade, a função retorna Nul
 
 #### Descrição
 
-The `.getStamp()` function <!-- REF #EntityClass.getStamp().Summary --> returns the current value of the stamp of the entity<!-- END REF -->.
+A função `.getStamp()` <!-- REF #EntityClass.getStamp().Summary --> returns the current value of the stamp of the entity<!-- END REF -->.
 
 O selo interno é automaticamente incrementado por 4D cada vez que a entidade é gravada. Gere o acesso de usuários simultâneos e modificações às mesmas entidades (ver [**bloqueio de entidades**](ORDA/entities.md#entity-locking)).
 > Para uma nova entidade (nunca salva), a função retorna 0. Para saber se uma entidade acabou de ser criada, recomenda-se a utilização de [.isNew()](#isnew).
@@ -1624,7 +1624,7 @@ Retorna:
 
 #### Descrição
 
-The `.touched()` function <!-- REF #EntityClass.touched().Summary -->tests whether or not an entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->.
+A função `.touched()` <!-- REF #EntityClass.touched().Summary -->tests whether or not an entity attribute has been modified since the entity was loaded into memory or saved<!-- END REF -->.
 
 If an attribute has been modified or calculated, the function returns True, else it returns False. You can use this function to determine if you need to save the entity.
 

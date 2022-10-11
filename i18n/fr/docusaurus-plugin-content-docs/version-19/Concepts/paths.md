@@ -47,6 +47,7 @@ $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
 
+
 ## Syntaxe spécifique à la plate-forme
 
 La syntaxe spécifique à la plate-forme dépend du système d'exploitation sur lequel la commande est exécutée. Notez que lorsque vous créez un objet fichier ou dossier avec cette syntaxe, vous devez le déclarer en utilisant la constante `fk platform path` comme paramètre.
@@ -68,7 +69,7 @@ $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 
 #### Saisie de chemins Windows et séquences d'échappement
 
-L'[éditeur de code 4D](../code-editor/write-class-method.md) permet l'utilisation de séquences d'échappement. Une séquence d’échappement est une suite de caractères permettant de remplacer un caractère “spécial”. La séquence débute par le caractère barre oblique inversée (antislash) `\`, suivi d’un caractère. Par exemple, `\t` est la séquence d'échappement pour le caractère `Tab`.
+The 4D code editor allows the use of escape sequences. Une séquence d’échappement est une suite de caractères permettant de remplacer un caractère “spécial”. La séquence débute par le caractère barre oblique inversée (antislash) `\`, suivi d’un caractère. Par exemple, `\t` est la séquence d'échappement pour le caractère `Tab`.
 
 Le caractère `\` est également utilisé comme séparateur dans les noms de chemin sous Windows. En général, 4D interprète correctement les chemins Windows saisis dans l'éditeur de code en remplaçant les barres obliques simples `\` par des barres obliques doubles ``\\`. Par exemple,``C:\Folder`deviendra`C:\\Folder`.
 
