@@ -208,8 +208,8 @@ Para asociar un símbolo de menú emergente a un botón, hay dos opciones de vis
 
 Cada opción precisa la relación entre el botón y el menú emergente asociado:
 
-<li>When the pop-up menu is **separated**, clicking on the left part of the button directly executes the current action of the button; this action can be modified using the pop-up menu accessible in the right part of the button.
-</li><li>When the pop-up menu is **linked**, a simple click on the button only displays the pop-up menu. Sólo la selección de la acción en el menú emergente provoca su ejecución.</li>
+<li>Cuando el menú emergente está **separado**, al hacer clic en la parte izquierda del botón se ejecuta directamente la acción actual del botón; esta acción puede modificarse mediante el menú emergente accesible en la parte derecha del botón.
+</li><li>Cuando el menú emergente está **vinculado**, un simple clic en el botón sólo muestra el menú emergente. Sólo la selección de la acción en el menú emergente provoca su ejecución.</li>
 
 ### Gestión del menú emergente
 
