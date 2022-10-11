@@ -295,7 +295,7 @@ The entity selection must be *alterable*, i.e. it has been created for example b
 
 :::
 
-**Adding an entity**
+**Añadir una entidad**
 
 *   Si la entity selection está ordenada, *entity* se añade al final de la selección. Si una referencia a la misma entidad ya pertenece a la selección de entidades, se duplica y se añade una nueva referencia.
 *   Si la entity selection no está ordenada, *entity* se añade en cualquier lugar de la selección, sin un orden específico.
@@ -1317,10 +1317,10 @@ En este ejemplo, queremos encontrar el salario más bajo entre todas las emplead
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                   |
-| ------- | -------------------------------- |
-| v19 R7  | Support of *keepOrder* parameter |
-| v17     | Añadidos                         |
+| Versión | Modificaciones                    |
+| ------- | --------------------------------- |
+| v19 R7  | Soporte del parámetro *keepOrder* |
+| v17     | Añadidos                          |
 
 </details>
 
