@@ -47,6 +47,7 @@ $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
 
+
 ## Sintaxis específica de la plataforma
 
 La sintaxis específica de la plataforma depende del sistema operativo en el que se ejecute el comando. Tenga en cuenta que al crear un objeto archivo o carpeta con esta sintaxis, debe declararlo utilizando la constante `fk platform path` como parámetro.
@@ -68,7 +69,7 @@ $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 
 #### Entrada de rutas Windows y secuencias de escape
 
-El [editor de código e 4D](../code-editor/write-class-method.md) permite el uso de secuencias de escape. Una secuencia de escape es un conjunto de caracteres que se utilizan para sustituir un caracter "especial". La secuencia comienza con una barra diagonal inversa `\`, seguida de un caracter. Por ejemplo, `\t` es la secuencia de escape para el caracter `Tab`.
+The 4D code editor allows the use of escape sequences. Una secuencia de escape es un conjunto de caracteres que se utilizan para sustituir un caracter "especial". La secuencia comienza con una barra diagonal inversa `\`, seguida de un caracter. Por ejemplo, `\t` es la secuencia de escape para el caracter `Tab`.
 
 El caracter `\` también se utiliza como separador en los nombres de ruta Windows. En general, 4D interpretará correctamente los nombres de ruta Windows que se introduzcan en el editor de código sustituyendo las barras invertidas simples `\` por barras invertidas dobles ``\\`. Por ejemplo,``C:\Folder`se convertirá en `C:\\Folder`.
 
