@@ -89,7 +89,7 @@ Project フォルダー Project Sources Classes Polygon.4dm
   - クラスメソッドはコードのブロックです
   - オブジェクトメンバーに対する **定義に移動** 操作はクラスの Function 宣言を探します。例: "$o.f()" の場合、"Function f" を見つけます。
   - クラスのメソッド宣言に対する **参照箇所を検索** 操作は、そのメソッドがオブジェクトメンバーとして使われている箇所を探します。例: "Function f" の場合 "$o.f()" を見つけます。
-- ランタイムエクスプローラーおよびデバッガーにおいて、クラスメソッドは `\<ClassName>` コンストラクターまたは `\<ClassName>\<FunctionName>` 形式で表示されます。
+- ランタイムエクスプローラーおよびデバッガーにおいて、クラスメソッドは `<ClassName>` コンストラクターまたは `<ClassName>.<FunctionName>` 形式で表示されます。
 
 ## クラスストア
 
@@ -140,7 +140,7 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 - [`name`](API/ClassClass.md#name) 文字列
 - [`superclass`](API/ClassClass.md#superclass) オブジェクト (無い場合は null)
-- [`new()`](API/ClassClass.md#new) 関数 (クラスオブジェクトをインスタンス化します)
+- [`new()`](API/ClassClass.md#new) 関数 (Class オブジェクトをインスタンス化します)
 
 また、Class オブジェクトは [`constructor`](#class-constructor) オブジェクトを参照することも可能です。
 
@@ -195,7 +195,7 @@ Function getFullname()->$fullname : Text
 
 クラス関数の場合には、`Current method name` コマンドは次を返します: `<ClassName>.<FunctionName>` (例: "MyClass.myFunction")。
 
-アプリケーションのコード内では、クラス関数はオブジェクトインスタンスのメンバーメソッドとして呼び出され、[引数](#クラス関数の引数 mark=) を受け取ることができます。 以下のシンタックスがサポートされています:
+アプリケーションのコード内では、クラス関数はオブジェクトインスタンスのメンバーメソッドとして呼び出され、[引数](#クラス関数の引数) を受け取ることができます。 以下のシンタックスがサポートされています:
 
 - `()` 演算子の使用。 例: `myObject.methodName("hello")`
 - "4D.Function" クラスメンバーメソッドの使用:
@@ -542,7 +542,7 @@ Function description()
 var $square : Object
 var $message : Text
 $square:=cs.Square.new()
-$message:=$square.description() // I have 4 sides which are all equal
+$message:=$square.description() // "I have 4 sides which are all equal"
 ```
 
 ### `This`
