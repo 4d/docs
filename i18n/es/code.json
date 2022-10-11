@@ -539,5 +539,18 @@
   "theme.SearchModal.placeholder": {
     "message": "Search docs",
     "description": "The placeholder of the input of the DocSearch pop-up modal"
+  },
+  "This is the documentation for the latest": {
+    "message": "This is the documentation for the latest"
+  },
+  "Looking for a LTS documentation?": {
+    "message": "Looking for a LTS documentation?"
+  },
+  "4D Write Pro": {
+    "message": "4D Write Pro"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Etiquetas",
+    "description": "The title of the tag list page"
   }
 }
