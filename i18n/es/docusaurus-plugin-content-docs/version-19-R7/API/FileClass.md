@@ -463,7 +463,7 @@ La función `.open()` <!-- REF #FileClass.open().Summary -->crea y devuelve un n
 
 Si utiliza el parámetro *mode* (text), pase el modo de apertura al gestor del archivo:
 
-| *modo*   | Descripción                                                                                                                                                                                                                                            |
+| *mode*   | Descripción                                                                                                                                                                                                                                            |
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | "read"   | (Por defecto) Crea un manejador de archivos para leer los valores del archivo. Si el archivo no existe en el disco, se devuelve un error. Puedes abrir tantos manejadores de archivo como quiera en modo "lectura" en el mismo objeto Archivo.         |
 | "write"  | Crea un gestor de archivo para escribir valores en el archivo (empezando por el principio del contenido del archivo). Si el archivo no existe en el disco, se crea. Sólo se puede abrir un gestor de archivo en modo "write" en el mismo objeto File.  |
@@ -662,7 +662,7 @@ $infoPlistFile.setAppInfo($info)
 
 #### Descripción
 
-La función `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescribe todo el contenido del archivo utilizando los datos almacenados en el BLOB *content*<!-- END REF -->. Para obtener información sobre los BLOB, consulte la sección [BLOB](Conceptos/dt_blob.md).
+La función `.setContent( )` <!-- REF #FileClass.setContent().Summary -->reescribe todo el contenido del archivo utilizando los datos almacenados en el BLOB *content*<!-- END REF -->. .
 
 #### Ejemplo
 
