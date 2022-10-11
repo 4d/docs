@@ -131,7 +131,7 @@ In the *options* parameter, pass an object that can contain the following proper
 | onHeaders            | [Function](FunctionClass.md)                    | Callback when the headers are received. It receives two objects as parameters (see below)                                                                                                                                                                         | indefinido   |
 | onResponse           | [Function](FunctionClass.md)                    | Callback when a response is received. It receives two objects as parameters (see below)                                                                                                                                                                           | indefinido   |
 | onTerminate          | [Function](FunctionClass.md)                    | Callback when the request is over. It receives two objects as parameters (see below)                                                                                                                                                                              | indefinido   |
-| protocol             | Text                                            | "auto" or "HTTP1". "auto" means HTTP1 in the current implementation                                                                                                                                                                                               | "auto"       |
+| protocol             | Text                                            | "auto" ou "HTTP1". "auto" means HTTP1 in the current implementation                                                                                                                                                                                               | "auto"       |
 | proxyAuthentication  | [authentication object](#authentication-object) | Object handling proxy authentication                                                                                                                                                                                                                              | indefinido   |
 | serverAuthentication | [authentication object](#authentication-object) | Object handling server authentication                                                                                                                                                                                                                             | indefinido   |
 | returnResponseBody   | Booleano                                        | If false, the response body is not returned in the [`response` object](#response). Returns an error if false and `onData` is undefined                                                                                                                            | True         |
@@ -143,7 +143,7 @@ All callback functions receive two object parameters:
 
 | Parâmetros | Tipo                                        |
 | ---------- | ------------------------------------------- |
-| $param1    | [`HTTPRequest` object](#httprequest-object) |
+| $param1    | [objeto `HTTPRequest`](#httprequest-object) |
 | $param2    | [`Event` object](#event-object)             |
 
 Here is the sequence of callback calls:
