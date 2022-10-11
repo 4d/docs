@@ -99,7 +99,7 @@ IP:port/4DACTION/action_Session
 
 #### Descrição
 
-The `.clearPrivileges()` function <!-- REF #SessionClass.clearPrivileges().Summary -->removes all the privileges associated to the session<!-- END REF -->. Summary -->devolve True se o privilegio estiver associado à sessão, ou então False em caso contrário<!-- END REF -->.
+A função `.clearPrivileges()` <!-- REF #SessionClass.clearPrivileges().Summary -->removes all the privileges associated to the session<!-- END REF -->. Summary -->devolve True se o privilegio estiver associado à sessão, ou então False em caso contrário<!-- END REF -->.
 
 #### Exemplo
 
