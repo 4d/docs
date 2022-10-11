@@ -41,15 +41,15 @@ If 4D Server is connected to the same network as the remote 4D, select **Availab
 
 To connect to a server from the list, double-click on its name or select it and click the **OK** button.
 
-> A circumflex accent (^) is placed before the name of projects published with the encryption option enabled.
+> Se antepone un acento circunflejo (^) al nombre de los proyectos publicados con la opción de encripción activada.
 
-If the published project is not displayed in the **Available** list, select **Custom**. The Custom page allows you to connect to a published server on the network using its network address and assigning it a customized name.
+Si el proyecto publicado no aparece en la lista **Disponible**, seleccione **Personalizado**. La página Personalizada le permite conectarse a un servidor publicado en la red utilizando su dirección de red y asignándole un nombre personalizado.
 
 ![](../assets/en/Desktop/serverConnect2.png)
 
-- **Project name**: Defines the local name of the 4D Server project. This name will be used in the **Recent** page when referring to the project.
-- **Network address**: The IP address of the machine where the 4D Server was launched.
-  - If two servers are executed simultaneously on the same machine, the IP address must be followed by a colon and port number, for example: `192.168.92.104:19814`.
+- **Nombre del proyecto**: define el nombre local del proyecto 4D Server. Este nombre se utilizará en la página **Reciente** cuando se haga referencia al proyecto.
+- **Dirección red**: la dirección IP de la máquina donde se lanzó el 4D Server.
+  - Si dos servidores se ejecutan simultáneamente en la misma máquina, la dirección IP debe ir seguida de dos puntos y del número de puerto, por ejemplo: `192.168.92.104:19814`.
   - Por defecto, el puerto de publicación de un 4D Server es el 19813. Este número puede modificarse en los parámetros del proyecto.
 
 > The **Activate development mode** option opens the remote connection in a special read/write mode and requires to access the project folder from the remote 4D (compatibility option).

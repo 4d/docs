@@ -33,9 +33,9 @@ Puedes gestionar los datos con los [métodos](Concepts/methods.md) objeto o form
 
 <details><summary>Histórico</summary>
 
-| Versión | Modificaciones                    |
-| ------- | --------------------------------- |
-| v19 R7  | Support of Corner radius property |
+| Versión | Modificaciones                           |
+| ------- | ---------------------------------------- |
+| v19 R7  | Soporte de la propiedad Radio de esquina |
 
 </details>
 
@@ -48,5 +48,5 @@ Puedes gestionar los datos con los [métodos](Concepts/methods.md) objeto o form
 También puede representar expresiones de campos y de variables en sus formularios utilizando objetos alternativos, más concretamente:
 
 *   Puede mostrar e introducir datos de los campos de la base directamente en las columnas [de tipo List box](listbox_overview.md).
-*   You can represent a list field or variable directly in a form using [Pop-up Menus/Drop-down Lists](dropdownList_Overview.md) and [Combo Boxes](comboBox_overview.md) objects.
+*   Puede representar un campo de lista o una variable directamente en un formulario utilizando los objetos [Menús desplegables/Listas desplegables](dropdownList_Overview.md) y [Combo Box](comboBox_overview.md).
 *   Puede representar una expresión booleana como una [casilla de selección](checkbox_overview.md) o como un objeto [botón radio](radio_overview.md).

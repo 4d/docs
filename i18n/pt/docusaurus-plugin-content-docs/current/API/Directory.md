@@ -18,7 +18,7 @@ title: Directory Class
 
 #### Descrição
 
-The `.creationDate` property returns <!-- REF #directory.creationDate.Summary -->the creation date of the folder<!-- END REF -->.
+A propriedade `.aceita a transação` devolve <!-- REF #directory.creationDate.Summary -->the creation date of the folder<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 
@@ -40,7 +40,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.creationTime` property returns <!-- REF #directory.creationTime.Summary -->the creation time of the folder<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
+A propriedade `.creationTime` devolve <!-- REF #directory.creationTime.Summary -->the creation time of the folder<!-- END REF --> (expressed as a number of seconds beginning at 00:00).
 
 Essa propriedade é**apenas leitura**.
 
@@ -62,7 +62,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.exists` property returns <!-- REF #directory.exists.Summary -->true if the folder exists on disk<!-- END REF -->, and false otherwise.
+A propriedade `.exists` devolve <!-- REF #directory.exists.Summary -->true if the folder exists on disk<!-- END REF -->, and false otherwise.
 
 Essa propriedade é**apenas leitura**.
 

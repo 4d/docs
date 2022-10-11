@@ -264,7 +264,7 @@ El objeto resultante es una entity selection de la dataclass Employee sin duplic
 
 | Versión | Modificaciones                                |
 | ------- | --------------------------------------------- |
-| v19 R7  | Support of *entitySelection* parameter        |
+| v19 R7  | Soporte del parámetro *entitySelection*       |
 | v18 R5  | Sólo soporta las entity selections alterables |
 | v17     | Añadidos                                      |
 
