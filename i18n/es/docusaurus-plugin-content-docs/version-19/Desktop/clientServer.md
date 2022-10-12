@@ -31,13 +31,13 @@ Para conectarse remotamente a un proyecto 4D Server:
 
 1. Select **Connect to 4D Server** in the Welcome Wizard dialog, OR Select **Open/Remote Project...** from the **File** menu or the **Open** toolbar button.
 
-Aparece el diálogo de conexión de 4D Server. This dialog has three tabs: **Recent**, **Available**, and **Custom**.
+Aparece el diálogo de conexión de 4D Server. Este diálogo tiene tres pestañas: **Reciente**, **Disponible** y **Personalizado**.
 
-If 4D Server is connected to the same network as the remote 4D, select **Available**. 4D Server includes a built-in TCP/IP broadcasting system that, by default, publishes the name of the 4D Server projects available over the network. The list is sorted by order of appearance and updated dynamically.
+Si 4D Server está conectado a la misma red que el 4D remoto, seleccione **Disponible**. 4D Server incluye un sistema de difusión TCP/IP integrado que, por defecto, publica el nombre de los proyectos 4D Server disponibles en la red. La lista se ordena por orden de aparición y se actualiza dinámicamente.
 
 ![](../assets/en/getStart/serverConnect.png)
 
-To connect to a server from the list, double-click on its name or select it and click the **OK** button.
+Para conectarse a un servidor de la lista, haga doble clic en su nombre o selecciónelo y presione el botón **Aceptar**.
 
 > Se antepone un acento circunflejo (^) al nombre de los proyectos publicados con la opción de encripción activada.
 
@@ -48,17 +48,17 @@ Si el proyecto publicado no aparece en la lista **Disponible**, seleccione **Per
 - **Nombre del proyecto**: define el nombre local del proyecto 4D Server. Este nombre se utilizará en la página **Reciente** cuando se haga referencia al proyecto.
 - **Dirección red**: la dirección IP de la máquina donde se lanzó el 4D Server. Si dos servidores se ejecutan simultáneamente en la misma máquina, la dirección IP debe ir seguida de dos puntos y del número de puerto, por ejemplo: `192.168.92.104:19814`. Por defecto, el puerto de publicación de un 4D Server es el 19813. Este número puede modificarse en los parámetros del proyecto.
 
-Once this page assigns a server, clicking the **OK** button will allow you to connect to the server.
+Una vez que esta página asigna un servidor, al hacer clic en el botón **Aceptar** podrá conectarse al servidor.
 
 > If the project is published with the encryption option enabled, you must add a circumflex accent (^) before the name, otherwise the connection will be refused. For more information, refer to the Encrypting Client/Server Connections section.
 
-Once a connection to the server has been established, the remote project will be listed on the **Recent** tab.
+Una vez establecida la conexión con el servidor, el proyecto remoto aparecerá en la pestaña **Recientes**.
 
 ### Actualización de los archivos del proyecto en el servidor
 
 4D Server automatically creates and sends the remote machines a [.4dz version](building.md#build-compiled-structure) of the *.4DProject* project file (not compressed) in interpreted mode.
 
-- An updated .4dz version of the project is automatically produced when necessary, *i.e.* when the project has been modified and reloaded by 4D Server. El proyecto se recarga:
+- Una versión .4dz actualizada del proyecto se produce automáticamente cuando es necesario, *es decir, *cuando el proyecto ha sido modificado y recargado por 4D Server. El proyecto se recarga:
   - automatically, when the 4D Server application window comes to the front of the OS or when the 4D application on the same machine saves a modification (see below).
   - cuando se ejecuta el comando `RELOAD PROJECT`. Calling this command is necessary for example when you have pulled a new version of the project from the source control platform.
 
