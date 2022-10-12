@@ -21,7 +21,7 @@ title: プロジェクトパッケージのビルド
 プロジェクトパッケージをビルドするには次の方法があります:
 
 * [`BUILD APPLICATION`](https://doc.4d.com/4Dv19/4D/19/BUILD-APPLICATION.301-5392523.ja.html) コマンドを使う
-* [アプリケーションビルド](#application-builder)ウィンドウを使う
+* [アプリケーションビルド](#application-builder) ウィンドウを使う
 
 このウィンドウを開くには 4D の **デザイン** メニューから **アプリケーションビルド...** を選択します。
 
@@ -35,7 +35,7 @@ title: プロジェクトパッケージのビルド
 
 ### アプリケーションビルド設定
 
-アプリケーションビルドに関わる各パラメーター設定は XML キーの形で、`buildApp.4DSettings` という名称のアプリケーションプロジェクトファイルに保存されます。 この XML ファイルはプロジェクトの `Settings` フォルダーに配置されます。
+アプリケーションビルドに関わる各パラメーター設定は XML キーの形で、`buildApp.4DSettings` という名称のアプリケーションプロジェクトファイルに保存されます。この XML ファイルはプロジェクトの `Settings` フォルダーに配置されます。
 
 アプリケーションビルドダイアログが初めて表示されるときにはデフォルトパラメーターが使用されます。 **ビルド** ボタンや **設定保存** ボタンをクリックすると、このプロジェクトファイルの内容が更新されます。 同じデータベースについて内容の異なる複数の XML ファイルを定義し、[BUILD APPLICATION](https://doc.4d.com/4Dv19/4D/19/BUILD-APPLICATION.301-5392523.ja.html) コマンドでそれらを使い分けることができます。
 
@@ -73,7 +73,7 @@ title: プロジェクトパッケージのビルド
 
 インタープリターコードを含まないアプリケーションをビルドします。
 
-This feature creates a `.4dz`file within a `Compiled Database/<project name>` folder. たとえば、アプリケーション名を "MyProject" にした場合、4D は次のものを作成します:
+これにより、`Compiled Database<project name>` フォルダーの中に `.4dz` ファイルが作成されます。 たとえば、アプリケーション名を "MyProject" にした場合、4D は次のものを作成します:
 
 *<destination\>/Compiled Database/MyProject/MyProject.4dz*
 
@@ -207,7 +207,7 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 * サーバーを起動するには、サーバーアプリケーションをダブルクリックします。 プロジェクトファイルを選択する必要はありません。
 * クライアントを起動するにも、同様にクライアントアプリケーションをダブルクリックします。すると、サーバーアプリケーションへの接続が直接おこなわれるため、 接続ダイアログでサーバーを選択する必要はありません。 クライアントは接続対象のサーバーを名称 (サーバーが同じサブネットワーク上にある場合)、あるいはIPアドレスによって認識します。IPアドレスの指定は buildapp.4DSettings ファイル内の `IPAddress` XMLキーを使用して設定されます。 接続が失敗した場合のために、代替機構を実装することができます。これについては [クライアント接続の管理](#クライアント接続の管理) の章で説明されています。 また、**Option** (macOS) や **Alt** (Windows) キーを押しながらクライアントアプリケーション起動すると、標準の接続ダイアログを強制的に表示させることもできます。 サーバーアプリケーションには、対応するクライアントアプリケーションのみが接続できます。 標準の 4Dアプリケーションを使用してサーバーアプリケーションに接続を試みると、接続は拒否されエラーが返されます。
 * クライアント側を [ネットワーク越しに自動更新](#サーバーアプリケーション内部のクライアントアプリケーションのコピー) するようにクライアント/サーバーアプリケーションを設定することも可能です。 クライアントアプリケーションは最初のバージョンのみビルドして配布する必要があります。以降のアップデートは、自動アップデート機構を利用することで管理します。
-* It is also possible to automate the update of the server part through the use of a sequence of language commands ([SET UPDATE FOLDER](https://doc.4d.com/4dv19/help/command/en/page1291.html) and [RESTART 4D](https://doc.4d.com/4dv19/help/command/en/page1292.html)).
+* また、ランゲージコマンド ([SET UPDATE FOLDER](https://doc.4d.com/4dv19/help/command/ja/page1291.html)、および [RESTART 4D](https://doc.4d.com/4dv19/help/command/ja/page1292.html)) を使用して、サーバーアプリケーションの更新を自動化することも可能です。
 
 ### サーバーアプリケーションをビルド
 
@@ -335,12 +335,12 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 インストール場所:
 
 * **Windows**
-  * **Server application** - in the `Client Server executable\&#060;ApplicationName&#062;Server\Server Database` subfolder.
-  * **Client application** - in the `Client Server executable\&#060;ApplicationName&#062;Client` subfolder.
+  * **サーバーアプリケーション** - `Client Server executable<ApplicationName>Server\Server Database` サブフォルダー内にこれらの項目を配置します。
+  * **クライアントアプリケーション** - `Client Server executable<ApplicationName>Client` サブフォルダー内にこれらの項目を配置します。
 
 * **macOS**
-  * **Server application** - next to the `<ApplicationName>Server`software package.
-  * **Client application** - next to the `<ApplicationName>Client`software package.
+  * **サーバーアプリケーション** - `<ApplicationName>Server` ソフトウェアパッケージと同階層にこれらの項目を配置します。
+  * **クライアントアプリケーション** - `<ApplicationName>Client` ソフトウェアパッケージと同階層にこれらの項目を配置します。
 
 ### シングルユーザークライアントアプリケーションの埋め込み
 
@@ -484,7 +484,7 @@ Gatekeeper とは macOS のセキュリティ機能で、インターネット�
 
 macOS 10.14.5 (Mojave) および 10.15 (Catalina) において、アプリケーションのノータリゼーション (公証) が Apple より強く推奨されています。公証を得ていないアプリケーションをインターネットからダウンロードした場合、デフォルトでブロックされます。
 
-Apple の公証サービスを利用するのに必要な条件を満たすため、4D v18 では [ビルトインの署名機能](#os-x-署名に使用する証明書) が更新されています。 公証自体はデベロッパーによっておこなわなくてはいけないもので、4D とは直接関係ありません。なお、Xcode のインストールが必須である点に注意してください。 公証についての詳細は [4D ブログ記事 (英語)](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) や関連の [テクニカルノート (日本語)](https://4d-jp.github.io/tech_notes/20-02-25-notarization/) を参照ください。
+Apple の公証サービスを利用するのに必要な条件を満たすため、4D v18 で [ビルトインの署名機能](#os-x-署名に使用する証明書) が更新されています。 公証自体はデベロッパーによっておこなわなくてはいけないもので、4D とは直接関係ありません。なお、Xcode のインストールが必須である点に注意してください。 公証についての詳細は [4D ブログ記事 (英語)](https://blog.4d.com/how-to-notarize-your-merged-4d-application/) や関連の [テクニカルノート (日本語)](https://4d-jp.github.io/tech_notes/20-02-25-notarization/) を参照ください。
 
 公証についての詳細は、[Apple のデベロッパー Web サイト](https://developer.apple.com/documentation/xcode/notarizing_your_app_before_distribution/customizing_the_notarization_workflow) を参照ください。
 
