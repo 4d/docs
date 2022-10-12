@@ -15,7 +15,7 @@ Two processes should run at the same time:
 run `npm run start_watch` in one terminal.
 The files from the folder "docs" will be preprocessed in the folder named "docsPostProcessed". A change to a file will be automatically preprocessed.
 
-#### Docusaurus start
+#### Docusaurus Start
 
 The `docusaurus.config_start.js` uses `docusaurus.config.js` with a few modifications:
 
