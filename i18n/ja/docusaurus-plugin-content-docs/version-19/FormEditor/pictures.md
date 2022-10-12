@@ -49,7 +49,7 @@ title: ピクチャー
 * [リストボックスヘッダー](FormObjects/listbox_overview.md#リストボックスヘッダー)
 * [メニューアイコン](Menus/properties.md#項目アイコン)
 
-4D は自動的に最高解像度のピクチャーを優先します。 4D automatically prioritizes pictures with the highest resolution. コマンドまたはプロパティが *circle.png* を指定していたとしても、*circle@3x.png* があれば、それを使用します。
+4D は自動的に最高解像度のピクチャーを優先します。 <br/><br/> **例**: 標準解像度と高解像度の２つのディスプレイを使用している際に、片方からもう片方へとフォームを移動させると、4D は常に使用可能な範囲内での最高解像度のピクチャーを表示します。 コマンドまたはプロパティが *circle.png* を指定していたとしても、*circle@3x.png* があれば、それを使用します。
 > 解像度の優先順位付けはスクリーン上のピクチャー表示にのみ適用され、印刷に関しては自動適用されないことに留意が必要です。
 
 ### DPI (macOS および Windows)

@@ -18,12 +18,12 @@ title: 入力
 
 ```4d
  "myText": {
-  "type": "input", //define the type of object
-  "spellcheck": true, //enable spelling verification
-  "left": 60,   //left position on the form  
-  "top": 160,   //top position on the form 
-  "width": 100,  //width of the object
-  "height": 20  //height of the object
+  "type": "input",    // オブジェクトタイプ
+  "spellcheck": true, // 自動スペルチェック
+  "left": 60,         // フォーム上の座標 (左)
+  "top": 160,         // フォーム上の座標 (上)
+  "width": 100,       // 幅
+  "height": 20        // 高さ
   }
 ```
 

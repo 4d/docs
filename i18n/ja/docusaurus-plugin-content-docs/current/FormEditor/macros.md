@@ -76,7 +76,7 @@ Function onInvoke($editor : Object)->$result : Object
 
 ![](../assets/en/FormEditor/macroSelect.png)
 
-このメニューは `formMacros.json` [マクロ定義ファイル](#マクロファイルの場所) をもとに作成されています。 マクロメニュー項目はABC順に表示されます。
+このメニューは `formMacros.json` [マクロ定義ファイル](#マクロファイルの場所) をもとに作成されています。 マクロメニュー項目は ABC順に表示されます。
 
 このメニューは、フォームエディター内で右クリックにより開くことができます。 選択オブジェクトがある状態や、フォームオブジェクトの上でマクロを呼び出した場合は、それらのオブジェクト名がマクロの [`onInvoke`](#oninvoke) 関数の `$editor.currentSelection` や `$editor.target` パラメーターに受け渡されます。
 

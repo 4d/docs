@@ -45,7 +45,7 @@ Function onInvoke($editor : Object)->$result : Object
 
  var $btnHello : Object
 
- // Create a "Hello" button
+ // "Hello" ボタンを作成します
  $btnHello:=New object("type"; "button"; \
  "text"; "Hello World!"; \
  "method"; New object("source"; "ALERT(\"Hello World!\")"); \
@@ -53,16 +53,16 @@ Function onInvoke($editor : Object)->$result : Object
  "width"; 120; \
  "height"; 20; \
  "top"; 0; \
- "left"; 0) 
+ "left"; 0)  
 
- // Add button in the current page
- $editor.editor.currentPage.objects.btnHello:=$btnHello 
+ // 現在のページにボタンを追加します
+ $editor.editor.currentPage.objects.btnHello:=$btnHello  
 
- // Select the new button in the form editor
+ // フォームエディター上で新規作成したボタンを選択します
  $editor.editor.currentSelection.clear() //unselect elements
- $editor.editor.currentSelection.push("btnHello") 
+ $editor.editor.currentSelection.push("btnHello")    
 
- // Notify the modification to the 4D Form editor
+ // 4D に変更内容を通知します
  $result:=New object("currentSelection"; $editor.editor.currentSelection;\  
   "currentPage"; $editor.editor.currentPage)
 ```
@@ -75,7 +75,7 @@ Function onInvoke($editor : Object)->$result : Object
 
 ![](../assets/en/FormEditor/macroSelect.png)
 
-このメニューは `formMacros.json` [マクロ定義ファイル](#マクロファイルの場所) をもとに作成されています。 マクロメニュー項目はABC順に表示されます。
+このメニューは `formMacros.json` [マクロ定義ファイル](#マクロファイルの場所) をもとに作成されています。 マクロメニュー項目は ABC順に表示されます。
 
 このメニューは、フォームエディター内で右クリックにより開くことができます。 選択オブジェクトがある状態や、フォームオブジェクトの上でマクロを呼び出した場合は、それらのオブジェクト名がマクロの [`onInvoke`](#oninvoke) 関数の `$editor.currentSelection` や `$editor.target` パラメーターに受け渡されます。
 
@@ -264,7 +264,7 @@ Function onInvoke($editor : Object)->$result : Object
  var $name : Text
 
  If ($editor.editor.currentSelection.length>0)  
-  // Set stroke to red and style to italic for each selected object
+  // 選択されている各オブジェクトの stroke 属性を red に、style 属性を italic に設定します
   For each ($name; $editor.editor.currentSelection)
    $editor.editor.currentPage.objects[$name].stroke:="red"
    $editor.editor.currentPage.objects[$name].fontStyle:="italic"
@@ -272,10 +272,10 @@ Function onInvoke($editor : Object)->$result : Object
   End for each 
 
  Else 
-  ALERT("Please select a form object.")
+  ALERT("フォームオブジェクトを選択してください。")
  End if 
 
- // Notify to 4D the modification
+ // 4Dに変更を通知します
  $result:=New object("currentPage"; $editor.editor.currentPage)
 ```
 

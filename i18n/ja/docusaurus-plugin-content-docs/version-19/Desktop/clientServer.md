@@ -29,7 +29,7 @@ title: クライアント/サーバー管理
 
 4D Server で実行されているプロジェクトに接続するには:
 
-1. Select **Connect to 4D Server** in the Welcome Wizard dialog, OR Select **Open/Remote Project...** from the **File** menu or the **Open** toolbar button.
+1. 次のいずれかの方法をおこないます:<br/> Welcome ウィザードにて **4D Serverに接続** を選択します。 **ファイル** メニューより **開く ＞ リモートプロジェクト...** を選択するか、**開く** ツールバーボタンより同様に選択します。
 
 4D Server に接続するためのダイアログが表示されます。 ダイアログには **最近使用**、**利用可**、および **カスタム** という、3つのタブがあります。
 

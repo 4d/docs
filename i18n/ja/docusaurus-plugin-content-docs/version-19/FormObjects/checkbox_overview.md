@@ -360,7 +360,7 @@ Office XP スタイルのチェックボックスの反転表示と背景のカ�
   "icon": "/RESOURCES/smiley.jpg", 
   "iconFrame": 4, 
   "customBackgroundPicture": "/RESOURCES/paper.jpg", 
-  "iconOffset": 5, //custom icon offset when clicked
+  "iconOffset": 5, // クリック時のアイコンオフセット
   "left": 60, 
   "top": 160, 
   "width": 100,  

@@ -91,7 +91,7 @@ $area:=$o.getArea(50;100)
 クラス関数において、引数の値はそれぞれ対応するパラメーターに代入されます:
 
 ```4d
-// Class: Polygon
+// クラス: Polygon
 Function getArea($width : Integer; $height : Integer)-> $area : Integer
  $area:=$width*$height
 ```
@@ -189,8 +189,8 @@ ALERT($0)
 
 順番引数には、あらゆる [式](quick-tour.md#式のタイプ) の形が使用できますが、例外があります:
 
-- tables
-- arrays
+- テーブル
+- 配列
 
 テーブルや配列の式は [ポインターを介した参照として](dt_pointer.md#メソッドの引数としてのポインター) 渡す必要があります。
 
