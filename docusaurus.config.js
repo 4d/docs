@@ -102,9 +102,12 @@ module.exports = {
   ],
   "themeConfig": {
     algolia: {
-      appId: 'YOUR_APP_ID',
-      apiKey: 'YOUR_SEARCH_API_KEY',
-      indexName: 'YOUR_INDEX_NAME',
+		apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
+		appId: 'OJ04C0M3CU',
+      indexName: '4d',
+	  algoliaOptions: {
+      facetFilters: ['language:LANGUAGE', 'version:VERSION'],
+    },
       contextualSearch: true
     },
     prism: {
