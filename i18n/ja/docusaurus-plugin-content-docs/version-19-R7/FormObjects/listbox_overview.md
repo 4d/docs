@@ -703,9 +703,9 @@ End if
 
 #### "階層リストボックス" プロパティによる階層化
 
-このプロパティを使用してリストボックスの階層表示を設定します。 In the JSON form, this feature is triggered [when the column *dataSource* property value is an array](properties_Object.md#array-list-box), i.e. a collection.
+このプロパティを使用してリストボックスの階層表示を設定します。 JSON フォームにおいては、リストボックス列の [*dataSource* プロパティの値が配列名のコレクションであるとき](properties_Object.md#配列リストボックス) に階層化します。
 
-Additional options (**Variable 1...10**) are available when the *Hierarchical List Box* option is selected, corresponding to each element of the *dataSource* array to use as break column. 入力欄に値が入力されると、新しい入力欄が追加されます。 10個までの変数を指定できます。 これらの変数は先頭列に表示される階層のレベルを設定します。
+*階層リストボックス* プロパティが選択されると、追加プロパティである **Variable 1...10** が利用可能になります。これらには階層の各レベルとして使用するデータソース配列を指定します。これが *dataSource* の値である配列名のコレクションとなります。 入力欄に値が入力されると、新しい入力欄が追加されます。 10個までの変数を指定できます。 これらの変数は先頭列に表示される階層のレベルを設定します。
 
 Variable 1 は常に、リストボックスの先頭列の変数名に対応します (この 2つの値は自動でバインドされます)。 Variable 1欄は常に表示され、入力できます。 例: country。 Variable 2 も常に表示され、入力できます。これは二番目の階層レベルを指定します。 例: regions。 三番目以降の欄は、その前の番号の欄が入力されると表示されます。 例えば: counties、cities等。 最大10レベルまで指定できます。 ある階層レベルの値を削除すると、その後の階層レベルが繰り上がります。
 
