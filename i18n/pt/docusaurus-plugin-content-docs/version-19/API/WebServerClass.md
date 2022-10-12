@@ -355,7 +355,7 @@ Default = 80
 <!-- REF #WebServerClass.HTTPTrace.Syntax -->**.HTTPTrace** : Boolean<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.HTTPTrace.Summary -->activation of `HTTP TRACE`<!-- END REF -->. For security reasons, by default the Web server rejects `HTTP TRACE` requests with an error 405. When enabled, the web server replies to `HTTP TRACE` requests with the request line, header, and body.
+The <!-- REF #WebServerClass.HTTPTrace.Summary -->ativação de `HTTP TRACE`<!-- END REF -->. For security reasons, by default the Web server rejects `HTTP TRACE` requests with an error 405. When enabled, the web server replies to `HTTP TRACE` requests with the request line, header, and body.
 
 <!-- END REF -->
 
@@ -366,7 +366,7 @@ The <!-- REF #WebServerClass.HTTPTrace.Summary -->activation of `HTTP TRACE`<!--
 <!-- REF #WebServerClass.HTTPSEnabled.Syntax -->**.HTTPSEnabled** : Boolean<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.HTTPSEnabled.Summary -->HTTPS protocol state<!-- END REF -->.
+The <!-- REF #WebServerClass.HTTPSEnabled.Summary -->Estado do protocolo HTTPS<!-- END REF -->.
 
 <!-- END REF -->
 

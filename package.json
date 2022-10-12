@@ -21,10 +21,10 @@
     "highlightjs-4d": "^1.0.0"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.1",
     "@4dsas/doc_preprocessing": "1.0.16",
-    "@docusaurus/plugin-client-redirects": "^2.0.1",
-    "@docusaurus/preset-classic": "^2.0.1",
+    "@docusaurus/core": "^2.1.0",
+    "@docusaurus/plugin-client-redirects": "^2.1.0",
+    "@docusaurus/preset-classic": "^2.1.0",
     "@swc/core": "^1.2.158",
     "clsx": "^1.1.1",
     "esbuild-loader": "^2.19.0",

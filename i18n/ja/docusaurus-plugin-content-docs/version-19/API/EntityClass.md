@@ -47,7 +47,7 @@ title: Entity
 
 #### 説明
 
-データクラス属性はすべてがエンティティのプロパティとして利用可能です。各エンティティのプロパティは、当該 <!-- REF EntityClass.attributeName.Summary -->エンティティの属性値を格納します<!-- END REF -->。
+データクラス属性はすべて、エンティティのプロパティとして利用可能です。各エンティティのプロパティは、当該 <!-- REF EntityClass.attributeName.Summary -->エンティティの属性値を格納します<!-- END REF -->。
 > データクラス属性は \[ ] を使用したシンタックスを使用することでもアクセス可能です。
 
 この属性値タイプは属性の種類 ([](DataClassAttributeClass.md#kind).kind; リレーションまたはストレージ) によります。

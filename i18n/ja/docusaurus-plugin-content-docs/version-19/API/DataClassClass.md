@@ -111,7 +111,7 @@ var $firstnameAtt;$employerAtt;$employeesAtt : Object
 
 #### 説明
 
-The `.all( )` function <!-- REF #DataClassClass.all().Summary -->データストアをクエリして、データクラスの全エンティティをエンティティセレクションとして返します<!-- END REF -->。
+`.all()` 関数は、 <!-- REF #DataClassClass.all().Summary -->データストアをクエリして、データクラスの全エンティティをエンティティセレクションとして返します<!-- END REF -->。
 
 エンティティはデフォルトの順番で返され、通常は作成順になっています。 ただし、エンティティ削除後に新規追加した場合には、デフォルトの順番は作成順を反映しない点に留意が必要です。
 
@@ -189,7 +189,7 @@ The `.all( )` function <!-- REF #DataClassClass.all().Summary -->データスト
 リレートエンティティに相当するネストされたオブジェクトは、リレートエンティティのプライマリーキー値を格納した "\_\_KEY" プロパティあるいはプライマリーキー属性を格納している必要があります。 ”\_\_KEY” プロパティを使用すると、プライマリーキー属性名に依存する必要がありません。
 > この機構によって、リレートエンティティの中身を作成・更新することはできません。
 
-**記号**
+**スタンプ**
 
 "\_\_STAMP" プロパティが指定された場合、データストアのスタンプとのチェックがおこなわれ、エラーが返されることがあります ("与えられたスタンプはテーブルXXX のレコード# XXのカレントのものと合致しません")。 詳細については [エンティティロッキング](ORDA/entities.md#エンティティロッキング) を参照ください。
 
@@ -432,7 +432,7 @@ The `.all( )` function <!-- REF #DataClassClass.all().Summary -->データスト
 
 #### 説明
 
-The `.getDataStore( )` function <!-- REF #DataClassClass.getDataStore().Summary -->指定したデータクラスが属しているデータストアを返します<!-- END REF -->。
+`.getDataStore()` 関数は、 <!-- REF #DataClassClass.getDataStore().Summary -->指定したデータクラスが属しているデータストアを返します<!-- END REF -->。
 
 返されるデータストアは次のいずれかです:
 
@@ -485,7 +485,7 @@ The `.getDataStore( )` function <!-- REF #DataClassClass.getDataStore().Summary 
 
 #### 説明
 
-The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->データクラスの情報を提供するオブジェクトを返します<!-- END REF -->。 このメソッドは汎用的なコードを書くのに有用です。
+`.getInfo()` 関数は、 <!-- REF #DataClassClass.getInfo().Summary -->データクラスの情報を提供するオブジェクトを返します<!-- END REF -->。 このメソッドは汎用的なコードを書くのに有用です。
 
 **返されるオブジェクト**
 
@@ -556,7 +556,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->デー�
 
 #### 説明
 
-The `.new( )` function <!-- REF #DataClassClass.new().Summary -->メモリ内にデータクラスに空のエンティティを新規作成しそれを返します<!-- END REF -->。
+`.new()` 関数は、 <!-- REF #DataClassClass.new().Summary -->メモリ内にデータクラスに空のエンティティを新規作成しそれを返します<!-- END REF -->。
 
 エンティティオブジェクトはメモリ内に作成されますが、[`.save( )`](EntityClass.md#save) 関数が呼び出されるまでデータベースには保存されません。 エンティティを保存する前に削除した場合、復元することはできません。
 
@@ -599,7 +599,7 @@ The `.new( )` function <!-- REF #DataClassClass.new().Summary -->メモリ内に
 
 #### 説明
 
-The `.newSelection( )` function <!-- REF #DataClassClass.newSelection().Summary -->データクラスに紐づいた 追加可能な、空の新規エンティティセレクションをメモリ内に作成します<!-- END REF -->。
+`.newSelection()` 関数は、 <!-- REF #DataClassClass.newSelection().Summary -->データクラスに紐づいた 追加可能な、空の新規エンティティセレクションをメモリ内に作成します<!-- END REF -->。
 
 > 追加可能なエンティティセレクションについての詳細は [共有可能/追加可能なエンティティセレクション](ORDA/entities.md#共有可能追加可能なエンティティセレクション) を参照ください。
 
@@ -646,7 +646,7 @@ The `.newSelection( )` function <!-- REF #DataClassClass.newSelection().Summary 
 
 #### 説明
 
-The `.query( )` function <!-- REF #DataClassClass.query().Summary -->データクラスの全エンティティから、*queryString* または *formula* と任意の *value* 引数で指定した検索条件に合致するエンティティを検索します<!-- END REF -->。 戻り値は、見つかったエンティティをすべて格納する `EntitySelection` 型の新しいオブジェクトです。 この関数には、レイジーローディングが適用されます。
+`.query()` 関数は、 <!-- REF #DataClassClass.query().Summary -->データクラスの全エンティティから、*queryString* または *formula* と任意の *value* 引数で指定した検索条件に合致するエンティティを検索します<!-- END REF -->。戻り値は、見つかったエンティティをすべて格納する `EntitySelection` 型の新しいオブジェクトです。 この関数には、レイジーローディングが適用されます。
 
 エンティティが見つからない場合、空のエンティティセレクションが返されます。
 
@@ -706,7 +706,7 @@ attributePath|formula 比較演算子 値
  | OR  | &#124;,&#124;&#124;, or |
 
 * **order by attributePath**: クエリに "order by attributePath" ステートメントを追加することで、結果をソートすることができます。 カンマで区切ることで、複数の order by ステートメントを使用することもできます (例: order by *attributePath1* desc, *attributePath2* asc)。 デフォルトの並び順は昇順です。 並び順を指定するには、降順の場合は 'desc'、昇順の場合は 'asc' を追加します。
-> > *If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
+> * このステートメントを使用した場合、順序ありエンティティセレクションが返されます (詳細については [エンティティセレクションの順列あり/順列なし](ORDA/dsMapping.md#エンティティセレクションの順列あり順列なし) を参照ください)。
 
 **引用符を使用する**
 
@@ -846,7 +846,7 @@ ds.People.query("places.locations[a].kind= :1 and places.locations[a].city= :2";
 * フォーミュラは処理されるエンティティごとに評価され、true または false を返さなくてはなりません。 クエリの実行中、フォーミュラの結果がブール値でなかった場合、それは false であるとみなされます。
 * 処理中のエンティティはフォーミュラ内において `This` で参照されます。
 * `Formula` オブジェクトが **null** の場合、エラー1626 ("テキストまたはフォーミュラが必要です") が生成されます。このエラーは `ON ERR CALL` で実装したメソッドを使用して割り込み可能です。
-> > For security reasons, formula calls within `query(`) member methods can be disallowed. *querySettings* パラメーターの説明を参照ください。
+> セキュリティのため、`query()` 関数内のフォーミュラ使用を禁止することができます。 *querySettings* パラメーターの説明を参照ください。
 
 **フォーミュラに引数を渡す**
 

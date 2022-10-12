@@ -153,7 +153,7 @@ A função `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summary
 
 #### Descrição
 
-The `.addFlags()` function <!-- REF #IMAPTransporterClass.addFlags().Summary -->adds flags to the `msgIDs` for the specified `keywords`<!-- END REF -->.
+A função `.addFlags()` <!-- REF #IMAPTransporterClass.addFlags().Summary -->adds flags to the `msgIDs` for the specified `keywords`<!-- END REF -->.
 
 In the `msgIDs` parameter, you can pass either:
 
@@ -241,7 +241,7 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 #### Descrição
 
-The `.append()` function <!-- REF #IMAPTransporterClass.append().Summary -->appends a `mailObj` to the `destinationBox`<!-- END REF -->.
+A função `.append()` <!-- REF #IMAPTransporterClass.append().Summary -->appends a `mailObj` to the `destinationBox`<!-- END REF -->.
 
 In the `mailObj` parameter, pass an Email object. In the `mailObj` parameter, pass an Email object. The `.append()` function supports keyword tags in the Email object's `keywords` attribute.
 
@@ -894,7 +894,7 @@ If the account does not contain any mailboxes, an empty collection is returned.
 
 #### Descrição
 
-The `.getDelimiter()` function <!-- REF #IMAPTransporterClass.getDelimiter().Summary -->returns the character used to delimit levels of hierarchy in the mailbox name<!-- END REF -->.
+A função `.getDelimiter()` <!-- REF #IMAPTransporterClass.getDelimiter().Summary -->returns the character used to delimit levels of hierarchy in the mailbox name<!-- END REF -->.
 
 The delimiter is a character which can be used to:
 
@@ -1366,7 +1366,7 @@ The function returns a collection of strings (unique IDs).
 
 #### Descrição
 
-The `.removeFlags()` function <!-- REF #IMAPTransporterClass.removeFlags().Summary -->removes flags from the `msgIDs` for the specified `keywords`<!-- END REF -->.
+A função `.removeFlags()` <!-- REF #IMAPTransporterClass.removeFlags().Summary -->removes flags from the `msgIDs` for the specified `keywords`<!-- END REF -->.
 
 In the `msgIDs` parameter, you can pass either:
 
@@ -1731,7 +1731,7 @@ O objeto `boxInfo` retornado contém as funcionalidades abaixo:
 
 #### Descrição
 
-The `.subscribe()` function <!-- REF #IMAPTransporterClass.subscribe().Summary -->allows adding or removing of the specified mailbox to/from the IMAP server’s set of “subscribed” mailboxes<!-- END REF -->. As such, you can choose to narrow down a large list of available mailboxes by subscribing to those you usually want to see.
+A função `.subscribe()` <!-- REF #IMAPTransporterClass.subscribe().Summary -->allows adding or removing of the specified mailbox to/from the IMAP server’s set of “subscribed” mailboxes<!-- END REF -->. As such, you can choose to narrow down a large list of available mailboxes by subscribing to those you usually want to see.
 
 In the `name` parameter, pass the name of the mailbox to add (subscribe) to your "subscribed" mailboxes.
 

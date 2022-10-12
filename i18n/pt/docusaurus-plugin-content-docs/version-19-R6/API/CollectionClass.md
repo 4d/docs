@@ -775,7 +775,7 @@ The callback receives the following parameters:
 
 It can set the following parameter(s):
 
-* (mandatory if you used a method) *$1.result* (Boolean): **true** if the element value evaluation is successful, **false** otherwise.
+* (obrigatório se você usou um método) *$1.result* (Booleano): **true** se a avaliação do elemento valor tiver sucesso, senão será**false**.
 * *$1.stop* (Booleano, opcional): **true** para parar o método callback. O valor retornado é o último calculado.
 
 In all cases, at the point when the `.every()` function encounters the first collection element evaluated to **false**, it stops calling the callback and returns **false**.
@@ -1655,7 +1655,7 @@ Se a coleção estiver vazia, `.min()` devolve *Undefined*.
 | ----------- | ---------- |:--:| ------------------------------------------------------------------------ |
 | pathStrings | Text       | -> | Property path(s) on which to order the collection                        |
 | pathObjects | Collection | -> | Coleção de objetos criterio                                              |
-| ascOrDesc   | Integer    | -> | `ck ascending` or `ck descending` (scalar values)                        |
+| ascOrDesc   | Integer    | -> | `ck ascending` ou `ck descending` (valores escalares)                    |
 | Resultados  | Collection | <- | Ordered copy of the collection (shallow copy)|<!-- END REF --> |
 
 #### Descrição

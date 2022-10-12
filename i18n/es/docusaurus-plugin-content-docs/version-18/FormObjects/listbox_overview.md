@@ -51,14 +51,14 @@ Hay varios tipos de list box, con sus propios comportamientos y propiedades espe
 
 * **Arrays**: cada columna está ligada a un array 4D. Los list boxes basados en arrays pueden mostrarse como [cajas de lista jerárquicas](listbox_overview.md#hierarchical-list-boxes).
 * **Selección** (**Selección actual** o **Selección con nombre**): cada columna está vinculada a una expresión (por ejemplo, un campo) que se evalúa para cada registro de la selección.
-* **Collection or Entity selection**: each column is bound to an expression which is evaluated for every element of the collection or every entity of the entity selection.
-> > It is not possible to combine different list box types in the same list box object. La fuente de datos se define cuando se crea el list box. Entonces ya no es posible modificarlo por programación.
+* **Collection o Entity selection**: cada columna está ligada a una expresión que se evalúa para cada elemento de la colección o cada entidad de la selección de entidades.
+> No es posible combinar diferentes tipos de list box en el mismo objeto list box. La fuente de datos se define cuando se crea el list box. Entonces ya no es posible modificarlo por programación.
 
 ### Gestión de list boxes
 
-You can completely configure a list box object through its properties, and you can also manage it dynamically through programming.
+Se puede configurar completamente un objeto list box a través de sus propiedades, y también se puede gestionar dinámicamente por programación.
 
-The 4D Language includes a dedicated "List Box" theme for list box commands, but commands from various other themes, such as "Object properties" commands or `EDIT ITEM`, `Displayed line number` commands can also be used. Refer to the [List Box Commands Summary](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box-Commands-Summary.300-4311159.en.html) page of the *4D Language reference* for more information.
+El lenguaje 4D incluye un tema "List Box" dedicado a los comandos de list box, pero los comandos de otros temas, tales como "Propiedades de los objetos" o los comandos `EDIT ITEM` y `Displayed line number` también pueden ser utilizados. Para mayor información consulte la página [List Box Commands Summary](https://doc.4d.com/4Dv17R6/4D/17-R6/List-Box-Commands-Summary.300-4311159.en.html) del manual *Lenguaje 4D*.
 
 ## Objetos tipo List box
 
@@ -66,10 +66,10 @@ The 4D Language includes a dedicated "List Box" theme for list box commands, but
 
 En un list box de tipo array, cada columna debe estar asociada a un array unidimensional 4D; se pueden utilizar todos los tipos de array, a excepción de los arrays de punteros. El número de líneas se basa en el número de elementos del array.
 
-Por defecto, 4D asigna el nombre "ColumnX" a cada columna. You can change it, as well as other column properties, in the [column properties](listbox_overview.md#column-specific-properties). The display format for each column can also be defined using the `OBJECT SET FORMAT` command.
-> Array type list boxes can be displayed in [hierarchical mode](listbox_overview.md#hierarchical-list-boxes), with specific mechanisms.
+Por defecto, 4D asigna el nombre "ColumnX" a cada columna. Puede cambiarlo, así como las otras propiedades de la columna, en las [propiedades de las columnas](listbox_overview.md#column-specific-properties). El formato de visualización de cada columna también puede definirse mediante el comando `OBJECT SET FORMAT`.
+> Los list boxes de tipo array pueden mostrarse en [modo jerárquico](listbox_overview.md#hierarchical-list-boxes), con mecanismos específicos.
 
-Con los list box de tipo array, los valores introducidos o mostrados se gestionan utilizando el lenguaje 4D. You can also associate a [choice list](properties_DataSource.md#choice-list) with a column in order to control data entry. Los valores de las columnas se gestionan mediante comandos de alto nivel del tema List box (como `LISTBOX INSERT ROWS` o `LISTBOX DELETE ROWS`), así como comandos de manipulación de arrays. Por ejemplo, para inicializar el contenido de una columna, puede utilizar la siguiente instrucción:
+Con los list box de tipo array, los valores introducidos o mostrados se gestionan utilizando el lenguaje 4D. También puede asociar una [lista de opciones](properties_DataSource.md#choice-list) con una columna para controlar la entrada de datos. Los valores de las columnas se gestionan mediante comandos de alto nivel del tema List box (como `LISTBOX INSERT ROWS` o `LISTBOX DELETE ROWS`), así como comandos de manipulación de arrays. Por ejemplo, para inicializar el contenido de una columna, puede utilizar la siguiente instrucción:
 
 ```4d
 ARRAY TEXT(varCol;size)
@@ -84,17 +84,17 @@ LIST TO ARRAY("ListName";varCol)
 
 ### List box de tipo selección
 
-En este tipo de list box, cada columna puede estar asociada a un campo (por ejemplo `[Employees]LastName)` o a una expresión. The expression can be based on one or more fields (for example, `[Employees]FirstName+" "[Employees]LastName`) or it may simply be a formula (for example `String(Milliseconds)`). The expression can also be a project method, a variable or an array item. You can use the `LISTBOX SET COLUMN FORMULA` and `LISTBOX INSERT COLUMN FORMULA` commands to modify columns programmatically.
+En este tipo de list box, cada columna puede estar asociada a un campo (por ejemplo `[Employees]LastName)` o a una expresión. The expression can be based on one or more fields (for example, `[Employees]FirstName+" "[Employees]LastName`) or it may simply be a formula (for example `String(Milliseconds)`). The expression can also be a project method, a variable or an array item. Puede utilizar los comandos `LISTBOX SET COLUMN FORMULA` y `LISTBOX INSERT COLUMN FORMULA` para modificar las columnas por programación.
 
 The contents of each row is then evaluated according to a selection of records: the **current selection** of a table or a **named selection**.
 
-In the case of a list box based on the current selection of a table, any modification done from the database side is automatically reflected in the list box, and vice versa. The current selection is therefore always the same in both places.
+En el caso de un list box basado en la selección actual de una tabla, cualquier modificación realizada desde la base de datos se refleja automáticamente en el list box, y viceversa. Por lo tanto, la selección actual es siempre la misma en ambos lugares.
 
 ### List box colección o entity selection
 
-En este tipo de list box, cada columna debe estar asociada a una expresión. The contents of each row is then evaluated per collection element or per entity of the entity selection.
+En este tipo de list box, cada columna debe estar asociada a una expresión. El contenido de cada línea se evalúa entonces por elemento de la colección o por entidad de la selección de entidades.
 
-Each element of the collection or each entity is available as an object that can be accessed through the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command. A column expression can be a project method, a variable, or any formula, accessing each entity or collection element object through `This`, for example `This.<propertyPath>` (or `This.value` in case of a collection of scalar values). You can use the `LISTBOX SET COLUMN FORMULA` and `LISTBOX INSERT COLUMN FORMULA` commands to modify columns programmatically.
+Each element of the collection or each entity is available as an object that can be accessed through the [This](https://doc.4d.com/4Dv17R6/4D/17-R6/This.301-4310806.en.html) command. A column expression can be a project method, a variable, or any formula, accessing each entity or collection element object through `This`, for example `This.<propertyPath>` (or `This.value` in case of a collection of scalar values). Puede utilizar los comandos `LISTBOX SET COLUMN FORMULA` y `LISTBOX INSERT COLUMN FORMULA` para modificar las columnas por programación.
 
 When the data source is an entity selection, any modifications made on the list box side are automatically saved in the database. On the other hand, modifications made on the database side are visible in the list box after touched entities have been reloaded.
 
@@ -239,12 +239,12 @@ When the `OBJECT SET VISIBLE` command is used with a footer, it is applied to al
 
 ## Gestión de entrada
 
-For a list box cell to be enterable, both of the following conditions must be met:
+Para que una celda de list box sea editable, deben cumplirse las dos condiciones siguientes:
 
-* The cell’s column must have been set as [Enterable](properties_Entry.md#enterable) (otherwise, the cells of the column can never be enterable).
-* En el evento `On Before Data Entry`, $0 no devuelve -1. When the cursor arrives in the cell, the `On Before Data Entry` event is generated in the column method. Si, en el contexto de este evento, $0 se define como -1, la celda se considera como no editable. Si el evento se generó después de presionar **Tab** o **Mayús+Tab**, el foco pasa a la siguiente celda o a la anterior, respectivamente. Si $0 no es -1 (por defecto $0 es 0), la celda se puede introducir y pasa al modo de edición.
+* La columna de la celda debe haberse definido como [Enterable](properties_Entry.md#enterable) (de lo contrario, las celdas de la columna nunca podrán ser editables).
+* En el evento `On Before Data Entry`, $0 no devuelve -1. Cuando el cursor llega a la celda, se genera el evento `On Before Data Entry` en el método de la columna. Si, en el contexto de este evento, $0 se define como -1, la celda se considera como no editable. Si el evento se generó después de presionar **Tab** o **Mayús+Tab**, el foco pasa a la siguiente celda o a la anterior, respectivamente. Si $0 no es -1 (por defecto $0 es 0), la celda se puede introducir y pasa al modo de edición.
 
-Let’s consider the example of a list box containing two arrays, one date and one text. The date array is not enterable but the text array is enterable if the date has not already past.
+Consideremos el ejemplo de un list box que contiene dos arrays, uno fecha y otro texto. El array de la fecha no se puede introducir, pero el array del texto sí se puede introducir si la fecha no ha pasado.
 
 ![](../assets/en/FormObjects/listbox_entry.png)
 
@@ -263,35 +263,35 @@ Aquí está el método de la columna *arrText*:
  End case
 ```
 
-The `On Before Data Entry` event is returned before `On Getting Focus`.
+El evento `On Before Data Entry` se devuelve antes de `On Getting Focus`.
 
-In order to preserve data consistency for selection type and entity selection type list boxes, any modified record/entity is automatically saved as soon as the cell is validated, i.e.:
+Para preservar la coherencia de los datos para los list box de tipo de selección y selección de entidades, todo registro/entidad modificado se guarda automáticamente en cuanto se valida la celda, es decir:
 
 * cuando se desactiva la celda (el usuario presiona el tabulador, hace clic, etc.)
 * cuando el listbox ya no tiene el foco,
 * cuando el formulario ya no tiene el foco.
 
-The typical sequence of events generated during data entry or modification is as follows:
+La secuencia típica de eventos generados durante la entrada o la modificación de datos es la siguiente:
 
-| Acción                                                                          | Tipo(s) de Listbox                      | Secuencia de eventos                                                                                                                                                                                                |
-| ------------------------------------------------------------------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| A cell switches to edit mode (user action or a call to the `EDIT ITEM` command) | Todos                                   | On Before Data Entry                                                                                                                                                                                                |
-|                                                                                 | Todos                                   | On Getting Focus                                                                                                                                                                                                    |
-| Cuando se ha editado el valor de una celda                                      | Todos                                   | On Before Keystroke                                                                                                                                                                                                 |
-|                                                                                 | Todos                                   | On After Keystroke                                                                                                                                                                                                  |
-|                                                                                 | Todos                                   | On After Edit                                                                                                                                                                                                       |
-| Un usuario valida y abandona la celda                                           | List box de tipo selección              | Guardar                                                                                                                                                                                                             |
-|                                                                                 | List box de tipo selección de registro  | Activación de On saving an existing record (si definido)                                                                                                                                                            |
-|                                                                                 | List box de tipo selección              | On Data Change(*)                                                                                                                                                                                                   |
-|                                                                                 | List box de tipo selección de entidades | Entity is saved with automerge option, optimistic lock (see entity.save( )). In case of successful save, the entity is refreshed with the last update done. Si la operación de guardado falla, se mostrará un error |
-|                                                                                 | Todos                                   | On Losing Focus                                                                                                                                                                                                     |
+| Acción                                                                                | Tipo(s) de Listbox                      | Secuencia de eventos                                                                                                                                                                                                                       |
+| ------------------------------------------------------------------------------------- | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Una celda pasa al modo edición (acción del usuario o llamada del comando `EDIT ITEM`) | Todos                                   | On Before Data Entry                                                                                                                                                                                                                       |
+|                                                                                       | Todos                                   | On Getting Focus                                                                                                                                                                                                                           |
+| Cuando se ha editado el valor de una celda                                            | Todos                                   | On Before Keystroke                                                                                                                                                                                                                        |
+|                                                                                       | Todos                                   | On After Keystroke                                                                                                                                                                                                                         |
+|                                                                                       | Todos                                   | On After Edit                                                                                                                                                                                                                              |
+| Un usuario valida y abandona la celda                                                 | List box de tipo selección              | Guardar                                                                                                                                                                                                                                    |
+|                                                                                       | List box de tipo selección de registro  | Activación de On saving an existing record (si definido)                                                                                                                                                                                   |
+|                                                                                       | List box de tipo selección              | On Data Change(*)                                                                                                                                                                                                                          |
+|                                                                                       | List box de tipo selección de entidades | La entidad se guarda con la opción automerger, bloqueo optimista (ver entity.save( )). En caso de guardar con éxito, la entidad se refresca con la última actualización realizada. Si la operación de guardado falla, se mostrará un error |
+|                                                                                       | Todos                                   | On Losing Focus                                                                                                                                                                                                                            |
 
-(*) With entity selection list boxes, in the On Data Change event:
+(*) Con los list box de tipo selección de entidades, en el evento On Data Change:
 
-* the [Current item](properties_DataSource.md#current-item) object contains the value before modification.
-* the `This` object contains the modified value.
+* el objeto [elemento actual](properties_DataSource.md#element-courant) contiene el valor antes de la modificación.
+* el objeto `This` contiene el valor modificado.
 
-> Data entry in collection/entity selection type list boxes has a limitation when the expression evaluates to null. In this case, it is not possible to edit or remove the null value in the cell.
+> La entrada de datos en los list box de tipo colección/selección de entidades tiene una limitación cuando la expresión se evalúa como nula. En este caso, no es posible editar o eliminar el valor nulo en la celda.
 
 ## Gestión de selecciones
 
@@ -316,11 +316,11 @@ La gestión de selecciones es diferente dependiendo de si el list box se basa en
  End if
 ```
 
-> The `OBJECT SET SCROLL POSITION` command scrolls the list box rows so that the first selected row or a specified row is displayed.
+> El comando `OBJECT SET SCROLL POSITION` se desplaza por las líneas del list box para que se muestre la primera línea seleccionada o una línea especificada.
 
 ### Personalizar la apariencia de las líneas seleccionadas
 
-When the [Hide selection highlight](properties_Appearance.md#hide-selection-highlight) option is selected, you need to make list box selections visible using available interface options. Dado que las selecciones siguen siendo gestionadas en su totalidad por 4D, esto significa:
+Cuando la opción [Ocultar el resaltado de la selección](properties_Appearance.md#cacher-surlignage-selection) está seleccionada, debe gestionar la representación visual de las selecciones en el list box utilizando las opciones de interfaz disponibles. Dado que las selecciones siguen siendo gestionadas en su totalidad por 4D, esto significa:
 
 * For array type list boxes, you must parse the Boolean array variable associated with the list box to determine which rows are selected or not.
 * For selection type list boxes, you have to check whether the current record (row) belongs to the set specified in the [Highlight Set](properties_ListBox.md#highlight-set) property of the list box.

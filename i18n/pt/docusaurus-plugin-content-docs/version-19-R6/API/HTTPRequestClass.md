@@ -87,7 +87,7 @@ HTTPRequest objects provide the following properties and functions:
 
 #### Descrição
 
-The `4D.HTTPRequest.new()` function <!-- REF #4D.HTTPRequest.new().Summary -->creates and sends a HTTP request to the HTTP server defined in *url* with the defined *options*, and returns a `4D.HTTPRequest` object<!-- END REF -->.
+A função `4D.HTTPRequest.new()` <!-- REF #4D.HTTPRequest.new().Summary -->creates and sends a HTTP request to the HTTP server defined in *url* with the defined *options*, and returns a `4D.HTTPRequest` object<!-- END REF -->.
 
 The returned `HTTPRequest` object is used to process responses from the HTTP server and call methods.
 
@@ -131,11 +131,11 @@ In the *options* parameter, pass an object that can contain the following proper
 | onHeaders            | [Function](FunctionClass.md)                    | Callback when the headers are received. It receives two objects as parameters (see below)                                                                                                                                                                         | indefinido   |
 | onResponse           | [Function](FunctionClass.md)                    | Callback when a response is received. It receives two objects as parameters (see below)                                                                                                                                                                           | indefinido   |
 | onTerminate          | [Function](FunctionClass.md)                    | Callback when the request is over. It receives two objects as parameters (see below)                                                                                                                                                                              | indefinido   |
-| protocol             | Text                                            | "auto" or "HTTP1". "auto" means HTTP1 in the current implementation                                                                                                                                                                                               | "auto"       |
+| protocol             | Text                                            | "auto" ou "HTTP1". "auto" means HTTP1 in the current implementation                                                                                                                                                                                               | "auto"       |
 | proxyAuthentication  | [authentication object](#authentication-object) | Object handling proxy authentication                                                                                                                                                                                                                              | indefinido   |
 | serverAuthentication | [authentication object](#authentication-object) | Object handling server authentication                                                                                                                                                                                                                             | indefinido   |
 | returnResponseBody   | Booleano                                        | If false, the response body is not returned in the [`response` object](#response). Returns an error if false and `onData` is undefined                                                                                                                            | True         |
-| timeout              | Real                                            | Timeout in seconds. Undefined = no timeout                                                                                                                                                                                                                        | Indefinido   |
+| timeout              | Real                                            | Tempo de espera em segundos. Undefined = no timeout                                                                                                                                                                                                               | Indefinido   |
 
 #### Callback functions
 
@@ -143,7 +143,7 @@ All callback functions receive two object parameters:
 
 | Parâmetros | Tipo                                        |
 | ---------- | ------------------------------------------- |
-| $param1    | [`HTTPRequest` object](#httprequest-object) |
+| $param1    | [objeto `HTTPRequest`](#httprequest-object) |
 | $param2    | [`Event` object](#event-object)             |
 
 Here is the sequence of callback calls:
@@ -353,7 +353,7 @@ A propriedade `.url` contém <!-- REF #HTTPRequestClass.url.Summary -->the URL o
 
 > This function is thread-safe.
 
-The `wait()` function <!-- REF #HTTPRequestClass.wait().Summary -->waits for the response from the server<!-- END REF -->.
+A função `wait()` <!-- REF #HTTPRequestClass.wait().Summary -->waits for the response from the server<!-- END REF -->.
 
 If a *time* parameter is passed, the function will wait at most the defined number of seconds.
 

@@ -221,7 +221,7 @@ Em caso de erro, o comando devolve **Null**. Se não for possível acessar o arm
 
 #### Descrição
 
-Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface subministrado por ORDA para referenciar e acessar a uma base de dados. The returned object <!-- REF DataStoreClass.dataclassName.Summary -->contains a description of the dataclass<!-- END REF -->.
+Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface subministrado por ORDA para referenciar e acessar a uma base de dados. O objeto devolvido <!-- REF DataStoreClass.dataclassName.Summary -->contains a description of the dataclass<!-- END REF -->.
 
 #### Exemplo
 
@@ -262,7 +262,7 @@ Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface subministra
 
 #### Descrição
 
-A função `.cancelTransaction()` <!-- REF #DataStoreClass.cancelTransaction().Summary -->cancels the transaction<!-- END REF --> opened by the [`.startTransaction()`](#starttransaction) function at the corresponding level in the current process for the specified datastore.
+A função `.cancelTransaction()` <!-- REF #DataStoreClass.cancelTransaction().Summary -->cancela a transação<!-- END REF --> opened by the [`.startTransaction()`](#starttransaction) function at the corresponding level in the current process for the specified datastore.
 
 A função `.cancelTransaction()` cancela qualquer mudança realizado nos dados durante a transação.
 
@@ -544,7 +544,7 @@ Em um armazém de dados remoto:
 <!-- REF #DataStoreClass.getRemoteContextInfo().Params -->
 | Parâmetros  | Tipo   |    | Descrição                                                          |
 | ----------- | ------ | -- | ------------------------------------------------------------------ |
-| contextName | Text   | -> | Name of the context                                                |
+| contextName | Text   | -> | Nome do contexto                                                   |
 | Resultados  | Objeto | <- | Description of the optimization context|<!-- END REF --> |
 
 > **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
@@ -561,10 +561,10 @@ The returned object has the following properties:
 
 | Propriedade            | Tipo | Descrição                                                                                                                                                                                                                                                                     |
 | ---------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| name                   | Text | Name of the context                                                                                                                                                                                                                                                           |
+| name                   | Text | Nome do contexto                                                                                                                                                                                                                                                              |
 | main                   | Text | Attribute(s) associated to the context (attribute names are separated by a comma)                                                                                                                                                                                             |
 | dataclass              | Text | Dataclass name                                                                                                                                                                                                                                                                |
-| currentItem (optional) | Text | The attributes of the [page mode](../ORDA/remoteDatastores.md#entity-selection-based-list-box) if the context is linked to a list box. Returned as `Null` or empty text element if the context name is not used for a list box, or if there is no context for the currentItem |
+| currentItem (opcional) | Text | The attributes of the [page mode](../ORDA/remoteDatastores.md#entity-selection-based-list-box) if the context is linked to a list box. Returned as `Null` or empty text element if the context name is not used for a list box, or if there is no context for the currentItem |
 
 Since contexts behave as filters for attributes, if *main* is returned empty, it means that no filter is applied, and that the server returns all the dataclass attributes.
 
@@ -818,11 +818,11 @@ Se criar um método projeto *protectDataFile* para chamar antes dos lançamentos
 <!-- REF #DataStoreClass.setRemoteContextInfo().Params -->
 | Parâmetros      | Tipo          |    | Descrição                                                                                            |
 | --------------- | ------------- | -- | ---------------------------------------------------------------------------------------------------- |
-| contextName     | Text          | -> | Name of the context                                                                                  |
+| contextName     | Text          | -> | Nome do contexto                                                                                     |
 | dataClassName   | Text          | -> | Nome da dataclass                                                                                    |
 | dataClassObject | 4D. DataClass | -> | dataclass object (e.g datastore. Employee)                                                           |
 | attributes      | Text          | -> | Attribute list separated by a comma                                                                  |
-| attributesColl  | Collection    | -> | Collection of attribute names (text)                                                                 |
+| attributesColl  | Collection    | -> | Coleção de nomes de atributos (text)                                                                 |
 | contextType     | Text          | -> | If provided, value must be "main" or "currentItem"                                                   |
 | pageLength      | Integer       | -> | Page length of the entity selection linked to the context (default is 80)|<!-- END REF --> |
 
@@ -900,7 +900,7 @@ $ds.setRemoteContextInfo("contextA"; $ds. Address; "zipCode, persons:20,\
 persons.lastname, persons.firstname"; "main"; 30)
 ```
 
-#### Example 3 - Listbox
+#### Exemplo 3 - Listbox
 
 ```4d
 // When the form loads Case of
@@ -1088,7 +1088,7 @@ Pode aninhar várias transações (subtransações). Cada transação ou subtran
 
 #### Descrição
 
-A função `.stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->stops any logging of ORDA requests on the client side<!-- END REF --> (in file or in memory). É particularmente útil quando se registrar um arquivo, já que realmente fecha o documento aberto no disco.
+A função `.stopRequestLog()` <!-- REF #DataStoreClass.stopRequestLog().Summary -->stops any logging of ORDA requests on the client side<!-- END REF --> (em arquivo ou em memória). É particularmente útil quando se registrar um arquivo, já que realmente fecha o documento aberto no disco.
 
 Esta função deve ser chamada em um 4D remoto, do contrário não faz nada. Foi criado para depuração em configurações de cliente/servidor.
 
@@ -1121,7 +1121,7 @@ Ver exemplos [`.startRequestLog()`](#startrequestlog).
 
 #### Descrição
 
-A função `.validateTransaction()` <!-- REF #DataStoreClass.validateTransaction().Summary -->accepts the transaction <!-- END REF -->that was started with [`.startTransaction()`](#starttransaction) at the corresponding level on the specified datastore.
+A função `.validateTransaction()` <!-- REF #DataStoreClass.validateTransaction().Summary -->aceita a transação <!-- END REF -->that was started with [`.startTransaction()`](#starttransaction) at the corresponding level on the specified datastore.
 
 A função salva as mudanças nos dados do datastore que se produziram durante a transação.
 

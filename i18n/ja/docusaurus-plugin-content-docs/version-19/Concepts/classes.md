@@ -15,7 +15,7 @@ title: クラス
 たとえば、次のように `Person` クラスを定義した場合:
 
 ```4d  
-//Class: Person.4dm
+// クラス: Person.4dm
 Class constructor($firstname : Text; $lastname : Text)
  This.firstName:=$firstname
  This.lastName:=$lastname
@@ -51,7 +51,7 @@ $hello:=$person.sayHello() //"Hello John Doe"
 - Project フォルダー
   - Project
     - Sources
-      - クラス
+      - Classes
         - Polygon.4dm
 
 ### クラスの削除
@@ -90,7 +90,7 @@ $hello:=$person.sayHello() //"Hello John Doe"
   - クラスメソッドはコードのブロックです
   - オブジェクトメンバーに対する **定義に移動** 操作はクラスの Function 宣言を探します。例: "$o.f()" の場合、"Function f" を見つけます。
   - クラスのメソッド宣言に対する **参照箇所を検索** 操作は、そのメソッドがオブジェクトメンバーとして使われている箇所を探します。例: "Function f" の場合 "$o.f()" を見つけます。
-- ランタイムエクスプローラーおよびデバッガーにおいて、クラスメソッドは `\<ClassName>` コンストラクターまたは `\<ClassName>\<FunctionName>` 形式で表示されます。
+- ランタイムエクスプローラーおよびデバッガーにおいて、クラスメソッドは `<ClassName>` コンストラクターまたは `<ClassName>.<FunctionName>` 形式で表示されます。
 
 ## クラスストア
 
@@ -141,7 +141,7 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 
 - [`name`](API/ClassClass.md#name) 文字列
 - [`superclass`](API/ClassClass.md#superclass) オブジェクト (無い場合は null)
-- [`new()`](API/ClassClass.md#new) 関数 (クラスオブジェクトをインスタンス化します)
+- [`new()`](API/ClassClass.md#new) 関数 (Class オブジェクトをインスタンス化します)
 
 また、Class オブジェクトは [`constructor`](#class-constructor) オブジェクトを参照することも可能です。
 
@@ -193,9 +193,9 @@ Function getFullname()->$fullname : Text
  $fullname:=This.firstName+" "+Uppercase(This.lastName)
 ```
 
-クラスメソッドの場合には、`Current method name` コマンドは次を返します: `<ClassName>.<FunctionName>` (例: "MyClass.myMethod")。
+クラス関数の場合には、`Current method name` コマンドは次を返します: `<ClassName>.<FunctionName>` (例: "MyClass.myMethod")。
 
-アプリケーションのコード内では、クラス関数はオブジェクトインスタンスのメンバーメソッドとして呼び出され、[引数](#クラス関数の引数 mark=) を受け取ることができます。 以下のシンタックスがサポートされています:
+アプリケーションのコード内では、クラス関数はオブジェクトインスタンスのメンバーメソッドとして呼び出され、[引数](#クラス関数の引数) を受け取ることができます。 以下のシンタックスがサポートされています:
 
 - `()` 演算子の使用。 例: `myObject.methodName("hello")`
 - "4D.Function" クラスメンバーメソッドの使用:
@@ -222,7 +222,7 @@ Function add($x; $y : Variant; $z : Integer; $xy : Object)
 Function add($x : Variant; $y : Integer)->$result : Integer
 ```
 
-関数名のすぐ後に、名前とデータ型を指定して [引数](#引数) を宣言します (戻り値の宣言も可)。 例:
+戻り値は、コロン (:) 記号の後に戻り値のデータ型だけを指定して宣言することもできます。その場合は、自動的に $0 が使用されます。 例:
 
 ```4d
 Function add($x : Variant; $y : Integer): Integer
@@ -277,7 +277,7 @@ Class Constructor({$parameterName : type; ...})
 
 クラスコンストラクターが定義されていると、[` new()`](API/ClassClass.md#new) 関数を呼び出したときに、当該コンストラクターが呼び出されます (コンストラクターで引数を指定している場合は `new()` 関数に渡します)。
 
-クラスコンストラクターが定義されていると、 [`new()`](API/ClassClass.md#new) 関数を呼び出したときに、当該コンストラクターが呼び出されます (コンストラクターで引数を指定している場合は `new()` 関数に渡します)。
+クラスコンストラクター関数の場合には、`Current method name` コマンドは次を返します: `<ClassName>:constructor` (例: "MyClass:constructor")。
 
 #### 例題
 
@@ -296,7 +296,7 @@ $o:=cs.MyClass.new("HelloWorld")
 // $o = {"name":"HelloWorld"}
 ```
 
-### Class extends `\<ClassName>`
+### Class extends `<ClassName>`
 
 #### シンタックス
 
@@ -323,19 +323,19 @@ Class extends <ParentClass>
 `Polygon` クラスを継承した `Square` クラスを作成します。
 
 ```4d
-//Class: Square
+// クラス: Square
 
-//path: Classes/Square.4dm 
+// パス: Classes/Square.4dm 
 
 Class extends Polygon
 
 Class constructor ($side : Integer)
 
- // It calls the parent class's constructor with lengths
- // provided for the Polygon's width and height
+ // 親クラスのコンストラクターを呼び出します
+ // 長方形の高さ・幅パラメーターに正方形の一辺の長さを引数として渡します
  Super($side;$side)
- // In derived classes, Super must be called before you
- // can use 'This'
+ // 派生クラスにおいては、'This' を使用するより先に
+ // Super を呼び出しておく必要があります
  This.name:="Square"
 
  Function getArea()
@@ -395,15 +395,10 @@ Class constructor($width : Integer; $height : Integer)
 Function sayName()
  ALERT("Hi, I am a "+This.name+".")
 
-// Class: Rectangle
-Class constructor($width : Integer; $height : Integer)
- This.name:="Rectangle"
- This.height:=$height
- This.width:=$width
-
-
-Function sayName()
- ALERT("Hi, I am a "+This.name+".")
+// 関数定義
+Function getArea()
+ var $0 : Integer
+ $0:=(This.height)*(This.width)
 ```
 
 ```4d
@@ -455,7 +450,7 @@ Function description()
 var $square : Object
 var $message : Text
 $square:=cs.Square.new()
-$message:=$square.description() // I have 4 sides which are all equal
+$message:=$square.description() // "I have 4 sides which are all equal"
 ```
 
 ### This

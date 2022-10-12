@@ -19,7 +19,7 @@ title: Document Class
 
 #### Descrição
 
-The `.creationDate` property returns <!-- REF #document.creationDate.Summary -->The `.creationDate` property returns<!-- END REF -->.
+A propriedade `.aceita a transação` devolve <!-- REF #document.creationDate.Summary -->The `.creationDate` property returns<!-- END REF -->.
 
 Essa propriedade é**apenas leitura**.
 <!-- END REF -->
@@ -58,7 +58,7 @@ Essa propriedade é**apenas leitura**.
 
 #### Descrição
 
-The `.exists` property returns <!-- REF #document.exists.Summary -->true if the file exists on disk<!-- END REF -->, and false otherwise.
+A propriedade `.exists` devolve <!-- REF #document.exists.Summary -->true if the file exists on disk<!-- END REF -->, and false otherwise.
 
 Essa propriedade é**apenas leitura**.
 

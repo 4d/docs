@@ -132,7 +132,7 @@ $currentSelection:=VP Cells("myVPArea";3;4;2;3)
 VP ADD SELECTION($currentSelection)
 ```
 
-Result:
+Résultat:
 
 ![](../assets/en/ViewPro/cmd_vpAddSelection2.PNG)
 
@@ -3293,7 +3293,7 @@ Pour retirer toutes les fusions de cellules de ce document :
  VP REMOVE SPAN($span)
 ```
 
-Result:
+Résultat:
 
 ![](../assets/en/ViewPro/cmd_vpRemoveSpan2.PNG)
 
@@ -3545,7 +3545,7 @@ Les lignes suivantes n'affichent pas correctement le texte :
  VP ROW AUTOFIT(VP Row("ViewProArea";1;2))
 ```
 
-Result:
+Résultat:
 
 ![](../assets/en/ViewPro/cmd_vpRowAutoFit2.PNG)
 
@@ -5146,7 +5146,7 @@ $options.sheetTabColor:="blue"
 VP SET SHEET OPTIONS("ViewProArea";$options;2)
 ```
 
-Result:
+Résultat:
 
 ![](../assets/en/ViewPro/cmd_vpSetSheetOptions1.PNG)
 
@@ -5167,7 +5167,7 @@ $options.colHeaderVisible:=False
 VP SET SHEET OPTIONS("ViewProArea";$options)
 ```
 
-Result:
+Résultat:
 
 ![](../assets/en/ViewPro/cmd_vpSetSheetOptions2.PNG)
 
@@ -5579,7 +5579,7 @@ $displayCell:=VP Cell("myVPArea";50;50)
  VP SHOW CELL($displayCell;vk position center;vk position center)
 ```
 
-Result:
+Résultat:
 
 ![](../assets/en/ViewPro/cmd_vpShowCell1.PNG)
 
@@ -5591,7 +5591,7 @@ $displayCell:=VP Cell("myVPArea";50;50)
  VP SHOW CELL($displayCell;vk position top;vk position right)
 ```
 
-Result:
+Résultat:
 
 ![](../assets/en/ViewPro/cmd_vpShowCell2.PNG)
 

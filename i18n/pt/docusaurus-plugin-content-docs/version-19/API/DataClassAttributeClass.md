@@ -334,7 +334,7 @@ O tipo de valor conceitual depende do atributo [`.kind`](#kind).
 
 #### Descrição
 
-The `.unique` property <!-- REF DataClassAttributeClass.unique.Summary -->contains True if the attribute value must be unique<!-- END REF -->. Essa propriedade corresponde a propriedade de campo 4D "Unique".
+A propriedade `.unique` <!-- REF DataClassAttributeClass.unique.Summary -->contains True if the attribute value must be unique<!-- END REF -->. Essa propriedade corresponde a propriedade de campo 4D "Unique".
 
 Esta propriedade não é retornada se [`.kind`](#kind) = "relatedEntity" ou "relatedEntities".
 > Para programação genérica pode usar **Bool**(dataClassAttribute.unique) pra obter um valor válido (false) mesmo se `.unique` não for retornado.

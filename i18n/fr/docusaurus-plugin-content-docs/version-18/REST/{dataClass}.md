@@ -256,7 +256,7 @@ $0:=New object("ageAverage";Average([Employee]age))
 
 `POST  /rest/Employee/getAverage`
 
-Result:
+Résultat:
 
 ```
 {
@@ -280,7 +280,7 @@ $0:=New object("fullName";[Employee]firstname+" "+[Employee]lastname)
 
 `POST  /rest/Employee(3)/getFullName`
 
-Result:
+Résultat:
 
 ```
 {
@@ -317,7 +317,7 @@ $0:=New object("updates";$vCount)
 
 POST data (in the request body): [1.5]
 
-Result:
+Résultat:
 
 ```
 {

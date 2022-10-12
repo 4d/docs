@@ -47,6 +47,7 @@ $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
 
+
 ## Platform-specific syntax
 
 Platform-specific syntax depends on the operating system on which the command is executed. Note that when creating a file or folder object with this syntax, you must declare it using the `fk platform path` constant as parameter.
@@ -68,7 +69,7 @@ $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 
 #### Entering Windows pathnames and escape sequences
 
-The 4D [code editor](../code-editor/write-class-method.md) allows the use of escape sequences. An escape sequence is a set of characters that are used to replace a "special" character. The sequence begins with a backslash `\`, followed by a character. For example, `\t` is the escape sequence for the `Tab` character.
+The 4D code editor allows the use of escape sequences. An escape sequence is a set of characters that are used to replace a "special" character. The sequence begins with a backslash `\`, followed by a character. For example, `\t` is the escape sequence for the `Tab` character.
 
 The `\` character is also used as the separator in pathnames in Windows. In general, 4D will correctly interpret Windows pathnames that are entered in the code editor by replacing single backslashes `\` with double backslashes ``\\`. For example,``C:\Folder`will become`C:\\Folder`.
 

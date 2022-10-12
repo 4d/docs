@@ -68,7 +68,7 @@ title: プロジェクトパッケージのビルド
 
 これにより、*Compiled Database* フォルダーの中に *.4dz* ファイルが作成されます。 たとえば、アプリケーション名を "MyProject" にした場合、4D は次のものを作成します:
 
-`\<destination\>/Compiled Database/\<database name>/\MyProject.4dz`
+`<destination>/Compiled Database/<database name>/MyProject.4dz`
 
 > .4dz ファイルは ZIP 圧縮されたプロジェクトフォルダーです (**注:** バイナリデータベースの場合に生成される .4DC ファイルと同義ではないことに注意が必要です)。 .4dzファイルを開けるのは 4D Server、4D Volume ライセンス (組み込みアプリケーション)、および 4D Developer です。 圧縮・最適化された .4dz ファイルによってプロジェクトパッケージの展開が容易になります。
 
@@ -84,7 +84,7 @@ title: プロジェクトパッケージのビルド
 
 アプリケーション名を *MyComponent* に指定した場合、4D は Components フォルダーを作成し、その中に *MyComponent.4dbase* フォルダーを生成します:
 
-`\<destination>/Components/name.4dbase/\<name>.4DZ`
+`<destination>/Components/name.4dbase/<name>.4DZ`
 
 *MyComponent.4dbase* フォルダーには次のファイルが含まれます:
 
@@ -146,7 +146,7 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 * *Windows*
   * MyProject.exe - 実行可能ファイル、そして MyProject.rsr (アプリケーションリソースファイル)
   * 4D Extensions および Resources フォルダー、さまざまなライブラリ (DLL)、 Native Components フォルダー、SASL Plugins フォルダーなど、アプリケーション実行に必要なファイル
-  * Databaseフォルダー: Resources フォルダーと MyProject.4DZ ファイルが格納されています。 これらはデータベースのコンパイル済みストラクチャーおよびデータベースの Resourcesフォルダーです。 **注**: このフォルダには、定義されていれば *Default Data* フォルダーも含まれています ([最終アプリケーションでのデータファイルの管理](#データファイルの管理)を参照してください)。
+  * Databaseフォルダー: Resources フォルダーと MyProject.4DZ ファイルが格納されています。 これらはデータベースのコンパイル済みストラクチャーおよびデータベースの Resourcesフォルダーです。 **注**: このフォルダーには、定義されていれば *Default Data* フォルダーも含まれています ([最終アプリケーションでのデータファイルの管理](#データファイルの管理)を参照してください)。
   * (オプション) データベースに含まれるコンポーネントやプラグインが配置された Components フォルダーおよび Plugins フォルダー。 この点に関する詳細は [プラグイン＆コンポーネントページ](#プラグイン＆コンポーネントページ) を参照してください。
   * Licenses フォルダー - アプリケーションに統合されたライセンス番号の XML ファイルが含まれます。 この点に関する詳細は [ライセンス＆証明書ページ](#ライセンス＆証明書ページ) を参照してください。
   * 4D Volume Desktop フォルダーに追加されたその他の項目 (あれば) ([4D Volume Desktop フォルダーのカスタマイズ](#4d-volume-desktop-フォルダーのカスタマイズ) 参照)
@@ -169,7 +169,7 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 
 ダブルクリックで起動可能なアプリケーションを Webサーバーとして使用する場合、Web フォルダーやファイルは特定の場所にインストールする必要があります :
 
-* *cert.pem* と *key.pem* ファイル (オプション): これらのファイルはTLS接続とデータ暗号化コマンドに使用されます。
+* *cert.pem* と *key.pem* ファイル (オプション): これらのファイルは SSL接続とデータ暗号化コマンドに使用されます。
 * デフォルト Web ルートフォルダー
 
 インストール場所:
@@ -277,23 +277,23 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 
 ### 生成されるファイル
 
-クライアント/サーバーアプリケーションをビルドすると、保存先フォルダー内に **Client Server executable** という名前の新しいフォルダーが作成されます。 このフォルダーにはさらに2つのサブフォルダー、 *\&lt;ApplicationName&gt;Client* と *\&lt;ApplicationName&gt;Server* があります。
+クライアント/サーバーアプリケーションをビルドすると、保存先フォルダー内に **Client Server executable** という名前の新しいフォルダーが作成されます。 このフォルダーにはさらに2つのサブフォルダー、`<ApplicationName>Client` と `<ApplicationName>Server` があります。
 > エラーが発生した場合これらのフォルダーは作成されません。 そのような場合には、エラーの原因を特定するために [ログファイル](#ログファイル) の内容を確認してください。
 
-*\&lt;ApplicationName&gt;Client* フォルダーは、アプリケーションビルダーを実行したプラットフォームに対応するクライアントアプリケーションを格納します。 このフォルダーを各クライアントにインストールします。 *\&lt;ApplicationName&gt;Server* フォルダーはサーバーアプリケーションを格納します。
+`<ApplicationName>Client` フォルダーは、アプリケーションビルダーを実行したプラットフォームに対応するクライアントアプリケーションを格納します。 このフォルダーを各クライアントにインストールします。 `<ApplicationName>Server` フォルダーはサーバーアプリケーションを格納します。
 
 これらのフォルダーの内容はカレントのプラットフォームにより異なります:
 
-* *Windows* - 各フォルダーに`\<ApplicationName>Client.exe` (クライアント用) あるいは `\<ApplicationName>Server.exe` (サーバー用) という名前の実行ファイル、およびそれぞれに対応する.rsrファイルが作成されます。 これらのフォルダーには、アプリケーション実行のために必要な様々なファイルやフォルダー、および元の 4D Server や 4D Volume Desktop に追加されたカスタマイズ項目も格納されます。
-* *macOS* - 各フォルダーは `\<ApplicationName>Client.app` (クライアント用) と `\<ApplicationName>Server.app` (サーバー用) という名前のアプリケーションパッケージになっています。 各パッケージには動作に必要なすべてのファイルが含まれます。 macOS では、アプリケーションを実行するためにパッケージをダブルクリックします。
+* *Windows* - 各フォルダーに`<ApplicationName>Client.exe` (クライアント用) あるいは `<ApplicationName>Server.exe` (サーバー用) という名前の実行ファイル、およびそれぞれに対応する.rsrファイルが作成されます。 これらのフォルダーには、アプリケーション実行のために必要な様々なファイルやフォルダー、および元の 4D Server や 4D Volume Desktop に追加されたカスタマイズ項目も格納されます。
+* *macOS* - 各フォルダーは `<ApplicationName>Client.app` (クライアント用) と `<ApplicationName>Server.app` (サーバー用) という名前のアプリケーションパッケージになっています。 各パッケージには動作に必要なすべてのファイルが含まれます。 macOS では、アプリケーションを実行するためにパッケージをダブルクリックします。
 
  > ビルドされた macOSパッケージには、Windows版のサブフォルダーと同じものが格納されています。 ビルドされた macOS パッケージの内容を表示するにはアイコンを **Control+クリック** して、"パッケージの内容を表示" を選択します。
 
-"クライアントの自動更新を有効にする" オプションを選択している場合、`\<ApplicationName>Server` フォルダー/パッケージには追加で *Upgrade4DClient* サブフォルダーが作成されます。 このサブフォルダーには macOS/Windows 版のクライアントアプリケーションが圧縮されて格納されます。 クライアントアプリケーションを自動更新するときに、このファイルは使用されます。
+"クライアントの自動更新を有効にする" オプションを選択している場合、`<ApplicationName>Server` フォルダー/パッケージには追加で *Upgrade4DClient* サブフォルダーが作成されます。 このサブフォルダーには macOS/Windows 版のクライアントアプリケーションが圧縮されて格納されます。 クライアントアプリケーションを自動更新するときに、このファイルは使用されます。
 
 #### 4D Volume Desktop フォルダーのカスタマイズ
 
-ダブルクリックで起動可能なアプリケーションをビルドする際、4D は 4D Volume Desktop フォルダーの内容を Final Application 内のアプリケーション名サブフォルダーにコピーします。 元の 4D Server と 4D Volume Desktop の内容は必要に応じてカスタマイズできます。 たとえば:
+ダブルクリックで起動可能なアプリケーションをビルドする際、4D は 4D Volume Desktop フォルダーの内容を Final Application 内のアプリケーション名サブフォルダーにコピーします。 必要に応じて、このコピー元である 4D Volume Desktop フォルダーの内容をカスタマイズすることできます。 たとえば、次のようなことが可能です:
 
 * 特定の言語バージョンに対応する 4D Volume Desktop をインストールする
 * カスタムプラグインを Plugins フォルダーに置く
@@ -303,14 +303,14 @@ Windows においては、.exe 拡張子のついた実行ファイルが作成�
 
 サーバーやクライアントを Webサーバーとして使用する場合、Webサーバーが使用するファイルを特定の場所に配置しなければなりません :
 
-* *cert.pem* と *key.pem* ファイル (オプション): これらのファイルはTLS接続とデータ暗号化コマンドに使用されます。
+* *cert.pem* と *key.pem* ファイル (オプション): これらのファイルは SSL接続とデータ暗号化コマンドに使用されます。
 * デフォルト Web ルートフォルダー (WebFolder)
 
 インストール場所:
 
 * **Windows**
-  * **サーバーアプリケーション** - `Client Server executable\ \<ApplicationName>Server\Server Database` サブフォルダー内にこれらの項目を配置します。
-  * **クライアントアプリケーション** - `Client Server executable\ \<ApplicationName>Client` サブフォルダー内にこれらの項目を配置します。
+  * **サーバーアプリケーション** - `Client Server executable\<ApplicationName>Server\Server Database` サブフォルダー内にこれらの項目を配置します。
+  * **クライアントアプリケーション** - `Client Server executable\<ApplicationName>Client` サブフォルダー内にこれらの項目を配置します。
 
 * **macOS**
   * **サーバーアプリケーション** - `\<ApplicationName>Server` ソフトウェアパッケージと同階層にこれらの項目を配置します。

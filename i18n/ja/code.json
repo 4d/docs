@@ -539,5 +539,18 @@
   "theme.SearchModal.placeholder": {
     "message": "ドキュメントを検索する",
     "description": "The placeholder of the input of the DocSearch pop-up modal"
+  },
+  "This is the documentation for the latest": {
+    "message": "これは最新リリースのドキュメントです: "
+  },
+  "Looking for a LTS documentation?": {
+    "message": "LTS のドキュメントをお探しですか？"
+  },
+  "4D Write Pro": {
+    "message": "4D Write Pro"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "タグ",
+    "description": "The title of the tag list page"
   }
 }

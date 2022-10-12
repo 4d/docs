@@ -38,7 +38,7 @@ title: "$filter"
 4D においてデータをクエリする方法についての詳細は、[dataClass.query()](https://doc.4d.com/4Dv18/4D/18/dataClassquery.305-4505887.ja.html) ドキュメンテーションを参照ください。
 > 単一引用符 (') または二重引用符 (") を挿入するには、対応する文字コードを使ってそれらをエスケープする必要があります:
 > 
-> Quotes ('): \u0027 Double quotes ("): \u0022
+> 単一引用符 ('): \u0027 二重引用符 ("): \u0022
 > 
 > たとえば、単一引用符が含まれる値を *params* プロパティに渡すには、次のように書きます:  
 > `http://127.0.0.1:8081/rest/Person/?$filter="lastName=:1"&$params='["O\u0027Reilly"]'`
