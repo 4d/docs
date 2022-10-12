@@ -2,7 +2,7 @@ module.exports = {
   title: "4D Docs",
   tagline: "Documentation for 4D developers",
   baseUrl: "/docs/",
-  url: "https://doc4d.github.io/",
+  url: "https://4d.github.io/",
   organizationName: "4D",
   projectName: "docs",
   favicon: "img/favicon/4d.gif",
@@ -107,8 +107,13 @@ module.exports = {
       indexName: '4d',
 	  algoliaOptions: {
       facetFilters: ['language:LANGUAGE', 'version:VERSION'],
-    },
+		},
       contextualSearch: true
+    },
+    docs: {
+      sidebar: {
+        hideable: true,
+      },
     },
     prism: {
       theme: require("./src/theme/highlight/themes/palenight"),
