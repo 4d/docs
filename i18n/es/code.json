@@ -51,7 +51,7 @@
     "message": "Interfaz de línea de comando"
   },
   "TLS Protocol": {
-    "message": "TLS Protocol"
+    "message": "Protocolo TLS"
   },
   "Licenses & Data Collection": {
     "message": "Licenses & Data Collection"
@@ -123,7 +123,7 @@
     "message": "Propiedades de los formularios"
   },
   "Form Objects": {
-    "message": "Form Objects"
+    "message": "Objetos formularios"
   },
   "Form Object Properties": {
     "message": "Form Object Properties"
@@ -374,7 +374,7 @@
     "description": "The label for the mobile language switcher dropdown"
   },
   "theme.TOCCollapsible.toggleButtonLabel": {
-    "message": "On this page",
+    "message": "En esta página",
     "description": "The label used by the button on the collapsible TOC component"
   },
   "theme.blog.post.readingTime.plurals": {
