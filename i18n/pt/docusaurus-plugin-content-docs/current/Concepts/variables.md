@@ -60,9 +60,9 @@ The following table lists all supported `varType` values:
 
 | varType                | Conteúdos                              |
 | ---------------------- | -------------------------------------- |
-| `Text`                 | Text value                             |
-| `Date`                 | Date value                             |
-| `Hora`                 | Time value                             |
+| `Text`                 | Valor texto                            |
+| `Date`                 | Valor data                             |
+| `Hora`                 | Valor Hora                             |
 | `Booleano`             | Boolean value                          |
 | `Integer`              | Long integer value                     |
 | `Real`                 | Real value                             |
