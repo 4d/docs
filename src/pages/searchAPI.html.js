@@ -8,10 +8,7 @@ export default function RedirectAPI() {
   const context = useDocusaurusContext();
   const listVersions = JSON.stringify(context.siteConfig.presets[0][1].docs.versions)
   const url = context.siteConfig.baseUrl
-  const currentLanguage = context.i18n.currentLocale;
-  //console.log(listVersions)
   return (
-    <Layout title="redirectPage">
       <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -30,14 +27,13 @@ export default function RedirectAPI() {
                   versionToGo = version + "/"
                 }
               }
-              finalUrl = "${url}" + "/${currentLanguage}/" + versionToGo + "API/" + classWanted + "Class" + "#" + member
+              finalUrl = "${url}" + versionToGo + "API/" + classWanted + "Class" + "#" + member
               console.log(finalUrl)
               window.location.href = finalUrl
             })();
                 `,
             }}
           />
-    </Layout>
   );
 }
 
