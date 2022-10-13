@@ -79,7 +79,7 @@ Uma coleção se inicializa com:
 
 #### Descrição
 
-O comando `New collection` <!-- REF #_command_.New collection.Summary --> creates a new empty or prefilled collection<!-- END REF --> and returns its reference.
+O comando `New collection` <!-- REF #_command_.New collection.Summary --> cria uma nova colecção vazia ou pré-carregada<!-- END REF --> e devolve a sua referência.
 
 Se não passar nenhum parâmetro, `New collection` cria uma coleção vazia e retorna sua referência.
 
@@ -160,7 +160,7 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 
 #### Descrição
 
-O comando `New shared collection` <!-- REF #_command_.New shared collection.Summary --> creates a new empty or prefilled shared collection<!-- END REF --> and returns its reference.
+O comando `New shared collection` <!-- REF #_command_.New shared collection.Summary --> creates a new empty or prefilled shared collection<!-- END REF --> e devolve a sua referência.
 
 Adding an element to this collection must be surrounded by the [`Use... End`](Concepts/shared.md#useend-use) use structure, otherwise an error is generated. Ler um elemento sem a estrutura é entretanto possível.
 > Para saber mais sobre coleções partilhadas, veja a página [Shared objects and collections](Concepts/shared.md).
@@ -845,7 +845,7 @@ Com o método ***TypeLookUp***:
 | propertyPath | Text       | -> | Rota de propriedade de objeto cujos valores serão extraídos para nova coleção                                                         |
 | targetpath   | Text       | -> | Rota de propriedade alvo ou nome propriedade                                                                                          |
 | option       | Integer    | -> | `ck keep null`: inclui propriedades null na coleção retornada (ignorado como padrão). Parâmetro ignorado se for passado *targetPath*. |
-| Resultados   | Collection | <- | New collection containing extracted values|<!-- END REF -->                                                                 |
+| Resultados   | Collection | <- | Nova collection contendo valores extraídos|<!-- END REF -->                                                                 |
 
 #### Descrição
 
@@ -909,12 +909,12 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 
 <!-- REF #collection.fill().Params -->
-| Parâmetros | Tipo                                            |    | Descrição                                                         |
-| ---------- | ----------------------------------------------- |:--:| ----------------------------------------------------------------- |
-| value      | number, Text, Collection, Object, Date, Boolean | -> | Valores preenchido                                                |
-| startFrom  | Integer                                         | -> | Início do índice (incluído)                                       |
-| end        | Integer                                         | -> | Final do índice (não incluído)                                    |
-| Resultados | collection                                      | <- | Original collection with filled values|<!-- END REF --> |
+| Parâmetros | Tipo                                            |    | Descrição                                                           |
+| ---------- | ----------------------------------------------- |:--:| ------------------------------------------------------------------- |
+| value      | number, Text, Collection, Object, Date, Boolean | -> | Valores preenchido                                                  |
+| startFrom  | Integer                                         | -> | Início do índice (incluído)                                         |
+| end        | Integer                                         | -> | Final do índice (não incluído)                                      |
+| Resultados | collection                                      | <- | Coleção original com valores preenchidos|<!-- END REF --> |
 
 #### Descrição
 
@@ -962,11 +962,11 @@ Em caso de inconsistências, as regras abaixos são seguidas:
 
 
 <!-- REF #collection.filter().Params -->
-| Parâmetros | Tipo       |    | Descrição                                                                             |
-| ---------- | ---------- |:--:| ------------------------------------------------------------------------------------- |
-| methodName | Text       | -> | Nome da função a chamar para filtrar a coleção                                        |
-| param      | Mixed      | -> | Parâmetros a passar para *methodName*                                                 |
-| Resultados | Collection | <- | New collection containing filtered elements (shallow copy)|<!-- END REF --> |
+| Parâmetros | Tipo       |    | Descrição                                                                                |
+| ---------- | ---------- |:--:| ---------------------------------------------------------------------------------------- |
+| methodName | Text       | -> | Nome da função a chamar para filtrar a coleção                                           |
+| param      | Mixed      | -> | Parâmetros a passar para *methodName*                                                    |
+| Resultados | Collection | <- | Nova coleção contendo elementos filtrados (cópia superficial)|<!-- END REF --> |
 
 #### Descrição
 
@@ -1485,7 +1485,7 @@ Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Descrição
 
-A propriedade `.length` <!-- REF #collection.length.Summary -->returns the number of elements in the collection<!-- END REF -->.
+A propriedade `.length` <!-- REF #collection.length.Summary -->devolve o número de elementos da colecção<!-- END REF -->.
 
 A propriedade `.length` é iniciada quando a coleção for criada. Adicionar ou remover elementos atualiza o tamanho, se necessário. Essa propriedade é **read-only** /apenas leitura (não pode usá-la para estabelecer o tamanho da coleção).
 
@@ -2256,7 +2256,7 @@ If you try to remove an element from an empty collection, the method does nothin
 <!-- REF #collection.resize().Params -->
 | Parâmetros   | Tipo                                            |    | Descrição                                                   |
 | ------------ | ----------------------------------------------- |:--:| ----------------------------------------------------------- |
-| size         | Integer                                         | -> | New size of the collection                                  |
+| size         | Integer                                         | -> | Nova dimensão da colecção                                   |
 | defaultValue | Number, Text, Object, Collection, Date, Boolean | -> | Default value to fill new elements                          |
 | Resultados   | Collection                                      | <- | Colecção original redimensionada|<!-- END REF --> |
 
@@ -2308,9 +2308,9 @@ By default, new elements are filled will **null** values. You can specify the va
 
 
 <!-- REF #collection.reverse().Params -->
-| Parâmetros | Tipo       |    | Descrição                                                  |
-| ---------- | ---------- |:--:| ---------------------------------------------------------- |
-| Resultados | Collection | <- | Inverted copy of the collection|<!-- END REF --> |
+| Parâmetros | Tipo       |    | Descrição                                              |
+| ---------- | ---------- |:--:| ------------------------------------------------------ |
+| Resultados | Collection | <- | Cópia invertida da colecção|<!-- END REF --> |
 
 #### Descrição
 
@@ -2350,9 +2350,9 @@ A função `.reverse()` <!-- REF #collection.reverse().Summary -->returns a deep
 
 
 <!-- REF #collection.shift().Params -->
-| Parâmetros | Tipo |    | Descrição                                              |
-| ---------- | ---- |:--:| ------------------------------------------------------ |
-| Resultados | any  | <- | First element of collection|<!-- END REF --> |
+| Parâmetros | Tipo |    | Descrição                                                |
+| ---------- | ---- |:--:| -------------------------------------------------------- |
+| Resultados | any  | <- | Primeiro elemento de colecção|<!-- END REF --> |
 
 #### Descrição
 
@@ -2520,7 +2520,7 @@ With the following *NumberGreaterThan0* method:
 | ---------- | ---------- |:--:| ----------------------------------------------------------------- |
 | methodName | Text       | -> | Nome do método utilizado para especificar a ordem de clasificação |
 | extraParam | any        | -> | Parâmetros para o método                                          |
-| Resultados | Collection | <- | Original collection sorted|<!-- END REF -->             |
+| Resultados | Collection | <- | Colecção original ordenada|<!-- END REF -->             |
 
 #### Descrição
 
