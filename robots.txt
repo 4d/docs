@@ -2,4 +2,4 @@
 
 User-agent: *
 Allow: /
-Sitemap: https://developer.4d.com/docs/sitemap.xml
+Sitemap: https://4d.github.io/docs/sitemap.xml
