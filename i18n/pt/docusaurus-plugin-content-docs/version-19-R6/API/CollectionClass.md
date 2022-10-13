@@ -79,7 +79,7 @@ Uma coleção se inicializa com:
 
 #### Descrição
 
-O comando `New collection` <!-- REF #_command_.New collection.Summary --> creates a new empty or prefilled collection<!-- END REF --> and returns its reference.
+O comando `New collection` <!-- REF #_command_.New collection.Summary --> cria uma nova colecção vazia ou pré-carregada<!-- END REF --> e devolve a sua referência.
 
 Se não passar nenhum parâmetro, `New collection` cria uma coleção vazia e retorna sua referência.
 
@@ -160,7 +160,7 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 
 #### Descrição
 
-O comando `New shared collection` <!-- REF #_command_.New shared collection.Summary --> creates a new empty or prefilled shared collection<!-- END REF --> and returns its reference.
+O comando `New shared collection` <!-- REF #_command_.New shared collection.Summary --> creates a new empty or prefilled shared collection<!-- END REF --> e devolve a sua referência.
 
 Adding an element to this collection must be surrounded by the [`Use... End`](Concepts/shared.md#useend-use) use structure, otherwise an error is generated. Ler um elemento sem a estrutura é entretanto possível.
 > Para saber mais sobre coleções partilhadas, veja a página [Shared objects and collections](Concepts/shared.md).
@@ -825,7 +825,7 @@ $b:=$c.every($f;Is real) //$b=false
 
 <details><summary>Histórico</summary>
 
-|Version|Changes|
+|Versão|Alterações|
 
 |---|---| |v16 R6|Added|
 
@@ -842,7 +842,7 @@ $b:=$c.every($f;Is real) //$b=false
 | propertyPath | Text       | -> | Rota de propriedade de objeto cujos valores serão extraídos para nova coleção                                                         |
 | targetpath   | Text       | -> | Rota de propriedade alvo ou nome propriedade                                                                                          |
 | option       | Integer    | -> | `ck keep null`: inclui propriedades null na coleção retornada (ignorado como padrão). Parâmetro ignorado se for passado *targetPath*. |
-| Resultados   | Collection | <- | New collection containing extracted values|<!-- END REF -->                                                                 |
+| Resultados   | Collection | <- | Nova collection contendo valores extraídos|<!-- END REF -->                                                                 |
 
 #### Descrição
 
@@ -906,12 +906,12 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 
 <!-- REF #collection.fill().Params -->
-| Parâmetros | Tipo                                            |    | Descrição                                                         |
-| ---------- | ----------------------------------------------- |:--:| ----------------------------------------------------------------- |
-| value      | number, Text, Collection, Object, Date, Boolean | -> | Valores preenchido                                                |
-| startFrom  | Integer                                         | -> | Início do índice (incluído)                                       |
-| end        | Integer                                         | -> | Final do índice (não incluído)                                    |
-| Resultados | collection                                      | <- | Original collection with filled values|<!-- END REF --> |
+| Parâmetros | Tipo                                            |    | Descrição                                                           |
+| ---------- | ----------------------------------------------- |:--:| ------------------------------------------------------------------- |
+| value      | number, Text, Collection, Object, Date, Boolean | -> | Valores preenchido                                                  |
+| startFrom  | Integer                                         | -> | Início do índice (incluído)                                         |
+| end        | Integer                                         | -> | Final do índice (não incluído)                                      |
+| Resultados | collection                                      | <- | Coleção original com valores preenchidos|<!-- END REF --> |
 
 #### Descrição
 
@@ -960,12 +960,12 @@ Em caso de inconsistências, as regras abaixos são seguidas:
 
 
 <!-- REF #collection.filter().Params -->
-| Parâmetros | Tipo         |    | Descrição                                                                             |
-| ---------- | ------------ |:--:| ------------------------------------------------------------------------------------- |
-| formula    | 4D. Function | -> | Formula object                                                                        |
-| methodName | Text         | -> | Name of a method                                                                      |
-| param      | any          | -> | Parameter(s) to pass to *formula* or *methodName*                                     |
-| Resultados | Collection   | <- | New collection containing filtered elements (shallow copy)|<!-- END REF --> |
+| Parâmetros | Tipo         |    | Descrição                                                                                |
+| ---------- | ------------ |:--:| ---------------------------------------------------------------------------------------- |
+| formula    | 4D. Function | -> | Formula object                                                                           |
+| methodName | Text         | -> | Name of a method                                                                         |
+| param      | any          | -> | Parameter(s) to pass to *formula* or *methodName*                                        |
+| Resultados | Collection   | <- | Nova coleção contendo elementos filtrados (cópia superficial)|<!-- END REF --> |
 
 #### Descrição
 
@@ -1141,7 +1141,7 @@ A função `.find()` <!-- REF #collection.findIndex().Summary -->returns the ind
 You designate the callback to be executed to evaluate collection elements using either:
 
 * *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
-* *methodName*, the name of a project method (text).
+* *methodName*, o nome de um método projecto (texto).
 
 The callback is called with the parameter(s) passed in *param* (optional). The callback is called with the parameter(s) passed in *param* (optional). It receives an `Object` in first parameter ($1).
 
@@ -1460,7 +1460,7 @@ Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Descrição
 
-A propriedade `.length` <!-- REF #collection.length.Summary -->returns the number of elements in the collection<!-- END REF -->.
+A propriedade `.length` <!-- REF #collection.length.Summary -->devolve o número de elementos da colecção<!-- END REF -->.
 
 A propriedade `.length` é iniciada quando a coleção for criada. Adicionar ou remover elementos atualiza o tamanho, se necessário. Essa propriedade é **read-only** /apenas leitura (não pode usá-la para estabelecer o tamanho da coleção).
 
@@ -2227,7 +2227,7 @@ If you try to remove an element from an empty collection, the method does nothin
 <!-- REF #collection.resize().Params -->
 | Parâmetros   | Tipo                                            |    | Descrição                                                   |
 | ------------ | ----------------------------------------------- |:--:| ----------------------------------------------------------- |
-| size         | Integer                                         | -> | New size of the collection                                  |
+| size         | Integer                                         | -> | Nova dimensão da colecção                                   |
 | defaultValue | Number, Text, Object, Collection, Date, Boolean | -> | Default value to fill new elements                          |
 | Resultados   | Collection                                      | <- | Colecção original redimensionada|<!-- END REF --> |
 
@@ -2279,9 +2279,9 @@ By default, new elements are filled will **null** values. You can specify the va
 
 
 <!-- REF #collection.reverse().Params -->
-| Parâmetros | Tipo       |    | Descrição                                                  |
-| ---------- | ---------- |:--:| ---------------------------------------------------------- |
-| Resultados | Collection | <- | Inverted copy of the collection|<!-- END REF --> |
+| Parâmetros | Tipo       |    | Descrição                                              |
+| ---------- | ---------- |:--:| ------------------------------------------------------ |
+| Resultados | Collection | <- | Cópia invertida da colecção|<!-- END REF --> |
 
 #### Descrição
 
@@ -2321,9 +2321,9 @@ A função `.reverse()` <!-- REF #collection.reverse().Summary -->returns a deep
 
 
 <!-- REF #collection.shift().Params -->
-| Parâmetros | Tipo |    | Descrição                                              |
-| ---------- | ---- |:--:| ------------------------------------------------------ |
-| Resultados | any  | <- | First element of collection|<!-- END REF --> |
+| Parâmetros | Tipo |    | Descrição                                                |
+| ---------- | ---- |:--:| -------------------------------------------------------- |
+| Resultados | any  | <- | Primeiro elemento de colecção|<!-- END REF --> |
 
 #### Descrição
 
@@ -2496,7 +2496,7 @@ You want to know if at least one collection value is >0.
 | formula    | 4D. Function | -> | Formula object                                        |
 | methodName | Text         | -> | Name of a method                                      |
 | extraParam | any          | -> | Parâmetros para o método                              |
-| Resultados | Collection   | <- | Original collection sorted|<!-- END REF --> |
+| Resultados | Collection   | <- | Colecção original ordenada|<!-- END REF --> |
 
 #### Descrição
 
