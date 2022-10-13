@@ -1296,7 +1296,7 @@ $activeCell:=VP Get active cell("myVPArea")
 
 The `VP Get binding path` command <!-- REF #_method_.VP Get binding path.Summary -->returns the name of the attribute bound to the cell specified in *rangeObj*<!-- END REF -->.
 
-In *rangeObj*, pass an object that is either a cell range or a combined range of cells. Note that:
+In *rangeObj*, pass an object that is either a cell range or a combined range of cells. Note que:
 
 * If *rangeObj* is a range with several cells, the command returns the attribute name linked to the first cell in the range.
 * If *rangeObj* contains several ranges of cells, the command returns the attribute name linked to the first cell of the first range.
@@ -3896,7 +3896,7 @@ In the *formulaObj* parameter, pass an object containing the 4D formulas that ca
 |                          | resumo     |            | Text                   | Formula description to display in 4D View Pro                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
 |                          | minParams  |            | Número                 | Minimum number of parameters                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 |                          | maxParams  |            | Número                 | Maximum number of parameters. Passing a number higher than the length of *parameters* allows declaring "optional" parameters with default type                                                                                                                                                                                                                                                                                                                                                                                                                           |
-> **WARNING**
+> **AVISO**
 > 
 > * As soon as `VP SET CUSTOM FUNCTIONS` is called, the methods allowed by the [VP SET ALLOWED METHODS](#vp-set-allowed-methods) command (if any) are ignored in the 4D View Pro area.
 > * As soon as `VP SET CUSTOM FUNCTIONS` is called, the functions based upon `SET TABLE TITLES` and `SET FIELD TITLES` commands are ignored in the 4D View Pro area.
