@@ -8,7 +8,7 @@
     "description": "The label for category Getting Started in sidebar docs"
   },
   "sidebar.docs.category.Project Management": {
-    "message": "Project Management",
+    "message": "Gestión del proyecto",
     "description": "The label for category Project Management in sidebar docs"
   },
   "sidebar.docs.category.4D Language Concepts": {
@@ -32,7 +32,7 @@
     "description": "The label for category Class API Reference in sidebar docs"
   },
   "sidebar.docs.category.Preferences": {
-    "message": "Preferences",
+    "message": "Preferencias",
     "description": "The label for category Preferences in sidebar docs"
   },
   "sidebar.docs.category.Administration": {
@@ -40,7 +40,7 @@
     "description": "The label for category Administration in sidebar docs"
   },
   "sidebar.docs.category.Access Rights": {
-    "message": "Access Rights",
+    "message": "Derechos de acceso",
     "description": "The label for category Access Rights in sidebar docs"
   },
   "sidebar.docs.category.MSC": {
@@ -48,7 +48,7 @@
     "description": "The label for category MSC in sidebar docs"
   },
   "sidebar.docs.category.Backup and Restore": {
-    "message": "Backup and Restore",
+    "message": "Copia de seguridad y restauración",
     "description": "The label for category Backup and Restore in sidebar docs"
   },
   "sidebar.docs.category.Web Server": {
@@ -56,7 +56,7 @@
     "description": "The label for category Web Server in sidebar docs"
   },
   "sidebar.docs.category.Web Development": {
-    "message": "Web Development",
+    "message": "Desarrollo web",
     "description": "The label for category Web Development in sidebar docs"
   },
   "sidebar.docs.category.REST Server": {
@@ -76,7 +76,7 @@
     "description": "The label for category API (dataClass) in sidebar docs"
   },
   "sidebar.docs.category.Client/Server": {
-    "message": "Client/Server",
+    "message": "Cliente/Servidor",
     "description": "The label for category Client/Server in sidebar docs"
   },
   "sidebar.docs.category.Forms": {
