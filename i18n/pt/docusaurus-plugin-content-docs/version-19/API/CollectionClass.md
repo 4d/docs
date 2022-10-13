@@ -748,12 +748,12 @@ Como padrão, uma avaliação não-diacrítica é realizada. Se quiser que a ava
 
 
 <!-- REF #collection.every().Params -->
-| Parâmetros | Tipo     |    | Descrição                                                                    |
-| ---------- | -------- |:--:| ---------------------------------------------------------------------------- |
-| startFrom  | Integer  | -> | Índice para início do teste em                                               |
-| methodName | Text     | -> | Nome do método para chamar para o teste                                      |
-| param      | Mixed    | -> | Parâmetros a passar para methodName                                          |
-| Resultados | Booleano | <- | True if all elements successfully passed the test|<!-- END REF --> |
+| Parâmetros | Tipo     |    | Descrição                                                                          |
+| ---------- | -------- |:--:| ---------------------------------------------------------------------------------- |
+| startFrom  | Integer  | -> | Índice para início do teste em                                                     |
+| methodName | Text     | -> | Nome do método para chamar para o teste                                            |
+| param      | Mixed    | -> | Parâmetros a passar para methodName                                                |
+| Resultados | Booleano | <- | True se todos os elementos passarem o teste com sucesso|<!-- END REF --> |
 
 #### Descrição
 
