@@ -748,13 +748,13 @@ Como padrão, uma avaliação não-diacrítica é realizada. Se quiser que a ava
 
 
 <!-- REF #collection.every().Params -->
-| Parâmetros | Tipo         |    | Descrição                                                                    |
-| ---------- | ------------ |:--:| ---------------------------------------------------------------------------- |
-| startFrom  | Integer      | -> | Índice para início do teste em                                               |
-| formula    | 4D. Function | -> | Formula object                                                               |
-| methodName | Text         | -> | Name of a method                                                             |
-| param      | Mixed        | -> | Parameter(s) to pass to *formula* or *methodName*                            |
-| Resultados | Booleano     | <- | True if all elements successfully passed the test|<!-- END REF --> |
+| Parâmetros | Tipo         |    | Descrição                                                                          |
+| ---------- | ------------ |:--:| ---------------------------------------------------------------------------------- |
+| startFrom  | Integer      | -> | Índice para início do teste em                                                     |
+| formula    | 4D. Function | -> | Formula object                                                                     |
+| methodName | Text         | -> | Name of a method                                                                   |
+| param      | Mixed        | -> | Parameter(s) to pass to *formula* or *methodName*                                  |
+| Resultados | Booleano     | <- | True se todos os elementos passarem o teste com sucesso|<!-- END REF --> |
 
 #### Descrição
 
@@ -1791,7 +1791,7 @@ Ordenar com uma rota de propriedade:
 | ---------- | ------------ |:--:| ------------------------------------------------------------------------ |
 | formula    | 4D. Function | -> | Formula object                                                           |
 | methodName | Text         | -> | Name of a method                                                         |
-| extraParam | any          | -> | Parameter(s) to pass                                                     |
+| extraParam | any          | -> | Parâmetro(s) a passar                                                    |
 | Resultados | Collection   | <- | Cópia ordenada da coleção (cópia superficial)|<!-- END REF --> |
 
 #### Descrição
@@ -1850,11 +1850,11 @@ Se quiser ordenar a coleção por código de caractere ou alfabeticamente:
 var $strings1; $strings2 : Collection
 $strings1:=New collection("Alpha";"Charlie";"alpha";"bravo";"Bravo";"charlie")
 
-//using the character code:
+//usar o código de caractere:
 $strings2:=$strings1.orderByMethod(Function(sortCollection);sk character codes)
 // result : ["Alpha","Bravo","Charlie","alpha","bravo","charlie"]
 
-//using the language:
+//usar a linguagem:
 $strings2:=$string1s.orderByMethod(Function(sortCollection);sk strict)
 // result : ["alpha","Alpha","bravo","Bravo","charlie","Charlie"]
 ```
@@ -2093,7 +2093,7 @@ Mais exemplos de pesquisas podem ser encontrados na página `dataClass.query()`.
 | formula    | 4D. Function                                    | -> | Formula object                                                                    |
 | methodName | Text                                            | -> | Name of a method                                                                  |
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Value to use as the first argument to the first call of *formula* or *methodName* |
-| param      | expressão                                       | -> | Parameter(s) to pass                                                              |
+| param      | expressão                                       | -> | Parâmetro(s) a passar                                                             |
 | Resultados | Text, Number, Object, Collection, Date, Boolean | <- | Resultado do valor do acumulador|<!-- END REF -->                       |
 
 #### Descrição
@@ -2418,7 +2418,7 @@ The returned collection contains the element specified by *startFrom* and all su
 | startFrom  | Integer      | -> | Índice para início do teste em                                                       |
 | formula    | 4D. Function | -> | Formula object                                                                       |
 | methodName | Text         | -> | Name of a method                                                                     |
-| param      | Mixed        | -> | Parameter(s) to pass                                                                 |
+| param      | Mixed        | -> | Parâmetro(s) a passar                                                                |
 | Resultados | Booleano     | <- | True if at least one element successfully passed the test|<!-- END REF --> |
 
 #### Descrição
@@ -2440,7 +2440,7 @@ The callback receives the following parameters:
 
 It can set the following parameter(s):
 
-* (mandatory if you used a method) *$1.result* (boolean): **true** if the element value evaluation is successful, **false** otherwise.
+* (obrigatório se você usou um método) *$1.result* (booleano): **true** se a avaliação do elemento valor tiver sucesso, senão será**false**.
 * *$1.stop* (boolean, opcional): **true** para parar o callback do método. O valor retornado é o último calculado.
 
 In any case, at the point where `.some()` function encounters the first collection element returning true, it stops calling the callback and returns **true**.
