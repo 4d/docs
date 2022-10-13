@@ -53,10 +53,10 @@ Each process is identified by an icon as well as a type. The color and form of t
 | icon                                       | type                                                                                                                                                      |
 | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | ![](../assets/en/Admin/server-icon-1.png)  | Application server                                                                                                                                        |
-| ![](../assets/en/Admin/server-icon-2.png)  | SQL Server                                                                                                                                                |
+| ![](../assets/en/Admin/server-icon-2.png)  | Servidor SQL                                                                                                                                              |
 | ![](../assets/en/Admin/server-icon-3.png)  | DB4D Server (database engine)                                                                                                                             |
-| ![](../assets/en/Admin/server-icon-4.png)  | Web Server                                                                                                                                                |
-| ![](../assets/en/Admin/server-icon-5.png)  | SOAP Server                                                                                                                                               |
+| ![](../assets/en/Admin/server-icon-4.png)  | Servidor Web                                                                                                                                              |
+| ![](../assets/en/Admin/server-icon-5.png)  | Servidor SOAP                                                                                                                                             |
 | ![](../assets/en/Admin/server-icon-6.png)  | Protected 4D client process (development process of a connected 4D)                                                                                       |
 | ![](../assets/en/Admin/server-icon-7.png)  | Main 4D client process (main process of a connected 4D). Collaborative process, equivalent on the server of the process created on the client machine)    |
 | ![](../assets/en/Admin/server-icon-8.png)  | 4D client base process (process parallel to a 4D client process. Preemptive process responsible for controlling the corresponding main 4D client process) |
