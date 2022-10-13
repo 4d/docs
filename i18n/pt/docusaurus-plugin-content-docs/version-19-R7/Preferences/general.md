@@ -7,7 +7,7 @@ This page contains various options to configure the general operation of your 4D
 
 ## Options
 
-### At startup
+### Na inicialização
 
 This option allows you to configure the default 4D display at startup, when the user launches only the application.
 
