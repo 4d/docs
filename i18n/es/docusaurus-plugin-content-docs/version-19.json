@@ -44,7 +44,7 @@
     "description": "The label for category Access Rights in sidebar docs"
   },
   "sidebar.docs.category.MSC": {
-    "message": "MSC",
+    "message": "CSM",
     "description": "The label for category MSC in sidebar docs"
   },
   "sidebar.docs.category.Backup and Restore": {
@@ -88,7 +88,7 @@
     "description": "The label for category Form Properties in sidebar docs"
   },
   "sidebar.docs.category.Form Objects": {
-    "message": "Form Objects",
+    "message": "Objetos formularios",
     "description": "The label for category Form Objects in sidebar docs"
   },
   "sidebar.docs.category.Form Object Properties": {
