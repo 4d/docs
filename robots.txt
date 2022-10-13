@@ -1,5 +1,0 @@
-# Algolia-Crawler-Verif: 78594B1797EB6BB0
-
-User-agent: *
-Allow: /
-Sitemap: https://4d.github.io/docs/sitemap.xml
