@@ -119,7 +119,8 @@ var $entity : cs.EmployeeEntity
 いくつかの基本的な変数宣言の例です:
 
 ```4d
- C_BLOB(vxMyBlob) // プロセス変数 vxMyBlob を BLOB型として宣言します C_DATE($vdCurDate) // ローカル変数 $vdCurDate を日付型として宣言します
+ C_BLOB(vxMyBlob) // プロセス変数 vxMyBlob を BLOB型として宣言します
+ C_DATE($vdCurDate) // ローカル変数 $vdCurDate を日付型として宣言します
  C_LONGINT(vg1;vg2;vg3) // 3つのプロセス変数 vg1, vg2, vg3 を倍長整数型として宣言します
  C_OBJECT($vObj) // ローカル変数 $vObj をオブジェクト型として宣言します
  C_COLLECTION($vCol) // ローカル変数 $vCol をコレクション型として宣言します
