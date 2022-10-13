@@ -374,7 +374,7 @@ If the server and/or client part of your double-clickable application is used as
 
 Items must be installed:
 
-* **on Windows**
+* **em Windows**
   * **Server application** - in the `Client Server executable/<ApplicationName>Server/Server Database` subfolder.
   * **Client application** - in the `Client Server executable/<ApplicationName>Client` subfolder.
 
