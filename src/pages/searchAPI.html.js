@@ -1,13 +1,18 @@
-const React = require("react");
+import useBaseUrl, { useBaseUrlUtils } from '@docusaurus/useBaseUrl';
+import React from 'react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Layout from '@theme/Layout';
 
-class RedirectAPI extends React.Component {
-  render() {
-    const listVersions = JSON.stringify(this.props.config.presets[0][1].docs.versions)
-    const url = this.props.config.baseUrl
-   
 
-    return (
-          <script
+export default function RedirectAPI() {
+  const context = useDocusaurusContext();
+  const listVersions = JSON.stringify(context.siteConfig.presets[0][1].docs.versions)
+  const url = context.siteConfig.baseUrl
+  const currentLanguage = context.i18n.currentLocale;
+  //console.log(listVersions)
+  return (
+    <Layout title="redirectPage">
+      <script
             dangerouslySetInnerHTML={{
               __html: `
               ( function() {
@@ -25,16 +30,14 @@ class RedirectAPI extends React.Component {
                   versionToGo = version + "/"
                 }
               }
-
-              finalUrl = "${url}" + versionToGo + "API/" + classWanted + "Class" + "#" + member
+              finalUrl = "${url}" + "/${currentLanguage}/" + versionToGo + "API/" + classWanted + "Class" + "#" + member
               console.log(finalUrl)
               window.location.href = finalUrl
             })();
                 `,
             }}
           />
-    );
-  }
+    </Layout>
+  );
 }
 
-module.exports = RedirectAPI;
