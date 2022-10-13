@@ -179,7 +179,7 @@ The scientific notation format is the only format that will automatically round 
 
 You can display a number in hexadecimal using the following display formats:
 
-* `&x`: This format displays hexadecimal numbers using the “0xFFFF” format.
+* `&x`: este formato muestra números hexadecimales utilizando el formato “0xFFFF”.
 * `&$`: este formato muestra números hexadecimales utilizando el formato "$FFFF".
 
 ### Notación XML
@@ -194,7 +194,7 @@ Por ejemplo, el formato:
 
  &/5
 
-corresponds to the 5th time format in the pop-up menu, specifically the AM/PM time. A number field with this format would display 25000 as:
+corresponds to the 5th time format in the pop-up menu, specifically the AM/PM time. Un campo numérico con este formato mostraría 25000 como:
 
  6:56 AM
 
@@ -254,7 +254,7 @@ Las opciones de truncamiento y escalado no afectan a la imagen en sí. El conten
 
 `Gramática JSON: "scaled"`
 
-The **Scaled to fit** format causes 4D to resize the picture to fit the dimensions of the area.
+El formato **A escala para ajustarse** hace que 4D redimensione la imagen para ajustarla a las dimensiones del área.
 
 ![](../assets/en/FormObjects/property_pictureFormat_ScaledToFit.png)
 
@@ -262,10 +262,10 @@ The **Scaled to fit** format causes 4D to resize the picture to fit the dimensio
 
 `Gramática JSON: "truncatedCenter" / "truncatedTopLeft"`
 
-The **Truncated (centered)** format causes 4D to center the picture in the area and crop any portion that does not fit within the area. 4D recorta por igual desde cada borde y desde la parte superior e inferior.
+El formato **Truncado (centrado)** hace que 4D centre la imagen en el área y recorte cualquier parte que no quepa dentro del área. 4D recorta por igual desde cada borde y desde la parte superior e inferior.
 
-The **Truncated (non-centered)** format causes 4D to place the upper-left corner of the picture in the upper-left corner of the area and crop any portion that does not fit within the area. 4D crops from the right and bottom.
-> When the picture format is **Truncated (non-centered)**, it is possible to add scroll bars to the input area.
+El formato **Truncado (no centrado)** hace que 4D coloque la esquina superior izquierda de la imagen en la esquina superior izquierda del área y recorte cualquier parte que no quepa dentro del área. 4D corta desde la derecha y desde abajo.
+> Cuando el formato de la imagen es **Truncado (no centrado)**, es posible añadir barras de desplazamiento al área de entrada.
 
 ![](../assets/en/FormObjects/property_pictureFormat_Truncated.png)
 
@@ -372,7 +372,7 @@ Las columnas booleanas también pueden mostrarse como menús emergentes. In this
 
 | Nombre      | Tipos de datos | Valores posibles                                   |
 | ----------- | -------------- | -------------------------------------------------- |
-| controlType | string         | <li>**number columns**: "automatic" (default) or "checkbox"</li><li>**boolean columns**: "checkbox" (default) or "popup"</li> |
+| controlType | string         | <li>**number columns**: "automatic" (default) or "checkbox"</li><li>**columnas booleanas**: "checkbox" (por defecto) o "popup"</li> |
 
 #### Objetos soportados
 
@@ -410,8 +410,8 @@ List box columns with a numeric [data type](properties_Object.md#expression-type
 * 1 = casilla seleccionada,
 * 2 (o cualquier valor >0) = caja semi-marcada (tercer estado). Para la entrada de datos, este estado devuelve el valor 2.
 * -1 = casilla de verificación invisible,
-* -2 = unchecked box, not enterable,
-* -3 = checked box, not enterable,
+* -2 = casilla desmarcada, no editable,
+* -3 = casilla marcada, no editable,
 * -4 = casilla semi-marcada, no editable
 
 In this case as well, the [Title](#title) property is also available so that the title of the check box can be entered.
@@ -424,7 +424,7 @@ In this case as well, the [Title](#title) property is also available so that the
 
 #### Objetos soportados
 
-[Check box](checkbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Casilla de selección](checkbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -481,13 +481,13 @@ The Truncate with ellipsis property can be applied to Boolean type columns; howe
 
 #### Objetos soportados
 
-[List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-footers)
+[Columna List Box](listbox_overview.md#list-box-columns) - [Encabezado List Box](listbox_overview.md#list-box-footers)
 
 ---
 
 ## Visibilidad
 
-This property allows hiding the object in the Application environment.
+Esta propiedad permite ocultar el objeto en el entorno Aplicación.
 
 Puede manejar la propiedad Visibilidad para la mayoría de los objetos del formulario. Esta propiedad se utiliza principalmente para simplificar el desarrollo de interfaces dinámicas. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. In this context, it is often necessary to hide objects programatically during the `On load` event of the form then to display certain objects afterwards. The Visibility property allows inverting this logic by making certain objects invisible by default.
 
@@ -506,23 +506,23 @@ This property is only used when drawing objects located in the body of a list fo
 
 #### Gramática JSON
 
-| Nombre     | Tipos de datos | Valores posibles                                                                        |
-| ---------- | -------------- | --------------------------------------------------------------------------------------- |
-| visibility | string         | "visible", "hidden", "selectedRows" (list form only), "unselectedRows" (list form only) |
+| Nombre     | Tipos de datos | Valores posibles                                                                                                      |
+| ---------- | -------------- | --------------------------------------------------------------------------------------------------------------------- |
+| visibility | string         | "visible", "hidden", "selectedRows" (formulario listado únicamente), "unselectedRows" (formulario listado únicamente) |
 
 #### Objetos soportados
 
-[4D View Pro area](viewProArea_overview.md) - [4D Write Pro area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
+[Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - [Botón](button_overview.md) - [Rejilla de botones](buttonGrid_overview.md) - [Casilla de selección](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Lista desplegable](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Lista jerárquica](list_overview.md) - [List Box](listbox_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns) - [Pie de List Box](listbox_overview.md#list-box-footers) - [Encabezado de List Box](listbox_overview.md#list-box-headers) - [Botón imagen](pictureButton_overview.md) - [Menú emergente imagen](picturePopupMenu_overview.md) - [Área de Plug-in](pluginArea_overview.md) - [Indicador de progreso](progressIndicator.md) - [Botón de radio](radio_overview.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Imagen estática](staticPicture.md) - [Stepper](stepper.md) - [Subformulario](subform_overview.md) - [Control de pestañas](tabControl.md) - [Área de texto](text.md) - [Área web](webArea_overview.md)
 
 ---
 
 ## Ajuste de texto
 
-> For [input](input_overview.md) objects, available when the [Multiline](properties_Entry.md#multiline) property is set to "yes" .
+> Para los objetos [entrada](input_overview.md), disponibles cuando la propiedad [Multilínea](properties_Entry.md#multiline) está definida como "yes".
 
 Gestiona la visualización del contenido cuando supera el ancho del objeto.
 
-#### Checked for list box/Yes for input
+#### Marcada para list box/Sí para entrada
 
 `Gramática JSON: "normal"`
 
@@ -534,7 +534,7 @@ When this option is selected, text automatically wraps to the next line whenever
 
 ![](../assets/en/FormObjects/wordwrap2.png)
 
-#### Unchecked for list box/No for input
+#### Sin marcar para el list box/No para entrada
 
 `Gramática JSON: "none"`
 
