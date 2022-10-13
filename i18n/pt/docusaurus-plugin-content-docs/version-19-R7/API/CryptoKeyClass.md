@@ -305,7 +305,7 @@ A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->signs the utf8 repres
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
 
 
-Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the key in bits<!-- END REF -->. .
+Definido apenas para chaves RSA: <!-- REF #CryptoKey.size.Summary -->the size of the key in bits<!-- END REF -->. .
 
 <!-- REF CryptoKey.type -->
 ## .type
