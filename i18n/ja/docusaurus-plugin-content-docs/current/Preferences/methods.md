@@ -152,7 +152,7 @@ title: メソッドページ
 ![](../assets/en/Preferences/optionsClosing.png)  
 ![](../assets/en/Preferences/optionsClosing2.png)
 
-#### Matching \[]\(){}
+#### 括弧のマッチング
 
 コード中での対応する括弧を強調する方法を設定します。 この強調は、括弧 (大カッコ[]、中カッコ{}、小カッコ()) が選択されたときに表示されます。 次のオプションから選択することができます:
 
