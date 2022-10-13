@@ -102,13 +102,13 @@
     "message": "Web Applications"
   },
   "Web Server": {
-    "message": "Web Server"
+    "message": "Servidor Web"
   },
   "Web Development": {
     "message": "Web Development"
   },
   "REST Server": {
-    "message": "REST Server"
+    "message": "Servidor REST"
   },
   "homepage.sections.desktop-applications.title": {
     "message": "Desktop Applications"
@@ -129,7 +129,7 @@
     "message": "Form Object Properties"
   },
   "Form Events": {
-    "message": "Form Events"
+    "message": "Eventos formulário"
   },
   "Menus": {
     "message": "Menus"
@@ -342,7 +342,7 @@
     "description": "The skip to content label used for accessibility, allowing to rapidly navigate to main content with keyboard tab/enter navigation"
   },
   "theme.tags.tagsListLabel": {
-    "message": "Tags:",
+    "message": "Etiquetas:",
     "description": "The label alongside a tag list"
   },
   "theme.blog.sidebar.navAriaLabel": {
