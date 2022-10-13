@@ -65,7 +65,7 @@ If a request is sent to the remote datastore after the session has been closed, 
 * the **optimization context**
 * the **ORDA cache**
 
-### Context
+### Contexto
 
 The optimization context is based upon the following implementations:
 
