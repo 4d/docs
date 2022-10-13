@@ -22,7 +22,7 @@ Specifies if the user can delete subrecords in a list subform.
 ---
 ## Formulário detalhado
 
-You use this property to declare the detail form to use in the subform. It can be:
+You use this property to declare the detail form to use in the subform. Pode ser:
 
 - a widget, i.e. a page-type subform endowed with specific functions. In this case, the [list subform](#list-form) and [Source](#source) properties must be empty or not present.   
   You can select a component form name when it is published in the component.
