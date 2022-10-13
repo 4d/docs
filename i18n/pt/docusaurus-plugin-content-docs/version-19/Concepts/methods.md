@@ -16,7 +16,7 @@ In the 4D Language, there are several categories of methods. The category depend
 | -------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Project method**               | On demand, when the project method name is called (see [Calling project methods](#calling-project-methods)) | Sim                | Can contain any code to execute any custom actions. Once a project method is created, it becomes part of the language of the project.                                |
 | **Object (widget) method**       | Automatic, when an event involves the object to which the method is attached                                | No                 | Property of a form object (also called widget)                                                                                                                       |
-| **Form method**                  | Automatic, when an event involves the form to which the method is attached                                  | No                 | Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. |
+| **Método formulário**            | Automatic, when an event involves the form to which the method is attached                                  | No                 | Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. |
 | **Trigger** (aka *Table method*) | Automatic, each time that you manipulate the records of a table (Add, Delete and Modify)                    | No                 | Property of a table. Triggers are methods that can prevent “illegal” operations with the records of your database.                                                   |
 | **Database method**              | Automatic, when a working session event occurs                                                              | Yes (predefined)   | There are 16 database methods in 4D. See Database methods section                                                                                                    |
 
@@ -28,13 +28,13 @@ In the 4D Language, there are several categories of methods. The category depend
 
 A project method can have one of the following roles, depending on how it is executed and used:
 
-- Subroutine
+- Subrotina
 - Object formula
-- Menu method
+- Método do menu
 - Process method
 - Event or Error catching method
 
-### Subroutines
+### Subrotinas
 
 A subroutine is a project method that can be thought of as a servant. It performs those tasks that other methods request it to perform. A function is a subroutine that returns a value to the method that called it.
 
