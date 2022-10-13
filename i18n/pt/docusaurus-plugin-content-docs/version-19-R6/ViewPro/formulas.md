@@ -72,7 +72,7 @@ List of operators from most to least important:
 | ()                                  | Parenthesis (for grouping) |
 | -                                   | Negate                     |
 | +                                   | Mais                       |
-| %                                   | Percent                    |
+| %                                   | Porcentagem                |
 | ^                                   | Expoente                   |
 | * and /                             | Multiply and divide        |
 | + and -                             | Add and Subtract           |
@@ -231,7 +231,7 @@ For more information on supported incoming parameter types, please refer to the 
 
  | Propriedade | Tipo | Descrição       |
  | ----------- | ---- | --------------- |
- | value       | Date | Date value      |
+ | value       | Date | Valor data      |
  | time        | Real | Time in seconds |
 
 If the 4D method returns nothing, an empty string is automatically returned.
