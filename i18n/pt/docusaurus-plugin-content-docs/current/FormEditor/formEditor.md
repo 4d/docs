@@ -39,7 +39,7 @@ You can display or hide elements at any moment in the Form editor’s current wi
 
 ![](../assets/en/FormEditor/showHideElements.png)
 
-### Rulers
+### Regras
 
 The rulers on the side and bottom help you position objects in the form. They can be [displayed or hidden](#display-options).
 
@@ -71,7 +71,7 @@ The toolbar contains the following elements:
 | ![](../assets/en/FormEditor/library.png)         | [Preconfigured object library](objectLibrary.html)   | This button displays the preconfigured object library that provides numerous objects with certain properties that have been predefined.                                                                                                                                                                                      |
 | ![](../assets/en/FormEditor/listBoxBuilder1.png) | [List Box Builder](#list-box-builder)                | This button creates new entity selection list boxes.                                                                                                                                                                                                                                                                         |
 
-### Object bar
+### Barra de objetos
 
 The object bar contains all the active and inactive objects that can be used in 4D forms. Some objects are grouped together by themes. Each theme includes several alternatives that you can choose between. When the object bar has the focus, you can select the buttons using the keys of the keyboard. The following table describes the object groups available and their associated shortcut key.
 
