@@ -899,11 +899,11 @@ utilice el siguiente código:
 
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
 
-| Parámetros | Tipo   |    | Descripción                                  |
-| ---------- | ------ | -- | -------------------------------------------- |
-| vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro |
-| filePath   | Text   | -> | Ruta de acceso del documento                 |
-| paramObj   | Object | -> | Export options|<!-- END REF -->    |
+| Parámetros | Tipo   |    | Descripción                                        |
+| ---------- | ------ | -- | -------------------------------------------------- |
+| vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro       |
+| filePath   | Text   | -> | Ruta de acceso del documento                       |
+| paramObj   | Object | -> | Opciones de exportación|<!-- END REF --> |
 
 #### Descripción
 
@@ -3177,7 +3177,7 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 #### Descripción
 
-The `VP REMOVE TABLE` command <!-- REF #_method_.VP REMOVE TABLE.Summary -->removes a table<!-- END REF -->that you created with [VP CREATE TABLE](#vp-create-table).
+The `VP REMOVE TABLE` command <!-- REF #_method_.VP REMOVE TABLE.Summary -->elimina una tabla<!-- END REF -->that you created with [VP CREATE TABLE](#vp-create-table).
 
 In *vpAreaName*, pass the name of the area where the table to remove is located.
 
