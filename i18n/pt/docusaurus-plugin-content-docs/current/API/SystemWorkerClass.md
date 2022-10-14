@@ -258,9 +258,9 @@ $systemworker:=4D. SystemWorker.new("/bin/ls -l /Users ";cs. Params.new())
 
 
 <!-- REF #SystemWorkerClass.closeInput().Params -->
-| Parâmetros | Tipo |  | Descrição                                                  |
-| ---------- | ---- |::| ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF --> |
+| Parâmetros | Tipo |  | Descrição                                             |
+| ---------- | ---- |::| ----------------------------------------------------- |
+|            |      |  | Não exige nenhum parâmetro|<!-- END REF --> |
 
 #### Descrição
 
@@ -473,9 +473,9 @@ The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary 
 
 
 <!-- REF #SystemWorkerClass.terminate().Params -->
-| Parâmetros | Tipo |  | Descrição                                                  |
-| ---------- | ---- |::| ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF --> |
+| Parâmetros | Tipo |  | Descrição                                             |
+| ---------- | ---- |::| ----------------------------------------------------- |
+|            |      |  | Não exige nenhum parâmetro|<!-- END REF --> |
 
 #### Descrição
 
