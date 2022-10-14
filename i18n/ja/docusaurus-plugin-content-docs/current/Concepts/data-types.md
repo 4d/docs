@@ -47,7 +47,7 @@ title: データタイプの概要
 | 実数     | 0          |
 | ポインター  | Nil=true   |
 | テキスト   | ""         |
-| BLOB   | Blob サイズ=0 |
+| BLOB   | BLOB サイズ=0 |
 | オブジェクト | null       |
 | コレクション | null       |
 | バリアント  | undefined  |
