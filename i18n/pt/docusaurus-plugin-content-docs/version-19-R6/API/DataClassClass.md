@@ -39,7 +39,7 @@ Uma [DataClass](ORDA/dsMapping.md#dataclass) oferece uma interface de objeto a u
 
 #### Descrição
 
-The attributes of dataclasses are <!-- REF DataClassClass.attributeName.Summary -->objects that are available directly as properties<!-- END REF --> destas classes.
+Os atributos dos dataclasses são <!-- REF DataClassClass.attributeName.Summary -->objectos que estão disponíveis directamente como propriedades<!-- END REF --> destas classes.
 
 Os objetos retornados são do tipo class [`DataClassAttribute`](DataClassAttributeClass.md). Esses objetos têm propriedades que podem ser lidas para obter informação sobre seus atributos dataclass.
 > Os objetos do atributo Dataclass podem ser modificados, mas a estrutura subjacente do banco de dados não será alterada.
@@ -106,16 +106,16 @@ Considerando as propriedades de tabela abaixo:
 
 
 <!-- REF #DataClassClass.all().Params -->
-| Parâmetros | Tipo                |    | Descrição                                                                      |
-| ---------- | ------------------- |:--:| ------------------------------------------------------------------------------ |
-| settings   | Objeto              | -> | Build option: context                                                          |
-| Resultados | 4D. EntitySelection | <- | References on all entities related to the Dataclass|<!-- END REF -->
+| Parâmetros | Tipo                |    | Descrição                                                                                          |
+| ---------- | ------------------- |:--:| -------------------------------------------------------------------------------------------------- |
+| settings   | Objeto              | -> | Build option: context                                                                              |
+| Resultados | 4D. EntitySelection | <- | Referencias sobre todas as entidades relacionadas com a classe de dados|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.all()` <!-- REF #DataClassClass.all().Summary -->queries the datastore to find all the entities related to the dataclass and returns them as an entity selection<!-- END REF -->.
+A função `.all()` <!-- REF #DataClassClass.all().Summary -->consulta a datastore para encontrar todas as entidades relacionadas com a dataclass e devolve-as como uma selecção de entidade<!-- END REF -->.
 
 As entidades são devolvidas na ordem padrão, que é inicialmente a ordem na qual foram criadas. Note no entanto que, se as entidades foram apagas e outras adicionadas, a ordem padrão não reflete mais sua ordem de criação.
 
@@ -131,7 +131,7 @@ No  parâmetro *querySettings* é possível passar um objeto que conteha opçõe
 | ----------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | context     | Text | Etiqueta para o contexto de otimização aplicado a seleção de entidades. Este contexto será utilizado pelo código que maneja a seleção de entidades para que possa se beneficiar da otimização. Essa funcionalidade foi criada para processamento cliente/servidor de ORDA [](ORDA/entities.md#client-server-optimization). |
 
-> To know the total number of entities in a dataclass, it is recommended to use the [`getCount()`](#getcount) function which is more optimized than the `ds.myClass.all().length` expression.
+> Para conhecer o número total de entidades num dataclass, recomenda-se a utilização da função [`getCount()`](#getcount) que é mais optimizada do que a expressão `ds.myClass.all().length`.
 
 #### Exemplo
 
@@ -217,7 +217,7 @@ $ds. Persons.clearRemoteCache()
 
 #### Descrição
 
-A função `.fromCollection()` <!-- REF #DataClassClass.fromCollection().Summary -->updates or creates entities in the dataclass according to the *objectCol* collection of objects, and returns the corresponding entity selection<!-- END REF -->.
+A função `.fromCollection()` <!-- REF #DataClassClass.fromCollection().Summary -->actualiza ou cria entidades no dataclass de acordo com a colecção de objectos *objectCol*, e devolve a selecção da entidade correspondente<!-- END REF -->.
 
 No parâmetro *objectCol*, passa uma coleção de objetos para criar novas entidades ou atualizar as existentes da classe de dados. Os nomes das propriedades devem ser os mesmos que os dos atributos da classe de dados. Se um nome de propriedade não existir na dataclass, é ignorado. Se um valor de atributo não for definido na coleção, seu valor será null.
 
@@ -665,7 +665,7 @@ A função `.getRemoteCache()` <!-- REF #DataClassClass.getRemoteCache().Summary
 
 Calling this function from a 4D single-user application returns `Null`.
 
-The returned object has the following properties:
+O objeto retornado tem as propriedades abaixo:
 
 | Propriedade | Tipo       | Descrição                                                                 |
 | ----------- | ---------- | ------------------------------------------------------------------------- |
@@ -737,9 +737,9 @@ $cacheAddress:=$ds. Adress.getRemoteCache()
 
 
 <!-- REF #DataClassClass.new().Params -->
-| Parâmetros | Tipo       |    | Descrição                                                    |
-| ---------- | ---------- | -- | ------------------------------------------------------------ |
-| Resultados | 4D. Entity | <- | New entity matching the Dataclass|<!-- END REF -->
+| Parâmetros | Tipo       |    | Descrição                                                                   |
+| ---------- | ---------- | -- | --------------------------------------------------------------------------- |
+| Resultados | 4D. Entity | <- | Nova entidade que coincide com a classe de dados|<!-- END REF -->
 
 |
 
@@ -867,7 +867,7 @@ onde:
 
  Fórmulas nas consultas podem receber parâmetros através de $1. Este ponto é detalhado no parágrafo **Parâmetro fórmula** mais abaixo.
 > * Também pode passar diretamente um objeto parâmetro `formula` ao invés do parâmetro `queryString` (recomendado quando as fórmulas sejam mais complexas). Ver o parágrafo **Parâmetro fórmula** mais abaixo.
-> * For security reasons, formula calls within `query()` functions can be disallowed. Veja a descrição do parâmetro `querySettings`.
+> * Por razões de segurança, as chamadas de fórmula dentro de as funções `query()` podem ser proibidas. Veja a descrição do parâmetro `querySettings`.
 
 * **comparator**: symbol que compara *attributePath* e *valor*. Os simbolos abaixo são compatíveis:
 
@@ -1069,8 +1069,8 @@ A fórmula deve ter sido criada usando  [`Formula`](FunctionClass.md#formula) ou
 
 * *fórmula* se avalia para cada entidade e deve devolver true ou false. Durante a execução da pesquisa, se o resultado da fórmula não for booleano, é considerado como False.
 * dentro da *fórmula*, a entidade está disponível através do objeto `This`.
-* if the `Formula` object is **null**, the error 1626 ("Expecting a text or formula") is generated, that you call intercept using a method installed with `ON ERR CALL`.
-> For security reasons, formula calls within `query()` functions can be disallowed. Veja a descrição do parâmetro *querySettings*.
+* se o objeto `Formula` for **null**, o erro 1626 ("Expecting a text or formula") é gerado, então pode interceptar a chamada com o método instalado `ON ERR CALL`.
+> Por razões de segurança, as chamadas de fórmula dentro de as funções `query()` podem ser proibidas. Veja a descrição do parâmetro *querySettings*.
 
 **Passar parâmetros a fórmulas**
 
