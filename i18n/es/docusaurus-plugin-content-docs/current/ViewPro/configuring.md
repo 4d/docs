@@ -297,7 +297,7 @@ The following special characters allow the automatic addition or formatting of i
 | B        | Negrita                           | printInfo.headerLeft:="&BEsto es texto."                               | **Esto es texto.**                                   |
 | I        | Itálica                           | printInfo.headerLeft:="&IEsto es texto."                               | *Esto es texto.*                                     |
 | "        | Prefijo fuente                    | printInfo.headerLeft:="&\"Lucida Console\"&14This is text."          | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG) |
-| K        | Prefijo de color de texto         | printInfo.headerLeft:="&KFF0000Esto es texto."                         | This is text (in red).                               |
+| K        | Prefijo de color de texto         | printInfo.headerLeft:="&KFF0000Esto es texto."                         | Esto es texto (en rojo).                             |
 | F        | Nombre del libro                  | printInfo.headerLeft:="&F"                                             | 2019 Monthly Revenue Forecasts                       |
 | A        | Nombre de la hoja de cálculo      | printInfo.headerLeft:="&A"                                             | June 2019 revenue forecast                           |
 
