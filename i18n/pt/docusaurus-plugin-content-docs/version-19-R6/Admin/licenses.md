@@ -75,74 +75,74 @@ Esse modo pode ser usado para ativação temporária especial de 4D (por no máx
 
 Pode adicionar novas licenças, por exemplo par aumentar as capacidades de sua aplicação, a qualquer momento.
 
-Choose the **License Manager...** command from the **Help** menu of the 4D or 4D Server application, then click on the **Refresh** button:
+Escolha o comando **License Manager...** a partir do menu **Help** da aplicação Servidor 4D ou 4D, depois clicar no botão **Refresh** :
 
 ![](../assets/en/getStart/licens1.png)
 
-This button connects you to our customer database and automatically activates any new or updated licenses related to the current license (the current license is displayed in **bold** in the "Active Licenses" list). You will just be prompted for your user account and password.
+Este botão conecta você à nossa base de dados de clientes e ativa automaticamente quaisquer licenças novas ou actualizadas relacionadas com a licença atual (a licença actual é apresentada em **em negrito** na lista "Active Licenses"). Será pedido sua conta de usuário e senha.
 
-- If you purchased additional expansions for a 4D Server, you do not need to enter any license number -- just click **Refresh**.
-- At the first activation of a 4D Server, you just need to enter the server number and all the purchased expansions are automatically assigned.
+- Se adquiriu expansões adicionais para um Servidor 4D, não necessita de introduzir qualquer número de licença -- basta clicar em **Atualizar**.
+- Na primeira ativação de um Servidor 4D, basta introduzir o número do servidor e todas as expansões compradas são automaticamente atribuídas.
 
-You can use the **Refresh** button in the following contexts:
+Pode utilizar o botão **Refresh** nos seguintes contextos:
 
-- When you have purchased an additional expansion and want to activate it,
-- When you need to update an expired temporary number (Partners or evolutions).
+- Quando tiver adquirido uma expansão adicional e quiser ativá-la,
+- Quando for necessário atualizar um número temporário expirado (Parceiros ou evoluções).
 
 
 
 ## 4D Online Store
 
-In 4D Store, you can order, upgrade, extend, and/or manage 4D products. You can reach the store at the following address: [https://store.4d.com/us/](https://store.4d.com/us/) (you will need to select your country).
+Na loja 4D, pode encomendar, atualizar, ampliar, e/ou gerir produtos 4D. Pode contactar a loja no seguinte endereço: [https://store.4d.com/us/](https://store.4d.com/us/) (terá de seleccionar o seu país).
 
-Click **Login** to sign in using your existing account or **New Account** to create a new one, then follow the on-screen instructions.
+Clique **Login** para entrar usando a sua conta existente ou **Nova Conta** para criar uma nova, depois siga as instruções na tela.
 
-### License Management
+### Gestão de licenças
 
-After you log in, you can click on **License list** at the top right of the page:
+Depois de iniciar sessão, pode clicar em **Lista de licenças** no canto superior direito da página:
 
 ![](../assets/en/getStart/licens2.png)
 
-Here you can manage your licenses by assigning them to projects.
+Aqui pode gerir as suas licenças, atribuindo-as a projectos.
 
-Select the appropriate license from the list then click **Link to a project... >**:
+Seleccione a licença apropriada da lista e clique em **Link para um projeto... >**:
 
 ![](../assets/en/getStart/licens3.png)
 
-You can either select an existing project or create a new one:
+Pode selecionar um projeto existente ou criar um novo:
 
 ![](../assets/en/getStart/licens4.png)
 
 ![](../assets/en/getStart/licens5.png)
 
-You can use projects to organize your licenses according to your needs:
+Pode utilizar os projectos para organizar as suas licenças de acordo com as suas necessidades:
 
 ![](../assets/en/getStart/licens6.png)
 
 
-## Troubleshooting
+## Resolução de problemas
 
-If the installation or activation process fails, please check the following table, which gives the most common causes of malfunctioning:
+Se a instalação ou o processo de ativação falhar, verificar a tabela seguinte, que apresenta as causas mais comuns de mau funcionamento:
 
-| Sintomas                                                      | Possible causes                                            | Solution(s)                                                                                                                                     |
-| ------------------------------------------------------------- | ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| Impossible to download product from 4D Internet site          | Internet site unavailable, antivirus application, firewall | 1- Try again later OR 2- Temporarily disable your antivirus application or your firewall.                                                       |
-| Impossible to install product on disk (installation refused). | Insufficient user access rights                            | Open a session with access rights allowing you to install applications (administrator access)                                                   |
-| Failure of on-line activation                                 | Antivirus application, firewall, proxy                     | 1- Temporarily disable your antivirus application or your firewall OR 2- Use deferred activation (not available with licenses for "R" versions) |
+| Sintomas                                                      | Possíveis causas                                           | Solução(ões)                                                                                                                                       |
+| ------------------------------------------------------------- | ---------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Impossível descarregar o produto do sítio 4D da Internet      | Sítio Internet indisponível, aplicação antivírus, firewall | 1- Tente novamente mais tarde OU 2- Desative temporariamente a sua aplicação antivírus ou a sua firewall.                                          |
+| Impossível instalar o produto em disco (instalação recusada). | Direitos de acesso insuficientes dos utilizadores          | Abrir uma sessão com direitos de acesso que lhe permita instalar aplicações (acesso de administrador)                                              |
+| Falha da ativação on-line                                     | Aplicação antivírus, firewall, proxy                       | 1- Desative temporariamente a sua aplicação antivírus ou a sua firewall OU 2- Use ativação diferida (não disponível com licenças para versões "R") |
 
-If this information does not help you resolve your problem, please contact 4D or your local distributor.
+Se estas informações não o ajudarem a resolver o seu problema, por favor contate 4D ou o seu distribuidor local.
 
 
 ## Contactos
 
-For any questions about the installation or activation of your product, please contact 4D, Inc. or your local distributor.
+Para quaisquer questões sobre a instalação ou activação do seu produto, contacte 4D, Inc. ou o seu distribuidor local.
 
 Para os EUA:
 
 - Web: [https://us.4d.com/4d-technical-support](https://us.4d.com/4d-technical-support)
-- Telephone: 1-408-557-4600
+- Telefone: 1-408-557-4600
 
-For the UK:
+Para o Reino Unido:
 
 - Web: [https://uk.4d.com/4d-technical-support](https://uk.4d.com/4d-technical-support)
-- Telephone: 01625 536178
+- Telefone: 01625 536178
