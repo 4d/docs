@@ -108,7 +108,7 @@ module.exports = {
 	  //searchParameters : {
       //facetFilters: ['language:LANGUAGE', 'version:VERSION'],
 		//},
-      contextualSearch: true
+      //contextualSearch: false
     },
     docs: {
       sidebar: {
