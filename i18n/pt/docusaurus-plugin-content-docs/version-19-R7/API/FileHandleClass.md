@@ -97,7 +97,7 @@ The `.breakModeRead` property can be defined at the handle creation with the [`f
 > The `.breakModeRead` property always contains a text value, even if the `.open()` option was set using a number (constant).
 
 
-Essa propriedade é**apenas leitura**.
+Essa propriedade é **apenas leitura**.
 
 <!-- END REF -->
 
@@ -124,7 +124,7 @@ The `.breakModeWrite` property can be defined at the handle creation with the [`
 > The `.breakModeWrite` property always contains a text value, even if the `.open()` option was set using a number (constant).
 
 
-Essa propriedade é**apenas leitura**.
+Essa propriedade é **apenas leitura**.
 
 <!-- END REF -->
 
@@ -149,7 +149,7 @@ The `.charset` property returns <!-- REF #FileHandleClass.charset.Summary -->the
 
 The charset can be defined at the handle creation with the [`file.open()`](FileClass#open) function. Por padrão é "UTF-8".
 
-Essa propriedade é**apenas leitura**.
+Essa propriedade é **apenas leitura**.
 
 <!-- END REF -->
 
@@ -171,7 +171,7 @@ Essa propriedade é**apenas leitura**.
 
 A propriedade `.eof` devolve <!-- REF #FileHandleClass.eof.Summary -->True is the `offset` has reached the end of the file, and False otherwise<!-- END REF -->.
 
-Essa propriedade é**apenas leitura**.
+Essa propriedade é **apenas leitura**.
 
 <!-- END REF -->
 
@@ -229,7 +229,7 @@ A propriedade `.mode` devolve <!-- REF #FileHandleClass.mode.Summary -->the mode
 
 The mode can be defined at the handle creation with the [`file.open()`](FileClass#open) function. Default is "read".
 
-Essa propriedade é**apenas leitura**.
+Essa propriedade é **apenas leitura**.
 
 <!-- END REF -->
 
