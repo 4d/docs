@@ -183,7 +183,7 @@ Para la configuración por lotes de los atributos del método:
 2.  In the "Matching method name:" area, enter a string that lets you designate the methods you want to modify as a batch. The character string is used as a search criterion for the method names. Utilice el carácter comodín @ para ayudar a definir los grupos de métodos:
    -   To designate methods whose names begin with..., type @ at the end of the string. Por ejemplo: web@
     -   To designate methods whose names contain..., type @ in the middle of the string. Por ejemplo: web@write
-    -   To designate methods whose names end with..., type @ at the beginning of the string. For example: @write
+    -   To designate methods whose names end with..., type @ at the beginning of the string. Por ejemplo: @write
     -   To designate all of the methods, just type @ in the area.\
       **Notes:**
         -   La búsqueda no tiene en cuenta las mayúsculas/minúsculas.
