@@ -40,7 +40,7 @@
     "description": "The label for category Menus in sidebar docs"
   },
   "sidebar.docs.category.MSC": {
-    "message": "MSC",
+    "message": "CSM",
     "description": "The label for category MSC in sidebar docs"
   },
   "sidebar.docs.category.Backup and Restore": {
@@ -52,7 +52,7 @@
     "description": "The label for category Users and Groups in sidebar docs"
   },
   "sidebar.docs.category.REST Server": {
-    "message": "REST Server",
+    "message": "Servidor REST",
     "description": "The label for category REST Server in sidebar docs"
   },
   "sidebar.docs.category.Guides": {

@@ -84,7 +84,7 @@ Con:
 | Desigualdade | Pointer # Pointer | Booleano | vPtrA # vPtrC | True  |
 |              |                   |          | vPtrA # vPtrB | False |
 
-## Main usages
+## Principais usos
 ### Pointers to tables
 Anywhere that the language expects to see a table, you can use a dereferenced pointer to the table. You create a pointer to a table by using a line like this:
 ```4d

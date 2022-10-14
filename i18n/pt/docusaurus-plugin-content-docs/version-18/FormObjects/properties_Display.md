@@ -39,9 +39,9 @@ The field actually contains "proportion". 4D accepts and stores the entire entry
 
 #### JSON Grammar
 
-| Nome       | Tipo de dados | Possible Values                                                                      |
-| ---------- | ------------- | ------------------------------------------------------------------------------------ |
-| textFormat | string        | "### ####", "(###) ### ####", "### ### ####", "### ## ####", "00000", custom formats |
+| Nome       | Tipo de dados | Possible Values                                                                                  |
+| ---------- | ------------- | ------------------------------------------------------------------------------------------------ |
+| textFormat | string        | "####", "(#####) ### ####", "### ### ### ####", "#### ## ####", "00000", formatos personalizados |
 
 #### Objects Supported
 
@@ -114,7 +114,7 @@ If the user enters a negative number, the leftmost character is displayed as a m
 
 Each placeholder character has a different effect on the display of leading or trailing zeros. A leading zero is a zero that starts a number before the decimal point; a trailing zero is a zero that ends a number after the decimal point.
 
-Suppose you use the format ##0 to display three digits. If the user enters nothing in the field, the field displays 0. If the user enters 26, the field displays 26.
+Suponha que utiliza o formato ##0 para mostrar três dígitos. If the user enters nothing in the field, the field displays 0. If the user enters 26, the field displays 26.
 
 ### Separator characters
 

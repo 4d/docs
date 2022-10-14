@@ -97,7 +97,7 @@ $4 引数は 4D Webサーバーによってリクエストされた IPアドレ�
 
 ## /4DACTION
 
-***/4DACTION/***MethodName***<br/> **/4DACTION/******MethodName/Param*
+***/4DACTION/****MethodName*<br/> ***/4DACTION/****MethodName/Param*
 
 | 引数         | タイプ  |    | 説明                    |
 | ---------- | ---- |:--:| --------------------- |
@@ -240,22 +240,30 @@ if(formObj.vtUserName.value!=""){
 return true
 } else {
 alert("Enter your name, then try again.")
-<html>
-<head>
-  <title>Welcome</title>
-  <script language="JavaScript"><!--
-function GetBrowserInformation(formObj){
-formObj.vtNav_appName.value = navigator.appName
-formObj.vtNav_appVersion.value = navigator.appVersion
-formObj.vtNav_appCodeName.value = navigator.appCodeName
-formObj.vtNav_userAgent.value = navigator.userAgent
-return true
+return false
 }
-function LogOn(formObj){
-if(formObj.vtUserName.value!=""){
-return true
-} else {
-alert("Enter your name, then try again.")
+}
+//--></script>
+</head>
+<body>
+<form action="/4DACTION/WWW_STD_FORM_POST" method="post"
+ name="frmWelcome"
+ onsubmit="return GetBrowserInformation(frmWelcome)">
+  <h1>Welcome to Spiders United</h1>
+  <b>Please enter your name:</b>
+  <input name="vtUserName" value="" size="30" type="text"></p>
+
+<input name="vsbLogOn" value="Log On" onclick="return LogOn(frmWelcome)" type="submit"> 
+<input name="vsbRegister" value="Register" type="submit">
+<input name="vsbInformation" value="Information" type="submit"></p>
+
+<input name="vtNav_appName" value="" type="hidden"> 
+<input name="vtNav_appVersion" value="" type="hidden"> 
+<input name="vtNav_appCodeName" value="" type="hidden">
+<input name="vtNav_userAgent" value="" type="hidden"></p>
+</form>
+</body>
+</html>
 ```
 
 4D が Webブラウザーにページを送信すると、以下のように表示されます:

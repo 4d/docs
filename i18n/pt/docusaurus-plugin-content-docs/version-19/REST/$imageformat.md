@@ -12,10 +12,10 @@ Define which format to use to display images. You can use one of the following f
 | Tipo                    | Descrição                      |
 | ----------------------- | ------------------------------ |
 | "best"                  | Best format based on the image |
-| ".gif" or "image/gif"   | GIF format                     |
-| ".png" or "image/png"   | PNG format                     |
-| ".jpeg" or "image/jpeg" | JPEG format                    |
-| ".tiff" or "image/tiff" | TIFF format                    |
+| ".gif" or "image/gif"   | Formato GIF                    |
+| ".png" or "image/png"   | Formato PNG                    |
+| ".jpeg" or "image/jpeg" | Formato JPEG                   |
+| ".tiff" or "image/tiff" | Formato TIFF                   |
 
 Once you have defined the format, you must pass the image attribute to [`$expand`]($expand.md) to load the photo completely.
 

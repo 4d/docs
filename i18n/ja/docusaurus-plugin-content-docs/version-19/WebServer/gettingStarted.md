@@ -39,7 +39,7 @@ Case of
  : ($1="/hello")
   WEB SEND TEXT("Hello World!")
  Else 
-  // Error 404 for example
+  // 404エラーなど
 End case 
 ```
 
@@ -190,7 +190,7 @@ http://localhost/rest/Friends
 - ユーザーは、専用の非公開テーブル (例: *WebUsers*) に保存されます。
 - [暗号化](MSC/encrypt.md) することも可能な *WebUsers* テーブルには、ユーザーのログイン名とパスワードのハッシュが保存されています。
 
-1. いくつかのフィールドを持つテーブルを作成します。 たとえば:
+1. いくつかのフィールドを持つテーブルを作成します。たとえば:
 
 ![](../assets/en/WebServer/helloUsers.png)
 
@@ -223,26 +223,26 @@ var $user; $info : Object
 ARRAY TEXT($anames; 0)
 ARRAY TEXT($avalues; 0)
 
-// get values sent in the header of the request
+// リクエストヘッダーにて送信された値を取得します
 WEB GET VARIABLES($anames; $avalues)
 
-// look for header login fields
+// ヘッダーのログインフィールドを探します
 $indexUserId:=Find in array($anames; "userId")
 $userId:=$avalues{$indexUserId}
 $indexPassword:=Find in array($anames; "password")
 $password:=$avalues{$indexPassword}
 
-//look for a user with the entered name in the users table
+// 入力された名前のユーザーを users テーブルで探します
 $user:=ds.WebUsers.query("userId = :1"; $userId).first()
 
-If ($user#Null) //a user was found
-  //check the password
+If ($user#Null) // ユーザーが見つかった場合
+  // パスワードを確認します
     If (Verify password hash($password; $user.password))
-      //password ok, fill the session
+      // パスワードがOKであれば、セッションに登録します
         $info:=New object()
         $info.userName:=$user.firstName+" "+$user.lastName
         Session.setPrivileges($info)
-         //You can use the user session to store any information
+         // ユーザーセッションを使って任意の情報を保存できます
         WEB SEND TEXT("Welcome "+Session.userName)
     Else 
         WEB SEND TEXT("Wrong user name or password.")

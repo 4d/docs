@@ -907,11 +907,11 @@ utilice el siguiente código:
 
 <!-- REF #_method_.VP EXPORT DOCUMENT.Params -->
 
-| Parámetros | Tipo   |    | Descripción                                  |
-| ---------- | ------ | -- | -------------------------------------------- |
-| vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro |
-| filePath   | Text   | -> | Ruta de acceso del documento                 |
-| paramObj   | Object | -> | Export options|<!-- END REF -->    |
+| Parámetros | Tipo   |    | Descripción                                        |
+| ---------- | ------ | -- | -------------------------------------------------- |
+| vpAreaName | Text   | -> | Nombre de objeto formulario área 4D View Pro       |
+| filePath   | Text   | -> | Ruta de acceso del documento                       |
+| paramObj   | Object | -> | Opciones de exportación|<!-- END REF --> |
 
 #### Descripción
 
@@ -1202,10 +1202,10 @@ End if
 
 <!-- REF #_method_.VP Find table.Params -->
 
-| Parámetros | Tipo   |    | Descripción                           |
-| ---------- | ------ | -- | ------------------------------------- |
-| rangeObj   | Object | -> | Rango de celdas                       |
-| Result     | Text   | <- | Table name|<!-- END REF --> |
+| Parámetros | Tipo   |    | Descripción                                   |
+| ---------- | ------ | -- | --------------------------------------------- |
+| rangeObj   | Object | -> | Rango de celdas                               |
+| Result     | Text   | <- | Nombre de la tabla|<!-- END REF --> |
 
 #### Descripción
 
@@ -2436,7 +2436,7 @@ En este caso, la hoja actual utiliza dos objetos estilo:
 | Parámetros | Tipo    |    | Descripción                                           |
 | ---------- | ------- | -- | ----------------------------------------------------- |
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro          |
-| tableName  | Text    | -> | Table name                                            |
+| tableName  | Text    | -> | Nombre de la tabla                                    |
 | column     | Integer | -> | Index of the column in the table                      |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)           |
 | Result     | Object  | <- | Attributes of the *column*|<!-- END REF --> |
@@ -2495,7 +2495,7 @@ End if
 | Parámetros | Tipo    |    | Descripción                                      |
 | ---------- | ------- | -- | ------------------------------------------------ |
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro     |
-| tableName  | Text    | -> | Table name                                       |
+| tableName  | Text    | -> | Nombre de la tabla                               |
 | columnName | Text    | -> | Name of the table column                         |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)      |
 | Result     | Integer | <- | Index of *columnName*|<!-- END REF --> |
@@ -2548,7 +2548,7 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 | Parámetros | Tipo    |    | Descripción                                              |
 | ---------- | ------- | -- | -------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro             |
-| tableName  | Text    | -> | Table name                                               |
+| tableName  | Text    | -> | Nombre de la tabla                                       |
 | onlyData   | Integer | -> | `vk table full range` (default) or `vk table data range` |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)              |
 | Result     | Object  | <- | Rango que contiene la tabla|<!-- END REF -->   |
@@ -2969,7 +2969,7 @@ El resultado es:
 | Parámetros  | Tipo    |    | Descripción                                                            |
 | ----------- | ------- | -- | ---------------------------------------------------------------------- |
 | vpAreaName  | Text    | -> | Nombre de objeto formulario área 4D View Pro                           |
-| tableName   | Text    | -> | Table name                                                             |
+| tableName   | Text    | -> | Nombre de la tabla                                                     |
 | column      | Integer | -> | Índice en la tabla de la columna inicial a insertar                    |
 | count       | Text    | -> | Número de columnas a añadir (debe ser >0)                              |
 | insertAfter | Integer | -> | `vk table insert before` or `vk table insert after` *column*           |
@@ -3021,7 +3021,7 @@ See examples for [VP INSERT TABLE ROWS](#vp-insert-table-rows) and [VP SET TABLE
 | Parámetros  | Tipo    |    | Descripción                                                            |
 | ----------- | ------- | -- | ---------------------------------------------------------------------- |
 | vpAreaName  | Text    | -> | Nombre de objeto formulario área 4D View Pro                           |
-| tableName   | Text    | -> | Table name                                                             |
+| tableName   | Text    | -> | Nombre de la tabla                                                     |
 | row         | Integer | -> | Índice en la tabla de la línea inicial a insertar                      |
 | count       | Text    | -> | Número de líneas a añadir (debe ser >0)                                |
 | insertAfter | Integer | -> | `vk table insert before` or `vk table insert after` *row*              |
@@ -3580,7 +3580,7 @@ VP REMOVE STYLESHEET("ViewProArea";"GreenDashDotStyle")
 
 #### Descripción
 
-The `VP REMOVE TABLE` command <!-- REF #_method_.VP REMOVE TABLE.Summary -->removes a table<!-- END REF --> that you created with [VP CREATE TABLE](#vp-create-table).
+The `VP REMOVE TABLE` command <!-- REF #_method_.VP REMOVE TABLE.Summary -->elimina una tabla<!-- END REF --> that you created with [VP CREATE TABLE](#vp-create-table).
 
 In *vpAreaName*, pass the name of the area where the table to remove is located.
 
@@ -3626,7 +3626,7 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 | Parámetros | Tipo    |    | Descripción                                                            |
 | ---------- | ------- | -- | ---------------------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                           |
-| tableName  | Text    | -> | Table name                                                             |
+| tableName  | Text    | -> | Nombre de la tabla                                                     |
 | column     | Integer | -> | Índice en la tabla de la columna inicial a eliminar                    |
 | count      | Text    | -> | Número de columnas a eliminar (debe ser >0)                            |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)|<!-- END REF --> |
@@ -3672,7 +3672,7 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 | Parámetros | Tipo    |    | Descripción                                                            |
 | ---------- | ------- | -- | ---------------------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                           |
-| tableName  | Text    | -> | Table name                                                             |
+| tableName  | Text    | -> | Nombre de la tabla                                                     |
 | row        | Integer | -> | Índice en la tabla de la línea inicial a eliminar                      |
 | count      | Text    | -> | Número de líneas a eliminar (debe ser >0)                              |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)|<!-- END REF --> |
@@ -5530,7 +5530,7 @@ Con un salto de página:
 | Parámetros | Tipo    |    | Descripción                                                            |
 | ---------- | ------- | -- | ---------------------------------------------------------------------- |
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                           |
-| tableName  | Text    | -> | Table name                                                             |
+| tableName  | Text    | -> | Nombre de la tabla                                                     |
 | column     | Integer | -> | Index of the column in the table                                       |
 | attributes | Object  | -> | Attribute(s) to apply to the *column*                                  |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)|<!-- END REF --> |

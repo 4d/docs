@@ -60,7 +60,7 @@ Webサーバー用の TLS証明書ファイルが置かれているフォルダ�
 
 | 設定できる場所          | 名称                                                 | コメント |
 | ---------------- | -------------------------------------------------- | ---- |
-| webServer オブジェクト | [`cipherSuite`](API/WebServerClass.md#ciphersuite) | Text |
+| webServer オブジェクト | [`cipherSuite`](API/WebServerClass.md#ciphersuite) | テキスト |
 
 セキュアプロトコルに使用される暗号リストです。Webサーバーが実装する暗号アルゴリズムの優先順位を設定します。 コロン区切りの文字列として設定できます (例: "ECDHE-RSA-AES128-...")。 詳細は Open SSL サイトの [ciphers ページ](https://www.openssl.org/docs/manmaster/man1/ciphers.html) を参照ください。
 
@@ -112,10 +112,10 @@ CORS を介したサーバーへのデータリクエスト送信が許可され
 
 ## デバッグログ
 
-| 設定できる場所          | 名称              | コメント   |
-| ---------------- | --------------- | ------ |
-| webServer オブジェクト | `debugLog`      | number |
-| `WEB SET OPTION` | `Web debug log` | number |
+| 設定できる場所          | 名称              | コメント |
+| ---------------- | --------------- | ---- |
+| webServer オブジェクト | `debugLog`      | 数値   |
+| `WEB SET OPTION` | `Web debug log` | 数値   |
 
 Webサーバーの HTTPリクエストログファイル (アプリケーションの "Logs" フォルダーに格納されている HTTPDebugLog_nn.txt (nn はファイル番号)) の状態を指定します。 このログファイルは、Webサーバーに関連する問題をデバッグするのに便利です。 ログには、各リクエスト・レスポンスが rawモードで記録されます。 ヘッダーを含むリクエスト全体が記録され、オプションでボディ部分も記録することができます。
 
@@ -123,13 +123,13 @@ Webサーバーの HTTPリクエストログファイル (アプリケーショ�
 | - | ----------- | ----------------------------- |
 | 0 | wdl disable | Web HTTP debug log は無効化されています |
 
-|1|wdl enable without body|Web HTTP debug log is enabled without body parts (body size is provided in this case)| |3|wdl enable with response body|Web HTTP debug log is enabled with body part in response only| |5|wdl enable with request body|Web HTTP debug log is enabled with body part in request only| |7|wdl enable with all body parts|Web HTTP debug log is enabled with body parts in response and request|
+|1|wdl enable without body|Web HTTP debug log はボディ部なしで有効化されています (この場合ボディ部のサイズは提供されます)| |3|wdl enable with response body|Web HTTP debug log はレスポンスのボディ部のみを含めた状態で有効化されています。 | |5|wdl enable with request body|Web HTTP debug log はリクエストのボディ部のみ含めた状態で有効化されます| |7|wdl enable with all body parts|Web HTTP debug log はレスポンスとリクエスト両方をボディ部に含めた状態で有効化されます|
 
 ## デフォルトホームページ
 
 | 設定できる場所             | 名称                                                         | コメント              |
 | ------------------- | ---------------------------------------------------------- | ----------------- |
-| webServer オブジェクト    | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage) | Text              |
+| webServer オブジェクト    | [`defaultHomepage`](API/WebServerClass.md#defaulthomepage) | テキスト              |
 | `WEB SET HOME PAGE` |                                                            | Webプロセス毎に異なる設定が可能 |
 | 設定ダイアログボックス         | 設定ページ / デフォルトホームページ                                        |                   |
 
@@ -169,21 +169,21 @@ CORS についての詳細は、Wikipedia の[Cross-origin resource sharing](htt
 
 ## HTTPを有効化
 
-| 設定できる場所          | 名称                                                 | コメント    |
-| ---------------- | -------------------------------------------------- | ------- |
-| webServer オブジェクト | [`HTTPEnabled`](API/WebServerClass.md#httpenabled) | boolean |
-| `WEB SET OPTION` | `Web HTTP enabled`                                 |         |
-| 設定ダイアログボックス      | 設定ページ / HTTPを有効化                                   |         |
+| 設定できる場所          | 名称                                                 | コメント |
+| ---------------- | -------------------------------------------------- | ---- |
+| webServer オブジェクト | [`HTTPEnabled`](API/WebServerClass.md#httpenabled) | ブール  |
+| `WEB SET OPTION` | `Web HTTP enabled`                                 |      |
+| 設定ダイアログボックス      | 設定ページ / HTTPを有効化                                   |      |
 
 安全でない接続を Webサーバーが受け入れるかどうかを示します。
 
 ## HTTPSを有効にする
 
-| 設定できる場所          | 名称                                                   | コメント    |
-| ---------------- | ---------------------------------------------------- | ------- |
-| webServer オブジェクト | [`HTTPSEnabled`](API/WebServerClass.md#httpsenabled) | boolean |
-| `WEB SET OPTION` | `Web HTTPS enabled`                                  |         |
-| 設定ダイアログボックス      | 設定ページ / HTTPSを有効にする                                  |         |
+| 設定できる場所          | 名称                                                   | コメント |
+| ---------------- | ---------------------------------------------------- | ---- |
+| webServer オブジェクト | [`HTTPSEnabled`](API/WebServerClass.md#httpsenabled) | ブール  |
+| `WEB SET OPTION` | `Web HTTPS enabled`                                  |      |
+| 設定ダイアログボックス      | 設定ページ / HTTPSを有効にする                                  |      |
 
 Webサーバーがセキュアな接続を受け入れるか受け入れないかを指定します。 このオプションは [TLSプロトコル](Admin/tls.md) で説明しています。
 
@@ -239,11 +239,11 @@ HSTS によって、4D Webサーバーはブラウザーに対し、セキュア
 
 ## HTTP ポート
 
-| 設定できる場所          | 名称                                           | コメント   |
-| ---------------- | -------------------------------------------- | ------ |
-| webServer オブジェクト | [`HTTPPort`](API/WebServerClass.md#httpport) | number |
-| `WEB SET OPTION` | `Web port ID`                                |        |
-| 設定ダイアログボックス      | 設定ページ / HTTPポート                              |        |
+| 設定できる場所          | 名称                                           | コメント |
+| ---------------- | -------------------------------------------- | ---- |
+| webServer オブジェクト | [`HTTPPort`](API/WebServerClass.md#httpport) | 数値   |
+| `WEB SET OPTION` | `Web port ID`                                |      |
+| 設定ダイアログボックス      | 設定ページ / HTTPポート                              |      |
 
 HTTP接続を受け付ける IP (TCP) ポート番号。 デフォルトで、4D は通常の Web HTTPポート (TCPポート) 番号である 80番を使用して Webアプリケーションを公開します。 他の Webサービスによってこのポート番号が既に使用されている場合、4D が使用する HTTPポート番号を変更する必要があります。
 
@@ -265,11 +265,11 @@ HTTP接続を受け付ける IP (TCP) ポート番号。 デフォルトで、4D
 
 ## HTTPS ポート
 
-| 設定できる場所          | 名称                                             | コメント   |
-| ---------------- | ---------------------------------------------- | ------ |
-| webServer オブジェクト | [`HTTPSPort`](API/WebServerClass.md#httpsport) | number |
-| `WEB SET OPTION` | `Web HTTPS port ID`                            |        |
-| 設定ダイアログボックス      | 設定ページ / HTTPSポート                               |        |
+| 設定できる場所          | 名称                                             | コメント |
+| ---------------- | ---------------------------------------------- | ---- |
+| webServer オブジェクト | [`HTTPSPort`](API/WebServerClass.md#httpsport) | 数値   |
+| `WEB SET OPTION` | `Web HTTPS port ID`                            |      |
+| 設定ダイアログボックス      | 設定ページ / HTTPSポート                               |      |
 
 TLS を介した HTTPS接続を受け付ける IPポート番号。 デフォルトで HTTPSポート番号は 443です。 ポート番号に関する詳細については、[HTTP ポート](#http-ポート) を参照ください。
 
@@ -319,8 +319,8 @@ TLS を介した HTTPS接続を受け付ける IPポート番号。 デフォル
 - **ポート番号の表記**<br/> IPv6 記法はコロン (:) を使用するので、ポート番号を追加するときには混乱を招く恐れがあることに注意が必要です。たとえば:
 
 ```code4d
- 2001:0DB8::85a3:0:ac1f:8001 // IPv6 address
- 2001:0DB8::85a3:0:ac1f:8001:8081 // IPv6 address with port 8081
+ 2001:0DB8::85a3:0:ac1f:8001 // IPv6アドレス
+ 2001:0DB8::85a3:0:ac1f:8001:8081 // ポート 8081 指定の IPv6アドレス
 ```
 
 混乱を避けるため、 IPv6アドレスをポート番号と併記する際には、以下の様に [ ] でアドレスを囲う記法が推奨されます:
@@ -403,9 +403,9 @@ Webサーバーに処理を許可する HTTPリクエスト (POST) の最大サ�
 
 ## 最低TLSバージョン
 
-| 設定できる場所          | 名称                                                     | コメント   |
-| ---------------- | ------------------------------------------------------ | ------ |
-| webServer オブジェクト | [`minTLSVersion`](API/WebServerClass.md#mintlsversion) | number |
+| 設定できる場所          | 名称                                                     | コメント |
+| ---------------- | ------------------------------------------------------ | ---- |
+| webServer オブジェクト | [`minTLSVersion`](API/WebServerClass.md#mintlsversion) | 数値   |
 
 接続に必要な最低TLSバージョン。 これよりも低いバージョンのみをサポートするクライアントからの接続は拒否されます。
 

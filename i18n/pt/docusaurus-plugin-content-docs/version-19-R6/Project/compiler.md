@@ -1,6 +1,6 @@
 ---
 id: compiler
-title: Compilation
+title: Compilação
 ---
 
 You can compile your projects, i.e., translate all of your methods into machine language. Compiling a project lets you check the consistency of the code and accelerate its execution, as well as making it possible to obfuscate the code in its entirety. Compilation is an indispensable step between the development of projects using 4D and their deployment as stand-alone applications.
@@ -225,7 +225,7 @@ Procedure or Function <Method name>(parameter data types):
 result data type, number of calls, Thread Safe or Thread Unsafe
 ```
 
-### Error file
+### Arquivo de erros
 
 You can choose whether or not to generate an error file during compilation using the [**Generate error file**](#generate-error-file) option in the compiler settings. The error file is automatically named `projectName_errors.xml` and is placed in the [Logs folder](Project/architecture.md#logs) of the project.
 
@@ -282,7 +282,7 @@ The classic compiler can be used on any platform, while the Silicon compiler can
 
 |                | Compile for Windows | Compile for Intel Mac | Compile for Silicon Mac |
 | -------------- |:-------------------:|:---------------------:|:-----------------------:|
-| On Windows     |      &#10003;       |       &#10003;        |        &#10007;         |
+| Em Windows     |      &#10003;       |       &#10003;        |        &#10007;         |
 | On Intel Mac   |      &#10003;       |       &#10003;        |        &#10003;         |
 | On Silicon Mac |      &#10003;       |       &#10003;        |        &#10003;         |
 

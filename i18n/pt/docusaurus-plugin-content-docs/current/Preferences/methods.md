@@ -11,7 +11,7 @@ This page allows selecting, creating, or configuring Code Editor themes. A theme
 
 ![](../assets/en/Preferences/themes.png)
 
-### Theme list
+### Lista de temas
 
 In this list, you select the theme to apply to the code editor. All available themes are displayed, including custom themes (if any). 4D provides two themes by default:
 
@@ -109,7 +109,7 @@ Modifying this default value can be useful if your methods contain complex algor
 
 Lets you display the line numbers by default in each window of the Code Editor. You can also show/hide line numbers for the current window directly from the Code Editor.
 
-#### Show Lists
+#### Mostrar as listas
 
 Lets you choose whether or not to show the lists of objects (Commands, Tables and fields, etc.) by default when the Code Editor window is opened. You can also show or hide each list directly from the Code Editor.
 

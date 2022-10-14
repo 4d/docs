@@ -7,8 +7,8 @@ Shapes are [static objects](formObjects_overview.md#active-and-static-objects) t
 
 4D forms support the following basic shapes:
 
-- rectangles
-- lines
+- retângulos
+- linhas
 - ovals
 
 ## Retângulo

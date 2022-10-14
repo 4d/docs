@@ -1,6 +1,6 @@
 {
   "link.title.Community": {
-    "message": "Community",
+    "message": "Comunidad",
     "description": "The title of the footer links column with title=Community in the footer"
   },
   "link.title.Support": {
@@ -44,11 +44,11 @@
     "description": "The label of footer link with label=4D Doc Center (Where It All Began) linking to https://doc.4d.com"
   },
   "link.item.label.Knowledgebase": {
-    "message": "Knowledgebase",
+    "message": "Base de conocimientos",
     "description": "The label of footer link with label=Knowledgebase linking to https://kb.4d.com"
   },
   "link.item.label.Downloads": {
-    "message": "Downloads",
+    "message": "Descargas",
     "description": "The label of footer link with label=Downloads linking to https://github.com/facebook/docusaurus"
   },
   "link.item.label.Resources": {
@@ -64,7 +64,7 @@
     "description": "The label of footer link with label=About 4D linking to https://us.4d.com/about-us"
   },
   "link.item.label.Contact us": {
-    "message": "Contact us",
+    "message": "Contáctenos",
     "description": "The label of footer link with label=Contact us linking to https://us.4d.com/contact-us"
   },
   "link.item.label.4D around the world": {

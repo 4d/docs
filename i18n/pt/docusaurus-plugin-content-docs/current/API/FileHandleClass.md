@@ -33,7 +33,7 @@ For ($line; 1; 4)
     $fhandle.writeLine($text+String($line))
 End for
 
-//Reading using a stop character and an object parameter
+//Leitura usando um carácter de paragem e um parâmetro objecto 
 $o:=New object()
 $o.mode:="read"
 $o.charset:="UTF-8"
@@ -42,7 +42,7 @@ $stopChar:="!"
 $fhandle:=$f.open($o)
 $text:=$fhandle.readText($stopChar)
 
-//Reading line by line
+//Leitura linha a linha
 $lines:=New collection
 $fhandle:=$f.open("read")
 While (Not($fhandle.eof))

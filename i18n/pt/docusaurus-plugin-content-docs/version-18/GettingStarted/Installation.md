@@ -157,7 +157,7 @@ If this information does not help you resolve your problem, please contact 4D or
 
 For any questions about the installation or activation of your product, please contact 4D, Inc. or your local distributor.
 
-For the US:
+Para os EUA:
 
 - Web: [https://us.4d.com/4d-technical-support](https://us.4d.com/4d-technical-support)
 - Telephone: 1-408-557-4600

@@ -35,7 +35,7 @@ Uma [DataClass](ORDA/dsMapping.md#dataclass) oferece uma interface de objeto a u
 
 #### Descrição
 
-The attributes of dataclasses are <!-- REF DataClassClass.attributeName.Summary -->objects that are available directly as properties<!-- END REF --> of these classes.
+The attributes of dataclasses are <!-- REF DataClassClass.attributeName.Summary -->objects that are available directly as properties<!-- END REF --> destas classes.
 
 Os objetos retornados são do tipo class [`DataClassAttribute`](DataClassAttributeClass.md). Esses objetos têm propriedades que podem ser lidas para obter informação sobre seus atributos dataclass.
 > Os objetos do atributo Dataclass podem ser modificados, mas a estrutura subjacente do banco de dados não será alterada.
@@ -156,7 +156,7 @@ No  parâmetro *querySettings* é possível passar um objeto que conteha opçõe
 | ---------- | ------------------- |:--:| ---------------------------------------------------------------------- |
 | objectCol  | Collection          | -> | Coleção de objetos a mapear com entidades                              |
 | settings   | Objeto              | -> | Build option: context                                                  |
-| Resultados | 4D. EntitySelection | <- | Entity selection filled from the collection|<!-- END REF -->
+| Resultados | 4D. EntitySelection | <- | Seleção de entidades preenchidas da coleção|<!-- END REF -->
 
 |
 
@@ -348,11 +348,11 @@ Neste exemplo, a primeira entidade se criará e salvará mas a segunda falhará 
 
 
 <!-- REF #DataClassClass.get().Params -->
-| Parâmetros | Tipo            |    | Descrição                                                             |
-| ---------- | --------------- |:--:| --------------------------------------------------------------------- |
-| primaryKey | Integer OR Text | -> | Valor da chave primária da entidade a recuperar                       |
-| settings   | Objeto          | -> | Build option: context                                                 |
-| Resultados | 4D. Entity      | <- | Entity matching the designated primary key|<!-- END REF -->
+| Parâmetros | Tipo            |    | Descrição                                                                       |
+| ---------- | --------------- |:--:| ------------------------------------------------------------------------------- |
+| primaryKey | Integer OR Text | -> | Valor da chave primária da entidade a recuperar                                 |
+| settings   | Objeto          | -> | Build option: context                                                           |
+| Resultados | 4D. Entity      | <- | Entidade que coincide com a chave primária designada|<!-- END REF -->
 
 |
 
@@ -424,15 +424,15 @@ Este exemplo ilustra o uso da propriedade *context* :
 
 
 <!-- REF #DataClassClass.getDataStore().Params -->
-| Parâmetros | Tipo          |    | Descrição                                             |
-| ---------- | ------------- |:--:| ----------------------------------------------------- |
-| Resultados | cs. DataStore | <- | Datastore of the dataclass|<!-- END REF -->
+| Parâmetros | Tipo          |    | Descrição                                         |
+| ---------- | ------------- |:--:| ------------------------------------------------- |
+| Resultados | cs. DataStore | <- | Datastore da dataclass|<!-- END REF -->
 
 |
 
 #### Descrição
 
-The `.getDataStore( )` function <!-- REF #DataClassClass.getDataStore().Summary -->returns the datastore for the specified dataclass<!-- END REF -->.
+The `.getDataStore( )` function <!-- REF #DataClassClass.getDataStore().Summary -->devolve o datastore para a dataclass especificada<!-- END REF -->.
 
 A datastore pode ser:
 
@@ -477,15 +477,15 @@ O método de projeto ***SearchDuplicate*** procura por valores duplicados em qua
 
 
 <!-- REF #DataClassClass.getInfo().Params -->
-| Parâmetros | Tipo   |    | Descrição                                               |
-| ---------- | ------ | -- | ------------------------------------------------------- |
-| Resultados | Objeto | <- | Information on the dataclass|<!-- END REF -->
+| Parâmetros | Tipo   |    | Descrição                                          |
+| ---------- | ------ | -- | -------------------------------------------------- |
+| Resultados | Objeto | <- | Informação da dataclass|<!-- END REF -->
 
 |
 
 #### Descrição
 
-The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->returns an object providing information about the dataclass<!-- END REF -->. Esta função é útil para configurar o código genérico.
+The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->devolve um objecto que fornece informação sobre o dataclass<!-- END REF -->. Esta função é útil para configurar o código genérico.
 
 **Objeto devolvido**
 
@@ -746,7 +746,7 @@ Pode misturar os tipos de argumentos em *queryString*. Um *queryString* pode con
 1. Evita a inserção de código malicioso: se user diretamente variáveis preenchidas com uma string de pesquisa, um usuário poderia modificar as condições de pesquisa entrando argumentos adicionais. Por exemplo, imagine uma string de pesquisa como:
 
  ```4d
-  $vquery:="status = 'public' & name = "+myname //user enters their name
+  $vquery:="status = 'public' & name = "+myname //o usuário introduz seu nome
   $result:=$col.query($vquery)
  ```
 

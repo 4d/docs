@@ -107,7 +107,7 @@ All callback functions receive two object parameters. Their contents depend on t
 | ------------ | ------------ | ------------ | ------------- | ------------- | ------------ | ------------- |
 | $param1      | Objeto       | SystemWorker | SystemWorker  | SystemWorker  | SystemWorker | SystemWorker  |
 | $param2.type | Text         | "response"   | "data"        | "erro"        | "erro"       | "termination" |
-| $param2.data | Text or Blob |              | received data | error data    |              |               |
+| $param2.data | Text ou Blob |              | received data | dados de erro |              |               |
 
 Here is the sequence of callback calls:
 
@@ -258,9 +258,9 @@ $systemworker:=4D. SystemWorker.new("/bin/ls -l /Users ";cs. Params.new())
 
 
 <!-- REF #SystemWorkerClass.closeInput().Params -->
-| Parâmetros | Tipo |  | Descrição                                                  |
-| ---------- | ---- |::| ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF --> |
+| Parâmetros | Tipo |  | Descrição                                             |
+| ---------- | ---- |::| ----------------------------------------------------- |
+|            |      |  | Não exige nenhum parâmetro|<!-- END REF --> |
 
 #### Descrição
 
@@ -473,9 +473,9 @@ The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary 
 
 
 <!-- REF #SystemWorkerClass.terminate().Params -->
-| Parâmetros | Tipo |  | Descrição                                                  |
-| ---------- | ---- |::| ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF --> |
+| Parâmetros | Tipo |  | Descrição                                             |
+| ---------- | ---- |::| ----------------------------------------------------- |
+|            |      |  | Não exige nenhum parâmetro|<!-- END REF --> |
 
 #### Descrição
 

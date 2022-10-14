@@ -221,7 +221,7 @@ Em caso de erro, o comando devolve **Null**. Se não for possível acessar o arm
 
 #### Descrição
 
-Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface subministrado por ORDA para referenciar e acessar a uma base de dados. O objeto devolvido <!-- REF DataStoreClass.dataclassName.Summary -->contains a description of the dataclass<!-- END REF -->.
+Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface subministrado por ORDA para referenciar e acessar a uma base de dados. O objeto devolvido <!-- REF DataStoreClass.dataclassName.Summary -->contém uma descrição do dataclass<!-- END REF -->.
 
 #### Exemplo
 
@@ -256,9 +256,9 @@ Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface subministra
 
 
 <!-- REF #DataStoreClass.cancelTransaction().Params -->
-| Parâmetros | Tipo |  | Descrição                                                  |
-| ---------- | ---- |::| ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF --> |
+| Parâmetros | Tipo |  | Descrição                                             |
+| ---------- | ---- |::| ----------------------------------------------------- |
+|            |      |  | Não exige nenhum parâmetro|<!-- END REF --> |
 
 #### Descrição
 
@@ -291,9 +291,9 @@ Ver  exemplo da função [`.startTransaction()`](#starttransaction).
 
 
 <!-- REF #DataStoreClass.clearAllRemoteContexts().Params -->
-| Parâmetros | Tipo |  | Descrição                                                  |
-| ---------- | ---- |::| ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF --> |
+| Parâmetros | Tipo |  | Descrição                                             |
+| ---------- | ---- |::| ----------------------------------------------------- |
+|            |      |  | Não exige nenhum parâmetro|<!-- END REF --> |
 
 #### Descrição
 
@@ -404,7 +404,7 @@ Se quiser saber o número de tabelas criptografadas no arquivo de dados atual:
 | ---------- | ------ | -- | --------------------------------------------------------------------- |
 | Resultados | Objeto | <- | Collection of optimization context objects|<!-- END REF --> |
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
+> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
@@ -547,7 +547,7 @@ Em um armazém de dados remoto:
 | contextName | Text   | -> | Nome do contexto                                                   |
 | Resultados  | Objeto | <- | Description of the optimization context|<!-- END REF --> |
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
+> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
@@ -563,7 +563,7 @@ The returned object has the following properties:
 | ---------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | name                   | Text | Nome do contexto                                                                                                                                                                                                                                                              |
 | main                   | Text | Attribute(s) associated to the context (attribute names are separated by a comma)                                                                                                                                                                                             |
-| dataclass              | Text | Dataclass name                                                                                                                                                                                                                                                                |
+| dataclass              | Text | Nome do dataclass                                                                                                                                                                                                                                                             |
 | currentItem (opcional) | Text | The attributes of the [page mode](../ORDA/remoteDatastores.md#entity-selection-based-list-box) if the context is linked to a list box. Returned as `Null` or empty text element if the context name is not used for a list box, or if there is no context for the currentItem |
 
 Since contexts behave as filters for attributes, if *main* is returned empty, it means that no filter is applied, and that the server returns all the dataclass attributes.
@@ -665,9 +665,9 @@ Como padrão, o acesso ao Explorador de Dados se concede para as sessões `webAd
 
 
 <!-- REF #DataStoreClass.makeSelectionsAlterable().Params -->
-| Parâmetros | Tipo |  | Descrição                                                  |
-| ---------- | ---- |::| ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF --> |
+| Parâmetros | Tipo |  | Descrição                                             |
+| ---------- | ---- |::| ----------------------------------------------------- |
+|            |      |  | Não exige nenhum parâmetro|<!-- END REF --> |
 
 #### Descrição
 
@@ -821,12 +821,12 @@ Se criar um método projeto *protectDataFile* para chamar antes dos lançamentos
 | contextName     | Text          | -> | Nome do contexto                                                                                     |
 | dataClassName   | Text          | -> | Nome da dataclass                                                                                    |
 | dataClassObject | 4D. DataClass | -> | dataclass object (e.g datastore. Employee)                                                           |
-| attributes      | Text          | -> | Attribute list separated by a comma                                                                  |
+| attributes      | Text          | -> | Lista de atributos separada por vírgulas                                                             |
 | attributesColl  | Collection    | -> | Coleção de nomes de atributos (text)                                                                 |
-| contextType     | Text          | -> | If provided, value must be "main" or "currentItem"                                                   |
+| contextType     | Text          | -> | Se fornecido, o valor deve ser "main" ou "currentItem"                                               |
 | pageLength      | Integer       | -> | Page length of the entity selection linked to the context (default is 80)|<!-- END REF --> |
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
+> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
@@ -850,11 +850,11 @@ If *attributes* is an empty Text, or *attributesColl* is an empty collection, al
 You can pass a *contextType* to  specify if the context is a standard context or the context of the current entity selection item displayed in a list box:
 
 * If set to "main" (default), the *contextName* designates a standard context.
-* If set to "currentItem", the attributes passed are put in the context of the current item.  See  [Entity selection-based list box](../ORDA/remoteDatastores.md#entity-selection-based-list-box).
+* If set to "currentItem", the attributes passed are put in the context of the current item.  Ver  [List box baseado na seleção da entidade](../ORDA/remoteDatastores.md#entity-selection-based-list-box).
 
-In *pageLength*, specify the number of dataclass entities to request from the server.
+Em *pageLength*, especificar o número de entidades dataclass a solicitar ao servidor.
 
-You can pass a *pageLength* for a relation attribute which is an entity selection (one to many). The syntax is `relationAttributeName:pageLength` (e.g employees:20).
+Pode passar um *pageLength* para um atributo relacional que é uma selecção de entidade (uma a muitas). A sintaxe é `relationAttributeName:pageLength` (e.g. employees:20).
 
 #### Exemplo 1
 
@@ -887,7 +887,7 @@ $info:=$ds.getRemoteContextInfo("contextA")
 
 #### Exemplo 2
 
-The following piece of code requests pages of 30 entities of the `Address` dataclass from the server. The returned entities only contain the `zipCode` attribute.
+The following piece of code requests pages of 30 entities of the `Address` dataclass from the server. As entidades devolvidas contêm apenas o atributo `zipCode`.
 
 For each `Address` entity, 20 Persons entities are returned, and they only contain the `lastname` and `firstname` attributes:
 
@@ -941,10 +941,10 @@ persons.lastname, persons.firstname"; "main"; 30)
 
 
 <!-- REF #DataStoreClass.startRequestLog().Params -->
-| Parâmetros | Tipo     |    | Descrição                                                       |
-| ---------- | -------- | -- | --------------------------------------------------------------- |
-| file       | 4D. File | -> | Objeto File                                                     |
-| reqNum     | Integer  | -> | Number of requests to keep in memory|<!-- END REF --> |
+| Parâmetros | Tipo     |    | Descrição                                                        |
+| ---------- | -------- | -- | ---------------------------------------------------------------- |
+| file       | 4D. File | -> | Objeto File                                                      |
+| reqNum     | Integer  | -> | Número de petiçõs a manter em memória|<!-- END REF --> |
 
 #### Descrição
 
@@ -1018,9 +1018,9 @@ Se quiser registrar as petições dos clientes ORDA na memória:
 
 
 <!-- REF #DataStoreClass.startTransaction().Params -->
-| Parâmetros | Tipo |  | Descrição                                                  |
-| ---------- | ---- |  | ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF --> |
+| Parâmetros | Tipo |  | Descrição                                             |
+| ---------- | ---- |  | ----------------------------------------------------- |
+|            |      |  | Não exige nenhum parâmetro|<!-- END REF --> |
 
 #### Descrição
 
@@ -1082,9 +1082,9 @@ Pode aninhar várias transações (subtransações). Cada transação ou subtran
 
 
 <!-- REF #DataStoreClass.stopRequestLog().Params -->
-| Parâmetros | Tipo |  | Descrição                                                  |
-| ---------- | ---- |  | ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF --> |
+| Parâmetros | Tipo |  | Descrição                                             |
+| ---------- | ---- |  | ----------------------------------------------------- |
+|            |      |  | Não exige nenhum parâmetro|<!-- END REF --> |
 
 #### Descrição
 
@@ -1115,9 +1115,9 @@ Ver exemplos [`.startRequestLog()`](#startrequestlog).
 
 
 <!-- REF #DataStoreClass.validateTransaction().Params -->
-| Parâmetros | Tipo |  | Descrição                                                  |
-| ---------- | ---- |  | ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF --> |
+| Parâmetros | Tipo |  | Descrição                                             |
+| ---------- | ---- |  | ----------------------------------------------------- |
+|            |      |  | Não exige nenhum parâmetro|<!-- END REF --> |
 
 #### Descrição
 

@@ -126,13 +126,13 @@ A propriedade `.fieldType` <!-- REF DataClassAttributeClass.fieldType.Summary --
 
 **Valores possíveis:**
 
-| dataClassAttribute.kind | fieldType                                                                                               |
-| ----------------------- | ------------------------------------------------------------------------------------------------------- |
-| storage                 | Corresponding 4D field type, see [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html) |
-| relatedEntity           | 38 (`Is object`)                                                                                        |
-| relatedEntities         | 42 (`Is collection`)                                                                                    |
-| calculated              | <li>scalar: corresponding 4D field type, see [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>entity: 38 (`Is object`)</li><li>entity selection: 42 (`Is collection`)</li>                             |
-| alias                   | <li>scalar: corresponding 4D field type, see [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>entity: 38 (`Is object`)</li><li>entity selection: 42 (`Is collection)`</li>                             |
+| dataClassAttribute.kind | fieldType                                                                                                   |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------- |
+| storage                 | Tipo de campo 4D correspondente, ver [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html) |
+| relatedEntity           | 38 (`Is object`)                                                                                            |
+| relatedEntities         | 42 (`Is collection`)                                                                                        |
+| calculated              | <li>escalar: tipo de campo 4D correspondente, ver [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>entity: 38 (`Is object`)</li><li>entity selection: 42 (`Is collection`)</li>                                 |
+| alias                   | <li>escalar: tipo de campo 4D correspondente, ver [`Value type`](https://doc.4d.com/4dv19/help/command/en/page1509.html)</li><li>entity: 38 (`Is object`)</li><li>entity selection: 42 (`Is collection)`</li>                                 |
 
 <!-- END REF -->
 
@@ -222,7 +222,7 @@ Esta propriedade não é retornada se [`.kind`](#kind) = "relatedEntity" ou "rel
 
 #### Descrição
 
-A propriedade `.kind` <!-- REF DataClassAttributeClass.kind.Summary -->returns the category of the attribute<!-- END REF -->. O valor retornado pode ser um dos abaixo:
+A propriedade `.kind` <!-- REF DataClassAttributeClass.kind.Summary -->devolve a categoria do atributo<!-- END REF -->. O valor retornado pode ser um dos abaixo:
 
 * Atributo "storage": storage (ou escalar) ou seja, atributo que armazena um valor, não uma referência a outro atributo
 * "calculated": computed attribute, i.e. defined through a [`get` function](ORDA/ordaClasses.md#function-get-attributename)
@@ -335,7 +335,7 @@ A propriedade `.path` <!-- REF DataClassAttributeClass.path.Summary -->returns t
 
 #### Descrição
 
-O `.readOnly` propriedade é <!-- REF DataClassAttributeClass.readOnly.Summary -->true if the attribute is read-only<!-- END REF -->.
+O `.readOnly` propriedade é <!-- REF DataClassAttributeClass.readOnly.Summary -->true se o atributo for apenas de leitura<!-- END REF -->.
 
 For example, computed attributes without [`set` function](ORDA/ordaClasses.md#function-set-attributename) are read-only.
 
@@ -388,7 +388,7 @@ Dada a seguinte tabela e relação:
 
 #### Descrição
 
-A propriedade `.type` <!-- REF DataClassAttributeClass.type.Summary -->contains the conceptual value type of the attribute<!-- END REF -->, useful for generic programming.
+A propriedade `.type` <!-- REF DataClassAttributeClass.type.Summary -->contains the conceptual value type of the attribute<!-- END REF -->, útil para a programação genérica.
 
 O tipo de valor conceitual depende do atributo [`.kind`](#kind).
 

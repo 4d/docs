@@ -89,7 +89,7 @@ O objeto `CryptoKey` devolvido encapsula um par de chaves de cifrado. É um obje
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Text<!-- END REF -->
 
 
-Defined only for ECDSA keys: the <!-- REF #CryptoKey.curve.Summary -->normalised curve name of the key<!-- END REF -->. Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512.
+Definido apenas para as chaves ECDSA: o <!-- REF #CryptoKey.curve.Summary -->normalised curve name of the key<!-- END REF -->. Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512.
 <!-- END REF -->
 
 <!-- REF CryptoKey.decrypt().Desc -->
@@ -175,7 +175,7 @@ A função `.encrypt()` <!-- REF #CryptoKey.encrypt().Summary -->encrypts the *m
 
 #### *Resultados*
 
-The returned value is an encrypted message.
+O valor devolvido é uma mensagem encriptada.
 <!-- END REF -->
 
 <!-- REF CryptoKey.getPrivateKey().Desc -->
@@ -305,7 +305,7 @@ A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->signs the utf8 repres
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
 
 
-Defined only for RSA keys: <!-- REF #CryptoKey.size.Summary -->the size of the key in bits<!-- END REF -->. .
+Definido apenas para chaves RSA: <!-- REF #CryptoKey.size.Summary -->the size of the key in bits<!-- END REF -->. .
 
 <!-- REF CryptoKey.type -->
 ## .type

@@ -272,7 +272,7 @@ You can check the **Allow automatic update...** option for client applications r
 
 This feature requires that you click on the **[...]** button and designate the location on your disk of the file to use for the update. The file to select depends on the current server platform:
 
-| Current server platform | Required file                                                | Details                                                                                                                                                                    |
+| Current server platform | Required file                                                | Detalhes                                                                                                                                                                   |
 | ----------------------- | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | macOS                   | Windows 4D Volume Desktop *or* Windows client update archive | By default, you select the `4D Volume Desktop` application for Windows. To select a `.4darchive` file previously built on Windows, press **Shift** while clicking on [...] |
 | Windows                 | macOS client update archive                                  | Select a signed `.4darchive` file previously built on macOS                                                                                                                |
@@ -334,7 +334,7 @@ If the server and/or client part of your double-clickable application is used as
 
 Items must be installed:
 
-* **on Windows**
+* **em Windows**
   * **Server application** - in the `Client Server executable\&#060;ApplicationName&#062;Server\Server Database` subfolder.
   * **Client application** - in the `Client Server executable\&#060;ApplicationName&#062;Client` subfolder.
 

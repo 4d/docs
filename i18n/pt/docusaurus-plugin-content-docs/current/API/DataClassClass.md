@@ -39,7 +39,7 @@ Uma [DataClass](ORDA/dsMapping.md#dataclass) oferece uma interface de objeto a u
 
 #### Descrição
 
-The attributes of dataclasses are <!-- REF DataClassClass.attributeName.Summary -->objects that are available directly as properties<!-- END REF --> of these classes.
+The attributes of dataclasses are <!-- REF DataClassClass.attributeName.Summary -->objects that are available directly as properties<!-- END REF --> destas classes.
 
 Os objetos retornados são do tipo class [`DataClassAttribute`](DataClassAttributeClass.md). Esses objetos têm propriedades que podem ser lidas para obter informação sobre seus atributos dataclass.
 > Os objetos do atributo Dataclass podem ser modificados, mas a estrutura subjacente do banco de dados não será alterada.
@@ -155,17 +155,17 @@ No  parâmetro *querySettings* é possível passar um objeto que conteha opçõe
 
 
 <!-- REF #DataStoreClass.clearRemoteCache().Params -->
-| Parâmetros | Tipo |  | Descrição                                                  |
-| ---------- | ---- |::| ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF -->
+| Parâmetros | Tipo |  | Descrição                                             |
+| ---------- | ---- |::| ----------------------------------------------------- |
+|            |      |  | Não exige nenhum parâmetro|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.clearRemoteCache()` <!-- REF #DataClassClass.clearRemoteCache().Summary -->empties the ORDA cache of a dataclass<!-- END REF -->.
+A função `.clearRemoteCache()` <!-- REF #DataClassClass.clearRemoteCache().Summary -->esvazia a cache ORDA de um dataclass<!-- END REF -->.
 
-> This function does not reset the `timeout` and `maxEntries` values.
+> Esta função não reinicia os valores `timeout` e `maxEntries`.
 
 #### Exemplo
 
@@ -211,7 +211,7 @@ $ds. Persons.clearRemoteCache()
 | ---------- | ------------------- |:--:| ---------------------------------------------------------------------- |
 | objectCol  | Collection          | -> | Coleção de objetos a mapear com entidades                              |
 | settings   | Objeto              | -> | Build option: context                                                  |
-| Resultados | 4D. EntitySelection | <- | Entity selection filled from the collection|<!-- END REF -->
+| Resultados | 4D. EntitySelection | <- | Seleção de entidades preenchidas da coleção|<!-- END REF -->
 
 |
 
@@ -405,11 +405,11 @@ Neste exemplo, a primeira entidade se criará e salvará mas a segunda falhará 
 
 
 <!-- REF #DataClassClass.get().Params -->
-| Parâmetros | Tipo            |    | Descrição                                                             |
-| ---------- | --------------- |:--:| --------------------------------------------------------------------- |
-| primaryKey | Integer OR Text | -> | Valor da chave primária da entidade a recuperar                       |
-| settings   | Objeto          | -> | Build option: context                                                 |
-| Resultados | 4D. Entity      | <- | Entity matching the designated primary key|<!-- END REF -->
+| Parâmetros | Tipo            |    | Descrição                                                                       |
+| ---------- | --------------- |:--:| ------------------------------------------------------------------------------- |
+| primaryKey | Integer OR Text | -> | Valor da chave primária da entidade a recuperar                                 |
+| settings   | Objeto          | -> | Build option: context                                                           |
+| Resultados | 4D. Entity      | <- | Entidade que coincide com a chave primária designada|<!-- END REF -->
 
 |
 
@@ -481,17 +481,17 @@ Este exemplo ilustra o uso da propriedade *context* :
 
 
 <!-- REF #DataClassClass.getCount().Params -->
-| Parâmetros | Tipo    |    | Descrição                                                      |
-| ---------- | ------- | -- | -------------------------------------------------------------- |
-| result     | Integer | <- | Number of entities in the dataclass|<!-- END REF -->
+| Parâmetros | Tipo    |    | Descrição                                                   |
+| ---------- | ------- | -- | ----------------------------------------------------------- |
+| result     | Integer | <- | Número de entidades na dataclass|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.getCount()` <!-- REF #DataClassClass.getCount().Summary --> returns the number of entities in a dataclass<!-- END REF -->.
+A função `.getCount()` <!-- REF #DataClassClass.getCount().Summary --> devolve o número de entidades de um dataclass<!-- END REF -->.
 
-If this function is used within a transaction, entities created during the transaction will be taken into account.
+Se esta função for utilizada dentro de uma transacção, as entidades criadas durante a transacção serão tidas em conta.
 
 #### Exemplo
 
@@ -521,15 +521,15 @@ $number:=$ds. Persons.getCount()
 
 
 <!-- REF #DataClassClass.getDataStore().Params -->
-| Parâmetros | Tipo          |    | Descrição                                             |
-| ---------- | ------------- |:--:| ----------------------------------------------------- |
-| Resultados | cs. DataStore | <- | Datastore of the dataclass|<!-- END REF -->
+| Parâmetros | Tipo          |    | Descrição                                         |
+| ---------- | ------------- |:--:| ------------------------------------------------- |
+| Resultados | cs. DataStore | <- | Datastore da dataclass|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.getCount()` <!-- REF #DataClassClass.getDataStore().Summary -->returns the datastore for the specified dataclass<!-- END REF -->.
+A função `.getCount()` <!-- REF #DataClassClass.getDataStore().Summary -->devolve o datastore para a dataclass especificada<!-- END REF -->.
 
 A datastore pode ser:
 
@@ -575,21 +575,21 @@ O método de projeto ***SearchDuplicate*** procura por valores duplicados em qua
 
 
 <!-- REF #DataClassClass.getInfo().Params -->
-| Parâmetros | Tipo   |    | Descrição                                               |
-| ---------- | ------ | -- | ------------------------------------------------------- |
-| Resultados | Objeto | <- | Information on the dataclass|<!-- END REF -->
+| Parâmetros | Tipo   |    | Descrição                                          |
+| ---------- | ------ | -- | -------------------------------------------------- |
+| Resultados | Objeto | <- | Informação da dataclass|<!-- END REF -->
 
 |
 
 #### Descrição
 
-A função `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->returns an object providing information about the dataclass<!-- END REF -->. Esta função é útil para configurar o código genérico.
+A função `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->devolve um objecto que fornece informação sobre o dataclass<!-- END REF -->. Esta função é útil para configurar o código genérico.
 
 **Objeto devolvido**
 
 | Propriedade | Tipo     | Descrição                                 |
 | ----------- | -------- | ----------------------------------------- |
-| exposed     | Booleano | True if the dataclass is exposed in REST  |
+| exposed     | Booleano | True se a dataclass for exposta em REST   |
 | name        | Text     | Nome da dataclass                         |
 | primaryKey  | Text     | Nome da chave primária da classe de dados |
 | tableNumber | Integer  | Número daa tabela 4D interna              |
@@ -651,20 +651,20 @@ A função `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->returns an
 
 
 <!-- REF #DataClassClass.getRemoteCache().Params -->
-| Parâmetros | Tipo   |    | Descrição                                                                                      |
-| ---------- | ------ | -- | ---------------------------------------------------------------------------------------------- |
-| result     | Objeto | <- | Object describing the contents of the ORDA cache for the dataclass.|<!-- END REF -->
+| Parâmetros | Tipo   |    | Descrição                                                                                  |
+| ---------- | ------ | -- | ------------------------------------------------------------------------------------------ |
+| result     | Objeto | <- | Objecto que descreve o conteúdo da cache ORDA para o dataclass.|<!-- END REF -->
 
 
 |
 
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
+> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
 
 
 #### Descrição
 
-A função `.getRemoteCache()` <!-- REF #DataClassClass.getRemoteCache().Summary -->returns an object that holds the contents of the ORDA cache for a dataclass.<!-- END REF -->.
+A função `.getRemoteCache()` <!-- REF #DataClassClass.getRemoteCache().Summary -->devolve um objecto que contém o conteúdo da cache ORDA para uma dataclass.<!-- END REF -->.
 
 Calling this function from a 4D single-user application returns `Null`.
 
@@ -685,13 +685,13 @@ Each entry object in the `entries` collection has the following properties:
 | expired     | Booleano | True if the entry has expired.    |
 | key         | Text     | Primary key of the entity.        |
 
-The `data` object in each entry contains the following properties:
+O objecto `data` em cada entrada contém as seguintes propriedades:
 
 | Propriedade            | Tipo    | Descrição                                                                                                                    |
 | ---------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| __KEY                  | String  | Primary key of the entity                                                                                                    |
-| __STAMP                | Longint | Timestamp of the entity in the database                                                                                      |
-| __TIMESTAMP            | String  | Stamp of the entity in the database (format is YYYY-MM-DDTHH:MM:SS:ms:Z)                                                     |
+| __KEY                  | String  | Chave primária da entidade                                                                                                   |
+| __STAMP                | Longint | Stamp da entidade na base de dados                                                                                           |
+| __TIMESTAMP            | String  | Stamp da entidade na base de dados (formato é YYYY-MM-DDTHH:MM:SS:ms:Z)                                                      |
 | dataClassAttributeName | Variant | If there is data in the cache for a dataclass attribute, it is returned in a property with the same type as in the database. |
 
 Data concerning related entities is stored in the cache of the data object.
@@ -943,7 +943,7 @@ Using placeholders in queries **is recommended** for the following reasons:
 1. Evita a inserção de código malicioso: se user diretamente variáveis preenchidas com uma string de pesquisa, um usuário poderia modificar as condições de pesquisa entrando argumentos adicionais. Por exemplo, imagine uma string de pesquisa como:
 
  ```4d
-  $vquery:="status = 'public' & name = "+myname //user enters their name
+  $vquery:="status = 'public' & name = "+myname //o usuário introduz seu nome
   $result:=$col.query($vquery)
  ```
 
@@ -1057,7 +1057,7 @@ To make it possible to perform such queries, ORDA allows a special syntax: you j
 
 **{x}** tells ORDA to create another reference for the relation attribute. It will then perform all the necessary bitmap operations internally. Note that **x** can be any number **except 0**: {1}, or {2}, or {1540}... ORDA only needs a unique reference in the query for each class index.
 
-In our example, it would be:
+No nosso exemplo, seria:
 
 ```4d
 // valid code
@@ -1441,7 +1441,7 @@ Queremos desautorizar as fórmulas, por exemplo, quando el usuario introduz sua 
 
 |
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
+> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
@@ -1452,9 +1452,9 @@ In the *settings* parameter, pass an object with the following properties:
 | Propriedade | Tipo    | Descrição                    |
 | ----------- | ------- | ---------------------------- |
 | timeout     | Integer | Tempo de espera em segundos. |
-| maxEntries  | Integer | Maximum number of entities.  |
+| maxEntries  | Integer | Número máximo de entidades.  |
 
-`timeout` sets the timeout of the ORDA cache for the dataclass (default is 30 seconds). Once the timeout has passed, the entities of the dataclass in the cache are considered as expired. Isto significa que:
+`timeout` define o timeout da cache ORDA para o dataclass (por defeito é de 30 segundos). Once the timeout has passed, the entities of the dataclass in the cache are considered as expired. Isto significa que:
 
 * the data is still there
 * the next time the data is needed, it will be asked to the server

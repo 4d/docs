@@ -81,7 +81,7 @@ When a variable is not named, when the form is loaded, 4D creates a new variable
 In the 4D code, dynamic variables can be accessed using a pointer obtained with the `OBJECT Get pointer` command. Por ejemplo:
 
 ```4d
-  // assign the time 12:00:00 to the variable for the "tstart" object
+  // asigna la hora 12:00:00 a la variable para el objeto "tstart"
  $p :=OBJECT Get pointer(Object named;"tstart")
  $p->:=?12:00:00?
 ```
@@ -123,7 +123,7 @@ However, this property has a typing function in the following specific cases:
 
 | Nombre             | Tipos de datos | Valores posibles          |
 | ------------------ | -------------- | ------------------------- |
-| dataSourceTypeHint | string         | <ul><li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**list box columns:** "boolean", "number", "picture", "text", date" (*array/selection list box only*) "integer", "time", "object"</li></ul> |
+| dataSourceTypeHint | string         | <ul><li>**objetos estándar:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**list box columns:** "boolean", "number", "picture", "text", date" (*array/selection list box only*) "integer", "time", "object"</li></ul> |
 
 #### Objetos soportados
 

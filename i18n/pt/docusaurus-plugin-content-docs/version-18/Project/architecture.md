@@ -130,7 +130,7 @@ A pasta Resources contém todos os arquivos e pastas de recursos personalizados 
 
 | Conteúdos             | Descrição                                                                                                                                             | Formato |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| *item*                | Arquivos e pastas dos recursos do banco de dados                                                                                                      | various |
+| *item*                | Arquivos e pastas dos recursos do banco de dados                                                                                                      | vários  |
 | Images/Library/*item* | Pictures from the Picture Library as separate files(*). Names of these items become file names. If a duplicate exists, a number is added to the name. | picture |
 
 (*) only if the project was exported from a .4db binary database.

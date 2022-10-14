@@ -130,7 +130,7 @@ var $vName; $vJob : Text //local variales If(bValidate=1) //process variable
 <>vlProcessID:=Current process() //interprocess variable
 ```
 
-## Other names
+## Outros nomes
 
 In the 4D language, several elements have their names handled as strings: **forms**, **form objects**, **named selections**, **processes**, **sets**, **menu bars**, etc.
 

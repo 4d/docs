@@ -169,7 +169,7 @@ This property applies to all internal and external SQL queries --- executed via 
 
 For more information, refer to [4D SQL engine implementation](https://doc.4d.com/4Dv19R5/4D/19-R5/4D-SQL-engine-implementation.300-5871873.en.html) in the 4D SQL manual.
 
-##### REST Server
+##### Servidor REST
 
 *This option is deprecated because it relies on legacy current record and current selection concepts. It is recommended to use** [ORDA data model class functions](https://developer.4d.com/docs/en/REST/classFunctions.html) for REST access. *
 

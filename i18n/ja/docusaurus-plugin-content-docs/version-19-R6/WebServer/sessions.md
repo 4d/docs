@@ -92,9 +92,9 @@ Webプロセスは通常終了せず、効率化のためにプールされリ�
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
- //Access is granted, do nothing
+ // アクセス権が付与されているので、何もしません
 Else
- //Display an authentication page
+ // 認証ページを表示します
 End if
 ```
 

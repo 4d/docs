@@ -75,7 +75,7 @@ Lista de los operadores de la mas a menos importante:
 | %                                   | Porcentaje                |
 | ^                                   | Exponente                 |
 | * y /                               | Multiplicar y dividar     |
-| + y -                               | Add and Subtract          |
+| + y -                               | Añadir y restar           |
 | &                                   | Concatenar                |
 | `=  > < >= <= <>` | Comparar                  |
 

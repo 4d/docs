@@ -10,7 +10,7 @@ title: テンプレートページ
 たとえば、HTMLページ内にて以下のように記述すると:
 
 ```html
-Welcome to <!--#4DTEXT vtSiteName-->!</P>
+<P><!--#4DTEXT vtSiteName--> へようこそ！</P>
 ```
 
 4D変数 *vtSiteName* の値が HTMLページに挿入されます。
