@@ -105,10 +105,10 @@ module.exports = {
 		apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
 		appId: 'OJ04C0M3CU',
       indexName: '4d',
-	  //algoliaOptions: {
-      //facetFilters: ['language:LANGUAGE', 'version:VERSION'],
-    //},
-      contextualSearch: true
+	searchParameters: {
+	      facetFilters: ['language:LANGUAGE', 'version:VERSION'],
+    	},
+      contextualSearch: false,
     },
     prism: {
       theme: require("./src/theme/highlight/themes/palenight"),
