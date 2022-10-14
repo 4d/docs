@@ -60,7 +60,7 @@ ASSERT($status.success)
 | settings   | Objeto        | -> | Parâmetros para gerar ou carregar um par de chaves                           |
 | result     | 4D. CryptoKey | <- | Objeto que contém um par de chaves de criptografia<!-- END REF --> |
 
-The `4D. CryptoKey.new()` function <!-- REF #4D.CryptoKey.new().Summary -->creates a new `4D. CryptoKey` object encapsulating an encryption key pair<!-- END REF -->, based upon the *settings* object parameter. Permite gerar uma nova chave RSA o ECDSA, ou carregar um par de chaves existente desde uma definição PEM.
+A função `4D.CryptoKey.new()` <!-- REF #4D.CryptoKey.new().Summary -->cria um novo objecto `4D.CryptoKey` que encapsula um par de chaves de encriptação<!-- END REF -->, com base no parâmetro objecto *settings*. Permite gerar uma nova chave RSA o ECDSA, ou carregar um par de chaves existente desde uma definição PEM.
 
 #### *settings*
 
@@ -89,7 +89,7 @@ O objeto `CryptoKey` devolvido encapsula um par de chaves de cifrado. É um obje
 <!-- REF #CryptoKey.curve.Syntax -->**.curve** : Text<!-- END REF -->
 
 
-Definido apenas para as chaves ECDSA: o <!-- REF #CryptoKey.curve.Summary -->normalised curve name of the key<!-- END REF -->. Usually "prime256v1" for ES256 (default), "secp384r1" for ES384, "secp521r1" for ES512.
+Definido apenas para as chaves ECDSA: o <!-- REF #CryptoKey.curve.Summary -->nome da curva normalizada da chave<!-- END REF -->. Normalmente "prime256v1" para ES256 (por defeito), "secp384r1" para ES384, "secp521r1" para ES512.
 <!-- END REF -->
 
 <!-- REF CryptoKey.decrypt().Desc -->
@@ -114,7 +114,7 @@ Definido apenas para as chaves ECDSA: o <!-- REF #CryptoKey.curve.Summary -->nor
 | options    | Objeto | -> | Opções de codificação                                                                 |
 | Resultados | Objeto | <- | Estado|<!-- END REF -->                                                     |
 
-A função `.decrypt()` <!-- REF #CryptoKey.decrypt().Summary -->decrypts the *message* parameter using the **private** key<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
+A função `.decrypt()` <!-- REF #CryptoKey.decrypt().Summary -->decifra o parâmetro *mensagem* usando a chave **privada**<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
 
 "RSA": um par de chaves RSA, utilizando `settings.size` como \[.size\](#size).
 
@@ -161,7 +161,7 @@ A função devolve um objeto "status" com a propriedade `success` definida como 
 | options    | Objeto | -> | Opções de decodificação                                                                               |
 | Resultados | Text   | <- | Mensagem criptografada e codificada utilizando `options.encodingEncrypted`|<!-- END REF --> |
 
-A função `.encrypt()` <!-- REF #CryptoKey.encrypt().Summary -->encrypts the *message* parameter using the **public** key<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
+A função `.encrypt()` <!-- REF #CryptoKey.encrypt().Summary -->encripta o parâmetro *mensagem* utilizando a chave **public**<!-- END REF -->. O algoritmo utilizado depende do tipo da chave.
 
 "RSA": um par de chaves RSA, utilizando `settings.size` como \[.size\](#size).
 
@@ -198,7 +198,7 @@ O valor devolvido é uma mensagem encriptada.
 | ---------- | ---- | -- | ------------------------------------------------------- |
 | Resultados | Text | <- | Chave privada em formato PEM|<!-- END REF --> |
 
-A função `.getPrivateKey()`  <!-- REF #CryptoKey.getPrivateKey().Summary -->returns the private key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
+A função `.getPrivateKey()`  <!-- REF #CryptoKey.getPrivateKey().Summary -->devolve a chave privada do objecto `CryptoKey`<!-- END REF --> em formato PEM, ou uma string vazia se nenhum estiver disponível.
 
 #### *Resultados*
 
@@ -225,7 +225,7 @@ O valor devolvido é a chave privada.
 | ---------- | ---- | -- | ------------------------------------------------------- |
 | Resultados | Text | <- | Chave pública em formato PEM|<!-- END REF --> |
 
-A função `.getPublicKey()` <!-- REF #CryptoKey.getPublicKey().Summary -->returns the public key of the `CryptoKey` object<!-- END REF --> in PEM format, or an empty string if none is available.
+A função `.getPublicKey()` <!-- REF #CryptoKey.getPublicKey().Summary -->devolve a chave pública do objecto `CryptoKey`<!-- END REF --> em formato PEM, ou uma string vazia se nenhum estiver disponível.
 
 #### *Resultados*
 
@@ -265,13 +265,13 @@ O valor devolvido é a chave pública.
 
 
 <!-- REF #CryptoKey.sign().Params -->
-| Parâmetros | Tipo   |    | Descrição                                                                                                  |
-| ---------- | ------ | -- | ---------------------------------------------------------------------------------------------------------- |
-| message    | Text   | -> | String mensagem a assinar                                                                                  |
-| options    | Objeto | -> | Opções de assinatura                                                                                       |
-| Resultados | Text   | <- | Signature in Base64 or Base64URL representation, depending on "encoding" option|<!-- END REF --> |
+| Parâmetros | Tipo   |    | Descrição                                                                                                     |
+| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------------------- |
+| message    | Text   | -> | String mensagem a assinar                                                                                     |
+| options    | Objeto | -> | Opções de assinatura                                                                                          |
+| Resultados | Text   | <- | Assinatura na representação Base64 ou Base64URL, dependendo da opção "codificação".<!-- END REF --> |
 
-A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->signs the utf8 representation of a *message* string<!-- END REF --> using the `CryptoKey` object keys and provided *options*. Summary -->verifica a assinatura base64 contra a representação utf8 de *message*<!-- END REF --> utilizando as chaves do objeto `CryptoKey` e as *options* proporcionadas.
+A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->assina a representação utf8 de uma mensagem ** string<!-- END REF --> utilizando o `CryptoKey` chaves-objecto e forneceu *opções*. Summary -->verifica a assinatura base64 contra a representação utf8 de *message*<!-- END REF --> utilizando as chaves do objeto `CryptoKey` e as *options* proporcionadas.
 
 `CryptoKey` deve conter uma chave válida **privada**.
 
@@ -305,7 +305,7 @@ A função `.sign()` <!-- REF #CryptoKey.sign().Summary -->signs the utf8 repres
 <!-- REF #CryptoKey.size.Syntax -->**.size** : Integer<!-- END REF -->
 
 
-Definido apenas para chaves RSA: <!-- REF #CryptoKey.size.Summary -->the size of the key in bits<!-- END REF -->. .
+Definido apenas para chaves RSA: <!-- REF #CryptoKey.size.Summary -->o tamanho da chave em bits<!-- END REF -->. Tipicamente 2048 (por defeito).
 
 <!-- REF CryptoKey.type -->
 ## .type
@@ -326,9 +326,9 @@ Definido apenas para chaves RSA: <!-- REF #CryptoKey.size.Summary -->the size of
 
 <!-- REF #CryptoKey.type.Summary -->Nome do tipo da chave - "RSA", "ECDSA", "PEM" <!-- END REF -->.
 
-- "RSA": an RSA key pair, using `settings.size` as [.size](#size).
-- "ECDSA": an Elliptic Curve Digital Signature Algorithm key pair, using `settings.curve` as [.curve](#curve). Lembre que chaves ECDSA não podem ser usadas para a criptografia mas só pela assinatura.
-- "PEM": a key pair definition in PEM format, using `settings.pem` as [.pem](#pem).
+- "RSA": um par de chaves RSA, usando `settings.size` como [.size](#size).
+- "ECDSA": um par de chaves de Algoritmos de Assinatura Digital de Curva Elíptica, usando `settings.curve` como [.curve](#curve). Lembre que chaves ECDSA não podem ser usadas para a criptografia mas só pela assinatura.
+- "PEM": uma definição de par chave em formato PEM, usando `settings.pem` como [.pem](#pem).
 
 <!-- REF CryptoKey.verify().Desc -->
 ## .verify()
@@ -354,7 +354,7 @@ Definido apenas para chaves RSA: <!-- REF #CryptoKey.size.Summary -->the size of
 | Resultados | Objeto | <- | Estado da verificação|<!-- END REF -->                                                                   |
 
 
-A função `.verify()` <!-- REF #CryptoKey.verify().Summary -->verifies the base64 signature against the utf8 representation of *message*<!-- END REF --> using the `CryptoKey` object keys and provided *options*.
+A função `.verify()` <!-- REF #CryptoKey.verify().Summary -->verifica a assinatura base64 contra a representação utf8 de *mensagem*<!-- END REF --> utilizando o `CryptoKey` chaves-objecto e forneceu *opções*.
 
 `CryptoKey` deve conter uma chave válida **publica**.
 
