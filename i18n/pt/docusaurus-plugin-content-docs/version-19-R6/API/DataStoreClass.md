@@ -53,7 +53,7 @@ Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface subministra
 
 #### Descrição
 
-O comando `ds` <!-- REF #_command_.ds.Summary -->returns a reference to the datastore matching the current 4D database or the database designated by *localID*<!-- END REF -->.
+O comando `ds` <!-- REF #_command_.ds.Summary -->devolve uma referência ao datastore que corresponde à base de dados 4D actual ou à base de dados designada por *localID*<!-- END REF -->.
 
 Se omitir o parâmetro *localID* (ou se passa uma string vazia ""), o comando devolve uma referência ao armazém de dados que coincide com a base de dados local de 4D (ou  a base de datos de 4D Server em caso de abrir uma base de dados remota em 4D Server). O armazém de dados se abre automaticamente e está disponível diretamente através de `ds`.
 
@@ -62,7 +62,7 @@ Também pode obter uma referencia em um datastore remoto aberto passando seu id 
 
 Se não encontrar nenhum armazém de dados *localID*, o comando devolve **Null**.
 
-Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
+Os objectos disponíveis no site `cs.Datastore` são mapeados a partir da base de dados alvo no que respeita às regras gerais da [ORDA](ORDA/dsMapping.md#general-rules).
 
 #### Exemplo 1
 
@@ -134,7 +134,7 @@ Se não se encontrar nenhum banco de dados coincidente, `Open datastore` devolve
 
 *localID* é um alias local para a sessão aberta no armazém de dados remoto. Se *localID* já existir na aplicação, se utiliza. Em caso contrário, se cria uma nova sessão *localID* quando se utiliza o objeto datastore.
 
-Objects available in the `cs.Datastore` are mapped from the target database with respect to the [ORDA general rules](ORDA/dsMapping.md#general-rules).
+Os objectos disponíveis no site `cs.Datastore` são mapeados a partir da base de dados alvo no que respeita às regras gerais da [ORDA](ORDA/dsMapping.md#general-rules).
 
 Quando abrir a sessão, as sentenças abaixo são equivalentes e devolvem uma referência sobre o mesmo objeto datastore:
 
@@ -262,7 +262,7 @@ Um [Datastore](ORDA/dsMapping.md#datastore) é o objeto de interface subministra
 
 #### Descrição
 
-A função `.cancelTransaction()` <!-- REF #DataStoreClass.cancelTransaction().Summary -->cancela a transação<!-- END REF --> opened by the [`.startTransaction()`](#starttransaction) function at the corresponding level in the current process for the specified datastore.
+A função `.cancelTransaction()` <!-- REF #DataStoreClass.cancelTransaction().Summary -->cancela a transação<!-- END REF --> aberto pela função [`.startTransaction()`](#starttransaction) ao nível correspondente no processo actual para o datastore especificado.
 
 A função `.cancelTransaction()` cancela qualquer mudança realizado nos dados durante a transação.
 
@@ -330,7 +330,7 @@ In such cases, you can use `.clearAllRemoteContexts()` to clear your contexts an
 
 #### Descrição
 
-A função `.encryptionStatus()` <!-- REF #DataStoreClass.encryptionStatus().Summary -->returns an object providing the encryption status for the current data file<!-- END REF --> (i.e., the data file of the `ds` datastore). Também se proporciona o estado de cada tabela.
+A função `.encryptionStatus()` <!-- REF #DataStoreClass.encryptionStatus().Summary -->devolve um objecto que fornece o estado de encriptação para o ficheiro de dados actual<!-- END REF --> (ou seja, o ficheiro de dados do datastore `ds`). Também se proporciona o estado de cada tabela.
 > Use the `Data file encryption status` command to determine the encryption status of any other data file.
 
 **Valor retornado**
@@ -478,7 +478,7 @@ $info:=$ds.getAllRemoteContexts()
 
 #### Descrição
 
-A função `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->The `.getInfo()` function<!-- END REF -->. Esta função é útil para configurar o código genérico.
+A função `.getInfo()` <!-- REF #DataStoreClass.getInfo().Summary -->devolve um objecto que fornece informação sobre o datastore<!-- END REF -->. Esta função é útil para configurar o código genérico.
 
 **Objeto devolvido**
 
@@ -542,10 +542,10 @@ Em um armazém de dados remoto:
 
 
 <!-- REF #DataStoreClass.getRemoteContextInfo().Params -->
-| Parâmetros  | Tipo   |    | Descrição                                                          |
-| ----------- | ------ | -- | ------------------------------------------------------------------ |
-| contextName | Text   | -> | Nome do contexto                                                   |
-| Resultados  | Objeto | <- | Description of the optimization context|<!-- END REF --> |
+| Parâmetros  | Tipo   |    | Descrição                                                       |
+| ----------- | ------ | -- | --------------------------------------------------------------- |
+| contextName | Text   | -> | Nome do contexto                                                |
+| Resultados  | Objeto | <- | Descrição do contexto de optimização|<!-- END REF --> |
 
 > **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
 
@@ -557,7 +557,7 @@ For more information on how optimization contexts can be created, see [client/se
 
 #### Objeto devolvido
 
-The returned object has the following properties:
+O objeto retornado tem as propriedades abaixo:
 
 | Propriedade            | Tipo | Descrição                                                                                                                                                                                                                                                                     |
 | ---------------------- | ---- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -570,7 +570,7 @@ Since contexts behave as filters for attributes, if *main* is returned empty, it
 
 #### Exemplo
 
-See the example from the [.setRemoteContextInfo()](#example-1-3) section.
+Ver o exemplo da secção [.setRemoteContextInfo()](#example-1-3).
 
 #### Veja também
 
@@ -593,13 +593,13 @@ See the example from the [.setRemoteContextInfo()](#example-1-3) section.
 
 
 <!-- REF #DataStoreClass.getRequestLog().Params -->
-| Parâmetros | Tipo       |    | Descrição                                                                               |
-| ---------- | ---------- |:--:| --------------------------------------------------------------------------------------- |
-| Resultados | Collection | <- | Collection of objects, where each object describes a request|<!-- END REF --> |
+| Parâmetros | Tipo       |    | Descrição                                                                           |
+| ---------- | ---------- |:--:| ----------------------------------------------------------------------------------- |
+| Resultados | Collection | <- | Coleção de objetos onde cada objeto descreve uma petição|<!-- END REF --> |
 
 #### Descrição
 
-A função `.getRequestLog()` <!-- REF #DataStoreClass.getRequestLog().Summary -->returns the ORDA requests logged in memory on the client side<!-- END REF -->. .
+A função `.getRequestLog()` <!-- REF #DataStoreClass.getRequestLog().Summary -->devolve os pedidos ORDA registados na memória do lado do cliente<!-- END REF -->. .
 
 Esta função deve ser chamada em um 4D remoto, do contrário devolve uma coleção vazia. Foi criado para depuração em configurações de cliente/servidor.
 
@@ -948,16 +948,16 @@ persons.lastname, persons.firstname"; "main"; 30)
 
 #### Descrição
 
-A função `.startRequestLog()` <!-- REF #DataStoreClass.startRequestLog().Summary -->starts the logging of ORDA requests on the client side<!-- END REF -->.
+A função `.startRequestLog()` <!-- REF #DataStoreClass.startRequestLog().Summary -->inicia o registo dos pedidos ORDA no lado do cliente<!-- END REF -->.
 
 Esta função deve ser chamada em um 4D remoto, do contrário não faz nada. Foi criado para depuração em configurações de cliente/servidor.
 
 O registro de petições ORDA pode ser enviado a um arquivo ou a memória, dependendo do tipo de parâmetro:
 
-* Se passar um objeto *file* criado com o comando `File`, os dados de registro se escrevem neste arquivo como uma coleção de objetos (formato JSON). Each object represents a request.<br/>If the file does not already exist, it is created. No caso contrário, ou seja, se o arquivo já existir, os novos dados de registro serão adicionados a ele. Se chamar a `.startRequestLog( )` com um arquivo enquanto se iniciou previamente um registro na memória, o registro em memória para e é esvaziado.
+* Se passar um objeto *file* criado com o comando `File`, os dados de registro se escrevem neste arquivo como uma coleção de objetos (formato JSON). Cada objeto representa uma petição.<br/>Se o arquivo não existir, será criado. No caso contrário, ou seja, se o arquivo já existir, os novos dados de registro serão adicionados a ele. Se chamar a `.startRequestLog( )` com um arquivo enquanto se iniciou previamente um registro na memória, o registro em memória para e é esvaziado.
 > Deve adicionar manualmente um caractere \N ao final do arquivo para realizar uma validação JSON
 
-* Se passar um inteiro *reqNum*, se esvazia o registro em memória (se houver) e se inicializa um novo registro. It will keep *reqNum* requests in memory until the number is reached, in which case the oldest entries are emptied (FIFO stack).<br/>If `.startRequestLog()` is called with a *reqNum* while a logging was previously started in a file, the file logging is stopped.
+* Se passar um inteiro *reqNum*, se esvazia o registro em memória (se houver) e se inicializa um novo registro. Vai manter *reqNum* petições em memória até que se alcance o número, em cujo caso se esvaziam as entradas mais antigas (pilha FIFO).<br/>Se chamar a `.startRequestLog()` com um *reqNum* enquanto tiver iniciado previamente um registro em um arquivo, se para o registro do arquivo.
 
 * Se não tiver passado nenhum parâmetro, o registro se inicia na memória. Se chamou previamente a `.startRequestLog()` com um *reqNum* (antes de um `.stopRequestLog()`), os datos do registro são empilhados em memória até a próxima vez que se esvazie o registro ou se chame a `.stopRequestLog()`.
 
@@ -1121,7 +1121,7 @@ Ver exemplos [`.startRequestLog()`](#startrequestlog).
 
 #### Descrição
 
-A função `.validateTransaction()` <!-- REF #DataStoreClass.validateTransaction().Summary -->aceita a transação <!-- END REF -->that was started with [`.startTransaction()`](#starttransaction) at the corresponding level on the specified datastore.
+A função `.validateTransaction()` <!-- REF #DataStoreClass.validateTransaction().Summary -->aceita a transação <!-- END REF -->que foi iniciado com [`.startTransaction()`](#starttransaction) ao nível correspondente no datastore especificado.
 
 A função salva as mudanças nos dados do datastore que se produziram durante a transação.
 
