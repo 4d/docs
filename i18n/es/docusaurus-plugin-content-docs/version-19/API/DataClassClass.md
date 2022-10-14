@@ -111,7 +111,7 @@ Considerando las propiedades de tabla siguientes:
 
 #### Descripción
 
-The `.all( )` function <!-- REF #DataClassClass.all().Summary -->consulta el almacén de datos para encontrar todas las entidades relacionadas con la clase de datos y las devuelve como una selección de entidades<!-- END REF -->.
+La función `.all( )` <!-- REF #DataClassClass.all().Summary -->consulta el almacén de datos para encontrar todas las entidades relacionadas con la clase de datos y las devuelve como una selección de entidades<!-- END REF -->.
 
 Las entidades se devuelven en el orden por defecto, que es inicialmente el orden en que fueron creadas. Tenga en cuenta, sin embargo, que si se han eliminado entidades y se han añadido otras nuevas, el orden por defecto ya no refleja el orden de creación.
 
@@ -485,7 +485,7 @@ El método de proyecto ***SearchDuplicate*** busca valores duplicados en cualqui
 
 #### Descripción
 
-The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->devuelve un objeto que ofrece información sobre la clase de datos<!-- END REF -->. Esta función es útil para configurar el código genérico.
+La función `.getInfo( )` <!-- REF #DataClassClass.getInfo().Summary -->devuelve un objeto que ofrece información sobre la clase de datos<!-- END REF -->. Esta función es útil para configurar el código genérico.
 
 **Objeto devuelto**
 
@@ -556,7 +556,7 @@ The `.getInfo( )` function <!-- REF #DataClassClass.getInfo().Summary -->devuelv
 
 #### Descripción
 
-The `.new( )` function <!-- REF #DataClassClass.new().Summary -->crea en memoria y devuelve una nueva entidad en blanco relacionada con la Dataclass<!-- END REF -->.
+La función `.new( )` <!-- REF #DataClassClass.new().Summary -->crea en memoria y devuelve una nueva entidad en blanco relacionada con la Dataclass<!-- END REF -->.
 
 El objeto entidad se crea en memoria y no se guarda en la base de datos hasta que se llama a la función [`.save( )`](EntityClass.md#save). Si la entidad se borra antes de ser guardada, no se puede recuperar.
 
@@ -646,7 +646,7 @@ Cuando se crea, la selección de entidades no contiene ninguna entidad (`mySelec
 
 #### Descripción
 
-The `.query( )` function <!-- REF #DataClassClass.query().Summary -->busca entidades que cumplan los criterios de búsqueda especificados en *queryString* o *formula* y (opcionalmente) *valor*<!-- END REF -->para todas las entidades de la clase de datos, y devuelve un nuevo objeto de tipo `EntitySelection` que contiene todas las entidades encontradas. Se aplica carga diferida.
+La función `.query( )` <!-- REF #DataClassClass.query().Summary -->busca entidades que cumplan los criterios de búsqueda especificados en *queryString* o *formula* y (opcionalmente) *valor*<!-- END REF -->para todas las entidades de la clase de datos, y devuelve un nuevo objeto de tipo `EntitySelection` que contiene todas las entidades encontradas. Se aplica carga diferida.
 
 Si no se encuentran entidades coincidentes, se devuelve una `EntitySelection` vacía.
 
