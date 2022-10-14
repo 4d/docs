@@ -279,7 +279,7 @@ Para la traducción de la aplicación, puede introducir una referencia XLIFF en 
 
 ---
 
-## Variable Calculation
+## Cálculo de variables
 
 This property sets the type of calculation to be done in a [column footer](listbox_overview.md#list-box-footers) area.
 > The calculation for footers can also be set using the [`LISTBOX SET FOOTER CALCULATION`](https://doc.4d.com/4dv19/help/command/en/page1140.html) 4D command.
