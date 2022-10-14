@@ -45,7 +45,7 @@ myHttpRequestOptions := cs.MyHttpRequestOptions.new("GET"; $headers; "")
 var $request : 4D.HTTPRequest
 $request:=4D.HTTPRequest.new("www.google.com"; myHttpRequestOptions)
 $request.wait() //If you want to handle the request synchronously
-//Now you can use $request.response to access the result of the request or $request.error to check the error that happened.
+//Now pode usar $request.response para aceder ao resultado do pedido ou $request.error para verificar o erro que aconteceu.
 ```
 
 ### HTTPRequest Object
@@ -288,9 +288,9 @@ The `.returnResponseBody` property contains <!-- REF #HTTPRequestClass.returnRes
 
 
 <!-- REF #HTTPRequestClass.terminate().Params -->
-| Parâmetros | Tipo |  | Descrição                                                  |
-| ---------- | ---- |::| ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF -->
+| Parâmetros | Tipo |  | Descrição                                             |
+| ---------- | ---- |::| ----------------------------------------------------- |
+|            |      |  | Não exige nenhum parâmetro|<!-- END REF -->
 
 |
 
