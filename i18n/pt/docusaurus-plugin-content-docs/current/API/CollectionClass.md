@@ -173,7 +173,7 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 
 #### Descrição
 
-O comando `New shared collection` <!-- REF #_command_.New shared collection.Summary --> creates a new empty or prefilled shared collection<!-- END REF --> e devolve a sua referência.
+O comando `New shared collection` <!-- REF #_command_.New shared collection.Summary --> cria uma nova colecção partilhada vazia ou pré-carregada<!-- END REF --> e devolve a sua referência.
 
 Adding an element to this collection must be surrounded by the [`Use... End`](Concepts/shared.md#useend-use) use structure, otherwise an error is generated. Ler um elemento sem a estrutura é entretanto possível.
 > Para saber mais sobre coleções partilhadas, veja a página [Shared objects and collections](Concepts/shared.md).
@@ -440,7 +440,7 @@ $c2:=$c.concat(6;7;8) //[1,2,3,4,5,6,7,8]
 
 #### Descrição
 
-A função `.copy()` <!-- REF #collection.copy().Summary --> returns a deep copy of the collection instance<!-- END REF -->.***Deep copy*** means that objects or collections within the original collection are duplicated and do not share any reference with the returned collection.
+A função `.copy()` <!-- REF #collection.copy().Summary --> returns a deep copy of the collection instance<!-- END REF -->.***Deep copy*** significa que os objectos ou colecções dentro da colecção original são duplicados e não partilham qualquer referência com a colecção devolvida.
 > Essa função não modifica a coleção original.
 
 Se passado, o parâmetro *option* pode conter uma das constantes abaixo (ou ambas):
@@ -556,7 +556,7 @@ Esse exemplo ilustra o uso da opção `ck resolve pointers`:
 
 #### Descrição
 
-A função `.count()` <!-- REF #collection.count().Summary -->returns the number of non-null elements in the collection<!-- END REF -->.
+A função `.count()` <!-- REF #collection.count().Summary -->devolve o número de elementos não-nulos na colecção<!-- END REF -->.
 
 Se a coleção conter objetos, pode passar o parâmetro *propertyPath*. Nesse caso, só elementos que conterem *propertyPath* serão levados em consideração.
 
@@ -604,7 +604,7 @@ Se a coleção conter objetos, pode passar o parâmetro *propertyPath*. Nesse ca
 
 #### Descrição
 
-A função `.countValues()` <!-- REF #collection.countValues().Summary -->returns the number of times value is found in the collection<!-- END REF -->.
+A função `.countValues()` <!-- REF #collection.countValues().Summary -->devolve o número de vezes que o valor é encontrado na colecção<!-- END REF -->.
 
 Pode passar em *value*:
 
@@ -683,7 +683,7 @@ O parâmetro opcional *propertyPath* permite contar valores dentro de uma coleç
 
 #### Descrição
 
-A função `.distinct()` <!-- REF #collection.distinct().Summary -->returns a collection containing only distinct (different) values from the original collection<!-- END REF -->.
+A função `.distinct()` <!-- REF #collection.distinct().Summary -->devolve uma colecção contendo apenas valores distintos (diferentes) da colecção original<!-- END REF -->.
 > Essa função não modifica a coleção original.
 
 A coleção retornada é ordenada automaticamente. Valores **Null** não são retornados.
@@ -737,7 +737,7 @@ Se a coleção conter objetos, pode passar o parâmetro *propertyPath* para indi
 
 #### Descrição
 
-A função `.equal()` <!-- REF #collection.equal().Summary -->compares the collection with collection2 <!-- END REF -->and returns **true** if they are identical (deep comparison).
+A função `.equal()` <!-- REF #collection.equal().Summary -->compara a collection com a collection2 <!-- END REF -->e retorna **true** se forem idênticos (deep comparison).
 
 Como padrão, uma avaliação não-diacrítica é realizada. Se quiser que a avaliação diferencie maiúsculas de minúsculas e caracteres acentuados, passe a constante`ck diacritical` no parâmetro option.
 > Elementos com valores **Null** não são a mesma coisa que valores Undefined.
@@ -789,9 +789,9 @@ Como padrão, uma avaliação não-diacrítica é realizada. Se quiser que a ava
 | Parâmetros | Tipo         |    | Descrição                                                                          |
 | ---------- | ------------ |:--:| ---------------------------------------------------------------------------------- |
 | startFrom  | Integer      | -> | Índice para início do teste em                                                     |
-| formula    | 4D. Function | -> | Formula object                                                                     |
-| methodName | Text         | -> | Name of a method                                                                   |
-| param      | Mixed        | -> | Parameter(s) to pass to *formula* or *methodName*                                  |
+| formula    | 4D. Function | -> | Objecto fórmula                                                                    |
+| methodName | Text         | -> | Nome de um método                                                                  |
+| param      | Mixed        | -> | Parâmetro(s) a passar para *formula* ou *methodName*                               |
 | Resultados | Booleano     | <- | True se todos os elementos passarem o teste com sucesso|<!-- END REF --> |
 
 
@@ -804,7 +804,7 @@ You designate the callback to be executed to evaluate collection elements using 
 - *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
 - or *methodName*, the name of a project method (text).
 
-The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for every element fulfilling the test. It receives an `Object` in first parameter ($1).
+The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for every element fulfilling the test. Recebe um `objecto ` no primeiro parâmetro ($1).
 
 The callback receives the following parameters:
 
@@ -1010,9 +1010,9 @@ Em caso de inconsistências, as regras abaixos são seguidas:
 <!-- REF #collection.filter().Params -->
 | Parâmetros | Tipo         |    | Descrição                                                                                |
 | ---------- | ------------ |:--:| ---------------------------------------------------------------------------------------- |
-| formula    | 4D. Function | -> | Formula object                                                                           |
-| methodName | Text         | -> | Name of a method                                                                         |
-| param      | any          | -> | Parameter(s) to pass to *formula* or *methodName*                                        |
+| formula    | 4D. Function | -> | Objecto fórmula                                                                          |
+| methodName | Text         | -> | Nome de um método                                                                        |
+| param      | any          | -> | Parâmetro(s) a passar para *formula* ou *methodName*                                     |
 | Resultados | Collection   | <- | Nova coleção contendo elementos filtrados (cópia superficial)|<!-- END REF --> |
 
 
@@ -1026,7 +1026,7 @@ You designate the callback to be executed to filter collection elements using ei
 - *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
 - or *methodName*, the name of a project method (text).
 
-The callback is called with the parameter(s) passed in *param* (optional). The callback is called with the parameter(s) passed in *param* (optional). It receives an `Object` in first parameter ($1).
+The callback is called with the parameter(s) passed in *param* (optional). The callback is called with the parameter(s) passed in *param* (optional). Recebe um `objecto ` no primeiro parâmetro ($1).
 
 The callback receives the following parameters:
 
@@ -1089,13 +1089,13 @@ Se quiser filtrar elementos de acordo com seu tipo de valor:
 
 
 <!-- REF #collection.find().Params -->
-| Parâmetros | Tipo         |    | Descrição                                                               |
-| ---------- | ------------ |:--:| ----------------------------------------------------------------------- |
-| startFrom  | Integer      | -> | Índice onde inicia a pesquisa                                           |
-| formula    | 4D. Function | -> | Formula object                                                          |
-| methodName | Text         | -> | Name of a method                                                        |
-| param      | any          | -> | Parameter(s) to pass to *formula* or *methodName*                       |
-| Resultados | any          | <- | First value found, or Undefined if not found|<!-- END REF --> |
+| Parâmetros | Tipo         |    | Descrição                                                                           |
+| ---------- | ------------ |:--:| ----------------------------------------------------------------------------------- |
+| startFrom  | Integer      | -> | Índice onde inicia a pesquisa                                                       |
+| formula    | 4D. Function | -> | Objecto fórmula                                                                     |
+| methodName | Text         | -> | Nome de um método                                                                   |
+| param      | any          | -> | Parâmetro(s) a passar para *formula* ou *methodName*                                |
+| Resultados | any          | <- | Primeiro valor encontrado ou Undefined se não encontrado|<!-- END REF --> |
 
 
 #### Descrição
@@ -1108,7 +1108,7 @@ You designate the callback to be executed to evaluate collection elements using 
 - *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
 - or *methodName*, the name of a project method (text).
 
-The callback is called with the parameter(s) passed in *param* (optional). The callback is called with the parameter(s) passed in *param* (optional). It receives an `Object` in first parameter ($1).
+The callback is called with the parameter(s) passed in *param* (optional). The callback is called with the parameter(s) passed in *param* (optional). Recebe um `objecto ` no primeiro parâmetro ($1).
 
 The callback receives the following parameters:
 
@@ -1179,13 +1179,13 @@ $c2:=$c.find(Formula($1.value.name=$2); "Clanton")  //$c2={name:Clanton,zc:35046
 
 
 <!-- REF #collection.findIndex().Params -->
-| Parâmetros | Tipo         |    | Descrição                                                                 |
-| ---------- | ------------ |:--:| ------------------------------------------------------------------------- |
-| startFrom  | Integer      | -> | Índice onde inicia a pesquisa                                             |
-| formula    | 4D. Function | -> | Formula object                                                            |
-| methodName | Text         | -> | Name of a method                                                          |
-| param      | any          | -> | Parameter(s) to pass to *formula* or *methodName*                         |
-| Resultados | Integer      | <- | Index of first value found, or -1 if not found|<!-- END REF --> |
+| Parâmetros | Tipo         |    | Descrição                                                                              |
+| ---------- | ------------ |:--:| -------------------------------------------------------------------------------------- |
+| startFrom  | Integer      | -> | Índice onde inicia a pesquisa                                                          |
+| formula    | 4D. Function | -> | Objecto fórmula                                                                        |
+| methodName | Text         | -> | Nome de um método                                                                      |
+| param      | any          | -> | Parâmetro(s) a passar para *formula* ou *methodName*                                   |
+| Resultados | Integer      | <- | Indice do primeiro valor encontrado ou -1 se não encontrado|<!-- END REF --> |
 
 
 #### Descrição
@@ -1198,7 +1198,7 @@ You designate the callback to be executed to evaluate collection elements using 
 - *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
 - *methodName*, o nome de um método projecto (texto).
 
-The callback is called with the parameter(s) passed in *param* (optional). The callback is called with the parameter(s) passed in *param* (optional). It receives an `Object` in first parameter ($1).
+The callback is called with the parameter(s) passed in *param* (optional). The callback is called with the parameter(s) passed in *param* (optional). Recebe um `objecto ` no primeiro parâmetro ($1).
 
 The callback receives the following parameters:
 
@@ -1327,7 +1327,7 @@ Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa 
 
 #### Descrição
 
-The `.indices()` function works exactly the same as the [`.query()`](#query) function but <!-- REF #collection.indices().Summary -->returns indexes, in the original collection, of object collection elements that match the *queryString* search conditions<!-- END REF -->, and not elements themselves. Indices são retornados em ordem ascendente.
+A função `.indices()` funciona exactamente da mesma forma que a função [`.query()`](#query) mas <!-- REF #collection.indices().Summary -->returns indexes, in the original collection, of object collection elements that match the *queryString* search conditions<!-- END REF -->, and not elements themselves. Indices são retornados em ordem ascendente.
 > Essa função não modifica a coleção original.
 
 O parâmetro *queryString* usa a sintaxe abaixo:
@@ -1479,7 +1479,7 @@ Como padrão, elementos null ou vazios da coleção são retornados na string re
 
 #### Descrição
 
-A função `.lastIndexOf()` <!-- REF #collection.lastIndexOf().Summary -->searches the *toSearch* expression among collection elements and returns the index of the last occurrence<!-- END REF -->, or -1 if it was not found.
+A função `.lastIndexOf()` <!-- REF #collection.lastIndexOf().Summary -->searches the *toSearch* expression among collection elements and returns the index of the last occurrence<!-- END REF -->ou -1 se não foi encontrado.
 > Essa função não modifica a coleção original.
 
 Em *toSearch*, passe a expressão para encontrar na coleção. Pode passar:
@@ -1568,9 +1568,9 @@ A propriedade `.length` é iniciada quando a coleção for criada. Adicionar ou 
 <!-- REF #collection.map().Params -->
 | Parâmetros | Tipo         |    | Descrição                                                      |
 | ---------- | ------------ |:--:| -------------------------------------------------------------- |
-| formula    | 4D. Function | -> | Formula object                                                 |
-| methodName | Text         | -> | Name of a method                                               |
-| param      | any          | -> | Parameter(s) to pass to *formula* or *methodName*              |
+| formula    | 4D. Function | -> | Objecto fórmula                                                |
+| methodName | Text         | -> | Nome de um método                                              |
+| param      | any          | -> | Parâmetro(s) a passar para *formula* ou *methodName*           |
 | Resultados | Collection   | <- | Collection de valores transformados|<!-- END REF --> |
 
 
@@ -1585,7 +1585,7 @@ You designate the callback to be executed to evaluate collection elements using 
 - *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
 - or *methodName*, the name of a project method (text).
 
-The callback is called with the parameter(s) passed in *param* (optional). The callback is called with the parameter(s) passed in *param* (optional). It receives an `Object` in first parameter ($1).
+The callback is called with the parameter(s) passed in *param* (optional). The callback is called with the parameter(s) passed in *param* (optional). Recebe um `objecto ` no primeiro parâmetro ($1).
 
 The callback receives the following parameters:
 
@@ -1637,7 +1637,7 @@ $c2:=$c.map(Formula(Round(($1.value/$2)*100; 2)); $c.sum())
 
 #### Descrição
 
-A função `.max()` <!-- REF #collection.max().Summary -->returns the element with the highest value in the collection<!-- END REF --> (the last element of the collection as it would be sorted in ascending order using the [`.sort()`](#sort) function).
+A função `.max()` <!-- REF #collection.max().Summary -->returns the element with the highest value in the collection<!-- END REF --> (o último elemento da colecção como seria classificado em ordem ascendente utilizando a função [.sort()``](#sort)).
 > Essa função não modifica a coleção original.
 
 Se a coleção conter objetos, pode passar o parâmetro *propertyPath* para indicar a propriedade objeto cujos valores máximos você quer obter.
@@ -1688,7 +1688,7 @@ Se *end* < 0 , é recalculado como sendo *end:=end+length*.
 
 #### Descrição
 
-A função `.min()` <!-- REF #collection.min().Summary -->returns the element with the smallest value in the collection<!-- END REF --> (the first element of the collection as it would be sorted in ascending order using the [`.sort()`](#sort) function).
+A função `.min()` <!-- REF #collection.min().Summary -->returns the element with the smallest value in the collection<!-- END REF --> (o primeiro elemento da colecção como seria classificado em ordem ascendente utilizando a função [.sort()``](#sort)).
 > Essa função não modifica a coleção original.
 
 Se a coleção conter diferentes tipos de valores, a função `.min()` devolverá o valor mínimo dentro do primeiro tipo de elemento na ordem da lista de tipos (ver a descrição de [`.sort()`](#sort)).
@@ -1872,8 +1872,8 @@ Ordenar com uma rota de propriedade:
 <!-- REF #collection.orderByMethod().Params -->
 | Parâmetros | Tipo         |    | Descrição                                                                |
 | ---------- | ------------ |:--:| ------------------------------------------------------------------------ |
-| formula    | 4D. Function | -> | Formula object                                                           |
-| methodName | Text         | -> | Name of a method                                                         |
+| formula    | 4D. Function | -> | Objecto fórmula                                                          |
+| methodName | Text         | -> | Nome de um método                                                        |
 | extraParam | any          | -> | Parâmetro(s) a passar                                                    |
 | Resultados | Collection   | <- | Cópia ordenada da coleção (cópia superficial)|<!-- END REF --> |
 
@@ -2185,8 +2185,8 @@ Mais exemplos de pesquisas podem ser encontrados na página `dataClass.query()`.
 <!-- REF #collection.reduce().Params -->
 | Parâmetros | Tipo                                            |    | Descrição                                                                         |
 | ---------- | ----------------------------------------------- |:--:| --------------------------------------------------------------------------------- |
-| formula    | 4D. Function                                    | -> | Formula object                                                                    |
-| methodName | Text                                            | -> | Name of a method                                                                  |
+| formula    | 4D. Function                                    | -> | Objecto fórmula                                                                   |
+| methodName | Text                                            | -> | Nome de um método                                                                 |
 | initValue  | Text, Number, Object, Collection, Date, Boolean | -> | Value to use as the first argument to the first call of *formula* or *methodName* |
 | param      | expressão                                       | -> | Parâmetro(s) a passar                                                             |
 | Resultados | Text, Number, Object, Collection, Date, Boolean | <- | Resultado do valor do acumulador|<!-- END REF -->                       |
@@ -2288,7 +2288,7 @@ In *index*, pass the position where you want the element to be removed from the 
 > **Aviso**: Lembre que elementos coleção são numerados a partir de 0. If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*).
 
 *   Se *index* < 0, será recalculado como  *index:=index+length* (é considerado como o offset do final da coleção).
-*   If the calculated value < 0, *index* is set to 0.
+*   Se o valor calculado < 0, *index* será estabelecido como 0.
 *   If the calculated value > the length of the collection, *index* is set to the length.
 
 In *howMany*, pass the number of elements to remove from *index*. If *howMany* is not specified, then one element is removed.
@@ -2443,7 +2443,7 @@ A função `.reverse()` <!-- REF #collection.reverse().Summary -->returns a deep
 A função `.shift()` <!-- REF #collection.shift().Summary -->removes the first element of the collection and returns it as the function result<!-- END REF -->.
 > Essa função modifica a coleção original.
 
-If the collection is empty, this method does nothing.
+Se a colecção estiver vazia, este método não faz nada.
 
 #### Exemplo
 
@@ -2477,19 +2477,19 @@ If the collection is empty, this method does nothing.
 
 
 <!-- REF #collection.slice().Params -->
-| Parâmetros | Tipo       |    | Descrição                                                                           |
-| ---------- | ---------- |:--:| ----------------------------------------------------------------------------------- |
-| startFrom  | Integer    | -> | Início do índice (incluído)                                                         |
-| end        | Integer    | -> | Final do índice (não incluído)                                                      |
-| Resultados | Collection | <- | New collection containing sliced elements (shallow copy)|<!-- END REF --> |
+| Parâmetros | Tipo       |    | Descrição                                                                                |
+| ---------- | ---------- |:--:| ---------------------------------------------------------------------------------------- |
+| startFrom  | Integer    | -> | Início do índice (incluído)                                                              |
+| end        | Integer    | -> | Final do índice (não incluído)                                                           |
+| Resultados | Collection | <- | Nova colecção contendo elementos cortados (cópia superficial)|<!-- END REF --> |
 
 
 #### Descrição
 
-A função `.slice()` <!-- REF #collection.slice().Summary -->returns a portion of a collection into a new collection<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). Summary --> devolve todos os elementos de uma coleção de objetos que coincidem com as condiciones de pesquisa <!-- END REF -->definidas por *queryString* e (opcionalmente) *value* ou *querySettings*. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
+A função `.slice()` <!-- REF #collection.slice().Summary -->devolve uma parte de uma colecção para uma nova colecção<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). Summary --> devolve todos os elementos de uma coleção de objetos que coincidem com as condiciones de pesquisa <!-- END REF -->definidas por *queryString* e (opcionalmente) *value* ou *querySettings*. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > Essa função não modifica a coleção original.
 
-The returned collection contains the element specified by *startFrom* and all subsequent elements up to, but not including, the element specified by *end*. If only the *startFrom* parameter is specified, the returned collection contains all elements from *startFrom* to the last element of the original collection.
+A colecção devolvida contém o elemento especificado por *startFrom* e todos os elementos subsequentes até, mas não incluindo, o elemento especificado por *end*. If only the *startFrom* parameter is specified, the returned collection contains all elements from *startFrom* to the last element of the original collection.
 
 *   Se *index* < 0, será recalculado como *startFrom:=startFrom+length* (é considerado como o offset do final da coleção).
 *   If the calculated value < 0, *startFrom* is set to 0.
@@ -2532,8 +2532,8 @@ The returned collection contains the element specified by *startFrom* and all su
 | Parâmetros | Tipo         |    | Descrição                                                                            |
 | ---------- | ------------ |:--:| ------------------------------------------------------------------------------------ |
 | startFrom  | Integer      | -> | Índice para início do teste em                                                       |
-| formula    | 4D. Function | -> | Formula object                                                                       |
-| methodName | Text         | -> | Name of a method                                                                     |
+| formula    | 4D. Function | -> | Objecto fórmula                                                                      |
+| methodName | Text         | -> | Nome de um método                                                                    |
 | param      | Mixed        | -> | Parâmetro(s) a passar                                                                |
 | Resultados | Booleano     | <- | True if at least one element successfully passed the test|<!-- END REF --> |
 
@@ -2547,7 +2547,7 @@ You designate the 4D code (callback) to be executed to evaluate collection eleme
 - *formula* (recommended syntax), a [Formula object](FunctionClass.md) that can encapsulate any executable expressions, including functions and project methods;
 - or *methodName*, the name of a project method (text).
 
-The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for every element fulfilling the test. It receives an `Object` in first parameter ($1).
+The callback is called with the parameter(s) passed in *param* (optional). The callback can perform any test, with or without the parameter(s) and must return **true** for every element fulfilling the test. Recebe um `objecto ` no primeiro parâmetro ($1).
 
 
 The callback receives the following parameters:
@@ -2563,7 +2563,7 @@ It can set the following parameter(s):
 
 In any case, at the point where `.some()` function encounters the first collection element returning true, it stops calling the callback and returns **true**.
 
-By default, `.some()` tests the whole collection. Optionally, you can pass the index of an element from which to start the test in *startFrom*.
+Como padrão, `.some()` testa toda a colecção. Optionally, you can pass the index of an element from which to start the test in *startFrom*.
 
 *   If *startFrom* >= the collection's length, **False** is returned, which means the collection is not tested.
 *   If *startFrom* < 0, it is considered as the offset from the end of the collection.
@@ -2572,7 +2572,7 @@ By default, `.some()` tests the whole collection. Optionally, you can pass the i
 
 #### Exemplo
 
-You want to know if at least one collection value is >0.
+Quer saber se pelo menos um valor de colecção é >0.
 
 ```4d
  var $c : Collection
@@ -2612,8 +2612,8 @@ You want to know if at least one collection value is >0.
 <!-- REF #collection.sort().Params -->
 | Parâmetros | Tipo         |    | Descrição                                             |
 | ---------- | ------------ |:--:| ----------------------------------------------------- |
-| formula    | 4D. Function | -> | Formula object                                        |
-| methodName | Text         | -> | Name of a method                                      |
+| formula    | 4D. Function | -> | Objecto fórmula                                       |
+| methodName | Text         | -> | Nome de um método                                     |
 | extraParam | any          | -> | Parâmetros para o método                              |
 | Resultados | Collection   | <- | Colecção original ordenada|<!-- END REF --> |
 
@@ -2695,10 +2695,10 @@ $col3:=$col.sort(Formula(String($1.value)<String($1.value2))) //ordem alfabétic
 
 
 <!-- REF #collection.sum().Params -->
-| Parâmetros   | Tipo |    | Descrição                                            |
-| ------------ | ---- |:--:| ---------------------------------------------------- |
-| propertyPath | Text | -> | Rota de propriedade objeto a ser usado para cálculos |
-| Resultados   | Real | <- | Sum of collection values|<!-- END REF -->  |
+| Parâmetros   | Tipo |    | Descrição                                               |
+| ------------ | ---- |:--:| ------------------------------------------------------- |
+| propertyPath | Text | -> | Rota de propriedade objeto a ser usado para cálculos    |
+| Resultados   | Real | <- | Soma dos valores da colecção|<!-- END REF --> |
 
 
 #### Descrição
