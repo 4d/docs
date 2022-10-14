@@ -47,7 +47,7 @@ title: データタイプの概要
 | Real       | 0          |
 | ポインター      | Nil=true   |
 | Text       | ""         |
-| Blob       | Blob サイズ=0 |
+| Blob       | BLOB サイズ=0 |
 | Object     | null       |
 | Collection | null       |
 | Variant    | undefined  |
