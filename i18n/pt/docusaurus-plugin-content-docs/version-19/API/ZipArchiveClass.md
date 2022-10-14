@@ -60,7 +60,7 @@ End if
 
 #### Descrição
 
-The `ZIP Create archive` command <!-- REF #_command_.ZIP Create archive.Summary -->creates a compressed ZIP archive object and returns the status of the operation<!-- END REF -->.
+O comando `ZIP Create archive` <!-- REF #_command_.ZIP Create archive.Summary -->cria um objecto de arquivo ZIP comprimido e devolve o estado da operação<!-- END REF -->.
 
 You can pass a 4D. File, a 4D. Folder, or a zip structure object as first parameter:
 
@@ -253,8 +253,8 @@ Para extrair da pasta root:
 
 #### Descrição
 
-The `.root` property contains <!-- REF #ZipArchiveClass.root.Summary -->a virtual folder providing access to the contents of the ZIP archive<!-- END REF -->.
+A propriedade `.root` contém <!-- REF #ZipArchiveClass.root.Summary -->a virtual folder providing access to the contents of the ZIP archive<!-- END REF -->.
 
 A pasta `root` e seus conteúdos podem ser manipulados com as funções e propriedades [ZipFile](ZipFileClass.md) e [ZipFolder](ZipFolderClass.md).
 
-Essa propriedade é**apenas leitura**.
+Essa propriedade é **apenas leitura**.
