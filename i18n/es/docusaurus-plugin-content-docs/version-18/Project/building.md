@@ -187,7 +187,7 @@ En esta pestaña, usted puede construir aplicaciones cliente y servidor personal
 
 Una aplicación cliente/servidor proviene de la combinación de tres elementos:
 
-* A compiled 4D database,
+* Una base de datos 4D compilada,
 * La aplicación 4D Server,
 * La aplicación 4D Volumen Desktop (macOS y/o Windows).
 
