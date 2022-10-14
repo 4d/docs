@@ -99,7 +99,7 @@ Una selección de entidades es un objeto. Cuando se consulta el datastore, se de
 Una selección de entidades contiene:
 
 *   un conjunto de 0 a X referencias de entidades,
-*   a length property (always),
+*   una propiedad length (siempre),
 *   las propiedades queryPlan y queryPath (si se preguntan durante la consulta).
 
 Una selección de entidades también puede estar vacía.
