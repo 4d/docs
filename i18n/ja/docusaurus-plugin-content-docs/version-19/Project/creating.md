@@ -14,7 +14,7 @@ title: プロジェクトを開発する
 新規プロジェクトを作成するには:
 
 1. 4D または 4D Server を起動します。
-2. Select **New > Project...** from the **File** menu: ![](../assets/en/getStart/projectCreate1.png)OR(4D only) Select **Project...** from the **New** toolbar button:![](../assets/en/getStart/projectCreate2.png)A standard **Save** dialog appears so you can choose the name and location of the 4D project's main folder.
+2. **ファイル** メニューより **新規 ＞ プロジェクト...** を選択します: ![](../assets/en/getStart/projectCreate1.png)<br/> または<br/> (4D のみ) **新規** ツールバーボタンより **プロジェクト...** を選択します: ![](../assets/en/getStart/projectCreate2.png)<br/> 標準の **保存** ダイアログが表示され、4D プロジェクトの名前と保存場所を指定します。
 
 3. プロジェクトフォルダー名を入力したら、**保存**をクリックします。 この名称はつぎの場所に使用されます:
 
@@ -31,7 +31,7 @@ title: プロジェクトを開発する
 
 既存のプロジェクトを 4D で開くには:
 
-1. Select **Open a local application project** in the Welcome Wizard dialog, OR Select **Open/Local Project...** from the **File** menu or the **Open** toolbar button. 標準のファイルを開くためのダイアログが表示されます。
+1. Welcome ウィザードにて **ローカルアプリケーションプロジェクトを開く** を選択します。<br/> または<br/> **ファイル** メニューより **開く ＞ ローカルプロジェクト...** を選択するか、**開く** ツールバーボタンより同様に選択します。 標準のファイルを開くためのダイアログが表示されます。
 
 2. プロジェクトの `.4dproject` ファイルを選択し、**開く** をクリックします。 デフォルトで、プロジェクトはカレントデータファイルとともに開かれます。 ほかにも、次のファイルタイプを選択できます:
 
