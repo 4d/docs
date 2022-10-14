@@ -162,7 +162,7 @@ Utilice este área para definir el tipo por defecto para los objetos de base de 
 - **Numérico**: se utiliza para forzar un tipo numérico de manera no ambigua, bien sea real o entero largo. Esto no anulará las directivas que haya establecido en su proyecto. Puede optimizar el funcionamiento de su base de datos eligiendo el tipo Longint.
 - **Botón**: se utiliza para forzar el tecleo de un botón de manera no ambigua, ya sea Real o Entero largo. Esto no anulará las directivas que haya establecido en su proyecto. Este tipo se aplica a los botones y a las casillas de selección, a los botones imagen, a las rejillas de botones, a los botones radio, a los menús pop-up imagen y a las listas desplegables.
 
-### Compiler Methods for
+### Métodos Compilador para
 
 Esta área le permite renombrar los métodos del compilador que son generados automáticamente por el compilador cuando hace clic en [Declarar tipos](#generate-typing).
 
