@@ -42,7 +42,7 @@ Webプロセスをプリエンプティモードで実行するには、Webサ�
 *   すべての Web関連データベースメソッド:
     *   [`On Web Authentication`](authentication.md#on-web-authentication)
     *   [`On Web Connection`](httpRequests.md#on-web-connection)
-    *   [`On REST Authentication`](REST/configuration.md#using-the-on-rest-authentication-database-method)
+    *   [`On REST Authentication`](REST/configuration.md#on-rest-authentication-データベースメソッドを使用する)
     *   [`On Mobile App Authentication`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-authentication) と [`On Mobile App Action`](https://developer.4d.com/go-mobile/docs/4d/on-mobile-app-action)
 
 *   `compiler_web` プロジェクトメソッド (実際の "実行モード" プロパティに関わらず評価されます)
