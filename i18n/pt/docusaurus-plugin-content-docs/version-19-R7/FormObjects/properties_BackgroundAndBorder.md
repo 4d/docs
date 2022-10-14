@@ -28,9 +28,9 @@ In the case of a list box, by default *Automatic* is selected: the column uses t
 
 #### JSON Grammar
 
-| Nome | Tipo de dados | Possible Values                           |
-| ---- | ------------- | ----------------------------------------- |
-| fill | string        | any css value; "transparent"; "automatic" |
+| Nome | Tipo de dados | Possible Values                                |
+| ---- | ------------- | ---------------------------------------------- |
+| fill | string        | qualquer valor css; "transparent"; "automatic" |
 
 #### Objects Supported
 
