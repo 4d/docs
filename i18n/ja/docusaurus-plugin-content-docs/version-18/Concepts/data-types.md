@@ -57,7 +57,7 @@ title: データタイプの概要
 | 実数     | 0                                                                    | 1.250753659382e+243          | 1.972748538022e-217 (場合による) |
 | ポインター  | Nil=true                                                             | Nil=true                     | Nil=true                    |
 | テキスト   | ""                                                                   | ""                           | ""                          |
-| BLOB   | Blob サイズ=0                                                           | Blob サイズ=0                   | Blob サイズ=0                  |
+| BLOB   | BLOB サイズ=0                                                           | BLOB サイズ=0                   | BLOB サイズ=0                  |
 | オブジェクト | null                                                                 | null                         | null                        |
 | コレクション | null                                                                 | null                         | null                        |
 | バリアント  | undefined                                                            | undefined                    | undefined                   |
