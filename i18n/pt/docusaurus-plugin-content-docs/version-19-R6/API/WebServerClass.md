@@ -75,7 +75,7 @@ Eles oferecem as propriedades abaixo e funções:
 
 <!-- END REF -->
 
-The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the default Web server object, or the Web server object defined through the *option* parameter<!-- END REF -->.
+O comando `WEB Server` <!-- REF #_command_.WEB Server.Summary -->returns the default Web server object, or the Web server object defined through the *option* parameter<!-- END REF -->.
 
 Por padrão, se o parâmetro *opção* for omitido, o comando retorna uma referência ao servidor Web do banco de dados, i. . o servidor web padrão. Para designar o servidor da Web para retornar, você pode passar uma das seguintes constantes no parâmetro de *opção*:
 
@@ -120,7 +120,7 @@ Do seu componente, você quer saber se o servidor Web do banco de dados host est
 
 <!-- END REF -->
 
-The `WEB Server list` command <!-- REF #_command_.WEB Server list.Summary -->returns a collection of all Web server objects available in the 4D application<!-- END REF -->.
+O comando `WEB Server list` <!-- REF #_command_.WEB Server list.Summary -->returns a collection of all Web server objects available in the 4D application<!-- END REF -->.
 
 Uma aplicação 4D pode conter em qualquer lugar de um a vários servidores Web:
 
@@ -152,7 +152,7 @@ Queremos saber quantos servidores rodando estão disponíveis:
 <!-- REF #WebServerClass.accessKeyDefined.Syntax -->**.accessKeyDefined** : Boolean<!-- END REF -->
 
 
-The **.accessKeyDefined** property contains <!-- REF #WebServerClass.accessKeyDefined.Summary -->true if an access key is defined in the settings of the web server<!-- END REF -->. Esta propriedade é usada pelo servidor web WebAdmin para validar a configuração de segurança da interface de administração.
+A propriedade **.accessKeyDefined** contém <!-- REF #WebServerClass.accessKeyDefined.Summary -->true if an access key is defined in the settings of the web server<!-- END REF -->. Esta propriedade é usada pelo servidor web WebAdmin para validar a configuração de segurança da interface de administração.
 
 <!-- REF WebServerClass.certificateFolder.Desc -->
 
@@ -161,7 +161,7 @@ The **.accessKeyDefined** property contains <!-- REF #WebServerClass.accessKeyDe
 <!-- REF #WebServerClass.certificateFolder.Syntax -->**.certificateFolder** : Text<!-- END REF -->
 
 
-Path of the <!-- REF #WebServerClass.certificateFolder.Summary -->folder where the certificate files are located<!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. Ao usar essa propriedade no parâmetro `configurações` do [`. tart()`](#start) função, pode ser um [`Pasta` objeto](FolderClass.md).
+Caminho do <!-- REF #WebServerClass.certificateFolder.Summary -->pasta onde se encontram os ficheiros do certificado<!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. Ao usar essa propriedade no parâmetro `configurações` do [`. tart()`](#start) função, pode ser um [`Pasta` objeto](FolderClass.md).
 
 <!-- END REF -->
 
@@ -331,7 +331,7 @@ Limite de compressão padrão = 1024 bytes
 <!-- REF #WebServerClass.HTTPEnabled.Syntax -->**.HTTPEnabled** : Boolean<!-- END REF -->
 
 
-O <!-- REF #WebServerClass.HTTPEnabled.Summary -->HTTP protocol state<!-- END REF -->.
+O <!-- REF #WebServerClass.HTTPEnabled.Summary -->Estado do protocolo HTTP<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -379,7 +379,7 @@ O <!-- REF #WebServerClass.HTTPSEnabled.Summary -->Estado do protocolo HTTPS<!--
 
 O <!-- REF #WebServerClass.HTTPSPort.Summary -->listening IP port number for HTTPS<!-- END REF -->.
 
-Default = 443
+O padrão = 443
 
 <!-- END REF -->
 
@@ -442,7 +442,7 @@ O <!-- REF #WebServerClass.isRunning.Summary -->web server running state<!-- END
 <!-- REF #WebServerClass.keepSession.Syntax -->**.keepSession** : Boolean<!-- END REF -->
 
 
-Contains <!-- REF #WebServerClass.keepSession.Summary -->`True` if legacy sessions are enabled in the web server, `False` otherwise<!-- END REF -->.
+Contém <!-- REF #WebServerClass.keepSession.Summary -->`True` if legacy sessions are enabled in the web server, `False` otherwise<!-- END REF -->.
 
 ##### Veja também
 
@@ -459,7 +459,7 @@ Contains <!-- REF #WebServerClass.keepSession.Summary -->`True` if legacy sessio
 
 O <!-- REF #WebServerClass.logRecording.Summary -->log requests (logweb.txt) recording value<!-- END REF -->.
 
-- 0 = Do not record (default)
+- 0 = Não registar (por defeito)
 - 1 = Record in CLF format
 - 2 = Record in DLF format
 - 3 = Record in ELF format
@@ -474,9 +474,9 @@ O <!-- REF #WebServerClass.logRecording.Summary -->log requests (logweb.txt) rec
 <!-- REF #WebServerClass.maxConcurrentProcesses.Syntax -->**.maxConcurrentProcesses** : Number<!-- END REF -->
 
 
-O <!-- REF #WebServerClass.maxConcurrentProcesses.Summary -->maximum number of concurrent web processes supported by the web server<!-- END REF -->. When this number (minus one) is reached, 4D will not create any other processes and returns the HTTP status 503 - Service Unavailable to all new requests.
+O <!-- REF #WebServerClass.maxConcurrentProcesses.Summary -->número máximo de processos web simultâneos suportados pelo servidor web<!-- END REF -->. When this number (minus one) is reached, 4D will not create any other processes and returns the HTTP status 503 - Service Unavailable to all new requests.
 
-Possible values: 10 - 32000
+Valores possíveis: 10 - 32000
 
 Default = 100
 
@@ -491,7 +491,7 @@ Default = 100
 
 <!-- REF #WebServerClass.maxRequestSize.Summary -->Maximum size (in bytes) of incoming HTTP requests (POST) that the web server is allowed to process<!-- END REF -->. Passing the maximum value (2147483647) means that, in practice, no limit is set. This limit is used to avoid web server saturation due to incoming requests that are too large. If a request reaches this limit, the web server rejects it.
 
-Possible values: 500000 - 2147483647
+Valores possíveis: 500000 - 2147483647
 
 <!-- END REF -->
 
@@ -523,7 +523,7 @@ Valores possíveis:
 - 3 = TLSv1_2 (default)
 - 4 = TLSv1_3
 
-If modified, the server must be restarted to use the new value.
+Se modificado, o servidor deve ser reiniciado para utilizar o novo valor.
 
 <!-- END REF -->
 
@@ -536,7 +536,7 @@ If modified, the server must be restarted to use the new value.
 
 *Read-only property*
 
-O <!-- REF #WebServerClass.name.Summary -->name of the web server application<!-- END REF -->.
+O <!-- REF #WebServerClass.name.Summary -->nome da aplicação do servidor web<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -562,7 +562,7 @@ O <!-- REF #WebServerClass.openSSLVersion.Summary -->version of the OpenSSL libr
 
 *Read-only property*
 
-O <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->PFS availability on the server<!-- END REF -->.
+O <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->disponibilidade do PFS no servidor<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -572,7 +572,7 @@ O <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->PFS availability on 
 <!-- REF #WebServerClass.rootFolder.Syntax -->**.rootFolder** : Text<!-- END REF -->
 
 
-O <!-- REF #WebServerClass.rootFolder.Summary -->path of web server root folder<!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. When using this property in the `settings` parameter, it can be a `Folder` object.
+O <!-- REF #WebServerClass.rootFolder.Summary -->caminho da pasta raiz do servidor web<!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. When using this property in the `settings` parameter, it can be a `Folder` object.
 
 <!-- END REF -->
 
@@ -582,7 +582,7 @@ O <!-- REF #WebServerClass.rootFolder.Summary -->path of web server root folder<
 <!-- REF #WebServerClass.scalableSession.Syntax -->**.scalableSession** : Boolean<!-- END REF -->
 
 
-Contains <!-- REF #WebServerClass.scalableSession.Summary -->`True` if scalable sessions are used in the web server, and `False` otherwise<!-- END REF -->.
+Contém <!-- REF #WebServerClass.scalableSession.Summary -->`True` if scalable sessions are used in the web server, and `False` otherwise<!-- END REF -->.
 
 ##### Veja também
 
@@ -748,14 +748,14 @@ The function returns an object describing the Web server launch status. This obj
 
 |
 
-The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
+A função `.stop()` <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
 
 If the web server was started, all web connections and web processes are closed, once the currently handled requests are finished. If the web server was not started, the method does nothing.
 > This function resets the customized web settings defined for the session using the *settings* parameter of the [`.start()`](#start) function, if any.
 
 #### Exemplo
 
-To stop the database Web server:
+Para parar o servidor Web da base de dados:
 
 ```4d
  var $webServer : 4D. WebServer
