@@ -661,7 +661,7 @@ As chaves primárias podem ser números (Inteiro) ou strings. Você pode "força
 | ---------- | ---- | -- | ---------------------------------------------------------------------------------------- |
 | result     | Text | <- | Context attributes linked to the entity, separated by a comma|<!-- END REF --> |
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
+> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
