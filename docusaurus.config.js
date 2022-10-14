@@ -104,7 +104,7 @@ module.exports = {
     algolia: {
 		//apiKey: '5f22ebbb9382abafeadc3e86ca47d4af',
 	    	//apiKey: '042ce0f78ae81e1d41589c5a6f26de8d',
-	    	apiKey: 'eeb8ff38264e57e29beabbfd4ce6f35e'
+	    	apiKey: 'eeb8ff38264e57e29beabbfd4ce6f35e',
 		appId: 'OJ04C0M3CU',
       indexName: '4d',
 	  //algoliaOptions: {
