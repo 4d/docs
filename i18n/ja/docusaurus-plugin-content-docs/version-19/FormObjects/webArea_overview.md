@@ -178,9 +178,9 @@ macOS 上の Webエリアで、プログラムにより処理される URL は�
 
 Webインスペクターを表示させるには、`WA OPEN WEB INSPECTOR` コマンドを実行するか、 Webエリアのコンテキストメニューを使用します。
 
-- **Execute the `WA OPEN WEB INSPECTOR` command**<br/> This command can be used directly with onscreen (form object) and offscreen web areas. オフスクリーンの Webエリアの場合、そのエリアは [埋め込みWebレンダリングエンジン](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) を使用している必要があります (Webインスペクターはこの設定でのみ利用可能です)。
+- **`WA OPEN WEB INSPECTOR` コマンドの実行**<br/> このコマンドはスクリーン上 (フォームオブジェクト) の、またはオフスクリーンの Webエリアに対して直接使用することができます。 オフスクリーンの Webエリアの場合、そのエリアは [埋め込みWebレンダリングエンジン](properties_WebArea.md#埋め込みwebレンダリングエンジンを使用) を使用している必要があります (Webインスペクターはこの設定でのみ利用可能です)。
 
-- **Use the web area context menu**<br/> This feature can only be used with onscreen web areas and requires that the following conditions are met:
+- **Webエリアコンテキストメニューの使用**<br/> この機能はオンスクリーンの Webエリアでのみ使用することができ、以下の条件を満たしている必要があります:
   - エリアに対して "埋め込みWebレンダリングエンジンを使用" プロパティが選択されている。
   - エリアに対して [コンテキストメニュー](properties_Entry.md#コンテキストメニュー) が有効化されている。
   - インスペクターの使用が、以下の宣言を用いて明示的に有効化されている:

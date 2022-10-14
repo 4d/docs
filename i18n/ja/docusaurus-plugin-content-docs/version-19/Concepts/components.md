@@ -86,7 +86,7 @@ component_method("host_method_name")
  EXECUTE METHOD($1)
 ```
 
-> インタープリターコンポーネントがインストールされたインタープリターホストデータベースは、それがインタープリターコンポーネントのメソッドを呼び出さなければ、コンパイル/シンタックスチェックができます。 そうでない場合、コンパイルまたはシンタックスチェックを実行しようとすると警告ダイアログが表示され、操作を実行することはできません。 Keep in mind that an interpreted method can call a compiled method, but not the reverse, except via the use of the `EXECUTE METHOD` and `EXECUTE FORMULA` commands.
+> インタープリターコンポーネントがインストールされたインタープリターホストデータベースは、それがインタープリターコンポーネントのメソッドを呼び出さなければ、コンパイル/シンタックスチェックができます。 そうでない場合、コンパイルまたはシンタックスチェックを実行しようとすると警告ダイアログが表示され、操作を実行することはできません。 一般的に、インタープリターメソッドはコンパイル済みメソッドを呼び出せますが、逆はできません。これをおこなうには `EXECUTE METHOD` や `EXECUTE FORMULA` コマンドを使用します。
 
 ## 変数の渡し方
 
@@ -282,7 +282,7 @@ SAVE RECORD($tablepointer->)
 
 初期化やデータベースを閉じるコードの実行は、 `On Host Database Event` データベースメソッド を使用しておこなわれます。
 
-> セキュリティ上の理由から、`On Host Database Event` データベースメソッドを使用可能にするためには、その実行をホストデータベースで明示的に許可する必要があります。 For security reasons, you must explicitly authorize the execution of the `On Host Database Event` database method in the host database in order to be able to call it.
+> セキュリティ上の理由から、`On Host Database Event` データベースメソッドを使用可能にするためには、その実行をホストデータベースで明示的に許可する必要があります。 このためには、ストラクチャー設定画面のセキュリティページ内の、**コンポーネントの "On Host Database Event" メソッドを実行** オプションにチェックを入れます。
 
 ## コンポーネントの保護: コンパイル
 

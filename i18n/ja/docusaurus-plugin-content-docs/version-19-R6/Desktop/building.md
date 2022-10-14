@@ -376,7 +376,7 @@ Windows用サーバーアプリケーションのビルドに使用される App
 
 * **Windows**
   * **Server application** - in the `Client Server executable\&#060;ApplicationName&#062;Server/Server Database` subfolder.
-  * **Client application** - in the `Client Server executable\&#060;ApplicationName&#062;Client` subfolder.
+  * **クライアントアプリケーション** - `Client Server executable<ApplicationName>Client` サブフォルダー内にこれらの項目を配置します。
 
 * **macOS**
   * **サーバーアプリケーション** - `<ApplicationName>Server` ソフトウェアパッケージと同階層にこれらの項目を配置します。

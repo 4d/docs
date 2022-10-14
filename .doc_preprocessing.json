@@ -20,7 +20,7 @@
         "syntax_output":"./syntax/en.lproj/syntaxEN.json",
         "config":"../preprocessing.conf",
         "syntax_only":true,
-        "syntax_pretty":false
+        "syntax_pretty":true
     },
     "build_syntax_translated": {
         "path":"./i18n/%language%/docusaurus-plugin-content-docs/current/API/",
@@ -28,11 +28,11 @@
         "syntax_output":"./syntax/%language%.lproj/syntax%LANGUAGE%.json",
         "config":"../../../../../docs/preprocessing.conf",
         "syntax_only":true,
-        "syntax_pretty":false
+        "syntax_pretty":true
     },
     "build_syntax_viewPro": {
         "path":"./docs/ViewPro/",
-        "syntax_output":"./syntax_viewPro/",
+        "syntax_output":"./syntax_viewPro/en.lproj/syntaxEN.json",
         "config":"../preprocessing.conf",
         "syntax_only":true,
         "syntax_pretty":true
@@ -41,7 +41,7 @@
         "path":"./i18n/%language%/docusaurus-plugin-content-docs/current/ViewPro/",
         "languages":["de", "es", "fr", "ja", "pt"],
         "syntax_output":"./syntax_viewPro/%language%.lproj/syntax%LANGUAGE%.json",
-        "config":"../preprocessing.conf",
+        "config":"../../../../../docs/preprocessing.conf",
         "syntax_only":true,
         "syntax_pretty":true
     }
