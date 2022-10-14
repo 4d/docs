@@ -253,7 +253,7 @@ Para la traducción de la base de datos, puede introducir una referencia XLIFF e
 
 ---
 
-## Variable Calculation
+## Cálculo de variables
 
 This property sets the type of calculation to be done in a [column footer](listbox_overview.md#list-box-footers) area.
 > El cálculo de los pies de página también puede definirse con el comando 4D `LISTBOX SET FOOTER CALCULATION`.
