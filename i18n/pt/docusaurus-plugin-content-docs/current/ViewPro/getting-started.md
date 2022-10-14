@@ -107,7 +107,7 @@ A 4D View Pro area handles several objects and elements.
 
 Most of 4D View Pro methods require a *vpAreaName* parameter, which is the [**4D View Pro form area name**](FormObjects/viewProArea_overview.md) (4D form object). This name is the [object name](FormObjects/properties_Object.md#object-name) property.
 
-For example, if you want to set the total number of columns of an area named "myVpArea", you write:
+Por exemplo, se quiser definir o número total de colunas de uma área chamada "myVpArea", escreva:
 
 ```4d
 VP SET COLUMN COUNT("myVpArea";5)
