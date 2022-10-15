@@ -40,7 +40,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.creationTime` devolve <!-- REF #directory.creationTime.Summary -->the creation time of the folder<!-- END REF --> (expresso como um número de segundos a partir das 00:00).
+A propriedade `.creationTime` devolve <!-- REF #directory.creationTime.Summary -->a hora da criação da pasta<!-- END REF --> (expresso como um número de segundos a partir das 00:00).
 
 Essa propriedade é **apenas leitura**.
 
@@ -263,7 +263,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.modificationTime` devolve <!-- REF #directory.modificationTime.Summary -->the time of the folder's last modification<!-- END REF --> (expresso como um número de segundos a partir das 00:00).
+A propriedade `.modificationTime` devolve <!-- REF #directory.modificationTime.Summary -->a hora da última modificação da pasta<!-- END REF --> (expresso como um número de segundos a partir das 00:00).
 
 Essa propriedade é **apenas leitura**.
 
@@ -330,7 +330,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.parent` devolve <!-- REF #directory.parent.Summary -->the parent folder object of the folder<!-- END REF -->. .
+A propriedade `.parent` devolve <!-- REF #directory.parent.Summary -->o objecto Folder pai da pasta<!-- END REF -->. .
 
 Se a pasta não existir no disco, se devolve um icone vazio como padrão.
 
@@ -568,7 +568,7 @@ Se quiser obter todos os arquivos que não são invisíveis na pasta Documents:
 
 #### Descrição
 
-A função `.folder()` <!-- REF #directory.folder().Summary -->creates a `Folder` object inside the parent `Folder` object and returns its reference<!-- END REF -->.
+A função `.folder()` <!-- REF #directory.folder().Summary -->cria um objecto `Folder` dentro do objecto pai `Folder` e devolve a sua referência<!-- END REF -->.
 
 Em *path*, passe uma rota relativa POSIX para designar a pasta a devolver. A rota se avaliará a partir da pasta pai como raíz.
 
@@ -610,7 +610,7 @@ Um objeto `Folder` ou null se *path* não for válido.
 
 #### Descrição
 
-A função `.folders()` <!-- REF #directory.folders().Summary -->returns a collection of `Folder` objects contained in the parent folder<!-- END REF -->.
+A função `.folders()` <!-- REF #directory.folders().Summary -->devolve uma colecção dos objetos `Folder` contidos na pasta pai<!-- END REF -->.
 
 Como padrão, se omitir o parâmetro *options*, só se devolvem as pastas no primeiro nível da pasta. Pode modificar isso passando, no parâmetro *options*, uma ou várias das constantes abaixo:
 
