@@ -331,7 +331,7 @@ A propriedade `.sendTimeOut` contém <!-- REF #transporter.sendTimeOut.Summary -
 
 #### Descrição
 
-The `.user` property contains <!-- REF #transporter.user.Summary --> the user name used for authentication on the mail server<!-- END REF -->.
+A propriedade `.user` contém <!-- REF #transporter.user.Summary --> the user name used for authentication on the mail server<!-- END REF -->.
 
 <!-- END REF -->
 
