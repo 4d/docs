@@ -150,7 +150,7 @@ Resultado:
 
 #### Descripción
 
-The `VP ADD SHEET` command <!-- REF #_method_.VP ADD SHEET.Summary -->inserts a sheet in the document loaded in *vpAreaName*.<!-- END REF -->
+El comando `VP ADD SHEET` <!-- REF #_method_.VP ADD SHEET.Summary -->inserts a sheet in the document loaded in *vpAreaName*.<!-- END REF -->
 
 En *vpAreaName*, pase el nombre del área 4D View Pro.
 
@@ -1856,7 +1856,7 @@ El objeto devuelto contiene, por ejemplo:
 
 #### Descripción
 
-The `VP Get names` command <!-- REF #_method_.VP Get names.Summary -->returns a collection of all defined "names" in the current sheet or in the scope designated by the *scope* parameter<!-- END REF -->.
+El comando `VP Get names` <!-- REF #_method_.VP Get names.Summary -->returns a collection of all defined "names" in the current sheet or in the scope designated by the *scope* parameter<!-- END REF -->.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
@@ -2286,7 +2286,7 @@ The following code checks if preview lines are displayed or hidden in the docume
 
 #### Descripción
 
-The `VP Get spans` command <!-- REF #_method_.VP Get spans.Summary -->retrieves the cell spans in the designated *rangeObj*<!-- END REF -->.
+El comando `VP Get spans` <!-- REF #_method_.VP Get spans.Summary -->retrieves the cell spans in the designated *rangeObj*<!-- END REF -->.
 
 In *rangeObj*, pass a range of cell spans you want to retrieve. If *rangeObj* does not contain a cell span, an empty range is returned.
 
@@ -2591,11 +2591,11 @@ If *tableName* is not found, the command returns **null**.
 
 <!-- REF #_method_.VP Get tables.Params -->
 
-| Parámetros | Tipo       |    | Descripción                                                     |
-| ---------- | ---------- | -- | --------------------------------------------------------------- |
-| vpAreaName | Text       | -> | Nombre de objeto formulario área 4D View Pro                    |
-| sheet      | Integer    | -> | Índice de la hoja (hoja actual si se omite)                     |
-| Result     | Collection | <- | Text collection with all table names|<!-- END REF --> |
+| Parámetros | Tipo       |    | Descripción                                                                        |
+| ---------- | ---------- | -- | ---------------------------------------------------------------------------------- |
+| vpAreaName | Text       | -> | Nombre de objeto formulario área 4D View Pro                                       |
+| sheet      | Integer    | -> | Índice de la hoja (hoja actual si se omite)                                        |
+| Result     | Collection | <- | Colección de textos con todos los nombres de las tablas|<!-- END REF --> |
 
 #### Descripción
 
@@ -2639,7 +2639,7 @@ $tables:=VP Get tables("ViewProArea")
 
 #### Descripción
 
-The `VP Get value` command <!-- REF #_method_.VP Get value.Summary -->retrieves a cell value from a designated cell range<!-- END REF -->.
+El comando `VP Get value` <!-- REF #_method_.VP Get value.Summary -->retrieves a cell value from a designated cell range<!-- END REF -->.
 
 In *rangeObj*, pass a range whose value you want to retrieve.
 
@@ -4369,10 +4369,10 @@ VP SET CELL STYLE(VP Cell("ViewProArea";1;1);$style)
 
 <!-- REF #_method_.VP SET COLUMN ATTRIBUTES.Params -->
 
-| Parámetros  | Tipo   |    | Descripción                                                    |
-| ----------- | ------ | -- | -------------------------------------------------------------- |
-| rangeObj    | Object | -> | Objeto rango                                                   |
-| propertyObj | Object | -> | Object containing column properties|<!-- END REF --> |
+| Parámetros  | Tipo   |    | Descripción                                                               |
+| ----------- | ------ | -- | ------------------------------------------------------------------------- |
+| rangeObj    | Object | -> | Objeto rango                                                              |
+| propertyObj | Object | -> | Objeto que contiene las propiedades de columna|<!-- END REF --> |
 
 #### Descripción
 
@@ -4852,7 +4852,7 @@ VP SET DEFAULT STYLE("myDoc";$style)
 
 #### Descripción
 
-The `VP SET FIELD` command <!-- REF #_method_.VP SET FIELD.Summary -->assigns a 4D database virtual field to a designated cell range<!-- END REF -->.
+El comando `VP SET FIELD` <!-- REF #_method_.VP SET FIELD.Summary -->assigns a 4D database virtual field to a designated cell range<!-- END REF -->.
 
 In *rangeObj*, pass a range of the cell(s) whose value you want to specify. In *rangeObj*, pass a range of the cell(s) whose value you want to specify.
 
@@ -5701,7 +5701,7 @@ VP SET TIME VALUE(VP Cell("ViewProArea";5;2);?12:15:06?;vk pattern long time)
 
 #### Descripción
 
-The `VP SET VALUE` command <!-- REF #_method_.VP SET VALUE.Summary -->assigns a specified value to a designated cell range<!-- END REF -->.
+El comando `VP SET VALUE` <!-- REF #_method_.VP SET VALUE.Summary -->assigns a specified value to a designated cell range<!-- END REF -->.
 
 The command allows you to use a generic code to set and format the types of values in *rangeObj*, whereas other commands, such as [`VP SET TEXT VALUE`](#vp-set-text-value) and [`VP SET NUM VALUE`](#vp-set-num-value), reduce the values to specific types.
 
@@ -5917,7 +5917,7 @@ VP SET WORKBOOK OPTIONS("ViewProArea";$workbookOptions)
 
 #### Descripción
 
-The `VP SHOW CELL` command <!-- REF #_method_.VP SHOW CELL.Summary -->vertically and horizontally repositions the view of the *rangeObj*<!-- END REF -->.
+El comando `VP SHOW CELL` <!-- REF #_method_.VP SHOW CELL.Summary -->vertically and horizontally repositions the view of the *rangeObj*<!-- END REF -->.
 
 In *rangeObj*, pass a range of cells as an object to designate the cells to be viewed. The view of the *rangeObj* will be positioned vertically or horizontally (i.e., where *rangeObj* appears) based on the *vPos* and *hPos* parameters. The *vPos* parameter defines the desired vertical position to display the *rangeObj*, and the *hPos* parameter defines the desired horizontal position to display the *rangeObj*.
 
