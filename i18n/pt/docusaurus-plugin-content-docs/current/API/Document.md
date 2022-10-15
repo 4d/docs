@@ -39,7 +39,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.creationTime` devolve <!-- REF #document.creationTime.Summary -->the creation  time of the file<!-- END REF --> (expresso como um número de segundos a partir das 00:00).
+A propriedade `.creationTime` devolve <!-- REF #document.creationTime.Summary -->a hora da criação do arquivo<!-- END REF --> (expresso como um número de segundos a partir das 00:00).
 
 Essa propriedade é **apenas leitura**.
 
@@ -120,7 +120,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.size` devolve <!-- REF #document.hidden.Summary -->true if the file is set as "hidden" at the system level<!-- END REF -->e false de outra forma.
+A propriedade `.size` devolve <!-- REF #document.hidden.Summary -->true se o arquivo for definido como "escondido" ao nível do sistema<!-- END REF -->e false de outra forma.
 
 Essa propriedade é **apenas leitura**.
 
