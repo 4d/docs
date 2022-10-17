@@ -448,7 +448,7 @@ Valores possíveis:
 - 3 = TLSv1_2 (default)
 - 4 = TLSv1_3
 
-If modified, the server must be restarted to use the new value.
+Se modificado, o servidor deve ser reiniciado para utilizar o novo valor.
 
 > The minimum TLS version used by 4D can be modified for the session using the `SET DATABASE PARAMETER` command, in which case the modification applies to the entire 4D application, including the web server, SQL server and client/server connections.
 

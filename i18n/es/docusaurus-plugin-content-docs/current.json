@@ -32,7 +32,7 @@
     "description": "The label for category ORDA in sidebar docs"
   },
   "sidebar.docs.category.Class API Reference": {
-    "message": "Class API Reference",
+    "message": "Referencia de la API de la clase",
     "description": "The label for category Class API Reference in sidebar docs"
   },
   "sidebar.docs.category.Handling Code": {
@@ -56,7 +56,7 @@
     "description": "The label for category Administration in sidebar docs"
   },
   "sidebar.docs.category.4D Server Administration Window": {
-    "message": "4D Server Administration Window",
+    "message": "Ventana de administración de 4D Server",
     "description": "The label for category 4D Server Administration Window in sidebar docs"
   },
   "sidebar.docs.category.Web Administration": {
@@ -72,7 +72,7 @@
     "description": "The label for category TLS Protocol in sidebar docs"
   },
   "sidebar.docs.category.Licenses & Data Collection": {
-    "message": "Licenses & Data Collection",
+    "message": "Licencias y recolección de datos",
     "description": "The label for category Licenses & Data Collection in sidebar docs"
   },
   "sidebar.docs.category.Access Rights": {
@@ -168,11 +168,11 @@
     "description": "The label for category Build Application in sidebar docs"
   },
   "sidebar.docs.category.Mobile Applications": {
-    "message": "Mobile Applications",
+    "message": "Aplicaciones móviles",
     "description": "The label for category Mobile Applications in sidebar docs"
   },
   "sidebar.docs.link.4D Language Reference": {
-    "message": "4D Language Reference",
+    "message": "Referencia del lenguaje 4D",
     "description": "The label for link 4D Language Reference in sidebar docs, linking to https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Language-Reference.100-5910320.en.html"
   },
   "sidebar.docs.link.4D Mobile App Server": {
@@ -196,7 +196,7 @@
     "description": "The label for link 4D Widgets in sidebar docs, linking to https://doc.4d.com/4Dv19R6/4D/19-R6/4D-Widgets.100-5968122.en.html"
   },
   "sidebar.docs.link.4D Write Pro Interface": {
-    "message": "4D Write Pro Interface",
+    "message": "Interfaz 4D Write Pro",
     "description": "The label for link 4D Write Pro Interface in sidebar docs, linking to https://github.com/4d/4D-WritePro-Interface"
   },
   "sidebar.docs.link.Go Mobile": {

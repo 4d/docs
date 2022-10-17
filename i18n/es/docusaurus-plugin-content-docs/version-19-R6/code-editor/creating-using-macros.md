@@ -48,7 +48,7 @@ The macro-command files of 4D must be in conformity with the XML standard. This 
 
 If a macros file does not contain the declaration statements or cannot be validated, it is not loaded.
 
-## Syntax of 4D macros
+## Síntaxis de macros 4D
 
 Las macros 4D se crean utilizando etiquetas XML personalizadas llamadas "elementos"
 
@@ -92,7 +92,7 @@ Aquí está la lista de etiquetas y su modo de uso:
 |                                  | - format: formato 4D utilizado para mostrar la hora. Si no se define ningún formato, se utilizará el formato predeterminado. Valores = número de formato 4D (0 a 6).                                                                                                                                                                                                                                                                                                                                     |
 | `<clipboard/>`             | Etiqueta reemplazada por el contenido del portapapeles.                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |                                  | *Atributo*:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
-|                                  | - index: Clipboard to be pasted. Valores = número del portapapeles (0 a 9).                                                                                                                                                                                                                                                                                                                                                                                                                              |
+|                                  | - index: portapapeles a pegar. Valores = número del portapapeles (0 a 9).                                                                                                                                                                                                                                                                                                                                                                                                                                |
 
 - Macros can be called using the context menu of the Code Editor or using the type-ahead function (see the following section).\
   ** If you want to conform to XML language specifications, you must not use extended characters (accented characters, quotation marks, etc.).
@@ -106,7 +106,7 @@ Este es un ejemplo de definición de una macro:
 | `<!DOCTYPE macros SYSTEM>`                     | Declaración del documento                                                                                                                       |
 | `<macros>`                                     | Start of macros XML file                                                                                                                        |
 | `<macro name="RecordLoop">`                    | Start of macro definition and name                                                                                                              |
-| `<text>`                                       | Start of macro code                                                                                                                             |
+| `<text>`                                       | Inicio del código de la macro                                                                                                                   |
 | For($i;1;Records in selection(`<Selection/>`)) | The `<Selection/>` tag will be replaced by the selected code in the 4D method at the time of macro insertion (for instance, a table name) |
 | SAVE RECORD(`<Selection/>`)                    |                                                                                                                                                 |
 | NEXT RECORD(`<Selection/>`)                    |                                                                                                                                                 |
@@ -149,7 +149,7 @@ By default, all macros are accessible using the autocomplete (aka type-ahead) fu
 
 You can display your macros in a list of the Code Editor (see [Writing a method](./write-class-method.md)). Basta con hacer doble clic en el nombre de una macro de la lista para llamarla. No es posible excluir una macro específica de esta lista.
 
-## Compatibility notes
+## Notas de compatibilidad
 
 El soporte de macros puede cambiar de una versión de 4D a otra. In order to keep the different versions compatible while maintaining your customizations, 4D does not remove any previous versions. If you want to use the latest features available, you must adapt your version accordingly.
 

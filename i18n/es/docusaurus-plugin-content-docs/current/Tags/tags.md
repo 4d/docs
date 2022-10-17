@@ -348,15 +348,16 @@ Utilizado con los comentarios `<!--#4DELSEIF-->` (opcional), `<!--#4DELSE-->` (o
 
 El parámetro *expresión* puede contener toda expresión 4D válida que devuelva un valor booleano. Debe indicarse entre paréntesis y cumplir con las reglas de sintaxis de 4D.
 
+
 In case of an interpretation error, the text "`<!--#4DIF expression-->`: A Boolean expression was expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`. Likewise, if there are not as many `<!--#4DENDIF-->` as `<!--#4DIF -->`, the text "`<!--#4DIF expression-->`: 4DENDIF expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`.
 
 En caso de un error de interpretación, se inserta el texto "`<!--#4DIF expression-->`: Se esperaba una expresión booleana" en lugar del contenido situado entre `<!--#4DIF -->` y `<!--#4DENDIF-->`. The `<!--#4DIF expression-->` ... `<!--#4DENDIF-->` blocks can be nested in several levels. Like in 4D, each `<!--#4DIF expression-->` must match a `<!--#4DENDIF-->`.
 
-Utilizando la etiqueta `<!--#4DELSEIF-->`, puede probar un número ilimitado de condiciones. Sólo se ejecuta el código que sigue a la primera condición evaluada como `True`. Si ninguna condición es true, no se ejecuta ninguna sentencia (si no hay un final `<!--#4DELSE-->`). Puede utilizar una <!--#4DELSE--> pestaña luego del último<!--#4DELSEIF-->. Si todas las condiciones son falsas, las siguientes instrucciones<!--#4DELSE-->se ejecutan.
+Utilizando la etiqueta `<!--#4DELSEIF-->`, puede probar un número ilimitado de condiciones. Sólo se ejecuta el código que sigue a la primera condición evaluada como `True`. Si ninguna condición es true, no se ejecuta ninguna sentencia (si no hay un final `<!--#4DELSE-->`). You can use a `<!--#4DELSE-->` tag after the last `<!--#4DELSEIF-->`. If all the conditions are false, the statements following the `<!--#4DELSE-->` are executed.
 
 Los dos códigos siguientes son equivalentes.
 
-Código utilizando sólo 4DELSE:
+Code using `4DELSE` only:
 
 ```html
 <!--#4DIF Condition1-->
@@ -566,6 +567,7 @@ Por ejemplo, el siguiente código:
 ...produce el siguiente resultado:
 
 ```
+
 0
 
 1

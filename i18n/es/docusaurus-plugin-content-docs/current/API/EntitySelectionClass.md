@@ -300,7 +300,7 @@ The entity selection must be *alterable*, i.e. it has been created for example b
 *   Si la entity selection está ordenada, *entity* se añade al final de la selección. Si una referencia a la misma entidad ya pertenece a la selección de entidades, se duplica y se añade una nueva referencia.
 *   Si la entity selection no está ordenada, *entity* se añade en cualquier lugar de la selección, sin un orden específico.
 
-**Adding an entity selection**
+**Añadir una selección de entidades**
 
 *   If the entity selection is ordered, its order is kept and *entitySelection* is added at the end of the selection. If references to the same entities of *entitySelection* already belong to the entity selection, they are duplicated and new references are added.
 *   If the entity selection is unordered, it becomes ordered.
