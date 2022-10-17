@@ -46,3 +46,8 @@ title: インストール
 
 ぜひ 4D を楽しんでください！
 
+:::info
+
+Need to activate specific licenses? Visit the [Managing 4D licenses](../licenses.md) page.
+
+:::
