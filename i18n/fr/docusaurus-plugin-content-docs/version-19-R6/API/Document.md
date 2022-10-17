@@ -343,6 +343,7 @@ Cette propriété est en **lecture seule**.
 <!-- REF document.platformPath.Desc -->
 ## .platformPath
 
+
 <details><summary>Historique</summary>
 
 | Version | Modifications |
@@ -589,7 +590,7 @@ avec `\t` (tab) comme séparateur et `\r\n` (CRLF) comme délimiteur de ligne.
 Voici un autre exemple avec le même fichier, mais un délimiteur de ligne différent :
 
 ```4d
- $txt:=$myFile.getText("UTF-8", Document with LF)
+ $txt:=$myFile.getText("UTF-8"; Document with LF)
 ```
 
 Dans ce cas, le contenu de `$txt` est :
