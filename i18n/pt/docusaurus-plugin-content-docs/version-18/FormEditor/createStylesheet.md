@@ -131,12 +131,12 @@ Especifique o tipo de atributo entre colchetes, depois entre chaves, declare os 
 
 #### Sintaxes compatíveis
 
-| Sintaxe                   | Descrição                                                                                                                  |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| [attribute]               | coincide com objetos com o `attribute`                                                                                     |
-| [attribute="value"]       | coincide com objetos cujo valor do `attribute` conteha exatamente o "valor" especificado                                   |
-| [attribute~="value"]      | coincide com os objetos com o valor do `attribute` que contém o  "valor" entre uma lista de palavras separadas por espaços |
-| [attribute&#124;="value"] | coincide com objetos com um `attribute` cujo valor começa por "valor"                                                      |
+| Sintaxe                   | Descrição                                                                                                                 |
+| ------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| [attribute]               | coincide com objetos com o `attribute`                                                                                    |
+| [attribute="value"]       | coincide com objetos cujo valor do `attribute` conteha exatamente o "valor" especificado                                  |
+| [attribute~="value"]      | coincide com os objetos com o valor do `attribute` que contém o "valor" entre uma lista de palavras separadas por espaços |
+| [attribute&#124;="value"] | coincide com objetos com um `attribute` cujo valor começa por "valor"                                                     |
 
 #### Exemplos
 
@@ -227,7 +227,7 @@ icon: url("edit.png"); /* rota relativa ao arquivo de formulário */
 
 ## Ordem de prioridade
 
-Os proetos 4D priorizam as definições de estilo em conflito, primeiro pela definição do formulário e depois pelas folhas de estilo.
+Os projetos 4D priorizam as definições de estilo em conflito, primeiro pela definição do formulário e depois pelas folhas de estilo.
 
 ### JSON vs Folha de estilo
 
@@ -243,9 +243,9 @@ Para anular este comportamento, o valor do estilo deve ir seguido de uma declara
 
 **Exemplo 2:**
 
-| Descripción do formulário JSON | Folha de Estilo          | 4D exibe |
-| ------------------------------ | ------------------------ | -------- |
-| `"text": "Button",`            | `text: Edit !important;` | `"Edit"` |
+| Descrição do formulário JSON | Folha de Estilo          | 4D exibe |
+| ---------------------------- | ------------------------ | -------- |
+| `"text": "Button",`          | `text: Edit !important;` | `"Edit"` |
 
 ### Folhas de estilo múltiplas
 
@@ -281,8 +281,8 @@ Durante a execução, 4D prioriza automaticamente as folhas de estilo na seguint
 
 > As rotas dos arquivos pedem ser relativas ou absolutas.
 > 
-> * Relative paths are resolved relative to the JSON form description file.
-> * For security reasons, only filesystem paths are accepted for absolute paths. (*e.g.*, "/RESOURCES", "/DATA")
+> * * As rotas relativas se resolvem em relação com o arquivo de descrição do formulário JSON.
+> * * Por razões de segurança, só se aceitam as rotas do sistema de arquivos para as rotas absolutas. (*e.g.*, "/RESOURCES", "/DATA")
 
 ## Criação ou modificação de folhas de estilo
 
