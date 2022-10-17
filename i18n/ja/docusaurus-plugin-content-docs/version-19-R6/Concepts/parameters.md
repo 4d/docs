@@ -220,12 +220,12 @@ Function square($x : Integer)
 Function getValue
  $0:=10
  return 20
- // returns 20
+ // 20 が返されます
 
 Function getValue -> $v : Integer
  return 10
- $v:=20 // never executed
- // returns 10
+ $v:=20 // 実行されません
+ // 10 が返されます
 ```
 
 ## 引数の間接参照 (${N})
@@ -257,7 +257,7 @@ Function getValue -> $v : Integer
 メソッド内で 0、1、またはそれ以上のパラメーターを宣言した場合でも、任意の数の引数を渡すことができます。 呼び出されたメソッド内では、`${N}` シンタックスを使って引数を利用でき、可変長引数の型はデフォルトで [バリアント](dt_variant.md) です ([コンパイラー指示子](#ジェネリックパラメーターの宣言) を使ってこれらを宣言できます)。 [`Count parameters`](https://doc.4d.com/4dv19/help/command/ja/page259.html) コマンドを使用して、パラメーターが存在することをあらかじめ確認しておく必要があります。 例:
 
 ```4d
-//foo method
+// foo メソッド
 #DECLARE($p1: Text;$p2 : Text; $p3 : Date) 
 For($i;1;Count parameters)
  ALERT("param "+String($i)+" = "+String(${$i}))
@@ -296,7 +296,7 @@ foo("hello";"world";!01/01/2021!;42;?12:00:00?) // 追加の引数が受け渡�
 
 ```4d
 Function add($x : Variant; $y : Integer)-> $result : Integer
- // all parameters are declared with their type
+ // すべての引数はデータ型とともに宣言されます
 ```
 
 [順番引数シンタックス](#順番引数) を利用している場合には、引数がそれぞれ適切に宣言されていることを確認する必要があります。 次の例では `Capitalize` プロジェクトメソッドは第1パラメーターにテキスト型の引数を受け取り、戻り値としてテキスト型の値を返します:
@@ -439,14 +439,14 @@ method1(42) // 型間違い。期待されるのはテキスト
 $person:=New object("Name";"Smith";"Age";40;"toAdd";10)
 ChangeAge($person)
 
-//ChangeAge
+// ChangeAge メソッド
 var $1;$para : Object
 $para:=$1  
 If ($para.toAdd=Null)
  $para.toAdd:=10
 End if
 $para.Age:=Num($para.Age)+$para.toAdd
-ALERT(String($para.Name)+" is "+String($para.Age)+" years old.")
+ALERT(String($para.Name)+" は "+String($para.Age)+" 歳です。")
 ```
 
 このように、既存のコードを変える必要はありません。 変更後のコードは変更前と同じように動作しますが、引数によって加算年数に数値を指定することもできるようになりました。
@@ -515,11 +515,11 @@ APPEND TEXT(vtSomeText;"";$wpArea) // メッセージを表示して、 $wpArea 
 引数を渡すとき、4D は呼び出し元メソッドのコンテキストにおいてその式を評価し、**結果の値** をクラス関数またはサブルーチンのローカル変数に格納します。 これらのローカル変数に格納されているのは、呼び出し元で使用されているフィールドや変数、式ではなく、渡された値のみです。 スコープがローカルに限られているため、クラス関数 / サブルーチン内でローカル変数の値を変えても、呼び出し元メソッドには影響ありません。 例:
 
 ```4d
- //Here is some code from the method MY_METHOD
-DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
+ // MY_METHOD メソッド
+DO_SOMETHING([People]Name) // [People]Name の値が "williams" だとします
 ALERT([People]Name)
 
- //Here is the code of the method DO_SOMETHING
+ // DO_SOMETHING メソッド
  $1:=Uppercase($1)
  ALERT($1)
 ```
@@ -545,11 +545,11 @@ ALERT([People]Name)
 2. `DO_SOMETHING` メソッドに "何かさせる" 代わりに、値を返すようにメソッドを書き直すこともできます。 たとえば、以下のようにコードです:
 
 ```4d
- //Here is some code from the method MY METHOD
- [People]Name:=DO_SOMETHING([People]Name) //Let's say [People]Name value is "williams"
+ // MY_METHOD メソッド
+ [People]Name:=DO_SOMETHING([People]Name) // もとの [People]Name の値が "williams" だとします
  ALERT([People]Name)
 
- //Here the code of the method DO SOMETHING
+ // DO_SOMETHING メソッド
  $0:=Uppercase($1)
  ALERT($0)
 ```
