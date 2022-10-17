@@ -23,11 +23,11 @@ title: On Window Opening Denied
 このイベントは、Webエリア (埋め込みおよび Windowsシステム [エンジン](../FormObjects/properties_WebArea.md#埋め込みwebレンダリングエンジンを使用)) で [ドラッグ＆ドロップ](../FormObjects/webArea_Overview.md#ユーザーインターフェース) オプションが有効になっている場合に、ドロップ操作がおこなわれたときにも発生します。 次を呼び出すことで、ドロップを受け入れることができます:
 
 ```4d
-//web area object method
+// Webエリアオブジェクトメソッド
 If (FORM Event.code=On Window Opening Denied)
  WA OPEN URL(*; "WebArea"; WA Get last filtered URL(*; "WebArea"))  
- // or UrlVariable:=WA Get last filtered URL(*; "WebArea")  
- // where UrlVariable is the URL variable associated to the web area
+ // または UrlVariable:=WA Get last filtered URL(*; "WebArea")  
+ // (UrlVariable は Webエリアに関連づけられた URL変数)
 End if 
 ```
 
