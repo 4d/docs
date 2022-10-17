@@ -10,7 +10,7 @@ title: ドキュメンテーション
 ドキュメントすることができるプロジェクト要素は次のとおりです:
 
 - メソッド (データベースメソッド、コンポーネントメソッド、プロジェクトメソッド、フォームメソッド、4D Mobile メソッド、トリガー、クラス)
-- Forms
+- フォーム
 - テーブルとフィールド
 
 ドキュメンテーションファイルは Markdown記法 (.md ファイル) で記述します。これには、Markdown をサポートしている任意のエディターを使うことができます。 これらはそれぞれ独立したファイルとしてプロジェクトフォルダー内に格納されます。
@@ -36,7 +36,7 @@ title: ドキュメンテーション
 `Documentation` フォルダーのアーキテクチャーは次のとおりです:
 
 - **Documentation**
-  - **クラス**
+  - **Classes**
     - myClass.md
   - **DatabaseMethods**
     - onStartup.md
@@ -44,7 +44,7 @@ title: ドキュメンテーション
   - **Forms**
     - loginDial.md
     - ...
-  - **メソッド**
+  - **Methods**
     - myMethod.md
     - ...
   - **TableForms**
@@ -98,7 +98,7 @@ title: ドキュメンテーション
 
 ![](../assets/en/Project/codeEditor_Comments.png)
 
-If a file named `\&#060;MethodName&#062;.md` exists in `\&#060;package&#062;/documentation` folder, the code editor displays (by priority):
+`<MethodName>.md` ファイルが `<package>/documentation` フォルダーに存在する場合、コードエディターは次の優先順位でヘルプTips を表示します:
 
 - Markdown ファイルの先頭に設置した、HTML のコメントタグで囲まれたテキスト (*\<!-- command documentation -->*。
 
