@@ -353,11 +353,11 @@ TEXT TO DOCUMENT("customers.txt"; $output)
 
 解釈エラーの場合、`<!--#4DIF -->` と `<!--#4DENDIF-->` の間のコンテンツの代わりに、"`<!--#4DIF expression-->`: ブール式が必要です" というテキストが挿入されます。 同様に、`<!--#4DIF -->` が同じ数の `<!--#4DENDIF-->` で閉じられていない場合、`<!--#4DIF -->` と `<!--#4DENDIF-->` の間のコンテンツの代わりに "`<!--#4DIF expression-->`: 4DENDIFが必要です" というテキストが挿入されます。
 
-`<!--#4DELSEIF-->` タグを使用すると、数に制限なく条件をテストできます。 最初に `true` と判定されたブロック内にあるコードだけが実行されます。 `true` ブロックがなく、`<!--#4DELSE-->` もない場合には、なにも実行されません。 You can use a `<!--#4DELSE-->` tag after the last `<!--#4DELSEIF-->`. If all the conditions are false, the statements following the `<!--#4DELSE-->` are executed.
+`<!--#4DELSEIF-->` タグを使用すると、数に制限なく条件をテストできます。 最初に `true` と判定されたブロック内にあるコードだけが実行されます。 `true` ブロックがなく、`<!--#4DELSE-->` もない場合には、なにも実行されません。 `<!--#4DELSE-->`タグは、最後の `<!--#4DELSEIF-->` の後に記述できます。 それまでの条件がすべて `false` の場合、`<!--#4DELSE-->`ブロックの文が実行されます。
 
 以下の2つのコードは同等です。
 
-Code using `4DELSE` only:
+`4DELSE` のみを使用する場合:
 
 ```html
 <!--#4DIF Condition1-->
