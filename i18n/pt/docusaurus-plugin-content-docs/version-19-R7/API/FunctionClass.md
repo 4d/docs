@@ -443,7 +443,7 @@ Note que `.call()` é similar a [`.apply()`](#apply) exceto que parâmetros são
 
 A propriedade `.source` <!-- REF #FunctionClass.source.Summary -->contains the source expression of the `formula` as text<!-- END REF -->.
 
-Essa propriedade é**apenas leitura**.
+Essa propriedade é **apenas leitura**.
 
 #### Exemplo
 

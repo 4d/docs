@@ -24,7 +24,7 @@ A project method can have one of the following roles, depending on how it is exe
 
 - Subrotina e função
 - Método associado a um objeto
-- Menu method
+- Método do menu
 - Process method
 - Event or Error catching method
 
@@ -240,6 +240,6 @@ Além dos **métodos projeto**, 4D oferece vários tipos de métodos específico
 | Tipo                             | Calling context                                                                          | Accepts parameters | Descrição                                                                                                                                                            |
 | -------------------------------- | ---------------------------------------------------------------------------------------- | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Object (widget) method**       | Automatic, when an event involves the object to which the method is attached             | No                 | Property of a form object (also called widget)                                                                                                                       |
-| **Form method**                  | Automatic, when an event involves the form to which the method is attached               | No                 | Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. |
+| **Método formulário**            | Automatic, when an event involves the form to which the method is attached               | No                 | Property of a form. You can use a form method to manage data and objects, but it is generally simpler and more efficient to use an object method for these purposes. |
 | **Trigger** (aka *Table method*) | Automatic, each time that you manipulate the records of a table (Add, Delete and Modify) | No                 | Property of a table. Triggers are methods that can prevent “illegal” operations with the records of your database.                                                   |
 | **Database method**              | Automatic, when a working session event occurs                                           | Yes (predefined)   | There are 16 database methods in 4D. See Database methods section                                                                                                    |

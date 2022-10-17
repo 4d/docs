@@ -28,7 +28,7 @@
     "description": "The label for category Form Editor in sidebar docs"
   },
   "sidebar.docs.category.Form Objects": {
-    "message": "Form Objects",
+    "message": "Objetos formularios",
     "description": "The label for category Form Objects in sidebar docs"
   },
   "sidebar.docs.category.Form Object Properties": {
@@ -40,11 +40,11 @@
     "description": "The label for category Menus in sidebar docs"
   },
   "sidebar.docs.category.MSC": {
-    "message": "MSC",
+    "message": "CSM",
     "description": "The label for category MSC in sidebar docs"
   },
   "sidebar.docs.category.Backup and Restore": {
-    "message": "Backup and Restore",
+    "message": "Copia de seguridad y restauración",
     "description": "The label for category Backup and Restore in sidebar docs"
   },
   "sidebar.docs.category.Users and Groups": {
@@ -68,11 +68,11 @@
     "description": "The label for category API (dataClass) in sidebar docs"
   },
   "sidebar.docs.category.4D Language Reference": {
-    "message": "4D Language Reference",
+    "message": "Referencia del lenguaje 4D",
     "description": "The label for category 4D Language Reference in sidebar docs"
   },
   "sidebar.docs.link.4D Language Reference (4D Doc Center)": {
-    "message": "4D Language Reference (4D Doc Center)",
+    "message": "Referencia del lenguaje 4D (4D Doc Center)",
     "description": "The label for link 4D Language Reference (4D Doc Center) in sidebar docs, linking to https://doc.4d.com/4Dv18/4D/18.4/4D-Language-Reference.100-5232397.en.html"
   }
 }

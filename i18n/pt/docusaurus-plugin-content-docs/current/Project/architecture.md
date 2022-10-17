@@ -144,7 +144,7 @@ The Resources folder contains any custom project resource files and folders. In 
 
 | Conteúdos             | Descrição                                                                                                                                             | Formato |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| *item*                | Project resource files and folders                                                                                                                    | various |
+| *item*                | Project resource files and folders                                                                                                                    | vários  |
 | Images/Library/*item* | Pictures from the Picture Library as separate files(*). Names of these items become file names. If a duplicate exists, a number is added to the name. | picture |
 
 (*) only if the project was exported from a .4db binary database.

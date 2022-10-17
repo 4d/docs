@@ -21,11 +21,11 @@ Each Code Editor window has a toolbar that provides instant access to basic func
 | ------------------------------------ | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Ejecución del método**             | ![execute-method](../assets/en/code-editor/execute-method.png)                    | When working with methods, each Code Editor window has a button that can be used to run the current method. Using the menu associated with this button, you can choose the type of execution:<ul><li> **Run new process**: Creates a process and runs the method in standard mode in this process.</li><li>**Run and debug new process**: Creates a new process and displays the method in the Debugger window for step by step execution in this process.</li><li>**Run in Application process**: Runs the method in standard mode in the context of the Application process (in other words, the record display window).</li><li>**Run and debug in Application process**: Displays the method in the Debugger window for step by step execution in the context of the Application process (in other words, the record display window).</li></ul>For more information on method execution, see [Calling Project Methods](../Concepts/methods.md#calling-project-methods). |
 | **Buscar**                           | ![search-icon](../assets/en/code-editor/search.png)                               | Permite realizar una búsqueda en la ventana actual.                                                                                                                                                                                                                                                                                            |
-| **Macros**                           | ![macros-button](../assets/en/code-editor/macros.png)                             | Inserts a macro at the selection. Haga clic en la flecha desplegable para mostrar una lista de macros disponibles. For more information on how to create and instantiate macros, see [Macros](creating-using-macros.md).                                                                                                                       |
+| **Macros**                           | ![macros-button](../assets/en/code-editor/macros.png)                             | Inserta una macro en la selección. Haga clic en la flecha desplegable para mostrar una lista de macros disponibles. For more information on how to create and instantiate macros, see [Macros](creating-using-macros.md).                                                                                                                      |
 | **Expandir todo/Contraer todo**      | ![expand-collapse-button](../assets/en/code-editor/expand-collapse-all.png)       | These buttons allow expanding or collapsing all the control flow structures of the code.                                                                                                                                                                                                                                                       |
 | **Información del método**           | ![method-information-icon](../assets/en/code-editor/method-information.png)       | Displays the [Method Properties](../Concepts/methods.md#project-method-properties) dialog box (project methods only).                                                                                                                                                                                                                          |
 | **Últimos valores del portapapeles** | ![last-clipboard-values-icon](../assets/en/code-editor/last-clipboard-values.png) | Muestra los últimos valores almacenados en el portapapeles.                                                                                                                                                                                                                                                                                    |
-| **Clipboards**                       | ![clipboard icons](../assets/en/code-editor/clipboards.png)                       | Nueve portapapeles disponibles en el editor de código. You can [use these clipboards](./write-class-method.md#multiple-copy-paste-and-numbering-of-clipboards) by clicking on them directly or by using keyboard shortcuts. You can use a [Preferences option](Preferences/methods.md#options-1) to hide them.                                 |
+| **Portapapeles**                     | ![iconos del portapapeles](../assets/en/code-editor/clipboards.png)               | Nueve portapapeles disponibles en el editor de código. You can [use these clipboards](./write-class-method.md#multiple-copy-paste-and-numbering-of-clipboards) by clicking on them directly or by using keyboard shortcuts. You can use a [Preferences option](Preferences/methods.md#options-1) to hide them.                                 |
 | **Navegación en el código**          | ![code-navigation-icons](../assets/en/code-editor/tags.png)                       | Lets you navigate inside methods and classes with automatically tagged content or manually declared markers. See [Navigation dropdown](./write-class-method.md#navigation-dropdown).                                                                                                                                                           |
 
 ## Editing area
@@ -92,7 +92,7 @@ You can save the lists set in the Code Editor window in the form of a template. 
 Los siguientes parámetros se almacenan en la plantilla:
 
 - Tamaño relativo de las áreas de edición y de la lista
-- Number of lists
+- Número de listas
 - Ubicación y contenido de cada lista
 - Ancho relativo de cada lista
 
@@ -111,7 +111,7 @@ You can display or hide the line numbers in the break points area for each windo
 
 Displaying the line numbers makes it easier to find your way around in the window. The **Method** > **Go to Line Number...** command in the also lets you take advantage of this display.
 
-## Status bar
+## Barra de estado
 
 The status bar located at the bottom right part of the editor window displays the position of the cursor at all times:
 
@@ -259,7 +259,7 @@ If the characters typed correspond to different types of objects, the list displ
 - Variable local, proceso o interproceso, declarada en el método
 - Nombres de propiedad objeto
 - Comandos del Plug-in
-- 4D keywords
+- Palabras claves 4D
 - Palabras clave SQL
 - Macros (mostradas entre < >)
 
@@ -291,7 +291,7 @@ Cuando se reinicia la base de datos, la lista se reinicia.
 The **Select Enclosing Block** function is used to select the "enclosing block" of the code containing the insertion point. El bloque adjunto puede ser definido por:
 
 - Comillas
-- Parentheses
+- Paréntesis
 - A logical structure (If/Else/End if, While/End while, Repeat/Until Case of/End case)
 - Braces
 
@@ -341,7 +341,7 @@ When entering code, you can immediately check the syntax of the current line (wi
 
 When the method, class or function is validated, 4D checks for:
 
-- basic syntax errors
+- errores de sintaxis básicos
 - the structure of statements (`If`, `End if` and so on)
 - matching enclosing characters in the code such as parentheses or quotation marks. When you type an enclosing character, 4D indicates the match by framing the start/end characters with gray rectangles:
 
@@ -396,7 +396,7 @@ Se utiliza para crear un comentario de una sola línea. Inserting // at the begi
 &lt;/code>
 &lt;/code></pre>
 
-#### `/*comment*/`
+#### `/*comentario*/`
 
 Used to surround the content to create inline comments or multiline comment blocks.
 

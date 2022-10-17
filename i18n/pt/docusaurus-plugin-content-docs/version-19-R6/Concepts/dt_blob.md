@@ -9,7 +9,7 @@ A blob is loaded into memory in its entirety. A blob variable is held and exists
 
 Like other field types that can retain a large amount of data (such as the Picture field type), Blob fields are not duplicated in memory when you modify a record. Consequently, the result returned by the `Old` and `Modified` commands is not significant when applied to a Blob field.
 
-## Blob Types
+## Tipos de Blob
 
 Using the 4D language, there are two ways to handle a blob:
 

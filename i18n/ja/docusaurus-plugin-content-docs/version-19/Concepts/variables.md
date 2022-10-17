@@ -64,12 +64,12 @@ var $myVar // バリアント型変数
 | varType                | 内容                             |
 | ---------------------- | ------------------------------ |
 | `Text`                 | テキスト値                          |
-| `日付`                   | 日付値                            |
-| `時間`                   | 時間値                            |
+| `Date`                 | 日付値                            |
+| `Time`                 | 時間値                            |
 | `Boolean`              | ブール値                           |
 | `Integer`              | 倍長整数値                          |
 | `Real`                 | 実数値                            |
-| `ポインター`                | ポインター値                         |
+| `Pointer`              | ポインター値                         |
 | `Picture`              | ピクチャー値                         |
 | `Blob`                 | BLOB値                          |
 | `Collection`           | コレクション値                        |
@@ -123,7 +123,8 @@ var $entity : cs.EmployeeEntity
 いくつかの基本的な変数宣言の例です:
 
 ```4d
- C_BLOB(vxMyBlob) // プロセス変数 vxMyBlob を BLOB型として宣言します C_DATE($vdCurDate) // ローカル変数 $vdCurDate を日付型として宣言します
+ C_BLOB(vxMyBlob) // プロセス変数 vxMyBlob を BLOB型として宣言します
+ C_DATE($vdCurDate) // ローカル変数 $vdCurDate を日付型として宣言します
  C_LONGINT(vg1;vg2;vg3) // 3つのプロセス変数 vg1, vg2, vg3 を倍長整数型として宣言します
  C_OBJECT($vObj) // ローカル変数 $vObj をオブジェクト型として宣言します
  C_COLLECTION($vCol) // ローカル変数 $vCol をコレクション型として宣言します

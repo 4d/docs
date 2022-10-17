@@ -35,7 +35,7 @@ Se muestra el formulario especificado:
 
 | Nombre     | Tipos de datos | Valores posibles                                                            |
 | ---------- | -------------- | --------------------------------------------------------------------------- |
-| detailForm | string         | <li>Nombre (cadena) de la tabla o formulario proyecto</li><li>POSIX path (string) to a .json file describing the form</li><li>Objeto que describe el formulario</li> |
+| detailForm | string         | <li>Nombre (cadena) de la tabla o formulario proyecto</li><li>Ruta POSIX (cadena) a un archivo .json que describe el formulario</li><li>Objeto que describe el formulario</li> |
 
 #### Objetos soportados
 
@@ -118,7 +118,7 @@ Estas propiedades interactúan de la siguiente manera:
 
 ![](../assets/en/FormObjects/property_lockedStaticColumns2.png)
 
-*   You can set a combination of locked and static columns according to your needs. For example, if you set three locked columns and one static column, the user can swap the two right-most columns within the locked area (since only the first column is static).
+*   Puede definir una combinación de columnas bloqueadas y estáticas según sus necesidades. For example, if you set three locked columns and one static column, the user can swap the two right-most columns within the locked area (since only the first column is static).
 
 ### Número de columnas bloqueadas
 
@@ -210,9 +210,9 @@ Note that setting properties for an element overrides any other values for this 
 
 ```4d
  aLControlArr{6}:=lk row is disabled + lk row is not selectable 
- //sets row 6 as disabled AND not selectable
+ //define la línea 6 como desactivada Y no seleccionable
  aLControlArr{6}:=lk row is disabled 
- //sets row 6 as disabled but selectable again
+ //define la línea 6 como desactivada pero seleccionable nuevamente
 ```
 
 

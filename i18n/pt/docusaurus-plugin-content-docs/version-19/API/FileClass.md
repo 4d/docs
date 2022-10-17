@@ -258,9 +258,9 @@ You want to create an alias to a file in your database folder:
 
 
 <!-- REF #FileClass.delete().Params -->
-| Parâmetros | Tipo |  | Descrição                                                  |
-| ---------- | ---- |  | ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF -->
+| Parâmetros | Tipo |  | Descrição                                             |
+| ---------- | ---- |  | ----------------------------------------------------- |
+|            |      |  | Não exige nenhum parâmetro|<!-- END REF -->
 
 |
 

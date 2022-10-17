@@ -71,24 +71,24 @@ When this property is disabled, any pop-up menus associated with a list box colu
 
 Un filtro de entrada controla exactamente lo que el usuario puede escribir durante la entrada de datos. Unlike [required lists](properties_RangeOfValues.md#required-list) for example, entry filters operate on a character-by-character basis. For example, if a part number always consists of two letters followed by three digits, you can use an entry filter to restrict the user to that pattern. Incluso puede controlar las letras y números en particular.
 
-Un filtro de entrada sólo funciona durante la entrada de datos. No tiene efecto en la visualización de los datos después de que el usuario deseleccione el objeto. In general, you use entry filters and [display formats](properties_Display.md) together. The filter constrains data entry and the format ensures proper display of the value after data entry.
+Un filtro de entrada sólo funciona durante la entrada de datos. No tiene efecto en la visualización de los datos después de que el usuario deseleccione el objeto. En general, se utilizan conjuntamente los filtros de entrada con los [formatos de visualización](properties_Display.md). El filtro restringe la entrada de datos y el formato asegura la correcta visualización del valor tras la entrada de datos.
 
-Durante la entrada de datos, un filtro de entrada evalúa cada caracter a medida que se escribe. If the user attempts to type an invalid character (a number instead of a letter, for example), 4D simply does not accept it. The null character remains unchanged until the user types a valid character.
+Durante la entrada de datos, un filtro de entrada evalúa cada caracter a medida que se escribe. Si el usuario intenta escribir un caracter no válido (un número en lugar de una letra, por ejemplo), 4D simplemente no lo acepta. El caracter null permanece sin cambios hasta que el usuario escribe un caracter válido.
 
-Entry filters can also be used to display required formatting characters so that the user need not enter them. For example, an American telephone number consists of a three-digit area code, followed by a seven-digit number that is broken up into two groups of three and four digits, respectively. A display format can be used to enclose the area code in parentheses and display a dash after the third digit of the telephone number. Cuando se utiliza este formato, el usuario no necesita introducir los paréntesis ni los guiones.
+Los filtros de entrada también pueden utilizarse para mostrar los caracteres de formato necesarios para que el usuario no tenga que introducirlos. Por ejemplo, un número de teléfono estadounidense consta de un código de área de tres dígitos, seguido de un número de siete dígitos que se divide en dos grupos de tres y cuatro dígitos, respectivamente. Se puede utilizar un formato de visualización para encerrar el código de área entre paréntesis y para mostrar un guión después del tercer dígito del número de teléfono. Cuando se utiliza este formato, el usuario no necesita introducir los paréntesis ni los guiones.
 
 ### Definir un filtro de entrada
 
-Most of the time, you can use one of the [built-in filters](#default-entry-filters) of 4D for what you need; however, you can also create and use custom filters:
+La mayoría de las veces, puede utilizar uno de los [filtros integrados](#default-entry-filters) de 4D para lo que necesite; sin embargo, también puede crear y utilizar filtros personalizados:
 
 - puede introducir directamente una cadena de definición de filtro
-- or you can enter the name of an entry filter created in the Filters editor in the Toolbox. Los nombres de los filtros personalizados que se crean comienzan con una barra vertical (|).
+- o puede introducir el nombre de un filtro de entrada creado en el editor de filtros de la caja de herramientas. Los nombres de los filtros personalizados que se crean comienzan con una barra vertical (|).
 
 For information about creating entry filters, see [Filter and format codes](https://doc.4d.com/4Dv18/4D/18/Filter-and-format-codes.300-4575706.en.html).
 
 ### Filtros de entrada por defecto
 
-Here is a table that explains each of the entry filter choices in the Entry Filter drop-down list:
+A continuación se presenta una tabla que explica cada una de las opciones de filtro de entrada en la lista desplegable Filtro de entrada:
 
 | Filtro de entrada                      | Descripción                                                                                                                                                              |
 | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -104,11 +104,11 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 | !0&9## Horas ## Minutos ## Segundos    | Formato de entrada de hora. Mostrar ceros en los espacios de entrada. Permitir dos números antes de cada palabra.                                                        |
 | !0&9Horas: ## Minutas: ## Segundos: ## | Formato de entrada de hora. Mostrar ceros en los espacios de entrada. Permitir dos números después de cada palabra.                                                      |
 | !0&9##-##-##-##                        | Formato de número de teléfono local. Mostrar ceros en los espacios de entrada. Permitir cualquier número. Tres entradas, guión, cuatro entradas.                         |
-| !_&9(###)!0###-####                    | Número de teléfono de larga distancia. Display underscores in first three entry spaces, zeros in remainder.                                                              |
+| !_&9(###)!0###-####                    | Número de teléfono de larga distancia. Mostrar guiones bajos en los tres primeros espacios de entrada, ceros en el resto.                                                |
 | !0&9###-###-###                        | Número de teléfono de larga distancia. Mostrar ceros en los espacios de entrada. Permitir cualquier número. Tres entradas, guión, tres entradas, guión, cuatro entradas. |
 | !0&9###-##-###                         | Número de la Seguridad Social. Mostrar ceros en los espacios de entrada. Permitir cualquier número.                                                                      |
 | ~"A-Z;0-9; ;,;.;-"                     | Letras mayúsculas y puntuación. Permita sólo letras mayúsculas, números, espacios, comas, puntos y guiones.                                                              |
-| &"a-z;0-9; ;,;.;-"                     | Letras mayúsculas y minúsculas y puntuación. Allow lowercase letters, numbers, spaces, commas, periods, and hyphens.                                                     |
+| &"a-z;0-9; ;,;.;-"                     | Letras mayúsculas y minúsculas y puntuación. Permite letras minúsculas, números, espacios, comas, puntos y guiones.                                                      |
 | &"0-9;.;-"                             | Números. Sólo se permiten números, puntos decimales y guiones (signo menos).                                                                                             |
 
 #### Gramática JSON
@@ -163,7 +163,7 @@ Por defecto, el objeto utiliza la disposición actual del teclado.
 
 #### Objetos soportados
 
-[4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Área de entrada](input_overview.md)
 
 ---
 
@@ -249,7 +249,7 @@ This property keeps the selection visible within the object after it has lost th
 
 #### Objetos soportados
 
-[4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md)
+[Áreas 4D Write Pro](writeProArea_overview.md) - [Área de entrada](input_overview.md)
 
 ---
 

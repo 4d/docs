@@ -32,7 +32,7 @@ This area provides information about the SQL server configuration parameters: au
 
 These parameters can be modified via the 4D Settings.
 
-### Connections
+### Conexões
 
 Number of SQL connections currently open on 4D Server.
 

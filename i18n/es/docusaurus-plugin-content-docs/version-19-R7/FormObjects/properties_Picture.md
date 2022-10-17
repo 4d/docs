@@ -31,7 +31,7 @@ Las siguientes ubicaciones pueden utilizarse para las imágenes estáticas:
 
 `Gramática JSON: "scaled"`
 
-The **Scaled to fit** format causes 4D to resize the picture to fit the dimensions of the area.
+El formato **A escala para ajustarse** hace que 4D redimensione la imagen para ajustarla a las dimensiones del área.
 
 ![](../assets/en/FormObjects/property_pictureFormat_ScaledToFit.png)
 
@@ -51,8 +51,8 @@ If the field is reduced to a size smaller than that of the original picture, the
 
 El formato **Centro** hace que 4D centre la imagen en el área y recorte cualquier parte que no quepa dentro del área. 4D recorta por igual desde cada borde y desde la parte superior e inferior.
 
-The **Truncated (non-centered)** format causes 4D to place the upper-left corner of the picture in the upper-left corner of the area and crop any portion that does not fit within the area. 4D crops from the right and bottom.
-> When the picture format is **Truncated (non-centered)**, it is possible to add scroll bars to the input area.
+El formato **Truncado (no centrado)** hace que 4D coloque la esquina superior izquierda de la imagen en la esquina superior izquierda del área y recorte cualquier parte que no quepa dentro del área. 4D corta desde la derecha y desde abajo.
+> Cuando el formato de la imagen es **Truncado (no centrado)**, es posible añadir barras de desplazamiento al área de entrada.
 
 ![](../assets/en/FormObjects/property_pictureFormat_Truncated.png)
 

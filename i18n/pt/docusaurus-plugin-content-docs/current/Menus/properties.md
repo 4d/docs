@@ -23,7 +23,7 @@ You can set some properties of the menu commands by using control characters (me
 
 Control characters do not appear in the menu command labels. You should therefore avoid using them so as not to have any undesirable effects. The control characters are the following:
 
-| Character   | Descrição                   | Usage                                                         |
+| Character   | Descrição                   | Utilização                                                    |
 | ----------- | --------------------------- | ------------------------------------------------------------- |
 | (           | open parenthese             | Disable item                                                  |
 | <B          | less than B                 | Bold font                                                     |
@@ -120,7 +120,7 @@ These reserved key combinations are listed in the following table:
 | --------------- | ------------------ | ----------- |
 | Ctrl+C          | Comando+C          | Copiar      |
 | Ctrl+Q          | Comando+Q          | Salir       |
-| Ctrl+V          | Comando+V          | Paste       |
+| Ctrl+V          | Comando+V          | Colar       |
 | Ctrl+X          | Comando+X          | Cortar      |
 | Ctrl+Z          | Comando+Z          | Deshacer    |
 | Ctrl+. (period) | Comando+. (period) | Stop action |

@@ -241,12 +241,12 @@ $toModify:=ds.Company.all().copy() // $toModify は追加可能です
 
 ```4d
 $highSal:=ds.Employee.query("salary >= :1"; 1000000)   
- //$highSal is shareable because of the query on dataClass
-$comp:=$highSal.employer //$comp is shareable because $highSal is shareable
+ // データクラスに対するクエリによって生成されたため $highSal は共有可能です
+$comp:=$highSal.employer // $highSal が共有可能なため $comp も共有可能です
 
 $lowSal:=ds.Employee.query("salary <= :1"; 10000).copy() 
- //$lowSal is alterable because of the copy()
-$comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
+ // オプション無しの copy( ) によって生成されたため $lowSal は追加可能です
+$comp2:=$lowSal.employer // $lowSal が追加可能なため $comp2 も追加可能です
 ```
 
 #### プロセス間のエンティティセレクションの共有 (例題)

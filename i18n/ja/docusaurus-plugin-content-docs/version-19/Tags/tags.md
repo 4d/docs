@@ -637,7 +637,7 @@ No name has been found.
 タグ `<!--#4DTEXT VarName-->` を使用して 4D変数や値を返す式への参照を挿入できます。 たとえば、(HTMLページ内にて) 以下のように記述すると:
 
 ```html
-Welcome to <!--#4DTEXT vtSiteName-->!</P>
+<P><!--#4DTEXT vtSiteName--> へようこそ！</P>
 ```
 
 4D変数 `vtSiteName` の値が HTMLページに送信時に挿入されます。 値はテキストとして挿入されます。">"のようなHTMLの特殊文字は、自動的にエスケープされます。
@@ -653,7 +653,7 @@ Welcome to <!--#4DTEXT vtSiteName-->!</P>
 - 4D式を使用して、オブジェクトフィールドの中身を表示させることができます。 たとえば、次の様に記述します: `<!--#4DTEXT OB Get:C1224([Rect]Desc;\"color\")-->`.
 - 通常はテキスト変数を使用します。 しかし、BLOB変数を使用することもできます。 この場合、長さ情報なしのテキストBLOBを使用します。
 
-## 4dtext, 4dhtml, 4deval の代替シンタックス
+## 4DTEXT, 4DHTML, 4DEVAL の代替シンタックス
 
 いくつかの既存の 4D変換タグは、$-ベースのシンタックスを使用して表現することができます:
 

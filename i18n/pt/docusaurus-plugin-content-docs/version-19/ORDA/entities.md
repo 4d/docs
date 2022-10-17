@@ -186,7 +186,7 @@ You can simultaneously create and use as many different entity selections as you
 
 An entity selection can be **shareable** (readable by multiple processes, but not alterable after creation) or **alterable** (supports the [`.add()`](API/EntitySelectionClass.md#add) function, but only usable by the current process).
 
-#### Properties
+#### Propriedades
 
 A **shareable** entity selection has the following characteristics:
 

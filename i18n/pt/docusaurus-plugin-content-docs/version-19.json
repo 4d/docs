@@ -44,7 +44,7 @@
     "description": "The label for category Access Rights in sidebar docs"
   },
   "sidebar.docs.category.MSC": {
-    "message": "MSC",
+    "message": "CSM",
     "description": "The label for category MSC in sidebar docs"
   },
   "sidebar.docs.category.Backup and Restore": {
@@ -52,7 +52,7 @@
     "description": "The label for category Backup and Restore in sidebar docs"
   },
   "sidebar.docs.category.Web Server": {
-    "message": "Web Server",
+    "message": "Servidor Web",
     "description": "The label for category Web Server in sidebar docs"
   },
   "sidebar.docs.category.Web Development": {
@@ -60,7 +60,7 @@
     "description": "The label for category Web Development in sidebar docs"
   },
   "sidebar.docs.category.REST Server": {
-    "message": "REST Server",
+    "message": "Servidor REST",
     "description": "The label for category REST Server in sidebar docs"
   },
   "sidebar.docs.category.Guides": {
@@ -96,7 +96,7 @@
     "description": "The label for category Form Object Properties in sidebar docs"
   },
   "sidebar.docs.category.Form Events": {
-    "message": "Form Events",
+    "message": "Eventos formulário",
     "description": "The label for category Form Events in sidebar docs"
   },
   "sidebar.docs.category.Menus": {

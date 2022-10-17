@@ -75,7 +75,7 @@ Eles oferecem as propriedades abaixo e funções:
 
 <!-- END REF -->
 
-The `WEB Server` command <!-- REF #_command_.WEB Server.Summary -->returns the default Web server object, or the Web server object defined through the *option* parameter<!-- END REF -->.
+O comando `WEB Server` <!-- REF #_command_.WEB Server.Summary -->returns the default Web server object, or the Web server object defined through the *option* parameter<!-- END REF -->.
 
 Por padrão, se o parâmetro *opção* for omitido, o comando retorna uma referência ao servidor Web do banco de dados, i. . o servidor web padrão. Para designar o servidor da Web para retornar, você pode passar uma das seguintes constantes no parâmetro de *opção*:
 
@@ -120,7 +120,7 @@ Do seu componente, você quer saber se o servidor Web do banco de dados host est
 
 <!-- END REF -->
 
-The `WEB Server list` command <!-- REF #_command_.WEB Server list.Summary -->returns a collection of all Web server objects available in the 4D application<!-- END REF -->.
+O comando `WEB Server list` <!-- REF #_command_.WEB Server list.Summary -->returns a collection of all Web server objects available in the 4D application<!-- END REF -->.
 
 Uma aplicação 4D pode conter em qualquer lugar de um a vários servidores Web:
 
@@ -152,7 +152,7 @@ Queremos saber quantos servidores rodando estão disponíveis:
 <!-- REF #WebServerClass.accessKeyDefined.Syntax -->**.accessKeyDefined** : Boolean<!-- END REF -->
 
 
-The **.accessKeyDefined** property contains <!-- REF #WebServerClass.accessKeyDefined.Summary -->true if an access key is defined in the settings of the web server<!-- END REF -->. Esta propriedade é usada pelo servidor web WebAdmin para validar a configuração de segurança da interface de administração.
+A propriedade **.accessKeyDefined** contém <!-- REF #WebServerClass.accessKeyDefined.Summary -->true if an access key is defined in the settings of the web server<!-- END REF -->. Esta propriedade é usada pelo servidor web WebAdmin para validar a configuração de segurança da interface de administração.
 
 <!-- REF WebServerClass.certificateFolder.Desc -->
 
@@ -161,7 +161,7 @@ The **.accessKeyDefined** property contains <!-- REF #WebServerClass.accessKeyDe
 <!-- REF #WebServerClass.certificateFolder.Syntax -->**.certificateFolder** : Text<!-- END REF -->
 
 
-Path of the <!-- REF #WebServerClass.certificateFolder.Summary -->folder where the certificate files are located<!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. Ao usar essa propriedade no parâmetro `configurações` do [`. tart()`](#start) função, pode ser um [`Pasta` objeto](FolderClass.md).
+Caminho do <!-- REF #WebServerClass.certificateFolder.Summary -->pasta onde se encontram os ficheiros do certificado<!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. Ao usar essa propriedade no parâmetro `configurações` do [`. tart()`](#start) função, pode ser um [`Pasta` objeto](FolderClass.md).
 
 <!-- END REF -->
 
@@ -172,7 +172,7 @@ Path of the <!-- REF #WebServerClass.certificateFolder.Summary -->folder where t
 <!-- REF #WebServerClass.characterSet.Syntax -->**.characterSet** : Number<br/>**.characterSet** : Text<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.characterSet.Summary -->character set that the 4D Web Server should use to communicate with browsers connecting to the application<!-- END REF -->. O valor padrão realmente depende da linguagem do SO. Pode ser um inteiro MIBEnum ou uma string de nome, identificadores [definidos por IANA](http://www.iana.org/assignments/character-sets/character-sets.xhtml). Aqui está a lista de identificadores correspondentes aos conjuntos de caracteres suportados pelo Servidor Web 4D:
+O <!-- REF #WebServerClass.characterSet.Summary -->character set that the 4D Web Server should use to communicate with browsers connecting to the application<!-- END REF -->. O valor padrão realmente depende da linguagem do SO. Pode ser um inteiro MIBEnum ou uma string de nome, identificadores [definidos por IANA](http://www.iana.org/assignments/character-sets/character-sets.xhtml). Aqui está a lista de identificadores correspondentes aos conjuntos de caracteres suportados pelo Servidor Web 4D:
 
 - 4 = ISO-8859-1
 - 12 = ISO-8859-9
@@ -197,7 +197,7 @@ The <!-- REF #WebServerClass.characterSet.Summary -->character set that the 4D W
 <!-- REF #WebServerClass.cipherSuite.Syntax -->**.cipherSuite** : Text<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.cipherSuite.Summary -->cipher list used for the secure protocol<!-- END REF -->. Define a prioridade dos algoritmos de criptografia implementados pelo servidor web 4D. Pode ser uma sequência de frases separadas por dois pontos (por exemplo, "ECDHE-RSA-AES128-..."). Veja a página cifras [](https://www.openssl.org/docs/manmaster/man1/ciphers.html) no site OpenSSL.
+O <!-- REF #WebServerClass.cipherSuite.Summary -->cipher list used for the secure protocol<!-- END REF -->. Define a prioridade dos algoritmos de criptografia implementados pelo servidor web 4D. Pode ser uma sequência de frases separadas por dois pontos (por exemplo, "ECDHE-RSA-AES128-..."). Veja a página cifras [](https://www.openssl.org/docs/manmaster/man1/ciphers.html) no site OpenSSL.
 
 <!-- END REF -->
 
@@ -208,7 +208,7 @@ The <!-- REF #WebServerClass.cipherSuite.Summary -->cipher list used for the sec
 <!-- REF #WebServerClass.CORSEnabled.Syntax -->**.CORSEnabled** : Boolean<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.CORSEnabled.Summary -->CORS (*Cross-origin resource sharing*) service status for the web server<!-- END REF -->. Por razões de segurança, solicitações de "cross-domain" são proibidas no nível do navegador por padrão. Quando ativado (True), chamadas XHR (por exemplo, Solicitações REST) de páginas da Web fora do domínio podem ser permitidas na sua aplicação (você precisa definir a lista de endereços permitidos na lista de domínio CORS, veja `CORSSettings` abaixo). Quando desativado (False, padrão), todas as solicitações de cruzamento de sites enviadas com CORS são ignoradas. Quando habilitado (verdadeiro) e um domínio ou método não permitido envia uma solicitação de site cruzado, ele é rejeitado com uma resposta de erro "403 - proibido".
+O <!-- REF #WebServerClass.CORSEnabled.Summary -->CORS (*Cross-origin resource sharing*) service status for the web server<!-- END REF -->. Por razões de segurança, solicitações de "cross-domain" são proibidas no nível do navegador por padrão. Quando ativado (True), chamadas XHR (por exemplo, Solicitações REST) de páginas da Web fora do domínio podem ser permitidas na sua aplicação (você precisa definir a lista de endereços permitidos na lista de domínio CORS, veja `CORSSettings` abaixo). Quando desativado (False, padrão), todas as solicitações de cruzamento de sites enviadas com CORS são ignoradas. Quando habilitado (verdadeiro) e um domínio ou método não permitido envia uma solicitação de site cruzado, ele é rejeitado com uma resposta de erro "403 - proibido".
 
 Padrão: Falso (desabilitado)
 
@@ -248,7 +248,7 @@ Para obter mais informações sobre o CORS, consulte a [página de compartilhame
 <!-- REF #WebServerClass.debugLog.Syntax -->**.debugLog** : Number<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.debugLog.Summary -->status of the HTTP request log file<!-- END REF --> (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number).
+O <!-- REF #WebServerClass.debugLog.Summary -->status of the HTTP request log file<!-- END REF --> (HTTPDebugLog_nn.txt, stored in the "Logs" folder of the application -- nn is the file number).
 
 - 0 = disabled
 - 1 = habilitado sem partes do corpo (o tamanho do corpo é fornecido neste caso)
@@ -265,7 +265,7 @@ The <!-- REF #WebServerClass.debugLog.Summary -->status of the HTTP request log 
 <!-- REF #WebServerClass.defaultHomepage.Syntax -->**.defaultHomepage** : Text<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.defaultHomepage.Summary -->name of the default home page<!-- END REF --> or "" to not send the custom home page.
+O <!-- REF #WebServerClass.defaultHomepage.Summary -->name of the default home page<!-- END REF --> or "" to not send the custom home page.
 
 <!-- END REF -->
 
@@ -276,7 +276,7 @@ The <!-- REF #WebServerClass.defaultHomepage.Summary -->name of the default home
 <!-- REF #WebServerClass.HSTSEnabled.Syntax -->**.HSTSEnabled** : Boolean<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.HSTSEnabled.Summary -->HTTP Strict Transport Security (HSTS) status<!-- END REF -->. O HSTS permite que o servidor declare que os navegadores só devem interagir com ele através de conexões HTTPS seguras. Navegadores gravarão as informações de HSTS na primeira vez que receberem uma resposta do servidor web, então quaisquer futuras solicitações HTTP serão automaticamente transformadas em solicitações HTTPS. O tempo que essas informações são armazenadas pelo navegador é especificado na propriedade `HSTSMaxAge`. A HSTS requer que HTTPS esteja ativado no servidor. HTTP deve também ser habilitado para permitir conexões iniciais de clientes.
+O <!-- REF #WebServerClass.HSTSEnabled.Summary -->HTTP Strict Transport Security (HSTS) status<!-- END REF -->. O HSTS permite que o servidor declare que os navegadores só devem interagir com ele através de conexões HTTPS seguras. Navegadores gravarão as informações de HSTS na primeira vez que receberem uma resposta do servidor web, então quaisquer futuras solicitações HTTP serão automaticamente transformadas em solicitações HTTPS. O tempo que essas informações são armazenadas pelo navegador é especificado na propriedade `HSTSMaxAge`. A HSTS requer que HTTPS esteja ativado no servidor. HTTP deve também ser habilitado para permitir conexões iniciais de clientes.
 
 <!-- END REF -->
 
@@ -287,7 +287,7 @@ The <!-- REF #WebServerClass.HSTSEnabled.Summary -->HTTP Strict Transport Securi
 <!-- REF #WebServerClass.HSTSMaxAge.Syntax -->**.HSTSMaxAge** : Number<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.HSTSMaxAge.Summary -->maximum length of time (in seconds) that HSTS is active for each new client connection<!-- END REF -->. Esta informação é armazenada no lado do Cliente durante a duração especificada.
+O <!-- REF #WebServerClass.HSTSMaxAge.Summary -->maximum length of time (in seconds) that HSTS is active for each new client connection<!-- END REF -->. Esta informação é armazenada no lado do Cliente durante a duração especificada.
 
 Valor padrão: 63072000 (2 anos).
 
@@ -300,7 +300,7 @@ Valor padrão: 63072000 (2 anos).
 <!-- REF #WebServerClass.HTTPCompressionLevel.Syntax -->**.HTTPCompressionLevel** : Number<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.HTTPCompressionLevel.Summary -->compression level for all compressed HTTP exchanges for the 4D HTTP server (client requests or server replies)<!-- END REF -->. Este seletor permite otimizar trocas priorizando a velocidade de execução (menos compactação) ou a quantidade de compressão (menos velocidade)
+O <!-- REF #WebServerClass.HTTPCompressionLevel.Summary -->compression level for all compressed HTTP exchanges for the 4D HTTP server (client requests or server replies)<!-- END REF -->. Este seletor permite otimizar trocas priorizando a velocidade de execução (menos compactação) ou a quantidade de compressão (menos velocidade)
 
 Valores possíveis:
 
@@ -318,7 +318,7 @@ Padrão = 1 (compressão mais rápida).
 <!-- REF #WebServerClass.HTTPCompressionThreshold.Syntax -->**.HTTPCompressionThreshold** : Number<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.HTTPCompressionThreshold.Summary -->size threshold (bytes) for requests below which exchanges should not be compressed<!-- END REF -->. Essa configuração é útil para evitar perder o tempo da máquina ao comprimir pequenas trocas.
+O <!-- REF #WebServerClass.HTTPCompressionThreshold.Summary -->size threshold (bytes) for requests below which exchanges should not be compressed<!-- END REF -->. Essa configuração é útil para evitar perder o tempo da máquina ao comprimir pequenas trocas.
 
 Limite de compressão padrão = 1024 bytes
 
@@ -331,7 +331,7 @@ Limite de compressão padrão = 1024 bytes
 <!-- REF #WebServerClass.HTTPEnabled.Syntax -->**.HTTPEnabled** : Boolean<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.HTTPEnabled.Summary -->HTTP protocol state<!-- END REF -->.
+O <!-- REF #WebServerClass.HTTPEnabled.Summary -->Estado do protocolo HTTP<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -342,9 +342,9 @@ The <!-- REF #WebServerClass.HTTPEnabled.Summary -->HTTP protocol state<!-- END 
 <!-- REF #WebServerClass.HTTPPort.Syntax -->**.HTTPPort** : Number<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.HTTPPort.Summary -->listening IP port number for HTTP<!-- END REF -->.
+O <!-- REF #WebServerClass.HTTPPort.Summary -->listening IP port number for HTTP<!-- END REF -->.
 
-Default = 80
+O padrão = 80
 
 <!-- END REF -->
 
@@ -355,7 +355,7 @@ Default = 80
 <!-- REF #WebServerClass.HTTPTrace.Syntax -->**.HTTPTrace** : Boolean<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.HTTPTrace.Summary -->ativação de `HTTP TRACE`<!-- END REF -->. For security reasons, by default the Web server rejects `HTTP TRACE` requests with an error 405. When enabled, the web server replies to `HTTP TRACE` requests with the request line, header, and body.
+O <!-- REF #WebServerClass.HTTPTrace.Summary -->ativação de `HTTP TRACE`<!-- END REF -->. For security reasons, by default the Web server rejects `HTTP TRACE` requests with an error 405. When enabled, the web server replies to `HTTP TRACE` requests with the request line, header, and body.
 
 <!-- END REF -->
 
@@ -366,7 +366,7 @@ The <!-- REF #WebServerClass.HTTPTrace.Summary -->ativação de `HTTP TRACE`<!--
 <!-- REF #WebServerClass.HTTPSEnabled.Syntax -->**.HTTPSEnabled** : Boolean<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.HTTPSEnabled.Summary -->Estado do protocolo HTTPS<!-- END REF -->.
+O <!-- REF #WebServerClass.HTTPSEnabled.Summary -->Estado do protocolo HTTPS<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -377,9 +377,9 @@ The <!-- REF #WebServerClass.HTTPSEnabled.Summary -->Estado do protocolo HTTPS<!
 <!-- REF #WebServerClass.HTTPSPort.Syntax -->**.HTTPSPort** : Number<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.HTTPSPort.Summary -->listening IP port number for HTTPS<!-- END REF -->.
+O <!-- REF #WebServerClass.HTTPSPort.Summary -->listening IP port number for HTTPS<!-- END REF -->.
 
-Default = 443
+O padrão = 443
 
 <!-- END REF -->
 
@@ -391,7 +391,7 @@ Default = 443
 
 > This property is not returned in [scalable sessions mode](#scalablesession).
 
-The <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->life duration (in minutes) of the inactive legacy session processes<!-- END REF -->. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the legacy session context is destroyed.
+O <!-- REF #WebServerClass.inactiveProcessTimeout.Summary -->life duration (in minutes) of the inactive legacy session processes<!-- END REF -->. At the end of the timeout, the process is killed on the server, the `On Web Legacy Close Session` database method is called, then the legacy session context is destroyed.
 
 Default = 480 minutes
 
@@ -405,7 +405,7 @@ Default = 480 minutes
 
 > This property is not returned in [scalable sessions mode](#scalablesession).
 
-The <!-- REF #WebServerClass.inactiveSessionTimeout.Summary -->life duration (in minutes) of inactive legacy sessions (duration set in cookie)<!-- END REF -->. At the end of this period, the session cookie expires and is no longer sent by the HTTP client.
+O <!-- REF #WebServerClass.inactiveSessionTimeout.Summary -->life duration (in minutes) of inactive legacy sessions (duration set in cookie)<!-- END REF -->. At the end of this period, the session cookie expires and is no longer sent by the HTTP client.
 
 Default = 480 minutes
 
@@ -418,7 +418,7 @@ Default = 480 minutes
 <!-- REF #WebServerClass.IPAddressToListen.Syntax -->**.IPAddressToListen** : Text<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.IPAddressToListen.Summary -->IP address on which the 4D Web Server will receive HTTP requests<!-- END REF -->. By default, no specific address is defined. Both IPv6 string formats and IPv4 string formats are supported.
+O <!-- REF #WebServerClass.IPAddressToListen.Summary -->IP address on which the 4D Web Server will receive HTTP requests<!-- END REF -->. By default, no specific address is defined. Both IPv6 string formats and IPv4 string formats are supported.
 
 <!-- END REF -->
 
@@ -431,7 +431,7 @@ The <!-- REF #WebServerClass.IPAddressToListen.Summary -->IP address on which th
 
 *Read-only property*
 
-The <!-- REF #WebServerClass.isRunning.Summary -->web server running state<!-- END REF -->.
+O <!-- REF #WebServerClass.isRunning.Summary -->web server running state<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -442,7 +442,7 @@ The <!-- REF #WebServerClass.isRunning.Summary -->web server running state<!-- E
 <!-- REF #WebServerClass.keepSession.Syntax -->**.keepSession** : Boolean<!-- END REF -->
 
 
-Contains <!-- REF #WebServerClass.keepSession.Summary -->`True` if legacy sessions are enabled in the web server, `False` otherwise<!-- END REF -->.
+Contém <!-- REF #WebServerClass.keepSession.Summary -->`True` if legacy sessions are enabled in the web server, `False` otherwise<!-- END REF -->.
 
 ##### Veja também
 
@@ -457,9 +457,9 @@ Contains <!-- REF #WebServerClass.keepSession.Summary -->`True` if legacy sessio
 <!-- REF #WebServerClass.logRecording.Syntax -->**.logRecording** : Number<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.logRecording.Summary -->log requests (logweb.txt) recording value<!-- END REF -->.
+O <!-- REF #WebServerClass.logRecording.Summary -->log requests (logweb.txt) recording value<!-- END REF -->.
 
-- 0 = Do not record (default)
+- 0 = Não registar (por defeito)
 - 1 = Record in CLF format
 - 2 = Record in DLF format
 - 3 = Record in ELF format
@@ -474,9 +474,9 @@ The <!-- REF #WebServerClass.logRecording.Summary -->log requests (logweb.txt) r
 <!-- REF #WebServerClass.maxConcurrentProcesses.Syntax -->**.maxConcurrentProcesses** : Number<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.maxConcurrentProcesses.Summary -->maximum number of concurrent web processes supported by the web server<!-- END REF -->. When this number (minus one) is reached, 4D will not create any other processes and returns the HTTP status 503 - Service Unavailable to all new requests.
+O <!-- REF #WebServerClass.maxConcurrentProcesses.Summary -->número máximo de processos web simultâneos suportados pelo servidor web<!-- END REF -->. When this number (minus one) is reached, 4D will not create any other processes and returns the HTTP status 503 - Service Unavailable to all new requests.
 
-Possible values: 10 - 32000
+Valores possíveis: 10 - 32000
 
 Default = 100
 
@@ -491,7 +491,7 @@ Default = 100
 
 <!-- REF #WebServerClass.maxRequestSize.Summary -->Maximum size (in bytes) of incoming HTTP requests (POST) that the web server is allowed to process<!-- END REF -->. Passing the maximum value (2147483647) means that, in practice, no limit is set. This limit is used to avoid web server saturation due to incoming requests that are too large. If a request reaches this limit, the web server rejects it.
 
-Possible values: 500000 - 2147483647
+Valores possíveis: 500000 - 2147483647
 
 <!-- END REF -->
 
@@ -514,7 +514,7 @@ Possible values: 500000 - 2147483647
 <!-- REF #WebServerClass.minTLSVersion.Syntax -->**.minTLSVersion** : Number<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.minTLSVersion.Summary -->minimum TLS version accepted for connections<!-- END REF -->. Connection attempts from clients supporting only versions below the minimum will be rejected.
+O <!-- REF #WebServerClass.minTLSVersion.Summary -->minimum TLS version accepted for connections<!-- END REF -->. Connection attempts from clients supporting only versions below the minimum will be rejected.
 
 Valores possíveis:
 
@@ -523,7 +523,7 @@ Valores possíveis:
 - 3 = TLSv1_2 (default)
 - 4 = TLSv1_3
 
-If modified, the server must be restarted to use the new value.
+Se modificado, o servidor deve ser reiniciado para utilizar o novo valor.
 
 <!-- END REF -->
 
@@ -534,9 +534,9 @@ If modified, the server must be restarted to use the new value.
 <!-- REF #WebServerClass.name.Syntax -->**.name** : Text<!-- END REF -->
 
 
-*Read-only property*
+*Propriedade só de leitura*
 
-The <!-- REF #WebServerClass.name.Summary -->name of the web server application<!-- END REF -->.
+O <!-- REF #WebServerClass.name.Summary -->nome da aplicação do servidor web<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -547,9 +547,9 @@ The <!-- REF #WebServerClass.name.Summary -->name of the web server application<
 <!-- REF #WebServerClass.openSSLVersion.Syntax -->**.openSSLVersion** : Text<!-- END REF -->
 
 
-*Read-only property*
+*Propriedade só de leitura*
 
-The <!-- REF #WebServerClass.openSSLVersion.Summary -->version of the OpenSSL library used<!-- END REF -->.
+O <!-- REF #WebServerClass.openSSLVersion.Summary -->version of the OpenSSL library used<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -560,9 +560,9 @@ The <!-- REF #WebServerClass.openSSLVersion.Summary -->version of the OpenSSL li
 <!-- REF #WebServerClass.perfectForwardSecrecy.Syntax -->**.perfectForwardSecrecy** : Boolean<!-- END REF -->
 
 
-*Read-only property*
+*Propriedade só de leitura*
 
-The <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->PFS availability on the server<!-- END REF -->.
+O <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->disponibilidade do PFS no servidor<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -572,7 +572,7 @@ The <!-- REF #WebServerClass.perfectForwardSecrecy.Summary -->PFS availability o
 <!-- REF #WebServerClass.rootFolder.Syntax -->**.rootFolder** : Text<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.rootFolder.Summary -->path of web server root folder<!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. When using this property in the `settings` parameter, it can be a `Folder` object.
+O <!-- REF #WebServerClass.rootFolder.Summary -->caminho da pasta raiz do servidor web<!-- END REF -->. O caminho está formatado no caminho completo POSIX usando sistemas de arquivos. When using this property in the `settings` parameter, it can be a `Folder` object.
 
 <!-- END REF -->
 
@@ -582,7 +582,7 @@ The <!-- REF #WebServerClass.rootFolder.Summary -->path of web server root folde
 <!-- REF #WebServerClass.scalableSession.Syntax -->**.scalableSession** : Boolean<!-- END REF -->
 
 
-Contains <!-- REF #WebServerClass.scalableSession.Summary -->`True` if scalable sessions are used in the web server, and `False` otherwise<!-- END REF -->.
+Contém <!-- REF #WebServerClass.scalableSession.Summary -->`True` if scalable sessions are used in the web server, and `False` otherwise<!-- END REF -->.
 
 ##### Veja também
 
@@ -596,7 +596,7 @@ Contains <!-- REF #WebServerClass.scalableSession.Summary -->`True` if scalable 
 <!-- REF #WebServerClass.sessionCookieDomain.Syntax -->**.sessionCookieDomain** : Text<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.sessionCookieDomain.Summary -->"domain" field of the session cookie<!-- END REF -->. Used to control the scope of the session cookies. If you set, for example, the value "/*.4d.fr" for this selector, the client will only send a cookie when the request is addressed to the domain ".4d.fr", which excludes servers hosting external static data.
+O <!-- REF #WebServerClass.sessionCookieDomain.Summary -->"domain" field of the session cookie<!-- END REF -->. Used to control the scope of the session cookies. If you set, for example, the value "/*.4d.fr" for this selector, the client will only send a cookie when the request is addressed to the domain ".4d.fr", which excludes servers hosting external static data.
 
 <!-- END REF -->
 
@@ -607,9 +607,9 @@ The <!-- REF #WebServerClass.sessionCookieDomain.Summary -->"domain" field of th
 <!-- REF #WebServerClass.sessionCookieName.Syntax -->**.sessionCookieName** : Text<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.sessionCookieName.Summary -->name of the cookie used for storing the session ID<!-- END REF -->.
+O <!-- REF #WebServerClass.sessionCookieName.Summary -->name of the cookie used for storing the session ID<!-- END REF -->.
 
-*Read-only property*
+*Propriedade só de leitura*
 
 <!-- END REF -->
 
@@ -620,7 +620,7 @@ The <!-- REF #WebServerClass.sessionCookieName.Summary -->name of the cookie use
 <!-- REF #WebServerClass.sessionCookiePath.Syntax -->**.sessionCookiePath** : Text<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.sessionCookiePath.Summary -->"path" field of the session cookie<!-- END REF -->. Used to control the scope of the session cookies. If you set, for example, the value "/4DACTION" for this selector, the client will only send a cookie for dynamic requests beginning with 4DACTION, and not for pictures, static pages, etc.
+O <!-- REF #WebServerClass.sessionCookiePath.Summary -->"path" field of the session cookie<!-- END REF -->. Used to control the scope of the session cookies. If you set, for example, the value "/4DACTION" for this selector, the client will only send a cookie for dynamic requests beginning with 4DACTION, and not for pictures, static pages, etc.
 
 <!-- END REF -->
 
@@ -639,7 +639,7 @@ The <!-- REF #WebServerClass.sessionCookiePath.Summary -->"path" field of the se
 <!-- REF #WebServerClass.sessionCookieSameSite.Syntax -->**.sessionCookieSameSite** : Text<!-- END REF -->
 
 
-The <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->"SameSite" session cookie value<!-- END REF -->. Possible values (using constants):
+O <!-- REF #WebServerClass.sessionCookieSameSite.Summary -->"SameSite" session cookie value<!-- END REF -->. Possible values (using constants):
 
 | Constante           | Value    | Descrição                                                                                                                           |
 | ------------------- | -------- | ----------------------------------------------------------------------------------------------------------------------------------- |
@@ -660,7 +660,7 @@ See the [Session Cookie SameSite](WebServer/webServerConfig.md#session-cookie-sa
 > This property is not used in [scalable sessions mode](#scalablesession) (there is no IP address validation).
 
 
-The <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address validation for session cookies<!-- END REF -->. For security reasons, by default the web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. In some specific applications, you may want to disable this validation and accept session cookies, even when their IP addresses do not match. For example when mobile devices switch between WiFi and 3G/4G networks, their IP address will change. In this case, you can allow clients to be able to continue using their web sessions even when the IP addresses change (this setting lowers the security level of your application).
+O <!-- REF #WebServerClass.sessionIPAddressValidation.Summary -->IP address validation for session cookies<!-- END REF -->. For security reasons, by default the web server checks the IP address of each request containing a session cookie and rejects it if this address does not match the IP address used to create the cookie. In some specific applications, you may want to disable this validation and accept session cookies, even when their IP addresses do not match. For example when mobile devices switch between WiFi and 3G/4G networks, their IP address will change. In this case, you can allow clients to be able to continue using their web sessions even when the IP addresses change (this setting lowers the security level of your application).
 
 <!-- END REF -->
 
@@ -742,20 +742,20 @@ The function returns an object describing the Web server launch status. This obj
 
 <!-- REF #WebServerClass.stop().Params -->
 
-| Parâmetros | Tipo |  | Descrição                                                  |
-| ---------- | ---- |  | ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF -->
+| Parâmetros | Tipo |  | Descrição                                             |
+| ---------- | ---- |  | ----------------------------------------------------- |
+|            |      |  | Não exige nenhum parâmetro|<!-- END REF -->
 
 |
 
-The `.stop()` function <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
+A função `.stop()` <!-- REF #WebServerClass.stop().Summary -->stops the web server on which it is applied<!-- END REF -->.
 
 If the web server was started, all web connections and web processes are closed, once the currently handled requests are finished. If the web server was not started, the method does nothing.
 > This function resets the customized web settings defined for the session using the *settings* parameter of the [`.start()`](#start) function, if any.
 
 #### Exemplo
 
-To stop the database Web server:
+Para parar o servidor Web da base de dados:
 
 ```4d
  var $webServer : 4D. WebServer

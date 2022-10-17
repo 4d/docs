@@ -143,7 +143,7 @@ $key:=4D.CryptoKey.new(New object("type";"ECDSA";"curve";"prime256v1"))
 - [`superclass`](API/ClassClass.md#superclass) オブジェクト (無い場合は null)
 - [`new()`](API/ClassClass.md#new) 関数 (Class オブジェクトをインスタンス化します)
 
-また、Class オブジェクトは [`constructor`](#class-constructor) オブジェクトを参照することも可能です。
+また、Class オブジェクトは [`constructor`](#class-constructor) オブジェクトを参照することも可能です (任意)。
 
 Class オブジェクトは [共有オブジェクト](shared.md) です。したがって、異なる 4Dプロセスから同時にアクセスすることができます。
 

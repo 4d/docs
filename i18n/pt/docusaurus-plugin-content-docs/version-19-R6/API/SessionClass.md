@@ -93,9 +93,9 @@ IP:port/4DACTION/action_Session
 
 
 <!-- REF #SessionClass.clearPrivileges().Params -->
-| Parâmetros | Tipo |  | Descrição                                                  |
-| ---------- | ---- |::| ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF --> |
+| Parâmetros | Tipo |  | Descrição                                             |
+| ---------- | ---- |::| ----------------------------------------------------- |
+|            |      |  | Não exige nenhum parâmetro|<!-- END REF --> |
 
 #### Descrição
 
@@ -130,7 +130,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 The `.expirationDate` property contains <!-- REF #SessionClass.expirationDate.Summary -->the expiration date and time of the session cookie<!-- END REF -->. O valor se expressa como texto no formato ISO 8601: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
 
-Essa propriedade é**apenas leitura**. É recalculada automaticamente se modificar o valor da propriedade [`.idleTimeout`](#idletimeout).
+Essa propriedade é **apenas leitura**. É recalculada automaticamente se modificar o valor da propriedade [`.idleTimeout`](#idletimeout).
 
 #### Exemplo
 

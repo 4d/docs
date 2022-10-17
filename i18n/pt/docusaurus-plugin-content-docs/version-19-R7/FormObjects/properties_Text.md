@@ -80,7 +80,7 @@ Sets the text to have a line running beneath it.
 This property allows you to specify either the **font theme** or the **font family** used in the object.
 > **Font theme** and **font family** properties are mutually exclusive. A font theme takes hold of font attributes, including size. A font family allows you to define font name, font size and font color.
 
-### Font Theme
+### Tema Fonte
 
 The font theme property designates an automatic style name. Automatic styles determine the font family, font size and font color to be used for the object dynamically according to system parameters. These parameters depend on:
 

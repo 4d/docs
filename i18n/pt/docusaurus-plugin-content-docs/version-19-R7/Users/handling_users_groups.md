@@ -179,7 +179,7 @@ Groups are assigned access privileges to specific parts or features of the appli
 - Design and Runtime Explorer access,
 - HTTP server,
 - REST server,
-- SQL server.
+- Servidor SQL.
 
 These accesses are defined in the Settings dialog. O exemplo abaixo mostra direitos de acesso ao explorador de Execução e ao Design sendo atribuidos ao grupo "Devs":
 

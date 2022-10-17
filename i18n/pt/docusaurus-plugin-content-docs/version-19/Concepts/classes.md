@@ -457,7 +457,7 @@ When a [class constructor](#class-constructor) function is used (with the [`new(
 ```
 
 ```4d
-// in a 4D method  
+// num método 4D  
 $o:=cs.ob.new()
 $val:=$o.a //42
 ```

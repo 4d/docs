@@ -512,9 +512,9 @@ Se quiser saber o número total e tamanho dos emails nas mailbox:
 
 
 <!-- REF #POP3TransporterClass.undeleteAll().Params -->
-| Parâmetros | Tipo |  | Descrição                                                  |
-| ---------- | ---- |::| ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF --> |
+| Parâmetros | Tipo |  | Descrição                                             |
+| ---------- | ---- |::| ----------------------------------------------------- |
+|            |      |  | Não exige nenhum parâmetro|<!-- END REF --> |
 
 ##### Descrição
 

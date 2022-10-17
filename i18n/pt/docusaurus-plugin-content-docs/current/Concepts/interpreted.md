@@ -19,7 +19,7 @@ The advantages of the compilation are:
 ## Differences between interpreted and compiled code
 Although application will work the same way in interpreted and compiled modes, there are some differences to know when you write code that will be compiled. The 4D interpreter is usually more flexible than the compiler.
 
-| Compiled                                                                                                                                                                               | Interpreted                                                                    |
+| Compiled                                                                                                                                                                               | Interpretado                                                                   |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | You cannot have a method with the same name as a variable.                                                                                                                             | No error is generated, but priority is given to the method                     |
 | All variables must by typed, either through a compiler directive (ex: `C_LONGINT`), or by the compiler at compilation time.                                                            | Variables can be typed on-the-fly (not recommended)                            |

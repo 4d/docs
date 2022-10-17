@@ -53,7 +53,7 @@ SET USER ALIAS(Current system user)
 
 ### Protecting access
 
-#### Privileges
+#### Privilégios
 
 On a machine that is shared by several users, you can install the 4D application in a folder and give appropriate user access privileges to the folder at the OS level.
 

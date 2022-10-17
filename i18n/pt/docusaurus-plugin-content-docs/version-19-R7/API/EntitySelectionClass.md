@@ -490,7 +490,7 @@ Se quisermos obter uma lista de funcionários cujo salário for superior ao sal�
 
 #### Descrição
 
-The `.contains()` function <!-- REF #EntitySelectionClass.contains().Summary -->returns true if entity reference belongs to the entity selection<!-- END REF -->, and false otherwise.
+The `.contains()` function <!-- REF #EntitySelectionClass.contains().Summary -->returns true if entity reference belongs to the entity selection<!-- END REF -->e false de outra forma.
 
 Em *entity*, especifique a entidade a buscar na entity selection. Se a entidade for Null, a função devolverá false.
 
@@ -990,7 +990,7 @@ O seguinte código genérico duplica todas as entidades da entity selection:
 | ---------- | ---- | -- | -------------------------------------------------------------------------------------------------- |
 | result     | Text | <- | Context attributes linked to the entity selection, separated by a comma|<!-- END REF --> |
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. In most cases, you will not need to use it.
+> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
 
 
 #### Descrição
@@ -1510,11 +1510,11 @@ You can add as many objects in the criteria collection as necessary.
 
 
 ```4d
-// order by formula
+// ordenar por fórmula
  $sortedEntitySelection:=$entitySelection.orderBy("firstName asc, salary desc")
  $sortedEntitySelection:=$entitySelection.orderBy("firstName")
 
-  // order by collection with or without sort orders
+  // ordenar por colecção com ou sem ordenação
  $orderColl:=New collection
  $orderColl.push(New object("propertyPath";"firstName";"descending";False))
  $orderColl.push(New object("propertyPath";"salary";"descending";True))
@@ -1549,7 +1549,7 @@ You can add as many objects in the criteria collection as necessary.
 | Parâmetros    | Tipo                |    | Descrição                                               |
 | ------------- | ------------------- |:--:| ------------------------------------------------------- |
 | formulaString | Text                | -> | Formula string                                          |
-| formulaObj    | Objeto              | -> | Formula object                                          |
+| formulaObj    | Objeto              | -> | Objecto fórmula                                         |
 | sortOrder     | Integer             | -> | `dk ascending` (default) or `dk descending`             |
 | settings      | Objeto              | -> | Parameter(s) for the formula                            |
 | Resultados    | 4D. EntitySelection | <- | New ordered entity selection|<!-- END REF --> |
@@ -1576,7 +1576,7 @@ By default if you omit the *sortOrder* parameter, the resulting entity selection
 
 Within the *formulaString* or *formulaObj*, the processed entity and thus its attributes are available through the `This` command (for example, `This.lastName`).
 
-You can pass parameter(s) to the formula using the `args` property (object) of the `settings` parameter: the formula receives the `settings.args` object in $1.
+Pode passar parâmetro(s) à fórmula usando a propriedade (objecto) `args` do parâmetro `settings`: a fórmula recebe o objecto `settings.args` em $1.
 
 #### Exemplo 1
 
@@ -1603,7 +1603,7 @@ Same sort order but using a formula object:
 
 #### Exemplo 2
 
-A formula is given as a formula object with parameters; `settings.args` object is received as $1 in the ***computeAverage*** method.
+Uma fórmula é dada como um objecto de fórmula com parâmetros; `settings.args` objecto é recebido como $1 no método ***computeAverage***.
 
 In this example, the "marks" object field in the **Students** dataClass contains students' grades for each subject. A single formula object is used to compute a student's average grade with different coefficients for schoolA and schoolB.
 
@@ -1773,9 +1773,9 @@ For more information, refer to the **querySettings parameter** paragraph in the 
 
 
 <!-- REF #EntitySelectionClass.refresh().Params -->
-| Parâmetros | Tipo |  | Descrição                                                  |
-| ---------- | ---- |::| ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF --> |
+| Parâmetros | Tipo |  | Descrição                                             |
+| ---------- | ---- |::| ----------------------------------------------------- |
+|            |      |  | Não exige nenhum parâmetro|<!-- END REF --> |
 
 #### Descrição
 > This function only works with a remote datastore (client / server or `Open datastore` connection).

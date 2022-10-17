@@ -327,7 +327,7 @@ The value of the 4D variable `vtSiteName` will be inserted in the HTML page when
 
 For example, here are the processing results of the 4D text variable myvar with the available tags:
 
-| myvar Value          | Etiquetas                    | Resultados          |
+| Valor myvar          | Etiquetas                    | Resultados          |
 | -------------------- | ---------------------------- | ------------------- |
 | `myvar:="<B>"` | `<!--#4DTEXT myvar-->` | `&lt;B&gt;` |
 | `myvar:="<B>"` | `<!--#4DHTML myvar-->` | `<B>`         |
@@ -672,7 +672,7 @@ Por exemplo, pode escrever:
 $4DEVAL(UserName)
 ```
 
-instead of:
+em vez de:
 
 ```html
 <!--#4DEVAL(UserName)-->

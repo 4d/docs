@@ -38,7 +38,7 @@ ds.webUser.save()
 
 "はじめに" の章の [例題](gettingStarted.md#ユーザー認証) も参照ください。
 
-カスタム認証が提供されていない場合、4D は [`On Web Authentication`](#on-web-authentication) データベースメソッドを呼び出します (あれば)。 $1 と $2 に加えて、ブラウザーとサーバーの IPアドレス ($3 と$ 4) のみが提供され、ユーザー名とパスワード ($5 と $6) は空です。 ユーザー認証が成功した場合、このメソッドは $0 に **True** を返さなければなりません。この場合、リクエストされたリソースが提供されます。 認証が失敗した場合には、$0 に **False** を返します。
+カスタム認証が提供されていない場合、4D は [`On Web Authentication`](#on-web-authentication) データベースメソッドを呼び出します (あれば)。 $1 と $2 に加えて、ブラウザーとサーバーの IPアドレス ($3 と$ 4) のみが提供され、ユーザー名とパスワード ($5 と $6) は空です。 ユーザー認証が成功した場合、このメソッドは $0 に **True** を返さなければなりません。この場合、リクエストされたリソースが提供されます。認証が失敗した場合には、$0 に **False** を返します。
 
 > **警告:** `On Web Authentication` データベースメソッドが存在しない場合、接続は自動的に受け入れられます (テストモード)。
 
@@ -173,7 +173,7 @@ BASICモードと同様に、ユーザーは接続時に自分の名前とパス
 [DIGEST認証モード](#digest認証) での `On Web Authentication` データベースメソッドの例題:
 
 ```4d
- // On Web Authentication Database Method
+ // On Web Authentication データベースメソッド
  #DECLARE ($url : Text; $header : Text; $ipB : Text; $ipS : Text; \
   $user : Text; $pw : Text) -> $valid : Boolean
 
@@ -181,9 +181,9 @@ BASICモードと同様に、ユーザーは接続時に自分の名前とパス
  $valid:=False
 
  $found:=ds.WebUser.query("User === :1";$user)
- If($found.length=1) // User is found
+ If($found.length=1) // ユーザーが見つかった場合
   $valid:=WEB Validate digest($user;[WebUser]password)
  Else
-    $valid:=False // User does not exist
+  $valid:=False // ユーザーは存在しません
  End if
 ```

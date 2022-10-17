@@ -4,29 +4,29 @@ title: Calling ORDA class functions
 ---
 
 
-You can call [data model class functions](ORDA/ordaClasses.md) defined for the ORDA Data Model through your REST requests, so that you can benefit from the exposed API of the targeted 4D application.
+Pode chamar [funções de classe de modelo de dados](ORDA/ordaClasses.md) definidas para o Modelo de Dados ORDA através dos seus pedidos REST, para que possa beneficiar da API exposta da aplicação 4D visada.
 
-Functions are simply called in POST requests on the appropriate ORDA interface, without (). For example, if you have defined a `getCity()` function in the City dataclass class, you could call it using the following request:
+As funções são simplesmente chamadas em pedidos POST na interface ORDA apropriada, sem (). Por exemplo, se tiver definido uma função `getCity()` na classe de Dataclass da Cidade, poderia chamá-la utilizando o seguinte pedido:
 
 `/rest/City/getCity`
 
-with data in the body of the POST request: `["Aguada"]`
+com dados no corpo do pedido POST: `["Aguada"]`
 
-In 4D language, this call is equivalent to, :
+Em linguagem 4D, esta chamada é equivalente a, :
 
 ```4d
 $city:=ds. City.getCity("Aguada")
 ```
 
-> Only functions with the `exposed` keyword can be directly called from REST requests. See [Exposed vs non-exposed functions](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) section.
+> Apenas funções com a palavra-chave `exposed` podem ser diretamente chamadas a partir de pedidos REST. Veja a seção [Funções expostas vs. funções não expostas](ORDA/ordaClasses.md#exposed-vs-non-exposed-functions) .
 
-## Function calls
+## Chamadas de funções
 
-Functions must always be called using REST **POST** requests (a GET request will receive an error).
+As funções devem ser sempre chamadas utilizando REST **POST** pedidos (um pedido GET receberá um erro).
 
-Functions are called on the corresponding object on the server datastore.
+As funções são chamadas no objecto correspondente no datastore do servidor.
 
-| Class function                                                     | Sintaxe                                                                     |
+| Função de classe                                                   | Sintaxe                                                                     |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------- |
 | [datastore class](ORDA/ordaClasses.md#datastore-class)             | `/rest/$catalog/DataStoreClassFunction`                                     |
 | [dataclass class](ORDA/ordaClasses.md#dataclass-class)             | `/rest/{dataClass}/DataClassClassFunction`                                  |
@@ -67,7 +67,7 @@ Entities passed in parameters are referenced on the server through their key (*i
 
 > If the request sends modified attribute values for an existing entity on the server, the called ORDA data model function will be automatically executed on the server with modified values. This feature allows you, for example, to check the result of an operation on an entity, after applying all business rules, from the client application. You can then decide to save or not the entity on the server.
 
-| Properties               | Tipo                                 | Descrição                                                                  |
+| Propriedades             | Tipo                                 | Descrição                                                                  |
 | ------------------------ | ------------------------------------ | -------------------------------------------------------------------------- |
 | Attributes of the entity | misto                                | Optional - Values to modify                                                |
 | __DATACLASS              | String                               | Mandatory - Indicates the Dataclass of the entity                          |
@@ -91,7 +91,7 @@ The entity selection must have been defined beforehand using [$method=entityset]
 
 > If the request sends a modified entity selection to the server, the called ORDA data model function will be automatically executed on the server with the modified entity selection.
 
-| Properties               | Tipo     | Descrição                                                                            |
+| Propriedades             | Tipo     | Descrição                                                                            |
 | ------------------------ | -------- | ------------------------------------------------------------------------------------ |
 | Attributes of the entity | misto    | Optional - Values to modify                                                          |
 | __DATASET                | String   | Mandatory - entitySetID (UUID) of the entity selection                               |

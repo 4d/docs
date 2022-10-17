@@ -17,14 +17,14 @@ La siguiente tabla indica si el modo apropiativo se utiliza o está disponible, 
 | Servidor REST         | cooperativo                                                                                                              | apropiativo                                                         | apropiativo     |
 | Servidor Web          | cooperativo                                                                                                              | *parámetro web*                                                     | *parámetro web* |
 | Servidor Web Services | cooperativo                                                                                                              | *parámetro web*                                                     | *parámetro web* |
-| Legacy REST           | cooperativo                                                                                                              | *parámetro web*                                                     | *parámetro web* |
+| Legado REST           | cooperativo                                                                                                              | *parámetro web*                                                     | *parámetro web* |
 
 | 4D remoto/monopuesto  | Interpretado | Compilado       |
 | --------------------- | ------------ | --------------- |
 | Servidor REST         | cooperativo  | apropiativo     |
 | Servidor Web          | cooperativo  | *parámetro web* |
 | Servidor Web Services | cooperativo  | *parámetro web* |
-| Legacy REST           | cooperativo  | *parámetro web* |
+| Legado REST           | cooperativo  | *parámetro web* |
 
 - Servidor REST: gestiona las [funciones de clase del modelo de datos ORDA](../REST/ClassFunctions.md)
 - Servidor web: maneja las [plantillas web](templates.md), [4DACTION y los métodos base](httpRequests.md)

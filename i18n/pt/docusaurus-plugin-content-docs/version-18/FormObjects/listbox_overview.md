@@ -639,7 +639,7 @@ As with selections, the `LISTBOX GET CELL POSITION` command will return the same
 
 When all the rows of a sub-hierarchy are hidden, the break line is automatically hidden. In the above example, if rows 1 to 3 are hidden, the "Brittany" break row will not appear.
 
-#### Break rows
+#### Linhas de quebra
 
 If the user selects a break row, `LISTBOX GET CELL POSITION` returns the first occurrence of the row in the corresponding array. In the following case:
 
@@ -739,7 +739,7 @@ When a list box column is associated with an object array, the way a cell is dis
 
 | valueType | Default widget                                 | Alternative widget(s)                                                                          |
 | --------- | ---------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| text      | text input                                     | drop-down menu (required list) or combo box (choice list)                                      |
+| text      | entrada de texto                               | drop-down menu (required list) or combo box (choice list)                                      |
 | real      | controlled text input (numbers and separators) | drop-down menu (required list) or combo box (choice list)                                      |
 | integer   | controlled text input (numbers only)           | drop-down menu (required list) or combo box (choice list) or three-states check box            |
 | boolean   | caixa de verificação                           | drop-down menu (required list)                                                                 |

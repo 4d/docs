@@ -348,15 +348,16 @@ Used with the `<!--#4DELSEIF-->` (optional), `<!--#4DELSE-->` (optional) and `<!
 
 The *expression* parameter can contain any valid 4D expression returning a Boolean value. It must be indicated within parenthesis and comply with the 4D syntax rules.
 
+
 The `<!--#4DIF expression-->` ... `<!--#4DENDIF-->` blocks can be nested in several levels. Like in 4D, each `<!--#4DIF expression-->` must match a `<!--#4DENDIF-->`.
 
 In case of an interpretation error, the text "`<!--#4DIF expression-->`: A Boolean expression was expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`. Likewise, if there are not as many `<!--#4DENDIF-->` as `<!--#4DIF -->`, the text "`<!--#4DIF expression-->`: 4DENDIF expected" is inserted instead of the contents located between `<!--#4DIF -->` and `<!--#4DENDIF-->`.
 
-Using the `<!--#4DELSEIF-->` tag, you can test an unlimited number of conditions. Only the code that follows the first condition evaluated as `True` is executed. If no conditions are true, no statement is executed (if there is no final `<!--#4DELSE-->`). You can use a <!--#4DELSE--> tag after the last <!--#4DELSEIF-->. . <!--#4DELSE--> If all the conditions are false, the statements following the
+Using the `<!--#4DELSEIF-->` tag, you can test an unlimited number of conditions. Only the code that follows the first condition evaluated as `True` is executed. If no conditions are true, no statement is executed (if there is no final `<!--#4DELSE-->`). You can use a `<!--#4DELSE-->` tag after the last `<!--#4DELSEIF-->`. If all the conditions are false, the statements following the `<!--#4DELSE-->` are executed.
 
 The two following codes are equivalent.
 
-Code using 4DELSE only:
+Code using `4DELSE` only:
 
 ```html
 <!--#4DIF Condition1-->
@@ -576,6 +577,7 @@ For example, the following code:
 ...produces the following result:
 
 ```
+
 0
 
 1

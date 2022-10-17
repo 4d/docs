@@ -260,9 +260,9 @@ You want to create an alias to a file in your database folder:
 
 
 <!-- REF #FileClass.delete().Params -->
-| Parâmetros | Tipo |  | Descrição                                                  |
-| ---------- | ---- |  | ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF -->
+| Parâmetros | Tipo |  | Descrição                                             |
+| ---------- | ---- |  | ----------------------------------------------------- |
+|            |      |  | Não exige nenhum parâmetro|<!-- END REF -->
 
 |
 
@@ -729,7 +729,7 @@ In *breakMode*, you can pass a number indicating the processing to apply to end-
 
 Por padrão, ao omitir o parâmetro *breakMode* , as quebras de linha são processadas no modo nativo (1).
 
-> **Compatibility Note**: Compatibility options are available for EOL and BOM management. See [Compatibility page](https://doc.4d.com/4dv19R/help/title/en/page3239.html) on doc.4d.com.
+> **Compatibility Note**: Compatibility options are available for EOL and BOM management. Ver [página Compatibilidade](https://doc.4d.com/4dv19R/help/title/en/page3239.html) em doc.4d.com.
 
 #### Exemplo
 

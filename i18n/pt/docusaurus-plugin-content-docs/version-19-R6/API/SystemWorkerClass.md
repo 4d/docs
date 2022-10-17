@@ -107,7 +107,7 @@ All callback functions receive two object parameters. Their contents depend on t
 | ------------ | ------------ | ------------ | ------------- | ------------- | ------------ | ------------- |
 | $param1      | Objeto       | SystemWorker | SystemWorker  | SystemWorker  | SystemWorker | SystemWorker  |
 | $param2.type | Text         | "response"   | "data"        | "erro"        | "erro"       | "termination" |
-| $param2.data | Text or Blob |              | received data | error data    |              |               |
+| $param2.data | Text ou Blob |              | received data | dados de erro |              |               |
 
 Here is the sequence of callback calls:
 
@@ -258,9 +258,9 @@ $systemworker:=4D. SystemWorker.new("/bin/ls -l /Users ";cs. Params.new())
 
 
 <!-- REF #SystemWorkerClass.closeInput().Params -->
-| Parâmetros | Tipo |  | Descrição                                                  |
-| ---------- | ---- |::| ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF --> |
+| Parâmetros | Tipo |  | Descrição                                             |
+| ---------- | ---- |::| ----------------------------------------------------- |
+|            |      |  | Não exige nenhum parâmetro|<!-- END REF --> |
 
 #### Descrição
 
@@ -304,7 +304,7 @@ $output:=$worker.response
 
 The `.currentDirectory` property <!-- REF #SystemWorkerClass.commandLine.Summary -->contains the working directory in which the external process is executed<!-- END REF -->.
 
-Essa propriedade é**apenas leitura**.
+Essa propriedade é **apenas leitura**.
 
 <!-- END REF -->
 
@@ -330,7 +330,7 @@ The `.pid` property <!-- REF #SystemWorkerClass.currentDirectory.Summary -->cont
 
 A propriedade `.dataType` <!-- REF #SystemWorkerClass.dataType.Summary -->contains the type of the response body content<!-- END REF -->. .
 
-Essa propriedade é**apenas leitura**.
+Essa propriedade é **apenas leitura**.
 
 <!-- END REF -->
 
@@ -344,7 +344,7 @@ Essa propriedade é**apenas leitura**.
 
 The `.encoding` property <!-- REF #SystemWorkerClass.encoding.Summary -->contains the encoding of the response body content<!-- END REF -->. .
 
-Essa propriedade é**apenas leitura**.
+Essa propriedade é **apenas leitura**.
 
 <!-- END REF -->
 
@@ -380,7 +380,7 @@ If no error occured, `.errors` contains an empty collection.
 
 The `.exitCode` property <!-- REF #SystemWorkerClass.exitCode.Summary -->contains the exit code returned by the external process<!-- END REF -->. Summary -->contains **true** if the external process is terminated<!-- END REF -->.
 
-Essa propriedade é**apenas leitura**.
+Essa propriedade é **apenas leitura**.
 
 <!-- END REF -->
 
@@ -408,7 +408,7 @@ Essa propriedade é**apenas escrita**.
 
 The `.terminated` property <!-- REF #SystemWorkerClass.pid.Summary -->contains **true** if the external process is terminated<!-- END REF -->.
 
-Essa propriedade é**apenas leitura**.
+Essa propriedade é **apenas leitura**.
 
 <!-- END REF -->
 
@@ -448,7 +448,7 @@ The `.response` property <!-- REF #SystemWorkerClass.response.Summary -->contain
 
 The type of the message is defined according to the [`dataType`](#datatype) attribute.
 
-Essa propriedade é**apenas leitura**.
+Essa propriedade é **apenas leitura**.
 
 <!-- END REF -->
 
@@ -473,9 +473,9 @@ The `.responseError` property <!-- REF #SystemWorkerClass.responseError.Summary 
 
 
 <!-- REF #SystemWorkerClass.terminate().Params -->
-| Parâmetros | Tipo |  | Descrição                                                  |
-| ---------- | ---- |::| ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF --> |
+| Parâmetros | Tipo |  | Descrição                                             |
+| ---------- | ---- |::| ----------------------------------------------------- |
+|            |      |  | Não exige nenhum parâmetro|<!-- END REF --> |
 
 #### Descrição
 
@@ -495,7 +495,7 @@ This function sends the instruction to terminate and give control back to the ex
 
 The `.timeout` property <!-- REF #SystemWorkerClass.terminated.Summary -->contains the duration in seconds before the external process will be killed if it is still alive<!-- END REF -->.
 
-Essa propriedade é**apenas leitura**.
+Essa propriedade é **apenas leitura**.
 
 <!-- END REF -->
 
@@ -509,7 +509,7 @@ Essa propriedade é**apenas leitura**.
 
 The `.wait()` function <!-- REF #SystemWorkerClass.timeout.Summary -->waits until the end of the `SystemWorker` execution or the specified *timeout*<!-- END REF -->.
 
-Essa propriedade é**apenas leitura**.
+Essa propriedade é **apenas leitura**.
 
 <!-- END REF -->
 

@@ -324,7 +324,7 @@ The *$event* parameter contains the following properties:
 | Propriedade   | Tipo    | Descrição                                                                                 |
 | ------------- | ------- | ----------------------------------------------------------------------------------------- |
 | attributeName | Text    | Computed attribute name                                                                   |
-| dataClassName | Text    | Dataclass name                                                                            |
+| dataClassName | Text    | Nome do dataclass                                                                         |
 | kind          | Text    | "get"                                                                                     |
 | result        | Variant | Optional. Add this property with Null value if you want a scalar attribute to return Null |
 
@@ -386,7 +386,7 @@ The *$event* parameter contains the following properties:
 | Propriedade   | Tipo    | Descrição                                     |
 | ------------- | ------- | --------------------------------------------- |
 | attributeName | Text    | Computed attribute name                       |
-| dataClassName | Text    | Dataclass name                                |
+| dataClassName | Text    | Nome do dataclass                             |
 | kind          | Text    | "set"                                         |
 | value         | Variant | Value to be handled by the computed attribute |
 
@@ -433,7 +433,7 @@ The *$event* parameter contains the following properties:
 | Propriedade   | Tipo    | Descrição                                                                                                                                                                                                                                                                                                                                                          |
 | ------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | attributeName | Text    | Computed attribute name                                                                                                                                                                                                                                                                                                                                            |
-| dataClassName | Text    | Dataclass name                                                                                                                                                                                                                                                                                                                                                     |
+| dataClassName | Text    | Nome do dataclass                                                                                                                                                                                                                                                                                                                                                  |
 | kind          | Text    | "query"                                                                                                                                                                                                                                                                                                                                                            |
 | value         | Variant | Value to be handled by the computed attribute                                                                                                                                                                                                                                                                                                                      |
 | operator      | Text    | Query operator (see also the [`query` class function](API/DataClassClass.md#query)). Valores possíveis:<li>== (equal to, @ is wildcard)</li><li>=== (equal to, @ is not wildcard)</li><li>!= (not equal to, @ is wildcard)</li><li>!== (not equal to, @ is not wildcard)</li><li>< (less than)</li><li><= (less than or equal to)</li><li>> (greater than)</li><li>>= (greater than or equal to)</li><li>IN (included in)</li><li>% (contains keyword)</li> |
@@ -566,7 +566,7 @@ The *$event* parameter contains the following properties:
 | Propriedade   | Tipo     | Descrição                                                                                                  |
 | ------------- | -------- | ---------------------------------------------------------------------------------------------------------- |
 | attributeName | Text     | Computed attribute name                                                                                    |
-| dataClassName | Text     | Dataclass name                                                                                             |
+| dataClassName | Text     | Nome do dataclass                                                                                          |
 | kind          | Text     | "orderBy"                                                                                                  |
 | value         | Variant  | Value to be handled by the computed attribute                                                              |
 | operator      | Text     | "desc" or "asc" (default)                                                                                  |

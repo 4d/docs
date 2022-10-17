@@ -277,7 +277,7 @@ The Custom Watch Pane is useful for evaluating expressions. It is similar to the
 * variável
 * pointer
 * calculation
-* 4D command
+* Comando 4D
 * method
 * and anything else that returns a value
 

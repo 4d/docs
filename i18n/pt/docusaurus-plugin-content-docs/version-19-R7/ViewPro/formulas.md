@@ -42,7 +42,7 @@ All formulas have operands and operators:
 
 4D View Pro supports five types of data. For each data type, specific literal values and operators are supported.
 
-| Tipos de dados                     | Values                                                | Operadores                                                                                                                                                                                                                                             |
+| Tipos de dados                     | Valores                                               | Operadores                                                                                                                                                                                                                                             |
 | ---------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [Número](Concepts/dt_number.md)    | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (addition)<br/>- (subtraction)<br/>* (multiplication)<br/>/ (division)<br/>^ (exponent, the number of times to multiply a number by itself)<br/>% (percentage -- divide the number before the operator by one hundred) |
 | [Date](Concepts/dt_date.md)        | 10/24/2017                                            | + (date + number of days -> date)<br/>+ (date + time -> date + time of day)<br/>- (date - number of days -> date)<br/>- (date - date -> number of days between the two)                                                              |
@@ -74,12 +74,12 @@ List of operators from most to least important:
 | ()                                            | Parenthesis (for grouping) |
 | -                                             | Negate                     |
 | +                                             | Mais                       |
-| %                                             | Percent                    |
+| %                                             | Porcentagem                |
 | ^                                             | Expoente                   |
 | * and /                                       | Multiply and divide        |
 | + and -                                       | Add and Subtract           |
 | &                                             | Concatenate                |
-| `=`  `>` `<` `>=` `<=` `<>` | Compare                    |
+| `=`  `>` `<` `>=` `<=` `<>` | Comparar                   |
 
 
 
@@ -245,7 +245,7 @@ For more information on supported incoming parameter types, please refer to the 
 
     | Propriedade | Tipo | Descrição       |
     | ----------- | ---- | --------------- |
-    | value       | Date | Date value      |
+    | value       | Date | Valor data      |
     | time        | Real | Time in seconds |
 
 If the 4D method returns nothing, an empty string is automatically returned.

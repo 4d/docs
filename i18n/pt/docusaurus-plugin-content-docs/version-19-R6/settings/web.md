@@ -293,7 +293,7 @@ This page contains the options used to enable and control advanced Web features 
 
 Starts and stops the REST Server. See [REST Server Configuration](../REST/configuration.md).
 
-### Access
+### Acesso
 
 This option specifies a group of 4D users that is authorized to establish the link to the 4D database using REST requests. See [Configuring REST access](../REST/configuration.md#configuring-rest-access).
 

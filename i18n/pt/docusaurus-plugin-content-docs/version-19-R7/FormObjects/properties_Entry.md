@@ -115,7 +115,7 @@ Here is a table that explains each of the entry filter choices in the Entry Filt
 
 | Nome        | Tipo de dados | Possible Values                                      |
 | ----------- | ------------- | ---------------------------------------------------- |
-| entryFilter | string        | <li>Entry filter code</li> or <li>Entry filter name (filter names start with &#124; )</li> |
+| entryFilter | string        | <li>Entry filter code</li> ou <li>Entry filter name (filter names start with &#124; )</li> |
 
 #### Objects Supported
 

@@ -25,7 +25,7 @@ Independente da verificação solicitada, 4D gera um arquivo de histórico na pa
 
 When you click on the **Open log file** button, 4D displays the most recent log file in the default browser of the machine.
 
-## Details
+## Detalhes
 
 The **Table list** button displays a detailed page that can be used to view and select the actual records and indexes to be checked:
 

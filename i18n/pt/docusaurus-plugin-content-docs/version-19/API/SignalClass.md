@@ -197,7 +197,7 @@ Essa propriedade é**apenas escrita**.
 
 A propriedade `.signaled` <!-- REF #SignalClass.signaled.Summary -->contains the current state of the `Signal` object<!-- END REF -->. . When the signal is created, `.signaled` is **False**.
 
-Essa propriedade é**apenas leitura**.
+Essa propriedade é **apenas leitura**.
 
 <!-- END REF -->
 
@@ -216,9 +216,9 @@ Essa propriedade é**apenas leitura**.
 
 
 <!-- REF #SignalClass.trigger().Params -->
-| Parâmetros | Tipo |  | Descrição                                                  |
-| ---------- | ---- |::| ---------------------------------------------------------- |
-|            |      |  | Does not require any parameters|<!-- END REF -->
+| Parâmetros | Tipo |  | Descrição                                             |
+| ---------- | ---- |::| ----------------------------------------------------- |
+|            |      |  | Não exige nenhum parâmetro|<!-- END REF -->
 
 |
 

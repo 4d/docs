@@ -275,13 +275,16 @@ This property is **read/write**.
 
 <!--REF #FileHandleClass.readBlob().Syntax -->**.readBlob**( *bytes* : Real ) : [4D.Blob](BlobClass) <!-- END REF -->
 
+
 <!--REF #FileHandleClass.readBlob().Params -->
 | 引数      | タイプ                  |    | 説明                                                  |
 | ------- | -------------------- | -- | --------------------------------------------------- |
 | *bytes* | Real                 | -> | Number of bytes to be read                          |
 | 戻り値     | [4D.Blob](BlobClass) | <- | Bytes read from the file|<!-- END REF -->
 
+
 |
+
 
 #### 説明
 
@@ -310,12 +313,15 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 <!--REF #FileHandleClass.readLine().Syntax -->**.readLine()** : Text <!-- END REF -->
 
+
 <!--REF #FileHandleClass.readLine().Params -->
 | 引数  | タイプ  |    | 説明                                      |
 | --- | ---- | -- | --------------------------------------- |
 | 戻り値 | Text | <- | Line of text|<!-- END REF -->
 
+
 |
+
 
 #### 説明
 
@@ -345,13 +351,16 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 <!--REF #FileHandleClass.readText().Syntax -->**.readText**( { *stopChar* : Text } ) : Text <!-- END REF -->
 
+
 <!--REF #FileHandleClass.readText().Params -->
 | 引数         | タイプ  |    | 説明                                            |
 | ---------- | ---- | -- | --------------------------------------------- |
 | *stopChar* | Text | -> | Character(s) at which to stop reading         |
 | 戻り値        | Text | <- | Text from the file|<!-- END REF -->
 
+
 |
+
 
 #### 説明
 
@@ -386,12 +395,15 @@ If the *stopChar* parameter is passed and not found, `.readText()` returns an em
 
 <!--REF #FileHandleClass.setSize().Syntax -->**.setSize**( *size* : Real )<!-- END REF -->
 
+
 <!--REF #FileHandleClass.setSize().Params -->
 | 引数   | タイプ  |    | 説明                                                           |
 | ---- | ---- | -- | ------------------------------------------------------------ |
 | size | Real | -> | New size of the document in bytes|<!-- END REF -->
 
+
 |
+
 
 #### 説明
 
@@ -418,12 +430,15 @@ If the *size* value is less than the current document size, the document content
 
 <!--REF #FileHandleClass.writeBlob().Syntax -->**.writeBlob**( *blob* : 4D.Blob ) <!-- END REF -->
 
+
 <!--REF #FileHandleClass.writeBlob().Params -->
 | 引数     | タイプ                  |    | 説明                                                   |
 | ------ | -------------------- | -- | ---------------------------------------------------- |
 | *blob* | [4D.Blob](BlobClass) | -> | Blob to write in the file|<!-- END REF -->
 
+
 |
+
 
 #### 説明
 
@@ -451,12 +466,15 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 <!--REF #FileHandleClass.writeLine().Syntax -->**.writeLine**( *lineOfText* : Text ) <!-- END REF -->
 
+
 <!--REF #FileHandleClass.writeLine().Params -->
 | 引数           | タイプ  |    | 説明                                       |
 | ------------ | ---- | -- | ---------------------------------------- |
 | *lineOfText* | Text | -> | Text to write|<!-- END REF -->
 
+
 |
+
 
 #### 説明
 
@@ -483,12 +501,15 @@ When this function is executed, the current position ([.offset](#offset)) is upd
 
 <!--REF #FileHandleClass.writeText().Syntax -->**.writeText**( *textToWrite* : Text )<!-- END REF -->
 
+
 <!--REF #FileHandleClass.writeText().Params -->
 | 引数            | タイプ  |    | 説明                                       |
 | ------------- | ---- | -- | ---------------------------------------- |
 | *textToWrite* | Text | -> | Text to write|<!-- END REF -->
 
+
 |
+
 
 #### 説明
 
