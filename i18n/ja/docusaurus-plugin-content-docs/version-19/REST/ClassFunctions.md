@@ -36,7 +36,7 @@ $city:=ds.City.getCity("Aguada")
 |                                                                  | `/rest/{dataClass}/EntitySelectionClassFunction/$orderby`                   |
 | [Entity クラス](ORDA/ordaClasses.md#entity-class)                   | `/rest/{dataClass}(key)/EntityClassFunction/`                               |
 
-> `/rest/{dataClass}/Function` can be used to call either a dataclass or an entity selection function (`/rest/{dataClass}` returns all entities of the DataClass as an entity selection). The function is searched in the entity selection class first. 見つからない場合に、DataClassクラスを探します。 つまり、同じ名称の関数が DataClassクラスと EntitySelectionクラスの両方に定義されている場合、DataClassクラスの関数が実行されることはありません。
+> `/rest/{dataClass}/Function` は DataClassクラスまたは EntitySelectionクラスの関数を呼び出すのに使えます (`/rest/{dataClass}` はデータクラスの全エンティティをエンティティセレクションに返します)。 EntitySelection クラスの関数が先に探されます。 見つからない場合に、DataClassクラスを探します。 つまり、同じ名称の関数が DataClassクラスと EntitySelectionクラスの両方に定義されている場合、DataClassクラスの関数が実行されることはありません。
 
 > プロジェクトがコンパイル済みモードで実行される場合、RESTサーバーは常にプリエンプティブプロセスを使用するため、RESTリクエストから呼び出されるすべての 4Dコードは **スレッドセーフでなければなりません** ([*プリエンプティブプロセスを使用* の設定値](../WebServer/preemptiveWeb.md#webサーバーにおいてプリエンプティブモードを有効化する) は、RESTサーバーによって無視されます)。
 
@@ -49,7 +49,7 @@ ORDAユーザークラスに定義された関数には、引数を渡すこと�
 - 引数はすべて、**POSTリクエストのボディ** に渡す必要があります:
 - 引数はコレクション (JSON形式) の中に格納する必要があります。
 - JSON コレクションがサポートしているスカラーなデータ型はすべて引数として渡せます。
-- エンティティやエンティティセレクションも引数として受け渡せます。 The JSON object must contain specific attributes used by the REST server to assign data to the corresponding ORDA objects: __DATACLASS,__ENTITY, __ENTITIES,__DATASET.
+- エンティティやエンティティセレクションも引数として受け渡せます。 この際、対応する ORDAオブジェクトにデータを割り当てるために RESTサーバーが使用する専用の属性 (__DATACLASS, __ENTITY, __ENTITIES, __DATASET) を JSONオブジェクトに含めなくてはなりません。
 
 [エンティティを引数として受け取る例題](#エンティティを引数として受け取る) と [エンティティセレクションを引数として受け取る例題](#エンティティセレクションを引数として受け取る) を参照ください。
 
@@ -75,7 +75,7 @@ ORDAユーザークラスに定義された関数には、引数を渡すこと�
 | __KEY       | 混合 (プライマリーキーと同じ型) | 任意 - エンティティのプライマリーキー                 |
 
 - __KEY が省略された場合、指定した属性を持つ新規エンティティがサーバー上で作成されます。
-- If __KEY is provided, the entity corresponding to__KEY is loaded on the server with the given attributes
+- __KEY が提供された場合、__KEY が合致するエンティティが指定した属性とともにサーバー上に読み込まれます。
 
 エンティティを [作成](#エンティティを作成する) または [更新](#エンティティを更新する) する例題を参照ください。
 
@@ -135,7 +135,7 @@ exposed Function getName()
 `City` DataClassクラスは、引数として受け取った名前をもとに City エンティティを返す API を提供しています:
 
 ```
-// City class
+// cs.City クラス
 
 Class extends DataClass
 
@@ -235,7 +235,7 @@ exposed Function getPopulation()
 `StudentsSelection` クラスは `getAgeAverage` 関数を持ちます:
 
 ```  
-// StudentsSelection Class
+// cs.StudentsSelection クラス
 
 Class extends EntitySelection
 
@@ -267,7 +267,7 @@ exposed Function getAgeAverage
 `StudentsSelection` クラスは `getLastSummary` 関数を持ちます:
 
 ```  
-// StudentsSelection Class
+// cs.StudentsSelection クラス
 
 
 Class extends EntitySelection
@@ -297,7 +297,7 @@ exposed Function getLastSummary
 `Students` DataClassクラスは、データを含むエンティティをクライアントから受け取る `pushData()` 関数を持ちます。 `checkData()` メソッドはいくつかの検証を実行します。 問題がなければ、エンティティは保存されて返されます。
 
 ```
-// Students Class
+// cs.Students クラス
 
 Class extends DataClass
 
@@ -306,7 +306,7 @@ exposed Function pushData
 
  $entity:=$1
 
- $status:=checkData($entity) // $status is an object with a success boolean property
+ $status:=checkData($entity) // $status は success ブールプロパティを持つオブジェクトです
 
  $0:=$status
 
@@ -438,17 +438,17 @@ __KEY 属性を使って、上の例題と同じことをおこなうと、エ�
 既存の Schools エンティティを既存の Studentsエンティティに紐付けます。 `StudentsEntity` クラスは次の API を提供しています:
 
 ```
-// StudentsEntity class
+// cs.StudentsEntity クラス
 
 Class extends Entity
 
 exposed Function putToSchool()
  var $1, $school , $0, $status : Object
 
-  //$1 is a Schools entity
+  // $1 は Schools エンティティ
  $school:=$1
-  //Associate the related entity school to the current Students entity
- This.school:=$school
+  // Schools リレートエンティティをカレントの Students エンティティに紐付けます
+ This.school:=$school // このとき、school は N対1リレーション名です
 
  $status:=This.save()
 
