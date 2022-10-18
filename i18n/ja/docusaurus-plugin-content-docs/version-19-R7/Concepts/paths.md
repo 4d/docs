@@ -1,34 +1,34 @@
 ---
 id: paths
-title: Pathnames
+title: パス名
 ---
 
-File and Folder functions, properties, and commands allow you to handle files and folders as objects. This makes file and folder management powerful and flexible. For example, to create a new file in the current user's Documents folder, you can write:
+File および Folder の関数、プロパティ、コマンドにより、ファイルやフォルダーをオブジェクトとして扱うことができます。 これにより、ファイルやフォルダーの管理を強力かつ柔軟におこなえます。 たとえば、カレントユーザーのドキュメントフォルダーに新しいファイルを作成する場合、次のように書くことができます:
 
 ```4d
 $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 ```
 
-In addition, file and folder objects support `fileSystems`, which provide contextual path to main application folders.
+さらに、ファイルおよびフォルダーオブジェクトは、アプリケーションの主なフォルダーへのコンテキストパスを提供する `filesystem` をサポートしています。
 
 
-## Filesystem pathnames
+## filsystemパス名
 
-4D accepts several `filesystem` pathnames that designate specific 4D folders with variable location on macOS and Windows. Filesystem pathnames are useful for two main reasons:
+4D は、macOS および Windows上で様々な場所にある特定の 4Dフォルダーを指定するいくつかの "filesystem" パス名を受け取ります。 filesystemパス名の使用は、主に二つの理由から有用です:
 
-- Independence: You can move your solution from one place to another regardless of the OS, without having to worry about paths,
-- Security: No code can access elements located above the file system root on the disk (sandboxing).
+- 独立性: OS の違いやパスの心配なく、ソリューションを一つの場所から他の場所へと移せるようになります。
+- 安全性: コードにより、ディスク上のファイルシステムのルートより上の階層にある要素へアクセスすることはできません (サンドボックス化)。
 
-The following filesystem pathnames are supported:
+以下の filesystemパス名がサポートされています:
 
-| filesystem   | Designates                                         |
-| ------------ | -------------------------------------------------- |
-| "/DATA"      | Current data folder                                |
-| "/LOGS"      | Logs フォルダー                                         |
-| "/PACKAGE"   | Database folder (with or without 4dbase extension) |
-| "/PROJECT"   | Project フォルダー                                      |
-| "/RESOURCES" | Current database resources folder                  |
-| "/SOURCES"   | Current project resources folder                   |
+| filesystem   | 指定先                               |
+| ------------ | --------------------------------- |
+| "/DATA"      | カレントデータフォルダー                      |
+| "/LOGS"      | Logs フォルダー                        |
+| "/PACKAGE"   | データベースフォルダー (拡張子 4dbase の有無に関わらず) |
+| "/PROJECT"   | Project フォルダー                     |
+| "/RESOURCES" | カレントデータベースの Resources フォルダー       |
+| "/SOURCES"   | カレントプロジェクトの Sources フォルダー         |
 
 ## POSIX syntax
 
