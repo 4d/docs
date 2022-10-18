@@ -30,26 +30,26 @@ $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 | "/RESOURCES" | カレントデータベースの Resources フォルダー       |
 | "/SOURCES"   | カレントプロジェクトの Sources フォルダー         |
 
-## POSIX syntax
+## POSIX シンタックス
 
-The POSIX syntax is supported on all platforms. **POSIX syntax is recommended** since it is the most flexible. It is used by default (returned by [file.path](../API/FileClass.md#path) and [folder.path](../API/FolderClass.md#path) properties).
+POSIX シンタックスはすべてのプラットフォームでサポートされています。 もっとも柔軟性に優れるため、**POSIX シンタックスの使用が推奨されています**。 POSIX シンタックスはデフォルトで使用されています ([file.path](../API/FileClass.md#path) および [folder.path](../API/FolderClass.md#path) プロパティによって返されます)。
 
-With this syntax:
+このシンタックスでは:
 
-- folders are separated by "/"
-- absolute pathnames start with a "/"
-- to move up one folder in a relative path, use "../" in front of the pathname (for security, you cannot move up the filesystem).
+- フォルダーは "/" で区切られます。
+- 絶対パス名は "/" で始まります。
+- 相対パスにおいて 1階層上に移動するには、パス名の前に "../" を使用します (セキュリティ上の理由から、filesystem から上へは移動できません)。
 
-In POSIX syntax, you will generally use `filesystem` pathnames with [`File`](../API/FileClass.md#file) and [`Folder`](../API/FolderClass.md#folder) commands, for example:
+POSIX シンタックスでは一般的に、[`File`](../API/FileClass.md#file) および [`Folder`](../API/FolderClass.md#folder) コマンドに `filesystem` パス名を使用します。例:
 
 ```4d
 $pathFile:=File("/DATA/Archives/file 2.txt")
 $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
 
-## Platform-specific syntax
+## プラットフォーム特有のシンタックス
 
-Platform-specific syntax depends on the operating system on which the command is executed. Note that when creating a file or folder object with this syntax, you must declare it using the `fk platform path` constant as parameter.
+プラットフォーム特有のシンタックスは、コマンドが実行される OS に依存します。 このシンタックスを使用して File または Folder オブジェクトを作成するとき、`fk platform path` 定数を引数として使用してそれを宣言する必要がある点に注意してください。
 
 ### Windows
 
