@@ -29,12 +29,11 @@ export default function RedirectAPI() {
 
                 const version = key.replace('-','');
                 if(version === versionWanted) {
-                  versionToGo = version + "/"
+                  versionToGo = key + "/"
                 }
                 i++;
               }
               finalUrl = "${url}" + versionToGo + "API/" + classWanted + "Class" + "#" + member
-              console.log(finalUrl)
               window.location.href = finalUrl
             })();
                 `,
