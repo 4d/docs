@@ -8,7 +8,6 @@ export default function RedirectAPI() {
   const context = useDocusaurusContext();
   const listVersions = JSON.stringify(context.siteConfig.presets[0][1].docs.versions)
   const url = context.siteConfig.baseUrl
-  const hasFirstVersion = context.siteConfig.presets[0][1].docs.includeCurrentVersion;
   return (
       <script
             dangerouslySetInnerHTML={{
@@ -24,7 +23,7 @@ export default function RedirectAPI() {
               //Match version
               let i = 0;
               for (let [key, value] of Object.entries(obj)) {
-                if(i === 0 && !${hasFirstVersion})
+                if(i === 0)
                   continue;
 
                 const version = key.replace('-','');
