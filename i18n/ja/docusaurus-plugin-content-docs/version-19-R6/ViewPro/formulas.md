@@ -42,13 +42,13 @@ title: 式と関数
 
 4D View Pro は 5つのデータ型をサポートします。 それぞれのデータ型について、特定の定数と演算子がサポートされています。
 
-| データ型                              | 値                                                     | 演算子                                                                                                                                              |
-| --------------------------------- | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [Number](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (加法)<br/>- (減法)<br/>* (乗法)<br/>/ (除法)<br/>^ (べき乗、数値を自身に対してかける回数)<br/>% (パーセント -- 演算子の前の数値を100で割る)                |
-| [日付](Concepts/dt_date.md)         | 10/24/2017                                            | + (日付 + 日数 -> 日付)<br/>+ (日付 + 時間 -> 日付 + その日の時間)<br/>- (日付 - 日数 -> 日付)<br/>- (日付 - 日付 -> 2つの日付間の日数)                            |
-| [時間](Concepts/dt_time.md)         | 10:12:10                                              | Duration operators: + (addition)<br/>- (subtraction)<br/>*(duration* number -> duration)<br/>/ (duration / number -> duration) |
-| [String](Concepts/dt_string.md)   | 'Sophie' または "Sophie"                                 | & (連結)                                                                                                                                           |
-| [Boolean](Concepts/dt_boolean.md) | TRUE または FALSE                                        | -                                                                                                                                                |
+| データ型                              | 値                                                     | 演算子                                                                                                                               |
+| --------------------------------- | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| [Number](Concepts/dt_number.md)   | 1.2<br/>1.2 E3<br/>1.2E-3<br/>10.3x | + (加法)<br/>- (減法)<br/>* (乗法)<br/>/ (除法)<br/>^ (べき乗、数値を自身に対してかける回数)<br/>% (パーセント -- 演算子の前の数値を100で割る) |
+| [Date](Concepts/dt_date.md)       | 10/24/2017                                            | + (日付 + 日数 -> 日付)<br/>+ (日付 + 時間 -> 日付 + その日の時間)<br/>- (日付 - 日数 -> 日付)<br/>- (日付 - 日付 -> 2つの日付間の日数)             |
+| [Time](Concepts/dt_time.md)       | 10:12:10                                              | 経過時間演算子:<br/>+ (加法)<br/>- (減法)<br/>* (経過時間 * 数値 -> 経過時間)<br/>/ (経過時間 / 数値 -> 経過時間)                      |
+| [String](Concepts/dt_string.md)   | 'Sophie' または "Sophie"                                 | & (連結)                                                                                                                            |
+| [Boolean](Concepts/dt_boolean.md) | TRUE または FALSE                                        | -                                                                                                                                 |
 
 ### 比較演算子
 
@@ -217,7 +217,7 @@ $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 
 サポートされている引数の型の詳細については、[VP SET CUSTOM FUNCTIONS](method-list.md#vp-set-custom-functions) メソッドの説明を参照ください。
 
-> 引数を宣言していない場合には、メソッドに値を順番に渡すことができ ($1、$2... に受け取られます)、それらの型は自動的に変換されます。 Dates in *jstype* will be passed as [object](Concepts/dt_object.md) in 4D code with two properties: |Property| Type| Description| |---|---|---| |value| Date| Date value| |time |Real| Time in seconds|
+> 引数を宣言していない場合には、メソッドに値を順番に渡すことができ ($1、$2... に受け取られます)、それらの型は自動的に変換されます。 *jstype* の日付は、4Dコードでは 2つのプロパティを持つ [オブジェクト](Concepts/dt_object.md) として渡されます: |プロパティ|    型|   説明| |---|---|---| |value|   Date|   日付| |time |Real|  時間 (秒単位)|
 
 4Dプロジェクトメソッドは、$0 を介して 4D View Pro のセルフォーミュラに値を返すこともできます。 以下のデータ型の戻り値がサポートされています:
 
@@ -231,7 +231,7 @@ $o.DRIVERS_LICENCE.parameters.push(New object("name"; "ID"; "type"; Is longint))
 
  | プロパティ | タイプ  | 説明       |
  | ----- | ---- | -------- |
- | value | 日付   | 日付値      |
+ | value | Date | 日付値      |
  | time  | Real | 数値 (秒単位) |
 
 4Dメソッドが何も返さない場合は、自動的に空の文字列が返されます。
@@ -314,7 +314,7 @@ TABLENAME_FIELDNAME()
  ARRAY TEXT($fieldTitles;1)
  ARRAY LONGINT($fieldNum;1)
  $fieldTitles{1}:="Name"
- $fieldNum{1}:=2 //last name
+ $fieldNum{1}:=2 // ラストネーム
  SET FIELD TITLES([Employee];$fieldTitles;$fieldNum;*)
  ```
 

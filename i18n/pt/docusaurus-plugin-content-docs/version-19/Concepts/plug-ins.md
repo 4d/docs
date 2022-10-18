@@ -39,21 +39,21 @@ A plug-in can be very simple, with just one routine performing a very small task
 - the [**4D Plugin API**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20API), written in C, adds more than 400 functions that help you to easily create your own plug-ins to add new functionnalities to your 4D application. 4D Plug-in API functions manage all the interactions between the 4D application and your plug-in.
 - The [**4D Plugin Wizard**](https://github.com/4d/4D-Plugin-SDK/blob/master/4D%20Plugin%20Wizard) is an essential tool that simplifies the task of developing 4D plug-ins. It writes the code 4D needs to correctly load and interact with a plug-in, allowing you to concentrate on your own code.
 
-## How to install a plug-in?
+## Como instalar um plug-in?
 
-You install plug-ins in the 4D environment by copying their files into the appropriate folder.
+Instala-se plug-ins no ambiente 4D copiando os seus arquivos para a pasta apropriada.
 
-“PluginName.bundle” folders contain both Windows and macOS versions of 4D plug-ins. Their specific internal architecture lets 4D Server load the appropriate version according to the platform where the client machine will be run. To install a plug-in in your environment, you just need to put the “PluginName.bundle” folder or package concerned into the desired **Plugins** folder.
+As pastas "PluginName.bundle" contêm tanto versões Windows como macOS de plug-ins 4D. A sua arquitetura interna específica permite ao Servidor 4D carregar a versão apropriada de acordo com a plataforma onde a máquina cliente será executada. To install a plug-in in your environment, you just need to put the “PluginName.bundle” folder or package concerned into the desired **Plugins** folder.
 
 You can put the Plugins folder in two different places:
 
-- At the level of the 4D executable application, i.e.:
-  - Under Windows: next to the .exe file
+- A nível da aplicação executável 4D, ou seja
+  - Em Windows: ao lado do arquivo .exe
   - Under macOS: at the first level of the Contents folder inside the application package. In this case, plug-ins are available in every project opened by this application.
 - At the same level as the Project folder. In this case, plug-ins are only available in this particular project.
 
-The choice of location depends on how you want to use the plug-in.
+A escolha da localização depende de como se pretende utilizar o plug-in.
 
-If the same plug-in is placed in both locations, 4D will only load the one located next to the structure. In an application that is compiled and merged using 4D Volume Desktop, if there are several instances of the same plug-in present, this will prevent the application from opening.
+Se o mesmo plug-in for colocado em ambos os locais, 4D só carregará o localizado ao lado da estrutura. Numa aplicação que é compilada e fundida utilizando o Volume Desktop 4D, se existirem várias instâncias do mesmo plug-in presente, isto impedirá a aplicação de abrir.
 
-Plug-ins are loaded by 4D when the application is launched so you will need to quit your 4D application before installing them. Plug-ins are loaded by 4D when the application is launched so you will need to quit your 4D application before installing them. If any plug-in requires a specific license for use, it will be loaded but not available for use.
+Plug-ins are loaded by 4D when the application is launched so you will need to quit your 4D application before installing them. Plug-ins are loaded by 4D when the application is launched so you will need to quit your 4D application before installing them. Se qualquer plug-in necessitar de uma licença específica para utilização, será carregado mas não estará disponível para utilização.

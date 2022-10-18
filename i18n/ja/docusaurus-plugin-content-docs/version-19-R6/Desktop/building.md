@@ -375,7 +375,7 @@ Windows用サーバーアプリケーションのビルドに使用される App
 インストール場所:
 
 * **Windows**
-  * **Server application** - in the `Client Server executable\&#060;ApplicationName&#062;Server/Server Database` subfolder.
+  * **サーバーアプリケーション** - `Client Server executable<ApplicationName>Server/Server Database` サブフォルダー内にこれらの項目を配置します。
   * **クライアントアプリケーション** - `Client Server executable<ApplicationName>Client` サブフォルダー内にこれらの項目を配置します。
 
 * **macOS**

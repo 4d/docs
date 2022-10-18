@@ -172,10 +172,9 @@ $expiration:=Session.expirationDate // 例: "2021-11-05T17:10:42Z"
 
 ```4d
 If (Session.hasPrivilege("WebAdmin"))
- //Access is granted, do nothing
+ // アクセス権が付与されているので、何もしません
 Else
- //Display an authentication page
-
+ // 認証ページを表示します
 End if
 ```
 
@@ -210,10 +209,10 @@ End if
 
 ```4d
 If (Session.isGuest())
-  // A Guest session will close after 60 minutes of inactivity
+  // ゲストセッションは、60分の非アクティブ時間経過後に終了します
  Session.idleTimeout:=60
 Else
-  // Other sessions will close after 120 minutes of inactivity
+  // その他のセッションは、120分の非アクティブ時間経過後に終了します
  Session.idleTimeout:=120
 End if
 
@@ -252,7 +251,7 @@ End if
 
 ```4d
 If (Session.isGuest())
- //Do something for Guest user
+ // ゲストユーザー用の処理
 End if
 ```
 

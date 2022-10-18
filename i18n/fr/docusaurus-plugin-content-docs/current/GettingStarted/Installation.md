@@ -46,3 +46,9 @@ Apparaît ensuite l'assistant de bienvenue :
 
 Nous vous souhaitons une excellente expérience 4D !
 
+
+:::info
+
+Need to activate specific licenses? Visit the [Managing 4D licenses](../licenses.md) page.
+
+:::

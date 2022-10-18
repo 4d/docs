@@ -343,6 +343,7 @@ title: Document クラス
 <!-- REF document.platformPath.Desc -->
 ## .platformPath
 
+
 <details><summary>履歴</summary>
 
 | バージョン  | 内容 |
@@ -589,7 +590,7 @@ id name price vat
 以下は、同じファイルで改行コードが異なる例です:
 
 ```4d
- $txt:=$myFile.getText("UTF-8", Document with LF)
+ $txt:=$myFile.getText("UTF-8"; Document with LF)
 ```
 
 この場合、`$txt` の値は次の通りです:

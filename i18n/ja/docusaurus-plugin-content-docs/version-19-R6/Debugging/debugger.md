@@ -94,7 +94,7 @@ title: デバッガー
 
 これらは、プロジェクト内に保存されます。
 
-This action is not available in remote debugging mode (see [Debugging from Remote Machines](./debugging-remote.md)).
+このアクションはリモートデバッグモードでは利用できません ([リモートマシンからのデバッグ](debugging-remote.md) 参照)。
 
 ## ウォッチエリア
 
@@ -275,10 +275,10 @@ $c:=$a+$b
 
 * フィールド
 * 変数
-* pointer
+* ポインター
 * 演算
 * 4Dコマンド
-* method
+* メソッド
 * ほか値を返すものなら何でも
 
 ![カスタムウォッチエリア](../assets/en/Debugging/custom-watch-pane.png)

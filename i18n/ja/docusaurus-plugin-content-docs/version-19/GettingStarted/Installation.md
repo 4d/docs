@@ -42,3 +42,9 @@ title: インストール
 - **新規にアプリケーションプロジェクトを作成する** - ディスク上に新規のアプリケーションプロジェクトを作成します。
 
 ぜひ 4D を楽しんでください！
+
+:::info
+
+Need to activate specific licenses? Visit the [Managing 4D licenses](../licenses.md) page.
+
+:::

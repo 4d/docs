@@ -42,3 +42,9 @@ Despliegue el área **Abrir o crear un proyecto aplicación** y seleccione la ac
 - **Cree un nuevo proyecto de aplicación**: cree un nuevo proyecto de aplicación vacío en su disco.
 
 ¡Disfrute de su experiencia 4D!
+
+|
+
+Need to activate specific licenses? Visit the [Managing 4D licenses](../licenses.md) page.
+
+:::
