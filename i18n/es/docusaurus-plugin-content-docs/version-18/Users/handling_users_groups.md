@@ -120,7 +120,7 @@ Para eliminar un usuario o grupo de otro grupo, basta con deseleccionar la opci√
 
 ### Asignar un grupo a un plug-in o a un servidor
 
-You can assign a group privileges to any plug-ins installed in the database. Esto incluye todos los plug-ins de 4D y los de terceros.
+Puede asignar privilegios de grupo a todo plug-in instalado en la base. Esto incluye todos los plug-ins de 4D y los de terceros.
 
 Distribuir los accesos a los plug-ins le permite controlar el uso de las licencias que posee para estos plug-ins. Todo usuario que no pertenezca al grupo de acceso de un plug-in no puede cargar este plug-in.
 
