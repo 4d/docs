@@ -115,7 +115,7 @@ Note that both *theClient* and *companyProjects* in the above example are primar
 
 ![](../assets/en/ORDA/entityAttributes2.png)
 
-Cada empleado puede ser gerente y puede tener un gerente. To get the manager of the manager of an employee, you can simply write:
+Cada empleado puede ser gerente y puede tener un gerente. Para obtener el gerente del gerente de un empleado, puede simplemente escribir:
 
 ```4d
  $myEmp:=ds.Employee.get(50)
@@ -249,7 +249,7 @@ $lowSal:=ds.Employee.query("salary <= :1"; 10000).copy()
 $comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 ```
 
-#### Sharing an entity selection between processes (example)
+#### Compartir una selección de entidades entre procesos (ejemplo)
 
 You work with two entity selections that you want to pass to a worker process so that it can send mails to appropriate persons:
 
@@ -401,7 +401,7 @@ Estos principios se muestran en el siguiente diagrama:
 
 Se aplican los siguientes mecanismos de optimización:
 
-* When a client requests an entity selection from the server, 4D automatically "learns" which attributes of the entity selection are actually used on the client side during the code execution, and builds a corresponding "optimization context". This context is attached to the entity selection and stores the used attributes. It will be dynamically updated if other attributes are used afterwards.
+* When a client requests an entity selection from the server, 4D automatically "learns" which attributes of the entity selection are actually used on the client side during the code execution, and builds a corresponding "optimization context". This context is attached to the entity selection and stores the used attributes. Se actualizará dinámicamente si se utilizan posteriormente otros atributos.
 
 * Subsequent requests sent to the server on the same entity selection automatically reuse the optimization context and only get necessary attributes from the server, which accelerates the processing. For example in an entity selection-based list box, the learning phase takes place during the display of the first rows, next rows display is very optimized.
 
