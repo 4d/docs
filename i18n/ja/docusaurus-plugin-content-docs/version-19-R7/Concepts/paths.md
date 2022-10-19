@@ -1,46 +1,46 @@
 ---
 id: paths
-title: Pathnames
+title: パス名
 ---
 
-File and Folder functions, properties, and commands allow you to handle files and folders as objects. This makes file and folder management powerful and flexible. For example, to create a new file in the current user's Documents folder, you can write:
+File および Folder の関数、プロパティ、コマンドにより、ファイルやフォルダーをオブジェクトとして扱うことができます。 これにより、ファイルやフォルダーの管理を強力かつ柔軟におこなえます。 たとえば、カレントユーザーのドキュメントフォルダーに新しいファイルを作成する場合、次のように書くことができます:
 
 ```4d
 $ok:=Folder(fk documents folder).file("Archives/John4D.prefs").create()
 ```
 
-In addition, file and folder objects support `fileSystems`, which provide contextual path to main application folders.
+さらに、ファイルおよびフォルダーオブジェクトは、アプリケーションの主なフォルダーへのコンテキストパスを提供する `filesystem` をサポートしています。
 
 
-## Filesystem pathnames
+## filsystemパス名
 
-4D accepts several `filesystem` pathnames that designate specific 4D folders with variable location on macOS and Windows. Filesystem pathnames are useful for two main reasons:
+4D は、macOS および Windows上で様々な場所にある特定の 4Dフォルダーを指定するいくつかの "filesystem" パス名を受け取ります。 filesystemパス名の使用は、主に二つの理由から有用です:
 
-- Independence: You can move your solution from one place to another regardless of the OS, without having to worry about paths,
-- Security: No code can access elements located above the file system root on the disk (sandboxing).
+- 独立性: OS の違いやパスの心配なく、ソリューションを一つの場所から他の場所へと移せるようになります。
+- 安全性: コードにより、ディスク上のファイルシステムのルートより上の階層にある要素へアクセスすることはできません (サンドボックス化)。
 
-The following filesystem pathnames are supported:
+以下の filesystemパス名がサポートされています:
 
-| filesystem   | Designates                                         |
-| ------------ | -------------------------------------------------- |
-| "/DATA"      | Current data folder                                |
-| "/LOGS"      | Logs フォルダー                                         |
-| "/PACKAGE"   | Database folder (with or without 4dbase extension) |
-| "/PROJECT"   | Project フォルダー                                      |
-| "/RESOURCES" | Current database resources folder                  |
-| "/SOURCES"   | Current project resources folder                   |
+| filesystem   | 指定先                               |
+| ------------ | --------------------------------- |
+| "/DATA"      | カレントデータフォルダー                      |
+| "/LOGS"      | Logs フォルダー                        |
+| "/PACKAGE"   | データベースフォルダー (拡張子 4dbase の有無に関わらず) |
+| "/PROJECT"   | Project フォルダー                     |
+| "/RESOURCES" | カレントデータベースの Resources フォルダー       |
+| "/SOURCES"   | カレントプロジェクトの Sources フォルダー         |
 
-## POSIX syntax
+## POSIX シンタックス
 
-The POSIX syntax is supported on all platforms. **POSIX syntax is recommended** since it is the most flexible. It is used by default (returned by [file.path](../API/FileClass.md#path) and [folder.path](../API/FolderClass.md#path) properties).
+POSIX シンタックスはすべてのプラットフォームでサポートされています。 もっとも柔軟性に優れるため、**POSIX シンタックスの使用が推奨されています**。 POSIX シンタックスはデフォルトで使用されています ([file.path](../API/FileClass.md#path) および [folder.path](../API/FolderClass.md#path) プロパティによって返されます)。
 
-With this syntax:
+このシンタックスでは:
 
-- folders are separated by "/"
-- absolute pathnames start with a "/"
-- to move up one folder in a relative path, use "../" in front of the pathname (for security, you cannot move up the filesystem).
+- フォルダーは "/" で区切られます。
+- 絶対パス名は "/" で始まります。
+- 相対パスにおいて 1階層上に移動するには、パス名の前に "../" を使用します (セキュリティ上の理由から、filesystem から上へは移動できません)。
 
-In POSIX syntax, you will generally use `filesystem` pathnames with [`File`](../API/FileClass.md#file) and [`Folder`](../API/FolderClass.md#folder) commands, for example:
+POSIX シンタックスでは一般的に、[`File`](../API/FileClass.md#file) および [`Folder`](../API/FolderClass.md#folder) コマンドに `filesystem` パス名を使用します。例:
 
 ```4d
 $pathFile:=File("/DATA/Archives/file 2.txt")
@@ -48,92 +48,92 @@ $pathFolder:=Folder("/RESOURCES/Pictures")
 ```
 
 
-## Platform-specific syntax
+## プラットフォーム特有のシンタックス
 
-Platform-specific syntax depends on the operating system on which the command is executed. Note that when creating a file or folder object with this syntax, you must declare it using the `fk platform path` constant as parameter.
+プラットフォーム特有のシンタックスは、コマンドが実行される OS に依存します。 このシンタックスを使用して File または Folder オブジェクトを作成するとき、`fk platform path` 定数を引数として使用してそれを宣言する必要がある点に注意してください。
 
 ### Windows
 
-The following patterns are supported:
+以下のパターンがサポートされています:
 
-- folder separators are "\"
-- the text contains ":" and "\" as the second and third character,
-- the text starts with "\\".
+- フォルダーは "\" で区切られます。
+- パスは 2番目と 3番目の文字にそれぞれ ":" と "\" を含みます。
+- パスは "\\" で始まります。
 
-Examples with [`Folder`](../API/FolderClass.md#folder):
+[`Folder`](../API/FolderClass.md#folder) を使用した例:
 
 ```4d
 $ok:=Folder("C:\\Monday";fk platform path).create()
 $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 ```
 
-#### Entering Windows pathnames and escape sequences
+#### Windows のパス名の入力とエスケープシーケンス
 
-The 4D [code editor](../code-editor/write-class-method.md) allows the use of escape sequences. An escape sequence is a set of characters that are used to replace a "special" character. The sequence begins with a backslash `\`, followed by a character. For example, `\t` is the escape sequence for the `Tab` character.
+4D の [コードエディター](../code-editor/write-class-method.md) ではエスケープシーケンスを使用できます。 エスケープシーケンスとは、"特殊" 文字を置き換えるために使用する文字のセットです。 シーケンスはバックスラッシュ (`\`: 日本語フォント環境では円マーク) で始まり、その後に文字が続きます。 たとえば、`\t` は、`Tab` 文字のエスケープシーケンスです。
 
-The `\` character is also used as the separator in pathnames in Windows. In general, 4D will correctly interpret Windows pathnames that are entered in the code editor by replacing single backslashes `\` with double backslashes ``\\`. For example,``C:\Folder`will become`C:\\Folder`.
+Windows では、`\` 文字をパスの区切り文字としても使用します。 ほとんどの場合において 4D は、シングルバックスラッシュ `\` をダブルバックスラッシュ `\` に置き換えることにより、コードエディターに入力された Windows のパス名を正確に判断します。 たとえば、`C:\Folder` は `C:\\Folder` となります。
 
-However, if you write `C:\MyDocuments\New`, 4D will display `C:\\MyDocuments\New`. In this case, the second `\` is incorrectly interpreted as `\N` (an existing escape sequence). You must therefore enter a double `\\` when you want to insert a backslash before a character that is used in one of the escape sequences recognized by 4D.
+しかし、`C:\MyDocuments\New` と書いた場合、4D は `C:\\MyDocuments\New` と表示します。 この場合、二つ目の `\` は、誤って `\N` (存在するエスケープシーケンス) と認識されています。 従って、4D のエスケープシーケンスで使用される文字の前にバックスラッシュを挿入したいときは、`\` となるよう手入力しなければなりません。
 
-The following escape sequences are recognized by 4D:
+4D は次のエスケープシーケンスを認識します:
 
-| エスケープシーケンス                   | 意味する文字              |
-| ---------------------------- | ------------------- |
-| `\n`                        | LF (New line)       |
-| `\t`                        | HT (Horizontal tab) |
-| `\r`                        | CR (改行)             |
-| ``\\`|``&#96; (Backslash) |                     |
-| `\"`                        | `"` (Quotes)        |
+| エスケープシーケンス                   | 意味する文字       |
+| ---------------------------- | ------------ |
+| `\n`                        | LF (ラインフィード) |
+| `\t`                        | HT (水平タブ)    |
+| `\r`                        | CR (改行)      |
+| ``\\` |``&#96; (バックスラッシュ) |              |
+| `\"`                        | `"` (二重引用符)  |
 
 ### macOS
 
-The following patterns are supported (HFS+ syntax):
+以下のパターンがサポートされます (HFS + シンタックス):
 
-- folder separators are ":"
-- the path must not start with a ":"
+- フォルダーは ":" で区切られます。
+- パスは ":" で始まってはいけません。
 
-Examples with [`Folder`](../API/FolderClass.md#folder):
+[`Folder`](../API/FolderClass.md#folder) を使用した例:
 
 ```4d
 $ok:=Folder("macintosh hd:";fk platform path).create()
-$ok:=Folder("Monday:Tuesday";fk platform path).create() //a volume must be called Monday
+$ok:=Folder("Monday:Tuesday";fk platform path).create() // ボリュームの名前は Monday である必要があります
 ```
 
-## Absolute and relative pathnames
+## 相対パス名および絶対パス名について
 
-### `File` and `Folder` constructors
+### `File` および `Folder` コンストラクター
 
-[`File`](../API/FileClass.md#file) and [`Folder`](../API/FolderClass.md#folder) commands only accept **absolute pathnames**. Relative pathnames are not supported and will return errors. For example, the following code is not allowed:
+[`File`](../API/FileClass.md#file) および [`Folder`](../API/FolderClass.md#folder) コマンドは **絶対パス名** のみを受け付けます。 相対パス名はサポートされておらず、エラーが返されます。 たとえば、以下のコードは使用できません:
 
 ```4d
     //ERROR
-$ko:=Folder("myFolder").create() //relative pathname with constructor
+$ko:=Folder("myFolder").create() // コンストラクターで相対パス名を使用しています
 ```
 
-If you want to handle files or folders in various locations (project folder, system folders, etc.), you can use `filesystems` (see above). たとえば:
+様々な場所 (プロジェクトフォルダー内、システムフォルダー内、など) にあるファイルやフォルダーを扱いたい場合は、`filesystems` (上述参照) を使用します。 たとえば:
 
 ```4d
-$okFolder:=Folder("/PACKAGE/myFolder").create() //folder created at the structure level
-$okFile:=File("/DATA/Prefs/tempo.txt").create() //file created in the data folder
+$okFolder:=Folder("/PACKAGE/myFolder").create() // ストラクチャーレベルでフォルダーが作成されます
+$okFile:=File("/DATA/Prefs/tempo.txt").create() // データフォルダー内にファイルが作成されます
 ```
 
-### `.file()` and `.folder()` folder functions
+### `.file()` および `.folder()` フォルダー関数
 
-Functions of folder objects such as [`folder.file()`](../API/FolderClass.md#file) and [`folder.folder()`](../API/FolderClass.md#folder-1) expect relative POSIX pathnames. 例:
+[`folder.file()`](../API/FolderClass.md#file) および [`folder.folder()`](../API/FolderClass.md#folder-1) などの Folder オブジェクトの関数は、相対 POSIX パス名を想定しています。 例:
 
 ```4d
-  //to reference a "Picture" folder within the user documents folder
+  // ユーザードキュメントフォルダー内にある "Picture" フォルダーを参照するには
 $userImages:=Folder(fk documents folder).folder("Pictures")
-  //to create a folder on the desktop
+  // デスクトップにフォルダーを作成するには
 $ok:=Folder(fk desktop folder).folder("myFolder").create()
 ```
 
-Absolute pathnames are not supported and will return errors.
+絶対パス名はサポートされておらず、エラーを返します。
 
 
 ## 例題
 
-The flexibility of file and folder functions offers you various possibilities for handling files and folders, like in the following examples:
+File および Folder のコマンドや関数により、以下の例題のように様々な方法でファイルやフォルダーを管理することが可能になります:
 
 ```4d
 $f:=Folder(fk desktop folder).folder("archive/jan2019")

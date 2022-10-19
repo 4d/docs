@@ -590,7 +590,7 @@ with `\t` (tab) as separator and `\r\n` (CRLF) as line delimiter.
 Aqui está outro exemplo com o mesmo arquivo, mas um delimitador de linha diferente:
 
 ```4d
- $txt:=$myFile.getText("UTF-8", Documento com LF)
+ $txt:=$myFile.getText("UTF-8"; Document with LF)
 ```
 
 Neste caso, o conteúdo de `$txt` é o seguinte:

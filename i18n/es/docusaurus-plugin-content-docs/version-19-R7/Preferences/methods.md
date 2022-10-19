@@ -71,7 +71,7 @@ These options configure the various colors used in the Code Editor and debugger 
 | **Resaltar la misma variable o campo**                 | Highlight color for other occurrences of the same variable or field text when one of the "Highlighting variables and text" option is enabled in the [Options](#options). |
 | **Resaltado de la línea en ejecución en el depurador** | Highlight color of the line currently running in the debugger when the "Highlight line running" option is enabled in the [Options](#options).                            |
 | **Color de fondo de la selección**                     | Color de fondo de la selección.                                                                                                                                          |
-| **Texto sugerido**                                     | Color of autocomplete text suggested by the Code Editor.                                                                                                                 |
+| **Texto sugerido**                                     | Color del texto de autocompletar sugerido por el Editor de Código.                                                                                                       |
 
 
 

@@ -611,7 +611,7 @@ with `\t` (tab) as separator and `\r\n` (CRLF) as line delimiter.
 Here is another example with the same file, but a different line delimiter:
 
 ```4d
- $txt:=$myFile.getText("UTF-8", Document with LF)
+ $txt:=$myFile.getText("UTF-8"; Document with LF)
 ```
 
 In this case, the contents of `$txt` are as follows:

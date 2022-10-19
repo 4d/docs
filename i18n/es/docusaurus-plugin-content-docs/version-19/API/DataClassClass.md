@@ -432,7 +432,7 @@ Este ejemplo ilustra el uso de la propiedad *context*:
 
 #### Descripción
 
-The `.getDataStore( )` function <!-- REF #DataClassClass.getDataStore().Summary -->devuelve el almacén de datos para la clase de datos especificada<!-- END REF -->.
+La función `.getDataStore( )` <!-- REF #DataClassClass.getDataStore().Summary -->devuelve el almacén de datos para la clase de datos especificada<!-- END REF -->.
 
 El almacén de datos puede ser:
 
@@ -599,7 +599,7 @@ Este ejemplo crea una nueva entidad en la clase de datos "Log" y registra la inf
 
 #### Descripción
 
-The `.newSelection( )` function <!-- REF #DataClassClass.newSelection().Summary -->crea una nueva selección de entidades en blanco, no compartible, relacionada con la clase de datos, en la memoria<!-- END REF -->.
+La función `.newSelection( )` <!-- REF #DataClassClass.newSelection().Summary -->crea una nueva selección de entidades en blanco, no compartible, relacionada con la clase de datos, en la memoria<!-- END REF -->.
 
 > Para más información sobre las selecciones de entidades no compartibles, consulte [esta sección](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 

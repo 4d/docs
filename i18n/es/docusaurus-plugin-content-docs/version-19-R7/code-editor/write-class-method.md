@@ -11,7 +11,7 @@ El editor de código funciona como un editor de texto. Writing a method or a cla
 
 You can scroll through the contents of methods, classes and functions, which can include up to 32,000 lines of code or 2 GB of text.
 
-The 4D Code Editor provides basic syntax error-checking. Cuando se ejecuta el código se realiza una comprobación adicional de errores. For more information on how to handle errors, see [Debugging](../Debugging/basics.md).
+El Editor de Código 4D ofrece una comprobación básica de errores de sintaxis. Cuando se ejecuta el código se realiza una comprobación adicional de errores. For more information on how to handle errors, see [Debugging](../Debugging/basics.md).
 
 ## Toolbar (Barra de herramientas)
 
@@ -321,7 +321,7 @@ Standard keyboard shortcuts to navigate the code are available in 4D's Code Edit
 | [Ctrl]+[flecha izquierda]                           | Mover el punto de inserción, palabra por palabra, de derecha a izquierda                                                               |
 | [Home]                                              | Colocar el punto de inserción al comienzo de la línea                                                                                  |
 | [End]                                               | Coloca el punto de inserción al final de la línea                                                                                      |
-| [Ctrl]+[Home]                                       | Place the insertion point at the beginning of the method                                                                               |
+| [Ctrl]+[Home]                                       | Colocar el punto de inserción al comienzo del método                                                                                   |
 | [Ctrl]+[End]                                        | Coloca el punto de inserción al final del método                                                                                       |
 | [Shift]+[Home]                                      | Select all the characters in the line that are to the left of the cursor                                                               |
 | [Shift]+[End]                                       | Selecciona todos los caracteres de la línea que están a la derecha del cursor                                                          |

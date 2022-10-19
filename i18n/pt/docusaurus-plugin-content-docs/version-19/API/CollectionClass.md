@@ -64,7 +64,7 @@ Uma coleção se inicializa com:
 | [<!-- INCLUDE #collection.sum().Syntax -->](#sum)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.sum().Summary -->                               |
 | [<!-- INCLUDE #collection.unshift().Syntax -->](#unshift)&nbsp;&nbsp;&nbsp;&nbsp;<!-- INCLUDE #collection.unshift().Summary -->                   |
 
-## `New collection`
+## `Nova colecção`
 
 
 <!-- REF #_command_.New collection.Syntax -->**New collection** {( *...value* : any )} : Collection<!-- END REF -->
@@ -162,7 +162,7 @@ Pode criar uma nova coleção e adicionar um novo elemento:
 
 O comando `New shared collection` <!-- REF #_command_.New shared collection.Summary --> cria uma nova colecção partilhada vazia ou pré-carregada<!-- END REF --> e devolve a sua referência.
 
-Adding an element to this collection must be surrounded by the [`Use... End`](Concepts/shared.md#useend-use) use structure, otherwise an error is generated. Ler um elemento sem a estrutura é entretanto possível.
+A adição de um elemento a esta colecção deve ser rodeada pela estrutura de utilização [`Use...End`](Concepts/shared.md#useend-use) , caso contrário é gerado um erro. Ler um elemento sem a estrutura é entretanto possível.
 > Para saber mais sobre coleções partilhadas, veja a página [Shared objects and collections](Concepts/shared.md).
 
 Se não quiser passar parâmetros, `New shared collection` cria uma coleção vazia partilhada e retorna sua referência.
@@ -183,7 +183,7 @@ Pode passar qualquer número de valores dos tipos compatíveis abaixo:
 * hora (armazenada como número de milissegundos - real)
 * null
 * objeto compartido(*)
-* shared collection(*) > Unlike standard (not shared) collections, shared collections do not support pictures, pointers, and objects or collections that are not shared.
+* shared collection(*) > Diferente de coleções padrão (não partilhadas), coleções partilhadas não são compatíveis com imagens, ponteiros, objetos ou coleções que não são compartilhadas.
 
 > Diferente de coleções padrão (não partilhadas), coleções partilhadas não são compatíveis com imagens, ponteiros e objetos ou coleção que não forem partilhadas.
 
@@ -224,7 +224,7 @@ Pode passar qualquer número de valores dos tipos compatíveis abaixo:
 
 #### Descrição
 
-A função `.average()` <!-- REF #collection.average().Summary -->returns the arithmetic mean (average) of defined values in the collection instance<!-- END REF -->.
+A função `.average()` <!-- REF #collection.average().Summary -->retorna a média aritmética dos valores definidos na instância de coleção<!-- END REF -->.
 
 Apenas elementos numéricos são considerados para cálculos (outros tipos são ignorados).
 
@@ -281,7 +281,7 @@ Se a coleção contiver objetos, passe o parâmetro *propertyPath* para indicar 
 
 #### Descrição
 
-A função `.clear()` <!-- REF #collection.clear().Summary -->removes all elements from the collection instance and returns an empty collection<!-- END REF -->.
+A função `.clear()` <!-- REF #collection.clear().Summary -->remove todos os elementos da instância de recolha e devolve uma coleção vazia<!-- END REF -->.
 > Essa função modifica a coleção original.
 
 #### Exemplo
@@ -322,7 +322,7 @@ $vSize:=$col.length //$vSize=0
 #### Descrição
 
 
-A função `.combine()` <!-- REF #collection.combine().Summary -->inserts *col2* elements at the end or at the specified *index* position in the collection instance and returns the edited collection<!-- END REF -->. .
+A função `.combine()` <!-- REF #collection.combine().Summary -->insere *col2* elementos no final ou no índice *especificado* posição na instância de coleção e devolve a colecção editada<!-- END REF -->. .
 > Essa função modifica a coleção original.
 
 Como padrão, elementos *col2* são adicionados ao final da collection original. Pode passar em *index* a posição onde quiser que os elmentos *col2* sejam inseridos na coleção.
@@ -774,7 +774,7 @@ Em *methodName*, passe o nome do método para usar para avliar elementos collect
 
 Em todos os casos, no ponto quanod a função `.every()` encontra o primeiro elemento de coleção retornando **false** em *$1.result*, ele para de chamar *methodName* e retorna **false**.
 
-By default, `.some()` tests the whole collection. Optionally, you can pass the index of an element from which to start the test in *startFrom*.
+Como padrão, `.every()` testa a coleção completa. Opcionalmente, pode passar em *startFrom* o índice do elemento a partir do qual se inicia o teste.
 
 * Se *startFrom* >= tamanho da coleção, é retornado **false**, o que significa que a coleção não é testada.
 * Se *startFrom* < 0, é considerada como offset do final da coleção( *startFrom:=startFrom+length*).
@@ -918,7 +918,7 @@ $c2:=$c.extract("name";"City";"zc";"Zip") //$c2=[{Zip:35060},{City:null,Zip:3504
 
 #### Descrição
 
-A função `.fill()` <!-- REF #collection.fill().Summary -->fills the collection with the specified *value*, optionally from *startFrom* index to *end* index, and returns the resulting collection<!-- END REF -->.
+A função `.fill()` <!-- REF #collection.fill().Summary -->preenche a coleção com o valor especificado **, opcionalmente de *startFrom* index to *end* index, e devolve a coleção resultante<!-- END REF -->.
 > Essa função modifica a coleção original.
 
 * Se o parâmetro *startFrom* for omitido, *value* é estabelecido para todos os elementos coleção (*startFrom*=0).

@@ -379,9 +379,9 @@ End for
 ```4d
 For ($vCounter;1;100)
 /*
-comments  
+コメント  
  /* 
- other comments
+ 詳細なコメント
  */
 */
 ...

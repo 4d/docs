@@ -10,7 +10,7 @@ Cuando estas páginas son enviadas por el servidor HTTP, son analizadas y las et
 Por ejemplo, si se escribe en una página HTML:
 
 ```html
-Welcome to <!--#4DTEXT vtSiteName-->!</P>
+Bienvenido a <!--#4DTEXT vtSiteName-->!</P>
 ```
 
 El valor de la variable 4D *vtSiteName* se insertará en la página HTML.

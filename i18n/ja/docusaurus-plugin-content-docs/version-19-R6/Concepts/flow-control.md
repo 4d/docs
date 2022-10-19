@@ -34,17 +34,17 @@ title: 制御フロー
 var $message : Text
 var $i : Integer
 
-While (True) //infinite loop
+While (True) // 無限ループ
  $i:=$i+1
- $message+=String($i)+"A\r"  // until 5
+ $message+=String($i)+"A\r"  // 5まで実行されます
  logConsole($message)
  If ($i=5)
-  return //stops the loop
+  return // ループを終了させます
  End if 
- $message+=String($i)+"B\r"  // until 4
+ $message+=String($i)+"B\r"  // 4まで実行されます
  logConsole($message)
 End while 
-$message+=String($i)+"C\r"  //never executed 
+$message+=String($i)+"C\r"  // 実行されることはありません 
 logConsole($message)
 
 // 1A
