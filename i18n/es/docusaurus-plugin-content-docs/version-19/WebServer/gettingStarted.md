@@ -42,7 +42,7 @@ Case of
   // Error 404 for example
 End case
  Else 
-  // Error 404 for example
+  // Error 404 por ejemplo
 End case 
 ```
 

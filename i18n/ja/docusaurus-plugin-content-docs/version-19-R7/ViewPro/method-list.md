@@ -2809,7 +2809,7 @@ End if
 
  | プロパティ | タイプ  | 説明                     |
  | ----- | ---- | ---------------------- |
- | value | 日付   | セルの値 (時間部分を除く)         |
+ | value | Date | セルの値 (時間部分を除く)         |
  | time  | Real | 値が js 日付型の場合、時間値 (秒単位) |
 
 日付または時間は 日付時間 (datetime) として扱われ、以下のように補完されます:
@@ -3100,25 +3100,25 @@ VP INSERT ROWS(VP Row("ViewProArea";0;3))
 
 #### 説明
 
-The `VP INSERT TABLE COLUMNS` command <!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->inserts one or *count* empty column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->。
+`VP INSERT TABLE COLUMNS` コマンドは、 <!-- REF #_method_.VP INSERT TABLE COLUMNS.Summary -->*tableName* で指定した表組みの *column* で指定した列インデックスに、1つまたは *count* で指定した数の空の列を挿入します<!-- END REF -->。
 
-When a column has been inserted with this command, you typically modify its contents using the [VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes) command.
+このコマンドで列を挿入した場合、通常は [VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes) コマンドを使用してその内容を編集します。
 
-In the *insertAfter* parameter, you can pass one of the following constants to indicate if the column(s) must be inserted before or after the *column* index:
+*insertAfter* パラメーターに以下の定数のいずれかを渡すことで、*column* に指定した列インデックスの前または後に列を挿入するかを指定できます。
 
-| 定数                       | 値 | 説明                                                        |
-| ------------------------ | - | --------------------------------------------------------- |
-| `vk table insert before` | 0 | Insert column(s) before the *column* (default if omitted) |
-| `vk table insert after`  | 1 | Insert column(s) after the *column*                       |
+| 定数                       | 値 | 説明                              |
+| ------------------------ | - | ------------------------------- |
+| `vk table insert before` | 0 | *column* の前に列を挿入します (省略時のデフォルト) |
+| `vk table insert after`  | 1 | *column* の後に列を挿入します             |
 
-This command inserts some columns in the *tableName* table, NOT in the sheet. The total number of columns of the sheet is not impacted by the command. Data present at the right of the table (if any) are automatically moved right according to the number of added columns.
+このコマンドは、シート内ではなく、*tableName* の表組みに列を挿入します。 したがって、シートの総列数は、このコマンドの影響を受けません。 表組みより右側にデータがある場合は、挿入された列の数に応じて自動的に右に移動します。
 
-If *tableName* does not exist or if there is not enough space in the sheet, nothing happens.
+*tableName* の表組みが存在しない場合、あるいはシートに十分なスペースがない場合は、何も起こりません。
 
 
 #### 例題
 
-See examples for [VP INSERT TABLE ROWS](#vp-insert-table-rows) and [VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes).
+[VP INSERT TABLE ROWS](#vp-insert-table-rows) および [VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes) の例題を参照ください。
 
 
 #### 参照
@@ -3141,38 +3141,38 @@ See examples for [VP INSERT TABLE ROWS](#vp-insert-table-rows) and [VP SET TABLE
 
 <!-- REF #_method_.VP INSERT TABLE ROWS.Params -->
 
-| 引数          | タイプ     |    | 説明                                                        |
-| ----------- | ------- | -- | --------------------------------------------------------- |
-| vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名                                   |
-| tableName   | Text    | -> | 表組みの名称                                                    |
-| row         | Integer | -> | Index in the table of the starting row to insert          |
-| count       | Text    | -> | Number of rows to add (must be >0)                        |
-| insertAfter | Integer | -> | `vk table insert before` or `vk table insert after` *row* |
+| 引数          | タイプ     |    | 説明                                                     |
+| ----------- | ------- | -- | ------------------------------------------------------ |
+| vpAreaName  | Text    | -> | 4D View Pro フォームオブジェクト名                                |
+| tableName   | Text    | -> | 表組みの名称                                                 |
+| row         | Integer | -> | 行の挿入場所を指定する表組み内のインデックス                                 |
+| count       | Text    | -> | 挿入する行の数 (>0)                                           |
+| insertAfter | Integer | -> | `vk table insert before` または `vk table insert after`   |
 | sheet       | Integer | -> | シートのインデックス (省略した場合はカレントシート)|<!-- END REF -->
 
 |
 
 #### 説明
 
-The `VP INSERT TABLE ROWS` command <!-- REF #_method_.VP INSERT TABLE ROWS.Summary -->inserts one or *count* empty row(s) in the specified *tableName* at the specified *row* index<!-- END REF -->。
+`VP INSERT TABLE ROWS` コマンドは、 <!-- REF #_method_.VP INSERT TABLE ROWS.Summary -->*tableName* で指定した表組みの *row* で指定した行インデックスに、1つまたは *count* で指定した数の空の行を挿入します<!-- END REF -->。
 
-In the *insertAfter* parameter, you can pass one of the following constants to indicate if the row(s) must be inserted before or after the *row* index:
+*insertAfter* パラメーターに以下の定数のいずれかを渡すことで、*row* に指定した行インデックスの前または後に行を挿入するかを指定できます。
 
-| 定数                       | 値 | 説明                                                  |
-| ------------------------ | - | --------------------------------------------------- |
-| `vk table insert before` | 0 | Insert row(s) before the *row* (default if omitted) |
-| `vk table insert after`  | 1 | Insert row(s) after the *row*                       |
+| 定数                       | 値 | 説明                           |
+| ------------------------ | - | ---------------------------- |
+| `vk table insert before` | 0 | *row* の前に行を挿入します (省略時のデフォルト) |
+| `vk table insert after`  | 1 | *row* の後に行を挿入します             |
 
-This command inserts some rows in the *tableName* table, NOT in the sheet. The total number of rows of the sheet is not impacted by the command. Data present below the table (if any) are automatically moved down according to the number of added rows.
+このコマンドは、シート内ではなく、*tableName* の表組みに行を挿入します。 したがって、シートの総行数は、このコマンドの影響を受けません。 表組みより下側にデータがある場合は、挿入された行の数に応じて自動的に下に移動します。
 
-If the *tableName* table is bound to a [data context](#vp-set-data-context), the command inserts new, empty element(s) in the collection.
+*tableName* の表組みが [データコンテキスト](#vp-set-data-context) にバインドされている場合、このコマンドはコレクションに新しい空の要素を挿入します。
 
-If *tableName* does not exist or if there is not enough space in the sheet, nothing happens.
+*tableName* の表組みが存在しない場合、あるいはシートに十分なスペースがない場合は、何も起こりません。
 
 
 #### 例題
 
-You create a table with a data context:
+データコンテキストを使用した表組みを作成します:
 
 ```4d
 var $context : Object
@@ -3190,7 +3190,7 @@ VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 3; 3); "PeopleTable"; "col")
 
 ![](../assets/en/ViewPro/table-base.png)
 
-You want to insert two rows and two columns in the table, you can write:
+表組みに 2行と 2列を挿入したい場合、次のように書きます:
 
 ```4d
 VP INSERT TABLE ROWS("ViewProArea"; "PeopleTable"; 1; 2)
@@ -3775,25 +3775,25 @@ VP REMOVE TABLE("ViewProArea"; "people"; vk table remove style; 2)
 | ---------- | ------- | -- | ------------------------------------------------------ |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                                |
 | tableName  | Text    | -> | 表組みの名称                                                 |
-| column     | Integer | -> | Index in the table of the starting column to remove    |
-| count      | Text    | -> | Number of columns to remove (must be >0)               |
+| column     | Integer | -> | 列の削除の開始場所を指定する表組み内のインデックス                              |
+| count      | Text    | -> | 削除する列の数 (>0)                                           |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)|<!-- END REF -->
 
 |
 
 #### 説明
 
-The `VP REMOVE TABLE COLUMNS` command <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->removes one or *count* column(s) in the specified *tableName* at the specified *column* index<!-- END REF -->。 The command removes values and styles.
+`VP REMOVE TABLE COLUMNS` コマンドは、 <!-- REF #_method_.VP REMOVE TABLE COLUMNS.Summary -->*tableName* で指定した表組みの *column* で指定した列インデックスから、1つまたは *count* で指定した数の列を削除します<!-- END REF -->。 このコマンドは、値とスタイルを削除します。
 
-The command removes columns from the *tableName* table, NOT from the sheet. The total number of columns of the sheet is not impacted by the command. The total number of columns of the sheet is not impacted by the command.
+このコマンドは、シートではなく、*tableName* の表組みから列を削除します。 したがって、シートの総列数は、このコマンドの影響を受けません。 表組みより右側にデータがある場合は、削除された列の数に応じて自動的に左に移動します。
 
-If *tableName* does not exist, nothing happens.
+*tableName* の表組みが存在しない場合には、何も起こりません。
 
 
 
 #### 例題
 
-To remove two columns from 3rd column of the "dataTable" table:
+"dataTable" 表組みの 3列目から 2列を削除します:
 
 ```4d
 VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
@@ -3823,26 +3823,26 @@ VP REMOVE TABLE COLUMNS("ViewProArea"; "dataTable"; 3; 2)
 | ---------- | ------- | -- | ------------------------------------------------------ |
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                                |
 | tableName  | Text    | -> | 表組みの名称                                                 |
-| row        | Integer | -> | Index in the table of the starting row to remove       |
-| count      | Text    | -> | Number of rows to remove (must be >0)                  |
+| row        | Integer | -> | 行の削除の開始場所を指定する表組み内のインデックス                              |
+| count      | Text    | -> | 削除する行の数 (>0)                                           |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)|<!-- END REF -->
 
 |
 
 #### 説明
 
-The `VP REMOVE TABLE ROWS` command <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->removes one or *count* row(s) from the specified *tableName* at the specified *row* index<!-- END REF -->。 The command removes values and styles.
+`VP REMOVE TABLE ROWS` コマンドは、 <!-- REF #_method_.VP REMOVE TABLE ROWS.Summary -->*tableName* で指定した表組みの *row* で指定した行インデックスから、1つまたは *count* で指定した数の行を削除します<!-- END REF -->。 このコマンドは、値とスタイルを削除します。
 
-This command removes rows from the *tableName* table, NOT from the sheet. The total number of rows of the sheet is not impacted by the command. The total number of rows of the sheet is not impacted by the command.
+このコマンドは、シートではなく、*tableName* の表組みから行を削除します。 したがって、シートの総行数は、このコマンドの影響を受けません。 表組みより下側にデータがある場合は、削除された行の数に応じて自動的に上に移動します。
 
-If the *tableName* table is bound to a [data context](#vp-set-data-context), the command removes element(s) from the collection.
+*tableName* の表組みが [データコンテキスト](#vp-set-data-context) にバインドされている場合、このコマンドはコレクションから要素を削除します。
 
-If *tableName* does not exist, nothing happens.
+*tableName* の表組みが存在しない場合には、何も起こりません。
 
 
 #### 例題
 
-To remove two rows from 3rd row of the "dataTable" table:
+"dataTable" 表組みの 3行目から 2行を削除します:
 
 ```4d
 VP REMOVE TABLE ROWS("ViewProArea"; "dataTable"; 3; 2)
@@ -3908,16 +3908,16 @@ VP RESET SELECTION("myVPArea")
 
 <!-- REF #_method_.VP RESIZE TABLE.Params -->
 
-| 引数        | タイプ    |    | 説明                               |
-| --------- | ------ | -- | -------------------------------- |
-| rangeObj  | Object | -> | New range for the table          |
-| tableName | Text   | -> | テーブル名|<!-- END REF -->
+| 引数        | タイプ    |    | 説明                              |
+| --------- | ------ | -- | ------------------------------- |
+| rangeObj  | Object | -> | 表組みの新しいレンジ                      |
+| tableName | Text   | -> | 表組み名|<!-- END REF -->
 
 |
 
 #### 説明
 
-The `VP RESIZE TABLE` command <!-- REF #_method_.VP RESIZE TABLE.Summary -->changes the *tableName* size with regards to the *rangeObj*<!-- END REF -->。
+`VP RESIZE TABLE` コマンドは、 <!-- REF #_method_.VP RESIZE TABLE.Summary -->changes the *tableName* size with regards to the *rangeObj*<!-- END REF -->。
 
 次のルールが適用されます:
 
@@ -3927,12 +3927,12 @@ The `VP RESIZE TABLE` command <!-- REF #_method_.VP RESIZE TABLE.Summary -->chan
     - if rows are added, data is deleted,
     - if columns are added, data are kept and are displayed in new columns.
 
-If *tableName* does not exist, nothing happens.
+*tableName* の表組みが存在しない場合には、何も起こりません。
 
 
 #### 例題
 
-You create a table with a data context:
+データコンテキストを使用した表組みを作成します:
 
 ```4d
 var $context : Object
@@ -5775,7 +5775,7 @@ If *tableName* is not found or if *column* is higher than the number of columns,
 
 #### 例題
 
-You create a table with a data context:
+データコンテキストを使用した表組みを作成します:
 
 ```4d
 var $context;$options : Object

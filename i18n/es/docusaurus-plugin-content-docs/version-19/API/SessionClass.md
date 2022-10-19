@@ -252,7 +252,7 @@ En el método base `On Web Connection`:
 
 ```4d
 If (Session.isGuest())
- //Do something for Guest user
+ //Hacer algo para el usuario invitado
 End if
 ```
 

@@ -860,8 +860,8 @@ When a list box column is associated with an object array, the way a cell is dis
 
 | valueType | Widget por defecto                                  | Widget(s) alternativo(s)                                                                       |
 | --------- | --------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| text      | entrada de texto                                    | drop-down menu (required list) or combo box (choice list)                                      |
-| real      | entrada de texto controlada (números y separadores) | drop-down menu (required list) or combo box (choice list)                                      |
+| text      | entrada de texto                                    | menú desplegable (lista obligatoria) o combo box (lista de selección)                          |
+| real      | entrada de texto controlada (números y separadores) | menú desplegable (lista obligatoria) o combo box (lista de selección)                          |
 | integer   | entrada de texto controlada (números únicamente)    | drop-down menu (required list) or combo box (choice list) or three-states check box            |
 | boolean   | casilla de selección                                | menú desplegable (lista requerida)                                                             |
 | color     | color de fondo                                      | text                                                                                           |

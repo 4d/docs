@@ -116,7 +116,7 @@ Un objeto dataclass puede contener:
 *   attributes
 *   atributos relacionales
 
-The dataclass offers an abstraction of the physical database and allows handling a conceptual data model. The dataclass is the only means to query the datastore. Una consulta se hace desde una única dataclass. Queries are built around attributes and relation attribute names of the dataclasses. So the relation attributes are the means to involve several linked tables in a query.
+The dataclass offers an abstraction of the physical database and allows handling a conceptual data model. El dataclass es el único medio para consultar al datastore. Una consulta se hace desde una única dataclass. Queries are built around attributes and relation attribute names of the dataclasses. So the relation attributes are the means to involve several linked tables in a query.
 
 El objeto dataclass mismo no puede copiarse como un objeto:
 
@@ -158,9 +158,9 @@ For example, consider the following partial database structure and the relation 
 
 ![](../assets/en/ORDA/relationProperties.png)
 
-All storage attributes will be automatically available:
+Todos los atributos de almacenamiento estarán disponibles automáticamente:
 
-*   in the Project dataclass: "ID", "name", and "companyID"
+*   en la dataclass Project: "ID", "name", y "companyID"
 *   en la dataclasss Company: "ID", "name" y "discount"
 
 In addition, the following relation attributes will also be automatically available:
@@ -219,7 +219,7 @@ Entity selections can be "sorted" or "unsorted" ([see below](#ordered-or-unorder
 El objeto selección de entidades en sí no puede ser copiado como un objeto:
 
 ```4d
- $myentitysel:=OB Copy(ds.Employee.all()) //returns null
+ $myentitysel:=OB Copy(ds.Employee.all()) //devuelve null
 ```
 
 Las propiedades de las selecciones de entidades son sin embargo enumerables:

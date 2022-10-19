@@ -269,13 +269,13 @@ Header and footer attributes are used to specify text or images in the left, rig
 | footerCenterImage | picture &#124; text* | La imagen para la sección central del pie de página.                       |
 | footerLeft        | text                 | El texto y el formato del pie de página izquierdo en las páginas impresas. |
 | footerLeftImage   | picture &#124; text* | La imagen de la parte izquierda del pie de página.                         |
-| footerRight       | text                 | The text and format of the right footer on printed pages.                  |
+| footerRight       | text                 | El texto y el formato del pie de página derecho en las páginas impresas.   |
 | footerRightImage  | picture &#124; text* | La imagen de la parte derecha del pie de página.                           |
 | headerCenter      | text                 | El texto y el formato del encabezado central en las páginas impresas.      |
 | headerCenterImage | picture &#124; text* | La imagen para la sección central del encabezado.                          |
 | headerLeft        | text                 | El texto y el formato del encabezado izquierdo en las páginas impresas.    |
 | headerLeftImage   | picture &#124; text* | La imagen de la sección izquierda del encabezado.                          |
-| headerRight       | text                 | The text and format of the right header on printed pages.                  |
+| headerRight       | text                 | El texto y el formato del encabezado derecho en las páginas impresas.      |
 | headerRightImage  | picture &#124; text* | La imagen de la sección derecha del encabezado.                            |
 
 \* If using text type, pass the filepath (absolute or relative) of the image. If you pass a relative path, the file should be located next to the database structure file. En Windows, la extensión del archivo debe ser indicada. No matter the type used to set an image, the image itself (not a reference) is stored in the 4D View Pro area and is returned by [VP Get print info](method-list.md#vp-get-print-info).

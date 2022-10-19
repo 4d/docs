@@ -32,7 +32,7 @@ You can also create named formulas that can be called via their name. To do so, 
 Todas las fórmulas tienen operandos y operadores:
 
 - **Operators**: see [Values and operators](#values-and-operators) below.
-- **Operands** include several categories:
+- Los **operandos** incluyen varias categorías:
   - [values](#values-and-operators) (5 data types are supported)
   - [references to other cells](#cell-references) (relative, absolute, mixed or by name)
   - [funciones estándar de hoja de cálculo](#using-functions)
