@@ -48,6 +48,6 @@ title: インストール
 
 :::info
 
-Need to activate specific licenses? Visit the [Managing 4D licenses](../licenses.md) page.
+特定のライセンスのアクティベーションですか？ [4Dライセンスの管理](../licenses.md) ページを参照ください。
 
 :::
