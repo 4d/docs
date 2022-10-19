@@ -191,7 +191,7 @@ A 4D database opened on a 4D or 4D Server (available through HTTP) and exposed a
 
 ## Session
 
-When the 4D application connects to a Remote datastore, a session is created on the 4D Server (HTTP). A session cookie is generated and associated to the local datastore id.
+When the 4D application connects to a Remote datastore, a session is created on the 4D Server (HTTP). Se genera una cookie de sesión y se asocia al identificador del datastore local.
 
 Cada vez que se abre una nueva sesión, se utiliza una licencia. Cada vez que se cierra una sesión, se libera la licencia.
 
