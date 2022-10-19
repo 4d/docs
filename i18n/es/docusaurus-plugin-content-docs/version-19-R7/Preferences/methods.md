@@ -143,7 +143,7 @@ Allows you to hide all expand/collapse icons by default when displaying code. Wh
 
 #### Insertar () y añadir } ) ] " cierres
 
-Enables automatic insertion of () and closing braces while typing code. Esta opción controla dos funcionalidades automáticas:
+Activa la inserción automática de () y de llaves de cierre mientras se escribe el código. Esta opción controla dos funcionalidades automáticas:
 
 - **parentheses pair ()**: Added after a 4D command, keyword or project method inserted from a suggestion or completion list, if the inserted element requires one or more mandatory arguments. For example, if you type "C_OB" and press Tab, 4D writes "C_OBJECT()" and sets the insertion point inside the ().
 
