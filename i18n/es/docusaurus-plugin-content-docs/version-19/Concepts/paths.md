@@ -69,7 +69,7 @@ $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 
 #### Entrada de rutas Windows y secuencias de escape
 
-The 4D code editor allows the use of escape sequences. Una secuencia de escape es un conjunto de caracteres que se utilizan para sustituir un caracter "especial". La secuencia comienza con una barra diagonal inversa `\`, seguida de un caracter. Por ejemplo, `\t` es la secuencia de escape para el caracter `Tab`.
+El editor de código 4D permite el uso de secuencias de escape. Una secuencia de escape es un conjunto de caracteres que se utilizan para sustituir un caracter "especial". La secuencia comienza con una barra diagonal inversa `\`, seguida de un caracter. Por ejemplo, `\t` es la secuencia de escape para el caracter `Tab`.
 
 El caracter `\` también se utiliza como separador en los nombres de ruta Windows. En general, 4D interpretará correctamente los nombres de ruta Windows que se introduzcan en el editor de código sustituyendo las barras invertidas simples `\` por barras invertidas dobles ``\\`. Por ejemplo,``C:\Folder`se convertirá en `C:\\Folder`.
 
