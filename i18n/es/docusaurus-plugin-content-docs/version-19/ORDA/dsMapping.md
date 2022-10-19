@@ -29,7 +29,7 @@ Se aplican las siguientes reglas para todas las conversiones:
 > 
 > * la opción "Invisible" para las tablas o los campos,
 > * the virtual structure defined through `SET TABLE TITLES` or `SET FIELD TITLES`,
-> * the "Manual" or "Automatic" property of relations.
+> * la propiedad "Manual" o "Automática" de las relaciones.
 
 ### Normas de control de acceso remoto
 
