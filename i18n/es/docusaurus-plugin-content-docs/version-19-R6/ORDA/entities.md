@@ -119,7 +119,7 @@ Note that both *theClient* and *companyProjects* in the above example are primar
 
 ![](../assets/en/ORDA/entityAttributes2.png)
 
-Cada empleado puede ser gerente y puede tener un gerente. To get the manager of the manager of an employee, you can simply write:
+Cada empleado puede ser gerente y puede tener un gerente. Para obtener el gerente del gerente de un empleado, puede simplemente escribir:
 
 ```4d
  $myEmp:=ds.Employee.get(50)
@@ -255,7 +255,7 @@ $comp2:=$lowSal.employer //$comp2 is alterable because $lowSal is alterable
 ```
 
 
-#### Sharing an entity selection between processes (example)
+#### Compartir una selección de entidades entre procesos (ejemplo)
 
 You work with two entity selections that you want to pass to a worker process so that it can send mails to appropriate persons:
 
