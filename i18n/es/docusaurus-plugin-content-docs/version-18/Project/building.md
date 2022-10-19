@@ -195,7 +195,7 @@ Una vez generada, una aplicación cliente/servidor se compone de dos partes pers
 
 Además, se personaliza la aplicación cliente/servidor y se simplifica su manejo:
 
-* Para lanzar la parte del servidor, el usuario simplemente hace doble clic en la aplicación servidor. The database does not need to be selected.
+* Para lanzar la parte del servidor, el usuario simplemente hace doble clic en la aplicación servidor. No es necesario seleccionar la base de datos.
 * Para lanzar la parte cliente, el usuario simplemente hace doble clic en la aplicación cliente, que se conecta directamente a la aplicación servidor. To launch the client portion, the user simply double-clicks the client application, which connects directly to the server application. Si desea que la aplicación cliente se conecte al servidor utilizando una dirección específica (distinta del nombre del servidor publicado en la subred), debe utilizar la llave XML `IPAddress` en el archivo buildapp.4DSettings. Si la conexión falla, \[se pueden implementar mecanismos alternativos específicos\](#management-of-client-connections). Puede "forzar" la visualización de la caja de diálogo de conexión estándar presionando la tecla **Opción** (macOS) o **Alt** (Windows) mientras inicia la aplicación cliente. Sólo la parte cliente puede conectarse a la parte del servidor correspondiente. Si un usuario intenta conectarse a la parte servidor utilizando una aplicación estándar 4D, se devuelve un mensaje de error y la conexión es imposible.
 * Una aplicación cliente/servidor puede configurarse para que la parte cliente [se actualice automáticamente a través de la red](#copy-of-client-applications-in-the-server-application).
 * También es posible automatizar la actualización de la parte del servidor mediante el uso de una secuencia de comandos del lenguaje ([SET UPDATE FOLDER](https://doc.4d.com/4Dv17R6/4D/17-R6/SET-UPDATE-FOLDER.301-4311308.en.html) y [RESTART 4D](https://doc.4d.com/4Dv17R6/4D/17-R6/RESTART-4D.301-4311311.en.html)).
@@ -234,7 +234,7 @@ You must designate the location on your disk of the 4D Volume Desktop applicatio
 
 Si desea que la aplicación cliente se conecte al servidor utilizando una dirección específica (distinta del nombre del servidor publicado en la subred), debe utilizar la llave XML `IPAddress` en el archivo buildapp.4DSettings. If you want the client application to connect to the server using a specific address (other than the server name published on the sub-network), you must use the `IPAddress` XML key in the buildapp.4DSettings file. También puede implementar mecanismos específicos en caso de fallo de la conexión. También puede implementar mecanismos específicos en caso de fallo de la conexión.
 
-#### Copy of client applications in the server application
+#### Copia de las aplicaciones clientes en la aplicación servidor
 
 The options of this area to set up the mechanism for updating the client parts of your client/server applications using the network each time a new version of the application is generated.
 
@@ -297,7 +297,7 @@ When building a double-clickable application, 4D copies the contents of the 4D V
 
 * Instalar una versión de 4D Volume Desktop correspondiente a un lenguaje específico;
 * Add a custom PlugIns folder;
-* Customize the contents of the Resources folder.
+* Personalizar el contenido de la carpeta Resources.
 
 #### Ubicación de los archivos web
 
