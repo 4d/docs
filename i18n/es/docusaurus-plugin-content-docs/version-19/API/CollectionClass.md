@@ -2498,7 +2498,7 @@ Con el siguiente método *NumberGreaterThan0*:
 
 #### Descripción
 
-La función `.orderBy()` <!-- REF #collection.sort().Summary -->sorts the elements of the original collection<!-- END REF --> and also returns the sorted collection.
+La función `.orderBy()` <!-- REF #collection.sort().Summary -->ordena los elementos de la colección original<!-- END REF --> and also returns the sorted collection.
 > Esta función modifica la colección original.
 
 Si se llama a `.sort()` sin parámetros, sólo se ordenan los valores escalares (número, texto, fecha, booleanos). Los elementos se ordenan por defecto de forma ascendente, según su tipo.
