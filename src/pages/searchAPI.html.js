@@ -1,19 +1,18 @@
-import useBaseUrl, { useBaseUrlUtils } from '@docusaurus/useBaseUrl';
 import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import Layout from '@theme/Layout';
+import versions from '../../versions.json';
 
 
 export default function RedirectAPI() {
   const context = useDocusaurusContext();
-  const listVersions = JSON.stringify(context.siteConfig.presets[0][1].docs.versions)
+  const listVersions = JSON.stringify(versions)
   const url = context.siteConfig.baseUrl
   return (
       <script
             dangerouslySetInnerHTML={{
               __html: `
               ( function() {
-              const obj = JSON.parse('${listVersions}')
+              const versions = JSON.parse('${listVersions}')
               const url = new URL(window.location.href);
               const versionWanted = url.searchParams.get("v");
               const classWanted = url.searchParams.get("class");
@@ -21,14 +20,11 @@ export default function RedirectAPI() {
               let finalUrl = ""
               let versionToGo = ""
               //Match version
-              let i = 0;
-              for (let [key, value] of Object.entries(obj)) {
-                if(i === 0)
-                  continue;
+              for (let i = 1; i < versions.length; ++i) {
 
-                const version = key.replace('-','');
+                const version = versions[i].replace('-','');
                 if(version === versionWanted) {
-                  versionToGo = key + "/"
+                  versionToGo = versions[i] + "/"
                 }
                 i++;
               }
