@@ -28,7 +28,7 @@ When [**User settings** mode is enabled](../Desktop/user-settings.md), **Setting
 Locking can occur in both Project and Client/server modes when:
 
 -   The *settings.4DSettings* file is 'Read-only' (Projects only). Al modificar un parámetro se mostrará una alerta para desbloquearlo, si es posible.
--   Two or more users attempt to modify the same settings at the same time. The settings cannot be used until the first user frees it by closing the window. (Cliente/servidor únicamente)
+-   Dos o más usuarios intentan modificar los mismos parámetros al tiempo. The settings cannot be used until the first user frees it by closing the window. (Cliente/servidor únicamente)
 
 In both cases, the settings can be opened in 'Read-only', but cannot be used until the lock is removed.
 
