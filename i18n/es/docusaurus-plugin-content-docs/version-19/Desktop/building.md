@@ -407,7 +407,7 @@ La página lista los elementos cargados por la aplicación 4D actual:
 
 ![](../assets/en/Project/buildapppluginsProj.png)
 
-* La columna **Activa** indica los elementos que se integrarán en la aplicación generada. Todos los elementos están marcados por defecto. To exclude a plug-in or a component, deselect the check box next to it.
+* La columna **Activa** indica los elementos que se integrarán en la aplicación generada. Todos los elementos están marcados por defecto. Para excluir un plug-in o un componente, anule la selección de la casilla situada junto a él.
 
 * **Plugins and components** column - Displays the name of the plug-in/component.
 
