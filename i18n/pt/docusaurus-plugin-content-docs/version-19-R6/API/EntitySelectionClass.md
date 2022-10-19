@@ -1834,10 +1834,10 @@ A função `.slice()` <!-- REF #EntitySelectionClass.slice().Summary -->returns 
 
 The returned entity selection contains the entities specified by *startFrom* and all subsequent entities up to, but not including, the entity specified by *end*. If only the *startFrom* parameter is specified, the returned entity selection contains all entities from *startFrom* to the last entity of the original entity selection.
 
-* If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the entity selection). If the calculated value < 0, *startFrom* is set to 0.
+* If *startFrom* < 0, it is recalculated as *startFrom:=startFrom+length* (it is considered as the offset from the end of the entity selection). Se o valor calculado < 0, *index* será estabelecido como 0.
 * If *startFrom >= length*, the function returns an empty entity selection.
 * If *end* < 0, it is recalculated as *end:=end+length*.
-* If *end < startFrom* (passed or calculated values), the method does nothing.
+* Se *end < startFrom* (valores passados ou calculados), o método não faz nada.
 
 If the entity selection contains entities that were dropped in the meantime, they are also returned.
 
