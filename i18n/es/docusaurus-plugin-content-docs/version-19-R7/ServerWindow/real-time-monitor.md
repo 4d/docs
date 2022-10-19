@@ -9,7 +9,7 @@ The Real Time Monitor page monitors the progress of "long" operations performed 
 ![](../assets/en/Admin/server-admin-monitor-page.png)
 > This page is available in the administration window of the server machine and also from a remote 4D machine. In the case of a remote machine, this page displays data from operations performed on the server machine.
 
-A line is added for each long operation performed on the data. This line automatically disappears when the operation is complete (you can check the **Display operations at least 5 seconds** option to keep quick operations on screen for 5 seconds, see below).
+Se añade una línea para cada operación larga realizada en los datos. This line automatically disappears when the operation is complete (you can check the **Display operations at least 5 seconds** option to keep quick operations on screen for 5 seconds, see below).
 
 La siguiente información se ofrece para cada línea:
 
