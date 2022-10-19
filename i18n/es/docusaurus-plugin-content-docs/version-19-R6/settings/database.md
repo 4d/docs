@@ -26,7 +26,7 @@ Los archivos bloqueados pueden ser leídos pero su contenido no puede ser modifi
 
 This area lets you change the location of temporary files created while 4D is running. The temporary files folder is used by the application, when necessary, to temporarily save the data in memory to disk.
 
-The current location of this folder is displayed in the "Current:" area. You can click in this area to show the pathname as a scrolldown list:
+The current location of this folder is displayed in the "Current:" area. Puede hacer clic en esta área para mostrar el nombre de la ruta en forma de lista desplegable:
 
 ![](../assets/en/settings/temporary-file-location.png)
 
