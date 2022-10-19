@@ -30,7 +30,7 @@ If you click on the **Reject new connections** button:
 
 ![](../assets/en/Admin/server-error.png)
 
-- The project name no longer appears in the remote connection dialog box.
+- El nombre del proyecto ya no aparece en el diálogo de conexión remota.
 - Desktop clients that are already connected are not disconnected and can continue to work normally.
 
 > You can perform the same action with the [`REJECT NEW REMOTE CONNECTIONS`](https://doc.4d.com/4dv19/help/command/en/page1635.html) command.
