@@ -3,7 +3,7 @@ id: overview
 title: Generalidades
 ---
 
-Los parámetros configuran el funcionamiento del proyecto actual. These parameters may be different for each project. They include the listening ports, backup configurations, security options, Web parameters, etc.
+Los parámetros configuran el funcionamiento del proyecto actual. Estos parámetros pueden ser diferentes para cada proyecto. They include the listening ports, backup configurations, security options, Web parameters, etc.
 
 ![](../assets/en/settings/main.png)
 
