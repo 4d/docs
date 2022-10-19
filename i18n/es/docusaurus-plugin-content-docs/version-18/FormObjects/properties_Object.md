@@ -57,7 +57,7 @@ Variables or expressions can be enterable or non-enterable and can receive data 
 
 ### Expresiones
 
-You can use an expression as data source for an object. Any valid 4D expression is allowed: simple expression, formula, 4D function, project method name or field using the standard `[Table]Field` syntax. The expression is evaluated when the form is executed and reevaluated for each form event. Note that expressions can be [assignable or non-assignable](Concepts/quick-tour.md#expressions).
+Puede utilizar una expresión como fuente de datos para un objeto. Any valid 4D expression is allowed: simple expression, formula, 4D function, project method name or field using the standard `[Table]Field` syntax. The expression is evaluated when the form is executed and reevaluated for each form event. Note that expressions can be [assignable or non-assignable](Concepts/quick-tour.md#expressions).
 > If the value entered corresponds to both a variable name and a method name, 4D considers that you are indicating the method.
 
 ### Variables dinámicas
