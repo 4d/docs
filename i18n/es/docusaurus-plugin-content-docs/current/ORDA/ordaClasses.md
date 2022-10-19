@@ -446,13 +446,13 @@ Esta función soporta tres sintaxis:
 
 - With the first syntax, you handle the whole query through the `$event.result` object property.
 - Con la segunda y tercera sintaxis, la función devuelve un valor en *$result*:
-    - If *$result* is a Text, it must be a valid query string
+    - Si *$result* es un texto, debe ser una cadena de consulta válida
     - If *$result* is an Object, it must contain two properties:
 
-    | Propiedad          | Tipo       | Descripción                                         |
-    | ------------------ | ---------- | --------------------------------------------------- |
-    | $result.query      | Text       | Valid query string with placeholders (:1, :2, etc.) |
-    | $result.parameters | Collection | valors para marcadores                              |
+    | Propiedad          | Tipo       | Descripción                                                         |
+    | ------------------ | ---------- | ------------------------------------------------------------------- |
+    | $result.query      | Text       | Cadena de búsqueda válida con marcadores de posición (:1, :2, etc.) |
+    | $result.parameters | Collection | valors para marcadores                                              |
 
 The `query` function executes whenever a query using the computed attribute is launched. It is useful to customize and optimize queries by relying on indexed attributes. When the `query` function is not implemented for a computed attribute, the search is always sequential (based upon the evaluation of all values using the `get <AttributeName>` function).
 
@@ -851,7 +851,7 @@ local Function getYoungest
     $0:=This.students.query("birthDate >= :1"; !2000-01-01!).orderBy("birthDate desc").slice(0; 5)
 ```
 - **without** the `local` keyword, the result is given using a single request
-- **with** the `local` keyword, 4 requests are necessary: one to get the Schools entity students, one for the `query()`, one for the `orderBy()`, and one for the `slice()`. In this example, using the `local` keyword is inappropriate.
+- **with** the `local` keyword, 4 requests are necessary: one to get the Schools entity students, one for the `query()`, one for the `orderBy()`, and one for the `slice()`. En este ejemplo, el uso de la palabra clave `local` es inapropiado.
 
 
 ### Ejemplos
