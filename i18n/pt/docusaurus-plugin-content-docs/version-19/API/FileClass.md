@@ -64,12 +64,12 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 
 <!-- REF #_command_.File.Params -->
-| Parâmetros   | Tipo     |    | Descrição                                       |
-| ------------ | -------- |:--:| ----------------------------------------------- |
-| path         | Text     | -> | Rota do arquivo                                 |
-| fileConstant | Integer  | -> | 4D file constant                                |
-| pathType     | Integer  | -> | `fk posix path` (default) or `fk platform path` |
-| *            |          | -> | * to return file of host database               |
+| Parâmetros   | Tipo     |    | Descrição                                           |
+| ------------ | -------- |:--:| --------------------------------------------------- |
+| path         | Text     | -> | Rota do arquivo                                     |
+| fileConstant | Integer  | -> | 4D file constant                                    |
+| pathType     | Integer  | -> | `fk posix path` (por defeito) ou `fk platform path` |
+| *            |          | -> | * to return file of host database                   |
 | Resultados   | 4D. File | <- | New file object|<!-- END REF -->
 
 |
@@ -407,7 +407,7 @@ ALERT($info.
 
 #### Descrição
 
-The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
+A função `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
 
 A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
@@ -415,7 +415,7 @@ By default, the file retains its name when moved. If you want to rename the move
 
 **Objeto devolvido**
 
-The moved `File` object.
+O objecto `File` movido.
 
 #### Exemplo
 
@@ -467,7 +467,7 @@ Note that the function modifies the full name of the file, i.e. if you do not pa
 
 **Objeto devolvido**
 
-The renamed `File` object.
+O objecto `File` renomeado.
 
 #### Exemplo
 
