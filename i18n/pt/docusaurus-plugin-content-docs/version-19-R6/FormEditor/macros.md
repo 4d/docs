@@ -92,9 +92,9 @@ This file must be located in the host or component's **Project** > **Sources** f
 
 
 
-## Declaring macros
+## Declaração de macros
 
-The structure of the `formMacros.json` file is the following:
+A estrutura do ficheiro `formMacros.json` é a seguinte:
 
 ```js
 {
@@ -174,7 +174,7 @@ Custom properties added to the [macro declaration](#declaring-macros) are return
 
 #### Exemplo
 
-In the `formMacros.json` file:
+No ficheiro `formMacros.json`:
 
 ```js
 {
@@ -246,7 +246,7 @@ For example, if objects of the current page and groups have been modified, you c
 ```
 
 
-#### `method` attribute
+#### atributo `method`
 
 When handling the `method` attribute of form objects, you can define the attribute value in two ways in macros:
 
