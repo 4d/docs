@@ -155,7 +155,7 @@ A função `4D.File.new()` <!-- REF #4D.File.new().Summary -->creates and return
 </details>
 
 <!--REF file.create().Note -->
-**Not available for ZIP archives**<!-- END REF -->
+**Não disponível para arquivos ZIP**<!-- END REF -->
 
 <!--REF #FileClass.create().Syntax -->**.create()** : Boolean <!-- END REF -->
 
