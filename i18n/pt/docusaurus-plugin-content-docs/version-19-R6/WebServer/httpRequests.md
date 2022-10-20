@@ -138,7 +138,7 @@ This example describes the association of the `/4DACTION` URL with an HTML pictu
 <IMG SRC="/4DACTION/getPhoto/smith">
 ```
 
-The `getPhoto` method is as follows:
+O método `getPhoto` é o seguinte:
 
 ```4d
 C_TEXT($1) // This parameter must always be declared
@@ -304,7 +304,7 @@ The main features of this page are:
 
 - It includes three **Submit** buttons: `vsbLogOn`, `vsbRegister` and `vsbInformation`.
 - When you click **Log On**, the submission of the form is first processed by the JavaScript function `LogOn`. If no name is entered, the form is not even submitted to 4D, and a JavaScript alert is displayed.
-- The form has a POST 4D method as well as a Submit script (*GetBrowserInformation*) that copies the browser properties to the four hidden objects whose names starts with *vtNav_App*. It also includes the `vtUserName` object.
+- The form has a POST 4D method as well as a Submit script (*GetBrowserInformation*) that copies the browser properties to the four hidden objects whose names starts with *vtNav_App*. Inclui também o objecto `vtUserName`.
 
 Let’s examine the 4D method `WWW_STD_FORM_POST` that is called when the user clicks on one of the buttons on the HTML form.
 
