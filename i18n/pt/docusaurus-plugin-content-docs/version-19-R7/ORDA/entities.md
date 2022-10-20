@@ -270,7 +270,7 @@ $unpaid:=ds. Invoices.query("status=:1"; "Unpaid")
 
 ```
 
-The `sendMails` method:
+O método `sendMails`:
 
 ```4d 
 
