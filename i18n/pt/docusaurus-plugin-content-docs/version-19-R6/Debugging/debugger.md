@@ -142,7 +142,7 @@ $c:=a+b
     | -- | ---------- |
     | $b | Indefinido |
 
-    The value of the `$a` variable is now 1. The `$b` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
+    O valor da variável `$a` é agora 1. The `$b` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 
 3. You click the **Step Over** button again. The program counter is now set on the line with c:=a+b. At this point the Line Objects theme displays:
 
@@ -151,7 +151,7 @@ $c:=a+b
     | $a | 1          |
     | $b | 2          |
 
-    The value of the `$b` variable is now 2. The `$c` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
+    O valor da variável `$b` é agora 2. The `$c` variable is not yet initialized, but it is displayed because it is used in the line to be executed.
 
 #### Variáveis
 
@@ -253,7 +253,7 @@ In the image above:
 * `thirdMethod` has not received any parameter
 * `$0` is currently undefined, as the method did not assign any value to `$0` (because it has not executed this assignment yet or because the method is a subroutine and not a function)
 * `secondMethod` has received three parameters from `firstMethod`:
-  * $1 is a pointer to the `[Employee]` table
+  * $1 é um ponteiro para a tabela `[Employee]`
   * $2 is a pointer to the `ID` field in the  `[Employee]` table
   * $3 is an alphanumeric parameter whose value is "Z"
 
