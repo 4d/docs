@@ -92,7 +92,7 @@ The wildcard character must be used within the second operand (the string on the
     "abc@"="abcdefghij"
 ```
 
-The wildcard means "one or more characters or nothing". The following expressions are `TRUE`:
+The wildcard means "one or more characters or nothing". As seguintes expressões são `TRUE`:
 
 ```4d
      "abcdefghij"="abcdefghij@"
