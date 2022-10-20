@@ -7,7 +7,7 @@ title: Editor de código
 
 ![](../assets/en/code-editor/code-editor-overview.png)
 
-El editor de código funciona como un editor de texto. Writing a method or a class is usually a combination of typing text, selecting components, and dragging items from the Explorer or other windows. You can also use various type-ahead functions to create methods faster.
+El editor de código funciona como un editor de texto. Writing a method or a class is usually a combination of typing text, selecting components, and dragging items from the Explorer or other windows. También se pueden utilizar varias funciones de tecleo predictivo para crear métodos más rápidamente.
 
 You can scroll through the contents of methods, classes and functions, which can include up to 32,000 lines of code or 2 GB of text.
 
@@ -36,7 +36,7 @@ Puede personalizar la visualización del área de edición. Any customization is
 
 | Option                                          | Descripción                                                                                                                                                                                                 | Set in...                                                                                                                                                                                                                   |
 | ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **font** and **font size**                      | Define la fuente y el tamaño de los caracteres que se utilizarán en el área de edición                                                                                                                      | **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**                                                                                                       |
+| **fuente** y **tamaño de la fuente**            | Define la fuente y el tamaño de los caracteres que se utilizarán en el área de edición                                                                                                                      | **Preferences** > [**Methods**](../Preferences/methods.md) or **Method > View** > **Bigger Font** or **Smaller Font**                                                                                                       |
 | **estilo y color de los elementos de sintaxis** | assign a specific color and/or style to each type of element of the 4D language.  You can also change the different colors used in the interface of the editing area (highlighting, background, and so on). | Haga clic derecho en un elemento lingüístico (variable, palabra clave, etc.) Right-click on a language element (variable, keyword, etc.) > **Style** submenu. Or **Preferences** > [**Methods**](../Preferences/methods.md) |
 | **espacios**                                    | You can display the spaces between words using dots (.) instead of blank spaces. This option applies to all the code elements (command names, variables, comments, etc.).                                   | **Método > Ver > Espacios en blanco**                                                                                                                                                                                       |
 | **temas**                                       | Puedes seleccionar el tema Dark o Light, o definir uno personalizado                                                                                                                                        | **Preferences** > [**Methods**](../Preferences/methods.md)                                                                                                                                                                  |
@@ -44,7 +44,7 @@ Puede personalizar la visualización del área de edición. Any customization is
 
 ## Lists area
 
-The lists area lets you display one or more lists of elements necessary for writing methods and classes (commands, constants, forms, etc.). You can choose the number and contents of the lists displayed in the window.
+The lists area lets you display one or more lists of elements necessary for writing methods and classes (commands, constants, forms, etc.). Puede elegir el número y el contenido de las listas que aparecen en la ventana.
 
 Por defecto, el editor de código muestra cuatro listas. You can hide or show all lists by clicking on the icon at the botton right of the window. ![](../assets/en/code-editor/show-hide-list.png)
 
@@ -146,7 +146,7 @@ Al escribir métodos, puede arrastrar y soltar elementos:
 
 Desde el Explorador, puedes arrastrar y soltar:
 
-- Table names, field names, form names and project methods from the Home page.
+- Nombres de tablas, nombres de campos, nombres de formularios y métodos proyecto desde la página de inicio.
 - Nombres de tablas y nombres de campos de la página Tablas,
 - Nombres de tablas y formularios de la página Formularios,
 - Project methods and form names from the Methods page,
@@ -438,7 +438,7 @@ In the following example, the **Carriage return** character (escape sequence \r)
 
 `ALERT("The operation has been completed successfully.\rYou may now disconnect.")`
 
-**Warning:** The `\` (backslash) character is used as a separator in pathnames under Windows. In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash `\` with a double backslash ``\\`. For instance,``C:\Folder`will become`C:\\Folder`. However, if you write`"C:\MyDocuments\New"`, 4D will display`"C:\\MyDocuments\New"`. In this case, the second backslash is interpreted incorrectly as`\N`(an existing escape sequence). You must therefore enter a double backslash`\\` when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
+**Warning:** The `\` (backslash) character is used as a separator in pathnames under Windows. In general, 4D will correctly interpret Windows pathnames entered in the Code Editor by replacing the single backslash `\` with a double backslash ``\\`. Por ejemplo,``C:\Folder`se convertirá en`C:\Folder`. However, if you write`"C:\MyDocuments\New"`, 4D will display`"C:\\MyDocuments\New"`. In this case, the second backslash is interpreted incorrectly as`\N`(an existing escape sequence). You must therefore enter a double backslash`\\` when you want to have a backslash in front of a character used in one of the escape sequences recognized by 4D.
 
 ## Facilitar la edición de código
 

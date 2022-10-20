@@ -156,7 +156,7 @@ A função `4D.File.new()` <!-- REF #4D.File.new().Summary -->creates and return
 </details>
 
 <!--REF file.create().Note -->
-**Not available for ZIP archives**<!-- END REF -->
+**Não disponível para arquivos ZIP**<!-- END REF -->
 
 
 <!--REF #FileClass.create().Syntax -->**.create()** : Boolean <!-- END REF -->
@@ -477,8 +477,8 @@ If you use the *options* (object) parameter, you can pass more options for the f
 | ----------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | `.mode`           | Text           | Opening mode (see *mode* above)                                                                                               | "read"        |
 | `.charset`        | Text           | Charset used when reading from or writing to the file. Use the standard name of the set (for example "ISO-8859-1" or "UTF-8") | "UTF-8"       |
-| `.breakModeRead`  | Text or Number | Processing mode for line breaks used when reading in the file (see below)                                                     | "native" or 1 |
-| `.breakModeWrite` | Text or Number | Processing mode for line breaks used when writing to the file (see below)                                                     | "native" or 1 |
+| `.breakModeRead`  | Text ou Number | Processing mode for line breaks used when reading in the file (see below)                                                     | "native" or 1 |
+| `.breakModeWrite` | Text ou Number | Processing mode for line breaks used when writing to the file (see below)                                                     | "native" or 1 |
 
 The `.breakModeRead` and `.breakModeWrite` indicate the processing to apply to end-of-line characters in the document. You can use one of the following values (text or number):
 

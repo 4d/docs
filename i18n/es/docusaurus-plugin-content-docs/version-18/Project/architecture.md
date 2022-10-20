@@ -202,7 +202,7 @@ Esta carpeta contiene archivos que memorizan las configuraciones del usuario, po
 
 Esta carpeta contiene los componentes que deben estar disponibles únicamente en la base proyecto. Debe almacenarse en el mismo nivel que la carpeta Project.
 
-> A project database can be used itself as a component:
+> Una base proyecto puede utilizarse como un componente:
 > 
 > - for development: put an alias of the .4dproject file in the Components folder of the host database.
 > - para el despliegue: cree el componente (ver [Crear un paquete proyecto](building.md)) y ponga el archivo .4dz resultante en una carpeta .4dbase en la carpeta Componentes de la base local.

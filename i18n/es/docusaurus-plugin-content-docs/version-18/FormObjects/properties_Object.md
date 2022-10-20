@@ -277,7 +277,7 @@ Hay varios tipos de cálculos disponibles. The following table shows which calcu
 When an automatic calculation is set, it is applied to all the values found in the list box column. Note that the calculation does not take the shown/hidden state of list box rows into account. If you want to restrict a calculation to only visible rows, you must use a custom calculation.
 
 When **Custom** ("none" in JSON) is set, no automatic calculations are performed by 4D and you must assign the value of the variable in this area by programming.
-> Automatic calculations are not supported with:
+> Los cálculos automáticos no son soportados con:
 > 
 > - footers of columns based on formulas,
 > - footers of [Collection and Entity selection](listbox_overview.md#collection-or-entity-selection-list-boxes) list boxes. Es necesario utilizar cálculos personalizados.

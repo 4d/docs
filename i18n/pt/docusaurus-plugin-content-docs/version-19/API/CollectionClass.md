@@ -1224,15 +1224,15 @@ O código para o método ***FindCity*** é:
 
 
 <!-- REF #collection.indexOf().Params -->
-| Parâmetros | Tipo      |    | Descrição                                                                                               |
-| ---------- | --------- |:--:| ------------------------------------------------------------------------------------------------------- |
-| toSearch   | expressão | -> | Expressão a pesquisar na coleção                                                                        |
-| startFrom  | Integer   | -> | Índice onde inicia a pesquisa                                                                           |
-| Resultados | Integer   | <- | Index of the first occurrence of toSearch in the collection, -1 if not found|<!-- END REF --> |
+| Parâmetros | Tipo      |    | Descrição                                                                                             |
+| ---------- | --------- |:--:| ----------------------------------------------------------------------------------------------------- |
+| toSearch   | expressão | -> | Expressão a pesquisar na coleção                                                                      |
+| startFrom  | Integer   | -> | Índice onde inicia a pesquisa                                                                         |
+| Resultados | Integer   | <- | Índice da primeira ocorrência de toSearch na coleção, -1 se não encontrado|<!-- END REF --> |
 
 #### Descrição
 
-A função `.indexOf()` <!-- REF #collection.indexOf().Summary -->searches the *toSearch* expression among collection elements and returns the index of the first found occurrence, or -1 if it was not found<!-- END REF -->.
+A função `.indexOf()` <!-- REF #collection.indexOf().Summary -->pesquisa a expressão *toSearch* entre os elementos da colecção e devolve o índice da primeira ocorrência encontrada, ou -1 se não foi encontrada<!-- END REF -->.
 > Essa função não modifica a coleção original.
 
 Em *toSearch*, passe a expressão para encontrar na coleção. Pode passar:
@@ -1285,11 +1285,11 @@ Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa 
 | ----------- | ---------- |:--:| ----------------------------------------------------------------------------------- |
 | queryString | Text       | -> | Critérios de pesquisa                                                               |
 | value       | any        | -> | Valores a comparar quando usar placeholders (valores temporários)                   |
-| Resultados  | Collection | <- | Element index(es) matching queryString in the collection|<!-- END REF --> |
+| Resultados  | Collection | <- | Índices elemento correspondendo a queryString na coleção|<!-- END REF --> |
 
 #### Descrição
 
-A função `.indices()` funciona exactamente da mesma forma que a função [`.query()`](#query) mas <!-- REF #collection.indices().Summary -->returns indexes, in the original collection, of object collection elements that match the *queryString* search conditions<!-- END REF -->, and not elements themselves. Indices são retornados em ordem ascendente.
+A função `.indices()` funciona exactamente da mesma forma que a função [`.query()`](#query) mas <!-- REF #collection.indices().Summary -->devolve índices, na coleção original, de elementos da coleção de objectos que correspondem à *queryString* condições de pesquisa<!-- END REF -->, and not elements themselves. Indices são retornados em ordem ascendente.
 > Essa função não modifica a coleção original.
 
 O parâmetro *queryString* usa a sintaxe abaixo:
@@ -1343,7 +1343,7 @@ Para uma descrição detalhada dos parâmetros *queryString* e *value*, veja a f
 
 #### Descrição
 
-A função `.insert()` <!-- REF #collection.insert().Summary --> inserts *element* at the specified *index* position in the collection instance and returns the edited collection<!-- END REF -->.
+A função `.insert()` <!-- REF #collection.insert().Summary --> insere *elementos* no *índice* posição na instância de coleção e devolve a coleção editada<!-- END REF -->.
 > Essa função modifica a coleção original.
 
 In *index*, passe a posição onde quiser que o elemento seja inserido na coleção.
@@ -1436,7 +1436,7 @@ Como padrão, elementos null ou vazios da coleção são retornados na string re
 
 #### Descrição
 
-A função `.lastIndexOf()` <!-- REF #collection.lastIndexOf().Summary -->searches the *toSearch* expression among collection elements and returns the index of the last occurrence<!-- END REF -->ou -1 se não foi encontrado.
+A função `.lastIndexOf()` <!-- REF #collection.lastIndexOf().Summary -->pesquisa a expressão *toSearch* entre os elementos da coleção e devolve o índice da última ocorrência<!-- END REF -->ou -1 se não foi encontrado.
 > Essa função não modifica a coleção original.
 
 Em *toSearch*, passe a expressão para encontrar na coleção. Pode passar:
@@ -1679,10 +1679,10 @@ Se a coleção estiver vazia, `.min()` devolve *Undefined*.
 <!-- REF #collection.orderBy().Params -->
 | Parâmetros  | Tipo       |    | Descrição                                                                |
 | ----------- | ---------- |:--:| ------------------------------------------------------------------------ |
-| pathStrings | Text       | -> | Property path(s) on which to order the collection                        |
+| pathStrings | Text       | -> | Caminho(s) de propriedade(s) no(s) qual(is) encomendar a coleção         |
 | pathObjects | Collection | -> | Coleção de objetos criterio                                              |
 | ascOrDesc   | Integer    | -> | `ck ascending` ou `ck descending` (valores escalares)                    |
-| Resultados  | Collection | <- | Ordered copy of the collection (shallow copy)|<!-- END REF --> |
+| Resultados  | Collection | <- | Cópia ordenada da coleção (cópia superficial)|<!-- END REF --> |
 
 #### Descrição
 
@@ -1922,7 +1922,7 @@ $1.result:=(Compare strings($1.value;$1.value2;$2)<0)
 
 #### Descrição
 
-A função `.pop()` <!-- REF #collection.pop().Summary -->removes the last element from the collection and returns it as the function result<!-- END REF -->.
+A função `.pop()` <!-- REF #collection.pop().Summary -->remove o primeiro elemento da coleção e devolve-o como resultado da função<!-- END REF -->.
 > Essa função modifica a coleção original.
 
 Quando for aplicado a uma coleção vazia, `.pop()` devolve ***undefined***.
@@ -1968,7 +1968,7 @@ Quando for aplicado a uma coleção vazia, `.pop()` devolve ***undefined***.
 
 #### Descrição
 
-A função `.push()` <!-- REF #collection.push().Summary -->appends one or more *element*(s) to the end of the collection instance and returns the edited collection<!-- END REF -->.
+A função `.push()` <!-- REF #collection.push().Summary -->anexa um ou mais  *elementos*(s) ao final da instância de recolha e devolve a coleção editada<!-- END REF -->.
 > Essa função modifica a coleção original.
 
 #### Exemplo 1
@@ -2023,7 +2023,7 @@ Se quiser ordenar a coleção resultante:
 
 #### Descrição
 
-A função `.query()` <!-- REF #collection.query().Summary -->returns all elements of a collection of objects that match the search conditions <!-- END REF -->defined by *queryString* and (optionally) *value* or *querySettings*. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
+A função `.query()` <!-- REF #collection.query().Summary -->devolve todos os elementos de uma coleção de objectos que correspondem às condições de pesquisa <!-- END REF -->defined by *queryString* and (optionally) *value* or *querySettings*. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > Essa função não modifica a coleção original.
 
 O parâmetro *queryString* usa a sintaxe abaixo:
@@ -2209,19 +2209,19 @@ Com o método ***Flatten***:
 
 #### Descrição
 
-A função `.remove()` <!-- REF #collection.remove().Summary -->removes one or more element(s) from the specified *index* position in the collection and returns the edited collection<!-- END REF -->.
+A função `.remove()` <!-- REF #collection.remove().Summary -->insere elementos no *índice* posição na instância de coleção e devolve a coleção editada<!-- END REF -->.
 > Essa função modifica a coleção original.
 
-In *index*, pass the position where you want the element to be removed from the collection.
+Em *index*, passe a posição onde deseja que o elemento seja retirado da colecção.
 > **Aviso**: Lembre que elementos coleção são numerados a partir de 0. If *startFrom* < 0, it is considered as the offset from the end of the collection (*startFrom:=startFrom+length*).
 
 * Se *index* < 0, será recalculado como  *index:=index+length* (é considerado como o offset do final da coleção).
 * Se o valor calculado < 0, *index* será estabelecido como 0.
-* If the calculated value > the length of the collection, *index* is set to the length.
+* Se o valor calculado > o comprimento da colecção, *índice* é definido para o comprimento.
 
-In *howMany*, pass the number of elements to remove from *index*. If *howMany* is not specified, then one element is removed.
+Em *howMany*, passe o número de elementos a remover do índice **. Se *howMany* não for especificado, então um elemento é removido.
 
-If you try to remove an element from an empty collection, the method does nothing (no error is generated).
+Se tentar remover um elemento de uma coleção vazia, o método não faz nada (não é gerado qualquer erro).
 
 #### Exemplo
 
@@ -2257,18 +2257,18 @@ If you try to remove an element from an empty collection, the method does nothin
 | Parâmetros   | Tipo                                            |    | Descrição                                                   |
 | ------------ | ----------------------------------------------- |:--:| ----------------------------------------------------------- |
 | size         | Integer                                         | -> | Nova dimensão da colecção                                   |
-| defaultValue | Number, Text, Object, Collection, Date, Boolean | -> | Default value to fill new elements                          |
+| defaultValue | Number, Text, Object, Collection, Date, Boolean | -> | Valor padrão para preencher novos elementos                 |
 | Resultados   | Collection                                      | <- | Colecção original redimensionada|<!-- END REF --> |
 
 #### Descrição
 
-A função `.resize()` <!-- REF #collection.resize().Summary -->sets the collection length to the specified new size and returns the resized collection<!-- END REF -->.
+A função `.resize()` <!-- REF #collection.resize().Summary -->define o comprimento da coleção para o novo tamanho especificado e devolve a coleção redimensionada<!-- END REF -->.
 > Essa função modifica a coleção original.
 
-* If *size* < collection length, exceeding elements are removed from the collection.
-* If *size* > collection length, the collection length is increased to size.
+* Se *tamanho* < comprimento da colecção, os elementos excedentes são removidos da colecção.
+* Se *tamanho* > comprimento da colecção, o comprimento da colecção é aumentado à medida.
 
-By default, new elements are filled will **null** values. You can specify the value to fill in added elements using the *defaultValue* parameter.
+Por padrão, são preenchidos novos elementos **null** valores. Pode especificar o valor para preencher os elementos adicionados usando o parâmetro *defaultValue* .
 
 #### Exemplo
 
@@ -2403,12 +2403,12 @@ Se a colecção estiver vazia, este método não faz nada.
 A função `.slice()` <!-- REF #collection.slice().Summary -->devolve uma parte de uma colecção para uma nova colecção<!-- END REF -->, selected from *startFrom* index to *end* index (end not included). Summary --> devolve todos os elementos de uma coleção de objetos que coincidem com as condiciones de pesquisa <!-- END REF -->definidas por *queryString* e (opcionalmente) *value* ou *querySettings*. Na coleção original é uma coleção partilhada, a coleção retornada também é uma coleção partilhada.
 > Essa função não modifica a coleção original.
 
-A colecção devolvida contém o elemento especificado por *startFrom* e todos os elementos subsequentes até, mas não incluindo, o elemento especificado por *end*. If only the *startFrom* parameter is specified, the returned collection contains all elements from *startFrom* to the last element of the original collection.
+A colecção devolvida contém o elemento especificado por *startFrom* e todos os elementos subsequentes até, mas não incluindo, o elemento especificado por *end*. Se apenas for especificado o parâmetro *startFrom* , a colecção devolvida contém todos os elementos desde *startFrom* até ao último elemento da colecção original.
 
 * Se *index* < 0, será recalculado como *startFrom:=startFrom+length* (é considerado como o offset do final da coleção).
-* If the calculated value < 0, *startFrom* is set to 0.
+* Se o valor calculado < 0, *index* será estabelecido como 0.
 * Se *end* < 0 , é recalculado como sendo *end:=end+length*.
-* If *end < startFrom* (passed or calculated values), the method does nothing.
+* Se *end < startFrom* (valores passados ou calculados), o método não faz nada.
 
 #### Exemplo
 
@@ -2441,12 +2441,12 @@ A colecção devolvida contém o elemento especificado por *startFrom* e todos o
 
 
 <!-- REF #collection.some().Params -->
-| Parâmetros | Tipo     |    | Descrição                                                                            |
-| ---------- | -------- |:--:| ------------------------------------------------------------------------------------ |
-| startFrom  | Integer  | -> | Índice para início do teste em                                                       |
-| methodName | Text     | -> | Nome do método para chamar para o teste                                              |
-| param      | Mixed    | -> | Parâmetros a passar para *methodName*                                                |
-| Resultados | Booleano | <- | True if at least one element successfully passed the test|<!-- END REF --> |
+| Parâmetros | Tipo     |    | Descrição                                                                          |
+| ---------- | -------- |:--:| ---------------------------------------------------------------------------------- |
+| startFrom  | Integer  | -> | Índice para início do teste em                                                     |
+| methodName | Text     | -> | Nome do método para chamar para o teste                                            |
+| param      | Mixed    | -> | Parâmetros a passar para *methodName*                                              |
+| Resultados | Booleano | <- | True se todos os elementos passarem o teste com sucesso|<!-- END REF --> |
 
 #### Descrição
 
@@ -2467,10 +2467,10 @@ Em *methodName*, passe o nome do método para usar para avliar elementos collect
 
 In any case, at the point where `.some()` function encounters the first collection element returning true in *$1.result*, it stops calling *methodName* and returns **true**.
 
-Como padrão, `.some()` testa toda a colecção. Optionally, you can pass the index of an element from which to start the test in *startFrom*.
+Como padrão, `.some()` testa toda a colecção. Opcionalmente pode passar o índice da coleção para a qual iniciar a pesquisa em*startFrom*.
 
-* If *startFrom* >= the collection's length, **False** is returned, which means the collection is not tested.
-* If *startFrom* < 0, it is considered as the offset from the end of the collection.
+* Se *startFrom* >= tamanho da coleção, é retornado **false**, o que significa que a coleção não é testada.
+* Se *startFrom* < 0, é considerado como a compensação a partir do final da recolha.
 * Se *startFrom* = 0, a coleção inteira é pesquisada (padrão).
 
 #### Exemplo
@@ -2527,7 +2527,7 @@ With the following *NumberGreaterThan0* method:
 A função `.sort()` <!-- REF #collection.sort().Summary -->sorts the elements of the original collection<!-- END REF --> and also returns the sorted collection.
 > Essa função modifica a coleção original.
 
-If `.sort()` is called with no parameters, only scalar values (number, text, date, booleans) are sorted. Elements are sorted by default in ascending order, according to their type.
+Se `.sort()` for chamado sem parâmetros, apenas valores escalares (número, texto, data, booleanos) são ordenados. Os elementos são classificados por defeito em ordem ascendente, de acordo com o seu tipo.
 
 If you want to sort the collection elements in some other order or sort any type of element, you must supply in *methodName* a comparison method that compares two values and returns **true** in *$1.result* if the first value is lower than the second value. Pode fornecer parâmetros adicionais a *methodName* se for necessário.
 
@@ -2671,7 +2671,7 @@ Se a coleção contiver objetos, passe o parâmetro *propertyPath* para indicar 
 
 #### Descrição
 
-A função `.unshift()` <!-- REF #collection.unshift().Summary -->inserts the given *value*(s) at the beginning of the collection <!-- END REF -->and returns the modified collection.
+A função `.unshift()` <!-- REF #collection.unshift().Summary -->insere o  *valor* dado no início da coleção <!-- END REF -->e devolve a coleção modificada.
 > Essa função modifica a coleção original.
 
 Se vários valores forem passados, são inseridos todos ao mesmo tempo, o que significa que aparecem na colecção resultante na mesma ordem que na lista de argumentos.

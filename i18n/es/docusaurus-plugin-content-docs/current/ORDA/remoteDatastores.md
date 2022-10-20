@@ -33,7 +33,7 @@ Estos principios se ilustran en los gráficos siguientes:
 
 Processes that manage sessions for datastore access are shown in the 4D Server administration window:
 
-*   name: "REST Handler: \<process name\>"
+*   nombre: "REST Handler: \<process name\>"
 *   tipo: tipo Worker Server HTTP
 *   session: session name is the user name passed to the `Open datastore` command.
 
@@ -69,7 +69,7 @@ If a request is sent to the remote datastore after the session has been closed, 
 
 The optimization context is based upon the following implementations:
 
-* When a client requests an entity selection from the server, 4D automatically "learns" which attributes of the entity selection are actually used on the client side during the code execution, and builds a corresponding "optimization context". This context is attached to the entity selection and stores the used attributes. It will be dynamically updated if other attributes are used afterwards. Los siguientes métodos y funciones activan la fase de aprendizaje:
+* When a client requests an entity selection from the server, 4D automatically "learns" which attributes of the entity selection are actually used on the client side during the code execution, and builds a corresponding "optimization context". This context is attached to the entity selection and stores the used attributes. Se actualizará dinámicamente si se utilizan posteriormente otros atributos. Los siguientes métodos y funciones activan la fase de aprendizaje:
   * [`Crear una entity selection`](../API/EntitySelectionClass.md#create-entity-selection)
   * [`dataClass.fromCollection()`](../API/DataClassClass.md#fromcollection)
   * [`dataClass.all()`](../API/DataClassClass.md#all)

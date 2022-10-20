@@ -33,7 +33,7 @@ Todas las fórmulas tienen operandos y operadores:
 
 *   **Operators**: see [Values and operators](#values-and-operators) below.
 *   Los **operandos** incluyen varias categorías:
-    *   [values](#values-and-operators) (5 data types are supported)
+    *   Los [valores](#values-and-operators) (soportan 5 tipos de datos)
     *   [references to other cells](#cell-references) (relative, absolute, mixed or by name)
     *   [funciones estándar de hoja de cálculo](#using-functions)
     *   [4D functions](#4d-functions) based upon 4D formulas and providing access to 4D variables, fields, methods, commands, or expressions.
@@ -53,7 +53,7 @@ Todas las fórmulas tienen operandos y operadores:
 
 ### Operadores de comparación
 
-The following operators can be used with two operands of the same type:
+Los siguientes operadores pueden utilizarse con dos operandos del mismo tipo:
 
 | Operador   | Comparación       |
 | ---------- | ----------------- |
@@ -248,7 +248,7 @@ For more information on supported incoming parameter types, please refer to the 
     | value     | Fecha | Valor fecha      |
     | time      | Real  | Hora en segundos |
 
-If the 4D method returns nothing, an empty string is automatically returned.
+Si el método 4D no devuelve nada, se devuelve automáticamente una cadena vacía.
 
 Se devuelve un error en la celda 4D View Pro si:
 

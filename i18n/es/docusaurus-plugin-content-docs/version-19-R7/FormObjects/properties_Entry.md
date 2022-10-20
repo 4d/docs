@@ -7,7 +7,7 @@ title: Entrada
 
 4D incluye funcionalidades de corrección ortográfica integradas y personalizables. Text type [inputs](input_overview.md) can be checked, as well as [4D Write Pro](writeProArea_overview.md) documents.
 
-The Auto Spellcheck property activates the spell-check for each object. Cuando se utiliza, se realiza automáticamente una corrección ortográfica durante la entrada de datos. You can also execute the `SPELL CHECKING` 4D language command for each object to be checked.
+La propiedad de corrección ortográfica automática activa la corrección ortográfica de cada objeto. Cuando se utiliza, se realiza automáticamente una corrección ortográfica durante la entrada de datos. You can also execute the `SPELL CHECKING` 4D language command for each object to be checked.
 
 #### Gramática JSON
 
@@ -29,7 +29,7 @@ For a picture type [input](input_overview.md), in addition to standard editing c
 
 For a [multi-style](properties_Text.md#multi-style) text type [input](input_overview.md), in addition to standard editing commands, the context menu provides the following commands:
 
-- **Fonts...**: displays the font system dialog box
+- **Fuentes...**: muestra el diálogo del sistema de fuentes
 - **Recent fonts**: displays the names of recent fonts selected during the session. The list can store up to 10 fonts (beyond that, the last font used replaces the oldest). Por defecto, esta lista está vacía y la opción no se muestra. You can manage this list using the `SET RECENT FONTS` and `FONT LIST` commands.
 - commands for supported style modifications: font, size, style, color and background color. When the user modifies a style attribute via this pop-up menu, 4D generates the `On After Edit` form event.
 

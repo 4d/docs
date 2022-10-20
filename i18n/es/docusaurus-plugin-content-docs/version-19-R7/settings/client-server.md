@@ -26,7 +26,7 @@ This option lets you change the publication name of a 4D Server database, *i.e.*
 
 #### Número de puerto
 
-This option lets you change the TCP port number on which 4D Server publishes the database. This information is stored in the project and on each client machine. By default, the TCP port number used by 4D Server and 4D in remote mode is 19813.
+This option lets you change the TCP port number on which 4D Server publishes the database. Esta información se almacena en el proyecto y en cada máquina cliente. By default, the TCP port number used by 4D Server and 4D in remote mode is 19813.
 
 Customizing this value is necessary when you want to use several 4D applications on the same machine; in this case, you must specify a different port number for each application. When you modify this value from 4D Server or 4D, it is automatically passed on to all the 4D machines connected to the database.
 
@@ -90,8 +90,8 @@ This table allows you to set access control rules for the database depending on 
 
 El funcionamiento de la tabla de configuración es el siguiente:
 
-- The "Allow-Deny" column allows selecting the type of rule to apply (Allow or Deny) using a pop-up menu. Para añadir una regla, haga clic en el botón Añadir. Aparece una nueva línea en la tabla. The **Delete** button lets you remove the current row.
-- The "IP Address" column allows setting the IP address(es) concerned by the rule. To specify an address, click in the column and enter the address in the following form: 123.45.67.89 (IPv4 format) or 2001:0DB8:0000:85A3:0000:0000:AC1F:8001 (IPv6 format). You can use an * (asterisk) character to specify "starts with" type addresses. For example, 192.168.* indicates all addresses starting with 192.168.
+- The "Allow-Deny" column allows selecting the type of rule to apply (Allow or Deny) using a pop-up menu. Para añadir una regla, haga clic en el botón Añadir. Aparece una nueva línea en la tabla. El botón **Borrar** permite eliminar la línea actual.
+- The "IP Address" column allows setting the IP address(es) concerned by the rule. To specify an address, click in the column and enter the address in the following form: 123.45.67.89 (IPv4 format) or 2001:0DB8:0000:85A3:0000:0000:AC1F:8001 (IPv6 format). You can use an * (asterisk) character to specify "starts with" type addresses. Por ejemplo, 192.168.* indica todas las direcciones que empiezan por 192.168.
 - La aplicación de las reglas se basa en el orden de visualización de la tabla. If two rules are contradictory, priority is given to the rule located highest in the table. You can re-order rows by modifying the current sort (click the header of the column to alternate the direction of the sort). También puede mover las líneas utilizando arrastrar y soltar.
 - For security reasons, only addresses that actually match a rule will be allowed to connect. In other words, if the table only contains one or more Deny rules, all addresses will be refused because none will match at least one rule. If you want to deny only certain addresses (and allow others), add an Allow * rule at the end of the table. Por ejemplo:
     - Denegar 192.168.* (denegar todas las direcciones que empiecen por 192.168)

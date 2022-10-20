@@ -88,7 +88,7 @@ You can control how project methods are used and/or called in different contexts
 
 If you do not want users to be able to run a project method using the **Method...** command of the **Run** menu, you can make it Invisible by checking this option. Un método invisible no aparece en la caja de diálogo de ejecución del método.
 
-When you make a project method invisible, it is still available to database programmers. It remains listed on the method list of the Explorer and of the Code Editor.
+When you make a project method invisible, it is still available to database programmers. Permanece en la lista de métodos del Explorador y del Editor de código.
 
 ##### Compartido por los componentes y la base local
 

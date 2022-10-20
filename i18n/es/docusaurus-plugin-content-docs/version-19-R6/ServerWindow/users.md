@@ -23,7 +23,7 @@ For each user connected to the server, the list provides the following informati
 - **4D User**: Name of the 4D user, or alias if set with the [`SET USER ALIAS`](https://doc.4d.com/4dv19/help/command/en/page1666.html) command on the user machine. If passwords are not activated and no alias has been set, all users are named "Designer".
 - **Nombre de máquina**: Nombre de la máquina remota.
 - **Session name**: Name of the session opened on the remote machine.
-- **IP Address**: IP address of the remote machine.
+- **Dirección IP**: dirección IP de la máquina remota.
 - **Login date**: Date and time of the remote machine connection.
 - **CPU Time**: CPU time consumed by this user since connecting.
 - **Activity**: Ratio of time that 4D Server devotes to this user (dynamic display). "Sleeping" if the remote machine has switched to sleep mode (see below).

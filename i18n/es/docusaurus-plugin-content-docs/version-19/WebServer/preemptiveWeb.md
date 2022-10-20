@@ -55,7 +55,7 @@ Todo el código 4D ejecutado por el servidor web debe ser hilo seguro si quiere 
 
 - [funciones de clase del modelo de datos ORDA](../REST/ClassFunctions.md) llamadas vía REST
 
-- Project methods with "REST Server" property checked (legacy REST calls)
+- Métodos proyecto con la propiedad "Servidor REST" marcada (llamadas REST heredadas)
 
 Para cada uno de estos métodos y partes de código, el compilador comprobará si se respetan las reglas de seguridad de hilos, y devolverá errores en caso de que haya problemas. Para más información sobre las reglas hilo seguro, consulte el párrafo *Escribir un método hilo seguro* en el capítulo *Procesos* del manual de [Lenguaje 4D](https://doc.4d.com).
 

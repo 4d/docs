@@ -144,11 +144,11 @@ Debe introducir una lista de valores. In the Form editor, a specific dialog box 
 
 ## Expression
 
-This description is specific to [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns. See also **[Variable or Expression](properties_Object.md#variable-or-expression)** section.
+This description is specific to [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns. Ver también la sección **[Variable o Expresión](properties_Object.md#variable-or-expression)**.
 
 Una expresión 4D que se asociará a una columna. Puede introducir:
 
-- A **simple variable** (in this case, it must be explicitly declared for compilation). Se puede utilizar cualquier tipo de variable excepto BLOBs y arrays. The value of the variable will be generally calculated in the `On Display Detail` event.
+- Una **variable simple** (en este caso, debe ser declarada explícitamente para la compilación). Se puede utilizar cualquier tipo de variable excepto BLOBs y arrays. The value of the variable will be generally calculated in the `On Display Detail` event.
 
 - A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes) only), for example: `[Employees]LastName`. Se pueden utilizar los siguientes tipos de campos:
   - String
@@ -159,7 +159,7 @@ Una expresión 4D que se asociará a una columna. Puede introducir:
   - Boolean  
     Puede utilizar campos de la tabla maestra o de otras tablas.
 
-- A **4D expression** (simple expression, formula or 4D method). La expresión debe devolver un valor. The value will be evaluated in the `On Display Detail` and `On Data Change` events. The result of the expression will be automatically displayed when you switch to Application mode. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). Si está vacía, la columna no mostrará ningún resultado. The following expression types are supported:
+- A **4D expression** (simple expression, formula or 4D method). La expresión debe devolver un valor. The value will be evaluated in the `On Display Detail` and `On Data Change` events. The result of the expression will be automatically displayed when you switch to Application mode. The expression will be evaluated for each record of the selection (current or named) of the Master Table (for selection type list boxes), each element of the collection (for collection type list boxes) or each entity of the selection (for entity selection list boxes). Si está vacía, la columna no mostrará ningún resultado. Se soportan los siguientes tipos de expresiones:
   - String
   - Numeric
   - Fecha
@@ -207,7 +207,7 @@ All database tables can be used, regardless of whether the form is related to a 
 
 ## Guardar como
 
-This property is available in the following conditions:
+Esta propiedad está disponible en las siguientes condiciones:
 
 - una [lista de selección](#choice-list) está asociada al objeto
 - for [inputs](input_overview.md) and [list box columns](listbox_overview.md#list-box-columns), a [required list](properties_RangeOfValues.md#required-list) is also defined for the object (both options should use usually the same list), so that only values from the list can be entered by the user.
@@ -244,7 +244,7 @@ El uso de esta propiedad requiere el cumplimiento de los siguientes principios:
 Specifies a variable or expression that will be assigned the elements or entities selected by the user.
 
 - for a collection list box, you must use a collection variable or an assignable expression that accepts collections,
-- for an entity selection list box, an entity selection object is built. Debe utilizar una variable objeto o una expresión asignable que acepte objetos.
+- para un list box selección de entidades, se crea un objeto de selección de entidades. Debe utilizar una variable objeto o una expresión asignable que acepte objetos.
 > Esta propiedad es de "sólo lectura", se actualiza automáticamente según las acciones del usuario en el list box. No se puede editar su valor para modificar el estado de selección del list box.
 
 #### Gramática JSON

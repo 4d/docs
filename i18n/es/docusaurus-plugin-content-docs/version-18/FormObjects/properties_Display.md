@@ -114,7 +114,7 @@ If the user enters a negative number, the leftmost character is displayed as a m
 
 Each placeholder character has a different effect on the display of leading or trailing zeros. A leading zero is a zero that starts a number before the decimal point; a trailing zero is a zero that ends a number after the decimal point.
 
-Suppose you use the format ##0 to display three digits. Si el usuario no introduce nada en el campo, el campo muestra 0. Si el usuario introduce 26, el campo muestra 26.
+Supongamos que usa el formato ##0 para mostrar tres dígitos. Si el usuario no introduce nada en el campo, el campo muestra 0. Si el usuario introduce 26, el campo muestra 26.
 
 ### Caracteres separadores
 
@@ -126,7 +126,7 @@ The numeric display formats (except for scientific notations) are automatically 
 
 ### Puntos decimales y otros caracteres de visualización
 
-You can use a decimal point in a number display format. If you want the decimal to display regardless of whether the user types it in, it must be placed between zeros.
+Puede utilizar un punto decimal en un formato de visualización de números. If you want the decimal to display regardless of whether the user types it in, it must be placed between zeros.
 
 Puede utilizar cualquier otro caracter en el formato. When used alone, or placed before or after placeholders, the characters always appear. Por ejemplo, si utiliza el siguiente formato:
 
@@ -470,7 +470,7 @@ The Truncate with ellipsis option is enabled by default and can be specified wit
 
 The Truncate with ellipsis property can be applied to Boolean type columns; however, the result differs depending on the [cell format](#display-type):
 
-* For Pop-up type Boolean formats, labels are truncated with an ellipsis,
+* En los formatos booleanos de tipo emergente, las etiquetas se truncan con una elipsis,
 * Para los formatos booleanos de tipo casilla de verificación, las etiquetas siempre se recortan.
 
 #### Gramática JSON
@@ -495,7 +495,7 @@ Puede manejar la propiedad Visibilidad para la mayoría de los objetos del formu
 
 In the context of list forms, the Visibility property supports two specific values:
 
-* **If record selected** (JSON name: "selectedRows")
+* **Si registro seleccionado** (nombre JSON: "selectedRows")
 * **If record not selected** (JSON name: "unselectedRows")
 
 This property is only used when drawing objects located in the body of a list form. It tells 4D whether or not to draw the object depending on whether the record being processed is selected/not selected. It allows you to represent a selection of records using visual attributes other than highlight colors:
