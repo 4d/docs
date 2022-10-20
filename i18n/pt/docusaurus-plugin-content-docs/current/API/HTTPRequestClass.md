@@ -280,7 +280,7 @@ A `response` object is a non-sharable object. It provides the following properti
 
 #### Descrição
 
-The `.returnResponseBody` property contains <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->the `returnResponseBody` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. If it was omitted, contains True.
+A propriedade `.returnResponseBody` contém <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->the `returnResponseBody` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. If it was omitted, contains True.
 
 <!-- END REF -->
 
