@@ -144,11 +144,11 @@ Debe introducir una lista de valores. In the Form editor, a specific dialog box 
 
 ## Expression
 
-This description is specific to [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns. See also **[Variable or Expression](properties_Object.md#variable-or-expression)** section.
+This description is specific to [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns. Ver también la sección **[Variable o Expresión](properties_Object.md#variable-or-expression)**.
 
 Una expresión 4D que se asociará a una columna. Puede introducir:
 
-- A **simple variable** (in this case, it must be explicitly declared for compilation). Se puede utilizar cualquier tipo de variable excepto BLOBs y arrays. The value of the variable will be generally calculated in the `On Display Detail` event.
+- Una **variable simple** (en este caso, debe ser declarada explícitamente para la compilación). Se puede utilizar cualquier tipo de variable excepto BLOBs y arrays. The value of the variable will be generally calculated in the `On Display Detail` event.
 
 - A **field** using the standard [Table]Field syntax ([selection type list box](listbox_overview.md#selection-list-boxes) only), for example: `[Employees]LastName`. Se pueden utilizar los siguientes tipos de campos:
   - String
