@@ -77,7 +77,7 @@ There are two categories of forms:
 
 Typically, you select the form category when you create the form, but you can change it afterwards.
 
-## Form pages
+## Páginas formulário
 
 Each form has is made of at least two pages:
 
