@@ -192,7 +192,7 @@ For a class function, the `Current method name` command returns: `<ClassName>.<F
 
 In the application code, class functions are called as member methods of the object instance and can receive [parameters](#class-function-parameters) if any. The following syntaxes are supported:
 
-- use of the `()` operator. For example, `myObject.methodName("hello")`
+- utilização do operador `()`. For example, `myObject.methodName("hello")`
 - use of a "4D. Function" class member method:
   - [`apply()`](API/FunctionClass.md#apply)
   - [`call()`](API/FunctionClass.md#call)
