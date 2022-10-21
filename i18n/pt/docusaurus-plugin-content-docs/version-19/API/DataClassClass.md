@@ -358,7 +358,7 @@ Neste exemplo, a primeira entidade se criará e salvará mas a segunda falhará 
 
 #### Descrição
 
-A função `.get()` <!-- REF #DataClassClass.get().Summary -->queries the dataclass to retrieve the entity matching the *primaryKey* parameter<!-- END REF -->.
+A função `.get()` <!-- REF #DataClassClass.get().Summary -->consulta a folha de dados para recuperar a entidade que corresponde ao parâmetro *primaryKey*<!-- END REF -->.
 
 Em *primaryKey*, passe o valor da chave primária da entidade a recuperar Em *primaryKey*, passe o valor da chave primária da entidade a recuperar O tipo valor deve coresponder com o tipo de chave primária estabelecido na datastore (Inteiro ou texto). Também pode se assegurar que o valor de chave primária seja sempre retornado como Texto ao usar a função [`.getKey()`](EntityClass.md#getkey) com o parâmetro`dk key as string`.
 
@@ -556,7 +556,7 @@ A função `.getInfo( )` <!-- REF #DataClassClass.getInfo().Summary -->devolve u
 
 #### Descrição
 
-A função `.new( )` <!-- REF #DataClassClass.new().Summary -->creates in memory and returns a new blank entity related to the Dataclass<!-- END REF -->.
+A função `.new( )` <!-- REF #DataClassClass.new().Summary -->cria em memória e devolve uma nova entidade em branco relacionada com a Dataclass<!-- END REF -->.
 
 O objeto entidade se cria em memória e não se guarda no banco de dados até que se chama a função [`.save( )`](EntityClass.md#save). Se a entidade for apagada antes de ser salva, não se pode recuperar.
 
@@ -599,7 +599,7 @@ Este exemplo cria uma nova entidade na classe de dados "Log" e registra a inform
 
 #### Descrição
 
-The `.newSelection( )` function <!-- REF #DataClassClass.newSelection().Summary -->creates a new, blank, non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->.
+The `.newSelection( )` function <!-- REF #DataClassClass.newSelection().Summary -->cria uma nova selecção de entidade, em branco e não partilhável, relacionada com o dataclass, em memória<!-- END REF -->.
 
 > Para mais informação sobre as seleçõees de entidades não compartilháveis, consulte [esta seção](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
@@ -646,7 +646,7 @@ Quando for criada, a seleção de entidades não contém nenhuma entidade (`mySe
 
 #### Descrição
 
-A função `.query( )` <!-- REF #DataClassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carregamento diferido/lazy loading.
+A função `.query( )` <!-- REF #DataClassClass.query().Summary -->pesquisa por  entidades que satisfaçam os critérios de pesquisa especificados em *queryString* ou *fórmula* e (opcionalmente) *valor*(s)<!-- END REF -->, para todas as entidades no dataclass, e devolve um novo objecto do tipo `EntitySelection` contendo todas as entidades que são encontradas. Se aplica carregamento diferido/lazy loading.
 
 Se não houver entidades correspondentes encontradas, uma `EntitySelection` vazia é retornada.
 
@@ -662,7 +662,7 @@ attributePath|formula comparator value
 
 onde:
 
-* **Named placeholders for attribute paths** used in the *queryString* or *formula*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* or *formula* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass Também pode usar um **placeholder** (ver abaixo).
+* **attributePath**: caminho de atributo no qual se pretende executar a consulta. Este parâmetro pode ser um nome simples (por exemplo "país") ou qualquer caminho de atributo válido (por exemplo "país.nome"). No caso de um caminho de atributo cujo tipo é `Colecção`, a notação é utilizada para lidar com todas as ocorrências (por exemplo, "crianças\[ ].idade"). Também pode usar um **placeholder** (ver abaixo).
 > *Não pode usar diretamente atributos cujo nome contenha caracteres especiais como ".", "\[ ]", or "=", ">", "#"..., porque serão avaliados incorretamente na string da query. Se precisar de uma query com esses atributos, deve considerar o uso de placeholders que permitem uma gama estendida de caracteres em rotas de atributo (ver* **Using placeholders** *below).*
 
 * **formula**: uma fórmula válida passada como `Text` ou `Object`. A fórmula será avaliada para cada entidade processada e deve retornar um valor booleano. Dentro da fórmula, a entidade está disponível através do objeto `This`.
