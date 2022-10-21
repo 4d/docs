@@ -753,16 +753,16 @@ You set the cell display and options using specific attributes in each object (s
 
 You cannot set display formats or entry filters for columns of object-type list boxes. They are automatically defined according to the value type. These are listed in the following table:
 
-| Tipo de valor | Default format                                             | Entry control           |
-| ------------- | ---------------------------------------------------------- | ----------------------- |
-| text          | same as defined in object                                  | any (no control)        |
-| real          | same as defined in object (using system decimal separator) | "0-9" and "." and "-"   |
-|               |                                                            | "0-9" and "." if min>=0 |
-| integer       | same as defined in object                                  | "0-9" and "-"           |
-|               |                                                            | "0-9" if min>=0         |
-| Booleano      | caixa de verificação                                       | N/A                     |
-| color         | N/A                                                        | N/A                     |
-| event         | N/A                                                        | N/A                     |
+| Tipo de valor | Default format                                             | Entry control         |
+| ------------- | ---------------------------------------------------------- | --------------------- |
+| text          | same as defined in object                                  | any (no control)      |
+| real          | same as defined in object (using system decimal separator) | "0-9" e "." e "-"     |
+|               |                                                            | "0-9" e "." se min>=0 |
+| integer       | same as defined in object                                  | "0-9" e "-"           |
+|               |                                                            | "0-9" se min>=0       |
+| Booleano      | caixa de verificação                                       | N/A                   |
+| color         | N/A                                                        | N/A                   |
+| event         | N/A                                                        | N/A                   |
 
 ### Attributes
 

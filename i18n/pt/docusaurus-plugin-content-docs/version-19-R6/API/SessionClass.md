@@ -42,7 +42,7 @@ Para obter informação detalhada sobre a implementação da sessão, consulte [
 
 #### Descrição
 
-The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current scalable user web session<!-- END REF -->.
+O comando `Session` <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current scalable user web session<!-- END REF -->.
 
 Este comando só funciona quando [estão ativadas as sessões escaláveis](WebServer/sessions.md#enabling-sessions). Devolve *Null* quando as sessões estiverem desabilitadas ou quando utilizar sessões herdadas.
 
@@ -128,7 +128,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 #### Descrição
 
-The `.expirationDate` property contains <!-- REF #SessionClass.expirationDate.Summary -->the expiration date and time of the session cookie<!-- END REF -->. O valor se expressa como texto no formato ISO 8601: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
+A propriedade `.expirationDate` contém <!-- REF #SessionClass.expirationDate.Summary -->the expiration date and time of the session cookie<!-- END REF -->. O valor se expressa como texto no formato ISO 8601: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
 
 Essa propriedade é **apenas leitura**. É recalculada automaticamente se modificar o valor da propriedade [`.idleTimeout`](#idletimeout).
 
@@ -244,7 +244,7 @@ If (Session.isGuest())
 
 #### Descrição
 
-The `.isGuest()` function <!-- REF #SessionClass.isGuest().Summary -->returns True if the session is a Guest session (i.e. it has no privileges)<!-- END REF -->.
+A função `.isGuest()` <!-- REF #SessionClass.isGuest().Summary -->returns True if the session is a Guest session (i.e. it has no privileges)<!-- END REF -->.
 
 #### Exemplo
 

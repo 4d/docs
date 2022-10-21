@@ -264,7 +264,7 @@ $systemworker:=4D. SystemWorker.new("/bin/ls -l /Users ";cs. Params.new())
 
 #### Descrição
 
-The `.closeInput()` function <!-- REF #SystemWorkerClass.closeInput().Summary -->closes the input stream (*stdin*) of the external process<!-- END REF -->.
+A função `.closeInput()` <!-- REF #SystemWorkerClass.closeInput().Summary -->closes the input stream (*stdin*) of the external process<!-- END REF -->.
 
 When the executable waits for all data to be received through `postMessage()`, `.closeInput()` is useful to indicate to the executable that data sending is finished and that it can proceed.
 
@@ -342,7 +342,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-The `.encoding` property <!-- REF #SystemWorkerClass.encoding.Summary -->contains the encoding of the response body content<!-- END REF -->. .
+A propriedade `.encoding` <!-- REF #SystemWorkerClass.encoding.Summary -->contains the encoding of the response body content<!-- END REF -->. .
 
 Essa propriedade é **apenas leitura**.
 
@@ -356,7 +356,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-The `.errors` property <!-- REF #SystemWorkerClass.errors.Summary -->contains a collection of 4D errors in case of execution error(s)<!-- END REF -->.
+A propriedade `.erros` <!-- REF #SystemWorkerClass.errors.Summary -->contains a collection of 4D errors in case of execution error(s)<!-- END REF -->.
 
 Each element of the collection is an object with the following properties:
 
@@ -378,7 +378,7 @@ If no error occured, `.errors` contains an empty collection.
 
 #### Descrição
 
-The `.exitCode` property <!-- REF #SystemWorkerClass.exitCode.Summary -->contains the exit code returned by the external process<!-- END REF -->. Summary -->contains **true** if the external process is terminated<!-- END REF -->.
+A propriedade `.exitCode` <!-- REF #SystemWorkerClass.exitCode.Summary -->contains the exit code returned by the external process<!-- END REF -->. Summary -->contains **true** if the external process is terminated<!-- END REF -->.
 
 Essa propriedade é **apenas leitura**.
 
@@ -392,7 +392,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-The `.hideWindow` property <!-- REF #SystemWorkerClass.hideWindow.Summary -->can be used to hide the window of the DOS console or the window of the launched executable (**Windows only**)<!-- END REF -->.
+A propriedade `.hideWindow` <!-- REF #SystemWorkerClass.hideWindow.Summary -->can be used to hide the window of the DOS console or the window of the launched executable (**Windows only**)<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -444,7 +444,7 @@ You can use the `.dataType` property of the [options object](#options-object) to
 
 #### Descrição
 
-The `.response` property <!-- REF #SystemWorkerClass.response.Summary -->contains the concatenation of all data returned once the request is terminated<!-- END REF -->, i.e. the full message received from the process output.
+A propriedade `.response` <!-- REF #SystemWorkerClass.response.Summary -->contains the concatenation of all data returned once the request is terminated<!-- END REF -->, i.e. the full message received from the process output.
 
 The type of the message is defined according to the [`dataType`](#datatype) attribute.
 
@@ -539,7 +539,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-The `.wait()` function <!-- REF #SystemWorkerClass.wait().Summary -->waits until the end of the `SystemWorker` execution or the specified *timeout*<!-- END REF -->.
+A função `.wait()` <!-- REF #SystemWorkerClass.wait().Summary -->waits until the end of the `SystemWorker` execution or the specified *timeout*<!-- END REF -->.
 
 In *timeout*, pass a value in seconds. The `SystemWorker` script will wait for the external process for the amount of time defined in the *timeout* parameter. If you omit the *timeout* parameter, the script execution will wait indefinitely.
 

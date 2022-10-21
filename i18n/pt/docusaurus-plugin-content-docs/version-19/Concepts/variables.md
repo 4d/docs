@@ -32,7 +32,7 @@ You create variables by declaring them. The 4D language offers two ways to decla
 ```
 
 
-### Using the `var` keyword
+### Usando a palavra-chave `var`
 
 Declaring variables using the `var` keyword is recommended since this syntax allows you to bind object variables with classes. Using this syntax enhances code editor suggestions and type-ahead features.
 
