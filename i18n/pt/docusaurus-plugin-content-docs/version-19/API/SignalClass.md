@@ -195,7 +195,7 @@ Essa propriedade é**apenas escrita**.
 
 #### Descrição
 
-A propriedade `.signaled` <!-- REF #SignalClass.signaled.Summary -->contains the current state of the `Signal` object<!-- END REF -->. . When the signal is created, `.signaled` is **False**.
+A propriedade `.signaled` <!-- REF #SignalClass.signaled.Summary -->contém o estado actual do objecto `Sinal`<!-- END REF -->. Quando se cria um sinal, `.signaled` é **False**. When the signal is created, `.signaled` is **False**.
 
 Essa propriedade é **apenas leitura**.
 
