@@ -125,7 +125,7 @@ El usuario no ve ninguna caja de diálogo; la operación es completamente autom�
 
 > In the case of an automatic restore, only the following elements are restored:
 > 
-> - .4DD file
+> - archivo .4DD
 > - archivo .4DIndx
 > - archivo .4DSyncData
 > - archivo .4DSyncHeader
