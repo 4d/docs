@@ -415,7 +415,7 @@ Neste exemplo, a primeira entidade se criará e salvará mas a segunda falhará 
 
 #### Descrição
 
-A função `.get()` <!-- REF #DataClassClass.get().Summary -->queries the dataclass to retrieve the entity matching the *primaryKey* parameter<!-- END REF -->.
+A função `.get()` <!-- REF #DataClassClass.get().Summary -->consulta a folha de dados para recuperar a entidade que corresponde ao parâmetro *primaryKey*<!-- END REF -->.
 
 Em *primaryKey*, passe o valor da chave primária da entidade a recuperar Em *primaryKey*, passe o valor da chave primária da entidade a recuperar O tipo valor deve coresponder com o tipo de chave primária estabelecido na datastore (Inteiro ou texto). Também pode se assegurar que o valor de chave primária seja sempre retornado como Texto ao usar a função [`.getKey()`](EntityClass.md#getkey) com o parâmetro`dk key as string`.
 
@@ -659,50 +659,50 @@ A função `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->devolve um
 |
 
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
+> **Modo avançado:** Esta função destina-se a programadores que necessitem personalizar as características padrão ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
 
 #### Descrição
 
 A função `.getRemoteCache()` <!-- REF #DataClassClass.getRemoteCache().Summary -->devolve um objecto que contém o conteúdo da cache ORDA para uma dataclass.<!-- END REF -->.
 
-Calling this function from a 4D single-user application returns `Null`.
+Chamar esta função a partir de uma aplicação 4D monousuário retorna `Null`.
 
 O objeto retornado tem as propriedades abaixo:
 
-| Propriedade | Tipo       | Descrição                                                                 |
-| ----------- | ---------- | ------------------------------------------------------------------------- |
-| maxEntries  | Integer    | Maximum number of entries collection.                                     |
-| stamp       | Integer    | Stamp of the cache.                                                       |
-| timeout     | Integer    | Time remaining before the new entries in the cache are marked as expired. |
-| entries     | Collection | Contains an entry object for each entity in the cache.                    |
+| Propriedade | Tipo       | Descrição                                                                          |
+| ----------- | ---------- | ---------------------------------------------------------------------------------- |
+| maxEntries  | Integer    | Número máximo de entradas recolhidas.                                              |
+| stamp       | Integer    | carimbo da caché                                                                   |
+| timeout     | Integer    | Tempo restante antes que as novas entradas na cache sejam marcadas como expiradas. |
+| entries     | Collection | Contém um objecto de entrada para cada entidade na cache.                          |
 
-Each entry object in the `entries` collection has the following properties:
+Cada objecto de entrada na colecção `entradas` tem as seguintes propriedades:
 
-| Propriedade | Tipo     | Descrição                         |
-| ----------- | -------- | --------------------------------- |
-| data        | Objeto   | Object holding data on the entry. |
-| expired     | Booleano | True if the entry has expired.    |
-| key         | Text     | Primary key of the entity.        |
+| Propriedade | Tipo     | Descrição                             |
+| ----------- | -------- | ------------------------------------- |
+| data        | Objeto   | Objeto que contém os dados da entrada |
+| expired     | Booleano | True se a entrada tiver expirado      |
+| key         | Text     | Chave primária da entidade.           |
 
 O objecto `data` em cada entrada contém as seguintes propriedades:
 
-| Propriedade            | Tipo    | Descrição                                                                                                                    |
-| ---------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| __KEY                  | String  | Chave primária da entidade                                                                                                   |
-| __STAMP                | Longint | Stamp da entidade na base de dados                                                                                           |
-| __TIMESTAMP            | String  | Stamp da entidade na base de dados (formato é YYYY-MM-DDTHH:MM:SS:ms:Z)                                                      |
-| dataClassAttributeName | Variant | If there is data in the cache for a dataclass attribute, it is returned in a property with the same type as in the database. |
+| Propriedade            | Tipo    | Descrição                                                                                                                         |
+| ---------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| __KEY                  | String  | Chave primária da entidade                                                                                                        |
+| __STAMP                | Longint | Stamp da entidade na base de dados                                                                                                |
+| __TIMESTAMP            | String  | Stamp da entidade na base de dados (formato é YYYY-MM-DDTHH:MM:SS:ms:Z)                                                           |
+| dataClassAttributeName | Variant | Se houver dados na cache para um atributo dataclass, estes são devolvidos numa propriedade com o mesmo tipo que na base de dados. |
 
-Data concerning related entities is stored in the cache of the data object.
+Os dados relativos a entidades relacionadas são armazenados na cache do objecto de dados.
 
 #### Exemplo
 
-In the following example, `$ds. Persons.all()` loads the first entity with all its attributes. Then, the request optimization is triggered, so only `firstname` and `address.city` are loaded.
+No exemplo seguinte, `$ds.Persons.all()` carrega a primeira entidade com todos os seus atributos. Depois, a optimização do pedido é desencadeada, pelo que apenas `firstname` e `address.city` são carregados.
 
-Note that `address.city` is loaded in the cache of the `Persons` dataclass.
+Note-se que `address.city` é carregado na cache do `Pessoas` dataclass.
 
-Only the first entity of the `Address` dataclass is stored in the cache. It is loaded during the first iteration of the loop.
+Apenas a primeira entidade do `endereço ` dataclass é armazenada na cache. É carregado durante a primeira iteração do loop.
 
 ```4d
 var $ds : 4D. DataStoreImplementation
@@ -749,15 +749,15 @@ $cacheAddress:=$ds. Adress.getRemoteCache()
 
 #### Descrição
 
-A função `.new()` <!-- REF #DataClassClass.new().Summary -->creates in memory and returns a new blank entity related to the Dataclass<!-- END REF -->.
+A função `.new()` <!-- REF #DataClassClass.new().Summary -->cria em memória e devolve uma nova entidade em branco relacionada com a Dataclass<!-- END REF -->.
 
 O objeto entidade se cria em memória e não se guarda no banco de dados até que se chama a função [`.save( )`](EntityClass.md#save). Se a entidade for apagada antes de ser salva, não se pode recuperar.
 
 **4D Server**: eám cliente-servidor, se a chave primaria da tabela correspondente se autoincrementa, se calculará quando a entidade se guarde no servidor.
 
-All attributes of the entity are initialized with the **null** value.
+Todos os atributos da entidade são inicializados com o valor **null** .
 
-> Attributes can be initialized with default values if the **Map NULL values to blank values** option is selected at the 4D database structure level.
+> Os atributos podem ser inicializados com valores por padrão se a opção **Map NULL values to blank values** for seleccionada ao nível da estrutura da base de dados 4D.
 
 #### Exemplo
 
@@ -796,7 +796,7 @@ Este exemplo cria uma nova entidade na classe de dados "Log" e registra a inform
 
 #### Descrição
 
-A função `.newSelection()` <!-- REF #DataClassClass.newSelection().Summary -->creates a new, blank, non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->.
+A função `.newSelection()` <!-- REF #DataClassClass.newSelection().Summary -->cria uma nova selecção de entidade, em branco e não partilhável, relacionada com o dataclass, em memória<!-- END REF -->.
 
 > Para mais informação sobre as seleçõees de entidades não compartilháveis, consulte [esta seção](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
@@ -843,7 +843,7 @@ Quando for criada, a seleção de entidades não contém nenhuma entidade (`mySe
 
 #### Descrição
 
-A função `.query()` <!-- REF #DataClassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carregamento diferido/lazy loading.
+A função `.query()` <!-- REF #DataClassClass.query().Summary -->pesquisa por  entidades que satisfaçam os critérios de pesquisa especificados em *queryString* ou *fórmula* e (opcionalmente) *valor*(s)<!-- END REF -->, para todas as entidades no dataclass, e devolve um novo objecto do tipo `EntitySelection` contendo todas as entidades que são encontradas. Se aplica carregamento diferido/lazy loading.
 
 Se não houver entidades correspondentes encontradas, uma `EntitySelection` vazia é retornada.
 
@@ -859,7 +859,7 @@ attributePath|formula comparator value
 
 onde:
 
-* **Named placeholders for attribute paths** used in the *queryString* or *formula*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* or *formula* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass
+* **attributePath**: caminho de atributo no qual se pretende executar a consulta. Este parâmetro pode ser um nome simples (por exemplo "país") ou qualquer caminho de atributo válido (por exemplo "país.nome"). No caso de um caminho de atributo cujo tipo é `Colecção`, a notação é utilizada para lidar com todas as ocorrências (por exemplo, "crianças\[ ].idade").
 > *Não pode usar diretamente atributos cujo nome contenha caracteres especiais como ".", "\[ ]", or "=", ">", "#"..., porque serão avaliados incorretamente na string da query. Se precisar de uma query com esses atributos, deve considerar o uso de placeholders que permitem uma gama estendida de caracteres em rotas de atributo (ver* **Using placeholders** *below).*
 
 * **formula**: uma fórmula válida passada como `Text` ou `Object`. A fórmula será avaliada para cada entidade processada e deve retornar um valor booleano. Dentro da fórmula, a entidade está disponível através do objeto `This`.
@@ -893,9 +893,9 @@ onde:
   * A constante de tipo **texto** pode ser passada com ou sem aspas simples (ver **Uso de aspas** mais abaixo). Para pesquisar uma stirng dentro de uma string (uma pesquisa "contém") use o símbolo coringa (@) em valor para isolar a string a ser pesquisada como mostrado neste exemplo: "@Smith@". As palavras chaves abaixo são proibidas para constantes de texto: true, false.
   * Valores constantes de tipo **booleano** : **true** ou **false** (diferencia maiuscula de minúscula).
   * Valores constantes de tipo **numérico**: os decimais se separam com um '.' (ponto).
-  * **date** type constants: "YYYY-MM-DD" format
+  * **data** tipo constants: formato "YYYYY-MM-DD".
   * **null** constante: usando a palavra chave "null" encontra as propriedades **null** e **undefined**.
-  * in case of a query with an IN comparator, *value* must be a collection, or values matching the type of the attribute path between \[ ] separated by commas (for strings, `"` characters must be escaped with `\`).
+  * no caso de uma consulta com um comparador IN, *valor* deve ser uma colecção, ou valores correspondentes ao tipo de caminho do atributo entre \[ ] separados por vírgulas (para cordas, `"` caracteres devem ser evitados com `\`).
 * **logicalOperator**: utilizado para unir condições múltiplas na pesquisa (opcional). Pode usaar um dos operadores lógicos abaixo (ou o nome ou o símbolo podem ser usados):
 
  | Conjunção | Símbolos                |
@@ -1441,7 +1441,7 @@ Queremos desautorizar as fórmulas, por exemplo, quando el usuario introduz sua 
 
 |
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
+> **Modo avançado:** Esta função destina-se a programadores que necessitem personalizar as características padrão ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
