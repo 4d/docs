@@ -404,7 +404,7 @@ Se quiser saber o número de tabelas criptografadas no arquivo de dados atual:
 | ---------- | ------ | -- | --------------------------------------------------------------------- |
 | Resultados | Objeto | <- | Collection of optimization context objects|<!-- END REF --> |
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
+> **Modo avançado:** Esta função destina-se a programadores que necessitem personalizar as características padrão ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
@@ -547,7 +547,7 @@ Em um armazém de dados remoto:
 | contextName | Text   | -> | Nome do contexto                                                |
 | Resultados  | Objeto | <- | Descrição do contexto de optimização|<!-- END REF --> |
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
+> **Modo avançado:** Esta função destina-se a programadores que necessitem personalizar as características padrão ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
@@ -826,7 +826,7 @@ Se criar um método projeto *protectDataFile* para chamar antes dos lançamentos
 | contextType     | Text          | -> | Se fornecido, o valor deve ser "main" ou "currentItem"                                               |
 | pageLength      | Integer       | -> | Page length of the entity selection linked to the context (default is 80)|<!-- END REF --> |
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
+> **Modo avançado:** Esta função destina-se a programadores que necessitem personalizar as características padrão ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
