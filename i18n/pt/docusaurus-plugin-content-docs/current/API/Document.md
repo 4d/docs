@@ -140,7 +140,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.isAlias` devolve <!-- REF #document.isAlias.Summary -->true if the file is an alias, a shortcut, or a symbolic link<!-- END REF -->e false de outra forma.
+A propriedade `.isAlias` devolve <!-- REF #document.isAlias.Summary -->verdadeiro se o arquivo for um alias (apelido), um atalho, ou um link simbólico<!-- END REF -->e false de outra forma.
 
 Essa propriedade é **apenas leitura**.
 
@@ -200,7 +200,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.isWritable` devolve <!-- REF #document.isWritable.Summary -->true if the file exists on disk and is writable<!-- END REF -->.
+A propriedade `.isWritable` devolve <!-- REF #document.isWritable.Summary -->verdadeiro se o arquivo existir em disco e for gravável<!-- END REF -->.
 > A propriedade verifica a habilidade da aplicação 4D de escrever no disco (direitos de acesso), não depende apenas do atributo *writable* do arquivo.
 
 Essa propriedade é **apenas leitura**.
@@ -270,7 +270,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.name` devolve <!-- REF #document.name.Summary -->the name of the file without extension (if any)<!-- END REF -->.
+A propriedade `.name` devolve <!-- REF #document.name.Summary -->o nome do arquivo, sem extensão (se houver)<!-- END REF -->.
 
 Essa propriedade é **apenas leitura**.
 
@@ -290,7 +290,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.original` devolve <!-- REF #document.original.Summary -->the target element for an alias, a shortcut, or a symbolic link file<!-- END REF -->. O elemento alvo pode ser:
+A propriedade `.original` devolve <!-- REF #document.original.Summary -->o elemento alvo de um alias, um atalho, ou um arquivo de ligação simbólica<!-- END REF -->. O elemento alvo pode ser:
 
 * um objeto File
 * um objeto folder
@@ -375,7 +375,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A propriedade `.size` devolve <!-- REF #document.size.Summary -->the size of the file expressed in bytes<!-- END REF -->. Se o arquivo não existir em disco, o tamanho é 0.
+A propriedade `.size` devolve <!-- REF #document.size.Summary -->o tamanho do arquivo expresso em bytes<!-- END REF -->. Se o arquivo não existir em disco, o tamanho é 0.
 
 Essa propriedade é **apenas leitura**.
 
