@@ -8,13 +8,13 @@ title: Subformulário
 
 Specifies if the user can delete subrecords in a list subform.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome            | Tipo de dados | Possible Values             |
+| Nome            | Tipo de dados | Valores possíveis           |
 | --------------- | ------------- | --------------------------- |
 | deletableInList | boolean       | true, false (default: true) |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Subformulário](subform_overview.md)
 
@@ -31,13 +31,13 @@ You use this property to declare the detail form to use in the subform. Pode ser
 - the detail form to associate a with the [list subform](#list-form). The detail form can be used to enter or view subrecords. It generally contains more information than the list subform. Naturally, the detail form must belong to the same table as the subform. You normally use an Output form as the list form and an Input form as the detail form. If you do not specify the form to use for full page entry, 4D automatically uses the default Input format of the table.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome       | Tipo de dados | Possible Values                                                                                                                     |
+| Nome       | Tipo de dados | Valores possíveis                                                                                                                   |
 | ---------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | detailForm | string        | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Subformulário](subform_overview.md)
 
@@ -49,13 +49,13 @@ Action to perform in case of a double-click on an empty line of a list subform. 
 - Add Record: Creates a new record in the subform and changes to editing mode. The record will be created directly in the list if the [Enterable in List](#enterable-in-list) property is enabled. Otherwise, it will be created in page mode, in the [detail form](#detail-form) associated with the subform.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome                         | Tipo de dados | Possible Values                    |
+| Nome                         | Tipo de dados | Valores possíveis                  |
 | ---------------------------- | ------------- | ---------------------------------- |
 | doubleClickInEmptyAreaAction | string        | "addSubrecord" or "" to do nothing |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Subformulário](subform_overview.md)
 
@@ -77,13 +77,13 @@ Regardless of the action selected/chosen, the `On Double clicked` form event is 
 
 For the last two actions, the On `Open Detail` form event is also generated. The `On Close Detail` is then generated when a record displayed in the detail form associated with the list box is about to be closed (regardless of whether or not the record was modified).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome                   | Tipo de dados | Possible Values                     |
+| Nome                   | Tipo de dados | Valores possíveis                   |
 | ---------------------- | ------------- | ----------------------------------- |
 | doubleClickInRowAction | string        | "editSubrecord", "displaySubrecord" |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Subformulário](subform_overview.md)
 
@@ -99,14 +99,14 @@ When a list subform has this property enabled, the user can modify record data d
 > To do this, simply click twice on the field to be modified in order to switch it to editing mode (make sure to leave enough time between the two clicks so as not to generate a double-click).
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome            | Tipo de dados | Possible Values |
-| --------------- | ------------- | --------------- |
-| enterableInList | boolean       | true, false     |
+| Nome            | Tipo de dados | Valores possíveis |
+| --------------- | ------------- | ----------------- |
+| enterableInList | boolean       | true, false       |
 
 
-#### Objects Supported
+#### Objectos suportados
 
 [Subformulário](subform_overview.md)
 
@@ -118,13 +118,13 @@ You use this property to declare the list form to use in the subform. A list sub
 
 List subforms can be used for data entry in two ways: the user can enter data directly in the subform, or enter it in an [input form](#detail-form). In this configuration, the form used as the subform is referred to as the List form. The input form is referred to as the Detail form.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome     | Tipo de dados | Possible Values                                                                                                                     |
+| Nome     | Tipo de dados | Valores possíveis                                                                                                                   |
 | -------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | listForm | string        | Name (string) of table or project form, a POSIX path (string) to a .json file describing the form, or an object describing the form |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Subformulário](subform_overview.md)
 
@@ -135,13 +135,13 @@ List subforms can be used for data entry in two ways: the user can enter data di
 
 Specifies the table that the list subform belongs to (if any).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome   | Tipo de dados | Possible Values                   |
+| Nome   | Tipo de dados | Valores possíveis                 |
 | ------ | ------------- | --------------------------------- |
 | tabela | string        | 4D table name, or "" if no table. |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Subformulário](subform_overview.md)
 
@@ -158,12 +158,12 @@ Designates the option for allowing users to select rows:
     - A **Ctrl+click** (Windows) or **Command+click** (macOS) on a record toggles its state (between selected or not). The Up and Down arrow keys select the previous/next record in the list. The other navigation keys scroll the list. The `On Selection Change` form event is generated every time the selected record is changed.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome          | Tipo de dados | Possible Values              |
+| Nome          | Tipo de dados | Valores possíveis            |
 | ------------- | ------------- | ---------------------------- |
 | selectionMode | string        | "multiple", "single", "none" |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Subformulário](subform_overview.md)
