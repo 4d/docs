@@ -11,13 +11,13 @@ title: Objetos
 
 This property designates the type of the [active or inactive form object](formObjects_overview.md).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome | Tipo de dados | Possible Values                                                                                                                                                                                                                                                                                          |
+| Nome | Tipo de dados | Valores possíveis                                                                                                                                                                                                                                                                                        |
 | ---- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | type | string        | "button", "buttonGrid", "checkbox", "combo", "dropdown", "groupBox", "input", "line", "list", "listbox", "oval", "picture", "pictureButton", "picturePopup", "plugin", "progress", "radio", "rectangle", "ruler", "spinner", "splitter", "stepper", "subform", "tab", "text", "view", "webArea", "write" |
 
-#### Objects Supported
+#### Objectos suportados
 
 [4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) -[Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
@@ -32,13 +32,13 @@ When using 4D’s language, you can refer to an active form object by its object
 
 For more information about naming rules for form objects, refer to [Identifiers](Concepts/identifiers.md) section.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome | Tipo de dados | Possible Values                                                      |
+| Nome | Tipo de dados | Valores possíveis                                                    |
 | ---- | ------------- | -------------------------------------------------------------------- |
 | name | string        | Any allowed name which does not belong to an already existing object |
 
-#### Objects Supported
+#### Objectos suportados
 
 [4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md) - [List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [List Box Header](listbox_overview.md#list-box-headers) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md) - [Progress indicator](progressIndicator.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Radio Button](radio_overview.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md)
 
@@ -95,13 +95,13 @@ There are two advantages with this mechanism:
 
 For an array list box, the **Variable or Expression** property usually holds the name of the array variable defined for the list box, and for each column. However, you can use a string array (containing arrays names) as *dataSource* value for a list box column to define a [hierarchical list box](listbox_overview.md#hierarchical-list-boxes).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome       | Tipo de dados           | Possible Values           |
+| Nome       | Tipo de dados           | Valores possíveis         |
 | ---------- | ----------------------- | ------------------------- |
 | dataSource | string, or string array | <ul><li>4D variable, field name, or arbitrary complex language expression.</li><li>Empty string for [dynamic variables](#dynamic-variables).</li><li>String array (collection of array names) for a [hierarchical listbox](listbox_overview.md#hierarchical-list-boxes) column]</li></ul> |
 
-#### Objects Supported
+#### Objectos suportados
 
 [4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Header](listbox_overview.md#list-box-headers) - [List Box Footer](listbox_overview.md#list-box-footers) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress indicator](progressIndicator.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Stepper](stepper.md) - [Tab control](tabControl.md) - [Subform](subform_overview.md#overview) - [Radio Button](radio_overview.md) - [Web Area](webArea_overview.md)
 
@@ -119,29 +119,29 @@ However, this property has a typing function in the following specific cases:
 - **[List Box Columns](listbox_overview.md#list-box-columns)**: this property is used to associate a display format with the column data. The formats provided will depend on the variable type (array type list box) or the data/field type (selection and collection type list boxes). The standard 4D formats that can be used are: Alpha, Numeric, Date, Time, Picture and Boolean. The Text type does not have specific display formats. Any existing custom formats are also available.
 - **[Picture variables](input_overview.md)**: you can use this menu to declare the variables before loading the form in interpreted mode. Specific native mechanisms govern the display of picture variables in forms. These mechanisms require greater precision when configuring variables: from now on, they must have already been declared before loading the form — i.e., even before the `On Load` form event — unlike other types of variables. To do this, you need either for the statement `C_PICTURE(varName)` to have been executed before loading the form (typically, in the method calling the `DIALOG` command), or for the variable to have been typed at the form level using the expression type property. Otherwise, the picture variable will not be displayed correctly (only in interpreted mode).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome               | Tipo de dados | Possible Values           |
+| Nome               | Tipo de dados | Valores possíveis         |
 | ------------------ | ------------- | ------------------------- |
 | dataSourceTypeHint | string        | <ul><li>**standard objects:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**list box columns:** "boolean", "number", "picture", "text", date" (*array/selection list box only*) "integer", "time", "object"</li></ul> |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns) - [List Box Footer](listbox_overview.md#list-box-footers) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress indicator](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab Control](tabControl.md)
 
 ---
 
-## CSS Class
+## Classe CSS
 
 A list of space-separated words used as class selectors in css files.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome  | Tipo de dados | Possible Values                                           |
+| Nome  | Tipo de dados | Valores possíveis                                         |
 | ----- | ------------- | --------------------------------------------------------- |
 | class | string        | One string with CSS name(s) separated by space characters |
 
-#### Objects Supported
+#### Objectos suportados
 
 [4D View Pro area](viewProArea_overview) - [4D Write Pro area](writeProArea_overview) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Radio Button](radio_overview.md) - [Static Picture](staticPicture.md) - [Subform](subform_overview.md#overview) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
@@ -160,13 +160,13 @@ The collection or the entity selection must be available to the form when it is 
 
 > If you used a collection of scalar values (and not objects), 4D allows you to display each value by calling `This.value` in the datasource expression. However in this case you will not be able to modify values or to access the current ite object (see below) Note: For information about entity selections, please refer to the [ORDA](https://doc.4d.com/4Dv17R6/4D/17-R6/ORDA.200-4354624.en.html) chapter.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome       | Tipo de dados | Possible Values                                              |
+| Nome       | Tipo de dados | Valores possíveis                                            |
 | ---------- | ------------- | ------------------------------------------------------------ |
 | dataSource | string        | Expression that returns a collection or an entity selection. |
 
-#### Objects Supported
+#### Objectos suportados
 
 [List Box](listbox_overview.md)
 
@@ -183,29 +183,29 @@ Specify the type of list box.
 - **Named Selection**: use expressions, fields or methods whose values will be evaluated for each record of a named selection.
 - **Collection or Entity Selection**: use collection elements or entities to define the row contents of the list box. Note that with this list box type, you need to define the [Collection or Entity Selection](properties_Object.md#collection-or-entity-selection) property.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome        | Tipo de dados | Possible Values                                             |
+| Nome        | Tipo de dados | Valores possíveis                                           |
 | ----------- | ------------- | ----------------------------------------------------------- |
 | listboxType | string        | "array", "currentSelection", "namedSelection", "collection" |
 
-#### Objects Supported
+#### Objectos suportados
 
 [List Box](listbox_overview.md)
 
 ---
 
-## Plug-in Kind
+## Tipo de plug-in
 
 Name of the [plug-in external area](pluginArea_overview.md) associated to the object. Plug-in external area names are published in the manifest.json file of the plug-in.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome           | Tipo de dados | Possible Values                                               |
+| Nome           | Tipo de dados | Valores possíveis                                             |
 | -------------- | ------------- | ------------------------------------------------------------- |
 | pluginAreaKind | string        | Name of the plug-in external area (starts with a % character) |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Plug-in Area](pluginArea_overview.md)
 
@@ -215,13 +215,13 @@ Name of the [plug-in external area](pluginArea_overview.md) associated to the ob
 
 Enables radio buttons to be used in coordinated sets: only one button at a time can be selected in the set.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome       | Tipo de dados | Possible Values  |
-| ---------- | ------------- | ---------------- |
-| radioGroup | string        | Radio group name |
+| Nome       | Tipo de dados | Valores possíveis |
+| ---------- | ------------- | ----------------- |
+| radioGroup | string        | Radio group name  |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Radio Button](radio_overview.md)
 
@@ -241,13 +241,13 @@ By default, the label is placed in the center of the object. When the object als
 
 Para a tradução do banco de dados, pode introduzir uma referência XLIFF na área do título de um botão (ver [Apêndice B: arquitetura XLIFF](https://doc.4d.com/4Dv17R5/4D/17-R5/Appendix-B-XLIFF-architecture.300-4163748.en.html)).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome | Tipo de dados | Possible Values |
-| ---- | ------------- | --------------- |
-| text | string        | qualquer texto  |
+| Nome | Tipo de dados | Valores possíveis |
+| ---- | ------------- | ----------------- |
+| text | string        | qualquer texto    |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Button](button_overview.md) - [Check Box](checkbox_overview.md) - [List Box Header](listbox_overview.md#list-box-headers) - [Radio Button](radio_overview.md) - [Text Area](text.md)
 
@@ -282,12 +282,12 @@ When **Custom** ("none" in JSON) is set, no automatic calculations are performed
 > - footers of columns based on formulas,
 > - footers of [Collection and Entity selection](listbox_overview.md#collection-or-entity-selection-list-boxes) list boxes. Precisa utilizar cálculos personalizados.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome                | Tipo de dados | Possible Values                                                                                       |
+| Nome                | Tipo de dados | Valores possíveis                                                                                     |
 | ------------------- | ------------- | ----------------------------------------------------------------------------------------------------- |
 | variableCalculation | string        | "none", "minimum", "maximum", "sum", "count", "average", "standardDeviation", "variance", "sumSquare" |
 
-#### Objects Supported
+#### Objectos suportados
 
 [List Box Footer](listbox_overview.md#list-box-footers)
