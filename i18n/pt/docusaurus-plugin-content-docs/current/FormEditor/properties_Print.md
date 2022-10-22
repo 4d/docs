@@ -22,9 +22,9 @@ You can modify the following print settings:
 
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome        | Tipo de dados | Possible Values                                                                      |
+| Nome        | Tipo de dados | Valores possíveis                                                                    |
 | ----------- | ------------- | ------------------------------------------------------------------------------------ |
 | pageFormat  | object        | Available print properties: paperName, paperWidth, paperHeight, orientation, scale   |
 | paperName   | string        | "A4", "US Letter"...                                                                 |
