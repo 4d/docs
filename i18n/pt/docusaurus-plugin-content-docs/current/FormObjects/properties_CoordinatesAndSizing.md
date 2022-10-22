@@ -23,13 +23,13 @@ When this property is enabled, the height of every row is automatically calculat
   * [Row Height](#row-height) and [Row Height Array](#row-height-array) properties (if any) set either in the Property list or by programming.
 > > Since it requires additional calculations at runtime, the automatic row height option could affect the scrolling fluidity of your list box, in particular when it contains a large number of rows.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome          | Tipo de dados | Possible Values |
-| ------------- | ------------- | --------------- |
-| rowHeightAuto | boolean       | true, false     |
+| Nome          | Tipo de dados | Valores possíveis |
+| ------------- | ------------- | ----------------- |
+| rowHeightAuto | boolean       | true, false       |
 
-#### Objects Supported
+#### Objectos suportados
 
 [List Box Column](listbox_overview.md#list-box-columns)
 
@@ -39,13 +39,13 @@ When this property is enabled, the height of every row is automatically calculat
 
 Bottom coordinate of the object in the form.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome   | Tipo de dados | Possible Values |
-| ------ | ------------- | --------------- |
-| bottom | number        | mínimo: 0       |
+| Nome   | Tipo de dados | Valores possíveis |
+| ------ | ------------- | ----------------- |
+| bottom | number        | mínimo: 0         |
 
-#### Objects Supported
+#### Objectos suportados
 
 [4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Rectangle](shapes_overview.md#rectangle) - [Ruler](ruler.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
@@ -55,13 +55,13 @@ Bottom coordinate of the object in the form.
 
 Left coordinate of the object on the form.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome | Tipo de dados | Possible Values |
-| ---- | ------------- | --------------- |
-| left | number        | mínimo: 0       |
+| Nome | Tipo de dados | Valores possíveis |
+| ---- | ------------- | ----------------- |
+| left | number        | mínimo: 0         |
 
-#### Objects Supported
+#### Objectos suportados
 
 [4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
@@ -71,13 +71,13 @@ Left coordinate of the object on the form.
 
 Right coordinate of the object in the form.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome    | Tipo de dados | Possible Values |
-| ------- | ------------- | --------------- |
-| direita | number        | mínimo: 0       |
+| Nome    | Tipo de dados | Valores possíveis |
+| ------- | ------------- | ----------------- |
+| direita | number        | mínimo: 0         |
 
-#### Objects Supported
+#### Objectos suportados
 
 [4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
@@ -87,13 +87,13 @@ Right coordinate of the object in the form.
 
 Top coordinate of the object in the form.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome | Tipo de dados | Possible Values |
-| ---- | ------------- | --------------- |
-| top  | number        | mínimo: 0       |
+| Nome | Tipo de dados | Valores possíveis |
+| ---- | ------------- | ----------------- |
+| top  | number        | mínimo: 0         |
 
-#### Objects Supported
+#### Objectos suportados
 
 [4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
@@ -128,13 +128,13 @@ With [text areas](text.md) and [inputs](input_overview.md):
 
 You can also set this property using the [OBJECT Get corner radius](https://doc.4d.com/4dv19/help/command/en/page1323.html) and [OBJECT SET CORNER RADIUS](https://doc.4d.com/4dv19/help/command/en/page1324.html) commands.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome         | Tipo de dados | Possible Values |
-| ------------ | ------------- | --------------- |
-| borderRadius | integer       | mínimo: 0       |
+| Nome         | Tipo de dados | Valores possíveis |
+| ------------ | ------------- | ----------------- |
+| borderRadius | integer       | mínimo: 0         |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Input](input_overview.md) - [Rectangle](shapes_overview.md#rectangle) - [Text Area](text.md)
 
@@ -145,13 +145,13 @@ You can also set this property using the [OBJECT Get corner radius](https://doc.
 This property designates an object's vertical size.
 > Some objects may have a predefined height that cannot be altered.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome   | Tipo de dados | Possible Values |
-| ------ | ------------- | --------------- |
-| height | number        | mínimo: 0       |
+| Nome   | Tipo de dados | Valores possíveis |
+| ------ | ------------- | ----------------- |
+| height | number        | mínimo: 0         |
 
-#### Objects Supported
+#### Objectos suportados
 
 [4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - [Line](shapes_overview.md#line) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
@@ -164,13 +164,13 @@ This property designates an object's horizontal size.
 > * If the [Resizable](properties_ResizingOptions.md#resizable) property is used for a [list box column](listbox_overview.md#list-box-columns), the user can also manually resize the column.
 > * When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome  | Tipo de dados | Possible Values |
-| ----- | ------------- | --------------- |
-| width | number        | mínimo: 0       |
+| Nome  | Tipo de dados | Valores possíveis |
+| ----- | ------------- | ----------------- |
+| width | number        | mínimo: 0         |
 
-#### Objects Supported
+#### Objectos suportados
 
 [4D View Pro Area](viewProArea_overview.md) - [4D Write Pro Area](writeProArea_overview.md) - [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Combo Box](comboBox_overview.md) - [Dropdown list](dropdownList_Overview.md) - [Group Box](groupBox.md) - [Hierarchical List](list_overview.md#overview) - [Input](input_overview.md) - [Line](shapes_overview.md#line) - [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [Oval](shapes_overview.md#oval) - [Picture Button](pictureButton_overview.md) - [Picture Pop up menu](picturePopupMenu_overview.md) - [Plug-in Area](pluginArea_overview.md#overview) - [Progress Indicators](progressIndicator.md) - [Radio Button](radio_overview.md) - [Ruler](ruler.md) - [Rectangle](shapes_overview.md#rectangle) - [Spinner](spinner.md) - [Splitter](splitters.md) - [Static Picture](staticPicture.md) - [Stepper](stepper.md) - [Subform](subform_overview.md) - [Tab control](tabControl.md) - [Text Area](text.md) - [Web Area](webArea_overview.md#overview)
 
@@ -181,13 +181,13 @@ This property designates an object's horizontal size.
 The maximum width of the column (in pixels). The width of the column cannot be increased beyond this value when resizing the column or form.
 > When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome     | Tipo de dados | Possible Values |
-| -------- | ------------- | --------------- |
-| maxWidth | number        | mínimo: 0       |
+| Nome     | Tipo de dados | Valores possíveis |
+| -------- | ------------- | ----------------- |
+| maxWidth | number        | mínimo: 0         |
 
-#### Objects Supported
+#### Objectos suportados
 
 [List Box Column](listbox_overview.md#list-box-columns)
 
@@ -198,13 +198,13 @@ The maximum width of the column (in pixels). The width of the column cannot be i
 The minimum width of the column (in pixels). The width of the column cannot be reduced below this value when resizing the column or form.
 > When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome     | Tipo de dados | Possible Values |
-| -------- | ------------- | --------------- |
-| minWidth | number        | mínimo: 0       |
+| Nome     | Tipo de dados | Valores possíveis |
+| -------- | ------------- | ----------------- |
+| minWidth | number        | mínimo: 0         |
 
-#### Objects Supported
+#### Objectos suportados
 
 [List Box Column](listbox_overview.md#list-box-columns)
 
@@ -214,13 +214,13 @@ The minimum width of the column (in pixels). The width of the column cannot be r
 
 Sets the height of list box rows (excluding headers and footers). By default, the row height is set according to the platform and the font size.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome      | Tipo de dados | Possible Values                          |
+| Nome      | Tipo de dados | Valores possíveis                        |
 | --------- | ------------- | ---------------------------------------- |
 | rowHeight | string        | css value in unit "em" or "px" (default) |
 
-#### Objects Supported
+#### Objectos suportados
 
 [List Box](listbox_overview.md#overview)
 
@@ -247,13 +247,13 @@ Assuming that the unit of the rows is "lines," then the fifth row of the list bo
 > * The Row Height Array property is not taken into account for hierarchical list boxes.
 > * For array-based list boxes, this property is available only if the [Automatic Row Height](#automatic-row-height) option is not selected.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome            | Tipo de dados | Possible Values              |
+| Nome            | Tipo de dados | Valores possíveis            |
 | --------------- | ------------- | ---------------------------- |
 | rowHeightSource | string        | Name of a 4D array variable. |
 
-#### Objects Supported
+#### Objectos suportados
 
 [List Box](listbox_overview.md#overview)
 
@@ -269,13 +269,13 @@ Sets a horizontal padding for the cells. The value is set in pixels (default = 0
 
 ![](../assets/en/FormObjects/padding.png)
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome              | Tipo de dados | Possible Values                |
+| Nome              | Tipo de dados | Valores possíveis              |
 | ----------------- | ------------- | ------------------------------ |
 | horizontalPadding | number        | Number of pixels (must be >=0) |
 
-#### Objects Supported
+#### Objectos suportados
 
 [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [Footers](properties_Footers.md) - [Headers](properties_Headers.md)
 
@@ -289,13 +289,13 @@ Sets a horizontal padding for the cells. The value is set in pixels (default = 0
 
 Sets a vertical padding for the cells. The value is set in pixels (default = 0).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome            | Tipo de dados | Possible Values                |
+| Nome            | Tipo de dados | Valores possíveis              |
 | --------------- | ------------- | ------------------------------ |
 | verticalPadding | number        | Number of pixels (must be >=0) |
 
-#### Objects Supported
+#### Objectos suportados
 
 [List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns) - [Footers](properties_Footers.md) - [Headers](properties_Headers.md)
 
