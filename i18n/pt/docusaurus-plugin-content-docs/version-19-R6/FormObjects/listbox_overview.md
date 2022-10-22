@@ -223,7 +223,7 @@ Propriedades compatíveis dependem do tipo de list box.
 | On Scroll            | <li>[horizontalScroll](#additional-properties)</li><li>[verticalScroll](#additional-properties)</li>                                                                                 |                                                                                         |
 | On Unload            |                                                                                                                                      |                                                                                         |
 
-#### Additional Properties
+#### Propriedades adicionais
 
 Form events on list box or list box column objects may return the following additional properties:
 
@@ -260,7 +260,7 @@ Pode estabelecer propriedades padrão (texto, cor de fundo, etc) para cada colun
 
 ### Supported Form Events
 
-| Form event           | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties)    | Comentários                                                                             |
+| Evento formulário    | Additional Properties Returned (see [Form event](https://doc.4d.com/4Dv18/4D/18/FORM-Event.301-4522191.en.html) for main properties)    | Comentários                                                                             |
 | -------------------- | --------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
 | On After Edit        | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                          |                                                                                         |
 | On After Keystroke   | <li>[column](#additional-properties)</li><li>[columnName](#additional-properties)</li><li>[row](#additional-properties)</li>                                                          |                                                                                         |
@@ -341,13 +341,12 @@ Aqui está o método da coluna *arrText*:
 
 ```4d
  Case of
-    :(FORM event.code=On Before Data Entry) // a cell gets the focus
+    :(FORM event.code=On Before Data Entry) // uma célua obtém o foco
        LISTBOX GET CELL POSITION(*;"lb";$col;$row)
-  // identification of cell
-       If(arrDate{$row}<Current date) // if date is earlier than today
-          $0:=-1 // cell is NOT enterable
+  // identificação da célula       If(arrDate{$row}<Current date) // se data for anterior que hoje
+          $0:=-1 // célula NAO é editável
        Else
-  // otherwise, cell is enterable
+  // senão, célula é editável
        End if
  End case
 ```
@@ -456,11 +455,11 @@ No método de objeto da list box, pode escrever:
  Case of
     :(FORM event.code=On Selection Change)
        $n:=Size of array(LB_Arrays)
-       ARRAY LONGINT(_ListboxBackground;$n) // row background colors
+       ARRAY LONGINT(_ListboxBackground;$n) // cores de fundo linha
        For($i;1;$n)
-          If(LB_Arrays{$i}=True) // selected
-             _ListboxBackground{$i}:=0x0080C080 // green background
-          Else // not selected
+          If(LB_Arrays{$i}=True) // selecionado
+             _ListboxBackground{$i}:=0x0080C080 // fundo verde
+          Else // não selecionado
              _ListboxBackground{$i}:=lk inherited
           End if
        End for
@@ -502,14 +501,14 @@ You can enable or disable standard user sorts by disabling the [Sortable](proper
 
 Standard sort support depends on the list box type:
 
-| List box type               | Support of standard sort | Comentários                                                                                                  |
-| --------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| Uma coleção de objetos      | Sim                      | <li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
-| Collection of scalar values | No                       | Use custom sort with [`orderBy()`](..\API\CollectionClass.md#orderby) function                             |
-| Seleção de entidades        | Sim                      | <li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Supported: sorts on related attributes (e.g. "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
-| Current selection           | Sim                      | Only simple expressions are sortable (e.g. `[Table_1]Field_2`)                                               |
-| Named selection             | No                       |                                                                                                              |
-| Arrays                      | Sim                      | Columns bound to picture and pointer arrays are not sortable                                                 |
+| List box type                   | Support of standard sort | Comentários                                                                                                  |
+| ------------------------------- | ------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| Uma coleção de objetos          | Sim                      | <li>"This.a" or "This.a.b" columns are sortable.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
+| Collection de valores escalares | No                       | Use custom sort with [`orderBy()`](..\API\CollectionClass.md#orderby) function                             |
+| Seleção de entidades            | Sim                      | <li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Supported: sorts on related attributes (e.g. "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
+| Seleção atual                   | Sim                      | Only simple expressions are sortable (e.g. `[Table_1]Field_2`)                                               |
+| Seleção temporária              | No                       |                                                                                                              |
+| Arrays                          | Sim                      | Columns bound to picture and pointer arrays are not sortable                                                 |
 
 ### Custom sort
 
@@ -747,7 +746,7 @@ Regardless of how the data are displayed in the list box (hierarchically or not)
 This principle is implemented for internal arrays that can be used to manage:
 
 * cores
-* background colors
+* cores de fundo
 * estilos
 * hidden rows
 * seleções
