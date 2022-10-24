@@ -1,6 +1,6 @@
 ---
 id: windowSize
-title: Window Size
+title: Tamanho da janela
 ---
 
 
@@ -47,8 +47,8 @@ Maximum and minimum height (in pixels) of a resizeable form window if the [Fixed
 
 | Nome            | Tipo de dados | Valores possíveis |
 | --------------- | ------------- | ----------------- |
-| windowMinHeight | number        | integer value     |
-| windowMaxHeight | number        | integer value     |
+| windowMinHeight | number        | valor inteiro     |
+| windowMaxHeight | number        | valor inteiro     |
 
 
 ## Maximum Width, Minimum Width
@@ -60,6 +60,6 @@ Maximum and minimum width (in pixels) of a resizeable form window if the [Fixed 
 
 | Nome           | Tipo de dados | Valores possíveis |
 | -------------- | ------------- | ----------------- |
-| windowMinWidth | number        | integer value     |
-| windowMaxWidth | number        | integer value     |
+| windowMinWidth | number        | valor inteiro     |
+| windowMaxWidth | number        | valor inteiro     |
 
