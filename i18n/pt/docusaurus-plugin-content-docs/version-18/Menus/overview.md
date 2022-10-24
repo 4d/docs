@@ -24,7 +24,7 @@ To create menus and menu bars, you can use either:
 - language commands for the "Menus" theme,
 - a combination of both.
 
-## Menu editor
+## Editor de menus
 
 The Menu editor is accessed using the **Menus** button of the Toolbox.
 
