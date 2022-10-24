@@ -116,7 +116,7 @@ When this property is not applied to the splitter, the result is as follows:
 
 ---
 
-## Resizable
+## Redimensionável
 
 Designates if the size of the column can be modified by the user.
 
@@ -128,4 +128,4 @@ Designates if the size of the column can be modified by the user.
 
 #### Objectos suportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Coluna da List Box](listbox_overview.md#list-box-columns)
