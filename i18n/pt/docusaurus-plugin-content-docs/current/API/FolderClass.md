@@ -149,6 +149,7 @@ A função `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->creates and re
 <!--REF #FolderClass.create().Syntax -->**.create()** : Boolean<!-- END REF -->
 
 
+
 <!--REF #FolderClass.create().Params -->
 | Parâmetros | Tipo     |    | Descrição                                                                               |
 | ---------- | -------- | -- | --------------------------------------------------------------------------------------- |
