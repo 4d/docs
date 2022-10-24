@@ -1096,16 +1096,16 @@ Exemplos:
 *   You want to display a drop-down list based on a list defined by programming and save it as a reference:
 
 ```4d
-    <>List:=New list
-    APPEND TO LIST(<>List;"Paris";1)
-    APPEND TO LIST(<>List;"London";2)
-    APPEND TO LIST(<>List;"Berlin";3)
-    APPEND TO LIST(<>List;"Madrid";4)
+    <>Lista:=Nova lista
+    APENDER A LISTA(<>Lista; "Paris";1)
+    APENDER A LISTA(<>Lista; "Londres";2)
+    APENDER A LISTA(<>Lista; "Berlim";3)
+    APENDER A LISTA(<>Lista; "Madrid";4)
     C_OBJECT($ob)
-    OB SET($ob;"valueType";"integer")
-    OB SET($ob;"saveAs";"reference")
-    OB SET($ob;"value";2) //displays London by default
-    OB SET($ob;"requiredListReference";<>List)
+    OB SET($ob; "valueType"; "integer")
+    OB SET($ob; "saveAs"; "reference")
+    OB SET($ob; "value";2) //mostra London por padrão
+    OB SET($ob; "requiredListReference";<>List)
 ```
 
 
