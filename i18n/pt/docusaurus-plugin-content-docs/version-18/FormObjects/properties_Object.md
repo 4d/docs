@@ -107,7 +107,7 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 ---
 
-## Expression Type
+## Tipo de expressão
 
 > This property is called **Data Type** in the Property List for Selection and collection type list box columns.
 
