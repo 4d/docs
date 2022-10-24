@@ -5,7 +5,7 @@ title: Visualização
 
 ---
 
-## Alpha Format
+## Formato Alfa
 
 Alpha formats control the way the alphanumeric fields and variables appear when displayed or printed. Here is a list of formats provided for alphanumeric fields:
 
@@ -56,13 +56,13 @@ Date formats control the way dates appear when displayed or printed. For data en
 
 The table below shows choices available:
 
-| Format name                     | JSON String  | Example (US system)           |
+| Nome do formato                 | JSON String  | Exemplo (sistema americano)   |
 | ------------------------------- | ------------ | ----------------------------- |
 | System date short               | - (default)  | 03/25/20                      |
 | System date abbreviated *(1)*   | systemMedium | Wed, Mar 25, 2020             |
 | System date long                | systemLong   | Wednesday, March 25, 2020     |
 | RFC 822                         | rfc822       | Tue, 25 Mar 2020 22:00:00 GMT |
-| Short Century                   | shortCentury | 03/25/20 but 04/25/2032 *(2)* |
+| Short Century                   | shortCentury | 25/03/20 mas 25/04/2032 *(2)* |
 | Internal date long              | long         | March 25, 2020                |
 | Internal date abbreviated *(1)* | abbreviated  | Mar 25, 2020                  |
 | Internal date short             | short        | 03/25/2020                    |
@@ -202,7 +202,7 @@ corresponds to the 5th time format in the pop-up menu, specifically the AM/PM ti
 
 The following table shows how different formats affect the display of numbers. The three columns — Positive, Negative, and Zero — each show how 1,234.50, –1,234.50, and 0 would be displayed.
 
-| Format Entered                         | Positive         | Negative      | Zero                         |
+| Formato Introduzido                    | Positivo         | Negativo      | Zero                         |
 | -------------------------------------- | ---------------- | ------------- | ---------------------------- |
 | ###                                    | <<<              | <<<           |                              |
 | ####                                   | 1234             | <<<<          |                              |
@@ -283,7 +283,7 @@ If you have applied the **Scaled to fit centered (proportional)** format, the pi
 
 ### Replicado
 
-`JSON grammar: "tiled"`
+`Gramática JSON: "tiled"`
 
 When the area that contains a picture with the **Replicated** format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.
 
@@ -310,7 +310,7 @@ Time formats control the way times appear when displayed or printed. For data en
 
 The table below shows the Time field display formats and gives examples:
 
-| Format name                  | JSON string  | Comentários                                                                                                                                      | Example for 04:30:25          |
+| Nome do formato              | JSON string  | Comentários                                                                                                                                      | Example for 04:30:25          |
 | ---------------------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
 | HH:MM:SS                     | hh_mm_ss   |                                                                                                                                                  | 04:30:25                      |
 | HH:MM                        | hh_mm        |                                                                                                                                                  | 04:30                         |
@@ -376,7 +376,7 @@ Boolean columns can also be displayed as pop-up menus. In this case, the [Text w
 
 #### Objectos suportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Coluna da List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -445,7 +445,7 @@ In that cases, the title of the check box can be entered using this property.
 
 #### Objectos suportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Coluna da List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -524,7 +524,7 @@ Manages the display of contents when it exceeds the width of the object.
 
 #### Checked for list box/Yes for input
 
-`JSON grammar: "normal"`
+`Gramática JSON: "normal"`
 
 When this option is selected, text automatically wraps to the next line whenever its width exceeds that of the column/area, if the column/area height permits it.
 
@@ -536,7 +536,7 @@ When this option is selected, text automatically wraps to the next line whenever
 
 #### Unchecked for list box/No for input
 
-`JSON grammar: "none"`
+`Gramática JSON: "none"`
 
 When this option is selected, 4D does not do any automatic line returns and the last word that can be displayed may be truncated. In text type areas, carriage returns are supported:
 
@@ -552,7 +552,7 @@ Note that regardless of the Wordwrap option’s value, the row height is not cha
 
 #### Automatic for input (default option)
 
-`JSON grammar: "automatic"`
+`Gramática JSON: "automatic"`
 
 * In single-line areas, words located at the end of lines are truncated and there are no line returns.
 * In multiline areas, 4D carries out automatic line returns.
