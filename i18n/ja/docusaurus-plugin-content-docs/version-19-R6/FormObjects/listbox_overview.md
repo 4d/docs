@@ -239,9 +239,9 @@ myCol:=myCol.push("new value") // リストボックスに new value を表示
 | isRowSelected    | boolean | 行が選択されていれば true、でなければ false                   |
 | newPosition      | longint | 列あるいは行の変更後の位置                                 |
 | newSize          | longint | 列または行の変更後のサイズ (ピクセル単位)                        |
-| oldPosition      | 倍長整数    | 列あるいは行の変更前の位置                                 |
+| oldPosition      | longint | 列あるいは行の変更前の位置                                 |
 | oldSize          | longint | 列または行の変更前のサイズ (ピクセル単位)                        |
-| row              | 倍長整数    | 行番号                                           |
+| row              | longint | 行番号                                           |
 | verticalScroll   | longint | 下方向スクロールの場合は正の数値、上方向の場合は負の数値                  |
 > "偽" カラムや存在しないカラムにてイベントが発生した場合には、主に空の文字列が返されます。
 
