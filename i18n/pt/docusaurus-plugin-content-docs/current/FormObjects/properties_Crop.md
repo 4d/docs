@@ -6,7 +6,7 @@ title: Crop
 
 ## Colunas
 
-Sets the number of columns in a thumbnail table.
+Define o número de colunas numa tabela de miniaturas.
 
 #### Gramática JSON
 
@@ -16,11 +16,11 @@ Sets the number of columns in a thumbnail table.
 
 #### Objectos suportados
 
-[Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
+[Botão imagem](pictureButton_overview.md) - [Grade de Botões](buttonGrid_overview.md) - [Menu Pop-up imagem](picturePopupMenu_overview.md)
 
 ---
 
-## Rows
+## Linhas
 
 Sets the number of rows in a thumbnail table.
 
@@ -32,4 +32,4 @@ Sets the number of rows in a thumbnail table.
 
 #### Objectos suportados
 
-[Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
+[Botão imagem](pictureButton_overview.md) - [Grade de Botões](buttonGrid_overview.md) - [Menu Pop-up imagem](picturePopupMenu_overview.md)
