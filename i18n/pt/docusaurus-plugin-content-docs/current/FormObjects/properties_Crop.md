@@ -8,13 +8,13 @@ title: Crop
 
 Sets the number of columns in a thumbnail table.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome        | Tipo de dados | Possible Values |
-|:----------- |:-------------:| --------------- |
-| columnCount |    integer    | mínimo: 1       |
+| Nome        | Tipo de dados | Valores possíveis |
+|:----------- |:-------------:| ----------------- |
+| columnCount |    integer    | mínimo: 1         |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)
 
@@ -24,12 +24,12 @@ Sets the number of columns in a thumbnail table.
 
 Sets the number of rows in a thumbnail table.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome     | Tipo de dados | Possible Values |
-|:-------- |:-------------:| --------------- |
-| rowCount |    integer    | mínimo: 1       |
+| Nome     | Tipo de dados | Valores possíveis |
+|:-------- |:-------------:| ----------------- |
+| rowCount |    integer    | mínimo: 1         |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Picture Button](pictureButton_overview.md) - [Button Grid](buttonGrid_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md)

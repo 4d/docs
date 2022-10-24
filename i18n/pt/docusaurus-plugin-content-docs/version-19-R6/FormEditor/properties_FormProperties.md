@@ -14,11 +14,11 @@ This property defines the color scheme for the form. This property defines the c
 * light - dark text on a light background > A defined color scheme can not be overridden by a CSS.
 > A defined color scheme can not be overridden by a CSS.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome        | Tipo de dados | Possible Values |
-| ----------- | ------------- | --------------- |
-| colorScheme | string        | "dark", "light" |
+| Nome        | Tipo de dados | Valores possíveis |
+| ----------- | ------------- | ----------------- |
+| colorScheme | string        | "dark", "light"   |
 
 ---
 
@@ -31,9 +31,9 @@ Each form has is made of at least two pages:
 
 For more information, please refer to [Form pages](forms.md#form-pages).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome  | Tipo de dados | Possible Values                                                          |
+| Nome  | Tipo de dados | Valores possíveis                                                        |
 | ----- | ------------- | ------------------------------------------------------------------------ |
 | pages | collection    | Collection of pages (each page is an object, page 0 is the first element |
 
@@ -43,7 +43,7 @@ For more information, please refer to [Form pages](forms.md#form-pages).
 
 This property is the name of the form itself and is used to refer to the form by name using the 4D language. The form name must comply with the [rules specified for identifiers](Concepts/identifiers.md) in 4D.
 
-#### JSON Grammar
+#### Gramática JSON
 
 The form name is defined by the name of the folder that contains the form.4Dform file. See [project architecture](Project/architecture.md#sources-folder) for more information.
 
@@ -69,9 +69,9 @@ Supported types depend on the form category:
 | List Form for Printing   | listPrinter      | A printed report that list records                            | Table forms                 |
 | Nenhum                   | *no destination* | A form with no specific feature                               | Project forms - Table forms |
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome        | Tipo de dados | Possible Values                                              |
+| Nome        | Tipo de dados | Valores possíveis                                            |
 | ----------- | ------------- | ------------------------------------------------------------ |
 | destination | string        | "detailScreen", "listScreen", "detailPrinter", "listPrinter" |
 
@@ -85,9 +85,9 @@ To inherit from a table form, set the table in the [Inherited Form Table](#inher
 
 To remove inheritance, select `\&#060;None&#062;` in the Property List (or " " in JSON).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome          | Tipo de dados | Possible Values                                                                                                    |
+| Nome          | Tipo de dados | Valores possíveis                                                                                                  |
 | ------------- | ------------- | ------------------------------------------------------------------------------------------------------------------ |
 | inheritedForm | string        | Name of table or project form OR a POSIX path to a .json file describing the form OR an object describing the form |
 
@@ -99,9 +99,9 @@ This property specifies the database table from which to [inherit a form](forms.
 
 Set to `\&#060;None&#062;` in the Property List (or " " in JSON) to inherited from a project form.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome               | Tipo de dados    | Possible Values            |
+| Nome               | Tipo de dados    | Valores possíveis          |
 | ------------------ | ---------------- | -------------------------- |
 | inheritedFormTable | string or number | table name or table number |
 
@@ -113,11 +113,11 @@ For a component form to be selected as a [subform](FormObjects/subform_overview.
 
 Only project forms can be specified as published subforms.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome   | Tipo de dados | Possible Values |
-| ------ | ------------- | --------------- |
-| shared | boolean       | true, false     |
+| Nome   | Tipo de dados | Valores possíveis |
+| ------ | ------------- | ----------------- |
+| shared | boolean       | true, false       |
 
 ---
 
@@ -131,11 +131,11 @@ When the option is used, if the window is opened using the `Open form window` co
 
 When this option is selected, the [Save Value](FormObjects/properties_Object.md#save-value) option is available for certain objects.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome             | Tipo de dados | Possible Values |
-| ---------------- | ------------- | --------------- |
-| memorizeGeometry | boolean       | true, false     |
+| Nome             | Tipo de dados | Valores possíveis |
+| ---------------- | ------------- | ----------------- |
+| memorizeGeometry | boolean       | true, false       |
 
 #### Veja também
 
@@ -155,8 +155,8 @@ You can use dynamic references to set the window titles for forms, *i.e.*:
 
 > The number of characters for a window title is limited to 31.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome        | Tipo de dados | Possible Values                                        |
+| Nome        | Tipo de dados | Valores possíveis                                      |
 | ----------- | ------------- | ------------------------------------------------------ |
 | windowTitle | string        | The name of the window as plain text or as a reference |

@@ -111,10 +111,10 @@ Esta propriedade não é devolvida se `.kind` = "relatedEntity" ou "relatedEntit
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                       |
-| ------ | ------------------------------ |
-| v19 R4 | Support of alias attributes    |
-| v19 R3 | Support of computed attributes |
+| Versão | Mudanças                                |
+| ------ | --------------------------------------- |
+| v19 R4 | Compatibilidade de atributos de alias   |
+| v19 R3 | Compatibilidade de atributos computados |
 
 </details>
 
@@ -211,10 +211,10 @@ Esta propriedade não é retornada se [`.kind`](#kind) = "relatedEntity" ou "rel
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças           |
-| ------ | ------------------ |
-| v19 R4 | Added "alias"      |
-| v19 R3 | Added "calculated" |
+| Versão | Mudanças                |
+| ------ | ----------------------- |
+| v19 R4 | "alias" adicionado      |
+| v19 R3 | "calculated" adicionado |
 
 </details>
 
@@ -378,9 +378,9 @@ Dada a seguinte tabela e relação:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                       |
-| ------ | ------------------------------ |
-| v19 R3 | Support of computed attributes |
+| Versão | Mudanças                                |
+| ------ | --------------------------------------- |
+| v19 R3 | Compatibilidade de atributos computados |
 
 </details>
 

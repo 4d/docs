@@ -413,26 +413,26 @@ Cuando la opción [Ocultar el resaltado de la selección](properties_Appearance.
 * En el caso de los list box de tipo array, debe analizar la variable array booleana asociada al list box para determinar qué líneas están seleccionadas o no.
 * Para los list box de tipo selección, hay que comprobar si el registro actual (línea) pertenece al conjunto especificado en la propiedad [Conjunto resaltado](properties_ListBox.md#highlight-set) del list box.
 
-You can then define specific background colors, font colors and/or font styles by programming to customize the appearance of selected rows. This can be done using arrays or expressions, depending on the type of list box being displayed (see the following sections).
+A continuación, puede definir por programación los colores de fondo, los colores y/o estilos de fuentes específicas para personalizar la apariencia de las líneas seleccionadas. Esto puede hacerse utilizando arrays o expresiones, dependiendo del tipo de list box mostrado (ver las siguientes secciones).
 
-> You can use the `lk inherited` constant to mimic the current appearance of the list box (e.g., font color, background color, font style, etc.).
+> Puede utilizar la constante `lk inherited` para imitar la apariencia actual del list box (por ejemplo, el color de la fuente, el color de fondo, el estilo de la fuente, etc.).
 
 #### List box de tipo selección
 
-To determine which rows are selected, you have to check whether they are included in the set indicated in the [Highlight Set](properties_ListBox.md#highlight-set) property of the list box. You can then define the appearance of selected rows using one or more of the relevant [color or style expression property](#using-arrays-and-expressions).
+Para determinar qué líneas están seleccionadas, hay que comprobar si están incluidas en el conjunto indicado en la propiedad [Conjunto resaltado](properties_ListBox.md#highlight-set) del list box. A continuación, puede definir la apariencia de las líneas seleccionadas utilizando una o varias de las [propiedades de expresión de color o estilo](#using-arrays-and-expressions) relevantes.
 
 Tenga en cuenta que las expresiones se reevalúan automáticamente cada vez que:
 * la selección de list box cambia.
 * list box obtiene o pierde el foco.
-* form window containing the list box becomes, or ceases to be, the frontmost window.
+* la ventana del formulario que contiene el list box se convierte, o deja de ser, la ventana del primer plano.
 
 #### List box de tipo array
 
-You have to parse the Boolean array [Variable or Expression](properties_Object.md#variable-or-expression) associated with the list box to determine whether rows are selected or not selected.
+Tiene que analizar el array booleano [Variable o expresión](properties_Object.md#variable-or-expression) asociado al list box para determinar si las líneas están seleccionadas o no.
 
-You can then define the appearance of selected rows using one or more of the relevant [color or style array property](#using-arrays-and-expressions).
+A continuación, puede definir la apariencia de las líneas seleccionadas utilizando una o varias de las [propiedades de array de color o de estilo](#using-arrays-and-expressions) relevantes.
 
-Note that list box arrays used for defining the appearance of selected rows must be recalculated during the `On Selection Change` form event; however, you can also modify these arrays based on the following additional form events:
+Tenga en cuenta que los arrays de list box utilizados para definir la apariencia de las líneas seleccionadas deben recalcularse en el evento formulario `On Selection Change`; sin embargo, también puede modificar estos arrays basándose en los siguientes eventos formulario adicionales:
 * `On Getting Focus` (propiedad list box)
 * `On Losing Focus` (propiedad list box)
 * `On Activate` (propiedad list box)
@@ -440,11 +440,11 @@ Note that list box arrays used for defining the appearance of selected rows must
 
 ##### Ejemplo
 
-You have chosen to hide the system highlight and want to display list box selections with a green background color, as shown here:
+Ha elegido ocultar el resaltado sistema y desea mostrar las selecciones en el list box con un color de fondo verde, como se muestra aquí:
 
 ![](../assets/en/FormObjects/listbox_styles7.png)
 
-For an array type list box, you need to update the [Row Background Color Array](properties_BackgroundAndBorder.md#row-background-color-array) by programming. In the JSON form, you have defined the following Row Background Color Array for the list box:
+Para un list box de tipo array, es necesario actualizar el [Array colores de fondo](properties_BackgroundAndBorder.md#row-background-color-array) por programación. En el formulario JSON, ha definido el Array colores de fondo de línea para el list box:
 
 ```
  "rowFillSource": "_ListboxBackground",
@@ -467,9 +467,9 @@ En el método objeto del list box, puede escribir:
  End case
 ```
 
-For a selection type list box, to produce the same effect you can use a method to update the [Background Color Expression](properties_BackgroundAndBorder.md#background-color-expression) based on the set specified in the [Highlight Set](properties_ListBox.md#highlight-set) property.
+Con un list box de tipo selección, para producir el mismo efecto puede utilizar un método para actualizar la propiedad [Expresión color de fondo](properties_BackgroundAndBorder.md#background-color-expression) basado en el conjunto designado por la propiedad [Conjunto resaltado](properties_ListBox.md#highlight-set).
 
-For example, in the JSON form, you have defined the following Highlight Set and Background Color Expression for the list box:
+Por ejemplo, en el formulario JSON, ha definido el conjunto resaltado y la expresión de color de fondo siguientes para el list box:
 
 ```
  "highlightSet": "$SampleSet",
@@ -488,45 +488,45 @@ Puede escribir en el método *UI_SetColor*:
  $0:=$color
 ```
 
-> In hierarchical list boxes, break rows cannot be highlighted when the [Hide selection highlight](properties_Appearance.md#hide-selection-highlight) option is checked. Since it is not possible to have distinct colors for headers of the same level, there is no way to highlight a specific break row by programming.
+> En los list box jerárquicos, las líneas de ruptura no pueden resaltarse cuando la opción [Ocultar resaltado selección](properties_Appearance.md#hide-selection-highlight) está seleccionada. Como no es posible tener colores distintos para los encabezados del mismo nivel, no hay manera de destacar una línea de ruptura específica por programación.
 
 ## Gestión de ordenaciones
 
-Un orden en un list box puede ser estándar o personalizado. When a column of a list box is sorted, all other columns are always synchronized automatically.
+Un orden en un list box puede ser estándar o personalizado. Cuando se ordena una columna de un list box, todas las demás columnas se sincronizan siempre automáticamente.
 
 ### Ordenación estándar
 
-By default, a list box provides standard column sorts when the header is clicked. A standard sort is an alphanumeric sort of evaluated column values, alternately ascending/descending with each successive click.
+Por defecto, un list box ofrece una ordenación de columnas estándar cuando se hace clic en el encabezado. Una ordenación estándar es una ordenación alfanumérica de los valores de las columnas evaluadas, alternativamente ascendiendo/descendiendo con cada clic sucesivo.
 
-You can enable or disable standard user sorts by disabling the [Sortable](properties_Action.md#sortable) property of the list box (enabled by default).
+Puede activar o desactivar la ordenación usuario estándar desactivando la propiedad [Ordenable](properties_Action.md#sortable) del list box (activada por defecto).
 
 El soporte de ordenación estándar depende del tipo de list box:
 
 | Tipo de list box               | Soporte de ordenación estándar | Comentarios                                                                                                  |
 | ------------------------------ | ------------------------------ | ------------------------------------------------------------------------------------------------------------ |
-| Colección de objetos           | Sí                             | <li>Las columnas "This.a" o "This.a.b" son ordenables.</li><li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
-| Colección de valores escalares | No                             | Use custom sort with [`orderBy()`](..\API\CollectionClass.md#orderby) function                             |
-| Entity selection               | Sí                             | <li>The [list box source property](properties_Object.md#variable-or-expression) must be an [assignable expression](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Supported: sorts on object attribute properties (e.g. "This.data.city" when "data" is an object attribute)</li><li>Soportado: ordena los atributos relacionados (por ejemplo, "This.company.name")</li><li>Not supported: sorts on object attribute properties through related attributes (e.g. "This.company.data.city"). For this, you need to use custom sort with [`orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) function (see example below)</li> |
+| Colección de objetos           | Sí                             | <li>Las columnas "This.a" o "This.a.b" son ordenables.</li><li>La [propiedad source del list box](properties_Object.md#variable-or-expression) debe ser una [expresión asignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li>                                                       |
+| Colección de valores escalares | No                             | Utilice la ordenación personalizada con la función [`orderBy()`](..\API\CollectionClass.md#orderby)        |
+| Entity selection               | Sí                             | <li>La [propiedad source del list box](properties_Object.md#variable-or-expression) debe ser una [expresión asignable](../Concepts/quick-tour.md#assignable-vs-non-assignable-expressions).</li><li>Soportado: ordena las propiedades de los atributos de los objetos (por ejemplo, "This.data.city" cuando "data" es un atributo del objeto)</li><li>Soportado: ordena los atributos relacionados (por ejemplo, "This.company.name")</li><li>No soportado: ordenar en las propiedades de atributos de objetos a través de atributos relacionados (por ejemplo, "This.company.data.city"). Para ello, debe utilizar la ordenación personalizada con la función [`orderByFormula()`](..\I\EntitySelectionClass.md#orderbyformula) (ver el siguiente ejemplo)</li> |
 | Selección actual               | Sí                             | Sólo se pueden ordenar las expresiones simples (por ejemplo, `[Table_1]Campo_2`)                             |
 | Selección temporal             | No                             |                                                                                                              |
 | Arrays                         | Sí                             | Las columnas vinculadas a arrays de imágenes y punteros no se pueden ordenar                                 |
 
 ### Ordenación personalizada
 
-The developer can set up custom sorts, for example using the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command and/or combining the [`On Header Click`](../Events/onHeaderClick) and [`On After Sort`](../Events/onAfterSort) form events and relevant 4D commands.
+El desarrollador puede configurar ordenaciones personalizadas, por ejemplo utilizando el comando [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) y/o combinando los eventos de formulario [`On Header Click`](../Events/onHeaderClick) y [`On After Sort`](../Events/onAfterSort) y los comandos 4D correspondientes.
 
 Los ordenamientos personalizados le permiten:
 
-* carry out multi-level sorts on several columns, thanks to the [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html) command,
-* use functions such as [`collection.orderByFormula()`](..\API\CollectionClass.md#orderbyformula) or [`entitySelection.orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) to sort columns on complex criteria.
+* efectuar las ordenaciones multinivel en varias columnas, gracias al comando [`LISTBOX SORT COLUMNS`](https://doc.4d.com/4dv19/help/command/en/page916.html),
+* utilizar las funciones como [`collection.orderByFormula()`](..\API\CollectionClass.md#orderbyformula) o [`entitySelection.orderByFormula()`](..\API\EntitySelectionClass.md#orderbyformula) para ordenar las columnas según criterios complejos.
 
 #### Ejemplo
 
-You want to sort a list box using values of a property stored in a related object attribute. Tiene la siguiente estructura:
+Desea ordenar un list box utilizando los valores de una propiedad almacenada en un atributo de objeto relacionado. Tiene la siguiente estructura:
 
 ![](../assets/en/FormObjects/relationLB.png)
 
-You design a list box of the entity selection type, bound to the `Form.child` expression. In the `On Load` form event, you execute `Form.child:=ds.Child.all()`.
+Se diseña un list box de tipo entity selection, vinculado a la expresión `Form.child`. En el evento formulario `On Load`, se ejecuta `Form.child:=ds.Child.all()`.
 
 Se muestran dos columnas:
 
@@ -534,7 +534,7 @@ Se muestran dos columnas:
 | --------------- | ---------------------------- |
 | `This.name`     | `This.parent.extra.nickname` |
 
-If you want to sort the list box using the values of the second column, you have to write:
+Si quiere ordenar el list box utilizando los valores de la segunda columna, debe escribir:
 
 ```4d
 If (Form event code=On Header Click)
@@ -544,14 +544,14 @@ End if
 
 ### Variable de encabezado de columna
 
-The value of the [column header variable](properties_Object.md#variable-or-expression) allows you to manage additional information: the current sort of the column (read) and the display of the sort arrow.
+El valor de la [variable encabezado de una columna](properties_Object.md#variable-or-expression) permite gestionar una información adicional: la ordenación actual de la columna (lectura) y la visualización de la flecha de ordenación.
 
-* If the variable is set to 0, the column is not sorted and the sort arrow is not displayed.  
+* Si la variable se define en 0, la columna no se ordena y la flecha de ordenación no se muestra.  
   ![](../assets/en/FormObjects/sorticon0.png)
 
-* If the variable is set to 1, the column is sorted in ascending order and the sort arrow is displayed. ![](../assets/en/FormObjects/sorticon1.png)
+* Si la variable está definida como 1, la columna se organiza en orden ascendente y se muestra la flecha de ordenación. ![](../assets/en/FormObjects/sorticon1.png)
 
-* If the variable is set to 2, the column is sorted in descending order and the sort arrow is displayed. ![](../assets/en/FormObjects/sorticon2.png)
+* Si la variable se establece en 2, la columna se clasifica en orden descendente y se muestra la flecha de clasificación. ![](../assets/en/FormObjects/sorticon2.png)
 
 > Only declared or dynamic [variables](Concepts/variables.md) can be used as header column variables. Other kinds of [expressions](Concepts/quick-tour.md#expressions) such as `Form.sortValue` are not supported.
 
@@ -655,9 +655,9 @@ Para definir un list box jerárquico, existen varias posibilidades:
 
 #### Propiedades del List Box jerárquico
 
-This property specifies that the list box must be displayed in hierarchical form. In the JSON form, this feature is triggered [when the *dataSource* property value is an array](properties_Object.md#hierarchical-list-box), i.e. a collection.
+This property specifies that the list box must be displayed in hierarchical form. En el formulario JSON, esta funcionalidad se activa [cuando el valor de la propiedad *dataSource* es un array](properties_Object.md#hierarchical-list-box), es decir, una colección.
 
-Additional options (**Variable 1...10**) are available when the *Hierarchical List Box* option is selected, corresponding to each *dataSource* array to use as break column. Cada vez que se introduce un valor en un campo, se añade una nueva línea. Se pueden especificar hasta 10 variables. These variables set the hierarchical levels to be displayed in the first column.
+Las opciones adicionales (**Variable 1...10**) están disponibles cuando se selecciona la opción *List box jerárquico*, correspondiente a cada elemento del array *dataSource* a utilizar como columna de ruptura. Cada vez que se introduce un valor en un campo, se añade una nueva línea. Se pueden especificar hasta 10 variables. These variables set the hierarchical levels to be displayed in the first column.
 
 The first variable always corresponds to the name of the variable for the first column of the list box (the two values are automatically bound). Esta primera variable está siempre visible y se puede editar. Por ejemplo: country. The second variable is also always visible and enterable; it specifies the second hierarchical level. Por ejemplo: regions. Beginning with the third field, each variable depends on the one preceding it. Por ejemplo: counties, cities, etc. Se puede especificar un máximo de diez niveles jerárquicos. Si se elimina un valor, toda la jerarquía sube de nivel.
 

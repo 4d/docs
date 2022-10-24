@@ -14,13 +14,13 @@ When this property is on, a special JavaScript object named `$4d` is instantiate
 
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome                 | Tipo de dados | Possible Values         |
+| Nome                 | Tipo de dados | Valores possíveis       |
 | -------------------- | ------------- | ----------------------- |
 | methodsAccessibility | string        | "none" (default), "all" |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Área Web](webArea_overview.md)
 
@@ -32,13 +32,13 @@ Name of a Longint type variable. This variable will receive a value between 0 an
 
 > As of 4D v19 R5, this variable is no longer updated in Web Areas using the [Windows system rendering engine](./webArea_overview.md#web-rendering-engine).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome           | Tipo de dados | Possible Values            |
+| Nome           | Tipo de dados | Valores possíveis          |
 | -------------- | ------------- | -------------------------- |
 | progressSource | string        | Name of a Longint variable |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Área Web](webArea_overview.md)
 
@@ -63,13 +63,13 @@ The URL variable produces the same effects as the [WA OPEN URL](https://doc.4d.c
 - If the URL variable does not contain a protocol (http, mailto, file, etc.), the Web area adds "http://", which is not the case for the [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command.
 - When the Web area is not displayed in the form (when it is located on another page of the form), executing the [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18/WA-OPEN-URL.301-4504841.en.html) command has no effect, whereas assigning a value to the URL variable can be used to update the current URL.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome      | Tipo de dados | Possible Values |
-| --------- | ------------- | --------------- |
-| urlSource | string        | Um URL.         |
+| Nome      | Tipo de dados | Valores possíveis |
+| --------- | ------------- | ----------------- |
+| urlSource | string        | Um URL.           |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Área Web](webArea_overview.md)
 
@@ -94,12 +94,12 @@ The CEF engine has the following limitations:
 - [WA SET PAGE CONTENT](https://doc.4d.com/4dv19/help/command/en/page1037.html): using this command requires that at least one page is already loaded in the area (through a call to [`WA OPEN URL`](https://doc.4d.com/4dv19/help/command/en/page1020.html) or an assignment to the URL variable associated to the area).
 - Quando se ativa soltar URLs mediante o seletor `WA enable URL drop` do comando [WA SET PREFERENCE](https://doc.4d.com/4Dv18/4D/18.4/WA-SET-PREFERENCE.301-5232962.en.html), a primeira soltada deve ir precedida de ao menos uma chamada a [WA OPEN URL](https://doc.4d.com/4Dv18/4D/18.4/WA-OPEN-URL.301-5232954.en.html) ou uma atribuição à variável URL associada à área.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome      | Tipo de dados | Possible Values      |
+| Nome      | Tipo de dados | Valores possíveis    |
 | --------- | ------------- | -------------------- |
 | webEngine | string        | "embedded", "system" |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Área Web](webArea_overview.md)

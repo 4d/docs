@@ -34,11 +34,11 @@ Objetos anexos oferecem as propriedades e funções apenas leitura abaixo:
 | cid         | Text               | -> | ID do anexo (apenas mensagens HTML), ou " " se nenhum cid for exigido |
 | type        | Text               | -> | Valor do cabeçalho content-type                                       |
 | disposition | Text               | -> | Valor do cabeçalho content-disposition: "inline" ou "attachment".     |
-| Resultados  | 4D. MailAttachment | <- | Attachment object|<!-- END REF -->                          |
+| Resultados  | 4D. MailAttachment | <- | Objeto anexo<!-- END REF -->                                |
 
 #### Descrição
 
-The `MAIL New attachment` command <!-- REF #_command_.MAIL_New_attachment.Summary -->allows you to create an attachment object that you can add to an [Email object](EmailObjectClass.md#email-object)<!-- END REF -->.
+Comando `MAIL New attachment` <!-- REF #_command_.MAIL_New_attachment.Summary -->permite criar um objeto anexo que adicione um objeto [Email](EmailObjectClass.md#email-object)<!-- END REF -->.
 
 Pode passar uma rota ou um Blob para definir o anexo.
 
@@ -51,7 +51,7 @@ O parâmetro opcional *name* permite passar o nome e extensão para ser usado pe
 - passar uma rota de arquivo, o nome e extensão do arquivo é usado,
 - passar um BLOB, um nome aleatório sem extensão é gerado automaticamente.
 
-O parâmetro opcional *cid* permite passar uma ID interna para o anexo. A ID é o valor do cabeçalho `Content-Id`, vai ser usado apenas em mensagens HTML.  The cid associates the attachment with a reference defined in the message body using an HTML tag such as `\&#060;img src="cid:ID"&#062;`. Isso significa que os conteúdos do anexo (por exemplo uma imagem) deve ser exibida dentro da mensagem do cliente mail. O resultado final deve variar dependendo do cliente mail. Pode passar uma string vazia em *cid* se não quiser usar esse parâmetro.
+O parâmetro opcional *cid* permite passar uma ID interna para o anexo. A ID é o valor do cabeçalho `Content-Id`, vai ser usado apenas em mensagens HTML.  O cid associa o anexo com uma referência definida no corpo da mensagem usando uma tag HTML tais como`\&#060;img src="cid:ID"&#062;`. Isso significa que os conteúdos do anexo (por exemplo uma imagem) deve ser exibida dentro da mensagem do cliente mail. O resultado final deve variar dependendo do cliente mail. Pode passar uma string vazia em *cid* se não quiser usar esse parâmetro.
 
 Pode usar o parâmetro opcional *type* para estabeçecer explicitamente o `content-type` do arquivo anexo. Por exemplo, pode passar uma string definindo um tipo MIME ("video/mpeg"). Esse valor de content-type vai ser estabelecido para o anexo, independente de sua extensão. Para saber mais sobre tipos MIME veja a página sobre tipos MIME [em Wikipedia](https://en.wikipedia.org/wiki/MIME).
 
@@ -161,11 +161,11 @@ $transporter.send($email)
 | cid         | Text               | -> | ID do anexo (apenas mensagens HTML), ou " " se nenhum cid for exigido |
 | type        | Text               | -> | Valor do cabeçalho content-type                                       |
 | disposition | Text               | -> | Valor do cabeçalho content-disposition: "inline" ou "attachment".     |
-| Resultados  | 4D. MailAttachment | <- | Attachment object|<!-- END REF -->                          |
+| Resultados  | 4D. MailAttachment | <- | Objeto anexo<!-- END REF -->                                |
 
 #### Descrição
 
-A função `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->creates and returns a new object of the `4D.MailAttachment` type<!-- END REF -->. Isso é idêntico ao comando [`MAIL New attachment`](#mail-new-attachment) (atalho).
+A função `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -->cria e devolve um novo objecto do tipo `4D.MailAttachment`<!-- END REF -->. Isso é idêntico ao comando [`MAIL New attachment`](#mail-new-attachment) (atalho).
 
 ## .cid
 
@@ -174,7 +174,7 @@ A função `4D.MailAttachment.new()` <!-- REF #4D.MailAttachment.new().Summary -
 
 #### Descrição
 
-A propriedade `.cid` contém <!-- REF #MailAttachmentClass.cid.Summary --> the ID of the attachment<!-- END REF -->. Essa funcionalidade é usada em mensagens HTML apenas. Se essa propriedade faltar, o arquivo é manejado como um anexo simples (link).
+A propriedade `.cid` contém <!-- REF #MailAttachmentClass.cid.Summary --> a ID do anexo<!-- END REF -->. Essa funcionalidade é usada em mensagens HTML apenas. Se essa propriedade faltar, o arquivo é manejado como um anexo simples (link).
 
 ## .disposition
 
@@ -183,7 +183,7 @@ A propriedade `.cid` contém <!-- REF #MailAttachmentClass.cid.Summary --> the I
 
 #### Descrição
 
-A propriedade `.disposition` contém <!-- REF #MailAttachmentClass.disposition.Summary -->the value of the `Content-Disposition` header<!-- END REF -->. Dois valores esetão disponíveis:
+A propriedade `.disposition` contém <!-- REF #MailAttachmentClass.disposition.Summary -->o valor do cabeçalho `Content-Disposition`<!-- END REF -->. Dois valores esetão disponíveis:
 
 - "inline": o anexo é renderizado dentro dos conteúdos da mensagem, no local "cid". A renderização depende do cliente mail.
 - "attachment": o anexo é fornecido como um link na mensagem.
@@ -196,9 +196,9 @@ A propriedade `.disposition` contém <!-- REF #MailAttachmentClass.disposition.S
 
 
 <!-- REF #MailAttachmentClass.getContent().Params -->
-| Parâmetros | Tipo |    | Descrição                                            |
-| ---------- | ---- |:--:| ---------------------------------------------------- |
-| Resultados | Blob | <- | Content of the attachment|<!-- END REF --> |
+| Parâmetros | Tipo |    | Descrição                                    |
+| ---------- | ---- |:--:| -------------------------------------------- |
+| Resultados | Blob | <- | Conteúdo do anexo|<!-- END REF --> |
 
 #### Descrição
 
@@ -211,7 +211,7 @@ A função `.getContent()` <!-- REF #MailAttachmentClass.getContent().Summary --
 
 #### Descrição
 
-A propriedade `.name` contém <!-- REF #MailAttachmentClass.name.Summary -->the name and extension of the attachment<!-- END REF -->.  Como padrão, é o nome do arquivo, a não ser que outro nome tenha sido especificado no comando [`MAIL New attachment`](#mail-new-attachment).
+A propriedade `.name` contém <!-- REF #MailAttachmentClass.name.Summary -->o nome e extensão do anexo<!-- END REF -->.  Como padrão, é o nome do arquivo, a não ser que outro nome tenha sido especificado no comando [`MAIL New attachment`](#mail-new-attachment).
 
 ## .path
 
@@ -220,7 +220,7 @@ A propriedade `.name` contém <!-- REF #MailAttachmentClass.name.Summary -->the 
 
 #### Descrição
 
-A propriedade `.path` contém <!-- REF #MailAttachmentClass.path.Summary -->the POSIX path of the attachment file, if it exists<!-- END REF -->.
+A propriedade `.path` contém <!-- REF #MailAttachmentClass.path.Summary -->o caminho POSIX do arquivo anexo, se este existir<!-- END REF -->.
 
 ## .platformPath
 
@@ -236,7 +236,7 @@ A propriedade `.path` contém <!-- REF #MailAttachmentClass.path.Summary -->the 
 
 #### Descrição
 
-A propriedade `.platformPath` devolve <!-- REF #MailAttachmentClass.platformPath.Summary -->the path of the attachment file expressed with the current platform syntax<!-- END REF -->.
+A propriedade `.platformPath` devolve <!-- REF #MailAttachmentClass.platformPath.Summary -->o caminho do arquivo anexo expresso com a sintaxe da plataforma actual<!-- END REF -->.
 
 ## .type
 

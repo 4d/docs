@@ -9,15 +9,15 @@ title: List Box
 
 Collection of columns of the list box.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome    | Tipo de dados                | Possible Values                                  |
+| Nome    | Tipo de dados                | Valores possíveis                                |
 | ------- | ---------------------------- | ------------------------------------------------ |
 | columns | collection of column objects | Contains the properties for the list box columns |
 
 For a list of properties supported by column objects, please refer to the [Column Specific Properties](listbox_overview#column-specific-properties) section.
 
-#### Objects Supported
+#### Objectos suportados
 
 [List Box](listbox_overview.md)
 
@@ -34,13 +34,13 @@ The specified form is displayed:
 * when using `Add Subrecord` and `Edit Subrecord` standard actions applied to the list box (see [Using standard actions](https://doc.4d.com/4Dv17R6/4D/17-R6/Using-standard-actions.300-4354811.en.html)),
 * when a row is double-clicked and the [Double-click on Row](#double-click-on-row) property is set to "Edit Record" or "Display Record".
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome       | Tipo de dados | Possible Values           |
+| Nome       | Tipo de dados | Valores possíveis         |
 | ---------- | ------------- | ------------------------- |
 | detailForm | string        | <ul><li>Name (string) of table or project form</li><li>POSIX path (string) to a .json file describing the form</li><li>Object describing the form</li></ul> |
 
-#### Objects Supported
+#### Objectos suportados
 
 [List Box](listbox_overview.md)
 
@@ -61,13 +61,13 @@ Regardless of the action selected/chosen, the `On Double clicked` form event is 
 
 For the last two actions, the On `Open Detail` form event is also generated. The `On Close Detail` is then generated when a record displayed in the detail form associated with the list box is about to be closed (regardless of whether or not the record was modified).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome                   | Tipo de dados | Possible Values                     |
+| Nome                   | Tipo de dados | Valores possíveis                   |
 | ---------------------- | ------------- | ----------------------------------- |
 | doubleClickInRowAction | string        | "editSubrecord", "displaySubrecord" |
 
-#### Objects Supported
+#### Objectos suportados
 
 [List Box](listbox_overview.md)
 
@@ -83,13 +83,13 @@ This property is used to specify the set to be used to manage highlighted record
 > * The highlighted status of the list box rows and the highlighted status of the table records are completely independent.
 > * If the “Highlight Set” property does not contain a name, it will not be possible to make selections in the list box.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome         | Tipo de dados | Possible Values |
-| ------------ | ------------- | --------------- |
-| highlightSet | string        | Name of the set |
+| Nome         | Tipo de dados | Valores possíveis |
+| ------------ | ------------- | ----------------- |
+| highlightSet | string        | Name of the set   |
 
-#### Objects Supported
+#### Objectos suportados
 
 [List Box](listbox_overview.md)
 
@@ -121,13 +121,13 @@ These properties interact as follows:
 
 Number of columns that must stay permanently displayed in the left part of the list box, even when the user scrolls through the columns horizontally.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome              | Tipo de dados | Possible Values |
-| ----------------- | ------------- | --------------- |
-| lockedColumnCount | integer       | mínimo: 0       |
+| Nome              | Tipo de dados | Valores possíveis |
+| ----------------- | ------------- | ----------------- |
+| lockedColumnCount | integer       | mínimo: 0         |
 
-#### Objects Supported
+#### Objectos suportados
 
 [List Box](listbox_overview.md)
 
@@ -135,13 +135,13 @@ Number of columns that must stay permanently displayed in the left part of the l
 
 Number of columns that cannot be moved during execution.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome              | Tipo de dados | Possible Values |
-| ----------------- | ------------- | --------------- |
-| staticColumnCount | integer       | mínimo: 0       |
+| Nome              | Tipo de dados | Valores possíveis |
+| ----------------- | ------------- | ----------------- |
+| staticColumnCount | integer       | mínimo: 0         |
 
-#### Objects Supported
+#### Objectos suportados
 
 [List Box](listbox_overview.md)
 
@@ -152,13 +152,13 @@ Number of columns that cannot be moved during execution.
 Sets the number of columns of the list box.
 > You can add or remove columns dynamically by programming, using commands such as [LISTBOX INSERT COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-INSERT-COLUMN.301-4505224.en.html) or [LISTBOX DELETE COLUMN](https://doc.4d.com/4Dv18/4D/18/LISTBOX-DELETE-COLUMN.301-4505185.en.html).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome        | Tipo de dados | Possible Values |
-| ----------- | ------------- | --------------- |
-| columnCount | integer       | mínimo: 1       |
+| Nome        | Tipo de dados | Valores possíveis |
+| ----------- | ------------- | ----------------- |
+| columnCount | integer       | mínimo: 1         |
 
-#### Objects Supported
+#### Objectos suportados
 
 [List Box](listbox_overview.md)
 
@@ -205,13 +205,13 @@ Note that setting properties for an element overrides any other values for this 
  //define a linha 6 como desativada mas selecionável novamente
 ```
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome             | Tipo de dados | Possible Values        |
+| Nome             | Tipo de dados | Valores possíveis      |
 | ---------------- | ------------- | ---------------------- |
 | rowControlSource | string        | Row control array name |
 
-#### Objects Supported
+#### Objectos suportados
 
 [List Box](listbox_overview.md)
 
@@ -226,12 +226,12 @@ Designates the option for allowing users to select rows:
   The Up and Down arrow keys select the previous/next row in the list. The other navigation keys scroll the list. The `On Selection Change` form event is generated every time the current row is changed.
 * **Multiple**: Several rows can be selected simultaneously in this mode.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome          | Tipo de dados | Possible Values              |
+| Nome          | Tipo de dados | Valores possíveis            |
 | ------------- | ------------- | ---------------------------- |
 | selectionMode | string        | "multiple", "single", "none" |
 
-#### Objects Supported
+#### Objectos suportados
 
 [List Box](listbox_overview.md)

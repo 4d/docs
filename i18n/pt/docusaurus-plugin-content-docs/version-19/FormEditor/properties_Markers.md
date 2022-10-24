@@ -20,9 +20,9 @@ The Break area is defined as the area between the Detail control line and the Br
 
 You can make Break areas smaller or larger. You can use a Break area to display information that is not part of the records (instructions, current date, current time, etc.), or to display a line or other graphic element that concludes the screen display. In a printed report, you can use a Break area for calculating and printing subtotals and other summary calculations.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome        | Tipo de dados                     | Possible Values                                                                                     |
+| Nome        | Tipo de dados                     | Valores possíveis                                                                                   |
 | ----------- | --------------------------------- | --------------------------------------------------------------------------------------------------- |
 | markerBreak | integer &#x7c; integer collection | Break marker position or collection of break marker positions in pixels.<br/>Minimum value: 0 |
 
@@ -34,9 +34,9 @@ The form Detail area is displayed on the screen and printed once for each record
 
 You can make the Detail area smaller or larger. Whatever you place in the Detail area is displayed or printed once for each record. Most often you place fields or variables in the Detail area so that the information in each record is displayed or printed, but you can place other elements in the Detail area as well.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome       | Tipo de dados | Possible Values                   |
+| Nome       | Tipo de dados | Valores possíveis                 |
 | ---------- | ------------- | --------------------------------- |
 | markerBody | integer       | Detail marker position. Mínimo: 0 |
 
@@ -50,11 +50,11 @@ You make the Footer area smaller or larger.
 
 You can use the Footer area to print graphics, page numbers, the current date, or any text you want at the bottom of each page of a report. For output forms designed for use on screen, the Footer area typically contains buttons that give the user options such as doing a search or sort, printing records, or putting away the current report. Active objects are accepted.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome         | Tipo de dados | Possible Values |
-| ------------ | ------------- | --------------- |
-| markerFooter | integer       | mínimo: 0       |
+| Nome         | Tipo de dados | Valores possíveis |
+| ------------ | ------------- | ----------------- |
+| markerFooter | integer       | mínimo: 0         |
 
 ---
 
@@ -76,9 +76,9 @@ Standard actions such as `Add Subrecord`, `Cancel` (lists displayed using `DISPL
 
 The form can contains [additional header areas](#additional-areas) to be associated with additional breaks. A level 1 Header is printed just before the records grouped by the first sorted field are printed.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome         | Tipo de dados                     | Possible Values                                                                                       |
+| Nome         | Tipo de dados                     | Valores possíveis                                                                                     |
 | ------------ | --------------------------------- | ----------------------------------------------------------------------------------------------------- |
 | markerHeader | integer &#x7c; integer collection | Header marker position or collection of header marker positions in pixels.<br/>Minimum value: 0 |
 

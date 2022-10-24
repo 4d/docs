@@ -19,13 +19,13 @@ Two drag modes are available:
 
 For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) in the *4D Language Reference* manual.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome     | Tipo de dados | Possible Values                                              |
+| Nome     | Tipo de dados | Valores possíveis                                            |
 | -------- | ------------- | ------------------------------------------------------------ |
 | dragging | text          | "none" (default), "custom", "automatic" (excluding list box) |
 
-#### Objects Supported
+#### Objectos suportados
 
 [4D Write Pro areas](writeProArea_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview)
 
@@ -46,13 +46,13 @@ Two drop modes are available:
 
 For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Drag-and-Drop.300-4505037.en.html) in the *4D Language Reference* manual.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome     | Tipo de dados | Possible Values                                              |
+| Nome     | Tipo de dados | Valores possíveis                                            |
 | -------- | ------------- | ------------------------------------------------------------ |
 | dropping | text          | "none" (default), "custom", "automatic" (excluding list box) |
 
-#### Objects Supported
+#### Objectos suportados
 
 [4D Write Pro areas](writeProArea_overview.md) - [Button](button_overview.md) - [Input](input_overview.md) - [Hierarchical List](list_overview.md#overview) - [List Box](listbox_overview.md#overview) - [Plug-in Area](pluginArea_overview.md#overview)
 
@@ -66,13 +66,13 @@ For more information, refer to [Drag and Drop](https://doc.4d.com/4Dv18/4D/18/Dr
 
 When this option is enabled, the object method is executed with the `On Data Change` event *at the same moment* the user changes the value of the indicator. When the option is disabled, the method is executed *after* the modification.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome                | Tipo de dados | Possible Values |
-| ------------------- | ------------- | --------------- |
-| continuousExecution | boolean       | true, false     |
+| Nome                | Tipo de dados | Valores possíveis |
+| ------------------- | ------------- | ----------------- |
+| continuousExecution | boolean       | true, false       |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Progress bar](progressIndicator.md) - [Ruler](ruler.md) - [Stepper](stepper.md)
 
@@ -94,13 +94,13 @@ Several types of method references are supported:
   `../../CustomMethods/myMethod.4dm` You can also use a filesystem:  
   `/RESOURCES/Buttons/bOK.4dm` In this case, 4D does not provide automatic support for object operations.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome   | Tipo de dados | Possible Values                                                    |
+| Nome   | Tipo de dados | Valores possíveis                                                  |
 | ------ | ------------- | ------------------------------------------------------------------ |
 | method | text          | Object method standard or custom file path, or project method name |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Área 4D View Pro](viewProArea_overview.md) - [Área 4D Write Pro](writeProArea_overview.md) - \[Botão\](button_overview. md) - [Grade de botões](buttonGrid_overview.md) - [Caixa de seleção](checkbox_overview.md) - \[Combo Box\](comboBox_overview. md) - [Lista dropdown](dropdownList_Overview.md) - \[Lista hierárquica\](list_overview. md#overview) - [Input](input_overview.md) - [List Box](listbox_overview.md#overview) - \[Columna List Box\](listbox_overview. md#list-box-columns) - [Botão imagem](pictureButton_overview.md) - \[Menu emergente de imagem,\](picturePopupMenu_overview. md) - [Área de plugins](pluginArea_overview.md#overview) - [Indicadores de progresso](progressIndicator.md) - \[Botón radio\](radio_overview. md) - [Régua](ruler.md) - [Spinner](spinner.md) - [Splitter](splitters.md) - \[Stepper\](stepper. md) - [Subformulário](subform_overview.md) - [Controle de abas](tabControl.md) - [Área web](webArea_overview.md#overview)
 
@@ -112,13 +112,13 @@ Several types of method references are supported:
 
 Authorizes the movement of rows during execution. This option is selected by default. It is not available for [selection type list boxes](listbox_overview.md#selection-list-boxes) nor for [list boxes in hierarchical mode](properties_Hierarchy.md#hierarchical-list-box).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome        | Tipo de dados | Possible Values |
-| ----------- | ------------- | --------------- |
-| movableRows | boolean       | true, false     |
+| Nome        | Tipo de dados | Valores possíveis |
+| ----------- | ------------- | ----------------- |
+| movableRows | boolean       | true, false       |
 
-#### Objects Supported
+#### Objectos suportados
 
 [List Box](listbox_overview.md#overview)
 
@@ -128,13 +128,13 @@ Authorizes the movement of rows during execution. This option is selected by def
 
 Allows the selection of multiple records/options in a [hierarchical list](list_overview.md).
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome          | Tipo de dados | Possible Values              |
+| Nome          | Tipo de dados | Valores possíveis            |
 | ------------- | ------------- | ---------------------------- |
 | selectionMode | text          | "multiple", "single", "none" |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Hierarchical List](list_overview.md)
 
@@ -150,13 +150,13 @@ In list boxes based on a selection of records, the standard sort function is ava
 
 In other cases (list boxes based on named selections, columns associated with expressions), the standard sort function is not available. A standard list box sort changes the order of the current selection in the database. However, the highlighted records and the current record are not changed. A standard sort synchronizes all the columns of the list box, including calculated columns.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome     | Tipo de dados | Possible Values |
-| -------- | ------------- | --------------- |
-| sortable | boolean       | true, false     |
+| Nome     | Tipo de dados | Valores possíveis |
+| -------- | ------------- | ----------------- |
+| sortable | boolean       | true, false       |
 
-#### Objects Supported
+#### Objectos suportados
 
 [List Box](listbox_overview.md)
 
@@ -170,12 +170,12 @@ You can assign both a standard action and a project method to an object. In this
 
 You can also set this property using the `OBJECT SET ACTION` command.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome   | Tipo de dados | Possible Values                                                                                                  |
+| Nome   | Tipo de dados | Valores possíveis                                                                                                |
 | ------ | ------------- | ---------------------------------------------------------------------------------------------------------------- |
 | action | string        | The name of a [valid standard action](https://doc.4d.com/4Dv17R5/4D/17-R5/Standard-actions.300-4163633.en.html). |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Button](button_overview.md) - [Button Grid](buttonGrid_overview.md) - [Check Box](checkbox_overview.md) - [Drop-down List](dropdownList_Overview.md) - [List Box](listbox_overview.md) - [Picture Button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Tab control](tabControl.md)

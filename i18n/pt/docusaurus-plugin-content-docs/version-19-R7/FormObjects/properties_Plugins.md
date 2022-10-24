@@ -9,12 +9,12 @@ If advanced options are provided by the author of the plug-in, an **Advanced Pro
 
 Because the Advanced properties feature is under the control of the author of the plug-in, information about these Advanced options is the responsibility of the distributor of the plug-in.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome             | Tipo de dados | Possible Values                                                                                                              |
+| Nome             | Tipo de dados | Valores possíveis                                                                                                            |
 | ---------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | customProperties | text          | Plugin specific properties, passed to plugin as a JSON string if an object, or as a binary buffer if a base64 encoded string |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Plug-in Area](pluginArea_overview.md)

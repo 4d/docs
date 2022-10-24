@@ -7,9 +7,9 @@ title: Jerarquía
 
 `List box de tipo array`
 
-This property specifies that the list box must be displayed in hierarchical form. In the JSON form, this feature is triggered [when the *dataSource* property value is an array](properties_Object.md#hierarchical-list-box), i.e. a collection.
+Esta propiedad especifica que el list box debe mostrarse en forma jerárquica. En el formulario JSON, esta funcionalidad se activa [cuando el valor de la propiedad *dataSource* es un array](properties_Object.md#hierarchical-list-box), es decir, una colección.
 
-Additional options (**Variable 1...10**) are available when the *Hierarchical List Box* option is selected, corresponding to each *dataSource* array to use as break column. Cada vez que se introduce un valor en un campo, se añade una nueva línea. Se pueden especificar hasta 10 variables. These variables set the hierarchical levels to be displayed in the first column.
+Las opciones adicionales (**Variable 1...10**) están disponibles cuando se selecciona la opción *List box jerárquico*, correspondiente a cada elemento del array *dataSource* a utilizar como columna de ruptura. Cada vez que se introduce un valor en un campo, se añade una nueva línea. Se pueden especificar hasta 10 variables. Estas variables definen los niveles jerárquicos que se mostrarán en la primera columna.
 
 Ver [List box jerárquicos](listbox_overview.md#hierarchical-list-boxes)
 

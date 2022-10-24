@@ -95,5 +95,5 @@ La lista de las principales actualizaciones de esta documentación. Para obtener
 - [IMAP Mail](API/IMAPTransporterClass.md), [POP3 Mail](API/POP3TransporterClass.md) y [SMTP Mail](API/SMTPTransporterClass.md): la propiedad `authenticationMode` activa a OAuth 2.0
 - [IMAP Mail](API/IMAPTransporterClass.md): nuevas funciones `.expunge()` y `.append()`
 - Nuevo componente [WebAdmin](Admin/webAdmin.md) del servidor web
-- New [DataExplorer](../Admin/dataExplorer.md) interface
+- Nueva interfaz [DataExplorer](../Admin/dataExplorer.md)
 - Nuevas [sesiones de usuario](WebServer/sessions.md) web y [su API](API/SessionClass.md).

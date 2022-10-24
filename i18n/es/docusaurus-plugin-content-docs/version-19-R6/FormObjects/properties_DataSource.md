@@ -277,7 +277,7 @@ El uso de esta propiedad requiere el cumplimiento de los siguientes principios:
 
 #### Objetos soportados
 
-[Input](input_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Área de entrada](input_overview.md) - [Columna List Box](listbox_overview.md#list-box-columns)
 
 ---
 
