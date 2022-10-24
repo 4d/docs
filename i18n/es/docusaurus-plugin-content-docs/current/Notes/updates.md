@@ -8,69 +8,69 @@ La lista de las principales actualizaciones de esta documentación. Para obtener
 
 ## 4D v19 R7
 
-- Related data and computed/alias attributes can be displayed in the [Data Explorer](Admin/dataExplorer.md#basics).
-- New [FileHandle](API/FileHandleClass.md) class and new [`.open()`](API/FileClass.md#open) function in the `File` class.
+- Los datos relacionados y los atributos calculados/alias pueden mostrarse en el [explorador de datos](Admin/dataExplorer.md#basics).
+- Nueva clase [FileHandle](API/FileHandleClass.md) y nueva función [`.open()`](API/FileClass.md#open) en la clase `File`.
 
 
 ## 4D v19 R6
 
 - Nueva clase [HTTPRequest](API/HTTPRequestClass.md).
-- Collection functions that can call code now support function objects as *formula* parameter: [`.every()`](API/CollectionClass.md#every), [`.filter()`](API/CollectionClass.md#filter), [`.find()`](API/CollectionClass.md#find), [`.findIndex()`](API/CollectionClass.md#findindex), [`.map()`](API/CollectionClass.md#map), [`.orderByMethod()`](API/CollectionClass.md#orderbymethod), [`.reduce()`](API/CollectionClass.md#reduce), [`.some()`](API/CollectionClass.md#some), [`.sort()`](API/CollectionClass.md#sort)
-- Listbox cells support [horizontal](FormObjects/properties_CoordinatesAndSizing.md#horizontal-padding) and [vertical](FormObjects/properties_CoordinatesAndSizing.md#vertical-padding) padding.
-- 4D View Pro: new [VP CREATE TABLE](ViewPro/method-list.md#vp-create-table) and [VP REMOVE TABLE](ViewPro/method-list.md#vp-remove-table) commands to handle tables in sheets.
-- Ability to see related, computed, and alias attributes in the [Web Data Explorer](Admin/dataExplorer.md#basics).
-- New page explaining [why and how 4D collects data](Admin/data-collect.md).
+- Las funciones colección que pueden llamar al código ahora soportan objetos función como parámetro *fórmula*: [`.every()`](API/CollectionClass.md#every), [`.filter()`](API/CollectionClass.md#filter), [`.find()`](API/CollectionClass.md#find), [`.findIndex()`](API/CollectionClass.md#findindex), [`.map()`](API/CollectionClass.md#map), [`.orderByMethod()`](API/CollectionClass.md#orderbymethod), [`.reduce()`](API/CollectionClass.md#reduce), [`.some()`](API/CollectionClass.md#some), [`.sort()`](API/CollectionClass.md#sort)
+- Las celdas listbox soportan el espacio [horizontal](FormObjects/properties_CoordinatesAndSizing.md#horizontal-padding) y [vertical ](FormObjects/properties_CoordinatesAndSizing.md#vertical-padding).
+- 4D View Pro: nuevos comandos [VP CREATE TABLE](ViewPro/method-list.md#vp-create-table) y [VP REMOVE TABLE](ViewPro/method-list.md#vp-remove-table) para gestionar las tablas en las hojas.
+- Posibilidad de ver los atributos relacionados, calculados y alias en el [explorador de datos web](Admin/dataExplorer.md#basics).
+- Nueva página que explica [por qué y cómo 4D recoge los datos](Admin/data-collect.md).
 
 
 ## 4D v19 R5
 
 - Aplicaciones cliente/servidor generadas:
-    - The project [directory.json file](../Users/handling_users_groups.md#directoryjson-file) can now be [embedded in the server](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) at build time, allowing you to deploy a client/server application with a basic security user and group configuration.
-    - You can now [deselect useless modules](../Desktop/building.md#deselecting-modules) in your built applications.
+    - El [archivo directory.json](../Users/handling_users_groups.md#directoryjson-file) del proyecto ahora puede ser [integrado al servidor](../Desktop/building.md#embed-the-project-users-and-groups-in-built-server-application) al momento de la generación, lo que le permite desplegar una aplicación cliente/servidor con una configuración básica de la seguridad de los usuarios y de los grupos.
+    - Ahora puede [deseleccionar los módulos inútiles](../Desktop/building.md#deselecting-modules) en sus aplicaciones generadas.
 
-- [Client/Server optimization](../ORDA/remoteDatastores.md#clientserver-optimization): New class functions allow you to handle the ORDA cache and the contents of an optimization context. See [Preconfiguring contexts](../ORDA/remoteDatastores.md#preconfiguring-contexts) and [ORDA Cache](../ORDA/remoteDatastores.md#orda-cache) for more information.
+- [Optimización cliente/servidor](../ORDA/remoteDatastores.md#clientserver-optimization): nuevas funciones de clase permiten manejar la caché ORDA y el contenido de un contexto de optimización. Para más información [Preconfiguración de contextos](../ORDA/remoteDatastores.md#preconfiguring-contexts) y [Caché ORDA](../ORDA/remoteDatastores.md#orda-cache).
 
-    > These functions are intended for developers who need to customize ORDA default features for specific configurations. En la mayoría de los casos, no será necesario utilizarlos.
+    > Estas funciones están destinadas a los desarrolladores que necesitan personalizar las funciones por defecto de ORDA para las configuraciones específicas. En la mayoría de los casos, no será necesario utilizarlos.
 
-- [DataClass class](../API/DataClassClass.md): The new [.getCount()](../API/DataClassClass.md#getcount) function returns the number of entities in a dataclass.
+- [clase DataClass](../API/DataClassClass.md): la nueva función [.getCount()](../API/DataClassClass.md#getcount) devuelve el número de entidades de una dataclass.
 
 - 4D View Pro:
-    - The new [VP SET DATA CONTEXT](ViewPro/method-list.md#vp-set-data-context), [VP Get data context](ViewPro/method-list.md#vp-get-data-context), [VP SET BINDING PATH](ViewPro/method-list.md#vp-set-binding-path), [VP Get binding path](ViewPro/method-list.md#vp-get-binding-path) commands allow you to create data contexts and bind their contents to sheet cells.
-    - [VP EXPORT DOCUMENT](ViewPro/method-list.md#vp-get-binding-path) and [VP Export to object](ViewPro/method-list.md#vp-get-binding-path) now accept the new `includeBindingSource` option that exports the contents of a data context as cell values.
+    - Los nuevos comandos [VP SET DATA CONTEXT](ViewPro/method-list.md#vp-set-data-context), [VP Get data context](ViewPro/method-list.md#vp-get-data-context), [VP SET BINDING PATH](ViewPro/method-list.md#vp-set-binding-path), [VP Get binding path](ViewPro/method-list.md#vp-get-binding-path) permiten crear contextos de datos y vincular su contenido a las celdas de la hoja.
+    - [VP EXPORT DOCUMENT](ViewPro/method-list.md#vp-get-binding-path) y [VP Export to object](ViewPro/method-list.md#vp-get-binding-path) aceptan ahora la nueva opción `includeBindingSource` que exporta el contenido de un contexto de datos como valores de celda.
 
 
 ## 4D v19 R4
 
-- [Alias attributes](ORDA/ordaClasses.md#alias-attributes-1) are available in ORDA classes.
+- [Atributos Alias](ORDA/ordaClasses.md#alias-attributes-1) están disponibles en las clases ORDA.
 
-- Support for [break and continue](Concepts/cf_looping.md#break-and-continue) statements in loops.
-- Support for [return](Concepts/flow-control.md#return-expression) statement and [return expression](Concepts/parameters.md#return-expression) to return values.
-- Support for [compound assignment operators](Concepts/operators.md#compound-assignment-operators), [short-circuit operators](Concepts/operators.md#short-circuit-operators), and [ternary operator](Concepts/operators.md#ternary-operator)
-- The [Code Editor](../code-editor/write-class-method.md#navigation-dropdown) now includes an dropdown tool and supports markers for better code navigation.
-- New Preferences: [**Include tokens in project source files**](Preferences/general.md#include-tokens-in-project-source-files) and [**Show clipboards**](Preferences/methods.md#show-clipboards) option on the Methods page.
-- New REST request to [lock/unlock](REST/$lock.md) entities.
-- [4D View Pro](ViewPro/getting-started.md) chapter added with new commands: [VP Copy to object](ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](ViewPro/method-list.md#vp-paste-from-object).
+- Soporte para las instrucciones [break y continue](Concepts/cf_looping.md#break-and-continue) en los bucles.
+- Soporte para la instrucción [return](Concepts/flow-control.md#return-expression) y [la expresión return](Concepts/parameters.md#return-expression) para devolver los valores.
+- Soporte de los [operadores de asignación compuestos](Concepts/operators.md#compound-assignment-operators), [los operadores de cortocircuito](Concepts/operators.md#short-circuit-operators) y del [operador ternario](Concepts/operators.md#ternary-operator)
+- El [editor de código](../code-editor/write-class-method.md#navigation-dropdown) incluye ahora una herramienta desplegable y soporta marcadores para una mejor navegación por el código.
+- Nuevas Preferencias: [**Incluir los tokens en los archivos source del proyecto**](Preferences/general.md#include-tokens-in-project-source-files) y la opción [**Mostrar los portapapeles**](Preferences/methods.md#show-clipboards) en la página Métodos.
+- Nueva petición REST para [bloquear/desbloquear](REST/$lock.md) las entidades.
+- [4D View Pro](ViewPro/getting-started.md) capítulo añadido con nuevos comandos: [VP Copy to object](ViewPro/method-list.md#vp-copy-to-object), [VP MOVE CELLS](ViewPro/method-list.md#vp-move-cells), [VP PASTE FROM OBJECT](ViewPro/method-list.md#vp-paste-from-object).
 - Nuevo [Clase SystemWorker](API/SystemWorkerClass.md).
 
 
 ## 4D v19 R3
 
-- [Computed properties](Concepts/classes.md#function-get-and-function-set) are available in classes.
-- [Computed attributes](ORDA/ordaClasses.md#computed-attributes) are available in ORDA classes. They are similar to computed properties but also support [query](ORDA/ordaClasses.md#function-query-attributename) and [orderBy](ORDA/ordaClasses.md#function-orderby-attributename) functions.
-- New ORDA dataclass attributes: [`exposed`](API/DataClassAttributeClass.md#exposed) and [`readOnly`](API/DataClassAttributeClass.md#readonly).
-- [ZIP archives](API/ZipArchiveClass.md#zip-create-archive) now supports *LZMA* and *xz* compression algorithms.
-- A [new build option](Desktop/building.md#allow-connection-of-silicon-mac-clients) makes it easier to include Silicon Mac clients in Server applications on Windows.
-- Extended [support of dark mode](Preferences/general.md#appearance-macos-only) on macOS.
-- Support of **OAuth2 token object** in [`IMAP New transporter`](API/IMAPTransporterClass.md#imap-new-transporter), [`POP3 New transporter`](API/POP3TransporterClass.md#pop3-new-transporter), and [`SMTP New transporter`](API/SMTPTransporterClass.md#smtp-new-transporter).
-- Users can now load a [log configuration file](Debugging/debugLogFiles.md#using-a-log-configuration-file) using a button in the [server administration window](ServerWindow/maintenance.md#load-logs-configuration-file).
-- Handling [optional parameters](Concepts/parameters.md#optional-parameters) is more flexible in the 4D language.
-- Debugging web server sessions [is easier on 4D Server](WebServer/sessions.md#preemptive-mode).
-- The new [4D NetKit](Extensions/overview.md#list-of-4d-components) component allows you to connect to third-party APIs such as Microsoft Graph.
+- Las [propiedades calculadas](Concepts/classes.md#function-get-and-function-set) están disponibles en las clases.
+- [Los atributos calculados](ORDA/ordaClasses.md#computed-attributes) están disponibles en las clases ORDA. Son similares a las propiedades calculadas pero también soportan las funciones [query](ORDA/ordaClasses.md#function-query-attributename) y [orderBy](ORDA/ordaClasses.md#function-orderby-attributename).
+- Nuevos atributos de dataclass ORDA: [`exposed`](API/DataClassAttributeClass.md#exposed) y [`readOnly`](API/DataClassAttributeClass.md#readonly).
+- [Los archivos ZIP](API/ZipArchiveClass.md#zip-create-archive) ahora soportan los algoritmos de compresión *LZMA* y *xz*.
+- Una [nueva opción de build](Desktop/building.md#allow-connection-of-silicon-mac-clients) facilita la inclusión de los clientes Silicon Mac en las aplicaciones servidor en Windows.
+- [soporte del modo oscuro](Preferences/general.md#appearance-macos-only) en macOS.
+- Soporte de **OAuth2 token object** en [`IMAP New transporter`](API/IMAPTransporterClass.md#imap-new-transporter), [`POP3 New transporter`](API/POP3TransporterClass.md#pop3-new-transporter) y [`SMTP New transporter`](API/SMTPTransporterClass.md#smtp-new-transporter).
+- Los usuarios pueden ahora cargar un [archivo de configuración de registro](Debugging/debugLogFiles.md#using-a-log-configuration-file) utilizando un botón en la [ventana de administración del servidor](ServerWindow/maintenance.md#load-logs-configuration-file).
+- La gestión de los [parámetros opcionales](Concepts/parameters.md#optional-parameters) es más flexible en el lenguaje 4D.
+- La depuración de las sesiones de servidor web [es más fácil en 4D Server](WebServer/sessions.md#preemptive-mode).
+- El nuevo componente [4D NetKit](Extensions/overview.md#list-of-4d-components) permite conectar con APIs de terceros como Microsoft Graph.
 
 
 ## 4D v19 R2
 
-- A [default .gitignore file](Preferences/general.md#create-gitignore-file) can be created with new projects
+- Un [archivo .gitignore por defecto](Preferences/general.md#create-gitignore-file) puede ser creado con nuevos proyectos
 - New [Blob class API](API/BlobClass.md) to handle new [`4D.Blob` objects](Concepts/dt_blob.md#blob-types)
 - `no-bom` support and new default end-of-line characters in [`.setText()`](API/FileClass.md#settext)
 
