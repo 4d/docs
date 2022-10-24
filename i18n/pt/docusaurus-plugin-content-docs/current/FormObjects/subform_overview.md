@@ -177,7 +177,7 @@ The code of the event is unrestricted (for example, 20000 or -100). You can use 
 
 For more information, refer to the description of the `CALL SUBFORM CONTAINER` command.
 
-#### EXECUTE METHOD IN SUBFORM command
+#### Comando EXECUTE METHOD IN SUBFORM
 
 The `EXECUTE METHOD IN SUBFORM` command lets a form or one of its objects request the execution of a method in the context of the subform instance, which gives it access to the subform variables, objects, etc. This method can also receive parameters. This method can also receive parameters.
 
