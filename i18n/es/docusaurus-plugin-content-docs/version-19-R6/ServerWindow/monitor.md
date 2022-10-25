@@ -17,21 +17,21 @@ The graphic area lets you see the evolution in real time of several parameters: 
 
 - **CPU Usage**: Overall CPU usage of the machine, for all applications taken together. The specific part of 4D Server in this usage rate is provided in the "Processors" information area.
 - **Network**: Number of bytes received per second by the machine (server or client). El número de bytes enviados se suministra en el área de información "Red".
-- **Physical memory**: Quantity of RAM memory of machine used by 4D Server. A more detailed view of memory use is provided in the "Memory" information area.
-- **Virtual memory**: Quantity of virtual memory used by the 4D Server application. This memory is allocated by the system according to the application needs. The value found at the bottom right of the area indicates the quantity of memory currently being used. The value found at the top left indicates the maximum quantity of usable virtual memory. The maximum value is calculated dynamically according to the general memory settings of the application.
-- **Cache**: Quantity of cache memory used by the 4D Server application. The value found at the bottom right of the area indicates the quantity of memory currently being used. The value found at the bottom right of the area indicates the quantity of memory currently being used.
+- **Physical memory**: Quantity of RAM memory of machine used by 4D Server. En el área de información "Memoria" se ofrece una visión más detallada del uso de la memoria.
+- **Memoria virtual**: cantidad de memoria virtual utilizada por la aplicación 4D Server. Esta memoria es asignada por el sistema en función de las necesidades de la aplicación. El valor que se encuentra en la parte inferior derecha del área indica la cantidad de memoria que se está utilizando actualmente. El valor que se encuentra en la parte superior izquierda indica la cantidad máxima de memoria virtual utilizable. El valor máximo se calcula dinámicamente en función de la configuración general de la memoria de la aplicación.
+- **Caché**: cantidad de memoria caché utilizada por la aplicación 4D Server. El valor que se encuentra en la parte inferior derecha del área indica la cantidad de memoria que se está utilizando actualmente. The value found at the bottom right of the area indicates the quantity of memory currently being used.
 
-Note that when this option is selected, the graph area scrolling is slowed down since an efficient analysis of the cache is generally carried out over a fairly long observation period.
+Tenga en cuenta que cuando se selecciona esta opción, el desplazamiento del área gráfica se ralentiza, ya que un análisis eficaz de la memoria caché se realiza generalmente durante un período de observación bastante largo.
 
 
 ## Visión general del área
 
-The "Overview" area provides various information concerning the system, application and licenses installed on the 4D Server machine.
+El área "Visión general" ofrece diferente información sobre el sistema, la aplicación y las licencias instaladas en la máquina 4D Server.
 
-- **System Information**: Computer, system and IP address of server
-- **Application Information**: Internal version number of 4D Server and Volume Shadow Copy status
-- **Maximum connections**: Number of simultaneous connections allowed by type of server
-- **Licencia**: descripción de la licencia. When the product license or one of its attached expansions expires in less than 10 days, e.g. in case of a subscription-license, 4D Server tries to automatically renew the license from the 4D user account. In this case, if the automatic renewal failed for some reason (connection error, invalid account status, non-prolongated contract...), a warning icon is displayed next to the license to alert the server administrator. Additional information about the license renewal status can be displayed in a tip when you hover the mouse over the area:
+- **Información sistema**: ordenador, sistema y dirección IP del servidor
+- **Información aplicación**: número de versión interna de 4D Server y estado de Volume Shadow Copy
+- **Conexiones máximas**: número de conexiones simultáneas permitidas por tipo de servidor
+- **Licencia**: descripción de la licencia. Cuando la licencia producto o una de sus expansiones adjuntas vence en menos de 10 días, por ejemplo en el caso de una licencia de suscripción, 4D Server intenta renovar automáticamente la licencia desde la cuenta del usuario 4D. En este caso, si la renovación automática ha fallado por alguna razón (error de conexión, estado de la cuenta inválido, contrato no prolongado...), se muestra un icono de advertencia junto a la licencia para alertar al administrador del servidor. Additional information about the license renewal status can be displayed in a tip when you hover the mouse over the area:
 
 ![](../assets/en/Admin/server-licence-failed.png)
 
