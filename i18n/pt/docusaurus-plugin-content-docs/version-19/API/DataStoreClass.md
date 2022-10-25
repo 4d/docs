@@ -295,7 +295,7 @@ Ver  exemplo da função [`.startTransaction()`](#starttransaction).
 #### Descrição
 
 A função `.encryptionStatus()` <!-- REF #DataStoreClass.encryptionStatus().Summary -->devolve um objecto que fornece o estado de encriptação para o ficheiro de dados actual<!-- END REF --> (ou seja, o ficheiro de dados do datastore `ds`). Também se proporciona o estado de cada tabela.
-> Use the `Data file encryption status` command to determine the encryption status of any other data file.
+> Utilizar o comando `Estado de encriptação de ficheiros de dados` para determinar o estado de encriptação de qualquer outro ficheiro de dados.
 
 **Valor retornado**
 
