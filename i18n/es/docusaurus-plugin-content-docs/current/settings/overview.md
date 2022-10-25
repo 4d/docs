@@ -51,4 +51,4 @@ La mayoría de los parámetros se aplican inmediatamente. However, a few of them
 
 To reset the parameters to their default values and remove the bold style indicating that they have been customized, click **Reset to factory settings**.
 
-Este botón reinicializa todos los parámetros de la página actual. It becomes active when at least one parameter has been modified on the current page.
+Este botón reinicializa todos los parámetros de la página actual. Se activa cuando se ha modificado al menos un parámetro en la página actual.
