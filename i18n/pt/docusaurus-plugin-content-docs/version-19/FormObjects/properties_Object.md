@@ -52,7 +52,7 @@ This feature is only supported for objects that contribute to the overall geomet
 
 Here is the list of objects whose value can be saved:
 
-| Objeto                                                  | Saved value                                                                            |
+| Objeto                                                  | Valor guardado                                                                         |
 | ------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | [Check Box](checkbox_overview.md)                       | Value of associated variable (0, 1, 2)                                                 |
 | [Lista suspensa ou drop down](dropdownList_Overview.md) | Number of selected row                                                                 |
@@ -134,7 +134,7 @@ For an array list box, the **Variable or Expression** property usually holds the
 
 ---
 
-## Expression Type
+## Tipo de expressão
 
 > This property is called [**Data Type**](properties_DataSource.md#data-type-expression-type) in the Property List for [selection](listbox_overview.md#selection-list-boxes) and [collection](listbox_overview.md#collection-or-entity-selection-list-boxes) type list box columns and for [Drop-down Lists](dropdownList_Overview.md) associated to an [object](FormObjects/dropdownList_Overview.md#using-an-object) or an [array](FormObjects/dropdownList_Overview.md#using-an-array).
 
