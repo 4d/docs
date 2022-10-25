@@ -22,14 +22,14 @@ You can set some properties of the menu commands by using control characters (me
 
 Control characters do not appear in the menu command labels. You should therefore avoid using them so as not to have any undesirable effects. The control characters are the following:
 
-| Character   | Descrição                   | Utilização                                                    |
-| ----------- | --------------------------- | ------------------------------------------------------------- |
-| (           | open parenthese             | Disable item                                                  |
-| <B          | less than B                 | Bold font                                                     |
-| <I          | less than I                 | Italic font                                                   |
-| <U          | less than U                 | Underline font                                                |
-| !+character | exclamation point+character | Add character as check mark (macOS); add check mark (Windows) |
-| /+character | slash+character             | Add character as shortcut                                     |
+| Caracter   | Descrição                   | Utilização                                                    |
+| ---------- | --------------------------- | ------------------------------------------------------------- |
+| (          | open parenthese             | Disable item                                                  |
+| <B         | less than B                 | Bold font                                                     |
+| <I         | less than I                 | Italic font                                                   |
+| <U         | less than U                 | Underline font                                                |
+| !+caracter | exclamation point+character | Add character as check mark (macOS); add check mark (Windows) |
+| /+caracter | slash+character             | Add character as shortcut                                     |
 
 ## Parâmetros
 
@@ -53,7 +53,7 @@ The choice between associating a standard action or a project method with a menu
 
 You can assign a project method and/or a standard action to a selected menu command in the Menu editor:
 
-- **Method Name**: Select an existing project method name in the combo box. If the project method does not exist, enter its name in the "Method Name" combo box then click on the [...] button. 4D displays a project method creation dialog that is used to access the Method editor.
+- **Method Name**: Select an existing project method name in the combo box. If the project method does not exist, enter its name in the "Method Name" combo box then click on the [...] button. 4D exibe um diálogo de criação de métodos de projecto que é utilizado para aceder ao editor de métodos.
 - **Associated Standard Action**: Choose or write the action you want to assign in the "Associated Standard Action" combo box. You can enter any supported action and (optionally) parameter you want in the area. For a comprehensive list of standard actions, please refer to the **Standard actions** section in the *Design Reference*. **Note for macOS:** Under macOS, the custom menu commands associated with the *Quit* action are automatically placed in the application menu, in compliance with the platform interface standards.
 
 Using the 4D language, you can associate a project method using the `SET MENU ITEM METHOD` command, and a standard action using the `SET MENU ITEM PROPERTY` command.
@@ -96,8 +96,8 @@ You can add keyboard shortcuts to any menu command. If a menu command has one of
 
 You can also add the **Shift** key as well as the **Alt** key (Windows) or **Option** key (macOS) to the shortcut associated with a menu command. This multiplies the number of shortcuts that can be used. The following types of keyboard shortcuts can therefore be defined:
 
-- Under Windows:
-  - Ctrl+character
+- Em Windows:
+  - Ctrl+caracter
   - Ctrl+Shift+character
   - Ctrl+Alt+character
   - Ctrl+Shift+Alt+character
@@ -114,14 +114,14 @@ You can use any alphanumeric keys as a keyboard shortcut, except for the keys re
 
 These reserved key combinations are listed in the following table:
 
-| Key (Windows)   | Key (macOS)        | Operação    |
-| --------------- | ------------------ | ----------- |
-| Ctrl+C          | Comando+C          | Copiar      |
-| Ctrl+Q          | Comando+Q          | Salir       |
-| Ctrl+V          | Comando+V          | Colar       |
-| Ctrl+X          | Comando+X          | Cortar      |
-| Ctrl+Z          | Comando+Z          | Deshacer    |
-| Ctrl+. (period) | Comando+. (period) | Stop action |
+| Tecla (Windows) | Tecla (macOS)     | Operação      |
+| --------------- | ----------------- | ------------- |
+| Ctrl+C          | Comando+C         | Copiar        |
+| Ctrl+Q          | Comando+Q         | Salir         |
+| Ctrl+V          | Comando+V         | Colar         |
+| Ctrl+X          | Comando+X         | Cortar        |
+| Ctrl+Z          | Comando+Z         | Deshacer      |
+| Ctrl+. (ponto)  | Comando+. (ponto) | Parar a acção |
 
 To assign a keyboard shortcut in the Menu editor:
 

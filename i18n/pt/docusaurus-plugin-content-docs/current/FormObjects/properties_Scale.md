@@ -7,13 +7,13 @@ title: Escala
 
 Enables the "barber shop" variant for the thermometer.
 
-#### JSON Grammar
+#### Gramática JSON
 
-|      Nome       | Tipo de dados | Possible Values                                             |
+|      Nome       | Tipo de dados | Valores possíveis                                           |
 |:---------------:|:-------------:| ----------------------------------------------------------- |
 | [max](#maximum) |    number     | NOT passed = enabled; passed = disabled (basic thermometer) |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Barber shop](progressIndicator.md#barber-shop)
 
@@ -23,13 +23,13 @@ Enables the "barber shop" variant for the thermometer.
 
 Displays/Hides the graduations next to the labels.
 
-#### JSON Grammar
+#### Gramática JSON
 
-|      Nome       | Tipo de dados | Possible Values |
-|:---------------:|:-------------:| --------------- |
-| showGraduations |    boolean    | "true", "false" |
+|      Nome       | Tipo de dados | Valores possíveis |
+|:---------------:|:-------------:| ----------------- |
+| showGraduations |    boolean    | "true", "false"   |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
 
@@ -39,13 +39,13 @@ Displays/Hides the graduations next to the labels.
 
 Scale display measurement.
 
-#### JSON Grammar
+#### Gramática JSON
 
-|      Nome      | Tipo de dados | Possible Values |
-|:--------------:|:-------------:| --------------- |
-| graduationStep |    integer    | mínimo: 0       |
+|      Nome      | Tipo de dados | Valores possíveis |
+|:--------------:|:-------------:| ----------------- |
+| graduationStep |    integer    | mínimo: 0         |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
 
@@ -59,13 +59,13 @@ Specifies the location of an object's displayed text.
 * Top - Displays labels to the left of or above an indicator
 * Bottom - Displays labels to the right of or below an indicator
 
-#### JSON Grammar
+#### Gramática JSON
 
-|      Nome       | Tipo de dados | Possible Values                          |
+|      Nome       | Tipo de dados | Valores possíveis                        |
 |:---------------:|:-------------:| ---------------------------------------- |
 | labelsPlacement |    string     | "none", "top", "bottom", "left", "right" |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler)
 
@@ -78,13 +78,13 @@ Maximum value of an indicator.
 * For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
 * To enable [Barber shop thermometers](progressIndicator.md#barber-shop), this property must be omitted.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome |  Tipo de dados  | Possible Values                     |
+| Nome |  Tipo de dados  | Valores possíveis                   |
 |:----:|:---------------:| ----------------------------------- |
 | max  | string / number | minimum: 0 (for numeric data types) |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
 
@@ -94,13 +94,13 @@ Maximum value of an indicator.
 
 Minimum value of an indicator. For numeric steppers, this property represent seconds when the object is associated with a time type value and are ignored when it is associated with a date type value.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome |  Tipo de dados  | Possible Values                     |
+| Nome |  Tipo de dados  | Valores possíveis                   |
 |:----:|:---------------:| ----------------------------------- |
 | min  | string / number | minimum: 0 (for numeric data types) |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)
 
@@ -110,12 +110,12 @@ Minimum value of an indicator. For numeric steppers, this property represent sec
 
 Minimum interval accepted between values during use. For numeric steppers, this property represents seconds when the object is associated with a time type value and days when it is associated with a date type value.
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome | Tipo de dados | Possible Values |
-|:----:|:-------------:| --------------- |
-| step |    integer    | mínimo: 1       |
+| Nome | Tipo de dados | Valores possíveis |
+|:----:|:-------------:| ----------------- |
+| step |    integer    | mínimo: 1         |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Thermometer](progressIndicator.md#thermometer) - [Ruler](ruler.md#ruler) - [Stepper](stepper.md#stepper)

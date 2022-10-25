@@ -117,7 +117,7 @@ O código JavaScript que roda na área web é:
 ```js
 $4d.calcSum(33, 45, 75, 102.5, 7, function(dollarZero)
     {
-        var result = dollarZero // result is 262.5
+        var result = dollarZero // o resultado é 262.5
     });
 ```
 

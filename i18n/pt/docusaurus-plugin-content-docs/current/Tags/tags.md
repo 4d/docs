@@ -371,7 +371,7 @@ Code using `4DELSE` only:
 <!--#4DENDIF-->
 ```
 
-Similar code using the `4DELSEIF` tag:
+Código semelhante usando a tag `4DELSEIF`:
 
 ```
 <!--#4DIF Condition1-->
@@ -526,7 +526,7 @@ The following code example:
  End if
 ```
 
-The `my_method` method can be as follows:
+O método `my_method` pode ser o seguinte:
 
 ```4d
  C_LONGINT($1)

@@ -89,9 +89,9 @@ This file must be located in the host or component's **Project** > **Sources** f
 
 ![](../assets/en/FormEditor/macroStructure.png)
 
-## Declaring macros
+## Declaração de macros
 
-The structure of the `formMacros.json` file is the following:
+A estrutura do ficheiro `formMacros.json` é a seguinte:
 
 ```js
 {
@@ -143,7 +143,7 @@ The class name must match the name defined using the [class](#creating-macros) a
 
 Macros are instantiated at application startup. Consequently, if you modify the macro class structure (add a function, modify a parameter...) or the [constructor](#class-constructor), you will have to restart the application to apply the changes.
 
-## Macro Functions
+## Funções macro
 
 Every macro class can contain a `Class constructor` and two functions: `onInvoke()` and `onError()`.
 
@@ -163,7 +163,7 @@ Custom properties added to the [macro declaration](#declaring-macros) are return
 
 #### Exemplo
 
-In the `formMacros.json` file:
+No ficheiro `formMacros.json`:
 
 ```js
 {
@@ -232,7 +232,7 @@ For example, if objects of the current page and groups have been modified, you c
 
 ```
 
-#### `method` attribute
+#### atributo `method`
 
 When handling the `method` attribute of form objects, you can define the attribute value in two ways in macros:
 

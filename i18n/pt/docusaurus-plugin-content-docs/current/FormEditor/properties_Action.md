@@ -23,9 +23,9 @@ Several types of method references are supported:
   `/RESOURCES/Forms/FormMethod.4dm` In this case, 4D does not provide automatic support for object operations.
 
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome   | Tipo de dados | Possible Values                                                  |
+| Nome   | Tipo de dados | Valores possíveis                                                |
 | ------ | ------------- | ---------------------------------------------------------------- |
 | method | text          | Form method standard or custom file path, or project method name |
 

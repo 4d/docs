@@ -48,7 +48,7 @@ Os objetos `DataClassAttribute` têm propriedades que pode ler para obter inform
 
 #### Descrição
 
-A propriedade `.autoFilled` <!-- REF DataClassAttributeClass.autoFilled.Summary -->contains True if the attribute value is automatically filled by 4D<!-- END REF -->. Esta propriedade corresponde às seguintes propriedades de campo 4D:
+A propriedade `.autoFilled` <!-- REF DataClassAttributeClass.autoFilled.Summary -->contém True se o valor do atributo for automaticamente preenchido por 4D<!-- END REF -->. Esta propriedade corresponde às seguintes propriedades de campo 4D:
 
 * "Auto incremento", para campos de tipo numérico
 * "Auto UUID", para campos UUID (tipo alfa).
@@ -122,7 +122,7 @@ A propriedade `.fieldType` <!-- REF DataClassAttributeClass.fieldType.Summary --
 
 #### Descrição
 
-A propriedade `.indexed` <!-- REF DataClassAttributeClass.indexed.Summary -->contains **True** if there is a B-tree or a Cluster B-tree index on the attribute<!-- END REF -->.
+A propriedade `.indexed` <!-- REF DataClassAttributeClass.indexed.Summary -->contém **True** se houver uma árvore B ou um índice de árvore B cluster no atributo<!-- END REF -->.
 
 Esta propriedade não é devolvida se `.kind` = "relatedEntity" ou "relatedEntities".
 > Para programação genérica é possível usar **Bool**(dataClassAttribute.indexed) para obter um valor válido (false) mesmo se `.indexed` não for retornado.
@@ -166,7 +166,7 @@ Esta propriedade não se devolve si `.kind` = "storage". Deve ser do tipo "relat
 
 #### Descrição
 
-A propriedade `.keywordIndexed` <!-- REF DataClassAttributeClass.keywordIndexed.Summary -->contains **True** if there is a keyword index on the attribute<!-- END REF -->.
+A propriedade `.keywordIndexed` <!-- REF DataClassAttributeClass.keywordIndexed.Summary -->contém **True** se houver um índice de palavras-chave no atributo<!-- END REF -->.
 
 Esta propriedade não é retornada se [`.kind`](#kind) = "relatedEntity" ou "relatedEntities".
 > Para a programação gene´rica pode usar **Bool**(dataClassAttribute.keywordIndexed) para obter um valor válido (false) mesmo se `.keywordIndexed` não for retornado.

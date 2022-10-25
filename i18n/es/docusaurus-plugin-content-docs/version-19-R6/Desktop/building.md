@@ -697,7 +697,7 @@ Este procedimiento puede automatizarse en gran medida mediante los siguientes co
 
 > You also have XML keys to elevate installation privileges so that you can use protected files under Windows (see the [4D XML Keys BuildApplication](https://doc.4d.com/4Dv19/4D/19/4D-XML-Keys-BuildApplication.100-5447429.en.html) manual).
 
-Here is the scenario for updating a server or merged single-user application:
+Este es el escenario para actualizar un servidor o una aplicación unipersonal fusionada:
 
 1. You transfer, for example using an HTTP server, the new version of the server application or the merged single-user application onto the machine in production.
 2. In the application in production, you call the `SET UPDATE FOLDER` command: this command designates the location of the folder where the "pending" update of the current application is found. Optionally, you can copy in this folder the custom elements of the version in production (user files).

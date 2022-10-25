@@ -70,41 +70,41 @@ In addition to standard system options, the *Open* dialog in 4D provides two men
 
 You can use a [`.4DLink` file](#about-4DLink-files) to launch the 4D application and open the target 4D project. Hay dos maneras de hacer esto:
 
-* double-click or drag and drop the `.4DLink` file onto the 4D application
-* go to **File** > **Open Recent Projects** and select a project
+* haga doble clic o arrastre y suelte el archivo `.4DLink` en la aplicación 4D
+* vaya a **Archivo** > **Abrir los proyectos recientes** y seleccione un proyecto
 
 ![open-recent-projects](../assets/en/Project/4Dlinkfiles.png)
 
-A .4DLink file of "remote project" type can be copied and used on several machines.
-> It's also possible to select a 4DLink file in the 4D and 4D Server opening dialog box (opening local project only).
+Un archivo .4DLink de tipo "proyecto remoto" puede copiarse y utilizarse en varias máquinas.
+> También es posible seleccionar un archivo 4DLink en la caja de diálogo de apertura de 4D y 4D Server (abriendo sólo el proyecto local).
 
 ## Sobre 4DLink Files
 
-Files with the `.4DLink` extension are XML files that contain parameters intended to automate and simplify opening local or remote 4D projects.
+Los archivos con la extensión `.4DLink` son archivos XML que contienen parámetros destinados a automatizar y a simplificar la apertura de proyectos 4D locales o remotos.
 
-`.4DLink` files can save the address of a 4D project as well as its connection identifiers and opening mode, saving you time when opening projects.
+Los archivos `.4DLink` pueden guardar la dirección de un proyecto 4D, así como sus identificadores de conexión y el modo de apertura, lo que permite ahorrar tiempo al abrir los proyectos.
 
-4D automatically generates a `.4DLink` file when a local project is opened for the first time or when connecting to a server for the first time. The file is stored in the local preferences folder at the following location:
+4D genera automáticamente un archivo `.4DLink` cuando se abre un proyecto local por primera vez o cuando se conecta a un servidor por primera vez. El archivo se almacena en la carpeta de preferencias locales en la siguiente ubicación:
 
-* Windows 7 and higher: C:\Users\UserName\AppData\Roaming\4D\Favorites vXX\
+* Windows 7 y superior: C:|Users\NuserName\NappData\Roaming\4D\Favorites vXX\
 * OS X: Users/UserName/Library/Application Support/4D/Favorites vXX/
 
 XX representa el número de versión de la aplicación. Por ejemplo, "Favoritos v19" para 4D v19.
 
 Esa carpeta está dividida en dos subcarpetas:
 
-* the **Local** folder contains the `.4DLink` files that can be used to open local projects
-* the **Remote** folder contains the `.4DLink` files of recent remote projects
+* la carpeta **Local** contiene los archivos `.4DLink` que pueden utilizarse para abrir proyectos locales
+* la carpeta **Remote** contiene los archivos `.4DLink` de proyectos remotos recientes
 
 Los archivos `.4DLink` también pueden crearse con un editor XML.
 
-4D provides a DTD describing the XML keys that can be used to build a `.4DLink` file. This DTD is named database_link.dtd and is found in the \Resources\DTD\ subfolder of the 4D application.
+4D ofrece un DTD que describe las llaves XML que pueden utilizarse para crear un archivo `.4DLink`. Este DTD se llama database_link.dtd y se encuentra en la subcarpeta \Resources\DTD de la aplicación 4D.
 
 ## Guardado de archivos
 
 Cuando trabaja en un proyecto en 4D, puede utilizar los editores integrados de 4D para crear, modificar o guardar elementos de la estructura, los métodos, los formularios, etc. Las modificaciones se guardan en el disco cuando se selecciona una opción de menú **Guardar**, o cuando la ventana del editor pierde o recupera el foco.
 
-Dado que los editores utilizan archivos en el disco, podrían producirse conflictos si se modifica el mismo archivo o incluso se borra desde diferentes ubicaciones. For example, if the same method is edited in a Code Editor window *and* in a text editor, saving both modifications will result in a conflict.
+Dado que los editores utilizan archivos en el disco, podrían producirse conflictos si se modifica el mismo archivo o incluso se borra desde diferentes ubicaciones. Por ejemplo, si se edita el mismo método en una ventana del Editor de Código *y* en un editor de texto, al guardar ambas modificaciones se producirá un conflicto.
 
 El marco de desarrollo 4D incluye un gestor de acceso a los archivos para controlar los accesos simultáneos:
 

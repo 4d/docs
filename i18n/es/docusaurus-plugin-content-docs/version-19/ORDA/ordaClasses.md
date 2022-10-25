@@ -330,7 +330,7 @@ local Function getYoungest
 ```
 
 - **without** the `local` keyword, the result is given using a single request
-- **with** the `local` keyword, 4 requests are necessary: one to get the Schools entity students, one for the `query()`, one for the `orderBy()`, and one for the `slice()`. In this example, using the `local` keyword is inappropriate.
+- **with** the `local` keyword, 4 requests are necessary: one to get the Schools entity students, one for the `query()`, one for the `orderBy()`, and one for the `slice()`. En este ejemplo, el uso de la palabra clave `local` es inapropiado.
 
 ### Ejemplos
 

@@ -132,7 +132,7 @@ The Librairies folder contains the file resulting from a compilation with the [S
 
 ## Resources folder
 
-The Resources folder contains any custom project resource files and folders. In this folder, you can place all the files needed for the translation or customization of the application interface (picture files, text files, XLIFF files, etc.). 4D uses automatic mechanisms to work with the contents of this folder, in particular for the handling of XLIFF files and static pictures. For using in remote mode, the Resources folder lets you share files between the server machine and all the client machines. See the *4D Server Reference Manual*.
+A pasta Resources contém todos os arquivos e pastas de recursos personalizados do projeto. In this folder, you can place all the files needed for the translation or customization of the application interface (picture files, text files, XLIFF files, etc.). 4D uses automatic mechanisms to work with the contents of this folder, in particular for the handling of XLIFF files and static pictures. For using in remote mode, the Resources folder lets you share files between the server machine and all the client machines. See the *4D Server Reference Manual*.
 
 | Conteúdos             | Descrição                                                                                                                                             | Formato |
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |

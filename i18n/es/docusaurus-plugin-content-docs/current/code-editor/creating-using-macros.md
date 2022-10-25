@@ -15,7 +15,7 @@ Las macros 4D están escritas en formato XML. Puede utilizar el archivo de macro
 
 ## Ubicación de las macros
 
-4D loads the macros from a folder named **Macros v2**. Macros must be in the form of one or more XML files that are placed in this folder.
+4D carga las macros desde una carpeta llamada **Macros v2**. Macros must be in the form of one or more XML files that are placed in this folder.
 
 La carpeta "Macros v2" puede ser ubicada:
 
@@ -56,7 +56,7 @@ Some tags indicate the start and end of the definition (double tags of the type 
 
 In conformity with XML specifications, some element tags can include attributes. Unless otherwise indicated, these attributes are optional and a default value is used when they are omitted. La sintaxis de los elementos con atributos es la siguiente:
 
-- Double tags: `<tag attribute="value"> </macro>`
+- Etiquetas dobles: `<tag attribute="value"> </macro>`
 - Single tags: `<tag attribute="value"/>`
 
 If the element accepts several attributes, you can group them in the same line of command, separated by a space: `\&#060;tag attribute1="value" attribute2="value" attribute3="value"... &#062;`

@@ -9,7 +9,7 @@ This page contains options related to data access and protection for your deskto
 
 ## Acceso a datos / Acceso a usuarios remotos
 
-> These settings do not apply to project databases opened in single-user mode.
+> Estos parámetros no se aplican a las bases proyecto abiertas en modo monopuesto.
 
 -   **Design and Runtime Explorer Access**: Gives the specified group the ability to enter the Design environment of the database and display the Runtime Explorer.
 

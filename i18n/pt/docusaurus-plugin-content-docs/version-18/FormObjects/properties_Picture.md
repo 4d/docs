@@ -13,13 +13,13 @@ Two main locations can be used for static picture path:
 - na pasta **Resources** do banco de dados projeto. Apropriado quando quiser compartir imagens estáticas entre vários formulários do banco de dados. In this case, the Pathname is "/RESOURCES/\<picture path\>".
 - in an image folder (e.g. named **Images**) within the form folder. Appropriate when the static pictures are used only in the form and/or you want to be able to move or duplicate the whole form within the project or different projects. In this case, the Pathname is "\<picture path\>" and is resolved from the root of the form folder.
 
-#### JSON Grammar
+#### Gramática JSON
 
-|  Nome   | Tipo de dados | Possible Values                             |
+|  Nome   | Tipo de dados | Valores possíveis                           |
 |:-------:|:-------------:| ------------------------------------------- |
 | picture |     text      | Relative or filesystem path in POSIX syntax |
 
-#### Objects Supported
+#### Objectos suportados
 
 [Picture button](pictureButton_overview.md) - [Picture Pop-up Menu](picturePopupMenu_overview.md) - [Static Picture](staticPicture.md)
 
@@ -37,7 +37,7 @@ The **Scaled to fit** format causes 4D to resize the picture to fit the dimensio
 
 ### Replicado
 
-`JSON grammar: "tiled"`
+`Gramática JSON: "tiled"`
 
 When the area that contains a picture with the **Replicated** format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.
 
@@ -56,12 +56,12 @@ The **Truncated (non-centered)** format causes 4D to place the upper-left corner
 
 ![](../assets/en/FormObjects/property_pictureFormat_Truncated.png)
 
-#### JSON Grammar
+#### Gramática JSON
 
-| Nome          | Tipo de dados | Possible Values                                          |
+| Nome          | Tipo de dados | Valores possíveis                                        |
 | ------------- | ------------- | -------------------------------------------------------- |
 | pictureFormat | string        | "scaled", "tiled", "truncatedCenter", "truncatedTopLeft" |
 
-#### Objects Supported
+#### Objectos suportados
 
-[Static Picture](staticPicture.md)
+[Imagem estática](staticPicture.md)

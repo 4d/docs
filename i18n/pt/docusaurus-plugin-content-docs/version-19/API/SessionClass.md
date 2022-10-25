@@ -42,7 +42,7 @@ Para obter informação detalhada sobre a implementação da sessão, consulte [
 
 #### Descrição
 
-The `Session` command <!-- REF #_command_.Session.Summary -->returns the `Session` object corresponding to the current scalable user web session<!-- END REF -->.
+O comando `Session` <!-- REF #_command_.Session.Summary -->devolve o objecto `Sessão` correspondente à actual sessão web escalável do utilizador<!-- END REF -->.
 
 Este comando só funciona quando [estão ativadas as sessões escaláveis](WebServer/sessions.md#enabling-sessions). Devolve *Null* quando as sessões estiverem desabilitadas ou quando utilizar sessões herdadas.
 
@@ -99,7 +99,7 @@ IP:port/4DACTION/action_Session
 
 #### Descrição
 
-A função `.clearPrivileges()` <!-- REF #SessionClass.clearPrivileges().Summary -->removes all the privileges associated to the session<!-- END REF -->. Summary -->devolve True se o privilegio estiver associado à sessão, ou então False em caso contrário<!-- END REF -->.
+A função `.clearPrivileges()` <!-- REF #SessionClass.clearPrivileges().Summary -->retira todos os privilégios associados à sessão<!-- END REF -->. Summary -->devolve True se o privilegio estiver associado à sessão, ou então False em caso contrário<!-- END REF -->.
 
 #### Exemplo
 
@@ -128,7 +128,7 @@ $isGuest:=Session.isGuest() //$isGuest is True
 
 #### Descrição
 
-The `.expirationDate` property contains <!-- REF #SessionClass.expirationDate.Summary -->the expiration date and time of the session cookie<!-- END REF -->. O valor se expressa como texto no formato ISO 8601: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
+A propriedade `.expirationDate` contém <!-- REF #SessionClass.expirationDate.Summary -->a data e hora de expiração do cookie da sessão<!-- END REF -->. O valor se expressa como texto no formato ISO 8601: `YYYY-MM-DDTHH:MM:SS.mmmZ`.
 
 Essa propriedade é **apenas leitura**. É recalculada automaticamente se modificar o valor da propriedade [`.idleTimeout`](#idletimeout).
 
@@ -166,7 +166,7 @@ $expiration:=Session.expirationDate //por exemplo "2021-11-05T17:10:42Z"
 
 #### Descrição
 
-The `.hasPrivilege()` function <!-- REF #SessionClass.hasPrivilege().Summary -->returns True if the privilege is associated to the session, and False otherwise<!-- END REF -->.
+A função `.hasPrivilege()` <!-- REF #SessionClass.hasPrivilege().Summary -->retorna Verdadeiro se o privilégio estiver associado à sessão, e Falso de outra forma<!-- END REF -->.
 
 #### Exemplo
 
@@ -197,7 +197,7 @@ If (Session.hasPrivilege("WebAdmin"))
 
 #### Descrição
 
-The `.idleTimeout` property contains <!-- REF #SessionClass.idleTimeout.Summary -->the inactivity session timeout (in minutes), after which the session is automatically closed by 4D<!-- END REF -->.
+A propriedade `.idleTimeout` contém <!-- REF #SessionClass.idleTimeout.Summary -->o tempo limite da sessão de inatividade (em minutos), após o qual a sessão é automaticamente encerrada por 4D<!-- END REF -->.
 
 Se não se definir esta propriedade, o valor padrão é 60 (1h).
 
@@ -244,7 +244,7 @@ If (Session.isGuest())
 
 #### Descrição
 
-The `.isGuest()` function <!-- REF #SessionClass.isGuest().Summary -->returns True if the session is a Guest session (i.e. it has no privileges)<!-- END REF -->.
+A função `.isGuest()` <!-- REF #SessionClass.isGuest().Summary -->retorna Verdadeiro se a sessão for uma sessão de Convidado (ou seja, não tem privilégios)<!-- END REF -->.
 
 #### Exemplo
 
@@ -283,7 +283,7 @@ If (Session.isGuest())
 
 #### Descrição
 
-The `.setPrivileges()` function <!-- REF #SessionClass.setPrivileges().Summary -->associates the privilege(s) defined in the parameter to the session<!-- END REF -->.
+A função `.setPrivileges()` <!-- REF #SessionClass.setPrivileges().Summary -->associa à sessão o(s) privilégio(s) definido(s) no parâmetro<!-- END REF -->.
 
 - No parâmetro *privilege*, passe uma string contendo um nome de privilégio (ou vários nomes de privilégio separados por vígulas).
 
@@ -339,7 +339,7 @@ End if
 
 #### Descrição
 
-A propriedade `.storage` contém <!-- REF #SessionClass.storage.Summary -->a shared object that can be used to store information available to all requests of the web client<!-- END REF -->.
+A propriedade `.storage` contém <!-- REF #SessionClass.storage.Summary -->um objeto partilhado que pode ser utilizado para armazenar informação disponível para todos os pedidos do cliente da web<!-- END REF -->.
 
 Quando um objeto `Session` for criado, a propriedade `.storage` é vazia. Já que é um objeto partilhado, essa propriedade estará disponível no objeto `Storage` do servidor.
 
@@ -379,7 +379,7 @@ End if
 
 #### Descrição
 
-A propriedade `.userName` contém <!-- REF #SessionClass.userName.Summary -->the user name associated to the session<!-- END REF -->. Pode usá-la para identificar o usuário dentro de seu código.
+A propriedade `.userName` contém <!-- REF #SessionClass.userName.Summary -->o nome de usuário associado à sessão<!-- END REF -->. Pode usá-la para identificar o usuário dentro de seu código.
 
 Essa propriedade é uma string vazia como padrão. Pode ser estabelecida usando a propriedade `privileges` da função [`setPrivileges()`](#setprivileges).
 

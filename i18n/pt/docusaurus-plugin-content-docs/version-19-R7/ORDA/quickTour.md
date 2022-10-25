@@ -31,7 +31,7 @@ ds. Company.city //returns the name of the city
 
 > In the ORDA world, a record is an **entity** -- an entity is itself an object. A command that is attached to a specific object is called a **member method**.
 
-> ORDA is case sensitive. `ds.company.city` will not refer to the ds. Company.city attribute.
+> ORDA e sensíveis às maiúsculas e minúsculas. `ds.company.city` will not refer to the ds. Company.city attribute.
 
 You have also noticed the extra `hires` property in the ds. Company dataclass. It does not correspond to a field. `hires` is actually the name of the *One to many* relation between Company and Employee:
 

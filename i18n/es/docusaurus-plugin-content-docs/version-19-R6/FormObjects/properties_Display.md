@@ -114,7 +114,7 @@ If the user enters a negative number, the leftmost character is displayed as a m
 
 Each placeholder character has a different effect on the display of leading or trailing zeros. A leading zero is a zero that starts a number before the decimal point; a trailing zero is a zero that ends a number after the decimal point.
 
-Suppose you use the format ##0 to display three digits. Si el usuario no introduce nada en el campo, el campo muestra 0. Si el usuario introduce 26, el campo muestra 26.
+Supongamos que usa el formato ##0 para mostrar tres dígitos. Si el usuario no introduce nada en el campo, el campo muestra 0. Si el usuario introduce 26, el campo muestra 26.
 
 ### Caracteres separadores
 
@@ -126,7 +126,7 @@ The numeric display formats (except for scientific notations) are automatically 
 
 ### Puntos decimales y otros caracteres de visualización
 
-You can use a decimal point in a number display format. If you want the decimal to display regardless of whether the user types it in, it must be placed between zeros.
+Puede utilizar un punto decimal en un formato de visualización de números. If you want the decimal to display regardless of whether the user types it in, it must be placed between zeros.
 
 Puede utilizar cualquier otro caracter en el formato. When used alone, or placed before or after placeholders, the characters always appear. Por ejemplo, si utiliza el siguiente formato:
 
@@ -248,7 +248,7 @@ The following table shows how different formats affect the display of numbers. T
 
 Los formatos Imagen controlan la apariencia de las imágenes cuando se muestran o se imprimen. For data entry, the user always enters pictures by pasting them from the Clipboard or by drag and drop, regardless of the display format.
 
-Las opciones de truncamiento y escalado no afectan a la imagen en sí. El contenido de un campo Imagen siempre se guarda. Only the display on the particular form is affected by the picture display format.
+Las opciones de truncamiento y escalado no afectan a la imagen en sí. El contenido de un campo Imagen siempre se guarda. El formato de visualización de la imagen sólo afecta a la visualización en el formulario en cuestión.
 
 ### A escala para ajustarse
 
@@ -310,19 +310,19 @@ Los formatos de hora controlan la forma en que aparecen las horas cuando se mues
 
 La siguiente tabla muestra los formatos de visualización de los campos de hora y da ejemplos:
 
-| Nombre del formato           | Cadena JSON     | Comentarios                                                                                                                                                | Ejemplo para 04:30:25          |
-| ---------------------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| HH:MM:SS                     | hh_mm_ss      |                                                                                                                                                            | 04:30:25                       |
-| HH:MM                        | hh_mm           |                                                                                                                                                            | 04:30                          |
-| Hour Min Sec                 | HH_MM_SS      |                                                                                                                                                            | 4 horas 30 minutos 25 segundos |
-| Hour Min                     | HH_MM           |                                                                                                                                                            | 4 horas 30 minutos             |
-| HH:MM AM/PM                  | hh_mm_am      |                                                                                                                                                            | 4:30 a.m.                      |
-| MM SS                        | mm_ss           | Hora expresada como duración a partir de las 00:00:00                                                                                                      | 270:25                         |
-| Min Sec                      | MM_SS           | Hora expresada como duración a partir de las 00:00:00                                                                                                      | 270 Minutos 25 Segundos        |
-| ISO Date Time                | iso8601         | Corresponde al estándar XML para representar datos relacionados con la hora. It is mainly intended to be used when importing/exporting data in XML format  | 0000-00-00T04:30:25            |
-| System time short            | - (por defecto) | Formato de hora estándar definido en el sistema                                                                                                            | 04:30:25                       |
-| System time long abbreviated | systemMedium    | sólo macOS: formato de tiempo abreviado definido en el sistema. <br/>Windows: este formato es el mismo que el formato corto de la hora del sistema   | 4•30•25 AM                     |
-| System time long             | systemLong      | macOS únicamente: formato de tiempo largo definido en el sistema. <br/>Windows: este formato es el mismo que el formato corto de la hora del sistema | 4:30:25 AM HNEC                |
+| Nombre del formato           | Cadena JSON     | Comentarios                                                                                                                                                                  | Ejemplo para 04:30:25          |
+| ---------------------------- | --------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
+| HH:MM:SS                     | hh_mm_ss      |                                                                                                                                                                              | 04:30:25                       |
+| HH:MM                        | hh_mm           |                                                                                                                                                                              | 04:30                          |
+| Hour Min Sec                 | HH_MM_SS      |                                                                                                                                                                              | 4 horas 30 minutos 25 segundos |
+| Hour Min                     | HH_MM           |                                                                                                                                                                              | 4 horas 30 minutos             |
+| HH:MM AM/PM                  | hh_mm_am      |                                                                                                                                                                              | 4:30 a.m.                      |
+| MM SS                        | mm_ss           | Hora expresada como duración a partir de las 00:00:00                                                                                                                        | 270:25                         |
+| Min Sec                      | MM_SS           | Hora expresada como duración a partir de las 00:00:00                                                                                                                        | 270 Minutos 25 Segundos        |
+| ISO Date Time                | iso8601         | Corresponde al estándar XML para representar datos relacionados con la hora. Está pensado principalmente para ser utilizado cuando se importan/exportan datos en formato XML | 0000-00-00T04:30:25            |
+| System time short            | - (por defecto) | Formato de hora estándar definido en el sistema                                                                                                                              | 04:30:25                       |
+| System time long abbreviated | systemMedium    | sólo macOS: formato de tiempo abreviado definido en el sistema. <br/>Windows: este formato es el mismo que el formato corto de la hora del sistema                     | 4•30•25 AM                     |
+| System time long             | systemLong      | macOS únicamente: formato de tiempo largo definido en el sistema. <br/>Windows: este formato es el mismo que el formato corto de la hora del sistema                   | 4:30:25 AM HNEC                |
 
 #### Gramática JSON
 
@@ -338,10 +338,10 @@ La siguiente tabla muestra los formatos de visualización de los campos de hora 
 
 ## Texto cuando False/Texto cuando True
 
-When a [boolean expression](properties_Object.md#expression-type) is displayed as:
+Cuando una [expresión booleana](properties_Object.md#expression-type) se muestra como:
 
 * un texto en un [objeto de entrada](input_overview.md)
-* a ["popup"](properties_Display.md#display-type) in a [list box column](listbox_overview.md#list-box-columns),
+* un "popup" [](properties_Display.md#display-type) en una [columna del list box](listbox_overview.md#list-box-columns),
 
 ... puede seleccionar el texto que se mostrará para cada valor:
 
@@ -350,9 +350,9 @@ When a [boolean expression](properties_Object.md#expression-type) is displayed a
 
 #### Gramática JSON
 
-| Nombre        | Tipos de datos | Valores posibles                                                         |
-| ------------- | -------------- | ------------------------------------------------------------------------ |
-| booleanFormat | string         | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", e.g. "Assigned;Unassigned" |
+| Nombre        | Tipos de datos | Valores posibles                                                                |
+| ------------- | -------------- | ------------------------------------------------------------------------------- |
+| booleanFormat | string         | "\<*textWhenTrue*\>;\<*textWhenFalse*\>", por ejemplo "Assigned;Unassigned" |
 
 #### Objetos soportados
 
@@ -372,7 +372,7 @@ Las columnas booleanas también pueden mostrarse como menús emergentes. In this
 
 | Nombre      | Tipos de datos | Valores posibles                                   |
 | ----------- | -------------- | -------------------------------------------------- |
-| controlType | string         | <li>**number columns**: "automatic" (default) or "checkbox"</li><li>**columnas booleanas**: "checkbox" (por defecto) o "popup"</li> |
+| controlType | string         | <li>**columnas numéricas**: "automatic" (por defecto) o "checkbox"</li><li>**columnas booleanas**: "checkbox" (por defecto) o "popup"</li> |
 
 #### Objetos soportados
 
@@ -470,7 +470,7 @@ The Truncate with ellipsis option is enabled by default and can be specified wit
 
 The Truncate with ellipsis property can be applied to Boolean type columns; however, the result differs depending on the [cell format](#display-type):
 
-* For Pop-up type Boolean formats, labels are truncated with an ellipsis,
+* En los formatos booleanos de tipo emergente, las etiquetas se truncan con una elipsis,
 * Para los formatos booleanos de tipo casilla de verificación, las etiquetas siempre se recortan.
 
 #### Gramática JSON
@@ -495,7 +495,7 @@ Puede manejar la propiedad Visibilidad para la mayoría de los objetos del formu
 
 In the context of ["list" forms](FormEditor/properties_FormProperties.md#form-type), the Visibility property supports two specific values:
 
-* **If record selected** (JSON name: "selectedRows")
+* **Si registro seleccionado** (nombre JSON: "selectedRows")
 * **If record not selected** (JSON name: "unselectedRows")
 
 This property is only used when drawing objects located in the body of a list form. It tells 4D whether or not to draw the object depending on whether the record being processed is selected/not selected. It allows you to represent a selection of records using visual attributes other than highlight colors:

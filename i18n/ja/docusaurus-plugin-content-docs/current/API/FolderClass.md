@@ -147,6 +147,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 <!--REF #FolderClass.create().Syntax -->**.create()** : Boolean<!-- END REF -->
 
+
 <!--REF #FolderClass.create().Params -->
 | 引数  | タイプ     |    | 説明                                                                |
 | --- | ------- | -- | ----------------------------------------------------------------- |

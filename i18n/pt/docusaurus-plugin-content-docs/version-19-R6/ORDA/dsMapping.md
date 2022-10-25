@@ -17,7 +17,7 @@ When you call a datastore using the [`ds`](API/DataStoreClass.md#ds) or the [`Op
 ![](../assets/en/ORDA/datastoreMapping.png)
 
 
-### General rules
+### Regras gerais
 
 The following rules are applied for any conversions:
 
@@ -56,7 +56,7 @@ However, the updated ORDA model layer is not automatically available in the foll
 *   a remote datastore opened using `Open datastore` or through [REST calls](REST/gettingStarted.md) -- a new session must be opened.
 
 
-## Object definition
+## Definição de objetos
 
 ### Datastore
 
@@ -189,7 +189,7 @@ The purpose of the entity is to manage data (create, update, delete). When an en
 The entity object itself cannot be copied as an object:
 
 ```4d
- $myentity:=OB Copy(ds. Employee.get(1)) //returns null
+ $myentity:=OB Copy(ds. Employee.get(1)) //retorna null
 ```
 
 The entity properties are however enumerable:

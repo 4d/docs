@@ -736,10 +736,10 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 <details><summary>履歴</summary>
 
-| バージョン  | 内容                                  |
-| ------ | ----------------------------------- |
-| v19 R7 | Support of `allowAutoExpand` option |
-| v19 R6 | 追加                                  |
+| バージョン  | 内容                           |
+| ------ | ---------------------------- |
+| v19 R7 | `allowAutoExpand` オプションをサポート |
+| v19 R6 | 追加                           |
 </details>
 
 <!-- REF #_method_.VP CREATE TABLE.Syntax -->
@@ -3917,15 +3917,15 @@ VP RESET SELECTION("myVPArea")
 
 #### 説明
 
-`VP RESIZE TABLE` コマンドは、 <!-- REF #_method_.VP RESIZE TABLE.Summary -->changes the *tableName* size with regards to the *rangeObj*<!-- END REF -->。
+`VP RESIZE TABLE` コマンドは、 <!-- REF #_method_.VP RESIZE TABLE.Summary -->*rangeObj* で指定したレンジの大きさに *tableName* で指定した表組みをリサイズします<!-- END REF -->。
 
 次のルールが適用されます:
 
-- Headers must remain in the same row and the resulting table range must overlap the original table range.
-- If the row count of the resized table is inferior to the initial row count, values inside cropped rows or columns are kept if they were not bound to a [data context](#vp-set-data-context), otherwise they are deleted.
-- If the table expands on cells containing data:
-    - if rows are added, data is deleted,
-    - if columns are added, data are kept and are displayed in new columns.
+- ヘッダーは同じ行のまま残り、結果の表範囲は元の表範囲と重なっている必要があります。
+- リサイズされた表組みの行数がリサイズ前より少ない場合、切り取られた行や列内の値は、それらが [データコンテキスト](#vp-set-data-context) にバインドされていなければ保持され、そうでなければ削除されます。
+- 表組みを拡張した先にデータを含むセルが存在する場合には:
+    - 行が追加された場合、データは削除されます。
+    - 列が追加された場合、データは保持され、新しい列に表示されます。
 
 *tableName* の表組みが存在しない場合には、何も起こりません。
 
@@ -3951,7 +3951,7 @@ VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 3; 3); "PeopleTable"; "col")
 ![](../assets/en/ViewPro/table-base.png)
 
 
-You want to add one column before and after the table as well as two empty rows. 以下のように書くことができます:
+表組みの前後に 1列ずつと、空行を 2行を追加します。 以下のように書くことができます:
 
 ```4d
 VP RESIZE TABLE(VP Cells("ViewProArea"; 0; 1; 4; 6); "PeopleTable")
@@ -4636,9 +4636,9 @@ VP SET COLUMN COUNT("ViewProArea";5)
 
 <!-- REF #_method_.VP SET CURRENT SHEET.Params -->
 
-|Parameter|Type| |Description|
+|引数|タイプ| |説明|
 
-|---|---|---|---| |vpAreaName| Text|->|4D View Pro area form object name| |sheet|Integer|<-|Index of the new current sheet|<!-- END REF -->
+|---|---|---|---| |vpAreaName| Text|->|4D View Pro フォームオブジェクト名| |sheet|Integer|<-|Index of the new current sheet|<!-- END REF -->
 
 #### 説明
 
@@ -5745,32 +5745,32 @@ VP SET SHOW PRINT LINES("ViewProArea";True;1)
 | vpAreaName | Text    | -> | 4D View Pro フォームオブジェクト名                                |
 | tableName  | Text    | -> | 表組みの名称                                                 |
 | column     | Integer | -> | 表の列のインデックス                                             |
-| attributes | Object  | -> | Attribute(s) to apply to the *column*                  |
+| attributes | Object  | -> | *column* の列に適用する属性                                     |
 | sheet      | Integer | -> | シートのインデックス (省略した場合はカレントシート)|<!-- END REF -->
 
 |
 
 #### 説明
 
-The `VP SET TABLE COLUMN ATTRIBUTES` command <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Summary -->applies the defined *attributes* to the *column* in the *tableName*<!-- END REF -->。
+`VP SET TABLE COLUMN ATTRIBUTES` コマンドは、 <!-- REF #_method_.VP SET TABLE COLUMN ATTRIBUTES.Summary -->*tableName* で指定した表組みの *column* でインデックスを指定した列に *attributes* の属性を適用します<!-- END REF -->。
 
 *vpAreaName* には、4D View Pro エリアの名前を渡します。
 
-In the *attributes* parameter, pass an object that contains the properties to set:
+*attributes* 引数には、設定するプロパティを含むオブジェクトを渡します:
 
-| プロパティ               | タイプ     | 説明                                                                                                                                                                            |
-| ------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dataField           | text    | データコンテキストにおける、表の列のプロパティ名。                                                                                                                                                     |
-| name                | text    | 表の列の名前。 Must be unique in the table. If this name already used by another column, it is not applied and a default name is automaticaly used.                                  |
-| formula             | text    | Sets the formula for each column cell. See [Structured Reference Formulas in the SpreadJS documentation](https://www.grapecity.com/spreadjs/docs/features/tablegen/structref) |
-| footerText          | text    | 列のフッター値                                                                                                                                                                       |
-| footerFormula       | text    | 列のフッターのフォーミュラ。                                                                                                                                                                |
-| filterButtonVisible | boolean | Sets whether the table column's filter button is displayed (default is `True` when the table is created).                                                                     |
+| プロパティ               | タイプ     | 説明                                                                                                                                           |
+| ------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| dataField           | text    | データコンテキストにおける、表の列のプロパティ名。                                                                                                                    |
+| name                | text    | 表の列の名前。 表組み内でユニークでなくてはなりません。 すでに他の列で使われている場合、名前は適用されず、自動的にデフォルトの名前が使われます。                                                                    |
+| formula             | text    | 列の各セルにフォーミュラを設定します。 SpreadJS のドキュメント [Structured Reference Formulas](https://www.grapecity.com/spreadjs/docs/features/tablegen/structref) 参照 |
+| footerText          | text    | 列のフッター値                                                                                                                                      |
+| footerFormula       | text    | 列のフッターのフォーミュラ。                                                                                                                               |
+| filterButtonVisible | boolean | 表組みの列のフィルターボタンを表示するかどうかを設定します (表組み作成時のデフォルトは `true`)。                                                                                        |
 
 *sheet* には、ターゲットシートのインデックスを渡します。 index が省略された場合、または -1 が渡された場合、コマンドはカレントシートに対して適用されます。
 > インデックスは 0 起点です。
 
-If *tableName* is not found or if *column* is higher than the number of columns, the command does nothing.
+*tableName* に指定した名称の表組みが見つからない場合、または *column* に指定したインデックスが列数を超える場合には、コマンドは何もしません。
 
 
 #### 例題
@@ -5787,7 +5787,7 @@ $context.col.push(New object("name"; "Wesson"; "firstname"; "Jim"; "salary"; 500
 $context.col.push(New object("name"; "Gross"; "firstname"; "Maria"; "salary"; 10500))
 VP SET DATA CONTEXT("ViewProArea"; $context)
 
-    //Define the columns for the table
+    // 表組みの列を定義します
 $options:=New object()
 $options.tableColumns:=New collection()
 $options.tableColumns.push(New object("name"; "Last Name"; "dataField"; "name"))
@@ -5798,24 +5798,24 @@ VP CREATE TABLE(VP Cells("ViewProArea"; 1; 1; 2; 3); "PeopleTable"; "col"; $opti
 
 ![](../assets/en/ViewPro/table-inserta.png)
 
-Then you want to insert a column with data from the data context and hide some filter buttons:
+その後、データコンテキストからデータを取得する列を挿入し、フィルターボタンをいくつか非表示にします:
 
 ```4d
-    //insert a column
+    // 列を挿入します
 VP INSERT TABLE COLUMNS("ViewProArea"; "PeopleTable"; 1; 1)
 
 var $param : Object
 $param:=New object()
-    // Bind the column to the firstname field from the datacontext
+    // データコンテキストの firstname フィールドに列をバインドします
 $param.dataField:="firstname"
-    // Change the default name of the column to "First name"
-    // and hide the filter button
+    // 列名をデフォルトから "First name" に変更します
+    // フィルターボタンを非表示にします
 $param.name:="First Name"
 $param.filterButtonVisible:=False
 
 VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 1; $param)
 
-    // Hide the filter button of the first column
+    // 1列目のフィルターボタンも非表示にします
 VP SET TABLE COLUMN ATTRIBUTES("ViewProArea"; "PeopleTable"; 0; \
     New object("filterButtonVisible"; False))
 

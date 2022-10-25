@@ -415,7 +415,7 @@ Neste exemplo, a primeira entidade se criará e salvará mas a segunda falhará 
 
 #### Descrição
 
-A função `.get()` <!-- REF #DataClassClass.get().Summary -->queries the dataclass to retrieve the entity matching the *primaryKey* parameter<!-- END REF -->.
+A função `.get()` <!-- REF #DataClassClass.get().Summary -->consulta a folha de dados para recuperar a entidade que corresponde ao parâmetro *primaryKey*<!-- END REF -->.
 
 Em *primaryKey*, passe o valor da chave primária da entidade a recuperar Em *primaryKey*, passe o valor da chave primária da entidade a recuperar O tipo valor deve coresponder com o tipo de chave primária estabelecido na datastore (Inteiro ou texto). Também pode se assegurar que o valor de chave primária seja sempre retornado como Texto ao usar a função [`.getKey()`](EntityClass.md#getkey) com o parâmetro`dk key as string`.
 
@@ -564,10 +564,10 @@ O método de projeto ***SearchDuplicate*** procura por valores duplicados em qua
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças               |
-| ------ | ---------------------- |
-| v19 R3 | Added exposed property |
-| v17 R5 | Adicionado             |
+| Versão | Mudanças                             |
+| ------ | ------------------------------------ |
+| v19 R3 | A propriedade exposed foi adicionada |
+| v17 R5 | Adicionado                           |
 
 </details>
 
@@ -659,50 +659,50 @@ A função `.getInfo()` <!-- REF #DataClassClass.getInfo().Summary -->devolve um
 |
 
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
+> **Modo avançado:** Esta função destina-se a programadores que necessitem personalizar as características padrão ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
 
 #### Descrição
 
 A função `.getRemoteCache()` <!-- REF #DataClassClass.getRemoteCache().Summary -->devolve um objecto que contém o conteúdo da cache ORDA para uma dataclass.<!-- END REF -->.
 
-Calling this function from a 4D single-user application returns `Null`.
+Chamar esta função a partir de uma aplicação 4D monousuário retorna `Null`.
 
 O objeto retornado tem as propriedades abaixo:
 
-| Propriedade | Tipo       | Descrição                                                                 |
-| ----------- | ---------- | ------------------------------------------------------------------------- |
-| maxEntries  | Integer    | Maximum number of entries collection.                                     |
-| stamp       | Integer    | Stamp of the cache.                                                       |
-| timeout     | Integer    | Time remaining before the new entries in the cache are marked as expired. |
-| entries     | Collection | Contains an entry object for each entity in the cache.                    |
+| Propriedade | Tipo       | Descrição                                                                          |
+| ----------- | ---------- | ---------------------------------------------------------------------------------- |
+| maxEntries  | Integer    | Número máximo de entradas recolhidas.                                              |
+| stamp       | Integer    | carimbo da caché                                                                   |
+| timeout     | Integer    | Tempo restante antes que as novas entradas na cache sejam marcadas como expiradas. |
+| entries     | Collection | Contém um objecto de entrada para cada entidade na cache.                          |
 
-Each entry object in the `entries` collection has the following properties:
+Cada objecto de entrada na colecção `entradas` tem as seguintes propriedades:
 
-| Propriedade | Tipo     | Descrição                         |
-| ----------- | -------- | --------------------------------- |
-| data        | Objeto   | Object holding data on the entry. |
-| expired     | Booleano | True if the entry has expired.    |
-| key         | Text     | Primary key of the entity.        |
+| Propriedade | Tipo     | Descrição                             |
+| ----------- | -------- | ------------------------------------- |
+| data        | Objeto   | Objeto que contém os dados da entrada |
+| expired     | Booleano | True se a entrada tiver expirado      |
+| key         | Text     | Chave primária da entidade.           |
 
 O objecto `data` em cada entrada contém as seguintes propriedades:
 
-| Propriedade            | Tipo    | Descrição                                                                                                                    |
-| ---------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| __KEY                  | String  | Chave primária da entidade                                                                                                   |
-| __STAMP                | Longint | Stamp da entidade na base de dados                                                                                           |
-| __TIMESTAMP            | String  | Stamp da entidade na base de dados (formato é YYYY-MM-DDTHH:MM:SS:ms:Z)                                                      |
-| dataClassAttributeName | Variant | If there is data in the cache for a dataclass attribute, it is returned in a property with the same type as in the database. |
+| Propriedade            | Tipo    | Descrição                                                                                                                         |
+| ---------------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| __KEY                  | String  | Chave primária da entidade                                                                                                        |
+| __STAMP                | Longint | Stamp da entidade na base de dados                                                                                                |
+| __TIMESTAMP            | String  | Stamp da entidade na base de dados (formato é YYYY-MM-DDTHH:MM:SS:ms:Z)                                                           |
+| dataClassAttributeName | Variant | Se houver dados na cache para um atributo dataclass, estes são devolvidos numa propriedade com o mesmo tipo que na base de dados. |
 
-Data concerning related entities is stored in the cache of the data object.
+Os dados relativos a entidades relacionadas são armazenados na cache do objecto de dados.
 
 #### Exemplo
 
-In the following example, `$ds. Persons.all()` loads the first entity with all its attributes. Then, the request optimization is triggered, so only `firstname` and `address.city` are loaded.
+No exemplo seguinte, `$ds.Persons.all()` carrega a primeira entidade com todos os seus atributos. Depois, a optimização do pedido é desencadeada, pelo que apenas `firstname` e `address.city` são carregados.
 
-Note that `address.city` is loaded in the cache of the `Persons` dataclass.
+Note-se que `address.city` é carregado na cache do `Pessoas` dataclass.
 
-Only the first entity of the `Address` dataclass is stored in the cache. It is loaded during the first iteration of the loop.
+Apenas a primeira entidade do `endereço ` dataclass é armazenada na cache. É carregado durante a primeira iteração do loop.
 
 ```4d
 var $ds : 4D. DataStoreImplementation
@@ -749,15 +749,15 @@ $cacheAddress:=$ds. Adress.getRemoteCache()
 
 #### Descrição
 
-A função `.new()` <!-- REF #DataClassClass.new().Summary -->creates in memory and returns a new blank entity related to the Dataclass<!-- END REF -->.
+A função `.new()` <!-- REF #DataClassClass.new().Summary -->cria em memória e devolve uma nova entidade em branco relacionada com a Dataclass<!-- END REF -->.
 
 O objeto entidade se cria em memória e não se guarda no banco de dados até que se chama a função [`.save( )`](EntityClass.md#save). Se a entidade for apagada antes de ser salva, não se pode recuperar.
 
 **4D Server**: eám cliente-servidor, se a chave primaria da tabela correspondente se autoincrementa, se calculará quando a entidade se guarde no servidor.
 
-All attributes of the entity are initialized with the **null** value.
+Todos os atributos da entidade são inicializados com o valor **null** .
 
-> Attributes can be initialized with default values if the **Map NULL values to blank values** option is selected at the 4D database structure level.
+> Os atributos podem ser inicializados com valores por padrão se a opção **Map NULL values to blank values** for seleccionada ao nível da estrutura da base de dados 4D.
 
 #### Exemplo
 
@@ -796,7 +796,7 @@ Este exemplo cria uma nova entidade na classe de dados "Log" e registra a inform
 
 #### Descrição
 
-A função `.newSelection()` <!-- REF #DataClassClass.newSelection().Summary -->creates a new, blank, non-shareable entity selection, related to the dataclass, in memory<!-- END REF -->.
+A função `.newSelection()` <!-- REF #DataClassClass.newSelection().Summary -->cria uma nova selecção de entidade, em branco e não partilhável, relacionada com o dataclass, em memória<!-- END REF -->.
 
 > Para mais informação sobre as seleçõees de entidades não compartilháveis, consulte [esta seção](ORDA/entities.md#shareable-or-non-shareable-entity-selections).
 
@@ -843,7 +843,7 @@ Quando for criada, a seleção de entidades não contém nenhuma entidade (`mySe
 
 #### Descrição
 
-A função `.query()` <!-- REF #DataClassClass.query().Summary -->searches for entities that meet the search criteria specified in *queryString* or *formula* and (optionally) *value*(s)<!-- END REF -->, for all the entities in the dataclass, and returns a new object of type `EntitySelection` containing all the entities that are found. Se aplica carregamento diferido/lazy loading.
+A função `.query()` <!-- REF #DataClassClass.query().Summary -->pesquisa por  entidades que satisfaçam os critérios de pesquisa especificados em *queryString* ou *fórmula* e (opcionalmente) *valor*(s)<!-- END REF -->, para todas as entidades no dataclass, e devolve um novo objecto do tipo `EntitySelection` contendo todas as entidades que são encontradas. Se aplica carregamento diferido/lazy loading.
 
 Se não houver entidades correspondentes encontradas, uma `EntitySelection` vazia é retornada.
 
@@ -859,7 +859,7 @@ attributePath|formula comparator value
 
 onde:
 
-* **Named placeholders for attribute paths** used in the *queryString* or *formula*. Attributes are expressed as property / value pairs, where property is the placeholder name inserted for an attribute path in the *queryString* or *formula* (":placeholder"), and value can be a string or a collection of strings. Each value is a path that can designate either a scalar or a related attribute of the dataclass or a property in an object field of the dataclass
+* **attributePath**: caminho de atributo no qual se pretende executar a consulta. Este parâmetro pode ser um nome simples (por exemplo "país") ou qualquer caminho de atributo válido (por exemplo "país.nome"). No caso de um caminho de atributo cujo tipo é `Colecção`, a notação é utilizada para lidar com todas as ocorrências (por exemplo, "crianças\[ ].idade").
 > *Não pode usar diretamente atributos cujo nome contenha caracteres especiais como ".", "\[ ]", or "=", ">", "#"..., porque serão avaliados incorretamente na string da query. Se precisar de uma query com esses atributos, deve considerar o uso de placeholders que permitem uma gama estendida de caracteres em rotas de atributo (ver* **Using placeholders** *below).*
 
 * **formula**: uma fórmula válida passada como `Text` ou `Object`. A fórmula será avaliada para cada entidade processada e deve retornar um valor booleano. Dentro da fórmula, a entidade está disponível através do objeto `This`.
@@ -893,9 +893,9 @@ onde:
   * A constante de tipo **texto** pode ser passada com ou sem aspas simples (ver **Uso de aspas** mais abaixo). Para pesquisar uma stirng dentro de uma string (uma pesquisa "contém") use o símbolo coringa (@) em valor para isolar a string a ser pesquisada como mostrado neste exemplo: "@Smith@". As palavras chaves abaixo são proibidas para constantes de texto: true, false.
   * Valores constantes de tipo **booleano** : **true** ou **false** (diferencia maiuscula de minúscula).
   * Valores constantes de tipo **numérico**: os decimais se separam com um '.' (ponto).
-  * **date** type constants: "YYYY-MM-DD" format
+  * **data** tipo constants: formato "YYYYY-MM-DD".
   * **null** constante: usando a palavra chave "null" encontra as propriedades **null** e **undefined**.
-  * in case of a query with an IN comparator, *value* must be a collection, or values matching the type of the attribute path between \[ ] separated by commas (for strings, `"` characters must be escaped with `\`).
+  * no caso de uma consulta com um comparador IN, *valor* deve ser uma colecção, ou valores correspondentes ao tipo de caminho do atributo entre \[ ] separados por vírgulas (para cordas, `"` caracteres devem ser evitados com `\`).
 * **logicalOperator**: utilizado para unir condições múltiplas na pesquisa (opcional). Pode usaar um dos operadores lógicos abaixo (ou o nome ou o símbolo podem ser usados):
 
  | Conjunção | Símbolos                |
@@ -903,7 +903,7 @@ onde:
  | AND       | &, &&, and              |
  | OU        | &#124;,&#124;&#124;, or |
 
-* **order by attributePath**: pode incluir uma declaração order by *attributePath* na pesquisa para que os dados resultantes sejam ordenados de acordo com esta declaração. Pode utilizar várias instruções de ordenação, separadas por vírgulas (por exemplo, ordenação por *attributePath1* desc, *attributePath2* asc). Como padrão, a ordem é ascendente. Passe 'desc'' para definir uma ordem descendente e 'asc' para definir uma ordem ascendente. >If you use this statement, the returned entity selection is ordered (for more information, please refer to [Ordered vs Unordered entity selections](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
+* **order by attributePath**: pode incluir uma declaração order by *attributePath* na pesquisa para que os dados resultantes sejam ordenados de acordo com esta declaração. Pode utilizar várias instruções de ordenação, separadas por vírgulas (por exemplo, ordenação por *attributePath1* desc, *attributePath2* asc). Como padrão, a ordem é ascendente. Passe 'desc'' para definir uma ordem descendente e 'asc' para definir uma ordem ascendente. >Se utilizar esta declaração, a selecção da entidade devolvida é ordenada (para mais informações, consulte [Selecções de entidades ordenadas vs não ordenadas](ORDA/dsMapping.md#ordered-or-unordered-entity-selection)).
 
 **Usar aspas**
 
@@ -928,17 +928,17 @@ Pode usar parêntesis na pesquisa para dar prioridade ao cálculo Por exemplo, p
 
 Dois tipos de marcadores podem ser usados: **placeholders indexados ** e **placeholders nomeados**:
 
-|           | Marcadores de posição indexados                                                                                                                                                                                 | Placeholders nomeados                                                                                                                                                     |
-| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Definição | Parameters are inserted as `:paramIndex` (for example :1, :2...) in *queryString* and their corresponding values are provided by the sequence of *value* parameter(s). You can use up to 128 *value* parameters | Parameters are inserted as `:paramName` (for example :myparam) and their values are provided in the attributes and/or parameters objects in the *querySettings* parameter |
-| Exemplo   | `$r:=class.query(":1=:2";"city";"Chicago")`                                                                                                                                                                     | `$o.attributes:=New object("att";"city")`<br/> `$o.parameters:=New object("name";"Chicago")`<br/> `$r:=class.query(":att=:name";$o)`                          |
+|           | Marcadores de posição indexados                                                                                                                                                                                       | Placeholders nomeados                                                                                                                                                     |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Definição | Os parâmetros são inseridos como `:paramIndex` (por exemplo :1, :2...) em *queryString* e os seus valores correspondentes são fornecidos pela sequência de *valor* parâmetro(s). Pode usar até 128 *valor* parâmetros | Os parâmetros são inseridos como `:paramName` (por exemplo :myparam) e os seus valores são fornecidos nos atributos e/ou parâmetros objectos no parâmetro *querySettings* |
+| Exemplo   | `$r:=class.query(":1=:2";"city";"Chicago")`                                                                                                                                                                           | `$o.attributes:=New object("att";"city")`<br/> `$o.parameters:=New object("name";"Chicago")`<br/> `$r:=class.query(":att=:name";$o)`                          |
 
 Pode misturar os tipos de argumentos em *queryString*. Um *queryString* pode conter, para os parâmetros *attributePath*, *formula* e *value* :
 
 * valores diretos (sem marcadores),
 * marcadores indexados ou com nome.
 
-Using placeholders in queries **is recommended** for the following reasons:
+Recomenda-se a utilização de marcadores de lugar nas consultas **pelas seguintes razões:** :
 
 1. Evita a inserção de código malicioso: se user diretamente variáveis preenchidas com uma string de pesquisa, um usuário poderia modificar as condições de pesquisa entrando argumentos adicionais. Por exemplo, imagine uma string de pesquisa como:
 
@@ -984,11 +984,11 @@ Você não vai conseguir o resultado esperado porque o valor null será avaliado
 
 :::info
 
-This feature is only available in queries on dataclasses and [entity selections](EntitySelectionClass.md#query). It cannot be used in queries on [collections](CollectionClass.md#query).
+Esta funcionalidade só está disponível em consultas de dataclasses e [selecção de entidades](EntitySelectionClass.md#query). Não pode ser utilizado em pesquisas em [colecções](CollectionClass.md#query).
 
 :::
 
-When searching within dataclass object attributes containing collections using multiple query arguments joined by the AND operator, you may want to make sure that only entities containing elements that match all arguments are returned, and not entities where arguments can be found in different elements. Para fazer isso, é necessário vincular os argumentos de pesquisa para elementos de coleção, para que apenas elementos únicos contendo argumentos linkados são encontrados.
+Ao pesquisar dentro de atributos de objectos dataclass contendo colecções utilizando múltiplos argumentos de consulta unidos pelo operador AND, poderá querer certificar-se de que apenas entidades contendo elementos que correspondem a todos os argumentos são devolvidas, e não entidades onde os argumentos podem ser encontrados em diferentes elementos. Para fazer isso, é necessário vincular os argumentos de pesquisa para elementos de coleção, para que apenas elementos únicos contendo argumentos linkados são encontrados.
 
 Por exemplo, com as duas entidades abaixo:
 
@@ -1033,13 +1033,13 @@ ds. People.query("places.locations[a].kind= :1 and places.locations[a].city= :2"
 ... pesquisa só devolverá "martin" porque tem um elemento "locations" cujo "kind" é "home" e cujo "city" for "paris". A pesquisa não devolverá 'smith' porque os valores 'home' e 'paris' não estão no mesmo elemento de coleção.
 
 
-**Queries in many-to-many relations**
+**Consultas em relações Muitos para Muitos**
 
-ORDA offers a special syntax to facilitate queries in many-to-many relations. In this context, you may need to search for different values with an `AND` operator BUT in the same attribute. For example, take a look at the following structure:
+A ORDA oferece uma sintaxe especial para facilitar as consultas em muitas relações. Neste contexto, poderá ter de procurar valores diferentes com um operador `E` MAS no mesmo atributo. Por exemplo, veja a seguinte estrutura:
 
 ![alt-text](../assets/en/API/manytomany.png)
 
-Imagine that you want to search all movies in which *both* actor A and actor B have a role. If you write a simple query using an `AND` operator, it will not work:
+Imagine que quer procurar em todos os filmes em que *tanto* o actor A como o actor B têm um papel. Se escrever uma simples consulta utilizando um operador `E` , não funcionará:
 
 ```4d
 // invalid code
@@ -1047,15 +1047,15 @@ $es:=ds. Movie.query("roles.actor.lastName = :1 AND roles.actor.lastName = :2";"
 // $es is empty
 ```
 
-Basically, the issue is related to the internal logic of the query: you cannot search for an attribute whose value would be both "A" and "B".
+Basicamente, a questão está relacionada com a lógica interna da consulta: não se pode procurar um atributo cujo valor seria tanto "A" como "B".
 
-To make it possible to perform such queries, ORDA allows a special syntax: you just need to add a *class index* between **{}** in all additional relation attributes used in the string:
+Para tornar possível a realização de tais consultas, a ORDA permite uma sintaxe especial: basta adicionar um índice de classe ** entre **{}** em todos os atributos de relação adicionais utilizados na cadeia de caracteres:
 
 ```4d
 "relationAttribute.attribute = :1 AND relationAttribute{x}.attribute = :2 [AND relationAttribute{y}.attribute...]"
 ```
 
-**{x}** tells ORDA to create another reference for the relation attribute. It will then perform all the necessary bitmap operations internally. Note that **x** can be any number **except 0**: {1}, or {2}, or {1540}... ORDA only needs a unique reference in the query for each class index.
+**{x}** diz à ORDA para criar outra referência para o atributo da relação. Realizará então todas as operações de bitmap necessárias internamente. Note-se que **x** pode ser qualquer número **excepto 0**: {1}, ou {2}, ou {1540}... A ORDA só precisa de uma referência única na consulta para cada índice de classe.
 
 No nosso exemplo, seria:
 
@@ -1435,40 +1435,40 @@ Queremos desautorizar as fórmulas, por exemplo, quando el usuario introduz sua 
 
 
 <!-- REF #DataClassClass.setRemoteCacheSettings().Params -->
-| Parâmetros | Tipo   |    | Descrição                                                                                                     |
-| ---------- | ------ | -- | ------------------------------------------------------------------------------------------------------------- |
-| settings   | Objeto | -> | Object that sets the timeout and maximum size of the ORDA cache for the dataclass.|<!-- END REF -->
+| Parâmetros | Tipo   |    | Descrição                                                                                                       |
+| ---------- | ------ | -- | --------------------------------------------------------------------------------------------------------------- |
+| settings   | Objeto | -> | Objecto que define o tempo limite e o tamanho máximo da cache ORDA para a dataclass.|<!-- END REF -->
 
 |
 
-> **Advanced mode:** This function is intended for developers who need to customize ORDA default features for specific configurations. Na maioria dos casos, não necessitará de o utilizar.
+> **Modo avançado:** Esta função destina-se a programadores que necessitem personalizar as características padrão ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
-A função `.setRemoteCacheSettings()` <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->sets the timeout and maximum size of the ORDA cache for a dataclass.<!-- END REF -->.
+A função `.setRemoteCacheSettings()` <!-- REF #DataClassClass.setRemoteCacheSettings().Summary -->define o tempo limite e o tamanho máximo da cache ORDA para um dataclass.<!-- END REF -->.
 
-In the *settings* parameter, pass an object with the following properties:
+No parâmetro *settings*, passe um objeto contendo as propriedades abaixo:
 
 | Propriedade | Tipo    | Descrição                    |
 | ----------- | ------- | ---------------------------- |
 | timeout     | Integer | Tempo de espera em segundos. |
 | maxEntries  | Integer | Número máximo de entidades.  |
 
-`timeout` define o timeout da cache ORDA para o dataclass (por defeito é de 30 segundos). Once the timeout has passed, the entities of the dataclass in the cache are considered as expired. Isto significa que:
+`timeout` define o timeout da cache ORDA para o dataclass (por defeito é de 30 segundos). Uma vez decorrido o tempo limite, as entidades da classe de dados na cache são consideradas como expiradas. Isto significa que:
 
-* the data is still there
-* the next time the data is needed, it will be asked to the server
-* 4D automatically removes expired data when the maximum number of entities is reached
+* os dados ainda estão lá
+* na próxima vez que os dados forem necessários, serão solicitados ao servidor
+* 4D remove automaticamente os dados expirados quando o número máximo de entidades é atingido
 
-Setting a `timeout` property sets a new timeout for the entities already present in the cache. It is useful when working with data that does not change very frequently, and thus when new requests to the server are not necessary.
+A definição de um tempo limite `` define um novo tempo limite para as entidades já presentes na cache. É útil quando se trabalha com dados que não mudam com muita frequência, e portanto quando não são necessários novos pedidos ao servidor.
 
-`maxEntries` sets the max number of entities in the ORDA cache. O padrão é de 30 000.
+`maxEntries` define o número máximo de entidades na cache ORDA. O padrão é de 30 000.
 
-The minimum number of entries is 300, so the value of `maxEntries` must be equal to or higher than 300. Otherwise it is ignored and the maximum number of entries is set to 300.
+O número mínimo de entradas é 300, pelo que o valor de `maxEntries` deve ser igual ou superior a 300. Caso contrário, é ignorado e o número máximo de entradas é fixado em 300.
 
-If no valid properties are passed as `timeout` and `maxEntries`, the cache remains unchanged, with its default or previously set values.
+Se nenhuma propriedade válida for passada como `timeout` e `maxEntries`, a cache permanece inalterada, com os seus valores por defeito ou previamente definidos.
 
-When an entity is saved, it is updated in the cache and expires once the timeout is reached.
+Quando uma entidade é guardada, é actualizada na cache e expira quando o tempo limite é atingido.
 
 #### Exemplo
 

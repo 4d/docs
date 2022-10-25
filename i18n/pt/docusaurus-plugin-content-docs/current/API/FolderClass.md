@@ -16,7 +16,7 @@ Form.curfolder:=Folder(fk database folder)
 Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 ```
 
-### Folder object
+### Objecto Folder
 
 |                                                                                                                                                                          |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -65,17 +65,17 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 
 <!-- REF #_command_.Folder.Params -->
-| Parâmetros     | Tipo       |    | Descrição                                       |
-| -------------- | ---------- |:--:| ----------------------------------------------- |
-| path           | Text       | -> | Folder path                                     |
-| folderConstant | Integer    | -> | 4D folder constant                              |
-| pathType       | Integer    | -> | `fk posix path` (default) or `fk platform path` |
-| *              |            | -> | * to return folder of host database             |
-| Resultados     | 4D. Folder | <- | New folder object|<!-- END REF -->    |
+| Parâmetros     | Tipo       |    | Descrição                                           |
+| -------------- | ---------- |:--:| --------------------------------------------------- |
+| path           | Text       | -> | Folder path                                         |
+| folderConstant | Integer    | -> | 4D folder constant                                  |
+| pathType       | Integer    | -> | `fk posix path` (por defeito) ou `fk platform path` |
+| *              |            | -> | * to return folder of host database                 |
+| Resultados     | 4D. Folder | <- | New folder object|<!-- END REF -->        |
 
 #### Descrição
 
-The `Folder` command <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. The command accepts two syntaxes:
+O comando `Folder` <!-- REF #_command_.Folder.Summary -->creates and returns a new object of the `4D.Folder` type<!-- END REF -->. The command accepts two syntaxes:
 
 **Folder ( path { ; pathType } { ; \* } )**
 
@@ -147,6 +147,7 @@ A função `4D.Folder.new()` <!-- REF #4D.Folder.new().Summary -->creates and re
 
 
 <!--REF #FolderClass.create().Syntax -->**.create()** : Boolean<!-- END REF -->
+
 
 
 <!--REF #FolderClass.create().Params -->
@@ -355,7 +356,7 @@ By default, the folder retains its name when moved. If you want to rename the mo
 
 **Objeto devolvido**
 
-The moved `Folder` object.
+O objecto `Folder` movido.
 
 #### Exemplo
 
@@ -410,7 +411,7 @@ The *newName* parameter must comply with naming rules (e.g., it must not contain
 
 **Objeto devolvido**
 
-The renamed `Folder` object.
+O objecto `Folder` renomeado.
 
 #### Exemplo
 

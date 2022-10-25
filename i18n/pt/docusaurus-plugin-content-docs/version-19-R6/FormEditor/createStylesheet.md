@@ -231,7 +231,7 @@ This CSS defines a color combination for text and text background in the light s
 }
 ```
 
-### Object Attributes
+### Atributos de objetos
 
 A maioria dos atributos do objeto formulário podem ser definidos dentro de uma folha de estilo, exceto os seguintes atributos:
 
@@ -239,7 +239,7 @@ A maioria dos atributos do objeto formulário podem ser definidos dentro de uma 
 * `type`
 * `class`
 * `event`
-* `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (list type)
+* `choiceList`, `excludedList`, `labels`, `list`, `requiredList` (tipo de lista)
 
 Form object attributes can be declared with their [JSON name](FormObjects/properties_Reference.md) as CSS attributes (not including object types, methods, events, and lists).
 
@@ -272,7 +272,7 @@ icon: url("edit.png"); /* rota relativa ao arquivo de formulário */
 
 * Para `fill`, `stroke` , `alternateFill` , `horizontalLineStroke` e `verticalLineStroke`, três sintaxes são compatíveis:
 
-  * CSS color name: `fill: red;`
+  * Nome da cor CSS: `fill: red;`
   * Valor hexadécimal: `fill: #FF0000;`
   * función `rgb()`: `fill:rgb(255,0,0)`
 

@@ -57,7 +57,7 @@ La sintaxis específica de la plataforma depende del sistema operativo en el que
 Se soportan los siguientes modelos:
 
 - los separadores de carpetas son "\"
-- the text contains ':' and '\' as the second and third character,
+- el texto contiene ':' y '\' como segundo y tercer carácter,
 - el texto comienza con "\\".
 
 Ejemplos con [`Folder`](../API/FolderClass.md#folder):
@@ -69,7 +69,7 @@ $ok:=Folder("\\\\svr-internal\\tempo";fk platform path).create()
 
 #### Entrada de rutas Windows y secuencias de escape
 
-The 4D code editor allows the use of escape sequences. Una secuencia de escape es un conjunto de caracteres que se utilizan para sustituir un caracter "especial". La secuencia comienza con una barra diagonal inversa `\`, seguida de un caracter. Por ejemplo, `\t` es la secuencia de escape para el caracter `Tab`.
+El editor de código 4D permite el uso de secuencias de escape. Una secuencia de escape es un conjunto de caracteres que se utilizan para sustituir un caracter "especial". La secuencia comienza con una barra diagonal inversa `\`, seguida de un caracter. Por ejemplo, `\t` es la secuencia de escape para el caracter `Tab`.
 
 El caracter `\` también se utiliza como separador en los nombres de ruta Windows. En general, 4D interpretará correctamente los nombres de ruta Windows que se introduzcan en el editor de código sustituyendo las barras invertidas simples `\` por barras invertidas dobles ``\\`. Por ejemplo,``C:\Folder`se convertirá en `C:\\Folder`.
 
@@ -117,7 +117,7 @@ $okFolder:=Folder("/PACKAGE/myFolder").create() //carpeta creada a nivel de la e
 $okFile:=File("/DATA/Prefs/tempo.txt").create() //archivo creado en la carpeta de datos
 ```
 
-### `.file()` and `.folder()` folder methods
+### `.file()` y `.folder()`
 
 Las funciones de los objetos carpeta, tales como [`folder.file()`](../API/FolderClass.md#file) y [`folder.folder()`](../API/FolderClass.md#folder-1) esperan nombres de ruta POSIX relativos. Por ejemplo:
 

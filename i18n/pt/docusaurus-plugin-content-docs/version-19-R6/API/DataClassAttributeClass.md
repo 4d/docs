@@ -51,7 +51,7 @@ Os objetos `DataClassAttribute` têm propriedades que pode ler para obter inform
 
 #### Descrição
 
-A propriedade `.autoFilled` <!-- REF DataClassAttributeClass.autoFilled.Summary -->contains True if the attribute value is automatically filled by 4D<!-- END REF -->. Esta propriedade corresponde às seguintes propriedades de campo 4D:
+A propriedade `.autoFilled` <!-- REF DataClassAttributeClass.autoFilled.Summary -->contém True se o valor do atributo for automaticamente preenchido por 4D<!-- END REF -->. Esta propriedade corresponde às seguintes propriedades de campo 4D:
 
 * "Auto incremento", para campos de tipo numérico
 * "Auto UUID", para campos UUID (tipo alfa).
@@ -111,10 +111,10 @@ Esta propriedade não é devolvida se `.kind` = "relatedEntity" ou "relatedEntit
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                       |
-| ------ | ------------------------------ |
-| v19 R4 | Support of alias attributes    |
-| v19 R3 | Support of computed attributes |
+| Versão | Mudanças                                |
+| ------ | --------------------------------------- |
+| v19 R4 | Compatibilidade de atributos de alias   |
+| v19 R3 | Compatibilidade de atributos computados |
 
 </details>
 
@@ -155,7 +155,7 @@ A propriedade `.fieldType` <!-- REF DataClassAttributeClass.fieldType.Summary --
 
 #### Descrição
 
-A propriedade `.indexed` <!-- REF DataClassAttributeClass.indexed.Summary -->contains **True** if there is a B-tree or a Cluster B-tree index on the attribute<!-- END REF -->.
+A propriedade `.indexed` <!-- REF DataClassAttributeClass.indexed.Summary -->contém **True** se houver uma árvore B ou um índice de árvore B cluster no atributo<!-- END REF -->.
 
 Esta propriedade não é devolvida se `.kind` = "relatedEntity" ou "relatedEntities".
 > Para programação genérica é possível usar **Bool**(dataClassAttribute.indexed) para obter um valor válido (false) mesmo se `.indexed` não for retornado.
@@ -199,7 +199,7 @@ Esta propriedade não se devolve si `.kind` = "storage". Deve ser do tipo "relat
 
 #### Descrição
 
-A propriedade `.keywordIndexed` <!-- REF DataClassAttributeClass.keywordIndexed.Summary -->contains **True** if there is a keyword index on the attribute<!-- END REF -->.
+A propriedade `.keywordIndexed` <!-- REF DataClassAttributeClass.keywordIndexed.Summary -->contém **True** se houver um índice de palavras-chave no atributo<!-- END REF -->.
 
 Esta propriedade não é retornada se [`.kind`](#kind) = "relatedEntity" ou "relatedEntities".
 > Para a programação gene´rica pode usar **Bool**(dataClassAttribute.keywordIndexed) para obter um valor válido (false) mesmo se `.keywordIndexed` não for retornado.
@@ -211,10 +211,10 @@ Esta propriedade não é retornada se [`.kind`](#kind) = "relatedEntity" ou "rel
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças           |
-| ------ | ------------------ |
-| v19 R4 | Added "alias"      |
-| v19 R3 | Added "calculated" |
+| Versão | Mudanças                |
+| ------ | ----------------------- |
+| v19 R4 | "alias" adicionado      |
+| v19 R3 | "calculated" adicionado |
 
 </details>
 
@@ -225,8 +225,8 @@ Esta propriedade não é retornada se [`.kind`](#kind) = "relatedEntity" ou "rel
 A propriedade `.kind` <!-- REF DataClassAttributeClass.kind.Summary -->devolve a categoria do atributo<!-- END REF -->. O valor retornado pode ser um dos abaixo:
 
 * Atributo "storage": storage (ou escalar) ou seja, atributo que armazena um valor, não uma referência a outro atributo
-* "calculated": computed attribute, i.e. defined through a [`get` function](ORDA/ordaClasses.md#function-get-attributename)
-* "alias": attribute built upon [another attribute](ORDA/ordaClasses.md#alias-attributes-1)
+* "calculado": atributo computado, ou seja, definido através de uma [`obter` função](ORDA/ordaClasses.md#function-get-attributename)
+* "alias": atributo construído sobre [outro atributo](ORDA/ordaClasses.md#alias-attributes-1)
 * "relatedEntity": N -> 1 atributo de relação (referência a uma entidade)
 * "relatedEntities": 1 -> N atributo de relação (referência a uma seleção de entidades)
 
@@ -337,7 +337,7 @@ A propriedade `.path` <!-- REF DataClassAttributeClass.path.Summary -->devolve o
 
 O `.readOnly` propriedade é <!-- REF DataClassAttributeClass.readOnly.Summary -->true se o atributo for apenas de leitura<!-- END REF -->.
 
-For example, computed attributes without [`set` function](ORDA/ordaClasses.md#function-set-attributename) are read-only.
+Por exemplo, os atributos computados sem o conjunto [`` função](ORDA/ordaClasses.md#function-set-attributename) são apenas de leitura.
 
 <!-- END REF -->
 
@@ -378,9 +378,9 @@ Dada a seguinte tabela e relação:
 
 <details><summary>Histórico</summary>
 
-| Versão | Mudanças                       |
-| ------ | ------------------------------ |
-| v19 R3 | Support of computed attributes |
+| Versão | Mudanças                                |
+| ------ | --------------------------------------- |
+| v19 R3 | Compatibilidade de atributos computados |
 
 </details>
 

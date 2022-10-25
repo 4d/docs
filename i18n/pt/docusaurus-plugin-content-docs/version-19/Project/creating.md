@@ -7,7 +7,7 @@ title: Working with a project
 
 Multi-user development is managed via standard **source control** repository tools (Perforce, Git, SVN, etc.), which allow developers to work on different branches, and compare, merge, or revert modifications.
 
-## Creating a project
+## Criar um projeto
 
 New 4D application projects can be created from **4D** or **4D Server**. In any case, project files are stored on the local machine.
 
@@ -27,7 +27,7 @@ When you validate the **Save** dialog, 4D closes the current project (if any), c
 
 You can then start developing your project.
 
-## Opening a project
+## Abrir projeto
 
 To open an existing project from 4D:
 

@@ -938,16 +938,16 @@ You set the cell display and options using specific attributes in each object (s
 
 You cannot set display formats or entry filters for columns of object-type list boxes. They are automatically defined according to the value type. These are listed in the following table:
 
-| Tipo de valor | Default format                                             | Entry control           |
-| ------------- | ---------------------------------------------------------- | ----------------------- |
-| text          | same as defined in object                                  | any (no control)        |
-| real          | same as defined in object (using system decimal separator) | "0-9" and "." and "-"   |
-|               |                                                            | "0-9" and "." if min>=0 |
-| integer       | same as defined in object                                  | "0-9" and "-"           |
-|               |                                                            | "0-9" if min>=0         |
-| Booleano      | caixa de verificação                                       | N/A                     |
-| color         | N/A                                                        | N/A                     |
-| event         | N/A                                                        | N/A                     |
+| Tipo de valor | Default format                                             | Entry control         |
+| ------------- | ---------------------------------------------------------- | --------------------- |
+| text          | same as defined in object                                  | any (no control)      |
+| real          | same as defined in object (using system decimal separator) | "0-9" e "." e "-"     |
+|               |                                                            | "0-9" e "." se min>=0 |
+| integer       | same as defined in object                                  | "0-9" e "-"           |
+|               |                                                            | "0-9" se min>=0       |
+| Booleano      | caixa de verificação                                       | N/A                   |
+| color         | N/A                                                        | N/A                   |
+| event         | N/A                                                        | N/A                   |
 
 ### Attributes
 
@@ -1064,7 +1064,7 @@ Exemplos:
     APPEND TO ARRAY($ChoiceList;100)
     C_OBJECT($ob)
     OB SET($ob;"valueType";"integer")
-    OB SET($ob;"value";10) //10 as default value
+    OB SET($ob;"value";10) //10 como valor por defeito
     OB SET ARRAY($ob;"choiceList";$ChoiceList)
 ```
 ![](../assets/en/FormObjects/listbox_column_objectArray_helloWorld_commonValues.png)
@@ -1096,16 +1096,16 @@ Exemplos:
 *   You want to display a drop-down list based on a list defined by programming and save it as a reference:
 
 ```4d
-    <>List:=New list
-    APPEND TO LIST(<>List;"Paris";1)
-    APPEND TO LIST(<>List;"London";2)
-    APPEND TO LIST(<>List;"Berlin";3)
-    APPEND TO LIST(<>List;"Madrid";4)
+    <>Lista:=Nova lista
+    APENDER A LISTA(<>Lista; "Paris";1)
+    APENDER A LISTA(<>Lista; "Londres";2)
+    APENDER A LISTA(<>Lista; "Berlim";3)
+    APENDER A LISTA(<>Lista; "Madrid";4)
     C_OBJECT($ob)
-    OB SET($ob;"valueType";"integer")
-    OB SET($ob;"saveAs";"reference")
-    OB SET($ob;"value";2) //displays London by default
-    OB SET($ob;"requiredListReference";<>List)
+    OB SET($ob; "valueType"; "integer")
+    OB SET($ob; "saveAs"; "reference")
+    OB SET($ob; "value";2) //mostra London por padrão
+    OB SET($ob; "requiredListReference";<>List)
 ```
 
 

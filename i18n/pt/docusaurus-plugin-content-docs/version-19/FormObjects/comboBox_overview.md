@@ -15,7 +15,7 @@ Use the [`On Data Change`](Events/onDataChange.md) event to manage entries into 
 
 You initialize a combo box in exactly the same way as a [drop-down list](dropdownList_Overview.md#overview): using an object, an array, or a choice list.
 
-### Using an object
+### Utilização de um objecto
 
 > This feature is only available in 4D projects.
 

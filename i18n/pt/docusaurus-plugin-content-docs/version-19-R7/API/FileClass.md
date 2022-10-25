@@ -65,12 +65,12 @@ $created:=File("/PACKAGE/SpecialPrefs/"+Current user+".myPrefs").create()
 
 
 <!-- REF #_command_.File.Params -->
-| Parâmetros   | Tipo     |    | Descrição                                       |
-| ------------ | -------- |:--:| ----------------------------------------------- |
-| path         | Text     | -> | Rota do arquivo                                 |
-| fileConstant | Integer  | -> | 4D file constant                                |
-| pathType     | Integer  | -> | `fk posix path` (default) or `fk platform path` |
-| *            |          | -> | * to return file of host database               |
+| Parâmetros   | Tipo     |    | Descrição                                           |
+| ------------ | -------- |:--:| --------------------------------------------------- |
+| path         | Text     | -> | Rota do arquivo                                     |
+| fileConstant | Integer  | -> | 4D file constant                                    |
+| pathType     | Integer  | -> | `fk posix path` (por defeito) ou `fk platform path` |
+| *            |          | -> | * to return file of host database                   |
 | Resultados   | 4D. File | <- | New file object|<!-- END REF -->
 
 |
@@ -156,7 +156,7 @@ A função `4D.File.new()` <!-- REF #4D.File.new().Summary -->creates and return
 </details>
 
 <!--REF file.create().Note -->
-**Not available for ZIP archives**<!-- END REF -->
+**Não disponível para arquivos ZIP**<!-- END REF -->
 
 
 <!--REF #FileClass.create().Syntax -->**.create()** : Boolean <!-- END REF -->
@@ -414,7 +414,7 @@ ALERT($info.
 
 #### Descrição
 
-The `.moveTo()` function <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
+A função `.moveTo()` <!-- REF #FileClass.moveTo().Summary -->moves or renames the `File` object into the specified *destinationFolder*<!-- END REF -->.
 
 A *destinationFolder* deve existir em disco, senão um erro é gerado.
 
@@ -422,7 +422,7 @@ By default, the file retains its name when moved. If you want to rename the move
 
 **Objeto devolvido**
 
-The moved `File` object.
+O objecto `File` movido.
 
 #### Exemplo
 
@@ -477,8 +477,8 @@ If you use the *options* (object) parameter, you can pass more options for the f
 | ----------------- | -------------- | ----------------------------------------------------------------------------------------------------------------------------- | ------------- |
 | `.mode`           | Text           | Opening mode (see *mode* above)                                                                                               | "read"        |
 | `.charset`        | Text           | Charset used when reading from or writing to the file. Use the standard name of the set (for example "ISO-8859-1" or "UTF-8") | "UTF-8"       |
-| `.breakModeRead`  | Text or Number | Processing mode for line breaks used when reading in the file (see below)                                                     | "native" or 1 |
-| `.breakModeWrite` | Text or Number | Processing mode for line breaks used when writing to the file (see below)                                                     | "native" or 1 |
+| `.breakModeRead`  | Text ou Number | Processing mode for line breaks used when reading in the file (see below)                                                     | "native" or 1 |
+| `.breakModeWrite` | Text ou Number | Processing mode for line breaks used when writing to the file (see below)                                                     | "native" or 1 |
 
 The `.breakModeRead` and `.breakModeWrite` indicate the processing to apply to end-of-line characters in the document. You can use one of the following values (text or number):
 
@@ -544,7 +544,7 @@ Note that the function modifies the full name of the file, i.e. if you do not pa
 
 **Objeto devolvido**
 
-The renamed `File` object.
+O objecto `File` renomeado.
 
 #### Exemplo
 

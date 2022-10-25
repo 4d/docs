@@ -113,7 +113,7 @@ For example, you can pass the following strings:
     http://[2001:0db8:0000:0000:0000:ff00:0042:8329]:8080/index.html (**)
 ```
 
-#### `options` parameter
+#### parâmetro `options`
 
 In the *options* parameter, pass an object that can contain the following properties:
 
@@ -137,14 +137,14 @@ In the *options* parameter, pass an object that can contain the following proper
 | returnResponseBody   | Booleano                                        | If false, the response body is not returned in the [`response` object](#response). Returns an error if false and `onData` is undefined                                                                                                                            | True         |
 | timeout              | Real                                            | Tempo de espera em segundos. Undefined = no timeout                                                                                                                                                                                                               | Indefinido   |
 
-#### Callback functions
+#### Funções Callback
 
 All callback functions receive two object parameters:
 
 | Parâmetros | Tipo                                        |
 | ---------- | ------------------------------------------- |
 | $param1    | [objeto `HTTPRequest`](#httprequest-object) |
-| $param2    | [`Event` object](#event-object)             |
+| $param2    | [`Event` objecto](#event-object)            |
 
 Here is the sequence of callback calls:
 
@@ -154,7 +154,7 @@ Here is the sequence of callback calls:
 4. If an error occurs, `onError` is executed once (and terminates the request)
 5. `onTerminate` is always executed once
 
-#### event object
+#### objecto evento
 
 An `event` object is returned when a [callback function](#callback-functions) is called. It contains the following properties:
 
@@ -182,7 +182,7 @@ An authentication object handles the `options.serverAuthentication` or `options.
 
 #### Descrição
 
-The `.dataType` property contains <!-- REF #HTTPRequestClass.dataType.Summary -->the `dataType` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew), "auto" if it was omitted<!-- END REF -->.
+A propriedade `.dataType` contém <!-- REF #HTTPRequestClass.dataType.Summary -->the `dataType` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew), "auto" if it was omitted<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -193,7 +193,7 @@ The `.dataType` property contains <!-- REF #HTTPRequestClass.dataType.Summary --
 
 #### Descrição
 
-The `.encoding` property contains <!-- REF #HTTPRequestClass.encoding.Summary -->the `encoding` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew), "UTF-8" if it was omitted<!-- END REF -->.
+A propriedade `.encoding` contém <!-- REF #HTTPRequestClass.encoding.Summary -->the `encoding` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew), "UTF-8" if it was omitted<!-- END REF -->.
 
 <!-- END REF -->
 
@@ -277,7 +277,7 @@ A `response` object is a non-sharable object. It provides the following properti
 
 #### Descrição
 
-The `.returnResponseBody` property contains <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->the `returnResponseBody` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. If it was omitted, contains True.
+A propriedade `.returnResponseBody` contém <!-- REF #HTTPRequestClass.returnResponseBody.Summary -->the `returnResponseBody` passed in the [`options`](#options-parameter) object when calling [new()](#4dhttprequestnew)<!-- END REF -->. If it was omitted, contains True.
 
 <!-- END REF -->
 

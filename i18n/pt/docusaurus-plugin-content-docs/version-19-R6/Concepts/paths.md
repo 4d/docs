@@ -95,7 +95,7 @@ Examples with [`Folder`](../API/FolderClass.md#folder):
 
 ```4d
 $ok:=Folder("macintosh hd:";fk platform path).create()
-$ok:=Folder("Monday:Tuesday";fk platform path).create() //a volume must be called Monday
+$ok:=Folder("Monday:Tuesday";fk platform path).create() //a volume deve ser chamado Monday
 ```
 
 ## Absolute and relative pathnames

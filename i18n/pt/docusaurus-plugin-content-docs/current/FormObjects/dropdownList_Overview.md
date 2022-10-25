@@ -13,18 +13,18 @@ Em macOS, listas drop down são também chamadas de "menu pop up" Ambos os nomes
 
 You can create different types of drop-down lists with different features. To define a type, select the appropriate **Expression Type** and **Data Type** values in the Property list, or use their JSON equivalent.
 
-| Tipo                           | Funcionalidades                                  | Expression Type | Tipo de dados                | JSON definition                                                                                                                                               |
-| ------------------------------ | ------------------------------------------------ | --------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objeto                         | Built upon a collection                          | Objeto          | Numeric, Text, Date, or Time | `dataSourceTypeHint: object` + `numberFormat: <format>` or `textFormat: <format>` or `dateFormat: <format>` or `timeFormat: <format>` |
-| Array                          | Built upon an array                              | Array           | Numeric, Text, Date, or Time | `dataSourceTypeHint: arrayNumber` or `arrayText` or `arrayDate` or `arrayTime`                                                                                |
-| Choice list saved as value     | Built upon a choice list (standard)              | Lista           | Selected item value          | `dataSourceTypeHint: text` + `saveAs: value`                                                                                                                  |
-| Choice list saved as reference | Built upon a choice list. Item position is saved | Lista           | Selected item reference      | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                                           |
-| Hierarchical choice list       | Can display hierarchical contents                | Lista           | List reference               | `dataSourceTypeHint: integer`                                                                                                                                 |
-| Ação padrão                    | Automatically built by the action                | *any*           | *any except List reference*  | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                                                          |
+| Tipo                           | Funcionalidades                                  | Tipo de expressão | Tipo de dados                | JSON definition                                                                                                                                               |
+| ------------------------------ | ------------------------------------------------ | ----------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objeto                         | Built upon a collection                          | Objeto            | Numeric, Text, Date, ou Time | `dataSourceTypeHint: object` + `numberFormat: <format>` or `textFormat: <format>` or `dateFormat: <format>` or `timeFormat: <format>` |
+| Array                          | Built upon an array                              | Array             | Numeric, Text, Date, ou Time | `dataSourceTypeHint: arrayNumber` or `arrayText` or `arrayDate` or `arrayTime`                                                                                |
+| Choice list saved as value     | Built upon a choice list (standard)              | Lista             | Selected item value          | `dataSourceTypeHint: text` + `saveAs: value`                                                                                                                  |
+| Choice list saved as reference | Built upon a choice list. Item position is saved | Lista             | Selected item reference      | `dataSourceTypeHint: integer` + `saveAs: reference`                                                                                                           |
+| Hierarchical choice list       | Can display hierarchical contents                | Lista             | List reference               | `dataSourceTypeHint: integer`                                                                                                                                 |
+| Ação padrão                    | Automatically built by the action                | *any*             | *any except List reference*  | any definition + `action: <action>` (+ `focusable: false` for actions applying to other areas)                                                          |
 
 ## Handling drop-down lists
 
-### Using an object
+### Utilização de um objecto
 
 > This feature is only available in 4D projects.
 
@@ -112,7 +112,7 @@ Se precisar salvar as escolhas do usuário em um campo, precisa usar uma declara
  End case
 ```
 
-You must select each event that you test for in your Case statement. Os arrays sempre contém um número finito de elementos. A lista de elementos é dinâmica e pode ser modificada por um método. Itens em um array podem ser modificados, ordenados e terem itens adicionados.
+Deve selecionar cada event que teste nas estruturas Case. Os arrays sempre contém um número finito de elementos. A lista de elementos é dinâmica e pode ser modificada por um método. Itens em um array podem ser modificados, ordenados e terem itens adicionados.
 
 ### Utilizar uma lista de seleção
 

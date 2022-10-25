@@ -253,7 +253,7 @@ Para extrair da pasta root:
 
 #### Descrição
 
-A propriedade `.root` contém <!-- REF #ZipArchiveClass.root.Summary -->a virtual folder providing access to the contents of the ZIP archive<!-- END REF -->.
+A propriedade `.root` contém <!-- REF #ZipArchiveClass.root.Summary -->uma pasta virtual que permite o acesso ao conteúdo do arquivo ZIP<!-- END REF -->.
 
 A pasta `root` e seus conteúdos podem ser manipulados com as funções e propriedades [ZipFile](ZipFileClass.md) e [ZipFolder](ZipFolderClass.md).
 

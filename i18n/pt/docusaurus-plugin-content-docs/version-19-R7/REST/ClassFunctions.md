@@ -297,7 +297,7 @@ You can then run this request:
 ### Using an entity to be created on the server
 
 
-The Dataclass class `Students` has the function `pushData()` receiving an entity containing data from the client. The `checkData()` method runs some controls. If they are OK, the entity is saved and returned.
+The Dataclass class `Students` has the function `pushData()` receiving an entity containing data from the client. O método `checkData()` executa alguns controlos. If they are OK, the entity is saved and returned.
 
 ```
 // Students Class Class extends DataClass
@@ -436,7 +436,7 @@ Body of the request:
 
 ### Updating an entity with a related entity
 
-In this example, we associate an existing school to a Students entity. The `StudentsEntity` class has an API:
+In this example, we associate an existing school to a Students entity. A classe `StudentEntity` tem um API:
 
 ```
 // StudentsEntity class Class extends Entity

@@ -383,7 +383,7 @@ Starts or stops the recording of requests received by the 4D web server in the *
 
 This setting allows you to select the format of this file. Available values are:
 
-| Value | Format name          | Descrição                                                                                                                                                                                                                |
+| Value | Nome do formato      | Descrição                                                                                                                                                                                                                |
 | ----- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | 0     | No Log File          | Predefinição                                                                                                                                                                                                             |
 | 1     | Record in CLF format | Common Log Format - Each line of the file represents a request, such as: `host rfc931 user [DD/MMM/YYYY:HH:MM:SS] "request" state length` - Each field is separated by a space and each line ends by the CR/LF sequence. |
