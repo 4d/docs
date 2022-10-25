@@ -297,9 +297,9 @@ Ver  exemplo da função [`.startTransaction()`](#starttransaction).
 
 #### Descrição
 
-A função `.clearAllRemoteContexts()` <!-- REF #DataStoreClass.clearAllRemoteContexts().Summary -->clears all the attributes for all the active contexts in the datastore<!-- END REF -->.
+A função `.clearAllRemoteContexts()` <!-- REF #DataStoreClass.clearAllRemoteContexts().Summary -->limpa todos os atributos para todos os contextos activos no datastore<!-- END REF -->.
 
-This function is mainly used in the context of debugging. One thing to keep in mind is that when you open the debugger, it sends requests to the server and queries all the dataclass attributes to display them. This can overload your contexts with unnecessary data.
+Esta função é utilizada principalmente no contexto da depuração. Deve lembrar que quando abrir o depurador ele envia petições ao servidor e pesquisa todos os atributos de dataclasse para exibi-los Isso pode sobrecarregar seus contextos com dados desnecessários.
 
 In such cases, you can use `.clearAllRemoteContexts()` to clear your contexts and keep them clean.
 
@@ -331,7 +331,7 @@ In such cases, you can use `.clearAllRemoteContexts()` to clear your contexts an
 #### Descrição
 
 A função `.encryptionStatus()` <!-- REF #DataStoreClass.encryptionStatus().Summary -->devolve um objecto que fornece o estado de encriptação para o ficheiro de dados actual<!-- END REF --> (ou seja, o ficheiro de dados do datastore `ds`). Também se proporciona o estado de cada tabela.
-> Use the `Data file encryption status` command to determine the encryption status of any other data file.
+> Utilizar o comando `Estado de encriptação de ficheiros de dados` para determinar o estado de encriptação de qualquer outro ficheiro de dados.
 
 **Valor retornado**
 
@@ -400,23 +400,23 @@ Se quiser saber o número de tabelas criptografadas no arquivo de dados atual:
 
 
 <!-- REF #DataStoreClass.getAllRemoteContexts().Params -->
-| Parâmetros | Tipo   |    | Descrição                                                             |
-| ---------- | ------ | -- | --------------------------------------------------------------------- |
-| Resultados | Objeto | <- | Collection of optimization context objects|<!-- END REF --> |
+| Parâmetros | Tipo   |    | Descrição                                                                  |
+| ---------- | ------ | -- | -------------------------------------------------------------------------- |
+| Resultados | Objeto | <- | Colecção de objectos de contexto de optimização|<!-- END REF --> |
 
 > **Modo avançado:** Esta função destina-se a programadores que necessitem personalizar as características padrão ORDA para configurações específicas. Na maioria dos casos, não necessitará de o utilizar.
 
 #### Descrição
 
-A função `.getAllRemoteContexts()` <!-- REF #DataStoreClass.getAllRemoteContexts().Summary -->returns a collection of objects containing information on all the active optimization contexts in the datastore<!-- END REF -->.
+A função `.getAllRemoteContexts()` <!-- REF #DataStoreClass.getAllRemoteContexts().Summary -->devolve uma colecção de objectos contendo informação sobre todos os contextos de optimização activa no datastore<!-- END REF -->.
 
-> For more information on how contexts can be created, see [client/server optimization](../ORDA/remoteDatastores.md#clientserver-optimization).
+> Para mais informações sobre como podem ser criados contextos, ver [optimização cliente/servidor](../ORDA/remoteDatastores.md#clientserver-optimization).
 
-Each object in the returned collection has the properties listed in the [`.getRemoteContextInfo()`](#properties-of-the-returned-object) section.
+Cada objeto da coleção devolvida ccontém as propriedades listadas na seção.[`.getRemoteContextInfo()`](#properties-of-the-returned-object).
 
 #### Exemplo
 
-The following code sets up two contexts and retrieves them using `.getAllRemoteContexts()`:
+O código abaixo define dois contextos e os recupera utilizando `.getAllRemoteContexts()`:
 
 ```4d
 var $ds : 4D. DataStoreImplementation
@@ -449,7 +449,7 @@ $info:=$ds.getAllRemoteContexts()
 {name:"contextA";dataclass:"Persons";main:"firstname,address.city"}]
 ```
 
-> This example serves as a demonstration, it is not meant for real implementation.
+> Este exemplo serve como uma demonstração, não se destina a uma implementação real.
 
 #### Veja também
 
@@ -883,7 +883,7 @@ $info:=$ds.getRemoteContextInfo("contextA")
 // $info = {name:"contextA";dataclass:"Persons";main:"firstname, lastname"}
 ```
 
-> This example serves as a demonstration, it is not meant for real implementation.
+> Este exemplo serve como uma demonstração, não se destina a uma implementação real.
 
 #### Exemplo 2
 
