@@ -38,7 +38,7 @@ The **Scaled to fit** format causes 4D to resize the picture to fit the dimensio
 
 ### Replicado
 
-`JSON grammar: "tiled"`
+`Gramática JSON: "tiled"`
 
 When the area that contains a picture with the **Replicated** format is enlarged, the picture is not deformed but is replicated as many times as necessary in order to fill the area entirely.
 
@@ -65,4 +65,4 @@ The **Truncated (non-centered)** format causes 4D to place the upper-left corner
 
 #### Objectos suportados
 
-[Static Picture](staticPicture.md)
+[Imagem estática](staticPicture.md)
