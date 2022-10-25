@@ -26,7 +26,7 @@ title: Lista de los métodos
 
 #### Descripción
 
-El comando `VP ADD FORMULA NAME` <!-- REF #_method_.VP ADD FORMULA NAME.Summary -->creates or modifies a named formula in the open document<!-- END REF -->.
+El comando `VP ADD FORMULA NAME` <!-- REF #_method_.VP ADD FORMULA NAME.Summary -->crea o modifica una fórmula temporal en el documento abierto<!-- END REF -->.
 > Las fórmulas nombradas creadas por este comando se guardan en el documento.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
@@ -68,19 +68,19 @@ VP ADD FORMULA NAME("ViewProArea";"SUM($A$1:$A$10)";"Total2")
 
 #### Descripción
 
-El comando `VP ADD RANGE NAME` <!-- REF #_method_.VP ADD RANGE NAME.Summary -->creates or modifies a named range in the open document<!-- END REF -->.
+El comando `VP ADD RANGE NAME` <!-- REF #_method_.VP ADD RANGE NAME.Summary -->crea o modifica un rango temporal en el documento abierto<!-- END REF -->.
 > Los rangos nombrados creados por este comando se guardan con el documento.
 
-In *rangeObj*, pass the range that you want to name and in *name*, pass the new name for the range. If the name is already used within the same scope, the new named range replaces the existing one. Tenga en cuenta que puede utilizar el mismo nombre para diferentes alcances (ver más adelante).
+En *rangeObj*, pase el rango que quiere nombrar, y pase el nuevo nombre del rango en *name*. Si el nombre ya se utiliza en el mismo alcance, el nuevo rango nombrado sustituye al existente. Tenga en cuenta que puede utilizar el mismo nombre para diferentes alcances (ver más adelante).
 
-You can pass an object with additional properties for the named range in *options*. Se soportan las siguientes propiedades:
+Puede pasar un objeto con las propiedades adicionales para el rango nombrado en *options*. Se soportan las siguientes propiedades:
 
 | Propiedad | Tipo   | Descripción                                                                                                                                                                                                                                                                                                                                                                           |
 | --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | scope     | Number | Alcance del rango. Puede pasar el índice de la hoja (la numeracièon comienza en 0) o utilizar las siguientes constantes: <li>`vk current sheet`</li><li>`vk workbook`</li>El alcance determina si el nombre de un rango es local para una hoja de cálculo determinada (*scope*=sheet index or `vk current sheet`), o si es global a todo el libro de trabajo (*scope*=`vk workbook`). |
 | comment   | Text   | Comentario asociado al rango nombrado                                                                                                                                                                                                                                                                                                                                                 |
-> * Un rango nombrado es en realidad una fórmula nombrada que contiene coordenadas. `VP ADD RANGE NAME` facilitates the creation of named ranges, but you can also use the [`VP ADD FORMULA NAME`](#vp-add-formula-name) method to create named ranges.
-> * Formulas defining named ranges can be retrieved with the [`VP Get formula by name`](#vp-get-formula-by-name) method.
+> * Un rango nombrado es en realidad una fórmula nombrada que contiene coordenadas. `VP ADD RANGE NAME` facilita la creación de rangos con nombre, pero también puede utilizar el comando [`VP ADD FORMULA NAME`](#vp-add-formula-name) para crear rangos con nombre.
+> * Las fórmulas que definen rangos con nombre pueden recuperarse con el método [`VP Get formula by name`](#vp-get-formula-by-name).
 
 #### Ejemplo
 
@@ -105,13 +105,13 @@ VP ADD RANGE NAME($range;"Total1")
 
 | Parámetros | Tipo |    | Descripción                              |
 | ---------- | ---- | -- | ---------------------------------------- |
-| rangeObj   | Text | -> | Range object |<!-- END REF --> |
+| rangeObj   | Text | -> | Objeto rango |<!-- END REF --> |
 
 #### Descripción
 
 El comando `VP ADD SELECTION` <!-- REF #_method_.VP ADD SELECTION.Summary -->añade las celdas especificadas a las celdas actualmente seleccionadas<!-- END REF -->.
 
-In *rangeObj*, pass a range object of cells to add to the current selection.
+En *rangeObj*, pase un objeto rango de varias celdas para añadir a la selección actual.
 > La celda activa no se modifica.
 
 #### Ejemplo
@@ -157,7 +157,7 @@ En *vpAreaName*, pase el nombre del área 4D View Pro.
 If *index* exceeds the number of sheets, the command inserts the new sheet after the existing ones. In *sheet*, you can pass an index for the new sheet. If the passed *index* is inferior to or equal to 0, the command inserts the new sheet at the beginning.
 > La indexación comienza en 0.
 
-En *name*, puede pasar un nombre para la nueva hoja. The new name cannot contain the following characters: `*, :, [, ], ?,\,/`
+En *name*, puede pasar un nombre para la nueva hoja. El nuevo nombre no puede contener los siguientes caracteres: `*, :, [, ], ?,\,/`
 
 #### Ejemplo
 
@@ -406,7 +406,7 @@ El comando `VP Cells` <!-- REF #_method_.VP Cells.Summary -->devuelve un nuevo o
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
-The *column* parameter defines the first column of the cell range. Pase el índice de la columna (la numeración comienza en 0) en este parámetro. If the range is within multiple columns, you should also use the *columnCount* parameter.
+El parámetro *column* define la primera columna del rango de celdas. Pase el índice de la columna (la numeración comienza en 0) en este parámetro. Si el rango está dentro de varias columnas, también debe utilizar el parámetro *columnCount*.
 
 In the *row* parameter, you can define the row(s) of the cell range's position. Pase el índice de la línea (el conteo comienza en 0) en este parámetro. If the range is within multiple rows, you should also use the *rowCount* parameter.
 
@@ -488,7 +488,7 @@ El código es el siguiente:
 
 #### Descripción
 
-El comando `VP COLUMN AUTOFIT` <!-- REF #_method_.VP COLUMN AUTOFIT.Summary -->automatically sizes the column(s) in *rangeObj* according to their contents<!-- END REF -->.
+El comando `VP COLUMN AUTOFIT` <!-- REF #_method_.VP COLUMN AUTOFIT.Summary -->dimensiona automáticamente la(s) columna(s) de *rangeObj* en función de su contenido<!-- END REF -->.
 
 En *rangeObj*, pase un objeto rango que contenga un rango de columnas cuyo tamaño se gestionará automáticamente.
 
@@ -527,7 +527,7 @@ La selección de las columnas y la ejecución de este código:
 
 #### Descripción
 
-El comando `VP Combine Ranges` <!-- REF #_method_.VP Combine Ranges.Summary -->returns a new range object that incorporates two or more existing range objects<!-- END REF -->. Summary -->returns the 4D View Pro object attached to the 4D View Pro area *vpAreaName*<!-- END REF -->.
+El comando `VP Combine Ranges` <!-- REF #_method_.VP Combine Ranges.Summary -->devuelve un nuevo objeto de rango que integra dos o más objetos rango existentes<!-- END REF -->. Todos los rangos deben ser de la misma área 4D View Pro.
 
 En *rangeObj*, pase el primer rango.
 
@@ -564,7 +564,7 @@ Quiere combinar los rangos de tipo celda, columna y línea en un nuevo rango dis
 
 #### Descripción
 
-El comando `VP Convert from 4D View` <!-- REF #_method_.VP Convert from 4D View.Summary -->allows you to convert a legacy 4D View document into a 4D View Pro object<!-- END REF -->.
+El comando `VP Convert from 4D View` <!-- REF #_method_.VP Convert from 4D View.Summary -->permite convertir un documento heredado 4D View en un objeto 4D View Pro<!-- END REF -->.
 > Este comando no requiere que el plug-in 4D View esté instalado en su entorno.
 
 En el parámetro *4DViewDocument*, pase una variable o un campo BLOB que contenga el documento 4D View a convertir. El comando devuelve un objeto 4D View Pro en el que toda la información almacenada originalmente en el documento 4D View se convierte en atributos 4D View Pro.
@@ -593,7 +593,7 @@ $vpObj:=VP Convert from 4D View($pvblob)
 
 #### Descripción
 
-El comando `VP Convert to picture` <!-- REF #_method_.VP Convert to picture.Summary -->converts the *vpObject* 4D View Pro object (or the *rangeObj* range within *vpObject*) to a SVG picture<!-- END REF -->.
+El comando `VP Convert to picture` <!-- REF #_method_.VP Convert to picture.Summary -->convierte el objeto *vpObject* de 4D View Pro (o el rango *rangeObj* dentro de *vpObject*) en una imagen SVG<!-- END REF -->.
 
 Este comando es útil, por ejemplo:
 
@@ -607,7 +607,7 @@ En *rangeObj*, pase un rango de celdas a convertir. By default, if this paramete
 
 Document contents are converted with respect to their viewing attributes, including formats (see note above), visibility of headers, columns and rows. La conversión de los siguientes elementos es soportada:
 
-* Text : style / font / size / alignment / orientation / rotation / format
+* Texto: estilo / fuente / tamaño / alineación / orientación / rotación / formato
 * Fondo de la celda : color / imagen
 * Bordes de las celdas : grosor / color / estilo
 * Fusión de celdas
@@ -623,7 +623,7 @@ El comando devuelve una imagen en formato SVG.
 
 #### Ejemplo
 
-You want to convert a 4D View Pro area in SVG, preview the result, and send it to a picture variable:
+Quiere convertir un área 4D View Pro en SVG, previsualizar el resultado y enviarlo a una variable imagen:
 
 ```4d
 C_OBJECT($vpAreaObj)
@@ -724,7 +724,7 @@ VP PASTE FROM OBJECT($targetRange; $dataObject; vk clipboard options all)
 
 #### Descripción
 
-El comando `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->creates a table in the specified range<!-- END REF -->. Puede crear una tabla en un rango de celdas para facilitar la gestión y el análisis de un grupo de datos relacionados. Una tabla normalmente contiene datos relacionados en líneas y columnas y aprovecha un [contexto de datos](#vp-set-data-context).
+El comando `VP CREATE TABLE` <!-- REF #_method_.VP CREATE TABLE.Summary -->crea una tabla en el rango especificado<!-- END REF -->. Puede crear una tabla en un rango de celdas para facilitar la gestión y el análisis de un grupo de datos relacionados. Una tabla normalmente contiene datos relacionados en líneas y columnas y aprovecha un [contexto de datos](#vp-set-data-context).
 
 ![](../assets/en/ViewPro/vp-create-table.png)
 
@@ -743,22 +743,22 @@ En *source<*, puede pasar un nombre de propiedad de un [contexto de datos](#vp-s
 
 En *options*, puede pasar un objeto con opciones adicionales para la tabla. Los valores posibles son:
 
-| Propiedad             | Tipo       | Descripción                                                                                              | Valor por defecto |
-| --------------------- | ---------- | -------------------------------------------------------------------------------------------------------- | ----------------- |
-| allowAutoExpand       | Boolean    | True to expand columns or rows of the table when values are added in empty adjacent cells.               | True              |
-| showFooter            | Boolean    | Mostrar un pie de página                                                                                 | False             |
-| showHeader            | Boolean    | Mostrar un encabezado                                                                                    | True              |
-| showResizeHandle      | Boolean    | Para las tablas que no tienen una *source*. Mostrar la marca de redimensionamiento                       | False             |
-| tableColumns          | Collection | Colección de objetos utilizados para crear las columnas de la tabla (ver más abajo)                      | Indefinido        |
-| useFooterDropDownList | Boolean    | Utiliza una lista desplegable en las celdas del pie de página que calculan el valor total de una columna | False             |
+| Propiedad             | Tipo       | Descripción                                                                                                   | Valor por defecto |
+| --------------------- | ---------- | ------------------------------------------------------------------------------------------------------------- | ----------------- |
+| allowAutoExpand       | Boolean    | True para ampliar las columnas o líneas de la tabla cuando se añaden valores en las celdas adyacentes vacías. | True              |
+| showFooter            | Boolean    | Mostrar un pie de página                                                                                      | False             |
+| showHeader            | Boolean    | Mostrar un encabezado                                                                                         | True              |
+| showResizeHandle      | Boolean    | Para las tablas que no tienen una *source*. Mostrar la marca de redimensionamiento                            | False             |
+| tableColumns          | Collection | Colección de objetos utilizados para crear las columnas de la tabla (ver más abajo)                           | Indefinido        |
+| useFooterDropDownList | Boolean    | Utiliza una lista desplegable en las celdas del pie de página que calculan el valor total de una columna      | False             |
 
 La colección *tableColumns* determina la estructura de las columnas de la tabla. Cada objeto de la colección tiene los siguientes valores:
 
-  | Propiedad | Tipo | Descripción                                                              | Mandatory |
-  | --------- | ---- | ------------------------------------------------------------------------ | --------- |
-  | dataField | Text | nombre de la propiedad de la columna de la tabla en el contexto de datos | No        |
-  | formatter | Text | formateador de la columna de la tabla                                    | No        |
-  | name      | Text | nombre de la columna de la tabla                                         | Sí        |
+  | Propiedad | Tipo | Descripción                                                              | Obligatorio |
+  | --------- | ---- | ------------------------------------------------------------------------ | ----------- |
+  | dataField | Text | nombre de la propiedad de la columna de la tabla en el contexto de datos | No          |
+  | formatter | Text | formateador de la columna de la tabla                                    | No          |
+  | name      | Text | nombre de la columna de la tabla                                         | Sí          |
 
 La longitud de la colección *tableColumns* debe ser igual al número de columnas del rango:
 
@@ -1221,7 +1221,7 @@ If *rangeObj* is not a cell range or contains multiple ranges, the first cell of
 If (FORM Event.code=On After Edit && FORM Event.action="valueChanged")
      $tableName:=VP Find table(FORM Event.range)
      If ($tableName#"")
-         ALERT("The "+$tableName+" table has been modified.")
+         ALERT("La"+$tableName+" tabla ha sido modificada.")
      End if 
 End if
 ```
@@ -1280,7 +1280,7 @@ You want to trace the execution of the commands and empty the command buffer:
 
 #### Descripción
 
-The `VP Font to object` utility command <!-- REF #_method_.VP Font to object.Summary -->devuelve un objeto a partir de una cadena abreviada de fuentes<!-- END REF -->. .
+El comando utilitario `VP Font to object` <!-- REF #_method_.VP Font to object.Summary -->devuelve un objeto a partir de una cadena abreviada de fuentes<!-- END REF -->. .
 
 In the *font* parameter, pass a font shorthand string to specify the different properties of a font (e.g., "12 pt Arial"). You can learn more about font shorthand strings [in this page](https://www.w3schools.com/cssref/pr_font_font.asp) for example.
 
@@ -1306,7 +1306,7 @@ size:16pt
 
 #### Ejemplo 2
 
-See example for [`VP Object to font`](#vp-object-to-font).
+Ver el ejemplo de [`VP Object to font`](#vp-object-to-font).
 
 #### Ver también
 
@@ -2015,11 +2015,11 @@ $attr:=VP Get row attributes($range)
 
 <!-- REF #_method_.VP Get row count.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                     |
-| ---------- | ------- | -- | ----------------------------------------------- |
-| vpAreaName | Text    | -> | Nombre del área 4D View Pro en el formulario    |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)     |
-| Result     | Integer | <- | Total number of rows|<!-- END REF --> |
+| Parámetros | Tipo    |    | Descripción                                       |
+| ---------- | ------- | -- | ------------------------------------------------- |
+| vpAreaName | Text    | -> | Nombre del área 4D View Pro en el formulario      |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)       |
+| Result     | Integer | <- | Número total de líneas|<!-- END REF --> |
 
 #### Descripción
 
@@ -2496,7 +2496,7 @@ End if
 | ---------- | ------- | -- | ------------------------------------------------ |
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro     |
 | tableName  | Text    | -> | Nombre de la tabla                               |
-| columnName | Text    | -> | Name of the table column                         |
+| columnName | Text    | -> | Nombre de la columna de la tabla                 |
 | sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)      |
 | Result     | Integer | <- | Index of *columnName*|<!-- END REF --> |
 
@@ -2545,13 +2545,13 @@ VP REMOVE TABLE COLUMNS($area; $tableName; $id)
 
 <!-- REF #_method_.VP Get table range.Params -->
 
-| Parámetros | Tipo    |    | Descripción                                              |
-| ---------- | ------- | -- | -------------------------------------------------------- |
-| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro             |
-| tableName  | Text    | -> | Nombre de la tabla                                       |
-| onlyData   | Integer | -> | `vk table full range` (default) or `vk table data range` |
-| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)              |
-| Result     | Object  | <- | Rango que contiene la tabla|<!-- END REF -->   |
+| Parámetros | Tipo    |    | Descripción                                                 |
+| ---------- | ------- | -- | ----------------------------------------------------------- |
+| vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro                |
+| tableName  | Text    | -> | Nombre de la tabla                                          |
+| onlyData   | Integer | -> | `vk table full range` (por defecto) o `vk table data range` |
+| sheet      | Integer | -> | Índice de la hoja (hoja actual si se omite)                 |
+| Result     | Object  | <- | Rango que contiene la tabla|<!-- END REF -->      |
 
 #### Descripción
 
@@ -2972,7 +2972,7 @@ El resultado es:
 | tableName   | Text    | -> | Nombre de la tabla                                                     |
 | column      | Integer | -> | Índice en la tabla de la columna inicial a insertar                    |
 | count       | Text    | -> | Número de columnas a añadir (debe ser >0)                              |
-| insertAfter | Integer | -> | `vk table insert before` or `vk table insert after` *column*           |
+| insertAfter | Integer | -> | `vk table insert before` o `vk table insert after` *column*            |
 | sheet       | Integer | -> | Índice de la hoja (hoja actual si se omite)|<!-- END REF --> |
 
 #### Descripción
@@ -2995,7 +2995,7 @@ If *tableName* does not exist or if there is not enough space in the sheet, noth
 
 #### Ejemplo
 
-See examples for [VP INSERT TABLE ROWS](#vp-insert-table-rows) and [VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes).
+Ver ejemplos para [VP INSERT TABLE ROWS](#vp-insert-table-rows) y [VP SET TABLE COLUMN ATTRIBUTES](#vp-set-table-column-attributes).
 
 
 #### Ver también
@@ -3024,7 +3024,7 @@ See examples for [VP INSERT TABLE ROWS](#vp-insert-table-rows) and [VP SET TABLE
 | tableName   | Text    | -> | Nombre de la tabla                                                     |
 | row         | Integer | -> | Índice en la tabla de la línea inicial a insertar                      |
 | count       | Text    | -> | Número de líneas a añadir (debe ser >0)                                |
-| insertAfter | Integer | -> | `vk table insert before` or `vk table insert after` *row*              |
+| insertAfter | Integer | -> | `vk table insert before` o `vk table insert after` *row*               |
 | sheet       | Integer | -> | Índice de la hoja (hoja actual si se omite)|<!-- END REF --> |
 
 #### Descripción
@@ -3240,13 +3240,13 @@ El comando `VP Object to font` <!-- REF #_method_.VP Object to font.Summary -->r
 
 En *fontObj*, pase un objeto que contenga las propiedades de fuente. Se soportan las siguientes propiedades:
 
-| Propiedad | Tipo | Descripción                                                                                                         | Valores posibles                                                                                                                                                                                                                                                                                                         | Mandatory |
-| --------- | ---- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------- |
-| family    | text | Define la fuente.                                                                                                   | todo tipo de familia de fuentes estándar o genérica. Ej. "Arial", "Helvetica", "serif", "arial,sans-serif"                                                                                                                                                                                                               | Sí        |
-| size      | text | Defines the size of the font. The line-height can be added to the font-size: font-size/line-height: Ex: "15pt/20pt" | un número con una de las siguientes unidades: <li>"em", "ex", "%", "px", "cm", "mm", "in", "pt", "pc", "ch", "rem", "vh", "vw", "vmin", "vmax"</li>or one of the following:<li>`vk font size large`</li><li>`vk font size larger`</li><li>`vk font size x large`</li><li>`vk font size xx large`</li><li>`vk font size small`</li><li>`vk font size smaller`</li><li>`vk font size x small`</li><li>`vk font size xx small`</li>          | Sí        |
-| style     | text | Estilo de fuente.                                                                                                   | <li>`vk font style italic`</li><li>`vk font style oblique`</li>                                                                                                                                                                                                                                                                     | No        |
-| variant   | text | Especifica el tipo de letra en minúsculas.                                                                          | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                               | No        |
-| weight    | text | Define el grosor de la fuente.                                                                                      | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li> | No        |
+| Propiedad | Tipo | Descripción                                                                                                         | Valores posibles                                                                                                                                                                                                                                                                                                         | Obligatorio |
+| --------- | ---- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------- |
+| family    | text | Define la fuente.                                                                                                   | todo tipo de familia de fuentes estándar o genérica. Ej. "Arial", "Helvetica", "serif", "arial,sans-serif"                                                                                                                                                                                                               | Sí          |
+| size      | text | Defines the size of the font. The line-height can be added to the font-size: font-size/line-height: Ex: "15pt/20pt" | un número con una de las siguientes unidades: <li>"em", "ex", "%", "px", "cm", "mm", "in", "pt", "pc", "ch", "rem", "vh", "vw", "vmin", "vmax"</li>or one of the following:<li>`vk font size large`</li><li>`vk font size larger`</li><li>`vk font size x large`</li><li>`vk font size xx large`</li><li>`vk font size small`</li><li>`vk font size smaller`</li><li>`vk font size x small`</li><li>`vk font size xx small`</li>          | Sí          |
+| style     | text | Estilo de fuente.                                                                                                   | <li>`vk font style italic`</li><li>`vk font style oblique`</li>                                                                                                                                                                                                                                                                     | No          |
+| variant   | text | Especifica el tipo de letra en minúsculas.                                                                          | <li>`vk font variant small caps`</li>                                                                                                                                                                                                                                                                                               | No          |
+| weight    | text | Define el grosor de la fuente.                                                                                      | <li>`vk font weight 100`</li><li>`vk font weight 200`</li><li>`vk font weight 300`</li><li>`vk font weight 400`</li><li>`vk font weight 500`</li><li>`vk font weight 600`</li><li>`vk font weight 700`</li><li>`vk font weight 800`</li><li>`vk font weight 900`</li><li>`vk font weight bold`</li><li>`vk font weight bolder`</li><li>`vk font weight lighter`</li> | No          |
 
 This object can be created with the [VP Font to object](#vp-font-to-object) command.
 
@@ -3756,7 +3756,7 @@ VP RESET SELECTION("myVPArea")
 
 | Parámetros | Tipo   |    | Descripción                                   |
 | ---------- | ------ | -- | --------------------------------------------- |
-| rangeObj   | Object | -> | New range for the table                       |
+| rangeObj   | Object | -> | Nuevo rango para la tabla                     |
 | tableName  | Text   | -> | Nombre de la tabla|<!-- END REF --> |
 
 #### Descripción
@@ -3856,7 +3856,7 @@ See example in [VP SUSPEND COMPUTING](#vp-suspend-computing).
 
 #### Descripción
 
-El comando `VP Row` <!-- REF #_method_.VP Row.Summary -->returns a new range object referencing a specific row or rows<!-- END REF -->.
+El comando `VP Row` <!-- REF #_method_.VP Row.Summary -->devuelve un nuevo objeto rango que hace referencia a una o varias líneas específicas<!-- END REF -->.
 
 En *vpAreaName*, pase el nombre del área 4D View Pro. Si pasa un nombre que no existe, se devuelve un error.
 
@@ -5275,7 +5275,7 @@ VP SET SELECTION($currentSelection)
 | Parámetros | Tipo    |    | Descripción                                  |
 | ---------- | ------- | -- | -------------------------------------------- |
 | vpAreaName | Text    | -> | Nombre de objeto formulario área 4D View Pro |
-| number     | Integer | -> | Number of sheets|<!-- END REF -->  |
+| number     | Integer | -> | Número de hojas|<!-- END REF -->   |
 
 #### Descripción
 
@@ -5329,7 +5329,7 @@ En *sheet*, pase el índice de la hoja a renombrar.
 
 If no *index* is passed, the command renames the current sheet.
 
-The new name cannot contain the following characters: `*, :, [, ], ?,\,/`
+El nuevo nombre no puede contener los siguientes caracteres: `*, :, [, ], ?,\,/`
 
 El comando no hace nada si:
 
