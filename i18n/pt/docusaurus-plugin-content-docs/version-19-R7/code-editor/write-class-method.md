@@ -250,8 +250,8 @@ You can press the **Esc** key to close the pop-up list or you can continue typin
 
 If the characters typed correspond to different types of objects, the list displays them in their current style. The following types of objects can be displayed:
 
-- 4D commands
-- SQL commands
+- Comandos 4D
+- Comandos SQL
 - User methods
 - Table names
 - Field names
@@ -396,7 +396,7 @@ Used to create a single line comment. Inserting // at the beginning of a line wi
 &lt;/code>
 &lt;/code></pre>
 
-#### `/*comment*/`
+#### `/*comentário*/`
 
 Used to surround the content to create inline comments or multiline comment blocks.
 
