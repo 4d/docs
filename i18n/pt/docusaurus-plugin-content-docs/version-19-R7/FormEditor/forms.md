@@ -13,7 +13,7 @@ Forms can also contain other forms through the following features:
 - [subform objects](FormObjects/subform_overview.md)
 - [inherited forms](properties_FormProperties.md#inherited-forms)
 
-## Creating forms
+## Criar formulários
 
 You can add or modify 4D forms using the following elements:
 
