@@ -146,7 +146,7 @@ Dataclass attributes come in several kinds: storage, relatedEntity, and relatedE
 * A **storage attribute** is equivalent to a field in the 4D database and can be indexed. Values assigned to a storage attribute are stored as part of the entity when it is saved. When a storage attribute is accessed, its value comes directly from the datastore. Storage attributes are the most basic building block of an entity and are defined by name and data type.
 * A **relation attribute** provides access to other entities. Relation attributes can result in either a single entity (or no entity) or an entity selection (0 to N entities). Relation attributes are built upon "classic" relations in the relational structure to provide direct access to related entity or related entities. Relation attributes are directy available in ORDA using their names.
 
-For example, consider the following partial database structure and the relation properties:
+Por ejemplo, considere la siguiente estructura de base de datos parcial y las propiedades relacionales:
 
 ![](../assets/en/ORDA/relationProperties.png)
 
@@ -155,9 +155,9 @@ Todos los atributos de almacenamiento estarán disponibles automáticamente:
 * en la dataclass Project: "ID", "name", y "companyID"
 * en la dataclasss Company: "ID", "name" y "discount"
 
-In addition, the following relation attributes will also be automatically available:
+Además, los siguientes atributos relacionales también estarán disponibles automáticamente:
 
-* in the Project dataclass: **theClient** attribute, of the "relatedEntity" kind; there is at most one Company for each Project (the client)
+* en la dataclass Project: el atributo **theClient**, del tipo "relatedEntity"; hay como máximo una Empresa para cada Proyecto (el cliente)
 * in the Company dataclass: **companyProjects** attribute, of the "relatedEntities" kind; for each Company there is any number of related Projects.
 > > The Manual or Automatic property of a database relation has no effect in ORDA.
 
@@ -184,7 +184,7 @@ Sin embargo, las propiedades de la entidad son enumerables:
 ```4d
  ARRAY TEXT($prop;0)
  OB GET PROPERTY NAMES(ds.Employee.get(1);$prop)
-  //$prop contains the names of all the entity attributes
+  //$prop contiene los nombres de todos los atributos de la entidad
 ```
 
 ### Entity selection
@@ -213,7 +213,7 @@ Las propiedades de las selecciones de entidades son sin embargo enumerables:
 ```4d
  ARRAY TEXT($prop;0)
  OB GET PROPERTY NAMES(ds.Employee.all();$prop)
-  //$prop contains the names of the entity selection properties
+  //$prop contiene los nombres de las propiedades de la selección de entidades
   //("length", 00", "01"...)
 ```
 
