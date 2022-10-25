@@ -224,7 +224,7 @@ Essa propriedade é **apenas leitura**.
 
 #### Descrição
 
-A função `.trigger()` <!-- REF #SignalClass.trigger().Summary -->sets the `signaled` property of the signal object to **true**<!-- END REF --> and awakens all workers or processes waiting for this signal.
+A função `.trigger()` <!-- REF #SignalClass.trigger().Summary -->coloca o `sinalizado` propriedade do objecto de sinal em **verdadeiro**<!-- END REF --> e desperta todos os trabalhadores ou processos que esperam por este sinal.
 
 Se o sinal já estiver no estado de sinalização (ou seja, a propriedade `signaled` já for **true**), a função não faz nada.
 
@@ -254,7 +254,7 @@ Se o sinal já estiver no estado de sinalização (ou seja, a propriedade `signa
 
 #### Descrição
 
-A função `.wait()` <!-- REF #SignalClass.wait().Summary -->makes the current process wait until the `.signaled` property of the signal object to become **true** or the optional *timeout* to expire<!-- END REF -->.
+A função `.wait()` <!-- REF #SignalClass.wait().Summary -->faz com que o processo atual espere até a propriedade `.signaled` do objeto sinal se tornar **true** ou expirar o opcional *timeout*<!-- END REF -->.
 
 Para evitar que o código se bloqueie, pode passar um tempo máximo de espera em segundos no parâmetro *timeout* (se aceitam decimais).
 > **Atención**: A chamada a `.wait( )` sem um *timeout* no processo principal de 4D não é recomendável porque poderia congelar toda a aplicação 4D.
