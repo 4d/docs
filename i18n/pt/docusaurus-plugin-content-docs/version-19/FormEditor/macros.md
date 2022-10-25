@@ -143,7 +143,7 @@ The class name must match the name defined using the [class](#creating-macros) a
 
 Macros are instantiated at application startup. Consequently, if you modify the macro class structure (add a function, modify a parameter...) or the [constructor](#class-constructor), you will have to restart the application to apply the changes.
 
-## Macro Functions
+## Funções macro
 
 Every macro class can contain a `Class constructor` and two functions: `onInvoke()` and `onError()`.
 

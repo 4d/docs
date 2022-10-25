@@ -119,7 +119,7 @@ Several types of method references are supported:
 
 ---
 ## Linhas móveis
-`Array type list boxes`
+`List boxes de tipo array`
 
 Authorizes the movement of rows during execution. This option is selected by default. It is not available for [selection type list boxes](listbox_overview.md#selection-list-boxes) nor for [list boxes in hierarchical mode](properties_Hierarchy.md#hierarchical-list-box).
 

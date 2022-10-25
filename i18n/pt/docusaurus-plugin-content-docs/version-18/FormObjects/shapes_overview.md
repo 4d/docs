@@ -42,7 +42,7 @@ A static line is a decorative object for forms, drawn between two plots. Lines c
 
 The design of lines is controlled through many properties (color, line thickness, etc.).
 
-### startPoint property
+### propriedade startPoint
 
 The `startPoint` JSON property defines from which coordinate to draw the line (see example).
 

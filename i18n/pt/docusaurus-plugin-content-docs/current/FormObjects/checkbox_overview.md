@@ -3,7 +3,7 @@ id: checkboxOverview
 title: Check Box
 ---
 
-Uma caixa de seleção é um tipo de botão usado para introduzir ou exibir dados binários (verdadeiro-falso). Basically, it is either checked or unchecked, but a [third state](#three-states-check-box) can be defined.
+Uma caixa de seleção é um tipo de botão usado para introduzir ou exibir dados binários (verdadeiro-falso). Basicamente, ou é verificada ou não, mas um [terceiro estado](#three-states-check-box) pode ser definido.
 
 ![](../assets/en/FormObjects/checkbox.png)
 

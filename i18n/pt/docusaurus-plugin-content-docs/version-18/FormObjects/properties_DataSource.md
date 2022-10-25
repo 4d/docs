@@ -29,7 +29,7 @@ When the **automatic insertion** option is not selected (default), the value ent
 
 #### Objectos suportados
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Combo Bo](comboBox_overview.md) - [Coluna List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -41,7 +41,7 @@ Associates a choice list with an object. It can be a choice list name (a list re
 
 | Nome       | Tipo de dados    | Valores possíveis                                   |
 | ---------- | ---------------- | --------------------------------------------------- |
-| choiceList | list, collection | A list of possible values                           |
+| choiceList | list, collection | Uma lista de valores possíveis                      |
 | lista      | list, collection | A list of possible values (hierarchical lists only) |
 
 #### Objectos suportados
@@ -114,7 +114,7 @@ Please refer to [Expression Type](properties_Object.md#expression-type) section.
 
 #### Objectos suportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Coluna da List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -181,7 +181,7 @@ If a field, a variable, or an assignable expression (*e.g. Person.lastName*) is 
 
 #### Objectos suportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Coluna da List Box](listbox_overview.md#list-box-columns)
 
 ---
 

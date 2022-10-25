@@ -23,14 +23,14 @@ You can set some properties of the menu commands by using control characters (me
 
 Control characters do not appear in the menu command labels. You should therefore avoid using them so as not to have any undesirable effects. The control characters are the following:
 
-| Character   | Descrição                   | Utilização                                                    |
-| ----------- | --------------------------- | ------------------------------------------------------------- |
-| (           | open parenthese             | Disable item                                                  |
-| <B          | less than B                 | Bold font                                                     |
-| <I          | less than I                 | Italic font                                                   |
-| <U          | less than U                 | Underline font                                                |
-| !+character | exclamation point+character | Add character as check mark (macOS); add check mark (Windows) |
-| /+character | slash+character             | Add character as shortcut                                     |
+| Caracter   | Descrição                   | Utilização                                                    |
+| ---------- | --------------------------- | ------------------------------------------------------------- |
+| (          | open parenthese             | Disable item                                                  |
+| <B         | less than B                 | Bold font                                                     |
+| <I         | less than I                 | Italic font                                                   |
+| <U         | less than U                 | Underline font                                                |
+| !+caracter | exclamation point+character | Add character as check mark (macOS); add check mark (Windows) |
+| /+caracter | slash+character             | Add character as shortcut                                     |
 
 
 
@@ -98,8 +98,8 @@ You can add keyboard shortcuts to any menu command. If a menu command has one of
 
 You can also add the **Shift** key as well as the **Alt** key (Windows) or **Option** key (macOS) to the shortcut associated with a menu command. This multiplies the number of shortcuts that can be used. The following types of keyboard shortcuts can therefore be defined:
 
-- Under Windows:
-    - Ctrl+character
+- Em Windows:
+    - Ctrl+caracter
     - Ctrl+Shift+character
     - Ctrl+Alt+character
     - Ctrl+Shift+Alt+character
@@ -116,14 +116,14 @@ You can use any alphanumeric keys as a keyboard shortcut, except for the keys re
 
 These reserved key combinations are listed in the following table:
 
-| Key (Windows)   | Key (macOS)        | Operação    |
-| --------------- | ------------------ | ----------- |
-| Ctrl+C          | Comando+C          | Copiar      |
-| Ctrl+Q          | Comando+Q          | Salir       |
-| Ctrl+V          | Comando+V          | Colar       |
-| Ctrl+X          | Comando+X          | Cortar      |
-| Ctrl+Z          | Comando+Z          | Deshacer    |
-| Ctrl+. (period) | Comando+. (period) | Stop action |
+| Tecla (Windows) | Tecla (macOS)     | Operação      |
+| --------------- | ----------------- | ------------- |
+| Ctrl+C          | Comando+C         | Copiar        |
+| Ctrl+Q          | Comando+Q         | Salir         |
+| Ctrl+V          | Comando+V         | Colar         |
+| Ctrl+X          | Comando+X         | Cortar        |
+| Ctrl+Z          | Comando+Z         | Deshacer      |
+| Ctrl+. (ponto)  | Comando+. (ponto) | Parar a acção |
 
 To assign a keyboard shortcut in the Menu editor:
 

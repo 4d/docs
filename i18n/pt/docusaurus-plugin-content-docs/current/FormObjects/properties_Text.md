@@ -120,9 +120,9 @@ You can set this using the [**OBJECT SET FONT**](https://doc.4d.com/4Dv17R5/4D/1
 
 #### Gramática JSON
 
-| Nome       | Tipo de dados | Valores possíveis    |
-| ---------- | ------------- | -------------------- |
-| fontFamily | string        | CSS font family name |
+| Nome       | Tipo de dados | Valores possíveis            |
+| ---------- | ------------- | ---------------------------- |
+| fontFamily | string        | Nome da família da fonte CSS |
 > 4D recommends using only [web safe](https://www.w3schools.com/cssref/css_websafe_fonts.asp) fonts.
 
 #### Objectos suportados
@@ -227,7 +227,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md) - [Coluna List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -383,7 +383,7 @@ Além de [áreas de texto estáticas](text.md), [input](input_overview.md) os ob
 
 ## Array cores de Fonte
 
-`Array type list boxes`
+`List boxes de tipo array`
 
 Permite estabelecer uma cor de fonte personalizada para cada linha do list box ou cada célula da coluna.
 
@@ -403,7 +403,7 @@ O nome do array LongInt deve ser usado. Each element of this array corresponds t
 
 ## Array estilo linha
 
-`Array type list boxes`
+`List boxes de tipo array`
 
 Permite estabelecer um estilo de fonte personalizado para cada linha do list box ou cada célula da coluna.
 
@@ -411,13 +411,13 @@ O nome do array LongInt deve ser usado. Each element of this array corresponds t
 
 #### Gramática JSON
 
-| Nome           | Tipo de dados | Valores possíveis            |
-| -------------- | ------------- | ---------------------------- |
-| rowStyleSource | string        | The name of a longint array. |
+| Nome           | Tipo de dados | Valores possíveis           |
+| -------------- | ------------- | --------------------------- |
+| rowStyleSource | string        | O nome de um array longint. |
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md#overview) - [Coluna List Box](listbox_overview.md#list-box-columns)
 
 ---
 

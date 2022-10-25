@@ -151,7 +151,7 @@ Macros are instantiated at application startup. Consequently, if you modify the 
 
 
 
-## Macro Functions
+## Funções macro
 
 Every macro class can contain a `Class constructor` and two functions: `onInvoke()` and `onError()`.
 

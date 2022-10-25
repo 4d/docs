@@ -134,7 +134,7 @@ Note that when creating your own format patterns, only the display of the data i
 
 Number formats apply to all number types (e.g., positive, negative, and zeros).
 
-| Character | Descrição                                                                                                                                                                                                                  | Exemplo                                                                                                                    |
+| Caracter  | Descrição                                                                                                                                                                                                                  | Exemplo                                                                                                                    |
 | --------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
 | 0         | Placeholder that displays zeros.                                                                                                                                                                                           | #.00 will display 1.1 as 1.10                                                                                              |
 | .         | Displays a decimal point                                                                                                                                                                                                   | 0.00 will display 1999 as 1999.00                                                                                          |
@@ -214,7 +214,7 @@ To create your own date and time patterns, in your current localization, you can
 
 In addition to the special characters and codes described in the previous sections, there are additional characters and symbols that can be used in your format patterns. These additional characters and symbols do not require a \ or "" and do not impact the interpretation of the format pattern. They appear "as-is" within the pattern.
 
-| Character   | Descrição                                                          | Exemplo              |
+| Caracter    | Descrição                                                          | Exemplo              |
 | ----------- | ------------------------------------------------------------------ | -------------------- |
 | + and -     | Plus and minus signs                                               | ### + ### = ###,### |
 | ( )         | Left and right parenthesis                                         | (-###.##)            |
@@ -282,22 +282,22 @@ Header and footer attributes are used to specify text or images in the left, rig
 
 The following special characters allow the automatic addition or formatting of information in the header and footer when the 4D View Pro area is printed.
 
-| Character | Descrição                        | Exemplo                                                                | Resultados                                           |
-| --------- | -------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
-| &         | Escape character                 | (see examples below)                                                   |                                                      |
-| P         | Current page                     | printInfo.headerLeft:="This is page &P."                               | This is page 5.|                                     |
-| N         | Page count                       | printInfo.headerLeft:="There are &N pages."                            | There are 10 pages.                                  |
-| D         | Current date (yyyy/mm/dd format) | printInfo.headerLeft:="It is &D."                                      | It is 2015/6/19.                                     |
-| T         | Current time                     | printInfo.headerLeft:="It is &T."                                      | It is 16:30:36.                                      |
-| G         | Imagem                           | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
-| S         | Strikethrough                    | printInfo.headerLeft:="&SThis is text."                                | ~~This is text.~~                                    |
-| U         | Sublinhado                       | printInfo.headerLeft:="&UThis is text."                                | This is text. (Underlined)                           |
-| B         | Negrito                          | printInfo.headerLeft:="&BThis is text."                                | **This is text.**                                    |
-| I         | Itálico                          | printInfo.headerLeft:="&IThis is text."                                | *This is text.*                                      |
-| "         | Font prefix                      | printInfo.headerLeft:="&\"Lucida Console\"&14This is text."          | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG) |
-| K         | Text Color prefix                | printInfo.headerLeft:="&KFF0000This is text."                          | This is text (in red).                               |
-| F         | Workbook name                    | printInfo.headerLeft:="&F"                                             | 2019 Monthly Revenue Forecasts                       |
-| A         | Spreadsheet name                 | printInfo.headerLeft:="&A"                                             | June 2019 revenue forecast                           |
+| Caracter | Descrição                        | Exemplo                                                                | Resultados                                           |
+| -------- | -------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------- |
+| &        | Escape character                 | (see examples below)                                                   |                                                      |
+| P        | Current page                     | printInfo.headerLeft:="This is page &P."                               | This is page 5.|                                     |
+| N        | Page count                       | printInfo.headerLeft:="There are &N pages."                            | There are 10 pages.                                  |
+| D        | Current date (yyyy/mm/dd format) | printInfo.headerLeft:="It is &D."                                      | It is 2015/6/19.                                     |
+| T        | Current time                     | printInfo.headerLeft:="It is &T."                                      | It is 16:30:36.                                      |
+| G        | Imagem                           | printInfo.headerLeftImage:=smiley<br/>printInfo.headerLeft:="&G" | ![](../assets/en/ViewPro/apx_vpPrintAttributes1.PNG) |
+| S        | Strikethrough                    | printInfo.headerLeft:="&SThis is text."                                | ~~This is text.~~                                    |
+| U        | Sublinhado                       | printInfo.headerLeft:="&UThis is text."                                | This is text. (Underlined)                           |
+| B        | Negrito                          | printInfo.headerLeft:="&BThis is text."                                | **This is text.**                                    |
+| I        | Itálico                          | printInfo.headerLeft:="&IThis is text."                                | *This is text.*                                      |
+| "        | Font prefix                      | printInfo.headerLeft:="&\"Lucida Console\"&14This is text."          | ![](../assets/en/ViewPro/apx_vpPrintAttributes2.PNG) |
+| K        | Text Color prefix                | printInfo.headerLeft:="&KFF0000This is text."                          | This is text (in red).                               |
+| F        | Workbook name                    | printInfo.headerLeft:="&F"                                             | 2019 Monthly Revenue Forecasts                       |
+| A        | Spreadsheet name                 | printInfo.headerLeft:="&A"                                             | June 2019 revenue forecast                           |
 
 ### Margins
 

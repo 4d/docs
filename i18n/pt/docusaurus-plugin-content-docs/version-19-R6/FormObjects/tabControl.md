@@ -35,7 +35,7 @@ Under macOS, in addition to the standard position (top), the tab controls can al
         "top": 160,  
         "width": 100,   
         "height": 20,   
-        "labelsPlacement": "bottom" //define the direction
+        "labelsPlacement": "bottom" //definir a direção
     }
 ```
 
@@ -49,7 +49,7 @@ To supply the labels for a tab control, you can use:
 - a choice list
 - an array
 
-### Using an object
+### Utilização de um objecto
 
 You can assign an [object](Concepts/dt_object.md) encapsulating a [collection](Concepts/dt_collection) as the [data source](properties_Object.md#variable-or-expression) of the tab control. The object must contain the following properties:
 

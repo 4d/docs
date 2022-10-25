@@ -32,7 +32,7 @@ When this property is enabled, the height of every row is automatically calculat
 
 #### Objectos suportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Coluna da List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -54,7 +54,7 @@ Bottom coordinate of the object in the form.
 
 ## Esquerda
 
-Left coordinate of the object on the form.
+Coordenadas esquerda do objecto no formulário.
 
 #### Gramática JSON
 
@@ -70,7 +70,7 @@ Left coordinate of the object on the form.
 
 ## Direita
 
-Right coordinate of the object in the form.
+Coordenada direita do objecto no formulário.
 
 #### Gramática JSON
 
@@ -86,7 +86,7 @@ Right coordinate of the object in the form.
 
 ## Topo
 
-Top coordinate of the object in the form.
+Coordenada superior do objecto no formulário.
 
 #### Gramática JSON
 
@@ -158,7 +158,7 @@ This property designates an object's horizontal size.
 
 ---
 
-## Maximum Width
+## Largura máxima
 
 The maximum width of the column (in pixels). The width of the column cannot be increased beyond this value when resizing the column or form.
 > When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
@@ -171,11 +171,11 @@ The maximum width of the column (in pixels). The width of the column cannot be i
 
 #### Objectos suportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Coluna da List Box](listbox_overview.md#list-box-columns)
 
 ---
 
-## Minimum Width
+## Largura mínima
 
 The minimum width of the column (in pixels). The width of the column cannot be reduced below this value when resizing the column or form.
 > When resizing the form, if the ["Grow" horizontal sizing](properties_ResizingOptions.md#horizontal-sizing) property was assigned to the list box, the right-most column will be increased beyond its maximum width if necessary.
@@ -188,7 +188,7 @@ The minimum width of the column (in pixels). The width of the column cannot be r
 
 #### Objectos suportados
 
-[List Box Column](listbox_overview.md#list-box-columns)
+[Coluna da List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -198,9 +198,9 @@ Sets the height of list box rows (excluding headers and footers). By default, th
 
 #### Gramática JSON
 
-| Nome      | Tipo de dados | Valores possíveis                        |
-| --------- | ------------- | ---------------------------------------- |
-| rowHeight | string        | css value in unit "em" or "px" (default) |
+| Nome      | Tipo de dados | Valores possíveis                               |
+| --------- | ------------- | ----------------------------------------------- |
+| rowHeight | string        | valor css na unidade "em" ou "px" (por defeito) |
 
 #### Objectos suportados
 

@@ -16,7 +16,7 @@ Allows setting a different background color for odd-numbered rows/columns in a l
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md#overview) - [Coluna List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -59,7 +59,7 @@ You can also set this property using the `LISTBOX SET PROPERTY` command with `lk
 
 #### Objectos suportados
 
-[List Box](listbox_overview.md#overview) - [List Box Column](listbox_overview.md#list-box-columns)
+[List Box](listbox_overview.md#overview) - [Coluna List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -143,7 +143,7 @@ You can also set this property using the [**OBJECT SET RGB COLORS**](https://doc
 
 ## Largura da linha
 
-Designates the thickness of a line.
+Designa a espessura de uma linha.
 
 #### Gramática JSON
 
@@ -159,7 +159,7 @@ Designates the thickness of a line.
 
 ## Array cores de fundo
 
-`Array type list boxes`
+`List boxes de tipo array`
 
 The name of an array to apply a custom background color to each row of the list box or column.
 
@@ -168,8 +168,8 @@ The name of a Longint array must be entered. Each element of this array correspo
 For example, given a list box where the rows have an alternating gray/light gray color, defined in the properties of the list box. A background color array has also been set for the list box in order to switch the color of rows where at least one value is negative to light orange:
 
 ```4d
- <>_BgndColors{$i}:=0x00FFD0B0 // orange
- <>_BgndColors{$i}:=-255 // default value
+ <>_BgndColors{$i}:=0x00FFD0B0 // laranja
+ <>_BgndColors{$i}:=-255 // valor por defeito
 ```
 
 ![](../assets/en/FormObjects/listbox_styles1.png)
@@ -177,7 +177,7 @@ For example, given a list box where the rows have an alternating gray/light gray
 Next you want to color the cells with negative values in dark orange. To do this, you set a background color array for each column, for example `<>_BgndColor_1`, `<>_BgndColor_2` and `<>_BgndColor_3`. The values of these arrays have priority over the ones set in the list box properties as well as those of the general background color array:
 
 ```4d
- <>_BgndColorsCol_3{2}:=0x00FF8000 // dark orange
+ <>_BgndColorsCol_3{2}:=0x00FF8000 // laranja escura
  <>_BgndColorsCol_2{5}:=0x00FF8000
  <>_BgndColorsCol_1{9}:=0x00FF8000
  <>_BgndColorsCol_1{16}:=0x00FF8000
@@ -189,9 +189,9 @@ You can get the same result using the `LISTBOX SET ROW FONT STYLE` and `LISTBOX 
 
 #### Gramática JSON
 
-| Nome          | Tipo de dados | Valores possíveis            |
-| ------------- | ------------- | ---------------------------- |
-| rowFillSource | string        | The name of a longint array. |
+| Nome          | Tipo de dados | Valores possíveis           |
+| ------------- | ------------- | --------------------------- |
+| rowFillSource | string        | O nome de um array longint. |
 
 #### Objectos suportados
 

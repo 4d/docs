@@ -277,11 +277,11 @@ To do this, you must surround the code to be excluded from range checking with t
 
 The classic compiler can be used on any platform, while the Silicon compiler can only be used on a Mac machine:
 
-|                | Compile for Windows | Compile for Intel Mac | Compile for Silicon Mac |
-| -------------- |:-------------------:|:---------------------:|:-----------------------:|
-| Em Windows     |      &#10003;       |       &#10003;        |        &#10007;         |
-| On Intel Mac   |      &#10003;       |       &#10003;        |        &#10003;         |
-| On Silicon Mac |      &#10003;       |       &#10003;        |        &#10003;         |
+|             | Compile for Windows | Compile for Intel Mac | Compile for Silicon Mac |
+| ----------- |:-------------------:|:---------------------:|:-----------------------:|
+| Em Windows  |      &#10003;       |       &#10003;        |        &#10007;         |
+| Intel Mac   |      &#10003;       |       &#10003;        |        &#10003;         |
+| Silicon Mac |      &#10003;       |       &#10003;        |        &#10003;         |
 
 Both compilers are integrated into 4D. The appropriate compiler is automatically selected depending on the [compilation target](#compilation-target) option.
 

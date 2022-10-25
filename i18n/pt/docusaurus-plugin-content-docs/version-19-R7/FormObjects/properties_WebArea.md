@@ -26,7 +26,7 @@ When this property is on, a special JavaScript object named `$4d` is instantiate
 
 
 ---
-## Progression
+## Progressão
 
 Name of a Longint type variable. This variable will receive a value between 0 and 100, representing the page load completion percentage in the Web area. Automatically updated by 4D, cannot be modified manually.
 

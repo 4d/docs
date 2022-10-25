@@ -28,7 +28,7 @@ For example, given a choice list containing "France, Germany, Italy" that is ass
 
 #### Objectos suportados
 
-[Combo Box](comboBox_overview.md) - [List Box Column](listbox_overview.md#list-box-columns)
+[Combo Bo](comboBox_overview.md) - [Coluna List Box](listbox_overview.md#list-box-columns)
 
 ---
 
@@ -42,7 +42,7 @@ You can also associate choice lists to objects using the [OBJECT SET LIST BY NAM
 
 | Nome       | Tipo de dados    | Valores possíveis                                   |
 | ---------- | ---------------- | --------------------------------------------------- |
-| choiceList | list, collection | A list of possible values                           |
+| choiceList | list, collection | Uma lista de valores possíveis                      |
 | lista      | list, collection | A list of possible values (hierarchical lists only) |
 
 #### Objectos suportados

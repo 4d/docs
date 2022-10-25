@@ -74,13 +74,13 @@ By default, this option is not enabled.
 
 An interface tool allowing the user to move the viewing area to the left or right.
 
-Available values:
+Valores disponíveis:
 
-| Property List | Valor JSON  | Descrição                                                                                                                                                |
-| ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Sim           | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
-| No            | "hidden"    | The scrollbar is never visible                                                                                                                           |
-| Automático    | "automatic" | The scrollbar appears automatically whenever necessary and the user can enter text larger than the object width                                          |
+| Lista de propriedades | Valor JSON  | Descrição                                                                                                                                                |
+| --------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sim                   | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
+| No                    | "hidden"    | The scrollbar is never visible                                                                                                                           |
+| Automático            | "automatic" | The scrollbar appears automatically whenever necessary and the user can enter text larger than the object width                                          |
 
 > Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
 
@@ -343,13 +343,13 @@ You can add an interface to 4D View Pro areas to allow end users to perform basi
 
 An interface tool allowing the user to move the viewing area up and down.
 
-Available values:
+Valores disponíveis:
 
-| Property List | Valor JSON  | Descrição                                                                                                                                                |
-| ------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Sim           | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
-| No            | "hidden"    | The scrollbar is never visible                                                                                                                           |
-| Automático    | "automatic" | The scrollbar appears automatically whenever necessary (in other words, when the size of the object contents is greater than that of the frame)          |
+| Lista de propriedades | Valor JSON  | Descrição                                                                                                                                                |
+| --------------------- | ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sim                   | "visible"   | The scrollbar is always visible, even when it is not necessary (in other words, when the size of the object contents is smaller than that of the frame). |
+| No                    | "hidden"    | The scrollbar is never visible                                                                                                                           |
+| Automático            | "automatic" | The scrollbar appears automatically whenever necessary (in other words, when the size of the object contents is greater than that of the frame)          |
 
 > Picture objects can have scrollbars when the display format of the picture is set to “Truncated (non-centered).”
 
@@ -403,7 +403,7 @@ Sets the zoom percentage for displaying 4D Write Pro area contents.
 | Nome | Tipo de dados | Valores possíveis |
 | ---- | ------------- | ----------------- |
 |      |               |                   |
- zoom|number|minimum = 0 |
+ zoom|número|mínimo = 0 |
 
 #### Objectos suportados
 

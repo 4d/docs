@@ -268,7 +268,7 @@ L'objet résultant est une entity selection de la dataclass Employee sans doublo
 
 | Version | Modifications                                        |
 | ------- | ---------------------------------------------------- |
-| v19 R7  | Support of *entitySelection* parameter               |
+| v19 R7  | Prise en charge du paramètre *entitySelection*       |
 | v18 R5  | Supporte uniquement les entity selections altérables |
 | v17     | Ajoutées                                             |
 
@@ -279,11 +279,11 @@ L'objet résultant est une entity selection de la dataclass Employee sans doublo
 
 
 <!-- REF #EntitySelectionClass.add().Params -->
-| Paramètres      | Type               |    | Description                                                                                   |
-| --------------- | ------------------ |:--:| --------------------------------------------------------------------------------------------- |
-| entity          | 4D.Entity          | -> | Entité à ajouter à l'entity selection                                                         |
-| entitySelection | 4D.EntitySelection | -> | Entity selection to be added to the original entity selection                                 |
-| Résultat        | 4D.EntitySelection | -> | Entity selection including the added *entity* or *entitySelection*|<!-- END REF -->
+| Paramètres      | Type               |    | Description                                                                                 |
+| --------------- | ------------------ |:--:| ------------------------------------------------------------------------------------------- |
+| entity          | 4D.Entity          | -> | Entité à ajouter à l'entity selection                                                       |
+| entitySelection | 4D.EntitySelection | -> | Entity selection à ajouter à l'entity selection d'origine                                   |
+| Résultat        | 4D.EntitySelection | -> | Entity selection incluant l'*entity* ou *entitySelection*ajoutée|<!-- END REF -->
 
 
 |
@@ -291,21 +291,21 @@ L'objet résultant est une entity selection de la dataclass Employee sans doublo
 
 #### Description
 
-La fonction `.add()` <!-- REF #EntitySelectionClass.add().Summary -->adds the specified *entity* or *entitySelection* to the original entity selection and returns the modified entity selection<!-- END REF -->.
+La fonction `.add()` <!-- REF #EntitySelectionClass.add().Summary -->ajoute l'*entity* ou l'*entitySelection*spécifiée à l'entity selection d'origine et retourne l'entity selection modifiée<!-- END REF -->.
 > Cette fonction modifie l'entity selection d'origine.
 
 :::info warning
 
-The entity selection must be *alterable*, i.e. it has been created for example by [`.newSelection()`](DataClassClass.md#newselection) or `Create entity selection`, otherwise `.add()` will return an error. Les entity selections partageables n'acceptent pas l'ajout d'entités. Pour plus d'informations, reportez-vous au paragraphe [Entity selections partageables ou altérables](ORDA/entities.md#shareable-or-alterable-entity-selections).
+L'entity selection doit être *altérable*, c'est-à-dire qu'elle a été créée par exemple par [`.newSelection()`](DataClassClass.md#newselection) ou `Create entity selection`, sinon `.add()` retournera une erreur. Les entity selections partageables n'acceptent pas l'ajout d'entités. Pour plus d'informations, reportez-vous au paragraphe [Entity selections partageables ou altérables](ORDA/entities.md#shareable-or-alterable-entity-selections).
 
 :::
 
-**Adding an entity**
+**Ajouter une entité**
 
 *   Si l'entity selection est ordonnée, le paramètre *entity* est ajouté à la fin de la sélection. Si une référence à la même entité appartient déjà à l'entity selection, elle est dupliquée et une nouvelle référence est ajoutée.
 *   Si l'entity selection est non ordonnée, le paramètre *entity* est ajouté n'importe où dans la sélection, sans ordre spécifique.
 
-**Adding an entity selection**
+**Ajouter une entity selection**
 
 *   If the entity selection is ordered, its order is kept and *entitySelection* is added at the end of the selection. If references to the same entities of *entitySelection* already belong to the entity selection, they are duplicated and new references are added.
 *   If the entity selection is unordered, it becomes ordered.
