@@ -307,8 +307,8 @@ L'entity selection doit être *altérable*, c'est-à-dire qu'elle a été créé
 
 **Ajouter une entity selection**
 
-*   If the entity selection is ordered, its order is kept and *entitySelection* is added at the end of the selection. If references to the same entities of *entitySelection* already belong to the entity selection, they are duplicated and new references are added.
-*   If the entity selection is unordered, it becomes ordered.
+*   Si l'entity selection est ordonnée, son ordre est conservé et *entitySelection* est ajoutée à la fin de la sélection. Si des références aux mêmes entités de *entitySelection* appartiennent déjà à l'entity selection, elles sont dupliquées et de nouvelles références sont ajoutées.
+*   Si l'entity selection n'est pas ordonnée, elle devient ordonnée.
 > Pour plus d'informations, reportez-vous au paragraphe [Entity selections triées ou non triées](ORDA/dsMapping.md#ordered-or-unordered-entity-selection).
 
 L'entity selection modifiée est retournée par la fonction, afin que les appels vers la fonction puissent être chaînés.
@@ -344,7 +344,7 @@ Les appels vers la fonction peuvent être chaînés :
 
 #### Exemple 3
 
-In a user interface, we have two lists. The user selects items from the list1 to add them to the list2.
+Dans une interface utilisateur, nous avons deux listes. L'utilisateur sélectionne des éléments de list1 pour les ajouter dans list2.
 
 ```4d
 $sellist2:=$sellist2.add($sellist1)
@@ -1334,10 +1334,10 @@ Nous souhaitons connaître le salaire le plus bas parmi les employées :
 
 <details><summary>Historique</summary>
 
-| Version | Modifications                    |
-| ------- | -------------------------------- |
-| v19 R7  | Support of *keepOrder* parameter |
-| v17     | Ajoutées                         |
+| Version | Modifications                            |
+| ------- | ---------------------------------------- |
+| v19 R7  | Prise en charge du paramètre *keepOrder* |
+| v17     | Ajoutées                                 |
 
 </details>
 
@@ -1349,7 +1349,7 @@ Nous souhaitons connaître le salaire le plus bas parmi les employées :
 | --------------- | ------------------ |:--:| --------------------------------------------------------------------------------------------------------------- |
 | entity          | 4D.Entity          | -> | Entité à soustraire                                                                                             |
 | entitySelection | 4D.EntitySelection | -> | Entity selection à soustraire                                                                                   |
-| keepOrder       | Integer            | -> | `dk keep ordered` (integer) to keep the initial order in the resulting entity selection                         |
+| keepOrder       | Integer            | -> | `dk keep ordered` (integer) pour conserver l'ordre initial dans l'entity selection résultante                   |
 | Résultat        | 4D.EntitySelection | <- | Nouvelle entity selection ou une nouvelle référence sur l'entity selection existante|<!-- END REF -->
 
 |
@@ -1361,11 +1361,11 @@ La fonction `minus()` <!-- REF #EntitySelectionClass.minus().Summary -->exclut d
 *   Si vous passez *entity* en paramètre, la fonction crée une nouvelle entity selection sans *entity* (si *entity* appartient à l'entity selection). Si *entity* n'était pas incluse dans l'entity selection d'origine, une nouvelle référence à l'entity selection est renvoyée.
 *   Si vous passez *entitySelection* en paramètre, la fonction retourne une entity selection contenant les entités appartenant à l"entity selection d'origine, sans les entités appartenant à *entitySelection*. Vous pouvez comparer des [entity selections ordonnées et/ou non ordonnées](ORDA/dsMapping.md#entity-selections-tri%C3%A9es-vs-entity-selections-non-tri%C3%A9es).
 
-By default, if you omit the *keepOrder* parameter, the resulting entity selection is unordered. If you want to keep the order of the original entity selection (for example if you want to reuse the entity selection in a user interface), pass the `dk keep ordered` constant in *keepOrder*. In this case, the result is an ordered entity selection and the order of the initial entity selection is kept.
+Par défaut, si vous omettez le paramètre *keepOrder*, l'entity selection résultante n'est pas triée. Si vous souhaitez conserver l'ordre de l'entity selection originale (par exemple si vous voulez réutiliser l'entity selection dans une interface utilisateur), passez la constante `dk keep ordered` dans *keepOrder*. Dans ce cas, le résultat est une entity selection ordonnée et l'ordre de l'entity selection initiale est conservé.
 
 :::note
 
-If you pass `dk keep ordered` in *keepOrder* and the removed *entitySelection* contains entities duplicated in the original entity selection, all occurences of the duplicates are removed.
+Si vous passez `dk keep ordered` dans *keepOrder* et que l'*entitySelection* supprimée contient des entités dupliquées dans l'entity selection originale, toutes les occurrences des doublons sont supprimées.
 
 :::
 
@@ -1405,7 +1405,7 @@ Vous voulez avoir une sélection d'employées nommées "Jones" qui vivent à New
 
 #### Exemple 3
 
-In a user interface, we have a list that displays items in a specific order. If the user selects items in the list to remove them, the order must be kept when refreshing the list:
+Dans une interface utilisateur, nous avons une liste qui affiche des éléments dans un ordre spécifique. Si l'utilisateur sélectionne des éléments dans la liste pour les supprimer, l'ordre doit être conservé lors du rafraîchissement de la liste :
 
 ```4d
 $listsel:=$listsel.minus($selectedItems; dk keep ordered)
