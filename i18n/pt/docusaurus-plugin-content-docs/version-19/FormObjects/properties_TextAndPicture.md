@@ -44,7 +44,7 @@ This property allows setting the size (in pixels) of the horizontal margins of t
 
 This parameter is useful, for example, when the background picture contains borders:
 
-| With / Without       | Exemplo                                                      |
+| Com / Sem            | Exemplo                                                      |
 | -------------------- | ------------------------------------------------------------ |
 | Without margin       | ![](../assets/en/FormObjects/property_horizontalMargin1.png) |
 | With 13-pixel margin | ![](../assets/en/FormObjects/property_horizontalMargin2.png) |
@@ -197,11 +197,11 @@ This property allows displaying a symbol that appears as a triangle in the butto
 
 The appearance and location of this symbol depends on the button style and the current platform.
 
-### Linked and Separated
+### Ligados e Separados
 
 To attach a pop-up menu symbol to a button, there are two display options available:
 
-|                         Linked                          |                         Separated                          |
+|                         Linked                          |                          Separado                          |
 |:-------------------------------------------------------:|:----------------------------------------------------------:|
 | ![](../assets/en/FormObjects/property_popup_linked.png) | ![](../assets/en/FormObjects/property_popup_separated.png) |
 > The actual availability of a "separated" mode depends on the style of the button and the platform.
