@@ -71,8 +71,8 @@ La lista de las principales actualizaciones de esta documentación. Para obtener
 ## 4D v19 R2
 
 - Un [archivo .gitignore por defecto](Preferences/general.md#create-gitignore-file) puede ser creado con nuevos proyectos
-- New [Blob class API](API/BlobClass.md) to handle new [`4D.Blob` objects](Concepts/dt_blob.md#blob-types)
-- `no-bom` support and new default end-of-line characters in [`.setText()`](API/FileClass.md#settext)
+- Nuevo [API Blob class](API/BlobClass.md) para generar nuevos objetos [`4D.Blob`](Concepts/dt_blob.md#blob-types)
+- Soporte de `no-bom` y nuevos caracteres de fin de línea por defecto en [`.setText()`](API/FileClass.md#settext)
 
 
 ## 4D v19
@@ -82,7 +82,7 @@ La lista de las principales actualizaciones de esta documentación. Para obtener
 - Nueva etiqueta de transformación [4DEACH](Tags/tags.md#4deach-and-4dendeach).
 - Servidor web: nuevo parámetro [Cookie de sesión SameSite](WebServer/webServerConfig.md#session-cookie-samesite).
 - Soporte de esquema de color oscuro y claro para los [formularios](FormEditor/properties_FormProperties.md#color-scheme) y [hojas de estilo](FormEditor/createStylesheet.md#media-queries)
-- New default dark and light themes in [Code Editor preferences](Preferences/methods.md#theme-list).
+- Nuevos temas oscuros y claros por defecto en [las preferencias del editor de código](Preferences/methods.md#theme-list).
 - [Compilación nativa](Project/compiler.md#compiler-methods-for) para procesadores Silicon.
 - La propiedad [cálculo de variables](FormObjects/properties_Object.md#variable-calculation) es ahora soportada por las columnas list box de la selección de entidades.
 - Nueva, página [CLI](Admin/cli.md) completa.
