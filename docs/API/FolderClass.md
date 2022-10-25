@@ -55,6 +55,7 @@ Form.curfolder:=Folder("C:\\Users\\JohnSmith\\";fk platform path)
 
 |Version|Changes|
 |---|---|
+|v20 |Support of `fk home folder`|
 |v17 R5|Added|
 
 </details>
@@ -99,6 +100,7 @@ In the *folderConstant* parameter, pass a 4D built-in or system folder, using on
 |fk database folder|4|Associated filesystem: "/PACKAGE"|
 |fk desktop folder|115||
 |fk documents folder|117|Document folder of the user|
+|fk home folder|118|Current home directory of the user|
 |fk licenses folder|1|Folder containing the machine's 4D license files|
 |fk logs folder|7|Associated filesystem: "/LOGS"|
 |fk mobileApps folder|10||
