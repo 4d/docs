@@ -41,7 +41,7 @@ Height of the form (in pixels) when the [form size](#size-based-on) is **Set siz
 
 | Nome   | Tipo de dados | Valores possíveis |
 | ------ | ------------- | ----------------- |
-| height | number        | integer value     |
+| height | number        | valor inteiro     |
 
 
 ---
@@ -56,7 +56,7 @@ This value also determines the right-hand margins of forms used in the Label edi
 
 | Nome        | Tipo de dados | Valores possíveis |
 | ----------- | ------------- | ----------------- |
-| rightMargin | number        | integer value     |
+| rightMargin | number        | valor inteiro     |
 
 
 ---
@@ -71,7 +71,7 @@ This value also determines the top margins of forms used in the Label editor.
 
 | Nome         | Tipo de dados | Valores possíveis |
 | ------------ | ------------- | ----------------- |
-| bottomMargin | number        | integer value     |
+| bottomMargin | number        | valor inteiro     |
 
 
 ---
@@ -84,4 +84,4 @@ Width of the form (in pixels) when the [form size](#size-based-on) is **Set size
 
 | Nome  | Tipo de dados | Valores possíveis |
 | ----- | ------------- | ----------------- |
-| width | number        | integer value     |
+| width | number        | valor inteiro     |
