@@ -3,7 +3,7 @@ id: propertiesPlugIns
 title: Plug-ins
 ---
 
-## Advanced Properties
+## Propriedades avançadas
 
 If advanced options are provided by the author of the plug-in, an **Advanced Properties** button may be enabled in the Property list. In this case, you can click this button to set these options, usually through a custom dialog box.
 
