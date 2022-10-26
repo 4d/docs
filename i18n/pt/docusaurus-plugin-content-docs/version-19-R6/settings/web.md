@@ -13,7 +13,7 @@ Using the tabs on the **Web** page, you can configure various aspects of the int
 
 Indicates whether the Web server will be launched on startup of the 4D application. This option is described in the [Web server administration](../WebServer/webServerAdmin.md#starting-the-4d-web-server) section.
 
-#### Enable HTTP
+#### Ativar HTTP
 
 Indicates whether or not the Web server will accept non-secure connections. See [Enable HTTP](../WebServer/webServerConfig.md#enable-http).
 
@@ -27,7 +27,7 @@ Listening IP (TCP) port number for HTTP. See [HTTP Port](../WebServer/webServerC
 IP address on which the 4D web server will receive HTTP requests (4D local and 4D Server). See [IP Address to listen](../WebServer/webServerConfig.md#ip-address-to-listen).
 
 
-#### Enable HTTPS
+#### Ativar HTTPS
 
 Indicates whether or not the Web server will accept secure connections. See [Enable HTTPS](../WebServer/webServerConfig.md#enable-https).
 
