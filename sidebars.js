@@ -6,7 +6,8 @@ module.exports =
 			label: "Getting Started",
 			items: [
 				"GettingStarted/installation",
-				"GettingStarted/creating"
+				"GettingStarted/creating",
+				"Notes/updates"
 			],
 		},
 		{
