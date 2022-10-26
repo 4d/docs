@@ -163,7 +163,7 @@ Here are the 4DCODE tag features:
 
 > The fact that 4DCODE tags can call any of the 4D language commands or project methods could be seen as a security issue, especially when the database is available through HTTP. However, since it executes server-side code called from your own template files, the tag itself does not represent a security issue. In this context, as for any Web server, security is mainly handled at the level of remote accesses to server files.
 
-## 4DEACH and 4DENDEACH
+## 4DEACH e 4DENDEACH
 
 #### Syntax: `<!--#4DEACH variable in expression-->` `<!--#4DENDEACH-->`
 
@@ -439,7 +439,7 @@ Exemplos:
 <!--#4DINCLUDE ../folder/subpage.html-->
 ```
 
-## 4DLOOP and 4DENDLOOP
+## 4DLOOP e 4DENDLOOP
 
 #### Syntax: `<!--#4DLOOP condition-->` `<!--#4DENDLOOP-->`
 
