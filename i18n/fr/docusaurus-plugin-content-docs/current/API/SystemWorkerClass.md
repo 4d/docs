@@ -52,7 +52,7 @@ $myMacWorker:= 4D.SystemWorker.new("chmod x /folder/myfile.sh")
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajoutées      |
+| v19 R4  | Ajout         |
 
 </details>
 
@@ -256,7 +256,7 @@ Function _createFile($title : Text; $textBody : Text)
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajoutées      |
+| v19 R4  | Ajout         |
 
 </details>
 
