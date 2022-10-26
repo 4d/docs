@@ -86,8 +86,8 @@ The 4D View Pro sheet options object allows you to control various options of yo
 |                      | showHorizontalGridline | boolean       | Specifies whether to show the horizontal grid line.                                                                                                                                                                                                                                                        |
 | rowHeaderVisible     |                        | boolean       | Specifies whether the row header is visible.                                                                                                                                                                                                                                                               |
 | colHeaderVisible     |                        | boolean       | Specifies whether the column header is visible.                                                                                                                                                                                                                                                            |
-| rowHeaderAutoText    |                        | inteiro longo | Specifies whether the row header displays letters or numbers or is blank. Available values: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                      |
-| colHeaderAutoText    |                        | inteiro longo | Specifies whether the column header displays letters or numbers or is blank. Available values: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                   |
+| rowHeaderAutoText    |                        | inteiro longo | Specifies whether the row header displays letters or numbers or is blank. Valores disponíveis: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                   |
+| colHeaderAutoText    |                        | inteiro longo | Specifies whether the column header displays letters or numbers or is blank. Valores disponíveis: `vk header auto text blank`, `vk header auto text letters`, `vk header auto text numbers`                                                                                                                |
 | selectionBackColor   |                        | string        | The selection's background color for the sheet. (preferred RGBA format)                                                                                                                                                                                                                                    |
 | selectionBorderColor |                        | string        | The selection's border color for the sheet.                                                                                                                                                                                                                                                                |
 | sheetAreaOffset      |                        | object        | The sheetAreaOffset's options.                                                                                                                                                                                                                                                                             |
@@ -231,8 +231,8 @@ In addition to the special characters and codes described in the previous sectio
 |             | Space character                                                    |                      |
 | €           | Euro                                                               | €###.00              |
 | £           | British Pound                                                      | £###.00              |
-| ¥           | Japanese Yen                                                       | ¥###.00              |
-| $           | Dollar sign                                                        | $###.00              |
+| ¥           | Iene japonês                                                       | ¥###.00              |
+| $           | Sinal de dólar                                                     | $###.00              |
 | ¢           | Cent sign                                                          | .00¢                 |
 
 ## Print Attributes
@@ -303,39 +303,39 @@ The following special characters allow the automatic addition or formatting of i
 
 Margin attributes are used to specify the 4D View Pro area margins for printing. Expressed in hundreds of an inch.
 
-| Propriedade |         | Tipo          | Descrição                                                   |
-| ----------- | ------- | ------------- | ----------------------------------------------------------- |
-| margin      |         | object        | The print margins                                           |
-|             | top     | inteiro longo | Top margin, in hundredths of an inch. Default value = 75    |
-|             | bottom  | inteiro longo | Bottom margin, in hundredths of an inch. Default value = 75 |
-|             | left    | inteiro longo | Left margin, in hundredths of an inch. Default value = 70   |
-|             | direita | inteiro longo | Right margin, in hundredths of an inch. Default value = 70  |
-|             | header  | inteiro longo | Header offset, in hundredths of an inch. Default value = 30 |
-|             | footer  | inteiro longo | Footer offset, in hundredths of an inch. Default value = 30 |
+| Propriedade |         | Tipo          | Descrição                                                  |
+| ----------- | ------- | ------------- | ---------------------------------------------------------- |
+| margin      |         | object        | The print margins                                          |
+|             | top     | inteiro longo | Top margin, in hundredths of an inch. Valor padrão = 75    |
+|             | bottom  | inteiro longo | Bottom margin, in hundredths of an inch. Valor padrão = 75 |
+|             | left    | inteiro longo | Left margin, in hundredths of an inch. Valor padrão = 70   |
+|             | direita | inteiro longo | Right margin, in hundredths of an inch. Valor padrão = 70  |
+|             | header  | inteiro longo | Header offset, in hundredths of an inch. Valor padrão = 30 |
+|             | footer  | inteiro longo | Footer offset, in hundredths of an inch. Valor padrão = 30 |
 
 ### Orientation
 
 Orientation attributes are used to specify the direction the printed page layout.
 > This attribute defines rendering information only.
 
-| Propriedade | Tipo          | Descrição                                                                                                                 |
-| ----------- | ------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| orientation | inteiro longo | Page orientation. Available values: `vk print page orientation landscape`, `vk print page orientation portrait` (default) |
+| Propriedade | Tipo          | Descrição                                                                                                                   |
+| ----------- | ------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| orientation | inteiro longo | Page orientation. Valores disponíveis: `vk print page orientation landscape`, `vk print page orientation portrait` (padrão) |
 
 ### Página
 
 Page attributes are used to specify general document print settings.
 
-| Propriedade     | Tipo          | Descrição                                                                                                                                                                                           |
-| --------------- | ------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| blackAndWhite   | boolean       | Printing in black and white only. <p>Default value = false</p><p>**Note**: PDFs are not affected by this attribute. Colors in PDFs remain.</p>                                                                                                                 |
-| centering       | inteiro longo | How the contents are centered on the printed page. Available values: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (default), `vk print centering vertical` |
-| firstPageNumber | inteiro longo | The page number to print on the first page. Default value = 1                                                                                                                                       |
-| pageOrder       | inteiro longo | The order pages are printed. Available values: `vk print page order auto` (default), `vk print page order down then over`, `vk print page order over then down`.                                    |
-| pageRange       | text          | The range of pages for printing                                                                                                                                                                     |
-| qualityFactor   | inteiro longo | The quality factor for printing (1 - 8).  The higher the quality factor, the better the printing quality, however printing performance may be affected.<p>Default value = 2</p>                    |
-| useMax          | boolean       | Only columns and rows with data are printed.<p>Default value = true</p>                                                                                                                               |
-| zoomFactor      | real          | The amount to enlarge or reduce the printed page.<p>Default value = 1</p>                                                                                                                          |
+| Propriedade     | Tipo          | Descrição                                                                                                                                                                                             |
+| --------------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| blackAndWhite   | boolean       | Printing in black and white only. <p>Default value = false</p><p>**Note**: PDFs are not affected by this attribute. Colors in PDFs remain.</p>                                                                                                                   |
+| centering       | inteiro longo | How the contents are centered on the printed page. Valores disponíveis: `vk print centering both`, `vk print centering horizontal`, `vk print centering none` (padrão), `vk print centering vertical` |
+| firstPageNumber | inteiro longo | The page number to print on the first page. Default value = 1                                                                                                                                         |
+| pageOrder       | inteiro longo | The order pages are printed. Valores disponíveis: `vk print page order auto` (default), `vk print page order down then over`, `vk print page order over then down`.                                   |
+| pageRange       | text          | The range of pages for printing                                                                                                                                                                       |
+| qualityFactor   | inteiro longo | The quality factor for printing (1 - 8).  The higher the quality factor, the better the printing quality, however printing performance may be affected.<p>Valor padrão = 2</p>                      |
+| useMax          | boolean       | Only columns and rows with data are printed.<p>Valor padrão = true</p>                                                                                                                                 |
+| zoomFactor      | real          | The amount to enlarge or reduce the printed page.<p>Valor padrão = 1</p>                                                                                                                            |
 
 ### Paper Size
 
@@ -361,23 +361,23 @@ Paper size attributes are used to specify the dimensions or model of paper to us
 
 Scale attributes are used to specify printing optimization and adjustments.
 
-| Propriedade    | Tipo          | Descrição                                                                                                    |
-| -------------- | ------------- | ------------------------------------------------------------------------------------------------------------ |
-| bestFitColumns | boolean       | Column width is adjusted to fit the largest text width for printing. Default value = "false"                 |
-| bestFitRows    | boolean       | Row height is adjusted to fit the tallest text height for printing. Default value = "false"                  |
-| fitPagesTall   | inteiro longo | The number of vertical pages (portrait orientation) to check when optimizing printing. Default value = -1    |
-| fitPagesWide   | inteiro longo | The number of horizontal pages (landscape orientation) to check when optimizing printing. Default value = -1 |
+| Propriedade    | Tipo          | Descrição                                                                                                   |
+| -------------- | ------------- | ----------------------------------------------------------------------------------------------------------- |
+| bestFitColumns | boolean       | Column width is adjusted to fit the largest text width for printing. Default value = "false"                |
+| bestFitRows    | boolean       | Row height is adjusted to fit the tallest text height for printing. Default value = "false"                 |
+| fitPagesTall   | inteiro longo | The number of vertical pages (portrait orientation) to check when optimizing printing. Valor padrão = -1    |
+| fitPagesWide   | inteiro longo | The number of horizontal pages (landscape orientation) to check when optimizing printing. Valor padrão = -1 |
 
 ### Show / Hide
 
 Show / Hide attributes are used to specify the visibility (printing) of 4D View Pro area elements.
 
-| Propriedade      | Tipo          | Descrição                                                                                                                                                                        |
-| ---------------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| showBorder       | boolean       | Prints the outline border. Default value = "true"                                                                                                                                |
-| showColumnHeader | inteiro longo | Column header print settings. Available values: `vk print visibility hide`, `vk print visibility inherit` (default), `vk print visibility show`, `vk print visibility show once` |
-| showGridLine     | boolean       | Prints the gridlines. Default value = "false"                                                                                                                                    |
-| showRowHeader    | inteiro longo | Row headers print settings. Available values: `vk print visibility hide`, `vk print visibility inherit` (default), `vk print visibility show`, `vk print visibility show once`   |
+| Propriedade      | Tipo          | Descrição                                                                                                                                                                          |
+| ---------------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| showBorder       | boolean       | Prints the outline border. Default value = "true"                                                                                                                                  |
+| showColumnHeader | inteiro longo | Column header print settings. Valores disponíveis: `vk print visibility hide`, `vk print visibility inherit` (padrão), `vk print visibility show`, `vk print visibility show once` |
+| showGridLine     | boolean       | Prints the gridlines. Default value = "false"                                                                                                                                      |
+| showRowHeader    | inteiro longo | Row headers print settings. Valores disponíveis: `vk print visibility hide`, `vk print visibility inherit` (padrão), `vk print visibility show`, `vk print visibility show once`   |
 
 ### Watermark
 
@@ -417,7 +417,7 @@ Exemplo:
  $style:=New object
  $style.hAlign:=vk horizontal align left
  $style.font:="12pt papyrus"
- $style.backColor:="#E6E6FA" //light purple color
+ $style.backColor:="#E6E6FA" //cor púrpura claro
 
  VP SET DEFAULT STYLE("myDoc";$style)
 ```
@@ -452,7 +452,7 @@ Exemplo:
 |                 | foreColor    | text          | Defines the color of the foreground. Optional property.                                                                                                                                                                                                                                                                                                              | CSS color "#rrggbb" syntax (preferred syntax), CSS color "rgb(r,g,b)" syntax (alternate syntax), CSS color name (alternate syntax)                                                                                |
 |                 | font         | text          | Specifies the font characteristics with CSS font shorthand ("font-style font-variant font-weight font-size/line-height font-family"). The font-size and font-family values are mandatory.                                                                                                                                                                            |                                                                                                                                                                                                                   |
 | textDecoration  |              | inteiro longo | Specifies the decoration added to text.                                                                                                                                                                                                                                                                                                                              | `vk text decoration double underline`, `vk text decoration line through`, `vk text decoration none`, `vk text decoration overline`, `vk text decoration underline`                                                |
-| textIndent      |              | inteiro longo | Defines the unit of text indention. 1 = 8 pixels                                                                                                                                                                                                                                                                                                                     |                                                                                                                                                                                                                   |
+| textIndent      |              | inteiro longo | Defines the unit of text indention. 1 = 8 píxeles                                                                                                                                                                                                                                                                                                                    |                                                                                                                                                                                                                   |
 | textOrientation |              | inteiro longo | Defines the rotation angle of the text in a cell. Number between -90 and 90                                                                                                                                                                                                                                                                                          |                                                                                                                                                                                                                   |
 | watermark       |              | text          | Defines the watermark (cell label) content                                                                                                                                                                                                                                                                                                                           |                                                                                                                                                                                                                   |
 | wordWrap        |              | boolean       | Specifies if text should be wrapped.                                                                                                                                                                                                                                                                                                                                 | True = wrapped text, False = unwrapped text                                                                                                                                                                       |
