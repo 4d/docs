@@ -139,12 +139,12 @@ Activa la inserción automática de () y de llaves de cierre mientras se escribe
 
 #### Correspondencia \[]\(){}
 
-Define la señalización gráfica de las llaves correspondientes en el código. This signaling appears whenever a square bracket, parenthesis, or curly bracket is selected. Las siguientes opciones están disponibles:
+Define la señalización gráfica de las llaves correspondientes en el código. Esta señalización aparece siempre que se selecciona un corchete, un paréntesis o una llave. Las siguientes opciones están disponibles:
 
 * **Ninguno**: sin señales
-* **Rectangle** (default): Braces surrounded by a black line  
+* **Rectángulo** (por defecto): corchetes rodeados por una línea negra  
   ![](../assets/en/Preferences/optionsRectangle.png)
-* **Background Color**: Braces highlighted (the color is set in the [Theme](#theme-definition) page).
+* **Color de fondo**: corchetes resaltados (el color se define en la página [Tema](#Teme-definition)).
 * **Negrita**: las llaves aparecen en negrita.
 
 #### Resaltado de las variables y campos

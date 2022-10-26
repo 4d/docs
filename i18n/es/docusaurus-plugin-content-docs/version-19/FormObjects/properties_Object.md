@@ -150,7 +150,7 @@ However, this property has a typing function in the following specific cases:
 
 | Nombre             | Tipos de datos | Valores posibles                                   |
 | ------------------ | -------------- | -------------------------------------------------- |
-| dataSourceTypeHint | string         | <li>**objetos estándar:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**list box columns:** "boolean", "number", "picture", "text", date", "time". *Sólo para Array/selección list box*: "integer", "object"</li> |
+| dataSourceTypeHint | string         | <li>**objetos estándar:** "integer", "boolean", "number", "picture", "text", date", "time", "arrayText", "arrayDate", "arrayTime", "arrayNumber", "collection", "object", "undefined"</li><li>**columnas list box:** "boolean", "number", "picture", "text", date", "time". *Sólo para Array/selección list box*: "integer", "object"</li> |
 
 #### Objetos soportados
 

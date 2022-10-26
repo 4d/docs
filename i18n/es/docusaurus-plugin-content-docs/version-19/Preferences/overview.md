@@ -39,4 +39,4 @@ To reset the parameters to their default values and remove the bold style indica
 
 ![](../assets/en/Preferences/overviewSettings.png)
 
-Este botón reinicializa todos los parámetros de la página actual. It becomes active when at least one parameter has been modified on the current page.
+Este botón reinicializa todos los parámetros de la página actual. Se activa cuando se ha modificado al menos un parámetro en la página actual.

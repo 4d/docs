@@ -194,9 +194,9 @@ text[text|=Hello]
 
 ## Declaraciones de hojas de estilo
 
-### Media Queries
+### Consultas de medios
 
-Media queries are used to apply color schemes to an application.
+Las consultas de medios se utilizan para aplicar esquemas de color a las aplicaciones.
 
 A media query is composed of a media feature and a value (e.g., `\&#060;media feature&#062;:\&#060;value&#062;` ).
 
