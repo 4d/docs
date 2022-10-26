@@ -12,7 +12,7 @@ title: Classe Transporter
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 </details>
 
 <!-- REF #transporter.acceptUnsecureConnection.Syntax -->**.acceptUnsecureConnection** : Boolean<!-- END REF -->
@@ -45,7 +45,7 @@ Ports sécurisés disponibles :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 
 </details>
 
@@ -77,7 +77,7 @@ Valeurs possibles :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 
 </details>
 
@@ -110,7 +110,7 @@ Valeurs possibles :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 
 </details>
 
@@ -143,7 +143,7 @@ Valeurs possibles :
 | Version | Modifications                  |
 | ------- | ------------------------------ |
 | v18     | Prise en charge de UTF8 base64 |
-| v17 R5  | Ajoutées                       |
+| v17 R5  | Ajout                          |
 
 </details>
 
@@ -174,7 +174,7 @@ La propriété `.bodyCharset` contient <!-- REF #transporter.bodyCharset.Summary
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 
 </details>
 
@@ -195,7 +195,7 @@ La propriété `.connectionTimeOut` contient <!-- REF #transporter.connectionTim
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 
 </details>
 
@@ -229,7 +229,7 @@ La propriété `.headerCharset` contient <!-- REF #transporter.headerCharset.Sum
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 
 </details>
 
@@ -250,7 +250,7 @@ La propriété `.host` contient <!-- REF #transporter.host.Summary -->le nom ou 
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R5  | Ajoutées      |
+| v17 R5  | Ajout         |
 
 </details>
 
@@ -277,7 +277,7 @@ Contrairement aux fichiers log habituels (activés via la commande `SET DATABASE
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 
 </details>
 
@@ -302,7 +302,7 @@ La propriété `.port` contient <!-- REF #transporter.port.Summary --> le numér
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 </details>
 
 <!-- REF #transporter.sendTimeOut.Syntax -->**.sendTimeOut** : Integer<!-- END REF -->
@@ -322,7 +322,7 @@ La propriété `.sendTimeOut` contient <!-- REF #transporter.sendTimeOut.Summary
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 
 </details>
 
@@ -343,7 +343,7 @@ La propriété `.user` contient <!-- REF #transporter.user.Summary --> le nom d'
 
 | Version | Modifications |
 | ------- | ------------- |
-| v17 R4  | Ajoutées      |
+| v17 R4  | Ajout         |
 
 </details>
 
