@@ -32,7 +32,7 @@
     "description": "The label for category Class API Reference in sidebar docs"
   },
   "sidebar.docs.category.Preferences": {
-    "message": "Preferences",
+    "message": "Preferências",
     "description": "The label for category Preferences in sidebar docs"
   },
   "sidebar.docs.category.Administration": {
