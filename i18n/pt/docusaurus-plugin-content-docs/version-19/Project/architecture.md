@@ -165,7 +165,7 @@ This folder contains **user settings files for data** used for application admin
 | Backup.4DSettings   | Database backup settings, used to set the [backup options](Backup/settings.md) when the database is run with this data file. Keys concerning backup configuration are described in the *4D XML Keys Backup* manual. | XML     |
 | settings.4DSettings | Propriedades personalizadas de o banco de dados para este arquivo de dados.                                                                                                                                         | XML     |
 
-### Logs folder
+### Pasta Logs
 
 The Logs folder contains all log files used by the project. Log files include, in particular:
 
