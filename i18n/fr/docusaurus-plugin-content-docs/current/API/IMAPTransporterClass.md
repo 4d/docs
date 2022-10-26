@@ -48,7 +48,7 @@ Les objets IMAP Transporter sont instanciés avec la commande [IMAP New transpor
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 
 </details>
 
@@ -135,7 +135,7 @@ La fonction `4D.IMAPTransporter.new()` <!-- REF #4D.IMAPTransporter.new().Summar
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 
 </details>
 
@@ -222,7 +222,7 @@ $status:=$transporter.addFlags(IMAP all;$flags)
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 
 </details>
 
@@ -312,7 +312,7 @@ $status:=$imap.append($msg; "Drafts")
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 
 </details>
 
@@ -334,7 +334,7 @@ La propriété `.checkConnectionDelay` contient <!-- REF #IMAPTransporterClass.c
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R5  | Ajoutées      |
+| v18 R5  | Ajout         |
 
 </details>
 
@@ -435,7 +435,7 @@ Pour copier tous les messages de la boîte de réception courante :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19     | Ajoutées      |
+| v19     | Ajout         |
 
 </details>
 
@@ -514,7 +514,7 @@ End for each
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R5  | Ajoutées      |
+| v18 R5  | Ajout         |
 
 </details>
 
@@ -613,7 +613,7 @@ Pour supprimer tous les messages de la boîte de réception courante :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19     | Ajoutées      |
+| v19     | Ajout         |
 
 </details>
 
@@ -691,7 +691,7 @@ End if
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 
 </details>
 
@@ -812,7 +812,7 @@ L'objet `boxInfo` contient les propriété suivantes :
 
 | Version | Modifications                  |
 | ------- | ------------------------------ |
-| v18 R4  | Ajoutées                       |
+| v18 R4  | Ajout                          |
 | v19     | Ajout paramètre `isSubscribed` |
 
 </details>
@@ -878,7 +878,7 @@ Si le compte ne contient pas de boites de réception, une collection vide est re
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 
 </details>
 
@@ -932,7 +932,7 @@ Caractère de délimitation des noms de boites de réception.
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 
 </details>
 
@@ -1006,7 +1006,7 @@ Vous souhaitez lire le message avec ID = 1 :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R5  | Ajoutées      |
+| v18 R5  | Ajout         |
 
 </details>
 
@@ -1107,7 +1107,7 @@ Vous souhaitez récupérer les 20 emails les plus récents sans modifier le stat
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 
 </details>
 
@@ -1183,7 +1183,7 @@ Le paramètre optionnel *updateSeen* vous permet d'indiquer si le message est ma
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R5  | Ajoutées      |
+| v18 R5  | Ajout         |
 
 </details>
 
@@ -1285,7 +1285,7 @@ Pour déplacer tous les messages de la boîte de réception courante :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R5  | Ajoutées      |
+| v18 R5  | Ajout         |
 
 </details>
 
@@ -1345,7 +1345,7 @@ $status:=$transporter.removeFlags(IMAP all;$flags)
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R6  | Ajoutées      |
+| v18 R6  | Ajout         |
 
 </details>
 
@@ -1436,7 +1436,7 @@ End if
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19     | Ajoutées      |
+| v19     | Ajout         |
 
 </details>
 
@@ -1518,7 +1518,7 @@ End if
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R5  | Ajoutées      |
+| v18 R5  | Ajout         |
 
 </details>
 
@@ -1655,7 +1655,7 @@ Les mots-clés de recherche peuvent traiter des valeurs des types suivants :
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18 R4  | Ajoutées      |
+| v18 R4  | Ajout         |
 
 </details>
 
@@ -1738,7 +1738,7 @@ End if
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19     | Ajoutées      |
+| v19     | Ajout         |
 
 </details>
 
@@ -1814,7 +1814,7 @@ End if
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19     | Ajoutées      |
+| v19     | Ajout         |
 
 </details>
 
