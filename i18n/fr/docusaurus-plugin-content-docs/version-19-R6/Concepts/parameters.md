@@ -199,7 +199,7 @@ Les expressions tables ou arrays (tableaux) peuvent être passées uniquement [p
 
 | Version | Modifications |
 | ------- | ------------- |
-| v19 R4  | Ajoutées      |
+| v19 R4  | Ajout         |
 </details>
 
 L'instruction `return` met fin à l'exécution d'une fonction ou d'une méthode et peut être utilisée pour retourner une expression à l'appelant.
