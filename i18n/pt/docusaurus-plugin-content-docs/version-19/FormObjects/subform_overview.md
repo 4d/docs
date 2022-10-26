@@ -141,7 +141,7 @@ This mechanism is illustrated in the following diagram:
 
 For more information, refer to the description of the `EXECUTE METHOD IN SUBFORM` command.
 
-#### GOTO OBJECT command
+#### Comando GOTO OBJECT
 
 The `GOTO OBJECT` command looks for the destination object in the parent form even if it is executed from a subform.
 
