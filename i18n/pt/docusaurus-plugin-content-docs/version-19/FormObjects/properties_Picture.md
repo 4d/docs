@@ -28,7 +28,7 @@ The following locations can be used for static pictures:
 
 ## Visualização
 
-### Scaled to fit
+### Escalado para caber
 
 `JSON grammar: "scaled"`
 
