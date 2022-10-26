@@ -42,7 +42,7 @@ End if
 | Version | Modifications                                                               |
 | ------- | --------------------------------------------------------------------------- |
 | v19 R3  | Ajout des propriétés `ZIP Compression LZMA`, `ZIP Compression xy`, `.level` |
-| v18     | Ajoutées                                                                    |
+| v18     | Ajout                                                                       |
 
 </details>
 
@@ -196,7 +196,7 @@ $err:=ZIP Create archive($zip; $destination)
 
 | Version | Modifications |
 | ------- | ------------- |
-| v18     | Ajoutées      |
+| v18     | Ajout         |
 
 </details>
 
