@@ -363,7 +363,7 @@ Modifica a orientação (rotação) de uma área texto. Áreas texto pode ser ro
 
 | Orientation value | Resultados                                     |
 | ----------------- | ---------------------------------------------- |
-| 0 (default)       | ![](../assets/en/FormObjects/orientation1.png) |
+| 0 (o padrão)      | ![](../assets/en/FormObjects/orientation1.png) |
 | 90                | ![](../assets/en/FormObjects/orientation2.png) |
 | 180               | ![](../assets/en/FormObjects/orientation3.png) |
 | 270               | ![](../assets/en/FormObjects/orientation4.png) |
