@@ -47,7 +47,7 @@ The number of objects involved in an event depends on the nature of the event.
 
 The following table summarizes how object and form methods are called for each event type:
 
-| Evento                   | Object Methods                      | Form Method | Which Objects          |
+| Evento                   | Métodos objecto                     | Form Method | Which Objects          |
 | ------------------------ | ----------------------------------- | ----------- | ---------------------- |
 | On Load                  | Sim                                 | Sim         | All objects            |
 | On Unload                | Sim                                 | Sim         | All objects            |
