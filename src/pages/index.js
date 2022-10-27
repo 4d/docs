@@ -119,7 +119,6 @@ export default function Home() {
     	<Lts />
 		<HeroBanner />	
         <TilesContainer />
- //       <Updates />
       </main>
     </Layout>
   );
