@@ -87,7 +87,7 @@ function TilesContainer() {
     </div>
   );
 }
-
+/*
 function Updates() {
   return (
     <div className="container text--right">
@@ -98,6 +98,7 @@ function Updates() {
     </div>
   )
 }
+*/
 
 function Lts() {
   return (
